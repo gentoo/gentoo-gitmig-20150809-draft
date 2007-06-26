@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-2.2.4.ebuild,v 1.2 2007/05/06 16:14:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-2.2.4.ebuild,v 1.3 2007/06/26 01:56:21 mr_bones_ Exp $
 
 inherit eutils findlib
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk ssl tk httpd"
 
 # the auth-dh compile flag has been disabled as well, since it depends on
-# ocaml-cryptgps, which is not available. 
+# ocaml-cryptgps, which is not available.
 
 DEPEND="!dev-ml/equeue
 		!dev-ml/rpc

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.23 2006/11/03 10:51:45 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.24 2007/06/26 01:55:57 mr_bones_ Exp $
 
 inherit multilib eutils
 
@@ -13,9 +13,9 @@ LICENSE="as-is"
 DEPEND=">=dev-lang/ocaml-3.05
 	virtual/opengl
 	glut? ( virtual/glut )
-	tk? ( 
+	tk? (
 		>=dev-lang/tcl-8.3
-		>=dev-lang/tk-8.3 
+		>=dev-lang/tk-8.3
 	)"
 
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
