@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre4.ebuild,v 1.2 2007/06/26 06:20:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre4.ebuild,v 1.3 2007/06/26 07:59:29 ulm Exp $
 
 inherit elisp eutils versionator
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake -j1 EMACS=/usr/bin/emacs || die "emake failed"
+	emake EMACS=/usr/bin/emacs || die "emake failed"
 }
 
 src_install() {
