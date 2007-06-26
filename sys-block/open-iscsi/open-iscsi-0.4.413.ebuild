@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-0.4.413.ebuild,v 1.2 2005/09/20 08:00:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-0.4.413.ebuild,v 1.3 2007/06/26 02:48:53 mr_bones_ Exp $
 
 inherit versionator linux-mod eutils
 
@@ -46,7 +46,7 @@ src_unpack() {
 src_compile() {
 	einfo "Building kernel modules"
 	export KSRC="${KERNEL_DIR}"
-	#S=${S}/kernel 
+	#S=${S}/kernel
 	linux-mod_src_compile || die "failed to build modules"
 	einfo "Building userspace"
 	cd ${S}/usr && emake || die "emake failed"
@@ -55,7 +55,7 @@ src_compile() {
 src_install() {
 	einfo "Installing kernel modules"
 	export KSRC="${KERNEL_DIR}"
-	#S=${S}/kernel 
+	#S=${S}/kernel
 	linux-mod_src_install
 
 	einfo "Installing userspace"

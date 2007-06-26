@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-0.4.434.ebuild,v 1.1 2005/11/03 05:51:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-0.4.434.ebuild,v 1.2 2007/06/26 02:48:53 mr_bones_ Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
@@ -48,7 +48,7 @@ src_compile() {
 	einfo "Building kernel modules"
 	export KSRC="${KERNEL_DIR}"
 	use debug && append-flags -DDEBUG_TCP -DDEBUG_SCSI
-	#S=${S}/kernel 
+	#S=${S}/kernel
 	linux-mod_src_compile || die "failed to build modules"
 	einfo "Building userspace"
 	cd ${S}/usr && emake || die "emake failed"
@@ -57,7 +57,7 @@ src_compile() {
 src_install() {
 	einfo "Installing kernel modules"
 	export KSRC="${KERNEL_DIR}"
-	#S=${S}/kernel 
+	#S=${S}/kernel
 	linux-mod_src_install
 
 	einfo "Installing userspace"

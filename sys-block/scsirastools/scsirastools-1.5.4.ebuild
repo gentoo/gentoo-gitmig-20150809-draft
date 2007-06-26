@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/scsirastools/scsirastools-1.5.4.ebuild,v 1.1 2007/05/24 07:29:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/scsirastools/scsirastools-1.5.4.ebuild,v 1.2 2007/06/26 02:49:19 mr_bones_ Exp $
 
 inherit autotools
 
@@ -28,7 +28,7 @@ src_unpack() {
 	# i386 ELF binaries in tarball = bad
 	rm -f ${S}/files/alarms*
 
-	# Fix up /sbin instances to be /usr/sbin instead	
+	# Fix up /sbin instances to be /usr/sbin instead
 	for i in src/sgraidmon.c src/sgdiskmon.c ; do
 		sed -i ${S}/${i} \
 			-e '/evtcmd\[\].*\"\/sbin\//s,/sbin/,/usr/sbin/,' \

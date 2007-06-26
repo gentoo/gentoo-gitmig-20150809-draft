@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-1.0.514.ebuild,v 1.2 2006/05/23 01:55:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-1.0.514.ebuild,v 1.3 2007/06/26 02:48:53 mr_bones_ Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
@@ -69,7 +69,7 @@ src_compile() {
 src_install() {
 	einfo "Installing kernel modules"
 	export KSRC="${KERNEL_DIR}"
-	#S=${S}/kernel 
+	#S=${S}/kernel
 	linux-mod_src_install
 
 	einfo "Installing userspace"
