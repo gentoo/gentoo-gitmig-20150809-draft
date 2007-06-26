@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.4.1.ebuild,v 1.1 2007/06/24 11:55:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.4.1.ebuild,v 1.2 2007/06/26 02:26:04 mr_bones_ Exp $
 
 inherit eutils perl-module
 
@@ -94,7 +94,7 @@ src_install() {
 
 	dodoc AUTHORS COPYING README USAGE
 
-	# to fix segfault on connect with 
+	# to fix segfault on connect with
 	if has_version '<net-irc/irssi-0.8.11'; then
 		cd ${D}/usr/$(get_libdir)/irssi/modules
 		mv libfe_common_silc.a libfe_silc.a
