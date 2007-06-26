@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68-r5.ebuild,v 1.2 2007/06/25 11:40:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68-r5.ebuild,v 1.3 2007/06/26 17:08:03 pylon Exp $
 
 WANT_AUTOMAKE="1.6"
 WANT_AUTOCONF="latest"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.eng.oar.net/pub/flow-tools/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ~ppc x86"
+KEYWORDS="~amd64 ia64 ppc x86"
 IUSE="mysql postgres debug ssl"
 
 RDEPEND="sys-apps/tcp-wrappers
