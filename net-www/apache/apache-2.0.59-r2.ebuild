@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.59-r2.ebuild,v 1.4 2007/04/09 11:03:44 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.59-r2.ebuild,v 1.5 2007/06/26 02:38:32 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib
 
@@ -261,7 +261,7 @@ src_install () {
 	mv -v usr/sbin/list_hooks.pl usr/sbin/list_hooks2.pl
 	mv -v usr/sbin/logresolve.pl usr/sbin/logresolve2.pl
 	useq ssl && mv -v usr/sbin/ab-ssl usr/sbin/ab2-ssl
-#	useq no-suexec || 
+#	useq no-suexec ||
 	mv -v usr/sbin/suexec usr/sbin/suexec2
 
 	# do the man pages
@@ -271,7 +271,7 @@ src_install () {
 	for i in ab.8 apxs.8 logresolve.8 rotatelogs.8; do
 		mv -v usr/share/man/man8/${i} usr/share/man/man8/${i/./2.}
 	done
-	#useq no-suexec || 
+	#useq no-suexec ||
 	mv -v usr/share/man/man8/suexec.8 usr/share/man/man8/suexec2.8
 
 	mv -v usr/share/man/man8/apachectl.8 usr/share/man/man8/apache2ctl.8
