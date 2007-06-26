@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta7.ebuild,v 1.2 2006/11/13 15:13:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta7.ebuild,v 1.3 2007/06/26 01:45:43 mr_bones_ Exp $
 
 inherit eutils
 
@@ -181,7 +181,7 @@ src_install() {
 		/usr/ti-linux-gnu/tigcc-bin/${GCC_VER}/ti-linux-gnu-gcc
 
 	# install gas
-	# exeinto /usr/ti-linux-gnu/bin <-- a symlink will be 
+	# exeinto /usr/ti-linux-gnu/bin <-- a symlink will be
 	# created so that gas resides in /usr/ti-linux-gnu/bin too
 	cd ${WORKDIR}/build/binutils
 	newexe gas/as-new as
