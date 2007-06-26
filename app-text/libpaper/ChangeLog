@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.25 2007/06/20 14:58:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.26 2007/06/26 18:49:37 pylon Exp $
+
+  26 Jun 2007; Lars Weiler <pylon@gentoo.org> libpaper-1.1.21.ebuild:
+  Stable on ppc; bug #182363.
 
   20 Jun 2007; Jeroen Roovers <jer@gentoo.org> libpaper-1.1.21.ebuild:
   Stable for HPPA (bug #182363).
