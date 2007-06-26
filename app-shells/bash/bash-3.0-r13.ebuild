@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r13.ebuild,v 1.5 2007/02/27 17:02:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r13.ebuild,v 1.6 2007/06/26 01:42:11 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -145,7 +145,7 @@ pkg_preinst() {
 		mv -f "${ROOT}"/etc/bashrc "${ROOT}"/etc/bash/
 	fi
 
-	# our bash_logout is just a place holder so dont 
+	# our bash_logout is just a place holder so dont
 	# force users to go through etc-update all the time
 	if [[ -e ${ROOT}/etc/bash/bash_logout ]] ; then
 		rm -f "${D}"/etc/bash/bash_logout

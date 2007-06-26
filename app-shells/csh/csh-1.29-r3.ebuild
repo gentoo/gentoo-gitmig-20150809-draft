@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r3.ebuild,v 1.16 2007/01/24 03:50:04 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r3.ebuild,v 1.17 2007/06/26 01:42:39 mr_bones_ Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -76,7 +76,7 @@ src_compile() {
 
 	einfo "Adding flags required for succesful compilation..."
 
-	# this should be easier than maintaining a patch. 
+	# this should be easier than maintaining a patch.
 	append-flags -Dlint -w -D__dead="" -D__LIBC12_SOURCE__ -DNODEV="-1"
 	append-flags -DTTYHOG=1024 -DMAXPATHLEN=4096 -D_GNU_SOURCE
 	append-flags -D_DIAGASSERT="assert"
