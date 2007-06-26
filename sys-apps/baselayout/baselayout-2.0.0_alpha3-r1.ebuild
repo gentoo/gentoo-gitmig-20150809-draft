@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_alpha3-r1.ebuild,v 1.1 2007/05/30 22:39:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_alpha3-r1.ebuild,v 1.2 2007/06/26 14:14:19 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -189,7 +189,7 @@ pkg_postinst() {
 		)
 	elif has_version "<sys-apps/${PN}-2.0.0_alpha" ; then
 		# The format has changed since 1.13
-		rm -rf "${ROOT}lib/rcscripts/init.d/daemons"
+		rm -rf "${ROOT}"lib/rcscripts/{init.d/daemons,console}
 	fi
 
 	if [[ ${ROOT} == / ]] && ! use build && ! use bootstrap; then
