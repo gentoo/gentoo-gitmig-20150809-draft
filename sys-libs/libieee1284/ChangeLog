@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libieee1284
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.15 2007/06/18 01:04:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.16 2007/06/26 18:51:52 pylon Exp $
+
+  26 Jun 2007; Lars Weiler <pylon@gentoo.org> libieee1284-0.2.8.ebuild:
+  Stable on ppc; bug #182364.
 
   18 Jun 2007; Christoph Mende <angelos@gentoo.org>
   libieee1284-0.2.8.ebuild:
