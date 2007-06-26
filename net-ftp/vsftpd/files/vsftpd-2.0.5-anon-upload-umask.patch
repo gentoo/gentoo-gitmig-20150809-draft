@@ -1,0 +1,22 @@
+From: Bruno Cornec <Bruno.Cornec@hp.com>
+To: 269193@bugs.debian.org
+Subject: Proposal of patch
+Date: Wed, 2 May 2007 19:51:49 +0200
+
+Hello,
+
+I'm not a Debian contributer, but a Mandriva one.
+Here is the patch I made for the Mandriva cooker package.
+Maybe it could be useful, or at least serve as a base for discussion:
+
+--- vsftpd-2.0.5/postlogin.c.orig       2007-05-02 19:43:54.000000000 +0200
++++ vsftpd-2.0.5/postlogin.c    2007-05-02 19:44:28.000000000 +0200
+@@ -1009,7 +1009,7 @@
+   /* Are we required to chown() this file for security? */
+   if (p_sess->is_anonymous && tunable_chown_uploads)
+   {
+-    vsf_sysutil_fchmod(new_file_fd, 0600);
++    vsf_sysutil_fchmod(new_file_fd, (0777 & ~tunable_anon_umask));
+     if (tunable_one_process_model)
+     {
+       vsf_one_process_chown_upload(p_sess, new_file_fd);
