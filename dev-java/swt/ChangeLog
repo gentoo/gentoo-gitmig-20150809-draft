@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.69 2007/06/20 17:44:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.70 2007/06/26 16:31:57 pylon Exp $
+
+  26 Jun 2007; Lars Weiler <pylon@gentoo.org> swt-3.2.2.ebuild:
+  Stable on ppc; bug #179815.
 
   20 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> -swt-3.2.1.ebuild:
   Remove old version.
