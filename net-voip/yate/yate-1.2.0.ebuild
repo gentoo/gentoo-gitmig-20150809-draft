@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-1.2.0.ebuild,v 1.1 2007/05/01 09:16:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-1.2.0.ebuild,v 1.2 2007/06/26 02:38:01 mr_bones_ Exp $
 
 IUSE="doc gsm gtk h323 ilbc postgres zaptel"
 
@@ -47,7 +47,7 @@ src_compile() {
 	emake all contrib test || die "Building failed"
 
 	if use doc; then
-		emake apidocs || die "Building of API docs failed" 
+		emake apidocs || die "Building of API docs failed"
 	fi
 }
 
