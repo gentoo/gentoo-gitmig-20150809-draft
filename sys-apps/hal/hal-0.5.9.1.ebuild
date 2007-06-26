@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1.ebuild,v 1.2 2007/06/19 20:12:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1.ebuild,v 1.3 2007/06/26 14:03:26 uberlord Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -113,6 +113,7 @@ src_unpack() {
 	cd ${S}
 
 	# Gentoo patchset
+	epatch ${FILESDIR}/0.5.9/07_malloc_h_for_stdlib_h.patch
 	#epatch ${FILESDIR}/0.5.9/95_gentoo_man_page.patch
 	epatch ${FILESDIR}/0.5.9/96_plugdev_allow_send.patch
 	epatch ${FILESDIR}/0.5.9/97_ignore_fixed_drives.patch
