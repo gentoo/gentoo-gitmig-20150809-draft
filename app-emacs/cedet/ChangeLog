@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.22 2007/06/23 09:41:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.23 2007/06/26 06:20:49 ulm Exp $
+
+  26 Jun 2007; Ulrich Mueller <ulm@gentoo.org> cedet-1.0_pre4.ebuild:
+  Call emake with option -j1 w.r.t. bug #183205.
 
 *cedet-1.0_pre4 (23 Jun 2007)
 
