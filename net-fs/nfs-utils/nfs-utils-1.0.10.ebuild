@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.10.ebuild,v 1.14 2007/03/26 08:18:13 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.10.ebuild,v 1.15 2007/06/26 02:24:51 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="nonfsv4 tcpd kerberos"
 
 # kth-krb doesn't provide the right include
-# files, and nfs-utils doesn't build against heimdal either, 
+# files, and nfs-utils doesn't build against heimdal either,
 # so don't depend on virtual/krb.
 # (04 Feb 2005 agriffis)
 RDEPEND="tcpd? ( sys-apps/tcp-wrappers )

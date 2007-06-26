@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.7 2007/05/06 10:14:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.8 2007/06/26 02:24:19 mr_bones_ Exp $
 
 inherit autotools eutils
 
@@ -49,7 +49,7 @@ src_compile() {
 }
 
 src_install () {
-	#these crazy makefiles dont seem to use DESTDIR, but they do use these... 
+	#these crazy makefiles dont seem to use DESTDIR, but they do use these...
 	# (except infodir, but no harm in leaving it there)
 	# see Makeconf.setup in the package
 
@@ -116,7 +116,7 @@ pkg_postinst () {
 
 pkg_config () {
 
-	# Set of default configuration values 
+	# Set of default configuration values
 	local CODA_ROOT_DIR="/var/lib/vice"
 	local CODA_TEST_VOLUME="codatestvol"
 	local CODA_TEST_VOLUME_MOUNTPOINT="test"
@@ -225,7 +225,7 @@ pkg_config () {
 	/etc/init.d/codasrv start || exit 1
 
 	# Workaround to increase the likelihood that the coda server finished
-	# starting up. Once there is a nicer way to detect this, it should 
+	# starting up. Once there is a nicer way to detect this, it should
 	# probably be added to the codasrv init script.
 	# See http://www.coda.cs.cmu.edu/maillists/codalist/codalist-2004/6954.html
 	sleep 5
