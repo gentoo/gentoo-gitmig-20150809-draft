@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/sara-6.0.4.ebuild,v 1.5 2007/05/01 22:27:45 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/sara-6.0.4.ebuild,v 1.6 2007/06/26 02:21:50 mr_bones_ Exp $
 
 DESCRIPTION="SARA Security Auditor's Research Assistant is a derived work of Security Administrator Tool for Analyzing Networks SATAN"
 SRC_URI="http://www-arc.com/sara/downloads/${P}.tgz"
@@ -61,7 +61,7 @@ src_install(){
 	insinto ${SARA_HOME}/perllib; doins perllib/*
 	dodir ${SARA_HOME}/encoded
 	insinto ${SARA_HOME}/encoded; doins encoded/*
-	#html stuff 
+	#html stuff
 
 	dodir ${SARA_HOME}/html
 	dodir ${SARA_HOME}/html/{admin,cve,data,docs,dots,images,reporting,running,search,update}

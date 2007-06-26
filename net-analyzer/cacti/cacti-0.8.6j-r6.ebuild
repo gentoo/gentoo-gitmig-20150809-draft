@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6j-r6.ebuild,v 1.7 2007/06/09 16:12:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6j-r6.ebuild,v 1.8 2007/06/26 02:20:27 mr_bones_ Exp $
 
 inherit eutils webapp depend.apache depend.php
 
@@ -12,7 +12,7 @@ DESCRIPTION="Cacti is a complete frontend to rrdtool"
 HOMEPAGE="http://www.cacti.net/"
 SRC_URI="http://www.cacti.net/downloads/${MY_P}.tar.gz"
 
-# patches 
+# patches
 if [ $HAS_PATCHES == 1 ] ; then
 	UPSTREAM_PATCHES="ping_php_version4_snmpgetnext
 					  tree_console_missing_hosts

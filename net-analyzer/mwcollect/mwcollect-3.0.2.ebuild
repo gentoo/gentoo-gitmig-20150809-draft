@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/mwcollect-3.0.2.ebuild,v 1.2 2007/04/28 17:40:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/mwcollect-3.0.2.ebuild,v 1.3 2007/06/26 02:20:54 mr_bones_ Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_unpack() {
 src_compile() {
 	use debug && export DEBUG="y"
 	# has issues right now
-	#use prelude && export MODULES="log-prelude" 
+	#use prelude && export MODULES="log-prelude"
 
 	emake || die "Make failed"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.4.1-r1.ebuild,v 1.3 2007/05/12 04:01:57 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.4.1-r1.ebuild,v 1.4 2007/06/26 02:21:22 mr_bones_ Exp $
 
 inherit eutils apache-module toolchain-funcs
 
@@ -56,7 +56,7 @@ src_unpack() {
 	epatch ${FILESDIR}/nagios-1.x-Makefile-asneeded.diff
 	epatch ${WORKDIR}/nagios-1.x-Makefile-distclean-gentoo.diff
 
-	# libpq-fe.h isnt in psgql/ 
+	# libpq-fe.h isnt in psgql/
 	cd xdata/
 	sed -i -e "s:pgsql/::" *.c
 }
