@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.2.ebuild,v 1.1 2007/03/21 04:51:17 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.2.ebuild,v 1.2 2007/06/26 03:01:22 mr_bones_ Exp $
 
 DESCRIPTION="Collection of IceWM themes"
 HOMEPAGE="http://www.icewm.org/
@@ -48,12 +48,12 @@ SLOT="0"
 
 ## GPL-2:
 # icecrack, icebox, cyrus-icewm, ufosightings, axxlite, phaaba,
-# winclassic, elberg, gertplastic, cruxteal, truecurve, bluecrux, 
+# winclassic, elberg, gertplastic, cruxteal, truecurve, bluecrux,
 # silverxp
 ## Public Domain:
 # greyscaled
 ## Freedist:
-# 1in1-xp 
+# 1in1-xp
 ## Free for non commercial use:
 # qnx_icewm, kliin, miigy4
 ## BSD:

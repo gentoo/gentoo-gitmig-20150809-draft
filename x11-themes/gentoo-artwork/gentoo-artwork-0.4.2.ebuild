@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2.ebuild,v 1.4 2007/03/05 19:24:05 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2.ebuild,v 1.5 2007/06/26 03:00:58 mr_bones_ Exp $
 
 BI_VER="20060811"
 
@@ -49,7 +49,7 @@ src_unpack() {
 
 	mv ${S}/pixmaps/1280x1024/gentoo-freedom-1280x1024,jpg \
 		${S}/pixmaps/1280x1024/gentoo-freedom-1280x1024.jpg
-	
+
 	# remove misspelled files
 	rm ${S}/icons/gentoo/{32x32,48x48,64x64}/slypheed.png
 
