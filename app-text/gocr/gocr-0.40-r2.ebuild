@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.40-r2.ebuild,v 1.7 2007/03/13 08:03:42 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.40-r2.ebuild,v 1.8 2007/06/26 01:43:36 mr_bones_ Exp $
 
 inherit eutils
 
@@ -56,7 +56,7 @@ src_install() {
 		insinto /usr/share/doc/${P}/examples
 		doins ${S}/examples/*.{fig,tex,pcx}
 	fi
-	# and then install all the docs	
+	# and then install all the docs
 	dodoc ${DOCS}
 
 }

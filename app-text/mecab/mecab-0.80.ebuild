@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.80.ebuild,v 1.8 2005/11/26 16:50:19 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.80.ebuild,v 1.9 2007/06/26 01:44:30 mr_bones_ Exp $
 
-# need one of ipadic-2.4.4/2.5.0/2.5.1 
+# need one of ipadic-2.4.4/2.5.0/2.5.1
 MY_IPADIC="ipadic-2.5.1"
 
 DESCRIPTION="Yet Another Part-of-Speech and Morphological Analyzer"

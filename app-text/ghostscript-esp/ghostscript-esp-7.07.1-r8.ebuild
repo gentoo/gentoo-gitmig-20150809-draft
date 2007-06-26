@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.12 2006/10/21 11:12:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.13 2007/06/26 01:43:11 mr_bones_ Exp $
 
 inherit flag-o-matic eutils toolchain-funcs libtool
 
@@ -106,7 +106,7 @@ src_compile() {
 	myconf="--with-ijs --without-gimp-print"
 	use gtk && myconf="${myconf} --with-omni" || myconf="${myconf} --without-omni"
 
-	# bug #56998, only compiled-in fontpath is searched when running 
+	# bug #56998, only compiled-in fontpath is searched when running
 	# gs -DPARANOIDSAFER out.ps
 	myconf="${myconf} --with-fontconfig --with-fontpath=/usr/share/fonts:/usr/share/fonts/ttf/zh_TW:/usr/share/fonts/ttf/zh_CN:/usr/share/fonts/arphicfonts:/usr/share/fonts/ttf/korean/baekmuk:/usr/share/fonts/baekmuk-fonts:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/kochi-substitute"
 

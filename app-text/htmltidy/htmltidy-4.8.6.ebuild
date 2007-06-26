@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-4.8.6.ebuild,v 1.21 2007/04/12 19:05:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-4.8.6.ebuild,v 1.22 2007/06/26 01:44:05 mr_bones_ Exp $
 
 WANT_AUTOMAKE=1.5
 WANT_AUTOCONF=2.5
@@ -73,7 +73,7 @@ src_install() {
 
 	cd ${S}/htmldoc
 	# It seems the manual page installation in the Makefile's
-	# is commented out, so we need to install manually 
+	# is commented out, so we need to install manually
 	# for the moment. Please check this on updates.
 	mv man_page.txt tidy.1
 	doman tidy.1
