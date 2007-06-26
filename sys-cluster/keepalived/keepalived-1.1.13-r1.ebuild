@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.13-r1.ebuild,v 1.1 2007/04/28 07:24:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.13-r1.ebuild,v 1.2 2007/06/26 02:50:56 mr_bones_ Exp $
 
 inherit flag-o-matic autotools
 
@@ -49,7 +49,7 @@ src_compile() {
 
 	use debug && myconf="${myconf} --enable-debug"
 
-	# disable -fomit-frame-pointer for profiling	
+	# disable -fomit-frame-pointer for profiling
 	if use profile; then
 		filter-flags -fomit-frame-pointer
 		myconf="${myconf} --enable-profile"
@@ -64,7 +64,7 @@ src_install() {
 	emake -j1 install DESTDIR="${D}" || die "emake install failed"
 
 	newinitd ${FILESDIR}/init-keepalived keepalived
-	
+
 	dodoc doc/keepalived.conf.SYNOPSIS
 	dodoc README CONTRIBUTORS INSTALL VERSION ChangeLog AUTHOR TODO
 

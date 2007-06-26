@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.2.6_p13-r1.ebuild,v 1.3 2006/09/25 05:56:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.2.6_p13-r1.ebuild,v 1.4 2007/06/26 02:51:21 mr_bones_ Exp $
 
 inherit multilib
 
@@ -23,7 +23,7 @@ src_compile() {
 
 	# Torque on Gentoo installs libnet.a, which clobbers libnet.a from libnet.
 	# (Stupid developers.) Unfortunately, libnet also installs libnet.so, which
-	# Torque doesn't clobber, so when running make we end up linking against 
+	# Torque doesn't clobber, so when running make we end up linking against
 	# .so rather than .a. Big problem. Fix it.
 
 	sed -i -e "s~-lnet~/usr/$(get_libdir)/pbs/libnet.a~" Makefile

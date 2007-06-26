@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.7 2006/05/23 01:58:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.8 2007/06/26 02:50:30 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -73,7 +73,7 @@ src_unpack() {
 		CHARM_OPTS="${CHARM_OPTS} icc"
 	fi
 
-	# CMK optimization 
+	# CMK optimization
 	if use cmkopt; then
 		append-flags -DCMK_OPTIMIZE=1
 	fi
@@ -105,7 +105,7 @@ src_install() {
 	dobin ./charmd ./charmd_faceless ./charmr* ./charmc ./charmxi \
 		./conv-cpm ./dep.pl || die "Failed to install binaries"
 
-	# install headers	
+	# install headers
 	cd "${S}"/include
 	insinto /usr/include/${P}
 	doins * || die "failed to install header files"
