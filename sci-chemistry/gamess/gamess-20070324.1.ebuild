@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.1.ebuild,v 1.1 2007/04/17 21:14:36 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.1.ebuild,v 1.2 2007/06/26 02:39:48 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -67,7 +67,7 @@ src_unpack() {
 	sed -e "s:NEO=false:NEO=true:" -i compall lked || \
 		die "Failed to enable NEO code"
 
-	# greate proper activate sourcefile 
+	# greate proper activate sourcefile
 	cp "./tools/actvte.code" "./tools/actvte.f" || \
 		die || "Failed to create actvte.f"
 	sed -e "s/^\*UNX/    /" -i "./tools/actvte.f" || \
@@ -95,7 +95,7 @@ src_unpack() {
 			-i comp || die "Failed setting up comp script"
 	fi
 
-	# use proper blas 
+	# use proper blas
 	if ! use blas || [[ "${FORTRANC}" = "ifc" ]]; then
 		sed -e "s|/usr/lib/libblas.a|/usr/lib/dontuselibblas.a|" \
 			-i lked || die "Failed to adjust blas in lked"

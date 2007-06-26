@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.2.1.ebuild,v 1.1 2007/04/03 15:54:17 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.2.1.ebuild,v 1.2 2007/06/26 02:40:55 mr_bones_ Exp $
 
 inherit eutils fortran multilib flag-o-matic distutils
 
@@ -51,7 +51,7 @@ src_install() {
 	insinto "${INPATH}"/dat
 	doins dat/* || die "Installing data failed."
 
-	# generate pdb2pqr wrapper 
+	# generate pdb2pqr wrapper
 	cat >> "${T}"/${PN} << EOF
 #!/bin/sh
 ${python} ${INPATH}/${PN}.py \$*

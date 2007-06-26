@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r1.ebuild,v 1.5 2006/10/05 09:16:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r1.ebuild,v 1.6 2007/06/26 02:40:33 mr_bones_ Exp $
 
 inherit fortran
 
@@ -72,7 +72,7 @@ src_install() {
 
 	dodoc CHANGES CITATION README || die "failed to install docs"
 
-	# make extended docs 
+	# make extended docs
 	if use doc; then
 		cd "${S}"/doc
 		make all || die "failed to generate documentation"

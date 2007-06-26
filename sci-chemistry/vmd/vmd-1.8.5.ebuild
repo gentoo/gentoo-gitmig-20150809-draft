@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.6 2007/01/07 17:37:06 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.7 2007/06/26 02:41:20 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs python
 
@@ -44,7 +44,7 @@ src_unpack() {
 	# apply LINUX-arch patches to vmd configure
 	epatch "${FILESDIR}"/${P}-config-gentoo.patch
 
-	# prepare the plugins 
+	# prepare the plugins
 
 	cd "${WORKDIR}"/plugins
 
@@ -123,7 +123,7 @@ src_install() {
 	PLUGINDIR=${D}/usr/$(get_libdir)/${PN}/plugins make distrib || \
 		die "failed to install plugins"
 
-	# install vmd 
+	# install vmd
 	cd "${S}"/src
 	make install || die "failed to install vmd"
 
@@ -136,7 +136,7 @@ src_install() {
 	cd "${S}"
 	dodoc Announcement README doc/ig.pdf doc/ug.pdf
 
-	# remove some of the things we don't want and need in 
+	# remove some of the things we don't want and need in
 	# /usr/lib
 	cd "${D}"/usr/$(get_libdir)/vmd
 	rm -fr doc README Announcement LICENSE || \

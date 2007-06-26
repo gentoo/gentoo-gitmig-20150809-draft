@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e.ebuild,v 1.5 2006/01/18 05:46:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e.ebuild,v 1.6 2007/06/26 02:40:09 mr_bones_ Exp $
 
 IUSE=""
 
@@ -29,7 +29,7 @@ src_compile() {
 #It should be safe to select an optimization which means "treat all
 #function arguments as restricted pointers which are not aliased to
 #any other object".  OPT is used for less preformance-critical modules
-#and may be set to a lower level of optimization than OPT2. 
+#and may be set to a lower level of optimization than OPT2.
 
 	OPT=${CFLAGS} OPT2=${CFLAGS} \
 	./configure --prefix=/usr \
