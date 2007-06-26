@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.1.ebuild,v 1.3 2007/05/30 12:52:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.1.ebuild,v 1.4 2007/06/26 02:43:53 mr_bones_ Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
@@ -80,7 +80,7 @@ src_compile() {
 	local myopts
 	myopts="${myopts} --with-atlas-library=/usr/$(get_libdir)"
 
-	# the tk interface is the default 
+	# the tk interface is the default
 	myopts="${myopts} --with-tk"
 
 	if [[ ${FORTRANC} == gfortran ]]; then
@@ -113,8 +113,8 @@ src_install() {
 	insinto /usr/$(get_libdir)/${P}
 	doins Makefile.incl || die "failed to install Makefile.incl"
 
-	# The compile and install process causes the work folder 
-	# to be registered as the runtime folder in many files. 
+	# The compile and install process causes the work folder
+	# to be registered as the runtime folder in many files.
 	# This is corrected here.
 	BAD_REF="${WORKDIR}/${P}"
 	FIXED_REF="/usr/$(get_libdir)/${P}"

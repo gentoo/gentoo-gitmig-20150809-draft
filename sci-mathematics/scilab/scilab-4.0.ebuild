@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.11 2007/03/01 23:10:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.12 2007/06/26 02:43:53 mr_bones_ Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
@@ -106,8 +106,8 @@ src_install() {
 	insinto /usr/share/${PN}/
 	doins -r examples/ || die "failed to install examples"
 
-	# The compile and install process causes the work folder 
-	# to be registered as the runtime folder in many files. 
+	# The compile and install process causes the work folder
+	# to be registered as the runtime folder in many files.
 	# This is corrected here.
 	BAD_REF="${WORKDIR}/${P}"
 	FIXED_REF="/usr/$(get_libdir)/${P}"
