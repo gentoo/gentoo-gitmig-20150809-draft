@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.3.2-r1.ebuild,v 1.1 2006/01/29 20:05:41 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.3.2-r1.ebuild,v 1.2 2007/06/26 02:45:02 mr_bones_ Exp $
 
 # Set SMP="no" to force disable of SMP compilation.
 # Set SMP="yes" to force enable of SMP compilation.
@@ -99,7 +99,7 @@ src_compile() {
 		`use_with imagemagick magick` \
 		${myconf} || die
 
-	#		`use_with java javadx` 
+	#		`use_with java javadx`
 	# This is broken
 	#	`use_enable doc installhtml`
 
