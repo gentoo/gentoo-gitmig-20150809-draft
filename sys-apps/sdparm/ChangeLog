@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.26 2007/05/23 20:25:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.27 2007/06/26 21:29:32 pylon Exp $
+
+  26 Jun 2007; Lars Weiler <pylon@gentoo.org> sdparm-1.01.ebuild:
+  Stable on ppc; bug #183310.
 
   23 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> sdparm-1.01.ebuild:
   Stable on sparc
