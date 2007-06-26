@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.2.2.ebuild,v 1.10 2007/05/21 10:31:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.2.2.ebuild,v 1.11 2007/06/26 23:19:09 mr_bones_ Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.8"
@@ -51,7 +51,6 @@ DEPEND="${RDEPEND}
 	x11-libs/libXt"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
-
 
 pkg_setup() {
 	G2CONF="--disable-scrollkeeper \
