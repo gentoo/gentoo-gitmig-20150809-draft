@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.27.ebuild,v 1.6 2007/04/18 19:44:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.27.ebuild,v 1.7 2007/06/26 18:26:03 dertobi123 Exp $
 
 inherit eutils
 
 DESCRIPTION="Postgrey is a Postfix policy server implementing greylisting"
-SRC_URI="http://isg.ee.ethz.ch/tools/${PN}/pub/${P}.tar.gz
-		http://isg.ee.ethz.ch/tools/${PN}/pub/old/${P}.tar.gz"
-HOMEPAGE="http://isg.ee.ethz.ch/tools/postgrey/"
+SRC_URI="http://postgrey.schweikert.ch/pub/${P}.tar.gz
+			http://postgrey.schweikert.ch/pub/old/${P}.tar.gz"
+HOMEPAGE="http://postgrey.schweikert.ch/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""

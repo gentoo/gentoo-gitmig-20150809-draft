@@ -1,6 +1,15 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.27 2007/04/18 19:44:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.28 2007/06/26 18:26:03 dertobi123 Exp $
+
+*postgrey-1.28 (26 Jun 2007)
+
+  26 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  postgrey-1.21-r2.ebuild, postgrey-1.24.ebuild, postgrey-1.27.ebuild,
+  +postgrey-1.28.ebuild:
+  Version bump per bug #183038, added new dev-perl/Parse-Syslog dependency
+  needed for the policy-test script which has been added to postgrey.
+  Fixed HOMEPAGE and SCR_URI per bug #182761.
 
   18 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> postgrey-1.27.ebuild:
   Keyworded ~sparc wrt #172399
