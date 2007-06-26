@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Parse-Syslog
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Syslog/ChangeLog,v 1.1 2007/06/26 17:49:00 ian Exp $
+
+*Parse-Syslog-1.09 (26 Jun 2007)
+
+  26 Jun 2007; Christian Hartmann <ian@gentoo.org> +metadata.xml,
+  +Parse-Syslog-1.09.ebuild:
+  New package requested by dertobi123
+
