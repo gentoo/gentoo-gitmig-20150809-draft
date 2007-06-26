@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/altermime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.12 2007/06/24 23:32:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.13 2007/06/26 18:25:49 pylon Exp $
+
+  26 Jun 2007; Lars Weiler <pylon@gentoo.org> altermime-0.3.7.ebuild:
+  Stable on ppc; bug #180228.
 
   24 Jun 2007; Christoph Mende <angelos@gentoo.org> altermime-0.3.7.ebuild:
   Stable on amd64 wrt bug 180228
