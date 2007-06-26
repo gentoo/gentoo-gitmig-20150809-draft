@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.14.2.ebuild,v 1.13 2007/01/30 16:39:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.14.2.ebuild,v 1.14 2007/06/26 02:06:48 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -53,7 +53,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.10.0-esd_switch.patch
 
 	#Remove libnotify autocheck so we don't link against it ever. Upstream
-	#hasn't decided on any notification standards yet so we don't want to 
+	#hasn't decided on any notification standards yet so we don't want to
 	#support notification support at this time
 	epatch ${FILESDIR}/${PN}-2.14.0-no_libnotify.patch
 
