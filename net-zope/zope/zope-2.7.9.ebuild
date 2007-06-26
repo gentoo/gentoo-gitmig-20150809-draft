@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.9.ebuild,v 1.6 2006/09/03 15:39:30 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.9.ebuild,v 1.7 2007/06/26 02:39:00 mr_bones_ Exp $
 
 inherit eutils
 
@@ -55,7 +55,7 @@ src_install() {
 	dodoc doc/*.txt
 	docinto PLATFORMS ; dodoc doc/PLATFORMS/*
 
-	# Patched StructuredText will accept source text formatted in utf-8 encoding, 
+	# Patched StructuredText will accept source text formatted in utf-8 encoding,
 	# apply all formattings and output utf-8 encoded text.
 	# if you want to use this option you need to set your
 	# system python encoding to utf-8 (create the file sitecustomize.py inside
