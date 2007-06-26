@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.12.ebuild,v 1.2 2007/06/25 22:57:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.12.ebuild,v 1.3 2007/06/26 03:14:22 mr_bones_ Exp $
 
 WANT_AUTOCONF="2.1"
 
