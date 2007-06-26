@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20060306.ebuild,v 1.1 2006/03/11 11:17:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20060306.ebuild,v 1.2 2007/06/26 01:33:38 mr_bones_ Exp $
 
 inherit eutils portability
 
@@ -20,7 +20,7 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# IDcheck patch not needed anymore, superseded by CREATE=0	
+	# IDcheck patch not needed anymore, superseded by CREATE=0
 	epatch ${FILESDIR}/runltp-path.patch
 
 	# All that remains of bad perl paths
