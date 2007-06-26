@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfburn/xfburn-0.3.0_pre20070616.ebuild,v 1.2 2007/06/16 19:12:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfburn/xfburn-0.3.0_pre20070616.ebuild,v 1.3 2007/06/26 12:14:07 drac Exp $
 
 inherit xfce44
 
 xfce44
 
-DESCRIPTION="a GTK+ cd burning application"
+DESCRIPTION="GTK+ based CD and DVD burning application"
 HOMEPAGE="http://www.xfce.org/projects/xfburn"
 SRC_URI="http://dev.gentooexperimental.org/~drac/distfiles/${P}.tar.bz2"
 
@@ -31,3 +31,11 @@ if use minimal; then
 fi
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+pkg_postinst() {
+	xfce44_pkg_postinst
+
+	elog
+	elog "DVD burning support is incomplete in this version."
+	elog
+}
