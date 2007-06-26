@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r4.ebuild,v 1.7 2006/12/31 17:05:34 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r4.ebuild,v 1.8 2007/06/26 01:54:41 mr_bones_ Exp $
 
 inherit python toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND="=sys-libs/slang-1*
 
 src_unpack() {
 	unpack ${A}
-	# bug 73850 
+	# bug 73850
 	if use elibc_uclibc; then
 		sed -i -e 's:-lslang:-lslang -lncurses:g' ${S}/Makefile.in
 	fi

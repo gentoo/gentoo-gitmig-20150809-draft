@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/qsa-1.1.5.ebuild,v 1.1 2007/03/14 21:40:21 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/qsa-1.1.5.ebuild,v 1.2 2007/06/26 01:55:07 mr_bones_ Exp $
 
 inherit eutils qt3
 
@@ -76,7 +76,7 @@ src_install() {
 	insinto ${QTDIR}/lib
 	doins lib/libqsa.prl
 
-	#QSA plugin (SEditor) for Qt designer 
+	#QSA plugin (SEditor) for Qt designer
 	insinto ${QTDIR}/plugins/designer
 	doins plugins/designer/libqseditorplugin.so
 

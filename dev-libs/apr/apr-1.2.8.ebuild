@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.8.ebuild,v 1.11 2007/06/15 15:43:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.8.ebuild,v 1.12 2007/06/26 01:53:00 mr_bones_ Exp $
 
 inherit autotools
 
@@ -20,7 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# for some reason not all the .m4 files that are referenced in 
+	# for some reason not all the .m4 files that are referenced in
 	# configure.in exist, so we remove all references and include every
 	# .m4 file in build using aclocal via eautoreconf
 	# See bug 135463

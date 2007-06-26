@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6-r2.ebuild,v 1.2 2006/12/31 17:05:34 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6-r2.ebuild,v 1.3 2007/06/26 01:54:41 mr_bones_ Exp $
 
 inherit python toolchain-funcs eutils flag-o-matic
 
@@ -30,7 +30,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-assorted-fixes.patch || die
 	epatch ${FILESDIR}/${P}-do-not-ignore-EARLY-events-in-listbox--and-allow-textbox-to-take-focus.patch || die
 
-	# bug 73850 
+	# bug 73850
 	if use elibc_uclibc; then
 		sed -i -e 's:-lslang:-lslang -lncurses:g' ${S}/Makefile.in
 	fi

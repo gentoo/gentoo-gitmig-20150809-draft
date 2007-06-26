@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/libwbxml-0.9.0.ebuild,v 1.3 2006/06/25 06:14:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/libwbxml-0.9.0.ebuild,v 1.4 2007/06/26 01:53:49 mr_bones_ Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_unpack()
 	# Add optional Nokia 6600 support
 	use nokia6600 && epatch ${FILESDIR}/${MY_P}.nokia-6600.patch
 
-	# Remove ./configure stuff from the bootstrap script, 
+	# Remove ./configure stuff from the bootstrap script,
 	# we will handle that step directly
 	subst="./configure --prefix=/usr"
 	sed -i -e "s:${subst}:#${subst}:" bootstrap

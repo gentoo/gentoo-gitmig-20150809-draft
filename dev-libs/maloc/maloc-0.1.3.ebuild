@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/maloc-0.1.3.ebuild,v 1.3 2006/10/12 14:04:41 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/maloc-0.1.3.ebuild,v 1.4 2007/06/26 01:54:13 mr_bones_ Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_compile() {
 		myconf="${myconf} --enable-mpi"
 	fi
 
-	# configure 
+	# configure
 	econf ${myconf} || die "configure failed"
 
 	# fix install location of libs in Makefile

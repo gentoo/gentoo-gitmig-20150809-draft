@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.8.ebuild,v 1.3 2007/06/19 17:40:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.8.ebuild,v 1.4 2007/06/26 01:53:26 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -35,7 +35,7 @@ src_unpack() {
 
 	pushd libffi
 	epatch ${DISTDIR}/${P}-gcc-4.2.0.patch.bz2
-	epatch ${FILESDIR}/${PV}-fix-gcc-4.2.0-libffi.patch 
+	epatch ${FILESDIR}/${PV}-fix-gcc-4.2.0-libffi.patch
 	popd
 
 	AT_M4DIR="${S}/m4" eautoreconf
