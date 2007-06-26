@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/cairomm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.10 2007/06/12 20:06:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.11 2007/06/26 20:58:25 gustavoz Exp $
+
+  26 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> cairomm-1.2.4.ebuild:
+  Stable on sparc wrt #180420
 
   12 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> cairomm-1.2.4.ebuild:
   Add ~x86-fbsd keyword.

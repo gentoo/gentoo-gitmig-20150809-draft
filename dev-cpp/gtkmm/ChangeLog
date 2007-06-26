@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.113 2007/06/12 20:07:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.114 2007/06/26 20:59:18 gustavoz Exp $
+
+  26 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> gtkmm-2.10.9.ebuild:
+  Stable on sparc wrt #180420
 
   12 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> gtkmm-2.10.9.ebuild:
   Add ~x86-fbsd keyword.
