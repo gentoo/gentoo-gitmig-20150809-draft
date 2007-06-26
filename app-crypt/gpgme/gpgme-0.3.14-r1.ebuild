@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.20 2007/02/16 22:15:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.21 2007/06/26 01:34:07 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -80,7 +80,7 @@ src_compile() {
 	fi
 
 	# For gnugpg-1.9+
-	# 		$(use_with smime gpgsm /usr/bin/gpgsm) 
+	# 		$(use_with smime gpgsm /usr/bin/gpgsm)
 	#
 
 	econf \
