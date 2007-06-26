@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.42 2007/05/19 09:31:44 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.43 2007/06/26 16:52:05 uberlord Exp $
+
+*dash-0.5.3.8 (26 Jun 2007)
+
+  26 Jun 2007; Roy Marples <uberlord@gentoo.org>
+  +files/dash-0.5.3-read-length.patch, +dash-0.5.3.8.ebuild:
+  Use new debian patchset.
+  Add patch from Harald van Dijk to fix reading certain line lengths.
 
 *dash-0.5.3.7-r1 (19 May 2007)
 
