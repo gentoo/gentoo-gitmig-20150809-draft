@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437.ebuild,v 1.2 2007/05/13 09:28:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437.ebuild,v 1.3 2007/06/26 02:37:13 mr_bones_ Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -45,7 +45,7 @@ src_install() {
 	insinto ${init_dir}
 	cp -pPR initscripts/* "${D}"/${init_dir}
 
-	# Fixes permissions for bug 155865 
+	# Fixes permissions for bug 155865
 	chmod 700 "${D}"/usr/share/pykota/cupspykota
 
 	for doc in ${DOCS}; do

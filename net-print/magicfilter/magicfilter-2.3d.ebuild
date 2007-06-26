@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/magicfilter-2.3d.ebuild,v 1.1 2005/06/01 00:25:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/magicfilter-2.3d.ebuild,v 1.2 2007/06/26 02:36:52 mr_bones_ Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 		--filterdir=${D}/usr/share/magicfilter/filters \
 		${myconf}
 
-	# Fix headers in filters	
+	# Fix headers in filters
 	cd filters
 	for f in *.def; do
 		mv $f $f.old
