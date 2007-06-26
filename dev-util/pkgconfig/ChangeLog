@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.60 2007/06/26 10:41:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.61 2007/06/26 15:53:14 jer Exp $
+
+  26 Jun 2007; Jeroen Roovers <jer@gentoo.org> pkgconfig-0.21-r1.ebuild:
+  Stable for HPPA (bug #182981).
 
   26 Jun 2007; Joseph Jezak <josejx@gentoo.org> pkgconfig-0.21-r1.ebuild:
   Marked ppc stable for bug #182981.
