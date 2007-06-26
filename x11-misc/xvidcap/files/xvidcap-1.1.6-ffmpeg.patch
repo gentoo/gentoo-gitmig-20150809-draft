@@ -1,0 +1,23 @@
+diff -ur xvidcap-1.1.6.orig/configure.in xvidcap-1.1.6/configure.in
+--- xvidcap-1.1.6.orig/configure.in	2007-05-29 23:39:43.000000000 +0300
++++ xvidcap-1.1.6/configure.in	2007-06-26 18:59:28.000000000 +0300
+@@ -402,7 +402,7 @@
+ 
+ 
+ # only use ffmpeg if ALL required libs are present
+-if ( `test x$ac_cv_lib_avcodec_avcodec_encode_video = xyes -a x$ac_cv_lib_avformat_av_write_header = xyes -a x$ac_cv_lib_avutil_av_rescale = xyes -a x$ac_cv_lib_swscale_sws_scale = xyes` ) ; then
++if ( `test x$ac_cv_lib_avcodec_avcodec_encode_video = xyes -a x$ac_cv_lib_avformat_av_write_header = xyes -a x$ac_cv_lib_avutil_av_rescale = xyes` ) ; then
+     ac_cv_lib_avcodec_avcodec_encode_video=yes
+ else
+     ac_cv_lib_avcodec_avcodec_encode_video=no
+diff -ur xvidcap-1.1.6.orig/src/xtoffmpeg.c xvidcap-1.1.6/src/xtoffmpeg.c
+--- xvidcap-1.1.6.orig/src/xtoffmpeg.c	2007-05-13 01:24:22.000000000 +0300
++++ xvidcap-1.1.6/src/xtoffmpeg.c	2007-06-26 19:07:30.000000000 +0300
+@@ -58,7 +58,6 @@
+ // ffmpeg stuff
+ #include <ffmpeg/avcodec.h>
+ #include <ffmpeg/avformat.h>
+-#include <ffmpeg/dsputil.h>
+ #include <ffmpeg/swscale.h>
+ #include <ffmpeg/rgb2rgb.h>
+ #include <ffmpeg/fifo.h>
