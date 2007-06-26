@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.6 2007/06/22 21:37:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.7 2007/06/26 18:24:24 josejx Exp $
+
+  26 Jun 2007; Joseph Jezak <josejx@gentoo.org> orca-2.18.0.ebuild,
+  orca-2.18.1.ebuild:
+  Added ~ppc.
 
   22 Jun 2007; Jeroen Roovers <jer@gentoo.org> orca-2.18.0.ebuild,
   orca-2.18.1.ebuild:
