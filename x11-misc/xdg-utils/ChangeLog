@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.27 2007/06/25 18:02:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.28 2007/06/26 03:54:02 jer Exp $
+
+  26 Jun 2007; Jeroen Roovers <jer@gentoo.org> xdg-utils-1.0.1.ebuild:
+  Stable for HPPA (bug #183052).
 
   25 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   xdg-utils-1.0.1.ebuild:
