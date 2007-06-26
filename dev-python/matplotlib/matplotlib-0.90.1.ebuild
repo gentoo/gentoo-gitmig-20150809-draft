@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.1.ebuild,v 1.1 2007/06/05 12:02:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.1.ebuild,v 1.2 2007/06/26 12:23:56 lucass Exp $
 
 NEED_PYTHON=2.3
 
-inherit distutils python
+inherit distutils
 
 DOC_PV=0.90.0
 
@@ -35,7 +35,7 @@ DEPEND="|| (
 DOCS="INTERACTIVE API_CHANGES NUMARRAY_ISSUES"
 
 pkg_setup() {
-	use tk && python_tkinter_exists
+	use tk && distutils_python_tkinter
 }
 
 src_unpack() {

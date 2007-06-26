@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.31 2007/06/05 12:02:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.32 2007/06/26 12:23:56 lucass Exp $
+
+  26 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -files/matplotlib-0.87.7-no-autodetect.patch,
+  -files/matplotlib-0.90.0-init.patch, -files/matplotlib-0.90.0-setup.patch,
+  -matplotlib-0.87.7.ebuild, -matplotlib-0.90.0.ebuild,
+  matplotlib-0.90.1.ebuild:
+  Dropped old versions. Removed unnecessary inherit python.
 
 *matplotlib-0.90.1 (05 Jun 2007)
 
