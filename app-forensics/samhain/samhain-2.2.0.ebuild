@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.2.0.ebuild,v 1.5 2007/04/28 12:58:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.2.0.ebuild,v 1.6 2007/06/26 01:39:37 mr_bones_ Exp $
 
 KEYWORDS="~x86"
 DESCRIPTION="Advanced file integrity and intrusion detection tool."
@@ -22,7 +22,7 @@ DEPEND="crypt? ( >=app-crypt/gnupg-1.2 )
 
 # Samhain stealth mode options
 #
-# If you would like to enable stealth mode, please set and uncomment the 
+# If you would like to enable stealth mode, please set and uncomment the
 # following options or pass them as enviroment variables when emerging
 # the package (like INSTALL_NAME="asd" emerge samhain).
 # If you set the variables here, don't forget to redigest the ebuild by
