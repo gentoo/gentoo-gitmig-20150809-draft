@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-0.98p.ebuild,v 1.1 2005/12/04 21:14:52 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-0.98p.ebuild,v 1.2 2007/06/26 02:44:15 mr_bones_ Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ GATO_DOC="${WORKDIR}"/Doc
 src_unpack() {
 	unpack ${A}
 
-	# convert to python2.4 
+	# convert to python2.4
 	epatch "${FILESDIR}"/gato-python2.4-gentoo.patch
 
 	cd "${S}"
