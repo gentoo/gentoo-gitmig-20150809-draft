@@ -1,6 +1,10 @@
 # ChangeLog for net-www/vdradmin-am
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.18 2007/06/04 11:58:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.19 2007/06/26 17:06:43 zzam Exp $
+
+  26 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  -files/vdradmin-am-3.4.7_opera-search.diff, -vdradmin-am-3.4.7-r1.ebuild:
+  Removed old ebuild.
 
   04 Jun 2007; Matthias Schwarzott <zzam@gentoo.org> files/vdradmin-2:
   Remove some bashisms.
