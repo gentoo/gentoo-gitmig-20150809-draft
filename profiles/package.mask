@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7405 2007/06/26 20:59:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7406 2007/06/26 21:30:34 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -857,10 +857,6 @@ dev-db/monetdb
 # Unmasking due to removal being canceled.
 # Updated ebuild addresses current bugs.
 #app-misc/gpsdrive
-
-# Grant Goodyear <g2boojum@gentoo.org> (10 Oct 2006)
-# mask gnuplot rc
-=sci-visualization/gnuplot-4.2*
 
 # Alexis Ballier <aballier@gentoo.org> (10 Oct 2006)
 # Masking newest version
