@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.9.23.ebuild,v 1.4 2006/11/23 15:49:26 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.9.23.ebuild,v 1.5 2007/06/26 02:04:02 mr_bones_ Exp $
 
 inherit eutils qt3
 
@@ -43,7 +43,7 @@ RDEPEND="$(qt_min_version 3.2)
 #	cd "${S}"
 #	epatch "${FILESDIR}"/${PN}-1.0.6-configure-CFLAGS.patch
 
-	# replace braindead Makefile (it's getting better, but 
+	# replace braindead Makefile (it's getting better, but
 	# still has the stupid symlink stuff)
 #	rm Makefile*
 #	cp "${FILESDIR}/Makefile.am-1.0_rc2" ./Makefile.am

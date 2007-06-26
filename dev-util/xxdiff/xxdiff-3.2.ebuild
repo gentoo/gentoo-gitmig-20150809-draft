@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.2.ebuild,v 1.7 2007/04/21 19:09:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.2.ebuild,v 1.8 2007/06/26 02:05:52 mr_bones_ Exp $
 
 inherit distutils eutils kde-functions
 
@@ -53,7 +53,7 @@ src_install () {
 
 	dobin bin/xxdiff bin/xx-cvs-diff bin/xx-encrypted bin/xx-find-grep-sed bin/xx-match
 	doman src/xxdiff.1
-	dodoc README CHANGES TODO 
+	dodoc README CHANGES TODO
 	cd doc
 	dodoc xxdiff-doc.html
 }

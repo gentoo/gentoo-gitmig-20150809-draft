@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.35.ebuild,v 1.1 2007/06/21 08:52:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.35.ebuild,v 1.2 2007/06/26 02:04:27 mr_bones_ Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
@@ -34,7 +34,7 @@ pkg_setup() {
 src_compile() {
 	local myconf="$(use_enable nls) \
 		$(use_enable ipv6)"
-	#lvcargnini modifications 
+	#lvcargnini modifications
 	epatch "${FILESDIR}"/${P}-numeric-vocab.patch
 
 	# more aggressive optimizations cause trouble with the crypto library

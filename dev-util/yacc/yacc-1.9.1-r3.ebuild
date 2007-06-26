@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r3.ebuild,v 1.1 2007/01/17 13:07:13 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r3.ebuild,v 1.2 2007/06/26 02:06:19 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -43,7 +43,7 @@ src_install() {
 
 pkg_preinst() {
 	# bison installs a /usr/bin/yacc symlink ...
-	# we need to remove it to avoid triggering 
+	# we need to remove it to avoid triggering
 	# collision-protect errors #90089
 	if [[ -L ${ROOT}/usr/bin/yacc ]] ; then
 		rm -f "${ROOT}"/usr/bin/yacc
@@ -51,7 +51,7 @@ pkg_preinst() {
 }
 
 pkg_postrm() {
-	# and if we uninstall yacc but keep bison, 
+	# and if we uninstall yacc but keep bison,
 	# lets restore the /usr/bin/yacc symlink
 	if [[ ! -e ${ROOT}/usr/bin/yacc ]] && [[ -e ${ROOT}/usr/bin/yacc.bison ]] ; then
 		ln -s yacc.bison "${ROOT}"/usr/bin/yacc
