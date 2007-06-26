@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1-r1.ebuild,v 1.1 2007/04/30 14:52:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1-r1.ebuild,v 1.2 2007/06/26 23:57:35 matsuu Exp $
 
 inherit multilib
 
@@ -37,7 +37,9 @@ src_compile() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
+	# parallel borks #177088
+	emake -j1 INSTALL_ROOT="${D}" install || die "emake install failed"
+
 	dodoc CHANGES ChangeLog README license.terms
 	doman doc/*.n
 }
