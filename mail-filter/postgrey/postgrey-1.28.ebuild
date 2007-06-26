@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.28.ebuild,v 1.1 2007/06/26 18:26:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.28.ebuild,v 1.2 2007/06/26 19:42:10 fmccor Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-lang/perl-5.6.0
 	dev-perl/Parse-Syslog
 	>=sys-libs/db-4.1"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 pkg_setup() {
 	enewgroup ${PN}
