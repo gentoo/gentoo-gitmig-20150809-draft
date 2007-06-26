@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/taskjuggler-2.3.0.ebuild,v 1.1 2007/01/02 20:59:40 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/taskjuggler-2.3.0.ebuild,v 1.2 2007/06/26 01:40:47 mr_bones_ Exp $
 
 inherit eutils qt3
 
@@ -35,7 +35,7 @@ src_compile() {
 	sed -i -e 's/db2ps --pdf/docbook2pdf/g' docs/en/Makefile.*
 	sed -i -e 's/db2ps/docbook2ps/g' docs/en/Makefile.*
 
-	# Need to fake out QT or we'll get sandbox probles 
+	# Need to fake out QT or we'll get sandbox probles
 	# from http://www.gentoo.org/cgi-bin/viewcvs.cgi/dev-db/tora/tora-1.3.13.ebuild?r1=1.2&r2=1.3
 	REALHOME="$HOME"
 	mkdir -p $T/fakehome/.kde
