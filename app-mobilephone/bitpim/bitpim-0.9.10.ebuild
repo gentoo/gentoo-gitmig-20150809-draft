@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.10.ebuild,v 1.1 2007/01/16 17:55:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.10.ebuild,v 1.2 2007/06/26 01:39:59 mr_bones_ Exp $
 
 inherit distutils multilib
 
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 
 #For Gentoo devs only: uncomment this line when you want to make the tarball
 #then COMMENT IT BACK!
-#pkg_setup() { maketarball; } 
+#pkg_setup() { maketarball; }
 maketarball() { #For building the tarball. To be used only by ebuild maintainers
 	local x svnrev
 	svnrev=$(svn log -q --limit 1 https://svn.sourceforge.net/svnroot/${PN}/releases/${PV} | sed -r '/^[^r]/d;s/^r([0-9]+) .*$/\1/')
@@ -78,9 +78,9 @@ src_install() {
 
 	# Install files into right place
 	#
-	# BitPim is a self-contained app, so jamming it into 
+	# BitPim is a self-contained app, so jamming it into
 	# Python's site-packages might not be worthwhile.  We'll
-	# Put it in its own home, and add the PYTHONPATH in the 
+	# Put it in its own home, and add the PYTHONPATH in the
 	# wrapper executables below.
 	distutils_python_version
 	local RLOC=/usr/$(get_libdir)/${P}

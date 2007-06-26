@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.13 2007/06/23 14:06:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.14 2007/06/26 01:40:23 mr_bones_ Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -39,7 +39,7 @@ src_unpack() {
 
 src_compile() {
 	if use python || use tcl ; then
-		# These wrappers break strict aliasing rules 
+		# These wrappers break strict aliasing rules
 		append-flags -fno-strict-aliasing
 	fi
 	if use debug ; then
