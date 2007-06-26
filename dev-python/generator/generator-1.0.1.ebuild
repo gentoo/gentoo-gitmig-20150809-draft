@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/generator/generator-1.0.1.ebuild,v 1.4 2004/06/25 01:30:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/generator/generator-1.0.1.ebuild,v 1.5 2007/06/26 01:59:18 mr_bones_ Exp $
 SLOT="0"
 IUSE=""
 DESCRIPTION="Widget generator for Archetypes"
@@ -36,7 +36,7 @@ src_install() {
 
 	for i in ${python}; do
 		$i setup.py clean
-		# ok, so this actually compiles them here, but it was the only way I could find to 
+		# ok, so this actually compiles them here, but it was the only way I could find to
 		# compile both versions
 		$i setup.py build install --prefix=${D}/usr || die
 	done;

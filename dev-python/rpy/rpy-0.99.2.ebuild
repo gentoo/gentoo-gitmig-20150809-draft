@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-0.99.2.ebuild,v 1.2 2007/04/09 14:12:15 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-0.99.2.ebuild,v 1.3 2007/06/26 02:00:06 mr_bones_ Exp $
 
 inherit distutils
 
@@ -19,7 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch ${FILESDIR}/${P}-version-detect.patch
-	
+
 }
 
 src_install() {

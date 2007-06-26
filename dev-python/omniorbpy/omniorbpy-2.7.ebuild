@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.7.ebuild,v 1.2 2007/02/03 09:14:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.7.ebuild,v 1.3 2007/06/26 01:59:43 mr_bones_ Exp $
 
 inherit eutils python
 
@@ -52,7 +52,7 @@ src_install() {
 	sed -i -e "s/'prefix[\t ]*:= \/usr'/'prefix := \${DESTDIR}\/usr'/" \
 		mk/beforeauto.mk
 
-	# won't work without these really very ugly hack... 
+	# won't work without these really very ugly hack...
 	# maybe someone can do better..
 
 	mv python/omniORB/dir.mk python/omniORB/dir.mk_orig
