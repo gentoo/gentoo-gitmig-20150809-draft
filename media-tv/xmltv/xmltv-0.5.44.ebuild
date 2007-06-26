@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.44.ebuild,v 1.13 2007/05/01 00:36:31 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.44.ebuild,v 1.14 2007/06/26 02:16:50 mr_bones_ Exp $
 
 inherit eutils perl-module
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ~ppc ~sparc x86"
 PREFIX="/usr"
 
 # NOTE: you can customize the xmltv installation by
-#       defining USE FLAGS (custom ones in 
+#       defining USE FLAGS (custom ones in
 #	/etc/portage/package.use for example).
 #
 #	Do "equery u media-tv/xmltv" for the complete
@@ -79,7 +79,7 @@ make_config() {
 	use uk_rt && echo "yes" || echo "no"
 	# Enable Alternate Brittain 2
 	use uk_bleb && echo "yes" || echo "no"
-	# Enable Belgium and Luxemburg 
+	# Enable Belgium and Luxemburg
 	use be && echo "yes" || echo "no"
 	#Enable Iceland
 	use is && echo "yes" || echo "no"
