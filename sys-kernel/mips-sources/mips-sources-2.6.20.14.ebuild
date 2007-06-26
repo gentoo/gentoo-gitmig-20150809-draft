@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.20.14.ebuild,v 1.1 2007/06/14 05:34:59 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.20.14.ebuild,v 1.2 2007/06/26 02:54:34 mr_bones_ Exp $
 
 
 # INCLUDED:
@@ -57,7 +57,7 @@ DO_IP30="yes"				# 		   IP30 support		(SGI Octane)
 DO_IP32="yes"				# 		   IP32 support		(SGI O2, R5000/RM5200 Only)
 DO_CBLT="yes"				# 		   Cobalt Support	(Cobalt Microsystems)
 
-# Machine Stable Version Variables 
+# Machine Stable Version Variables
 SV_IP22=""				# If set && DO_IP22 == "no", indicates last "good" IP22 version
 SV_IP27=""				# 	    DO_IP27 == "no", 			   IP27
 SV_IP28=""				# 	    DO_IP28 == "no", 			   IP28
