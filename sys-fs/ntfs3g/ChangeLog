@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.36 2007/06/23 16:12:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.37 2007/06/26 00:18:48 chutzpah Exp $
+
+*ntfs3g-1.616-r2 (26 Jun 2007)
+
+  26 Jun 2007; Patrick McLean <chutzpah@gentoo.org> +ntfs3g-1.616-r2.ebuild:
+  New revision, change /usr/bin to /bin for USE=suid (fixes bug #183178)
 
 *ntfs3g-1.616-r1 (23 Jun 2007)
 
