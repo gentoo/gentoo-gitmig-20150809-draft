@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.4.ebuild,v 1.6 2007/04/28 11:52:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.4.ebuild,v 1.7 2007/06/26 02:17:53 mr_bones_ Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_install() {
 	# copy configuration file
 	cp "${D}"/etc/motion-dist.conf "${D}"/etc/motion.conf
 
-	# cleanup unused files 
+	# cleanup unused files
 	cd "${D}"/usr/share/doc/${P}/examples/
 	rm motion.init-Debian motion.init-RH motion.init-FreeBSD.sh
 }

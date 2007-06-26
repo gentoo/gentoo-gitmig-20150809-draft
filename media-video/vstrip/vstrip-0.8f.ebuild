@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vstrip/vstrip-0.8f.ebuild,v 1.4 2007/03/31 19:26:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vstrip/vstrip-0.8f.ebuild,v 1.5 2007/06/26 02:19:55 mr_bones_ Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	edos2unix *.c *.h
-	
+
 	for file in *.c *.h ; do
 		echo >>$file
 	done

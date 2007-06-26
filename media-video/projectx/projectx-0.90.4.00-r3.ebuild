@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00-r3.ebuild,v 1.1 2007/05/01 23:48:22 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00-r3.ebuild,v 1.2 2007/06/26 02:18:18 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs java-pkg-2 java-ant-2
 
@@ -80,7 +80,7 @@ src_unpack() {
 		rm resources/*.gif
 	fi
 
-	# update library packages	
+	# update library packages
 	cd lib
 	rm -f {commons-net,jakarta-oro}*.jar
 	java-pkg_jar-from commons-net

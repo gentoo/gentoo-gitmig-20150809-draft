@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00-r2.ebuild,v 1.4 2007/03/11 22:11:27 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00-r2.ebuild,v 1.5 2007/06/26 02:18:18 mr_bones_ Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -55,7 +55,7 @@ src_unpack() {
 	# convert CRLF to LF
 	edos2unix *.txt MANIFEST.MF
 
-	# update library packages	
+	# update library packages
 	cd lib
 	rm -f {commons-net,jakarta-oro}*.jar
 	java-pkg_jar-from commons-net

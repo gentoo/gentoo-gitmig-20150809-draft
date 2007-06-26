@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/submux-dvd/submux-dvd-0.5.ebuild,v 1.7 2005/07/28 11:21:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/submux-dvd/submux-dvd-0.5.ebuild,v 1.8 2007/06/26 02:18:41 mr_bones_ Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 
-	# fix missing '\' 
+	# fix missing '\'
 	cd ${S}
 	epatch ${FILESDIR}/${P}.patch
 }
