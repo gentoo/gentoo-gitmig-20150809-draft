@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-2.2.5-r1.ebuild,v 1.8 2006/08/22 10:32:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-2.2.5-r1.ebuild,v 1.9 2007/06/26 01:41:10 mr_bones_ Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}
-	econf $(use_with nls i18n) $(use_with perl) 
+	econf $(use_with nls i18n) $(use_with perl)
 	make || die "couldn't make coldsync"
 }
 
