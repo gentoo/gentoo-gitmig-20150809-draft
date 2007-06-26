@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.8.0.ebuild,v 1.1 2007/06/12 18:31:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.8.1.ebuild,v 1.1 2007/06/26 11:01:14 drac Exp $
 
 inherit python eutils
 
@@ -33,10 +33,10 @@ src_compile() {
 	econf --enable-docbook-stylesheet=${xslloc} \
 		$(use_enable oss oss-sound)
 
-	emake || die "emake failed"
+	emake || die "emake failed."
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS changelog FAQ README
+	dodoc AUTHORS *hange*og FAQ README
 }
