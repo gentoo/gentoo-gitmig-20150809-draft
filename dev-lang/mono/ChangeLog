@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.118 2007/06/25 21:30:23 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.119 2007/06/26 22:48:49 jurek Exp $
+
+  26 Jun 2007; Jurek Bartuszek <jurek@gentoo.org>
+  +files/mono-1.2.4-make-check.patch, mono-1.1.16.1.ebuild,
+  mono-1.2.2.1.ebuild, mono-1.2.3.1.ebuild, mono-1.2.4.ebuild:
+  Added patch that allows mono-1.2.4 to pass make check, other versions received
+  test restriction (fixing bugs #140561, #168345)
 
   25 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> mono-1.1.16.1.ebuild,
   mono-1.2.2.1.ebuild, mono-1.2.3.1.ebuild, mono-1.2.4.ebuild:

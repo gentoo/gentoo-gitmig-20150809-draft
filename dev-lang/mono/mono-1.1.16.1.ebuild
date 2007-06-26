@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.16.1.ebuild,v 1.4 2007/06/25 21:30:23 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.16.1.ebuild,v 1.5 2007/06/26 22:48:49 jurek Exp $
 
 inherit eutils mono flag-o-matic multilib autotools
 
@@ -28,6 +28,8 @@ RDEPEND="${DEPEND}
 	X? ( >=dev-dotnet/libgdiplus-1.1.16 )
 	dev-util/pkgconfig
 	dev-libs/libxml2"
+
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}

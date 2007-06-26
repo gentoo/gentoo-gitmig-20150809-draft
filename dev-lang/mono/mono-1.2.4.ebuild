@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.7 2007/06/25 21:30:23 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.8 2007/06/26 22:48:49 jurek Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -52,6 +52,8 @@ src_unpack() {
 		${S}/{scripts,}/*.pc.in                                               \
 	|| die "sed failed"
 
+	epatch ${FILESDIR}/${P}-make-check.patch || die "patch failed"
+
 	# Remove dummy ltconfig and let libtool handle it
 	rm -f ${S}/libgc/ltconfig
 
@@ -94,6 +96,21 @@ src_compile() {
 		ewarn "why build has failed. In this case turn any active security"
 		ewarn "enhancements off and try emerging the package again"
 		die
+	fi
+}
+
+src_test() {
+	vecho ">>> Test phase [check]: ${CATEGORY}/${PF}"
+
+	mkdir -p "${T}/home/mono" || die "mkdir home failed"
+
+	export HOME="${T}/home/mono"
+	export XDG_CONFIG_HOME="${T}/home/mono"
+	export XDG_DATA_HOME="${T}/home/mono"
+
+	if ! LC_ALL=C emake -j1 check; then
+		hasq test $FEATURES && die "Make check failed. See above for details."
+		hasq test $FEATURES || eerror "Make check failed. See above for details."
 	fi
 }
 

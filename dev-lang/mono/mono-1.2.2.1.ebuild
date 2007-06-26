@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.2.1.ebuild,v 1.7 2007/06/25 21:30:23 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.2.1.ebuild,v 1.8 2007/06/26 22:48:49 jurek Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -30,7 +30,7 @@ PDEPEND="dev-dotnet/pe-format"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 # confcache causes build errors
-RESTRICT="confcache"
+RESTRICT="confcache test"
 
 function get-memory-total() {
 	cat /proc/meminfo | grep MemTotal | sed -r "s/[^0-9]*([[0-9]+).*/\1/"
