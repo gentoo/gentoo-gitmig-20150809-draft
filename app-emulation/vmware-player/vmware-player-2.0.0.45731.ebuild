@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.0.0.45731.ebuild,v 1.1 2007/06/24 18:53:44 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.0.0.45731.ebuild,v 1.2 2007/06/26 01:37:40 mr_bones_ Exp $
 
 inherit versionator eutils vmware
 
@@ -29,7 +29,7 @@ S=${WORKDIR}/vmware-player-distrib
 
 DEPEND="${RDEPEND} virtual/os-headers
 	!app-emulation/vmware-workstation"
-# vmware-player should not use virtual/libc as this is a 
+# vmware-player should not use virtual/libc as this is a
 # precompiled binary package thats linked to glibc.
 RDEPEND="sys-libs/glibc
 	amd64? (

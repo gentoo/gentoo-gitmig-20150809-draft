@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.6.ebuild,v 1.7 2007/05/02 17:39:55 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.6.ebuild,v 1.8 2007/06/26 01:36:03 mr_bones_ Exp $
 
 inherit eutils wxwidgets
 
@@ -84,7 +84,7 @@ src_compile() {
 		myconf="$myconf --with-nogui"
 	fi
 
-# needed to use gtk2 includes and libs	
+# needed to use gtk2 includes and libs
 	autoconf
 	./configure \
 		--enable-usb --enable-pci --enable-vbe \

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.3.44356.ebuild,v 1.1 2007/05/07 18:06:36 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.3.44356.ebuild,v 1.2 2007/06/26 01:38:04 mr_bones_ Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -36,7 +36,7 @@ DEPEND=">=sys-libs/glibc-2.3.5
 	sys-apps/pciutils
 	sys-apps/findutils
 	virtual/os-headers"
-# vmware-server should not use virtual/libc as this is a 
+# vmware-server should not use virtual/libc as this is a
 # precompiled binary package thats linked to glibc.
 RDEPEND=">=sys-libs/glibc-2.3.5
 	amd64? (
@@ -71,7 +71,7 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ${PN}-perl-fixed-rpath-libs.tar.bz2
 
-	# patch the vmware /etc/pam.d file to ensure that only 
+	# patch the vmware /etc/pam.d file to ensure that only
 	# vmware group members can log in
 	cp ${FILESDIR}/vmware-authd ${S}/etc/pam.d/vmware-authd
 }

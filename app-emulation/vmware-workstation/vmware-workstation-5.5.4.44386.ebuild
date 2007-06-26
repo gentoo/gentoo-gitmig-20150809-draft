@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.4.44386.ebuild,v 1.1 2007/05/15 01:47:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.4.44386.ebuild,v 1.2 2007/06/26 01:38:51 mr_bones_ Exp $
 
 inherit vmware eutils
 
@@ -21,7 +21,7 @@ KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
-# vmware-workstation should not use virtual/libc as this is a 
+# vmware-workstation should not use virtual/libc as this is a
 # precompiled binary package thats linked to glibc.
 RDEPEND="sys-libs/glibc
 	amd64? (

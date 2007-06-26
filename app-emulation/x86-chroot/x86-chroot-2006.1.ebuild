@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/x86-chroot-2006.1.ebuild,v 1.5 2007/06/01 02:06:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/x86-chroot-2006.1.ebuild,v 1.6 2007/06/26 01:39:14 mr_bones_ Exp $
 
 inherit linux-info
 
@@ -47,7 +47,7 @@ src_compile() {
 		CHOST="i686-pc-linux-gnu"
 		CXXFLAGS="\${CFLAGS}"
 	EOF
-	
+
 	echo -e "env-update\nsource /etc/profile" >> "${WORKDIR}/${CHROOT_LOCATION}/root/.bashrc"
 	echo "CHROOT_LOCATION=${CHROOT_LOCATION}" >	"${WORKDIR}/${CHROOT_LOCATION}/etc/conf.d/${PN}"
 }

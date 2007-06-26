@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.3.8.ebuild,v 1.6 2007/06/23 15:56:20 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.3.8.ebuild,v 1.7 2007/06/26 01:37:14 mr_bones_ Exp $
 
 inherit eutils flag-o-matic qt3 toolchain-funcs
 
@@ -35,7 +35,7 @@ RDEPEND="${RDEPEND}
 S=${WORKDIR}/vbox-ose-${PV}
 
 pkg_setup() {
-	# The VBoxSDL frontend needs media-libs/libsdl compiled 
+	# The VBoxSDL frontend needs media-libs/libsdl compiled
 	# with USE flag X enabled (bug #177335)
 	if ! built_with_use media-libs/libsdl X; then
 		eerror "media-libs/libsdl was compiled without the \"X\" USE flag enabled."

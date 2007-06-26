@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.3.1.ebuild,v 1.8 2007/01/25 22:50:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.3.1.ebuild,v 1.9 2007/06/26 01:36:27 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -39,7 +39,7 @@ pkg_setup() {
 #		ewarn "More than one frontend USE flags enabled, defaulting to X11 support."
 #		ewarn
 #		DEFAULT_TO_X11=1
-#	fi		
+#	fi
 }
 
 src_compile() {

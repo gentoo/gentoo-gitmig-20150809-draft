@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-2.0.3.ebuild,v 1.3 2006/06/24 07:38:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-2.0.3.ebuild,v 1.4 2007/06/26 01:36:50 mr_bones_ Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ pkg_nofetch() {
 	einfo "Please download the appropriate Point2Play archive:"
 #	use emerald \
 #		&& einfo "   ${MY_P}_emerald.tgz" \
-#		|| 
+#		||
 	einfo "   ${MY_P}.tgz"
 	einfo "from ${HOMEPAGE} (requires a Transgaming subscription)"
 	echo
