@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.3.ebuild,v 1.1 2007/06/21 06:10:52 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.3.ebuild,v 1.2 2007/06/26 16:18:19 wschlich Exp $
 
 DESCRIPTION="A small Jabber console client with various features, like MUC, SSL, PGP"
 HOMEPAGE="http://www.lilotux.net/~mikael/mcabber/"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="ssl crypt"
+IUSE="crypt spell ssl"
 
 LANGS="de en fr nl pl uk ru"
 # localized help versions are installed only, when LINGUAS var is set
@@ -20,12 +20,14 @@ done;
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.7-r1 )
 	crypt? ( >=app-crypt/gpgme-1.0.0 )
+	spell? ( app-text/aspell )
 	>=dev-libs/glib-2.0.0
 	sys-libs/ncurses"
 
 src_compile() {
 	econf \
 		$(use_enable crypt gpgme) \
+		$(use_enable spell aspell) \
 		$(use_with ssl) \
 		|| die "econf failed"
 
