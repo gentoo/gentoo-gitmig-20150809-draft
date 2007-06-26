@@ -1,0 +1,24 @@
+--- sparse-0.3/work/sparse-0.3/Makefile	2007-06-15 14:21:33.000000000 +0200
++++ sparse-0.3-new/work/sparse-0.3/Makefile	2007-06-15 14:21:51.000000000 +0200
+@@ -16,9 +16,9 @@ AR=ar
+ CFLAGS += -DDEBUG
+ 
+ DESTDIR=
+-PREFIX=$(HOME)
+-BINDIR=$(PREFIX)/bin
+-LIBDIR=$(PREFIX)/lib
++PREFIX=
++BINDIR=$(PREFIX)/usr/bin
++LIBDIR=$(PREFIX)/usr/lib
+ INCLUDEDIR=$(PREFIX)/include
+ PKGCONFIGDIR=$(LIBDIR)/pkgconfig
+ 
+@@ -38,7 +38,7 @@ LIB_OBJS= target.o parse.o tokenize.o pr
+ LIB_FILE= libsparse.a
+ SLIB_FILE= libsparse.so
+ 
+-LIBS=$(LIB_FILE)
++LIBS=$(SLIB_FILE)
+ 
+ all: $(PROGRAMS) sparse.pc
+ 
