@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.33.ebuild,v 1.3 2007/04/09 23:12:30 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.33.ebuild,v 1.4 2007/06/26 02:12:40 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -71,7 +71,7 @@ src_compile() {
 		MO="${MO} LOCALEOBJ=localef.o LOCALE_FLAG=-DLOCALE"
 	fi
 
-	# Support for compressed or uncompressed svg. svgz implies svg. If the 
+	# Support for compressed or uncompressed svg. svgz implies svg. If the
 	# external gd library is used, the svgz format will always be available if
 	# ploticus was compiled with support for svg (even if the svgz flag was not
 	# specified and even if the -svgz flag was used).

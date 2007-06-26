@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.8.ebuild,v 1.7 2007/02/25 14:57:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.8.ebuild,v 1.8 2007/06/26 02:12:14 mr_bones_ Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -30,7 +30,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-header.patch
 	epatch "${FILESDIR}"/${P}-asneeded.patch
-	
+
 	eautomake
 }
 

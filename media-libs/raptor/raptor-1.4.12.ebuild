@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.12.ebuild,v 1.4 2007/06/14 08:00:36 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.12.ebuild,v 1.5 2007/06/26 02:13:05 mr_bones_ Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ RDEPEND="virtual/libc
 	curl? ( net-misc/curl )"
 
 # compilation with libwww currently breaks and for using libfetch I didn't find the right USE flag
-#IUSE="curl xml libwww gnome"  
+#IUSE="curl xml libwww gnome"
 #DEPEND="virtual/libc
 #	gnome? ( >=dev-libs/glib-2.2.1 dev-util/pkgconfig )
 #	xml? ( >=dev-libs/libxml2-2.4.0 ) : ( dev-libs/expat )
