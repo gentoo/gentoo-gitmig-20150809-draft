@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.19 2006/02/13 02:53:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.20 2007/06/26 01:01:50 mr_bones_ Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -87,7 +87,7 @@ src_unpack() {
 #define BuildDBE YES
 #define KdriveServerExtraDefines -DPIXPRIV
 #define BuildRandR                 YES
-#define BuildXInputLib             YES 
+#define BuildXInputLib             YES
 #define BuildXTrueType             NO
 #define ServerXdmcpDefines         -DXDMCP
 #define BuildFonts                 NO" >>config/cf/host.def
@@ -239,8 +239,8 @@ src_compile() {
 	einfo "Building KDrive..."
 	emake World WORLDOPTS="" || die
 
-	# This is dirty, we know, but there is no need to build man pages 
-	# for a whole pile of nothing. As such we are just going to copy 
+	# This is dirty, we know, but there is no need to build man pages
+	# for a whole pile of nothing. As such we are just going to copy
 	# across the three needed man pages.
 	einfo "Making and installing man pages..."
 	mkdir -p ${MANDIR}
