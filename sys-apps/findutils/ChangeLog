@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.125 2007/06/26 14:45:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.126 2007/06/26 15:36:28 jer Exp $
+
+  26 Jun 2007; Jeroen Roovers <jer@gentoo.org> findutils-4.3.7.ebuild:
+  Stable for HPPA (bug #180617).
 
   26 Jun 2007; Raúl Porcel <armin76@gentoo.org> findutils-4.3.7.ebuild:
   alpha/ia64/x86 stable wrt #180617
