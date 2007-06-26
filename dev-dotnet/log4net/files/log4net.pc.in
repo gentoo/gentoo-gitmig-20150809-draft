@@ -5,4 +5,4 @@ libdir=${exec_prefix}/@LIBDIR@
 Name: Log4net
 Description: Log4net - Logging library for C# and VB.NET
 Version: @VERSION@
-Libs: -r:${libdir}/log4net/log4net.dll
+Libs: -r:${libdir}/log4net/@NET_VERSION@/log4net.dll

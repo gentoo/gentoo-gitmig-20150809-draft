@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/log4net-1.2.10.ebuild,v 1.2 2007/06/25 00:59:49 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/log4net-1.2.10-r1.ebuild,v 1.1 2007/06/26 01:00:24 jurek Exp $
 
 inherit eutils mono
 
@@ -33,16 +33,21 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/$(get_libdir)/${PN}
+	insinto /usr/$(get_libdir)/${PN}/1.0
 	doins bin/mono/1.0/release/${PN}.dll
+
+	insinto /usr/$(get_libdir)/${PN}/2.0
+	doins bin/mono/2.0/release/${PN}.dll
 
 	dodir /usr/$(get_libdir)/pkgconfig
 	sed -e "s:@VERSION@:${PV}:" \
 		-e "s:@LIBDIR@:$(get_libdir):" \
+		-e "s:@NET_VERSION@:1.0:" \
 		${FILESDIR}/${PN}.pc.in > ${D}/usr/$(get_libdir)/pkgconfig/${PN}.pc
-
-	/usr/bin/gacutil /i bin/mono/1.0/release/${PN}.dll \
-		/check_refs /root ${D}/usr/$(get_libdir)
+	sed -e "s:@VERSION@:${PV}:" \
+		-e "s:@LIBDIR@:$(get_libdir):" \
+		-e "s:@NET_VERSION@:2.0:" \
+		${FILESDIR}/${PN}.pc.in > ${D}/usr/$(get_libdir)/pkgconfig/${PN}-2.0.pc
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}
