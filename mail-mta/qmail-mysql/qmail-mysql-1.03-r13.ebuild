@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03-r13.ebuild,v 1.12 2007/04/28 16:54:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03-r13.ebuild,v 1.13 2007/06/26 02:09:10 mr_bones_ Exp $
 
 inherit eutils fixheadtails
 
@@ -158,7 +158,7 @@ src_unpack() {
 	#epatch ${DISTDIR}/nullenvsender-recipcount.patch
 	# TODO REDIFF
 	#EPATCH_SINGLE_MSG="qmail-pop3d reports erroneous figures on STAT after a DELE" \
-	#epatch ${DISTDIR}/qmail-pop3d-stat.patch 
+	#epatch ${DISTDIR}/qmail-pop3d-stat.patch
 
 	echo -n "${CC} ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then
