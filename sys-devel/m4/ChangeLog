@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.87 2007/06/26 17:15:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.88 2007/06/26 19:29:29 pylon Exp $
+
+  26 Jun 2007; Lars Weiler <pylon@gentoo.org> m4-1.4.9.ebuild:
+  Stable on ppc; bug #183253.
 
   26 Jun 2007; Raúl Porcel <armin76@gentoo.org> m4-1.4.9.ebuild:
   alpha stable wrt #183253
