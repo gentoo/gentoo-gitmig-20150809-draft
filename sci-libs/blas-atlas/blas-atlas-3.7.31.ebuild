@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.31.ebuild,v 1.1 2007/05/19 02:21:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.31.ebuild,v 1.2 2007/06/26 02:42:35 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -142,8 +142,8 @@ src_install () {
 		"${S}"/include/atlas_enum.h || \
 		die "failed to install headers"
 
-	# These headers contain the architecture-specific 
-	# optimizations determined by ATLAS. The atlas-lapack build 
+	# These headers contain the architecture-specific
+	# optimizations determined by ATLAS. The atlas-lapack build
 	# is much shorter if they are available, so save them:
 	doins ${BLD_DIR}/include/*.h || \
 		die "failed to install timing headers"

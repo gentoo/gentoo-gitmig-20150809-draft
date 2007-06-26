@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-1.12.0.ebuild,v 1.2 2005/11/28 12:04:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-1.12.0.ebuild,v 1.3 2007/06/26 02:43:26 mr_bones_ Exp $
 
 inherit eutils
 
-# This is the Unidata Units library, which supports conversion of unit 
-# specifications between formatted and binary forms, arithmetic 
-# manipulation of unit specifications, and conversion of values between 
+# This is the Unidata Units library, which supports conversion of unit
+# specifications between formatted and binary forms, arithmetic
+# manipulation of unit specifications, and conversion of values between
 # compatible scales of measurement.
 
 #inherit perl-app
