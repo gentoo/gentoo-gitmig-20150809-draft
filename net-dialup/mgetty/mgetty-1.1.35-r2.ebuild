@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.35-r2.ebuild,v 1.3 2007/05/06 07:57:44 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.35-r2.ebuild,v 1.4 2007/06/26 02:23:09 mr_bones_ Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -37,7 +37,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-netpbm-collision.patch" #g3topbm is installed by netpbm
 	epatch "${FILESDIR}/${P}-implicit-decl.patch"
 
-	#Avoid "is setXid, dynamically linked and using lazy bindings" QA notices 
+	#Avoid "is setXid, dynamically linked and using lazy bindings" QA notices
 	append-ldflags $(bindnow-flags)
 
 	sed -i 's: \$(CFLAGS) -o faxq-helper faxq-helper.o: $(LDLAGS) '$(bindnow-flags)' -o faxq-helper faxq-helper.o:' "${S}/fax/Makefile"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.8 2007/05/02 00:14:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.9 2007/06/26 02:22:12 mr_bones_ Exp $
 
 inherit eutils linux-mod
 
@@ -92,7 +92,7 @@ src_install() {
 		die "Cannot install unicorntest"
 	doman "${S}/Documentation/unicorntest.8"
 
-	# Install documentation	
+	# Install documentation
 	cd "${S}"
 	dodoc README
 	docinto RFCs

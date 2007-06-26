@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.9 2007/04/14 11:46:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.10 2007/06/26 02:22:41 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_test() {
-	#Don't use check target. 
+	#Don't use check target.
 	#See bug #120748 before changing this function.
 	make vcheck || die "tests failed"
 }
