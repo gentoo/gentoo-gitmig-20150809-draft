@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7400 2007/06/26 16:18:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7401 2007/06/26 16:28:53 philantrop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Wulf C. Krueger <philantrop@gentoo.org> (26 Jun 2007)
+# Broken in several ways, see bug 171493 for details.
+# The author has abandoned it.
+app-cdr/konqburn
 
 # Samuli Suominen <drac@gentoo.org> (26 Jun 2007)
 # Needs to unmasked same time with >=ffmpeg-0.4.9_p20070616
