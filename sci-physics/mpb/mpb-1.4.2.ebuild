@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2.ebuild,v 1.4 2007/01/10 17:32:24 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2.ebuild,v 1.5 2007/06/26 02:44:37 mr_bones_ Exp $
 
 inherit fortran
 
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 
 	epatch "${FILESDIR}"/${P}-gcc4.patch
-	# Create directories to compile the versions with inversion 
+	# Create directories to compile the versions with inversion
 	# symmetry and with hermitian eps.
 
 	cp -r ${S} ${S}_inv
