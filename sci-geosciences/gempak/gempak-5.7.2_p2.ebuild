@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/gempak-5.7.2_p2.ebuild,v 1.4 2007/04/28 15:54:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/gempak-5.7.2_p2.ebuild,v 1.5 2007/06/26 02:41:43 mr_bones_ Exp $
 
 inherit eutils
 
@@ -86,7 +86,7 @@ src_install() {
 	einfo "Pre-installing GEMPAK..."
 	make install || die
 
-	# This eliminates all the Makefiles, source code, header files, 
+	# This eliminates all the Makefiles, source code, header files,
 	# and sundry other useless files.
 	ebegin "Removing unnecessary files"
 		rm -rf ${S}/{config,include,ldm,lib,netcdf,nprogs,unidata,gempak/source}

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0.ebuild,v 1.4 2007/03/13 00:35:42 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0.ebuild,v 1.5 2007/06/26 02:42:07 mr_bones_ Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -17,7 +17,7 @@ LICENSE="MIT"
 
 KEYWORDS="~x86"
 
-#I must check for mygis use flag availability 
+#I must check for mygis use flag availability
 #"mono"
 IUSE="xml pdf proj geos tiff gdal xpm postgis flash php python perl ruby tcl java"
 
