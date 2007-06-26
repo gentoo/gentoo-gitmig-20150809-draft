@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.5.4-r3.ebuild,v 1.6 2007/02/28 22:08:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.5.4-r3.ebuild,v 1.7 2007/06/26 20:06:48 george Exp $
 
 inherit eutils
 
