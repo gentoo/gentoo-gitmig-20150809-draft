@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006-r1.ebuild,v 1.4 2007/05/28 19:26:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006-r1.ebuild,v 1.5 2007/06/26 01:49:39 mr_bones_ Exp $
 
 inherit gnatbuild
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${GCCVER}/gcc-core-${GCCVER}.tar
 	x86?   ( mirror://gentoo/gnatboot-${BOOT_SLOT}-i386.tar.bz2 )
 	ppc?   ( mirror://gentoo/gnatboot-${BOOT_SLOT}-ppc.tar.bz2 )
 	amd64? ( mirror://gentoo/gnatboot-${BOOT_SLOT}-amd64-r2.tar.bz2 )"
-# ${BOOT_SLOT} and ${GCCVER} are defined in gnatbuild.eclass and depend 
+# ${BOOT_SLOT} and ${GCCVER} are defined in gnatbuild.eclass and depend
 # only on $PV, so should be safe to use in DEPEND/SRC_URI
 
 QA_EXECSTACK="${BINPATH:1}/gnatls ${BINPATH:1}/gnatbind ${BINPATH:1}/gnatmake

@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.3 2007/04/06 16:26:05 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.4 2007/06/26 01:49:10 mr_bones_ Exp $
 
 # Brief explanation of the bootstrap logic:
 #
 # ghc requires ghc-bin to bootstrap.
-# Therefore, 
+# Therefore,
 # (1) both ghc-bin and ghc provide virtual/ghc
 # (2) virtual/ghc *must* default to ghc-bin
 # (3) ghc depends on virtual/ghc

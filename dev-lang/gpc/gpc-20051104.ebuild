@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20051104.ebuild,v 1.3 2007/05/06 17:32:23 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20051104.ebuild,v 1.4 2007/06/26 01:50:04 mr_bones_ Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -47,7 +47,7 @@ src_unpack() {
 
 	cd "${WORKDIR}/${P}/p"
 
-	#comment out read to let ebuild continue 
+	#comment out read to let ebuild continue
 	sed -i -e "s:read:#read:"  config-lang.in || die "seding autoreplies failed"
 	#and remove that P var (it doesn't seem to do much except to break a build)
 	sed -i -e "s:\$(P)::" Make-lang.in || die "seding Make-lan.in failed"
