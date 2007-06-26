@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.25.1-r1.ebuild,v 1.3 2007/03/05 16:22:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.25.1-r1.ebuild,v 1.4 2007/06/26 02:36:07 mr_bones_ Exp $
 
 inherit gnome2 python distutils virtualx eutils
 
@@ -39,10 +39,10 @@ pkg_setup() {
 	fi
 }
 
-# This about of virtualmake in src_compile and src_install are 
-# pretty horrible.. why can't I compile gtk base modules in 
+# This about of virtualmake in src_compile and src_install are
+# pretty horrible.. why can't I compile gtk base modules in
 # distutils without that (ps. I'm the upstream guy to blame)
-# Olivier Crete <tester@gentoo.org> 
+# Olivier Crete <tester@gentoo.org>
 
 src_compile() {
 	epatch "${FILESDIR}"/${P}-setup-fix.patch
