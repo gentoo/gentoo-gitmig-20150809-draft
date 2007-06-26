@@ -1,0 +1,14 @@
+diff -ur exaile_0.2.10.orig/xl/xlmisc.py exaile_0.2.10/xl/xlmisc.py
+--- exaile_0.2.10.orig/xl/xlmisc.py	2007-06-07 15:48:24.000000000 +0300
++++ exaile_0.2.10/xl/xlmisc.py	2007-06-26 20:57:12.000000000 +0300
+@@ -1709,8 +1709,8 @@
+     """
+     if BITMAP_CACHE.has_key("%s - %sx%s - %s" % (text, width, height, bgcolor)):
+         return BITMAP_CACHE["%s - %sx%s - %s" % (text, width, height, bgcolor)]
+-        
+-    pixmap = gtk.gdk.Pixmap(None, width, height, 24)
++    default_visual = gtk.gdk.visual_get_system()
++    pixmap = gtk.gdk.Pixmap(None, width, height, default_visual.depth)
+     colormap = gtk.gdk.colormap_get_system()
+     white = colormap.alloc_color(65535, 65535, 65535)
+     black = colormap.alloc_color(0, 0, 0)
