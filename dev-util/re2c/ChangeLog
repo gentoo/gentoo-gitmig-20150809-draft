@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/re2c
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.43 2007/06/25 13:25:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.44 2007/06/26 05:46:37 corsair Exp $
+
+  26 Jun 2007; Markus Rothe <corsair@gentoo.org> re2c-0.12.0.ebuild:
+  Stable on ppc64; bug #181941
 
   25 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> re2c-0.12.0.ebuild:
   Stable on sparc wrt #181941
