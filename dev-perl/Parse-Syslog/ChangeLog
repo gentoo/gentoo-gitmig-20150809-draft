@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Parse-Syslog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Syslog/ChangeLog,v 1.1 2007/06/26 17:49:00 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Syslog/ChangeLog,v 1.2 2007/06/26 19:32:14 fmccor Exp $
+
+  26 Jun 2007; Ferris McCormick <fmccor@gentoo.org>
+  Parse-Syslog-1.09.ebuild:
+  Add ~sparc keyword --- Bug #183038 --- all tests successful.
 
 *Parse-Syslog-1.09 (26 Jun 2007)
 
