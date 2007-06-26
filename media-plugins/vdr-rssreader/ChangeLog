@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-rssreader
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rssreader/ChangeLog,v 1.2 2007/03/13 12:32:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rssreader/ChangeLog,v 1.3 2007/06/26 08:03:47 zzam Exp $
+
+  26 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-rssreader-1.0.1-vdr-1.5.3.diff, vdr-rssreader-1.0.1.ebuild:
+  Added patch to compile with vdr-1.5.3 and up.
 
   13 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
   vdr-rssreader-1.0.1.ebuild:

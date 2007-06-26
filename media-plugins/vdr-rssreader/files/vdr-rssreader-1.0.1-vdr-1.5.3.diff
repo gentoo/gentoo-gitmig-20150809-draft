@@ -1,0 +1,58 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 90_rssreader-1.0.1-1.5.3.dpatch by Thomas Günther <tom@toms-cafe.de>
+## http://toms-cafe.de/vdr/download/rssreader-1.0.1-1.5.3.diff
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Changes for VDR >= 1.5.3.
+
+@DPATCH@
+--- rssreader-1.0.1/parser.c
++++ rssreader-1.0.1/parser.c
+@@ -51,7 +51,11 @@ void cItem::SetDate(const char *str)
+   char tmp[SHORT_TEXT_LEN];
+   memset(tmp, 0, sizeof(tmp));
+ 
++#if APIVERSNUM >= 10503
++  charsetconv(tmp, sizeof(tmp), str, strlen(str), "UTF8", cCharSetConv::SystemCharacterTable());
++#else
+   charsetconv(tmp, sizeof(tmp), str, strlen(str), "UTF8", I18nCharSets()[Setup.OSDLanguage]);
++#endif
+   compactspace(tmp);
+   debug("cItem::SetDate(): Date: '%s'", tmp);
+   strn0cpy(date, tmp, sizeof(tmp));
+@@ -62,7 +66,11 @@ void cItem::SetTitle(const char *str)
+   char tmp[SHORT_TEXT_LEN];
+   memset(tmp, 0, sizeof(tmp));
+ 
++#if APIVERSNUM >= 10503
++  charsetconv(tmp, sizeof(tmp), str, strlen(str), "UTF8", cCharSetConv::SystemCharacterTable());
++#else
+   charsetconv(tmp, sizeof(tmp), str, strlen(str), "UTF8", I18nCharSets()[Setup.OSDLanguage]);
++#endif
+   compactspace(tmp);
+   striphtml(tmp);
+   htmlcharconv(tmp);
+@@ -75,7 +83,11 @@ void cItem::SetLink(const char *str)
+   char tmp[SHORT_TEXT_LEN];
+   memset(tmp, 0, sizeof(tmp));
+ 
++#if APIVERSNUM >= 10503
++  charsetconv(tmp, sizeof(tmp), str, strlen(str), "UTF8", cCharSetConv::SystemCharacterTable());
++#else
+   charsetconv(tmp, sizeof(tmp), str, strlen(str), "UTF8", I18nCharSets()[Setup.OSDLanguage]);
++#endif
+   compactspace(tmp);
+   debug("cItem::SetLink(): '%s'", tmp);
+   strn0cpy(link, tmp, sizeof(tmp));
+@@ -86,7 +98,11 @@ void cItem::SetDescription(const char *s
+   char tmp[LONG_TEXT_LEN];
+   memset(tmp, 0, sizeof(tmp));
+ 
++#if APIVERSNUM >= 10503
++  charsetconv(tmp, sizeof(tmp), str, strlen(str), "UTF8", cCharSetConv::SystemCharacterTable());
++#else
+   charsetconv(tmp, sizeof(tmp), str, strlen(str), "UTF8", I18nCharSets()[Setup.OSDLanguage]);
++#endif
+   compactspace(tmp);
+   striphtml(tmp);
+   htmlcharconv(tmp);
