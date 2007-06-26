@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.7 2007/06/26 05:40:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.8 2007/06/26 17:47:46 mr_bones_ Exp $
 
 inherit eutils libtool autotools wxwidgets flag-o-matic
 
@@ -44,7 +44,7 @@ src_compile() {
 	    einfo "Found neon support; continuing..."
 	fi
 
-	# if you compiled subversion without (the) apache2 (flag) and with the 
+	# if you compiled subversion without (the) apache2 (flag) and with the
 	# berkdb flag, you will get an error that it can't find the lib db4
 	# Note: this should be fixed in rapidsvn 0.9.3 and later
 	local myconf
