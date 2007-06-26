@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10-r1.ebuild,v 1.1 2007/06/26 18:07:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10-r1.ebuild,v 1.2 2007/06/26 20:52:16 drac Exp $
 
-inherit eutils fdo-mime python
+inherit eutils fdo-mime multilib python
 
 GVER="0.10"
 
@@ -70,7 +70,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake LIBDIR="/usr/$(get_libdir)" DESTDIR="${D}" install || die "emake install failed."
 	dodoc TODO changelog
 
 	insinto /usr/share/${PN}
