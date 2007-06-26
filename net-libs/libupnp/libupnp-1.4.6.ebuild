@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.4.6.ebuild,v 1.6 2007/06/06 19:53:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.4.6.ebuild,v 1.7 2007/06/26 02:27:16 mr_bones_ Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -29,7 +29,7 @@ src_unpack() {
 
 src_compile() {
 	use x86-fbsd &&	append-flags -O1
-	# w/o docdir to avoid sandbox violations	
+	# w/o docdir to avoid sandbox violations
 	econf \
 		$(use_enable debug) \
 		--without-docdir \

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.2.ebuild,v 1.9 2006/10/23 07:46:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.2.ebuild,v 1.10 2007/06/26 02:27:44 mr_bones_ Exp $
 
 inherit eutils fixheadtails
 
@@ -54,7 +54,7 @@ src_unpack() {
 
 src_compile() {
 	env WANT_AUTOCONF=2.5 autoconf || die "autoconf failed" #needed by xplc and tcl patch
-	#without following, the makefile would remove some files and request 
+	#without following, the makefile would remove some files and request
 	#you to run ./configure again
 	touch include/wvautoconf.h.in configure
 

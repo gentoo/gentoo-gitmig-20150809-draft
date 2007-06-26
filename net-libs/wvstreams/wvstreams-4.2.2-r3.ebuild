@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.2-r3.ebuild,v 1.1 2007/02/08 19:07:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.2-r3.ebuild,v 1.2 2007/06/26 02:27:44 mr_bones_ Exp $
 
 WANT_AUTOCONF=2.59
 WANT_AUTOMAKE=none
@@ -56,7 +56,7 @@ src_unpack() {
 	#needed by xplc and as-needed patch:
 	cd "${S}"
 	eautoconf || die "autoconf failed"
-	#without following, the makefile would remove some files and request 
+	#without following, the makefile would remove some files and request
 	#you to run ./configure again
 	touch include/wvautoconf.h.in configure
 }

@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.2-r1.ebuild,v 1.1 2006/04/16 00:44:35 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.2-r1.ebuild,v 1.2 2007/06/26 02:26:51 mr_bones_ Exp $
 
 inherit eutils
 
-# NOTE: 
+# NOTE:
 # this is libpri-1.2.2-r3 in the overlay
 
 IUSE="bri"

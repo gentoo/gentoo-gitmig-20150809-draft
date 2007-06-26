@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/libpcap-ringbuffer-0.9.20060417.ebuild,v 1.3 2007/05/08 22:56:03 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/libpcap-ringbuffer-0.9.20060417.ebuild,v 1.4 2007/06/26 02:26:28 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs linux-info multilib libtool autotools
 
@@ -45,7 +45,7 @@ src_install() {
 	dosym libpcap-0.9.3.so /usr/$(get_libdir)/libpcap.so.0.9
 	dosym libpcap-0.9.3.so /usr/$(get_libdir)/libpcap.so.0
 
-	#set PCAP_FRAMES=max 
+	#set PCAP_FRAMES=max
 	echo "PCAP_FRAMES=32768" > "${T}/99libpcap-ringbuffer"
 	doenvd "${T}/99libpcap-ringbuffer"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.4.ebuild,v 1.7 2007/06/15 10:25:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.4.ebuild,v 1.8 2007/06/26 02:28:13 mr_bones_ Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -77,7 +77,7 @@ src_compile() {
 	mozconfig_annotate '' --enable-oji --enable-mathml
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 
-	#disable java 
+	#disable java
 	if ! use java ; then
 		mozconfig_annotate '-java' --disable-javaxpcom
 	fi
