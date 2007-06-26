@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.36 2007/06/26 17:13:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.37 2007/06/26 18:33:10 pylon Exp $
+
+  26 Jun 2007; Lars Weiler <pylon@gentoo.org> libdvb-0.5.5.1-r3.ebuild:
+  Stable on ppc; bug #183264.
 
   26 Jun 2007; Raúl Porcel <armin76@gentoo.org> libdvb-0.5.5.1-r2.ebuild,
   libdvb-0.5.5.1-r3.ebuild:
