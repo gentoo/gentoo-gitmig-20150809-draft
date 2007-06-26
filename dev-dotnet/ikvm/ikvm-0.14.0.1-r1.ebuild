@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.14.0.1-r1.ebuild,v 1.6 2007/02/05 00:23:11 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.14.0.1-r1.ebuild,v 1.7 2007/06/26 23:53:10 jurek Exp $
 
 inherit mono multilib
 
@@ -39,9 +39,9 @@ src_install() {
 		fperms +x /usr/bin/${exe}
 	done
 
-	dodir /usr/lib/pkgconfig
+	dodir /usr/$(get_libdir)/pkgconfig
 	sed -e "s:@VERSION@:${PV}:" ${FILESDIR}/ikvm.pc.in \
-		> ${D}/usr/lib/pkgconfig/ikvm.pc
+		> ${D}/usr/$(get_libdir)/pkgconfig/ikvm.pc
 
 	insinto /usr/$(get_libdir)/${PN}
 	doins ${S}/bin/*
