@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.8 2007/04/30 07:38:35 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.9 2007/06/26 01:46:09 mr_bones_ Exp $
 
 inherit flag-o-matic wxwidgets ghc-package multilib
 
@@ -58,7 +58,7 @@ src_compile() {
 	append-flags -fPIC
 
 	# non-standard configure, so econf is not an option
-	# --wx-config must appear first according to configure file comments 
+	# --wx-config must appear first according to configure file comments
 	./configure \
 		--wx-config="${WX_CONFIG}" \
 		--prefix=/usr \
