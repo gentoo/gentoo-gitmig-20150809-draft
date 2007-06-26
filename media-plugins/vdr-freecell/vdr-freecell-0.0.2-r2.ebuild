@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-freecell/vdr-freecell-0.0.2-r2.ebuild,v 1.2 2007/06/08 11:00:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-freecell/vdr-freecell-0.0.2-r2.ebuild,v 1.3 2007/06/26 19:05:34 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -18,7 +18,8 @@ DEPEND=">=media-video/vdr-1.2.6"
 
 PATCHES="${FILESDIR}/${PN}-time_ms.diff
 		${FILESDIR}/gcc-3.4.patch
-		${FILESDIR}/${P}-gentoo.diff"
+		${FILESDIR}/${P}-gentoo.diff
+		${FILESDIR}/${P}_vdr-1.5.4-compile.diff"
 
 src_install() {
 	vdr-plugin_src_install
