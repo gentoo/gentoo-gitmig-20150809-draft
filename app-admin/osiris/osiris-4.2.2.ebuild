@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-4.2.2.ebuild,v 1.2 2007/01/24 14:46:42 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-4.2.2.ebuild,v 1.3 2007/06/26 01:31:51 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -46,7 +46,7 @@ src_unpack()
 src_compile()
 {
 	econf --prefix=/var/lib --enable-fancy-cli=yes || die "configure failed."
-#	if  ! use noagent ; then 
+#	if  ! use noagent ; then
 		emake agent || die "agent build failed"
 #	fi
 #	if use console ; then
