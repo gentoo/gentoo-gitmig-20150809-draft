@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.2.1.ebuild,v 1.2 2006/09/25 02:44:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.2.1.ebuild,v 1.3 2007/06/26 02:53:50 mr_bones_ Exp $
 
 PV_MAJOR="${PV%%.*}"
 PV_MINOR="${PV#*.}"
@@ -47,7 +47,7 @@ src_install() {
 		documentation/users_guide.txt documentation/samples/cluster.conf \
 		"${FILESDIR}"/INSTALL.GENTOO
 
-	# Keep o2cb script in case someone needs it 
+	# Keep o2cb script in case someone needs it
 	insinto /usr/sbin
 	newins "${S}"/vendor/common/o2cb.init o2cb
 	insinto /etc/default
