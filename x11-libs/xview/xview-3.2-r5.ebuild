@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r5.ebuild,v 1.4 2006/09/29 14:05:02 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r5.ebuild,v 1.5 2007/06/26 02:59:19 mr_bones_ Exp $
 
 inherit eutils
 
@@ -68,7 +68,7 @@ src_compile() {
 	imake -DUseInstalled -I"${S}"/config -I/usr/X11R6/lib/X11/config \
 		|| die "imake failed"
 
-	# This is crazy and I know it, but wait till you read the code in 
+	# This is crazy and I know it, but wait till you read the code in
 	# Build-LinuxXView.bash.
 	OPENWINHOME="/usr/X11R6" bash Build-LinuxXView.bash libs \
 		|| die "building libs failed"
@@ -92,7 +92,7 @@ src_install() {
 	cd "${D}"/usr
 	ln -s X11R6 openwin
 
-	# The rest of the docs is already installed 
+	# The rest of the docs is already installed
 	cd "${S}"/doc
 	dodoc README xview-info olgx_api.txt olgx_api.ps sel_api.txt \
 		dnd_api.txt whats_new.ps bugform config/usenixws/paper.ps

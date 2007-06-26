@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r14.ebuild,v 1.5 2007/01/04 19:12:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r14.ebuild,v 1.6 2007/06/26 02:58:54 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -80,9 +80,9 @@ src_compile() {
 	has_multilib_profile && append-flags "-I/usr/include/gentoo-multilib/${ABI}"
 
 	# glibc-2.3.2-r1/gcc-3.2.3 /w `-mcpu=athlon-xp -O2', right-clicking
-	# in nedit triggers DPMS monitor standby instead of popping up the 
-	# context menu.  this doesn't happen on my `stable' test partition 
-	# where everything is compiled i686, nor with most non-essential 
+	# in nedit triggers DPMS monitor standby instead of popping up the
+	# context menu.  this doesn't happen on my `stable' test partition
+	# where everything is compiled i686, nor with most non-essential
 	# packages athlon-xp and only motif i686.  needs investigation.
 	replace-flags "-mcpu=athlon-xp" "-mcpu=i686"
 
