@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.18.ebuild,v 1.9 2006/11/23 20:01:16 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.18.ebuild,v 1.10 2007/06/26 01:45:18 mr_bones_ Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -37,7 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# mysql has -fno-exceptions, but we need exceptions 
+	# mysql has -fno-exceptions, but we need exceptions
 	append-flags -fexceptions
 
 	cd "${S}"/mysql-gui-common
