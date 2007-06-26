@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94-r1.ebuild,v 1.13 2006/09/19 04:48:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.94-r1.ebuild,v 1.14 2007/06/26 02:47:25 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -64,9 +64,9 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/generic
 	chmod a+rx tests/sort/sort-mb-tests
 
-	# Since we've patched many .c files, the make process will 
-	# try to re-build the manpages by running `./bin --help`.  
-	# When cross-compiling, we can't do that since 'bin' isn't 
+	# Since we've patched many .c files, the make process will
+	# try to re-build the manpages by running `./bin --help`.
+	# When cross-compiling, we can't do that since 'bin' isn't
 	# a native binary, so let's just install outdated man-pages.
 	tc-is-cross-compiler && touch man/*.1
 	# There's no reason for this crap to use the private version

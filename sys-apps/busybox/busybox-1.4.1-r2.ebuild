@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.4.1-r2.ebuild,v 1.13 2007/06/11 03:58:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.4.1-r2.ebuild,v 1.14 2007/06/26 02:46:52 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ inherit eutils flag-o-matic
 #     get erased afterwards. Add a definition like ROOT=/my/root/path to the
 #     start of the line if you're installing to somewhere else than the root
 #     directory. This command will save the default configuration to
-#     ${PORTAGE_CONFIGROOT} (or ${ROOT} if ${PORTAGE_CONFIGROOT} is not 
+#     ${PORTAGE_CONFIGROOT} (or ${ROOT} if ${PORTAGE_CONFIGROOT} is not
 #     defined), and it will tell you that it has done this. Note the location
 #     where the config file was saved.
 #
@@ -27,7 +27,7 @@ inherit eutils flag-o-matic
 #
 #
 # (3) Save your configuration to the default location and copy it to the
-#     savedconfig location as follows. Replace X.X.X by the version of 
+#     savedconfig location as follows. Replace X.X.X by the version of
 #     busybox, and change the path if you're overriding ${ROOT} or
 #     ${PORTAGE_CONFIGROOT}. The file should overwrite the default config
 #     file that was written by the ebuild during step 1.
@@ -40,8 +40,8 @@ inherit eutils flag-o-matic
 #
 ################################################################################
 #
-# (1) Alternatively skip the above steps and simply emerge busybox with 
-#     USE=savedconfig and edit the file it saves by hand. Then remerge bb as 
+# (1) Alternatively skip the above steps and simply emerge busybox with
+#     USE=savedconfig and edit the file it saves by hand. Then remerge bb as
 #     needed.
 #
 ################################################################################

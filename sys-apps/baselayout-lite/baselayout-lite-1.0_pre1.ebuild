@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.13 2007/04/28 18:09:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.14 2007/06/26 02:45:55 mr_bones_ Exp $
 
 DESCRIPTION="Baselayout for embedded systems"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/embedded/"
@@ -21,7 +21,7 @@ src_install() {
 	keepdir /bin /etc /etc/init.d /home /lib /sbin /usr /var /root /mnt
 	keepdir /var/log /proc /dev/pts
 
-	# if ROOT=/ and we make /proc, we will get errors when portage tries 
+	# if ROOT=/ and we make /proc, we will get errors when portage tries
 	# to create /proc/.keep, so we remove it if we need to
 	[ "${ROOT}" = "/" ] && rm -rf ${D}/proc
 	[ "${ROOT}" = "" ] && rm -rf ${D}/proc
@@ -29,7 +29,7 @@ src_install() {
 	# (Jul 23 2004 -solar)
 	# This fails a when merging if /proc is already mounted. We
 	# could postinst it but 99% of the time we only are building
-	# this port as a package via emerge -B 
+	# this port as a package via emerge -B
 	#keepdir /proc
 
 	insinto /etc

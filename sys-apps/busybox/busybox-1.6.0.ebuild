@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.6.0.ebuild,v 1.2 2007/06/11 05:10:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.6.0.ebuild,v 1.3 2007/06/26 02:46:52 mr_bones_ Exp $
 
 inherit eutils flag-o-matic savedconfig
 
@@ -13,7 +13,7 @@ inherit eutils flag-o-matic savedconfig
 #     get erased afterwards. Add a definition like ROOT=/my/root/path to the
 #     start of the line if you're installing to somewhere else than the root
 #     directory. This command will save the default configuration to
-#     ${PORTAGE_CONFIGROOT} (or ${ROOT} if ${PORTAGE_CONFIGROOT} is not 
+#     ${PORTAGE_CONFIGROOT} (or ${ROOT} if ${PORTAGE_CONFIGROOT} is not
 #     defined), and it will tell you that it has done this. Note the location
 #     where the config file was saved.
 #
@@ -39,7 +39,7 @@ inherit eutils flag-o-matic savedconfig
 # (2) Edit the file it saves by hand. ${ROOT}"/etc/portage/savedconfig/${CATEGORY}/${PF}
 #
 # (3) Remerge busybox as using USE=savedconfig.
-#     
+#
 ################################################################################
 
 

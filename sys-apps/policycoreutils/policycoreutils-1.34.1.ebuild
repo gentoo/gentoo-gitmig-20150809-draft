@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.34.1.ebuild,v 1.3 2007/06/04 00:52:47 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.34.1.ebuild,v 1.4 2007/06/26 02:48:24 mr_bones_ Exp $
 
 IUSE="nls pam"
 
@@ -130,7 +130,7 @@ src_install() {
 			# for older pam
 			make DESTDIR="${D}" -C ${S2}/pam.d install || die
 		fi
-	fi			
+	fi
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r3.ebuild,v 1.12 2007/02/13 16:19:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r3.ebuild,v 1.13 2007/06/26 02:47:57 mr_bones_ Exp $
 
 inherit eutils linux-info
 
@@ -106,7 +106,7 @@ src_unpack() {
 	# fix pmu support crash
 	epatch "${FILESDIR}"/${PN}-0.5.7-pmu-fix.patch
 
-	# unclean unmount 
+	# unclean unmount
 	epatch "${FILESDIR}"/${PN}-0.5.7-unclean-unmount-r1.patch
 
 	# allow plugdev group people to mount
