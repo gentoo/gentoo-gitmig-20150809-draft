@@ -1,0 +1,32 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 92_live-0.1.0-1.5.3.dpatch by Thomas Günther <tom@toms-cafe.de>
+## http://toms-cafe.de/vdr/download/live-0.1.0-1.5.3.diff
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Changes for VDR >= 1.5.3.
+
+@DPATCH@
+--- live-0.1.0/pages/timers.ecpp
++++ live-0.1.0/pages/timers.ecpp
+@@ -59,7 +59,11 @@ using namespace vdrlive;
+ 			<table class="timers" cellspacing="0" cellpadding="0">
+ <%cpp>
+ 				for (SortedTimers::iterator timer = timers.begin(); timer != timers.end(); ++timer) {
++#if VDRVERSNUM >= 10503
++					string currentDay = timer->WeekDays() > 0 ? *cTimer::PrintDay(0, timer->WeekDays(), true) : 							FormatDateTime(tr("%A, %x"), timer->Day());
++#else
+ 					string currentDay = timer->WeekDays() > 0 ? *cTimer::PrintDay(0, timer->WeekDays()) : 							FormatDateTime(tr("%A, %x"), timer->Day());
++#endif
+ 					if (previousDay != currentDay) {
+ 						if (!previousDay.empty()) {
+ </%cpp>
+@@ -73,7 +77,7 @@ using namespace vdrlive;
+ 				<tr class="head">
+ 					<td colspan="10">
+ 						<div class="boxheader"><div><div>
+-							<$ timer->WeekDays() > 0 ? *cTimer::PrintDay(0, timer->WeekDays()) : FormatDateTime(tr("%A, %x"), timer->Day()) $>
++							<$ currentDay $>
+ 						</div></div></div>
+ 					</td>
+ 				</tr>
+
