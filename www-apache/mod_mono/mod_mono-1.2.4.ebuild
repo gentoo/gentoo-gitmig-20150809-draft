@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-1.2.4.ebuild,v 1.1 2007/05/17 18:26:34 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-1.2.4.ebuild,v 1.2 2007/06/26 21:47:41 pylon Exp $
 
 inherit apache-module eutils
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 
 DESCRIPTION="Apache module for Mono."
 HOMEPAGE="http://www.go-mono.com/"
