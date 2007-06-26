@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.59 2007/06/25 17:58:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.60 2007/06/26 10:41:28 josejx Exp $
+
+  26 Jun 2007; Joseph Jezak <josejx@gentoo.org> pkgconfig-0.21-r1.ebuild:
+  Marked ppc stable for bug #182981.
 
   25 Jun 2007; Raúl Porcel <armin76@gentoo.org> pkgconfig-0.21-r1.ebuild:
   alpha stable wrt #182981
