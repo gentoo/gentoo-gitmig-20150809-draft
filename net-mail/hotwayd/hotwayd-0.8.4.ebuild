@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.8.4.ebuild,v 1.4 2007/06/12 12:30:46 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.8.4.ebuild,v 1.5 2007/06/26 02:29:44 mr_bones_ Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ pkg_setup() {
 }
 
 src_install () {
-	# The original make install is broken, since it also tries to install 
+	# The original make install is broken, since it also tries to install
 	# the libghttp files. This is not needed, since this library is statically
 	# linked into the executable.
 	# Lets just copy the (one) file manually...

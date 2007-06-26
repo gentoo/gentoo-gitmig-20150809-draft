@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.1.ebuild,v 1.4 2007/01/08 15:31:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.1.ebuild,v 1.5 2007/06/26 02:29:19 mr_bones_ Exp $
 
 inherit eutils ssl-cert fixheadtails pam
 
@@ -52,7 +52,7 @@ new_net-snmp_check() {
 			fi
 		fi
 	done
-	# DynaLoader check. Bug #67411 
+	# DynaLoader check. Bug #67411
 	if built_with_use net-analyzer/net-snmp minimal ; then
 		eerror "If you want to emerge this package with \"snmp\" USE flag"
 		eerror "reemerge \"net-snmp\" without \"minimal\" USE flag"

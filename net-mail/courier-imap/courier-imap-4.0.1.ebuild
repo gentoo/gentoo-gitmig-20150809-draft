@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.1.ebuild,v 1.12 2007/06/12 12:12:32 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.1.ebuild,v 1.13 2007/06/26 02:28:48 mr_bones_ Exp $
 
 inherit eutils
 
@@ -149,7 +149,7 @@ src_compile() {
 	myconf="${myconf} $(use_with fam)"
 
 	# bug #76592
-	# configure cache confuses the configure script. 
+	# configure cache confuses the configure script.
 	#local cachefile
 	#cachefile=${WORKDIR}/config.cache
 	#rm -f ${cachefile}

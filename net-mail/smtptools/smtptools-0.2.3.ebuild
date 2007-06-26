@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/smtptools/smtptools-0.2.3.ebuild,v 1.10 2006/03/12 09:43:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/smtptools/smtptools-0.2.3.ebuild,v 1.11 2007/06/26 02:30:31 mr_bones_ Exp $
 
 inherit eutils
 
@@ -22,9 +22,9 @@ src_unpack() {
 }
 
 src_compile() {
-	# the configure check looks for the symbol name 'dn_expand' in 
-	# libresolv but later glibc's use the internal symbol name 
-	# '__dn_expand' and macro 'dn_expand' to '__dn_expand' in the 
+	# the configure check looks for the symbol name 'dn_expand' in
+	# libresolv but later glibc's use the internal symbol name
+	# '__dn_expand' and macro 'dn_expand' to '__dn_expand' in the
 	# resolv.h header file ... lets force the func to be detected.
 	ac_cv_lib_resolv_dn_expand="yes" \
 	econf || die

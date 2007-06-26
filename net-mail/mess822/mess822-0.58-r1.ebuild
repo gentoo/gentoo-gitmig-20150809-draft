@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r1.ebuild,v 1.9 2006/09/02 18:14:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r1.ebuild,v 1.10 2007/06/26 02:30:06 mr_bones_ Exp $
 
 inherit multilib
 
@@ -46,7 +46,7 @@ src_install() {
 	mv "${D}/usr/man" "${D}/usr/share/"
 
 	dodir /usr/$(get_libdir)
-	mv "${D}/usr/lib/${PN}.a" "${D}/usr/$(get_libdir)/${PN}.a" 
+	mv "${D}/usr/lib/${PN}.a" "${D}/usr/$(get_libdir)/${PN}.a"
 	rmdir "${D}/usr/lib"
 	dodoc BLURB CHANGES INSTALL README THANKS TODO VERSION
 }
