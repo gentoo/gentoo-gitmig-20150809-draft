@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.16 2007/06/23 14:22:56 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.17 2007/06/26 21:58:42 pylon Exp $
+
+  26 Jun 2007; Lars Weiler <pylon@gentoo.org> bigloo-2.9a.ebuild:
+  Stable on ppc; bug #182690.
 
   23 Jun 2007; Christoph Mende <angelos@gentoo.org> bigloo-2.9a.ebuild:
   Stable on amd64 wrt bug 182690
