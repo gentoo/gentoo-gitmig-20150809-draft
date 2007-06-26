@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.13-r3.ebuild,v 1.3 2007/06/17 15:53:56 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.13-r3.ebuild,v 1.4 2007/06/26 02:58:24 mr_bones_ Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -171,7 +171,7 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "Changing ownership recursively on /etc/${TOMCAT_NAME}"
-	# temp fix for bug #176097	
+	# temp fix for bug #176097
 	chown -fR tomcat:tomcat /etc/${TOMCAT_NAME}
 	ewarn "Owner ship changed to tomcat:tomcat. Temp hack/fix."
 
