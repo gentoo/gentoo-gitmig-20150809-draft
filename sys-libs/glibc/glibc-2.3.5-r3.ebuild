@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.30 2006/08/31 20:28:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.31 2007/06/26 02:55:45 mr_bones_ Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -394,8 +394,8 @@ toolchain-glibc_src_install() {
 
 	#################################################################
 	# EVERYTHING AFTER THIS POINT IS FOR NATIVE GLIBC INSTALLS ONLY #
-	# Make sure we install the sys-include symlink so that when 
-	# we build a 2nd stage cross-compiler, gcc finds the target 
+	# Make sure we install the sys-include symlink so that when
+	# we build a 2nd stage cross-compiler, gcc finds the target
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	if is_crosscompile ; then
 		dosym include $(alt_prefix)/sys-include

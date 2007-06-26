@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.20 2006/08/31 20:28:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.21 2007/06/26 02:55:45 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -586,7 +586,7 @@ src_compile() {
 }
 
 src_test() {
-	# This is wrong, but glibc's tests fail bad when screwing 
+	# This is wrong, but glibc's tests fail bad when screwing
 	# around with sandbox, so lets just punt it
 	unset LD_PRELOAD
 

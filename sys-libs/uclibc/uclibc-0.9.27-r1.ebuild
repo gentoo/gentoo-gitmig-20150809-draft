@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.25 2007/02/16 03:30:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.26 2007/06/26 02:56:29 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -300,7 +300,7 @@ setup_locales() {
 src_compile() {
 	cp myconfig .config
 
-	# last release doesnt support parallel build, 
+	# last release doesnt support parallel build,
 	# but the current svn repo does ...
 	export MAKEOPTS="${MAKEOPTS} -j1"
 	type -p ${CTARGET}-ar && export MAKEOPTS="${MAKEOPTS} CROSS=${CTARGET}-"
@@ -333,7 +333,7 @@ src_test() {
 	# running tests require this
 	use build || addwrite /dev/ptmx
 
-	# This is wrong, but uclibc's tests fail bad when screwing 
+	# This is wrong, but uclibc's tests fail bad when screwing
 	# around with sandbox, so lets just punt it
 	unset LD_PRELOAD
 
@@ -358,8 +358,8 @@ src_install() {
 	find "${D}"${sysroot}/usr/include -type d '(' -name CVS -o -name .svn ')' -print0 | xargs -0 rm -r
 	find "${D}"${sysroot}/usr/include -type f -name .cvsignore -print0 | xargs -0 rm -f
 
-	# Make sure we install the sys-include symlink so that when 
-	# we build a 2nd stage cross-compiler, gcc finds the target 
+	# Make sure we install the sys-include symlink so that when
+	# we build a 2nd stage cross-compiler, gcc finds the target
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
 		dosym usr/include /usr/${CTARGET}/sys-include

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.35 2007/06/01 13:30:12 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.36 2007/06/26 02:55:45 mr_bones_ Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -500,8 +500,8 @@ toolchain-glibc_headers_install() {
 	doins misc/syscall-list.h bits/stdio_lim.h || die "doins include bits"
 	insinto $(alt_headers)/gnu
 	doins "${S}"/include/gnu/stubs.h || die "doins include gnu"
-	# Make sure we install the sys-include symlink so that when 
-	# we build a 2nd stage cross-compiler, gcc finds the target 
+	# Make sure we install the sys-include symlink so that when
+	# we build a 2nd stage cross-compiler, gcc finds the target
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	dosym usr/include /usr/${CTARGET}/sys-include
 }

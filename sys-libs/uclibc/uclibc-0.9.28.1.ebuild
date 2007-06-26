@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.1.ebuild,v 1.3 2007/02/16 03:30:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.1.ebuild,v 1.4 2007/06/26 02:56:29 mr_bones_ Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -411,8 +411,8 @@ src_install() {
 	# remove files coming from kernel-headers
 	rm -rf "${sysroot}"/usr/include/{linux,asm*}
 
-	# Make sure we install the sys-include symlink so that when 
-	# we build a 2nd stage cross-compiler, gcc finds the target 
+	# Make sure we install the sys-include symlink so that when
+	# we build a 2nd stage cross-compiler, gcc finds the target
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
 		dosym usr/include /usr/${CTARGET}/sys-include
