@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.0-r2.ebuild,v 1.2 2006/10/21 21:57:43 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.0-r2.ebuild,v 1.3 2007/06/26 03:00:06 mr_bones_ Exp $
 
 MY_P=${P/-/_}-12
 DESCRIPTION="A simplistic screen locking program for X"
@@ -15,7 +15,7 @@ IUSE=""
 RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}
 	x11-proto/xproto
-	x11-misc/imake" 
+	x11-misc/imake"
 
 src_unpack() {
 	unpack ${A}

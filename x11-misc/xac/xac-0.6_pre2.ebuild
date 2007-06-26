@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre2.ebuild,v 1.2 2007/04/21 22:26:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre2.ebuild,v 1.3 2007/06/26 02:59:42 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -20,7 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	### Replace /usr/lib/xac with libdir version 
+	### Replace /usr/lib/xac with libdir version
 	sed -i "s:/usr/lib/xac:/usr/$(get_libdir)/xac:" xac
 }
 
