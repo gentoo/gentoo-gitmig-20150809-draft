@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.2 2007/05/23 22:52:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.3 2007/06/26 12:27:39 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -39,7 +39,21 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 LICENSE="LGPL-2"
 
-IUSE="build debug nls nptl nptlonly hardened multilib selinux glibc-omitfp profile glibc-compat20"
+GLIBC_RELEASE_VER=$(get_version_component_range 1-3)
+
+# Don't set this to :-, - allows BRANCH_UPDATE=""
+BRANCH_UPDATE=${BRANCH_UPDATE-$(get_version_component_range 4)}
+GLIBC_PORTS_VER=${GLIBC_RELEASE_VER}
+GLIBC_LT_VER=""
+
+# (Recent snapshots fails with 2.6.5 and earlier with NPTL)
+NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-"2.6.9"}
+#LT_KERNEL_VERSION=${LT_KERNEL_VERSION:-"2.4.1"}
+
+[[ ${CTARGET} == hppa* ]] && NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-2.6.20}
+
+IUSE="build debug nls hardened multilib selinux glibc-omitfp profile glibc-compat20"
+[[ -n ${GLIBC_LT_VER} ]] && IUSE="${IUSE} nptl nptlonly"
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -58,19 +72,6 @@ is_crosscompile() {
 just_headers() {
 	is_crosscompile && use crosscompile_opts_headers-only
 }
-
-GLIBC_RELEASE_VER=$(get_version_component_range 1-3)
-
-# Don't set this to :-, - allows BRANCH_UPDATE=""
-BRANCH_UPDATE=${BRANCH_UPDATE-$(get_version_component_range 4)}
-GLIBC_PORTS_VER=${GLIBC_RELEASE_VER}
-GLIBC_LT_VER=""
-
-# (Recent snapshots fails with 2.6.5 and earlier with NPTL)
-NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-"2.6.9"}
-#LT_KERNEL_VERSION=${LT_KERNEL_VERSION:-"2.4.1"}
-
-[[ ${CTARGET} == hppa* ]] && NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-2.6.20}
 
 ### SRC_URI ###
 
@@ -793,6 +794,7 @@ check_nptl_support() {
 }
 
 want_nptl() {
+	[[ -z ${GLIBC_LT_VER} ]] && return 0
 	want_tls || return 1
 	use nptl || return 1
 
@@ -809,6 +811,7 @@ want_nptl() {
 }
 
 want_linuxthreads() {
+	[[ -z ${GLIBC_LT_VER} ]] && return 1
 	! use nptlonly && return 0
 	want_nptl || return 0
 	return 1
@@ -1087,9 +1090,11 @@ pkg_setup() {
 		die "please fix your CHOST"
 	fi
 
-	if use nptlonly && ! use nptl ; then
-		eerror "If you want nptlonly, add nptl to your USE too ;p"
-		die "nptlonly without nptl"
+	if [[ -n ${GLIBC_LT_VER} ]] ; then
+		if use nptlonly && ! use nptl ; then
+			eerror "If you want nptlonly, add nptl to your USE too ;p"
+			die "nptlonly without nptl"
+		fi
 	fi
 
 	if [[ -e /proc/xen ]] && [[ $(tc-arch) == "x86" ]] && ! is-flag -mno-tls-direct-seg-refs ; then
