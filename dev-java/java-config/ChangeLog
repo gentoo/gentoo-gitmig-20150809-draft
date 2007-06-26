@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.166 2007/06/26 21:25:40 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.167 2007/06/26 22:03:25 angelos Exp $
+
+  26 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  java-config-2.0.33-r1.ebuild:
+  Stable on amd64 wrt bug 183317
 
   26 Jun 2007; Lars Weiler <pylon@gentoo.org> java-config-2.0.33-r1.ebuild:
   Stable on ppc; bug #183317.
