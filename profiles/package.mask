@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7396 2007/06/25 14:20:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7397 2007/06/26 10:05:59 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -773,13 +773,6 @@ games-action/d2x-rebirth
 # pending removal (#156989)
 # can't fix rpath, application checks its checksum
 app-antivirus/vlnx
-
-# Daniel Black <dragonheart@gentoo.org> (09 Dec 2006)
-# needs more compatibilty testing - bug #157718 for incompatibilites
->=net-misc/curl-7.16.0
-# masked because of the above mask
-net-fs/curlftpfs
->=dev-python/pycurl-7.16.2
 
 # Patrick Kursawe <phosphan@gentoo.org> (06 Dec 2006)
 # Only partially working, see bug #153667
