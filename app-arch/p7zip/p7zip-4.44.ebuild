@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.44.ebuild,v 1.8 2007/04/01 10:24:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.44.ebuild,v 1.9 2007/06/26 01:32:46 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -50,7 +50,7 @@ src_install() {
 
 	dobin ${FILESDIR}/p7zip
 
-	# gzip introduced in 4.42, so beware :) 
+	# gzip introduced in 4.42, so beware :)
 	# mv needed just as rename, because dobin installs using old name
 	mv contrib/gzip-like_CLI_wrapper_for_7z/p7zip contrib/gzip-like_CLI_wrapper_for_7z/7zg
 	dobin contrib/gzip-like_CLI_wrapper_for_7z/7zg
