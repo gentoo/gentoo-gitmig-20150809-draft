@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.0_p1-r2.ebuild,v 1.1 2007/06/18 12:01:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.0_p1-r2.ebuild,v 1.2 2007/06/26 01:48:34 mr_bones_ Exp $
 
 inherit eutils java-pkg-2
 
@@ -44,7 +44,7 @@ src_unpack() {
 		epatch ${FILESDIR}/java_files_remove_ssl.diff
 	fi
 
-	# These are two private headers from QtDesigner that aren't installed in the normal 
+	# These are two private headers from QtDesigner that aren't installed in the normal
 	# Qt distribution, but are needed when building QtJambi
 	cp ${FILESDIR}/qdesigner_utils_p.h ${S}/qtjambi_designer
 	cp ${FILESDIR}/shared_global_p.h ${S}/qtjambi_designer

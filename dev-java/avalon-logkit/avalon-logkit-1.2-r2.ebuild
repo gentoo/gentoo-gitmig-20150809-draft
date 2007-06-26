@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2-r2.ebuild,v 1.7 2007/05/23 17:19:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2-r2.ebuild,v 1.8 2007/06/26 01:46:36 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc javamail jms source"
 inherit java-pkg-2 java-ant-2
@@ -42,13 +42,13 @@ src_unpack() {
 	fi
 
 	use jms && java-pkg_jar-from sun-jms
-	
+
 }
 
 src_compile() {
 	# not generating api docs because we would
 	# need avalon-site otherwise
-	eant jar 
+	eant jar
 }
 
 src_install() {

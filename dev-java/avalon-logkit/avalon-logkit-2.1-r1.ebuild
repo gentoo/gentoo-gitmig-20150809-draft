@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.1-r1.ebuild,v 1.2 2007/06/12 16:03:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.1-r1.ebuild,v 1.3 2007/06/26 01:46:36 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
@@ -27,7 +27,7 @@ DEPEND="|| (
 		=virtual/jdk-1.5*
 		=virtual/jdk-1.4*
 	)
-	test? ( 
+	test? (
 		=dev-java/junit-3*
 		dev-java/ant-junit
 	)

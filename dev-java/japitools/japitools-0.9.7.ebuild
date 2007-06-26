@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/japitools-0.9.7.ebuild,v 1.3 2007/05/07 17:05:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/japitools-0.9.7.ebuild,v 1.4 2007/06/26 01:47:47 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND="dev-java/ant-core
 	>=virtual/jdk-1.4
 	test? (
-		=dev-java/junit-3* 
+		=dev-java/junit-3*
 		dev-java/ant-junit
 	)"
 

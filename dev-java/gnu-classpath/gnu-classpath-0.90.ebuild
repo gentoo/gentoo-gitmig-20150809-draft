@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.90.ebuild,v 1.13 2007/01/05 23:29:06 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.90.ebuild,v 1.14 2007/06/26 01:47:24 mr_bones_ Exp $
 
 inherit eutils
 
@@ -56,7 +56,7 @@ src_compile() {
 	local compiler="--with-jikes"
 
 	# Now this detects fastjar automatically and some people have broken
-	# wrappers in /usr/bin by eselect-compiler. Unfortunately 
+	# wrappers in /usr/bin by eselect-compiler. Unfortunately
 	# --without-fastjar does not seem to work.
 	# http://bugs.gentoo.org/show_bug.cgi?id=135688
 	econf ${compiler} \
