@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20051222-r1.ebuild,v 1.4 2007/01/25 23:46:13 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20051222-r1.ebuild,v 1.5 2007/06/26 01:44:52 mr_bones_ Exp $
 
 IUSE="doc"
 
@@ -33,7 +33,7 @@ lib_install() {
 	# new style booch components install Debug and Release versions, we only
 	# need the lib subdir of either
 	mkdir -p ${DL}/Debug
-	# both $SL and $DL are under ${WORKDIR}, so no dodir, doins... 
+	# both $SL and $DL are under ${WORKDIR}, so no dodir, doins...
 	# (as lib_install is  called from src_compile it is not safe to have $DL
 	# under $D)
 	mv ${SL}/GNAT/*-Release/lib/* ${DL}
