@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.5 2007/04/30 22:20:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.6 2007/06/26 02:10:50 mr_bones_ Exp $
 
 inherit rpm eutils versionator
 
@@ -188,12 +188,12 @@ pkg_postinst() {
 	cp ${ROOT}/etc/services ${T}/services.maya_save
 	awk '/mi-raysat/ { found++; print ; next } {print} END {if (0==found) print "mi-raysat 7103/tcp" }' ${T}/services.maya_save > ${ROOT}/etc/services
 
-	# update the magic file 
+	# update the magic file
 	if [[ -e ${ROOT}/usr/share/magic ]]; then
 		mv ${ROOT}/usr/share/magic ${T}/magic.rpmsave
 		awk '/Alias.Wavefront Maya files. begin/ {p=1} /Alias.Wavefront Maya files. end/ {p=2} {if (p==2) { p=0} else if (p==0) print }' ${T}/magic.rpmsave > ${ROOT}/usr/share/magic
 		cat ${ROOT}${MAYADIR}/.tmpdata/awmagic >> ${ROOT}/usr/share/magic;
-		# get file to rebuild the cache 
+		# get file to rebuild the cache
 		file -C > /dev/null 2>&1
 		rm -Rf ${ROOT}${MAYADIR}/.tmpdata/awmagic 2>&1 > /dev/null
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18-r2.ebuild,v 1.11 2007/04/30 22:41:46 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18-r2.ebuild,v 1.12 2007/06/26 02:11:50 mr_bones_ Exp $
 
 inherit eutils
 
@@ -34,14 +34,14 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
 # To enable specific backends, define SANE_BACKENDS with the backends you want
 # in those:
-# 
-# abaton agfafocus apple artec as6e avision bh brother canon 
-# canon630u coolscan coolscan2 dc25 dmc 
-# epson fujitsu genesys gt68xx hp leo lexmark matsushita microtek 
-# microtek2 mustek mustek_usb nec pie pixma plustek 
-# plustek_pp ricoh s9036 sceptre sharp 
-# sp15c st400 tamarack test teco1 teco2 teco3 umax umax_pp umax1220u 
-# artec_eplus48u ma1509 ibm hp5400 u12 snapscan niash sm3840 hp4200 
+#
+# abaton agfafocus apple artec as6e avision bh brother canon
+# canon630u coolscan coolscan2 dc25 dmc
+# epson fujitsu genesys gt68xx hp leo lexmark matsushita microtek
+# microtek2 mustek mustek_usb nec pie pixma plustek
+# plustek_pp ricoh s9036 sceptre sharp
+# sp15c st400 tamarack test teco1 teco2 teco3 umax umax_pp umax1220u
+# artec_eplus48u ma1509 ibm hp5400 u12 snapscan niash sm3840 hp4200
 # sm3600 hp3500 stv680"
 
 # Note that some backends has specific dependencies which make the compilation

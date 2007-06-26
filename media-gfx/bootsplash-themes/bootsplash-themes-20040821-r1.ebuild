@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20040821-r1.ebuild,v 1.6 2007/04/30 21:19:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20040821-r1.ebuild,v 1.7 2007/06/26 02:09:52 mr_bones_ Exp $
 
 DESCRIPTION="A collection of Bootsplash themes"
 HOMEPAGE="http://www.bootsplash.de/"
@@ -144,7 +144,7 @@ src_unpack() {
 	find -name INSTALL -exec rm -f "{}" \;
 	rm -rf "./SuSE-Home/var"
 
-	# backup files? no, thank you.	
+	# backup files? no, thank you.
 	find -regex '.*~$' -exec rm -f "{}" \;
 
 	# gentooify all paths

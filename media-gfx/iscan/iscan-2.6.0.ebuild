@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.6.0.ebuild,v 1.2 2007/05/17 22:57:18 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.6.0.ebuild,v 1.3 2007/06/26 02:10:24 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs flag-o-matic autotools rpm
 
 SRC_REV="0"  # revision used by upstream
 
-# DISCLAIMER: 
+# DISCLAIMER:
 # -> first try to remove GCC 3.3 stuff since 3.4 is stable
 # -> please open BugZilla if you still need it!
 
