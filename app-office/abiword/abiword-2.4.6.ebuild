@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.6.ebuild,v 1.13 2007/06/26 05:41:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.6.ebuild,v 1.14 2007/06/26 07:25:10 opfer Exp $
 
 inherit alternatives eutils fdo-mime
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug gnome spell xml"
 
 RDEPEND="virtual/xft
