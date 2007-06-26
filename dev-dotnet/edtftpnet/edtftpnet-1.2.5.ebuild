@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/edtftpnet/edtftpnet-1.2.5.ebuild,v 1.1 2007/06/24 02:20:13 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/edtftpnet/edtftpnet-1.2.5.ebuild,v 1.2 2007/06/26 01:18:33 jurek Exp $
 
 inherit eutils mono
 
@@ -19,7 +19,7 @@ DEPEND=">=dev-lang/mono-1.2.1
 RDEPEND="${DEPEND}"
 
 src_install() {
-	GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir)"
+	GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /package ${PN}"
 	/usr/bin/gacutil /i ./bin/edtFTPnet.dll ${GACUTIL_FLAGS}
 
 	dodoc readme.html
