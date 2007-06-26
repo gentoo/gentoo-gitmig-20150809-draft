@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.42.1-r1.ebuild,v 1.11 2007/04/07 14:45:30 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.42.1-r1.ebuild,v 1.12 2007/06/26 02:02:04 mr_bones_ Exp $
 
 WANT_AUTOCONF="2.1"
 inherit autotools eutils
@@ -70,7 +70,7 @@ src_compile() {
 }
 
 src_test() {
-	# we need dejagnu to do tests ... but dejagnu needs 
+	# we need dejagnu to do tests ... but dejagnu needs
 	# expect ... so don't do tests unless we have dejagnu
 	type -p runtest || return 0
 	make check || die "make check failed"
