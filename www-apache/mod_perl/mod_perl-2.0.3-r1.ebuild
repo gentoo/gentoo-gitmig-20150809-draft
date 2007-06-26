@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3-r1.ebuild,v 1.8 2007/04/06 21:50:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3-r1.ebuild,v 1.9 2007/06/26 02:56:57 mr_bones_ Exp $
 
 inherit apache-module perl-module eutils multilib
 DESCRIPTION="An embedded Perl interpreter for Apache2"
@@ -53,7 +53,7 @@ src_unpack() {
 	# and the socket may be rebound immediately.  If a different user
 	# (yes, in my testing, even root) attempts to rebind, it fails.
 	# Since the "is the socket available yet" code and the
-	# second-batch bind call both run as root, this will fail.  
+	# second-batch bind call both run as root, this will fail.
 
 	# The upstream settings on my test machine cause the second batch
 	# of tests to fail, believing the socket to still be in use.  I
@@ -96,7 +96,7 @@ src_compile() {
 	emake -j1 || die
 
 	# mcummings - disabling tests right, there's a bug i haven't found an override for
-	# rendhalver - i seem to have fixed this so turning them back on again. 
+	# rendhalver - i seem to have fixed this so turning them back on again.
 	# yet that sets /tmp as your tmp dir
 	#hasq maketest $FEATURES && src_test
 }
