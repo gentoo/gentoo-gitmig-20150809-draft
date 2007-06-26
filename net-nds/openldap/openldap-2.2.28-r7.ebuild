@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r7.ebuild,v 1.14 2007/06/24 23:28:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r7.ebuild,v 1.15 2007/06/26 02:35:42 mr_bones_ Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -221,7 +221,7 @@ src_compile() {
 		--libexecdir=/usr/$(get_libdir)/openldap \
 		${myconf} || die "configure failed"
 
-	# Adding back -j1 as upstream didn't answer on parallel make issue yet 
+	# Adding back -j1 as upstream didn't answer on parallel make issue yet
 	emake -j1 depend || die "make depend failed"
 	emake -j1 || die "make failed"
 
