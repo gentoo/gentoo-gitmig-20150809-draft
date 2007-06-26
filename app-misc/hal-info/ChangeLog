@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.14 2007/06/18 18:33:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.15 2007/06/26 18:07:13 ranger Exp $
+
+  26 Jun 2007; Brent Baude <ranger@gentoo.org> hal-info-20070425.ebuild,
+  hal-info-20070516.ebuild, hal-info-20070618.ebuild:
+  Changing ~ppc64 to -ppc64 on all hal-info ebuilds because of the dependancy
+  on a broken (for ppc64) version of hal
 
 *hal-info-20070618 (18 Jun 2007)
 *hal-info-20070516 (18 Jun 2007)
