@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc2-r2.ebuild,v 1.5 2007/06/11 13:22:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc2-r3.ebuild,v 1.1 2007/06/26 23:24:09 chtekk Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -53,11 +53,12 @@ src_unpack() {
 
 	cd "${S}"
 
-	# Fix bugs #164612, #167003, #175082 and #178866
+	# Fix bugs #164612, #167003, #175082, #178866 and #181712
 	epatch "${FILESDIR}/${P}-bug164612.patch"
 	epatch "${FILESDIR}/${P}-bug167003.patch"
 	epatch "${FILESDIR}/${P}-bug175082.patch"
 	epatch "${FILESDIR}/${P}-bug178866.patch"
+	epatch "${FILESDIR}/${P}-bug181712.patch"
 
 	# Fix stripping of files
 	sed -e "s| @INSTALL_STRIP@||g" -i Make*
