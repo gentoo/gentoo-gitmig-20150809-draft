@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/netkit-tftp-0.17-r3.ebuild,v 1.1 2007/02/21 19:44:02 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/netkit-tftp-0.17-r3.ebuild,v 1.2 2007/06/26 02:25:17 mr_bones_ Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="!virtual/tftp"
 PROVIDE="virtual/tftp"
 
 src_compile() {
-	# Change default man directory	
+	# Change default man directory
 	epatch ${FILESDIR}/man.patch
 	# Solve QA warning by including string.h
 	epatch ${FILESDIR}/memset.patch
