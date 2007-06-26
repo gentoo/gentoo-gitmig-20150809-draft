@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7404 2007/06/26 20:45:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7405 2007/06/26 20:59:19 eva Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Gilles Dartiguelongue <eva@gentoo.org> (26 Jun 2007)
+# Obsolete pre Gnome-2.6 component, bug #183086.
+# Masked for removal in 30 days.
+net-libs/linc
 
 # Wulf C. Krueger <philantrop@gentoo.org> (26 Jun 2007)
 # Broken in several ways, see bug 171493 for details.
