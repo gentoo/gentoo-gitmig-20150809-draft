@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.23b.ebuild,v 1.7 2007/06/25 15:14:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.23b.ebuild,v 1.8 2007/06/26 21:01:11 pylon Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/libtool/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="1.5"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 m68k mips ~ppc ~ppc64 s390 sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 m68k mips ppc ~ppc64 s390 sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="sys-devel/gnuconfig
