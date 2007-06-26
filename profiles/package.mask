@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7398 2007/06/26 15:25:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7399 2007/06/26 16:02:58 hkbst Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -235,11 +235,6 @@ www-servers/boa
 # Masked for removal,  See bug #169546 for more information.  Will be removed on
 # 17 Jun 2007.
 games-fps/unreal-tounrament-infiltration
-
-# Marijn Schouten <hkBst@gentoo.org> (14 May 2007)
-# masked for removal, use >=dev-scheme/drscheme-360-r2
-# without X use flag instead
-dev-scheme/mzscheme
 
 # Marijn Schouten <hkBst@gentoo.org> (14 May 2007)
 # development version
@@ -493,10 +488,6 @@ games-arcade/stepmania
 =dev-haskell/x11-1.2
 =dev-haskell/xhtml-2006.9.13
 
-# Marijn Schouten <hkBst@gentoo.org> (13 Mar 2007)
-# masked for removal
-<dev-scheme/bigloo-2.7a_p2
-
 # Steve Dibb <beandog@gentoo.org> (12 Mar 2007)
 # needs testing
 >=media-video/transcode-1.1.0_pre0
@@ -633,7 +624,7 @@ media-font/mikachan-font
 =net-misc/dropbear-0.48.1-r1
 
 # Seemant Kulleen <seemant@gentoo.org> (02 Feb 2007)
-# Masked because it causees breakages with guile-1.8 and gnucash-2.
+# Masked because it causes breakages with guile-1.8 and gnucash-2.
 # See Marijn's comment below
 ~dev-libs/g-wrap-1.9.7
 
