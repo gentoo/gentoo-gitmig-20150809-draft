@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.8.ebuild,v 1.3 2007/04/19 06:21:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.8.ebuild,v 1.4 2007/06/26 02:15:38 mr_bones_ Exp $
 
 IUSE=""
 
@@ -44,7 +44,7 @@ src_install() {
 	# sets screen logging and real time output off since we're running this as a deamon
 	sed -e "s:RealTime=1:RealTime=0:" -e "s:ScreenLog=1:ScreenLog=0:" -i sc_serv.conf
 
-	# fixes up messed up example as directories for on demand 
+	# fixes up messed up example as directories for on demand
 	# streaming need a trailing slash at the end of directories
 	sed -e "s:; Default is ./content:; Default is ./content/:" -i sc_serv.conf
 

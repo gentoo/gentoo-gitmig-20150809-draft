@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.13 2007/01/05 17:42:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.14 2007/06/26 02:14:45 mr_bones_ Exp $
 
 IUSE="jack fluidsynth ladcca doc alsa"
 
@@ -61,7 +61,7 @@ src_compile() {
 	mkdir -p $T/fakehome/.qt
 	export HOME="$T/fakehome"
 	#addwrite "${QTDIR}/etc/settings"
-	# commented this out, proper fix is need-qt 3 from 
+	# commented this out, proper fix is need-qt 3 from
 	# kde-functions.
 	# Danny van Dyk <kugelfang@gentoo.org> 2004/05/26
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.8-r1.ebuild,v 1.10 2005/12/06 07:48:29 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.8-r1.ebuild,v 1.11 2007/06/26 02:15:14 mr_bones_ Exp $
 
 inherit gnome2 eutils
 
@@ -31,7 +31,7 @@ RDEPEND=">=x11-libs/gtk+-2.2.2
 #		vorbis? ( =media-plugins/gst-plugins-vorbis-0.8*
 #		             =media-plugins/gst-plugins-ogg-0.8* )
 #		mad? ( =media-plugins/gst-plugins-mad-0.8* )
-#		flac? ( =media-plugins/gst-plugins-flac-0.8* ) 
+#		flac? ( =media-plugins/gst-plugins-flac-0.8* )
 #		aac? ( =media-plugins/gst-plugins-faad-0.8* ) )
 #	xine? ( aac? ( >=media-libs/faad2-2.0_rc3 )
 #		flac? ( >=media-libs/flac-1

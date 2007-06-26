@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/slimserver-6.5.2.ebuild,v 1.1 2007/06/04 10:00:40 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/slimserver-6.5.2.ebuild,v 1.2 2007/06/26 02:16:01 mr_bones_ Exp $
 
 inherit eutils
 
@@ -71,7 +71,7 @@ src_install() {
 	#[[ -z "${password}" || "${password}" == "''" ]] \
 	#	&& password="${RANDOM}.${RANDOM}.${RANDOM}.${RANDOM}"
 	#cat <<EOF > ${D}/etc/slimserver.prefs
-	#--- 
+	#---
 	#dbsource: dbi:mysql:database=slimserver
 	#dbusername: slimserver
 	#dbpassword: ${password}
