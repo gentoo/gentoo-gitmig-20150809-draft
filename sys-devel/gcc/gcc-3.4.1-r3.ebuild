@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.27 2007/04/07 04:25:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.28 2007/06/26 02:52:46 mr_bones_ Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened n32 n64"
 
@@ -503,8 +503,8 @@ src_unpack() {
 
 	# disable --as-needed from being compiled into gcc specs
 	# natively when using >=sys-devel/binutils-2.15.90.0.1 this is
-	# done to keep our gcc backwards compatible with binutils. 
-	# gcc 3.4.1 cvs has patches that need back porting.. 
+	# done to keep our gcc backwards compatible with binutils.
+	# gcc 3.4.1 cvs has patches that need back porting..
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
 	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
 
@@ -563,7 +563,7 @@ src_compile() {
 	[ "${ARCH}" = "hppa" ] && myconf="${myconf} --enable-sjlj-exceptions"
 
 	# --with-gnu-ld needed for cross-compiling
-	# --enable-sjlj-exceptions : currently the unwind stuff seems to work 
+	# --enable-sjlj-exceptions : currently the unwind stuff seems to work
 	# for statically linked apps but not dynamic
 	# so use setjmp/longjmp exceptions by default
 	# uclibc uses --enable-clocale=uclibc (autodetected)

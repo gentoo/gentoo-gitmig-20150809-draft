@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.17.ebuild,v 1.4 2005/12/29 23:28:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.17.ebuild,v 1.5 2007/06/26 02:51:42 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 		-e '/^INSTALL_OPTS/s:-s::' \
 		Makefile || die "sed"
 
-	# This should make it built on other archictectures as well 
+	# This should make it built on other archictectures as well
 	use amd64 && epatch ${FILESDIR}/${P}-amd64-build.patch
 }
 
