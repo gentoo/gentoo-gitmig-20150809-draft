@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r2.ebuild,v 1.7 2007/06/24 22:12:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r2.ebuild,v 1.8 2007/06/26 02:34:46 mr_bones_ Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -31,7 +31,7 @@ src_unpack() {
 	# Fix security quagga bug 355
 	epatch "${WORKDIR}/patch/bgpd-bug-355.diff"
 	#Patch to fix RIP authentication problem in 0.98.6 (#132353)
-	#DO NOT USE IT IN ANY OTHER VERSIONS! 
+	#DO NOT USE IT IN ANY OTHER VERSIONS!
 	epatch "${WORKDIR}/patch/ripd-show-ifaces.diff"
 
 	# TCP MD5 for BGP patch for Linux (RFC 2385) - http://hasso.linux.ee/doku.php/english:network:rfc2385
@@ -41,7 +41,7 @@ src_unpack() {
 	use bgpclassless && epatch "${WORKDIR}/patch/ht-20040304-classless-bgp.patch"
 
 	# Connected route fix (Amir Guindehi) - http://voidptr.sboost.org/quagga/amir-connected-route.patch.bz2
-	# Dependant on the use flag 'fix-connected-rt' because it seems that more peoples have troubles 
+	# Dependant on the use flag 'fix-connected-rt' because it seems that more peoples have troubles
 	# with this than having a benefit.
 	# This patch fixes a bad behavior of the Linux kernel routing packets to interfaces which are
 	# down. Folks with PtP interfaces and VLans report troubles with this patch. Enable it again

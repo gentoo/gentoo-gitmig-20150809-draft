@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r9.ebuild,v 1.13 2007/04/22 17:27:37 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r9.ebuild,v 1.14 2007/06/26 02:30:59 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -51,7 +51,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}"-3.0.3-dhclient-stdin-conf.patch
 
 	# General fixes which will probably be accepted upstream eventually
-	# Fix token ring compiling, #102473 
+	# Fix token ring compiling, #102473
 	epatch "${FILESDIR}/${P}-tr.patch"
 	# Install libdst, #75544
 	epatch "${FILESDIR}/${PN}"-3.0.3-libdst.patch

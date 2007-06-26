@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/proxychains-3.1.ebuild,v 1.4 2006/10/24 06:12:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/proxychains-3.1.ebuild,v 1.5 2007/06/26 02:34:19 mr_bones_ Exp $
 
 # This doesn't seem to be 64bit clean ... on amd64 for example,
-# trying to do `proxychains telnet 192.168.0.77` will attempt to 
+# trying to do `proxychains telnet 192.168.0.77` will attempt to
 # connect to '10.0.0.5' instead:
 # $ strace -econnect ./proxychains telnet 192.168.0.77
-# connect(4, {sa_family=AF_INET, sin_port=htons(3128), sin_addr=inet_addr("10.0.0.5")}, 16) = -1 
+# connect(4, {sa_family=AF_INET, sin_port=htons(3128), sin_addr=inet_addr("10.0.0.5")}, 16) = -1
 
 inherit eutils
 

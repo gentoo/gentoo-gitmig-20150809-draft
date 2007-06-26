@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r8.ebuild,v 1.3 2007/04/04 06:44:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r8.ebuild,v 1.4 2007/06/26 02:33:56 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,17 +26,17 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	# Patch: [0]
-	# Gentoo lacks a maintainer for this package right now. And a 
-	# security problem arose. While reviewing our options for how 
-	# should we proceed with the security bug we decided it would be 
-	# better to just stay in sync with debian's own netkit-telnet 
-	# package. Lots of bug fixes by them over time which were not in 
+	# Gentoo lacks a maintainer for this package right now. And a
+	# security problem arose. While reviewing our options for how
+	# should we proceed with the security bug we decided it would be
+	# better to just stay in sync with debian's own netkit-telnet
+	# package. Lots of bug fixes by them over time which were not in
 	# our telnetd.
 	epatch "${WORKDIR}"/netkit-telnet_0.17-${PATCHLEVEL}.diff
 
 	# Patch: [1]
-	# after the deb patch we need to add a small patch that defines 
-	# gnu source. This is needed for gcc-3.4.x (needs to be pushed 
+	# after the deb patch we need to add a small patch that defines
+	# gnu source. This is needed for gcc-3.4.x (needs to be pushed
 	# back to the deb folk?)
 	epatch "${FILESDIR}"/netkit-telnetd-0.17-cflags-gnu_source.patch
 }

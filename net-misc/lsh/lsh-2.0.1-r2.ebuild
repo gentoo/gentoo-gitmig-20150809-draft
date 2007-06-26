@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-2.0.1-r2.ebuild,v 1.6 2007/03/26 08:06:35 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-2.0.1-r2.ebuild,v 1.7 2007/06/26 02:32:58 mr_bones_ Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_unpack() {
 		doc/{lshd.8,lsh.info} src/lshd.c src/sftp/sftp-server.[c8] \
 		|| die "rename sftp-server"
 	# remove bundled nettle crap #56156 ... this is pretty ugly sed foo,
-	# but the alternative is a bigger, uglier patch which would probably 
+	# but the alternative is a bigger, uglier patch which would probably
 	# need updating with every version :/
 	sed -i -e '/src\/nettle/d' configure || die "sed configure failed"
 	sed -i \

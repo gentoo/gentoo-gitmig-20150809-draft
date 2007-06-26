@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.0.ebuild,v 1.1 2007/04/10 21:54:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.0.ebuild,v 1.2 2007/06/26 02:32:05 mr_bones_ Exp $
 
 inherit eutils multilib rpm
 
@@ -66,7 +66,7 @@ src_install() {
 	doins lib/ICAClient/config/* lib/ICAClient/config/.*
 
 	insinto /opt/ICAClient/config/usertemplate
-	doins lib/ICAClient/config/usertemplate/* 
+	doins lib/ICAClient/config/usertemplate/*
 
 	insinto /opt/ICAClient/help
 	doins lib/ICAClient/help/*

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.10-r2.ebuild,v 1.1 2006/11/27 14:36:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.10-r2.ebuild,v 1.2 2007/06/26 02:35:12 mr_bones_ Exp $
 
 IUSE="bri devfs26 rtc ukcid"
 
@@ -105,7 +105,7 @@ src_unpack() {
 		sed -i  -e "s:^\(CFLAGS+=-I. \).*:\1 \$(ZAP):" \
 			zaphfc/Makefile
 
-		# replace uname -r with $(KVERS) 
+		# replace uname -r with $(KVERS)
 		# and add KVERS?="$(uname -r)" to all bristuff Makefiles
 		find ${S_BRI} -iname "Makefile" -exec sed -i \
 			-e "s:\`uname -r\`:\$(KVERS):g" \
