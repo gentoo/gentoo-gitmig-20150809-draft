@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/remember-1.9-r1.ebuild,v 1.1 2007/06/25 18:43:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/remember-1.9-r1.ebuild,v 1.2 2007/06/26 07:09:11 ulm Exp $
 
 inherit elisp eutils
 
@@ -23,27 +23,18 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-make-elc.patch"
-
-	# don't try to compile files with unsatisfied dependencies
-	mkdir nocompile
-	mv remember-{bibl,blosxom,emacs-wiki-journal}.el nocompile
-
-	if ! use bbdb; then
-		elog "bbdb USE flag not set - removing remember-bbdb.el"
-		rm -f remember-bbdb.el
-	fi
-	if ! use planner; then
-		elog "planner USE flag not set - removing remember-planner.el"
-		rm -f remember-{planner,experimental}.el
-	fi
 }
 
 src_compile() {
-	emake || die "emake failed"
+	local EL="remember.el remember-diary.el read-file-name.el"
+	use bbdb && EL="${EL} remember-bbdb.el"
+	use planner && EL="${EL} remember-planner.el remember-experimental.el"
+
+	emake EL="${EL}" || die "emake failed"
 }
 
 src_install() {
-	elisp-install ${PN} *.{el,elc} nocompile/*.el
+	elisp-install ${PN} *.{el,elc}
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	doinfo remember-el.info
 	dodoc ChangeLog
