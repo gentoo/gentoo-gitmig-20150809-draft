@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.43 2007/04/08 03:56:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.44 2007/06/26 05:40:11 nerdboy Exp $
+
+  26 Jun 2007; Steve Arnold <nerdboy@gentoo.org> rapidsvn-0.9.3.ebuild,
+  rapidsvn-0.9.4.ebuild:
+  Fixes for bug 180236 as well as desktop and icon fixes.  Set apr deps
+  based on subversion and upstream (handle apr-1 correctly).
 
   08 Apr 2007; Ryan Hill <dirtyepic@gentoo.org> rapidsvn-0.9.3.ebuild,
   rapidsvn-0.9.4.ebuild:
