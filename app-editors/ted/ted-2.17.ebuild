@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.17.ebuild,v 1.3 2005/08/28 16:03:56 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.17.ebuild,v 1.4 2007/06/26 01:34:52 mr_bones_ Exp $
 
 DESCRIPTION="X-based rich text editor"
 HOMEPAGE="http://www.nllgg.nl/Ted"
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# This is a fix for userpriv &| usersandbox. 
+	# This is a fix for userpriv &| usersandbox.
 	export RPM_BUILD_ROOT="${S}"
 	for dir in Ted tedPackage appFrame appUtil ind bitmap libreg; do
 		cd ${S}/${dir}
@@ -45,7 +45,7 @@ src_compile() {
 }
 
 src_install() {
-	# This is a fix for userpriv &| usersandbox. 
+	# This is a fix for userpriv &| usersandbox.
 	export RPM_BUILD_ROOT="${S}"
 
 	mkdir ${T}/pkg
