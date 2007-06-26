@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.501 2007/06/26 17:47:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.502 2007/06/26 19:54:58 ulm Exp $
+
+  26 Jun 2007; Ulrich Mueller <ulm@gentoo.org> updates/2Q-2007:
+  Package move app-emacs/rst-mode to app-emacs/rst.
 
   26 Jun 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
   Remove mask for removed package, bug 131866

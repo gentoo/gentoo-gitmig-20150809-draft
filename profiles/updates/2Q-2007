@@ -21,3 +21,4 @@ move media-fonts/cjkuni-fonts media-fonts/arphicfonts
 move net-misc/libupnp net-libs/libupnp
 move net-wireless/orinoco net-wireless/orinoco-sn
 move app-emacs/ebuild-mode app-emacs/gentoo-syntax
+move app-emacs/rst-mode app-emacs/rst
