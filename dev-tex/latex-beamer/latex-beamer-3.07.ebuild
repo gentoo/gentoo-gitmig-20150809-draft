@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.07.ebuild,v 1.2 2007/06/19 12:06:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.07.ebuild,v 1.3 2007/06/26 02:02:52 mr_bones_ Exp $
 
 inherit latex-package elisp-common
 
@@ -49,7 +49,7 @@ src_install() {
 	if use doc ; then
 		insinto /usr/share/doc/${PF}
 		doins doc/* || die
-	
+
 		insinto /usr/share/doc/${PF}
 		doins -r examples emulation/examples solutions || die
 	fi
