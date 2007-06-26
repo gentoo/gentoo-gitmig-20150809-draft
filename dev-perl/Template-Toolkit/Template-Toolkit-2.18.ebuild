@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.18.ebuild,v 1.6 2007/05/05 18:02:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.18.ebuild,v 1.7 2007/06/26 01:58:29 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -40,7 +40,7 @@ mydoc="README"
 #    of the Template Toolkit which you should be aware of.  Installing
 #    this version will overwrite your version $Template::VERSION files
 #    unless you take measures to install one or the other version in a
-#    different location (i.e. perl Makefile.PL PREFIX=/other/path).  
+#    different location (i.e. perl Makefile.PL PREFIX=/other/path).
 #
 #    Please consult the README and Changes file for further details.
 #    Most of the changes are in the more obscure features and

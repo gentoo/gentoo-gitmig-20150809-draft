@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010709.ebuild,v 1.4 2007/03/05 12:52:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010709.ebuild,v 1.5 2007/06/26 01:58:55 mr_bones_ Exp $
 
 inherit perl-module eutils
 
@@ -28,8 +28,8 @@ DEPEND="~sci-mathematics/pari-2.1.7
 src_compile() {
 	# Unfortunately the assembly routines math-pari has for SPARC do not appear
 	# to be working at current.  Perl cannot test math-pari or anything that
-	# pulls in the math-pari module as DynaLoader cannot load the resulting 
-	# .so files math-pari generates.  As such, we have to use the generic 
+	# pulls in the math-pari module as DynaLoader cannot load the resulting
+	# .so files math-pari generates.  As such, we have to use the generic
 	# non-machine specific assembly methods here.
 	use sparc && myconf="${myconf} machine=none"
 

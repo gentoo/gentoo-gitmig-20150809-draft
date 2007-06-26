@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Norwegian/Snowball-Norwegian-1.2.ebuild,v 1.2 2007/06/21 16:41:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Norwegian/Snowball-Norwegian-1.2.ebuild,v 1.3 2007/06/26 01:57:34 mr_bones_ Exp $
 
 inherit perl-module multilib
 
@@ -22,16 +22,16 @@ src_install() {
 	perl-module_src_install
 	local version
 	eval `perl '-V:version'`
-	perl_version=${version} 
+	perl_version=${version}
 	local myarch
 	eval `perl '-V:archname'`
-	myarch=${archname} 
+	myarch=${archname}
 
 	if [ -f ${D}/usr/$(get_libdir)/perl5/vendor_perl/${perl_version}/Lingua/Stem/Snowball/stemmer.pl ]; then
 		mv \
 		${D}/usr/$(get_libdir)/perl5/vendor_perl/${perl_version}/Lingua/Stem/Snowball/stemmer.pl \
 		${D}/usr/$(get_libdir)/perl5/vendor_perl/${perl_version}/Lingua/Stem/Snowball/no-stemmer.pl
-	fi 
+	fi
 }
 
 pkg_postinst() {

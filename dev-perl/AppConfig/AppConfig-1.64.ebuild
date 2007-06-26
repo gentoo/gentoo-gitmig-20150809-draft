@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/AppConfig-1.64.ebuild,v 1.5 2007/05/05 17:30:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/AppConfig-1.64.ebuild,v 1.6 2007/06/26 01:56:49 mr_bones_ Exp $
 
 inherit perl-module eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# 2004.05.27 rac 
+	# 2004.05.27 rac
 	# this patch, which will be sent upstream, allows [ block ] to
 	# work without variables becoming ' block _var'
 
