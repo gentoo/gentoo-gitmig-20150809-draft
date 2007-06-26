@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.34 2007/05/18 21:08:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.35 2007/06/26 14:14:56 angelos Exp $
+
+  26 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  libdvb-0.5.5.1-r3.ebuild:
+  Stable on amd64 wrt bug 183264
 
   18 May 2007; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Make it media-tv herd assigned only.
