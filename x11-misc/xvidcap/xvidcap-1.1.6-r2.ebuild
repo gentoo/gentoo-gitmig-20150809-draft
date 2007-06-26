@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.6-r2.ebuild,v 1.1 2007/06/26 20:44:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.6-r2.ebuild,v 1.2 2007/06/26 21:07:22 drac Exp $
 
 GCONF_DEBUG="no"
 
-inherit autotools eutils gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Screen capture utility enabling you to create videos of your desktop for illustration or documentation purposes."
 HOMEPAGE="http://xvidcap.sourceforge.net"
@@ -31,12 +31,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-ffmpeg.patch
-	eautoreconf
 }
 
 src_compile() {
 	econf --without-forced-embedded-ffmpeg \
-		--includedir=/usr/include/ffmpeg \
 		$(use_enable mp3 libmp3lame) \
 		$(use_enable theora libtheora)
 	emake || die "emake failed."

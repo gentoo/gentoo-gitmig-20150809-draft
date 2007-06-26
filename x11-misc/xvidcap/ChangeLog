@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xvidcap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.36 2007/06/26 20:44:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.37 2007/06/26 21:07:22 drac Exp $
+
+  26 Jun 2007; Samuli Suominen <drac@gentoo.org> xvidcap-1.1.6-r2.ebuild:
+  Drop redudant autotools usage.
 
 *xvidcap-1.1.6-r2 (26 Jun 2007)
 
