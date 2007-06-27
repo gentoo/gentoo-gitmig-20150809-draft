@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/schedutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/schedutils/ChangeLog,v 1.6 2007/06/20 12:11:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/schedutils/ChangeLog,v 1.7 2007/06/27 16:05:49 opfer Exp $
+
+  27 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  schedutils-1.5.0.ebuild:
+  stable x86, bug 182524
 
   20 Jun 2007; Christoph Mende <angelos@gentoo.org> schedutils-1.5.0.ebuild:
   Stable on amd64 wrt bug 182524
