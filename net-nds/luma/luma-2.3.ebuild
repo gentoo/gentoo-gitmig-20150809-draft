@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.3.ebuild,v 1.2 2007/06/23 11:21:59 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.3.ebuild,v 1.3 2007/06/27 06:45:47 opfer Exp $
 
 NEED_PYTHON=2.3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/luma/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="samba"
 
 RDEPEND="$(qt_min_version 3.2)

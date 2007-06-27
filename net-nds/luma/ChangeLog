@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/luma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/ChangeLog,v 1.27 2007/06/23 11:21:59 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/ChangeLog,v 1.28 2007/06/27 06:45:47 opfer Exp $
+
+  27 Jun 2007; Christian Faulhammer <opfer@gentoo.org> luma-2.3.ebuild:
+  stable x86, bug 180520
 
   23 Jun 2007; Tiziano Müller <dev-zero@gentoo.org> luma-2.3.ebuild:
   Cleanup
