@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.312 2007/06/07 13:44:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.313 2007/06/27 09:58:08 zzam Exp $
+
+*udev-113 (27 Jun 2007)
+
+  27 Jun 2007; Matthias Schwarzott <zzam@gentoo.org> +udev-113.ebuild:
+  Version bumped. Moved installing device-mapper rules to sys-fs/device-mapper
+  ebuild, Bug #182957. Added some code to make sure the file gets kept if
+  device-mapper is installed, and removed if not.
 
 *udev-112-r1 (07 Jun 2007)
 
