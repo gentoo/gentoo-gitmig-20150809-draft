@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.55 2007/05/01 17:52:35 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.56 2007/06/27 13:29:26 angelos Exp $
+
+  27 Jun 2007; Christoph Mende <angelos@gentoo.org> iptraf-3.0.0-r3.ebuild:
+  Stable on amd64 wrt bug 183386
 
   01 May 2007; Marius Mauch <genone@gentoo.org> iptraf-3.0.0-r2.ebuild,
   iptraf-3.0.0-r3.ebuild:
