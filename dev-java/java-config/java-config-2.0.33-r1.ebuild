@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.33-r1.ebuild,v 1.4 2007/06/26 22:03:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.33-r1.ebuild,v 1.5 2007/06/27 06:14:40 corsair Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64 ~arm ~ia64 ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~ia64 ppc ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-lang/python"
