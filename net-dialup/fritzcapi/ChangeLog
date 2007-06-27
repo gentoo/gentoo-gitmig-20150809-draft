@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/fritzcapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.30 2007/05/02 07:53:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.31 2007/06/27 21:34:59 genstef Exp $
+
+  27 Jun 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/2.6.43-linux-2.6.19-irq_handler.amd64.patch,
+  +files/fritzcapi-2.6.20.amd64.patch, +files/2.6.43-fcpcmcia.amd64.patch,
+  fritzcapi-2.6.43.ebuild:
+  amd64 later 2.6 kernel fixes thanks to Miroslaw Mieszczak
+  <mieszcz@zabrze.zigzag.pl> in bug 163366
 
   02 May 2007; Marius Mauch <genone@gentoo.org> fritzcapi-2.6.43.ebuild:
   Replacing einfo with elog
