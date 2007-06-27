@@ -1,6 +1,9 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.36 2007/06/06 17:39:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.37 2007/06/27 10:31:42 uberlord Exp $
+
+# Beagle needs these patches #176668, 176670.
+beagle
 
 # Someone who knows kerberos is needed to make sure that this works
 kerberos
@@ -40,7 +43,6 @@ skey
 xulrunner
 
 # To be tested
-mono
 meanwhile
 smartcard
 openct
