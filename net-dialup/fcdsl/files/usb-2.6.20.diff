@@ -1,0 +1,189 @@
+diff -ur /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslslusb/driver.c ./src.fcdslslusb/driver.c
+--- /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslslusb/driver.c	2005-07-06 22:00:00.000000000 +0000
++++ ./src.fcdslslusb/driver.c	2007-06-27 19:56:42.000000000 +0000
+@@ -106,7 +106,7 @@
+ static int			hard_error_issued	= FALSE;
+ static atomic_t			resetting_ctrl		= ATOMIC_INIT (0);
+ static struct work_struct	closing_work;
+-static void			closing_worker (void *);
++static void			closing_worker (struct work_struct *);
+ static atomic_t			closing_worker_running	= ATOMIC_INIT (0);
+ static void		     (* close_func) (void *)	= NULL;
+ static void *			close_data		= NULL;
+@@ -341,8 +341,8 @@
+ 
+ /*---------------------------------------------------------------------------*\
+ \*---------------------------------------------------------------------------*/
+-static void closing_worker (void * ctx) {
+-	card_p	card = (card_p) ctx;
++static void closing_worker (struct work_struct *work) {
++	card_p	card = capi_card;
+ 
+ 	DECLARE_WAIT_QUEUE_HEAD(close_wait);
+ 
+@@ -434,7 +434,7 @@
+ 	close_func = func;
+ 	close_data = data;
+ 
+-	INIT_WORK (&closing_work, closing_worker, capi_card);
++	INIT_WORK (&closing_work, closing_worker);
+ 	schedule_work (&closing_work);
+ 	LOG("Worker scheduled.\n");
+ } /* start_closing_worker */
+diff -ur /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslusb/driver.c ./src.fcdslusb/driver.c
+--- /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslusb/driver.c	2005-08-04 22:00:00.000000000 +0000
++++ ./src.fcdslusb/driver.c	2007-06-27 19:53:54.000000000 +0000
+@@ -84,7 +84,7 @@
+ static atomic_t			thread_capi_flag;
+ static atomic_t			resetting_ctrl		= ATOMIC_INIT (0);
+ static struct work_struct	closing_work;
+-static void			closing_worker (void *);
++static void			closing_worker (struct work_struct *);
+ static atomic_t			closing_worker_running	= ATOMIC_INIT (0);
+ static void		     (* close_func) (void *)	= NULL;
+ static void *			close_data		= NULL;
+@@ -699,8 +699,8 @@
+ 
+ /*-C-------------------------------------------------------------------------*\
+ \*---------------------------------------------------------------------------*/
+-static void closing_worker (void * ctx) {
+-	card_p	card = (card_p) ctx;
++static void closing_worker (struct work_struct *work) {
++	card_p	card = capi_card;
+ 
+ 	DECLARE_WAIT_QUEUE_HEAD(close_wait);
+ 
+@@ -787,7 +787,7 @@
+ 	close_func = func;
+ 	close_data = data;
+ 
+-	INIT_WORK (&closing_work, closing_worker, capi_card);
++	INIT_WORK (&closing_work, closing_worker);
+ 	schedule_work (&closing_work);
+ 	LOG("Worker scheduled.\n");
+ } /* start_closing_worker */
+diff -ur /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslusb/main.c ./src.fcdslusb/main.c
+--- /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslusb/main.c	2006-01-30 16:06:37.000000000 +0000
++++ ./src.fcdslusb/main.c	2007-06-27 19:40:42.000000000 +0000
+@@ -76,14 +76,7 @@
+ } ;
+ 
+ static struct usb_driver usb_driver = {
+-#ifndef OLD_USB_DRIVER
+-	.driver = {
+-#endif
+-		.owner =	THIS_MODULE,
+-		.name =		TARGET,
+-#ifndef OLD_USB_DRIVER
+-	},
+-#endif
++	.name =		TARGET,
+ 	.id_table =	usb_id_table,
+ 	.probe =	usb_probe,
+ 	.disconnect =	usb_disconnect,
+diff -ur /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslusb2/driver.c ./src.fcdslusb2/driver.c
+--- /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslusb2/driver.c	2005-08-04 22:00:00.000000000 +0000
++++ ./src.fcdslusb2/driver.c	2007-06-27 19:57:51.000000000 +0000
+@@ -106,7 +106,7 @@
+ static int			hard_error_issued	= FALSE;
+ static atomic_t			resetting_ctrl		= ATOMIC_INIT (0);
+ static struct work_struct	closing_work;
+-static void			closing_worker (void *);
++static void			closing_worker (struct work_struct *);
+ static atomic_t			closing_worker_running	= ATOMIC_INIT (0);
+ static void		     (* close_func) (void *)	= NULL;
+ static void *			close_data		= NULL;
+@@ -341,8 +341,8 @@
+ 
+ /*---------------------------------------------------------------------------*\
+ \*---------------------------------------------------------------------------*/
+-static void closing_worker (void * ctx) {
+-	card_p	card = (card_p) ctx;
++static void closing_worker (struct work_struct *work) {
++	card_p	card = capi_card;
+ 
+ 	DECLARE_WAIT_QUEUE_HEAD(close_wait);
+ 
+@@ -434,7 +434,7 @@
+ 	close_func = func;
+ 	close_data = data;
+ 
+-	INIT_WORK (&closing_work, closing_worker, capi_card);
++	INIT_WORK (&closing_work, closing_worker);
+ 	schedule_work (&closing_work);
+ 	LOG("Worker scheduled.\n");
+ } /* start_closing_worker */
+Only in ./src.fcdslusb2: driver.o
+Only in ./src.fcdslusb2: lib.o
+diff -ur /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslusb2/main.c ./src.fcdslusb2/main.c
+--- /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslusb2/main.c	2007-06-27 20:01:13.000000000 +0000
++++ ./src.fcdslusb2/main.c	2007-06-27 19:57:13.000000000 +0000
+@@ -91,15 +91,7 @@
+ } ;
+ 
+ static struct usb_driver usb_driver = {
+-
+-#ifndef OLD_USB_DRIVER
+-	.driver = {
+-#endif
+-		.owner =	THIS_MODULE,
+-		.name =		TARGET,
+-#ifndef OLD_USB_DRIVER
+-	},
+-#endif
++	.name =		TARGET,
+ 	.id_table =	usb_id_table,
+ 	.probe =	usb_probe,
+ 	.disconnect =	usb_disconnect,
+diff -ur /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslusba/driver.c ./src.fcdslusba/driver.c
+--- /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslusba/driver.c	2005-07-06 22:00:00.000000000 +0000
++++ ./src.fcdslusba/driver.c	2007-06-27 19:58:47.000000000 +0000
+@@ -106,7 +106,7 @@
+ static int			hard_error_issued	= FALSE;
+ static atomic_t			resetting_ctrl		= ATOMIC_INIT (0);
+ static struct work_struct	closing_work;
+-static void			closing_worker (void *);
++static void			closing_worker (struct work_struct *);
+ static atomic_t			closing_worker_running	= ATOMIC_INIT (0);
+ static void		     (* close_func) (void *)	= NULL;
+ static void *			close_data		= NULL;
+@@ -341,8 +341,8 @@
+ 
+ /*---------------------------------------------------------------------------*\
+ \*---------------------------------------------------------------------------*/
+-static void closing_worker (void * ctx) {
+-	card_p	card = (card_p) ctx;
++static void closing_worker (struct work_struct *work) {
++	card_p	card = capi_card;
+ 
+ 	DECLARE_WAIT_QUEUE_HEAD(close_wait);
+ 
+@@ -434,7 +434,7 @@
+ 	close_func = func;
+ 	close_data = data;
+ 
+-	INIT_WORK (&closing_work, closing_worker, capi_card);
++	INIT_WORK (&closing_work, closing_worker);
+ 	schedule_work (&closing_work);
+ 	LOG("Worker scheduled.\n");
+ } /* start_closing_worker */
+diff -ur /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslusba/main.c ./src.fcdslusba/main.c
+--- /var/tmp/portage/net-dialup/fcdsl-2.6.37/work/usr/src/kernel-modules/fcdsl/src/src.fcdslusba/main.c	2007-06-27 20:01:13.000000000 +0000
++++ ./src.fcdslusba/main.c	2007-06-27 19:58:18.000000000 +0000
+@@ -91,15 +91,7 @@
+ } ;
+ 
+ static struct usb_driver usb_driver = {
+-
+-#ifndef OLD_USB_DRIVER
+-	.driver = {
+-#endif
+-		.owner =	THIS_MODULE,
+-		.name =		TARGET,
+-#ifndef OLD_USB_DRIVER
+-	},
+-#endif
++	.name =		TARGET,
+ 	.id_table =	usb_id_table,
+ 	.probe =	usb_probe,
+ 	.disconnect =	usb_disconnect,
