@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/make.defaults,v 1.17 2006/10/05 21:18:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/make.defaults,v 1.18 2007/06/27 17:27:31 gustavoz Exp $
 
 # 32bit kernel, 32bit userland
 CHOST="sparc-unknown-linux-gnu"
@@ -26,4 +26,4 @@ CXXFLAGS=${CFLAGS}
 
 # 2006/10/05 - Gustavo Zacarias <gustavoz@gentoo.org>
 # Defaults for video drivers
-VIDEO_CARDS="dummy fbdev sisusb sunbw2 suncg14 suncg3 suncg6 sunffb sunleo"
+VIDEO_CARDS="dummy fbdev sunbw2 suncg14 suncg3 suncg6 sunffb sunleo"
