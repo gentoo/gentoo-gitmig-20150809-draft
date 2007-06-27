@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7407 2007/06/27 03:17:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7408 2007/06/27 04:41:06 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -34,10 +34,6 @@ app-cdr/konqburn
 # Samuli Suominen <drac@gentoo.org> (26 Jun 2007)
 # Needs to unmasked same time with >=ffmpeg-0.4.9_p20070616
 >=x11-misc/xvidcap-1.1.6-r1
-
-# Ulrich Mueller <ulm@gentoo.org> (26 Jun 2007)
-# Masked wrt bug #183205
-=app-emacs/cedet-1.0_pre4
 
 # Mike Auty <ikelos@gentoo.org> (24 Jun 2007)
 # Masked for about a week, for testing
