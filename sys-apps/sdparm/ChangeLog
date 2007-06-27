@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.28 2007/06/26 22:01:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.29 2007/06/27 19:51:51 armin76 Exp $
+
+  27 Jun 2007; Raúl Porcel <armin76@gentoo.org> sdparm-1.01.ebuild:
+  alpha stable wrt #183310, thanks to Tobias Klausmann for testing
 
   26 Jun 2007; Christoph Mende <angelos@gentoo.org> sdparm-1.01.ebuild:
   Stable on amd64 wrt bug 183310
