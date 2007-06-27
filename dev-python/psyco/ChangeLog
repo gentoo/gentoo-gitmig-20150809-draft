@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psyco
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.20 2007/06/25 18:01:39 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.21 2007/06/27 09:49:35 hawking Exp $
+
+*psyco-1.5.2 (27 Jun 2007)
+
+  27 Jun 2007; Ali Polatel <hawking@gentoo.org> +psyco-1.5.2.ebuild:
+  Version bump, bug #166942
 
   25 Jun 2007; Ali Polatel <hawking@gentoo.org> psyco-1.4.ebuild,
   psyco-1.5.1.ebuild:
