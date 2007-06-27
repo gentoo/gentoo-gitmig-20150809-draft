@@ -1,6 +1,10 @@
 # ChangeLog for media-video/camsource
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.20 2007/06/21 11:17:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.21 2007/06/27 06:40:43 opfer Exp $
+
+  27 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  camsource-0.7.1.ebuild:
+  stable x86, bug 181930
 
   21 Jun 2007; Samuli Suominen <drac@gentoo.org> camsource-0.7.1.ebuild:
   filter-ldflags -Wl,-z,now for bug 182775.
