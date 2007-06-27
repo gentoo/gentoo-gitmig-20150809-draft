@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.24 2007/06/26 07:59:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.25 2007/06/27 04:36:38 ulm Exp $
+
+  27 Jun 2007; Ulrich Mueller <ulm@gentoo.org>
+  +files/1.0_pre4-semantic-makefile.patch, cedet-1.0_pre4.ebuild:
+  Fix wisent compilation, bug #183205, reported by Martin von Gagern
+  <Martin.vGagern@gmx.net>.
 
 *cedet-1.0_pre4 (23 Jun 2007)
 

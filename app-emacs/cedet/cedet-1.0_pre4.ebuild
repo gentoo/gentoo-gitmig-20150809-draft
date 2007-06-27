@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre4.ebuild,v 1.3 2007/06/26 07:59:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre4.ebuild,v 1.4 2007/06/27 04:36:38 ulm Exp $
 
 inherit elisp eutils versionator
 
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/1.0_pre3-eieio-tests-gentoo.patch" # Bug #124598
+	epatch "${FILESDIR}/1.0_pre4-semantic-makefile.patch"  # Bug #183205
 }
 
 src_compile() {

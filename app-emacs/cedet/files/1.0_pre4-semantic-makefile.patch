@@ -1,0 +1,11 @@
+--- cedet-1.0pre4/semantic/Makefile~	2007-06-06 04:00:10.000000000 +0200
++++ cedet-1.0pre4/semantic/Makefile	2007-06-27 00:45:06.000000000 +0200
+@@ -114,7 +114,7 @@
+ 	"$(EMACS)" -batch --no-site-file -l $@-compile-script -f batch-byte-compile $^
+ 
+ .PHONY:wisent
+-wisent:
++wisent: bovinator
+ 	cd wisent; $(MAKE)
+ 
+ .PHONY:Tests
