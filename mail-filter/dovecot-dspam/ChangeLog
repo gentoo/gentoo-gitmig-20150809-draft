@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for mail-filter/dovecot-dspam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-dspam/ChangeLog,v 1.1 2007/06/18 12:26:07 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-dspam/ChangeLog,v 1.2 2007/06/27 20:33:59 swegener Exp $
 
 *dovecot-dspam-0_beta7 (18 Jun 2007)
 
