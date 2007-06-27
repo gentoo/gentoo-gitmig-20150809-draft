@@ -1,0 +1,57 @@
+diff -ur telepathy-inspector-0.5.0.orig/data/SConscript telepathy-inspector-0.5.0/data/SConscript
+--- telepathy-inspector-0.5.0.orig/data/SConscript	2007-06-27 12:10:15.000000000 +0200
++++ telepathy-inspector-0.5.0/data/SConscript	2007-06-27 12:10:48.000000000 +0200
+@@ -27,7 +27,8 @@
+ 
+ Import ('env')
+ 
+-install_dir = os.path.join (env['PREFIX'], 'share', 'telepathy-inspector')
++_r = lambda p: (p[0] == '/') and p[1:] or p
++install_dir = os.path.join('/', env['DESTDIR'], _r(env['PREFIX']), 'share', 'telepathy-inspector')
+ 
+ data_install = env.Install (install_dir, data_files)
+ env.Alias ('install', data_install)
+diff -ur telepathy-inspector-0.5.0.orig/SConstruct telepathy-inspector-0.5.0/SConstruct
+--- telepathy-inspector-0.5.0.orig/SConstruct	2007-06-27 12:10:15.000000000 +0200
++++ telepathy-inspector-0.5.0/SConstruct	2007-06-27 13:56:42.000000000 +0200
+@@ -21,7 +21,9 @@
+ 
+ # Get our configuration options:
+ opts = Options(options_filename)
+-opts.Add('PREFIX', 'Directory to install under', '/usr/local')
++opts.Add('PREFIX', 'A prefix for all paths', '/usr/local')
++opts.Add('DESTDIR', 'Directory to install under', '')
++opts.Add('CCFLAGS', 'Compiler flags', '')
+ opts.Add(BoolOption('CONFIGURE', 'Whether the build should be (re)configured', 'yes'))
+ opts.Add(BoolOption('DEBUG', 'Whether debugging information should be produced', 'no'))
+ opts.Update(env)
+@@ -32,13 +34,12 @@
+ # Compiler options
+ 
+ if env['CC'] == 'gcc':
++    if '-Wall' not in env['CCFLAGS'].split() and '-Werror' not in env['CCFLAGS'].split():
++        env['CCFLAGS'] += ' -Wall -Werror'
+ 
+-    env['CCFLAGS'] += ' -Wall -Werror'
+-
+-    if env['DEBUG'] == True:
++    if env['DEBUG'] == True and '-g' not in env['CCFLAGS'].split():
+         env['CCFLAGS'] += ' -g'
+ 
+-
+ # Configuration:
+ 
+ if env['CONFIGURE'] == True:
+diff -ur telepathy-inspector-0.5.0.orig/src/SConscript telepathy-inspector-0.5.0/src/SConscript
+--- telepathy-inspector-0.5.0.orig/src/SConscript	2007-06-27 12:10:14.000000000 +0200
++++ telepathy-inspector-0.5.0/src/SConscript	2007-06-27 12:11:00.000000000 +0200
+@@ -45,7 +45,8 @@
+ 
+ Import ('env options_filename')
+ 
+-install_dir = os.path.join (env['PREFIX'], 'bin')
++_r = lambda p: (p[0] == '/') and p[1:] or p
++install_dir = os.path.join('/', env['DESTDIR'], _r(env['PREFIX']), 'bin')
+ 
+ env.Command('ti-signals-marshal.c', 'ti-signals-marshal.list', 'glib-genmarshal --body --prefix=ti_marshal $SOURCE > $TARGET')
+ env.Command('ti-signals-marshal.h', 'ti-signals-marshal.list', 'glib-genmarshal --header --prefix=ti_marshal $SOURCE > $TARGET')
