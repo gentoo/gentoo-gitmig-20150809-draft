@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-4.3.1-r1.ebuild,v 1.1 2007/05/03 12:40:24 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-4.3.1-r1.ebuild,v 1.2 2007/06/27 09:49:03 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -18,11 +18,11 @@ DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
 
 src_compile() {
-
 	emake sources || die "failed to make sources"
-
+	# bug 162650 and #175578 and #183356
+	java-pkg_init-compiler_
+	[[ ${GENTOO_COMPILER} != "javac" ]] && export ANT_OPTS="-Xmx512m"
 	java-pkg-2_src_compile
-
 }
 
 src_install() {

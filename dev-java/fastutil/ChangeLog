@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/fastutil
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.31 2007/05/05 19:15:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.32 2007/06/27 09:49:03 caster Exp $
+
+  27 Jun 2007; Vlastimil Babka <caster@gentoo.org> fastutil-4.3.1-r1.ebuild,
+  fastutil-4.4.2-r1.ebuild:
+  Raise heap size for compiling also for other slots. Fixes bug #183356.
 
 *fastutil-5.0.9 (05 May 2007)
 
