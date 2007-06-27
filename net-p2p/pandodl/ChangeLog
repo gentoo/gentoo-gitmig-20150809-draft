@@ -1,0 +1,10 @@
+# ChangeLog for net-p2p/pandodl
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pandodl/ChangeLog,v 1.1 2007/06/27 22:25:21 coldwind Exp $
+
+*pandodl-0.9.1.0 (27 Jun 2007)
+
+  27 Jun 2007; Santiago M. Mola <coldwind@gentoo.org> +files/pandodl,
+  +metadata.xml, +pandodl-0.9.1.0.ebuild:
+  Initial commit, fixes bug #182580
+
