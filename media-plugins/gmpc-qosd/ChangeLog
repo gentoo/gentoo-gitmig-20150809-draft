@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-qosd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-qosd/ChangeLog,v 1.3 2007/06/24 18:18:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-qosd/ChangeLog,v 1.4 2007/06/27 18:21:11 gustavoz Exp $
+
+  27 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gmpc-qosd-0.15.0.ebuild:
+  Keyworded ~sparc
 
   24 Jun 2007; Christoph Mende <angelos@gentoo.org> gmpc-qosd-0.15.0.ebuild:
   Added ~amd64

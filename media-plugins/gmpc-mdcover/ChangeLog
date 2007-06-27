@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-mdcover
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.2 2007/06/19 14:33:22 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.3 2007/06/27 18:22:11 gustavoz Exp $
+
+  27 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gmpc-mdcover-0.15.0.ebuild:
+  Keyworded ~sparc
 
 *gmpc-mdcover-0.15.0 (19 Jun 2007)
 

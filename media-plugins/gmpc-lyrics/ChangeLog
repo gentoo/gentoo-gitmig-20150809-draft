@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-lyrics
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyrics/ChangeLog,v 1.2 2007/06/19 13:24:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyrics/ChangeLog,v 1.3 2007/06/27 18:18:50 gustavoz Exp $
+
+  27 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gmpc-lyrics-0.15.0.ebuild:
+  Keyworded ~sparc
 
 *gmpc-lyrics-0.15.0 (19 Jun 2007)
 
