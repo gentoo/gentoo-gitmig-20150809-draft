@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtkglext
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.26 2007/06/14 15:30:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.27 2007/06/27 19:03:46 uberlord Exp $
+
+  27 Jun 2007; Roy Marples <uberlord@gentoo.org> pygtkglext-1.1.0.ebuild:
+  Keyworded ~x86-fbsd, #183308 thanks to Nathan Smith.
 
   14 Jun 2007; Samuli Suominen <drac@gentoo.org> pygtkglext-1.1.0.ebuild:
   Keyword arm for bug 176517.
