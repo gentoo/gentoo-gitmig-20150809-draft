@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.269 2007/06/27 14:45:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.270 2007/06/27 20:04:21 pylon Exp $
+
+  27 Jun 2007; Lars Weiler <pylon@gentoo.org> subversion-1.3.2-r4.ebuild:
+  Stable on ppc; bug #178264.
 
   27 Jun 2007; Jeroen Roovers <jer@gentoo.org> subversion-1.3.2-r4.ebuild:
   Stable for HPPA (bug #178264).
