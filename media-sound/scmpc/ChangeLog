@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/scmpc
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/ChangeLog,v 1.1 2007/06/27 00:47:25 angelos Exp $
+
+*scmpc-0.2.2 (26 Jun 2007)
+
+  26 Jun 2007; Christoph Mende <angelos@gentoo.org> +metadata.xml,
+  +scmpc-0.2.2.ebuild:
+  Initial import
+
