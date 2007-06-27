@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r12.ebuild,v 1.12 2007/01/06 05:09:58 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r12.ebuild,v 1.13 2007/06/27 16:52:18 vapier Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
-WANT_AUTOMAKE=1.4
 inherit gnome.org eutils toolchain-funcs autotools
 
 DESCRIPTION="The GIMP Toolkit"
@@ -36,9 +35,12 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-m4.patch
+	epatch "${FILESDIR}"/${P}-automake.patch
+	epatch "${FILESDIR}"/${P}-cleanup.patch
 	epatch "${DISTDIR}"/gtk+-1.2.10-r8-gentoo.diff.bz2
 	epatch "${FILESDIR}"/${PN}-1.2-locale_fix.patch
 	epatch "${FILESDIR}"/${P}-as-needed.patch
+	sed -i '/libtool.m4/,/AM_PROG_NM/d' acinclude.m4 #168198
 	eautoreconf
 }
 
