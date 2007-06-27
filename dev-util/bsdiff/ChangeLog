@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bsdiff
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.26 2007/04/24 19:35:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.27 2007/06/27 18:34:20 armin76 Exp $
+
+  27 Jun 2007; Raúl Porcel <armin76@gentoo.org> bsdiff-4.3-r1.ebuild:
+  alpha stable wrt #183376
 
   24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> bsdiff-4.3-r1.ebuild:
   Stable on sparc
