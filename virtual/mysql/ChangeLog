@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.7 2007/05/17 08:39:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.8 2007/06/27 03:39:15 mr_bones_ Exp $
+
+  27 Jun 2007; Michael Sterrett <mr_bones_@gentoo.org> mysql-4.1.ebuild:
+  remove reference to dev-db/mysql-community-4 which has gone away.
 
   17 May 2007; Bryan Østergaard <kloeri@gentoo.org> mysql-5.0.ebuild:
   Mark stable on Alpha.
