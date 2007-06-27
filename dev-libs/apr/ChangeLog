@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.87 2007/06/27 14:39:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.88 2007/06/27 19:54:59 pylon Exp $
+
+  27 Jun 2007; Lars Weiler <pylon@gentoo.org> apr-1.2.8.ebuild:
+  Stable on ppc; bug #178264.
 
   27 Jun 2007; Jeroen Roovers <jer@gentoo.org> apr-1.2.8.ebuild:
   Stable for HPPA (bug #178264).
