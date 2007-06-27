@@ -13,3 +13,17 @@
   * Get struct timeval
   */
  
+--- Xvnc/config/imake/imakemdep.h~      2003-02-19 09:39:54 -0700
++++ Xvnc/config/imake/imakemdep.h       2007-06-27 09:54:44 -0600
+@@ -253,7 +253,10 @@
+ #ifdef _CRAY
+ #define DEFAULT_CPP "/lib/pcpp"
+ #endif
+-#if defined(__386BSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__FreeBSD__)
++#if defined(__FreeBSD__)
++#define DEFAULT_CPP "/usr/bin/cpp"
++#endif
++#if defined(__386BSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+ #define DEFAULT_CPP "/usr/libexec/cpp"
+ #endif
+ #if defined(__sgi) && defined(__ANSI_CPP__)
