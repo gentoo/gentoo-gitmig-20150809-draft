@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/poweriso
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/poweriso/ChangeLog,v 1.3 2007/05/11 15:57:31 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/poweriso/ChangeLog,v 1.4 2007/06/27 16:12:54 opfer Exp $
+
+  27 Jun 2007; Christian Faulhammer <opfer@gentoo.org> poweriso-1.1.ebuild:
+  stable x86, bug 182846
 
   11 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   fix herd
