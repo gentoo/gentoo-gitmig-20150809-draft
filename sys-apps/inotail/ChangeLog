@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/inotail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/ChangeLog,v 1.1 2007/06/25 00:04:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/ChangeLog,v 1.2 2007/06/27 06:56:30 opfer Exp $
+
+  27 Jun 2007; Christian Faulhammer <opfer@gentoo.org> inotail-0.4.ebuild:
+  keyworded ~x86, bug 183366
 
 *inotail-0.4 (24 Jun 2007)
 
