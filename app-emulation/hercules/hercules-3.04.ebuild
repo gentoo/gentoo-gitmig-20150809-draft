@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.04.ebuild,v 1.4 2007/06/27 13:11:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.04.ebuild,v 1.5 2007/06/27 13:41:25 armin76 Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.hercules-390.org/${P}.tar.gz"
 
 LICENSE="QPL-1.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc sparc ~x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="custom-cflags"
 
 src_compile() {
