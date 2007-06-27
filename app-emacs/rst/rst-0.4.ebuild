@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/rst-0.4.ebuild,v 1.3 2007/06/27 06:39:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/rst-0.4.ebuild,v 1.4 2007/06/27 07:44:12 lavajoe Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/docutils/docutils-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc64 x86"
+KEYWORDS="ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}/docutils-${PV}/tools/editors/emacs"
