@@ -1,9 +1,7 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-2.0.0-r1.ebuild,v 1.5 2006/11/17 08:51:08 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-2.0.0-r1.ebuild,v 1.6 2007/06/27 18:04:35 nyhm Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
 inherit autotools eutils games
 
 L_URI="http://www.glest.org/files/contrib/translations"
@@ -22,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 -ppc ~x86" # ppc: bug #145478
 IUSE="linguas_de linguas_fr linguas_it linguas_pt_BR linguas_sk"
 
-RDEPEND=">=media-libs/libsdl-1.2.5
+RDEPEND="media-libs/libsdl
 	media-libs/libogg
 	media-libs/libvorbis
 	media-libs/openal
@@ -62,7 +60,7 @@ src_unpack() {
 	# sometimes they package configure, sometimes they don't
 	if [[ ! -f configure ]] ; then
 		chmod a+x autogen.sh
-		./autogen.sh || die "autogen failed"
+		./autogen.sh || die "autogen failed" # FIXME: use autotools.eclass
 	fi
 
 	sed -i 's:-O3 -g3::' Jamrules || die "sed Jamrules failed"
@@ -93,19 +91,16 @@ src_install() {
 	newicon techs/magitech/factions/magic/units/archmage/images/archmage.bmp \
 		${PN}.bmp
 
-	insinto "${GAMES_DATADIR}"/${PN}/data/lang
-	local lang
-	for lang in ${LINGUAS} ; do
-		case ${lang} in
-			de) lang=deutsch_2.0.0.lng ;;
-			fr) lang=francais.lng ;;
-			it) lang=italiano2_0_0.lng ;;
-			pt_BR) lang=tradu_pt-br.lng ;;
-			sk) lang=slovak.lng ;;
-			*) continue ;;
-		esac
-		doins "${WORKDIR}"/${lang} || die "doins ${lang} failed"
-	done
+	dolang() {
+		insinto "${GAMES_DATADIR}"/${PN}/data/lang
+		doins "${WORKDIR}"/${1} || die "doins ${1} failed"
+	}
+
+	use linguas_de && dolang deutsch_2.0.0.lng
+	use linguas_fr && dolang francais.lng
+	use linguas_it && dolang italiano2_0_0.lng
+	use linguas_pt_BR && dolang tradu_pt-br.lng
+	use linguas_sk && dolang slovak.lng
 
 	prepgamesdirs
 }
