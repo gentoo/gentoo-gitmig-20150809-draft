@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.60 2007/06/23 17:02:26 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.61 2007/06/27 13:50:04 hkbst Exp $
+
+  27 Jun 2007; Marijn Schouten <hkBst@gentoo.org> -lilypond-2.10.25.ebuild,
+  lilypond-2.10.25-r1.ebuild, -lilypond-2.11.26.ebuild,
+  lilypond-2.11.27.ebuild:
+  fix fontforge dep, bug 183132, remove a few old versions
 
   23 Jun 2007; Marijn Schouten <hkBst@gentoo.org> -lilypond-2.10.23.ebuild,
   -lilypond-2.11.23.ebuild:
