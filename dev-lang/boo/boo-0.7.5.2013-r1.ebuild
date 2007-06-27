@@ -1,19 +1,18 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.7.5.2013.ebuild,v 1.2 2006/01/19 05:40:36 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.7.5.2013-r1.ebuild,v 1.1 2007/06/27 20:38:41 jurek Exp $
 
 inherit mono fdo-mime eutils
 
 DESCRIPTION="A wrist friendly language for the CLI"
 HOMEPAGE="http://boo.codehaus.org/"
-
-SRC_URI="http://dist.codehaus.org/boo/distributions/${P}-src.tar.bz2"
+SRC_URI="http://dist.codehaus.org/${PN}/distributions/${P}-src.tar.bz2"
 
 LICENSE="BSD"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="doc examples"
 
 DEPEND=">=dev-lang/mono-1.1.4
 		dev-dotnet/nant
@@ -22,7 +21,8 @@ DEPEND=">=dev-lang/mono-1.1.4
 
 src_unpack() {
 	if has_version "dev-lang/boo"; then
-		if ! has_version "=dev-lang/boo-${PV}"; then
+		if ! (has_version ">=dev-lang/boo-${PV}" &&
+			has_version	 "<=dev-lang/boo-${PVR}"); then
 			eerror "This version of boo has a problem compiling when any other"
 			eerror "version of boo is present on the system. Please unmerge boo"
 			eerror "and then try emerging this version of boo. See bug #108520"
@@ -37,14 +37,29 @@ src_unpack() {
 }
 
 src_compile() {
-	LC_ALL="C" LANG="C" nant -t:mono-1.0 -D:install.prefix=/usr || die
+	# We no longer need to provide boo.lang (bug #163926)
+	sed -i -e 's#^.*<copy file="extras/boo.lang".*$##' \
+		default.build
+
+	nant -t:mono-1.0 -D:install.prefix=/usr || die
 }
 
 src_install() {
-	LC_ALL="C" LANG="C" nant install \
+	nant install \
 		-D:install.destdir=${D} -t:mono-1.0 -D:install.prefix=/usr || die
+
+	use doc && dodoc docs/BooManifesto.sxw
+
+	if use examples; then
+		insinto /usr/share/doc/${PF}
+		doins -r examples
+	fi
 }
 
 pkg_postinst() {
-	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_mime_database_update
 }
