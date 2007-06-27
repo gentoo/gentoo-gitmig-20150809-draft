@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.119 2007/06/26 22:48:49 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.120 2007/06/27 01:39:47 jurek Exp $
+
+  27 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> mono-1.1.16.1.ebuild,
+  mono-1.2.2.1.ebuild, mono-1.2.3.1.ebuild, mono-1.2.4.ebuild:
+  LC_ALL=C is now being set in mono.eclass
 
   26 Jun 2007; Jurek Bartuszek <jurek@gentoo.org>
   +files/mono-1.2.4-make-check.patch, mono-1.1.16.1.ebuild,
