@@ -36,3 +36,6 @@ dvb
 
 # mask pcmcia (bug #131306)
 pcmcia
+
+# pbbuttonsd does not work on ppc64 - bug #183035
+pbbuttonsd

@@ -4,3 +4,6 @@
 # Mask ppcsha1 USE flag as it's 32bit only. It's getting unmasked in 32bit
 # profiles again
 ppcsha1
+
+# pbbuttonsd deos not work on ppc64 - bug #183035
+pbbuttonsd

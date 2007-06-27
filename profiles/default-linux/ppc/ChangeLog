@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.18 2007/06/25 05:55:57 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.19 2007/06/27 07:16:47 corsair Exp $
+
+  27 Jun 2007; Markus Rothe <corsair@gentoo.org> 2005.1/ppc64/use.mask,
+  dev/ppc64/use.mask, ppc64/use.mask:
+  pbbuttonsd does not work on ppc64. Masking in ppc64 profiles. Bug #183035
 
   25 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
   ppc64/package.use.mask:
