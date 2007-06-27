@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.96 2007/06/27 14:26:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.97 2007/06/27 14:38:41 fmccor Exp $
+
+  27 Jun 2007; Ferris McCormick <fmccor@gentoo.org> opera-9.21.ebuild:
+  Sparc stable --- Bug #183404 --- works fine for me.
 
   27 Jun 2007; Christoph Mende <angelos@gentoo.org> opera-9.21.ebuild:
   Stable on amd64 wrt bug 183404
