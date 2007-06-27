@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.115 2007/06/27 00:22:09 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.116 2007/06/27 07:23:19 corsair Exp $
+
+  27 Jun 2007; Markus Rothe <corsair@gentoo.org> gtkmm-2.10.9.ebuild:
+  Stable on ppc64; bug #180420
 
   27 Jun 2007; Lars Weiler <pylon@gentoo.org> gtkmm-2.10.9.ebuild:
   Stable on ppc; bug #180420.
