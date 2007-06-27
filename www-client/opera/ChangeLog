@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.95 2007/05/24 05:30:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.96 2007/06/27 14:26:07 angelos Exp $
+
+  27 Jun 2007; Christoph Mende <angelos@gentoo.org> opera-9.21.ebuild:
+  Stable on amd64 wrt bug 183404
 
   24 May 2007; Jeroen Roovers <jer@gentoo.org> files/opera.desktop:
   Updated to meet desktop entry specification, except for the previous GNOME
