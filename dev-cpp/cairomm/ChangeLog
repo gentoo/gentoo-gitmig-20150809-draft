@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/cairomm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.11 2007/06/26 20:58:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.12 2007/06/27 00:21:16 pylon Exp $
+
+  27 Jun 2007; Lars Weiler <pylon@gentoo.org> cairomm-1.2.4.ebuild:
+  Stable on ppc; bug #180420.
 
   26 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> cairomm-1.2.4.ebuild:
   Stable on sparc wrt #180420

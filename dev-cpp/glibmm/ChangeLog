@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.79 2007/06/26 20:57:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.80 2007/06/27 00:19:44 pylon Exp $
+
+  27 Jun 2007; Lars Weiler <pylon@gentoo.org> glibmm-2.12.8.ebuild:
+  Stable on ppc; bug #180420.
 
   26 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> glibmm-2.12.8.ebuild:
   Stable on sparc wrt #180420
