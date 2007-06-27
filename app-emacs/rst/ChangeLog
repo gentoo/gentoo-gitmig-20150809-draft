@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/rst
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.6 2007/06/27 07:44:12 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.7 2007/06/27 13:03:48 gustavoz Exp $
+
+  27 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> rst-0.4.ebuild:
+  Sparc stable wrt #183312
 
   27 Jun 2007; Joe Peterson <lavajoe@gentoo.org> rst-0.4.ebuild:
   Add ~x86-fbsd keyword
