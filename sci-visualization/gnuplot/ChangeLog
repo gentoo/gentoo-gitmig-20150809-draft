@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.23 2007/06/27 18:44:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.24 2007/06/27 19:39:11 pylon Exp $
+
+  27 Jun 2007; Lars Weiler <pylon@gentoo.org> gnuplot-4.0-r2.ebuild:
+  Stable on ppc; bug #179533.
 
   27 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> gnuplot-4.0-r2.ebuild:
   Stable on sparc wrt #179533
