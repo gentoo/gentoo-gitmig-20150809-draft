@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/jscall-sharp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/jscall-sharp/ChangeLog,v 1.5 2007/06/21 22:50:08 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/jscall-sharp/ChangeLog,v 1.6 2007/06/27 16:11:05 opfer Exp $
+
+  27 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  jscall-sharp-0.0.2_pre20061125.ebuild:
+  stable x86, bug 182842
 
 *jscall-sharp-0.0.3_pre20070621 (21 Jun 2007)
 
