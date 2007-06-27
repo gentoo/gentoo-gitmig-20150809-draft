@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.53 2007/06/22 18:30:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.54 2007/06/27 17:15:39 armin76 Exp $
+
+  27 Jun 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
+  P.mask lirc USE-flag as we don't have hardware to test
 
   22 Jun 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   P.mask >=dev-python/dbus-python-0.80.2 on 2.4 profiles since it needs

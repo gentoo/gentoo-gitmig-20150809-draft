@@ -1,6 +1,10 @@
 # This is a list of USE flags that should not be used on ia64.
 
 # Raúl Porcel <armin76@gentoo.org>
+# No hardware to test
+lirc
+
+# Raúl Porcel <armin76@gentoo.org>
 # Depends on libnl which doesn't compile, bug 175714
 networkmanager
 
