@@ -113,3 +113,6 @@ dell
 
 # mask qt4 (does not work) - bug #178779
 qt4
+
+# pbbuttonsd does not work on ppc64 - bug #183035
+pbbuttonsd
