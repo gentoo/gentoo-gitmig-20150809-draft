@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.99 2007/06/27 15:32:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.100 2007/06/27 15:40:24 jer Exp $
+
+  27 Jun 2007; Jeroen Roovers <jer@gentoo.org> -opera-9.20.ebuild:
+  Removing old version.
 
   27 Jun 2007; Christian Faulhammer <opfer@gentoo.org> opera-9.21.ebuild:
   stable x86, bug 183404
