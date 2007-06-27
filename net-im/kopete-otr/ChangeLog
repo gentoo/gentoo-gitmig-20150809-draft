@@ -1,6 +1,15 @@
 # ChangeLog for net-im/kopete-otr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete-otr/ChangeLog,v 1.9 2007/05/23 08:38:13 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete-otr/ChangeLog,v 1.10 2007/06/27 08:48:06 drizzt Exp $
+
+*kopete-otr-0.5 (27 Jun 2007)
+
+  27 Jun 2007; Timothy Redaelli <drizzt@gentoo.org>
+  -files/kopete-otr-0.2-as-needed.patch, -kopete-otr-0.2.ebuild,
+  -kopete-otr-0.3.ebuild, -kopete-otr-0.4.ebuild, +kopete-otr-0.5.ebuild:
+  Version bump wrt bug #183373.
+  Thanks to Michael Zanetti for reporting.
+  Remove old versions.
 
 *kopete-otr-0.4 (23 May 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete-otr/kopete-otr-0.3.ebuild,v 1.4 2007/05/04 23:24:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete-otr/kopete-otr-0.5.ebuild,v 1.1 2007/06/27 08:48:06 drizzt Exp $
 
 inherit kde
 
@@ -15,7 +15,7 @@ IUSE=""
 
 #FIXME Fix deps before KDE-4
 DEPEND=">=net-libs/libotr-3.0.0
-		|| ( >=kde-base/kopete-3.5.5-r2 >=kde-base/kdenetwork-3.5.5-r2 )"
+	|| ( >=kde-base/kopete-3.5.5-r2 >=kde-base/kdenetwork-3.5.5-r2 )"
 
 need-kde 3.5.5
 
