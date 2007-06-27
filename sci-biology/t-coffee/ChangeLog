@@ -1,9 +1,6 @@
 # ChangeLog for sci-biology/t-coffee
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.20 2007/06/27 12:04:00 pylon Exp $
-
-  27 Jun 2007; Lars Weiler <pylon@gentoo.org> t-coffee-4.96.ebuild:
-  Stable on ppc; bug #179327
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.21 2007/06/27 12:08:45 pylon Exp $
 
   22 May 2007; Christian Faulhammer <opfer@gentoo.org> t-coffee-4.96.ebuild:
   x86 stable, bug 179327
