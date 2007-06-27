@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.58 2007/06/22 18:53:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.59 2007/06/27 17:22:02 wolf31o2 Exp $
 
 # SECTION: Unmask
 
@@ -124,8 +124,8 @@ gcc64
 capslib
 
 # lvm2 cluster
--clvm
--gulm
--cman
+#-clvm
+#-gulm
+#-cman
 
 # NOT NECESSARY - SECTION

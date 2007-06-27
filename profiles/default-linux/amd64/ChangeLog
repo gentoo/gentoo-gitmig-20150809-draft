@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.99 2007/06/24 15:22:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.100 2007/06/27 17:22:02 wolf31o2 Exp $
+
+  27 Jun 2007; Chris Gianelloni <wolf31o2@gentoo.org> use.mask:
+  Mask the LVM clustering USE on amd64 as it is not yet ready to be unmasked.
+  Sorry about that. Thanks to Michael Sterret <mr_bones_@gentoo.org> for
+  pointing it out.
 
   24 Jun 2007; Christoph Mende <angelos@gentoo.org>
   2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask,
