@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.98 2007/06/27 15:19:41 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.99 2007/06/27 15:32:02 opfer Exp $
+
+  27 Jun 2007; Christian Faulhammer <opfer@gentoo.org> opera-9.21.ebuild:
+  stable x86, bug 183404
 
   27 Jun 2007; Lars Weiler <pylon@gentoo.org> opera-9.21.ebuild:
   Stable on ppc; bug #183404.
