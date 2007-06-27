@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7409 2007/06/27 11:47:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7410 2007/06/27 11:54:43 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -32,7 +32,7 @@
 app-cdr/konqburn
 
 # Samuli Suominen <drac@gentoo.org> (26 Jun 2007)
-# Needs to unmasked same time with >=ffmpeg-0.4.9_p20070616-r1,
+# Needs to be unmasked same time with >=ffmpeg-0.4.9_p20070616-r1,
 # because they both require swscale.
 >=media-video/ffmpegthumbnailer-1.1.2
 >=x11-misc/xvidcap-1.1.6-r1
