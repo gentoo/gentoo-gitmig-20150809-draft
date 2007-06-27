@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.233 2007/06/01 04:36:34 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.234 2007/06/27 15:18:41 chainsaw Exp $
+
+*alsa-lib-1.0.14a (27 Jun 2007)
+
+  27 Jun 2007; Tony Vroon <chainsaw@gentoo.org> +alsa-lib-1.0.14a.ebuild:
+  Version bump to 1.0.14a as requested in bug #181042. Change advisory message
+  to recommend in-kernel ALSA instead of the alsa-drivers ebuild as per new
+  ALSA policy.
 
   01 Jun 2007; Joshua Kinard <kumba@gentoo.org> alsa-lib-1.0.14_rc3.ebuild:
   Stable on mips.
