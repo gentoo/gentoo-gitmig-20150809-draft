@@ -1,0 +1,31 @@
+diff -ur ffmpegthumbnailer-1.1.2.orig/configure.ac ffmpegthumbnailer-1.1.2/configure.ac
+--- ffmpegthumbnailer-1.1.2.orig/configure.ac	2007-06-01 23:49:10.000000000 +0300
++++ ffmpegthumbnailer-1.1.2/configure.ac	2007-06-27 16:49:30.000000000 +0300
+@@ -6,8 +6,14 @@
+ AC_PROG_CXX
+ AC_PROG_INSTALL
+ 
+-AC_CONFIG_FILES([
+-	Makefile
+-	src/Makefile
++PKG_CHECK_MODULES(FFMPEG, libavutil libavformat libavcodec libswscale, HAVE_FFMPEG=yes, AC_MSG_ERROR([
++Could not find ffmpeg. Please update PKG_CONFIG_PATH to point at ffmpeg include directory.
++])
++)
++
++AC_SUBST(FFMPEG_LIBS)
++
++AC_OUTPUT([
++        Makefile
++        src/Makefile
+ ])
+-AC_OUTPUT
+diff -ur ffmpegthumbnailer-1.1.2.orig/src/Makefile.am ffmpegthumbnailer-1.1.2/src/Makefile.am
+--- ffmpegthumbnailer-1.1.2.orig/src/Makefile.am	2007-06-01 23:47:05.000000000 +0300
++++ ffmpegthumbnailer-1.1.2/src/Makefile.am	2007-06-27 16:02:56.000000000 +0300
+@@ -7,4 +7,4 @@
+ 							pngwriter.h pngwriter.cpp \
+ 							stringoperations.h stringoperations.cpp
+ 
+-ffmpegthumbnailer_LDADD = -lavutil -lavcodec -lavformat -lpng
++ffmpegthumbnailer_LDADD = @FFMPEG_LIBS@ -lpng

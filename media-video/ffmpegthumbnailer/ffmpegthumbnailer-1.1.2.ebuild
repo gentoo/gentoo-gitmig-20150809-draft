@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-1.1.2.ebuild,v 1.1 2007/06/27 11:50:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-1.1.2.ebuild,v 1.2 2007/06/27 14:07:46 drac Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Lightweight video thumbnailer that can be used by file managers"
 HOMEPAGE="http://code.google.com/p/ffmpegthumbnailer"
@@ -14,13 +14,15 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="media-libs/libpng
-	>=media-video/ffmpeg-0.4.9_p20070616-r1"
-DEPEND="${RDEPEND}"
+	>=media-video/ffmpeg-0.4.9_p20070330"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-swscale.patch
+	epatch "${FILESDIR}"/${P}-ffmpeg.patch
+	eautoreconf
 }
 
 src_install() {

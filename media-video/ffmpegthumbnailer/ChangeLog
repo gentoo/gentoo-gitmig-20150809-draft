@@ -1,6 +1,14 @@
 # ChangeLog for media-video/ffmpegthumbnailer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.21 2007/06/27 11:50:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.22 2007/06/27 14:07:46 drac Exp $
+
+  27 Jun 2007; Samuli Suominen <drac@gentoo.org>
+  -files/ffmpegthumbnailer-1.1.1-ffmpeg.patch,
+  +files/ffmpegthumbnailer-1.1.2-ffmpeg.patch,
+  -files/ffmpegthumbnailer-1.1.2-swscale.patch,
+  -ffmpegthumbnailer-1.1.1-r1.ebuild, ffmpegthumbnailer-1.1.2.ebuild:
+  Patch to allow building with old and new ffmpeg still supporting asneeded,
+  using autotools and pkgconfig.
 
 *ffmpegthumbnailer-1.1.2 (27 Jun 2007)
 

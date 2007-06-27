@@ -1,9 +1,0 @@
-diff -ur ffmpegthumbnailer-1.1.2.orig/src/Makefile.am ffmpegthumbnailer-1.1.2/src/Makefile.am
---- ffmpegthumbnailer-1.1.2.orig/src/Makefile.am	2007-06-01 23:47:05.000000000 +0300
-+++ ffmpegthumbnailer-1.1.2/src/Makefile.am	2007-06-27 14:26:54.000000000 +0300
-@@ -7,4 +7,4 @@
- 							pngwriter.h pngwriter.cpp \
- 							stringoperations.h stringoperations.cpp
- 
--ffmpegthumbnailer_LDADD = -lavutil -lavcodec -lavformat -lpng
-+ffmpegthumbnailer_LDADD = -lavutil -lavcodec -lavformat -lswscale -lpng
