@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tree
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.38 2007/06/27 13:25:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.39 2007/06/27 13:59:45 pylon Exp $
+
+  27 Jun 2007; Lars Weiler <pylon@gentoo.org> tree-1.5.1.ebuild:
+  Stable on ppc; bug #183371.
 
   27 Jun 2007; Christoph Mende <angelos@gentoo.org> tree-1.5.1.ebuild:
   Stable on amd64 wrt bug 183371
