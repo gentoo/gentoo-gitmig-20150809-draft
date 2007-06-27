@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/luma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/ChangeLog,v 1.28 2007/06/27 06:45:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/ChangeLog,v 1.29 2007/06/27 13:35:28 gustavoz Exp $
+
+  27 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> luma-2.3.ebuild:
+  Stable on sparc wrt #180520
 
   27 Jun 2007; Christian Faulhammer <opfer@gentoo.org> luma-2.3.ebuild:
   stable x86, bug 180520
