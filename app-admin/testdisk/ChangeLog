@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.23 2007/02/18 20:22:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.24 2007/06/27 08:57:24 dragonheart Exp $
+
+*testdisk-6.7 (27 Jun 2007)
+
+  27 Jun 2007; Daniel Black <dragonheart@gentoo.org>
+  +files/testdisk-6.7-constdef.patch, +testdisk-6.7.ebuild:
+  version bump thanks to upstream notification service. Cheers Christophe
 
 *testdisk-6.6 (18 Feb 2007)
 

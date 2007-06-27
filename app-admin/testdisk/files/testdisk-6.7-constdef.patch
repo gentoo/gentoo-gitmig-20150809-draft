@@ -1,0 +1,11 @@
+--- testdisk-6.7/src/ntfsp.c.orig	2007-06-27 18:38:59.000000000 +1000
++++ testdisk-6.7/src/ntfsp.c	2007-06-27 18:48:21.000000000 +1000
+@@ -101,7 +101,7 @@
+     }
+     for(lcn=0;lcn<no_of_cluster;lcn++)
+     {
+-      static long long bmplcn = -sizeof_buffer - 1;	/* Which bit of $Bitmap is in the buffer */
++      static long long bmplcn = -512 - 1;	/* Which bit of $Bitmap is in the buffer */
+       int byte, bit;
+       if ((lcn < bmplcn) || (lcn >= (bmplcn + (sizeof_buffer << 3))))
+       {
