@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pandodl/pandodl-0.9.1.0.ebuild,v 1.1 2007/06/27 22:25:21 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pandodl/pandodl-0.9.1.0.ebuild,v 1.2 2007/06/27 22:29:15 coldwind Exp $
 
 inherit eutils
 
@@ -28,12 +28,12 @@ pkg_setup() {
 
 src_install() {
 	insinto /opt/${PN}
-	doins -r lib *.png
+	doins -r lib *.png || die
 
 	exeinto /opt/${PN}/bin
-	doexe bin/pandoDownloader
+	doexe bin/pandoDownloader || die
 
-	dobin ${FILESDIR}/${PN}
+	dobin ${FILESDIR}/${PN} || die
 
-	dodoc README
+	dodoc README || die
 }
