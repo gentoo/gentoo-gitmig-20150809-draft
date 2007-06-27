@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.35-r1.ebuild,v 1.2 2007/05/03 13:25:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.35-r1.ebuild,v 1.3 2007/06/27 17:53:28 mr_bones_ Exp $
 
 inherit eutils
 
@@ -19,9 +19,7 @@ IUSE="opengl X"
 
 OPENGL_DEPEND="virtual/opengl
 	x11-misc/mkxf86config
-	|| (
-		app-admin/eselect-opengl
-		>=x11-base/opengl-update-2.2.1 )"
+	app-admin/eselect-opengl"
 
 RDEPEND="dev-util/dialog
 	sys-apps/pciutils
