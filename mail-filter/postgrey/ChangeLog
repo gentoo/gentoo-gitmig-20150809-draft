@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.29 2007/06/26 19:42:10 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.30 2007/06/27 07:29:52 corsair Exp $
+
+  27 Jun 2007; Markus Rothe <corsair@gentoo.org> postgrey-1.28.ebuild:
+  Added ~ppc64; bug #183038
 
   26 Jun 2007; Ferris McCormick <fmccor@gentoo.org> postgrey-1.28.ebuild:
   Re-keyword ~sparc at developer's request --- Bug #183038 --- all seems well.
