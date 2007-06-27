@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/rst
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.8 2007/06/27 13:15:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.9 2007/06/27 13:24:07 armin76 Exp $
+
+  27 Jun 2007; Raúl Porcel <armin76@gentoo.org> rst-0.4.ebuild:
+  alpha/ia64 stable wrt #183312
 
   27 Jun 2007; Christoph Mende <angelos@gentoo.org> rst-0.4.ebuild:
   Stable on amd64 wrt bug 183312
