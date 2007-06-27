@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-nag
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.23 2007/05/25 07:48:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.24 2007/06/27 20:35:42 armin76 Exp $
+
+  27 Jun 2007; Raúl Porcel <armin76@gentoo.org> horde-nag-2.1.2.ebuild:
+  alpha stable wrt #177129
 
   25 May 2007; Christian Faulhammer <opfer@gentoo.org>
   horde-nag-2.1.2.ebuild:
