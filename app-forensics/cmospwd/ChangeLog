@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/cmospwd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/ChangeLog,v 1.6 2007/05/17 12:24:47 hyakuhei Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/ChangeLog,v 1.7 2007/06/27 07:56:59 dragonheart Exp $
+
+  27 Jun 2007; Daniel Black <dragonheart@gentoo.org> -cmospwd-4.4.ebuild,
+  -cmospwd-4.7.ebuild, cmospwd-4.8.ebuild:
+  added amd64 keyword. removed old versions
 
 *cmospwd-4.8 (17 May 2007)
 
