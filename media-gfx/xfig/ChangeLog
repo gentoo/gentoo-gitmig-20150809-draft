@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.48 2007/06/27 06:00:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.49 2007/06/27 06:56:52 pva Exp $
+
+  27 Jun 2007; <pva@gentoo.org> -files/xfig-3.2.5_alpha5-gentoo.diff,
+  -files/xfig-3.2.5_alpha5-xaw3d.diff, -xfig-3.2.4-r2.ebuild:
+  Cleaning old ebuild.
 
   27 Jun 2007; Markus Rothe <corsair@gentoo.org> xfig-3.2.5-r1.ebuild:
   Stable on ppc64; bug #183040
