@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/treecc-0.3.8.ebuild,v 1.10 2006/11/12 05:37:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/treecc-0.3.8.ebuild,v 1.11 2007/06/27 09:57:27 jurek Exp $
 
 DESCRIPTION="compiler-compiler tool for aspect-oriented programming"
 HOMEPAGE="http://www.southern-storm.com.au/treecc.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www.southern-storm.com.au/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc-macos ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 IUSE="doc examples"
 
 DEPEND="doc? ( app-text/texi2html )"

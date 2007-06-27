@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/treecc
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/ChangeLog,v 1.24 2006/10/15 10:01:59 dertobi123 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/ChangeLog,v 1.25 2007/06/27 09:57:27 jurek Exp $
+
+  27 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> treecc-0.3.4.ebuild,
+  treecc-0.3.6.ebuild, treecc-0.3.8.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   15 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> treecc-0.3.8.ebuild:
   hppa stable, bug #150219
