@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.24 2007/06/28 18:40:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.25 2007/06/28 19:19:21 cardoe Exp $
 #
 # Author: Doug Goldstein <cardoe@gentoo.org>
 #
@@ -47,6 +47,10 @@ mythtv-plugins_pkg_setup() {
 
 mythtv-plugins_src_unpack() {
 	unpack ${A}
+	mythtv-plugins_src_unpack_patch
+}
+
+mythtv-plugins_src_unpack_patch() {
 	cd "${S}"
 
 	mythtv-fixes_patch
