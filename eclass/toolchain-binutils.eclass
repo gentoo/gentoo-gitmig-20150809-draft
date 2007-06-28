@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.74 2007/06/28 12:55:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.75 2007/06/28 14:44:08 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -111,26 +111,41 @@ tc-binutils_unpack() {
 tc-binutils_apply_patches() {
 	cd "${S}"
 
-	if ! use vanilla && [[ -n ${PATCHVER} ]] ; then
-		EPATCH_SOURCE=${WORKDIR}/patch
-		[[ -n $(ls "${EPATCH_SOURCE}"/*.bz2 2>/dev/null) ]] \
-			&& EPATCH_SUFFIX="patch.bz2" \
-			|| EPATCH_SUFFIX="patch"
-		epatch
-	fi
-	if ! use vanilla && [[ -n ${UCLIBC_PATCHVER} ]] ; then
-		EPATCH_SOURCE=${WORKDIR}/uclibc-patches
-		[[ -n $(ls "${EPATCH_SOURCE}"/*.bz2 2>/dev/null) ]] \
-			&& EPATCH_SUFFIX="patch.bz2" \
-			|| EPATCH_SUFFIX="patch"
-		EPATCH_MULTI_MSG="Applying uClibc fixes ..." \
-		epatch
-	elif [[ ${CTARGET} == *-uclibc* ]] ; then
-		# starting with binutils-2.17.50.0.17, we no longer need
-		# uClibc patchsets :D
-		if grep -qs 'linux-gnu' "${S}"/ltconfig ; then
-			die "sorry, but this binutils doesn't yet support uClibc :("
+	if ! use vanilla ; then
+		if [[ -n ${PATCHVER} ]] ; then
+			EPATCH_SOURCE=${WORKDIR}/patch
+			[[ -n $(ls "${EPATCH_SOURCE}"/*.bz2 2>/dev/null) ]] \
+				&& EPATCH_SUFFIX="patch.bz2" \
+				|| EPATCH_SUFFIX="patch"
+			epatch
 		fi
+		if [[ -n ${UCLIBC_PATCHVER} ]] ; then
+			EPATCH_SOURCE=${WORKDIR}/uclibc-patches
+			[[ -n $(ls "${EPATCH_SOURCE}"/*.bz2 2>/dev/null) ]] \
+				&& EPATCH_SUFFIX="patch.bz2" \
+				|| EPATCH_SUFFIX="patch"
+			EPATCH_MULTI_MSG="Applying uClibc fixes ..." \
+			epatch
+		elif [[ ${CTARGET} == *-uclibc* ]] ; then
+			# starting with binutils-2.17.50.0.17, we no longer need
+			# uClibc patchsets :D
+			if grep -qs 'linux-gnu' "${S}"/ltconfig ; then
+				die "sorry, but this binutils doesn't yet support uClibc :("
+			fi
+		fi
+		local check base=${PORTAGE_CONFIGROOT}/etc/portage/patches
+		for check in {${CATEGORY}/${PF},${CATEGORY}/${P},${CATEGORY}/${PN}}; do
+			EPATCH_SOURCE=${base}/${CTARGET}/${check}
+			[[ -r ${EPATCH_SOURCE} ]] || EPATCH_SOURCE=${base}/${CHOST}/${check}
+			[[ -r ${EPATCH_SOURCE} ]] || EPATCH_SOURCE=${base}/${check}
+			if [[ -d ${EPATCH_SOURCE} ]] ; then
+				EPATCH_SUFFIX="patch"
+				EPATCH_FORCE="yes" \
+				EPATCH_MULTI_MSG="Applying user patches from ${EPATCH_SOURCE} ..." \
+				epatch
+				break
+			fi
+		done
 	fi
 
 	# fix locale issues if possible #122216
