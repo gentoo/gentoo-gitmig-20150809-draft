@@ -41,6 +41,7 @@ video_cards_sis
 tk
 tcltk
 
+nss
 diet
 xemacs
 Xaw3d
@@ -53,3 +54,4 @@ pike
 ocaml
 sdl
 lm_sensors
+wxwindows
