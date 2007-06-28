@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-0.8.ebuild,v 1.2 2007/06/18 12:29:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-0.8.1.ebuild,v 1.1 2007/06/28 04:15:22 pythonhead Exp $
 
 inherit eutils distutils
 
@@ -23,13 +23,13 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	#Gentoo patches to make lexer recognize ebuilds as bash input
-	epatch ${FILESDIR}/${P}-other.py-ebuild.patch || die "Patch failed"
-	epatch ${FILESDIR}/${P}-_mapping.py-ebuild.patch || die "Patch failed"
+	epatch ${FILESDIR}/${PN}-0.8-other.py-ebuild.patch || die "Patch failed"
+	epatch ${FILESDIR}/${PN}-0.8-_mapping.py-ebuild.patch || die "Patch failed"
 }
 
 src_install(){
 	distutils_src_install
-	use doc && dohtml -r docs/build/.
+	use doc && dohtml -r docs/build/
 }
 
 src_test() {
