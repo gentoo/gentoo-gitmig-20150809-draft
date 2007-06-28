@@ -1,6 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+DIST gst-plugins-0.8.11-conffix.patch.bz2 463 RMD160 070ca474768776984765390d97d02de8e62376ff SHA1 afac762694a48c3b982638b8cb8310fa80c1bf08 SHA256 c8b6e6d7e231b69be598a5cedef278716bb71eec0136500946490ef992bc48de
 DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA1 4a9be6b62dd0e8a73616e8e93f7a3ace8aec8c59 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
 DIST gst-plugins-0.8.12.tar.bz2 2506926 RMD160 cc0bbf3d790cb5791ce982fe6493bf2d8496a507 SHA1 3b65fe96aa849c463f5f968830ad76143c4b9952 SHA256 8728da4f71bc87e10fb064d28154220d66a3d8332482fd2c8a7ed47c5f0a03ba
 DIST gst-plugins-ugly-0.10.3.tar.bz2 605833 RMD160 0ea0d039cf87ecf662655521b9dbca8c2a388412 SHA1 98c69c4feeee975fdbe829cf6534d6c12b960182 SHA256 0cd916b3f0c8867cea77243d20d8d56ed45b7ef5ec5c5dd1603860ece8e88a10
@@ -43,16 +41,9 @@ SHA256 7f432695e33fb8a908b0a2494e7b00fca2c66085160d120f8617cf8c31210151 files/di
 MD5 6e902d1ab1d5e7124701131138506545 files/digest-gst-plugins-mad-0.10.6 274
 RMD160 331d1af999a48e6fad0e63220cddf1b3a5dcd52d files/digest-gst-plugins-mad-0.10.6 274
 SHA256 d9a8448534a0f7934aaba344e30d0859b58ba5895eb8fac25357bf0d29105bab files/digest-gst-plugins-mad-0.10.6 274
-MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-mad-0.8.11 262
-RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-mad-0.8.11 262
-SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-mad-0.8.11 262
+MD5 cdfd36869f155250b4f6deea0beac30a files/digest-gst-plugins-mad-0.8.11 542
+RMD160 680795b56b96f93ec1bec74d3a5f0e37e341f780 files/digest-gst-plugins-mad-0.8.11 542
+SHA256 027f38a921af2acdde43732296cc6a00f5a4f712931d17fb18b2254719ee03b6 files/digest-gst-plugins-mad-0.8.11 542
 MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-mad-0.8.12 262
 RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-mad-0.8.12 262
 SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-mad-0.8.12 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
-
-iD8DBQFGeH2jr2QksT29OyARArOlAJ9X2C9JY0roHhxQkySQawkYRzgqkACfeWUa
-1zscgmDNunfKEXrjDwKOfdg=
-=4vUL
------END PGP SIGNATURE-----
