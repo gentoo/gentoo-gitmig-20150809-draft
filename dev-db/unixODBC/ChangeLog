@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.66 2007/06/28 02:47:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.67 2007/06/28 08:10:14 corsair Exp $
+
+  28 Jun 2007; Markus Rothe <corsair@gentoo.org> unixODBC-2.2.12.ebuild:
+  Stable on ppc64; bug #183194
 
   28 Jun 2007; Joshua Kinard <kumba@gentoo.org> unixODBC-2.2.12.ebuild:
   Stable on mips, per #183194.
