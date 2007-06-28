@@ -1,0 +1,22 @@
+=== modified file 'pkgcore/scripts/pmerge.py'
+--- pkgcore/scripts/pmerge.py	2007-06-06 21:01:31 +0000
++++ pkgcore/scripts/pmerge.py	2007-06-06 21:03:03 +0000
+@@ -174,7 +174,7 @@
+     """Raised internally to indicate an "expected" failure condition."""
+ 
+ 
+-def unmerge(out, err, vdb, tokens, options, world_set=None):
++def unmerge(out, err, vdb, tokens, options, formatter, world_set=None):
+     """Unmerge tokens. hackish, should be rolled back into the resolver"""
+     all_matches = set()
+     for token in tokens:
+@@ -311,7 +311,7 @@
+                 return 1
+         try:
+             unmerge(
+-                out, err, vdb, options.targets, options, world_set)
++                out, err, vdb, options.targets, options, formatter, world_set)
+         except (parserestrict.ParseError, Failure), e:
+             out.error(str(e))
+             return 1
+

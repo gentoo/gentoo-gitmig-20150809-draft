@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.39 2007/06/28 07:20:34 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.40 2007/06/28 08:12:37 tsunam Exp $
+
+  28 Jun 2007; Joshua Jackson <tsunam@gentoo.org>
+  +files/pkgcore-0.3.1-pmerge-unmerge-ask.patch:
+  Forgot the patch bumpage as well
 
 *pkgcore-0.3.1 (28 Jun 2007)
 
