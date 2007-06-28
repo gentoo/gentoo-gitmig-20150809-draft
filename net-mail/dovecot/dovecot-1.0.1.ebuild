@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0.1.ebuild,v 1.1 2007/06/26 13:04:48 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0.1.ebuild,v 1.2 2007/06/28 10:48:20 uberlord Exp $
 
 inherit autotools eutils ssl-cert
 
 MY_P="${P/_/.}"
 S="${WORKDIR}/${MY_P}"
-SIEVE="dovecot-sieve-1.0"
+SIEVE="dovecot-sieve-1.0.1"
 SIEVE_S="${WORKDIR}/${SIEVE}"
 
 SRC_URI="http://dovecot.org/releases/${MY_P}.tar.gz
