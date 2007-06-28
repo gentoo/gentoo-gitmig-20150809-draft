@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-1.0.1.ebuild,v 1.1 2007/02/02 15:19:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-1.0.1.ebuild,v 1.2 2007/06/28 14:36:23 ribosome Exp $
 
 DESCRIPTION="Design primers for PCR reactions."
-HOMEPAGE="http://frodo.wi.mit.edu/primer3/primer3_code.html"
+HOMEPAGE="http://primer3.sourceforge.net/"
 SRC_URI="http://frodo.wi.mit.edu/${PN}/${PN}_${PV}.tar.gz"
 LICENSE="whitehead"
 
