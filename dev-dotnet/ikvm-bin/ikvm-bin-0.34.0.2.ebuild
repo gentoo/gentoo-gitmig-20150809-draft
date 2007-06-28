@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-0.34.0.2.ebuild,v 1.1 2007/06/27 02:02:24 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-0.34.0.2.ebuild,v 1.2 2007/06/28 03:46:37 jurek Exp $
 
 inherit eutils mono multilib
 
@@ -9,8 +9,7 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="Java VM for .NET"
 HOMEPAGE="http://www.ikvm.net/"
-SRC_URI="http://www.go-mono.com/sources/${MY_PN}/${MY_PN}bin-${PV}.zip"
-
+SRC_URI="mirror://sourceforge/${MY_PN}/${MY_PN}bin-${PV}.zip"
 LICENSE="as-is"
 
 SLOT="0"
