@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.30 2007/06/28 00:52:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.31 2007/06/28 04:32:10 jer Exp $
+
+  28 Jun 2007; Jeroen Roovers <jer@gentoo.org> sdparm-1.01.ebuild:
+  Stable for HPPA (bug #183310).
 
   28 Jun 2007; Joshua Kinard <kumba@gentoo.org> ChangeLog:
   Stable on mips, per #183310.
