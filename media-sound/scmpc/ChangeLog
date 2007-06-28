@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/scmpc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/ChangeLog,v 1.2 2007/06/27 00:57:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/ChangeLog,v 1.3 2007/06/28 17:35:38 armin76 Exp $
+
+  28 Jun 2007; Raúl Porcel <armin76@gentoo.org> scmpc-0.2.2.ebuild:
+  Add ~x86 wrt #183351
 
   27 Jun 2007; Christoph Mende <angelos@gentoo.org> +files/scmpc.init:
   Added an init script, thanks to Avuton Olrich
