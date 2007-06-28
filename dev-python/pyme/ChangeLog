@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.18 2007/06/27 19:45:01 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.19 2007/06/28 13:40:08 hawking Exp $
+
+  28 Jun 2007; Ali Polatel <hawking@gentoo.org>
+  -files/pyme-0.7.0-swig-compatibility.patch,
+  +files/pyme-swig-compatibility.patch, pyme-0.6.0-r1.ebuild,
+  pyme-0.7.0-r1.ebuild:
+  renamed pyme-0.7.0-swig-compatibility.patch to pyme-swig-compatibility.patch
+  as we use it for pyme-0.6.0 too.
 
   27 Jun 2007; Ali Polatel <hawking@gentoo.org> pyme-0.5.1.ebuild,
   -pyme-0.6.0.ebuild, -pyme-0.7.0.ebuild, pyme-0.7.0-r1.ebuild:

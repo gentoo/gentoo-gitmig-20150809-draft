@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.6.0-r1.ebuild,v 1.1 2007/06/27 19:28:52 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.6.0-r1.ebuild,v 1.2 2007/06/28 13:40:08 hawking Exp $
 
 inherit distutils eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 	# Make it build with swig >=1.3.28
 	# patch is originally written for 0.7.0 but works for this
 	# version as well.
-	epatch "${FILESDIR}/${PN}-0.7.0-swig-compatibility.patch"
+	epatch "${FILESDIR}/${PN}-swig-compatibility.patch"
 }
 
 src_compile() {
