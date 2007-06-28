@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-5.2.ebuild,v 1.5 2007/03/19 14:47:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-5.2.ebuild,v 1.6 2007/06/28 20:50:05 lu_zero Exp $
 
 inherit font
 
@@ -12,7 +12,7 @@ SRC_URI="http://support.wolfram.com/mathematica/systems/windows/general/files/Ma
 LICENSE="WRI-EULA"
 
 SLOT="0"
-KEYWORDS="amd64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 DEPEND="app-arch/unzip"
 
