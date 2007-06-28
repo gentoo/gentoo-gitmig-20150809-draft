@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.34 2007/04/27 06:39:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.35 2007/06/28 19:13:20 cardoe Exp $
+
+*mythweb-0.21_pre13775 (28 Jun 2007)
+
+  28 Jun 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/postinstall-en-0.21.txt, -files/postinstall-en.txt,
+  +mythweb-0.21_pre13775.ebuild:
+  new version of mythweb trunk. fixes bug #175510.
 
 *mythweb-0.20.1 (27 Apr 2007)
 
