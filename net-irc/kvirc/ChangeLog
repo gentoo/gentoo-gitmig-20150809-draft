@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.46 2007/05/01 11:17:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.47 2007/06/28 13:11:30 jokey Exp $
+
+*kvirc-3.2.6_pre20070628 (28 Jun 2007)
+
+  28 Jun 2007; Markus Ullmann <jokey@gentoo.org>
+  +kvirc-3.2.6_pre20070628.ebuild:
+  Add svn snapshot with fixed security bug #183174 and fixed
+  crash-on-initial-setup bugs
 
   01 May 2007; Raúl Porcel <armin76@gentoo.org>
   files/kvirc-svn-kdedir-fix.patch:
