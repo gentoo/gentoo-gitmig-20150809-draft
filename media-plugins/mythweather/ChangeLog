@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mythweather
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.36 2007/06/12 17:01:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.37 2007/06/28 21:08:45 cardoe Exp $
+
+  28 Jun 2007; Doug Goldstein <cardoe@gentoo.org> -mythweather-0.20.ebuild:
+  nuke old version
 
   12 Jun 2007; Doug Goldstein <cardoe@gentoo.org> mythweather-0.20.1.ebuild:
   Stable amd64, ppc, x86.
