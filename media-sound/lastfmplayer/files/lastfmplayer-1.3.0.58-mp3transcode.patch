@@ -1,0 +1,24 @@
+--- src/mp3transcode/mp3transcode.cpp.orig	2007-06-22 14:21:53.000000000 -0400
++++ src/mp3transcode/mp3transcode.cpp	2007-06-28 09:37:19.000000000 -0400
+@@ -19,6 +19,7 @@
+  *   51 Franklin Steet, Fifth Floor, Boston, MA  02111-1307, USA.          *
+  ***************************************************************************/
+ 
++#include <qconfig.h> // for Q_BYTE_ORDER
+ #include <QtGui>
+ 
+ #include "mp3transcode.h"
+@@ -116,8 +117,13 @@
+     {
+         for ( int i = 0; i < ( size / 2 ); i++ )
+         {
++#if Q_BYTE_ORDER == Q_LITTLE_ENDIAN
+             m_decodedBuffer.append( tempBuffer[i * 2] );
+             m_decodedBuffer.append( tempBuffer[i * 2 + 1] );
++#else	/* Q_BIG_ENDIAN */
++            m_decodedBuffer.append( tempBuffer[i * 2 + 1] );
++            m_decodedBuffer.append( tempBuffer[i * 2] );
++#endif /* Q_BYTE_ORDER */
+         }
+ 
+         result = decodeMP3( &mpeg, NULL, 0, tempBuffer, sizeof( tempBuffer ), &size );

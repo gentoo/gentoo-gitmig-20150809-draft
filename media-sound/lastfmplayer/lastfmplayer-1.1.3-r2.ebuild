@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.3-r2.ebuild,v 1.1 2007/05/22 19:58:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.1.3-r2.ebuild,v 1.2 2007/06/28 14:23:19 josejx Exp $
 
 inherit eutils versionator
 
@@ -11,7 +11,7 @@ SRC_URI="http://static.last.fm/client/Linux/${MY_P}.src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 RESTRICT="nomirror"
 S="${WORKDIR}/${MY_P}"
@@ -21,8 +21,11 @@ DEPEND=">=x11-libs/qt-4.2
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+
 	epatch ${FILESDIR}/13_alsa-r1.diff
 	epatch ${FILESDIR}/qt4.patch
+	epatch ${FILESDIR}/${P}-mp3transcode.patch
 }
 
 src_compile() {
