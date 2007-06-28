@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.107 2007/06/23 23:35:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.108 2007/06/28 08:07:14 corsair Exp $
+
+  28 Jun 2007; Markus Rothe <corsair@gentoo.org> avahi-0.6.19-r1.ebuild:
+  Stable on ppc64; bug #182918
 
 *avahi-0.6.19-r1 (23 Jun 2007)
 
