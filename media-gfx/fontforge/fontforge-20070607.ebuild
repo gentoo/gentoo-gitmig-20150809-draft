@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20070607.ebuild,v 1.1 2007/06/10 20:52:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20070607.ebuild,v 1.2 2007/06/28 22:18:25 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,11 +12,12 @@ SRC_URI="mirror://sourceforge/fontforge/${PN}_full-${PV}.tar.bz2
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="gif jpeg nls png tiff truetype svg unicode X"
+IUSE="gif jpeg nls png python tiff truetype svg unicode X"
 
-RDEPEND="png? ( >=media-libs/libpng-1.2.4 )
-	gif? ( >=media-libs/giflib-4.1.0-r1 )
+RDEPEND="gif? ( >=media-libs/giflib-4.1.0-r1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
+	png? ( >=media-libs/libpng-1.2.4 )
+	python? ( dev-lang/python )
 	tiff? ( >=media-libs/tiff-3.5.7-r1 )
 	truetype? ( >=media-libs/freetype-2.1.4 )
 	svg? ( >=dev-libs/libxml2-2.6.7 )
@@ -38,6 +39,7 @@ src_compile() {
 	econf \
 		--with-multilayer \
 		--without-freetype-src \
+		$(use_with python) \
 		$(use_with X x) \
 		|| die "econf failed"
 	emake || die
