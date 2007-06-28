@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.4.ebuild,v 1.11 2006/11/22 17:11:13 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.4.ebuild,v 1.12 2007/06/28 19:54:00 eva Exp $
 
 inherit eutils
 
@@ -28,23 +28,25 @@ RDEPEND=">=dev-libs/libxml2-2.4
 	>=gnome-base/libgnomecanvas-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	net-libs/linc
+	>=gnome-base/orbit-2.8
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	has_version '>=orbit/orbit-2.8.0' && epatch ${FILESDIR}/${P}-linc.patch
+	epatch ${FILESDIR}/${P}-linc.patch
 }
 
 src_compile() {
 	local myconf=""
-	use nls || myconf="${myconf} --disable-nls"
+
+	myconf="${myconf} `use_enable nls`"
+
 	econf ${myconf} || die "./configure failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	einstall || die
+	einstall || die "einstall failed"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }
