@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.69 2007/06/27 06:10:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.70 2007/06/28 00:59:36 kumba Exp $
+
+  28 Jun 2007; Joshua Kinard <kumba@gentoo.org> bison-2.3.ebuild:
+  Stable on mips, per #183254.
 
   27 Jun 2007; Markus Rothe <corsair@gentoo.org> bison-2.3.ebuild:
   Stable on ppc64; bug #183254
