@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.83 2007/06/13 16:39:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.84 2007/06/28 08:11:50 corsair Exp $
+
+  28 Jun 2007; Markus Rothe <corsair@gentoo.org> whois-4.7.21.ebuild:
+  Stable on ppc64; bug #183412
 
   13 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> whois-4.7.21.ebuild:
   Stable on sparc
