@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/libapreq2/libapreq2-2.08-r1.ebuild,v 1.1 2007/05/31 11:15:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/libapreq2/libapreq2-2.08-r1.ebuild,v 1.2 2007/06/28 11:24:34 mcummings Exp $
 
 inherit perl-module depend.apache multilib
 
@@ -85,12 +85,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "To enable ${PN}, you need to edit your /etc/conf.d/apache2 file and"
-	einfo "add '-D APREQ' to APACHE2_OPTS."
-	einfo "Configuration file installed as"
-	einfo "    ${APACHE2_MODULES_CONFDIR}/76_mod_apreq.conf"
-	einfo "You may want to edit it before turning the module on in /etc/conf.d/apache2"
-	einfo
+	elog
+	elog "To enable ${PN}, you need to edit your /etc/conf.d/apache2 file and"
+	elog "add '-D APREQ' to APACHE2_OPTS."
+	elog "Configuration file installed as"
+	elog "    ${APACHE2_MODULES_CONFDIR}/76_mod_apreq.conf"
+	elog "You may want to edit it before turning the module on in /etc/conf.d/apache2"
+	elog
 
 }
