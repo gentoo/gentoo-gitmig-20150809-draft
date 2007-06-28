@@ -1,6 +1,17 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.156 2007/06/12 15:49:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.157 2007/06/28 18:54:34 cardoe Exp $
+
+*mythtv-0.21_pre13775 (28 Jun 2007)
+
+  28 Jun 2007; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-0.20_p11626.ebuild, -mythtv-0.20_p12172.ebuild,
+  -mythtv-0.20_p12325.ebuild, -mythtv-0.20_p12884.ebuild,
+  -mythtv-0.20_p12963.ebuild, -mythtv-0.20_p13053.ebuild,
+  -mythtv-0.20_p13110.ebuild, -mythtv-0.21_pre12945.ebuild,
+  +mythtv-0.21_pre13775.ebuild:
+  remove old versions in favor of latest stable. added new trunk based ebuild
+  which fixes bug #182048
 
   12 Jun 2007; Doug Goldstein <cardoe@gentoo.org>
   files/mythbackend-0.18.2.rc:
