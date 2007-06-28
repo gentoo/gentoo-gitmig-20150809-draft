@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/fann
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.7 2007/02/24 15:54:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.8 2007/06/28 13:25:22 josejx Exp $
+
+  28 Jun 2007; Joseph Jezak <josejx@gentoo.org> fann-2.0.0.ebuild:
+  Marked ~ppc for bug #182739.
 
   24 Feb 2007; Steve Dibb <beandog@gentoo.org> fann-2.0.0.ebuild:
   add ~amd64, bug 168225
