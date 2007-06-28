@@ -18,6 +18,7 @@ ffmpeg
 
 # havent tested yet
 qt3
+dell
 qt4
 arts
 kde

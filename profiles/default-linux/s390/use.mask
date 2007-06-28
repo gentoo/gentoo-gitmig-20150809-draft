@@ -1,4 +1,5 @@
 # This file contains a list of useflags that cannot be used on s390.
+dell
 pcmcia
 cdr
 qt3

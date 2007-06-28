@@ -47,6 +47,7 @@ lirc
 lm_sensors
 netjack
 beagle
+dell
 nvtv
 mzscheme
 
@@ -87,3 +88,4 @@ dri
 -alsa_cards_armaaci
 -alsa_cards_at91-soc
 -alsa_cards_at91-soc-eti-b1-wm8731
+
