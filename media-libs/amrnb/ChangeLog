@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/amrnb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amrnb/ChangeLog,v 1.10 2007/06/28 19:36:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amrnb/ChangeLog,v 1.11 2007/06/28 21:57:15 armin76 Exp $
+
+  28 Jun 2007; Raúl Porcel <armin76@gentoo.org> amrnb-6.1.0.3.ebuild:
+  Add ~alpha/~ia64
 
   28 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org> ChangeLog:
   ppc stable, bug #181097
