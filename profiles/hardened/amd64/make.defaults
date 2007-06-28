@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/make.defaults,v 1.13 2007/04/13 18:27:37 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/make.defaults,v 1.14 2007/06/28 11:24:00 phreak Exp $
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
-USE="${ARCH} berkdb crypt hardened justify nls pam pic readline ssl tcpd zlib"
+USE="${ARCH} berkdb crypt hardened justify nls nptl pam pic readline ssl tcpd zlib"
 MULTILIB_ABIS="amd64"
 DEFAULT_ABI="amd64"
 ABI="amd64"
