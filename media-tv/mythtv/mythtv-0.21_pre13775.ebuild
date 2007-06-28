@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre13775.ebuild,v 1.1 2007/06/28 18:54:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre13775.ebuild,v 1.2 2007/06/28 21:49:46 cardoe Exp $
 
 inherit flag-o-matic multilib eutils qt3 mythtv subversion
 
@@ -99,7 +99,7 @@ src_unpack() {
 	subversion_src_unpack
 
 	# mcpu to march
-	epatch "${FILESDIR}"/${PN}-trunk-mcpu-march.patch
+	epatch "${FILESDIR}"/${PN}-trunk-mcpu-march-2.patch
 
 	# As needed fix since they don't know how to write qmake let alone a real
 	# make system. And they won't accept this upstream since it comes from

@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.157 2007/06/28 18:54:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.158 2007/06/28 21:49:46 cardoe Exp $
+
+  28 Jun 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/mythtv-trunk-mcpu-march-2.patch, mythtv-0.21_pre13775.ebuild:
+  refresh march/mcpu patch
 
 *mythtv-0.21_pre13775 (28 Jun 2007)
 
