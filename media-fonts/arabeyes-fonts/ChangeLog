@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/arabeyes-fonts
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arabeyes-fonts/ChangeLog,v 1.8 2006/11/26 23:21:00 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arabeyes-fonts/ChangeLog,v 1.9 2007/06/28 02:15:36 angelos Exp $
+
+  28 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  arabeyes-fonts-1.1.ebuild:
+  Stable on amd64
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   arabeyes-fonts-1.1.ebuild:
