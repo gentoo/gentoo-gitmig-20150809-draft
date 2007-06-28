@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xmldiff
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.1 2007/06/28 00:38:05 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.2 2007/06/28 19:45:45 coldwind Exp $
+
+  28 Jun 2007; Santiago M. Mola <coldwind@gentoo.org>
+  -files/xmldiff-0.6.8-python2.5.patch:
+  Fixing stupid cvs breakage thanks to Chris Mayo. Fixes bug #183566
 
 *xmldiff-0.6.8 (28 Jun 2007)
 

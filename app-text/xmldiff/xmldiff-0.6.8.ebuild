@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/xmldiff-0.6.8.ebuild,v 1.1 2007/06/28 00:38:05 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/xmldiff-0.6.8.ebuild,v 1.2 2007/06/28 19:45:45 coldwind Exp $
 
 inherit eutils distutils
 
@@ -22,5 +22,5 @@ DOCS="ChangeLog README README.xmlrev TODO"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-python2.5.patch"
+	sed -i -e "/^__revision__/d" setup.py test/regrtest.py || die "sed failed"
 }
