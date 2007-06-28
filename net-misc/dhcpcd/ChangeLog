@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.145 2007/06/20 19:49:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.146 2007/06/28 21:51:47 uberlord Exp $
+
+*dhcpcd-3.0.18 (28 Jun 2007)
+
+  28 Jun 2007; Roy Marples <uberlord@gentoo.org> +dhcpcd-3.0.18.ebuild:
+  Bump with a few misc fixes.
 
   20 Jun 2007; Raúl Porcel <armin76@gentoo.org> dhcpcd-3.0.16-r1.ebuild:
   alpha stable wrt #166921, thanks to Tobias Klausmann for testing
