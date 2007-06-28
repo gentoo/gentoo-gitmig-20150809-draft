@@ -49,3 +49,4 @@ video_cards_sis
 # nspr isnt ported to SuperH which means no seamonkey/firefox/etc...
 nsplugin
 firefox
+nss
