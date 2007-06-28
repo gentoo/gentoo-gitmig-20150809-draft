@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.15.ebuild,v 1.1 2007/06/28 20:23:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.15.ebuild,v 1.2 2007/06/28 20:28:56 betelgeuse Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit pax-utils java-vm-2 eutils
@@ -30,11 +30,7 @@ DEPEND="sys-apps/sed
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	doc? ( =dev-java/java-sdk-docs-1.4.2* )
 	X? (
-		x11-libs/libICE
-		x11-libs/libSM
 		x11-libs/libX11
-		x11-libs/libXau
-		x11-libs/libXdmcp
 		x11-libs/libXext
 		x11-libs/libXi
 		x11-libs/libXp
