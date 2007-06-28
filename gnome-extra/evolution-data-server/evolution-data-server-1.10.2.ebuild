@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.10.2.ebuild,v 1.1 2007/06/27 07:30:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.10.2.ebuild,v 1.2 2007/06/28 03:18:33 mr_bones_ Exp $
 
 inherit db-use eutils flag-o-matic gnome2 autotools
 
@@ -108,7 +108,7 @@ src_unpack() {
 	# tack on the server.deps Makefile on our last edit
 	sed -i -e 's:calendar/backends/groupwise:server.deps/calendar/Makefile\nserver.deps:' configure.in
 
-	# fix file includes 
+	# fix file includes
 	sed -i -e 's:<backends/groupwise/e-book-backend-groupwise.h>:"server.deps/addressbook/e-book-backend-groupwise.h":' addressbook/libedata-book/e-data-book-factory.c
 
 	# Fix db version for FreeBSD users where -ldb is always db-1

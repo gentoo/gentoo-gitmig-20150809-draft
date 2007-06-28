@@ -54,10 +54,10 @@ EBUILD evolution-data-server-1.10.1-r3.ebuild 4648 RMD160 ae05060d9171b380cd87bb
 MD5 ce44aecc12af3806eb8538563c4abe1e evolution-data-server-1.10.1-r3.ebuild 4648
 RMD160 ae05060d9171b380cd87bb515c4b0fcf3d08fed0 evolution-data-server-1.10.1-r3.ebuild 4648
 SHA256 f9631bdd8a277c1c58c5a85baa829f05fc02d845c1bfa91e4b6fc5760efe8e69 evolution-data-server-1.10.1-r3.ebuild 4648
-EBUILD evolution-data-server-1.10.2.ebuild 4434 RMD160 d2909c411a7fea9d6aee30165fd76c6213f5222e SHA1 7edb8e4f11557ce7dee72ffc79578b9e0fd0005a SHA256 70073b8159c828579170555892eeaa038fee07685ba5764b1db1151e4c4057a1
-MD5 2fe37254034b07ae72162468c43f1529 evolution-data-server-1.10.2.ebuild 4434
-RMD160 d2909c411a7fea9d6aee30165fd76c6213f5222e evolution-data-server-1.10.2.ebuild 4434
-SHA256 70073b8159c828579170555892eeaa038fee07685ba5764b1db1151e4c4057a1 evolution-data-server-1.10.2.ebuild 4434
+EBUILD evolution-data-server-1.10.2.ebuild 4439 RMD160 601d389f5e7ecba9564d51ff6e4526350f015e4f SHA1 8b4746722472dae43251b57890462cda97d77f41 SHA256 e7ceca97387e36258239559a961873a0da1b89c0e36ff1d2850f19b40cf98689
+MD5 9292b7a49df25f2f0dc98836bf96aa1a evolution-data-server-1.10.2.ebuild 4439
+RMD160 601d389f5e7ecba9564d51ff6e4526350f015e4f evolution-data-server-1.10.2.ebuild 4439
+SHA256 e7ceca97387e36258239559a961873a0da1b89c0e36ff1d2850f19b40cf98689 evolution-data-server-1.10.2.ebuild 4439
 EBUILD evolution-data-server-1.6.2-r1.ebuild 2804 RMD160 bae914061de98e9dc2fd04ab23af29b5b3ee9012 SHA1 fb336e4bac348d75c53ed4bd7470efb9288d6936 SHA256 0ac991c2ac8ddbdc686dedb39ab8eb57c2ec2f7616c2e90378f5fe084323a940
 MD5 b54a87717f5005502d3293a67665c01a evolution-data-server-1.6.2-r1.ebuild 2804
 RMD160 bae914061de98e9dc2fd04ab23af29b5b3ee9012 evolution-data-server-1.6.2-r1.ebuild 2804
