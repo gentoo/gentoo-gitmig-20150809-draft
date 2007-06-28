@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.7.5.2013-r1.ebuild,v 1.1 2007/06/27 20:38:41 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.7.5.2013-r1.ebuild,v 1.2 2007/06/28 01:28:08 jurek Exp $
 
 inherit mono fdo-mime eutils
 
 DESCRIPTION="A wrist friendly language for the CLI"
 HOMEPAGE="http://boo.codehaus.org/"
-SRC_URI="http://dist.codehaus.org/${PN}/distributions/${P}-src.tar.bz2"
+SRC_URI="http://dist.codehaus.org/${PN}/distributions/archive/${P}-src.tar.bz2"
 
 LICENSE="BSD"
 
@@ -39,14 +39,15 @@ src_unpack() {
 src_compile() {
 	# We no longer need to provide boo.lang (bug #163926)
 	sed -i -e 's#^.*<copy file="extras/boo.lang".*$##' \
-		default.build
+		default.build || die "sed failed"
 
-	nant -t:mono-1.0 -D:install.prefix=/usr || die
+	nant -t:mono-1.0 -D:install.prefix=/usr || die "build failed"
 }
 
 src_install() {
 	nant install \
-		-D:install.destdir=${D} -t:mono-1.0 -D:install.prefix=/usr || die
+		-D:install.destdir=${D} -t:mono-1.0 -D:install.prefix=/usr ||
+		die "install failed"
 
 	use doc && dodoc docs/BooManifesto.sxw
 

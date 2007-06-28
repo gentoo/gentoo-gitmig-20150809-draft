@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/boo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.13 2007/06/27 20:38:41 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.14 2007/06/28 01:28:08 jurek Exp $
+
+  28 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> boo-0.7.5.2013-r1.ebuild,
+  boo-0.7.6.2237-r1.ebuild:
+  Added sed failure check
 
 *boo-0.7.6.2237-r1 (27 Jun 2007)
 *boo-0.7.5.2013-r1 (27 Jun 2007)
