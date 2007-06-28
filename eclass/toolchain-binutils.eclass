@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.73 2007/06/19 06:47:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.74 2007/06/28 12:55:51 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -60,12 +60,15 @@ case ${BTYPE} in
 			mirror://kernel/linux/devel/binutils/test/binutils-${PV}.tar.bz2
 			mirror://gnu/binutils/binutils-${PV}.tar.bz2"
 esac
-[[ -n ${PATCHVER} ]] && \
-	SRC_URI="${SRC_URI} mirror://gentoo/binutils-${PV}-patches-${PATCHVER}.tar.bz2"
-[[ -n ${UCLIBC_PATCHVER} ]] && \
-	SRC_URI="${SRC_URI} mirror://gentoo/binutils-${PV}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2"
-[[ -n ${ELF2FLT_VER} ]] && \
-	SRC_URI="${SRC_URI} mirror://gentoo/elf2flt-${ELF2FLT_VER}.tar.bz2"
+add_src_uri() {
+	[[ -z $2 ]] && return
+	local a=$1
+	set -- mirror://gentoo http://dev.gentoo.org/~vapier/dist
+	SRC_URI="${SRC_URI} ${@/%//${a}}"
+}
+add_src_uri binutils-${PV}-patches-${PATCHVER}.tar.bz2 ${PATCHVER}
+add_src_uri binutils-${PV}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2 ${UCLIBC_PATCHVER}
+add_src_uri elf2flt-${ELF2FLT_VER}.tar.bz2 ${ELF2FLT_VER}
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
 IUSE="nls multitarget multislot test vanilla"
