@@ -1,0 +1,30 @@
+diff -ur xmldiff-0.6.8.orig/setup.py xmldiff-0.6.8/setup.py
+--- xmldiff-0.6.8.orig/setup.py	2007-06-07 23:55:05.000000000 +0200
++++ xmldiff-0.6.8/setup.py	2007-06-07 23:55:21.000000000 +0200
+@@ -17,10 +17,10 @@
+ # this program; if not, write to the Free Software Foundation, Inc.,
+ # 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ """ Generic Setup script, takes package info from __pkginfo__.py file """
++from __future__ import nested_scopes
+ 
+ __revision__ = '$Id: xmldiff-0.6.8-python2.5.patch,v 1.1 2007/06/28 00:38:05 coldwind Exp $'
+ 
+-from __future__ import nested_scopes
+ import os
+ import sys
+ import shutil
+diff -ur xmldiff-0.6.8.orig/test/regrtest.py xmldiff-0.6.8/test/regrtest.py
+--- xmldiff-0.6.8.orig/test/regrtest.py	2007-06-07 23:55:05.000000000 +0200
++++ xmldiff-0.6.8/test/regrtest.py	2007-06-07 23:55:43.000000000 +0200
+@@ -1,9 +1,10 @@
+ """
+ xmldiff non regression test
+ """
++from __future__ import nested_scopes
++
+ __revision__ = "$Id: xmldiff-0.6.8-python2.5.patch,v 1.1 2007/06/28 00:38:05 coldwind Exp $"
+ 
+-from __future__ import nested_scopes
+ from os.path import join, basename
+ from cStringIO import StringIO
+ import sys
