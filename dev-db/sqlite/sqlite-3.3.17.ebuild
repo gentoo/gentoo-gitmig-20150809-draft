@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.17.ebuild,v 1.12 2007/06/27 15:01:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.17.ebuild,v 1.13 2007/06/28 05:02:42 kumba Exp $
 
 inherit flag-o-matic eutils alternatives libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.sqlite.org/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="3"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ~ia64 mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="debug doc nothreadsafe soundex tcl"
 RESTRICT="!tcl? ( test )"
 
