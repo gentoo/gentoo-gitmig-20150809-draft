@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.21_pre13285.ebuild,v 1.1 2007/04/20 18:35:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.21_pre13775.ebuild,v 1.1 2007/06/28 19:22:22 cardoe Exp $
 
-inherit mythtv-plugins
+inherit mythtv-plugins subversion
 
 DESCRIPTION="Video player module for MythTV."
 IUSE="mplayer xine"
@@ -15,6 +15,11 @@ RDEPEND="dev-perl/libwww-perl
 	mplayer? ( || ( media-video/mplayer media-video/mplayer-bin ) )
 	xine? ( media-video/xine-ui )"
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	subversion_src_unpack
+	mythtv-plugins_src_unpack_patch
+}
 
 pkg_postinst() {
 	elog "MythVideo can use any media player to playback files, since"
