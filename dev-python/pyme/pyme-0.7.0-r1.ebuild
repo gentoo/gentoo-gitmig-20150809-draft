@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.7.0-r1.ebuild,v 1.3 2007/06/28 13:40:08 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.7.0-r1.ebuild,v 1.4 2007/06/28 14:09:19 hawking Exp $
 
 inherit distutils eutils
 
@@ -11,29 +11,39 @@ SRC_URI="mirror://sourceforge/pyme/${P}.tar.gz"
 LICENSE="|| ( GPL-2 LGPL-2.1 )"
 SLOT="0"
 KEYWORDS="~ia64 ~ppc ~sparc ~x86"
-IUSE=""
+IUSE="doc examples"
 
-DEPEND=">=app-crypt/gpgme-0.9.0"
+DEPEND=">=app-crypt/gpgme-0.9.0
+	dev-lang/swig"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	sed -i -e 's:include/:include/gpgme/:;s:$(PYTHON):/usr/bin/python:' Makefile
+	sed -i \
+		-e 's:include/:include/gpgme/:' \
+		-e 's:$(PYTHON):/usr/bin/python:' \
+		-e '/-rm doc\/\*\.html$/d' \
+		Makefile || die "sed in Makefile failed"
+
 	# Make it build with swig >=1.3.28
 	epatch "${FILESDIR}/${PN}-swig-compatibility.patch"
 }
 
 src_compile() {
 	PYTHON="/usr/bin/python"
-	emake swig
+	emake -j1 swig || die "emake swig failed"
 	distutils_src_compile
 }
 
 src_install() {
-	mydoc="examples/*"
 	distutils_src_install
-	dohtml -r doc/*
+	use doc && dohtml -r doc/*
+
+	if use examples; then
+		insinto /usr/share/doc/${PF}/examples
+		doins examples/*
+	fi
 }
 
 src_test() {
