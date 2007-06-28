@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythdvd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.42 2007/06/12 17:01:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.43 2007/06/28 18:47:08 cardoe Exp $
+
+  28 Jun 2007; Doug Goldstein <cardoe@gentoo.org>
+  -mythdvd-0.20_p11329.ebuild, -mythdvd-0.21_pre13285.ebuild:
+  mythdvd is gone, merged into mythvideo. remove old stable
 
   12 Jun 2007; Doug Goldstein <cardoe@gentoo.org> mythdvd-0.20.1.ebuild:
   Stable amd64, pcc, x86
