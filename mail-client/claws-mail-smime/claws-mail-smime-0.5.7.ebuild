@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/claws-mail-smime-0.5.7.ebuild,v 1.4 2007/06/23 18:10:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/claws-mail-smime-0.5.7.ebuild,v 1.5 2007/06/28 10:26:54 ticho Exp $
+
+inherit eutils
 
 MY_P="${P#claws-mail-}"
 
