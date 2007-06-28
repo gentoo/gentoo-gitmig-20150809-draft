@@ -106,3 +106,20 @@ alsa_cards_wavefront
 # Doug Goldstein <cardoe@gentoo.org> (27 Apr 2007)
 # # Dell does not ship or sell PPC systems
 dell
+
+# Joseph Jezak <josejx@gentoo.org> (28 Jun 2007)
+# Masked Parallel LCD devices for bug #180683
+
+# app-misc/lcd4linux
+lcd_devices_lph7508
+lcd_devices_m50530
+lcd_devices_noritake
+lcd_devices_routerboard
+
+# app-misc/lcdproc
+lcd_devices_sed1330
+lcd_devices_sed1520
+lcd_devices_stv5730
+
+# Both
+lcd_devices_t6963
