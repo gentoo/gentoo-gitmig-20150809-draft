@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.35.ebuild,v 1.2 2007/02/21 19:45:32 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.35.ebuild,v 1.3 2007/06/28 07:18:36 opfer Exp $
 
 inherit linux-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cakey.de/acerhk/"
 SRC_URI="http://www.cakey.de/${PN}/archives/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc"
+KEYWORDS="-ppc x86"
 IUSE=""
 
 MODULE_NAMES="acerhk(extra:)"

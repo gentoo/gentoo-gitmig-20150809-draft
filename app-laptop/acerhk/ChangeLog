@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/acerhk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.23 2007/02/21 19:45:32 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.24 2007/06/28 07:18:36 opfer Exp $
+
+  28 Jun 2007; Christian Faulhammer <opfer@gentoo.org> acerhk-0.5.35.ebuild:
+  stable x86, bug 182845
 
   21 Feb 2007; Jurek Bartuszek <jurek@gentoo.org> acerhk-0.5.35.ebuild:
   Disabled patching from 0.5.35 ebuild (bug #167839)
