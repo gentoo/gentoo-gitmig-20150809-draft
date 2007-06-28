@@ -1,0 +1,11 @@
+--- ionice.c.bak	2007-06-26 15:36:15.000000000 -0400
++++ ionice.c	2007-06-26 15:36:19.000000000 -0400
+@@ -35,7 +35,7 @@
+ #if defined(__i386__)
+ # define __NR_ioprio_set	289
+ # define __NR_ioprio_get	290
+-#elif defined(__ppc__)
++#elif defined(__ppc__) || defined(__powerpc__)
+ # define __NR_ioprio_set	273
+ # define __NR_ioprio_get	274
+ #elif defined(__x86_64__)

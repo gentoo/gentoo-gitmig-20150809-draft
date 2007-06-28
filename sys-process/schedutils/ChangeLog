@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/schedutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/schedutils/ChangeLog,v 1.7 2007/06/27 16:05:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/schedutils/ChangeLog,v 1.8 2007/06/28 13:22:56 josejx Exp $
+
+  28 Jun 2007; Joseph Jezak <josejx@gentoo.org>
+  +files/schedutils-1.5.0-powerpc.patch, schedutils-1.5.0.ebuild:
+  Added patch to fix compilation on powerpc, marked ppc stable for bug #182524.
 
   27 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
   schedutils-1.5.0.ebuild:
