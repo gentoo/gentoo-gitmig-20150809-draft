@@ -3,5 +3,4 @@
 >=x11-base/xorg-x11-6.8.0-r4
 
 *sys-devel/libtool
-*sys-libs/pwdb
 *virtual/dev-manager 

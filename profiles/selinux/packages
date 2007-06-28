@@ -1,6 +1,6 @@
 # Copyright 2002-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.22 2007/03/04 20:02:05 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.23 2007/06/28 10:07:37 vapier Exp $
 
 # This file extends the base packages file for the default profile that all
 # architectures will enjoy.  Please note that default is what most architectures
@@ -44,7 +44,6 @@
 >=gnome-base/gdm-2.4.4.7
 >=sys-process/fcron-2.9.4
 >=sys-fs/udev-055
->=sys-libs/pwdb-0.61-r4
 >=sys-process/vixie-cron-3.0.1-r2
 
 # SELinux is integrated in 2.6
