@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/libgnomekbd-2.18.0.ebuild,v 1.7 2007/06/28 23:11:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/libgnomekbd-2.18.2.ebuild,v 1.1 2007/06/29 22:31:23 leio Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-libs/dbus-glib
@@ -32,3 +32,10 @@ DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 # This collides with
 # /etc/gconf/schemas/desktop_gnome_peripherals_keyboard_xkb.schemas from
 # control-center...
+
+src_compile() {
+	# FreeBSD doesn't like -j
+	MAKEOPTS="${MAKEOPTS} -j1"
+
+	gnome2_src_compile
+}
