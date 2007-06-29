@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/planets
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/planets/ChangeLog,v 1.11 2006/11/04 19:26:10 nyhm Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/planets/ChangeLog,v 1.12 2007/06/29 03:16:37 nyhm Exp $
+
+*planets-0.1.13 (29 Jun 2007)
+
+  29 Jun 2007; Tristan Heaven <nyhm@gentoo.org> +planets-0.1.13.ebuild:
+  Version bump
 
   04 Nov 2006; Tristan Heaven <nyhm@gentoo.org> planets-0.1.10.ebuild,
   planets-0.1.12.ebuild:
