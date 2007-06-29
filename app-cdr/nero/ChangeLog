@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/nero
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.24 2007/04/16 21:35:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.25 2007/06/29 13:40:23 drac Exp $
+
+*nero-3.0.0.0 (29 Jun 2007)
+
+  29 Jun 2007; Samuli Suominen <drac@gentoo.org> -nero-2.1.0.1.ebuild,
+  -nero-2.1.0.2.ebuild, +nero-3.0.0.0.ebuild:
+  Version bump for bug 172717.
 
   16 Apr 2007; Raúl Porcel <armin76@gentoo.org> nero-2.1.0.3.ebuild:
   x86 stable, since older versions are 404
