@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/capistrano
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.16 2007/05/18 11:45:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.17 2007/06/29 05:45:38 nichoj Exp $
+
+*capistrano-1.99.3 (29 Jun 2007)
+
+  29 Jun 2007; Joshua Nichols <nichoj@gentoo.org> +capistrano-1.99.3.ebuild:
+  Version bump.
 
 *capistrano-1.99.1 (18 May 2007)
 
