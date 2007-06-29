@@ -1,6 +1,6 @@
 # Copyright 2000-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.19-r1.ebuild,v 1.6 2007/06/28 18:41:23 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.19-r1.ebuild,v 1.7 2007/06/29 18:18:41 swegener Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -100,6 +100,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-0.6.1-no-ipv6.patch
 	epatch "${FILESDIR}"/${P}-ui-sharp-automake.patch
+	epatch "${FILESDIR}"/${P}-ui-sharp-gtk.patch
 	epatch "${FILESDIR}"/${P}-assert-security.patch
 
 	eautomake

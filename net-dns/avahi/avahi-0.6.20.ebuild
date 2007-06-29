@@ -1,8 +1,10 @@
 # Copyright 2000-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.20.ebuild,v 1.2 2007/06/24 22:13:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.20.ebuild,v 1.3 2007/06/29 18:18:41 swegener Exp $
 
-inherit eutils mono python qt3 qt4
+WANT_AUTOMAKE="1.9"
+
+inherit eutils mono python qt3 qt4 autotools
 
 DESCRIPTION="System which facilitates service discovery on a local network"
 HOMEPAGE="http://avahi.org/"
@@ -97,6 +99,9 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-0.6.1-no-ipv6.patch
+	epatch "${FILESDIR}"/${P}-ui-sharp-gtk.patch
+
+	eautomake
 }
 
 src_compile() {
