@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7416 2007/06/28 20:04:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7417 2007/06/29 08:24:50 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1020,12 +1020,6 @@ sys-apps/ppc64-utils
 # Stefan Knoblich <stkn@gentoo.org> (18 Apr 2006)
 # Masking until asterisk-1.2 gets released into the wild
 net-misc/asterisk-app_authenticate_ldap
-
-# Mark Loeser <halcy0n@gentoo.org> (11 Apr 2006)
-# GCC snapshots; use with extreme care and only report bugs if you have
-# a patch
-=sys-devel/gcc-4.3*
-=sys-devel/gcc-4.2*
 
 # Michael Sterrett <mr_bones_@gentoo.org> (02 Apr 2006)
 # masked pending unresolved security issues #122845
