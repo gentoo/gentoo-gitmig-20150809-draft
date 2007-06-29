@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-sound
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.29 2007/06/29 12:32:31 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.30 2007/06/29 21:52:17 pylon Exp $
+
+  29 Jun 2007; Lars Weiler <pylon@gentoo.org> sdl-sound-1.0.1-r2.ebuild:
+  Stable on ppc; bug #183438.
 
   29 Jun 2007; Christoph Mende <angelos@gentoo.org>
   sdl-sound-1.0.1-r2.ebuild:
