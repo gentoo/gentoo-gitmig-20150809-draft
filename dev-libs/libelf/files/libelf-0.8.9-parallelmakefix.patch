@@ -1,6 +1,10 @@
---- libelf-0.8.9/lib/Makefile.in.orig	2007-06-20 00:09:41.876160240 -0400
-+++ libelf-0.8.9/lib/Makefile.in	2007-06-20 00:10:13.601337280 -0400
-@@ -174,7 +174,7 @@ installdirs: $(top_srcdir)/mkinstalldirs
+--- libelf-0.8.9/lib/Makefile.in.orig	2007-06-29 00:09:41.876160240 -0400
++++ libelf-0.8.9/lib/Makefile.in	2007-06-29 00:10:13.601337280 -0400
+@@ -171,10 +171,11 @@ installdirs: $(top_srcdir)/mkinstalldirs
+ 
+ installdirs: $(top_srcdir)/mkinstalldirs
+ 	dirs="$(installdirs)"; for dir in $$dirs; do \
++	    if test -d $(distsubdir); then continue; fi; \
  	    $(SHELL) $(top_srcdir)/mkinstalldirs $(instroot)$$dir; \
  	done
  

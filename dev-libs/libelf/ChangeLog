@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libelf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.19 2007/06/20 04:17:29 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.20 2007/06/29 18:09:30 kanaka Exp $
+
+  29 Jun 2007; Joel Martin <kanaka@gentoo.org>
+  files/libelf-0.8.9-parallelmakefix.patch:
+  Update parallel make patch to only mkinstalldirs if not already there.
 
   20 Jun 2007; Joel Martin <kanaka@gentoo.org>
   +files/libelf-0.8.9-parallelmakefix.patch, libelf-0.8.9.ebuild:
