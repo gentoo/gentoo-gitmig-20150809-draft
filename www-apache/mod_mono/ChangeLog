@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.35 2007/06/26 21:47:41 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.36 2007/06/29 18:17:02 opfer Exp $
+
+  29 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  mod_mono-1.2.4.ebuild:
+  stable x86, bug 182850
 
   26 Jun 2007; Lars Weiler <pylon@gentoo.org> mod_mono-1.2.4.ebuild:
   Stable on ppc; bug #182850.
