@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.18.1.ebuild,v 1.1 2007/04/25 01:45:14 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.18.2.ebuild,v 1.1 2007/06/29 19:50:10 leio Exp $
 
 inherit gnome2
 
@@ -23,10 +23,7 @@ RDEPEND=">=gnome-base/gnome-vfs-2.1.3.1
 	>=gnome-base/gconf-2
 	>=gnome-base/gnome-mount-0.4
 	>=sys-apps/hal-0.5.7
-	||	(
-			>=dev-libs/dbus-glib-0.71
-			( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.6.0 )
-		)
+	>=dev-libs/dbus-glib-0.71
 	cdr? ( virtual/cdrtools )
 	dvdr? ( >=app-cdr/dvd+rw-tools-6.1 )"
 DEPEND="${RDEPEND}
