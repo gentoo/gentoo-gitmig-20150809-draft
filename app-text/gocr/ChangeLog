@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gocr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.42 2007/06/29 12:34:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.43 2007/06/29 16:10:44 opfer Exp $
+
+  29 Jun 2007; Christian Faulhammer <opfer@gentoo.org> gocr-0.43.ebuild:
+  stable x86, bug 153068
 
   29 Jun 2007; Christoph Mende <angelos@gentoo.org> gocr-0.43.ebuild:
   Stable on amd64 wrt bug #153068
