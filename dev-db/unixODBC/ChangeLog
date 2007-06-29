@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.68 2007/06/28 13:04:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.69 2007/06/29 12:56:44 gustavoz Exp $
+
+  29 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  unixODBC-2.2.12.ebuild:
+  Stable on sparc wrt #183194
 
   28 Jun 2007; Raúl Porcel <armin76@gentoo.org> unixODBC-2.2.12.ebuild:
   alpha/ia64/x86 stable wrt #183194
