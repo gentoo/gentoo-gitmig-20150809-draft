@@ -1,6 +1,16 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.214 2007/05/02 04:46:04 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.215 2007/06/29 22:24:08 dsd Exp $
+
+*gnome-applets-2.18.0-r2 (29 Jun 2007)
+*gnome-applets-2.16.2-r1 (29 Jun 2007)
+
+  29 Jun 2007; Daniel Drake <dsd@gentoo.org>
+  +files/gnome-applets-2.18.0-acpi-procfs.patch,
+  -files/gnome-applets-2.18.0-deprecated-acpi-info.patch,
+  +gnome-applets-2.16.2-r1.ebuild, -gnome-applets-2.18.0-r1.ebuild,
+  +gnome-applets-2.18.0-r2.ebuild:
+  Proper fix for 2.6.21 compatibility with CONFIG_ACPI_PROCFS=n (bug #176757)
 
 *gnome-applets-2.18.0-r1 (02 May 2007)
 

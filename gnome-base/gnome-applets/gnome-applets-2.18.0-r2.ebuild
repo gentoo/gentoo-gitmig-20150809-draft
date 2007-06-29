@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.18.0-r1.ebuild,v 1.1 2007/05/02 04:46:04 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.18.0-r2.ebuild,v 1.1 2007/06/29 22:24:08 dsd Exp $
 
 inherit eutils gnome2 autotools
 
@@ -87,7 +87,7 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
-	epatch ${FILESDIR}/${PN}-2.18.0-deprecated-acpi-info.patch
+	epatch ${FILESDIR}/${P}-acpi-procfs.patch
 }
 
 src_install() {

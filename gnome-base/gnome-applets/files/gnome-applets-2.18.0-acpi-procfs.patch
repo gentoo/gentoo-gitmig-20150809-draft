@@ -1,0 +1,137 @@
+
+From: Daniel Drake <dsd@gentoo.org>
+
+2.6.21 compatibility fix (based on patch by Alan Swanson). Also improved error
+passing/handling. (#427562)
+
+http://bugzilla.gnome.org/show_bug.cgi?id=427562
+https://bugs.gentoo.org/show_bug.cgi?id=176757
+
+Index: battstat/acpi-linux.c
+===================================================================
+--- battstat/acpi-linux.c	(revision 10278)
++++ battstat/acpi-linux.c	(revision 10280)
+@@ -191,7 +191,6 @@
+ static gboolean update_battery_info(struct acpi_info * acpiinfo)
+ {
+   char batt_info[60];
+-  gulong acpi_ver;
+   GHashTable *hash;
+   DIR * procdir;
+   struct dirent * procdirentry;
+@@ -201,23 +200,6 @@
+   acpiinfo->low_capacity = 0;
+   acpiinfo->critical_capacity = 0;
+ 
+-  hash = read_file ("/proc/acpi/info", buf, sizeof (buf));
+-  if (!hash)
+-    return FALSE;
+-
+-  acpi_ver = read_ulong (hash, "version");
+-  g_hash_table_destroy (hash);
+-
+-  if (acpi_ver < (gulong)20020208) {
+-    acpiinfo->ac_state_state = "status";
+-    acpiinfo->batt_state_state = "status";
+-    acpiinfo->charging_state = "state";
+-  } else {
+-    acpiinfo->ac_state_state = "state";
+-    acpiinfo->batt_state_state = "state";
+-    acpiinfo->charging_state = "charging state";
+-  }
+-
+   procdir=opendir("/proc/acpi/battery/");
+   if (!procdir)
+     return FALSE;
+@@ -252,16 +234,40 @@
+  * initializes the stored battery and AC adapter information. */
+ gboolean acpi_linux_init(struct acpi_info * acpiinfo)
+ {
++  GHashTable *hash;
++  char buf[BUFSIZ];
++  gchar *pbuf;
++  gulong acpi_ver;
+   int fd;
+ 
+   g_assert(acpiinfo);
++
++  if (g_file_get_contents ("/sys/module/acpi/parameters/acpica_version", &pbuf, NULL, NULL)) {
++    acpi_ver = strtoul (pbuf, NULL, 10);
++    g_free (pbuf);
++  } else if (hash = read_file ("/proc/acpi/info", buf, sizeof (buf))) {
++      acpi_ver = read_ulong (hash, "version");
++      g_hash_table_destroy (hash);
++  } else
++      return FALSE;
++
++  if (acpi_ver < (gulong)20020208) {
++    acpiinfo->ac_state_state = "status";
++    acpiinfo->batt_state_state = "status";
++    acpiinfo->charging_state = "state";
++  } else {
++    acpiinfo->ac_state_state = "state";
++    acpiinfo->batt_state_state = "state";
++    acpiinfo->charging_state = "charging state";
++  }
++
++  if (!update_battery_info(acpiinfo) || !update_ac_info(acpiinfo))
++    return FALSE;
+   
+   fd = open("/proc/acpi/event", 0);
+   if (fd >= 0) {
+     acpiinfo->event_fd = fd;
+     acpiinfo->channel = g_io_channel_unix_new(fd);
+-    update_battery_info(acpiinfo);
+-    update_ac_info(acpiinfo);
+     return TRUE;
+   }
+ 
+@@ -273,8 +279,6 @@
+     if (connect(fd, (struct sockaddr *) &addr, sizeof(addr)) == 0) {
+       acpiinfo->event_fd = fd;
+       acpiinfo->channel = g_io_channel_unix_new(fd);
+-      update_battery_info(acpiinfo);
+-      update_ac_info(acpiinfo);
+       return TRUE;
+     }
+   }
+@@ -323,7 +327,6 @@
+ {
+     gsize i;
+     int evt;
+-    gboolean result = FALSE;
+     GString *buffer;
+     GError *gerror=NULL;
+     buffer=g_string_new(NULL);
+@@ -333,21 +336,18 @@
+     evt = parse_acpi_event(buffer);
+       switch (evt) {
+         case ACPI_EVENT_AC:
+-          update_ac_info(acpiinfo);
+-          result = TRUE;
+-          break;
++          return update_ac_info(acpiinfo);
+         case ACPI_EVENT_BATTERY_INFO:
+-          update_battery_info(acpiinfo);
+-          /* Update AC info on battery info updates.  This works around
+-           * a bug in ACPI (as per bug #163013).
+-           */
+-          update_ac_info(acpiinfo);
+-          result = TRUE;
+-          break;
++          if (update_battery_info(acpiinfo)) {
++            /* Update AC info on battery info updates.  This works around
++             * a bug in ACPI (as per bug #163013).
++             */
++            return update_ac_info(acpiinfo);
++          }
++          /* fall-through */
++        default:
++          return FALSE;
+       }
+-    
+-
+-    return result;
+ }
+ 
+ /*
