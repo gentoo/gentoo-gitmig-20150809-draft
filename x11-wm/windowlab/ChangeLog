@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/windowlab
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.20 2007/02/21 22:42:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.21 2007/06/29 11:05:50 coldwind Exp $
+
+*windowlab-1.34 (29 Jun 2007)
+
+  29 Jun 2007; Santiago M. Mola <coldwind@gentoo.org>
+  +files/windowlab-1.34-fixed-font.patch, -windowlab-1.32.ebuild,
+  +windowlab-1.34.ebuild:
+  Version bump fixing problems with xft fonts, thanks to Stephen Tallowitz.
+  Fixes bugs #145907, #145913 and #172307.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
