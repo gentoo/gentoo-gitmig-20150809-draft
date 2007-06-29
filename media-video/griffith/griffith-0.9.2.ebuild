@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.2.ebuild,v 1.4 2007/06/24 22:38:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.2.ebuild,v 1.5 2007/06/29 07:13:23 opfer Exp $
 
 inherit python
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.berlios.de/griffith/${P/_/-}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc spell"
 
 RDEPEND="dev-python/imaging
