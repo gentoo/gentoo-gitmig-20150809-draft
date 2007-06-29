@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.43 2007/06/26 21:40:31 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.44 2007/06/29 18:14:56 opfer Exp $
+
+  29 Jun 2007; Christian Faulhammer <opfer@gentoo.org> xsp-1.2.4.ebuild:
+  stable x86, bug 182850
 
   26 Jun 2007; Lars Weiler <pylon@gentoo.org> xsp-1.2.4.ebuild:
   Stable on ppc; bug #182850.
