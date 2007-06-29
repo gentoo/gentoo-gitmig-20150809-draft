@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gocr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.41 2007/06/03 15:36:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.42 2007/06/29 12:34:01 angelos Exp $
+
+  29 Jun 2007; Christoph Mende <angelos@gentoo.org> gocr-0.43.ebuild:
+  Stable on amd64 wrt bug #153068
 
   03 Jun 2007; Raúl Porcel <armin76@gentoo.org> gocr-0.43.ebuild:
   Add ~alpha wrt #173100
