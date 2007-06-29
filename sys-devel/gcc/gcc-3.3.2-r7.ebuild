@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.31 2007/04/07 04:25:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.32 2007/06/29 08:20:27 vapier Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj"
 
@@ -115,10 +115,8 @@ SLOT="3.3"
 # if we use later bison.
 # This one depends on glibc-2.3.2-r3 containing the __guard in glibc
 # we scan for Guard@@libgcc and then apply the function moving patch.
-# If using NPTL, we currently cannot however depend on glibc-2.3.2-r3,
-# else bootstap will break.
 DEPEND="virtual/libc
-	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
+	>=sys-libs/glibc-2.3.2-r3
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
@@ -126,7 +124,7 @@ DEPEND="virtual/libc
 		nls? ( sys-devel/gettext ) )"
 
 RDEPEND="virtual/libc
-	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
+	>=sys-libs/glibc-2.3.2-r3
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
