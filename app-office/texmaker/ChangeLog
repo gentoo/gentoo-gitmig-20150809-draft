@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.32 2007/06/29 12:47:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.33 2007/06/29 22:01:39 pylon Exp $
+
+  29 Jun 2007; Lars Weiler <pylon@gentoo.org> texmaker-1.50-r1.ebuild:
+  Stable on ppc; bug #183633.
 
   29 Jun 2007; Christoph Mende <angelos@gentoo.org> texmaker-1.50-r1.ebuild:
   Stable on amd64 wrt bug #183633
