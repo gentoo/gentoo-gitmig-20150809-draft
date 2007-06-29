@@ -1,10 +1,6 @@
 --- libelf-0.8.9/lib/Makefile.in.orig	2007-06-29 00:09:41.876160240 -0400
 +++ libelf-0.8.9/lib/Makefile.in	2007-06-29 00:10:13.601337280 -0400
-@@ -171,10 +171,11 @@ installdirs: $(top_srcdir)/mkinstalldirs
- 
- installdirs: $(top_srcdir)/mkinstalldirs
- 	dirs="$(installdirs)"; for dir in $$dirs; do \
-+	    if test -d $(distsubdir); then continue; fi; \
+@@ -174,7 +174,7 @@ installdirs: $(top_srcdir)/mkinstalldirs
  	    $(SHELL) $(top_srcdir)/mkinstalldirs $(instroot)$$dir; \
  	done
  
@@ -31,3 +27,20 @@
  	files="$(HDRS)"; for file in $$files; do \
  	  if test -f $(instroot)$(includedir)/$$file; then true; else \
  	    echo "#include <libelf/$$file>" > $(instroot)$(includedir)/$$file; \
+--- libelf-0.8.9/mkinstalldirs.orig	2007-06-29 15:22:54.048886832 -0400
++++ libelf-0.8.9/mkinstalldirs	2007-06-29 15:31:49.261522144 -0400
+@@ -23,7 +23,13 @@ for file in ${1+"$@"} ; do 
+ 
+      if test ! -d "${pathcomp}"; then
+         echo "mkdir $pathcomp" 1>&2
+-        mkdir "${pathcomp}" || errstatus=$?
++        mkdir "${pathcomp}"
++        tmpstatus=$?
++        if test "${tmpstatus}" != 0; then
++           # If there was an error but the dir exists 
++           # then a race happened so ignore the error
++           test -d "${pathcomp}" || errstatus=${tmpstatus}
++        fi
+      fi
+ 
+      pathcomp="${pathcomp}/"
