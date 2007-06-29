@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_pam
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/ChangeLog,v 1.22 2007/06/14 20:50:39 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/ChangeLog,v 1.23 2007/06/29 15:12:29 chtekk Exp $
+
+  29 Jun 2007; Luca Longinotti <chtekk@gentoo.org> files/apache2.pam,
+  metadata.xml:
+  Fix DOS line endings.
 
   14 Jun 2007; Christian Heim <phreak@gentoo.org>
   files/10_mod_auth_pam.conf:
