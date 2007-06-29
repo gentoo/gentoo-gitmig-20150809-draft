@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.8 2007/06/06 19:53:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.9 2007/06/29 11:24:17 gurligebis Exp $
+
+  29 Jun 2007; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  libupnp-1.4.6.ebuild:
+  Removing blocking of net-misc/upnp, since it is finally gone :-)
 
   06 Jun 2007; Markus Rothe <corsair@gentoo.org> libupnp-1.4.6.ebuild:
   Stable on ppc64; bug #168789

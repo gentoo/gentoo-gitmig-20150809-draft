@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.4.6.ebuild,v 1.7 2007/06/26 02:27:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.4.6.ebuild,v 1.8 2007/06/29 11:24:17 gurligebis Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -14,8 +14,6 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug"
-
-RDEPEND="!net-misc/upnp"
 
 src_unpack() {
 	unpack ${A}
