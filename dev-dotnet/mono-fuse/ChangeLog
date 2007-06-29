@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/mono-fuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-fuse/ChangeLog,v 1.6 2007/06/29 11:32:10 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-fuse/ChangeLog,v 1.7 2007/06/29 12:48:25 opfer Exp $
+
+  29 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  mono-fuse-0.4.0.ebuild:
+  stable x86, bug 182916
 
   29 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> mono-fuse-0.4.0.ebuild:
   Removed configure.in rule that prevented configure script from running on
