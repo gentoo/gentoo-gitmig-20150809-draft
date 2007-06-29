@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.0.0.ebuild,v 1.2 2007/06/29 14:16:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.0.0.ebuild,v 1.3 2007/06/29 14:21:43 drac Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -28,11 +28,6 @@ QA_TEXTRELS="opt/nero/lib/nero/plug-ins/libOggVorbis.so
 	opt/nero/lib/nero/plug-ins/libFLAC.so"
 
 S="${WORKDIR}"
-
-# Legacy from nero-2.x.x.x ebuilds. Still required?
-pkg_setup() {
-	has_multilib_profile && ABI="x86"
-}
 
 src_compile() {
 	echo "Nothing to compile."
