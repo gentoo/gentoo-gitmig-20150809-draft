@@ -1,6 +1,31 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.86 2007/06/29 12:37:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.87 2007/06/29 14:09:57 flameeyes Exp $
+
+*jack-audio-connection-kit-0.103.0 (29 Jun 2007)
+
+  29 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/jack-audio-connection-kit-0.103.0-riceitdown.patch,
+  +jack-audio-connection-kit-0.103.0.ebuild:
+  Version bump and ebuild cleanup:
+  
+  - add a patch to avoid adding extra CFLAGS;
+  
+  - don't build documentation at all if doc USE flag is disabled but doxygen
+  is found;
+  
+  - update netjack version to 0.12 final (and fetch tarball only if the USE
+  flag is enabled);
+  
+  - fix netjack installation on multilib systems;
+  
+  - don't force PIC, leave it to libtool;
+  
+  - don't prestrip jack when enabling capabilities;
+  
+  - make libsndfile a mandatory dependency (it was automagic before);
+  
+  - move pkgconfig to build-time dependency.
 
   29 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
   jack-audio-connection-kit-0.101.1-r1.ebuild,
