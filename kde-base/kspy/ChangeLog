@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kspy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kspy/ChangeLog,v 1.36 2007/05/24 11:22:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kspy/ChangeLog,v 1.37 2007/06/29 19:27:58 philantrop Exp $
+
+  29 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> kspy-3.5.6.ebuild:
+  The tests fail if the kdehiddenvisibility USE flag is set. They're disabled
+  for now. Fixes bug 183460.
 
   24 May 2007; Carsten Lohrke <carlo@gentoo.org> kspy-3.5.6.ebuild:
   Adjust MAXKDEVER.
