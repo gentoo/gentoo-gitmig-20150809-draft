@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.9.ebuild,v 1.1 2007/05/16 21:25:16 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.9.ebuild,v 1.2 2007/06/29 17:03:50 hanno Exp $
 
 inherit qt3 eutils
 
@@ -23,6 +23,13 @@ DEPEND="$(qt_min_version 3.3.4)
 
 RDEPEND="${DEPEND}
 	virtual/ghostscript"
+
+pkg_setup() {
+	if use cairo && ! built_with_use 'x11-libs/cairo' 'X' ; then
+		eerror "You must build cairo with X support"
+		die "x11-libs/cairo built without X"
+	fi
+}
 
 src_compile() {
 	econf `use_enable cairo` || die
