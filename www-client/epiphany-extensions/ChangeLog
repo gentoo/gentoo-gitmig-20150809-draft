@@ -1,6 +1,13 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.53 2007/04/26 16:11:46 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.54 2007/06/29 22:13:21 leio Exp $
+
+*epiphany-extensions-2.18.2 (29 Jun 2007)
+
+  29 Jun 2007; Mart Raudsepp <leio@gentoo.org>
+  -epiphany-extensions-2.16.1.ebuild, -epiphany-extensions-2.18.0.ebuild,
+  +epiphany-extensions-2.18.2.ebuild:
+  Version bump for epilicious localization fixes and translation updates
 
   26 Apr 2007; Daniel Gryniewicz <dang@gentoo.org>
   -files/epiphany-extensions-2.18.0-sessionsaver-v4.patch,
