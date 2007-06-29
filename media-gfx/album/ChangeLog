@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/album
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.32 2007/06/29 12:44:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.33 2007/06/29 21:59:06 pylon Exp $
+
+  29 Jun 2007; Lars Weiler <pylon@gentoo.org> album-4.02.ebuild:
+  Stable on ppc; bug #183549.
 
   29 Jun 2007; Christoph Mende <angelos@gentoo.org> album-4.02.ebuild:
   Stable on amd64 wrt bug #183549
