@@ -1,25 +1,30 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.3.1.ebuild,v 1.10 2007/06/13 13:15:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.5.ebuild,v 1.1 2007/06/29 14:22:12 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
-PATCH="${P}-patches-0.3"
-LANGS="ca cs da de es-ES eu fr hu it mn nl pl ru sk sl"
+PATCH="${P}-patches-0.1"
+LANGS="ca cs da de es-ES eu fr ga-IE hu it mk mn nb-NO nl pa-IN pl pt-BR ru sk sl sv-SE"
 
 MY_PN="${PN/mozilla-}"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="The Mozilla Sunbird Calendar"
 HOMEPAGE="http://www.mozilla.org/projects/calendar/sunbird.html"
 IUSE="bindist"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/${MY_PN}/releases/${PV}/source/${MY_P}.source.tar.bz2
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/${MY_PN}/releases/${PV}/source/lightning-${MY_P}-source.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2"
 
+# These are in
+#
+#  http://releases.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${PV}/langpacks/
+#
+# for i in $LANGS $SHORTLANGS; do wget $i.xpi -O ${P}-$i.xpi; done
 for X in ${LANGS} ; do
 	SRC_URI="${SRC_URI}
-		linguas_${X/-/_}? ( http://releases.mozilla.org/pub/mozilla.org/calendar/${MY_PN}/releases/${PV}/langpacks/${MY_PN}-${PV}.${X}.langpack.xpi )"
+		linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P}-xpi/${P}-${X}.xpi )"
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
 done
@@ -82,8 +87,9 @@ src_unpack() {
 	unpack ${A%bz2*}bz2
 
 	linguas
+	linguas
 	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_unpack "${MY_PN}-${PV}.${X}.langpack.xpi"
+		[[ ${X} != "en" ]] && xpi_unpack "${P}-${X}.xpi"
 	done
 	if [[ ${linguas} != "" ]]; then
 		elog "Selected language packs (first will be default): ${linguas}"
@@ -171,7 +177,7 @@ src_install() {
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${MY_PN}-${PV}.${X}.langpack"
+		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P}-${X}"
 	done
 
 	local LANG=${linguas%% *}

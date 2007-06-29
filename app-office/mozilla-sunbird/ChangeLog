@@ -1,6 +1,12 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.11 2007/06/13 13:15:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.12 2007/06/29 14:22:12 armin76 Exp $
+
+*mozilla-sunbird-0.5 (29 Jun 2007)
+
+  29 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  -mozilla-sunbird-0.3.1.ebuild, +mozilla-sunbird-0.5.ebuild:
+  Version bump, bug 183609, old
 
   13 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   mozilla-sunbird-0.3.1.ebuild:
