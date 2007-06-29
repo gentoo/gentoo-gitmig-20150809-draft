@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3_rc4.ebuild,v 1.1 2007/06/17 23:31:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3_rc6.ebuild,v 1.1 2007/06/29 02:32:34 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -15,6 +15,7 @@ IUSE_ELIBC="elibc_glibc elibc_uclibc elibc_FreeBSD"
 IUSE="build doc epydoc selinux linguas_pl userland_GNU ${IUSE_ELIBC}"
 DEPEND=">=dev-lang/python-2.4
 	!build? ( >=sys-apps/sed-4.0.5 )
+	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
 	epydoc? ( >=dev-python/epydoc-2.0 )"
 RDEPEND=">=dev-lang/python-2.4
 	!build? ( >=sys-apps/sed-4.0.5
@@ -86,15 +87,24 @@ src_compile() {
 	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o tbz2tool tbz2tool.c || \
 		die "Failed to build tbz2tool"
 
+	if use doc; then
+		cd "${S}"/doc
+		touch fragment/date
+		sed -i "s/svn-trunk/${PVR}/" fragment/version
+		make xhtml-nochunks || die "failed to make docs"
+	fi
+
 	if use epydoc; then
 		einfo "Generating api docs"
 		mkdir "${WORKDIR}"/api
 		local my_modules
 		my_modules="$(find "${S}/pym" -name "*.py" \
-			| sed -e 's:.*__init__.py$::' -e 's:\.py$::' -e "s:^${S}/pym/::" \
+			| sed -e 's:/__init__.py$::' -e 's:\.py$::' -e "s:^${S}/pym/::" \
 			 -e 's:/:.:g')" || die "error listing modules"
 		PYTHONPATH="${S}/pym:${PYTHONPATH}" epydoc -o "${WORKDIR}"/api \
-			-qqqqq --ignore-param-mismatch ${my_modules} || die "epydoc failed"
+			-qqqqq --ignore-param-mismatch --no-frames --show-imports \
+			--name "${PN}" --url "${HOMEPAGE}" \
+			${my_modules} || die "epydoc failed"
 	fi
 }
 
@@ -120,6 +130,9 @@ src_install() {
 		eerror ""
 		newins make.conf make.conf.example
 	fi
+
+	insinto /etc/logrotate.d
+	doins "${S}"/cnf/logrotate.d/elog-save-summary
 
 	dodir ${portage_base}/bin
 	exeinto ${portage_base}/bin
@@ -147,6 +160,7 @@ src_install() {
 	dodoc "${S}"/ChangeLog
 	dodoc "${S}"/NEWS
 	dodoc "${S}"/RELEASE-NOTES
+	use doc && dohtml "${S}"/doc/*.html
 	use epydoc && dohtml -r "${WORKDIR}"/api
 
 	dodir /usr/bin
