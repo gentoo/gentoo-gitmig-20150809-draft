@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.85 2007/05/01 00:04:49 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.86 2007/06/29 12:37:29 flameeyes Exp $
+
+  29 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  jack-audio-connection-kit-0.101.1-r1.ebuild,
+  jack-audio-connection-kit-0.102.20.ebuild:
+  Replace check-kernel usage with linux-info (hopefully this won't make it
+  harder to build on FreeBSD). Patch by Jakub Moc in bug #179732.
 
   01 May 2007; Marius Mauch <genone@gentoo.org>
   jack-audio-connection-kit-0.101.1-r1.ebuild,

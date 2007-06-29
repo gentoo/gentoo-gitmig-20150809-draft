@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.101.1-r1.ebuild,v 1.14 2007/05/01 00:04:49 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.101.1-r1.ebuild,v 1.15 2007/06/29 12:37:29 flameeyes Exp $
 
-inherit flag-o-matic eutils multilib check-kernel
+inherit flag-o-matic eutils multilib linux-info
 
 NETJACK=netjack-0.12rc1
 
@@ -34,7 +34,7 @@ pkg_setup() {
 	fi
 
 	if use caps; then
-		if is_2_4_kernel; then
+		if kernel_is 2 4 ; then
 			elog "will build jackstart for 2.4 kernel"
 		else
 			elog "using compatibility symlink for jackstart"
@@ -123,7 +123,7 @@ src_compile() {
 		${myconf} || die "configure failed"
 	emake || die "compilation failed"
 
-	if use caps && is_2_4_kernel; then
+	if use caps && kernel_is 2 4 ; then
 		elog "Building jackstart for 2.4 kernel"
 		cd ${S}/jackd
 		emake jackstart || die "jackstart build failed."
@@ -140,7 +140,7 @@ src_install() {
 	make DESTDIR=${D} datadir=/usr/share/doc install || die
 
 	if use caps; then
-		if is_2_4_kernel; then
+		if kernel_is 2 4 ; then
 			cd ${S}/jackd
 			dobin jackstart
 		else
