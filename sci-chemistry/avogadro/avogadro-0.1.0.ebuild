@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.1.0.ebuild,v 1.1 2007/05/17 09:06:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.1.0.ebuild,v 1.2 2007/06/29 07:00:27 opfer Exp $
 
 inherit toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-util/cmake-2.4.3
