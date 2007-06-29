@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.16.2.ebuild,v 1.9 2007/01/21 21:42:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.18.3.ebuild,v 1.1 2007/06/29 17:17:23 leio Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://fileroller.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gnome"
 
 RDEPEND=">=dev-libs/glib-2.12
@@ -18,11 +18,8 @@ RDEPEND=">=dev-libs/glib-2.12
 	>=gnome-base/libgnomeui-2.6
 	>=gnome-base/gnome-vfs-2.10
 	>=gnome-base/libglade-2.4
-	>=gnome-base/libbonobo-2.6
-	>=gnome-base/libbonoboui-2.6
 	gnome? ( >=gnome-base/nautilus-2.10 )
 	>=gnome-base/gconf-2"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35
