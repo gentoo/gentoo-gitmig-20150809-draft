@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7418 2007/06/29 09:46:44 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7419 2007/06/29 10:50:06 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -137,11 +137,6 @@ app-emacs/ilisp-cvs
 # because some ebuilds there are using this.
 dev-java/odmg
 
-# Samuli Suominen <drac@gentoo.org> (06 Jun 2007)
-# Masked for removal in 30 days. Uncompatible with
-# current lineakd as per upstream page. Bug 181079.
-x11-misc/lineakconfig
-
 # Mart Raudsepp <leio@gentoo.org> (04 Jun 2007)
 # Obsolete Gnome-1.x component, bug 180808
 # Masked for removal in 30 days.
@@ -161,13 +156,6 @@ mail-client/muttng
 # release candidate
 ~app-text/poppler-0.5.9
 ~app-text/poppler-bindings-0.5.9
-
-# Samuli Suominen <drac@gentoo.org> (31 May 2007)
-# Masked, pending removal in 30 days for bug 178900.
-# Also, upstream is dead. As alternative, use any
-# preferred file manager from tree, there are plenty
-# of them.
-x11-misc/xfm
 
 # Roy Marples <uberlord@gentoo.org> (31 May 2007)
 # Masked, pending removal. Remove in 30 days
