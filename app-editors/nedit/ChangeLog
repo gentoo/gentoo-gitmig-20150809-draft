@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nedit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.43 2007/05/13 18:20:02 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.44 2007/06/29 16:59:25 opfer Exp $
+
+  29 Jun 2007; Christian Faulhammer <opfer@gentoo.org> nedit-5.5.ebuild:
+  remove virtual/x11 from DEPEND
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add herd
