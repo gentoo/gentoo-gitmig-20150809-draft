@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.9.ebuild,v 1.3 2007/06/29 18:38:32 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.9.ebuild,v 1.4 2007/06/29 19:25:17 jer Exp $
 
 inherit qt3 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.scribus.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~amd64 hppa ~ppc ~ppc64 sparc ~x86"
 IUSE="cairo"
 
 DEPEND="$(qt_min_version 3.3.4)
