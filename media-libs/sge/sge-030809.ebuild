@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/sge-030809.ebuild,v 1.8 2007/06/29 12:00:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/sge-030809.ebuild,v 1.9 2007/06/29 12:06:05 nyhm Exp $
 
 inherit eutils multilib
 
@@ -27,7 +27,7 @@ src_unpack() {
 		"${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${P}-freetype.patch \
 		"${FILESDIR}"/${P}-cmap.patch
-	sed -i "/\$(PREFIX)/s:lib:$(get_libdir):g" Makefile \
+	sed -i "s:\$(PREFIX)/lib:\$(PREFIX)/$(get_libdir):" Makefile \
 		|| die "sed failed"
 }
 
