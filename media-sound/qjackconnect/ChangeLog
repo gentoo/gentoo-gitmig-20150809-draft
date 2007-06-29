@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/qjackconnect
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/ChangeLog,v 1.18 2007/02/03 20:10:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/ChangeLog,v 1.19 2007/06/29 14:23:00 flameeyes Exp $
+
+  29 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  qjackconnect-0.0.3b-r1.ebuild:
+  Use emake, respect CXX settings and LDFLAGS, remove wrong dependency over
+  alsa-lib.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
