@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/sge-030809.ebuild,v 1.7 2007/05/15 17:49:03 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/sge-030809.ebuild,v 1.8 2007/06/29 12:00:11 nyhm Exp $
 
-inherit eutils
+inherit eutils multilib
 
 MY_P="sge${PV}"
 DESCRIPTION="Graphics extensions library for SDL"
@@ -27,6 +27,8 @@ src_unpack() {
 		"${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${P}-freetype.patch \
 		"${FILESDIR}"/${P}-cmap.patch
+	sed -i "/\$(PREFIX)/s:lib:$(get_libdir):g" Makefile \
+		|| die "sed failed"
 }
 
 src_compile() {
