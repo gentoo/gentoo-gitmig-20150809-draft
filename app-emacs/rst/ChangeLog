@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/rst
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.10 2007/06/27 15:32:56 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.11 2007/06/29 20:23:08 jer Exp $
+
+  29 Jun 2007; Jeroen Roovers <jer@gentoo.org> rst-0.4.ebuild:
+  Straight to stable for HPPA (bug #183312).
 
   27 Jun 2007; Lars Weiler <pylon@gentoo.org> rst-0.4.ebuild:
   Stable on ppc; bug #183312.
