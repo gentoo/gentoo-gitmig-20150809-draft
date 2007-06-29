@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.111 2007/06/08 06:23:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.112 2007/06/29 09:17:36 uberlord Exp $
+
+*openvpn-2.1_rc4-r1 (29 Jun 2007)
+
+  29 Jun 2007; Roy Marples <uberlord@gentoo.org> +files/openvpn-2.1.conf,
+  files/openvpn-2.1.init, +openvpn-2.1_rc4-r1.ebuild:
+  DETECT_CLIENT config directive now controls init script behaviour, #181000.
+  IPv6 support added, #183457 thanks to Marcel Pennewiß.
 
   08 Jun 2007; Joshua Kinard <kumba@gentoo.org> openvpn-2.0.7-r2.ebuild:
   Marked unstable on mips, per #181074.

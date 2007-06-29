@@ -75,7 +75,8 @@ start() {
 	# We mark the service as inactive and then start it.
 	# When we get an authenticated packet from the peer then we run our script
 	# which configures our DNS if any and marks us as up.
-	if grep -q "^[ \t]*remote[ \t].*" "${VPNCONF}" ; then
+	if [ "${DETECT_CLIENT:-yes}" = "yes" ] && \
+	grep -q "^[ \t]*remote[ \t].*" "${VPNCONF}" ; then
 		client=true
 		args="${args} --nobind --up-delay --up-restart"
 		args="${args} --up /etc/openvpn/up.sh"
