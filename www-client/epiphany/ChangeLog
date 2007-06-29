@@ -1,6 +1,15 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.112 2007/06/02 02:52:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.113 2007/06/29 14:10:11 leio Exp $
+
+*epiphany-2.18.2 (29 Jun 2007)
+
+  29 Jun 2007; Mart Raudsepp <leio@gentoo.org> -epiphany-2.16.2.ebuild,
+  -epiphany-2.18.0.ebuild, +epiphany-2.18.2.ebuild:
+  Version bump
+  - Middle clicking the Go button opens the URL in a new tab
+  - Recognize quicktime mime types as safe
+  - Avoid opening nautilus if downloads go on Desktop
 
   02 Jun 2007; Brent Baude <ranger@gentoo.org> epiphany-2.16.3.ebuild:
   Marking epiphany-2.16.3 ppc stable for bug #171107
