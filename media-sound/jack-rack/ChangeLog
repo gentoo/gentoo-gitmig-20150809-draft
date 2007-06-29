@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.23 2007/02/22 01:05:11 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.24 2007/06/29 14:40:27 flameeyes Exp $
+
+  29 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/jack-rack-1.4.5-asneeded.patch, jack-rack-1.4.5.ebuild:
+  Add patch to build with --as-needed; add error message if alsa-lib is built
+  without midi USE flag enabled; add pkgconfig build-time dependency and fix
+  dependencies for nls USE flag.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
