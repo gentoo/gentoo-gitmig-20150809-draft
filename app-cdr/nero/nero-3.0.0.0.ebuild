@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.0.0.ebuild,v 1.1 2007/06/29 13:40:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.0.0.ebuild,v 1.2 2007/06/29 14:16:13 drac Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -44,8 +44,8 @@ src_install() {
 	dosym /opt/${PN}/etc/${PN}/config /etc/${PN}/config
 
 	insinto /opt/${PN}
-	doins -r usr/lib
-	dosym /opt/nero/lib/nero/plug-ins /usr/lib/nero/plug-ins
+	doins -r usr/$(get_libdir)
+	dosym /opt/nero/$(get_libdir)/nero/plug-ins /usr/$(get_libdir)/nero/plug-ins
 
 	exeinto /opt/${PN}
 	doexe usr/bin/${PN}
@@ -57,7 +57,7 @@ src_install() {
 	dodoc usr/share/doc/${PN}/NEWS
 	use doc && dodoc usr/share/doc/${PN}/*.pdf
 
-	make_wrapper ${PN} ./${PN} /opt/${PN} /opt/${PN}/lib || die "make_wrapper failed."
+	make_wrapper ${PN} ./${PN} /opt/${PN} /opt/${PN}/$(get_libdir) || die "make_wrapper failed."
 }
 
 pkg_postinst() {
