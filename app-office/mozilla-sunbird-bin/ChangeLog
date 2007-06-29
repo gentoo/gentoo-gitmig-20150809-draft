@@ -1,6 +1,12 @@
 # ChangeLog for app-office/mozilla-sunbird-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.21 2007/06/08 13:53:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.22 2007/06/29 14:34:03 armin76 Exp $
+
+*mozilla-sunbird-bin-0.5 (29 Jun 2007)
+
+  29 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  +mozilla-sunbird-bin-0.5.ebuild:
+  Version bump, bug 183609
 
   08 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   mozilla-sunbird-bin-0.3.1.ebuild:
