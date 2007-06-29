@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-mount
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.35 2007/05/29 20:48:45 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.36 2007/06/29 23:57:33 tester Exp $
+
+  29 Jun 2007; Olivier Crête <tester@gentoo.org> gnome-mount-0.6.ebuild:
+  Stable on amd64 for bug #183674
 
   29 May 2007; Remi Cardona <remi@gentoo.org>
   +files/gnome-mount-0.6-include-locale-h.patch, gnome-mount-0.6.ebuild:
