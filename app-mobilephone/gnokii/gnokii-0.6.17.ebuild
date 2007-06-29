@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.17.ebuild,v 1.1 2007/06/27 18:00:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.17.ebuild,v 1.2 2007/06/29 06:12:11 mrness Exp $
 
 inherit eutils flag-o-matic linux-info
 
