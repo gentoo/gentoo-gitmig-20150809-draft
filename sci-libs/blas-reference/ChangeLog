@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.24 2007/06/25 17:41:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.25 2007/06/29 17:42:09 jer Exp $
+
+  29 Jun 2007; Jeroen Roovers <jer@gentoo.org>
+  blas-reference-19940131-r4.ebuild:
+  Marked ~hppa (bug #159002).
 
   25 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   blas-reference-19940131-r4.ebuild:
