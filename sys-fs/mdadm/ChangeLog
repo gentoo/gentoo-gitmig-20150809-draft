@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.76 2007/06/27 18:25:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.77 2007/06/29 18:15:03 opfer Exp $
+
+  29 Jun 2007; Christian Faulhammer <opfer@gentoo.org> mdadm-2.6.2.ebuild:
+  stable x86, bug 182993
 
   27 Jun 2007; Raúl Porcel <armin76@gentoo.org> mdadm-2.6.2.ebuild:
   alpha/ia64 stable wrt #182993
