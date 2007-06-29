@@ -1,10 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/make.defaults,v 1.15 2007/04/29 02:10:25 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/make.defaults,v 1.16 2007/06/29 12:33:38 phreak Exp $
 
 STAGE1_USE="hardened pic"
 USE="xorg urandom"
 INPUT_DEVICES="mouse keyboard"
-ALSA_CARDS=""
-ALSA_PCM_PLUGINS=""
-LCD_DEVICES=""
