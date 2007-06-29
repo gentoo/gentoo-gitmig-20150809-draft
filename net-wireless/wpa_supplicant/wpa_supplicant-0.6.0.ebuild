@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.0.ebuild,v 1.2 2007/06/19 07:54:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.0.ebuild,v 1.3 2007/06/29 07:47:07 uberlord Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils qt3 toolchain-funcs
 
 DESCRIPTION="IEEE 802.1X/WPA supplicant for secure wireless transfers"
 HOMEPAGE="http://hostap.epitest.fi/wpa_supplicant/"
@@ -151,8 +151,8 @@ src_compile() {
 		cd "${S}"/wpa_gui-qt4
 		emake || die "emake wpa_gui-qt4 failed"
 	elif use qt3 ; then
-		[[ -d ${QTDIR}/etc/settings ]] && addwrite "${QTDIR}"/etc/settings
-		/usr/qt/3/bin/qmake -o "${S}"/wpa_gui/Makefile "${S}"/wpa_gui/wpa_gui.pro
+		[[ -d "${QTDIR}"/etc/settings ]] && addwrite "${QTDIR}"/etc/settings
+		"${QTDIR}"/bin/qmake -o "${S}"/wpa_gui/Makefile "${S}"/wpa_gui/wpa_gui.pro
 		cd "${S}"/wpa_gui
 		emake || die "emake wpa_gui failed"
 	fi
