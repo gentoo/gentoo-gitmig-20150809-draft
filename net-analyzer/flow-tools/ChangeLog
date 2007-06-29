@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.32 2007/06/26 17:08:03 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.33 2007/06/29 12:40:14 angelos Exp $
+
+  29 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  flow-tools-0.68-r5.ebuild:
+  Stable on amd64 wrt bug #183050
 
   26 Jun 2007; Lars Weiler <pylon@gentoo.org> flow-tools-0.68-r5.ebuild:
   Stable on ppc; bug #183050.
