@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/abs-guide-4.3.ebuild,v 1.1 2007/06/16 21:08:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/abs-guide-5.0.ebuild,v 1.1 2007/06/30 14:03:34 dirtyepic Exp $
 
 DESCRIPTION="An advanced reference and a tutorial on bash shell scripting"
 SRC_URI="http://personal.riverusers.com/~thegrendel/${P}.tar.bz2"
