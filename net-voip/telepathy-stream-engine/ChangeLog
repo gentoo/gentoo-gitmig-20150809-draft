@@ -1,6 +1,12 @@
 # ChangeLog for net-voip/telepathy-stream-engine
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-stream-engine/ChangeLog,v 1.13 2007/04/30 22:49:20 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-stream-engine/ChangeLog,v 1.14 2007/06/30 17:42:15 peper Exp $
+
+  30 Jun 2007; Piotr Jaroszyński <peper@gentoo.org>
+  telepathy-stream-engine-0.3.20.ebuild,
+  telepathy-stream-engine-0.3.21.ebuild,
+  telepathy-stream-engine-0.3.23.ebuild:
+  Clean up dbus deps wrt bug #183696.
 
 *telepathy-stream-engine-0.3.23 (30 Apr 2007)
 
