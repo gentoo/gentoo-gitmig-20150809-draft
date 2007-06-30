@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.4 2007/06/01 17:11:18 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.5 2007/06/30 17:38:03 peper Exp $
+
+  30 Jun 2007; Piotr Jaroszyński <peper@gentoo.org>
+  telepathy-glib-0.5.10.ebuild, telepathy-glib-0.5.11.ebuild,
+  telepathy-glib-0.5.13.ebuild:
+  Clean up dbus deps wrt bug #183696.
 
 *telepathy-glib-0.5.13 (01 Jun 2007)
 

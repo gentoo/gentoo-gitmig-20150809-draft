@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.5.11.ebuild,v 1.1 2007/04/30 21:46:46 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.5.11.ebuild,v 1.2 2007/06/30 17:38:03 peper Exp $
 
 DESCRIPTION="GLib binding for the Telepathy D-Bus protocol."
 HOMEPAGE="http://telepathy.freedesktop.org"
@@ -12,8 +12,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND=">=dev-libs/glib-2.4
-	|| ( >=dev-libs/dbus-glib-0.72
-		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.61 ) )
+	>=dev-libs/dbus-glib-0.72
 	>=dev-lang/python-2.3
 	!<net-voip/telepathy-gabble-0.5.10"
 
