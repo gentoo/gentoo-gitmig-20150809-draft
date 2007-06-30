@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.1.7b.ebuild,v 1.1 2007/06/30 06:01:21 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.1.7b.ebuild,v 1.2 2007/06/30 13:27:02 hawking Exp $
+
+NEED_PYTHON=2.3
 
 inherit distutils
 
@@ -16,8 +18,6 @@ IUSE=""
 DEPEND=">=dev-python/clientform-0.2.7"
 RDEPEND="${DEPEND}"
 
-DOCS="0.1-changes.txt"
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -32,13 +32,10 @@ src_unpack() {
 	sed -i \
 		-e '/import coverage/d' \
 		test.py || die "sed in test.py failed"
-
-	# For some weird reason README.txt
-	# is just a copy of README.html
-	rm README.txt
 }
 
 src_install() {
+	DOCS="0.1-changes.txt"
 	# remove to prevent distutils_src_install from installing it
 	dohtml *.html
 	rm README.html*
@@ -47,6 +44,5 @@ src_install() {
 }
 
 src_test() {
-	PYTHONPATH=build/lib/ \
-	${python} test.py || die "tests failed"
+	PYTHONPATH=build/lib/ "${python}" test.py || die "tests failed"
 }
