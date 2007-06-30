@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tapioca-xmpp/tapioca-xmpp-0.3.9.ebuild,v 1.6 2006/12/03 10:45:11 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tapioca-xmpp/tapioca-xmpp-0.3.9.ebuild,v 1.7 2007/06/30 17:44:01 peper Exp $
 
 DESCRIPTION="Tapioca XMPP protocol"
 HOMEPAGE="http://tapioca-voip.sf.net"
@@ -14,8 +14,7 @@ IUSE=""
 DEPEND="net-im/tapiocad
 	net-libs/libjingle
 	>=dev-libs/glib-2
-	|| ( >=dev-libs/dbus-glib-0.71
-		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )"
+	>=dev-libs/dbus-glib-0.71"
 
 RDEPEND="${DEPEND}"
 
