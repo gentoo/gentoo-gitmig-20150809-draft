@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.0.0.ebuild,v 1.5 2007/06/29 14:48:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.0.0.ebuild,v 1.6 2007/06/30 07:55:18 drac Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -39,7 +39,7 @@ src_install() {
 
 	insinto /opt/${PN}
 	doins -r usr/$(get_libdir)
-	dosym /opt/nero/$(get_libdir)/nero/plug-ins /usr/$(get_libdir)/nero/plug-ins
+	dosym /opt/nero/$(get_libdir)/nero /usr/$(get_libdir)/nero
 
 	exeinto /opt/${PN}
 	doexe usr/bin/${PN}
