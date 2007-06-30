@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.40 2007/05/19 21:01:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.41 2007/06/30 18:43:11 armin76 Exp $
+
+  30 Jun 2007; Raúl Porcel <armin76@gentoo.org> netqmail-1.05-r8.ebuild:
+  alpha stable wrt #169591
 
   19 May 2007; Daniel Gryniewicz <dang@gentoo.org> netqmail-1.05-r8.ebuild:
   Marked stable on amd64 for bug #169591
