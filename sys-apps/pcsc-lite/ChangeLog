@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.46 2007/06/30 04:43:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.47 2007/06/30 11:28:26 alonbl Exp $
+
+  30 Jun 2007; Alon Bar-Lev <alonbl@gentoo.org> pcsc-lite-1.2.0.ebuild:
+  Remove alpha keyword, bug#133107
 
   30 Jun 2007; Joshua Kinard <kumba@gentoo.org> pcsc-lite-1.2.0.ebuild:
   Removed mips keyword, as we don't use smartcards.
