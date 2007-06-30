@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.17.ebuild,v 1.3 2007/06/17 10:51:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.17.ebuild,v 1.4 2007/06/30 22:07:01 vapier Exp $
 
 inherit toolchain-funcs
 
 MY_P=${PN/-/_}-${PV}
-DESCRIPTION="Intel IA32 microcode update utility"
+DESCRIPTION="Intel processor microcode update utility"
 HOMEPAGE="http://www.urbanmyth.org/microcode"
 SRC_URI="http://www.urbanmyth.org/microcode/${MY_P}.tar.gz"
 
