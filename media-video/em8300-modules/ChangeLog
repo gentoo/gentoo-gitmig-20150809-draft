@@ -1,6 +1,9 @@
 # ChangeLog for media-video/em8300-modules
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.39 2007/04/12 15:00:01 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.40 2007/06/30 08:13:21 drac Exp $
+
+  30 Jun 2007; Samuli Suominen <drac@gentoo.org> metadata.xml:
+  Remove myself from metadata.xml as I don't have this hardware anymore.
 
   12 Apr 2007; <welp@gentoo.org> em8300-modules-0.16.0-r1.ebuild:
   Stable on amd64 wrt bug 158144

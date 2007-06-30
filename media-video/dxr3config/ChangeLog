@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dxr3config
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/ChangeLog,v 1.3 2007/04/12 15:04:56 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/ChangeLog,v 1.4 2007/06/30 08:14:28 drac Exp $
+
+  30 Jun 2007; Samuli Suominen <drac@gentoo.org> metadata.xml:
+  Remove myself from metadata.xml as I don't have this hardware anymore.
 
   12 Apr 2007; <welp@gentoo.org> dxr3config-0.3.2.ebuild:
   Stable on amd64
