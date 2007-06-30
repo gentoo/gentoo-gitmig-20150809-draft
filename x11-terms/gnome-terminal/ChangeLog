@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.139 2007/03/27 21:36:30 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.140 2007/06/30 23:02:56 leio Exp $
+
+*gnome-terminal-2.18.1 (30 Jun 2007)
+
+  30 Jun 2007; Mart Raudsepp <leio@gentoo.org>
+  +gnome-terminal-2.18.1.ebuild:
+  Version bump
 
 *gnome-terminal-2.18.0 (27 Mar 2007)
 
