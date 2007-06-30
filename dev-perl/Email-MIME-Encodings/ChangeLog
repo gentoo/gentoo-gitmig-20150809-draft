@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-MIME-Encodings
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Encodings/ChangeLog,v 1.8 2007/06/21 16:02:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Encodings/ChangeLog,v 1.9 2007/06/30 15:42:47 armin76 Exp $
+
+  30 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  Email-MIME-Encodings-1.311.ebuild:
+  Add ~alpha wrt #165190
 
   21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
   Email-MIME-Encodings-1.311.ebuild:

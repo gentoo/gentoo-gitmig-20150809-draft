@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Return-Value/Return-Value-1.302.ebuild,v 1.7 2007/04/10 12:20:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Return-Value/Return-Value-1.302.ebuild,v 1.8 2007/06/30 15:35:19 armin76 Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 sparc ~x86"
 
 DEPEND="virtual/perl-Test-Simple
 	dev-lang/perl"

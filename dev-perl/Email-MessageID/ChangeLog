@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-MessageID
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MessageID/ChangeLog,v 1.8 2007/06/21 15:59:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MessageID/ChangeLog,v 1.9 2007/06/30 15:38:16 armin76 Exp $
+
+  30 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  Email-MessageID-1.35.1.ebuild:
+  Add ~alpha wrt #165190
 
   21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
   Email-MessageID-1.35.1.ebuild:
