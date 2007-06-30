@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.2.ebuild,v 1.1 2007/06/18 17:20:10 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.2.ebuild,v 1.2 2007/06/30 16:37:51 tester Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -68,32 +68,37 @@ S="${WORKDIR}/${MY_PV}"
 DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple"
 
 # List of plugins yet to be ported (will be removed at some point)
-#   app-accessibility/festival-gaim
-#   net-im/gaim-blogger
 #   net-im/gaim-bnet
-#   net-im/gaim-meanwhile (integrated in gaim)
 #   net-im/gaim-snpp (will soon be net-im/pidgin-snpp)
 #   x11-plugins/autoprofile
-#   x11-plugins/gaim-assistant
 #   x11-plugins/gaim-otr
-#   x11-plugins/gaimosd
 #   x11-plugins/gaim-xfire
-#   net-im/librvp
+#   x11-plugins/gaim-galago
+#   x11-themes/gaim-smileys (get liquidx to fix it)
+
+# Abandonned 
 #   x11-plugins/ignorance
 #   x11-plugins/bangexec
-#   x11-plugins/gaim-galago
+#   x11-plugins/gaim-assistant
+# Last release in 2004
+#   net-im/gaim-blogger
+#   x11-plugins/gaimosd
+# Last release in 2005
+#   app-accessibility/festival-gaim
+# Merged into something else
+#   net-im/gaim-meanwhile (integrated in gaim)
 #   x11-plugins/gaim-libnotify (integrated into pidgin)
 #   x11-plugins/gaim-slashexec (integrated into plugin pack)
-#   x11-themes/gaim-smileys
 
 # List of plugins
-#   x11-plugins/pidgin-extprefs
+#   net-im/librvp
 #   x11-plugins/gaim-rhythmbox
 #   x11-plugins/guifications
 #   x11-plugins/pidgin-encryption
+#   x11-plugins/pidgin-extprefs
+#   x11-plugins/pidgin-hotkeys
 #   x11-plugins/pidgin-latex
 #   x11-plugins/purple-plugin_pack
-#   x11-plugins/pidgin-hotkeys
 
 print_pidgin_warning() {
 	ewarn
@@ -235,7 +240,7 @@ src_compile() {
 	fi
 
 	if ! use ncurses && ! use gtk; then
-		myconf="${myconf} --enable-consoleui"
+		myconf="${myconf} --enable-consoleui --disable-gtkui"
 	else
 		myconf="${myconf} $(use_enable ncurses consoleui) $(use_enable gtk gtkui)"
 	fi
