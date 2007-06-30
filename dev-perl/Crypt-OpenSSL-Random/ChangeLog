@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-Random
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Random/ChangeLog,v 1.22 2007/06/25 17:01:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Random/ChangeLog,v 1.23 2007/06/30 01:45:17 kumba Exp $
+
+  30 Jun 2007; Joshua Kinard <kumba@gentoo.org>
+  Crypt-OpenSSL-Random-0.04.ebuild:
+  Stable on mips.
 
   25 Jun 2007; Michael Cummings <mcummings@gentoo.org>
   Crypt-OpenSSL-Random-0.04.ebuild:
