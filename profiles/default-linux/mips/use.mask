@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.92 2007/06/22 18:53:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.93 2007/06/30 04:45:49 kumba Exp $
 
 # 22 May 2007; Christian Heim <phreak@gentoo.org>
 # unmask ip28 and ip32r10k only on mips
@@ -291,8 +291,7 @@ x86
 x86-fbsd
 sparc-fbsd
 
-# disable until tested
-# bug 148402
+# We don't use smartcards, afaik
 pcsc-lite
 
 # Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
