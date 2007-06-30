@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28-r1.ebuild,v 1.11 2007/06/26 02:56:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28-r1.ebuild,v 1.12 2007/06/30 12:16:34 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -65,9 +65,16 @@ just_headers() {
 }
 
 uclibc_endian() {
-	printf "#include <endian.h>\n#if __BYTE_ORDER == __LITTLE_ENDIAN\nlittle\n#else\nbig\n#endif\n" \
-		| $(tc-getCPP ${CTARGET}) - \
-		| tail -n 1
+	# XXX: this wont work for a toolchain which is bi-endian, but we
+	#      dont have any such thing at the moment, so not a big deal
+	touch "${T}"/endian.s
+	$(tc-getAS) "${T}"/endian.s -o "${T}"/endian.o
+	case $(file "${T}"/endian.o) in
+		*" MSB "*) echo "big";;
+		*" LSB "*) echo "little";;
+		*)         echo "NFC";;
+	esac
+	rm -f "${T}"/endian.{s,o}
 }
 
 pkg_setup() {
