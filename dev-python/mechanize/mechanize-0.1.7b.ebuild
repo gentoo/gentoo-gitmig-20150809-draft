@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.1.7b.ebuild,v 1.2 2007/06/30 13:27:02 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.1.7b.ebuild,v 1.3 2007/06/30 13:35:27 lucass Exp $
 
 NEED_PYTHON=2.3
 
@@ -12,7 +12,7 @@ SRC_URI="http://wwwsearch.sourceforge.net/${PN}/src/${P}.tar.gz"
 
 LICENSE="|| ( BSD ZPL )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-python/clientform-0.2.7"

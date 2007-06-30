@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mechanize
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.2 2007/06/30 13:27:02 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.3 2007/06/30 13:35:27 lucass Exp $
+
+  30 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  mechanize-0.1.7b.ebuild:
+  Marked ~amd64.
 
   30 Jun 2007; Ali Polatel <hawking@gentoo.org> mechanize-0.1.7b.ebuild:
   Added NEED_PYTHON=2.3, moved DOCS to src_install, quotes and cosmetics.
