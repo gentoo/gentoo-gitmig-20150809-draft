@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ftjam/ftjam-2.5.3_rc2.ebuild,v 1.1 2007/06/10 19:05:20 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ftjam/ftjam-2.5.3_rc2.ebuild,v 1.2 2007/06/30 11:22:00 vapier Exp $
 
 inherit eutils versionator
 
@@ -16,18 +16,15 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="!dev-util/jam
-sys-devel/bison"
-
+	sys-devel/bison"
 RDEPEND="!dev-util/jam"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
+S=${WORKDIR}/${PN}-${MY_PV}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	epatch "${FILESDIR}"/ftjam-2.5.3-nostrip.patch
-
 }
 
 src_install() {
