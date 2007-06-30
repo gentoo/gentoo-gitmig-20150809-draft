@@ -1,51 +1,41 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/wmsystray-0.1.1.ebuild,v 1.9 2006/07/16 21:49:14 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/wmsystray-0.1.1.ebuild,v 1.10 2007/06/30 14:20:37 coldwind Exp $
 
 inherit eutils
-
-IUSE=""
 
 DESCRIPTION="Window Maker dock app that provides a system tray for GNOME/KDE applications"
 SRC_URI="http://kai.vm.bytemark.co.uk/~arashi/wmsystray/release/${P}.tar.bz2"
 HOMEPAGE="http://kai.vm.bytemark.co.uk/~arashi/wmsystray/"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXpm )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc ~sparc x86"
+IUSE=""
 
 src_unpack() {
-
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	# Let's honour Gentoo CFLAGS
-	epatch ${FILESDIR}/${PN}-cflags.patch
+	# Let's honour Gentoo CFLAGS and use correct install program
+	epatch "${FILESDIR}/${P}-Makefile.patch"
 
 	# Fix for #61704, cannot compile with gcc 3.4.1:
 	# it's a trivial change and does not affect other compilers...
-	epatch ${FILESDIR}/${PN}-gcc-3.4.patch
-
+	epatch "${FILESDIR}/${P}-gcc-3.4.patch"
 }
 
 src_compile() {
-
-	emake EXTRACFLAGS="${CFLAGS}" || die "Compilation failed"
-
+	emake EXTRACFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
+	einstall || die "einstall failed"
+	dodoc AUTHORS HACKING README || die
 
-	einstall || die "Installation failed"
-	dodoc AUTHORS HACKING README
-
-	insinto /usr/share/applications
-	doins ${FILESDIR}/${PN}.desktop
-
+	domenu "${FILESDIR}/${PN}.desktop"
 }

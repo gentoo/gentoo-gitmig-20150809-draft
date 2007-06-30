@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmsystray
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/ChangeLog,v 1.10 2007/02/21 23:50:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/ChangeLog,v 1.11 2007/06/30 14:20:37 coldwind Exp $
+
+  30 Jun 2007; Santiago M. Mola <coldwind@gentoo.org>
+  +files/wmsystray-0.1.1-Makefile.patch,
+  +files/wmsystray-0.1.1-gcc-3.4.patch, -files/wmsystray-gcc-3.4.patch,
+  -files/wmsystray-cflags.patch, wmsystray-0.1.1.ebuild:
+  Use correct install program (bug #176100), use domenu and clean *DEPEND
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
