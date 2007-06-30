@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-0.9.1.ebuild,v 1.8 2006/06/24 00:25:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-0.9.1.ebuild,v 1.9 2007/06/30 22:48:13 flameeyes Exp $
 
-inherit multilib
+inherit multilib qt3 libtool
 
 IUSE="qt3"
 
@@ -20,7 +20,7 @@ RDEPEND=">=media-libs/alsa-lib-1.0
 	>=media-libs/ladspa-sdk-1.12-r2
 	>=media-libs/libsndfile-1.0.11
 	>=media-libs/libsamplerate-0.1.1-r1
-	qt3? ( >=x11-libs/qt-3 )"
+	qt3? ( $(qt_min_version 3) )"
 DEPEND="${RDEPEND}
 	sys-apps/sed
 	dev-util/pkgconfig"
@@ -29,15 +29,16 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	sed -i -e "s:/lib:/$(get_libdir):" ${S}/dssi.pc.in || die
+	elibtoolize
 }
 
 src_compile() {
 	use qt3 || QTDIR=/WONT_BE_FOUND
-	econf || die "configure failed"
+	econf || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake -j1 DESTDIR="${D}" install || die "make install failed"
 	dodoc README doc/TODO doc/*.txt
 }

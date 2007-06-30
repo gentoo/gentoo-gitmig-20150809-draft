@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/dssi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.11 2007/02/22 01:47:29 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.12 2007/06/30 22:48:13 flameeyes Exp $
+
+  30 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> dssi-0.9.1.ebuild:
+  Add elibtoolize call, use emake -j1 for install, use proper dependency for qt3.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
