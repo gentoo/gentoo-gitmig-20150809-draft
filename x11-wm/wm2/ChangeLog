@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/wm2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/ChangeLog,v 1.9 2007/02/21 22:44:08 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/ChangeLog,v 1.10 2007/06/30 13:14:15 coldwind Exp $
+
+  30 Jun 2007; Santiago M. Mola <coldwind@gentoo.org>
+  files/wm2-4-gentoo.patch, wm2-4.ebuild:
+  Fixed build on amd64. Thanks to angelos and vapier. bug #153575
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
