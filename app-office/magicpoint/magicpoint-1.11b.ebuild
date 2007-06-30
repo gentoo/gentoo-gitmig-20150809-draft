@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.13 2007/01/25 05:23:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.14 2007/06/30 08:31:21 ulm Exp $
 
 inherit elisp-common eutils fixheadtails
 
@@ -42,14 +42,6 @@ RDEPEND="${MY_DEPEND}
 
 SITELISP=/usr/share/emacs/site-lisp
 SITEFILE=50mgp-mode-gentoo.el
-
-has_emacs() {
-	if has_version 'virtual/emacs' ; then
-		true
-	else
-		false
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -116,7 +108,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	has_emacs && elisp-site-regen
+	use emacs && elisp-site-regen
 	elog
 	elog "If you enabled xft2 support (default) you may specify xfont directive by"
 	elog "font name and font registry."
@@ -126,5 +118,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	has_emacs && elisp-site-regen
+	use emacs && elisp-site-regen
 }

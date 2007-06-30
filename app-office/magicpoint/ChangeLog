@@ -1,6 +1,9 @@
 # ChangeLog for app-office/magicpoint
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.22 2007/01/25 05:23:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.23 2007/06/30 08:31:21 ulm Exp $
+
+  30 Jun 2007; Ulrich Mueller <ulm@gentoo.org> magicpoint-1.11b.ebuild:
+  Fix conditional for calling elisp-site-regen, bug #182639.
 
   25 Jan 2007; Marius Mauch <genone@gentoo.org> magicpoint-1.11b.ebuild:
   Replacing einfo with elog
