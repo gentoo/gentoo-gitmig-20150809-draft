@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/qmail-ldap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.21 2007/06/18 08:33:32 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.22 2007/06/30 01:27:10 mr_bones_ Exp $
+
+  30 Jun 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  qmail-ldap-1.03-r7.ebuild:
+  add controldb to IUSE
 
 *qmail-ldap-1.03-r7 (18 Jun 2007)
 

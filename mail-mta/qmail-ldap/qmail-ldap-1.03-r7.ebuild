@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r7.ebuild,v 1.1 2007/06/18 08:33:32 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r7.ebuild,v 1.2 2007/06/30 01:27:10 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -25,7 +25,7 @@ SRC_URI="
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="cluster debug gencertdaily highvolume mailwrapper qmail-spp rfc2307 rfc822 ssl zlib"
+IUSE="cluster controldb debug gencertdaily highvolume mailwrapper qmail-spp rfc2307 rfc822 ssl zlib"
 RESTRICT="test"
 
 DEPEND="
@@ -59,7 +59,6 @@ if use gencertdaily; then
 else
 	CRON_FOLDER=cron.hourly
 fi
-
 
 src_unpack() {
 	unpack qmail-${PV}.tar.gz
