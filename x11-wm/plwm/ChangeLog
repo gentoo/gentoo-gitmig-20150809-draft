@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/plwm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.8 2007/02/22 05:58:11 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.9 2007/06/30 09:41:01 pylon Exp $
+
+  30 Jun 2007; Lars Weiler <pylon@gentoo.org> plwm-2.5-r1.ebuild:
+  Stable on ppc; bug #183656.
 
   22 Feb 2007; David Shakaryan <omp@gentoo.org> plwm-2.5.ebuild:
   Remove redundant src_compile.
