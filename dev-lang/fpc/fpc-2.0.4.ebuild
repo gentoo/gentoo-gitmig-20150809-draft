@@ -1,8 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.4.ebuild,v 1.5 2007/06/20 22:01:26 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.4.ebuild,v 1.6 2007/06/30 09:23:04 truedfx Exp $
 
 inherit eutils
+
+# bug #183604
+RESTRICT="strip"
 
 PV_BIN="2.0.4"
 S="${WORKDIR}/fpcbuild_${PV}_exp/fpcsrc"
@@ -22,8 +25,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc source"
 
 DEPEND="!dev-lang/fpc-bin
-	!dev-lang/fpc-source
-	!<sys-apps/findutils-4.3.0"
+	!dev-lang/fpc-source"
 #	doc? ( virtual/tetex )
 
 src_unpack() {
@@ -39,9 +41,6 @@ src_unpack() {
 
 	tar -xf binary.${FPC_ARCH}-linux.tar || die "Unpacking binary.${FPC_ARCH}-linux.tar failed!"
 	tar -xzf base.${FPC_ARCH}-linux.tar.gz || die "Unpacking base.${FPC_ARCH}-linux.tar.gz failed!"
-
-	# Don't strip
-	find "${S}" -name Makefile -exec sed -i -e 's/ -Xs / /g' {} + || die
 }
 
 set_pp() {
