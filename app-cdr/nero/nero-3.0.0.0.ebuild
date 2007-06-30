@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.0.0.ebuild,v 1.6 2007/06/30 07:55:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.0.0.ebuild,v 1.7 2007/06/30 08:59:58 drac Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/libX11
 	>=x11-libs/gtk+-2"
 DEPEND=""
 
-RESTRICT="strip nomirror test"
+RESTRICT="strip mirror test"
 
 # Poor attempt to shut up QA notices for binary package.
 QA_TEXTRELS="opt/nero/lib/nero/plug-ins/libOggVorbis.so
