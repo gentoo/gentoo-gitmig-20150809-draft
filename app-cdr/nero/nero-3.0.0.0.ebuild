@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.0.0.ebuild,v 1.8 2007/06/30 09:11:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.0.0.ebuild,v 1.9 2007/06/30 17:42:04 drac Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -26,7 +26,8 @@ QA_TEXTRELS="opt/nero/$(get_libdir)/nero/plug-ins/libOggVorbis.so
 	opt/nero/$(get_libdir)/nero/plug-ins/libMP3.so
 	opt/nero/$(get_libdir)/nero/plug-ins/libDefConvertor.so
 	opt/nero/$(get_libdir)/nero/plug-ins/libFLAC.so"
-QA_EXECSTACK="opt/nero/$(get_libdir)/nero/plug-ins/libFLAC.so"
+QA_EXECSTACK="opt/nero/$(get_libdir)/nero/plug-ins/libFLAC.so
+	opt/nero/$(get_libdir)/nero/plug-ins/libMP3.so"
 
 S="${WORKDIR}"
 
