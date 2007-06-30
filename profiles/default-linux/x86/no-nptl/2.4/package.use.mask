@@ -1,7 +1,11 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.use.mask,v 1.1 2007/04/29 15:06:06 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.use.mask,v 1.2 2007/06/30 02:26:12 mr_bones_ Exp $
 
 # This file requires >=portage-2.1.1
 
 # Duncan Coutts <dcoutts@gentoo.org> (29 Apr 2007)
 # gtk2hs optionally deps on librsvg which is masked in this profile
 dev-haskell/gtk2hs gnome
+
+# Michael Sterrett <mr_bones_@gentoo.org> (29 Jun 2007)
+# needs dev-python/pygobject for test which is masked
+>dev-python/dbus-python-0.71 test
