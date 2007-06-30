@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/volume
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/ChangeLog,v 1.9 2007/01/30 22:12:39 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/ChangeLog,v 1.10 2007/06/30 03:09:46 lack Exp $
+
+  30 Jun 2007; Jim Ramsay <lack@gentoo.org> volume-009-r1.ebuild:
+  Adding ~amd64 keyword
 
 *volume-009-r1 (30 Jan 2007)
 
