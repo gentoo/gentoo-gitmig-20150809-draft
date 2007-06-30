@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.86 2007/05/11 13:31:28 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.87 2007/06/30 17:14:25 markusle Exp $
+
+*R-2.5.1 (30 Jun 2007)
+
+  30 Jun 2007; Markus Dittrich <markusle@gentoo.org> +R-2.5.1.ebuild:
+  Version bump.
 
   11 May 2007; Markus Dittrich <markusle@gentoo.org> R-2.5.0.ebuild:
   Added gd useflag to allow users to install the GDD module (this
