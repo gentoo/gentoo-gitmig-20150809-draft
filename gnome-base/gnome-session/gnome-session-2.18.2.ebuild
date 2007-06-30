@@ -1,11 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.16.1.ebuild,v 1.11 2007/01/14 02:30:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.18.2.ebuild,v 1.1 2007/06/30 17:45:38 leio Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="1.9"
-
-inherit autotools eutils gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Gnome session manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -14,11 +11,13 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="branding esd ipv6 tcpd"
 
 RDEPEND=">=dev-libs/glib-2.6
 		 >=x11-libs/gtk+-2.3.1
+		 x11-libs/libXau
+		 x11-apps/xdpyinfo
 		 >=gnome-base/libgnomeui-2.2
 		  =gnome-base/gnome-desktop-2*
 		 >=gnome-base/control-center-2.15.4
@@ -36,7 +35,6 @@ DEPEND="${RDEPEND}
 		>=sys-devel/gettext-0.10.40
 		>=dev-util/pkgconfig-0.17
 		>=dev-util/intltool-0.35
-		gnome-base/gnome-common
 		!gnome-base/gnome-core"
 
 # gnome-base/gnome-core overwrite /usr/bin/gnome-session
@@ -51,15 +49,10 @@ src_unpack() {
 	gnome2_src_unpack
 
 	# Patch for Gentoo Branding (bug #42687)
-	use branding && epatch ${FILESDIR}/${PN}-2.10.0-schema_defaults.patch
+	use branding && epatch ${FILESDIR}/${PN}-2.17.90.1-gentoo-branding.patch
 
-	# Patch for optionalizing tcp-wrappers
-	epatch ${FILESDIR}/${PN}-2.12.0-optional-tcp-wrappers.patch
-
-	# Implement switch to enable/disable esound support. See bug #6920.
-	epatch ${FILESDIR}/${PN}-2.10.0-esd_switch.patch
-
-	eautoreconf
+	# Get rid of random asserts in tons of programs due to development versions
+	epatch ${FILESDIR}/${PN}-2.17.90-no-asserts.patch
 }
 
 src_install() {
