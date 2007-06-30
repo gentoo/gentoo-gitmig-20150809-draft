@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21-r1.ebuild,v 1.6 2007/05/03 18:36:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21-r1.ebuild,v 1.7 2007/06/30 17:40:01 armin76 Exp $
 
 inherit eutils kde-functions
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 hppa ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 hppa ppc ~sparc x86"
 
 RDEPEND="${DEPEND}
 	xinerama? ( || ( x11-libs/libXinerama <virtual/x11-7 ) )"
