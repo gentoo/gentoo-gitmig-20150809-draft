@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.51 2007/04/25 13:54:57 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.52 2007/06/30 07:42:01 aross Exp $
+
+  30 Jun 2007; Andrew Ross <aross@gentoo.org> metadata.xml,
+  mercurial-0.9.3-r1.ebuild:
+  Fix the conditional calling of elisp-site-regen in pkg_postrm() (bug #182639).
+  Remove agriffis@gentoo.org from metadata.xml (retired, bug #182294).
 
   25 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org>
   mercurial-0.9.3-r1.ebuild:

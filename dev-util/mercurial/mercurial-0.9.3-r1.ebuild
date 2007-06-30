@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.9.3-r1.ebuild,v 1.7 2007/04/25 13:54:57 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.9.3-r1.ebuild,v 1.8 2007/06/30 07:42:01 aross Exp $
 
 inherit bash-completion distutils elisp-common flag-o-matic
 
@@ -67,7 +67,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	distutils_pkg_postrm
-	# regenerate site-gentoo if we are merged USE=emacs and unmerged
-	# USE=-emacs
-	has_version virtual/emacs && elisp-site-regen
+	use emacs && elisp-site-regen
 }
