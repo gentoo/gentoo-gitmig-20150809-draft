@@ -1,16 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0_rc3-r2.ebuild,v 1.3 2007/06/30 04:36:42 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0_rc3_p4949.ebuild,v 1.1 2007/06/30 04:36:42 lack Exp $
 
 inherit eutils
 
 IUSE="nls xinerama truetype kde gnome imlib disableslit disabletoolbar"
 
 DESCRIPTION="Fluxbox is an X11 window manager featuring tabs and an iconbar"
-MY_P="fluxbox-1.0rc3"
+MY_P="fluxbox-1.0rc3-svn-4937"
 
 S="${WORKDIR}/${MY_P}"
-SRC_URI="mirror://sourceforge/fluxbox/${MY_P}.tar.bz2"
+#SRC_URI="mirror://sourceforge/fluxbox/${MY_P}.tar.bz2"
+SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.fluxbox.org"
 
 # Please note that USE="kde gnome" simply adds support for the respective
@@ -59,25 +60,18 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}/${PV}/svn_up_from_4937.patch" || die "Patch failed"
+
 	# We need to be able to include directories rather than just plain
 	# files in menu [include] items. This patch will allow us to do clever
 	# things with style ebuilds.
-	epatch "${FILESDIR}/1.0_rc3/${PN}-1.0_rc3-our-styles-go-over-here.patch" ||	die "Patch failed"
-
-	# Bug 177114 - Segfault for certain locales
-	epatch "${FILESDIR}/1.0_rc3/${PN}-1.0_rc3-textproperties_segfault.patch" ||	die "Patch failed"
-
-	# Some "bottom" windows, notably ROX Filer's panel, cause a flicker sometimes
-	epatch "${FILESDIR}/1.0_rc3/${PN}-1.0_rc3-flicker.patch" ||	die "Patch failed"
-
-	# Bug 176476 - Missing icons from fluxbox-generate_menu
-	epatch "${FILESDIR}/1.0_rc3/fluxbox-1.0_rc3-generate_menu_icon_fix.patch" ||	die "Patch failed"
+	epatch "${FILESDIR}/${PV}/gentoo_style_location.patch" ||	die "Patch failed"
 
 	# Add in the Gentoo -r number to fluxbox -version output.
 	if [[ "${PR}" == "r0" ]] ; then
-		suffix="gentoo"
+		suffix="svn-4949-gentoo"
 	else
-		suffix="gentoo-${PR}"
+		suffix="svn-4949-gentoo-${PR}"
 	fi
 	sed -i \
 		-e "s~\(__fluxbox_version .@VERSION@\)~\1-${suffix}~" \
@@ -119,7 +113,7 @@ src_compile() {
 	ebegin "Creating a menu file (may take a while)"
 	mkdir -p "${T}/home/.fluxbox" || die "mkdir home failed"
 	MENUFILENAME="${S}/data/menu" MENUTITLE="Fluxbox ${PV}" \
-		CHECKINIT="no. go away." HOME="${T}/home" sh -x \
+		CHECKINIT="no. go away." HOME="${T}/home" \
 		"${S}/util/fluxbox-generate_menu" -is -ds \
 		|| die "menu generation failed"
 	eend $?
@@ -146,30 +140,5 @@ src_install() {
 	doins "${FILESDIR}/styles-menu-fluxbox" || die
 	doins "${FILESDIR}/styles-menu-commonbox" || die
 	doins "${FILESDIR}/styles-menu-user" || die
-}
-
-pkg_postinst() {
-	einfo "As of fluxbox 0.9.10-r3, we are using an improved layout for"
-	einfo "styles to avoid problems with huge menus. Use the following"
-	einfo "in the menu for your menu styles section:"
-	echo
-	einfo "    [submenu] (Styles) {Select a Style}"
-	einfo "        [include] (/usr/share/fluxbox/menu.d/styles/)"
-	einfo "    [end]"
-	echo
-	einfo "If you use fluxbox-generate_menu or the default global fluxbox"
-	einfo "menu file, this will already be present."
-	echo
-	einfo "Note that menumaker and similar utilities do *not* support"
-	einfo "this out of the box."
-	echo
-	einfo "As of fluxbox 0.9.14_pre1, Fluxbox uses XFT for font rendering. If"
-	einfo "you experience font problems, try tinkering with your theme files."
-	einfo "You can check the validity of a font name using:"
-	echo
-	einfo "    XFT_DEBUG=1 xfd -fa 'whatever-12:bold'"
-	echo
-	einfo "The slow startup issues in previous versions should now be fixed;"
-	einfo "if you still encounter problems, please report bugs upstream."
 }
 
