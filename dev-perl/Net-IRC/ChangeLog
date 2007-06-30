@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-IRC
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.26 2007/01/19 14:52:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.27 2007/06/30 01:29:25 kumba Exp $
+
+  30 Jun 2007; Joshua Kinard <kumba@gentoo.org> Net-IRC-0.75.ebuild:
+  Marked unstable on mips.
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org> -Net-IRC-0.74.ebuild,
   Net-IRC-0.75.ebuild:
