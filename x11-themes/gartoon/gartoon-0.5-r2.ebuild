@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/gartoon-0.5-r2.ebuild,v 1.3 2007/05/05 02:43:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/gartoon-0.5-r2.ebuild,v 1.4 2007/06/30 09:29:50 drac Exp $
 
 DESCRIPTION="Gartoon SVG icon theme"
 SRC_URI="http://zeus.qballcow.nl/icon/paket/${P}.tar.gz"
@@ -11,7 +11,7 @@ IUSE=""
 KEYWORDS="amd64 ~ppc sparc ~x86"
 SLOT="0"
 
-RESTRICT="nostrip"
+RESTRICT="binchecks strip"
 
 S="${WORKDIR}/${PN}"
 MY_DEST="/usr/share/icons/${PN}"

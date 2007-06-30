@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gartoon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/ChangeLog,v 1.11 2007/05/05 02:43:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gartoon/ChangeLog,v 1.12 2007/06/30 09:29:50 drac Exp $
+
+  30 Jun 2007; Samuli Suominen <drac@gentoo.org> gartoon-0.5-r2.ebuild:
+  Fix RESTRICT nostrip to strip.
 
   05 May 2007; Steve Dibb <beandog@gentoo.org> gartoon-0.5-r2.ebuild:
   amd64 stable
