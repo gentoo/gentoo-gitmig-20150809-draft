@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-0.7.3.ebuild,v 1.1 2007/06/30 21:41:12 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-0.7.3.ebuild,v 1.2 2007/06/30 21:42:38 hawking Exp $
 
 NEED_PYTHON=2.4
 
-inherit distutils eutils
+inherit distutils
 
 MY_PN=Beaker
 MY_P=${MY_PN}-${PV}
