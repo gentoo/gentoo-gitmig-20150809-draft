@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.1 2007/03/06 14:45:58 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.2 2007/06/30 10:34:49 drizzt Exp $
+
+*openjpeg-1.2 (30 Jun 2007)
+
+  30 Jun 2007; Timothy Redaelli <drizzt@gentoo.org>
+  +files/openjpeg-1.2-Makefile.patch, +openjpeg-1.2.ebuild:
+  Version bump.
+  Thanks to Matsuu Takuto for reporting wrt bug #183698.
 
 *openjpeg-1.1.1 (06 Mar 2007)
 
