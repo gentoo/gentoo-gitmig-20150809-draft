@@ -7,6 +7,11 @@
 	<name>Wolfram Schlich</name>
 	<description>Primary maintainer</description>
 </maintainer>
+<maintainer>
+	<email>drac@gentoo.org</email>
+	<name>Samuli Suominen</name>
+	<description>Secondary maintainer</description>
+</maintainer>
 <longdescription>
 NeroLINUX is a comprehensive, yet flexible solution for CD/DVD burning.
 </longdescription>
