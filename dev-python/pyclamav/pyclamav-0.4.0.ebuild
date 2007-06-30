@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/pyclamav-0.4.0.ebuild,v 1.1 2007/02/17 19:55:25 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/pyclamav-0.4.0.ebuild,v 1.2 2007/06/30 19:56:15 lucass Exp $
 
 NEED_PYTHON=2.2
 
@@ -18,4 +18,10 @@ IUSE=""
 src_install() {
 	distutils_src_install
 	insinto /usr/share/doc/${PF} && doins example.py
+}
+
+pkg_postinst() {
+	elog "Due to removal of cl_scanbuff in libclamav, pyclamav.scanthis()"
+	elog "has been removed in this release. Authors strongly encourage to use"
+	elog "pyClamd (http://xael.org/norman/python/pyclamd)."
 }
