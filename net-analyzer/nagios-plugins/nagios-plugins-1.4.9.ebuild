@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.9.ebuild,v 1.1 2007/06/04 18:37:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.9.ebuild,v 1.2 2007/06/30 16:36:32 dertobi123 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -106,11 +106,11 @@ src_install() {
 	dodir /usr/nagios/libexec/
 	mv ${S}/contrib ${D}/usr/nagios/libexec/contrib
 
-	chown -R nagios:nagios ${D}/usr/nagios/libexec || die "Failed Chown of ${D}usr/nagios/libexec"
+	chown root:nagios ${D}/usr/nagios || die "Failed Chown of ${D}usr/nagios"
+	chown -R root:nagios ${D}/usr/nagios/libexec || die "Failed Chown of ${D}usr/nagios/libexec"
 
 	chmod -R o-rwx ${D}/usr/nagios/libexec || "Failed Chmod of ${D}usr/nagios/libexec"
 
-	chown root:nagios ${D}/usr/nagios/libexec/check_icmp || "Failed Chown of ${D}/usr/nagios/libexec/check_icmp"
 	chmod 04710 ${D}/usr/nagios/libexec/check_icmp || "Failed Chmod of ${D}usr/nagios/libexec/check_icmp"
 }
 

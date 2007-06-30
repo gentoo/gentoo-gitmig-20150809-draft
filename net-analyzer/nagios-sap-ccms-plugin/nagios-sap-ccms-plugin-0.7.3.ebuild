@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/nagios-sap-ccms-plugin-0.7.3.ebuild,v 1.3 2007/05/14 19:32:32 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/nagios-sap-ccms-plugin-0.7.3.ebuild,v 1.4 2007/06/30 16:39:48 dertobi123 Exp $
 
 MY_P="sap-ccms-plugin-${PV}"
 
@@ -33,6 +33,8 @@ src_install() {
 	do
 		doexe ${file}
 	done
+
+	chown -R root:nagios ${D}/usr/nagios/libexec || die "Failed Chown of ${D}usr/nagios/libexec"
 
 	dolib.so sap_moni.so
 	cd ${S}/config

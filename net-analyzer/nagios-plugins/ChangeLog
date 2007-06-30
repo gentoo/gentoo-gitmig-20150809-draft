@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.68 2007/06/30 15:33:18 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.69 2007/06/30 16:36:32 dertobi123 Exp $
+
+  30 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  nagios-plugins-1.4.8-r1.ebuild, nagios-plugins-1.4.9.ebuild:
+  Fix ownership of /usr/nagios/libexec for bug #154293
 
   30 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   -files/nagios-plugins-1.4-autoconf-fix.patch, -files/check_swap.c.patch,
