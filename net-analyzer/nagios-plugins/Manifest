@@ -1,14 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX check_swap.c.patch 2212 RMD160 ef5e3c1af55ec0b3acb31ec75c530664ee84e428 SHA1 1e74bf575a8c70943f6d8b73089b91258121a1a0 SHA256 2409f9dfe74a4b527b4c3f4c47c4cd6c40361f64104f420e3893402b731ab785
-MD5 c8c25561d4871462ea03dc0490ced91b files/check_swap.c.patch 2212
-RMD160 ef5e3c1af55ec0b3acb31ec75c530664ee84e428 files/check_swap.c.patch 2212
-SHA256 2409f9dfe74a4b527b4c3f4c47c4cd6c40361f64104f420e3893402b731ab785 files/check_swap.c.patch 2212
-AUX nagios-plugins-1.4-autoconf-fix.patch 375 RMD160 1efc5680a1528ab2e8dcb53dac54ce7fbb1e6817 SHA1 6a8567c6f2891c75901d56c6d752779410c9ef92 SHA256 953cb9b89dcf3119a58f1c8f0cdbd23a6cc8125629629c903a6701c62423fdec
-MD5 913ba522e807f771d6bf7418191fe60a files/nagios-plugins-1.4-autoconf-fix.patch 375
-RMD160 1efc5680a1528ab2e8dcb53dac54ce7fbb1e6817 files/nagios-plugins-1.4-autoconf-fix.patch 375
-SHA256 953cb9b89dcf3119a58f1c8f0cdbd23a6cc8125629629c903a6701c62423fdec files/nagios-plugins-1.4-autoconf-fix.patch 375
 AUX nagios-plugins-1.4-contrib.patch 1581 RMD160 8f643aa021d228b79479d8bede9d86bbaff2d82b SHA1 0c9a8e7f593af4766646c6ec53a3a67cb62dbdb9 SHA256 bcf878cb13d8a4671263da25d0e7a0965da80dca92afe24da03780807b646a18
 MD5 95c74832c7812b19353d002c28abff72 files/nagios-plugins-1.4-contrib.patch 1581
 RMD160 8f643aa021d228b79479d8bede9d86bbaff2d82b files/nagios-plugins-1.4-contrib.patch 1581
@@ -21,22 +10,8 @@ AUX nagios-plugins-1.4.8-mysql.patch 588 RMD160 79282c1f6e988ec1ff8e34f356277425
 MD5 4763f9482afd9e2bbf0e8fd8589d7d21 files/nagios-plugins-1.4.8-mysql.patch 588
 RMD160 79282c1f6e988ec1ff8e34f356277425fdeb85f6 files/nagios-plugins-1.4.8-mysql.patch 588
 SHA256 ba6940889d5352b28cf40180975f262d2db84014e73ca3b425a19fd93f295539 files/nagios-plugins-1.4.8-mysql.patch 588
-AUX nagios-plugins-noradius.patch 2661 RMD160 6b5cd77be1503721d512a0c67c182e98e3d788cf SHA1 1ed08b006a6073d2ec9794548cb4abdb5a59dba7 SHA256 91172235c0389e52093bee548771228bc14ab95b81d95f4d0d6ac55ea54fa006
-MD5 ee71da291efd7427bd9786591a98df34 files/nagios-plugins-noradius.patch 2661
-RMD160 6b5cd77be1503721d512a0c67c182e98e3d788cf files/nagios-plugins-noradius.patch 2661
-SHA256 91172235c0389e52093bee548771228bc14ab95b81d95f4d0d6ac55ea54fa006 files/nagios-plugins-noradius.patch 2661
-DIST nagios-plugins-1.3.1.tar.gz 532516 RMD160 356308fa8354ada43e7ef492fbd580dff7b7b398 SHA1 dccbb84473533040830ad574e9eaa76c108f52a2 SHA256 bb6d00fff033070ef5e790da63f17bf91c667e47b5da6f00f17f4473e86f5e67
-DIST nagios-plugins-1.4.2.tar.gz 971447 RMD160 93d747bb445e4e59cdb72ef210feb052b7855cac SHA1 d12238c75c0bbb0c7cb8e81585effe5375b9ced4 SHA256 a329b3e1c7daf79dc002eacc44af9d4706555342b7d20227cc8eb3139767e652
 DIST nagios-plugins-1.4.8.tar.gz 1356563 RMD160 28754b5e09ef0617530fdc6f54c62f5f94c0bd03 SHA1 24446531e4f9647b0a633f1782ee34031d85fd1c SHA256 ce59972199049e587f2ee078888beb3824a6612d75a8efc9feaafe64d6ee83ef
 DIST nagios-plugins-1.4.9.tar.gz 1370263 RMD160 fdbe8cf1fc2ec6886b03a41542e1eda26d220186 SHA1 df726022c3835f80c25d5efcdbb11d0aae53e15a SHA256 93cf5dadfb092d7c4d600a713bbef75d37141edb4d18ac3bc3c0d1c09f4b7fe2
-EBUILD nagios-plugins-1.3.1-r1.ebuild 3248 RMD160 7ef6959e5bfafc891f3e1071b533b7ad09f26a58 SHA1 3b76f781336cfdbdd6dcf87eb792c5ee383c6d68 SHA256 1fa9dbf64b961a98868f487beb4a99c66d23d37c346a33813c6342078be757cf
-MD5 1d399feaaf0ca34bbc1346249892dbbc nagios-plugins-1.3.1-r1.ebuild 3248
-RMD160 7ef6959e5bfafc891f3e1071b533b7ad09f26a58 nagios-plugins-1.3.1-r1.ebuild 3248
-SHA256 1fa9dbf64b961a98868f487beb4a99c66d23d37c346a33813c6342078be757cf nagios-plugins-1.3.1-r1.ebuild 3248
-EBUILD nagios-plugins-1.4.2.ebuild 3429 RMD160 087d0c79cb5298e0c3752b1d0be9f4e891c4e7c5 SHA1 dfcc998287b8ff09f296318659e5398bd9a48130 SHA256 94ebe7b0f8dbb046eae07ce488701f10dd7b736d0958fa452f3d171e3f5ea7bb
-MD5 a92d1d76e5c10463ea234814b2e7515d nagios-plugins-1.4.2.ebuild 3429
-RMD160 087d0c79cb5298e0c3752b1d0be9f4e891c4e7c5 nagios-plugins-1.4.2.ebuild 3429
-SHA256 94ebe7b0f8dbb046eae07ce488701f10dd7b736d0958fa452f3d171e3f5ea7bb nagios-plugins-1.4.2.ebuild 3429
 EBUILD nagios-plugins-1.4.8-r1.ebuild 3691 RMD160 3059f5dc2ad8c1e96508ce5e8501a7ecf161bb26 SHA1 d2df831f5a388d9c72e0bdd304509fe9654fbd68 SHA256 acc255519d78fec023bd058492dc1408fc4b7cf3000f7a4d2351eedc415309ac
 MD5 cdeefeb0b0e2fff16a2238f9c9b36a6a nagios-plugins-1.4.8-r1.ebuild 3691
 RMD160 3059f5dc2ad8c1e96508ce5e8501a7ecf161bb26 nagios-plugins-1.4.8-r1.ebuild 3691
@@ -45,30 +20,17 @@ EBUILD nagios-plugins-1.4.9.ebuild 3660 RMD160 3d370199a1a7b24582d1a1bfb9448bce4
 MD5 f0602e5c0d5cbcdbbb0f6fa6d49bbb8e nagios-plugins-1.4.9.ebuild 3660
 RMD160 3d370199a1a7b24582d1a1bfb9448bce49b5e80a nagios-plugins-1.4.9.ebuild 3660
 SHA256 760f8e471e5683680b094821c5c01b83c886d78ddbe3b25e558c6cd6a03b022d nagios-plugins-1.4.9.ebuild 3660
-MISC ChangeLog 11851 RMD160 b29f40f2acb63d933451ca620a571c0b5395c845 SHA1 2e82cf8a30fc98617642c3a4a42f16b8003a4242 SHA256 f80d21ef44cb51df675cf3084a158ee4ac37d1ea1cf780d5f6e575749e8867b5
-MD5 07822d8ac171c0a3b62d4fa2f3d51b17 ChangeLog 11851
-RMD160 b29f40f2acb63d933451ca620a571c0b5395c845 ChangeLog 11851
-SHA256 f80d21ef44cb51df675cf3084a158ee4ac37d1ea1cf780d5f6e575749e8867b5 ChangeLog 11851
+MISC ChangeLog 12108 RMD160 135c90d75050faf85e3269bf67747614b92f0b37 SHA1 379c6f2630ec33c294f034a4f42cd0ff0ec426ce SHA256 937d1f6f57152ca3c0d672484c0883bdc29e774dd3fee9edfb56bb69596ca6c4
+MD5 8cfa82bf3f098f0b6033deeaa93be6e8 ChangeLog 12108
+RMD160 135c90d75050faf85e3269bf67747614b92f0b37 ChangeLog 12108
+SHA256 937d1f6f57152ca3c0d672484c0883bdc29e774dd3fee9edfb56bb69596ca6c4 ChangeLog 12108
 MISC metadata.xml 374 RMD160 c261e08c2be47cbf618ed122151d25f96a176aa9 SHA1 88da42b8cc7c08339067720081f61c110e00acb5 SHA256 4babbe654b066c416bb453a8decbd1e8bdaf450226d9ed6d4380bf17e5761f59
 MD5 afd013450a188e41979f4d528607d692 metadata.xml 374
 RMD160 c261e08c2be47cbf618ed122151d25f96a176aa9 metadata.xml 374
 SHA256 4babbe654b066c416bb453a8decbd1e8bdaf450226d9ed6d4380bf17e5761f59 metadata.xml 374
-MD5 d9131130e25b59ca50f348317201bb2c files/digest-nagios-plugins-1.3.1-r1 262
-RMD160 cd7b2ebee0a3e092ef7c82c175e94f47763c49bd files/digest-nagios-plugins-1.3.1-r1 262
-SHA256 e109fb7c2891be04dac488d594f13958b7e9fd79b29f6d89723593e96aeedde2 files/digest-nagios-plugins-1.3.1-r1 262
-MD5 f9010211b0e43cb5f57ac0056c7d40bb files/digest-nagios-plugins-1.4.2 262
-RMD160 5c7abc2550ce37fd939e70a1120bba9a4dde916a files/digest-nagios-plugins-1.4.2 262
-SHA256 36a8c29ac7a540fbed42806003285c59585c88e3d994eba8f065788d84b51062 files/digest-nagios-plugins-1.4.2 262
 MD5 bb2c03bcf04c01e804752addf2281d55 files/digest-nagios-plugins-1.4.8-r1 265
 RMD160 b08f8ed8e94124305adeff87ae406428690b267a files/digest-nagios-plugins-1.4.8-r1 265
 SHA256 a5f71eb154fc0d8cbaeecbc22c2d9a365775bd4990552e86e0ec84da6ea59add files/digest-nagios-plugins-1.4.8-r1 265
 MD5 61d5ee0023a740e02e487ff316628ff4 files/digest-nagios-plugins-1.4.9 265
 RMD160 4538b3a1f1b06123045cb21c169b555aff9d12a0 files/digest-nagios-plugins-1.4.9 265
 SHA256 15f49615b07f9220930316a4215f44cc54cebe4f7530812e5addd2f27bd5238d files/digest-nagios-plugins-1.4.9 265
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFGd3/4NQqtfCuFneMRAgbyAJ94H1mJRcwD+ABEK+wg1niKiNrdIgCfUxwl
-VAvCV6vc3DijhthbySOu4bQ=
-=90Ls
------END PGP SIGNATURE-----
