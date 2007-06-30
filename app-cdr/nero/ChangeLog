@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/nero
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.26 2007/06/30 09:11:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.27 2007/06/30 11:47:41 drac Exp $
+
+  30 Jun 2007; Samuli Suominen <drac@gentoo.org> nero-2.1.0.3.ebuild:
+  Removed stable x86 keyword from unfetchable nero-2.1.0.3 ebuild, authorized
+  by armin76.
 
   30 Jun 2007; Samuli Suominen <drac@gentoo.org> nero-3.0.0.0.ebuild:
   Stick some QA_ variables to keep installing quiet.
