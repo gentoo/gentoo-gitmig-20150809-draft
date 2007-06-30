@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-MIME-Modifier
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Modifier/ChangeLog,v 1.6 2007/04/10 12:16:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Modifier/ChangeLog,v 1.7 2007/06/30 16:05:32 armin76 Exp $
+
+  30 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  Email-MIME-Modifier-1.441.ebuild:
+  Add ~alpha wrt #165190
 
   10 Apr 2007; Michael Cummings <mcummings@gentoo.org>
   Email-MIME-Modifier-1.441.ebuild:
