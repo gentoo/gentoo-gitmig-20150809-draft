@@ -1,6 +1,12 @@
 # ChangeLog for dev-php4/pecl-apc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/ChangeLog,v 1.24 2007/05/12 14:35:18 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/ChangeLog,v 1.25 2007/06/30 17:22:56 voxus Exp $
+
+*pecl-apc-3.0.14 (30 Jun 2007)
+
+  30 Jun 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  +pecl-apc-3.0.14.ebuild:
+  Version bump, closing bug #180562.
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org>
   pecl-apc-3.0.12_p2.ebuild, pecl-apc-3.0.13.ebuild:
