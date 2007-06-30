@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=NeroLINUX
-Comment=Linux OS Solution for CD/DVD Burning
-Exec=nero
-Icon=/usr/share/nero/pixmaps/nero.png
-Type=Application
-Terminal=false
-Encoding=UTF-8
-Categories=Application;AudioVideo;DiscBurning;System

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.0.0.ebuild,v 1.9 2007/06/30 17:42:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.0.0.ebuild,v 1.10 2007/06/30 20:17:43 drac Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -11,8 +11,7 @@ SRC_URI="x86? ( mirror://${PN}/${PN}linux-${PV}-x86.rpm )
 
 LICENSE="Nero"
 SLOT="0"
-# Should be all ready for ~amd64 but needs to be tested.
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="x11-libs/libX11
@@ -54,6 +53,10 @@ src_install() {
 	use doc && dodoc usr/share/doc/${PN}/*.pdf
 
 	make_wrapper ${PN} ./${PN} /opt/${PN} /opt/${PN}/$(get_libdir) || die "make_wrapper failed."
+
+	# This is a ugly hack to fix burning in x86_64 which can be removed in future releases.
+	# http://club.cdfreaks.com/showthread.php?t=218041
+	use amd64 && cp usr/share/${PN}/Nero*.txt "${D}"/opt/${PN}/$(get_libdir)/${PN}
 }
 
 pkg_postinst() {

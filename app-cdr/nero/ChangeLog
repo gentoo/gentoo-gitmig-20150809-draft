@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/nero
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.28 2007/06/30 17:42:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.29 2007/06/30 20:17:43 drac Exp $
+
+  30 Jun 2007; Samuli Suominen <drac@gentoo.org> -files/nero.desktop,
+  -nero-2.1.0.3.ebuild, nero-3.0.0.0.ebuild:
+  Keyword for ~amd64 after heavy testing from AMD64 Arch Testers Jonas
+  Pedersen and Kenneth Prugh. Authorized by KingTaco.
 
   30 Jun 2007; Samuli Suominen <drac@gentoo.org> nero-3.0.0.0.ebuild:
   Add more QA_ variables for x86_64.
