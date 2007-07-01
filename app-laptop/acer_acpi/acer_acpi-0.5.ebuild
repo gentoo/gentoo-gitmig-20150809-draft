@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.5.ebuild,v 1.1 2007/06/21 19:29:19 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.5.ebuild,v 1.2 2007/07/01 13:29:04 jurek Exp $
 
 inherit linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="http://aceracpi.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 MODULE_NAMES="acer_acpi(extra:)"
@@ -37,5 +37,5 @@ pkg_postinst() {
 	ewarn "If you upgraded from version 0.1 or 0.2, than please delete on of the lines from that file!"
 	elog
 	elog "If you need more info about this driver you can read the README file"
-	elog "% zmore /usr/share/doc/${PF}/README.gz"
+	elog "% zmore /usr/share/doc/${PF}/README.bz2"
 }

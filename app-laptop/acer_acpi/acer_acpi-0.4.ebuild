@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.4.ebuild,v 1.3 2007/06/28 07:17:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.4.ebuild,v 1.4 2007/07/01 13:29:04 jurek Exp $
 
 inherit linux-mod
 
@@ -37,5 +37,5 @@ pkg_postinst() {
 	ewarn "If you upgraded from version 0.1 or 0.2, than please delete on of the lines from that file!"
 	elog
 	elog "If you need more info about this driver you can read the README file"
-	elog "% zmore /usr/share/doc/${PF}/README.gz"
+	elog "% zmore /usr/share/doc/${PF}/README.bz2"
 }

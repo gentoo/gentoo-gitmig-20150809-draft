@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/acer_acpi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/ChangeLog,v 1.7 2007/07/01 02:59:00 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/ChangeLog,v 1.8 2007/07/01 13:29:04 jurek Exp $
+
+  01 Jul 2007; Jurek Bartuszek <jurek@gentoo.org> acer_acpi-0.4.ebuild,
+  acer_acpi-0.5.ebuild:
+  Changed README.gz to README.bz2 (bug #183795)
 
   01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   +files/digest-acer_acpi-0.4, +files/digest-acer_acpi-0.5, Manifest:
