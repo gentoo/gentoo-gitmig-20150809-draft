@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/acerhk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.24 2007/06/28 07:18:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.25 2007/07/01 02:59:54 peper Exp $
+
+  01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  +files/digest-acerhk-0.5.34, +files/digest-acerhk-0.5.35, Manifest:
+  (QA) Add digests.
 
   28 Jun 2007; Christian Faulhammer <opfer@gentoo.org> acerhk-0.5.35.ebuild:
   stable x86, bug 182845
