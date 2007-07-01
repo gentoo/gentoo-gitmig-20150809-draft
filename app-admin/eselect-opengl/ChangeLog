@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.29 2007/03/10 20:06:07 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.30 2007/07/01 22:53:00 peper Exp $
+
+  01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  eselect-opengl-1.0.3.ebuild, eselect-opengl-1.0.4.ebuild,
+  eselect-opengl-1.0.5.ebuild:
+  (QA) RESTRICT="multilib-pkg-force" -> EMULTILIB_PKG="true"
 
   10 Mar 2007; Danny van Dyk <kugelfang@gentoo.org>
   eselect-opengl-1.0.3.ebuild, eselect-opengl-1.0.4.ebuild,
