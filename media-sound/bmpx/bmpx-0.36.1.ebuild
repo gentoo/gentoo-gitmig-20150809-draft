@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.36.1.ebuild,v 1.1 2006/12/17 16:03:43 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.36.1.ebuild,v 1.2 2007/07/01 09:49:27 drac Exp $
 
 inherit fdo-mime eutils versionator
 
@@ -36,8 +36,7 @@ RDEPEND=">=dev-libs/glib-2.10
 	>=media-libs/musicbrainz-2.1.1
 	>=media-libs/gstreamer-0.10.10
 	virtual/fam
-	|| ( ( >=dev-libs/dbus-glib-0.72 )
-		( <sys-apps/dbus-1 >=sys-apps/dbus-0.62 ) )
+	>=dev-libs/dbus-glib-0.72
 	>=dev-libs/libxml2-2.6.1
 	>=net-misc/neon-0.25.5
 	media-sound/cdparanoia
