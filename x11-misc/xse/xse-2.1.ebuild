@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.1.ebuild,v 1.4 2006/06/18 14:40:39 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.1.ebuild,v 1.5 2007/07/01 19:04:10 pylon Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://ftp.x.org/R5contrib/"
 SRC_URI="ftp://ftp.x.org/R5contrib/xsendevent-${PV}.tar.Z"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 DEPEND="|| ( (
 			x11-misc/imake

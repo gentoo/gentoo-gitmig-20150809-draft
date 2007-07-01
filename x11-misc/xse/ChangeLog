@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/ChangeLog,v 1.8 2007/02/22 00:09:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/ChangeLog,v 1.9 2007/07/01 19:04:10 pylon Exp $
+
+  01 Jul 2007; Lars Weiler <pylon@gentoo.org> xse-2.1.ebuild:
+  Stable on ppc; bug #183870.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
