@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcaptury
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaptury/ChangeLog,v 1.2 2007/06/15 15:30:22 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaptury/ChangeLog,v 1.3 2007/07/01 23:12:18 peper Exp $
+
+  01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  libcaptury-0.3.0_pre200706031.ebuild:
+  (QA) RESTRICT="multilib-pkg-force" -> EMULTILIB_PKG="true"
 
   15 Jun 2007; <trapni@gentoo.org> libcaptury-0.3.0_pre200706031.ebuild:
   added missing useflag to IUSE

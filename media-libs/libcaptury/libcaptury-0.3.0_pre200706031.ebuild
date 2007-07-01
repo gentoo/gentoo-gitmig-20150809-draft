@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaptury/libcaptury-0.3.0_pre200706031.ebuild,v 1.2 2007/06/15 15:30:22 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaptury/libcaptury-0.3.0_pre200706031.ebuild,v 1.3 2007/07/01 23:12:18 peper Exp $
 
 inherit multilib flag-o-matic
 
@@ -24,7 +24,7 @@ RDEPEND=">=media-libs/capseo-0.3.0_pre200706031
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
-RESTRICT="multilib-pkg-force"
+EMULTILIB_PKG="true"
 
 S="${WORKDIR}/captury-${PV}/${PN}"
 
