@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7426 2007/07/01 06:16:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7427 2007/07/01 06:19:59 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -26,8 +26,8 @@
 # into /usr/share, large amount of invalid declaration of functions,
 # autotools usage is completely wrong, installs desktop files into
 # deprecated locations, upstream is likely dead plus there is open 
-# bug 152864. Unless you're willing to fix *all* this this package
-# will be removed in 30 days.
+# bug 152864. Unless you're willing to fix *all* this package will
+# be removed in 30 days.
 x11-misc/gwhere
 
 # Samuli Suominen <drac@gentoo.org> (29 Jun 2007)
