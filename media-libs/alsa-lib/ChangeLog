@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.234 2007/06/27 15:18:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.235 2007/07/01 16:41:31 phreak Exp $
+
+*alsa-lib-1.0.14a-r1 (01 Jul 2007)
+
+  01 Jul 2007; Christian Heim <phreak@gentoo.org>
+  +files/alsa-lib-1.0.14a-softfloat.patch, +alsa-lib-1.0.14a-r1.ebuild:
+  Revision bump, fixing the compilation of the softfloat PCM plugin (thanks to
+  atti <mtd05003 at fh-hagenberg.at> in #183732).
 
 *alsa-lib-1.0.14a (27 Jun 2007)
 

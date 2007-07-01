@@ -1,0 +1,24 @@
+---
+ configure.in |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+--- a/configure.in
++++ b/configure.in
+@@ -185,7 +185,7 @@ AC_ARG_WITH(softfloat,
+     [do you have floating point unit on this machine? (optional)]),
+   [  AC_DEFINE(HAVE_SOFT_FLOAT, "1", [Avoid calculation in float])
+      softfloat=yes ],)
+-if test "$softloat" = "yes" ; then
++if test "$softfloat" = "yes" ; then
+   AC_MSG_RESULT(yes)
+ else
+   AC_MSG_RESULT(no)
+@@ -414,7 +414,7 @@ if test "$HAVE_LIBPTHREAD" != "yes"; the
+   build_pcm_share="no"
+ fi
+ 
+-if test "$softfloat" != "yes"; then
++if test "$softfloat" = "yes"; then
+   build_pcm_lfloat="no"
+ fi
+ 
