@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/oidentd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.30 2007/05/31 22:25:06 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.31 2007/07/01 12:43:46 angelos Exp $
+
+  01 Jul 2007; Christoph Mende <angelos@gentoo.org> oidentd-2.0.8-r1.ebuild:
+  Stable on amd64
 
 *oidentd-2.0.8-r1 (31 May 2007)
 
