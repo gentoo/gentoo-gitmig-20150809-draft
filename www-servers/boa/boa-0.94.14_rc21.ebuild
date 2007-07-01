@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21.ebuild,v 1.2 2006/12/10 09:06:58 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21.ebuild,v 1.3 2007/07/01 04:18:20 dirtyepic Exp $
 
 inherit eutils
 
@@ -17,6 +17,13 @@ S=${WORKDIR}/${PN}-${MY_PV}
 DEPEND="sys-devel/flex
 	sys-devel/bison
 	tetex? ( virtual/tetex )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-texi.patch
+}
 
 src_compile() {
 	econf || die "econf failed"
