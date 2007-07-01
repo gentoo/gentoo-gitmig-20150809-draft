@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/lazarus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.16 2007/04/07 08:34:01 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.17 2007/07/01 00:11:17 truedfx Exp $
+
+  01 Jul 2007; Harald van Dĳk <truedfx@gentoo.org>
+  lazarus-0.9.22-r1.ebuild:
+  Add RESTRICT=strip, #183604
 
 *lazarus-0.9.22-r1 (06 Apr 2007)
 

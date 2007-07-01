@@ -1,8 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.22-r1.ebuild,v 1.2 2007/04/14 16:06:58 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.22-r1.ebuild,v 1.3 2007/07/01 00:11:17 truedfx Exp $
 
 inherit eutils
+
+# bug #183604
+RESTRICT="strip"
 
 FPCVER="2.0.4"
 
