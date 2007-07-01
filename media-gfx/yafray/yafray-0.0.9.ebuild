@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.9.ebuild,v 1.7 2007/06/28 18:20:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.9.ebuild,v 1.8 2007/07/01 15:03:32 pylon Exp $
 
 inherit eutils python multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.yafray.org/sec/2/downloads/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ppc ppc64 ~sparc x86"
 IUSE="openexr"
 
 RDEPEND="media-libs/jpeg
