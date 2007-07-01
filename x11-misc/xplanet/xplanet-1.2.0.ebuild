@@ -1,52 +1,37 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.2.0.ebuild,v 1.11 2006/05/06 16:23:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.2.0.ebuild,v 1.12 2007/07/01 04:38:36 drac Exp $
 
-DESCRIPTION="A program to render images of the earth into the X root window"
+DESCRIPTION="a program to render images of the earth into the X root window"
+HOMEPAGE="http://xplanet.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-HOMEPAGE="http://xplanet.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
-IUSE="gif jpeg X opengl truetype tiff png"
+IUSE="gif jpeg X truetype tiff png"
 
-RDEPEND="X? ( || ( (
-		x11-libs/libX11
-		x11-libs/libXScrnSaver
-		x11-libs/libXt
-		x11-libs/libXext )
-	virtual/x11 ) )
-	opengl? ( virtual/opengl
-		virtual/glut )
+RDEPEND="X? ( x11-libs/libX11
+	x11-libs/libXScrnSaver
+	x11-libs/libXt
+	x11-libs/libXext )
 	gif? ( media-libs/giflib )
 	jpeg? ( media-libs/jpeg )
 	tiff? ( media-libs/tiff )
-	png? ( media-libs/libpng )
-	truetype? ( =media-libs/freetype-2* )"
+	png? ( media-libs/libpng
+		media-libs/netpbm )
+	truetype? ( =media-libs/freetype-2*
+		x11-libs/pango )"
 DEPEND="${RDEPEND}
-	X? ( || ( (
-		x11-proto/xproto
-		x11-proto/scrnsaverproto )
-	virtual/x11 ) )"
-
-src_unpack() {
-	unpack ${A}
-	# fix GCC3.2 include re-ordering bug.
-	cd ${S}
-	sed -i 's,-I$prefix/include,,' configure
-}
+	X? ( x11-proto/xproto
+	x11-proto/scrnsaverproto )"
 
 src_compile() {
 	local myconf
 
 	use X \
-		&& myconf="${myconf} --with-x" \
-		|| myconf="${myconf} --with-x=no"
-
-	use opengl \
-		&& myconf="${myconf} --with-gl --with-glut --with-animation" \
-		|| myconf="${myconf} --with-gl=no --with-glut=no --with-animation=no"
+		&& myconf="${myconf} --with-x --with-xscreensaver" \
+		|| myconf="${myconf} --with-x=no --with-xscreensaver=no"
 
 	use gif \
 		&& myconf="${myconf} --with-gif" \
@@ -65,16 +50,14 @@ src_compile() {
 		|| myconf="${myconf} --with-png=no --with-pnm=no"
 
 	use truetype \
-		&& myconf="${myconf} --with-freetype" \
-		|| myconf="${myconf} --with-freetype=no"
+		&& myconf="${myconf} --with-freetype --with-pango" \
+		|| myconf="${myconf} --with-freetype=no --with-pango=no"
 
-	econf ${myconf} || die
-
-	# xplanet doesn't like to build parallel
-	make || die
+	econf --with-cspice=no ${myconf}
+	emake -j1 || die "emake failed."
 }
 
 src_install () {
-	einstall || die "einstall failed"
-	dodoc AUTHORS README NEWS ChangeLog TODO
+	emake DESTDIR="${D}" install || die "emake install failed."
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
