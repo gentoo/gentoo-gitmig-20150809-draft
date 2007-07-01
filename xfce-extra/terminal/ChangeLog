@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/terminal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.41 2007/05/27 17:39:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.42 2007/07/01 09:28:52 welp Exp $
+
+  01 Jul 2007; Peter Weller <welp@gentoo.org> terminal-0.2.6-r1.ebuild:
+  Fix up dbus deps wrt bug 183696
 
   27 May 2007; Joshua Kinard <kumba@gentoo.org> terminal-0.2.6-r1.ebuild:
   Stable on mips.

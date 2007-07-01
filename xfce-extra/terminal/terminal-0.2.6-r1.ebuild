@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.6-r1.ebuild,v 1.12 2007/05/27 17:39:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.6-r1.ebuild,v 1.13 2007/07/01 09:28:52 welp Exp $
 
 inherit xfce44
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	x11-libs/libXft
 	x11-libs/libXrender
 	startup-notification? ( x11-libs/startup-notification )
-	dbus? ( || ( dev-libs/dbus-glib <sys-apps/dbus-1 ) )
+	dbus? ( dev-libs/dbus-glib )
 	>=x11-libs/vte-0.11.11
 	>=xfce-extra/exo-0.3.2"
 DEPEND="${RDEPEND}
