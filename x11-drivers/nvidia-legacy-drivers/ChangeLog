@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-legacy-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/ChangeLog,v 1.16 2007/03/14 00:32:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/ChangeLog,v 1.17 2007/07/01 22:43:39 peper Exp $
+
+  01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  nvidia-legacy-drivers-1.0.7184.ebuild:
+  (QA) RESTRICT="multilib-pkg-force" -> EMULTILIB_PKG="true"
 
   14 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   nvidia-legacy-drivers-1.0.7184.ebuild:
