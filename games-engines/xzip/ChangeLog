@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/xzip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/xzip/ChangeLog,v 1.9 2007/02/21 23:36:14 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/xzip/ChangeLog,v 1.10 2007/07/01 23:13:59 nyhm Exp $
+
+  01 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
+  -files/xzip-182-makefile.diff, xzip-1.8.2-r2.ebuild:
+  RESTRICT="test" and cleanup
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
