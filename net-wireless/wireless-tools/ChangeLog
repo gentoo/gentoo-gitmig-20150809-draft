@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.115 2007/05/02 07:31:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.116 2007/07/01 15:55:08 uberlord Exp $
+
+*wireless-tools-29_pre22 (01 Jul 2007)
+
+  01 Jul 2007; Roy Marples <uberlord@gentoo.org>
+  +wireless-tools-29_pre22.ebuild:
+  Bumpage
 
 *wireless-tools-29_pre21 (02 May 2007)
 
