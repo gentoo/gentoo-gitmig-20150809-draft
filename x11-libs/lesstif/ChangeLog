@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/lesstif
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.82 2007/06/29 17:04:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.83 2007/07/01 03:13:56 peper Exp $
+
+  01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  +files/digest-lesstif-0.94.4, +files/digest-lesstif-0.95.0, Manifest:
+  (QA) Add digests.
 
 *lesstif-0.95.0 (29 Jun 2007)
 
