@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.508 2007/07/01 12:37:19 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.509 2007/07/01 17:15:01 dirtyepic Exp $
+
+  01 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Unmask www-servers/boa.
 
   01 Jul 2007; Cédric Krier <cedk@gentoo.org> use.local.desc:
   Add libcrypto flag for libssh2
