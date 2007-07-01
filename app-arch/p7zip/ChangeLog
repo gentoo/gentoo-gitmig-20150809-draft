@@ -1,6 +1,15 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.64 2007/06/12 14:49:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.65 2007/07/01 23:33:30 radek Exp $
+
+*p7zip-4.48 (01 Jul 2007)
+
+  01 Jul 2007; Radoslaw Stachowiak <radek@gentoo.org>
+  -files/p7zip-4.30-gcc41.diff, -files/7z, -files/7za,
+  -files/p7zip-4.16_x86_static.patch, -p7zip-4.20.ebuild,
+  -p7zip-4.30.ebuild, -p7zip-4.33.ebuild, -p7zip-4.39.ebuild,
+  -p7zip-4.42.ebuild, -p7zip-4.43.ebuild, +p7zip-4.48.ebuild:
+  version bump, and orphaned files cleaning
 
   12 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> p7zip-4.45.ebuild:
   Stable on sparc

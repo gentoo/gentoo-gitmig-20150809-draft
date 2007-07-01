@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.43.ebuild,v 1.6 2007/06/26 01:32:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.48.ebuild,v 1.1 2007/07/01 23:33:30 radek Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src_all.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc-macos ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="static doc"
 
 S=${WORKDIR}/${PN}_${PV}
@@ -59,8 +59,8 @@ src_install() {
 	doexe bin/7z bin/7za bin/7zr bin/7zCon.sfx || die "doexe bins"
 	exeinto /usr/$(get_libdir)/${PN}/Codecs
 	doexe bin/Codecs/* || die "doexe Codecs"
-	exeinto /usr/$(get_libdir)/${PN}/Formats
-	doexe bin/Formats/* || die "doexe Formats"
+	exeinto /usr/$(get_libdir)/${PN}
+	doexe bin/*.so || die "doexe *.so files"
 
 	doman man1/7z.1 man1/7za.1 man1/7zr.1
 	dodoc ChangeLog README TODO
