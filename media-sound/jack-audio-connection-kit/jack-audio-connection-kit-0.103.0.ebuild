@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.103.0.ebuild,v 1.1 2007/06/29 14:09:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.103.0.ebuild,v 1.2 2007/07/01 15:02:13 flameeyes Exp $
 
 inherit flag-o-matic eutils multilib linux-info autotools multilib
 
@@ -30,14 +30,14 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	if use caps; then
 		if kernel_is 2 4 ; then
-			elog "will build jackstart for 2.4 kernel"
+			einfo "will build jackstart for 2.4 kernel"
 		else
-			elog "using compatibility symlink for jackstart"
+			einfo "using compatibility symlink for jackstart"
 		fi
 	fi
 
 	if use netjack; then
-		elog "including support for experimental netjack, see http://netjack.sourceforge.net/"
+		einfo "including support for experimental netjack, see http://netjack.sourceforge.net/"
 	fi
 }
 
@@ -77,7 +77,7 @@ src_compile() {
 		elif (! grep mmx /proc/cpuinfo >/dev/null) ; then
 			ewarn "Can't build cpudetection (dynsimd) without cpu mmx support. see bug #136565."
 		else
-			elog "Enabling cpudetection (dynsimd). Adding -mmmx, -msse, -m3dnow and -O2 to CFLAGS."
+			einfo "Enabling cpudetection (dynsimd). Adding -mmmx, -msse, -m3dnow and -O2 to CFLAGS."
 			myconf="${myconf} --enable-dynsimd"
 
 			filter-flags -O*
@@ -103,7 +103,7 @@ src_compile() {
 	emake || die "compilation failed"
 
 	if use caps && kernel_is 2 4 ; then
-		elog "Building jackstart for 2.4 kernel"
+		einfo "Building jackstart for 2.4 kernel"
 		cd "${S}/jackd"
 		emake jackstart || die "jackstart build failed."
 	fi
