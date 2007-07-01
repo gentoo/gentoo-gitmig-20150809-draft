@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/pynetworkmanager/pynetworkmanager-0.2.ebuild,v 1.1 2007/07/01 06:54:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/pynetworkmanager/pynetworkmanager-0.2.ebuild,v 1.2 2007/07/01 17:12:10 drac Exp $
 
 MY_PN="${PN/n/N}" ; MY_PN="${MY_PN/m/M}" ; MY_P="${MY_PN}-${PV}"
 
@@ -50,6 +50,17 @@ src_install() {
 pkg_postinst() {
 	xfce44_pkg_postinst
 	python_mod_optimize /usr/share/xfce4/${MY_PN}
+
+	elog
+	elog "Note: This version of pyNetworkManager doesn't support encrypted networks."
+	elog
+	elog "You might need to edit /etc/dbus-1/system.d/NetworkManager.conf,"
+	elog "into group=\"plugdev\" section:"
+	elog
+	elog "<allow own=\"org.freedesktop.NetworkManagerInfo\"/>"
+	elog
+	elog "And restart system dbus after: /etc/init.d/dbus restart."
+	elog
 }
 
 pkg_postrm() {
