@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7431 2007/07/01 17:15:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7432 2007/07/01 17:16:40 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -41,12 +41,8 @@ kde-misc/kdbus
 # autotools usage is completely wrong, installs desktop files into
 # deprecated locations, installs invalid patch conditionally, upstream is 
 # likely dead plus there is open bug 152864. Unless you're willing 
-# to fix *all* this package will be removed in 30 days.
+# to fix *all* this. Package will be removed in 30 days.
 x11-misc/gwhere
-
-# Samuli Suominen <drac@gentoo.org> (29 Jun 2007)
-# Needs testing, work, and guide for bug 183547.
-xfce-extra/pynetworkmanager
 
 # Roy Marples <uberlord@gentoo.org> (29 Jun 2007)
 # Masked due to several connectivity issues.
