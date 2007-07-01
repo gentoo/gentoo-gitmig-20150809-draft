@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/ndoutils
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ChangeLog,v 1.1 2007/07/01 08:29:56 dertobi123 Exp $
+
+*ndoutils-1.4_beta4 (01 Jul 2007)
+
+  01 Jul 2007; Tobias Scherbaum <dertobi123@gentoo.org> +files/ndo2db.init,
+  +metadata.xml, +ndoutils-1.4_beta4.ebuild:
+  Initial import for bug #176780
+
