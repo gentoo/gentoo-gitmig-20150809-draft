@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r5.ebuild,v 1.22 2007/06/26 02:55:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r5.ebuild,v 1.23 2007/07/01 22:36:43 peper Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -998,7 +998,8 @@ else
 fi
 
 # we'll handle stripping ourself #46186
-RESTRICT="nostrip multilib-pkg-force"
+RESTRICT="nostrip"
+EMULTILIB_PKG="true"
 
 # We need a new-enough binutils for as-needed
 DEPEND="!ia64? ( >=sys-devel/gcc-3.4 )

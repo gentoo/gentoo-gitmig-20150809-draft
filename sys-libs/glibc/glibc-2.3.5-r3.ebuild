@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.31 2007/06/26 02:55:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.32 2007/07/01 22:36:43 peper Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -991,7 +991,8 @@ else
 fi
 
 # we'll handle stripping ourself #46186
-RESTRICT="nostrip multilib-pkg-force"
+RESTRICT="nostrip"
+EMULTILIB_PKG="true"
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
 # We also need linux26-headers if using NPTL. Including kernel headers is

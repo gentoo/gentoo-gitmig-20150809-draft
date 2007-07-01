@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.532 2007/06/25 05:42:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.533 2007/07/01 22:36:43 peper Exp $
+
+  01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> glibc-2.3.5-r3.ebuild,
+  glibc-2.3.6-r4.ebuild, glibc-2.3.6-r5.ebuild, glibc-2.4-r4.ebuild,
+  glibc-2.5-r2.ebuild, glibc-2.5-r3.ebuild, glibc-2.6.ebuild:
+  (QA) RESTRICT="multilib-pkg-force" -> EMULTILIB_PKG="true"
 
   25 Jun 2007; Joshua Kinard <kumba@gentoo.org> glibc-2.5-r3.ebuild:
   Stable on mips, per #176712.
