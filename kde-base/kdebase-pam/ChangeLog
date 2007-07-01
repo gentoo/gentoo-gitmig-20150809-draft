@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-pam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.31 2007/07/01 20:19:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.32 2007/07/01 23:23:30 kumba Exp $
+
+  01 Jul 2007; Joshua Kinard <kumba@gentoo.org> kdebase-pam-7.ebuild:
+  Stable on mips, per #183887.
 
 *kdebase-pam-7 (01 Jul 2007)
 
