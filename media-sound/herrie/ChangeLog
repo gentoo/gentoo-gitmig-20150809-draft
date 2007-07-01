@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/herrie
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/ChangeLog,v 1.10 2007/06/05 19:26:40 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/ChangeLog,v 1.11 2007/07/01 15:07:59 rbu Exp $
+
+*herrie-1.8 (01 Jul 2007)
+
+  01 Jul 2007; Robert Buchholz <rbu@gentoo.org>
+  +files/herrie-1.8-chost.patch, +herrie-1.8.ebuild:
+  Version bump, output default is now alsa. Upstream added pulseaudio support
+  and greek locale
 
 *herrie-1.7-r1 (05 Jun 2007)
 
