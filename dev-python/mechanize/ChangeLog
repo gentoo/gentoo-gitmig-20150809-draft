@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mechanize
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.4 2007/06/30 14:12:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.5 2007/07/01 13:20:05 pylon Exp $
+
+  01 Jul 2007; Lars Weiler <pylon@gentoo.org> mechanize-0.1.7b.ebuild:
+  Keyworded ~ppc; bug #166914.
 
   30 Jun 2007; Raúl Porcel <armin76@gentoo.org> mechanize-0.1.7b.ebuild:
   Add ~ia64 wrt #166914
