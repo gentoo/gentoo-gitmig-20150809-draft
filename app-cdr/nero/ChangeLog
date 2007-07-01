@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/nero
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.29 2007/06/30 20:17:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.30 2007/07/01 05:55:37 wschlich Exp $
+
+  01 Jul 2007; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
+  Removed myself from metadata.xml due to lack of interest
 
   30 Jun 2007; Samuli Suominen <drac@gentoo.org> -files/nero.desktop,
   -nero-2.1.0.3.ebuild, nero-3.0.0.0.ebuild:
