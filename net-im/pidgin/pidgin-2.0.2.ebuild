@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.2.ebuild,v 1.2 2007/06/30 16:37:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.2.ebuild,v 1.3 2007/07/01 06:24:53 mr_bones_ Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -76,7 +76,7 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple"
 #   x11-plugins/gaim-galago
 #   x11-themes/gaim-smileys (get liquidx to fix it)
 
-# Abandonned 
+# Abandonned
 #   x11-plugins/ignorance
 #   x11-plugins/bangexec
 #   x11-plugins/gaim-assistant
