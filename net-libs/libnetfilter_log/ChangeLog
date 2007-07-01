@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_log
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/ChangeLog,v 1.2 2007/05/22 17:54:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/ChangeLog,v 1.3 2007/07/01 12:12:54 swegener Exp $
+
+  01 Jul 2007; Sven Wegener <swegener@gentoo.org>
+  libnetfilter_log-0.0.13.ebuild:
+  Add ~amd64 keyword.
 
   22 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   libnetfilter_log-0.0.13.ebuild:
