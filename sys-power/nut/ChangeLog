@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.44 2007/06/29 17:06:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.45 2007/07/01 15:59:37 armin76 Exp $
+
+  01 Jul 2007; Raúl Porcel <armin76@gentoo.org> nut-2.0.5-r2.ebuild:
+  Add ~alpha keyword as some user requested it
 
   29 Jun 2007; Raúl Porcel <armin76@gentoo.org> nut-2.0.0.ebuild,
   nut-2.0.0-r1.ebuild, nut-2.0.1_pre4.ebuild, nut-2.0.3.ebuild,
