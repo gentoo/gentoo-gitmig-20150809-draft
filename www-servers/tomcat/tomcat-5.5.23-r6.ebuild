@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23-r6.ebuild,v 1.2 2007/06/17 15:53:56 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23-r6.ebuild,v 1.3 2007/07/01 17:07:07 wltjr Exp $
 
 #WANT_ANT_TASKS="ant-trax"
 
@@ -48,7 +48,8 @@ RDEPEND="=dev-java/eclipse-ecj-3.2*
 	   )"
 DEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( =virtual/jdk-1.4* )
-	${RDEPEND}"
+	${RDEPEND}
+	|| ( dev-java/ant-trax dev-java/ant-tasks ) "
 
 S=${WORKDIR}/${MY_P}
 
