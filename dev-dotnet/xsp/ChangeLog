@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.44 2007/06/29 18:14:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.45 2007/07/01 03:02:45 peper Exp $
+
+  01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  +files/digest-xsp-1.2.1, +files/digest-xsp-1.2.3, +files/digest-xsp-1.2.4,
+  Manifest:
+  (QA) Add digests.
 
   29 Jun 2007; Christian Faulhammer <opfer@gentoo.org> xsp-1.2.4.ebuild:
   stable x86, bug 182850
