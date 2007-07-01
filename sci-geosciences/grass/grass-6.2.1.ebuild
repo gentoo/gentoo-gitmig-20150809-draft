@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1.ebuild,v 1.1 2007/05/19 22:13:14 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1.ebuild,v 1.2 2007/07/01 23:19:00 nerdboy Exp $
 
 inherit eutils autotools
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 # To-do: get ppc64 gdal deps fixed up
 
 IUSE="ffmpeg fftw glw gmath jpeg largefile motif mysql nls odbc opengl png
-postgres python readline sqlite tcl tk tiff truetype"
+postgres python readline sqlite tcl tk tiff truetype X"
 
 RESTRICT="nostrip"
 
@@ -49,7 +49,7 @@ RDEPEND=">=sys-devel/make-3.80
 	tk? ( >=dev-lang/tk-8.4 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	truetype? ( >=media-libs/freetype-2.0 )
-	|| (
+	X? ( || (
 	    ( x11-libs/libXmu
 	    x11-libs/libXext
 	    x11-libs/libXp
@@ -59,12 +59,14 @@ RDEPEND=">=sys-devel/make-3.80
 	    x11-libs/libICE
 	    x11-libs/libXpm
 	    x11-libs/libXaw )
-	virtual/x11 )"
+	virtual/x11 )
+	)"
 
 DEPEND="${RDEPEND}
-	|| (
+	X? ( || (
 	    ( x11-proto/xproto x11-proto/xextproto )
-	        virtual/x11 )"
+	        virtual/x11 )
+	)"
 
 src_unpack() {
 	if use glw && ! use opengl; then
@@ -143,6 +145,7 @@ src_compile() {
 	    fi
 	else
 	    epatch ${FILESDIR}/${P}-html-nonviz.patch
+	    myconf="${myconf} --without-opengl --without-glw"
 	fi
 
 	if use sqlite; then
@@ -153,7 +156,7 @@ src_compile() {
 	fi
 
 	export LD_LIBRARY_PATH="/${WORKDIR}/image/usr/${P}/$(get_libdir):${LD_LIBRARY_PATH}"
-	econf ${myconf} \
+	econf ${myconf} --with-libs=/usr/$(get_libdir) \
 		$(use_enable amd64 64bit) \
 		$(use_with fftw) \
 		$(use_with gmath blas) \
@@ -172,6 +175,7 @@ src_compile() {
 	# patch missing math functions
 	sed -i 's:EXTRA_LIBS=:EXTRA_LIBS=-lm :g' ${S}/lib/gmath/Makefile
 	sed -i 's:EXTRA_LIBS = :EXTRA_LIBS = -lm :g' ${S}/lib/gis/Makefile
+
 	emake -j1 || die "Error: emake failed!"
 }
 

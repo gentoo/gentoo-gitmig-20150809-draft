@@ -1,6 +1,14 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.40 2007/06/02 15:52:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.41 2007/07/01 23:19:00 nerdboy Exp $
+
+  01 Jul 2007; Steve Arnold <nerdboy@gentoo.org>
+  +files/grass-6.2.1-html-nonviz.patch, grass-6.2.1.ebuild:
+  Updated patch and configure options for minimal no-X install (at least
+  it builds on a server and works in a console).
+  
+  Compile with the following USE flags turned off:
+  -opengl -glw -motif -tcl -tk -X
 
   02 Jun 2007; nixnut <nixnut@gentoo.org> grass-6.2.0-r1.ebuild:
   Stable on ppc wrt bug 179150
