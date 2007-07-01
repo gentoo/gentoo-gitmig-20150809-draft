@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21.ebuild,v 1.3 2007/07/01 04:18:20 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21.ebuild,v 1.4 2007/07/01 17:09:02 dirtyepic Exp $
 
 inherit eutils
 
 MY_PV=${PV/_/}
-DESCRIPTION="Boa - A very small and very fast http daemon"
+DESCRIPTION="Boa - A very small and very fast http daemon."
 SRC_URI="http://www.boa.org/${PN}-${MY_PV}.tar.gz"
 HOMEPAGE="http://www.boa.org/"
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-texi.patch
+	epatch "${FILESDIR}"/${P}-ENOSYS.patch
 }
 
 src_compile() {
@@ -30,11 +31,6 @@ src_compile() {
 	emake || die "emake failed"
 	use tetex || sed -i -e '/^all:/s/boa.dvi //' docs/Makefile
 	emake docs || die "emake docs failed"
-	# SLH - 2004/04/23
-	# commented out - this doesn't appear to work, and I'm not tetex
-	# expert, so I don't know how to fix it
-	#
-	# use tetex && make boa.dvi
 }
 
 src_install() {
@@ -43,25 +39,21 @@ src_install() {
 	dodoc docs/boa.html
 	dodoc docs/boa_banner.png
 	doinfo docs/boa.info
-#	if use tetex; then
-#		dodoc docs/boa.dvi || die
-#	fi
 
 	keepdir /var/log/boa
 	dodir /var/www/localhost/htdocs
 	dodir /var/www/localhost/cgi-bin
 	dodir /var/www/localhost/icons
 
-	newconfd ${FILESDIR}/boa.conf.d boa
+	newconfd "${FILESDIR}"/boa.conf.d boa
 
 	exeinto /usr/lib/boa
 	doexe src/boa_indexer
 
-	newinitd ${FILESDIR}/boa.rc6 boa
+	newinitd "${FILESDIR}"/boa.rc6 boa
 
 	dodir /etc/boa
 	insinto /etc/boa
-	insopts -m700
-	doins ${FILESDIR}/boa.conf
-	doins ${FILESDIR}/mime.types
+	doins "${FILESDIR}"/boa.conf
+	doins "${FILESDIR}"/mime.types
 }
