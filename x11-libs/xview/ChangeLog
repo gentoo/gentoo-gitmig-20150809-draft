@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.24 2007/07/01 19:10:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.25 2007/07/01 20:29:57 flameeyes Exp $
+
+  01 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest to compensate  value in CVS header expansion.
 
   01 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> +xview-3.2-r6.ebuild:
   Revision bump to fix building when /usr/X11R6 is missing, see bug #149712
