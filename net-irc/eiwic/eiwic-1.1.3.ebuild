@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/eiwic-1.1.3.ebuild,v 1.3 2007/06/04 13:29:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/eiwic-1.1.3.ebuild,v 1.4 2007/07/01 12:42:23 angelos Exp $
 
 inherit multilib flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://lordi.styleliga.org/eiwic/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug doc ipv6 rss"
 
 DEPEND="rss? ( media-libs/raptor )"
