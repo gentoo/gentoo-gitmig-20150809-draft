@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.8.4-r1.ebuild,v 1.1 2006/03/31 22:01:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.8.4-r1.ebuild,v 1.2 2007/07/01 22:45:09 nyhm Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,18 +13,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND="virtual/glut
+DEPEND="virtual/glut
 	virtual/opengl
 	media-libs/libsdl"
-DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xproto
-			x11-libs/libX11
-			x11-libs/libXt )
-		virtual/x11 )"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
-
+	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc41.patch
 	epatch "${FILESDIR}"/${P}-too-many-axes.patch
 
@@ -34,6 +29,6 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog KNOWN_BUGS NOTICE README* TODO*
 }
