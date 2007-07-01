@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.151 2007/07/01 17:07:07 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.152 2007/07/01 17:29:23 wltjr Exp $
+
+  01 Jul 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  tomcat-5.5.23-r6.ebuild:
+  Switched to using automatic split-ant stuff via WANT_ANT_TASKS, related to
+  last modification.
 
   01 Jul 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   tomcat-5.5.23-r6.ebuild:

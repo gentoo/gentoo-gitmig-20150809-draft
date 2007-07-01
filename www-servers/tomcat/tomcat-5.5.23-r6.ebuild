@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23-r6.ebuild,v 1.3 2007/07/01 17:07:07 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23-r6.ebuild,v 1.4 2007/07/01 17:29:23 wltjr Exp $
 
-#WANT_ANT_TASKS="ant-trax"
+WANT_ANT_TASKS="ant-trax"
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -48,8 +48,7 @@ RDEPEND="=dev-java/eclipse-ecj-3.2*
 	   )"
 DEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( =virtual/jdk-1.4* )
-	${RDEPEND}
-	|| ( dev-java/ant-trax dev-java/ant-tasks ) "
+	${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -161,8 +160,7 @@ src_compile(){
 		antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xml-commons-external-1.3 xml-apis.jar)"
 	fi
 
-	# prevent classpath bloat with ant-1.7.0 which makes admin app fail
-	ANT_TASKS="ant-trax" eant ${antflags}
+	eant ${antflags}
 }
 
 src_install() {
