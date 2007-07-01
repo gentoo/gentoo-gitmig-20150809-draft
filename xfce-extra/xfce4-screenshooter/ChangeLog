@@ -1,6 +1,14 @@
 # ChangeLog for xfce-extra/xfce4-screenshooter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/ChangeLog,v 1.10 2007/03/15 13:55:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/ChangeLog,v 1.11 2007/07/01 17:26:45 drac Exp $
+
+*xfce4-screenshooter-1.0.0-r1 (01 Jul 2007)
+
+  01 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/xfce4-screenshooter-1.0.0-cancel-save.patch,
+  +xfce4-screenshooter-1.0.0-r1.ebuild:
+  Apply patch from upstream, reported by Debian, backported by Christoph Mende
+  to fix behavior of Cancel button. Bug 183803.
 
   15 Mar 2007; Markus Rothe <corsair@gentoo.org>
   xfce4-screenshooter-1.0.0.ebuild:
