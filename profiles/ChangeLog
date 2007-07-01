@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.504 2007/06/30 17:15:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.505 2007/07/01 08:43:06 betelgeuse Exp $
+
+  01 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> use.local.desc:
+  Add note to libX11 xcb use flag that it can break proprietary binaries like
+  Sun Java.
 
   30 Jun 2007; Raúl Porcel <armin76@gentoo.org> thirdpartymirrors:
   Remove ancient GNU mirrors

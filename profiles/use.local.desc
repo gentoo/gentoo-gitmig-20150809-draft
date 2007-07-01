@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2899 2007/06/28 21:26:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2900 2007/07/01 08:43:06 betelgeuse Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2010,7 +2010,7 @@ x11-libs/cairo:opengl - When used along with USE=glitz, enables glitz-glx usage.
 x11-libs/cairo:xcb - Support the X C-language Binding, a replacement for Xlib
 x11-libs/fltk:noxft - Disables fltk; use for non-english characters
 x11-libs/gtkmathview:t1lib - Enable t1lib support
-x11-libs/libX11:xcb - Support the X C-language Binding, a replacement for Xlib
+x11-libs/libX11:xcb - Support the X C-language Binding, a replacement for Xlib (can break proprietary binaries, for example Sun Java)
 x11-libs/libmatchbox:pango - Enable pango support
 x11-libs/libmatchbox:xsettings - Enable the use of xsettings for settings management.
 x11-libs/qt:glib - Enable glib eventloop support
