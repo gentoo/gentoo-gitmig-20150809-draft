@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.65 2007/06/25 18:54:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.66 2007/07/01 19:05:23 wltjr Exp $
+
+*firebird-2.0.1.12855.0-r5 (01 Jul 2007)
+
+  01 Jul 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/firebird-1.5.0.xinetd, files/firebird.xinetd,
+  -firebird-1.5.4-r2.ebuild, firebird-1.5.4-r3.ebuild,
+  +firebird-2.0.1.12855.0-r5.ebuild:
+  Old version and files cleanup. Installing upgrade sql script, and misc files
+  now. Preparation for automated security.fdb -> security2.fdb via pkg_config
 
   25 Jun 2007; Christoph Mende <angelos@gentoo.org>
   firebird-2.0.1.12855.0-r4.ebuild:

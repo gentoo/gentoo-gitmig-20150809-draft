@@ -3,9 +3,9 @@ service gds_db
 	flags			= REUSE
 	socket_type		= stream
 	wait			= no
-	user			= root
+	user			= firebird
 	log_on_success		+= USERID
 	log_on_failure 		+= USERID
-	server			= /opt/interbase/bin/gds_inet_server
+	server			= /opt/firebird/bin/fb_inet_server
 	disable			= yes
 }

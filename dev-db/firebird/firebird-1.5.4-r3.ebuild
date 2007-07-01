@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.4-r3.ebuild,v 1.2 2007/06/21 05:37:23 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.4-r3.ebuild,v 1.3 2007/07/01 19:05:23 wltjr Exp $
 
 inherit flag-o-matic eutils
 
@@ -89,7 +89,7 @@ src_install() {
 	rm -r ${D}/opt/firebird/examples
 
 	if use xinetd ; then
-		insinto /etc/xinetd.d ; newins ${FILESDIR}/${PN}-1.5.0.xinetd firebird
+		insinto /etc/xinetd.d ; newins ${FILESDIR}/${PN}.xinetd firebird
 	else
 		exeinto /etc/init.d ; newexe ${FILESDIR}/${PN}.init.d firebird
 		insinto /etc/conf.d ; newins ${FILESDIR}/firebird.conf.d firebird
