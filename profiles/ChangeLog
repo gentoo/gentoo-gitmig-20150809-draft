@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.507 2007/07/01 10:19:24 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.508 2007/07/01 12:37:19 cedk Exp $
+
+  01 Jul 2007; Cédric Krier <cedk@gentoo.org> use.local.desc:
+  Add libcrypto flag for libssh2
 
   01 Jul 2007; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
   Mask x11-misc/xnview.
