@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.6.2.ebuild,v 1.2 2007/07/01 12:21:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.6.2.ebuild,v 1.3 2007/07/01 14:15:58 pylon Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/kplayer/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE=""
 
 RDEPEND=">=media-video/mplayer-1.0_rc1"
