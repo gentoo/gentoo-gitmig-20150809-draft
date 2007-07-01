@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.8.ebuild,v 1.11 2006/10/10 09:48:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.8.ebuild,v 1.12 2007/07/01 22:18:14 nyhm Exp $
 
 inherit eutils
 
@@ -14,16 +14,16 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc-macos ppc64 sparc x86 ~x86-fbsd"
 IUSE="X"
 
-DEPEND="X? ( || ( x11-libs/libXt virtual/x11 ) )
-	>=media-libs/libsdl-1.2.4
-	>=media-libs/freetype-2.0.1"
+DEPEND="X? ( x11-libs/libXt )
+	media-libs/libsdl
+	>=media-libs/freetype-2.3"
 
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/sdl-ttf-2.0.8-noftinternals.patch
+	epatch "${FILESDIR}"/${P}-noftinternals.patch
 }
 
 src_compile() {
