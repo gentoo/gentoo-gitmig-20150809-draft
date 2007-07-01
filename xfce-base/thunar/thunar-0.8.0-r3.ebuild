@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.8.0-r3.ebuild,v 1.9 2007/06/07 18:31:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.8.0-r3.ebuild,v 1.10 2007/07/01 09:18:32 welp Exp $
 
 inherit eutils virtualx xfce44
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-lang/perl-5.6
 	>=dev-util/desktop-file-utils-0.10
 	>=xfce-base/libxfce4util-${XFCE_MASTER_VERSION}
 	virtual/fam
-	dbus? ( || ( dev-libs/dbus-glib <sys-apps/dbus-1 ) )
+	dbus? ( dev-libs/dbus-glib )
 	hal? ( sys-apps/hal )
 	>=media-libs/freetype-2
 	gnome? ( gnome-base/gconf )

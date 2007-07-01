@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.37 2007/06/07 18:31:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.38 2007/07/01 09:18:32 welp Exp $
+
+  01 Jul 2007; Peter Weller <welp@gentoo.org> thunar-0.8.0-r3.ebuild:
+  Fix up dbus deps wrt bug 183696
 
   07 Jun 2007; Samuli Suominen <drac@gentoo.org> thunar-0.8.0-r3.ebuild:
   Stable on arm.
