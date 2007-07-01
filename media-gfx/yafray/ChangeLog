@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/yafray
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.40 2007/07/01 15:03:32 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.41 2007/07/01 18:15:48 betelgeuse Exp $
+
+  01 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> -yafray-0.0.7.ebuild,
+  -yafray-0.0.8.ebuild:
+  Remove old ebuilds with broken autotools handling for bug #160021.
 
   01 Jul 2007; Lars Weiler <pylon@gentoo.org> yafray-0.0.9.ebuild:
   Stable on ppc; bug #160021.
