@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/conserver
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.56 2007/01/08 15:30:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.57 2007/07/01 20:32:31 flameeyes Exp $
+
+*conserver-8.1.14-r1 (01 Jul 2007)
+
+  01 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> -files/conserver.pam,
+  +files/conserver.pam-include.1, +conserver-8.1.14-r1.ebuild:
+  Fix pam.d file to run pam_nologin as expected.
 
   08 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   conserver-8.1.14.ebuild:
