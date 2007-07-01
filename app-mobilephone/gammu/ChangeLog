@@ -1,6 +1,15 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.39 2007/06/19 06:46:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.40 2007/07/01 10:34:13 mrness Exp $
+
+*gammu-1.12.0 (01 Jul 2007)
+
+  01 Jul 2007; Alin Năstac <mrness@gentoo.org>
+  -files/gammu-1.08.00-as-needed.patch,
+  -files/gammu-1.08.00-backup-limits.patch,
+  +files/gammu-1.12.0-fixups.patch, -gammu-1.08.00.ebuild,
+  +gammu-1.12.0.ebuild:
+  Version bump using cmake instead unsupported autoconf script (#183323).
 
   19 Jun 2007; Christian Faulhammer <opfer@gentoo.org> gammu-1.11.0.ebuild:
   stable x86, bug 178635
