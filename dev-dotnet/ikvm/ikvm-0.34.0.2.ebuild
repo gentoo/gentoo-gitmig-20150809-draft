@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.34.0.2.ebuild,v 1.2 2007/06/29 02:48:17 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.34.0.2.ebuild,v 1.3 2007/07/01 23:06:00 jurek Exp $
 
 inherit eutils mono multilib
 
@@ -34,7 +34,7 @@ src_compile() {
 	# memory related problems (see bug #183526)
 	sed -i \
 		-e 's#ecj#javac#' \
-		-e 's#-1.5#-J-mx160M -source 1.5#' \
+		-e 's#-1.5#-J-mx384M -source 1.5#' \
 		classpath/classpath.build \
 	|| die "sed failed"
 
