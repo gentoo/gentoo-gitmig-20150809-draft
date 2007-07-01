@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.19.ebuild,v 1.1 2007/03/23 09:45:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.21.ebuild,v 1.1 2007/07/01 10:40:38 mrness Exp $
 
 inherit distutils
 
@@ -14,14 +14,30 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bluetooth"
 
 #gnome-bluetooth is used for additional functionality - see bug #101067
-RDEPEND=">=dev-python/wxpython-2.6
-	>=dev-python/python-gammu-0.19
+RDEPEND=">=dev-python/wxpython-2.6.3.3
+	>=dev-python/python-gammu-0.20
 	bluetooth? (
-		net-wireless/gnome-bluetooth
 		dev-python/pybluez
+		net-wireless/gnome-bluetooth
 	)"
-DEPEND="dev-util/pkgconfig
-	${RDEPEND}"
+DEPEND="${RDEPEND}"
+
+# Supported languages and translated documentation
+# Be sure all languages are prefixed with a single space!
+MY_AVAILABLE_LINGUAS=" af ca cs de es et fi fr hu it ko nl pl pt_BR ru sk sv zh_CN"
+IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}/locale"
+	local lang
+	for lang in ${MY_AVAILABLE_LINGUAS} ; do
+		if ! use linguas_${lang} ; then
+			rm -r ${lang}
+		fi
+	done
+}
 
 src_compile() {
 	# SKIPWXCHECK: else 'import wx' results in
