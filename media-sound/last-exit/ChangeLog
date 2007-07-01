@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/last-exit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.11 2007/04/10 20:09:52 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.12 2007/07/01 10:26:19 drac Exp $
+
+  01 Jul 2007; Samuli Suominen <drac@gentoo.org> -last-exit-1.0.ebuild,
+  -last-exit-2.0.ebuild, -last-exit-3.0.ebuild, last-exit-4.0.ebuild:
+  Fix up dbus deps wrt bug 183696. Fix quoting and remove old versions.
 
   10 Apr 2007; Steev Klimaszewski <steev@gentoo.org>
   +files/last-exit-4.0-decimal_parse.patch, last-exit-4.0.ebuild:

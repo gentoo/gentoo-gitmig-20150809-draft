@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-4.0.ebuild,v 1.5 2007/04/10 20:09:52 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-4.0.ebuild,v 1.6 2007/07/01 10:26:19 drac Exp $
 
 inherit mono gnome2 eutils autotools
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=gnome-base/gconf-2.0
+RDEPEND=">=gnome-base/gconf-2.0
 		>=x11-libs/gtk+-2.6
 		>=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10
@@ -25,25 +25,25 @@ DEPEND=">=gnome-base/gconf-2.0
 		>=dev-dotnet/gnome-sharp-1.9.2
 		>=dev-dotnet/glade-sharp-1.9.2
 		>=dev-dotnet/gconf-sharp-1.9.2
-		|| ( >=dev-libs/dbus-glib-0.71 <sys-apps/dbus-0.90 )"
+		>=dev-libs/dbus-glib-0.71"
+DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/"${PN}-4"
+S="${WORKDIR}"/${PN}-4
 
 pkg_setup() {
-	G2CONF="${G2CONF} \
-	--disable-schemas-install"
+	G2CONF="${G2CONF} --disable-schemas-install"
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-dbus-sharp-parallel-build-fix.patch
 	epatch "${FILESDIR}"/${PN}-4.0-decimal_parse.patch
 	eautoreconf
 }
 
 src_install() {
-	make DESTDIR="${D}" install
+	emake DESTDIR="${D}" install
 }
 
 pkg_postinst() {
