@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emact
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/ChangeLog,v 1.1 2007/07/01 06:38:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/ChangeLog,v 1.2 2007/07/01 15:15:02 flameeyes Exp $
+
+  01 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> emact-2.50.0.ebuild:
+  Add ~amd64 keyword.
 
 *emact-2.50.0 (01 Jul 2007)
 
