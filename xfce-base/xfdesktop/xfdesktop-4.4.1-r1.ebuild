@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.4.1-r1.ebuild,v 1.10 2007/06/07 18:34:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.4.1-r1.ebuild,v 1.11 2007/07/01 09:56:15 drac Exp $
 
 inherit eutils xfce44
 
@@ -24,8 +24,7 @@ RDEPEND="x11-libs/libX11
 	>=xfce-base/libxfce4util-${XFCE_MASTER_VERSION}
 	>=xfce-base/libxfcegui4-${XFCE_MASTER_VERSION}
 	>=xfce-base/xfce-mcs-manager-${XFCE_MASTER_VERSION}
-	dbus? ( || ( dev-libs/dbus-glib <sys-apps/dbus-1 )
-		>=xfce-base/thunar-${THUNAR_MASTER_VERSION} )
+	dbus? ( dev-libs/dbus-glib >=xfce-base/thunar-${THUNAR_MASTER_VERSION} )
 	!minimal? ( >=xfce-base/xfce4-panel-${XFCE_MASTER_VERSION}
 		>=xfce-extra/exo-0.3.2 )"
 DEPEND="${RDEPEND}
