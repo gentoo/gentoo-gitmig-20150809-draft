@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.35.ebuild,v 1.3 2007/06/28 07:18:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.35.ebuild,v 1.4 2007/07/01 13:26:32 jurek Exp $
 
 inherit linux-mod
 
@@ -41,5 +41,5 @@ pkg_postinst() {
 	elog "If you need poll=1 you can set it permanently in /etc/modules.d/acerhk"
 	elog
 	elog "If you need more info about this driver you can read the README file"
-	elog "% zmore /usr/share/doc/${PF}/README.gz"
+	elog "% zmore /usr/share/doc/${PF}/README.bz2"
 }

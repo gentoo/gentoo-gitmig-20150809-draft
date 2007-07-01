@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/acerhk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.25 2007/07/01 02:59:54 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.26 2007/07/01 13:26:32 jurek Exp $
+
+  01 Jul 2007; Jurek Bartuszek <jurek@gentoo.org> -acerhk-0.5.34.ebuild,
+  acerhk-0.5.35.ebuild:
+  - Cleaned out old version
+  - Changed README.gz to README.bz2 (bug #183795)
 
   01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   +files/digest-acerhk-0.5.34, +files/digest-acerhk-0.5.35, Manifest:
