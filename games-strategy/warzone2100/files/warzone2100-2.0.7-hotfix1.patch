@@ -1,0 +1,24 @@
+Index: data/wrf/cam2/cam2change.wrf
+===================================================================
+--- data/wrf/cam2/cam2change.wrf	(revision 1629)
++++ data/wrf/cam2/cam2change.wrf	(revision 1630)
+@@ -9,7 +9,6 @@
+ directory	"texpages"
+ file 		TEXPAGE		"page-6-features-urban area.png"
+ file		TEXPAGE		"page-8-player buildings-bases urban.png"
+-file		TEXPAGE		"page-9-player-soft buildings-bases-urban.png"	//need altering to urban**DONE**
+ file		TEXPAGE		"page-9-player-hard buildings-bases-urban.png"
+ file		TEXPAGE 	"page-7-barbarians-urban.png"
+ file 		HWTERTILES	"tertilesc2hw.png"
+Index: data/wrf/cam3/cam3change.wrf
+===================================================================
+--- data/wrf/cam3/cam3change.wrf	(revision 1629)
++++ data/wrf/cam3/cam3change.wrf	(revision 1630)
+@@ -10,7 +10,6 @@
+ file 		TEXPAGE		"page-6-features-rockies.png"
+ file		TEXPAGE		"page-7-barbarians-kevlar.png"
+ file		TEXPAGE		"page-8-player buildings-bases-rockies.png"
+-file		TEXPAGE		"page-9-player-soft buildings-bases-rockies.png"	//needs changing**DONE**
+ file		TEXPAGE		"page-9-player-hard buildings-bases-rockies.png"
+ file 		HWTERTILES	"tertilesc3hw.png"
+ 
