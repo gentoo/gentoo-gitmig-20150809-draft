@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/python-xlib-0.12-r3.ebuild,v 1.7 2007/04/24 20:01:42 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/python-xlib-0.12-r3.ebuild,v 1.8 2007/07/01 07:21:41 lucass Exp $
 
 inherit distutils eutils
 
@@ -30,6 +30,6 @@ src_install () {
 
 src_test() {
 	for pytest in $(ls test/*py); do
-		PYTHONPATH=. ${python} ${pytest} || die "test failed"
+		PYTHONPATH=. "${python}" ${pytest} || die "test failed"
 	done
 }
