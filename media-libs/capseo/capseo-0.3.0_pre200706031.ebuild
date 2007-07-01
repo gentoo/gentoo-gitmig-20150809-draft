@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/capseo-0.3.0_pre200706031.ebuild,v 1.1 2007/06/14 14:30:57 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/capseo-0.3.0_pre200706031.ebuild,v 1.2 2007/07/01 22:26:30 peper Exp $
 
 inherit flag-o-matic multilib
 
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 		>=dev-lang/yasm-0.4.0
 		dev-util/pkgconfig"
 
-RESTRICT="multilib-pkg-force"
+EMULTILIB_PKG="true"
 
 S="${WORKDIR}/captury-${PV}/${PN}"
 
