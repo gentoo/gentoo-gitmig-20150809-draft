@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.169 2007/06/23 02:36:07 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.170 2007/07/01 20:10:16 flameeyes Exp $
+
+*shadow-4.0.18.1-r1 (01 Jul 2007)
+
+  01 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> +files/login.pamd.1,
+  +shadow-4.0.18.1-r1.ebuild:
+  Revision bump with a fixed pam.d/login file that actually honours stuff like
+  pam_nologin.
 
   23 Jun 2007; Daniel Drake <dsd@gentoo.org> shadow-4.0.18.1.ebuild:
   Add GPL to license, as vipw is GPL-licensed (bug #175257)
