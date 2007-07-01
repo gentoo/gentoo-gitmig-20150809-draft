@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.18.ebuild,v 1.4 2007/06/24 18:07:40 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.18.ebuild,v 1.5 2007/07/01 22:21:19 peper Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -19,9 +19,10 @@ SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 KEYWORDS=""
 IUSE=""
-RESTRICT="multilib-pkg-force"
 
 DEPEND=""
+
+EMULTILIB_PKG="true"
 
 setup_multilib() {
 	if use amd64 && has_m32 && [[ ${CONF_MULTILIBDIR} == "lib32" ]]; then
