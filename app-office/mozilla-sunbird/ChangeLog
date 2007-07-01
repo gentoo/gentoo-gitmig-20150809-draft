@@ -1,6 +1,9 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.12 2007/06/29 14:22:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.13 2007/07/01 15:27:28 pylon Exp $
+
+  01 Jul 2007; Lars Weiler <pylon@gentoo.org> mozilla-sunbird-0.5.ebuild:
+  Keyworded ~ppc; bug #183760.
 
 *mozilla-sunbird-0.5 (29 Jun 2007)
 
