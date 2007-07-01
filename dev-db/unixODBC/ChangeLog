@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.69 2007/06/29 12:56:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.70 2007/07/01 12:57:27 dertobi123 Exp $
+
+  01 Jul 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  unixODBC-2.2.12.ebuild:
+  hppa stable, bug #183194
 
   29 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   unixODBC-2.2.12.ebuild:
