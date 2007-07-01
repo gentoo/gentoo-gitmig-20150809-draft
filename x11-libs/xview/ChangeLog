@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.25 2007/07/01 20:29:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.26 2007/07/01 20:34:26 flameeyes Exp $
+
+  01 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Once again, with passion.
 
   01 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest to compensate  value in CVS header expansion.
