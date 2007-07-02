@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.14-r1.ebuild,v 1.1 2007/07/01 20:32:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.14-r1.ebuild,v 1.2 2007/07/02 11:42:15 flameeyes Exp $
 
 inherit ssl-cert eutils pam
 
@@ -71,7 +71,7 @@ src_install() {
 	newdoc conserver.cf/conserver.cf conserver.cf.sample
 
 	# Add pam config
-	newpamd ${FILESDIR}/conserver.pam-include-1 conserver
+	newpamd ${FILESDIR}/conserver.pam-include.1 conserver
 
 	# Add certs if SSL use flag is enabled
 	if use ssl && [ ! -f /etc/ssl/conserver/conserver.key ]; then
