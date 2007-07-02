@@ -1,6 +1,9 @@
 # ChangeLog for net-news/yarssr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/yarssr/ChangeLog,v 1.2 2007/05/15 14:08:03 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/yarssr/ChangeLog,v 1.3 2007/07/02 15:07:03 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> yarssr-0.2.2.ebuild:
+  (QA) RESTRICT clean up.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
