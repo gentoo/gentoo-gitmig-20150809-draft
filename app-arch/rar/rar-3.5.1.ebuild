@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.5.1.ebuild,v 1.7 2006/10/07 11:44:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.5.1.ebuild,v 1.8 2007/07/02 13:38:24 peper Exp $
 
 DESCRIPTION="RAR compressor/uncompressor"
 HOMEPAGE="http://www.rarsoft.com/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 RDEPEND="
 	sys-libs/glibc

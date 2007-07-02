@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/stuffit-5.2.0.611.ebuild,v 1.17 2007/01/23 15:43:01 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/stuffit-5.2.0.611.ebuild,v 1.18 2007/07/02 13:39:12 peper Exp $
 
 MY_P="stuffit520.611linux-i386"
 DESCRIPTION="Aladdin Software's StuffIt and StuffIt Expander"
@@ -16,7 +16,7 @@ RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
 S=${WORKDIR}
 INSTALLDIR="/opt/stuffit"
-RESTRICT="fetch nostrip"
+RESTRICT="fetch strip"
 
 pkg_nofetch() {
 	einfo "Please download stuffit from"

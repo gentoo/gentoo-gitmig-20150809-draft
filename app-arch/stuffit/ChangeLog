@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/stuffit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.16 2007/01/23 15:43:01 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.17 2007/07/02 13:39:12 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  stuffit-5.2.0.611.ebuild:
+  (QA) RESTRICT clean up.
 
   23 Jan 2007; Marius Mauch <genone@gentoo.org> stuffit-5.2.0.611.ebuild:
   Replacing einfo with elog
