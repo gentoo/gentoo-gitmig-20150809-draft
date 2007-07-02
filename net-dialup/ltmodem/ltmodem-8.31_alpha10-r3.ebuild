@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r3.ebuild,v 1.6 2007/05/02 08:27:40 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r3.ebuild,v 1.7 2007/07/02 14:45:03 peper Exp $
 
 inherit linux-mod eutils
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
 
-RESTRICT="nouserpriv"
+RESTRICT="userpriv"
 
 S="${WORKDIR}/${PN}-${MY_ALK_VER}"
 S_2_4="${WORKDIR}/${MY_P}"

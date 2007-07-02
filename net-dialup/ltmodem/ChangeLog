@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ltmodem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.34 2007/05/02 08:27:40 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.35 2007/07/02 14:45:03 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  ltmodem-8.31_alpha10-r3.ebuild:
+  (QA) RESTRICT clean up.
 
   02 May 2007; Marius Mauch <genone@gentoo.org>
   ltmodem-8.31_alpha10-r3.ebuild:
