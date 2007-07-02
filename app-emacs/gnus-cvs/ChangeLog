@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnus-cvs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/ChangeLog,v 1.16 2007/04/15 19:44:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/ChangeLog,v 1.17 2007/07/02 13:46:59 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> gnus-cvs-5.11.ebuild:
+  (QA) RESTRICT clean up.
 
   15 Apr 2007; Ulrich Mueller <ulm@gentoo.org> gnus-cvs-5.11.ebuild:
   Changed emake to einstall, corrected name of sitefile. Fixes bug #174237.

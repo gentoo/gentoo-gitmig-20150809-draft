@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.11.ebuild,v 1.12 2007/04/15 19:44:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.11.ebuild,v 1.13 2007/07/02 13:46:59 peper Exp $
 
 ECVS_SERVER="cvs.gnus.org:/usr/local/cvsroot"
 ECVS_MODULE="gnus"
@@ -18,7 +18,7 @@ LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
 IUSE=""
-RESTRICT="$RESTRICT nostrip"
+RESTRICT="$RESTRICT strip"
 
 DEPEND=""
 
