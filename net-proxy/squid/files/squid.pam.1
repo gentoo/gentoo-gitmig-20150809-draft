@@ -1,8 +1,8 @@
 #%PAM-1.0
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/files/squid.pam.1,v 1.1 2007/07/02 10:14:30 flameeyes Exp $
-auth       include		system-auth
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/files/squid.pam.1,v 1.2 2007/07/02 10:15:56 flameeyes Exp $
 auth       required		pam_nologin.so
+auth       include		system-auth
 account    include		system-auth
 password   include		system-auth
-session    include		system-auth
 session    optional		pam_limits.so
+session    include		system-auth
