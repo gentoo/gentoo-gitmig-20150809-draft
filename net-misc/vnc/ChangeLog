@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.83 2007/06/09 19:59:30 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.84 2007/07/02 19:47:07 armin76 Exp $
+
+  02 Jul 2007; Raúl Porcel <armin76@gentoo.org> vnc-4.1.2-r2.ebuild:
+  alpha stable wrt #175985
 
   09 Jun 2007; Joe Peterson <lavajoe@gentoo.org> vnc-4.1.2-r3.ebuild:
   Add ~x86-fbsd keyword (bug #178430)
