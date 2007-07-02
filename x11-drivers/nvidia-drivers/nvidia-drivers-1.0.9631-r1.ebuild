@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9631-r1.ebuild,v 1.3 2007/07/01 22:41:51 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9631-r1.ebuild,v 1.4 2007/07/02 14:51:49 peper Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic
 
@@ -19,7 +19,7 @@ LICENSE="NVIDIA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
 IUSE=""
-RESTRICT="nostrip"
+RESTRICT="strip"
 EMULTILIB_PKG="true"
 
 DEPEND="kernel_linux? ( virtual/linux-sources )"

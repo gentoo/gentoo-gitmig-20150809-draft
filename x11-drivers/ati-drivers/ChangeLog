@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.79 2007/07/01 22:50:47 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.80 2007/07/02 14:50:23 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  ati-drivers-8.27.10-r1.ebuild, ati-drivers-8.28.8.ebuild,
+  ati-drivers-8.28.8-r1.ebuild, ati-drivers-8.29.6.ebuild,
+  ati-drivers-8.30.3.ebuild, ati-drivers-8.30.3-r1.ebuild,
+  ati-drivers-8.32.5.ebuild, ati-drivers-8.33.6.ebuild,
+  ati-drivers-8.33.6-r1.ebuild:
+  (QA) RESTRICT clean up.
 
   01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   ati-drivers-8.27.10-r1.ebuild, ati-drivers-8.28.8.ebuild,

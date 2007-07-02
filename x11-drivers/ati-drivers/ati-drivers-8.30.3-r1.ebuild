@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.30.3-r1.ebuild,v 1.5 2007/07/01 22:50:47 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.30.3-r1.ebuild,v 1.6 2007/07/02 14:50:23 peper Exp $
 
 IUSE="acpi doc opengl"
 
@@ -30,7 +30,7 @@ PROVIDE="virtual/opengl"
 S="${WORKDIR}/common/lib/modules/fglrx/build_mod"
 
 ATIBIN="${D}/opt/ati/bin"
-RESTRICT="nostrip stricter"
+RESTRICT="strip"
 EMULTILIB_PKG="true"
 
 QA_EXECSTACK_x86="usr/lib/xorg/modules/dri/fglrx_dri.so"
