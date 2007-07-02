@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeartwork-icewm-themes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/ChangeLog,v 1.52 2007/05/22 21:51:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/ChangeLog,v 1.53 2007/07/02 15:13:21 coldwind Exp $
+
+  02 Jul 2007; Santiago M. Mola <coldwind@gentoo.org>
+  kdeartwork-icewm-themes-3.5.5.ebuild,
+  kdeartwork-icewm-themes-3.5.6.ebuild,
+  kdeartwork-icewm-themes-3.5.7.ebuild:
+  Add an elog about x11-themes/icewm-themes. bug #180946
 
 *kdeartwork-icewm-themes-3.5.7 (22 May 2007)
 

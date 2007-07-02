@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/kdeartwork-icewm-themes-3.5.6.ebuild,v 1.1 2007/01/16 19:53:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/kdeartwork-icewm-themes-3.5.6.ebuild,v 1.2 2007/07/02 15:13:21 coldwind Exp $
 
 ARTS_REQUIRED="never"
 RESTRICT="binchecks strip"
@@ -16,3 +16,8 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 DEPEND=""
 RDEPEND="$(deprange $PV $MAXKDEVER kde-base/kdeartwork-kwin-styles)"
+
+pkg_postinst() {
+	kde_pkg_postinst
+	elog "More IceWM themes are available installing x11-themes/icewm-themes"
+}
