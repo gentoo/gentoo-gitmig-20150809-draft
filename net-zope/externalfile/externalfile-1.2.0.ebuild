@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/externalfile/externalfile-1.2.0.ebuild,v 1.7 2006/01/27 02:32:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/externalfile/externalfile-1.2.0.ebuild,v 1.8 2007/07/02 15:22:04 peper Exp $
 
 inherit zproduct
 
@@ -11,7 +11,7 @@ SRC_URI="${HOMEPAGE}/${PV}/ExternalFile-${NEW_PV}.zip"
 
 LICENSE="ZPL"
 KEYWORDS="~ppc x86"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 RDEPEND="net-zope/zope"
 DEPEND="app-arch/unzip"
