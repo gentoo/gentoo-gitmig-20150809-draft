@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-3.0.1.ebuild,v 1.6 2006/10/05 14:38:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-3.0.1.ebuild,v 1.7 2007/07/02 15:11:12 peper Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 RDEPEND=">=virtual/jre-1.4.1"
 DEPEND="app-arch/unzip"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 IUSE="doc"
 
 pkg_nofetch() {

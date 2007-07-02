@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/its4
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/its4/ChangeLog,v 1.5 2007/02/09 13:20:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/its4/ChangeLog,v 1.6 2007/07/02 15:09:43 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> its4-1.1.1.ebuild:
+  (QA) RESTRICT clean up.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

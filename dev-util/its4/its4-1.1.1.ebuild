@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/its4/its4-1.1.1.ebuild,v 1.4 2005/04/24 12:58:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/its4/its4-1.1.1.ebuild,v 1.5 2007/07/02 15:09:43 peper Exp $
 
 DESCRIPTION="ITS4: Software Security Tool"
 HOMEPAGE="http://www.cigital.com/its4/"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 DEPEND="sys-devel/gcc virtual/libc"
-RESTRICT="nomirror fetch"
+RESTRICT="mirror fetch"
 #RDEPEND=""
 S="${WORKDIR}/${PN}"
 
