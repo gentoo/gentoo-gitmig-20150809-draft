@@ -1,6 +1,6 @@
---- configure.ok	2007-04-01 19:56:31.000000000 +0200
-+++ configure	2007-04-01 19:57:06.000000000 +0200
-@@ -4551,12 +4551,6 @@
+--- configure.old	2007-07-02 20:02:46.000000000 +0200
++++ configure	2007-07-02 20:04:14.000000000 +0200
+@@ -4552,12 +4552,6 @@
     fi
  fi
  
@@ -13,7 +13,7 @@
  # Check whether --enable-lang was given.
  if test "${enable_lang+set}" = set; then
    enableval=$enable_lang; if test "$enableval" = "no"; then
-@@ -4636,14 +4630,6 @@
+@@ -4637,11 +4631,6 @@
  
         perl_libs=`perl -MExtUtils::Embed -e ldopts`
  
@@ -21,9 +21,6 @@
 -       	  echo "creating script directory: $HOME/.dbhub/scripts"
 -       	  mkdir $HOME/.dbhub/scripts
 -	  chmod 700 $HOME/.dbhub/scripts;
--	  for i in Samplescripts/*; do
--	      cp $i $HOME/.dbhub/scripts;
--	  done
 -       fi
     fi
  else

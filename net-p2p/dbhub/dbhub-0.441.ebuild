@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/dbhub-0.440.ebuild,v 1.1 2007/05/17 14:10:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/dbhub-0.441.ebuild,v 1.1 2007/07/02 18:17:10 armin76 Exp $
 
 inherit eutils
 
@@ -32,6 +32,4 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-
-	dodoc Documentation/*
 }
