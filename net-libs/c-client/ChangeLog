@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.33 2007/05/18 12:21:16 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.34 2007/07/02 11:40:27 pylon Exp $
+
+  02 Jul 2007; Lars Weiler <pylon@gentoo.org> c-client-2004g.ebuild:
+  Stable on ppc; bug #183898.
 
   18 May 2007; Roy Marples <uberlord@gentoo.org> c-client-2004g.ebuild:
   Keyworded ~x86-fbsd, #138170 thanks to Nicholas Steicke.
