@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/cromwell-2.40-r2.ebuild,v 1.1 2005/10/26 08:19:09 gimli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/cromwell-2.40-r2.ebuild,v 1.2 2007/07/02 15:30:28 peper Exp $
 
 inherit eutils mount-boot
 
@@ -8,7 +8,7 @@ IUSE=""
 DESCRIPTION="Xbox boot loader"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://www.xbox-linux.org"
-RESTRICT="${RESTRICT} nostrip"
+RESTRICT="${RESTRICT} strip"
 DEPEND=""
 SLOT="0"
 LICENSE="GPL-2"

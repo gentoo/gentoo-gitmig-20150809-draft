@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.21.ebuild,v 1.1 2006/03/25 15:57:58 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.21.ebuild,v 1.2 2007/07/02 15:30:39 peper Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="-* ~mips"
 IUSE=""
 DEPEND=""
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 
 pkg_setup() {

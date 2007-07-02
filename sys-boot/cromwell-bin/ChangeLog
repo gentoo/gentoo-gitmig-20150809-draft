@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/cromwell-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell-bin/ChangeLog,v 1.4 2007/02/22 00:56:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell-bin/ChangeLog,v 1.5 2007/07/02 15:30:47 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  cromwell-bin-2.31.ebuild, cromwell-bin-2.40.ebuild:
+  (QA) RESTRICT clean up.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

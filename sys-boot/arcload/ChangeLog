@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/arcload
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.9 2006/09/05 19:13:18 kumba Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.10 2007/07/02 15:29:42 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> arcload-0.43-r1.ebuild,
+  arcload-0.50.ebuild:
+  (QA) RESTRICT clean up.
 
   05 Sep 2006; Joshua Kinard <kumba@gentoo.org> arcload-0.50.ebuild:
   Stablize.
