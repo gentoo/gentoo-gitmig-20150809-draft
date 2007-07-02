@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.25 2007/06/15 06:51:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.26 2007/07/02 15:14:53 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  foo2zjs-20070424.ebuild:
+  (QA) RESTRICT clean up.
 
   15 Jun 2007; Stefan Schweizer <genstef@gentoo.org>
   files/digest-foo2zjs-20070424, Manifest:
