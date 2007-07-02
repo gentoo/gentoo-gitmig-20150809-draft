@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7436 2007/07/02 16:15:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7437 2007/07/02 16:53:57 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (02 Jul 2007)
+# Orphaned library. Masked for removal in 30 days. Bug 153439.
+media-libs/allegromp3
 
 # Ulrich Mueller <ulm@gentoo.org> (02 Jul 2007)
 # Gnus alpha branch, obsolete since 2003. Last release was ognus-0.24
