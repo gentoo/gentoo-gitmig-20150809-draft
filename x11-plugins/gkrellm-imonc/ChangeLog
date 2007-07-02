@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-imonc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-imonc/ChangeLog,v 1.6 2007/04/26 19:12:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-imonc/ChangeLog,v 1.7 2007/07/02 15:02:02 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  gkrellm-imonc-0.2.ebuild:
+  (QA) RESTRICT clean up.
 
   26 Apr 2007; Raúl Porcel <armin76@gentoo.org> gkrellm-imonc-0.2.ebuild:
   x86 stable wrt #176144
