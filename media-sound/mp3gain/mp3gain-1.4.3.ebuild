@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/mp3gain-1.4.3.ebuild,v 1.9 2005/02/03 10:14:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/mp3gain-1.4.3.ebuild,v 1.10 2007/07/02 15:16:02 peper Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ DESCRIPTION="MP3Gain automatically adjusts mp3s so that they all have the same v
 HOMEPAGE="http://mp3gain.sourceforge.net"
 MY_P=${P//./_}
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}-src.zip"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 SLOT="0"
 LICENSE="LGPL-2.1"

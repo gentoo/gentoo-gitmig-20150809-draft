@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.14.ebuild,v 1.13 2005/12/26 15:19:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.14.ebuild,v 1.14 2007/07/02 15:14:10 peper Exp $
 
 IUSE="encode vorbis alsa"
 
 DESCRIPTION="IceCast live streamer delivering Ogg and mp3 streams simultaneously to multiple hosts."
 HOMEPAGE="http://darkice.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 SLOT="0"
 LICENSE="GPL-2"

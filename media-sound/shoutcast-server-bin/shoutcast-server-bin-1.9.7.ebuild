@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.7.ebuild,v 1.4 2007/06/26 02:15:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.7.ebuild,v 1.5 2007/07/02 15:17:45 peper Exp $
 
 IUSE=""
 
 inherit eutils
 
 SVER=${PV//./-}
-RESTRICT="fetch nostrip"
+RESTRICT="fetch strip"
 DESCRIPTION="${PN} is a network streaming server by Nullsoft."
 HOMEPAGE="http://www.shoutcast.com/download/license.phtml"
 SRC_URI="shoutcast-${SVER}-linux-glibc6.tar.gz"

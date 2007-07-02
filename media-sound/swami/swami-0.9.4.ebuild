@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/swami/swami-0.9.4.ebuild,v 1.1 2006/07/08 22:51:34 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/swami/swami-0.9.4.ebuild,v 1.2 2007/07/02 15:19:20 peper Exp $
 
 IUSE="alsa"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~ppc ~x86 ~amd64"
 
 # Swami plugins must not be stripped of symbols, so we handle it manually.
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 RDEPEND="
 	>=x11-libs/gtk+-1.2.10-r11

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.8.7.ebuild,v 1.6 2006/10/05 06:57:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.8.7.ebuild,v 1.7 2007/07/02 15:10:16 peper Exp $
 
 inherit multilib
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	sys-apps/sed"
 
 SRC_URI="mirror://sourceforge/alsamodular/${P}.tar.bz2"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 src_compile() {
 	emake QT_BASE_DIR="${QTDIR}" QT_LIB_DIR="${QTDIR}/$(get_libdir)" || die "Make failed."

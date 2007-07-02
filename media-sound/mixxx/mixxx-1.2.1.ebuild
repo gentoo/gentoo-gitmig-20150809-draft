@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.2.1.ebuild,v 1.11 2006/10/29 22:23:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.2.1.ebuild,v 1.12 2007/07/02 15:15:21 peper Exp $
 
 inherit qt3
 
@@ -9,7 +9,7 @@ IUSE="jack"
 DESCRIPTION="Digital DJ tool using QT 3.x"
 HOMEPAGE="http://mixxx.sourceforge.net"
 SRC_URI="mirror://sourceforge/mixxx/${P}.tar.gz"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 KEYWORDS="x86"

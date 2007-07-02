@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/darkice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.38 2007/04/06 18:21:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.39 2007/07/02 15:14:10 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> darkice-0.14.ebuild:
+  (QA) RESTRICT clean up.
 
   06 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   darkice-0.17.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.9.1.ebuild,v 1.4 2007/01/05 17:41:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.9.1.ebuild,v 1.5 2007/07/02 15:16:54 peper Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND="media-sound/lame
 	ncurses? ( sys-libs/ncurses )
 	gtk? ( =x11-libs/gtk+-1*
 	>=dev-libs/glib-1 )"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 
 src_unpack() {

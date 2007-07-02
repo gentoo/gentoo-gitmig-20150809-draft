@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mixxx
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.33 2006/11/05 21:59:07 aballier Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.34 2007/07/02 15:15:21 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> mixxx-1.2.1.ebuild:
+  (QA) RESTRICT clean up.
 
   05 Nov 2006; Alexis Ballier <aballier@gentoo.org> mixxx-1.4.2.ebuild:
   Manually installing files to prevent sandbox violation wrt bug #132390,

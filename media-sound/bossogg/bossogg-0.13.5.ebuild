@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.5.ebuild,v 1.10 2007/04/28 19:04:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.5.ebuild,v 1.11 2007/07/02 15:13:45 peper Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ IUSE="vorbis mad"
 DESCRIPTION="Bossogg Music Server"
 HOMEPAGE="http://bossogg.wishy.org"
 SRC_URI="mirror://sourceforge/bossogg/${P}.tar.gz"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 KEYWORDS="x86 ~ppc"
 SLOT="0"

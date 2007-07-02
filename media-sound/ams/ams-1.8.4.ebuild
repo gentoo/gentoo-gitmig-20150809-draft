@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.8.4.ebuild,v 1.6 2005/09/09 13:14:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.8.4.ebuild,v 1.7 2007/07/02 15:10:16 peper Exp $
 
 DESCRIPTION="Alsa Modular Software Synthesizer"
 HOMEPAGE="http://alsamodular.sourceforge.net"
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 	sys-apps/sed"
 
 SRC_URI="mirror://sourceforge/alsamodular/${P}.tar.bz2"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 src_unpack() {
 	unpack ${A} || die

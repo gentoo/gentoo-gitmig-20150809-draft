@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.17 2007/01/10 19:48:01 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.18 2007/07/02 15:14:34 peper Exp $
 
 IUSE="nls vorbis debug alsa"
 
@@ -9,7 +9,7 @@ inherit eutils
 DESCRIPTION="an audio file editing utility"
 HOMEPAGE="http://glame.sourceforge.net/"
 SRC_URI="mirror://sourceforge/glame/${P}.tar.gz"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
