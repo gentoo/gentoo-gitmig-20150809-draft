@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.12-r2.ebuild,v 1.2 2007/03/20 19:26:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.12-r2.ebuild,v 1.3 2007/07/02 16:55:35 cardoe Exp $
 
 inherit eutils perl-app
 
@@ -469,15 +469,13 @@ pkg_postinst() {
 	einfo "Asterisk has been installed"
 	einfo ""
 	elog "to add new Mailboxes use: /usr/sbin/addmailbox"
-	echo
+	elog
 	elog "If you want to know more about asterisk, visit these sites:"
 	elog "http://www.asteriskdocs.org/"
 	elog "http://www.voip-info.org/wiki-Asterisk"
-	echo
-	elog "http://asterisk.xvoip.com/"
-	elog "http://junghanns.net/asterisk/"
+	elog
 	elog "http://www.automated.it/guidetoasterisk.htm"
-	echo
+	elog
 	elog "Gentoo VoIP IRC Channel:"
 	elog "#gentoo-voip @ irc.freenode.net"
 

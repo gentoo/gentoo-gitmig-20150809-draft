@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.163 2007/05/01 09:18:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.164 2007/07/02 16:55:35 cardoe Exp $
+
+  02 Jul 2007; Doug Goldstein <cardoe@gentoo.org> asterisk-1.0.12-r2.ebuild,
+  asterisk-1.2.13.ebuild, asterisk-1.2.13-r1.ebuild, asterisk-1.2.14.ebuild,
+  asterisk-1.2.14-r1.ebuild, asterisk-1.2.14-r2.ebuild,
+  asterisk-1.2.17.ebuild:
+  Remove sites that no longer exist and are now spam havens
 
   01 May 2007; Raúl Porcel <armin76@gentoo.org> asterisk-1.2.17.ebuild:
   x86 stable wrt security bug 175960
