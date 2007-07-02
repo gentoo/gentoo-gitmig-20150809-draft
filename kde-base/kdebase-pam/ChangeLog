@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-pam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.35 2007/07/02 15:09:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.36 2007/07/02 17:52:38 philantrop Exp $
+
+  02 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org> kdebase-pam-7.ebuild:
+  Marked stable on amd64 as per bug 183887.
 
   02 Jul 2007; Raúl Porcel <armin76@gentoo.org> kdebase-pam-7.ebuild:
   alpha/ia64/x86 stable wrt #183887
