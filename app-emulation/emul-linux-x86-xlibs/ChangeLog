@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.60 2007/03/10 12:20:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.61 2007/07/02 13:58:24 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  emul-linux-x86-xlibs-7.0-r8.ebuild:
+  (QA) RESTRICT clean up.
 
   10 Mar 2007; Simon Stelling <blubb@gentoo.org> ChangeLog:
   repair ChangeLog

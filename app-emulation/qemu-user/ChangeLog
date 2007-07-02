@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.29 2007/05/20 08:36:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.30 2007/07/02 14:02:43 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> qemu-user-0.8.0.ebuild,
+  qemu-user-0.8.0.20060329.ebuild, qemu-user-0.8.1.ebuild,
+  qemu-user-0.8.2.ebuild, qemu-user-0.9.0.ebuild:
+  (QA) RESTRICT clean up.
 
   20 May 2007; Christian Faulhammer <opfer@gentoo.org>
   qemu-user-0.9.0.ebuild:

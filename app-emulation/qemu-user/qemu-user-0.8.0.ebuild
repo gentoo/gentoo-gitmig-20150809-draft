@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.8.0.ebuild,v 1.9 2006/05/06 08:52:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.8.0.ebuild,v 1.10 2007/07/02 14:02:43 peper Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="-alpha amd64 ppc -sparc x86"
 IUSE=""  #qvm86 debug nptl qemu-fast nptlonly"
-RESTRICT="nostrip test"
+RESTRICT="strip test"
 
 DEPEND="virtual/libc
 	app-text/texi2html

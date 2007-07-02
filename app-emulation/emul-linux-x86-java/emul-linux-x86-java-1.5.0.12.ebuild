@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.5.0.12.ebuild,v 1.1 2007/06/11 18:15:28 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.5.0.12.ebuild,v 1.2 2007/07/02 13:54:09 peper Exp $
 
 inherit pax-utils eutils java-vm-2
 
@@ -15,7 +15,7 @@ SRC_URI="http://download.java.net/dlj/binaries/${At}"
 SLOT="1.5"
 LICENSE="dlj-1.1"
 KEYWORDS="-* ~amd64"
-RESTRICT="nostrip"
+RESTRICT="strip"
 IUSE="X alsa nsplugin"
 
 JAVA_VM_NO_GENERATION1=true

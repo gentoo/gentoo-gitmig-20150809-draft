@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-compat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.17 2007/03/02 15:07:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.18 2007/07/02 13:51:36 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  emul-linux-x86-compat-1.0-r1.ebuild, emul-linux-x86-compat-1.0-r3.ebuild:
+  (QA) RESTRICT clean up.
 
   02 Mar 2007; Simon Stelling <blubb@gentoo.org>
   -emul-linux-x86-compat-1.0-r2.ebuild, emul-linux-x86-compat-1.0-r3.ebuild:

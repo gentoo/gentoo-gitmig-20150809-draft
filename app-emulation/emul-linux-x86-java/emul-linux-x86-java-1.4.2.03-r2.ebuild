@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r2.ebuild,v 1.4 2007/05/07 15:51:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r2.ebuild,v 1.5 2007/07/02 13:54:09 peper Exp $
 
 inherit multilib java-vm-2 versionator
 
@@ -34,7 +34,7 @@ pkg_setup() {
 	java-vm-2_pkg_setup
 }
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 # Extract the 'skip' value (offset of tarball) we should pass to tail
 get_offset() {

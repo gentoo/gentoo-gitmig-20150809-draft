@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-7.0-r8.ebuild,v 1.3 2007/02/16 10:28:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-7.0-r8.ebuild,v 1.4 2007/07/02 13:58:24 peper Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_trident
 	video_cards_via"
 IUSE="opengl ${IUSE_VIDEO_CARDS}"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 QA_TEXTRELS_amd64="emul/linux/x86/usr/lib/opengl/xorg-x11/lib/libGL.so.1.2"
 QA_EXECSTACK_amd64="emul/linux/x86/usr/lib/opengl/xorg-x11/lib/libGL.so.1.2"

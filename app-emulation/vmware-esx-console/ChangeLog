@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-esx-console
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/ChangeLog,v 1.3 2007/03/04 06:46:04 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/ChangeLog,v 1.4 2007/07/02 14:03:32 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  vmware-esx-console-2.5.2.16390.ebuild,
+  vmware-esx-console-2.5.3.24171.ebuild:
+  (QA) RESTRICT clean up.
 
   04 Mar 2007; Marius Mauch <genone@gentoo.org>
   vmware-esx-console-2.5.3.24171.ebuild:

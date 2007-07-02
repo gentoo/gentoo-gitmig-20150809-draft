@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-2.10.6.3.ebuild,v 1.2 2006/12/07 04:03:31 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-2.10.6.3.ebuild,v 1.3 2007/07/02 13:52:36 peper Exp $
 
 DESCRIPTION="Gtk+ 1/2 for emulation of 32bit x86 on amd64"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
@@ -24,7 +24,7 @@ RDEPEND=">=app-emulation/emul-linux-x86-xlibs-7.0-r3
 	>=x11-themes/gtk-engines-2.8
 	qt3? ( >=app-emulation/emul-linux-x86-qtlibs-3.4.4 )"
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 src_install() {
 	# Avoid dep on qtlibs if qt support not required

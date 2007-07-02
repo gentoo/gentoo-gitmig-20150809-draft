@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-3.4.4-r5.ebuild,v 1.1 2007/02/04 12:49:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-3.4.4-r5.ebuild,v 1.2 2007/07/02 13:55:46 peper Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 IUSE="immqt-bc"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 RDEPEND="virtual/libc
 	>=app-emulation/emul-linux-x86-baselibs-2.5.5-r2

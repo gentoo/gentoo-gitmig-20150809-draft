@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/parallels-workstation/parallels-workstation-2.2.2112-r1.ebuild,v 1.1 2007/05/16 19:04:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/parallels-workstation/parallels-workstation-2.2.2112-r1.ebuild,v 1.2 2007/07/02 14:00:27 peper Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.parallels.com/GA/Parallels-${PV}-lin.tgz"
 LICENSE="Parallels"
 SLOT="0"
 KEYWORDS="-* x86"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 DEPEND="virtual/os-headers
 	=x11-libs/qt-3*

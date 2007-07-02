@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/vmware-esx-console-2.5.2.16390.ebuild,v 1.2 2006/01/31 21:34:19 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/vmware-esx-console-2.5.2.16390.ebuild,v 1.3 2007/07/02 14:03:32 peper Exp $
 
 MY_PN="VMware-console-2.5.2-16390.tar.gz"
 S="${WORKDIR}/vmware-console-distrib"
@@ -13,7 +13,7 @@ LICENSE="vmware-console"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-RESTRICT="fetch nostrip"
+RESTRICT="fetch strip"
 
 DEPEND="virtual/libc"
 

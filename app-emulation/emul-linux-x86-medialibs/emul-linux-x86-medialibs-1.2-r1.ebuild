@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-1.2-r1.ebuild,v 1.2 2007/02/16 15:50:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-1.2-r1.ebuild,v 1.3 2007/07/02 13:55:03 peper Exp $
 
 DESCRIPTION="Media libraries for emulation of 32bit x86 on amd64"
 HOMEPAGE="http://www.gentoo.org/"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* amd64"
 IUSE=""
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 RDEPEND=">=app-emulation/emul-linux-x86-baselibs-2.5.5-r1
 	>=app-emulation/emul-linux-x86-soundlibs-2.5-r1"

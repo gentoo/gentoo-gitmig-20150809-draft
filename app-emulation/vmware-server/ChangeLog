@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.23 2007/05/07 18:06:36 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.24 2007/07/02 14:07:59 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  vmware-server-1.0.3.44356.ebuild:
+  (QA) RESTRICT clean up.
 
 *vmware-server-1.0.3.44356 (07 May 2007)
 
