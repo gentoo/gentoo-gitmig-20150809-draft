@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gift-openft
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.38 2007/04/20 14:08:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.39 2007/07/02 15:09:42 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  gift-openft-0.2.1.6.ebuild:
+  (QA) RESTRICT clean up.
 
   20 Apr 2007; Raúl Porcel <armin76@gentoo.org> gift-openft-0.2.1.6.ebuild:
   ia64 stable

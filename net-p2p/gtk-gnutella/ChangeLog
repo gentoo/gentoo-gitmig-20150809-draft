@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.75 2007/05/13 14:02:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.76 2007/07/02 15:11:34 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  gtk-gnutella-0.96.3.ebuild:
+  (QA) RESTRICT clean up.
 
   13 May 2007; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   Add myself explicitly as maintainer as I'm leaving the herd

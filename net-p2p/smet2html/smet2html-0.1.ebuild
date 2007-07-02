@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/smet2html/smet2html-0.1.ebuild,v 1.5 2004/07/01 09:40:26 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/smet2html/smet2html-0.1.ebuild,v 1.6 2007/07/02 15:13:45 peper Exp $
 
 DESCRIPTION="Convert eDonkey2000 server.met to html"
 HOMEPAGE="http://ed2k-tools.sourceforge.net/${PN}.shtml"
 SRC_URI="mirror://sourceforge/ed2k-tools/${P}.tar.gz"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.96.3.ebuild,v 1.7 2007/04/23 20:28:11 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.96.3.ebuild,v 1.8 2007/07/02 15:11:34 peper Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ IUSE="nls dbus gnutls sqlite3"
 
 DESCRIPTION="A GTK+ Gnutella client"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 HOMEPAGE="http://gtk-gnutella.sourceforge.net/"
 
 SLOT="0"
