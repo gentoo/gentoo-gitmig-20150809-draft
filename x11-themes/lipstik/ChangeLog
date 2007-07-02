@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/lipstik
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.23 2007/06/04 15:27:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lipstik/ChangeLog,v 1.24 2007/07/02 15:06:52 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> lipstik-2.2.ebuild,
+  lipstik-2.2.2.ebuild:
+  (QA) RESTRICT clean up.
 
   04 Jun 2007; Brent Baude <ranger@gentoo.org> lipstik-2.2.2.ebuild:
   Marking lipstik-2.2.2.ebuild ppc and ppc64 stable for bug#180716

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/thinkeramik-3.2.1.ebuild,v 1.14 2006/11/28 01:03:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/thinkeramik-3.2.1.ebuild,v 1.15 2007/07/02 15:08:00 peper Exp $
 
 ARTS_REQUIRED="never"
 
@@ -9,7 +9,7 @@ inherit kde
 DESCRIPTION="A cool kde style modified from keramik"
 SRC_URI="http://prefsx1.hp.infoseek.co.jp/tk040429/${P}.tar.gz"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=10919"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"

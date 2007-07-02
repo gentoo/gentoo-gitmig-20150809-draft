@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/amsn-skins-20061125.ebuild,v 1.8 2007/04/30 14:14:08 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/amsn-skins-20061125.ebuild,v 1.9 2007/07/02 15:03:46 peper Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Collection of AMSN themes"
@@ -38,7 +38,7 @@ SRC_URI="${THEME_URI}/aMac.zip
 	${THEME_URI}/Unified-0.95.zip
 	${THEME_URI}/Windows_Classic-1.0.zip
 	${THEME_URI}/WinMSN7-1.0.zip"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 SLOT="0"
 LICENSE="freedist"
 KEYWORDS="alpha amd64 ppc x86"

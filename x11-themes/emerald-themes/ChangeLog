@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/emerald-themes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/emerald-themes/ChangeLog,v 1.8 2007/05/15 20:43:13 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/emerald-themes/ChangeLog,v 1.9 2007/07/02 15:04:50 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  emerald-themes-0.1.3.ebuild:
+  (QA) RESTRICT clean up.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
