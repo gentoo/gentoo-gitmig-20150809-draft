@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wdm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.25 2007/07/02 10:28:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.26 2007/07/02 13:32:45 pylon Exp $
+
+  02 Jul 2007; Lars Weiler <pylon@gentoo.org> wdm-1.28-r1.ebuild:
+  Stable on ppc; bug #183961.
 
 *wdm-1.28-r1 (02 Jul 2007)
 
