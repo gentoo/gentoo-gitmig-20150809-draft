@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/moagg-0.18.ebuild,v 1.2 2005/05/06 10:04:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/moagg-0.18.ebuild,v 1.3 2007/07/02 19:23:28 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="MOAGG (Mother Of All Gravity Games) combines several different gravity-type games"
 HOMEPAGE="http://moagg.sourceforge.net"
@@ -14,18 +14,18 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.2.6
-	>=media-libs/sdl-mixer-1.2.4
-	>=media-libs/sdl-gfx-2.0.8
-	>=media-libs/freetype-2.1.4
-	sys-libs/zlib
-	>=dev-libs/expat-1.95.6
+DEPEND="media-libs/libsdl
+	media-libs/sdl-mixer
+	media-libs/sdl-gfx
+	>=media-libs/freetype-2.3
+	dev-libs/expat
 	=media-libs/paragui-1.0*
 	!>=media-libs/paragui-1.1"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc42.patch
 	# We don't want the docs inside ${GAMES_DATADIR}/doc, so we don't
 	# let "make install" do the doc install.
 	sed -i \
@@ -46,7 +46,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO doc/*.tex
 	prepgamesdirs
 }
