@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lsscsi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.21 2007/07/02 11:35:29 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.22 2007/07/02 12:40:32 gustavoz Exp $
+
+  02 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> lsscsi-0.19.ebuild:
+  Stable on sparc wrt #183932
 
   02 Jul 2007; Lars Weiler <pylon@gentoo.org> lsscsi-0.19.ebuild:
   Stable on ppc; bug #183932.
