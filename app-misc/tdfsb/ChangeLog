@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/tdfsb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.16 2007/05/14 16:47:40 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.17 2007/07/02 19:01:56 angelos Exp $
+
+*tdfsb-0.0.10 (02 Jul 2007)
+
+  02 Jul 2007; Christoph Mende <angelos@gentoo.org> metadata.xml,
+  +tdfsb-0.0.10.ebuild:
+  Taking over maintainership and version bump, bug #182973
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
