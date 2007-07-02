@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.73 2007/06/19 21:31:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.74 2007/07/02 21:39:29 armin76 Exp $
+
+*enigmail-0.95.2 (02 Jul 2007)
+*enigmail-0.94.4 (02 Jul 2007)
+
+  02 Jul 2007; Raúl Porcel <armin76@gentoo.org> +enigmail-0.94.4.ebuild,
+  +enigmail-0.95.2.ebuild:
+  Version bump
 
   19 Jun 2007; Raúl Porcel <armin76@gentoo.org> enigmail-0.95.0.ebuild:
   Build 0.95.0 with 2.0.0.4
