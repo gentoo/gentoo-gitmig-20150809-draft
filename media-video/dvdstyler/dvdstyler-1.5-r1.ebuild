@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.5-r1.ebuild,v 1.1 2007/06/19 07:22:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.5-r1.ebuild,v 1.2 2007/07/02 06:49:58 dragonheart Exp $
 
 inherit eutils wxwidgets
 
@@ -20,6 +20,7 @@ RDEPEND="app-cdr/dvd+rw-tools
 	media-video/mpgtx
 	>=media-video/mjpegtools-1.8.0
 	=x11-libs/wxGTK-2.6*
+	media-libs/netpbm
 	>=media-libs/wxsvg-1.0_beta7
 	virtual/cdrtools
 	virtual/libc

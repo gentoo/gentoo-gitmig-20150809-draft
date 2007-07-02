@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdstyler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.24 2007/06/19 07:22:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.25 2007/07/02 06:49:58 dragonheart Exp $
+
+  02 Jul 2007; Daniel Black <dragonheart@gentoo.org>
+  dvdstyler-1.5-r1.ebuild:
+  addded missing media-libs/netpbm dependency as per bug #183848 thanks to
+  Paulo Aragao
 
 *dvdstyler-1.5-r1 (19 Jun 2007)
 
