@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2006.11.13.ebuild,v 1.5 2007/06/25 12:57:12 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2006.11.13.ebuild,v 1.6 2007/07/02 15:21:39 peper Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -15,7 +15,7 @@ DEPEND="dvb_cards_sp887x? ( ${UNSHIELD_DEPEND} )"
 
 RDEPEND=""
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 S="${WORKDIR}"
 

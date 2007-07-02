@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/pvr-firmware/pvr-firmware-20070217.ebuild,v 1.1 2007/02/19 22:52:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/pvr-firmware/pvr-firmware-20070217.ebuild,v 1.2 2007/07/02 15:22:13 peper Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ivtvdriver.org/index.php/Firmware"
 
 SRC_URI="http://dl.ivtvdriver.org/ivtv/firmware/firmware-${PV}.tar.gz"
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 SLOT="0"
 LICENSE="Hauppauge-Firmware"
 KEYWORDS="amd64 ppc x86"
