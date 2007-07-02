@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.80 2007/06/12 13:14:46 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.81 2007/07/02 14:56:57 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> vpopmail-5.4.16.ebuild:
+  (QA) RESTRICT clean up.
 
   12 Jun 2007; Marius Mauch <genone@gentoo.org> vpopmail-5.4.16.ebuild:
   Replacing einfo with elog

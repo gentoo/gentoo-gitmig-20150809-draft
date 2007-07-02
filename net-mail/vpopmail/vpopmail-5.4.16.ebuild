@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.16.ebuild,v 1.13 2007/06/12 13:14:46 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.16.ebuild,v 1.14 2007/07/02 14:56:57 peper Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="amd64 arm hppa ppc s390 sh sparc x86"
 IUSE="mysql ipalias clearpasswd"
 # vpopmail will NOT build if non-root.
-RESTRICT="nouserpriv"
+RESTRICT="userpriv"
 
 DEPEND_COMMON="virtual/qmail
 	mysql? ( virtual/mysql )"
