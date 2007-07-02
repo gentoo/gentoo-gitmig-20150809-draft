@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.99_rc10.ebuild,v 1.3 2007/07/02 12:40:56 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.99_rc10.ebuild,v 1.4 2007/07/02 19:05:52 opfer Exp $
 
 inherit distutils eutils multilib subversion
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://pymol.sourceforge.net/"
 LICENSE="PSF-2.2"
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 
 DEPEND="dev-lang/python
 dev-python/pmw

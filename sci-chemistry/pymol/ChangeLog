@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.28 2007/07/02 12:40:56 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.29 2007/07/02 19:05:52 opfer Exp $
+
+  02 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  pymol-0.99_rc10.ebuild:
+  stable x86, bug 183879
 
   02 Jul 2007; Lars Weiler <pylon@gentoo.org> pymol-0.99_rc10.ebuild:
   Stable on ppc; bug #183879.
