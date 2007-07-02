@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/python-irclib-0.4.6.ebuild,v 1.1 2006/10/22 20:28:52 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/python-irclib-0.4.6.ebuild,v 1.2 2007/07/02 15:05:52 peper Exp $
 
 inherit distutils
 
 DESCRIPTION="IRC client framework written in Python."
 HOMEPAGE="http://python-irclib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 LICENSE="LGPL-2.1"
 
 SLOT="0"
