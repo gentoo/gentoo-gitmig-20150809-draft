@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qjackconnect
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/ChangeLog,v 1.19 2007/06/29 14:23:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/ChangeLog,v 1.20 2007/07/02 15:16:42 flameeyes Exp $
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Hand to newly-born proaudio herd.
 
   29 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
   qjackconnect-0.0.3b-r1.ebuild:

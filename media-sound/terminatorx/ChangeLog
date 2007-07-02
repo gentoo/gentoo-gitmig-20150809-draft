@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/terminatorx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.22 2007/02/15 07:55:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.23 2007/07/02 15:20:40 flameeyes Exp $
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Hand to newly-born proaudio herd.
 
   15 Feb 2007; Alexis Ballier <aballier@gentoo.org> terminatorx-3.82.ebuild:
   add desktop entry, bug #94667

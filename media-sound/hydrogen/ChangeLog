@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.48 2007/02/17 00:52:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.49 2007/07/02 15:11:47 flameeyes Exp $
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Hand to newly-born proaudio herd.
 
   17 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> hydrogen-0.9.2.ebuild,
   hydrogen-0.9.3.ebuild, hydrogen-0.9.3-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.46 2007/06/20 13:58:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.47 2007/07/02 15:18:49 flameeyes Exp $
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Hand to newly-born proaudio herd.
 
 *rosegarden-1.5.1 (20 Jun 2007)
 

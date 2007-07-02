@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/protux
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.23 2007/03/03 16:11:10 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.24 2007/07/02 15:16:09 flameeyes Exp $
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Hand to newly-born proaudio herd.
 
 *protux-0.50.100 (03 Mar 2007)
 

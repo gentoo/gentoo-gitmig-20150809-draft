@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.42 2007/03/30 21:14:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.43 2007/07/02 15:18:00 flameeyes Exp $
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Hand to newly-born proaudio herd.
 
   30 Mar 2007; Alexis Ballier <aballier@gentoo.org>
   rezound-0.12.2_beta-r2.ebuild, rezound-0.12.3_beta.ebuild:

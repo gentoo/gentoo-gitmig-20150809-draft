@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jamin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/ChangeLog,v 1.21 2007/03/09 04:36:09 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/ChangeLog,v 1.22 2007/07/02 15:14:52 flameeyes Exp $
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Hand to newly-born proaudio herd.
 
   09 Mar 2007; Steve Dibb <beandog@gentoo.org> jamin-0.95.0-r2.ebuild:
   amd64 stable, bug 154460

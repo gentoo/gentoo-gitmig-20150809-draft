@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.24 2007/06/29 14:40:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.25 2007/07/02 15:14:18 flameeyes Exp $
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Hand to newly-born proaudio herd.
 
   29 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
   +files/jack-rack-1.4.5-asneeded.patch, jack-rack-1.4.5.ebuild:

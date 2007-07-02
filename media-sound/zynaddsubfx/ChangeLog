@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/zynaddsubfx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.26 2007/06/16 12:00:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.27 2007/07/02 15:22:19 flameeyes Exp $
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Hand to newly-born proaudio herd.
 
 *zynaddsubfx-2.2.1-r3 (16 Jun 2007)
 
