@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.1.0.ebuild,v 1.6 2007/05/12 04:34:26 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.1.0.ebuild,v 1.7 2007/07/02 14:38:00 peper Exp $
 
 # Source: http://bugs.gentoo.org/show_bug.cgi?id=50035
 # Submitted-By: SteveB <tp22a@softhome.net>
 # Reviewed-By: wrobel 2005-12-14
-# $Id: postfixadmin-2.1.0.ebuild,v 1.6 2007/05/12 04:34:26 chtekk Exp $
+# $Id: postfixadmin-2.1.0.ebuild,v 1.7 2007/07/02 14:38:00 peper Exp $
 
 inherit eutils webapp
 
@@ -13,7 +13,7 @@ IUSE="vhosts"
 DESCRIPTION="Postfix Admin is a Web Based Management tool for Postfix when you are dealing with Postfix Style Virtual Domains and Virtual Users that are stored in MySQL."
 HOMEPAGE="http://high5.net/postfixadmin/"
 SRC_URI="http://high5.net/page7_files/${PN}-${PV}.tgz"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="virtual/httpd-php

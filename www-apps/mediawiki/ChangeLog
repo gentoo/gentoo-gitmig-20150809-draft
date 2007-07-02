@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.83 2007/05/10 09:18:31 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.84 2007/07/02 14:36:56 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  mediawiki-1.6.10.ebuild, mediawiki-1.8.3.ebuild, mediawiki-1.8.4.ebuild,
+  mediawiki-1.9.0.ebuild, mediawiki-1.9.1.ebuild, mediawiki-1.9.2.ebuild,
+  mediawiki-1.9.3.ebuild, mediawiki-1.10.0_rc1.ebuild,
+  mediawiki-1.10.0.ebuild:
+  (QA) RESTRICT clean up.
 
   10 May 2007; Christian Parpart <trapni@gentoo.org>
   -mediawiki-1.6.9.ebuild, -mediawiki-1.7.2.ebuild, -mediawiki-1.7.3.ebuild:
