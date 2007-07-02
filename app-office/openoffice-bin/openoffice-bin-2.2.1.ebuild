@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.2.1.ebuild,v 1.3 2007/06/15 15:35:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.2.1.ebuild,v 1.4 2007/07/02 14:19:41 peper Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -48,7 +48,7 @@ DEPEND="${RDEPEND}
 	sys-apps/findutils"
 
 PROVIDE="virtual/ooo"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 QA_EXECSTACK="usr/lib/openoffice/program/*"
 QA_TEXTRELS="usr/lib/openoffice/program/libvclplug_gen680li.so.1.1 \
