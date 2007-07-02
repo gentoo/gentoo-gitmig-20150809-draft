@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.7_pre4.ebuild,v 1.1 2007/01/25 15:38:57 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.7_pre4.ebuild,v 1.2 2007/07/02 13:36:26 peper Exp $
 
 inherit eutils multilib
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 # EI_PAX flags are not strip safe.
-RESTRICT="nostrip"
+RESTRICT="strip"
 S=${WORKDIR}/${MY_P}
 
 RDEPEND=""

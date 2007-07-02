@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.5-r1.ebuild,v 1.11 2005/01/01 11:17:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.5-r1.ebuild,v 1.12 2007/07/02 13:36:26 peper Exp $
 
 inherit eutils
 
 # pax flags are not strip safe.
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 DESCRIPTION="PaX regression test suite"
 HOMEPAGE="http://pageexec.virtualave.net/"

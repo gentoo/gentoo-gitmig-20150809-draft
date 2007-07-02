@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/flexlm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.14 2007/05/13 08:08:11 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.15 2007/07/02 13:34:02 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> flexlm-9.5-r1.ebuild:
+  (QA) RESTRICT clean up.
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add herd
