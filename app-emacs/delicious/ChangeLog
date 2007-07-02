@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/delicious
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/ChangeLog,v 1.4 2007/04/06 10:25:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/ChangeLog,v 1.5 2007/07/02 06:39:42 opfer Exp $
+
+*delicious-0.3-r1 (02 Jul 2007)
+
+  02 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  +delicious-0.3-r1.ebuild:
+  using new-style virtual dependency; make use of DOCS variable
 
   06 Apr 2007; Christian Faulhammer <opfer@gentoo.org> delicious-0.3.ebuild:
   used the correct elisp functions, so it has not to be adjust to new releases
