@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919-r1.ebuild,v 1.10 2006/11/26 22:03:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919-r1.ebuild,v 1.11 2007/07/02 15:04:42 peper Exp $
 
 inherit rpm font
 
-RESTRICT="nomirror strip binchecks"
+RESTRICT="mirror strip binchecks"
 
 RPM_V=1.0
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/hkscs-ming
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/ChangeLog,v 1.10 2006/11/26 22:03:35 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/ChangeLog,v 1.11 2007/07/02 15:04:42 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  hkscs-ming-1.0_pre20030919-r1.ebuild:
+  (QA) RESTRICT clean up.
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   hkscs-ming-1.0_pre20030919-r1.ebuild:

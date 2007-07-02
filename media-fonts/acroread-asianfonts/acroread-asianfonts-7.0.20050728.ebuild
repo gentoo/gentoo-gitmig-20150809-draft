@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-7.0.20050728.ebuild,v 1.5 2007/04/11 06:29:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-7.0.20050728.ebuild,v 1.6 2007/07/02 15:03:37 peper Exp $
 
 BASE_URI="ftp://ftp.adobe.com/pub/adobe/reader/unix/7x/7.0/misc"
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="Adobe"
 KEYWORDS=""
 IUSE="linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 DEPEND="=app-text/acroread-7*"
 

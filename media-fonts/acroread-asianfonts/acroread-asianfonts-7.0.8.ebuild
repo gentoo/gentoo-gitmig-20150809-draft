@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-7.0.8.ebuild,v 1.4 2007/04/11 06:29:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-7.0.8.ebuild,v 1.5 2007/07/02 15:03:37 peper Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ SLOT="0"
 LICENSE="Adobe"
 KEYWORDS="~amd64 x86"
 IUSE="linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 DEPEND=">=app-text/acroread-7.0.8"
 

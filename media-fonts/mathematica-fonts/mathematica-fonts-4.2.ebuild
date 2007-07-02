@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-4.2.ebuild,v 1.6 2007/03/19 14:47:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-4.2.ebuild,v 1.7 2007/07/02 15:05:36 peper Exp $
 
 inherit font
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="truetype"
 DEPEND="app-arch/unzip"
 RDEPEND=""
-RESTRICT="fetch nomirror"
+RESTRICT="fetch mirror"
 S=${WORKDIR}/
 FONT_S=${S}
 
