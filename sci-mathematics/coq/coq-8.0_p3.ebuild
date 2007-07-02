@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.0_p3.ebuild,v 1.5 2006/09/24 09:16:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.0_p3.ebuild,v 1.6 2007/07/02 15:26:46 peper Exp $
 
 inherit eutils
 
 IUSE="norealanalysis ide debug translator doc"
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 MY_PV="${PV/_p/pl}"
 MY_P="${PN}-${MY_PV}"

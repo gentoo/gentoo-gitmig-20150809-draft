@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mupad/mupad-2.5.2-r2.ebuild,v 1.4 2005/12/22 00:18:52 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mupad/mupad-2.5.2-r2.ebuild,v 1.5 2007/07/02 15:26:51 peper Exp $
 
 inherit versionator
 
@@ -10,7 +10,7 @@ INSTDIR="/usr/lib/mupad"
 INSTBINDIR="${INSTDIR}/share/bin"
 BINDIR="/usr/bin"
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 DESCRIPTION="MuPAD is an open computer algebra system"
 HOMEPAGE="http://www.mupad.de/index_uni.shtml"
 
