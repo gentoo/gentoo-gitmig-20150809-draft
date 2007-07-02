@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.22 2007/06/30 12:16:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.23 2007/07/02 15:35:40 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  uclibc-0.9.27-r1.ebuild, uclibc-0.9.28.ebuild, uclibc-0.9.28-r1.ebuild,
+  uclibc-0.9.28-r2.ebuild, uclibc-0.9.28.1.ebuild, uclibc-0.9.28.3.ebuild:
+  (QA) RESTRICT clean up.
 
   30 Jun 2007; Mike Frysinger <vapier@gentoo.org> uclibc-0.9.27-r1.ebuild,
   uclibc-0.9.28.ebuild, uclibc-0.9.28-r1.ebuild, uclibc-0.9.28-r2.ebuild,

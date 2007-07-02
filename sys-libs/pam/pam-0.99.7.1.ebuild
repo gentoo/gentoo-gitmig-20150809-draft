@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.7.1.ebuild,v 1.3 2007/06/13 19:00:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.7.1.ebuild,v 1.4 2007/07/02 15:35:24 peper Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -31,7 +31,6 @@ PDEPEND="vim-syntax? ( app-vim/pam-syntax )"
 
 S="${WORKDIR}/${MY_P}"
 
-RESTRICT="confcache"
 
 PROVIDE="virtual/pam"
 
