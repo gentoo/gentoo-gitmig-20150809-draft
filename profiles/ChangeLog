@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.510 2007/07/01 18:57:19 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.511 2007/07/02 10:09:00 tove Exp $
 
   01 Jul 2007; Jurek Bartuszek <jurek@gentoo.org> use.local.desc:
   Add aspnet, aspnetedit and subversion flags for dev-util/monodevelop
@@ -40,7 +40,7 @@
   25 Jun 2007; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
   Add local use flags bbdb and planner for app-emacs/remember.
 
-  25 Jun 2007; Diego Petten?? <flameeyes@gentoo.org> package.mask:
+  25 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
   Fix typo in mask.
 
   25 Jun 2007; Alon Bar-Lev <alonbl@gentoo.org> use.local.desc:
@@ -126,10 +126,10 @@
   21 Jun 2007; Timothy Redaelli <drizzt@gentoo.org> package.mask:
   Stable version of UPX released, beta version removed.
 
-  21 Jun 2007; Diego Petten?? <flameeyes@gentoo.org> use.local.desc:
+  21 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add mp4 useflag for Amarok (replaces AAC).
 
-  20 Jun 2007; Diego Petten?? <flameeyes@gentoo.org> use.local.desc:
+  20 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add dssi USE flag for rosegarden.
 
   19 Jun 2007; Raúl Porcel <armin76@gentoo.org> package.mask:
@@ -283,10 +283,10 @@
   27 May 2007; Vlastimil Babka <caster@gentoo.org> use.local.desc:
   Add new local useflag "bsf" for dev-java/jruby.
 
-  26 May 2007; Olivier Cr??te <tester@gentoo.org> use.local.desc:
+  26 May 2007; Olivier Crête <tester@gentoo.org> use.local.desc:
   Remove console and custom-cflags use flag from pidgin
 
-  26 May 2007; Olivier Cr??te <tester@gentoo.org> use.local.desc:
+  26 May 2007; Olivier Crête <tester@gentoo.org> use.local.desc:
   Add zephyr flag for net-im/pidgin
 
   26 May 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
@@ -1228,7 +1228,7 @@
   12 Feb 2007; Sandro Bonazzola <sanchan@gentoo.org> package.mask:
   Masking app-arch/rpm-4.4.7-r3, unmasking app-arch/rpm-4.4.7-r2
 
-  11 Feb 2007; Diego Petten?? <flameeyes@gentoo.org> use.local.desc:
+  11 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add midi useflag for alsa-tools.
 
   11 Feb 2007; Samuli Suominen <drac@gentoo.org> package.mask:
@@ -1257,7 +1257,7 @@
   09 Feb 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
   Added an smp use flag for sci-libs/acml.
 
-  09 Feb 2007; Diego Petten?? <flameeyes@gentoo.org> use.local.desc:
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add xcb useflags for xine-lib and kaffeine.
 
   09 Feb 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
@@ -1324,7 +1324,7 @@
   02 Feb 2007; Markus Ullmann <jokey@gentoo.org> package.mask:
   mask net-analyzer/prelude-nagios for removal
 
-  02 Feb 2007; Nguy???n Thái Ng???c Duy <pclouds@gentoo.org> use.local.desc:
+  02 Feb 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> use.local.desc:
   Add rubygems:server
 
   02 Feb 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
@@ -1336,7 +1336,7 @@
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org> use.local.desc:
   Add mask for bug #164924
 
-  01 Feb 2007; Diego Petten?? <flameeyes@gentoo.org> use.local.desc:
+  01 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add daap useflag for amarok.
 
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org> use.local.desc:
@@ -1372,7 +1372,7 @@
   package.mask'd dev-embedded/gpsim-led pending removal on 1 March 2007 at the
   latest. See bug #96578.
 
-  30 Jan 2007; Diego Petten?? <flameeyes@gentoo.org> use.local.desc:
+  30 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add midi useflag for media-sound/alsa-driver.
 
   29 Jan 2007; Leonardo Boshell <leonardop@gentoo.org> package.mask:
@@ -1465,7 +1465,7 @@
   17 Jan 2007; Robert Buchholz <rbu@gentoo.org> +desc/lcd_devices.desc:
   Add desc for new LCD_DEVICES USEs
 
-  16 Jan 2007; Diego Petten?? <flameeyes@gentoo.org> use.local.desc:
+  16 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> use.local.desc:
   Add midi useflag for media-sound/alsa-utils.
 
   16 Jan 2007; Sandro Bonazzola <sanchan@gentoo.org> package.mask:
