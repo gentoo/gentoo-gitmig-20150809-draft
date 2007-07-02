@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58.ebuild,v 1.15 2007/05/08 22:50:40 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.58.ebuild,v 1.16 2007/07/02 14:51:44 peper Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="postgres ldap mysql berkdb gdbm pam crypt debug"
 
-RESTRICT="nouserpriv"
+RESTRICT="userpriv"
 
 DEPEND="gdbm? ( sys-libs/gdbm )
 		!gdbm? ( >=sys-devel/autoconf-2.5 sys-libs/db )
