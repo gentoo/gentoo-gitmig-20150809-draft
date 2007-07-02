@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/bookmarksync-0.3.4-r1.ebuild,v 1.2 2007/03/13 14:37:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/bookmarksync-0.3.4-r1.ebuild,v 1.3 2007/07/02 14:40:50 peper Exp $
 
 DESCRIPTION="bookmarksync synchronizes various browser bookmark files"
 HOMEPAGE="http://sourceforge.net/projects/booksync/"
@@ -11,7 +11,7 @@ KEYWORDS="ppc x86"
 SLOT="0"
 
 IUSE="perl"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}

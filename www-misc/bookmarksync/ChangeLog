@@ -1,6 +1,12 @@
 # ChangeLog for www-misc/bookmarksync
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/ChangeLog,v 1.7 2007/05/13 18:37:45 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/ChangeLog,v 1.8 2007/07/02 14:40:50 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  bookmarksync-0.3.1.ebuild, bookmarksync-0.3.2.ebuild,
+  bookmarksync-0.3.3.ebuild, bookmarksync-0.3.4.ebuild,
+  bookmarksync-0.3.4-r1.ebuild:
+  (QA) RESTRICT clean up.
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
