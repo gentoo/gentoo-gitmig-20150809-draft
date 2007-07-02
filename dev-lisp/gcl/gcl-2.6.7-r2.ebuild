@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.4 2007/02/03 17:55:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.5 2007/07/02 15:03:30 peper Exp $
 
 inherit elisp-common flag-o-matic
 
@@ -16,7 +16,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 IUSE="emacs readline debug X tk doc ansi"
-RESTRICT="sandbox"
 
 RDEPEND="emacs? ( virtual/emacs )
 	readline? ( sys-libs/readline )

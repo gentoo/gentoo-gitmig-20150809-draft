@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl-cvs/gcl-cvs-2.7.0.ebuild,v 1.5 2006/11/29 15:44:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl-cvs/gcl-cvs-2.7.0.ebuild,v 1.6 2007/07/02 15:04:13 peper Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/gcl"
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="emacs readline debug X tk custreloc dlopen gprof doc"
-RESTRICT="$RESTRICT nostrip"
+RESTRICT="$RESTRICT strip"
 
 DEPEND=">=app-text/texi2html-1.64
 	emacs? ( virtual/emacs )
