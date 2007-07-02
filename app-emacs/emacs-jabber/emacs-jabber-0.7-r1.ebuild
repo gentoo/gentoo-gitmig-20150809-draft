@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/emacs-jabber-0.7-r1.ebuild,v 1.3 2007/06/22 04:12:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/emacs-jabber-0.7-r1.ebuild,v 1.4 2007/07/02 14:20:19 ulm Exp $
 
 inherit elisp
 
@@ -18,7 +18,7 @@ IUSE="sasl"
 # app-emacs/gnus or bundled with app-editors/emacs-cvs.	 emacs 21.4a
 # includes gnus-5.9
 
-DEPEND="virtual/gnus
+DEPEND=">=virtual/gnus-5.10
 	sasl? ( app-emacs/flim )"
 RDEPEND="${DEPEND}"
 
@@ -39,5 +39,5 @@ src_install() {
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	doinfo jabber.info
 	dohtml html/*
-	dodoc AUTHORS NEWS README
+	dodoc AUTHORS NEWS README || die "dodoc failed"
 }

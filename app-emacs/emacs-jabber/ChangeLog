@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-jabber
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.10 2007/06/22 04:12:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.11 2007/07/02 14:20:19 ulm Exp $
+
+  02 Jul 2007; Ulrich Mueller <ulm@gentoo.org> emacs-jabber-0.7-r1.ebuild,
+  emacs-jabber-0.7.1.ebuild:
+  Depend on >=virtual/gnus-5.10. Add a die command to dodoc.
 
   22 Jun 2007; Ulrich Mueller <ulm@gentoo.org> emacs-jabber-0.7.1.ebuild:
   Remove sasl USE flag since it occurs in DEPEND only. Don't inherit distutils.
