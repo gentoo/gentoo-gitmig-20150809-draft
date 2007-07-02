@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ipamonafont
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ChangeLog,v 1.8 2006/11/26 22:51:44 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ChangeLog,v 1.9 2007/07/02 02:33:24 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  ipamonafont-1.0.3.ebuild, ipamonafont-1.0.5.ebuild:
+  (QA) RESTRICT clean up.
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
   ipamonafont-1.0.5.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ipamonafont-1.0.3.ebuild,v 1.7 2006/09/03 06:39:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ipamonafont-1.0.3.ebuild,v 1.8 2007/07/02 02:33:24 peper Exp $
 
 inherit font
 
@@ -10,7 +10,7 @@ MY_PN="opfc-ModuleHP-1.1.1_withIPAMonaFonts"
 SRC_URI="http://www.geocities.jp/ipa_mona/${MY_PN}-${PV}.tar.gz"
 LICENSE="grass-ipafonts as-is"
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 SLOT="0"
 KEYWORDS="~amd64 arm ~hppa ia64 ppc s390 sh x86"
