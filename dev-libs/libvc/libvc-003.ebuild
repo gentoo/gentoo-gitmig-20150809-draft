@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvc/libvc-003.ebuild,v 1.10 2005/04/21 19:41:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvc/libvc-003.ebuild,v 1.11 2007/07/02 15:00:44 peper Exp $
 
 DESCRIPTION="vCard library (rolo)"
 HOMEPAGE="http://rolo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/rolo/${P}.tar.bz2"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""

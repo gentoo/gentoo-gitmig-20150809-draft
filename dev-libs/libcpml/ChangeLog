@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcpml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/ChangeLog,v 1.14 2007/02/15 11:21:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/ChangeLog,v 1.15 2007/07/02 14:55:18 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  libcpml-5.2.01-r3.ebuild:
+  (QA) RESTRICT clean up.
 
   15 Feb 2007; Daniel Black <dragonheart@gentoo.org>
   libcpml-5.2.01-r2.ebuild, libcpml-5.2.01-r3.ebuild:

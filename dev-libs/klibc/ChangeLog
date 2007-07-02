@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.43 2007/06/13 18:10:34 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.44 2007/07/02 14:54:32 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> klibc-1.1.ebuild,
+  klibc-1.2.1-r1.ebuild, klibc-1.2.1-r2.ebuild, klibc-1.4.12.ebuild,
+  klibc-1.4.13.ebuild:
+  (QA) RESTRICT clean up.
 
   13 Jun 2007; Christian Heim <phreak@gentoo.org> klibc-1.5.ebuild:
   Fixing cross compilation, thanks to Michal Januszewski in #181560.

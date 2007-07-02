@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/http-fetcher-1.0.3.ebuild,v 1.8 2005/05/01 17:09:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/http-fetcher-1.0.3.ebuild,v 1.9 2007/07/02 14:53:14 peper Exp $
 
 MY_P="${P/-/_}"
 S="${WORKDIR}/${MY_P}"
@@ -8,7 +8,7 @@ DESCRIPTION="HTTP Fetcher is a small, robust, flexible library for downloading f
 HOMEPAGE="http://http-fetcher.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 amd64 alpha ppc"

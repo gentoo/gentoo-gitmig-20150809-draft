@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/vrb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/ChangeLog,v 1.10 2007/05/14 20:18:59 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/ChangeLog,v 1.11 2007/07/02 15:02:24 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> vrb-0.5.1.ebuild:
+  (QA) RESTRICT clean up.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>

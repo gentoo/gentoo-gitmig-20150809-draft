@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r3.ebuild,v 1.6 2007/02/15 11:21:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r3.ebuild,v 1.7 2007/07/02 14:55:18 peper Exp $
 
 inherit eutils rpm
 
@@ -13,7 +13,7 @@ LICENSE="compaq-sdla"
 SLOT="5.2.01"
 KEYWORDS="-* ~alpha"
 IUSE="ev6"
-RESTRICT="fetch nostrip nomirror"
+RESTRICT="fetch strip mirror"
 
 DEPEND="virtual/libc
 	sys-devel/binutils

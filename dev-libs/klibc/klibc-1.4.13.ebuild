@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.4.13.ebuild,v 1.7 2007/05/13 11:21:33 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.4.13.ebuild,v 1.8 2007/07/02 14:54:32 peper Exp $
 
 inherit eutils linux-info multilib
 
@@ -23,7 +23,7 @@ LICENSE="|| ( GPL-2 LGPL-2 )"
 # Mips patches needs updating ...
 KEYWORDS="amd64 -mips ppc x86"
 IUSE="debug n32"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 DEPEND="dev-lang/perl
 	virtual/linux-sources"
