@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.2.6_p16.ebuild,v 1.2 2007/05/12 00:10:05 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.2.6_p16.ebuild,v 1.3 2007/07/02 15:32:03 peper Exp $
 
 inherit autotools eutils multilib
 
@@ -14,7 +14,7 @@ RDEPEND="${DEPEND}
 SLOT="0"
 LICENSE="maui"
 KEYWORDS="~x86 ~amd64"
-RESTRICT="fetch nomirror"
+RESTRICT="fetch mirror"
 
 S="${WORKDIR}/${P/_/}"
 

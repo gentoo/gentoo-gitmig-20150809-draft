@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/maui
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.7 2007/05/12 00:10:05 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.8 2007/07/02 15:32:03 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> maui-3.2.6_p13.ebuild,
+  maui-3.2.6_p13-r1.ebuild, maui-3.2.6_p16.ebuild:
+  (QA) RESTRICT clean up.
 
   12 May 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   maui-3.2.6_p16.ebuild:
