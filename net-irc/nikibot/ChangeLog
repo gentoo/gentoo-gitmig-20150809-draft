@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/nikibot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/nikibot/ChangeLog,v 1.4 2007/02/28 16:50:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/nikibot/ChangeLog,v 1.5 2007/07/02 14:50:35 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> nikibot-0.8.ebuild:
+  (QA) RESTRICT clean up.
 
   28 Feb 2007; Raúl Porcel <armin76@gentoo.org> nikibot-0.8.ebuild:
   Make the dep on lua strictly on 5.0 version, it doesn't work with 5.1

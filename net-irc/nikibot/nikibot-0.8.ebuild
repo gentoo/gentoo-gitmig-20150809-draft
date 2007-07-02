@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/nikibot/nikibot-0.8.ebuild,v 1.4 2007/02/28 16:50:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/nikibot/nikibot-0.8.ebuild,v 1.5 2007/07/02 14:50:35 peper Exp $
 
 inherit autotools
 
 DESCRIPTION="An IRC-Bot with lua script interface"
 HOMEPAGE="http://sourceforge.net/projects/nikibot/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
