@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.533 2007/07/01 22:36:43 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.534 2007/07/02 12:00:06 yoswink Exp $
+
+  02 Jul 2007; Jose Luis Rivero <yoswink@gentoo.org> glibc-2.5-r3.ebuild:
+  Stable on alpha wrt security bug #176712
 
   01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> glibc-2.3.5-r3.ebuild,
   glibc-2.3.6-r4.ebuild, glibc-2.3.6-r5.ebuild, glibc-2.4-r4.ebuild,
