@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.5.ebuild,v 1.14 2007/04/28 23:12:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.5.ebuild,v 1.15 2007/07/02 14:41:51 peper Exp $
 
 inherit eutils java-pkg
 
@@ -8,7 +8,7 @@ MY_P="${P}-src"
 
 DESCRIPTION="An open source, standards-compliant, J2EE-based application server implemented in 100% Pure Java."
 SRC_URI="mirror://sourceforge/jboss/${MY_P}.tar.bz2"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 HOMEPAGE="http://www.jboss.org"
 LICENSE="LGPL-2"
 IUSE=""

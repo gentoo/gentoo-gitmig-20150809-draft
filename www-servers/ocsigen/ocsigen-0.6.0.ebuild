@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.6.0.ebuild,v 1.2 2007/05/04 14:19:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.6.0.ebuild,v 1.3 2007/07/02 14:42:45 peper Exp $
 
 inherit eutils findlib multilib
 
@@ -12,7 +12,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug ocamlduce"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 DEPEND="dev-ml/findlib
 		>=dev-lang/ocaml-3.08.4
