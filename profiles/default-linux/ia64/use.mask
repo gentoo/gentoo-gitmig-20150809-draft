@@ -3,6 +3,7 @@
 # Raúl Porcel <armin76@gentoo.org>
 # No hardware to test
 lirc
+gnokii
 
 # Raúl Porcel <armin76@gentoo.org>
 # Depends on libnl which doesn't compile, bug 175714
