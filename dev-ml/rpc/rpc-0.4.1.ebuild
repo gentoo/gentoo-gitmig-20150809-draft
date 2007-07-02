@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/rpc/rpc-0.4.1.ebuild,v 1.1 2005/03/27 15:30:56 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/rpc/rpc-0.4.1.ebuild,v 1.2 2007/07/02 15:04:54 peper Exp $
 
 inherit findlib
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="doc"
 # Stripping breaks ocamlrpcgen
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 # TODO: add optional AUTH support
 # - add "auth" to IUSE
