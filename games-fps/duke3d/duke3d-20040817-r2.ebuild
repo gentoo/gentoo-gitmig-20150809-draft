@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r2.ebuild,v 1.1 2007/07/02 19:59:26 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r2.ebuild,v 1.2 2007/07/02 20:02:26 tupone Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
@@ -24,7 +24,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="hppa ppc x86"
+KEYWORDS="~hppa ~ppc ~x86"
 IUSE="demo pic perl opengl"
 
 RDEPEND="media-libs/libsdl
