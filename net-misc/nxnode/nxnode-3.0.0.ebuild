@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0.ebuild,v 1.3 2007/07/02 15:04:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0.ebuild,v 1.4 2007/07/02 21:25:53 voyageur Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ pkg_setup() {
 
 		if has_version net-misc/tightvnc && ! built_with_use net-misc/tightvnc server;
 		then
-			die "net-misc/vnc needs to be built with USE=\"server\" for VNC support"
+			die "net-misc/tightvnc needs to be built with USE=\"server\" for VNC support"
 		fi
 	fi
 }
