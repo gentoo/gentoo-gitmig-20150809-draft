@@ -1,79 +1,67 @@
 Index: configure
 ===================================================================
---- configure	(revision 13780)
+--- configure	(revision 13775)
 +++ configure	(working copy)
-@@ -1476,49 +1476,49 @@
- if test $tune != "generic"; then
+@@ -1791,36 +1791,36 @@
+     }
      case $tune in
          601|ppc601|PowerPC601)
 -            ARCHFLAGS="-mcpu=601"
 +            ARCHFLAGS="-march=601"
-             if test $altivec = "yes"; then
-                 echo "WARNING: Tuning for PPC601 but AltiVec enabled!";
-             fi
-             TUNECPU=ppc601
+             warn_altivec enabled PPC601
          ;;
          603*|ppc603*|PowerPC603*)
 -            ARCHFLAGS="-mcpu=603"
 +            ARCHFLAGS="-march=603"
-             if test $altivec = "yes"; then
-                 echo "WARNING: Tuning for PPC603 but AltiVec enabled!";
-             fi
-             TUNECPU=ppc603
+             warn_altivec enabled PPC603
          ;;
          604*|ppc604*|PowerPC604*)
 -            ARCHFLAGS="-mcpu=604"
 +            ARCHFLAGS="-march=604"
-             if test $altivec = "yes"; then
-                 echo "WARNING: Tuning for PPC604 but AltiVec enabled!";
-             fi
-             TUNECPU=ppc604
+             warn_altivec enabled PPC604
          ;;
          G3|g3|75*|ppc75*|PowerPC75*)
 -            ARCHFLAGS="-mcpu=750 -mtune=750 -mpowerpc-gfxopt"
 +            ARCHFLAGS="-march=750 -mtune=750 -mpowerpc-gfxopt"
-             if test $altivec = "yes"; then
-                 echo "WARNING: Tuning for PPC75x but AltiVec enabled!";
-             fi
-             TUNECPU=ppc750
+             warn_altivec enabled PPC75x
          ;;
          G4|g4|745*|ppc745*|PowerPC745*)
 -            ARCHFLAGS="-mcpu=7450 -mtune=7450 -mpowerpc-gfxopt"
 +            ARCHFLAGS="-march=7450 -mtune=7450 -mpowerpc-gfxopt"
-             if test $altivec = "no"; then
-                 echo "WARNING: Tuning for PPC745x but AltiVec disabled!";
-             fi
-             TUNECPU=ppc7450
+             warn_altivec disabled PPC745x
          ;;
          74*|ppc74*|PowerPC74*)
 -            ARCHFLAGS="-mcpu=7400 -mtune=7400 -mpowerpc-gfxopt"
 +            ARCHFLAGS="-march=7400 -mtune=7400 -mpowerpc-gfxopt"
-             if test $altivec = "no"; then
-                 echo "WARNING: Tuning for PPC74xx but AltiVec disabled!";
-             fi
-             TUNECPU=ppc7400
+             warn_altivec disabled PPC74xx
          ;;
          G5|g5|970|ppc970|PowerPC970|power4*|Power4*)
 -            ARCHFLAGS="-mcpu=970 -mtune=970 -mpowerpc-gfxopt -mpowerpc64"
 +            ARCHFLAGS="-march=970 -mtune=970 -mpowerpc-gfxopt -mpowerpc64"
-             if test $altivec = "no"; then
-                 echo "WARNING: Tuning for PPC970 but AltiVec disabled!";
-             fi
-@@ -1526,7 +1526,7 @@
+             warn_altivec disabled PPC970
              POWERPCMODE="64bits"
          ;;
          sparc64)
 -            ARCHFLAGS="-mcpu=v9 -mtune=v9"
 +            ARCHFLAGS="-march=v9 -mtune=v9"
          ;;               
- 	*)
-             ARCHFLAGS="-mtune=$tune"
-@@ -1536,7 +1536,7 @@
+         bf*) #bf531 bf532 bf533 bf561 bf5xx all get this config
+             add_cflags "-mfdpic"
+@@ -1833,7 +1833,7 @@
  fi
  
- if test x"$cpu_overide" = x"yes"; then
--    ARCHFLAGS="-mcpu=$cpu_raw $ARCHFLAGS"
-+    ARCHFLAGS="-march=$cpu_raw $ARCHFLAGS"
+ if enabled cpu_overide; then
+-    ARCHFLAGS="-mcpu=$arch_raw $ARCHFLAGS"
++    ARCHFLAGS="-march=$arch_raw $ARCHFLAGS"
  fi
  
- # compiler sanity check
+ gnu_make(){
+@@ -2092,7 +2092,7 @@
+ if test x"$tune" = x"generic" -a x"$arch" = x"x86_64" -a x"$cpu_overide" != x"yes"; then
+    ARCHFLAGS="-march=k8"
+ elif test x"$tune" = x"generic" -a x"$arch" = x"sparc64" -a x"$cpu_overide" != x"yes"; then
+-   ARCHFLAGS="-mcpu=ultrasparc -mvis"
++   ARCHFLAGS="-march=ultrasparc -mvis"
+ fi
+ 
+ if enabled proc_error_msg; then
