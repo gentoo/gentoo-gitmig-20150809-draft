@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/ciphire-mail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ChangeLog,v 1.14 2007/03/18 01:44:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ChangeLog,v 1.15 2007/07/02 14:59:32 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  ciphire-mail-1.1.015.ebuild, ciphire-mail-1.2.047.ebuild:
+  (QA) RESTRICT clean up.
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> ciphire-mail-1.1.015.ebuild,
   ciphire-mail-1.2.047.ebuild:

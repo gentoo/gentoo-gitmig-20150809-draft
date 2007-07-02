@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-2.0.0.4.ebuild,v 1.3 2007/06/15 18:49:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-2.0.0.4.ebuild,v 1.4 2007/07/02 15:00:37 peper Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -10,7 +10,7 @@ NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
 DESCRIPTION="The Mozilla Thunderbird Mail & News Reader"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/linux-i686/en-US/thunderbird-${PV}.tar.gz"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 KEYWORDS="-* amd64 x86"
 SLOT="0"
