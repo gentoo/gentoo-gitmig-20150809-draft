@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/dssi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.13 2007/06/30 22:50:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.14 2007/07/02 15:52:52 flameeyes Exp $
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Hand to newly-born proaudio herd.
 
   30 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/dssi-0.9-gentoo.patch, -dssi-0.9.ebuild:

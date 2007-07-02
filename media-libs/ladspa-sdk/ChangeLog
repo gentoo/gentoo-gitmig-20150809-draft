@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-sdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.33 2007/02/22 01:50:17 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.34 2007/07/02 15:54:03 flameeyes Exp $
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Hand to newly-born proaudio herd.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

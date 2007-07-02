@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdjconsole
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdjconsole/ChangeLog,v 1.1 2007/01/30 20:33:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdjconsole/ChangeLog,v 1.2 2007/07/02 15:54:34 flameeyes Exp $
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Hand to newly-born proaudio herd.
 
 *libdjconsole-0.1.2 (30 Jan 2007)
 

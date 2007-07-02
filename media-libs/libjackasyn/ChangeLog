@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libjackasyn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/ChangeLog,v 1.14 2007/02/13 22:14:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/ChangeLog,v 1.15 2007/07/02 15:55:06 flameeyes Exp $
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Hand to newly-born proaudio herd.
 
   13 Feb 2007; Alexis Ballier <aballier@gentoo.org>
   +files/libjackasyn-0.13-execprefix.patch, libjackasyn-0.13.ebuild:
