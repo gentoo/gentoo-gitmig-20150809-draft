@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.11 2006/12/05 18:02:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.12 2007/07/02 17:39:11 nyhm Exp $
 
 #ECVS_SERVER="cvs.tenebrae.sourceforge.net:/cvsroot/tenebrae"
 #ECVS_MODULE="tenebrae_0"
@@ -38,7 +38,9 @@ src_unpack() {
 		cvs_src_unpack
 	fi
 	cd tenebrae_0
-	epatch "${FILESDIR}"/${PV}-glhax.patch
+	epatch \
+		"${FILESDIR}"/${PV}-glhax.patch \
+		"${FILESDIR}"/${P}-exec-stack.patch
 	cd linux
 	sed "s:-mpentiumpro -O6:${CFLAGS}:" Makefile.i386linux > Makefile
 	#if use sdl ; then

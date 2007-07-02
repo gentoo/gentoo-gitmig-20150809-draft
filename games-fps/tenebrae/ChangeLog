@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/tenebrae
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/ChangeLog,v 1.9 2007/02/22 00:30:49 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/ChangeLog,v 1.10 2007/07/02 17:39:11 nyhm Exp $
+
+  02 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/tenebrae-1.04-exec-stack.patch, tenebrae-1.04.ebuild:
+  remove need for an executable stack
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
