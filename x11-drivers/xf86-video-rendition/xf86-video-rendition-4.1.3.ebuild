@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-rendition/xf86-video-rendition-4.1.3.ebuild,v 1.4 2007/05/05 18:30:05 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-rendition/xf86-video-rendition-4.1.3.ebuild,v 1.5 2007/07/02 15:56:02 armin76 Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -9,7 +9,7 @@ XDPVER=4
 inherit x-modular
 
 DESCRIPTION="Rendition video driver"
-KEYWORDS="~alpha amd64 ia64 ~sh x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ~sh x86 ~x86-fbsd"
 RDEPEND=">=x11-base/xorg-server-1.0.99"
 DEPEND="${RDEPEND}
 	x11-proto/fontsproto
