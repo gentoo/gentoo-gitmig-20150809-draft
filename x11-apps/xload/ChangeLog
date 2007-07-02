@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xload
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xload/ChangeLog,v 1.24 2007/06/24 17:19:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xload/ChangeLog,v 1.25 2007/07/02 14:08:03 armin76 Exp $
+
+  02 Jul 2007; Raúl Porcel <armin76@gentoo.org> xload-1.0.2.ebuild:
+  alpha stable wrt #175465
 
   24 Jun 2007; Joshua Kinard <kumba@gentoo.org> xload-1.0.2.ebuild:
   Stable on mips, per #175645.
