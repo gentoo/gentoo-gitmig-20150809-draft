@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1.ebuild,v 1.6 2007/02/22 05:43:16 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1.ebuild,v 1.7 2007/07/02 14:23:08 coldwind Exp $
 
 DESCRIPTION="Collection of IceWM themes"
 HOMEPAGE="http://www.icewm.org/
@@ -18,25 +18,24 @@ SRC_URI="${THEME_URI}/icecrack/icecrack-default-2.0.0.tar.gz
 	${THEME_URI}/ufosightings/ufosightings-1.0.0.tar.gz
 	${THEME_URI}/1in1-xp/1in1-xp-default.tar.gz"
 
-SLOT="0"
-
 # icecrack, icebox, cyrus-icewm, ufosightings -> GPL-2
 # greyscaled -> Public Domain
 # 1in1-xp -> freedist
 LICENSE="GPL-2 public-domain freedist"
-KEYWORDS="x86 ppc ~amd64"
-
+KEYWORDS="~amd64 ppc x86"
+SLOT="0"
 IUSE=""
 
 RDEPEND="x11-wm/icewm"
+DEPEND=""
 
 S="${WORKDIR}"
 
 src_install () {
-	dodir /usr/share/icewm/themes
-	cp -dpR * ${D}/usr/share/icewm/themes/
-	chown -R root:root ${D}/usr/share/icewm/themes/
-	chmod -R o-w ${D}/usr/share/icewm/themes/
+	dodir /usr/share/icewm/themes || die
+	cp -dpR * "${D}"/usr/share/icewm/themes/ || die
+	chown -R root:root "${D}"/usr/share/icewm/themes/ || die
+	chmod -R o-w "${D}"/usr/share/icewm/themes/ || die
 }
 
 pkg_postinst() {

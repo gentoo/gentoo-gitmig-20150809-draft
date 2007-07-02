@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1-r1.ebuild,v 1.7 2007/03/12 17:42:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1-r1.ebuild,v 1.8 2007/07/02 14:23:08 coldwind Exp $
 
 DESCRIPTION="Collection of IceWM themes"
 HOMEPAGE="http://www.icewm.org/
@@ -18,36 +18,35 @@ SRC_URI="${THEME_URI}/icecrack/icecrack-default-2.0.0.tar.gz
 	${THEME_URI}/ufosightings/ufosightings-1.0.0.tar.gz
 	${THEME_URI}/1in1-xp/1in1-xp-default.tar.gz"
 
-SLOT="0"
-
 # icecrack, icebox, cyrus-icewm, ufosightings -> GPL-2
 # greyscaled -> Public Domain
 # 1in1-xp -> freedist
 LICENSE="GPL-2 public-domain freedist"
 KEYWORDS="amd64 ~ppc sparc x86"
-
+SLOT="0"
 IUSE=""
 
-RDEPEND="x11-wm/icewm"
+RDEPEND=""
+DEPEND=""
 
 S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	find . -name \.xvpics | xargs rm -rf
 	find . -name \*~ | xargs rm -rf
 }
 
 src_install() {
 	local ICEWM_THEMES=/usr/share/icewm/themes
-	dodir ${ICEWM_THEMES}
-	cp -pR * ${D}/${ICEWM_THEMES}
-	chown -R root:0 ${D}/${ICEWM_THEMES}
+	dodir ${ICEWM_THEMES} || die
+	cp -pR * "${D}"/${ICEWM_THEMES} || die
+	chown -R root:0 "${D}"/${ICEWM_THEMES} || die
 	#chmod -R o-w ${D}/${ICEWM_THEMES}
-	rm -f ${D}/${ICEWM_THEMES}/Crus-IceWM/cpframes.sh || die
-	find ${D}/${ICEWM_THEMES} -type d | xargs chmod 755 || die
-	find ${D}/${ICEWM_THEMES} -type f | xargs chmod 644 || die
+	rm -f "${D}"/${ICEWM_THEMES}/Crus-IceWM/cpframes.sh || die
+	find "${D}"/${ICEWM_THEMES} -type d | xargs chmod 755 || die
+	find "${D}"/${ICEWM_THEMES} -type f | xargs chmod 644 || die
 }
 
 pkg_postinst() {

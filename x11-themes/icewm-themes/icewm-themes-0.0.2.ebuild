@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.2.ebuild,v 1.2 2007/06/26 03:01:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.2.ebuild,v 1.3 2007/07/02 14:23:08 coldwind Exp $
 
 DESCRIPTION="Collection of IceWM themes"
 HOMEPAGE="http://www.icewm.org/
@@ -44,8 +44,6 @@ SRC_URI="${THEME_URI}/icecrack/icecrack-default-2.0.0.tar.gz
 	http://themes.freshmeat.net/redir/kliin/32422/url_tgz/kliin-default-0.1.tar.gz
 	mirror://sourceforge/icewmsilverxp/SilverXP-1.2.17-single-1.tar.bz2"
 
-SLOT="0"
-
 ## GPL-2:
 # icecrack, icebox, cyrus-icewm, ufosightings, axxlite, phaaba,
 # winclassic, elberg, gertplastic, cruxteal, truecurve, bluecrux,
@@ -59,11 +57,12 @@ SLOT="0"
 ## BSD:
 # icequa
 LICENSE="GPL-2 public-domain freedist free-noncomm BSD"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
-
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+SLOT="0"
 IUSE=""
 
-RDEPEND="x11-wm/icewm"
+RDEPEND=""
+DEPEND=""
 
 S="${WORKDIR}"
 
@@ -76,24 +75,24 @@ src_unpack() {
 
 src_install() {
 	local ICEWM_THEMES=/usr/share/icewm/themes
-	dodir ${ICEWM_THEMES}
-	cp -pR * ${D}/${ICEWM_THEMES}
-	chown -R root:0 ${D}/${ICEWM_THEMES}
+	dodir ${ICEWM_THEMES} || die
+	cp -pR * "${D}"/${ICEWM_THEMES} || die
+	chown -R root:0 "${D}"/${ICEWM_THEMES} || die
 	rm -f ${D}/${ICEWM_THEMES}/Cyrus-IceWM/cpframes.sh || die "Failed in Cyrus-IceWM theme fix"
 
 	# start elberg theme packaging fix
-	mv ${D}/${ICEWM_THEMES}/themes/* ${D}/${ICEWM_THEMES} || die "Error in elberg theme fix"
-	rmdir ${D}/${ICEWM_THEMES}/themes || die "Error in elberg theme fix"
+	mv "${D}"/${ICEWM_THEMES}/themes/* "${D}"/${ICEWM_THEMES} || die "Error in elberg theme fix"
+	rmdir "${D}"/${ICEWM_THEMES}/themes || die "Error in elberg theme fix"
 	# end elberg theme packaging fix
 
 	# start silverxp theme packaging fix
-	mv ${D}/${ICEWM_THEMES}/icewm/themes/* ${D}/${ICEWM_THEMES} || die "Error in sivlerxp theme fix"
-	rm -rf ${D}/${ICEWM_THEMES}/icewm || die "Error in silverxp theme fix"
+	mv "${D}"/${ICEWM_THEMES}/icewm/themes/* "${D}"/${ICEWM_THEMES} || die "Error in sivlerxp theme fix"
+	rm -rf "${D}"/${ICEWM_THEMES}/icewm || die "Error in silverxp theme fix"
 	# end silverxp theme packaging fix
 
 	# use -print0 and xargs --null to handle file names with spaces!
-	find ${D}/${ICEWM_THEMES} -type d -print0 | xargs --null chmod 755 || die "Error changing permissions on theme dirs!"
-	find ${D}/${ICEWM_THEMES} -type f -print0 | xargs --null chmod 644 || die "Error changing permissions on theme files!"
+	find "${D}"/${ICEWM_THEMES} -type d -print0 | xargs --null chmod 755 || die "Error changing permissions on theme dirs!"
+	find "${D}"/${ICEWM_THEMES} -type f -print0 | xargs --null chmod 644 || die "Error changing permissions on theme files!"
 }
 
 pkg_postinst() {
