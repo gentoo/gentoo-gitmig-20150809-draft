@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.86.ebuild,v 1.12 2005/05/06 10:35:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.86.ebuild,v 1.13 2007/07/02 03:04:52 peper Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
-RESTRICT="nouserpriv"
+RESTRICT="userpriv"
 
 DEPEND=">=app-arch/bzip2-1.0.1
 		>=app-cdr/cdrtools-1.11

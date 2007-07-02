@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mindi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.23 2007/03/19 13:23:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.24 2007/07/02 03:04:52 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> mindi-0.85.ebuild,
+  mindi-0.86.ebuild:
+  (QA) RESTRICT clean up.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove pfeifer from metadata.xml due to retirement.
