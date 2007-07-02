@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.52 2007/07/01 09:54:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.53 2007/07/02 19:44:06 armin76 Exp $
+
+  02 Jul 2007; Raúl Porcel <armin76@gentoo.org> quodlibet-1.0.ebuild:
+  Readd ~alpha wrt #177140
 
   01 Jul 2007; Samuli Suominen <drac@gentoo.org> quodlibet-0.24-r1.ebuild:
   Remove old style dbus dep for bug 183696.
