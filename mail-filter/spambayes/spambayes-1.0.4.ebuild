@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/spambayes-1.0.4.ebuild,v 1.3 2007/04/28 12:40:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/spambayes-1.0.4.ebuild,v 1.4 2007/07/02 15:02:31 peper Exp $
 
 inherit distutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="An anti-spam filter using on Bayesian filtering"
 HOMEPAGE="http://spambayes.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 LICENSE="PSF-2.2"
 SLOT="0"
