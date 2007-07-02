@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7434 2007/07/01 17:56:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7435 2007/07/02 15:27:18 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (02 Jul 2007)
+# Masked for removal in 30 days. Replaced by media-sound/bitmeter.
+media-sound/bitscope
 
 # Raúl Porcel <armin76@gentoo.org> (01 Jul 2007)
 # For treecleaners
