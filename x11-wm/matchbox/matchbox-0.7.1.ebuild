@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.9 2007/07/02 02:03:30 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.10 2007/07/02 02:58:48 peper Exp $
 
 IUSE="jpeg png nls debug"
 
@@ -32,8 +32,6 @@ DEPEND="${RDEPEND}
 		x11-proto/xextproto )
 	virtual/x11 )
 	sys-devel/libtool"
-
-RESTRICT="debug? ( strip )"
 
 src_compile() {
 	local myconf
