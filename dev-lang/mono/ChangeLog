@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.120 2007/06/27 01:39:47 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.121 2007/07/02 02:31:24 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> mono-1.1.16.1.ebuild:
+  (QA) RESTRICT clean up.
 
   27 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> mono-1.1.16.1.ebuild,
   mono-1.2.2.1.ebuild, mono-1.2.3.1.ebuild, mono-1.2.4.ebuild:

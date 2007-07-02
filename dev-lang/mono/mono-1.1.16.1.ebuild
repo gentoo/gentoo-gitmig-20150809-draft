@@ -1,10 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.16.1.ebuild,v 1.6 2007/06/27 01:39:47 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.16.1.ebuild,v 1.7 2007/07/02 02:31:24 peper Exp $
 
 inherit eutils mono flag-o-matic multilib autotools
-
-RESTRICT="confcache"
 
 DESCRIPTION="Mono runtime and class libraries, a C# compiler/interpreter"
 HOMEPAGE="http://www.go-mono.com/"
