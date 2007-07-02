@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fdftk/fdftk-6.0-r1.ebuild,v 1.7 2007/02/09 09:31:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fdftk/fdftk-6.0-r1.ebuild,v 1.8 2007/07/02 14:24:49 peper Exp $
 
 MY_P="FDFToolkitForUnix"
 At="${MY_P}.tar.gz"
@@ -12,7 +12,7 @@ SRC_URI="${At}"
 SLOT="0"
 LICENSE="Adobe"
 KEYWORDS="-* x86" # binaries for i386 type hardware ONLY
-RESTRICT="fetch nostrip nomirror"
+RESTRICT="fetch strip mirror"
 
 #DEPEND="virtual/libc
 #		perl? ( dev-lang/perl )"

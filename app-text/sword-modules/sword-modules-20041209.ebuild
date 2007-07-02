@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20041209.ebuild,v 1.11 2007/03/10 21:22:21 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20041209.ebuild,v 1.12 2007/07/02 14:25:43 peper Exp $
 
 CROSSWIREFTP="http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip"
 DESCRIPTION="a collection of modules for the sword project"
@@ -33,7 +33,7 @@ SRC_URI="${CROSSWIREFTP}/KJV.zip
 # must wait for the betamodules to return.
 #	http://www.crosswire.org/ftpmirror/pub/sword/betamodules/win/QuranShakir.zip
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 LICENSE="freedist"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
