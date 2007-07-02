@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1-r1.ebuild,v 1.8 2007/07/02 14:23:08 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1-r1.ebuild,v 1.9 2007/07/02 14:56:08 coldwind Exp $
 
 DESCRIPTION="Collection of IceWM themes"
 HOMEPAGE="http://www.icewm.org/
@@ -26,7 +26,8 @@ KEYWORDS="amd64 ~ppc sparc x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="|| ( x11-wm/icewm
+	kde-base/kdeartwork-icewm-themes )"
 DEPEND=""
 
 S="${WORKDIR}"
