@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.27 2007/06/14 17:41:38 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.28 2007/07/02 12:40:56 pylon Exp $
+
+  02 Jul 2007; Lars Weiler <pylon@gentoo.org> pymol-0.99_rc10.ebuild:
+  Stable on ppc; bug #183879.
 
   14 Jun 2007; Jeff Gardner <je_fro@gentoo.org> pymol-0.99_rc10.ebuild:
   Removing dev-python/numeric dependency wrt bug #181653.
