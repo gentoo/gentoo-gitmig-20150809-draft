@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.121 2007/07/02 11:29:05 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.122 2007/07/02 15:06:53 armin76 Exp $
+
+  02 Jul 2007; Raúl Porcel <armin76@gentoo.org> usermin-1.280-r1.ebuild:
+  alpha/x86 stable wrt #183890
 
   02 Jul 2007; Lars Weiler <pylon@gentoo.org> usermin-1.280-r1.ebuild:
   Stable on ppc; bug #183890.
