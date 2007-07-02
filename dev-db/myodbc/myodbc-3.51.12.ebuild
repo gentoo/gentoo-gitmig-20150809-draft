@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-3.51.12.ebuild,v 1.4 2007/01/31 13:46:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-3.51.12.ebuild,v 1.5 2007/07/02 02:28:00 peper Exp $
 
 MY_PN="mysql-connector-odbc"
 MY_P="${MY_PN}-${PV}"
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="debug doc static"
-RESTRICT="confcache"
 RDEPEND=">=virtual/mysql-4.0 dev-db/unixODBC sys-devel/m4"
 # perl is required for building docs
 DEPEND="${RDEPEND} doc? ( dev-lang/perl )"
