@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.60 2007/06/02 21:09:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.61 2007/07/02 09:41:10 flameeyes Exp $
+
+*pulseaudio-0.9.6-r1 (02 Jul 2007)
+
+  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +pulseaudio-0.9.6-r1.ebuild:
+  Revision bump: now use realtime group rather than pulse-rt, and link the
+  realtime guide, so that users can set it up.
 
   02 Jun 2007; Raúl Porcel <armin76@gentoo.org> pulseaudio-0.9.5-r6.ebuild,
   pulseaudio-0.9.6.ebuild:
