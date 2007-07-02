@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-yaepg
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-yaepg/ChangeLog,v 1.7 2006/08/18 10:25:03 zzam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-yaepg/ChangeLog,v 1.8 2007/07/02 08:41:06 zzam Exp $
+
+*vdr-yaepg-0.0.2.1-r1 (02 Jul 2007)
+
+  02 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-yaepg-0.0.2.1-uint64.diff,
+  +files/vdr-yaepg-0.0.2.1-vdr-1.5.3.diff, +vdr-yaepg-0.0.2.1-r1.ebuild:
+  Changed check for yaepg patched vdr. Added uint64 and vdr-1.5.3 patch.
 
   18 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Changed herd to media-tv.
