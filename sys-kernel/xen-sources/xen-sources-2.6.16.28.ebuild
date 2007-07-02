@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.16.28.ebuild,v 1.1 2006/09/10 11:36:22 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.16.28.ebuild,v 1.2 2007/07/02 15:33:50 peper Exp $
 
 ETYPE="sources"
 inherit kernel-2 eutils
@@ -17,7 +17,7 @@ SRC_URI="${KERNEL_URI} mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/pat
 KEYWORDS="~x86 ~amd64"
 #RDEPEND="~app-emulation/xen-${XEN_VERSION}"
 S="${WORKDIR}"
-RESTRICT="nostrip"
+RESTRICT="strip"
 XEN_KV=${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}
 
 src_unpack() {

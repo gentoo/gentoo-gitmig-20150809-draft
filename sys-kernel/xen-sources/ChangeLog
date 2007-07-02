@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.38 2007/05/02 03:31:45 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.39 2007/07/02 15:33:50 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  xen-sources-2.6.16.28.ebuild, xen-sources-2.6.16.28-r1.ebuild:
+  (QA) RESTRICT clean up.
 
 *xen-sources-2.6.16.49 (02 May 2007)
 *xen-sources-2.6.16.33 (02 May 2007)
