@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/duke3d
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.26 2007/03/12 14:37:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.27 2007/07/02 19:59:26 tupone Exp $
+
+*duke3d-20040817-r2 (02 Jul 2007)
+
+  02 Jul 2007; <tupone@gentoo.org> +duke3d-20040817-r2.ebuild:
+  Adding demo. Bug #161684 by Paul Bredbury
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> duke3d-20040817.ebuild,
   duke3d-20040817-r1.ebuild:
