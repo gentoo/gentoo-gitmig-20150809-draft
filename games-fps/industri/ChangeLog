@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/industri
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/ChangeLog,v 1.8 2007/02/21 23:40:37 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/ChangeLog,v 1.9 2007/07/02 17:28:03 nyhm Exp $
+
+  02 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/industri-1.01-exec-stack.patch, industri-1.01.ebuild:
+  remove need for an executable stack
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

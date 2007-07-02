@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.13 2007/01/11 21:43:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.14 2007/07/02 17:28:03 nyhm Exp $
 
-inherit toolchain-funcs games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="Quake/Tenebrae based, single player game"
 HOMEPAGE="http://industri.sourceforge.net/"
@@ -21,8 +21,7 @@ RDEPEND="virtual/opengl
 	x11-libs/libX11
 	x11-libs/libXxf86vm
 	media-libs/libpng
-	cdinstall? ( games-fps/quake1-data )
-	sys-libs/zlib"
+	cdinstall? ( games-fps/quake1-data )"
 DEPEND="${RDEPEND}
 	x11-proto/xf86dgaproto
 	x11-proto/xextproto
@@ -49,6 +48,8 @@ src_unpack() {
 				|| die "sed failed"
 		fi
 	done
+
+	epatch "${FILESDIR}"/${P}-exec-stack.patch
 }
 
 src_compile() {
