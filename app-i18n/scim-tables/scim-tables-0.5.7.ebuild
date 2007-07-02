@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.7.ebuild,v 1.2 2007/01/05 16:32:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.7.ebuild,v 1.3 2007/07/02 14:14:05 peper Exp $
 
 inherit kde-functions autotools eutils
 
@@ -26,7 +26,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-RESTRICT="confcache"
 
 pkg_setup() {
 	elog "Not all languages are going to be compiled."
