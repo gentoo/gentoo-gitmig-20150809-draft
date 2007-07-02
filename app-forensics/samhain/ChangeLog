@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/samhain
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/ChangeLog,v 1.8 2007/05/13 18:16:23 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/ChangeLog,v 1.9 2007/07/02 14:12:03 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> samhain-2.1.3.ebuild,
+  samhain-2.2.0.ebuild:
+  (QA) RESTRICT clean up.
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
