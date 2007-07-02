@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.4-r2.ebuild,v 1.5 2007/07/01 15:33:24 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.4-r2.ebuild,v 1.6 2007/07/02 12:35:06 gustavoz Exp $
 
 inherit distutils eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/docutils/${P}.tar.gz
 
 LICENSE="public-domain PYTHON BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~m68k ~mips ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~m68k ~mips ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="glep emacs"
 
 DEPEND=">=dev-lang/python-2.3"
