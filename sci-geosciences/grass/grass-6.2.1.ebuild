@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1.ebuild,v 1.2 2007/07/01 23:19:00 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1.ebuild,v 1.3 2007/07/02 15:26:00 peper Exp $
 
 inherit eutils autotools
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="ffmpeg fftw glw gmath jpeg largefile motif mysql nls odbc opengl png
 postgres python readline sqlite tcl tk tiff truetype X"
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 RDEPEND=">=sys-devel/make-3.80
 	>=sys-libs/zlib-1.1.4

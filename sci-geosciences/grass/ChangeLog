@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.41 2007/07/01 23:19:00 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.42 2007/07/02 15:26:00 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> grass-6.0.1.ebuild,
+  grass-6.2.0-r1.ebuild, grass-6.2.1.ebuild:
+  (QA) RESTRICT clean up.
 
   01 Jul 2007; Steve Arnold <nerdboy@gentoo.org>
   +files/grass-6.2.1-html-nonviz.patch, grass-6.2.1.ebuild:
