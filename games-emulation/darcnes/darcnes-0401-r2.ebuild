@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/darcnes-0401-r2.ebuild,v 1.11 2006/12/01 21:22:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/darcnes-0401-r2.ebuild,v 1.12 2007/07/02 17:07:42 nyhm Exp $
 
 inherit eutils games
 
@@ -26,8 +26,9 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-gcc34.patch"
+	epatch \
+		"${FILESDIR}"/${P}-gcc34.patch \
+		"${FILESDIR}"/${P}-exec-stack.patch
 	# bug #75391
 	sed -i \
 		-e "s/buttons\[0\]/buttons\[\]/" ui.h \
