@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/dejavu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.74 2007/07/01 18:05:00 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.75 2007/07/02 12:46:00 angelos Exp $
+
+  02 Jul 2007; Christoph Mende <angelos@gentoo.org> dejavu-2.17.ebuild:
+  Stable on amd64 wrt bug #183853
 
   01 Jul 2007; Lars Weiler <pylon@gentoo.org> dejavu-2.17.ebuild:
   Stable on ppc; bug #183853.
