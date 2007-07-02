@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.9.001-r3.ebuild,v 1.6 2007/01/31 14:22:04 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.9.001-r3.ebuild,v 1.7 2007/07/02 14:39:33 peper Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	app-crypt/gnupg
 	>=app-shells/bash-2.05b"
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 # These variables are not used by Portage, but by the functions
 # below.

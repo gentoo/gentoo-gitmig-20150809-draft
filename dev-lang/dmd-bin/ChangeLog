@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/dmd-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/ChangeLog,v 1.7 2007/07/02 11:15:17 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/ChangeLog,v 1.8 2007/07/02 14:40:39 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> dmd-bin-1.016.ebuild,
+  dmd-bin-1.018.ebuild:
+  (QA) RESTRICT clean up.
 
 *dmd-bin-1.018 (02 Jul 2007)
 *dmd-bin-1.016 (02 Jul 2007)

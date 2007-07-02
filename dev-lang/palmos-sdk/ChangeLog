@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/palmos-sdk
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/ChangeLog,v 1.7 2007/03/09 21:04:11 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/ChangeLog,v 1.8 2007/07/02 14:44:59 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  palmos-sdk-5.0-r3.ebuild:
+  (QA) RESTRICT clean up.
 
   04 Mar 2007; Anant Narayanan <anant@gentoo.org> -palmos-sdk-3.5.ebuild,
   -palmos-sdk-4.0.ebuild:

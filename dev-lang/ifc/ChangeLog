@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.25 2007/04/28 16:55:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.26 2007/07/02 14:44:01 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> ifc-9.1.040.ebuild:
+  (QA) RESTRICT clean up.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> ifc-9.1.040.ebuild:
   Fix *initd, *confd and *envd calls (#17388, #174266)

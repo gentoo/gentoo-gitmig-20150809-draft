@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.20 2007/05/24 18:17:45 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.21 2007/07/02 14:50:46 peper Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -18,7 +18,7 @@ LICENSE="Ruby"
 SLOT="1.8"
 KEYWORDS="~alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="socks5 tk cjk doc threads examples ipv6 debug"
-RESTRICT="confcache test"
+RESTRICT="test"
 
 RDEPEND="virtual/libc
 	>=sys-libs/gdbm-1.8.0

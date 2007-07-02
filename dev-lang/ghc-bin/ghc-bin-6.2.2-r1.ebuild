@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.2-r1.ebuild,v 1.7 2007/04/12 18:07:11 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.2-r1.ebuild,v 1.8 2007/07/02 14:41:42 peper Exp $
 
 IUSE="" # use the non-binary version if you want to have more choice
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 KEYWORDS="-alpha -amd64 ppc sparc x86"
 SLOT="0"
 
-RESTRICT="nostrip" # already stripped
+RESTRICT="strip" # already stripped
 
 LOC="/opt/ghc"
 

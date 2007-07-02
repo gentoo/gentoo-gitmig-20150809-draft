@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/palmos-sdk-5.0-r3.ebuild,v 1.6 2006/03/19 22:22:25 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/palmos-sdk-5.0-r3.ebuild,v 1.7 2007/07/02 14:44:59 peper Exp $
 
 DESCRIPTION="The static libraries and header files needed for developing PalmOS applications."
 HOMEPAGE="http://www.palmos.com/"
@@ -13,7 +13,7 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 SRC_URI="palmos-sdk-5.0r3-1.tar.gz PalmOS_5_SDK_68K_R3_no-install.zip"
 IUSE="doc"
-RESTRICT="nostrip fetch"
+RESTRICT="strip fetch"
 S=${WORKDIR}
 
 pkg_nofetch() {

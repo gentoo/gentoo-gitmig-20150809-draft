@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.1.045.ebuild,v 1.6 2007/06/26 01:50:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.1.045.ebuild,v 1.7 2007/07/02 14:43:12 peper Exp $
 
 inherit rpm versionator
 
@@ -17,7 +17,7 @@ SLOT="${MAJOR}.${MINOR}"
 MMV="${MAJOR}.${MINOR}"
 KEYWORDS="~amd64 ia64 x86"
 IUSE=""
-RESTRICT="nostrip fetch"
+RESTRICT="strip fetch"
 S="${WORKDIR}/l_cc_c_${PV}"
 
 pkg_nofetch() {

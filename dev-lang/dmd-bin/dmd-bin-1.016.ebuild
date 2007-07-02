@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-1.016.ebuild,v 1.1 2007/07/02 11:15:17 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-1.016.ebuild,v 1.2 2007/07/02 14:40:39 peper Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.digitalmars.com/d/"
 SRC_URI="http://ftp.digitalmars.com/${MY_P}.zip"
 
 LICENSE="DMD"
-RESTRICT="mirror nostrip"
+RESTRICT="mirror strip"
 SLOT="0"
 KEYWORDS="~x86"
 

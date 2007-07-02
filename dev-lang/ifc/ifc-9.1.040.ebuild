@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-9.1.040.ebuild,v 1.5 2007/06/26 01:50:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-9.1.040.ebuild,v 1.6 2007/07/02 14:44:01 peper Exp $
 
 inherit rpm versionator
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.intel.com/software/products/compilers/flin/"
 IUSE=""
 KEYWORDS="~amd64 ia64 x86"
 LICENSE="ifc-9.0"
-RESTRICT="nostrip fetch"
+RESTRICT="strip fetch"
 SLOT="${MAJOR}.${MINOR}"
 MMV="${MAJOR}.${MINOR}"
 

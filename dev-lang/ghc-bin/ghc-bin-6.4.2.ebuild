@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.2.ebuild,v 1.14 2007/04/12 18:07:11 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.2.ebuild,v 1.15 2007/07/02 14:41:42 peper Exp $
 
 # Note to users of hardened gcc-3.x:
 #
@@ -33,7 +33,7 @@ KEYWORDS="-* ~alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 IUSE="" # use the non-binary version if you want to have more choice
 
-RESTRICT="nostrip" # already stripped
+RESTRICT="strip" # already stripped
 
 LOC="/opt/ghc"
 
