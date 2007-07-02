@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnus-cvs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/ChangeLog,v 1.17 2007/07/02 13:46:59 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/ChangeLog,v 1.18 2007/07/02 19:00:09 ulm Exp $
+
+  02 Jul 2007; Ulrich Mueller <ulm@gentoo.org> gnus-cvs-5.11.ebuild:
+  Add blocking dependency against app-emacs/gnus.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> gnus-cvs-5.11.ebuild:
   (QA) RESTRICT clean up.
