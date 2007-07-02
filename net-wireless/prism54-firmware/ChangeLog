@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/prism54-firmware
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/ChangeLog,v 1.8 2007/02/05 05:34:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/ChangeLog,v 1.9 2007/07/02 15:20:30 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  prism54-firmware-1.0.4.3.ebuild:
+  (QA) RESTRICT clean up.
 
   05 Feb 2007; Doug Goldstein <cardoe@gentoo.org>
   prism54-firmware-1.0.4.3.ebuild:

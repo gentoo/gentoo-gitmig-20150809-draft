@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx-firmware/acx-firmware-20060207.ebuild,v 1.5 2007/02/22 11:41:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx-firmware/acx-firmware-20060207.ebuild,v 1.6 2007/07/02 15:15:56 peper Exp $
 
 DESCRIPTION="Firmware for the ACX100 and ACX111 wireless chipsets"
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 HOMEPAGE="http://acx100.erley.org/acx_fw"
 SRC_URI="http://www.kazer.org/${P}.tar.bz2"
 

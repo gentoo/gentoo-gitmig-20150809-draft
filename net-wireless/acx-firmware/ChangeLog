@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/acx-firmware
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx-firmware/ChangeLog,v 1.5 2007/02/22 11:41:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx-firmware/ChangeLog,v 1.6 2007/07/02 15:15:56 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  acx-firmware-20060207.ebuild:
+  (QA) RESTRICT clean up.
 
   22 Feb 2007; <genstef@gentoo.org> acx-firmware-20060207.ebuild:
   New firmware source, bug 165401 thanks to KaZeR

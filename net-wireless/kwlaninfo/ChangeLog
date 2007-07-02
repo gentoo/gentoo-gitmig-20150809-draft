@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kwlaninfo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwlaninfo/ChangeLog,v 1.4 2007/05/07 16:46:58 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwlaninfo/ChangeLog,v 1.5 2007/07/02 15:18:41 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> kwlaninfo-0.9.4.ebuild:
+  (QA) RESTRICT clean up.
 
 *kwlaninfo-0.9.5 (07 May 2007)
 

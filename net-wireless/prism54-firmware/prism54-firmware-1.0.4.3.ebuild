@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/prism54-firmware-1.0.4.3.ebuild,v 1.8 2007/02/05 05:34:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/prism54-firmware-1.0.4.3.ebuild,v 1.9 2007/07/02 15:20:30 peper Exp $
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 DESCRIPTION="Firmware for Intersil Prism GT / Prism Duette wireless chipsets"
 HOMEPAGE="http://www.prism54.org/"
