@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.2.2.ebuild,v 1.8 2007/05/12 07:24:51 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.2.2.ebuild,v 1.9 2007/07/02 14:31:03 peper Exp $
 
 inherit eutils libtool wxwidgets
 
 IUSE=""
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 DESCRIPTION="wxWindows GUI for PostgreSQL"
 HOMEPAGE="http://www.pgadmin.org/"
 SRC_URI="mirror://postgresql/pgadmin3/release/v${PV}/src/${P}.tar.gz"

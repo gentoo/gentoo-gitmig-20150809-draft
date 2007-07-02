@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.66 2007/07/01 19:05:23 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.67 2007/07/02 14:27:47 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  firebird-1.5.4-r3.ebuild:
+  (QA) RESTRICT clean up.
 
 *firebird-2.0.1.12855.0-r5 (01 Jul 2007)
 

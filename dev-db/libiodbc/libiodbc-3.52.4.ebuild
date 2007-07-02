@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.52.4.ebuild,v 1.9 2007/05/06 04:58:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.52.4.ebuild,v 1.10 2007/07/02 14:30:08 peper Exp $
 
 KEYWORDS="~alpha ~amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
 
@@ -10,9 +10,6 @@ SRC_URI="http://www.iodbc.org/downloads/iODBC/${P}.tar.gz"
 LICENSE="LGPL-2 BSD"
 SLOT="0"
 IUSE="gtk"
-
-# upstream does weird stuff in their configure
-RESTRICT="confcache"
 
 DEPEND=">=sys-libs/readline-4.1
 		>=sys-libs/ncurses-5.2

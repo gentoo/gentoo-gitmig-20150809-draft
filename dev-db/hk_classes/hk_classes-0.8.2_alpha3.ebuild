@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.2_alpha3.ebuild,v 1.3 2006/11/23 19:55:29 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.2_alpha3.ebuild,v 1.4 2007/07/02 14:28:49 peper Exp $
 
 inherit eutils python
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 P_DOCS="hk_classes-htmldocumentation-0.8"
 
