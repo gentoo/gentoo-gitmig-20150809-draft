@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/upx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/ChangeLog,v 1.17 2007/07/02 13:40:23 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/ChangeLog,v 1.18 2007/07/02 17:00:51 matsuu Exp $
+
+*upx-3.00 (02 Jul 2007)
+
+  02 Jul 2007; MATSUU Takuto <matsuu@gentoo.org> +upx-3.00.ebuild:
+  Version bumped, bug #183974.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> upx-1.25.ebuild,
   upx-2.02.ebuild:
