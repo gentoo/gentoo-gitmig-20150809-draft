@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi-kernel/mindi-kernel-1.0.ebuild,v 1.5 2005/05/06 14:57:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi-kernel/mindi-kernel-1.0.ebuild,v 1.6 2007/07/02 15:27:41 peper Exp $
 
 DESCRIPTION="Mindi-kernel provides a basic kernel image for a mindi created bootdisk"
 HOMEPAGE="http://www.microwerks.net/~hugo/mindi/"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
-RESTRICT="nouserpriv"
+RESTRICT="userpriv"
 
 RDEPEND=">=sys-apps/mindi-0.85"
 

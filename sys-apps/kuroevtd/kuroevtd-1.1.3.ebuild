@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kuroevtd/kuroevtd-1.1.3.ebuild,v 1.2 2006/01/21 21:53:29 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kuroevtd/kuroevtd-1.1.3.ebuild,v 1.3 2007/07/02 15:27:48 peper Exp $
 
 DESCRIPTION="Monitors the Kurobox and LinkStation power and reset buttons."
 HOMEPAGE="http://kuro.dsk.jp/"
 SRC_URI="http://kuro.dsk.jp/data/bin/${PN}_${PV}.tgz"
 
-RESTRICT="nomirror nostrip"
+RESTRICT="mirror strip"
 LICENSE="as-is"
 SLOT="0"
 
