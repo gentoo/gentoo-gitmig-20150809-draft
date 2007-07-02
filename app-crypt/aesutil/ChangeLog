@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/aesutil
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aesutil/ChangeLog,v 1.4 2007/05/13 18:05:42 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aesutil/ChangeLog,v 1.5 2007/07/02 23:02:45 betelgeuse Exp $
+
+  02 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> aesutil-1.0.7.ebuild:
+  Don't depend on virtual/libc as it's pointless.
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add herd
