@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.11 2005/09/19 13:45:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.12 2007/07/02 14:24:27 peper Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org>
 #
@@ -14,7 +14,7 @@
 #	   * DICT_SUFFIX   -  SRC_URI after the prefix.
 
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 [ -z "${DICT_SUFFIX}" ] && DICT_SUFFIX=${PN#stardict-[a-z]*-}
 [ -z "${DICT_P}" ] && DICT_P=stardict-${DICT_PREFIX}${DICT_SUFFIX}-${PV}
