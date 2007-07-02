@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/nprquake-sdl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nprquake-sdl/ChangeLog,v 1.6 2007/03/12 14:44:51 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nprquake-sdl/ChangeLog,v 1.7 2007/07/02 21:46:18 nyhm Exp $
+
+  02 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/nprquake-sdl-1-exec-stack.patch, files/1-gentoo.patch,
+  nprquake-sdl-1-r1.ebuild:
+  remove need for an executable stack
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> nprquake-sdl-1-r1.ebuild:
   Replacing einfo with elog

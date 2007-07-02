@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nprquake-sdl/nprquake-sdl-1-r1.ebuild,v 1.12 2007/04/09 17:54:20 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nprquake-sdl/nprquake-sdl-1-r1.ebuild,v 1.13 2007/07/02 21:46:18 nyhm Exp $
 
 inherit eutils games
 
@@ -22,16 +22,18 @@ S=${WORKDIR}/NPRQuake-SDL
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-gentoo.patch
+	epatch \
+		"${FILESDIR}"/${PV}-gentoo.patch \
+		"${FILESDIR}"/${P}-exec-stack.patch
 }
 
 src_compile() {
-	make \
+	emake \
 		GENTOO_LIBDIR="$(games_get_libdir)/${PN}" \
 		GENTOO_DATADIR="${GAMES_DATADIR}/quake1" \
 		OPTFLAGS="${CFLAGS}" \
 		release \
-		|| die
+		|| die "emake failed"
 }
 
 src_install() {
