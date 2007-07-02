@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/jflex
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.1 2007/07/02 05:51:09 ali_bush Exp $
+
+  02 Jul 2007; Alistair John Bush <ali_bush@gentoo.org> ChangeLog:
+  Adding jflex to tree with 2 minor fixes. Thank you to elvanor
+  <elvanor@gmail.com> for contributing the ebuild.
+
