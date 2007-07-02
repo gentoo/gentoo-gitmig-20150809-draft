@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/katapult
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katapult/ChangeLog,v 1.14 2007/07/01 20:59:11 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katapult/ChangeLog,v 1.15 2007/07/02 05:21:52 philantrop Exp $
+
+*katapult-0.3.2.1 (02 Jul 2007)
+
+  02 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  -katapult-0.3.2.ebuild, +katapult-0.3.2.1.ebuild:
+  Version bump to 0.3.2.1 as 0.3.2 had some issues and was therefore removed.
 
 *katapult-0.3.2 (01 Jul 2007)
 
