@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/rescan-scsi-bus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/ChangeLog,v 1.4 2007/05/24 07:02:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/ChangeLog,v 1.5 2007/07/02 14:07:19 gustavoz Exp $
+
+  02 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  rescan-scsi-bus-1.24.ebuild:
+  Stable on sparc
 
   24 May 2007; Robin H. Johnson <robbat2@gentoo.org>
   rescan-scsi-bus-1.24.ebuild:
