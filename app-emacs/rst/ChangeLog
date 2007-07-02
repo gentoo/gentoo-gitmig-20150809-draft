@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/rst
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.11 2007/06/29 20:23:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.12 2007/07/02 13:56:30 ulm Exp $
+
+  02 Jul 2007; Ulrich Mueller <ulm@gentoo.org> rst-0.4.ebuild:
+  Remove src_install, since it is now the default of elisp.eclass.
 
   29 Jun 2007; Jeroen Roovers <jer@gentoo.org> rst-0.4.ebuild:
   Straight to stable for HPPA (bug #183312).

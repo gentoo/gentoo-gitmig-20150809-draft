@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/rst-0.4.ebuild,v 1.9 2007/06/29 20:23:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/rst-0.4.ebuild,v 1.10 2007/07/02 13:56:30 ulm Exp $
 
 inherit elisp
 
@@ -16,12 +16,3 @@ IUSE=""
 S="${WORKDIR}/docutils-${PV}/tools/editors/emacs"
 SITEFILE=50${PN}-gentoo.el
 DOCS="README.txt"
-
-# this can be removed once the new elisp.eclass is in the tree
-src_install() {
-	elisp-install ${PN} *.el *.elc
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
-	if [ -n "${DOCS}" ]; then
-		dodoc ${DOCS} || die "dodoc failed"
-	fi
-}
