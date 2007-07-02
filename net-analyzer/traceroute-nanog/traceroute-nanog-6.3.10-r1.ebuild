@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/traceroute-nanog-6.3.10-r1.ebuild,v 1.5 2006/03/27 22:05:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/traceroute-nanog-6.3.10-r1.ebuild,v 1.6 2007/07/02 14:44:09 peper Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ DESCRIPTION="Traceroute with AS lookup, TOS support, MTU discovery and other fea
 HOMEPAGE="http://packages.debian.org/traceroute-nanog"
 SRC_URI="mirror://debian/pool/main/t/traceroute-nanog/${MY_P}.orig.tar.gz
 	mirror://debian/pool/main/t/traceroute-nanog/${MY_P}-${DEB_PL}.diff.gz"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 LICENSE="BSD"
 SLOT="0"

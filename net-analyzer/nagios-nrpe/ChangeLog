@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.42 2007/06/10 17:02:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.43 2007/07/02 14:38:33 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  nagios-nrpe-2.5.1.ebuild, nagios-nrpe-2.8.1.ebuild:
+  (QA) RESTRICT clean up.
 
 *nagios-nrpe-2.8.1 (10 Jun 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-3.0.5.ebuild,v 1.3 2007/05/01 18:07:06 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-3.0.5.ebuild,v 1.4 2007/07/02 14:39:26 peper Exp $
 
 inherit rpm
 
@@ -10,7 +10,7 @@ MY_P="Nessus-${PV}-suse10.0.i586"
 DESCRIPTION="A remote security scanner for Linux"
 HOMEPAGE="http://www.nessus.org"
 SRC_URI="${MY_P}.rpm"
-RESTRICT="nomirror fetch nostrip"
+RESTRICT="mirror fetch strip"
 
 LICENSE="Nessus-EULA"
 SLOT="0"

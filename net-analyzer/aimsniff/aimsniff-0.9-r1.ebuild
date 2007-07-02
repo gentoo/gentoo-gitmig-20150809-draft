@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.14 2007/05/12 03:13:37 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.15 2007/07/02 14:35:04 peper Exp $
 
 inherit eutils webapp
 
@@ -30,7 +30,7 @@ DEPEND="dev-lang/perl
 	http? ( =net-www/apache-2* )"
 RDEPEND=${DEPEND}
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 S=${WORKDIR}/${MY_P}
 
