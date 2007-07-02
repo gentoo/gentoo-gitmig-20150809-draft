@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.2.ebuild,v 1.3 2007/07/01 12:26:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.2.ebuild,v 1.4 2007/07/02 18:59:42 opfer Exp $
 
 inherit eutils games
 
@@ -16,7 +16,7 @@ SRC_URI="${SB}/${P}-source.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="alsa debug dedicated iconv png scenarios timidity zlib"
 
 DEPEND="!dedicated? ( media-libs/libsdl
