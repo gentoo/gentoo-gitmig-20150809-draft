@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.2.1.1.ebuild,v 1.1 2005/09/03 18:39:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.2.1.1.ebuild,v 1.2 2007/07/02 15:29:58 peper Exp $
 
 #set
 DESCRIPTION="3ware Command Line Interface Tool"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="-* x86 amd64"
 IUSE=""
 # stripping seems to break this sometimes
-RESTRICT="fetch nostrip nomirror"
+RESTRICT="fetch strip mirror"
 # binary packages
 DEPEND=""
 RDEPEND="virtual/libc"

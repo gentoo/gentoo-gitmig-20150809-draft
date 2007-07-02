@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.4.0.1.ebuild,v 1.2 2007/04/01 19:56:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.4.0.1.ebuild,v 1.3 2007/07/02 15:29:58 peper Exp $
 
 DESCRIPTION="3ware SATA+PATA RAID controller Command Line Interface tool"
 HOMEPAGE="http://www.3ware.com/"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 # stripping seems to break this sometimes
-RESTRICT="fetch nostrip nomirror"
+RESTRICT="fetch strip mirror"
 # binary packages
 DEPEND=""
 RDEPEND="virtual/libc"
