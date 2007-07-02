@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.31 2007/07/02 13:04:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.32 2007/07/02 15:16:46 armin76 Exp $
+
+  02 Jul 2007; Raúl Porcel <armin76@gentoo.org> pyzor-0.4.0-r3.ebuild:
+  alpha/ia64/x86 stable wrt #183892
 
   02 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> pyzor-0.4.0-r3.ebuild:
   Stable on sparc wrt #183892
