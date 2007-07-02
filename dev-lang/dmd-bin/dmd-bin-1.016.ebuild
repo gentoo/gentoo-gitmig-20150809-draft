@@ -1,11 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-1.0.0.ebuild,v 1.2 2007/03/09 15:12:46 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-1.016.ebuild,v 1.1 2007/07/02 11:15:17 anant Exp $
 
 inherit eutils
 
 MY_P=${P/-bin/}
-MY_P=${MY_P/0./0}
 MY_P=${MY_P/-/.}
 
 DESCRIPTION="Digital Mars D Compiler"
@@ -16,29 +15,30 @@ LICENSE="DMD"
 RESTRICT="mirror nostrip"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
 
 LOC="/opt/dmd"
 S="${WORKDIR}"
 
 DEPEND="sys-apps/findutils"
 RDEPEND="amd64? ( app-emulation/emul-linux-x86-compat )
-	x86? ( >=virtual/libstdc++-3.3 )"
+	x86? ( sys-libs/libstdc++-v3 )"
+
 
 src_unpack() {
 	unpack ${A}
 
 	# Remove unneccessary files
+	mv ${S}/dmd/lib/libphobos.a ${S}/dmd
+	rm -r ${S}/dmd/lib
+	mkdir ${S}/dmd/lib
+	mv ${S}/dmd/libphobos.a ${S}/dmd/lib
+
 	rm -r ${S}/dm
 	rm ${S}/dmd/bin/*.dll ${S}/dmd/bin/*.exe ${S}/dmd/bin/readme.txt
 	rm ${S}/dmd/bin/sc.ini ${S}/dmd/bin/windbg.hlp
-	rm ${S}/dmd/lib/*.LIB ${S}/dmd/lib/*.lib ${S}/dmd/lib/*.obj
-}
-
-src_install() {
-	cd ${S}/dmd
 
 	# Cleanup line endings
+	cd ${S}/dmd
 	edos2unix `find . -name '*.c' -type f`
 	edos2unix `find . -name '*.d' -type f`
 	edos2unix `find . -name '*.ddoc' -type f`
@@ -47,18 +47,35 @@ src_install() {
 	edos2unix `find . -name '*.txt' -type f`
 	edos2unix `find samples -name '*.html' -type f`
 
+	# Fix permissions
+	fperms guo=r `find . -type f`
+	fperms guo=rx `find . -type d`
+	fperms guo=rx bin/dmd bin/dumpobj bin/obj2asm bin/rdmd
+}
+
+src_compile() {
+	cd ${S}/dmd/src/phobos
+	sed -i -e "s:DMD=.*:DMD=${S}/dmd/bin/dmd -I${S}/dmd/src/phobos -L${S}/dmd/lib/libphobos.a:" linux.mak internal/gc/linux.mak
+	edos2unix linux.mak internal/gc/linux.mak
+	make -f linux.mak
+	cp libphobos.a ${S}/dmd/lib
+
+	# Clean up
+	make -f linux.mak clean
+	rm internal/gc/*.o
+}
+
+src_install() {
+	cd ${S}/dmd
+
 	# Broken dmd.conf
 	# http://d.puremagic.com/issues/show_bug.cgi?id=278
 	mv bin/dmd bin/dmd.bin
 	cat <<END > "bin/dmd"
 #!/bin/sh
-${LOC}/bin/dmd.bin -I${LOC}/src/phobos -L${LOC}/lib \$*
+${LOC}/bin/dmd.bin -I${LOC}/src/phobos -L${LOC}/lib/libphobos.a \$*
 END
-
-	# Fix permissions
-	fperms guo=r `find . -type f`
-	fperms guo=rx `find . -type d`
-	fperms guo=rx bin/dmd bin/dmd.bin bin/dumpobj bin/obj2asm bin/rdmd
+	fperms guo=rx bin/dmd bin/dmd.bin
 
 	# Man pages
 	doman man/man1/dmd.1
