@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.1-r1.ebuild,v 1.5 2007/04/07 08:31:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.1-r1.ebuild,v 1.6 2007/07/02 03:02:23 peper Exp $
 
 inherit fortran eutils gnuconfig toolchain-funcs
 
@@ -36,7 +36,7 @@ PATCH12=( src
 
 DESCRIPTION="Protein X-ray crystallography toolkit"
 HOMEPAGE="http://www.ccp4.ac.uk/"
-RESTRICT="mirror stricter"
+RESTRICT="mirror"
 SRC_URI="${SRC}/${PV}/packed/${P}-core-src.tar.gz"
 for i in $(seq $PATCH_TOT); do
 	NAME="PATCH${i}[1]"
@@ -72,8 +72,6 @@ RDEPEND="X? (
 		sci-libs/mccp4
 		|| ( app-shells/tcsh app-shells/csh )
 		!app-office/sc"
-# >=sys-apps/portage-2.1.1_pre1 for RESTRICT=stricter
-# Otherwise portage dies instead of fixing RPATHs
 DEPEND="${RDEPEND}
 		X? (
 			|| (
@@ -84,8 +82,7 @@ DEPEND="${RDEPEND}
 				)
 				virtual/x11
 			)
-		)
-		>=sys-apps/portage-2.1.1_pre1"
+		)"
 
 S="${WORKDIR}/${PN}-${PV}"
 
