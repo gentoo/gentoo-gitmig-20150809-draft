@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-5.05.ebuild,v 1.1 2007/05/21 15:26:35 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-5.05.ebuild,v 1.2 2007/07/02 15:24:09 peper Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~ppc ~x86"
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 DEPEND="sci-biology/clustalw"
 

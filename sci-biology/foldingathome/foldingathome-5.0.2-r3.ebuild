@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-5.0.2-r3.ebuild,v 1.5 2007/04/21 23:00:25 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-5.0.2-r3.ebuild,v 1.6 2007/07/02 15:23:09 peper Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -11,7 +11,7 @@ inherit eutils
 DESCRIPTION="Help simulate protein folding at home"
 HOMEPAGE="http://folding.stanford.edu/"
 SRC_URI="http://www.stanford.edu/group/pandegroup/release/FAH502-Linux.exe"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 SLOT="0"
 IUSE=""

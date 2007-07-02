@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/foldingathome
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.15 2007/04/21 22:54:55 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.16 2007/07/02 15:23:09 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  foldingathome-5.0.2-r3.ebuild, foldingathome-5.0.2-r5.ebuild:
+  (QA) RESTRICT clean up.
 
   21 Apr 2007; Jeff Gardner <je_fro@gentoo.org>
   foldingathome-5.0.2-r3.ebuild, foldingathome-5.0.2-r5.ebuild:

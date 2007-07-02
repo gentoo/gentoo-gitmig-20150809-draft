@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/t-coffee
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.22 2007/07/01 19:24:23 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.23 2007/07/02 15:24:09 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> t-coffee-4.96.ebuild,
+  t-coffee-5.05.ebuild:
+  (QA) RESTRICT clean up.
 
   01 Jul 2007; Olivier Fisette <ribosome@gentoo.org> -t-coffee-3.84.ebuild:
   Removed old version (sources are no longer available). There is no stable
