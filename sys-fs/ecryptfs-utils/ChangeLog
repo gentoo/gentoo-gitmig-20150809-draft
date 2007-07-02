@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ecryptfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.6 2007/05/12 02:14:15 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.7 2007/07/02 15:33:12 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  ecryptfs-utils-7.ebuild:
+  (QA) RESTRICT clean up.
 
   12 May 2007; Daniel Drake <dsd@gentoo.org> metadata.xml:
   Move from kernel to kernel-misc herd

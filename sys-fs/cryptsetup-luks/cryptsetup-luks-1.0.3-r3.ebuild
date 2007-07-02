@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.3-r3.ebuild,v 1.1 2006/10/12 11:03:00 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.3-r3.ebuild,v 1.2 2007/07/02 15:33:24 peper Exp $
 
 inherit autotools linux-info eutils flag-o-matic multilib
 
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="build dynamic nls selinux"
-RESTRICT="confcache"
 
 DEPEND=">=sys-fs/device-mapper-1.00.07-r1
 	>=dev-libs/libgcrypt-1.1.42
