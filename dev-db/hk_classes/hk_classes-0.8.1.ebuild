@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.1.ebuild,v 1.9 2007/07/02 14:28:49 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.1.ebuild,v 1.10 2007/07/02 19:47:00 philantrop Exp $
 
 inherit eutils python
 
-RESTRICT="strip"
+# The tests themselves are broken.
+RESTRICT="strip test"
 
 P_DOCS="hk_classes-htmldocumentation-0.8"
 
