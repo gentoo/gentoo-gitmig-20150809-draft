@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.150 2007/06/24 06:33:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.151 2007/07/02 02:56:52 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> mesa-6.5-r3.ebuild,
+  mesa-6.5.1-r1.ebuild, mesa-6.5.1-r4.ebuild, mesa-6.5.2.ebuild,
+  mesa-6.5.2-r1.ebuild, mesa-6.5.3.ebuild:
+  (QA) RESTRICT clean up.
 
   24 Jun 2007; Joshua Kinard <kumba@gentoo.org> mesa-6.5.2-r1.ebuild:
   Stable on mips, per #175465.

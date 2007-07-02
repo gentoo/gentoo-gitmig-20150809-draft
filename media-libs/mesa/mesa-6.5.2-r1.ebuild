@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.2-r1.ebuild,v 1.9 2007/06/24 22:01:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.2-r1.ebuild,v 1.10 2007/07/02 02:56:52 peper Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -37,7 +37,6 @@ IUSE="${IUSE_VIDEO_CARDS}
 	nptl
 	xcb"
 
-RESTRICT="stricter"
 RDEPEND="dev-libs/expat
 	x11-libs/libX11
 	x11-libs/libXext
@@ -64,12 +63,6 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 # Think about: ggi, svga, fbcon, no-X configs
-
-if use debug; then
-	if ! has splitdebug ${FEATURES}; then
-		RESTRICT="${RESTRICT} nostrip"
-	fi
-fi
 
 pkg_setup() {
 	if use xcb; then
