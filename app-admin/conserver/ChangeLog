@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conserver
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.58 2007/07/02 11:42:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.59 2007/07/02 13:29:40 pylon Exp $
+
+  02 Jul 2007; Lars Weiler <pylon@gentoo.org> conserver-8.1.14-r1.ebuild:
+  Stable on ppc; bug #183888.
 
   02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
   conserver-8.1.14-r1.ebuild:
