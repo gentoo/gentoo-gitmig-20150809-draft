@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7438 2007/07/02 17:07:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7439 2007/07/02 17:28:08 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (02 Jul 2007)
+# Still using GTK+-1.2. Replaced by x11-misc/gcolor2.
+# Masked for removal in 30 days.
+x11-misc/gcolor
 
 # Samuli Suominen <drac@gentoo.org> (02 Jul 2007)
 # Upstream gone, last release from 2004. Still using GTK+-1.2.
