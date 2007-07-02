@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.37 2007/07/02 12:41:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.38 2007/07/02 12:44:26 angelos Exp $
+
+  02 Jul 2007; Christoph Mende <angelos@gentoo.org> wgetpaste-2.4.ebuild:
+  Stable on amd64 wrt bug #183835
 
   02 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> wgetpaste-2.4.ebuild:
   Stable on sparc wrt #183835
