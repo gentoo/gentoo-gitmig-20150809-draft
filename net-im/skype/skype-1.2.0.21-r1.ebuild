@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.2.0.21-r1.ebuild,v 1.3 2006/03/29 23:11:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.2.0.21-r1.ebuild,v 1.4 2007/07/02 14:48:26 peper Exp $
 
 inherit eutils qt3 rpm
 
 
 #If you want to know when this package will be marked stable please see the Changelog
-RESTRICT="nomirror nostrip"
+RESTRICT="mirror strip"
 AVATARV="1.0"
 DESCRIPTION="${PN} is a P2P-VoiceIP client."
 HOMEPAGE="http://www.${PN}.com/"

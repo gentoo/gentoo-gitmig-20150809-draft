@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sendxmpp/sendxmpp-0.0.8.ebuild,v 1.7 2007/03/12 22:22:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sendxmpp/sendxmpp-0.0.8.ebuild,v 1.8 2007/07/02 14:46:17 peper Exp $
 
 inherit eutils perl-module
 DESCRIPTION="sendxmpp is a perl-script to send xmpp (jabber), similar to what mail(1) does for mail."
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 hppa ppc sparc x86"
 IUSE=""
-RESTRICT="nomirror"
+RESTRICT="mirror"
 DEPEND="dev-perl/Net-XMPP"
 #RDEPEND=""
 
