@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/listings
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/listings/ChangeLog,v 1.14 2007/03/13 00:30:57 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/listings/ChangeLog,v 1.15 2007/07/02 15:08:35 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> listings-1.3.ebuild:
+  (QA) RESTRICT clean up.
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
