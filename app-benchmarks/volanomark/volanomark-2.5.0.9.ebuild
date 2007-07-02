@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volanomark/volanomark-2.5.0.9.ebuild,v 1.6 2007/01/23 15:54:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volanomark/volanomark-2.5.0.9.ebuild,v 1.7 2007/07/02 13:42:04 peper Exp $
 
 DESCRIPTION="Java server benchmark utility"
 HOMEPAGE="http://www.volano.com/benchmarks.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www.volano.com/pub/vmark2_5_0_9.class"
 LICENSE="Volano"
 
 # Below because of licensing.
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 SLOT="0"
 
