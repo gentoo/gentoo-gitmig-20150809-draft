@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_ssh
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.7 2007/02/09 15:24:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.8 2007/07/02 15:28:49 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> pam_ssh-1.91.ebuild,
+  pam_ssh-1.91-r2.ebuild, pam_ssh-1.92.ebuild:
+  (QA) RESTRICT clean up.
 
 *pam_ssh-1.92 (09 Feb 2007)
 

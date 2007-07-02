@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-20030601-r1.ebuild,v 1.4 2007/05/01 11:41:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-20030601-r1.ebuild,v 1.5 2007/07/02 15:28:41 peper Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ MY_PN="${PN}_snap"
 MY_PV="${PV:0:4}.${PV:4:2}.${PV:6:2}"
 DESCRIPTION="Pam module for MIT Kerberos V and Heimdal"
 SRC_URI_BASE="mirror://sourceforge/pam-krb5"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 SRC_URI="${SRC_URI_BASE}/${MY_PN}-${MY_PV}.tar.gz"
 HOMEPAGE="http://pam-krb5.sourceforge.net/"
 
