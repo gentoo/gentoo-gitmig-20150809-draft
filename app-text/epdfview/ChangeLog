@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.14 2007/04/11 08:21:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.15 2007/07/02 14:17:37 gustavoz Exp $
+
+  02 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> epdfview-0.1.6.ebuild:
+  Stable on sparc
 
   11 Apr 2007; Markus Rothe <corsair@gentoo.org> epdfview-0.1.6.ebuild:
   Added ~ppc64
