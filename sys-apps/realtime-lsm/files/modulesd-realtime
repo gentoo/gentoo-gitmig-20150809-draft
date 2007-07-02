@@ -1,0 +1,12 @@
+# modules.d configuration file for REALTIME
+# For more information please read the documentation at
+# /usr/share/doc/realtime-lsm-*/
+
+
+# Configurable module parameters
+# ------------------------------
+# mlock:	 enable memory locking privileges.
+# gid:	 the group ID with access to realtime privileges.
+# any:	 grant realtime privileges to any process.
+
+options realtime gid=@REALTIMEGROUPID@
