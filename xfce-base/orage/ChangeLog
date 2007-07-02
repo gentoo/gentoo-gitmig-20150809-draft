@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/orage
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.33 2007/06/16 17:22:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.34 2007/07/02 14:16:43 drac Exp $
+
+*orage-4.5.9.6 (02 Jul 2007)
+
+  02 Jul 2007; Samuli Suominen <drac@gentoo.org> -orage-4.5.9.3.ebuild,
+  +orage-4.5.9.6.ebuild:
+  Version bump. This version supports importing and exporting ical files, dbus
+  and libnotify.
 
 *orage-4.5.9.3 (16 Jun 2007)
 
