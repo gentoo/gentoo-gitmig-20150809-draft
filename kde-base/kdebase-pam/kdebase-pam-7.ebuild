@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/kdebase-pam-7.ebuild,v 1.2 2007/07/01 23:23:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/kdebase-pam-7.ebuild,v 1.3 2007/07/02 10:59:14 pylon Exp $
 
 inherit pam
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.kde.org"
 LICENSE="as-is"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 mips ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/pam"
