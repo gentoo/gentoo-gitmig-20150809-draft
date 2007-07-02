@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/matchbox
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/ChangeLog,v 1.13 2007/02/21 22:39:53 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/ChangeLog,v 1.14 2007/07/02 02:03:30 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> matchbox-0.7.1.ebuild:
+  (QA) RESTRICT clean up.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
