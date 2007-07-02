@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.01.ebuild,v 1.1 2007/07/01 22:10:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.01.ebuild,v 1.2 2007/07/02 13:20:26 drac Exp $
 
 DESCRIPTION="DVD Video Creator"
 HOMEPAGE="http://www.rastersoft.com/programas/devede.html"
@@ -9,7 +9,7 @@ SRC_URI="http://www.rastersoft.com/descargas/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc"
+IUSE="doc psyco"
 
 RDEPEND=">=x11-libs/gtk+-2.6
 	>=dev-lang/python-2.4
@@ -17,7 +17,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=media-video/mplayer-1.0_rc1
 	media-video/dvdauthor
 	media-video/vcdimager
-	dev-python/psyco
+	psyco? ( dev-python/psyco )
 	virtual/cdrtools"
 DEPEND="${RDEPEND}
 	sys-apps/sed"
