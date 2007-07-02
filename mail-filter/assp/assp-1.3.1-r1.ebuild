@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.3.1.ebuild,v 1.1 2007/07/02 16:26:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.3.1-r1.ebuild,v 1.1 2007/07/02 16:44:01 wltjr Exp $
 
 inherit eutils
 
@@ -70,6 +70,9 @@ src_install() {
 	dodir /etc/assp
 
 	insinto /etc/assp
+	# Installs files that are used by assp for black/gray lists,
+	# and domain country lookup. To be changed by admin as needed.
+	doins files/*.txt
 
 	fowners assp:assp /etc/assp -R
 	fperms 770 /etc/assp
@@ -88,8 +91,6 @@ src_install() {
 	doexe *.pl *.sh
 	insinto /usr/share/assp
 	doins -r images/
-
-	insinto /usr/share/assp
 	doins *.txt
 
 	# Lock down the files/data
