@@ -1,13 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.25 2007/06/01 21:24:02 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6-r1.ebuild,v 1.26 2007/07/02 15:24:47 peper Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
 
 inherit autotools eutils flag-o-matic gnome2 multilib nsplugins toolchain-funcs wxwidgets
 
-RESTRICT="confcache"
 
 MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-beta/-test}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.8-r2.ebuild,v 1.2 2007/04/18 13:00:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.8-r2.ebuild,v 1.3 2007/07/02 15:23:56 peper Exp $
 
 inherit nsplugins eutils rpm
 
@@ -22,7 +22,7 @@ RDEPEND="!amd64? (
 			X? ( app-emulation/emul-linux-x86-gtklibs )
 			app-emulation/emul-linux-x86-compat
 		)"
-RESTRICT="strip nomirror test"
+RESTRICT="strip mirror test"
 
 QA_TEXTRELS="opt/RealPlayer/codecs/raac.so
 	opt/RealPlayer/codecs/cvt1.so

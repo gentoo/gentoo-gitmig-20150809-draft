@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_pre8.ebuild,v 1.3 2007/02/18 16:40:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_pre8.ebuild,v 1.4 2007/07/02 15:23:16 peper Exp $
 
 inherit multilib
 
@@ -25,7 +25,7 @@ DEPEND=""
 
 S=${WORKDIR}
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 pkg_setup() {
 	# This is a binary x86 package => ABI=x86

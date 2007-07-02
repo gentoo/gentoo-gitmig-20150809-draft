@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20070122.ebuild,v 1.2 2007/01/28 05:28:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20070122.ebuild,v 1.3 2007/07/02 15:22:48 peper Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -9,7 +9,7 @@ inherit toolchain-funcs eutils flag-o-matic autotools
 
 #filter-flags "-fPIC -fforce-addr"
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 DESCRIPTION="Cinelerra - Professional Video Editor - Unofficial CVS-version"
 HOMEPAGE="http://cvs.cinelerra.org/"
