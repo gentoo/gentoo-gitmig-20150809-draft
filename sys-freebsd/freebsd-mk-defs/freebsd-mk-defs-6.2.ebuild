@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-6.2.ebuild,v 1.1 2007/01/15 21:36:42 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-6.2.ebuild,v 1.2 2007/07/02 15:31:54 peper Exp $
 
 inherit bsdmk freebsd
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${SHARE}.tar.bz2"
 RDEPEND=""
 DEPEND=""
 
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 S="${WORKDIR}/share/mk"
 

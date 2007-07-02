@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-mk-defs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.30 2007/01/15 21:36:42 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.31 2007/07/02 15:31:54 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  freebsd-mk-defs-6.2.ebuild:
+  (QA) RESTRICT clean up.
 
 *freebsd-mk-defs-6.2 (15 Jan 2007)
 
