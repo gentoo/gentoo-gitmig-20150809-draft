@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2903 2007/07/01 18:57:19 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2904 2007/07/02 10:45:14 coldwind Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2074,6 +2074,7 @@ x11-wm/openbox:pango - Enable pango support
 x11-wm/sawfish:pango - Enable pango support
 x11-wm/stumpwm-cvs:clisp - Use CLISP for the runtime
 x11-wm/stumpwm-cvs:sbcl - Use SBCL for the runtime
+x11-wm/vtwm:rplay - Enable rplay support, needed for sound.
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
 xfce-base/thunar:plugins - Enable trash panel plugin.
 xfce-base/xfce4-extras:battery - Meta pulls in xfce4-battery dependency.
