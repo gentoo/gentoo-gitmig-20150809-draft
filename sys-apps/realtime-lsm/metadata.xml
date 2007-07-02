@@ -1,36 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sound</herd>
-	<maintainer>
-		<email>sound@gentoo.org</email>
-	</maintainer>
-  <longdescription>
-Realtime Linux Security Module
-
-This Linux Security Module (LSM) enables realtime capabilities.
-
-Options:
-
-# modprobe realtime any=1
-
-Any program can request realtime privileges.  This allows any local
-user to crash the system by hogging the CPU in a tight loop or
-locking down too much memory.  But, it is simple to administer.  :-)
-
-# modprobe realtime gid=29
-
-All users belonging to group 29 and programs that are setgid to that
-group have realtime privileges.  Use any group number you like.
-
-# modprobe realtime mlock=0
-
-Grants realtime scheduling privileges without the ability to lock
-memory using mlock() or mlockall() system calls.  This option can be
-used in conjunction with any of the other options.
-
-The JACK Audio Connection Kit (jackit.sourceforge.net) includes a
-jackstart program which uses CAP_SETPCAP to run the JACK daemon
-and its clients with realtime capabilities.
-  </longdescription>
+<herd>proaudio</herd>
 </pkgmetadata>
