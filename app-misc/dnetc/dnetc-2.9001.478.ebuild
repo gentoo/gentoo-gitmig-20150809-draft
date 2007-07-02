@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9001.478.ebuild,v 1.15 2007/04/28 21:22:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9001.478.ebuild,v 1.16 2007/07/02 14:16:13 peper Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -18,7 +18,7 @@ if use mips; then
 	S="${WORKDIR}/dnetc${MIN_PV}-ps2linux-mipsel"
 fi
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 pkg_preinst() {
 	if [ -e /opt/distributed.net/dnetc ] && [ -e /etc/init.d/dnetc ]; then

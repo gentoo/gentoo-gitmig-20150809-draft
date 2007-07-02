@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.44 2007/06/01 06:49:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.45 2007/07/02 14:16:13 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  dnetc-2.9001.478.ebuild, dnetc-2.9002.479.ebuild,
+  dnetc-2.9003.481-r1.ebuild, dnetc-2.9005.483.ebuild,
+  dnetc-2.9008.490.ebuild, dnetc-2.9009.494.ebuild, dnetc-2.9011.496.ebuild,
+  dnetc-2.9011.496-r1.ebuild, dnetc-2.9011.498.ebuild:
+  (QA) RESTRICT clean up.
 
   01 Jun 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
   modified ChangeLog to meet common format

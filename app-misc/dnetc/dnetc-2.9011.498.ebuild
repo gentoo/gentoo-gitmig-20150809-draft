@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9011.498.ebuild,v 1.2 2007/01/28 05:11:22 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9011.498.ebuild,v 1.3 2007/07/02 14:16:13 peper Exp $
 
 inherit eutils versionator
 
@@ -13,7 +13,7 @@ SRC_URI="x86? ( http://http.distributed.net/pub/dcti/v2.9013/dnetc${MIN_PV}-linu
 LICENSE="distributed.net"
 SLOT="0"
 KEYWORDS="~x86 -*"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 IUSE=""
 DEPEND=""
 RDEPEND=""
