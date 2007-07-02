@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/mkl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.14 2007/06/01 00:59:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.15 2007/07/02 15:26:36 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> mkl-5.2.ebuild,
+  mkl-8.1.014.ebuild, mkl-9.0.018.ebuild:
+  (QA) RESTRICT clean up.
 
   01 Jun 2007; Sébastien Fabbro <bicatali@gentoo.org> mkl-9.0.018.ebuild:
   small fix while creating the env.d file

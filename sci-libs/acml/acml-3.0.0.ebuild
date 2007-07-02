@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.0.0.ebuild,v 1.4 2006/08/15 21:22:14 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.0.0.ebuild,v 1.5 2007/07/02 15:25:55 peper Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ S=${WORKDIR}
 
 SRC_URI="amd64? ( acml-${MY_PV}-gnu-64bit.tgz )
 	x86? ( acml-${MY_PV}-gnu-32bit.tgz )"
-RESTRICT="fetch nostrip"
+RESTRICT="fetch strip"
 IUSE="sse sse2"
 LICENSE="ACML"
 KEYWORDS="amd64 x86"

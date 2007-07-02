@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-8.1.014.ebuild,v 1.2 2007/03/24 23:11:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-8.1.014.ebuild,v 1.3 2007/07/02 15:26:36 peper Exp $
 
 inherit fortran rpm flag-o-matic
 
@@ -8,7 +8,7 @@ MYPV=${PV%.*}
 DESCRIPTION="Intel(R) Math Kernel Library: linear algebra, fft, random number generators."
 HOMEPAGE="http://developer.intel.com/software/products/mkl/"
 SRC_URI="l_${PN}_p_${PV}.tgz"
-RESTRICT="nostrip fetch"
+RESTRICT="strip fetch"
 
 #fortran95 implements a fortran 95 blas/lapack interface
 IUSE="fortran95 examples"

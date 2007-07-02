@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1.ebuild,v 1.1 2007/06/01 16:05:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1.ebuild,v 1.2 2007/07/02 15:25:55 peper Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -13,7 +13,7 @@ SRC_URI="x86? ( acml-${MY_PV}-gfortran-32bit.tgz )
 	amd64? ( int64? ( acml-${MY_PV}-gfortran-64bit-int64.tgz )
 		!int64? ( acml-${MY_PV}-gfortran-64bit.tgz ) )"
 
-RESTRICT="fetch nostrip"
+RESTRICT="fetch strip"
 IUSE="int64 doc examples"
 LICENSE="ACML"
 KEYWORDS="~amd64 ~x86"

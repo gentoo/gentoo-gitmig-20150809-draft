@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-5.2.ebuild,v 1.2 2005/08/24 16:27:00 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-5.2.ebuild,v 1.3 2007/07/02 15:26:36 peper Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Intel(R) Math Kernel Library"
@@ -10,7 +10,7 @@ SRC_URI="http://developer.intel.com/software/products/mkl/downloads/mkl52lin_e.t
 IUSE=""
 
 # No need to, there aren't any executables and it takes a long time.
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 SLOT="0"
 LICENSE="imkl-5.1"
