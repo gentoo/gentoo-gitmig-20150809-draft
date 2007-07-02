@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.52 2007/03/14 18:18:53 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.53 2007/07/02 14:43:55 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  x11-drm-20051223.ebuild:
+  (QA) RESTRICT clean up.
 
   14 Mar 2007; Bryan Stine <battousai@gentoo.org> x11-drm-20060608.ebuild,
   x11-drm-20060608-r1.ebuild, x11-drm-20070314.ebuild:

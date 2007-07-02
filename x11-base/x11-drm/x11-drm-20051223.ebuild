@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051223.ebuild,v 1.12 2006/09/07 04:47:34 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051223.ebuild,v 1.13 2007/07/02 14:43:55 peper Exp $
 
 inherit eutils x11 linux-mod
 
@@ -20,7 +20,7 @@ IUSE="${IUSE_VIDEO_CARDS}"
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 S="${WORKDIR}/drm"
 PATCHVER="0.2"
