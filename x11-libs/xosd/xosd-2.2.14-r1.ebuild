@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.12 2007/06/02 16:20:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.13 2007/07/02 14:55:10 peper Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -31,7 +31,6 @@ DEPEND="|| ( (
 	virtual/x11 )
 	${RDEPEND}"
 
-RESTRICT="confcache"
 
 src_unpack() {
 	unpack ${A}

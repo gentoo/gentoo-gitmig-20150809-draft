@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ViewKlass/ViewKlass-0.7.0.ebuild,v 1.4 2004/09/03 15:35:19 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ViewKlass/ViewKlass-0.7.0.ebuild,v 1.5 2007/07/02 14:54:16 peper Exp $
 
 IUSE=""
 
 DESCRIPTION="An implementation of the ViewKit user interface library"
 SRC_URI="mirror://sourceforge/viewklass/${P}.tar.gz"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 HOMEPAGE="http://viewklass.sourceforge.net"
 LICENSE="LGPL-2.1"
 
