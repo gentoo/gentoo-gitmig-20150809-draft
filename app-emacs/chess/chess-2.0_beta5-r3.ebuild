@@ -1,8 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta5-r2.ebuild,v 1.3 2007/04/07 16:41:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta5-r3.ebuild,v 1.1 2007/07/02 06:29:34 opfer Exp $
 
-inherit elisp-common eutils
+NEED_EMACS=22
+
+inherit elisp eutils
 
 DESCRIPTION="A chess client and library for Emacs"
 HOMEPAGE="http://emacs-chess.sourceforge.net/"
@@ -15,9 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="festival"
 
-# don't forget to change it back to virtual/emacs
-# (inherit elisp.eclass)!  See bug 151474
-DEPEND="app-editors/emacs-cvs"
+DEPEND=""
 
 RDEPEND="${DEPEND}
 	games-board/gnuchess
@@ -34,18 +34,20 @@ src_unpack() {
 }
 
 src_compile() {
-	make || die
+	emake || die
 }
 
 src_install() {
 	elisp-install ${PN} *.el *.elc
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
-	dodir /usr/share/pixmaps/${PN}
-	cp -r "${WORKDIR}/pieces/." "${D}/usr/share/pixmaps/${PN}"
-	dodir /usr/share/sounds/${PN}
-	cp -r "${WORKDIR}/sounds/." "${D}/usr/share/sounds/${PN}"
-
+	einfo "Installing sound files..."
+	insinto /usr/share/sounds/${PN}
+	doins "${WORKDIR}"/sounds/*
+	einfo "Installing graphic files..."
+	insinto /usr/share/pixmaps/
+	doins -r "${WORKDIR}"/pieces/*
+	einfo "Installing documentation"
 	doinfo chess.info
 	dohtml *.html
 	dodoc ChangeLog EPD.txt PGN.txt PLAN README TODO
