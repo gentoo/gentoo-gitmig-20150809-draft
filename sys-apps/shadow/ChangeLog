@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.172 2007/07/02 10:55:37 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.173 2007/07/02 13:02:23 gustavoz Exp $
+
+  02 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  shadow-4.0.18.1-r1.ebuild:
+  Stable on sparc wrt #183886
 
   02 Jul 2007; Lars Weiler <pylon@gentoo.org> shadow-4.0.18.1-r1.ebuild:
   Stable on ppc; bug #183886.
