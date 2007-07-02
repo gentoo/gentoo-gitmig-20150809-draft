@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-cs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-cs/ChangeLog,v 1.4 2007/05/31 13:31:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-cs/ChangeLog,v 1.5 2007/07/02 14:13:04 gustavoz Exp $
+
+  02 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  vim-spell-cs-20061021.ebuild:
+  Stable on sparc
 
   31 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   vim-spell-cs-20061021.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-da
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-da/ChangeLog,v 1.6 2007/05/31 13:28:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-da/ChangeLog,v 1.7 2007/07/02 14:12:11 gustavoz Exp $
+
+  02 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  vim-spell-da-20060116.ebuild:
+  Stable on sparc
 
   31 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   vim-spell-da-20060116.ebuild:
