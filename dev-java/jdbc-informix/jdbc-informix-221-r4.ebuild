@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/jdbc-informix-221-r4.ebuild,v 1.10 2005/07/16 18:23:48 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/jdbc-informix-221-r4.ebuild,v 1.11 2007/07/02 14:31:56 peper Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ LICENSE="informix-jdbc"
 SLOT="0"
 DEPEND=""
 RDEPEND=">=virtual/jre-1.2"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 IUSE="doc"
 
 src_unpack() {

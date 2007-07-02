@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/jdbc-mssqlserver-2.2.0040-r1.ebuild,v 1.1 2007/06/09 10:37:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/jdbc-mssqlserver-2.2.0040-r1.ebuild,v 1.2 2007/07/02 14:32:47 peper Exp $
 
 inherit java-pkg-2
 
@@ -15,7 +15,7 @@ SLOT="0"
 DEPEND=""
 RDEPEND=">=virtual/jre-1.1"
 IUSE="doc"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 src_unpack() {
 	tar xf ${DISTDIR}/${At} || die

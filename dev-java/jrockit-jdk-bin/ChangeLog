@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jrockit-jdk-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.35 2007/05/03 20:31:00 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.36 2007/07/02 14:33:55 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  jrockit-jdk-bin-1.4.2.13.ebuild, jrockit-jdk-bin-1.5.0.06-r1.ebuild,
+  jrockit-jdk-bin-1.5.0.10.ebuild:
+  (QA) RESTRICT clean up.
 
   03 May 2007; Vlastimil Babka <caster@gentoo.org>
   -jrockit-jdk-bin-1.4.2.11.ebuild:

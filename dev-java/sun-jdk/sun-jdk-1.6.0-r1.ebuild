@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0-r1.ebuild,v 1.8 2007/04/07 19:23:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0-r1.ebuild,v 1.9 2007/07/02 14:37:02 peper Exp $
 
 inherit java-vm-2 eutils pax-utils
 
@@ -18,7 +18,7 @@ SRC_URI="x86? ( http://download.java.net/dlj/binaries/${X86_AT} )
 SLOT="1.6"
 LICENSE="dlj-1.1"
 KEYWORDS="~amd64 ~x86"
-RESTRICT="nostrip"
+RESTRICT="strip"
 IUSE="X alsa doc examples jce nsplugin"
 
 QA_TEXTRELS_x86="opt/${P}/jre/lib/i386/motif21/libmawt.so
