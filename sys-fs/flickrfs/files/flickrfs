@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# Josh Glover <jmglov@wmalumni.com> - we need to use the old fuse-python
-# API until flickrfs is upgraded to use the new one
-FUSE_PYTHON_API=0.1 flickrfs.py $@

@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/flickrfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/flickrfs/ChangeLog,v 1.1 2007/06/24 03:53:27 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/flickrfs/ChangeLog,v 1.2 2007/07/02 05:25:10 jmglov Exp $
+
+  02 Jul 2007; Josh Glover <jmglov@gentoo.org> files/flickrfs-1.3.9.patch,
+  -files/flickrfs:
+  now depends on virtual/fuse-python, so we can do away with the wrapper
+  script; submitted by Josh Glover in bug #112550
 
 *flickrfs-1.3.9 (24 Jun 2007)
 
