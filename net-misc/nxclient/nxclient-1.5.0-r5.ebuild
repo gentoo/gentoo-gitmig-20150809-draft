@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0-r5.ebuild,v 1.4 2007/06/13 08:21:47 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0-r5.ebuild,v 1.5 2007/07/02 15:03:12 peper Exp $
 
 inherit rpm
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.nomachine.com"
 IUSE=""
 LICENSE="nomachine"
 SLOT="0"
-RESTRICT="nostrip"
+RESTRICT="strip"
 SRC_URI="http://web04.nomachine.com/download/1.5.0/client/${P}-141.i386.rpm"
 
 # This is only supported upstream on 32-bit x86.

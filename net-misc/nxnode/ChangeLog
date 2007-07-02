@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.7 2007/06/21 22:36:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.8 2007/07/02 15:04:09 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> nxnode-2.1.0.ebuild,
+  nxnode-3.0.0.ebuild:
+  (QA) RESTRICT clean up.
 
   21 Jun 2007; Bernard Cafarelli <voyageur@gentoo.org> nxnode-3.0.0.ebuild:
   Only check VNC installation when vnc USE flag is set

@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-1.1.ebuild,v 1.4 2006/09/25 17:13:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-1.1.ebuild,v 1.5 2007/07/02 14:59:23 peper Exp $
 
 inherit eutils
 
 DESCRIPTION="GTK Blog - post entries to your blog"
 HOMEPAGE="http://blogtk.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/BloGTK-${PV}.tar.bz2"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 S="${WORKDIR}/BloGTK-${PV}"
 
 LICENSE="BSD"

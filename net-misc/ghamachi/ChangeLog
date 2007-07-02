@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ghamachi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ghamachi/ChangeLog,v 1.4 2007/06/14 12:49:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ghamachi/ChangeLog,v 1.5 2007/07/02 15:00:24 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> ghamachi-0.7.3.ebuild,
+  ghamachi-0.8.1.ebuild:
+  (QA) RESTRICT clean up.
 
   14 Jun 2007; Christoph Mende <angelos@gentoo.org> ghamachi-0.8.1.ebuild:
   Added ~amd64

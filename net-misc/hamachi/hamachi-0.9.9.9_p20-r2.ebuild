@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r2.ebuild,v 1.5 2007/04/28 22:34:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r2.ebuild,v 1.6 2007/07/02 15:01:15 peper Exp $
 
 inherit eutils linux-info
 
@@ -17,7 +17,7 @@ SRC_URI=" !pentium? ( http://files.hamachi.cc/linux/${MY_P}.tar.gz )
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="pentium"
-RESTRICT="nostrip nomirror"
+RESTRICT="strip mirror"
 
 # Set workdir for both hamachi versions
 if use pentium; then

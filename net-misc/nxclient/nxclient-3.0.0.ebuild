@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.0.0.ebuild,v 1.3 2007/06/25 12:08:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.0.0.ebuild,v 1.4 2007/07/02 15:03:12 peper Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="nomachine"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 DEPEND=""
 RDEPEND="dev-libs/expat

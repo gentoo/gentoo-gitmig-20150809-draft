@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-freeedition
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.7 2007/06/21 20:21:30 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.8 2007/07/02 15:05:09 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  nxserver-freeedition-2.1.0.ebuild, nxserver-freeedition-3.0.0.ebuild:
+  (QA) RESTRICT clean up.
 
 *nxserver-freeedition-3.0.0 (21 Jun 2007)
 

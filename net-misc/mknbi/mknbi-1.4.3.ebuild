@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.3.ebuild,v 1.8 2005/05/30 18:30:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.3.ebuild,v 1.9 2007/07/02 15:02:07 peper Exp $
 
 inherit toolchain-funcs eutils
 
 DESCRIPTION="Utility for making tagged kernel images useful for netbooting"
 SRC_URI="mirror://sourceforge/etherboot/${P}.tar.gz"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 HOMEPAGE="http://etherboot.sourceforge.net"
 
 LICENSE="GPL-2"

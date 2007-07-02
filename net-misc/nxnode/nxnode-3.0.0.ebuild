@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0.ebuild,v 1.2 2007/06/21 22:36:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0.ebuild,v 1.3 2007/07/02 15:04:09 peper Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="nomachine"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="rdesktop vnc"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 DEPEND="!net-misc/nxserver-freenx
 	!<net-misc/nxserver-freeedition-3.0.0"
