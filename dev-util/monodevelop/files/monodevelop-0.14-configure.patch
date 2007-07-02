@@ -1,5 +1,5 @@
---- configure.in.old	2007-06-28 07:50:48.000000000 +0200
-+++ configure.in	2007-06-28 07:58:56.000000000 +0200
+--- configure.in.old	2007-07-02 22:59:22.000000000 +0200
++++ configure.in	2007-07-02 22:59:44.000000000 +0200
 @@ -127,7 +127,7 @@
  AC_ARG_ENABLE(java,
  	AC_HELP_STRING([--enable-java],
@@ -82,3 +82,12 @@
  
  if test "x$enable_aspnet" = "xno"; then
  	enable_aspnetedit=no
+@@ -383,7 +383,7 @@
+ 
+ AC_ARG_ENABLE(update-desktopdb,
+    AC_HELP_STRING([--disable-update-desktopdb],
+-                  [disable the update-desktop-database after install [default=np]]),,
++                  [disable the update-desktop-database after install [default=no]]),,
+                   enable_update_desktopdb=yes)
+    AM_CONDITIONAL(ENABLE_UPDATE_DESKTOPDB, test x$enable_update_desktopdb = xyes)
+ 

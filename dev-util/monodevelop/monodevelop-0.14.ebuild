@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.14.ebuild,v 1.1 2007/07/01 19:09:25 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.14.ebuild,v 1.2 2007/07/02 21:42:24 jurek Exp $
 
 inherit autotools eutils fdo-mime mono multilib
 
@@ -42,8 +42,18 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	if use aspnetedit && ! use aspnet; then
 		eerror
-		eerror "You cannot install the ASP.NET visual designer unless you"
-		eerror "enable ASP.NET support by enabling the aspnet use flag"
+		eerror "You cannot install the ASP.NET Visual Designer unless you"
+		eerror "add ASP.NET support by enabling the aspnet use flag"
+		eerror
+		die
+	fi
+
+	if use aspnetedit && ! ( use firefox || use seamonkey ); then
+		eerror
+		eerror "You cannot install the ASP.NET Visual Designer unless you"
+		eerror "add support for either Mozilla Firefox or Mozilla Seamonkey"
+		eerror "web browser by enabling the firefox or seamonkey use flag"
+		eerror "respectively"
 		eerror
 		die
 	fi
@@ -68,6 +78,7 @@ src_unpack() {
 
 		# We handle installation of aspdesigner.jar by ourselves
 		sed -i -e 's#old-install-files install-chrome-text$##g' \
+			-e 's#install-files install-manifest$##g' \
 			Extras/AspNetEdit/chrome/Makefile.am \
 			|| die "sed failed"
 		sed -i -e 's#@prefix@/lib/monodevelop/AddIns/AspNetEdit/##g' \
