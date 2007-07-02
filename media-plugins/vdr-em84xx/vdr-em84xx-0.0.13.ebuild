@@ -1,11 +1,11 @@
 # Copyright 2003-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-em84xx/vdr-em84xx-0.0.13.ebuild,v 1.1 2007/05/22 12:54:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-em84xx/vdr-em84xx-0.0.13.ebuild,v 1.2 2007/07/02 15:09:21 peper Exp $
 
 IUSE=""
 inherit vdr-plugin eutils
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 DESCRIPTION="VDR plugin: use em84xx as video-output-device"
 HOMEPAGE="http://www.arghgra.de/"
 SRC_URI="http://www.arghgra.de/${P}.tar.gz"

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-em84xx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-em84xx/ChangeLog,v 1.1 2007/05/22 12:54:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-em84xx/ChangeLog,v 1.2 2007/07/02 15:09:21 peper Exp $
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  vdr-em84xx-0.0.13.ebuild:
+  (QA) RESTRICT clean up.
 
 *vdr-em84xx-0.0.13 (22 May 2007)
 
