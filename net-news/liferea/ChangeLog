@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.106 2007/06/18 21:55:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.107 2007/07/03 15:32:55 uberlord Exp $
+
+  03 Jul 2007; Roy Marples <uberlord@gentoo.org> liferea-1.2.17.ebuild:
+  Added ~x86-fbsd keyword.
 
 *liferea-1.2.17 (18 Jun 2007)
 
