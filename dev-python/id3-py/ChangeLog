@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/id3-py
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/id3-py/ChangeLog,v 1.12 2006/07/12 15:41:09 agriffis Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/id3-py/ChangeLog,v 1.13 2007/07/03 10:29:21 lucass Exp $
+
+  03 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> id3-py-1.2.ebuild:
+  Cleanup.
 
   12 Jul 2006; Aron Griffis <agriffis@gentoo.org> id3-py-1.2.ebuild:
   Mark 1.2 stable on ia64
