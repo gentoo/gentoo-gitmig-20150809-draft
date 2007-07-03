@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/celementtree-1.0.2-r1.ebuild,v 1.1 2007/07/03 06:41:17 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/celementtree-1.0.2.ebuild,v 1.6 2007/07/03 07:25:16 hawking Exp $
 
 inherit eutils distutils
 
@@ -15,16 +15,8 @@ KEYWORDS="~amd64 ~ppc x86"
 
 IUSE="doc"
 DEPEND=">=dev-lang/python-2.1.3-r1
-	>=dev-python/elementtree-1.2
-	>=dev-libs/expat-1.95.8"
+	>=dev-python/elementtree-1.2"
 S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-use_system_expat.patch"
-}
 
 src_install() {
 	distutils_src_install
@@ -33,9 +25,4 @@ src_install() {
 		doins samples/*
 		doins selftest.py
 	fi
-}
-
-src_test() {
-	PYTHONPATH="$(ls -d build/lib.*)" "${python}" selftest.py \
-		|| die "tests failed"
 }

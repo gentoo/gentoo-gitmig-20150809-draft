@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/celementtree
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.16 2007/07/03 06:56:14 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.17 2007/07/03 07:25:16 hawking Exp $
+
+  03 Jul 2007; Ali Polatel <hawking@gentoo.org>
+  -files/celementtree-1.0.2-use_system_expat.patch,
+  +celementtree-1.0.2.ebuild, -celementtree-1.0.2-r1.ebuild:
+  Reverted version 1.0.2, removed 1.0.2-r1
 
   03 Jul 2007; Ali Polatel <hawking@gentoo.org> -celementtree-1.0.ebuild,
   -celementtree-1.0.2.ebuild, -celementtree-1.0.5.ebuild:
