@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0.0.20061118.ebuild,v 1.7 2007/04/28 06:56:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0.0.20061118.ebuild,v 1.8 2007/07/03 07:06:37 opfer Exp $
 
 inherit elisp eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="doc"
 
-DEPEND="virtual/emacs
-	virtual/commonlisp
+DEPEND="virtual/commonlisp
 	doc? ( sys-apps/texinfo )"
 
 CLPACKAGE=swank
@@ -26,7 +25,7 @@ src_compile() {
 
 src_install() {
 	elisp-install ${PN} *
-	elisp-site-file-install ${FILESDIR}/70slime-gentoo.el
+	elisp-site-file-install "${FILESDIR}/70slime-gentoo.el"
 	dodoc README* ChangeLog HACKING NEWS PROBLEMS
 	dodir /usr/share/common-lisp/systems
 	dosym /usr/share/emacs/site-lisp/${PN}/swank.asd \
