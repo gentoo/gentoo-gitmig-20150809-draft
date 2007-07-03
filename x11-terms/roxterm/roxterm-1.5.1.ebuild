@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-1.5.1.ebuild,v 1.1 2007/03/24 04:58:54 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-1.5.1.ebuild,v 1.2 2007/07/03 23:27:08 mr_bones_ Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-libs/glib-2.6
 		 >=x11-libs/gtk+-2.6
 		 || (
 				>=dev-libs/dbus-glib-0.71
-				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.35 )
+				>=sys-apps/dbus-0.35
 			)
 		 >=x11-libs/vte-0.11.11
 		 >=gnome-base/libglade-2"

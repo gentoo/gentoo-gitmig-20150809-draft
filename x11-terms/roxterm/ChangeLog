@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.12 2007/05/28 17:32:35 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.13 2007/07/03 23:27:08 mr_bones_ Exp $
+
+  03 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org> roxterm-1.4.1.ebuild,
+  roxterm-1.5.1.ebuild, roxterm-1.5.2.ebuild:
+  remove reference to old, removed dbus (bug #183696)
 
 *roxterm-1.5.2 (28 May 2007)
 
