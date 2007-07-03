@@ -1,32 +1,32 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.99_rc8.ebuild,v 1.1 2007/05/02 16:52:04 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.0-r1.ebuild,v 1.1 2007/07/03 00:12:04 je_fro Exp $
 
 inherit distutils eutils multilib subversion
 
-ESVN_REPO_URI="https://svn.sourceforge.net/svnroot/pymol/branches/b099/pymol"
-ESVN_UPDATE_CMD="svn -r 2805 update"
+ESVN_REPO_URI="https://svn.sourceforge.net/svnroot/pymol/trunk/pymol"
+ESVN_UPDATE_CMD="svn -r 3010 update"
 
 DESCRIPTION="A Python-extensible molecular graphics system."
 HOMEPAGE="http://pymol.sourceforge.net/"
 
-LICENSE="PSF-2.2"
+LICENSE="pymol"
+
 IUSE=""
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="dev-lang/python
 dev-python/pmw
-dev-python/numeric
 dev-lang/tk
 media-libs/libpng
 sys-libs/zlib
-media-libs/glut"
+virtual/glut"
 
 src_unpack() {
 	subversion_src_unpack
 
-	epatch "${FILESDIR}"/${P}-data-path.patch
+	epatch "${FILESDIR}"/${PF}-data-path.patch
 
 # Turn off splash screen.  Please do make a project contribution
 # if you are able.
@@ -66,7 +66,7 @@ EOF
 
 		exeinto /usr/bin
 		doexe "${T}"/pymol || die "Failed to install wrapper."
-		dodoc DEVELOPERS CHANGES || die "Failed to install docs."
+		dodoc DEVELOPERS || die "Failed to install docs."
 
 		mv examples "${D}"/usr/share/doc/${PF}/ || die "Failed moving docs."
 

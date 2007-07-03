@@ -1,6 +1,16 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.29 2007/07/02 19:05:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.30 2007/07/03 00:12:04 je_fro Exp $
+
+*pymol-1.0-r1 (03 Jul 2007)
+
+  03 Jul 2007; Jeff Gardner <je_fro@gentoo.org>
+  +files/pymol-1.0-r1-data-path.patch, -files/header_order.patch,
+  -files/pymol-gentoo.diff, -files/setup.py-gentoo.patch,
+  -files/setup2.py-gentoo.patch, -pymol-0.98.ebuild, -pymol-0.99_rc8.ebuild,
+  pymol-0.99_rc10.ebuild, +pymol-1.0-r1.ebuild:
+  Adding 1.0 release, changed LICENCE to pymol for the last 2 releases, and
+  cleaned up old files.
 
   02 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   pymol-0.99_rc10.ebuild:
