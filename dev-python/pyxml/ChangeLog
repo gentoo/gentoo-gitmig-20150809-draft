@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.38 2007/07/03 07:46:12 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.39 2007/07/03 11:37:57 dev-zero Exp $
+
+  03 Jul 2007; Tiziano Müller <dev-zero@gentoo.org> Manifest:
+  Re-digest (bug #184073)
 
   03 Jul 2007; Ali Polatel <hawking@gentoo.org> +pyxml-0.8.4.ebuild,
   pyxml-0.8.4-r1.ebuild:
