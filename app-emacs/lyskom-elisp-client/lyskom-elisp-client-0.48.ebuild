@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lyskom-elisp-client/lyskom-elisp-client-0.48.ebuild,v 1.5 2006/05/21 09:38:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lyskom-elisp-client/lyskom-elisp-client-0.48.ebuild,v 1.6 2007/07/03 09:45:44 opfer Exp $
 
 inherit elisp
 
@@ -17,18 +17,12 @@ KEYWORDS="amd64 sparc x86"
 IUSE=""
 
 SITEFILE=50lyskom-elisp-client-gentoo.el
+DOCS="NEWS-* README"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	mv lyskom-all-${PV}.el lyskom.el
-}
-
-src_install() {
-	elisp-install ${PN} *.el*
-	elisp-site-file-install ${FILESDIR}/${SITEFILE}
-
-	dodoc NEWS-* README
 }
 
 pkg_postinst() {
@@ -38,8 +32,4 @@ pkg_postinst() {
 	ewarn "\t(setq-default kom-default-language 'sv)"
 	ewarn "to your emacs configuration file."
 	ewarn
-}
-
-pkg_postrm() {
-	elisp-site-regen
 }
