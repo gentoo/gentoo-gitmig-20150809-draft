@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.5 2007/05/16 15:05:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.6 2007/07/03 18:48:18 opfer Exp $
+
+*org-mode-5.01 (03 Jul 2007)
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  -org-mode-4.68.ebuild, +org-mode-5.01.ebuild:
+  version bump, fixes bug 184108; clean-up
 
 *org-mode-4.74 (16 May 2007)
 
