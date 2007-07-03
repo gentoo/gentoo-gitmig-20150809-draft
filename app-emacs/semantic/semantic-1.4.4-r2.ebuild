@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semantic/semantic-1.4.4-r2.ebuild,v 1.1 2007/04/17 21:37:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semantic/semantic-1.4.4-r2.ebuild,v 1.2 2007/07/03 07:26:15 opfer Exp $
 
 inherit elisp
 
@@ -13,15 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="virtual/emacs
-	>=app-emacs/speedbar-0.14_beta4
+DEPEND=">=app-emacs/speedbar-0.14_beta4
 	>=app-emacs/eieio-0.17
 	!app-emacs/cedet"
 
 SITEFILE=61${PN}-gentoo.el
 
 src_compile() {
-	make LOADPATH="${SITELISP}/speedbar ${SITELISP}/eieio" || die
+	emake LOADPATH="${SITELISP}/speedbar ${SITELISP}/eieio" || die
 }
 
 src_install() {
