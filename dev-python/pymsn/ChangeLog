@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymsn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymsn/ChangeLog,v 1.1 2007/06/10 18:34:48 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymsn/ChangeLog,v 1.2 2007/07/03 21:29:23 coldwind Exp $
+
+  03 Jul 2007; Santiago M. Mola <coldwind@gentoo.org> metadata.xml:
+  Update metadata.
 
 *pymsn-0.2.2 (10 Jun 2007)
 
