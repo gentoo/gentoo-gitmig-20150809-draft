@@ -1,0 +1,57 @@
+diff -Nur pyNetworkManager-0.3.orig/LICENCE pyNetworkManager-0.3/LICENCE
+--- pyNetworkManager-0.3.orig/LICENCE	2007-06-29 22:35:11.000000000 +0300
++++ pyNetworkManager-0.3/LICENCE	1970-01-01 02:00:00.000000000 +0200
+@@ -1,5 +0,0 @@
+-pyNetworkManager:
+-Copyrigt: Martin Forsgren, mk0foma@student.chalmers.se
+-Lisence: GPL v2.
+-
+-No garanties as usual.
+diff -Nur pyNetworkManager-0.3.orig/LICENSE pyNetworkManager-0.3/LICENSE
+--- pyNetworkManager-0.3.orig/LICENSE	1970-01-01 02:00:00.000000000 +0200
++++ pyNetworkManager-0.3/LICENSE	2007-06-29 22:35:11.000000000 +0300
+@@ -0,0 +1,5 @@
++pyNetworkManager:
++Copyrigt: Martin Forsgren, mk0foma@student.chalmers.se
++Lisence: GPL v2.
++
++No garanties as usual.
+diff -Nur pyNetworkManager-0.3.orig/Makefile pyNetworkManager-0.3/Makefile
+--- pyNetworkManager-0.3.orig/Makefile	1970-01-01 02:00:00.000000000 +0200
++++ pyNetworkManager-0.3/Makefile	2007-07-03 21:16:09.000000000 +0300
+@@ -0,0 +1,14 @@
++PREFIX=/usr
++
++make-install-dirs: 
++	mkdir -p $(DESTDIR)$(PREFIX)/share/xfce4/pyNetworkManager/icons
++	mkdir -p $(DESTDIR)$(PREFIX)/share/xfce4/panel-plugins
++
++install: make-install-dirs
++	install -m 755 *.py $(DESTDIR)$(PREFIX)/share/xfce4/pyNetworkManager
++	install -m 644 icons/*.png $(DESTDIR)$(PREFIX)/share/xfce4/pyNetworkManager/icons
++	install -m 644 pyNetworkManager.desktop $(DESTDIR)$(PREFIX)/share/xfce4/panel-plugins
++	
++uninstall:
++	rm -rf $(DESTDIR)$(PREFIX)/share/xfce4/pyNetworkManager
++	rm -rr $(DESTDIR)$(PREFIX)/share/xfce4/panel-plugins/pyNetworkManager.desktop
+diff -Nur pyNetworkManager-0.3.orig/pyNetworkManager.desktop pyNetworkManager-0.3/pyNetworkManager.desktop
+--- pyNetworkManager-0.3.orig/pyNetworkManager.desktop	2007-07-01 18:14:08.000000000 +0300
++++ pyNetworkManager-0.3/pyNetworkManager.desktop	2007-07-03 21:29:34.000000000 +0300
+@@ -5,4 +5,4 @@
+ Icon=nm-device-wireless
+ Type=Panel
+ X-XFCE-Unique=true
+-X-XFCE-Exec=/home/martin/projekt/xfce/panel/pyNetworkManager/current/pyNMxfcePanel.py
++X-XFCE-Exec=/usr/share/xfce4/pyNetworkManager/pyNMxfcePanel.py
+diff -Nur pyNetworkManager-0.3.orig/pyNetworkManager.py pyNetworkManager-0.3/pyNetworkManager.py
+--- pyNetworkManager-0.3.orig/pyNetworkManager.py	2007-07-01 17:12:44.000000000 +0300
++++ pyNetworkManager-0.3/pyNetworkManager.py	2007-07-03 21:30:25.000000000 +0300
+@@ -11,7 +11,7 @@
+ # Filesystem
+ 
+ # Change to suit your system.
+-FILES_PATH='/home/martin/projekt/xfce/panel/pyNetworkManager/'
++FILES_PATH='/usr/share/xfce4/pyNetworkManager/'
+ 
+ # DBus
+ #  Networkmanager
