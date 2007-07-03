@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/xrdb-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xrdb-mode/ChangeLog,v 1.7 2007/02/18 12:03:33 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xrdb-mode/ChangeLog,v 1.8 2007/07/03 19:54:36 ulm Exp $
+
+  03 Jul 2007; Ulrich Mueller <ulm@gentoo.org> xrdb-mode-2.31.ebuild:
+  Remove redundant functions.
 
   18 Feb 2007; Matti Bickel <mabi@gentoo.org> xrdb-mode-2.31.ebuild:
   keyworded ~ppc (bug #163537)
