@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.10 2007/07/02 21:44:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.11 2007/07/03 11:20:19 opfer Exp $
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org> nxnode-2.1.0.ebuild:
+  stable x86, bug 180040
 
 *nxnode-3.0.0-r1 (02 Jul 2007)
 

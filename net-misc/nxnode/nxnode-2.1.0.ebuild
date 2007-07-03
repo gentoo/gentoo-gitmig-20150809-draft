@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-2.1.0.ebuild,v 1.5 2007/07/02 15:04:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-2.1.0.ebuild,v 1.6 2007/07/03 11:20:19 opfer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://64.34.161.181/download/2.1.0/Linux/nxnode-2.1.0-22.i386.tar.gz"
 
 LICENSE="nomachine"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 RESTRICT="strip"
 

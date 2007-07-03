@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-2.1.0-r1.ebuild,v 1.4 2007/07/02 15:03:12 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-2.1.0-r1.ebuild,v 1.5 2007/07/03 11:18:39 opfer Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nomachine.com/"
 SRC_URI="http://64.34.161.181/download/2.1.0/Linux/nxclient-2.1.0-17.i386.tar.gz"
 LICENSE="nomachine"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 RESTRICT="strip"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-2.1.0.ebuild,v 1.2 2007/04/26 10:06:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-2.1.0.ebuild,v 1.3 2007/07/03 11:10:53 opfer Exp $
 
 inherit autotools eutils multilib
 
@@ -24,7 +24,7 @@ SRC_URI="$URI_BASE/$SRC_NX_X11 $URI_BASE/$SRC_NXAGENT $URI_BASE/$SRC_NXPROXY
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="rdesktop vnc"
 
 RDEPEND="x86? ( x11-libs/libXau
