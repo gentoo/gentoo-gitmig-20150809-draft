@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ddskk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.18 2007/02/03 23:25:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.19 2007/07/03 06:57:07 opfer Exp $
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  ddskk-12.2.1_pre20050522.ebuild:
+  added some die comments; exchanged manual make calls with emake; adjusted
+  DESCRIPTION; cleaned-up DEPEND lines; added some quotes
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ddskk-12.2.0-r1.ebuild:
   Regenerate digest in Manifest2 format.
