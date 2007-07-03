@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.9 2007/02/12 19:44:17 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.10 2007/07/03 07:29:10 lucass Exp $
+
+  03 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> -files/odepath.patch,
+  -pyode-1.0.0.ebuild, -pyode-1.1.0.ebuild, pyode-1.1.0_p20060728.ebuild,
+  pyode-1.2.0.ebuild:
+  Dropped old versions. Cleanup. Added examples use-flag.
 
 *pyode-1.2.0 (12 Feb 2007)
 
