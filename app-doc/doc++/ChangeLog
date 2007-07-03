@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/doc++
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.21 2007/05/11 18:16:25 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.22 2007/07/03 15:18:32 anant Exp $
+
+*doc++-3.4.10-r2 (03 Jul 2007)
+
+  03 Jul 2007; Anant Narayanan <anant@gentoo.org> +doc++-3.4.10-r2.ebuild:
+  Fix collision error on AMD64 archs, per bug #169429
 
   11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml,
   doc++-3.4.10-r1.ebuild:
