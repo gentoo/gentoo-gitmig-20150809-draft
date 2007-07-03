@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/atheme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/ChangeLog,v 1.5 2007/05/06 12:21:19 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/ChangeLog,v 1.6 2007/07/03 17:57:58 welp Exp $
+
+  03 Jul 2007; Peter Weller <welp@gentoo.org> atheme-0.2.2.ebuild,
+  atheme-1.2.1.ebuild:
+  Fixed SRC_URI/HOMEPAGE
 
   06 May 2007; Marius Mauch <genone@gentoo.org> atheme-0.2.2.ebuild,
   atheme-1.2.1.ebuild:

@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/atheme-0.2.2.ebuild,v 1.5 2007/05/06 12:21:19 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/atheme-0.2.2.ebuild,v 1.6 2007/07/03 17:57:58 welp Exp $
 
 inherit eutils autotools
 
 DESCRIPTION="A portable, secure set of open source, and modular IRC services"
-HOMEPAGE="http://atheme.org/"
-SRC_URI="http://www.atheme.org/releases/${P}.tgz"
+HOMEPAGE="http://www.atheme.net/"
+SRC_URI="http://www.atheme.net/releases/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~sparc ~x86 ~x86-fbsd"
 IUSE="largenet postgres"
 
 RDEPEND="postgres? ( dev-db/postgresql )"
