@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.99.10.ebuild,v 1.2 2007/06/29 15:21:31 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.99.10.ebuild,v 1.3 2007/07/03 00:16:32 tester Exp $
 
 inherit eutils
 
@@ -11,12 +11,19 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="aac"
+IUSE="aac hal"
 
-DEPEND=">=x11-libs/gtk+-2.4.0
+DEPEND=">=x11-libs/gtk+-2.6.0
 	>=media-libs/libid3tag-0.15
-	>=gnome-base/libglade-2
+	>=gnome-base/libglade-2.4
+	>=gnome-base/libgnomecanvas-2.14
 	>=media-libs/libgpod-0.5.2
+	>=gnome-base/libgnomecanvas-2.14.0
+	>=gnome-base/gnome-vfs-2.6
+	>=net-misc/curl-7.10
+	media-libs/flac
+	media-libs/libvorbis
+	hal? ( =sys-apps/hal-0.5* )
 	aac? ( media-libs/libmp4v2 )"
 
 src_unpack() {
@@ -24,6 +31,11 @@ src_unpack() {
 
 	# Disable aac forcefully if not enabled
 	use aac || sed -i -e s/MP4FileInfo/MP4FileInfoDisabled/g ${S}/configure
+}
+
+src_compile() {
+	econf $(use_with hal) || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
