@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-5.2.ebuild,v 1.1 2007/05/20 22:15:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-5.2.ebuild,v 1.2 2007/07/03 07:15:49 opfer Exp $
 
 inherit elisp
 
@@ -25,11 +25,11 @@ src_compile() {
 }
 
 src_install() {
-	einstall prefix=${D}/usr \
-		infodir=${D}/usr/share/info \
-		elispdir=${D}/${SITELISP}/${PN} \
-		etcdir=${D}/usr/share/${PN} \
-		mandir=${D}/usr/share/man/man1 || die "einstall failed"
+	einstall prefix="${D}/usr" \
+		infodir="${D}/usr/share/info" \
+		elispdir="${D}/${SITELISP}/${PN}" \
+		etcdir="${D}/usr/share/${PN}" \
+		mandir="${D}/usr/share/man/man1" || die "einstall failed"
 
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
@@ -44,6 +44,3 @@ pkg_postinst() {
 	elog
 }
 
-pkg_postrm() {
-	elisp-site-regen
-}
