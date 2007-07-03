@@ -1,9 +1,9 @@
 # ChangeLog for app-emacs/uboat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/uboat/ChangeLog,v 1.10 2007/07/03 07:57:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/uboat/ChangeLog,v 1.11 2007/07/03 18:42:57 ulm Exp $
 
   03 Jul 2007; Ulrich Mueller <ulm@gentoo.org> uboat-1.2.ebuild:
-  Correct LICENSE. Remove redundant functions.
+  Correct LICENSE, update HOMEPAGE. Remove redundant functions.
 
   08 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50uboat-gentoo.el:
