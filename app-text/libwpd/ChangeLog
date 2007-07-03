@@ -1,6 +1,12 @@
 # ChangeLog for app-text/libwpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.53 2007/03/27 15:34:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.54 2007/07/03 22:00:04 leio Exp $
+
+  03 Jul 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/libwpd-0.8.2-gcc41.patch, -files/libwpd-0.8.4-heap-overflow.patch,
+  -libwpd-0.7.1.ebuild, -libwpd-0.7.2.ebuild, -libwpd-0.8.2.ebuild,
+  -libwpd-0.8.4.ebuild, -libwpd-0.8.4-r1.ebuild:
+  Remove old security vulnerable versions
 
   27 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> libwpd-0.8.9.ebuild:
   Stable on ia64 wrt bug #169675.
