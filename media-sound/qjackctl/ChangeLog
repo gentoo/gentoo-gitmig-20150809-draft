@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/qjackctl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.42 2007/07/02 15:17:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.43 2007/07/03 11:55:54 flameeyes Exp $
+
+*qjackctl-0.2.23 (03 Jul 2007)
+
+  03 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -qjackctl-0.2.20.ebuild, -qjackctl-0.2.21.ebuild, -qjackctl-0.2.22.ebuild,
+  +qjackctl-0.2.23.ebuild:
+  Version bump (thanks to upstream who addressed some of the issues found on
+  previous ebuild); also remove old versions, .23 is the target stable for
+  next month.
 
   02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Hand to newly-born proaudio herd.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.2.22.ebuild,v 1.1 2007/06/29 12:22:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.2.23.ebuild,v 1.1 2007/07/03 11:55:54 flameeyes Exp $
 
 inherit eutils qt3
 
@@ -28,26 +28,19 @@ pkg_setup() {
 }
 
 src_compile() {
-	local myconf
-
-	# Upstream's configure.ac is broken, assumes that passing any
-	# --(dis|en)able-(feature) means the non-default option.
-
-	use alsa || myconf="${myconf} --disable-alsa-seq"
-	use debug && myconf="${myconf} --enable-debug"
-
-	econf ${myconf} || die "econf failed"
+	econf \
+		$(use_enable alsa alsa-seq) \
+		$(use_enable debug) \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
 	emake -j1 DESTDIR="${D}" install || die "make install failed"
 
-	# The icon is installed in the wrong place, move it into a more
-	# proper path.
-	dodir /usr/share/icons/hicolor/32x32/apps
-	mv "${D}/usr/share/icons/${PN}.png" "${D}/usr/share/icons/hicolor/32x32/apps/"
+	rm "${D}/usr/share/applications/qjackctl.desktop"
 
+	# Upstream desktop file is invalid, better stick with our for now.
 	make_desktop_entry "${PN}" "QjackCtl" "${PN}"
 
 	dodoc README ChangeLog TODO AUTHORS
