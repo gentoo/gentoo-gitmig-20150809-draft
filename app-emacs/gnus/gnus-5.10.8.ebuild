@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.8.ebuild,v 1.11 2007/07/03 06:13:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.8.ebuild,v 1.12 2007/07/03 06:30:04 ulm Exp $
 
 inherit elisp
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="!app-emacs/gnus-cvs"
 
-SITEFILE=70gnus-gentoo.el
+SITEFILE=70${PN}-gentoo.el
 
 src_compile() {
 	local myconf
@@ -33,7 +33,7 @@ src_install() {
 	einstall \
 		lispdir="${D}/usr/share/emacs/site-lisp/gnus" \
 		etcdir="${D}/usr/share/emacs/etc" \
-		|| die "emake install failed"
+		|| die "einstall failed"
 
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
