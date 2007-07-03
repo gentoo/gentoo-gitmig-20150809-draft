@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pymad
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.21 2007/02/22 00:39:57 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.22 2007/07/03 12:27:12 lucass Exp $
+
+*pymad-0.6 (03 Jul 2007)
+
+  03 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> -pymad-0.4.1.ebuild,
+  -pymad-0.5.1.ebuild, -pymad-0.5.2.ebuild, pymad-0.5.4.ebuild,
+  +pymad-0.6.ebuild:
+  Version bump. Dropped old versions.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
