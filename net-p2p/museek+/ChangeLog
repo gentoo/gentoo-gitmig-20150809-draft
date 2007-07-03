@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/museek+
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.4 2007/02/14 10:46:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.5 2007/07/03 21:20:52 coldwind Exp $
+
+  03 Jul 2007; Santiago M. Mola <coldwind@gentoo.org> metadata.xml:
+  Update my maintainer data.
 
   14 Feb 2007; Raúl Porcel <armin76@gentoo.org>
   +files/museek+-0.1.12-musetup-gtk-spaces.patch,
