@@ -1,9 +1,16 @@
---- setup.py.orig	2007-05-07 07:28:49.000000000 -0700
-+++ setup.py	2007-05-07 07:30:16.000000000 -0700
-@@ -10,36 +10,9 @@
+--- setup.py.orig	2007-07-02 17:36:43.000000000 -0700
++++ setup.py	2007-07-02 17:38:39.000000000 -0700
+@@ -1,5 +1,3 @@
+-from ez_setup import use_setuptools
+-use_setuptools()
+ from setuptools import setup, find_packages
+ from pkg_resources import DistributionNotFound
+ 
+@@ -11,37 +9,6 @@
+ 
  execfile(os.path.join("turbogears", "release.py"))
  
- # setup params
+-# setup params
 -install_requires = [
 -        "TurboJson >= 0.9.9",
 -        "TurboCheetah >= 0.9.5",
@@ -17,9 +24,9 @@
 -        "RuleDispatch >= 0.5a0.dev-r2303",
 -        "DecoratorTools >= 1.4",
 -        "ConfigObj >= 4.3.2"]
- tgtesttools =  ["nose >= 0.9.1", "SQLAlchemy>=0.3"]
- standard = ["SQLObject>=0.8,<0.10dev"]
- 
+-tgtesttools =  ["nose >= 0.9.1", "SQLAlchemy>=0.3"]
+-standard = ["SQLObject>=0.8,<0.10dev"]
+-
 -# python 2.5 compatible list
 -if sys.version_info < (2, 5):
 -    install_requires.extend([
@@ -37,7 +44,7 @@
  
  setup(
      name="TurboGears",
-@@ -70,7 +43,6 @@
+@@ -72,7 +39,6 @@
  the TurboGears subversion repository</a>.""",
      url="http://www.turbogears.org",
      zip_safe=False,
@@ -45,7 +52,7 @@
      packages=find_packages(),
      include_package_data=True,
      exclude_package_data={"thirdparty": ["*"]},
-@@ -117,13 +89,6 @@
+@@ -119,13 +85,6 @@
      catwalk = turbogears.toolbox.catwalk:CatWalk
  
      """,

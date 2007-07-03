@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/turbogears
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/ChangeLog,v 1.5 2007/05/07 14:41:58 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/ChangeLog,v 1.6 2007/07/03 00:53:32 pythonhead Exp $
+
+  03 Jul 2007; Rob Cakebread <pythonhead@gentoo.org>
+  files/turbogears-1.0.2.2-gentoo-setuptools.diff:
+  Clean up setuptools patch.
 
   07 May 2007; Rob Cakebread <pythonhead@gentoo.org>
   +files/turbogears-1.0.2.2-gentoo-setuptools.diff,
