@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/elib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/ChangeLog,v 1.9 2007/03/07 09:38:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/ChangeLog,v 1.10 2007/07/03 09:39:44 opfer Exp $
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org> elib-1.0.ebuild:
+  removed postrm and postinst functions; added some quotes; manual make call
+  to emake; removed virtual/emacs from DEPEND
 
   07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50elib-gentoo.el:

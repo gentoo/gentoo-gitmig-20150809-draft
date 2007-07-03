@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/elib-1.0.ebuild,v 1.12 2006/12/04 11:53:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/elib-1.0.ebuild,v 1.13 2007/07/03 09:39:44 opfer Exp $
 
 inherit elisp
 
@@ -13,34 +13,24 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc-macos x86"
 IUSE=""
 
-DEPEND="virtual/emacs"
-
 SITEFILE=50elib-gentoo.el
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i 's:--infodir:--info-dir:g' Makefile
 }
 
 src_compile() {
-	make || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	dodir ${SITELISP}/elib
+	dodir "${SITELISP}/elib"
 	dodir /usr/share/info
-	make prefix=${D}/usr infodir=${D}/usr/share/info install || die
+	emake prefix="${D}/usr" infodir="${D}/usr/share/info" install || die "emake install failed"
 
-	elisp-site-file-install ${FILESDIR}/${SITEFILE}
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
 	dodoc ChangeLog INSTALL NEWS README RELEASING TODO
-}
-
-pkg_postinst() {
-	elisp-site-regen
-}
-
-pkg_postrm() {
-	elisp-site-regen
 }
