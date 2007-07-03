@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.109 2007/06/09 16:12:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.110 2007/07/03 10:33:26 pva Exp $
+
+  03 Jul 2007; <pva@gentoo.org> -cacti-0.8.6i-r1.ebuild,
+  -cacti-0.8.6j-r4.ebuild, -cacti-0.8.6j-r5.ebuild, cacti-0.8.6j-r6.ebuild:
+  Added pcre and session php checks. Fixed bug #184057. Removed vulnerable to
+  bug #181112 versions.
 
   09 Jun 2007; Markus Rothe <corsair@gentoo.org> cacti-0.8.6j-r6.ebuild:
   Stable on ppc64; bug #181112
