@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/foldingathome
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.16 2007/07/02 15:23:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.17 2007/07/03 04:26:15 je_fro Exp $
+
+  03 Jul 2007; Jeff Gardner <je_fro@gentoo.org>
+  foldingathome-5.91_beta.ebuild:
+  foldingathome-5.91_beta has expired. Removing KEYWORDS until the next
+  release arrives.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   foldingathome-5.0.2-r3.ebuild, foldingathome-5.0.2-r5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-5.91_beta.ebuild,v 1.2 2007/04/11 01:48:31 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-5.91_beta.ebuild,v 1.3 2007/07/03 04:26:15 je_fro Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -16,8 +16,8 @@ SRC_URI="http://folding.stanford.edu/release/FAH_SMP_Linux.tgz"
 LICENSE="folding-at-home"
 SLOT="0"
 
-# Currently only amd64 is supported.
-KEYWORDS="~amd64"
+# This beta just died...we're waiting on the next revision.
+KEYWORDS=""
 IUSE=""
 
 DEPEND=">=sys-apps/baselayout-1.8.0
