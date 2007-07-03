@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/celementtree
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.15 2007/07/03 06:41:17 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.16 2007/07/03 06:56:14 hawking Exp $
+
+  03 Jul 2007; Ali Polatel <hawking@gentoo.org> -celementtree-1.0.ebuild,
+  -celementtree-1.0.2.ebuild, -celementtree-1.0.5.ebuild:
+  Drop old
 
 *celementtree-1.0.5-r1 (03 Jul 2007)
 *celementtree-1.0.2-r1 (03 Jul 2007)
