@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/redo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo/ChangeLog,v 1.10 2007/05/03 19:32:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo/ChangeLog,v 1.11 2007/07/03 16:00:20 ulm Exp $
+
+  03 Jul 2007; Ulrich Mueller <ulm@gentoo.org> redo-1.02-r1.ebuild:
+  Call elisp-site-regen in postinst.
 
 *redo-1.02-r1 (03 May 2007)
 
