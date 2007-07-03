@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.535 2007/07/02 15:36:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.536 2007/07/03 03:09:37 solar Exp $
+
+*glibc-2.5-r4 (03 Jul 2007)
+
+  03 Jul 2007; <solar@gentoo.org> +glibc-2.5-r4.ebuild:
+  - bug 183844
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> glibc-2.2.5-r10.ebuild,
   glibc-2.3.2-r12.ebuild, glibc-2.3.5-r3.ebuild, glibc-2.3.6-r4.ebuild,
