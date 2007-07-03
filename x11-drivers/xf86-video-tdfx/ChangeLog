@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-tdfx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/ChangeLog,v 1.34 2007/07/02 16:01:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/ChangeLog,v 1.35 2007/07/03 13:13:13 pylon Exp $
+
+  03 Jul 2007; Lars Weiler <pylon@gentoo.org> xf86-video-tdfx-1.3.0.ebuild:
+  Stable on ppc; bug #175465.
 
   02 Jul 2007; Raúl Porcel <armin76@gentoo.org>
   xf86-video-tdfx-1.3.0.ebuild:

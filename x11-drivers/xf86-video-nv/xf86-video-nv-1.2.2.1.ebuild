@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/xf86-video-nv-1.2.2.1.ebuild,v 1.7 2007/07/02 15:54:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/xf86-video-nv-1.2.2.1.ebuild,v 1.8 2007/07/03 13:08:13 pylon Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -10,7 +10,7 @@ inherit x-modular
 
 DESCRIPTION="NVIDIA video driver"
 
-KEYWORDS="alpha amd64 arm ia64 ~ppc ppc64 sh x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh x86 ~x86-fbsd"
 
 RDEPEND="x11-base/xorg-server"
 DEPEND="${RDEPEND}

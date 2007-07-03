@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/xf86-video-savage-2.1.2-r1.ebuild,v 1.5 2007/07/02 15:59:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/xf86-video-savage-2.1.2-r1.ebuild,v 1.6 2007/07/03 13:11:03 pylon Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="S3 Savage video driver"
-KEYWORDS="alpha amd64 ~arm ia64 ~ppc ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ia64 ppc ~sh ~sparc x86 ~x86-fbsd"
 IUSE="dri"
 RDEPEND=">=x11-base/xorg-server-1.0.99"
 DEPEND="${RDEPEND}
