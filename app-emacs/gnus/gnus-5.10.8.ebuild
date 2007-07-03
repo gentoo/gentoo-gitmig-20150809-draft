@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.8.ebuild,v 1.10 2007/07/02 18:59:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.8.ebuild,v 1.11 2007/07/03 06:13:48 ulm Exp $
 
 inherit elisp
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="!app-emacs/gnus-cvs"
-RDEPEND="${DEPEND}"
+DEPEND=""
+RDEPEND="!app-emacs/gnus-cvs"
 
 SITEFILE=70gnus-gentoo.el
 
