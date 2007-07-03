@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/proofgeneral
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.12 2007/03/08 07:58:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.13 2007/07/03 07:30:25 opfer Exp $
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  proofgeneral-3.5-r1.ebuild:
+  clean-up DEPEND; exchange manual make calls with emake; adjusted
+  DESCRIPTION; removed pkg_postrm
 
   08 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50proofgeneral-gentoo.el:
