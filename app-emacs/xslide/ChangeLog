@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/xslide
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/ChangeLog,v 1.13 2007/03/30 18:56:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/ChangeLog,v 1.14 2007/07/03 07:00:24 opfer Exp $
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org> xslide-0.2.2.ebuild:
+  adjusted DESCRIPTION; removed src_install (use DOCS variable and
+  elisp.eclass); added some die comments
 
   30 Mar 2007; Christian Faulhammer <opfer@gentoo.org> -xslide-0.2.ebuild:
   clean up
