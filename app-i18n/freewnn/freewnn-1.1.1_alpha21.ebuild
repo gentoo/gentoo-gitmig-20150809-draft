@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha21.ebuild,v 1.9 2007/07/03 20:11:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha21.ebuild,v 1.10 2007/07/03 20:33:58 tove Exp $
 
 inherit eutils
 
@@ -47,5 +47,5 @@ src_install() {
 	# install docs
 	dodoc ChangeLog* INSTALL* CONTRIBUTORS
 	# install rc script
-	newexe "${FILESDIR}"/freewnn.initd freewnn
+	newinitd "${FILESDIR}"/freewnn.initd freewnn
 }
