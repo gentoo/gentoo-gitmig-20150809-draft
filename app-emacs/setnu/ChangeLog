@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/setnu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/setnu/ChangeLog,v 1.5 2007/02/06 13:46:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/setnu/ChangeLog,v 1.6 2007/07/03 19:35:24 ulm Exp $
+
+  03 Jul 2007; Ulrich Mueller <ulm@gentoo.org> setnu-1.06.ebuild:
+  Remove redundant functions.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
