@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/gmpc-magnatune-0.15.0.ebuild,v 1.2 2007/06/27 18:19:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/gmpc-magnatune-0.15.0.ebuild,v 1.3 2007/07/03 12:50:02 angelos Exp $
 
 DESCRIPTION="The plugin allows you to browse, and preview available albums on www.magnatune.com."
 HOMEPAGE="http://sarine.nl/gmpc-plugins-lyrics-magnatune"
@@ -8,7 +8,7 @@ SRC_URI="http://download.sarine.nl/gmpc-${PV}/plugins/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=media-sound/gmpc-${PV}

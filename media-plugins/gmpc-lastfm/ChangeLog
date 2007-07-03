@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-lastfm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lastfm/ChangeLog,v 1.3 2007/06/27 18:33:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lastfm/ChangeLog,v 1.4 2007/07/03 12:47:33 angelos Exp $
+
+  03 Jul 2007; Christoph Mende <angelos@gentoo.org>
+  gmpc-lastfm-0.15.0.ebuild:
+  Added ~amd64
 
   27 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gmpc-lastfm-0.15.0.ebuild:
