@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/xml-writer
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-writer/ChangeLog,v 1.1 2007/07/03 23:31:59 betelgeuse Exp $
+
+*xml-writer-0.2 (03 Jul 2007)
+
+  03 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +xml-writer-0.2.ebuild:
+  Initial addition. Needed to add src_test for dev-java/xstream. Ebuild
+  written by me.
+
