@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-20070630.ebuild,v 1.1 2007/06/30 23:20:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-20070630.ebuild,v 1.2 2007/07/03 18:18:47 swegener Exp $
 
 inherit linux-info eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-libs/elfutils-0.122"
+DEPEND=">=dev-libs/elfutils-0.122
+	=dev-db/sqlite-3*"
 RDEPEND="${DEPEND}
 	virtual/linux-sources"
 

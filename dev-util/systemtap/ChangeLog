@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.17 2007/06/30 23:20:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.18 2007/07/03 18:18:47 swegener Exp $
+
+  03 Jul 2007; Sven Wegener <swegener@gentoo.org> systemtap-20070630.ebuild:
+  Add missing sqlite dependency, bug #184028.
 
 *systemtap-20070630 (30 Jun 2007)
 
