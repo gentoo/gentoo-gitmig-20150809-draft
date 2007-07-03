@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/eieio/eieio-0.17.ebuild,v 1.9 2005/06/05 11:34:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/eieio/eieio-0.17.ebuild,v 1.10 2007/07/03 07:04:32 opfer Exp $
 
 inherit elisp
 
@@ -13,28 +13,19 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
-DEPEND="virtual/emacs
-	app-emacs/speedbar
+DEPEND="app-emacs/speedbar
 	!app-emacs/cedet"
 
 SITEFILE=60eieio-gentoo.el
 
 src_compile() {
-	make LOADPATH=${SITELISP}/speedbar || die
+	emake LOADPATH="${SITELISP}/speedbar" || die "emake failed"
 }
 
 src_install() {
 	elisp-install ${PN} *.el *.elc
-	elisp-site-file-install ${FILESDIR}/${SITEFILE}
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
 	dodoc ChangeLog INSTALL
 	doinfo eieio.info
-}
-
-pkg_postinst() {
-	elisp-site-regen
-}
-
-pkg_postrm() {
-	elisp-site-regen
 }

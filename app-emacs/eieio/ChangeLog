@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/eieio
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/eieio/ChangeLog,v 1.9 2007/03/07 09:36:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/eieio/ChangeLog,v 1.10 2007/07/03 07:04:32 opfer Exp $
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org> eieio-0.17.ebuild:
+  cleaned-up DEPEND; added some quotes; exchanged manual make call with emake
 
   07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/60eieio-gentoo.el:
