@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/speedbar
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/speedbar/ChangeLog,v 1.10 2007/04/10 19:47:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/speedbar/ChangeLog,v 1.11 2007/07/03 12:05:30 ulm Exp $
+
+  03 Jul 2007; Ulrich Mueller <ulm@gentoo.org> speedbar-0.14_beta4.ebuild:
+  Remove redundant pkg_post{inst,rm} functions. Other minor cleanups.
 
   10 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   speedbar-0.14_beta4.ebuild:
