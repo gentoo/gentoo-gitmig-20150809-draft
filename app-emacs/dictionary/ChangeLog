@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/dictionary
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/ChangeLog,v 1.11 2007/03/07 09:34:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/ChangeLog,v 1.12 2007/07/03 09:34:28 opfer Exp $
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  dictionary-1.8.7.ebuild:
+  removed src_install(); changed location of IUSE; manual make call to emake
 
   07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50dictionary-gentoo.el:
