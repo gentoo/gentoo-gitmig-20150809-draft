@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/tdtd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/ChangeLog,v 1.10 2007/02/20 22:51:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/ChangeLog,v 1.11 2007/07/03 09:47:29 opfer Exp $
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org> tdtd-0.7.1-r1.ebuild:
+  echangelog removed src_install(); added die comment
 
   20 Feb 2007; Christian Faulhammer <opfer@gentoo.org> -tdtd-0.7.1.ebuild:
   clean up

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/tdtd-0.7.1-r1.ebuild,v 1.4 2007/02/18 10:45:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/tdtd-0.7.1-r1.ebuild,v 1.5 2007/07/03 09:47:29 opfer Exp $
 
 inherit elisp
 
@@ -18,13 +18,9 @@ DEPEND="app-arch/unzip"
 SITEFILE=50tdtd-gentoo.el
 
 S=${WORKDIR}
+DOCS="TODO changelog.txt readme.txt tutorial.txt"
 
 src_compile() {
-	elisp-comp *.el || die
+	elisp-comp *.el || die "elisp-comp failed"
 }
 
-src_install() {
-	elisp-install ${PN} *.{el,elc}
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
-	dodoc TODO changelog.txt readme.txt tutorial.txt
-}
