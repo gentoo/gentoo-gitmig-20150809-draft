@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/elscreen-1.4.5.ebuild,v 1.6 2007/04/19 14:33:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/elscreen-1.4.5.ebuild,v 1.7 2007/07/03 09:08:00 opfer Exp $
 
 inherit elisp
 
@@ -15,9 +15,4 @@ IUSE=""
 DEPEND="app-emacs/apel"
 
 SITEFILE=60elscreen-gentoo.el
-
-src_install() {
-	elisp-install ${PN} *.el *.elc
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
-	dodoc ChangeLog README
-}
+DOCS="ChangeLog README"
