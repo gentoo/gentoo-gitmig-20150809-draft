@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nipper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/ChangeLog,v 1.4 2007/06/24 17:46:49 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/ChangeLog,v 1.5 2007/07/03 23:44:39 ikelos Exp $
+
+*nipper-0.10.1 (03 Jul 2007)
+
+  03 Jul 2007; Mike Auty <ikelos@gentoo.org> +nipper-0.10.1.ebuild:
+  Version bump.
 
 *nipper-0.10.0 (24 Jun 2007)
 
