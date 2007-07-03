@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/celementtree
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.14 2007/01/18 23:39:03 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.15 2007/07/03 06:41:17 hawking Exp $
+
+*celementtree-1.0.5-r1 (03 Jul 2007)
+*celementtree-1.0.2-r1 (03 Jul 2007)
+
+  03 Jul 2007; Ali Polatel <hawking@gentoo.org>
+  +files/celementtree-1.0.2-use_system_expat.patch,
+  +files/celementtree-1.0.5-use_system_expat.patch,
+  +celementtree-1.0.2-r1.ebuild, +celementtree-1.0.5-r1.ebuild:
+  revbump, use system expat (bug 178919), fix src_test (bug 179589)
 
   18 Jan 2007; Lukasz Strzygowski <lucass@gentoo.org>
   celementtree-1.0.5.ebuild:
