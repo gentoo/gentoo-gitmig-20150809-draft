@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.2-r1.ebuild,v 1.2 2007/06/24 23:42:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.2-r1.ebuild,v 1.3 2007/07/03 19:06:46 swegener Exp $
 
 DESCRIPTION="A VNC server for real X displays"
 HOMEPAGE="http://www.karlrunge.com/x11vnc/"
@@ -43,6 +43,11 @@ DEPEND="${RDEPEND}
 	)"
 
 src_compile() {
+	local myconf=""
+
+	# we need to force threads on, because our system libvncserver gets build with thread support
+	use system-libvncserver && myconf="--with-pthread"
+
 	econf \
 		$(use_with system-libvncserver) \
 		$(use_with avahi) \
@@ -54,6 +59,7 @@ src_compile() {
 		$(use_with jpeg) \
 		$(use_with zlib) \
 		$(use_with threads pthread) \
+		${myconf} \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
