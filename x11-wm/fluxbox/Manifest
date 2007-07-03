@@ -1,11 +1,11 @@
-AUX 0.9.13/fluxbox-0.9.13-our-styles-go-over-here.patch 653 RMD160 32e2d79cf651073efffb3f27aa54fa8b1738e98f SHA1 96bbbab6007e40c44659c3854ec2eb3f691c1546 SHA256 699f2e563f582362b0ed9d4f53a20fa930abfca1262bb0fb71e7f738e8eadcc4
-MD5 17110f6fe071a751aaa29832e92832fd files/0.9.13/fluxbox-0.9.13-our-styles-go-over-here.patch 653
-RMD160 32e2d79cf651073efffb3f27aa54fa8b1738e98f files/0.9.13/fluxbox-0.9.13-our-styles-go-over-here.patch 653
-SHA256 699f2e563f582362b0ed9d4f53a20fa930abfca1262bb0fb71e7f738e8eadcc4 files/0.9.13/fluxbox-0.9.13-our-styles-go-over-here.patch 653
 AUX 0.9.15/129065-fix-doubleclick-64bit.patch 431 RMD160 764e8b5522a36cc1dc5e18083f3631314d8c3364 SHA1 269c0acdcff131b9f3e2bf90e301c2d44cab0ea3 SHA256 7aec914f3e5b8de5029e01fa6d5c75276a072269735b19d85dbacb89f5f073a1
 MD5 d97cb145e49bef0dc45d56b8428d8ba7 files/0.9.15/129065-fix-doubleclick-64bit.patch 431
 RMD160 764e8b5522a36cc1dc5e18083f3631314d8c3364 files/0.9.15/129065-fix-doubleclick-64bit.patch 431
 SHA256 7aec914f3e5b8de5029e01fa6d5c75276a072269735b19d85dbacb89f5f073a1 files/0.9.15/129065-fix-doubleclick-64bit.patch 431
+AUX 0.9.15/fluxbox-0.9.15-our-styles-go-over-here.patch 653 RMD160 32e2d79cf651073efffb3f27aa54fa8b1738e98f SHA1 96bbbab6007e40c44659c3854ec2eb3f691c1546 SHA256 699f2e563f582362b0ed9d4f53a20fa930abfca1262bb0fb71e7f738e8eadcc4
+MD5 17110f6fe071a751aaa29832e92832fd files/0.9.15/fluxbox-0.9.15-our-styles-go-over-here.patch 653
+RMD160 32e2d79cf651073efffb3f27aa54fa8b1738e98f files/0.9.15/fluxbox-0.9.15-our-styles-go-over-here.patch 653
+SHA256 699f2e563f582362b0ed9d4f53a20fa930abfca1262bb0fb71e7f738e8eadcc4 files/0.9.15/fluxbox-0.9.15-our-styles-go-over-here.patch 653
 AUX 1.0_rc3/fluxbox-1.0_rc3-flicker.patch 761 RMD160 9450d4b1b32270df3325f327e88b4a67544dbd4c SHA1 2f74cff436bf9835b13368d0bb2cc67f879594a9 SHA256 afddd79a46887a954facf3cdd0e8a2e3e9accb924a363c8cd387532b87dbedbe
 MD5 70be9f7bf9b5189a0e4bb4de15b6fc37 files/1.0_rc3/fluxbox-1.0_rc3-flicker.patch 761
 RMD160 9450d4b1b32270df3325f327e88b4a67544dbd4c files/1.0_rc3/fluxbox-1.0_rc3-flicker.patch 761
@@ -89,10 +89,10 @@ EBUILD fluxbox-1.0_rc3_p4949.ebuild 4340 RMD160 4d0b59e3371ba80686a7b1b56b41c0e9
 MD5 be10670b4432052b2d148523235ed1a8 fluxbox-1.0_rc3_p4949.ebuild 4340
 RMD160 4d0b59e3371ba80686a7b1b56b41c0e94a04f08c fluxbox-1.0_rc3_p4949.ebuild 4340
 SHA256 5b5cd3984ee1b30d8e4d663926f320be02ba17afcf056f6dca786e9f82401c8e fluxbox-1.0_rc3_p4949.ebuild 4340
-MISC ChangeLog 41345 RMD160 b2739de499bf793eede59f1d993b8e2d8fea8a2a SHA1 8499947bcfd3ef217bcdb631cf4f297db721ff48 SHA256 1c16d6772fbc64e0870e7ae6f2fe535e26bd7f1e90da00bd0a85c852aa28be45
-MD5 87b4f52fb2f2b92b86590c0a1930aea5 ChangeLog 41345
-RMD160 b2739de499bf793eede59f1d993b8e2d8fea8a2a ChangeLog 41345
-SHA256 1c16d6772fbc64e0870e7ae6f2fe535e26bd7f1e90da00bd0a85c852aa28be45 ChangeLog 41345
+MISC ChangeLog 41584 RMD160 2bebf658f4e9204eae8d9d89cadaea50e36e198a SHA1 f5b6b4ff74fba93875fedfa3beaebd831323158b SHA256 a85dbf5bf785071dffe9b6c9714802dcf3836217914cf14a17030f1559cad34f
+MD5 0537bf7013f586d01f51fe540a5fa70f ChangeLog 41584
+RMD160 2bebf658f4e9204eae8d9d89cadaea50e36e198a ChangeLog 41584
+SHA256 a85dbf5bf785071dffe9b6c9714802dcf3836217914cf14a17030f1559cad34f ChangeLog 41584
 MISC metadata.xml 712 RMD160 28bbbb6c8c1ad0897f5a66d3b3fb251c13b532c1 SHA1 9f493761c477ad9b3f532638a1351489442d4f54 SHA256 415fa5c634f5ee4aa0a77dab674282588c0befbb209ce31c0eb4375e4ec36b65
 MD5 2c8f22e229558b963d967e6ca024506e metadata.xml 712
 RMD160 28bbbb6c8c1ad0897f5a66d3b3fb251c13b532c1 metadata.xml 712
