@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.0.2.ebuild,v 1.4 2006/10/15 17:51:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.0.2.ebuild,v 1.5 2007/07/03 06:49:29 lucass Exp $
 
 inherit distutils eutils
 
@@ -42,4 +42,3 @@ src_install() {
 	insinto /usr/share/doc/${PF}
 	doins -r samples
 }
-
