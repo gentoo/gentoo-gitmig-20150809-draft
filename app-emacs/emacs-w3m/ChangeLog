@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-w3m
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.48 2007/06/02 09:47:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.49 2007/07/03 07:54:50 opfer Exp $
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  emacs-w3m-1.4.4-r2.ebuild:
+  stable x86, bug 184059
 
 *emacs-w3m-1.4.4-r2 (02 Jun 2007)
 
