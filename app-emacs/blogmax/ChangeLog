@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/blogmax
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/blogmax/ChangeLog,v 1.4 2007/02/06 13:22:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/blogmax/ChangeLog,v 1.5 2007/07/03 06:41:41 opfer Exp $
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  blogmax-20041208.ebuild:
+  removed DEPEND on virtual/emacs; added some quotes; adjusted DESCRIPTION
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
