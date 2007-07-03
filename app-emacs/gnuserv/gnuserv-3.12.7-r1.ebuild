@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.7-r1.ebuild,v 1.3 2007/06/21 17:43:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.7-r1.ebuild,v 1.4 2007/07/03 07:11:49 opfer Exp $
 
 inherit elisp eutils
 
@@ -17,6 +17,7 @@ DEPEND=""
 RDEPEND="|| ( ~app-emacs/gnuserv-programs-${PV} virtual/xemacs )"
 
 SITEFILE=50${PN}-gentoo.el
+DOCS="ChangeLog README README.orig"
 
 src_unpack() {
 	unpack ${A}
@@ -26,10 +27,4 @@ src_unpack() {
 
 src_compile() {
 	elisp-comp *.el || die "elisp-comp failed"
-}
-
-src_install() {
-	elisp-install ${PN} *.el *.elc
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
-	dodoc ChangeLog README README.orig || die "dodoc failed"
 }
