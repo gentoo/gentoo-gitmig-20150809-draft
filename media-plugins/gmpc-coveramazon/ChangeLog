@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-coveramazon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-coveramazon/ChangeLog,v 1.3 2007/06/19 12:43:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-coveramazon/ChangeLog,v 1.4 2007/07/03 12:46:19 angelos Exp $
+
+  03 Jul 2007; Christoph Mende <angelos@gentoo.org>
+  gmpc-coveramazon-0.15.0.ebuild:
+  Added ~amd64 wrt bug #183855
 
 *gmpc-coveramazon-0.15.0 (19 Jun 2007)
 
