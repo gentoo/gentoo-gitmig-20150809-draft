@@ -1,0 +1,62 @@
+--- cpufreq.c	2006-10-02 06:56:33.000000000 +0200
++++ cpufreq-fixed.c	2007-06-26 18:44:00.000000000 +0200
+@@ -45,7 +45,7 @@
+ #include <cpufreq.h>
+ 
+ /* version number */
+-#define  VERSION        "0.6"
++#define  VERSION        "0.6.1"
+ 
+ /* name in the configuration tree */
+ #define  CONFIG_NAME	"CPUfreq"
+@@ -57,6 +57,8 @@
+ 
+ #define NCPU_MAX 8
+ 
++#define	PROC_STAT_FILE	"/proc/stat"
++
+ static unsigned int ncpu;
+ static unsigned long khz_max;
+ static unsigned long khz[NCPU_MAX];
+@@ -85,7 +87,29 @@
+ static gint controls_coupled = 0;
+ static gint style_id;
+ 
++static void get_num_cpus() {
++  FILE	*f;
++  gchar	buf[1024];
++  ncpu = 0;
++  f = fopen(PROC_STAT_FILE, "r");
++  while (fgets(buf, sizeof(buf), f))
++  {
++    if (strncmp(buf, "cpu", 3) != 0)
++      continue;
++    ++ncpu;
++    }
++  fclose(f);
++  // If multiple CPUs, the first one will be a composite.  Report only real.
++  if (ncpu > 1)
++    --ncpu;
++}
++
+ static void read_governors() {
++
++  /* Since there could be CPU-hotplug on the system, we need to re-check */
++  /* before we update, otherwise we crash: */
++  get_num_cpus();
++
+   unsigned int cpu;
+   for ( cpu=0; cpu<ncpu; ++cpu ) {
+     struct cpufreq_policy* policy = cpufreq_get_policy(cpu);
+@@ -545,10 +569,7 @@
+   style_id = gkrellm_add_meter_style(&plugin_mon, STYLE_NAME);
+   monitor = &plugin_mon;
+ 
+-  /* determine number of cpus */
+-  for( ncpu = 0; cpufreq_cpu_exists(ncpu)==0; ++ncpu )
+-    ;
+-  ncpu = ncpu > NCPU_MAX ? NCPU_MAX : ncpu;
++  get_num_cpus();
+ 
+   /* determine maximal frequency */
+   unsigned int cpu;
