@@ -1,6 +1,14 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.178 2007/05/31 20:55:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.179 2007/07/03 21:57:24 aballier Exp $
+
+  03 Jul 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/transcode-1.0.3-ffmpeg_codecs_are_not_in_public_api.patch,
+  +files/transcode-1.0.3-libmpeg3-1.7.patch,
+  -files/transcode-1.0.3_rc2_p20070310-libmpeg3.patch,
+  transcode-1.0.3.ebuild:
+  Fix to build with libmpeg3 1.7 and recent ffmpegs, closing bug #183965 and
+  bug #184014
 
   31 May 2007; Markus Rothe <corsair@gentoo.org> transcode-1.0.3.ebuild:
   Do not break on ppc64 any more; use patch from previous versions

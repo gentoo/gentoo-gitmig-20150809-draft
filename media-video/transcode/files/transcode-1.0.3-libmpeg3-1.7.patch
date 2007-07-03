@@ -1,7 +1,7 @@
-Index: transcode/import/import_mpeg3.c
+Index: transcode-1.0.3/import/import_mpeg3.c
 ===================================================================
---- transcode.orig/import/import_mpeg3.c
-+++ transcode/import/import_mpeg3.c
+--- transcode-1.0.3.orig/import/import_mpeg3.c
++++ transcode-1.0.3/import/import_mpeg3.c
 @@ -69,6 +69,9 @@ MOD_open
  {
  
@@ -19,7 +19,7 @@ Index: transcode/import/import_mpeg3.c
 +#if MPEG3_MINOR  < 7
  	      if((file = mpeg3_open(vob->video_in_file))==NULL) {
 +#else
-+	      if(((file = mpeg3_open(vob->video_in_file, &mpeg3_return_value))==NULL) || (mpeg3_return_value != 0)) {
++   	      if(((file = mpeg3_open(vob->video_in_file, &mpeg3_return_value))==NULL) || (mpeg3_return_value != 0)) {
 +#endif
  		  fprintf(stderr, "open file failed\n");
  		  return(TC_IMPORT_ERROR);

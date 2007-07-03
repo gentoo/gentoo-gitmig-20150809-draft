@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.3.ebuild,v 1.7 2007/05/31 20:55:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.3.ebuild,v 1.8 2007/07/03 21:57:24 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -52,6 +52,8 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${DISTDIR}/${PN}-types.patch.bz2"
+	epatch "${FILESDIR}/${P}-libmpeg3-1.7.patch"
+	epatch "${FILESDIR}/${P}-ffmpeg_codecs_are_not_in_public_api.patch"
 
 	dosed -i -e "s:\$(datadir)/doc/transcode:\$(datadir)/doc/${PF}:" \
 		"${S}"/Makefile.am "${S}"/docs/Makefile.am "${S}"/docs/html/Makefile.am \
