@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070515.ebuild,v 1.1 2007/05/15 21:24:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070515.ebuild,v 1.2 2007/07/03 14:22:13 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -55,7 +55,8 @@ DEPEND="${RDEPEND}
 DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
 
 PATCHES="
-		${FILESDIR}/patches-0.4.0/shm-fullscreen-parameter.diff"
+		${FILESDIR}/patches-0.4.0/shm-fullscreen-parameter.diff
+		${FILESDIR}/patches-0.4.0/new-ffmpeg-extern-c.diff"
 
 pkg_setup() {
 	vdr-plugin_pkg_setup

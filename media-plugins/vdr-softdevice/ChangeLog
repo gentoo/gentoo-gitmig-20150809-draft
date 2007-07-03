@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.40 2007/05/15 21:24:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.41 2007/07/03 14:22:13 zzam Exp $
+
+  03 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/patches-0.4.0/new-ffmpeg-extern-c.diff, files/patches-0.4.0/series,
+  vdr-softdevice-0.4.0.20070515.ebuild:
+  Added patch to compile with ffmpeg-0.4.9_p20070616-r1
 
 *vdr-softdevice-0.4.0.20070515 (15 May 2007)
 

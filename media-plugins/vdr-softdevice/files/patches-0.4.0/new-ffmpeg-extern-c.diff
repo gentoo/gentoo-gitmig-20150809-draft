@@ -1,0 +1,28 @@
+Index: softdevice-cvs/configure
+===================================================================
+--- softdevice-cvs.orig/configure
++++ softdevice-cvs/configure
+@@ -173,9 +173,11 @@ test_ffmpeg()
+   ffmpeg="yes";
+ cat > ${TMPC} << EOF
+ #define __STDC_CONSTANT_MACROS
++extern "C" {
+ #include <stdlib.h>
+ #include <avcodec.h>
+ #include <avformat.h>
++}
+ int main(void) {
+ /*  if ( avcodec_build() != LIBAVCODEC_BUILD ) {
+      fprintf(stderr,"Fatal Error! Libavcodec library build(%d) doesn't match avcodec.h build(%d)!!!\n",avcodec_build(),LIBAVCODEC_BUILD);
+@@ -249,9 +251,11 @@ test_swscale()
+ cat > ${TMPC} << EOF
+ #define __STDC_CONSTANT_MACROS
+ #include <stdlib.h>
++extern "C" {
+ #include <avcodec.h>
+ #include <avformat.h>
+ #include <swscale.h>
++}
+ int main(void) {
+ /*  if ( avcodec_build() != LIBAVCODEC_BUILD ) {
+      fprintf(stderr,"Fatal Error! Libavcodec library build(%d) doesn't match avcodec.h build(%d)!!!\n",avcodec_build(),LIBAVCODEC_BUILD);
