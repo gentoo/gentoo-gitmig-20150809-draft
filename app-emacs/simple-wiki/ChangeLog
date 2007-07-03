@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/simple-wiki
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/simple-wiki/ChangeLog,v 1.6 2007/02/09 07:12:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/simple-wiki/ChangeLog,v 1.7 2007/07/03 09:44:22 opfer Exp $
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  simple-wiki-1.1.ebuild:
+  remove virtual/emacs from DEPEND; add die comment; remove src_install()
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
