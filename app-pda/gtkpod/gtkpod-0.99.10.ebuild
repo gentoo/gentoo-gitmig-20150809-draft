@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.99.10.ebuild,v 1.3 2007/07/03 00:16:32 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.99.10.ebuild,v 1.4 2007/07/03 20:24:01 tester Exp $
 
 inherit eutils
 
@@ -18,7 +18,6 @@ DEPEND=">=x11-libs/gtk+-2.6.0
 	>=gnome-base/libglade-2.4
 	>=gnome-base/libgnomecanvas-2.14
 	>=media-libs/libgpod-0.5.2
-	>=gnome-base/libgnomecanvas-2.14.0
 	>=gnome-base/gnome-vfs-2.6
 	>=net-misc/curl-7.10
 	media-libs/flac
