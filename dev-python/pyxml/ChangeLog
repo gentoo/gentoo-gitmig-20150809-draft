@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.36 2007/07/03 04:27:53 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.37 2007/07/03 04:46:01 hawking Exp $
+
+  03 Jul 2007; Ali Polatel <hawking@gentoo.org> -pyxml-0.8.3-r1.ebuild,
+  -pyxml-0.8.4.ebuild:
+  Drop old
 
 *pyxml-0.8.4-r1 (03 Jul 2007)
 
