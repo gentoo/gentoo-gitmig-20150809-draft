@@ -1,6 +1,11 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.28 2007/06/12 16:04:19 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.29 2007/07/03 15:01:30 zzam Exp $
+
+  03 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/patches-0.6.0/new-ffmpeg-extern-c.diff, files/patches-0.6.0/series,
+  noad-0.6.0-r9.ebuild:
+  Added patch to compile with ffmpeg-0.4.9_p20070616-r1
 
   12 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/0.6.0-r7/record-50-noad.sh:

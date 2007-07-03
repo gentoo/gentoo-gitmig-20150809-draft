@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r9.ebuild,v 1.2 2007/05/27 16:46:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r9.ebuild,v 1.3 2007/07/03 15:01:30 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -33,6 +33,7 @@ src_unpack() {
 	epatch ${FILESDIR}/patches-${PV}/delete-while-scanning.diff
 	epatch ${FILESDIR}/patches-${PV}/fix-osd.patch
 	epatch ${FILESDIR}/patches-${PV}/hangcheck.diff
+	epatch ${FILESDIR}/patches-${PV}/new-ffmpeg-extern-c.diff
 
 	rm configure
 	eautoreconf
