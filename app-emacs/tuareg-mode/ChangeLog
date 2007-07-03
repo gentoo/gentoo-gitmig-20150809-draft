@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/tuareg-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.19 2007/02/21 21:38:25 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.20 2007/07/03 07:24:21 opfer Exp $
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  tuareg-mode-1.46.2.ebuild:
+  removed src_install (make use of DOCS variable and elisp.eclass); clean-up
+  DEPEND
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
