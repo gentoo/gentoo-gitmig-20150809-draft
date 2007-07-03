@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.37 2007/05/10 10:24:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.38 2007/07/03 11:08:00 uberlord Exp $
+
+*freebsd-sources-6.2-r2 (03 Jul 2007)
+
+  03 Jul 2007; Roy Marples <uberlord@gentoo.org>
+  +files/freebsd-sources-6.2-EN-07:02.net.patch,
+  +files/freebsd-sources-6.2-unp_gc.patch, +freebsd-sources-6.2-r2.ebuild:
+  Push out errata patches for GIF/IPv6 and unix domain sockets.
 
 *freebsd-sources-6.2-r1 (10 May 2007)
 

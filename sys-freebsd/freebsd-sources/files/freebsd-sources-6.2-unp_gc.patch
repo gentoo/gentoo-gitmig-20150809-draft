@@ -1,0 +1,221 @@
+--- src/sys/kern/kern_descrip.c	2006/09/29 12:29:26
++++ src/sys/kern/kern_descrip.c	2006/12/29 16:06:02
+@@ -2150,6 +2150,17 @@
+ 		FILE_UNLOCK(fp);
+ 		return (0);
+ 	}
++
++	/*
++	 * We might have just dropped the last reference to a file
++	 * object that is for a UNIX domain socket whose message
++	 * buffers are being examined in unp_gc().  If that is the
++	 * case, FWAIT will be set in f_gcflag and we need to wait for
++	 * unp_gc() to finish its scan.
++	 */
++	while (fp->f_gcflag & FWAIT)
++		msleep(&fp->f_gcflag, fp->f_mtxp, 0, "fpdrop", 0);
++
+ 	/* We have the last ref so we can proceed without the file lock. */
+ 	FILE_UNLOCK(fp);
+ 	if (fp->f_count < 0)
+--- src/sys/kern/uipc_usrreq.c	2006/07/13 07:28:19
++++ src/sys/kern/uipc_usrreq.c	2006/12/29 16:16:12
+@@ -68,6 +69,17 @@
+ 
+ #include <vm/uma.h>
+ 
++/*
++ * We allocate wrapper objects that add the reference count to an existing
++ * unpcb in 6.x to preserve the ABI layout of unpcb.
++ */
++struct unpcb_wrapper {
++	struct 	unpcb unpw_unpcb;
++	u_int	unpw_refcount;
++};
++
++#define	UNP_REFCOUNT(unp)	(((struct unpcb_wrapper *)(unp))->unpw_refcount)
++
+ static uma_zone_t unp_zone;
+ static	unp_gen_t unp_gencnt;
+ static	u_int unp_count;
+@@ -769,6 +781,7 @@
+ 	unp->unp_socket = so;
+ 	so->so_pcb = unp;
+ 
++	UNP_REFCOUNT(unp) = 1;
+ 	UNP_LOCK();
+ 	unp->unp_gencnt = ++unp_gencnt;
+ 	unp_count++;
+@@ -782,8 +795,10 @@
+ static void
+ unp_detach(struct unpcb *unp)
+ {
++	struct sockaddr_un *saved_unp_addr;	
+ 	struct vnode *vp;
+ 	int local_unp_rights;
++	int freeunp;
+ 
+ 	UNP_LOCK_ASSERT();
+ 
+@@ -807,10 +822,15 @@
+ 	soisdisconnected(unp->unp_socket);
+ 	unp->unp_socket->so_pcb = NULL;
+ 	local_unp_rights = unp_rights;
++	saved_unp_addr = unp->unp_addr;
++	unp->unp_addr = NULL;
++	UNP_REFCOUNT(unp)--;
++	freeunp = (UNP_REFCOUNT(unp) == 0);
+ 	UNP_UNLOCK();
+-	if (unp->unp_addr != NULL)
+-		FREE(unp->unp_addr, M_SONAME);
+-	uma_zfree(unp_zone, unp);
++	if (saved_unp_addr != NULL)
++		FREE(saved_unp_addr, M_SONAME);
++	if (freeunp)
++		uma_zfree(unp_zone, unp);
+ 	if (vp) {
+ 		int vfslocked;
+ 
+@@ -1126,6 +1146,7 @@
+ unp_pcblist(SYSCTL_HANDLER_ARGS)
+ {
+ 	int error, i, n;
++	int freeunp;
+ 	struct unpcb *unp, **unp_list;
+ 	unp_gen_t gencnt;
+ 	struct xunpgen *xug;
+@@ -1177,6 +1198,7 @@
+ 			    unp->unp_socket->so_cred))
+ 				continue;
+ 			unp_list[i++] = unp;
++			UNP_REFCOUNT(unp)++;
+ 		}
+ 	}
+ 	UNP_UNLOCK();
+@@ -1186,7 +1208,9 @@
+ 	xu = malloc(sizeof(*xu), M_TEMP, M_WAITOK | M_ZERO);
+ 	for (i = 0; i < n; i++) {
+ 		unp = unp_list[i];
+-		if (unp->unp_gencnt <= gencnt) {
++		UNP_LOCK();
++		UNP_REFCOUNT(unp)--;
++	        if (UNP_REFCOUNT(unp) != 0 && unp->unp_gencnt <= gencnt) {
+ 			xu->xu_len = sizeof *xu;
+ 			xu->xu_unpp = unp;
+ 			/*
+@@ -1203,7 +1227,13 @@
+ 				      unp->unp_conn->unp_addr->sun_len);
+ 			bcopy(unp, &xu->xu_unp, sizeof *unp);
+ 			sotoxsocket(unp->unp_socket, &xu->xu_socket);
++			UNP_UNLOCK();
+ 			error = SYSCTL_OUT(req, xu, sizeof *xu);
++		} else {
++			freeunp = (UNP_REFCOUNT(unp) == 0);
++			UNP_UNLOCK();
++			if (freeunp) 
++				uma_zfree(unp_zone, unp);
+ 		}
+ 	}
+ 	free(xu, M_TEMP);
+@@ -1401,8 +1431,8 @@
+ void
+ unp_init(void)
+ {
+-	unp_zone = uma_zcreate("unpcb", sizeof(struct unpcb), NULL, NULL,
+-	    NULL, NULL, UMA_ALIGN_PTR, UMA_ZONE_NOFREE);
++	unp_zone = uma_zcreate("unpcb", sizeof(struct unpcb_wrapper), NULL,
++	    NULL, NULL, NULL, UMA_ALIGN_PTR, 0);
+ 	if (unp_zone == NULL)
+ 		panic("unp_init");
+ 	uma_zone_set_max(unp_zone, maxsockets);
+@@ -1636,7 +1666,7 @@
+ 	unp_defer = 0;
+ 	/*
+ 	 * before going through all this, set all FDs to
+-	 * be NOT defered and NOT externally accessible
++	 * be NOT deferred and NOT externally accessible
+ 	 */
+ 	sx_slock(&filelist_lock);
+ 	LIST_FOREACH(fp, &filehead, f_list)
+@@ -1659,16 +1689,16 @@
+ 				continue;
+ 			}
+ 			/*
+-			 * If we already marked it as 'defer'  in a
+-			 * previous pass, then try process it this time
+-			 * and un-mark it
++			 * If we already marked it as 'defer' in a
++			 * previous pass, then try to process it this
++			 * time and un-mark it
+ 			 */
+ 			if (fp->f_gcflag & FDEFER) {
+ 				fp->f_gcflag &= ~FDEFER;
+ 				unp_defer--;
+ 			} else {
+ 				/*
+-				 * if it's not defered, then check if it's
++				 * if it's not deferred, then check if it's
+ 				 * already marked.. if so skip it
+ 				 */
+ 				if (fp->f_gcflag & FMARK) {
+@@ -1691,7 +1721,7 @@
+ 				fp->f_gcflag |= FMARK;
+ 			}
+ 			/*
+-			 * either it was defered, or it is externally
++			 * either it was deferred, or it is externally
+ 			 * accessible and not already marked so.
+ 			 * Now check if it is possibly one of OUR sockets.
+ 			 */
+@@ -1700,13 +1730,23 @@
+ 				FILE_UNLOCK(fp);
+ 				continue;
+ 			}
+-			FILE_UNLOCK(fp);
+ 			if (so->so_proto->pr_domain != &localdomain ||
+-			    (so->so_proto->pr_flags&PR_RIGHTS) == 0)
++			    (so->so_proto->pr_flags & PR_RIGHTS) == 0) {
++				FILE_UNLOCK(fp);
+ 				continue;
++			}
++
++			/*
++			 * Tell any other threads that do a subsequent
++			 * fdrop() that we are scanning the message
++			 * buffers.
++			 */
++			fp->f_gcflag |= FWAIT;
++			FILE_UNLOCK(fp);
++
+ 			/*
+ 			 * So, Ok, it's one of our sockets and it IS externally
+-			 * accessible (or was defered). Now we look
++			 * accessible (or was deferred). Now we look
+ 			 * to see if we hold any file descriptors in its
+ 			 * message buffers. Follow those links and mark them
+ 			 * as accessible too.
+@@ -1714,6 +1754,14 @@
+ 			SOCKBUF_LOCK(&so->so_rcv);
+ 			unp_scan(so->so_rcv.sb_mb, unp_mark);
+ 			SOCKBUF_UNLOCK(&so->so_rcv);
++
++			/*
++			 * Wake up any threads waiting in fdrop().
++			 */
++			FILE_LOCK(fp);
++			fp->f_gcflag &= ~FWAIT;
++			wakeup(&fp->f_gcflag);
++			FILE_UNLOCK(fp);
+ 		}
+ 	} while (unp_defer);
+ 	sx_sunlock(&filelist_lock);
+--- src/sys/sys/file.h	2006/05/29 20:28:17
++++ src/sys/sys/file.h	2006/12/29 16:16:12
+@@ -127,6 +127,7 @@
+ 	short	f_gcflag;	/* used by thread doing fd garbage collection */
+ #define	FMARK		0x1	/* mark during gc() */
+ #define	FDEFER		0x2	/* defer for next gc pass */
++#define	FWAIT		0x4	/* gc is scanning message buffers */
+ 	int	f_msgcount;	/* (f) references from message queue */
+ 
+ 	/* DTYPE_VNODE specific fields */
