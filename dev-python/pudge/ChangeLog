@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pudge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pudge/ChangeLog,v 1.3 2007/04/13 02:18:24 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pudge/ChangeLog,v 1.4 2007/07/04 18:25:13 pythonhead Exp $
+
+  04 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> pudge-0.1.2.ebuild,
+  pudge-0.1.3.ebuild:
+  Removed setuptools sed. bug# 184039
 
 *pudge-0.1.3 (13 Apr 2007)
 

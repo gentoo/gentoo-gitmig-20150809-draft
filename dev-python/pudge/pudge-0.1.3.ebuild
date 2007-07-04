@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pudge/pudge-0.1.3.ebuild,v 1.1 2007/04/13 02:18:24 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pudge/pudge-0.1.3.ebuild,v 1.2 2007/07/04 18:25:13 pythonhead Exp $
 
 inherit distutils
 
@@ -23,8 +23,6 @@ src_unpack() {
 	cd "${S}"
 	sed -i \
 		-e '/use_setuptools/d' \
-		-e '/install_requires[ \t]*=[ \t]*\[.*\],/d' \
-		-e '/install_requires/, /],/d' \
 		setup.py || die "sed failed"
 }
 
