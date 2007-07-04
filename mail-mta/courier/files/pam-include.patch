@@ -1,0 +1,36 @@
+--- courier-0.53.2/webmail/sqwebmail-system-auth.pamconf	2007/05/10 05:49:26	1.1
++++ courier-0.53.2/webmail/sqwebmail-system-auth.pamconf	2007/05/13 18:19:03
+@@ -5,10 +5,10 @@
+ # Copyright 1998-2001 Double Precision, Inc.  See COPYING for
+ # distribution information.
+ #
+-# This is a sample authpam configuration file that uses pam_stack
+-# (circa linux-pam 0.72).
++# This is a sample authpam configuration file that uses include statements
++# (circa linux-pam 0.78).
+ 
+ auth       required     pam_nologin.so
+-auth       required     pam_stack.so service=system-auth
+-account    required     pam_stack.so service=system-auth
+-session    required     pam_stack.so service=system-auth
++auth       include	system-auth
++account    include	system-auth
++session    include	system-auth
+--- courier-0.53.2/imap/system-auth.authpam	2007/05/13 19:03:10	1.1
++++ courier-0.53.2/imap/system-auth.authpam	2007/05/13 19:04:03
+@@ -5,10 +5,10 @@
+ # Copyright 1998-2001 Double Precision, Inc.  See COPYING for
+ # distribution information.
+ #
+-# This is a sample authpam configuration file that uses pam_stack
+-# (circa linux-pam 0.72).
++# This is a sample authpam configuration file that uses include statements
++# (circa linux-pam 0.78).
+ 
+ auth       required     pam_nologin.so
+-auth       required     pam_stack.so service=system-auth
+-account    required     pam_stack.so service=system-auth
+-session    required     pam_stack.so service=system-auth
++auth       include	system-auth
++account    include	system-auth
++session    include	system-auth

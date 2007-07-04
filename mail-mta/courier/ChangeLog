@@ -1,6 +1,15 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.90 2007/05/30 16:21:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.91 2007/07/04 19:57:20 flameeyes Exp $
+
+*courier-0.55.1-r1 (04 Jul 2007)
+*courier-0.53.2-r1 (04 Jul 2007)
+
+  04 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pam-include.patch, +courier-0.53.2-r1.ebuild,
+  +courier-0.55.1-r1.ebuild:
+  Add patch from Ed Catmur to work with PAM 0.99 (and in general without
+  pam_stack). Thanks Ed. See bug #177748.
 
 *courier-0.55.1 (30 May 2007)
 
