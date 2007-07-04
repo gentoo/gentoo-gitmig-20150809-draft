@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.34 2007/06/15 10:25:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.35 2007/07/04 20:15:05 armin76 Exp $
+
+  04 Jul 2007; Raúl Porcel <armin76@gentoo.org> xulrunner-1.8.1.4.ebuild:
+  Make it work in fbsd, patches provided by Roy Marples <uberlord at gentoo
+  dot org>, bug 184099
 
   15 Jun 2007; Raúl Porcel <armin76@gentoo.org> xulrunner-1.8.1.4.ebuild:
   Enable parallel compile, bug 181722
