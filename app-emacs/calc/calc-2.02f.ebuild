@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/calc/calc-2.02f.ebuild,v 1.2 2006/12/10 17:43:51 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/calc/calc-2.02f.ebuild,v 1.3 2007/07/04 22:42:11 opfer Exp $
 
 inherit elisp eutils
 
@@ -17,18 +17,18 @@ SITEFILE="50calc-gentoo.el"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-emacs-21.patch
-	epatch ${FILESDIR}/${P}-info-dir.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-emacs-21.patch"
+	epatch "${FILESDIR}/${P}-info-dir.patch"
 }
 
 src_compile() {
-	emake compile info || die
+	emake compile info || die "emake failed"
 }
 
 src_install() {
 	elisp-install ${PN} calc*.el calc*.elc
-	elisp-site-file-install ${FILESDIR}/${SITEFILE}
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	doinfo calc.info*
 	dodoc README README.prev
 }
