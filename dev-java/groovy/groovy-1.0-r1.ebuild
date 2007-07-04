@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0-r1.ebuild,v 1.3 2007/05/27 20:02:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0-r1.ebuild,v 1.4 2007/07/04 22:14:28 betelgeuse Exp $
 
 inherit versionator java-pkg-2 java-ant-2
 
@@ -15,7 +15,7 @@ SLOT="1"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bsf"
 # testcases won't even compile in current state
-RESTRICT="test"
+#RESTRICT="test"
 
 COMMON_DEPS="
 	=dev-java/asm-2.2*
