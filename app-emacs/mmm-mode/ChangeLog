@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/mmm-mode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/ChangeLog,v 1.9 2007/05/27 16:18:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/ChangeLog,v 1.10 2007/07/04 23:10:48 opfer Exp $
+
+  04 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  mmm-mode-0.4.8-r1.ebuild:
+  removed virtual/emacs from DEPEND; manual make and configure calls to emake
+  and econf; added some die comments; added some quotes
 
   27 May 2007; Ulrich Mueller <ulm@gentoo.org> -mmm-mode-0.4.8.ebuild:
   Remove old.
