@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/flagedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.14 2007/05/14 21:16:48 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.15 2007/07/04 21:54:40 armin76 Exp $
+
+  04 Jul 2007; Raúl Porcel <armin76@gentoo.org> flagedit-0.0.7.ebuild:
+  x86 stable
 
   14 May 2007; Steve Dibb <beandog@gentoo.org> flagedit-0.0.7.ebuild:
   amd64 stable
