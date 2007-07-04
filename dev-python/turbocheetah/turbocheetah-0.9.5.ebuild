@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbocheetah/turbocheetah-0.9.5.ebuild,v 1.1 2007/02/28 00:11:37 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbocheetah/turbocheetah-0.9.5.ebuild,v 1.2 2007/07/04 19:07:20 pythonhead Exp $
 
 NEED_PYTHON=2.4
 
@@ -25,14 +25,6 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e '/install_requires = \[.*\],/d' \
-		-e '/install_requires/, /],/d' \
-		setup.py || die "sed failed"
-}
 
 src_test() {
 	PYTHONPATH=. "${python}" setup.py test || die "tests failed"
