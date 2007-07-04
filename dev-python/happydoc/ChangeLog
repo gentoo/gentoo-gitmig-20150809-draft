@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/happydoc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.21 2007/02/22 00:28:14 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.22 2007/07/04 19:50:49 hawking Exp $
+
+  04 Jul 2007; Ali Polatel <hawking@gentoo.org> happydoc-2.1.ebuild,
+  happydoc-2.1-r1.ebuild:
+  use DOCS, mydoc is deprecated. don't dodoc license.txt and install.txt
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

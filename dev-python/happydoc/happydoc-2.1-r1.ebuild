@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/happydoc-2.1-r1.ebuild,v 1.1 2006/05/16 17:19:38 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/happydoc-2.1-r1.ebuild,v 1.2 2007/07/04 19:50:49 hawking Exp $
 
 inherit distutils eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_install() {
-	mydoc="INSTALL.txt LICENSE.txt CHANGES.txt README.txt"
+	DOCS="CHANGES.txt"
 	distutils_src_install
 
 	insinto /usr/share/doc/${PF}
