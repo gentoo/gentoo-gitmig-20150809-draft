@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pudge/pudge-0.1.3.ebuild,v 1.2 2007/07/04 18:25:13 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pudge/pudge-0.1.3.ebuild,v 1.3 2007/07/04 20:16:09 lucass Exp $
 
 inherit distutils
 
@@ -17,14 +17,6 @@ RDEPEND="dev-python/docutils
 	>=dev-python/kid-0.9.5"
 DEPEND="dev-python/setuptools
 	doc? ( ${RDEPEND} )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e '/use_setuptools/d' \
-		setup.py || die "sed failed"
-}
 
 src_install() {
 	distutils_src_install
