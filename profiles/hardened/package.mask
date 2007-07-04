@@ -1,10 +1,10 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.29 2007/06/11 09:44:31 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.30 2007/07/04 20:23:08 armin76 Exp $
 
 # Christian Heim <phreak@gentoo.org> (28 January 2007)
 # Mask sys-devel/autoconf-2.61 due to bug #161566
-=sys-devel/autoconf-2.61
+=sys-devel/autoconf-2.61*
 # needs >=sys-devel/autoconf-2.60b
 app-i18n/uim-svn
 ~sys-apps/coreutils-6.9
