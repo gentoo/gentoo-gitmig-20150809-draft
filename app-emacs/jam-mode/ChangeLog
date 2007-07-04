@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/jam-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jam-mode/ChangeLog,v 1.7 2007/02/06 13:34:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jam-mode/ChangeLog,v 1.8 2007/07/04 05:41:23 ulm Exp $
+
+  04 Jul 2007; Ulrich Mueller <ulm@gentoo.org> jam-mode-0.1.ebuild:
+  Remove redundant functions. Dropped ~ppc-macos keyword.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
