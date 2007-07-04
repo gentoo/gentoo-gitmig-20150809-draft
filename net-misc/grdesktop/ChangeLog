@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/grdesktop
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.23 2007/02/22 02:24:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.24 2007/07/04 14:10:36 uberlord Exp $
+
+  04 Jul 2007; Roy Marples <uberlord@gentoo.org> grdesktop-0.23.ebuild:
+  Added ~x86-fbsd keyword.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
