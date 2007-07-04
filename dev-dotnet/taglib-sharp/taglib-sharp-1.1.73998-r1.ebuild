@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-1.1.73998.ebuild,v 1.1 2007/06/27 18:56:41 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-1.1.73998-r1.ebuild,v 1.1 2007/07/04 21:04:21 jurek Exp $
 
 inherit mono eutils
 
@@ -31,6 +31,12 @@ src_compile() {
 }
 
 src_install()  {
+	# cleaning up docdir mess (bug #184149)
+	sed -i -e 's#^docdir = ${datarootdir}/doc/${PACKAGE}$##' \
+		-e 's#^docdir = $(DESTDIR)$(DOCDIR)$#docdir = $(DOCDIR)#' \
+		docs/Makefile \
+	|| die "sed failed"
+
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 }
