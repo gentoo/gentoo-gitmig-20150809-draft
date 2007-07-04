@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-mdcover
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.3 2007/06/27 18:22:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.4 2007/07/04 23:59:45 ticho Exp $
+
+  04 Jul 2007; Andrej Kacian <ticho@gentoo.org> gmpc-mdcover-0.14.0.ebuild,
+  gmpc-mdcover-0.15.0.ebuild:
+  Add check for correct USE flag for x11-libs/gtk+-2.
 
   27 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gmpc-mdcover-0.15.0.ebuild:
