@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.2.2.ebuild,v 1.3 2007/07/04 19:39:14 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.2.2.ebuild,v 1.4 2007/07/04 20:34:56 lucass Exp $
 
 NEED_PYTHON=2.4
 
@@ -37,20 +37,11 @@ RDEPEND=">=dev-python/turbojson-1.0
 DEPEND="${RDEPEND}
 	>=dev-python/setuptools-0.6_rc5"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 DOCS="CHANGELOG.txt CONTRIBUTORS.txt"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e '/use_setuptools/d' \
-		setup.py || die "sed failed"
-}
 
 src_test() {
 	PYTHONPATH=. "${python}" setup.py test || die "tests failed"
 	PYTHONPATH=. "${python}" setup.py nosetests || die "nosetests failed"
 }
-
