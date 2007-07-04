@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.37 2007/07/02 18:44:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.38 2007/07/04 18:08:27 angelos Exp $
+
+  04 Jul 2007; Christoph Mende <angelos@gentoo.org> c-client-2004g.ebuild:
+  Stable on amd64 wrt bug #183898
 
   02 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> c-client-2004g.ebuild:
   Stable on sparc wrt #183898
