@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tree
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.42 2007/07/01 11:56:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.43 2007/07/04 06:32:30 mr_bones_ Exp $
+
+*tree-1.5.1.1 (04 Jul 2007)
+
+  04 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org> +tree-1.5.1.1.ebuild:
+  version bump (bug #184148)
 
   01 Jul 2007; Tobias Scherbaum <dertobi123@gentoo.org> tree-1.5.1.ebuild:
   hppa stable, bug #183371
