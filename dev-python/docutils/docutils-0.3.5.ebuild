@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.5.ebuild,v 1.11 2007/03/30 19:07:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.5.ebuild,v 1.12 2007/07/04 19:38:17 hawking Exp $
 
 inherit distutils eutils multilib
 
 DESCRIPTION="Set of python tools for processing plaintext docs into HTML, XML, etc."
 HOMEPAGE="http://docutils.sourceforge.net/"
 SRC_URI="mirror://sourceforge/docutils/${P}.tar.gz
-		 glep? ( mirror://gentoo/glep-${PV}.tbz2 )"
+		glep? ( mirror://gentoo/glep-${PV}.tbz2 )"
 
 LICENSE="public-domain PYTHON BSD"
 SLOT="0"
@@ -32,7 +32,6 @@ src_compile() {
 		tools/buildhtml.py --config=tools/docutils.conf
 }
 
-
 install_txt_doc() {
 	local doc=${1}
 	local dir="txt/$(dirname ${doc})"
@@ -41,7 +40,7 @@ install_txt_doc() {
 }
 
 src_install() {
-	mydoc="MANIFEST.in *.txt"
+	DOCS="*.txt"
 	distutils_src_install
 	# Tools
 	cd ${S}/tools

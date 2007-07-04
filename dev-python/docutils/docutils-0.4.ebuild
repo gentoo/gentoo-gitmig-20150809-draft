@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.4.ebuild,v 1.14 2007/04/04 18:28:41 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.4.ebuild,v 1.15 2007/07/04 19:38:17 hawking Exp $
 
 inherit distutils eutils elisp-common multilib
 
@@ -58,7 +58,6 @@ src_compile() {
 	fi
 }
 
-
 install_txt_doc() {
 	local doc=${1}
 	local dir="txt/$(dirname ${doc})"
@@ -73,7 +72,7 @@ src_test() {
 
 src_install() {
 	cd ${S}
-	mydoc="*.txt"
+	DOCS="*.txt"
 	distutils_src_install
 	# Tools
 	cd ${S}/tools
