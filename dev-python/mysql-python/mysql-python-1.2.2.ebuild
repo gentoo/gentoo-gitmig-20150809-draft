@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.2.2.ebuild,v 1.1 2007/03/04 12:09:53 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.2.2.ebuild,v 1.2 2007/07/04 20:48:37 lucass Exp $
 
 NEED_PYTHON=2.3
 
@@ -22,9 +22,3 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 DOCS="HISTORY doc/FAQ.txt doc/MySQLdb.txt"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -e '/ez_setup/d' -i setup.py
-}

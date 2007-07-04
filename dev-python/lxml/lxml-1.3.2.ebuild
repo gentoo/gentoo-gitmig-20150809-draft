@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.3.2.ebuild,v 1.1 2007/07/04 06:08:03 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.3.2.ebuild,v 1.2 2007/07/04 20:44:52 lucass Exp $
 
 NEED_PYTHON=2.3
 
@@ -19,14 +19,6 @@ IUSE="doc examples"
 DEPEND=">=dev-libs/libxml2-2.6.16
 		>=dev-libs/libxslt-1.1.12
 		dev-python/setuptools"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# don't use ez_setup
-	sed -e '4,9d' -i setup.py
-}
 
 src_install() {
 	distutils_src_install
