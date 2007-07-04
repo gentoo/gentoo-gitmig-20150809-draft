@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/kid-0.9.5.ebuild,v 1.1 2007/02/03 22:43:15 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/kid-0.9.5.ebuild,v 1.2 2007/07/04 20:09:11 lucass Exp $
 
 NEED_PYTHON=2.3
 
@@ -19,16 +19,6 @@ RDEPEND="|| ( >=dev-lang/python-2.5 dev-python/elementtree )"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	doc? ( dev-python/docutils )"
-
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	sed -i \
-		-e '/use_setuptools/d' \
-		setup.py || die "sed failed"
-}
 
 src_test() {
 	# We have to move the build folder out of the way to make the tests work

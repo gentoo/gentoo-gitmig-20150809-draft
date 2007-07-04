@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/ChangeLog,v 1.11 2007/02/03 22:43:14 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/ChangeLog,v 1.12 2007/07/04 20:09:11 lucass Exp $
+
+  04 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> kid-0.9.5.ebuild:
+  Removed use_setuptools sed.
 
 *kid-0.9.5 (03 Feb 2007)
 

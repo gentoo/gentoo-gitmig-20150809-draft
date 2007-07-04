@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/myghtyutils/myghtyutils-0.52.ebuild,v 1.1 2007/02/27 23:52:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/myghtyutils/myghtyutils-0.52.ebuild,v 1.2 2007/07/04 20:12:14 lucass Exp $
 
 NEED_PYTHON=2.4
 
@@ -23,12 +23,4 @@ DEPEND="${RDEPEND}
 	app-arch/unzip
 	dev-python/setuptools"
 
-S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e '/use_setuptools/d' \
-		setup.py || die "sed failed"
-}
+S="${WORKDIR}/${MY_P}"
