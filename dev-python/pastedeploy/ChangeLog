@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pastedeploy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/ChangeLog,v 1.1 2007/02/27 23:43:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/ChangeLog,v 1.2 2007/07/04 18:04:46 pythonhead Exp $
+
+  04 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> pastedeploy-1.1.ebuild:
+  Removed setuptools sed. bug# 184039
 
   04 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> pastedeploy-1.1.ebuild:
   Added ~amd64 keyword.
