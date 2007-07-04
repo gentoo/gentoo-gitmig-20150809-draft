@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.16 2007/04/24 16:04:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.17 2007/07/04 21:23:18 lucass Exp $
+
+  04 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> django-0.95.1.ebuild,
+  django-0.96.ebuild:
+  Removed use_setuptools sed. Removed setuptools dependency in 0.96.
 
   24 Apr 2007; Seemant Kulleen <seemant@gentoo.org> django-0.96.ebuild:
   adjust the mysql-python dependency, as 1.2.1_p2 is the minimum allowed

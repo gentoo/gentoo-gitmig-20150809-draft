@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.95.1.ebuild,v 1.2 2007/01/22 16:55:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.95.1.ebuild,v 1.3 2007/07/04 21:23:18 lucass Exp $
 
 inherit bash-completion distutils eutils versionator
 
@@ -31,14 +31,6 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 DOCS="docs/* AUTHORS"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e '/ez_setup/d' \
-		setup.py || die "sed failed"
-}
 
 src_install() {
 	distutils_python_version
