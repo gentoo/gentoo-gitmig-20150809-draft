@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/sawfish
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sawfish/ChangeLog,v 1.8 2007/04/01 10:05:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sawfish/ChangeLog,v 1.9 2007/07/04 06:19:06 ulm Exp $
+
+  04 Jul 2007; Ulrich Mueller <ulm@gentoo.org> files/50sawfish-gentoo.el,
+  sawfish-1.32.ebuild:
+  Remove redundant functions. Use add-to-list in sitefile.
 
   01 Apr 2007; Michael Hanselmann <hansmi@gentoo.org> sawfish-1.32.ebuild:
   Stable on ppc.
