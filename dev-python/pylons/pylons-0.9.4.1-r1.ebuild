@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/pylons-0.9.4.1-r1.ebuild,v 1.1 2007/07/04 18:39:30 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/pylons-0.9.4.1-r1.ebuild,v 1.2 2007/07/04 20:19:28 lucass Exp $
 
 NEED_PYTHON=2.3
 
@@ -35,18 +35,14 @@ DEPEND="${RDEPEND}
 # The tests fail, needs further investigation
 RESTRICT="test"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	distutils_src_unpack
 
 	sed -i \
 		-e 's|dest =.*|dest = docs/html|' \
 		setup.cfg || die "sed failed"
-	sed -i \
-		-e '/use_setuptools/d' \
-		setup.py || die "sed failed"
 }
 
 src_compile() {
