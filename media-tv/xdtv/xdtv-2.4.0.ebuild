@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.1 2007/02/24 12:19:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.2 2007/07/04 08:27:25 aballier Exp $
 
-inherit multilib flag-o-matic toolchain-funcs
+inherit eutils multilib flag-o-matic toolchain-funcs
 
 IUSE="alsa jpeg encode ffmpeg xvid lirc xinerama neXt Xaw3d mmx zvbi aqua_theme
 carbone_theme xv debug ogg png nls schedule"
@@ -97,6 +97,14 @@ extension_install() {
 	einfo "Installing ${1}"
 	cd ${WORKDIR}/${1} \
 		&& emake DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)/${PN}" install
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-ffmpeg.patch"
+
 }
 
 src_compile() {
