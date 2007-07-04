@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/vhdl-mode
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/ChangeLog,v 1.7 2006/03/06 06:03:53 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/ChangeLog,v 1.8 2007/07/04 23:36:27 opfer Exp $
+
+  04 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  vhdl-mode-3.33.8.ebuild:
+  removed src_install() and src_compile(); relocated IUSE; added a pair of quotes
 
 *vhdl-mode-3.33.8 (06 Mar 2006)
 
