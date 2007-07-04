@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-places
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/ChangeLog,v 1.22 2007/07/03 17:50:05 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/ChangeLog,v 1.23 2007/07/04 12:18:27 angelos Exp $
+
+  04 Jul 2007; Christoph Mende <angelos@gentoo.org>
+  xfce4-places-0.3.0.ebuild:
+  Stable on amd64
 
   03 Jul 2007; Peter Weller <welp@gentoo.org> xfce4-places-0.3.0.ebuild:
   Keyworded ~x86-fbsd
