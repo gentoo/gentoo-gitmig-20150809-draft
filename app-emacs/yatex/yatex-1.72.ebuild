@@ -1,10 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.72.ebuild,v 1.11 2007/04/08 12:39:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.72.ebuild,v 1.12 2007/07/04 23:30:08 opfer Exp $
 
 inherit elisp eutils
-
-IUSE="cjk"
 
 DESCRIPTION="Yet Another TeX mode for Emacs"
 HOMEPAGE="http://www.yatex.org/"
@@ -13,14 +11,12 @@ SRC_URI="http://www.yatex.org/${P/-/}.tar.gz"
 KEYWORDS="alpha ~amd64 ppc ~ppc-macos ~ppc64 sparc x86"
 SLOT="0"
 LICENSE="as-is"
-
-# virtual/emacs is from elisp.eclass
-#DEPEND="virtual/emacs"
+IUSE="cjk"
 
 S=${WORKDIR}/${P/-/}
+SITEFILE=50${PN}-gentoo.el
 
 src_unpack() {
-
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gentoo.diff"
@@ -28,9 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-
 	# compilation b0rks on alpha, sparc and ppc
-
 	cd docs
 	mv yatexe yatex.info
 	mv yahtmle yahtml.info
@@ -43,7 +37,7 @@ src_compile() {
 src_install() {
 
 	elisp-install ${PN} *.el
-	elisp-site-file-install "${FILESDIR}/50yatex-gentoo.el"
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	elisp-install ${PN} help/YATEXHLP*
 
 	dodoc docs/*.eng
