@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/groovy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.24 2007/05/27 20:02:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.25 2007/07/04 22:14:19 betelgeuse Exp $
+
+  04 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> -groovy-1.0.ebuild:
+  Remove old revision.
 
   27 May 2007; Vlastimil Babka <caster@gentoo.org> groovy-1.0-r1.ebuild:
   Make BSF support optional via new local USE flag and minor style tweaks;
