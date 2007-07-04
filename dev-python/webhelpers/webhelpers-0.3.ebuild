@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/webhelpers-0.3.ebuild,v 1.1 2007/03/24 11:35:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/webhelpers-0.3.ebuild,v 1.2 2007/07/04 20:23:39 pythonhead Exp $
 
 NEED_PYTHON=2.3
 
@@ -27,15 +27,6 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e '/use_setuptools/d' \
-		-e '/install_requires = \[.*\],/d' \
-		-e '/install_requires/, /],/d' \
-		setup.py || die "sed failed"
-}
 
 src_compile() {
 	distutils_src_compile
