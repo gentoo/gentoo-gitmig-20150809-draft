@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.52 2007/06/30 07:42:01 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.53 2007/07/04 08:34:39 aross Exp $
+
+*mercurial-0.9.4 (04 Jul 2007)
+
+  04 Jul 2007; Andrew Ross <aross@gentoo.org> -mercurial-0.9.ebuild,
+  -mercurial-0.9.1.ebuild, -mercurial-0.9.1-r1.ebuild,
+  -mercurial-0.9.1-r2.ebuild, +mercurial-0.9.4.ebuild:
+  Bump to 0.9.4 (bug #183212) and drop ebuilds <0.9.3
 
   30 Jun 2007; Andrew Ross <aross@gentoo.org> metadata.xml,
   mercurial-0.9.3-r1.ebuild:
