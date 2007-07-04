@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/buildutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/buildutils/ChangeLog,v 1.2 2007/02/27 23:20:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/buildutils/ChangeLog,v 1.3 2007/07/04 19:59:16 lucass Exp $
+
+  04 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  buildutils-0.1.2.ebuild:
+  Removed use_setuptools sed.
 
   27 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
   buildutils-0.1.2.ebuild:
