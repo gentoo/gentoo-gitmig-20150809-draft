@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-0.6.3.ebuild,v 1.1 2007/03/24 09:53:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-0.6.3.ebuild,v 1.2 2007/07/04 17:13:02 pythonhead Exp $
 
 NEED_PYTHON=2.4
 
@@ -20,15 +20,7 @@ IUSE="test"
 
 RDEPEND="dev-python/myghtyutils"
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
+	>=dev-python/setuptools-0.6_rc3"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e '/install_requires = \[.*\],/d' \
-		-e '/install_requires/, /],/d' \
-		setup.py || die "sed failed"
-}

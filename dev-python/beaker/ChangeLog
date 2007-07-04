@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/beaker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.3 2007/06/30 21:41:12 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.4 2007/07/04 17:13:02 pythonhead Exp $
+
+  04 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> beaker-0.6.3.ebuild:
+  Removed setuptools sed. bug# 184039
 
 *beaker-0.7.3 (30 Jun 2007)
 
