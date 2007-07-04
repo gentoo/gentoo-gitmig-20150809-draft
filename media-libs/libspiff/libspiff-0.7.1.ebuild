@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libspiff/libspiff-0.7.1.ebuild,v 1.1 2007/06/23 01:21:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libspiff/libspiff-0.7.1.ebuild,v 1.2 2007/07/04 20:26:43 gustavoz Exp $
 
 DESCRIPTION="Library for XSPF playlist reading and writing"
 HOMEPAGE="http://libspiff.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2.1 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="doc"
 RDEPEND=">=dev-libs/expat-1.95.8"
 DEPEND="${RDEPEND}
