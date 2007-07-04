@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-2xterminalserver/nxserver-2xterminalserver-1.5.0.ebuild,v 1.5 2007/06/11 11:58:59 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-2xterminalserver/nxserver-2xterminalserver-1.5.0.ebuild,v 1.6 2007/07/04 15:08:07 voyageur Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,6 +18,7 @@ IUSE="rdesktop vnc"
 RDEPEND="dev-libs/glib
 	dev-libs/openssl
 	dev-perl/BSD-Resource
+	dev-perl/DateManip
 	dev-perl/DBD-SQLite
 	dev-perl/DBI
 	dev-perl/Error
@@ -111,7 +112,7 @@ src_compile() {
 	make || die
 
 	cd ${S}/server/nxsensor
-	emake glib12=1 || die
+	emake || die
 
 	cd ${S}/server/nxuexec
 	emake || die
