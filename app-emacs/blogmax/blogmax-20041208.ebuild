@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/blogmax/blogmax-20041208.ebuild,v 1.5 2007/07/03 06:41:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/blogmax/blogmax-20041208.ebuild,v 1.6 2007/07/04 23:32:59 opfer Exp $
 
 inherit elisp
 
@@ -14,10 +14,6 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}; rm -f *.elc
-}
-
-src_compile() {
-	elisp-compile *.el
 }
 
 src_install() {
