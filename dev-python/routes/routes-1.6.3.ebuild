@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-1.6.3.ebuild,v 1.1 2007/04/22 08:03:52 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-1.6.3.ebuild,v 1.2 2007/07/04 20:21:18 lucass Exp $
 
 NEED_PYTHON=2.4
 
@@ -23,15 +23,7 @@ DEPEND="doc? ( dev-python/buildutils dev-python/pudge )
 	dev-python/setuptools"
 RDEPEND=""
 
-S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e '/use_setuptools/d' \
-		setup.py || die "sed failed"
-}
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	distutils_src_compile

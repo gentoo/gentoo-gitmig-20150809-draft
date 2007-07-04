@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/routes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/ChangeLog,v 1.2 2007/04/22 08:03:52 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/ChangeLog,v 1.3 2007/07/04 20:21:18 lucass Exp $
+
+  04 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> routes-1.6.3.ebuild:
+  Removed use_setuptools sed.
 
 *routes-1.6.3 (22 Apr 2007)
 
