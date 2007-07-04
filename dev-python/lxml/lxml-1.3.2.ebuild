@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.3.1.ebuild,v 1.1 2007/07/03 06:49:29 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.3.2.ebuild,v 1.1 2007/07/04 06:08:03 lucass Exp $
 
 NEED_PYTHON=2.3
 
@@ -25,7 +25,7 @@ src_unpack() {
 	cd "${S}"
 
 	# don't use ez_setup
-	sed -e '4,10d' -i setup.py
+	sed -e '4,9d' -i setup.py
 }
 
 src_install() {
