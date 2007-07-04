@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.46 2007/07/02 14:51:49 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.47 2007/07/04 02:34:24 trapni Exp $
+
+*nvidia-drivers-100.14.11 (04 Jul 2007)
+
+  04 Jul 2007; Christian Parpart <trapni@gentoo.org>
+  +nvidia-drivers-100.14.11.ebuild:
+  version bump to 100.14.11
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   nvidia-drivers-1.0.8776-r1.ebuild, nvidia-drivers-1.0.9631-r1.ebuild:
