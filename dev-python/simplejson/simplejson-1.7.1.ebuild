@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/simplejson-1.7.1.ebuild,v 1.1 2007/04/22 08:22:22 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/simplejson-1.7.1.ebuild,v 1.2 2007/07/04 21:30:14 lucass Exp $
 
 NEED_PYTHON=2.3
 
@@ -18,14 +18,6 @@ IUSE="test"
 DEPEND="test? ( dev-python/nose )
 	dev-python/setuptools"
 RDEPEND=""
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e '/^ez_setup/d' -e '/^import ez_setup/d' \
-		setup.py || die "sed failed"
-}
 
 src_install() {
 	distutils_src_install
