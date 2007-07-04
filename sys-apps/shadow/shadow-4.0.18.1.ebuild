@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1.ebuild,v 1.14 2007/06/23 02:36:07 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1.ebuild,v 1.15 2007/07/04 18:34:04 vapier Exp $
 
-inherit eutils libtool toolchain-funcs flag-o-matic autotools pam
+inherit eutils libtool toolchain-funcs autotools pam
 
 DESCRIPTION="Utilities to deal with user accounts"
 HOMEPAGE="http://shadow.pld.org.pl/"
@@ -62,7 +62,6 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags $(bindnow-flags)
 	tc-is-cross-compiler && export ac_cv_func_setpgrp_void=yes
 	econf \
 		--disable-desrpc \
