@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.25 2007/06/02 21:27:00 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.26 2007/07/04 05:20:04 compnerd Exp $
+
+*transmission-0.72-r1 (04 Jul 2007)
+
+  04 Jul 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +transmission-0.72-r1.ebuild:
+  Revision bump for upsate from upstream without a release.
 
   02 Jun 2007; René Nussbaumer <killerfox@gentoo.org>
   transmission-0.72.ebuild:
