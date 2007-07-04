@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.12 2007/06/19 21:06:11 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.13 2007/07/04 21:17:12 gustavoz Exp $
+
+  04 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> powertop-1.7.ebuild:
+  Keyworded ~sparc wrt #183769
 
 *powertop-1.7 (19 Jun 2007)
 
