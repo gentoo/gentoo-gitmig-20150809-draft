@@ -1,0 +1,11 @@
+--- src/speak_lib.cpp	2007-06-09 16:56:51.000000000 -0500
++++ src/speak_lib.cpp	2007-06-09 17:02:19.000000000 -0500
+@@ -264,7 +264,7 @@
+ char *Alloc(int size)
+ {//==================
+ 	char *p;
+-	if((p = (char *)malloc(size)) == NULL)
++	if((p = (char *)malloc(size+1)) == NULL)
+ 		fprintf(stderr,"Can't allocate memory\n");
+ 	return(p);
+ }
