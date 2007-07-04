@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.5.ebuild,v 1.4 2007/07/02 14:40:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.5.ebuild,v 1.5 2007/07/04 21:27:43 uberlord Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog NEWS README
-	use X || rm "${D}"/bi/pstree.x11
+	use X || rm "${D}"/bin/pstree.x11
 	# easier to do this than forcing regen of autotools
 	[[ -e ${D}/usr/bin/peekfd ]] || rm -f "${D}"/usr/share/man/man1/peekfd.1
 }
