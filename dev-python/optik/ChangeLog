@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/optik
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/ChangeLog,v 1.24 2007/02/09 07:38:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/ChangeLog,v 1.25 2007/07/04 20:37:49 hawking Exp $
+
+  04 Jul 2007; Ali Polatel <hawking@gentoo.org> optik-1.4.ebuild,
+  optik-1.4.1.ebuild, optik-1.5.ebuild:
+  use DOCS, mydoc is deprecated
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
