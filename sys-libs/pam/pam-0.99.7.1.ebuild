@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.7.1.ebuild,v 1.4 2007/07/02 15:35:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.7.1.ebuild,v 1.5 2007/07/04 19:43:37 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -33,6 +33,68 @@ S="${WORKDIR}/${MY_P}"
 
 
 PROVIDE="virtual/pam"
+
+check_old_modules() {
+	local retval="0"
+
+	if sed -e 's:#.*::' /etc/pam.d/* | fgrep -q pam_stack.so; then
+		eerror ""
+		eerror "Your current setup is using the pam_stack module."
+		eerror "This module is deprecated and no more supported, and since version"
+		eerror "0.99 is no more installed, nor provided by any other package."
+		eerror "The package will be built (to allow binary package builds), but will"
+		eerror "not be installed."
+		eerror "Please replace pam_stack usage with proper include directive usage,"
+		eerror "following the PAM Upgrade guide at the following URL"
+		eerror "  http://www.gentoo.org/proj/en/base/pam/upgrade-0.99.xml"
+		eerror ""
+		ebeep 15
+
+		retval=1
+	fi
+
+	if sed -e 's:#.*::' /etc/pam.d/* | egrep -q 'pam_(pwdb|radius|timestamp|chroot)'; then
+		eerror ""
+		eerror "Your current setup is using one or more of the following modules,"
+		eerror "that are not built or supported anymore:"
+		eerror "pam_pwdb, pam_radius, pam_timestamp, pam_chroot"
+		eerror "If you are in real need for these modules, please contact the maintainers"
+		eerror "of PAM through http://bugs.gentoo.org/ providing information about its"
+		eerror "use cases."
+		ebeel 10
+
+		retval=1
+	fi
+
+	# Produce the warnings only during upgrade, for the following two
+	has_version '=sys-libs/pam-0.78' || return $retval
+
+	if sed -e 's:#.*::' /etc/pam.d/* | fgrep -q pam_console.so; then
+		ewarn ""
+		ewarn "Your current setup is using the pam_console module."
+		ewarn "Since version 0.99, ${CATEGORY}/${PN} does not provide this module"
+		ewarn "anymore; if you want to continue using this module, you should install"
+		ewarn "sys-auth/pam_console."
+		ewarn ""
+		ebeep 5
+	fi
+
+	if sed -e 's:#.*::' /etc/pam.d/* | fgrep -q pam_userdb.so; then
+		ewarn ""
+		ewarn "Your current setup is using the pam_userdb module."
+		ewarn "Since version 0.99, ${CATEGORY}/${PN} does not provide this module"
+		ewarn "anymore; if you want to continue using this module, you should install"
+		ewarn "sys-auth/pam_userdb."
+		ewarn ""
+		ebeep 5
+	fi
+
+	return $retval
+}
+
+pkg_setup() {
+	check_old_modules
+}
 
 src_unpack() {
 	unpack ${A}
@@ -101,9 +163,6 @@ src_install() {
 	rm -f "${D}"/usr/share/man/man8/pam_userdb.8*
 }
 
-pkg_postinst() {
-	elog "Since version 0.99 we don't apply RedHat patches anymore, thus stuff"
-	elog "like pam_stack is not present (replaced by the 'include' directive)."
-	elog "The pam_userdb module is now moved in sys-auth/pam_userdb."
-	elog "The pam_console module is now moved in sys-auth/pam_console."
+pkg_preinst() {
+	check_old_modules || die "deprecated PAM modules still used"
 }
