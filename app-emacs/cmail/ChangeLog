@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cmail
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/ChangeLog,v 1.8 2007/05/03 20:06:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/ChangeLog,v 1.9 2007/07/04 23:04:25 opfer Exp $
+
+  04 Jul 2007; Christian Faulhammer <opfer@gentoo.org> cmail-2.62.ebuild:
+  remove virtual/emacs from DEPEND; add die comment
 
   03 May 2007; Ulrich Mueller <ulm@gentoo.org> cmail-2.62.ebuild:
   Dependency on virtual/semi changed to app-emacs/semi.

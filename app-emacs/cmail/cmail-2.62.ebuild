@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/cmail-2.62.ebuild,v 1.8 2007/05/03 20:06:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/cmail-2.62.ebuild,v 1.9 2007/07/04 23:04:25 opfer Exp $
 
 inherit elisp
 
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}
 	app-emacs/apel
 	virtual/flim
@@ -22,16 +21,17 @@ RDEPEND="${DEPEND}
 SITEFILE="70cmail-gentoo.el"
 
 src_compile() {
-	make || die
+	emake PREFIX="${D}/usr" \
+		LISPDIR="${D}/${SITELISP}" \
+		VERSION_SPECIFIC_LISPDIR="${D}/${SITELISP}" || die "emake failed"
 }
 
 src_install() {
-	make \
-		LISPDIR=${D}/${SITELISP} \
-		INFODIR=${D}/usr/share/info \
-		install || die
+	emake PREFIX="${D}/usr" \
+		LISPDIR="${D}/${SITELISP}" \
+		VERSION_SPECIFIC_LISPDIR="${D}/${SITELISP}" install || die "emake install failed"
 
-	elisp-site-file-install ${FILESDIR}/${SITEFILE} || die
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die "elisp-site-file-install failed"
 
 	dodoc ChangeLog INTRO* README* RELNOTES*
 	dodoc doc/FAQ doc/README* doc/cmail-r2c* doc/glossary
