@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.39 2007/06/13 14:44:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.40 2007/07/04 18:25:31 drac Exp $
+
+  04 Jul 2007; Samuli Suominen <drac@gentoo.org> dcraw-8.73.ebuild:
+  Stable on arm.
 
   13 Jun 2007; Samuli Suominen <drac@gentoo.org> dcraw-8.73.ebuild:
   Keyword for arm.
