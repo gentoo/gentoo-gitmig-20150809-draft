@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.6.2.ebuild,v 1.8 2006/08/19 13:15:54 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.6.2.ebuild,v 1.9 2007/07/04 20:57:37 hawking Exp $
 
 inherit distutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_install() {
-	mydoc=WHATSNEW
+	DOCS=WHATSNEW
 	distutils_src_install
 
 	dohtml -r docs/*

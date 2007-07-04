@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.5.1.ebuild,v 1.14 2007/06/27 19:45:01 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.5.1.ebuild,v 1.15 2007/07/04 21:02:36 hawking Exp $
 
 inherit distutils
 
@@ -31,7 +31,7 @@ src_test() {
 }
 
 src_install() {
-	mydoc="examples/*"
+	DOCS="examples/*"
 	distutils_src_install
 	dohtml -r doc/*
 }
