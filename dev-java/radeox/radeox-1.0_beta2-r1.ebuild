@@ -1,23 +1,26 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/radeox/radeox-1.0_beta2-r1.ebuild,v 1.1 2007/01/12 12:39:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/radeox/radeox-1.0_beta2-r1.ebuild,v 1.2 2007/07/04 22:24:44 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Radeox Wiki render engine"
 HOMEPAGE="http://www.radeox.org"
-SRC_URI="ftp://snipsnap.org/radeox/${PN}-1.0-BETA-2-src.tgz"
+MY_PV="${PV/_beta/-BETA-}"
+MY_P="${PN}-${MY_PV}"
+SRC_URI="ftp://snipsnap.org/radeox/${MY_P}-src.tgz"
 LICENSE="LGPL-2.1"
 SLOT="1"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc source"
+IUSE=""
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/commons-logging-1*"
 DEPEND=">=virtual/jdk-1.4
-	${RDEPEND}
-	dev-java/ant-core"
+	${RDEPEND}"
 
-S=${WORKDIR}/${PN}-1.0-BETA-2
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
@@ -29,7 +32,9 @@ src_unpack() {
 	rm -rf  src/org/radeox/example/ \
 		src/test/ src/org/radeox/test/
 
-	rm -v lib/*.jar
+	rm -v lib/*.jar || die
+	rm -v src/org/radeox/filter/*.class || die
+	rm -v src/org/radeox/*/*/*.class || die
 	cd lib
 	java-pkg_jar-from commons-logging
 }
