@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.57.ebuild,v 1.1 2007/06/12 16:04:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.57.ebuild,v 1.2 2007/07/04 06:38:24 genstef Exp $
 
 WANT_AUTOMAKE=1.6
 
@@ -22,7 +22,7 @@ SRC_URI="cjk? ( ftp://ftp.gyve.org/pub/gs-cjk/adobe-cmaps-200406.tar.gz
 LICENSE="GPL-2 CPL-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~sh ~x86 ~x86-fbsd"
-IUSE="X bindist cups cjk djvu emacs gtk jpeg2k"
+IUSE="X bindist cups cjk djvu gtk jpeg2k"
 
 DEP="virtual/libc
 	>=media-libs/jpeg-6b
@@ -155,7 +155,6 @@ src_install() {
 
 	rm -fr "${D}"/usr/share/doc/${PF}/html/{README,PUBLIC}
 	dodoc doc/README
-	use emacs && elisp-site-file-install doc/gsdoc.el
 
 	cd ${S}/ijs
 	emake DESTDIR="${D}" install || die "emake ijs install failed"

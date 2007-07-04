@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.10 2007/06/12 16:04:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.11 2007/07/04 06:38:24 genstef Exp $
+
+  04 Jul 2007; Stefan Schweizer <genstef@gentoo.org>
+  ghostscript-gpl-8.54.ebuild, ghostscript-gpl-8.57.ebuild:
+  Drop emacs support thanks opfer in bug 184167
 
 *ghostscript-gpl-8.57 (12 Jun 2007)
 
