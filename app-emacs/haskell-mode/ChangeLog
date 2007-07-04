@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/haskell-mode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.24 2007/04/25 06:19:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.25 2007/07/04 23:32:02 opfer Exp $
+
+  04 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  haskell-mode-2.3.ebuild:
+  removed pkg_postinst(); relocated IUSE
 
   25 Apr 2007; Christian Faulhammer <opfer@gentoo.org>
   -haskell-mode-1.44-r1.ebuild, -haskell-mode-1.45.ebuild,
