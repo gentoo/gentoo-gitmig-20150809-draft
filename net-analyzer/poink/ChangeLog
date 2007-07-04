@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/poink
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/poink/ChangeLog,v 1.6 2007/07/03 12:36:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/poink/ChangeLog,v 1.7 2007/07/04 17:50:56 angelos Exp $
+
+  04 Jul 2007; Christoph Mende <angelos@gentoo.org> poink-2.03.ebuild:
+  Stable on amd64 wrt bug #181591
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org> poink-2.03.ebuild:
   stable x86, bug 181591
