@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythoncard/pythoncard-0.8.2.ebuild,v 1.1 2006/12/29 16:50:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythoncard/pythoncard-0.8.2.ebuild,v 1.2 2007/07/04 21:19:23 hawking Exp $
 
 inherit distutils
 
@@ -19,8 +19,6 @@ DEPEND=">=dev-python/wxpython-2.6"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
-
-mydoc="README.txt README_StyleEditor.txt"
 
 src_install() {
 	distutils_src_install
