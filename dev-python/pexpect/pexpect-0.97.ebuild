@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/pexpect-0.97.ebuild,v 1.10 2005/01/09 06:19:23 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/pexpect-0.97.ebuild,v 1.11 2007/07/04 20:46:00 hawking Exp $
 
 inherit distutils
 
@@ -12,5 +12,3 @@ LICENSE="PYTHON"
 SLOT="0"
 KEYWORDS="x86 ~ppc alpha sparc s390 ~amd64"
 DEPEND="dev-lang/python"
-
-mydoc="README.txt"
