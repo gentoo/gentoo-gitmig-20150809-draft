@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.3.0.58.ebuild,v 1.3 2007/07/02 15:15:06 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.3.0.58.ebuild,v 1.4 2007/07/04 00:58:27 josejx Exp $
 
 inherit eutils versionator
 
@@ -23,7 +23,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/qt4.patch
-	epatch ${FILESDIR}/${P}-mp3transcode.patch
 }
 
 src_compile() {
