@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.0.9.ebuild,v 1.3 2007/07/03 19:21:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.0.9.ebuild,v 1.4 2007/07/04 17:53:24 angelos Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/bfilter/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 sparc x86"
+KEYWORDS="amd64 sparc x86"
 IUSE="X debug"
 
 RDEPEND="sys-libs/zlib
