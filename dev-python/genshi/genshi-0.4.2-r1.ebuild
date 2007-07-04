@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.4.2.ebuild,v 1.1 2007/06/21 05:50:36 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.4.2-r1.ebuild,v 1.1 2007/07/04 15:54:36 pythonhead Exp $
 
 NEED_PYTHON=2.3
 
@@ -23,14 +23,6 @@ RDEPEND=">=dev-python/setuptools-0.6_rc3"
 S="${WORKDIR}/${MY_P}"
 DOCS="INSTALL.txt UPGRADE.txt"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	sed -i \
-		-e '/extras_require/, /},/d' \
-		setup.py || die "sed failed"
-}
 
 src_install() {
 	distutils_src_install
