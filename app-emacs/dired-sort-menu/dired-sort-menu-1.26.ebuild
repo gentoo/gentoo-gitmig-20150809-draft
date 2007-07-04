@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dired-sort-menu/dired-sort-menu-1.26.ebuild,v 1.1 2006/05/19 08:53:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dired-sort-menu/dired-sort-menu-1.26.ebuild,v 1.2 2007/07/04 23:33:56 opfer Exp $
 
 inherit elisp
 
@@ -13,8 +13,3 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 SITEFILE=50dired-sort-menu-gentoo.el
-
-src_install() {
-	elisp-install ${PN} *.{el,elc}
-	elisp-site-file-install ${FILESDIR}/${SITEFILE}
-}

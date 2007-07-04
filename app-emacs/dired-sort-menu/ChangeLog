@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/dired-sort-menu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dired-sort-menu/ChangeLog,v 1.2 2007/02/21 21:29:49 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dired-sort-menu/ChangeLog,v 1.3 2007/07/04 23:33:56 opfer Exp $
+
+  04 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  dired-sort-menu-1.26.ebuild:
+  removed src_install()
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
