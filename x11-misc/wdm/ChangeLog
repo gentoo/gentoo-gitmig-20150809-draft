@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wdm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.28 2007/07/02 17:02:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.29 2007/07/04 18:11:32 angelos Exp $
+
+  04 Jul 2007; Christoph Mende <angelos@gentoo.org> wdm-1.28-r1.ebuild:
+  Stable on amd64 wrt bug #183961
 
   02 Jul 2007; Raúl Porcel <armin76@gentoo.org> wdm-1.28-r1.ebuild:
   alpha/x86 stable wrt #183961
