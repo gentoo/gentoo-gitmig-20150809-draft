@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.5.ebuild,v 1.14 2007/06/24 20:23:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.5.ebuild,v 1.15 2007/07/04 20:05:58 hawking Exp $
 
 inherit distutils eutils multilib
 
@@ -41,12 +41,12 @@ src_compile() {
 
 src_install() {
 
-	local mydoc="CHANGES* CONTENTS"
+	local DOCS="CHANGES* CONTENTS"
 	distutils_src_install
 
 	if use scanner ; then
 		cd ${S}/Sane
-		local mydoc="CHANGES *"
+		local DOCS="CHANGES sanedoc.txt"
 		docinto "sane"
 		distutils_src_install
 		cd ${S}
