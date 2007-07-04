@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/pyprotocols-1.0_pre2082.ebuild,v 1.1 2007/02/28 00:18:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/pyprotocols-1.0_pre2082.ebuild,v 1.2 2007/07/04 18:52:29 pythonhead Exp $
 
 NEED_PYTHON=2.4
 
@@ -31,7 +31,5 @@ src_unpack() {
 	cd "${S}"
 	sed -i \
 		-e '/ez_setup/d' \
-		-e '/install_requires = \[.*\],/d' \
-		-e '/install_requires/, /],/d' \
 		setup.py || die "sed failed"
 }
