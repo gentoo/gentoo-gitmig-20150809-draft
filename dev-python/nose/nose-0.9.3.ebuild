@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.9.3.ebuild,v 1.1 2007/04/21 23:58:57 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.9.3.ebuild,v 1.2 2007/07/04 20:53:20 lucass Exp $
 
 NEED_PYTHON=2.2
 
@@ -18,14 +18,6 @@ IUSE="doc examples"
 RDEPEND="dev-python/setuptools"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/docutils )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e '/ez_setup/d' \
-		setup.py || die "sed failed"
-}
 
 src_compile() {
 	distutils_src_compile
