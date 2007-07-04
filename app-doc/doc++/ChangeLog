@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doc++
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.22 2007/07/03 15:18:32 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.23 2007/07/04 17:46:15 angelos Exp $
+
+  04 Jul 2007; Christoph Mende <angelos@gentoo.org> doc++-3.4.10-r2.ebuild:
+  Stable on amd64 wrt bug #169429
 
 *doc++-3.4.10-r2 (03 Jul 2007)
 
