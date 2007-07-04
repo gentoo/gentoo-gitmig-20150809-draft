@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/python-biggles-1.6.3.ebuild,v 1.9 2004/06/25 01:44:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/python-biggles-1.6.3.ebuild,v 1.10 2007/07/04 21:08:32 hawking Exp $
 
 inherit distutils
 
@@ -16,4 +16,4 @@ SLOT="0"
 KEYWORDS="x86"
 LICENSE="GPL-2"
 
-mydoc="examples/*"
+DOCS="examples/*"
