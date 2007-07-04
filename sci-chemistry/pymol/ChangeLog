@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.33 2007/07/04 23:56:14 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.34 2007/07/04 23:57:46 je_fro Exp $
+
+  04 Jul 2007; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
+  Updating Manifest.
 
   04 Jul 2007; Jeff Gardner <je_fro@gentoo.org>
   -files/pymol-0.99_rc6-data-path.patch, -pymol-0.99_rc6-r2.ebuild:
