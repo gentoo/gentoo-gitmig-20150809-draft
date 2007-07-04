@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.95 2007/01/05 16:04:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.96 2007/07/04 19:06:19 ulm Exp $
+
+*autoconf-2.61-r1 (04 Jul 2007)
+
+  04 Jul 2007; Ulrich Mueller <ulm@gentoo.org> +autoconf-2.61-r1.ebuild:
+  Split off Emacs support to package app-emacs/autoconf-mode, bug #184196.
 
   05 Jan 2007; Jeroen Roovers <jer@gentoo.org> autoconf-2.61.ebuild:
   Stable for HPPA (bug #159416).
