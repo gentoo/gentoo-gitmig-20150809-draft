@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-w3m
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.50 2007/07/03 11:39:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.51 2007/07/04 20:58:30 gustavoz Exp $
+
+  04 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  emacs-w3m-1.4.4-r2.ebuild:
+  Stable on sparc wrt #184059
 
   03 Jul 2007; Raúl Porcel <armin76@gentoo.org> emacs-w3m-1.4.4-r2.ebuild:
   alpha stable wrt #184059
