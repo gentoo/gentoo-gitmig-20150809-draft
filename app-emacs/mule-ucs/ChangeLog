@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/mule-ucs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/ChangeLog,v 1.6 2007/02/08 14:33:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/ChangeLog,v 1.7 2007/07/04 23:15:28 opfer Exp $
+
+  04 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  mule-ucs-0.85_rc3.ebuild:
+  reordered KEYWORDS; added some die comments and quotes
 
   08 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   -mule-ucs-0.84-r1.ebuild:
