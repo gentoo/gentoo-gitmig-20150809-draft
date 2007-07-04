@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-lzo/python-lzo-1.08.ebuild,v 1.1 2007/04/14 01:27:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-lzo/python-lzo-1.08.ebuild,v 1.2 2007/07/04 21:43:17 hawking Exp $
 
 inherit eutils distutils
 
@@ -20,9 +20,4 @@ src_unpack() {
 	if has_version ">=dev-libs/lzo-2"; then
 		epatch "${FILESDIR}"/lzo2compat.patch
 	fi
-}
-
-src_install() {
-	mydoc="NEWS PKG-INFO README"
-	distutils_src_install
 }
