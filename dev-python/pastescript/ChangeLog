@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pastescript
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/ChangeLog,v 1.1 2007/02/27 23:46:25 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/ChangeLog,v 1.2 2007/07/04 18:15:28 pythonhead Exp $
+
+  04 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> pastescript-1.1.ebuild:
+  Removed setuptools sed. bug# 184039
 
   06 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> pastescript-1.1.ebuild:
   Fixed the sed for killing the install_requires, extra_requires is needed for
