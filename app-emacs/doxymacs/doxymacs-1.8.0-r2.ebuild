@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/doxymacs/doxymacs-1.8.0.ebuild,v 1.2 2007/07/04 09:29:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/doxymacs/doxymacs-1.8.0-r2.ebuild,v 1.1 2007/07/04 17:12:32 ulm Exp $
 
 NEED_EMACS=22
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND=">=dev-libs/libxml2-2.6.13"
 RDEPEND="${DEPEND}"
 
-SITEFILE="50doxymacs-gentoo.el"
+SITEFILE=50${PN}-gentoo.el
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 src_compile() {
@@ -28,7 +28,6 @@ src_compile() {
 		|| die "econf failed"
 
 	emake || die "emake failed"
-	elisp-make-autoload-file ${PN}-autoloads.el lisp/
 }
 
 src_install() {
@@ -39,15 +38,7 @@ src_install() {
 		install \
 		|| die "emake install failed"
 
-	elisp-install ${PN} ${PN}-autoloads.el
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
 	dodoc ${DOCS} || die "dodoc failed"
-}
-
-pkg_postinst() {
-	elisp-site-regen
-	elog "doxymacs is loaded for all C modes"
-	elog "if you need it in other situations, please add (require 'doxmacs)"
-	elog "to your ~/.emacs file"
 }
