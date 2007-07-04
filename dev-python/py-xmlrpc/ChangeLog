@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/py-xmlrpc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/ChangeLog,v 1.20 2007/02/22 00:33:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/ChangeLog,v 1.21 2007/07/04 20:53:27 hawking Exp $
+
+  04 Jul 2007; Ali Polatel <hawking@gentoo.org> py-xmlrpc-0.8.8.2.ebuild,
+  py-xmlrpc-0.8.8.3.ebuild:
+  Removed redundant mydoc
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
