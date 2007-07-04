@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ruledispatch/ruledispatch-0.5_pre2115.ebuild,v 1.1 2007/02/28 00:19:35 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ruledispatch/ruledispatch-0.5_pre2115.ebuild,v 1.2 2007/07/04 20:29:43 pythonhead Exp $
 
 NEED_PYTHON=2.4
 
@@ -27,15 +27,6 @@ S=${WORKDIR}/${MY_P}
 
 PYTHON_MODNAME="dispatch"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e '/ez_setup/d' \
-		-e '/install_requires = \[.*\],/d' \
-		-e '/install_requires/, /],/d' \
-		setup.py || die "sed failed"
-}
 
 src_test() {
 	PYTHONPATH=./src/ "${python}" setup.py test || die "tests failed"
