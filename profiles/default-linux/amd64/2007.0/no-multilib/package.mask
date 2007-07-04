@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2007.0/no-multilib/package.mask,v 1.10 2007/07/04 20:21:42 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2007.0/no-multilib/package.mask,v 1.11 2007/07/04 20:35:29 welp Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -194,6 +194,4 @@ x11-misc/qcomicbook
 
 # AMD64 Team; <amd64@gentoo.org>
 # grub is not available on no-multilib-profiles; use sys-boot/grub-static
-# grub-splashes needs grub, grouping 'em together
 sys-boot/grub
-x11-themes/grub-splashes
