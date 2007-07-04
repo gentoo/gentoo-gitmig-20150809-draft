@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/limit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/ChangeLog,v 1.20 2007/05/15 14:47:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/ChangeLog,v 1.21 2007/07/04 23:01:17 opfer Exp $
+
+  04 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  limit-1.14.9_pre20041001.ebuild:
+  adjust DESCRIPTION; manual make to emake; some die comments added; some
+  quotes added
 
   15 May 2007; Ulrich Mueller <ulm@gentoo.org>
   limit-1.14.9_pre20041001.ebuild:
