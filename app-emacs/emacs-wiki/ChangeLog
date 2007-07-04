@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-wiki
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/ChangeLog,v 1.16 2007/03/07 09:39:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/ChangeLog,v 1.17 2007/07/04 22:49:03 opfer Exp $
+
+  04 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  emacs-wiki-2.72.ebuild:
+  added some quotes; added die comments
 
   07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50emacs-wiki-gentoo.el:

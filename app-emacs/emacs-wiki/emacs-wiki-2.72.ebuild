@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/emacs-wiki-2.72.ebuild,v 1.2 2007/06/26 01:35:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/emacs-wiki-2.72.ebuild,v 1.3 2007/07/04 22:49:03 opfer Exp $
 
 inherit elisp
 
@@ -26,17 +26,17 @@ src_unpack() {
 	unpack ${A}
 	# These will be made part of the emacs-wiki installation until
 	# they are packaged separately
-	mv ${S}/contrib/{update-remote,cgi}.el ${S}/
+	mv "${S}"/contrib/{update-remote,cgi}.el "${S}"/
 }
 
 src_compile() {
-	elisp-comp *.el	|| die
-	makeinfo emacs-wiki.texi || die
+	elisp-comp *.el	|| die "elisp-comp failed"
+	makeinfo emacs-wiki.texi || die "makeinfo failed"
 }
 
 src_install() {
 	elisp-install ${PN} *.{el,elc}
-	elisp-site-file-install ${FILESDIR}/${SITEFILE}
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	doinfo *.info*
 	dodoc ChangeLog*
 	docinto examples
