@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.9 2007/07/03 22:49:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.10 2007/07/04 08:15:48 aballier Exp $
+
+  04 Jul 2007; Alexis Ballier <aballier@gentoo.org> lash-0.5.3.ebuild:
+  alsa is optional
 
   03 Jul 2007; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   move to proaudio herd
