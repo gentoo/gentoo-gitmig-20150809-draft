@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.6.1-r1.ebuild,v 1.5 2006/07/28 12:04:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.6.1-r1.ebuild,v 1.6 2007/07/04 20:27:04 lucass Exp $
 
 inherit distutils eutils
 
@@ -18,11 +18,12 @@ RDEPEND=">=dev-lang/python-2.2
 		sqlite? ( <dev-python/pysqlite-2.0 )
 		firebird? ( >=dev-python/kinterbasdb-3.0.2 )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
-	unpack ${A} || die "Failed to unpack ${A}"
-	cd ${S} || die "Failed to cd to ${S}"
+	unpack ${A}
+	cd "${S}"
+
 	#Add array type for Subway:
 	epatch ${FILESDIR}/converters-${PV}-gentoo.diff
 }
