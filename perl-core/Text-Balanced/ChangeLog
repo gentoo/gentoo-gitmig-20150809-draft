@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Text-Balanced
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.22 2007/05/11 02:43:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.23 2007/07/04 19:34:58 armin76 Exp $
+
+  04 Jul 2007; Raúl Porcel <armin76@gentoo.org> Text-Balanced-2.0.0.ebuild:
+  alpha/ia64/x86 stable
 
   11 May 2007; Joshua Kinard <kumba@gentoo.org> Text-Balanced-2.0.0.ebuild:
   Stable on mips.
