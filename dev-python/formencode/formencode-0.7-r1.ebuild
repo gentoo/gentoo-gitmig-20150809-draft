@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-0.7.ebuild,v 1.3 2007/04/13 01:17:56 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-0.7-r1.ebuild,v 1.1 2007/07/04 17:50:20 pythonhead Exp $
 
 # TODO: Add pudge support via "doc" flag
 #       currently broken with 0.6 and 0.7 releases
@@ -25,16 +25,6 @@ RDEPEND="dev-python/setuptools"
 
 PYTHON_MODNAME=$MY_PN
 S="${WORKDIR}/${MY_P}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	sed -i \
-		-e '/use_setuptools/d' \
-		-e '/extras_require/d' \
-		setup.py || die "sed failed"
-}
 
 src_install() {
 	distutils_src_install
