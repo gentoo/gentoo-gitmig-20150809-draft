@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bicyclerepair
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.15 2007/06/25 07:21:06 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.16 2007/07/04 19:16:33 hawking Exp $
+
+  04 Jul 2007; Ali Polatel <hawking@gentoo.org> bicyclerepair-0.7.1.ebuild,
+  bicyclerepair-0.7.1-r1.ebuild, bicyclerepair-0.9.ebuild:
+  use DOCS, mydoc is deprecated
 
   25 Jun 2007; Ali Polatel <hawking@gentoo.org>
   bicyclerepair-0.7.1-r1.ebuild, bicyclerepair-0.9.ebuild:
