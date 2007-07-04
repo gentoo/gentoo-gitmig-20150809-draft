@@ -151,9 +151,9 @@ diff -Naur sysinfo-0.1.0a.orig/sysinfoosd.c sysinfo-0.1.0a/sysinfoosd.c
  	// CPU free
  	sprintf(cTemp, tr("CPU free:"));
 +#if VDRVERSNUM >=10503
-+	osd->DrawText(15, iTop+40, cTemp, pal[3],pal[1],cFont::GetFont(fontOsd));
++	osd->DrawText(15, iTop+70, cTemp, pal[3],pal[1],cFont::GetFont(fontOsd));
 +	asprintf(&cTmp, "%d%%", 100-iPerCentCpu);
-+	osd->DrawText(215, iTop+40, cTmp, pal[3],pal[1],cFont::GetFont(fontOsd), 85, 0, taRight);
++	osd->DrawText(215, iTop+70, cTmp, pal[3],pal[1],cFont::GetFont(fontOsd), 85, 0, taRight);
 +#else
  	osd->DrawText(15, iTop+70, cTemp, pal[3],pal[1],font);
  	asprintf(&cTmp, "%d%%", 100-iPerCentCpu);
