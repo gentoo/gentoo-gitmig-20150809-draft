@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7442 2007/07/03 15:55:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7443 2007/07/04 15:35:48 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (04 Jul 2007)
+# For treecleaners, bug 182937. Replaced by texinfo.
+# Upstream is gone and it breaks with Python 2.5.
+# Masked for removal in 60 days.
+app-text/yodl
 
 # Samuli Suominen <drac@gentoo.org> (02 Jul 2007)
 # Replaced by glipper, klipper, xclipboard or xfce4-clipman.
