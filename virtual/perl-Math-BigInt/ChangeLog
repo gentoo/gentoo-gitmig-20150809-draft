@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Math-BigInt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt/ChangeLog,v 1.14 2007/06/09 11:42:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt/ChangeLog,v 1.15 2007/07/04 18:19:55 armin76 Exp $
+
+  04 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  perl-Math-BigInt-1.86.ebuild:
+  Readd missing keywords, since the dep was already keyworded
 
 *perl-Math-BigInt-1.86 (09 Jun 2007)
 
