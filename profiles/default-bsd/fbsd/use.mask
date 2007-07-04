@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.37 2007/06/27 10:31:42 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.38 2007/07/04 21:32:22 uberlord Exp $
 
 # Beagle needs these patches #176668, 176670.
 beagle
@@ -34,13 +34,6 @@ lua
 
 # This does not build on FreeBSD, unless anybody wants to fix it, use opie
 skey
-
-# Diego Pettenò <flameeyes@gentoo.org> (6 June 2007)
-# xulrunner does not work correctly with libiconv, and
-# fixing it is non-trivial; plus upstream doesn't seem to
-# have a bugzilla product for this, so mask it in the mean
-# time.
-xulrunner
 
 # To be tested
 meanwhile
