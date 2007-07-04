@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.13 2007/06/26 01:43:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.14 2007/07/04 06:24:51 genstef Exp $
 
 inherit flag-o-matic eutils toolchain-funcs libtool
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/espgs/espgs-${PV}-source.tar.bz2
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
-IUSE="X cups cjk emacs gtk"
+IUSE="X cups cjk gtk"
 
 DEP="virtual/libc
 	>=media-libs/jpeg-6b
@@ -141,11 +141,6 @@ src_install() {
 	rm -fr ${D}/usr/share/ghostscript/7.07/doc || die
 	dodoc doc/README doc/COPYING doc/COPYING.LGPL
 	dohtml doc/*.html doc/*.htm
-
-	if use emacs; then
-		insinto /usr/share/emacs/site-lisp
-		doins doc/gsdoc.el
-	fi
 
 	if use cjk ; then
 		dodir /usr/share/ghostscript/Resource
