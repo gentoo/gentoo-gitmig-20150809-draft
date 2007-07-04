@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/pylons-0.9.4.1.ebuild,v 1.1 2007/02/28 00:08:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/pylons-0.9.4.1-r1.ebuild,v 1.1 2007/07/04 18:39:30 pythonhead Exp $
 
 NEED_PYTHON=2.3
 
@@ -46,9 +46,6 @@ src_unpack() {
 		setup.cfg || die "sed failed"
 	sed -i \
 		-e '/use_setuptools/d' \
-		-e '/install_requires=\[.*\],/d' \
-		-e '/install_requires/, /],/d' \
-		-e '/extras_require/, /},/d' \
 		setup.py || die "sed failed"
 }
 

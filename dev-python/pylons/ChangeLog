@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pylons
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/ChangeLog,v 1.1 2007/02/28 00:08:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/ChangeLog,v 1.2 2007/07/04 18:39:30 pythonhead Exp $
+
+*pylons-0.9.4.1-r1 (04 Jul 2007)
+
+  04 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> -pylons-0.9.4.1.ebuild,
+  +pylons-0.9.4.1-r1.ebuild:
+  Removed setuptools sed. bug# 184039
 
   06 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> +pylons-0.9.4.1.ebuild,
   +metadata.xml:
