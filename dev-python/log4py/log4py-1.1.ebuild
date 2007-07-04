@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/log4py-1.1.ebuild,v 1.9 2004/06/25 01:33:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/log4py-1.1.ebuild,v 1.10 2007/07/04 20:18:21 hawking Exp $
 
 inherit distutils
 
@@ -18,7 +18,7 @@ DEPEND="virtual/python"
 RDEPEND=""
 
 src_install() {
-	mydoc="doc/*.* database/* log4py-test.py"
+	DOCS="doc/*.* database/* log4py-test.py"
 	distutils_src_install
 	dohtml -r doc/html/*
 
