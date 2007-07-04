@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/autoconf-mode
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.1 2007/07/04 18:54:00 ulm Exp $
+
+*autoconf-mode-2.61 (04 Jul 2007)
+
+  04 Jul 2007; Ulrich Mueller <ulm@gentoo.org>
+  +files/50autoconf-mode-gentoo.el, +metadata.xml,
+  +autoconf-mode-2.61.ebuild:
+  Initial import. Split off Emacs support from sys-devel/autoconf, bug #184196.
+
