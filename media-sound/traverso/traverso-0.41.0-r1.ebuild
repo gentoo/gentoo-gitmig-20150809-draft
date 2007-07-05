@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.41.0.ebuild,v 1.1 2007/07/05 18:19:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.41.0-r1.ebuild,v 1.1 2007/07/05 21:32:08 aballier Exp $
 
 inherit eutils qt4 toolchain-funcs
 
 DESCRIPTION="Professional Audio Tools for GNU/Linux"
 HOMEPAGE="http://traverso-daw.org/"
-SRC_URI="http://traverso-daw.org/download/releases/current/${P}.tar.gz"
+SRC_URI="http://traverso-daw.org/download/gentoo/${P}-1.tar.gz"
 
 IUSE="alsa jack lv2 opengl sse"
 SLOT="0"
@@ -31,6 +31,8 @@ pkg_setup() {
 		die "Enabling opengl for traverso requires qt4 to be built with opengl support"
 	fi
 }
+
+S="${WORKDIR}/${P}-1"
 
 src_unpack() {
 	unpack ${A}
