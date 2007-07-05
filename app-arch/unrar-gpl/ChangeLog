@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar-gpl/ChangeLog,v 1.4 2007/02/21 20:03:02 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar-gpl/ChangeLog,v 1.5 2007/07/05 00:51:45 angelos Exp $
+
+  05 Jul 2007; Christoph Mende <angelos@gentoo.org> unrar-gpl-0.0.1.ebuild:
+  Added ~amd64
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
