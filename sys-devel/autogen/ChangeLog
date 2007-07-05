@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.28 2007/05/30 13:21:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.29 2007/07/05 23:04:15 angelos Exp $
+
+  05 Jul 2007; Christoph Mende <angelos@gentoo.org> autogen-5.8.8.ebuild:
+  Stable on amd64 wrt bug #183999
 
   30 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> autogen-5.9.ebuild:
   Stable on sparc
