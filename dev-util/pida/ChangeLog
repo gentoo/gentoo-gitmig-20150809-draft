@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pida
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/ChangeLog,v 1.9 2007/07/05 17:46:11 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/ChangeLog,v 1.10 2007/07/05 18:01:30 pythonhead Exp $
+
+  05 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> pida-0.5.0.ebuild:
+  Added RDEPEND for bicylerepair. Thanks Steve Long <slong@rathaus.eclipse.co.uk>
 
 *pida-0.5.0 (05 Jul 2007)
 
