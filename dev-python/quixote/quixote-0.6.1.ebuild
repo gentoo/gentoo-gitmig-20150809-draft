@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/quixote-0.6.1.ebuild,v 1.6 2005/02/07 15:46:14 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/quixote-0.6.1.ebuild,v 1.7 2007/07/05 01:22:01 hawking Exp $
 
 inherit distutils
 
@@ -18,7 +18,7 @@ DEPEND=">=dev-lang/python-2.2"
 S=${WORKDIR}/${PN0}-${PV}
 
 src_install() {
-	mydoc="ACKS CHANGES LICENSE MANIFEST.in README TODO"
+	DOCS="ACKS CHANGES"
 	distutils_src_install
 	dodoc doc/*.txt
 	dohtml doc/*.html
@@ -26,4 +26,3 @@ src_install() {
 	insinto /usr/share/${PN}/demo
 	doins demo/*
 }
-
