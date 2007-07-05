@@ -1,14 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20070628.ebuild,v 1.1 2007/07/02 11:06:58 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20070628.ebuild,v 1.2 2007/07/05 10:05:24 taviso Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 RELEASE="2007-06-28"
+LOCALE_RELEASE="2007-03-28"
+INIT_RELEASE="${RELEASE}"
+
 DESCRIPTION="The Original Korn Shell, 1993 revision (ksh93)"
 HOMEPAGE="http://www.kornshell.com/"
-SRC_URI="nls? ( mirror://gentoo/ast-ksh-locale.2007-03-28.tgz )
-	mirror://gentoo/INIT.${RELEASE}.tgz
+SRC_URI="nls? ( mirror://gentoo/ast-ksh-locale.${LOCALE_RELEASE}.tgz )
+	mirror://gentoo/INIT.${INIT_RELEASE}.tgz
 	mirror://gentoo/ast-ksh.${RELEASE}.tgz"
 
 LICENSE="CPL-1.0"
@@ -28,11 +31,11 @@ src_unpack() {
 	cp ${DISTDIR}/ast-ksh.${RELEASE}.tgz ${S}/lib/package/tgz/ || die
 
 	if use nls; then
-		cp ${DISTDIR}/ast-ksh-locale.${RELEASE}.tgz ${S}/lib/package/tgz/ || die
+		cp ${DISTDIR}/ast-ksh-locale.${LOCALE_RELEASE}.tgz ${S}/lib/package/tgz/ || die
 	fi
 
 	# INIT provides the basic tools to start building.
-	unpack INIT.${RELEASE}.tgz
+	unpack INIT.${INIT_RELEASE}.tgz
 
 	# `package read` will unpack any tarballs put in place.
 	${S}/bin/package read || die

@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.30 2007/07/02 11:06:58 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.31 2007/07/05 10:05:23 taviso Exp $
+
+  05 Jul 2007; Tavis Ormandy <taviso@gentoo.org> ksh-93.20070628.ebuild:
+  sync releases correctly #184231
 
 *ksh-93.20070628 (02 Jul 2007)
 
