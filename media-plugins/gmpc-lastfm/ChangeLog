@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-lastfm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lastfm/ChangeLog,v 1.4 2007/07/03 12:47:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lastfm/ChangeLog,v 1.5 2007/07/05 00:05:19 ticho Exp $
+
+  05 Jul 2007; Andrej Kacian <ticho@gentoo.org> gmpc-lastfm-0.15.0.ebuild:
+  Add check for correct USE flag for x11-libs/gtk+-2.
 
   03 Jul 2007; Christoph Mende <angelos@gentoo.org>
   gmpc-lastfm-0.15.0.ebuild:

@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lastfm/gmpc-lastfm-0.15.0.ebuild,v 1.3 2007/07/03 12:47:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lastfm/gmpc-lastfm-0.15.0.ebuild,v 1.4 2007/07/05 00:05:19 ticho Exp $
+
+inherit eutils
 
 DESCRIPTION="The last.fm plugin can fetch artist images, from last.fm. This plugin doesn't scrobble your music, use a dedicated client like mpdscribble for this."
 HOMEPAGE="http://sarine.nl/gmpc-plugins-lastfm"
@@ -13,6 +15,14 @@ IUSE=""
 
 DEPEND=">=media-sound/gmpc-${PV}
 		dev-libs/libxml2"
+
+pkg_setup() {
+	if ! built_with_use =x11-libs/gtk+-2* jpeg ; then
+		echo
+		eerror "x11-libs/gtk+-2 needs to be built with \"jpeg\" USE flag"
+		die "x11-libs/gtk+-2 needs to be built with \"jpeg\" USE flag"
+	fi
+}
 
 src_compile ()
 {
