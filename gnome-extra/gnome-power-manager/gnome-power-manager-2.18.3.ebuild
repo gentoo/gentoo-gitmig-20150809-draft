@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.18.3.ebuild,v 1.3 2007/06/22 21:38:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.18.3.ebuild,v 1.4 2007/07/05 16:42:28 uberlord Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gnome-power-manager/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.6.0
@@ -71,6 +71,9 @@ src_unpack() {
 		# parameter in configure.in.
 		sed -i -e 's:@HAVE_DOCBOOK2MAN_TRUE@.*::' ${S}/man/Makefile.in
 	fi
+
+	# glibc splits this out, whereas other libc's do not tend to
+	use elibc_glibc || sed -i -e 's/-lresolv//' configure
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.52 2007/06/22 21:38:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.53 2007/07/05 16:42:28 uberlord Exp $
+
+  05 Jul 2007; Roy Marples <uberlord@gentoo.org>
+  gnome-power-manager-2.18.3.ebuild:
+  Keyworded ~x86-fbsd.
 
   22 Jun 2007; Jeroen Roovers <jer@gentoo.org>
   gnome-power-manager-2.18.1.ebuild, gnome-power-manager-2.18.2.ebuild,
