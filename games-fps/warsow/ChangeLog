@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.6 2007/06/29 22:33:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.7 2007/07/05 15:57:37 nyhm Exp $
+
+*warsow-0.3.1-r1 (05 Jul 2007)
+
+  05 Jul 2007; Tristan Heaven <nyhm@gentoo.org> +warsow-0.3.1-r1.ebuild:
+  Install BattlEye, bug #184305
 
 *warsow-0.3.1 (29 Jun 2007)
 
