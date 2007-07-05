@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/alock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/ChangeLog,v 1.4 2007/04/27 20:29:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/ChangeLog,v 1.5 2007/07/05 17:42:14 hansmi Exp $
+
+*alock-60-r2 (05 Jul 2007)
+
+  05 Jul 2007; Michael Hanselmann <hansmi@gentoo.org> -alock-60.ebuild,
+  +alock-60-r2.ebuild:
+  New ebuild from Greg Fitzgerald in bug 184253. Adds --with-all parameter to
+  configure.
 
 *alock-60-r1 (27 Apr 2007)
 
