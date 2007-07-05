@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.2.ebuild,v 1.1 2007/06/30 22:11:39 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.2.ebuild,v 1.2 2007/07/05 16:17:18 uberlord Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gnome.org/projects/totem/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 
 # No 0.10.0 release for gst-plugins-pitdfdll yet
 # IUSE="win32codecs"
