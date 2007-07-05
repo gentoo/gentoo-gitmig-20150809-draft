@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-mhash
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/ChangeLog,v 1.6 2007/02/21 17:15:15 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/ChangeLog,v 1.7 2007/07/05 10:58:27 hawking Exp $
+
+  05 Jul 2007; Ali Polatel <hawking@gentoo.org> python-mhash-1.2.ebuild,
+  python-mhash-1.3.ebuild, python-mhash-1.4.ebuild:
+  use DOCS, mydocs is deprecated. removed default doc names from DOCS
 
   21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
   files/digest-python-mhash-1.2, files/digest-python-mhash-1.3,

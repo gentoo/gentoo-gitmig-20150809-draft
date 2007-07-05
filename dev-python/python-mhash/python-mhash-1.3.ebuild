@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/python-mhash-1.3.ebuild,v 1.1 2005/02/18 21:07:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/python-mhash-1.3.ebuild,v 1.2 2007/07/05 10:58:27 hawking Exp $
 
 inherit distutils
 
@@ -27,6 +27,6 @@ src_unpack() {
 }
 
 src_install() {
-	mydoc="AUTHORS LICENSE NEWS PKG-INFO README"
+	DOCS="AUTHORS"
 	distutils_src_install
 }
