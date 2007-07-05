@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/atop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.15 2007/07/04 21:33:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.16 2007/07/05 00:02:15 angelos Exp $
+
+  05 Jul 2007; Christoph Mende <angelos@gentoo.org> atop-1.19.ebuild:
+  Stable on amd64
 
   04 Jul 2007; Raúl Porcel <armin76@gentoo.org> atop-1.19.ebuild:
   x86 stable
