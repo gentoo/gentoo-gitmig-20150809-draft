@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.35 2007/07/05 20:17:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.36 2007/07/05 22:53:34 hawking Exp $
+
+  05 Jul 2007; Ali Polatel <hawking@gentoo.org> +files/pyzord_getopt.patch,
+  pyzor-0.4.0-r3.ebuild:
+  Added pyzord_getopt.patch for better command line handling.
 
   04 Jul 2007; Jeroen Roovers <jer@gentoo.org> pyzor-0.4.0-r3.ebuild:
   Stable for HPPA (bug #183892).

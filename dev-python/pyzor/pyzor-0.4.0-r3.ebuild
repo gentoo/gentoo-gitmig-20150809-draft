@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/pyzor-0.4.0-r3.ebuild,v 1.9 2007/07/05 20:17:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/pyzor-0.4.0-r3.ebuild,v 1.10 2007/07/05 22:53:34 hawking Exp $
 
 inherit distutils eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/debian_mbox.patch"
 	epatch "${FILESDIR}/handle_unknown_encodings.patch"
+	epatch "${FILESDIR}/pyzord_getopt.patch"
 	epatch "${FILESDIR}/unknown_type.patch"
 
 	# rfc822BodyCleanerTest doesn't work fine
