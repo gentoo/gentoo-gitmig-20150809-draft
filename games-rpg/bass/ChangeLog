@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/bass
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/ChangeLog,v 1.10 2007/05/21 22:57:54 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/ChangeLog,v 1.11 2007/07/05 20:02:21 corsair Exp $
+
+  05 Jul 2007; Markus Rothe <corsair@gentoo.org> bass-1.2-r1.ebuild:
+  Added ~ppc64; bug #183570
 
 *bass-1.2-r1 (21 May 2007)
 
