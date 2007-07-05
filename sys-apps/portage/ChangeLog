@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.404 2007/07/02 12:56:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.405 2007/07/05 14:57:37 ranger Exp $
+
+  05 Jul 2007; Brent Baude <ranger@gentoo.org> portage-2.1.2.9.ebuild:
+  Marking portage-2.1.2.9 ppc64 stable for bug 183728
 
   02 Jul 2007; Raúl Porcel <armin76@gentoo.org> portage-2.1.2.9.ebuild:
   alpha stable wrt #183728
