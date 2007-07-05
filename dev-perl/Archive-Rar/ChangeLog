@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Archive-Rar
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/ChangeLog,v 1.19 2007/04/14 15:44:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/ChangeLog,v 1.20 2007/07/05 14:55:08 mcummings Exp $
+
+  05 Jul 2007; Michael Cummings <mcummings@gentoo.org>
+  Archive-Rar-1.9.ebuild:
+  Archive-Rar (any version) depends on app-arch/rar to actually function - it
+  will build without, but won't work. Removing unsupportable keywords and
+  updating DEPENDs for 1.9
 
   14 Apr 2007; Michael Cummings <mcummings@gentoo.org>
   Archive-Rar-1.9.2.ebuild:
