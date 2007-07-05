@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/scheme48
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/ChangeLog,v 1.6 2007/01/20 06:35:36 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/ChangeLog,v 1.7 2007/07/05 23:35:03 ulm Exp $
+
+  05 Jul 2007; Ulrich Mueller <ulm@gentoo.org> scheme48-1.3-r1.ebuild,
+  scheme48-1.5.ebuild:
+  Add missing dependency on virtual/emacs.
 
   20 Jan 2007; Luis F. Araujo <araujo@gentoo.org> scheme48-1.3-r1.ebuild:
   Adding support for amd64

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.3-r1.ebuild,v 1.4 2007/01/20 06:35:36 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.3-r1.ebuild,v 1.5 2007/07/05 23:35:03 ulm Exp $
 
 inherit elisp-common multilib eutils flag-o-matic
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc emacs"
 
-DEPEND=""
-RDEPEND=""
+DEPEND="emacs? ( virtual/emacs )"
+RDEPEND="${DEPEND}"
 SITEFILE=50scheme48-gentoo.el
 
 src_unpack() {
