@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2908 2007/07/05 18:18:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2909 2007/07/05 18:29:52 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1826,18 +1826,18 @@ sys-cluster/ocfs:aio - Add aio support
 sys-cluster/openmpi:pbs - Add support for the Portable Batch System (PBS)
 sys-cluster/torque:server - Enable compilation of server
 sys-cluster/vzctl:logrotate - Enable logrotate file installation
-sys-devel/binutils-hppa64:multislot - !!!not appropriate for end users!!! Allow for multiple versions of binutils to be emerged at once for same CTARGET
+sys-devel/binutils-hppa64:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils-hppa64:multitarget - Adds support to binutils for cross compiling (does not work with gas)
-sys-devel/binutils-nios2:multislot - !!!not appropriate for end users!!! Allow for multiple versions of binutils to be emerged at once for same CTARGET
+sys-devel/binutils-nios2:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils-nios2:multitarget - Adds support to binutils for cross compiling (does not work with gas)
-sys-devel/binutils:multislot - !!!not appropriate for end users!!! Allow for multiple versions of binutils to be emerged at once for same CTARGET
+sys-devel/binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
-sys-devel/gcc-nios2:multislot - !!!not appropriate for end users!!! Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
+sys-devel/gcc-nios2:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/gcc:d - Enable support for the D programming language
 sys-devel/gcc:ip28 - Enable building a compiler capable of building a kernel for SGI Indigo2 Impact R10000 (IP28)
 sys-devel/gcc:ip32r10k - Enable building a compiler capable of building an experimental kernel for SGI O2 w/ R1x000 CPUs (IP32)
 sys-devel/gcc:mudflap - Add support for mudflap, a pointer use checking library
-sys-devel/gcc:multislot - !!!not appropriate for end users!!! Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
+sys-devel/gcc:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/gcc:n32 - Enable n32 ABI support on mips
 sys-devel/gcc:n64 - Enable n64 ABI support on mips
 sys-devel/gcc:nopie - Disable PIE support (NOT FOR GENERAL USE)
@@ -1846,7 +1846,7 @@ sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gcc:objc++ - Build support for the Objective C++ language
 sys-devel/gcc:objc-gc - Build support for the Objective C code language Garbage Collector
 sys-devel/gcc:openmp - Build support for the OpenMP (support parallel computing)
-sys-devel/kgcc64:multislot - !!!not appropriate for end users!!! Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
+sys-devel/kgcc64:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
 sys-freebsd/freebsd-lib:atm - Enable Asynchronous Transfer Mode protocol support
 sys-freebsd/freebsd-lib:gpib - Enable gpib support (TODO improve description)
