@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.127 2007/07/05 22:29:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.128 2007/07/05 23:06:54 angelos Exp $
+
+  05 Jul 2007; Christoph Mende <angelos@gentoo.org> doxygen-1.5.2.ebuild:
+  Stable on amd64 wrt bug #184044
 
   05 Jul 2007; Jeroen Roovers <jer@gentoo.org> doxygen-1.5.2.ebuild:
   Stable for HPPA (bug #184044).
