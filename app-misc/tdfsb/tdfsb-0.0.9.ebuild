@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/tdfsb-0.0.9.ebuild,v 1.1 2006/06/22 03:53:50 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/tdfsb-0.0.9.ebuild,v 1.2 2007/07/05 01:45:26 angelos Exp $
 
 IUSE=""
 
 DESCRIPTION="SDL based graphical file browser"
-HOMEPAGE="http://www.hgb-leipzig.de/~leander/TDFSB/"
+HOMEPAGE="http://www.determinate.net/webdata/seg/tdfsb.html"
 SRC_URI="http://www.determinate.net/webdata/data/${P}.tar.gz"
 
 SLOT="0"
