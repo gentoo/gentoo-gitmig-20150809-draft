@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.47 2007/07/04 02:34:24 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.48 2007/07/05 22:29:36 vapier Exp $
+
+  05 Jul 2007; Mike Frysinger <vapier@gentoo.org>
+  nvidia-drivers-1.0.8776-r1.ebuild, nvidia-drivers-1.0.9631-r1.ebuild,
+  nvidia-drivers-1.0.9746-r1.ebuild, nvidia-drivers-1.0.9755-r1.ebuild,
+  nvidia-drivers-100.14.09.ebuild, nvidia-drivers-100.14.11.ebuild:
+  If glibc does not have IUSE=nptl, assume it is enabled as newer versions
+  only support nptl.
 
 *nvidia-drivers-100.14.11 (04 Jul 2007)
 

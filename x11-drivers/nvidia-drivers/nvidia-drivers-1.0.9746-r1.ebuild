@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9746-r1.ebuild,v 1.3 2007/07/01 22:41:51 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9746-r1.ebuild,v 1.4 2007/07/05 22:29:36 vapier Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic
 
@@ -425,7 +425,7 @@ want_tls() {
 	[[ ${valid_chost} == "false" ]] && return 1
 
 	# If we've got nptl, we've got tls
-	built_with_use sys-libs/glibc nptl && return 0
+	built_with_use --missing true sys-libs/glibc nptl && return 0
 
 	# 2.3.5 turned off tls for linuxthreads glibc on i486 and i586
 	if use x86 && has_version '>=sys-libs/glibc-2.3.5' ; then
