@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.16 2007/06/18 18:04:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.17 2007/07/05 07:22:34 genstef Exp $
+
+*xmoto-0.3.1 (05 Jul 2007)
+
+  05 Jul 2007; Stefan Schweizer <genstef@gentoo.org> +xmoto-0.3.1.ebuild:
+  version bump thanks to Franz Fellner <fellner@gmx.de> in bug 184262
 
   18 Jun 2007; Stefan Schweizer <genstef@gentoo.org> xmoto-0.3.0.ebuild:
   Add missing sqlite-3 depend thanks to Marco Squarcina <lavish@gmail.com> and
