@@ -1,6 +1,14 @@
 # ChangeLog for xfce-extra/pynetworkmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/pynetworkmanager/ChangeLog,v 1.4 2007/07/03 18:55:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/pynetworkmanager/ChangeLog,v 1.5 2007/07/05 18:07:10 drac Exp $
+
+*pynetworkmanager-0.3-r1 (05 Jul 2007)
+
+  05 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/pynetworkmanager-0.3-gentoo-2.patch, -pynetworkmanager-0.3.ebuild,
+  +pynetworkmanager-0.3-r1.ebuild:
+  Patch to use python site-packages instead of installing .py[co] to
+  /usr/share and break.
 
 *pynetworkmanager-0.3 (03 Jul 2007)
 
