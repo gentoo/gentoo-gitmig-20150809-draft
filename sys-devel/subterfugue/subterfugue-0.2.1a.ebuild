@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/subterfugue/subterfugue-0.2.1a.ebuild,v 1.3 2006/11/18 22:33:01 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/subterfugue/subterfugue-0.2.1a.ebuild,v 1.4 2007/07/05 11:13:38 hawking Exp $
 
 inherit distutils eutils
 
@@ -40,7 +40,7 @@ src_compile() {
 
 src_install() {
 	# installs python extensions (*.so)
-	mydoc="GNU-entry INTERNALS"
+	DOCS="GNU-entry INTERNALS"
 	distutils_src_install
 
 	# installs python scripts (*.py?)
