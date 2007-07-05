@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Exception
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.45 2007/05/05 18:04:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.46 2007/07/05 14:41:02 tgall Exp $
+
+  05 Jul 2007; Tom Gall <tgall@gentoo.org> Test-Exception-0.25.ebuild:
+  stable on ppc64
 
   05 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   Test-Exception-0.25.ebuild:
