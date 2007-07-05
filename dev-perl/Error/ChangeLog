@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Error
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.48 2007/05/05 17:45:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.49 2007/07/05 21:48:27 armin76 Exp $
+
+  05 Jul 2007; Raúl Porcel <armin76@gentoo.org> Error-0.17.008.ebuild:
+  alpha stable
 
   05 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   Error-0.17.008.ebuild:
