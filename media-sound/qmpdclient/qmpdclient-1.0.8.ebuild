@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.8.ebuild,v 1.1 2007/07/04 21:59:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.0.8.ebuild,v 1.2 2007/07/05 18:40:44 ticho Exp $
 
 inherit eutils multilib qt4 toolchain-funcs
 
@@ -18,6 +18,9 @@ DEPEND="$(qt4_min_version 4.2)"
 src_unpack() {
 	unpack "${A}"
 	cd "${S}"
+
+	# Fix a crasher for am64 and possibly others. Bug #183593.
+	epatch "${FILESDIR}"/${PV}-argc-ref-fix.patch
 
 	# Fix the install path
 	sed -i -e "s:PREFIX = /usr/local:PREFIX = /usr:" qmpdclient.pro \
