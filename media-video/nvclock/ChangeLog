@@ -1,6 +1,9 @@
 # ChangeLog for media-video/nvclock
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.21 2007/07/05 11:10:44 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.22 2007/07/05 11:40:16 armin76 Exp $
+
+  05 Jul 2007; Raúl Porcel <armin76@gentoo.org> nvclock-0.7-r2.ebuild:
+  x86 stable wrt security #184071
 
 *nvclock-0.7-r2 (05 Jul 2007)
 
