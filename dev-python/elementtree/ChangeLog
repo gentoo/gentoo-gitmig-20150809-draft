@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/elementtree
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.25 2007/07/05 06:45:42 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.26 2007/07/05 09:04:24 hawking Exp $
+
+  05 Jul 2007; Ali Polatel <hawking@gentoo.org> Manifest:
+  Removed 1.2.6-r1
 
 *elementtree-1.2.6-r1 (05 Jul 2007)
 
