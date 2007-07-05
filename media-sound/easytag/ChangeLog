@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.100 2007/06/05 11:20:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.101 2007/07/05 05:35:55 drac Exp $
+
+*easytag-2.1.1 (05 Jul 2007)
+
+  05 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  -files/easytag-2.1-strict-aliasing.patch, -easytag-2.1-r1.ebuild,
+  +easytag-2.1.1.ebuild:
+  Version bump.
 
   05 Jun 2007; Raúl Porcel <armin76@gentoo.org> -easytag-1.1.ebuild,
   easytag-2.0.ebuild:
