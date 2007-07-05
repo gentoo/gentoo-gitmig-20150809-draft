@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.290 2007/07/04 06:18:08 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.291 2007/07/05 10:05:35 peper Exp $
+
+  05 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  ruby-1.8.6_p36-r3.ebuild:
+  (QA) RESTRICT clean up.
 
 *ruby-1.8.6_p36-r3 (04 Jul 2007)
 
