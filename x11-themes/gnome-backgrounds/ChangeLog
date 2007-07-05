@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-backgrounds
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.74 2007/01/21 19:02:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.75 2007/07/05 16:03:38 uberlord Exp $
+
+  05 Jul 2007; Roy Marples <uberlord@gentoo.org>
+  gnome-backgrounds-2.16.2.ebuild:
+  Keyworded ~x86-fbsd.
 
   21 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   gnome-backgrounds-2.16.2.ebuild:
