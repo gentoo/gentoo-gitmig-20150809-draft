@@ -1,6 +1,12 @@
 # ChangeLog for media-video/nvclock
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.20 2007/05/15 13:56:23 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.21 2007/07/05 11:10:44 taviso Exp $
+
+*nvclock-0.7-r2 (05 Jul 2007)
+
+  05 Jul 2007; Tavis Ormandy <taviso@gentoo.org>
+  +files/nvclock-insecure-tmp.diff, +nvclock-0.7-r2.ebuild:
+  emergency bump by security team #184071 - ** do not assign me bugs **
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
