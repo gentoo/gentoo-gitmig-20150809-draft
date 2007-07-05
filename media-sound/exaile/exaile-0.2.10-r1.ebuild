@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10-r1.ebuild,v 1.2 2007/06/26 20:52:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10-r1.ebuild,v 1.3 2007/07/05 18:21:56 drac Exp $
 
 inherit eutils fdo-mime multilib python
 
@@ -80,13 +80,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize /usr/share/${PN}
+	python_mod_optimize "${ROOT}"/usr/share/${PN}
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/share/${PN}
+	python_mod_cleanup "${ROOT}"/usr/share/${PN}
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 }
