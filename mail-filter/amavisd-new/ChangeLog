@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.110 2007/06/18 16:03:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.111 2007/07/05 19:05:18 ticho Exp $
+
+*amavisd-new-2.5.2 (05 Jul 2007)
+
+  05 Jul 2007; Andrej Kacian <ticho@gentoo.org> +amavisd-new-2.5.2.ebuild:
+  Version bump, bug #183952.
 
 *amavisd-new-2.5.1 (18 Jun 2007)
 
