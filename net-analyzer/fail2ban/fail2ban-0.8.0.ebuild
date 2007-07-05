@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.0.ebuild,v 1.2 2007/06/18 12:34:52 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.0.ebuild,v 1.3 2007/07/05 22:49:55 falco Exp $
 
 inherit distutils
 
@@ -26,16 +26,18 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog
-	elog "Configuration files are now in /etc/fail2ban/"
-	elog "You probably have to manually update your configuration"
-	elog "files before restarting Fail2ban!"
-	elog
-	elog "Fail2ban is not installed under /usr/lib anymore. The"
-	elog "new location is under /usr/share."
-	elog
-	elog "If you are upgrading from version 0.6.x see:"
-	elog "http://www.fail2ban.org/wiki/index.php/HOWTO_Upgrade_from_0.6_to_0.8"
+	if has_version '<net-analyzer/fail2ban-0.7' ; then
+		elog
+		elog "Configuration files are now in /etc/fail2ban/"
+		elog "You probably have to manually update your configuration"
+		elog "files before restarting Fail2ban!"
+		elog
+		elog "Fail2ban is not installed under /usr/lib anymore. The"
+		elog "new location is under /usr/share."
+		elog
+		elog "You are upgrading from version 0.6.x, please see:"
+		elog "http://www.fail2ban.org/wiki/index.php/HOWTO_Upgrade_from_0.6_to_0.8"
+	fi
 }
 
 pkg_setup() {
