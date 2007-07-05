@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+<herd>Artwork</herd>
+	<maintainer>
+		<email>welp@gentoo.org</email>
+		<name>Peter Weller</name>
+		<description>Maintainer</description>
+	</maintainer>
+	<longdescription>
+A collection of grub themes provided and maintained by the Gentoo Artwork project
+	</longdescription>
+</pkgmetadata>

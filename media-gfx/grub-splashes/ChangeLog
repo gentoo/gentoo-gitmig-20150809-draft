@@ -1,0 +1,7 @@
+# ChangeLog for x11-themes/grub-splashes
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grub-splashes/ChangeLog,v 1.1 2007/07/05 05:05:40 welp Exp $
+
+  04 Jul 2007; Peter Weller <welp@gentoo.org> ChangeLog:
+  Initial import
+
