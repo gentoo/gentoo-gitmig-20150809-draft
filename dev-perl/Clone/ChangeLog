@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.40 2007/06/21 14:46:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.41 2007/07/05 14:21:02 armin76 Exp $
+
+  05 Jul 2007; Raúl Porcel <armin76@gentoo.org> Clone-0.23.ebuild:
+  alpha/ia64/x86 stable
 
   21 Jun 2007; Michael Cummings <mcummings@gentoo.org> Clone-0.23.ebuild:
   Marking sparc stable
