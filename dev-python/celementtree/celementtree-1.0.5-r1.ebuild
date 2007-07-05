@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/celementtree-1.0.5-r1.ebuild,v 1.1 2007/07/03 06:41:17 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/celementtree-1.0.5-r1.ebuild,v 1.2 2007/07/05 06:36:25 pythonhead Exp $
 
 inherit distutils eutils
 
@@ -22,8 +22,8 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	epatch "${FILESDIR}/${P}-use_system_expat.patch"
+	epatch "${FILESDIR}/${P}-setuptools.patch"
 }
 
 src_install() {

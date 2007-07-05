@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/celementtree
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.17 2007/07/03 07:25:16 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.18 2007/07/05 06:36:25 pythonhead Exp $
+
+  05 Jul 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +files/celementtree-1.0.5-setuptools.patch, celementtree-1.0.5-r1.ebuild:
+  Change setup.py to use setuptools setup
 
   03 Jul 2007; Ali Polatel <hawking@gentoo.org>
   -files/celementtree-1.0.2-use_system_expat.patch,
