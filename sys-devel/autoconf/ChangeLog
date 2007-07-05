@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.97 2007/07/05 09:25:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.98 2007/07/05 10:52:30 armin76 Exp $
+
+  05 Jul 2007; Raúl Porcel <armin76@gentoo.org> autoconf-2.61-r1.ebuild:
+  Re-add ~alpha/~ia64 wrt #184219
 
   05 Jul 2007; Roy Marples <uberlord@gentoo.org> autoconf-2.61-r1.ebuild:
   Re-added ~sparc-fbsd and ~x86-fbsd keywords, #184219.

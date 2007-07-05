@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.61-r1.ebuild,v 1.2 2007/07/05 09:25:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.61-r1.ebuild,v 1.3 2007/07/05 10:52:30 armin76 Exp $
 
 DESCRIPTION="Used to create autoconfiguration files"
 HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2.5"
-KEYWORDS="~m68k ~mips ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~ia64 ~m68k ~mips ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="emacs"
 
 DEPEND=">=sys-apps/texinfo-4.3
