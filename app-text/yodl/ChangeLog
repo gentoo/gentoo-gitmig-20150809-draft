@@ -1,6 +1,12 @@
 # ChangeLog for app-text/yodl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/ChangeLog,v 1.13 2007/03/13 00:54:45 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/ChangeLog,v 1.14 2007/07/05 11:40:06 drac Exp $
+
+*yodl-1.31.18-r1 (05 Jul 2007)
+
+  05 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/yodl-1.31.18-python-2.5.patch, +yodl-1.31.18-r1.ebuild:
+  Patch for Python 2.5 compatibility and clean up.
 
   13 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
   Replacing text-markup herd with the new sgml herd.
