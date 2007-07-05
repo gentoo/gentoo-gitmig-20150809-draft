@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gwydion-dylan/gwydion-dylan-2.4.0.ebuild,v 1.2 2005/08/02 10:21:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gwydion-dylan/gwydion-dylan-2.4.0.ebuild,v 1.3 2007/07/05 23:52:47 ulm Exp $
 
 inherit elisp-common
 
@@ -16,6 +16,7 @@ IUSE="gtk emacs"
 DEPEND="( || ( dev-lang/gwydion-dylan-bin
 	dev-lang/gwydion-dylan ) )
 	>=dev-libs/boehm-gc-6.4
+	emacs? ( virtual/emacs )
 	gtk? ( =x11-libs/gtk+-1.2* )"
 RDEPEND=""
 
