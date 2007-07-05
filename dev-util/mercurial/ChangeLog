@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.53 2007/07/04 08:34:39 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.54 2007/07/05 06:12:29 mr_bones_ Exp $
+
+  05 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +mercurial-0.9.1-r2.ebuild:
+  restore ebuilds still in use in the tree
 
 *mercurial-0.9.4 (04 Jul 2007)
 
