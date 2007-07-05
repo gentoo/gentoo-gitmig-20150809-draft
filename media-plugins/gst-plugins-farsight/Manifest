@@ -2,19 +2,24 @@
 Hash: SHA1
 
 DIST gst-plugins-farsight-0.10.2.tar.gz 442873 RMD160 a2ecdbc64a9b4f06983a3eb056371c80235777e3 SHA1 b5af2785af35044a45bd9e5d63b5d4b8a23fb864 SHA256 3d22f524c38d451a3d096d049646f8e370c9711749420009d49db8a66129035a
-DIST gst-plugins-farsight-0.12.0.tar.gz 492592 RMD160 c4a23b1c6b3c76e437eda70f2eea6fe07f706caa SHA1 a9ccd0a89be627480efdd6b350eac29c7932e8be SHA256 1de7766275b069cf4347502686c07d5b7a6c14eda98f746d99c671737a390eb9
+DIST gst-plugins-farsight-0.12.1.tar.gz 522005 RMD160 27ece3f1109cefc6901a1f5a42dae8f78617f497 SHA1 af0db65c77cc674fa6c49e499afdf9072ec63708 SHA256 3661a920775bd66e001a25920a5cf6fdb0749b83dd1c533aa8faa2b2bc13b3e4
+DIST gst-plugins-farsight-0.12.2.tar.gz 532693 RMD160 80b5d3de473e08a11857fc12d35effbba72354f7 SHA1 0315ce90f0b5e9a5389a257ad858d0cbd3ca9be1 SHA256 aad4378c265a67f7135fdc2da5c1859ee2b4a947de7ee7d9964de1252ff36ecc
 EBUILD gst-plugins-farsight-0.10.2.ebuild 1388 RMD160 a53388a586dd6990bc0ad04bf05b83e80f4efae4 SHA1 01068eb0e1aff50d6bd534a6059865b1b96dbe24 SHA256 fc6c214609ae27507f850505e9c96f54ecd0951012adde42b26ccac22b120f5c
 MD5 b180fe10d5bb2be18a710fb8243a0d7b gst-plugins-farsight-0.10.2.ebuild 1388
 RMD160 a53388a586dd6990bc0ad04bf05b83e80f4efae4 gst-plugins-farsight-0.10.2.ebuild 1388
 SHA256 fc6c214609ae27507f850505e9c96f54ecd0951012adde42b26ccac22b120f5c gst-plugins-farsight-0.10.2.ebuild 1388
-EBUILD gst-plugins-farsight-0.12.0.ebuild 1351 RMD160 c07c6f18f5df15f2be65ded62d6f4cdbc9b703fb SHA1 836212a9067d0e3e614a13723c7a3b186df19cb5 SHA256 c24e733d66bb33dbed4d2fb383d65e76c6a13e893bbd66748f9af528d77a2eb6
-MD5 2e5c9df2cf6c9eab028c65a797ad9dd5 gst-plugins-farsight-0.12.0.ebuild 1351
-RMD160 c07c6f18f5df15f2be65ded62d6f4cdbc9b703fb gst-plugins-farsight-0.12.0.ebuild 1351
-SHA256 c24e733d66bb33dbed4d2fb383d65e76c6a13e893bbd66748f9af528d77a2eb6 gst-plugins-farsight-0.12.0.ebuild 1351
-MISC ChangeLog 1686 RMD160 dd6b30e276d0b7330587eae212b297cce87269af SHA1 1f7413ad77ff821cb0a125ebd15a1a7ecfe39a2a SHA256 8dc315773ac14a703e50cd86452d6a618b0dbd134abdc6a55a418126c300f496
-MD5 fd4c5f55731b9f552b9e2450f6a05c38 ChangeLog 1686
-RMD160 dd6b30e276d0b7330587eae212b297cce87269af ChangeLog 1686
-SHA256 8dc315773ac14a703e50cd86452d6a618b0dbd134abdc6a55a418126c300f496 ChangeLog 1686
+EBUILD gst-plugins-farsight-0.12.1.ebuild 1360 RMD160 c3f71c84cb088fd0399713c70be0e6c2ee97d88d SHA1 c492e6ebf3059e7484778f0e7d5346eef8170dbc SHA256 be62232fbc2452b0c7a86aac6f6f66579cc4136f0acc7b340af53d1e2c1c8e20
+MD5 8f7a8e27bc01db3fdc418fc05de2631d gst-plugins-farsight-0.12.1.ebuild 1360
+RMD160 c3f71c84cb088fd0399713c70be0e6c2ee97d88d gst-plugins-farsight-0.12.1.ebuild 1360
+SHA256 be62232fbc2452b0c7a86aac6f6f66579cc4136f0acc7b340af53d1e2c1c8e20 gst-plugins-farsight-0.12.1.ebuild 1360
+EBUILD gst-plugins-farsight-0.12.2.ebuild 1422 RMD160 247447141160c0d5078dd960403e82ac110322d3 SHA1 999a7caacdc8e24d454b7ba226398021a088f19f SHA256 96ee71e5dd5bd50f5689a17e668dbf435ee81735f802c61a6af954439a3e5f3e
+MD5 58e6777efe04e56e23db784c393c6f3a gst-plugins-farsight-0.12.2.ebuild 1422
+RMD160 247447141160c0d5078dd960403e82ac110322d3 gst-plugins-farsight-0.12.2.ebuild 1422
+SHA256 96ee71e5dd5bd50f5689a17e668dbf435ee81735f802c61a6af954439a3e5f3e gst-plugins-farsight-0.12.2.ebuild 1422
+MISC ChangeLog 1937 RMD160 e19e534e10283d3f3cfeca49f01e30a23a3fa067 SHA1 cd3f1878711507836cc6d767a01733e55f99a7cf SHA256 d22f69da0c73839989a6f344b246194be39c8810e1bf28abb5da9ca8a3c9948a
+MD5 7c13e4888b304a0a804749d2a1528edb ChangeLog 1937
+RMD160 e19e534e10283d3f3cfeca49f01e30a23a3fa067 ChangeLog 1937
+SHA256 d22f69da0c73839989a6f344b246194be39c8810e1bf28abb5da9ca8a3c9948a ChangeLog 1937
 MISC metadata.xml 303 RMD160 3950596006d7979eaf1ae13179375a8b8db35e92 SHA1 bf3f5d1416e08236c80b9078759c5482700c2768 SHA256 7c5107002ae0169be60822ea4ea5f315331142d23e33a5f9efa735c35514361e
 MD5 b57b4d6cac21a6db8700ad38ffbdd243 metadata.xml 303
 RMD160 3950596006d7979eaf1ae13179375a8b8db35e92 metadata.xml 303
@@ -22,13 +27,16 @@ SHA256 7c5107002ae0169be60822ea4ea5f315331142d23e33a5f9efa735c35514361e metadata
 MD5 f84fbbe1b279b2c89fccdb9aad1c80f3 files/digest-gst-plugins-farsight-0.10.2 283
 RMD160 94c86ecaa97ca4ed30fb5dc35253fc3f51bec25d files/digest-gst-plugins-farsight-0.10.2 283
 SHA256 831b6906bc4d626fdd0ca50c7c59f7c953cd0ed2efc12686e103b5edb1f34b5e files/digest-gst-plugins-farsight-0.10.2 283
-MD5 80e38af9fe3e0b2ae6c78444e2971b11 files/digest-gst-plugins-farsight-0.12.0 283
-RMD160 a91bb1611b8517d15bc398a45ddd5bbd2e289a7e files/digest-gst-plugins-farsight-0.12.0 283
-SHA256 f9e632832dc7e8bb12a7bd3d832c0bb8b6d1eac9f04e7337acd993f647ef66e1 files/digest-gst-plugins-farsight-0.12.0 283
+MD5 4dd1c1a00d10f0db5068b316ff4bba7e files/digest-gst-plugins-farsight-0.12.1 283
+RMD160 c7e1aa04e7804b043fc0eff6f1ac5da9c1bd2383 files/digest-gst-plugins-farsight-0.12.1 283
+SHA256 1e7452abdd754aa17cc7c75befcdd15fa4b3c3f40cf1c4e286b84f9ec3003da1 files/digest-gst-plugins-farsight-0.12.1 283
+MD5 f31c6d1a6e04213e43c376990665b511 files/digest-gst-plugins-farsight-0.12.2 283
+RMD160 e22db1788306beeec8273f076fe34f92f35d748d files/digest-gst-plugins-farsight-0.12.2 283
+SHA256 9e68d5ecc759c0482e2967021c5d122d983277fcf1df07d80867f37a117246dc files/digest-gst-plugins-farsight-0.12.2 283
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
+Version: GnuPG v1.4.7 (GNU/Linux)
 
-iD8DBQFGJ5nj+IXOQtHLm/gRAu0QAJ0X7VgvqqNWFGH3rkMBWp+KhCvYGQCfZVFC
-LQd/Qt8ChjLXUmzNevCsxnM=
-=V8OU
+iD8DBQFGjQtV+IXOQtHLm/gRAnWFAJ9ryGsYjn4ChYg1AIhcr5iGHmLbvgCfdaeT
+z8PyWA1uv9N5w0/yaal81X8=
+=aYyr
 -----END PGP SIGNATURE-----

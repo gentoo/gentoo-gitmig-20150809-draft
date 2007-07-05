@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-farsight
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/ChangeLog,v 1.8 2007/04/19 16:33:03 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/ChangeLog,v 1.9 2007/07/05 15:16:42 tester Exp $
+
+*gst-plugins-farsight-0.12.2 (05 Jul 2007)
+*gst-plugins-farsight-0.12.1 (05 Jul 2007)
+
+  05 Jul 2007; <tester@gentoo.org> -gst-plugins-farsight-0.12.0.ebuild,
+  +gst-plugins-farsight-0.12.1.ebuild, +gst-plugins-farsight-0.12.2.ebuild:
+  Version bump
 
   19 Apr 2007; <tester@gentoo.org> gst-plugins-farsight-0.12.0.ebuild:
   Remove broken support for jrtplib (will be fixed "soon"(tm))
