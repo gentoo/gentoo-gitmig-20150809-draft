@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.1.ebuild,v 1.1 2007/07/05 05:35:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.1.ebuild,v 1.2 2007/07/05 05:37:36 drac Exp $
 
 DESCRIPTION="GTK+ utility for editing MP3, FLAC, Vorbis and MP4/AAC tags"
 HOMEPAGE="http://easytag.sourceforge.net/"
@@ -17,7 +17,8 @@ RDEPEND=">=x11-libs/gtk+-2.4.1
 	flac? ( media-libs/flac >=media-libs/libvorbis-1.0 )
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	aac? ( media-libs/libmp4v2 )
-	wavpack? ( media-sound/wavpack )"
+	wavpack? ( media-sound/wavpack )
+	speex? ( media-libs/speex )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
