@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/celementtree-1.0.5-r1.ebuild,v 1.2 2007/07/05 06:36:25 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/celementtree-1.0.5-r1.ebuild,v 1.3 2007/07/05 20:18:06 pythonhead Exp $
 
 inherit distutils eutils
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
 IUSE="doc"
-DEPEND=">=dev-lang/python-2.1.3-r1
+DEPEND="dev-python/setuptools"
+RDEPEND=">=dev-lang/python-2.1.3-r1
 	>=dev-python/elementtree-1.2
 	>=dev-libs/expat-1.95.8"
 S="${WORKDIR}/${MY_P}"

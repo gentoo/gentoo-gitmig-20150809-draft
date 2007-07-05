@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/configobj
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.3 2007/07/05 06:43:01 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.4 2007/07/05 20:15:12 pythonhead Exp $
+
+  05 Jul 2007; Rob Cakebread <pythonhead@gentoo.org>
+  configobj-4.4.0-r1.ebuild:
+  Add setuptools depend
 
 *configobj-4.4.0-r1 (05 Jul 2007)
 

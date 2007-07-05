@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/configobj-4.4.0-r1.ebuild,v 1.1 2007/07/05 06:43:01 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/configobj-4.4.0-r1.ebuild,v 1.2 2007/07/05 20:15:12 pythonhead Exp $
 
 NEED_PYTHON=2.3
 
@@ -15,7 +15,8 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="doc"
 
-DEPEND="app-arch/unzip"
+DEPEND="dev-python/setuptools
+	app-arch/unzip"
 RDEPEND=""
 
 src_unpack() {
