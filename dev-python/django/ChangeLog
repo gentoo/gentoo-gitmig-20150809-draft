@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.17 2007/07/04 21:23:18 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.18 2007/07/05 06:45:29 lucass Exp $
+
+  05 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> -django-0.95.1.ebuild:
+  Dropped old version.
 
   04 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> django-0.95.1.ebuild,
   django-0.96.ebuild:
@@ -12,6 +15,8 @@
 
   25 Mar 2007; Seemant Kulleen <seemant@gentoo.org> django-0.96.ebuild:
   fix the src_test -- thanks to mabi for catching the b0rkedness
+
+*django-0.96 (24 Mar 2007)
 
   24 Mar 2007; Seemant Kulleen <seemant@gentoo.org> +django-0.96.ebuild:
   version bump to newest release -- how about a zero-day this time
