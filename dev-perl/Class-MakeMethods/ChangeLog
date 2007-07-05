@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-MakeMethods
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MakeMethods/ChangeLog,v 1.29 2007/01/15 14:51:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MakeMethods/ChangeLog,v 1.30 2007/07/05 14:08:25 armin76 Exp $
+
+  05 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  Class-MakeMethods-1.01.ebuild:
+  alpha stable
 
   15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Class-MakeMethods-1.01.ebuild, Class-MakeMethods-1.009.ebuild:
