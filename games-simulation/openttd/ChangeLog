@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.45 2007/07/02 18:59:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.46 2007/07/05 20:07:17 corsair Exp $
+
+  05 Jul 2007; Markus Rothe <corsair@gentoo.org> ChangeLog:
+  Stable on ppc64; bug #183718
 
   02 Jul 2007; Christian Faulhammer <opfer@gentoo.org> openttd-0.5.2.ebuild:
   stable x86, bug 183718
