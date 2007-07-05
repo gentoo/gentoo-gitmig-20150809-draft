@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/ircservices
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.34 2007/06/21 14:46:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.35 2007/07/05 11:36:32 armin76 Exp $
+
+*ircservices-5.0.62 (05 Jul 2007)
+
+  05 Jul 2007; Raúl Porcel <armin76@gentoo.org> +ircservices-5.0.62.ebuild:
+  Version bump
 
   21 Jun 2007; Raúl Porcel <armin76@gentoo.org> -ircservices-5.0.59.ebuild:
   old
