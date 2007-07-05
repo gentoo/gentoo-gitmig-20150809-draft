@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/redo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo/ChangeLog,v 1.14 2007/07/03 17:23:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo/ChangeLog,v 1.15 2007/07/05 23:08:22 angelos Exp $
+
+  05 Jul 2007; Christoph Mende <angelos@gentoo.org> redo-1.02-r1.ebuild:
+  Stable on amd64 wrt bug #184103
 
   03 Jul 2007; Raúl Porcel <armin76@gentoo.org> redo-1.02-r1.ebuild:
   alpha stable wrt #184103
