@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-0.7-r1.ebuild,v 1.4 2007/03/18 08:52:51 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-0.9.1.ebuild,v 1.1 2007/07/05 18:12:49 alonbl Exp $
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs
 
 DESCRIPTION="WLAN tools for breaking 802.11 WEP/WPA keys"
 HOMEPAGE="http://www.aircrack-ng.org"
@@ -10,16 +10,10 @@ SRC_URI="http://download.aircrack-ng.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd"
 IUSE="wifi"
 
 DEPEND="wifi? ( net-libs/libpcap )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-make.patch"
-}
 
 src_compile() {
 	local target
@@ -49,4 +43,3 @@ src_test() {
 	"$(tc-getCC)" -o process-group-leader "${FILESDIR}/process-group-leader.c"
 	./process-group-leader ./aircrack-ng -w test/password.lst test/wpa.cap || die 'cracking WPA key failed'
 }
-
