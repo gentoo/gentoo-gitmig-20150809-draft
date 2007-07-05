@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-2.17.0.ebuild,v 1.2 2007/06/22 21:32:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-2.17.0.ebuild,v 1.3 2007/07/05 23:58:45 dang Exp $
 
 inherit gnome2 eutils autotools
 
@@ -44,6 +44,13 @@ pkg_setup() {
 	# (like enable it when pam_console is available?). For now, this is a
 	# slightly nicer solution than applying ${PN}-1.5.9-no-pam_console.patch
 	G2CONF="${G2CONF} --disable-multiuser"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# fbsd fixes.  bug #183442
+	epatch "${FILESDIR}"/${P}-fbsd.patch
 }
 
 pkg_postinst() {
