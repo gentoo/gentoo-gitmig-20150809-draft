@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r4.ebuild,v 1.2 2007/07/03 13:10:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r4.ebuild,v 1.3 2007/07/05 10:08:54 peper Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1032,7 +1032,7 @@ else
 fi
 
 # we'll handle stripping ourself #46186
-RESTRICT="nostrip"
+RESTRICT="strip"
 EMULTILIB_PKG="true"
 
 # General: We need a new-enough binutils for as-needed
