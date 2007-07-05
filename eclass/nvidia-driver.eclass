@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.1 2007/07/05 19:03:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.2 2007/07/05 21:01:18 cardoe Exp $
 
 #
 # Original Author: Doug Goldstein <cardoe@gentoo.org>
@@ -9,6 +9,9 @@
 #
 
 DEPEND="sys-apps/pciutils"
+
+# the data below is derived from
+# http://us.download.nvidia.com/XFree86/Linux-x86_64/100.14.11/README/appendix-a.html
 
 drv_96xx="0110 0111 0112 0113 0170 0171 0172 0173 0174 0175 0176 0177 0178 \
 0179 017a 017c 017d 0181 0182 0183 0185 0188 018a 018b 018c 01a0 01f0 0200 \
@@ -74,6 +77,9 @@ nvidia-driver-check-warning() {
 		ewarn
 		ewarn "Failure to perform the steps above could result in a non-working"
 		ewarn "X setup."
+		ewarn
+		ewarn "For more information please read:"
+		ewarn "http://us.download.nvidia.com/XFree86/Linux-x86_64/100.14.11/README/appendix-a.html"
 		ebeep 5
 	fi
 }
