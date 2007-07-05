@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-6.0.3-r1.ebuild,v 1.9 2007/06/24 22:00:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-6.0.3-r1.ebuild,v 1.10 2007/07/05 19:29:31 anant Exp $
 
 # eutils must be inherited since get_libdir() is only
 # globally available on baselayout-1.11 (still on ~arch)
@@ -13,7 +13,7 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="A library for generating PDF on the fly."
 HOMEPAGE="http://www.pdflib.com/"
 SRC_URI="http://www.pdflib.com/products/pdflib/download/${PV//./}src/${MY_P}.tar.gz"
-LICENSE="Aladdin"
+LICENSE="PDFLite"
 SLOT="5"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="doc tcl perl python java"
