@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.32 2007/06/13 16:40:29 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.33 2007/07/05 16:27:25 uberlord Exp $
+
+  05 Jul 2007; Roy Marples <uberlord@gentoo.org> alacarte-0.11.3.ebuild,
+  alacarte-0.11.3-r1.ebuild:
+  Keyworded ~x86-fbsd.
 
   13 Jun 2007; Daniel Gryniewicz <dang@gentoo.org>
   alacarte-0.11.3-r1.ebuild:
