@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-0.11-r1.ebuild,v 1.18 2007/03/05 03:06:11 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-0.11-r1.ebuild,v 1.19 2007/07/05 11:05:34 hawking Exp $
 
 inherit distutils eutils
 
@@ -35,7 +35,7 @@ src_test() {
 }
 
 src_install() {
-	mydoc="CHANGES.txt README.txt"
+	DOCS="CHANGES.txt"
 	distutils_src_install
 
 	python_version

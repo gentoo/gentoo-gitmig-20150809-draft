@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-2.1.ebuild,v 1.5 2006/02/03 20:07:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-2.1.ebuild,v 1.6 2007/07/05 11:05:34 hawking Exp $
 
 inherit distutils
 
@@ -19,6 +19,6 @@ DEPEND=">=dev-lang/python-2.2"
 S=${WORKDIR}/${MY_P}
 
 src_install() {
-	mydoc="CHANGES.txt README.txt"
+	DOCS="CHANGES.txt"
 	distutils_src_install
 }
