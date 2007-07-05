@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-2.2.1-r1.ebuild,v 1.1 2007/07/05 06:40:53 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-2.2.1-r1.ebuild,v 1.2 2007/07/05 20:24:30 pythonhead Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 LICENSE="BSD"
 
-DEPEND=""
+DEPEND="dev-python/setuptools"
 RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
