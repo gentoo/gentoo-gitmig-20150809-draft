@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.1.ebuild,v 1.2 2007/07/05 05:37:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.1.ebuild,v 1.3 2007/07/05 05:55:18 drac Exp $
 
 DESCRIPTION="GTK+ utility for editing MP3, FLAC, Vorbis and MP4/AAC tags"
 HOMEPAGE="http://easytag.sourceforge.net/"
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	econf $(use_enable mp3) \
+		$(use_enable mp3 id3v23) \
 		$(use_enable vorbis ogg) \
 		$(use_enable flac) \
 		$(use_enable aac mp4) \
