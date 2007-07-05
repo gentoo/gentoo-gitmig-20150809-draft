@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.107 2007/05/11 02:20:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.108 2007/07/05 14:42:42 uberlord Exp $
+
+  05 Jul 2007; Roy Marples <uberlord@gentoo.org> libgda-1.2.4.ebuild:
+  Keyworded ~x86-fbsd.
 
 *libgda-3.0.1 (11 May 2007)
 
