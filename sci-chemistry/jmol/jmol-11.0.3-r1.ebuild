@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-11.0.3-r1.ebuild,v 1.2 2007/06/22 22:43:14 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-11.0.3-r1.ebuild,v 1.3 2007/07/05 00:17:58 je_fro Exp $
 
 inherit eutils webapp java-pkg-2 java-ant-2
 
 DESCRIPTION="Jmol is a java molecular viever for 3-D chemical structures."
 SRC_URI="mirror://sourceforge/${PN}/${P}-full.tar.gz"
 HOMEPAGE="http://jmol.sourceforge.net/"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 LICENSE="LGPL-2.1"
 
 IUSE="client-only vhosts"
@@ -48,7 +48,11 @@ src_unpack() {
 
 	rm -v "${S}"/*.jar "${S}"/plugin-jars/*.jar || die
 	cd "${S}/jars"
+
+# We still have to use netscape.jar on amd64 until a nice way to include plugin.jar comes along.
+	use amd64 && mv -v netscape.jar netscape.tempjar || die "Failed to move netscape.jar."
 	rm -v *.jar *.tar.gz || die
+	use amd64 && mv -v netscape.tempjar netscape.jar || die "Failed to move netscape.tempjar."
 
 	java-pkg_jar-from vecmath-objectclub vecmath-objectclub.jar vecmath1.2-1.14.jar
 	java-pkg_jar-from itext iText.jar itext-1.4.5.jar

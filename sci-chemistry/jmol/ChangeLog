@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/jmol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.3 2007/06/22 22:43:14 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.4 2007/07/05 00:17:58 je_fro Exp $
+
+  05 Jul 2007; Jeff Gardner <je_fro@gentoo.org> jmol-11.0.3-r1.ebuild:
+  Protecting netscape.jar from removal on amd64.
 
   22 Jun 2007; Jeff Gardner <je_fro@gentoo.org> jmol-11.0.3-r1.ebuild:
   Removing ~amd64 for jmol-11.0.3-r1 because the bundled netscape.jar is still
