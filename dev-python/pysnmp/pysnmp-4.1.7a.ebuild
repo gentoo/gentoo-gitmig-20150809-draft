@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-4.1.7a.ebuild,v 1.2 2007/03/05 03:04:35 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-4.1.7a.ebuild,v 1.3 2007/07/05 07:07:09 lucass Exp $
 
 inherit distutils
 
@@ -16,11 +16,10 @@ DEPEND=">=dev-python/pyasn1-0.0.6a
 	dev-python/pycrypto"
 RDEPEND="${DEPEND}"
 
-mydoc="CHANGES"
-
 src_install(){
 	distutils_src_install
 
+	dodoc CHANGES
 	dohtml docs/*.{html,gif}
 	insinto /usr/share/doc/${PF}
 	doins -r examples docs/mibs

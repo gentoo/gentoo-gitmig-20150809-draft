@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-2.0.9.ebuild,v 1.1 2006/12/30 11:32:59 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-2.0.9.ebuild,v 1.2 2007/07/05 07:07:09 lucass Exp $
 
 inherit distutils
 
@@ -12,10 +12,10 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 
-mydoc="CHANGES"
-
 src_install() {
 	distutils_src_install
+
+	dodoc CHANGES
 	dohtml html/*
 	insinto /usr/share/doc/${PF}
 	doins -r examples

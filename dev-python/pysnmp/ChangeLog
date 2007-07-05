@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pysnmp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.19 2007/03/05 03:04:35 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.20 2007/07/05 07:07:09 lucass Exp $
+
+  05 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> pysnmp-2.0.9.ebuild,
+  pysnmp-4.1.7a.ebuild:
+  Fixed to not use mydoc.
 
   05 Mar 2007; Marius Mauch <genone@gentoo.org> pysnmp-4.1.7a.ebuild:
   Replacing einfo with elog
