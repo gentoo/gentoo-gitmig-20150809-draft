@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nedit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.45 2007/07/01 02:48:22 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.46 2007/07/05 20:36:32 uberlord Exp $
+
+  05 Jul 2007; Roy Marples <uberlord@gentoo.org> nedit-5.5.ebuild:
+  Keyworded ~x86-fbsd, #184298 thanks to Sascha Lucas.
 
   01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   +files/digest-nedit-5.5, Manifest:
