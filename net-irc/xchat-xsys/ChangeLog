@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.57 2007/02/20 23:13:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.58 2007/07/05 10:29:07 chainsaw Exp $
+
+  05 Jul 2007; Tony Vroon <chainsaw@gentoo.org>
+  -files/2.0.8-pciutils-headerchange.patch:
+  Remove obsolete patch, as pointed out by Kalidarn <dcecchin@gmail.com>.
 
   20 Feb 2007; Tony Vroon <chainsaw@gentoo.org> -xchat-xsys-2.0.8-r1.ebuild,
   -xchat-xsys-2.0.9.ebuild, -xchat-xsys-2.1.0.ebuild:
