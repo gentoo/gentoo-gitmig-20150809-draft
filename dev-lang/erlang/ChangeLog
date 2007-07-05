@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.63 2007/05/21 06:27:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.64 2007/07/05 08:40:23 opfer Exp $
+
+*erlang-11.2.5 (05 Jul 2007)
+
+  05 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  -files/glibc-2.4-fix.patch, -files/erl_process_dump_R11B-3.patch,
+  -erlang-10.2.10.ebuild, -erlang-11.2.2-r1.ebuild, -erlang-11.2.3.ebuild,
+  -erlang-11.2.3-r1.ebuild, -erlang-11.2.4.ebuild, +erlang-11.2.5.ebuild:
+  version bump; clean-up
 
 *erlang-11.2.4-r1 (21 May 2007)
 

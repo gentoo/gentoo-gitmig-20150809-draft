@@ -1,15 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.2-r1.ebuild,v 1.5 2007/01/31 14:28:59 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.5.ebuild,v 1.1 2007/07/05 08:40:23 opfer Exp $
 
 inherit elisp-common eutils flag-o-matic multilib versionator
 
-# NOTE: When bumping you need to adjust the *_VER strings in
-#  src_install() to honour newer versions in the package (they
-#  are maintained separately upstream).  You even need to adjust the version number
-#  in the last comment.
-#  If you need symlinks for binaries please tell maintainers or open up a bug
-#  to let it be created.
+# NOTE: You	 need to adjust the version number	in the last comment.  If you need symlinks for
+# binaries please tell maintainers or open up a bug to let it be created.
 
 # erlang uses a really weird versioning scheme which caused quite a few problems
 # already. Thus we do a slight modification converting all letters to digits to
@@ -26,13 +22,11 @@ HOMEPAGE="http://www.erlang.org/"
 SRC_URI="http://www.erlang.org/download/${MY_P}.tar.gz
 	doc? ( http://erlang.org/download/otp_doc_man_${MY_PV}.tar.gz
 		http://erlang.org/download/otp_doc_html_${MY_PV}.tar.gz )"
-# Not yet available for 11.2.1
-#	http://developer.sipphone.com/ejabberd/erlang_epoll_patch/otp_src_${MY_PV}_epoll.patch"
 
 LICENSE="EPL"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="doc emacs hipe java odbc ssl tk"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="doc emacs hipe java kpoll odbc smp ssl tk"
 
 RDEPEND=">=dev-lang/perl-5.6.1
 	ssl? ( >=dev-libs/openssl-0.9.7d )
@@ -53,15 +47,12 @@ src_unpack() {
 
 	unpack ${A}
 	cd "${S}"
+
+	# needed for amd64
 	epatch "${FILESDIR}/${PN}-10.2.6-export-TARGET.patch"
-	epatch "${FILESDIR}/10.2.6-manpage-emacs-gentoo.patch"
 	use odbc || sed -i 's: odbc : :' lib/Makefile
-#	epatch "${DISTDIR}"/otp_src_${MY_PV}_epoll.patch
 
 	if use hipe; then
-		# Fix for bug #151612
-		sed -i "s/__GLIBC_MINOR__\ ==\ 3/__GLIBC_MINOR__\ \>=\ 3/g" \
-			${S}/erts/emulator/hipe/hipe_x86_signal.c
 		ewarn
 		ewarn "You enabled High performance Erlang. Be aware that this extension"
 		ewarn "can break the compilation in many ways, especially on hardened systems."
@@ -77,8 +68,10 @@ src_compile() {
 		--enable-threads \
 		$(use_enable hipe) \
 		$(use_with ssl) \
+		$(use_enable kpoll kernell-poll) \
+		$(use_enable smp smp-support) \
 		|| die "econf failed"
-	make || die "emake failed"
+	emake -j1 || die "emake failed"
 
 	if use emacs ; then
 		pushd lib/tools/emacs
@@ -96,13 +89,11 @@ src_install() {
 	local ERL_INTERFACE_VER=$(extract_version lib/erl_interface EI_VSN)
 	local ERL_ERTS_VER=$(extract_version erts VSN)
 
-	make INSTALL_PREFIX="${D}" install || die
+	emake -j1 INSTALL_PREFIX="${D}" install || die "install failed"
 	dodoc AUTHORS EPLICENCE README
 
 	dosym ${ERL_LIBDIR}/bin/erl /usr/bin/erl
 	dosym ${ERL_LIBDIR}/bin/erlc /usr/bin/erlc
-	dosym ${ERL_LIBDIR}/bin/ecc /usr/bin/ecc
-	dosym ${ERL_LIBDIR}/bin/elink /usr/bin/elink
 	dosym ${ERL_LIBDIR}/bin/ear /usr/bin/ear
 	dosym ${ERL_LIBDIR}/bin/escript /usr/bin/escript
 	dosym \
@@ -113,7 +104,6 @@ src_install() {
 	## Remove ${D} from the following files
 	dosed ${ERL_LIBDIR}/bin/erl
 	dosed ${ERL_LIBDIR}/bin/start
-	cd ${ERL_LIBDIR}/erts-${ERL_ERTS_VER}
 	grep -rle "${D}" "${D}"/${ERL_LIBDIR}/erts-${ERL_ERTS_VER} | xargs sed -i -e "s:${D}::g"
 
 	## Clean up the no longer needed files
@@ -151,7 +141,7 @@ pkg_postinst() {
 	elog "If you need a symlink to one of erlang's binaries,"
 	elog "please open a bug and tell the maintainers."
 	elog
-	elog "Gentoo's versioning scheme differs from the author's, so please refer to this version as R11B-2"
+	elog "Gentoo's versioning scheme differs from the author's, so please refer to this version as R11B-5"
 	elog
 }
 
