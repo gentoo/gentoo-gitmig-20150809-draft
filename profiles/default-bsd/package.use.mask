@@ -17,3 +17,6 @@ sys-apps/help2man nls
 
 # NetworkManager is Linux-only, Zephyr requires kerberos
 net-im/pidgin networkmanager zephyr
+
+# nvtv is probably Linux only, someone with an nvidia card plz test
+media-video/totem nvtv
