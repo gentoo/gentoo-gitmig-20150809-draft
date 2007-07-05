@@ -1,9 +1,6 @@
 # ChangeLog for app-dicts/edictionary
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/edictionary/ChangeLog,v 1.9 2007/07/05 20:23:12 corsair Exp $
-
-  05 Jul 2007; Markus Rothe <corsair@gentoo.org> ChangeLog:
-  Added ~ppc64; bug #184179
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/edictionary/ChangeLog,v 1.10 2007/07/05 20:25:37 corsair Exp $
 
   04 Jul 2007; Tom Gall <tgall@gentoo.org> edictionary-2.2.ebuild:
   added ~ppc64, bug #184179
