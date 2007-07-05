@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/archivemail-0.6.1-r1.ebuild,v 1.6 2004/12/03 17:02:34 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/archivemail-0.6.1-r1.ebuild,v 1.7 2007/07/05 01:15:28 hawking Exp $
 
 inherit distutils
 
@@ -15,7 +15,6 @@ IUSE=""
 DEPEND=">=dev-lang/python-2.0
 		>=sys-apps/sed-4"
 
-
 src_unpack() {
 	unpack ${A}
 	# Assigning to None returns a syntax warning in Python 2.3
@@ -23,7 +22,7 @@ src_unpack() {
 }
 
 src_install() {
-	mydoc="CHANGELOG COPYING FAQ MANIFEST PKG-INFO README TODO"
+	DOCS="FAQ"
 	distutils_src_install
 	dodoc examples/*
 }
