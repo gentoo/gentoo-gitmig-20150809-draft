@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mirmon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mirmon/ChangeLog,v 1.3 2007/02/09 04:04:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mirmon/ChangeLog,v 1.4 2007/07/05 10:40:48 armin76 Exp $
+
+*mirmon-1.37 (05 Jul 2007)
+
+  05 Jul 2007; Raúl Porcel <armin76@gentoo.org> +mirmon-1.37.ebuild:
+  Version bump
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
