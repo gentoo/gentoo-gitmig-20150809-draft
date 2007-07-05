@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/xbase
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.16 2007/02/22 01:10:12 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.17 2007/07/05 14:42:16 uberlord Exp $
+
+  05 Jul 2007; Roy Marples <uberlord@gentoo.org> xbase-2.0.0.ebuild:
+  Keyworded ~x86-fbsd.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
