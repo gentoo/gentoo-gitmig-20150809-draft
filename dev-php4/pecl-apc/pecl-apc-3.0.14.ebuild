@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/pecl-apc-3.0.14.ebuild,v 1.1 2007/06/30 17:22:56 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/pecl-apc-3.0.14.ebuild,v 1.2 2007/07/05 10:55:15 voxus Exp $
 
 PHP_EXT_NAME="apc"
 PHP_EXT_PECL_PKG="APC"
@@ -24,12 +24,6 @@ need_php_by_category
 pkg_setup() {
 	has_php
 	require_php_sapi_from cgi apache2
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-tsrm.patch"
 }
 
 src_compile() {
