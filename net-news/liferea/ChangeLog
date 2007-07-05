@@ -1,6 +1,18 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.107 2007/07/03 15:32:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.108 2007/07/05 13:57:13 dang Exp $
+
+*liferea-1.2.18 (05 Jul 2007)
+
+  05 Jul 2007; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.2.18.ebuild:
+  Bump to 1.2.18
+  	* Fixes some memory leaks (Hubert Figuiere)
+  	* Improved manpage (Emilo Pozuelo Monfort)
+  	* Starter script support for $DEBUGGER (Hubert Figuiere)
+  	* Fixed XulRunner library root compilation parameter
+  	  (Hubert Figuiere)
+  	* Making the tray icon transparent again when the
+  	  "show new count" option is disabled.
 
   03 Jul 2007; Roy Marples <uberlord@gentoo.org> liferea-1.2.17.ebuild:
   Added ~x86-fbsd keyword.
