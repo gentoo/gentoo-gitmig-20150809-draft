@@ -1,6 +1,10 @@
 # ChangeLog for net-news/charm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/charm/ChangeLog,v 1.7 2007/03/16 12:47:41 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/charm/ChangeLog,v 1.8 2007/07/05 07:11:22 lucass Exp $
+
+  05 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> -charm-1.3.0.ebuild,
+  charm-1.4.0.ebuild:
+  Fixed to not use mydoc. Dropped old version.
 
 *charm-1.7.0 (16 Mar 2007)
 
