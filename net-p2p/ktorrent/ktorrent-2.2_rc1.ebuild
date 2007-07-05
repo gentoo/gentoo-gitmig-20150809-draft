@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2_rc1.ebuild,v 1.2 2007/06/21 19:30:33 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2_rc1.ebuild,v 1.3 2007/07/05 17:21:08 philantrop Exp $
 
 inherit kde
 
@@ -21,8 +21,8 @@ DEPEND="dev-libs/gmp"
 
 need-kde 3.4
 
-LANGS="bg br ca cs cy da de el en_GB es et eu fr ga gl hu it ja km lt
-mk ms nb nl pa pl pt pt_BR ru rw sk sr sr@Latn sv tr uk zh_CN zh_TW"
+LANGS="ar bg br ca cs cy da de el en_GB es et fa fr gl hu it ja ka lt
+ms nds nl pa pl pt pt_BR ru rw sk sr sr@Latn sv tr uk zh_CN zh_TW"
 
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
