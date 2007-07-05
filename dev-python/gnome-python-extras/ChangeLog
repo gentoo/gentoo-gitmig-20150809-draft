@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.55 2007/06/24 09:12:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.56 2007/07/05 14:46:52 uberlord Exp $
+
+  05 Jul 2007; Roy Marples <uberlord@gentoo.org>
+  gnome-python-extras-2.14.2.ebuild, gnome-python-extras-2.14.2-r1.ebuild:
+  Keyworded ~x86-fbsd.
 
   24 Jun 2007; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-python-extras-2.14.0-r1.ebuild, gnome-python-extras-2.14.2.ebuild,
