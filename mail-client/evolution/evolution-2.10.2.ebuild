@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.2.ebuild,v 1.1 2007/06/27 07:36:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.2.ebuild,v 1.2 2007/07/06 01:46:06 dang Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -169,6 +169,9 @@ src_unpack() {
 
 	# certificate filtering for clueless users (and even for those who know)
 	epatch ${FILESDIR}/${PN}-2.8.2.1-certificate-manager-filtering.patch
+
+	# Fix timezone offsets on fbsd.  bug #183708
+	epatch "${FILESDIR}"/${P}-fbsd.patch
 
 	eautoreconf
 }
