@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.1-r1.ebuild,v 1.1 2007/05/26 14:29:32 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.1-r1.ebuild,v 1.2 2007/07/06 19:50:05 mr_bones_ Exp $
 
 inherit kde eutils
 
@@ -19,7 +19,7 @@ IUSE="alsa css dvdr dvdread encode ffmpeg flac hal kde mp3 musepack musicbrainz
 
 DEPEND="kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
 	hal? ( || ( dev-libs/dbus-qt3-old
-				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.30 ) )
+				>=sys-apps/dbus-0.30 )
 		sys-apps/hal )
 	media-libs/libsamplerate
 	media-libs/taglib
@@ -100,7 +100,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--enable-libsuffix= 		\
+	local myconf="--enable-libsuffix=		\
 			--with-external-libsamplerate	\
 			--without-resmgr				\
 			--without-cdrecord-suid-root	\
