@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.8.8.ebuild,v 1.9 2007/07/05 23:04:15 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.8.8.ebuild,v 1.10 2007/07/06 14:52:32 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc x86"
 IUSE=""
 
 # autogen doesn't build with lower versions of guile on ia64
