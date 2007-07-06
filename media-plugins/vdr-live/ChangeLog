@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-live
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.5 2007/06/26 17:21:46 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.6 2007/07/06 13:42:41 zzam Exp $
+
+*vdr-live-0.1.0.20070704 (06 Jul 2007)
+
+  06 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-live-content-type.diff, +vdr-live-0.1.0.20070704.ebuild:
+  Added a cvs snapshot. Added patch to make live send correct character
+  encoding to the browser.
 
   26 Jun 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/0.1.0/vdr-live-0.1.0_vdr-1.5.3-compile.diff,

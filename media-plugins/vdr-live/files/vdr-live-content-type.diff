@@ -1,0 +1,100 @@
+Index: live-20070704/tntconfig.cpp
+===================================================================
+--- live-20070704.orig/tntconfig.cpp
++++ live-20070704/tntconfig.cpp
+@@ -57,6 +57,8 @@ void TntConfig::WriteConfig()
+ 	file << "PropertyFile " << m_propertiesPath << endl;
+ 	file << "SessionTimeout 86400" << endl;
+ 
++	file << "DefaultContentType \"text/html; charset=" << encoding << "\"" << endl;
++
+ 	Setup::IpList const& ips = LiveSetup().GetServerIps();
+ 	int port = LiveSetup().GetServerPort();
+ 	for ( Setup::IpList::const_iterator ip = ips.begin(); ip != ips.end(); ++ip ) {
+Index: live-20070704/pages/xmlresponse.ecpp
+===================================================================
+--- live-20070704.orig/pages/xmlresponse.ecpp
++++ live-20070704/pages/xmlresponse.ecpp
+@@ -2,6 +2,12 @@
+ #include <string>
+ 
+ using namespace std;
++namespace vdrlive {
++extern const char * encoding;
++};
++
++std::string xml_head_1 = "<?xml version=\"1.0\" encoding=\"";
++std::string xml_head_2 = "\"?>";
+ </%pre>
+ 
+ <# ------------------------------------------------------------------------- #>
+@@ -14,7 +20,7 @@ using namespace std;
+ 	bool result;
+ 	string error;
+ </%args>
+-<?xml version="1.0" encoding="ISO-8859-1"?>
++<$$ xml_head_1 $><$ vdrlive::encoding $><$$ xml_head_2 $>
+ <service>
+   <request name="<$ name $>">
+      <param name="<$ pname $>"><$ value $></param>
+@@ -38,7 +44,7 @@ using namespace std;
+ 	string prev_chan;
+ 	string next_chan;
+ </%args>
+-<?xml version="1.0" encoding="ISO-8859-1"?>
++<$$ xml_head_1 $><$ vdrlive::encoding $><$$ xml_head_2 $>
+ <service>
+   <request name="ibox">
+ 	<param name="update"><$ update $></param>
+Index: live-20070704/thread.cpp
+===================================================================
+--- live-20070704.orig/thread.cpp
++++ live-20070704/thread.cpp
+@@ -1,8 +1,10 @@
+ #include <cstdlib>
+ #include <iostream>
+ #include <stdexcept>
++#include <vdr/config.h>
+ #include <vdr/tools.h>
+ #include <tnt/tntnet.h>
++#include <vdr/i18n.h>
+ #include "thread.h"
+ #include "tntconfig.h"
+ 
+@@ -23,6 +25,8 @@ private:
+ 	char* m_string;
+ };
+ 
++const char* encoding = NULL;
++
+ ServerThread::ServerThread()
+ {
+ }
+@@ -43,6 +47,14 @@ void ServerThread::Stop()
+ void ServerThread::Action()
+ {
+ 	try {
++#if VDRVERSNUM >= 10503
++		if ( cCharSetConv::SystemCharacterTable() )
++			encoding = cCharSetConv::SystemCharacterTable();
++		else
++			encoding = "UTF-8";
++#else
++		encoding = I18nCharSets()[::Setup.OSDLanguage];
++#endif
+ 		ProtectedCString configPath( TntConfig::Get().GetConfigPath().c_str() );
+ 
+ 		char* argv[] = { const_cast< char* >( "tntnet" ), const_cast< char* >( "-c" ), configPath };
+Index: live-20070704/thread.h
+===================================================================
+--- live-20070704.orig/thread.h
++++ live-20070704/thread.h
+@@ -22,6 +22,8 @@ private:
+ 	std::auto_ptr< tnt::Tntnet > m_server;
+ };
+ 
++extern const char *encoding;
++
+ } // namespace vdrlive
+ 
+ #endif // VDR_LIVE_THREAD_H
