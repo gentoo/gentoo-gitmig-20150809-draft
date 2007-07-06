@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7447 2007/07/06 16:23:38 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7448 2007/07/06 17:15:40 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -101,10 +101,6 @@ x11-misc/gwhere
 # Doug Goldstein <cardoe@gentoo.org> (28 Jun 2007)
 # masked due to security issues see bug #177630
 www-apps/otrs
-
-# Raúl Porcel <armin76@gentoo.org> (28 Jun 2007)
-# Mask rc versions
-=net-p2p/deluge-0.5.2_rc*
 
 # Ali Polatel <hawking@gentoo.org> (28 Jun 2007)
 # Included in python standard library with python-2.1.
