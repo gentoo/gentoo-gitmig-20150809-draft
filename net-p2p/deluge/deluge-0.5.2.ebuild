@@ -1,14 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.2_rc1.ebuild,v 1.1 2007/06/28 18:18:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.2.ebuild,v 1.1 2007/07/06 11:44:17 armin76 Exp $
 
 inherit eutils distutils
 
-MY_P="${PN}-0.5.1.90"
-
 DESCRIPTION="BitTorrent client in Python and PyGTK."
 HOMEPAGE="http://deluge-torrent.org/"
-SRC_URI="http://download.deluge-torrent.org/testing/${MY_P}.tar.gz"
+SRC_URI="http://download.deluge-torrent.org/stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,8 +20,6 @@ RDEPEND="${DEPEND}
 	dev-python/pyxdg
 	dev-python/dbus-python
 	libnotify? ( dev-python/notify-python )"
-
-S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	if has_version "<dev-libs/boost-1.34" && \
