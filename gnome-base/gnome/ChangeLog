@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.278 2007/06/20 01:50:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.279 2007/07/06 09:46:35 uberlord Exp $
+
+  06 Jul 2007; Roy Marples <uberlord@gentoo.org> gnome-2.18.0.ebuild:
+  Keyworded x86-fbsd
 
   20 Jun 2007; Daniel Gryniewicz <dang@gentoo.org> gnome-2.14.2.ebuild,
   gnome-2.16.2.ebuild, gnome-2.16.3.ebuild, gnome-2.18.0.ebuild:
