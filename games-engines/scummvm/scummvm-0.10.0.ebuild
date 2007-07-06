@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.10.0.ebuild,v 1.2 2007/07/05 20:00:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.10.0.ebuild,v 1.3 2007/07/06 17:47:42 flameeyes Exp $
 
 inherit eutils games
 
@@ -25,6 +25,17 @@ RDEPEND=">=media-libs/libsdl-1.2.2
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
+
+pkg_setup() {
+	games_pkg_setup
+
+	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
+		eerror ""
+		eerror "To be able to build ${CATEGORY}/${PN} with ALSA support you"
+		eerror "need to have built media-libs/alsa-lib with midi USE flag."
+		die "Missing midi USE flag on media-libs/alsa-lib"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

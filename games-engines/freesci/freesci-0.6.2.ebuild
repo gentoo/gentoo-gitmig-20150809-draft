@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.2.ebuild,v 1.2 2006/12/01 22:21:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.2.ebuild,v 1.3 2007/07/06 17:48:34 flameeyes Exp $
 
 inherit games
 
@@ -27,6 +27,17 @@ DEPEND="${RDEPEND}
 	X? (
 		x11-libs/libXft
 		x11-libs/libXt )"
+
+pkg_setup() {
+	games_pkg_setup
+
+	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
+		eerror ""
+		eerror "To be able to build ${CATEGORY}/${PN} with ALSA support you"
+		eerror "need to have built media-libs/alsa-lib with midi USE flag."
+		die "Missing midi USE flag on media-libs/alsa-lib"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

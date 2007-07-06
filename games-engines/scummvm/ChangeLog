@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.48 2007/07/05 20:00:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.49 2007/07/06 17:47:42 flameeyes Exp $
+
+  06 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> scummvm-0.10.0.ebuild:
+  Add a pkg_setup check for midi USE flag in alsa-lib.
 
   05 Jul 2007; Markus Rothe <corsair@gentoo.org> scummvm-0.10.0.ebuild:
   Added ~ppc64; bug #183570
