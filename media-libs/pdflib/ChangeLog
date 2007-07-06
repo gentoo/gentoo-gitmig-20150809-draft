@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.73 2007/07/06 15:33:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.74 2007/07/06 16:31:01 anant Exp $
+
+  06 Jul 2007; Anant Narayanan <anant@gentoo.org> pdflib-7.0.1.ebuild:
+  Add revdep-rebuild instructions to pkg_postinst()
 
   06 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> pdflib-7.0.1.ebuild:
   Keyworded ~sparc wrt #184343
