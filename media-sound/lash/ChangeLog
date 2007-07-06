@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.10 2007/07/04 08:15:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.11 2007/07/06 16:26:38 flameeyes Exp $
+
+  06 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> lash-0.5.3.ebuild:
+  Add python and gtk USE flags. Run elibtoolize. Check for midi useflag on
+  alsa-lib when alsa USE flag is enabled.
 
   04 Jul 2007; Alexis Ballier <aballier@gentoo.org> lash-0.5.3.ebuild:
   alsa is optional
