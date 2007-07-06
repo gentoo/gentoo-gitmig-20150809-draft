@@ -1,18 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.4 2007/06/26 01:49:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.5 2007/07/06 00:02:59 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
-# ghc requires ghc-bin to bootstrap.
-# Therefore,
-# (1) both ghc-bin and ghc provide virtual/ghc
-# (2) virtual/ghc *must* default to ghc-bin
-# (3) ghc depends on virtual/ghc
+# Previous ghc ebuilds have been split into two: ghc and ghc-bin,
+# where ghc-bin was primarily used for bootstrapping purposes.
+# From now on, these two ebuilds have been combined, with the
+# binary USE flag used to determine whether or not the pre-built
+# binary package should be emerged or whether ghc should be compiled
+# from source.  If the latter, then the relevant ghc-bin for the
+# arch in question will be used in the working directory to compile
+# ghc from source.
 #
-# This solution has the advantage that the binary distribution
-# can be removed once an forall after the first succesful install
-# of ghc.
+# This solution has the advantage of allowing us to retain the one
+# ebuild for both packages, and thus phase out virtual/ghc.
 
 # Note to users of hardened gcc-3.x:
 #
@@ -38,14 +40,23 @@ MY_P="${PN}-${MY_PV}"
 EXTRA_SRC_URI="${MY_PV}"
 [[ -z "${IS_SNAPSHOT}" ]] && EXTRA_SRC_URI="current/dist"
 
-SRC_URI="http://haskell.org/ghc/dist/${EXTRA_SRC_URI}/${MY_P}-src.tar.bz2"
+SRC_URI="!binary? ( http://haskell.org/ghc/dist/${EXTRA_SRC_URI}/${MY_P}-src.tar.bz2 )
+		 doc? 	( binary? ( mirror://${P}-libraries.tar.gz
+						    mirror://${P}-users_guide.tar.gz ) )
+		 amd64?	( mirror://gentoo/ghc-bin-${PV}-amd64.tbz2 )
+		 x86?	( mirror://gentoo/ghc-bin-${PV}-x86.tbz2 )
+		 ppc?	( mirror://gentoo/ghc-bin-${PV}-ppc.tbz2 )"
+#		 alpha?		( mirror://gentoo/ghc-bin-${PV}-alpha.tbz2 )
+#		 sparc?		( mirror://gentoo/ghc-bin-${PV}-sparc.tbz2 )
 #	"test? ( http://haskell.org/ghc/dist/${EXTRA_SRC_URI}/ghc-testsuite-${MY_PV}.tar.gz )"
 
-LICENSE="as-is"
+LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc"
+KEYWORDS="~amd64 ~ppc ~x86"
+#KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="binary doc ghcbootstrap"
 
+LOC="/opt/ghc" # location for installation of binary version
 S="${WORKDIR}/${MY_P}"
 
 PROVIDE="virtual/ghc"
@@ -54,31 +65,16 @@ RDEPEND="
 	>=sys-devel/gcc-2.95.3
 	>=dev-lang/perl-5.6.1
 	>=dev-libs/gmp-4.1
-	>=sys-libs/readline-4.2"
+	=sys-libs/readline-5*"
 
-# ghc cannot usually be bootstrapped using later versions ...
 DEPEND="${RDEPEND}
-	<virtual/ghc-6.7
-	!>=virtual/ghc-6.7
-	doc? (  ~app-text/docbook-xml-dtd-4.2
+	doc? ( !binary? (
+			~app-text/docbook-xml-dtd-4.2
 			app-text/docbook-xsl-stylesheets
 			>=dev-libs/libxslt-1.1.2
-			>=dev-haskell/haddock-0.8 )"
+			>=dev-haskell/haddock-0.8 ) )"
 
 PDEPEND=">=dev-haskell/cabal-1.1.6.1"
-
-#pkg_setup() {
-	# Portage's resolution of virtuals fails on virtual/ghc in some Portage
-	# releases, the following function causes the build to fail with an
-	# informative error message in such a case.
-	#if ! has_version virtual/ghc; then
-	#	eerror "This ebuild needs a version of GHC to bootstrap from."
-	#	eerror "Please emerge dev-lang/ghc-bin to get a binary version."
-	#	eerror "You can either use the binary version directly or emerge"
-	#	eerror "dev-lang/ghc afterwards."
-	#	die "virtual/ghc version required to build"
-	#fi
-#}
 
 append-ghc-cflags() {
 	local flag compile assemble link
@@ -136,143 +132,209 @@ ghc_setup_cflags() {
 
 ghc_setup_wrapper() {
 	echo '#!/bin/sh'
-	echo "GHCBIN=\"$(ghc-libdir)/ghc-$1\";"
-	echo "TOPDIROPT=\"-B$(ghc-libdir)\";"
+	echo "GHCBIN=\"$1\";"
+	echo "TOPDIROPT=\"-B$(dirname $1)\";"
 	echo "GHC_CFLAGS=\"${GHC_CFLAGS}\";"
 	echo '# Mini-driver for GHC'
 	echo 'exec $GHCBIN $TOPDIROPT $GHC_CFLAGS ${1+"$@"}'
 }
 
+pkg_setup() {
+	if use ghcbootstrap && [[ -z $(type -P ghc) ]]; then
+		ewarn ""
+		ewarn "You requested bootstrapping,"
+		ewarn "but I could not find a ghc executable to bootstrap with"
+		ewarn ""
+		die "Could not find a ghc executable to bootstrap with"
+	fi
+}
+
 src_unpack() {
+	# Create the ${S} dir if we're using the binary version
+	use binary && mkdir "${S}"
+
 	base_src_unpack
 	ghc_setup_cflags
 
-	# Modify the ghc driver script to use GHC_CFLAGS
-	echo "SCRIPT_SUBST_VARS += GHC_CFLAGS" >> "${S}/driver/ghc/Makefile"
-	echo "GHC_CFLAGS = ${GHC_CFLAGS}"      >> "${S}/driver/ghc/Makefile"
-	sed -i -e 's|$TOPDIROPT|$TOPDIROPT $GHC_CFLAGS|' "${S}/driver/ghc/ghc.sh"
+	if use binary; then
 
-	# If we're using the testsuite then move it to into the build tree
-#	use test && mv "${WORKDIR}/testsuite" "${S}/"
+		# Move unpacked files to the expected place
+		mv "${WORKDIR}/usr" "${S}"
 
-	# This is a hack for ia64. We can persuade ghc to avoid mangler errors
-	# if we turn down the optimisations in one problematic module.
-	use ia64 && sed -i -e 's/OPTIONS_GHC/OPTIONS_GHC -O0 -optc-O/' \
-		"${S}/libraries/base/GHC/Float.lhs"
+		if use doc; then
+			mkdir "${S}/usr/share/doc/${MY_P}/html"
+			mv "${WORKDIR}/libraries" "${S}/usr/share/doc/${MY_P}/html/"
+			mv "${WORKDIR}/users_guide" "${S}/usr/share/doc/${MY_P}/html/"
+		fi
 
-	# Don't strip binaries on install. See QA warnings in bug #140369.
-	sed -i -e 's/SRC_INSTALL_BIN_OPTS	+= -s//' ${S}/mk/config.mk.in
+		# Setup the ghc wrapper script
+		GHCBIN="${LOC}/$(get_libdir)/$P/$P"
+		ghc_setup_wrapper "$GHCBIN" > "${S}/usr/bin/ghc-${PV}"
 
-	# Temporary patches that needs testing before being pushed upstream:
-	cd "${S}"
-	# Fix sparc split-objs linking problem
-	epatch "${FILESDIR}/ghc-6.5-norelax.patch"
+		# Relocate from /usr to /opt/ghc
+		sed -i -e "s|/usr|${LOC}|g" \
+			"${S}/usr/bin/ghci-${PV}" \
+			"${S}/usr/bin/ghc-pkg-${PV}" \
+			"${S}/usr/bin/hsc2hs" \
+			"${S}/usr/$(get_libdir)/ghc-${PV}/package.conf"
 
-	# Disable threaded runtime build to work around RTS bugs on sparc
-	epatch "${FILESDIR}/ghc-6.6-nothreadedrts.patch"
+		sed -i -e "s|/usr/$(get_libdir)|${LOC}/$(get_libdir)|" \
+			"${S}/usr/bin/ghcprof"
+
+	else
+
+		# Modify the ghc driver script to use GHC_CFLAGS
+		echo "SCRIPT_SUBST_VARS += GHC_CFLAGS" >> "${S}/driver/ghc/Makefile"
+		echo "GHC_CFLAGS = ${GHC_CFLAGS}"      >> "${S}/driver/ghc/Makefile"
+		sed -i -e 's|$TOPDIROPT|$TOPDIROPT $GHC_CFLAGS|' "${S}/driver/ghc/ghc.sh"
+
+		# Create the setup wrapper
+		if use ghcbootstrap; then
+			# When we are bootstrapping, rely on the developer to have set a
+			# sane environment
+
+			echo -e '#!/bin/sh\nexec ghc $*' > "${T}/ghc.sh"
+		else
+			GHC_TOP="${WORKDIR}/usr/$(get_libdir)/${P}"
+			GHC_CFLAGS="" ghc_setup_wrapper "${GHC_TOP}/${P}" > "${T}/ghc.sh"
+
+			# Fix paths for workdir ghc
+			sed -i -e "s|/usr|${WORKDIR}/usr|g" \
+				"${GHC_TOP}/package.conf"
+		fi
+
+		chmod +x "${T}/ghc.sh"
+
+		# If we're using the testsuite then move it to into the build tree
+		#	use test && mv "${WORKDIR}/testsuite" "${S}/"
+
+		# This is a hack for ia64. We can persuade ghc to avoid mangler errors
+		# if we turn down the optimisations in one problematic module.
+		use ia64 && sed -i -e 's/OPTIONS_GHC/OPTIONS_GHC -O0 -optc-O/' \
+			"${S}/libraries/base/GHC/Float.lhs"
+
+		# Don't strip binaries on install. See QA warnings in bug #140369.
+		sed -i -e 's/SRC_INSTALL_BIN_OPTS	+= -s//' ${S}/mk/config.mk.in
+
+		# Temporary patches that needs testing before being pushed upstream:
+		cd "${S}"
+		# Fix sparc split-objs linking problem
+		epatch "${FILESDIR}/ghc-6.5-norelax.patch"
+
+		# Disable threaded runtime build to work around RTS bugs on sparc
+		epatch "${FILESDIR}/ghc-6.6-nothreadedrts.patch"
+
+	fi
 }
 
 src_compile() {
-	# initialize build.mk
-	echo '# Gentoo changes' > mk/build.mk
+	if ! use binary; then
 
-	# We also need to use the GHC_CFLAGS flags when building ghc itself
-	echo "SRC_HC_OPTS+=${GHC_CFLAGS}" >> mk/build.mk
-	echo "SRC_CC_OPTS+=${CFLAGS} -Wa,--noexecstack" >> mk/build.mk
+		# initialize build.mk
+		echo '# Gentoo changes' > mk/build.mk
 
-	# If you need to do a quick build then enable this bit and add debug to IUSE
-	#if use debug; then
-	#	echo "SRC_HC_OPTS     = -H32m -O -fasm" >> mk/build.mk
-	#	echo "GhcLibHcOpts    =" >> mk/build.mk
-	#	echo "GhcLibWays      =" >> mk/build.mk
-	#	echo "SplitObjs       = NO" >> mk/build.mk
-	#fi
+		# We also need to use the GHC_CFLAGS flags when building ghc itself
+		echo "SRC_HC_OPTS+=${GHC_CFLAGS}" >> mk/build.mk
+		echo "SRC_CC_OPTS+=${CFLAGS} -Wa,--noexecstack" >> mk/build.mk
 
-	# determine what to do with documentation
-	if use doc; then
-		echo XMLDocWays="html" >> mk/build.mk
-	else
-		echo XMLDocWays="" >> mk/build.mk
-		# needed to prevent haddock from being called
-		echo NO_HADDOCK_DOCS=YES >> mk/build.mk
-	fi
+		# If you need to do a quick build then enable this bit and add debug to IUSE
+		#if use debug; then
+		#	echo "SRC_HC_OPTS     = -H32m -O -fasm" >> mk/build.mk
+		#	echo "GhcLibHcOpts    =" >> mk/build.mk
+		#	echo "GhcLibWays      =" >> mk/build.mk
+		#	echo "SplitObjs       = NO" >> mk/build.mk
+		#fi
 
-	# circumvent a very strange bug that seems related with ghc producing too much
-	# output while being filtered through tee (e.g. due to portage logging)
-	# reported as bug #111183
-	echo "SRC_HC_OPTS+=-fno-warn-deprecations" >> mk/build.mk
+		# determine what to do with documentation
+		if use doc; then
+		  echo XMLDocWays="html" >> mk/build.mk
+		else
+		  echo XMLDocWays="" >> mk/build.mk
+		  # needed to prevent haddock from being called
+		  echo NO_HADDOCK_DOCS=YES >> mk/build.mk
+		fi
 
-	# force the config variable ArSupportsInput to be unset;
-	# ar in binutils >= 2.14.90.0.8-r1 seems to be classified
-	# incorrectly by the configure script
-	echo "ArSupportsInput:=" >> mk/build.mk
+		# circumvent a very strange bug that seems related with ghc producing too much
+		# output while being filtered through tee (e.g. due to portage logging)
+		# reported as bug #111183
+		echo "SRC_HC_OPTS+=-fno-warn-deprecations" >> mk/build.mk
 
-	# Some arches do support some ghc features even though they're off by default
-	use ia64 && echo "GhcWithInterpreter=YES" >> mk/build.mk
+		# force the config variable ArSupportsInput to be unset;
+		# ar in binutils >= 2.14.90.0.8-r1 seems to be classified
+		# incorrectly by the configure script
+		echo "ArSupportsInput:=" >> mk/build.mk
 
-	# Workaround for threaded RTS bugs on sparc in ghc-6.6
-	# This is rather draconian, hopefully upstream fixes this soon.
-	if use sparc; then
-		echo "GhcUnregisterised=YES" >> mk/build.mk
-		echo "GhcWithNativeCodeGen=NO" >> mk/build.mk
-		echo "GhcWithInterpreter=NO" >> mk/build.mk
-		echo "SplitObjs=NO" >> mk/build.mk
-		echo "GhcRTSWays := debug" >> mk/build.mk
-		echo "GhcNotThreaded=YES" >> mk/build.mk
-	fi
+		# Some arches do support some ghc features even though they're off by default
+		use ia64 && echo "GhcWithInterpreter=YES" >> mk/build.mk
 
-	# The SplitObjs feature makes 'ar'/'ranlib' take loads of RAM:
-	CHECKREQS_MEMORY="200"
-	if ! check_reqs_conditional; then
-		elog "Turning off ghc's 'Split Objs' feature because this machine"
-		elog "does not have enough RAM for it. This will have the effect"
-		elog "of making binaries produced by ghc considerably larger."
-		echo "SplitObjs=NO" >> mk/build.mk
-	fi
+		# Workaround for threaded RTS bugs on sparc in ghc-6.6
+		# This is rather draconian, hopefully upstream fixes this soon.
+		if use sparc; then
+		  echo "GhcUnregisterised=YES" >> mk/build.mk
+		  echo "GhcWithNativeCodeGen=NO" >> mk/build.mk
+		  echo "GhcWithInterpreter=NO" >> mk/build.mk
+		  echo "SplitObjs=NO" >> mk/build.mk
+		  echo "GhcRTSWays := debug" >> mk/build.mk
+		  echo "GhcNotThreaded=YES" >> mk/build.mk
+		fi
 
-	GHC_CFLAGS="" ghc_setup_wrapper $(ghc-version) > "${T}/ghc.sh"
-	chmod +x "${T}/ghc.sh"
+		# The SplitObjs feature makes 'ar'/'ranlib' take loads of RAM:
+		CHECKREQS_MEMORY="200"
+		if ! check_reqs_conditional; then
+		  elog "Turning off ghc's 'Split Objs' feature because this machine"
+		  elog "does not have enough RAM for it. This will have the effect"
+		  elog "of making binaries produced by ghc considerably larger."
+		  echo "SplitObjs=NO" >> mk/build.mk
+		fi
 
-	econf \
-		--with-ghc="${T}/ghc.sh" \
-		|| die "econf failed"
+		econf \
+		  --with-ghc="${T}/ghc.sh" \
+		  || die "econf failed"
 
-	emake all datadir="/usr/share/doc/${PF}" || die "make failed"
-	# the explicit datadir is required to make the haddock entries
-	# in the package.conf file point to the right place ...
-	# TODO: is this still required ?
+		emake all datadir="/usr/share/doc/${PF}" || die "make failed"
+		# the explicit datadir is required to make the haddock entries
+		# in the package.conf file point to the right place ...
+		# TODO: is this still required ?
 
+	fi # ! use binary
 }
 
 src_install () {
-	local insttarget
+	if use binary; then
+	  mkdir "${D}/opt"
+	  mv "${S}/usr" "${D}/opt/ghc"
 
-	insttarget="install"
-	use doc && insttarget="${insttarget} install-docs"
+	  doenvd "${FILESDIR}/10ghc"
+	else
+	  local insttarget
 
-	# the libdir0 setting is needed for amd64, and does not
-	# harm for other arches
-	#TODO: is this still required?
-	emake -j1 ${insttarget} \
-		prefix="${D}/usr" \
-		datadir="${D}/usr/share/doc/${PF}" \
-		infodir="${D}/usr/share/info" \
-		mandir="${D}/usr/share/man" \
-		libdir0="${D}/usr/$(get_libdir)" \
-		|| die "make ${insttarget} failed"
+	  insttarget="install"
+	  use doc && insttarget="${insttarget} install-docs"
 
-	#need to remove ${D} from ghcprof script
-	# TODO: does this actually work?
-	cd "${D}/usr/bin"
-	mv ghcprof ghcprof-orig
-	sed -e 's:$FPTOOLS_TOP_ABS:#$FPTOOLS_TOP_ABS:' ghcprof-orig > ghcprof
-	chmod a+x ghcprof
-	rm -f ghcprof-orig
+	  # the libdir0 setting is needed for amd64, and does not
+	  # harm for other arches
+	  #TODO: is this still required?
+	  emake -j1 ${insttarget} \
+		  prefix="${D}/usr" \
+		  datadir="${D}/usr/share/doc/${PF}" \
+		  infodir="${D}/usr/share/info" \
+		  mandir="${D}/usr/share/man" \
+		  libdir0="${D}/usr/$(get_libdir)" \
+		  || die "make ${insttarget} failed"
 
-	cd "${S}"
-	dodoc README ANNOUNCE LICENSE VERSION
+	  #need to remove ${D} from ghcprof script
+	  # TODO: does this actually work?
+	  cd "${D}/usr/bin"
+	  mv ghcprof ghcprof-orig
+	  sed -e 's:$FPTOOLS_TOP_ABS:#$FPTOOLS_TOP_ABS:' ghcprof-orig > ghcprof
+	  chmod a+x ghcprof
+	  rm -f ghcprof-orig
 
-	dosbin ${FILESDIR}/ghc-updater
+	  cd "${S}"
+	  dodoc README ANNOUNCE LICENSE VERSION
+
+	  dosbin ${FILESDIR}/ghc-updater
+	fi
 }
 
 pkg_postinst () {
@@ -283,10 +345,23 @@ pkg_postinst () {
 	elog "If you have dev-lang/ghc-bin installed, you might"
 	elog "want to unmerge it. It is no longer needed."
 	elog
+
+	if use binary; then
+		elog "The envirenment has been set to use the binary distribution of"
+		elog "GHC. In order to activate it please run:"
+		elog "   env-update && source /etc/profile"
+		elog "Otherwise this setting will become active the next time you login"
+	fi
+
 	ewarn "IMPORTANT:"
 	ewarn "If you have upgraded from another version of ghc or"
-	ewarn "if you have switched from ghc-bin to ghc, please run:"
-	ewarn "	/usr/sbin/ghc-updater"
+	ewarn "if you have switched between binary and source versions"
+	ewarn "of ghc, please run:"
+	if use binary; then
+		ewarn "      /opt/ghc/sbin/ghc-updater"
+	else
+		ewarn "      /usr/sbin/ghc-updater"
+	fi
 	ewarn "to re-merge all ghc-based Haskell libraries."
 }
 

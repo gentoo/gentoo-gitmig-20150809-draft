@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.119 2007/04/06 16:26:05 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.120 2007/07/06 00:02:59 dcoutts Exp $
+
+  05 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> +files/10ghc,
+  ghc-6.6.ebuild:
+  Merge ghc and ghc-bin ebuilds. emerge ghc with USE="binary" to get a binary
+  version. The ghc-bin ebuild will not be used anymore. This ghc ebuild is
+  able to bootstrap without a separate ghc-bin ebuild by downloading a binary
+  version specially for the purpose.
 
   06 Apr 2007; Chris Parrott <cparrott@gentoo.org>
   +files/ghc-6.6-nothreadedrts.patch, ghc-6.6.ebuild:
