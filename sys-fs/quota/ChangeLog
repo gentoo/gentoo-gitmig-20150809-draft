@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.25 2007/07/06 12:37:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.26 2007/07/06 13:08:28 gustavoz Exp $
+
+  06 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> quota-3.14-r1.ebuild:
+  Stable on sparc wrt #184382
 
   06 Jul 2007; Christoph Mende <angelos@gentoo.org> quota-3.14-r1.ebuild:
   Stable on amd64 wrt bug #184382
