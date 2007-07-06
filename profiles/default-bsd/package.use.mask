@@ -4,6 +4,7 @@ dev-util/catalyst cdr
 gnome-extra/gnome-screensaver pam
 
 # Requires Linux-only packages
+app-accessibility/gok usb
 kde-base/kcontrol ieee1394
 kde-base/kdebase ieee1394
 kde-base/kdenetwork-meta wifi
