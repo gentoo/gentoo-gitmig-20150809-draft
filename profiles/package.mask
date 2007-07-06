@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7450 2007/07/06 21:32:27 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7451 2007/07/06 22:06:34 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1331,7 +1331,6 @@ dev-lisp/cl-rsm-genetic-alg
 games-fps/unreal
 games-fps/unreal-tournament
 games-fps/unreal-tournament-goty
-games-fps/unreal-tournament-infiltration
 games-fps/unreal-tournament-strikeforce
 games-fps/unreal-tournament-bonuspacks
 games-fps/aaut
