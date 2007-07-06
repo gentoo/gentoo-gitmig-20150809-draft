@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/gnuboy
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/ChangeLog,v 1.10 2006/09/28 12:45:03 nyhm Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/ChangeLog,v 1.11 2007/07/06 18:48:05 nyhm Exp $
+
+  06 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/gnuboy-1.0.3-exec-stack.patch,
+  +files/gnuboy-1.0.3-linux-headers.patch, gnuboy-1.0.3.ebuild:
+  Fix for recent linux-headers and exec stack
 
   28 Sep 2006; Tristan Heaven <nyhm@gentoo.org> gnuboy-1.0.3.ebuild:
   Add missing RDEPEND on sys-apps/fbset, bug #99983
