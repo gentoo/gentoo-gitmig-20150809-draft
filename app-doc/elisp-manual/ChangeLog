@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/elisp-manual
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.2 2007/07/06 13:09:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.3 2007/07/06 17:50:24 opfer Exp $
+
+  06 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  elisp-manual-21.2.8-r1.ebuild:
+  x86 stable, bug 184408
 
   06 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   elisp-manual-21.2.8-r1.ebuild:
