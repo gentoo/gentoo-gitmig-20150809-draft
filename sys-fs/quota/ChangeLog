@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.23 2007/06/21 18:45:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.24 2007/07/06 04:29:28 vapier Exp $
+
+  06 Jul 2007; Mike Frysinger <vapier@gentoo.org> quota-3.14-r1.ebuild:
+  Add -DLDAP_DEPRECATED=1 to CPPFLAGS #183359 by Andrew Ross.
 
   21 Jun 2007; Raúl Porcel <armin76@gentoo.org> quota-3.13.ebuild:
   alpha stable wrt #172154, thanks to Tobias Klausmann for testing

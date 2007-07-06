@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.14-r1.ebuild,v 1.1 2007/04/13 10:45:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.14-r1.ebuild,v 1.2 2007/07/06 04:29:28 vapier Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Linux quota tools"
 HOMEPAGE="http://sourceforge.net/projects/linuxquota/"
@@ -34,6 +34,8 @@ src_unpack() {
 
 	# Don't strip binaries (from Fedora)
 	epatch "${FILESDIR}"/quota-3.06-no-stripping.patch
+
+	append-cppflags -DLDAP_DEPRECATED=1
 
 	sed -i -e "s:,LIBS=\"\$saved_LIBS=\":;LIBS=\"\$saved_LIBS\":" configure
 }
