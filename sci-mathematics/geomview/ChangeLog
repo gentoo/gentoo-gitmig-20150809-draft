@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/geomview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.4 2007/04/04 06:08:02 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.5 2007/07/06 07:30:51 nerdboy Exp $
+
+*geomview-1.9.2 (06 Jul 2007)
+
+  06 Jul 2007; Steve Arnold <nerdboy@gentoo.org> +files/geomview.png,
+  +files/gvcl-mode.el, +geomview-1.9.2.ebuild:
+  overdue version bump and feature additions (modified ebuild from user,
+  but I admit to finding it on my hard drive and I have no idea where it
+  originally came from)
 
 *geomview-1.8.2_rc9 (04 Apr 2007)
 
