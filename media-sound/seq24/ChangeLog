@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/seq24
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.26 2007/07/02 15:19:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.27 2007/07/06 16:36:56 flameeyes Exp $
+
+  06 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> seq24-0.8.7.ebuild:
+  Add a pkg_setup check for the midi USE flag in alsa-lib; disable the ALSA
+  test, we expect it to be present.
 
   02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Hand to newly-born proaudio herd.
