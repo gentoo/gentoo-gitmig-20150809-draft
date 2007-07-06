@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.107 2007/06/24 20:14:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.108 2007/07/06 05:09:40 vapier Exp $
+
+*pciutils-2.2.6-r1 (06 Jul 2007)
+
+  06 Jul 2007; Mike Frysinger <vapier@gentoo.org> +pciutils-2.2.6-r1.ebuild:
+  Fix install of pkg-config file.
 
   24 Jun 2007; Mike Frysinger <vapier@gentoo.org> pciutils-2.2.4-r3.ebuild:
   Add workaround for stable where we decompress pci.ids when USE=hal.
