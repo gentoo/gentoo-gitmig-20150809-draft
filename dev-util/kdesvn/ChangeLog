@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.27 2007/05/27 21:05:46 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.28 2007/07/06 22:12:57 george Exp $
+
+  06 Jul 2007; George Shapovalov <george@gentoo.org> kdesvn-0.9.2.ebuild,
+  kdesvn-0.9.3.ebuild, kdesvn-0.11.1.ebuild, kdesvn-0.11.2.ebuild,
+  kdesvn-0.12.0.ebuild:
+  upstream has changed source directory layout, adjusted ebuilds (#184146).
+  Thanks to Bram Schoenmakers for reporting.
 
   27 May 2007; Peter Weller <welp@gentoo.org> kdesvn-0.11.2.ebuild:
   Stable on amd64 wrt bug 171710
