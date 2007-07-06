@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7446 2007/07/06 13:20:57 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7447 2007/07/06 16:23:38 dcoutts Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -532,6 +532,7 @@ games-arcade/stepmania
 # Mask ghc-bin for testing.
 # See bug bug 151012
 =dev-lang/ghc-bin-6.6
+=dev-lang/ghc-bin-6.6.1
 
 # Raúl Porcel <armin76@gentoo.org> (15 Mar 2007)
 # Mask snapshots
