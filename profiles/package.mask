@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7445 2007/07/05 11:55:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7446 2007/07/06 13:20:57 peper Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Piotr Jaroszyński <peper@gentoo.org> (06 Jul 2007)
+# Masked for removal. bug #167379.
+x11-themes/gdm-themes
 
 # Samuli Suominen <drac@gentoo.org> (04 Jul 2007)
 # For treecleaners, bug 182937. Replaced by texinfo.

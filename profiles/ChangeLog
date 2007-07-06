@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.513 2007/07/06 00:02:05 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.514 2007/07/06 13:20:57 peper Exp $
+
+  06 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> package.mask:
+  Mask x11-themes/gdm-themes for removal. bug #167379.
 
   06 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> use.local.desc:
   Add binary and ghcbootstrap flags for dev-lang/ghc
