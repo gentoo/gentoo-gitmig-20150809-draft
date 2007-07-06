@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/howm/howm-1.3.3.ebuild,v 1.5 2007/07/06 18:37:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/howm/howm-1.3.4.ebuild,v 1.1 2007/07/06 18:37:09 ulm Exp $
 
 inherit elisp
 
@@ -31,5 +31,5 @@ src_install() {
 		DESTDIR="${D}" PREFIX=/usr LISPDIR="${SITELISP}/${PN}" install \
 		|| die "emake install failed"
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
-	dodoc NEWS README AUTHORS ChangeLog || die "dodoc failed"
+	dodoc ChangeLog || die "dodoc failed"
 }
