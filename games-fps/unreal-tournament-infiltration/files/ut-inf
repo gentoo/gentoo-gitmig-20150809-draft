@@ -1,2 +1,0 @@
-#!/bin/sh
-exec ut -ini=Infiltration.ini -userini=InfiltrationUser.ini -log=Infiltration.log ${@}
