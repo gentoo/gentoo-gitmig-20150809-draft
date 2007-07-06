@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2910 2007/07/05 19:46:13 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2911 2007/07/06 00:02:05 dcoutts Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -415,6 +415,8 @@ dev-lang/erlang:smp - Enable support for multiprocessors
 dev-lang/gdl:hdf - Adds support for the Hierarchical Data Format
 dev-lang/gdl:hdf5 - Adds support for the Hierarchical Data Format v 5
 dev-lang/gforth:force-reg - Enable a possibly unstable GCC flag for possibly large performance gains
+dev-lang/ghc:binary - Install the binary version directly, rather than using it to build the source version.
+dev-lang/ghc:ghcbootstrap - Internal: Bootstrap GHC from an exsting GHC installation.
 dev-lang/icon:iplsrc - install the icon programming library source
 dev-lang/ocaml:latex - Add ocamldoc support for latex
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
