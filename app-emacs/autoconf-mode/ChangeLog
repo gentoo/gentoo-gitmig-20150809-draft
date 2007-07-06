@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/autoconf-mode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.4 2007/07/06 16:14:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.5 2007/07/06 22:29:15 ulm Exp $
+
+  06 Jul 2007; Ulrich Mueller <ulm@gentoo.org> autoconf-mode-2.61.ebuild:
+  Add ~amd64 ~arm ~hppa ~ppc ~s390 ~sh ~sparc, closes bug #184219.
 
   06 Jul 2007; Markus Rothe <corsair@gentoo.org> autoconf-mode-2.61.ebuild:
   Added ~ppc64; bug #184219
