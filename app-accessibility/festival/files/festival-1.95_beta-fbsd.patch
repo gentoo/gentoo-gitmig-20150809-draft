@@ -1,0 +1,21 @@
+--- speech_tools/audio/voxware.cc.orig	2007-06-29 14:37:11 -0700
++++ speech_tools/audio/voxware.cc	2007-06-29 14:37:37 -0700
+@@ -61,7 +61,7 @@
+ #include "EST_error.h"
+ 
+ #ifdef SUPPORT_FREEBSD16
+-#include <machine/soundcard.h>
++#include <sys/soundcard.h>
+ #include <fcntl.h>
+ int freebsd16_supported = TRUE;
+ int linux16_supported = FALSE;
+--- speech_tools/audio/voxware.cc.orig	2007-06-29 14:53:01 -0700
++++ speech_tools/audio/voxware.cc	2007-06-29 14:53:20 -0700
+@@ -66,6 +66,7 @@
+ int freebsd16_supported = TRUE;
+ int linux16_supported = FALSE;
+ static char *aud_sys_name = "FreeBSD";
++static int stereo_only = 0;
+ #endif
+ 
+ #ifdef SUPPORT_LINUX16

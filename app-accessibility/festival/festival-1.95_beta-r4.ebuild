@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.95_beta-r4.ebuild,v 1.8 2007/06/11 14:10:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.95_beta-r4.ebuild,v 1.9 2007/07/06 10:39:12 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,7 +29,7 @@ SRC_URI="${SITE}/${MY_P}.tar.gz
 		${SITE}/festvox_us3.tar.gz )"
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="asterisk esd linguas_es mbrola X"
 
 RDEPEND="sys-libs/ncurses
@@ -65,6 +65,9 @@ src_unpack() {
 	sed -i -e "s:\.\./examples/:/usr/share/doc/${PF}/examples/:" ${S}/festival/lib/festival.scm
 
 	epatch ${FILESDIR}/${P}-init-scm.patch
+
+	# Allow building on fbsd, #183686
+	epatch ${FILESDIR}/${P}-fbsd.patch
 
 	# gcc 4.1 compatibility patches
 	epatch ${FILESDIR}/${P}-gcc41.patch

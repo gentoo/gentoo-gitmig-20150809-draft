@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.66 2007/06/11 14:10:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.67 2007/07/06 10:39:12 uberlord Exp $
+
+  06 Jul 2007; Roy Marples <uberlord@gentoo.org>
+  +files/festival-1.95_beta-fbsd.patch, festival-1.95_beta-r4.ebuild:
+  Add patch to build on fbsd, #183686 thanks to Nathan Smith.
+  Keyworded ~x86-fbsd.
 
   11 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   festival-1.95_beta-r4.ebuild:
