@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/ultrastar-ng
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ChangeLog,v 1.1 2007/07/06 20:58:10 tupone Exp $
+
+*ultrastar-ng-0.1.4 (06 Jul 2007)
+
+  06 Jul 2007; Tupone Alfredo <tupone@gentoo.org> +metadata.xml,
+  +ultrastar-ng-0.1.4.ebuild:
+  New package, request bug #163021 by Vincent
+
