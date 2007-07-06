@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.27 2007/06/27 16:31:15 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.28 2007/07/06 17:00:21 armin76 Exp $
+
+  06 Jul 2007; Raúl Porcel <armin76@gentoo.org> libvncserver-0.9.1.ebuild:
+  Add ~ia64 wrt #183009
 
   25 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
   libvncserver-0.9.1.ebuild:
