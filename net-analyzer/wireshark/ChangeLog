@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.55 2007/04/18 11:58:31 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.56 2007/07/06 16:09:31 jokey Exp $
+
+*wireshark-0.99.6 (06 Jul 2007)
+
+  06 Jul 2007; Markus Ullmann <jokey@gentoo.org> +wireshark-0.99.6.ebuild:
+  Security version bump wrt bug #183520
 
   18 Apr 2007; Markus Ullmann <jokey@gentoo.org> -wireshark-0.99.4.ebuild,
   -wireshark-0.99.4-r1.ebuild, wireshark-0.99.5.ebuild:
