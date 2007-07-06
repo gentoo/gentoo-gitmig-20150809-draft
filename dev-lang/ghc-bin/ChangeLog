@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.70 2007/07/02 14:41:42 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.71 2007/07/06 01:07:09 dcoutts Exp $
+
+  06 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> -ghc-bin-6.6.ebuild:
+  The ghc-bin ebuild will not be continued. Its function has been merged into
+  the ghc ebuild as of 6.6. There will be no new versions of this ebuild.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   ghc-bin-6.2.2-r1.ebuild, ghc-bin-6.4.1.ebuild, ghc-bin-6.4.1-r1.ebuild,
