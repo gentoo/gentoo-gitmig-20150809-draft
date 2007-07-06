@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.45 2007/06/03 07:35:50 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.46 2007/07/06 09:17:20 phreak Exp $
+
+*vzctl-3.0.17 (06 Jul 2007)
+
+  06 Jul 2007; Christian Heim <phreak@gentoo.org> +vzctl-3.0.17.ebuild:
+  Version bump, fixing 'a lot of bugs' either in code or documentation;
+  ArchLinux support for VE's; init-script improvements as well as IPv6
+  fixes/improvements. For a full ChangeLog see
+  http://git.openvz.org/?p=vzctl;a=shortlog;h=vzctl-3.0.17-1.
 
   03 Jun 2007; Christian Heim <phreak@gentoo.org> vzctl-3.0.16.ebuild:
   Marking vzctl-3.0.16 stable on amd64 and x86.
