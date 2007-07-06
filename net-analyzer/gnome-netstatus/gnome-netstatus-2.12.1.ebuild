@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/gnome-netstatus-2.12.1.ebuild,v 1.1 2007/02/22 23:10:52 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/gnome-netstatus-2.12.1.ebuild,v 1.2 2007/07/06 07:47:21 uberlord Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.3.1
@@ -32,5 +32,5 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
-	epatch ${FILESDIR}/${PN}-2.10.0-amd64.patch
+	use x86-fbsd || epatch ${FILESDIR}/${PN}-2.10.0-amd64.patch
 }
