@@ -1,0 +1,13 @@
+diff -ur a/lspci.c b/lspci.c
+--- a/lspci.c	2007-03-30 10:56:35 +0100
++++ b/lspci.c	2007-07-06 10:31:54 +0100
+@@ -60,7 +60,9 @@
+  */
+ 
+ #ifdef __GNUC__
++#ifdef __GLIBC__
+ #include <alloca.h>
++#endif
+ #else
+ #undef alloca
+ #define alloca xmalloc
