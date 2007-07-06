@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-mag
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.110 2007/04/20 19:57:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.111 2007/07/06 10:47:17 uberlord Exp $
+
+  06 Jul 2007; Roy Marples <uberlord@gentoo.org> gnome-mag-0.14.3.ebuild:
+  Keyworded ~x86-fbsd
 
   20 Apr 2007; Raúl Porcel <armin76@gentoo.org> gnome-mag-0.14.0.ebuild:
   ia64 + x86 stable
