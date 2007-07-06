@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/usb-robot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/usb-robot/ChangeLog,v 1.4 2007/05/15 09:10:31 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/usb-robot/ChangeLog,v 1.5 2007/07/06 06:09:47 opfer Exp $
+
+  06 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  usb-robot-0.2.0.ebuild:
+  x86 stable, bug 184332
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
