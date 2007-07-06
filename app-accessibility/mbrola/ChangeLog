@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.36 2007/02/21 19:22:32 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.37 2007/07/06 10:27:58 uberlord Exp $
+
+  06 Jul 2007; Roy Marples <uberlord@gentoo.org> mbrola-3.0.1h-r4.ebuild:
+  Keyworded ~x86-fbsd
 
   21 Feb 2007; <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
