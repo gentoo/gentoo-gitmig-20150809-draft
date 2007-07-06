@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/fortune-mod
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.22 2006/07/20 08:08:46 mr_bones_ Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.23 2007/07/06 09:24:38 uberlord Exp $
+
+  06 Jul 2007; Roy Marples <uberlord@gentoo.org>
+  fortune-mod-1.99.1-r2.ebuild:
+  link against -lintl on non glibc systems when app-text/recode is built with
+  nls, #184399.
 
   20 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
   fortune-mod-1.99.1-r2.ebuild:
