@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/fwlanusb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/fwlanusb/ChangeLog,v 1.6 2007/05/21 21:54:05 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/fwlanusb/ChangeLog,v 1.7 2007/07/06 20:16:04 sbriesen Exp $
+
+*fwlanusb-1.00.00 (06 Jul 2007)
+
+  06 Jul 2007; Stefan Briesenick <sbriesen@gentoo.org>
+  +fwlanusb-1.00.00.ebuild:
+  version bump. And finally, it seems to work on recent kernels. ;-)
 
 *fwlanusb-1.00.00_rc1 (21 May 2007)
 
