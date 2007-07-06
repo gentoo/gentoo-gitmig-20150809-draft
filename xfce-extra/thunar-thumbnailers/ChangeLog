@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-thumbnailers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/ChangeLog,v 1.27 2007/07/06 16:13:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/ChangeLog,v 1.28 2007/07/06 18:41:58 pylon Exp $
+
+  06 Jul 2007; Lars Weiler <pylon@gentoo.org>
+  thunar-thumbnailers-0.2.1.ebuild:
+  Stable on ppc; bug #184267.
 
   06 Jul 2007; Markus Rothe <corsair@gentoo.org>
   thunar-thumbnailers-0.2.1.ebuild:
