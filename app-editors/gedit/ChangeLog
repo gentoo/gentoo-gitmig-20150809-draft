@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.187 2007/06/17 11:26:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.188 2007/07/06 00:50:26 dang Exp $
+
+  06 Jul 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gedit-2.18.1-fbsd.patch, gedit-2.18.1-r1.ebuild:
+  chown on fbsd doesn't have --reference.  Bug #183691
 
   17 Jun 2007; Gilles Dartiguelongue <eva@gentoo.org>
   gedit-2.18.1-r1.ebuild:

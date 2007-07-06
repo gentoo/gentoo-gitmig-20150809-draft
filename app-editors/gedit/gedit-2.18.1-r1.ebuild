@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.18.1-r1.ebuild,v 1.2 2007/06/17 11:26:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.18.1-r1.ebuild,v 1.3 2007/07/06 00:50:26 dang Exp $
 
 inherit gnome2 eutils
 
@@ -56,5 +56,8 @@ src_unpack() {
 	if use !python && use doc; then
 		epatch "${FILESDIR}"/${PN}-2.16.2-no_python_module_docs.patch
 	fi
+
+	# chown on fbsd doesn't have --reference.  Bug #183691
+	epatch "${FILESDIR}"/${P}-fbsd.patch
 }
 
