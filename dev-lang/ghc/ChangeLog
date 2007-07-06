@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.120 2007/07/06 00:02:59 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.121 2007/07/06 00:46:24 dcoutts Exp $
+
+  06 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> ghc-6.6.ebuild:
+  Add ~sparc and ~alpha to KEYWORDS. Both were included for old ghc-bin-6.6.
 
   05 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> +files/10ghc,
   ghc-6.6.ebuild:

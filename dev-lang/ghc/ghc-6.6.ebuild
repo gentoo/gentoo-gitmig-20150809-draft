@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.5 2007/07/06 00:02:59 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.6 2007/07/06 00:46:24 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -45,14 +45,14 @@ SRC_URI="!binary? ( http://haskell.org/ghc/dist/${EXTRA_SRC_URI}/${MY_P}-src.tar
 						    mirror://${P}-users_guide.tar.gz ) )
 		 amd64?	( mirror://gentoo/ghc-bin-${PV}-amd64.tbz2 )
 		 x86?	( mirror://gentoo/ghc-bin-${PV}-x86.tbz2 )
-		 ppc?	( mirror://gentoo/ghc-bin-${PV}-ppc.tbz2 )"
-#		 alpha?		( mirror://gentoo/ghc-bin-${PV}-alpha.tbz2 )
-#		 sparc?		( mirror://gentoo/ghc-bin-${PV}-sparc.tbz2 )
+		 ppc?	( mirror://gentoo/ghc-bin-${PV}-ppc.tbz2 )
+		 alpha?	( mirror://gentoo/ghc-bin-${PV}-alpha.tbz2 )
+		 sparc?	( mirror://gentoo/ghc-bin-${PV}-sparc.tbz2 )"
 #	"test? ( http://haskell.org/ghc/dist/${EXTRA_SRC_URI}/ghc-testsuite-${MY_PV}.tar.gz )"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 #KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="binary doc ghcbootstrap"
 
