@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.5.5.ebuild,v 1.3 2007/01/31 19:57:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.5.5.ebuild,v 1.4 2007/07/06 06:24:53 tupone Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -35,6 +35,9 @@ src_unpack() {
 		-e "/^BINDIR/s:=.*:=${GAMES_BINDIR}:" \
 		-e "/^DATADIR/s:=.*:=${GAMES_DATADIR}:" \
 		*/Makefile.install.UNIX || die
+	sed -i \
+		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
+		client/xsw.h || die "sed on xsw.h failed"
 }
 
 src_compile() {

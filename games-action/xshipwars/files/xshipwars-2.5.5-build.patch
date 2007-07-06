@@ -66,3 +66,20 @@
  UNVEDIT_IMAGES_DIR = $(XSW_DATA_DIR)/images/unvedit
  
  HR = "-------------------------------------------------------------------------"
+--- client/xsw.h.old	2007-07-06 08:02:07.000000000 +0200
++++ client/xsw.h	2007-07-06 08:04:05.000000000 +0200
+@@ -135,10 +135,10 @@
+ #define XSW_DEF_SW_SERVER_DIR		CWD_STR
+ #else
+ #define XSW_DEF_LOCAL_DATA_DIR		".shipwars"
+-#define XSW_DEF_GLOBAL_DATA_DIR		PREFIX "/share/games/xshipwars"
+-#define XSW_DEF_GLOBAL_IMAGES_DIR	PREFIX "/share/games/xshipwars/images"
+-#define XSW_DEF_GLOBAL_SOUNDS_DIR	PREFIX "/share/games/xshipwars/sounds"
+-#define XSW_DEF_GLOBAL_ETC_DIR		PREFIX "/share/games/xshipwars/etc"
++#define XSW_DEF_GLOBAL_DATA_DIR		"@GENTOO_DATADIR@"
++#define XSW_DEF_GLOBAL_IMAGES_DIR	"@GENTOO_DATADIR@/images"
++#define XSW_DEF_GLOBAL_SOUNDS_DIR	"@GENTOO_DATADIR@/sounds"
++#define XSW_DEF_GLOBAL_ETC_DIR		"@GENTOO_DATADIR@/etc"
+ #define XSW_DEF_SW_SERVER_DIR		"/home/swserv"
+ #endif
+ 

@@ -1,6 +1,10 @@
 # ChangeLog for games-action/xshipwars
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/ChangeLog,v 1.17 2007/01/31 19:57:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/ChangeLog,v 1.18 2007/07/06 06:24:53 tupone Exp $
+
+  06 Jul 2007; Tupone Alfredo <tupone@gentoo.org>
+  files/xshipwars-2.5.5-build.patch, xshipwars-2.5.5.ebuild:
+  Fix bad data path: bug #184363 by Ken Rushia
 
   31 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/xshipwars-2.5.5-64bit.patch, xshipwars-2.5.5.ebuild:
