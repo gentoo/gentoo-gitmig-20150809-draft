@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.44 2007/01/15 21:40:38 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.45 2007/07/06 15:04:03 uberlord Exp $
+
+  06 Jul 2007; Roy Marples <uberlord@gentoo.org> freebsd-ubin-6.2.ebuild:
+  Build a dynamic make.
 
 *freebsd-ubin-6.2 (15 Jan 2007)
 

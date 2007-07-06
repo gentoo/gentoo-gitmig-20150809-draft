@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2.ebuild,v 1.1 2007/01/15 21:40:38 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2.ebuild,v 1.2 2007/07/06 15:04:03 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -84,6 +84,9 @@ src_unpack() {
 	mv ${S}/cmp/cmp.1 ${S}/cmp/bsdcmp.1
 	# Fix whereis(1) manpath search.
 	sed -i -e 's:"manpath -q":"manpath":' "${S}/whereis/pathnames.h"
+
+	# Build a dynamic make
+	sed -i -e '/^NO_SHARED/ s/^/#/' "${S}"/make/Makefile
 }
 
 src_install() {
