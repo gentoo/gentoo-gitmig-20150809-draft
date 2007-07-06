@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/telepathy-inspector/telepathy-inspector-0.5.0.ebuild,v 1.1 2007/06/27 12:35:56 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/telepathy-inspector/telepathy-inspector-0.5.0.ebuild,v 1.2 2007/07/06 18:44:28 coldwind Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,7 +37,7 @@ src_compile() {
 		myopts="DEBUG=no"
 	fi
 	scons CONFIGURE=yes DESTDIR="${D}" PREFIX=/usr \
-		CCFLAGS="${CFLAGS}" ${myopts} || die "scons failed"
+		${myopts} || die "scons failed"
 }
 
 src_install() {

@@ -13,29 +13,41 @@ diff -ur telepathy-inspector-0.5.0.orig/data/SConscript telepathy-inspector-0.5.
  env.Alias ('install', data_install)
 diff -ur telepathy-inspector-0.5.0.orig/SConstruct telepathy-inspector-0.5.0/SConstruct
 --- telepathy-inspector-0.5.0.orig/SConstruct	2007-06-27 12:10:15.000000000 +0200
-+++ telepathy-inspector-0.5.0/SConstruct	2007-06-27 13:56:42.000000000 +0200
-@@ -21,7 +21,9 @@
++++ telepathy-inspector-0.5.0/SConstruct	2007-07-06 19:53:53.000000000 +0200
+@@ -1,5 +1,6 @@
+ import os
+ from build_functions import CheckPKGConfig, CheckPKG, CheckPackages, SaveDictionary
++from SCons.Util import CLVar
+ 
+ SConsignFile()
+ 
+@@ -21,7 +22,8 @@
  
  # Get our configuration options:
  opts = Options(options_filename)
 -opts.Add('PREFIX', 'Directory to install under', '/usr/local')
 +opts.Add('PREFIX', 'A prefix for all paths', '/usr/local')
 +opts.Add('DESTDIR', 'Directory to install under', '')
-+opts.Add('CCFLAGS', 'Compiler flags', '')
  opts.Add(BoolOption('CONFIGURE', 'Whether the build should be (re)configured', 'yes'))
  opts.Add(BoolOption('DEBUG', 'Whether debugging information should be produced', 'no'))
  opts.Update(env)
-@@ -32,13 +34,12 @@
- # Compiler options
+@@ -29,16 +31,18 @@
  
- if env['CC'] == 'gcc':
-+    if '-Wall' not in env['CCFLAGS'].split() and '-Werror' not in env['CCFLAGS'].split():
-+        env['CCFLAGS'] += ' -Wall -Werror'
+ Help(opts.GenerateHelpText(env))
  
--    env['CCFLAGS'] += ' -Wall -Werror'
+-# Compiler options
++# Compiler and linker flags
+ 
+-if env['CC'] == 'gcc':
++if os.environ.has_key('CFLAGS'):
++	env['CCFLAGS'] += CLVar(os.environ['CFLAGS'])
++if os.environ.has_key('LDFLAGS'):
++	env['LINKFLAGS'] += CLVar(os.environ['LDFLAGS'])
+ 
++if env['CC'] == 'gcc':
+     env['CCFLAGS'] += ' -Wall -Werror'
 -
--    if env['DEBUG'] == True:
-+    if env['DEBUG'] == True and '-g' not in env['CCFLAGS'].split():
+     if env['DEBUG'] == True:
          env['CCFLAGS'] += ' -g'
  
 -
