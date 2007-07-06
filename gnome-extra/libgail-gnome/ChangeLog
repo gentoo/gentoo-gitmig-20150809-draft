@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgail-gnome
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.76 2007/03/27 17:14:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.77 2007/07/06 11:15:02 uberlord Exp $
+
+  06 Jul 2007; Roy Marples <uberlord@gentoo.org>
+  libgail-gnome-1.18.0.ebuild:
+  Keyworded ~x86-fbsd
 
 *libgail-gnome-1.18.0 (27 Mar 2007)
 
