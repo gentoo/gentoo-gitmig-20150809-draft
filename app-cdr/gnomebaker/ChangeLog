@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/gnomebaker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.37 2007/07/06 13:31:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.38 2007/07/06 13:38:26 armin76 Exp $
+
+  06 Jul 2007; Raúl Porcel <armin76@gentoo.org> gnomebaker-0.6.1-r2.ebuild:
+  ia64 stable wrt #184334
 
   06 Jul 2007; Markus Rothe <corsair@gentoo.org> gnomebaker-0.6.1-r2.ebuild:
   Stable on ppc64; bug #184334
