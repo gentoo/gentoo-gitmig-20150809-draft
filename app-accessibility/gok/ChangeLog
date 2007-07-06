@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.93 2007/06/02 02:40:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.94 2007/07/06 11:00:15 uberlord Exp $
+
+  06 Jul 2007; Roy Marples <uberlord@gentoo.org> gok-1.2.3.ebuild:
+  Keyworded ~x86-fbsd
 
   02 Jun 2007; Brent Baude <ranger@gentoo.org> gok-1.2.3.ebuild:
   Marking gok-1.2.3 ppc stable for bug #171107
