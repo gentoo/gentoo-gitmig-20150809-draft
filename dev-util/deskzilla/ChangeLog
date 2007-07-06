@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/deskzilla
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.6 2007/06/19 13:48:00 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.7 2007/07/06 18:20:33 betelgeuse Exp $
+
+  06 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> deskzilla-1.4.ebuild:
+  Fix location of the gentoo license given by pkg_postinst. Fixes bug #184409.
 
 *deskzilla-1.4 (19 Jun 2007)
 

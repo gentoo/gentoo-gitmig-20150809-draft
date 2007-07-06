@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.4.ebuild,v 1.1 2007/06/19 13:48:00 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.4.ebuild,v 1.2 2007/07/06 18:20:33 betelgeuse Exp $
 
 inherit java-pkg-2 versionator
 
@@ -71,7 +71,7 @@ src_install () {
 pkg_postinst() {
 	elog "The default, evaluation license allows usage for one month."
 	elog "You may switch (per-user) to the license we obtained for Gentoo,"
-	elog "located in /opt/${P}/licenses/${PN}_gentoo.license"
+	elog "located in /opt/${P}/license/${PN}_gentoo.license"
 	elog "It is locked to Gentoo, ALM Works and Mozilla bugzilla only."
 	elog "Note that you need to use 1.5 VM to run deskzilla when setting"
 	elog "license or it won't get set due to bug in 1.6+ VMs."
