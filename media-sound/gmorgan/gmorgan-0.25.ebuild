@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.25.ebuild,v 1.1 2006/11/07 17:41:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.25.ebuild,v 1.2 2007/07/06 17:45:05 flameeyes Exp $
 
 inherit eutils
 
@@ -19,6 +19,15 @@ RDEPEND=">=x11-libs/fltk-1.1.2
 
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.11.5-r1 )"
+
+pkg_setup() {
+	if ! built_with_use --missing true media-libs/alsa-lib midi; then
+		eerror ""
+		eerror "To be able to build ${CATEGORY}/${PN} with ALSA support you"
+		eerror "need to have built media-libs/alsa-lib with midi USE flag."
+		die "Missing midi USE flag on media-libs/alsa-lib"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

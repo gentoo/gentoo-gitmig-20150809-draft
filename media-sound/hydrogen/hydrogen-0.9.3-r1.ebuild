@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r1.ebuild,v 1.2 2007/02/17 00:52:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r1.ebuild,v 1.3 2007/07/06 17:45:50 flameeyes Exp $
 
 inherit eutils kde-functions autotools multilib
 
@@ -23,6 +23,15 @@ RDEPEND="dev-libs/libxml2
 	ladspa? ( media-libs/liblrdf )"
 
 need-qt 3
+
+pkg_setup() {
+	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
+		eerror ""
+		eerror "To be able to build ${CATEGORY}/${PN} with ALSA support you"
+		eerror "need to have built media-libs/alsa-lib with midi USE flag."
+		die "Missing midi USE flag on media-libs/alsa-lib"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

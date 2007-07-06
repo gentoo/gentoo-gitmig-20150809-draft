@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmorgan
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.18 2007/07/02 15:11:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.19 2007/07/06 17:45:05 flameeyes Exp $
+
+  06 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> gmorgan-0.25.ebuild:
+  Add a pkg_setup check for midi USE flag in alsa-lib.
 
   02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Hand to newly-born proaudio herd.

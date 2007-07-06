@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.5.ebuild,v 1.1 2007/06/15 12:22:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.5.ebuild,v 1.2 2007/07/06 17:44:11 flameeyes Exp $
 
 inherit multilib
 
@@ -30,6 +30,15 @@ DEPEND="${RDEPEND}"
 
 # We don't make RDEPEND for vorbis-tools, mpg123/mpg321, timidity++ or lame -- no
 # use flags for them.
+
+pkg_setup() {
+	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
+		eerror ""
+		eerror "To be able to build ${CATEGORY}/${PN} with ALSA support you"
+		eerror "need to have built media-libs/alsa-lib with midi USE flag."
+		die "Missing midi USE flag on media-libs/alsa-lib"
+	fi
+}
 
 src_compile () {
 	local myconf
