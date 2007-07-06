@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/libassuan-1.0.2.ebuild,v 1.2 2007/07/06 15:57:16 alonbl Exp $
-
-inherit libtool
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/libassuan-1.0.2.ebuild,v 1.3 2007/07/06 17:39:20 alonbl Exp $
 
 DESCRIPTION="Standalone IPC library used by gpg, gpgme and newpg"
 HOMEPAGE="http://www.gnupg.org/(en)/download/index.html#libassuan"
@@ -13,19 +11,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-COMMON_DEPEND="
+DEPEND="
 	virtual/libc
 	>=dev-libs/pth-1.3.7
 	>=dev-libs/libgpg-error-1.4"
-
-DEPEND="${COMMON_DEPEND}"
-RDEPEND="${COMMON_DEPEND}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	elibtoolize
-}
+RDEPEND="${DEPEND}"
 
 src_install() {
 	make install DESTDIR="${D}" || die
