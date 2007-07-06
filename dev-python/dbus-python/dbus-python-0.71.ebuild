@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.71.ebuild,v 1.13 2007/05/13 07:22:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.71.ebuild,v 1.14 2007/07/06 17:32:48 hawking Exp $
 
 inherit distutils
 
@@ -19,10 +19,4 @@ RDEPEND=">=dev-lang/python-2.4
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-pkg_postrm() {
-	python_mod_cleanup "${ROOT}"/usr/lib/python*/site-packages/dbus
-}
-
-pkg_postinst() {
-	python_mod_optimize "${ROOT}"/usr/lib/python*/site-packages/dbus
-}
+PYTHON_MODNAME="dbus"

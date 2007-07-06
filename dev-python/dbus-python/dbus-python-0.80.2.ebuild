@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.80.2.ebuild,v 1.11 2007/06/24 21:33:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.80.2.ebuild,v 1.12 2007/07/06 17:32:48 hawking Exp $
 
-inherit distutils
+inherit python multilib
 
 DESCRIPTION="Python bindings for the D-Bus messagebus."
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/DBusBindings \
@@ -22,6 +22,16 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/pygobject )
 	dev-util/pkgconfig"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# don't run py-compile
+	sed -i \
+		-e '/if test -n "$$dlist"; then/,/else :; fi/d' \
+		dbus/Makefile.in Makefile.in || die "sed in Makefile.in failed"
+}
+
 src_compile() {
 	econf --docdir=/usr/share/doc/dbus-python-${PV} || die "econf failed"
 	emake || die "emake failed"
@@ -31,10 +41,10 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 }
 
-pkg_postrm() {
-	python_mod_cleanup "${ROOT}"/usr/lib/python*/site-packages/dbus
+pkg_postinst() {
+	python_mod_optimize ${ROOT}usr/$(get_libdir)/python*/site-packages/dbus
 }
 
-pkg_postinst() {
-	python_mod_optimize "${ROOT}"/usr/lib/python*/site-packages/dbus
+pkg_postrm() {
+	python_mod_cleanup
 }

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.25 2007/06/22 18:27:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.26 2007/07/06 17:32:48 hawking Exp $
+
+  06 Jul 2007; Ali Polatel <hawking@gentoo.org> dbus-python-0.71.ebuild,
+  dbus-python-0.80.2.ebuild, dbus-python-0.81.0.ebuild:
+  generate .pyc/.pyo files properly, use python & multilib instead of
+  distutils (bug 176612)
 
   22 Jun 2007; Raúl Porcel <armin76@gentoo.org> dbus-python-0.80.2.ebuild:
   alpha stable wrt #174810
