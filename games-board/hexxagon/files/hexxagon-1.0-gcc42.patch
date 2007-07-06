@@ -1,0 +1,18 @@
+--- src/libhexx/bitboard64.h
++++ src/libhexx/bitboard64.h
+@@ -55,13 +55,12 @@
+             printf("0x%X, 0x%X\n", lowbits, highbits);
+         };
+         
+-        friend std::ostream& operator<<(std::ostream &output, const class BitBoard64 &b);
+-		friend std::istream& operator>>(std::istream &input, class BitBoard64 &b);
+ 		
+-	private:
+ 		
+ 		uint32_t lowbits, highbits;
+ 	};
++	std::ostream& operator<<(std::ostream &output, const class BitBoard64 &b);
++	std::istream& operator>>(std::istream &input, class BitBoard64 &b);
+ }
+ 
+ #endif

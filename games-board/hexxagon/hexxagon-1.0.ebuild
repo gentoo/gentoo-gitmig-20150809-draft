@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.ebuild,v 1.6 2006/10/09 14:36:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.ebuild,v 1.7 2007/07/06 15:48:50 nyhm Exp $
 
 inherit eutils games
 
@@ -16,6 +16,12 @@ IUSE=""
 DEPEND=">=dev-cpp/glibmm-2.4
 	>=dev-cpp/gtkmm-2.4
 	>=x11-libs/gtk+-2.0"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc42.patch
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
