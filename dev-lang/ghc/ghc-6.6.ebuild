@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.6 2007/07/06 00:46:24 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.7 2007/07/06 11:37:31 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -41,8 +41,8 @@ EXTRA_SRC_URI="${MY_PV}"
 [[ -z "${IS_SNAPSHOT}" ]] && EXTRA_SRC_URI="current/dist"
 
 SRC_URI="!binary? ( http://haskell.org/ghc/dist/${EXTRA_SRC_URI}/${MY_P}-src.tar.bz2 )
-		 doc? 	( binary? ( mirror://${P}-libraries.tar.gz
-						    mirror://${P}-users_guide.tar.gz ) )
+		 doc? 	( binary? ( mirror://gentoo/${P}-libraries.tar.gz
+						    mirror://gentoo/${P}-users_guide.tar.gz ) )
 		 amd64?	( mirror://gentoo/ghc-bin-${PV}-amd64.tbz2 )
 		 x86?	( mirror://gentoo/ghc-bin-${PV}-x86.tbz2 )
 		 ppc?	( mirror://gentoo/ghc-bin-${PV}-ppc.tbz2 )
