@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7449 2007/07/06 18:50:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7450 2007/07/06 21:32:27 spock Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Michał Januszewski <spock@gentoo.org> (06 Jul 2007)
+# Unsupported, use media-gfx/splashutils instead.
+# Masked for removal in 30 days.
+media-gfx/bootsplash
 
 # Piotr Jaroszyński <peper@gentoo.org> (06 Jul 2007)
 # Masked for removal. bug #167379.
