@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.15 2006/12/06 17:18:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.16 2007/07/06 22:18:36 nyhm Exp $
 
-inherit eutils toolchain-funcs games
+inherit eutils games
 
 DESCRIPTION="A tetris clone with multiplayer support"
 HOMEPAGE="http://quadra.sourceforge.net/"
@@ -22,9 +22,11 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	[ $(gcc-major-version) -ge 3 ] && epatch "${FILESDIR}/${P}-gcc3.patch"
-	epatch "${FILESDIR}/libpng-1.2.5.patch"
-	use amd64 && epatch "${FILESDIR}/${P}-amd64.patch"
+	epatch \
+		"${FILESDIR}"/${P}-gcc3.patch \
+		"${FILESDIR}"/libpng-1.2.5.patch \
+		"${FILESDIR}"/${P}-amd64.patch \
+		"${FILESDIR}"/${P}-gcc42.patch
 	sed -i \
 		-e 's:-pedantic::' config/vars.mk \
 			|| die "sed config/vars.mk failed"
@@ -50,9 +52,9 @@ src_compile() {
 src_install() {
 	dogamesbin ${PN}
 	if use svga; then
-		dogameslib.so ${PN}-svga.so
+		dogameslib.so ${PN}-svga.so || die "dogameslib.so failed"
 	fi
-	insinto ${GAMES_DATADIR}/${PN}
+	insinto "${GAMES_DATADIR}"/${PN}
 	doins ${PN}.res
 	doicon images/${PN}.xpm
 	make_desktop_entry ${PN} "Quadra" ${PN}.xpm
