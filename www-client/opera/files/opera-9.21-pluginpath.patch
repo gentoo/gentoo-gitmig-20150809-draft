@@ -1,0 +1,12 @@
+Should fix bug 181300 - JeR
+
+--- ini/pluginpath.ini.	2007-07-06 21:42:16.000000000 +0200
++++ ini/pluginpath.ini	2007-07-06 21:43:22.000000000 +0200
+@@ -49,6 +49,7 @@
+ ; Netscape Plug-in Paths
+ $HOME/.netscape6/plugins=1
+ $HOME/.netscape/plugins=1
++/usr/lib/nsbrowser/plugins=1
+ /opt/netscape/plugins=1
+ /usr/lib/netscape/plugins=1
+ /usr/local/netscape/plugins=1
