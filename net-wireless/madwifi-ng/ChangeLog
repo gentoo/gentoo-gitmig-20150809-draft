@@ -1,6 +1,18 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.39 2007/06/02 18:55:43 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.40 2007/07/07 11:01:13 genstef Exp $
+
+  07 Jul 2007; Stefan Schweizer <genstef@gentoo.org>
+  -files/madwifi-ng-0.9.2.1-linux-2.6.20.patch,
+  -files/madwifi-ng-0.9.2-allow-cipher-none.diff,
+  -files/madwifi-ng-0.9.2-ath_intr.diff,
+  -files/madwifi-ng-0.9.2-config.h.diff,
+  -files/madwifi-ng-0.9.2-crypto_cipher_encrypt_one.diff,
+  -files/madwifi-association-fix.patch,
+  -files/madwifi-ng-uudecode-gcda-fix.patch, -madwifi-ng-0.9.2.1.ebuild,
+  -madwifi-ng-0.9.3-r2.ebuild, -madwifi-ng-0.9.3-r3.ebuild,
+  madwifi-ng-0.9.3.1.ebuild:
+  remove old vulnerable, fix help text variable
 
   02 Jun 2007; Peter Weller <welp@gentoo.org> madwifi-ng-0.9.3.1.ebuild:
   Stable on amd46 wrt security bug 179532

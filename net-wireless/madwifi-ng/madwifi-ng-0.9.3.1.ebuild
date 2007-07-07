@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3.1.ebuild,v 1.4 2007/06/02 18:55:43 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3.1.ebuild,v 1.5 2007/07/07 11:01:13 genstef Exp $
 
 inherit linux-mod
 
@@ -24,7 +24,7 @@ RDEPEND="!net-wireless/madwifi-old
 
 CONFIG_CHECK="CRYPTO WIRELESS_EXT SYSCTL"
 ERROR_CRYPTO="${P} requires Cryptographic API support (CONFIG_CRYPTO)."
-ERROR_NET_RADIO="${P} requires CONFIG_WIRELESS_EXT selected by Wireless LAN drivers (non-hamradio) & Wireless Extensions"
+ERROR_WIRELESS_EXT="${P} requires CONFIG_WIRELESS_EXT selected by Wireless LAN drivers (non-hamradio) & Wireless Extensions"
 ERROR_SYSCTL="${P} requires Sysctl support (CONFIG_SYSCTL)."
 BUILD_TARGETS="all"
 MODULESD_ATH_PCI_DOCS="README"
