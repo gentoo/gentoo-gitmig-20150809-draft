@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygame
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.41 2007/07/04 20:57:37 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.42 2007/07/07 15:16:52 armin76 Exp $
+
+  07 Jul 2007; Raúl Porcel <armin76@gentoo.org> pygame-1.7.1.ebuild:
+  alpha stable wrt #175532
 
   04 Jul 2007; Ali Polatel <hawking@gentoo.org> pygame-1.6.2.ebuild,
   pygame-1.7.1.ebuild:
