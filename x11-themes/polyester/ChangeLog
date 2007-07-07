@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/polyester
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/polyester/ChangeLog,v 1.1 2007/07/07 22:42:28 keytoaster Exp $
+
+*polyester-1.0.1 (07 Jul 2007)
+
+  07 Jul 2007; Tobias Heinlein <keytoaster@gentoo.org> +metadata.xml,
+  +polyester-1.0.1.ebuild:
+  Initial ebuild, see bug 128092. Thanks to Fabio Rosati and the Sunrise people.
+
