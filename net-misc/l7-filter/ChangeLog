@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/l7-filter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.47 2007/07/04 12:30:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.48 2007/07/07 00:31:11 dragonheart Exp $
+
+*l7-filter-2.12 (07 Jul 2007)
+
+  07 Jul 2007; Daniel Black <dragonheart@gentoo.org> -l7-filter-2.11.ebuild,
+  +l7-filter-2.12.ebuild:
+  version bump thank to cilly - bug #184173
 
 *l7-filter-2.11 (04 Jul 2007)
 

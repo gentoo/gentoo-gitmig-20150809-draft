@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.11.ebuild,v 1.1 2007/07/04 12:30:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.12.ebuild,v 1.1 2007/07/07 00:31:11 dragonheart Exp $
 
 inherit linux-info eutils
 
@@ -23,7 +23,7 @@ RDEPEND="net-misc/l7-protocols"
 which_patch() {
 	if kernel_is ge 2 6 22
 	then
-		PATCH=kernel-2.6.22-layer7-2.11.patch
+		PATCH=kernel-2.6.22-layer7-${PV}.patch
 	elif kernel_is ge 2 6 20
 	then
 		PATCH=for_older_kernels/kernel-2.6.20-2.6.21-layer7-2.10.patch
@@ -47,7 +47,7 @@ which_patch() {
 		PATCH=for_older_kernels/kernel-2.6.0-2.6.8.1-layer7-0.9.2.patch
 	elif kernel_is 2 4
 	then
-		PATCH=kernel-2.4-layer7-2.11.patch
+		PATCH=kernel-2.4-layer7-${PV}.patch
 	else
 		die "No L7-filter patch for Kernel version ${KV_FULL} - sorry not supported"
 	fi
@@ -133,8 +133,8 @@ src_install() {
 pkg_preinstall() {
 	if has collision-protect ${FEATURES}; then
 		ewarn
-		ewarn "Collisions are expected as this patches kernel code. Disable"
-		ewarn "FEATURES=collision-protect before use"
+		ewarn "Collisions are expected as this patches kernel code. Use"
+		ewarn "FEATURES=-collision-protect emerge ...... for this package"
 		die 'incompatible FEATURES=collision-protect'
 	fi
 }
