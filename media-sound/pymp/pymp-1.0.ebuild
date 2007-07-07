@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pymp/pymp-1.0.ebuild,v 1.1 2007/03/16 16:16:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pymp/pymp-1.0.ebuild,v 1.2 2007/07/07 18:03:48 drac Exp $
 
 inherit eutils
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND="media-video/mplayer"
+PDEPEND="media-video/mplayer"
+RDEPEND="dev-python/pygtk"
+DEPEND="sys-apps/sed"
 
 src_unpack() {
 	unpack ${A}

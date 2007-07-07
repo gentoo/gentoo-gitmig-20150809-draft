@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pymp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pymp/ChangeLog,v 1.1 2007/03/16 16:16:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pymp/ChangeLog,v 1.2 2007/07/07 18:03:48 drac Exp $
+
+  07 Jul 2007; Samuli Suominen <drac@gentoo.org> pymp-1.0.ebuild:
+  Fix deps.
 
 *pymp-1.0 (16 Mar 2007)
 
