@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.ebuild,v 1.4 2007/06/24 09:12:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.ebuild,v 1.5 2007/07/07 17:56:48 opfer Exp $
 
 inherit gnome2 fdo-mime
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/Planner/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ppc sparc ~x86"
+KEYWORDS="~alpha ~amd64 ppc sparc x86"
 IUSE="doc libgda python"
 
 RDEPEND=">=dev-libs/glib-2.4
