@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-notification
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.6 2007/04/16 13:17:03 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.7 2007/07/07 14:40:32 ticho Exp $
+
+*claws-mail-notification-0.11 (07 Jul 2007)
+
+  07 Jul 2007; <ticho@gentoo.org> +claws-mail-notification-0.11.ebuild:
+  Version bump.
 
 *claws-mail-notification-0.10 (16 Apr 2007)
 

@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-pdf-viewer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.10 2007/05/08 07:43:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.11 2007/07/07 14:43:25 ticho Exp $
+
+*claws-mail-pdf-viewer-0.5 (07 Jul 2007)
+
+  07 Jul 2007; <ticho@gentoo.org> +claws-mail-pdf-viewer-0.5.ebuild:
+  Version bump.
 
   08 May 2007; Andrej Kacian <ticho@gentoo.org>
   claws-mail-pdf-viewer-0.4.ebuild:

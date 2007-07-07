@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-smime
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/ChangeLog,v 1.10 2007/06/28 10:26:54 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/ChangeLog,v 1.11 2007/07/07 14:47:29 ticho Exp $
+
+*claws-mail-smime-0.7.1 (07 Jul 2007)
+
+  07 Jul 2007; <ticho@gentoo.org> +claws-mail-smime-0.7.1.ebuild:
+  Version bump.
 
   28 Jun 2007; Andrej Kacian <ticho@gentoo.org>
   claws-mail-smime-0.5.7.ebuild, claws-mail-smime-0.5.8.ebuild,
