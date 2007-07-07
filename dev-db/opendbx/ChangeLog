@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/opendbx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.5 2007/05/07 19:15:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.6 2007/07/07 11:45:45 swegener Exp $
+
+*opendbx-1.2.3 (07 Jul 2007)
+
+  07 Jul 2007; Sven Wegener <swegener@gentoo.org> +opendbx-1.2.3.ebuild:
+  Version bump.
 
   07 May 2007; Sven Wegener <swegener@gentoo.org> -opendbx-1.0.3.ebuild,
   -opendbx-1.2.1.ebuild:
