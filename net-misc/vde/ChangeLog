@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/vde
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.11 2007/06/09 15:38:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.12 2007/07/07 12:27:43 genstef Exp $
+
+*vde-2.1.6-r1 (07 Jul 2007)
+
+  07 Jul 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/Unixterm_20070403.patch, +vde-2.1.6-r1.ebuild:
+  patch to enable unixterm to receive commands from standard input thanks to
+  Adrian Lambeck <adrian@basicsedv.de> in bug 184429
 
   09 Jun 2007; Stefan Schweizer <genstef@gentoo.org> files/vde.init:
   Fix failing script thanks to Giuliano Gagliardi <gentoo@gogi.tv> in bug 181193
