@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.101 2007/07/07 17:52:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.102 2007/07/07 18:08:14 jer Exp $
+
+  07 Jul 2007; Jeroen Roovers <jer@gentoo.org>
+  -files/opera-9.21-install.patch:
+  Remove deprecated patch.
 
 *opera-9.21-r1 (07 Jul 2007)
 
