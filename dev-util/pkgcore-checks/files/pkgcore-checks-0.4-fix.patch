@@ -1,0 +1,13 @@
+=== modified file 'pkgcore_checks/visibility.py'
+--- pkgcore_checks/visibility.py	2007-04-05 18:41:54 +0000
++++ pkgcore_checks/visibility.py	2007-07-07 22:56:25 +0000
+@@ -130,6 +130,8 @@
+                             nonexistant.add(node)
+                             self.query_cache[h] = ()
+                             self.profiles.global_insoluable.add(h)
++                elif not self.query_cache[h]:
++                    nonexistant.add(node)
+ 
+             if nonexistant:
+                 reporter.add_report(NonExistantDeps(pkg, attr, nonexistant))
+
