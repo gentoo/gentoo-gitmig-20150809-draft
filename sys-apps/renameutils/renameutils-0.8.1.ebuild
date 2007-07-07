@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/renameutils-0.8.1.ebuild,v 1.1 2005/08/29 23:20:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/renameutils-0.8.1.ebuild,v 1.2 2007/07/07 04:48:25 vapier Exp $
 
 DESCRIPTION="Use your favorite text editor to rename files"
 HOMEPAGE="http://www.nongnu.org/renameutils/"
@@ -19,6 +19,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "install failed"
+	emake install DESTDIR="${D}" || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
