@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.29 2007/07/07 23:16:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.30 2007/07/07 23:17:30 mr_bones_ Exp $
+
+  07 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/pkgcore-checks-0.1-missing-glsa-dir.patch,
+  -files/pkgcore-checks-0.1-optimization.patch,
+  -pkgcore-checks-0.1-r2.ebuild, -pkgcore-checks-0.2-r1.ebuild,
+  -pkgcore-checks-0.3.3.ebuild, -pkgcore-checks-0.3.4.ebuild:
+  clean out old files per upstream
 
 *pkgcore-checks-0.4-r1 (07 Jul 2007)
 
