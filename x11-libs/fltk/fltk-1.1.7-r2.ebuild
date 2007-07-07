@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r2.ebuild,v 1.1 2007/06/16 11:12:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r2.ebuild,v 1.2 2007/07/07 02:33:53 vapier Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -35,11 +35,9 @@ DEPEND="|| ( (
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/libs-1.7.diff" || die "patch failed"
-	use amd64 && {
-		epatch "${FILESDIR}/${P}-amd64.patch" || die "patch failed"
-	}
+	cd "${S}"
+	epatch "${FILESDIR}/libs-1.7.diff"
+	epatch "${FILESDIR}/${P}-amd64.patch"
 	epatch "${FILESDIR}/${P}-as-needed.patch"
 	epatch "${FILESDIR}/${P}-dieonerrors.patch"
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.80 2007/06/16 11:12:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.81 2007/07/07 02:33:53 vapier Exp $
+
+  07 Jul 2007; Mike Frysinger <vapier@gentoo.org> fltk-1.1.7-r2.ebuild:
+  The amd64 patch is *not* amd64 specific, so apply it for everyone.
 
 *fltk-1.1.7-r2 (16 Jun 2007)
 
