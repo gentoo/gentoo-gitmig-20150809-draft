@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10-r1.ebuild,v 1.3 2007/07/05 18:21:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10-r1.ebuild,v 1.4 2007/07/07 13:56:06 drac Exp $
 
 inherit eutils fdo-mime multilib python
 
@@ -19,7 +19,7 @@ IUSE="aac alsa cdparanoia flac gnome ipod libnotify libsexy mad musepack ogg
 	oss serpentine streamripper vorbis"
 
 RDEPEND=">=dev-python/pygtk-2.8.6
-	>=dev-python/pysqlite-2
+	>=dev-python/pysqlite-2.3.4-r1
 	>=media-libs/mutagen-1.6
 	dev-python/elementtree
 	dev-python/dbus-python

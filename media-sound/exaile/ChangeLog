@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.22 2007/07/05 18:21:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.23 2007/07/07 13:56:06 drac Exp $
+
+  07 Jul 2007; Samuli Suominen <drac@gentoo.org> exaile-0.2.10-r1.ebuild:
+  We need fixed pysqlite-2.3.4-r1 for tr_TR.utf8 locale.
 
   05 Jul 2007; Samuli Suominen <drac@gentoo.org> exaile-0.2.9-r3.ebuild,
   exaile-0.2.10-r1.ebuild:
