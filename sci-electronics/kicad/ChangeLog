@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.24 2007/06/23 20:12:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.25 2007/07/07 08:44:26 calchan Exp $
+
+  07 Jul 2007; Denis Dupeyron <calchan@gentoo.org> kicad-20070115.ebuild,
+  kicad-20070525.ebuild:
+  Locked required wxGTK to version 2.6 to prepare for new wxwidget eclass.
 
   23 Jun 2007; Markus Rothe <corsair@gentoo.org> kicad-20070525.ebuild:
   Added ~ppc

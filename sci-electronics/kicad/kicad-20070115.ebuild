@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20070115.ebuild,v 1.8 2007/06/06 19:59:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20070115.ebuild,v 1.9 2007/07/07 08:44:26 calchan Exp $
 
 inherit wxwidgets
 
@@ -15,11 +15,11 @@ SLOT="0"
 KEYWORDS="amd64 ppc64 x86"
 IUSE="unicode doc examples minimal"
 
-DEPEND=">=x11-libs/wxGTK-2.6"
+DEPEND="=x11-libs/wxGTK-2.6*"
 
 pkg_setup() {
-	# Tell wxwidgets.eclass the version we need. We pick the latest on the system.
-	WX_GTK_VER=$(`ls /usr/bin/wx-config* | sort | tail -n 1` --release)
+	# Tell wxwidgets.eclass which version we need
+	WX_GTK_VER="2.6"
 
 	# Check for proper wxGTK USE flags.
 	if use unicode; then
@@ -27,7 +27,7 @@ pkg_setup() {
 	else
 		need-wxwidgets gtk2 || die "You need to install wxGTK with gtk2 support."
 	fi
-	built_with_use ">=x11-libs/wxGTK-${WX_GTK_VER}" opengl || die "You need to install wxGTK with opengl support."
+	built_with_use "=x11-libs/wxGTK-${WX_GTK_VER}*" opengl || die "You need to install wxGTK with opengl support."
 }
 
 src_unpack() {
