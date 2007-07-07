@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.45 2007/03/26 19:38:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.46 2007/07/07 15:23:09 pythonhead Exp $
+
+  07 Jul 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +files/zziplib-0.13.49-python.patch, zziplib-0.13.49.ebuild:
+  Added patch to use default Python version installed. bug #174189
 
   26 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
   -files/zziplib-0.13.45-manpages.patch,

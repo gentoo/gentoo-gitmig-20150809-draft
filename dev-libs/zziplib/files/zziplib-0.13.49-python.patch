@@ -1,0 +1,11 @@
+--- configure.ac.orig	2007-04-11 16:37:45.000000000 -0700
++++ configure.ac	2007-04-11 16:38:07.000000000 -0700
+@@ -84,7 +84,7 @@
+ [zzip/zziplib.pc], [zzip-zlib-config],[-lzzip])
+ # -----------------------------------------------------------------------
+ AC_PATH_PROGS(PERL, perl5 perl, echo no perl found for)
+-AC_PATH_PROGS(PYTHON, python2.2 python2.3 python, echo no python found for)
++AC_PATH_PROGS(PYTHON, python, echo no python found for)
+ AC_PATH_PROGS(MKZIP, zip pkzip, :)
+ AC_PATH_PROGS(XMLTO, xmlto, :)
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.49.ebuild,v 1.10 2007/03/26 19:38:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.49.ebuild,v 1.11 2007/07/07 15:23:09 pythonhead Exp $
 
 inherit libtool fixheadtails eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh -sparc x86 ~x86-fbsd"
 IUSE="sdl"
 
-RDEPEND="sys-libs/zlib
+RDEPEND=">=dev-lang/python-2.3
+	sys-libs/zlib
 	sdl? ( >=media-libs/libsdl-1.2.6 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -21,6 +22,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	#Make it find correct Python version bug #174189
+	epatch "${FILESDIR}"/${P}-python.patch
 	epatch "${FILESDIR}"/${P}-SDL-test.patch
 	ht_fix_file configure docs/Makefile.in uses/depcomp
 	elibtoolize
