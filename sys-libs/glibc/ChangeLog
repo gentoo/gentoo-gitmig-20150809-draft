@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.540 2007/07/07 14:34:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.541 2007/07/07 15:29:50 kumba Exp $
+
+  07 Jul 2007; Joshua Kinard <kumba@gentoo.org> glibc-2.5-r4.ebuild:
+  Stable on mips, per #183844.
 
   07 Jul 2007; Raúl Porcel <armin76@gentoo.org> glibc-2.5-r4.ebuild:
   alpha/ia64 stable wrt security #183844
