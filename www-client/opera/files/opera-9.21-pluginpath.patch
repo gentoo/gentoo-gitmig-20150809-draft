@@ -7,6 +7,7 @@ Should fix bug 181300 - JeR
  $HOME/.netscape6/plugins=1
  $HOME/.netscape/plugins=1
 +/usr/lib/nsbrowser/plugins=1
- /opt/netscape/plugins=1
+-/opt/netscape/plugins=1
++/opt/netscape/plugins=2
  /usr/lib/netscape/plugins=1
  /usr/local/netscape/plugins=1

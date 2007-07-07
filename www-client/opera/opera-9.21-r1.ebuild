@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.21-r1.ebuild,v 1.1 2007/07/07 17:52:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.21-r1.ebuild,v 1.2 2007/07/07 20:43:17 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -82,6 +82,8 @@ src_unpack() {
 }
 
 src_compile() {
+	# This workaround is sadly needed because gnome2.eclass doesn't check
+	# whether a configure script or Makefile exists.
 	true
 }
 
@@ -151,6 +153,10 @@ src_install() {
 	# symlink to libflash-player.so:
 	dosym /opt/netscape/plugins/libflashplayer.so \
 		/opt/opera/lib/opera/plugins/libflashplayer.so
+
+	# Add the Opera man dir to MANPATH:
+	insinto /etc/env.d
+	echo 'MANPATH="/opt/opera/share/man"' >> ${D}/etc/env.d/90opera
 }
 
 pkg_postinst() {
@@ -159,19 +165,13 @@ pkg_postinst() {
 	elog "For localized language files take a look at:"
 	elog " http://www.opera.com/download/languagefiles/index.dml"
 	elog
-	elog "To change the spellcheck language edit"
-	elog " /opt/opera/share/opera/ini/spellcheck.ini"
-	elog "and emerge app-dicts/aspell-language."
-	elog
-	elog "If you want to watch videos on websites like YouTube,"
-	elog "you will need to emerge net-www/netscape-flash,"
-	elog "then edit \$HOME/.opera/pluginpath.ini and set:"
-	elog " /opt/netscape/plugins=2"
+	elog "To use the spellchecker (USE=spell) for non-English simply do"
+	elog "$ emerge app-dicts/aspell-[your language]."
 
 	if use x86-fbsd; then
 		elog
 		elog "To improve shared memory usage please set:"
-		elog "	sysctl kern.ipc.shm_allow_removed=1"
+		elog "$	sysctl kern.ipc.shm_allow_removed=1"
 	fi
 }
 
