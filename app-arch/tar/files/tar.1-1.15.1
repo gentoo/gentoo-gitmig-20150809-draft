@@ -1,4 +1,4 @@
-.TH TAR 1 "Jul 2007" "GNU" "tar"
+.TH TAR 1 "Oct 2004" "GNU" "tar"
 .SH NAME
 tar \- The GNU version of the tar archiving utility
 .SH SYNOPSIS
@@ -46,6 +46,9 @@ tar \- The GNU version of the tar archiving utility
 ]
 [
 .BR -C ", " --directory " DIR"
+]
+[
+.BR --check-links
 ]
 [
 .BR --checkpoint
@@ -102,7 +105,7 @@ tar \- The GNU version of the tar archiving utility
 .BR --keep-newer-files
 ]
 [
-.BR -l ", " --check-links
+.BR -l ", " --one-file-system
 ]
 [
 .BR -L ", " --tape-length " N"
@@ -154,9 +157,6 @@ tar \- The GNU version of the tar archiving utility
 ]
 [
 .BR --occurrence " NUM"
-]
-[
-.BR --one-file-system
 ]
 [
 .BR --overwrite
@@ -270,10 +270,10 @@ tar \- The GNU version of the tar archiving utility
 .BR -X ", " --exclude-from " FILE"
 ]
 [
-.BR -z ", " --gzip ", " --gunzip ", " --ungzip
+.BR -Z ", " --compress ", " --uncompress
 ]
 [
-.BR -Z ", " --compress ", " --uncompress
+.BR -z ", " --gzip ", " --gunzip ", " --ungzip
 ]
 [
 .BR -[0-7][lmh]
@@ -373,6 +373,10 @@ block the output of compression program for tapes
 .BR -C ", " --directory " DIR"
 change to directory DIR
 .TP
+.BR --check-links
+warn if number of hard links to the file on the filesystem mismatch the 
+number of links recorded in the archive
+.TP
 .BR --checkpoint
 print directory names while reading the archive
 .TP
@@ -431,9 +435,8 @@ begin at file F in the archive
 .BR --keep-newer-files
 do not overwrite files which are newer than the archive
 .TP
-.BR -l ", " --check-links
-warn if number of hard links to the file on the filesystem mismatch the 
-number of links recorded in the archive
+.BR -l ", " --one-file-system
+stay in local file system when creating an archive
 .TP
 .BR -L ", " --tape-length " N"
 change tapes after writing N*1024 bytes
@@ -492,9 +495,6 @@ extract files to standard output
 .BR --occurrence " NUM"
 process only NUM occurrences of each named file; used with 
 \fI--delete\fR, \fI--diff\fR, \fI--extract\fR, or \fI--list\fR
-.TP
-.BR --one-file-system
-stay in local file system when creating an archive
 .TP
 .BR --overwrite
 overwrite existing files and directory metadata when extracting
@@ -611,11 +611,11 @@ exclude files based upon PATTERN
 .BR -X ", " --exclude-from " FILE"
 exclude files listed in FILE
 .TP
-.BR -z ", " --gzip ", " --gunzip ", " --ungzip
-filter the archive through gzip
-.TP
 .BR -Z ", " --compress ", " --uncompress
 filter the archive through compress
+.TP
+.BR -z ", " --gzip ", " --gunzip ", " --ungzip
+filter the archive through gzip
 .TP
 .BR --use-compress-program " PROG"
 filter the archive through PROG (which must accept -d)
@@ -623,11 +623,11 @@ filter the archive through PROG (which must accept -d)
 .BR -[0-7][lmh]
 specify drive and density
 .SH BUGS
-The GNU folks, in general, abhor man pages and create info documents instead.
-The maintainer of \fBtar\fR falls into this category.  Thus, this man page may 
-not be complete nor current, and it is included in the Gentoo portage tree 
+The GNU folks, in general, abhor man pages, and create info documents instead.
+The maintainer of \fBtar\fR falls into this category.  Thus this man page may 
+not be complete, nor current, and was included in the Gentoo portage tree 
 because man is a great tool :).  This man page was first taken from Debian 
-Linux and has since been lovingly updated here.
+Linux and has since been loving updated here.
 .SH "REPORTING BUGS"
 Please report bugs via http://bugs.gentoo.org/
 .SH "AUTHORS"

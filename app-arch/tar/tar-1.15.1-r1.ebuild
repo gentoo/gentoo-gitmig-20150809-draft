@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1-r1.ebuild,v 1.11 2006/04/23 16:43:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1-r1.ebuild,v 1.12 2007/07/07 12:26:40 ulm Exp $
 
 inherit flag-o-matic eutils
 
@@ -68,7 +68,7 @@ src_install() {
 		dodir /usr/bin
 		dosym /bin/${p}tar /usr/bin/${p}tar
 		dodoc AUTHORS ChangeLog* NEWS README* PORTS THANKS
-		newman "${FILESDIR}"/tar.1 ${p}tar.1
+		newman "${FILESDIR}"/tar.1-${PV} ${p}tar.1
 		mv "${D}"/usr/sbin/${p}backup{,-tar}
 		mv "${D}"/usr/sbin/${p}restore{,-tar}
 	fi
