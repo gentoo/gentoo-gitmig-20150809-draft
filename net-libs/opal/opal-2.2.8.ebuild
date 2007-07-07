@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-2.2.8.ebuild,v 1.3 2007/06/03 21:58:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-2.2.8.ebuild,v 1.4 2007/07/07 17:43:11 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -8,12 +8,12 @@ DESCRIPTION="OPAL library, used by Ekiga"
 HOMEPAGE="http://www.ekiga.org"
 SRC_URI="http://www.ekiga.org/admin/downloads/latest/sources/sources/${P}.tar.gz"
 
-IUSE="novideo noaudio debug"
-SLOT="0"
 LICENSE="MPL-1.1"
+SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="novideo noaudio debug"
 
-RDEPEND="~dev-libs/pwlib-1.10.$[${PV##*.}-1]
+RDEPEND="~dev-libs/pwlib-1.10.$((${PV##*.}-1))
 	>=media-video/ffmpeg-0.4.7"
 
 src_unpack() {
@@ -31,9 +31,6 @@ src_compile() {
 
 	# remove -fstack-protector, may cause problems (bug #75259)
 	filter-flags -fstack-protector
-
-	# -Os causes problems, bug #180718
-	replace-flags -Os -O2
 
 	# NOTRACE avoid compilation problems, we disable PTRACING using NOTRACE=1
 	# compile with PTRACING if the user wants to debug stuff
