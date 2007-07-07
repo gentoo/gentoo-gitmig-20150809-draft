@@ -5,7 +5,7 @@
 # This is a nice client firewall script which should suit most desktop users.
 # We allow auth and ssh in by default.
 
-PORTS_IN=${PORTS_IN:-auth ssh}
+PORTS_IN=${PORTS_IN-auth ssh}
 
 opts="panic showstatus"
 
