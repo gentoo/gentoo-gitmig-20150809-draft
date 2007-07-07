@@ -33,10 +33,10 @@ AUX vdr-weatherng-0.0.8_pre3-dxr3.diff 526 RMD160 6a61ea5da3f0183f2360fe20b637bc
 MD5 d662f919fa1978c907c7afef08a4a430 files/vdr-weatherng-0.0.8_pre3-dxr3.diff 526
 RMD160 6a61ea5da3f0183f2360fe20b637bc91571ee916 files/vdr-weatherng-0.0.8_pre3-dxr3.diff 526
 SHA256 10e5820e34058157be8b9702f6a5d01aa86051694a9f6a1f8a678bce22f41c49 files/vdr-weatherng-0.0.8_pre3-dxr3.diff 526
-AUX vdr-weatherng-0.0.8_pre3-gentoo.diff 3183 RMD160 fd7aee043ca6e8dad28b9da0789181874d8bf468 SHA1 379977933c44ec03594a5b2a983fde21adf7405e SHA256 45031e48d369d6db6ac8ecb36d10e64e71e79eee60694ee3975f1a7c78e3d1a6
-MD5 6eb39b0533b7a1a3db354dc901585e8e files/vdr-weatherng-0.0.8_pre3-gentoo.diff 3183
-RMD160 fd7aee043ca6e8dad28b9da0789181874d8bf468 files/vdr-weatherng-0.0.8_pre3-gentoo.diff 3183
-SHA256 45031e48d369d6db6ac8ecb36d10e64e71e79eee60694ee3975f1a7c78e3d1a6 files/vdr-weatherng-0.0.8_pre3-gentoo.diff 3183
+AUX vdr-weatherng-0.0.8_pre3-gentoo.diff 3243 RMD160 f47d6dad32ed6ec8eefb19b7ccbff154424e161c SHA1 ec825384c5a750bc910871a62d30e55a149c935b SHA256 7eea5a74e14cdca3077ae54ec1c92693c6308ae171fe7471fc3533d85e9d46ad
+MD5 05b51c54d504fd2d4e86a51360e254a0 files/vdr-weatherng-0.0.8_pre3-gentoo.diff 3243
+RMD160 f47d6dad32ed6ec8eefb19b7ccbff154424e161c files/vdr-weatherng-0.0.8_pre3-gentoo.diff 3243
+SHA256 7eea5a74e14cdca3077ae54ec1c92693c6308ae171fe7471fc3533d85e9d46ad files/vdr-weatherng-0.0.8_pre3-gentoo.diff 3243
 AUX vdr-weatherng-0.0.8_pre3-timeout.diff 1160 RMD160 111b401d975f42ef0998e41e89ce669b5cf38e4f SHA1 b57051a40a1ef514ca40702b3a3df3b8d72b5d21 SHA256 5060f4085b875215945674ab03457e3d241e13086489e7ea1bea4de1045a0639
 MD5 1ad72781e5d4f31a06cba430fa74c70c files/vdr-weatherng-0.0.8_pre3-timeout.diff 1160
 RMD160 111b401d975f42ef0998e41e89ce669b5cf38e4f files/vdr-weatherng-0.0.8_pre3-timeout.diff 1160
@@ -56,10 +56,10 @@ EBUILD vdr-weatherng-0.0.8_pre3.ebuild 1894 RMD160 8927761d888681aed3903a1943b45
 MD5 a505345ade80928c0529a1945c2f8406 vdr-weatherng-0.0.8_pre3.ebuild 1894
 RMD160 8927761d888681aed3903a1943b45bb73b3d200f vdr-weatherng-0.0.8_pre3.ebuild 1894
 SHA256 382a19fca6d76803eb5553c67a77d2861fdb4ea6869998f04caf92f84fda85b9 vdr-weatherng-0.0.8_pre3.ebuild 1894
-MISC ChangeLog 2816 RMD160 ebc5f9073ffa1b39c919a59d7ded4f91f965a660 SHA1 d4b02965ed82dbdb00426512de76ee98c23ca914 SHA256 03cc47768f9b0fafcbd90a0b06dbc5b33e939817dcf99daaab09c5f5eb977b9c
-MD5 c458d3f80cb07e3be033f2a40e7759fd ChangeLog 2816
-RMD160 ebc5f9073ffa1b39c919a59d7ded4f91f965a660 ChangeLog 2816
-SHA256 03cc47768f9b0fafcbd90a0b06dbc5b33e939817dcf99daaab09c5f5eb977b9c ChangeLog 2816
+MISC ChangeLog 2976 RMD160 d6c71eb7860f1d76e394c636db76b5ecc94b602b SHA1 12c925875e56b71584aced41966f7684b2daf912 SHA256 41245c8b685c21f9cfbcd5ba8c9825d4c3f906deef8fe07d6f0ae5d63825a8f7
+MD5 35972236631760dfb19e6b2773945077 ChangeLog 2976
+RMD160 d6c71eb7860f1d76e394c636db76b5ecc94b602b ChangeLog 2976
+SHA256 41245c8b685c21f9cfbcd5ba8c9825d4c3f906deef8fe07d6f0ae5d63825a8f7 ChangeLog 2976
 MISC metadata.xml 383 RMD160 a8a4701d352ee3590a8a30f381be6c63e6f0a096 SHA1 056dbf4bd08fd4c735ca17984e290e0ab2358922 SHA256 ef325da6618d80ec03206c7c910e7912b3258e13be76d6426187be42c939e6a5
 MD5 fa035fb6dd31464495e86c490fb67c8f metadata.xml 383
 RMD160 a8a4701d352ee3590a8a30f381be6c63e6f0a096 metadata.xml 383
@@ -74,9 +74,10 @@ MD5 d4cb29e51c6c67e3a72c268d5011284f files/digest-vdr-weatherng-0.0.8_pre3 265
 RMD160 d87fccad14d061e802e44b2e188f21a926020aa5 files/digest-vdr-weatherng-0.0.8_pre3 265
 SHA256 694610fdf3d30a5f8e93aca3ebb1939abd82c316915ce320fb33924ff7e1a07a files/digest-vdr-weatherng-0.0.8_pre3 265
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
+Comment: added by hd_brummy@gentoo.org
 
-iD8DBQFGboOyt2vP6XvVdOcRAh1OAJ9+FAFtRKcphlCLDZsS1Y8GmICuNACgg2iH
-/fFcqesqa7E07RL0wsCXCAA=
-=rqbN
+iD8DBQFGj9Qidn07HTTCgIoRAnpzAJsH7xcT2KbaGGZ7bJSQ9BNhIMpi1wCgs3AH
+XSK//hklvg0SW+q4Cx4dpXo=
+=y0ms
 -----END PGP SIGNATURE-----

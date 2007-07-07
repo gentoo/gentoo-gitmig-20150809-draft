@@ -26,10 +26,10 @@ diff -Naur weatherng-0.0.8-pre2.orig/examples/weatherng.sh weatherng-0.0.8-pre2/
 -#		http://www.wetter24.de/automatic/brd_tag_tt00002.jpg \
 -#		http://www.wetter24.de/automatic/brd_tag_rr00002.jpg \
 +		http://www.dwd.de/scripts/getimg.php?src=/wundk/Wetter.jpg \
-+		http://www.zdf.de/ZDFde/wetter/showpicture/0,2236,355,00.jpg \
-+		http://www.zdf.de/ZDFde/wetter/showpicture/0,2236,110,00.jpg \
-+		http://www.zdf.de/ZDFde/wetter/showpicture/0,2236,267,00.jpg \
-+		http://www.zdf.de/ZDFde/wetter/showpicture/0,2236,346,00.jpg \
++		http://www.zdf.de/CMO/frontend/subsystem_we/WeShowPicture/0,6008,337,00.jpg \
++		http://www.zdf.de/CMO/frontend/subsystem_we/WeShowPicture/0,6008,261,00.jpg \
++		http://www.zdf.de/CMO/frontend/subsystem_we/WeShowPicture/0,6008,258,00.jpg \
++		http://www.zdf.de/CMO/frontend/subsystem_we/WeShowPicture/0,6008,346,00.jpg \
  		)
  	;;
  	7) MESG='Téléchargement des données Météo OK'
