@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.76 2007/07/02 15:11:34 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.77 2007/07/07 08:43:40 graaff Exp $
+
+*gtk-gnutella-0.96.4 (07 Jul 2007)
+
+  07 Jul 2007; Hans de Graaff <graaff@gentoo.org>
+  +gtk-gnutella-0.96.4.ebuild:
+  Version bump with numerous improvements and bug fixes.
+  This version no longer uses sqlite for some of its internal data.
+  Removed RESTRICT=mirror after discussion with upstream on IRC.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   gtk-gnutella-0.96.3.ebuild:
