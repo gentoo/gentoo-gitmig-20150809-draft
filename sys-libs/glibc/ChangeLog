@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.538 2007/07/05 10:08:54 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.539 2007/07/07 13:12:42 corsair Exp $
+
+  07 Jul 2007; Markus Rothe <corsair@gentoo.org> glibc-2.5-r4.ebuild:
+  Stable on ppc64; bug #183844
 
   05 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> glibc-2.5-r4.ebuild:
   (QA) RESTRICT clean up.
