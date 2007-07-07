@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gwget
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.12 2007/02/17 00:08:12 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.13 2007/07/07 10:57:32 eva Exp $
+
+*gwget-0.99 (07 Jul 2007)
+
+  07 Jul 2007; Gilles Dartiguelongue <eva@gentoo.org> -gwget-0.14.ebuild,
+  -gwget-0.96.ebuild, -gwget-0.97.ebuild, +gwget-0.99.ebuild:
+  bump to 0.99 and cleanup of old (eventually broken) versions to fix bug
+  #144727 and bug #144756
 
   17 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> metadata.xml:
   Removed allanonjl from metadata.xml
