@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6-r8.ebuild,v 1.5 2007/06/25 17:00:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6-r8.ebuild,v 1.6 2007/07/07 13:40:09 philantrop Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -190,6 +190,9 @@ KDEDIRS="/usr:/usr/local:${PREFIX}"
 XDG_DATA_DIRS="/usr/share:${PREFIX}/share:/usr/local/share"
 COLON_SEPARATED="XDG_DATA_DIRS"
 EOF
+
+	# Make sure the target for the revdep-rebuild stuff exists. Fixes bug 184441.
+	dodir /etc/revdep-rebuild
 
 cat <<EOF > "${D}"/etc/revdep-rebuild/50-kde3
 SEARCH_DIRS="${PREFIX}/bin ${PREFIX}/lib*"

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.467 2007/06/25 17:00:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.468 2007/07/07 13:40:09 philantrop Exp $
+
+  07 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kdelibs-3.5.6-r7.ebuild, kdelibs-3.5.6-r8.ebuild, kdelibs-3.5.6-r9.ebuild,
+  kdelibs-3.5.7.ebuild:
+  Make sure the target for the revdep-rebuild stuff exists. Fixes bug 184441.
 
   25 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
   kdelibs-3.5.5-r4.ebuild, kdelibs-3.5.5-r10.ebuild,
