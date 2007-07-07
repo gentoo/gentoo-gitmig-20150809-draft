@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.5-r2.ebuild,v 1.14 2007/05/12 22:17:52 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.5-r2.ebuild,v 1.15 2007/07/07 23:52:59 philantrop Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -15,9 +15,9 @@ HOMEPAGE="http://kopete.kde.org/"
 
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="jingle sametime ssl xscreensaver slp kernel_linux latex crypt
-	  winpopup sms irc yahoo gadu groupwise netmeeting statistics autoreplace
-	  connectionstatus contactnotes translator webpresence texteffect highlight
-	  alias autoreplace history nowlistening addbookmarks kdehiddenvisibility"
+	winpopup sms irc yahoo gadu groupwise netmeeting statistics autoreplace
+	connectionstatus contactnotes translator webpresence texteffect highlight
+	alias autoreplace history nowlistening addbookmarks kdehiddenvisibility"
 
 # The kernel_linux? ( ) conditional dependencies are for webcams, not supported
 # on other kernels AFAIK
@@ -80,6 +80,12 @@ src_unpack() {
 	epatch "${FILESDIR}/gnomemeeting-ekiga.patch"
 
 	epatch "${FILESDIR}/${P}-icqfix.patch"
+
+	# Fixes bug 154421
+	epatch "${FILESDIR}/${P}-status-visibility.patch"
+
+	# Fixes bug 151089
+	epatch "${FILESDIR}/${P}-enable-final-redefines.patch"
 
 	epatch "${FILESDIR}/kdenetwork-3.5.5-linux-headers-2.6.18.patch"
 
