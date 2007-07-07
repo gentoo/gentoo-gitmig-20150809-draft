@@ -1,0 +1,9 @@
+# ChangeLog for media-video/pymp
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/ChangeLog,v 1.1 2007/07/07 18:25:36 drac Exp $
+
+*pymp-1.0 (07 Jul 2007)
+
+  07 Jul 2007; Samuli Suominen <drac@gentoo.org> +pymp-1.0.ebuild:
+  package move from media-sound, mplayer frontend belongs here.
+
