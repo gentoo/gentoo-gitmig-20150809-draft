@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7455 2007/07/07 17:03:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7456 2007/07/07 17:07:30 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -675,11 +675,6 @@ media-font/mikachan-font
 # Marien Zwart <marienz@gentoo.org> (10 Feb 2007)
 # Masking experimental ebuild.
 =x11-drivers/ati-drivers-8.33.6-r2
-
-# Peter Weller <welp@gentoo.org> (09 Feb 2007)
-# Libnotify doesn't work with dbus-python-0.80.x
-# fixed in a newer version
-=net-im/gajim-0.11-r3
 
 # Alec Warner <antarus@gentoo.org> (05 Feb 2007)
 # Masked to security problems, use 1.23-r1 until I fix it
