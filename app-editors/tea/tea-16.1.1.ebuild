@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-16.1.1.ebuild,v 1.3 2007/06/27 13:22:40 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-16.1.1.ebuild,v 1.4 2007/07/07 19:00:48 welp Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed!"
 
 	doicon ${FILESDIR}/tea_icon_v2.png
-	make_desktop_entry tea Tea tea_icon_v2.png Office
+	make_desktop_entry teaed Tea tea_icon_v2.png Development
 }
 
 pkg_postinst() {
