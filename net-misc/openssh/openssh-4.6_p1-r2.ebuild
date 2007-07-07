@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.6_p1-r2.ebuild,v 1.5 2007/07/05 11:54:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.6_p1-r2.ebuild,v 1.6 2007/07/07 16:23:44 kumba Exp $
 
 inherit eutils flag-o-matic ccc multilib autotools pam
 
@@ -23,7 +23,7 @@ SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm hppa ia64 m68k mips ~ppc ~ppc64 s390 sh sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="static pam tcpd kerberos skey selinux chroot X509 ldap smartcard hpn libedit X"
 
 RDEPEND="pam? ( virtual/pam )
