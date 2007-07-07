@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pymp/pymp-1.0.ebuild,v 1.2 2007/07/07 18:03:48 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pymp/pymp-1.0.ebuild,v 1.3 2007/07/07 18:06:56 drac Exp $
 
 inherit eutils
 
@@ -17,17 +17,12 @@ PDEPEND="media-video/mplayer"
 RDEPEND="dev-python/pygtk"
 DEPEND="sys-apps/sed"
 
-src_unpack() {
-	unpack ${A}
-	sed -i -e 's:/usr/local:/usr:' "${S}"/Makefile
-}
-
 src_compile() {
 	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake PREFIX="/usr" DESTDIR="${D}" install || die "emake install failed."
 	dodoc CHANGELOG README
 	make_desktop_entry ${PN} "${PN}" ${PN}.png
 }
