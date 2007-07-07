@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta.ebuild,v 1.3 2007/03/30 21:14:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta.ebuild,v 1.4 2007/07/07 09:29:28 aballier Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -10,7 +10,7 @@ inherit eutils autotools
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
 
-PATCHLEVEL="1"
+PATCHLEVEL="2"
 DESCRIPTION="Sound editor and recorder"
 HOMEPAGE="http://rezound.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
@@ -29,7 +29,7 @@ RDEPEND="=sci-libs/fftw-2*
 	alsa? ( >=media-libs/alsa-lib-1.0 )
 	flac? ( >=media-libs/flac-1.1.2 )
 	jack? ( media-sound/jack-audio-connection-kit )
-	portaudio? ( =media-libs/portaudio-18* )
+	portaudio? ( >=media-libs/portaudio-18 )
 	soundtouch? ( >=media-libs/libsoundtouch-1.2.1 )
 	vorbis? ( media-libs/libvorbis media-libs/libogg )"
 
