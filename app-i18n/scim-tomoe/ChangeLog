@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-tomoe
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tomoe/ChangeLog,v 1.6 2007/06/02 00:26:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tomoe/ChangeLog,v 1.7 2007/07/07 05:40:06 matsuu Exp $
+
+*scim-tomoe-0.6.0 (07 Jul 2007)
+
+  07 Jul 2007; MATSUU Takuto <matsuu@gentoo.org> +scim-tomoe-0.6.0.ebuild:
+  Version bumped, bug #183802.
 
 *scim-tomoe-0.5.0-r2 (02 Jun 2007)
 
