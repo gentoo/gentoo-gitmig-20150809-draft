@@ -1,11 +1,11 @@
 # ChangeLog for net-news/raggle
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.9 2007/06/26 03:11:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.10 2007/07/07 22:46:37 mr_bones_ Exp $
 
   26 Jun 2007; Michael Sterrett <mr_bones_@gentoo.org> raggle-0.4.0.ebuild:
   dev-lang/ruby-cvs was removed
 
-  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
   02 May 2006; Jason Wever <weeve@gentoo.org> raggle-0.4.0.ebuild:
@@ -38,7 +38,7 @@
   +raggle-0.4.0.ebuild, +raggle-0.4.1.ebuild:
   Moved from www-client/raggle to net-news/raggle.
 
-  19 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> raggle-0.4.0.ebuild:
+  19 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org> raggle-0.4.0.ebuild:
   Stable on alpha.
 
   18 Jul 2005; Michael Kohl <citizen428@gentoo.org> -raggle-0.3.0.ebuild,
@@ -53,7 +53,7 @@
   20 Mar 2005; Michael Kohl <citizen428@gentoo.org> :
   Version bump, closing bug #85987, obsoleting the destdir-patch
 
-  19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> raggle-0.3.2.ebuild:
+  19 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> raggle-0.3.2.ebuild:
   Stable on alpha.
 
   04 Jan 2005; Michael Kohl <citizen428@gentoo.org> raggle-0.3.2.ebuild:
@@ -72,7 +72,7 @@
   14 Oct 2004; David Holm <dholm@gentoo.org> raggle-0.3.1.ebuild:
   Added to ~ppc.
 
-  03 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> raggle-0.3.1.ebuild:
+  03 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> raggle-0.3.1.ebuild:
   Stable on alpha.
 
   30 Sep 2004; Michael Kohl <citizen428@gentoo.org> raggle-0.3.1.ebuild:
