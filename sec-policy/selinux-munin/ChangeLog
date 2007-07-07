@@ -1,0 +1,11 @@
+# ChangeLog for sec-policy/selinux-munin
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-munin/ChangeLog,v 1.1 2007/07/07 16:30:11 kaiowas Exp $
+
+*selinux-munin-20070329 (07 Jul 2007)
+
+  07 Jul 2007; Petre Rodan <kaiowas@gentoo.org>
+  +files/selinux-munin-20070329.patch, +metadata.xml,
+  +selinux-munin-20070329.ebuild:
+  initial commit. patch from Krzysztof Kozłowski bug #183409
+
