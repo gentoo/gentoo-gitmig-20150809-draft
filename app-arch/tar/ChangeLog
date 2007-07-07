@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.96 2007/07/07 07:15:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.97 2007/07/07 07:36:09 corsair Exp $
+
+  07 Jul 2007; Markus Rothe <corsair@gentoo.org> tar-1.17.ebuild:
+  Stable on ppc64; bug #184453
 
   07 Jul 2007; Joshua Kinard <kumba@gentoo.org> tar-1.17.ebuild:
   Stable on mips, per #184453.
