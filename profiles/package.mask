@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7459 2007/07/07 21:53:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7460 2007/07/07 22:02:20 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -754,19 +754,9 @@ media-tv/nuppelvideo
 # Masked for testing.
 =media-libs/spandsp-0.0.3*
 
-# Robin H. Johnson <robbat2@gentoo.org> (21 Nov 2006)
-# Block. It breaks badly on bigendian boxes.
-=app-crypt/mhash-0.9.7.1
-
 # Aron Griffis <agriffis@gentoo.org>
 # Masked for testing new enablement via eselect
 >app-shells/bash-completion-20060301
-
-# Doug Goldstein <cardoe@gentoo.org> (15 Nov 2006)
-# Completely broken. Upstream removed and changed binary files
-# diff kinda doesn't work with binary files. Gonna have to make
-# a tarball of changed binary files and overlay it
-=media-plugins/mytharchive-0.20_p11671
 
 # Markus Dittrich <markusle@gentoo.org> (15 Nov 2006)
 # masked sci-mathematics/gturing; last release was
@@ -835,7 +825,6 @@ dev-db/monetdb
 # masked for testing due to major ebuild and installation changes
 sys-apps/makedev
 >=sys-apps/baselayout-1.13.0_alpha1
-=media-gfx/splashutils-1.3-r3
 
 # Markus Ullmann <jokey@gentoo.org> (24.09.2006)
 # masking kvirc cvs ebuild
@@ -965,10 +954,6 @@ app-text/texlive
 # Pre-release snapshots
 =app-mobilephone/kmobiletools-0.5*
 
-# Tavis Ormandy <taviso@gentoo.org> (21 Apr 2006)
-# unresolved security issues #125491
-net-analyzer/tcpick
-
 # Brent Baude <ranger@gentoo.org> (18 Apr 2006)
 # Masked pending removal. This package had been deprecated
 # in favor of sys-apps/ibm-powerpc-utils and an optional
@@ -1056,10 +1041,6 @@ app-shells/csh
 # Mask tcpreplay beta branch. If you want it, unmask it.
 >=net-analyzer/tcpreplay-3.0_beta1
 
-# Luca Barbato <lu_zero@gentoo.org> (25 Jan 2006)
-# untested
-=app-emulation/bochs-2.2.5-r1
-
 # Mike Frysinger <vapier@gentoo.org> (25 Jan 2006)
 # Added for fun, but incomplete atm
 >=sys-apps/util-linux-2.13_pre0
@@ -1117,8 +1098,6 @@ sys-apps/gli
 >=dev-db/mysql-community-5.1
 >=virtual/mysql-5.1
 =dev-db/mysql-4.1.23_alpha20070101-r61
-=dev-db/mysql-5.0.34_alpha20070101-r61
-=dev-db/mysql-community-5.1.15_alpha-r90
 
 # Wolfram Schlich <wschlich@gentoo.org> (26 Nov 2005)
 # has security issues and will be removed from portage
