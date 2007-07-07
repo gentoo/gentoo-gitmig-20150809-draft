@@ -1,18 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.24.ebuild,v 1.5 2007/04/28 17:09:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.24.ebuild,v 1.6 2007/07/07 04:21:29 vapier Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 inherit eutils flag-o-matic autotools
 
 DESCRIPTION="A userspace logging daemon for netfilter/iptables related logging"
-SRC_URI="http://ftp.netfilter.org/pub/ulogd/${P}.tar.bz2"
 HOMEPAGE="http://netfilter.org/projects/ulogd/index.html"
+SRC_URI="http://ftp.netfilter.org/pub/ulogd/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc -sparc ~x86"
+SLOT="0"
+KEYWORDS="~amd64 ~ia64 ~ppc -sparc ~x86"
 IUSE="mysql postgres"
 
 DEPEND="net-firewall/iptables
@@ -54,13 +52,8 @@ src_install() {
 	cd doc/
 	dodoc ulogd.txt ulogd.a4.ps
 
-	if use mysql; then
-		dodoc mysql.table mysql.table.ipaddr-as-string
-	fi
-
-	if use postgres; then
-		dodoc pgsql.table
-	fi
+	use mysql && dodoc mysql.table mysql.table.ipaddr-as-string
+	use postgres && dodoc pgsql.table
 
 	dohtml ulogd.html
 }

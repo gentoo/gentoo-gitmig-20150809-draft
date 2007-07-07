@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.44 2007/04/28 17:09:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.45 2007/07/07 04:21:29 vapier Exp $
+
+  07 Jul 2007; Mike Frysinger <vapier@gentoo.org> ulogd-1.24.ebuild:
+  Add back in ~ia64 that got lost along the way.
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> ulogd-1.23-r1.ebuild,
   ulogd-1.24.ebuild:
