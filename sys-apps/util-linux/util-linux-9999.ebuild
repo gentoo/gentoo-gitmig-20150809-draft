@@ -1,17 +1,21 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.3 2007/06/13 03:27:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.4 2007/07/07 05:30:58 vapier Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
 inherit eutils git
 
 MY_PV=${PV/_/-}
-MY_P=${PN}-${MY_PV}
+MY_P=${PN}-ng-${MY_PV}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Various useful Linux utilities"
-HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
-SRC_URI=""
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux-ng/"
+if [[ ${PV} == "9999" ]] ; then
+	SRC_URI=""
+else
+	SRC_URI="http://www.kernel.org/pub/linux/utils/util-linux-ng/v${PV:0:4}/${MY_P}.tar.bz2"
+fi
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,6 +23,7 @@ KEYWORDS=""
 IUSE="nls old-linux selinux"
 
 RDEPEND="!sys-process/schedutils
+	!sys-apps/setarch
 	>=sys-libs/ncurses-5.2-r2
 	>=sys-fs/e2fsprogs-1.34
 	selinux? ( sys-libs/libselinux )"
@@ -27,14 +32,18 @@ DEPEND="${RDEPEND}
 	virtual/os-headers"
 
 src_unpack() {
-	git_src_unpack
-	cd "${S}"
-	./autogen.sh || die
+	if [[ ${PV} == "9999" ]] ; then
+		git_src_unpack
+		cd "${S}"
+		./autogen.sh || die
+	else
+		unpack ${A}
+	fi
 }
 
 src_compile() {
 	econf \
-		--prefix=/ \
+		--with-fsprobe=blkid \
 		$(use_enable nls) \
 		--enable-agetty \
 		--enable-cramfs \
@@ -60,7 +69,5 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "install failed"
-	dodoc AUTHORS DEPRECATED NEWS README TODO
-	# required by autotools
-	dosym /bin/arch /usr/bin/arch
+	dodoc AUTHORS NEWS README* TODO docs/*
 }
