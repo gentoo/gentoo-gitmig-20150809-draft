@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/package.mask,v 1.12 2007/06/11 09:44:31 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/package.mask,v 1.13 2007/07/07 16:13:17 kaiowas Exp $
 
 # Jason Wever <weeve@gentoo.org>
 # gradm requires 64 bit support, which doesn't exist in this profile
@@ -48,8 +48,10 @@ sec-policy/selinux-inetd
 >=sec-policy/selinux-jabber-server-20060101
 >=sec-policy/selinux-kerberos-20060101
 >=sec-policy/selinux-logrotate-20060101
+sec-policy/selinux-lpd
 >=sec-policy/selinux-lvm-20060101
 >=sec-policy/selinux-mdadm-20060101
+sec-policy/selinux-munin
 >=sec-policy/selinux-mysql-20060101
 >=sec-policy/selinux-nfs-20060101
 >=sec-policy/selinux-ntop-20060101

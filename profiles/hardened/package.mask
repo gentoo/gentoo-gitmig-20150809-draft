@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.31 2007/07/07 10:19:51 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.32 2007/07/07 16:13:17 kaiowas Exp $
 
 # Mask off gcc-4 for all hardened arches until SSP is sorted out (i.e.
 # backport for gcc-4.0 and 4.0/4.1 rigged for SSP support in the C
@@ -64,8 +64,10 @@ sec-policy/selinux-inetd
 >=sec-policy/selinux-jabber-server-20060101
 >=sec-policy/selinux-kerberos-20060101
 >=sec-policy/selinux-logrotate-20060101
+sec-policy/selinux-lpd
 >=sec-policy/selinux-lvm-20060101
 >=sec-policy/selinux-mdadm-20060101
+sec-policy/selinux-munin
 >=sec-policy/selinux-mysql-20060101
 >=sec-policy/selinux-nfs-20060101
 >=sec-policy/selinux-ntop-20060101

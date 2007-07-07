@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/package.mask,v 1.6 2007/06/11 09:44:31 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/package.mask,v 1.7 2007/07/07 16:13:17 kaiowas Exp $
 
 # Chris PeBenito <pebenito@gentoo.org> (19 Mar 2006)
 # Requires a new profile
@@ -31,9 +31,11 @@ sec-policy/selinux-inetd
 >=sec-policy/selinux-ipsec-tools-20060101
 >=sec-policy/selinux-jabber-server-20060101
 >=sec-policy/selinux-kerberos-20060101
+sec-policy/selinux-lpd
 >=sec-policy/selinux-logrotate-20060101
 >=sec-policy/selinux-lvm-20060101
 >=sec-policy/selinux-mdadm-20060101
+sec-policy/selinux-munin
 >=sec-policy/selinux-mysql-20060101
 >=sec-policy/selinux-nfs-20060101
 >=sec-policy/selinux-ntop-20060101
