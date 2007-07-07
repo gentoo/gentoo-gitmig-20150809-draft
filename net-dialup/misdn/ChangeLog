@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/misdn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.23 2007/05/16 17:11:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.24 2007/07/07 10:21:39 genstef Exp $
+
+*misdn-1.1.5 (07 Jul 2007)
+
+  07 Jul 2007; Stefan Schweizer <genstef@gentoo.org> +misdn-1.1.5.ebuild:
+  version bump
 
   16 May 2007; Stefan Schweizer <genstef@gentoo.org> +misdn-1.1.2.ebuild:
   Readd 1.1.2 for Jörg in bug 178765
