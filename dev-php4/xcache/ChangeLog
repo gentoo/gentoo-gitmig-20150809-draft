@@ -1,6 +1,13 @@
 # ChangeLog for dev-php4/xcache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/xcache/ChangeLog,v 1.5 2007/05/12 14:36:29 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/xcache/ChangeLog,v 1.6 2007/07/07 13:33:56 jokey Exp $
+
+*xcache-1.2.1 (07 Jul 2007)
+
+  07 Jul 2007; Markus Ullmann <jokey@gentoo.org> +xcache-1.2.1.ebuild:
+  version bump to 1.2.1 including several bugfixes (some of them were
+  segfaults), see http://xcache.lighttpd.net/wiki/Release-1.2.1 for details
+  (proxy-commit, thanks to hoffie)
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org> xcache-1.2.0.ebuild:
   Fix require_php_sapi_from usage wrt apache1.
