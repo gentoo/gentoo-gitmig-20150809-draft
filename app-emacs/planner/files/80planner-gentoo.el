@@ -5,4 +5,4 @@
 
 (require 'planner-autoloads)
 (setq remember-handler-functions '(remember-planner-append))
-(setq remember-annotation-functions planner-annotation-functions)
+(defvaralias 'remember-annotation-functions 'planner-annotation-functions)

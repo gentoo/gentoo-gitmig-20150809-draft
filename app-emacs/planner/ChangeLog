@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/planner
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/ChangeLog,v 1.18 2007/06/26 06:41:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/ChangeLog,v 1.19 2007/07/07 18:09:30 ulm Exp $
+
+  07 Jul 2007; Ulrich Mueller <ulm@gentoo.org> files/80planner-gentoo.el:
+  Use defvaralias in sitefile since the variable does not exist at this point.
 
 *planner-3.41-r2 (26 Jun 2007)
 
