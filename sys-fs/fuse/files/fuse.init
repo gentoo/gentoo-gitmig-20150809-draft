@@ -30,9 +30,6 @@ stop() {
 		umount $MOUNTPOINT >/dev/null 2>&1 || \
 			eerror $? "Error unmounting control filesystem"
 	fi
-	if grep -qw "^fuse" /proc/modules; then
-		rmmod fuse >/dev/null 2>&1 || eerror $? "Error unloading fuse module"
-	fi
 	eend ${?}
 	
 }
