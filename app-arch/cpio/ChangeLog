@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.68 2007/07/07 07:20:00 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.69 2007/07/07 07:37:43 corsair Exp $
+
+  07 Jul 2007; Markus Rothe <corsair@gentoo.org> cpio-2.8.ebuild:
+  Stable on ppc64; bug #184454
 
   07 Jul 2007; Joshua Kinard <kumba@gentoo.org> cpio-2.8.ebuild:
   Stable on mips, per #184454.
