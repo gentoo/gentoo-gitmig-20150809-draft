@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.16.1-r1.ebuild,v 1.1 2007/07/06 23:37:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.16.1-r1.ebuild,v 1.2 2007/07/07 01:44:18 ulm Exp $
 
 inherit flag-o-matic eutils multilib toolchain-funcs mono libtool
 
@@ -15,7 +15,7 @@ IUSE="emacs nls doc nocxx"
 
 DEPEND="virtual/libiconv
 	dev-libs/expat"
-PDEPEND="emacs? ( virtual/emacs )"
+PDEPEND="emacs? ( app-emacs/po-mode )"
 
 src_unpack() {
 	unpack ${A}
