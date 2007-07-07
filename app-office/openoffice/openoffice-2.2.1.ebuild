@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.1.ebuild,v 1.7 2007/06/22 11:22:42 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.1.ebuild,v 1.8 2007/07/07 07:59:58 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -201,6 +201,7 @@ src_unpack() {
 
 	#Some fixes for our patchset
 	cd ${S}
+	cp -f ${FILESDIR}/${PV}/swregion-gcc42.diff ${S}/patches/src680 || die
 	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 	epatch ${FILESDIR}/${PV}/ooo-env_log.diff
 
