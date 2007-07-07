@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.118 2007/04/24 15:37:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.119 2007/07/07 03:49:50 matsuu Exp $
+
+*scim-1.4.7 (07 Jul 2007)
+
+  07 Jul 2007; MATSUU Takuto <matsuu@gentoo.org> scim-1.4.6.ebuild,
+  +scim-1.4.7.ebuild:
+  Version bumped.
+  Removed virtual/x11.
 
   24 Apr 2007; MATSUU Takuto <matsuu@gentoo.org>
   -files/1.4.4-nodoxygen.patch, -scim-1.4.4.ebuild, -scim-1.4.5.ebuild:
