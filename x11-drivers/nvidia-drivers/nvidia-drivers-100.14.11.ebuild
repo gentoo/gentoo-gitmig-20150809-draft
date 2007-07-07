@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.11.ebuild,v 1.2 2007/07/05 22:29:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.11.ebuild,v 1.3 2007/07/07 16:47:01 cardoe Exp $
 
-inherit eutils multilib versionator linux-mod flag-o-matic
+inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
 SETTINGS_V="1.0"
 NV_V="${PV/1.0./1.0-}"
@@ -22,7 +22,6 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 RESTRICT="strip"
-EMULTILIB_PKG="true"
 
 COMMON="x11-base/xorg-server
 	x11-libs/libXt
@@ -94,13 +93,13 @@ QA_WX_LOAD_amd64="usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
 
 export _POSIX2_VERSION="199209"
 
-if use x86 ; then
+if use x86; then
 	PKG_V="-pkg0"
 	NV_PACKAGE="${X86_NV_PACKAGE}"
-elif use amd64 ; then
+elif use amd64; then
 	PKG_V="-pkg2"
 	NV_PACKAGE="${AMD64_NV_PACKAGE}"
-elif use x86-fbsd ; then
+elif use x86-fbsd; then
 	PKG_V=""
 	NV_PACKAGE="${X86_FBSD_NV_PACKAGE}"
 fi
@@ -129,23 +128,29 @@ mtrr_check() {
 }
 
 pkg_setup() {
-	if use amd64 && has_multilib_profile && [ "${DEFAULT_ABI}" != "amd64" ] ; then
+	if use amd64 && has_multilib_profile && [ "${DEFAULT_ABI}" != "amd64" ]; then
 		eerror "This ebuild doesn't currently support changing your default abi."
 		die "Unexpected \${DEFAULT_ABI} = ${DEFAULT_ABI}"
 	fi
 
-	if ! use x86-fbsd ; then
+	if ! use x86-fbsd; then
 		linux-mod_pkg_setup
 		MODULE_NAMES="nvidia(video:${S})"
 		BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} SYSOUT=${KV_OUT_DIR}"
 		mtrr_check
 	fi
+
+	# Since Nvidia ships 3 different series of drivers, we need to give the user
+	# some kind of guidance as to what version they should install. This tries
+	# to point the user in the right direction but can't be perfect. check
+	# nvidia-driver.eclass
+	nvidia-driver-check-warning
 }
 
 src_unpack() {
 	local NV_PATCH_PREFIX="${FILESDIR}/${PV}/NVIDIA-${PV}"
 
-	if ! use x86-fbsd ; then
+	if ! use x86-fbsd; then
 		if [[ ${KV_MINOR} -eq 6 && ${KV_PATCH} -lt 7 ]] ; then
 			echo
 			ewarn "Your kernel version is ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
@@ -157,9 +162,9 @@ src_unpack() {
 		fi
 	fi
 
-	if ! use x86-fbsd ; then
+	if ! use x86-fbsd; then
 		cd "${WORKDIR}"
-		bash "${DISTDIR}/${NV_PACKAGE}${PKG_V}.run" --extract-only
+		bash ${DISTDIR}/${NV_PACKAGE}${PKG_V}.run --extract-only
 	else
 		unpack ${A}
 	fi
@@ -172,8 +177,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/NVIDIA_glx-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
 	epatch "${FILESDIR}"/NVIDIA_glx-glheader.patch
+	# allow on board sensors to work with lm_sensors
+	epatch "${FILESDIR}"/NVIDIA_i2c-hwmon.patch
 
-	if ! use x86-fbsd ; then
+	if ! use x86-fbsd; then
 		# Quiet down warnings the user does not need to see
 		sed -i \
 			-e 's:-Wpointer-arith::g' \
@@ -184,8 +191,7 @@ src_unpack() {
 		[[ -n ${USE_CRAZY_OPTS} ]] && sed -i "s:-O:${CFLAGS}:" Makefile.*
 
 		# If greater than 2.6.5 use M= instead of SUBDIR=
-		cd "${S}"
-		convert_to_m Makefile.kbuild
+		cd "${S}"; convert_to_m Makefile.kbuild
 	fi
 
 	cd "${WORKDIR}"
@@ -200,7 +206,7 @@ src_compile() {
 	# This is already the default on Linux, as there's no toplevel Makefile, but
 	# on FreeBSD there's one and triggers the kernel module build, as we install
 	# it by itself, pass this.
-	if use x86-fbsd ; then
+	if use x86-fbsd; then
 		cd "${WORKDIR}/${NV_PACKAGE}${PKG_V}/src"
 		echo LDFLAGS="$(raw-ldflags)"
 		MAKE="$(get_bmake)" emake CC="$(tc-getCC)" LD="$(tc-getLD)" LDFLAGS="$(raw-ldflags)" || die
@@ -223,14 +229,21 @@ src_compile() {
 src_install() {
 	local MLTEST=$(type dyn_unpack)
 
-	cd "${WORKDIR}/${NV_PACKAGE}${PKG_V}"
+	cd "${WORKDIR}"/${NV_PACKAGE}${PKG_V}
 
-	if ! use x86-fbsd ; then
+	if ! use x86-fbsd; then
 		linux-mod_src_install
 
+		VIDEOGROUP="$(egetent group video | cut -d ':' -f 3)"
+		if [ -z "$VIDEOGROUP" ]; then
+			eerror "Failed to determine the video group gid."
+			die "Failed to determine the video group gid."
+		fi
+
 		# Add the aliases
-		[[ -f "${FILESDIR}"/nvidia ]] || die "nvidia missing in FILESDIR"
-		sed -e 's:\${PACKAGE}:'${PF}':g' "${FILESDIR}"/nvidia > "${WORKDIR}"/nvidia
+		[[ -f "${FILESDIR}"/nvidia-2 ]] || die "nvidia-2 missing in FILESDIR"
+		sed -e 's:\${PACKAGE}:'${PF}':g' \
+			-e 's:VIDEOGID:'${VIDEOGROUP}':' "${FILESDIR}"/nvidia-2 > "${WORKDIR}"/nvidia
 		insinto /etc/modules.d
 		newins "${WORKDIR}"/nvidia nvidia || die
 	else
@@ -249,18 +262,18 @@ src_install() {
 		ABI=${OABI}
 		unset OABI
 	elif use amd64 ; then
-		src_install-libs lib32 "$(get_multilibdir)"
-		src_install-libs lib "$(get_libdir)"
+		src_install-libs lib32 $(get_multilibdir)
+		src_install-libs lib $(get_libdir)
 
-		rm -rf "${D}/usr/$(get_multilibdir)"/opengl/nvidia/include
-		rm -rf "${D}/usr/$(get_multilibdir)"/opengl/nvidia/extensions
+		rm -rf "${D}"/usr/$(get_multilibdir)/opengl/nvidia/include
+		rm -rf "${D}"/usr/$(get_multilibdir)/opengl/nvidia/extensions
 	else
 		src_install-libs
 	fi
 
 	is_final_abi || return 0
 
-	if ! use x86-fbsd ; then
+	if ! use x86-fbsd; then
 		# Docs
 		newdoc usr/share/doc/README.txt README
 		dodoc usr/share/doc/Copyrights usr/share/doc/NVIDIA_Changelog
@@ -303,9 +316,9 @@ donvidia() {
 	libname=$(basename $2)
 
 	doexe $2.$3
-	dosym "${libname}.${3}" "${1}/${libname}"
+	dosym ${libname}.$3 $1/${libname}
 
-	[[ ${3} != "1" ]] && dosym "${libname}.${3}" "${1}/${libname}.1"
+	[[ $3 != "1" ]] && dosym ${libname}.$3 $1/${libname}.1
 }
 
 src_install-libs() {
@@ -335,7 +348,7 @@ src_install-libs() {
 		X11_LIB_DIR="/usr/${inslibdir}"
 	fi
 
-	if use x86-fbsd ; then
+	if use x86-fbsd; then
 		# on FreeBSD everything is on obj/
 		pkglibdir=obj
 		usrpkglibdir=obj
@@ -351,29 +364,29 @@ src_install-libs() {
 	fi
 
 	# The GLX libraries
-	donvidia "${NV_ROOT}"/lib "${usrpkglibdir}"/libGL.so "${sover}"
-	donvidia "${NV_ROOT}"/lib "${usrpkglibdir}"/libGLcore.so "${sover}"
+	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libGL.so ${sover}
+	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libGLcore.so ${sover}
 
-	donvidia "${NV_ROOT}"/lib "${usrpkglibdir}"/libnvidia-cfg.so "${sover}"
+	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libnvidia-cfg.so ${sover}
 
-	dodir "${NO_TLS_ROOT}"
-	donvidia "${NO_TLS_ROOT}" "${usrpkglibdir}"/libnvidia-tls.so "${sover}"
+	dodir ${NO_TLS_ROOT}
+	donvidia ${NO_TLS_ROOT} ${usrpkglibdir}/libnvidia-tls.so ${sover}
 
-	if ! use x86-fbsd ; then
-		donvidia "${TLS_ROOT}" "${usrpkglibdir}"/tls/libnvidia-tls.so "${sover}"
+	if ! use x86-fbsd; then
+		donvidia ${TLS_ROOT} ${usrpkglibdir}/tls/libnvidia-tls.so ${sover}
 	fi
 
 	if want_tls ; then
-		dosym ../tls/libnvidia-tls.so "${NV_ROOT}"/lib
-		dosym ../tls/libnvidia-tls.so.1 "${NV_ROOT}"/lib
-		dosym "../tls/libnvidia-tls.so.${sover}" "${NV_ROOT}"/lib
+		dosym ../tls/libnvidia-tls.so ${NV_ROOT}/lib
+		dosym ../tls/libnvidia-tls.so.1 ${NV_ROOT}/lib
+		dosym ../tls/libnvidia-tls.so.${sover} ${NV_ROOT}/lib
 	else
-		dosym ../no-tls/libnvidia-tls.so "${NV_ROOT}"/lib
-		dosym ../no-tls/libnvidia-tls.so.1 "${NV_ROOT}"/lib
-		dosym "../no-tls/libnvidia-tls.so.${sover}" "${NV_ROOT}"/lib
+		dosym ../no-tls/libnvidia-tls.so ${NV_ROOT}/lib
+		dosym ../no-tls/libnvidia-tls.so.1 ${NV_ROOT}/lib
+		dosym ../no-tls/libnvidia-tls.so.${sover} ${NV_ROOT}/lib
 	fi
 
-	if ! use x86-fbsd ; then
+	if ! use x86-fbsd; then
 		# Install the .la file for libtool, to prevent e.g. bug #176423
 		[[ -f "${FILESDIR}"/libGL.la-r2 ]] \
 			|| die "libGL.la-r2 missing in FILESDIR"
@@ -385,44 +398,44 @@ src_install-libs() {
 			-e "s:\${ver2}:${ver2}:" \
 			-e "s:\${ver3}:${ver3}:" \
 			-e "s:\${libdir}:${inslibdir}:" \
-			"${FILESDIR}"/libGL.la-r2 > "${D}/${NV_ROOT}"/lib/libGL.la
+			"${FILESDIR}"/libGL.la-r2 > "${D}"/${NV_ROOT}/lib/libGL.la
 	fi
 
-	exeinto "${X11_LIB_DIR}"/modules/drivers
+	exeinto ${X11_LIB_DIR}/modules/drivers
 
 	[[ -f ${drvdir}/nvidia_drv.so ]] && \
-		doexe "${drvdir}"/nvidia_drv.so
+		doexe ${drvdir}/nvidia_drv.so
 
-	insinto "/usr/${inslibdir}"
+	insinto /usr/${inslibdir}
 	[[ -f ${libdir}/libXvMCNVIDIA.a ]] && \
-		doins "${libdir}"/libXvMCNVIDIA.a
-	exeinto "/usr/${inslibdir}"
+		doins ${libdir}/libXvMCNVIDIA.a
+	exeinto /usr/${inslibdir}
 	# fix Bug 131315
 	[[ -f ${libdir}/libXvMCNVIDIA.so.${PV} ]] && \
-		doexe "${libdir}/libXvMCNVIDIA.so.${PV}" && \
-		dosym "libXvMCNVIDIA.so.${PV}" \
-			"/usr/${inslibdir}"/libXvMCNVIDIA.so
+		doexe ${libdir}/libXvMCNVIDIA.so.${PV} && \
+		dosym libXvMCNVIDIA.so.${PV} \
+			/usr/${inslibdir}/libXvMCNVIDIA.so
 
-	exeinto "${NV_ROOT}"/extensions
+	exeinto ${NV_ROOT}/extensions
 	[[ -f ${modules}/libnvidia-wfb.so.${sover} ]] && \
-		newexe "${modules}/libnvidia-wfb.so.${sover}" libwfb.so
+		newexe ${modules}/libnvidia-wfb.so.${sover} libwfb.so
 	[[ -f ${extdir}/libglx.so.${sover} ]] && \
-		newexe "${extdir}/libglx.so.${sover}" libglx.so
+		newexe ${extdir}/libglx.so.${sover} libglx.so
 
 	# Includes
-	insinto "${NV_ROOT}"/include
-	doins "${incdir}"/*.h
+	insinto ${NV_ROOT}/include
+	doins ${incdir}/*.h
 }
 
 pkg_preinst() {
 	# Can we make up our minds ?!?!?
-	local NV_D=${D} dir
+	local NV_D=${D}
 
 	if ! has_version x11-base/xorg-server ; then
 		for dir in lib lib32 lib64 ; do
 			if [[ -d ${NV_D}/usr/${dir}/xorg ]] ; then
-				mv "${NV_D}/usr/${dir}"/xorg/* "${NV_D}/usr/${dir}"
-				rmdir "${NV_D}/usr/${dir}"/xorg
+				mv ${NV_D}/usr/${dir}/xorg/* ${NV_D}/usr/${dir}
+				rmdir ${NV_D}/usr/${dir}/xorg
 			fi
 		done
 	fi
@@ -430,21 +443,32 @@ pkg_preinst() {
 	# Clean the dynamic libGL stuff's home to ensure
 	# we dont have stale libs floating around
 	if [[ -d ${ROOT}/usr/lib/opengl/nvidia ]] ; then
-		rm -rf "${ROOT}"/usr/lib/opengl/nvidia/*
+		rm -rf ${ROOT}/usr/lib/opengl/nvidia/*
 	fi
 	# Make sure we nuke the old nvidia-glx's env.d file
 	if [[ -e ${ROOT}/etc/env.d/09nvidia ]] ; then
-		rm -f "${ROOT}"/etc/env.d/09nvidia
+		rm -f ${ROOT}/etc/env.d/09nvidia
 	fi
 }
 
 pkg_postinst() {
-	if ! use x86-fbsd ; then
+	if ! use x86-fbsd; then
 		linux-mod_pkg_postinst
 	fi
 
 	# Switch to the nvidia implementation
 	eselect opengl set --use-old nvidia
+
+	echo
+	elog "To use the Nvidia GLX, run \"eselect opengl set nvidia\""
+	elog
+	elog "nVidia has requested that any bug reports submitted have the"
+	elog "output of /usr/bin/nvidia-bug-report.sh included."
+	elog
+	elog "To work with compiz, you must enable the AddARGBGLXVisuals option."
+	elog
+	elog "If you are having resolution problems, try disabling DynamicTwinView."
+	echo
 }
 
 want_tls() {
@@ -481,7 +505,7 @@ want_tls() {
 }
 
 pkg_postrm() {
-	if ! use x86-fbsd ; then
+	if ! use x86-fbsd; then
 		linux-mod_pkg_postrm
 	fi
 	eselect opengl set --use-old xorg-x11
