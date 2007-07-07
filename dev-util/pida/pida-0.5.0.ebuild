@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.5.0.ebuild,v 1.2 2007/07/05 18:01:30 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.5.0.ebuild,v 1.3 2007/07/07 13:20:00 corsair Exp $
 
 NEED_PYTHON=2.4
 
@@ -13,7 +13,7 @@ SRC_URI="http://pida.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="gnome"
 
 #Note: bicyclerepair should be optional but its needed due to a bug and
