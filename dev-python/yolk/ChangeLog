@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/yolk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/ChangeLog,v 1.5 2007/06/23 09:02:01 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/ChangeLog,v 1.6 2007/07/07 23:18:52 pythonhead Exp $
+
+*yolk-0.2.0 (07 Jul 2007)
+
+  07 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> -yolk-0.1.0.ebuild,
+  +yolk-0.2.0.ebuild:
+  Version bump, dropped obsolete version.
 
   23 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org> yolk-0.1.0.ebuild:
   Fixed deps, moved NEED_PYTHON before inherit.
