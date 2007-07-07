@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.5.ebuild,v 1.2 2007/07/07 08:05:15 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.5.ebuild,v 1.3 2007/07/07 16:12:12 alonbl Exp $
 
 inherit flag-o-matic
 
@@ -42,6 +42,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.0.4-idea.patch"
+	epatch "${FILESDIR}/${P}-test.patch"
 
 	# parallel make issue
 	sed -i 's#\.\./common/libcommon#libcommon#g' common/Makefile.in

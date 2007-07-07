@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.298 2007/07/07 08:05:15 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.299 2007/07/07 16:12:12 alonbl Exp $
+
+  07 Jul 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/gnupg-2.0.5-test.patch, gnupg-2.0.5.ebuild:
+  Fixed gettime test, bug#184484, thanks to Rickard Närström
 
   07 Jul 2007; Alon Bar-Lev <alonbl@gentoo.org> gnupg-2.0.5.ebuild:
   Fix dependencies, bug#184456
