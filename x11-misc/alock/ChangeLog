@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/alock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/ChangeLog,v 1.5 2007/07/05 17:42:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/ChangeLog,v 1.6 2007/07/07 09:15:48 hansmi Exp $
+
+*alock-60-r3 (07 Jul 2007)
+
+  07 Jul 2007; Michael Hanselmann <hansmi@gentoo.org> -alock-60-r1.ebuild,
+  +alock-60-r3.ebuild:
+  Install manpages to the right place, bug #184252. Patch by Tiago Cunha.
 
 *alock-60-r2 (05 Jul 2007)
 

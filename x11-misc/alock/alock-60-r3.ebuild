@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r1.ebuild,v 1.1 2007/04/27 20:29:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.1 2007/07/07 09:15:48 hansmi Exp $
 
 DESCRIPTION="alock - locks the local X display until a password is entered"
 HOMEPAGE="
@@ -11,12 +11,13 @@ SRC_URI="http://alock.googlecode.com/files/alock-svn-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~x86 ~amd64"
 IUSE=""
 
 DEPEND="
 	x11-libs/libX11
 	x11-libs/libXext
+	media-libs/imlib2
 "
 RDEPEND=""
 
@@ -24,12 +25,14 @@ MY_S="${WORKDIR}/alock-svn-${PV}"
 
 src_unpack() {
 	unpack "${A}"
+	sed -i 's|\$(DESTDIR)\$(prefix)/man|\$(DESTDIR)\$(prefix)/share/man|g' \
+		"${MY_S}"/Makefile || die "sed failed"
 }
 
 src_compile() {
 	cd "${MY_S}" || die
 
-	econf || die
+	econf --with-all || die
 	emake || die
 }
 
