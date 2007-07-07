@@ -1,4 +1,8 @@
 # Samuli Suominen <drac@gentoo.org>
+# media-libs/amrnb and media-libs/amrwb not tested.
+amr
+
+# Samuli Suominen <drac@gentoo.org>
 # sci-visualization/grace not tested.
 grace
 
