@@ -1,0 +1,48 @@
+Daemons should always close stdin, stdout and stderr after forking otherwise
+the controlling terminal will have issues closing.
+Examples include starting over ssh or baselayout-2
+http://bugs.gentoo.org/show_bug.cgi?id=182721
+
+diff -ur a/src/startup.c b/src/startup.c
+--- a/src/startup.c	2002-12-24 22:57:16.000000000 +0000
++++ b/src/startup.c	2007-07-06 23:33:50.000000000 +0100
+@@ -29,7 +29,7 @@
+ #include <sys/types.h>  /* geteuid, mknod */
+ #include <sys/stat.h>   /* mknod */
+ #include <fcntl.h>      /* mknod */
+-#include <unistd.h>     /* mknod */
++#include <unistd.h>     /* mknod, daemon */
+ 
+ 
+ #include "headers/gpmInt.h"
+@@ -134,26 +134,17 @@
+       }
+    }
+ 
+-   if(option.run_status == GPM_RUN_STARTUP ) { /* else is debugging */
+-      /* goto background and become a session leader (Stefan Giessler) */  
+-      switch(fork()) {
+-         case -1: gpm_report(GPM_PR_OOPS,GPM_MESS_FORK_FAILED);   /* error  */
+-         case  0: option.run_status = GPM_RUN_DAEMON; break;      /* child  */
+-         default: _exit(0);                                       /* parent */
+-      }
++   if (option.run_status == GPM_RUN_STARTUP ) { /* else is debugging */
++      if (daemon(0,0))
++         gpm_report(GPM_PR_OOPS,GPM_MESS_FORK_FAILED);   /* error  */
+ 
+-      if (setsid() < 0) gpm_report(GPM_PR_OOPS,GPM_MESS_SETSID_FAILED);
++      option.run_status = GPM_RUN_DAEMON; /* child  */
+    }
+ 
+    /* damon init: check whether we run or not, display message */
+    check_uniqueness();
+    gpm_report(GPM_PR_INFO,GPM_MESS_STARTED);
+ 
+-   /* is changing to root needed, because of relative paths ? or can we just
+-    * remove and ignore it ?? FIXME */
+-   if (chdir("/") < 0) gpm_report(GPM_PR_OOPS,GPM_MESS_CHDIR_FAILED);
+-
+-   
+    //return mouse_table[1].fd; /* the second is handled in the main() */
+ 
+    /****************** OLD CODE from gpn.c  END ***********************/
