@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/rtl8180-0.22_pre20050528.ebuild,v 1.4 2007/05/09 20:15:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/rtl8180-0.22_pre20050528.ebuild,v 1.5 2007/07/07 10:55:27 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -16,12 +16,12 @@ DEPEND="net-wireless/wireless-tools"
 
 MODULE_NAMES="ieee80211_crypt-r8180(net:) ieee80211_crypt_wep-r8180(net:)
 	ieee80211-r8180(net:) r8180(net:)"
-CONFIG_CHECK="NET_RADIO CRYPTO CRYPTO_ARC4 CRC32"
+CONFIG_CHECK="WIRELESS_EXT CRYPTO CRYPTO_ARC4 CRC32"
 BUILD_TARGETS="all"
 
 pkg_setup() {
 	linux-mod_pkg_setup
-	BUILD_PARAMS="KSRC=${KV_DIR}"
+	BUILD_PARAMS="KSRC=${KV_OUT_DIR}"
 }
 
 src_unpack() {
