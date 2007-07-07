@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.83 2007/05/16 10:44:58 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.84 2007/07/07 12:49:25 genstef Exp $
+
+  07 Jul 2007; Stefan Schweizer <genstef@gentoo.org>
+  slmodem-2.9.11_pre20070505.ebuild:
+  Use KV_OUT_DIR instead of KV_DIR thanks to Natanael Copa
+  <natanael.copa@gmail.com> in bug 182651
 
 *slmodem-2.9.11_pre20070505 (16 May 2007)
 
