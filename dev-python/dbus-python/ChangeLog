@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.26 2007/07/06 17:32:48 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.27 2007/07/07 22:52:52 mr_bones_ Exp $
+
+  07 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  dbus-python-0.80.2.ebuild, dbus-python-0.81.0.ebuild:
+  Add missing IUSE="test"
 
   06 Jul 2007; Ali Polatel <hawking@gentoo.org> dbus-python-0.71.ebuild,
   dbus-python-0.80.2.ebuild, dbus-python-0.81.0.ebuild:
