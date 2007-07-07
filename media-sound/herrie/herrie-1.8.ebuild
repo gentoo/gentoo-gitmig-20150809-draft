@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.8.ebuild,v 1.2 2007/07/04 20:27:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.8.ebuild,v 1.3 2007/07/07 20:13:23 rbu Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://herrie.info/distfiles/${P}.tar.bz2"
 
 LICENSE="BSD-2 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86 ~ppc"
 IUSE="ao http modplug mp3 sndfile vorbis xspf unicode nls pulseaudio oss
 	linguas_de linguas_nl linguas_pl linguas_tr linguas_sv linguas_ga"
 
