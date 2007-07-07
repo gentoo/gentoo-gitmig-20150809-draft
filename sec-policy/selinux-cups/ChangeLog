@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-cups
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-cups/ChangeLog,v 1.1 2007/07/07 16:37:11 kaiowas Exp $
+
+*selinux-cups-20070329 (07 Jul 2007)
+
+  07 Jul 2007; Petre Rodan <kaiowas@gentoo.org> +metadata.xml,
+  +selinux-cups-20070329.ebuild:
+  initial commit. fix for bug #162469
+
