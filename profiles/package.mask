@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7462 2007/07/07 22:09:40 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7463 2007/07/07 22:10:39 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -210,11 +210,6 @@ app-emacs/ilisp-cvs
 # dev-java/glassfish-persistence. After 30 days moved to java-experimental
 # because some ebuilds there are using this.
 dev-java/odmg
-
-# Mart Raudsepp <leio@gentoo.org> (04 Jun 2007)
-# Obsolete Gnome-1.x component, bug 180808
-# Masked for removal in 30 days.
-net-libs/soup
 
 # Fabian Groffen <grobian@gentoo.org> (03 Jun 2007)
 # muttng is outdated and unmaintained, try plain mutt instead.
