@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/missingh-0.16.0.ebuild,v 1.2 2007/04/30 09:19:14 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/missingh-0.16.0.ebuild,v 1.3 2007/07/07 20:31:14 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit base haskell-cabal
@@ -18,7 +18,7 @@ S="${WORKDIR}/missingh"
 
 DEPEND=">=virtual/ghc-6.4.2
 		>=dev-haskell/mtl-1.0
-		>=dev-haskell/haskell-src-1.0
+		>=dev-haskell/quickcheck-1.0
 		>=dev-haskell/hunit-1.1
 		>=dev-haskell/network-1.0"
 
