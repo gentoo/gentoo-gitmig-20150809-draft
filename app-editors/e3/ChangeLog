@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/e3
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/ChangeLog,v 1.23 2007/07/02 13:45:17 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/ChangeLog,v 1.24 2007/07/07 11:28:42 opfer Exp $
+
+  07 Jul 2007; Christian Faulhammer <opfer@gentoo.org> e3-2.7.0.ebuild,
+  -e3-2.43.ebuild:
+  stable x86, bug 184451; clean-up and adjusted DESCRIPTION
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> e3-2.43.ebuild:
   (QA) RESTRICT clean up.
