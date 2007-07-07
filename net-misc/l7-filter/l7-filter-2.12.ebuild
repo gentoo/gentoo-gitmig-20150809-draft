@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.12.ebuild,v 1.1 2007/07/07 00:31:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.12.ebuild,v 1.2 2007/07/07 01:59:50 dragonheart Exp $
 
 inherit linux-info eutils
 
@@ -153,15 +153,26 @@ pkg_postinst() {
 
 pkg_prerm() {
 	# How to determine what version it was installed against? - measily
-	eval $(/bin/fgrep KV=2 ${ROOT}/var/db/pkg/net-misc/${PF}/environment |\
-		/bin/head -1)
+	if [ -f ${ROOT}/var/db/pkg/net-misc/${PF}/environment ]; then
+		eval $(/bin/fgrep KV=2 ${ROOT}/var/db/pkg/net-misc/${PF}/environment |\
+			/bin/head -1)
+	elif [ -f ${ROOT}/var/db/pkg/net-misc/${PF}/environment.bz2 ]; then
+		eval $(/bin/bzfgrep KV=2 ${ROOT}/var/db/pkg/net-misc/${PF}/environment.bz2 |\
+			/bin/head -1)
+	elif [ -f ${ROOT}/var/db/pkg/net-misc/${PF}/environment.gz ]; then
+		eval $(/usr/bin/zfgrep KV=2	${ROOT}/var/db/pkg/net-misc/${PF}/environment.gz |\
+			/bin/head -1)
+	else
+		die 'could not find previous version'
+	fi
 	KV_DIR=/usr/src/linux-"${KV}"
 	if [ -d  ${KV_DIR} ]; then
 		ewarn "${KV_DIR} nolonger exists"
 		return 0;
 	fi
 	echo "KV_DIR=$KV_DIR"
-	if [ -f ${KV_DIR}/include/linux/netfilter_ipv4/ipt_layer7.h ]
+	if [ -f ${KV_DIR}/include/linux/netfilter_ipv4/ipt_layer7.h ] || \
+		[ -f ${KV_DIR}/include/linux/netfilter/xt_layer7.h ]
 	then
 		einfo 'attempting to unpatch l7-patch from kernel ${KV_FULL}'
 		which_patch
