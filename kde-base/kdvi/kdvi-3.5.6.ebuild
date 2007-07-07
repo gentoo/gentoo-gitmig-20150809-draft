@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/kdvi-3.5.6.ebuild,v 1.3 2007/06/20 16:12:33 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/kdvi-3.5.6.ebuild,v 1.4 2007/07/07 15:30:17 keytoaster Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -18,6 +18,7 @@ RDEPEND="${DEPEND}
 	tetex? ( virtual/tetex )"
 
 KMCOMPILEONLY="kviewshell/"
+SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
 	kde-meta_src_compile
@@ -32,9 +33,8 @@ src_install() {
 	kde-meta_src_install
 
 	if use emacs; then
-		insinto "${SITELISP}"
-		doins doc/kdvi/kdvi-search.el*
-		elisp-site-file-install "${FILESDIR}/50kdvi-gentoo.el"
+		elisp-install ${PN} doc/kdvi/kdvi-search.el*
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdvi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/ChangeLog,v 1.67 2007/06/20 16:12:33 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdvi/ChangeLog,v 1.68 2007/07/07 15:30:17 keytoaster Exp $
+
+  07 Jul 2007; Tobias Heinlein <keytoaster@gentoo.org> kdvi-3.5.6.ebuild,
+  kdvi-3.5.7.ebuild:
+  Canonicalizing Emacs support, bug 184350
 
   20 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> kdvi-3.5.6.ebuild,
   kdvi-3.5.7.ebuild:
