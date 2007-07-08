@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daap/python-daap-0.7.ebuild,v 1.1 2007/07/08 18:07:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daap/python-daap-0.7.ebuild,v 1.2 2007/07/08 18:17:18 drac Exp $
 
 inherit distutils python
 
@@ -30,10 +30,10 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize "${ROOT}"/usr/lib*/python${PYVER}/site-packages
+	python_mod_optimize "${ROOT}"usr/lib*/python${PYVER}/site-packages
 }
 
 pkg_postrm() {
 	python_version
-	python_mod_cleanup "${ROOT}"/usr/lib*/python${PYVER}/site-packages
+	python_mod_cleanup "${ROOT}"usr/lib*/python${PYVER}/site-packages
 }
