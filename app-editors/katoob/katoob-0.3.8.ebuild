@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.3.8.ebuild,v 1.5 2005/04/24 10:57:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.3.8.ebuild,v 1.6 2007/07/08 00:20:48 mr_bones_ Exp $
 
 inherit eutils
 
@@ -36,4 +36,3 @@ src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog NEWS README RELEASE_NOTES THANKS TODO
 }
-
