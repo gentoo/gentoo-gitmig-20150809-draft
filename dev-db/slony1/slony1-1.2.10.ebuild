@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-1.2.8.ebuild,v 1.1 2007/03/17 18:08:35 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-1.2.10.ebuild,v 1.1 2007/07/08 01:55:20 nakano Exp $
 
 inherit eutils
 
@@ -8,8 +8,7 @@ IUSE="perl"
 
 DESCRIPTION="A replication system for the PostgreSQL Database Management System"
 HOMEPAGE="http://slony.info/"
-SRC_URI="http://main.slony.info/downloads/1.2/${P}.tar.bz2"
-
+SRC_URI="http://main.slony.info/downloads/1.2/source/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
