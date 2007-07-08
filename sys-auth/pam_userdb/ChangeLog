@@ -1,6 +1,15 @@
 # ChangeLog for sys-auth/pam_userdb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/ChangeLog,v 1.11 2007/07/02 15:28:53 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/ChangeLog,v 1.12 2007/07/08 15:37:36 flameeyes Exp $
+
+*pam_userdb-0.99.8.0 (08 Jul 2007)
+
+  08 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/Linux-PAM-0.99.8.0-berkdb-uniquename.patch,
+  +pam_userdb-0.99.8.0.ebuild:
+  Bump to current Linux-PAM version, change the dependency to block older
+  Linux-PAM so that the dependency over Linux-PAM can be replaced with a
+  virtual dependency, for usage with OpenPAM.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   pam_userdb-0.99.6.3.ebuild:
