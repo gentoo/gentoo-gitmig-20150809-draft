@@ -1,101 +1,333 @@
-#!/bin/bash
-# Remove old signatures and unimportant tokens from the DSPAM database
+#!/bin/sh
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+#
+# Remove old signatures and unimportant tokens from the DSPAM database.
+# Purge old log entries in user logs.
+#
 
-for foo in awk head tail cut sed
-do
-	DSPAM_Check_App="$(${foo} --version 2>&1)"
-	if [[ "${DSPAM_Check_App/ *}" == "bash:" ]]
+#
+# Parameters
+#
+LOGROTATE_AGE=30 # Delete log entries older than $LOGROTATE_AGE days 
+
+#
+# Function to run dspam_clean
+#
+run_dspam_clean() {
+	if [ ! -f "/usr/bin/dspam_clean" ]
 	then
-		echo "Command ${foo} not found."
-		exit 1
-	fi
-done
-
-DSPAM_HOMEDIR="$(getent passwd dspam | awk -F : '{print $6}')"
-[[ ! -d "${DSPAM_HOMEDIR}" ]] && exit 2
-DSPAM_DATA_FILES=( "${DSPAM_HOMEDIR}"/*.data )
-if [ ! -f "${DSPAM_DATA_FILES[0]}" ]
-then
-	DSPAM_DATA_FILES=( /etc/mail/dspam/*.data )
-	if [ -f "${DSPAM_DATA_FILES[0]}" ]
-	then
-		DSPAM_HOMEDIR="/etc/mail/dspam"
-	fi
-fi
-
-[[ ! -f "${DSPAM_HOMEDIR}/dspam.conf" ]] && exit 2
-DSPAM_SPOOLDIR="$(grep ^Home "${DSPAM_HOMEDIR}/dspam.conf" | cut -d' ' -f2)"
-if [[ -d "${DSPAM_SPOOLDIR}" ]]
-then
-	cd /
-	su -s /bin/sh -c "/usr/bin/dspam_logrotate -a 30 -d ${DSPAM_SPOOLDIR}" dspam
-else
-	echo 'Spool directory not configured. Please set "Home" in your dspam.conf.'
-fi
-
-if [[ -f "${DSPAM_HOMEDIR}/mysql.data" ]]
-then
-	[[ ! -f "/usr/bin/mysql_config" ]] && exit 4
-	DSPAM_MySQL_PURGE_SQL=""
-	DSPAM_MySQL_VER="$(mysql_config --version | sed "s:\([^0-9\.]*\)::g")"
-	DSPAM_MySQL_MAJOR="$(echo "${DSPAM_MySQL_VER}" | cut -d. -f1)"
-	DSPAM_MySQL_MINOR="$(echo "${DSPAM_MySQL_VER}" | cut -d. -f2)"
-	DSPAM_MySQL_MICRO="$(echo "${DSPAM_MySQL_VER}" | cut -d. -f3)"
-	DSPAM_MySQL_INT="$((DSPAM_MySQL_MAJOR * 65536 + DSPAM_MySQL_MINOR * 256 + DSPAM_MySQL_MICRO))"
-
-	# For MySQL >= 4.1 use the new purge script
-	if [[ "${DSPAM_MySQL_INT}" -ge "262400" ]]
-	then
-		[[ -f "${DSPAM_HOMEDIR}/config/mysql_purge-4.1.sql" ]] && DSPAM_MySQL_PURGE_SQL="${DSPAM_HOMEDIR}/config/mysql_purge-4.1.sql"
-		[[ -f "${DSPAM_HOMEDIR}/mysql_purge-4.1.sql" ]] && DSPAM_MySQL_PURGE_SQL="${DSPAM_HOMEDIR}/mysql_purge-4.1.sql"
+		echo "/usr/bin/dspam_clean not found!"
+		return 1
 	else
-		[[ -f "${DSPAM_HOMEDIR}/config/mysql_purge.sql" ]] && DSPAM_MySQL_PURGE_SQL="${DSPAM_HOMEDIR}/config/mysql_purge.sql"
-		[[ -f "${DSPAM_HOMEDIR}/mysql_purge.sql" ]] && DSPAM_MySQL_PURGE_SQL="${DSPAM_HOMEDIR}/mysql_purge.sql"
+		/usr/bin/dspam_clean -s -p -u >/dev/null 2>&1
+		return 0
+	fi
+}
+
+
+#
+# Function to check if we have all needed tools
+#
+check_for_tools() {
+	local myrc=0
+	for foo in awk cut sed getent
+	do
+		if ! which ${foo} >/dev/null 2>&1
+		then
+			echo "Command ${foo} not found!"
+			myrc=1
+		fi
+	done
+	return ${myrc}
+}
+
+
+#
+# Acquire lock file and start processing
+#
+DSPAM_CRON_LOCKFILE="/var/run/$(basename $0 .sh).pid"
+if ( set -o noclobber; echo "$$" > "${DSPAM_CRON_LOCKFILE}") 2> /dev/null; then
+
+	trap 'rm -f "${DSPAM_CRON_LOCKFILE}"; exit $?' INT TERM EXIT
+
+	#
+	# Check for needed tools
+	#
+	if ! check_for_tools
+	then
+		# We have not all needed tools installed. Run just the dspam_clean part.
+		run_dspam_clean
+		exit $?
 	fi
 
-	[[ "${DSPAM_MySQL_PURGE_SQL}" == "" ]] && exit 3
-	[[ ! -f "/usr/bin/mysql" ]] && exit 4
-	DSPAM_MySQL_HOST="$(cat ${DSPAM_HOMEDIR}/mysql.data|head -n 1|tail -n 1)"
-	DSPAM_MySQL_PORT="$(cat ${DSPAM_HOMEDIR}/mysql.data|head -n 2|tail -n 1)"
-	DSPAM_MySQL_USER="$(cat ${DSPAM_HOMEDIR}/mysql.data|head -n 3|tail -n 1)"
-	DSPAM_MySQL_PWD="$(cat ${DSPAM_HOMEDIR}/mysql.data|head -n 4|tail -n 1)"
-	DSPAM_MySQL_DB="$(cat ${DSPAM_HOMEDIR}/mysql.data|head -n 5|tail -n 1)"
-	(/usr/bin/mysql -u ${DSPAM_MySQL_USER} -p"${DSPAM_MySQL_PWD}" ${DSPAM_MySQL_DB} < ${DSPAM_MySQL_PURGE_SQL}) 1>/dev/null 2>&1
-	MYRC="$?"
-	for foo in $(/usr/bin/mysql -u ${DSPAM_MySQL_USER} -p"${DSPAM_MySQL_PWD}" ${DSPAM_MySQL_DB} -e 'SHOW TABLES;' 2>&1 | grep -v "^+\|^Tables_in_${DSPAM_MySQL_DB}")
-	do
-		(/usr/bin/mysql -u ${DSPAM_MySQL_USER} -p"${DSPAM_MySQL_PWD}" ${DSPAM_MySQL_DB} -e "OPTIMIZE TABLE ${foo};") 1>/dev/null 2>&1
-	done
-	exit ${MYRC}
-elif [[ -f "${DSPAM_HOMEDIR}/pgsql.data" ]]
-then
-	DSPAM_PgSQL_PURGE_SQL=""
-	[[ -f "${DSPAM_HOMEDIR}/config/pgsql_purge.sql" ]] && DSPAM_PgSQL_PURGE_SQL="${DSPAM_HOMEDIR}/config/pgsql_purge.sql"
-	[[ -f "${DSPAM_HOMEDIR}/pgsql_purge.sql" ]] && DSPAM_PgSQL_PURGE_SQL="${DSPAM_HOMEDIR}/pgsql_purge.sql"
-	[[ "${DSPAM_PgSQL_PURGE_SQL}" == "" ]] && exit 3
-	[[ ! -f "/usr/bin/psql" ]] && exit 4
-	DSPAM_PgSQL_HOST="$(cat ${DSPAM_HOMEDIR}/pgsql.data|head -n 1|tail -n 1)"
-	DSPAM_PgSQL_PORT="$(cat ${DSPAM_HOMEDIR}/pgsql.data|head -n 2|tail -n 1)"
-	DSPAM_PgSQL_USER="$(cat ${DSPAM_HOMEDIR}/pgsql.data|head -n 3|tail -n 1)"
-	DSPAM_PgSQL_PWD="$(cat ${DSPAM_HOMEDIR}/pgsql.data|head -n 4|tail -n 1)"
-	DSPAM_PgSQL_DB="$(cat ${DSPAM_HOMEDIR}/pgsql.data|head -n 5|tail -n 1)"
-	(PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -U ${DSPAM_PgSQL_USER} -d ${DSPAM_PgSQL_DB} -p ${DSPAM_PgSQL_PORT} -h ${DSPAM_PgSQL_HOST} -f ${DSPAM_PgSQL_PURGE_SQL}) 1>/dev/null 2>&1
-	exit $?
-elif [[ -f "${DSPAM_HOMEDIR}/oracle.data" ]]
-then
-	DSPAM_Oracle_PURGE_SQL=""
-	[[ -f "${DSPAM_HOMEDIR}/config/ora_purge.sql" ]] && DSPAM_Oracle_PURGE_SQL="${DSPAM_HOMEDIR}/config/ora_purge.sql"
-	[[ -f "${DSPAM_HOMEDIR}/ora_purge.sql" ]] && DSPAM_Oracle_PURGE_SQL="${DSPAM_HOMEDIR}/ora_purge.sql"
-	[[ "${DSPAM_Oracle_PURGE_SQL}" == "" ]] && exit 3
-	[[ ! -f "/usr/bin/sqlplus" ]] && exit 4
-	DSPAM_Oracle_DBLINK="$(cat ${DSPAM_HOMEDIR}/oracle.data|head -n 1|tail -n 1)"
-	DSPAM_Oracle_USER="$(cat ${DSPAM_HOMEDIR}/oracle.data|head -n 2|tail -n 1)"
-	DSPAM_Oracle_PWD="$(cat ${DSPAM_HOMEDIR}/oracle.data|head -n 3|tail -n 1)"
-	DSPAM_Oracle_SCHEMA="$(cat ${DSPAM_HOMEDIR}/oracle.data|head -n 4|tail -n 1)"
-	(/usr/bin/sqlplus -s ${DSPAM_Oracle_USER}/${DSPAM_Oracle_PWD} @${DSPAM_Oracle_PURGE_SQL}) 1>/dev/null 2>&1
-	exit $?
-else
-	[[ ! -f "/usr/bin/dspam_clean" ]] && exit 4
-	/usr/bin/dspam_clean -s -p -u 1>/dev/null 2>&1
-	exit $?
+
+	#
+	# Try to get DSPAM config directory
+	#
+	DSPAM_CONFIGDIR=$(getent passwd dspam | awk -F : '{print $6}')
+	if [ ! -f "${DSPAM_CONFIGDIR}/dspam.conf" ]
+	then
+		# Something is wrong in passwd! Check if /etc/mail/dspam exists instead.
+		if [ -f /etc/mail/dspam/dspam.conf ]
+		then
+			DSPAM_CONFIGDIR="/etc/mail/dspam"
+		fi
+	fi
+	if [ ! -d "${DSPAM_CONFIGDIR}" ] 
+	then
+		echo "Configuration directory not found!"
+		exit 2
+	fi
+
+	#
+	# Try to get DSPAM data home directory
+	#
+	DSPAM_HOMEDIR=$(awk '$1 ~ /^[[:space:]]*Home[[:space:]]/ {print $2}' "${DSPAM_CONFIGDIR}/dspam.conf")
+	if [ ! -d "${DSPAM_HOMEDIR}" ]
+	then
+		# Something is wrong in dspam.conf! Check if /var/spool/dspam exists instead.
+		if [ -d /var/spool/dspam ]
+		then
+			DSPAM_HOMEDIR="/var/spool/dspam"
+		fi
+	fi
+	if [ ! -d "${DSPAM_HOMEDIR}" ] 
+	then
+		echo "Home directory not found! Please fix your dspam.conf."
+		exit 2
+	fi
+	
+	
+	#
+	# User log purging
+	#
+	if [ -d "${DSPAM_CONFIGDIR}/data" ]
+	then
+		dspam_logrotate -a ${LOGROTATE_AGE} -d "${DSPAM_CONFIGDIR}/data" >/dev/null # 2>&1
+	fi
+
+
+	#
+	# MySQL
+	#
+	if [ -f "${DSPAM_CONFIGDIR}/mysql.data" ]
+	then
+		if [ ! -f "/usr/bin/mysql_config" ]
+		then
+			echo "Can not run MySQL purge script:"
+			echo "  /usr/bin/mysql_config does not exist"
+			run_dspam_clean
+			exit 1
+		fi
+		DSPAM_MySQL_PURGE_SQL=
+		DSPAM_MySQL_VER=$(/usr/bin/mysql_config --version | sed "s:[^0-9.]*::g")
+		DSPAM_MySQL_MAJOR=$(echo "${DSPAM_MySQL_VER}" | cut -d. -f1)
+		DSPAM_MySQL_MINOR=$(echo "${DSPAM_MySQL_VER}" | cut -d. -f2)
+		DSPAM_MySQL_MICRO=$(echo "${DSPAM_MySQL_VER}" | cut -d. -f3)
+		DSPAM_MySQL_INT=$(($DSPAM_MySQL_MAJOR * 65536 + $DSPAM_MySQL_MINOR * 256 + $DSPAM_MySQL_MICRO))
+
+		# For MySQL >= 4.1 use the new purge script
+		if [ "${DSPAM_MySQL_INT}" -ge "262400" ]
+		then
+			if [ -f "${DSPAM_CONFIGDIR}/config/mysql_purge-4.1-optimized.sql" -o -f "${DSPAM_CONFIGDIR}/mysql_purge-4.1-optimized.sql" ]
+			then
+				# See: http://securitydot.net/txt/id/32/type/articles/
+				[ -f "${DSPAM_CONFIGDIR}/config/mysql_purge-4.1-optimized.sql" ] && DSPAM_MySQL_PURGE_SQL="${DSPAM_CONFIGDIR}/config/mysql_purge-4.1-optimized.sql"
+				[ -f "${DSPAM_CONFIGDIR}/mysql_purge-4.1-optimized.sql" ] && DSPAM_MySQL_PURGE_SQL="${DSPAM_CONFIGDIR}/mysql_purge-4.1-optimized.sql"
+			else
+				[ -f "${DSPAM_CONFIGDIR}/config/mysql_purge-4.1.sql" ] && DSPAM_MySQL_PURGE_SQL="${DSPAM_CONFIGDIR}/config/mysql_purge-4.1.sql"
+				[ -f "${DSPAM_CONFIGDIR}/mysql_purge-4.1.sql" ] && DSPAM_MySQL_PURGE_SQL="${DSPAM_CONFIGDIR}/mysql_purge-4.1.sql"
+			fi
+		else
+			[ -f "${DSPAM_CONFIGDIR}/config/mysql_purge.sql" ] && DSPAM_MySQL_PURGE_SQL="${DSPAM_CONFIGDIR}/config/mysql_purge.sql"
+			[ -f "${DSPAM_CONFIGDIR}/mysql_purge.sql" ] && DSPAM_MySQL_PURGE_SQL="${DSPAM_CONFIGDIR}/mysql_purge.sql"
+		fi
+
+		if [ -z "${DSPAM_MySQL_PURGE_SQL}" ]
+		then
+			echo "Can not run MySQL purge script:"
+			echo "  No mysql_purge SQL script found"
+			run_dspam_clean
+			exit 1
+		fi
+
+		if [ ! -f "/usr/bin/mysql" ]
+		then
+			echo "Can not run MySQL purge script:"
+			echo "  /usr/bin/mysql does not exist"
+			run_dspam_clean
+			exit 1
+		fi
+
+		# Get DSPAM MySQL username and password
+		DSPAM_MySQL_HOST=$(sed "1q;d" "${DSPAM_CONFIGDIR}/mysql.data")
+		DSPAM_MySQL_PORT=$(sed "2q;d" "${DSPAM_CONFIGDIR}/mysql.data")
+		DSPAM_MySQL_USER=$(sed "3q;d" "${DSPAM_CONFIGDIR}/mysql.data")
+		DSPAM_MySQL_PWD=$(sed "4q;d" "${DSPAM_CONFIGDIR}/mysql.data")
+		DSPAM_MySQL_DB=$(sed "5q;d" "${DSPAM_CONFIGDIR}/mysql.data")
+
+		# Check if MySQL is remote or using a socket
+		if [ -S "${DSPAM_MySQL_HOST}" ]
+		then
+			DSPAM_MySQL_HOSTCMD="--socket"
+		else
+			DSPAM_MySQL_HOSTCMD="--host"
+		fi
+
+		# Run the MySQL purge script
+		/usr/bin/mysql --silent --user="${DSPAM_MySQL_USER}" --password="${DSPAM_MySQL_PWD}" ${DSPAM_MySQL_HOSTCMD}="${DSPAM_MySQL_HOST}" ${DSPAM_MySQL_DB} < ${DSPAM_MySQL_PURGE_SQL}
+
+		# Run the dspam_clean command
+		run_dspam_clean
+	
+		# Optimize the MySQL tables for DSPAM
+		for foo in $(/usr/bin/mysql --user="${DSPAM_MySQL_USER}" --password="${DSPAM_MySQL_PWD}" ${DSPAM_MySQL_HOSTCMD}="${DSPAM_MySQL_HOST}" --silent --skip-column-names --batch ${DSPAM_MySQL_DB} -e 'SHOW TABLES;' 2>&1)
+		do
+			/usr/bin/mysql --user="${DSPAM_MySQL_USER}" --password="${DSPAM_MySQL_PWD}" ${DSPAM_MySQL_HOSTCMD}="${DSPAM_MySQL_HOST}" ${DSPAM_MySQL_DB} -e "OPTIMIZE TABLE ${foo};" 1>/dev/null 2>&1
+		done
+		exit 0
+
+
+	#
+	# PostgreSQL
+	#
+	elif [ -f "${DSPAM_CONFIGDIR}/pgsql.data" ]
+	then
+		DSPAM_PgSQL_PURGE_SQL=""
+		[ -f "${DSPAM_CONFIGDIR}/config/pgsql_purge.sql" ] && DSPAM_PgSQL_PURGE_SQL="${DSPAM_CONFIGDIR}/config/pgsql_purge.sql"
+		[ -f "${DSPAM_CONFIGDIR}/pgsql_purge.sql" ] && DSPAM_PgSQL_PURGE_SQL="${DSPAM_CONFIGDIR}/pgsql_purge.sql"
+
+		if [ -z "${DSPAM_PgSQL_PURGE_SQL}" ]
+		then
+			echo "Can not run PostgreSQL purge script:"
+			echo "  No pgsql_purge SQL script found"
+			run_dspam_clean
+			exit 1
+		fi
+
+		if [ ! -f "/usr/bin/psql" ]
+		then
+			echo "Can not run PostgreSQL purge script:"
+			echo "  /usr/bin/psql does not exist"
+			run_dspam_clean
+			exit 1
+		fi
+
+		# Get DSPAM PostgreSQL username and password
+		DSPAM_PgSQL_HOST=$(sed "1q;d" "${DSPAM_CONFIGDIR}/pgsql.data")
+		DSPAM_PgSQL_PORT=$(sed "2q;d" "${DSPAM_CONFIGDIR}/pgsql.data")
+		DSPAM_PgSQL_USER=$(sed "3q;d" "${DSPAM_CONFIGDIR}/pgsql.data")
+		DSPAM_PgSQL_PWD=$(sed "4q;d" "${DSPAM_CONFIGDIR}/pgsql.data")
+		DSPAM_PgSQL_DB=$(sed "5q;d" "${DSPAM_CONFIGDIR}/pgsql.data")
+
+		# Run the PostgreSQL purge script
+		PGUSER="${DSPAM_PgSQL_USER}" PGPASSWORD="${DSPAM_PgSQL_PWD}" /usr/bin/psql -q -U "${DSPAM_PgSQL_USER}" -d "${DSPAM_PgSQL_DB}" -p "${DSPAM_PgSQL_PORT}" -h "${DSPAM_PgSQL_HOST}" -f "${DSPAM_PgSQL_PURGE_SQL}"
+
+		# Run the dspam_clean command
+		run_dspam_clean
+
+		exit 0
+
+
+	#
+	# SQLite3
+	#
+	elif ( grep -q "^[[:space:]]*StorageDriver[[:space:]]*.*libsqlite3_drv" "${DSPAM_CONFIGDIR}/dspam.conf" )
+	then
+		DSPAM_SQLite3_PURGE_SQL=""
+		[ -f "${DSPAM_CONFIGDIR}/config/sqlite3_purge.sql" ] && DSPAM_SQLite3_PURGE_SQL="${DSPAM_CONFIGDIR}/config/sqlite3_purge.sql"
+		[ -f "${DSPAM_CONFIGDIR}/sqlite3_purge.sql" ] && DSPAM_SQLite3_PURGE_SQL="${DSPAM_CONFIGDIR}/sqlite3_purge.sql"
+
+		if [ -z "${DSPAM_SQLite3_PURGE_SQL}" ]
+		then
+			echo "Can not run SQLite3 purge script:"
+			echo "  No sqlite_purge SQL script found"
+			run_dspam_clean
+			exit 1
+		fi
+
+		if [ ! -f "/usr/bin/sqlite3" ]
+		then
+			echo "Can not run SQLite3 purge script:"
+			echo "  /usr/bin/sqlite3 does not exist"
+			run_dspam_clean
+			exit 1
+		fi
+
+		# Run the SQLite3 purge script
+		find "${DSPAM_HOMEDIR}" -name "*.sdb" -print | while read name
+			do
+				/usr/bin/sqlite3 "$name" < "${DSPAM_SQLite3_PURGE_SQL}"
+			done 1>/dev/null 2>&1
+
+		# Run the dspam_clean command
+		run_dspam_clean
+
+		# Optimize the SQLite tables for DSPAM
+		find "${DSPAM_HOMEDIR}" -name "*.sdb" -print | while read name
+			do
+				echo 'vacuum;' | /usr/bin/sqlite3 "$name"
+			done
+
+		exit 0
+
+	
+	#
+	# SQLite
+	#
+	elif ( grep -q "^[[:space:]]*StorageDriver[[:space:]]*.*libsqlite_drv" "${DSPAM_CONFIGDIR}/dspam.conf" )
+	then
+		DSPAM_SQLite_PURGE_SQL=""
+		[ -f "${DSPAM_CONFIGDIR}/config/sqlite_purge.sql" ] && DSPAM_SQLite_PURGE_SQL="${DSPAM_CONFIGDIR}/config/sqlite_purge.sql"
+		[ -f "${DSPAM_CONFIGDIR}/sqlite_purge.sql" ] && DSPAM_SQLite_PURGE_SQL="${DSPAM_CONFIGDIR}/sqlite_purge.sql"
+
+		if [ -z "${DSPAM_SQLite_PURGE_SQL}" ]
+		then
+			echo "Can not run SQLite purge script:"
+			echo "  No sqlite_purge SQL script found"
+			run_dspam_clean
+			exit 1
+		fi
+
+		if [ ! -f "/usr/bin/sqlite" ]
+		then
+			echo "Can not run SQLite purge script:"
+			echo "  /usr/bin/sqlite does not exist"
+			run_dspam_clean
+			exit 1
+		fi
+
+		# Run the SQLite purge script
+		find "${DSPAM_HOMEDIR}" -name "*.sdb" -print | while read name
+			do
+				/usr/bin/sqlite "$name" < "${DSPAM_SQLite_PURGE_SQL}"
+			done 1>/dev/null 2>&1
+
+		# Run the dspam_clean command
+		run_dspam_clean
+
+		# Optimize the SQLite tables for DSPAM
+		find "${DSPAM_HOMEDIR}" -name "*.sdb" -print | while read name
+			do
+				echo 'vacuum;' | /usr/bin/sqlite "$name"
+			done
+
+		exit 0
+		
+		
+	#
+	# Generic
+	#
+	else
+		run_dspam_clean
+		exit $?
+	fi
+
+
+	#
+	# Release lock
+	#
+	rm -f "${DSPAM_CRON_LOCKFILE}"
+	trap - INT TERM EXIT
 fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r1.ebuild,v 1.5 2007/06/26 02:08:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r2.ebuild,v 1.1 2007/07/08 07:52:02 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -285,7 +285,7 @@ src_install () {
 
 	# dspam cron job
 	exeinto /etc/cron.daily
-	newexe "${FILESDIR}/${P}.cron" dspam.cron
+	newexe "${FILESDIR}/dspam.cron" dspam.cron
 
 	# documentation
 	dodoc CHANGELOG README* RELEASE.NOTES UPGRADING

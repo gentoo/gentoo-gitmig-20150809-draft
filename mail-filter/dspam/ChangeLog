@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.91 2007/06/24 09:08:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.92 2007/07/08 07:52:02 mrness Exp $
+
+*dspam-3.8.0-r2 (08 Jul 2007)
+
+  08 Jul 2007; Alin Năstac <mrness@gentoo.org> -files/dspam-3.8.0.cron,
+  files/dspam.cron, -dspam-3.8.0-r1.ebuild, +dspam-3.8.0-r2.ebuild:
+  Fix sqlite part of cron script, thanks to Henry So <henryso@panix.com>
+  (#184194).
 
   24 Jun 2007; Alin Năstac <mrness@gentoo.org> -dspam-3.6.8-r3.ebuild,
   dspam-3.8.0-r1.ebuild:
