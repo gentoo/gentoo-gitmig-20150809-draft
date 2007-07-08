@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.83.1.ebuild,v 1.3 2007/04/09 18:26:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.83.1.ebuild,v 1.4 2007/07/08 09:35:57 tupone Exp $
 
 inherit games python
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.1
-	>=dev-python/pygame-1.6
+	>=dev-python/pygame-1.7.1
 	>=media-libs/sdl-image-1.2
 	>=media-libs/sdl-ttf-2.0
 	>=media-libs/sdl-mixer-1.2
