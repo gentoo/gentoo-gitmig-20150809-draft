@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.5.4-r1.ebuild,v 1.7 2007/05/11 16:58:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.5.4-r1.ebuild,v 1.8 2007/07/08 04:11:17 mr_bones_ Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.12.0
 		   sys-libs/zlib
 		 || (
 				>=dev-libs/dbus-glib-0.71
-				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.60 )
+				>=sys-apps/dbus-0.60
 			)
 		 >=dev-db/sqlite-3.2
 		 >=media-libs/libpng-1.2
@@ -38,7 +38,7 @@ RDEPEND=">=dev-libs/glib-2.12.0
 		 !amd64? ( gstreamer? ( >=media-libs/gstreamer-0.10 ) )
 		 jpeg? ( >=media-gfx/exif-0.6 )
 		 pdf?	(
-		 			>=x11-libs/cairo-1.0
+					>=x11-libs/cairo-1.0
 					>=app-text/poppler-bindings-0.5.0
 				)
 		 xine? ( >=media-libs/xine-lib-1.0 )
