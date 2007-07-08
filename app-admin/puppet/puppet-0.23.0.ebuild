@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.22.3.ebuild,v 1.1 2007/03/28 14:22:10 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.23.0.ebuild,v 1.1 2007/07/08 02:17:56 nakano Exp $
 
 inherit eutils ruby
 
@@ -8,7 +8,7 @@ DESCRIPTION="A system automation and configuration management software"
 LICENSE="GPL-2"
 HOMEPAGE="http://reductivelabs.com/projects/puppet/index.html"
 SRC_URI="http://reductivelabs.com/downloads/${PN}/${P}.tgz"
-RDEPEND=">=dev-ruby/facter-1.3.5 >=app-portage/eix-0.7.9"
+RDEPEND=">=dev-ruby/facter-1.3.5 >=app-portage/eix-0.9.4"
 
 SLOT="0"
 IUSE=""
