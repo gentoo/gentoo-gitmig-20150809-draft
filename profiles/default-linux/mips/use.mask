@@ -1,9 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.93 2007/06/30 04:45:49 kumba Exp $
-
-# 22 May 2007; Christian Heim <phreak@gentoo.org>
-# unmask ip28 and ip32r10k only on mips
--ip28
--ip32r10k
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.94 2007/07/08 03:49:58 kumba Exp $
 
 # Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
 # no tested dbus on mips. Masking for now.
