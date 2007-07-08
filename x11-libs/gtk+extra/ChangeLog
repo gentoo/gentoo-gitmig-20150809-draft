@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+extra
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.19 2007/02/13 11:50:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.20 2007/07/08 16:52:02 remi Exp $
+
+  08 Jul 2007; Remi Cardona <remi@gentoo.org> -gtk+extra-0.99.17.ebuild:
+  punt old version 0.99.17 (see bug 160195)
 
   13 Feb 2007; Markus Rothe <corsair@gentoo.org> gtk+extra-2.1.1.ebuild:
   Stable on ppc64; bug #146422
