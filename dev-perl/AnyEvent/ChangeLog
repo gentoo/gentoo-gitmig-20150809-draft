@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/AnyEvent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.26 2007/07/05 04:12:45 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.27 2007/07/08 19:34:42 mcummings Exp $
+
+  08 Jul 2007; Michael Cummings <mcummings@gentoo.org>
+  -AnyEvent-1.02.ebuild:
+  Cleaning out stale ebuilds
 
   04 Jul 2007; Tom Gall <tgall@gentoo.org> AnyEvent-2.5.2.ebuild:
   stable on ppc64
