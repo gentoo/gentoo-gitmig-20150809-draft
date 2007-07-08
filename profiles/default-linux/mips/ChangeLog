@@ -1,6 +1,10 @@
 # ChangeLog for MIPS profile directory
 # Copyright 2007-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.2 2007/04/23 13:11:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.3 2007/07/08 20:19:10 phreak Exp $
+
+  08 Jul 2007; Christian Heim <phreak@gentoo.org> package.use.mask:
+  Package.use.mask mysql for dev-libs/apr-util. Apparently the apr_dbd_mysql
+  backend requires mysql-5, which isn't keyworded on mips.
 
   23 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> package.use.mask,
   use.mask:
