@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.3-r1.ebuild,v 1.11 2006/11/09 02:41:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.3-r1.ebuild,v 1.12 2007/07/08 04:16:37 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -20,7 +20,7 @@ RDEPEND="
 		t1lib? ( >=media-libs/t1lib-5.0.0 )
 	)
 	dbus? ( || ( >=dev-libs/dbus-glib-0.71
-		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.33 ) ) )
+		>=sys-apps/dbus-0.33 ) )
 	tiff? ( >=media-libs/tiff-3.6 )
 	>=app-text/poppler-bindings-0.5.2
 	>=dev-libs/glib-2
@@ -43,11 +43,9 @@ DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.9
 	>=dev-util/intltool-0.28"
 
-
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 USE_DESTDIR="1"
 ELTCONF="--portage"
-
 
 pkg_setup() {
 	G2CONF="--disable-scrollkeeper \
