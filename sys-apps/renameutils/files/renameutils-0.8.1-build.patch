@@ -1,0 +1,46 @@
+--- configure.ac
++++ configure.ac
+@@ -7,6 +7,7 @@
+ AC_CONFIG_SRCDIR([config.h.in])
+ AC_CONFIG_HEADER([config.h])
+ AC_GNU_SOURCE
++AC_SYS_LARGEFILE
+ AC_DEFINE_DIR(LOCALEDIR, datadir/locale, [Directory where gettext translations are kept.])
+ 
+ # Checks for programs.
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -40,21 +40,23 @@
+   ../lib/libgnu.a
+ 
+ all-local:
+-	@[ -f qmv ] || (echo $(LN_S) qcmd qmv ; $(LN_S) qcmd qmv)
+-	@[ -f qcp ] || (echo $(LN_S) qcmd qcp ; $(LN_S) qcmd qcp)
+-	@[ -f imv ] || (echo $(LN_S) icmd imv ; $(LN_S) icmd imv)
+-	@[ -f icp ] || (echo $(LN_S) icmd icp ; $(LN_S) icmd icp)
++	$(LN_S) -f qcmd qmv
++	$(LN_S) -f qcmd qcp
++	$(LN_S) -f icmd imv
++	$(LN_S) -f icmd icp
+ 
+ install-exec-local:
+-	@[ -f $(bindir)/qmv ] || (echo $(LN_S) qcmd $(DESTDIR)$(bindir)/qmv ; $(LN_S) qcmd $(DESTDIR)$(bindir)/qmv)
+-	@[ -f $(bindir)/qcp ] || (echo $(LN_S) qcmd $(DESTDIR)$(bindir)/qcp ; $(LN_S) qcmd $(DESTDIR)$(bindir)/qcp)
+-	@[ -f $(bindir)/imv ] || (echo $(LN_S) icmd $(DESTDIR)$(bindir)/imv ; $(LN_S) icmd $(DESTDIR)$(bindir)/imv)
+-	@[ -f $(bindir)/icp ] || (echo $(LN_S) icmd $(DESTDIR)$(bindir)/icp ; $(LN_S) icmd $(DESTDIR)$(bindir)/icp)
++	$(MKDIR_P) $(DESTDIR)$(bindir)
++	$(LN_S) -f qcmd $(DESTDIR)$(bindir)/qmv
++	$(LN_S) -f qcmd $(DESTDIR)$(bindir)/qcp
++	$(LN_S) -f icmd $(DESTDIR)$(bindir)/imv
++	$(LN_S) -f icmd $(DESTDIR)$(bindir)/icp
+ 
+ install-data-local:
+ 	$(mkdir_p) $(DESTDIR)$(man1dir)
+-	@[ -f $(man1dir)/qmv.1 ] || (echo $(LN_S) qcmd.1 $(DESTDIR)$(man1dir)/qmv.1 ; $(LN_S) qcmd.1 $(DESTDIR)$(man1dir)/qmv.1)
+-	@[ -f $(man1dir)/qcp.1 ] || (echo $(LN_S) qcmd.1 $(DESTDIR)$(man1dir)/qcp.1 ; $(LN_S) qcmd.1 $(DESTDIR)$(man1dir)/qcp.1)
++	$(MKDIR_P) $(DESTDIR)$(man1dir)
++	$(LN_S) -f qcmd.1 $(DESTDIR)$(man1dir)/qmv.1
++	$(LN_S) -f qcmd.1 $(DESTDIR)$(man1dir)/qcp.1
+ 
+ clean-local:
+ 	rm -f qmv qcp imv icp qmv.1 qcp.1
