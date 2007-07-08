@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.14.2-r2.ebuild,v 1.9 2007/01/28 09:12:24 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.14.2-r2.ebuild,v 1.10 2007/07/08 05:02:30 mr_bones_ Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -45,7 +45,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
-
 
 pkg_setup() {
 	G2CONF="${G2CONF} --enable-man --enable-info"
