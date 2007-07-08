@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.5.4.ebuild,v 1.10 2007/03/13 23:20:13 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.5.4.ebuild,v 1.11 2007/07/08 05:07:11 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -27,7 +27,6 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog README HACKING NEWS TODO"
 USE_DESTDIR="1"
-
 
 pkg_setup() {
 	G2CONF="--with-eject-command=/usr/bin/eject"
