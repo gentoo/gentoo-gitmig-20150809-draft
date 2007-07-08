@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/beryl-plugins/beryl-plugins-0.2.1.ebuild,v 1.2 2007/03/23 03:23:55 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/beryl-plugins/beryl-plugins-0.2.1.ebuild,v 1.3 2007/07/08 05:57:37 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -18,7 +18,7 @@ RDEPEND="~x11-wm/beryl-core-${PV}
 	media-libs/jpeg
 	>=gnome-base/librsvg-2.14.0
 	dbus? (
-		|| ( dev-libs/dbus-glib	( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.36 ) )
+		|| ( dev-libs/dbus-glib	>=sys-apps/dbus-0.36 )
 	)
 	!x11-plugins/beryl-dbus"
 
