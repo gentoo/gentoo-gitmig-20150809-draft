@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/text-wrapper
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-wrapper/ChangeLog,v 1.18 2007/06/21 17:58:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-wrapper/ChangeLog,v 1.19 2007/07/08 04:04:46 tgall Exp $
+
+  07 Jul 2007; Tom Gall <tgall@gentoo.org> text-wrapper-1.01.ebuild:
+  stable on ppc64
 
   21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
   text-wrapper-1.01.ebuild:
