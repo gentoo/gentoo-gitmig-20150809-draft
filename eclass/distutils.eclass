@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.41 2007/07/04 19:38:06 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.42 2007/07/08 01:29:20 hawking Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -41,7 +41,7 @@ distutils_src_unpack() {
 	# remove ez_setup stuff to prevent packages
 	# from installing setuptools on their own
 	rm -rf ez_setup*
-	echo "def use_setuptools(): pass" > ez_setup.py
+	echo "def use_setuptools(*args, **kwargs): pass" > ez_setup.py
 }
 
 distutils_src_compile() {
