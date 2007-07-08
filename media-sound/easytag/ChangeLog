@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.101 2007/07/05 05:35:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.102 2007/07/08 00:09:43 drac Exp $
+
+  08 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/easytag-2.1.1-include.patch, easytag-2.1.1.ebuild:
+  Fix implicit declaration of function Log_Print by including log.h in
+  id3v24_tag.c.
 
 *easytag-2.1.1 (05 Jul 2007)
 
