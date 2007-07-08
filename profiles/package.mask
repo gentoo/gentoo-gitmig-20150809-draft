@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7464 2007/07/07 22:15:37 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7465 2007/07/08 00:08:56 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1035,10 +1035,6 @@ app-shells/csh
 # Marcelo Goes <vanquirius@gentoo.org> (06 Feb 2006)
 # Mask tcpreplay beta branch. If you want it, unmask it.
 >=net-analyzer/tcpreplay-3.0_beta1
-
-# Mike Frysinger <vapier@gentoo.org> (25 Jan 2006)
-# Added for fun, but incomplete atm
->=sys-apps/util-linux-2.13_pre0
 
 # Marius Mauch <genone@gentoo.org> (17 Jan 2006)
 # Development version
