@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.60 2007/07/07 20:19:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.61 2007/07/08 03:30:37 pylon Exp $
+
+  08 Jul 2007; Lars Weiler <pylon@gentoo.org> rmagick-1.15.7.ebuild:
+  Stable on ppc; bug #184538.
 
   07 Jul 2007; Hans de Graaff <graaff@gentoo.org> -rmagick-1.15.6.ebuild:
   Remove version that won't make it to stable
