@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/nautilus-sendto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/ChangeLog,v 1.15 2007/05/11 16:53:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/ChangeLog,v 1.16 2007/07/08 05:49:29 mr_bones_ Exp $
+
+  08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  nautilus-sendto-0.8-r1.ebuild, nautilus-sendto-0.10.ebuild:
+  remove reference to old, removed dbus (bug #183696)
 
   11 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   nautilus-sendto-0.10.ebuild:

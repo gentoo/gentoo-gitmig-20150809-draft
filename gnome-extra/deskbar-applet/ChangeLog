@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/deskbar-applet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.54 2007/07/05 14:57:06 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.55 2007/07/08 05:45:49 mr_bones_ Exp $
+
+  08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  deskbar-applet-2.16.2-r1.ebuild, deskbar-applet-2.18.1.ebuild:
+  remove reference to old, removed dbus (bug #183696)
 
   05 Jul 2007; Roy Marples <uberlord@gentoo.org>
   deskbar-applet-2.18.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.3.ebuild,v 1.9 2007/06/02 02:46:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.3.ebuild,v 1.10 2007/07/08 05:47:01 mr_bones_ Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 
@@ -23,10 +23,7 @@ RDEPEND=">=dev-libs/glib-2.6.0
 	>=x11-libs/libwnck-2.10.0
 	>=x11-libs/cairo-1.0.0
 	>=gnome-base/gconf-2
-	|| (
-		>=dev-libs/dbus-glib-0.71
-		~sys-apps/dbus-0.62
-	   )
+	>=dev-libs/dbus-glib-0.71
 	libnotify? (
 			>=x11-libs/libnotify-0.4.3
 			>=x11-misc/notification-daemon-0.2.1

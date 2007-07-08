@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.8-r1.ebuild,v 1.3 2007/03/22 17:42:34 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.8-r1.ebuild,v 1.4 2007/07/08 05:49:29 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -26,7 +26,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 		 >=gnome-base/gconf-2.13.0
 		 ||	(
 				>=dev-libs/dbus-glib-0.71
-				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.60 )
+				>=sys-apps/dbus-0.60
 			)
 		 bluetooth? ( >=net-wireless/gnome-bluetooth-0.6 )
 		 eds? ( >=gnome-extra/evolution-data-server-1.5.3 )
