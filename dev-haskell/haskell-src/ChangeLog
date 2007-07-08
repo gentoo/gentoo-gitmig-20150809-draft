@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haskell-src
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.16 2007/07/08 15:36:08 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.17 2007/07/08 17:35:50 dcoutts Exp $
+
+*haskell-src-1.0.1 (08 Jul 2007)
+
+  08 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> +haskell-src-1.0.1.ebuild:
+  New version from ghc-6.6.1 extralibs collection.
 
   08 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> haskell-src-1.0-r1.ebuild:
   Use dev-lang/ghc rather than virtual/ghc.
