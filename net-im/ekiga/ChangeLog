@@ -1,6 +1,10 @@
 # ChangeLog for net-im/ekiga
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ChangeLog,v 1.40 2007/04/14 08:57:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ChangeLog,v 1.41 2007/07/08 05:50:37 mr_bones_ Exp $
+
+  08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org> ekiga-2.0.7.ebuild,
+  ekiga-2.0.9.ebuild:
+  remove reference to old, removed dbus (bug #183696)
 
 *ekiga-2.0.9 (14 Apr 2007)
 

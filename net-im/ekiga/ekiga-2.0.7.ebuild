@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.7.ebuild,v 1.5 2007/03/23 20:39:49 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.7.ebuild,v 1.6 2007/07/08 05:50:37 mr_bones_ Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -20,7 +20,7 @@ RDEPEND="~dev-libs/pwlib-1.10.5
 	>=dev-libs/libxml2-2.6.1
 	sdl? ( >=media-libs/libsdl-1.2.4 )
 	dbus? ( || ( >=dev-libs/dbus-glib-0.71
-		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.61 ) ) )
+		>=sys-apps/dbus-0.61 ) )
 	avahi? ( net-dns/avahi )
 	gnome? ( >=gnome-base/libbonoboui-2.2.0
 		>=gnome-base/libbonobo-2.2.0
@@ -32,7 +32,6 @@ RDEPEND="~dev-libs/pwlib-1.10.5
 		gnome-extra/evolution-data-server
 		>=media-sound/esound-0.2.28
 		doc? ( app-text/gnome-doc-utils ) )"
-
 
 DEPEND="${RDEPEND}
 	dev-lang/perl
