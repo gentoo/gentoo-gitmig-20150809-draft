@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.2.ebuild,v 1.3 2007/03/05 04:16:20 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.2.ebuild,v 1.4 2007/07/08 19:09:47 lucass Exp $
 
 inherit distutils eutils
 
 MY_P="SPE-0.8.2.a-wx2.6.1.0"
 DESCRIPTION="Python IDE with Blender support"
-HOMEPAGE="http://www.stani.be/python/spe/blog/"
+HOMEPAGE="http://pythonide.stani.be/"
 SRC_URI="http://download.berlios.de/python/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
