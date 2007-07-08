@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.109 2007/07/05 13:59:56 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.110 2007/07/08 05:51:42 mr_bones_ Exp $
+
+  08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  liferea-1.0.16.ebuild, liferea-1.0.24.ebuild:
+  remove reference to old, removed dbus (bug #183696)
 
   05 Jul 2007; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.2.13.ebuild,
   -liferea-1.2.14.ebuild, -liferea-1.2.15b.ebuild:

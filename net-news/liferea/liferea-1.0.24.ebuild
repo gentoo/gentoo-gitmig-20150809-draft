@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0.24.ebuild,v 1.9 2007/05/13 17:51:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0.24.ebuild,v 1.10 2007/07/08 05:51:42 mr_bones_ Exp $
 
 inherit gnome2 eutils autotools
 
@@ -23,7 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.4.0
 	!seamonkey? ( !firefox? ( =gnome-extra/gtkhtml-2* ) )
 	gnome-base/libgnome
 	dbus? ( || ( >=dev-libs/dbus-glib-0.71
-		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.36 ) )
+		>=sys-apps/dbus-0.36 )
 	)"
 
 # libgnome dep is for gnome-open; it's not in configure.ac
