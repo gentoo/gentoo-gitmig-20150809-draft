@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/pwsafe
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pwsafe/ChangeLog,v 1.1 2007/07/08 18:59:11 taviso Exp $
+
+  08 Jul 2007; Tavis Ormandy <taviso@gentoo.org> ChangeLog:
+  initial import, commandline password manager that can read password safe
+  databases.
+
