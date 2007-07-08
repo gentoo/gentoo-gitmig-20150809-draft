@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.103 2007/07/07 20:43:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.104 2007/07/08 18:04:47 jer Exp $
+
+*opera-9.22.651 (08 Jul 2007)
+
+  08 Jul 2007; Jeroen Roovers <jer@gentoo.org> +opera-9.22.651.ebuild:
+  http://my.opera.com/desktopteam/blog/yet-another-merlin-build
 
   07 Jul 2007; Jeroen Roovers <jer@gentoo.org>
   files/opera-9.21-pluginpath.patch, opera-9.21-r1.ebuild:
