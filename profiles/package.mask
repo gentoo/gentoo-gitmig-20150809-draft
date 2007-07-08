@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7466 2007/07/08 15:31:52 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7467 2007/07/08 17:32:51 dcoutts Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -480,7 +480,7 @@ games-arcade/stepmania
 =net-p2p/amule-2.2.0_pre*
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (15 Mar 2007)
-# Mask modular libraries for testing.
+# Mask modular Haskell libraries for testing.
 # See bug 151012
 =dev-haskell/alut-2.0
 =dev-haskell/arrows-0.2
@@ -499,6 +499,17 @@ games-arcade/stepmania
 =dev-haskell/time-1.0
 =dev-haskell/x11-1.2
 =dev-haskell/xhtml-2006.9.13
+=dev-haskell/arrows-0.2.1
+=dev-haskell/cgi-3001.1.1
+=dev-haskell/fgl-5.4.1
+=dev-haskell/haskell-src-1.0.1
+=dev-haskell/html-1.0.1
+=dev-haskell/hunit-1.1.1
+=dev-haskell/mtl-1.0.1
+=dev-haskell/network-2.0.1
+=dev-haskell/quickcheck-1.0.1
+=dev-haskell/time-1.1.1
+=dev-haskell/xhtml-3000.0.2
 
 # Steve Dibb <beandog@gentoo.org> (12 Mar 2007)
 # needs testing

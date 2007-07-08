@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.518 2007/07/08 15:31:51 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.519 2007/07/08 17:32:51 dcoutts Exp $
+
+  08 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> package.mask:
+  Add more versions of the modular haskell packages to p.mask
 
   08 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> package.mask:
   Fix version number for dev-haskell/arrows in package.mask
