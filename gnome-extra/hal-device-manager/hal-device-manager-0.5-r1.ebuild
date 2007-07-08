@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hal-device-manager/hal-device-manager-0.5-r1.ebuild,v 1.5 2007/05/03 12:01:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hal-device-manager/hal-device-manager-0.5-r1.ebuild,v 1.6 2007/07/08 05:54:39 mr_bones_ Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND=">=sys-apps/hal-${PV}-r1
 	|| ( >=dev-python/dbus-python-0.71
-		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.60 ) )
+		>=sys-apps/dbus-0.60 )
 	>=dev-python/gnome-python-2.0.0-r1"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
