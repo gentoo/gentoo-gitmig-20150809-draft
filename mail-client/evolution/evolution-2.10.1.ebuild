@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.1.ebuild,v 1.2 2007/04/22 10:00:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.1.ebuild,v 1.3 2007/07/08 05:00:26 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -51,9 +51,7 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 	ldap? ( >=net-nds/openldap-2 )
 	kerberos? ( virtual/krb5 )
 	krb4? ( virtual/krb5 )
-	dbus? ( || (
-		dev-libs/dbus-glib
-		~sys-apps/dbus-0.62 ) )
+	dbus? ( dev-libs/dbus-glib )
 	networkmanager? ( net-misc/networkmanager )
 	mono? ( >=dev-lang/mono-1 )
 	bogofilter? ( mail-filter/bogofilter )
@@ -74,7 +72,6 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
 ELTCONF="--reverse-deps"
-
 
 pkg_setup() {
 	G2CONF="--disable-default-binary \

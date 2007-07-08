@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.2-r1.ebuild,v 1.11 2007/03/18 01:50:55 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.2-r1.ebuild,v 1.12 2007/07/08 05:00:26 mr_bones_ Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -56,7 +56,7 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 		>=media-libs/gst-plugins-base-0.10 )
 	dbus? ( || (
 		dev-libs/dbus-glib
-		( >=sys-apps/dbus-0.61 <sys-apps/dbus-0.90 ) ) )
+		>=sys-apps/dbus-0.61 ) )
 	mono? ( >=dev-lang/mono-1 )
 	bogofilter? ( mail-filter/bogofilter )
 	!bogofilter? ( mail-filter/spamassassin )"
@@ -72,7 +72,6 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
 ELTCONF="--reverse-deps"
-
 
 pkg_setup() {
 	G2CONF="--disable-default-binary \
@@ -150,7 +149,6 @@ src_unpack() {
 
 	# Add bogofilter junk plugin source
 	use bogofilter && epatch ${WORKDIR}/${PN}-2.5.5.1-bf-junk.patch
-
 
 	# Add widescreen mode, if requested
 	use widescreen && epatch ${FILESDIR}/${PN}-2.5.5.1-sideview.patch
