@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.1.1_pre2-r3.ebuild,v 1.1 2007/07/08 12:20:14 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.1.1_pre2-r3.ebuild,v 1.2 2007/07/08 19:18:13 zzam Exp $
 
 inherit vdr-plugin
 
@@ -25,6 +25,8 @@ S=${WORKDIR}/${MY_P#vdr-}
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-${PV}-r1.sh"
 
 PATCHES="${FILESDIR}/${P}-PatchCollection-FireFly.diff"
+#PATCHES="${FILESDIR}/${P}-PatchCollection-FireFly.diff
+#	${FILESDIR}/${P}-vdr-1.5.5-getfont.diff"
 
 src_unpack() {
 	vdr-plugin_src_unpack

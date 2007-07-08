@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-skinelchi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/ChangeLog,v 1.16 2007/07/08 12:20:14 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/ChangeLog,v 1.17 2007/07/08 19:18:13 zzam Exp $
+
+  08 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-skinelchi-0.1.1_pre2-vdr-1.5.5-getfont.diff,
+  vdr-skinelchi-0.1.1_pre2-r3.ebuild:
+  Added first version of patch against font problems.
 
 *vdr-skinelchi-0.1.1_pre2-r3 (08 Jul 2007)
 
