@@ -1,6 +1,10 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.32 2007/07/07 16:13:17 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.33 2007/07/08 17:13:47 phreak Exp $
+
+
+# The following packages need =gcc-4*
+=net-im/skype-1.4.0*
 
 # Mask off gcc-4 for all hardened arches until SSP is sorted out (i.e.
 # backport for gcc-4.0 and 4.0/4.1 rigged for SSP support in the C
