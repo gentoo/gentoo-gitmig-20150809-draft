@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.2.ebuild,v 1.1 2007/06/30 17:48:01 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.2.ebuild,v 1.2 2007/07/08 05:39:33 mr_bones_ Exp $
 
 inherit eutils pam gnome2
 
@@ -34,7 +34,7 @@ RDEPEND="pam?	(
 	>=media-libs/libart_lgpl-2.3.11
 	||	(
 			>=dev-libs/dbus-glib-0.71
-			( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.35 )
+			>=sys-apps/dbus-0.35
 		)
 	accessibility? ( x11-libs/libXevie )
 	selinux? ( sys-libs/libselinux )
