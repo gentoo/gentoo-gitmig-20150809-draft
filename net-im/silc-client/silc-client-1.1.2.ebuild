@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.1.ebuild,v 1.1 2007/06/12 15:48:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.1.2.ebuild,v 1.1 2007/07/08 21:31:10 armin76 Exp $
 
 inherit eutils multilib
 
@@ -13,11 +13,10 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="ipv6 perl debug"
 
-#=dev-libs/glib-1.2*
-
 DEPEND="perl? (	dev-lang/perl )
 	sys-libs/ncurses
 	!<=net-im/silc-toolkit-0.9.12-r1"
+
 RDEPEND="${DEPEND}
 	perl? (
 		!net-irc/irssi
@@ -29,7 +28,7 @@ src_unpack() {
 	cd ${S}
 
 	sed -i -e "s:-g -O2:${CFLAGS}:g" configure
-	epatch "${FILESDIR}/${P}-docdir.patch"
+	epatch "${FILESDIR}/${PN}-1.1-docdir.patch"
 }
 
 src_compile() {
@@ -37,9 +36,18 @@ src_compile() {
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 
 	econf \
+		--datadir=/usr/share/${PN} \
+		--datarootdir=/usr/share/${PN} \
+		--mandir=/usr/share/man \
+		--includedir=/usr/include/${PN} \
+		--sysconfdir=/etc/silc \
+		--with-helpdir=/usr/share/${PN}/help \
+		--libdir=/usr/$(get_libdir)/${PN} \
+		--docdir=/usr/share/doc/${PF} \
+		--disable-optimizations \
 		$(use_enable debug) \
-		--with-simdir=/usr/$(get_libdir)/${PN} \
-		|| die "econf failed"
+		${myconf}
+
 	emake || die "emake failed"
 }
 
