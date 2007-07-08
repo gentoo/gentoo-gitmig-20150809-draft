@@ -1,6 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.536 2007/06/15 19:05:48 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.537 2007/07/08 20:31:18 phreak Exp $
+
+*apache-2.2.4-r8 (08 Jul 2007)
+
+  08 Jul 2007; Christian Heim <phreak@gentoo.org> +apache-2.2.4-r8.ebuild:
+  Fixing SUEXEC_SAFEPATH (erroneous quotes for SUEXEC SAFEPATH - #182451,
+  thanks to Martin von Gagern <Martin.vGagern at gmx.net>). Making
+  SUEXEC_SAFEPATH configureable too.
 
 *apache-2.2.4-r7 (15 Jun 2007)
 
