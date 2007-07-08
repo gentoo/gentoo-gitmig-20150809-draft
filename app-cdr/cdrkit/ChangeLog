@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.44 2007/07/08 03:01:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.45 2007/07/08 03:24:57 pylon Exp $
+
+  08 Jul 2007; Lars Weiler <pylon@gentoo.org> ChangeLog:
+  Stable on ppc; bug #184559.
 
   08 Jul 2007; Lars Weiler <pylon@gentoo.org> ChangeLog:
   Stable on ppc; bug #184559.
