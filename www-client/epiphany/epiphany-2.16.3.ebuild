@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.16.3.ebuild,v 1.8 2007/06/02 02:52:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.16.3.ebuild,v 1.9 2007/07/08 04:30:03 mr_bones_ Exp $
 
 inherit eutils gnome2 multilib
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.12
 	>=app-text/iso-codes-0.35
 	>=www-client/mozilla-firefox-1.5
 	|| ( >=dev-libs/dbus-glib-0.71
-		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.35 ) )
+		>=sys-apps/dbus-0.35 )
 	python? (
 		>=dev-lang/python-2.3
 		>=dev-python/pygtk-2.7.1

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.114 2007/07/05 15:14:33 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.115 2007/07/08 04:30:03 mr_bones_ Exp $
+
+  08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  epiphany-2.14.2.1-r1.ebuild, epiphany-2.14.3.ebuild,
+  epiphany-2.16.3.ebuild, epiphany-2.18.1.ebuild:
+  remove reference to old, removed dbus (bug #183696)
 
   05 Jul 2007; Roy Marples <uberlord@gentoo.org> epiphany-2.18.2.ebuild:
   Keyworded ~x86-fbsd.

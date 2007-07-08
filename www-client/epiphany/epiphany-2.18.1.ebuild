@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.18.1.ebuild,v 1.1 2007/04/24 19:24:43 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.18.1.ebuild,v 1.2 2007/07/08 04:30:03 mr_bones_ Exp $
 
 WANT_AUTOMAKE=1.9
 inherit eutils gnome2 multilib autotools
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.12
 	>=gnome-base/gnome-desktop-2.9.91
 	>=x11-libs/startup-notification-0.5
 	|| ( >=dev-libs/dbus-glib-0.71
-		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.35 ) )
+		>=sys-apps/dbus-0.35 )
 	>=gnome-base/gconf-2
 	>=app-text/iso-codes-0.35
 	!xulrunner? ( >=www-client/mozilla-firefox-1.5 )
