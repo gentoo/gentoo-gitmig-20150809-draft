@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.123 2007/07/06 16:25:01 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.124 2007/07/08 16:21:46 dcoutts Exp $
+
+  08 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> ghc-6.6.1.ebuild:
+  Bump dep on cabal and no longer hide ghc's built-in cabal.
 
 *ghc-6.6.1 (06 Jul 2007)
 

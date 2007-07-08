@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.1.ebuild,v 1.1 2007/07/06 16:25:01 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.1.ebuild,v 1.2 2007/07/08 16:21:46 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -72,7 +72,7 @@ DEPEND="${RDEPEND}
 			>=dev-libs/libxslt-1.1.2
 			>=dev-haskell/haddock-0.8 ) )"
 
-PDEPEND=">=dev-haskell/cabal-1.1.6.1"
+PDEPEND=">=dev-haskell/cabal-1.1.6.2"
 
 append-ghc-cflags() {
 	local flag compile assemble link
@@ -333,9 +333,6 @@ src_install () {
 }
 
 pkg_postinst () {
-	ebegin "Hiding ghc's built-in cabal "
-	$(ghc-getghcpkg) hide Cabal > /dev/null
-	eend $?
 	ghc-reregister
 	elog "If you have dev-lang/ghc-bin installed, you might"
 	elog "want to unmerge it. It is no longer needed."
