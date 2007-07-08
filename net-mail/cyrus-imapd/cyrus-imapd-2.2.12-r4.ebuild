@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.12-r4.ebuild,v 1.10 2007/01/08 15:31:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.12-r4.ebuild,v 1.11 2007/07/08 18:07:10 angelos Exp $
 
 inherit eutils ssl-cert fixheadtails pam
 
@@ -148,6 +148,9 @@ src_unpack() {
 
 	# Parallel make fix
 	epatch "${FILESDIR}"/${PN}-parallel.patch
+
+	# db-4.5 fix
+	epatch "${FILESDIR}/${P}-db45.patch"
 
 	# Add unsupported patch wrt #18706 and #80630
 	use unsupported_8bit && epatch "${FILESDIR}/${PN}-unsupported-8bit.patch"

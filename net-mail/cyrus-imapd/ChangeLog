@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.92 2007/01/08 15:31:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.93 2007/07/08 18:07:10 angelos Exp $
+
+  08 Jul 2007; Christoph Mende <angelos@gentoo.org>
+  +files/cyrus-imapd-2.2.12-db45.patch, cyrus-imapd-2.2.12-r4.ebuild:
+  Added a patch to fix compilation against db-4.5
 
   08 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   cyrus-imapd-2.2.12.ebuild, cyrus-imapd-2.2.12-r4.ebuild,
