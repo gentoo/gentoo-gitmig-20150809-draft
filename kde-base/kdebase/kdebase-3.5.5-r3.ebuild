@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.5-r3.ebuild,v 1.12 2007/05/25 13:24:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.5-r3.ebuild,v 1.13 2007/07/08 04:20:12 mr_bones_ Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -28,7 +28,7 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	lm_sensors? ( sys-apps/lm_sensors )
 	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )
 	ieee1394? ( sys-libs/libraw1394 )
-	hal? ( || ( dev-libs/dbus-qt3-old ( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )
+	hal? ( || ( dev-libs/dbus-qt3-old >=sys-apps/dbus-0.34 )
 		   =sys-apps/hal-0.5* )
 	zeroconf? ( net-misc/mDNSResponder )
 	xcomposite? ( x11-libs/libXcomposite x11-libs/libXdamage )
