@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.59 2007/07/08 09:07:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.60 2007/07/08 14:09:02 pylon Exp $
+
+  08 Jul 2007; Lars Weiler <pylon@gentoo.org> rubygems-0.9.4.ebuild:
+  Stable on ppc; bug #181322.
 
   08 Jul 2007; Markus Rothe <corsair@gentoo.org> rubygems-0.9.4.ebuild:
   Stable on ppc64; bug #181322
