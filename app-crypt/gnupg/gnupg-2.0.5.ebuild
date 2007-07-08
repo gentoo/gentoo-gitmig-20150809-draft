@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.5.ebuild,v 1.3 2007/07/07 16:12:12 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.5.ebuild,v 1.4 2007/07/08 11:02:41 alonbl Exp $
 
 inherit flag-o-matic
 
@@ -42,10 +42,18 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.0.4-idea.patch"
+
+	# https://bugs.g10code.com/gnupg/issue811
 	epatch "${FILESDIR}/${P}-test.patch"
 
 	# parallel make issue
+	# ack by upstream.
 	sed -i 's#\.\./common/libcommon#libcommon#g' common/Makefile.in
+
+	# Make scripts/install-sh executable
+	# it is used by bsd autoconf as-is as install replacement
+	# https://bugs.g10code.com/gnupg/issue812
+	chmod +x ${S}/scripts/install-sh
 }
 
 src_compile() {
