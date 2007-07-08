@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r3.ebuild,v 1.13 2007/06/26 02:47:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r3.ebuild,v 1.14 2007/07/08 05:58:39 mr_bones_ Exp $
 
 inherit eutils linux-info
 
@@ -15,7 +15,7 @@ IUSE="acpi crypt debug doc dmi pcmcia selinux"
 
 RDEPEND=">=dev-libs/glib-2.6
 	|| ( >=dev-libs/dbus-glib-0.71
-		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.60 ) )
+		>=sys-apps/dbus-0.60 )
 	>=sys-fs/udev-083
 	>=sys-apps/util-linux-2.12r
 	|| ( >=sys-kernel/linux-headers-2.6 >=sys-kernel/mips-headers-2.6 )
