@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.26 2007/04/29 18:02:20 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.27 2007/07/08 16:01:04 dcoutts Exp $
+
+*cabal-1.1.6.2 (08 Jul 2007)
+
+  08 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> +cabal-1.1.6.2.ebuild:
+  New cabal version that comes with ghc-6.6.1.
 
   29 Apr 2007; Lennart Kolmodin <kolmodin@gentoo.org> cabal-1.1.3-r1.ebuild,
   cabal-1.1.4.ebuild:
