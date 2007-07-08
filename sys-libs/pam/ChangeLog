@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.156 2007/07/08 15:34:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.157 2007/07/08 17:17:52 flameeyes Exp $
+
+  08 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/Linux-PAM-0.99.8.0-setlocale.patch, pam-0.99.8.0.ebuild:
+  Fix missing locale.h include when nls USE flag is turned off. Thanks
+  Christian Heim (phreak) for reporting in bug #184618.
 
 *pam-0.99.8.0 (08 Jul 2007)
 

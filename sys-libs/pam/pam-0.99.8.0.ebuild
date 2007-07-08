@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.8.0.ebuild,v 1.1 2007/07/08 15:34:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.8.0.ebuild,v 1.2 2007/07/08 17:17:52 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -108,6 +108,7 @@ src_unpack() {
 
 	epatch "${DISTDIR}/${MY_P}-ldflags-to-libadd.patch.bz2"
 	epatch "${FILESDIR}/${MY_PN}-0.99.7.0-disable-regenerate-man.patch"
+	epatch "${FILESDIR}/${MY_P}-setlocale.patch"
 
 	AT_M4DIR="m4" eautoreconf
 

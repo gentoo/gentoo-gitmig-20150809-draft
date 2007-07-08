@@ -1,0 +1,12 @@
+Index: Linux-PAM-0.99.8.0/modules/pam_limits/pam_limits.c
+===================================================================
+--- Linux-PAM-0.99.8.0.orig/modules/pam_limits/pam_limits.c
++++ Linux-PAM-0.99.8.0/modules/pam_limits/pam_limits.c
+@@ -27,6 +27,7 @@
+ #include <errno.h>
+ #include <syslog.h>
+ #include <stdarg.h>
++#include <locale.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/resource.h>
