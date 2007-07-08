@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.4-r5.ebuild,v 1.13 2007/01/28 07:41:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.4-r5.ebuild,v 1.14 2007/07/08 05:53:52 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -21,7 +21,7 @@ RDEPEND=">=gnome-base/libgnomeui-2.13
 	>=gnome-base/gconf-2
 	||  (
 			>=dev-libs/dbus-glib-0.71
-			( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.60 )
+			>=sys-apps/dbus-0.60
 		)"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
