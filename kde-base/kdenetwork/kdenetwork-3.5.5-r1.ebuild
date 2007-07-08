@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.5-r1.ebuild,v 1.16 2007/04/21 23:03:46 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.5-r1.ebuild,v 1.17 2007/07/08 10:27:19 philantrop Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -46,7 +46,9 @@ DEPEND="${BOTH_DEPEND}
 	dev-util/pkgconfig"
 
 PATCHES="${FILESDIR}/kopete-3.5.5-icqfix.patch
-	${FILESDIR}/kdenetwork-3.5.5-linux-headers-2.6.18.patch"
+		${FILESDIR}/kdenetwork-3.5.5-linux-headers-2.6.18.patch
+		${FILESDIR}/kopete-3.5.5-status-visibility.patch
+		${FILESDIR}/kopete-3.5.5-enable-final-redefines.patch"
 
 pkg_setup() {
 	if use kernel_linux && ! built_with_use =x11-libs/qt-3* opengl; then
