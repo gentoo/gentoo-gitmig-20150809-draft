@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PlRPC
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.36 2007/06/25 17:09:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.37 2007/07/08 03:08:17 tgall Exp $
+
+  07 Jul 2007; Tom Gall <tgall@gentoo.org> PlRPC-0.2019.ebuild:
+  stable on ppc64
 
   25 Jun 2007; Michael Cummings <mcummings@gentoo.org> PlRPC-0.2019.ebuild:
   Marking sparc stable

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Heap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Heap/ChangeLog,v 1.24 2007/06/21 16:16:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Heap/ChangeLog,v 1.25 2007/07/08 02:30:17 tgall Exp $
+
+  07 Jul 2007; Tom Gall <tgall@gentoo.org> Heap-0.80.ebuild:
+  stable on ppc64
 
   21 Jun 2007; Michael Cummings <mcummings@gentoo.org> Heap-0.80.ebuild:
   Marking sparc stable
