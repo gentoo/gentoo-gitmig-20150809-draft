@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/mlocate
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.1 2007/07/08 10:26:09 opfer Exp $
+
+*mlocate-0.17 (08 Jul 2007)
+
+  08 Jul 2007; Christian Faulhammer <opfer@gentoo.org> +files/mlocate.cron,
+  +files/updatedb.conf, +metadata.xml, +mlocate-0.17.ebuild:
+  new ebuild for bug 127010, thanks to José Romildo Malaquias
+  <j.romildo@gmail.com>
+
