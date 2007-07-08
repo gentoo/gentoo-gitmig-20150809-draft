@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/python-daap
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daap/ChangeLog,v 1.1 2007/07/08 18:07:50 drac Exp $
+
+*python-daap-0.7 (08 Jul 2007)
+
+  08 Jul 2007; Samuli Suominen <drac@gentoo.org> +python-daap-0.7.ebuild:
+  Initial commit for bug 183408. Thanks to Philip Allison, Bernie Hackett and
+  Niklas Närhinen.
+
