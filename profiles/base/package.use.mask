@@ -13,4 +13,4 @@ dev-java/blackdown-jdk nsplugin
 dev-java/blackdown-jre nsplugin
 
 # These are for BSD only
-net-proxy/squid -pf-transparent pf-transparent
+net-proxy/squid ipf-transparent pf-transparent
