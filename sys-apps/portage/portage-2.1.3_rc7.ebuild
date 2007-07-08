@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3_rc5.ebuild,v 1.2 2007/06/23 22:18:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3_rc7.ebuild,v 1.1 2007/07/08 21:30:00 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -217,6 +217,14 @@ pkg_postinst() {
 		# Overwrite the globals file automatically.
 		[ -e "${x}" ] && mv -f "${x}" "${ROOT}etc/make.globals"
 	done
+
+	elog
+	elog "The world file now supports slot atoms such as 'sys-devel/gcc:3.4'. In some"
+	elog "cases, emerge --depclean may remove slots that it would not have removed"
+	elog "in the past. The emerge --noreplace command can be used to add an atom to"
+	elog "the world file and prevent matching packages from being removed.  A slot"
+	elog "atom will be recorded in the world file for any atom that is precise enough"
+	elog "to identify a specific slot."
 
 	portage_docs
 }
