@@ -1,6 +1,11 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.54 2007/06/29 22:13:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.55 2007/07/08 05:18:59 mr_bones_ Exp $
+
+  08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  epiphany-extensions-2.14.1-r1.ebuild,
+  epiphany-extensions-2.16.1-r1.ebuild:
+  remove reference to old, removed dbus (bug #183696)
 
 *epiphany-extensions-2.18.2 (29 Jun 2007)
 

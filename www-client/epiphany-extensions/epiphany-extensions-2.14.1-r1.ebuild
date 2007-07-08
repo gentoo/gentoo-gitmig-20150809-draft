@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.14.1-r1.ebuild,v 1.9 2006/11/07 01:16:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.14.1-r1.ebuild,v 1.10 2007/07/08 05:18:59 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -23,7 +23,7 @@ RDEPEND=">=www-client/epiphany-2.14.1
 	firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
 	pcre? ( >=dev-libs/libpcre-3.9-r2 )
 	dbus? ( || ( >=dev-libs/dbus-glib-0.71
-		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )
+		>=sys-apps/dbus-0.34 )
 		)
 	python? ( >=dev-lang/python-2.3 )"
 
@@ -60,4 +60,3 @@ pkg_setup() {
 		G2CONF="${G2CONF} --with-mozilla=seamonkey"
 	fi
 }
-
