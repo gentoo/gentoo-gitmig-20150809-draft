@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.14.2-r1.ebuild,v 1.4 2006/11/09 02:54:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.14.2-r1.ebuild,v 1.5 2007/07/08 04:40:03 mr_bones_ Exp $
 
 WANT_AUTOMAKE=1.8
 inherit eutils gnome2 autotools
@@ -29,7 +29,7 @@ RDEPEND=">=x11-libs/gtk+-2.5
 	>=gnome-base/gnome-desktop-2.11.1
 	hal? ( >=sys-apps/hal-0.5.3
 		|| ( >=dev-libs/dbus-glib-0.71
-			( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 ) )
+			>=sys-apps/dbus-0.34 )
 	)
 	>=gnome-extra/gucharmap-1.4
 	apm? ( sys-apps/apmd )

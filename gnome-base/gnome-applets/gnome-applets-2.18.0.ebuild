@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.18.0.ebuild,v 1.3 2007/04/07 22:46:32 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.18.0.ebuild,v 1.4 2007/07/08 04:40:03 mr_bones_ Exp $
 
 inherit eutils gnome2 autotools
 
@@ -28,7 +28,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 		hal? ( >=sys-apps/hal-0.5.3 )
 		||  (
 				>=dev-libs/dbus-glib-0.71
-				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.34 )
+				>=sys-apps/dbus-0.34
 			)
 		>=x11-themes/gnome-icon-theme-2.15.91
 		>=dev-libs/libxml2-2.5.0
