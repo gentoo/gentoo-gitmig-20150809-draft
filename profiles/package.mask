@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7465 2007/07/08 00:08:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7466 2007/07/08 15:31:52 dcoutts Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -483,7 +483,7 @@ games-arcade/stepmania
 # Mask modular libraries for testing.
 # See bug 151012
 =dev-haskell/alut-2.0
-=dev-haskell/arrows-2.0
+=dev-haskell/arrows-0.2
 =dev-haskell/cgi-2006.9.6
 =dev-haskell/fgl-5.3
 =dev-haskell/glut-2.0-r1

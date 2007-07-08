@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.517 2007/07/07 11:52:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.518 2007/07/08 15:31:51 dcoutts Exp $
+
+  08 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> package.mask:
+  Fix version number for dev-haskell/arrows in package.mask
 
   07 Jul 2007; Sven Wegener <swegener@gentoo.org> package.mask:
   Mask =dev-db/opendbx-1.3* (development releases)
