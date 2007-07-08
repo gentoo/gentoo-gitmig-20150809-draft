@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.14.2.ebuild,v 1.9 2007/03/18 01:25:49 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.14.2.ebuild,v 1.10 2007/07/08 04:41:55 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -22,7 +22,7 @@ RDEPEND=">=sys-apps/dbus-0.35.2
 		 >=media-libs/libexif-0.6.12
 		 >=dev-libs/glib-2.7.0
 		 ||	(
-		 		(
+				(
 					x11-libs/libX11
 					x11-libs/libXext
 					x11-libs/libXrandr
