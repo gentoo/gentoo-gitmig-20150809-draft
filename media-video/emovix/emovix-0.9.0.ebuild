@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/emovix-0.9.0.ebuild,v 1.1 2007/07/08 20:51:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/emovix-0.9.0.ebuild,v 1.2 2007/07/08 20:58:11 drac Exp $
 
 DESCRIPTION="Micro Linux distro to boot from a CD and play every video file localized in the CD root."
 HOMEPAGE="http://movix.sourceforge.net"
@@ -21,4 +21,3 @@ src_install() {
 	dodoc AUTHORS ChangeLog README* TODO
 	dosym /usr/lib/win32 /usr/share/emovix/codecs
 }
-
