@@ -1,0 +1,19 @@
+Patch from http://cvs.fedora.redhat.com/viewcvs/rpms/at-spi/F-7/at-spi-1.18.0-ior-leak.patch?rev=1.1&view=auto
+to not have to duplicate efforts on just including the functional patch and leaving out the whitespace changes at
+upstream http://svn.gnome.org/viewcvs/at-spi/trunk/atk-bridge/bridge.c?r1=903&r2=902&pathrev=903
+
+--- at-spi-1.18.0/atk-bridge/bridge.c.ior-leak	2007-04-09 13:34:13.000000000 +0200
++++ at-spi-1.18.0/atk-bridge/bridge.c	2007-04-09 13:35:35.000000000 +0200
+@@ -420,9 +420,11 @@
+ 	  /* XXX: This presumes that the registry has successfully restarted itself already...*/
+ 	  ior = (char *) spi_atk_bridge_get_registry_ior ();
+ 
+-	  if (ior != NULL)
++	  if (ior != NULL) {
+ 	       registry = CORBA_ORB_string_to_object (bonobo_activation_orb_get (), 
+ 						      ior, &ev);
++	       XFree (ior);
++	  }
+ 	  else {
+ 	       g_warning ("IOR not set.");  
+ 	       registry = CORBA_OBJECT_NIL;

@@ -1,0 +1,17 @@
+Patch from http://svn.gnome.org/viewcvs/at-spi/trunk/atk-bridge/bridge.c?r1=902&r2=901&pathrev=902
+to fix a memory leak in spi_atk_bridge_focus_tracker codepath
+
+--- trunk/atk-bridge/bridge.c	2007/04/09 08:34:50	901
++++ trunk/atk-bridge/bridge.c	2007/04/12 07:06:38	902
+@@ -714,7 +714,10 @@
+     registry_died = TRUE;
+ 
+   bonobo_object_unref (source);
+-  
++
++  if (e.any_data._release)
++    CORBA_free (e.any_data._value);
++
+   CORBA_exception_free (&ev);
+ }
+ 

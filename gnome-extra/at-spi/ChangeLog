@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.143 2007/07/05 16:51:21 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.144 2007/07/08 23:19:09 leio Exp $
+
+*at-spi-1.18.1-r1 (08 Jul 2007)
+
+  08 Jul 2007; Mart Raudsepp <leio@gentoo.org>
+  +files/at-spi-1.18.0-ior-leak.patch,
+  +files/at-spi-1.18.1-focus-tracker-leak.patch, +at-spi-1.18.1-r1.ebuild:
+  Fix a couple of memory leaks, one of which can result in applications
+  leaking hundreds of megabytes of memory in the matter of a day with lots of
+  typing and assistive technology being enabled.
 
   05 Jul 2007; Roy Marples <uberlord@gentoo.org> at-spi-1.18.1.ebuild:
   Keyworded ~x86-fbsd.
