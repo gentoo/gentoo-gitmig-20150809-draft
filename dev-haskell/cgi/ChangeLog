@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cgi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.3 2007/04/06 16:48:06 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.4 2007/07/08 15:35:07 dcoutts Exp $
+
+  08 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> cgi-2006.9.6.ebuild:
+  Use dev-lang/ghc rather than virtual/ghc.
 
   06 Apr 2007; Chris Parrott <cparrott@gentoo.org> cgi-2006.9.6.ebuild:
   added ~ppc and ~sparc keywords

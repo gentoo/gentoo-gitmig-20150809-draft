@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/html-1.0-r1.ebuild,v 1.3 2007/04/06 17:06:50 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/html-1.0-r1.ebuild,v 1.4 2007/07/08 15:36:36 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -16,6 +16,6 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=virtual/ghc-6.6"
+DEPEND=">=dev-lang/ghc-6.6"
 
 S="${WORKDIR}/ghc-${GHC_PV}/libraries/${PN}"
