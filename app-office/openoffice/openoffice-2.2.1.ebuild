@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.1.ebuild,v 1.8 2007/07/07 07:59:58 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.2.1.ebuild,v 1.9 2007/07/08 05:52:48 mr_bones_ Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -53,7 +53,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	>=dev-lang/perl-5.0
 	dbus? ( || (
 				>=dev-libs/dbus-glib-0.71
-				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.61 )
+				>=sys-apps/dbus-0.61
 			) )
 	gnome? ( >=x11-libs/gtk+-2.10
 		>=gnome-base/gnome-vfs-2.6
@@ -136,7 +136,6 @@ if use amd64; then
 	# Thus we force the use of a Java 1.4 JDK on amd64 (and amd64 only).
 	export JAVA_PKG_NV_DEPEND="=virtual/jdk-1.4*"
 fi
-
 
 pkg_setup() {
 
