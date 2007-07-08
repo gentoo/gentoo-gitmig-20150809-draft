@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/galago-daemon/galago-daemon-0.5.1.ebuild,v 1.6 2007/03/15 19:07:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/galago-daemon/galago-daemon-0.5.1.ebuild,v 1.7 2007/07/08 05:35:44 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-libs/glib-2.8
 		 >=dev-libs/libgalago-0.5.2
 		 || (
 				>=dev-libs/dbus-glib-0.71
-				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.36 )
+				>=sys-apps/dbus-0.36
 			)"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.9
