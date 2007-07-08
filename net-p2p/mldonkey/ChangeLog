@@ -1,32 +1,32 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.164 2007/07/08 20:58:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.165 2007/07/08 21:00:31 josejx Exp $
 
-  08 Jul 2007; Joseph Jezak <josejx@gentoo.org> ChangeLog:
+  08 Jul 2007; Joseph Jezak <josejx@gentoo.org> mldonkey-2.8.7.ebuild:
   Marked ppc stable for bug #184625.
 
-  08 Jul 2007; Raúl Porcel <armin76@gentoo.org> mldonkey-2.8.7.ebuild:
+  08 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> mldonkey-2.8.7.ebuild:
   ia64/x86 stable wrt #184625
 
-  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> mldonkey-2.8.5.ebuild,
+  02 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org> mldonkey-2.8.5.ebuild,
   mldonkey-2.8.7.ebuild:
   (QA) RESTRICT clean up.
 
-  13 Jun 2007; Raúl Porcel <armin76@gentoo.org> -mldonkey-2.8.3.ebuild,
+  13 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> -mldonkey-2.8.3.ebuild,
   -mldonkey-2.8.4.ebuild:
   old
 
   13 Jun 2007; Christoph Mende <angelos@gentoo.org> mldonkey-2.8.5.ebuild:
   Stable on amd64 wrt bug 179882
 
-  08 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  08 Jun 2007; RaÃºl Porcel <armin76@gentoo.org>
   files/mldonkey.initd-2.8-r1:
-  Swap one line in the init script, thanks to Jörg Eitemüller <destotelhorus
+  Swap one line in the init script, thanks to JÃ¶rg EitemÃ¼ller <destotelhorus
   at googlemail dot com> for reporting in bug 181140
 
 *mldonkey-2.8.7 (03 Jun 2007)
 
-  03 Jun 2007; Raúl Porcel <armin76@gentoo.org> +mldonkey-2.8.7.ebuild:
+  03 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> +mldonkey-2.8.7.ebuild:
   Version bump
 
   01 Jun 2007; nixnut <nixnut@gentoo.org> mldonkey-2.8.5.ebuild:
@@ -35,30 +35,30 @@
   28 May 2007; Jeroen Roovers <jer@gentoo.org> mldonkey-2.8.5.ebuild:
   Stable for HPPA (bug #179882).
 
-  26 May 2007; Raúl Porcel <armin76@gentoo.org> mldonkey-2.8.5.ebuild:
+  26 May 2007; RaÃºl Porcel <armin76@gentoo.org> mldonkey-2.8.5.ebuild:
   ia64 + x86 stable wrt #179882
 
-  17 May 2007; Raúl Porcel <armin76@gentoo.org> mldonkey-2.8.3.ebuild,
+  17 May 2007; RaÃºl Porcel <armin76@gentoo.org> mldonkey-2.8.3.ebuild,
   mldonkey-2.8.4.ebuild, mldonkey-2.8.5.ebuild:
   Remove useless mldonkey script, bug 178883
 
-  04 May 2007; Raúl Porcel <armin76@gentoo.org> mldonkey-2.8.4.ebuild:
+  04 May 2007; RaÃºl Porcel <armin76@gentoo.org> mldonkey-2.8.4.ebuild:
   ia64 + x86 stable
 
 *mldonkey-2.8.5 (23 Apr 2007)
 
-  23 Apr 2007; Raúl Porcel <armin76@gentoo.org> +mldonkey-2.8.5.ebuild:
+  23 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> +mldonkey-2.8.5.ebuild:
   Version bump
 
-  22 Apr 2007; Raúl Porcel <armin76@gentoo.org> mldonkey-2.8.3.ebuild,
+  22 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> mldonkey-2.8.3.ebuild,
   mldonkey-2.8.4.ebuild:
   Use doconfd and doinitd, bug 174266
 
-  10 Apr 2007; Raúl Porcel <armin76@gentoo.org> mldonkey-2.8.3.ebuild,
+  10 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> mldonkey-2.8.3.ebuild,
   mldonkey-2.8.4.ebuild:
   Remove idiot batch USE-flag, bug 174021
 
-  08 Apr 2007; Raúl Porcel <armin76@gentoo.org>
+  08 Apr 2007; RaÃºl Porcel <armin76@gentoo.org>
   -files/mldonkey-2.8.2-avoid_dupl_sending.patch, -mldonkey-2.8.2-r1.ebuild:
   drop old
 
@@ -70,13 +70,13 @@
   mldonkey-2.8.3.ebuild:
   ppc stable, bug #165591
 
-  04 Apr 2007; Raúl Porcel <armin76@gentoo.org> mldonkey-2.8.3.ebuild,
+  04 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> mldonkey-2.8.3.ebuild,
   mldonkey-2.8.4.ebuild:
   Make install fail if dobin fails, bug 173317
 
 *mldonkey-2.8.4 (02 Apr 2007)
 
-  02 Apr 2007; Raúl Porcel <armin76@gentoo.org> -files/dp500.patch,
+  02 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> -files/dp500.patch,
   -files/mldonkey.confd, -files/mldonkey.initd, -mldonkey-2.7.7.ebuild,
   mldonkey-2.8.3.ebuild, +mldonkey-2.8.4.ebuild:
   Version bump, ia64 stable wrt bug 165591 and cleanup old
@@ -84,7 +84,7 @@
   20 Mar 2007; Jeroen Roovers <jer@gentoo.org> mldonkey-2.8.3.ebuild:
   Stable for HPPA (bug #165591).
 
-  13 Mar 2007; Raúl Porcel <armin76@gentoo.org> mldonkey-2.8.3.ebuild:
+  13 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> mldonkey-2.8.3.ebuild:
   x86 stable
 
   25 Feb 2007; Matti Bickel <mabi@gentoo.org> mldonkey-2.8.2-r1.ebuild:
@@ -95,16 +95,16 @@
 
 *mldonkey-2.8.3 (11 Feb 2007)
 
-  11 Feb 2007; Raúl Porcel <armin76@gentoo.org> +mldonkey-2.8.3.ebuild:
+  11 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> +mldonkey-2.8.3.ebuild:
   Version bump, bug 166350
 
   06 Feb 2007; Jeroen Roovers <jer@gentoo.org> mldonkey-2.8.2-r1.ebuild:
   Stable for HPPA (bug #165591).
 
-  06 Feb 2007; Raúl Porcel <armin76@gentoo.org> mldonkey-2.8.2-r1.ebuild:
+  06 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> mldonkey-2.8.2-r1.ebuild:
   x86 stable wrt bug 165591
 
-  24 Jan 2007; Raúl Porcel <armin76@gentoo.org>
+  24 Jan 2007; RaÃºl Porcel <armin76@gentoo.org>
   -files/mldonkey-2.7.3-configure.patch, -files/mldonkey-2.7.6-magic.patch,
   +files/mldonkey.confd-2.8, -files/mldonkey.initd-2.8,
   +files/mldonkey.initd-2.8-r1, -mldonkey-2.6.4-r2.ebuild,
@@ -113,13 +113,13 @@
   Drop old , add new initd script and confd, thanks to Christian Schlotter
   <again at gmx at de>, bug 141177
 
-  13 Jan 2007; Raúl Porcel <armin76@gentoo.org> mldonkey-2.7.7.ebuild,
+  13 Jan 2007; RaÃºl Porcel <armin76@gentoo.org> mldonkey-2.7.7.ebuild,
   mldonkey-2.8.2-r1.ebuild:
   Change HOMEPAGE, bug 161875
 
 *mldonkey-2.8.2-r1 (12 Jan 2007)
 
-  12 Jan 2007; Raúl Porcel <armin76@gentoo.org>
+  12 Jan 2007; RaÃºl Porcel <armin76@gentoo.org>
   +files/mldonkey-2.8.2-avoid_dupl_sending.patch, +mldonkey-2.8.2-r1.ebuild:
   Add new patch, from bug 161169, thanks to spiralvoice <spiralvoice at
   hotmail dot com>
@@ -357,7 +357,7 @@
   23 Jul 2005; <sekretarz@gentoo.org> +mldonkey-2.6.0.ebuild:
   Version bump, bug #84100
 
-  06 May 2005; Bryan Østergaard <kloeri@gentoo.org>
+  06 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   mldonkey-2.5.16-r10.ebuild:
   Fix typo, bug 89322.
 
@@ -730,6 +730,6 @@
 
   move to net-p2p
 
-  16 jun 2002; J. Alberto Suárez L. <bass@gentoo.org> mldonkey-1.16.ebuild : 
+  16 jun 2002; J. Alberto SuÃ¡rez L. <bass@gentoo.org> mldonkey-1.16.ebuild : 
 
   First relase
