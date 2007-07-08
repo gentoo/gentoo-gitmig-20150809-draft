@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.112 2007/06/29 09:17:36 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.113 2007/07/08 11:36:57 uberlord Exp $
+
+  08 Jul 2007; Roy Marples <uberlord@gentoo.org> files/openvpn-2.1.conf,
+  files/openvpn-2.1.init:
+  RE_ENTER config variable allows custom up/down scripts to re-enter openvpn.
+  Should fix #133107.
 
 *openvpn-2.1_rc4-r1 (29 Jun 2007)
 

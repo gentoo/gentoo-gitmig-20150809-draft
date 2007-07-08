@@ -65,7 +65,7 @@ start() {
 
 	checkconfig || return 1
 
-	local args="" client=false
+	local args="" reenter=${RE_ENTER:-no}
 	# If the config file does not specify the cd option, we do
 	# But if we specify it, we override the config option which we do not want
 	if ! grep -q "^[ \t]*cd[ \t].*" "${VPNCONF}" ; then
@@ -77,7 +77,7 @@ start() {
 	# which configures our DNS if any and marks us as up.
 	if [ "${DETECT_CLIENT:-yes}" = "yes" ] && \
 	grep -q "^[ \t]*remote[ \t].*" "${VPNCONF}" ; then
-		client=true
+		reenter="yes"
 		args="${args} --nobind --up-delay --up-restart"
 		args="${args} --up /etc/openvpn/up.sh"
 		args="${args} --down-pre --down /etc/openvpn/down.sh"
@@ -104,7 +104,7 @@ start() {
 		grep -q "^[ \t]*group[ \t].*" "${VPNCONF}" || args="${args} --group openvpn"
 	fi
 
-	${client} && mark_service_inactive "${SVCNAME}"
+	[ "${reenter}" = "yes" ] && mark_service_inactive "${SVCNAME}"
 	start-stop-daemon --start --exec /usr/sbin/openvpn --pidfile "${VPNPID}" \
 		-- --config "${VPNCONF}" --writepid "${VPNPID}" --daemon ${args}
 	eend $? "Check your logs to see why startup failed"
