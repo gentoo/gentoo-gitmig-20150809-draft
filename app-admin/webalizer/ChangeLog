@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.62 2007/07/07 19:31:41 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.63 2007/07/08 08:59:02 corsair Exp $
+
+  08 Jul 2007; Markus Rothe <corsair@gentoo.org>
+  webalizer-2.01.10-r15.ebuild:
+  Stable on ppc64; bug #174950
 
   07 Jul 2007; Lars Weiler <pylon@gentoo.org> webalizer-2.01.10-r15.ebuild:
   Stable on ppc; bug #174950.
