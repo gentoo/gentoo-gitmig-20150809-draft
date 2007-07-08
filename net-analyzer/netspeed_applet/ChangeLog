@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netspeed_applet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/ChangeLog,v 1.26 2007/07/08 14:27:39 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/ChangeLog,v 1.27 2007/07/08 17:33:19 angelos Exp $
+
+  08 Jul 2007; Christoph Mende <angelos@gentoo.org>
+  netspeed_applet-0.14.ebuild:
+  Stable on amd64 wrt bug #173947
 
   08 Jul 2007; Lars Weiler <pylon@gentoo.org> netspeed_applet-0.14.ebuild:
   Stable on ppc; bug #173947.
