@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.3.2.ebuild,v 1.2 2007/07/04 20:44:52 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.3.2.ebuild,v 1.3 2007/07/08 07:39:58 hawking Exp $
 
 NEED_PYTHON=2.3
 
@@ -18,7 +18,7 @@ IUSE="doc examples"
 # Note: This version comes with it's own bundled svn version of pyrex
 DEPEND=">=dev-libs/libxml2-2.6.16
 		>=dev-libs/libxslt-1.1.12
-		dev-python/setuptools"
+		>=dev-python/setuptools-0.6_rc5"
 
 src_install() {
 	distutils_src_install

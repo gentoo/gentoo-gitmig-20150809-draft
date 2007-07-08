@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.0.2.ebuild,v 1.5 2007/07/03 06:49:29 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.0.2.ebuild,v 1.6 2007/07/08 07:39:58 hawking Exp $
 
 inherit distutils eutils
 
