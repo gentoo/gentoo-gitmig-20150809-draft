@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.2.ebuild,v 1.2 2007/07/05 16:17:18 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.2.ebuild,v 1.3 2007/07/08 04:57:17 mr_bones_ Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.12
 	   dev-libs/libxml2
 	 || (
 			>=dev-libs/dbus-glib-0.71
-			( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.60 )
+			>=sys-apps/dbus-0.60
 		)
 
 	 >=media-libs/gstreamer-0.10.6

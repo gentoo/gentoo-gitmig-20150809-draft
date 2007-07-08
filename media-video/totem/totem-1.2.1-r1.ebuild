@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.1-r1.ebuild,v 1.4 2007/01/05 20:42:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.1-r1.ebuild,v 1.5 2007/07/08 04:57:17 mr_bones_ Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -66,7 +66,6 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 USE_DESTDIR="1"
-
 
 pkg_setup() {
 	G2CONF="--disable-gtk \
