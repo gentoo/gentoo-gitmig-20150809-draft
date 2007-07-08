@@ -1,6 +1,9 @@
 # ChangeLog for media-video/emovix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/ChangeLog,v 1.14 2007/07/08 20:51:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/ChangeLog,v 1.15 2007/07/08 23:02:22 drac Exp $
+
+  08 Jul 2007; Samuli Suominen <drac@gentoo.org> emovix-0.9.0.ebuild:
+  Pass -j1 to install.
 
 *emovix-0.9.0 (08 Jul 2007)
 
