@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.20 2007/06/01 18:22:02 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.21 2007/07/08 05:05:37 mr_bones_ Exp $
+
+  08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org> f-spot-0.3.3.ebuild,
+  f-spot-0.3.4.ebuild, f-spot-0.3.5.ebuild, f-spot-0.3.5-r1.ebuild:
+  remove reference to old, removed dbus (bug #183696)
 
 *f-spot-0.3.5-r1 (01 Jun 2007)
 

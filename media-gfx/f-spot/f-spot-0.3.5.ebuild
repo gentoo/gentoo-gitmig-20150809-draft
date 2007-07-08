@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.3.5.ebuild,v 1.1 2007/03/20 22:50:00 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.3.5.ebuild,v 1.2 2007/07/08 05:05:37 mr_bones_ Exp $
 
 inherit gnome2 mono eutils autotools
 
@@ -13,7 +13,7 @@ IUSE=""
 
 RDEPEND=">=dev-lang/mono-1.1.10
 || ( >=dev-libs/dbus-glib-0.71
-		( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.35 ) )
+		>=sys-apps/dbus-0.35 )
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2.6
 	>=dev-dotnet/gtk-sharp-2.7
@@ -58,4 +58,3 @@ src_unpack()
 
 	eautoconf || die "autoconf failed"
 }
-
