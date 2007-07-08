@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.8.0.ebuild,v 1.2 2007/07/08 17:17:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.8.0.ebuild,v 1.3 2007/07/08 17:26:58 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -67,7 +67,7 @@ check_old_modules() {
 	fi
 
 	# Produce the warnings only during upgrade, for the following two
-	has_version '=sys-libs/pam-0.78' || return $retval
+	has_version '<sys-libs/pam-0.99' || return $retval
 
 	if sed -e 's:#.*::' /etc/pam.d/* | fgrep -q pam_console.so; then
 		ewarn ""
