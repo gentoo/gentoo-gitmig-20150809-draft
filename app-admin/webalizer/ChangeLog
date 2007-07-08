@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.65 2007/07/08 17:36:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.66 2007/07/08 18:08:36 armin76 Exp $
+
+  08 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  webalizer-2.01.10-r15.ebuild:
+  alpha stable wrt #174950
 
   08 Jul 2007; Christoph Mende <angelos@gentoo.org>
   webalizer-2.01.10-r15.ebuild:
