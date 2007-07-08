@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/nicotine+
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.19 2007/07/08 17:20:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.20 2007/07/08 20:50:41 josejx Exp $
+
+  08 Jul 2007; Joseph Jezak <josejx@gentoo.org> nicotine+-1.2.8.ebuild:
+  Marked ppc stable for bug #184620.
 
   08 Jul 2007; Raúl Porcel <armin76@gentoo.org> nicotine+-1.2.8.ebuild:
   x86 stable wrt #184620
