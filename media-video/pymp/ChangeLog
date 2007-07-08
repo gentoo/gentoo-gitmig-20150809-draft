@@ -1,6 +1,9 @@
 # ChangeLog for media-video/pymp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/ChangeLog,v 1.1 2007/07/07 18:25:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/ChangeLog,v 1.2 2007/07/08 14:05:34 angelos Exp $
+
+  08 Jul 2007; Christoph Mende <angelos@gentoo.org> pymp-1.0.ebuild:
+  Added ~amd64
 
 *pymp-1.0 (07 Jul 2007)
 
