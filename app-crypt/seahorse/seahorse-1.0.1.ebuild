@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-1.0.1.ebuild,v 1.5 2007/06/22 12:42:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-1.0.1.ebuild,v 1.6 2007/07/08 04:09:07 mr_bones_ Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -30,7 +30,7 @@ RDEPEND=">=gnome-base/libgnome-2.14
 		 avahi? ( >=net-dns/avahi-0.6 )
 		 dbus?	( ||	(
 							>=dev-libs/dbus-glib-0.72
-							( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.60 )
+							>=sys-apps/dbus-0.60
 		 				)
 				)
 		 gedit? ( >=app-editors/gedit-2.16 )

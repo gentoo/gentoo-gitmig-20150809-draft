@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.74 2007/06/22 12:42:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.75 2007/07/08 04:09:07 mr_bones_ Exp $
+
+  08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org> seahorse-1.0.ebuild,
+  seahorse-1.0.1.ebuild:
+  remove reference to old, removed dbus (bug #183696)
 
   22 Jun 2007; Raúl Porcel <armin76@gentoo.org> seahorse-1.0.1.ebuild:
   Add ~alpha wrt #171871
