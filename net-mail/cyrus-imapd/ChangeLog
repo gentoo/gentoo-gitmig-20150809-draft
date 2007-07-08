@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.93 2007/07/08 18:07:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.94 2007/07/08 18:47:30 drac Exp $
+
+  08 Jul 2007; Samuli Suominen <drac@gentoo.org> files/cyrus.rc6:
+  Replace "need net" with "use net" for bug 116534.
 
   08 Jul 2007; Christoph Mende <angelos@gentoo.org>
   +files/cyrus-imapd-2.2.12-db45.patch, cyrus-imapd-2.2.12-r4.ebuild:
