@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.14 2007/07/04 16:08:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.15 2007/07/09 11:29:17 chainsaw Exp $
+
+*libmowgli-0.3.0 (09 Jul 2007)
+
+  09 Jul 2007; Tony Vroon <chainsaw@gentoo.org> +libmowgli-0.3.0.ebuild:
+  New upstream release that uses dancing trees for faster dictionary searches.
 
   04 Jul 2007; Tony Vroon <chainsaw@gentoo.org> libmowgli-0.1.4.ebuild,
   libmowgli-0.1.5.ebuild, libmowgli-0.2.0.ebuild:
