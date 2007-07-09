@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.5.4.ebuild,v 1.1 2007/07/08 05:15:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.5.4.ebuild,v 1.2 2007/07/09 05:05:48 vapier Exp $
 
 inherit autotools multilib toolchain-funcs
 
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-build.patch
 	# stupid package does not include generated autotools
 	eautoreconf
 }
