@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.5.26.ebuild,v 1.2 2007/06/26 02:57:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.5.26.ebuild,v 1.3 2007/07/09 07:48:48 voxus Exp $
 
 inherit eutils ssl-cert
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sysoev.ru/nginx/"
 SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug fastcgi imap pcre perl ssl status webdav zlib"
 
 DEPEND="dev-lang/perl
