@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.0-r1.ebuild,v 1.1 2007/02/09 16:57:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.0-r1.ebuild,v 1.2 2007/07/09 14:02:22 uberlord Exp $
 
 inherit eutils
 
@@ -10,12 +10,10 @@ SRC_URI="http://v6web.litech.org/radvd/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
-IUSE=""
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86 x86-fbsd"
+IUSE="kernel_FreeBSD"
 
-DEPEND="sys-devel/bison
-	sys-devel/flex"
-RDEPEND=">=sys-process/procps-3.2"
+DEPEND=""
 
 pkg_setup() {
 	enewgroup radvd
@@ -46,6 +44,12 @@ src_install() {
 	keepdir /var/run/radvd
 	chown -R radvd:radvd "${D}"/var/run/radvd
 	fperms 755 /var/run/radvd
+
+	if use kernel_FreeBSD ; then
+		sed -i -e \
+			's/^SYSCTL_FORWARD=.*$/SYSCTL_FORWARD=net.inet6.ip6.forwarding/g' \
+			"${D}"/etc/init.d/"${PN}" || die
+	fi
 }
 
 pkg_postinst() {
