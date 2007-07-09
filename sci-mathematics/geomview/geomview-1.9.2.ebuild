@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.2.ebuild,v 1.2 2007/07/09 01:24:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.2.ebuild,v 1.3 2007/07/09 01:33:37 nerdboy Exp $
 
 inherit eutils flag-o-matic fdo-mime
 
@@ -70,6 +70,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	fdo-mime_desktop_database_update
+
 	elog "GeomView expects you to have both Firefox and Xpdf installed for"
 	elog "viewing the documentation (this can be changed at runtime)."
 	elog ""
@@ -83,10 +85,6 @@ pkg_postinst() {
 	elog "language (courtesy of Claus-Justus Heine).  Incorporating it"
 	elog "into your emacs configuration is left as an exercise..."
 	elog ""
-}
-
-pkg_postinst() {
-	fdo-mime_desktop_database_update
 }
 
 pkg_postrm() {
