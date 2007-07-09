@@ -1,6 +1,23 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.19 2007/04/26 06:10:51 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.20 2007/07/09 01:58:30 nerdboy Exp $
+
+*mpich2-1.0.5_p4 (09 Jul 2007)
+
+  09 Jul 2007; Steve Arnold <nerdboy@gentoo.org>
+  +files/mpich2-1.0.5_p4-make.patch, +files/mpich2-1.0.5_p4-soname.patch,
+  +mpich2-1.0.5_p4.ebuild:
+  Updated to current version with major ebuild enhancements (it even builds
+  with all USE flags now :)
+
+  Note: the mpe-sdk flag requires a JDK and libX11, so it's really intended
+  for a development workstation or at least a machine with an X desktop. The
+  JDK parts of the ebuild could probably be improved, and it doesn't currently
+  rebuild the jar files.  The docs handling is also hackish, but should Do The
+  Right Thing (TM).  I'm pretty sure the upstream *.so config is whacked, and
+  the current patch is about the best I can do right now.  Please enhance it.
+
+  Test away...
 
   26 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update for cluster herd split to hp-cluster and ha-cluster.

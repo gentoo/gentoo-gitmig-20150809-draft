@@ -1,0 +1,36 @@
+--- configure.orig	2005-11-23 10:41:50.000000000 -0800
++++ configure	2006-05-20 21:04:16.000000000 -0700
+@@ -9619,6 +9619,7 @@
+ C_LINK_SHL=true
+ SHLIB_EXT=so
+ SHLIB_FROM_LO=no
++SHLIB_VER=0.0
+ SHLIB_INSTALL='$(INSTALL_PROGRAM)'
+ case "$enable_sharedlibs" in
+     no|none)
+@@ -9640,11 +9641,11 @@
+     # Not quite right yet.  See mpich/util/makesharedlib
+     # Use syntax that works in both Make and the shell
+     #C_LINK_SHL='${CC} -shared -Wl,-r'
+-    C_LINK_SHL='${CC} -shared'
++    C_LINK_SHL='${CC} -shared -Wl,-soname'
+     # For example, include the libname as ${LIBNAME_SHL}
+     #C_LINK_SHL='${CC} -shared -Wl,-h,<finallibname>'
+     # May need -fPIC
+-    CC_SHL='${CC} -fpic'
++    CC_SHL='${CC} -fPIC'
+     C_LINKPATH_SHL="-Wl,-rpath -Wl,"
+     # We need to test that this isn't osx.  The following is a
+     # simple hack
+     esac 
+--- src/util/createshlib.in.orig	2006-07-11 19:52:47.000000000 -0700
++++ src/util/createshlib.in	2006-07-11 19:56:09.000000000 -0700
+@@ -172,7 +172,7 @@
+ 
+ 	*)
+         # This is the default model
+-	$Show ${C_LINK_SHL} -o $srclibbase.$SHLIB_EXT .tmp/*.o
++	$Show ${C_LINK_SHL} -Wl,$srclibbase.$SHLIB_EXT.0 -o $srclibbase.$SHLIB_EXT .tmp/*.o
+ 	;;
+     esac
+ 
