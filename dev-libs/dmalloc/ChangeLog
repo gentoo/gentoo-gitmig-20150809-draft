@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.29 2007/03/19 00:57:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.30 2007/07/09 20:44:36 drizzt Exp $
+
+*dmalloc-5.5.2 (09 Jul 2007)
+
+  09 Jul 2007; Timothy Redaelli <drizzt@gentoo.org>
+  +files/dmalloc-5.5.2-SONAME.patch,
+  +files/dmalloc-5.5.2-respect-DESTDIR.diff, +dmalloc-5.5.2.ebuild:
+  Version bump.
+  Add correct licence.
+  Fix SONAME and NEEDED.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.

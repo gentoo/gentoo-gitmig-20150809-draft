@@ -1,0 +1,13 @@
+--- dmalloc-5.5.2.orig/configure.ac	2007-07-09 22:02:57.000000000 +0200
++++ dmalloc-5.5.2/configure.ac	2007-07-09 22:18:42.000000000 +0200
+@@ -160,8 +160,8 @@
+ 		ac_cv_shared_link_args='ld -shared --whole-archive -soname $@ -o $@.t'
+ 	elif (ld -shared -o conftest.so.t -all -soname conftest.so.t -none -lc -all conftest.a) 2>&5; then
+ 		ac_cv_shared_link_args='ld -shared -o $@.t -all -soname $@ -none -lc -all'
+-	elif (ld -G -o conftest.so.t conftest.a) 2>&5; then
+-		ac_cv_shared_link_args='ld -G -o $@.t'
++	elif (ld -G -soname $@ -o conftest.so.t conftest.a) 2>&5; then
++		ac_cv_shared_link_args='ld -G -soname $@ -o $@.t'
+ 	else
+ 		# oh well, toss an error
+ 		ac_cv_shared_link_args='# Could not configure shlib linking'
