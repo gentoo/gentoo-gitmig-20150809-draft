@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.6.ebuild,v 1.1 2007/07/06 16:09:31 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.6.ebuild,v 1.2 2007/07/09 17:37:35 armin76 Exp $
 
 inherit libtool flag-o-matic eutils toolchain-funcs
 
@@ -101,6 +101,7 @@ src_compile() {
 		--enable-text2pcap \
 		--enable-dftest \
 		--enable-randpkt \
+		--disable-warnings-as-errors \
 		${myconf} || die "econf failed"
 
 	# fixes an access violation caused by libnetsnmp - see bug 79068
