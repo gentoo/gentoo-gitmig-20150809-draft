@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/syck
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.14 2007/07/06 13:13:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.15 2007/07/09 06:49:39 opfer Exp $
+
+  09 Jul 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  stable x86, bug 180863
 
 *syck-0.55-r4 (06 Jul 2007)
 
