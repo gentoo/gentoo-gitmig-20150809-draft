@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.5.ebuild,v 1.2 2007/07/02 14:17:54 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.5.ebuild,v 1.3 2007/07/09 13:36:48 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -13,7 +13,7 @@ SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/$
 HOMEPAGE="http://www.mozilla.org/projects/calendar/sunbird.html"
 RESTRICT="strip"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE=""
