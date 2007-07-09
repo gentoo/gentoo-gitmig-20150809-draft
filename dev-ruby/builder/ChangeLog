@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.15 2007/07/08 14:07:39 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.16 2007/07/09 04:37:56 jer Exp $
+
+  09 Jul 2007; Jeroen Roovers <jer@gentoo.org> builder-2.1.1.ebuild:
+  Stable for HPPA (bug #181322).
 
   08 Jul 2007; Lars Weiler <pylon@gentoo.org> builder-2.1.1.ebuild:
   Stable on ppc; bug #181322.
