@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/alut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.1 2007/07/09 12:41:32 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.2 2007/07/09 12:54:38 dcoutts Exp $
+
+  09 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> alut-2.0.ebuild,
+  alut-2.0.1.ebuild:
+  Fix swapped dep versions on dev-haskell/opengl.
 
 *alut-2.0.1 (09 Jul 2007)
 *alut-2.0 (09 Jul 2007)

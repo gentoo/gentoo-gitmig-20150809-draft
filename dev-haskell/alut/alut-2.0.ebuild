@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/alut-2.0.ebuild,v 1.1 2007/07/09 12:41:32 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/alut-2.0.ebuild,v 1.2 2007/07/09 12:54:38 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.6
-	>=dev-haskell/opengl-2.2.1
+	>=dev-haskell/opengl-2.1
 	>=dev-haskell/openal-1.3
 	media-libs/freealut"
 
