@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.23 2007/03/24 03:06:46 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.24 2007/07/09 15:11:19 armin76 Exp $
+
+  09 Jul 2007; Raúl Porcel <armin76@gentoo.org> hydra-5.4.ebuild:
+  x86 stable
 
 *hydra-5.4 (24 Mar 2007)
 
