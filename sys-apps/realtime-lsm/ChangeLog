@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/realtime-lsm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.15 2007/07/02 15:59:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.16 2007/07/09 14:43:40 flameeyes Exp $
+
+  09 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
+  realtime-lsm-0.8.5-r2.ebuild:
+  Fix building by respecting KV_DIR and KV_OUT_DIR. Thanks to Stefan Talpalaru
+  in bug #184726.
 
   02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Hand to newly-born proaudio herd.

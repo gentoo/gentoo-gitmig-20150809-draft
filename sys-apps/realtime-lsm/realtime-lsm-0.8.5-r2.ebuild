@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.5-r2.ebuild,v 1.3 2007/07/02 09:19:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.5-r2.ebuild,v 1.4 2007/07/09 14:43:40 flameeyes Exp $
 
 inherit linux-mod eutils
 
@@ -21,7 +21,7 @@ MODULESD_REALTIME_DOCS="AUTHORS ChangeLog README"
 
 pkg_setup() {
 	linux-mod_pkg_setup
-	BUILD_PARAMS="KSRC=${ROOT}${KV_DIR} TOUT=${TMP}/tmp-gas-check"
+	BUILD_PARAMS="KSRC=${ROOT}${KV_DIR} KERNEL_DIR=${ROOT}${KV_DIR} O=${KV_OUT_DIR} TOUT=${TMP}/tmp-gas-check"
 }
 
 src_unpack() {
