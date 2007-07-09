@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Cflow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cflow/ChangeLog,v 1.10 2007/06/02 22:13:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cflow/ChangeLog,v 1.11 2007/07/09 13:09:34 mcummings Exp $
+
+  09 Jul 2007; Michael Cummings <mcummings@gentoo.org>
+  Cflow-1.051-r1.ebuild:
+  Bug 184513, keywording ~amd64. Also added fixlocalpod call to resolve
+  collision-protect problems.
 
   02 Jun 2007; Markus Ullmann <jokey@gentoo.org> -Cflow-1.051.ebuild,
   Cflow-1.051-r1.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cflow/Cflow-1.051-r1.ebuild,v 1.2 2007/06/02 22:13:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cflow/Cflow-1.051-r1.ebuild,v 1.3 2007/07/09 13:09:34 mcummings Exp $
 
-inherit eutils
+inherit eutils perl-app
 
 FLOW_TOOLS_VERSION="0.68"
 
@@ -13,7 +13,7 @@ SRC_URI="http://net.doit.wisc.edu/~plonka/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ia64 ~ppc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
@@ -35,5 +35,7 @@ src_install() {
 	cd ${WORKDIR}/flow-tools-${FLOW_TOOLS_VERSION}/contrib/${P}
 	perl Makefile.PL
 	make DESTDIR="${D}" install || die "make install failed"
+	# Remove perlocal.pod - causes collision-detect warnings - mcummings
+	fixlocalpod
 	dodoc README
 }
