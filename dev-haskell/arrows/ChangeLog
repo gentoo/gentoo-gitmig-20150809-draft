@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/arrows
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/ChangeLog,v 1.5 2007/07/08 17:33:42 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/ChangeLog,v 1.6 2007/07/09 13:23:40 dcoutts Exp $
+
+  09 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> arrows-0.2.1.ebuild:
+  Fix building arrows-0.2.1 with current Cabal.
 
 *arrows-0.2.1 (08 Jul 2007)
 
