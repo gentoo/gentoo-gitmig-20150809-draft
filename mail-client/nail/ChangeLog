@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.53 2007/03/29 16:47:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.54 2007/07/09 05:37:56 redhatter Exp $
+
+  09 Jul 2007; Stuart Longland <redhatter@gentoo.org> nail-11.25-r3.ebuild:
+  Tested and working on MIPS... consider bug 103291 nailed
 
   29 Mar 2007; Andrej Kacian <ticho@gentoo.org> -nail-11.25-r1.ebuild,
   nail-11.25-r3.ebuild:
