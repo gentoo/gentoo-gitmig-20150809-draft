@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.2.4.ebuild,v 1.3 2007/06/16 11:57:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.2.4.ebuild,v 1.4 2007/07/09 16:58:13 jurek Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -39,6 +39,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${PN}-1.1.13-libungif-configure-fix.diff
+	epatch ${FILESDIR}/${P}-cairo.patch
 	eautoreconf
 }
 
