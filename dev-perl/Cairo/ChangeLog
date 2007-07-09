@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cairo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.35 2007/07/09 13:49:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.36 2007/07/09 18:19:59 armin76 Exp $
+
+  09 Jul 2007; Raúl Porcel <armin76@gentoo.org> Cairo-1.04.1.ebuild:
+  x86 stable
 
   09 Jul 2007; Michael Cummings <mcummings@gentoo.org> Cairo-1.04.1.ebuild:
   Marking sparc stable
