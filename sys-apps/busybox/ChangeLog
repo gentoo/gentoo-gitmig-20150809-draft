@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.145 2007/06/11 05:10:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.146 2007/07/09 20:03:55 vapier Exp $
+
+*busybox-1.6.1 (09 Jul 2007)
+
+  09 Jul 2007; Mike Frysinger <vapier@gentoo.org> +busybox-1.6.1.ebuild:
+  Version bump #184759.
 
   11 Jun 2007; Daniel Black <dragonheart@gentoo.org> busybox-1.6.0.ebuild:
   converted to saveconfig eclass version at Mike\'s request
