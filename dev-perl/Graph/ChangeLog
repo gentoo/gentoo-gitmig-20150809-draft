@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Graph
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.38 2007/05/05 17:49:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.39 2007/07/09 19:27:09 mcummings Exp $
+
+  09 Jul 2007; Michael Cummings <mcummings@gentoo.org> Graph-0.81.ebuild:
+  Latest dev-perl/Heap breaks Graph in tests - hard-depping older Heap. See rt
+  #26943 to track this.
 
   05 May 2007; Tobias Scherbaum <dertobi123@gentoo.org> Graph-0.81.ebuild:
   ppc stable
