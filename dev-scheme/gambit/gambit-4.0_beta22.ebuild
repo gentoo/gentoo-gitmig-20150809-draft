@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta22.ebuild,v 1.6 2007/06/17 17:09:52 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta22.ebuild,v 1.7 2007/07/09 13:37:31 hkbst Exp $
 
 inherit eutils elisp-common check-reqs autotools multilib
 
@@ -98,4 +98,12 @@ src_install() {
 	# automatically load syntax-case for r5rs+ goodness
 	dodir /etc/env.d/ && echo "GAMBCOPT=\"=/usr/\"" > ${D}/etc/env.d/50gambit
 	echo "(load \"/usr/$(get_libdir)/syntax-case\")" > ${D}/usr/gambcext
+}
+
+pkg_postinst() {
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
