@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/traverso
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.8 2007/07/05 21:32:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.9 2007/07/09 19:14:38 aballier Exp $
+
+  09 Jul 2007; Alexis Ballier <aballier@gentoo.org>
+  traverso-0.41.0-r1.ebuild:
+  Force -j1 for compiling as it happens to fail parallel make, bug #184767
 
 *traverso-0.41.0-r1 (05 Jul 2007)
 

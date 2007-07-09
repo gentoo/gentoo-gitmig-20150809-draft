@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.41.0-r1.ebuild,v 1.1 2007/07/05 21:32:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.41.0-r1.ebuild,v 1.2 2007/07/09 19:14:38 aballier Exp $
 
 inherit eutils qt4 toolchain-funcs
 
@@ -56,7 +56,7 @@ src_compile() {
 
 	QMAKE="/usr/bin/qmake"
 	$QMAKE -recursive traverso.pro -after "QMAKE_STRIP=\"/usr/bin/true\"" || die "qmake failed"
-	emake CC=$(tc-getCC) CXX=$(tc-getCXX) LINK=$(tc-getCXX) || die "emake failed"
+	emake -j1 CC=$(tc-getCC) CXX=$(tc-getCXX) LINK=$(tc-getCXX) || die "emake failed"
 }
 
 src_install() {
