@@ -1,10 +1,5 @@
-DIST thunar-thumbnailers-0.2.0.tar.bz2 79301 RMD160 085ed54142d59a04278a6c2d6067e32e041ebe1a SHA1 14fb1a3be8740252e1c02caac6a9216eb0187adc SHA256 e096fd5596d144cf95394a24eadf9135cfc12fee1f53461f9c881b64d6349335
 DIST thunar-thumbnailers-0.2.1.tar.bz2 79733 RMD160 b2907a0f3a6900419bfba7cd26ce83128eb04b4e SHA1 db392a6f58d1aab400602cda1432e608c0c2254d SHA256 55a83eb0f891d5156ca07ed254ccce969cec31eda9ec2dd4516f0bd1e89f4403
 DIST thunar-thumbnailers-0.2.2.tar.bz2 80169 RMD160 554c644f3502c6dad73b6b1794089c399dec9cbd SHA1 654d7db904b5e6153157f1f96ab8adf27800e248 SHA256 9ffbc258b1cd0cbf897ef325c3459b537411cc6ac15fbb48929792d5a491ca53
-EBUILD thunar-thumbnailers-0.2.0.ebuild 1163 RMD160 eacf929053917e8e38eb5eb42c72a8bee7d7745b SHA1 c3f5334d958de754c992a5fcbce6a44840d3e8cc SHA256 6468c5a86c40dcdd87fe9b261e130b0e29f6ee86328639245ad8bef7b68fbc06
-MD5 72eaa0c55006ac2fcb6546c0a0fc7e2e thunar-thumbnailers-0.2.0.ebuild 1163
-RMD160 eacf929053917e8e38eb5eb42c72a8bee7d7745b thunar-thumbnailers-0.2.0.ebuild 1163
-SHA256 6468c5a86c40dcdd87fe9b261e130b0e29f6ee86328639245ad8bef7b68fbc06 thunar-thumbnailers-0.2.0.ebuild 1163
 EBUILD thunar-thumbnailers-0.2.1.ebuild 1162 RMD160 b03c3f966e2c560ca2a799ebbb12dd989efba185 SHA1 f87721df617fbd6cb213dd782e06d607aa68f3c4 SHA256 789132814f55b71b1ba77f93be39437e8a975b05d062aa4960a89ad1f3cd35b9
 MD5 7fde36bbb29bdb41e4a3e95e3163164d thunar-thumbnailers-0.2.1.ebuild 1162
 RMD160 b03c3f966e2c560ca2a799ebbb12dd989efba185 thunar-thumbnailers-0.2.1.ebuild 1162
@@ -21,9 +16,6 @@ MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae9
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
-MD5 7b268694a3087ebaed1b357bf063ea07 files/digest-thunar-thumbnailers-0.2.0 277
-RMD160 c7eb615afc2a5ef41fad7175d7f06b91a5939b67 files/digest-thunar-thumbnailers-0.2.0 277
-SHA256 876b619472884594deae901cdda52b4ebff0768fec9480525c44a587e30aadfc files/digest-thunar-thumbnailers-0.2.0 277
 MD5 d2627f34ba16d2fbf9693774d93ec0fa files/digest-thunar-thumbnailers-0.2.1 277
 RMD160 9b4206e3d17cd7e747591d21224ea093fb43645b files/digest-thunar-thumbnailers-0.2.1 277
 SHA256 6148ebff4458f126d1b05b54d7e9bc82dc22398dde8d5d106e00eaceeef02d67 files/digest-thunar-thumbnailers-0.2.1 277
