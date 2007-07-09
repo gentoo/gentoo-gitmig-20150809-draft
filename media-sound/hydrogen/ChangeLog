@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.50 2007/07/06 17:45:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.51 2007/07/09 06:12:38 aballier Exp $
+
+*hydrogen-0.9.3-r2 (09 Jul 2007)
+
+  09 Jul 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/hydrogen-0.9.3-automagic.patch,
+  +files/hydrogen-0.9.3-desktop-noexec.patch, +hydrogen-0.9.3-r2.ebuild:
+  Call only once the autotools with eautoreconf, do not install destop entry
+  as executable (reported by Josh Saddler), fix automagic on portaudio,
+  regenerate doc with doc useflag, make flac optional, parallel make appears
+  to work thus drop -j1, add missing dep for docbook2html when regenerating
+  doc
 
   06 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
   hydrogen-0.9.3-r1.ebuild:

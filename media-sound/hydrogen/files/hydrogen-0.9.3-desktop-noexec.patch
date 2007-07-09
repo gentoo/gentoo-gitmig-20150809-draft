@@ -1,0 +1,13 @@
+Index: hydrogen-0.9.3/Makefile.in
+===================================================================
+--- hydrogen-0.9.3.orig/Makefile.in
++++ hydrogen-0.9.3/Makefile.in
+@@ -225,7 +225,7 @@ install:
+ 	mkdir -p $(DESTDIR)$(prefix)/share/hydrogen/data/
+ 	cp -R data $(DESTDIR)$(prefix)/share/hydrogen
+ 	mkdir -p $(DESTDIR)$(prefix)/share/hydrogen/data/
+-	@install -vD hydrogen.desktop $(DESTDIR)$(prefix)/share/applications/hydrogen.desktop
++	@install -vD -m 644 hydrogen.desktop $(DESTDIR)$(prefix)/share/applications/hydrogen.desktop
+ 	cd plugins;make install;cd ..
+ 	
+ 	
