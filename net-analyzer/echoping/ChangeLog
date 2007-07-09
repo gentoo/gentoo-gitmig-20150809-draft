@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/echoping
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.9 2007/04/12 19:32:37 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.10 2007/07/09 12:10:52 armin76 Exp $
+
+  09 Jul 2007; Raúl Porcel <armin76@gentoo.org> echoping-6.0.1.ebuild:
+  x86 stable
 
 *echoping-6.0.1 (12 Apr 2007)
 
