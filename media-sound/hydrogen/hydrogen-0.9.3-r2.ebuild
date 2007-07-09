@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r2.ebuild,v 1.1 2007/07/09 06:12:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r2.ebuild,v 1.2 2007/07/09 06:29:29 aballier Exp $
 
 inherit eutils kde-functions autotools multilib
 
@@ -20,7 +20,9 @@ RDEPEND="dev-libs/libxml2
 	portaudio? ( media-libs/portaudio )
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
-	ladspa? ( media-libs/liblrdf )
+	ladspa? ( media-libs/liblrdf )"
+
+DEPEND="${RDEPEND}
 	doc? ( app-text/docbook-sgml-utils )"
 
 need-qt 3
