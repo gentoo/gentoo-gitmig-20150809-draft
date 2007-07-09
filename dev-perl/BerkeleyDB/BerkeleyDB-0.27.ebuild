@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.27.ebuild,v 1.10 2006/10/21 15:57:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.27.ebuild,v 1.11 2007/07/09 13:29:34 mcummings Exp $
 
-inherit perl-module eutils
+inherit perl-module eutils db-use
 
 DESCRIPTION="This module provides Berkeley DB interface for Perl."
 HOMEPAGE="http://search.cpan.org/~pmqs/BerkeleyDB-0.27"
@@ -24,4 +24,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/Gentoo-config-0.26.diff
+	# on Gentoo/FreeBSD we cannot trust on the symlink /usr/include/db.h
+	# as for Gentoo/Linux, so we need to esplicitely declare the exact berkdb
+	# include path
+	sed -i -e "s:/usr/include:$(db_includedir):" config.in || die "berkdb include directory"
 }

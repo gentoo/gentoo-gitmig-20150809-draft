@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/BerkeleyDB
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.46 2007/04/15 20:28:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.47 2007/07/09 13:29:34 mcummings Exp $
+
+  09 Jul 2007; Michael Cummings <mcummings@gentoo.org>
+  BerkeleyDB-0.27.ebuild, BerkeleyDB-0.29.ebuild, BerkeleyDB-0.30.ebuild,
+  BerkeleyDB-0.31.ebuild:
+  Bug 182221, guarantee db_includedir is right. Thanks to flameeyes and wiredtek
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> BerkeleyDB-0.31.ebuild:
   Stable on ppc64
