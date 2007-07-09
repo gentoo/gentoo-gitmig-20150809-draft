@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.194 2007/07/07 05:31:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.195 2007/07/09 02:28:53 vapier Exp $
+
+  09 Jul 2007; Mike Frysinger <vapier@gentoo.org>
+  util-linux-2.12r-r7.ebuild:
+  Pull in setarch for amd64/mips/ppc/sparc.
 
 *util-linux-2.13_rc1 (07 Jul 2007)
 
