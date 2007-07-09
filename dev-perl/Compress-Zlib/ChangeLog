@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Compress-Zlib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.77 2007/07/07 14:33:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.78 2007/07/09 15:11:44 mcummings Exp $
+
+  09 Jul 2007; Michael Cummings <mcummings@gentoo.org>
+  Compress-Zlib-2.003.ebuild:
+  Marking sparc stable
 
 *Compress-Zlib-2.005 (07 Jul 2007)
 
