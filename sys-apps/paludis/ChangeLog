@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.63 2007/07/09 20:23:19 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.64 2007/07/09 21:32:47 peper Exp $
+
+*paludis-0.24.5 (09 Jul 2007)
+
+  09 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> +paludis-0.24.5.ebuild:
+  Add 0.24.5.
 
   09 Jul 2007; Richard Brown <rbrown@gentoo.org> -paludis-0.24.4.ebuild:
   0.24.4 still has ldconfig problems
