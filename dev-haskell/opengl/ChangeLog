@@ -1,0 +1,12 @@
+# ChangeLog for dev-haskell/opengl
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/ChangeLog,v 1.1 2007/07/09 12:39:57 dcoutts Exp $
+
+*opengl-2.2.1 (09 Jul 2007)
+*opengl-2.1 (09 Jul 2007)
+*opengl-2.0 (09 Jul 2007)
+
+  09 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> +metadata.xml,
+  +opengl-2.0.ebuild, +opengl-2.1.ebuild, +opengl-2.2.1.ebuild:
+  Initial versions.
+
