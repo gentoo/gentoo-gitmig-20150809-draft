@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/pylibpcap-0.5.1.ebuild,v 1.7 2007/04/01 10:02:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/pylibpcap-0.5.1.ebuild,v 1.8 2007/07/09 13:15:51 hawking Exp $
 
 inherit distutils eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-swig-1.3.29.patch"
+	epatch "${FILESDIR}/${PN}-unknown_addr.patch"
 }
 
 src_install() {

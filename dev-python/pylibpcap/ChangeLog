@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pylibpcap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.16 2007/04/01 10:02:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.17 2007/07/09 13:15:51 hawking Exp $
+
+  09 Jul 2007; Ali Polatel <hawking@gentoo.org>
+  +files/pylibpcap-unknown_addr.patch, pylibpcap-0.5.1.ebuild:
+  Apply fix from upstream to make pcap.findalldevs() work fine (bug #179342)
 
   01 Apr 2007; Raúl Porcel <armin76@gentoo.org> pylibpcap-0.5.1.ebuild:
   ia64 stable wrt bug 168330
