@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.9-r2.ebuild,v 1.8 2007/06/30 17:22:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.9-r2.ebuild,v 1.9 2007/07/09 02:23:07 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,7 +14,8 @@ KEYWORDS="alpha ~amd64 arm hppa ia64 m68k mips ~ppc ~ppc64 s390 sh sparc ~sparc-
 IUSE="acl ipv6 static xinetd"
 
 DEPEND=">=dev-libs/popt-1.5
-	acl? ( kernel_linux? ( sys-apps/acl ) )"
+	acl? ( kernel_linux? ( sys-apps/acl ) )
+	xinetd? ( sys-apps/xinetd )"
 
 S=${WORKDIR}/${P/_/}
 
