@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.5-r3.ebuild,v 1.1 2007/06/26 17:59:23 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.5-r3.ebuild,v 1.2 2007/07/09 12:40:35 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://vsftpd.beasts.org/users/cevans/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="caps logrotate pam tcpd ssl selinux xinetd"
 
 DEPEND="caps? ( sys-libs/libcap )
