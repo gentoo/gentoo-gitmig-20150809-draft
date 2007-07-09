@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Manifest
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.31 2007/07/08 03:26:15 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.32 2007/07/09 11:53:54 mcummings Exp $
+
+  09 Jul 2007; Michael Cummings <mcummings@gentoo.org> ChangeLog:
+  Fixing ChangeLog
 
   07 Jul 2007; Tom Gall <tgall@gentoo.org> Test-Manifest-1.17.ebuild:
   stable on ppc64
@@ -21,7 +24,9 @@
   +Test-Manifest-1.17.ebuild, +files/digest-Test-Manifest-1.17, Manifest:
   Version bump
 
-  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+* Test-Manifest-1.17 (11 Mar 2007)
+
+  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
   15 Oct 2006; Michael Cummings <mcummings@gentoo.org>
@@ -36,7 +41,7 @@
   Test-Manifest-1.11.ebuild, Test-Manifest-1.14.ebuild:
   Adding perl dep; fixed header; fixed DEPEND
 
-  24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  24 Apr 2006; Diego PettenÃ² <flameeyes@gentoo.org>
   Test-Manifest-1.14.ebuild:
   Add ~x86-fbsd keyword.
 
@@ -97,7 +102,7 @@
   06 Jun 2004; Michael Cummings <mcummings@gentoo.org> :
   new version on cpan
 
-  06 May 2004; Bryan Østergaard <kloeri@gentoo.org> :
+  06 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> :
   Added ~alpha.
 
   30 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org> :
