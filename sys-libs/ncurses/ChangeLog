@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.141 2007/06/30 18:29:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.142 2007/07/09 01:30:46 vapier Exp $
+
+*ncurses-5.6-r2 (09 Jul 2007)
+
+  09 Jul 2007; Mike Frysinger <vapier@gentoo.org> +ncurses-5.6-r2.ebuild:
+  Update configure options used; tie more to USE=debug and USE=profile.
 
   30 Jun 2007; Raúl Porcel <armin76@gentoo.org> ncurses-5.6-r1.ebuild:
   ia64/x86 stable
