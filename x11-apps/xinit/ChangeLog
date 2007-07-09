@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.91 2007/07/02 14:04:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.92 2007/07/09 10:31:38 uberlord Exp $
+
+  09 Jul 2007; Roy Marples <uberlord@gentoo.org> files/xdm.initd-1:
+  The xdm init script is now after modules, #179032.
 
   02 Jul 2007; Raúl Porcel <armin76@gentoo.org> xinit-1.0.3-r3.ebuild:
   alpha stable wrt #175465
