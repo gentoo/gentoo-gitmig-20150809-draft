@@ -1,6 +1,12 @@
 # ChangeLog for dev-scheme/mit-scheme
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/ChangeLog,v 1.4 2007/05/25 17:27:21 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/ChangeLog,v 1.5 2007/07/09 13:53:53 hkbst Exp $
+
+*mit-scheme-20070623 (09 Jul 2007)
+
+  09 Jul 2007; Marijn Schouten <hkBst@gentoo.org>
+  +mit-scheme-20070623.ebuild:
+  add latest snapshot (23 jun)
 
 *mit-scheme-20070205 (25 May 2007)
 
