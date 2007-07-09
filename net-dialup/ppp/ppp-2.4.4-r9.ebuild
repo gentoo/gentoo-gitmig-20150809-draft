@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r8.ebuild,v 1.1 2007/06/14 11:53:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r9.ebuild,v 1.1 2007/07/09 07:11:37 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -143,7 +143,12 @@ src_install() {
 		doman ${y}/${y}.8
 		dosbin ${y}/${y}
 	done
-	chmod u+s-w "${D}/usr/sbin/pppd"
+	fperms u+s-w /usr/sbin/pppd
+
+	# Install pppd header files
+	pushd pppd && \
+		make INSTROOT="${D}" install-devel && \
+		popd || die "make install-devel failed"
 
 	dosbin pppd/plugins/rp-pppoe/pppoe-discovery
 
