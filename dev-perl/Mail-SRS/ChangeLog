@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-SRS
 # Copyright 2000-2007 DataCore GmbH; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SRS/ChangeLog,v 1.7 2007/04/06 18:00:15 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SRS/ChangeLog,v 1.8 2007/07/09 11:52:31 mcummings Exp $
+
+  09 Jul 2007; Michael Cummings <mcummings@gentoo.org> ChangeLog:
+  Fixing changelog
 
   06 Apr 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   Mail-SRS-0.31.ebuild:
@@ -18,6 +21,8 @@
 
   19 Nov 2006; Christian Hartmann <ian@gentoo.org> Mail-SRS-0.31.ebuild:
   added tests, rdep, iuse
+
+* Mail-SRS-0.31 (19 Nov 2006)
 
   19 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org> ChangeLog:
   Initial ebuild, needed as a dep for another package already in tree.
