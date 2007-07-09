@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.2.ebuild,v 1.1 2007/07/06 07:30:51 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.2.ebuild,v 1.2 2007/07/09 01:24:15 nerdboy Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic fdo-mime
 
 DESCRIPTION="Interactive Geometry Viewer"
 SRC_URI="http://mesh.dl.sourceforge.net/sourceforge/geomview/${P/_/-}.tar.bz2"
@@ -55,11 +55,11 @@ src_install() {
 	doicon ${FILESDIR}/geomview.png
 	make_desktop_entry geomview "GeomView ${PV}" \
 	    "/usr/share/pixmaps/geomview.png" \
-	    "Application;Science;Math;Other"
+	    "Science;Math;Education"
 
 	dodoc AUTHORS ChangeLog NEWS INSTALL.Geomview
 
-	if !use pdf; then
+	if ! use pdf; then
 	    rm ${D}usr/share/doc/${PF}/${PN}.pdf
 	fi
 
@@ -84,3 +84,12 @@ pkg_postinst() {
 	elog "into your emacs configuration is left as an exercise..."
 	elog ""
 }
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+}
+
