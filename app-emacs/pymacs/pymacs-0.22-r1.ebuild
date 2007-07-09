@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.22-r1.ebuild,v 1.12 2007/07/04 23:18:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.22-r1.ebuild,v 1.13 2007/07/09 06:41:55 ulm Exp $
 
 inherit distutils elisp eutils
 
@@ -10,13 +10,13 @@ SRC_URI="http://pymacs.progiciels-bpi.ca/archives/${P/pymacs/Pymacs}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ia64 ppc ppc-macos s390 sh x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ~hppa ia64 ppc s390 sh x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND="virtual/python"
 SITEFILE=50${PN}-gentoo.el
 
-S=${WORKDIR}/Pymacs-${PV}
+S="${WORKDIR}/Pymacs-${PV}"
 
 src_unpack() {
 	unpack ${A}
@@ -30,7 +30,7 @@ src_compile() {
 
 src_install() {
 	elisp-install ${PN} pymacs.el pymacs.elc
-	elisp-site-file-install "${FILESDIR}"/
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	distutils_src_install
 	if use doc ; then
 		insinto /usr/share/doc/${PF}
