@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.45 2007/06/25 22:27:57 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.46 2007/07/09 23:33:17 marineam Exp $
+
+  09 Jul 2007; Michael Marineau <marineam@gentoo.org> xen-3.0.4_p1.ebuild:
+  It turns out that xen 3.0.4 correctly handles hardened flags, remove useless
+  code from the ebuild.
 
   25 Jun 2007; Michael Marineau <marineam@gentoo.org> xen-3.0.4_p1.ebuild:
   Fix typo in -fno-pie flag.
