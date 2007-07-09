@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.11.0-r2.ebuild,v 1.2 2007/04/18 17:53:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.11.0-r2.ebuild,v 1.3 2007/07/09 01:39:58 nerdboy Exp $
 
-inherit eutils elisp-common autotools
+inherit eutils elisp-common autotools fdo-mime
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
 HOMEPAGE="http://maxima.sourceforge.net/"
@@ -137,7 +137,8 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	use tk && make_desktop_entry xmaxima xmaxima \
-		/usr/share/${PN}/${PV}/xmaxima/maxima-new.png
+		/usr/share/${PN}/${PV}/xmaxima/maxima-new.png \
+		"Science;Math;Education"
 
 	use emacs && \
 		elisp-site-file-install "${FILESDIR}"/50maxima-gentoo.el
@@ -165,8 +166,10 @@ pkg_preinst() {
 pkg_postinst() {
 	use emacs && elisp-site-regen
 	use tetex && mktexlsr
+	fdo-mime_desktop_database_update
 }
 
 pkg_postrm() {
 	use emacs && elisp-site-regen
+	fdo-mime_desktop_database_update
 }
