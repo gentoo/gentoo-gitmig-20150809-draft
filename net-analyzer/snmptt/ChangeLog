@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snmptt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/ChangeLog,v 1.14 2007/05/01 22:38:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/ChangeLog,v 1.15 2007/07/09 17:22:35 armin76 Exp $
+
+  09 Jul 2007; Raúl Porcel <armin76@gentoo.org> snmptt-1.1.ebuild:
+  x86 stable
 
   01 May 2007; Marius Mauch <genone@gentoo.org> snmptt-0.9-r1.ebuild,
   snmptt-1.0.ebuild, snmptt-1.1.ebuild:
