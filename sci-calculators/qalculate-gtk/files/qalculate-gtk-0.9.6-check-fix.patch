@@ -1,0 +1,8 @@
+diff -Naur qalculate-gtk-0.9.6/po/POTFILES.in qalculate-gtk-0.9.6.new/po/POTFILES.in
+--- qalculate-gtk-0.9.6/po/POTFILES.in	2006-04-10 09:33:08.000000000 -0400
++++ qalculate-gtk-0.9.6.new/po/POTFILES.in	2007-07-09 11:03:42.000000000 -0400
+@@ -28,3 +28,4 @@
+ src/main.cc
+ src/interface.cc
+ src/callbacks.cc
++data/periodictable.glade
