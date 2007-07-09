@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/jrisk-1.0.9.0.ebuild,v 1.1 2007/07/07 02:43:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/jrisk-1.0.9.1.ebuild,v 1.1 2007/07/09 00:23:29 mr_bones_ Exp $
 
 inherit eutils java-pkg-2 java-ant-2 games
 
