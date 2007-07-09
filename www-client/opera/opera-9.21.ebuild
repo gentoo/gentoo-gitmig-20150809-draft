@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.21.ebuild,v 1.6 2007/06/27 15:32:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.21.ebuild,v 1.7 2007/07/09 01:28:35 vapier Exp $
 
 GCONF_DEBUG="no"
 
@@ -32,8 +32,7 @@ SRC_URI="
 	x86-fbsd? ( !qt-static? ( ${OPERA_URI}unix/freebsd/${OPERAFTP}/shared/${PN}-${OPERAVER}.4-shared-qt.i386.freebsd-${OPERALNG}.tar.bz2 ) )
 	x86-fbsd? ( qt-static? ( ${OPERA_URI}unix/freebsd/${OPERAFTP}/static/${PN}-${OPERAVER}.1-static-qt.i386.freebsd-${OPERALNG}.tar.bz2 ) )"
 
-DEPEND=">=sys-apps/sed-4
-	amd64? ( sys-apps/setarch )"
+DEPEND=">=sys-apps/sed-4"
 
 RDEPEND="|| ( ( x11-libs/libXrandr
 				x11-libs/libXp

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.104 2007/07/08 18:04:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.105 2007/07/09 01:28:35 vapier Exp $
+
+  09 Jul 2007; Mike Frysinger <vapier@gentoo.org> opera-9.21.ebuild,
+  opera-9.21-r1.ebuild, opera-9.22.651.ebuild:
+  Drop setarch depend -- this is handled by the system packages.
 
 *opera-9.22.651 (08 Jul 2007)
 
