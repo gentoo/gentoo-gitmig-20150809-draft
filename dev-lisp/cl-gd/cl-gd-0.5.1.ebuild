@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/cl-gd-0.5.1.ebuild,v 1.1 2005/10/04 18:19:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/cl-gd-0.5.1.ebuild,v 1.2 2007/07/09 15:14:04 hkbst Exp $
 
 inherit common-lisp
 
-DESCRIPTION="CL-GD is a library for Common Lisp which interfaces ti the GD Graphics Library"
+DESCRIPTION="CL-GD is a library for Common Lisp which interfaces to the GD Graphics Library"
 HOMEPAGE="http://weitz.de/cl-gd http://www.cliki.net/cl-gd"
 SRC_URI="mirror://gentoo/${PN}_${PV}.orig.tar.gz"
 LICENSE="BSD"
