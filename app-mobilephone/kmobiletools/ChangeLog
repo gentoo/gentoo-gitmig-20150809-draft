@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/kmobiletools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.16 2007/06/18 20:15:34 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.17 2007/07/09 00:18:20 keytoaster Exp $
+
+  09 Jul 2007; Tobias Heinlein <keytoaster@gentoo.org>
+  kmobiletools-0.5.0_beta3.ebuild:
+  Changing dependency on app-mobilephone/gammu, see bug
 
 *kmobiletools-0.5.0_beta3 (18 Jun 2007)
 
