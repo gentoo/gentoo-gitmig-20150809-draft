@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/kmobiletools-0.5.0_beta3.ebuild,v 1.2 2007/07/09 00:18:20 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/kmobiletools-0.5.0_beta3.ebuild,v 1.3 2007/07/09 00:50:24 keytoaster Exp $
 
 inherit kde eutils
 
@@ -26,6 +26,11 @@ src_unpack() {
 	kde_src_unpack
 
 	epatch ${FILESDIR}/${P}-no-automagic-deps.patch
+
+	# Fixing file collision between kmobiletools and kdebluetooth when
+	# USE="obex" is set, see bug 183245
+	epatch ${FILESDIR}/${P}-obexftp-file-collision-fix.patch
+
 	# remove configure script to trigger it's rebuild during kde_src_compile
 	rm -f ${S}/configure
 }
