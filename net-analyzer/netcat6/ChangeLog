@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netcat6
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.7 2007/03/20 15:36:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.8 2007/07/09 16:29:22 armin76 Exp $
+
+  09 Jul 2007; Raúl Porcel <armin76@gentoo.org> netcat6-1.0.ebuild:
+  alpha stable
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> netcat6-1.0.ebuild:
   x86 stable
