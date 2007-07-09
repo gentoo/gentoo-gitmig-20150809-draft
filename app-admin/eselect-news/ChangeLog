@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/eselect-news
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-news/ChangeLog,v 1.1 2007/07/09 21:23:17 peper Exp $
+
+*eselect-news-20070709 (09 Jul 2007)
+
+  09 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> +metadata.xml,
+  +eselect-news-20070709.ebuild:
+  New package.
+
