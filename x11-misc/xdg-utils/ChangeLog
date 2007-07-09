@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.30 2007/06/27 06:05:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.31 2007/07/09 20:27:58 drac Exp $
+
+  09 Jul 2007; Samuli Suominen <drac@gentoo.org> metadata.xml,
+  -xdg-utils-1.0.ebuild:
+  Add xdg-utils under freedesktop herd. Remove unused version.
 
   27 Jun 2007; Markus Rothe <corsair@gentoo.org> xdg-utils-1.0.1.ebuild:
   Stable on ppc64; bug #183052
