@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2917 2007/07/08 10:13:41 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2918 2007/07/09 01:57:24 nerdboy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1824,6 +1824,7 @@ sys-cluster/heartbeat:management - Adds support for management GUI.
 sys-cluster/lam-mpi:pbs - Add support for PBS scheduling stuff
 sys-cluster/lam-mpi:xmpi - Build support for the external XMPI debugging GUI
 sys-cluster/mpich2:cxx - Add cxx headers
+sys-cluster/mpich2:fast - Enabling fast turns off error checking and timing collection
 sys-cluster/mpich2:mpe - Add mpe support
 sys-cluster/mpich2:mpe-sdk - Include additional SDK support, jar files
 sys-cluster/mpich2:romio - Enable romio, a high-performance portable MPI-IO implementation
