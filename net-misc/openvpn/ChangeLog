@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.113 2007/07/08 11:36:57 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.114 2007/07/09 15:37:47 uberlord Exp $
+
+  09 Jul 2007; Roy Marples <uberlord@gentoo.org> openvpn-2.1_rc4.ebuild,
+  openvpn-2.1_rc4-r1.ebuild:
+  Remove BSD warning about MTU as it no longer applies (I think)
 
   08 Jul 2007; Roy Marples <uberlord@gentoo.org> files/openvpn-2.1.conf,
   files/openvpn-2.1.init:

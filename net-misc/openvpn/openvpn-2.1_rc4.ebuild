@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_rc4.ebuild,v 1.1 2007/04/26 13:48:48 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_rc4.ebuild,v 1.2 2007/07/09 15:37:47 uberlord Exp $
 
 inherit eutils multilib
 
@@ -147,12 +147,5 @@ pkg_postinst() {
 	if ! use minimal ; then
 		einfo ""
 		einfo "plugins have been installed into /usr/$(get_libdir)/${PN}"
-	fi
-
-	if use userland_BSD ; then
-		ewarn ""
-		ewarn "If you run any kind of firewall on BSD and use IPv6 acrosss"
-		ewarn "OpenVPN then you'll probably have to lower the MTU to 1420"
-		ewarn "using the tun-mtu statement (even for tap devices)"
 	fi
 }
