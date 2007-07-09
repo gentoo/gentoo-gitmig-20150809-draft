@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Number-Delta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Number-Delta/ChangeLog,v 1.6 2007/06/16 11:14:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Number-Delta/ChangeLog,v 1.7 2007/07/09 13:49:00 mcummings Exp $
+
+  09 Jul 2007; Michael Cummings <mcummings@gentoo.org>
+  Test-Number-Delta-1.03.ebuild:
+  Marking sparc stable
 
   16 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   Test-Number-Delta-1.03.ebuild:

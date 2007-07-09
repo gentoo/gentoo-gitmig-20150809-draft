@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Carp-Assert
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Assert/ChangeLog,v 1.17 2007/07/05 13:53:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Assert/ChangeLog,v 1.18 2007/07/09 13:50:49 mcummings Exp $
+
+  09 Jul 2007; Michael Cummings <mcummings@gentoo.org>
+  Carp-Assert-0.19.ebuild:
+  Marking sparc stable
 
   05 Jul 2007; Raúl Porcel <armin76@gentoo.org> Carp-Assert-0.20.ebuild:
   ia64/x86 stable
