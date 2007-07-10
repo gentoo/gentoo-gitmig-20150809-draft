@@ -1,6 +1,14 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.10 2007/06/03 16:24:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.11 2007/07/10 18:28:56 chutzpah Exp $
+
+*tesseract-1.04b (10 Jul 2007)
+
+  10 Jul 2007; Patrick McLean <chutzpah@gentoo.org>
+  +files/tesseract-1.04b-globals.patch, -tesseract-1.02.02022007.ebuild,
+  -tesseract-1.03.ebuild, +tesseract-1.04b.ebuild:
+  Version bump, change the default data directory to /usr/share/tessdata, closes
+  bug #180781. Drop older versions.
 
   03 Jun 2007; Raúl Porcel <armin76@gentoo.org> tesseract-1.03-r1.ebuild:
   Add ~alpha wrt #173114

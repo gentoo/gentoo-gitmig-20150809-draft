@@ -1,0 +1,32 @@
+--- ./tesseract-1.04/cutil/globals.h.orig	2007-06-04 00:06:00.000000000 +0300
++++ ./tesseract-1.04/cutil/globals.h	2007-06-04 00:06:25.000000000 +0300
+@@ -45,8 +45,6 @@
+ extern int debugs[MAXPROC];      /*debug flags */
+ extern int plots[MAXPROC];       /*plot flags */
+ extern int corners[4];           /*corners of scan window */
+-extern int optind;               /*option index */
+-extern char *optarg;             /*option argument */
+                                  /*image file name */
+ extern char imagefile[FILENAMESIZE];
+                                  /* main directory */
+--- ./tesseract-1.04/ccmain/tfacep.h.orig	2007-06-04 00:16:19.000000000 +0300
++++ ./tesseract-1.04/ccmain/tfacep.h	2007-06-04 00:16:24.000000000 +0300
+@@ -103,7 +103,6 @@
+   //extern int                                    enable_assoc;
+   //extern int                                    chop_enable;
+   //extern int                                    permute_only_top;
+-  extern int display_ratings;
+ 
+ };
+ 
+--- ./tesseract-1.04/cutil/tordvars.h.orig	2007-06-04 00:24:15.000000000 +0300
++++ ./tesseract-1.04/cutil/tordvars.h	2007-06-04 00:24:21.000000000 +0300
+@@ -45,7 +45,7 @@
+ extern int similarity_debug;                /* Level of debug output */
+ extern int write_raw_output;                /* Text before context */
+ extern int write_output;                    /* Text file output */
+-//extern "C" { extern int display_ratings; }  /* Show the ratings */
++extern "C" { extern int display_ratings; }  /* Show the ratings */
+ extern int display_ratings;                 /* Show the ratings */
+ extern int show_bold;                       /* Use bold text */
+ extern int display_text;                    /* Show word text */
