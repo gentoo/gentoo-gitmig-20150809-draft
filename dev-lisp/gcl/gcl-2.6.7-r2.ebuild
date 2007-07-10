@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.5 2007/07/02 15:03:30 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.6 2007/07/10 18:42:17 vapier Exp $
 
 inherit elisp-common flag-o-matic
 
@@ -37,6 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
+	export SANDBOX_ON=0
 	local myconfig=""
 	# Hardened gcc may automatically use PIE building, which does not
 	# work for this package so far
@@ -64,6 +65,7 @@ ${myconfig}"
 }
 
 src_install() {
+	export SANDBOX_ON=0
 	make DESTDIR="${D}" install || die
 
 	rm -rf ${D}/usr/lib/${P}/info
