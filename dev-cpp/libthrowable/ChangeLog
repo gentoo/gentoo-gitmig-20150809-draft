@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libthrowable
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/ChangeLog,v 1.7 2007/05/14 11:07:49 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/ChangeLog,v 1.8 2007/07/10 19:22:22 beandog Exp $
+
+  10 Jul 2007; Steve Dibb <beandog@gentoo.org> libthrowable-0.9.6.ebuild,
+  libthrowable-1.0.0.ebuild:
+  amd64 stable
 
   14 May 2007; Timothy Redaelli <drizzt@gentoo.org>
   libthrowable-1.0.0.ebuild:
