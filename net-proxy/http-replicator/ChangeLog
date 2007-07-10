@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/http-replicator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.14 2007/04/22 00:24:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.15 2007/07/10 18:25:50 griffon26 Exp $
+
+  10 Jul 2007; Maurice van der Pot <griffon26@gentoo.org>
+  +files/http-replicator-3.0-sighup.patch, files/http-replicator-3.0.init,
+  http-replicator-3.0.ebuild:
+  Slight changes to init script as well as a patch to ignore SIGHUP to prevent
+  the daemon from exiting right away when http-replicator is started at boot
+  time. This is a work-around for bug #177428 until the next version of
+  http-replicator, which is a rewrite, is released.
 
   22 Apr 2007; Alin Năstac <mrness@gentoo.org> http-replicator-3.0.ebuild:
   Use newinitd and newconfd (#174266).
