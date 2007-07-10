@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.158 2007/07/08 17:26:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.159 2007/07/10 13:05:12 flameeyes Exp $
+
+*pam-0.99.8.0-r1 (10 Jul 2007)
+
+  10 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/system-auth.pamd.epam, +pam-0.99.8.0-r1.ebuild:
+  Add a cracklib USE flag to enable/disable pam_cracklib module building.
+  Thanks to the EPAM "syntax", the configuration file installed is updated as
+  needed for etc-update.
 
   08 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> pam-0.99.7.1.ebuild,
   pam-0.99.8.0.ebuild:
