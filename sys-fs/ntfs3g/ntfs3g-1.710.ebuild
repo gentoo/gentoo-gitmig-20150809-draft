@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.616.ebuild,v 1.2 2007/06/22 19:29:21 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.710.ebuild,v 1.1 2007/07/10 15:02:49 chutzpah Exp $
 
 inherit multilib toolchain-funcs
 
@@ -23,8 +23,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	econf --disable-ldconfig
-	emake
+	econf --disable-ldconfig --libdir=/$(get_libdir)
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -37,7 +37,7 @@ src_install() {
 
 	gen_usr_ldscript libntfs-3g.so
 
-	use suid && fperms u+s /usr/bin/${MY_PN}
+	use suid && fperms u+s /bin/${MY_PN}
 }
 
 pkg_postinst() {
