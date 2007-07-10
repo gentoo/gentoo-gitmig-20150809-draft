@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2920 2007/07/10 21:43:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2921 2007/07/10 21:44:42 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1885,7 +1885,6 @@ sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/unionfs:nfs - Adds support for NFS file system
 sys-kernel/ck-sources:ck-server - Tune the kernel for servers
 sys-kernel/gentoo-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
-sys-kernel/hardened-sources:rsbac - Enables support for RSBAC (2.4 kernels)
 sys-kernel/linux-docs:html - Install HTML documentation
 sys-kernel/linux-headers:gcc64 - Use 64-bit kernel compiler
 sys-kernel/mips-headers:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
