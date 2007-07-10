@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.58 2007/07/10 12:00:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.59 2007/07/10 12:51:54 armin76 Exp $
+
+  10 Jul 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask dell USE-flag, no Dell hardware on alpha
 
   10 Jul 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   P.mask app-misc/hal-info on 2.4 profiles, needs 2.6 headers

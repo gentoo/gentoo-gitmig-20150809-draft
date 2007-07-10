@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.73 2007/07/02 17:25:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.74 2007/07/10 12:51:54 armin76 Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -12,6 +12,8 @@
 ipod
 lirc
 gnokii
+# No dell hardware on alpha
+dell
 
 # 13 Jun 2007 Jose Luis Rivero <yoswink@gentoo.org>
 # acpid masked and acpi use flag is deprecated now. 
