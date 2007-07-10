@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.21 2007/07/09 05:05:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.22 2007/07/10 19:42:14 armin76 Exp $
+
+  10 Jul 2007; Raúl Porcel <armin76@gentoo.org> audit-1.5.4.ebuild:
+  Add ~ia64 wrt #184563
 
   09 Jul 2007; Mike Frysinger <vapier@gentoo.org>
   +files/audit-1.5.4-build.patch, audit-1.5.4.ebuild:
