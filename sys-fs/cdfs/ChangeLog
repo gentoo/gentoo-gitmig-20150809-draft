@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/cdfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cdfs/ChangeLog,v 1.6 2007/01/30 22:45:18 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cdfs/ChangeLog,v 1.7 2007/07/10 22:29:26 drizzt Exp $
+
+  10 Jul 2007; Timothy Redaelli <drizzt@gentoo.org>
+  +files/cdfs-2.6.19-kernel-2.6.22.patch, cdfs-2.6.19.ebuild:
+  Add patch for kernel 2.6.22
+  Thanks to dsd and Marek Rychly wrt bug #184816
 
   30 Jan 2007; Timothy Redaelli <drizzt@gentoo.org>
   -files/cdfs-2.6.18-kernel-2.6.19.patch, -cdfs-2.6.18.ebuild:
