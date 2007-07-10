@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.20 2007/07/09 01:58:30 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.21 2007/07/10 04:57:34 nerdboy Exp $
+
+  10 Jul 2007; Steve Arnold <nerdboy@gentoo.org> mpich2-1.0.5_p4.ebuild:
+  fixed a leftover development hack alertly noticed by Mr_Bones
 
 *mpich2-1.0.5_p4 (09 Jul 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.5_p4.ebuild,v 1.1 2007/07/09 01:58:30 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.5_p4.ebuild,v 1.2 2007/07/10 04:57:34 nerdboy Exp $
 
 inherit eutils fortran distutils autotools kde-functions toolchain-funcs java-pkg
 
@@ -34,7 +34,7 @@ RDEPEND="${DEPEND}
 	!media-sound/mpd
 	!media-sound/mpd-svn"
 
-RESTRICT="-test"
+RESTRICT="test"
 
 # To-do: work on tests and add SCTP support for kernel and user tools
 
