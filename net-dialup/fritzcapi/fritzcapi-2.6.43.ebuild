@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.12 2007/06/27 21:34:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.13 2007/07/10 18:01:54 genstef Exp $
 
 inherit linux-mod rpm eutils
 
@@ -108,12 +108,12 @@ src_unpack() {
 		sed -i "s:\$(PWD)/../lib/driver-lib.o:${S}/e2220pc/lib/driver-lib.o:" ${i}
 		convert_to_m ${i}
 	done
-  	if [ -e fritz.usb2 ]; then
+	if [ -e fritz.usb2 ]; then
 		cd fritz.usb2; epatch ${FILESDIR}/fcusb2-2.6.19.patch; cd ..
 	fi
 	if ! use amd64; then
 	  epatch ${FILESDIR}/2.6.43-linux-2.6.19-irq_handler.patch
- 	  kernel_is ge 2 6 17 && epatch ${FILESDIR}/2.6.43-fcpcmcia.patch
+	  kernel_is ge 2 6 17 && epatch ${FILESDIR}/2.6.43-fcpcmcia.patch
 	  kernel_is ge 2 6 20 && epatch ${FILESDIR}/fritzcapi-2.6.20.patch
 	else
 	  epatch ${FILESDIR}/2.6.43-linux-2.6.19-irq_handler.amd64.patch
