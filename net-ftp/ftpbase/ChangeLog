@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/ftpbase
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.14 2007/05/15 14:03:32 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.15 2007/07/10 13:07:59 uberlord Exp $
+
+*ftpbase-0.01 (09 Jul 2007)
+
+  09 Jul 2007; Roy Marples <uberlord@gentoo.org> +ftpbase-0.01.ebuild:
+  Bumped for bug #184666 and keyworded ~x86-fbsd.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
