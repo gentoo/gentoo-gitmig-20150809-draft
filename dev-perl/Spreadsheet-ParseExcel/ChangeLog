@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Spreadsheet-ParseExcel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.16 2007/06/21 16:45:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.17 2007/07/10 15:47:53 mcummings Exp $
+
+  10 Jul 2007; Michael Cummings <mcummings@gentoo.org>
+  Spreadsheet-ParseExcel-0.28.ebuild, Spreadsheet-ParseExcel-0.32.ebuild:
+  Fixing deps to reflect optional unicode and cjk support
 
   21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
   Spreadsheet-ParseExcel-0.32.ebuild:
