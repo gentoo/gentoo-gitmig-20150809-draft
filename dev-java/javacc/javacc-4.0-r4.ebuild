@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-4.0-r4.ebuild,v 1.2 2007/06/18 17:20:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-4.0-r4.ebuild,v 1.3 2007/07/10 07:35:47 opfer Exp $
 
 IUSE="doc examples source test"
 
@@ -11,7 +11,7 @@ HOMEPAGE="https://javacc.dev.java.net/"
 SRC_URI="https://${PN}.dev.java.net/files/documents/17/26783/${P}src.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 DEPEND=">=virtual/jdk-1.4
 	dev-java/junit
 	test? ( dev-java/ant-junit )"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javacc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.21 2007/06/18 17:20:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.22 2007/07/10 07:35:47 opfer Exp $
+
+  10 Jul 2007; Christian Faulhammer <opfer@gentoo.org> javacc-4.0-r4.ebuild:
+  stable x86, bug 184561
 
   18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> javacc-4.0-r4.ebuild:
   Add ~x86-fbsd keyword.
