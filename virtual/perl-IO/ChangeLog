@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-IO
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.7 2007/03/05 13:15:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.8 2007/07/10 11:42:20 mcummings Exp $
+
+  10 Jul 2007; Michael Cummings <mcummings@gentoo.org> perl-IO-1.20.ebuild:
+  Keywording to match virtual to real packages
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> perl-IO-1.23.01.ebuild:
   Stable on x86, bug #169152.
