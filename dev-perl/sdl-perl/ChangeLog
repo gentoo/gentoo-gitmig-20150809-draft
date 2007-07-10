@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/sdl-perl
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.37 2006/11/18 16:05:07 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.38 2007/07/10 11:16:12 mcummings Exp $
+
+  10 Jul 2007; Michael Cummings <mcummings@gentoo.org>
+  sdl-perl-2.1.3-r3.ebuild:
+  Marking sparc stable
 
 *sdl-perl-2.1.3-r3 (18 Nov 2006)
 
