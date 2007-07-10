@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.1.ebuild,v 1.2 2007/05/20 17:51:25 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.1.ebuild,v 1.3 2007/07/10 09:49:50 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -26,6 +26,8 @@ MODULE_NAMES="ipw3945(net/wireless:)"
 MODULESD_IPW3945_DOCS="README.ipw3945"
 KV_OBJ="ko"
 
+CONFIG_CHECK="WIRELESS_EXT FW_LOADER IEEE80211 IEEE80211_CRYPT_CCMP IEEE80211_CRYPT_TKIP"
+ERROR_WIRELESS_EXT="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions"
 ERROR_FW_LOADER="${P} requires Hotplug firmware loading support (CONFIG_FW_LOADER)."
 ERROR_IEEE80211="${P} requires support for Generic IEEE 802.11 Networking Stack (CONFIG_IEEE80211)."
 
@@ -36,12 +38,6 @@ pkg_setup() {
 
 	if kernel_is lt 2 6 18; then
 		die "${P} needs a kernel >=2.6.18! Please set your KERNEL_DIR or /usr/src/linux suitably"
-	elif kernel_is ge 2 6 22 ; then
-		CONFIG_CHECK="WLAN_80211 FW_LOADER IEEE80211 IEEE80211_CRYPT_CCMP IEEE80211_CRYPT_TKIP"
-		ERROR_WLAN_80211="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_WLAN_80211)."
-	else
-		CONFIG_CHECK="NET_RADIO FW_LOADER IEEE80211 IEEE80211_CRYPT_CCMP IEEE80211_CRYPT_TKIP"
-		ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
 	fi
 
 	linux-mod_pkg_setup

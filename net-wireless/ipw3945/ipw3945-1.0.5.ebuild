@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.0.5.ebuild,v 1.3 2006/12/07 21:04:16 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.0.5.ebuild,v 1.4 2007/07/10 09:49:50 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -27,8 +27,8 @@ BUILD_TARGETS="all"
 MODULE_NAMES="ipw3945(net/wireless:)"
 MODULESD_IPW3945_DOCS="README.ipw3945"
 
-CONFIG_CHECK="NET_RADIO FW_LOADER !IPW3945"
-ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+CONFIG_CHECK="WIRELESS_EXT FW_LOADER !IPW3945"
+ERROR_WIRELESS_EXT="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions"
 ERROR_FW_LOADER="${P} requires Hotplug firmware loading support (CONFIG_FW_LOADER)."
 ERROR_IPW3945="${P} requires the in-kernel version of the IPW3945 driver to be disabled (CONFIG_IPW3945)"
 
