@@ -1,0 +1,30 @@
+--- ChangeLog.old	2007-07-10 11:25:41.639463587 +0200
++++ ChangeLog	2007-07-10 12:19:05.650671612 +0200
+@@ -1,4 +1,12 @@
+ 2007-05-06  Nicolas Boullis  <nboullis@debian.org>
++2007-05-14  Nicolas Boullis  <nboullis@debian.org>
++	* modules/em8300_main.c:
++	Use pci_register_driver instead pci_module_init since the latter
++	is removed in linux 2.6.22. Thanks to Adam who noticed the problem
++	with linux 2.6.21-git5. The only expected change in behavior is
++	that the module won't fail to load with linux 2.4 kernels if no
++	em8300-based board is present.
++
+ 	* configure.in,
+ 	  modules/Makefile:
+ 	Release 0.16.2.
+--- modules/em8300_main.c.old	2007-07-10 11:25:53.637633244 +0200
++++ modules/em8300_main.c	2007-07-10 12:19:05.650671612 +0200
+@@ -800,10 +800,8 @@
+ 		}
+ 	}
+ 
+-	if ((err = pci_module_init(&em8300_driver)) < 0) {
+-#ifdef MODULE
+-		printk(KERN_ERR "Sigmadesigns EM8300 not found or device busy\n");
+-#endif
++	if ((err = pci_register_driver(&em8300_driver)) < 0) {
++		printk(KERN_ERR "em8300: unable to register PCI driver\n");
+ 		goto err_init;
+ 	}
+ 
