@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.279 2007/07/06 09:46:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.280 2007/07/10 19:10:44 leio Exp $
+
+  10 Jul 2007; Mart Raudsepp <leio@gentoo.org> gnome-2.18.0.ebuild:
+  Remove ppc64 keyword from 2.18.0, as they don't have a keyword on
+  gnome-power-manager yet
 
   06 Jul 2007; Roy Marples <uberlord@gentoo.org> gnome-2.18.0.ebuild:
   Keyworded x86-fbsd
