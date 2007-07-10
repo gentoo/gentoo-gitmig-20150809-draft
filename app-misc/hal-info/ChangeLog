@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.15 2007/06/26 18:07:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.16 2007/07/10 12:00:57 armin76 Exp $
+
+  10 Jul 2007; Raúl Porcel <armin76@gentoo.org> hal-info-20070618.ebuild:
+  Add ~alpha wrt #172789, thanks to Tobias Klausmann for testing
 
   26 Jun 2007; Brent Baude <ranger@gentoo.org> hal-info-20070425.ebuild,
   hal-info-20070516.ebuild, hal-info-20070618.ebuild:
