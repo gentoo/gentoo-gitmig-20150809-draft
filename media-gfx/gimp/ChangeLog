@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.207 2007/07/10 07:12:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.208 2007/07/10 08:55:19 opfer Exp $
+
+  10 Jul 2007; Christian Faulhammer <opfer@gentoo.org> gimp-2.2.16.ebuild:
+  stable x86, security bug 182047
 
   10 Jul 2007; Jeroen Roovers <jer@gentoo.org> gimp-2.2.16.ebuild:
   Stable for HPPA (bug #182047).
