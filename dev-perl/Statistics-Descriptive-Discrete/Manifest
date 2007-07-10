@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST Statistics-Descriptive-Discrete-0.07.tar.gz 6889 RMD160 b23b0446c45ebebead6311e7cd2274aefe923558 SHA1 94c045ae46dcc0b21ce705ea4780fcc2268a204f SHA256 9810cbb96cc03191c4bde50b609d497edaed2acd02867cb8b384f198c6d6d0ee
-EBUILD Statistics-Descriptive-Discrete-0.07.ebuild 675 RMD160 e26e2c404c0a6ec7ffdddb124a2fa36c7465cfdc SHA1 a8f9a8896b5c21d54b9daaf8050586bc8c738193 SHA256 9be3421fa6f42c4ba0924ea7fe3ecb53ac291bab5b8e3a198d0e08cd338799c1
-MD5 36ab0aec06ec605817d966c353db0fbf Statistics-Descriptive-Discrete-0.07.ebuild 675
-RMD160 e26e2c404c0a6ec7ffdddb124a2fa36c7465cfdc Statistics-Descriptive-Discrete-0.07.ebuild 675
-SHA256 9be3421fa6f42c4ba0924ea7fe3ecb53ac291bab5b8e3a198d0e08cd338799c1 Statistics-Descriptive-Discrete-0.07.ebuild 675
+EBUILD Statistics-Descriptive-Discrete-0.07.ebuild 674 RMD160 37dc6d13b8edbeabe4a4bf5eec3fb461d93daacf SHA1 295e9f3c9e51528121c3167474bf656311fd93a4 SHA256 13b75986e3f23061e01d047eaea3ba99d18b3d6cd49c172b43ee1fa3d60615d7
+MD5 02531c99e261e1df392d699f08e683f9 Statistics-Descriptive-Discrete-0.07.ebuild 674
+RMD160 37dc6d13b8edbeabe4a4bf5eec3fb461d93daacf Statistics-Descriptive-Discrete-0.07.ebuild 674
+SHA256 13b75986e3f23061e01d047eaea3ba99d18b3d6cd49c172b43ee1fa3d60615d7 Statistics-Descriptive-Discrete-0.07.ebuild 674
 MISC ChangeLog 1345 RMD160 e247b8c8bcacfb57e256a3d7fae65b9ddb58a342 SHA1 a2be2ba69b74d0753240ae0d0a34487450e1d3f2 SHA256 ebf76184fb632d91ea4f5dce75ce0f6b447c5db79b39883034ccacf7ae98003f
 MD5 7dd53356e482933e2fe4409088c52ce9 ChangeLog 1345
 RMD160 e247b8c8bcacfb57e256a3d7fae65b9ddb58a342 ChangeLog 1345
@@ -17,10 +14,3 @@ SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata
 MD5 4fe30e6c38e50d0bd650f950abc4b8b6 files/digest-Statistics-Descriptive-Discrete-0.07 304
 RMD160 5a2a1857e7a15e558c5bf0a9367fea9ebdd2364f files/digest-Statistics-Descriptive-Discrete-0.07 304
 SHA256 7cc997a93935b1df20558fa1934c40a349e251392175e77a8882cfc396436f86 files/digest-Statistics-Descriptive-Discrete-0.07 304
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
-
-iD8DBQFFsOkHtG5z4I8BtQoRAptEAJ49cuvsJuvzzE05GjLlxK05S9MNKgCfVkFe
-FM2m/AHDZyusUe0no8BLkN0=
-=Xqbv
------END PGP SIGNATURE-----
