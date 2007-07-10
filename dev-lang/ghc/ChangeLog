@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.125 2007/07/10 17:16:49 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.126 2007/07/10 23:37:10 dcoutts Exp $
+
+  10 Jul 2007; Duncan Coutts <dcoutts@gentoo.org>
+  files/ghc-6.5-norelax.patch:
+  Fix sparc "norelax" patch.
 
   10 Jul 2007; Duncan Coutts <dcoutts@gentoo.org>
   -files/ghc-6.2.hardened.patch, -files/ghc-6.4.1-configure.patch,
