@@ -1,0 +1,18 @@
+--- branches/KDE/3.5/kdebase/kate/app/katesession.cpp	2007/06/16 03:24:38	676114
++++ branches/KDE/3.5/kdebase/kate/app/katesession.cpp	2007/06/16 03:24:56	676115
+@@ -381,13 +381,13 @@
+ 
+     if (sesExit == "ask")
+     {
+-      KDialogBase dlg( i18n ("Save Session?")
++      KDialogBase* dlg = new KDialogBase(i18n ("Save Session?")
+                      , KDialogBase::Yes | KDialogBase::No
+                      , KDialogBase::Yes, KDialogBase::No
+                      );
+ 
+       bool dontAgain = false;
+-      int res = KMessageBox::createKMessageBox(&dlg, QMessageBox::Question,
++      int res = KMessageBox::createKMessageBox(dlg, QMessageBox::Question,
+                               i18n("Save current session?"), QStringList(),
+                               i18n("Do not ask again"), &dontAgain, KMessageBox::Notify);
+ 

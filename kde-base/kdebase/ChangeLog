@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.373 2007/07/08 04:20:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.374 2007/07/10 18:36:59 philantrop Exp $
+
+*kdebase-3.5.7-r1 (10 Jul 2007)
+
+  10 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kate-3.5.7-session-save.patch, +kdebase-3.5.7-r1.ebuild:
+  Added the patch from KDE bug 147195 to prevent kate from crashing when
+  asking to save a session. Fixes our bug 184322.
 
   08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
   kdebase-3.5.5-r1.ebuild, kdebase-3.5.5-r3.ebuild, kdebase-3.5.5-r4.ebuild,
