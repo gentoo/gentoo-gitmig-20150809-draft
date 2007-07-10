@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.4.7-r3.ebuild,v 1.1 2007/01/18 18:17:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.4.7-r3.ebuild,v 1.2 2007/07/10 07:53:35 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/13501/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="debug"
 
 DEPEND=">=sys-libs/ncurses-5.6"
