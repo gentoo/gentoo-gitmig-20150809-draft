@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.159 2007/07/10 13:05:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.160 2007/07/10 13:49:07 flameeyes Exp $
+
+  10 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/pam.d-0.99/other, -files/pam.d-0.99/system-auth, +files/other.pamd,
+  -files/pam.d/other, -files/pam.d/system-auth,
+  +files/system-auth.pamd.0.78, +files/system-auth.pamd.0.99,
+  pam-0.78-r3.ebuild, pam-0.78-r5.ebuild, pam-0.99.7.1.ebuild,
+  pam-0.99.8.0.ebuild, pam-0.99.8.0-r1.ebuild:
+  Reduce the pamd installation code, remove two directories too.
 
 *pam-0.99.8.0-r1 (10 Jul 2007)
 

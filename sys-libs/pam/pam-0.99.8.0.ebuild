@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.8.0.ebuild,v 1.3 2007/07/08 17:26:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.8.0.ebuild,v 1.4 2007/07/10 13:49:07 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -155,9 +155,8 @@ src_install() {
 	dodoc CHANGELOG ChangeLog README AUTHORS Copyright
 	docinto modules ; dodoc doc/txts/README.*
 
-	for x in "${FILESDIR}/pam.d-0.99/"*; do
-		[[ -f "${x}" ]] && dopamd "${x}"
-	done
+	newpamd "${FILESDIR}/system-auth.pamd.0.99" system-auth
+	newpamd "${FILESDIR}/other.pamd" other
 
 	# Remove the wrongly installed manpage
 	rm -f "${D}"/usr/share/man/man8/pam_userdb.8*

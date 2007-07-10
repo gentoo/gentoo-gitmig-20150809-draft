@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r3.ebuild,v 1.7 2007/01/23 07:16:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r3.ebuild,v 1.8 2007/07/10 13:49:07 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -328,13 +328,12 @@ src_install() {
 	# need this for pam_console
 	keepdir /var/run/console
 
-	for x in ${FILESDIR}/pam.d/*; do
-		[[ -f ${x} ]] && dopamd ${x}
-	done
+	newpamd "${FILESDIR}/system-auth.pamd.0.78" system-auth
+	newpamd "${FILESDIR}/other.pamd" other
 
 	# Only add this one if needed.
 	if [[ ${FORCE_SYSTEMAUTH_UPDATE} = "yes" ]] ; then
-		newpamd ${FILESDIR}/pam.d/system-auth system-auth.new || \
+		newpamd "${FILESDIR}/system-auth.pamd.0.78" system-auth.new || \
 			die "Failed to install system-auth.new!"
 	fi
 
