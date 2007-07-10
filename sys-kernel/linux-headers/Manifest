@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX 2.6.11-ppc64-32ul-spinlock.patch 510 RMD160 1a8a5a7c96049c7cac243022143fd7f20d678495 SHA1 06821a65583ad90711368c957c6522a27865febd SHA256 ffb32af7a072d8e6c87b73eb525744da2442d472ca0f26af4e3f4468074453e3
 MD5 e32b5df37d1bd1fde32f19276f8bc5e2 files/2.6.11-ppc64-32ul-spinlock.patch 510
 RMD160 1a8a5a7c96049c7cac243022143fd7f20d678495 files/2.6.11-ppc64-32ul-spinlock.patch 510
@@ -57,7 +54,7 @@ DIST linux-2.2.26.tar.bz2 15754692 RMD160 ce8e808a61566b9ee1acf1f812be12d0a7e990
 DIST linux-2.4.26.tar.bz2 30772389 RMD160 30a9cdf29f97aef56d4345962105a8c2e588f6de SHA1 c0097733a9e3554971ddf18151b83b6f42f6d9ad SHA256 dab39fb4431c1c6852b4197300b729c5d674906e71ebfada6fe9541fd452ec81
 DIST linux-2.4.33.tar.bz2 31161078 RMD160 6acdabafecfdc69f3f5b0203eac154ac1c39c44b SHA1 ea444013d54ead1ed366180e9d18d52fbbbe5c6b SHA256 a1d8403a72dbe7a4d63986e71e22e6eeb32fe2e2e949f40c3f9f3bb6496ee47a
 DIST linux-2.6.11-m68k-headers.patch.bz2 12090 RMD160 d3fc9886b6d2d17b01e37638fc831e1c29d7bdf7 SHA1 f227ad4286e1f91747bebe0a380d2630b031b64d SHA256 0050ad1f1135289e004e45c952d81a58aa6bf947c57b6c31976ae518fb98be86
-DIST linux-2.6.11.tar.bz2 37075679 RMD160 6141d763bc35fe4c7d97ee97cb7d30a28907a123 SHA1 b26e0b898c9c7ff701730b242de685daf88981e1 SHA256 502d1a52532befffa0562af02babd93bfce5431101f7c1d6192ab8c2a02e003e
+DIST linux-2.6.11.tar.bz2 37075679 RMD160 c11918b5db60eb25c42b70eb376106c879678940 SHA1 d72ab76360d004dac4b976633dd0490e8d4b15cd SHA256 1fa39c202efe168bfeb0ddd74c8e4814f77da7dc78993e47826bad9173b95808
 DIST linux-2.6.12.1-blackfin.patch.bz2 237386 RMD160 0c3a76aec152c43ef7f1b6130a1a43e59829cf92 SHA1 0f0e16ca4ccc4e4b9ea6d6f12ae289cf878a1fe8 SHA256 7f7d34e07a5581ee120a5847bc21e98ded02df1cfa86856514cfe467a1a4ae8c
 DIST linux-2.6.16.tar.bz2 40845005 RMD160 af5c2f55733fadd2fdf8b00da55e7b31d516d4e8 SHA1 bef21cd5063a648f33a99a26f4742dd05eb4dca2 SHA256 1200dcc7e60fcdaf68618dba991917a47e41e67099e8b22143976ec972e2cad7
 DIST linux-2.6.17-m68k-headers.patch.bz2 18059 RMD160 9594404d1c3ac50a6baa49c390f21ab729122df6 SHA1 d602a5ce4a1ee17a3dbabb7224cc1b76745c21a1 SHA256 f0815e019ce814f21c6cc7ae8706538cabc23d1dfd177d0f7a91408ad85d5916
@@ -157,21 +154,21 @@ SHA256 ed8ab276d48205f14e6f2531d4063d3a3cdf1ddb67be961ca990140a622eb857 files/di
 MD5 629c6d332e617161ca37f687d17c6ff5 files/digest-linux-headers-2.4.33.3 747
 RMD160 2b4dbc42e5da0b28207fb526d7f9021c12b22e05 files/digest-linux-headers-2.4.33.3 747
 SHA256 ed034baadfad2cf1098fc1ae687e4e620e59c4660455fefe562e3ac8a5004c90 files/digest-linux-headers-2.4.33.3 747
-MD5 33bb483b1358851d670c997561930f63 files/digest-linux-headers-2.6.11-r2 1081
-RMD160 5bcf6c8f592368b7a90d616502f2b756fb811eb3 files/digest-linux-headers-2.6.11-r2 1081
-SHA256 f5d037975f0abdfe5e4c73331abc8df210bd5300d6bf5332fea3ba4c11b3e368 files/digest-linux-headers-2.6.11-r2 1081
-MD5 cb5e3d2f4fb9f0f01449fda67f1fef12 files/digest-linux-headers-2.6.11-r3 1081
-RMD160 3193865100b2c5949cf9c81f241745a6ad098ee9 files/digest-linux-headers-2.6.11-r3 1081
-SHA256 3469f011910f2ebcf4dbe78a5c2445d425ccbe660265a618f4dbd8eafac4e37d files/digest-linux-headers-2.6.11-r3 1081
-MD5 8b37be3bfa6867827d664b0b0b7cbae5 files/digest-linux-headers-2.6.11-r4 1084
-RMD160 72d6acdc6e486e46c10d0aff83b4f4721c4426a6 files/digest-linux-headers-2.6.11-r4 1084
-SHA256 83569bf4379bb218bb2a821ff893d9f7c684088a6709696283320b676488d6a8 files/digest-linux-headers-2.6.11-r4 1084
-MD5 4809909d94def7c73301adeeb28bad05 files/digest-linux-headers-2.6.11-r5 1084
-RMD160 3d257205c992e978e59b10c358d8169e4dddc3cd files/digest-linux-headers-2.6.11-r5 1084
-SHA256 4d44d514942305e105147e355001b72fbbaee3a905e4cfaf7c0f997668f3ad6f files/digest-linux-headers-2.6.11-r5 1084
-MD5 db243c4086068a0c9595555323625cdc files/digest-linux-headers-2.6.11-r6 1084
-RMD160 692a0dbcbd898e9729622eb70016dbd56a9911d4 files/digest-linux-headers-2.6.11-r6 1084
-SHA256 48f1df916a5cea46881b041e2301a395631137446ffb2e1d7d49ffd1f989a61b files/digest-linux-headers-2.6.11-r6 1084
+MD5 d2b4370e285d984d71e8fb9ed93e8c48 files/digest-linux-headers-2.6.11-r2 1081
+RMD160 6da513a86f951ca64e936c6a66dd35fe08cf7b75 files/digest-linux-headers-2.6.11-r2 1081
+SHA256 e59a997d0df059552cb83383343f39d18cb482d4b34573d01703472eaab4e129 files/digest-linux-headers-2.6.11-r2 1081
+MD5 47a93281352ff07785effab97c794dfd files/digest-linux-headers-2.6.11-r3 1081
+RMD160 5a111b8a968d495bf1419e7203623be7c039b1a2 files/digest-linux-headers-2.6.11-r3 1081
+SHA256 500e3669a99b79c5cefbb8aff4f34d78d87912248cb4b8229ad160053a43500f files/digest-linux-headers-2.6.11-r3 1081
+MD5 47d9a960af05bfc2f55e85c55ba81378 files/digest-linux-headers-2.6.11-r4 1084
+RMD160 4e0a6fa6a87189a2a1c8ffabde244047f913b18f files/digest-linux-headers-2.6.11-r4 1084
+SHA256 be9504887ef4936a57695dd7eda2f264c3346c938b1f7511ba7837794cacac8b files/digest-linux-headers-2.6.11-r4 1084
+MD5 8f0488650f911f882f0810ae0a82eb73 files/digest-linux-headers-2.6.11-r5 1084
+RMD160 b2fcec2b79e882e2e8804227b200d7151db7329d files/digest-linux-headers-2.6.11-r5 1084
+SHA256 15dbd8490fffabfcbd89771f5c36b813dc655e2e20a0f4811887132523489b59 files/digest-linux-headers-2.6.11-r5 1084
+MD5 1553eb48b8c552949760f01504a2e796 files/digest-linux-headers-2.6.11-r6 1084
+RMD160 6db4093f815eea042f6bdfac4c11aeebbc1f1989 files/digest-linux-headers-2.6.11-r6 1084
+SHA256 e3ec83a03c9f2fcb66cf1b92296cf3d820738a338f2902cdbc1a4abdfb8a7a5e files/digest-linux-headers-2.6.11-r6 1084
 MD5 f2e55f410dda3d1287e6bb9a5e078cd0 files/digest-linux-headers-2.6.16 801
 RMD160 22eca11764688bb3e90fbe018531ae65c681c428 files/digest-linux-headers-2.6.16 801
 SHA256 b81587e3a2c1907e9494a0d19cf889a84190dfeda322be34f7a94e7120328b79 files/digest-linux-headers-2.6.16 801
@@ -199,10 +196,3 @@ SHA256 06a62276054b3944c61370aa59a682d655a1249a5a26801fccc41386d7cef108 files/di
 MD5 74e4ec85fb16587c38c2fdbe54231e5e files/digest-linux-headers-2.6.8.1-r4 804
 RMD160 9c508c51fbd2128c59d43e481f4807a70d5fc408 files/digest-linux-headers-2.6.8.1-r4 804
 SHA256 825299e026cccf262682b6311a9bb9897b10eff11aecae00a5ce6ea88bb8849a files/digest-linux-headers-2.6.8.1-r4 804
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
-
-iD8DBQFGkpM5p/wUKkr7RBoRAqu3AJ9Rv1jU+dFQadYNf4Zd1UEbpGSKJgCgjOHg
-uEE1MqwHQblA45yRSS302FQ=
-=bZBG
------END PGP SIGNATURE-----
