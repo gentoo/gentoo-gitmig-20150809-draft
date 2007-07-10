@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/yaml-0.39.ebuild,v 1.12 2006/10/20 18:07:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/yaml-0.39.ebuild,v 1.13 2007/07/10 23:33:30 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -23,5 +23,3 @@ SRC_TEST="do"
 src_compile() {
 	echo "" | perl-module_src_compile
 }
-
-

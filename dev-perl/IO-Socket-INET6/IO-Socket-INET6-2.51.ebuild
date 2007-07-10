@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/IO-Socket-INET6-2.51.ebuild,v 1.18 2007/04/15 10:56:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/IO-Socket-INET6-2.51.ebuild,v 1.19 2007/07/10 23:33:29 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -19,5 +19,3 @@ DEPEND="dev-perl/Socket6
 # Disabling tests since they seem to be more trouble than worth, esp. in re bug
 # 115004
 #SRC_TEST="do"
-
-

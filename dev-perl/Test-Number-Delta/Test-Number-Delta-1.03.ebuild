@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Number-Delta/Test-Number-Delta-1.03.ebuild,v 1.8 2007/07/09 18:19:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Number-Delta/Test-Number-Delta-1.03.ebuild,v 1.9 2007/07/10 23:33:30 mr_bones_ Exp $
 
 inherit perl-module versionator
-
 
 DESCRIPTION="Perl interface to the cairo library"
 HOMEPAGE="http://search.cpan.org/~tsch"

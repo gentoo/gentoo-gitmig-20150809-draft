@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/Params-Validate-0.87.ebuild,v 1.4 2007/05/05 18:00:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/Params-Validate-0.87.ebuild,v 1.5 2007/07/10 23:33:28 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -18,6 +18,5 @@ src_install () {
 	perl-module_src_install
 	dohtml htdocs/*
 }
-
 
 DEPEND="dev-lang/perl"

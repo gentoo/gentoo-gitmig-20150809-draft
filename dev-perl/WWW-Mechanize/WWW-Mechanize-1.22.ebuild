@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.22.ebuild,v 1.1 2007/03/11 21:20:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.22.ebuild,v 1.2 2007/07/10 23:33:30 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -18,7 +18,6 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 # configure to run the local tests, but not the ones which access the Internet
 myconf="--local --mech-dump --nolive"
 
-
 DEPEND="dev-lang/perl
 	dev-perl/IO-Socket-SSL
 	>=dev-perl/libwww-perl-5.76
@@ -29,4 +28,3 @@ DEPEND="dev-lang/perl
 	dev-perl/Test-Taint
 	dev-perl/Test-Warn
 	dev-perl/Test-Memory-Cycle )"
-

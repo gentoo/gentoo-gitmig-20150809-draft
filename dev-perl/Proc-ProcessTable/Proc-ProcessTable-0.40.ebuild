@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/Proc-ProcessTable-0.40.ebuild,v 1.9 2007/01/19 15:39:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/Proc-ProcessTable-0.40.ebuild,v 1.10 2007/07/10 23:33:27 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -14,6 +14,5 @@ KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
-
 
 DEPEND="dev-lang/perl"

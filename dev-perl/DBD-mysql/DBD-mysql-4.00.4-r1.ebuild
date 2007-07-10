@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-4.00.4-r1.ebuild,v 1.4 2007/07/05 17:35:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-4.00.4-r1.ebuild,v 1.5 2007/07/10 23:33:30 mr_bones_ Exp $
 
 inherit eutils perl-module versionator
-
 
 MY_PV="$(delete_version_separator 2)"
 MY_P="${PN}-${MY_PV}"

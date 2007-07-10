@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/aww-0.33.ebuild,v 1.9 2006/02/13 14:16:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/aww-0.33.ebuild,v 1.10 2007/07/10 23:33:30 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -22,7 +22,6 @@ dev-perl/Crypt-Blowfish
 virtual/perl-Getopt-Long
 dev-perl/crypt-cbc
 dev-perl/Config-Simple"
-
 
 RDEPEND="net-ftp/lftp
 >=dev-lang/wml-2.0.9

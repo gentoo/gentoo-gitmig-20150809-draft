@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.2_pre1.ebuild,v 1.6 2007/01/15 22:28:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.2_pre1.ebuild,v 1.7 2007/07/10 23:33:26 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -33,4 +33,3 @@ src_unpack() {
 	# workaround for writability check of install dirs
 	sed -i -e 's:$$dir:$(DESTDIR)$$dir:g' Makefile.PL
 }
-

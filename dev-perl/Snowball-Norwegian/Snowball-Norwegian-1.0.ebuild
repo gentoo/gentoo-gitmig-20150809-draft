@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Norwegian/Snowball-Norwegian-1.0.ebuild,v 1.12 2007/06/26 01:57:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Norwegian/Snowball-Norwegian-1.0.ebuild,v 1.13 2007/07/10 23:33:30 mr_bones_ Exp $
 
 inherit perl-module multilib
 
@@ -14,7 +14,6 @@ KEYWORDS="amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"
-
 
 DEPEND="dev-lang/perl"
 

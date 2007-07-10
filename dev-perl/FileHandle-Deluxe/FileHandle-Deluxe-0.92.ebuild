@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Deluxe/FileHandle-Deluxe-0.92.ebuild,v 1.11 2007/01/15 19:45:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Deluxe/FileHandle-Deluxe-0.92.ebuild,v 1.12 2007/07/10 23:33:33 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -12,6 +12,5 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="amd64 ia64 sparc x86"
 IUSE=""
-
 
 DEPEND="dev-lang/perl"

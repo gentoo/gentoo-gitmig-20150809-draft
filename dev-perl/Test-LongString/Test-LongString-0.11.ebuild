@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LongString/Test-LongString-0.11.ebuild,v 1.6 2007/05/05 18:06:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LongString/Test-LongString-0.11.ebuild,v 1.7 2007/07/10 23:33:26 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -13,6 +13,5 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc sparc x86"
 IUSE=""
 SRC_TEST="do"
-
 
 DEPEND="dev-lang/perl"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/HTML-FromText-2.05.ebuild,v 1.17 2007/01/15 23:01:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/HTML-FromText-2.05.ebuild,v 1.18 2007/07/10 23:33:29 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -22,4 +22,3 @@ DEPEND="dev-perl/HTML-Parser
 	dev-perl/Email-Find
 	dev-lang/perl"
 RDEPEND="${DEPEND}"
-

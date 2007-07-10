@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Format/String-Format-1.14.ebuild,v 1.6 2007/01/19 15:51:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Format/String-Format-1.14.ebuild,v 1.7 2007/07/10 23:33:33 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -14,7 +14,5 @@ KEYWORDS="amd64 sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
-
-
 
 DEPEND="dev-lang/perl"

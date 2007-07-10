@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.027.ebuild,v 1.23 2007/01/19 15:22:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.027.ebuild,v 1.24 2007/07/10 23:33:29 mr_bones_ Exp $
 
 inherit perl-module eutils multilib
 
@@ -29,4 +29,3 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/xorg.patch
 }
-

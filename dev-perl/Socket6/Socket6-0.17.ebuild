@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/Socket6-0.17.ebuild,v 1.12 2007/01/19 15:48:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/Socket6-0.17.ebuild,v 1.13 2007/07/10 23:33:33 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -14,6 +14,5 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 ppc sparc alpha"
 
 SRC_TEST="do"
-
 
 DEPEND="dev-lang/perl"

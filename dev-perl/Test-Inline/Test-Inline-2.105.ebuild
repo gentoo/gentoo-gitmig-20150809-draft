@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/Test-Inline-2.105.ebuild,v 1.4 2007/03/05 12:30:24 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/Test-Inline-2.105.ebuild,v 1.5 2007/07/10 23:33:28 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -33,5 +33,3 @@ DEPEND="virtual/perl-Test-Simple
 	>=dev-perl/Pod-Tests-0.18"
 
 S=${WORKDIR}/${MY_P}
-
-

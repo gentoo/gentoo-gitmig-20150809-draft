@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/IPC-ShareLite-0.09.ebuild,v 1.19 2007/01/15 23:16:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/IPC-ShareLite-0.09.ebuild,v 1.20 2007/07/10 23:33:33 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -18,6 +18,5 @@ export OPTIMIZE="$CFLAGS"
 src_compile() {
 	echo "" | perl-module_src_compile
 }
-
 
 DEPEND="dev-lang/perl"

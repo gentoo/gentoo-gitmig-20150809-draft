@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.3-r3.ebuild,v 1.2 2007/07/10 11:16:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.3-r3.ebuild,v 1.3 2007/07/10 23:33:30 mr_bones_ Exp $
 
 inherit perl-module eutils
 
@@ -48,5 +48,3 @@ src_install() {
 		die "failed to install properly"
 	fi
 }
-
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/XML-RSS-1.10.ebuild,v 1.9 2006/10/20 20:14:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/XML-RSS-1.10.ebuild,v 1.10 2007/07/10 23:33:27 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -17,4 +17,3 @@ SRC_TEST="do"
 DEPEND=">=dev-perl/Test-Manifest-0.9
 	>=dev-perl/XML-Parser-2.30
 	dev-lang/perl"
-

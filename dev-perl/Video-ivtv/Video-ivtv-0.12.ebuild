@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-ivtv/Video-ivtv-0.12.ebuild,v 1.4 2007/03/13 16:00:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-ivtv/Video-ivtv-0.12.ebuild,v 1.5 2007/07/10 23:33:30 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -15,7 +15,6 @@ IUSE=""
 
 export OPTIMIZE="$CFLAGS"
 mydoc="README COPYING"
-
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}"

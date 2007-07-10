@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/perltidy-20060719.ebuild,v 1.7 2007/03/05 12:55:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/perltidy-20060719.ebuild,v 1.8 2007/07/10 23:33:28 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -23,6 +23,5 @@ mymake="/usr"
 pkg_postinst() {
 	elog "Example scripts can be found in /usr/share/doc/${P}"
 }
-
 
 DEPEND="dev-lang/perl"

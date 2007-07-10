@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.14.ebuild,v 1.8 2007/07/06 17:18:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.14.ebuild,v 1.9 2007/07/10 23:33:29 mr_bones_ Exp $
 
 IUSE=""
 inherit perl-module eutils
@@ -33,5 +33,3 @@ src_unpack() {
 	epatch ${FILESDIR}/window_close_patch
 
 }
-
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.60.ebuild,v 1.9 2007/01/19 17:30:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.60.ebuild,v 1.10 2007/07/10 23:33:29 mr_bones_ Exp $
 
 inherit perl-module eutils
 
@@ -34,4 +34,3 @@ pkg_postinst() {
 		-e "XML::SAX->add_parser(q(XML::LibXML::SAX::Parser))->save_parsers()"
 
 }
-

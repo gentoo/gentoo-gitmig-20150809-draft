@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.55.ebuild,v 1.4 2007/03/05 12:14:28 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.55.ebuild,v 1.5 2007/07/10 23:33:33 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -42,4 +42,3 @@ src_test() {
 	use test && export TEST_SIGNATURE="1"
 	perl-module_src_test
 }
-

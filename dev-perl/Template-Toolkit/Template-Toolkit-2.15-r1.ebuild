@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.15-r1.ebuild,v 1.15 2007/06/26 01:58:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.15-r1.ebuild,v 1.16 2007/07/10 23:33:30 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -46,4 +46,3 @@ mydoc="README"
 #    Most of the changes are in the more obscure features and
 #    directives so hopefully you will find the upgrade process fairly
 #    painless.  If you're feeling brave, then answer 'y', otherwise 'n'.
-

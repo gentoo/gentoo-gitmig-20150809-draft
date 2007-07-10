@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/Mail-DKIM-0.19.ebuild,v 1.3 2006/10/21 00:28:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/Mail-DKIM-0.19.ebuild,v 1.4 2007/07/10 23:33:29 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -23,5 +23,3 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="amd64 ~x86"
 IUSE=""
 SRC_TEST="do"
-
-

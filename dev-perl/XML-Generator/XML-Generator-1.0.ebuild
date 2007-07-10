@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/XML-Generator-1.0.ebuild,v 1.1 2007/06/25 10:45:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/XML-Generator-1.0.ebuild,v 1.2 2007/07/10 23:33:28 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -17,5 +17,3 @@ SRC_TEST="do"
 DEPEND="dev-libs/expat
 	dev-lang/perl"
 RDEPEND="${DEPEND}"
-
-

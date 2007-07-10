@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-NameParse/Lingua-EN-NameParse-1.23.ebuild,v 1.3 2007/05/05 17:55:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-NameParse/Lingua-EN-NameParse-1.23.ebuild,v 1.4 2007/07/10 23:33:33 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -16,4 +16,3 @@ KEYWORDS="amd64 ~ia64 ppc ~x86"
 DEPEND="dev-perl/Parse-RecDescent
 	dev-lang/perl"
 IUSE=""
-

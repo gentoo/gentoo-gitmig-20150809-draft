@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.26.ebuild,v 1.19 2007/01/08 16:29:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.26.ebuild,v 1.20 2007/07/10 23:33:28 mr_bones_ Exp $
 
 IUSE="ipv6 libwww ncurses tk"
 
@@ -33,5 +33,3 @@ mymake="/usr"
 src_compile() {
 	echo "n" | perl-module_src_compile
 }
-
-

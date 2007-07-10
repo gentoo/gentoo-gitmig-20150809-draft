@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.30.ebuild,v 1.7 2007/03/05 12:54:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.30.ebuild,v 1.8 2007/07/10 23:33:33 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -36,4 +36,3 @@ DEPEND=">=dev-perl/Math-GMP-1.04
 src_compile() {
 	echo "" | perl-module_src_compile
 }
-

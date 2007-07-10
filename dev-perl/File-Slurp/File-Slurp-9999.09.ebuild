@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/File-Slurp-9999.09.ebuild,v 1.7 2006/08/05 03:52:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/File-Slurp-9999.09.ebuild,v 1.8 2007/07/10 23:33:27 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -16,7 +16,6 @@ IUSE=""
 SRC_TEST="do"
 
 mydoc="extras/slurp_article.pod"
-
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}"

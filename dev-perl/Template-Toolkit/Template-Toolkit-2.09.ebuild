@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.09.ebuild,v 1.12 2006/10/15 20:10:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.09.ebuild,v 1.13 2007/07/10 23:33:30 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -20,4 +20,3 @@ DEPEND=">=dev-perl/AppConfig-1.52
 # 1) make install doesn't violate the sandbox rule
 # 2) perl Makefile.pl just uses reasonable defaults, and doesn't ask for input
 myconf="${myconf} TT_PREFIX=${D}/usr/share/template-toolkit2 TT_ACCEPT='y'"
-

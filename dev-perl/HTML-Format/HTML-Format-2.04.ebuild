@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Format/HTML-Format-2.04.ebuild,v 1.14 2007/01/15 22:41:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Format/HTML-Format-2.04.ebuild,v 1.15 2007/07/10 23:33:27 mr_bones_ Exp $
 
 # this is an RT dependency
 inherit perl-module
@@ -18,4 +18,3 @@ DEPEND="dev-perl/Font-AFM
 	dev-perl/HTML-Tree
 	dev-lang/perl"
 IUSE=""
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/VCP-autrijus-0.9_p20050110-r1.ebuild,v 1.10 2007/03/27 11:38:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/VCP-autrijus-0.9_p20050110-r1.ebuild,v 1.11 2007/07/10 23:33:29 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -27,4 +27,3 @@ S="${WORKDIR}/VCP-autrijus-snapshot-0.9-20050110"
 # there may be other (more relevant) errors, but they're hard to track
 # down by such a lot of dump in stdout. -- trapni/2005-04-09.
 #SRC_TEST="do"
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.009_beta2.ebuild,v 1.9 2007/01/08 17:08:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.009_beta2.ebuild,v 1.10 2007/07/10 23:33:29 mr_bones_ Exp $
 
 inherit perl-module kde
 
@@ -11,7 +11,6 @@ mydoc="ChangeLog README TODO INSTALL COPYING AUTHORS"
 
 DESCRIPTION="Perl bindings for the Qt 3.x toolkit"
 HOMEPAGE="http://perlqt.sourceforge.net/"
-
 
 SRC_URI="mirror://sourceforge/perlqt/${P/_beta2/-b2}.tar.gz"
 LICENSE="GPL-2"
@@ -63,4 +62,3 @@ src_install() {
 		chmod +x ${file}
 	done
 }
-

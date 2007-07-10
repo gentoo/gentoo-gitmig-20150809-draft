@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.60a-r1.ebuild,v 1.16 2006/11/24 18:23:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.60a-r1.ebuild,v 1.17 2007/07/10 23:33:33 mr_bones_ Exp $
 
 IUSE="jabber ssl"
 
@@ -48,4 +48,3 @@ src_unpack() {
 	# MIME::Parser.
 	epatch ${FILESDIR}/SOAP-Lite-0.60.a.patch
 }
-

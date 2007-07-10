@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/XML-DT-0.47.ebuild,v 1.6 2007/05/05 18:08:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/XML-DT-0.47.ebuild,v 1.7 2007/07/10 23:33:33 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -26,4 +26,3 @@ DEPEND=">=dev-perl/libwww-perl-1.35
 src_compile() {
 	echo "" | perl-module_src_compile
 }
-

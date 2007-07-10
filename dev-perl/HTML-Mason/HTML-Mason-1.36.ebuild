@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.36.ebuild,v 1.1 2007/06/12 18:44:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.36.ebuild,v 1.2 2007/07/10 23:33:27 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -51,5 +51,3 @@ src_install () {
 	# rendhalver - the html docs have subdirs so this gets all of them
 	use doc && dohtml -r htdocs/*
 }
-
-

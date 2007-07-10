@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.143.ebuild,v 1.5 2007/05/05 18:15:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.143.ebuild,v 1.6 2007/07/10 23:33:26 mr_bones_ Exp $
 
 inherit perl-module eutils
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-perl/extutils-depends-0.205
 	>=dev-perl/extutils-pkgconfig-1.07"
-

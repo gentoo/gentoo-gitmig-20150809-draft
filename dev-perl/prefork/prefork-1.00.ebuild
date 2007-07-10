@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/prefork-1.00.ebuild,v 1.16 2006/10/20 17:54:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/prefork-1.00.ebuild,v 1.17 2007/07/10 23:33:33 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -18,4 +18,3 @@ SRC_TEST="do"
 DEPEND=">=virtual/perl-File-Spec-0.80
 	>=virtual/perl-Scalar-List-Utils-1.10
 	dev-lang/perl"
-

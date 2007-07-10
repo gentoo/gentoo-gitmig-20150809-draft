@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/FreezeThaw-0.43-r1.ebuild,v 1.15 2007/01/15 19:48:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/FreezeThaw-0.43-r1.ebuild,v 1.16 2007/07/10 23:33:28 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -11,6 +11,5 @@ IUSE=""
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 amd64 hppa ppc sparc alpha ia64 s390"
-
 
 DEPEND="dev-lang/perl"

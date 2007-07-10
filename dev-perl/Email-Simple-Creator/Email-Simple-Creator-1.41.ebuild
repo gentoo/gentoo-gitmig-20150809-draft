@@ -1,13 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple-Creator/Email-Simple-Creator-1.41.ebuild,v 1.6 2007/04/10 12:23:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple-Creator/Email-Simple-Creator-1.41.ebuild,v 1.7 2007/07/10 23:33:26 mr_bones_ Exp $
 
 inherit perl-module
 
 DESCRIPTION="Email::Simple constructor for starting anew"
 HOMEPAGE="http://search.cpan.org/~rjbs/"
 SRC_URI="mirror://cpan/authors/id/R/RJ/RJBS/${P}.tar.gz"
-
 
 IUSE=""
 

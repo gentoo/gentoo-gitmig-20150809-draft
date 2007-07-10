@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/Statistics-Descriptive-2.6.ebuild,v 1.11 2007/03/13 15:58:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/Statistics-Descriptive-2.6.ebuild,v 1.12 2007/07/10 23:33:28 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -15,7 +15,5 @@ IUSE=""
 
 SRC_TEST="do"
 mydoc="README UserSurvey.txt"
-
-
 
 DEPEND="dev-lang/perl"

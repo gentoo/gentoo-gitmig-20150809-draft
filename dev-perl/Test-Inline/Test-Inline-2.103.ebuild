@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/Test-Inline-2.103.ebuild,v 1.13 2006/08/05 23:39:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/Test-Inline-2.103.ebuild,v 1.14 2007/07/10 23:33:28 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -33,5 +33,3 @@ RDEPEND="virtual/perl-Memoize
 	>=dev-perl/Pod-Tests-0.18"
 
 S=${WORKDIR}/${MY_P}
-
-

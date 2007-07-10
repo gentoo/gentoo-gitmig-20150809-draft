@@ -1,13 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Creator/Email-MIME-Creator-1.451.ebuild,v 1.6 2007/06/21 16:01:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Creator/Email-MIME-Creator-1.451.ebuild,v 1.7 2007/07/10 23:33:27 mr_bones_ Exp $
 
 inherit perl-module
 
 DESCRIPTION="Email::MIME constructor for starting anew"
 HOMEPAGE="http://search.cpan.org/~rjbs/"
 SRC_URI="mirror://cpan/authors/id/R/RJ/RJBS/${P}.tar.gz"
-
 
 IUSE=""
 

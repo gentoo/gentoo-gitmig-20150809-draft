@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.22.ebuild,v 1.14 2006/12/10 13:48:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.22.ebuild,v 1.15 2007/07/10 23:33:29 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -30,4 +30,3 @@ DEPEND=">=dev-perl/XML-Parser-2.31
 src_compile() {
 	echo "" | perl-module_src_compile
 }
-

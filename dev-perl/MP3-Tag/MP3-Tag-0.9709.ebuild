@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/MP3-Tag-0.9709.ebuild,v 1.1 2007/01/02 14:02:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/MP3-Tag-0.9709.ebuild,v 1.2 2007/07/10 23:33:28 mr_bones_ Exp $
 
 IUSE=""
 
@@ -20,6 +20,5 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-makefile.patch
 }
-
 
 DEPEND="dev-lang/perl"

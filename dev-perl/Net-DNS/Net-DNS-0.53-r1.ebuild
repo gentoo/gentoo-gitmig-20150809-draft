@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.53-r1.ebuild,v 1.19 2006/10/11 02:35:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.53-r1.ebuild,v 1.20 2007/07/10 23:33:33 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -24,4 +24,3 @@ DEPEND="virtual/perl-Digest-MD5
 #SRC_TEST="do"
 mydoc="TODO"
 myconf="--no-online-tests"
-

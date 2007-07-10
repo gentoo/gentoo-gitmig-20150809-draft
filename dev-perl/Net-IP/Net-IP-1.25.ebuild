@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/Net-IP-1.25.ebuild,v 1.11 2007/03/05 12:16:50 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/Net-IP-1.25.ebuild,v 1.12 2007/07/10 23:33:27 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -16,6 +16,5 @@ IUSE=""
 SRC_TEST="do"
 
 mydoc="TODO"
-
 
 DEPEND="dev-lang/perl"

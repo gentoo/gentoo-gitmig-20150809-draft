@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DomainKeys/Mail-DomainKeys-0.84.ebuild,v 1.3 2006/11/05 17:04:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DomainKeys/Mail-DomainKeys-0.84.ebuild,v 1.4 2007/07/10 23:33:27 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -19,5 +19,3 @@ DEPEND=">=dev-perl/Net-DNS-0.34
 	dev-perl/Crypt-OpenSSL-RSA
 	test? ( dev-perl/Email-Address )
 	dev-lang/perl"
-
-

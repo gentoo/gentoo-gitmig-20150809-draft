@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/WWW-Bugzilla-0.4.ebuild,v 1.12 2006/08/06 01:08:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/WWW-Bugzilla-0.4.ebuild,v 1.13 2007/07/10 23:33:29 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -18,5 +18,3 @@ RDEPEND="dev-perl/WWW-Mechanize
 	dev-lang/perl"
 
 DEPEND="${RDEPEND}"
-
-

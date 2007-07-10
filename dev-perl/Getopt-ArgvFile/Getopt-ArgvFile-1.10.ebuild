@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-ArgvFile/Getopt-ArgvFile-1.10.ebuild,v 1.9 2007/01/15 22:27:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-ArgvFile/Getopt-ArgvFile-1.10.ebuild,v 1.10 2007/07/10 23:33:26 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -12,6 +12,5 @@ LICENSE="GPL-2"
 SRC_TEST="do"
 KEYWORDS="amd64 ia64 ppc sparc x86"
 IUSE=""
-
 
 DEPEND="dev-lang/perl"

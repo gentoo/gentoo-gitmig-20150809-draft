@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MessageID/Email-MessageID-1.35.1.ebuild,v 1.3 2007/06/30 15:38:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MessageID/Email-MessageID-1.35.1.ebuild,v 1.4 2007/07/10 23:33:29 mr_bones_ Exp $
 
 inherit perl-module versionator
 
@@ -10,7 +10,6 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="Generate world unique message-ids"
 HOMEPAGE="http://search.cpan.org/~rjbs/"
 SRC_URI="mirror://cpan/authors/id/R/RJ/RJBS/${MY_P}.tar.gz"
-
 
 IUSE=""
 
