@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/wxmaxima
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.3 2007/04/18 10:10:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.4 2007/07/10 03:35:55 nerdboy Exp $
+
+  10 Jul 2007; Steve Arnold <nerdboy@gentoo.org> wxmaxima-0.7.1.ebuild,
+  wxmaxima-0.7.2.ebuild:
+  Updated desktop category and added desktop_database_update to pkg_post.
+  Seemed like the right thing to do...
 
 *wxmaxima-0.7.2 (18 Apr 2007)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.1.ebuild,v 1.1 2007/02/23 11:33:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.1.ebuild,v 1.2 2007/07/10 03:35:55 nerdboy Exp $
 
-inherit eutils autotools wxwidgets
+inherit eutils autotools wxwidgets fdo-mime
 
 MYP=wxMaxima-${PV}
 
@@ -50,11 +50,19 @@ src_compile () {
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	insinto /usr/share/pixmaps/
-	newins maxima-new.png wxmaxima.png
-	make_desktop_entry wxmaxima wxMaxima wxmaxima
+	newicon maxima-new.png wxmaxima.png
+	make_desktop_entry wxmaxima "wxMaxima ${PV}" wxmaxima \
+	    "Science;Math;Education"
 
 	dosym ${PORTDIR}/licenses/${LICENSE} /usr/share/${PN}/COPYING
 	dodir /usr/share/doc/${PF}
 	dosym /usr/share/${PN}/README /usr/share/doc/${PF}/README
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
 }
