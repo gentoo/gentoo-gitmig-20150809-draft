@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.105 2007/07/09 01:28:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.106 2007/07/10 18:39:07 jer Exp $
+
+*opera-9.22.652 (10 Jul 2007)
+
+  10 Jul 2007; Jeroen Roovers <jer@gentoo.org> opera-9.22.651.ebuild,
+  +opera-9.22.652.ebuild:
+  New weekly, intel-* only this time, so no ppc or sparc. Removed sample URIs
+  from weekly ebuilds.
 
   09 Jul 2007; Mike Frysinger <vapier@gentoo.org> opera-9.21.ebuild,
   opera-9.21-r1.ebuild, opera-9.22.651.ebuild:
