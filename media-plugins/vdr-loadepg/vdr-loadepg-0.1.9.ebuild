@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-loadepg/vdr-loadepg-0.1.9.ebuild,v 1.1 2006/08/12 19:31:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-loadepg/vdr-loadepg-0.1.9.ebuild,v 1.2 2007/07/10 23:08:59 mr_bones_ Exp $
 
 inherit vdr-plugin eutils
 
@@ -22,4 +22,3 @@ src_install() {
 	doins ${S}/loadepg.{conf,equiv}
 	fowners -R vdr:vdr /etc/vdr/plugins/loadepg
 }
-

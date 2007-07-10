@@ -1,6 +1,6 @@
 # Copyright 2003-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.0.8-r1.ebuild,v 1.2 2007/06/19 12:02:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.0.8-r1.ebuild,v 1.3 2007/07/10 23:08:59 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -28,4 +28,3 @@ src_unpack() {
 	  -e 's+-I\$(FFMDIR)/libavcodec+-I$(FFMDIR)+' \
 	  -e 's+-L\$(FFMDIR)/libavcodec++'
 }
-

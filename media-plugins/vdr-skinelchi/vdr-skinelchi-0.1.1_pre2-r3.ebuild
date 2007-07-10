@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.1.1_pre2-r3.ebuild,v 1.3 2007/07/08 21:11:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.1.1_pre2-r3.ebuild,v 1.4 2007/07/10 23:08:59 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -37,4 +37,3 @@ src_unpack() {
 
 	sed -i DisplayMenu.h -e "s:uint64:uint64_t:"
 }
-

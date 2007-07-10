@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2.ebuild,v 1.2 2007/06/26 18:39:54 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2.ebuild,v 1.3 2007/07/10 23:09:00 mr_bones_ Exp $
 
 inherit vdr-plugin eutils multilib
 
@@ -56,7 +56,6 @@ enable_in_makefile() {
 		sed -i "/^#${opt}.*= 1/s-^#--" Makefile
 	done
 }
-
 
 src_unpack() {
 	vdr-plugin_src_unpack

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cpumon/vdr-cpumon-0.0.5-r1.ebuild,v 1.1 2007/07/08 21:23:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cpumon/vdr-cpumon-0.0.5-r1.ebuild,v 1.2 2007/07/10 23:08:59 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -16,4 +16,3 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.3.44"
 
 PATCHES="${FILESDIR}/${P}-vdr-1.5.diff"
-

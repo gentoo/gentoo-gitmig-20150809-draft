@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vcd/vdr-vcd-0.7.ebuild,v 1.4 2007/04/17 13:36:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vcd/vdr-vcd-0.7.ebuild,v 1.5 2007/07/10 23:09:00 mr_bones_ Exp $
 
 inherit eutils vdr-plugin
 
@@ -26,4 +26,3 @@ src_unpack() {
 		epatch "${FILESDIR}/${P}-vdr-1.5.diff"
 	fi
 }
-

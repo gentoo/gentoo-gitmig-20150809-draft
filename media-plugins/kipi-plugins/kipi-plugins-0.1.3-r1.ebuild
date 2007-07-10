@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.3-r1.ebuild,v 1.1 2007/03/17 20:17:47 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.3-r1.ebuild,v 1.2 2007/07/10 23:08:59 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -50,4 +50,3 @@ src_compile() {
 	myconf="$(use_with opengl) $(use_with gphoto2)"
 	kde_src_compile all
 }
-

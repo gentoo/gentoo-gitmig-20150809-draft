@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070515.ebuild,v 1.2 2007/07/03 14:22:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070515.ebuild,v 1.3 2007/07/10 23:09:00 mr_bones_ Exp $
 
 inherit vdr-plugin versionator
-
 
 DESCRIPTION="VDR Plugin: Software output-Device"
 HOMEPAGE="http://softdevice.berlios.de/"
@@ -137,4 +136,3 @@ src_install() {
 	insinto /usr/include/vdr-softdevice
 	doins *.h
 }
-

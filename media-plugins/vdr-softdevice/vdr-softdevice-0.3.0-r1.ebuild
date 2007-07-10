@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.3.0-r1.ebuild,v 1.4 2007/01/05 16:51:49 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.3.0-r1.ebuild,v 1.5 2007/07/10 23:09:00 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -40,7 +40,6 @@ DEPEND="${RDEPEND}
 	) )
 	fbcon? ( sys-kernel/linux-headers )
 	dev-util/pkgconfig"
-
 
 PATCHES="
 		${FILESDIR}/vdr-softdevice-0.2.3-shm-fullscreen.diff
@@ -130,4 +129,3 @@ src_install() {
 	insinto /usr/include/vdr-softdevice
 	doins *.h
 }
-

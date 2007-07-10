@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/vdr-streamdev-server-0.3.3_pre20060502.ebuild,v 1.5 2007/02/17 01:21:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-server/vdr-streamdev-server-0.3.3_pre20060502.ebuild,v 1.6 2007/07/10 23:08:59 mr_bones_ Exp $
 
 inherit vdr-plugin eutils
 
@@ -46,4 +46,3 @@ src_install() {
 	newins streamdevhosts.conf.example streamdevhosts.conf
 	chown vdr:vdr ${D}/etc/vdr -R
 }
-

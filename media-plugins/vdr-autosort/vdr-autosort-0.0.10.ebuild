@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-autosort/vdr-autosort-0.0.10.ebuild,v 1.3 2007/03/10 14:23:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-autosort/vdr-autosort-0.0.10.ebuild,v 1.4 2007/07/10 23:09:00 mr_bones_ Exp $
 
 inherit vdr-plugin eutils
 
@@ -27,7 +27,6 @@ pkg_preinst() {
 		fowners vdr:vdr /etc/vdr/channels.conf.autosort.bak
 	fi
 }
-
 
 pkg_postinst() {
 	vdr-plugin_pkg_postinst

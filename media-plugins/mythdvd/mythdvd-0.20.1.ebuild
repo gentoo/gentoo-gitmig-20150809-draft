@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.20.1.ebuild,v 1.2 2007/06/12 17:01:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.20.1.ebuild,v 1.3 2007/07/10 23:11:31 mr_bones_ Exp $
 
 inherit mythtv-plugins
 
@@ -9,7 +9,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="transcode vcd"
 
 RDEPEND="=media-plugins/mythvideo-${MY_PV}*
-	transcode? ( 	media-video/transcode
+	transcode? ( media-video/transcode
 			media-libs/libdvdread )"
 
 MTVCONF="$(use_enable transcode)

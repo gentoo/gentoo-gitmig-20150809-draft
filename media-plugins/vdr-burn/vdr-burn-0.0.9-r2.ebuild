@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.15 2007/02/17 01:17:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.16 2007/07/10 23:08:59 mr_bones_ Exp $
 
 inherit vdr-plugin eutils
 
@@ -88,4 +88,3 @@ pkg_postinst() {
 	elog "To change the templates, use the vdr-image plugin"
 	echo
 }
-

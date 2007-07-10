@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rotor/vdr-rotor-0.1.4.ebuild,v 1.4 2007/01/05 16:45:39 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rotor/vdr-rotor-0.1.4.ebuild,v 1.5 2007/07/10 23:08:59 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -32,4 +32,3 @@ src_unpack() {
 	sed -i ${S}/filter.c \
 		-e "s:libsi/:vdr/libsi/:"
 }
-

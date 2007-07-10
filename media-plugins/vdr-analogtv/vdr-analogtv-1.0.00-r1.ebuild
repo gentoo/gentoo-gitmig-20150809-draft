@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/vdr-analogtv-1.0.00-r1.ebuild,v 1.3 2007/01/05 16:22:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/vdr-analogtv-1.0.00-r1.ebuild,v 1.4 2007/07/10 23:09:00 mr_bones_ Exp $
 
 inherit vdr-plugin eutils
 
@@ -43,4 +43,3 @@ pkg_postinst()
 	elog "Please try the example-channels.conf-files"
 	elog "stored inside /usr/share/doc/${PF}/examples"
 }
-

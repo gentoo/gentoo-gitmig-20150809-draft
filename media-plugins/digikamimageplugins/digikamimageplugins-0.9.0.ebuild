@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.9.0.ebuild,v 1.4 2007/03/19 14:49:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.9.0.ebuild,v 1.5 2007/07/10 23:09:00 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -30,7 +30,6 @@ need-kde 3.5
 
 LANGS="br ca cs cy da de el en_GB es et fr ga he it ja lt mt nb nl nn pa pl pt pt_BR ru rw sr sr@Latn sv ta tr zh_CN"
 LANGS_DOC="da de et it nl pt pt_BR sv"
-
 
 src_unpack(){
 	kde_src_unpack

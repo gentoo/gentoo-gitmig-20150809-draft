@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.4.ebuild,v 1.8 2007/06/08 10:00:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.2.4.ebuild,v 1.9 2007/07/10 23:08:59 mr_bones_ Exp $
 
 inherit vdr-plugin eutils
 
@@ -20,7 +20,6 @@ DEPEND=">=media-video/vdr-1.3.20
 RDEPEND="${DEPEND}
 	>=media-tv/gentoo-vdr-scripts-0.2.2"
 
-
 VDRPLUGIN_MAKE_TARGET="all -j1"
 
 src_unpack() {
@@ -29,7 +28,6 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gentoo.diff
 }
-
 
 src_install() {
 

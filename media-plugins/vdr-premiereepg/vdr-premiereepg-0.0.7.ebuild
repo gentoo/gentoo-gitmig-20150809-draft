@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/vdr-premiereepg-0.0.7.ebuild,v 1.2 2007/01/04 11:39:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/vdr-premiereepg-0.0.7.ebuild,v 1.3 2007/07/10 23:09:00 mr_bones_ Exp $
 
 inherit vdr-plugin eutils
 
@@ -30,4 +30,3 @@ pkg_postinst() {
 	ewarn "You should delete your existing /var/vdr/video/epg.data,"
 	ewarn "as the Handling of event-IDs has been changed in this release."
 }
-

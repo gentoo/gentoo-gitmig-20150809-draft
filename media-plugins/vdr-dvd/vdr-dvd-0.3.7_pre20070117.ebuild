@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/vdr-dvd-0.3.7_pre20070117.ebuild,v 1.2 2007/03/13 12:43:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/vdr-dvd-0.3.7_pre20070117.ebuild,v 1.3 2007/07/10 23:09:00 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -31,4 +31,3 @@ vdr-plugin_src_unpack
 	# Version number fix
 	sed -i "s:0.3.6-b03:0.3.7_pre20070117:" dvd.h
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvonscreen/vdr-tvonscreen-0.7.1.ebuild,v 1.3 2006/11/13 09:48:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvonscreen/vdr-tvonscreen-0.7.1.ebuild,v 1.4 2007/07/10 23:08:59 mr_bones_ Exp $
 
 IUSE=""
 inherit vdr-plugin
@@ -15,4 +15,3 @@ LICENSE="GPL-2"
 DEPEND=">=media-video/vdr-1.3.18"
 
 PATCHES="${FILESDIR}/${P}-includes.diff ${FILESDIR}/${P}.diff"
-

@@ -1,6 +1,6 @@
 # Copyright 2003-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-em84xx/vdr-em84xx-0.0.13.ebuild,v 1.2 2007/07/02 15:09:21 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-em84xx/vdr-em84xx-0.0.13.ebuild,v 1.3 2007/07/10 23:08:59 mr_bones_ Exp $
 
 IUSE=""
 inherit vdr-plugin eutils
@@ -22,4 +22,3 @@ PATCHES="${FILESDIR}/${PV}/gcc4.diff"
 
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-0.0.13.sh"
 VDR_CONFD_FILE="${FILESDIR}/confd-0.0.13"
-

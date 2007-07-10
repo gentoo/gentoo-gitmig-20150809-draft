@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remoteosd/vdr-remoteosd-0.0.1.ebuild,v 1.1 2006/09/27 22:32:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remoteosd/vdr-remoteosd-0.0.1.ebuild,v 1.2 2007/07/10 23:09:00 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -17,4 +17,3 @@ DEPEND=">=media-video/vdr-1.4.0
 		>=media-plugins/vdr-svdrpservice-0.0.2"
 
 PATCHES="${FILESDIR}/${P}-include.patch"
-

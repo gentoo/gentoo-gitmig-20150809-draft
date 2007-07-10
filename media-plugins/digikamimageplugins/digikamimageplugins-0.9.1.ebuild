@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.9.1.ebuild,v 1.5 2007/05/20 18:54:44 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.9.1.ebuild,v 1.6 2007/07/10 23:09:00 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -34,7 +34,6 @@ LANGS="ar bg br ca cs cy da de el en_GB es et fi fr ga gl he is it ja ka lt ms
 mt nb nl nn pa pl pt pt_BR ru rw sk sr sr@Latn sv ta th tr uk vi zh_CN"
 
 LANGS_DOC="da de et it nl pt pt_BR sv"
-
 
 src_unpack(){
 	kde_src_unpack

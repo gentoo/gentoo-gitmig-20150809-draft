@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-yaepg/vdr-yaepg-0.0.2.1-r1.ebuild,v 1.1 2007/07/02 08:41:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-yaepg/vdr-yaepg-0.0.2.1-r1.ebuild,v 1.2 2007/07/10 23:08:59 mr_bones_ Exp $
 
 inherit vdr-plugin eutils
-
 
 MY_P=${VDRPLUGIN}-${PV}-rev2
 
@@ -42,4 +41,3 @@ src_unpack() {
 		epatch "${FILESDIR}/${P}-vdr-1.5.3.diff"
 	fi
 }
-

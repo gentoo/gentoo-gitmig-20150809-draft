@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrcd/vdr-vdrcd-0.0.10.1-r1.ebuild,v 1.4 2007/01/05 16:59:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrcd/vdr-vdrcd-0.0.10.1-r1.ebuild,v 1.5 2007/07/10 23:09:00 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -27,7 +27,6 @@ src_install() {
 
 	dobin ${FILESDIR}/mount-vdrcd.sh
 }
-
 
 pkg_postinst() {
 

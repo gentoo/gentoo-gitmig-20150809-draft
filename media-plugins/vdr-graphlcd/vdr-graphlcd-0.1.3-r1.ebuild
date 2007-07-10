@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.3-r1.ebuild,v 1.5 2007/06/08 10:05:46 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.3-r1.ebuild,v 1.6 2007/07/10 23:08:59 mr_bones_ Exp $
 
 inherit eutils vdr-plugin
 
@@ -81,4 +81,3 @@ pkg_postinst() {
 	elog "files in /etc/vdr/plugins/graphlcd/ to"
 	elog "/etc/vdr/plugins/graphlcd/fonts.conf"
 }
-

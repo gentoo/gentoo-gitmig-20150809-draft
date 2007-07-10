@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-actuator/vdr-actuator-1.0.3.ebuild,v 1.1 2006/05/02 18:47:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-actuator/vdr-actuator-1.0.3.ebuild,v 1.2 2007/07/10 23:09:00 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -21,4 +21,3 @@ src_unpack()
 
 	fix_vdr_libsi_include ${S}/filter.c
 }
-

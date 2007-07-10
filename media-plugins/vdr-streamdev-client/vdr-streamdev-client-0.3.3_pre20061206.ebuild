@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-client/vdr-streamdev-client-0.3.3_pre20061206.ebuild,v 1.2 2007/04/27 00:09:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev-client/vdr-streamdev-client-0.3.3_pre20061206.ebuild,v 1.3 2007/07/10 23:09:00 mr_bones_ Exp $
 
 inherit vdr-plugin eutils
 
@@ -34,4 +34,3 @@ src_unpack() {
 	sed -i libdvbmpeg/Makefile \
 		-e 's:CFLAGS =  -g -Wall -O2:CFLAGS = $(CXXFLAGS) :'
 }
-

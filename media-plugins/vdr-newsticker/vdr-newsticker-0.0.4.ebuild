@@ -1,6 +1,6 @@
 # Copyright 2003-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-newsticker/vdr-newsticker-0.0.4.ebuild,v 1.3 2007/05/24 07:48:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-newsticker/vdr-newsticker-0.0.4.ebuild,v 1.4 2007/07/10 23:08:59 mr_bones_ Exp $
 
 IUSE=""
 
@@ -24,4 +24,3 @@ src_install() {
 	keepdir /var/vdr/newsticker
 	chown vdr:vdr ${D}/var/vdr/newsticker
 }
-

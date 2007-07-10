@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pin/vdr-pin-0.0.20.ebuild,v 1.2 2007/01/05 16:41:16 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pin/vdr-pin-0.0.20.ebuild,v 1.3 2007/07/10 23:08:59 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -40,4 +40,3 @@ src_install() {
 	insinto /etc/vdr/reccmds
 	newins ${FILESDIR}/reccmds.pin.conf-0.0.16 reccmds.pin.conf
 }
-
