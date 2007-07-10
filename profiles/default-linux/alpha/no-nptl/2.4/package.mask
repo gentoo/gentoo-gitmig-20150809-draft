@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.20 2007/07/10 12:00:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.21 2007/07/10 13:38:44 armin76 Exp $
 
 
 # Raúl Porcel <armin76@gentoo.org> (22 Jun 2007)
@@ -173,6 +173,7 @@ x11-drivers/xf86-input-evdev
 >=gnome-base/gconf-2.16.0
 >=gnome-base/gnome-light-2.16.0
 >=app-crypt/seahorse-1.0
+>=app-accessibility/orca-1
 
 # Chris Gianelloni <wolf31o2@gentoo.org>
 # Since this is a 2.4-only profile, we cannot have any 2.6-based headers/kernels
