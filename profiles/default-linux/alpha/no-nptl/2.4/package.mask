@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.19 2007/06/22 18:30:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.20 2007/07/10 12:00:05 armin76 Exp $
 
 
 # Raúl Porcel <armin76@gentoo.org> (22 Jun 2007)
@@ -46,6 +46,7 @@ gnome-base/gnome-volume-manager
 gnome-extra/gnome-power-manager
 gnome-extra/hal-device-manager
 sys-apps/hal
+app-misc/hal-info
 sys-apps/hwinfo
 sys-apps/ivman
 sys-apps/pmount
