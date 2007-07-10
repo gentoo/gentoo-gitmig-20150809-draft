@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.6.0.ebuild,v 1.5 2007/07/10 13:04:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.6.0.ebuild,v 1.6 2007/07/10 13:07:57 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.rarlab.com/rar/rarlinux-${PV}.tar.gz"
 
 LICENSE="RAR"
 SLOT="0"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 
 RESTRICT="strip"
