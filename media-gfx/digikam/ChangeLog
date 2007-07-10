@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.91 2007/06/24 14:32:37 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.92 2007/07/10 02:43:49 keytoaster Exp $
+
+  10 Jul 2007; Tobias Heinlein <keytoaster@gentoo.org> digikam-0.9.2.ebuild:
+  Fixing new line problem in $DIRS, see bug 184776
 
 *digikam-0.9.2 (24 Jun 2007)
 
