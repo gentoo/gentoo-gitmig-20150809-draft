@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.17.ebuild,v 1.1 2007/06/22 00:02:35 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.17.ebuild,v 1.2 2007/07/10 23:25:11 jokey Exp $
 
 inherit distutils bash-completion elisp-common eutils
 
@@ -32,6 +32,8 @@ PYTHON_MODNAME="bzrlib"
 
 DOCS="doc/*.txt"
 
+# disable until bug #173301 is solved
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}

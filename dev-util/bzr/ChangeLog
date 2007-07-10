@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bzr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.35 2007/06/22 00:02:35 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.36 2007/07/10 23:25:11 jokey Exp $
+
+  10 Jul 2007; Markus Ullmann <jokey@gentoo.org> bzr-0.17.ebuild:
+  RESTRICT test as noted on bug #173301
 
 *bzr-0.17 (22 Jun 2007)
 
