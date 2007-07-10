@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.454 2007/06/20 20:34:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.455 2007/07/10 08:47:22 corsair Exp $
+
+  10 Jul 2007; Markus Rothe <corsair@gentoo.org> qt-4.3.0.ebuild:
+  Added ~ppc
 
   20 Jun 2007; Caleb Tennis <caleb@gentoo.org> qt-4.3.0.ebuild:
   Add -reduce-relocations switch, from bug #178535
