@@ -1,12 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/files/init.d_inspircd,v 1.1 2006/07/15 01:39:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/files/init.d_inspircd,v 1.2 2007/07/10 19:20:45 hansmi Exp $
 
 opts="${opts} rehash"
 
 depend() {
 	need net
+    provide ircd
 }
 
 start() {
