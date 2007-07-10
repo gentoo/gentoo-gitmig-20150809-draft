@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2918 2007/07/09 01:57:24 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2919 2007/07/10 17:50:55 armin76 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -793,7 +793,7 @@ mail-client/mail-notification:evolution - Provide an Evolution plugin
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:pop - Enable support for pop
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by sylpheed
-mail-client/mozilla-thunderbird:mozdom - Enable mozilla DOM
+mail-client/mozilla-thunderbird:mozdom - Enable Mozilla's DOM inspector
 mail-client/mozilla-thunderbird:moznopango - Disable pango during runtime
 mail-client/mozilla-thunderbird:replytolist - Enable reply-to-list plugin
 mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
