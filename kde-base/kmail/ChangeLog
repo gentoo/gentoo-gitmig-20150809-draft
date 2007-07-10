@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.111 2007/06/23 21:12:18 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.112 2007/07/10 05:45:11 philantrop Exp $
+
+*kmail-3.5.7-r1 (10 Jul 2007)
+
+  10 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kmail-3.5.7-filters.patch, +kmail-3.5.7-r1.ebuild:
+  Added a patch to restore KMail's mail filtering capabilities. Fixes bug 180244.
 
   23 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> kmail-3.5.7.ebuild:
   The tests for kmail are broken and therefore deactivated now. Fixes bug 183001.

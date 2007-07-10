@@ -1,0 +1,186 @@
+diff -Naur kmail-3.5.7.orig/kmail/folderstorage.cpp kmail-3.5.7/kmail/folderstorage.cpp
+--- kmail-3.5.7.orig/kmail/folderstorage.cpp	2007-05-14 09:54:39.000000000 +0200
++++ kmail-3.5.7/kmail/folderstorage.cpp	2007-07-09 23:01:26.000000000 +0200
+@@ -84,8 +84,6 @@
+ 
+   mHasChildren = HasNoChildren;
+   mContentsType = KMail::ContentsTypeMail;
+- 
+-  connect(this, SIGNAL(closed(KMFolder*)), mFolder, SIGNAL(closed()));  
+ }
+ 
+ //-----------------------------------------------------------------------------
+@@ -629,7 +627,7 @@
+   QString oldLoc, oldIndexLoc, oldIdsLoc, newLoc, newIndexLoc, newIdsLoc;
+   QString oldSubDirLoc, newSubDirLoc;
+   QString oldName;
+-  int rc=0;
++  int rc=0, openCount=mOpenCount;
+   KMFolderDir *oldParent;
+ 
+   assert(!newName.isEmpty());
+@@ -699,6 +697,11 @@
+     }
+   }
+ 
++  if (openCount > 0)
++  {
++    open("rename");
++    mOpenCount = openCount;
++  }
+   writeConfig();
+ 
+   // delete the old entry as we get two entries with the same ID otherwise
+@@ -708,7 +711,6 @@
+   emit locationChanged( oldLoc, newLoc );
+   emit nameChanged();
+   kmkernel->folderMgr()->contentsChanged();
+-  emit closed(folder()); // let the ticket owners regain
+   return rc;
+ }
+ 
+@@ -736,7 +738,6 @@
+   KConfig* config = KMKernel::config();
+   config->deleteGroup( "Folder-" + folder()->idString() );
+ 
+-  emit closed(folder());
+   emit removed(folder(), (rc ? false : true));
+ }
+ 
+@@ -744,6 +745,8 @@
+ //-----------------------------------------------------------------------------
+ int FolderStorage::expunge()
+ {
++  int openCount = mOpenCount;
++
+   assert(!folder()->name().isEmpty());
+ 
+   clearIndex( true, mExportsSernums );   // delete and remove from dict, if needed
+@@ -761,6 +764,12 @@
+   mDirty = false;
+   needsCompact = false; //we're cleared and truncated no need to compact
+ 
++  if (openCount > 0)
++  {
++    open("expunge");
++    mOpenCount = openCount;
++  }
++
+   mUnreadMsgs = 0;
+   mTotalMsgs = 0;
+   emit numUnreadMsgsChanged( folder() );
+diff -Naur kmail-3.5.7.orig/kmail/folderstorage.h kmail-3.5.7/kmail/folderstorage.h
+--- kmail-3.5.7.orig/kmail/folderstorage.h	2007-05-14 09:54:39.000000000 +0200
++++ kmail-3.5.7/kmail/folderstorage.h	2007-07-09 23:01:26.000000000 +0200
+@@ -418,9 +418,6 @@
+       emmitted first. */
+   void expunged( KMFolder* );
+ 
+-  /** Emitted when the folder was closed and ticket owners have to reopen */
+-  void closed( KMFolder* );
+-  
+   /** Emitted when the serial numbers of this folder were invalidated. */
+   void invalidated( KMFolder * );
+ 
+diff -Naur kmail-3.5.7.orig/kmail/kmfolder.cpp kmail-3.5.7/kmail/kmfolder.cpp
+--- kmail-3.5.7.orig/kmail/kmfolder.cpp	2007-05-14 09:54:39.000000000 +0200
++++ kmail-3.5.7/kmail/kmfolder.cpp	2007-07-09 23:01:26.000000000 +0200
+@@ -476,7 +476,6 @@
+ 
+ void KMFolder::close( const char *owner, bool force )
+ {
+-  // do not emit closed() in here - as this would regain too early
+   mStorage->close( owner, force );
+ }
+ 
+diff -Naur kmail-3.5.7.orig/kmail/kmfolder.h kmail-3.5.7/kmail/kmfolder.h
+--- kmail-3.5.7.orig/kmail/kmfolder.h	2007-05-14 09:54:39.000000000 +0200
++++ kmail-3.5.7/kmail/kmfolder.h	2007-07-09 23:01:26.000000000 +0200
+@@ -537,10 +537,6 @@
+     folder changed. */
+   void changed();
+ 
+-  /** Emitted when the folder is closed for real - ticket holders should
+-   * discard any messages */
+-  void closed();
+-
+   /** Emitted when the contents of a folder have been cleared
+      (new search in a search folder, for example) */
+   void cleared();
+diff -Naur kmail-3.5.7.orig/kmail/kmfoldermbox.cpp kmail-3.5.7/kmail/kmfoldermbox.cpp
+--- kmail-3.5.7.orig/kmail/kmfoldermbox.cpp	2007-05-14 09:54:39.000000000 +0200
++++ kmail-3.5.7/kmail/kmfoldermbox.cpp	2007-07-09 23:01:26.000000000 +0200
+@@ -264,7 +264,7 @@
+   if (mOpenCount <= 0 || !mStream) { mOpenCount = 0; return; }
+   if (mOpenCount > 0) mOpenCount--;
+   if (mOpenCount > 0 && !aForced) { assert(mStream); return; }
+-
++  
+ #if 0 // removed hack that prevented closing system folders (see kmail-devel discussion about mail expiring)
+   if ( (folder() != kmkernel->inboxFolder())
+         && folder()->isSystemFolder() && !aForced )
+@@ -1246,11 +1246,17 @@
+ {
+   // This is called only when the user explicitely requests compaction,
+   // so we don't check needsCompact.
++  int openCount = mOpenCount;
+ 
+   KMail::MboxCompactionJob* job = new KMail::MboxCompactionJob( folder(), true /*immediate*/ );
+   int rc = job->executeNow( silent );
+   // Note that job autodeletes itself.
+ 
++  if (openCount > 0)
++  {
++    open("mboxcompact");
++    mOpenCount = openCount;
++  }
+   // If this is the current folder, the changed signal will ultimately call
+   // KMHeaders::setFolderInfoStatus which will override the message, so save/restore it
+   QString statusMsg = BroadcastStatus::instance()->statusMsg();
+diff -Naur kmail-3.5.7.orig/kmail/kmheaders.cpp kmail-3.5.7/kmail/kmheaders.cpp
+--- kmail-3.5.7.orig/kmail/kmheaders.cpp	2007-05-14 09:54:39.000000000 +0200
++++ kmail-3.5.7/kmail/kmheaders.cpp	2007-07-09 23:01:26.000000000 +0200
+@@ -673,8 +673,6 @@
+                  this, SLOT(folderCleared()));
+       disconnect(mFolder, SIGNAL(expunged( KMFolder* )),
+                  this, SLOT(folderCleared()));
+-      disconnect(mFolder, SIGNAL(closed()),
+-                 this, SLOT(folderClosed()));
+       disconnect( mFolder, SIGNAL( statusMsg( const QString& ) ),
+                   BroadcastStatus::instance(), SLOT( setStatusMsg( const QString& ) ) );
+       disconnect(mFolder, SIGNAL(viewConfigChanged()), this, SLOT(reset()));
+@@ -708,8 +706,6 @@
+               this, SLOT(folderCleared()));
+       connect(mFolder, SIGNAL(expunged( KMFolder* )),
+                  this, SLOT(folderCleared()));
+-      connect(mFolder, SIGNAL(closed()),
+-                 this, SLOT(folderClosed()));
+       connect(mFolder, SIGNAL(statusMsg(const QString&)),
+               BroadcastStatus::instance(), SLOT( setStatusMsg( const QString& ) ) );
+       connect(mFolder, SIGNAL(numUnreadMsgsChanged(KMFolder*)),
+@@ -2565,13 +2561,6 @@
+     emit selected(0);
+ }
+ 
+-
+-void KMHeaders::folderClosed()
+-{
+-    mFolder->open( "kmheaders" );
+-    folderCleared();
+-}
+-
+ bool KMHeaders::writeSortOrder()
+ {
+   QString sortFile = KMAIL_SORT_FILE(mFolder);
+diff -Naur kmail-3.5.7.orig/kmail/kmheaders.h kmail-3.5.7/kmail/kmheaders.h
+--- kmail-3.5.7.orig/kmail/kmheaders.h	2007-05-14 09:54:39.000000000 +0200
++++ kmail-3.5.7/kmail/kmheaders.h	2007-07-09 23:01:26.000000000 +0200
+@@ -221,8 +221,6 @@
+   void msgChanged();
+   /** For when the folder has been cleared */
+   void folderCleared();
+-  /** For when the folder has been cleared */
+-  void folderClosed();
+   /** For when the message with the given message id has been added to a folder */
+   void msgAdded(int);
+   /** For when the message with the given id has been removed for a folder */
