@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.55 2007/07/01 09:49:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.56 2007/07/10 17:59:06 drac Exp $
+
+  10 Jul 2007; Samuli Suominen <drac@gentoo.org> bmpx-0.36.1.ebuild:
+  Add dep for media-libs/alsa-lib.
 
   01 Jul 2007; Samuli Suominen <drac@gentoo.org> bmpx-0.36.1.ebuild:
   Remove old style dbus dep for bug 183696.

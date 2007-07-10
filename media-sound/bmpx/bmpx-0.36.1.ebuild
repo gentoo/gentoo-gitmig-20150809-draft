@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.36.1.ebuild,v 1.2 2007/07/01 09:49:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.36.1.ebuild,v 1.3 2007/07/10 17:59:06 drac Exp $
 
 inherit fdo-mime eutils versionator
 
@@ -43,8 +43,8 @@ RDEPEND=">=dev-libs/glib-2.10
 	ofa? ( >=media-libs/libofa-0.9.3 )
 	hal? ( >=sys-apps/hal-0.5.7.1 )
 	p2p? ( >=media-libs/moodriver-0.20 )
-	modplug? ( >=media-libs/libmodplug-0.8 )"
-
+	modplug? ( >=media-libs/libmodplug-0.8 )
+	media-libs/alsa-lib"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.17
 	nls? ( >=sys-devel/gettext-0.14.1
