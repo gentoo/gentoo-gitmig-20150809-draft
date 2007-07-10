@@ -1,0 +1,14 @@
+diff -Nru lcdproc-0.0.10.o/lcd.c lcdproc-0.0.10/lcd.c
+--- lcdproc-0.0.10.o/lcd.c	Thu Nov  4 17:38:44 2004
++++ lcdproc-0.0.10/lcd.c	Sun Jan  9 19:27:28 2005
+@@ -586,7 +586,7 @@
+   if ( offset || !( ShowStates && ((t%LcdSetup.FullCycle) >= LcdSetup.TimeCycle) )) {  
+     if (wid > 19) 
+       snprintf(string,wid+1,"<%s %02d.%02d %02d:%02d:%02d>",
+-        WeekDayName(now->tm_wday), now->tm_mday, now->tm_mon+1, now->tm_hour, now->tm_min,now->tm_sec);
++        *WeekDayName(now->tm_wday), now->tm_mday, now->tm_mon+1, now->tm_hour, now->tm_min,now->tm_sec);
+     else
+       snprintf(string,wid+1,"<%02d.%02d %02d:%02d:%02d>",
+         now->tm_mday, now->tm_mon+1, now->tm_hour, now->tm_min,now->tm_sec);
+Binary files lcdproc-0.0.10.o/lcd.o and lcdproc-0.0.10/lcd.o differ
+Binary files lcdproc-0.0.10.o/libvdr-lcdproc.so and lcdproc-0.0.10/libvdr-lcdproc.so differ
