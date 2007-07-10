@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.7 2007/07/06 11:37:31 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.8 2007/07/10 17:16:49 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -28,7 +28,7 @@
 # re-emerge ghc (or ghc-bin). People using vanilla gcc can switch between
 # gcc-3.x and 4.x with no problems.
 
-inherit base eutils flag-o-matic toolchain-funcs ghc-package check-reqs
+inherit base eutils flag-o-matic toolchain-funcs ghc-package
 
 DESCRIPTION="The Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
@@ -63,6 +63,7 @@ PROVIDE="virtual/ghc"
 
 RDEPEND="
 	>=sys-devel/gcc-2.95.3
+	>=sys-devel/binutils-2.17
 	>=dev-lang/perl-5.6.1
 	>=dev-libs/gmp-4.1
 	=sys-libs/readline-5*"
@@ -208,11 +209,6 @@ src_unpack() {
 		# If we're using the testsuite then move it to into the build tree
 		#	use test && mv "${WORKDIR}/testsuite" "${S}/"
 
-		# This is a hack for ia64. We can persuade ghc to avoid mangler errors
-		# if we turn down the optimisations in one problematic module.
-		use ia64 && sed -i -e 's/OPTIONS_GHC/OPTIONS_GHC -O0 -optc-O/' \
-			"${S}/libraries/base/GHC/Float.lhs"
-
 		# Don't strip binaries on install. See QA warnings in bug #140369.
 		sed -i -e 's/SRC_INSTALL_BIN_OPTS	+= -s//' ${S}/mk/config.mk.in
 
@@ -259,32 +255,15 @@ src_compile() {
 		# reported as bug #111183
 		echo "SRC_HC_OPTS+=-fno-warn-deprecations" >> mk/build.mk
 
-		# force the config variable ArSupportsInput to be unset;
-		# ar in binutils >= 2.14.90.0.8-r1 seems to be classified
-		# incorrectly by the configure script
-		echo "ArSupportsInput:=" >> mk/build.mk
-
-		# Some arches do support some ghc features even though they're off by default
-		use ia64 && echo "GhcWithInterpreter=YES" >> mk/build.mk
-
-		# Workaround for threaded RTS bugs on sparc in ghc-6.6
-		# This is rather draconian, hopefully upstream fixes this soon.
-		if use sparc; then
+		# GHC build system knows to build unregisterised on alpha and hppa,
+		# but we have to tell it to build unregisterised on some other arches
+		if use ia64 || use ppc64 || use sparc; then
 		  echo "GhcUnregisterised=YES" >> mk/build.mk
 		  echo "GhcWithNativeCodeGen=NO" >> mk/build.mk
 		  echo "GhcWithInterpreter=NO" >> mk/build.mk
 		  echo "SplitObjs=NO" >> mk/build.mk
 		  echo "GhcRTSWays := debug" >> mk/build.mk
 		  echo "GhcNotThreaded=YES" >> mk/build.mk
-		fi
-
-		# The SplitObjs feature makes 'ar'/'ranlib' take loads of RAM:
-		CHECKREQS_MEMORY="200"
-		if ! check_reqs_conditional; then
-		  elog "Turning off ghc's 'Split Objs' feature because this machine"
-		  elog "does not have enough RAM for it. This will have the effect"
-		  elog "of making binaries produced by ghc considerably larger."
-		  echo "SplitObjs=NO" >> mk/build.mk
 		fi
 
 		econf \
