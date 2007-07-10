@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.5.ebuild,v 1.17 2007/02/28 22:22:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.5.ebuild,v 1.18 2007/07/10 23:00:46 uberlord Exp $
 
 inherit flag-o-matic
 
@@ -44,13 +44,14 @@ src_compile() {
 		-e '/docdir =/s:=.*/doc:= $(datadir)/doc/'${PF}'/html:' \
 		doc/Makefile.in || die "sed html doc"
 
-	local myconf=""
+	local myconf= bindir=/bin
 	if ! use userland_GNU ; then
 		myconf="--program-prefix=g"
+		bindir=/usr/bin
 	fi
 	use static && append-ldflags -static
 	econf \
-		--bindir=/bin \
+		--bindir=${bindir} \
 		$(use_enable nls) \
 		${myconf} \
 		|| die "Configure failed"
