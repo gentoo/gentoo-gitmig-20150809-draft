@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/tomcat-native-1.1.10.ebuild,v 1.1 2007/05/22 20:53:28 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/tomcat-native-1.1.10.ebuild,v 1.2 2007/07/10 22:52:41 wltjr Exp $
 
 inherit eutils java-pkg-2
 
@@ -13,7 +13,8 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="Apache-2.0"
 
 RDEPEND="=dev-libs/apr-1*
-	dev-libs/openssl"
+	dev-libs/openssl
+	>=virtual/jre-1.5"
 
 DEPEND=">=virtual/jdk-1.5
 	${RDEPEND}"

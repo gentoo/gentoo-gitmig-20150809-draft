@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-native
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.7 2007/05/22 20:53:28 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.8 2007/07/10 22:52:41 wltjr Exp $
+
+  10 Jul 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  tomcat-native-1.1.8.ebuild, tomcat-native-1.1.10.ebuild:
+  Added rdep of jre per bug #181668
 
 *tomcat-native-1.1.10 (22 May 2007)
 
