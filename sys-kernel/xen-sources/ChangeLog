@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.39 2007/07/02 15:33:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.40 2007/07/10 19:42:31 marineam Exp $
+
+*xen-sources-2.6.16.52 (10 Jul 2007)
+
+  10 Jul 2007; Michael Marineau <marineam@gentoo.org>
+  +files/xen-sources-2.6.16.52-ipt-reject-fix.patch,
+  +xen-sources-2.6.16.52.ebuild:
+  Version bump and fix ip tables REJECT compile failure
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   xen-sources-2.6.16.28.ebuild, xen-sources-2.6.16.28-r1.ebuild:
