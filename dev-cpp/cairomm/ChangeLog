@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/cairomm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.15 2007/06/27 19:34:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.16 2007/07/10 17:33:18 jer Exp $
+
+  10 Jul 2007; Jeroen Roovers <jer@gentoo.org> cairomm-1.2.4.ebuild:
+  Stable for HPPA (bug #180420).
 
   27 Jun 2007; Christoph Mende <angelos@gentoo.org> cairomm-1.2.4.ebuild:
   Stable on amd64
