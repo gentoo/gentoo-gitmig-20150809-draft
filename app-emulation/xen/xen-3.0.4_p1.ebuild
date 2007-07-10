@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.4_p1.ebuild,v 1.3 2007/07/09 23:33:17 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.4_p1.ebuild,v 1.4 2007/07/10 17:01:29 marineam Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -73,7 +73,7 @@ src_install() {
 	use debug && myopt="${myopt} debug=y"
 	use pae && myopt="${myopt} pae=y"
 
-	make DESTDIR="${D}" ${myopt} install-xen || die "install failed"
+	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${D}" ${myopt} install-xen || die "install failed"
 }
 
 pkg_postinst() {
