@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.8 2007/06/26 17:47:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.9 2007/07/10 06:12:21 nerdboy Exp $
 
-inherit eutils libtool autotools wxwidgets flag-o-matic
+inherit eutils libtool autotools wxwidgets flag-o-matic fdo-mime
 
 DESCRIPTION="Cross-platform GUI front-end for the Subversion revision system."
 HOMEPAGE="http://rapidsvn.tigris.org/"
@@ -86,13 +86,27 @@ src_compile() {
 
 src_install() {
 	einstall || die "einstall failed"
+
 	doman doc/manpage/rapidsvn.1 || die "doman failed"
+
 	doicon src/res/rapidsvn.ico
 	make_desktop_entry rapidsvn "RapidSVN ${PV}" \
-	    "/usr/share/pixmaps/rapidsvn.ico"
+	    "/usr/share/pixmaps/rapidsvn.ico" \
+	    "RevisionControl;Development"
+
 	dodoc HACKING.txt TRANSLATIONS
+
 	if use doc ; then
 	    dodoc AUTHORS CHANGES NEWS README
 	    dohtml ${S}/doc/svncpp/html/*
 	fi
 }
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+}
+
