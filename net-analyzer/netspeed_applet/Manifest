@@ -7,14 +7,14 @@ EBUILD netspeed_applet-0.12.1.ebuild 775 RMD160 921a28aa4e051e4ff63aaec6a6af9fab
 MD5 421728f7db7016bc12b5fae1d77dac5f netspeed_applet-0.12.1.ebuild 775
 RMD160 921a28aa4e051e4ff63aaec6a6af9fab34c827bd netspeed_applet-0.12.1.ebuild 775
 SHA256 c5e4784f2b2d8a6986c54d9b9cfb69669c204fe272f1e6f1df300ec66f9a3681 netspeed_applet-0.12.1.ebuild 775
-EBUILD netspeed_applet-0.14.ebuild 751 RMD160 53a5d12141cc622012da464ef9f95d88b91ca74a SHA1 d9207da7e1c2d1c04a8a4f5e6e51e7d0cd263126 SHA256 c608e6cf777e71ad8f3a881094a2d2f548b8fd3ec7aa43b8ec93584c33cbba79
-MD5 4bf25bfa630f1fde873e7af2b40426eb netspeed_applet-0.14.ebuild 751
-RMD160 53a5d12141cc622012da464ef9f95d88b91ca74a netspeed_applet-0.14.ebuild 751
-SHA256 c608e6cf777e71ad8f3a881094a2d2f548b8fd3ec7aa43b8ec93584c33cbba79 netspeed_applet-0.14.ebuild 751
-MISC ChangeLog 3415 RMD160 75db5a9eb80e36f8e59dc413036d6d20da25ad29 SHA1 2a5fa73023d4e096cdd847995d11efe5ca8186b1 SHA256 69eda0abf54c1de2f689a4834813b3b798711c1543f674a37add680b600584db
-MD5 d5881eb6d92f4e5e65c2234011dbca5f ChangeLog 3415
-RMD160 75db5a9eb80e36f8e59dc413036d6d20da25ad29 ChangeLog 3415
-SHA256 69eda0abf54c1de2f689a4834813b3b798711c1543f674a37add680b600584db ChangeLog 3415
+EBUILD netspeed_applet-0.14.ebuild 748 RMD160 5f8dc4b6e6a7aa19fd222ccce34e30dfdc56ccb7 SHA1 2ff451a0e603b9e821e6034fbf918f26b158d069 SHA256 a1d2d84bdb04d2b76d7c6e8a0d47795c0c4ae2a0e063e89cddb88bdc8c00906b
+MD5 0c7748421697cd5e9a8a1dd5dfa69cec netspeed_applet-0.14.ebuild 748
+RMD160 5f8dc4b6e6a7aa19fd222ccce34e30dfdc56ccb7 netspeed_applet-0.14.ebuild 748
+SHA256 a1d2d84bdb04d2b76d7c6e8a0d47795c0c4ae2a0e063e89cddb88bdc8c00906b netspeed_applet-0.14.ebuild 748
+MISC ChangeLog 3525 RMD160 b53293bd45cc048dfd9eef17e434aafced8994c3 SHA1 58181fe02551a1b16eb8b4c649d213fe2e00f06a SHA256 66686ba008470b9e50ce38bb4767625387ff817899bbac696909fbb6a51052d6
+MD5 b908f4cf0d13582c9f1202266ae493ad ChangeLog 3525
+RMD160 b53293bd45cc048dfd9eef17e434aafced8994c3 ChangeLog 3525
+SHA256 66686ba008470b9e50ce38bb4767625387ff817899bbac696909fbb6a51052d6 ChangeLog 3525
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -26,9 +26,9 @@ MD5 892ba1ad7d5a23abecdc20a11c13e5a8 files/digest-netspeed_applet-0.14 262
 RMD160 0d26e44aceb24f27d073dc345a8df2f74fc0d578 files/digest-netspeed_applet-0.14 262
 SHA256 6aa31263645018b5c4f1c2ea696817c7fe1f58a3bc586cfdedaee66ff317976c files/digest-netspeed_applet-0.14 262
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
+Version: GnuPG v1.4.7 (GNU/Linux)
 
-iD8DBQFGkR/qKhnDs22gwa8RAn4wAKCHaiS9nKowVCOtYnYYwYtOTGhRfACg8PaH
-CHIHhlcu5R3du99MkczIg2c=
-=SccK
+iD8DBQFGkzfTNQqtfCuFneMRAkw1AJ4yYpQhXUoiOySbdAmb37r7/+1qzACePsT1
+tQ1MxHkDiFVHdurB+xXSiXg=
+=o4sW
 -----END PGP SIGNATURE-----
