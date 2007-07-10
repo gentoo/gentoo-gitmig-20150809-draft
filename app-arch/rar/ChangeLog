@@ -1,8 +1,9 @@
 # ChangeLog for app-arch/rar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.47 2007/07/10 12:48:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.48 2007/07/10 13:04:21 angelos Exp $
 
-  10 Jul 2007; Christoph Mende <angelos@gentoo.org> rar-3.7.0.ebuild:
+  10 Jul 2007; Christoph Mende <angelos@gentoo.org> rar-3.6.0.ebuild,
+  rar-3.7.0.ebuild:
   Stable on amd64
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> rar-3.5.1.ebuild,
