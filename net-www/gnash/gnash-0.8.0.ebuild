@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.0.ebuild,v 1.2 2007/06/12 11:15:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.0.ebuild,v 1.3 2007/07/10 07:20:47 genstef Exp $
 
-inherit nsplugins kde-functions qt3 multilib
+inherit nsplugins kde-functions qt3 multilib flag-o-matic autotools
 set-kdedir
 
 DESCRIPTION="Gnash is a GNU Flash movie player that supports many SWF v7 features"
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="agg gstreamer ffmpeg kde nsplugin xml video_cards_i810"
+IUSE="agg gstreamer ffmpeg kde mad nsplugin xml video_cards_i810"
 #dmalloc, broken see bug 142939
 #dmalloc? ( dev-libs/dmalloc )
 #		$(use_enable dmalloc) \
@@ -24,7 +24,7 @@ RDEPEND="
 	media-libs/libogg
 	media-libs/libpng
 	net-misc/curl
-	!ffmpeg? ( media-libs/libmad )
+	mad? ( media-libs/libmad )
 	ffmpeg? ( media-video/ffmpeg )
 	gstreamer? ( media-libs/gstreamer
 		|| (
@@ -63,6 +63,28 @@ pkg_setup() {
 		eerror "dev-libst/boost has to be built with the 'threads' USE flag"
 		die "dev-libs/boost not built with threads"
 	fi
+
+	if use mad && ( use !ffmpeg && use !gstreamer ) && ( use nsplugin || use xml ); then
+		eerror "Building Gnash using the mad media handler is incompatible with the nsplugin or xml USE flags"
+		die "nsplugin and xml not supported with mad media handler"
+	fi
+	
+	if use !mad && use !ffmpeg && use !gstreamer; then
+		eerror "You are trying to build Gnash without choosing a media handler"
+		eerror "Please enable one of the following ffmpeg,gstreamer or mad(mp3 audio only)"
+		die "No media handler selected !"
+	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	#as-needed breaks, see bug 183714
+	#
+	# TODO - does not work for me
+	#epatch ${FILESDIR}/gnash-no-asneeded.patch
+	#filter-ldflags -Wl,--as-needed --as-needed
+	#eautoconf
 }
 
 src_compile() {
@@ -84,15 +106,17 @@ src_compile() {
 	#				GTK
 	#				SDL -> has no controls, we do not USE it
 	#$(use_enable gtk glext) with USE=-gtk, fails to detect gtkglext, bug 135010
-	#--enable-sound=gst,sdl
-	if use gstreamer; then
-		myconf="${myconf} --enable-sound=gst"
-	else
-		myconf="${myconf} --enable-sound=sdl"
+	#--enable-media=gst||ffmpeg||mad
+	if use mad && use !ffmpeg && use !gstreamer; then
+		myconf="${myconf} --enable-media=mad"
+	fi
+
+	if use gstreamer && use !ffmpeg; then
+		myconf="${myconf} --enable-media=gst"
 	fi
 
 	if use ffmpeg; then
-		myconf="${myconf} --with-mp3-decoder=ffmpeg"
+		myconf="${myconf} --enable-media=ffmpeg"
 	fi
 
 	if use kde; then
@@ -106,7 +130,7 @@ src_compile() {
 		$(use_enable nsplugin plugin) \
 		$(use_enable xml) \
 		$(use_enable video_cards_i810 i810-lod-bias) \
-		--without-gcc-arch \
+		--without-gcc-arch --disable-debugger \
 		${myconf} || die "econf failed"
 	emake -j1 || die "emake failed"
 }

@@ -1,6 +1,12 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.46 2007/06/20 02:01:21 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.47 2007/07/10 07:20:47 genstef Exp $
+
+  10 Jul 2007; Stefan Schweizer <genstef@gentoo.org> -gnash-0.7.2.ebuild,
+  -gnash-0.7.2_p20099999.ebuild, gnash-0.8.0.ebuild, gnash-9999.ebuild:
+  Fix flawed media and sound setting logic thanks to Harley Peters
+  <harley@thepetersclan.com> in bug 184105 also attempt to fix as-needed bug
+  183714
 
 *gnash-9999 (20 Jun 2007)
 
