@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-9999.ebuild,v 1.2 2007/07/10 07:20:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-9999.ebuild,v 1.3 2007/07/10 18:25:01 mr_bones_ Exp $
 
 WANT_AUTOCONF=latest
 inherit nsplugins autotools cvs kde-functions qt3 multilib
@@ -71,7 +71,7 @@ pkg_setup() {
 		eerror "Building Gnash using the mad media handler is incompatible with the nsplugin or xml USE flags"
 		die "nsplugin and xml not supported with mad media handler"
 	fi
-	
+
 	if use !mad && use !ffmpeg && use !gstreamer; then
 		eerror "You are trying to build Gnash without choosing a media handler"
 		eerror "Please enable one of the following ffmpeg,gstreamer or mad(mp3 audio only)"
