@@ -1,6 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.537 2007/07/08 20:31:18 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.538 2007/07/10 18:54:27 phreak Exp $
+
+*apache-2.2.4-r9 (10 Jul 2007)
+
+  10 Jul 2007; Christian Heim <phreak@gentoo.org> +apache-2.2.4-r9.ebuild:
+  Revision bump to force the removal of *.conf~ files in
+  /etc/apache2/modules.d, which seem to have slipped in with the -r7
+  patchtarball.
 
 *apache-2.2.4-r8 (08 Jul 2007)
 
