@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.73 2007/07/09 03:41:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.74 2007/07/10 12:27:31 gustavoz Exp $
+
+  10 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> cpio-2.8.ebuild:
+  Stable on sparc wrt #184454
 
   09 Jul 2007; Jeroen Roovers <jer@gentoo.org> cpio-2.8.ebuild:
   Stable for HPPA (bug #184454).
