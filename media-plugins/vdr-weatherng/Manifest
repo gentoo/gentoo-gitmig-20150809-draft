@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX commands.weatherng.conf 119 RMD160 d14de92c63ba9680d31fb881d5da08e55389a227 SHA1 feb18f87a16d26d33b998ffbd40ecedb9a01455b SHA256 02a23e5cef6e3131ca79734e8ad0f87dcbbe6e720416101bb903128f59b8b98a
 MD5 ecd213d08b8b9809b4bdb46af714cf83 files/commands.weatherng.conf 119
 RMD160 d14de92c63ba9680d31fb881d5da08e55389a227 files/commands.weatherng.conf 119
@@ -52,10 +49,10 @@ EBUILD vdr-weatherng-0.0.8_pre2.ebuild 1507 RMD160 af58a93f013780ecb7ece6912d8ec
 MD5 3caf1a1ec961d41cbe81736f8f855d44 vdr-weatherng-0.0.8_pre2.ebuild 1507
 RMD160 af58a93f013780ecb7ece6912d8ece6e88772f9f vdr-weatherng-0.0.8_pre2.ebuild 1507
 SHA256 4233f38364853d351dcf9cd2a69533afe23c5dd157e94dc684c1a83001c0ec5b vdr-weatherng-0.0.8_pre2.ebuild 1507
-EBUILD vdr-weatherng-0.0.8_pre3.ebuild 1894 RMD160 8927761d888681aed3903a1943b45bb73b3d200f SHA1 b0a5fad6e87b395c4467bab0f70b7d72dc63cc97 SHA256 382a19fca6d76803eb5553c67a77d2861fdb4ea6869998f04caf92f84fda85b9
-MD5 a505345ade80928c0529a1945c2f8406 vdr-weatherng-0.0.8_pre3.ebuild 1894
-RMD160 8927761d888681aed3903a1943b45bb73b3d200f vdr-weatherng-0.0.8_pre3.ebuild 1894
-SHA256 382a19fca6d76803eb5553c67a77d2861fdb4ea6869998f04caf92f84fda85b9 vdr-weatherng-0.0.8_pre3.ebuild 1894
+EBUILD vdr-weatherng-0.0.8_pre3.ebuild 1898 RMD160 fd52840a4d52ceac64506d1f502f30362570c620 SHA1 efda277c491ffd5a721eba069126bfe49f42c697 SHA256 5ad4a1ba372975e13ff47f52774ec74b67dad970098980338526a08f5e57f63d
+MD5 c30b0133aaec0cd0188da6c42316f37c vdr-weatherng-0.0.8_pre3.ebuild 1898
+RMD160 fd52840a4d52ceac64506d1f502f30362570c620 vdr-weatherng-0.0.8_pre3.ebuild 1898
+SHA256 5ad4a1ba372975e13ff47f52774ec74b67dad970098980338526a08f5e57f63d vdr-weatherng-0.0.8_pre3.ebuild 1898
 MISC ChangeLog 2976 RMD160 d6c71eb7860f1d76e394c636db76b5ecc94b602b SHA1 12c925875e56b71584aced41966f7684b2daf912 SHA256 41245c8b685c21f9cfbcd5ba8c9825d4c3f906deef8fe07d6f0ae5d63825a8f7
 MD5 35972236631760dfb19e6b2773945077 ChangeLog 2976
 RMD160 d6c71eb7860f1d76e394c636db76b5ecc94b602b ChangeLog 2976
@@ -73,11 +70,3 @@ SHA256 82593343dcc06b6fc3ca423f05fb04b37ca5a6e29a26247964eaa7959f6f1485 files/di
 MD5 d4cb29e51c6c67e3a72c268d5011284f files/digest-vdr-weatherng-0.0.8_pre3 265
 RMD160 d87fccad14d061e802e44b2e188f21a926020aa5 files/digest-vdr-weatherng-0.0.8_pre3 265
 SHA256 694610fdf3d30a5f8e93aca3ebb1939abd82c316915ce320fb33924ff7e1a07a files/digest-vdr-weatherng-0.0.8_pre3 265
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-Comment: added by hd_brummy@gentoo.org
-
-iD8DBQFGj9Qidn07HTTCgIoRAnpzAJsH7xcT2KbaGGZ7bJSQ9BNhIMpi1wCgs3AH
-XSK//hklvg0SW+q4Cx4dpXo=
-=y0ms
------END PGP SIGNATURE-----

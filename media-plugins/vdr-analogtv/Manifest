@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX vdr-analogtv-sane-c++.diff 1682 RMD160 1bbf8308f62245571444b053127674bc992dd723 SHA1 a2719c2a3460fc7bac1766f0c2ecfb5567e8d0cf SHA256 46bbccf5b72c601aacccfd00dbdcf8e2ed35a6bf924d3649e0c57ec6238332ce
 MD5 e46e02a8406effdc9313012734c435a3 files/vdr-analogtv-sane-c++.diff 1682
 RMD160 1bbf8308f62245571444b053127674bc992dd723 files/vdr-analogtv-sane-c++.diff 1682
 SHA256 46bbccf5b72c601aacccfd00dbdcf8e2ed35a6bf924d3649e0c57ec6238332ce files/vdr-analogtv-sane-c++.diff 1682
 DIST vdr-analogtv-1.0.00.tar.bz2 142866 RMD160 b4a6c7e536005584303acf2166d0b987f6f2f7fd SHA1 b638b970864f62f7a92d9fcdd4e5fb1d8bbc7af9 SHA256 82a47a60392aaaf17df6d5932bc2a8e84ad367982cf60f0fc105cbe0af105dc4
-EBUILD vdr-analogtv-1.0.00-r1.ebuild 1020 RMD160 f55fd8408dd012919b9e24cb7c0354d243ae7972 SHA1 672f6a18348e6786d13272db446c0431059998d5 SHA256 9bfd53687806625d478c0a5ee63b9ea8820f89481938fccd01c89c84c36dceeb
-MD5 8d15e33a022d78b47774c4e1ac118fbe vdr-analogtv-1.0.00-r1.ebuild 1020
-RMD160 f55fd8408dd012919b9e24cb7c0354d243ae7972 vdr-analogtv-1.0.00-r1.ebuild 1020
-SHA256 9bfd53687806625d478c0a5ee63b9ea8820f89481938fccd01c89c84c36dceeb vdr-analogtv-1.0.00-r1.ebuild 1020
+EBUILD vdr-analogtv-1.0.00-r1.ebuild 1019 RMD160 ddd3997b0c495b73f113fac4a8ce819f6b52557a SHA1 aa9bb7a0bdcd18ab362982bc1590365ab93210bf SHA256 82048395ef0f81e9f1ce5e26b9a849db61f9444c750658b6180c96b358316652
+MD5 f32f8bad49696a9a0d7301e882352c98 vdr-analogtv-1.0.00-r1.ebuild 1019
+RMD160 ddd3997b0c495b73f113fac4a8ce819f6b52557a vdr-analogtv-1.0.00-r1.ebuild 1019
+SHA256 82048395ef0f81e9f1ce5e26b9a849db61f9444c750658b6180c96b358316652 vdr-analogtv-1.0.00-r1.ebuild 1019
 EBUILD vdr-analogtv-1.0.00.ebuild 766 RMD160 01aec458f5b8624bccb74907f6159cb6019c471e SHA1 7276b5cb7e5d24d5b219a2fc4d1006be70edfb9c SHA256 aec9b3986ea7568bff7aba15fe2c3c03d3fd4a1bd4cd6cceca12e9fbc05f2506
 MD5 23ef196de53ff222816ccf4f1d7b7756 vdr-analogtv-1.0.00.ebuild 766
 RMD160 01aec458f5b8624bccb74907f6159cb6019c471e vdr-analogtv-1.0.00.ebuild 766
@@ -28,11 +25,3 @@ SHA256 dbf11feefe77fd54fbc95a8ef49f63a40bb0e03ea06afe255d872ec570da7fe5 files/di
 MD5 3f08b99ee11f4af7a10818e3aa95b234 files/digest-vdr-analogtv-1.0.00-r1 262
 RMD160 bd17810615c49cfccc7205d1222d51a6e3aa64a0 files/digest-vdr-analogtv-1.0.00-r1 262
 SHA256 dbf11feefe77fd54fbc95a8ef49f63a40bb0e03ea06afe255d872ec570da7fe5 files/digest-vdr-analogtv-1.0.00-r1 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-Comment: GnuPG-Pack Basics: http://home.arcor.de/rose-indorf
-
-iD8DBQFFnnufdn07HTTCgIoRAvlHAJ96jCzvktbRY0D0cm+zJTA20VBJ3QCgpVWo
-IGTxzSgrLkTytRpgzGmITbw=
-=vi/s
------END PGP SIGNATURE-----

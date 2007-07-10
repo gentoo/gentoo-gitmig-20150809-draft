@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX libvisual-plugins-0.2.0-configure.patch 414 RMD160 6d069fcfc5e32f0fd1c7614a6fca87e72e5761b3 SHA1 9f6deeb67898544cabf52ab698dafc5973b9f011 SHA256 e24fb9ef71bdc3261bb55353b2a48f29085482234974dcd0cd0f389e0d6d7d99
 MD5 cd32e1ad4bd26ebca70a0f65350195ba files/libvisual-plugins-0.2.0-configure.patch 414
 RMD160 6d069fcfc5e32f0fd1c7614a6fca87e72e5761b3 files/libvisual-plugins-0.2.0-configure.patch 414
@@ -25,10 +22,10 @@ EBUILD libvisual-plugins-0.2.0.ebuild 1467 RMD160 b65151194b606554abcd408e341899
 MD5 fc4728fdbab1e96be123fbec82c2e53e libvisual-plugins-0.2.0.ebuild 1467
 RMD160 b65151194b606554abcd408e341899b5e5b7ad7d libvisual-plugins-0.2.0.ebuild 1467
 SHA256 e707d2766297914381e2d01bb6fa6105d56a25463c880571d6c9ac1dd4898ffd libvisual-plugins-0.2.0.ebuild 1467
-EBUILD libvisual-plugins-0.4.0-r1.ebuild 1939 RMD160 ff1a234c05cb46ec774f83bd3a4a66b4ee299850 SHA1 ee5f34be0dbf75aa54f7bd475447bb104f29ee29 SHA256 3669640fe3d1b2910a54684524e8f4e238b7f3f69cb772c35da5ef18649feb86
-MD5 d39d5ace9b4d986bd44a5081e2970429 libvisual-plugins-0.4.0-r1.ebuild 1939
-RMD160 ff1a234c05cb46ec774f83bd3a4a66b4ee299850 libvisual-plugins-0.4.0-r1.ebuild 1939
-SHA256 3669640fe3d1b2910a54684524e8f4e238b7f3f69cb772c35da5ef18649feb86 libvisual-plugins-0.4.0-r1.ebuild 1939
+EBUILD libvisual-plugins-0.4.0-r1.ebuild 1939 RMD160 8cf734dfd30005b21f7e3a0eb51f0c7c0c89b4f6 SHA1 f6220539c0d4eab57d447ed4c325d66fdbf2c9eb SHA256 e5759dc71a2b14b0279fb5f7e468ec5adab74f6a9790578fcba69c72a034ded8
+MD5 a964f6b80d0da35fc170b5a5f5b5d77e libvisual-plugins-0.4.0-r1.ebuild 1939
+RMD160 8cf734dfd30005b21f7e3a0eb51f0c7c0c89b4f6 libvisual-plugins-0.4.0-r1.ebuild 1939
+SHA256 e5759dc71a2b14b0279fb5f7e468ec5adab74f6a9790578fcba69c72a034ded8 libvisual-plugins-0.4.0-r1.ebuild 1939
 EBUILD libvisual-plugins-0.4.0.ebuild 1323 RMD160 229d6b21647a73d093f9f12266917f606d61f9e4 SHA1 4bb26f3d82adeebe7c61ffcd4f66bcd18c12cac3 SHA256 a301bcc3fb602ccbdefb411233d3f448195be730f3301b7f3190642ac04006a3
 MD5 811da91552de18d2f30274bdd3d5b58e libvisual-plugins-0.4.0.ebuild 1323
 RMD160 229d6b21647a73d093f9f12266917f606d61f9e4 libvisual-plugins-0.4.0.ebuild 1323
@@ -50,10 +47,3 @@ SHA256 385cb9ef49b1f49695406aa702a68514fbed39ce9d8cda537a1b048ae8a6c3a0 files/di
 MD5 7e8cb240e6933c3dece80ec0d597d889 files/digest-libvisual-plugins-0.4.0-r1 855
 RMD160 faa0a73df8404d82048571bc7b1fecf63918ee64 files/digest-libvisual-plugins-0.4.0-r1 855
 SHA256 f0811581c865e9bc79fef475c97158d82115686e0407d664bcbe51d3f76bce60 files/digest-libvisual-plugins-0.4.0-r1 855
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
-
-iD8DBQFGVobxvFcC4BYPU0oRAkv6AKCVyZqMlmrYBus1mMbEKSMc6sPMrQCdH/A4
-n0X73aamHlJUbUUonJCamOY=
-=wYQc
------END PGP SIGNATURE-----

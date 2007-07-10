@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX vdr-solitaire-0.0.2-vdr-1.5.5.diff 440 RMD160 fb23fd5480f515b99f1e5bdf55884b0f98ce8ff2 SHA1 da48f5649d4a2ae6ba962bba1155a8ce7e2e77ff SHA256 4b1d2ab056cc15bd0af4b429d60f510c23808dcf96cac6d37c6897b80ea301eb
 MD5 f7a1f042701753af94057249aa050c6b files/vdr-solitaire-0.0.2-vdr-1.5.5.diff 440
 RMD160 fb23fd5480f515b99f1e5bdf55884b0f98ce8ff2 files/vdr-solitaire-0.0.2-vdr-1.5.5.diff 440
@@ -10,10 +7,10 @@ MD5 9b09c1ad8bfe4e6100b6001ed370659e files/vdr-solitaire-0.0.2.patch 4005
 RMD160 8cd9fd877a48d66c8a63b8cdbcb31e19108b8f9d files/vdr-solitaire-0.0.2.patch 4005
 SHA256 5d05a05d1ae502cf70e890d3ca9cd1e3d1f80ebb65591bdb871a1a730910e16e files/vdr-solitaire-0.0.2.patch 4005
 DIST vdr-solitaire-0.0.2.tgz 332835 RMD160 ea20981aa218d87e3a1aca5959b80315e3b348eb SHA1 e2cb59d2cfa87da8992f0627024521ac3b74c668 SHA256 b35f10ee4da5ac4b111d2f608da49a682f4e79f4c522dac7386555743aa58f03
-EBUILD vdr-solitaire-0.0.2.ebuild 877 RMD160 e6feb271275c8b8bb1caf01de745d29a8d5d5184 SHA1 15275c4816217e1279ed80b5aa92c4e09d9a5e76 SHA256 a67bd3a8b924fe881f712fc9a0bdf1069213efeb0e7895da6058039522d9f69a
-MD5 89505aad6da4ded7b41b10ea6a436de5 vdr-solitaire-0.0.2.ebuild 877
-RMD160 e6feb271275c8b8bb1caf01de745d29a8d5d5184 vdr-solitaire-0.0.2.ebuild 877
-SHA256 a67bd3a8b924fe881f712fc9a0bdf1069213efeb0e7895da6058039522d9f69a vdr-solitaire-0.0.2.ebuild 877
+EBUILD vdr-solitaire-0.0.2.ebuild 880 RMD160 5c206241ac966481be07e34859a0056de8033d02 SHA1 003d92a9e3edf84c62b4e8b36fe95e0498ef778d SHA256 a9327da736fd669aef7fe2ea3ad1c5bb3818b1da402a9518df9e9f3d223bc880
+MD5 8f1c739fad1c4fb7adae8ab76e0f4e96 vdr-solitaire-0.0.2.ebuild 880
+RMD160 5c206241ac966481be07e34859a0056de8033d02 vdr-solitaire-0.0.2.ebuild 880
+SHA256 a9327da736fd669aef7fe2ea3ad1c5bb3818b1da402a9518df9e9f3d223bc880 vdr-solitaire-0.0.2.ebuild 880
 MISC ChangeLog 498 RMD160 e8eda633aedcd2181e90d4d3340c6dca6ebd7933 SHA1 31f72c5173a26f61766d6030cb6274317058b96d SHA256 39dc020e3d1147493eb9599a61a7f02104d16f530cde04a7eb69c22576dbf1c7
 MD5 79e34699f1da318288f1c9bba05cc9e2 ChangeLog 498
 RMD160 e8eda633aedcd2181e90d4d3340c6dca6ebd7933 ChangeLog 498
@@ -25,10 +22,3 @@ SHA256 1d6292676863287cee09b69ba35f3ea7546ed6718a3fea1d326deae735dadf64 metadata
 MD5 2b0697660ad2f67e3dc2c1195886c4be files/digest-vdr-solitaire-0.0.2 250
 RMD160 9e8ba71f004241328b42f6ffe2d1f02f5044427b files/digest-vdr-solitaire-0.0.2 250
 SHA256 941c409a18ea2d3b93bfe6991f8330f1ce1ccdfd2b515b4d420eb973c8ee79bb files/digest-vdr-solitaire-0.0.2 250
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
-
-iD8DBQFGgX8rt2vP6XvVdOcRAosyAKC0hHtDBRMztXOBBhcGdCBjr0JxkgCglkd8
-lfY0RVWWgzkT0d2Ljtj7csQ=
-=e/TX
------END PGP SIGNATURE-----

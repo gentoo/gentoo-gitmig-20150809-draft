@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX vdr-kvdrmon-0.6-remove-menu-entry.diff 569 RMD160 7f42355f15000c0740b6b147c7c882538a9fca7b SHA1 c2c5759de186cf851e85ad763e6a3ac46bcdb2fa SHA256 1f3a7121c44a05ca919593414f051207d6820f1d01a3b4d9136dec09a260c227
 MD5 de17fa9aff57663774364eae79b31fd8 files/vdr-kvdrmon-0.6-remove-menu-entry.diff 569
 RMD160 7f42355f15000c0740b6b147c7c882538a9fca7b files/vdr-kvdrmon-0.6-remove-menu-entry.diff 569
 SHA256 1f3a7121c44a05ca919593414f051207d6820f1d01a3b4d9136dec09a260c227 files/vdr-kvdrmon-0.6-remove-menu-entry.diff 569
 DIST vdr-kvdrmon-0.6.tgz 17528 RMD160 060b0f6bfc569f8ed2113cf92fc4a8e41b3d4f88 SHA1 7e8f8a9a60cdc4aa988043a575a772226b7c3e7e SHA256 9cdfaa220116c4efd859a2b67d54accd2cfb12e470adab8caab109b42b7a21bf
-EBUILD vdr-kvdrmon-0.6.ebuild 544 RMD160 aa7d6ed99a61e4ae96b621548d2d8cabfeb88f52 SHA1 e595aafd283b8386f90caba41a9d2b9ee310f092 SHA256 55aacc1f9c073e1d89b106c24ae3e6e47ff9dfe26eedbe7b93183cf3c9cebe31
-MD5 6f3f36e1ae77d08061755b8dae1666ff vdr-kvdrmon-0.6.ebuild 544
-RMD160 aa7d6ed99a61e4ae96b621548d2d8cabfeb88f52 vdr-kvdrmon-0.6.ebuild 544
-SHA256 55aacc1f9c073e1d89b106c24ae3e6e47ff9dfe26eedbe7b93183cf3c9cebe31 vdr-kvdrmon-0.6.ebuild 544
+EBUILD vdr-kvdrmon-0.6.ebuild 543 RMD160 9a57f00b9fbf709229e6cc9b9cdd95d48a35c762 SHA1 93ff9d665ad28761685f3ac5a058fe6aadf15c4b SHA256 41df15f104c8ca63f2d68effb8038f059ad1880e0834e6d1a4dbdec8f4e8dbae
+MD5 3398ed2740623f58a9edb90ff46025ad vdr-kvdrmon-0.6.ebuild 543
+RMD160 9a57f00b9fbf709229e6cc9b9cdd95d48a35c762 vdr-kvdrmon-0.6.ebuild 543
+SHA256 41df15f104c8ca63f2d68effb8038f059ad1880e0834e6d1a4dbdec8f4e8dbae vdr-kvdrmon-0.6.ebuild 543
 MISC ChangeLog 557 RMD160 b7bed27a0d2d88676965794281e4ec1c89333920 SHA1 04848533d771f7e4fe5c7f7cef2d0d38a1603425 SHA256 f855e7b45d5c766af7acdad85e4f291d9fb41cdb08af5acf260ca2cd1e03cb2c
 MD5 837412a4dceaed877ab4e0f4ac4aa190 ChangeLog 557
 RMD160 b7bed27a0d2d88676965794281e4ec1c89333920 ChangeLog 557
@@ -21,11 +18,3 @@ SHA256 00d2a0ad9b16bed406eb7f7f68066aee3a28ed03475e85b90053871f24fd75c6 metadata
 MD5 ab65494036ce73b11de03b5c78538672 files/digest-vdr-kvdrmon-0.6 235
 RMD160 b01edb1d189494b0d0041c3d2a2d73737cc52250 files/digest-vdr-kvdrmon-0.6 235
 SHA256 47ed11c045ff8f5ecc8a6570f70964cecb2ad0ad2488be76b111ac5ef950c1e7 files/digest-vdr-kvdrmon-0.6 235
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-Comment: no further Information
-
-iD8DBQFFPTNgdn07HTTCgIoRAgsDAJ432P2C6t3tP3j3xIJOmukCGUTZVQCdF2le
-cNMCmTLjEDDK8HSHNAL8GkA=
-=xgcd
------END PGP SIGNATURE-----
