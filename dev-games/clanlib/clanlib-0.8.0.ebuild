@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.0.ebuild,v 1.2 2007/06/12 23:38:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.0.ebuild,v 1.3 2007/07/10 03:23:50 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -66,7 +66,7 @@ src_install() {
 		dodir /usr/share/doc/${PF}/html
 		mv "${D}"/usr/share/doc/clanlib/* "${D}"/usr/share/doc/${PF}/html/ || die
 		rm -rf "${D}"/usr/share/doc/clanlib
-		cp -r Examples "${D}"/usr/share/doc/${PF}/ || die
+		cp -r Examples Resources "${D}"/usr/share/doc/${PF}/ || die
 	fi
 	dodoc CODING_STYLE CREDITS NEWS PATCHES README* INSTALL.linux
 }
