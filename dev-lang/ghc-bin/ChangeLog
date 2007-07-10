@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.71 2007/07/06 01:07:09 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.72 2007/07/10 16:07:00 dcoutts Exp $
+
+  10 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> ghc-bin-6.4.2.ebuild:
+  Add a binary for ia64, so mark ~ia64.
+  All supported arches now have a binary for 6.4.2 so we can drop 6.4.1.
 
   06 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> -ghc-bin-6.6.ebuild:
   The ghc-bin ebuild will not be continued. Its function has been merged into
