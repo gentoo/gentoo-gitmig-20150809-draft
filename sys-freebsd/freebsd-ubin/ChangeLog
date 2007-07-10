@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.45 2007/07/06 15:04:03 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.46 2007/07/10 22:35:17 uberlord Exp $
+
+  10 Jul 2007; Roy Marples <uberlord@gentoo.org> freebsd-ubin-6.2.ebuild:
+  Don't move awk, mkfifo, uname, true, false or tty to /bin
+  as baselayout-2 no longer requires them there.
 
   06 Jul 2007; Roy Marples <uberlord@gentoo.org> freebsd-ubin-6.2.ebuild:
   Build a dynamic make.
