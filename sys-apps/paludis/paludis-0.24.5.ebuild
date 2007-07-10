@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.24.5.ebuild,v 1.1 2007/07/09 21:32:47 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.24.5.ebuild,v 1.2 2007/07/10 13:36:09 peper Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -31,14 +31,16 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	>=app-admin/eselect-1.0.2
-	app-admin/eselect-news
 	net-misc/wget
 	net-misc/rsync
 	sys-apps/sandbox"
 
-# Keep this as a PDEPEND. It avoids issues when Paludis is used as the
+# Keep vim as a PDEPEND. It avoids issues when Paludis is used as the
 # default virtual/portage provider.
+# eselect-news here for easier upgrade path for portage users with
+# collision-protect.
 PDEPEND="
+	app-admin/eselect-news
 	vim-syntax? ( >=app-editors/vim-core-7 )"
 
 PROVIDE="virtual/portage"

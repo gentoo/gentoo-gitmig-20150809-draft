@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.64 2007/07/09 21:32:47 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.65 2007/07/10 13:36:09 peper Exp $
+
+  10 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> paludis-0.24.5.ebuild:
+  Move eselect-news to PDEPEND so portage users with collision-protect won't cry.
 
 *paludis-0.24.5 (09 Jul 2007)
 
