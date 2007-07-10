@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/mpm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/ChangeLog,v 1.6 2007/05/21 05:58:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/ChangeLog,v 1.7 2007/07/10 10:45:13 opfer Exp $
+
+*mpm-2.5.2719_beta15 (10 Jul 2007)
+
+  10 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  -mpm-2.5.2199_beta4.ebuild, -mpm-2.5.2398_beta14.ebuild,
+  +mpm-2.5.2719_beta15.ebuild:
+  version bump, fixes bug 184026; clean up
 
 *mpm-2.5.2398_beta14-r1 (21 May 2007)
 
