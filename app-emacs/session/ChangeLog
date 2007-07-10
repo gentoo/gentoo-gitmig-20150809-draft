@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/session
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/session/ChangeLog,v 1.12 2007/07/03 06:33:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/session/ChangeLog,v 1.13 2007/07/10 06:28:03 opfer Exp $
+
+  10 Jul 2007; Christian Faulhammer <opfer@gentoo.org> session-2.2a.ebuild:
+  restored src_install() as it should have not been removed, fixes bug 184802,
+  reported by John Altstadt <altstadt@telus.net>; fixed a typo in postinst;
+  reordered KEYWORDS; relocated IUSE
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org> session-2.2a.ebuild:
   removed src_install and postinst, as they are exactly like that in
