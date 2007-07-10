@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.72 2007/07/10 16:07:00 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.73 2007/07/10 17:20:21 dcoutts Exp $
+
+  10 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> -ghc-bin-6.4.1.ebuild,
+  -ghc-bin-6.4.1-r1.ebuild:
+  Remove ghc-bin-6.4.1 and -r1. Now that we have 6.4.2, we don't need an older
+  version on the 6.4.x branch.
 
   10 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> ghc-bin-6.4.2.ebuild:
   Add a binary for ia64, so mark ~ia64.
