@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.17 2007/07/10 13:49:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.18 2007/07/10 14:18:03 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -11,7 +11,7 @@ FORCE_SYSTEMAUTH_UPDATE="no"
 # with Linux-PAM.  I'm not really certain how pervasive the Radius
 # and NIS services of PWDB are at this point.
 
-PATCH_LEVEL="1.5"
+PATCH_LEVEL="1.6"
 BDB_VER="4.3.27"
 BDB_VER2="4.1.25"
 GLIB_VER="2.6.5"
@@ -144,9 +144,6 @@ src_unpack() {
 	cp /usr/share/automake/install-sh ${S}/ 2>/dev/null || touch install-sh
 	export WANT_AUTOCONF=2.5
 	autoconf || die
-
-	epatch "${FILESDIR}/${P}-inttypes.patch"
-	epatch "${FILESDIR}/${P}-xauth-path.patch"
 }
 
 src_compile() {
@@ -340,13 +337,13 @@ src_install() {
 	fi
 
 	insinto /etc/security
-	doins ${FILESDIR}/pam_env.conf
+	doins "${S2}/gentoo-extrafiles/pam_env.conf"
 	doman doc/man/*.[0-9]
 
 	dodoc CHANGELOG Copyright README
 	docinto modules ; dodoc modules/README ; dodoc doc/txts/README.*
 	# Install our own README.pam_console
-	docinto ; dodoc ${FILESDIR}/README.pam_console
+	docinto modules ; dodoc "${S2}/gentoo-extrafiles/README.pam_console"
 	docinto txt ; dodoc doc/specs/*.txt #doc/txts/*.txt
 #	docinto print ; dodoc doc/ps/*.ps
 
