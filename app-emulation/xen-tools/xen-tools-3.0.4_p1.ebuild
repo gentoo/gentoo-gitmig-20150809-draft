@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.4_p1.ebuild,v 1.3 2007/06/25 22:24:50 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.4_p1.ebuild,v 1.4 2007/07/10 17:28:02 marineam Exp $
 
 inherit flag-o-matic distutils eutils multilib
 
@@ -81,15 +81,6 @@ src_unpack() {
 			-e 's/CFLAGS\(.*\)=\(.*\)-O2\(.*\)/CFLAGS\1=\2\3/' \
 			-i {} \;
 	fi
-
-	# xen tries to be smart and filter out CFLAGs not supported by gcc.
-	# It doesn't handle no* flags though, but flag-o-matic's test-flag-CC does.
-	for FLAG in -fno-pie -fno-stack-protector -fno-stack-protector-all; do
-		test-flag-CC ${FLAG} && HARDFLAGS="${HARDFLAGS} ${FLAG}"
-	done
-	sed  -i "s/^CFLAGS :=$/& ${HARDFLAGS}/" \
-		"${S}"/tools/firmware/{hvmloader,vmxassist}/Makefile
-
 
 	# Disable the 32bit-only vmxassist if we are not on x86 and we don't
 	# support the x86 ABI. Also disable hvmloader, since it requires vmxassist.
@@ -181,10 +172,21 @@ pkg_postinst() {
 	elog "Please visit the Xen and Gentoo wiki:"
 	elog "http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
 
+	if [[ "$(scanelf -s __guard -q `which python`)" ]] ; then
+		ewarn "xend may not work when python is built with stack smashing protection (ssp)."
+		ewarn "If 'xm create' fails with '<ProtocolError for /RPC2: -1 >', see bug #141866"
+	fi
+
 	if ! built_with_use dev-lang/python ncurses; then
 		echo
 		ewarn "NB: Your dev-lang/python is built without USE=ncurses."
 		ewarn "Please rebuild python with USE=ncurses to make use of xenmon.py."
+	fi
+
+	if ! use x86 && ! has x86 $(get_all_abis); then
+		echo
+		elog "Your system does not support building x86 binaries (amd64 no-multilib)"
+		elog "hvmloader has not been built, which is required for HVM guests."
 	fi
 
 	if grep -qsF XENSV= "${ROOT}/etc/conf.d/xend"; then
