@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.5.ebuild,v 1.13 2007/06/23 00:46:13 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.5.ebuild,v 1.14 2007/07/10 21:39:59 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -74,7 +74,6 @@ src_compile() {
 	if use doc ; then
 		myconf="${myconf} --enable-latex-docs"
 	fi
-
 
 	econf \
 		$(use_enable debug) \
