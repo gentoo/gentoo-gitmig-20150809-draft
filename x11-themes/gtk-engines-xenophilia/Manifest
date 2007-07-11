@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST xenophilia-0.8.tar.gz 142101 RMD160 7b2d0cb8303bd41af2ec21315b908f1a2dd6e135 SHA1 e08476ce13289fbdbfc28e8f7ef50ffbc3a90687 SHA256 a90501a7b4616b84b59ba26f95c01e9d5be2431368c44289453ac3199613c181
-EBUILD gtk-engines-xenophilia-0.8-r1.ebuild 966 RMD160 1f574605833940760d6d9fce804d1129ad105caa SHA1 01f93102391c6f2dfecc5080e1cada9ee5de6f85 SHA256 b6c6f33ebf118b84fdc2114a4025c5b0a2595adac255e5baa7c7263a18644bc9
-MD5 b3d7148be3e5a3b26220efd8cc8e0bee gtk-engines-xenophilia-0.8-r1.ebuild 966
-RMD160 1f574605833940760d6d9fce804d1129ad105caa gtk-engines-xenophilia-0.8-r1.ebuild 966
-SHA256 b6c6f33ebf118b84fdc2114a4025c5b0a2595adac255e5baa7c7263a18644bc9 gtk-engines-xenophilia-0.8-r1.ebuild 966
+EBUILD gtk-engines-xenophilia-0.8-r1.ebuild 960 RMD160 3d4c017e200428f90355b022ba0ec64dae00eb88 SHA1 9868df81cd6bc1d1ad7cdc3a7d278d9ae650c1f2 SHA256 49e30d9a2f5bd3ff1867617278553122a97aedb220611bea6d0eeb771b3c4882
+MD5 e4b9a0ab1ba441f285fa210073dba495 gtk-engines-xenophilia-0.8-r1.ebuild 960
+RMD160 3d4c017e200428f90355b022ba0ec64dae00eb88 gtk-engines-xenophilia-0.8-r1.ebuild 960
+SHA256 49e30d9a2f5bd3ff1867617278553122a97aedb220611bea6d0eeb771b3c4882 gtk-engines-xenophilia-0.8-r1.ebuild 960
 MISC ChangeLog 1745 RMD160 5de361f903a6fa7dbc8a9be64d53b6c00f767724 SHA1 3bbcb799afd28dc0906b43d9dd4d8560d1268705 SHA256 db41fd146636892b01b80b156786c67b106bf54a23bb70e6e5f713f758dc9d7d
 MD5 4f3ddad17541ac0287b4b21632dcbfba ChangeLog 1745
 RMD160 5de361f903a6fa7dbc8a9be64d53b6c00f767724 ChangeLog 1745
@@ -17,10 +14,3 @@ SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata
 MD5 a1a447ba69dc548c4224f096addadd0c files/digest-gtk-engines-xenophilia-0.8-r1 244
 RMD160 38af77e7876f6c3fd2ff1727f4bdda5a95390e69 files/digest-gtk-engines-xenophilia-0.8-r1 244
 SHA256 44601450f526f8ebaafe47d0147ccc44e84c2d463c4d4b02008ac3665230703f files/digest-gtk-engines-xenophilia-0.8-r1 244
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
-
-iD8DBQFF3MxVz974XjDVpbkRAh5eAJ9UMpExL7RTv+UDXtlAK0nQNKRSvwCg1bxO
-38Z4ZveNdGhRYRNtt8YFQ7s=
-=SjtF
------END PGP SIGNATURE-----
