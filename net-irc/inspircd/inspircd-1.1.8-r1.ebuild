@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.1.8-r1.ebuild,v 1.1 2007/07/11 08:10:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.1.8-r1.ebuild,v 1.2 2007/07/11 11:31:36 hansmi Exp $
 
 inherit eutils toolchain-funcs multilib # subversion
 
@@ -54,6 +54,7 @@ src_install() {
 	dodir /usr/$(get_libdir)/inspircd/modules
 	dodir /etc/inspircd
 	dodir /var/log/inspircd
+	dodir /usr/include/inspircd
 
 	emake install \
 		LIBPATH="${D}/usr/$(get_libdir)/inspircd/" \
@@ -61,6 +62,9 @@ src_install() {
 		CONPATH="${D}/etc/inspircd" \
 		BINPATH="${D}/usr/bin" \
 		BASE="${D}/usr/$(get_libdir)/inspircd/inspircd.launcher"
+
+	insinto /usr/include/inspircd/
+	doins "${S}"/include/*
 
 	newinitd "${FILESDIR}"/init.d_inspircd inspircd
 }
