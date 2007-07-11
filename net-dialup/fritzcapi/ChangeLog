@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/fritzcapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.31 2007/06/27 21:34:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.32 2007/07/11 23:04:47 genstef Exp $
+
+  11 Jul 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/fritzcapi-2.6.22.patch, fritzcapi-2.6.43.ebuild:
+  Add 2.6.22 support thanks to Sven <skoehler@upb.de> in bug 184903
 
   27 Jun 2007; Stefan Schweizer <genstef@gentoo.org>
   +files/2.6.43-linux-2.6.19-irq_handler.amd64.patch,

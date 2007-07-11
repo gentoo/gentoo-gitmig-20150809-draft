@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.13 2007/07/10 18:01:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.14 2007/07/11 23:04:47 genstef Exp $
 
 inherit linux-mod rpm eutils
 
@@ -98,6 +98,7 @@ pkg_setup() {
 src_unpack() {
 	rpm_unpack "${DISTDIR}/${A}" || die "failed to unpack ${A} file"
 
+	epatch ${FILESDIR}/fritzcapi-2.6.22.patch
 	cd "${S}"
 	mkdir -p "${WORKDIR}/var/lib/fritz"
 	ln fritz.*/lib/*-lib.o "${WORKDIR}/var/lib/fritz"
