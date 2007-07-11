@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-base/mule-base-1.42.ebuild,v 1.14 2005/12/07 00:38:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-base/mule-base-1.42.ebuild,v 1.15 2007/07/11 02:37:38 mr_bones_ Exp $
 
 SLOT="0"
 IUSE=""
@@ -14,4 +14,3 @@ app-xemacs/apel
 KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
 
 inherit xemacs-packages
-

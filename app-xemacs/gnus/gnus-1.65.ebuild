@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/gnus-1.65.ebuild,v 1.7 2007/05/05 15:32:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/gnus-1.65.ebuild,v 1.8 2007/07/11 02:37:37 mr_bones_ Exp $
 
 SLOT="0"
 IUSE=""
@@ -22,4 +22,3 @@ app-xemacs/apel
 KEYWORDS="x86 ~ppc alpha sparc"
 
 inherit xemacs-packages
-

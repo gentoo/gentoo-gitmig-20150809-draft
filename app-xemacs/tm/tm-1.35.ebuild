@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tm/tm-1.35.ebuild,v 1.9 2007/05/05 15:33:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tm/tm-1.35.ebuild,v 1.10 2007/07/11 02:37:37 mr_bones_ Exp $
 
 SLOT="0"
 IUSE=""
@@ -20,4 +20,3 @@ app-xemacs/fsf-compat
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 
 inherit xemacs-packages
-
