@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.418 2007/06/09 14:24:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.419 2007/07/11 09:52:36 robbat2 Exp $
+
+*mysql-5.0.44 (11 Jul 2007)
+
+  11 Jul 2007; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.0.44.ebuild:
+  Version bump for bug #184791. Includes patch for mysql_client_test per bug
+  #160284, thanks to gabrielp@simnet.is.
 
   09 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org> mysql-5.0.42.ebuild:
   ppc stable, bug #178860
