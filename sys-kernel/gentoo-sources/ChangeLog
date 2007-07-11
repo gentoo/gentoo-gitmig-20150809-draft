@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.410 2007/07/11 14:36:01 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.411 2007/07/11 14:44:39 josejx Exp $
+
+  11 Jul 2007; Joseph Jezak <josejx@gentoo.org>
+  gentoo-sources-2.6.21-r4.ebuild:
+  Marked ppc stable for bug #184203.
 
 *gentoo-sources-2.6.22-r1 (11 Jul 2007)
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.335 2007/07/11 12:54:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.336 2007/07/11 14:47:37 josejx Exp $
+
+  11 Jul 2007; Joseph Jezak <josejx@gentoo.org>
+  vanilla-sources-2.6.21.6.ebuild:
+  Marked ppc stable for bug #184203.
 
   11 Jul 2007; Raúl Porcel <armin76@gentoo.org>
   vanilla-sources-2.6.21.6.ebuild:
