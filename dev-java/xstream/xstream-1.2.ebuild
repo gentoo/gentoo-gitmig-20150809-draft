@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2.ebuild,v 1.6 2007/05/26 17:36:39 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2.ebuild,v 1.7 2007/07/11 17:41:39 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc examples java5 source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,7 +13,7 @@ SRC_URI="http://dist.codehaus.org/xstream/distributions/${P}.zip"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc examples java5 source"
+IUSE=""
 
 COMMON_DEPS="
 	=dev-java/commons-lang-2.1*
@@ -25,10 +27,16 @@ COMMON_DEPS="
 	>=dev-java/xpp3-1.1.3.4
 	=dev-java/xml-commons-external-1.3*
 "
+#test? (
+#		dev-java/ant-junit
+#		dev-java/ant-trax
+#		dev-java/xml-writer
+#		dev-java/stax
+#	)
+
 DEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( =virtual/jdk-1.4* )
 	app-arch/unzip
-	source? ( app-arch/zip )
 	${COMMON_DEPS}"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPS}"
@@ -37,8 +45,11 @@ JAVA_PKG_BSFIX="off"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/lib
-	rm *.jar
+	cd "${S}"
+	rm -v *.jar || die
+	rm -v lib/jdk1.3/*.jar || die
+	cd "${S}/lib"
+	rm -v *.jar
 	java-pkg_jar-from xml-commons-external-1.3
 	java-pkg_jar-from jsr173
 	java-pkg_jar-from cglib-2.1
@@ -51,11 +62,20 @@ src_unpack() {
 	java-pkg_jar-from xpp3
 }
 
+# Restricted until we get keywords for deps. See:
+# https://bugs.gentoo.org/show_bug.cgi?id=184234
+RESTRICT="test"
+
+src_test() {
+	java-pkg_jar-from --into lib junit,xml-writer,stax
+	ANT_TASKS="ant-junit ant-trax" eant test
+}
+
 src_install() {
 	java-pkg_newjar ${P}.jar
 
 	if use doc; then
-		java-pkg_dohtml *.html
+		html *.html || die
 		java-pkg_dohtml -r docs/
 	fi
 	use source && java-pkg_dosrc src/java/com
