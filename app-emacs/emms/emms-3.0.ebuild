@@ -1,15 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/emms-2.1.ebuild,v 1.4 2007/07/11 21:56:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/emms-3.0.ebuild,v 1.1 2007/07/11 21:56:23 ulm Exp $
+
+NEED_EMACS=22
 
 inherit elisp toolchain-funcs eutils
 
 DESCRIPTION="The Emacs Multimedia System"
 HOMEPAGE="http://www.gnu.org/software/emms/
 	http://www.emacswiki.org/cgi-bin/wiki/EMMS"
-SRC_URI="http://www.gnu.org/software/emms/releases/${P}.tar.gz"
+SRC_URI="http://www.gnu.org/software/emms/download/${P}.tar.gz"
 
-LICENSE="GPL-2 FDL-1.1"
+LICENSE="GPL-3 FDL-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 IUSE=""
@@ -38,7 +40,7 @@ src_compile() {
 src_install() {
 	elisp-install ${PN} *.{el,elc}
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
-	dodoc AUTHORS ChangeLog FAQ README RELEASE
 	doinfo *.info*
 	dobin *-wrapper emms-print-metadata
+	dodoc AUTHORS ChangeLog FAQ NEWS README RELEASE || die "dodoc failed"
 }

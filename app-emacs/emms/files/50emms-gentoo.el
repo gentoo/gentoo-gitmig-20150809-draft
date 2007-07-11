@@ -1,5 +1,5 @@
 
-;;; site-lisp configuration for emms-cvs
+;;; emms site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
-(require 'emms)
+(require 'emms-auto)
