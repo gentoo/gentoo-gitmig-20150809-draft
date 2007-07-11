@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/pam_passwdqc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/ChangeLog,v 1.6 2007/02/22 01:01:52 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/ChangeLog,v 1.7 2007/07/11 12:37:52 flameeyes Exp $
+
+*pam_passwdqc-1.0.4 (11 Jul 2007)
+
+  11 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pam_passwdqc-1.0.4-makefile.patch, -pam_passwdqc-1.0.2.ebuild,
+  +pam_passwdqc-1.0.4.ebuild:
+  Version bump, and solve a few issues like the ignored cflags and the
+  pre-stripped binary.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
