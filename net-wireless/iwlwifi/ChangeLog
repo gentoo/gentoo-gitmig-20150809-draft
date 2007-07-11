@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/iwlwifi
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwlwifi/ChangeLog,v 1.1 2007/07/11 03:26:05 compnerd Exp $
+
+*iwlwifi-0.0.36 (11 Jul 2007)
+
+  11 Jul 2007; Saleem Abdulrasool <compnerd@gentoo.org> +metadata.xml,
+  +iwlwifi-0.0.36.ebuild:
+  Initial import
+
