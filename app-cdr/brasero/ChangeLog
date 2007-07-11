@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.14 2007/04/08 00:42:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.15 2007/07/11 21:52:29 beandog Exp $
+
+*brasero-0.6.0 (11 Jul 2007)
+*brasero-0.5.90 (11 Jul 2007)
+
+  11 Jul 2007; Steve Dibb <beandog@gentoo.org> +brasero-0.5.90.ebuild,
+  +brasero-0.6.0.ebuild:
+  Version bump
 
   08 Apr 2007; Joseph Jezak <josejx@gentoo.org> brasero-0.5.2.ebuild:
   Marked ~ppc for bug #168560.
