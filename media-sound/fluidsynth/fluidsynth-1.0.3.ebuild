@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.18 2007/06/26 02:13:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.19 2007/07/11 19:30:24 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -55,5 +55,3 @@ src_install() {
 	einstall || die
 	dodoc AUTHORS COPYING INSTALL NEWS README THANKS TODO
 }
-
-

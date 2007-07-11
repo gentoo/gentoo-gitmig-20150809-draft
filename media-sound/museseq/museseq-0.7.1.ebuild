@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.1.ebuild,v 1.8 2007/01/05 17:42:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.1.ebuild,v 1.9 2007/07/11 19:30:24 mr_bones_ Exp $
 
 inherit kde-functions virtualx eutils toolchain-funcs
 
@@ -55,4 +55,3 @@ pkg_postinst() {
 	elog "User must have read/write access to /dev/misc/rtc device."
 	elog "Realtime LSM: http://sourceforge.net/projects/realtime-lsm/"
 }
-

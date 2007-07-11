@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/tk707-0.8.ebuild,v 1.2 2005/11/07 12:16:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/tk707-0.8.ebuild,v 1.3 2007/07/11 19:30:24 mr_bones_ Exp $
 
 inherit eutils
 
@@ -24,7 +24,6 @@ RDEPEND=">=media-libs/alsa-lib-0.9.0
 DEPEND="${RDEPEND}
 		>=sys-devel/automake-1.7
 		>=sys-devel/autoconf-2.5"
-
 
 src_unpack() {
 	unpack ${A}

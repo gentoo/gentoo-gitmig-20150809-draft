@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-0.9.4.ebuild,v 1.4 2006/10/13 23:31:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-0.9.4.ebuild,v 1.5 2007/07/11 19:30:23 mr_bones_ Exp $
 
 DESCRIPTION="Pulseaudio Volume Control, GTK based mixer for Pulseaudio"
 HOMEPAGE="http://0pointer.de/lennart/projects/pavucontrol/"
@@ -33,4 +33,3 @@ src_install() {
 	dohtml -r doc
 	dodoc README doc/todo
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/audiotag-0.16.ebuild,v 1.4 2007/06/19 14:03:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/audiotag-0.16.ebuild,v 1.5 2007/07/11 19:30:24 mr_bones_ Exp $
 
 IUSE="aac flac vorbis mp3"
 
@@ -23,4 +23,3 @@ src_install() {
 	dobin audiotag
 	dodoc README ChangeLog
 }
-

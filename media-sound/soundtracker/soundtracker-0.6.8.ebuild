@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.8.ebuild,v 1.1 2007/01/07 12:44:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.8.ebuild,v 1.2 2007/07/11 19:30:23 mr_bones_ Exp $
 
 IUSE="alsa esd jack nls oss sdl"
 
@@ -51,7 +51,6 @@ src_compile() {
 	use x86 && myconf="${myconf} --enable-asm"
 	use jack || myconf="${myconf} --disable-jack"
 	use sdl || myconf="${myconf} --disable-sdl"
-
 
 	econf ${myconf} || die "configure failed"
 	emake || die "make failed"

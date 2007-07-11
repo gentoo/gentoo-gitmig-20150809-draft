@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.94a.ebuild,v 1.14 2007/01/05 17:26:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.94a.ebuild,v 1.15 2007/07/11 19:30:23 mr_bones_ Exp $
 
 inherit eutils
 
@@ -33,4 +33,3 @@ pkg_postinst() {
 	elog "Check /usr/share/doc/cdstatus-${PV} for help"
 	elog
 }
-

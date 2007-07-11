@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picoxine/picoxine-0.0.7.ebuild,v 1.3 2006/09/12 15:49:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picoxine/picoxine-0.0.7.ebuild,v 1.4 2007/07/11 19:30:23 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -40,4 +40,3 @@ src_install() {
 	dobin ${PN}
 	dodoc AUTHORS INSTALL
 }
-

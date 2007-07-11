@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/toolame-02l-r1.ebuild,v 1.3 2006/03/07 16:05:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/toolame-02l-r1.ebuild,v 1.4 2007/07/11 19:30:24 mr_bones_ Exp $
 
 IUSE=""
 
@@ -24,5 +24,3 @@ src_install() {
 	dobin toolame || die
 	dodoc README HISTORY FUTURE html/* text/*
 }
-
-

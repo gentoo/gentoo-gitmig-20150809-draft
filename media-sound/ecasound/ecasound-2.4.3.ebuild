@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.3.ebuild,v 1.7 2006/01/25 20:43:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.3.ebuild,v 1.8 2007/07/11 19:30:24 mr_bones_ Exp $
 
 inherit multilib
 
@@ -106,4 +106,3 @@ pkg_postinst() {
 		ewarn "future releases."
 	fi
 }
-

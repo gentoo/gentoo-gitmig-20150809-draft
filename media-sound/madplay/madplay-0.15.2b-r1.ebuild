@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b-r1.ebuild,v 1.1 2007/02/04 18:01:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b-r1.ebuild,v 1.2 2007/07/11 19:30:23 mr_bones_ Exp $
 
 inherit eutils
 
@@ -38,7 +38,6 @@ src_compile() {
 	use alsa && myconf="--with-alsa --without-esd"
 	use esd && myconf="--without-alsa --with-esd"
 	use alsa || use esd || myconf="--without-alsa --without-esd"
-
 
 	econf \
 		$(use_enable nls) \

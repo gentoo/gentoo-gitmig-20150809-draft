@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.9.ebuild,v 1.10 2006/09/03 17:48:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.9.ebuild,v 1.11 2007/07/11 19:30:24 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,7 +23,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-
 
 	epatch ${FILESDIR}/${P}-destdir.patch
 	epatch ${FILESDIR}/${P}-largefile.patch

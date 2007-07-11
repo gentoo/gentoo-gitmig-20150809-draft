@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.0.ebuild,v 1.4 2007/05/01 00:20:01 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.0.ebuild,v 1.5 2007/07/11 19:30:24 mr_bones_ Exp $
 
 inherit kde-functions eutils
 
@@ -100,4 +100,3 @@ src_compile() {
 src_install() {
 	dobin bin/radiomixer || die "dobin failed"
 }
-

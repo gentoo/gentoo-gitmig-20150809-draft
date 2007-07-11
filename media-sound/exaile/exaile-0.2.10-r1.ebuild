@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10-r1.ebuild,v 1.4 2007/07/07 13:56:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10-r1.ebuild,v 1.5 2007/07/11 19:30:23 mr_bones_ Exp $
 
 inherit eutils fdo-mime multilib python
 
@@ -62,7 +62,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-destdir.patch
 	epatch "${FILESDIR}"/${P}-visual.patch
 }
-
 
 src_compile() {
 	emake -j1 mmkeys.so || die "emake mmkeys.so failed."

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.11.27.ebuild,v 1.3 2007/06/27 13:50:04 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.11.27.ebuild,v 1.4 2007/07/11 19:30:24 mr_bones_ Exp $
 
 inherit eutils versionator toolchain-funcs elisp-common
 
@@ -35,7 +35,6 @@ RDEPEND="
 
 #	virtual/tetex
 
-
 DEPEND="${RDEPEND}
 	>=media-gfx/fontforge-20070501
 	>=app-text/mftrace-1.2.9
@@ -67,7 +66,6 @@ src_compile() {
 		--disable-gui \
 		--disable-documentation
 #		$(use_enable doc documentation) \
-
 
 	# without -j1 it will not fail, but building docs later will
 	emake -j1 || die "emake failed"

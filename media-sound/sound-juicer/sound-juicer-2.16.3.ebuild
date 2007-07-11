@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.16.3.ebuild,v 1.1 2007/02/26 00:49:37 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.16.3.ebuild,v 1.2 2007/07/11 19:30:24 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -45,4 +45,3 @@ export GST_INSPECT=/bin/true
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper"
 }
-

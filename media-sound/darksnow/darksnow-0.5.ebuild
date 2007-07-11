@@ -1,7 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.5.ebuild,v 1.2 2005/07/25 12:16:11 dholm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.5.ebuild,v 1.3 2007/07/11 19:30:24 mr_bones_ Exp $
 
 DESCRIPTION="Streaming GTK2 Front-End based in Darkice Ice Streamer"
 HOMEPAGE="http://darksnow.radiolivre.org"

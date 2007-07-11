@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta6.ebuild,v 1.6 2005/12/26 14:58:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta6.ebuild,v 1.7 2007/07/11 19:30:24 mr_bones_ Exp $
 
 IUSE="vorbis alsa opengl esd jack"
 
@@ -29,4 +29,3 @@ src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO doc/
 }
-

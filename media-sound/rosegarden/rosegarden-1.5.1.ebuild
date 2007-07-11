@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-1.5.1.ebuild,v 1.1 2007/06/20 13:58:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-1.5.1.ebuild,v 1.2 2007/07/11 19:30:24 mr_bones_ Exp $
 
 inherit eutils kde-functions
 
@@ -12,7 +12,6 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="MIDI and audio sequencer and notation editor."
 HOMEPAGE="http://www.rosegardenmusic.com/"
 SRC_URI="mirror://sourceforge/rosegarden/${MY_P}.tar.bz2"
-
 
 LICENSE="GPL-2"
 SLOT="0"

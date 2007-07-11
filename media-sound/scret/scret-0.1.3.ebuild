@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/scret/scret-0.1.3.ebuild,v 1.6 2005/03/17 18:36:47 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/scret/scret-0.1.3.ebuild,v 1.7 2007/07/11 19:30:24 mr_bones_ Exp $
 
 inherit kde
 
@@ -16,5 +16,3 @@ KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 need-kde 3.1
-
-

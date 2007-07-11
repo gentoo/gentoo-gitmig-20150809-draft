@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/qsampler-0.1.0.ebuild,v 1.6 2006/03/07 15:27:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/qsampler-0.1.0.ebuild,v 1.7 2007/07/11 19:30:24 mr_bones_ Exp $
 
 inherit kde eutils
 
@@ -21,7 +21,6 @@ DEPEND="${RDEPEND}"
 
 src_compile() {
 	econf || die "./configure failed"
-
 
 	### borrowed from kde.eclass #
 	#

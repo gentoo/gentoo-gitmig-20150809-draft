@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.16 2006/03/07 14:06:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.17 2007/07/11 19:30:23 mr_bones_ Exp $
 
 IUSE=""
 
@@ -32,7 +32,6 @@ src_unpack() {
 	cd ${S}
 	sed -i -e "s/install-data-am: install-data-local/install-data-am:/" Makefile.in
 }
-
 
 src_install () {
 	make DESTDIR="${D}" install || die

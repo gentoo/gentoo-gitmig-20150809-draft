@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.2.1-r2.ebuild,v 1.3 2007/06/16 12:00:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.2.1-r2.ebuild,v 1.4 2007/07/11 19:30:24 mr_bones_ Exp $
 
 inherit eutils
 
@@ -23,7 +23,6 @@ DEPEND=">=x11-libs/fltk-1.1.2
 #	portaudio? ( media-libs/portaudio )"
 
 S="${WORKDIR}/${MY_P}"
-
 
 pkg_setup() {
 	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then

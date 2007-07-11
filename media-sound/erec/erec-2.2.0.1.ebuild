@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/erec-2.2.0.1.ebuild,v 1.8 2005/09/04 10:36:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/erec-2.2.0.1.ebuild,v 1.9 2007/07/11 19:30:23 mr_bones_ Exp $
 
 DESCRIPTION="A shared audio recording server"
 HOMEPAGE="http://bisqwit.iki.fi/source/erec.html"
@@ -33,7 +33,6 @@ src_unpack() {
 	echo "" > .depend
 	echo "" > argh/.depend
 }
-
 
 src_compile() {
 	emake -j1 || die

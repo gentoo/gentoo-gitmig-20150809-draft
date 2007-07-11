@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0.ebuild,v 1.14 2007/02/12 19:23:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0.ebuild,v 1.15 2007/07/11 19:30:24 mr_bones_ Exp $
 
 inherit eutils kde-functions
 
@@ -26,7 +26,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/hydrogen-0.9.0-asneeded.patch
 }
-
 
 src_compile() {
 	econf $(use_enable jack jack-support) \

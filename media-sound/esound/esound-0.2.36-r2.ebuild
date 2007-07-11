@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r2.ebuild,v 1.23 2007/05/10 08:08:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r2.ebuild,v 1.24 2007/07/11 19:30:24 mr_bones_ Exp $
 
 WANT_AUTOMAKE=1.8
 inherit libtool gnome.org eutils autotools flag-o-matic
@@ -32,7 +32,6 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-mode_t.patch"
 	epatch "${FILESDIR}/${P}-asneeded.patch"
-
 
 	AT_M4DIR="m4" eautomake
 
