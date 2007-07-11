@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.12 2007/04/08 14:55:03 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.13 2007/07/11 09:40:23 cryos Exp $
+
+*openbabel-2.1.1 (11 Jul 2007)
+
+  11 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> +openbabel-2.1.1.ebuild:
+  Version bump.
 
 *openbabel-2.1.0 (08 Apr 2007)
 
