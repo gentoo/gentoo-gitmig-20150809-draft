@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-RawIP
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/ChangeLog,v 1.23 2007/06/21 16:30:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/ChangeLog,v 1.24 2007/07/11 20:21:34 armin76 Exp $
+
+  11 Jul 2007; Raúl Porcel <armin76@gentoo.org> Net-RawIP-0.21.ebuild:
+  alpha/ia64/x86 stable
 
   21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
   Net-RawIP-0.21.ebuild:
