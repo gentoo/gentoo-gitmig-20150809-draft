@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.524 2007/07/11 22:11:00 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.525 2007/07/11 23:38:05 rbu Exp $
+
+  11 Jul 2007; Robert Buchholz <rbu@gentoo.org> use.local.desc:
+  Add freevo related use flags
 
   11 Jul 2007; Robert Buchholz <rbu@gentoo.org> package.mask:
   Unmasking media-tv/freevo to keep stable working

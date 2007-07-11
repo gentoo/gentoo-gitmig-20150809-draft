@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2923 2007/07/11 19:40:19 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2924 2007/07/11 23:38:05 rbu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -552,6 +552,7 @@ dev-python/cgkit:3ds - enable support for importing 3D Studio models
 dev-python/cgkit:ogre - enable support for Ogre rendering
 dev-python/docutils:glep - Install support for GLEPs
 dev-python/ipython:gnuplot - enable gnuplot support
+dev-python/kaa-metadata:css - Enables ripping/reading of encrypted dvds
 dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
 dev-python/paste:flup - enable support for flup (and therefore for various wgsi servers and middleware)
 dev-python/paste:openid - enable OpenID support
@@ -1056,6 +1057,8 @@ media-sound/sonata:taglib - Enable tagging support with taglib
 media-sound/transkode:amarok - Build Amarok script
 media-sound/transkode:wavpack - Add support for wavpack decoding/encoding
 media-sound/traverso:lv2 - Add support for Ladspa V2
+media-tv/freevo:mixer - Enable support for adjusting volume via media-sound/aumix
+media-tv/freevo:tv - Enable support for the tv guide plugin
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
 media-tv/kdetv:zvbi - Enable VBI Decoding Library for Zapping
 media-tv/mythtv:autostart - Controls whether settings are installed for autostarting MythFrontend on boot
