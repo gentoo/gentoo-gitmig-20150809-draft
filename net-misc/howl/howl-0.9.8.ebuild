@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.8.ebuild,v 1.19 2007/04/28 23:05:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.8.ebuild,v 1.20 2007/07/11 03:59:52 compnerd Exp $
 
 inherit eutils flag-o-matic
 
@@ -39,6 +39,13 @@ src_compile() {
 	emake || die "emake failed"
 }
 
+pkg_preinst() {
+	# howl-0.9.8 introduces a change in library naming,
+	# preserve old libraries to not break things
+	preserve_old_lib /usr/$(get_libdir)/libhowl-[0-9].[0-9].[0-9].so.[0-9].[0-9].[0-9]
+	preserve_old_lib /usr/$(get_libdir)/libmDNSResponder-[0-9].[0-9].[0-9].so.[0-9].[0-9].[0-9]
+}
+
 src_install() {
 	emake DESTDIR=${D} install || die "emake install failed"
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
@@ -51,11 +58,6 @@ src_install() {
 	# Install init scripts
 	newinitd ${FILESDIR}/nifd.init.d nifd
 	newinitd ${FILESDIR}/mDNSResponder.init.d mDNSResponder
-
-	# howl-0.9.8 introduces a change in library naming,
-	# preserve old libraries to not break things
-	preserve_old_lib /usr/$(get_libdir)/libhowl-[0-9].[0-9].[0-9].so.[0-9].[0-9].[0-9]
-	preserve_old_lib /usr/$(get_libdir)/libmDNSResponder-[0-9].[0-9].[0-9].so.[0-9].[0-9].[0-9]
 }
 
 pkg_postinst() {

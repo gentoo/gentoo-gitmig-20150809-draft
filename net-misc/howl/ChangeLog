@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.48 2007/05/20 17:16:15 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.49 2007/07/11 03:59:52 compnerd Exp $
+
+  11 Jul 2007; Saleem Abdulrasool <compnerd@gentoo.org> howl-0.9.8.ebuild,
+  howl-1.0.0.ebuild:
+  Fix preserve_old_lib usage (bug #167991)
 
   20 May 2007; Timothy Redaelli <drizzt@gentoo.org> howl-1.0.0.ebuild:
   Add ~x86-fbsd keyword.
