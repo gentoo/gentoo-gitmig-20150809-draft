@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.6-r2.ebuild,v 1.1 2007/04/30 19:58:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.6-r2.ebuild,v 1.2 2007/07/11 01:08:48 mr_bones_ Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -32,7 +32,6 @@ $(deprange $PV $MAXKDEVER kde-base/kwin)
 $(deprange $PV $MAXKDEVER kde-base/kpersonalizer)
 $(deprange $PV $MAXKDEVER kde-base/kreadconfig)
 $(deprange $PV $MAXKDEVER kde-base/ksplashml)"
-
 
 src_compile() { :; }
 

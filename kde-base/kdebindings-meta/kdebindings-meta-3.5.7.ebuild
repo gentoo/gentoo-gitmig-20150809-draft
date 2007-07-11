@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/kdebindings-meta-3.5.7.ebuild,v 1.1 2007/05/22 22:38:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/kdebindings-meta-3.5.7.ebuild,v 1.2 2007/07/11 01:08:48 mr_bones_ Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -23,6 +23,5 @@ RDEPEND="
 	>=kde-base/dcoppython-3.5.0_beta2
 	>=kde-base/korundum-$PV
 	>=kde-base/qtruby-$PV"
-
 
 # Omitted: qtsharp, dcopc, dcopjava, xparts (considered broken by upstream)

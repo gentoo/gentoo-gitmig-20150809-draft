@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ksysguard-3.5.7.ebuild,v 1.1 2007/05/23 01:37:48 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ksysguard-3.5.7.ebuild,v 1.2 2007/07/11 01:08:47 mr_bones_ Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -19,4 +19,3 @@ src_compile() {
 
 	kde-meta_src_compile
 }
-

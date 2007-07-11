@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/kdeaddons-kfile-plugins-3.5.6-r1.ebuild,v 1.2 2007/05/24 11:14:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/kdeaddons-kfile-plugins-3.5.6-r1.ebuild,v 1.3 2007/07/11 01:08:47 mr_bones_ Exp $
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="kfile-plugins/"
@@ -17,4 +17,3 @@ src_compile() {
 	myconf="--with-ssl"
 	kde_src_compile
 }
-

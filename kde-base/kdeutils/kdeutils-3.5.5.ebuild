@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.5.ebuild,v 1.12 2007/02/03 15:42:49 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.5.ebuild,v 1.13 2007/07/11 01:08:48 mr_bones_ Exp $
 
 inherit kde-dist eutils
 
@@ -49,4 +49,3 @@ src_install() {
 	# see bug 144731
 	rm ${D}${KDEDIR}/share/applications/kde/ksim.desktop
 }
-

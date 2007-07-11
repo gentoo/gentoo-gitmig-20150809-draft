@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/kbounce-3.5.7.ebuild,v 1.1 2007/05/22 21:25:23 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/kbounce-3.5.7.ebuild,v 1.2 2007/07/11 01:08:48 mr_bones_ Exp $
 
 KMNAME=kdegames
 MAXKDEVER=$PV
@@ -16,4 +16,3 @@ RDEPEND="${DEPEND}"
 
 KMEXTRACTONLY=libkdegames
 KMCOPYLIB="libkdegames libkdegames"
-

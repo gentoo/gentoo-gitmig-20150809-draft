@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.6-r2.ebuild,v 1.2 2007/04/12 19:18:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.6-r2.ebuild,v 1.3 2007/07/11 01:08:47 mr_bones_ Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -57,7 +57,6 @@ KMCOMPILEONLY="libemailfunctions"
 # the kmail plugins are installed with kmail
 KMEXTRA="plugins/kmail/
 	kontact/plugins/kmail/" # We add here the kontact's plugin instead of compiling it with kontact because it needs a lot of this programs deps.
-
 
 src_install() {
 	kde-meta_src_install

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/kdebindings-meta-3.5.5.ebuild,v 1.6 2006/12/03 19:24:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/kdebindings-meta-3.5.5.ebuild,v 1.7 2007/07/11 01:08:48 mr_bones_ Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -23,6 +23,5 @@ $(deprange $PV $MAXKDEVER kde-base/kjsembed)
 $(deprange 3.5.2 $MAXKDEVER kde-base/qtjava)
 >=kde-base/qtruby-$PV
 $(deprange 3.5.2 $MAXKDEVER kde-base/smoke)"
-
 
 # Omitted: qtsharp, dcopc, dcopjava, xparts (considered broken by upstream)

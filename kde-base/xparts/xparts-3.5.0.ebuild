@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.5.0.ebuild,v 1.9 2007/05/24 11:28:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.5.0.ebuild,v 1.10 2007/07/11 01:08:48 mr_bones_ Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="dcopc"
@@ -24,4 +24,3 @@ src_unpack() {
 	# even when it doesn't detect the mozilla headers
 	sed -i -e 's:mozilla::' "${S}/xparts/Makefile.am"
 }
-

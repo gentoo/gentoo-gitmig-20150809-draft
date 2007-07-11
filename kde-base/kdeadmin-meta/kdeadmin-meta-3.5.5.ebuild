@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/kdeadmin-meta-3.5.5.ebuild,v 1.9 2006/12/11 13:55:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/kdeadmin-meta-3.5.5.ebuild,v 1.10 2007/07/11 01:08:47 mr_bones_ Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -22,4 +22,3 @@ RDEPEND="$(deprange $PV $MAXKDEVER kde-base/kcron)
 # NOTE: KPackage, KSysv are useless on a normal gentoo system and so aren't included
 # in the above list. KDat is broken and unmaintained. However, packages do nominally
 # exist for them.
-

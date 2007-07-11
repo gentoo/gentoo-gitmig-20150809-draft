@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.6-r1.ebuild,v 1.5 2007/06/04 02:26:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.5.6-r1.ebuild,v 1.6 2007/07/11 01:08:48 mr_bones_ Exp $
 
 inherit db-use kde-dist
 
@@ -48,4 +48,3 @@ src_compile() {
 
 	kde_src_compile
 }
-

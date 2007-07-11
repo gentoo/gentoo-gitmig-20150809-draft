@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kwin-styles/kdeartwork-kwin-styles-3.5.7.ebuild,v 1.2 2007/05/23 11:54:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kwin-styles/kdeartwork-kwin-styles-3.5.7.ebuild,v 1.3 2007/07/11 01:08:47 mr_bones_ Exp $
 
 ARTS_REQUIRED="never"
 
@@ -16,4 +16,3 @@ IUSE=""
 
 DEPEND="
 $(deprange-dual $PV $MAXKDEVER kde-base/kwin)"
-

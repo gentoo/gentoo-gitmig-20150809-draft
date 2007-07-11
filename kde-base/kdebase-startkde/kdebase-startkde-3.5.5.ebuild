@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.5.ebuild,v 1.11 2007/01/05 16:56:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.5.ebuild,v 1.12 2007/07/11 01:08:48 mr_bones_ Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -33,7 +33,6 @@ $(deprange $PV $MAXKDEVER kde-base/kwin)
 $(deprange $PV $MAXKDEVER kde-base/kpersonalizer)
 $(deprange 3.5.0 $MAXKDEVER kde-base/kreadconfig)
 $(deprange $PV $MAXKDEVER kde-base/ksplashml)"
-
 
 src_compile() {
 	elog "Nothing to compile"

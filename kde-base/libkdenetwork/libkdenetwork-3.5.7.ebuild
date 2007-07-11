@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/libkdenetwork-3.5.7.ebuild,v 1.1 2007/05/23 02:17:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/libkdenetwork-3.5.7.ebuild,v 1.2 2007/07/11 01:08:47 mr_bones_ Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -13,4 +13,3 @@ IUSE=""
 DEPEND=">=app-crypt/gpgme-1.0.2"
 
 RDEPEND="${DEPEND}"
-

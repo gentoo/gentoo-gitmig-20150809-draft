@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.5.5.ebuild,v 1.9 2006/12/11 14:24:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.5.5.ebuild,v 1.10 2007/07/11 01:08:47 mr_bones_ Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -27,4 +27,3 @@ $(deprange $PV $MAXKDEVER kde-base/renamedlg-audio)
 $(deprange $PV $MAXKDEVER kde-base/renamedlg-images)
 arts? ( $(deprange $PV $MAXKDEVER kde-base/noatun-plugins) )
 "
-

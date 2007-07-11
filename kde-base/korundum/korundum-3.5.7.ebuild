@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-3.5.7.ebuild,v 1.1 2007/05/23 00:56:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-3.5.7.ebuild,v 1.2 2007/07/11 01:08:47 mr_bones_ Exp $
 
 KMNAME=kdebindings
 KMCOPYLIB="libsmokeqt smoke/qt libsmokekde smoke/kde"
@@ -32,4 +32,3 @@ src_compile() {
 	myconf="$myconf --prefix=/usr"
 	kde_src_compile configure make
 }
-
