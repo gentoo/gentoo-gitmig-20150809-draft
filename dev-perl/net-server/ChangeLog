@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/net-server
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.55 2007/07/08 03:57:03 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.56 2007/07/11 20:29:47 armin76 Exp $
+
+  11 Jul 2007; Raúl Porcel <armin76@gentoo.org> net-server-0.96.ebuild:
+  alpha/ia64/x86 stable
 
   07 Jul 2007; Tom Gall <tgall@gentoo.org> net-server-0.96.ebuild:
   stable on ppc64
