@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Daemon
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.46 2007/07/08 03:00:56 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.47 2007/07/11 20:13:31 armin76 Exp $
+
+  11 Jul 2007; Raúl Porcel <armin76@gentoo.org> Net-Daemon-0.41.ebuild:
+  alpha/ia64/x86 stable
 
   07 Jul 2007; Tom Gall <tgall@gentoo.org> Net-Daemon-0.41.ebuild:
   stable on ppc64
