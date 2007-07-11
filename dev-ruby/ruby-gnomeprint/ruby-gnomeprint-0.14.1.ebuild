@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomeprint/ruby-gnomeprint-0.14.1.ebuild,v 1.2 2006/03/30 03:49:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomeprint/ruby-gnomeprint-0.14.1.ebuild,v 1.3 2007/07/11 05:23:08 mr_bones_ Exp $
 
 inherit ruby ruby-gnome2
 
@@ -13,4 +13,3 @@ RDEPEND="${DEPEND}
 	>=dev-ruby/ruby-glib2-${PV}
 	>=dev-ruby/ruby-pango-${PV}
 	>=dev-ruby/ruby-libart2-${PV}"
-

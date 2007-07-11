@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/diff-lcs-1.1.2.ebuild,v 1.3 2007/03/07 04:12:38 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/diff-lcs-1.1.2.ebuild,v 1.4 2007/07/11 05:23:08 mr_bones_ Exp $
 
 inherit ruby gems
 
@@ -16,4 +16,3 @@ IUSE=""
 DEPEND="virtual/ruby"
 RDEPEND="${DEPEND}
 	>=dev-ruby/text-format-0.64"
-

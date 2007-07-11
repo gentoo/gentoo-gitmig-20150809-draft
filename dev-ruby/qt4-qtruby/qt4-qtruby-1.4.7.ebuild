@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.7.ebuild,v 1.2 2006/11/07 13:21:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.7.ebuild,v 1.3 2007/07/11 05:23:08 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils
 
@@ -21,7 +21,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}.diff
 }
-
 
 src_compile() {
 	myconf="--with-qt-dir=/usr --with-qt-libraries=/usr/$(get_libdir)/qt4 --with-qt-includes=/usr/include/qt4"

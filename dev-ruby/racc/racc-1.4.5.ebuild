@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.5.ebuild,v 1.10 2007/05/03 17:53:57 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.5.ebuild,v 1.11 2007/07/11 05:23:08 mr_bones_ Exp $
 
 inherit ruby
 
@@ -21,4 +21,3 @@ src_install() {
 	${RUBY} setup.rb install --prefix="${D}"
 	erubydoc
 }
-

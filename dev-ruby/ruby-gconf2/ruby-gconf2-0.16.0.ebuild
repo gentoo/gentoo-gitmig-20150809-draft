@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ruby-gconf2-0.16.0.ebuild,v 1.1 2006/12/30 04:45:10 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ruby-gconf2-0.16.0.ebuild,v 1.2 2007/07/11 05:23:08 mr_bones_ Exp $
 
 inherit ruby ruby-gnome2
 
@@ -11,4 +11,3 @@ USE_RUBY="ruby18 ruby19"
 DEPEND=">=gnome-base/gconf-2"
 RDEPEND="${DEPEND}
 	>=dev-ruby/ruby-glib2-${PV}"
-

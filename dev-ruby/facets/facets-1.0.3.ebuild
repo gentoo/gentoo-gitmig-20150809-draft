@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/facets-1.0.3.ebuild,v 1.1 2006/04/17 23:31:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/facets-1.0.3.ebuild,v 1.2 2007/07/11 05:23:08 mr_bones_ Exp $
 
 inherit ruby gems
 
@@ -20,4 +20,3 @@ SLOT="0"
 KEYWORDS="~ia64 ~x86"
 
 DEPEND=">=dev-lang/ruby-1.8"
-

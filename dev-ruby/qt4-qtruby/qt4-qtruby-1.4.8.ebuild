@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.8.ebuild,v 1.2 2007/06/20 11:59:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/qt4-qtruby-1.4.8.ebuild,v 1.3 2007/07/11 05:23:08 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils qt4
 
@@ -30,7 +30,6 @@ src_unpack() {
 	epatch ${FILESDIR}/FindQwt.cmake.diff
 	epatch ${FILESDIR}/libCMakeLists.diff
 }
-
 
 src_compile() {
 	cd ${S} && cmake -DCMAKE_INSTALL_PREFIX=/usr/ . && make || die

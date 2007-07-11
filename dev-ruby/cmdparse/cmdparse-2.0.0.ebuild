@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/cmdparse-2.0.0.ebuild,v 1.4 2006/07/13 05:16:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/cmdparse-2.0.0.ebuild,v 1.5 2007/07/11 05:23:08 mr_bones_ Exp $
 
 inherit ruby gems
 
@@ -15,4 +15,3 @@ LICENSE="GPL-2"
 SLOT="0"
 
 USE_RUBY="ruby18"
-

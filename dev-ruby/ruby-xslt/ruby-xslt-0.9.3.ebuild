@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ruby-xslt-0.9.3.ebuild,v 1.4 2007/03/28 11:12:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ruby-xslt-0.9.3.ebuild,v 1.5 2007/07/11 05:23:08 mr_bones_ Exp $
 
 RUBY_BUG_145222=yes
 inherit ruby
@@ -22,4 +22,3 @@ DEPEND=">=dev-lang/ruby-1.8
 	>=dev-libs/libxslt-1.1.12"
 
 S="${WORKDIR}/${PN}"
-

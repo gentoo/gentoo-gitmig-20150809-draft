@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dpklib/dpklib-1.0.6.ebuild,v 1.4 2007/03/09 05:26:42 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dpklib/dpklib-1.0.6.ebuild,v 1.5 2007/07/11 05:23:08 mr_bones_ Exp $
 
 inherit ruby
 
@@ -29,4 +29,3 @@ src_install() {
 	docinto samples
 	dodoc samples/*
 }
-
