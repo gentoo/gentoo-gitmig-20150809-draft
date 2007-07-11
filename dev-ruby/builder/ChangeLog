@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.18 2007/07/10 18:51:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.19 2007/07/11 14:13:50 gustavoz Exp $
+
+  11 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> builder-2.1.1.ebuild:
+  Stable on sparc wrt #181322
 
   10 Jul 2007; Raúl Porcel <armin76@gentoo.org> builder-2.1.1.ebuild:
   ia64/x86 stable wrt #181322
