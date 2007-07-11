@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.2.ebuild,v 1.7 2007/04/15 20:17:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.2.ebuild,v 1.8 2007/07/11 20:09:02 dev-zero Exp $
 
 inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -21,6 +21,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-wrong_russian_currency_name.patch"
+	epatch "${FILESDIR}/${P}-fix_bashism.patch"
 
 	sed -i \
 		-e 's/\(OPT += \)-O2/\1/' \

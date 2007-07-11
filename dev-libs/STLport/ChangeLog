@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.61 2007/04/15 20:17:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.62 2007/07/11 20:09:02 dev-zero Exp $
+
+  11 Jul 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/STLport-5.1.2-fix_bashism.patch, STLport-5.1.2.ebuild:
+  Fixed bashism in Makefile (bug #183060)
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> STLport-5.1.2.ebuild:
   Stable on ppc64
