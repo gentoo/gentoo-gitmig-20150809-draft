@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST pidgin-rhythmbox-2.0.tar.gz 320758 RMD160 b5b3b0479e9a039a85e79c4078eb583cf599e40e SHA1 53b9b979d7fa60ad2ef4a4e9c90f5b33c0ceb7d4 SHA256 9fc4b43d8a353e2c4e7e219b34ae5fb23a3a0dd10b10446c4e75acab9bc5d460
-EBUILD pidgin-rhythmbox-2.0.ebuild 913 RMD160 d5d8b28d364ecb8e177a7dad2a11b1bd0e2fb380 SHA1 3d44047917bb4ede18a09ed68dd6c31aef2fff47 SHA256 20570158400d80a9350c4efb8b0fad04a2e661c58ffa3d88b3df2dfee803f78d
-MD5 5cdbd82a91874e4d93ed10890bd44e98 pidgin-rhythmbox-2.0.ebuild 913
-RMD160 d5d8b28d364ecb8e177a7dad2a11b1bd0e2fb380 pidgin-rhythmbox-2.0.ebuild 913
-SHA256 20570158400d80a9350c4efb8b0fad04a2e661c58ffa3d88b3df2dfee803f78d pidgin-rhythmbox-2.0.ebuild 913
+EBUILD pidgin-rhythmbox-2.0.ebuild 915 RMD160 63aaebf14c8494639797be1adc57fa291789079d SHA1 e31624ead7384e07d674554011149f4976c71a49 SHA256 631515de97224dae07bb64779182ccfc889dfd6dd9e6a4c2d377afdad81a7e09
+MD5 dd54b8b6d435474cff3cf9c53d0b4526 pidgin-rhythmbox-2.0.ebuild 915
+RMD160 63aaebf14c8494639797be1adc57fa291789079d pidgin-rhythmbox-2.0.ebuild 915
+SHA256 631515de97224dae07bb64779182ccfc889dfd6dd9e6a4c2d377afdad81a7e09 pidgin-rhythmbox-2.0.ebuild 915
 MISC ChangeLog 340 RMD160 76114176abe64fee80287196538770ee5022f3d8 SHA1 205bab6bd932b86f40dd9ef3ed2aa581ebec5bb6 SHA256 df9e09fcac71e93abff098c4558d0a29fc0bfd89fe4f57dbbcec93f4c182f1ce
 MD5 d2d7eec9d28d473d9945e7be2ac83c26 ChangeLog 340
 RMD160 76114176abe64fee80287196538770ee5022f3d8 ChangeLog 340
@@ -17,10 +14,3 @@ SHA256 bb3130d2515d5b2e4ff19aff2199bb00ac7c350bf78b34bbec55268bf1013908 metadata
 MD5 5b1bbac0fdcb72ea9b3fcb80036afde8 files/digest-pidgin-rhythmbox-2.0 262
 RMD160 40183d5dfe315a67e99fdce4de98830128e31c5c files/digest-pidgin-rhythmbox-2.0 262
 SHA256 17fb9de003f9e8d254dd8fca1e361568386b9abf2d06529754b9b7cde5e77980 files/digest-pidgin-rhythmbox-2.0 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
-
-iD8DBQFGNrCA+IXOQtHLm/gRAr4cAKCKE2x6O8b0A5/ZDxAIJ0k3P5vEzgCaAlPD
-FBa0ab0DtJ8FNcpP2VRa1FM=
-=6y41
------END PGP SIGNATURE-----

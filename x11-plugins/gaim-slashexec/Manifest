@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST slashexec-1.1beta.tar.gz 416065 RMD160 a10c2f3bad68303cf7bb469ca24d96dcd7907a79 SHA1 095a42f09a4dc1af28ade3bb555cfa10a4b2138c SHA256 51c6fca7d51276b67b02933bde923e261cf20e142056aa4a4359d7c4c0572877
-EBUILD gaim-slashexec-1.1_beta1.ebuild 821 RMD160 1dab3fa389457e865dc267e83222d5f830b26d52 SHA1 3fa2fae07e03539e3b53161625d3ef7d0d4f9899 SHA256 fe98543df8337b39c7c28ba76222ed5e1e02925f74ed562bc79d4944c3cbe6be
-MD5 ea0d4dc699dba5da842cdcc22ec40127 gaim-slashexec-1.1_beta1.ebuild 821
-RMD160 1dab3fa389457e865dc267e83222d5f830b26d52 gaim-slashexec-1.1_beta1.ebuild 821
-SHA256 fe98543df8337b39c7c28ba76222ed5e1e02925f74ed562bc79d4944c3cbe6be gaim-slashexec-1.1_beta1.ebuild 821
+EBUILD gaim-slashexec-1.1_beta1.ebuild 820 RMD160 cb5dfe6474b015dc58a495927b7b8270a2b27ece SHA1 bccfbe6ebb0a7ddb93fca95acb2bac470db6495f SHA256 6b93bd0a652cc9e3300a3d6890f5ac5b9bd5a5b1b9c5c145e77536c68b721cf7
+MD5 bef7129faf15c03dccdaa4c7261a5348 gaim-slashexec-1.1_beta1.ebuild 820
+RMD160 cb5dfe6474b015dc58a495927b7b8270a2b27ece gaim-slashexec-1.1_beta1.ebuild 820
+SHA256 6b93bd0a652cc9e3300a3d6890f5ac5b9bd5a5b1b9c5c145e77536c68b721cf7 gaim-slashexec-1.1_beta1.ebuild 820
 MISC ChangeLog 845 RMD160 daf3c0df21896ded920fe484001e0d0eab2b5591 SHA1 02e868979fa129af5e6043c512d6c7f5371105b7 SHA256 e8f7fbf39e52bfd54a3a0b0e759485b7885ba96cbecff545dbe91e4650729a55
 MD5 b81d1beddeafda6ce5b64b0cf631fa79 ChangeLog 845
 RMD160 daf3c0df21896ded920fe484001e0d0eab2b5591 ChangeLog 845
@@ -17,10 +14,3 @@ SHA256 cb1fac8dd269862c11f694b6231aea941bae7fd19ef06d2465fb554af56d9af1 metadata
 MD5 212b4557a48fe23458c249e85175168c files/digest-gaim-slashexec-1.1_beta1 253
 RMD160 4e9c505311982aca1591b66981952bb1b52654b0 files/digest-gaim-slashexec-1.1_beta1 253
 SHA256 4780333a0a758001ca9390a4d1a87fda06e264dd59f9c49fc35acf71d8ce1a86 files/digest-gaim-slashexec-1.1_beta1 253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
-
-iD8DBQFF/geOugEuf3OQ0akRAvfSAKCay1wZc+RrC0IWdR5fyW0ls+C3zwCfXEef
-+myIGBeFAFAqWOIFnHlQOZw=
-=AVu5
------END PGP SIGNATURE-----
