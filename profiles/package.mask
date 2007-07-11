@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7476 2007/07/11 19:30:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7477 2007/07/11 22:11:00 rbu Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,11 +20,6 @@
 ##
 ##   End example
 ##
-
-# Stefan Schweizer <genstef@gentoo.org> (11 Jul 2007)
-# unmaintained, masked for removal, bug 156497
-# You can find a new version in the sunrise overlay
-<media-tv/freevo-1.7.2
 
 # Michael Cummings <mcummings@gentoo.org> (11 Jul 2007)
 # Masking for removal
