@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IP-Country
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/ChangeLog,v 1.30 2007/07/08 02:45:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/ChangeLog,v 1.31 2007/07/11 16:18:16 armin76 Exp $
+
+  11 Jul 2007; Raúl Porcel <armin76@gentoo.org> IP-Country-2.23.ebuild:
+  ia64/x86 stable
 
   07 Jul 2007; Tom Gall <tgall@gentoo.org> IP-Country-2.23.ebuild:
   stable on ppc64
