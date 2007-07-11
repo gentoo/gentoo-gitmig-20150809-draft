@@ -1,3 +1,6 @@
+# this requires a newer release of GNOME
+>=gnome-extra/nautilus-open-terminal-0.8
+
 >=app-crypt/seahorse-1.0
 
 # Masking this since it requires nptl
