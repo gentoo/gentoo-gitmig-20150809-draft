@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/nipper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/ChangeLog,v 1.5 2007/07/03 23:44:39 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/ChangeLog,v 1.6 2007/07/11 21:07:12 ikelos Exp $
+
+*nipper-0.10.2 (11 Jul 2007)
+
+  11 Jul 2007; Mike Auty <ikelos@gentoo.org> +nipper-0.10.2.ebuild:
+  Version bump, fixes a segfault issue.
+
+*nipper-0.10.1-r1 (11 Jul 2007)
+
+  11 Jul 2007;  <>  nipper-0.10.1-r1.ebuild files/digest-nipper-0.10.1-r1
+  Version bump, fixes a segfault issue.
 
 *nipper-0.10.1 (03 Jul 2007)
 
