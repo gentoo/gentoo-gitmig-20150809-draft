@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.86 2007/07/11 09:12:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.87 2007/07/11 10:47:45 dragonheart Exp $
+
+*curl-7.15.5-r1 (11 Jul 2007)
+
+  11 Jul 2007; Daniel Black <dragonheart@gentoo.org> +curl-7.15.5-r1.ebuild,
+  files/libcurl-gnutlscert.patch:
+  backport patch for CVE-2007-3564
 
 *curl-7.16.4 (11 Jul 2007)
 
