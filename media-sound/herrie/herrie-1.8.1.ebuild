@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.6.1-r1.ebuild,v 1.1 2007/04/30 17:57:41 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-1.8.1.ebuild,v 1.1 2007/07/11 19:39:51 rbu Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,34 +10,29 @@ SRC_URI="http://herrie.info/distfiles/${P}.tar.bz2"
 
 LICENSE="BSD-2 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="ao http modplug mp3 scrobbler sdl sndfile vorbis xspf unicode
-	linguas_de linguas_nl linguas_pl linguas_tr"
+KEYWORDS="~amd64 ~sparc ~x86 ~ppc"
+IUSE="ao alsa pulseaudio oss http modplug mp3 sndfile vorbis xspf unicode nls
+	linguas_de linguas_nl linguas_pl linguas_tr linguas_sv linguas_ga linguas_ru"
 
 DEPEND="sys-libs/ncurses
 	>=dev-libs/glib-2.0
 	ao? ( media-libs/libao )
+	alsa? ( media-libs/alsa-lib )
 	http? ( net-misc/curl )
 	modplug? ( media-libs/libmodplug )
 	mp3? ( media-libs/libmad
 		media-libs/libid3tag )
-	scrobbler? ( net-misc/curl
-		dev-libs/openssl )
-	sdl? ( media-libs/libsdl )
+	pulseaudio? ( media-sound/pulseaudio )
 	sndfile? ( media-libs/libsndfile )
 	vorbis? ( media-libs/libvorbis )
-	xspf? ( >=media-libs/libspiff-0.6.5 )"
+	xspf? ( >=media-libs/libspiff-0.6.5 )
+	!ao? ( !alsa? ( !pulseaudio? ( !oss? ( media-libs/alsa-lib ) ) ) )
+	"
 RDEPEND="${DEPEND}"
-DEPEND="sys-devel/gettext
+DEPEND="nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	if use sdl && ! use ao ; then
-		ewarn "Please be aware that SDL support in Herrie is highly experimental. Use it at your own risk."
-	fi
-	if use sdl && use ao ; then
-		ewarn "You cannot use SDL and ao at the same time, using ao."
-	fi
 	if use unicode && ! built_with_use sys-libs/ncurses unicode; then
 		echo
 		eerror "Rebuild sys-libs/ncurses with USE=unicode if you need unicode in herrie."
@@ -49,24 +44,32 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 
-	epatch "${FILESDIR}/${PN}-1.5.1-chost.patch"
-	sed -i "47s:CFG_STRIP=-s:unset CFG_STRIP:" configure
+	epatch "${FILESDIR}/${PN}-1.8-chost.patch"
 }
 
 src_compile() {
-	local EXTRA_CONF="verbose"
+	if ! use ao && ! use alsa && ! use pulseaudio && ! use oss ; then
+		ewarn "No audio output selected (ao, alsa, pulseaudio, oss), defaulting to alsa."
+	fi
+
+	# We could add coreaudio here if on osx
+	local EXTRA_CONF="verbose no_strip"
 	use ao && EXTRA_CONF="${EXTRA_CONF} ao"
-	use http || EXTRA_CONF="${EXTRA_CONF} no_http"
+	use alsa && EXTRA_CONF="${EXTRA_CONF} alsa"
+	use http || EXTRA_CONF="${EXTRA_CONF} no_http no_scrobbler"
 	use mp3 || EXTRA_CONF="${EXTRA_CONF} no_mp3"
 	use modplug || EXTRA_CONF="${EXTRA_CONF} no_modplug"
-	use scrobbler || EXTRA_CONF="${EXTRA_CONF} no_scrobbler"
-	use sdl && ! use ao && EXTRA_CONF="${EXTRA_CONF} sdl"
+	use nls || EXTRA_CONF="${EXTRA_CONF} no_nls"
+	use oss && EXTRA_CONF="${EXTRA_CONF} oss"
+	use pulseaudio && EXTRA_CONF="${EXTRA_CONF} pulse"
 	use sndfile || EXTRA_CONF="${EXTRA_CONF} no_sndfile"
 	use unicode || EXTRA_CONF="${EXTRA_CONF} ncurses"
 	use vorbis || EXTRA_CONF="${EXTRA_CONF} no_vorbis"
 	use xspf || EXTRA_CONF="${EXTRA_CONF} no_xspf"
 
-	CC="$(tc-getCC)" PREFIX=/usr MANDIR=/usr/share/man ./configure ${EXTRA_CONF} || die "configure failed"
+	einfo "./configure ${EXTRA_CONF}"
+	CC="$(tc-getCC)" PREFIX=/usr MANDIR=/usr/share/man \
+		./configure ${EXTRA_CONF} || die "configure failed"
 	emake || die "make failed"
 }
 
