@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.2.ebuild,v 1.1 2007/05/18 15:40:49 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.2.ebuild,v 1.2 2007/07/11 19:08:21 jokey Exp $
 
 inherit qt4 eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/italc/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 IUSE="X v4l crypt xinerama threads fbcon"
 
