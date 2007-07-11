@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Pcap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/ChangeLog,v 1.35 2007/03/05 12:18:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/ChangeLog,v 1.36 2007/07/11 20:19:27 armin76 Exp $
+
+  11 Jul 2007; Raúl Porcel <armin76@gentoo.org> Net-Pcap-0.14.ebuild:
+  ia64 stable
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Net-Pcap-0.14.ebuild:
   Stable on x86, bug #169152.
