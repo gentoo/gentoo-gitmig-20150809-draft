@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.0.2-r2.ebuild,v 1.14 2007/06/24 22:15:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.0.2-r2.ebuild,v 1.15 2007/07/11 07:05:54 uberlord Exp $
 
 inherit eutils multilib autotools flag-o-matic
 
@@ -10,8 +10,8 @@ SRC_URI="http://dbus.freedesktop.org/releases/dbus/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.1 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="debug doc selinux X"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+IUSE="debug doc selinux X kernel_linux kernel_FreeBSD"
 
 RDEPEND="X? ( x11-libs/libXt x11-libs/libX11 )
 	selinux? ( sys-libs/libselinux
@@ -77,8 +77,10 @@ src_install() {
 	# dbus X session script (#77504)
 	# turns out to only work for GDM. has been merged into other desktop
 	# (kdm and such scripts)
-	exeinto /etc/X11/xinit/xinitrc.d/
-	doexe "${FILESDIR}"/30-dbus
+	if use X ; then
+		exeinto /etc/X11/xinit/xinitrc.d/
+		doexe "${FILESDIR}"/30-dbus
+	fi
 
 	# needs to exist for the system socket
 	keepdir /var/run/dbus
