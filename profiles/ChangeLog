@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.521 2007/07/09 12:37:56 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.522 2007/07/11 19:30:19 genstef Exp $
+
+  11 Jul 2007; Stefan Schweizer <genstef@gentoo.org> package.mask:
+  mask freevo for removal
 
   09 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> package.mask:
   Add new versions of dev-haskell/opengl, openal, glut, alut, x11 to
