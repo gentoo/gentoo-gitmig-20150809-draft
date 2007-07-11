@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.11.3.ebuild,v 1.6 2007/06/24 20:29:31 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.11.3.ebuild,v 1.7 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit eutils distutils
 
@@ -25,7 +25,6 @@ RDEPEND="virtual/libc
 
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
-
 
 src_compile() {
 	cd ${S}

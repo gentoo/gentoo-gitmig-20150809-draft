@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/pyvorbis-1.3.ebuild,v 1.14 2005/09/10 23:40:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/pyvorbis-1.3.ebuild,v 1.15 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils
 
@@ -25,4 +25,3 @@ src_compile() {
 }
 
 DOCS="AUTHORS COPYING ChangeLog NEWS README"
-

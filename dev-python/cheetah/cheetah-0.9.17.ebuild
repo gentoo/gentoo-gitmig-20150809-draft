@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-0.9.17.ebuild,v 1.5 2005/10/02 14:05:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-0.9.17.ebuild,v 1.6 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils
 
@@ -18,4 +18,3 @@ S=${WORKDIR}/${MY_P}
 
 PYTHON_MODNAME="Cheetah"
 DOCS="README CHANGES TODO"
-

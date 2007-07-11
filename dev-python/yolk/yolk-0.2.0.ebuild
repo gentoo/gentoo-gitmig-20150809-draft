@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/yolk-0.2.0.ebuild,v 1.1 2007/07/07 23:18:52 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/yolk-0.2.0.ebuild,v 1.2 2007/07/11 06:19:47 mr_bones_ Exp $
 
 NEED_PYTHON=2.4
 
@@ -19,7 +19,6 @@ RDEPEND="${DEPEND}
 	|| ( >=dev-lang/python-2.5 dev-python/celementtree ) )
 	dev-python/yolk-portage"
 
-
 src_install() {
 	distutils_src_install
 	if use examples ; then
@@ -36,4 +35,3 @@ src_install() {
 src_test() {
 	PYTHONPATH=. "${python}" setup.py nosetests || die "tests failed"
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/mecab-python-0.92.ebuild,v 1.1 2006/07/10 06:02:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/mecab-python-0.92.ebuild,v 1.2 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils
 
@@ -20,7 +20,6 @@ DOCS="test.py"
 src_test() {
 	python test.py || die "test.py failed"
 }
-
 
 src_install() {
 	DOCS="test.py"

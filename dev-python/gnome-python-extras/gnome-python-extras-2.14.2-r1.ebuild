@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.14.2-r1.ebuild,v 1.7 2007/07/05 14:46:52 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.14.2-r1.ebuild,v 1.8 2007/07/11 06:19:47 mr_bones_ Exp $
 
 NEED_PYTHON=2.4
 WANT_AUTOCONF=latest
@@ -73,4 +73,3 @@ pkg_postrm() {
 	python_version
 	python_mod_cleanup "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0"
 }
-

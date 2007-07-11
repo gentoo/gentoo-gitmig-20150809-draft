@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-0.4.6.ebuild,v 1.6 2007/04/09 14:12:15 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-0.4.6.ebuild,v 1.7 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils
 
@@ -14,7 +14,6 @@ IUSE=""
 DEPEND="virtual/python
 	=dev-lang/R-2.2*
 	dev-python/numeric"
-
 
 src_install() {
 	distutils_src_install

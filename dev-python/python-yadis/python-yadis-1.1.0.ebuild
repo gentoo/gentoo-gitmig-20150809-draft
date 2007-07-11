@@ -1,12 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/python-yadis-1.1.0.ebuild,v 1.2 2007/05/31 20:52:41 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/python-yadis-1.1.0.ebuild,v 1.3 2007/07/11 06:19:47 mr_bones_ Exp $
 
 PYTHON_MODNAME="yadis"
 NEED_PYTHON=2.3
 
 inherit distutils eutils
-
 
 DESCRIPTION="Yadis service discovery library."
 HOMEPAGE="http://www.openidenabled.com/yadis/libraries/python/"
@@ -30,4 +29,3 @@ src_test() {
 	./admin/runtests || die "tests failed"
 	einfo "The pyflake output about XML* redefinitions can be safely ignored"
 }
-

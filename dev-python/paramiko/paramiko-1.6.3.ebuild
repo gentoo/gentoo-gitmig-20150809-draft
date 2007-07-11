@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.6.3.ebuild,v 1.7 2007/04/12 17:35:05 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.6.3.ebuild,v 1.8 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils eutils
 
@@ -16,7 +16,6 @@ IUSE=""
 RDEPEND=">=dev-python/pycrypto-1.9_alpha6"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
-
 
 src_unpack() {
 	unpack ${A}

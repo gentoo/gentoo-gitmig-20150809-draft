@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.8.4.ebuild,v 1.1 2006/03/11 21:28:57 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.8.4.ebuild,v 1.2 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit python
 
@@ -48,4 +48,3 @@ pkg_postrm() {
 	python_version
 	python_mod_cleanup ${ROOT}usr/lib/python${PYVER}/site-packages/gst
 }
-

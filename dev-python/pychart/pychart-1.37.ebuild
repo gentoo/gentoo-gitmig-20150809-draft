@@ -1,7 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.37.ebuild,v 1.2 2005/04/26 11:46:30 liquidx Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.37.ebuild,v 1.3 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils
 

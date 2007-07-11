@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/soappy-0.11.6-r1.ebuild,v 1.4 2007/01/06 23:16:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/soappy-0.11.6-r1.ebuild,v 1.5 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils eutils
 
@@ -19,7 +19,6 @@ DEPEND=">=dev-python/fpconst-0.7.1
 		dev-python/pyxml"
 
 S=${WORKDIR}/${MY_P}
-
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/lupy-0.1.5.5.1.ebuild,v 1.5 2006/03/04 09:00:43 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/lupy-0.1.5.5.1.ebuild,v 1.6 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils
 
@@ -18,4 +18,3 @@ IUSE=""
 DEPEND=">=dev-lang/python-2.2"
 
 S=${WORKDIR}/${MY_P}
-

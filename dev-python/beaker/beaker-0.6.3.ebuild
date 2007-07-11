@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-0.6.3.ebuild,v 1.2 2007/07/04 17:13:02 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-0.6.3.ebuild,v 1.3 2007/07/11 06:19:47 mr_bones_ Exp $
 
 NEED_PYTHON=2.4
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 	>=dev-python/setuptools-0.6_rc3"
 
 S=${WORKDIR}/${MY_P}
-

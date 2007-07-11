@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.5.0.ebuild,v 1.3 2007/03/06 10:49:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.5.0.ebuild,v 1.4 2007/07/11 06:19:47 mr_bones_ Exp $
 
 NEED_PYTHON=2.1
 
@@ -26,7 +26,6 @@ src_compile() {
 		"--berkeley-db-incdir=$(db_includedir)" \
 		"--berkeley-db-libdir=/usr/$(get_libdir)"
 }
-
 
 src_install() {
 	DOCS="TODO.txt"

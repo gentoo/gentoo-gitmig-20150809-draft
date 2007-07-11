@@ -1,7 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.10.0_alpha1.ebuild,v 1.1 2007/07/08 15:48:39 pythonhead Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.10.0_alpha1.ebuild,v 1.2 2007/07/11 06:19:47 mr_bones_ Exp $
 
 NEED_PYTHON=2.2
 

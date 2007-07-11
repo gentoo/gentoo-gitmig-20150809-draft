@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/python-cdb-0.32-r1.ebuild,v 1.2 2006/12/09 14:19:37 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/python-cdb-0.32-r1.ebuild,v 1.3 2007/07/11 06:19:48 mr_bones_ Exp $
 
 inherit distutils eutils
 
@@ -18,7 +18,6 @@ DEPEND=">=dev-lang/python-2.2
 RDEPEND="${DEPEND}"
 
 DOCS="Example"
-
 
 src_unpack() {
 	unpack ${A}

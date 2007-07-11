@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.1.ebuild,v 1.1 2006/02/22 13:44:38 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.1.ebuild,v 1.2 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils
 
@@ -18,4 +18,3 @@ src_install() {
 	dodoc Doc/*.txt LICENSE.txt
 	cp -r Doc/*.py Doc/manual Doc/release_notes Examples ${D}/usr/share/doc/${PF}
 }
-

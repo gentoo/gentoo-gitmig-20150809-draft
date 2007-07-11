@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/f2py/f2py-2.39.235.1693.ebuild,v 1.7 2006/07/17 16:22:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/f2py/f2py-2.39.235.1693.ebuild,v 1.8 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils
 
@@ -26,4 +26,3 @@ src_install() {
 	insinto /usr/share/doc/${P}/usersguide
 	doins ${S}/docs/usersguide/*
 }
-

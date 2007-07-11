@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyltxml/pyltxml-1.3-r1.ebuild,v 1.4 2005/04/24 13:07:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyltxml/pyltxml-1.3-r1.ebuild,v 1.5 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils
 
@@ -25,4 +25,3 @@ src_unpack() {
 		setup.py \
 		|| die "sed failed on setup.py"
 }
-

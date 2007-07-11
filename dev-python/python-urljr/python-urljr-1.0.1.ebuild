@@ -1,13 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-urljr/python-urljr-1.0.1.ebuild,v 1.2 2007/05/31 20:56:01 lucass Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-urljr/python-urljr-1.0.1.ebuild,v 1.3 2007/07/11 06:19:47 mr_bones_ Exp $
 
 NEED_PYTHON=2.3
 PYTHON_MODNAME="urljr"
 
 inherit distutils eutils
-
 
 DESCRIPTION="JanRain's URL Utilities"
 HOMEPAGE="http://www.openidenabled.com/openid/libraries/python/"
@@ -29,4 +27,3 @@ src_unpack() {
 src_test() {
 	PYTHONPATH=. "${python}" admin/runtests || die "tests failed"
 }
-

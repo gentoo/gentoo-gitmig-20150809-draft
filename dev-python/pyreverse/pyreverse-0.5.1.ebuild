@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/pyreverse-0.5.1.ebuild,v 1.2 2006/04/01 18:50:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/pyreverse-0.5.1.ebuild,v 1.3 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils
 
@@ -17,4 +17,3 @@ RDEPEND="${DEPEND}
 	dev-python/optik
 	>=dev-python/logilab-common-0.10.0
 	dev-python/pyxml"
-

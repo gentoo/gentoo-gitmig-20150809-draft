@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ipy-0.53.ebuild,v 1.1 2007/02/28 13:10:43 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ipy-0.53.ebuild,v 1.2 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit eutils distutils
 
@@ -29,4 +29,3 @@ src_install() {
 		doins -r example
 	fi
 }
-

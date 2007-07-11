@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.21.0.ebuild,v 1.1 2006/11/29 23:54:46 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.21.0.ebuild,v 1.2 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils
 
@@ -17,7 +17,6 @@ DEPEND="|| ( >=dev-python/optik-1.4 >=dev-lang/python-2.3 )
 	test? ( dev-python/egenix-mx-base )"
 
 PYTHON_MODNAME="logilab"
-
 
 src_test() {
 	# The tests will not work properly from the source dir, so do a

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.10.2.ebuild,v 1.3 2007/01/28 19:17:41 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.10.2.ebuild,v 1.4 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils
 
@@ -30,7 +30,6 @@ DEPEND="virtual/opengl
 	>=media-libs/libsdl-1.2.8
 	>=media-libs/libpng-1.2.8
 	ode? ( >=dev-games/ode-0.5 )"
-
 
 RDEPEND="${DEPEND}
 	>=dev-python/editobj-0.5.6

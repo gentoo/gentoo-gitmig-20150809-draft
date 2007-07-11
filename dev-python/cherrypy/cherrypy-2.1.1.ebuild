@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-2.1.1.ebuild,v 1.4 2006/07/12 15:17:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-2.1.1.ebuild,v 1.5 2007/07/11 06:19:47 mr_bones_ Exp $
 
 inherit distutils eutils
 
@@ -36,4 +36,3 @@ src_test() {
 	cd cherrypy/test
 	python test.py || die "Test failed."
 }
-
