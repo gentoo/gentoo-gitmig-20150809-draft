@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xenophilia/gtk-engines-xenophilia-0.8-r1.ebuild,v 1.14 2006/02/16 12:18:32 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xenophilia/gtk-engines-xenophilia-0.8-r1.ebuild,v 1.15 2007/07/11 02:54:47 leio Exp $
 
 DESCRIPTION="GTK+1 Xenophilia Theme Engine"
 HOMEPAGE="http://themes.freshmeat.net/projects/xenophilia/"
@@ -14,7 +14,6 @@ DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*"
 
 S=${WORKDIR}/Xenophilia-${PV}
-
 
 src_unpack() {
 	unpack "${A}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/gtk-engines-qtpixmap-0.28-r2.ebuild,v 1.6 2006/09/03 20:50:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/gtk-engines-qtpixmap-0.28-r2.ebuild,v 1.7 2007/07/11 02:54:47 leio Exp $
 
 inherit eutils
 
@@ -15,12 +15,10 @@ SLOT="0"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
-
 
 src_unpack() {
 	unpack "${A}"

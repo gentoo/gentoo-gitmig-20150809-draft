@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.1.ebuild,v 1.6 2007/04/02 19:02:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.1.ebuild,v 1.7 2007/07/11 02:54:47 leio Exp $
 
 inherit eutils
 
@@ -38,7 +38,6 @@ SRC_URI="${THEME_URI}CityBox-0.10.tar.gz
 	${THEME_URI}MCity-Ugly-0.2.tar.bz2
 	${THEME_URI}MCity-Urbicande-1.0.tar.bz2
 	${THEME_URI}SmallPill-Citrus-0.2.tar.gz"
-
 
 HOMEPAGE="http://art.gnome.org/theme_list.php?category=metacity"
 

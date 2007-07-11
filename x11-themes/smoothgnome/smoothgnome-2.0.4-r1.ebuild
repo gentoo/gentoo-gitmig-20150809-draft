@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smoothgnome/smoothgnome-2.0.4-r1.ebuild,v 1.5 2006/02/18 00:04:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smoothgnome/smoothgnome-2.0.4-r1.ebuild,v 1.6 2007/07/11 02:54:47 leio Exp $
 
 inherit gnome2
 
@@ -21,7 +21,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=">=x11-themes/gtk-engines-2"
-
 
 src_unpack() {
 	unpack GTK2-${MY_P}.tar.gz
