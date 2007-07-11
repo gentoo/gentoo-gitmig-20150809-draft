@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX at-poke-0.2.2-gcc4.patch 715 RMD160 fefe69f213b1154b7363bf9df0f37aad0d1b665d SHA1 a1220cd8e4d0732e178094c2591454f84fcdfa32 SHA256 f26485ca1977739475fc554d03de421117e5b3c533667cc7144863c19c180a3c
 MD5 8eabd80eacb636bcce6e2ad0c5e32955 files/at-poke-0.2.2-gcc4.patch 715
 RMD160 fefe69f213b1154b7363bf9df0f37aad0d1b665d files/at-poke-0.2.2-gcc4.patch 715
@@ -26,3 +29,10 @@ SHA256 679465fe357d2ad0f46326481bb877edb4368ea4c89cd20bf212613dbb168dff files/di
 MD5 4b9a324014976be61f9e405ef75159ae files/digest-at-poke-0.2.3 244
 RMD160 9ff562d2da945f59ce959ed757f3902e8d741aee files/digest-at-poke-0.2.3 244
 SHA256 66b0b76707ebab802008d9fc9ceaef7db399e17f8b334e3c933d593ff19fd03e files/digest-at-poke-0.2.3 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFGlEGFkeYb6olFHJcRAjFqAKD9uBqG4cTwsPAb6Ra1hd7QcTBwXACg3lhx
+PcbASAadmqB9bhK6cNnjZfM=
+=1z9q
+-----END PGP SIGNATURE-----

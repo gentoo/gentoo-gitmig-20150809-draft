@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST java-access-bridge-1.6.0.tar.bz2 122911 RMD160 22112f8c3a2faa1acae054a4dce09cfe09d757f0 SHA1 947bd364214c01a6e6ba947a5b39a3e0fc9236ac SHA256 9a5ac1b59d2a0185fad08ca665a72b06b6fea69e583d5d995fc97c0e46fca520
 EBUILD java-access-bridge-1.6.0-r1.ebuild 1376 RMD160 7e7462c69a2f111ba1442f26d176a9ebd812ae0e SHA1 2f3e4c432af77b49a17fa731fde8906ba32007a7 SHA256 37f4252ba88ed3f2f38838425c36f40816983d4b237a6b01b64662bd46cff037
 MD5 bc9b947efed62f50b90b2329d8b2af8e java-access-bridge-1.6.0-r1.ebuild 1376
@@ -21,3 +24,10 @@ SHA256 6ff8168f9d54d9e8ad0885dc7bdbb88dfaa30d2730fcc78904b7fe93e6b56ce3 files/di
 MD5 b9017c7b472e3863d76b21def89767af files/digest-java-access-bridge-1.6.0-r1 277
 RMD160 0b8d42fd43382ec43735b4b5f052c5a765b65c6c files/digest-java-access-bridge-1.6.0-r1 277
 SHA256 6ff8168f9d54d9e8ad0885dc7bdbb88dfaa30d2730fcc78904b7fe93e6b56ce3 files/digest-java-access-bridge-1.6.0-r1 277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFGlEGGkeYb6olFHJcRAkdWAKDXtP3Ia8W10tIAAgB6e5G2OG8oVgCggiV2
+Vr3eBrqA1su5j+ZjoBz6oc8=
+=yeLk
+-----END PGP SIGNATURE-----
