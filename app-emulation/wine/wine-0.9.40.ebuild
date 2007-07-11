@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.40.ebuild,v 1.3 2007/07/10 06:58:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.40.ebuild,v 1.4 2007/07/11 19:43:44 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -54,6 +54,7 @@ DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 pkg_setup() {
+	use alsa || return 0
 	if ! built_with_use --missing true media-libs/alsa-lib midi ; then
 		eerror "You must build media-libs/alsa-lib with USE=midi"
 		die "please re-emerge media-libs/alsa-lib with USE=midi"
