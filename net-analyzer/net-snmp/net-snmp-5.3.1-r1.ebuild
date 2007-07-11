@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.3.1-r1.ebuild,v 1.3 2007/05/01 18:09:57 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.3.1-r1.ebuild,v 1.4 2007/07/11 23:49:24 mr_bones_ Exp $
 
 inherit fixheadtails flag-o-matic perl-module
 
@@ -55,7 +55,6 @@ src_unpack() {
 #   RedHat Patches to generally fix x86_64 type issues
 	epatch "${FILESDIR}"/${PN}-5.3.1-retrans-time.patch
 	epatch "${FILESDIR}"/${PN}-5.3.1-tcp-udp-mib-byteorder.patch
-
 
 	# bugs 68467 and 68254
 	sed -i -e \
@@ -185,4 +184,3 @@ pkg_postinst() {
 	elog "An example configuration file has been installed in"
 	elog "/etc/snmp/snmpd.conf.example."
 }
-

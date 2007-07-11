@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.33.0.ebuild,v 1.4 2007/04/16 08:40:57 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.33.0.ebuild,v 1.5 2007/07/11 23:49:24 mr_bones_ Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -43,7 +43,6 @@ src_compile() {
 	cd src
 	emake || die "compile problem"
 }
-
 
 src_install() {
 	dodoc README.TXT

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg-ping-probe/mrtg-ping-probe-2.2.0.ebuild,v 1.2 2006/06/05 17:40:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg-ping-probe/mrtg-ping-probe-2.2.0.ebuild,v 1.3 2007/07/11 23:49:24 mr_bones_ Exp $
 
 DESCRIPTION="Addon mrtg contrib for stats ping/loss packets"
 SRC_URI="ftp://ftp.pwo.de/pub/pwo/mrtg/mrtg-ping-probe/${P}.tar.gz"
@@ -32,4 +32,3 @@ src_install () {
 	doman mrtg-ping-probe.1
 	dobin check-ping-fmt mrtg-ping-probe ${FILESDIR}/mrtg-ping-cfg
 }
-

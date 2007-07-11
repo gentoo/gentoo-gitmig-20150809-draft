@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.8-r1.ebuild,v 1.6 2007/06/30 16:36:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.8-r1.ebuild,v 1.7 2007/07/11 23:49:24 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -122,4 +122,3 @@ pkg_postinst() {
 	echo
 	einfo "contrib plugins are installed into /usr/nagios/libexec/contrib"
 }
-

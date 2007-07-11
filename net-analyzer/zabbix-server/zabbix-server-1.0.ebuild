@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.0.ebuild,v 1.5 2007/05/01 22:50:32 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.0.ebuild,v 1.6 2007/07/11 23:49:24 mr_bones_ Exp $
 
 inherit eutils
 
@@ -86,7 +86,6 @@ src_install() {
 		doins create/postgresql/schema.sql
 	fi
 }
-
 
 pkg_postinst(){
 	if ( use mysql ); then

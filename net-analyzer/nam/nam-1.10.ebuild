@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.10.ebuild,v 1.6 2006/01/22 14:43:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.10.ebuild,v 1.7 2007/07/11 23:49:24 mr_bones_ Exp $
 
 DESCRIPTION="Network Simulator GUI for NS"
 HOMEPAGE="http://www.isi.edu/nsnam/${PN}/"
@@ -20,8 +20,6 @@ DEPEND="|| ( x11-libs/libXmu virtual/x11 )
 		dev-tcltk/tcl-debug"
 RDEPEND=">=net-analyzer/ns-2.27
 		 ${DEPEND}"
-
-
 
 findtclver() {
 	# input should always be in INCREASING order

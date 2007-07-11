@@ -1,7 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.22 2007/05/01 18:14:06 genone Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.23 2007/07/11 23:49:24 mr_bones_ Exp $
 
 DESCRIPTION="tool that shows network usage like top"
 HOMEPAGE="http://www.ntop.org/ntop.html"
@@ -56,4 +55,3 @@ pkg_postinst() {
 	elog "Notice that intop was removed upstream as of 3.0."
 
 }
-

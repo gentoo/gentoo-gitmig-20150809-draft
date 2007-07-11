@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/squid-graph-3.1.ebuild,v 1.9 2007/05/01 22:40:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/squid-graph-3.1.ebuild,v 1.10 2007/07/11 23:49:24 mr_bones_ Exp $
 
 DESCRIPTION="Squid logfile analyzer and traffic grapher"
 HOMEPAGE="http://squid-graph.securlogic.com/"
@@ -23,5 +23,3 @@ src_install () {
 pkg_postinst () {
 	elog "Remember to copy /usr/share/doc/${P}/html/logo.png to your output directory"
 }
-
-

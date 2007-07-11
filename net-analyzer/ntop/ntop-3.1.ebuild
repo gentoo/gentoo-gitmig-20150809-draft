@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.1.ebuild,v 1.11 2007/04/22 08:44:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.1.ebuild,v 1.12 2007/07/11 23:49:24 mr_bones_ Exp $
 
 inherit eutils
 
@@ -87,4 +87,3 @@ src_install() {
 
 	echo 'NTOP_OPTS="-u ntop -P /var/lib/ntop"' >> "${D}"/etc/conf.d/ntop
 }
-

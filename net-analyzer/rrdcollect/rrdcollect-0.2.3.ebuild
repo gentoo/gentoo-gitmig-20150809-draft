@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdcollect/rrdcollect-0.2.3.ebuild,v 1.2 2006/12/06 11:52:25 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdcollect/rrdcollect-0.2.3.ebuild,v 1.3 2007/07/11 23:49:24 mr_bones_ Exp $
 
 DESCRIPTION="Read system statistical data and feed it to RRDtool"
 HOMEPAGE="http://rrdcollect.sourceforge.net/"
@@ -30,4 +30,3 @@ src_compile() {
 src_install() {
 	einstall || die "einstall failed"
 }
-

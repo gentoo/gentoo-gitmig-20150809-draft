@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-1.5b.ebuild,v 1.5 2006/08/30 23:04:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-1.5b.ebuild,v 1.6 2007/07/11 23:49:24 mr_bones_ Exp $
 
 DESCRIPTION="Honeyd is a small daemon that creates virtual hosts on a network"
 HOMEPAGE="http://www.honeyd.org/"
@@ -64,4 +64,3 @@ src_install() {
 	find "${D}"/usr/share/honeyd/scripts \
 		-type f -name '*.sh' -o -name '*.pl' -exec chmod +x {} \;
 }
-

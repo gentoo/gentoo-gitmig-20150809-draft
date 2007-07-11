@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.14 2006/02/15 21:41:27 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.15 2007/07/11 23:49:24 mr_bones_ Exp $
 
 inherit eutils
 
@@ -42,4 +42,3 @@ src_install () {
 	insinto /etc/argus
 	doins support/Config/argus.conf
 }
-

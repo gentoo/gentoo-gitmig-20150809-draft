@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mirmon/mirmon-1.36.ebuild,v 1.2 2005/07/19 13:30:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mirmon/mirmon-1.36.ebuild,v 1.3 2007/07/11 23:49:24 mr_bones_ Exp $
 
 inherit webapp
 
@@ -13,7 +13,6 @@ LICENSE="GPL-2"
 KEYWORDS="~ppc ~x86"
 
 DEPEND=">=dev-lang/perl-5.8.5-r2"
-
 
 src_install() {
 	webapp_src_preinst

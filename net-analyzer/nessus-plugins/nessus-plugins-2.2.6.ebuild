@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.2.6.ebuild,v 1.7 2006/02/07 21:31:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.2.6.ebuild,v 1.8 2007/07/11 23:49:24 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -26,4 +26,3 @@ src_install() {
 		install || die "make install failed"
 	dodoc docs/*.txt plugins/accounts/accounts.txt
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7-r1.ebuild,v 1.8 2006/08/15 09:12:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7-r1.ebuild,v 1.9 2007/07/11 23:49:24 mr_bones_ Exp $
 
 inherit eutils
 
@@ -42,4 +42,3 @@ src_install () {
 	doman sniffit.5 sniffit.8
 	dodoc README* PLUGIN-HOWTO BETA* HISTORY LICENSE changelog
 }
-

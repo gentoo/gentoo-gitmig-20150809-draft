@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-2.3.1.ebuild,v 1.7 2007/05/01 18:05:06 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-2.3.1.ebuild,v 1.8 2007/07/11 23:49:24 mr_bones_ Exp $
 
 DESCRIPTION="A remote security scanner"
 HOMEPAGE="http://www.nessus.org/"
@@ -23,4 +23,3 @@ pkg_postrm() {
 	done
 	echo
 }
-

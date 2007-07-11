@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/nagios-sap-ccms-plugin-0.7.3.ebuild,v 1.4 2007/06/30 16:39:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/nagios-sap-ccms-plugin-0.7.3.ebuild,v 1.5 2007/07/11 23:49:24 mr_bones_ Exp $
 
 MY_P="sap-ccms-plugin-${PV}"
 
@@ -23,7 +23,6 @@ src_compile() {
 	cd "${S}/src"
 	emake || die "emake failed"
 }
-
 
 src_install() {
 	cd "${S}/src"

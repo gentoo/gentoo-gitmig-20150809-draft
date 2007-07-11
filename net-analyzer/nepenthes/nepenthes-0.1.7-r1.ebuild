@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.7-r1.ebuild,v 1.2 2006/05/03 11:06:34 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.7-r1.ebuild,v 1.3 2007/07/11 23:49:24 mr_bones_ Exp $
 
 inherit eutils
 
@@ -70,4 +70,3 @@ src_install() {
 	keepdir /var/lib/nepenthes/cache/geolocation
 
 }
-

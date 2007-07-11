@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.6.1.ebuild,v 1.3 2007/05/01 22:31:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.6.1.ebuild,v 1.4 2007/07/11 23:49:24 mr_bones_ Exp $
 
 inherit eutils
 
@@ -35,7 +35,6 @@ pkg_setup() {
 		die
 	fi
 }
-
 
 src_unpack() {
 	unpack ${A}

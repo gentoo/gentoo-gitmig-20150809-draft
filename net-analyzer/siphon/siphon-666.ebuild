@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/siphon-666.ebuild,v 1.12 2006/05/02 22:13:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/siphon-666.ebuild,v 1.13 2007/07/11 23:49:24 mr_bones_ Exp $
 
 IUSE=""
 MY_P=${PN}-v.${PV}
@@ -35,4 +35,3 @@ src_install() {
 	doins osprints.conf
 	dodoc LICENSE README
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/nagios-imagepack-1.0.ebuild,v 1.11 2006/05/07 20:16:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/nagios-imagepack-1.0.ebuild,v 1.12 2007/07/11 23:49:24 mr_bones_ Exp $
 
 DESCRIPTION="Nagios imagepacks - Icons and pictures for Nagios"
 HOMEPAGE="http://www.nagios.org"
@@ -14,7 +14,6 @@ SRC_URI="
 	${IMAGE_URI}/imagepak-satrapa.tar.gz
 	${IMAGE_URI}/imagepak-werschler.tar.gz
 "
-
 
 SLOT="0"
 LICENSE="GPL-2"
