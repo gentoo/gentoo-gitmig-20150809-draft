@@ -1,13 +1,13 @@
 # ChangeLog for app-emacs/emms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/ChangeLog,v 1.10 2007/07/11 21:56:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/ChangeLog,v 1.11 2007/07/11 22:00:05 ulm Exp $
+
+*emms-3.0 (11 Jul 2007)
 
   11 Jul 2007; Ulrich Mueller <ulm@gentoo.org> files/50emms-gentoo.el,
   emms-2.1.ebuild, +emms-3.0.ebuild:
   Version bump; Emacs 22 is needed now, updated SRC_URI, LICENSE changed to
   GPL-3; fixes bug #184920. Use autoload mechanism in site-init file.
-
-*emms-3.0 (11 Jul 2007)
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org> emms-2.1.ebuild:
   added some quotes; adjusted DESCRIPTION; cleaned-up DEPEND; exchanged manual
