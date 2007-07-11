@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-2.2.2-r1.ebuild,v 1.3 2007/07/11 14:05:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-2.2.2-r1.ebuild,v 1.4 2007/07/11 16:30:24 jer Exp $
 
 inherit eutils gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tangentsoft.net/mysql++/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~mips ~ppc sparc x86"
+KEYWORDS="alpha ~amd64 hppa ~mips ~ppc sparc x86"
 IUSE=""
 
 DEPEND=">=sys-devel/gcc-3"
