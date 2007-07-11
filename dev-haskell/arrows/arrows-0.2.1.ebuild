@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/arrows-0.2.1.ebuild,v 1.2 2007/07/09 13:23:40 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/arrows-0.2.1.ebuild,v 1.3 2007/07/11 18:08:34 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -13,7 +13,7 @@ SRC_URI="http://www.haskell.org/ghc/dist/${GHC_PV}/ghc-${GHC_PV}-src-extralibs.t
 LICENSE="BSD"
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.6"

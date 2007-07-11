@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hunit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.17 2007/07/08 17:37:11 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.18 2007/07/11 18:15:44 dcoutts Exp $
+
+  11 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> hunit-1.1.1.ebuild:
+  Marked ~ia64.
 
 *hunit-1.1.1 (08 Jul 2007)
 
