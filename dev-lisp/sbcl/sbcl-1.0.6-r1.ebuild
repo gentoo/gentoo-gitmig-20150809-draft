@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.6-r1.ebuild,v 1.3 2007/07/11 13:20:27 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.6-r1.ebuild,v 1.4 2007/07/11 13:23:32 hkbst Exp $
 
 inherit common-lisp-common-3 eutils flag-o-matic
 
@@ -82,7 +82,6 @@ src_unpack() {
 		for a in ${A}; do [[ $a == *binary* ]] && break; done
 	fi
 	unpack $a
-	ls -l
 	mv ${PN}* sbcl-binary || die
 	unpack ${P}-source.tar.bz2
 	pushd ${S}
