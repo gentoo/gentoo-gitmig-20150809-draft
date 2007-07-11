@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.419 2007/07/11 09:52:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.420 2007/07/11 17:49:37 mr_bones_ Exp $
+
+  11 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org> mysql-5.0.44.ebuild:
+  fix inherit order so DESCRIPTION is properly set
 
 *mysql-5.0.44 (11 Jul 2007)
 
