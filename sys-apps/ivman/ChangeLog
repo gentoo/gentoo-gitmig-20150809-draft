@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.54 2007/07/10 07:49:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.55 2007/07/11 13:14:52 gustavoz Exp $
+
+  11 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> ivman-0.6.14.ebuild:
+  Stable on sparc wrt #182190
 
   10 Jul 2007; Stefan Schweizer <genstef@gentoo.org> ivman-0.6.14.ebuild:
   remove debugging output thanks to Denilson <denilsonsa@gmail.com> in bug 182190
