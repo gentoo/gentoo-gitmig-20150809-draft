@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/Mail-Audit-2.218.ebuild,v 1.5 2007/06/21 16:23:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/Mail-Audit-2.218.ebuild,v 1.6 2007/07/11 19:06:56 armin76 Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~rjbs/"
 
 LICENSE="Artistic"
 #KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc sparc ~x86"
+KEYWORDS="alpha ~amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 SLOT="0"
