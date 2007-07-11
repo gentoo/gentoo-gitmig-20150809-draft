@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.2.0.ebuild,v 1.10 2007/01/21 22:25:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.2.0.ebuild,v 1.11 2007/07/11 02:34:03 leio Exp $
 
 inherit virtualx gnome2
 
@@ -49,7 +49,6 @@ DOCS="AUTHORS ChangeLog NEWS README"
 # So it doesn't break when building kbd files
 MAKEOPTS="${MAKEOPTS} -j1"
 
-
 src_test() {
 	# Remove missing file from the Makefile to fix tests (bug #140265)
 	sed -i -e '/char-frequency.xml.in/d' ${S}/po/Makefile
@@ -57,4 +56,3 @@ src_test() {
 	addwrite "/root/.gnome2_private"
 	Xmake check || die
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.6.0-r1.ebuild,v 1.2 2007/01/23 14:52:32 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.6.0-r1.ebuild,v 1.3 2007/07/11 02:34:03 leio Exp $
 
 inherit java-pkg-2 gnome2
 
@@ -23,7 +23,6 @@ DEPEND="$COMMON_DEPEND
 	>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-
 
 pkg_setup() {
 	java-pkg-2_pkg_setup

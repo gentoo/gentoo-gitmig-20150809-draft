@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.10.ebuild,v 1.10 2006/11/13 20:06:13 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.10.ebuild,v 1.11 2007/07/11 02:34:03 leio Exp $
 
 inherit virtualx gnome2
 
@@ -55,4 +55,3 @@ src_test() {
 	addwrite "/root/.gnome2_private"
 	Xmake check || die
 }
-
