@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hdbc-odbc
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/ChangeLog,v 1.9 2006/10/12 18:34:43 dcoutts Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/ChangeLog,v 1.10 2007/07/11 17:42:32 dcoutts Exp $
+
+*hdbc-odbc-1.0.1.1 (11 Jul 2007)
+
+  11 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> +hdbc-odbc-1.0.1.1.ebuild:
+  New minor version. Fixes bug #180686.
 
   12 Oct 2006; Duncan Coutts <dcoutts@gentoo.org>
   -hdbc-odbc-0.99.0.0.ebuild, -hdbc-odbc-0.99.2.1.ebuild:
