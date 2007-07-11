@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-hotkeys/gaim-hotkeys-0.1.2.ebuild,v 1.1 2005/12/19 00:59:46 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-hotkeys/gaim-hotkeys-0.1.2.ebuild,v 1.2 2007/07/11 20:39:22 mr_bones_ Exp $
 
 DESCRIPTION="gaim-hotkeys is a Gaim plugin that allows you to define global hotkeys for various actions such as toggling buddy list, fetching queued messages, opening preferences or account dialog."
 
@@ -14,7 +14,6 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=">=net-im/gaim-1.0.0"
-
 
 src_compile() {
 	econf || die "econf failed"

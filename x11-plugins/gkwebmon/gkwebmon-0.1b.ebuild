@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkwebmon/gkwebmon-0.1b.ebuild,v 1.7 2007/03/12 19:26:31 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkwebmon/gkwebmon-0.1b.ebuild,v 1.8 2007/07/11 20:39:22 mr_bones_ Exp $
 
 inherit gkrellm-plugin
 
@@ -13,4 +13,3 @@ SRC_URI="mirror://sourceforge/gkwebmon/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~sparc ~alpha"
-

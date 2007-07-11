@@ -1,7 +1,6 @@
-
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/pidgin-latex-1.0.ebuild,v 1.1 2007/05/24 04:34:54 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/pidgin-latex-1.0.ebuild,v 1.2 2007/07/11 20:39:22 mr_bones_ Exp $
 
 inherit flag-o-matic multilib
 

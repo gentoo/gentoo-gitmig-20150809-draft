@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellfire/gkrellfire-0.3.3.ebuild,v 1.3 2007/04/26 19:06:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellfire/gkrellfire-0.3.3.ebuild,v 1.4 2007/07/11 20:39:23 mr_bones_ Exp $
 
 inherit gkrellm-plugin
 
@@ -13,4 +13,3 @@ SLOT="0"
 KEYWORDS="x86"
 
 IUSE=""
-

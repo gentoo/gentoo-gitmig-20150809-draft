@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmswallow/wmswallow-0.6.1.ebuild,v 1.7 2006/01/31 20:54:36 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmswallow/wmswallow-0.6.1.ebuild,v 1.8 2007/07/11 20:39:22 mr_bones_ Exp $
 
 IUSE=""
 
@@ -34,4 +34,3 @@ src_install() {
 	fperms 755 /usr/bin/wmswallow
 	dodoc CHANGELOG README README.solaris todo
 }
-

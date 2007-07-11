@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/pidgin-encryption-3.0.ebuild,v 1.1 2007/05/09 13:14:06 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/pidgin-encryption-3.0.ebuild,v 1.2 2007/07/11 20:39:22 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="nls"
-
 
 RDEPEND="net-im/pidgin
 	>=x11-libs/gtk+-2

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/gkrellsun-1.0.0-r1.ebuild,v 1.3 2007/03/12 17:52:07 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/gkrellsun-1.0.0-r1.ebuild,v 1.4 2007/07/11 20:39:22 mr_bones_ Exp $
 
 inherit gkrellm-plugin
 
@@ -21,4 +21,3 @@ src_compile() {
 	use nls && myconf="$myconf enable_nls=1"
 	emake ${myconf}
 }
-

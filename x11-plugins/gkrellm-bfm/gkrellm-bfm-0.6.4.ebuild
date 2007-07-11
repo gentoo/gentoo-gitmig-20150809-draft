@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bfm/gkrellm-bfm-0.6.4.ebuild,v 1.5 2007/03/24 18:09:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bfm/gkrellm-bfm-0.6.4.ebuild,v 1.6 2007/07/11 20:39:23 mr_bones_ Exp $
 
 inherit gkrellm-plugin
 
@@ -24,4 +24,3 @@ src_unpack() {
 src_compile() {
 	emake STRIP=echo gkrellm
 }
-

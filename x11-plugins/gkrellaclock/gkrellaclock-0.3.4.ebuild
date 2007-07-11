@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/gkrellaclock-0.3.4.ebuild,v 1.8 2007/06/02 16:33:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/gkrellaclock-0.3.4.ebuild,v 1.9 2007/07/11 20:39:23 mr_bones_ Exp $
 
 inherit gkrellm-plugin
 
@@ -20,4 +20,3 @@ src_compile() {
 	export CFLAGS="${CFLAGS/-O?/}"
 	emake || die 'emake failed'
 }
-

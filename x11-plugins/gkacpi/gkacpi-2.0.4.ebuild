@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkacpi/gkacpi-2.0.4.ebuild,v 1.3 2007/06/04 18:05:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkacpi/gkacpi-2.0.4.ebuild,v 1.4 2007/07/11 20:39:22 mr_bones_ Exp $
 
 inherit gkrellm-plugin
 
@@ -15,4 +15,3 @@ SLOT="0"
 S="${WORKDIR}/${PN}2-0.4"
 
 PLUGIN_SO=gkacpi2.so
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b-r1.ebuild,v 1.2 2007/02/22 21:15:17 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b-r1.ebuild,v 1.3 2007/07/11 20:39:22 mr_bones_ Exp $
 
 IUSE="gtk"
 
@@ -66,4 +66,3 @@ src_install() {
 	einfo
 	einfo "or use the preferences within gkrellm2"
 }
-

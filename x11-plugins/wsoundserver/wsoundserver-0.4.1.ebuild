@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wsoundserver/wsoundserver-0.4.1.ebuild,v 1.4 2006/01/24 23:25:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wsoundserver/wsoundserver-0.4.1.ebuild,v 1.5 2007/07/11 20:39:22 mr_bones_ Exp $
 
 MY_P="${P/wsoundserver/WSoundServer}-new"
 S="${WORKDIR}/${MY_P}"
@@ -48,4 +48,3 @@ pkg_postinst() {
 	einfo "It supports not only 8 and 16 bit .wav files"
 	einfo "as the original does"
 }
-

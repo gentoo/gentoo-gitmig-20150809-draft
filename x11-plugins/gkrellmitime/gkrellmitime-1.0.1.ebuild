@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/gkrellmitime-1.0.1.ebuild,v 1.13 2007/03/09 19:07:26 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/gkrellmitime-1.0.1.ebuild,v 1.14 2007/07/11 20:39:22 mr_bones_ Exp $
 
 inherit gkrellm-plugin
 
@@ -20,4 +20,3 @@ src_unpack() {
 	cd ${S}
 	epatch "${FILESDIR}"/${P}-Makefile.patch || die "Patch failed"
 }
-

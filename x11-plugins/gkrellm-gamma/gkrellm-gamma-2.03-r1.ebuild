@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/gkrellm-gamma-2.03-r1.ebuild,v 1.5 2007/05/07 17:30:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/gkrellm-gamma-2.03-r1.ebuild,v 1.6 2007/07/11 20:39:23 mr_bones_ Exp $
 
 inherit gkrellm-plugin
 
@@ -27,4 +27,3 @@ src_unpack() {
 	sed -i -e 's:/usr/X11R6/lib/libXxf86vm.a::' Makefile || die "sed 1/2 failed"
 	sed -i -e '/^LIBS/aLIBS += -L/usr/lib -L/usr/X11R6/lib -lXxf86vm' Makefile || die "sed 2/2 failed"
 }
-

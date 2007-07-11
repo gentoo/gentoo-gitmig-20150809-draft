@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1-r2.ebuild,v 1.6 2006/01/31 19:29:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1-r2.ebuild,v 1.7 2007/07/11 20:39:22 mr_bones_ Exp $
 
 inherit eutils
 
@@ -33,7 +33,6 @@ src_unpack()
 	# and prettify program output for long names
 	epatch ${WORKDIR}/${PN}_${MY_PV}-11.diff
 }
-
 
 src_compile()
 {

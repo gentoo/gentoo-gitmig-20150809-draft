@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.6.ebuild,v 1.9 2007/06/01 00:21:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.6.ebuild,v 1.10 2007/07/11 20:39:22 mr_bones_ Exp $
 
 inherit gkrellm-plugin
 
@@ -31,4 +31,3 @@ src_compile() {
 	addpredict /dev/snd
 	emake ${myconf} || die
 }
-

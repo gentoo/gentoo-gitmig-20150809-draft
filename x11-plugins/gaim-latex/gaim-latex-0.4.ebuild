@@ -1,7 +1,6 @@
-
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-latex/gaim-latex-0.4.ebuild,v 1.2 2006/07/08 21:19:29 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-latex/gaim-latex-0.4.ebuild,v 1.3 2007/07/11 20:39:22 mr_bones_ Exp $
 
 inherit flag-o-matic multilib
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-extprefs/pidgin-extprefs-0.7.ebuild,v 1.1 2007/05/01 03:08:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-extprefs/pidgin-extprefs-0.7.ebuild,v 1.2 2007/07/11 20:39:22 mr_bones_ Exp $
 
 DESCRIPTION="Gaim Extended Preferences is a plugin that takes advantage of existing gaim functionality to provide preferences that are often desired but not are not considered worthy of inclusion in Gaim itself."
 
@@ -18,7 +18,6 @@ IUSE=""
 
 DEPEND="dev-util/pkgconfig
 	net-im/pidgin"
-
 
 src_compile() {
 	econf || die "econf failed"

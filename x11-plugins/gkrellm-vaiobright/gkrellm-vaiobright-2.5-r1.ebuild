@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-vaiobright/gkrellm-vaiobright-2.5-r1.ebuild,v 1.3 2007/04/26 19:14:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-vaiobright/gkrellm-vaiobright-2.5-r1.ebuild,v 1.4 2007/07/11 20:39:22 mr_bones_ Exp $
 
 inherit gkrellm-plugin
 
@@ -24,4 +24,3 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-textrel.patch" || die "Patch failed"
 	epatch "${FILESDIR}/${P}-fixinfo.patch" || die "Patch failed"
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.0-r1.ebuild,v 1.6 2007/02/18 16:50:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.0-r1.ebuild,v 1.7 2007/07/11 20:39:22 mr_bones_ Exp $
 
 WANT_AUTOMAKE="1.4"
 WANT_AUTOCONF="1.4"
@@ -32,7 +32,6 @@ DEPEND="${RDEPEND}
 		x11-proto/xproto
 		x11-proto/xextproto )
 	virtual/x11 )"
-
 
 src_compile()
 {

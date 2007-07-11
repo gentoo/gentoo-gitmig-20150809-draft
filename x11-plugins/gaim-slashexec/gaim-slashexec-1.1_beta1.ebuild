@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-slashexec/gaim-slashexec-1.1_beta1.ebuild,v 1.3 2007/01/05 04:44:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-slashexec/gaim-slashexec-1.1_beta1.ebuild,v 1.4 2007/07/11 20:39:22 mr_bones_ Exp $
 
 DESCRIPTION="execute commands from within a Gaim conversation"
 HOMEPAGE="http://guifications.sourceforge.net/SlashExec/"
@@ -28,4 +28,3 @@ src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README VERSION
 }
-
