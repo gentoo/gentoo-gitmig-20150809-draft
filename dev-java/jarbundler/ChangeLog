@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jarbundler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.5 2007/05/09 20:54:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.6 2007/07/11 06:19:09 ali_bush Exp $
+
+*jarbundler-1.8.1 (11 Jul 2007)
+
+  11 Jul 2007; Alistair John Bush <ali_bush@gentoo.org>
+  +jarbundler-1.8.1.ebuild:
+  Bump jarbunder to latest version.
 
   09 May 2007; Vlastimil Babka <caster@gentoo.org> -jarbundler-1.4.ebuild:
   Remove unused version, which symlinked to ant-core/lib.
