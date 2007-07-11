@@ -1,6 +1,15 @@
 # ChangeLog for sys-auth/pam_console
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/ChangeLog,v 1.17 2007/06/13 18:56:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/ChangeLog,v 1.18 2007/07/11 14:47:53 flameeyes Exp $
+
+*pam_console-0.99.7.0.2.7-r1 (11 Jul 2007)
+
+  11 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -pam_console-0.99.7.0.2.7.ebuild, +pam_console-0.99.7.0.2.7-r1.ebuild:
+  Apply fix by Brian Tarricone in bug #163860, and install the alternative
+  pam.d files as examples and not as actual configuration files, that was a
+  completely broken behaviour. And I hope nobody else will ever try to change
+  a PAM-herded package without notifying that in the future.
 
   13 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   pam_console-0.99.7.0.2.7.ebuild:

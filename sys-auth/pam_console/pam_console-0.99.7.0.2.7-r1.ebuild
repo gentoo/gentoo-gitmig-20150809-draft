@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/pam_console-0.99.7.0.2.7.ebuild,v 1.7 2007/06/13 18:56:44 armin76 Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/pam_console-0.99.7.0.2.7-r1.ebuild,v 1.1 2007/07/11 14:47:53 flameeyes Exp $
 
 inherit pam versionator rpm autotools flag-o-matic
 
@@ -41,7 +38,9 @@ src_compile() {
 	# I don't care enough to go fixing RedHat's code
 	append-flags -fno-strict-aliasing
 
-	econf --libdir=/$(get_libdir) || die "econf failed"
+	econf \
+		--sbindir=/sbin \
+		--libdir=/$(get_libdir) || die "econf failed"
 	emake -j1 || die "emake failed"
 }
 
@@ -50,10 +49,8 @@ src_install() {
 	dodoc README
 	exeinto /etc/dev.d/default
 	doexec "${FILESDIR}/pam_console.dev"
-	insinto /etc/pam.d
-	doins "${FILESDIR}/login"
-	doins "${FILESDIR}/gdm"
-	doins "${FILESDIR}/gdm-autologin"
+	docinto example
+	dodoc "${FILESDIR}/login" "${FILESDIR}/gdm" "${FILESDIR}/gdm-autologin"
 }
 
 pkg_postinst() {
