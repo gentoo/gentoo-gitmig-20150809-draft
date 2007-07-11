@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.5.7.ebuild,v 1.1 2007/06/16 14:02:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.5.7.ebuild,v 1.2 2007/07/11 18:29:21 dev-zero Exp $
 
 inherit autotools eutils
 
@@ -58,7 +58,7 @@ src_install () {
 	fi
 }
 
-# Don't work...
+# Some of the tests hang forever
 #src_test() {
 #	cd "${S}/tests"
 #	emake || die "emake tests failed"

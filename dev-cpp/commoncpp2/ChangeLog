@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.30 2007/06/16 14:02:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.31 2007/07/11 18:29:21 dev-zero Exp $
+
+  11 Jul 2007; Tiziano Müller <dev-zero@gentoo.org>
+  files/1.5.7-as-needed.patch, commoncpp2-1.5.7.ebuild:
+  Corrected as-needed patch (thanks to Flameeyes)
 
 *commoncpp2-1.5.7 (16 Jun 2007)
 
