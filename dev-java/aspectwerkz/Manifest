@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX aspectwerkz-2.0_rc2-gentoo.patch 4866 RMD160 5f103ae10c843b0ebcf5f3e92f9a733c4fde5dd8 SHA1 601cfaf73827be015c20935e4d02a041a2e440b6 SHA256 262f71feb10fc60b4fd2d6c160041c9ade5388c7d6b885ef9da18d4f8e4a3b29
 MD5 1bcde0233ea72230e5b78958ff1a30f9 files/aspectwerkz-2.0_rc2-gentoo.patch 4866
 RMD160 5f103ae10c843b0ebcf5f3e92f9a733c4fde5dd8 files/aspectwerkz-2.0_rc2-gentoo.patch 4866
@@ -10,10 +7,10 @@ MD5 f216531d3d24d7c011b307640da55b8e files/aspectwerkz-2.0_rc2-jdk15.patch 4503
 RMD160 ced2ad2d092e45c3671a1ddba8cf2868c90128c6 files/aspectwerkz-2.0_rc2-jdk15.patch 4503
 SHA256 7e0efe23f8f831bf0e11cc1e252c37387eede1b770847b44d803e0aeef7820de files/aspectwerkz-2.0_rc2-jdk15.patch 4503
 DIST aspectwerkz-2.0.RC2.zip 9758873 RMD160 75fce715072b274432d8dee8b751675399f9e96b SHA1 fcbc31d1ee7073b7f561c3a84d0d327fe35a6cb6 SHA256 ca3786ee34d7b339bee93944a1c136dcb2aaf783fd60ea88948c3bf19894e1a8
-EBUILD aspectwerkz-2.0_rc2-r2.ebuild 1770 RMD160 7891da879be1bb88e2d27be22b20b6d57f167439 SHA1 f090f0b0eac0c4c986b3175b518928129e7c28a8 SHA256 03389c0a3b69b05580e5501ef62cea5deb5585476aa9ccd30993542d72f557f5
-MD5 5c51e1895d94f2ce439bb78f883824e6 aspectwerkz-2.0_rc2-r2.ebuild 1770
-RMD160 7891da879be1bb88e2d27be22b20b6d57f167439 aspectwerkz-2.0_rc2-r2.ebuild 1770
-SHA256 03389c0a3b69b05580e5501ef62cea5deb5585476aa9ccd30993542d72f557f5 aspectwerkz-2.0_rc2-r2.ebuild 1770
+EBUILD aspectwerkz-2.0_rc2-r2.ebuild 1768 RMD160 220c04f5d7d6b4063e119c727cd648a348135cd4 SHA1 0b5722d8456b70daa720e48d0bb0e5385c60576c SHA256 b0c992d843742ad9705f84490c84c597fddf655dc18ace67db9eda59b45abe47
+MD5 ee712eec1ee4ff1597f8b67196a33d81 aspectwerkz-2.0_rc2-r2.ebuild 1768
+RMD160 220c04f5d7d6b4063e119c727cd648a348135cd4 aspectwerkz-2.0_rc2-r2.ebuild 1768
+SHA256 b0c992d843742ad9705f84490c84c597fddf655dc18ace67db9eda59b45abe47 aspectwerkz-2.0_rc2-r2.ebuild 1768
 EBUILD aspectwerkz-2.0_rc2.ebuild 1555 RMD160 2373a1405c6a935d8594de893f7de3f7303b1f1e SHA1 34ef49fa219a3962bfa6ce42b96a3cd9bf41a9b7 SHA256 68af1421a5ef2ca73ff13280d09a19f2951fbdef471ae3568602a59a68b71eb9
 MD5 3faa409d38c59003fb26142ab9963a7b aspectwerkz-2.0_rc2.ebuild 1555
 RMD160 2373a1405c6a935d8594de893f7de3f7303b1f1e aspectwerkz-2.0_rc2.ebuild 1555
@@ -32,10 +29,3 @@ SHA256 cf8c53ee9de8974e4f1550e22df2c5292ec83b69adf089c099f350f3af684c0f files/di
 MD5 a0ce019e97578ad1c6efb89e980f8bf6 files/digest-aspectwerkz-2.0_rc2-r2 253
 RMD160 cf9e681a76af31bd2691713633bc1d2606199770 files/digest-aspectwerkz-2.0_rc2-r2 253
 SHA256 cf8c53ee9de8974e4f1550e22df2c5292ec83b69adf089c099f350f3af684c0f files/digest-aspectwerkz-2.0_rc2-r2 253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.2 (GNU/Linux)
-
-iD8DBQFF9x+ccxLzpIGCsLQRArxJAJ9SoqapvtxRUqHGGp218QWRSUFOEwCcDoAy
-nvkr0ji7vpUrUW6IaU2d+oI=
-=xJbb
------END PGP SIGNATURE-----

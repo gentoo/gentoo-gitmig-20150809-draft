@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX gnu-classpath-inetlib-1.0-jdk15.patch 3035 RMD160 267b766def47190719942efcae991cfec107981e SHA1 a4bcdb580da639c05b7789ca9e835c0eb8728181 SHA256 c8cc12545a6ae37fc510b338dd8470ac1d704baf135b6c4dec51fb9a254cfd30
 MD5 a8b9ea912b3634be0f6bd77a120f999f files/gnu-classpath-inetlib-1.0-jdk15.patch 3035
 RMD160 267b766def47190719942efcae991cfec107981e files/gnu-classpath-inetlib-1.0-jdk15.patch 3035
@@ -15,10 +12,10 @@ EBUILD gnu-classpath-inetlib-1.0-r2.ebuild 1810 RMD160 f226ce755cd186edcfa44a69b
 MD5 055785bd2458ed217dd999dd933a6695 gnu-classpath-inetlib-1.0-r2.ebuild 1810
 RMD160 f226ce755cd186edcfa44a69b8bc0b041670ad70 gnu-classpath-inetlib-1.0-r2.ebuild 1810
 SHA256 ef073eff042f34bf1d3f615588750458c228183afddf5c4af7b1ae0d5a6abe32 gnu-classpath-inetlib-1.0-r2.ebuild 1810
-EBUILD gnu-classpath-inetlib-1.1-r2.ebuild 1412 RMD160 edff83b5edc7eafda42943b704341c7336ee8220 SHA1 f3aee033699df319c393177fa530fd97cb39ea4d SHA256 4f2ca65f288e71fab3c05558d9fa46f963f158b37415dd849da3c0009ddce2ef
-MD5 a6189aadd5a0f153f82fc4f1f9b3fce6 gnu-classpath-inetlib-1.1-r2.ebuild 1412
-RMD160 edff83b5edc7eafda42943b704341c7336ee8220 gnu-classpath-inetlib-1.1-r2.ebuild 1412
-SHA256 4f2ca65f288e71fab3c05558d9fa46f963f158b37415dd849da3c0009ddce2ef gnu-classpath-inetlib-1.1-r2.ebuild 1412
+EBUILD gnu-classpath-inetlib-1.1-r2.ebuild 1410 RMD160 e0b520035381edf3025c9b98d51a2802e2e13373 SHA1 5a6a824c6a2e890afd6b6c13e0bc2f08e98f42a6 SHA256 b134e7d20b8e25472c831d4ba006a2801ed7bc75fc8fe62ef6057609dd782623
+MD5 6abef662e8ad844ff4ca792e1c99b6e4 gnu-classpath-inetlib-1.1-r2.ebuild 1410
+RMD160 e0b520035381edf3025c9b98d51a2802e2e13373 gnu-classpath-inetlib-1.1-r2.ebuild 1410
+SHA256 b134e7d20b8e25472c831d4ba006a2801ed7bc75fc8fe62ef6057609dd782623 gnu-classpath-inetlib-1.1-r2.ebuild 1410
 MISC ChangeLog 2105 RMD160 03e1f94da1a77da2b38c303746b0b116b43a98e3 SHA1 d8445c6491d0426202cb983a11745d931de61c04 SHA256 ea71bcfdf60bb88d17247fbcb1ac7f1d28fd0dd7804854dd745d425f6f01565b
 MD5 4eba57941630b89fff571afd0b0dd5f2 ChangeLog 2105
 RMD160 03e1f94da1a77da2b38c303746b0b116b43a98e3 ChangeLog 2105
@@ -33,10 +30,3 @@ SHA256 2d27b7721d3743b0ca34f8a5d0d6a6352fce0113579653e73499138b533cafef files/di
 MD5 eb2b08694c0bdeed41c430ff8d8e792c files/digest-gnu-classpath-inetlib-1.1-r2 235
 RMD160 c925240dbf9a51c3d4d0dc9b14569d1ae1933a4c files/digest-gnu-classpath-inetlib-1.1-r2 235
 SHA256 dc83250a1ebec0229a1504a07fc3536d4759801d9d95e81a261f2697e6ec9d5e files/digest-gnu-classpath-inetlib-1.1-r2 235
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
-
-iD8DBQFGWLiXcxLzpIGCsLQRArbxAJ0WDdb06NQKvSaowxamGM4hYRymMwCbBIaz
-5qKYTGjUQTlQ6FGiECgNXvs=
-=Liom
------END PGP SIGNATURE-----
