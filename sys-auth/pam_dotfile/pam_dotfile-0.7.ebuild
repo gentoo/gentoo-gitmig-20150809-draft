@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/pam_dotfile-0.7.ebuild,v 1.1 2005/07/02 14:04:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/pam_dotfile-0.7.ebuild,v 1.2 2007/07/11 13:08:43 flameeyes Exp $
 
 MY_P="${P/_beta/beta}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="pam module to allow password-storing in \$HOME/dotfiles"
-HOMEPAGE="http://www.stud.uni-hamburg.de/users/lennart/projects/pam_dotfile/"
-SRC_URI="http://www.stud.uni-hamburg.de/users/lennart/projects/pam_dotfile/${MY_P}.tar.gz"
+HOMEPAGE="http://0pointer.de/lennart/projects/pam_dotfile/"
+SRC_URI="http://0pointer.de/lennart/projects/pam_dotfile/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
