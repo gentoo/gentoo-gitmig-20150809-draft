@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-dicts/dictd-dicts-1.0.ebuild,v 1.13 2005/11/25 17:31:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-dicts/dictd-dicts-1.0.ebuild,v 1.14 2007/07/11 05:41:19 mr_bones_ Exp $
 
 DESCRIPTION="A package to simplify installation of all dictd dictionaries"
 
@@ -21,5 +21,3 @@ RDEPEND="app-dicts/dictd-devils
 	app-dicts/dictd-vera
 	app-dicts/dictd-web1913
 	app-dicts/dictd-wn"
-
-

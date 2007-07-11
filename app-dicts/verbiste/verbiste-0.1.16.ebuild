@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.16.ebuild,v 1.6 2007/05/05 14:57:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.16.ebuild,v 1.7 2007/07/11 05:41:19 mr_bones_ Exp $
 
 inherit autotools eutils
 
@@ -21,7 +21,6 @@ RDEPEND=">=dev-libs/libxml2-2.4.0
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
-
 #from enlightenment eclass
 gettext_modify() {
 #        use nls || return 0
@@ -30,7 +29,6 @@ gettext_modify() {
 		-e 's:read dummy < /dev/tty::' \
 		"${T}"/gettextize
 }
-
 
 src_unpack() {
 	unpack ${A}
@@ -42,7 +40,6 @@ src_unpack() {
 	AT_M4DIR=macros eautoreconf
 }
 
-
 src_compile() {
 	econf $(use_with gnome) || die
 	emake || die
@@ -52,4 +49,3 @@ src_install() {
 	make install DESTDIR=${D} || die "can't install"
 	dodoc AUTHORS ChangeLog HACKING LISEZMOI NEWS README THANKS TODO
 }
-

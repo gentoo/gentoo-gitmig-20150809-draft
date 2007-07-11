@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-nl/ispell-nl-1996.ebuild,v 1.1 2006/07/21 21:54:17 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-nl/ispell-nl-1996.ebuild,v 1.2 2007/07/11 05:41:19 mr_bones_ Exp $
 
 MY_P="dutch96"
 S="${WORKDIR}/dutch"
@@ -24,7 +24,6 @@ src_unpack() {
 	cp /usr/portage/distfiles/dutch93.lat ${S}/dutch93.lat
 	cp /usr/portage/distfiles/dutch96.aff ${S}/dutch.aff
 }
-
 
 src_compile() {
 	/usr/bin/buildhash -s ${S}/dutch.lat ${S}/dutch.aff ${S}/dutch.hash || die
