@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/anthy-ss
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/ChangeLog,v 1.100 2007/06/24 15:52:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/ChangeLog,v 1.101 2007/07/11 13:00:02 hattya Exp $
+
+*anthy-ss-9026 (11 Jul 2007)
+
+  11 Jul 2007; Akinori Hattori <hattya@gentoo.org>
+  -files/anthy-ss-calctrans-dep.diff, -anthy-ss-9002.ebuild,
+  +anthy-ss-9026.ebuild:
+  new upstream release.
 
   24 Jun 2007; MATSUU Takuto <matsuu@gentoo.org> anthy-ss-9002.ebuild:
   Fixed to use the right condition for calling elisp-site-regen, bug #182639.

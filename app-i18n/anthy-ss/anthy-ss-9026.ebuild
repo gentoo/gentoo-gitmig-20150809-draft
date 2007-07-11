@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-9002.ebuild,v 1.2 2007/06/24 15:52:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-9026.ebuild,v 1.1 2007/07/11 13:00:02 hattya Exp $
 
-inherit autotools elisp-common eutils
+inherit elisp-common eutils
 
 IUSE="emacs"
 
@@ -10,7 +10,7 @@ MY_P="${P/-ss/}"
 
 DESCRIPTION="Anthy -- free and secure Japanese input system"
 HOMEPAGE="http://anthy.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/anthy/25653/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/anthy/25984/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
@@ -32,9 +32,6 @@ src_unpack() {
 		sed -i /placename/a"read ${cannadicdir}/nichan.ctd" \
 			mkworddic/dict.args.in
 	fi
-
-	epatch "${FILESDIR}"/${PN}-calctrans-dep.diff
-	eautomake
 
 }
 
