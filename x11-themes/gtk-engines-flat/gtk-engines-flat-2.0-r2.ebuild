@@ -1,7 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/gtk-engines-flat-2.0-r2.ebuild,v 1.12 2007/01/05 09:25:22 flameeyes Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/gtk-engines-flat-2.0-r2.ebuild,v 1.13 2007/07/11 03:10:58 leio Exp $
 
 MY_PN="gtk-flat-theme"
 MY_P=${MY_PN}-${PV}

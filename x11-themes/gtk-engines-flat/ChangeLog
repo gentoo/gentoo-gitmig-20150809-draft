@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-flat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/ChangeLog,v 1.23 2007/02/21 22:48:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/ChangeLog,v 1.24 2007/07/11 03:10:58 leio Exp $
+
+  11 Jul 2007; Mart Raudsepp <leio@gentoo.org>
+  -gtk-engines-flat-2.0-r1.ebuild, gtk-engines-flat-2.0-r2.ebuild:
+  Remove old
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
