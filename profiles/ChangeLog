@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.522 2007/07/11 19:30:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.523 2007/07/11 19:40:19 rbu Exp $
+
+  11 Jul 2007; Robert Buchholz <rbu@gentoo.org> use.local.desc:
+  Removing scrobbler from herrie's use locals
 
   11 Jul 2007; Stefan Schweizer <genstef@gentoo.org> package.mask:
   mask freevo for removal
