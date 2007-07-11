@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jflex
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.1 2007/07/02 05:51:09 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.2 2007/07/11 06:33:39 ali_bush Exp $
+
+  11 Jul 2007; Alistair John Bush <ali_bush@gentoo.org>
+  +files/jflex-1.4.1-build.xml.patch:
+  Added patch file which I missed when adding ebuild to portage.
 
   02 Jul 2007; Alistair John Bush <ali_bush@gentoo.org> ChangeLog:
   Adding jflex to tree with 2 minor fixes. Thank you to elvanor

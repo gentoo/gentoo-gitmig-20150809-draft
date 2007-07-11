@@ -1,0 +1,20 @@
+--- build.xml	2007-05-21 17:01:26.000000000 +0200
++++ build-neww.xml	2007-05-21 17:02:02.000000000 +0200
+@@ -35,7 +35,7 @@
+ 
+   <target name="declare" description="define tasks for jflex and cup">
+     <taskdef classname="JFlex.anttask.JFlexTask" name="jflex" classpath="${jflex.jar}"/>
+-    <taskdef classname="java_cup.AntTask" name="cup" classpath="${cup.jar}"/>
++    <taskdef classname="java_cup.anttask.CUPTask" name="cup" classpath="${cup.jar}"/>
+   </target>
+ 
+   <target name="gettools" description="download development tools">
+@@ -69,7 +69,7 @@
+   </target>
+ 
+   <target name="cup" depends="declare" description="generate parser">
+-    <cup file="JFlex/LexParse.cup" dir="JFlex" interface="true" parser="LexParse" />
++    <cup srcfile="JFlex/LexParse.cup" interface="true" parser="LexParse" />
+   </target>
+ 
+   <target name="copy" description="copy resources to build dir">
