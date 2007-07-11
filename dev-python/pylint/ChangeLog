@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.41 2007/07/11 01:23:16 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.42 2007/07/11 14:58:46 pythonhead Exp $
+
+  11 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> pylint-0.13.1.ebuild:
+  Removed test dep for egenix as its only needed for logilab-common
 
   11 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> pylint-0.13.1.ebuild:
   Added USE for test and dep for egenix-mx-base. bug #184839 Santiago M. Mola

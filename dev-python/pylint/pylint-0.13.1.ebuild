@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.13.1.ebuild,v 1.7 2007/07/11 01:23:16 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.13.1.ebuild,v 1.8 2007/07/11 14:58:46 pythonhead Exp $
 
 inherit distutils eutils
 
@@ -8,15 +8,14 @@ DESCRIPTION="PyLint is a tool to check if a Python module satisfies a coding sta
 SRC_URI="ftp://ftp.logilab.org/pub/pylint/${P}.tar.gz"
 HOMEPAGE="http://www.logilab.org/projects/pylint/"
 
-IUSE="tk test"
+IUSE="tk"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ~sparc x86"
 LICENSE="GPL-2"
 DEPEND="|| ( >=dev-python/optik-1.4 >=dev-lang/python-2.3 )
 		>=dev-python/logilab-common-0.21.0
 		>=dev-python/astng-0.17.0
-		tk? ( >=dev-lang/tk-8.4.9 )
-		test? ( dev-python/egenix-mx-base )"
+		tk? ( >=dev-lang/tk-8.4.9 )"
 
 DOCS="doc/*.txt"
 
