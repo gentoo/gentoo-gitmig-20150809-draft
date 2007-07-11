@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.1.8.ebuild,v 1.1 2007/07/01 15:42:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.1.9.ebuild,v 1.1 2007/07/11 18:20:32 hansmi Exp $
 
 inherit eutils toolchain-funcs multilib # subversion
 
@@ -53,6 +53,8 @@ src_install() {
 	dodir /usr/$(get_libdir)/inspircd
 	dodir /usr/$(get_libdir)/inspircd/modules
 	dodir /etc/inspircd
+	dodir /var/log/inspircd
+	dodir /usr/include/inspircd
 
 	emake install \
 		LIBPATH="${D}/usr/$(get_libdir)/inspircd/" \
@@ -61,6 +63,9 @@ src_install() {
 		BINPATH="${D}/usr/bin" \
 		BASE="${D}/usr/$(get_libdir)/inspircd/inspircd.launcher"
 
+	insinto /usr/include/inspircd/
+	doins "${S}"/include/*
+
 	newinitd "${FILESDIR}"/init.d_inspircd inspircd
 }
 
@@ -68,8 +73,11 @@ pkg_postinst() {
 	chown -R inspircd:inspircd "${ROOT}"/etc/inspircd
 	chmod 700 "${ROOT}"/etc/inspircd
 
+	chmod 750 "${ROOT}"/var/log/inspircd
+	chown -R inspircd:inspircd "${ROOT}"/var/log/inspircd
+
 	chown -R inspircd:inspircd "${ROOT}"/usr/$(get_libdir)/inspircd
 	chmod -R 755 "${ROOT}"/usr/$(get_libdir)/inspircd
 
-	chmod -R 755 /usr/bin/inspircd
+	chmod -R 755 "${ROOT}"/usr/bin/inspircd
 }
