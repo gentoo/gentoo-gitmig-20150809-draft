@@ -1,4 +1,7 @@
 #!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/files/postgresql.init-8.2,v 1.2 2007/07/11 08:46:51 dev-zero Exp $
 
 opts="${opts} reload"
 
@@ -24,13 +27,11 @@ start() {
 		rm -f "$PGDATA/postmaster.pid"
 	fi
 
-	local env_vars
-	for var in ${!ENV_*} ; do env_vars="${env_vars} -e ${!var}" ; done
 	start-stop-daemon --start \
 		--pidfile "${PGDATA}/postmaster.pid" \
 		--chuid ${PGUSER}:${PGGROUP} \
 		--exec /usr/bin/postmaster \
-		${env_vars} -- \
+		-- \
 		-D "${PGDATA}" \
 		--silent-mode=true \
 		${PGOPTS}
