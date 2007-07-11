@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Run3
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.20 2007/06/21 16:22:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.21 2007/07/11 16:23:56 armin76 Exp $
+
+  11 Jul 2007; Raúl Porcel <armin76@gentoo.org> IPC-Run3-0.037.ebuild:
+  ia64/x86 stable
 
   21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
   IPC-Run3-0.037.ebuild:
