@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-experience
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-experience/ChangeLog,v 1.16 2007/07/11 03:01:33 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-experience/ChangeLog,v 1.17 2007/07/11 13:15:45 gustavoz Exp $
+
+  11 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gtk-engines-experience-0.10.4.ebuild:
+  Stable on sparc wrt #184916
 
   11 Jul 2007; Mart Raudsepp <leio@gentoo.org>
   -gtk-engines-experience-0.9.8.ebuild,
