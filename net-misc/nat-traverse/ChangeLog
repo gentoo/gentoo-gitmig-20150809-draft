@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nat-traverse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nat-traverse/ChangeLog,v 1.2 2007/02/22 02:33:52 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nat-traverse/ChangeLog,v 1.3 2007/07/11 19:13:35 jokey Exp $
+
+  11 Jul 2007; Markus Ullmann <jokey@gentoo.org> nat-traverse-0.4.ebuild:
+  Stable on x86
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
