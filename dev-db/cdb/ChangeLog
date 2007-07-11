@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/cdb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.35 2007/04/24 17:30:05 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.36 2007/07/11 13:34:54 gustavoz Exp $
+
+  11 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> cdb-0.75-r2.ebuild:
+  Stable on sparc
 
   24 Apr 2007; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
   -cdb-0.75.ebuild, cdb-0.75-r1.ebuild, cdb-0.75-r2.ebuild:
