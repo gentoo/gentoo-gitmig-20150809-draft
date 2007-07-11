@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Tempdir
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Tempdir/ChangeLog,v 1.5 2007/06/21 16:10:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Tempdir/ChangeLog,v 1.6 2007/07/11 19:06:05 armin76 Exp $
+
+  11 Jul 2007; Raúl Porcel <armin76@gentoo.org> File-Tempdir-0.02.ebuild:
+  alpha/x86 stable
 
   21 Jun 2007; Michael Cummings <mcummings@gentoo.org>
   File-Tempdir-0.02.ebuild:
