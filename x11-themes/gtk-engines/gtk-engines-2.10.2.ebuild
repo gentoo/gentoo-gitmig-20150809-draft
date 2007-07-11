@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.10.2.ebuild,v 1.1 2007/06/18 07:38:05 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.10.2.ebuild,v 1.2 2007/07/11 02:44:21 leio Exp $
 
 inherit gnome2
 
@@ -14,12 +14,10 @@ IUSE="accessibility static"
 
 RDEPEND=">=x11-libs/gtk+-2.10
 	!<=x11-themes/gnome-themes-2.8.2"
-
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-
 
 pkg_setup() {
 	G2CONF="$(use_enable static) --enable-animation"
