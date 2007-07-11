@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.96 2007/07/08 04:28:07 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.97 2007/07/11 09:03:56 keri Exp $
+
+  11 Jul 2007; keri <keri@gentoo.org> swi-prolog-5.6.36.ebuild:
+  Fix freeStacks on single-threaded engine. Reported by Paul Bredbury in bug
+  #184662.
 
 *swi-prolog-5.6.36 (08 Jul 2007)
 
