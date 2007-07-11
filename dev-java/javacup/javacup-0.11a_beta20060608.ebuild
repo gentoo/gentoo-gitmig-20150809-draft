@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.11a_beta20060608.ebuild,v 1.1 2007/07/01 09:36:45 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.11a_beta20060608.ebuild,v 1.2 2007/07/11 19:58:37 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="source doc"
 WANT_SPLIT_ANT="true"
@@ -54,6 +54,3 @@ src_install() {
 	use source && java-pkg_dosrc java/*
 	use doc && java-pkg_dojavadoc javadoc
 }
-
-
-

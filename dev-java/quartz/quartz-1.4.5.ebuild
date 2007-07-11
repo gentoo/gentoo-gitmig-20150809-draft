@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.4.5.ebuild,v 1.5 2007/01/25 08:58:10 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.4.5.ebuild,v 1.6 2007/07/11 19:58:38 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -54,7 +54,6 @@ src_compile() {
 
 	ant ${antflags} || die "compile failed"
 }
-
 
 src_install() {
 	java-pkg_dojar lib/quartz.jar

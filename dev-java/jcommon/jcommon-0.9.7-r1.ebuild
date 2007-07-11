@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-0.9.7-r1.ebuild,v 1.7 2007/03/17 12:14:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-0.9.7-r1.ebuild,v 1.8 2007/07/11 19:58:37 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -35,4 +35,3 @@ src_install() {
 	dodoc README.txt
 	use doc && java-pkg_dohtml -r javadoc
 }
-

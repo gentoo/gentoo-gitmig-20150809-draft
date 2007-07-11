@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jre-bin/diablo-jre-bin-1.5.0.07.01.ebuild,v 1.1 2006/12/03 16:58:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jre-bin/diablo-jre-bin-1.5.0.07.01.ebuild,v 1.2 2007/07/11 19:58:37 mr_bones_ Exp $
 
 inherit java-vm-2 eutils versionator
 
@@ -71,7 +71,6 @@ src_install() {
 		sed -i -e 's/libz\.so\.3/libz.so.1/g' "$i"
 	done
 	[[ "$SANITY_CHECK_LIBZ_FAILED" = "1" ]] && die "failed to change libz.so.3 to libz.so.1"
-
 
 	# create dir for system preferences
 	dodir /opt/${P}/.systemPrefs

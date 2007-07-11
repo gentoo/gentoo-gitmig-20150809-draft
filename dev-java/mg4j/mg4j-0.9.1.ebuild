@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1.ebuild,v 1.8 2007/02/03 17:05:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1.ebuild,v 1.9 2007/07/11 19:58:37 mr_bones_ Exp $
 
 inherit eutils java-pkg
 
@@ -24,7 +24,6 @@ DEPEND=">=virtual/jdk-1.4
 	>=dev-java/javacc-3
 	jikes? ( dev-java/jikes )
 	source? ( app-arch/zip )"
-
 
 src_unpack() {
 	unpack ${A}

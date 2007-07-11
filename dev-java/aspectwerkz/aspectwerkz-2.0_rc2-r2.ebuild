@@ -1,12 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r2.ebuild,v 1.4 2007/03/13 21:53:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r2.ebuild,v 1.5 2007/07/11 19:58:37 mr_bones_ Exp $
 
 JAVA_PKG_BSFIX="off"
 # no rewriting required since we patch build.xml to contain target/source
 
 inherit java-pkg-2 eutils java-ant-2
-
 
 DESCRIPTION="AspectWerkz is a dynamic, lightweight and high-performant AOP/AOSD framework for Java."
 SRC_URI="http://dist.codehaus.org/${PN}/distributions/${P/_rc/.RC}.zip"

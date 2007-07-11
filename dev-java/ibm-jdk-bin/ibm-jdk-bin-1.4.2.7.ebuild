@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.7.ebuild,v 1.7 2007/04/13 16:56:28 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.7.ebuild,v 1.8 2007/07/11 19:58:37 mr_bones_ Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils versionator rpm
@@ -73,7 +73,6 @@ RDEPEND="
 		)
 		x86? ( nsplugin? ( =x11-libs/gtk+-1* =dev-libs/glib-1* ) )
 		doc? ( =dev-java/java-sdk-docs-1.4.2* )"
-
 
 RESTRICT="fetch"
 

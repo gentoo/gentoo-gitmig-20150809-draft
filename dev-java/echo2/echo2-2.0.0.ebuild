@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/echo2/echo2-2.0.0.ebuild,v 1.4 2007/01/12 21:12:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/echo2/echo2-2.0.0.ebuild,v 1.5 2007/07/11 19:58:37 mr_bones_ Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,7 +12,6 @@ HOMEPAGE="http://www.nextapp.com/platform/echo2/echo/"
 # DOWNLOAD_URI="http://www.nextapp.com/downloads/echo2/${PV}/NextApp_Echo2.tgz"
 
 SRC_URI="mirror://gentoo/NextApp_Echo2-${PV}.tgz"
-
 
 LICENSE="|| ( MPL-1.1 LGPL-2.1 )"
 SLOT="0"

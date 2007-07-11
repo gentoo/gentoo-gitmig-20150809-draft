@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/jsx-1.0.7.5.ebuild,v 1.5 2005/07/15 21:34:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/jsx-1.0.7.5.ebuild,v 1.6 2007/07/11 19:58:38 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -17,7 +17,6 @@ RDEPEND=">=virtual/jre-1.2"
 
 S=${WORKDIR}
 
-
 src_unpack() {
 	jar xf ${DISTDIR}/${A} || die
 	rm -f JSX/*.class JSX/magic/*.class
@@ -32,4 +31,3 @@ src_install() {
 	jar cf jsx.jar JSX/*.class JSX/magic/*.class || die "failed to create jar"
 	java-pkg_dojar jsx.jar
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta11.ebuild,v 1.13 2007/05/09 15:16:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta11.ebuild,v 1.14 2007/07/11 19:58:37 mr_bones_ Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -29,7 +29,6 @@ DEPEND=">=virtual/jdk-1.3
 	)
 	source? ( app-arch/zip )
 	${RDEPEND}"
-
 
 S=${WORKDIR}/${MY_P}
 

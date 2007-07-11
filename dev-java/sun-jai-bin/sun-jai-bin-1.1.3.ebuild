@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.3.ebuild,v 1.5 2007/05/24 14:39:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.3.ebuild,v 1.6 2007/07/11 19:58:38 mr_bones_ Exp $
 
 inherit java-pkg-2
 
@@ -39,4 +39,3 @@ pkg_postinst() {
 	use x86 && elog '-Djava.library.path=$(java-config -i sun-jai-bin)'
 	elog '-classpath $(java-config -p sun-jai-bin)'
 }
-

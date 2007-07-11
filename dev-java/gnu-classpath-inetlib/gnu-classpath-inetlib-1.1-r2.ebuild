@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.1-r2.ebuild,v 1.5 2007/05/26 22:45:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.1-r2.ebuild,v 1.6 2007/07/11 19:58:37 mr_bones_ Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -31,7 +31,6 @@ src_unpack() {
 	java-pkg_jar-from jessie
 	java-pkg_jar-from gnu-crypto
 }
-
 
 src_compile() {
 	econf \

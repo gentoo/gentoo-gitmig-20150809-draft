@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-slide-webdavclient/jakarta-slide-webdavclient-2.1-r1.ebuild,v 1.1 2007/05/02 10:14:07 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-slide-webdavclient/jakarta-slide-webdavclient-2.1-r1.ebuild,v 1.2 2007/07/11 19:58:38 mr_bones_ Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -41,7 +41,6 @@ src_unpack() {
 	java-pkg_jar-from jdom-1.0
 	java-pkg_jar-from xml-im-exporter
 }
-
 
 EANT_BUILD_TARGET="dist-clientlib"
 EANT_DOC_TARGET="javadoc-clientlib"

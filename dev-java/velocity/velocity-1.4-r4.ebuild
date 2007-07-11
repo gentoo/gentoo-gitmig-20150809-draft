@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4-r4.ebuild,v 1.7 2007/05/07 07:44:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4-r4.ebuild,v 1.8 2007/07/11 19:58:38 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2 eutils
@@ -66,7 +66,6 @@ src_compile () {
 	cd "${S}/build"
 	eant jar jar-core jar-util jar-servlet $(use_doc javadocs)
 }
-
 
 src_install () {
 	java-pkg_dojar bin/*.jar

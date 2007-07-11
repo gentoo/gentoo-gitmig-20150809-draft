@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-5.0.5.ebuild,v 1.7 2007/05/03 12:40:24 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-5.0.5.ebuild,v 1.8 2007/07/11 19:58:37 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -33,4 +33,3 @@ src_install() {
 	use doc && java-pkg_dojavadoc docs
 	use source && java-pkg_dosrc java/it
 }
-

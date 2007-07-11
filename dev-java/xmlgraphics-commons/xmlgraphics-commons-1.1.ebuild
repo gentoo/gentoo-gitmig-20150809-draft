@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/xmlgraphics-commons-1.1.ebuild,v 1.4 2007/05/26 13:29:11 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/xmlgraphics-commons-1.1.ebuild,v 1.5 2007/07/11 19:58:37 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 inherit java-pkg-2 java-ant-2
@@ -80,4 +80,3 @@ src_install(){
 	use source && java-pkg_dosrc src/java/org src/java-1.4/org
 	use doc && java-pkg_dojavadoc build/javadocs
 }
-

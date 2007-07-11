@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10-r1.ebuild,v 1.11 2007/05/09 14:54:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10-r1.ebuild,v 1.12 2007/07/11 19:58:37 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -57,4 +57,3 @@ src_install() {
 	use doc && java-pkg_dojavadoc doc/api
 	use source && java-pkg_dosrc src/java/*
 }
-

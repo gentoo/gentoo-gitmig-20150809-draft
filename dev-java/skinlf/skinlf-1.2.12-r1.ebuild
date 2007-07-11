@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/skinlf-1.2.12-r1.ebuild,v 1.4 2006/11/30 15:55:27 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/skinlf-1.2.12-r1.ebuild,v 1.5 2007/07/11 19:58:38 mr_bones_ Exp $
 
 inherit java-pkg eutils
 
@@ -56,5 +56,3 @@ src_install() {
 	#java-pkg_dojar lib/skinlf.jar
 	dodoc LICENSE LICENSE_nanoxml
 }
-
-

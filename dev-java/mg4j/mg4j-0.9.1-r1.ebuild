@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1-r1.ebuild,v 1.1 2007/04/28 19:19:18 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1-r1.ebuild,v 1.2 2007/07/11 19:58:37 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -26,7 +26,6 @@ RDEPEND=">=virtual/jre-1.4
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/javacc-3
 	${COMMON_DEP}"
-
 
 src_unpack() {
 

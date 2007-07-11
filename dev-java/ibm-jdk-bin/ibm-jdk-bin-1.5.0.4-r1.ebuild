@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.4-r1.ebuild,v 1.1 2007/04/20 10:49:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.4-r1.ebuild,v 1.2 2007/07/11 19:58:37 mr_bones_ Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -177,7 +177,6 @@ QA_TEXTRELS_ppc64="opt/${P}/jre/bin/libj9jextract.so
 	opt/${P}/jre/bin/libj9vm23.so
 	opt/${P}/jre/bin/libj9jit23.so"
 
-
 QA_TEXTRELS_x86="opt/${P}/jre/bin/lib*.so
 	opt/${P}/jre/bin/j9vm/libjvm.so
 	opt/${P}/jre/bin/xawt/libmawt.so
@@ -239,7 +238,6 @@ src_install() {
 	#	insinto /etc
 	#	doins ${FILESDIR}/cpuinfo
 	#fi
-
 
 	local x86plugin=libjavaplugin_ojigtk2.so
 	local ppcplugin=libjavaplugin_oji.so

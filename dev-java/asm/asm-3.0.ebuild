@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-3.0.ebuild,v 1.2 2007/05/24 13:36:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-3.0.ebuild,v 1.3 2007/07/11 19:58:37 mr_bones_ Exp $
 
 WANT_ANT_TASKS="ant-owanttask"
 JAVA_PKG_IUSE="doc source"
@@ -29,4 +29,3 @@ src_install() {
 	use doc && java-pkg_dojavadoc output/dist/doc/javadoc/user/
 	use source && java-pkg_dosrc src/*
 }
-

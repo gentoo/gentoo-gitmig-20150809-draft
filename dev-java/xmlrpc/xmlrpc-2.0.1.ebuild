@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-2.0.1.ebuild,v 1.1 2007/04/24 21:49:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-2.0.1.ebuild,v 1.2 2007/07/11 19:58:38 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 inherit java-pkg-2 java-ant-2
@@ -58,4 +58,3 @@ pkg_postinst() {
 	elog "This port does not currently build Servlet and/or SSL extensions. If"
 	elog "you need them, please file a bug or contact java@gentoo.org."
 }
-

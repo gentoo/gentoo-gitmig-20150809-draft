@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-1.4.3-r3.ebuild,v 1.5 2007/02/04 15:04:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-1.4.3-r3.ebuild,v 1.6 2007/07/11 19:58:37 mr_bones_ Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -35,4 +35,3 @@ src_install() {
 	use doc && java-pkg_dohtml -r output/dist/doc/javadoc/user/*
 	use source && java-pkg_dosrc src/*
 }
-

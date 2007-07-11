@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.8 2007/05/08 20:57:45 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.9 2007/07/11 19:58:37 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="source"
 WANT_ANT_TASKS="ant-nodeps ant-trax"
@@ -28,7 +28,6 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.4
 	dev-java/ant-core
 	${CDEPEND}"
-
 
 src_unpack() {
 	unpack ${A}
@@ -66,4 +65,3 @@ src_install() {
 	dodoc README.txt
 	use source && java-pkg_dosrc core/src/xdoclet modules/*
 }
-

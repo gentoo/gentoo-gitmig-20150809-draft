@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/jta-1.0.1.ebuild,v 1.14 2006/10/05 17:56:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/jta-1.0.1.ebuild,v 1.15 2007/07/11 19:58:38 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -43,4 +43,3 @@ src_compile() {
 src_install() {
 	java-pkg_dojar jta.jar
 }
-

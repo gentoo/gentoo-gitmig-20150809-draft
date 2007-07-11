@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2-r2.ebuild,v 1.1 2007/04/24 13:14:36 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2-r2.ebuild,v 1.2 2007/07/11 19:58:38 mr_bones_ Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -38,4 +38,3 @@ src_install() {
 src_test() {
 	ANT_TASKS="ant-junit" eant test
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/sun-javamail-1.4.ebuild,v 1.11 2007/04/02 18:32:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/sun-javamail-1.4.ebuild,v 1.12 2007/07/11 19:58:38 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -42,4 +42,3 @@ src_install() {
 	use doc && java-pkg_dojavadoc build/release/docs/javadocs
 	use source && java-pkg_dosrc src/java
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.5.0.5.ebuild,v 1.1 2007/06/08 21:21:11 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.5.0.5.ebuild,v 1.2 2007/07/11 19:58:37 mr_bones_ Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -157,7 +157,6 @@ QA_TEXTRELS_ppc64="opt/${P}/bin/libj9jextract.so
 	opt/${P}/bin/libj9gcchk23.so
 	opt/${P}/bin/libj9vm23.so
 	opt/${P}/bin/libj9jit23.so"
-
 
 QA_TEXTRELS_x86="opt/${P}/bin/lib*.so
 	opt/${P}/bin/j9vm/libjvm.so

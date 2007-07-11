@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/skinlf-6.7.ebuild,v 1.1 2007/04/28 22:14:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/skinlf-6.7.ebuild,v 1.2 2007/07/11 19:58:38 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="examples source"
 WANT_ANT_TASKS="ant-nodeps"
@@ -52,5 +52,3 @@ src_install() {
 
 	dodoc CHANGES README LICENSE LICENSE_nanoxml || die
 }
-
-

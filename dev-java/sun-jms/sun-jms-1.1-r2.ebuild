@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/sun-jms-1.1-r2.ebuild,v 1.10 2007/06/12 16:06:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/sun-jms-1.1-r2.ebuild,v 1.11 2007/07/11 19:58:38 mr_bones_ Exp $
 
 inherit java-pkg-2
 
@@ -54,4 +54,3 @@ src_install() {
 	java-pkg_dojar jms.jar
 	use doc && java-pkg_dohtml -r api
 }
-

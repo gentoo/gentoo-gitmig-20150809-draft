@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-1.3.1-r2.ebuild,v 1.5 2007/06/23 14:13:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-1.3.1-r2.ebuild,v 1.6 2007/07/11 19:58:38 mr_bones_ Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -19,7 +19,6 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jre-1.3
 	>=dev-java/xalan-2.5.2"
 IUSE="doc source"
-
 
 src_unpack() {
 	unpack ${A}

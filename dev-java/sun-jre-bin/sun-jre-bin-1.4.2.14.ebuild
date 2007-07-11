@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.14.ebuild,v 1.3 2007/05/04 00:50:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.14.ebuild,v 1.4 2007/07/11 19:58:37 mr_bones_ Exp $
 
 inherit java-vm-2 eutils
 
@@ -32,7 +32,6 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 		x11-libs/libXt
 		x11-libs/libXtst
 	)"
-
 
 PACKED_JARS="lib/rt.jar lib/jsse.jar lib/charsets.jar
 lib/ext/localedata.jar lib/plugin.jar javaws/javaws.jar"
