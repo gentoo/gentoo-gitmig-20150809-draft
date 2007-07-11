@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.42 2007/07/11 10:18:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.43 2007/07/11 13:28:00 gustavoz Exp $
+
+  11 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  mysql++-2.2.2-r1.ebuild:
+  Stable on sparc wrt #184939
 
 *mysql++-2.2.2-r1 (11 Jul 2007)
 
