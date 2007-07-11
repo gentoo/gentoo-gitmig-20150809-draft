@@ -1,14 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-EBUILD perl-locale-maketext-1.09.ebuild 521 RMD160 a1bbb7e0876c8d7f4b41fa58547bb1727e2984fb SHA1 b1aedc9a128837e9008f8bd05dc6430106f1e33f SHA256 0dce1943c70054cb984c5eb549e9c21db9fd7b5dfedfd6aa8946432589abb39f
-MD5 41f5bf1420423281232a6173b878aa1f perl-locale-maketext-1.09.ebuild 521
-RMD160 a1bbb7e0876c8d7f4b41fa58547bb1727e2984fb perl-locale-maketext-1.09.ebuild 521
-SHA256 0dce1943c70054cb984c5eb549e9c21db9fd7b5dfedfd6aa8946432589abb39f perl-locale-maketext-1.09.ebuild 521
-EBUILD perl-locale-maketext-1.10.ebuild 491 RMD160 4a71608743b03f4c03fadfbc65d1bd56268efb13 SHA1 244dcfa8a92d3df469031ffb09e84835ced7c8f7 SHA256 7825c191fcaa447c5af26a1ef8ee1963a3332dfa4b69f5464d5168ac4440feb8
-MD5 292aa5165c1950f80aa32afc7be51209 perl-locale-maketext-1.10.ebuild 491
-RMD160 4a71608743b03f4c03fadfbc65d1bd56268efb13 perl-locale-maketext-1.10.ebuild 491
-SHA256 7825c191fcaa447c5af26a1ef8ee1963a3332dfa4b69f5464d5168ac4440feb8 perl-locale-maketext-1.10.ebuild 491
+EBUILD perl-locale-maketext-1.09.ebuild 520 RMD160 4c223598ede547d74203c328b2f63ee078e8bb16 SHA1 388b485b80a81fb5ebea3aa01db2673ce117b6cb SHA256 1644301852adfe65954e7bccc7e795a6966f83e30f30adbde439351a8d3d9b97
+MD5 d8dd447e280afc435eae4c919b9ca84f perl-locale-maketext-1.09.ebuild 520
+RMD160 4c223598ede547d74203c328b2f63ee078e8bb16 perl-locale-maketext-1.09.ebuild 520
+SHA256 1644301852adfe65954e7bccc7e795a6966f83e30f30adbde439351a8d3d9b97 perl-locale-maketext-1.09.ebuild 520
+EBUILD perl-locale-maketext-1.10.ebuild 494 RMD160 c25a33ea7d33d99fe8b111ce8d8358669b4d1acf SHA1 325f8489488a344e74ad334cdfcd903457411830 SHA256 08187d38c0f479e849795c68d5ed03af3659e0e3bf3d4d9d1dad2c59e46a800b
+MD5 1ab1dee571d13a3453a226d18deb3c96 perl-locale-maketext-1.10.ebuild 494
+RMD160 c25a33ea7d33d99fe8b111ce8d8358669b4d1acf perl-locale-maketext-1.10.ebuild 494
+SHA256 08187d38c0f479e849795c68d5ed03af3659e0e3bf3d4d9d1dad2c59e46a800b perl-locale-maketext-1.10.ebuild 494
 MISC ChangeLog 1271 RMD160 546e8cc13e234e25f3e05ba90b9bb4d66415ebf6 SHA1 6fe80d9b142c766351071ff4cb38ddb73b887e97 SHA256 59e0a0469b4ec73598d758f953b646c5928a3187ad4e399f92547683922b08be
 MD5 955a79d83d637d39f248d6f44304df82 ChangeLog 1271
 RMD160 546e8cc13e234e25f3e05ba90b9bb4d66415ebf6 ChangeLog 1271
@@ -23,10 +20,3 @@ SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/di
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-locale-maketext-1.10 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-locale-maketext-1.10 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-locale-maketext-1.10 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
-
-iD8DBQFF6sBzQlM6RnzZP+IRAiAZAJkBJsUs/DQAIkeaHa9VPOUwVyBW+wCfXC6Z
-H5ypfVF6lwGk8sryqUEDYkc=
-=yolE
------END PGP SIGNATURE-----
