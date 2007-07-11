@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.2.ebuild,v 1.3 2006/11/29 03:06:46 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.2-r1.ebuild,v 1.1 2007/07/11 14:38:17 hkbst Exp $
 
-inherit common-lisp elisp eutils
+inherit common-lisp elisp-common eutils
 
 DESCRIPTION="McCLIM is a free software implementation of CLIM."
 HOMEPAGE="http://clim.mikemac.com/
@@ -21,7 +21,7 @@ DEPEND="dev-lisp/cl-spatial-trees
 	emacs? ( virtual/emacs )"
 
 CLPACKAGE="mcclim"
-SITEFILE=${FILESDIR}/50mcclim-gentoo.el
+SITEFILE=50${PN}-gentoo.el
 ELISP_SOURCES="Tools/Emacs/indent-clim.el"
 
 S=${WORKDIR}/${P#cl-}
@@ -56,17 +56,17 @@ src_install() {
 	use doc && dodoc Doc/manual.ps
 	if use emacs; then
 		insinto /usr/share/emacs/site-lisp/${PN}
-		doins *.el *.elc
-		elisp-site-file-install ${SITEFILE}
+		elisp-install ${PN} *.el *.elc || die "elisp-install failed"
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 }
 
 pkg_postinst() {
-	elisp_pkg_postinst
+	use emacs && elisp-site-regen
 	common-lisp_pkg_postinst
 }
 
 pkg_postrm() {
-	elisp_pkg_postinst
+	use emacs && elisp-site-regen
 	common-lisp_pkg_postrm
 }
