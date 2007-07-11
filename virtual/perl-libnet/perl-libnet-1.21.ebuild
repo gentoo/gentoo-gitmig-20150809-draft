@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/perl-libnet-1.21.ebuild,v 1.1 2007/06/13 07:21:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/perl-libnet-1.21.ebuild,v 1.2 2007/07/11 05:04:22 mr_bones_ Exp $
 
 DESCRIPTION="Virtual for libnet"
 HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
@@ -13,4 +13,3 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE=""
 DEPEND=""
 RDEPEND="~perl-core/libnet-${PV}"
-

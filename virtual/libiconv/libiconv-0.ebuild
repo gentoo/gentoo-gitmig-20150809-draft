@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libiconv/libiconv-0.ebuild,v 1.2 2006/10/17 09:18:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libiconv/libiconv-0.ebuild,v 1.3 2007/07/11 05:04:22 mr_bones_ Exp $
 
 DESCRIPTION="Virtual for the GNU conversion library"
 HOMEPAGE="http://www.gentoo.org/proj/en/gentoo-alt/"
@@ -21,4 +21,3 @@ RDEPEND="elibc_Darwin? ( dev-libs/libiconv )
 	elibc_NetBSD? ( dev-libs/libiconv )
 	elibc_OpenBSD? ( dev-libs/libiconv )
 	elibc_DragonFly? ( dev-libs/libiconv )"
-

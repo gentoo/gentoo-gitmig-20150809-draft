@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/libintl-0.ebuild,v 1.4 2006/10/17 06:47:33 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/libintl-0.ebuild,v 1.5 2007/07/11 05:04:22 mr_bones_ Exp $
 
 DESCRIPTION="Virtual for the GNU Internationalization Library"
 HOMEPAGE="http://www.gentoo.org/proj/en/gentoo-alt/"
@@ -21,4 +21,3 @@ RDEPEND="elibc_Darwin? ( sys-devel/gettext )
 	elibc_NetBSD? ( sys-devel/gettext )
 	elibc_OpenBSD? ( sys-devel/gettext )
 	elibc_DragonFly? ( sys-devel/gettext )"
-

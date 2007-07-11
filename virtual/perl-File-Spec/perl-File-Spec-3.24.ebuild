@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Spec/perl-File-Spec-3.24.ebuild,v 1.10 2007/06/04 02:50:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Spec/perl-File-Spec-3.24.ebuild,v 1.11 2007/07/11 05:04:22 mr_bones_ Exp $
 
 DESCRIPTION="Virtual for File-Spec"
 HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
@@ -13,4 +13,3 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-f
 IUSE=""
 DEPEND=""
 RDEPEND="~perl-core/File-Spec-${PV}"
-
