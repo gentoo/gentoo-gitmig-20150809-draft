@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/udev-syntax/udev-syntax-20051016.ebuild,v 1.4 2006/11/22 06:38:16 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/udev-syntax/udev-syntax-20051016.ebuild,v 1.5 2007/07/11 05:14:07 mr_bones_ Exp $
 
 inherit vim-plugin
 
@@ -14,4 +14,3 @@ VIM_PLUGIN_HELPTEXT=\
 "This plugin provides syntax highlighting for udev.rules files. These files
 are automatically detected by filename; manual loading is also possible,
 via :set filetype=udev"
-

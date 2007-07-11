@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/vimoutliner-0.3.3a-r1.ebuild,v 1.7 2006/11/22 05:33:32 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/vimoutliner-0.3.3a-r1.ebuild,v 1.8 2007/07/11 05:14:07 mr_bones_ Exp $
 
 inherit vim-plugin
 
@@ -41,4 +41,3 @@ src_install() {
 
 	dodoc vimoutlinerrc
 }
-

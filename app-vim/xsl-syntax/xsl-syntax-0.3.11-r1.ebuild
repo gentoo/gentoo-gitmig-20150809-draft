@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/xsl-syntax/xsl-syntax-0.3.11-r1.ebuild,v 1.7 2005/09/12 22:38:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/xsl-syntax/xsl-syntax-0.3.11-r1.ebuild,v 1.8 2007/07/11 05:14:07 mr_bones_ Exp $
 
 inherit vim-plugin
 
@@ -17,4 +17,3 @@ src_unpack() {
 	# hi link is evil. See bug #101787, bug #101804.
 	sed -i -e 's,^hi link,hi def link,' syntax/xsl.vim || die "sed failed"
 }
-

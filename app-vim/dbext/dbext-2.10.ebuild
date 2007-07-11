@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/dbext-2.10.ebuild,v 1.4 2005/01/01 16:49:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/dbext-2.10.ebuild,v 1.5 2007/07/11 05:14:08 mr_bones_ Exp $
 
 inherit vim-plugin eutils
 
@@ -20,4 +20,3 @@ src_unpack() {
 	cd ${S}
 	edos2unix {plugin,doc}/*
 }
-

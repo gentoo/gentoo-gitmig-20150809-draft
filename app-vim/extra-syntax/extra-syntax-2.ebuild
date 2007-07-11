@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/extra-syntax-2.ebuild,v 1.8 2007/04/14 23:43:28 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/extra-syntax-2.ebuild,v 1.9 2007/07/11 05:14:07 mr_bones_ Exp $
 
 inherit vim-plugin
 
@@ -32,4 +32,3 @@ RDEPEND="${RDEPEND}
 src_install() {
 	:
 }
-

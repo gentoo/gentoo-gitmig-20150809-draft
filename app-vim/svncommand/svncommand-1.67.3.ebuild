@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/svncommand/svncommand-1.67.3.ebuild,v 1.4 2005/07/05 10:50:51 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/svncommand/svncommand-1.67.3.ebuild,v 1.5 2007/07/11 05:14:08 mr_bones_ Exp $
 
 inherit vim-plugin
 
@@ -16,4 +16,3 @@ RDEPEND="${RDEPEND}
 	!app-vim/vimspell"
 
 VIM_PLUGIN_HELPURI="http://www.vim.org/scripts/script.php?script_id=922"
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/xquery-syntax/xquery-syntax-0.1-r1.ebuild,v 1.8 2006/11/23 08:36:18 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/xquery-syntax/xquery-syntax-0.1-r1.ebuild,v 1.9 2007/07/11 05:14:07 mr_bones_ Exp $
 
 inherit vim-plugin
 
@@ -20,4 +20,3 @@ src_unpack() {
 	sed -i -e 's,^hi\(ghlight\)\? link,hi def link,' syntax/xquery.vim \
 		|| die "sed failed"
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/taglist-3.4-r1.ebuild,v 1.11 2005/06/27 17:04:13 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/taglist-3.4-r1.ebuild,v 1.12 2007/07/11 05:14:07 mr_bones_ Exp $
 
 inherit vim-plugin eutils
 
@@ -20,4 +20,3 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-ebuilds.patch
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/help-extra-syntax/help-extra-syntax-20050106-r1.ebuild,v 1.2 2006/08/20 23:44:02 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/help-extra-syntax/help-extra-syntax-20050106-r1.ebuild,v 1.3 2007/07/11 05:14:07 mr_bones_ Exp $
 
 inherit vim-plugin
 
@@ -20,4 +20,3 @@ src_unpack() {
 	sed -i -e 's,^hi link,hi def link,' \
 		"after/syntax/help.vim.d/extra-help-syntax.vim" || die "sed failed"
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ebnf-syntax/ebnf-syntax-1.1-r1.ebuild,v 1.7 2006/11/23 08:26:25 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ebnf-syntax/ebnf-syntax-1.1-r1.ebuild,v 1.8 2007/07/11 05:14:07 mr_bones_ Exp $
 
 inherit vim-plugin
 
@@ -19,4 +19,3 @@ src_unpack() {
 	# don't use hi link, bug #101799.
 	sed -i -e 's,hi link,hi def link,' syntax/ebnf.vim || die "sed failed"
 }
-

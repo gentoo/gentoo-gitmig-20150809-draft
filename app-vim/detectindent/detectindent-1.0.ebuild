@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/detectindent/detectindent-1.0.ebuild,v 1.6 2006/11/22 05:55:44 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/detectindent/detectindent-1.0.ebuild,v 1.7 2007/07/11 05:14:07 mr_bones_ Exp $
 
 inherit vim-plugin
 
@@ -11,4 +11,3 @@ KEYWORDS="amd64 ~hppa mips ppc sparc x86"
 IUSE=""
 
 VIM_PLUGIN_HELPFILES="detectindent.txt"
-

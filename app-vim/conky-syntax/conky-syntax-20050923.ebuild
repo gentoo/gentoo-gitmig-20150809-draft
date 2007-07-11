@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/conky-syntax/conky-syntax-20050923.ebuild,v 1.12 2006/11/27 08:11:39 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/conky-syntax/conky-syntax-20050923.ebuild,v 1.13 2007/07/11 05:14:08 mr_bones_ Exp $
 
 inherit vim-plugin
 
@@ -12,4 +12,3 @@ IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\
 "This plugin provides syntax highlighting for conkyrc files."
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/eruby-syntax/eruby-syntax-2.0-r1.ebuild,v 1.10 2007/05/03 16:42:55 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/eruby-syntax/eruby-syntax-2.0-r1.ebuild,v 1.11 2007/07/11 05:14:07 mr_bones_ Exp $
 
 inherit vim-plugin
 
@@ -17,4 +17,3 @@ src_unpack() {
 	cd "${S}"
 	sed -i -e 's,hi link,hi def link,' syntax/eruby.vim || die "sed failed"
 }
-

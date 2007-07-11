@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/colorschemes-20050321.ebuild,v 1.7 2005/11/29 03:55:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/colorschemes-20050321.ebuild,v 1.8 2007/07/11 05:14:08 mr_bones_ Exp $
 
 inherit vim-plugin
 
@@ -22,4 +22,3 @@ src_unpack() {
 	cd ${S}
 	find . -type f -exec sed -i -e 's/\r//g' '{}' \;
 }
-
