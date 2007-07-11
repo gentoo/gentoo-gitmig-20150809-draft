@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX autoipd.sh 1271 RMD160 85ac3d69aff64867baa0ba6c58e9f224ba0e2e57 SHA1 95a6145f00ccd511e3b067d4669148861f56c2a4 SHA256 9582a49d0674fac714f448976065fd4e1f0423c08f645685160ed682a121f8c9
 MD5 873dca478a6a7bd3931f462becade245 files/autoipd.sh 1271
 RMD160 85ac3d69aff64867baa0ba6c58e9f224ba0e2e57 files/autoipd.sh 1271
@@ -58,6 +61,14 @@ AUX avahi-0.6.19-ui-sharp-gtk.patch 427 RMD160 967c446b0204baa4ddf5a0568164352ca
 MD5 1918bb632bd1476837dbeee789b7d310 files/avahi-0.6.19-ui-sharp-gtk.patch 427
 RMD160 967c446b0204baa4ddf5a0568164352caa90cfaa files/avahi-0.6.19-ui-sharp-gtk.patch 427
 SHA256 ae4ae6a21ebfcf39f3f1f9bf67cc5f47881d4e28cfb6f488517819806909ee9c files/avahi-0.6.19-ui-sharp-gtk.patch 427
+AUX avahi-0.6.20-cleanup-dns-compression-table.patch 1895 RMD160 31c8d84fb7fff3fb1a226c66e089c295131d30ae SHA1 1fcf7d6587e30a3534831b380760d87ed52c7211 SHA256 80c18ca1f12a7d67e55b41973ef2606bb46539945019e155ae88cb262b6c33fb
+MD5 4ea004d6e300d83a993a8cff49f73bab files/avahi-0.6.20-cleanup-dns-compression-table.patch 1895
+RMD160 31c8d84fb7fff3fb1a226c66e089c295131d30ae files/avahi-0.6.20-cleanup-dns-compression-table.patch 1895
+SHA256 80c18ca1f12a7d67e55b41973ef2606bb46539945019e155ae88cb262b6c33fb files/avahi-0.6.20-cleanup-dns-compression-table.patch 1895
+AUX avahi-0.6.20-make-known-answers-not-conflict.patch 802 RMD160 af6b2dfd7e0cd5f6c547edcc8f4c5c7a84d55379 SHA1 45c7db5887cdb3221be59726ca3e6385e327b986 SHA256 4316c4c4c0d2909ec3ae404bc1c43598ce1e439916a10319ec2abbf4dd77269f
+MD5 76277bbb8dd48a8dae2d1436d99fb99c files/avahi-0.6.20-make-known-answers-not-conflict.patch 802
+RMD160 af6b2dfd7e0cd5f6c547edcc8f4c5c7a84d55379 files/avahi-0.6.20-make-known-answers-not-conflict.patch 802
+SHA256 4316c4c4c0d2909ec3ae404bc1c43598ce1e439916a10319ec2abbf4dd77269f files/avahi-0.6.20-make-known-answers-not-conflict.patch 802
 AUX avahi-0.6.20-ui-sharp-gtk.patch 427 RMD160 d2459f3b30740bb6a97f47bfc1f709a1439e36d6 SHA1 8eeb7d17cfcb251840cb953cb61e0d107fa55c9d SHA256 cd3601df622a8445d50779fb73bb3deab3880fd66cd765d932155f51ac99491b
 MD5 02bb9381563447d6382b6a140e2ec463 files/avahi-0.6.20-ui-sharp-gtk.patch 427
 RMD160 d2459f3b30740bb6a97f47bfc1f709a1439e36d6 files/avahi-0.6.20-ui-sharp-gtk.patch 427
@@ -87,14 +98,18 @@ EBUILD avahi-0.6.19.ebuild 4363 RMD160 88de205107a99409b9d7adbce96e7b9466659bf4 
 MD5 f83dd71b9abca7300f83aee874ddecfd avahi-0.6.19.ebuild 4363
 RMD160 88de205107a99409b9d7adbce96e7b9466659bf4 avahi-0.6.19.ebuild 4363
 SHA256 91e45ab233248eb38a4e77da7edfd419455c1196448a7fb045c607744a5a55cd avahi-0.6.19.ebuild 4363
+EBUILD avahi-0.6.20-r1.ebuild 4582 RMD160 7a4382fb0b9695815b6a497caf523146e155ec03 SHA1 9c59c278fa660081588be5972799ac98eed4c3b0 SHA256 dec5fcd5da606f2edecc3eaff62192b35fe88dbc9fe5aeae19daa807f6b43263
+MD5 ebec8e2b26da56b7598660df78ea44c5 avahi-0.6.20-r1.ebuild 4582
+RMD160 7a4382fb0b9695815b6a497caf523146e155ec03 avahi-0.6.20-r1.ebuild 4582
+SHA256 dec5fcd5da606f2edecc3eaff62192b35fe88dbc9fe5aeae19daa807f6b43263 avahi-0.6.20-r1.ebuild 4582
 EBUILD avahi-0.6.20.ebuild 4362 RMD160 ae0545fe4adabe8f6fd0f73d70c6d900f1eed4fb SHA1 035f98c5b1a56087bd3080706e9c68bf1c51c277 SHA256 ea3c021bd88db31c2ccaa3fa6fd980f234056b54c417a560cb9751b2792f74ef
 MD5 fbf677c86dfe6388047a16f5c50f03f0 avahi-0.6.20.ebuild 4362
 RMD160 ae0545fe4adabe8f6fd0f73d70c6d900f1eed4fb avahi-0.6.20.ebuild 4362
 SHA256 ea3c021bd88db31c2ccaa3fa6fd980f234056b54c417a560cb9751b2792f74ef avahi-0.6.20.ebuild 4362
-MISC ChangeLog 15806 RMD160 2cc7d8d3f0ea43fc17b35f348c3ea1e839c2b409 SHA1 361735916d27e0bb84fd22f240c851582cc44615 SHA256 367a30482c294bb40f84f667ef2eee07b52661e30db940b70afd534b65819050
-MD5 ded5be945e97ccc215f63773308595c2 ChangeLog 15806
-RMD160 2cc7d8d3f0ea43fc17b35f348c3ea1e839c2b409 ChangeLog 15806
-SHA256 367a30482c294bb40f84f667ef2eee07b52661e30db940b70afd534b65819050 ChangeLog 15806
+MISC ChangeLog 16147 RMD160 9c04ac51b2dabb888e2e27cfaa596d73fd30d710 SHA1 060ab327fecb3ccfa6d8a30aa3ded132e71c9a14 SHA256 d283bf9da9de8d7daf66665a14dbe10e5b36ca108c82611fcd7146b559951cd4
+MD5 af1222bd94d92bd159dba812fdd12919 ChangeLog 16147
+RMD160 9c04ac51b2dabb888e2e27cfaa596d73fd30d710 ChangeLog 16147
+SHA256 d283bf9da9de8d7daf66665a14dbe10e5b36ca108c82611fcd7146b559951cd4 ChangeLog 16147
 MISC metadata.xml 223 RMD160 93a79d3a583130d803a2a8da0052f43d102ecfc2 SHA1 bd4caecc4cecdd93cb0e935e8f4ff92272aae978 SHA256 87de3da2e3f5d81839d9e3658af1703267195984bdee92aa032f1d429acc096d
 MD5 b8a99a5b7fa586fe9cabbacc87d88bfe metadata.xml 223
 RMD160 93a79d3a583130d803a2a8da0052f43d102ecfc2 metadata.xml 223
@@ -117,3 +132,13 @@ SHA256 ea8928681ddbe0fe704197076ec00c506b7a138c1510c373671297fcdbaef20d files/di
 MD5 abad0d13524e320d577cc47c71fbc9da files/digest-avahi-0.6.20 238
 RMD160 189115dd402bfa26b8bf8aa16ffd0879d8d147a5 files/digest-avahi-0.6.20 238
 SHA256 9dd3a566162032a532c8a8ce934135a8c99fd7abc07dfe010bfe606fa687785c files/digest-avahi-0.6.20 238
+MD5 abad0d13524e320d577cc47c71fbc9da files/digest-avahi-0.6.20-r1 238
+RMD160 189115dd402bfa26b8bf8aa16ffd0879d8d147a5 files/digest-avahi-0.6.20-r1 238
+SHA256 9dd3a566162032a532c8a8ce934135a8c99fd7abc07dfe010bfe606fa687785c files/digest-avahi-0.6.20-r1 238
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFGlWHuI1lqEGTUzyQRAorcAJ4wvu5tSiFttJltl0nfUWb/pPPY8QCfYRkl
+nHPaTnYmgTYAAZ4PAc8WqsI=
+=LWgy
+-----END PGP SIGNATURE-----
