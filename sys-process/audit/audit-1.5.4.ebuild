@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.5.4.ebuild,v 1.3 2007/07/10 19:42:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.5.4.ebuild,v 1.4 2007/07/11 18:31:58 gustavoz Exp $
 
 inherit autotools multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.redhat.com/sgrubb/audit/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.4"

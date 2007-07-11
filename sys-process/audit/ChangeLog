@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.22 2007/07/10 19:42:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.23 2007/07/11 18:31:58 gustavoz Exp $
+
+  11 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> audit-1.5.4.ebuild:
+  Keyworded ~sparc wrt #184563
 
   10 Jul 2007; Raúl Porcel <armin76@gentoo.org> audit-1.5.4.ebuild:
   Add ~ia64 wrt #184563
