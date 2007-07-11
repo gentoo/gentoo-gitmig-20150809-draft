@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX smooth-themes-0.5.8-remove_checks.patch 2016 RMD160 ae492fc5b03714787f94b18420fafd13fcc27dbb SHA1 6a51ffcbdc112d0ba505252e79860d5a224f858e SHA256 c941e114831c218079473574183830fe5d6879f126703c11ad3709cf862865d7
 MD5 e00695d75397a040b1e3fe3038b8b0ce files/smooth-themes-0.5.8-remove_checks.patch 2016
 RMD160 ae492fc5b03714787f94b18420fafd13fcc27dbb files/smooth-themes-0.5.8-remove_checks.patch 2016
@@ -18,3 +21,10 @@ SHA256 b9a5fceda8fcd11e73378be494015adbe1389dc4ad5b973a90caf98159b51b47 metadata
 MD5 d82ccb76d87b288736b2cc14b2b6945c files/digest-smooth-themes-0.5.8-r1 259
 RMD160 56d5fc4b72db83e2275982cb15c23acf3e2e41d9 files/digest-smooth-themes-0.5.8-r1 259
 SHA256 7bdec1937f5a7d1c7dbb95e96bf0ff2a896917012393e28fcaa7b1a01762f559 files/digest-smooth-themes-0.5.8-r1 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFGlEZdkeYb6olFHJcRAmorAJ4+XQLoB3viLEgI4s1WpFlLZ6XpjgCgnMd/
+f1oUoQHBqZr/BMEcEwCmxZY=
+=rEWk
+-----END PGP SIGNATURE-----

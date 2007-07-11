@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xenophilia-0.8.tar.gz 142101 RMD160 7b2d0cb8303bd41af2ec21315b908f1a2dd6e135 SHA1 e08476ce13289fbdbfc28e8f7ef50ffbc3a90687 SHA256 a90501a7b4616b84b59ba26f95c01e9d5be2431368c44289453ac3199613c181
 EBUILD gtk-engines-xenophilia-0.8-r1.ebuild 960 RMD160 3d4c017e200428f90355b022ba0ec64dae00eb88 SHA1 9868df81cd6bc1d1ad7cdc3a7d278d9ae650c1f2 SHA256 49e30d9a2f5bd3ff1867617278553122a97aedb220611bea6d0eeb771b3c4882
 MD5 e4b9a0ab1ba441f285fa210073dba495 gtk-engines-xenophilia-0.8-r1.ebuild 960
@@ -14,3 +17,10 @@ SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata
 MD5 a1a447ba69dc548c4224f096addadd0c files/digest-gtk-engines-xenophilia-0.8-r1 244
 RMD160 38af77e7876f6c3fd2ff1727f4bdda5a95390e69 files/digest-gtk-engines-xenophilia-0.8-r1 244
 SHA256 44601450f526f8ebaafe47d0147ccc44e84c2d463c4d4b02008ac3665230703f files/digest-gtk-engines-xenophilia-0.8-r1 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFGlEZdkeYb6olFHJcRAuyZAKCR3z9DwanAklP9Xrv1T/Ilok8LfwCfTVEJ
+Gza0rZXH0EWKkxplNXyUnkg=
+=LrHn
+-----END PGP SIGNATURE-----

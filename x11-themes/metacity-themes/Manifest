@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX metacity-themes-1.0-gentoo.diff 6074 RMD160 015fb6f0af6095a6218fd63b298373023257fedd SHA1 80500a28a3d3c57000df556a1cbbc0bfb8dec939 SHA256 f7af9345f4817ca4e9837b64f391dd6ffb742386c7da154e41dc4f3ed9acbaba
 MD5 919b2b44ab022d39973e8f5ef8fa8095 files/metacity-themes-1.0-gentoo.diff 6074
 RMD160 015fb6f0af6095a6218fd63b298373023257fedd files/metacity-themes-1.0-gentoo.diff 6074
@@ -48,3 +51,10 @@ SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata
 MD5 8db153a823ad2279577bd17677583b1c files/digest-metacity-themes-1.1 7693
 RMD160 35b702b6d8785b57f1311c092dd85f639def8147 files/digest-metacity-themes-1.1 7693
 SHA256 1c519f8ab9839700862915cdfb8a29ce062097d52b5fbbafb7f4f963ea7db9c2 files/digest-metacity-themes-1.1 7693
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFGlEZdkeYb6olFHJcRAnODAJ98F0X9OlgU9EEFUimS5sOzRXl7TACfZ9hX
+8qmGflSKX1zIYPJ3bQbiNjA=
+=9JmI
+-----END PGP SIGNATURE-----

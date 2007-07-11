@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gtk-engines-qtpixmap-0.28-gtk_switches.patch 3612 RMD160 3ed554fe563033a490902b651a3a0a8fa96e09d2 SHA1 d645d9972f3055ec6b23404a49f61a24c91c2a51 SHA256 45e917ab0579264c4bd5b160877df3b9d28a3f8a397d2d25d85a44720359bd8d
 MD5 321ec9a96a2261d0c4243871045afa21 files/gtk-engines-qtpixmap-0.28-gtk_switches.patch 3612
 RMD160 3ed554fe563033a490902b651a3a0a8fa96e09d2 files/gtk-engines-qtpixmap-0.28-gtk_switches.patch 3612
@@ -18,3 +21,10 @@ SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata
 MD5 cd6d255e94bf86df02673a650c9f7574 files/digest-gtk-engines-qtpixmap-0.28-r2 241
 RMD160 ba15c46892ffc83df8097cb75eb13617933959cd files/digest-gtk-engines-qtpixmap-0.28-r2 241
 SHA256 5c8e1b939eb6f1f1b62115ec48f22013f07adf273a83d909782aefff34c50c7d files/digest-gtk-engines-qtpixmap-0.28-r2 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFGlEZckeYb6olFHJcRAvhMAJ9oxxGNC7YMVEVD5aTGdFtGDs1qLwCgklii
+kZltNtNEw6CUu/hFhospOVE=
+=e84Z
+-----END PGP SIGNATURE-----
