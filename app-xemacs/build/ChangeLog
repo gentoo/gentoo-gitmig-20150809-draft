@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/build
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/build/ChangeLog,v 1.10 2007/06/03 17:48:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/build/ChangeLog,v 1.11 2007/07/12 12:51:23 armin76 Exp $
+
+  12 Jul 2007; Raúl Porcel <armin76@gentoo.org> build-1.14.ebuild:
+  alpha stable
 
   03 Jun 2007; Hans de Graaff <graaff@gentoo.org> build-1.14.ebuild:
   Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
