@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-gsx-console/vmware-gsx-console-3.2.0.14497.ebuild,v 1.4 2007/07/02 14:04:38 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-gsx-console/vmware-gsx-console-3.2.0.14497.ebuild,v 1.5 2007/07/12 06:39:56 mr_bones_ Exp $
 
 MY_PN="VMware-console"
 MY_PV=${PV%.*}-${PV##*.}
@@ -89,4 +89,3 @@ EOF
 	dosym /usr/share/doc/${P}/html/help /opt/vmware-console/lib/help-guestinstall
 	dosym /usr/share/doc/${P}/html/help /opt/vmware-console/lib/help-manual
 }
-

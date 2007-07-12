@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/emul-linux-x86-sdl-10.1.ebuild,v 1.2 2007/03/02 15:04:44 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/emul-linux-x86-sdl-10.1.ebuild,v 1.3 2007/07/12 06:39:56 mr_bones_ Exp $
 
 inherit emul-libs
 
@@ -19,4 +19,3 @@ KEYWORDS="-* amd64"
 DEPEND=""
 RDEPEND=">=app-emulation/emul-linux-x86-xlibs-10.0
 	>=app-emulation/emul-linux-x86-soundlibs-10.0"
-

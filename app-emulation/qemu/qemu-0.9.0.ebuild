@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.9.0.ebuild,v 1.4 2007/05/20 08:37:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.9.0.ebuild,v 1.5 2007/07/12 06:39:56 mr_bones_ Exp $
 
 DESCRIPTION="qemu emulator and abi wrapper meta ebuild"
 HOMEPAGE="http://fabrice.bellard.free.fr/qemu/"
@@ -14,4 +14,3 @@ IUSE=""
 DEPEND="~app-emulation/qemu-softmmu-${PV}
 		~app-emulation/qemu-user-${PV}
 		!<=app-emulation/qemu-0.7.0"
-

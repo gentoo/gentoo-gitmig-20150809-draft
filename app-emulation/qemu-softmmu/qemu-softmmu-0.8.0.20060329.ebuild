@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.0.20060329.ebuild,v 1.4 2007/07/02 14:01:30 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.0.20060329.ebuild,v 1.5 2007/07/12 06:39:56 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -8,13 +8,11 @@ DESCRIPTION="Multi-platform & multi-targets cpu emulator and dynamic translator"
 HOMEPAGE="http://fabrice.bellard.free.fr/qemu/"
 SRC_URI="mirror://gentoo/${P/-softmmu/}.tar.bz2"
 
-
 LICENSE="GPL-2 LGPL-2.1 KQEMU"
 SLOT="0"
 KEYWORDS="-alpha amd64 ~ppc -sparc ~x86"
 IUSE="sdl kqemu alsa"  #qvm86 debug nptl qemu-fast nptlonly"
 RESTRICT="strip"
-
 
 RDEPEND="sdl? ( media-libs/libsdl )
 		 kqemu? ( app-emulation/kqemu )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20020115.ebuild,v 1.10 2005/04/24 11:10:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20020115.ebuild,v 1.11 2007/07/12 06:39:56 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -26,7 +26,6 @@ S=${WORKDIR}/BasiliskII-1.0/src/Unix
 
 DEPEND="esd? ( media-sound/esound )
 	gtk? ( =x11-libs/gtk+-1.2* )"
-
 
 src_unpack() {
 	unpack ${A}

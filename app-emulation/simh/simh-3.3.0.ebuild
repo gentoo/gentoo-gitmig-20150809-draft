@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/simh-3.3.0.ebuild,v 1.2 2005/09/15 21:16:21 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/simh-3.3.0.ebuild,v 1.3 2007/07/12 06:39:56 mr_bones_ Exp $
 
 inherit eutils versionator
 
@@ -20,7 +20,6 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 MAKEOPTS="USE_NETWORK=1 ${MAKEOPTS}"
-
 
 src_unpack() {
 	mkdir "${WORKDIR}/BIN"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/vmware-esx-console-2.5.3.24171.ebuild,v 1.3 2007/07/02 14:03:32 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/vmware-esx-console-2.5.3.24171.ebuild,v 1.4 2007/07/12 06:39:56 mr_bones_ Exp $
 
 MY_PN="VMware-console-2.5.3-24171.tar.gz"
 S="${WORKDIR}/vmware-console-distrib"
@@ -48,4 +48,3 @@ pkg_postinst() {
 		to configure it by invoking the following command:
 		/usr/bin/vmware-config-console.pl "
 }
-

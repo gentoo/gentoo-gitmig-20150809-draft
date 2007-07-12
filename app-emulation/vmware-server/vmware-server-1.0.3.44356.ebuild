@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.3.44356.ebuild,v 1.3 2007/07/02 14:07:59 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.3.44356.ebuild,v 1.4 2007/07/12 06:39:56 mr_bones_ Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -102,4 +102,3 @@ pkg_postinst() {
 	ewarn "VMWare Server also has issues when running on a JFS filesystem.  For more"
 	ewarn "information see http://bugs.gentoo.org/show_bug.cgi?id=122500#c94"
 }
-

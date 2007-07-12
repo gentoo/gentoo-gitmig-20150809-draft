@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.9 2007/05/02 04:27:24 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.10 2007/07/12 06:39:56 mr_bones_ Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -35,7 +35,6 @@ pkg_setup() {
 		fi
 	fi
 }
-
 
 src_unpack() {
 	unpack ${A}

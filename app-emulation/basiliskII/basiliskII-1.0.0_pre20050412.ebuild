@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20050412.ebuild,v 1.6 2007/01/25 21:58:20 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20050412.ebuild,v 1.7 2007/07/12 06:39:56 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -41,7 +41,6 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto"
 
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -70,7 +69,6 @@ src_compile() {
 	use sdl && myflags="${myflags} \
 		--enable-sdl-video=yes \
 		--enable-sdl-audio=yes"
-
 
 	./configure \
 		--host=${CHOST} \

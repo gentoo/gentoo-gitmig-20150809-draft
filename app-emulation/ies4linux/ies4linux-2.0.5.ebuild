@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ies4linux-2.0.5.ebuild,v 1.1 2007/06/21 18:34:07 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ies4linux-2.0.5.ebuild,v 1.2 2007/07/12 06:39:56 mr_bones_ Exp $
 
 inherit eutils
 
@@ -96,4 +96,3 @@ pkg_postinst() {
 	elog "who will use the IE installations)."
 	elog
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r4.ebuild,v 1.4 2007/05/02 04:10:04 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r4.ebuild,v 1.5 2007/07/12 06:39:56 mr_bones_ Exp $
 
 inherit mount-boot flag-o-matic distutils eutils multilib
 
@@ -89,7 +89,6 @@ src_unpack() {
 	done
 	sed  -i "s/^CFLAGS :=$/& ${HARDFLAGS}/" \
 		"${S}"/tools/firmware/{hvmloader,vmxassist}/Makefile
-
 
 	# Disable the 32bit-only vmxassist if we are not on x86
 	# and we don't support the x86 ABI

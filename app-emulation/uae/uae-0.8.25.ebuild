@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.25.ebuild,v 1.2 2007/02/16 15:50:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.25.ebuild,v 1.3 2007/07/12 06:39:56 mr_bones_ Exp $
 
 inherit eutils
 
@@ -61,7 +61,6 @@ pkg_setup() {
 	use scsi && my_config="${my_config} --enable-scsi-device"
 	my_config="${my_config} --enable-threads"
 }
-
 
 src_compile() {
 	econf ${my_config} || die "configure failed"
