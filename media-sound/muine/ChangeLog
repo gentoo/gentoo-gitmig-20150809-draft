@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/muine
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.41 2007/05/01 00:17:11 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.42 2007/07/12 14:51:16 drac Exp $
+
+  12 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/muine-0.8.7-flac.patch, muine-0.8.7.ebuild:
+  >=flac 1.1.3 compatibility patch from bug 181829.
 
   01 May 2007; Marius Mauch <genone@gentoo.org> muine-0.8.7.ebuild:
   Replacing einfo with elog

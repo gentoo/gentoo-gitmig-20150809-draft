@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.7.ebuild,v 1.2 2007/05/01 00:17:11 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.7.ebuild,v 1.3 2007/07/12 14:51:16 drac Exp $
 
 inherit gnome2 mono eutils multilib autotools
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-lang/mono-1.1
 	>=dev-dotnet/gconf-sharp-2.6.0
 	>=dev-dotnet/gnomevfs-sharp-2.6.0
 	sys-libs/gdbm
-	~media-libs/flac-1.1.2
+	>=media-libs/flac-1.1.2
 	>=media-libs/libvorbis-1.0
 	>=media-libs/libid3tag-0.15.0b
 	xine? ( >=media-libs/xine-lib-1_rc4 )
@@ -52,7 +52,6 @@ DOCS="AUTHORS COPYING ChangeLog INSTALL MAINTAINERS NEWS README TODO"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
-
 	G2CONF="${G2CONF} $(use_enable aac faad2)"
 
 	if use xine ; then
@@ -64,8 +63,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-flac.patch
 	intltoolize --force --copy || die "intltoolize failed"
 	AT_M4DIR="${S}/m4" eautoreconf
 }
