@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-sony-misc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-sony-misc/ChangeLog,v 1.17 2007/07/07 19:44:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-sony-misc/ChangeLog,v 1.18 2007/07/12 14:51:08 armin76 Exp $
+
+  12 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  font-sony-misc-1.0.0.ebuild:
+  Add ~alpha
 
   07 Jul 2007; Lars Weiler <pylon@gentoo.org> font-sony-misc-1.0.0.ebuild:
   Stable on ppc; bug #184462.
