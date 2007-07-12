@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_chroot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/ChangeLog,v 1.2 2007/07/12 09:29:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/ChangeLog,v 1.3 2007/07/12 20:38:39 hawking Exp $
+
+  12 Jul 2007; Ali Polatel <hawking@gentoo.org>
+  +files/pam_chroot-0.9.1-makefile.patch, pam_chroot-0.9.1.ebuild:
+  Respect $LD and $LDFLAGS (bug #185050)
 
   12 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
   pam_chroot-0.9.1.ebuild:

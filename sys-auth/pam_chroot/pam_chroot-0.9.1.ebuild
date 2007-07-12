@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/pam_chroot-0.9.1.ebuild,v 1.2 2007/07/12 09:29:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/pam_chroot-0.9.1.ebuild,v 1.3 2007/07/12 20:38:39 hawking Exp $
 
-inherit toolchain-funcs pam flag-o-matic
+inherit toolchain-funcs pam flag-o-matic eutils
 
 DESCRIPTION="Linux-PAM module that allows a user to be chrooted in auth, account, or session."
 HOMEPAGE="http://sourceforge.net/projects/pam-chroot/"
@@ -17,9 +17,16 @@ DEPEND="virtual/pam
 	!<sys-libs/pam-0.99"
 RDEPEND="${DEPEND}"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-makefile.patch"
+}
+
 src_compile() {
-	append-flags "-fPIC"
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCC)" LD="$(tc-getLD)" \
+		LDFLAGS="$(raw-ldflags)" || die "emake failed"
 }
 
 src_install() {
