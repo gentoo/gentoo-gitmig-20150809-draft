@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.315 2007/07/12 14:24:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.316 2007/07/12 15:07:40 zzam Exp $
+
+  12 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/modprobe-113-r2.sh:
+  Convert module name to a regular expression, to match autoload/blacklist
+  entries regardless of being written with - or _.
 
 *udev-113-r2 (12 Jul 2007)
 

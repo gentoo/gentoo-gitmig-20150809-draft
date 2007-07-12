@@ -44,6 +44,7 @@ unlock_modprobe() {
 	rmdir "$MODPROBE_LOCK" || true
 }
 
+# Get normalized names only with _
 MODLIST=$("${MODPROBE}" -q -i --show-depends "${@}" 2>/dev/null \
 	| sed -e "s#^insmod /lib.*/\(.*\)\.ko.*#\1#g" -e 's|-|_|g')
 
@@ -53,16 +54,19 @@ for m in ${MODLIST}; do
 	MODNAME=$m
 done
 
+# build regex to match module name written with either - or _
+MOD_REGEX="$(echo "${MODNAME}"|sed -e 's#_#[-_]#g')"
+
 # check for blacklisting
 if [ -f /etc/modprobe.conf ]; then
-	if grep -q '^blacklist.*[[:space:]]'"${MODNAME}"'\([[:space:]]\|$\)' /etc/modprobe.conf; then
+	if grep -q '^blacklist.*[[:space:]]'"${MOD_REGEX}"'\([[:space:]]\|$\)' /etc/modprobe.conf; then
 		# module blacklisted
 		exit 0
 	fi
 fi
 
 if [ "$implicitly_blacklist_modules_autoload" = "yes" -a -f "${MODULES_AUTOLOAD_FILE}" ]; then
-	if grep -q "^${MODNAME}"'\([[:space:]]\|$\)' "${MODULES_AUTOLOAD_FILE}"; then
+	if grep -q "^${MOD_REGEX}"'\([[:space:]]\|$\)' "${MODULES_AUTOLOAD_FILE}"; then
 		# module implictly blacklisted
 		# as present in modules.autoload, Bug 184833
 		exit 0
