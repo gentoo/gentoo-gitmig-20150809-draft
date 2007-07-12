@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/openafs-legacy-0.1.ebuild,v 1.3 2007/06/02 11:57:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/openafs-legacy-0.1.ebuild,v 1.4 2007/07/12 05:38:40 mr_bones_ Exp $
 
 DESCRIPTION="Package that provides access to a FHS compliant OpenAFS installation through soft-links at legacy paths"
 HOMEPAGE="http://www.gentoo.org/ http://www.openafs.org/"
@@ -69,4 +69,3 @@ pkg_prerm() {
 	ewarn "It is recommended to remove this package AFTER removing openafs"
 	ewarn "This way there will be no dead links left lying around"
 }
-

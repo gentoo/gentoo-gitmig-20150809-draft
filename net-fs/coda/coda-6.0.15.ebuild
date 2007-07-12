@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.8 2007/06/26 02:24:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.9 2007/07/12 05:38:40 mr_bones_ Exp $
 
 inherit autotools eutils
 
@@ -271,4 +271,3 @@ pkg_config () {
 	echo
 	einfo "Tip: use pdbtool to add a normal coda user and clog to authenticate and get write access."
 }
-

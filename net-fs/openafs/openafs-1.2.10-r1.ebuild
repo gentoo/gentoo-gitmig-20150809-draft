@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r1.ebuild,v 1.17 2007/05/06 10:30:01 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r1.ebuild,v 1.18 2007/07/12 05:38:40 mr_bones_ Exp $
 
 inherit check-kernel fixheadtails eutils
 
@@ -20,14 +20,12 @@ DEPEND="virtual/linux-sources
 
 SYS_NAME=i386_linux24
 
-
 pkg_setup() {
 	if is_2_5_kernel || is_2_6_kernel
 	then
 		die "OpenAFS does not yet support 2.5 and 2.6 kernels"
 	fi
 }
-
 
 src_unpack() {
 	unpack ${A}

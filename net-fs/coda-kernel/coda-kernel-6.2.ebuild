@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-kernel/coda-kernel-6.2.ebuild,v 1.1 2005/07/29 18:38:58 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-kernel/coda-kernel-6.2.ebuild,v 1.2 2007/07/12 05:38:40 mr_bones_ Exp $
 
 inherit linux-mod
 
@@ -30,4 +30,3 @@ pkg_setup() {
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KVER=${KV_FULL} KSRC=${KV_DIR}"
 }
-
