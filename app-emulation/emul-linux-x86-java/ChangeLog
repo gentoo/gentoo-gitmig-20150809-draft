@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.32 2007/07/02 13:54:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.33 2007/07/12 21:14:29 betelgeuse Exp $
+
+*emul-linux-x86-java-1.6.0.02 (12 Jul 2007)
+
+  12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +emul-linux-x86-java-1.6.0.02.ebuild:
+  Version bump for bug #184407.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   emul-linux-x86-java-1.4.2.03-r2.ebuild,
