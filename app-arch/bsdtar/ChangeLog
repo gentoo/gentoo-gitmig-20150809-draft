@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/bsdtar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.70 2007/06/23 22:39:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.71 2007/07/12 17:04:57 uberlord Exp $
+
+*bsdtar-2.2.4 (12 Jul 2007)
+
+  12 Jul 2007; Roy Marples <uberlord@gentoo.org> +bsdtar-2.2.4.ebuild:
+  Bumpage.
 
   23 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/libarchive-1.2.53-strict-aliasing.patch,
