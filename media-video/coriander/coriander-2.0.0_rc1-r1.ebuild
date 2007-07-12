@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation and Pieter Van den Abeele
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0_rc1-r1.ebuild,v 1.1 2006/12/07 18:28:28 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0_rc1-r1.ebuild,v 1.2 2007/07/12 02:40:42 mr_bones_ Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="ffmpeg"
 
 S=${WORKDIR}/${MY_P}
-
 
 RDEPEND=">=media-libs/libdc1394-2.0.0_rc3
 	ffmpeg? ( media-video/ffmpeg )

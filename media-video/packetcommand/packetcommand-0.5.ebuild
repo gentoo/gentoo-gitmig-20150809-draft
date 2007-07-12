@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/packetcommand/packetcommand-0.5.ebuild,v 1.2 2007/06/08 10:32:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/packetcommand/packetcommand-0.5.ebuild,v 1.3 2007/07/12 02:40:42 mr_bones_ Exp $
 
 inherit linux-mod eutils
 
@@ -30,4 +30,3 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PV}/kernel-2.6.19.diff
 }
-

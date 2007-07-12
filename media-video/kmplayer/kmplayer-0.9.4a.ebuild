@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.4a.ebuild,v 1.1 2007/04/05 21:27:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.4a.ebuild,v 1.2 2007/07/12 02:40:43 mr_bones_ Exp $
 
 inherit kde eutils
 
@@ -28,11 +28,9 @@ DEPEND="xine? ( >=media-libs/xine-lib-1.1.1 )
 LANGS="ar br bs ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ka
 lt mt nb nl pa pl pt_BR pt ro ru rw sk sr@Latn sr sv ta tr uk zh_CN"
 
-
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
-
 
 need-kde 3.5
 
@@ -61,7 +59,6 @@ src_unpack() {
 	rm -f "${S}/configure"
 }
 
-
 src_compile(){
 	local myconf="$(use_with gstreamer) $(use_with xine) $(use_with cairo)"
 	kde_src_compile
@@ -73,4 +70,3 @@ src_install() {
 	# Remove this, as kdelibs 3.5.4 provides it
 	rm -f "${D}/usr/share/mimelnk/application/x-mplayer2.desktop"
 }
-

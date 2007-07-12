@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.4_p3.ebuild,v 1.5 2007/03/14 19:33:20 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.4_p3.ebuild,v 1.6 2007/07/12 02:40:43 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -23,7 +23,6 @@ KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-
 DEPEND="media-libs/jpeg
 	sys-apps/gawk
 	media-tv/linuxtv-dvb-headers
@@ -41,7 +40,6 @@ PLUGIN_LIB_DIR=/usr/$(get_libdir)/vdr/plugins
 CONF_DIR=/etc/vdr
 CAP_FILE=${S}/capabilities.sh
 CAPS="# Capabilities of the vdr-executable for use by startscript etc."
-
 
 pkg_setup() {
 	use debug && append-flags -g
@@ -119,7 +117,6 @@ src_unpack() {
 	if [[ -n "${VDRSOURCE_DIR}" ]]; then
 		cp -r ${S} ${T}/source-tree
 	fi
-
 
 	if ! use vanilla; then
 		add_cap CAP_IRCTRL_RUNTIME_PARAM \

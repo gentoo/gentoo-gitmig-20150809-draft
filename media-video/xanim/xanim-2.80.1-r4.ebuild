@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.34 2006/08/25 06:13:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.35 2007/07/12 02:40:43 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -73,7 +73,6 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz
 		mirror://gentoo/${_XA_CYUV_x86}${_XA_EXT_x86}
 		mirror://gentoo/${_XA_IV32_x86}${_XA_EXT_x86}
 	)"
-
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz

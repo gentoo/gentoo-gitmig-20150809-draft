@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r3.ebuild,v 1.8 2006/11/18 02:15:07 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r3.ebuild,v 1.9 2007/07/12 02:40:42 mr_bones_ Exp $
 
 inherit eutils
 
@@ -22,7 +22,6 @@ DEPEND="${RDEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
-
 
 src_unpack() {
 	unpack ${A}

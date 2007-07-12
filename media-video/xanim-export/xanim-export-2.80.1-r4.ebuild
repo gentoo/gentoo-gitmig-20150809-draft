@@ -1,11 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r4.ebuild,v 1.4 2006/11/13 04:51:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r4.ebuild,v 1.5 2007/07/12 02:40:43 mr_bones_ Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 strip-flags -finline-functions
 replace-flags -O3 -O2
-
 
 _XA_CYUV_sparc=xa1.0_cyuv_sparcELF.o
 _XA_CVID_sparc=xa2.0_cvid_sparcELF.o
@@ -40,7 +39,6 @@ QA_EXECSTACK_x86="usr/bin/xanim-export
 	    usr/lib/xanim/mods-export/${_XA_CVID/g21/}
 	    usr/lib/xanim/mods-export/${_XA_CYUV/g21/}
 	    usr/lib/xanim/mods-export/xa2.0_iv32_linuxELF.o"
-
 
 DESCRIPTION="XAnim with Quicktime and RAW Audio export functions"
 HOMEPAGE="http://heroin.linuxave.net/toys.html"
@@ -133,4 +131,3 @@ src_install() {
 	dodoc README*
 	dodoc docs/README.* docs/*.readme docs/*.doc
 }
-

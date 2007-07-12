@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mp1e/mp1e-0.5.2.20040909.ebuild,v 1.4 2007/02/11 19:58:30 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mp1e/mp1e-0.5.2.20040909.ebuild,v 1.5 2007/07/12 02:40:43 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -60,4 +60,3 @@ src_install() {
 	dodoc BUGS ChangeLog
 	dobin mp1e
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.25 2007/05/05 21:53:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.26 2007/07/12 02:40:43 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -159,7 +159,6 @@ src_compile() {
 		--enable-static --disable-shared \
 		"--cc=$(tc-getCC)" \
 		${myconf} || die "static failed"
-
 
 	emake || die "static failed"
 

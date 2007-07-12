@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/linux-uvc-0.1.0_pre100.ebuild,v 1.1 2007/05/07 20:21:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/linux-uvc-0.1.0_pre100.ebuild,v 1.2 2007/07/12 02:40:43 mr_bones_ Exp $
 
 inherit eutils linux-mod
 
@@ -10,7 +10,6 @@ HOMEPAGE="http://linux-uvc.berlios.de/
 SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.gz"
 #ESVN_REPO_URI="http://svn.berlios.de/svnroot/repos/linux-uvc/linux-uvc/trunk/"
 #ESVN_OPTIONS="-r ${PV/*_pre}"
-
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"

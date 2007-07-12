@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em84xx-modules/em84xx-modules-0.2.1.ebuild,v 1.1 2007/05/21 20:21:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em84xx-modules/em84xx-modules-0.2.1.ebuild,v 1.2 2007/07/12 02:40:43 mr_bones_ Exp $
 
 inherit linux-mod eutils
 
@@ -43,4 +43,3 @@ src_install() {
 
 	dodoc README TODO HISTORY
 }
-

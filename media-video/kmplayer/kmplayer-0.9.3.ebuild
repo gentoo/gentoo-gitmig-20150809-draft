@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.3.ebuild,v 1.10 2007/01/05 20:36:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.3.ebuild,v 1.11 2007/07/12 02:40:43 mr_bones_ Exp $
 
 inherit kde eutils
 
@@ -45,7 +45,6 @@ src_unpack() {
 		elog 'NOTICE: application.'
 	fi
 }
-
 
 src_compile(){
 	local myconf="$(use_with gstreamer) $(use_with xine)"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.4.ebuild,v 1.1 2007/03/03 16:19:21 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.4.ebuild,v 1.2 2007/07/12 02:40:43 mr_bones_ Exp $
 
 inherit kde eutils
 
@@ -44,7 +44,6 @@ src_unpack() {
 	fi
 }
 
-
 src_compile(){
 	local myconf="$(use_with gstreamer) $(use_with xine) $(use_with cairo)"
 	kde_src_compile
@@ -56,4 +55,3 @@ src_install() {
 	# Remove this, as kdelibs 3.5.4 provides it
 	rm -f "${D}/usr/share/mimelnk/application/x-mplayer2.desktop"
 }
-

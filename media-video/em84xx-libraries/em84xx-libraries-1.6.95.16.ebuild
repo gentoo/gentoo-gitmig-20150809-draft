@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em84xx-libraries/em84xx-libraries-1.6.95.16.ebuild,v 1.1 2007/05/21 19:53:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em84xx-libraries/em84xx-libraries-1.6.95.16.ebuild,v 1.2 2007/07/12 02:40:42 mr_bones_ Exp $
 
 inherit eutils
 
@@ -36,4 +36,3 @@ src_install() {
 	insinto /usr/include/em84xx/
 	doins include/*.h
 }
-

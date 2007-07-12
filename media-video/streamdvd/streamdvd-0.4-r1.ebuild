@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.12 2006/03/31 11:54:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.13 2007/07/12 02:40:42 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -55,4 +55,3 @@ src_install() {
 		newdoc Gui/README README.gui
 	fi
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/mplayer-sh-0.8.6-r2.ebuild,v 1.2 2006/04/17 11:42:19 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/mplayer-sh-0.8.6-r2.ebuild,v 1.3 2007/07/12 02:40:42 mr_bones_ Exp $
 
 inherit eutils
 
@@ -28,7 +28,6 @@ src_unpack() {
 	sed -i mplayer.sh.conf -e "s:^LIRCRC.*$:LIRCRC=\/etc\/lircd.conf:" \
 		-e "s:^MPLAYER=.*$:MPLAYER=\/usr\/bin\/mplayer:"
 }
-
 
 src_install() {
 

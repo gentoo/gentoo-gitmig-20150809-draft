@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gspca/gspca-01.00.10.ebuild,v 1.5 2007/05/01 00:46:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gspca/gspca-01.00.10.ebuild,v 1.6 2007/07/12 02:40:42 mr_bones_ Exp $
 
 inherit linux-mod
 
@@ -20,7 +20,6 @@ RDEPEND=""
 MODULE_NAMES="gspca(usb/video:)"
 BUILD_TARGETS="default"
 CONFIG_CHECK="VIDEO_DEV"
-
 
 pkg_setup() {
 	elog "The package maintainer made a mistake.  You should consider using media-video/gspcav1"

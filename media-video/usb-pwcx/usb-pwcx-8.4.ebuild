@@ -1,7 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/usb-pwcx-8.4.ebuild,v 1.10 2007/06/24 21:41:34 drac Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/usb-pwcx-8.4.ebuild,v 1.11 2007/07/12 02:40:42 mr_bones_ Exp $
 
 inherit linux-info
 

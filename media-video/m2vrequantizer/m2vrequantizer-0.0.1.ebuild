@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/m2vrequantizer-0.0.1.ebuild,v 1.1 2007/01/16 14:51:57 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/m2vrequantizer-0.0.1.ebuild,v 1.2 2007/07/12 02:40:43 mr_bones_ Exp $
 
 REQUANT="M2VRequantizer"
 REQUANT_VN="20030925"
@@ -35,4 +35,3 @@ src_install() {
 
 	dobin ${WORKDIR}/${REQUANT}-${REQUANT_VN}/src/requant
 }
-

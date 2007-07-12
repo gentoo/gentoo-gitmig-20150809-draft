@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r2.ebuild,v 1.1 2007/04/17 21:28:36 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r2.ebuild,v 1.2 2007/07/12 02:40:42 mr_bones_ Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -84,7 +84,6 @@ src_compile() {
 			$(use_enable arts)
 			--disable-srtp" # need ot add libsrtp to portage
 
-
 	# Those are possible for both player and mp4live
 	if use player || use mp4live ; then
 		myconf="${myconf} --enable-gtk-glib
@@ -102,7 +101,6 @@ src_compile() {
 			--disable-mmx
 			--disable-mpeg2dec
 			--disable-id3tags"
-
 
 	# those can only be used for mp4live
 	use mp4live && myconf="${myconf}

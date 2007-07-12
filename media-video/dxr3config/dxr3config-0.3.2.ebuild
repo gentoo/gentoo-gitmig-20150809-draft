@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/dxr3config-0.3.2.ebuild,v 1.3 2007/04/12 15:04:56 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/dxr3config-0.3.2.ebuild,v 1.4 2007/07/12 02:40:42 mr_bones_ Exp $
 
 MY_PV="${PV/./-}"
 MY_P="${PN}${MY_PV/./-}"
@@ -31,4 +31,3 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins usr/share/${PN}/${PN}.m2v
 }
-
