@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/musicbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/ChangeLog,v 1.7 2007/01/31 00:10:58 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/ChangeLog,v 1.8 2007/07/12 17:16:41 lack Exp $
+
+*musicbox-027-r2 (12 Jul 2007)
+
+  12 Jul 2007; Jim Ramsay <lack@gentoo.org> +musicbox-027-r2.ebuild:
+  Removing flac USE flag, until we become compatible with flac-1.1.3 (bug 181864)
 
 *musicbox-027-r1 (31 Jan 2007)
 
