@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/dialign-t
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/dialign-t/ChangeLog,v 1.5 2007/02/22 01:25:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/dialign-t/ChangeLog,v 1.6 2007/07/12 16:23:23 je_fro Exp $
+
+*dialign-t-0.2.2 (12 Jul 2007)
+
+  12 Jul 2007; Jeff Gardner <je_fro@gentoo.org> +dialign-t-0.2.2.ebuild:
+  New version, add amd64.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
