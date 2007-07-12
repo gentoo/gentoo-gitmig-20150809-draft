@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.32 2007/07/08 05:33:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.33 2007/07/12 06:21:31 corsair Exp $
+
+  12 Jul 2007; Markus Rothe <corsair@gentoo.org> libnotify-0.4.4.ebuild:
+  Stable on ppc64; bug #184615
 
   08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
   libnotify-0.4.3.ebuild, libnotify-0.4.4.ebuild:
