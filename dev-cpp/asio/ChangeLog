@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/asio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.8 2007/02/11 20:29:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.9 2007/07/12 23:17:07 dev-zero Exp $
+
+*asio-0.3.7-r1 (12 Jul 2007)
+
+  12 Jul 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/asio-0.3.7-double_delete_fix.patch, +asio-0.3.7-r1.ebuild:
+  Fixed bug #177800 (thanks to Roman Le Négrate). Added examples USE-flag
 
   11 Feb 2007; Raúl Porcel <armin76@gentoo.org> asio-0.3.7.ebuild:
   x86 stable

@@ -1,0 +1,12 @@
+--- include/asio/detail/reactor_op_queue.hpp	2006/11/05 08:00:27	1.22
++++ include/asio/detail/reactor_op_queue.hpp	2006/12/16 22:34:59	1.23
+@@ -160,8 +160,8 @@
+           i->second = this_op;
+           return;
+         }
+-        operations_.erase(i);
+       }
++      operations_.erase(i);
+     }
+   }
+
