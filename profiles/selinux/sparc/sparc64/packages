@@ -1,8 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/sparc64/packages,v 1.1 2006/10/08 18:37:25 pebenito Exp $
-
-# Sometimes necessary to trick programs into thinking we're really
-# a sparc32 system.
-*sys-apps/setarch
-

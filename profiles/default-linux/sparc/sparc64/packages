@@ -1,8 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/packages,v 1.3 2006/04/10 23:14:45 vapier Exp $
-
-# Sometimes necessary to trick programs into thinking we're really
-# a sparc32 system.
-*sys-apps/setarch
-

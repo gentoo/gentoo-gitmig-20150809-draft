@@ -1,6 +1,5 @@
 # Copyright 2003-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/2007.0/32bit-userland/packages,v 1.4 2007/04/27 09:15:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/2007.0/32bit-userland/packages,v 1.5 2007/07/12 04:38:46 vapier Exp $
 
 *sys-devel/kgcc64
-*sys-apps/setarch

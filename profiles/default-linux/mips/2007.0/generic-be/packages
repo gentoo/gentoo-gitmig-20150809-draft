@@ -1,10 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2007.0/generic-be/packages,v 1.1 2007/02/09 22:55:14 eroyf Exp $
-
-# Sometimes necessary to trick programs into thinking we're really
-# a mips32 system.
-*sys-apps/setarch
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2007.0/generic-be/packages,v 1.2 2007/07/12 04:38:46 vapier Exp $
 
 # The default SGI Bootloader is ArcLoad
 *sys-boot/arcload

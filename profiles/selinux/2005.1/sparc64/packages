@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/sparc64/packages,v 1.2 2006/04/10 23:14:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/sparc64/packages,v 1.3 2007/07/12 04:38:46 vapier Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -11,7 +11,6 @@
 ##############################################################################
 
 *sys-apps/sparc-utils
-*sys-apps/setarch
 
 # Unknown about SELinux/Sparc64 needs on gcc-3.4.x.  Masking here until verified it works.
 *<sys-devel/gcc-sparc64-3.4.0

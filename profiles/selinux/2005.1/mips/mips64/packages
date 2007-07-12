@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/mips/mips64/packages,v 1.2 2006/04/10 23:14:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/mips/mips64/packages,v 1.3 2007/07/12 04:38:46 vapier Exp $
 
 # mips64-specific packages
 *sys-devel/gcc-mips64
-*sys-apps/setarch

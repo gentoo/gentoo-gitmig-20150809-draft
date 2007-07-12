@@ -1,9 +1,0 @@
-# Copyright 2006 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2007.1-dev/cobalt/n32/packages,v 1.1 2007/02/25 17:47:56 kumba Exp $
-
-# Cobalt packages
-
-# Sometimes necessary to trick programs into thinking we're really
-# a mips32 system.
-*sys-apps/setarch
