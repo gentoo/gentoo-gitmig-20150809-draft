@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.43 2007/07/12 13:01:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.44 2007/07/12 13:40:41 armin76 Exp $
+
+  12 Jul 2007; Raúl Porcel <armin76@gentoo.org> dsniff-2.4_beta1-r3.ebuild:
+  alpha stable
 
   12 Jul 2007; Markus Ullmann <jokey@gentoo.org> dsniff-2.4_beta1-r3.ebuild:
   Stable on x86
