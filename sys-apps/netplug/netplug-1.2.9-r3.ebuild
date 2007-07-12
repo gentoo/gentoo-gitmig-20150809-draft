@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/netplug-1.2.9-r3.ebuild,v 1.4 2007/05/30 18:20:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/netplug-1.2.9-r3.ebuild,v 1.5 2007/07/12 13:46:51 gustavoz Exp $
 
 inherit eutils
 DESCRIPTION="Brings up/down ethernet ports automatically with cable detection"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.red-bean.com/~bos/"
 SRC_URI="http://www.red-bean.com/~bos/netplug/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 hax_bitkeeper() {
