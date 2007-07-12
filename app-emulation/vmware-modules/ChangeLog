@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.20 2007/06/24 18:36:09 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.21 2007/07/12 23:44:54 wolf31o2 Exp $
+
+  12 Jul 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  -vmware-modules-1.0.0.11.ebuild, vmware-modules-1.0.0.11-r1.ebuild,
+  -vmware-modules-1.0.0.13.ebuild, vmware-modules-1.0.0.13-r1.ebuild:
+  Marking 1.0.0.11-r1 and 1.0.0.13-r1 stable on amd64/x86 since the changes
+  from the previous ebuilds is just the placement of a variable, and the
+  current stable versions didn't work properly.
 
 *vmware-modules-1.0.0.16 (24 Jun 2007)
 
