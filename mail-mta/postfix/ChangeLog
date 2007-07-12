@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.129 2007/06/02 20:43:11 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.130 2007/07/12 08:45:12 zzam Exp $
+
+  12 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/postfix.rc6.2.2.9:
+  Removed bashisms from init-script, Bug #181874.
 
 *postfix-2.4.3 (02 Jun 2007)
 

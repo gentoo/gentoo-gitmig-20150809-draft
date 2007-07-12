@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/postfix.rc6.2.2.9,v 1.1 2006/03/07 21:07:20 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/postfix.rc6.2.2.9,v 1.2 2007/07/12 08:45:12 zzam Exp $
 
 opts="${opts} reload"
 
@@ -12,18 +12,18 @@ depend() {
 
 start() {
 	ebegin "Starting postfix"
-	/usr/sbin/postfix start &>/dev/null
+	/usr/sbin/postfix start >/dev/null 2>&1
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping postfix"
-	/usr/sbin/postfix stop &>/dev/null
+	/usr/sbin/postfix stop >/dev/null 2>&1
 	eend $?
 }
 
 reload() {
 	ebegin "Reloading postfix"
-	/usr/sbin/postfix reload &>/dev/null
+	/usr/sbin/postfix reload >/dev/null 2>&1
 	eend $?
 }
