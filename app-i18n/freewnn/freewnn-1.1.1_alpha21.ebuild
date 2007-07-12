@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha21.ebuild,v 1.10 2007/07/03 20:33:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha21.ebuild,v 1.11 2007/07/12 13:04:22 armin76 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge.jp/freewnn/17724/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 ~sparc x86"
 IUSE="X ipv6"
 
 DEPEND="X? ( x11-libs/libX11 x11-libs/libXmu x11-libs/libXt )"
