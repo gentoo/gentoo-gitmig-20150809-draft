@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/gfax-0.7.6.ebuild,v 1.2 2007/06/26 02:31:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/gfax-0.7.6.ebuild,v 1.3 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit gnome2 mono eutils autotools
 
@@ -47,7 +47,6 @@ src_compile() {
 	addwrite /root/.gconfd
 	gnome2_src_compile
 }
-
 
 src_install() {
 	gnome2_src_install

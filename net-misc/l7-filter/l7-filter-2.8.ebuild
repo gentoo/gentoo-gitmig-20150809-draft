@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.8.ebuild,v 1.6 2007/02/05 19:03:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.8.ebuild,v 1.7 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit linux-info eutils
 
@@ -18,7 +18,6 @@ IUSE=""
 SLOT="0"
 S=${WORKDIR}/${MY_P}
 RDEPEND="net-misc/l7-protocols"
-
 
 which_patch() {
 	if kernel_is ge 2 6 18
@@ -71,12 +70,10 @@ src_unpack() {
 	[ ! -f "${S}/${PATCH}" ] && \
 		die "patch ${PATCH} not found. Please enter a bug at bugs.gentoo.org"
 
-
 	cd ${S}
 
 	mkdir  kernel
 	mkdir  kernel/Documentation
-
 
 	# create needed directories
 	mkdir -p ${S}/kernel/net/ipv4/netfilter/regexp/

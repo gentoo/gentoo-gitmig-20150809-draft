@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ghamachi/ghamachi-0.7.3.ebuild,v 1.3 2007/07/02 15:00:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ghamachi/ghamachi-0.7.3.ebuild,v 1.4 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit eutils
 
@@ -30,4 +30,3 @@ src_install() {
 	doins ${WORKDIR}/ghamachi
 	dodoc ${WORKDIR}/README.gHamachi
 }
-

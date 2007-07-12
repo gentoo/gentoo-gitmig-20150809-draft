@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nat-traverse/nat-traverse-0.4.ebuild,v 1.2 2007/07/11 19:13:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nat-traverse/nat-traverse-0.4.ebuild,v 1.3 2007/07/12 02:52:15 mr_bones_ Exp $
 
 DESCRIPTION="Traverse NAT gateways with the Use of UDP"
 HOMEPAGE="http://linide.sourceforge.net/nat-traverse/"
@@ -19,4 +19,3 @@ src_install() {
 
 	dodoc ChangeLog README
 }
-

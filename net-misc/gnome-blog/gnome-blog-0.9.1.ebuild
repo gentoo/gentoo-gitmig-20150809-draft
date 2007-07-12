@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.1.ebuild,v 1.1 2006/07/27 04:00:06 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.1.ebuild,v 1.2 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -21,7 +21,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
-
 
 src_unpack () {
 	gnome2_src_unpack

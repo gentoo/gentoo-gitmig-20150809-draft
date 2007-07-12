@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/xrdp-0.3.1.ebuild,v 1.3 2006/11/21 18:29:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/xrdp-0.3.1.ebuild,v 1.4 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit eutils multilib
 
@@ -40,7 +40,6 @@ src_unpack() {
 	# fix insecure rpath
 	sed -ie "s:rpath,.:rpath,${DESTDIR}:" xrdp/Makefile
 }
-
 
 src_compile() {
 	emake MYCFLAGS="${CFLAGS}" DESTDIR="${DESTDIR}" || die "emake failed"

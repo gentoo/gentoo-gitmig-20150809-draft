@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.1.1.ebuild,v 1.2 2005/08/24 08:39:43 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.1.1.ebuild,v 1.3 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit eutils kde-functions
 
@@ -28,7 +28,6 @@ src_unpack() {
 	# Fix compilation with gcc-3.4. Applied in CVS.
 	epatch "${FILESDIR}/${P}-gcc34.patch"
 }
-
 
 src_compile() {
 	local myconf="$(use_enable alsa) $(use_enable jack)

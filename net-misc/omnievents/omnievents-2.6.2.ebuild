@@ -1,12 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omnievents/omnievents-2.6.2.ebuild,v 1.2 2005/10/01 13:48:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omnievents/omnievents-2.6.2.ebuild,v 1.3 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit versionator
 
 MY_PV=$(replace_all_version_separators "_")
 MY_P="omniEvents-${MY_PV}"
-
 
 DESCRIPTION="An implementation of the CORBA Events Service for omniORB"
 SRC_URI="mirror://sourceforge/omnievents/${MY_P}-src.tar.gz"

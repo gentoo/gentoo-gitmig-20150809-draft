@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-proxy/apt-proxy-1.3.0.ebuild,v 1.5 2005/08/23 13:15:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-proxy/apt-proxy-1.3.0.ebuild,v 1.6 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit eutils
-
 
 DESCRIPTION="Caching proxy for the Debian package system"
 HOMEPAGE="http://sourceforge.net/projects/apt-proxy/"

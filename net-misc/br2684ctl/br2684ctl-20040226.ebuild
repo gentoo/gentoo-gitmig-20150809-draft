@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.8 2007/01/18 05:32:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.9 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -75,4 +75,3 @@ pkg_postinst() {
 	einfo "Note: Replace 0.100 with your VPI.VCI of your provider"
 	einfo "      see br2684ctl(8) for more information"
 }
-

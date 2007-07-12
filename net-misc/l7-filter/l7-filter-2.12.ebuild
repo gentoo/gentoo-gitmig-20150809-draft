@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.12.ebuild,v 1.2 2007/07/07 01:59:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.12.ebuild,v 1.3 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit linux-info eutils
 
@@ -18,7 +18,6 @@ IUSE=""
 SLOT="0"
 S=${WORKDIR}/${MY_P}
 RDEPEND="net-misc/l7-protocols"
-
 
 which_patch() {
 	if kernel_is ge 2 6 22
@@ -78,12 +77,10 @@ src_unpack() {
 	[ ! -f "${S}/${PATCH}" ] && \
 		die "patch ${PATCH} not found. Please enter a bug at bugs.gentoo.org"
 
-
 	cd ${S}
 
 	mkdir  kernel
 	mkdir  kernel/Documentation
-
 
 	# create needed directories
 	if kernel_is ge 2 6 20

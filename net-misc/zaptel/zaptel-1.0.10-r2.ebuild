@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.10-r2.ebuild,v 1.2 2007/06/26 02:35:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.10-r2.ebuild,v 1.3 2007/07/12 02:52:15 mr_bones_ Exp $
 
 IUSE="bri devfs26 rtc ukcid"
 
@@ -113,7 +113,6 @@ src_unpack() {
 			-e "1 i KVERS?=\$(shell uname -r)" {} \;
 	fi
 
-
 	cd ${S}
 	#######################################################################
 	# apply other patches here,
@@ -129,7 +128,6 @@ src_unpack() {
 			ewarn "RTC is unsupported on your arch, skipping patch"
 		fi
 	fi
-
 
 	# UK callerid patch, adds support for british-telecoms callerid to x100p cards
 	# see http://www.lusyn.com/asterisk/patches.html for more information

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.12-r2.ebuild,v 1.3 2007/07/02 16:55:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.12-r2.ebuild,v 1.4 2007/07/12 02:52:16 mr_bones_ Exp $
 
 inherit eutils perl-app
 
@@ -18,7 +18,6 @@ SRC_URI="http://ftp1.digium.com/pub/telephony/${PN}/releases/${MY_P}.tar.gz
 S_ADDONS="${WORKDIR}/${PN}-addons-${ADDONS_VERSION}"
 S_BRI="${WORKDIR}/bristuff-${BRI_VERSION}"
 S="${WORKDIR}/${MY_P}"
-
 
 IUSE="alsa bri debug doc gtk hardened mmx mysql mysqlfriends postgres pri resperl speex ukcid vmdbmysql vmdbpostgres zaptel"
 SLOT="0"
@@ -94,7 +93,6 @@ pkg_setup() {
 		fi
 		einfo "Perl with ithreads support found"
 	fi
-
 
 	# mysql and postgres voicemail support are mutually exclusive..
 	if use vmdbmysql && use vmdbpostgres; then
@@ -262,7 +260,6 @@ src_unpack() {
 	sed -i  -e "s:^OPTIMIZE+=.*:OPTIMIZE+=${CFLAGS}:" \
 		-e "s:^\(CFLAGS=\)\(.*\):\1-I${S}/include -fPIC \2:" \
 		format_mp3/Makefile
-
 
 	#
 	# BRI patches

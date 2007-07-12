@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.1.0.ebuild,v 1.4 2007/02/11 18:17:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.1.0.ebuild,v 1.5 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit eutils kde
 
@@ -27,7 +27,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-Makefiles.patch
 }
-
 
 src_compile(){
 	# Fix for our kde location

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/hsc-0.999.ebuild,v 1.1 2005/09/22 10:11:32 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/hsc-0.999.ebuild,v 1.2 2007/07/12 02:52:15 mr_bones_ Exp $
 
 DESCRIPTION="An HTML preprocessor using ML syntax"
 HOMEPAGE="http://www.linguistik.uni-erlangen.de/~msbethke/software.html"
@@ -23,7 +23,6 @@ src_install() {
 	dodir /usr/bin
 	dodir /usr/share/doc/hsc
 	dodir /usr/share/hsc
-
 
 	make BINDIR=${D}/usr/bin DATADIR=${D}/usr/share/hsc \
 		prefix=${D}/usr docdir=${D}/usr/share/doc/hsc datadir=${D}/usr/share/hsc install || die

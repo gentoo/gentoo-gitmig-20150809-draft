@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-3.0.1.ebuild,v 1.3 2007/07/06 13:34:22 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-3.0.1.ebuild,v 1.4 2007/07/12 02:52:15 mr_bones_ Exp $
 
 DESCRIPTION="Create virtual tunnels over TCP/IP networks with traffic shaping, encryption, and compression."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -17,7 +17,6 @@ RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	socks5? ( net-proxy/dante )"
 DEPEND="${RDEPEND}
 	sys-devel/bison"
-
 
 src_compile() {
 	econf $(use_enable ssl) \

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.18.1.ebuild,v 1.2 2007/07/05 15:59:50 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.18.1.ebuild,v 1.3 2007/07/12 02:52:15 mr_bones_ Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
@@ -46,4 +46,3 @@ pkg_setup() {
 			$(use_enable libnotify) $(use_enable keyring gnome-keyring) \
 			--enable-session-support"
 }
-

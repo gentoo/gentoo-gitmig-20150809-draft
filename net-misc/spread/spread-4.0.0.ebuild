@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/spread-4.0.0.ebuild,v 1.1 2007/03/22 12:14:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/spread-4.0.0.ebuild,v 1.2 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit eutils
 
@@ -18,7 +18,6 @@ IUSE=""
 DEPEND=""
 
 S="${WORKDIR}/${MY_PN}-${PV}"
-
 
 pkg_setup()
 {

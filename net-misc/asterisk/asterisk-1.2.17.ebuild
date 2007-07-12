@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.17.ebuild,v 1.7 2007/07/02 16:55:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.17.ebuild,v 1.8 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -27,7 +27,6 @@ SRC_URI="http://ftp.digium.com/pub/asterisk/releases/${MY_P}.tar.gz
 		http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )
 	 genericjb? ( http://www.netdomination.org/pub/asterisk/${PN}-${JB_PATCHES}.patch.bz2 )"
 #	 bri? (	http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )
-
 
 S="${WORKDIR}/${MY_P}"
 S_BRI="${WORKDIR}/bristuff-${BRI_VERSION}"

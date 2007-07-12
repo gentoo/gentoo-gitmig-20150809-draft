@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/smbc-1.0.0-r1.ebuild,v 1.2 2005/03/03 10:03:38 mglauche Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/smbc-1.0.0-r1.ebuild,v 1.3 2007/07/12 02:52:16 mr_bones_ Exp $
 
 DESCRIPTION="A text mode (ncurses) SMB network commander. Features: resume and UTF-8"
 HOMEPAGE="http://smbc.airm.net/en/index.php"
@@ -30,4 +30,3 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 }
-

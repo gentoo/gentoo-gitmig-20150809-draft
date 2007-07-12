@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r2.ebuild,v 1.6 2007/07/02 15:01:15 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r2.ebuild,v 1.7 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit eutils linux-info
 
@@ -31,7 +31,6 @@ pkg_preinst() {
 	enewgroup ${PN}
 	enewuser ${PN} -1 -1 /dev/null ${PN}
 }
-
 
 pkg_setup() {
 	einfo "Checking your kernel configuration for TUN/TAP support."

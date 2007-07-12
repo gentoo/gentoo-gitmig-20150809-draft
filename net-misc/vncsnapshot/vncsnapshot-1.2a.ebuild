@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/vncsnapshot-1.2a.ebuild,v 1.4 2007/04/06 22:02:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/vncsnapshot-1.2a.ebuild,v 1.5 2007/07/12 02:52:15 mr_bones_ Exp $
 
 LICENSE="GPL-2"
 DESCRIPTION="A command-line tool for taking JPEG snapshots of VNC servers"
@@ -18,7 +18,6 @@ src_compile() {
 	#      we lost the INCLUDES in the makefile.
 	make CDEBUGFLAGS="${CFLAGS}" || die "make failed"
 }
-
 
 # likewise, no make install (we're real Unix hackers, we are)
 src_install() {

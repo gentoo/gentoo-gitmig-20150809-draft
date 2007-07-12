@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2007.01.15.ebuild,v 1.3 2007/04/28 16:49:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2007.01.15.ebuild,v 1.4 2007/07/12 02:52:15 mr_bones_ Exp $
 
 inherit eutils
 
@@ -37,4 +37,3 @@ pkg_postinst() {
 	einfo "edit your /etc/aiccu.conf and do"
 	einfo "# rc-update add aiccu default"
 }
-
