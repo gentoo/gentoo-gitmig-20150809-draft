@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/ChangeLog,v 1.8 2007/02/04 00:24:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/ChangeLog,v 1.9 2007/07/12 22:35:40 betelgeuse Exp $
+
+  12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> jdbm-0.12-r1.ebuild:
+  Javadoc in sun-jdk-1.6 starting with u2 works fine so removing the work
+  around from DEPEND.
 
   04 Feb 2007; Vlastimil Babka <caster@gentoo.org> -jdbm-0.12.ebuild:
   Cleanup.

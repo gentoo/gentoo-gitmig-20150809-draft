@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-vfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/ChangeLog,v 1.3 2007/05/12 10:39:17 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/ChangeLog,v 1.4 2007/07/12 22:34:52 betelgeuse Exp $
+
+  12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> commons-vfs-1.0.ebuild:
+  Javadoc in sun-jdk-1.6 starting with u2 works fine so removing the work
+  around from DEPEND.
 
   12 May 2007; Alistair John Bush <ali_bush@gentoo.org>
   commons-vfs-1.0.ebuild:

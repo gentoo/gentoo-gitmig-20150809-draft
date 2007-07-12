@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20051206-r1.ebuild,v 1.3 2007/06/17 19:40:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20051206-r1.ebuild,v 1.4 2007/07/12 22:38:23 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 eutils java-ant-2
@@ -18,8 +18,7 @@ RDEPEND=">=virtual/jre-1.4
 	dev-java/xp
 	${COMMON_DEP}"
 DEPEND="
-	!doc? ( >=virtual/jdk-1.4 )
-	doc? ( || ( =virtual/jdk-1.5* =virtual/jdk-1.4* ) )
+	>=virtual/jdk-1.4
 	app-arch/unzip
 	${COMMON_DEP}"
 
