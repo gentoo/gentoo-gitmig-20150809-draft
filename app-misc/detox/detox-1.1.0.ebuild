@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/detox-1.1.0.ebuild,v 1.2 2005/03/06 13:57:51 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/detox-1.1.0.ebuild,v 1.3 2007/07/12 03:35:11 mr_bones_ Exp $
 
 inherit eutils
 
@@ -36,4 +36,3 @@ src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 	dodoc README CHANGES
 }
-

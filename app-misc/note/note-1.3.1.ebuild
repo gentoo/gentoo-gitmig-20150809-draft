@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.1.ebuild,v 1.6 2006/11/23 15:43:46 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.1.ebuild,v 1.7 2007/07/12 03:35:11 mr_bones_ Exp $
 
 inherit perl-app
 
@@ -49,4 +49,3 @@ src_install() {
 
 	dodoc README Changelog TODO UPGRADE VERSION
 }
-

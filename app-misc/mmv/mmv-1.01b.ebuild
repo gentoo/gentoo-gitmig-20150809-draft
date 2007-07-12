@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.15 2005/06/05 11:51:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.16 2007/07/12 03:35:11 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -51,4 +51,3 @@ src_install() {
 	cd debian
 	dodoc changelog control copyright
 }
-

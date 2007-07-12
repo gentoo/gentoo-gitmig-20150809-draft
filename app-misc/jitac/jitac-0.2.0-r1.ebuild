@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/jitac-0.2.0-r1.ebuild,v 1.11 2006/10/05 14:32:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/jitac-0.2.0-r1.ebuild,v 1.12 2007/07/12 03:35:11 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -39,4 +39,3 @@ src_install() {
 	dodoc org/roqe/jitac/README
 	use doc && java-pkg_dohtml -r org/roqe/jitac/docs/*
 }
-

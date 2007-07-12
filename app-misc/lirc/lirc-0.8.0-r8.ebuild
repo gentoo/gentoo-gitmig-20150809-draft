@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r8.ebuild,v 1.12 2007/06/27 17:12:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r8.ebuild,v 1.13 2007/07/12 03:35:11 mr_bones_ Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -15,7 +15,6 @@ KEYWORDS="amd64 ppc ppc64 x86"
 SRC_URI="mirror://sourceforge/lirc/${P/_pre/pre}.tar.bz2"
 
 S=${WORKDIR}/${P/_pre/pre}
-
 
 IUSE_LIRC_DEVICES_DIRECT="
 	all userspace act200l act220l
@@ -48,8 +47,6 @@ IUSE_LIRC_DEVICES_SPECIAL="
 
 IUSE_LIRC_DEVICES="${IUSE_LIRC_DEVICES_DIRECT} ${IUSE_LIRC_DEVICES_SPECIAL}"
 
-
-
 RDEPEND="virtual/libc
 	sys-apps/coreutils
 	X? ( || ( (	x11-libs/libX11
@@ -59,7 +56,6 @@ RDEPEND="virtual/libc
 	lirc_devices_alsa_usb? ( media-libs/alsa-lib )
 	lirc_devices_audio? ( media-libs/portaudio )
 	lirc_devices_irman? ( media-libs/libirman )"
-
 
 #device-driver which use libusb
 LIBUSB_USED_BY_DEV="
@@ -74,19 +70,15 @@ done
 DEPEND="${RDEPEND}
 	virtual/linux-sources"
 
-
 # adding only run-time depends
 RDEPEND="${RDEPEND}
 	lirc_devices_usbirboy? ( app-misc/usbirboy )
 	lirc_devices_inputlirc? ( app-misc/inputlircd )"
 
-
-
 # add all devices to IUSE
 for dev in ${IUSE_LIRC_DEVICES}; do
 	IUSE="${IUSE} lirc_devices_${dev}"
 done
-
 
 add_device() {
 	: $(( lirc_device_count++ ))
@@ -101,7 +93,6 @@ add_device() {
 		ewarn
 		epause
 	fi
-
 
 	local dev="${1}"
 	local desc="device ${dev}"
@@ -176,7 +167,6 @@ pkg_setup() {
 	use hardware-carrier && MY_OPTS="${MY_OPTS} --without-soft-carrier"
 	use transmitter && MY_OPTS="${MY_OPTS} --with-transmitter"
 
-
 	if [[ -n "${LIRC_OPTS}" ]] ; then
 		ewarn
 		ewarn "LIRC_OPTS is deprecated from lirc-0.8.0-r1 on."
@@ -207,7 +197,6 @@ pkg_setup() {
 			die "LIRC_OPTS is no longer recommended."
 		fi
 	fi
-
 
 	# Setup parameter for linux-mod.eclass
 	MODULE_NAMES="lirc(misc:${S})"
@@ -275,7 +264,6 @@ src_unpack() {
 	eautoreconf || die "autoreconf failed"
 }
 
-
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
@@ -311,4 +299,3 @@ pkg_postinst() {
 	elog "merged, please read the documentation at http://www.lirc.org"
 	echo
 }
-

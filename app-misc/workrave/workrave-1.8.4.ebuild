@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.4.ebuild,v 1.1 2007/03/16 02:48:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.4.ebuild,v 1.2 2007/07/12 03:35:11 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -49,7 +49,6 @@ DEPEND="${RDEPEND}
 
 MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="AUTHORS NEWS README TODO"
-
 
 pkg_setup() {
 	G2CONF="--enable-gconf \

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1.ebuild,v 1.7 2006/10/05 14:34:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1.ebuild,v 1.8 2007/07/12 03:35:11 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -27,4 +27,3 @@ src_install() {
 
 	dobin ${PN}
 }
-

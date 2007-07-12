@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1.ebuild,v 1.11 2007/06/27 17:12:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.1.ebuild,v 1.12 2007/07/12 03:35:11 mr_bones_ Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -93,7 +93,6 @@ add_device() {
 		epause
 	fi
 
-
 	local dev="${1}"
 	local desc="device ${dev}"
 	if [[ -n "${2}" ]]; then
@@ -165,7 +164,6 @@ pkg_setup() {
 	use hardware-carrier && MY_OPTS="${MY_OPTS} --without-soft-carrier"
 	use transmitter && MY_OPTS="${MY_OPTS} --with-transmitter"
 
-
 	if [[ -n "${LIRC_OPTS}" ]] ; then
 		ewarn
 		ewarn "LIRC_OPTS is deprecated from lirc-0.8.0-r1 on."
@@ -196,7 +194,6 @@ pkg_setup() {
 			die "LIRC_OPTS is no longer recommended."
 		fi
 	fi
-
 
 	# Setup parameter for linux-mod.eclass
 	MODULE_NAMES="lirc(misc:${S})"
@@ -249,7 +246,6 @@ src_unpack() {
 
 	eautoreconf
 }
-
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"

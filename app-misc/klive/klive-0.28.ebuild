@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.28.ebuild,v 1.1 2007/04/14 23:11:29 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.28.ebuild,v 1.2 2007/07/12 03:35:11 mr_bones_ Exp $
 
 inherit eutils
 
@@ -56,4 +56,3 @@ pkg_postinst() {
 	ewarn "and/or its public availability, unmerge this package now."
 	echo
 }
-

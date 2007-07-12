@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.16.ebuild,v 1.5 2007/02/11 04:01:43 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.16.ebuild,v 1.6 2007/07/12 03:35:11 mr_bones_ Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -137,4 +137,3 @@ pkg_postinst() {
 	elog "basic usage info, see the Gentoo page of the Beagle website:"
 	elog " http://www.beagle-project.org/Gentoo_Installation"
 }
-
