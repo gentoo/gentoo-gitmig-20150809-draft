@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.168 2007/04/12 19:43:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.169 2007/07/12 06:37:40 vapier Exp $
+
+  12 Jul 2007; Mike Frysinger <vapier@gentoo.org> catalyst-2.0.4.ebuild:
+  Dont force sys-apps/setarch as it is part of the system already.
 
 *catalyst-2.0.4 (12 Apr 2007)
 
