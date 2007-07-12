@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.6.ebuild,v 1.12 2007/07/02 15:09:41 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.6.ebuild,v 1.13 2007/07/12 14:37:37 betelgeuse Exp $
 
 inherit eutils
 
@@ -13,16 +13,13 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ia64 ~ppc sparc x86 ~x86-fbsd"
 
-DEPEND="virtual/libc
-	dev-util/pkgconfig
-	berkdb? ( >=sys-libs/db-3.3 )"
-
 RDEPEND=">=net-p2p/gift-0.11.8
-	>=sys-libs/zlib-1.1.4
 	berkdb? ( >=sys-libs/db-3.3 )"
+DEPEND="dev-util/pkgconfig
+	${RDEPEND}"
 
 src_compile() {
-	econf `use_enable berkdb libdb` || die "failed to configure"
+	econf $(use_enable berkdb libdb) || die "failed to configure"
 	emake || die "failed to build"
 }
 

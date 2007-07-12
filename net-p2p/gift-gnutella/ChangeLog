@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gift-gnutella
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/ChangeLog,v 1.39 2007/05/28 17:50:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/ChangeLog,v 1.40 2007/07/12 14:33:49 betelgeuse Exp $
+
+  12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  gift-gnutella-0.0.11.ebuild:
+  Add net-p2p/gift to DEPEND for bug #184927 and remove redundant maintainer
+  element from metadata.xml.
 
   28 May 2007; Raúl Porcel <armin76@gentoo.org>
   -gift-gnutella-0.0.10.1.ebuild:
