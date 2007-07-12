@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.16-r1.ebuild,v 1.7 2007/02/19 17:19:36 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.16-r1.ebuild,v 1.8 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -36,7 +36,6 @@ src_unpack() {
 		epatch ${WORKDIR}/${P}-panic.patch
 		epatch ${FILESDIR}/${P}-common_h.patch
 	fi
-
 
 	if ! use ppc-macos; then
 		#EPATCH_OPTS="-p1 -d${S}" epatch ${FILESDIR}/${P}-fontconfig-externalgd.diff || die "Failed to patch"

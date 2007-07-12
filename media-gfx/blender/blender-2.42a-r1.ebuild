@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42a-r1.ebuild,v 1.11 2007/04/13 05:59:26 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42a-r1.ebuild,v 1.12 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -12,11 +12,9 @@ HOMEPAGE="http://www.blender.org/"
 SRC_URI="http://download.blender.org/source/${P}.tar.gz
 		 mirror://gentoo/ffmpeg-${FFMPEG_SNAP}.tar.bz2"
 
-
 SLOT="0"
 LICENSE="|| ( GPL-2 BL )"
 KEYWORDS="~amd64 ppc ppc64 ~sparc x86"
-
 
 RDEPEND="
 	jpeg? ( media-libs/jpeg )
@@ -72,7 +70,6 @@ src_unpack() {
 	unpack ffmpeg-${FFMPEG_SNAP}.tar.bz2
 	cp ${T}/Makefile ${T}/common.mak ffmpeg
 }
-
 
 src_compile() {
 	local myconf=""

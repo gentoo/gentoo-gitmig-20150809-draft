@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.0.2-r1.ebuild,v 1.7 2007/04/04 08:11:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.0.2-r1.ebuild,v 1.8 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit multilib
 
@@ -36,7 +36,6 @@ src_compile() {
 	econf || die "econf failed"
 	emake -j1 || die "Make failed"
 }
-
 
 src_install() {
 	make DESTDIR="${D}" install || die

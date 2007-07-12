@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42.ebuild,v 1.6 2006/12/06 20:36:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42.ebuild,v 1.7 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -11,11 +11,9 @@ DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="http://www.blender.org/"
 SRC_URI="http://download.blender.org/source/${P}.tar.gz"
 
-
 SLOT="0"
 LICENSE="|| ( GPL-2 BL )"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-
 
 RDEPEND="
 	jpeg? ( media-libs/jpeg )
@@ -66,7 +64,6 @@ src_unpack() {
 	epatch ${FILESDIR}/blender-2.37-dirs.patch
 #	mkdir -p ${WORKDIR}/build/linux2/{extern,intern,source}
 }
-
 
 src_compile() {
 	local myconf=""

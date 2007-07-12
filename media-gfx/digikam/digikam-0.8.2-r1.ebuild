@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.8.2-r1.ebuild,v 1.9 2007/05/16 14:01:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.8.2-r1.ebuild,v 1.10 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit kde
 
@@ -84,4 +84,3 @@ src_install(){
 	mv "${D}/usr/share/applnk/Graphics/digikam.desktop" \
 		"${D}/usr/share/applications/kde"
 }
-

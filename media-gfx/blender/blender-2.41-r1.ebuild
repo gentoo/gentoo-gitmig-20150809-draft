@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.41-r1.ebuild,v 1.9 2007/04/13 05:59:26 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.41-r1.ebuild,v 1.10 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -44,7 +44,6 @@ src_unpack() {
 	epatch ${FILESDIR}/blender-2.37-dirs.patch
 	mkdir -p ${WORKDIR}/build/linux2/{extern,intern,source}
 }
-
 
 src_compile() {
 	local myconf=""

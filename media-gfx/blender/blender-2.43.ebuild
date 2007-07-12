@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.43.ebuild,v 1.7 2007/04/17 17:23:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.43.ebuild,v 1.8 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -74,7 +74,6 @@ src_unpack() {
 	# echo "WITH_BF_PLAYER=0" >> ${S}/user-config.py
 	# echo "WITH_BF_ICONV=0" >> ${S}/user-config.py
 }
-
 
 src_compile() {
 	myconf="${myconf} $(blend_with openal)"

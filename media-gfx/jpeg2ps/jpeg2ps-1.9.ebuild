@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/jpeg2ps-1.9.ebuild,v 1.7 2007/04/30 22:02:28 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/jpeg2ps-1.9.ebuild,v 1.8 2007/07/12 04:08:47 mr_bones_ Exp $
 
 DESCRIPTION="Converts JPEG images to Postscript using a wrapper"
 HOMEPAGE="http://www.pdflib.com/download/free-software/jpeg2ps/"
@@ -38,4 +38,3 @@ pkg_postinst() {
 	elog "    jpeg2ps -p a4 file.jpg > file.ps"
 	elog
 }
-

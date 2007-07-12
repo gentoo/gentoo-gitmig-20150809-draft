@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5.ebuild,v 1.8 2006/11/23 19:41:07 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5.ebuild,v 1.9 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit kde eutils
 
@@ -19,7 +19,6 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="exif kipi mysql postgres"
 
-
 DEPEND="|| ( kde-base/libkonq kde-base/kdebase )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/libpq dev-libs/libpqxx )
@@ -27,7 +26,6 @@ DEPEND="|| ( kde-base/libkonq kde-base/kdebase )
 	kipi? ( media-plugins/kipi-plugins )
 	media-libs/libexif"
 need-kde 3.4
-
 
 src_unpack() {
 	unpack "${A}"

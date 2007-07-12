@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5-r1.ebuild,v 1.7 2007/06/27 06:00:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5-r1.ebuild,v 1.8 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit eutils multilib
 
@@ -60,7 +60,6 @@ sed_Imakefile() {
 		sed -i "s:^\(XCOMM\)*[[:space:]]*${varname}[[:space:]]*=.*$:${varname} = ${varval}:" "$@"
 	done
 }
-
 
 src_compile() {
 	sed_Imakefile Imakefile

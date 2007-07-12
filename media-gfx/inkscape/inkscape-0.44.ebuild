@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.44.ebuild,v 1.8 2007/01/04 15:05:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.44.ebuild,v 1.9 2007/07/12 04:08:47 mr_bones_ Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="latest"
@@ -56,7 +56,6 @@ use mmx || G2CONF="${G2CONF} --disable-mmx"
 use inkjar || G2CONF="${G2CONF} --without-inkjar"
 use gnome && G2CONF="${G2CONF} --with-gnome-vfs"
 use lcms || G2CONF="${G2CONF} --disable-lcms"
-
 
 src_unpack() {
 	unpack ${A}

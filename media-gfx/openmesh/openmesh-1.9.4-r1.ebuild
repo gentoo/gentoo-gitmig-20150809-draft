@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.4-r1.ebuild,v 1.2 2007/02/08 18:34:00 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.4-r1.ebuild,v 1.3 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -57,4 +57,3 @@ src_install() {
 	cp -a Core ${D}/usr/include/${MY_PN}
 	cp -a Tools ${D}/usr/include/${MY_PN}
 }
-

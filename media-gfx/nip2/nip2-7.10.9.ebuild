@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.10.9.ebuild,v 1.2 2005/04/07 06:42:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.10.9.ebuild,v 1.3 2007/07/12 04:08:47 mr_bones_ Exp $
 
 DESCRIPTION="VIPS Image Processing Graphical User Interface"
 SRC_URI="http://www.vips.ecs.soton.ac.uk/vips-7.10/${P}.tar.gz"
@@ -23,14 +23,12 @@ DEPEND="${RDEPEND}
 		sys-devel/flex
 		sys-devel/bison"
 
-
 src_compile() {
 	local myconf
 	use fftw || myconf="--without-fftw"
 	econf ${myconf} || die
 	emake || die
 }
-
 
 src_install() {
 	emake install DESTDIR=${D} || die

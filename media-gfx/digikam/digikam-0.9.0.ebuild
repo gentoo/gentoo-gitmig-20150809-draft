@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.0.ebuild,v 1.3 2007/04/30 21:42:42 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.0.ebuild,v 1.4 2007/07/12 04:08:47 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -92,4 +92,3 @@ src_install(){
 	mv "${D}/usr/share/applnk/Graphics/digikam.desktop" \
 		"${D}/usr/share/applications/kde"
 }
-

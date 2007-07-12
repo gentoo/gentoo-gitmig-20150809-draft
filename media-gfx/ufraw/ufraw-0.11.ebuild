@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.11.ebuild,v 1.1 2007/03/18 00:25:47 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.11.ebuild,v 1.2 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit eutils autotools fdo-mime gnome2-utils
 
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gimp exif gnome"
-
 
 DEPEND=">=x11-libs/gtk+-2.4.0
 	gimp? ( >=media-gfx/gimp-2.0 )
@@ -30,7 +29,6 @@ src_unpack() {
 	eautoreconf || die "failed running autoreconf"
 }
 
-
 src_compile() {
 	econf `use_enable gimp` \
 		`use_with exif libexif` \
@@ -38,7 +36,6 @@ src_compile() {
 		`use_enable gnome mime` || die "configure failed"
 	emake || die "emake failed"
 }
-
 
 src_install() {
 	make DESTDIR="${D}" install || die

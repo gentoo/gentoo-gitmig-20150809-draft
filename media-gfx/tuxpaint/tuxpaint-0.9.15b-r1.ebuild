@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.15b-r1.ebuild,v 1.6 2007/04/30 22:51:59 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.15b-r1.ebuild,v 1.7 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -22,7 +22,6 @@ DEPEND=">=media-libs/libpng-1.2
 	>=media-libs/freetype-2
 	media-libs/netpbm
 	nls? ( sys-devel/gettext )"
-
 
 src_unpack() {
 	unpack "${A}"
@@ -66,4 +65,3 @@ pkg_postinst() {
 	elog "media-gfx/tuxpaint-stamps package."
 	elog ""
 }
-

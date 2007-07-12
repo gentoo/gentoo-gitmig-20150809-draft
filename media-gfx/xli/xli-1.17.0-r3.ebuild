@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r3.ebuild,v 1.1 2007/05/14 17:43:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r3.ebuild,v 1.2 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit alternatives eutils
 
@@ -58,7 +58,6 @@ src_compile() {
 
 	emake CDEBUGFLAGS="${CFLAGS}" || die "emake failed."
 }
-
 
 src_install() {
 	dobin xli xlito

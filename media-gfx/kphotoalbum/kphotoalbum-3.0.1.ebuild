@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.0.1.ebuild,v 1.2 2007/04/30 22:06:34 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.0.1.ebuild,v 1.3 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit kde
 
@@ -58,4 +58,3 @@ src_compile()
 	fi
 	kde_src_compile
 }
-

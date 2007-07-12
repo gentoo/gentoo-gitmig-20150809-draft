@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint-stamps/tuxpaint-stamps-20051125.ebuild,v 1.3 2006/10/03 04:19:34 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint-stamps/tuxpaint-stamps-20051125.ebuild,v 1.4 2007/07/12 04:08:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -17,7 +17,6 @@ S=${WORKDIR}/${MY_P}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 x86"
-
 
 src_compile() {
 	emake || die "Compilation failed"
