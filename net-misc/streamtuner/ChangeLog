@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/streamtuner
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.26 2007/02/22 02:49:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.27 2007/07/12 15:51:00 gustavoz Exp $
+
+  12 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  streamtuner-0.12.4.ebuild:
+  Just ~sparc, it's really not stable, see #184869
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

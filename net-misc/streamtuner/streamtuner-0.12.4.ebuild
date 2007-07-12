@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.12.4.ebuild,v 1.5 2006/11/13 15:13:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.12.4.ebuild,v 1.6 2007/07/12 15:51:00 gustavoz Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.nongnu.org/streamtuner/"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64 sparc"
+KEYWORDS="x86 ~ppc amd64 ~sparc"
 LICENSE="BSD"
 
 RDEPEND=">=x11-libs/gtk+-2.2.2
