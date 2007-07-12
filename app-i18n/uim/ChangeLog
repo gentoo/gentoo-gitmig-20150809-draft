@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.162 2007/07/07 19:55:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.163 2007/07/12 14:57:46 armin76 Exp $
+
+  12 Jul 2007; Raúl Porcel <armin76@gentoo.org> uim-1.4.1.ebuild:
+  Re-add ~alpha and x86 stable
 
   07 Jul 2007; Lars Weiler <pylon@gentoo.org> uim-1.4.1.ebuild:
   Stable on ppc; bug #184462.
