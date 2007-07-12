@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.8-r1.ebuild,v 1.3 2007/04/09 13:41:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.8-r1.ebuild,v 1.4 2007/07/12 16:11:17 mr_bones_ Exp $
 
 inherit gnustep
 
@@ -40,4 +40,3 @@ src_install() {
 	dodir /var/run/GNUstep
 	elog "Check http://dev.gentoo.org/~grobian/fafhrd/ for very handy info in setting up your GNUstep env."
 }
-

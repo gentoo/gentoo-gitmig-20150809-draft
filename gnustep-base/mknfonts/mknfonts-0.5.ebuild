@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/mknfonts-0.5.ebuild,v 1.13 2005/08/25 18:46:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/mknfonts-0.5.ebuild,v 1.14 2007/07/12 16:11:17 mr_bones_ Exp $
 
 inherit eutils gnustep
 
@@ -18,4 +18,3 @@ DEPEND="gnustep-base/gnustep-gui
 RDEPEND="${DEPEND}"
 
 egnustep_install_domain "System"
-
