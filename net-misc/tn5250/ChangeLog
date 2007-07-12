@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tn5250
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/ChangeLog,v 1.13 2007/06/13 15:22:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/ChangeLog,v 1.14 2007/07/12 15:26:30 gustavoz Exp $
+
+  12 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> tn5250-0.17.3.ebuild:
+  Keyworded ~sparc
 
 *tn5250-0.17.3 (13 Jun 2007)
 
