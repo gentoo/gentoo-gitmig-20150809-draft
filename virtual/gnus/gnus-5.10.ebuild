@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/gnus-5.10.ebuild,v 1.1 2007/07/02 14:10:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/gnus-5.10.ebuild,v 1.2 2007/07/12 19:40:17 ulm Exp $
 
 inherit versionator
 
@@ -16,6 +16,7 @@ IUSE=""
 RDEPEND="|| (
 		>=app-emacs/gnus-5.10.8
 		>=app-emacs/gnus-cvs-5.11
+		>=app-emacs/ngnus-0.6
 		>=virtual/emacs-22
 	)"
 
@@ -28,6 +29,9 @@ pkg_setup () {
 
 	if [ "${gvn}" ] && version_is_at_least ${PV} "${gvn}"; then
 		einfo "Gnus version ${gvn} detected."
+	elif has_version app-emacs/ngnus; then
+		# ngnus doesn't follow the usual versioning scheme
+		einfo "No Gnus version ${gvn} detected."
 	else
 		eerror "virtual/${P} requires at least Gnus version ${PV}."
 		eerror "You should either install package app-emacs/{gnus,gnus-cvs},"

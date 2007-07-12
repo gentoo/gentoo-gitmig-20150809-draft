@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gnus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/ChangeLog,v 1.4 2007/07/02 14:10:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/ChangeLog,v 1.5 2007/07/12 19:40:17 ulm Exp $
+
+  12 Jul 2007; Ulrich Mueller <ulm@gentoo.org> gnus-5.10.ebuild:
+  Add app-emacs/ngnus as another alternative.
 
 *gnus-5.10 (02 Jul 2007)
 
