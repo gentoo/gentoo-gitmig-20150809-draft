@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.128 2007/07/12 06:24:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.129 2007/07/12 13:00:07 gustavoz Exp $
+
+  12 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> openbox-3.4.2.ebuild:
+  Stable on sparc wrt #185012
 
   12 Jul 2007; Markus Rothe <corsair@gentoo.org> openbox-3.4.2.ebuild:
   Stable on ppc64; bug #185012
