@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/knowit/knowit-0.10.ebuild,v 1.9 2005/04/24 11:38:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/knowit/knowit-0.10.ebuild,v 1.10 2007/07/12 04:37:47 mr_bones_ Exp $
 
 inherit kde
 need-kde 3
@@ -14,4 +14,3 @@ KEYWORDS="x86 ppc amd64 ~sparc"
 
 IUSE=""
 SLOT="0"
-

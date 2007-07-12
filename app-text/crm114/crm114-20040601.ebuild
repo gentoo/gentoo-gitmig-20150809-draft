@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040601.ebuild,v 1.12 2007/03/04 07:32:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040601.ebuild,v 1.13 2007/07/12 04:37:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -24,7 +24,6 @@ DEPEND=">=sys-apps/sed-4
 	emacs? ( app-emacs/mew )
 	!emacs? ( net-mail/metamail )
 	!static? ( >=dev-libs/tre-${TREVERS} )"
-
 
 src_unpack() {
 	unpack ${A}

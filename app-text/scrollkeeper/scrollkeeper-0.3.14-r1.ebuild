@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r1.ebuild,v 1.14 2007/01/28 06:03:51 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r1.ebuild,v 1.15 2007/07/12 04:37:47 mr_bones_ Exp $
 
 inherit libtool eutils
 
@@ -40,7 +40,6 @@ src_compile() {
 		# Not existing can cause ./configure to fail in some cases.
 		touch ${S}/intl/libintl.h
 	}
-
 
 	econf \
 		--localstatedir=/var \

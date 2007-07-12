@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.3-r1.ebuild,v 1.9 2007/02/13 17:44:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.3-r1.ebuild,v 1.10 2007/07/12 04:37:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -48,4 +48,3 @@ pkg_postinst() {
 	ewarn "revdep-rebuild"
 
 }
-

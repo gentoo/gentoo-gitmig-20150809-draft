@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r10.ebuild,v 1.10 2006/10/19 16:07:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r10.ebuild,v 1.11 2007/07/12 04:37:47 mr_bones_ Exp $
 
 inherit python sgml-catalog
 
@@ -23,7 +23,6 @@ DEPEND=">=virtual/python-1.5
 	|| (
 		www-client/w3m
 		www-client/lynx )"
-
 
 sgml-catalog_cat_include "/etc/sgml/sgml-lite.cat" \
 	"/usr/share/sgml/stylesheets/sgmltools/sgmltools.cat"

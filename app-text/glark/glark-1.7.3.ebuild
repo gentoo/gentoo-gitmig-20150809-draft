@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.7.3.ebuild,v 1.6 2005/08/13 14:38:21 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.7.3.ebuild,v 1.7 2007/07/12 04:37:47 mr_bones_ Exp $
 
 inherit bash-completion
 
@@ -29,4 +29,3 @@ src_install () {
 	make DESTDIR=${D} install
 	dobashcompletion ${FILESDIR}/${PV}/glark-completion ${PN}
 }
-

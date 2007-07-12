@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-7.0.4.ebuild,v 1.9 2006/07/12 21:48:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-7.0.4.ebuild,v 1.10 2007/07/12 04:37:47 mr_bones_ Exp $
 
 DESCRIPTION="A text document format for writing short documents, articles, books and UNIX man pages"
 HOMEPAGE="http://www.methods.co.nz/asciidoc/"
@@ -12,7 +12,6 @@ KEYWORDS="alpha amd64 hppa ia64 mips ppc ~ppc-macos ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=virtual/python-2.3"
-
 
 src_install() {
 	# Main binary

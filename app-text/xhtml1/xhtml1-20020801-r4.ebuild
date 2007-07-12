@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801-r4.ebuild,v 1.1 2007/01/11 04:56:53 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801-r4.ebuild,v 1.2 2007/07/12 04:37:47 mr_bones_ Exp $
 
 inherit sgml-catalog eutils
 
@@ -17,10 +17,8 @@ DEPEND="app-text/sgml-common
 	dev-libs/libxml2"
 RDEPEND=""
 
-
 sgml-catalog_cat_include "/etc/sgml/${PN}.cat" \
 	"/usr/share/sgml/${PN}/xhtml.soc"
-
 
 xml_catalog_setup() {
 	CATALOG="${ROOT}etc/xml/catalog"

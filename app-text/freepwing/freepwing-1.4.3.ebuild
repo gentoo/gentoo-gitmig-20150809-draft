@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/freepwing/freepwing-1.4.3.ebuild,v 1.5 2005/01/01 16:14:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/freepwing/freepwing-1.4.3.ebuild,v 1.6 2007/07/12 04:37:47 mr_bones_ Exp $
 
 IUSE=""
 
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="dev-lang/perl"
-
 
 src_install() {
 

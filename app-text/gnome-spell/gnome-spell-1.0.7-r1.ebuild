@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.7-r1.ebuild,v 1.13 2007/03/10 21:16:25 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.7-r1.ebuild,v 1.14 2007/07/12 04:37:47 mr_bones_ Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -51,7 +51,6 @@ src_unpack() {
 	# replace gtkentry with gtkcombo widget
 	epatch ${FILESDIR}/${P}-combo.patch
 	epatch ${FILESDIR}/${P}-remove_gnome_h.patch
-
 
 	eautoreconf
 }

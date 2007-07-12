@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p4.ebuild,v 1.4 2007/02/16 23:29:20 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p4.ebuild,v 1.5 2007/07/12 04:37:47 mr_bones_ Exp $
 
 inherit eutils sgml-catalog
 
@@ -29,7 +29,6 @@ RDEPEND="${DEPEND}
 
 sgml-catalog_cat_include "/etc/sgml/linuxdoc.cat" \
 	"/usr/share/linuxdoc-tools/linuxdoc-tools.catalog"
-
 
 src_unpack() {
 	unpack ${A}

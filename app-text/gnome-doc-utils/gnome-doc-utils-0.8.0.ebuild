@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.8.0.ebuild,v 1.14 2007/05/27 23:37:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.8.0.ebuild,v 1.15 2007/07/12 04:37:47 mr_bones_ Exp $
 
 inherit eutils python gnome2
 
@@ -22,7 +22,6 @@ DEPEND="${RDEPEND}
 	~app-text/docbook-xml-dtd-4.4"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-
 
 pkg_setup() {
 	G2CONF="--disable-scrollkeeper"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/kaspaliste-0.96-r1.ebuild,v 1.5 2007/01/28 05:53:42 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/kaspaliste-0.96-r1.ebuild,v 1.6 2007/07/12 04:37:47 mr_bones_ Exp $
 
 ARTS_REQUIRED="yes"
 
@@ -29,4 +29,3 @@ pkg_postinst() {
 	elog "And then import the file kaspaliste/data/create.tables.sql from the kaspaliste directory:"
 	elog "%psql kaspaliste -f create.tables.sql"
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.14.ebuild,v 1.27 2006/09/08 19:40:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.14.ebuild,v 1.28 2007/07/12 04:37:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -38,7 +38,6 @@ DEPEND=">=dev-lang/perl-5
 
 # including both xml-simple-dtd 4.1.2.4 and 1.0, to ease
 # transition to simple-dtd 1.0, <obz@gentoo.org>
-
 
 src_unpack() {
 	unpack "${A}"
