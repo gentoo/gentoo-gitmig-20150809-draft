@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/vgui-1.90a-r1.ebuild,v 1.1 2006/01/19 08:24:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/vgui-1.90a-r1.ebuild,v 1.2 2007/07/12 03:10:24 mr_bones_ Exp $
 
 MY_PN="v"
 MY_PV="${PV/a}"
@@ -23,7 +23,6 @@ DEPEND="${RDEPEND}
 	|| ( ( 	x11-proto/xextproto
 			x11-proto/xproto )
 		virtual/x11 )"
-
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz

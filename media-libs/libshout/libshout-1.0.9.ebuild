@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-1.0.9.ebuild,v 1.12 2006/03/07 11:15:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-1.0.9.ebuild,v 1.13 2007/07/12 03:10:24 mr_bones_ Exp $
 
 IUSE=""
 
@@ -22,5 +22,3 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die
 }
-
-

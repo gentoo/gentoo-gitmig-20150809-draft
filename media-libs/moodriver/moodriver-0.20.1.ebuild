@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/moodriver/moodriver-0.20.1.ebuild,v 1.2 2007/01/01 04:05:44 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/moodriver/moodriver-0.20.1.ebuild,v 1.3 2007/07/12 03:10:24 mr_bones_ Exp $
 
 DESCRIPTION="C++ class to interact with museekd."
 HOMEPAGE="http://projects.beep-media-player.org/index.php/Main/Moodriver"
@@ -18,4 +18,3 @@ DEPEND="${RDEPEND}
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 }
-

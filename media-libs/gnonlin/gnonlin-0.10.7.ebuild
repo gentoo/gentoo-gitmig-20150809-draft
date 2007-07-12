@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-0.10.7.ebuild,v 1.1 2007/04/02 22:20:29 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-0.10.7.ebuild,v 1.2 2007/07/12 03:10:25 mr_bones_ Exp $
 
 SRC_URI="http://gstreamer.freedesktop.org/src/${PN}/${P}.tar.bz2"
 KEYWORDS="~amd64 ~x86"
@@ -17,7 +17,6 @@ RDEPEND=">=media-libs/gstreamer-0.10.9
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
 
 src_install() {
 	make DESTDIR="${D}" install || die

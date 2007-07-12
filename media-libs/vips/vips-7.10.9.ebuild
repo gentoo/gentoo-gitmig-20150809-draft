@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.10.9.ebuild,v 1.4 2005/04/07 19:18:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.10.9.ebuild,v 1.5 2007/07/12 03:10:24 mr_bones_ Exp $
 
 DESCRIPTION="VIPS Image Processing Library"
 SRC_URI="http://www.vips.ecs.soton.ac.uk/vips-7.10/${P}.tar.gz"
@@ -26,7 +26,6 @@ RDEPEND="virtual/libc
 
 DEPEND="${RDEPEND}"
 
-
 src_compile() {
 	local myconf
 	use tiff    || myconf="--without-tiff"
@@ -41,7 +40,6 @@ src_compile() {
 
 	emake || die
 }
-
 
 src_install() {
 	emake install DESTDIR=${D} || die

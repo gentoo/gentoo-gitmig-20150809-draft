@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.0.0.ebuild,v 1.2 2007/04/30 23:18:43 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.0.0.ebuild,v 1.3 2007/07/12 03:10:24 mr_bones_ Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -114,4 +114,3 @@ pkg_preinst() {
 		fi
 	fi
 }
-

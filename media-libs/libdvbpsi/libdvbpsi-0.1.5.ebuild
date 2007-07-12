@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.5.ebuild,v 1.12 2007/06/12 12:36:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.5.ebuild,v 1.13 2007/07/12 03:10:24 mr_bones_ Exp $
 
 IUSE="doc"
 
@@ -69,4 +69,3 @@ pkg_postinst() {
 		ewarn
 	fi
 }
-

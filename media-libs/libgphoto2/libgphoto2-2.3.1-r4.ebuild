@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1-r4.ebuild,v 1.3 2007/03/24 18:34:55 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.3.1-r4.ebuild,v 1.4 2007/07/12 03:10:24 mr_bones_ Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -155,4 +155,3 @@ pkg_postinst() {
 	elog "Don't forget to add yourself to the plugdev group "
 	elog "if you want to be able to access your camera."
 }
-

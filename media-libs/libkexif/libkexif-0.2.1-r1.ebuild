@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/libkexif-0.2.1-r1.ebuild,v 1.4 2007/01/01 13:24:25 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/libkexif-0.2.1-r1.ebuild,v 1.5 2007/07/12 03:10:24 mr_bones_ Exp $
 
 inherit kde
 
@@ -24,4 +24,3 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gcc4.patch
 }
-

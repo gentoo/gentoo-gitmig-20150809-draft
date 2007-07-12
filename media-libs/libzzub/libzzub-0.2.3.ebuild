@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzzub/libzzub-0.2.3.ebuild,v 1.2 2007/04/02 22:28:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzzub/libzzub-0.2.3.ebuild,v 1.3 2007/07/12 03:10:24 mr_bones_ Exp $
 
 DESCRIPTION="Media library for Aldrin."
 HOMEPAGE="http://trac.zeitherrschaft.org/zzub/"
@@ -24,4 +24,3 @@ src_compile() {
 src_install() {
 	scons DESTDIR="${D}" install || die "emake install failed"
 }
-

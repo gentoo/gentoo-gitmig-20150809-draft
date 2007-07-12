@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.2.ebuild,v 1.9 2007/04/30 23:04:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.2.ebuild,v 1.10 2007/07/12 03:10:24 mr_bones_ Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins-good gst-plugins10 gnome2 eutils flag-o-matic libtool
@@ -18,7 +18,6 @@ RDEPEND=">=media-libs/gst-plugins-base-0.10.3
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11.5
 	>=dev-util/pkgconfig-0.9"
-
 
 # overrides the eclass
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r2.ebuild,v 1.5 2006/11/08 03:58:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r2.ebuild,v 1.6 2007/07/12 03:10:24 mr_bones_ Exp $
 
 inherit eutils versionator
 
@@ -96,4 +96,3 @@ src_install() {
 	dosym ${FONTDIR}/arial.ttf ${ALIASDIR}/Helvetica
 	dosym ${FONTDIR}/cour.ttf ${ALIASDIR}/Utopia-Regular
 }
-

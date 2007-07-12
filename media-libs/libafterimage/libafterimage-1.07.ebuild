@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.07.ebuild,v 1.1 2007/02/05 16:00:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.07.ebuild,v 1.2 2007/07/12 03:10:24 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -33,7 +33,6 @@ DEPEND="${RDEPEND}
 	!x11-wm/afterstep"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
-
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/exiftool-6.17.ebuild,v 1.2 2006/06/15 18:34:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/exiftool-6.17.ebuild,v 1.3 2007/07/12 03:10:24 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -14,7 +14,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 S=${WORKDIR}/${MY_PN}-${PV}
-
 
 src_compile() {
 	perl Makefile.PL DESTDIR="${D}" || die "Invalid Makefile.PL"

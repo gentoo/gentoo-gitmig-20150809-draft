@@ -1,7 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20050216.ebuild,v 1.7 2006/07/21 00:36:06 flameeyes Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20050216.ebuild,v 1.8 2007/07/12 03:10:24 mr_bones_ Exp $
 
 DESCRIPTION="Win32 binary codecs for video and audio playback support"
 SRC_URI="mirror://mplayer/releases/codecs/all-${PV}.tar.bz2"
