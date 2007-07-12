@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.36 2007/06/11 03:30:58 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.37 2007/07/12 04:01:59 omp Exp $
+
+  12 Jul 2007; David Shakaryan <omp@gentoo.org> -obconf-2.0.0.ebuild:
+  Remove older version.
 
 *obconf-2.0.1 (11 Jun 2007)
 
