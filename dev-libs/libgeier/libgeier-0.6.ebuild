@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.6.ebuild,v 1.2 2006/10/08 17:43:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.6.ebuild,v 1.3 2007/07/12 02:25:34 mr_bones_ Exp $
 
 inherit versionator
 
@@ -25,7 +25,6 @@ dev-libs/libxml2
 dev-libs/libxslt
 dev-libs/xmlsec
 sys-libs/zlib"
-
 
 src_compile() {
 

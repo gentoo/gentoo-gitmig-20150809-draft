@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-0.6.1.ebuild,v 1.2 2006/07/16 15:25:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-0.6.1.ebuild,v 1.3 2007/07/12 02:25:34 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
-

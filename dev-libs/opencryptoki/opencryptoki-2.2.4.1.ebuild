@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.2.4.1.ebuild,v 1.1 2007/03/25 18:09:47 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.2.4.1.ebuild,v 1.2 2007/07/12 02:25:35 mr_bones_ Exp $
 
 inherit autotools eutils
 
@@ -60,4 +60,3 @@ src_install() {
 pkg_setup() {
 	enewgroup pkcs11
 }
-

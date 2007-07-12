@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.2.1.ebuild,v 1.14 2006/08/05 22:46:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.2.1.ebuild,v 1.15 2007/07/12 02:25:34 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -34,7 +34,6 @@ src_compile() {
 	fi
 	emake -f GNUmakefile || die
 }
-
 
 src_test() {
 	# make sure all test vectors have unix line endings

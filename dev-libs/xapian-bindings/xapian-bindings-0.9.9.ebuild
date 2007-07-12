@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-0.9.9.ebuild,v 1.2 2007/06/20 21:03:04 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-0.9.9.ebuild,v 1.3 2007/07/12 02:25:34 mr_bones_ Exp $
 
 inherit mono java-pkg-opt-2
 
@@ -26,7 +26,6 @@ DEPEND="${COMMONDEPEND}
 
 RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.3 )"
-
 
 src_compile() {
 	if use java; then

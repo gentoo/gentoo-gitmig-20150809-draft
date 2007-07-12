@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.1.3.ebuild,v 1.7 2006/03/19 21:52:07 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.1.3.ebuild,v 1.8 2007/07/12 02:25:34 mr_bones_ Exp $
 
 DESCRIPTION=" The Link Grammar Parser is a syntactic parser of English, based on
 link grammar, an original theory of English syntax."
@@ -24,4 +24,3 @@ src_install() {
 	make DESTDIR=${D} install || die "install failed"
 	dodoc LICENSE README
 }
-

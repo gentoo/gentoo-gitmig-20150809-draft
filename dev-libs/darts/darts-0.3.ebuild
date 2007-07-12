@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/darts-0.3.ebuild,v 1.3 2006/03/30 03:16:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/darts-0.3.ebuild,v 1.4 2007/07/12 02:25:35 mr_bones_ Exp $
 
 DESCRIPTION="A C++ template library that implements Double-Array"
 HOMEPAGE="http://chasen.org/~taku/software/darts/"
@@ -23,4 +23,3 @@ src_install() {
 	dodoc AUTHORS ChangeLog INSTALL NEWS README || die
 	dohtml doc/* || die
 }
-

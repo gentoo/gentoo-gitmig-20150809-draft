@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-1.6.0-r1.ebuild,v 1.2 2007/05/31 10:16:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-1.6.0-r1.ebuild,v 1.3 2007/07/12 02:25:34 mr_bones_ Exp $
 
 DESCRIPTION="A modular, multithreaded webapplicationserver extensible with C++."
 HOMEPAGE="http://www.tntnet.org/index.hms"
@@ -48,4 +48,3 @@ src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
 	dodoc AUTHORS ChangeLog README TODO doc/*.pdf
 }
-

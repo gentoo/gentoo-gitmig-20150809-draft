@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-0.9.9.ebuild,v 1.2 2007/06/20 21:02:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-0.9.9.ebuild,v 1.3 2007/07/12 02:25:34 mr_bones_ Exp $
 
 DESCRIPTION="Xapian Probabilistic Information Retrieval library"
 HOMEPAGE="http://www.xapian.org/"
@@ -22,7 +22,6 @@ RDEPEND="virtual/libc"
 
 S=${WORKDIR}/xapian-core-${PV}
 
-
 src_test() {
 	if has_version '<=dev-util/valgrind-2.3.0';
 	then
@@ -32,7 +31,6 @@ src_test() {
 		make check || die "check failed"
 	fi
 }
-
 
 src_install () {
 	emake -j1 DESTDIR="${D}" install || die

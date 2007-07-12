@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.9.ebuild,v 1.2 2005/09/29 02:21:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.9.ebuild,v 1.3 2007/07/12 02:25:34 mr_bones_ Exp $
 
 inherit eutils
 
@@ -23,7 +23,6 @@ DEPEND=">=sys-devel/autoconf-2.2
 		>=dev-libs/nss-3.2 )"
 
 S="${WORKDIR}/${PN}1-${PV}"
-
 
 src_compile() {
 

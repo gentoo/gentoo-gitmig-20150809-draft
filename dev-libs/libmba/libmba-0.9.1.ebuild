@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmba/libmba-0.9.1.ebuild,v 1.2 2007/04/15 20:27:54 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmba/libmba-0.9.1.ebuild,v 1.3 2007/07/12 02:25:35 mr_bones_ Exp $
 
 DESCRIPTION="A library of generic C modules."
 HOMEPAGE="http://www.ioplex.com/~miallen/libmba/"
@@ -39,4 +39,3 @@ src_install() {
 	insinto /usr/share/doc/${PF}/examples
 	doins examples/*
 }
-

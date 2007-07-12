@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/engine_pkcs11-0.1.3.ebuild,v 1.8 2006/11/25 21:40:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/engine_pkcs11-0.1.3.ebuild,v 1.9 2007/07/12 02:25:34 mr_bones_ Exp $
 
 DESCRIPTION="engine_pkcs11 is an implementation of an engine for OpenSSL"
 HOMEPAGE="http://www.opensc-project.org/"
@@ -18,4 +18,3 @@ src_install() {
 	make install DESTDIR="${D}" || die "make install failed"
 	dohtml doc/*.html doc/*.css
 }
-

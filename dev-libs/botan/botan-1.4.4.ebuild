@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.8 2007/03/03 22:32:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.9 2007/07/12 02:25:35 mr_bones_ Exp $
 
 # Comments/fixes to lloyd@randombit.net (author)
 
@@ -43,7 +43,6 @@ src_compile() {
 	if useq zlib; then modules="$modules,comp_zlib"; fi
 	if useq gmp; then modules="$modules,eng_gmp"; fi
 	if useq ssl; then modules="$modules,eng_ossl"; fi
-
 
 	# This is also supported on i586+ - hope this is correct.
 	if [ ${ARCH} = 'alpha' -o ${ARCH} = 'amd64' ] || \

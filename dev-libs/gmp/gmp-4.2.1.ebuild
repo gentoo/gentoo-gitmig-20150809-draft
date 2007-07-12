@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.2.1.ebuild,v 1.16 2007/02/28 22:04:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.2.1.ebuild,v 1.17 2007/07/12 02:25:34 mr_bones_ Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -64,7 +64,6 @@ src_compile() {
 		sed -i "${S}/config.h" -e 's:pa32/hppa1_1:pa32/hppa2_0:'
 		export CHOST="${CHOST/1.1/2.0}"
 	fi
-
 
 	emake || die "emake failed"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5-r1.ebuild,v 1.7 2007/04/22 11:44:40 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5-r1.ebuild,v 1.8 2007/07/12 02:25:34 mr_bones_ Exp $
 
 inherit eutils
 
@@ -42,7 +42,6 @@ src_compile() {
 	emake static_libs=1 || die
 }
 
-
 src_test() {
 	cd ${S}/build
 	make ACE_ROOT=${S} check || die "self test failed"
@@ -55,7 +54,6 @@ src_install() {
 	# punt gperf stuff
 	rm -rf "${D}"/usr/bin/gperf "${D}"/usr/share
 }
-
 
 pkg_postinst() {
 	# This is required, as anything trying to compile against ACE will have

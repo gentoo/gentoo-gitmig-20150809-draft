@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.77.ebuild,v 1.17 2006/12/03 18:44:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.77.ebuild,v 1.18 2007/07/12 02:25:34 mr_bones_ Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -61,4 +61,3 @@ pkg_postinst() {
 	ewarn "packages that linked against ${PN} (vlc, vcdimager and more) by running:"
 	ewarn "\trevdep-rebuild"
 }
-

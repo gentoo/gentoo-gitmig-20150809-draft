@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.9.ebuild,v 1.6 2007/03/03 22:32:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.9.ebuild,v 1.7 2007/07/12 02:25:35 mr_bones_ Exp $
 
 inherit eutils
 # Comments/fixes to lloyd@randombit.net (author)
@@ -26,7 +26,6 @@ RDEPEND="virtual/libc
 # all seem included in dev-lang/perl ATM.
 DEPEND="${RDEPEND}
 	dev-lang/perl"
-
 
 src_unpack() {
 	unpack ${A}

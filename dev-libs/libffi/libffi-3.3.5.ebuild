@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.3.5.ebuild,v 1.10 2007/03/03 22:53:13 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.3.5.ebuild,v 1.11 2007/07/12 02:25:34 mr_bones_ Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -237,4 +237,3 @@ src_install() {
 	echo "LDPATH=\"${LOC}/lib/${PN}\"" >> ${D}/etc/env.d/99libffi
 	echo "CPATH=\"${LOC}/include/${PN}\"" >> ${D}/etc/env.d/99libffi
 }
-

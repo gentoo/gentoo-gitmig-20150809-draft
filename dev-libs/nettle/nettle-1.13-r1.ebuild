@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.13-r1.ebuild,v 1.4 2005/10/17 23:51:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.13-r1.ebuild,v 1.5 2007/07/12 02:25:35 mr_bones_ Exp $
 
 inherit eutils
 
@@ -36,7 +36,6 @@ src_compile() {
 		|| die
 	emake || die
 }
-
 
 src_install() {
 	make DESTDIR="${D}" install  || die

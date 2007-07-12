@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.16 2007/02/20 20:43:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.17 2007/07/12 02:25:34 mr_bones_ Exp $
 
 inherit eutils distutils multilib python versionator check-reqs
 
@@ -256,7 +256,6 @@ src_test() {
 		__EOF__
 		BOOST_COMMENT_PATH="$(pwd)/comment.html"
 	fi
-
 
 	cd "${S}/tools/regression"
 	sed -i \

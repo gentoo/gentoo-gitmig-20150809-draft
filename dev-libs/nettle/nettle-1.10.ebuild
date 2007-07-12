@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.10.ebuild,v 1.9 2005/09/29 02:08:45 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.10.ebuild,v 1.10 2007/07/12 02:25:35 mr_bones_ Exp $
 
 DESCRIPTION="cryptographic library that is designed to fit easily in any context"
 HOMEPAGE="http://www.lysator.liu.se/~nisse/nettle/"
@@ -21,7 +21,6 @@ src_compile() {
 	econf --enable-shared || die
 	emake || die
 }
-
 
 src_install() {
 	einstall || die

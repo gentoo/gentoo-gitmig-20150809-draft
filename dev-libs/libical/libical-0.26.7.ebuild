@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.26.7.ebuild,v 1.1 2007/06/24 12:01:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.26.7.ebuild,v 1.2 2007/07/12 02:25:34 mr_bones_ Exp $
 
 inherit versionator
 
@@ -20,7 +20,6 @@ DEPEND="${RDEPEND}
 	>=sys-devel/flex-2.5.4a-r6
 	>=sys-apps/gawk-3.1.4-r4
 	>=dev-lang/perl-5.8.7-r3"
-
 
 S="${WORKDIR}"/libical-${PV%.*}
 

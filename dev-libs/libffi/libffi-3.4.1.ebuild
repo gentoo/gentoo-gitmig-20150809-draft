@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.15 2006/11/05 01:02:38 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.16 2007/07/12 02:25:34 mr_bones_ Exp $
 
 IUSE="nls nptl"
 SLOT="0"
@@ -233,4 +233,3 @@ src_install() {
 	echo "LDPATH=\"${LOC}/$(get_libdir)/${PN}\"" >> ${D}/etc/env.d/99libffi
 	echo "CPATH=\"${LOC}/include/${PN}\"" >> ${D}/etc/env.d/99libffi
 }
-

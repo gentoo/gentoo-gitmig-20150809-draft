@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-0.9.6-r1.ebuild,v 1.2 2006/11/28 21:35:54 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-0.9.6-r1.ebuild,v 1.3 2007/07/12 02:25:34 mr_bones_ Exp $
 
 inherit mono eutils autotools java-pkg-opt-2
 
@@ -26,7 +26,6 @@ DEPEND="${COMMONDEPEND}
 
 RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.3 )"
-
 
 src_unpack() {
 	unpack ${A}

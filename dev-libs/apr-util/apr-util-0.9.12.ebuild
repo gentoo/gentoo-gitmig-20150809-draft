@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.12.ebuild,v 1.18 2007/02/11 14:25:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.12.ebuild,v 1.19 2007/07/12 02:25:34 mr_bones_ Exp $
 
 inherit eutils flag-o-matic libtool db-use
 
@@ -27,7 +27,6 @@ src_unpack() {
 	epatch ${FILESDIR}/apr-util-0.9.12-linking.patch
 	elibtoolize || die "elibtoolize failed"
 }
-
 
 src_compile() {
 

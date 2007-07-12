@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-0.1.3.ebuild,v 1.1 2006/06/29 20:52:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-0.1.3.ebuild,v 1.2 2007/07/12 02:25:35 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -21,7 +21,6 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/libxml2-2.6
 	>=dev-libs/gdl-0.6.1"
 
-
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig"
@@ -29,4 +28,3 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
 
 MAKEOPTS="-j1"
-

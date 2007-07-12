@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.7.0.ebuild,v 1.4 2005/01/12 16:51:28 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.7.0.ebuild,v 1.5 2007/07/12 02:25:34 mr_bones_ Exp $
 
 IUSE="nls static"
 
@@ -43,7 +43,6 @@ src_install() {
 	cd ${S}
 	dohtml doc/tre-api.html doc/tre-syntax.html
 }
-
 
 pkg_postinst() {
 	ewarn "Both app-misc/glimpse, app-text/agrep and this package provide agrep."

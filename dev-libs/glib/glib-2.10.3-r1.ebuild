@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.10.3-r1.ebuild,v 1.4 2007/02/11 16:45:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.10.3-r1.ebuild,v 1.5 2007/07/12 02:25:34 mr_bones_ Exp $
 
 inherit gnome.org libtool eutils flag-o-matic
 
@@ -22,7 +22,6 @@ DEPEND="${RDEPEND}
 		>=dev-util/gtk-doc-1.4
 		~app-text/docbook-xml-dtd-4.1.2
 	)"
-
 
 src_unpack() {
 
