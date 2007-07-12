@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_chroot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/ChangeLog,v 1.1 2007/07/12 04:37:09 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/ChangeLog,v 1.2 2007/07/12 09:29:32 flameeyes Exp $
+
+  12 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
+  pam_chroot-0.9.1.ebuild:
+  Block older PAM versions to avoid collisions.
 
 *pam_chroot-0.9.1 (12 Jul 2007)
 

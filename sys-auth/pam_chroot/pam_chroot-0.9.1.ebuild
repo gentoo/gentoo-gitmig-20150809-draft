@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/pam_chroot-0.9.1.ebuild,v 1.1 2007/07/12 04:37:09 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/pam_chroot-0.9.1.ebuild,v 1.2 2007/07/12 09:29:32 flameeyes Exp $
 
 inherit toolchain-funcs pam flag-o-matic
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/pam"
+DEPEND="virtual/pam
+	!<sys-libs/pam-0.99"
 RDEPEND="${DEPEND}"
 
 src_compile() {
