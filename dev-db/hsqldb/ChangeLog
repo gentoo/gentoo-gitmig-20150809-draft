@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/hsqldb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.23 2007/03/13 17:07:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.24 2007/07/12 22:18:59 betelgeuse Exp $
+
+  12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
+  hsqldb-1.7.3.1-r3.ebuild:
+  Prefer virtual/jdk:1.5 over 1.4 and use JAVA_PKG_IUSE.
 
   13 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   -hsqldb-1.7.3.1-r2.ebuild:
@@ -34,6 +38,8 @@
   22 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   hsqldb-1.7.3.1-r3.ebuild:
   ant_src_unpack -> src_unpack
+
+*hsqldb-1.7.3.1-r3 (01 Jul 2006)
 
   01 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +hsqldb-1.7.3.1-r3.ebuild:
   Revision bump to support new Java system. Also addresses bug #137332

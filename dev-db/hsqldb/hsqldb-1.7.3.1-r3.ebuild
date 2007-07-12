@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r3.ebuild,v 1.6 2007/01/09 15:34:06 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r3.ebuild,v 1.7 2007/07/12 22:18:59 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 eutils versionator java-ant-2
 
@@ -14,19 +16,15 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="doc source"
 
 CDEP="=dev-java/servletapi-2.3*"
 
 # doesn't like Java 1.6 due to JDBC changes
-RDEPEND="
-	|| ( =virtual/jre-1.4* =virtual/jre-1.5* )
+RDEPEND=">=virtual/jre-1.4
 	${CDEP}"
 DEPEND="
-	|| ( =virtual/jdk-1.4* =virtual/jdk-1.5* )
+	|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
 	app-arch/unzip
-	dev-java/ant-core
-	source? ( app-arch/zip )
 	${CDEP}"
 
 S="${WORKDIR}/${PN}"
