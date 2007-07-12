@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/horde-chora-2.0.2.ebuild,v 1.2 2007/05/05 11:09:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/horde-chora-2.0.2.ebuild,v 1.3 2007/07/12 14:26:04 gustavoz Exp $
 
 HORDE_MAJ="-h3"
 inherit horde
 
 DESCRIPTION="Chora is the Horde CVS viewer"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc sparc ~x86"
 
 DEPEND=""
 RDEPEND=">=www-apps/horde-3

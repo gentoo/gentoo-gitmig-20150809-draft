@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-turba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.27 2007/05/05 07:03:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.28 2007/07/12 14:30:40 gustavoz Exp $
+
+  12 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  horde-turba-2.1.4.ebuild:
+  Stable on sparc
 
 *horde-turba-2.1.4 (05 May 2007)
 
