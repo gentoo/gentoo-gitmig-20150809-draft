@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.9-r1.ebuild,v 1.8 2007/05/15 13:00:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.9-r1.ebuild,v 1.9 2007/07/12 14:29:34 betelgeuse Exp $
 
 inherit multilib
 
@@ -15,20 +15,11 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ia64 ~ppc sparc x86 ~x86-fbsd"
 
-DEPEND="virtual/libc
-	dev-util/pkgconfig"
-
-RDEPEND=">=net-p2p/gift-0.11.1
-	>=sys-libs/zlib-1.1.4"
+RDEPEND=">=net-p2p/gift-0.11.1"
+DEPEND="dev-util/pkgconfig
+	${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
-
-src_compile() {
-#	cp /usr/share/libtool/ltmain.sh .
-#	./autogen.sh --prefix=/usr --host=${CHOST} || die "FastTrack configure failed"
-	econf || die "FastTrack plugin failed to configure"
-	emake || die "FastTrack plugin failed to build"
-}
 
 src_install() {
 	make DESTDIR=${D} \
