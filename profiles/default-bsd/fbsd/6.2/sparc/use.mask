@@ -1,6 +1,9 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/sparc/use.mask,v 1.4 2007/07/11 07:02:51 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/sparc/use.mask,v 1.5 2007/07/12 05:23:55 uberlord Exp $
 
 acpi
+
+# These should work one day
+xpm
 X
