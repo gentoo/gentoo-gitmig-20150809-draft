@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.33 2007/07/12 21:14:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.34 2007/07/12 21:16:22 betelgeuse Exp $
+
+  12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Remove herbs from metadata.xml as in reality this has been maintained by us
+  Java folks.
 
 *emul-linux-x86-java-1.6.0.02 (12 Jul 2007)
 

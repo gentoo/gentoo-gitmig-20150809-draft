@@ -3,8 +3,5 @@
 <pkgmetadata>
 	<herd>amd64</herd>
 	<herd>java</herd>
-	<maintainer>
-		<email>herbs@gentoo.org</email>
-	</maintainer>
 </pkgmetadata>
 
