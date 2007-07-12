@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SGMLSpm
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.31 2006/09/08 19:35:52 flameeyes Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.32 2007/07/12 08:45:04 uberlord Exp $
+
+  12 Jul 2007; Roy Marples <uberlord@gentoo.org> SGMLSpm-1.03-r5.ebuild:
+  Keyworded ~sparc-fbsd
 
   08 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> SGMLSpm-1.03-r5.ebuild:
   Add ~x86-fbsd keyword.
