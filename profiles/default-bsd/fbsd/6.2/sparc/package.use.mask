@@ -1,3 +1,5 @@
 # Zac Medico <zmedico@gentoo.org> (22 June 2007)
 # missing keyword for app-text/xmlto, bug #182763
 >=sys-apps/portage-2.1.3_rc5 doc
+
+dev-lang/swig ocaml pike
