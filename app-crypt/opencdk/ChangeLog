@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/opencdk
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.55 2007/03/10 11:50:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.56 2007/07/12 10:12:49 uberlord Exp $
+
+  12 Jul 2007; Roy Marples <uberlord@gentoo.org> opencdk-0.5.7.ebuild:
+  Keyworded ~sparc-fbsd.
 
   10 Mar 2007; Simon Stelling <blubb@gentoo.org> opencdk-0.5.7.ebuild:
   stable on amd64; bug 169883
