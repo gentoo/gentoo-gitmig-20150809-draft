@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.8.0-r1.ebuild,v 1.2 2007/07/10 13:49:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.8.0-r1.ebuild,v 1.3 2007/07/12 09:22:59 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -53,11 +53,11 @@ check_old_modules() {
 		retval=1
 	fi
 
-	if sed -e 's:#.*::' /etc/pam.d/* | egrep -q 'pam_(pwdb|radius|timestamp|chroot)'; then
+	if sed -e 's:#.*::' /etc/pam.d/* | egrep -q 'pam_(pwdb|radius|timestamp)'; then
 		eerror ""
 		eerror "Your current setup is using one or more of the following modules,"
 		eerror "that are not built or supported anymore:"
-		eerror "pam_pwdb, pam_radius, pam_timestamp, pam_chroot"
+		eerror "pam_pwdb, pam_radius, pam_timestamp"
 		eerror "If you are in real need for these modules, please contact the maintainers"
 		eerror "of PAM through http://bugs.gentoo.org/ providing information about its"
 		eerror "use cases."
@@ -69,25 +69,19 @@ check_old_modules() {
 	# Produce the warnings only during upgrade, for the following two
 	has_version '<sys-libs/pam-0.99' || return $retval
 
-	if sed -e 's:#.*::' /etc/pam.d/* | fgrep -q pam_console.so; then
-		ewarn ""
-		ewarn "Your current setup is using the pam_console module."
-		ewarn "Since version 0.99, ${CATEGORY}/${PN} does not provide this module"
-		ewarn "anymore; if you want to continue using this module, you should install"
-		ewarn "sys-auth/pam_console."
-		ewarn ""
-		ebeep 5
-	fi
-
-	if sed -e 's:#.*::' /etc/pam.d/* | fgrep -q pam_userdb.so; then
-		ewarn ""
-		ewarn "Your current setup is using the pam_userdb module."
-		ewarn "Since version 0.99, ${CATEGORY}/${PN} does not provide this module"
-		ewarn "anymore; if you want to continue using this module, you should install"
-		ewarn "sys-auth/pam_userdb."
-		ewarn ""
-		ebeep 5
-	fi
+	# This works only for those modules that are moved to sys-auth/$module, or the
+	# message will be wrong.
+	for module in pam_chroot pam_console pam_userdb; do
+		if sed -e 's:#.*::' /etc/pam.d/* | fgrep -q ${module}.so; then
+			ewarn ""
+			ewarn "Your current setup is using the ${module} module."
+			ewarn "Since version 0.99, ${CATEGORY}/${PN} does not provide this module"
+			ewarn "anymore; if you want to continue using this module, you should install"
+			ewarn "sys-auth/${module}."
+			ewarn ""
+			ebeep 5
+		fi
+	done
 
 	return $retval
 }
