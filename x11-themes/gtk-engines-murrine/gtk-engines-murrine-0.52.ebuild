@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.52.ebuild,v 1.5 2007/06/09 13:49:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.52.ebuild,v 1.6 2007/07/12 07:35:24 mr_bones_ Exp $
 
 MY_PN="murrine"
 MY_P="${MY_PN}-${PV}"
@@ -32,4 +32,3 @@ src_install() {
 	insinto /usr/share/themes
 	doins -r ${WORKDIR}/Murrin*
 }
-

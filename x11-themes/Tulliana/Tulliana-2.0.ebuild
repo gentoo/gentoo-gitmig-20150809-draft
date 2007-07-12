@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/Tulliana/Tulliana-2.0.ebuild,v 1.5 2007/05/16 16:40:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/Tulliana/Tulliana-2.0.ebuild,v 1.6 2007/07/12 07:35:24 mr_bones_ Exp $
 
 DESCRIPTION="Tulliana icon set for KDE"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=38757"
@@ -20,4 +20,3 @@ src_install() {
 	insinto /usr/share/icons/${PN}
 	doins -r .
 }
-

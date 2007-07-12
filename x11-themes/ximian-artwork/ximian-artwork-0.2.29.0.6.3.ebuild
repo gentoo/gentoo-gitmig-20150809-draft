@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.15 2006/11/13 14:48:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.16 2007/07/12 07:35:24 mr_bones_ Exp $
 
 inherit rpm eutils
 
@@ -22,7 +22,6 @@ IUSE=""
 DEPEND="sys-devel/autoconf
 	sys-devel/automake
 	app-arch/rpm2targz"
-
 
 RDEPEND=">=x11-themes/gnome-themes-extras-0.5"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.2-r4.ebuild,v 1.10 2005/12/20 13:55:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.2-r4.ebuild,v 1.11 2007/07/12 07:35:24 mr_bones_ Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Collection of mplayer themes"
@@ -41,7 +41,6 @@ SRC_URI="${THEME_URI}/AlienMind-1.1.tar.bz2
 	${THEME_URI}/iTunes-mini-1.1.tar.bz2
 	${THEME_URI}/mplayer_red-1.0.tar.bz2
 	${THEME_URI}/xmmplayer-1.0.tar.bz2"
-
 
 SLOT="0"
 LICENSE="freedist"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/fvwm-themes-0.7.0.ebuild,v 1.14 2006/07/08 08:40:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/fvwm-themes-0.7.0.ebuild,v 1.15 2007/07/12 07:35:24 mr_bones_ Exp $
 
 IUSE="gnome"
 
@@ -32,7 +32,6 @@ src_compile() {
 	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
-
 
 src_install () {
 	make DESTDIR="${D}" install || die

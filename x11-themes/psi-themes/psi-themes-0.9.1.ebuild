@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.1.ebuild,v 1.8 2005/04/02 15:11:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.1.ebuild,v 1.9 2007/07/12 07:35:24 mr_bones_ Exp $
 
 SMILEYS="http://dev.gentoo.org/~humpback/jisp/AIM.jisp
 	http://dev.gentoo.org/~humpback/jisp/apple_ichat-1.0.jisp
@@ -74,4 +74,3 @@ src_install() {
 	dodir /usr/share/psi/iconsets
 	mv * ${D}/usr/share/psi/iconsets/
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/skinenigmang-logos/skinenigmang-logos-20070214.ebuild,v 1.1 2007/03/06 14:39:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/skinenigmang-logos/skinenigmang-logos-20070214.ebuild,v 1.2 2007/07/12 07:35:24 mr_bones_ Exp $
 
 inherit eutils
 
@@ -23,4 +23,3 @@ src_install() {
 	insinto /usr/share/vdr/skinenigmang
 	cp -r -a ${S}/* --target=${D}/usr/share/vdr/skinenigmang
 }
-
