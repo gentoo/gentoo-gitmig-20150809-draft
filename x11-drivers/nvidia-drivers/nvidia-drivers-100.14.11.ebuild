@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.11.ebuild,v 1.3 2007/07/07 16:47:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.11.ebuild,v 1.4 2007/07/12 16:46:30 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -15,17 +15,18 @@ HOMEPAGE="http://www.nvidia.com/"
 SRC_URI="x86? ( http://us.download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PACKAGE}-pkg0.run )
 	 amd64? ( http://us.download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${AMD64_NV_PACKAGE}-pkg2.run )
 	 x86-fbsd? ( http://us.download.nvidia.com/freebsd/${NV_V}/${X86_FBSD_NV_PACKAGE}.tar.gz )
-	 ftp://download.nvidia.com/XFree86/nvidia-settings/nvidia-settings-${SETTINGS_V}.tar.gz"
+	 gtk? ( ftp://download.nvidia.com/XFree86/nvidia-settings/nvidia-settings-${SETTINGS_V}.tar.gz )"
 
 LICENSE="NVIDIA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
-IUSE=""
+IUSE="gtk multilib"
 RESTRICT="strip"
 
 COMMON="x11-base/xorg-server
 	x11-libs/libXt
 	kernel_FreeBSD? ( !media-video/nvidia-freebsd )
+	multilib? ( app-emulation/emul-linux-x86-xlibs )
 	!media-video/nvidia-settings
 	!app-emulation/emul-linux-x86-nvidia
 	!x11-drivers/nvidia-legacy-drivers"
@@ -194,12 +195,14 @@ src_unpack() {
 		cd "${S}"; convert_to_m Makefile.kbuild
 	fi
 
-	cd "${WORKDIR}"
-	unpack "nvidia-settings-${SETTINGS_V}.tar.gz"
-	cd "${SETTINGS_DIR}" || die
-	sed -i.orig \
-		-e 's,DoNormalLib NormalLibXrandr,DoNormalLib YES,g' \
-		src/libXNVCtrl/Imakefile || die "sed Imakefile"
+	if use gtk; then
+		cd "${WORKDIR}"
+		unpack "nvidia-settings-${SETTINGS_V}.tar.gz"
+		cd "${SETTINGS_DIR}" || die
+		sed -i.orig \
+			-e 's,DoNormalLib NormalLibXrandr,DoNormalLib YES,g' \
+			src/libXNVCtrl/Imakefile || die "sed Imakefile"
+	fi
 }
 
 src_compile() {
@@ -214,16 +217,18 @@ src_compile() {
 		linux-mod_src_compile
 	fi
 
-	# nvidia-settings
-	einfo "Building libXNVCtrl..."
-	cd "${SETTINGS_DIR}/src/libXNVCtrl"
-	xmkmf -a || die "Running xmkmf failed"
-	make clean || die "Cleaning old libXNVCtrl failed"
-	emake CDEBUGFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die "emake libXNVCtrl"
+	if use gtk; then
+		# nvidia-settings
+		einfo "Building libXNVCtrl..."
+		cd "${SETTINGS_DIR}/src/libXNVCtrl"
+		xmkmf -a || die "Running xmkmf failed"
+		make clean || die "Cleaning old libXNVCtrl failed"
+		emake CDEBUGFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die "emake libXNVCtrl"
 
-	cd "${SETTINGS_DIR}"
-	einfo "Building nVidia-Settings..."
-	emake CC="$(tc-getCC)" || die "emake settings"
+		cd "${SETTINGS_DIR}"
+		einfo "Building nVidia-Settings..."
+		emake CC="$(tc-getCC)" || die "emake settings"
+	fi
 }
 
 src_install() {
@@ -287,22 +292,25 @@ src_install() {
 		dohtml doc/html/*
 	fi
 
-	# Taking nvidia-settings from nvidia-drivers - more up-to-date
-	dobin usr/bin/nvidia-{settings,xconfig} || die
+	# Taking nvidia-xconfig from nvidia-drivers to help config xorg.conf
+	dobin usr/bin/nvidia-xconfig || die
 
-	# nvidia-settings
-	cd "${SETTINGS_DIR}"
-	insinto "/usr/$(get_libdir)"
-	doins src/libXNVCtrl/libXNVCtrl.a || die
-	insinto /usr/include/NVCtrl
-	doins src/libXNVCtrl/{NVCtrl,NVCtrlLib}.h || die
+	if gtk; then
+		# nvidia-settings
+		dobin usr/bin/nvidia-settings || die
+		cd "${SETTINGS_DIR}"
+		insinto "/usr/$(get_libdir)"
+		doins src/libXNVCtrl/libXNVCtrl.a || die
+		insinto /usr/include/NVCtrl
+		doins src/libXNVCtrl/{NVCtrl,NVCtrlLib}.h || die
 
-	# Install icon and .desktop entry
-	doicon "${FILESDIR}/nvidia-settings.png" || die "doicon"
-	domenu "${FILESDIR}/nvidia-settings.desktop" || die "domenu"
+		# Install icon and .desktop entry
+		doicon "${FILESDIR}/nvidia-settings.png" || die "doicon"
+		domenu "${FILESDIR}/nvidia-settings.desktop" || die "domenu"
 
-	doman doc/nvidia-settings.1 || die
-	dodoc doc/*.txt
+		doman doc/nvidia-settings.1 || die
+		dodoc doc/*.txt
+	fi
 }
 
 # Install nvidia library:

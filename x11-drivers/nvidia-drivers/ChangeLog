@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.49 2007/07/07 16:47:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.50 2007/07/12 16:46:30 cardoe Exp $
+
+  12 Jul 2007; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-100.14.11.ebuild:
+  Fixes #177231, #182622, #184432, #184795
 
   07 Jul 2007; Doug Goldstein <cardoe@gentoo.org> +files/nvidia-2,
   +files/NVIDIA_i2c-hwmon.patch, +files/nvidia-settings.desktop,
