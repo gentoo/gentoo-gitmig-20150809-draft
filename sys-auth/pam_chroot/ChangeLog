@@ -1,0 +1,10 @@
+# ChangeLog for sys-auth/pam_chroot
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/ChangeLog,v 1.1 2007/07/12 04:37:09 hawking Exp $
+
+*pam_chroot-0.9.1 (12 Jul 2007)
+
+  12 Jul 2007; Ali Polatel <hawking@gentoo.org> +metadata.xml,
+  +pam_chroot-0.9.1.ebuild:
+  Import from gentoo-sunrise, bug #160755
+
