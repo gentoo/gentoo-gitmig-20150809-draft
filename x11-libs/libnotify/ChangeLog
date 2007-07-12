@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.34 2007/07/12 13:01:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.35 2007/07/12 18:13:32 jer Exp $
+
+  12 Jul 2007; Jeroen Roovers <jer@gentoo.org> libnotify-0.4.4.ebuild:
+  Stable for HPPA (bug #184615).
 
   12 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   libnotify-0.4.4.ebuild:
