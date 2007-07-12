@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.60.ebuild,v 1.2 2007/07/12 13:28:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.60.ebuild,v 1.3 2007/07/12 15:15:41 opfer Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/O/OL/OLAF/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
 IUSE="ipv6"
 
 DEPEND="virtual/perl-Digest-MD5
