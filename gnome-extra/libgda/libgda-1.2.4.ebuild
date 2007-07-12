@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.4.ebuild,v 1.2 2007/07/05 14:42:42 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.4.ebuild,v 1.3 2007/07/12 04:19:34 mr_bones_ Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -43,7 +43,6 @@ USE_DESTDIR="1"
 
 # problems with parallel builds
 MAKEOPTS="${MAKEOPTS} -j1"
-
 
 pkg_setup() {
 	G2CONF="$(use_with berkdb bdb /usr)    \

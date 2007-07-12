@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.8.3-r5.ebuild,v 1.9 2007/07/02 15:09:59 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.8.3-r5.ebuild,v 1.10 2007/07/12 04:19:34 mr_bones_ Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="latest"
@@ -43,7 +43,6 @@ DEPEND="${RDEPEND}
 
 MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="ChangeLog MAINTAINERS NEWS TODO"
-
 
 pkg_setup() {
 	G2CONF="$(use_with ldap openldap)	\

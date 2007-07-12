@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.11 2005/05/16 12:26:00 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.12 2007/07/12 04:19:34 mr_bones_ Exp $
 
 inherit gnome2 flag-o-matic toolchain-funcs
 
@@ -30,4 +30,3 @@ src_unpack() {
 	# get rid of strict-aliasing warnings
 	sed -i -e 's/-Wall//' ${S}/src/Makefile.in ${S}/src/Makefile.am
 }
-

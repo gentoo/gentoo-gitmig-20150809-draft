@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.10.2.ebuild,v 1.3 2007/07/02 15:09:59 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.10.2.ebuild,v 1.4 2007/07/12 04:19:34 mr_bones_ Exp $
 
 inherit db-use eutils flag-o-matic gnome2 autotools
 
@@ -40,7 +40,6 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1.4 )"
 
 DOCS="ChangeLog MAINTAINERS NEWS TODO"
-
 
 pkg_setup() {
 	G2CONF="$(use_with ldap openldap)       \

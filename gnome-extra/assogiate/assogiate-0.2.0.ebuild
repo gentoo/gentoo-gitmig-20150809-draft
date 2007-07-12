@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/assogiate/assogiate-0.2.0.ebuild,v 1.3 2007/05/25 07:10:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/assogiate/assogiate-0.2.0.ebuild,v 1.4 2007/07/12 04:19:34 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README TODO"
-

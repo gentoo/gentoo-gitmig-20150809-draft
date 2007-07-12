@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.14.2.ebuild,v 1.10 2006/10/20 20:49:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.14.2.ebuild,v 1.11 2007/07/12 04:19:34 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -24,7 +24,6 @@ DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README THANKS TODO"
-
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper"

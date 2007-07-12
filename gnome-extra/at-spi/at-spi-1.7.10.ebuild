@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.7.10.ebuild,v 1.11 2006/11/12 04:34:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.7.10.ebuild,v 1.12 2007/07/12 04:19:34 mr_bones_ Exp $
 
 inherit virtualx gnome2
 
@@ -38,7 +38,6 @@ DEPEND="${RDEPEND}
 		virtual/x11 )"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
-
 
 src_test() {
 	Xmake check || die "Testing phase failed"

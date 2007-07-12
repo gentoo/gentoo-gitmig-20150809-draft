@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.14.0.ebuild,v 1.11 2006/11/06 04:49:18 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.14.0.ebuild,v 1.12 2007/07/12 04:19:34 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -36,7 +36,6 @@ DEPEND=${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 USE_DESTDIR="1"
-
 
 pkg_setup() {
 	G2CONF="${G2CONF}--disable-scrollkeeper"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.18.2.ebuild,v 1.1 2007/06/27 15:50:51 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.18.2.ebuild,v 1.2 2007/07/12 04:19:34 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -27,4 +27,3 @@ DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
-

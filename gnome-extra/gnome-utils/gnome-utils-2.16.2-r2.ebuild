@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.16.2-r2.ebuild,v 1.4 2007/01/21 22:02:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.16.2-r2.ebuild,v 1.5 2007/07/12 04:19:34 mr_bones_ Exp $
 
 inherit gnome2 eutils
 
@@ -33,7 +33,6 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9"
-
 
 DOCS="AUTHORS ChangeLog NEWS README THANKS"
 

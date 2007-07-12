@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/music-applet-2.1.0.ebuild,v 1.2 2007/04/07 18:57:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/music-applet-2.1.0.ebuild,v 1.3 2007/07/12 04:19:34 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -24,4 +24,3 @@ DEPEND=">=x11-libs/gtk+-2.6
 
 RDEPEND="dev-util/pkgconfig
 	dev-util/intltool"
-

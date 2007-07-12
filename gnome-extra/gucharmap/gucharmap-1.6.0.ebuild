@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.6.0.ebuild,v 1.12 2006/10/20 19:14:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.6.0.ebuild,v 1.13 2007/07/12 04:19:34 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -27,7 +27,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29"
 
 DOCS="ChangeLog NEWS README TODO"
-
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper \

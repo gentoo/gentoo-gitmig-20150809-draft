@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/lock-keys-applet/lock-keys-applet-1.0.ebuild,v 1.8 2005/07/19 02:55:10 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/lock-keys-applet/lock-keys-applet-1.0.ebuild,v 1.9 2007/07/12 04:19:34 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -22,4 +22,3 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper"
 
 DOCS="ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README TODO"
-
