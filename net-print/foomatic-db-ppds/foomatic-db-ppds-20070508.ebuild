@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/foomatic-db-ppds-20070508.ebuild,v 1.2 2007/05/11 11:16:05 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/foomatic-db-ppds-20070508.ebuild,v 1.3 2007/07/12 10:08:01 uberlord Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://gentooexperimental.org/~calchan/distfiles/${PN/-ppds}-3.0-${PV}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}/${P/-ppds}
