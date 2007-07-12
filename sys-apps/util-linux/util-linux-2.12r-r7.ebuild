@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r7.ebuild,v 1.10 2007/07/09 02:28:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r7.ebuild,v 1.11 2007/07/12 06:36:31 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -28,6 +28,7 @@ RDEPEND=">=sys-libs/ncurses-5.2-r2
 	amd64? ( sys-apps/setarch )
 	mips? ( sys-apps/setarch )
 	ppc? ( sys-apps/setarch )
+	ppc64? ( sys-apps/setarch )
 	sparc? ( sys-apps/setarch )
 	!sys-apps/more"
 DEPEND="${RDEPEND}
