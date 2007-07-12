@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.39 2007/07/07 10:25:36 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.40 2007/07/12 08:26:18 uberlord Exp $
+
+  12 Jul 2007; Roy Marples <uberlord@gentoo.org> files/devd.initd:
+  Fix devd for baselayout-2.0.0_alpha4.
 
   07 Jul 2007; Roy Marples <uberlord@gentoo.org> files/ipfw.initd:
   Allow the user to close all ports

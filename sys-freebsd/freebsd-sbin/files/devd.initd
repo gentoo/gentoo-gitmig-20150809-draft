@@ -4,7 +4,8 @@
 
 depend() {
 	need localmount
-	after bootmisc hostname net
+	after bootmisc hostname
+	before net
 }
 
 start() {
@@ -29,10 +30,6 @@ start() {
 
 	# Now flush the queue
 	einfo "Flushing Device State Change Daemon queue"
-
-	# Flush the output buffer
-	eflush
-
 	/etc/devd_queue flush
 
 	mark_service_started "${SVCNAME}"
