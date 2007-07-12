@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX ximian-artwork-0.2.26-corruption_fix.patch 716 RMD160 dcb420c9b04c12577d6a54ca96f57d2eae4d50e0 SHA1 9339dc77a9f78201f59247dadb559187cadfd04a SHA256 b4b809081d5dd62ae1b5ab2244e3c68dd0b04bbea9919b16a5a909a939306b81
 MD5 481c98be012989222f01734d8c6e43e4 files/ximian-artwork-0.2.26-corruption_fix.patch 716
 RMD160 dcb420c9b04c12577d6a54ca96f57d2eae4d50e0 files/ximian-artwork-0.2.26-corruption_fix.patch 716
@@ -19,10 +16,10 @@ RMD160 b59808c7a823ebdbc925b1e0ef06f67a9e71f1a6 files/ximian-artwork-0.2.32.1-di
 SHA256 6c1a1d5a38cb731f50207ff7f9ac68a2f0b05cab0137479ac66c8e2f0632d1bc files/ximian-artwork-0.2.32.1-disable_industrial_engine.patch 1374
 DIST ximian-artwork-0.2.29-0.ximian.6.3.src.rpm 3824967 RMD160 2257cdb51ac2f7a8bb6cd1370384033f37cd3216 SHA1 0041cd03d6190b18bc88f28b7e15fdfed84ef53b SHA256 3703f6b1da092890b9200cca8e2a6be6269eb5e0f016339e3d2e2880ba156fff
 DIST ximian-artwork-0.2.32-1.rf.src.rpm 3958480 RMD160 83ba9fcbffced7396e34959f4a6d0cc522840db6 SHA1 8da4df6f5e6ec4683ac5a86ab1b7403f47db71da SHA256 bbb520faa99e08bc562a09bcf495291296f52f18a1323b228250d5fc5e3bfcff
-EBUILD ximian-artwork-0.2.29.0.6.3.ebuild 1978 RMD160 7cbbcc24b8b2e2f00a91da6ea6662d1227140031 SHA1 f0694fbd90b94a48902db0b9180ea1a15318d64b SHA256 c414b2c28523ca70ae73a317ff6788e1d34317e5b439fe395e69a2f928a4c5a7
-MD5 da4ef2cfee15b650827fc41ce8d9cd02 ximian-artwork-0.2.29.0.6.3.ebuild 1978
-RMD160 7cbbcc24b8b2e2f00a91da6ea6662d1227140031 ximian-artwork-0.2.29.0.6.3.ebuild 1978
-SHA256 c414b2c28523ca70ae73a317ff6788e1d34317e5b439fe395e69a2f928a4c5a7 ximian-artwork-0.2.29.0.6.3.ebuild 1978
+EBUILD ximian-artwork-0.2.29.0.6.3.ebuild 1977 RMD160 c4812c593023a956f83b42d6e1e84bd6e366f17d SHA1 04c142513304d12aacc75858e49abae96d75d618 SHA256 8c8bc8f1d4f92ac0571cb0363853ceae38bbe631f2c4f23f757ee78a2d072734
+MD5 abb3a43fe68990e81dff56b40ee558f9 ximian-artwork-0.2.29.0.6.3.ebuild 1977
+RMD160 c4812c593023a956f83b42d6e1e84bd6e366f17d ximian-artwork-0.2.29.0.6.3.ebuild 1977
+SHA256 8c8bc8f1d4f92ac0571cb0363853ceae38bbe631f2c4f23f757ee78a2d072734 ximian-artwork-0.2.29.0.6.3.ebuild 1977
 EBUILD ximian-artwork-0.2.32.1.ebuild 2319 RMD160 fb373e9bcb4d50a4c72d251b6894155994bf5ff2 SHA1 394ab29f578e2a78fbcfd5bdbf86cfadfb82411a SHA256 12403d881cae961346cc26cfe433ae6334b8b5413f2d2b097063c28047134fbd
 MD5 b5cd2036894c48aea7039b951b9af37a ximian-artwork-0.2.32.1.ebuild 2319
 RMD160 fb373e9bcb4d50a4c72d251b6894155994bf5ff2 ximian-artwork-0.2.32.1.ebuild 2319
@@ -41,10 +38,3 @@ SHA256 80f764abdf6a6e10069b327f16c226e11753331ccda4bbb825e0fe0fb6bd0f96 files/di
 MD5 f9969c019aa4a21e476f82f4a972afc3 files/digest-ximian-artwork-0.2.32.1 286
 RMD160 4d7c68cacfeb8a6c4ff65821da19102b3237a2c0 files/digest-ximian-artwork-0.2.32.1 286
 SHA256 00059478c2964f401e47c5fb0ad87902cc06c7b6f19c430d9446ad78cf175b4e files/digest-ximian-artwork-0.2.32.1 286
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
-
-iD8DBQFFyYpHNQqtfCuFneMRAnJoAKCBUw/0HTaO3VwFX3luHfwgE1JuXgCbBuVH
-FoVoxQFVfaCrsljfy31ZCj0=
-=27ew
------END PGP SIGNATURE-----
