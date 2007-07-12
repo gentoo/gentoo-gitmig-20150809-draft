@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.51 2007/05/25 16:44:58 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.52 2007/07/12 09:07:59 uberlord Exp $
+
+  12 Jul 2007; Roy Marples <uberlord@gentoo.org> +files/libmap.conf,
+  freebsd-lib-6.2.ebuild, freebsd-lib-6.2-r1.ebuild:
+  Install a default libmap.conf which maps libc_r and libpthread to libthr.
 
   25 May 2007; Roy Marples <uberlord@gentoo.org> freebsd-lib-6.2-r1.ebuild:
   Display Managers default to VT7, so disable VT7 and upwards so
