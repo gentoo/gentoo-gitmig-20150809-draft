@@ -1,8 +1,12 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/sparc/use.mask,v 1.6 2007/07/12 06:14:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/sparc/use.mask,v 1.7 2007/07/12 08:30:04 uberlord Exp $
 
 acpi
+
+# guile fails to build on sparc
+# Even with the patch from FreeBSD Ports it core dumps :/
+guile
 
 # These should work one day
 mono
