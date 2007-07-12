@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/roxget-0.0.5c.ebuild,v 1.6 2007/03/23 18:03:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/roxget-0.0.5c.ebuild,v 1.7 2007/07/12 06:31:38 mr_bones_ Exp $
 
 ROX_LIB_VER=1.9.16
 inherit rox
@@ -35,4 +35,3 @@ src_unpack() {
 	mkdir ${APPNAME}
 	mv * ${APPNAME}/
 }
-

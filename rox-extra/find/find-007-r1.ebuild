@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/find/find-007-r1.ebuild,v 1.2 2007/06/22 21:57:13 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/find/find-007-r1.ebuild,v 1.3 2007/07/12 06:31:38 mr_bones_ Exp $
 
 ROX_LIB_VER=2.0.0
 inherit rox
@@ -18,4 +18,3 @@ IUSE=""
 APPNAME=${MY_PN}
 APPCATEGORY="Utility"
 S=${WORKDIR}
-

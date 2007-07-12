@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/diff/diff-2.1.4.ebuild,v 1.5 2007/06/22 21:46:21 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/diff/diff-2.1.4.ebuild,v 1.6 2007/07/12 06:31:38 mr_bones_ Exp $
 
 ROX_CLIB_VER=2.1.8
 inherit rox
@@ -17,4 +17,3 @@ KEYWORDS="~amd64 x86"
 
 APPNAME=${MY_PN}
 S=${WORKDIR}
-
