@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.117 2007/04/21 01:22:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.118 2007/07/12 13:29:25 uberlord Exp $
+
+  12 Jul 2007; Roy Marples <uberlord@gentoo.org> gnutls-1.6.2.ebuild:
+  Keyworded ~sparc-fbsd.
 
 *gnutls-1.6.2 (21 Apr 2007)
 
