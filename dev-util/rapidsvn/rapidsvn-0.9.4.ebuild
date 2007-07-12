@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.9 2007/07/10 06:12:21 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.10 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit eutils libtool autotools wxwidgets flag-o-matic fdo-mime
 
@@ -109,4 +109,3 @@ pkg_postinst() {
 pkg_postrm() {
 	fdo-mime_desktop_database_update
 }
-

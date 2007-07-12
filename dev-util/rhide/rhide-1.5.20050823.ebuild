@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.7 2007/06/25 10:54:44 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.8 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -134,7 +134,6 @@ src_compile() {
 		touch ${WORKDIR}/.tvision
 	fi
 
-
 # ************* SetEdit *************
 
 	if [[ ! -f ${WORKDIR}/.setedit ]] ; then
@@ -160,7 +159,6 @@ src_compile() {
 
 		touch "${WORKDIR}/.setedit"
 	fi
-
 
 # ************* RHIDE ***************
 

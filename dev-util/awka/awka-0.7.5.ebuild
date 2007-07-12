@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/awka/awka-0.7.5.ebuild,v 1.9 2006/03/06 19:18:05 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/awka/awka-0.7.5.ebuild,v 1.10 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit eutils
 
@@ -38,4 +38,3 @@ src_install() {
 	dodoc ACKNOWLEDGEMENTS *.txt
 	dohtml doc/*
 }
-

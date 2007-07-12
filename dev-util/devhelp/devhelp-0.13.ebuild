@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.13.ebuild,v 1.5 2007/05/19 17:08:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.13.ebuild,v 1.6 2007/07/12 01:05:41 mr_bones_ Exp $
 
 inherit toolchain-funcs gnome2
 
@@ -28,7 +28,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-
 
 pkg_setup() {
 	G2CONF="$(use_with zlib)"

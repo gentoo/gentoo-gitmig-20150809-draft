@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ald/ald-0.1.7.ebuild,v 1.2 2005/06/09 01:17:20 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ald/ald-0.1.7.ebuild,v 1.3 2007/07/12 01:05:41 mr_bones_ Exp $
 
 DESCRIPTION="Assembly Language Debugger - a tool for debugging executable programs at the assembly level"
 HOMEPAGE="http://ald.sourceforge.net/"
@@ -22,4 +22,3 @@ src_install() {
 	make DESTDIR=${D} install || die
 	dodoc README ChangeLog TODO BUGS
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/cdecl-2.5-r1.ebuild,v 1.11 2007/06/04 12:10:56 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/cdecl-2.5-r1.ebuild,v 1.12 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit eutils
 
@@ -25,7 +25,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}.patch
 }
-
 
 src_compile() {
 	if use readline; then

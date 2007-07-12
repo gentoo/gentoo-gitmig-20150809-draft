@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.6.9.ebuild,v 1.1 2006/10/09 14:47:44 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.6.9.ebuild,v 1.2 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit eutils
 
@@ -41,7 +41,6 @@ src_compile() {
 	echo "READLINE_ENABLED = " $(use_boolean readline) > .config
 
 	PREFIX=/usr	OMAKEFLAGS= ./omake-boot --dotomake .omake --force-dotomake -j2 -S --progress main || die "Bootstrapping failed"
-
 
 	PREFIX=/usr OMAKEFLAGS= src/main/omake --dotomake .omake \
 		--force-dotomake -j2 -S --progress all doc \

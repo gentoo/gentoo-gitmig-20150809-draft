@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.27 2007/06/26 02:05:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.28 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
@@ -155,7 +155,6 @@ src_compile() {
 	sed -i 's/@SVN_DB_[^@]*@//g' svn-config || die "sed failed"
 }
 
-
 src_install () {
 	use apache2 && mkdir -p ${D}/etc/apache2/conf
 
@@ -175,7 +174,6 @@ src_install () {
 	if has_version '>=net-www/apache-2.0.48-r2'; then
 		chown -R root:root ${D}/usr/include/apr-0/
 	fi
-
 
 	dobin svn-config
 	if use python; then

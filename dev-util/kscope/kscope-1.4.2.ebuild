@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/kscope-1.4.2.ebuild,v 1.6 2007/04/24 08:10:35 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/kscope-1.4.2.ebuild,v 1.7 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit kde
 
@@ -31,4 +31,3 @@ src_install() {
 	insinto /usr/share/config
 	doins "${FILESDIR}/${PN}rc"
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.4-r1.ebuild,v 1.12 2006/05/03 00:59:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.4-r1.ebuild,v 1.13 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit elisp-common gnome.org
 
@@ -23,7 +23,6 @@ DEPEND=">=app-text/openjade-1.3.1
 	emacs? ( virtual/emacs )"
 
 SITEFILE="60gtk-doc-gentoo.el"
-
 
 src_compile() {
 	econf || die "Configuration failed"

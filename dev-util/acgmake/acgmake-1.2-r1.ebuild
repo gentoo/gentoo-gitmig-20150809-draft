@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/acgmake/acgmake-1.2-r1.ebuild,v 1.2 2006/11/23 19:01:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/acgmake/acgmake-1.2-r1.ebuild,v 1.3 2007/07/12 01:05:42 mr_bones_ Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Build system for large projects"
@@ -30,4 +30,3 @@ src_install() {
 
 	dosym ../lib/misc/acgmake/bin/acgmake /usr/bin/acgmake
 }
-

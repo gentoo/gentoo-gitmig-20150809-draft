@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.5.0.ebuild,v 1.4 2007/07/10 05:23:41 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.5.0.ebuild,v 1.5 2007/07/12 01:05:41 mr_bones_ Exp $
 
 NEED_PYTHON=2.4
 
@@ -29,7 +29,6 @@ DEPEND=">=dev-python/pygtk-2.8
 RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}
 
-
 pkg_setup() {
 	if ! built_with_use x11-libs/vte python ; then
 		eerror "x11-libs/vte has to be built with python USE-flag"
@@ -43,4 +42,3 @@ pkg_postinst() {
 	elog "dev-util/gazpacho (Glade-like interface designer)"
 	elog "Revision control: cvs, svn, darcs and many others"
 }
-

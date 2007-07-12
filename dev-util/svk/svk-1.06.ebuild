@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-1.06.ebuild,v 1.2 2006/02/13 14:28:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-1.06.ebuild,v 1.3 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit eutils perl-module bash-completion
 
@@ -49,7 +49,6 @@ DEPEND="
 		dev-perl/FreezeThaw
 	)
 	crypt? ( app-crypt/gnupg )"
-
 
 pkg_setup() {
 	if ! perl -MSVN::Core < /dev/null 2> /dev/null; then

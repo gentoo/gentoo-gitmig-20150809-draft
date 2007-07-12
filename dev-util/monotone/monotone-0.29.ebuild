@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.29.ebuild,v 1.11 2007/03/13 20:58:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.29.ebuild,v 1.12 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
@@ -21,7 +21,6 @@ RDEPEND="=dev-libs/boost-1.33*
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.11.5 )
 	doc? ( sys-apps/texinfo )"
-
 
 pkg_setup() {
 	enewgroup monotone

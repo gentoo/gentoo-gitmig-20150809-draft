@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/acgmake/acgmake-1.2-r2.ebuild,v 1.1 2007/02/08 15:00:09 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/acgmake/acgmake-1.2-r2.ebuild,v 1.2 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit eutils
 
@@ -37,4 +37,3 @@ src_install() {
 
 	dosym ../lib/misc/acgmake/bin/acgmake /usr/bin/acgmake
 }
-

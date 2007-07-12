@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.4.ebuild,v 1.4 2007/03/05 03:20:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.4.ebuild,v 1.5 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit distutils eutils
 
@@ -22,7 +22,6 @@ RDEPEND="${commondepend}
 DEPEND="${commondepend}
 	test? ( dev-python/twisted-web )
 	doc? ( dev-python/epydoc )"
-
 
 pkg_setup(){
 	enewuser buildbot

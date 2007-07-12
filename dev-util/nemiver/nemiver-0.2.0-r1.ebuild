@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.2.0-r1.ebuild,v 1.1 2006/12/26 15:48:06 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.2.0-r1.ebuild,v 1.2 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit gnome2 eutils
 
@@ -42,5 +42,3 @@ gnome2_src_unpack() {
 	# Prevent scrollkeeper access violations
 	gnome2_omf_fix
 }
-
-

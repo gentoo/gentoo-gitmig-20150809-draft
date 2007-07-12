@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.4.27.ebuild,v 1.1 2007/04/03 05:57:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.4.27.ebuild,v 1.2 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit eutils versionator multilib toolchain-funcs
 # flag-o-matic
@@ -75,4 +75,3 @@ src_install(){
 	    sem_inc.h || die " failed install headers"
 	dodoc CHANGELOG README
 }
-

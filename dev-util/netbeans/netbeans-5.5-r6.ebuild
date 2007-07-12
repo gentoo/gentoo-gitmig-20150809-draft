@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.7 2007/06/11 15:50:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5-r6.ebuild,v 1.8 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit eutils java-pkg-2 java-ant-2 versionator
 
@@ -88,7 +88,6 @@ PLATFORM="6"
 MY_FDIR="${FILESDIR}/${SLOT}-r2"
 DESTINATION="/usr/share/netbeans-${SLOT}"
 JAVA_PKG_BSFIX="off"
-
 
 src_unpack () {
 	unpack ${A}
@@ -343,12 +342,10 @@ symlink_extjars() {
 	dosymjar ${TARGET_DIR} jakarta-oro-2.0 jakarta-oro.jar
 	dosymjar ${TARGET_DIR} struts-1.2 struts.jar
 
-
 	einfo "Symlinking harness jars"
 
 	cd ${1}/harness
 	java-pkg_jar-from javahelp jhall.jar jsearch-2.0_03.jar
-
 
 	einfo "Symlinking ide jars"
 
@@ -398,7 +395,6 @@ symlink_extjars() {
 	dosymjar ${TARGET_DIR} jsr67 jsr67.jar saaj-api.jar
 	dosymjar ${TARGET_DIR} saaj saaj.jar saaj-impl.jar
 	dosymjar ${TARGET_DIR} sjsxp sjsxp.jar
-
 
 	einfo "Symlinking platform jars"
 	cd ${1}/platform${PLATFORM}/modules/ext

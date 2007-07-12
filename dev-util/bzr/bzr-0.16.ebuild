@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.16.ebuild,v 1.3 2007/06/22 00:02:35 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.16.ebuild,v 1.4 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit distutils bash-completion elisp-common eutils
 
@@ -31,7 +31,6 @@ RDEPEND=">=dev-lang/python-2.4
 PYTHON_MODNAME="bzrlib"
 
 DOCS="HACKING NEWS NEWS.developers doc/*"
-
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.7.ebuild,v 1.2 2006/12/21 02:35:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.7.ebuild,v 1.3 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit elisp-common gnome2
 
@@ -29,7 +29,6 @@ DEPEND="${RDEPEND}
 SITEFILE="60gtk-doc-gentoo.el"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO"
-
 
 src_compile() {
 	gnome2_src_compile

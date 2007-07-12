@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/devel-chroots-2.1.0.ebuild,v 1.2 2007/06/15 15:23:34 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/devel-chroots-2.1.0.ebuild,v 1.3 2007/07/12 01:05:42 mr_bones_ Exp $
 
 DESCRIPTION="Gentoo Developer chroots installation/configuration"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/docs/devel-chroots.xml"
@@ -23,5 +23,3 @@ src_install() {
 	doinitd "${S}/etc/init.d/${PN}"
 	dosbin "${S}/usr/sbin/${PN}"
 }
-
-

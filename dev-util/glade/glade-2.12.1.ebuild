@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.1.ebuild,v 1.8 2007/06/24 09:15:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.1.ebuild,v 1.9 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -33,7 +33,6 @@ DEPEND="${RDEPEND}
 DOCS="ABOUT-NLS AUTHORS ChangeLog FAQ NEWS README TODO"
 USE_DESTDIR="1"
 
-
 pkg_setup() {
 	G2CONF="$(use_enable gnome)"
 	#	$(use_enable gnomedb gnome-db)"
@@ -43,4 +42,3 @@ src_unpack() {
 	unpack ${A}
 	gnome2_omf_fix
 }
-

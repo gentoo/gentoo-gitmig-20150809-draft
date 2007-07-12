@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scanmem/scanmem-0.07.ebuild,v 1.1 2007/06/05 02:12:20 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scanmem/scanmem-0.07.ebuild,v 1.2 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit eutils
 
@@ -20,4 +20,3 @@ src_install() {
 	doman scanmem.1
 	dodoc README TODO ChangeLog
 }
-

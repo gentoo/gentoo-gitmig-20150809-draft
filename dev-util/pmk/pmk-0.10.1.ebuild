@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/pmk-0.10.1.ebuild,v 1.1 2007/03/15 19:35:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/pmk-0.10.1.ebuild,v 1.2 2007/07/12 01:05:42 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -55,4 +55,3 @@ pkg_postinst() {
 		rm -f ${ROOT}etc/pmk/pmk.conf.bak
 	fi
 }
-
