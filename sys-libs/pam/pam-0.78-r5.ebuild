@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.18 2007/07/10 14:18:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.19 2007/07/12 09:28:30 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -34,7 +34,10 @@ IUSE="berkdb pwdb selinux pam_chroot pam_console pam_timestamp nis"
 RDEPEND=">=sys-libs/cracklib-2.8.3
 	selinux? ( >=sys-libs/libselinux-1.28 )
 	berkdb? ( >=sys-libs/db-${BDB_VER2} )
-	pwdb? ( >=sys-libs/pwdb-0.62 )"
+	pwdb? ( >=sys-libs/pwdb-0.62 )
+	!sys-auth/pam_console
+	!sys-auth/pam_userdb
+	!sys-auth/pam_chroot"
 
 # Note that we link to static versions of glib (pam_console.so)
 # and pwdb (pam_pwdb.so), so we need glib-2.6.2-r1 or later ...

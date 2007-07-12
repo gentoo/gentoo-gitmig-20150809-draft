@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.163 2007/07/12 09:22:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.164 2007/07/12 09:28:30 flameeyes Exp $
+
+  12 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> pam-0.78-r5.ebuild:
+  Block the split modules to avoid collisions.
 
   12 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/Linux-PAM-0.99.6.3-berkdb.patch, -files/system-auth.pamd.0.99,
