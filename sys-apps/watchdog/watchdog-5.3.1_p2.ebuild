@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.3.1_p2.ebuild,v 1.2 2007/04/13 09:26:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.3.1_p2.ebuild,v 1.3 2007/07/12 05:10:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -40,4 +40,3 @@ src_install() {
 	docinto examples
 	dodoc examples/*
 }
-

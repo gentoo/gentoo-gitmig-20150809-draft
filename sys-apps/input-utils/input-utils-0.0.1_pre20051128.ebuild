@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/input-utils-0.0.1_pre20051128.ebuild,v 1.1 2007/03/31 08:17:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/input-utils-0.0.1_pre20051128.ebuild,v 1.2 2007/07/12 05:10:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -37,4 +37,3 @@ src_install() {
 	dodoc lircd.conf
 	dodoc README
 }
-

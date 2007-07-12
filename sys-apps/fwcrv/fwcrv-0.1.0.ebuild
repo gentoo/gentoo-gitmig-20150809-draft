@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwcrv/fwcrv-0.1.0.ebuild,v 1.3 2006/03/22 11:22:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwcrv/fwcrv-0.1.0.ebuild,v 1.4 2007/07/12 05:10:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -28,4 +28,3 @@ src_install() {
 	emake DESTDIR=${D} install || die
 	dodoc AUTHORS README src/testdata.txt TODO
 }
-

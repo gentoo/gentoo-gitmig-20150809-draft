@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.16.2.ebuild,v 1.1 2007/01/27 23:05:14 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.16.2.ebuild,v 1.2 2007/07/12 05:10:21 mr_bones_ Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -115,4 +115,3 @@ pkg_postinst() {
 	einfo "    http://paludis.pioto.org/faq.html"
 	echo
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.6.ebuild,v 1.13 2006/08/23 16:20:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.6.ebuild,v 1.14 2007/07/12 05:10:21 mr_bones_ Exp $
 
 inherit rpm eutils flag-o-matic
 
@@ -48,7 +48,6 @@ src_install() {
 	fowners root:utmp /usr/sbin/utempter
 	fperms 2755 /usr/sbin/utempter
 }
-
 
 pkg_postinst() {
 	if [ "${ROOT}" = "/" ]

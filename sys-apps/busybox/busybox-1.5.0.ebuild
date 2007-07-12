@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.5.0.ebuild,v 1.9 2007/06/26 02:46:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.5.0.ebuild,v 1.10 2007/07/12 05:10:21 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,7 +45,6 @@ inherit eutils flag-o-matic
 #     needed.
 #
 ################################################################################
-
 
 #SNAPSHOT=20040726
 SNAPSHOT=""

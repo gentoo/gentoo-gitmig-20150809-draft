@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.5.ebuild,v 1.4 2006/10/04 20:52:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.5.ebuild,v 1.5 2007/07/12 05:10:21 mr_bones_ Exp $
 
 inherit qt3 multilib autotools
 
@@ -24,7 +24,6 @@ DEPEND="$(qt_min_version 3.1)
 RDEPEND="${DEPEND}
 	kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
 	!kde? ( x11-libs/gksu )"
-
 
 src_unpack() {
 	unpack ${A}

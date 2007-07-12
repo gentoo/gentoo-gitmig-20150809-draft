@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/adjtime/adjtime-0.4-r2.ebuild,v 1.2 2006/11/30 06:09:13 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/adjtime/adjtime-0.4-r2.ebuild,v 1.3 2007/07/12 05:10:21 mr_bones_ Exp $
 
 DESCRIPTION="A perl script to adjust the clock tick of the hardware clock on the system board (should work on most platforms)."
 HOMEPAGE="http://groups.yahoo.com/group/LinkStation_General/"
@@ -32,4 +32,3 @@ pkg_postinst() {
 	ewarn "since adjtime uses ntp-date, ntpd must be stopped (or not yet"
 	ewarn "started) prior to running the adjtime script."
 }
-

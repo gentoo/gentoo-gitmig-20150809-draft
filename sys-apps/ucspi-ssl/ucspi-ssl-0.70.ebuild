@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.70.ebuild,v 1.1 2006/01/02 10:36:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.70.ebuild,v 1.2 2007/07/12 05:10:21 mr_bones_ Exp $
 
 inherit fixheadtails toolchain-funcs
 #eutils
@@ -19,7 +19,6 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86 ~amd64"
 S="${WORKDIR}/host/superscript.com/net/${P}/src"
-
 
 src_unpack() {
 	unpack ${A}

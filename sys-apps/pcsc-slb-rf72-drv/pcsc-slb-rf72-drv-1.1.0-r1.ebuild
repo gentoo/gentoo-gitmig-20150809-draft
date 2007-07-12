@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/pcsc-slb-rf72-drv-1.1.0-r1.ebuild,v 1.2 2007/02/15 19:38:06 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/pcsc-slb-rf72-drv-1.1.0-r1.ebuild,v 1.3 2007/07/12 05:10:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -57,4 +57,3 @@ pkg_postrm() {
 		einfo "You need to restart pcscd"
 	fi
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/inputd-0.0.7.ebuild,v 1.2 2006/12/30 16:15:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/inputd-0.0.7.ebuild,v 1.3 2007/07/12 05:10:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -27,4 +27,3 @@ src_install() {
 	insinto /etc
 	doins doc/inputd.conf
 }
-

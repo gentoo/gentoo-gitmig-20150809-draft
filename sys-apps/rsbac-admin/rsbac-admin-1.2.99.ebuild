@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.99.ebuild,v 1.5 2006/06/06 15:59:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.99.ebuild,v 1.6 2007/07/12 05:10:21 mr_bones_ Exp $
 
 inherit eutils subversion
 
@@ -23,13 +23,11 @@ DEPEND="dev-util/dialog
 
 RDEPEND=">=sys-libs/ncurses-5.2"
 
-
 src_unpack() {
 	ESVN_REPO_URI="svn://rsbac.de/rsbac1/rsbac-admin/trunk"
 	subversion_src_unpack
 	cd ${WORKDIR}/${P}/${ADMIN}
 }
-
 
 src_compile() {
 	local rsbacmakeargs

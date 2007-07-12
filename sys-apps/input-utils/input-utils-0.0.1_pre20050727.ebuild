@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/input-utils-0.0.1_pre20050727.ebuild,v 1.1 2005/11/22 20:14:31 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/input-utils-0.0.1_pre20050727.ebuild,v 1.2 2007/07/12 05:10:21 mr_bones_ Exp $
 
 MY_P=input-${PV/0.0.1_pre/}-141704
 
@@ -23,4 +23,3 @@ src_install() {
 
 	dodoc lircd.conf
 }
-
