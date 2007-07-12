@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler-data
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.8 2007/01/18 22:40:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.9 2007/07/12 11:06:09 uberlord Exp $
+
+  12 Jul 2007; Roy Marples <uberlord@gentoo.org> poppler-data-0.1.ebuild:
+  Keyworded ~sparc-fbsd.
 
   18 Jan 2007; Jeroen Roovers <jer@gentoo.org> poppler-data-0.1.ebuild:
   Stable for HPPA (bug #147751).
