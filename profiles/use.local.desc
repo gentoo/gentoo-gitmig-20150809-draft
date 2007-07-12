@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2925 2007/07/12 02:59:16 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2926 2007/07/12 21:13:33 gustavoz Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1557,6 +1557,7 @@ net-misc/wanpipe:adsl - Build with adsl support
 net-misc/xf4vnc:vncviewer - Install the vncviewer binary
 net-misc/xf4vnc:xvnc - Install the Xvnc binary
 net-misc/xsupplicant:gsm - Add support for EAP-SIM authentication algorithm
+net-misc/zaptel:astribank - Install Xorcom Astribank utilities
 net-misc/zaptel:bri - Enable ISDN BRI support (bristuff)
 net-misc/zaptel:devfs26 - Devfs support for Linux-2.6
 net-misc/zaptel:ecaggressive - Make the mark2 echo canceller a little more aggressive
