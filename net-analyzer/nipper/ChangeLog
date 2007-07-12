@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nipper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/ChangeLog,v 1.6 2007/07/11 21:07:12 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/ChangeLog,v 1.7 2007/07/12 12:40:05 ikelos Exp $
+
+  12 Jul 2007; Mike Auty <ikelos@gentoo.org> nipper-0.10.2.ebuild:
+  Adding ~amd64 keyword.
 
 *nipper-0.10.2 (11 Jul 2007)
 
