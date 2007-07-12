@@ -9,10 +9,10 @@ EBUILD docbook-xsl-stylesheets-1.70.1.ebuild 1267 RMD160 0771982177a0966b8cf23b8
 MD5 e1c1eaa764975b24a515a35b5940b6f0 docbook-xsl-stylesheets-1.70.1.ebuild 1267
 RMD160 0771982177a0966b8cf23b87652746487e687af3 docbook-xsl-stylesheets-1.70.1.ebuild 1267
 SHA256 5b243f4df70193e41e3c63797430fc87ff7bb03bd322187288bfef7a5391f8a3 docbook-xsl-stylesheets-1.70.1.ebuild 1267
-EBUILD docbook-xsl-stylesheets-1.72.0.ebuild 1354 RMD160 913613c2f80c1733588938bae5d6a584aa81d56f SHA1 32e70e353a2a997751a3bf9c971b91bd5b206dbf SHA256 e2f001f26392b85fd89cedab1802e354f7daf9dadf9404b1f147d85061b6f89f
-MD5 2fc2cc5d2793e616fb690e6347116237 docbook-xsl-stylesheets-1.72.0.ebuild 1354
-RMD160 913613c2f80c1733588938bae5d6a584aa81d56f docbook-xsl-stylesheets-1.72.0.ebuild 1354
-SHA256 e2f001f26392b85fd89cedab1802e354f7daf9dadf9404b1f147d85061b6f89f docbook-xsl-stylesheets-1.72.0.ebuild 1354
+EBUILD docbook-xsl-stylesheets-1.72.0.ebuild 1355 RMD160 3db2aff6097b718b80a0a431269f56dfc2b0269b SHA1 d72afb060e69a09fd413ddd6aa1715124d4e7bbe SHA256 41dd69d1378a3a8a7c2cc0ee5bcd43a1be13526e1986853e2f2b96d611b72c7a
+MD5 f3c51ba3e3010d88e5124acaeebd54b0 docbook-xsl-stylesheets-1.72.0.ebuild 1355
+RMD160 3db2aff6097b718b80a0a431269f56dfc2b0269b docbook-xsl-stylesheets-1.72.0.ebuild 1355
+SHA256 41dd69d1378a3a8a7c2cc0ee5bcd43a1be13526e1986853e2f2b96d611b72c7a docbook-xsl-stylesheets-1.72.0.ebuild 1355
 MISC ChangeLog 10680 RMD160 433c473dcb4183132d6eda07ef1fac694b7b4711 SHA1 eb2f393390fc69dd3241cad193de3e3d13151333 SHA256 f9f7eeba1d5e3aab03103379ad0fe8a50554cb5f77b0854431bfc365eec06d41
 MD5 900375e7626cd92acf8a55a58bfc4e62 ChangeLog 10680
 RMD160 433c473dcb4183132d6eda07ef1fac694b7b4711 ChangeLog 10680
