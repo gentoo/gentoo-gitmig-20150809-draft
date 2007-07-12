@@ -1,0 +1,74 @@
+diff -Nru diald-1.0.orig/configure.in diald-1.0/configure.in
+--- diald-1.0.orig/configure.in	2001-06-16 19:01:25.000000000 +0300
++++ diald-1.0/configure.in	2007-07-12 09:56:35.000000000 +0300
+@@ -10,7 +10,6 @@
+ dnl Checks for libraries.
+ AC_CHECK_LIB(dl, dlsym)
+ AC_CHECK_LIB(nsl, nis_add)
+-AC_CHECK_LIB(pam, pam_start)
+ AC_CHECK_LIB(wrap, request_init)
+ AC_CHECK_LIB(util, openpty)
+ 
+diff -Nru diald-1.0.orig/doc/diald-control.man diald-1.0/doc/diald-control.man
+--- diald-1.0.orig/doc/diald-control.man	2001-06-15 18:38:20.000000000 +0300
++++ diald-1.0/doc/diald-control.man	2007-07-12 09:55:59.000000000 +0300
+@@ -65,10 +65,6 @@
+ TCP connections.
+ If \fI<method>\fR is "simple" then a single following
+ string specifies the name of the privileges to request.
+-If \fI<method>\fR is "pam" then the two following strings specify
+-the UNIX username and password to be authenticated using PAM
+-(Pluggable Authentication Modules). Privileges are then given
+-according to group membership.
+ .TP
+ .B block
+ Block diald from making outgoing calls until a unblock command is issued.
+diff -Nru diald-1.0.orig/doc/diald.man diald-1.0/doc/diald.man
+--- diald-1.0.orig/doc/diald.man	2001-06-15 18:38:20.000000000 +0300
++++ diald-1.0/doc/diald.man	2007-07-12 09:54:37.000000000 +0300
+@@ -184,11 +184,6 @@
+ (very simple...) for TCP monitor connections.
+ 
+ .TP
+-.B authpam \fI<file>\fR
+-Specifies the name of a file to be used for PAM authentication
+-(not so simple...) for TCP monitor connections.
+-
+-.TP
+ .B scheduler \fI<class>\fR
+ Set diald's scheduling class. Valid choices for systems that
+ support POSIX scheduling classes are:
+diff -Nru diald-1.0.orig/Makefile.in diald-1.0/Makefile.in
+--- diald-1.0.orig/Makefile.in	2007-07-12 09:44:14.000000000 +0300
++++ diald-1.0/Makefile.in	2007-07-12 09:54:11.000000000 +0300
+@@ -67,8 +67,6 @@
+ 	$(INSTALL) -o $(ROOTUID) -g $(BINGRP) lib/*.gif $(DESTDIR)$(libdir)
+ 	$(INSTALL) -o $(ROOTUID) -g $(BINGRP) -m 0644 config/diald.defs $(DESTDIR)$(libdir)/diald.defs
+ 	$(INSTALL) -o $(ROOTUID) -g $(BINGRP) -m 0644 config/standard.filter $(DESTDIR)$(libdir)/standard.filter
+-	$(INSTALL) -d -m 0755 $(DESTDIR)/etc/pam.d
+-	$(INSTALL) -o $(ROOTUID) -g $(ROOTGRP) -m 0644 config/diald.pam $(DESTDIR)/$(sysconfdir)/pam.d/diald
+ 	$(INSTALL) -o $(ROOTUID) -g $(BINGRP) bin/connect $(DESTDIR)$(libdir)/connect
+ 
+ clean:
+diff -Nru diald-1.0.orig/README.pam diald-1.0/README.pam
+--- diald-1.0.orig/README.pam	1999-10-12 00:29:41.000000000 +0300
++++ diald-1.0/README.pam	1970-01-01 02:00:00.000000000 +0200
+@@ -1,18 +0,0 @@
+-      Pluggable Authentication Modules (PAM)
+-      ======================================
+-      
+-Full authentication based on UNIX user names and user groups and login 
+-passwords is now supported on monitor links. This is of most importance
+-to TCP monitor links which were previously very weakly protected.
+-
+-To use PAM authentication, you need to inform diald of the location of the 
+-group security permissions file with the "authpam" configuration option. An
+-example security file is provided in "config/auth.pam".
+-
+-
+-*NOTE* In common with many other network password authentication systems,
+-the password is transmitted over the network in unencrypted plain text
+-format. The implications are that if your physical network is not secure, it
+-is possible for intruders to intercept your passwords. The risk can be
+-minimised by using the tcp_wrappers capability to restrict access to
+-machines on the local area network only.

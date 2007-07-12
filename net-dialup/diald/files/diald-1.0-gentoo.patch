@@ -1,6 +1,17 @@
+diff -Nru diald-1.0.orig/config/diald.pam diald-1.0/config/diald.pam
+--- diald-1.0.orig/config/diald.pam	1999-10-12 00:29:43.000000000 +0300
++++ diald-1.0/config/diald.pam	2007-07-12 09:52:13.000000000 +0300
+@@ -1,4 +1,4 @@
+ #%PAM-1.0
+-auth       required	pam_nologin.so
+-auth       required	pam_pwdb.so shadow
+-account    required	pam_pwdb.so
++auth       required    pam_nologin.so
++auth       include     system-auth
++account    include     system-auth
 diff -Nru diald-1.0.orig/Makefile.in diald-1.0/Makefile.in
---- diald-1.0.orig/Makefile.in	2001-06-16 14:16:04.000000000 +0300
-+++ diald-1.0/Makefile.in	2005-09-19 23:40:47.855662256 +0300
+--- diald-1.0.orig/Makefile.in	2007-07-12 09:50:22.000000000 +0300
++++ diald-1.0/Makefile.in	2007-07-12 09:44:14.000000000 +0300
 @@ -21,9 +21,13 @@
  mandir          = @mandir@
  

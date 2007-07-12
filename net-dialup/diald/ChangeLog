@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/diald
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/ChangeLog,v 1.11 2007/04/14 09:22:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/ChangeLog,v 1.12 2007/07/12 07:36:27 mrness Exp $
+
+*diald-1.0-r2 (12 Jul 2007)
+
+  12 Jul 2007; Alin Năstac <mrness@gentoo.org>
+  files/diald-1.0-gentoo.patch, +files/diald-1.0-nopam.patch,
+  +diald-1.0-r2.ebuild:
+  Add pam USE flag and update /etc/pam.d/diald file (#185016). Add ~amd64
+  keyword.
 
   14 Apr 2007; Alin Năstac <mrness@gentoo.org>
   files/diald-1.0-gentoo.patch:
