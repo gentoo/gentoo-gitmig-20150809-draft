@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/nanoxml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nanoxml/ChangeLog,v 1.14 2007/05/06 09:44:53 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nanoxml/ChangeLog,v 1.15 2007/07/12 22:31:30 betelgeuse Exp $
+
+  12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
+  nanoxml-2.2.3-r2.ebuild:
+  sun-jdk-1.6 from u2 works fine now so removing the work around from DEPEND.
 
   06 May 2007; Vlastimil Babka <caster@gentoo.org> -nanoxml-2.2.3-r1.ebuild:
   Remove old revision.
