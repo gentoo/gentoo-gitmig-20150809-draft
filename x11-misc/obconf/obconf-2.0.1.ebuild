@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.1.ebuild,v 1.3 2007/07/12 13:00:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.1.ebuild,v 1.4 2007/07/12 18:12:59 armin76 Exp $
 
 inherit fdo-mime
 
@@ -10,7 +10,7 @@ SRC_URI="http://icculus.org/openbox/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~hppa ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="nls"
 
 RDEPEND=">=gnome-base/libglade-2
