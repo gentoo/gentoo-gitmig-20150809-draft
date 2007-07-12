@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/jabber-base-0.00.ebuild,v 1.8 2006/04/08 21:06:46 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/jabber-base-0.00.ebuild,v 1.9 2007/07/12 05:34:48 mr_bones_ Exp $
 
 inherit eutils
 
@@ -31,7 +31,6 @@ S="${WORKDIR}"
 #/usr/lib/python${PYVER}/site-packages/$package-name
 
 #the user should be the one created here username=group=jabber
-
 
 src_install() {
 

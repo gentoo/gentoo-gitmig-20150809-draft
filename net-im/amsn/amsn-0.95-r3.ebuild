@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.95-r3.ebuild,v 1.8 2007/04/24 15:05:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.95-r3.ebuild,v 1.9 2007/07/12 05:34:48 mr_bones_ Exp $
 
 inherit eutils fdo-mime
 
@@ -61,4 +61,3 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 	ewarn "You might have to remove ~/.amsn prior to running as user if amsn hangs on start-up."
 }
-

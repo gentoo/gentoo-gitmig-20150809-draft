@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.3 2007/07/01 08:29:02 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.4 2007/07/12 05:34:48 mr_bones_ Exp $
 
 IUSE="debug dbus tlen esd oss xosd arts jabber perl spell gnutls"
 
@@ -71,4 +71,3 @@ src_install () {
 	doins gg2.desktop
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
-

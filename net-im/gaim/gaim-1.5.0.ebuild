@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.24 2007/01/05 04:30:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.25 2007/07/12 05:34:48 mr_bones_ Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib perl-module perl-app
 
@@ -49,7 +49,6 @@ DEPEND="$RDEPEND
 #	x11-plugins/gaim-xmms-remote
 #	x11-plugins/gaimosd
 #	x11-plugins/guifications
-
 
 print_gaim_warning() {
 	ewarn
@@ -115,7 +114,6 @@ src_compile() {
 		myconf="${myconf} --with-nspr-libs=/usr/$(get_libdir)/nspr"
 		myconf="${myconf} --with-nss-libs=/usr/$(get_libdir)/nss"
 	fi
-
 
 	econf\
 		$(use_enable debug) \

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.1.6.ebuild,v 1.3 2007/06/16 15:34:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.1.6.ebuild,v 1.4 2007/07/12 05:34:48 mr_bones_ Exp $
 
 inherit eutils
 
@@ -25,7 +25,6 @@ DEPEND=">=net-im/jabber-base-0.01
 	postgres? ( dev-db/postgresql )
 	sqlite? ( >=dev-db/sqlite-3 )
 	!<net-im/jabberd-2.0"
-
 
 src_compile() {
 

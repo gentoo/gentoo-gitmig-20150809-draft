@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pebrot/pebrot-0.8.8.ebuild,v 1.1 2006/05/08 16:49:24 reb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pebrot/pebrot-0.8.8.ebuild,v 1.2 2007/07/12 05:34:47 mr_bones_ Exp $
 
 inherit distutils
 
@@ -16,4 +16,3 @@ KEYWORDS="~x86 ~ppc ~amd64"
 DEPEND=">=dev-lang/python-2.2"
 
 DOCS="AUTHORS README PKG-INFO INSTALL ChangeLog COPYING"
-

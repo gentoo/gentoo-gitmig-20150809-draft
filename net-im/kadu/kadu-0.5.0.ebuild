@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0.ebuild,v 1.3 2007/02/11 18:16:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.5.0.ebuild,v 1.4 2007/07/12 05:34:48 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -103,7 +103,6 @@ SRC_URI="http://kadu.net/download/stable/${P}.tar.bz2
 	http://scripts.one.pl/spellchecker/devel/${MY_PV}/spellchecker-${SPELLCHECKER}.tar.gz
 	)"
 #		http://www.kadu.net/~dorr/kadu-profiles-${PROFILES}.tar.gz
-
 
 S=${WORKDIR}/${PN}
 
@@ -246,4 +245,3 @@ src_install() {
 		done
 	fi
 }
-

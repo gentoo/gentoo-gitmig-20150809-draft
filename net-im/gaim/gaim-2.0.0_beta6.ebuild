@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta6.ebuild,v 1.4 2007/05/21 03:34:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta6.ebuild,v 1.5 2007/07/12 05:34:48 mr_bones_ Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib mono autotools perl-app gnome2
 
@@ -79,7 +79,6 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple"
 #   x11-plugins/gaim-xmms-remote
 #   x11-plugins/gaimosd
 #   x11-plugins/guifications
-
 
 print_gaim_warning() {
 	ewarn

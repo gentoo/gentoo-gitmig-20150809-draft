@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.1-r1.ebuild,v 1.5 2007/04/15 22:38:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.1-r1.ebuild,v 1.6 2007/07/12 05:34:48 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -82,7 +82,6 @@ SRC_URI="http://kadu.net/download/stable/${P}.tar.bz2
 	spell? (
 	http://scripts.one.pl/spellchecker/devel/${PV}/spellchecker-${SPELLCHECKER}.tar.gz
 	)"
-
 
 S=${WORKDIR}/${PN}
 

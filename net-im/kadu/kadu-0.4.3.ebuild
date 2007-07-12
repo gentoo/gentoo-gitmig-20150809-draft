@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.3.ebuild,v 1.9 2007/02/11 18:16:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.3.ebuild,v 1.10 2007/07/12 05:34:48 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -60,7 +60,6 @@ DEPEND="=x11-libs/qt-3*
 	tk? ( >=dev-lang/tk-8.4.0 )
 	xosd? ( x11-libs/xosd )"
 
-
 SRC_URI="http://kadu.net/download/stable/${P}.tar.bz2
 	amarok? ( http://scripts.one.pl/amarok/stable/0.4.0/amarok-${AMAROK}.tar.gz )
 	tk? ( http://scripts.one.pl/tcl4kadu/files/stable/${PV}/tcl_scripting-${TCL}.tar.gz )
@@ -91,7 +90,6 @@ SRC_URI="http://kadu.net/download/stable/${P}.tar.bz2
 	spell? (
 	http://scripts.one.pl/spellchecker/devel/${PV}/spellchecker-${SPELLCHECKER}.tar.gz
 	)"
-
 
 S=${WORKDIR}/${PN}
 

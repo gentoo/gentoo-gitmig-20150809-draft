@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.21 2006/08/14 15:33:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.22 2007/07/12 05:34:47 mr_bones_ Exp $
 
 inherit eutils kde-functions
 
@@ -130,7 +130,6 @@ src_install() {
 	    docinto plugins/console
 	    dodoc README
 	fi
-
 
 	cd ${S}/plugins/auto-reply
 	make DESTDIR=${D} install || die

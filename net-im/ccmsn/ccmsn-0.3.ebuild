@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ccmsn/ccmsn-0.3.ebuild,v 1.6 2004/06/24 22:49:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ccmsn/ccmsn-0.3.ebuild,v 1.7 2007/07/12 05:34:48 mr_bones_ Exp $
 
 IUSE=""
 RP="${P}p3"
@@ -12,7 +12,6 @@ SRC_URI="http://messenger.compucreations.com/${RP}.tgz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
-
 
 DEPEND="dev-lang/tcl dev-lang/tk"
 RDEPEND=""
