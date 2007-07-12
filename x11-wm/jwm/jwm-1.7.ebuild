@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-1.7.ebuild,v 1.3 2007/03/13 14:58:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-1.7.ebuild,v 1.4 2007/07/12 03:41:53 mr_bones_ Exp $
 
 inherit autotools eutils
 
@@ -51,7 +51,6 @@ src_compile() {
 
 	emake -j1 || die "make failed"
 }
-
 
 src_install() {
 	dodir /usr/bin

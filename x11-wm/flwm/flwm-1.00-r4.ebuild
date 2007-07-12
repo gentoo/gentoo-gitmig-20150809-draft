@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r4.ebuild,v 1.10 2006/02/11 11:44:24 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r4.ebuild,v 1.11 2007/07/12 03:41:53 mr_bones_ Exp $
 
 inherit eutils
 
@@ -13,7 +13,6 @@ HOMEPAGE="http://flwm.sourceforge.net"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc amd64"
-
 
 DEPEND="=x11-libs/fltk-1.1*
 	opengl? ( virtual/opengl )"

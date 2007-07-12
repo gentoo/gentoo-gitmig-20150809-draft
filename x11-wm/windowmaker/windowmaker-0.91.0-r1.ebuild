@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r1.ebuild,v 1.21 2007/04/07 22:06:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r1.ebuild,v 1.22 2007/07/12 03:41:53 mr_bones_ Exp $
 
 inherit eutils gnustep-funcs
 
@@ -181,4 +181,3 @@ pkg_postinst() {
 	ebeep 4
 	epause 4
 }
-

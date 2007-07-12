@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.1-r1.ebuild,v 1.18 2007/02/22 05:56:28 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.1-r1.ebuild,v 1.19 2007/07/12 03:41:52 mr_bones_ Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Other stuff for oroborus"
@@ -15,7 +15,6 @@ IUSE=""
 
 DEPEND="x11-wm/oroborus
 		=x11-libs/gtk+-1.2*"
-
 
 src_unpack() {
 

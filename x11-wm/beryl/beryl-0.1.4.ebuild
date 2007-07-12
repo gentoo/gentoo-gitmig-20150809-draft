@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl/beryl-0.1.4.ebuild,v 1.2 2007/03/21 03:14:09 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl/beryl-0.1.4.ebuild,v 1.3 2007/07/12 03:41:52 mr_bones_ Exp $
 
 inherit autotools
 
@@ -24,4 +24,3 @@ pkg_setup() {
 		die "Please emerge >=x11-libs/cairo-1.2.2 with the X flag set"
 	fi
 }
-

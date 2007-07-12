@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0_rc3_p4944.ebuild,v 1.1 2007/06/29 17:39:26 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0_rc3_p4944.ebuild,v 1.2 2007/07/12 03:41:53 mr_bones_ Exp $
 
 inherit eutils
 
@@ -141,4 +141,3 @@ src_install() {
 	doins "${FILESDIR}/styles-menu-commonbox" || die
 	doins "${FILESDIR}/styles-menu-user" || die
 }
-

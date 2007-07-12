@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.14.5.ebuild,v 1.12 2006/10/19 15:24:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.14.5.ebuild,v 1.13 2007/07/12 03:41:53 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -28,7 +28,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.28"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README *.txt doc/*.txt"
-
 
 pkg_setup() {
 	# Compositor is too unreliable
