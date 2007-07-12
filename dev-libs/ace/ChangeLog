@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.47 2007/06/22 22:24:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.48 2007/07/12 22:00:32 dev-zero Exp $
+
+  12 Jul 2007; Tiziano Müller <dev-zero@gentoo.org> ace-5.5.8.ebuild:
+  Cosmetic cleanup, fixed bug #169647
 
 *ace-5.5.8 (22 Jun 2007)
 
