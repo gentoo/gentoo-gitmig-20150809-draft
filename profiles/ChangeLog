@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.528 2007/07/13 01:19:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.529 2007/07/13 01:31:26 beandog Exp $
+
+  13 Jul 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
+  Add replaygain local use flag for media-sound/abcde
 
   13 Jul 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
   Add id3, lame local use flags for media-sound/abcde
