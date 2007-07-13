@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/atari800
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/ChangeLog,v 1.21 2007/02/21 23:17:52 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/ChangeLog,v 1.22 2007/07/13 03:25:04 mr_bones_ Exp $
+
+*atari800-2.0.3 (13 Jul 2007)
+
+  13 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +atari800-2.0.3.ebuild:
+  version bump
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
