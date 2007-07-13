@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.18.ebuild,v 1.1 2007/07/12 21:13:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.18.ebuild,v 1.2 2007/07/13 14:51:37 gustavoz Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -169,6 +169,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	epatch ${FILESDIR}/${P}-2.6.22.diff
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/zaptel-1.2.9.1-ar.patch
 
