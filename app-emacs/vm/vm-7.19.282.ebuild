@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.19.282.ebuild,v 1.5 2007/04/30 15:07:24 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.19.282.ebuild,v 1.6 2007/07/13 16:03:29 flameeyes Exp $
 
 inherit elisp eutils versionator
 
@@ -48,6 +48,10 @@ src_unpack() {
 		sed -i -e '1,/^vm\.info:/s/ vm-pcrisis.info//' Makefile \
 			|| die "sed failed"
 	fi
+
+	# Avoid using mkdirhier from imake package, it's just a replacement
+	# for mkdir -p, and it would add quite some dependencies
+	sed -i -e 's:mkdirhier:mkdir -p:' "${S}/Makefile"
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.31 2007/05/20 21:20:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.32 2007/07/13 16:03:29 flameeyes Exp $
+
+  13 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> vm-7.19.282.ebuild:
+  Replace mkdirhier with mkdir -p to avoid depending on x11-misc/imake. Thanks
+  to Andrea Veroni for finding out.
 
   20 May 2007; Raúl Porcel <armin76@gentoo.org>
   -files/vm-direntry-fix-gentoo.patch, -vm-7.19.ebuild, vm-7.19-r3.ebuild:
