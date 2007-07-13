@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ctwm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.18 2007/07/13 11:51:06 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.19 2007/07/13 11:59:37 omp Exp $
+
+  13 Jul 2007; David Shakaryan <omp@gentoo.org> ctwm-3.7.ebuild:
+  Some fixes and general cleanup.
 
   13 Jul 2007; David Shakaryan <omp@gentoo.org> -ctwm-3.6-r1.ebuild:
   Remove older version.

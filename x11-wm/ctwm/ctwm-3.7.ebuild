@@ -1,55 +1,49 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7.ebuild,v 1.7 2007/02/22 05:45:24 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7.ebuild,v 1.8 2007/07/13 11:59:37 omp Exp $
 
 inherit eutils
 
-IUSE=""
-
-MY_P="${P/_/-}"
-S=${WORKDIR}/${MY_P}
-
 DESCRIPTION="A clean, light window manager."
-SRC_URI="http://ctwm.free.lp.se/dist/${MY_P}.tar.gz"
-#SRC_URI="http://ctwm.free.lp.se/preview/${MY_P}.tar.gz"
 HOMEPAGE="http://ctwm.free.lp.se/"
+SRC_URI="http://ctwm.free.lp.se/dist/${P}.tar.gz"
 
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-LICENSE="MIT"
+IUSE=""
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXmu
-		x11-libs/libXt
-		x11-libs/libXext
-		x11-libs/libXpm )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXmu
+	x11-libs/libXpm
+	x11-libs/libXt"
 DEPEND="${RDEPEND}
-	|| ( (
-		x11-proto/xproto
-		x11-proto/xextproto
-		app-text/rman
-		x11-misc/imake )
-	virtual/x11 )
-	media-libs/jpeg"
+	app-text/rman
+	media-libs/jpeg
+	x11-misc/imake
+	x11-proto/xextproto
+	x11-proto/xproto"
 
 src_compile() {
-	sed -i -e "s@\(CONFDIR =\).*@\1 /etc/X11/twm@g" Imakefile || die
-	cp Imakefile.local-template Imakefile.local || die
-	xmkmf || die
-	make TWMDIR=/usr/share/${PN} || die
+	sed -i -e "s@\(CONFDIR =\).*@\1 /etc/X11/twm@g" Imakefile \
+		|| die "sed failed"
+
+	cp Imakefile.local-template Imakefile.local
+
+	xmkmf || die "xmkmf failed"
+	make TWMDIR=/usr/share/${PN} || die "make failed"
 }
 
 src_install() {
 	make BINDIR=/usr/bin \
 		MANPATH=/usr/share/man \
 		TWMDIR=/usr/share/${PN} \
-		DESTDIR=${D} install || die
+		DESTDIR="${D}" install || die "make install failed"
 
 	make MANPATH=/usr/share/man \
 		DOCHTMLDIR=/usr/share/doc/${PF}/html \
-		DESTDIR=${D} install.man || die
+		DESTDIR="${D}" install.man || die "make install.man failed"
 
 	echo "#!/bin/sh" > ${T}/ctwm
 	echo "/usr/bin/ctwm" >> ${T}/ctwm
