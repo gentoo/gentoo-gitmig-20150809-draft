@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gspcav1/gspcav1-20070508.ebuild,v 1.1 2007/05/19 16:36:07 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gspcav1/gspcav1-20070508.ebuild,v 1.2 2007/07/13 21:48:59 vapier Exp $
 
 inherit linux-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://mxhaard.free.fr/download.html"
 SRC_URI="http://mxhaard.free.fr/spca50x/Download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 RESTRICT=""
 DEPEND=""
