@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.4.ebuild,v 1.1 2006/11/06 11:11:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.4.ebuild,v 1.2 2007/07/13 05:34:14 mr_bones_ Exp $
 
 inherit qt4 toolchain-funcs
 
@@ -21,7 +21,6 @@ RDEPEND="$(qt4_min_version 4)
 DEPEND="sys-devel/flex
 	sys-devel/bison
 	${RDEPEND}"
-
 
 src_compile() {
 	export QTDIR=/usr QTLIBDIR=/usr/lib/qt4 QTINCLUDEDIR=/usr/include/qt4 QTPLUGINDIR=/usr/lib/qt4/plugins

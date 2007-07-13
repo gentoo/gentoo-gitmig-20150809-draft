@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/wily-1.0.ebuild,v 1.11 2006/08/24 00:20:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/wily-1.0.ebuild,v 1.12 2007/07/13 05:34:14 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -38,4 +38,3 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins "${S}"/misc/*
 }
-

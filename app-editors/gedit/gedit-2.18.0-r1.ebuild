@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.18.0-r1.ebuild,v 1.2 2007/04/17 19:02:47 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.18.0-r1.ebuild,v 1.3 2007/07/13 05:34:14 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -45,4 +45,3 @@ if [[ "${ARCH}" == "PPC" ]] ; then
 	# HACK HACK HACK: someone fix this garbage
 	MAKEOPTS="${MAKEOPTS} -j1"
 fi
-

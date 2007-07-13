@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/mlview-0.8-r1.ebuild,v 1.4 2006/02/08 22:44:24 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/mlview-0.8-r1.ebuild,v 1.5 2007/07/13 05:34:14 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -27,7 +27,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
 DOCS="ABOUT-NLS AUTHORS BRANCHES ChangeLog COPYRIGHT NEWS README"
-
 
 src_unpack() {
 	unpack "${A}"

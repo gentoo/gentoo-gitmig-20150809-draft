@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.20-r2.ebuild,v 1.1 2007/02/11 12:48:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.20-r2.ebuild,v 1.2 2007/07/13 05:34:14 mr_bones_ Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -224,4 +224,3 @@ src_install() {
 	insinto /usr/share/applications
 	doins "${FILESDIR}"/${PN}.desktop
 }
-

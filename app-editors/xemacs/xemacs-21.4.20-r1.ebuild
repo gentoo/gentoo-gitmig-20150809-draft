@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.20-r1.ebuild,v 1.8 2007/02/06 21:30:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.20-r1.ebuild,v 1.9 2007/07/13 05:34:14 mr_bones_ Exp $
 
 export WANT_AUTOCONF="2.1"
 inherit autotools eutils
@@ -210,4 +210,3 @@ src_install() {
 	insinto /usr/share/applications
 	doins "${FILESDIR}"/${PN}.desktop
 }
-
