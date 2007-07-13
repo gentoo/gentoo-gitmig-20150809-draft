@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/habak-0.2.5.ebuild,v 1.14 2007/06/09 20:19:30 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/habak-0.2.5.ebuild,v 1.15 2007/07/13 18:47:40 lucass Exp $
 
 DESCRIPTION="A simple but powerful tool to set desktop wallpaper"
 HOMEPAGE="http://lubuska.zapto.org/~hoppke/"
@@ -14,6 +14,15 @@ IUSE=""
 RDEPEND="media-libs/imlib2
 	x11-libs/libX11"
 DEPEND="x11-proto/xproto"
+
+pkg_setup() {
+	# fix for bug #185144
+	if ! built_with_use media-libs/imlib2 X; then
+		eerror "habak needs imlib2 built with X USE flag"
+		eerror "Please recompile media-libs/imlib2 with USE=X"
+		die "habak needs media-libs/imlib2 built with USE=X"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
