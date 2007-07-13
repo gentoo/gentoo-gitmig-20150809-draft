@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/quotchap/quotchap-0.9f.ebuild,v 1.6 2007/02/06 17:01:46 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/quotchap/quotchap-0.9f.ebuild,v 1.7 2007/07/13 06:20:20 mr_bones_ Exp $
 
 inherit latex-package
 S=${WORKDIR}/quotchap
@@ -19,4 +19,3 @@ src_install () {
 	        cd ${S}
 	        dodoc 00readme.txt document.pdf document.tex
 }
-

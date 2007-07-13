@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/SIunits/SIunits-1.25.ebuild,v 1.12 2007/02/06 16:26:47 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/SIunits/SIunits-1.25.ebuild,v 1.13 2007/07/13 06:20:20 mr_bones_ Exp $
 
 inherit latex-package
 
@@ -20,4 +20,3 @@ src_install () {
 	cd ${S}
 	dodoc readme.txt SIunits.pdf
 }
-

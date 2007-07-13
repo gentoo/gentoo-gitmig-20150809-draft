@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/latexdiff-0.2.ebuild,v 1.2 2004/12/28 21:07:56 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/latexdiff-0.2.ebuild,v 1.3 2007/07/13 06:20:20 mr_bones_ Exp $
 
 DESCRIPTION="latexdiff compares two latex files and marks up significant differences between them"
 
@@ -20,7 +20,6 @@ IUSE=""
 DEPEND=">=dev-lang/perl-5.8.4-r1
 	>=dev-perl/Algorithm-Diff-1.15"
 
-
 src_install() {
 	dodoc CHANGES LICENSE README
 	insinto /usr/share/doc/${P}
@@ -29,4 +28,3 @@ src_install() {
 	dobin latexdiff latexrevise
 	doman latexdiff.1 latexrevise.1
 }
-

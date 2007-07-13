@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/hyphen_show-20000425.ebuild,v 1.1 2005/11/18 17:57:01 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/hyphen_show-20000425.ebuild,v 1.2 2007/07/13 06:20:20 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND=""
 S=${WORKDIR}/${MY_PN}-${PV}
-
 
 src_unpack() {
 	unpack "${A}"

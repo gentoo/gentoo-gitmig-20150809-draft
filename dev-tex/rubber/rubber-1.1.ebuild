@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/rubber-1.1.ebuild,v 1.2 2006/11/04 13:32:13 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/rubber-1.1.ebuild,v 1.3 2007/07/13 06:20:20 mr_bones_ Exp $
 
 inherit distutils eutils
 
@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=dev-lang/python-2.2
 		virtual/tetex"
-
 
 src_compile() {
 	# configure script is not created by GNU autoconf
