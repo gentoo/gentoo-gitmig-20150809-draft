@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.1.0.ebuild,v 1.7 2007/07/02 14:38:00 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.1.0.ebuild,v 1.8 2007/07/13 06:13:03 mr_bones_ Exp $
 
 # Source: http://bugs.gentoo.org/show_bug.cgi?id=50035
 # Submitted-By: SteveB <tp22a@softhome.net>
 # Reviewed-By: wrobel 2005-12-14
-# $Id: postfixadmin-2.1.0.ebuild,v 1.7 2007/07/02 14:38:00 peper Exp $
+# $Id: postfixadmin-2.1.0.ebuild,v 1.8 2007/07/13 06:13:03 mr_bones_ Exp $
 
 inherit eutils webapp
 
@@ -55,7 +55,6 @@ src_unpack() {
 src_install() {
 	webapp_src_preinst
 
-
 	# Virtual Vacation only works with MySQL
 	diropts -m0770 -o vacation -g vacation
 	dodir /var/spool/vacation
@@ -77,7 +76,6 @@ src_install() {
 	webapp_sqlscript mysql ${T}/mysql-setup.sql
 	webapp_sqlscript mysql ${T}/mysql-update.sql 2.0.x
 	webapp_sqlscript mysql ${T}/mysql-update.sql 1.5x
-
 
 	# Copy the app's main files
 	#

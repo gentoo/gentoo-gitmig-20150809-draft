@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.2.4.ebuild,v 1.3 2007/01/02 22:58:09 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.2.4.ebuild,v 1.4 2007/07/13 06:13:03 mr_bones_ Exp $
 
 inherit webapp
 
@@ -23,7 +23,6 @@ src_unpack() {
 	cp -f xoops-2.2.3a-to-2.2.4/docs/* docs/ || die
 	cp -Rf xoops-2.2.3a-to-2.2.4/html/* html/ || die
 }
-
 
 src_install() {
 	webapp_src_preinst

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-5.1.ebuild,v 1.2 2007/03/19 13:49:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-5.1.ebuild,v 1.3 2007/07/13 06:13:03 mr_bones_ Exp $
 
 inherit webapp eutils
 
@@ -37,4 +37,3 @@ src_install() {
 	webapp_configfile "${MY_HTDOCSDIR}"/.htaccess
 	webapp_src_install
 }
-

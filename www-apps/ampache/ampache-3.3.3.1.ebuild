@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.3.1.ebuild,v 1.1 2007/05/20 03:17:54 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.3.1.ebuild,v 1.2 2007/07/13 06:13:03 mr_bones_ Exp $
 
 inherit webapp depend.php
 
@@ -38,4 +38,3 @@ src_install() {
 	webapp_postinst_txt en ${FILESDIR}/installdoc.txt
 	webapp_src_install
 }
-

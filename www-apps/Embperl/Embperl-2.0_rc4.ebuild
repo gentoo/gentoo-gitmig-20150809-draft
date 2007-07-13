@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Embperl/Embperl-2.0_rc4.ebuild,v 1.1 2007/01/20 15:30:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Embperl/Embperl-2.0_rc4.ebuild,v 1.2 2007/07/13 06:13:03 mr_bones_ Exp $
 
 inherit perl-module eutils
 
@@ -29,7 +29,6 @@ DEPEND="${DEPEND}
 	>=dev-libs/libxslt-1.0.4"
 	# Leftout until xalan is keyworded
 	# xalan? ( dev-libs/xalan-c )
-
 
 src_unpack() {
 
