@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.19.282.ebuild,v 1.6 2007/07/13 16:03:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.19.282.ebuild,v 1.7 2007/07/13 19:46:13 ulm Exp $
 
 inherit elisp eutils versionator
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${VM_P}"
 
-SITEFILE=51vm-gentoo.el
+SITEFILE=51${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
@@ -51,7 +51,7 @@ src_unpack() {
 
 	# Avoid using mkdirhier from imake package, it's just a replacement
 	# for mkdir -p, and it would add quite some dependencies
-	sed -i -e 's:mkdirhier:mkdir -p:' "${S}/Makefile"
+	sed -i -e 's:mkdirhier:mkdir -p:' Makefile
 }
 
 src_compile() {
@@ -59,13 +59,13 @@ src_compile() {
 }
 
 src_install() {
+	elisp-install vm *.el
 	emake prefix="${D}/usr" \
 		INFODIR="${D}/usr/share/info" \
 		LISPDIR="${D}${SITELISP}/vm" \
 		PIXMAPDIR="${D}/usr/share/pixmaps/vm" \
 		install || die "installation failed"
 
-	elisp-install vm *.el
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	dodoc README ChangeLog oldChangeLog TODO patchdoc.txt
 }

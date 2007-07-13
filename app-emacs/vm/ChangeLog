@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.32 2007/07/13 16:03:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.33 2007/07/13 19:46:13 ulm Exp $
+
+*vm-8.0.1.465 (13 Jul 2007)
+
+  13 Jul 2007; Ulrich Mueller <ulm@gentoo.org> files/50vm-gentoo.el,
+  +files/vm-8.0-no-pcrisis.patch, +vm-8.0.1.465.ebuild:
+  Major version bump. Updated HOMEPAGE, SRC_URI, and LICENSE; ebuild
+  completely redone.
 
   13 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> vm-7.19.282.ebuild:
   Replace mkdirhier with mkdir -p to avoid depending on x11-misc/imake. Thanks
