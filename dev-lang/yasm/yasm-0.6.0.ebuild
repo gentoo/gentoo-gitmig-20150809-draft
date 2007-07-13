@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-0.6.0.ebuild,v 1.3 2007/07/12 21:17:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-0.6.0.ebuild,v 1.4 2007/07/13 00:25:32 beandog Exp $
 
 inherit versionator
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.tortall.net/projects/yasm/releases/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 IUSE="nls"
 
 RDEPEND="nls? ( virtual/libintl )"
