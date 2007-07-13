@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.20060925.ebuild,v 1.2 2006/12/31 09:52:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.20060925.ebuild,v 1.3 2007/07/13 07:00:14 mr_bones_ Exp $
 
 inherit gnustep
 
@@ -39,7 +39,6 @@ src_unpack() {
 	iconv -futf-8 -tutf-16 Localizable.strings > Localizable.strings.utf-16
 	mv Localizable.strings.utf-16 Localizable.strings
 }
-
 
 src_compile() {
 	egnustep_env

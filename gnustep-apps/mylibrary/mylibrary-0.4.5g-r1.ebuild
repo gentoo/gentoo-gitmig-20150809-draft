@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/mylibrary/mylibrary-0.4.5g-r1.ebuild,v 1.2 2005/07/16 15:42:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/mylibrary/mylibrary-0.4.5g-r1.ebuild,v 1.3 2007/07/13 07:00:14 mr_bones_ Exp $
 
 inherit gnustep
 
@@ -30,4 +30,3 @@ src_install() {
 	fi
 	egnustep_package_config
 }
-

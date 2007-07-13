@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.7.1.ebuild,v 1.4 2006/01/22 18:41:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.7.1.ebuild,v 1.5 2007/07/13 07:00:14 mr_bones_ Exp $
 
 inherit gnustep
 
@@ -33,4 +33,3 @@ src_compile() {
 
 	egnustep_make
 }
-
