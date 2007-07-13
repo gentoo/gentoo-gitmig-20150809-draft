@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/openslp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.41 2007/04/07 18:39:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.42 2007/07/13 13:20:28 uberlord Exp $
+
+*openslp-1.2.1-r1 (13 Jul 2007)
+
+  13 Jul 2007; Roy Marples <uberlord@gentoo.org> files/slpd-init,
+  openslp-1.2.1.ebuild, +openslp-1.2.1-r1.ebuild:
+  Fix init script for baselayout-2.
+  Keyworded ~sparc-fbsd.
 
   07 Apr 2007; Stefan Schweizer <genstef@gentoo.org> -openslp-1.0.9a.ebuild,
   -openslp-1.0.11.ebuild:
