@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/tasktray-0.5.2.ebuild,v 1.1 2007/06/10 19:00:46 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/tasktray-0.5.2.ebuild,v 1.2 2007/07/13 06:15:04 mr_bones_ Exp $
 
 ROX_LIB_VER=1.9.6
 inherit rox
@@ -19,4 +19,3 @@ RDEPEND=">=dev-python/gnome-python-desktop-2.12"
 
 APPNAME="${MY_PN}"
 S="${WORKDIR}"
-

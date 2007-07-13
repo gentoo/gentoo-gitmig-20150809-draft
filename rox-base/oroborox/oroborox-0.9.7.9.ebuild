@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.7.9.ebuild,v 1.5 2006/11/17 14:39:51 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.7.9.ebuild,v 1.6 2007/07/13 06:15:04 mr_bones_ Exp $
 
 ROX_LIB_VER=1.9.14
 inherit rox
@@ -15,7 +15,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="xinerama"
-
 
 DEPEND="
 	>=media-libs/freetype-2.0

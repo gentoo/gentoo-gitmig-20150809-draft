@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/xdg-menu-1.2.ebuild,v 1.3 2006/11/20 18:09:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/xdg-menu-1.2.ebuild,v 1.4 2007/07/13 06:15:04 mr_bones_ Exp $
 
 ROX_LIB_VER=2.0.0
 inherit rox
@@ -18,4 +18,3 @@ IUSE=""
 
 APPNAME=${MY_PN}
 S=${WORKDIR}
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.30.ebuild,v 1.1 2007/04/26 14:33:18 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.30.ebuild,v 1.2 2007/07/13 06:15:04 mr_bones_ Exp $
 
 ROX_LIB_VER="2.0.0"
 inherit eutils rox
@@ -47,4 +47,3 @@ pkg_postinst() {
 	einfo "It has also been installed as an X Session, so you should be"
 	einfo "able to select it in the Session list of gdm or kdm"
 }
-

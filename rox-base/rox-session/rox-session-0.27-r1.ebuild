@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.27-r1.ebuild,v 1.7 2007/02/15 02:51:41 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.27-r1.ebuild,v 1.8 2007/07/13 06:15:04 mr_bones_ Exp $
 
 # ROX-Session-0.27 now is compatible with dbus >=0.3
 # This version is all python, no more compiling
@@ -34,4 +34,3 @@ pkg_postinst() {
 	einfo "Please review its documentation about proper use. A symlink"
 	einfo "for the executable has been created as /usr/bin/${APPNAME}."
 }
-
