@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Locale-PO
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.38 2007/07/11 20:21:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.39 2007/07/13 16:38:36 armin76 Exp $
+
+  13 Jul 2007; Raúl Porcel <armin76@gentoo.org> Locale-PO-0.17-r1.ebuild:
+  alpha/ia64/x86 stable
 
   11 Jul 2007; Markus Rothe <corsair@gentoo.org> Locale-PO-0.17-r1.ebuild:
   Stable on ppc64; bug #184971
