@@ -1,14 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX vdrplugin-rebuild-0.2 6397 RMD160 af72422b2d96501d0a975f8f3b6088511cd9c8b6 SHA1 e5a3df936e07cc8ddd6b17d8a59ccefbbe9ceea3 SHA256 be3afaad7a1de981044cf2397c816f74a0e24918bf56193213755ee8d97aa675
 MD5 b4dd7a929ed0d96a269da16f1db6c215 files/vdrplugin-rebuild-0.2 6397
 RMD160 af72422b2d96501d0a975f8f3b6088511cd9c8b6 files/vdrplugin-rebuild-0.2 6397
 SHA256 be3afaad7a1de981044cf2397c816f74a0e24918bf56193213755ee8d97aa675 files/vdrplugin-rebuild-0.2 6397
-EBUILD vdrplugin-rebuild-0.2.ebuild 860 RMD160 f1aac71a61fc3dea3312b49deb61adcbdea584ce SHA1 12d7e084f2bc23dcad84b319fb30e190de4c25d2 SHA256 65cd5514afbcbd3457a6a11ceb12f82bf964b9cb52c192c4d8bf183cd5e3cd10
-MD5 f4ff0a3a17eacecf7afe17ceea43bffa vdrplugin-rebuild-0.2.ebuild 860
-RMD160 f1aac71a61fc3dea3312b49deb61adcbdea584ce vdrplugin-rebuild-0.2.ebuild 860
-SHA256 65cd5514afbcbd3457a6a11ceb12f82bf964b9cb52c192c4d8bf183cd5e3cd10 vdrplugin-rebuild-0.2.ebuild 860
+EBUILD vdrplugin-rebuild-0.2.ebuild 859 RMD160 2c6b49784f2d30261352cc5370b4b55a16c9c8e4 SHA1 cb15ed6336c9abc8a8dfa4defd15982431b99fb1 SHA256 9970908e6cebc2418800745f378591cfe964ed5f9bf7254d6c85cde36618efa2
+MD5 e5d3e30654142c8eb84ec63a5e674286 vdrplugin-rebuild-0.2.ebuild 859
+RMD160 2c6b49784f2d30261352cc5370b4b55a16c9c8e4 vdrplugin-rebuild-0.2.ebuild 859
+SHA256 9970908e6cebc2418800745f378591cfe964ed5f9bf7254d6c85cde36618efa2 vdrplugin-rebuild-0.2.ebuild 859
 MISC ChangeLog 2065 RMD160 91f9162b1776632abc7e6a5c1321cf1e405c5fb5 SHA1 70c1ca9bdf354fa67eee855cc5356d79c9325385 SHA256 1343f74c4ec72aa0383fc31de2e233dba4d320df70bd8cb7f2b5de2429ec96d0
 MD5 81192aa364443091ee66f273839d5521 ChangeLog 2065
 RMD160 91f9162b1776632abc7e6a5c1321cf1e405c5fb5 ChangeLog 2065
@@ -20,10 +17,3 @@ SHA256 0dd45fbbaf1c6173535e371e3ff8a3faa41f3f89123ac9dffe338998599ebe26 metadata
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-vdrplugin-rebuild-0.2 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-vdrplugin-rebuild-0.2 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-vdrplugin-rebuild-0.2 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
-
-iD8DBQFF9nXft2vP6XvVdOcRAnNQAJ9tku/s1lVFq5gsLl6fg5+P8dvKEACgq+yK
-qToPjFhYgiB9XGNvYfL7D1Y=
-=YnYg
------END PGP SIGNATURE-----
