@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/kxdocker-1.0.0a.ebuild,v 1.2 2006/02/27 20:29:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker/kxdocker-1.0.0a.ebuild,v 1.3 2007/07/13 05:55:28 mr_bones_ Exp $
 
 inherit kde
 
@@ -36,7 +36,6 @@ DEPEND="${RDEPEND}
 #kde-misc/kxdocker-wizard-1.0.0"
 
 need-kde 3.2
-
 
 src_unpack() {
 	unpack ${A}

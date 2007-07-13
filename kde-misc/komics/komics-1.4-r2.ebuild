@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/komics/komics-1.4-r2.ebuild,v 1.4 2006/03/12 19:11:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/komics/komics-1.4-r2.ebuild,v 1.5 2007/07/13 05:55:28 mr_bones_ Exp $
 
 inherit kde eutils
 
@@ -29,4 +29,3 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-RightClickMenu.patch
 	epatch ${FILESDIR}/${P}-Dilbert.patch
 }
-

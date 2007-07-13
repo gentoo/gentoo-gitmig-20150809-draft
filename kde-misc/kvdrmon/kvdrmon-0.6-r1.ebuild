@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kvdrmon/kvdrmon-0.6-r1.ebuild,v 1.2 2007/01/05 17:03:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kvdrmon/kvdrmon-0.6-r1.ebuild,v 1.3 2007/07/13 05:55:28 mr_bones_ Exp $
 
 inherit kde
 
@@ -22,7 +22,6 @@ src_unpack() {
 
 	use arts || epatch ${FILESDIR}/${P}-noarts.diff
 }
-
 
 pkg_postinst() {
 	elog

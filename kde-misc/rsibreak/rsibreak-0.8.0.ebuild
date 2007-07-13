@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.8.0.ebuild,v 1.3 2006/10/29 00:23:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.8.0.ebuild,v 1.4 2007/07/13 05:55:28 mr_bones_ Exp $
 
 USE_KEG_PACKAGING="1"
 
@@ -35,4 +35,3 @@ DEPEND="${RDEPEND}
 	|| ( x11-proto/scrnsaverproto <virtual/x11-7 )"
 
 need-kde 3.3
-

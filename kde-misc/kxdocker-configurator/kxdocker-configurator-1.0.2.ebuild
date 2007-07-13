@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-configurator/kxdocker-configurator-1.0.2.ebuild,v 1.2 2006/04/24 11:15:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kxdocker-configurator/kxdocker-configurator-1.0.2.ebuild,v 1.3 2007/07/13 05:55:28 mr_bones_ Exp $
 
 inherit kde
 
@@ -22,4 +22,3 @@ src_unpack() {
 	cd "${S}"
 	epatch ${FILESDIR}/${P}-collisions.patch
 }
-

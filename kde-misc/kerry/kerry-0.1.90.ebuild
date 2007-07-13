@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.1.90.ebuild,v 1.2 2007/04/10 21:53:39 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.1.90.ebuild,v 1.3 2007/07/13 05:55:28 mr_bones_ Exp $
 
 inherit kde
 
@@ -21,4 +21,3 @@ DEPEND="${RDEPEND}
 need-kde 3.4
 
 PATCHES="${FILESDIR}/${PN}-0.09-del-shortcut.patch"
-

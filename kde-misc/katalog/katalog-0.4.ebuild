@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/katalog-0.4.ebuild,v 1.2 2007/02/16 22:02:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/katalog-0.4.ebuild,v 1.3 2007/07/13 05:55:28 mr_bones_ Exp $
 
 inherit kde
 
@@ -31,4 +31,3 @@ src_install() {
 }
 
 need-kde 3.4
-
