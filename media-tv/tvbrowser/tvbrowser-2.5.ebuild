@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.ebuild,v 1.1 2007/01/09 18:17:12 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.ebuild,v 1.2 2007/07/13 05:03:58 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -79,7 +79,6 @@ src_unpack() {
 	java-pkg_jar-from bsh bsh.jar bsh-2.0b1.jar
 	java-pkg_jar-from skinlf
 	java-pkg_jar-from l2fprod-common l2fprod-common-tasks.jar
-
 
 	cd ${S}/deployment/x11
 	rm src/libDesktopIndicator.so

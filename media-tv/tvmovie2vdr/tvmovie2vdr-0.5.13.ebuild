@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvmovie2vdr/tvmovie2vdr-0.5.13.ebuild,v 1.1 2007/06/13 13:15:05 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvmovie2vdr/tvmovie2vdr-0.5.13.ebuild,v 1.2 2007/07/13 05:03:57 mr_bones_ Exp $
 
 inherit eutils
 
@@ -88,7 +88,6 @@ pkg_postinst() {
 
 	[ -L "${ROOT}/var/vdr/tvmovie2vdr/tvmovie2vdr" ] \
 		&& rm -f "${ROOT}/var/vdr/tvmovie2vdr/tvmovie2vdr"
-
 
 	eerror "The executable name of tvmovie2vdr changed!"
 	eerror "Old name was tvm2vdr.pl, new is: tvm2vdr"

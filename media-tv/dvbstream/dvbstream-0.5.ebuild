@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/dvbstream-0.5.ebuild,v 1.3 2007/03/13 12:13:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/dvbstream-0.5.ebuild,v 1.4 2007/07/13 05:03:57 mr_bones_ Exp $
 
 inherit eutils
 
@@ -50,4 +50,3 @@ src_install() {
 	insinto /usr/share/doc/${PF}/multicast
 	doins *.sh
 }
-

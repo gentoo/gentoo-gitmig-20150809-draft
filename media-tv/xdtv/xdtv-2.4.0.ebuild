@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.2 2007/07/04 08:27:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.3 2007/07/13 05:03:57 mr_bones_ Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs
 
@@ -73,7 +73,6 @@ RDEPEND="${COMMON_DEPEND}
 # Make sure the assembler USE flags are unmasked on amd64
 # Remove this once default-linux/amd64/2006.1 is deprecated
 DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
-
 
 extension_iter() {
 	local my_a

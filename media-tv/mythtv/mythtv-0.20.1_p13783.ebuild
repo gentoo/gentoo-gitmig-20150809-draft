@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.1_p13783.ebuild,v 1.1 2007/06/29 18:06:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.1_p13783.ebuild,v 1.2 2007/07/13 05:03:57 mr_bones_ Exp $
 
 inherit mythtv flag-o-matic multilib eutils qt3
 
@@ -227,7 +227,6 @@ src_install() {
 		newconfd ${FILESDIR}/mythbackend-0.18.2.conf mythbackend
 	fi
 
-
 	dodoc keys.txt docs/*.{txt,pdf}
 	dohtml docs/*.html
 
@@ -291,4 +290,3 @@ pkg_postinst() {
 	fi
 
 }
-

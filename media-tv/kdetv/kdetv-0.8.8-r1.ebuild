@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.14 2007/05/15 15:49:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.15 2007/07/13 05:03:57 mr_bones_ Exp $
 
 LANGS="bg ca br da de cs cy el es et fi ga fr gl hu is it lt nb mt nl pa pl pt ro ru rw ta sr sv tr en_GB pt_BR zh_CN sr@Latn"
 LANGS_DOC="da et fr it nl pt ru sv"
@@ -63,4 +63,3 @@ src_install() {
 	mv ${D}/usr/share/applnk/Multimedia/kdetv.desktop \
 		${D}/usr/share/applications/kde
 }
-

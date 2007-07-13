@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-0.6.ebuild,v 1.2 2007/03/23 15:20:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-0.6.ebuild,v 1.3 2007/07/13 05:03:57 mr_bones_ Exp $
 
 inherit multilib
 
@@ -37,4 +37,3 @@ src_install() {
 
 	dodoc doc/*.txt ChangeLog README AUTHORS NEWS TODO || die "dodoc failed"
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2007.04.13.ebuild,v 1.3 2007/07/02 15:21:39 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2007.04.13.ebuild,v 1.4 2007/07/13 05:03:58 mr_bones_ Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -18,7 +18,6 @@ RDEPEND=""
 RESTRICT="mirror"
 
 S="${WORKDIR}"
-
 
 # Files which can be fetched from linuxtv.org
 PACKET_NAME=dvb-firmwares-1.tar.bz2
@@ -91,8 +90,6 @@ FW_FILES=(
 	"dvb-usb-bluebird-01.fw"
 )
 
-
-
 FW_GET_PARAMETER=(
 # packet
 	"-"
@@ -159,7 +156,6 @@ FW_URLS=(
 	"http://www.linuxtv.org/download/dvb/firmware/dvb-usb-bluebird-01.fw"
 )
 
-
 SRC_URI=""
 NEGATIVE_USE_FLAGS=""
 NEGATIVE_END_BRACKETS=""
@@ -185,7 +181,6 @@ for ((CARD=0; CARD < ${#FW_USE_FLAGS[*]}; CARD++)) do
 		DEPEND="${DEPEND} dvb_cards_${FW_USE_FLAGS[CARD]}? ( app-arch/unzip )"
 	fi
 done
-
 
 SRC_URI="${SRC_URI} ${NEGATIVE_USE_FLAGS} ${ALL_URLS} ${NEGATIVE_END_BRACKETS}"
 
@@ -256,7 +251,6 @@ src_unpack() {
 		mv dvb-usb-dibusb-5.0.0.11.fw dvb-dibusb-5.0.0.11.fw
 	fi
 
-
 	#SCRIPT_V=${PV}
 	#unchanged since last ebuild
 	SCRIPT_V=2006.11.13
@@ -292,4 +286,3 @@ src_install() {
 		fi
 	done
 }
-

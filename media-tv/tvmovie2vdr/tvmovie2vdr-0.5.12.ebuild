@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvmovie2vdr/tvmovie2vdr-0.5.12.ebuild,v 1.2 2007/05/31 10:49:28 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvmovie2vdr/tvmovie2vdr-0.5.12.ebuild,v 1.3 2007/07/13 05:03:57 mr_bones_ Exp $
 
 inherit eutils
 
@@ -88,7 +88,6 @@ pkg_postinst() {
 
 	[ -L "${ROOT}/var/vdr/tvmovie2vdr/tvmovie2vdr" ] \
 		&& rm -f "${ROOT}/var/vdr/tvmovie2vdr/tvmovie2vdr"
-
 
 	elog "You have to configure the following files:"
 	elog "\t${CONF_DIR}/config.pl"

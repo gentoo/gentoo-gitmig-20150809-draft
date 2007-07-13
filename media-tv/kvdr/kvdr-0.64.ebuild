@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/kvdr-0.64.ebuild,v 1.1 2006/07/28 20:09:55 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/kvdr-0.64.ebuild,v 1.2 2007/07/13 05:03:58 mr_bones_ Exp $
 
 inherit kde
 
@@ -22,4 +22,3 @@ DEPEND=">=media-tv/xawtv-3.86
 need-kde 3
 
 S=${WORKDIR}/${P}-gentoo
-

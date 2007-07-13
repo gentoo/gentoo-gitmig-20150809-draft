@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-1.ebuild,v 1.11 2007/07/02 15:21:39 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-1.ebuild,v 1.12 2007/07/13 05:03:58 mr_bones_ Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -17,7 +17,6 @@ RDEPEND=""
 RESTRICT="mirror"
 
 S="${WORKDIR}"
-
 
 # Files which can be fetched from linuxtv.org
 PACKET_SRC_URI="http://www.linuxtv.org/downloads/firmware/dvb-firmwares-1.tar.bz2"
@@ -98,7 +97,6 @@ FW_URLS=(
 	"http://www.aver.com/support/Drivers/AVerTVHD_MCE_A180_Drv_v1.2.2.16.zip"
 )
 
-
 SRC_URI=""
 NEGATIVE_USE_FLAGS=""
 ALL_URLS=""
@@ -113,7 +111,6 @@ for ((CARD=0; CARD < ${#PACKET_FW_NAMES[*]}; CARD++)) do
 done
 
 ALL_URLS="${ALL_URLS} ${PACKET_SRC_URI}"
-
 
 for ((CARD=0; CARD < ${#FW_NAMES[*]}; CARD++)) do
 	URL="${FW_URLS[CARD]}"
@@ -132,14 +129,12 @@ for ((CARD=0; CARD < ${#FW_NAMES[*]}; CARD++)) do
 	DEPEND="${DEPEND} dvb_cards_${FW_NAMES[CARD]}? ( app-arch/unzip )"
 done
 
-
 SRC_URI="${SRC_URI} ${NEGATIVE_USE_FLAGS} ${ALL_URLS}"
 
 # add closing brackets for negative use flags
 for ((NR=0; NR < ${NUMBER_OF_USE_FLAGS}; NR++)) do
 	SRC_URI="${SRC_URI} )"
 done
-
 
 install_dvb_card() {
 	[[ -z ${DVB_CARDS} ]] || use dvb_cards_${1}
@@ -168,7 +163,6 @@ src_unpack() {
 				[[ -L ${f} ]] || ln -s ${DISTDIR}/${f} ${f}
 		esac
 	done
-
 
 	cp ${FILESDIR}/get_dvb_firmware-1 get_dvb_firmware
 	sed -i get_dvb_firmware \
@@ -200,4 +194,3 @@ src_install() {
 		fi
 	done
 }
-
