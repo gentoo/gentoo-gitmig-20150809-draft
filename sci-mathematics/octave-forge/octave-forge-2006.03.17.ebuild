@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2006.03.17.ebuild,v 1.7 2007/07/13 05:28:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2006.03.17.ebuild,v 1.8 2007/07/13 15:35:23 markusle Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND=">=sci-mathematics/octave-2.1.72
 		dev-libs/libpcre
 		sys-libs/readline
 		sys-apps/texinfo
-		sys-libs/libtermcap-compat
+		sys-libs/ncurses
 		virtual/lapack
 		virtual/blas
 		X? ( || ( x11-libs/libX11 virtual/x11 ) )
