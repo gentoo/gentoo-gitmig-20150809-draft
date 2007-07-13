@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.7.ebuild,v 1.1 2007/06/27 08:57:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.7.ebuild,v 1.2 2007/07/13 06:07:38 mr_bones_ Exp $
 
 inherit eutils
 
@@ -58,4 +58,3 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	[ "$PF" != "$P" ] && mv ${D}/usr/share/doc/${P} ${D}/usr/share/doc/${PF}
 }
-

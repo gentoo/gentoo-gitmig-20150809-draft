@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6.ebuild,v 1.6 2007/01/24 14:03:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6.ebuild,v 1.7 2007/07/13 06:07:37 mr_bones_ Exp $
 
 inherit distutils eutils
 
@@ -62,4 +62,3 @@ pkg_postinst() {
 	elog
 	ewarn "Modify /etc/denyhosts.conf to suit your environment system."
 }
-

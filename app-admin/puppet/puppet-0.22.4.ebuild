@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.22.4.ebuild,v 1.1 2007/05/02 00:14:26 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.22.4.ebuild,v 1.2 2007/07/13 06:07:38 mr_bones_ Exp $
 
 inherit eutils ruby
 
@@ -38,7 +38,6 @@ src_install() {
 	doconfd ${S}/conf/gentoo/conf.d/puppetmaster
 	doinitd ${S}/conf/gentoo/init.d/puppet
 	doconfd ${S}/conf/gentoo/conf.d/puppet
-
 
 	# Initial configuration files
 	dodir /etc/puppet/manifests

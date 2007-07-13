@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-news/eselect-news-20070709.ebuild,v 1.2 2007/07/09 21:32:35 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-news/eselect-news-20070709.ebuild,v 1.3 2007/07/13 06:07:37 mr_bones_ Exp $
 
 DESCRIPTION="GLEP 42 news reader"
 HOMEPAGE="http://paludis.pioto.org/"
@@ -17,4 +17,3 @@ src_install() {
 	insinto /usr/share/eselect/modules
 	newins "${DISTDIR}/news.eselect-${PV}" news.eselect || die
 }
-

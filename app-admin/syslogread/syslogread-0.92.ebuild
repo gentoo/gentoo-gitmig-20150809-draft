@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.3 2007/01/24 15:02:03 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.4 2007/07/13 06:07:38 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -83,4 +83,3 @@ pkg_config() {
 	cp syslogread-log.run run
 	chmod u+x run
 }
-

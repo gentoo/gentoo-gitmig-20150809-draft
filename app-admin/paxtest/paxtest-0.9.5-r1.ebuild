@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.5-r1.ebuild,v 1.12 2007/07/02 13:36:26 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.5-r1.ebuild,v 1.13 2007/07/13 06:07:38 mr_bones_ Exp $
 
 inherit eutils
 
@@ -42,4 +42,3 @@ src_install() {
 		[ -f "${doc}" ] && dodoc ${doc}
 	done
 }
-

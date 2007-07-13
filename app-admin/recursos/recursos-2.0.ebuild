@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/recursos-2.0.ebuild,v 1.5 2007/01/24 14:52:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/recursos-2.0.ebuild,v 1.6 2007/07/13 06:07:38 mr_bones_ Exp $
 
 DESCRIPTION="Script to create html and text report about your system."
 HOMEPAGE="http://www.josealberto.org"
@@ -54,4 +54,3 @@ pkg_postinst() {
 	elog "in html or plain text and mail the file or whatever."
 	elog
 }
-
