@@ -1,7 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/meanwhile-1.0.2.ebuild,v 1.14 2007/02/03 15:44:36 eroyf Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/meanwhile-1.0.2.ebuild,v 1.15 2007/07/13 07:18:13 mr_bones_ Exp $
 
 DESCRIPTION="Meanwhile (Sametime protocol) library"
 HOMEPAGE="http://meanwhile.sourceforge.net/"

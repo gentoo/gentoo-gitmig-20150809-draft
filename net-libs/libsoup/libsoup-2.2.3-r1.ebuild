@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.2.3-r1.ebuild,v 1.9 2005/10/10 07:50:37 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.2.3-r1.ebuild,v 1.10 2007/07/13 07:18:13 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -24,4 +24,3 @@ DOCS="AUTHORS ChangeLog README* TODO"
 
 G2CONF="${G2CONF} $(use_enable ssl) $(use_enable static) \
 $(use_enable static static-ssl)"
-

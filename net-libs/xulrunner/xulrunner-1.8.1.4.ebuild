@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.4.ebuild,v 1.11 2007/07/10 20:19:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.4.ebuild,v 1.12 2007/07/13 07:18:13 mr_bones_ Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -22,7 +22,6 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	>=dev-libs/nss-3.11.5
 	>=dev-libs/nspr-4.6.5-r1
 	java? ( >=virtual/jre-1.4 )"
-
 
 DEPEND="java? ( >=virtual/jdk-1.4 )
 	${RDEPEND}

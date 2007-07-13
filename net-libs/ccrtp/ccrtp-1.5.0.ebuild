@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ccrtp-1.5.0.ebuild,v 1.2 2006/11/05 23:14:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ccrtp-1.5.0.ebuild,v 1.3 2007/07/13 07:18:13 mr_bones_ Exp $
 
 DESCRIPTION="GNU ccRTP is an implementation of RTP, the real-time transport protocol from the IETF"
 HOMEPAGE="http://www.gnu.org/software/ccrtp/"
@@ -30,4 +30,3 @@ pkg_postinst() {
 		ewarn
 	fi
 }
-

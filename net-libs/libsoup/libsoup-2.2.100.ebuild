@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.2.100.ebuild,v 1.9 2007/06/24 22:08:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.2.100.ebuild,v 1.10 2007/07/13 07:18:13 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -20,7 +20,6 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-
 
 pkg_setup() {
 	G2CONF="$(use_enable ssl)"
