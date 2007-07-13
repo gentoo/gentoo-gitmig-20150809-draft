@@ -1,6 +1,10 @@
 # ChangeLog for media-video/spcaview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spcaview/ChangeLog,v 1.9 2007/03/24 22:21:23 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spcaview/ChangeLog,v 1.10 2007/07/13 22:04:15 vapier Exp $
+
+  13 Jul 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/spcaview-20061208-build.patch, spcaview-20061208.ebuild:
+  Make the build not suck at life and spread some ppc/ppc64 love.
 
   24 Mar 2007; Mike Doty <kingtaco@gentoo.org> Manifest:
   clean out old versions
