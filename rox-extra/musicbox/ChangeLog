@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/musicbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/ChangeLog,v 1.8 2007/07/12 17:16:41 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/ChangeLog,v 1.9 2007/07/13 19:03:08 armin76 Exp $
+
+  13 Jul 2007; Raúl Porcel <armin76@gentoo.org> musicbox-027-r2.ebuild:
+  x86 stable wrt #181864
 
 *musicbox-027-r2 (12 Jul 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/musicbox-027-r2.ebuild,v 1.1 2007/07/12 17:16:41 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/musicbox-027-r2.ebuild,v 1.2 2007/07/13 19:03:08 armin76 Exp $
 
 ROX_LIB_VER=2.0.0
 inherit rox eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.hayber.us/rox/musicbox/MusicBox-027.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="mp3 vorbis alsa"
 
 # NOTE: flac support is removed because it requires 1.1.2, and 1.1.3 is now
