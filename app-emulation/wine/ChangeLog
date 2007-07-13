@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.185 2007/07/09 02:46:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.186 2007/07/13 19:45:00 vapier Exp $
+
+*wine-0.9.41 (13 Jul 2007)
+
+  13 Jul 2007; Mike Frysinger <vapier@gentoo.org> +wine-0.9.41.ebuild:
+  Version bump.
 
   09 Jul 2007; Mike Frysinger <vapier@gentoo.org> wine-0.9.40.ebuild:
   Make sure alsa-lib is built with USE=midi #183739.
