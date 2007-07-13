@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/packages.build,v 1.1 2006/10/05 16:31:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/packages.build,v 1.2 2007/07/13 13:13:44 flameeyes Exp $
 
 # This file describes the packages needed to build a stage 1 based on this
 # profile.  Packages in this file are built in order.
@@ -9,7 +9,7 @@
 # symlinks on systems that use them.
 
 app-arch/bzip2
-app-arch/bsdtar
+app-arch/libarchive
 app-shells/bash
 net-misc/rsync
 net-misc/wget
