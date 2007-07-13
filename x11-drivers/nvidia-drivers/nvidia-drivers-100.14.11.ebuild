@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.11.ebuild,v 1.4 2007/07/12 16:46:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.11.ebuild,v 1.5 2007/07/13 14:39:21 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -295,7 +295,7 @@ src_install() {
 	# Taking nvidia-xconfig from nvidia-drivers to help config xorg.conf
 	dobin usr/bin/nvidia-xconfig || die
 
-	if gtk; then
+	if use gtk; then
 		# nvidia-settings
 		dobin usr/bin/nvidia-settings || die
 		cd "${SETTINGS_DIR}"
