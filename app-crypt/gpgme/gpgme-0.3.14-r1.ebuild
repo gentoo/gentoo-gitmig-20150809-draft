@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.21 2007/06/26 01:34:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.22 2007/07/13 21:47:34 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -65,7 +65,6 @@ src_unpack() {
 	export WANT_AUTOMAKE="1.6"
 	eautoreconf
 }
-
 
 src_compile() {
 	local myconf

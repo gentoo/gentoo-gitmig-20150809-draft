@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.8.1.ebuild,v 1.7 2006/08/09 20:25:51 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.8.1.ebuild,v 1.8 2007/07/13 21:47:34 mr_bones_ Exp $
 
 inherit gnome2 eutils autotools flag-o-matic
 
@@ -42,7 +42,6 @@ src_compile() {
 	G2CONF="${G2CONF} $(use_enable ldap) --disable-update-mime-database"
 	gnome2_src_compile
 }
-
 
 src_install() {
 	gnome2_src_install

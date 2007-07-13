@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p13.ebuild,v 1.1 2007/05/14 04:38:48 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p13.ebuild,v 1.2 2007/07/13 21:47:34 mr_bones_ Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs multilib
 
@@ -90,7 +90,6 @@ src_install() {
 	newinitd "${FILESDIR}"/bcrypt3 bcrypt
 	dodoc README HIDDEN_PART
 }
-
 
 pkg_postinst() {
 	elog "If you are using the serpent or rc6 encryption modules and have any problems,"

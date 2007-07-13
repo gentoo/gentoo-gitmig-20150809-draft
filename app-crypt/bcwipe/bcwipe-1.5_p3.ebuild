@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.5_p3.ebuild,v 1.6 2006/04/23 06:05:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.5_p3.ebuild,v 1.7 2007/07/13 21:47:34 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -28,7 +28,6 @@ src_test() {
 	./bcwipe -f testfile || die "bcwipe test failed"
 	[ -f testfile ] && die "test file still exists. bcwipe should of deleted it"
 }
-
 
 src_install() {
 	dobin bcwipe || die

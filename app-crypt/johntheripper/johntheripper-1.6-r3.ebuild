@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r3.ebuild,v 1.12 2006/01/14 09:13:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r3.ebuild,v 1.13 2007/07/13 21:47:34 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,8 +20,6 @@ SRC_URI="http://www.openwall.com/john/dl/${MY_P}.tar.gz
 #        ftp://ftp.openwall.com/pub/projects/john/contrib/john-1.6-mysql-1.diff
 #        ftp://ftp.openwall.com/pub/projects/john/contrib/john-1.6.31-eggpatch-8.diff.gz
 #
-
-
 
 LICENSE="GPL-2"
 SLOT="0"

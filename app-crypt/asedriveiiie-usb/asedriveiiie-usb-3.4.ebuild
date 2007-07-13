@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-usb/asedriveiiie-usb-3.4.ebuild,v 1.3 2007/02/14 20:59:38 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-usb/asedriveiiie-usb-3.4.ebuild,v 1.4 2007/07/13 21:47:34 mr_bones_ Exp $
 
 DESCRIPTION="ASEDriveIIIe USB Card Reader"
 HOMEPAGE="http://www.athena-scs.com"
@@ -33,4 +33,3 @@ src_install() {
 	elog "NOTICE:"
 	elog "You should restart pcscd."
 }
-

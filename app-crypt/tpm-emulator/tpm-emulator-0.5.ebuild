@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.5.ebuild,v 1.1 2007/06/23 20:00:20 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.5.ebuild,v 1.2 2007/07/13 21:47:34 mr_bones_ Exp $
 
 inherit toolchain-funcs linux-mod eutils
 
@@ -56,4 +56,3 @@ src_install() {
 	keepdir /var/run/tpm
 	fowners tss /var/run/tpm
 }
-
