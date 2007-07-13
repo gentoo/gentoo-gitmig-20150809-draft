@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.530 2007/07/13 13:13:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.531 2007/07/13 16:00:30 gustavoz Exp $
+
+  13 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> use.local.desc:
+  Add USE=ecoslec for zaptel
 
   13 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> +updates/3Q-2007,
   default-bsd/fbsd/packages, default-bsd/fbsd/packages.build,
