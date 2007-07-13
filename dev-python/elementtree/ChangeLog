@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/elementtree
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.27 2007/07/08 21:14:15 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.28 2007/07/13 13:07:48 gustavoz Exp $
+
+  13 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  elementtree-1.2.6-r2.ebuild:
+  Rekeywording ~sparc, some dev didn't care or tell
 
 *elementtree-1.2.6-r2 (08 Jul 2007)
 
