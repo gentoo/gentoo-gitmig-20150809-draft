@@ -1,10 +1,10 @@
 # ChangeLog for games-board/chessdb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/chessdb/ChangeLog,v 1.1 2007/07/13 22:31:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/chessdb/ChangeLog,v 1.2 2007/07/13 22:33:21 tupone Exp $
 
 *chessdb-3.6.18 (13 Jul 2007)
 
   13 Jul 2007; Tupone Alfredo <tupone@gentoo.org>
   +files/chessdb-3.6.18-gentoo.patch, +metadata.xml, +chessdb-3.6.18.ebuild:
-  New package, requested with bug #169841 by Ali Polatel <hawking@gentoo.org>
+  New package, requested with bug #169481 by Ali Polatel <hawking@gentoo.org>
 
