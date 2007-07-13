@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/gimmix-0.4.1.ebuild,v 1.1 2007/07/13 19:35:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/gimmix-0.4.1.ebuild,v 1.2 2007/07/13 21:36:21 angelos Exp $
 
 DESCRIPTION="Gimmix is a graphical music player daemon (MPD) client written in C using GTK2."
 HOMEPAGE="http://gimmix.berlios.de/"
@@ -25,6 +25,6 @@ src_install() {
 
 pkg_postinst() {
 	elog "gimmix-0.4.1 introduces a new config file format."
-	elog "If you had used any version prior to this one,"
-	elog "please delete your ~/.gimmixrc before running gimmix."
+	elog "If you're upgrading from an older version please"
+	elog "delete your ~/.gimmixrc before running gimmix."
 }
