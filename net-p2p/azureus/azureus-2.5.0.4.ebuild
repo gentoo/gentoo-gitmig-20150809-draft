@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.4.ebuild,v 1.4 2007/04/08 00:50:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.4.ebuild,v 1.5 2007/07/13 05:52:07 mr_bones_ Exp $
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
@@ -69,7 +69,6 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar dist/Azureus2.jar || die "dojar failed"
-
 
 	java-pkg_dolauncher ${PN} \
 		--main org.gudy.azureus2.ui.common.Main \

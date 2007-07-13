@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.1.3.ebuild,v 1.6 2007/04/09 19:28:02 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.1.3.ebuild,v 1.7 2007/07/13 05:52:07 mr_bones_ Exp $
 
 inherit kde
 
@@ -40,9 +40,7 @@ src_unpack() {
 	sed -i -e "s:SUBDIRS=.*:SUBDIRS=${MAKE_LANGS}:" Makefile.am
 }
 
-
 src_compile(){
 	local myconf="--enable-knetwork"
 	kde_src_compile
 }
-
