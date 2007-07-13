@@ -1,13 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.250-r2.ebuild,v 1.2 2007/05/06 09:33:05 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.250-r2.ebuild,v 1.3 2007/07/13 07:21:37 mr_bones_ Exp $
 
 inherit eutils
 
 DESCRIPTION="iptables firewall generator"
 HOMEPAGE="http://firehol.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-1.226.tar.bz2"
-
 
 LICENSE="GPL-2"
 SLOT="0"

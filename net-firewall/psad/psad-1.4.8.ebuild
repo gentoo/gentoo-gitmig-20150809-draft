@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.4.8.ebuild,v 1.10 2007/05/06 10:00:48 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.4.8.ebuild,v 1.11 2007/07/13 07:21:37 mr_bones_ Exp $
 
 inherit eutils perl-app
 
@@ -147,4 +147,3 @@ fix_psad_conf() {
 	sed -i "s:/bin/mknod:/usr/bin/mknod:g" psad.conf || die "fix_psad_conf failed"
 	sed -i "s:/usr/bin/whois_psad:/usr/bin/whois:g" psad.conf || die "fix_psad_conf failed"
 }
-

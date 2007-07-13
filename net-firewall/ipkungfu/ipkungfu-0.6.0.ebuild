@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipkungfu/ipkungfu-0.6.0.ebuild,v 1.2 2007/04/28 17:39:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipkungfu/ipkungfu-0.6.0.ebuild,v 1.3 2007/07/13 07:21:37 mr_bones_ Exp $
 
 inherit eutils
 
@@ -44,4 +44,3 @@ pkg_postinst() {
 	einfo "There are some significant configuration changes on this"
 	einfo "release covered by the ipkungfu script."
 }
-

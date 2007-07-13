@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/tuxfrw-2.62.ebuild,v 1.1 2007/05/12 14:45:44 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/tuxfrw-2.62.ebuild,v 1.2 2007/07/13 07:21:37 mr_bones_ Exp $
 
 inherit eutils linux-info
 
@@ -50,7 +50,6 @@ src_install() {
 	for conf_mod in ${CONF_MOD}; do
 		doins ${conf_mod}
 	done
-
 
 	insinto /etc/tuxfrw/rules
 	insopts -m0600

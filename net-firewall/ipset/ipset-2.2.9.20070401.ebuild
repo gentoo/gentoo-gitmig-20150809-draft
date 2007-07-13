@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.2.9.20070401.ebuild,v 1.2 2007/06/26 03:07:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.2.9.20070401.ebuild,v 1.3 2007/07/13 07:21:37 mr_bones_ Exp $
 
 inherit eutils
 
@@ -18,7 +18,6 @@ IUSE=""
 RDEPEND=">=net-firewall/iptables-1.3"
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
-
 
 src_defs() {
 	# these are used in both of src_compile and src_install

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipkungfu/ipkungfu-0.5.2.ebuild,v 1.6 2007/04/28 17:39:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipkungfu/ipkungfu-0.5.2.ebuild,v 1.7 2007/07/13 07:21:37 mr_bones_ Exp $
 
 inherit eutils
 
@@ -15,7 +15,6 @@ IUSE=""
 
 DEPEND="virtual/libc
 	net-firewall/iptables"
-
 
 src_unpack() {
 	unpack ${A}
@@ -48,9 +47,7 @@ src_install() {
 	dodoc COPYRIGHT Changelog FAQ INSTALL README gpl.txt
 }
 
-
 pkg_postinst() {
 	einfo "Be sure to edit the config files"
 	einfo "in /etc/ipkungfu before running"
 }
-

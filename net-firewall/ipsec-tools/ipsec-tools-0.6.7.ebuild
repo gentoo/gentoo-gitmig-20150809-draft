@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.9 2007/06/26 02:23:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.10 2007/07/13 07:21:37 mr_bones_ Exp $
 
 inherit eutils flag-o-matic autotools linux-info
 
@@ -11,7 +11,6 @@ LICENSE="BSD"
 KEYWORDS="amd64 ppc sparc x86"
 SLOT="0"
 IUSE="idea ipv6 pam rc5 readline selinux ldap kerberos nat hybrid iconv"
-
 
 # FIXME: what is the correct syntax for ~sparc ???
 DEPEND="virtual/libc
@@ -153,8 +152,6 @@ src_unpack() {
 	epunt_cxx
 }
 
-
-
 src_compile() {
 	# fix for bug #61025
 	filter-flags -march=c3
@@ -256,7 +253,6 @@ pkg_postinst() {
 		elog " Consider to use a more recent version or CVS"
 		elog ""
 	fi;
-
 
 	elog ""
 	elog "Please have a look in /usr/share/doc/${P} and visit"
