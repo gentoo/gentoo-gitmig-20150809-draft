@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam_mount/pam_mount-0.19.ebuild,v 1.1 2007/07/13 01:57:45 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam_mount/pam_mount-0.19.ebuild,v 1.2 2007/07/13 02:03:16 hanno Exp $
 
 inherit eutils multilib
 
@@ -31,7 +31,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	insinto /etc/security
 	doins ${S}/config/pam_mount.conf.xml || die
-	dosbin scripts/mount.crypt scripts/umount.crypt || die
 
 	dodoc README TODO AUTHORS FAQ || die
 }
