@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.16.ebuild,v 1.2 2007/06/03 07:35:50 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.16.ebuild,v 1.3 2007/07/13 07:32:46 phreak Exp $
 
 inherit bash-completion eutils
 
@@ -45,6 +45,9 @@ src_install() {
 	# install the bash-completion script into the right location
 	rm -rf "${D}"/etc/bash_completion.d
 	dobashcompletion "${S}"/etc/bash_completion.d/vzctl.sh vzctl
+
+	# We need to keep /etc/vz/names
+	keepdir /etc/vz/names
 }
 
 pkg_postinst() {

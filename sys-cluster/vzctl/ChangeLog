@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.47 2007/07/06 10:10:49 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.48 2007/07/13 07:32:46 phreak Exp $
+
+  13 Jul 2007; Christian Heim <phreak@gentoo.org> vzctl-3.0.16.ebuild,
+  -vzctl-3.0.17.ebuild, vzctl-3.0.18.ebuild:
+  Removing vzctl-3.0.17. Adding the keepdir for /etc/vz/names as Kir pointed
+  in the mail from today.
 
 *vzctl-3.0.18 (06 Jul 2007)
 
