@@ -1,36 +1,27 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.4-r1.ebuild,v 1.7 2007/05/06 09:18:17 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.5-r1.ebuild,v 1.1 2007/07/13 07:46:00 mrness Exp $
 
 inherit eutils
 
 DESCRIPTION="Proxy DNS server with permanent caching"
-HOMEPAGE="http://www.phys.uu.nl/%7Erombouts/pdnsd.html http://www.phys.uu.nl/~rombouts/pdnsd.html"
-SRC_URI="http://www.phys.uu.nl/%7Erombouts/pdnsd/releases/${P}-par.tar.gz"
+HOMEPAGE="http://www.phys.uu.nl/~rombouts/pdnsd.html"
+SRC_URI="http://www.phys.uu.nl/~rombouts/pdnsd/releases/${P}-par.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ppc s390 sparc x86"
-IUSE="ipv6 debug isdn nptl"
+IUSE="ipv6 debug isdn nptl underscores"
 
 pkg_setup() {
 	enewgroup pdnsd
 	enewuser pdnsd -1 -1 /var/lib/pdnsd pdnsd
 }
 
-src_unpack() {
-	unpack ${A}
-
-	epatch "${FILESDIR}/${P}-dbg_file.patch"
-}
-
 src_compile() {
 	local myconf=""
 
-	if use debug; then
-	 	myconf="${myconf} --with-debug=3"
-		CFLAGS="${CFLAGS} -g"
-	fi
+	use debug && myconf="${myconf} --with-debug=3"
 	use nptl && myconf="${myconf} --with-thread-lib=NPTL"
 
 	[ -c /dev/urandom ] && myconf="${myconf} --with-random-device=/dev/urandom"
@@ -40,7 +31,9 @@ src_compile() {
 		--with-cachedir=/var/cache/pdnsd \
 		--infodir=/usr/share/info --mandir=/usr/share/man \
 		--with-default-id=pdnsd \
-		`use_enable ipv6` `use_enable isdn` \
+		$(use_enable ipv6) \
+		$(use_enable isdn) \
+		$(use_enable underscores) \
 		${myconf} \
 		|| die "bad configure"
 
@@ -48,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog* NEWS README THANKS TODO README.par
 	docinto contrib ; dodoc contrib/{README,dhcp2pdnsd,pdnsd_dhcp.pl}
@@ -72,6 +65,10 @@ src_install() {
 	echo "# Command line options" >> "${config}"
 	use ipv6 && echo PDNSDCONFIG="-a" >> "${config}" \
 		|| echo PDNSDCONFIG="" >> "${config}"
+
+	#resolvconf-gentoo support
+	exeinto /etc/resolvconf/update.d
+	newexe "${FILESDIR}/pdnsd.resolvconf" pdnsd
 }
 
 src_test() {

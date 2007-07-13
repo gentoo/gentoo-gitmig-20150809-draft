@@ -1,7 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/files/pdnsd.rc6,v 1.12 2004/07/14 23:26:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/files/pdnsd.rc6,v 1.13 2007/07/13 07:46:00 mrness Exp $
+
+opts="reload"
 
 depend() {
 	need net
@@ -27,5 +29,11 @@ start() {
 stop() {
 	ebegin "Stopping pdnsd"
 	start-stop-daemon --stop --quiet --pidfile /var/run/pdnsd.pid
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading pdnsd.conf"
+	/usr/sbin/pdnsd-ctl config
 	eend $?
 }

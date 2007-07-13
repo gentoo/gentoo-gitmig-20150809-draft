@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.71 2007/05/06 09:18:17 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.72 2007/07/13 07:46:00 mrness Exp $
+
+*pdnsd-1.2.5-r1 (13 Jul 2007)
+
+  13 Jul 2007; Alin Năstac <mrness@gentoo.org>
+  -files/pdnsd-1.2.4-dbg_file.patch, files/pdnsd.rc6,
+  -pdnsd-1.2.4-r1.ebuild, -pdnsd-1.2.4-r3.ebuild, -pdnsd-1.2.5.ebuild,
+  +pdnsd-1.2.5-r1.ebuild:
+  Add reload option to pdnsd init script (#184871).
 
   06 May 2007; Marius Mauch <genone@gentoo.org> pdnsd-1.2.4-r1.ebuild,
   pdnsd-1.2.4-r3.ebuild, pdnsd-1.2.5.ebuild:
