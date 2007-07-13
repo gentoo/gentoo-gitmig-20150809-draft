@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7478 2007/07/13 18:55:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7479 2007/07/13 20:28:24 lack Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jim Ramsay <lack@gentoo.org> (13 Jul 2007)
+# Masking until the patch hits the mirrors
+x11-wm/fluxbox-1.0_rc3_p4983
 
 # Michael Cummings <mcummings@gentoo.org> (11 Jul 2007)
 # Masking for removal
