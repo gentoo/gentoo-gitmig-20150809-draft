@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/kemistry-0.7.ebuild,v 1.5 2006/07/09 18:51:05 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/kemistry-0.7.ebuild,v 1.6 2007/07/13 05:48:10 mr_bones_ Exp $
 
 ARTS_REQUIRED="yes"
 inherit kde eutils
@@ -26,4 +26,3 @@ src_unpack() {
 		epatch ${FILESDIR}/${P}-fPIC.patch
 	fi
 }
-

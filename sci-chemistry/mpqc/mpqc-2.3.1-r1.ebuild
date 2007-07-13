@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r1.ebuild,v 1.6 2007/06/26 02:40:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r1.ebuild,v 1.7 2007/07/13 05:48:10 mr_bones_ Exp $
 
 inherit fortran
 
@@ -38,7 +38,6 @@ src_unpack() {
 	fi
 }
 
-
 src_compile() {
 	# Only shared will work on ppc64 - bug #62124
 	# But we always want shared libraries
@@ -54,7 +53,6 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-
 src_test() {
 	cd "${S}"/src/bin/mpqc/validate
 
@@ -63,8 +61,6 @@ src_test() {
 	# 1.8Ghz P4M
 	make check0 || die "failed in test routines"
 }
-
-
 
 src_install() {
 	make installroot="${D}" install install_devel install_inc \
@@ -93,8 +89,3 @@ pkg_postinst() {
 	einfo "consistent basis sets."
 	echo
 }
-
-
-
-
-

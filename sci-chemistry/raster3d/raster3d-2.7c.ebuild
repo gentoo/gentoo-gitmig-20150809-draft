@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.6 2006/08/07 03:43:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.7 2007/07/13 05:48:10 mr_bones_ Exp $
 
 inherit toolchain-funcs fortran
 
@@ -28,7 +28,6 @@ src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/raster3d-gcc-4.1-gentoo.patch
 }
-
 
 src_compile() {
 	cd "${S}"

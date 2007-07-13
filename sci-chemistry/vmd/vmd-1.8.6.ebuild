@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.6.ebuild,v 1.2 2007/06/26 02:41:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.6.ebuild,v 1.3 2007/07/13 05:48:10 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs python
 
@@ -24,7 +24,6 @@ DEPEND="app-shells/tcsh
 	>=dev-lang/python-2.3
 	sci-biology/stride
 	sci-libs/netcdf"
-
 
 VMD_DOWNLOAD="http://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD"
 
@@ -64,12 +63,10 @@ src_unpack() {
 		-e "s:gentoo-libdir:${D}/usr/$(get_libdir):" \
 		-i configure || die "failed to adjust install paths"
 
-
 	sed -e "s:gentoo-gcc:$(tc-getCC):" \
 		-e "s:gentoo-g++:$(tc-getCXX):" \
 		-e "s:gentoo-cflags:${CFLAGS}:" \
 		-i configure || die "Failed to adjust C compiler/flags"
-
 
 	sed -e "s:gentoo-plugindir:${WORKDIR}/plugins:" \
 		-i configure || die "Failed to set up linking to plugin files"
@@ -145,4 +142,3 @@ src_install() {
 	sed -e "s:${D}::" -i "${D}"/usr/bin/${PN} \
 		|| die "failed to set up vmd wrapper script"
 }
-

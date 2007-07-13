@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.1.2.ebuild,v 1.6 2007/06/26 02:40:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.1.2.ebuild,v 1.7 2007/07/13 05:48:10 mr_bones_ Exp $
 
 inherit eutils fortran multilib flag-o-matic distutils
 
@@ -68,9 +68,7 @@ EOF
 	exeinto /usr/bin
 	doexe ${T}/${PN} || die "Failed to install pdb2pqr wrapper."
 
-
 	dodoc ChangeLog NEWS README AUTHORS || \
 		die "Failed to install docs"
 	dohtml -r doc/* || die "Failed to install html docs."
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.7 2007/06/26 02:41:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.8 2007/07/13 05:48:10 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs python
 
@@ -25,7 +25,6 @@ DEPEND="app-shells/tcsh
 	sci-biology/stride
 	sci-libs/netcdf
 	hardened? ( sys-apps/paxctl )"
-
 
 VMD_DOWNLOAD="http://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD"
 
@@ -65,12 +64,10 @@ src_unpack() {
 		-e "s:gentoo-libdir:${D}/usr/$(get_libdir):" \
 		-i configure || die "failed to adjust install paths"
 
-
 	sed -e "s:gentoo-gcc:$(tc-getCC):" \
 		-e "s:gentoo-g++:$(tc-getCXX):" \
 		-e "s:gentoo-cflags:${CFLAGS}:" \
 		-i configure || die "Failed to adjust C compiler/flags"
-
 
 	sed -e "s:gentoo-plugindir:${WORKDIR}/plugins:" \
 		-i configure || die "Failed to set up linking to plugin files"
@@ -151,4 +148,3 @@ src_install() {
 		/sbin/paxctl -pemrxs ${D}/usr/$(get_libdir)/${PN}/${PN}_LINUX
 	fi
 }
-

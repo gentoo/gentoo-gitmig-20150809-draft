@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.2.1.1-r1.ebuild,v 1.4 2006/07/09 07:14:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.2.1.1-r1.ebuild,v 1.5 2007/07/13 05:48:10 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,6 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
-
 
 RDEPEND="|| ( ( x11-libs/libXext
 			x11-libs/libXi

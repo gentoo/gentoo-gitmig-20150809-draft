@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060907.4.ebuild,v 1.2 2007/06/26 02:39:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060907.4.ebuild,v 1.3 2007/07/13 05:48:10 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -110,7 +110,6 @@ src_unpack() {
 	sed -e "s/gentoo-CC = 'gcc'/CC = '$(tc-getCC)'/" \
 		-e "s/gentoo-g77/${FORTRANC}/" \
 		-i ddi/compddi || die "Failed setting up compddi script"
-
 
 	# fix up the checker scripts for gamess tests
 	sed -e "s:set GMSPATH:#set GMSPATH:g" \
