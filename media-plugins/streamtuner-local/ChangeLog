@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/streamtuner-local
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/ChangeLog,v 1.15 2006/10/27 21:46:18 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/ChangeLog,v 1.16 2007/07/13 17:30:37 gustavoz Exp $
+
+  13 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  streamtuner-local-0.4.0.ebuild:
+  Not sparc stable
 
   27 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   streamtuner-local-0.4.0.ebuild:

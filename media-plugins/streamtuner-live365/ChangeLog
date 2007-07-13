@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/streamtuner-live365
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-live365/ChangeLog,v 1.14 2007/02/22 02:29:01 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-live365/ChangeLog,v 1.15 2007/07/13 17:29:51 gustavoz Exp $
+
+  13 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  streamtuner-live365-0.3.4.ebuild:
+  Not sparc stable
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
