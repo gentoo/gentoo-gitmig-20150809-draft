@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.25 2007/04/28 16:59:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.26 2007/07/13 06:38:59 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -210,4 +210,3 @@ pkg_postinst() {
 	elog
 	use innodb || ewarn "InnoDB support is not selected to be compiled in."
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/henplus-0.9.7-r1.ebuild,v 1.4 2007/06/11 21:04:32 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/henplus-0.9.7-r1.ebuild,v 1.5 2007/07/13 06:38:59 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -45,4 +45,3 @@ src_install () {
 
 	use source && java-pkg_dosrc "src/${PN}"
 }
-

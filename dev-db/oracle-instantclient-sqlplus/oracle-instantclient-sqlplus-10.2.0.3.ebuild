@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.2.0.3.ebuild,v 1.4 2007/03/27 13:28:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.2.0.3.ebuild,v 1.5 2007/07/13 06:38:59 mr_bones_ Exp $
 
 inherit eutils
 
@@ -27,7 +27,6 @@ pkg_setup() {
 	MY_P=MY_P_${ARCH}
 	export MY_P=${!MY_P}
 }
-
 
 pkg_nofetch() {
 	eerror "Please go to:"

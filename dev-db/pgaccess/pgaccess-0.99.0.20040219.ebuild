@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.99.0.20040219.ebuild,v 1.5 2005/08/07 13:11:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.99.0.20040219.ebuild,v 1.6 2007/07/13 06:38:59 mr_bones_ Exp $
 
 inherit eutils
 
@@ -23,7 +23,6 @@ RDEPEND=">=dev-lang/tcl-8.3.4
 	>=dev-lang/tk-8.3.4
 	>=dev-db/postgresql-7.3
 	dev-tcltk/tcllib"
-
 
 src_compile() {
 	cd ${S}

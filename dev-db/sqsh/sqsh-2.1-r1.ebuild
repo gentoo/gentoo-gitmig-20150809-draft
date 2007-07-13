@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1-r1.ebuild,v 1.13 2006/03/16 13:51:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1-r1.ebuild,v 1.14 2007/07/13 06:38:59 mr_bones_ Exp $
 
 inherit eutils
 
@@ -36,7 +36,6 @@ src_compile() {
 		$(use_with readline) \
 		$(use_with X x) \
 		${myconf} || die
-
 
 	emake SQSHRC_GLOBAL=/etc/sqshrc || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/knoda-0.8.1.ebuild,v 1.5 2007/02/06 13:06:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/knoda-0.8.1.ebuild,v 1.6 2007/07/13 06:38:59 mr_bones_ Exp $
 
 inherit kde
 
@@ -19,4 +19,3 @@ IUSE=""
 DEPEND="~dev-db/hk_classes-${PV}"
 
 need-kde 3
-

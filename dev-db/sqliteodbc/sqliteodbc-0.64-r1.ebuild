@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.64-r1.ebuild,v 1.1 2006/02/02 19:12:08 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.64-r1.ebuild,v 1.2 2007/07/13 06:38:59 mr_bones_ Exp $
 
 inherit eutils
 
@@ -46,7 +46,6 @@ src_compile() {
 	econf --disable-static ${myconf} || die "could not configure"
 	emake || die "could not compile"
 }
-
 
 src_install() {
 	dodir /usr/lib

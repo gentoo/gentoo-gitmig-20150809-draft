@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/mergeant-0.66.ebuild,v 1.1 2007/03/26 02:56:04 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/mergeant-0.66.ebuild,v 1.2 2007/07/13 06:38:59 mr_bones_ Exp $
 
 #WANT_AUTOCONF="2.5"
 #WANT_AUTOMAKE="1.9"
@@ -30,7 +30,6 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
 
 DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README TODO"
-
 
 pkg_setup() {
 	G2CONF="$(use_enable debug debug-signal)"

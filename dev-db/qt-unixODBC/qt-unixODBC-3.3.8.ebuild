@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/qt-unixODBC-3.3.8.ebuild,v 1.8 2007/04/18 17:11:18 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/qt-unixODBC-3.3.8.ebuild,v 1.9 2007/07/13 06:38:59 mr_bones_ Exp $
 
 inherit eutils
 
@@ -27,7 +27,6 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/qt-no-rpath.patch
-
 
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
