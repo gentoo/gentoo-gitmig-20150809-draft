@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ASFiles/ASFiles-1.0.ebuild,v 1.13 2004/06/24 22:11:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ASFiles/ASFiles-1.0.ebuild,v 1.14 2007/07/13 05:09:41 mr_bones_ Exp $
 
 inherit eutils
 
@@ -36,4 +36,3 @@ src_install () {
 		install || die
 
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ftmenu/ftmenu-0.1.ebuild,v 1.2 2005/07/26 14:14:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ftmenu/ftmenu-0.1.ebuild,v 1.3 2007/07/13 05:09:41 mr_bones_ Exp $
 
 DESCRIPTION="A tray menu for the Fluxbox toolbar"
 HOMEPAGE="http://ftmenu.sourceforge.net/"
@@ -14,7 +14,6 @@ IUSE=""
 DEPEND="dev-util/pkgconfig"
 RDEPEND="x11-wm/fluxbox
 	>=x11-libs/gtk+-2.6"
-
 
 src_compile() {
 	econf || die "econf failed"

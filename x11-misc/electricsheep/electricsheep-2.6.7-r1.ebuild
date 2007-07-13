@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.7-r1.ebuild,v 1.3 2007/04/14 00:02:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.7-r1.ebuild,v 1.4 2007/07/13 05:09:41 mr_bones_ Exp $
 
 inherit eutils flag-o-matic kde-functions
 
@@ -52,7 +52,6 @@ src_unpack() {
 # if they exist on the user machine although these aren't deps.
 
 src_install() {
-
 
 	# prevent writing for xscreensaver
 	sed -i "s/^install-data-local:$/install-data-local:\nmy-install-data-local:/" \

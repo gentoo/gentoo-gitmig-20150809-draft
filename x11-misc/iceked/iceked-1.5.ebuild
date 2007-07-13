@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceked/iceked-1.5.ebuild,v 1.6 2006/02/27 07:02:21 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceked/iceked-1.5.ebuild,v 1.7 2007/07/13 05:09:41 mr_bones_ Exp $
 
 DESCRIPTION="IceWM keys editor"
 SRC_URI="mirror://sourceforge/icecc/${P}.tar.bz2"
@@ -24,7 +24,6 @@ src_compile () {
 	${QTDIR}/bin/qmake ${PN}.pro
 	emake || die
 }
-
 
 src_install () {
 	make INSTALL_ROOT="${D}" install || die

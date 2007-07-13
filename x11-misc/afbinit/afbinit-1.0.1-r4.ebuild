@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/afbinit-1.0.1-r4.ebuild,v 1.4 2007/04/28 21:53:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/afbinit-1.0.1-r4.ebuild,v 1.5 2007/07/13 05:09:41 mr_bones_ Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ KEYWORDS="-* sparc"
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	sys-apps/util-linux"
-
 
 src_unpack() {
 	unpack ${A}

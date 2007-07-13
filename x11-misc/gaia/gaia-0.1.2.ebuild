@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.5 2007/04/16 08:16:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.6 2007/07/13 05:09:41 mr_bones_ Exp $
 
 inherit eutils
 
@@ -8,7 +8,6 @@ DESCRIPTION="opensource 3D interface to the planet, based on NASA World Wind dat
 HOMEPAGE="http://gaia.serezhkin.com/
 	http://sourceforge.net/projects/gaia-clean"
 SRC_URI="mirror://sourceforge/gaia-clean/${P}.tar.bz2"
-
 
 SLOT="0"
 LICENSE="GPL-2"

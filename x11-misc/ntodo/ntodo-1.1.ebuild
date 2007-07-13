@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ntodo/ntodo-1.1.ebuild,v 1.6 2006/02/07 08:55:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ntodo/ntodo-1.1.ebuild,v 1.7 2007/07/13 05:09:41 mr_bones_ Exp $
 
 DESCRIPTION="GTK Todo program"
 HOMEPAGE="http://www.theasylum.org/ntodo/"
@@ -19,8 +19,6 @@ src_unpack() {
 
 	sed -i "s:^CFLAGS.*:CFLAGS = ${CFLAGS} \$(GTK_CFLAGS):g" Makefile
 }
-
-
 
 src_compile() {
 	make || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/touchcal-0.31.ebuild,v 1.2 2006/11/27 16:14:15 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/touchcal-0.31.ebuild,v 1.3 2007/07/13 05:09:41 mr_bones_ Exp $
 
 DESCRIPTION="Touchscreen calibration utility"
 HOMEPAGE="http://touchcal.sourceforge.net"
@@ -15,4 +15,3 @@ src_install() {
 	emake install DESTDIR=${D}
 	dodoc README ChangeLog
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.8.1.ebuild,v 1.1 2007/03/06 17:32:43 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.8.1.ebuild,v 1.2 2007/07/13 05:09:41 mr_bones_ Exp $
 
 inherit qt3
 
@@ -43,4 +43,3 @@ src_install() {
 	dobin scripts/vym2html.sh
 	dobin scripts/vym2txt.sh
 }
-

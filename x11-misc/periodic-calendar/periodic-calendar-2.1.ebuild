@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/periodic-calendar/periodic-calendar-2.1.ebuild,v 1.2 2007/02/18 23:50:31 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/periodic-calendar/periodic-calendar-2.1.ebuild,v 1.3 2007/07/13 05:09:41 mr_bones_ Exp $
 
 inherit gnome2 eutils
 
@@ -29,7 +29,6 @@ DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog COPYING* INSTALL README"
-
 
 pkg_postinst() {
 	ewarn "It's probably a good idea that you read the documentation for this package."

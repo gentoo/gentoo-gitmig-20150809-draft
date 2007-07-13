@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtoolwait/xtoolwait-1.3-r1.ebuild,v 1.12 2006/10/21 22:42:49 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtoolwait/xtoolwait-1.3-r1.ebuild,v 1.13 2007/07/13 05:09:41 mr_bones_ Exp $
 
 DESCRIPTION="Xtoolwait notably decreases the startup time of an X session"
 HOMEPAGE="http://www.hacom.nl/~richard/software/xtoolwait.html"
@@ -34,4 +34,3 @@ src_install() {
 		DESTDIR="${D}" install.man || die "emake install.man failed"
 	dodoc CHANGES README
 }
-
