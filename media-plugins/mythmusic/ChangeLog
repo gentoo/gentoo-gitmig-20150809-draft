@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.57 2007/06/28 19:32:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.58 2007/07/13 18:45:11 cardoe Exp $
+
+  13 Jul 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythmusic-0.20.1_p13375.ebuild, mythmusic-0.21_pre13775.ebuild:
+  fix flac depend
 
 *mythmusic-0.21_pre13775 (28 Jun 2007)
 
