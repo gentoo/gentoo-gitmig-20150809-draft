@@ -1,7 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/gaul-devel-0.1846.ebuild,v 1.2 2005/08/24 16:23:52 phosphan Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/gaul-devel-0.1846.ebuild,v 1.3 2007/07/13 06:57:50 mr_bones_ Exp $
 
 DESCRIPTION="Genetic Algorithm Utility Library"
 HOMEPAGE="http://GAUL.sourceforge.net/"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-0.7.4.ebuild,v 1.2 2006/03/17 05:05:11 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-0.7.4.ebuild,v 1.3 2007/07/13 06:57:51 mr_bones_ Exp $
 
 DESCRIPTION="GNU Triangulated Surface Library"
 LICENSE="LGPL-2"
@@ -32,4 +32,3 @@ src_install() {
 		dodoc examples/*
 	fi
 }
-

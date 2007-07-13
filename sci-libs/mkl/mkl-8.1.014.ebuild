@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-8.1.014.ebuild,v 1.3 2007/07/02 15:26:36 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-8.1.014.ebuild,v 1.4 2007/07/13 06:57:51 mr_bones_ Exp $
 
 inherit fortran rpm flag-o-matic
 
@@ -23,10 +23,8 @@ DEPEND="${RDEPEND}"
 PROVIDE="virtual/blas
 	virtual/lapack"
 
-
 S="${WORKDIR}/l_${PN}_p_${PV}"
 INSTDIR=opt/intel/${PN}/${MYPV}
-
 
 pkg_setup() {
 
@@ -50,7 +48,6 @@ pkg_setup() {
 		elog
 	fi
 }
-
 
 # the whole shmol is to extract rpm files non-interactively
 # from the big mkl installation
@@ -193,7 +190,6 @@ src_install () {
 	dosym libblas.so.0  /usr/$(get_libdir)/blas/mkl/libblas.so
 	dosym libcblas.so.0 /usr/$(get_libdir)/blas/mkl/libcblas.so
 	dosym liblapack.so.0 /usr/$(get_libdir)/lapack/mkl/liblapack.so
-
 
 	# install tools
 	insopts -m0644

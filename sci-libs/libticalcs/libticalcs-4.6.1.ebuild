@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs/libticalcs-4.6.1.ebuild,v 1.1 2006/03/15 04:45:31 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs/libticalcs-4.6.1.ebuild,v 1.2 2007/07/13 06:57:50 mr_bones_ Exp $
 
 DESCRIPTION="Calculator API for the TiLP calculator linking program"
 HOMEPAGE="http://tilp.info/"
@@ -36,4 +36,3 @@ src_install() {
 	make install DESTDIR=${D}
 	dodoc AUTHORS COPYING LOGO NEWS README
 }
-

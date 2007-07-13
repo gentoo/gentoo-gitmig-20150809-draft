@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-1.12.0.ebuild,v 1.3 2007/06/26 02:43:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-1.12.0.ebuild,v 1.4 2007/07/13 06:57:51 mr_bones_ Exp $
 
 inherit eutils
 
@@ -64,4 +64,3 @@ src_install() {
 
 	dodoc COPYRIGHT README RELEASE_NOTES VERSION CUSTOMIZE INSTALL
 }
-

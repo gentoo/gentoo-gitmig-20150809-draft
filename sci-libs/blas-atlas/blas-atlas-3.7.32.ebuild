@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.32.ebuild,v 1.2 2007/06/26 02:42:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.32.ebuild,v 1.3 2007/07/13 06:57:51 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -15,13 +15,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
-
 RDEPEND="app-admin/eselect-blas
 	app-admin/eselect-cblas"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.5"
 PROVIDE="virtual/blas"
-
 
 S="${WORKDIR}/ATLAS"
 BLD_DIR="${S}/gentoo-build"

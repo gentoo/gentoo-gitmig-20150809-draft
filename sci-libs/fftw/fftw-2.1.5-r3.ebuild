@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r3.ebuild,v 1.3 2007/05/21 18:28:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r3.ebuild,v 1.4 2007/07/13 06:57:51 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -55,7 +55,6 @@ src_unpack() {
 	cp -R ${P} ${P}-double
 	mv ${P} ${P}-single
 }
-
 
 src_compile() {
 	cd "${S}-single"

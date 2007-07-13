@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0-r1.ebuild,v 1.12 2007/03/13 00:24:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0-r1.ebuild,v 1.13 2007/07/13 06:57:51 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,7 +27,6 @@ S=${WORKDIR}/ATLAS
 # Libraries will be installed in ${RPATH}/atlas
 # and ${RPATH}/threaded-atlas:
 RPATH="${DESTTREE}/lib/blas"
-
 
 pkg_setup() {
 	if [[ -z `type -P g77` ]]; then

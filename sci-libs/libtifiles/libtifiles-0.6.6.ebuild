@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles/libtifiles-0.6.6.ebuild,v 1.1 2006/03/15 04:41:03 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles/libtifiles-0.6.6.ebuild,v 1.2 2007/07/13 06:57:50 mr_bones_ Exp $
 
 DESCRIPTION="Various TI file formats support for the TiLP calculator linking
 program"
@@ -35,4 +35,3 @@ src_install() {
 	make install DESTDIR=${D}
 	dodoc AUTHORS COPYING LOGO NEWS README
 }
-
