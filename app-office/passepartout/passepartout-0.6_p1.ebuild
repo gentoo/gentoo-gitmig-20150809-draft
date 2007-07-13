@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.6_p1.ebuild,v 1.1 2007/03/22 00:48:06 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.6_p1.ebuild,v 1.2 2007/07/13 07:04:12 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -37,7 +37,6 @@ DEPEND="${COMMON_DEPS}
 	>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS BUGS NEWS README"
-
 
 src_unpack() {
 	unpack "${MY_P}.tar.bz2"

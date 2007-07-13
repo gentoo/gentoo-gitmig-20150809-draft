@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.5.ebuild,v 1.3 2007/07/01 15:27:28 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.5.ebuild,v 1.4 2007/07/13 07:04:12 mr_bones_ Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -44,7 +44,6 @@ S="${WORKDIR}/mozilla"
 export MOZ_CO_PROJECT=calendar
 export BUILD_OFFICIAL=1
 export MOZILLA_OFFICIAL=1
-
 
 linguas() {
 	local LANG SLANG

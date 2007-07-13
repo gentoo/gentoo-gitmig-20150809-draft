@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.6-r1.ebuild,v 1.9 2007/01/10 17:49:31 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.6-r1.ebuild,v 1.10 2007/07/13 07:04:13 mr_bones_ Exp $
 
 # although flag-o-matic functions in portage, we should inherit it
 inherit flag-o-matic eutils
@@ -62,7 +62,6 @@ src_compile() {
 	fi
 
 }
-
 
 src_install() {
 

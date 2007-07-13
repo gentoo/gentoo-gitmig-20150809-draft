@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.6.3.ebuild,v 1.9 2007/01/25 05:14:16 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.6.3.ebuild,v 1.10 2007/07/13 07:04:13 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gnome2
 
@@ -49,7 +49,6 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS BEVERAGES BUGS ChangeLog HACKING MAINTAINERS NEWS README TODO"
 USE_DESTDIR="1"
 
-
 pkg_setup() {
 	G2CONF="--enable-ssindex \
 		$(use_with python) \
@@ -72,7 +71,6 @@ src_unpack() {
 	unpack "${A}"
 	gnome2_omf_fix ${S}/doc/C/Makefile.in
 }
-
 
 src_install() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.2.2.ebuild,v 1.1 2007/02/26 14:51:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.2.2.ebuild,v 1.2 2007/07/13 07:04:12 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -37,4 +37,3 @@ G2CONF="${G2CONF} --disable-schemas-install --without-system-qof"
 
 # Fix for bug #109047, don't parallel build with libqofsql
 MAKEOPTS="${MAKEOPTS} -j1"
-

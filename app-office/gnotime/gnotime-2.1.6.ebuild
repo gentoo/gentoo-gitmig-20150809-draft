@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.1.6.ebuild,v 1.10 2007/01/10 17:49:53 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.1.6.ebuild,v 1.11 2007/07/13 07:04:12 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -30,4 +30,3 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README TODO"
 
 G2CONF="${G2CONF} --disable-schemas-install"
-
