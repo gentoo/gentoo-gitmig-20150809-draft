@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.165 2007/07/12 21:36:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.166 2007/07/13 12:51:01 gustavoz Exp $
+
+  13 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  asterisk-1.2.21.1.ebuild:
+  Fix build bug #185162
 
 *asterisk-1.2.21.1 (12 Jul 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.21.1.ebuild,v 1.1 2007/07/12 21:36:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.21.1.ebuild,v 1.2 2007/07/13 12:51:01 gustavoz Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -159,7 +159,7 @@ pkg_setup() {
 		if ! built_with_use net-libs/libpri bri; then
 			die "net-libs/libpri must be rebuilt ith USE=bri."
 		fi
-	else
+	elif use pri; then
 		if built_with_use net-libs/libpri bri; then
 			die "net-libs/libpri must be rebuilt without USE=bri."
 		fi
