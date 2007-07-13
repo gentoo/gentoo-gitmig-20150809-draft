@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/abcde
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.30 2007/01/13 08:46:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.31 2007/07/13 01:34:46 beandog Exp $
+
+*abcde-2.3.3-r1 (13 Jul 2007)
+
+  13 Jul 2007; Steve Dibb <beandog@gentoo.org> +abcde-2.3.3-r1.ebuild:
+  Add support for use flags, bug 174725
 
   13 Jan 2007; Steve Dibb <beandog@gentoo.org> abcde-2.3.0.ebuild,
   abcde-2.3.3.ebuild:
