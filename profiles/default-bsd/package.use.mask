@@ -8,6 +8,7 @@ app-accessibility/gok usb
 kde-base/kcontrol ieee1394
 kde-base/kdebase ieee1394
 kde-base/kdenetwork-meta wifi
+net-misc/openvpn iproute2
 
 app-admin/sshguard -ipfilter
 media-video/ffmpeg ieee1394
