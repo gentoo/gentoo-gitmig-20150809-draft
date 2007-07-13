@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.34 2007/04/30 21:21:58 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.35 2007/07/13 06:25:50 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -110,7 +110,6 @@ src_unpack() {
 	[[ -n $(test-flags -fno-stack-protector) ]] && \
 		epatch ${FILESDIR}/${PN}-regexp-nossp.patch
 
-
 	# On PA7200, uname -a contains a single quote and we need to
 	# filter it otherwise configure fails. See #125535.
 	epatch ${FILESDIR}/perl-hppa-pa7200-configure.patch
@@ -130,7 +129,6 @@ src_unpack() {
 	# Newer linux-headers don't include asm/page.h. Fix this.
 	# Patch from bug 168312, thanks Peter!
 	has_version '>sys-kernel/linux-headers-2.6.20' && epatch ${FILESDIR}/${P}-asm-page-h-compile-failure.patch
-
 
 }
 
@@ -311,7 +309,6 @@ src_install() {
 
 	cp -f utils/h2ph utils/h2ph_patched
 	epatch ${FILESDIR}/${PN}-h2ph-ansi-header.patch
-
 
 	LD_LIBRARY_PATH=. ./perl -Ilib utils/h2ph_patched \
 		-a -d ${D}/usr/$(get_libdir)/perl5/${MY_PV}/${myarch}${mythreading} <<EOF
@@ -558,7 +555,6 @@ src_remove_extra_files()
 	${prV}/warnings
 	${prV}/warnings.pm
 	${prV}/warnings/register.pm"
-
 
 	if use perlsuid ; then
 		MINIMAL_PERL_INSTALL="${MINIMAL_PERL_INSTALL}

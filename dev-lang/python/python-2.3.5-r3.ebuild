@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5-r3.ebuild,v 1.13 2007/07/02 14:48:44 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5-r3.ebuild,v 1.14 2007/07/13 06:25:50 mr_bones_ Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -45,7 +45,6 @@ DEPEND=">=sys-libs/zlib-1.1.3
 # NOTE: changed RDEPEND to PDEPEND to resolve bug 88777. - kloeri
 
 PDEPEND="${DEPEND} dev-python/python-fchksum"
-
 
 PROVIDE="virtual/python"
 
@@ -247,4 +246,3 @@ src_test() {
 	elog "cd /usr/lib/python${PYVER}/test"
 	elog "and run the tests separately."
 }
-

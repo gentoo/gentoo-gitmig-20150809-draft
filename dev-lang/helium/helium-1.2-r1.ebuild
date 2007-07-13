@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.2-r1.ebuild,v 1.7 2007/04/10 17:36:29 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.2-r1.ebuild,v 1.8 2007/07/13 06:25:50 mr_bones_ Exp $
 
 inherit eutils java-pkg
 
@@ -69,4 +69,3 @@ src_install() {
 	dosym /usr/bin/helium-wrapper /usr/bin/texthint-tc
 	dosym /usr/bin/helium-wrapper /usr/bin/hint-tc
 }
-

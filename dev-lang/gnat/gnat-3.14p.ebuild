@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.14p.ebuild,v 1.5 2007/02/06 08:09:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.14p.ebuild,v 1.6 2007/07/13 06:25:50 mr_bones_ Exp $
 #
 # Never replace this with the Ada compiler in the gcc tree. They are based
 # on the same source but this is the official validated compiler from ACT.
@@ -99,7 +99,6 @@ src_install() {
 		install-common install-libgcc install-gnatlib install-driver || die
 	touch "${D}/usr/lib/gcc-lib/${CHOST}/2.8.1/include/float.h"
 
-
 	# Install the FSU threads library
 	cd "${D}/usr/lib/gcc-lib/${CHOST}/2.8.1"
 	mkdir rts-native
@@ -113,7 +112,6 @@ src_install() {
 	rm -f libgnarl.so libgnat.so
 	cd "${S}"
 	rm stamp-gnatlib1
-
 
 	# Compile and install the FSU threads library
 	make CC=gcc CFLAGS="-O2" GNATLIBCFLAGS="-fPIC -O2" THREAD_KIND=fsu gnatlib

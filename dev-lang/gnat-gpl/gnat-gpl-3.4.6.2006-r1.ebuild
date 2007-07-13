@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006-r1.ebuild,v 1.5 2007/06/26 01:49:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006-r1.ebuild,v 1.6 2007/07/13 06:25:50 mr_bones_ Exp $
 
 inherit gnatbuild
 
@@ -21,7 +21,6 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${GCCVER}/gcc-core-${GCCVER}.tar
 QA_EXECSTACK="${BINPATH:1}/gnatls ${BINPATH:1}/gnatbind ${BINPATH:1}/gnatmake
 	${LIBEXECPATH:1}/gnat1
 	${LIBPATH:1}/adalib/libgnat-2006.so"
-
 
 KEYWORDS="~amd64 ~ppc ~x86"
 DEPEND="app-arch/unzip"

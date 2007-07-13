@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.22 2007/07/10 17:16:49 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.23 2007/07/13 06:25:50 mr_bones_ Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -228,4 +228,3 @@ pkg_postinst () {
 	ewarn "	/usr/sbin/ghc-updater"
 	ewarn "to re-merge all ghc-based Haskell libraries."
 }
-

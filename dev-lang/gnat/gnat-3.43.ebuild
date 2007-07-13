@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.43.ebuild,v 1.5 2007/02/06 08:09:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.43.ebuild,v 1.6 2007/07/13 06:25:50 mr_bones_ Exp $
 
 MY_PV=3.4.3
 DESCRIPTION="GNAT Ada Compiler"
@@ -29,7 +29,6 @@ case ${ARCH} in
 			GNATBOOT="${WORKDIR}/gnat-3.15p-powerpc-unknown-linux-gnu"
 			;;
 esac
-
 
 CFLAGS="-O -gnatpgn"
 

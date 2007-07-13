@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2007.ebuild,v 1.3 2007/06/26 01:49:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2007.ebuild,v 1.4 2007/07/13 06:25:50 mr_bones_ Exp $
 
 inherit gnatbuild
 
@@ -28,7 +28,6 @@ QA_EXECSTACK="${BINPATH:1}/gnatls ${BINPATH:1}/gnatbind
 	${LIBPATH:1}/libffi.so.4.0.1 ${LIBPATH:1}/32/libffi.so.4.0.1 "
 
 GNATSOURCE="${WORKDIR}/${PN}-2007-src"
-
 
 src_unpack() {
 	gnatbuild_src_unpack base_unpack common_prep

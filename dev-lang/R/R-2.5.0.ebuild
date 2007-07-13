@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.5.0.ebuild,v 1.4 2007/05/11 13:31:28 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.5.0.ebuild,v 1.5 2007/07/13 06:25:50 mr_bones_ Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -58,7 +58,6 @@ src_unpack() {
 		-i "${S}"/src/unix/Makefile.in ||
 		die "Failed to fix Rscript makefile"
 }
-
 
 src_compile() {
 	local myconf="--enable-R-profiling --enable-R-shlib --enable-linux-lfs"

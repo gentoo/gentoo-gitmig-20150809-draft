@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.1.2.ebuild,v 1.3 2007/05/28 19:21:12 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.1.2.ebuild,v 1.4 2007/07/13 06:25:50 mr_bones_ Exp $
 
 inherit gnatbuild
 
@@ -37,7 +37,6 @@ src_unpack() {
 	sed -i -e 's:and Nam is "gnatgcc":and Nam is "gcc":' osint.ads ||
 		die	"reversing [gnat]gcc substitution in comments failed"
 }
-
 
 src_compile() {
 	# looks like gnatlib_and_tools and gnatlib_shared have become part of

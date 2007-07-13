@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4.ebuild,v 1.7 2007/07/02 14:48:44 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.4.ebuild,v 1.8 2007/07/13 06:25:50 mr_bones_ Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -210,7 +210,6 @@ src_install() {
 
 	prep_ml_includes usr/include/python${PYVER}
 
-
 	# The stuff below this line extends from 2.1, and should be deprecated
 	# in 2.3, or possibly can wait till 2.4
 
@@ -259,7 +258,6 @@ pkg_postinst() {
 	[[ "$(get_libdir)" == "lib" ]] || \
 		python_mod_optimize -x site-packages \
 							-x test ${myroot}/usr/$(get_libdir)/python${PYVER}
-
 
 	# workaround possible python-upgrade-breaks-portage situation
 	if [ ! -f ${myroot}/usr/lib/portage/pym/portage.py ]; then
