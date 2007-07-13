@@ -1,0 +1,62 @@
+--- Makefile.conf.old	2007-07-11 23:58:57.000000000 +0200
++++ Makefile.conf	2007-07-12 00:01:32.000000000 +0200
+@@ -227,14 +227,14 @@
+ #   for all users, and put extra files in $SHAREDIR, type "make install".
+ #
+ install: all
+-	install -m 755 -d $(SHAREDIR)
++	install -m 755 -d $(DESTDIR)$(SHAREDIR)
+ 	install -m 755 -d $(DESTDIR)$(BINDIR)
+-	install -m 755 -d $(SOUNDSDIR)
+-	install -m 755 -d $(TBDIR)
+-	install -m 755 -d $(MANDIR)/man6
+-	-install -m 644 -p $(SOUNDS)  $(SOUNDSDIR)
+-#	-install -m 644 -p $(TABLEBASES)  $(TBDIR)
+-	install -m 644 -p $(MAN6) $(MANDIR)/man6
++	install -m 755 -d $(DESTDIR)$(SOUNDSDIR)
++	install -m 755 -d $(DESTDIR)$(TBDIR)
++	install -m 755 -d $(DESTDIR)$(MANDIR)/man6
++	-install -m 644 -p $(SOUNDS)  $(DESTDIR)$(SOUNDSDIR)
++#	-install -m 644 -p $(TABLEBASES)  $(DESTDIR)$(TBDIR)
++	install -m 644 -p $(MAN6) $(DESTDIR)$(MANDIR)/man6
+ 	install -m 755 chessdb $(SCRIPTS) $(EXECS) $(DESTDIR)$(BINDIR)
+ 	-install -m 755 -d $(DESTDIR)$(SHAREDIR)
+ 	-install -m 644 -p chessdb.eco ratings.ssp $(DESTDIR)$(SHAREDIR)
+--- tcl/start.tcl.old	2007-07-13 08:10:20.000000000 +0200
++++ tcl/start.tcl	2007-07-13 08:15:07.000000000 +0200
+@@ -17,7 +17,7 @@
+ # The "\" at the end of the comment line below is necessary! It means
+ #   that the "exec" line is a comment to Tcl/Tk, but not to /bin/sh.
+ # The next line restarts using tkchessdb: \
+-exec tkchessdb "$0" "$@"
++TCLLIBPATH="@snack_path@ $TCLLIBPATH" exec tkchessdb "$0" "$@"
+ 
+ # For the above to work, tkchessdb must be in a directory in your PATH.
+ # Alternatively, you can set the first line to start tkchessdb directly
+@@ -147,13 +147,13 @@
+ if {$windowsOS} {
+   set ecoFile [file join $chessdbDataDir "chessdb.eco"]
+ } else {
+-  set ecoFile "/usr/local/share/chessdb/chessdb.eco"
++  set ecoFile "@GENTOO_DATADIR@/chessdb.eco"
+ }
+ 
+ if {$windowsOS} {
+   set defaultTBDIR [file nativename [file join $::chessdbExeDir "tablebases"]]
+ } else {
+-  set defaultTBDIR "/usr/local/share/chessdb/tablebases"
++  set defaultTBDIR "@GENTOO_DATADIR@/tablebases"
+ }
+ 
+ # boardSizes: a list of the available board sizes.
+@@ -692,8 +692,8 @@
+   set ::utils::sound::soundFolder [file nativename [file join $::chessdbExeDir sounds]]
+   set spellCheckFile [file nativename [file join $chessdbDataDir "ratings.ssp"] ]
+ } else {
+-  set spellCheckFile "/usr/local/share/chessdb/ratings.ssp"
+-  set ::utils::sound::soundFolder "/usr/local/share/chessdb/sounds"
++  set spellCheckFile "@GENTOO_DATADIR@/ratings.ssp"
++  set ::utils::sound::soundFolder "@GENTOO_DATADIR@/sounds"
+ }
+ 
+ # Engines data:
