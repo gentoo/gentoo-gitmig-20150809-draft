@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/vhdl-mode-3.33.3.ebuild,v 1.2 2005/08/28 02:30:55 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/vhdl-mode-3.33.3.ebuild,v 1.3 2007/07/13 07:25:16 mr_bones_ Exp $
 
 inherit elisp
 
@@ -28,4 +28,3 @@ src_install() {
 	elisp-install ${PN} vhdl-mode.el* speedbar.el* dframe.el* sb-image.el*
 	elisp-site-file-install ${FILESDIR}/${SITEFILE}
 }
-

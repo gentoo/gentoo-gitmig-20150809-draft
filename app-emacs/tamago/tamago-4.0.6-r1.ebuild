@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.11 2007/01/09 12:51:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.12 2007/07/13 07:25:16 mr_bones_ Exp $
 
 inherit elisp eutils
 
@@ -44,7 +44,6 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		elispdir=${D}/${SITELISP}/${PN} \
 		etcdir=${D}/usr/share/${PN}  install || die
-
 
 	cp ${FILESDIR}/${SITEFILE} ${SITEFILE}
 	if use canna ; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/circe-cvs/circe-cvs-20060810.ebuild,v 1.4 2007/07/04 22:46:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/circe-cvs/circe-cvs-20060810.ebuild,v 1.5 2007/07/13 07:25:16 mr_bones_ Exp $
 
 ECVS_SERVER="cvs.savannah.nongnu.org:/sources/circe"
 ECVS_MODULE="circe"
@@ -20,7 +20,6 @@ IUSE=""
 
 S=${WORKDIR}/${ECVS_MODULE}
 SITEFILE="50${PN}-gentoo.el"
-
 
 src_compile() {
 	emake compile circe.info || die "emake failed"

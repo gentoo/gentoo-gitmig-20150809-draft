@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/vhdl-mode-3.33.8.ebuild,v 1.2 2007/07/04 23:36:27 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/vhdl-mode-3.33.8.ebuild,v 1.3 2007/07/13 07:25:16 mr_bones_ Exp $
 
 inherit elisp
 
@@ -21,5 +21,3 @@ src_unpack() {
 	unpack ${A}
 	rm "${S}"/{sb-image,dframe,speedbar,hideshow,site-start}.el*
 }
-
-
