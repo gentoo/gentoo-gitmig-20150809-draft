@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unmakeself/unmakeself-1.0.ebuild,v 1.2 2007/04/10 08:44:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unmakeself/unmakeself-1.0.ebuild,v 1.3 2007/07/13 13:12:33 flameeyes Exp $
 
 inherit toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="app-arch/bzip2
 	sys-libs/zlib
-	app-arch/bsdtar"
+	app-arch/libarchive"
 RDEPEND="${DEPEND}"
 
 src_compile() {
