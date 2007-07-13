@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-2.14.ebuild,v 1.4 2007/02/25 09:43:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-2.14.ebuild,v 1.5 2007/07/13 05:15:33 mr_bones_ Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -16,7 +16,6 @@ DEPEND="virtual/libc
 
 MODULE_NAMES="cowloop(fs:)"
 BUILD_TARGETS="modules"
-
 
 pkg_setup() {
 	linux-mod_pkg_setup

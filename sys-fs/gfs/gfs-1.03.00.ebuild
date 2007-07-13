@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.03.00.ebuild,v 1.5 2007/05/12 13:36:42 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.03.00.ebuild,v 1.6 2007/07/13 05:15:33 mr_bones_ Exp $
 
 CLUSTER_RELEASE="1.03.00"
 MY_P="cluster-${CLUSTER_RELEASE}"
@@ -34,11 +34,9 @@ src_compile() {
 	emake || die "compile problem"
 }
 
-
 src_install() {
 	emake DESTDIR=${D} install || die "install problem"
 
 	keepdir /etc/cluster || die
 	newinitd ${FILESDIR}/${PN}.rc ${PN} || die
 }
-

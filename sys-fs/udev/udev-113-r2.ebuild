@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-113-r2.ebuild,v 1.1 2007/07/12 14:24:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-113-r2.ebuild,v 1.2 2007/07/13 05:15:33 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -286,7 +286,6 @@ pkg_postinst() {
 			rm -f "${ROOT}"/etc/udev/rules.d/64-device-mapper.rules
 			einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
-
 
 	if [[ "${ROOT}" == "/" ]] ; then
 		# check if root of init-process is identical to ours

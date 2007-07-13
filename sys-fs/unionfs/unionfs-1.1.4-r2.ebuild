@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.1.4-r2.ebuild,v 1.2 2006/05/09 09:30:40 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.1.4-r2.ebuild,v 1.3 2007/07/13 05:15:33 mr_bones_ Exp $
 
 inherit eutils linux-mod
 
@@ -54,4 +54,3 @@ src_install() {
 	into / # ${D}/sbin: usr could be unionfs mounted: bug #129960
 	dosbin unionctl uniondbg unionimap snapmerge
 }
-
