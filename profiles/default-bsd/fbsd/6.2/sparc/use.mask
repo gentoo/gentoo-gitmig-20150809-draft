@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/sparc/use.mask,v 1.8 2007/07/12 10:25:39 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/sparc/use.mask,v 1.9 2007/07/13 09:42:01 uberlord Exp $
 
 acpi
 
@@ -13,6 +13,7 @@ cairo
 gnome
 gtk
 mono
+opengl
 php
 tk
 xpm
