@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/aewm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.15 2007/02/21 22:27:36 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.16 2007/07/13 12:10:20 omp Exp $
+
+  13 Jul 2007; David Shakaryan <omp@gentoo.org> aewm-1.2.7.ebuild:
+  Die on failure of sed.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

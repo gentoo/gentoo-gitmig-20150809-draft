@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.1 2006/11/16 01:25:11 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.2 2007/07/13 12:10:20 omp Exp $
 
 DESCRIPTION="A minimalistic X11 window manager."
 HOMEPAGE="http://www.red-bean.com/~decklin/software/aewm/"
@@ -27,12 +27,12 @@ src_unpack() {
 	# Add freetype support.
 	sed -i \
 		-e '24,26s/^#//' \
-		src/Makefile
+		src/Makefile || die "sed failed"
 
 	# Change default font.
 	sed -i \
 		-e 's/lucidasans-10/-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*/' \
-		src/aewmrc.sample
+		src/aewmrc.sample || die "sed failed"
 }
 
 src_install() {
