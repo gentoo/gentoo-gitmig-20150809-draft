@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-1.0.2.ebuild,v 1.1 2007/03/18 19:00:12 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-1.0.2.ebuild,v 1.2 2007/07/13 05:28:09 mr_bones_ Exp $
 
 inherit autotools elisp-common
 
@@ -10,7 +10,6 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 DESCRIPTION="Agda is a proof assistant in Haskell."
 HOMEPAGE="http://unit.aist.go.jp/cvs/Agda/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tar.gz"
-
 
 LICENSE="MIT"
 SLOT="0"

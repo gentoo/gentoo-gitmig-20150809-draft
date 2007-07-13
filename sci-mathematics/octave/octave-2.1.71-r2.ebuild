@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.71-r2.ebuild,v 1.3 2006/01/29 19:41:30 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.71-r2.ebuild,v 1.4 2007/07/13 05:28:09 mr_bones_ Exp $
 
 inherit flag-o-matic fortran
 
@@ -56,7 +56,6 @@ src_compile() {
 	else
 		myconf="${myconf} --without-mpi"
 	fi
-
 
 	econf \
 		$(use_with hdf5) \

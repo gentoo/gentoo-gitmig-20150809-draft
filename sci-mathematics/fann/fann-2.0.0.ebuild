@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.0.0.ebuild,v 1.3 2007/06/28 13:25:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.0.0.ebuild,v 1.4 2007/07/13 05:28:09 mr_bones_ Exp $
 
 inherit eutils
 
@@ -15,14 +15,12 @@ IUSE="doc python"
 
 DEPEND="python? ( dev-lang/python dev-lang/swig )"
 
-
 src_unpack() {
 	unpack ${A} || die
 	cd "${S}" || die
 	epatch "${FILESDIR}"/${P}-shared-libs-gentoo.patch
 	epatch "${FILESDIR}"/${P}-benchmark.patch
 }
-
 
 src_compile() {
 	econf ${myconf} || die "configure failed"
@@ -66,4 +64,3 @@ src_install() {
 		fi
 	fi
 }
-

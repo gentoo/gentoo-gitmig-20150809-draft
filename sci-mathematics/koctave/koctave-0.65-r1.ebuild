@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/koctave-0.65-r1.ebuild,v 1.5 2005/11/27 17:44:12 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/koctave-0.65-r1.ebuild,v 1.6 2007/07/13 05:28:09 mr_bones_ Exp $
 
 inherit kde
 
@@ -13,7 +13,6 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="arts"
-
 
 DEPEND="virtual/libc
 	sci-mathematics/octave"

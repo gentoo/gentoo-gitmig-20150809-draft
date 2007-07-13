@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2006.03.17-r1.ebuild,v 1.1 2007/04/13 13:51:01 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2006.03.17-r1.ebuild,v 1.2 2007/07/13 05:28:09 mr_bones_ Exp $
 
 inherit eutils
 
@@ -35,7 +35,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-config-fix.patch
 }
 
-
 src_compile() {
 	econf $(use_with X x) || die "econf failed"
 	emake || die "emake failed"
@@ -55,4 +54,3 @@ pkg_postinst() {
 	einfo "specify USE='ginac qhull' and re-emerge octave-forge; in that case"
 	einfo "the ebuild will automatically install the additional packages."
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/euler-1.61.0.ebuild,v 1.5 2006/11/06 07:13:13 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/euler-1.61.0.ebuild,v 1.6 2007/07/13 05:28:09 mr_bones_ Exp $
 
 inherit autotools eutils
 
@@ -25,7 +25,6 @@ src_unpack() {
 	sed -e 's:g77:g77 gfortran:g' -i ./configure || \
 		die "Failed to patch configure"
 }
-
 
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"

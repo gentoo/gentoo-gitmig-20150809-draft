@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.2.1.ebuild,v 1.2 2007/05/19 21:56:11 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.2.1.ebuild,v 1.3 2007/07/13 05:28:09 mr_bones_ Exp $
 
 inherit eutils flag-o-matic autotools multilib
 
@@ -24,8 +24,6 @@ DEPEND=">=dev-lang/perl-5.6
 		emacs? ( || ( virtual/xemacs
 					virtual/emacs ) )
 		boost? ( dev-libs/boost )"
-
-
 
 S="${WORKDIR}"/${MY_PN}-${MY_PV_MAJOR}
 

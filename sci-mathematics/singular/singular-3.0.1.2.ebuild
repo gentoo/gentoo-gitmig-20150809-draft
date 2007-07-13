@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.1.2.ebuild,v 1.7 2006/09/10 06:05:37 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.1.2.ebuild,v 1.8 2007/07/13 05:28:09 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,6 @@ DEPEND=">=dev-lang/perl-5.6
 		emacs? ( || ( virtual/xemacs
 					virtual/emacs ) )"
 
-
 S="${WORKDIR}"/${MY_PN}-${MY_PV_MAJOR}
 
 src_unpack () {
@@ -41,7 +40,6 @@ src_compile() {
 	filter-flags -Wl,-hashvals
 	filter-ldflags -hashvals
 	filter-ldflags -Wl,-hashvals
-
 
 	local myconf="${myconf} --disable-doc --without-MP --with-factory --with-libfac --prefix=${S}"
 	econf $(use_enable emacs) \

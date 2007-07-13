@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.72.ebuild,v 1.10 2006/08/11 21:30:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.72.ebuild,v 1.11 2007/07/13 05:28:09 mr_bones_ Exp $
 
 inherit flag-o-matic fortran
 
@@ -37,7 +37,6 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/octave-2.1.72-gcc4.1-gentoo.patch
 }
-
 
 src_compile() {
 	filter-flags -ffast-math

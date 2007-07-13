@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-1.2.0.ebuild,v 1.3 2005/08/24 09:31:15 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-1.2.0.ebuild,v 1.4 2007/07/13 05:28:09 mr_bones_ Exp $
 
 inherit eutils
 #-----------------------------------------------------------------------------
@@ -69,4 +69,3 @@ src_install() {
 		fi
 	fi
 }
-

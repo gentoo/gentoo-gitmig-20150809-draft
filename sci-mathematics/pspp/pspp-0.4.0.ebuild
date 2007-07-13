@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.4.0.ebuild,v 1.1 2007/03/19 19:39:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.4.0.ebuild,v 1.2 2007/07/13 05:28:09 mr_bones_ Exp $
 
 inherit elisp-common
 
@@ -18,7 +18,6 @@ DEPEND=">=sci-libs/gsl-1.6
 	>=dev-lang/perl-5.6
 	ncurses? ( >=sys-libs/ncurses-5.4 )
 	plotutils? ( >=media-libs/plotutils-2.4.1 )"
-
 
 # make check gave 39 failures of out 96 tests
 RESTRICT="test"
