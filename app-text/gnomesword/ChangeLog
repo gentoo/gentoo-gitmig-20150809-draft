@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gnomesword
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.20 2007/03/19 17:33:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.21 2007/07/13 01:48:41 beandog Exp $
+
+*gnomesword-2.2.3 (13 Jul 2007)
+
+  13 Jul 2007; Steve Dibb <beandog@gentoo.org> +gnomesword-2.2.3.ebuild:
+  Version bump
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove squinky86 from metadata.xml due to retirement.
