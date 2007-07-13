@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.4.6.ebuild,v 1.10 2007/06/24 22:28:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.4.6.ebuild,v 1.11 2007/07/13 14:24:26 cardoe Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -43,6 +43,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# some people use Werror in their code then don't define ctype.h.. 
+	epatch "${FILESDIR}"/${P}-ctype.patch
 
 	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
 	elibtoolize
