@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/kmobiletools-0.5.0_beta3.ebuild,v 1.3 2007/07/09 00:50:24 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/kmobiletools-0.5.0_beta3.ebuild,v 1.4 2007/07/13 22:53:50 keytoaster Exp $
 
 inherit kde eutils
 
@@ -15,8 +15,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="kde? ( || ( ( kde-base/libkcal kde-base/kontact ) kde-base/kdepim ) )
 		bluetooth? ( >=net-wireless/kdebluetooth-1.0_beta2 )
-		gammu? ( ~app-mobilephone/gammu-1.11.0 )
-		obex? ( >=app-mobilephone/obexftp-0.21 )"
+		gammu? ( ~app-mobilephone/gammu-1.11.0 net-wireless/bluez-libs )
+		obex? ( >=app-mobilephone/obexftp-0.21 net-wireless/bluez-libs )"
 
 need-kde 3.4
 
