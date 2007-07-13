@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.2.29634.ebuild,v 1.8 2007/07/13 00:06:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.2.29634.ebuild,v 1.9 2007/07/13 00:36:15 wolf31o2 Exp $
 
 inherit eutils vmware
 
@@ -10,7 +10,7 @@ DESCRIPTION="Emulate a complete PC on your PC without the usual performance over
 HOMEPAGE="http://www.vmware.com/products/player/"
 SRC_URI="http://download3.vmware.com/software/vmplayer/${MY_P}.tar.gz
 	http://platan.vc.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://platan.vc.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
+	http://platan.vc.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz

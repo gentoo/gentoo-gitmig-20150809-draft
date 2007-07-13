@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.4.44386.ebuild,v 1.3 2007/07/13 00:24:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.4.44386.ebuild,v 1.4 2007/07/13 00:36:15 wolf31o2 Exp $
 
 inherit vmware eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 SRC_URI="mirror://vmware/software/wkst/${MY_P}.tar.gz
 	http://download.softpedia.ro/linux/${MY_P}.tar.gz
 	http://platan.vc.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://platan.vc.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
+	http://platan.vc.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz

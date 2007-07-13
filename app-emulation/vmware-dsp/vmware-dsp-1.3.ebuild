@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-dsp/vmware-dsp-1.3.ebuild,v 1.3 2007/07/12 23:36:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-dsp/vmware-dsp-1.3.ebuild,v 1.4 2007/07/13 00:36:15 wolf31o2 Exp $
 
 inherit eutils multilib
 
@@ -11,9 +11,9 @@ DESCRIPTION="Allows you to use VMware Workstation with ESD and ARTS."
 HOMEPAGE="http://ftp.cvut.cz/vmware/"
 SRC_URI="http://platan.vc.cvut.cz/ftp/pub/vmware/${MY_P}.tar.gz
 	http://ftp.cvut.cz/vmware/${MY_P}.tar.gz
-	http://ftp.cvut.cz/vmware/obselete/${MY_P}.tar.gz
+	http://ftp.cvut.cz/vmware/obsolete/${MY_P}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${MY_P}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${MY_P}.tar.gz"
+	http://knihovny.cvut.cz/ftp/pub/vmware/obsolete/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"

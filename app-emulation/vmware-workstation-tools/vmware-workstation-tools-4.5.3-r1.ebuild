@@ -1,19 +1,21 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-4.5.3-r1.ebuild,v 1.2 2007/01/16 23:38:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-4.5.3-r1.ebuild,v 1.3 2007/07/13 00:36:15 wolf31o2 Exp $
 
 inherit eutils vmware
 
 DESCRIPTION="Guest-os tools for VMware Workstation"
 HOMEPAGE="http://www.vmware.com/"
 SRC_URI="http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
-	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
+	http://platan.vc.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
+	http://platan.vc.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
+	http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz"
+	http://knihovny.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz"
 #	http://ftp.cvut.cz/vmware/${TOOLS_ANY}.tar.gz
-#	http://ftp.cvut.cz/vmware/obselete/${TOOLS_ANY}.tar.gz
+#	http://ftp.cvut.cz/vmware/obsolete/${TOOLS_ANY}.tar.gz
 #	http://knihovny.cvut.cz/ftp/pub/vmware/${TOOLS_ANY}.tar.gz
-#	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${TOOLS_ANY}.tar.gz"
+#	http://knihovny.cvut.cz/ftp/pub/vmware/obsolete/${TOOLS_ANY}.tar.gz"
 
 LICENSE="vmware"
 SLOT="0"
