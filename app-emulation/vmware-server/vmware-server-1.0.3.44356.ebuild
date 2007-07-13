@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.3.44356.ebuild,v 1.4 2007/07/12 06:39:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.3.44356.ebuild,v 1.5 2007/07/13 00:19:34 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -14,16 +14,18 @@ MY_P="VMware-server-${MY_PV}"
 DESCRIPTION="VMware Server for Linux"
 HOMEPAGE="http://www.vmware.com/"
 SRC_URI="http://download3.vmware.com/software/vmserver/${MY_P}.tar.gz
-		http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
-		http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz
-		http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-		http://knihovny.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
-		http://dev.gentoo.org/~ikelos/devoverlay-distfiles/${PN}-perl-fixed-rpath-libs.tar.bz2
-		mirror://gentoo/${PN}-perl-fixed-rpath-libs.tar.bz2
-		http://dev.gentoo.org/~wolf31o2/sources/dump/vmware-libssl.so.0.9.7l.tar.bz2
-		mirror://gentoo/vmware-libssl.so.0.9.7l.tar.bz2
-		http://dev.gentoo.org/~wolf31o2/sources/dump/vmware-libcrypto.so.0.9.7l.tar.bz2
-		mirror://gentoo/vmware-libcrypto.so.0.9.7l.tar.bz2"
+	http://platan.vc.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
+	http://platan.vc.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
+	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
+	http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz
+	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
+	http://knihovny.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
+	http://dev.gentoo.org/~ikelos/devoverlay-distfiles/${PN}-perl-fixed-rpath-libs.tar.bz2
+	mirror://gentoo/${PN}-perl-fixed-rpath-libs.tar.bz2
+	http://dev.gentoo.org/~wolf31o2/sources/dump/vmware-libssl.so.0.9.7l.tar.bz2
+	mirror://gentoo/vmware-libssl.so.0.9.7l.tar.bz2
+	http://dev.gentoo.org/~wolf31o2/sources/dump/vmware-libcrypto.so.0.9.7l.tar.bz2
+	mirror://gentoo/vmware-libcrypto.so.0.9.7l.tar.bz2"
 
 LICENSE="vmware"
 IUSE=""
