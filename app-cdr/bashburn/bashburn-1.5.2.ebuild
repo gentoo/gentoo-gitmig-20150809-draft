@@ -1,7 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-1.5.2.ebuild,v 1.6 2006/09/17 03:38:53 pylon Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-1.5.2.ebuild,v 1.7 2007/07/13 05:40:32 mr_bones_ Exp $
 
 MY_P=${P//b/B}
 DESCRIPTION="cd burning shell script"

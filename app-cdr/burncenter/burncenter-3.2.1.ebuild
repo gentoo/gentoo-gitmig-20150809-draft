@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.2.1.ebuild,v 1.6 2007/05/05 14:56:15 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.2.1.ebuild,v 1.7 2007/07/13 05:40:32 mr_bones_ Exp $
 
 DESCRIPTION="A Perl module and a collection of easy-to-use text based interfaces to the UNIX CD burning tools"
 HOMEPAGE="http://alx14.free.fr/burncenter/"
@@ -18,7 +18,6 @@ RDEPEND="${DEPEND}
 	vorbis? (
 		>=media-sound/vorbis-tools-1.0_rc2
 		>=media-sound/oggtst-0.0 )"
-
 
 src_compile() {
 	# Nothing to do.

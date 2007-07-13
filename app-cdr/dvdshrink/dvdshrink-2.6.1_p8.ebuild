@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1_p8.ebuild,v 1.2 2006/12/17 23:19:17 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1_p8.ebuild,v 1.3 2007/07/13 05:40:32 mr_bones_ Exp $
 
 inherit eutils
 
@@ -14,7 +14,6 @@ IUSE="X"
 
 KEYWORDS="~amd64 ~x86 ~ppc"
 S="${WORKDIR}/${PN}"
-
 
 RDEPEND=">=media-video/transcode-1.0.2-r2
 	>=media-video/mjpegtools-1.8.0-r1

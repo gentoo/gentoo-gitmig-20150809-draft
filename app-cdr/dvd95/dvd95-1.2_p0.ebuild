@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.2_p0.ebuild,v 1.1 2007/02/28 14:19:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.2_p0.ebuild,v 1.2 2007/07/13 05:40:32 mr_bones_ Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -49,4 +49,3 @@ src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog COPYING NEWS README
 }
-

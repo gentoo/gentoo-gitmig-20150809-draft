@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.1.0.ebuild,v 1.2 2007/02/15 16:34:26 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.1.0.ebuild,v 1.3 2007/07/13 05:40:32 mr_bones_ Exp $
 
 inherit kde
 
@@ -39,4 +39,3 @@ src_install() {
 	echo -e "\nCategories=Qt;KDE;Application;AudioVideo;" >> \
 		"${D}/usr/share/applications/kde/k9copy.desktop"
 }
-

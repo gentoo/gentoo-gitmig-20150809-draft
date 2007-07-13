@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/koverartist-0.4.4.ebuild,v 1.7 2006/11/15 19:58:04 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/koverartist-0.4.4.ebuild,v 1.8 2007/07/13 05:40:32 mr_bones_ Exp $
 
 inherit kde eutils
 
@@ -25,4 +25,3 @@ src_compile() {
 	fi
 	kde_src_compile
 }
-

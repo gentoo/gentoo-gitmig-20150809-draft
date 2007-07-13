@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-0.7-r1.ebuild,v 1.2 2007/02/12 23:19:17 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-0.7-r1.ebuild,v 1.3 2007/07/13 05:40:32 mr_bones_ Exp $
 
 inherit eutils
 
@@ -31,4 +31,3 @@ src_install() {
 	doicon icons/${PN}.png
 	make_desktop_entry ${PN} "Isomaster" ${PN}.png "Application;AudioVideo;"
 }
-
