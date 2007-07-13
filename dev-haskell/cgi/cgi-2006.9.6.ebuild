@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/cgi-2006.9.6.ebuild,v 1.4 2007/07/08 15:35:07 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/cgi-2006.9.6.ebuild,v 1.5 2007/07/13 06:03:10 mr_bones_ Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -22,4 +22,3 @@ DEPEND=">=dev-lang/ghc-6.6
 	>=dev-haskell/network-2.0"
 
 S="${WORKDIR}/ghc-${GHC_PV}/libraries/${PN}"
-

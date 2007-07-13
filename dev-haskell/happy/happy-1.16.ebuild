@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.16.ebuild,v 1.1 2007/07/08 18:01:09 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.16.ebuild,v 1.2 2007/07/13 06:03:10 mr_bones_ Exp $
 
 CABAL_FEATURES="bin"
 inherit haskell-cabal autotools
@@ -38,4 +38,3 @@ src_install() {
 	cabal_src_install
 	use doc && cd doc && dohtml -r happy/*
 }
-

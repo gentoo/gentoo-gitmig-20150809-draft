@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13.2.ebuild,v 1.1 2006/10/11 19:01:57 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13.2.ebuild,v 1.2 2007/07/13 06:03:10 mr_bones_ Exp $
 
 CABAL_FEATURES="lib bin profile haddock"
 inherit base haskell-cabal
@@ -40,4 +40,3 @@ src_install() {
 		dodoc docs/icfp99.dvi docs/icfp99.ps.gz
 	fi
 }
-

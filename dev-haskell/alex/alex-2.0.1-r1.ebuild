@@ -1,12 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.1-r1.ebuild,v 1.15 2007/04/29 17:11:52 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.1-r1.ebuild,v 1.16 2007/07/13 06:03:10 mr_bones_ Exp $
 #
 # USE variable summary:
 #   doc	   - Build extra documenation from DocBook sources,
 #		in HTML format.
 #   java   - Build the above docs as PostScript as well.
-
 
 inherit base eutils ghc-package
 IUSE="doc"

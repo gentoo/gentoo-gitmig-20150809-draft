@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.10-r1.ebuild,v 1.3 2007/04/29 19:33:47 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.10-r1.ebuild,v 1.4 2007/07/13 06:03:10 mr_bones_ Exp $
 
 inherit base eutils ghc-package multilib autotools
 
@@ -110,4 +110,3 @@ src_install() {
 		ghc-makeghcilib "${D}/usr/$(get_libdir)/gtk2hs/libHSmozembed.a"
 	fi
 }
-

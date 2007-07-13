@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.1.4.ebuild,v 1.9 2007/04/29 18:02:20 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.1.4.ebuild,v 1.10 2007/07/13 06:03:10 mr_bones_ Exp $
 
 CABAL_FEATURES="bootstrap profile lib"
 inherit haskell-cabal eutils base
@@ -56,4 +56,3 @@ pkg_postinst () {
 	fi
 	ghc-package_pkg_postinst
 }
-
