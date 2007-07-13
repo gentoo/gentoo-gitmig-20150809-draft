@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.7 2007/06/27 21:10:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.37.ebuild,v 1.8 2007/07/13 08:00:12 genstef Exp $
 
 inherit linux-mod eutils rpm
 
@@ -76,7 +76,11 @@ src_unpack() {
 		usr/src/kernel-modules/fcdsl/src/src.fcdslusb
 	# do not fail even if some drivers are not present
 	einfo "When you have FCDSL_CARDS set some errors are OK here"
-	patch -p0 -f < ${FILESDIR}/fcdsl-2.6.20.diff
+	if kernel_is ge 2 6 22 ; then
+		patch -p0 -f < "${FILESDIR}"/fcdsl-2.6.22.diff
+	elif kernel_is ge 2 6 20 ; then
+		patch -p0 -f < ${FILESDIR}/fcdsl-2.6.20.diff
+	fi
 	patch -p0 -f < ${FILESDIR}/fcdslslusb-2.6.20.diff
 	cd usr/src/kernel-modules/fcdsl/src
 	kernel_is ge 2 6 20 && patch -p1 -f < ${FILESDIR}/usb-2.6.20.diff
