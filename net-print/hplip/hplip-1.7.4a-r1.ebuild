@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.4a-r1.ebuild,v 1.5 2007/06/11 21:44:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.4a-r1.ebuild,v 1.6 2007/07/13 07:15:13 mr_bones_ Exp $
 
 inherit eutils
 
@@ -79,7 +79,6 @@ src_compile() {
 		emake || die "emake failed"
 	fi
 }
-
 
 src_install() {
 	# cups-1.2 installation paths, make sure that the .desktop is installed

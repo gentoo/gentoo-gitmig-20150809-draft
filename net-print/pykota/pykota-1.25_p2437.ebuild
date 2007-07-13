@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437.ebuild,v 1.3 2007/06/26 02:37:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437.ebuild,v 1.4 2007/07/13 07:15:13 mr_bones_ Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -56,4 +56,3 @@ src_install() {
 	mv "${D}"/usr/share/doc/${PN}/* "${D}"/usr/share/doc/${P}
 	rmdir "${D}"/usr/share/doc/${PN}
 }
-
