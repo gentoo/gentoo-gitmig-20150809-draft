@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-4.9.ebuild,v 1.1 2007/06/04 04:49:32 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-4.9.ebuild,v 1.2 2007/07/13 14:26:05 corsair Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2"
