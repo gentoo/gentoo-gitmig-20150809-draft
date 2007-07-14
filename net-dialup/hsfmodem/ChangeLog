@@ -1,6 +1,19 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.38 2007/05/12 09:35:10 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.39 2007/07/14 08:42:20 mrness Exp $
+
+*hsfmodem-7.60.00.09 (14 Jul 2007)
+
+  14 Jul 2007; Alin Năstac <mrness@gentoo.org>
+  -files/hsfmodem-7.47.00.03-udev-group.patch,
+  -files/hsfmodem-7.47.00.05-udev-group.patch,
+  -files/hsfmodem-7.47.00.07-udev-group.patch,
+  -files/hsfmodem-7.60.00.01-udev-group.patch,
+  +files/hsfmodem-7.60.00.09-udev-group.patch, -hsfmodem-7.47.00.03.ebuild,
+  -hsfmodem-7.47.00.05.ebuild, -hsfmodem-7.47.00.07-r1.ebuild,
+  -hsfmodem-7.60.00.01.ebuild, +hsfmodem-7.60.00.09.ebuild:
+  Remove old versions. Version bump that solves compilation problems when
+  build against kernels >= 2.6.21 (#185193).
 
   12 May 2007; Steve Dibb <beandog@gentoo.org> hsfmodem-7.60.00.02.ebuild:
   amd64 stable, bug 174574
