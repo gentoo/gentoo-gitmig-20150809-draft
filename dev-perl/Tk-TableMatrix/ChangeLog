@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tk-TableMatrix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/ChangeLog,v 1.43 2007/05/05 18:08:12 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/ChangeLog,v 1.44 2007/07/14 13:55:01 armin76 Exp $
+
+  14 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  Tk-TableMatrix-1.2.3.ebuild:
+  alpha/ia64/x86 stable
 
   05 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   Tk-TableMatrix-1.2.3.ebuild:

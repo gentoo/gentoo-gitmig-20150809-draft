@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Want
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.26 2007/06/21 17:59:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.27 2007/07/14 13:57:14 armin76 Exp $
+
+  14 Jul 2007; Raúl Porcel <armin76@gentoo.org> Want-0.14.ebuild:
+  alpha/ia64/x86 stable
 
   21 Jun 2007; Michael Cummings <mcummings@gentoo.org> Want-0.14.ebuild:
   Marking sparc stable
