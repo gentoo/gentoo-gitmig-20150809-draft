@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.532 2007/07/13 19:08:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.533 2007/07/14 19:51:05 flameeyes Exp $
+
+  14 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> base/make.defaults,
+  default-linux/make.defaults:
+  Move cracklib default from default-linux/ to base/.
 
   13 Jul 2007; Chris Gianelloni <wolf31o2@gentoo.org> thirdpartymirrors:
   Adding 'games' to liflg mirror per bug #185119.

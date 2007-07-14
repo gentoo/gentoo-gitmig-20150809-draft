@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.27 2007/05/19 03:25:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.28 2007/07/14 19:51:05 flameeyes Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -40,12 +40,6 @@ INPUT_DEVICES="keyboard mouse evdev"
 # Lowest common denominator defaults for video drivers,
 # except hppa, which lacks v4l so removes it in the hppa profile
 VIDEO_CARDS="dummy fbdev v4l"
-
-# 2006/10/17 - Daniel Drake <dsd@gentoo.org>
-# cracklib is becoming optional in shadow (and removed from system) as of
-# today. However, cracklib is very standard across the Linux world so we
-# enable it by default.
-USE="${USE} cracklib"
 
 # 2006/10/28 - Luca Barbato <lu_zero@gentoo.org>
 # on glibc system you cannot turn it off
