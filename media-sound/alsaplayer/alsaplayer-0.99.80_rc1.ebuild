@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80_rc1.ebuild,v 1.2 2007/06/16 08:42:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80_rc1.ebuild,v 1.3 2007/07/14 18:39:11 drac Exp $
 
 inherit eutils autotools versionator
 
@@ -15,13 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
 IUSE="alsa audiofile doc esd flac gtk jack mikmod nas ogg opengl oss vorbis xosd"
 
-RDEPEND="
-	media-libs/alsa-lib
+RDEPEND="media-libs/alsa-lib
 	media-libs/libsndfile
 	media-libs/libmad
 	audiofile? ( media-libs/audiofile )
 	esd? ( media-sound/esound )
-	flac? ( media-libs/flac )
+	flac? ( >=media-libs/flac-1.1.3 )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.80.0 )
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	nas? ( media-libs/nas )
@@ -29,7 +28,6 @@ RDEPEND="
 	opengl? ( virtual/opengl )
 	vorbis? ( media-libs/libvorbis )
 	xosd? ( x11-libs/xosd )"
-
 DEPEND="${RDEPEND}
 	>=dev-libs/glib-2.10.1
 	dev-util/pkgconfig
@@ -42,9 +40,8 @@ S="${WORKDIR}"/${PN}-${MY_PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	epatch "${FILESDIR}"/${PN}-0.99.77-cxxflags.patch
-
+	epatch "${FILESDIR}"/${P}-amd64-flac-1.1.3.patch
 	eautoreconf
 }
 
