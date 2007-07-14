@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/Ice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.5 2007/03/13 12:27:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.6 2007/07/14 09:58:47 phreak Exp $
+
+  14 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning dev-cpp/Ice to m-needed, as chriswhite has been retired (#56211).
 
 *Ice-3.2.0 (13 Mar 2007)
 
