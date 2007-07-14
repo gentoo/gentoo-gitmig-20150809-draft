@@ -2,12 +2,7 @@ AUX evolvotron-0.3.1-gcc4.patch 1925 RMD160 306ba82b8a848f5c1f826591cbef297dea90
 MD5 694388937c6f0277b1cb582fe6cdc30e files/evolvotron-0.3.1-gcc4.patch 1925
 RMD160 306ba82b8a848f5c1f826591cbef297dea90c15a files/evolvotron-0.3.1-gcc4.patch 1925
 SHA256 962adb14214178f2dc533c2d7d05a9315a9acf82d1c3923460fb49604544cfd6 files/evolvotron-0.3.1-gcc4.patch 1925
-DIST evolvotron-0.3.1.tar.gz 129201 RMD160 e855ff686347d70c6d0251332f4ce6ff3768bea9 SHA1 29cc5878df3bdbc6e93dac32e995f5724f370210 SHA256 2cd56c25335d2875a52cb638294e1597cabfcf955f6828fbd0b67199556cf636
 DIST evolvotron-0.4.0.tar.gz 131967 RMD160 d27490a8b852cde823619c968a0566647d76461a SHA1 988b98946cbd3e5b7ddfe8b2e8f7b56be84a7e5e SHA256 f846aa85fe443a61afd64d28d491b9afc0f3fbb491f3e27da2d601048d40d1ed
-EBUILD evolvotron-0.3.1.ebuild 1037 RMD160 00ca70634ac4e9be7e9b6c90af96da71fbb4b3ad SHA1 392d5bfebcd23ea15895045ba26e59ae0dc8ce4f SHA256 3fefef92ba4be3594ca311e2ac85e7a13400aef277e2d99f983957fe202a7808
-MD5 2858ec39bb83dbe37179d19b0ef522e5 evolvotron-0.3.1.ebuild 1037
-RMD160 00ca70634ac4e9be7e9b6c90af96da71fbb4b3ad evolvotron-0.3.1.ebuild 1037
-SHA256 3fefef92ba4be3594ca311e2ac85e7a13400aef277e2d99f983957fe202a7808 evolvotron-0.3.1.ebuild 1037
 EBUILD evolvotron-0.4.0.ebuild 1047 RMD160 2de46521de31871def43efbbc05bd35af85e4269 SHA1 b383afa1cbf7b12df377ab58fa2831d443760b04 SHA256 de48149b3cda22480a9e9aecce9fa260a43edf35b3b282d4d05c3aaba369d2f2
 MD5 122f256b816fb2eb46a1cacebd45f6fc evolvotron-0.4.0.ebuild 1047
 RMD160 2de46521de31871def43efbbc05bd35af85e4269 evolvotron-0.4.0.ebuild 1047
@@ -20,9 +15,6 @@ MISC metadata.xml 231 RMD160 edee523a81eb20b171a5dd298e8507ecd49230f6 SHA1 f7829
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
 RMD160 edee523a81eb20b171a5dd298e8507ecd49230f6 metadata.xml 231
 SHA256 f9af69429b315694d8f6094781bf242d6235450fc58aba6e9e35e28099cc334a metadata.xml 231
-MD5 7f43acb8b176f9ce25084e7bc7c582b8 files/digest-evolvotron-0.3.1 250
-RMD160 612ad046eaf2032f809cdceadd14150059e620c0 files/digest-evolvotron-0.3.1 250
-SHA256 d886dffd877ec762546e17289ec78a964553be4f21ef857a8947f922e730c0e5 files/digest-evolvotron-0.3.1 250
 MD5 f07ec304cdc2eb4b1b21adf1aea26759 files/digest-evolvotron-0.4.0 250
 RMD160 edd9323065e9812bcd7d017584e8eaf387cbc491 files/digest-evolvotron-0.4.0 250
 SHA256 d8b4797180b0e1ab795f3c77c1db65d5349e021b4e0cf8d108d888a47cad1990 files/digest-evolvotron-0.4.0 250
