@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.196 2007/07/10 12:52:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.197 2007/07/14 14:26:14 armin76 Exp $
+
+  14 Jul 2007; Raúl Porcel <armin76@gentoo.org> hal-0.5.9-r1.ebuild:
+  ia64 stable
 
   10 Jul 2007; Raúl Porcel <armin76@gentoo.org> hal-0.5.9.1.ebuild:
   Add ~alpha wrt #172789, thanks to Tobias Klausmann for testing
