@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.92 2007/07/09 10:31:38 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.93 2007/07/14 05:02:48 dberkholz Exp $
+
+*xinit-1.0.4 (14 Jul 2007)
+
+  14 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/gentoo-startx-customization-1.0.4.patch, +xinit-1.0.4.ebuild:
+  Bump. Mostly removes cruft. Also sets the WINDOWPATH variable for anyone
+  needing that.
 
   09 Jul 2007; Roy Marples <uberlord@gentoo.org> files/xdm.initd-1:
   The xdm init script is now after modules, #179032.
