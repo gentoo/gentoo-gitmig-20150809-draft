@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-input-joystick
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-joystick/ChangeLog,v 1.41 2007/07/03 12:57:17 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-joystick/ChangeLog,v 1.42 2007/07/14 05:32:12 dberkholz Exp $
+
+*xf86-input-joystick-1.2.2 (14 Jul 2007)
+
+  14 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-input-joystick-1.2.2.ebuild:
+  Bump. Changes include: Additional valuator per axis reporting unmodified
+  physical value to X; Reporting correct amount of exported buttons to X;
+  Button event is only generated when button actually changed.
 
   03 Jul 2007; Lars Weiler <pylon@gentoo.org>
   xf86-input-joystick-1.1.1.ebuild:
