@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/chntpw-0.99.3.20070409.ebuild,v 1.1 2007/07/13 17:04:14 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/chntpw-0.99.4.20070409.ebuild,v 1.1 2007/07/14 17:24:56 alonbl Exp $
 
 DESCRIPTION="Offline Windows NT Password & Registry Editor"
 HOMEPAGE="http://home.eunet.no/~pnordahl/ntpasswd/"
