@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.36 2007/05/28 14:59:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.37 2007/07/14 14:21:56 armin76 Exp $
+
+  14 Jul 2007; Raúl Porcel <armin76@gentoo.org> cppunit-1.12.0.ebuild:
+  ia64 stable
 
   28 May 2007; Tiziano Müller <dev-zero@gentoo.org>
   +files/cppunit-1.10.2-asneeded.patch:
