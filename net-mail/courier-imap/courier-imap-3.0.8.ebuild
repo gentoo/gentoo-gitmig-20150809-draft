@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.8.ebuild,v 1.23 2007/07/02 14:54:21 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.8.ebuild,v 1.24 2007/07/14 22:22:19 mr_bones_ Exp $
 
 inherit eutils
 
@@ -290,7 +290,6 @@ src_install() {
 
 	dodir /usr/bin
 	mv ${D}/usr/sbin/maildirmake ${D}/usr/bin/maildirmake
-
 
 	keepdir /var/lib/courier-imap/authdaemon
 

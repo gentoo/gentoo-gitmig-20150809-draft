@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.10.ebuild,v 1.8 2007/06/12 13:04:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.10.ebuild,v 1.9 2007/07/14 22:22:19 mr_bones_ Exp $
 
 inherit eutils
 
@@ -28,7 +28,6 @@ DEPEND="virtual/qmail
 RDEPEND="${DEPEND}"
 # apache and lighttpd both work, but there's no virtual yet
 #	net-www/apache"
-
 
 S=${WORKDIR}/${MY_P}
 

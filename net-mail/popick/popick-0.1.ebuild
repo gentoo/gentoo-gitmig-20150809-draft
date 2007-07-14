@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popick/popick-0.1.ebuild,v 1.4 2006/02/13 14:58:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popick/popick-0.1.ebuild,v 1.5 2007/07/14 22:22:19 mr_bones_ Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ DEPEND=""
 RDEPEND="dev-lang/perl
 	dev-perl/Curses-UI
 	virtual/perl-Getopt-Long"
-
 
 src_unpack() {
 	unpack ${A}

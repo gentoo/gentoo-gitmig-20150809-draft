@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004g-r2.ebuild,v 1.15 2007/04/01 20:46:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004g-r2.ebuild,v 1.16 2007/07/14 22:22:19 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -114,7 +114,6 @@ src_compile() {
 		else
 			yes | make lnp ${mymake} ${ipver} SSLTYPE=unix.nopwd EXTRACFLAGS="${CFLAGS}" || die
 		fi
-
 
 		local i
 		for i in imapd ipop3d; do

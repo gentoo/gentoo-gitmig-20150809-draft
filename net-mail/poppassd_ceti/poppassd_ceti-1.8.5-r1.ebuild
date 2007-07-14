@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/poppassd_ceti-1.8.5-r1.ebuild,v 1.3 2005/10/10 09:15:12 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/poppassd_ceti-1.8.5-r1.ebuild,v 1.4 2007/07/14 22:22:19 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs pam portability
 
@@ -44,4 +44,3 @@ src_install() {
 	insopts -o root -g bin -m 500
 	doins poppassd || die "Install failed."
 }
-

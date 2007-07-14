@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.12-r4.ebuild,v 1.11 2007/07/08 18:07:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.12-r4.ebuild,v 1.12 2007/07/14 22:22:19 mr_bones_ Exp $
 
 inherit eutils ssl-cert fixheadtails pam
 
@@ -136,7 +136,6 @@ pkg_setup() {
 
 	enewuser cyrus -1 -1 /usr/cyrus mail
 }
-
 
 src_unpack() {
 	unpack ${A} && cd "${S}"

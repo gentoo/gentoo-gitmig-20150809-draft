@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nmzmail/nmzmail-0.1.3.ebuild,v 1.2 2005/07/31 11:15:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nmzmail/nmzmail-0.1.3.ebuild,v 1.3 2007/07/14 22:22:19 mr_bones_ Exp $
 
 DESCRIPTION="Fast mail searchng for mutt using namazu"
 HOMEPAGE="http://www.ecademix.com/JohannesHofmann/#nmzmail"
@@ -23,4 +23,3 @@ src_install() {
 	make DESTDIR="${D}" install || die "Install failed"
 	dodoc README AUTHORS NEWS
 }
-

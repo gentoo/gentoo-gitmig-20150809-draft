@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/renattach/renattach-1.2.2.ebuild,v 1.1 2005/03/07 20:23:48 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/renattach/renattach-1.2.2.ebuild,v 1.2 2007/07/14 22:22:19 mr_bones_ Exp $
 
 inherit eutils
 
@@ -26,4 +26,3 @@ src_install () {
 
 	dodoc AUTHORS ChangeLog README COPYING INSTALL NEWS
 }
-
