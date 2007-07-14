@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/rbldnsd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.7 2007/05/06 09:21:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.8 2007/07/14 09:34:58 phreak Exp $
+
+  14 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning net-dns/rbldnsd to m-needed, as chriswhite has been retired (#56211).
 
   06 May 2007; Marius Mauch <genone@gentoo.org> rbldnsd-0.995.ebuild,
   rbldnsd-0.996.ebuild:
