@@ -1,6 +1,16 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.51 2007/07/13 14:39:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.52 2007/07/14 10:52:13 cardoe Exp $
+
+*nvidia-drivers-1.0.9639 (14 Jul 2007)
+
+  14 Jul 2007; Doug Goldstein <cardoe@gentoo.org>
+  -files/nvidia-settings.desktop, -files/nvidia-settings.png,
+  +nvidia-drivers-1.0.9639.ebuild, -nvidia-drivers-100.14.09.ebuild,
+  nvidia-drivers-100.14.11.ebuild:
+  add ebuild for 1.0.9639 drivers. Merge in updates from 100.14.11 drivers.
+  Removed old 100.14.09 drivers. No longer build nvidia-settings part of the
+  drivers but PDEPEND on it via gtk USE flag. Other misc cleanups.
 
   13 Jul 2007; Doug Goldstein <doug@gentoo.org>
   nvidia-drivers-100.14.11.ebuild:

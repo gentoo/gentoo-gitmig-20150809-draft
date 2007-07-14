@@ -1,10 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.11.ebuild,v 1.6 2007/07/13 18:27:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.11.ebuild,v 1.7 2007/07/14 10:52:13 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
-SETTINGS_V="1.0"
 NV_V="${PV/1.0./1.0-}"
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
 AMD64_NV_PACKAGE="NVIDIA-Linux-x86_64-${NV_V}"
@@ -14,8 +13,7 @@ DESCRIPTION="NVIDIA X11 driver and GLX libraries"
 HOMEPAGE="http://www.nvidia.com/"
 SRC_URI="x86? ( http://us.download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PACKAGE}-pkg0.run )
 	 amd64? ( http://us.download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${AMD64_NV_PACKAGE}-pkg2.run )
-	 x86-fbsd? ( http://us.download.nvidia.com/freebsd/${NV_V}/${X86_FBSD_NV_PACKAGE}.tar.gz )
-	 gtk? ( ftp://download.nvidia.com/XFree86/nvidia-settings/nvidia-settings-${SETTINGS_V}.tar.gz )"
+	 x86-fbsd? ( http://us.download.nvidia.com/freebsd/${NV_V}/${X86_FBSD_NV_PACKAGE}.tar.gz )"
 
 LICENSE="NVIDIA"
 SLOT="0"
@@ -25,25 +23,17 @@ RESTRICT="strip"
 EMULTILIB_PKG="true"
 
 COMMON="x11-base/xorg-server
-	x11-libs/libXt
-	kernel_FreeBSD? ( !media-video/nvidia-freebsd )
 	multilib? ( app-emulation/emul-linux-x86-xlibs )
-	!media-video/nvidia-settings
+	kernel_FreeBSD? ( !media-video/nvidia-freebsd )
 	!app-emulation/emul-linux-x86-nvidia
 	!x11-drivers/nvidia-legacy-drivers"
 DEPEND="${COMMON}
-	kernel_linux? ( virtual/linux-sources )
-	>=x11-libs/gtk+-2
-	dev-util/pkgconfig
-	x11-libs/libXv
-	x11-proto/xf86driproto
-	x11-misc/imake
-	x11-misc/gccmakedep"
+	kernel_linux? ( virtual/linux-sources )"
 RDEPEND="${COMMON}
 	kernel_linux? ( virtual/modutils )
 	media-libs/mesa
-	app-admin/eselect-opengl
-	>=x11-libs/gtk+-2"
+	app-admin/eselect-opengl"
+PDEPEND="gtk? ( media-video/nvidia-settings )"
 
 QA_TEXTRELS_x86="usr/lib/xorg/libXvMCNVIDIA.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
@@ -107,7 +97,6 @@ elif use x86-fbsd; then
 fi
 
 S="${WORKDIR}/${NV_PACKAGE}${PKG_V}/usr/src/nv"
-SETTINGS_DIR="${WORKDIR}/nvidia-settings-${SETTINGS_V}"
 
 # On BSD userland it wants real make command
 MAKE="make"
@@ -195,15 +184,6 @@ src_unpack() {
 		# If greater than 2.6.5 use M= instead of SUBDIR=
 		cd "${S}"; convert_to_m Makefile.kbuild
 	fi
-
-	if use gtk; then
-		cd "${WORKDIR}"
-		unpack "nvidia-settings-${SETTINGS_V}.tar.gz"
-		cd "${SETTINGS_DIR}" || die
-		sed -i.orig \
-			-e 's,DoNormalLib NormalLibXrandr,DoNormalLib YES,g' \
-			src/libXNVCtrl/Imakefile || die "sed Imakefile"
-	fi
 }
 
 src_compile() {
@@ -216,19 +196,6 @@ src_compile() {
 		MAKE="$(get_bmake)" emake CC="$(tc-getCC)" LD="$(tc-getLD)" LDFLAGS="$(raw-ldflags)" || die
 	else
 		linux-mod_src_compile
-	fi
-
-	if use gtk; then
-		# nvidia-settings
-		einfo "Building libXNVCtrl..."
-		cd "${SETTINGS_DIR}/src/libXNVCtrl"
-		xmkmf -a || die "Running xmkmf failed"
-		make clean || die "Cleaning old libXNVCtrl failed"
-		emake CDEBUGFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die "emake libXNVCtrl"
-
-		cd "${SETTINGS_DIR}"
-		einfo "Building nVidia-Settings..."
-		emake CC="$(tc-getCC)" || die "emake settings"
 	fi
 }
 
@@ -247,7 +214,7 @@ src_install() {
 		fi
 
 		# Add the aliases
-		[[ -f "${FILESDIR}"/nvidia-2 ]] || die "nvidia-2 missing in FILESDIR"
+		[ -f "${FILESDIR}/nvidia-2" ] || die "nvidia-2 missing in FILESDIR"
 		sed -e 's:\${PACKAGE}:'${PF}':g' \
 			-e 's:VIDEOGID:'${VIDEOGROUP}':' "${FILESDIR}"/nvidia-2 > "${WORKDIR}"/nvidia
 		insinto /etc/modules.d
@@ -295,23 +262,6 @@ src_install() {
 
 	# Taking nvidia-xconfig from nvidia-drivers to help config xorg.conf
 	dobin usr/bin/nvidia-xconfig || die
-
-	if use gtk; then
-		# nvidia-settings
-		dobin usr/bin/nvidia-settings || die
-		cd "${SETTINGS_DIR}"
-		insinto "/usr/$(get_libdir)"
-		doins src/libXNVCtrl/libXNVCtrl.a || die
-		insinto /usr/include/NVCtrl
-		doins src/libXNVCtrl/{NVCtrl,NVCtrlLib}.h || die
-
-		# Install icon and .desktop entry
-		doicon "${FILESDIR}/nvidia-settings.png" || die "doicon"
-		domenu "${FILESDIR}/nvidia-settings.desktop" || die "domenu"
-
-		doman doc/nvidia-settings.1 || die
-		dodoc doc/*.txt
-	fi
 }
 
 # Install nvidia library:
@@ -343,9 +293,8 @@ src_install-libs() {
 
 	local usrpkglibdir=usr/${pkglibdir}
 	local libdir=usr/X11R6/${pkglibdir}
-	local modules=${libdir}/modules
-	local drvdir=${modules}/drivers
-	local extdir=${modules}/extensions
+	local drvdir=${libdir}/modules/drivers
+	local extdir=${libdir}/modules/extensions
 	local incdir=usr/include/GL
 	local sover=${PV}
 	local NV_ROOT="/usr/${inslibdir}/opengl/nvidia"
@@ -397,8 +346,7 @@ src_install-libs() {
 
 	if ! use x86-fbsd; then
 		# Install the .la file for libtool, to prevent e.g. bug #176423
-		[[ -f "${FILESDIR}"/libGL.la-r2 ]] \
-			|| die "libGL.la-r2 missing in FILESDIR"
+		[ -f "${FILESDIR}/libGL.la-r2" ] || die "libGL.la-r2 missing in FILESDIR"
 		local ver1=$(get_version_component_range 1)
 		local ver2=$(get_version_component_range 2)
 		local ver3=$(get_version_component_range 3)
@@ -426,8 +374,8 @@ src_install-libs() {
 			/usr/${inslibdir}/libXvMCNVIDIA.so
 
 	exeinto ${NV_ROOT}/extensions
-	[[ -f ${modules}/libnvidia-wfb.so.${sover} ]] && \
-		newexe ${modules}/libnvidia-wfb.so.${sover} libwfb.so
+	[[ -f ${libdir}/modules/libnvidia-wfb.so.${sover} ]] && \
+		newexe ${libdir}/modules/libnvidia-wfb.so.${sover} libwfb.so
 	[[ -f ${extdir}/libglx.so.${sover} ]] && \
 		newexe ${extdir}/libglx.so.${sover} libglx.so
 
