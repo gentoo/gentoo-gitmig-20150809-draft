@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.533 2007/07/14 19:51:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.534 2007/07/14 22:47:02 tester Exp $
+
+  14 Jul 2007; <tester@gentoo.org> package.mask:
+  Mask net-www/netscape-flash
 
   14 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> base/make.defaults,
   default-linux/make.defaults:

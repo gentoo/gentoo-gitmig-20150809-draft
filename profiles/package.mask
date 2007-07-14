@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7481 2007/07/14 10:47:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7482 2007/07/14 22:47:02 tester Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Olivier Crête <tester@gentoo.org> (14 Jul 1007)
+# We can't mirror. Different upstream mirrors have different versions
+# and the tarballs are unversioned
+# And the older versions are affected by critical remote security vulnerability
+# See Gentoo bug #185141
+net-www/netscape-flash
 
 # Doug Goldstein <cardoe@gentoo.org> (14 Jul 2007)
 # ebuilds under active development
