@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>perl</herd>
-<maintainer>
-	<email>chriswhite@gentoo.org</email>
-	<name>Chris White</name>
-</maintainer>
-<longdescription lang="en">
-Eidetic is a middleware library for building database driven
-applications with Perl.  It provides handlers for displaying, editing,
-searching, and administrating data in various ways.  It is intended to
-be interface-generic, including web, commandline, daemon, and other
-types of interfacing to be used.  It is currently used by several
-applications, including STP, docsys, and rackview.
-</longdescription>
+	<herd>perl</herd>
+	<longdescription lang="en">
+		Eidetic is a middleware library for building database driven
+		applications with Perl. It provides handlers for displaying, editing,
+		searching, and administrating data in various ways. It is intended to
+		be interface-generic, including web, commandline, daemon, and other
+		types of interfacing to be used. It is currently used by several
+		applications, including STP, docsys, and rackview.
+	</longdescription>
 </pkgmetadata>
-

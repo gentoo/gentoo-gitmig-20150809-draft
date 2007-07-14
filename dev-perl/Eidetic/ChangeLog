@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Eidetic
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/ChangeLog,v 1.10 2007/03/03 23:39:42 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/ChangeLog,v 1.11 2007/07/14 09:49:56 phreak Exp $
+
+  14 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning dev-perl/Eidetic to perl-herd, as chriswhite has been retired
+  (#56211).
 
   03 Mar 2007; Marius Mauch <genone@gentoo.org> Eidetic-2.003003.ebuild:
   Replacing einfo with elog
