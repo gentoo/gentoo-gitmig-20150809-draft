@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jarbundler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.8 2007/07/13 08:28:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.9 2007/07/14 12:46:26 opfer Exp $
+
+  14 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  jarbundler-1.7.ebuild:
+  stable x86, bug 184941
 
 *jarbundler-1.8.1-r1 (13 Jul 2007)
 
