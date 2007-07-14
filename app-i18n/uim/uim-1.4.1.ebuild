@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.1.ebuild,v 1.5 2007/07/12 14:57:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.1.ebuild,v 1.6 2007/07/14 06:11:56 matsuu Exp $
 
 inherit eutils qt3 multilib elisp-common flag-o-matic
 
@@ -128,6 +128,8 @@ pkg_postinst() {
 	elog "All input methods can be found by running uim-im-switcher-gtk"
 	elog "or uim-im-switcher-qt."
 	elog
+	elog "If you upgrade from a version of uim older than 1.4.0,"
+	elog "you should run revdep-rebuild."
 
 	use gtk && gtk-query-immodules-2.0 > "${ROOT}"/${GTK2_CONFDIR}/gtk.immodules
 	use emacs && elisp-site-regen
