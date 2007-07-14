@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.62 2007/07/13 17:43:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.63 2007/07/14 10:53:27 armin76 Exp $
+
+  14 Jul 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  Mask xfce-extra/thunar-volman on 2.4 profiles
 
   13 Jul 2007; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Add hal use.flag mask on xfce-base/xfce4-extras until we keyword
