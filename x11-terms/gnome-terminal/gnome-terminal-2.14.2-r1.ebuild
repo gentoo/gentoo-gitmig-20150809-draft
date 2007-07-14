@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.14.2-r1.ebuild,v 1.3 2007/06/26 03:00:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.14.2-r1.ebuild,v 1.4 2007/07/14 21:54:51 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -34,7 +34,6 @@ DEPEND="${RDEPEND}
 # gnome-core overwrite /usr/bin/gnome-terminal
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
-
 
 src_unpack() {
 	gnome2_src_unpack
