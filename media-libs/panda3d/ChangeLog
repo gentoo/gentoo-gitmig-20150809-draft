@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/panda3d
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/ChangeLog,v 1.5 2007/04/30 23:28:32 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/ChangeLog,v 1.6 2007/07/14 09:38:18 phreak Exp $
+
+  14 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning media-libs/panda3d to m-needed, as chriswhite has been retired
+  (#56211).
 
   30 Apr 2007; Marius Mauch <genone@gentoo.org> panda3d-1.0.4.ebuild,
   panda3d-1.0.5.ebuild:
