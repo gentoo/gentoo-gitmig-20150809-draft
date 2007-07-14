@@ -1,6 +1,10 @@
 # ChangeLog for app-office/tinyerp-client
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-client/ChangeLog,v 1.6 2007/03/17 12:25:02 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-client/ChangeLog,v 1.7 2007/07/14 15:53:53 cedk Exp $
+
+  14 Jul 2007; Cédric Krier <cedk@gentoo.org>
+  -files/tinyerp-client-4.0.2-setup.patch, -tinyerp-client-4.0.2.ebuild:
+  Remove old
 
 *tinyerp-client-4.0.3 (17 Mar 2007)
 
