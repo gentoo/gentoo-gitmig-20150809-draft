@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>perl</herd>
-<maintainer>
-	<email>chriswhite@gentoo.org</email>
-	<name>Chris White</name>
-</maintainer>
-<longdescription lang="en">
-    Module for sending mails with attachments through an SMTP server
-</longdescription>
-<longdescription lang="ja">
-    SMTPでアタッチメントでメールを送るperlモジュール
-</longdescription>
+	<herd>perl</herd>
+	<longdescription lang="en">
+	    Module for sending mails with attachments through an SMTP server
+	</longdescription>
+	<longdescription lang="ja">
+	    SMTPでアタッチメントでメールを送るperlモジュール
+	</longdescription>
 </pkgmetadata>
