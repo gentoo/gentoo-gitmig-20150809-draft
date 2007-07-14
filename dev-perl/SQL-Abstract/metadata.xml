@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>perl</herd>
-<maintainer>
-	<email>chriswhite@gentoo.org</email>
-	<name>Chris White</name>
-</maintainer>
-<longdescription lang="en">
-A Perl module to create SQL statements based on perl structures.
-</longdescription>
-<longdescription lang="ja">
-perlデータ構造でSQLステートメントを作るperlモジュール。
-</longdescription>
+	<herd>perl</herd>
+	<longdescription lang="en">
+		A Perl module to create SQL statements based on perl structures.
+	</longdescription>
+	<longdescription lang="ja">
+		perlデータ構造でSQLステートメントを作るperlモジュール。
+	</longdescription>
 </pkgmetadata>
-
