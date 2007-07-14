@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/akode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.27 2007/04/08 13:11:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.28 2007/07/14 18:08:18 drac Exp $
+
+  14 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/akode-2.0.2-amd64-flac-1.1.3.patch, akode-2.0.2.ebuild:
+  Fix building with >=flac-1.1.3 on AMD64 systems for bug 185330, thanks to
+  Chris Smith for reporting and Huber Olivier for testing.
 
 *akode-2.0.2 (08 Apr 2007)
 

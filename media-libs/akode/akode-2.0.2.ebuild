@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/akode-2.0.2.ebuild,v 1.1 2007/04/08 13:11:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/akode-2.0.2.ebuild,v 1.2 2007/07/14 18:08:18 drac Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -8,7 +8,7 @@ WANT_AUTOCONF="2.5"
 inherit eutils autotools
 
 MY_P=${P/_beta/b}
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 DESCRIPTION="A simple framework to decode the most common audio formats."
 HOMEPAGE="http://www.carewolf.com/"
@@ -30,8 +30,8 @@ DEPEND="media-libs/libsamplerate
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-amd64-flac-1.1.3.patch
 
 	sed -i -e '/case $AUTO\(CONF\|HEADER\)_VERSION in/,+1 s/2\.5/2.[56]/g' \
 		admin/cvs.sh
