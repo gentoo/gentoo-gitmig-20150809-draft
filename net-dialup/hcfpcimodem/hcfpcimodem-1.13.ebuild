@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.12.ebuild,v 1.2 2007/05/02 08:03:27 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.13.ebuild,v 1.1 2007/07/14 07:41:55 mrness Exp $
 
 inherit eutils linux-info
 
@@ -48,6 +48,12 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+
+	epatch "${FILESDIR}/${P}-implicit-declarations.patch"
+}
+
 src_compile() {
 	emake all || die "make failed"
 }
@@ -63,6 +69,9 @@ pkg_preinst() {
 
 src_install () {
 	make PREFIX="${D}/usr/" ROOT="${D}" install || die "make install failed"
+
+	# in some cases, kernelcompiler.sh does not have x permission (#173414)
+	fperms a+rx /usr/lib/hcfpcimodem/modules/kernelcompiler.sh
 
 	use doc && dodoc "${DISTDIR}/${MY_DOC}"
 }
