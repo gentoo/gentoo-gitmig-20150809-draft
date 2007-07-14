@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/arc-5.21m.ebuild,v 1.8 2005/11/29 02:56:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/arc-5.21m.ebuild,v 1.9 2007/07/14 14:10:09 drizzt Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/arc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
