@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cache
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache/ChangeLog,v 1.4 2006/10/20 21:45:43 mcummings Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache/ChangeLog,v 1.5 2007/07/14 09:52:52 phreak Exp $
+
+  14 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning dev-perl/Cache to perl-herd, as chriswhite has been retired (#56211).
 
   20 Oct 2006; Michael Cummings <mcummings@gentoo.org> Cache-2.04.ebuild:
   Marking amd64 stable
