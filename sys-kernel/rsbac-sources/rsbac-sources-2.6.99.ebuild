@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.6.99.ebuild,v 1.5 2006/02/16 10:18:38 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.6.99.ebuild,v 1.6 2007/07/14 23:11:23 mr_bones_ Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -17,7 +17,6 @@ RGPV_SRC="http://dev.gentoo.org/~kang/rsbac/patches/${RSBACV}/2.6/rsbac-patches-
 UNIPATCH_STRICTORDER="yes"
 UNIPATCH_LIST="${DISTDIR}/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2"
 UNIPATCH_DOCS="${WORKDIR}/patches/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}/0000_README"
-
 
 HOMEPAGE="http://hardened.gentoo.org/rsbac/"
 DESCRIPTION="RSBAC hardened sources for the ${KV_MAJOR}.${KV_MINOR} kernel tree"

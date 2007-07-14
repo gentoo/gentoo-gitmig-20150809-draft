@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.22-r4.ebuild,v 1.1 2007/07/14 06:58:02 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.22-r4.ebuild,v 1.2 2007/07/14 23:11:23 mr_bones_ Exp $
 
 UNIPATCH_STRICTORDER="yes"
 K_NOUSENAME="yes"
@@ -13,7 +13,6 @@ CKV="${PVR/-r/-git}"
 [ "${PV/_pre}" == "${PV}" ] && [ "${PV/_rc}" == "${PV}" ] && OKV="${PV}"
 inherit kernel-2
 detect_version
-
 
 DESCRIPTION="The very latest -git version of the Linux kernel"
 HOMEPAGE="http://www.kernel.org"

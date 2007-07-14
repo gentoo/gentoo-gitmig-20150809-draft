@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.14.4.ebuild,v 1.2 2006/04/30 17:48:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.14.4.ebuild,v 1.3 2007/07/14 23:11:23 mr_bones_ Exp $
 
 # Eclass bits
 ETYPE="headers"
@@ -22,7 +22,6 @@ USEPNT="yes"
 # 1) linux sources from kernel.org
 # 2) linux-mips.org GIT snapshot diff from 15 Jan 2005
 # 4) Generic mips patches
-
 
 # If USEPNT == "yes", use a point release kernel (2.6.x.y)
 if [ "${USEPNT}" = "yes" ]; then
@@ -55,7 +54,6 @@ UNIPATCH_LIST="
 	${WORKDIR}/mips-patches-h/linux-headers-2.6.14-appCompat.patch
 	${WORKDIR}/mips-patches-h/${PN}-2.6.14-appCompat.patch"
 
-
 # IP27 (Origin) support? (includes additonal headers)
 if use ip27; then
 	UNIPATCH_LIST="${UNIPATCH_LIST} ${WORKDIR}/mips-patches/misc-2.6.14-ioc3-metadriver-r26.patch"
@@ -72,13 +70,11 @@ if use ip30; then
 	UNIPATCH_LIST="${UNIPATCH_LIST} ${WORKDIR}/mips-patches/misc-2.6.14-ip30-octane-support-r27.patch"
 fi
 
-
 src_unpack() {
 
 	# unpack ${A} unapcks kernel sources a second time, which we don't want
 	local my_a=${A/linux-${OKV}.tar.bz2/}
 	unpack ${my_a}
-
 
 	# kernel-2 stuff
 	kernel-2_src_unpack

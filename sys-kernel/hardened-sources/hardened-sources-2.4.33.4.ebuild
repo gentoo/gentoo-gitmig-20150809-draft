@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.33.4.ebuild,v 1.2 2007/01/11 22:37:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.33.4.ebuild,v 1.3 2007/07/14 23:11:23 mr_bones_ Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -27,4 +27,3 @@ RDEPEND="${RDEPEND}"
 
 UNIPATCH_STRICTORDER="yes"
 UNIPATCH_LIST="${DISTDIR}/${MY_PATCH_TBZ}"
-

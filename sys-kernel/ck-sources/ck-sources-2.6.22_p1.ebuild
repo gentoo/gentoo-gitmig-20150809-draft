@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.22_p1.ebuild,v 1.1 2007/07/13 20:39:47 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.22_p1.ebuild,v 1.2 2007/07/14 23:11:23 mr_bones_ Exp $
 
 DESCRIPTION="Full sources for the Linux kernel with Con Kolivas' high performance patchset and Gentoo's basic patchset."
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"
@@ -39,7 +39,6 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI}
 	)
 	!ck-server? (
 	mirror://kernel/linux/kernel/people/ck/patches/2.6/${OKV}/${KV_CK}/${CKPATCH} )"
-
 
 pkg_postinst() {
 	postinst_sources
