@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-1.5.1.ebuild,v 1.1 2006/07/24 22:06:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-1.5.1.ebuild,v 1.2 2007/07/14 22:18:04 mr_bones_ Exp $
 
 inherit linux-mod
 
@@ -15,7 +15,6 @@ DEPEND="${RDEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~ppc ~x86"
-
 
 pkg_setup() {
 	linux-mod_pkg_setup

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.02.00-r1.ebuild,v 1.5 2007/03/09 11:15:04 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.02.00-r1.ebuild,v 1.6 2007/07/14 22:18:04 mr_bones_ Exp $
 
 inherit eutils
 
@@ -28,7 +28,6 @@ DEPEND="=sys-cluster/magma-${CLUSTER_RELEASE}*
 RDEPEND=""
 
 #	!nogulm? ( >=sys-cluster/gulm-${CLUSTER_RELEASE}* )"
-
 
 S="${WORKDIR}/${MY_P}/${PN}"
 

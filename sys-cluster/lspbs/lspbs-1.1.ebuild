@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lspbs/lspbs-1.1.ebuild,v 1.1 2006/11/22 19:46:02 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lspbs/lspbs-1.1.ebuild,v 1.2 2007/07/14 22:18:04 mr_bones_ Exp $
 
 inherit multilib flag-o-matic
 
@@ -28,4 +28,3 @@ src_install() {
 	doman "${D}"/usr/share/lspbs.1 || die "doman failed"
 	rm -f "${D}"/usr/share/lspbs.1 || die "failed to remove old man page"
 }
-

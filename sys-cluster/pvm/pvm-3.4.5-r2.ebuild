@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r2.ebuild,v 1.9 2006/09/26 05:11:58 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r2.ebuild,v 1.10 2007/07/14 22:18:04 mr_bones_ Exp $
 
 inherit eutils multilib
 
@@ -78,7 +78,6 @@ src_install() {
 	ln -s /usr/share/pvm3/lib/${linuxdir}/pvm ${D}/usr/bin/pvm
 	ln -s /usr/share/pvm3/lib/${linuxdir}/pvmd3 ${D}/usr/bin/pvmd3
 	ln -s /usr/share/pvm3/lib/${linuxdir}/pvmgs ${D}/usr/bin/pvmgs
-
 
 	#environment variables:
 	echo PVM_ROOT=/usr/share/pvm3 > ${T}/98pvm

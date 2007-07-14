@@ -1,10 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-headers/gfs-headers-1.04.00.ebuild,v 1.1 2007/03/09 10:52:00 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-headers/gfs-headers-1.04.00.ebuild,v 1.2 2007/07/14 22:18:04 mr_bones_ Exp $
 
 CLUSTER_RELEASE="1.04.00"
 MY_P="cluster-${CLUSTER_RELEASE}"
-
 
 DESCRIPTION="GFS headers"
 HOMEPAGE="http://sources.redhat.com/cluster/"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.02.00-r1.ebuild,v 1.12 2007/03/09 15:12:26 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.02.00-r1.ebuild,v 1.13 2007/07/14 22:18:04 mr_bones_ Exp $
 
 inherit eutils linux-mod linux-info
 
@@ -53,7 +53,6 @@ src_unpack() {
 		fi
 	fi
 }
-
 
 src_compile() {
 	set_arch_to_kernel

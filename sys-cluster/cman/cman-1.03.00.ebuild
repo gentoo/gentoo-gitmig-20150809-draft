@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.03.00.ebuild,v 1.5 2007/05/12 13:18:52 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.03.00.ebuild,v 1.6 2007/07/14 22:18:04 mr_bones_ Exp $
 
 inherit eutils
 
@@ -29,7 +29,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-1.03.00-compile-hack.patch || die
 	epatch ${FILESDIR}/${PN}-1.03.00-qdisk-makefile.patch || die
 }
-
 
 src_compile() {
 	./configure || die "configure problem"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gulm/gulm-1.03.00.ebuild,v 1.2 2006/10/15 13:46:58 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gulm/gulm-1.03.00.ebuild,v 1.3 2007/07/14 22:18:04 mr_bones_ Exp $
 
 inherit linux-mod
 
@@ -15,14 +15,12 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
 
-
 DEPEND=">=sys-cluster/ccs-1.03.00
 	>=sys-cluster/cman-1.03.00
 	sys-apps/tcp-wrappers
 	"
 
 RDEPEND="sys-apps/tcp-wrappers"
-
 
 S="${WORKDIR}/${MY_P}/${PN}"
 
