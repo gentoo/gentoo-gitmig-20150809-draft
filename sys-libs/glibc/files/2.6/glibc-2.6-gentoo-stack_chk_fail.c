@@ -89,6 +89,7 @@
 # error Cannot do syscall exit
 #endif
 #ifdef SSP_SMASH_DUMPS_CORE
+# define ENABLE_SSP_SMASH_DUMPS_CORE 1
 # if !defined _KERNEL_NSIG && !defined _NSIG
 #  error No _NSIG or _KERNEL_NSIG for rt_sigaction
 # endif
@@ -105,6 +106,8 @@
 # else
 #  define _SSP_NSIG _NSIG
 # endif
+#else
+# define ENABLE_SSP_SMASH_DUMPS_CORE 0
 #endif
 
 /* Define DO_SIGACTION - default to newer rt signal interface but
@@ -118,33 +121,34 @@
 	INLINE_SYSCALL(sigaction, 3, signum, act, oldact)
 #endif
 
-/* Define DO_SOCKET/DO_CONNECT macros to deal with socketcall vs socket/connect */
+/* Define DO_SOCKET/DO_CONNECT functions to deal with socketcall vs socket/connect */
 #ifdef __NR_socketcall
-
-# define DO_SOCKET(result, domain, type, protocol) \
-	{socketargs[0] = domain; \
-	socketargs[1] = type; \
-	socketargs[2] = protocol; \
-	socketargs[3] = 0; \
-	result = INLINE_SYSCALL(socketcall, 2, SOCKOP_socket, socketargs);}
-
-# define DO_CONNECT(result,sockfd,serv_addr,addrlen) \
-	{socketargs[0] = sockfd; \
-	socketargs[1] = (unsigned long int)serv_addr; \
-	socketargs[2] = addrlen; \
-	socketargs[3] = 0; \
-	result = INLINE_SYSCALL(socketcall, 2, SOCKOP_connect, socketargs);}
-
+# define USE_OLD_SOCKETCALL 1
 #else
-
-# define DO_SOCKET(result, domain, type, protocol) \
-	{result = INLINE_SYSCALL(socket, 3, domain, type, protocol);}
-
-# define DO_CONNECT(result, sockfd, serv_addr, addrlen) \
-	{result = INLINE_SYSCALL(connect, 3, sockfd, serv_addr, addrlen);}
-
-#endif	/* __NR_socketcall */
-
+# define USE_OLD_SOCKETCALL 0
+#endif
+#define DO_SOCKET(result, domain, type, protocol) \
+	do { \
+		if (USE_OLD_SOCKETCALL) { \
+			socketargs[0] = domain; \
+			socketargs[1] = type; \
+			socketargs[2] = protocol; \
+			socketargs[3] = 0; \
+			result = INLINE_SYSCALL(socketcall, 2, SOCKOP_socket, socketargs); \
+		} else \
+			result = INLINE_SYSCALL(socket, 3, domain, type, protocol); \
+	} while (0)
+#define DO_CONNECT(result, sockfd, serv_addr, addrlen) \
+	do { \
+		if (USE_OLD_SOCKETCALL) { \
+			socketargs[0] = sockfd; \
+			socketargs[1] = (unsigned long int)serv_addr; \
+			socketargs[2] = addrlen; \
+			socketargs[3] = 0; \
+			result = INLINE_SYSCALL(socketcall, 2, SOCKOP_connect, socketargs); \
+		} else \
+			result = INLINE_SYSCALL(socket, 3, domain, type, protocol); \
+	} while (0)
 
 #ifndef _PATH_LOG
 # define _PATH_LOG "/dev/log"
@@ -182,14 +186,9 @@ __hardened_gentoo_stack_chk_fail(char func[], int damaged)
 	static const char msg_terminated[] = " - terminated\n";
 	static const char msg_report[] = "Report to http://bugs.gentoo.org/\n";
 	static const char msg_unknown[] = "<unknown>";
-#ifdef SSP_SMASH_DUMPS_CORE
-	static struct sigaction default_abort_act;
-#endif
 	static int log_socket, connect_result;
 	static struct sockaddr_un sock;
-#ifdef __NR_socketcall
 	static unsigned long int socketargs[4];
-#endif
 
 	/* Build socket address
 	 */
@@ -275,14 +274,16 @@ __hardened_gentoo_stack_chk_fail(char func[], int damaged)
 	/* Suicide */
 	pid = INLINE_SYSCALL(getpid, 0);
 
-#ifdef SSP_SMASH_DUMPS_CORE
-	/* Remove any user-supplied handler for SIGABRT, before using it */
-	default_abort_act.sa_handler = SIG_DFL;
-	default_abort_act.sa_sigaction = NULL;
-	__sigfillset(&default_abort_act.sa_mask);
-	default_abort_act.sa_flags = 0;
-	if (DO_SIGACTION(SIGABRT, &default_abort_act, NULL) == 0)
-		INLINE_SYSCALL(kill, 2, pid, SIGABRT);
+	if (ENABLE_SSP_SMASH_DUMPS_CORE) {
+		static struct sigaction default_abort_act;
+		/* Remove any user-supplied handler for SIGABRT, before using it */
+		default_abort_act.sa_handler = SIG_DFL;
+		default_abort_act.sa_sigaction = NULL;
+		__sigfillset(&default_abort_act.sa_mask);
+		default_abort_act.sa_flags = 0;
+		if (DO_SIGACTION(SIGABRT, &default_abort_act, NULL) == 0)
+			INLINE_SYSCALL(kill, 2, pid, SIGABRT);
+	}
 
 	/* Note; actions cannot be added to SIGKILL */
 	INLINE_SYSCALL(kill, 2, pid, SIGKILL);
