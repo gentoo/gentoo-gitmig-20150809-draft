@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/facets
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/ChangeLog,v 1.14 2007/03/09 19:53:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/ChangeLog,v 1.15 2007/07/14 14:29:37 nichoj Exp $
+
+*facets-1.8.54 (14 Jul 2007)
+
+  14 Jul 2007; Joshua Nichols <nichoj@gentoo.org> +facets-1.8.54.ebuild:
+  Version bump. See bug #185284.
 
   09 Mar 2007; Tom Gall <tgall@gentoo.org> facets-1.4.5.ebuild:
   added ~ppc64
