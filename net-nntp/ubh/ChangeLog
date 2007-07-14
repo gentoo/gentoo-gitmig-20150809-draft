@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/ubh
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/ubh/ChangeLog,v 1.8 2007/05/14 06:23:24 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/ubh/ChangeLog,v 1.9 2007/07/14 09:09:52 phreak Exp $
+
+  14 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning net-nntp/ubh to m-needed, as esammer retired (#36978).
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
