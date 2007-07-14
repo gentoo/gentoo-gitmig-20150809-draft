@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.0.27-r1.ebuild,v 1.2 2007/01/12 18:10:16 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.0.27-r1.ebuild,v 1.3 2007/07/14 21:39:02 robbat2 Exp $
 
 MY_EXTRAS_VER="20070105"
 SERVER_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/mysql-${PV//_/-}.tar.gz"
@@ -20,14 +20,14 @@ src_test() {
 		addpredict /this-dir-does-not-exist/t9.MYI
 
 		# mysqladmin start before dir creation
-		mkdir mysql-test/var{,/log}
+		mkdir -p "${S}"/mysql-test/var{,/log}
 
-		if [[ ${UID} -eq 0 ]] ; then
-			mysql_disable_test  "im_daemon_life_cycle" "fail as root"
-			mysql_disable_test  "im_life_cycle"        "fail as root"
-			mysql_disable_test  "im_options_set"       "fail as root"
-			mysql_disable_test  "im_options_unset"     "fail as root"
-			mysql_disable_test  "im_utils"             "fail as root"
+		if ! hasq "userpriv" ${FEATURES} ; then
+			mysql_disable_test	"im_daemon_life_cycle"	"fails as root"
+			mysql_disable_test	"im_life_cycle"			"fails as root"
+			mysql_disable_test	"im_options_set"		"fails as root"
+			mysql_disable_test	"im_options_unset"		"fails as root"
+			mysql_disable_test	"im_utils"				"fails as root"
 		fi
 
 		for t in \
@@ -39,10 +39,10 @@ src_test() {
 		ndb_{restore,subquery,transaction,trigger,truncate,types,update} \
 		ps_7ndb rpl_ndb_innodb_trans strict_autoinc_5ndb
 		do
-			mysql_disable_test "${t}" "fail in sandbox"
+			mysql_disable_test	"${t}"	"fails with sandbox enabled"
 		done
 
-		use "extraengine" && mysql_disable_test "federated" "fail with extraengine"
+		use "extraengine" && mysql_disable_test "federated" "fails with extraengine USE"
 
 		make test-force-pl
 		retstatus=$?
