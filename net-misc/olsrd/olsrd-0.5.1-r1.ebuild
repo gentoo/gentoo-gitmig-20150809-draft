@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.5.1.ebuild,v 1.1 2007/07/06 11:46:31 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.5.1-r1.ebuild,v 1.1 2007/07/14 10:49:29 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,6 +14,12 @@ KEYWORDS="~x86"
 IUSE="gtk"
 
 DEPEND="gtk? ( =x11-libs/gtk+-2* )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-fix-hashing.patch"
+}
 
 src_compile() {
 	cd "${S}"

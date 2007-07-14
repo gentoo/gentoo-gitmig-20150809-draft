@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/olsrd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.7 2007/07/06 11:46:31 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.8 2007/07/14 10:49:29 cedk Exp $
+
+*olsrd-0.5.1-r1 (14 Jul 2007)
+
+  14 Jul 2007; Cédric Krier <cedk@gentoo.org>
+  +files/olsrd-0.5.1-fix-hashing.patch, -olsrd-0.5.1.ebuild,
+  +olsrd-0.5.1-r1.ebuild:
+  Add patch to fix hashing
 
 *olsrd-0.5.1 (06 Jul 2007)
 
