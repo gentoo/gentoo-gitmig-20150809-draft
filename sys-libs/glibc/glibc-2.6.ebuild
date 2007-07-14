@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.9 2007/07/14 19:35:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.10 2007/07/14 23:01:21 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -228,7 +228,7 @@ toolchain-glibc_src_unpack() {
 		einfo "Patching to get working PIE binaries on PIE (hardened) platforms"
 		gcc-specs-pie && epatch "${FILESDIR}"/2.5/glibc-2.5-hardened-pie.patch
 		epatch "${FILESDIR}"/2.5/glibc-2.5-hardened-configure-picdefault.patch
-		epatch "${FILESDIR}"/2.5/glibc-2.5-hardened-inittls-nosysenter.patch
+		epatch "${FILESDIR}"/2.6/glibc-2.6-hardened-inittls-nosysenter.patch
 
 		einfo "Installing Hardened Gentoo SSP handler"
 		cp -f "${FILESDIR}"/2.6/glibc-2.6-gentoo-stack_chk_fail.c \
