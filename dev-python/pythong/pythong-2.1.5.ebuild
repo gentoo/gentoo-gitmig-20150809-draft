@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5.ebuild,v 1.8 2006/04/01 18:59:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5.ebuild,v 1.9 2007/07/14 08:23:33 hawking Exp $
 
 inherit python distutils
 
@@ -33,6 +33,18 @@ pkg_setup() {
 	python_tkinter_exists
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	python_version
+
+	sed -i \
+		-e "s:^\(fullpath = \).*:\1'/usr/lib/python${PYVER}/site-packages/':" \
+		-e "/^url_docFuncPG/s:'+fullpath+':/usr/share/doc/${PF}:" \
+		pythong.py || die "sed in pythong.py failed"
+}
+
 src_compile() {
 	return
 }
@@ -40,9 +52,6 @@ src_compile() {
 src_install() {
 
 	python_version
-
-	sed -e  "s#^fullpath = .*#fullpath = '/usr/lib/python${PYVER}/site-packages/'#" \
-		-i pythong.py
 
 	insinto /usr/lib/python${PYVER}/site-packages/
 	doins modulepythong.py
