@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7.ebuild,v 1.8 2006/11/29 15:42:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7.ebuild,v 1.9 2007/07/14 19:09:06 nerdboy Exp $
 
 inherit elisp-common flag-o-matic autotools
 
@@ -29,6 +29,7 @@ src_unpack() {
 	sed -e "s/gcl-doc/${PF}/g" ${S}/info/makefile > ${T}/makefile
 	mv ${T}/makefile ${S}/info/makefile
 	epatch ${FILESDIR}/${PV}-fix-configure.in-gentoo.patch || die
+	epatch ${FILESDIR}/${P}-fix-configure.in-bfd.patch || die
 }
 
 src_compile() {
