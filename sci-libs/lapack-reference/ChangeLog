@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/lapack-reference
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.26 2007/06/25 17:46:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.27 2007/07/14 00:15:25 nerdboy Exp $
+
+  14 Jul 2007; Steve Arnold <nerdboy@gentoo.org>
+  lapack-reference-3.1.0.ebuild:
+  Added last multilib fix and marked stable for amd64 (see bug #171784).  I
+  still haven't tracked down the test issue; google reveals almost nothing.
+  It seems to be rare and only occurs on 64-bit platforms.  Reference:
+  https://icl.cs.utk.edu/lapack-forum/viewtopic.php?t=299
 
   25 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   lapack-reference-3.1.1.ebuild:
