@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.58 2007/05/27 05:38:40 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.59 2007/07/14 05:22:50 dberkholz Exp $
+
+*xf86-video-i810-2.1.0 (14 Jul 2007)
+
+  14 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-video-i810-2.1.0.ebuild:
+  Bump. Vast quantities of changes. Some include performance improvements,
+  power savings, support for new chipsets, fixes for VT switching, sDVO RGB
+  outputs, and 830 fixes.
 
   27 May 2007; Donnie Berkholz <dberkholz@gentoo.org>; files/i810.xinf:
   Import new stuff from RH: moves 945 and 965 chips onto the 'intel' driver.
