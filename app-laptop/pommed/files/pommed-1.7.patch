@@ -1,11 +1,12 @@
---- pommed/Makefile.orig	2007-04-18 10:50:47.000000000 +0200
-+++ pommed/Makefile	2007-04-18 10:51:09.000000000 +0200
+diff -ru pommed-1.7~/pommed/Makefile pommed-1.7/pommed/Makefile
+--- pommed-1.7~/pommed/Makefile	2007-07-14 17:21:16.000000000 +0200
++++ pommed-1.7/pommed/Makefile	2007-07-14 17:22:40.000000000 +0200
 @@ -11,7 +11,7 @@
  CONFUSE_CFLAGS = $(shell pkg-config libconfuse --cflags)
  CONFUSE_LIBS = $(shell pkg-config libconfuse --libs)
  
 -CFLAGS = -g -O2 -Wall $(DBUS_CFLAGS) $(ALSA_CFLAGS) $(CONFUSE_CFLAGS)
-+CFLAGS += -Wall $(DBUS_CFLAGS) $(ALSA_CFLAGS) $(CONFUSE_CFLAGS)
++CFLAGS += -g -Wall $(DBUS_CFLAGS) $(ALSA_CFLAGS) $(CONFUSE_CFLAGS)
  
  ifeq ($(ARCH), ppc)
  OFLIB ?=

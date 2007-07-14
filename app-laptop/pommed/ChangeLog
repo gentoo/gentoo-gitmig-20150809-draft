@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.6 2007/05/21 20:54:14 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.7 2007/07/14 15:33:19 cedk Exp $
+
+*pommed-1.7 (14 Jul 2007)
+
+  14 Jul 2007; Cédric Krier <cedk@gentoo.org> -files/pommed-1.2.patch,
+  -files/pommed-1.4.patch, +files/pommed-1.7.patch, -pommed-1.2-r1.ebuild,
+  -pommed-1.4.ebuild, +pommed-1.7.ebuild:
+  Version bump and clean old
 
 *pommed-1.5 (21 May 2007)
 

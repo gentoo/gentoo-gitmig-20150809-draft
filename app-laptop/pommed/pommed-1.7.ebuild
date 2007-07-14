@@ -1,27 +1,30 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.2-r1.ebuild,v 1.2 2007/03/12 20:57:11 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.7.ebuild,v 1.1 2007/07/14 15:33:19 cedk Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Daemon managing special features such as screen and keyboard \
 backlight on Apple MacBook Pro/PowerBook laptops"
 HOMEPAGE="http://technologeek.org/projects/pommed/index.html"
-SRC_URI="http://alioth.debian.org/frs/download.php/1831/${P}.tar.gz"
+ALIOTH_NUMBER="2054"
+SRC_URI="http://alioth.debian.org/frs/download.php/${ALIOTH_NUMBER}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk X"
 
-DEPEND="sys-apps/pciutils
-	media-libs/alsa-lib
-	x86? ( sys-libs/libsmbios )
-	amd64? ( sys-libs/libsmbios )
+DEPEND="media-libs/alsa-lib
+	x86? ( sys-apps/pciutils
+		>=sys-libs/libsmbios-0.13.6 )
+	amd64? (  sys-apps/pciutils
+		>=sys-libs/libsmbios-0.13.6 )
 	dev-libs/confuse
 	sys-apps/dbus
 	sys-libs/zlib
 	gtk? ( >=x11-libs/gtk+-2
+		>=gnome-base/libglade-2
 		media-libs/audiofile )
 	X? ( x11-libs/libX11 )"
 RDEPEND="${DEPEND}
@@ -66,7 +69,7 @@ src_install() {
 
 	dobin pommed/pommed
 
-	newinitd ${FILESDIR}/pommed.rc pommed
+	newinitd "${FILESDIR}"/pommed.rc pommed
 
 	dodoc AUTHORS ChangeLog README TODO
 
@@ -82,8 +85,10 @@ src_install() {
 
 		insinto /usr/share/applications
 		doins gpomme/gpomme.desktop
+		doins gpomme/gpomme-c.desktop
 		insinto /usr/share/gpomme/
 		doins -r gpomme/themes
+		doins gpomme/gpomme.glade
 	fi
 
 	if use X ; then
