@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-4.2.ebuild,v 1.1 2007/05/30 20:04:50 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-4.2.ebuild,v 1.2 2007/07/14 16:13:33 tove Exp $
 
 inherit toolchain-funcs savedconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://suckless.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND="x11-libs/libX11"
