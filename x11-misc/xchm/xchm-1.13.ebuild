@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.13.ebuild,v 1.1 2007/04/25 03:50:04 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.13.ebuild,v 1.2 2007/07/14 17:31:42 dirtyepic Exp $
 
 inherit wxwidgets flag-o-matic fdo-mime gnome2-utils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="nls unicode"
 DEPEND=">=app-doc/chmlib-0.31
-	>=x11-libs/wxGTK-2.6.0"
+	=x11-libs/wxGTK-2.6*"
 # Tested to work against a local install of 2.8.3
 
 src_compile() {
