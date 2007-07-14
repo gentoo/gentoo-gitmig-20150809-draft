@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-scripts/daemontools-scripts-1.0.4.ebuild,v 1.3 2007/03/28 08:16:40 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-scripts/daemontools-scripts-1.0.4.ebuild,v 1.4 2007/07/14 23:02:48 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -72,5 +72,3 @@ src_install() {
 		done
 	fi
 }
-
-

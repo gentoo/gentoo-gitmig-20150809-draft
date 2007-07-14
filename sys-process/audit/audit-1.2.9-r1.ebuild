@@ -1,13 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.2.9-r1.ebuild,v 1.1 2007/02/24 10:26:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.2.9-r1.ebuild,v 1.2 2007/07/14 23:02:48 mr_bones_ Exp $
 
 inherit eutils autotools toolchain-funcs
 
 DESCRIPTION="Userspace utilities for storing and processing auditing records."
 HOMEPAGE="http://people.redhat.com/sgrubb/audit/"
 SRC_URI="${HOMEPAGE}${P}.tar.gz"
-
 
 LICENSE="GPL-2"
 SLOT="0"
