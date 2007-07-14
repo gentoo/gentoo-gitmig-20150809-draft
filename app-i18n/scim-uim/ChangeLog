@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-uim
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.24 2007/04/26 11:51:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.25 2007/07/14 13:14:13 armin76 Exp $
+
+  14 Jul 2007; Raúl Porcel <armin76@gentoo.org> scim-uim-0.2.0.ebuild:
+  alpha/x86 stable wrt #185274
 
 *scim-uim-0.2.0 (26 Apr 2007)
 
