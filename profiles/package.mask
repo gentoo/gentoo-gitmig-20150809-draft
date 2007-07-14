@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7480 2007/07/13 20:41:35 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7481 2007/07/14 10:47:02 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Doug Goldstein <cardoe@gentoo.org> (14 Jul 2007)
+# ebuilds under active development
+=x11-drivers/nvidia-drivers-1.0.7185
+=x11-drivers/nvidia-drivers-1.0.9639
+=x11-drivers/nvidia-drivers-100.14.11
 
 # Jim Ramsay <lack@gentoo.org> (13 Jul 2007)
 # Masking until the patch hits the mirrors
@@ -241,10 +247,6 @@ dev-java/odmg
 # see http://article.gmane.org/gmane.linux.gentoo.devel/49234
 # Masked pending removal.  Remove in 30 days.
 mail-client/muttng
-
-# Doug Goldstein <cardoe@gentoo.org> (03 Jun 2007)
-# beta drivers for testing
->x11-drivers/nvidia-drivers-100
 
 # Stefan Schweizer <genstef@gentoo.org> (31 May 2007)
 # release candidate
