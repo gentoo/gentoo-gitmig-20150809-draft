@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/eject-bsd/eject-bsd-1.5.ebuild,v 1.2 2006/05/23 16:50:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/eject-bsd/eject-bsd-1.5.ebuild,v 1.3 2007/07/14 23:16:45 mr_bones_ Exp $
 
 inherit eutils portability toolchain-funcs
 
@@ -41,4 +41,3 @@ src_install() {
 	doman "${S}/eject.1"
 	dodoc "${S}/README"
 }
-

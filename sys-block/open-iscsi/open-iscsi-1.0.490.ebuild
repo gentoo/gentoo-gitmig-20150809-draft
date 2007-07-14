@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-1.0.490.ebuild,v 1.2 2007/06/26 02:48:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-1.0.490.ebuild,v 1.3 2007/07/14 23:16:46 mr_bones_ Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
@@ -70,7 +70,6 @@ src_unpack() {
 	EPATCH_OPTS="-p1 -d${S}" \
 	epatch ${FILESDIR}/${PN}-490-add-targetname.patch
 }
-
 
 src_compile() {
 	use debug && append-flags -DDEBUG_TCP -DDEBUG_SCSI

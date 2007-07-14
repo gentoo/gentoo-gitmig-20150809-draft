@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-1.0.514.ebuild,v 1.3 2007/06/26 02:48:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-1.0.514.ebuild,v 1.4 2007/07/14 23:16:46 mr_bones_ Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
@@ -52,7 +52,6 @@ src_unpack() {
 	# Converts the close on error to a log message
 	#epatch ${FILESDIR}/${PN}-485-out.state.patch
 }
-
 
 src_compile() {
 	use debug && append-flags -DDEBUG_TCP -DDEBUG_SCSI

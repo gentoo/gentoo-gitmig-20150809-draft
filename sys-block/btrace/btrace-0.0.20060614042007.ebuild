@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-0.0.20060614042007.ebuild,v 1.2 2007/07/14 23:00:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-0.0.20060614042007.ebuild,v 1.3 2007/07/14 23:16:45 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -35,4 +35,3 @@ src_install() {
 	dodoc README
 	use doc && dodoc doc/blktrace.pdf
 }
-
