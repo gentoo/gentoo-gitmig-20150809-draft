@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.48.0.ebuild,v 1.1 2007/07/13 13:18:35 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.48.0.ebuild,v 1.2 2007/07/14 17:03:28 tester Exp $
 
 inherit nsplugins
 
@@ -56,7 +56,6 @@ src_install() {
 	dobin flashplayer
 
 	dodoc ${MY_PD}/README
-	use debug || dodoc ${MY_P}/Readme.txt
 
 	cd ${MY_P}
 	exeinto /opt/netscape/plugins
