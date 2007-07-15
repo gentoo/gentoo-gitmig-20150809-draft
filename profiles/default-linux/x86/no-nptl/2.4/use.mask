@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/use.mask,v 1.7 2007/04/23 17:20:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/use.mask,v 1.8 2007/07/15 20:04:28 drac Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (23 Apr 2007)
 # Needs >=gnome-2.16, bug 175712
@@ -16,3 +16,6 @@ input_devices_evdev
 # 2006/06/22 Chris Gianelloni <wolf31o2@gentoo.org>
 # Masking for bug #136866
 pmount
+
+# Needs 2.6 headers.
+ggi

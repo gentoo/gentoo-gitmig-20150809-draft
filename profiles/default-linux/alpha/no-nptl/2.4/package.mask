@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.23 2007/07/15 15:10:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.24 2007/07/15 20:07:42 drac Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (14 Jul 2007)
 # Needs hal, so needs headers-2.6
@@ -29,8 +29,8 @@ xfce-extra/xfce4-volstatus-icon
 
 # Samuli Suominen <drac@gentoo.org> (31 Mar 2007)
 # Requires 2.6 linux-headers.
->=media-libs/libgii-1.0.2
->=media-libs/libggi-2.2.2
+media-libs/libgii
+media-libs/libggi
 
 # Saleem Abdulrasool <compnerd@gentoo.org>
 # Depends on GNOME 2.16+
