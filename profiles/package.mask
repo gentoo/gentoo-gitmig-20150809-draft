@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7482 2007/07/14 22:47:02 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7483 2007/07/15 17:49:46 dev-zero Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -637,10 +637,6 @@ dev-tex/vntex
 # Raúl Porcel <armin76@gentoo.org> (17 Feb 2007)
 # Mask beta versions
 =net-irc/dircproxy-1.2.0_beta2
-
-# <dev-zero@gentoo.org> (15 Feb 2007)
-# Giving the kde team time to work out a solution for kexi
-=dev-libs/libpqxx-2.6.9
 
 # Alec Warner <antarus@gentoo.org> (05 Feb 2007)
 # Masked to security problems, use 1.23-r1 until I fix it
