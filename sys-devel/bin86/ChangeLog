@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bin86
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.17 2006/08/13 10:36:46 chrb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.18 2007/07/15 09:03:23 phreak Exp $
+
+  15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning to base-system, as beu is being retired (#66608).
 
   13 Aug 2006; Chris Bainbridge <chrb@gentoo.org> metadata.xml,
   -bin86-0.16.0.ebuild:
