@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.7.ebuild,v 1.2 2007/07/11 01:08:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.7.ebuild,v 1.3 2007/07/15 23:07:08 cryos Exp $
 
 inherit db-use kde-dist
 
@@ -24,13 +24,13 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if use subversion ; then
-		if [[ -n "$(svn-config --includes | grep -o /usr/include/apr-0)" ]] \
+		if [[ -n "$(ldd /usr/bin/svn | grep -o libapr-0)" ]] \
 			&& ! has_version =dev-libs/apr-0* ;
 		then
 			eerror "Subversion has been built against =dev-libs/apr-0*, but no matching version is installed."
 			die "Please rebuild dev-util/subversion."
 		fi
-		if [[ -n "$(svn-config --includes | grep -o /usr/include/apr-1)" ]] \
+		if [[ -n "$(ldd /usr/bin/svn | grep -o libapr-1)" ]] \
 			&& ! has_version =dev-libs/apr-1* ;
 		then
 			eerror "Subversion has been built against =dev-libs/apr-1*, but no matching version is installed."
@@ -50,10 +50,12 @@ src_compile() {
 	fi
 
 	if use subversion ; then
-		if [[ -n "$(svn-config --includes | grep -o /usr/include/apr-0)" ]] ; then
-			myconf="--with-apr-config=/usr/bin/apr-config"
+		if [[ -n "$(ldd /usr/bin/svn | grep -o libapr-0)" ]] ; then
+			myconf="--with-apr-config=/usr/bin/apr-config
+			--with-apu-config=/usr/bin/apu-config"
 		else
-			myconf="--with-apr-config=/usr/bin/apr-1-config"
+			myconf="--with-apr-config=/usr/bin/apr-1-config
+			--with-apu-config=/usr/bin/apu-1-config"
 		fi
 	fi
 

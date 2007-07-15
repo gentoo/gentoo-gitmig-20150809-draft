@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.146 2007/05/22 23:16:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.147 2007/07/15 23:07:08 cryos Exp $
+
+  15 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> kdesdk-3.5.7.ebuild:
+  Patch to work with newer apr and apr-utils, closes bug 169289, thanks for
+  suggestions given on that bug.
 
 *kdesdk-3.5.7 (22 May 2007)
 
