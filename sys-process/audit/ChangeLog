@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.23 2007/07/11 18:31:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.24 2007/07/15 07:03:40 robbat2 Exp $
+
+  15 Jul 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/audit-1.5.4-swig-gcc-attribute.patch, audit-1.5.4.ebuild:
+  Make audit-python compile on arches that use GCC __attribute in their
+  headers, as it does not like that.
 
   11 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> audit-1.5.4.ebuild:
   Keyworded ~sparc wrt #184563

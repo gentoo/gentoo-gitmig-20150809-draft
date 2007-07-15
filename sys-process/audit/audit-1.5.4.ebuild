@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.5.4.ebuild,v 1.4 2007/07/11 18:31:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.5.4.ebuild,v 1.5 2007/07/15 07:03:40 robbat2 Exp $
 
 inherit autotools multilib toolchain-funcs
 
@@ -23,11 +23,13 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-swig-gcc-attribute.patch
 	# stupid package does not include generated autotools
 	eautoreconf
 }
 
 src_compile() {
+	append-flags -D'__attribute__(x)='
 	econf --sbindir=/sbin || die
 	emake || die "emake failed"
 }
