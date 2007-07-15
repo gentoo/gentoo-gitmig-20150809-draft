@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.11-r1.ebuild,v 1.7 2007/01/05 16:20:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.11-r1.ebuild,v 1.8 2007/07/15 07:12:30 mr_bones_ Exp $
 
 IUSE=""
 
@@ -46,7 +46,6 @@ pkg_postinst() {
 	elog "export GTK_IM_MODULE=hangul3f	// 3 input type"
 	elog ""
 }
-
 
 pkg_postrm() {
 	gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules

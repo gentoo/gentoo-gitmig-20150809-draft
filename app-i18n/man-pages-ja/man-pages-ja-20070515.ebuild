@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20070515.ebuild,v 1.1 2007/05/23 16:38:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20070515.ebuild,v 1.2 2007/07/15 07:12:30 mr_bones_ Exp $
 
 IUSE=""
 
@@ -53,7 +53,6 @@ src_install() {
 	done
 
 	dodoc ChangeLog README
-
 
 	cd "${WORKDIR}"/${GENTOO_MAN_P}
 

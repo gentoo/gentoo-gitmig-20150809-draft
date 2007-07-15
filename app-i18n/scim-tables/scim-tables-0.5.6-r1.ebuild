@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.6-r1.ebuild,v 1.4 2007/07/02 14:14:05 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.6-r1.ebuild,v 1.5 2007/07/15 07:12:30 mr_bones_ Exp $
 
 inherit kde-functions autotools eutils
 
@@ -25,7 +25,6 @@ RDEPEND="|| ( x11-libs/libXt virtual/x11 )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
-
 
 pkg_setup() {
 	elog "Not all languages are going to be compiled."

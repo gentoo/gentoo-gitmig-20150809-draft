@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.6.1.ebuild,v 1.8 2007/03/31 00:32:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.6.1.ebuild,v 1.9 2007/07/15 07:12:30 mr_bones_ Exp $
 
 inherit kde
 
@@ -24,7 +24,6 @@ for X in ${LANGS}; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://kde/stable/koffice-${PV/_/-}/src/koffice-l10n/koffice-l10n-${X}-${RV/_/-}.tar.bz2 )"
 	IUSE="${IUSE} linguas_${X}"
 done
-
 
 src_unpack() {
 	if [ -z "${A}" ]; then
