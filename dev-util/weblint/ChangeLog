@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/weblint
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weblint/ChangeLog,v 1.13 2007/05/15 09:10:31 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weblint/ChangeLog,v 1.14 2007/07/15 08:30:05 phreak Exp $
+
+  15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning dev-util/weblint to m-needed, as beu is being retired (#66608).
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
