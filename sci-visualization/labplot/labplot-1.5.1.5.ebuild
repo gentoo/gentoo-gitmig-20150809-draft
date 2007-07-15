@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.5.ebuild,v 1.3 2007/05/06 12:16:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.5.1.5.ebuild,v 1.4 2007/07/15 02:36:19 mr_bones_ Exp $
 
 inherit eutils kde
 
@@ -77,4 +77,3 @@ src_compile() {
 		$(use_enable opengl)"
 	kde_src_compile
 }
-

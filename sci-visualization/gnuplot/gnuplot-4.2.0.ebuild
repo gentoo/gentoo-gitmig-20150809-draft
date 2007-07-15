@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.0.ebuild,v 1.4 2007/06/27 16:59:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.0.ebuild,v 1.5 2007/07/15 02:36:19 mr_bones_ Exp $
 
 inherit eutils elisp-common wxwidgets
 
@@ -135,7 +135,6 @@ src_install () {
 			}
 		cd ..
 	fi
-
 
 	dodoc BUGS ChangeLog FAQ NEWS PATCHLEVEL PGPKEYS PORTING README* TODO VERSION
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/opendx-samples-4.3.2.ebuild,v 1.5 2006/04/22 02:03:17 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/opendx-samples-4.3.2.ebuild,v 1.6 2007/07/15 02:36:19 mr_bones_ Exp $
 
 S="${WORKDIR}/dxsamples-${PV}"
 
@@ -42,4 +42,3 @@ my_einstall() {
 src_install() {
 	my_einstall || die
 }
-
