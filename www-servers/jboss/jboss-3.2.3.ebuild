@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.3.ebuild,v 1.10 2007/07/02 14:41:51 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.3.ebuild,v 1.11 2007/07/15 00:12:16 mr_bones_ Exp $
 
 inherit eutils java-pkg
 
@@ -112,4 +112,3 @@ pkg_prerm() {
 		install-catalog --remove /etc/sgml/jboss.cat /usr/share/sgml/jboss/catalog
 	fi
 }
-
