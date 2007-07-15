@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.28 2007/07/14 17:18:32 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.29 2007/07/15 14:43:17 armin76 Exp $
+
+  15 Jul 2007; Raúl Porcel <armin76@gentoo.org> -linkchecker-4.4.ebuild:
+  old
 
   14 Jul 2007; Matti Bickel <mabi@gentoo.org> linkchecker-4.6.ebuild:
   ppc stable (bug #184746)
