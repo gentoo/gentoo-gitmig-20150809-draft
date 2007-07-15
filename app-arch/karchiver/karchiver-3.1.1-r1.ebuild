@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/karchiver-3.1.1-r1.ebuild,v 1.6 2006/06/05 22:55:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/karchiver-3.1.1-r1.ebuild,v 1.7 2007/07/15 05:44:58 mr_bones_ Exp $
 
 inherit kde
 
@@ -30,4 +30,3 @@ src_install() {
 	kde_src_install
 	rm -rf ${D}/usr/share/applnk-mdk
 }
-

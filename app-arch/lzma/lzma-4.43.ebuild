@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/lzma-4.43.ebuild,v 1.1 2006/08/27 16:35:04 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/lzma-4.43.ebuild,v 1.2 2007/07/15 05:44:57 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,6 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~mips ~ppc-macos ~x86 ~amd64"
 IUSE="doc"
-
 
 src_unpack() {
 	mkdir ${S}

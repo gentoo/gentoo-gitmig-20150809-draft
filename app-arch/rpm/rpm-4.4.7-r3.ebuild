@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r3.ebuild,v 1.1 2007/02/12 19:44:53 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r3.ebuild,v 1.2 2007/07/15 05:44:57 mr_bones_ Exp $
 
 inherit eutils autotools distutils gnuconfig toolchain-funcs flag-o-matic
 
@@ -149,7 +149,6 @@ src_compile() {
 			myconf="${myconf} --enable-smallbuild"
 		fi
 	fi
-
 
 	python_version
 	econf ${myconf} \
