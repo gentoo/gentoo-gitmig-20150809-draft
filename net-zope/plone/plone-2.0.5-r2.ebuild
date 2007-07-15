@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.5-r2.ebuild,v 1.3 2006/04/17 15:45:43 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.5-r2.ebuild,v 1.4 2007/07/15 06:09:10 mr_bones_ Exp $
 
 inherit zproduct eutils
 
@@ -36,4 +36,3 @@ src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${P}-portrait_security.patch
 }
-
