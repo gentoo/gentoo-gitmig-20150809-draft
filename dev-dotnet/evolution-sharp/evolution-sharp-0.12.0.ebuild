@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.12.0.ebuild,v 1.4 2006/12/17 09:21:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.12.0.ebuild,v 1.5 2007/07/15 02:54:24 mr_bones_ Exp $
 
 inherit mono versionator eutils
 DESCRIPTION="Mono bindings for Evolution"
@@ -32,4 +32,3 @@ src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog MAINTAINERS NEWS README
 }
-
