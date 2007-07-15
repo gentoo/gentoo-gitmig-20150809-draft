@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/hcalc-1.0.ebuild,v 1.4 2006/01/21 01:34:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/hcalc-1.0.ebuild,v 1.5 2007/07/15 06:05:01 mr_bones_ Exp $
 
 DESCRIPTION="DJ's Hex Calculator"
 HOMEPAGE="http://www.delorie.com/store/hcalc/"
@@ -26,4 +26,3 @@ src_install() {
 pkg_postinst() {
 	einfo "Enter hcalc to run and use kill or ctrl-c to exit."
 }
-
