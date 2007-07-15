@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.12 2007/03/18 00:25:47 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.13 2007/07/15 09:24:43 phreak Exp $
+
+  15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning to graphics, as nattfodd is being retired (#108329).
 
 *ufraw-0.11 (18 Mar 2007)
 
