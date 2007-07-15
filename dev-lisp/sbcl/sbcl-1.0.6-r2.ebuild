@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.6-r2.ebuild,v 1.3 2007/07/15 16:10:13 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.6-r2.ebuild,v 1.4 2007/07/15 18:31:00 hkbst Exp $
 
 inherit common-lisp-common-3 eutils flag-o-matic
 
@@ -45,7 +45,7 @@ pkg_setup() {
 		eerror "(the \"vanilla\" profile) and \"source /etc/profile\" before continuing."
 		die
 	fi
-	if (use x86 || use amd64) && has_version <sys-libs/glibc-2.6 \
+	if (use x86 || use amd64) && has_version "<sys-libs/glibc-2.6" \
 		&& ! built_with_use sys-libs/glibc nptl; then
 		eerror "Building SBCL without NPTL support on at least x86 and amd64"
 		eerror "architectures is not a supported configuration in Gentoo.  Please"
