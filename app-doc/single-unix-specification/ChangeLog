@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/single-unix-specification
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.4 2007/07/02 13:44:15 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.5 2007/07/15 08:21:15 phreak Exp $
+
+  15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning app-doc/single-unix-specification to m-needed, as beu is being
+  retired (#66608).
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   single-unix-specification-3.ebuild:
