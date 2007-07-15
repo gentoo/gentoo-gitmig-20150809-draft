@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/espresso-ab/espresso-ab-1.0.ebuild,v 1.1 2004/12/27 18:59:35 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/espresso-ab/espresso-ab-1.0.ebuild,v 1.2 2007/07/15 03:25:39 mr_bones_ Exp $
 
 IUSE=""
 
@@ -24,4 +24,3 @@ src_install() {
 
 	dodoc COPYING README
 }
-
