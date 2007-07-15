@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.13-r1.ebuild,v 1.1 2005/10/08 23:32:22 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.13-r1.ebuild,v 1.2 2007/07/15 02:25:03 mr_bones_ Exp $
 
 inherit eutils
 
@@ -28,4 +28,3 @@ src_install() {
 	mv ${WORKDIR}/etc/yaboot.conf ${WORKDIR}/etc/yaboot.conf.unconfigured
 	cp -pPR ${WORKDIR}/* ${D}/
 }
-

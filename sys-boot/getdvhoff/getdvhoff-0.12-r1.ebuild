@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/getdvhoff/getdvhoff-0.12-r1.ebuild,v 1.2 2006/01/02 08:05:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/getdvhoff/getdvhoff-0.12-r1.ebuild,v 1.3 2007/07/15 02:25:03 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,6 @@ DEPEND="dev-libs/klibc"
 RESTRICT=""
 S="${WORKDIR}/sgibootcd-${PV}"
 MY_S="${S}/helpers"
-
 
 src_compile() {
 	cd ${MY_S}

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/netboot/netboot-0.10.1.ebuild,v 1.2 2007/01/30 20:24:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/netboot/netboot-0.10.1.ebuild,v 1.3 2007/07/15 02:25:03 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,6 @@ DEPEND=">=dev-libs/lzo-2
 		>=sys-libs/db-4"
 RDEPEND="${DEPEND}
 		!net-misc/mknbi"
-
 
 src_unpack() {
 	unpack ${A}

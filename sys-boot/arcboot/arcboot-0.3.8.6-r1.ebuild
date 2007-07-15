@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.6-r1.ebuild,v 1.2 2007/06/26 02:49:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.6-r1.ebuild,v 1.3 2007/07/15 02:25:03 mr_bones_ Exp $
 
 inherit eutils
 
@@ -38,7 +38,6 @@ pkg_setup() {
 		eerror "an ELF64 object.  Patches are welcome!"
 		die "No ELF64 Support"
 	fi
-
 
 	# Set SGITYPE properly
 	case "$(uname -i)" in

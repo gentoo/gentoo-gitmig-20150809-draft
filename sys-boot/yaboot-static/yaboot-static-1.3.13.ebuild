@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.13.ebuild,v 1.4 2005/08/24 09:25:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.13.ebuild,v 1.5 2007/07/15 02:25:03 mr_bones_ Exp $
 
 DESCRIPTION="Static yaboot ppc boot loader for machines with open firmware"
 
@@ -21,4 +21,3 @@ src_install() {
 	mv ${WORKDIR}/etc/yaboot.conf ${WORKDIR}/etc/yaboot.conf.unconfigured
 	cp -pPR ${WORKDIR}/* ${D}/
 	}
-

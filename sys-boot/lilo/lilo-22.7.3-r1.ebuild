@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.7.3-r1.ebuild,v 1.5 2007/06/26 02:50:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.7.3-r1.ebuild,v 1.6 2007/07/15 02:25:03 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -143,7 +143,6 @@ lilocheck () {
 
 	return 0
 }
-
 
 pkg_postinst() {
 	if [ ! -e ${ROOT}/boot/boot.b -a ! -L ${ROOT}/boot/boot.b ]

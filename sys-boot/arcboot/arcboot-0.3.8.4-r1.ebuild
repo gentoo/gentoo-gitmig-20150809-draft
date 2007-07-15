@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.4-r1.ebuild,v 1.4 2007/06/26 02:49:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.4-r1.ebuild,v 1.5 2007/07/15 02:25:03 mr_bones_ Exp $
 
 inherit eutils
 
@@ -28,7 +28,6 @@ pkg_setup() {
 			die "Wrong MIPS Machine Type"
 		fi
 	fi
-
 
 	# Set SGI_TARGET properly
 	case "$(uname -i)" in

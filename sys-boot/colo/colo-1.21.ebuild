@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.21.ebuild,v 1.2 2007/07/02 15:30:39 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.21.ebuild,v 1.3 2007/07/15 02:25:03 mr_bones_ Exp $
 
 inherit eutils
 
@@ -13,7 +13,6 @@ KEYWORDS="-* ~mips"
 IUSE=""
 DEPEND=""
 RESTRICT="strip"
-
 
 pkg_setup() {
 	# See if we're on a cobalt system (must use the cobalt-mips profile)
