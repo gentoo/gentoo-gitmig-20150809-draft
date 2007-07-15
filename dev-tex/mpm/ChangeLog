@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/mpm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/ChangeLog,v 1.7 2007/07/10 10:45:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mpm/ChangeLog,v 1.8 2007/07/15 09:20:15 phreak Exp $
+
+  15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning to tex, as nattfodd is being retired (#108329).
 
 *mpm-2.5.2719_beta15 (10 Jul 2007)
 
