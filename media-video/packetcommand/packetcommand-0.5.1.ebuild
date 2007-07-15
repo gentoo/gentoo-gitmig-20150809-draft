@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/packetcommand/packetcommand-0.5.1.ebuild,v 1.1 2007/07/14 15:38:23 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/packetcommand/packetcommand-0.5.1.ebuild,v 1.2 2007/07/15 06:28:04 mr_bones_ Exp $
 
 inherit linux-mod eutils
 
@@ -23,4 +23,3 @@ pkg_setup() {
 	BUILD_TARGETS="all"
 	BUILD_PARAMS="KDIR=\"${KV_DIR}\" V=1"
 }
-
