@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/perlbox-voice-0.09-r1.ebuild,v 1.3 2006/10/20 21:21:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/perlbox-voice-0.09-r1.ebuild,v 1.4 2007/07/15 23:02:29 mr_bones_ Exp $
 
 IUSE=""
 
@@ -20,10 +20,7 @@ RDEPEND="dev-lang/perl
 	app-arch/tar
 	app-accessibility/mbrola"
 
-
 DEPEND=""
-
-
 
 src_install() {
 	tar xvf perlbox-voice.ss -C ${D}

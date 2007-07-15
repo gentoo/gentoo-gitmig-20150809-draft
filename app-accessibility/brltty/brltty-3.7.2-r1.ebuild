@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.7.2-r1.ebuild,v 1.3 2007/06/01 06:54:21 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.7.2-r1.ebuild,v 1.4 2007/07/15 23:02:29 mr_bones_ Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -15,7 +15,6 @@ IUSE="doc gpm usb X"
 
 DEPEND=" gpm? ( >=sys-libs/gpm-1.20 )
 	X? ( || ( x11-libs/libXaw virtual/x11 ) )"
-
 
 src_unpack() {
 	unpack ${A}

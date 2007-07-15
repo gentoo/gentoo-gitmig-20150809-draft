@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.22.ebuild,v 1.3 2007/05/06 17:40:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.22.ebuild,v 1.4 2007/07/15 23:02:29 mr_bones_ Exp $
 
 inherit eutils
 
@@ -20,7 +20,6 @@ DEPEND=">=media-libs/portaudio-18.1-r5
 	app-arch/unzip"
 
 S=${WORKDIR}/${MY_P}
-
 
 src_unpack() {
 	unpack ${A}
