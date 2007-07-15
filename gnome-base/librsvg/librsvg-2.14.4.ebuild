@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.14.4.ebuild,v 1.11 2007/01/01 20:17:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.14.4.ebuild,v 1.12 2007/07/15 05:15:41 mr_bones_ Exp $
 
 inherit eutils multilib gnome2 autotools
 
@@ -30,7 +30,6 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.9 )"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
-
 
 set_gtk_confdir() {
 

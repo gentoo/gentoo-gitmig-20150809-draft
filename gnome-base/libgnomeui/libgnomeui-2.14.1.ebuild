@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.14.1.ebuild,v 1.13 2006/10/19 15:43:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.14.1.ebuild,v 1.14 2007/07/15 05:15:41 mr_bones_ Exp $
 
 inherit autotools eutils gnome2
 
@@ -33,7 +33,6 @@ PDEPEND="x11-themes/gnome-icon-theme"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 USE_DESTDIR="1"
-
 
 pkg_setup() {
 	G2CONF="$(use_with jpeg libjpeg)"

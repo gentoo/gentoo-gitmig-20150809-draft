@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.14.1.ebuild,v 1.18 2007/02/01 04:52:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.14.1.ebuild,v 1.19 2007/07/15 05:15:40 mr_bones_ Exp $
 
 inherit virtualx eutils gnome2
 
@@ -55,7 +55,6 @@ DEPEND="${RDEPEND}
 PDEPEND="gnome? ( >=x11-themes/gnome-icon-theme-1.1.91 )"
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README THANKS TODO"
-
 
 pkg_setup() {
 	G2CONF="--disable-update-mimedb $(use_enable beagle)"

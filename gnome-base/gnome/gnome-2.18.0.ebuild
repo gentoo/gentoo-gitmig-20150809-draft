@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.18.0.ebuild,v 1.7 2007/07/10 19:10:44 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.18.0.ebuild,v 1.8 2007/07/15 05:15:41 mr_bones_ Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -160,7 +160,6 @@ RDEPEND="!gnome-base/gnome-core
 #   intltool
 #   gtk-doc
 #   gnome-doc-utils
-
 
 pkg_postinst() {
 
