@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/spambayes-1.1_alpha3.ebuild,v 1.2 2007/04/28 12:40:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/spambayes-1.1_alpha3.ebuild,v 1.3 2007/07/15 02:43:38 mr_bones_ Exp $
 
 inherit distutils
 
@@ -37,4 +37,3 @@ src_install() {
 	keepdir /var/lib/spambayes
 
 }
-

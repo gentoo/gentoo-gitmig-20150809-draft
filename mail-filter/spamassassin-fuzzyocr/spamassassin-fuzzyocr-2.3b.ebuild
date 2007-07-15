@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-2.3b.ebuild,v 1.6 2007/03/29 23:29:39 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-2.3b.ebuild,v 1.7 2007/07/15 02:43:38 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -54,7 +54,6 @@ src_install() {
 	docinto samples
 	dodoc samples/*
 }
-
 
 pkg_postinst() {
 	elog "You need to restart spamassassin (as root) before this plugin will work:"

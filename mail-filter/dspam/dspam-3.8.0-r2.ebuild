@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r2.ebuild,v 1.1 2007/07/08 07:52:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r2.ebuild,v 1.2 2007/07/15 02:43:38 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -381,7 +381,6 @@ pkg_config () {
 
 			einfo "Creating DSPAM MySQL database \"${DSPAM_MySQL_DB}\""
 			/usr/bin/mysqladmin -u ${MYSQL_ROOT_USER} -p create ${DSPAM_MySQL_DB}
-
 
 			if has_version ">=virtual/mysql-4.1"; then
 				/usr/bin/mysql -u ${MYSQL_ROOT_USER} -p ${DSPAM_MySQL_DB} < ${CONFDIR}/mysql_objects-4.1.sql

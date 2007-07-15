@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-0.2.13.ebuild,v 1.1 2006/07/18 01:06:48 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-0.2.13.ebuild,v 1.2 2007/07/15 02:43:38 mr_bones_ Exp $
 
 inherit eutils
 
@@ -15,7 +15,6 @@ LICENSE="Sendmail-Open-Source"
 SLOT="0"
 
 KEYWORDS="~x86"
-
 
 IUSE=""
 

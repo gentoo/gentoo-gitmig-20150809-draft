@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdomainkeys/libdomainkeys-0.68-r1.ebuild,v 1.9 2007/06/30 18:25:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdomainkeys/libdomainkeys-0.68-r1.ebuild,v 1.10 2007/07/15 02:43:38 mr_bones_ Exp $
 
 inherit eutils
 
@@ -42,4 +42,3 @@ src_install() {
 	dodoc testcases/*
 	prepalldocs
 }
-
