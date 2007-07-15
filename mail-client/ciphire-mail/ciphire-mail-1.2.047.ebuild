@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ciphire-mail-1.2.047.ebuild,v 1.4 2007/07/02 14:59:32 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ciphire-mail-1.2.047.ebuild,v 1.5 2007/07/15 03:33:18 mr_bones_ Exp $
 
 inherit eutils qt3
 
@@ -167,4 +167,3 @@ EOF
 		newbin "${tmpwrapper}" "${wrapper}"
 	fi
 }
-

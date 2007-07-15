@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-3.0.ebuild,v 1.5 2006/07/23 14:29:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-3.0.ebuild,v 1.6 2007/07/15 03:33:18 mr_bones_ Exp $
 
 inherit eutils gnome2 multilib flag-o-matic versionator
 
@@ -73,4 +73,3 @@ pkg_postinst() {
 	ewarn "See http://bugzilla.gnome.org/show_bug.cgi?id=151082"
 	ewarn ""
 }
-
