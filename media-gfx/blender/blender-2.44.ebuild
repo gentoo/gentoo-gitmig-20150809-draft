@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.44.ebuild,v 1.2 2007/07/15 09:50:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.44.ebuild,v 1.3 2007/07/15 10:24:26 lu_zero Exp $
 
 inherit multilib flag-o-matic eutils python
 
 #IUSE="jpeg mozilla png sdl static truetype"
-IUSE="blender-game ffmpeg jpeg nls openal openexr png sdl"
+IUSE="blender-game ffmpeg jpeg nls openal openexr png sdl verse"
 FFMPEG_SNAP="0.4.9-p20070330"
 DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="http://www.blender.org/"
@@ -85,6 +85,7 @@ src_compile() {
 			'jpeg' \
 			'ffmpeg' \
 			'png' \
+			'verse' \
 			'nls international' \
 			'blender-game gameengine'; do
 		blend_with ${arg}
