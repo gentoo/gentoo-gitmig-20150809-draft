@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/liberation-fonts-ttf-3-r1.ebuild,v 1.4 2007/06/12 18:24:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/liberation-fonts-ttf-3-r1.ebuild,v 1.5 2007/07/15 23:23:47 dirtyepic Exp $
 
 inherit font
 
@@ -21,18 +21,13 @@ S="${FONT_S}"
 FONT_SUFFIX="ttf"
 DOCS="License.txt"
 
-src_install() {
-	font_src_install
-
-	# from http://uwstopia.nl/blog/2007/05/free-your-fonts
-	insinto /etc/fonts/conf.avail
-	newins ${FILESDIR}/${PN}-fontconfig.txt 60-liberation.conf \
-		|| die "newins failed"
-}
+FONT_CONF="60-liberation.conf"
 
 pkg_postinst() {
-	einfo
-	einfo "To substitute Liberation fonts for Microsoft equivalents, use:"
-	einfo "  cd /etc/fonts/conf.d/ && ln -sf ../conf.avail/60-liberation.conf ."
-	einfo
+	font_pkg_postinst
+
+	echo
+	elog "To substitute Liberation fonts for Microsoft equivalents, use:"
+	elog "  cd /etc/fonts/conf.d/ && ln -sf ../conf.avail/60-liberation.conf ."
+	echo
 }
