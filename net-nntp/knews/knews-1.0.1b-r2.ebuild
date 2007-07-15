@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/knews/knews-1.0.1b-r2.ebuild,v 1.3 2006/11/04 03:46:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/knews/knews-1.0.1b-r2.ebuild,v 1.4 2007/07/15 23:15:52 mr_bones_ Exp $
 
 inherit eutils
 
@@ -81,7 +81,6 @@ src_install () {
 
 	dodoc COPYING COPYRIGHT Changes README
 }
-
 
 pkg_postinst() {
 	einfo "Please be sure to set your local domain in"
