@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/compare
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/compare/ChangeLog,v 1.2 2006/06/11 14:33:46 stuart Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/compare/ChangeLog,v 1.3 2007/07/15 08:57:54 phreak Exp $
+
+  15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning to m-needed, as beu is being retired (#66608).
 
   11 Jun 2006; Stuart Herbert <stuart@gentoo.org> compare-1.16.ebuild:
   Added blocker against media-gfx/imagemagick; closes bug 117739
