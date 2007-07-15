@@ -1,7 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.2a.ebuild,v 1.1 2006/08/01 11:09:27 satya Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.2a.ebuild,v 1.2 2007/07/15 23:05:11 mr_bones_ Exp $
 
 inherit eutils
 
