@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.10 2007/07/14 23:01:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.11 2007/07/15 19:16:39 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1213,7 +1213,7 @@ src_strip() {
 	env \
 		-uRESTRICT \
 		CHOST=${CTARGET} \
-		STRIP_MASK="/*/{,tls/}{ld-,lib{pthread,thread_db}}*" \
+		STRIP_MASK="/*/{,tls/}libthread_db*" \
 		prepallstrip
 }
 
