@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/xtail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.13 2007/07/15 08:17:08 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.14 2007/07/15 19:35:04 hawking Exp $
+
+  15 Jul 2007; Ali Polatel <hawking@gentoo.org> metadata.xml:
+  Changed maintainer to hawking
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning app-admin/xtail to m-needed, as beu is being retired (#66608).
