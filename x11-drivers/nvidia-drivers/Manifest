@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX 09nvidia 61 RMD160 b69c3282ba6195112e312fe34bdcb12544aef8ca SHA1 05dd043f66f53409dfe511636d92a339edb4c765 SHA256 14702d6726cc9f0ad832a3cc90059999eb956f9e3a35397cb63cfa6347b33e39
 MD5 c3afc69f917a783ebd53cf2de38065dc files/09nvidia 61
 RMD160 b69c3282ba6195112e312fe34bdcb12544aef8ca files/09nvidia 61
@@ -100,9 +97,9 @@ SHA256 5cc33a43a4e8c244fafd30bffbc38638ad544ff11a817b8191dc3bd5e76b0ff3 files/di
 MD5 352fa2d75a4a3f1244165817cdbf61d4 files/digest-nvidia-drivers-1.0.8776-r1 867
 RMD160 073fc276016fc837371f3c321bd76786bc68ca19 files/digest-nvidia-drivers-1.0.8776-r1 867
 SHA256 9a2c001f4a7d6b6461ae0ed151c958442f1bc15f7c4515f499d876a503d41f92 files/digest-nvidia-drivers-1.0.8776-r1 867
-MD5 baf86828177883fd75ffdcf2b73c1f4c files/digest-nvidia-drivers-1.0.9631-r1 710
-RMD160 049e1a3e116e6bd9c226423f82871ff063499dff files/digest-nvidia-drivers-1.0.9631-r1 710
-SHA256 7ddaa09b148b62ce4ec3f84c4cab5a959e463dc4c12ffc1c2fbb6b96e551f22e files/digest-nvidia-drivers-1.0.9631-r1 710
+MD5 328e751839d2097237954549876ad0fe files/digest-nvidia-drivers-1.0.9631-r1 790
+RMD160 9ec92550c7d4314b9dec83f392bd3b4ce8c45b24 files/digest-nvidia-drivers-1.0.9631-r1 790
+SHA256 bc807f3d5473faae571a0075d782368de071868f5086af3432f62e8167ee5a51 files/digest-nvidia-drivers-1.0.9631-r1 790
 MD5 175d64f3601adc1c5c085a6164f6b828 files/digest-nvidia-drivers-1.0.9639 870
 RMD160 5cb5af0663450b5fa3ede68291c936e4f8aadd1e files/digest-nvidia-drivers-1.0.9639 870
 SHA256 ee9a11c805541adacb241ecacb91203c4fe65ec3e6690350c23022dc8832ee41 files/digest-nvidia-drivers-1.0.9639 870
@@ -115,10 +112,3 @@ SHA256 8950b102eca59ec72c39db57778a0c47ea65f8bd29abe4c00307fd8bfd64afd3 files/di
 MD5 cba58f442904bf8a62fef0ea1abc4006 files/digest-nvidia-drivers-100.14.11 882
 RMD160 a4f0cf0451ffaeb2f16eb1b695dde71d48bac51f files/digest-nvidia-drivers-100.14.11 882
 SHA256 5008f54f8a60cbc1d7460b00f9d4ab8c0b6ca211f51345f52815692965e808d2 files/digest-nvidia-drivers-100.14.11 882
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
-
-iD8DBQFGmK4doeSe8B0zEfwRAtHUAKCCzMHwlB+E+jcP28HNqqfRn0uYlACfdNCN
-Mpd83DGam6YIVRWsHx9+HBA=
-=tLjp
------END PGP SIGNATURE-----
