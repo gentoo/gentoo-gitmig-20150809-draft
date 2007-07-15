@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-1.2.ebuild,v 1.3 2007/03/23 14:22:46 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-1.2.ebuild,v 1.4 2007/07/15 06:01:18 mr_bones_ Exp $
 
 inherit eutils distutils fortran
 
@@ -46,7 +46,6 @@ src_compile() {
 	cd ${S}/docs
 	make
 }
-
 
 src_install() {
 	distutils_src_install
