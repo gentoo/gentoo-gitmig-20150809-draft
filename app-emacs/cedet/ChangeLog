@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.25 2007/06/27 04:36:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.26 2007/07/15 13:15:37 ulm Exp $
+
+*cedet-1.0_pre4-r1 (15 Jul 2007)
+
+  15 Jul 2007; Ulrich Mueller <ulm@gentoo.org> -cedet-1.0_pre4.ebuild,
+  +cedet-1.0_pre4-r1.ebuild:
+  Install INSTALL file again since it contains configuration hints. Thanks to
+  Ivan Miljenovic for pointing this out.
 
   27 Jun 2007; Ulrich Mueller <ulm@gentoo.org>
   +files/1.0_pre4-semantic-makefile.patch, cedet-1.0_pre4.ebuild:
