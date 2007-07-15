@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.109 2007/06/28 10:48:20 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.110 2007/07/15 19:17:07 uberlord Exp $
+
+*dovecot-1.0.2 (15 Jul 2007)
+
+  15 Jul 2007; Roy Marples <uberlord@gentoo.org> +dovecot-1.0.2.ebuild:
+  Bump, #185407 thanks to Kilburn Abrahams
 
   28 Jun 2007; Roy Marples <uberlord@gentoo.org> dovecot-1.0.1.ebuild:
   Update sieve to 1.0.1, #182182 thanks to Yoann Pannier
