@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.4.0.ebuild,v 1.2 2007/04/10 09:49:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.4.0.ebuild,v 1.3 2007/07/15 02:34:06 mr_bones_ Exp $
 
 inherit eutils pam
 
@@ -25,7 +25,6 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	dev-util/pkgconfig"
-
 
 src_install() {
 	dodir $(getpam_mod_dir) /usr/bin

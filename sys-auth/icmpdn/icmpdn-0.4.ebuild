@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/icmpdn/icmpdn-0.4.ebuild,v 1.1 2006/02/10 02:05:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/icmpdn/icmpdn-0.4.ebuild,v 1.2 2007/07/15 02:34:06 mr_bones_ Exp $
 
 inherit eutils
 
@@ -39,4 +39,3 @@ pkg_postinst() {
 	einfo "To use the ICMP nameswitch module, add 'icmp'"
 	einfo "to the 'hosts' line in your /etc/nsswitch.conf"
 }
-
