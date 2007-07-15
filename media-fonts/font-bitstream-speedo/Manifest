@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST font-bitstream-speedo-1.0.0.tar.bz2 337770 RMD160 4f27f06394f1ef1c97cdde7657f19a0ca0cdad5f SHA1 a46754330e70097338a858d31e4e8475775777f3 SHA256 80f5ff6deffbb9bdcecc95ca65dc52b90a17d8b84635e9a76d22bcb115323d69
-EBUILD font-bitstream-speedo-1.0.0.ebuild 503 RMD160 ab81e59c17f9633d35211be8ecab69fca1d316ab SHA1 a3c7708bbf8a5acbf5d3d4f08ff47ef9e34d3156 SHA256 275e76f62c07425394e2bee26dcfc149070e97ad37743055340eb8ade12d32fc
-MD5 56075a9ef7baaf356006f089397f6dac font-bitstream-speedo-1.0.0.ebuild 503
-RMD160 ab81e59c17f9633d35211be8ecab69fca1d316ab font-bitstream-speedo-1.0.0.ebuild 503
-SHA256 275e76f62c07425394e2bee26dcfc149070e97ad37743055340eb8ade12d32fc font-bitstream-speedo-1.0.0.ebuild 503
+EBUILD font-bitstream-speedo-1.0.0.ebuild 502 RMD160 bfefc20407b4615141eebb4998a0acebabf428b7 SHA1 45e62ea2f973db1eccff8e480f79313113d07814 SHA256 7c98a50641745dcd808b75f8f0d7c4701b3566ec789fc906651cbdbd2aea2124
+MD5 d48a3b5b9df53f4516969fe1f7abc668 font-bitstream-speedo-1.0.0.ebuild 502
+RMD160 bfefc20407b4615141eebb4998a0acebabf428b7 font-bitstream-speedo-1.0.0.ebuild 502
+SHA256 7c98a50641745dcd808b75f8f0d7c4701b3566ec789fc906651cbdbd2aea2124 font-bitstream-speedo-1.0.0.ebuild 502
 MISC ChangeLog 2313 RMD160 d62fa5778b22d2a9fd4af61cfaf3dd3bf31e9ddb SHA1 5ed52d331bd74700826bfbd89748ffc76aa10dd5 SHA256 aa372d6eabeac7758b23fbdd2ea6d85e8dfe7e7b7af82120a67dd470f9cba6c0
 MD5 9ffe7c1fd9cb8911c4f04ee8e784b2f8 ChangeLog 2313
 RMD160 d62fa5778b22d2a9fd4af61cfaf3dd3bf31e9ddb ChangeLog 2313
@@ -17,10 +14,3 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 cc5adb46b72c851572838be99aba6242 files/digest-font-bitstream-speedo-1.0.0 286
 RMD160 56a31c53ebe649553c36c830fdfdca96f4f80bce files/digest-font-bitstream-speedo-1.0.0 286
 SHA256 59b07af5ccbb623f229372a559bfbe136e1d7cd137b0341b9e89ccc6e0e51fe1 files/digest-font-bitstream-speedo-1.0.0 286
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFaiRQAiZjviIA2XgRAu1yAJwKSaI7ofxcyp+sJSEiCLKG5hJ85QCfU8BI
-F42V45ER/KaSNqUF6N5Wrl4=
-=IQW5
------END PGP SIGNATURE-----

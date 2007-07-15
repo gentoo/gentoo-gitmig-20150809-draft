@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST font-cronyx-cyrillic-1.0.0.tar.bz2 197094 RMD160 55c936f74d234ddc8cd8e98c3376b5d272e4d6fc SHA1 33560d4207ec5b215f4fd781c78c3fe772ec1b1f SHA256 7ca5dde2d056f6b9b1e6ac5f4bd0e461395dab1c80ace96ab136c13588eae703
-EBUILD font-cronyx-cyrillic-1.0.0.ebuild 502 RMD160 6d495fd3efe30859d3b83055cf82d730a0956fcb SHA1 05a34b9da5a7954fdeb66a620d23ea7eec310bfa SHA256 8ff5be1595f06ab7e79f855b259b8dee7bbf76de7514dc7dd04c7192a7b4a2e1
-MD5 b7910cc50142c0785056602a0b4c117d font-cronyx-cyrillic-1.0.0.ebuild 502
-RMD160 6d495fd3efe30859d3b83055cf82d730a0956fcb font-cronyx-cyrillic-1.0.0.ebuild 502
-SHA256 8ff5be1595f06ab7e79f855b259b8dee7bbf76de7514dc7dd04c7192a7b4a2e1 font-cronyx-cyrillic-1.0.0.ebuild 502
+EBUILD font-cronyx-cyrillic-1.0.0.ebuild 501 RMD160 9cdc3d4e27a96b19670dc8a7082dd871f2ea64fc SHA1 7ffb3e2f73f13f5edd431bcf41f90f0c89ffcd5f SHA256 d2fdc897d4082aa79f0fbc798f05a0a6198a2728d484dbefec14407cb2c364bc
+MD5 c8bad5aef0c6444a93e190b225bf9394 font-cronyx-cyrillic-1.0.0.ebuild 501
+RMD160 9cdc3d4e27a96b19670dc8a7082dd871f2ea64fc font-cronyx-cyrillic-1.0.0.ebuild 501
+SHA256 d2fdc897d4082aa79f0fbc798f05a0a6198a2728d484dbefec14407cb2c364bc font-cronyx-cyrillic-1.0.0.ebuild 501
 MISC ChangeLog 2293 RMD160 52c43738b98e031e8e398ce2f1edbc9590c8c821 SHA1 ae80d275f045b83db015e2208068c92b77b27f88 SHA256 f374467dfb37eb4dc91108b21c459cc57337453f4c2b2d335fbaea425767e046
 MD5 dc0f3cef3c0a7f35fb9e49fe64ba9f12 ChangeLog 2293
 RMD160 52c43738b98e031e8e398ce2f1edbc9590c8c821 ChangeLog 2293
@@ -17,10 +14,3 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 35a21c3355cc019fcce1e0b8491458e7 files/digest-font-cronyx-cyrillic-1.0.0 283
 RMD160 278c61c2ee1b97010aeab929e35b5b079b22795b files/digest-font-cronyx-cyrillic-1.0.0 283
 SHA256 ce40bbb778800ae3320556bf6aee5456dc2e58bf7e146cf962006ef57d8721fe files/digest-font-cronyx-cyrillic-1.0.0 283
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFaiSgAiZjviIA2XgRArDqAKC35EltaSASrLJBgBFixL7opytz6ACgkHrb
-okuEudABOKBTl5z4b+4ZjaM=
-=tu6O
------END PGP SIGNATURE-----

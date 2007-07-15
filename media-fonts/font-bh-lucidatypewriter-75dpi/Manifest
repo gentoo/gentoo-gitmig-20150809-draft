@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST font-bh-lucidatypewriter-75dpi-1.0.0.tar.bz2 153177 RMD160 ff40678ef3c78d0287594ef401d00dc434f61edb SHA1 39205d203bd9391a54d687040be60b46e34b295c SHA256 fde0402a3c5c9f01ba99b3faa1c3ea36aacd9f51ac0305b7d73ac23f90b550d8
-EBUILD font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 638 RMD160 00e03239accd79676af5373f001bb161d1ebafec SHA1 6f6befb8da08c9ea99a19779e28a7cea15efc551 SHA256 ca8c77c715a77212bc284f7a645b30a73ab95419a0379ac2df91bfcb29ecffdb
-MD5 e9debe4e7cafbdc76a469a939e7e0d20 font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 638
-RMD160 00e03239accd79676af5373f001bb161d1ebafec font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 638
-SHA256 ca8c77c715a77212bc284f7a645b30a73ab95419a0379ac2df91bfcb29ecffdb font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 638
+EBUILD font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 638 RMD160 e9210241c7399f8c2845496882f55b53d384fd37 SHA1 62a0d7cd9b834281bff9e953ee913c5cafd9f41b SHA256 34102a9d2026d679b8b3310357e58f93006096b00bf217e2fa627a414248f749
+MD5 32f500632ff9301ef4de5adbcd090541 font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 638
+RMD160 e9210241c7399f8c2845496882f55b53d384fd37 font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 638
+SHA256 34102a9d2026d679b8b3310357e58f93006096b00bf217e2fa627a414248f749 font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 638
 MISC ChangeLog 2887 RMD160 2d68fbb1590e1d86cfc09827a4bcab8d77ffa55d SHA1 66f33a8b21aa7d44519772e3502e22be4d891ee0 SHA256 3d8f2c585c352715c4a787829d44ea2f41dd48a16b4fcdf36a4c800a2da74007
 MD5 3b22ce19804ab79ba5ecfe6bc432cc2f ChangeLog 2887
 RMD160 2d68fbb1590e1d86cfc09827a4bcab8d77ffa55d ChangeLog 2887
@@ -17,10 +14,3 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 66e4c122688f92d7376e15f86a54250d files/digest-font-bh-lucidatypewriter-75dpi-1.0.0 313
 RMD160 b3c6a2c80105df24d938eab1e67a7c0c7a2ca6e6 files/digest-font-bh-lucidatypewriter-75dpi-1.0.0 313
 SHA256 376b2c00c5c62dab6b01ecd8e673b8f7a88f08ce54858097982b7b78bc7b9f25 files/digest-font-bh-lucidatypewriter-75dpi-1.0.0 313
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFaiOzAiZjviIA2XgRAjdoAJ95UwLw3zSd7Leedr/b4Qn8e5+dHQCaAtLf
-aONSKwWKEZYnQ0Fvn2HBSLs=
-=wO1R
------END PGP SIGNATURE-----
