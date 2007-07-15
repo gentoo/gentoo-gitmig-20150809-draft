@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/sobexsrv-1.0.0_pre4.ebuild,v 1.11 2007/02/16 21:54:39 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/sobexsrv-1.0.0_pre4.ebuild,v 1.12 2007/07/15 02:57:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -24,7 +24,6 @@ RDEPEND="${DEPEND}
 	gtk? ( >=dev-python/pygtk-2.2 )"
 
 S="${WORKDIR}/${MY_P}"
-
 
 pkg_setup() {
 	enewgroup sobexsrv

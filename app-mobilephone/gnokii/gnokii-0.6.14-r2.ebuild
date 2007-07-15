@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.14-r2.ebuild,v 1.6 2007/07/02 17:32:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.14-r2.ebuild,v 1.7 2007/07/15 02:57:21 mr_bones_ Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -83,7 +83,6 @@ src_compile() {
 	    --enable-security \
 		--disable-unix98test \
 		|| die "configure failed"
-
 
 	emake -j1 || die "make failed"
 

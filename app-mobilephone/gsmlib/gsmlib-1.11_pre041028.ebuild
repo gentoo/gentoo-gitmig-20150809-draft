@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/gsmlib-1.11_pre041028.ebuild,v 1.10 2006/12/01 20:26:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/gsmlib-1.11_pre041028.ebuild,v 1.11 2007/07/15 02:57:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -28,4 +28,3 @@ src_install () {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc Changelog README
 }
-
