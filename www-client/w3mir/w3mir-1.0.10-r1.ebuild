@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/w3mir-1.0.10-r1.ebuild,v 1.4 2006/03/25 04:11:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/w3mir-1.0.10-r1.ebuild,v 1.5 2007/07/15 04:26:42 mr_bones_ Exp $
 
 inherit perl-app eutils
 
@@ -24,4 +24,3 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-cwd.diff"
 }
-

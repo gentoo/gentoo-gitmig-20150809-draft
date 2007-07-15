@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.21-r1.ebuild,v 1.3 2007/07/09 01:28:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.21-r1.ebuild,v 1.4 2007/07/15 04:26:42 mr_bones_ Exp $
 
 GCONF_DEBUG="no"
 
@@ -173,7 +173,6 @@ pkg_postinst() {
 		elog "$	sysctl kern.ipc.shm_allow_removed=1"
 	fi
 }
-
 
 pkg_postrm() {
 	use gnome && gnome2_pkg_postrm

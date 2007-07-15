@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-1.0.7.ebuild,v 1.1 2005/03/18 14:51:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-1.0.7.ebuild,v 1.2 2007/07/15 04:26:42 mr_bones_ Exp $
 
 DESCRIPTION="A fast unix command line interface to WWW"
 SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/misc/proff/${P}.tar.gz"
@@ -9,7 +9,6 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc"
 IUSE=""
-
 
 src_compile() {
 	./configure \
