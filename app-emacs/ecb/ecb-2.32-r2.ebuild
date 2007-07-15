@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.32-r2.ebuild,v 1.1 2007/07/06 16:43:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.32-r2.ebuild,v 1.2 2007/07/15 13:26:02 ulm Exp $
 
 inherit elisp
 
@@ -60,4 +60,11 @@ src_install() {
 	dodoc NEWS README RELEASE_NOTES || die "dodoc failed"
 	doinfo info-help/ecb.info*
 	dohtml html-help/*.html
+}
+
+pkg_postinst() {
+	elisp-site-regen
+	elog "ECB is now autoloaded in site-gentoo.el. Add the line"
+	elog "  (require 'ecb)"
+	elog "to your ~/.emacs file to enable all features on Emacs startup."
 }
