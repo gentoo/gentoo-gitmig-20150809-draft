@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/fmirror
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fmirror/ChangeLog,v 1.8 2007/01/25 07:08:57 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fmirror/ChangeLog,v 1.9 2007/07/15 08:47:38 phreak Exp $
+
+  15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning to m-needed, as beu is being retired (#66608).
 
 *fmirror-0.8.4-r2 (25 Jan 2007)
 

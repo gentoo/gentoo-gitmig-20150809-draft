@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/proxytunnel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/ChangeLog,v 1.18 2007/05/14 19:45:45 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/ChangeLog,v 1.19 2007/07/15 08:52:26 phreak Exp $
+
+  15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning to m-needed, as beu is being retired (#66608).
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
