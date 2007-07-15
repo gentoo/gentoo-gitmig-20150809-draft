@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.3.ebuild,v 1.16 2007/04/04 05:59:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.3.ebuild,v 1.17 2007/07/15 05:53:11 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -106,7 +106,6 @@ install_build() {
 		einstall libdir="${D}/usr/$(get_libdir)" || die "Unicode install contrib failed"
 	fi
 }
-
 
 pkg_setup() {
 	if use X; then

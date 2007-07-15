@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.9.1.ebuild,v 1.7 2006/10/03 21:52:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.9.1.ebuild,v 1.8 2007/07/15 05:53:11 mr_bones_ Exp $
 
 inherit gnome2 fixheadtails
 
@@ -30,7 +30,6 @@ RDEPEND=">=x11-libs/libgksu-1.9.2
 
 DEPEND="${RDEPEND}"
 
-
 GCONF2="$(use_enable nls)"
 USE_DESTDIR="1"
 
@@ -43,7 +42,6 @@ src_install() {
 	gnome2_src_install
 	chmod +x "${D}/usr/share/gksu/gksu-migrate-conf.sh"
 }
-
 
 pkg_postinst() {
 	gnome2_pkg_postinst

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r8.ebuild,v 1.17 2007/01/04 19:12:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r8.ebuild,v 1.18 2007/07/15 05:53:11 mr_bones_ Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -63,7 +63,6 @@ src_unpack() {
 	autoconf || die
 }
 
-
 src_compile() {
 	# get around some LANG problems in make (#15119)
 	unset LANG
@@ -75,7 +74,6 @@ src_compile() {
 
 	emake -j1 || die "make failed, if you have lesstif installed removed it, compile openmotif and recompile lesstif"
 }
-
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
@@ -90,7 +88,6 @@ src_install() {
 		dosed 's:/usr/lib/X11/\(.*system\\&\.mwmrc\):/etc/X11/mwm/\1:g' "$f"
 		dosed 's:/usr/lib/X11/app-defaults:/etc/X11/app-defaults:g' "$f"
 	done
-
 
 	einfo "Fixing binaries"
 	dodir /usr/$(get_libdir)/openmotif-2.2

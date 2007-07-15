@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0.ebuild,v 1.19 2007/06/19 21:45:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0.ebuild,v 1.20 2007/07/15 05:53:11 mr_bones_ Exp $
 
 inherit gnome2 fixheadtails
 
@@ -19,7 +19,6 @@ RDEPEND=">=x11-libs/libgksu-2
 	gnome? ( >=gnome-base/nautilus-2 )"
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
-
 
 DOCS="AUTHORS ChangeLog NEWS README"
 G2CONF="$(use_enable doc gtk-doc) $(use_enable gnome nautilus-extension)"

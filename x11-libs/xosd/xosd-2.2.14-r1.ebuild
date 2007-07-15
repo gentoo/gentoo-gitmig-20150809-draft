@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.13 2007/07/02 14:55:10 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.14 2007/07/15 05:53:11 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -30,7 +30,6 @@ DEPEND="|| ( (
 	x11-proto/xproto )
 	virtual/x11 )
 	${RDEPEND}"
-
 
 src_unpack() {
 	unpack ${A}

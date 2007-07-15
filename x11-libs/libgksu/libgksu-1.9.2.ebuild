@@ -1,12 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-1.9.2.ebuild,v 1.11 2007/01/05 18:30:19 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-1.9.2.ebuild,v 1.12 2007/07/15 05:53:11 mr_bones_ Exp $
 
 inherit gnome2
 
 MY_PN="${PN}2"
 MY_P="${MY_PN}-${PV}"
-
 
 DESCRIPTION="A library for integration of su into applications"
 HOMEPAGE="http://www.nongnu.org/gksu/"

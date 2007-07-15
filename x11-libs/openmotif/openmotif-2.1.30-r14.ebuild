@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r14.ebuild,v 1.6 2007/06/26 02:58:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r14.ebuild,v 1.7 2007/07/15 05:53:11 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -55,7 +55,6 @@ src_unpack() {
 	echo >>$cfg "#undef  LinuxCLibMajorVersion" && \
 	echo >>$cfg "#define  LinuxCLibMajorVersion 6"
 	eend $? || die
-
 
 	# move `system.mwmrc' from `lib/X11' to `lib/X11/mwm'
 	ebegin "patching 'clients/mwm/Imakefile' (mwm confdir)"
@@ -127,7 +126,6 @@ src_install() {
 	dodir /usr/$(get_libdir)
 	mv ${D}/usr/X11R6/lib/* ${D}/usr/$(get_libdir)/
 	rm -fR ${D}/usr/X11R6
-
 
 	einfo "Fixing binaries"
 	dodir /usr/$(get_libdir)/openmotif-2.1

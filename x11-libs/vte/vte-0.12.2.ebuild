@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.12.2.ebuild,v 1.11 2006/11/04 11:41:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.12.2.ebuild,v 1.12 2007/07/15 05:53:11 mr_bones_ Exp $
 
 inherit eutils autotools gnome2
 
@@ -34,7 +34,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.31"
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README"
-
 
 pkg_setup() {
 	G2CONF="$(use_enable debug debugging) \

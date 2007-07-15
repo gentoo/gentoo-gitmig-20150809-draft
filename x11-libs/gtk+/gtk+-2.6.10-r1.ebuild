@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.10-r1.ebuild,v 1.4 2006/02/12 19:15:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.10-r1.ebuild,v 1.5 2007/07/15 05:53:11 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -49,7 +49,6 @@ DEPEND="${RDEPEND}
 		virtual/x11
 	)
 	doc? ( >=dev-util/gtk-doc-1 )"
-
 
 set_gtk2_confdir() {
 	# An arch specific config directory is used on multilib systems

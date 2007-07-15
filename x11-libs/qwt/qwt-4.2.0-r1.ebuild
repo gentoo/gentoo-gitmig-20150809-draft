@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0-r1.ebuild,v 1.8 2007/03/13 14:47:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0-r1.ebuild,v 1.9 2007/07/15 05:53:11 mr_bones_ Exp $
 
 inherit multilib
 
@@ -19,7 +19,6 @@ QWTVER="4.2.0"
 
 DEPEND="=x11-libs/qt-3*
 	>=sys-apps/sed-4"
-
 
 src_unpack () {
 	unpack ${A}

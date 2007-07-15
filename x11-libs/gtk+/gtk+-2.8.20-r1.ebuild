@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.20-r1.ebuild,v 1.6 2007/07/02 14:53:17 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.20-r1.ebuild,v 1.7 2007/07/15 05:53:11 mr_bones_ Exp $
 
 inherit gnome.org flag-o-matic eutils autotools virtualx
 
@@ -46,7 +46,6 @@ DEPEND="${RDEPEND}
 	doc? (
 		>=dev-util/gtk-doc-1.4
 		~app-text/docbook-xml-dtd-4.1.2 )"
-
 
 pkg_setup() {
 
