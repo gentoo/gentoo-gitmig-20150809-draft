@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/system-config-httpd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-httpd/ChangeLog,v 1.2 2006/09/05 21:54:33 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-httpd/ChangeLog,v 1.3 2007/07/15 03:43:09 dberkholz Exp $
+
+*system-config-httpd-1.4.3 (15 Jul 2007)
+
+  15 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.4.3-gentooify.patch, +system-config-httpd-1.4.3.ebuild:
+  Bump. Various SSL fixes, default vhost is now name-based, servername check
+  fixed, config file writes to /etc/apache2/conf.d/system-config-httpd.conf,
+  and more.
 
   05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   system-config-httpd-1.3.3.ebuild:
