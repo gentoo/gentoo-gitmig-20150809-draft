@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.4.4.ebuild,v 1.10 2005/06/28 13:40:48 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.4.4.ebuild,v 1.11 2007/07/15 04:01:12 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -19,4 +19,3 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS CHANGES ChangeLog NEWS README"
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-0.9.15.ebuild,v 1.1 2006/07/07 02:00:36 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-0.9.15.ebuild,v 1.2 2007/07/15 04:01:12 mr_bones_ Exp $
 
 DESCRIPTION="High-performance, full-featured text search engine based off of lucene in C++"
 HOMEPAGE="http://clucene.sourceforge.net/"
@@ -19,7 +19,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 }
-
 
 src_compile() {
 	econf $(use_enable static) \

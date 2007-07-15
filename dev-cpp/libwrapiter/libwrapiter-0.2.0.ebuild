@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libwrapiter/libwrapiter-0.2.0.ebuild,v 1.7 2006/09/01 10:27:11 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libwrapiter/libwrapiter-0.2.0.ebuild,v 1.8 2007/07/15 04:01:12 mr_bones_ Exp $
 
 DESCRIPTION="C++ template library for avoiding exposing privates via iterators"
 HOMEPAGE="http://libwrapiter.berlios.de/"
@@ -44,4 +44,3 @@ src_install() {
 src_test() {
 	emake check || die "Make check failed"
 }
-
