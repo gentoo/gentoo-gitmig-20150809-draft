@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sslwrap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.18 2007/07/15 08:53:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.19 2007/07/15 19:35:40 hawking Exp $
+
+  15 Jul 2007; Ali Polatel <hawking@gentoo.org> metadata.xml:
+  Changed maintainer to hawking
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to m-needed, as beu is being retired (#66608).
