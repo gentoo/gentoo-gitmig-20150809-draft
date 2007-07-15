@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3-r1.ebuild,v 1.9 2007/06/26 02:56:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.3-r1.ebuild,v 1.10 2007/07/15 23:03:48 mr_bones_ Exp $
 
 inherit apache-module perl-module eutils multilib
 DESCRIPTION="An embedded Perl interpreter for Apache2"
@@ -11,7 +11,6 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 SLOT="1"
-
 
 # see bug 30087 for why sudo is in here
 DEPEND=">=dev-perl/Apache-Test-1.27
