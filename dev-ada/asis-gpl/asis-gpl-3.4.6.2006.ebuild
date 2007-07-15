@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-3.4.6.2006.ebuild,v 1.3 2007/05/28 19:01:09 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-3.4.6.2006.ebuild,v 1.4 2007/07/15 04:21:59 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -14,7 +14,6 @@ LICENSE="GPL-2"
 
 KEYWORDS="~amd64 ~x86"
 
-
 IUSE="doc"
 RDEPEND="=dev-lang/gnat-gpl-${PV}*"
 DEPEND="${RDEPEND}
@@ -25,7 +24,6 @@ S="${WORKDIR}/asis-${ACT_Ver}"
 
 # it may be even better to force plain -O2 -pipe -ftracer here
 replace-flags -O3 -O2
-
 
 pkg_setup() {
 	currGnat=$(eselect --no-color gnat show | grep "gnat-" | awk '{ print $1 }')
@@ -47,7 +45,6 @@ src_unpack() {
 	unpack ${A}
 }
 
-
 src_compile() {
 	# Build the shared library first, we need -fPIC here
 	gnatmake -Pasis_bld -XBLD=prod -XOPSYS=default_Unix -cargs ${CFLAGS} -fPIC \
@@ -68,7 +65,6 @@ src_compile() {
 		emake -C documentation all || die "Failed while compiling documentation"
 	fi
 }
-
 
 src_install () {
 	# we need to adjust some vars defined in gnatbuild.eclass so that they use

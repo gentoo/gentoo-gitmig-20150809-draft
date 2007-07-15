@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-4.1.3.2007.ebuild,v 1.1 2007/05/25 20:49:26 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-4.1.3.2007.ebuild,v 1.2 2007/07/15 04:21:59 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -14,7 +14,6 @@ LICENSE="GPL-2"
 
 KEYWORDS="~amd64 ~x86"
 
-
 IUSE="doc"
 RDEPEND="=dev-lang/gnat-gpl-${PV}*"
 DEPEND="${RDEPEND}
@@ -22,7 +21,6 @@ DEPEND="${RDEPEND}
 	app-text/texi2html )"
 
 S="${WORKDIR}/asis-${ACT_Ver}-src"
-
 
 # it may be even better to force plain -O2 -pipe -ftracer here
 replace-flags -O3 -O2
@@ -35,7 +33,6 @@ DATAPATH=${DATAPATH/${PN}/${Gnat_Name}}
 
 QA_EXECSTACK="${BINPATH:1}/*
 	${LIBPATH:1}/adalib/libasis-${ACT_Ver}.so"
-
 
 pkg_setup() {
 	currGnat=$(eselect --no-color gnat show | grep "gnat-" | awk '{ print $1 }')
@@ -57,7 +54,6 @@ src_unpack() {
 	unpack ${A}
 }
 
-
 src_compile() {
 	# Build the shared library first, we need -fPIC here
 	gnatmake -Pasis_bld -XBLD=prod -XOPSYS=default_Unix -cargs ${CFLAGS} -fPIC \
@@ -78,7 +74,6 @@ src_compile() {
 		emake -C documentation all || die "Failed while compiling documentation"
 	fi
 }
-
 
 src_install () {
 	# install the lib

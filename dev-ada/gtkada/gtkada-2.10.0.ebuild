@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.10.0.ebuild,v 1.1 2007/05/28 07:18:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.10.0.ebuild,v 1.2 2007/07/15 04:21:59 mr_bones_ Exp $
 
 inherit eutils gnat versionator
 
@@ -25,7 +25,6 @@ DEPEND="virtual/gnat
 RDEPEND=""
 
 S="${WORKDIR}/${Name}-${PV}"
-
 
 # only needed for gcc-3.x based gnat profiles, but matching them individually
 # would be insane
@@ -110,4 +109,3 @@ pkg_postinst() {
 	einfo "   env-update && source /etc/profile"
 	einfo "Otherwise the settings will become active next time you login"
 }
-

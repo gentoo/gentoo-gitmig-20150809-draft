@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.8.4.7.ebuild,v 1.2 2007/05/27 09:41:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.8.4.7.ebuild,v 1.3 2007/07/15 04:21:59 mr_bones_ Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -16,7 +16,6 @@ DEPEND="virtual/gnat"
 SLOT="0"
 IUSE=""
 KEYWORDS="~x86 ~amd64"
-
 
 # a location to temporarily keep common stuff installed by make install
 CommonInst="${WORKDIR}/common-install"

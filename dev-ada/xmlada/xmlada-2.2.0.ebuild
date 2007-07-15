@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0.ebuild,v 1.5 2007/05/28 19:05:46 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0.ebuild,v 1.6 2007/07/15 04:21:59 mr_bones_ Exp $
 
 inherit gnat versionator
 
@@ -19,7 +19,6 @@ DEPEND="virtual/gnat
 	sys-apps/texinfo
 	>=sys-apps/sed-4"
 RDEPEND=""
-
 
 lib_compile()
 {

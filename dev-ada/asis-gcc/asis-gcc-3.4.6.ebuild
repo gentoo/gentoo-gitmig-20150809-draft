@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-3.4.6.ebuild,v 1.5 2007/05/28 18:59:00 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-3.4.6.ebuild,v 1.6 2007/07/15 04:21:59 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -30,7 +30,6 @@ QA_EXECSTACK="usr/lib/gnat-gcc/*/${SLOT}/adalib/libasis-${SLOT}.so
 	usr/lib/gnat-gcc/*/${SLOT}/adalib/libasis.a
 	usr/*/gnat-gcc-bin/${SLOT}/*"
 
-
 # it may be even better to force plain -O2 -pipe -ftracer here
 replace-flags -O3 -O2
 
@@ -39,7 +38,6 @@ replace-flags -O3 -O2
 My_LIBPATH=${LIBPATH/${PN}/${Gnat_Name}}
 My_BINPATH=${BINPATH/${PN}/${Gnat_Name}}
 My_DATAPATH=${DATAPATH/${PN}/${Gnat_Name}}
-
 
 pkg_setup() {
 	currGnat=$(eselect --no-color gnat show | grep "gnat-" | awk '{ print $1 }')
@@ -105,7 +103,6 @@ src_compile() {
 		popd
 	fi
 }
-
 
 src_install () {
 	# install the lib

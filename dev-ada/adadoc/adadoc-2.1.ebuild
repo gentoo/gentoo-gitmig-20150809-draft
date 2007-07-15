@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/adadoc-2.1.ebuild,v 1.3 2007/01/25 23:35:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/adadoc-2.1.ebuild,v 1.4 2007/07/15 04:21:59 mr_bones_ Exp $
 
 inherit eutils gnat
 
@@ -57,4 +57,3 @@ pkg_postinst() {
 	elog "env-update && source /etc/profile"
 	elog "Otherwise the settings will become active next time you login"
 }
-

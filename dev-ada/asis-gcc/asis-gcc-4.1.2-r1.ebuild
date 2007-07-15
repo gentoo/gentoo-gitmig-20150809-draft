@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.1.2-r1.ebuild,v 1.3 2007/02/27 12:35:13 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.1.2-r1.ebuild,v 1.4 2007/07/15 04:21:59 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -13,7 +13,6 @@ KEYWORDS="~amd64 ~x86"
 Gnat_Name="gnat-gcc"
 My_PN="asis"
 SRC_URI="http://dev.gentoo.org/~george/src/${P}.tar.bz2"
-
 
 IUSE="doc"
 RDEPEND="=dev-lang/gnat-gcc-${PV}*"
@@ -29,7 +28,6 @@ S="${WORKDIR}/${My_PN}-${PV}"
 QA_EXECSTACK="usr/lib/gnat-gcc/*/${SLOT}/adalib/libasis-${SLOT}.so
 	usr/lib/gnat-gcc/*/${SLOT}/adalib/libasis.a
 	usr/*/gnat-gcc-bin/${SLOT}/*"
-
 
 # it may be even better to force plain -O2 -pipe here
 replace-flags -O3 -O2
@@ -113,7 +111,6 @@ src_compile() {
 		popd
 	fi
 }
-
 
 src_install () {
 	# install the lib

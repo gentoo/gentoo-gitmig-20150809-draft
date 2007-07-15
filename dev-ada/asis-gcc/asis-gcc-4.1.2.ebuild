@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.1.2.ebuild,v 1.2 2007/05/28 18:59:00 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.1.2.ebuild,v 1.3 2007/07/15 04:21:59 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -15,7 +15,6 @@ My_PN="asis"
 # can reuse the same sources, but we need to force an upgrade
 My_PV="4.1.1"
 SRC_URI="mirror://gentoo/${PN}-${My_PV}.tar.bz2"
-
 
 IUSE="doc"
 RDEPEND="=dev-lang/gnat-gcc-${PV}*"
@@ -32,10 +31,8 @@ QA_EXECSTACK="usr/lib/gnat-gcc/*/${SLOT}/adalib/libasis-4.1.so
 	usr/lib/gnat-gcc/*/${SLOT}/adalib/libasis.a
 	usr/*/gnat-gcc-bin/${SLOT}/*"
 
-
 # it may be even better to force plain -O2 -pipe -ftracer here
 replace-flags -O3 -O2
-
 
 pkg_setup() {
 	currGnat=$(eselect --no-color gnat show | grep "gnat-" | awk '{ print $1 }')
@@ -100,7 +97,6 @@ src_compile() {
 		popd
 	fi
 }
-
 
 src_install () {
 	# we need to adjust some vars defined in gnatbuild.eclass so that they use

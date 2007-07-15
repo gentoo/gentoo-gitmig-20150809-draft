@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-2006.0.ebuild,v 1.2 2007/02/27 14:26:33 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-2006.0.ebuild,v 1.3 2007/07/15 04:21:59 mr_bones_ Exp $
 
 inherit gnat libtool
 
@@ -15,7 +15,6 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
 DEPEND="virtual/gnat"
-
 
 lib_compile()
 {
