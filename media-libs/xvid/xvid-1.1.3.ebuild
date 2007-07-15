@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.3.ebuild,v 1.9 2007/07/13 13:46:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.1.3.ebuild,v 1.10 2007/07/15 21:17:17 dertobi123 Exp $
 
 inherit eutils fixheadtails autotools
 
@@ -13,7 +13,7 @@ SRC_URI="http://downloads.xvid.org/downloads/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="examples altivec"
 
 # once yasm-0.6.0+ comes out, we can switch this to
