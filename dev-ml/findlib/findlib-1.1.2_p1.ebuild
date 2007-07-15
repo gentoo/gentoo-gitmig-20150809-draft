@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.1.2_p1.ebuild,v 1.1 2007/03/14 18:01:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.1.2_p1.ebuild,v 1.2 2007/07/15 06:39:51 mr_bones_ Exp $
 
 inherit multilib eutils
 
@@ -42,7 +42,6 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-sandbox.patch"
 
 }
-
 
 src_compile() {
 	./configure -bindir /usr/bin -mandir /usr/share/man \
