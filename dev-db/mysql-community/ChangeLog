@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/mysql-community
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.14 2007/07/14 21:39:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.15 2007/07/15 00:32:00 robbat2 Exp $
+
+*mysql-community-5.0.45 (15 Jul 2007)
+
+  15 Jul 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +mysql-community-5.0.45.ebuild:
+  Version bump of mysql-community, per security bug #185333, bump request
+  #178265. Also cleans up the src_test per bug #161885. If you want to use
+  src_test now, you MUST have FEATURES=userpriv. See the main
+  dev-db/mysql/ChangeLog for more details.
 
   14 Jul 2007; Robin H. Johnson <robbat2@gentoo.org>
   mysql-community-5.0.27-r1.ebuild:
