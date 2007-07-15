@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-base64/cl-base64-3.3.2.ebuild,v 1.1 2006/09/02 17:38:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-base64/cl-base64-3.3.2.ebuild,v 1.2 2007/07/15 02:50:08 mr_bones_ Exp $
 
 inherit common-lisp
 
@@ -15,7 +15,6 @@ DEPEND="virtual/commonlisp
 	dev-lisp/common-lisp-controller"
 
 CLPACKAGE=cl-base64
-
 
 src_install() {
 	common-lisp-install *.lisp *.asd

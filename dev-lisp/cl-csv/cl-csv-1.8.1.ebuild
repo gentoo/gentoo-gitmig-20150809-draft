@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-csv/cl-csv-1.8.1.ebuild,v 1.8 2007/02/03 17:34:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-csv/cl-csv-1.8.1.ebuild,v 1.9 2007/07/15 02:50:08 mr_bones_ Exp $
 
 inherit common-lisp
 
@@ -15,7 +15,6 @@ DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
 
 CLPACKAGE=csv
-
 
 src_install() {
 	common-lisp-install *.lisp *.asd

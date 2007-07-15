@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-blowfish/cl-blowfish-0.6.ebuild,v 1.8 2007/02/03 17:33:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-blowfish/cl-blowfish-0.6.ebuild,v 1.9 2007/07/15 02:50:08 mr_bones_ Exp $
 
 inherit common-lisp eutils
 
@@ -20,7 +20,6 @@ DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
 
 CLPACKAGE=blowfish
-
 
 src_unpack() {
 	unpack ${A}
