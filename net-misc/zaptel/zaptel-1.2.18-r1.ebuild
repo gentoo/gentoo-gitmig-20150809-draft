@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.18-r1.ebuild,v 1.1 2007/07/13 16:03:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.18-r1.ebuild,v 1.2 2007/07/15 23:22:24 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -306,7 +306,6 @@ src_compile() {
 		done
 	fi
 
-
 	if use ecoslec; then
 		cd "${S_OSLEC}"
 		make KVERS=${KV_FULL} \
@@ -368,7 +367,6 @@ src_install() {
 
 		cd ${S}
 	fi
-
 
 	if use ecoslec; then
 		cd "${S_OSLEC}"
