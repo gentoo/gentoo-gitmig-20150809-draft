@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.0-r1.ebuild,v 1.1 2007/07/15 14:44:36 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.0-r1.ebuild,v 1.2 2007/07/15 23:28:52 mr_bones_ Exp $
 
 inherit distutils flag-o-matic multilib toolchain-funcs versionator check-reqs
 
@@ -202,7 +202,6 @@ src_install () {
 	for lib in $(ls -1 libboost_thread-mt.*) ; do
 		dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
 	done
-
 
 	if use pyste; then
 		cd "${S}/libs/python/pyste/install"
