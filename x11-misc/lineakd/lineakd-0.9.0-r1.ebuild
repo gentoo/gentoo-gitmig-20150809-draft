@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0-r1.ebuild,v 1.2 2007/06/04 21:52:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0-r1.ebuild,v 1.3 2007/07/15 16:12:25 nixnut Exp $
 
 inherit multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/lineak/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc ~x86"
 IUSE="debug"
 
 RDEPEND="x11-libs/libICE

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lineak-xosdplugin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/ChangeLog,v 1.22 2007/06/03 19:48:57 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/ChangeLog,v 1.23 2007/07/15 16:22:59 nixnut Exp $
+
+  15 Jul 2007; nixnut <nixnut@gentoo.org> lineak-xosdplugin-0.9.0.ebuild:
+  Stable on ppc wrt bug 185400
 
 *lineak-xosdplugin-0.9.0 (03 Jun 2007)
 
