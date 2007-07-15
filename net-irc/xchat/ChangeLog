@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.253 2007/07/02 13:12:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.254 2007/07/15 11:38:13 armin76 Exp $
+
+*xchat-2.8.4-r1 (15 Jul 2007)
+
+  15 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/xc284-scrollbmkdir.diff, -xchat-2.8.4.ebuild,
+  +xchat-2.8.4-r1.ebuild:
+  Revbump to add a security patch, bug 184575
 
 *xchat-2.8.4 (02 Jul 2007)
 

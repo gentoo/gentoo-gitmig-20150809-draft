@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.4.ebuild,v 1.1 2007/07/02 13:12:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.4-r1.ebuild,v 1.1 2007/07/15 11:38:13 armin76 Exp $
 
 inherit eutils versionator gnome2
 
@@ -41,6 +41,8 @@ src_unpack() {
 		sed -i -e 's:${prefix}/lib/xchat:${libdir}/xchat:' \
 			"${S}"/configure{,.in} || die
 	fi
+
+	epatch "${FILESDIR}"/xc284-scrollbmkdir.diff
 }
 
 src_compile() {
