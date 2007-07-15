@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.10 2007/07/15 19:14:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.11 2007/07/15 19:23:13 drac Exp $
 
 WANT_AUTOCONF=2.5
 
@@ -43,17 +43,10 @@ src_unpack() {
 	eautoconf
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-cflags.patch
+	sed -i -e 's:glame.png:glame-logo.jpg:' src/gui/glame.desktop
 }
 
 src_compile() {
-	if use gnome; then
-		# Use a valid icon for the GNOME menu entry
-		cp src/gui/glame.desktop src/gui/glame.desktop.old
-		sed -e 's:glame.png:glame-logo.jpg:' \
-			src/gui/glame.desktop.old > src/gui/glame.desktop
-		rm src/gui/glame.desktop.old
-	fi
-
 	econf $(use_enable alsa alsatest) \
 		$(use_enable debug swapfiledebug) $(use_enable debug) \
 		$(use_enable gnome gui) \
