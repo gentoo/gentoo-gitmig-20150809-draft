@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.0.ebuild,v 1.9 2007/07/15 10:55:30 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.0-r1.ebuild,v 1.1 2007/07/15 14:44:36 dev-zero Exp $
 
 inherit distutils flag-o-matic multilib toolchain-funcs versionator check-reqs
 
@@ -48,6 +48,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-gcc42-atomicity.h.patch"
 
 	rm boost-build.jam
 
@@ -189,9 +191,18 @@ src_install () {
 
 	cd "${D}/usr/$(get_libdir)"
 
+	# If built with debug enabled, all libraries get a 'd' postfix,
+	# this breaks linking other apps against boost (bug #181972)
+	if use debug ; then
+		for lib in $(ls -1 libboost_*) ; do
+			dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-d\././' -e 's/d\././' <<< ${lib})"
+		done
+	fi
+
 	for lib in $(ls -1 libboost_thread-mt.*) ; do
 		dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
 	done
+
 
 	if use pyste; then
 		cd "${S}/libs/python/pyste/install"
