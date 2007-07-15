@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/usermode
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/ChangeLog,v 1.2 2006/10/30 16:58:41 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/ChangeLog,v 1.3 2007/07/15 16:31:19 dberkholz Exp $
+
+*usermode-1.92 (15 Jul 2007)
+
+  15 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +usermode-1.92.ebuild:
+  Bump. Preserve app exit code, use less memory, don't use PAM data after
+  free, support 'user', 'users', LABEL and UUID in usermount/userformat, add a
+  dialog caption when changing password, fix GUI=no, preserve env vars in
+  consolehelper if configured, fix non-UTF8 hangs, and more.
 
 *usermode-1.87 (30 Oct 2006)
 
