@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cronyx-fonts/cronyx-fonts-2.3.1-r1.ebuild,v 1.8 2007/03/19 14:43:42 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cronyx-fonts/cronyx-fonts-2.3.1-r1.ebuild,v 1.9 2007/07/15 05:13:09 mr_bones_ Exp $
 
 DESCRIPTION="Cronyx Cyrillic bitmap fonts for X"
 HOMEPAGE="http://koi8.pp.ru/frame.html?xwin.html#xwin_fonts"
@@ -24,7 +24,6 @@ src_install() {
 	doins misc/fonts.alias
 	dodoc xrus.info
 }
-
 
 rebuild_fontfiles() {
 	einfo "Refreshing fonts.scale and fonts.dir..."

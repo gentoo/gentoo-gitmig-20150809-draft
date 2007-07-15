@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sharefonts/sharefonts-0.10-r1.ebuild,v 1.6 2004/06/24 22:31:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sharefonts/sharefonts-0.10-r1.ebuild,v 1.7 2007/07/15 05:13:09 mr_bones_ Exp $
 
 S=${WORKDIR}/sharefont
 DESCRIPTION="A Collection of True Type Fonts"
@@ -20,4 +20,3 @@ src_install () {
 	dodoc README
 
 }
-
