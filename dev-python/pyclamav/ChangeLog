@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyclamav
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/ChangeLog,v 1.17 2007/07/02 23:49:29 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/ChangeLog,v 1.18 2007/07/15 09:16:22 lucass Exp $
+
+  15 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -pyclamav-0.3.3.ebuild:
+  Dropped old version.
 
   02 Jul 2007; Ali Polatel <hawking@gentoo.org> -pyclamav-0.2.1.ebuild:
   Remove old version, bug 180212
