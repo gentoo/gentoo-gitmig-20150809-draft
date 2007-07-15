@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.4-r1.ebuild,v 1.14 2007/06/29 17:06:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.4-r1.ebuild,v 1.15 2007/07/15 07:08:11 mr_bones_ Exp $
 
 inherit eutils fixheadtails
 
@@ -123,7 +123,6 @@ src_install() {
 		mv "${i}" "${i/.sample/}"
 	done
 
-
 	dodoc CHANGES CREDITS INSTALL MAINTAINERS NEWS README UPGRADING \
 			docs/{FAQ,*.txt}
 
@@ -133,7 +132,6 @@ src_install() {
 
 	docinto cables
 	dodoc docs/cables/*
-
 
 	newinitd "${FILESDIR}/upsd.rc6" upsd
 	newinitd "${FILESDIR}/upsdrv.rc6-r1" upsdrv
