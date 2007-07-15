@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/cmospwd-4.8.ebuild,v 1.2 2007/06/27 07:56:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/cmospwd-4.8.ebuild,v 1.3 2007/07/15 03:01:24 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -22,4 +22,3 @@ src_install() {
 	dosbin src/cmospwd || die
 	dodoc cmospwd.txt || die
 }
-
