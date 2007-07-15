@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/tdom-0.8.0.ebuild,v 1.1 2005/03/27 02:09:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/tdom-0.8.0.ebuild,v 1.2 2007/07/15 03:37:38 mr_bones_ Exp $
 
 MY_P="tDOM-${PV}"
 DESCRIPTION="XML manipulation library for TCL"
@@ -15,7 +15,6 @@ IUSE="threads"
 DEPEND=">=dev-lang/tcl-8.4.3"
 
 S="${WORKDIR}/${MY_P}"
-
 
 src_compile() {
 	local myconf=""

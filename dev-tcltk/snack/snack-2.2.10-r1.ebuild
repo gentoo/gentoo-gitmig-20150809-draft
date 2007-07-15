@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r1.ebuild,v 1.4 2007/07/14 11:50:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r1.ebuild,v 1.5 2007/07/15 03:37:38 mr_bones_ Exp $
 
 inherit eutils multilib
 
@@ -36,7 +36,6 @@ src_compile() {
 
 	econf ${myconf} || die "configure failed"
 	emake || die "make failed"
-
 
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/tcl-sql-20000114.ebuild,v 1.4 2006/11/23 17:37:59 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/tcl-sql-20000114.ebuild,v 1.5 2007/07/15 03:37:38 mr_bones_ Exp $
 
 inherit eutils
 
@@ -35,4 +35,3 @@ src_install() {
 	dodoc CHANGES.txt CODE_DESCRIPTION.txt LICENSE.txt docs/sample.full.txt docs/sample.simple.txt
 	dohtml README.html docs/api.html
 }
-
