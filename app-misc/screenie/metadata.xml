@@ -3,7 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>chriswhite@gentoo.org</email>
+		<email>hawking@gentoo.org</email>
+		<name>Ali Polatel</name>
 	</maintainer>
 	<longdescription lang="en">
 		Screenie is a small and lightweight GNU screen(1) frontend that is
