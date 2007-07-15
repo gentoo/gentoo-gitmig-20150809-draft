@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/acpi4asus-0.40-r1.ebuild,v 1.1 2007/03/22 18:46:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/acpi4asus-0.40-r1.ebuild,v 1.2 2007/07/15 07:10:12 mr_bones_ Exp $
 
 inherit linux-mod eutils
 
@@ -33,7 +33,6 @@ src_compile() {
 	linux-mod_src_compile
 	emake -C asus_acpid
 }
-
 
 src_install() {
 	linux-mod_src_install

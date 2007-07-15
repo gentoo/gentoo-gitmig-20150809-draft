@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/i8kutils-1.25.ebuild,v 1.10 2007/04/21 23:10:58 tester Exp $
-
-
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/i8kutils-1.25.ebuild,v 1.11 2007/07/15 07:10:12 mr_bones_ Exp $
 
 DESCRIPTION="Dell Inspiron and Latitude utilities"
 HOMEPAGE="http://people.debian.org/~dz/i8k/"
