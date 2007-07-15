@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX kmobiletools-0.5.0_beta3-no-automagic-deps.patch 4945 RMD160 ec2e5c14bdaea74c22db8f018c8b3c33e443c2d2 SHA1 a7b63c09801fc0b21bff24aabe8cb5e033af84da SHA256 acdd6a1bfe582ab95ba3b47bacf92c422ee0a16d52af2f0bd48f7b63c2a4c78e
 MD5 dfa08ffbda5bb89380c351b1d5efbf07 files/kmobiletools-0.5.0_beta3-no-automagic-deps.patch 4945
 RMD160 ec2e5c14bdaea74c22db8f018c8b3c33e443c2d2 files/kmobiletools-0.5.0_beta3-no-automagic-deps.patch 4945
@@ -13,10 +10,10 @@ DIST kmobiletools-0.4.3.3.tar.bz2 800936 RMD160 4e0fd406a171e9bdb3cb91522439bab5
 DIST kmobiletools-0.5.0-beta2.tar.bz2 1171134 RMD160 10d9f4b1c5b80a37e9a8d59f7cd8cb38657cfbc6 SHA1 04bacbab7e36b1ef40b9c19231f286ef4bb2e3bf SHA256 24d6a4f9a4136ce68a27c8b8b402dd6ccb2360df2295f5187b024eeac25d25c8
 DIST kmobiletools-0.5.0-beta3.tar.bz2 1282637 RMD160 767637c697ecfeb2800635a47a9c59ed299ffe63 SHA1 ce9b6d3a53ab0b771e8d4615d545625eccea54b6 SHA256 ef30d9d2ff8f0cb86c3b00137fa7a21d926a01f567e8375d4c7032dd41da346e
 DIST kmobiletools-0.5_beta1.tar.bz2 998633 RMD160 b3f36230d8a31263bddfa3bc3891ae302c95f262 SHA1 783c3027682fa5ef3539ce275581f25052ae7ac2 SHA256 0617bc4ab72fcefd8044ce16ad46071c33615470b24926cd10fd7c9d1b02abf0
-EBUILD kmobiletools-0.4.3.3.ebuild 818 RMD160 8d192051b5ad11d530fc5abc7b5bcbad0f5240d8 SHA1 7ab4ed0a7b1810f444a4d8f9c5b820fd55373bae SHA256 61d5300f396410c3fe5b8ed5243dfcc10b5c6fcff275ad388101b8455e2a0370
-MD5 d3988a575c866e528b2ef8e138693b9b kmobiletools-0.4.3.3.ebuild 818
-RMD160 8d192051b5ad11d530fc5abc7b5bcbad0f5240d8 kmobiletools-0.4.3.3.ebuild 818
-SHA256 61d5300f396410c3fe5b8ed5243dfcc10b5c6fcff275ad388101b8455e2a0370 kmobiletools-0.4.3.3.ebuild 818
+EBUILD kmobiletools-0.4.3.3.ebuild 820 RMD160 23854760e7dc9a0bfb04a7d1eed6b7d0de037e9c SHA1 5ad655f64d63f8d4fe697fd73030377cc7149654 SHA256 d0afc1a6ecd6b70b74205c97619ee9c33e35ca62c94922c003d0adb92029ca3b
+MD5 7e5ca23d242f0084e7a8c11e7e596c27 kmobiletools-0.4.3.3.ebuild 820
+RMD160 23854760e7dc9a0bfb04a7d1eed6b7d0de037e9c kmobiletools-0.4.3.3.ebuild 820
+SHA256 d0afc1a6ecd6b70b74205c97619ee9c33e35ca62c94922c003d0adb92029ca3b kmobiletools-0.4.3.3.ebuild 820
 EBUILD kmobiletools-0.5.0_beta2.ebuild 813 RMD160 8e34c82c1c9b93b1a00b11188b528ade3e9e64ec SHA1 728909e7781a54563ee28dec055d06c605977b30 SHA256 37ffc561abb54478e7ce20fa56868657f394591fb6e384e6f1cfd925ca0eed17
 MD5 4d9a44cf76e4c6e00f1c3aad63e51be9 kmobiletools-0.5.0_beta2.ebuild 813
 RMD160 8e34c82c1c9b93b1a00b11188b528ade3e9e64ec kmobiletools-0.5.0_beta2.ebuild 813
@@ -25,10 +22,10 @@ EBUILD kmobiletools-0.5.0_beta3.ebuild 1881 RMD160 53171ec9a3b7e3f96e35bbf000fdc
 MD5 b05f3009a35eccd18cc106f018c0cfc0 kmobiletools-0.5.0_beta3.ebuild 1881
 RMD160 53171ec9a3b7e3f96e35bbf000fdc697402702b4 kmobiletools-0.5.0_beta3.ebuild 1881
 SHA256 cc0b84fda96ca6029bf8734b5d237bc453e6dbb7af8ae0f122e3aa06ea3f9622 kmobiletools-0.5.0_beta3.ebuild 1881
-EBUILD kmobiletools-0.5_beta1.ebuild 722 RMD160 94eeaf65219f962c9d752cc95e79239608641e95 SHA1 331c1a186a7479c863b5761f69cb9568ce594180 SHA256 da027dc6e6231ef0193645ab09c73286225e811ead2ce526876b3334721fc025
-MD5 8c4da5cfb992f2198f5dfedc2339d1ff kmobiletools-0.5_beta1.ebuild 722
-RMD160 94eeaf65219f962c9d752cc95e79239608641e95 kmobiletools-0.5_beta1.ebuild 722
-SHA256 da027dc6e6231ef0193645ab09c73286225e811ead2ce526876b3334721fc025 kmobiletools-0.5_beta1.ebuild 722
+EBUILD kmobiletools-0.5_beta1.ebuild 723 RMD160 6a53e6f76bda63a6b4f2bcc8c99f673397fafbf1 SHA1 81b6270f5845489512a8f910baa68eac3cb73616 SHA256 c5c76028e5b5948bf1cab7a01e4cd2477c33bd7ea63e731ed59cebf3a323d7e9
+MD5 ce1ef593445fc467b8f43c3cf183684b kmobiletools-0.5_beta1.ebuild 723
+RMD160 6a53e6f76bda63a6b4f2bcc8c99f673397fafbf1 kmobiletools-0.5_beta1.ebuild 723
+SHA256 c5c76028e5b5948bf1cab7a01e4cd2477c33bd7ea63e731ed59cebf3a323d7e9 kmobiletools-0.5_beta1.ebuild 723
 MISC ChangeLog 4747 RMD160 3814b29dab93168cced504288dca0a791a7e9273 SHA1 eba31acaa84044fab276bfb4b8b32d48832917f7 SHA256 6d4e8554add3a50fe4c44f2de731b9b0375108cafa80a6ad102ca7bfe013e2dd
 MD5 7dea943f7ad76dbb14d1771be3d5b5d4 ChangeLog 4747
 RMD160 3814b29dab93168cced504288dca0a791a7e9273 ChangeLog 4747
@@ -49,10 +46,3 @@ SHA256 e2be20ed3f8c156714590a77606b9daae88ce9d328c5465795395c65f472a80b files/di
 MD5 ef1121410a54cfe09ff4bcc8e25d6281 files/digest-kmobiletools-0.5_beta1 271
 RMD160 fde7bd9c28b3988c33e76f926cde845edcedbcc1 files/digest-kmobiletools-0.5_beta1 271
 SHA256 7578cf62b327155bc87fc9c4c05bc9d420a185379108d1f55b8f46ff1ce2ba50 files/digest-kmobiletools-0.5_beta1 271
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFGmALTl1Qf6C0PV04RAhmcAKCHSKFKspyC5vPx1aNGOFQq0NdVqQCeINwb
-VB0R5NmkRrcRD+HVjdME8q0=
-=UWps
------END PGP SIGNATURE-----
