@@ -107,6 +107,7 @@
 #  define _SSP_NSIG _NSIG
 # endif
 #else
+# define _SSP_NSIG 0
 # define ENABLE_SSP_SMASH_DUMPS_CORE 0
 #endif
 
@@ -157,7 +158,7 @@
 			socketargs[3] = 0; \
 			result = INLINE_SYSCALL(socketcall, 2, SOCKOP_connect, socketargs); \
 		} else \
-			result = INLINE_SYSCALL(socket, 3, domain, type, protocol); \
+			result = INLINE_SYSCALL(connect, 3, sockfd, serv_addr, addrlen); \
 	} while (0)
 
 #ifndef _PATH_LOG
