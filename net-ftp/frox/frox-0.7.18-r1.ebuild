@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18-r1.ebuild,v 1.1 2005/09/07 09:40:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18-r1.ebuild,v 1.2 2007/07/15 02:38:18 mr_bones_ Exp $
 
 inherit eutils
 
@@ -17,7 +17,6 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc sparc x86"
 
 DEPEND="clamav? ( >=app-antivirus/clamav-0.80 )"
-
 
 pkg_setup() {
 	enewgroup ftpproxy
