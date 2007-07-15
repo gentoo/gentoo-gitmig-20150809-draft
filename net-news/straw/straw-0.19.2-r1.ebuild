@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.19.2-r1.ebuild,v 1.1 2005/07/16 14:35:14 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.19.2-r1.ebuild,v 1.2 2007/07/15 04:50:01 mr_bones_ Exp $
 
 inherit python distutils
 
@@ -49,4 +49,3 @@ src_install() {
 	make PREFIX=${D}/usr install || die "install failed"
 	dodoc NEWS README TODO
 }
-
