@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/aboot
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/ChangeLog,v 1.9 2007/02/09 05:49:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/ChangeLog,v 1.10 2007/07/15 07:07:59 vapier Exp $
+
+*aboot-1.0_pre20040408-r1 (15 Jul 2007)
+
+  15 Jul 2007; Mike Frysinger <vapier@gentoo.org>
+  +aboot-1.0_pre20040408-r1.ebuild:
+  Pull in our own copy of unsanitized kernel headers to build against #166769.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
