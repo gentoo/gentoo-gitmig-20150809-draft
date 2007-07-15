@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/gnupod-0.27.ebuild,v 1.7 2005/01/01 15:43:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/gnupod-0.27.ebuild,v 1.8 2007/07/15 05:41:19 mr_bones_ Exp $
 
 DESCRIPTION="Tools for updating your iPod"
 
@@ -19,7 +19,6 @@ DEPEND=">=dev-lang/perl-5.6.1-r11
 	dev-perl/Unicode-String
 	dev-perl/XML-Simple
 	dev-perl/Getopt-Mixed"
-
 
 # Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
 #RDEPEND=""

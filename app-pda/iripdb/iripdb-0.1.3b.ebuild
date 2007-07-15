@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/iripdb/iripdb-0.1.3b.ebuild,v 1.3 2006/03/19 19:06:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/iripdb/iripdb-0.1.3b.ebuild,v 1.4 2007/07/15 05:41:19 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -49,4 +49,3 @@ src_install() {
 	dobin iripdb
 	dodoc AUTHORS README doc/iRivDB_structure
 }
-

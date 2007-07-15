@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kde/synce-kde-0.6.1.ebuild,v 1.9 2005/05/22 15:34:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kde/synce-kde-0.6.1.ebuild,v 1.10 2007/07/15 05:41:19 mr_bones_ Exp $
 
 inherit kde
 
@@ -10,7 +10,6 @@ DESCRIPTION="Synchronize Windows CE devices with computers running GNU/Linux, li
 HOMEPAGE="http://synce.sourceforge.net"
 SRC_URI="mirror://sourceforge/synce/${P}.tar.gz
 	avantgo? ( http://www.mechlord.ca/%7Elownewulf/${AGVER}.tgz )"
-
 
 SLOT="0"
 LICENSE="GPL-2"
