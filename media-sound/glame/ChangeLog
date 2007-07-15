@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/glame
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.35 2007/07/02 15:14:34 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.36 2007/07/15 19:14:07 drac Exp $
+
+  15 Jul 2007; Samuli Suominen <drac@gentoo.org> glame-2.0.1.ebuild:
+  Add built_with_use check for bug 164514, missing quotes, and more.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> glame-1.0.2.ebuild:
   (QA) RESTRICT clean up.
