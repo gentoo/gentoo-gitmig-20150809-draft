@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.22.ebuild,v 1.4 2007/04/22 09:08:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.22.ebuild,v 1.5 2007/07/15 07:06:33 mr_bones_ Exp $
 
 inherit eutils linux-info
 
@@ -99,7 +99,6 @@ src_install() {
 	dodoc ${S}/docs/*
 	dodoc ${S}/gpl.txt
 	dodoc ${S}/ToDo.txt
-
 
 	einfo "Installing the XMail software"
 	doenvd ${FILESDIR}/15xmail

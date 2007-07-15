@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.55.1.ebuild,v 1.1 2007/05/30 16:21:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.55.1.ebuild,v 1.2 2007/07/15 07:06:33 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -295,7 +295,6 @@ pkg_config() {
 		domainname=`echo ${mailhost} | sed -e "s/[^\.]*\.\(.*\)/\1/"`
 	fi
 	export domainname
-
 
 	if [ ${ROOT} = "/" ] ; then
 		file=${ROOT}/etc/courier/locals

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00.ebuild,v 1.8 2007/03/18 05:51:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00.ebuild,v 1.9 2007/07/15 07:06:33 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -47,7 +47,6 @@ src_unpack() {
 	EPATCH_OPTS="-d ${S} -p0" \
 	epatch "${FILESDIR}/${P}-gcc34-fix.patch" || die "GCC-3.4 patch failed"
 }
-
 
 pkg_setup() {
 	setupuser

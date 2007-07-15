@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.10 2007/03/18 06:20:39 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.11 2007/07/15 07:06:33 mr_bones_ Exp $
 
 inherit eutils
 
@@ -72,8 +72,6 @@ src_compile() {
 	cd ${S}
 	emake MYSQL_LIBS="`mysql_config --libs`" it man || die
 }
-
-
 
 src_install() {
 

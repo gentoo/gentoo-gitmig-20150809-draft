@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03-r13.ebuild,v 1.13 2007/06/26 02:09:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03-r13.ebuild,v 1.14 2007/07/15 07:06:33 mr_bones_ Exp $
 
 inherit eutils fixheadtails
 
@@ -58,7 +58,6 @@ PROVIDE="virtual/mta
 S=${WORKDIR}/${P/-mysql/}
 
 src_unpack() {
-
 
 	# unpack the initial stuff
 	unpack ${P/-mysql/}.tar.gz

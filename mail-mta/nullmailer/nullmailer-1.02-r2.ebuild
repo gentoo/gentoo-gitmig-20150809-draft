@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.02-r2.ebuild,v 1.2 2007/03/18 05:51:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.02-r2.ebuild,v 1.3 2007/07/15 07:06:33 mr_bones_ Exp $
 
 inherit eutils flag-o-matic mailer
 
@@ -51,7 +51,6 @@ src_unpack() {
 		-e '/^nullmailer_send_LDADD/s, =, = ../lib/cli++/libcli++.a,' \
 		${S}/src/Makefile.am || die "Sed failed"
 }
-
 
 pkg_setup() {
 	setupuser

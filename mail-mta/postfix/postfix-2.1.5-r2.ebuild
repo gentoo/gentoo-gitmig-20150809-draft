@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.5-r2.ebuild,v 1.16 2007/04/28 16:53:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.5-r2.ebuild,v 1.17 2007/07/15 07:06:33 mr_bones_ Exp $
 
 inherit eutils ssl-cert toolchain-funcs
 
@@ -172,7 +172,6 @@ src_install () {
 		insinto /etc/mail
 		doins "${FILESDIR}/mailer.conf"
 	fi
-
 
 	# Provide another link for legacy FSH.
 	dosym /usr/sbin/sendmail /usr/lib/sendmail
