@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/kdesdk-kioslaves-3.5.7.ebuild,v 1.2 2007/05/30 20:37:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/kdesdk-kioslaves-3.5.7.ebuild,v 1.3 2007/07/15 23:00:09 cryos Exp $
 
 KMNAME=kdesdk
 KMMODULE=kioslave
@@ -30,9 +30,11 @@ pkg_setup() {
 
 src_compile() {
 	if [[ -n "$(ldd /usr/bin/svn | grep -o libapr-0)" ]] ; then
-		myconf="--with-apr-config=/usr/bin/apr-config"
+		myconf="--with-apr-config=/usr/bin/apr-config
+		--with-apu-config=/usr/bin/apu-config"
 	else
-		myconf="--with-apr-config=/usr/bin/apr-1-config"
+		myconf="--with-apr-config=/usr/bin/apr-1-config
+		--with-apu-config=/usr/bin/apu-1-config"
 	fi
 	kde-meta_src_compile
 }
