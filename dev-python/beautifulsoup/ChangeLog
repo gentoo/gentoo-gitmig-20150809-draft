@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.6 2007/04/22 08:13:42 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.7 2007/07/15 18:54:01 rbu Exp $
+
+  15 Jul 2007; Robert Buchholz <rbu@gentoo.org> beautifulsoup-3.0.4.ebuild:
+  Adding ~ppc (bug #185159)
 
 *beautifulsoup-3.0.4 (22 Apr 2007)
 
