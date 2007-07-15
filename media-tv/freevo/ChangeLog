@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/freevo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.47 2007/07/02 15:20:44 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.48 2007/07/15 19:16:42 rbu Exp $
+
+*freevo-1.7.2 (15 Jul 2007)
+
+  15 Jul 2007; Robert Buchholz <rbu@gentoo.org> +files/freevo.desktop,
+  metadata.xml, +freevo-1.7.2.ebuild:
+  Version bump fixing bugs #156497, #167893, #175607 and #165026. Thanks to
+  all contributors in the bugs. Metadata change: Added media-tv herd, Ian
+  Stakenvicius and myself as maintainers.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> freevo-1.5.4.ebuild,
   freevo-1.5.4-r2.ebuild, freevo-1.6.0.ebuild, freevo-1.6.1.ebuild:
