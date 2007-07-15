@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-display/system-config-display-1.0.51.ebuild,v 1.1 2007/07/15 03:15:05 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-display/system-config-display-1.0.51.ebuild,v 1.2 2007/07/15 16:09:27 dberkholz Exp $
 
 inherit python rpm
 
@@ -27,7 +27,6 @@ RDEPEND="=dev-python/pygtk-2*
 	dev-python/rhpl
 	>=dev-python/rhpxl-0.34
 	dev-util/desktop-file-utils
-	x11-misc/xsri
 	x11-base/xorg-server
 	x11-themes/hicolor-icon-theme"
 DEPEND="${RDEPEND}
