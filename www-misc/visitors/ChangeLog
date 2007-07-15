@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/visitors
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.7 2006/09/14 19:13:07 beu Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.8 2007/07/15 09:06:46 phreak Exp $
+
+  15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning to m-needed, as beu is being retired (#66608).
 
 *visitors-0.7 (14 Sep 2006)
 
