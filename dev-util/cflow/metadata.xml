@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>dev-zero@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 		GNU cflow analyzes a collection of C source files and prints a graph,
