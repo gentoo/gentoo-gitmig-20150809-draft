@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.420 2007/07/11 17:49:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.421 2007/07/15 00:26:35 robbat2 Exp $
+
+*mysql-5.0.44-r1 (15 Jul 2007)
+
+  15 Jul 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +mysql-5.0.44-r1.ebuild:
+  Cleanup of src_test code so that the enterprise and community ebuilds can be
+  very similar. Note that upstream has changed the testing procedures such
+  that they will always fail if you use FEATURES=-userpriv.
 
   11 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org> mysql-5.0.44.ebuild:
   fix inherit order so DESCRIPTION is properly set
