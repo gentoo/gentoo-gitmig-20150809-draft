@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20060213.ebuild,v 1.1 2006/04/11 21:33:09 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20060213.ebuild,v 1.2 2007/07/15 04:37:55 mr_bones_ Exp $
 
 inherit eutils
 
@@ -68,7 +68,6 @@ src_install() {
 	touch "${D}/var/lib/misc/prelink.quick"
 	touch "${D}/var/lib/misc/prelink.force"
 	touch "${D}/var/log/prelink.log"
-
 
 	dodoc INSTALL TODO ChangeLog THANKS COPYING README AUTHORS NEWS
 }

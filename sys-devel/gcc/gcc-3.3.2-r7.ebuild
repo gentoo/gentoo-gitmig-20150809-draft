@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.32 2007/06/29 08:20:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.33 2007/07/15 04:37:55 mr_bones_ Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj"
 
@@ -131,7 +131,6 @@ RDEPEND="virtual/libc
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
 PDEPEND="|| ( sys-devel/gcc-config app-admin/eselect-compiler )"
-
 
 chk_gcc_version() {
 	# This next bit is for updating libtool linker scripts ...
@@ -365,7 +364,6 @@ src_compile() {
 		einfo "WARNING: Multilib not enabled. You will not be able to build 32bit binaries."
 	fi
 	myconf="${myconf} --disable-multilib"
-
 
 	# Fix linking problem with c++ apps which where linkedi
 	# agains a 3.2.2 libgcc

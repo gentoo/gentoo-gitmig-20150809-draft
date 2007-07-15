@@ -1,7 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/bfin-toolchain-2006.2_rc2.ebuild,v 1.2 2007/02/13 17:46:23 vapier Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/bfin-toolchain-2006.2_rc2.ebuild,v 1.3 2007/07/15 04:37:55 mr_bones_ Exp $
 
 DESCRIPTION="toolchain for Blackfin processors"
 HOMEPAGE="http://blackfin.uclinux.org/"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.28 2007/06/26 02:52:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.29 2007/07/15 04:37:55 mr_bones_ Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened n32 n64"
 
@@ -44,7 +44,6 @@ PDEPEND="|| ( sys-devel/gcc-config app-admin/eselect-compiler )"
 [ "${ABI}" != "n32" ] && [ "${ABI}" != "n64" ] && PDEPEND="${PDEPEND}
 	!n32? ( !n64? ( !s390? ( !elibc_uclibc? ( sys-libs/libstdc++-v3 ) ) ) )"
 
-
 # <<--------------------SRC_URI variables-------------------->>
 # Location of gentoo-specific files. Please dont set this to mirror, that
 # would just make the files unavailable until they get mirrored. All files
@@ -75,7 +74,6 @@ PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
 # ProPolice version
 PP_VER="3_4"
 PP_FVER="${PP_VER//_/.}-2"
-
 
 # magic! =D
 if [ -n "${PRERELEASE}" ] ; then
@@ -113,7 +111,6 @@ SRC_URI="${SRC_URI} ${GENTOO_BASE_URI}/gcc-3.4.1-manpages.tar.bz2"
 # mmm... PIE =D
 SRC_URI="${SRC_URI} ${GENTOO_BASE_URI}${PIE_CORE}"
 # >>--------------------SRC_URI variables--------------------<<
-
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -947,4 +944,3 @@ pkg_postinst() {
 	ewarn "applications that would otherwise need it. If you dont, then all"
 	ewarn "c++ applications will break."
 }
-
