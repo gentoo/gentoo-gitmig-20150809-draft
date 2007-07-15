@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta7.ebuild,v 1.3 2007/06/26 01:45:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta7.ebuild,v 1.4 2007/07/15 03:57:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -12,7 +12,6 @@ ENV_FILE=${D}/etc/env.d/99tigcc
 S=$WORKDIR
 DESCRIPTION="Cross compiler for Texas Instruments TI-89, TI-92(+) and V200 calculators"
 HOMEPAGE="http://tigcc.ticalc.org"
-
 
 #original source can be found at:
 #SRC_URI="http://tigcc.ticalc.org/linux/tigcc_src.tar.bz2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.22.0.ebuild,v 1.6 2007/06/07 10:08:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.22.0.ebuild,v 1.7 2007/07/15 03:57:21 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -25,7 +25,6 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	>=dev-embedded/gputils-0.12.0"
 
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -34,12 +33,10 @@ src_unpack() {
 	eautoreconf
 }
 
-
 src_compile() {
 	econf $(use_enable gtk gui) || die "Configuration failed"
 	emake || die "Compilation failed"
 }
-
 
 src_install() {
 	emake DESTDIR=${D} install || die "Installation failed"

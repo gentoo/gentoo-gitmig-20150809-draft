@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.95_p3.ebuild,v 1.3 2005/02/17 17:13:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.95_p3.ebuild,v 1.4 2007/07/15 03:57:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -11,7 +11,6 @@ BIN_VER=${BASE_BINUTILS:0:4}
 S=${WORKDIR}
 DESCRIPTION="Cross compiler for Texas Instruments TI-89, TI-92(+) and V200 calculators"
 HOMEPAGE="http://tigcc.ticalc.org"
-
 
 # mirror://gentoo/${P}.tar.bz2 comes from http://tigcc.ticalc.org/linux/tigcc_src.tar.bz2
 # which isn't that reliable
