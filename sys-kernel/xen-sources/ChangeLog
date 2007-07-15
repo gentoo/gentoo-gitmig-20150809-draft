@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.40 2007/07/10 19:42:31 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.41 2007/07/15 18:00:11 marineam Exp $
+
+  15 Jul 2007; Michael Marineau <marineam@gentoo.org>
+  +files/xen-sources-2.6.16.52-sctp-skb_linearize-fix.patch,
+  xen-sources-2.6.16.52.ebuild:
+  Add fix for sctp compile error, resolves bug #185406.
 
 *xen-sources-2.6.16.52 (10 Jul 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.16.52.ebuild,v 1.1 2007/07/10 19:42:31 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.16.52.ebuild,v 1.2 2007/07/15 18:00:11 marineam Exp $
 
 ETYPE="sources"
 UNIPATCH_STRICTORDER="1"
@@ -17,7 +17,8 @@ PATCH_URI="mirror://gentoo/${XEN_PATCH}"
 SRC_URI="${KERNEL_URI} ${PATCH_URI}"
 
 UNIPATCH_LIST="${DISTDIR}/${XEN_PATCH}
-	${FILESDIR}/${P}-ipt-reject-fix.patch"
+	${FILESDIR}/${P}-ipt-reject-fix.patch
+	${FILESDIR}/${P}-sctp-skb_linearize-fix.patch"
 
 KEYWORDS="~x86 ~amd64"
 
