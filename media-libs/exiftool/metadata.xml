@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>graphics</herd>
 	<herd>perl</herd>
+	<maintainer>
+		<email>graaff@gentoo.org</email>
+	</maintainer>
 </pkgmetadata>
