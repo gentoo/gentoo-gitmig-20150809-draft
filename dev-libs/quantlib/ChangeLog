@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/quantlib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.30 2007/07/11 21:00:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.31 2007/07/15 16:48:44 armin76 Exp $
+
+  15 Jul 2007; Raúl Porcel <armin76@gentoo.org> quantlib-0.3.12.ebuild:
+  alpha stable
 
 *quantlib-0.3.14-r1 (11 Jul 2007)
 
