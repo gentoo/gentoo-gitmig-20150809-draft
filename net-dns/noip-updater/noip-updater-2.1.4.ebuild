@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.1.4.ebuild,v 1.3 2007/05/06 09:13:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/noip-updater-2.1.4.ebuild,v 1.4 2007/07/15 03:31:10 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -56,4 +56,3 @@ pkg_config() {
 	einfo "Answer the following questions."
 	noip2 -C || die
 }
-
