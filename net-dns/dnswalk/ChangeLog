@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnswalk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnswalk/ChangeLog,v 1.10 2007/05/15 13:55:25 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnswalk/ChangeLog,v 1.11 2007/07/15 08:32:00 phreak Exp $
+
+  15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning net-dns/dnswalk to m-needed, as beu is being retired (#66608).
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
