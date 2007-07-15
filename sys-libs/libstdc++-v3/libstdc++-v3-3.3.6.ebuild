@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.13 2007/04/24 14:49:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.14 2007/07/15 02:08:20 mr_bones_ Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -29,7 +29,6 @@ is_arch_allowed() {
 		[ "${proc}" == "${1}" ] && return 0
 	done
 
-
 	mips_processor_table="mips1 mips2 mips3 mips4 mips32 mips64 r3000 r2000 \
 		r3900 r6000 r4000 vr4100 vr4111 vr4120 vr4300 r4400 r4600 orion \
 		r4650 r8000 vr5000 vr5400 vr5500 4kc 4kp 5kc 20kc sr71000 sb1"
@@ -37,7 +36,6 @@ is_arch_allowed() {
 	for proc in ${mips_processor_table} ; do
 		[ "${proc}" == "${1}" ] && return 0
 	done
-
 
 	rs6000_processor_table="common power power2 power3 power4 powerpc \
 		powerpc64 rios rios1 rsc rsc1 rios2 rs64a 401 403 405 505 601 602 \
@@ -48,10 +46,8 @@ is_arch_allowed() {
 		[ "${proc}" == "${1}" ] && return 0
 	done
 
-
 	return 1
 }
-
 
 do_filter_flags() {
 	declare setting
@@ -80,7 +76,6 @@ do_filter_flags() {
 	if [ ! -z "${setting}" ] ; then
 		is_arch_allowed "${setting}" || filter-flags -mcpu="${setting}"
 	fi
-
 
 	# xgcc wont understand gcc 3.4 flags...
 	filter-flags -fno-unit-at-a-time

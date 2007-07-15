@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/detect/detect-0.9.72.ebuild,v 1.9 2004/10/10 02:31:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/detect/detect-0.9.72.ebuild,v 1.10 2007/07/15 02:08:20 mr_bones_ Exp $
 
 inherit eutils
 
@@ -38,4 +38,3 @@ src_install() {
 		gnulocaledir="${D}/usr/share/locale" \
 		install || die
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r2.ebuild,v 1.1 2007/02/26 09:11:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r2.ebuild,v 1.2 2007/07/15 02:08:20 mr_bones_ Exp $
 
 inherit eutils versionator multilib autotools
 
@@ -73,7 +73,6 @@ src_unpack() {
 		sed -i ${f} \
 			-e '/^mkinstalldirs = /s,\(mkinstalldirs =\).*,\1 $(top_builddir)/./mkinstalldirs,'
 	done
-
 
 	# Fixes thanks to Flameeyes
 	cp /usr/share/gettext/config.rpath . # missing

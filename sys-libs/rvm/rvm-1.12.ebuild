@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/rvm/rvm-1.12.ebuild,v 1.3 2007/05/18 12:50:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/rvm/rvm-1.12.ebuild,v 1.4 2007/07/15 02:08:20 mr_bones_ Exp $
 
 DESCRIPTION="Recoverable Virtual Memory (used by Coda)"
 HOMEPAGE="http://www.coda.cs.cmu.edu/"
@@ -16,7 +16,6 @@ DEPEND=">=sys-libs/lwp-2.0
 	sys-devel/gcc"
 
 RDEPEND=">=sys-libs/lwp-2.0"
-
 
 src_install() {
 	make DESTDIR=${D} install || die

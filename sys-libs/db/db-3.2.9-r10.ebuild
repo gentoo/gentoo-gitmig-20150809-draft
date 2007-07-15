@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.26 2006/09/19 17:07:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.27 2007/07/15 02:08:20 mr_bones_ Exp $
 
 inherit gnuconfig libtool eutils db java-pkg
 
@@ -163,4 +163,3 @@ pkg_postinst () {
 pkg_postrm () {
 	db_fix_so
 }
-

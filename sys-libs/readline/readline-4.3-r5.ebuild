@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.28 2007/06/16 07:06:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.29 2007/07/15 02:08:20 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -45,7 +45,6 @@ src_compile() {
 	cd shlib
 	emake || die
 }
-
 
 src_install() {
 	# portage 2.0.50's einstall causes sandbox violations if lib64 is a
