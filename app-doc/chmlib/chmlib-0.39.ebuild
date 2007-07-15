@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.39.ebuild,v 1.4 2007/01/30 15:51:41 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.39.ebuild,v 1.5 2007/07/15 23:35:58 mr_bones_ Exp $
 
 inherit eutils multilib flag-o-matic versionator
 
@@ -35,7 +35,6 @@ src_unpack() {
 		sed -i "s:__i386__:__hppa__:" src/chm_lib.c
 	fi
 }
-
 
 src_compile() {
 	append-flags "-L${S}/src/.libs"
