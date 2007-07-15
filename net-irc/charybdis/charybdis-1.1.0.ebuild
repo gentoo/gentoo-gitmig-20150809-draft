@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/charybdis-1.1.0.ebuild,v 1.1 2006/03/07 02:50:56 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/charybdis-1.1.0.ebuild,v 1.2 2007/07/15 06:24:03 mr_bones_ Exp $
 
 inherit eutils
 
@@ -73,4 +73,3 @@ src_install() {
 pkg_postinst() {
 	ewarn "You should probably edit /etc/charybdis/ircd.conf at this point."
 }
-
