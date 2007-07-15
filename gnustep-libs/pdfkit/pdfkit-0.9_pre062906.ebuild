@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pdfkit/pdfkit-0.9_pre062906.ebuild,v 1.2 2006/10/11 20:45:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pdfkit/pdfkit-0.9_pre062906.ebuild,v 1.3 2007/07/15 03:34:37 mr_bones_ Exp $
 
 inherit gnustep
 
@@ -31,4 +31,3 @@ src_compile () {
 	econf || die
 	egnustep_make || die
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/artresources-0.1.2.ebuild,v 1.13 2006/03/26 09:27:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/artresources-0.1.2.ebuild,v 1.14 2007/07/15 03:34:37 mr_bones_ Exp $
 
 inherit gnustep
 
@@ -34,4 +34,3 @@ src_install() {
 	cp -pPR *.nfont ${D}$(egnustep_system_root)/Library/Fonts
 	chown -R root:0 ${D}$(egnustep_system_root)/Library/Fonts
 }
-
