@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/libuser
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libuser/ChangeLog,v 1.3 2006/09/22 05:36:22 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libuser/ChangeLog,v 1.4 2007/07/15 16:29:33 dberkholz Exp $
+
+*libuser-0.56.4 (15 Jul 2007)
+
+  15 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +libuser-0.56.4.ebuild:
+  Bump. Adds import of HOME from default/useradd, drops quota library and
+  python module, API/ABI break to avoid corruption of number-like strings,
+  allows specifying a SASL mechanism, update the last-changed date field when
+  updating passwords, and more.
 
   22 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/0.54.6-raise-minimum-ids-to-1000.patch, libuser-0.54.6.ebuild:
