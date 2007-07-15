@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8.ebuild,v 1.2 2006/10/22 15:16:48 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8.ebuild,v 1.3 2007/07/15 03:28:52 mr_bones_ Exp $
 
 inherit eutils
 
@@ -31,7 +31,6 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-
 src_install() {
 	dobin src/wepdecrypt run/wepdecrypt_{inc,word} src/wkeygen || die
 
@@ -44,4 +43,3 @@ src_install() {
 	doman doc/wepdecrypt.1 doc/wkeygen.1
 	dodoc CHANGELOG README TODO doc/manual.html doc/manual.txt doc/Examples.txt
 }
-

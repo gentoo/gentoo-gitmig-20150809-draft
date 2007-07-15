@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta3.ebuild,v 1.10 2006/06/24 01:26:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta3.ebuild,v 1.11 2007/07/15 03:28:52 mr_bones_ Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -21,7 +21,6 @@ MODULE_NAMES="rt2500(net:${S}/Module)"
 CONFIG_CHECK="NET_RADIO BROKEN_ON_SMP"
 BROKEN_ON_SMP_ERROR="SMP Processors and Kernels are currently not supported"
 MODULESD_RT2500_ALIASES=('ra? rt2500')
-
 
 pkg_setup() {
 	linux-mod_pkg_setup

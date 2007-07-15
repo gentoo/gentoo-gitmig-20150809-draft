@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.3-r2.ebuild,v 1.2 2006/10/08 18:39:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.3-r2.ebuild,v 1.3 2007/07/15 03:28:52 mr_bones_ Exp $
 
 #The configure script needs prepared sources.
 inherit linux-mod
@@ -158,4 +158,3 @@ pkg_postinst() {
 	einfo ""
 	einfo "If they do not work, please report this to betelgeuse@gentoo.org."
 }
-
