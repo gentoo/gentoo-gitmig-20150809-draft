@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r4.ebuild,v 1.4 2007/02/04 19:16:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r6.ebuild,v 1.1 2007/07/15 20:23:43 dev-zero Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug gtk ncurses nls"
 
 #EVMS uses libuuid from e2fsprogs
@@ -41,10 +41,13 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}/cli_query_segfault.patch"
 	epatch "${FILESDIR}/${PV}/get_geometry.patch"
 	epatch "${FILESDIR}/${PV}/BaseName.patch"
+	epatch "${FILESDIR}/${PV}/disk_cache.patch"
 
-	epatch "${FILESDIR}/evms-2.5.5-as-needed.patch"
-	epatch "${FILESDIR}/evms-2.5.5-glib_dep.patch"
-	epatch "${FILESDIR}/evms-2.5.5-ocfs2.patch"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${P}-glib_dep.patch"
+	epatch "${FILESDIR}/${P}-ocfs2.patch"
+	epatch "${FILESDIR}/${P}-use_disk_group.patch"
+	epatch "${FILESDIR}/${P}-pagesize.patch"
 
 	eautoreconf
 }
@@ -124,7 +127,7 @@ src_test() {
 		einfo "  dd if=/dev/zero of=/tmp/evms_test_file bs=1M count=4096"
 		einfo "- Activate a loop device on this file:"
 		einfo "  losetup /dev/loop0 /tmp/evms_test_file"
-		einfo "- export EVMS_TEST_VOLUME=loop0"
+		einfo "- export EVMS_TEST_VOLUME=loop/0"
 		einfo "The disk has to be at least 4GB!"
 		einfo "To deactivate the loop-device afterwards:"
 		einfo "- losetup -d /dev/loop0"
@@ -147,5 +150,5 @@ src_test() {
 	addwrite /var/lock/evms-engine
 
 	cd "${S}/tests/suite"
-	PATH="${PATH}:/sbin:/${S}/tests" ./run_tests ${EVMS_TEST_VOLUME} || die "tests failed"
+	PATH="${S}/ui/cli:${S}/tests:/sbin:${PATH}" ./run_tests ${EVMS_TEST_VOLUME} || die "tests failed"
 }

@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.66 2007/04/06 20:32:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.67 2007/07/15 20:23:43 dev-zero Exp $
+
+*evms-2.5.5-r6 (15 Jul 2007)
+
+  15 Jul 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/2.5.5/disk_cache.patch, -evms-2.5.5-r1.ebuild,
+  -evms-2.5.5-r4.ebuild, +evms-2.5.5-r6.ebuild:
+  Added disk_cache patch for bug #185369 (thanks to Attila Jecs)
+  Dropped old versions
 
   06 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   evms-2.5.5-r5.ebuild:
