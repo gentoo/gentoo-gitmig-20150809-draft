@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/rt2500
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.42 2007/06/17 15:37:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.43 2007/07/15 22:12:19 uberlord Exp $
+
+*rt2500-1.1.0_pre2007071515 (15 Jul 2007)
+
+  15 Jul 2007; Roy Marples <uberlord@gentoo.org>
+  +rt2500-1.1.0_pre2007071515.ebuild:
+  New CVS snapshot, fixes #181973.
+  Added kernel tests for >=2.6.22, #181984 thanks to Ed Catmur.
 
   09 May 2007; Stefan Schweizer <genstef@gentoo.org>
   rt2500-1.1.0_pre2007020911.ebuild:
