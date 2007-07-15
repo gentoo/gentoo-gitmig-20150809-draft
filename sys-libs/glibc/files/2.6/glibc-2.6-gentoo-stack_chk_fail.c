@@ -122,10 +122,20 @@
 #endif
 
 /* Define DO_SOCKET/DO_CONNECT functions to deal with socketcall vs socket/connect */
-#ifdef __NR_socketcall
-# define USE_OLD_SOCKETCALL 1
-#else
+#if defined(__NR_socket) && defined(__NR_connect)
 # define USE_OLD_SOCKETCALL 0
+#else
+# define USE_OLD_SOCKETCALL 1
+#endif
+/* stub out the __NR_'s so we can let gcc optimize away dead code */
+#ifndef __NR_socketcall
+# define __NR_socketcall 0
+#endif
+#ifndef __NR_socket
+# define __NR_socket 0
+#endif
+#ifndef __NR_connect
+# define __NR_connect 0
 #endif
 #define DO_SOCKET(result, domain, type, protocol) \
 	do { \
