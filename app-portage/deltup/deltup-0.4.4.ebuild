@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.4.ebuild,v 1.1 2007/07/13 11:43:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.4.ebuild,v 1.2 2007/07/15 05:25:48 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -44,7 +44,6 @@ src_compile () {
 	append-flags -static
 	emake ${makeopts} bzip2 || die "emake bzip2 failed"
 	mv bzip2 bzip2_1.0.3
-
 
 }
 

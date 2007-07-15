@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.13.ebuild,v 1.1 2007/05/13 01:56:42 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.13.ebuild,v 1.2 2007/07/15 05:25:48 mr_bones_ Exp $
 
 inherit base haskell-cabal
 
@@ -20,7 +20,7 @@ RDEPEND=""
 
 pkg_setup() {
 	if ! built_with_use -o dev-haskell/gtk2hs firefox ; then
-	   	echo
+		echo
 		eerror "gtk2hs was not merged with the firefox USE flag."
 		eerror "Himerge requires gtk2hs be compiled with any of these flags."
 		die "gtk2hs missing web browser support."

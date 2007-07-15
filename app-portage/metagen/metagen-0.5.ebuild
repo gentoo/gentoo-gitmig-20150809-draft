@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.5.ebuild,v 1.4 2007/06/16 15:18:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.5.ebuild,v 1.5 2007/07/15 05:25:48 mr_bones_ Exp $
 
 inherit python
 
@@ -33,4 +33,3 @@ src_test() {
 		|| die "metagen tests failed"
 	einfo "Tests completed."
 }
-
