@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-3.1.3.ebuild,v 1.3 2007/02/23 12:01:45 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-3.1.3.ebuild,v 1.4 2007/07/15 07:14:13 mr_bones_ Exp $
 
 inherit eutils java-pkg
 #RESTRICT="fetch"
@@ -22,7 +22,6 @@ IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
-
 src_install() {
 	java-pkg_dojar *.jar
 	java-pkg_dojar extensions/*.jar
@@ -31,7 +30,6 @@ src_install() {
 	dohtml -r docs/*
 	insinto /usr/share/${PN}/models
 	doins -r models/*
-
 
 	insinto /usr/share/pixmaps
 	doins  ${FILESDIR}/netlogo.gif

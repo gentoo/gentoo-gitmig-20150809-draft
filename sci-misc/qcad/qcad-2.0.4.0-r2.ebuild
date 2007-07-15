@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r2.ebuild,v 1.3 2006/01/07 18:45:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r2.ebuild,v 1.4 2007/07/15 07:14:13 mr_bones_ Exp $
 
 inherit kde-functions eutils
 
@@ -48,7 +48,6 @@ src_unpack() {
 		qc_applicationwindow.cpp  || die "sed failed on manual path"
 
 }
-
 
 src_compile() {
 	### borrowed from kde.eclass #
