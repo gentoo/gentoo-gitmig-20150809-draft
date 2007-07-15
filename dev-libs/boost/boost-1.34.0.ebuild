@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.0.ebuild,v 1.8 2007/06/23 18:24:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.0.ebuild,v 1.9 2007/07/15 10:55:30 dev-zero Exp $
 
 inherit distutils flag-o-matic multilib toolchain-funcs versionator check-reqs
 
@@ -182,7 +182,7 @@ src_install () {
 	dodoc README
 
 	if use doc ; then
-		dohtml -A .pdf,.txt \
+		dohtml -A pdf,txt \
 			*.htm *.gif *.css \
 			-r doc libs more people wiki
 	fi
