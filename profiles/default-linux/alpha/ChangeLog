@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.63 2007/07/14 10:53:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.64 2007/07/15 15:10:07 armin76 Exp $
+
+  15 Jul 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask,
+  use.mask:
+  Unmask dbus USE-flag and p.mask xfce-extra/xfce4-volstatus-icon on 2.4 profiles
 
   14 Jul 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   Mask xfce-extra/thunar-volman on 2.4 profiles
