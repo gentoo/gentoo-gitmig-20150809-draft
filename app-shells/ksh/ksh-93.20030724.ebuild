@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030724.ebuild,v 1.13 2006/04/21 17:13:34 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030724.ebuild,v 1.14 2007/07/15 05:23:38 mr_bones_ Exp $
 
 inherit ccc eutils flag-o-matic
 
@@ -71,7 +71,7 @@ src_install() {
 	doexe ${my_arch}/bin/ok/ksh
 
 	# FIXME: talk to pdksh maintainer about making this nicer,
-	# 		how can we co-exist nicely without blocking?
+	# how can we co-exist nicely without blocking?
 	dosym /bin/ksh /bin/ksh93
 
 	newman ${my_arch}/man/man1/sh.1 ksh.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/pdsh-2.11.ebuild,v 1.1 2006/11/22 19:19:35 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/pdsh-2.11.ebuild,v 1.2 2007/07/15 05:23:38 mr_bones_ Exp $
 
 DESCRIPTION="A high-performance, parallel remote shell utility."
 HOMEPAGE="http://www.llnl.gov/linux/pdsh/pdsh.html"
@@ -28,4 +28,3 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 }
-
