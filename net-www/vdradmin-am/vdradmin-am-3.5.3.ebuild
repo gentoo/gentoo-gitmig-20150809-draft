@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.5.3.ebuild,v 1.2 2007/03/13 11:46:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.5.3.ebuild,v 1.3 2007/07/15 04:40:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -25,7 +25,6 @@ DEPEND="dev-lang/perl
 	unicode? ( sys-devel/gettext )"
 RDEPEND="${DEPEND}"
 
-
 ETC_DIR="/etc/vdradmin"
 LIB_DIR="/usr/share/vdradmin"
 VDRADMIN_USER="vdradmin"
@@ -45,7 +44,6 @@ src_unpack() {
 		-e "/COMPILE_DIR/s-/tmp-${TMP_DIR}-" \
 		-e "s-/var/run/vdradmind.pid-/var/tmp/vdradmin/vdradmind.pid-"
 }
-
 
 src_compile() {
 
@@ -179,4 +177,3 @@ pkg_config() {
 	/usr/bin/vdradmind.pl -c
 	chown ${VDRADMIN_USER}:${VDRADMIN_GROUP} ${ROOT}${ETC_DIR}/vdradmind.conf
 }
-
