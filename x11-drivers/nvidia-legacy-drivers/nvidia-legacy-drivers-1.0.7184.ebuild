@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/nvidia-legacy-drivers-1.0.7184.ebuild,v 1.12 2007/07/01 22:43:39 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/nvidia-legacy-drivers-1.0.7184.ebuild,v 1.13 2007/07/15 05:56:50 mr_bones_ Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -41,7 +41,6 @@ QA_TEXTRELS_x86="usr/lib/xorg/libXvMCNVIDIA.so.${PV}
 QA_EXECSTACK_x86="usr/lib/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib/opengl/nvidia/extensions/libglx.so"
-
 
 QA_TEXTRELS_amd64="usr/lib64/xorg/libXvMCNVIDIA.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libGL.so.${PV}

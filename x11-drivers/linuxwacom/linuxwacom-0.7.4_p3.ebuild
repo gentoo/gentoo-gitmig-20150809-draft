@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.4_p3.ebuild,v 1.7 2007/01/13 17:25:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.4_p3.ebuild,v 1.8 2007/07/15 05:56:50 mr_bones_ Exp $
 
 IUSE="gtk tcl tk usb"
 
@@ -26,7 +26,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	usb? ( >=sys-kernel/linux-headers-2.6 )"
 S=${WORKDIR}/${P/_p/-}
-
 
 src_unpack() {
 	unpack ${A}

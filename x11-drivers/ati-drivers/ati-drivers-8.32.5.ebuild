@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.32.5.ebuild,v 1.7 2007/07/02 14:50:23 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.32.5.ebuild,v 1.8 2007/07/15 05:56:50 mr_bones_ Exp $
 
 IUSE="acpi doc opengl"
 
@@ -333,7 +333,6 @@ src_install-libs() {
 		cp -pP ${COMMON_DIR}/etc/ati/authatieventsd.sh ${D}/etc/ati/
 	fi
 }
-
 
 pkg_postinst() {
 	/usr/bin/eselect opengl set --use-old ati
