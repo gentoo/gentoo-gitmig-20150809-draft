@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/xconvers-0.8.2.ebuild,v 1.6 2006/03/19 00:16:16 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/xconvers-0.8.2.ebuild,v 1.7 2007/07/15 04:56:11 mr_bones_ Exp $
 
 inherit eutils
 
@@ -27,4 +27,3 @@ src_install() {
 	dodoc README
 	make_desktop_entry xconvers Xconvers xconvers.png HamRadio
 }
-
