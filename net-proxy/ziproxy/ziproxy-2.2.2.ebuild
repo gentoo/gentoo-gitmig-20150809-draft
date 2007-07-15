@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.2.2.ebuild,v 1.1 2007/05/11 21:26:00 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.2.2.ebuild,v 1.2 2007/07/15 23:13:13 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -23,7 +23,6 @@ DEPEND="dev-libs/confuse
 	sys-libs/zlib
 	jpeg2k? ( media-libs/jasper )
 	xinetd? ( virtual/inetd )"
-
 
 pkg_setup() {
 	enewgroup ziproxy
