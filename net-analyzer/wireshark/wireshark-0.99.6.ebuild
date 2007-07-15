@@ -1,8 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.6.ebuild,v 1.2 2007/07/09 17:37:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.6.ebuild,v 1.3 2007/07/15 20:23:28 drac Exp $
 
-inherit libtool flag-o-matic eutils toolchain-funcs
+WANT_AUTOMAKE="1.9"
+
+inherit autotools libtool flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
@@ -53,7 +55,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"/epan
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautomake
+	cd epan
 	epatch "${FILESDIR}"/wireshark-except-double-free.diff
 	epatch "${FILESDIR}"/wireshark-epan_dissectors_packet-diameter.diff
 }

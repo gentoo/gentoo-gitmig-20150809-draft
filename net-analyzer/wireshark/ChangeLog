@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.57 2007/07/09 17:37:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.58 2007/07/15 20:23:28 drac Exp $
+
+  15 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/wireshark-0.99.6-asneeded.patch, wireshark-0.99.6.ebuild:
+  Fix building with asneeded for bug 184668.
 
   09 Jul 2007; Raúl Porcel <armin76@gentoo.org> wireshark-0.99.6.ebuild:
   Fix bug #184529, blame Jokey
