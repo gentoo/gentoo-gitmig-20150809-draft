@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ddccontrol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.17 2007/07/15 07:44:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.18 2007/07/15 12:09:55 nixnut Exp $
+
+  15 Jul 2007; nixnut <nixnut@gentoo.org> ddccontrol-0.4.2.ebuild:
+  Stable on ppc wrt bug 162735
 
   15 Jul 2007; Robin H. Johnson <robbat2@gentoo.org>
   +files/ddccontrol-0.4.2-pciutils-libz.patch, ddccontrol-0.4.2.ebuild:
