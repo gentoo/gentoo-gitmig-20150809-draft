@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/balance
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/ChangeLog,v 1.10 2007/05/14 19:45:45 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/ChangeLog,v 1.11 2007/07/15 08:34:50 phreak Exp $
+
+  15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning net-misc/balance to m-needed, as beu is being retired (#66608).
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
