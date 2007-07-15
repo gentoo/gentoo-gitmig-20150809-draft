@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.6 2007/04/09 17:05:01 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.7 2007/07/15 23:33:56 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -14,6 +14,7 @@ KEYWORDS="~ppc x86"
 IUSE="sdl"
 
 RDEPEND="=x11-libs/gtk+-1*
+	x11-libs/libXxf86vm
 	sdl? ( media-libs/libsdl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -45,6 +46,11 @@ src_unpack() {
 				|| die "sed sdl failed"
 		fi
 	fi
+	# bug #185428
+	sed -i \
+		-e 's:/X11R6::' \
+		src/makes/mk.x11 \
+		|| die "sed failed"
 }
 
 src_compile() {
