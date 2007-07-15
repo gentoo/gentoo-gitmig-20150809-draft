@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.121 2007/04/25 16:31:18 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.122 2007/07/15 09:08:40 phreak Exp $
+
+  15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning to www-servers, as beu is being retired (#66608).
 
   25 Apr 2007; Alexander Færøy <eroyf@gentoo.org> lighttpd-1.4.15.ebuild:
   Marked ~mips.
