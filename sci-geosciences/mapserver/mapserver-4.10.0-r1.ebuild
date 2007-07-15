@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0-r1.ebuild,v 1.3 2007/06/26 02:42:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0-r1.ebuild,v 1.4 2007/07/15 06:04:07 mr_bones_ Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -203,7 +203,6 @@ src_compile() {
 	fi
 
 }
-
 
 mapscript_install_examples() {
 	einfo "$1-mapscript examples could be found in the following directory"
