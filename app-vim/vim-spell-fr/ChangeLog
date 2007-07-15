@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vim-spell-fr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-fr/ChangeLog,v 1.6 2007/07/02 14:08:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-fr/ChangeLog,v 1.7 2007/07/15 09:11:51 phreak Exp $
+
+  15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning to vim, as nattfodd is being retired (#108329).
 
   02 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   vim-spell-fr-20060121.ebuild:
