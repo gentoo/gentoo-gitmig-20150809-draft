@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1.ebuild,v 1.7 2007/05/06 08:07:59 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1.ebuild,v 1.8 2007/07/15 04:52:33 mr_bones_ Exp $
 
 inherit eutils kde-functions
 
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
-
 
 DEPEND="$(qt_min_version 3.3)
 	>=net-dialup/wvdial-1.54.0

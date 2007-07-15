@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20061021-r2.ebuild,v 1.3 2007/05/16 10:44:58 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20061021-r2.ebuild,v 1.4 2007/07/15 04:52:33 mr_bones_ Exp $
 
 inherit eutils linux-mod multilib
 
@@ -87,7 +87,6 @@ src_install() {
 	else
 		sed -i "s/# MODULE=slamr/MODULE=slamr/" "${D}/etc/conf.d/slmodem"
 	fi
-
 
 	# Add module aliases and install hotplug script
 	insinto /etc/modules.d/; newins "${FILESDIR}/slmodem-modules" ${PN}

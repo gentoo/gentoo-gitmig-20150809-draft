@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20070505.ebuild,v 1.2 2007/07/07 12:49:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20070505.ebuild,v 1.3 2007/07/15 04:52:33 mr_bones_ Exp $
 
 inherit eutils linux-mod multilib
 
@@ -49,7 +49,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P%%_*}-makefile.patch"
 
-
 	cd "${S}"/drivers
 	sed -i "s:SUBDIRS=\$(shell pwd):SUBDIRS=${S}/drivers:" Makefile
 	convert_to_m Makefile
@@ -89,7 +88,6 @@ src_install() {
 	else
 		sed -i "s/# MODULE=slamr/MODULE=slamr/" "${D}/etc/conf.d/slmodem"
 	fi
-
 
 	# Add module aliases and install hotplug script
 	insinto /etc/modules.d/
