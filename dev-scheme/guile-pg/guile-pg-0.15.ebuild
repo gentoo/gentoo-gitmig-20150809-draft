@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-pg/guile-pg-0.15.ebuild,v 1.2 2007/01/10 19:40:17 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-pg/guile-pg-0.15.ebuild,v 1.3 2007/07/15 06:38:12 mr_bones_ Exp $
 
 IUSE=""
 
@@ -25,4 +25,3 @@ src_install () {
 	rm -f ${D}/usr/info/dir
 	dodoc COPYING HACKING INSTALL NEWS README TODO AUTHORS ChangeLog
 }
-
