@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/single-unix-specification
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.5 2007/07/15 08:21:15 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.6 2007/07/15 20:00:37 dirtyepic Exp $
+
+  15 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
+  Take maintainership.
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning app-doc/single-unix-specification to m-needed, as beu is being

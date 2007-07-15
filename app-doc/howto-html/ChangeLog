@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/howto-html
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.19 2007/07/15 08:18:06 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.20 2007/07/15 19:56:22 dirtyepic Exp $
+
+  15 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
+  Take maintainership.
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning app-doc/howto-html to m-needed, as beu is being retired (#66608).

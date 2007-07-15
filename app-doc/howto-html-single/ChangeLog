@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/howto-html-single
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.17 2007/07/15 08:19:02 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.18 2007/07/15 19:58:05 dirtyepic Exp $
+
+  15 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
+  Take maintainership.
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning app-doc/howto-html-single to m-needed, as beu is being retired
