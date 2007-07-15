@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2.ebuild,v 1.2 2007/01/04 08:27:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2.ebuild,v 1.3 2007/07/15 07:44:37 robbat2 Exp $
 
 inherit eutils autotools
 
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${P}-pciutils-libz.patch
 
 	# Fix sandbox violation
 	for i in Makefile.am Makefile.in; do
@@ -38,8 +39,27 @@ src_unpack() {
 		|| die "Failed to fix DESTDIR"
 	done
 
+	# ppc/ppc64 do not have inb/outb/ioperm
+	# they also do not have (sys|asm)/io.h
+	if [ "${ARCH/64}" == "ppc" ]; then
+		for card in sis intel810 ; do
+			sed -r -i \
+				-e "/${card}.Po/d" \
+				-e "s~${card}[^[:space:]]*~ ~g" \
+				src/ddcpci/Makefile.in
+			sed -r -i \
+				-e "/${card}.Po/d" \
+				-e "s~${card}[^[:space:]]*~ ~g" \
+				src/ddcpci/Makefile.am
+		done
+		sed -i \
+			-e '/sis_/d' \
+			-e '/i810_/d' \
+			src/ddcpci/main.c
+	fi
+
 	## Save for a rainy day or future patching
-	##eautoreconf || die "eautoreconf failed"
+	eautoreconf || die "eautoreconf failed"
 }
 
 src_compile() {

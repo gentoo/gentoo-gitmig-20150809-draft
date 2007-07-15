@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ddccontrol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.16 2007/03/01 15:24:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.17 2007/07/15 07:44:37 robbat2 Exp $
+
+  15 Jul 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/ddccontrol-0.4.2-pciutils-libz.patch, ddccontrol-0.4.2.ebuild:
+  Bug #163057 - compile fix for zlib'd pciutils. Also fix compile on ppc for
+  in/out/ioperm usage.
 
   01 Mar 2007; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Add metadata.xml note that upstream wishes to be CCd on all bugs for this
