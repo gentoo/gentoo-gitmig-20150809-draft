@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX scim-tables-0.5.6-fixconfigure.patch 1327 RMD160 ea9d500efedc6151853a6ac26dd7f9f9a14245f5 SHA1 53fa6c7f02eee979976a91b554b784b006557489 SHA256 543ebd250a486d02b2f92624eb92a3b21f7ec83a39d695eac92a7854064a9886
 MD5 921a08100c8b4a1796bf8a6a7c605bd5 files/scim-tables-0.5.6-fixconfigure.patch 1327
 RMD160 ea9d500efedc6151853a6ac26dd7f9f9a14245f5 files/scim-tables-0.5.6-fixconfigure.patch 1327
@@ -17,14 +14,14 @@ EBUILD scim-tables-0.5.3.ebuild 909 RMD160 d7275e39c90ac0a9960c4ed22ef57083a8211
 MD5 e4c5dce8321f7aa6a99989bacec5bcfc scim-tables-0.5.3.ebuild 909
 RMD160 d7275e39c90ac0a9960c4ed22ef57083a8211710 scim-tables-0.5.3.ebuild 909
 SHA256 16e66e232ee989466a22dd517ed6aff3602c6e6ccba40cda10d61b66e8d875ed scim-tables-0.5.3.ebuild 909
-EBUILD scim-tables-0.5.6-r1.ebuild 1955 RMD160 3e29fdafbe2aff24df645c3c8cc86eafed8ac623 SHA1 a7dd664a4bb78ec5adac4aa1abb07550d09d5fae SHA256 895b90c0951fcae28a71c923689b8e5e038d7b0f15caf2e63cf45ad7200090ba
-MD5 3bd6222d0c92283e1c12db072245a62c scim-tables-0.5.6-r1.ebuild 1955
-RMD160 3e29fdafbe2aff24df645c3c8cc86eafed8ac623 scim-tables-0.5.6-r1.ebuild 1955
-SHA256 895b90c0951fcae28a71c923689b8e5e038d7b0f15caf2e63cf45ad7200090ba scim-tables-0.5.6-r1.ebuild 1955
-EBUILD scim-tables-0.5.7.ebuild 1919 RMD160 413812fbef30db205dbba64f581aa328360ecf3d SHA1 9858695ee84a2c8f8536d4f31eb9a816f17bc79e SHA256 a73f6c803f5d80c904e7e82ecd35bb02a9d8320469943055e304df843e552be2
-MD5 fe4724f7cf74a98cdb5b3289379c3cff scim-tables-0.5.7.ebuild 1919
-RMD160 413812fbef30db205dbba64f581aa328360ecf3d scim-tables-0.5.7.ebuild 1919
-SHA256 a73f6c803f5d80c904e7e82ecd35bb02a9d8320469943055e304df843e552be2 scim-tables-0.5.7.ebuild 1919
+EBUILD scim-tables-0.5.6-r1.ebuild 1958 RMD160 e40c330ba2381349d94f6ca2fbe637e9309f7839 SHA1 6dc6a8ebace705ac86711e54dbe8c0dee9a8ae09 SHA256 878a93bf4c1a77a7a9fcd3888618edd7743e95ad1cbf5fbaf69d2af413bd8aaf
+MD5 186d1f06f1daa2f39a29f6936acdc5ef scim-tables-0.5.6-r1.ebuild 1958
+RMD160 e40c330ba2381349d94f6ca2fbe637e9309f7839 scim-tables-0.5.6-r1.ebuild 1958
+SHA256 878a93bf4c1a77a7a9fcd3888618edd7743e95ad1cbf5fbaf69d2af413bd8aaf scim-tables-0.5.6-r1.ebuild 1958
+EBUILD scim-tables-0.5.7.ebuild 1922 RMD160 b8a10b817850dbcc3f5af82a98079ac1e00142b8 SHA1 508af83d410ae7ab17d03e793b29c921365a0e06 SHA256 e11712fa7af582ca5d6029226096751aeff5c992e8d5d3ba0346ba2d7f0c0d43
+MD5 4b2f6170125ad2b29574bc0129e72eb0 scim-tables-0.5.7.ebuild 1922
+RMD160 b8a10b817850dbcc3f5af82a98079ac1e00142b8 scim-tables-0.5.7.ebuild 1922
+SHA256 e11712fa7af582ca5d6029226096751aeff5c992e8d5d3ba0346ba2d7f0c0d43 scim-tables-0.5.7.ebuild 1922
 MISC ChangeLog 6661 RMD160 c1713d06fbb93adbae8971b4f8e0a94282ca41b1 SHA1 bd5d67b0cbed9e50f9ce77799639a0191c6ee099 SHA256 69e45dde5cdee7116569082828431c9def845db61f62476cdfd0df617b5d8fc2
 MD5 3d64cc98d7ef2430ac380dacf6ae908b ChangeLog 6661
 RMD160 c1713d06fbb93adbae8971b4f8e0a94282ca41b1 ChangeLog 6661
@@ -42,10 +39,3 @@ SHA256 d1dd978105a7e778acb4c0366ca9e0430243f278372fbbb6c1df515235a5a6bd files/di
 MD5 bdf5b846da9d26167cf2759ada39b319 files/digest-scim-tables-0.5.7 515
 RMD160 d193fa12977fe2c96f14ba2d0252fa20c9c6b319 files/digest-scim-tables-0.5.7 515
 SHA256 c9d3632d8d8475cb06ba30aa5c20679d5996acb871999e4eb9fb818ee9fca8b7 files/digest-scim-tables-0.5.7 515
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
-
-iD8DBQFGiQg0ppoStNGKGywRAuGNAJ918pF6beT+dTg3vP6gEX3Mgppa4ACcCyV6
-252FlTrFwjRTqYSTTrReVpQ=
-=5N0N
------END PGP SIGNATURE-----
