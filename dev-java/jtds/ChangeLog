@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jtds
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.17 2007/07/15 13:49:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.18 2007/07/16 00:00:18 betelgeuse Exp $
+
+  15 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> -jtds-0.9.1.ebuild,
+  -jtds-1.0.3.ebuild:
+  Removing old versions as nothing uses them any more.
 
   15 Jul 2007; nixnut <nixnut@gentoo.org> jtds-1.2-r2.ebuild:
   Stable on ppc wrt bug 182176
