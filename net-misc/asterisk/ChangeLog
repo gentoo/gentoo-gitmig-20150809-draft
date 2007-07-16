@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.167 2007/07/13 20:39:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.168 2007/07/16 22:02:34 gustavoz Exp $
+
+  16 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  asterisk-1.2.21.1.ebuild:
+  Stable on sparc wrt security #171884
 
   13 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   files/1.2.0/asterisk-1.2.21.1-h323-dumb-makefile.diff:
