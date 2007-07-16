@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/libapreq2/libapreq2-2.08-r1.ebuild,v 1.2 2007/06/28 11:24:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/libapreq2/libapreq2-2.08-r1.ebuild,v 1.3 2007/07/16 15:18:38 mcummings Exp $
 
 inherit perl-module depend.apache multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://cpan/authors/id/J/JO/JOESUF/${P}.tar.gz"
 HOMEPAGE="http://httpd.apache.org/apreq/"
 SLOT="2"
 LICENSE="Apache-2.0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 sparc ~x86"
 
 DEPEND="${DEPEND}
 	>=dev-perl/ExtUtils-XSBuilder-0.23
