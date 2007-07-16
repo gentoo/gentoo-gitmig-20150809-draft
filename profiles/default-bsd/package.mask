@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/package.mask,v 1.4 2007/05/01 09:07:41 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/package.mask,v 1.5 2007/07/16 13:29:32 uberlord Exp $
 
 # Mask out the GNU versions of various packages.
 # We want BSD versions wherever possible
@@ -57,3 +57,6 @@ sys-kernel/gentoo-sources
 # work entirely.
 dev-cpp/libherdstat
 app-portage/herdstat
+
+# This version of m4 fails to work with autotools for us :/
+=sys-devel/m4-1.4.10
