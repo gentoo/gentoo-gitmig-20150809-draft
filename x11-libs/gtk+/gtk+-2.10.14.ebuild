@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.7-r1.ebuild,v 1.3 2007/07/15 05:53:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.14.ebuild,v 1.1 2007/07/16 23:53:28 leio Exp $
 
 inherit gnome.org flag-o-matic eutils autotools virtualx
 
@@ -54,7 +54,6 @@ pkg_setup() {
 set_gtk2_confdir() {
 	# An arch specific config directory is used on multilib systems
 	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-	use x86 && [ "$(get_libdir)" == "lib32" ] && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
 	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0}
 }
 
@@ -63,23 +62,17 @@ src_unpack() {
 	cd "${S}"
 
 	# Optionalize xinerama support
-	epatch "${FILESDIR}"/${PN}-2.8.10-xinerama.patch
+	epatch "${FILESDIR}/${PN}-2.8.10-xinerama.patch"
+
+	# Make gtk-update-icon-cache check subdirs in it's update check
+	epatch "${FILESDIR}"/${PN}-2.10.11-update-icon-subdirs.patch
 
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
-	has_multilib_profile && epatch "${FILESDIR}"/${PN}-2.8.0-multilib.patch
-
-	# and this line is just here to make building emul-linux-x86-gtklibs a bit
-	# easier, so even this should be amd64 specific.
-	if use x86 && [ "$(get_libdir)" == "lib32" ]; then
-		epatch "${FILESDIR}"/${PN}-2.8.0-multilib.patch
-	fi
-
-	# Don't crash in GtkSourceView/gedit with "Display line numbers"
-	epatch "${FILESDIR}/${P}-textview-fix.patch"
+	has_multilib_profile && epatch "${FILESDIR}/${PN}-2.8.0-multilib.patch"
 
 	# Revert DND change that makes mozilla products DND broken
-	EPATCH_OPTS="-R" epatch "${FILESDIR}/${P}-mozilla-dnd-fix.patch"
+	EPATCH_OPTS="-R" epatch "${FILESDIR}/${PN}-2.10.7-mozilla-dnd-fix.patch"
 
 	# -O3 and company cause random crashes in applications. Bug #133469
 	replace-flags -O3 -O2
