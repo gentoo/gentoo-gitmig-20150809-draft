@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/elementtree
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.28 2007/07/13 13:07:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.29 2007/07/16 18:20:08 drac Exp $
+
+  16 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  elementtree-1.2.6-r2.ebuild:
+  Rekeyword for ~arm as it was dropped without a reason.
 
   13 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   elementtree-1.2.6-r2.ebuild:
