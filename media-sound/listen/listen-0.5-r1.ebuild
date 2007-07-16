@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.5-r1.ebuild,v 1.1 2007/07/15 20:15:29 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.5-r1.ebuild,v 1.2 2007/07/16 01:02:04 mr_bones_ Exp $
 
 inherit eutils virtualx
 
@@ -64,7 +64,7 @@ pkg_setup() {
 		eerror "re-emerge gnome-vfs, and then emerge listen."
 		die "gnome-base/gnome-vfs is missing the hal binding."
 	fi
-	
+
 	if ! built_with_use dev-python/gnome-python-extras firefox ; then
 		if ! built_with_use dev-python/gnome-python-extras seamonkey ; then
 			if ! built_with_use dev-python/gnome-python-extras xulrunner ; then
