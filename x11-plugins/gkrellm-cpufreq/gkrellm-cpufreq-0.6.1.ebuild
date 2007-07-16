@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-cpufreq/gkrellm-cpufreq-0.6.1.ebuild,v 1.1 2007/07/15 17:58:10 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-cpufreq/gkrellm-cpufreq-0.6.1.ebuild,v 1.2 2007/07/16 01:12:09 mr_bones_ Exp $
 
 inherit gkrellm-plugin
 
@@ -36,4 +36,3 @@ pkg_postinst() {
 	einfo "ALL ALL = (root) NOPASSWD: /usr/sbin/cpufreqnextgovernor"
 	echo
 }
-
