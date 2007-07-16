@@ -9,6 +9,6 @@
 	<longdescription lang="en">
 		Sussen is a tool that checks for vulnerabilities and configuration
 		issues on computer systems. It is based on the Open Vulnerability and
-		Assessment Language.
+		Assessment Language (http://oval.mitre.org/).
 	</longdescription>
 </pkgmetadata>
