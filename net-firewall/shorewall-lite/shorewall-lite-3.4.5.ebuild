@@ -1,14 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-3.4.2.ebuild,v 1.3 2007/04/13 14:20:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-3.4.5.ebuild,v 1.1 2007/07/16 18:15:10 jokey Exp $
 
+#MY_P_TREE="development/3.9"
+MY_P_TREE="3.4"
 MY_P="shorewall-${PV}"
 MY_P_DOCS="${P/${PN}/shorewall-docs-html}"
 
 DESCRIPTION="An iptables-based firewall whose config is handled by a normal Shorewall."
 HOMEPAGE="http://www.shorewall.net/"
-SRC_URI="http://www1.shorewall.net/pub/shorewall/3.4/${MY_P}/${P}.tgz
-	doc? ( http://www1.shorewall.net/pub/shorewall/3.4/${MY_P}/${MY_P_DOCS}.tgz )"
+SRC_URI="http://www1.shorewall.net/pub/shorewall/${MY_P_TREE}/${MY_P}/${P}.tgz
+	doc? ( http://www1.shorewall.net/pub/shorewall/${MY_P_TREE}/${MY_P}/${MY_P_DOCS}.tgz )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -51,5 +53,5 @@ pkg_postinst() {
 	einfo "to /etc/shorewall-lite/shorewall-lite.conf"
 	einfo
 	einfo "Known problems:"
-	einfo "http://shorewall.net/pub/shorewall/3.4/${MY_P}/known_problems.txt"
+	einfo "http://shorewall.net/pub/shorewall/${MY_P_TREE}/${MY_P}/known_problems.txt"
 }
