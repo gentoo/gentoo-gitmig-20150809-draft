@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.106 2007/04/28 10:08:23 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.107 2007/07/16 18:06:01 armin76 Exp $
+
+  16 Jul 2007; Raúl Porcel <armin76@gentoo.org> qdbm-1.8.74.ebuild:
+  alpha stable
 
   28 Apr 2007; Akinori Hattori <hattya@gentoo.org>
   -files/1.8.75-javacflags.patch, -qdbm-1.8.75.ebuild,
