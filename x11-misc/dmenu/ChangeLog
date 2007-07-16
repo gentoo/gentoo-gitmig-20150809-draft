@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.24 2007/07/16 11:46:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.25 2007/07/16 19:34:43 corsair Exp $
+
+  16 Jul 2007; Markus Rothe <corsair@gentoo.org> dmenu-3.2.ebuild:
+  Stable on ppc64; bug #185310
 
   16 Jul 2007; nixnut <nixnut@gentoo.org> dmenu-3.2.ebuild:
   Stable on ppc wrt bug 185310
