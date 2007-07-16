@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/dhcdbd-2.8.ebuild,v 1.1 2007/06/14 17:51:24 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/dhcdbd-2.8.ebuild,v 1.2 2007/07/16 21:44:27 seemant Exp $
 
 inherit eutils
 
@@ -32,7 +32,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "dhcdbd is used by NetworkManager in order to use it"
-	einfo "you can add it to runlevels by writing on your terminal"
+	einfo "dhcdbd is used by NetworkManager."
+	einfo "If you feel you need to use it without that, simply add it to your"
+	einfo "runlevel by issuing the following command:"
 	einfo "rc-update add dhcdbd default"
 }
