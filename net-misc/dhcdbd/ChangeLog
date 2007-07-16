@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dhcdbd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.5 2007/06/14 17:51:24 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.6 2007/07/16 13:40:13 uberlord Exp $
+
+*dhcdbd-2.8-r1 (16 Jul 2007)
+
+  16 Jul 2007; Roy Marples <uberlord@gentoo.org>
+  +files/dhcdbd-2.8-daemon.patch, +dhcdbd-2.8-r1.ebuild:
+  Create a pidfile immediately after daemonizing so we're more robust
+  with baselayout-2
 
 *dhcdbd-2.8 (14 Jun 2007)
 
