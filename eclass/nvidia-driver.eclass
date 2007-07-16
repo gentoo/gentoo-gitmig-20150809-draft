@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.4 2007/07/16 15:01:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.5 2007/07/16 15:06:06 cardoe Exp $
 
 #
 # Original Author: Doug Goldstein <cardoe@gentoo.org>
@@ -65,7 +65,7 @@ nvidia-driver-get-mask() {
 nvidia-driver-check-warning() {
 	local NVIDIA_MASK="$(nvidia-driver-get-mask)"
 	if [ -n "$NVIDIA_MASK" ]; then
-		version-compare "${NVIDIA_MASK##-*}" "${PV}"
+		version_compare "${NVIDIA_MASK##-*}" "${PV}"
 		r=$?
 
 		if [ "x$r" = "x1" ]; then
