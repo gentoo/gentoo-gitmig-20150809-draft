@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.7.2.ebuild,v 1.1 2007/07/15 19:16:42 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.7.2.ebuild,v 1.2 2007/07/16 23:00:38 rbu Exp $
 
 inherit distutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-python/pygame-1.5.6
 	>=dev-python/pyxml-0.8.2
 	>=dev-python/imaging-1.1.3
 	=dev-python/twisted-2.4*
-	>=dev-python/twisted-web-0.5.0-r1
+	=dev-python/twisted-web-0.6*
 	>=media-video/mplayer-0.92
 	>=media-libs/freetype-2.1.4
 	>=media-libs/libsdl-1.2.5
