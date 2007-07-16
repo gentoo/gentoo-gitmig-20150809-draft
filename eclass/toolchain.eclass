@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.337 2007/07/02 14:16:32 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.338 2007/07/16 02:14:56 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1016,6 +1016,7 @@ gcc_src_unpack() {
 			guess_patch_type_in_dir "${WORKDIR}"/patch
 			EPATCH_MULTI_MSG="Applying Gentoo patches ..." \
 			epatch "${WORKDIR}"/patch
+			release_version="${release_version} p${PATCH_VER}"
 		fi
 		if [[ -n ${UCLIBC_VER} ]] ; then
 			guess_patch_type_in_dir "${WORKDIR}"/uclibc
@@ -1053,7 +1054,6 @@ gcc_src_unpack() {
 	if [[ ${GCC_PVR} == "3.3.5-r1" || ${GCC_PVR} = "3.4.3-r1" ]] ; then
 		 version_string="${version_string} ${BRANCH_UPDATE}"
 	fi
-
 
 	einfo "patching gcc version: ${version_string} (${release_version})"
 	gcc_version_patch "${version_string}" "${release_version}"
