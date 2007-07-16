@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/deskzilla
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.7 2007/07/06 18:20:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.8 2007/07/16 12:59:54 caster Exp $
+
+*deskzilla-1.4.1 (16 Jul 2007)
+
+  16 Jul 2007; Vlastimil Babka <caster@gentoo.org> -deskzilla-1.3.ebuild,
+  +deskzilla-1.4.1.ebuild:
+  Version bump. From now on install to unversioned dir under /opt. Should
+  remove the need to select gentoo license again after each upgrade. Remove
+  version 1.3.
 
   06 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> deskzilla-1.4.ebuild:
   Fix location of the gentoo license given by pkg_postinst. Fixes bug #184409.
