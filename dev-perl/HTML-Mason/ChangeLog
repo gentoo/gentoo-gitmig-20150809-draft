@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.69 2007/07/13 16:32:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.70 2007/07/16 14:21:44 mcummings Exp $
+
+  16 Jul 2007; Michael Cummings <mcummings@gentoo.org>
+  HTML-Mason-1.36.ebuild:
+  sparc stable
 
   13 Jul 2007; Raúl Porcel <armin76@gentoo.org> HTML-Mason-1.36.ebuild:
   alpha/x86 stable
