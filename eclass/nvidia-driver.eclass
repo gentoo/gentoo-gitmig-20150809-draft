@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.5 2007/07/16 15:06:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.6 2007/07/16 15:12:43 cardoe Exp $
 
 #
 # Original Author: Doug Goldstein <cardoe@gentoo.org>
@@ -68,7 +68,7 @@ nvidia-driver-check-warning() {
 		version_compare "${NVIDIA_MASK##-*}" "${PV}"
 		r=$?
 
-		if [ "x$r" = "x1" ]; then
+		if [ "x$r" = "x3" ]; then
 			ewarn "***** WARNING *****"
 			ewarn 
 			ewarn "You are currently installing a version of nvidia-drivers that is"
