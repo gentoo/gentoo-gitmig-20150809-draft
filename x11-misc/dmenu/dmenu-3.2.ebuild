@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-3.2.ebuild,v 1.2 2007/07/14 15:59:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-3.2.ebuild,v 1.3 2007/07/16 11:46:40 nixnut Exp $
 
 inherit toolchain-funcs savedconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://suckless.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND="x11-libs/libX11"
