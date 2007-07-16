@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/aewm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.16 2007/07/13 12:10:20 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.17 2007/07/16 07:23:39 opfer Exp $
+
+  16 Jul 2007; Christian Faulhammer <opfer@gentoo.org> aewm-1.2.7.ebuild:
+  stable x86, bug 185190
 
   13 Jul 2007; David Shakaryan <omp@gentoo.org> aewm-1.2.7.ebuild:
   Die on failure of sed.
