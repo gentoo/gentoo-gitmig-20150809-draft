@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.69 2007/07/15 14:22:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.70 2007/07/16 07:31:57 opfer Exp $
+
+  16 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  rmagick-1.15.7-r1.ebuild:
+  stable x86, bug 184538
 
   15 Jul 2007; nixnut <nixnut@gentoo.org> rmagick-1.15.7-r1.ebuild:
   Stable on ppc wrt bug 184538
