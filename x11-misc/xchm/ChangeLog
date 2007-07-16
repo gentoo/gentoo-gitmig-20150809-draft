@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xchm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.51 2007/07/16 11:18:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.52 2007/07/16 17:12:45 armin76 Exp $
+
+  16 Jul 2007; Raúl Porcel <armin76@gentoo.org> xchm-1.13.ebuild:
+  x86 stable wrt #185334
 
   16 Jul 2007; nixnut <nixnut@gentoo.org> xchm-1.13.ebuild:
   Stable on ppc wrt bug 185334
