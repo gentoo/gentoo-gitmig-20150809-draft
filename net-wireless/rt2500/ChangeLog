@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/rt2500
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.43 2007/07/15 22:12:19 uberlord Exp $
+# Copyright 1999-2018 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.44 2007/07/16 11:23:54 uberlord Exp $
+
+  21 May 2018; Roy Marples <uberlord@gentoo.org>
+  rt2500-1.1.0_pre2007071515.ebuild:
+  Punt the qt3 USE flag
 
 *rt2500-1.1.0_pre2007071515 (15 Jul 2007)
 

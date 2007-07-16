@@ -1,9 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_pre2007071515.ebuild,v 1.1 2007/07/15 22:12:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_pre2007071515.ebuild,v 1.2 2007/07/16 11:23:54 uberlord Exp $
 
-inherit eutils linux-mod kde-functions
-set-qtdir 3
+inherit eutils linux-mod
 
 MY_P="${P/_beta/-b}"
 DESCRIPTION="Driver for the RaLink RT2500 wireless chipset"
@@ -13,9 +12,8 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 KEYWORDS="amd64 hppa ppc x86"
-IUSE="qt3"
-DEPEND="net-wireless/wireless-tools
-	qt3? ( =x11-libs/qt-3* )"
+IUSE=""
+DEPEND="net-wireless/wireless-tools"
 
 MY_PRE_VERSION=${PV/1.1.0_pre}
 S="${WORKDIR}/${PN}-cvs-${MY_PRE_VERSION}"
@@ -40,27 +38,9 @@ pkg_setup() {
 	fi
 }
 
-src_compile() {
-	linux-mod_src_compile
-
-	if use qt3; then
-		cd "${S}"/Utilitys
-		"${QTDIR}"/bin/qmake -o Makefile raconfig2500.pro
-		emake || die "make Utilities failed"
-	fi
-}
-
 src_install() {
 	linux-mod_src_install
 
 	dodoc Module/README Module/TESTING Module/iwpriv_usage.txt \
 		THANKS FAQ CHANGELOG
-
-	if use qt3; then
-		dobin ${S}/Utilitys/RaConfig2500
-		doicon Utilitys/ico/RaConfig2500.xpm
-		make_desktop_entry RaConfig2500 "RaLink RT2500 Config" RaConfig2500.xpm
-		insinto /etc/Wireless/RT2500STA
-		doins Module/RT2500STA.dat
-	fi
 }
