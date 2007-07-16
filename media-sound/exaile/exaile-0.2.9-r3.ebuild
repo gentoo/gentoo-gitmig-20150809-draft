@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.9-r3.ebuild,v 1.2 2007/07/05 18:21:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.9-r3.ebuild,v 1.3 2007/07/16 13:12:53 drac Exp $
 
 inherit eutils fdo-mime python toolchain-funcs
 
@@ -21,7 +21,7 @@ IUSE="aac alsa cdparanoia flac gnome ipod libnotify libsexy mad musepack ogg
 RDEPEND=">=dev-python/pygtk-2.8.6
 	>=dev-python/pysqlite-2
 	>=media-libs/mutagen-1.6
-	dev-python/elementtree
+	|| ( >=dev-lang/python-2.5 dev-python/elementtree )
 	>=gnome-base/librsvg-2
 	dev-python/dbus-python
 	libnotify? ( dev-python/notify-python )
