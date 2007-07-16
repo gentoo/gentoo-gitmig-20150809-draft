@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdump
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdump/ChangeLog,v 1.3 2007/07/15 09:02:00 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdump/ChangeLog,v 1.4 2007/07/16 14:51:27 armin76 Exp $
+
+  16 Jul 2007; Raúl Porcel <armin76@gentoo.org> hdump-1.12.ebuild:
+  Fix HOMEPAGE, thanks to Erik Musick <lnxg33k at gmail dot com>, bug 185454
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to m-needed, as beu is being retired (#66608).
