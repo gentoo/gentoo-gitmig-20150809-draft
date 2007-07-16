@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7483 2007/07/15 17:49:46 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7484 2007/07/16 12:25:29 gustavoz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Gustavo Zacarias <gustavoz@gentoo.org> (16 Jul 2007)
+# Mask zaptel-1.2.18-r1 since it seems to have some issues and is experimental
+# See bug #185268
+=net-misc/zaptel-1.2.18-r1
 
 # Olivier Crête <tester@gentoo.org> (14 Jul 1007)
 # We can't mirror. Different upstream mirrors have different versions
