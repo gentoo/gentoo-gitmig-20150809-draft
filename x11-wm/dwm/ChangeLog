@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/dwm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.23 2007/07/14 19:49:59 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.24 2007/07/16 11:35:44 nixnut Exp $
+
+  16 Jul 2007; nixnut <nixnut@gentoo.org> dwm-4.2.ebuild:
+  Stable on ppc wrt bug 185308
 
 *dwm-4.3 (14 Jul 2007)
 
