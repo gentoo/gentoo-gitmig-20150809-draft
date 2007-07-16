@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.2.1.ebuild,v 1.1 2007/06/09 18:40:12 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.2.1.ebuild,v 1.2 2007/07/16 22:21:56 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -74,7 +74,7 @@ src_unpack() {
 		ewarn "without fbsplash support (ie. verbose mode will not work)."
 	fi
 
-	if has_version sys-libs/glibc && ! built_with_use sys-libs/glibc nptl ; then
+	if has_version sys-libs/glibc && ! built_with_use --missing true sys-libs/glibc nptl ; then
 		eerror "Your sys-libs/glibc has been built with support for linuxthreads only."
 		eerror "This package requires nptl to work correctly. Please recompile glibc"
 		eerror "with the 'nptl' USE flag enabled."
