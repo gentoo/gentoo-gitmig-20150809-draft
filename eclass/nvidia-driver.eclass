@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.2 2007/07/05 21:01:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.3 2007/07/16 13:39:36 cardoe Exp $
 
 #
 # Original Author: Doug Goldstein <cardoe@gentoo.org>
@@ -79,7 +79,7 @@ nvidia-driver-check-warning() {
 		ewarn "X setup."
 		ewarn
 		ewarn "For more information please read:"
-		ewarn "http://us.download.nvidia.com/XFree86/Linux-x86_64/100.14.11/README/appendix-a.html"
+		ewarn "http://www.nvidia.com/object/IO_32667.html"
 		ebeep 5
 	fi
 }
