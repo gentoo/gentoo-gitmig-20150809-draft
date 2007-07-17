@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.5.ebuild,v 1.8 2007/03/08 12:19:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.5.ebuild,v 1.9 2007/07/17 12:34:44 dragonheart Exp $
 
 inherit eutils
 # used for epause
@@ -35,6 +35,8 @@ DEPEND_COMMON="
 	)
 	!ipv6? ( >=dev-libs/glib-2.0 )"
 RDEPEND="${DEPEND_COMMON}
+	hddtemp? ( app-admin/hddtemp )   
+	mpd? ( media-sound/mpd )
 	vim-syntax? ( || ( app-editors/vim
 	app-editors/gvim ) )"
 
