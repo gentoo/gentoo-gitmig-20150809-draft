@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/wis-go7007
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/ChangeLog,v 1.4 2007/05/01 00:34:16 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/ChangeLog,v 1.5 2007/07/17 01:11:12 beandog Exp $
+
+*wis-go7007-0.9.8-r2 (17 Jul 2007)
+
+  17 Jul 2007; Steve Dibb <beandog@gentoo.org>
+  files/wis-go7007-0.9.8-fix-udev.diff, +files/snd.patch,
+  +wis-go7007-0.9.8-r2.ebuild:
+  Patch to work with 2.6.21, 2.6.22 kernels (thanks to Alan Hourihane)
 
   01 May 2007; Marius Mauch <genone@gentoo.org> wis-go7007-0.9.8.ebuild,
   wis-go7007-0.9.8-r1.ebuild:
