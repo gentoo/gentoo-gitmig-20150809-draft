@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.9.ebuild,v 1.1 2007/06/21 06:00:51 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.9.ebuild,v 1.2 2007/07/17 11:54:42 swegener Exp $
 
 inherit kde flag-o-matic
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 need-kde 3.4
 
 pkg_setup() {
-	if ! built_with_use kdelibs arts ; then
+	if ! built_with_use kde-base/kdelibs arts ; then
 		eerror "KWave needs aRts, please rebuild kdelibs with arts use flag enabled."
 		die
 	fi
