@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplay-sh/mplay-sh-0.5.3-r1.ebuild,v 1.1 2007/06/16 08:52:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplay-sh/mplay-sh-0.5.3-r1.ebuild,v 1.2 2007/07/17 09:17:25 zzam Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.vdr-portal.de/board/thread.php?threadid=62306"
 SRC_URI="mirror://gentoo/${MY_P}.tgz
 	http://dev.gentoo.org/~zzam/distfiles/${MY_P}.tgz"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
