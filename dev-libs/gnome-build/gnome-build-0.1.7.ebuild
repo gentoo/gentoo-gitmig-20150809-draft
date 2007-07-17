@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-0.1.7.ebuild,v 1.1 2007/07/12 05:15:25 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-0.1.7.ebuild,v 1.2 2007/07/17 01:59:53 compnerd Exp $
 
 inherit eutils gnome2
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND=">=dev-libs/glib-2
 		 >=x11-libs/gtk+-2.4
-		 >=dev-libs/gdl-0.7.0
+		 >=dev-libs/gdl-0.7.6
 		 >=dev-libs/libxml2-2.6
 		 >=gnome-base/libglade-2.0
 		 >=gnome-base/libgnome-2.4

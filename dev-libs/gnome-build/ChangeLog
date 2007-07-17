@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gnome-build
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.4 2007/07/12 05:15:25 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.5 2007/07/17 01:59:53 compnerd Exp $
+
+  17 Jul 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  gnome-build-0.1.7.ebuild:
+  Fix gdl version as per bug #185430
 
 *gnome-build-0.1.7 (12 Jul 2007)
 
