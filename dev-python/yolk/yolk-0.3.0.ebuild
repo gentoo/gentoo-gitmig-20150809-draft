@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/yolk-0.2.0.ebuild,v 1.2 2007/07/11 06:19:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/yolk-0.3.0.ebuild,v 1.1 2007/07/17 00:46:08 pythonhead Exp $
 
 NEED_PYTHON=2.4
 
@@ -12,12 +12,11 @@ SRC_URI="http://cheeseshop.python.org/packages/source/y/yolk/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="test examples"
+IUSE="examples"
 DEPEND="dev-python/setuptools"
 RDEPEND="${DEPEND}
-	test? ( dev-python/nose
-	|| ( >=dev-lang/python-2.5 dev-python/celementtree ) )
 	dev-python/yolk-portage"
+
 
 src_install() {
 	distutils_src_install
@@ -32,6 +31,3 @@ src_install() {
 	fi
 }
 
-src_test() {
-	PYTHONPATH=. "${python}" setup.py nosetests || die "tests failed"
-}
