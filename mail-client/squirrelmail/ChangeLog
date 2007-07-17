@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.98 2007/07/16 22:14:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.99 2007/07/17 01:34:31 beandog Exp $
+
+  17 Jul 2007; Steve Dibb <beandog@gentoo.org> squirrelmail-1.5.1-r6.ebuild:
+  amd64 stable, security bug 185010
 
   16 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   squirrelmail-1.4.10a-r2.ebuild:
