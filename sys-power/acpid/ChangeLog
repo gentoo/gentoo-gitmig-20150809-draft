@@ -1,6 +1,26 @@
 # ChangeLog for sys-power/acpid
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.28 2007/05/12 01:40:05 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.29 2007/07/17 19:42:55 genstef Exp $
+
+*acpid-1.0.6 (17 Jul 2007)
+
+  17 Jul 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/acpid-1.0.6-conf.d, +files/acpid-1.0.6-examples.diff,
+  +files/acpid-1.0.6-init.d, +acpid-1.0.6.ebuild:
+  version bump, thanks go to Matej Laitl <strohel@gmail.com> in bug 185553,
+  also thanks for his excellent changelog:
+  * dropped debian patch from SRC_URI, we'll provide light version of that patch
+  * changed KEYWORDS to testing
+  * patch with our own patch, which is an extract from the big debian patch for
+  1.0.4 (all source code changes are ignored, not needed for 1.0.6)
+  * dodir /usr/bin is not needed as acpid Makefile has been fixed
+  * we install sample conf.d file. (this file was already in portage tree but not
+  used in any recent ebuild)
+  * add elog comment about changed logging system
+  * kill doc useflag was not used in ebuild anyway. (this also applies to in-tree
+  1.0.4-r5 ebuild AFAIK)
+  * kill logrotate useflag and modify patch not to ship logrotate file. It had no
+  sense when acpid logs to syslog.
 
   12 May 2007; Daniel Gryniewicz <dang@gentoo.org> acpid-1.0.4-r5.ebuild:
   Marked stable on amd64 for bug #126131
