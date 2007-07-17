@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.176 2007/07/17 13:07:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.177 2007/07/17 18:19:40 corsair Exp $
+
+  17 Jul 2007; Markus Rothe <corsair@gentoo.org> pango-1.16.4.ebuild:
+  Stable on ppc64; bug #185614
 
   17 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> pango-1.16.4.ebuild:
   Stable on sparc wrt #185614
