@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.142 2007/07/17 18:18:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.143 2007/07/17 18:44:15 jer Exp $
+
+  17 Jul 2007; Jeroen Roovers <jer@gentoo.org> atk-1.18.0.ebuild:
+  Stable for HPPA (bug #185614).
 
   17 Jul 2007; Markus Rothe <corsair@gentoo.org> atk-1.18.0.ebuild:
   Stable on ppc64; bug #185614
