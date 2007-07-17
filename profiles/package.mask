@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7487 2007/07/17 16:45:13 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7488 2007/07/17 18:20:32 ribosome Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Olivier Fisette <ribosome@gentoo.org> (17 Jul 2007)
+# Redistribution not allowed and upstream keeps using unversionned archives.
+# I intend to remove this package in about a month.
+sci-chemistry/nmrpipe
 
 # Ulrich Mueller <ulm@gentoo.org> (17 Jul 2007)
 # CVS snapshot, bug #185106
