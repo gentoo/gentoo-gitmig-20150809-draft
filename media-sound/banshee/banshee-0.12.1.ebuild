@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.12.1.ebuild,v 1.2 2007/06/17 06:41:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.12.1.ebuild,v 1.3 2007/07/17 02:45:16 metalgod Exp $
 
 inherit autotools eutils gnome2 mono
 
@@ -41,7 +41,7 @@ RDEPEND=">=dev-lang/mono-1.1.17
 	>=gnome-base/libgnomeui-2.0
 	>=gnome-base/libbonobo-2.0
 	>=gnome-base/gnome-desktop-2.0
-	ipod? ( >=dev-dotnet/ipod-sharp-0.6.0
+	ipod? ( >=dev-dotnet/ipod-sharp-0.6.3
 		>=media-plugins/gst-plugins-faac-0.10.0 )
 	>=sys-apps/hal-0.5.2
 	boo? ( >=dev-lang/boo-0.7.6 )
