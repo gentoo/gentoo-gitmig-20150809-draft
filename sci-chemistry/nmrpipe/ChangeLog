@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/nmrpipe
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/ChangeLog,v 1.10 2006/10/18 00:10:58 ribosome Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/ChangeLog,v 1.11 2007/07/17 23:01:05 je_fro Exp $
+
+  17 Jul 2007; Jeff Gardner <je_fro@gentoo.org>
+  files/digest-nmrpipe-2.5.2006.184.15.37, ChangeLog, Manifest:
+  Updating Manifest with latest nmrpipe files.
 
 *nmrpipe-2.5.2006.184.15.37 (18 Oct 2006)
 
