@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ipod-sharp-0.5.16.ebuild,v 1.1 2006/06/03 02:05:55 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ipod-sharp-0.6.3.ebuild,v 1.1 2007/07/17 02:39:30 metalgod Exp $
 
 inherit mono
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-lang/mono-1.1.10
 	doc? ( >=dev-util/monodoc-1.1.8 )
 	>=dev-dotnet/gtk-sharp-2.0"
 DEPEND="${RDEPEND}
-	>=media-libs/libipoddevice-0.4.1"
+	>=media-libs/libipoddevice-0.5.0"
 
 src_compile() {
 	econf $(use_enable doc docs) || die "configure failed"
