@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.195 2007/06/27 06:02:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.196 2007/07/17 15:09:12 smithj Exp $
+
+*xscreensaver-5.03 (17 Jul 2007)
+
+  17 Jul 2007; <smithj@gentoo.org> +files/xscreensaver-5.03-nsfw.patch,
+  +xscreensaver-5.03.ebuild:
+  update to 5.03, the latest; note that ${P}-gdmflexiserver.patch and
+  ${P}-pam.patch have been pushed upstream
 
   27 Jun 2007; Markus Rothe <corsair@gentoo.org>
   xscreensaver-5.02-r2.ebuild:
