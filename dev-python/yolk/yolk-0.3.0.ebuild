@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/yolk-0.3.0.ebuild,v 1.1 2007/07/17 00:46:08 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/yolk-0.3.0.ebuild,v 1.2 2007/07/17 15:09:05 mr_bones_ Exp $
 
 NEED_PYTHON=2.4
 
@@ -17,7 +17,6 @@ DEPEND="dev-python/setuptools"
 RDEPEND="${DEPEND}
 	dev-python/yolk-portage"
 
-
 src_install() {
 	distutils_src_install
 	if use examples ; then
@@ -30,4 +29,3 @@ src_install() {
 		prepalldocs
 	fi
 }
-
