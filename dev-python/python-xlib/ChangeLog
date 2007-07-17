@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-xlib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.22 2007/04/24 20:01:42 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.23 2007/07/17 06:11:46 corsair Exp $
+
+  17 Jul 2007; Markus Rothe <corsair@gentoo.org> python-xlib-0.13.ebuild:
+  Added ~ppc64
 
   24 Apr 2007; Peter Weller <welp@gentoo.org> python-xlib-0.12-r3.ebuild:
   Stable on amd64 wrt bug 175473
