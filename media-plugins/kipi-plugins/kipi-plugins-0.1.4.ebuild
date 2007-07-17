@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.4.ebuild,v 1.1 2007/07/15 17:12:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.4.ebuild,v 1.2 2007/07/17 12:01:47 keytoaster Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="opengl gphoto2"
 
 DEPEND=">=media-libs/libkipi-0.1.5
-	media-libs/libkexiv2
+	>=media-libs/libkexiv2-0.1.5
 	>=media-libs/libkdcraw-0.1.1
 	gphoto2? ( >=media-libs/libgphoto2-2.3.1 )
 	>=media-libs/imlib2-1.1.0

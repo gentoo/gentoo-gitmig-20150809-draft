@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.23 2007/07/15 17:12:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.24 2007/07/17 12:01:47 keytoaster Exp $
+
+  17 Jul 2007; Tobias Heinlein <keytoaster@gentoo.org>
+  kipi-plugins-0.1.4.ebuild:
+  Fixing dependency on libkexiv2
 
 *kipi-plugins-0.1.4 (15 Jul 2007)
 
