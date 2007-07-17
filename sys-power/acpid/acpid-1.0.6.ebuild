@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.6.ebuild,v 1.1 2007/07/17 19:42:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.6.ebuild,v 1.2 2007/07/17 19:53:50 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,8 +18,10 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-
-	epatch ${FILESDIR}/${P}-examples.diff
+	cd "${S}"
+	sed -i \
+		-e '/^CFLAGS /{s:=:+=:;s:-Werror -g::}' \
+		Makefile
 }
 
 src_compile() {
@@ -33,18 +35,17 @@ src_install() {
 	emake INSTPREFIX="${D}" install || die "emake install failed"
 
 	exeinto /etc/acpi
-	doexe examples/default.sh
+	newexe "${FILESDIR}"/${P}-default.sh default.sh || die
 	insinto /etc/acpi/events
-	doins examples/default
+	newins "${FILESDIR}"/acpid-1.0.4-default default || die
 
 	dodoc README Changelog TODO
 
-	newinitd ${FILESDIR}/${P}-init.d acpid
-	newconfd ${FILESDIR}/${P}-conf.d acpid
+	newinitd "${FILESDIR}"/${P}-init.d acpid
+	newconfd "${FILESDIR}"/${P}-conf.d acpid
 
 	docinto examples
 	dodoc samples/{acpi_handler.sh,sample.conf}
-	dodoc examples/ac{,.sh}
 
 	docinto examples/battery
 	dodoc samples/battery/*
