@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.10.0.ebuild,v 1.1 2007/06/17 12:30:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.10.0.ebuild,v 1.2 2007/07/17 09:25:53 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.muempf.de/down/vdr-mp3-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.4.2"
