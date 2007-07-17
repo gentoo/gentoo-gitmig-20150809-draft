@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.1.ebuild,v 1.5 2007/07/08 04:22:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.3.ebuild,v 1.1 2007/07/17 02:34:00 metalgod Exp $
 
-inherit multilib eutils
+inherit eutils
 
-DESCRIPTION="libipoddevice is a device-specific layer for the Apple iPod"
+DESCRIPTION="device-specific layer for the Apple iPod"
 HOMEPAGE="http://banshee-project.org/Libipoddevice"
 SRC_URI="http://banshee-project.org/files/libipoddevice/${P}.tar.gz"
 
@@ -18,20 +18,11 @@ RDEPEND="|| ( >=dev-libs/dbus-glib-0.71
 	>=sys-apps/hal-0.5.2
 	sys-apps/pmount
 	virtual/eject"
-
 DEPEND="${RDEPEND}
 	>=dev-libs/glib-2.0
 	>=gnome-base/libgtop-2.12
 	>=sys-apps/sg3_utils-1.20"
 
-src_unpack() {
-	unpack ${A}
-	# use correct libdir in pkgconfig file
-	if [ $(get_libdir) != "lib" ] ; then
-		sed -i -e 's:^libdir=.*:libdir=@libdir@:' \
-			${S}/ipoddevice.pc.in || die "sed failed"
-	fi
-}
 pkg_setup() {
 	if [ ! -z $(best_version =sys-apps/dbus-0.62*) ]; then
 		if ! built_with_use "=sys-apps/dbus-0.62*" gtk; then
@@ -39,11 +30,18 @@ pkg_setup() {
 		fi
 	fi
 }
-src_compile() {
-	econf || die "configure failed"
-	emake || die "make failed"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# use correct libdir in pkgconfig file
+	sed -i \
+		-e 's:^libdir=.*:libdir=@libdir@:' \
+		ipoddevice.pc.in \
+		|| die "sed failed"
 }
+
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc ChangeLog NEWS README
 }

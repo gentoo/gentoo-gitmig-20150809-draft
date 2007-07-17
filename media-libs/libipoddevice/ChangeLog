@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libipoddevice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.12 2007/07/08 04:22:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.13 2007/07/17 02:34:00 metalgod Exp $
+
+*libipoddevice-0.5.3 (17 Jul 2007)
+
+  17 Jul 2007; <metalgod@gentoo.org>
+  -files/libipoddevice-0.5.0-gentoohal.patch, -libipoddevice-0.4.5.ebuild,
+  -libipoddevice-0.5.0.ebuild, -libipoddevice-0.5.0-r1.ebuild,
+  -libipoddevice-0.5.1.ebuild, -libipoddevice-0.5.2.ebuild,
+  +libipoddevice-0.5.3.ebuild:
+  Version Bump. Closes Bug #178814. Removed older versions.
 
   08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
   libipoddevice-0.4.5.ebuild, libipoddevice-0.5.0.ebuild,
