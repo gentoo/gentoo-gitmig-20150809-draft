@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.7.ebuild,v 1.2 2007/05/23 10:31:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.7.ebuild,v 1.3 2007/07/17 19:06:04 cryos Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -47,6 +47,8 @@ KMCOPYLIB="libkonq libkonq
 	libkicker kicker/libkicker
 	libtaskbar kicker/taskbar
 	libtaskmanager kicker/taskmanager"
+
+PATCHES="${FILESDIR}/${P}-screensaver-path.patch"
 
 src_compile() {
 	myconf="$myconf --with-ssl $(use_with arts) $(use_with opengl gl)
