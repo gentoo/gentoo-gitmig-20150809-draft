@@ -1,11 +1,11 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.16 2007/07/17 03:27:21 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.17 2007/07/17 03:29:13 metalgod Exp $
 
   17 Jul 2007; <metalgod@gentoo.org> brasero-0.5.2.ebuild,
   -brasero-0.5.90.ebuild, brasero-0.6.0.ebuild:
   Properly install gconf schema. Closes bug #174662 thanks to 
-  Sebastian Rick Rijkers <srrijkers@gmail.com>. Removed older 
+  Luca Marturana <lucamarturana@gmail.com>. Removed older 
   versions.
 
 *brasero-0.6.0 (11 Jul 2007)
