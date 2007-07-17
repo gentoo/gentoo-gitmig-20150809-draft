@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/kid-0.9.5.ebuild,v 1.2 2007/07/04 20:09:11 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/kid-0.9.6.ebuild,v 1.1 2007/07/17 07:35:25 lucass Exp $
 
 NEED_PYTHON=2.3
 
 inherit distutils
 
 DESCRIPTION="A simple and Pythonic XML template language"
-SRC_URI="http://www.kid-templating.org/dist/${PV}/${P}.tar.gz"
+SRC_URI="http://www.kid-templating.org/dist/${PV}/dist/${P}.tar.gz"
 HOMEPAGE="http://www.kid-templating.org/"
 
 KEYWORDS="~amd64 ~ia64 ~x86"
@@ -17,7 +17,7 @@ IUSE="doc examples"
 
 RDEPEND="|| ( >=dev-lang/python-2.5 dev-python/elementtree )"
 DEPEND="${RDEPEND}
-	dev-python/setuptools
+	>=dev-python/setuptools-0.6_rc6
 	doc? ( dev-python/docutils )"
 
 src_test() {
