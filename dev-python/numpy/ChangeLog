@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.31 2007/07/17 14:51:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.32 2007/07/17 15:58:47 angelos Exp $
+
+  17 Jul 2007; Christoph Mende <angelos@gentoo.org> numpy-1.0.3.ebuild:
+  Stable on amd64 wrt bug #180713
 
   17 Jul 2007; Raúl Porcel <armin76@gentoo.org> numpy-1.0.3.ebuild:
   ia64 stable wrt #180713
