@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7484 2007/07/16 12:25:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7485 2007/07/17 03:42:22 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -616,11 +616,6 @@ net-irc/nikibot
 # Gustavo Felisberto <humpback@gentoo.org> (23 Feb 2007)
 # Masked for remove from tree. Contact me if you need this
 net-misc/ssh
-
-# Luis Medinas <metalgod@gentoo.org> (21 Feb 2007)
-# banshee-official-plugins for removal because
-# the plugins are now included in the core
-media-plugins/banshee-official-plugins
 
 # Alexandre Buisse <nattfodd@gentoo.org> (21 Feb 2007)
 # Depends on xkeyval which was masked earlier today.
