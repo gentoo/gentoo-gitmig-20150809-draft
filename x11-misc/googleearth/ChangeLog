@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.29 2007/05/23 00:11:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.30 2007/07/17 07:08:11 genstef Exp $
+
+  17 Jul 2007; Stefan Schweizer <genstef@gentoo.org>
+  files/digest-googleearth-4, Manifest:
+  redigest
 
   23 May 2007; Stefan Schweizer <genstef@gentoo.org> googleearth-4.ebuild:
   Bump md5 sum for the new version and fix sandbox violations with those. Much
