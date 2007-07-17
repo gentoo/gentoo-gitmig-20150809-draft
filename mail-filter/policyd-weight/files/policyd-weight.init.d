@@ -14,7 +14,7 @@ start(){
 
 stop(){
 	ebegin "Stopping policyd-weight"
-	/usr/lib/postfix/policyd-weight stop
+	/usr/lib/postfix/policyd-weight -k stop
 	eend $?
 }
 
