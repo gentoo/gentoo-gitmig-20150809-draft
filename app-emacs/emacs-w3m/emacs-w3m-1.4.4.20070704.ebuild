@@ -1,22 +1,28 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.4-r2.ebuild,v 1.6 2007/07/17 08:03:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.4.20070704.ebuild,v 1.1 2007/07/17 08:03:48 ulm Exp $
 
-inherit elisp
+inherit elisp autotools
 
 DESCRIPTION="emacs-w3m is an interface program of w3m on Emacs"
 HOMEPAGE="http://emacs-w3m.namazu.org"
-SRC_URI="http://emacs-w3m.namazu.org/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/w3m"
 RDEPEND="${DEPEND}"
 
 SITEFILE=71${PN}-gentoo.el
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	eautoreconf
+}
 
 # This is NOT redundant: elisp.eclass redefines src_compile() from default
 src_compile() {
