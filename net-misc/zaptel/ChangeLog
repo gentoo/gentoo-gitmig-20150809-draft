@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.96 2007/07/13 16:03:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.97 2007/07/17 19:50:28 opfer Exp $
+
+  17 Jul 2007; Christian Faulhammer <opfer@gentoo.org> zaptel-1.2.18.ebuild:
+  stable x86, security bug 171884
 
 *zaptel-1.2.18-r1 (13 Jul 2007)
 
