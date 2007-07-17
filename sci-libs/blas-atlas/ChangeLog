@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.61 2007/07/17 13:44:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.62 2007/07/17 15:58:03 angelos Exp $
+
+  17 Jul 2007; Christoph Mende <angelos@gentoo.org>
+  blas-atlas-3.7.11-r1.ebuild:
+  Stable on amd64 wrt bug #180713
 
   17 Jul 2007; Markus Rothe <corsair@gentoo.org> blas-atlas-3.6.0-r2.ebuild,
   blas-atlas-3.7.11-r1.ebuild:
