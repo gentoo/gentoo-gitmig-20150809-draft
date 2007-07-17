@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.7 2007/07/16 15:38:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.8 2007/07/17 11:59:18 swegener Exp $
 
 #
 # Original Author: Doug Goldstein <cardoe@gentoo.org>
@@ -70,7 +70,7 @@ nvidia-driver-check-warning() {
 
 		if [ "x$r" = "x1" ]; then
 			ewarn "***** WARNING *****"
-			ewarn 
+			ewarn
 			ewarn "You are currently installing a version of nvidia-drivers that is"
 			ewarn "known not to work with a video card you have installed on your"
 			ewarn "system. If this is intentional, please ignore this. If it is not"
