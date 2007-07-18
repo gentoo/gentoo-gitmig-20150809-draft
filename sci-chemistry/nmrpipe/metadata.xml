@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>ribosome@gentoo.org</email>
-		<name>Olivier Fisette</name>
+		<email>je_fro@gentoo.org</email>
+		<name>Jeffrey Gardner</name>
 	</maintainer>
 	<herd>sci-chemistry</herd>
 </pkgmetadata>
