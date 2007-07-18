@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.77 2007/07/17 23:59:25 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.78 2007/07/18 00:47:40 cryos Exp $
+
+  18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org>
+  -koffice-libs-1.5.2.ebuild, -koffice-libs-1.6.2.ebuild:
+  Cleaned out old versions.
 
   17 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org>
   koffice-libs-1.6.3.ebuild:
