@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-isas-misc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-isas-misc/ChangeLog,v 1.19 2007/07/18 07:07:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-isas-misc/ChangeLog,v 1.20 2007/07/18 17:21:39 gustavoz Exp $
+
+  18 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  font-isas-misc-1.0.0.ebuild:
+  Stable on sparc wrt #184462
 
   18 Jul 2007; Jeroen Roovers <jer@gentoo.org> font-isas-misc-1.0.0.ebuild:
   Stable for HPPA (bug #184462).
