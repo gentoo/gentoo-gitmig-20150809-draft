@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/g3data-1.5.1.ebuild,v 1.1 2007/06/11 08:48:11 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/g3data-1.5.1.ebuild,v 1.2 2007/07/18 02:19:19 cryos Exp $
 
 DESCRIPTION="Tool for extracting data from graphs"
 HOMEPAGE="http://www.frantz.fi/software/g3data.php"
@@ -8,7 +8,7 @@ SRC_URI="http://www.frantz.fi/software/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="examples"
 
 RDEPEND=">=x11-libs/gtk+-2.6.0
