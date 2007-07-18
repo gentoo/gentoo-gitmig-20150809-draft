@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.134 2007/07/17 16:38:51 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.135 2007/07/18 20:55:32 omp Exp $
+
+  18 Jul 2007; David Shakaryan <omp@gentoo.org> openbox-3.4.2.ebuild:
+  Install docs into correct directory. (bug #185796)
 
   17 Jul 2007; David Shakaryan <omp@gentoo.org> -openbox-3.3.1.ebuild:
   Remove older version.
