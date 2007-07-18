@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.1.ebuild,v 1.1 2007/07/11 06:31:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.2.ebuild,v 1.1 2007/07/18 21:02:33 eradicator Exp $
 
 inherit eutils multilib autotools
 
@@ -29,9 +29,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-
-	# Bugfixes already in cvs upstream
-	epatch ${FILESDIR}/${PN}-2.2.1-riby.patch
 
 	# Force make to rebuild the shaders since the packaged ones
 	# are not always compiled with the latest version of sdr

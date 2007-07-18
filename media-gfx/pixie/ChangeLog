@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pixie
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.39 2007/07/11 06:32:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.40 2007/07/18 21:02:33 eradicator Exp $
+
+*pixie-2.2.2 (18 Jul 2007)
+
+  18 Jul 2007; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/pixie-2.2.1-riby.patch, -pixie-2.2.1.ebuild, +pixie-2.2.2.ebuild:
+  Version bump.
 
   11 Jul 2007; Jeremy Huddleston <eradicator@gentoo.org>
   -files/pixie-2.1.1-configure_paths.patch,
