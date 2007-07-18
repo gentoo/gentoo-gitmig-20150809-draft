@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/linux-atm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.23 2007/07/18 08:06:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.24 2007/07/18 17:18:23 gustavoz Exp $
+
+  18 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  linux-atm-2.4.1-r2.ebuild:
+  Stable on sparc wrt #185733
 
   18 Jul 2007; Markus Rothe <corsair@gentoo.org> linux-atm-2.4.1-r2.ebuild:
   Stable on ppc64; bug #185733
