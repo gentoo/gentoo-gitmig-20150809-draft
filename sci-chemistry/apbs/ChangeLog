@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.13 2007/02/24 18:39:08 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.14 2007/07/18 17:37:48 je_fro Exp $
+
+  18 Jul 2007; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
+  Add apbs-0.5.1 which includes many bugfixes and new features.
 
   24 Feb 2007; Jeff Gardner <je_fro@gentoo.org> apbs-0.5.0.ebuild:
   Cleanup apbs-0.5.0.ebuild.

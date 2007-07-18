@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.4.0.ebuild,v 1.6 2007/06/26 02:39:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.4.0.ebuild,v 1.7 2007/07/18 17:37:48 je_fro Exp $
 
 inherit eutils fortran
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 IUSE="blas mpi"
-KEYWORDS="~ppc ~x86 ~amd64"
+KEYWORDS=""
 
 DEPEND="blas? ( virtual/blas )
 		sys-libs/readline
