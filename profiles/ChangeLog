@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.537 2007/07/18 09:02:17 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.538 2007/07/18 20:53:26 cardoe Exp $
+
+  18 Jul 2007; Doug Goldstein <cardoe@gentoo.org> package.mask:
+  unmask nvidia drivers
 
   18 Jul 2007; Jeff Gardner <je_fro@gentoo.org> package.mask:
   Remove p.mask for sci-chemistry/nmrpipe

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7492 2007/07/18 20:38:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7493 2007/07/18 20:53:26 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -50,12 +50,6 @@ sci-chemistry/nmrview
 # And the older versions are affected by critical remote security vulnerability
 # See Gentoo bug #185141
 net-www/netscape-flash
-
-# Doug Goldstein <cardoe@gentoo.org> (14 Jul 2007)
-# ebuilds under active development
-=x11-drivers/nvidia-drivers-1.0.7185
-=x11-drivers/nvidia-drivers-1.0.9639
-=x11-drivers/nvidia-drivers-100.14.11
 
 # Michael Cummings <mcummings@gentoo.org> (11 Jul 2007)
 # Masking for removal
