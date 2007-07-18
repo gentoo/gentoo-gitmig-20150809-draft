@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ktechlab-0.3.6.ebuild,v 1.1 2007/05/20 14:51:37 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ktechlab-0.3.6.ebuild,v 1.2 2007/07/18 01:55:33 cryos Exp $
 
 inherit kde
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sourceforge.net/projects/ktechlab/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 ~x86"
 
 IUSE=""
 SLOT="0"

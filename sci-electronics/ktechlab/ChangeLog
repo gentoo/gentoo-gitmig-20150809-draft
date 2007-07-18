@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/ktechlab
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ChangeLog,v 1.11 2007/05/20 14:51:37 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ChangeLog,v 1.12 2007/07/18 01:55:33 cryos Exp $
+
+  18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> -ktechlab-0.3.ebuild,
+  ktechlab-0.3.6.ebuild:
+  Marked stable on amd64, removed old version.
 
 *ktechlab-0.3.6 (20 May 2007)
 
