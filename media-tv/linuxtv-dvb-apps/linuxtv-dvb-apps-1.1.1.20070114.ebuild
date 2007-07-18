@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20070114.ebuild,v 1.6 2007/06/08 10:31:04 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20070114.ebuild,v 1.7 2007/07/18 08:09:36 zzam Exp $
 
 inherit eutils versionator multilib
 
@@ -25,6 +25,8 @@ src_unpack()
 	unpack ${A}
 
 	cd ${S}
+	epatch "${FILESDIR}/${MY_P}-linux-headers-2.6.22.diff"
+
 	# disables compilation of ttusb_dec_reset which requires libusb
 	if ! use usb; then
 		sed -i util/Makefile \
