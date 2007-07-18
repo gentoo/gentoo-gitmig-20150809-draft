@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kformula
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.70 2007/06/09 00:11:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.71 2007/07/18 00:06:18 cryos Exp $
+
+  18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> kformula-1.6.2.ebuild:
+  Marked stable on amd64, bug 178697.
 
   09 Jun 2007; Carsten Lohrke <carlo@gentoo.org> kformula-1.6.2.ebuild:
   Adjust MAXKOFFICEVER.
