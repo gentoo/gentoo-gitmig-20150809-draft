@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kpresenter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.67 2007/07/18 00:11:26 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.68 2007/07/18 00:39:09 cryos Exp $
+
+  18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org>
+  -kpresenter-1.5.2.ebuild, -kpresenter-1.6.2.ebuild:
+  Cleaned out old versions.
 
   18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> kpresenter-1.6.3.ebuild:
   Marked stable on amd64, bug 178697.

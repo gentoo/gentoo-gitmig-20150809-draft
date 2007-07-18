@@ -1,6 +1,13 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.78 2007/07/18 00:05:08 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.79 2007/07/18 00:33:03 cryos Exp $
+
+  18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org>
+  -files/kexi-1.5.2-automake-error.patch,
+  -files/kexi-1.6.2-build_kexi_file.diff, -files/kexi-1.6.2-query.diff,
+  -kexi-1.5.2.ebuild, -kexi-1.6.2.ebuild, -kexi-1.6.2-r1.ebuild,
+  -kexi-1.6.2-r2.ebuild:
+  Cleaned out old versions.
 
   18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> kexi-1.6.3.ebuild:
   Marked stable on amd64, bug 178697.

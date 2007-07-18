@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kword
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.95 2007/07/18 00:16:11 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.96 2007/07/18 00:30:13 cryos Exp $
+
+  18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> -kword-1.5.2.ebuild,
+  -kword-1.5.2-r1.ebuild, -kword-1.6.2.ebuild:
+  Cleaned out old versions.
 
   18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> kword-1.6.3.ebuild:
   Marked stable on amd64, bug 178697.

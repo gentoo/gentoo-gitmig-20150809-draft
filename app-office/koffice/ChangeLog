@@ -1,6 +1,13 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.221 2007/07/17 23:56:08 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.222 2007/07/18 00:25:16 cryos Exp $
+
+  18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org>
+  -files/krita-1.6.0-corrupt_png_save.diff,
+  -files/kexi-1.6.2-build_kexi_file.diff, -files/kexi-1.6.2-query.diff,
+  -koffice-1.5.2-r1.ebuild, -koffice-1.5.2-r2.ebuild, -koffice-1.6.2.ebuild,
+  -koffice-1.6.2-r1.ebuild, -koffice-1.6.2-r2.ebuild:
+  Cleaned out old versions.
 
   17 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> koffice-1.6.3.ebuild:
   Marked stable on amd64, bug 178697.
