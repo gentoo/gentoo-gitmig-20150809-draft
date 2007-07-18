@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/fonttools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.8 2007/04/07 04:22:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.9 2007/07/18 23:07:06 hawking Exp $
+
+*fonttools-2.0_beta1-r1 (18 Jul 2007)
+
+  18 Jul 2007; Ali Polatel <hawking@gentoo.org>
+  +files/fonttools-2.0_beta1-numpy.patch, +fonttools-2.0_beta1-r1.ebuild:
+  revbump, adapted to use numpy.oldnumeric instead of numeric, changed numeric
+  to numpy in DEPEND
 
   07 Apr 2007; Mike Frysinger <vapier@gentoo.org>
   fonttools-2.0_beta1.ebuild:
