@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1.ebuild,v 1.8 2007/07/15 04:52:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1.ebuild,v 1.9 2007/07/18 08:00:03 mrness Exp $
 
 inherit eutils kde-functions
 
 DESCRIPTION="Qt based Least Cost Router for Germany"
-HOMEPAGE="http://www.thepingofdeath.de/index.php"
+HOMEPAGE="http://www.thepingofdeath.de/"
 SRC_URI="mirror://sourceforge/qlcr/${P}-1.tar.bz2"
 
 LICENSE="GPL-2"
