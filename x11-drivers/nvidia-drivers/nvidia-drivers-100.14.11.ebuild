@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.11.ebuild,v 1.7 2007/07/14 10:52:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.11.ebuild,v 1.8 2007/07/18 22:53:27 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -82,6 +82,20 @@ QA_WX_LOAD_amd64="usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib32/opengl/nvidia/extensions/libglx.so"
+
+QA_EXECSTACK_amd64="usr/lib64/xorg/modules/drivers/nvidia_drv.so
+	usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib64/opengl/nvidia/lib/libnvidia-cfg.so.${PV}
+	usr/lib64/opengl/nvidia/extensions/libglx.so
+	usr/lib64/libXvMCNVIDIA.so.${PV}
+	usr/bin/nvidia-xconfig"
+
+QA_EXECSTACK_x86="usr/lib/xorg/modules/drivers/nvidia_drv.so
+	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib/opengl/nvidia/lib/libnvidia-cfg.so.${PV}
+	usr/lib/opengl/nvidia/extensions/libglx.so
+	usr/lib/libXvMCNVIDIA.so.${PV}
+	usr/bin/nvidia-xconfig"
 
 export _POSIX2_VERSION="199209"
 
