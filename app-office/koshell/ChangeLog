@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koshell
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koshell/ChangeLog,v 1.66 2007/07/18 00:08:50 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koshell/ChangeLog,v 1.67 2007/07/18 00:40:36 cryos Exp $
+
+  18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> -koshell-1.5.2.ebuild:
+  Cleaned out old version.
 
   18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> koshell-1.6.2.ebuild:
   Marked stable on amd64, bug 178697.

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kspread
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.76 2007/07/18 00:13:51 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.77 2007/07/18 00:37:20 cryos Exp $
+
+  18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> -kspread-1.5.2.ebuild:
+  Cleaned out old version.
 
   18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> kspread-1.6.2.ebuild:
   Marked stable on amd64, bug 178697.

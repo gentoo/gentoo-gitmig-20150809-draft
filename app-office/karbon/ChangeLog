@@ -1,6 +1,9 @@
 # ChangeLog for app-office/karbon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.74 2007/07/18 00:02:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.75 2007/07/18 00:46:09 cryos Exp $
+
+  18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> -karbon-1.5.2.ebuild:
+  Cleaned out old version.
 
   18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> karbon-1.6.2.ebuild:
   Marked stable on amd64, bug 178697.
