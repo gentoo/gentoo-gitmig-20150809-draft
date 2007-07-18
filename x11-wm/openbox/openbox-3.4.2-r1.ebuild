@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.2.ebuild,v 1.9 2007/07/18 21:06:05 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.2-r1.ebuild,v 1.1 2007/07/18 21:06:05 omp Exp $
 
 DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager."
 HOMEPAGE="http://icculus.org/openbox/"
@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	econf \
+		--docdir=/usr/share/doc/${PF} \
 		$(use_enable nls) \
 		$(use_enable startup-notification) \
 		|| die "econf failed"
@@ -41,5 +42,4 @@ src_install() {
 	fperms a+x /etc/X11/Sessions/${PN}
 
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc ABOUT-NLS AUTHORS CHANGELOG COMPLIANCE README
 }
