@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.45 2007/07/18 07:57:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.46 2007/07/18 18:56:21 jer Exp $
+
+  18 Jul 2007; Jeroen Roovers <jer@gentoo.org> Manifest:
+  Remove offending 1.5.2 ebuild. Redigest.
 
   18 Jul 2007; Jeroen Roovers <jer@gentoo.org> kplato-1.6.2.ebuild:
   Restoring ~hppa.
