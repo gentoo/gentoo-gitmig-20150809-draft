@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/pam_chroot-0.9.1.ebuild,v 1.5 2007/07/17 13:23:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/pam_chroot-0.9.1.ebuild,v 1.6 2007/07/18 05:35:18 jer Exp $
 
 inherit toolchain-funcs pam flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pam-chroot/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~ia64 ~ppc64 ~x86"
+KEYWORDS="~alpha ~hppa ~ia64 ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="virtual/pam
