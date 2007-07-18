@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.535 2007/07/16 12:25:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.536 2007/07/18 09:01:03 je_fro Exp $
+
+  18 Jul 2007; Jeff Gardner <je_fro@gentoo.org> package.mask:
+  Remove p.mask for sci-chemistry/nmrview
 
   16 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> package.mask:
   Mask zaptel-1.2.18-r1
