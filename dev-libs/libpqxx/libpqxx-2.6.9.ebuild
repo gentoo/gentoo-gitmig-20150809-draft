@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-2.6.9.ebuild,v 1.3 2007/07/14 02:49:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-2.6.9.ebuild,v 1.4 2007/07/18 06:33:38 dev-zero Exp $
 
 inherit eutils
 
@@ -50,8 +50,12 @@ src_test() {
 	ewarn "PGUSER (default: username, probably root)"
 	epause 10
 
-	cd "${S}/test"
-	# Working around a mysterious bug in gcc-4.1
-	sed -i -e 's/-O2/-O1/' Makefile
-	emake -j1 check || die "emake check failed"
+	if [[ -n ${PGDATABASE} ]] ; then
+		cd "${S}/test"
+		# Working around a mysterious bug in gcc-4.1
+		sed -i -e 's/-O2/-O1/' Makefile
+		emake -j1 check || die "emake check failed"
+	else
+		ewarn "Tests skipped since PGDATABASE is not defined or empty"
+	fi
 }
