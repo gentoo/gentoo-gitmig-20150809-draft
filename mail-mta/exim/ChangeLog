@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.97 2007/06/30 18:27:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.98 2007/07/19 21:59:57 peitolm Exp $
+
+*exim-4.67-r2 (19 Jul 2007)
+
+  19 Jul 2007; Colin Morey <peitolm@gentoo.org> +exim-4.67-r2.ebuild:
+  Fixes for bugs 180894 (Broken symlinks) 184697 (missing -lcrypto when
+  building with domainkeys)
 
   30 Jun 2007; Raúl Porcel <armin76@gentoo.org> exim-4.67-r1.ebuild:
   Add ~alpha wrt #176487
