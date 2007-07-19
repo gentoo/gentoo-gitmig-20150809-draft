@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r2.ebuild,v 1.2 2007/07/15 02:43:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r3.ebuild,v 1.1 2007/07/19 08:28:32 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -58,15 +58,6 @@ pkg_setup() {
 		die "Incompatible USE flag selection"
 	fi
 
-	if ! ( use mysql || use postgres || use sqlite || use sqlite3 ) ; then
-		echo
-		ewarn "You didn't selected any database backend, therefore hash backend will be used."
-		ewarn "Be advised that hash backend has some issues (see http://bugs.gentoo.org/show_bug.cgi?id=179400),"
-		ewarn "Hit Ctrl-C now and select one database backend through the corespondent USE flag."
-		echo
-		ebeep
-	fi
-
 	create_dspam_usergroup
 }
 
@@ -104,30 +95,23 @@ src_compile() {
 		myconf="${myconf} --enable-preferences-extension"
 	fi
 
-	local STORAGE
+	local STORAGE="hash_drv"
 	# select storage driver
 	if use sqlite ; then
-		if [ "$STORAGE" ] ; then STORAGE="${STORAGE}," ; fi
-		STORAGE="${STORAGE}sqlite_drv"
+		STORAGE="${STORAGE},sqlite_drv"
 	fi
 	if use sqlite3 ; then
-		if [ "$STORAGE" ] ; then STORAGE="${STORAGE}," ; fi
-		STORAGE="${STORAGE}sqlite3_drv"
+		STORAGE="${STORAGE},sqlite3_drv"
 	fi
 	if use mysql; then
-		if [ "$STORAGE" ] ; then STORAGE="${STORAGE}," ; fi
-		STORAGE="${STORAGE}mysql_drv"
+		STORAGE="${STORAGE},mysql_drv"
 		myconf="${myconf} --with-mysql-includes=/usr/include/mysql"
 		myconf="${myconf} --with-mysql-libraries=/usr/$(get_libdir)/mysql"
 	fi
 	if use postgres ; then
-		if [ "$STORAGE" ] ; then STORAGE="${STORAGE}," ; fi
-		STORAGE="${STORAGE}pgsql_drv"
+		STORAGE="${STORAGE},pgsql_drv"
 		myconf="${myconf} --with-pgsql-includes=/usr/include/postgresql"
 		myconf="${myconf} --with-pgsql-libraries=/usr/$(get_libdir)/postgresql"
-	fi
-	if [[ -z "${STORAGE}" ]]; then
-		STORAGE="${STORAGE}hash_drv"
 	fi
 
 	econf ${myconf} --with-storage-driver=${STORAGE} \
@@ -261,6 +245,16 @@ src_install () {
 		-e "s:^#\(Purge.*\):\1:g" \
 		-e "s:^###\(Purge.*\):#\1:g" \
 		-i "${D}"/${CONFDIR}/dspam.conf
+	if ! ( use mysql || use postgres || use sqlite || use sqlite3 ) ; then
+		# When only one storage driver is compiled, it is linked statically with dspam
+		# thus you should not set the StorageDriver at all
+		# Also, hash_drv requires certain tokenizer and PValue (see bug #185718)
+		sed -e "s:^\(StorageDriver .*\)$:#\1:" \
+			-e "s:^Tokenizer .*$:Tokenizer sbph:" \
+			-e "/^#PValue/d" \
+			-e "s:^PValue .*$:PValue markov:" \
+		-i "${D}"/${CONFDIR}/dspam.conf
+	fi
 
 	# installs the notification messages
 	# -> The documentation is wrong! The files need to be in ./txt
@@ -309,6 +303,11 @@ pkg_preinst() {
 pkg_postinst() {
 	# need enewgroup/enewuser in this function for binary install.
 	create_dspam_usergroup
+
+	ewarn "The hash_drv storage backend has the following requirements:"
+	ewarn "  - PValue must be set to 'markov'; Do not use this pvalue with any other storage backend!"
+	ewarn "  - Tokenizer must be either 'sbph' or 'osb'"
+	ewarn "See markov.txt for more info."
 
 	if use mysql || use postgres; then
 		elog
