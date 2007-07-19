@@ -1,6 +1,27 @@
+diff -ur pyvorbis-1.4.orig/src/pyvorbiscodec.c pyvorbis-1.4/src/pyvorbiscodec.c
+--- pyvorbis-1.4.orig/src/pyvorbiscodec.c	2007-07-19 17:57:15.000000000 +0200
++++ pyvorbis-1.4/src/pyvorbiscodec.c	2007-07-19 20:13:59.000000000 +0200
+@@ -118,7 +118,7 @@
+ {
+   vorbis_dsp_clear(PY_DSP(self));
+   Py_XDECREF(((py_dsp *)self)->parent);
+-  PyMem_DEL(self);
++  PyObject_DEL(self);
+ }
+ 
+ static PyObject*
+@@ -447,7 +447,7 @@
+ {
+   vorbis_block_clear(PY_BLOCK(self));
+   Py_XDECREF(((py_block *)self)->parent);
+-  PyMem_DEL(self);
++  PyObject_DEL(self);
+ }
+ 
+ static PyObject*
 diff -ur pyvorbis-1.4.orig/src/pyvorbisfile.c pyvorbis-1.4/src/pyvorbisfile.c
 --- pyvorbis-1.4.orig/src/pyvorbisfile.c	2007-07-19 17:57:15.000000000 +0200
-+++ pyvorbis-1.4/src/pyvorbisfile.c	2007-07-19 17:59:49.000000000 +0200
++++ pyvorbis-1.4/src/pyvorbisfile.c	2007-07-19 20:25:27.000000000 +0200
 @@ -173,8 +173,7 @@
    if (ret == NULL) {
      PyMem_DEL(newobj);
@@ -11,7 +32,7 @@ diff -ur pyvorbis-1.4.orig/src/pyvorbisfile.c pyvorbis-1.4/src/pyvorbisfile.c
  
    return (PyObject *) newobj;
  }
-@@ -190,12 +189,10 @@
+@@ -190,12 +189,9 @@
      /* If file was opened from a file object, decref it, so it can
         close */
      Py_DECREF(py_self->py_file);
@@ -19,10 +40,31 @@ diff -ur pyvorbis-1.4.orig/src/pyvorbisfile.c pyvorbis-1.4/src/pyvorbisfile.c
 -    /* Otherwise, we opened the file and should close it. */
 -    fclose(py_self->c_file);
    }
- 
+-
 -  PyMem_DEL(self);
 +  free(py_self->ovf);
 +  PyObject_DEL(self);
  }
  
  static PyObject *
+diff -ur pyvorbis-1.4.orig/src/pyvorbisinfo.c pyvorbis-1.4/src/pyvorbisinfo.c
+--- pyvorbis-1.4.orig/src/pyvorbisinfo.c	2007-07-19 17:57:15.000000000 +0200
++++ pyvorbis-1.4/src/pyvorbisinfo.c	2007-07-19 20:36:25.000000000 +0200
+@@ -134,7 +134,7 @@
+ static void
+ py_ov_info_dealloc(PyObject *self)
+ {
+-  PyMem_DEL(self);
++  PyObject_DEL(self);
+ }
+ 
+ #define CMP_RET(x) \
+@@ -418,7 +418,7 @@
+     free(ovc_self->vc);
+   }
+ 
+-  PyMem_DEL(self);
++  PyObject_DEL(self);
+ }
+ 
+ 
