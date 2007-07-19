@@ -1,0 +1,13 @@
+diff -ur a/server/dhcpd.conf b/server/dhcpd.conf
+--- a/server/dhcpd.conf	2001-01-25 08:33:11 +0000
++++ b/server/dhcpd.conf	2007-07-19 10:29:43 +0100
+@@ -21,6 +21,9 @@
+ # No service will be given on this subnet, but declaring it helps the 
+ # DHCP server to understand the network topology.
+ 
++# Disable dynamic DNS updates.
++ddns-update-style none;
++
+ subnet 10.152.187.0 netmask 255.255.255.0 {
+ }
+ 

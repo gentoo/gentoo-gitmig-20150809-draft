@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r9.ebuild,v 1.14 2007/06/26 02:30:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.3-r9.ebuild,v 1.15 2007/07/19 09:38:27 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -57,6 +57,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}"-3.0.3-libdst.patch
 	# Fix building on Gentoo/FreeBSD
 	epatch "${FILESDIR}/${PN}"-3.0.2-gmake.patch
+	# Set ddns-update-style none in the example config, #170311
+	epatch "${FILESDIR}/${PN}"-3.0-ddns-example.patch
 
 	# NetworkManager support patches
 	# If they fail to apply to future versions they will be dropped
