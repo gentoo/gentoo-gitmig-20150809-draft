@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7496 2007/07/19 11:01:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7497 2007/07/19 17:01:46 lack Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Jim Ramsay <lack@gentoo.org> (19 Jul 1007)
+# netscape-flash-9.0.48.0-r1 addresses Gentoo bug #185141 by using the versioned
+# RPM distributed by Adobe instead of their unversioned tar.gz.
+# However, we must still mask the original ebuild, and any previous versions.
+<=net-www/netscape-flash-9.0.48.0
 
 # Alin Năstac <mrness@gentoo.org> (19 Jul 2007)
 # Dead upstream, forked in net-dialup/xl2tpd.
@@ -50,13 +56,6 @@ sci-chemistry/nmrview
 # Mask zaptel-1.2.18-r1 since it seems to have some issues and is experimental
 # See bug #185268
 =net-misc/zaptel-1.2.18-r1
-
-# Olivier Crête <tester@gentoo.org> (14 Jul 1007)
-# We can't mirror. Different upstream mirrors have different versions
-# and the tarballs are unversioned
-# And the older versions are affected by critical remote security vulnerability
-# See Gentoo bug #185141
-net-www/netscape-flash
 
 # Michael Cummings <mcummings@gentoo.org> (11 Jul 2007)
 # Masking for removal
