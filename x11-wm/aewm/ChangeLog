@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/aewm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.19 2007/07/16 22:31:08 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.20 2007/07/19 13:46:35 angelos Exp $
+
+  19 Jul 2007; Christoph Mende <angelos@gentoo.org> aewm-1.2.7.ebuild:
+  Stable on amd64 wrt bug #185190
 
   16 Jul 2007; David Shakaryan <omp@gentoo.org>
   -files/1.2.3-freetype-gentoo.diff, -aewm-1.2.3.ebuild:
