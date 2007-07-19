@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7494 2007/07/19 07:00:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7495 2007/07/19 09:01:51 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -29,6 +29,8 @@ net-dialup/l2tpd
 # Raúl Porcel <armin76@gentoo.org> (18 Jul 2007)
 # Mask rc
 =net-p2p/deluge-0.5.3_rc*
+=net-p2p/qbittorrent-1.0.0_beta*
+=net-libs/rb_libtorrent-0.13_pre*
 
 # Samuli Suominen <drac@gentoo.org> (18 Jul 2007)
 # Masked for treecleaners bug 185386. Unfetchable package,
