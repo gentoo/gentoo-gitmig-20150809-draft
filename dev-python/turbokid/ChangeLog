@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/turbokid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbokid/ChangeLog,v 1.3 2007/07/04 19:42:41 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbokid/ChangeLog,v 1.4 2007/07/19 05:58:51 pythonhead Exp $
+
+*turbokid-1.0.2 (19 Jul 2007)
+
+  19 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> -turbokid-1.0.1.ebuild,
+  +turbokid-1.0.2.ebuild:
+  Version bump, removed old version.
 
   04 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> turbokid-1.0.1.ebuild:
   Removed setuptools sed. bug# 184039
