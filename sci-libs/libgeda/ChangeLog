@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/libgeda
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.36 2007/06/02 16:16:12 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.37 2007/07/19 09:32:38 calchan Exp $
+
+*libgeda-1.1.1 (19 Jul 2007)
+
+  19 Jul 2007; Denis Dupeyron <calchan@gentoo.org> +libgeda-1.1.1.ebuild:
+  Version bump, with new upstream numbering (see bug #184701). You will have
+  to mask older versions to use it until we can stabilize this version and
+  remove the others.
 
 *libgeda-20070526 (02 Jun 2007)
 
