@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/opendx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.4 2007/02/22 01:09:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.5 2007/07/19 08:11:02 je_fro Exp $
+
+  19 Jul 2007; Jeff Gardner <je_fro@gentoo.org> +files/opendx-sys.h.patch,
+  opendx-4.3.2-r1.ebuild:
+  Add patch to fix compilation with >=linux headers-2.6.19. See bug 185828.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
