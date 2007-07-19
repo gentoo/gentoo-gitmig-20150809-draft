@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.5.ebuild,v 1.1 2007/07/18 18:03:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.5.ebuild,v 1.2 2007/07/19 21:33:06 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -12,7 +12,7 @@ SRC_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/linu
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="restrict-javascript"
@@ -55,38 +55,12 @@ pkg_setup() {
 	has_multilib_profile && ABI="x86"
 }
 
-linguas() {
-	local LANG SLANG
-	for LANG in ${LINGUAS}; do
-		if has ${LANG} en en_US; then
-			has en ${linguas} || linguas="${linguas:+"${linguas} "}en"
-			continue
-		elif has ${LANG} ${LANGS//-/_}; then
-			has ${LANG//_/-} ${linguas} || linguas="${linguas:+"${linguas} "}${LANG//_/-}"
-			continue
-		elif [[ " ${LANGS} " == *" ${LANG}-"* ]]; then
-			for X in ${LANGS}; do
-				if [[ "${X}" == "${LANG}-"* ]] && \
-					[[ " ${NOSHORTLANGS} " != *" ${X} "* ]]; then
-					has ${X} ${linguas} || linguas="${linguas:+"${linguas} "}${X}"
-					continue 2
-				fi
-			done
-		fi
-		ewarn "Sorry, but mozilla-firefox does not support the ${LANG} LINGUA"
-	done
-}
-
 src_unpack() {
 	unpack firefox-${PV}.tar.gz
 
-	linguas
-	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_unpack "${P/-bin/}-${X}.xpi"
+	for X in ${A}; do
+		[[ ${X} == *.xpi ]] && xpi_unpack ${X}
 	done
-	if [[ ${linguas} != "" ]]; then
-		einfo "Selected language packs (first will be default): ${linguas}"
-	fi
 }
 
 src_install() {
@@ -97,19 +71,9 @@ src_install() {
 	touch ${S}/extensions/talkback@mozilla.org/chrome.manifest
 	mv ${S} ${D}${MOZILLA_FIVE_HOME}
 
-	linguas
-	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P/-bin/}-${X}"
+	for X in ${A}; do
+		[[ ${X} == *.xpi ]] && xpi_install "${WORKDIR}"/${X%.xpi}
 	done
-
-	local LANG=${linguas%% *}
-	if [[ -n ${LANG} && ${LANG} != "en" ]]; then
-		elog "Setting default locale to ${LANG}"
-		dosed -e "s:general.useragent.locale\", \"en-US\":general.useragent.locale\", \"${LANG}\":" \
-			"${MOZILLA_FIVE_HOME}"/defaults/pref/firefox.js \
-			"${MOZILLA_FIVE_HOME}"/defaults/pref/firefox-l10n.js || \
-			die "sed failed to change locale"
-	fi
 
 	# Create /usr/bin/firefox-bin
 	install_mozilla_launcher_stub firefox-bin ${MOZILLA_FIVE_HOME}
@@ -126,6 +90,11 @@ src_install() {
 
 	# install ldpath env.d
 	doenvd ${FILESDIR}/71firefox-bin
+
+	for i in ${D}/"${MOZILLA_FIVE_HOME}"/greprefs/all-gentoo.js \
+		${D}"${MOZILLA_FIVE_HOME}"/defaults/pref/all-gentoo.js;	do
+		echo 'pref("intl.locale.matchOS",                true);' >> $i
+	done
 }
 
 pkg_preinst() {
