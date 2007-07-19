@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7497 2007/07/19 17:01:46 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7498 2007/07/19 17:52:15 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -263,12 +263,6 @@ app-emacs/ilisp-cvs
 # dev-java/glassfish-persistence. After 30 days moved to java-experimental
 # because some ebuilds there are using this.
 dev-java/odmg
-
-# Fabian Groffen <grobian@gentoo.org> (03 Jun 2007)
-# muttng is outdated and unmaintained, try plain mutt instead.
-# see http://article.gmane.org/gmane.linux.gentoo.devel/49234
-# Masked pending removal.  Remove in 30 days.
-mail-client/muttng
 
 # Stefan Schweizer <genstef@gentoo.org> (31 May 2007)
 # release candidate
