@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.55 2007/07/19 16:16:49 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.56 2007/07/19 16:21:25 alonbl Exp $
+
+  19 Jul 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/johntheripper-1.7.0.2-stackdef.S, -files/clk_tck.patch,
+  -files/john-ntlm.skey.patch, -johntheripper-1.6.ebuild,
+  -johntheripper-1.6-r3.ebuild, -johntheripper-1.6.40.ebuild,
+  -johntheripper-1.7.0.2.ebuild:
+  Cleanup
 
 *johntheripper-1.7.2-r1 (19 Jul 2007)
 
