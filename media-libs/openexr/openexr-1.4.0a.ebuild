@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.4.0a.ebuild,v 1.1 2006/11/08 20:35:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.4.0a.ebuild,v 1.2 2007/07/19 20:49:16 aballier Exp $
 
+WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.9
 
 inherit eutils libtool autotools
@@ -36,14 +37,15 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-asneeded.patch"
-	eautomake
-	elibtoolize
+	epatch "${FILESDIR}/${P}-nvidia-automagic.patch"
+	eautoreconf
 }
 
 src_compile() {
 	econf \
 		$(use_enable examples imfexamples) \
-		$(use_with opengl fltk-config /usr/bin/fltk-config)
+		$(use_with opengl fltk-config /usr/bin/fltk-config) \
+		$(use_enable video_cards_nvidia nvidia)
 
 	emake || die "make failed"
 }
