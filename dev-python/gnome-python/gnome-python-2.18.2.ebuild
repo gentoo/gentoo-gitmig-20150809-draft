@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.18.2.ebuild,v 1.1 2007/04/27 20:28:52 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.18.2.ebuild,v 1.2 2007/07/19 13:07:17 uberlord Exp $
 
 inherit gnome2 python
 
@@ -36,7 +36,7 @@ src_unpack() {
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
-	ln -s /bin/true py-compile
+	ln -s $(type -P true) py-compile
 }
 
 src_install() {
