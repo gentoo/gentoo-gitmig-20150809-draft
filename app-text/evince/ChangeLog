@@ -1,6 +1,16 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.106 2007/07/08 04:16:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.107 2007/07/19 14:24:12 eva Exp $
+
+*evince-0.8.3 (19 Jul 2007)
+
+  19 Jul 2007; Gilles Dartiguelongue <eva@gentoo.org> -evince-0.6.0.ebuild,
+  -evince-0.6.1.ebuild, -evince-0.6.1-r1.ebuild, -evince-0.6.1-r2.ebuild,
+  -evince-0.8.0.ebuild, -evince-0.8.1.ebuild, +evince-0.8.3.ebuild:
+  cleaning up old versions
+  bump to 0.8.3
+  * fix compilation against poppler 0.5.4
+  * freebsd patch is upstream
 
   08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
   evince-0.5.3-r1.ebuild, evince-0.6.0.ebuild, evince-0.6.1.ebuild,

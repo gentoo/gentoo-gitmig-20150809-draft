@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.6.1-r1.ebuild,v 1.8 2007/07/08 04:16:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.8.3.ebuild,v 1.1 2007/07/19 14:24:12 eva Exp $
 
+WANT_AUTOMAKE="1.9"
 inherit eutils gnome2 autotools
 
 DESCRIPTION="Simple document viewer for GNOME"
@@ -11,31 +12,28 @@ LICENSE="GPL-2"
 IUSE="dbus djvu doc dvi gnome t1lib tiff"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND="
 	dvi? (
 		virtual/tetex
 		t1lib? ( >=media-libs/t1lib-5.0.0 )
 	)
-	dbus? ( || ( >=dev-libs/dbus-glib-0.71
-		>=sys-apps/dbus-0.33 ) )
+	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	tiff? ( >=media-libs/tiff-3.6 )
 	>=app-text/poppler-bindings-0.5.4
 	>=dev-libs/glib-2
 	>=gnome-base/gnome-vfs-2.0
 	>=gnome-base/libglade-2
 	>=gnome-base/gconf-2
-	gnome-base/libgnome
-	|| (
-		>=gnome-base/libgnomeprintui-2.6
-		>=x11-libs/gtk+-2.10
-		)
+	>=gnome-base/libgnome-2.14
+	>=x11-libs/gtk+-2.10
+	gnome-base/gnome-keyring
 	>=gnome-base/libgnomeui-2.14
 	gnome? ( >=gnome-base/nautilus-2.10 )
-	>=x11-libs/gtk+-2.8.15
-	gnome-base/gnome-keyring
 	djvu? ( >=app-text/djvu-3.5.17 )
+	>=x11-themes/gnome-icon-theme-2.17.1
+	dev-libs/libxml2
 	virtual/ghostscript"
 
 DEPEND="${RDEPEND}
@@ -66,15 +64,15 @@ pkg_setup() {
 	fi
 }
 
-src_unpack(){
-	unpack "${A}"
-	cd "${S}"
+src_unpack() {
+	gnome2_src_unpack
 
 	# Fix .desktop file so menu item shows up
-	epatch ${FILESDIR}/${PN}-0.5.3-display-menu.patch
+	epatch ${FILESDIR}/${PN}-0.7.1-display-menu.patch
 
 	# Make dbus actually switchable
-	epatch ${FILESDIR}/${P}-dbus-switch.patch
+	epatch ${FILESDIR}/${PN}-0.6.1-dbus-switch.patch
 
-	eautoreconf
+	cp aclocal.m4 old_macros.m4
+	AT_M4DIR="." eautoreconf
 }
