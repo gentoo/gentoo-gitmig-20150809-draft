@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2.ebuild,v 1.15 2007/07/19 16:16:49 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2-r1.ebuild,v 1.1 2007/07/19 16:16:49 alonbl Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pax-utils
 
@@ -10,15 +10,15 @@ S=${WORKDIR}/${MY_PBASE}
 DESCRIPTION="fast password cracker"
 HOMEPAGE="http://www.openwall.com/john/"
 SRC_URI="http://www.openwall.com/john/f/${MY_PBASE}.tar.gz
-		http://www.openwall.com/john/contrib/${MY_PNBASE}-1.7-all-4.diff.gz"
+		http://www.openwall.com/john/contrib/${MY_PNBASE}-1.7.2-all-7.diff.gz"
 
 # banquise-to-bigpatch-17.patch.bz2"
 # based off /var/tmp/portage/johntheripper-1.6.40
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa mips ppc ppc64 sparc x86"
-IUSE="mmx altivec"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="mmx altivec sse2"
 
 RDEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.7"
@@ -26,9 +26,9 @@ RDEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${WORKDIR}"/${MY_PNBASE}-1.7-all-4.diff
+	epatch "${WORKDIR}"/${MY_PNBASE}-1.7.2-all-7.diff
 
-	for p in params.h sha1-memset stackdef.S stripping; do
+	for p in params.h sha1-memset stackdef.S stackdef-2.S stripping; do
 		epatch "${FILESDIR}/${P}-${p}.patch"
 	done
 
@@ -51,13 +51,13 @@ src_compile() {
 		CFG_ALT_NAME=/etc/john/john.ini"
 
 	if use x86 ; then
-		if use mmx ; then
+		if use sse2 ; then
+			emake ${OPTIONS} linux-x86-sse2 || die "Make failed"
+		elif use mmx ; then
 			emake ${OPTIONS} linux-x86-mmx || die "Make failed"
 		else
 			emake ${OPTIONS} linux-x86-any || die "Make failed"
 		fi
-	elif use amd64 ; then
-		emake ${OPTIONS} generic || die "Make failed"
 	elif use alpha ; then
 		emake ${OPTIONS} linux-alpha || die "Make failed"
 	elif use sparc; then
