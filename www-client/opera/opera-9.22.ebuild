@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.22.ebuild,v 1.1 2007/07/19 11:10:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.22.ebuild,v 1.2 2007/07/19 11:36:59 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -63,7 +63,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}/${PN}-9.00-install.patch"
-	epatch "${FILESDIR}/${P}-pluginpath.patch"
+	epatch "${FILESDIR}/${PN}-9.21-pluginpath.patch"
 
 	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
 		-e "s:/usr/share/applnk:${D}/usr/share/applnk:g" \
