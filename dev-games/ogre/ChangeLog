@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.39 2007/06/13 11:55:15 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.40 2007/07/19 18:25:43 mr_bones_ Exp $
+
+*ogre-1.4.3 (19 Jul 2007)
+
+  19 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/ogre-1.4.3-cegui.patch, +ogre-1.4.3.ebuild:
+  version bump
 
 *ogre-1.4.2 (13 Jun 2007)
 
