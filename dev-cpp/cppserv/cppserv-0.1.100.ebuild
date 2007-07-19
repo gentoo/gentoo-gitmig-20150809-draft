@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.1.100.ebuild,v 1.2 2007/07/19 02:06:52 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.1.100.ebuild,v 1.3 2007/07/19 02:25:08 iluxa Exp $
 
 inherit eutils apache-module
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~alpha ~x86 ~mips ~amd64"
 IUSE=""
 
-APACHE2_MOD_CONF="75_${PN}.conf"
+APACHE2_MOD_CONF="75_mod_cserv"
 
 DEPEND="net-libs/socket++
 	>=dev-cpp/sptk-3.4.1
