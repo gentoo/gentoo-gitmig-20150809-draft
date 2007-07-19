@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/mt-st
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.20 2007/07/19 15:49:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.21 2007/07/19 19:10:13 armin76 Exp $
+
+  19 Jul 2007; Raúl Porcel <armin76@gentoo.org> mt-st-0.9b.ebuild:
+  alpha/ia64/x86 stable wrt #185867
 
   19 Jul 2007; Markus Rothe <corsair@gentoo.org> mt-st-0.9b.ebuild:
   Stable on ppc64; bug #185867
