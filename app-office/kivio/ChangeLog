@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kivio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.71 2007/07/18 07:53:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.72 2007/07/19 13:41:54 armin76 Exp $
+
+  19 Jul 2007; Raúl Porcel <armin76@gentoo.org> kivio-1.6.2.ebuild:
+  alpha/ia64/x86 stable wrt #178697
 
   18 Jul 2007; Jeroen Roovers <jer@gentoo.org> kivio-1.6.2.ebuild:
   Restoring ~hppa.
