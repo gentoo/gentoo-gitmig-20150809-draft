@@ -1,6 +1,12 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.68 2007/07/07 23:40:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.69 2007/07/19 01:39:04 josejx Exp $
+
+*pbbuttonsd-0.8.1-r1 (19 Jul 2007)
+
+  19 Jul 2007; Joseph Jezak <josejx@gentoo.org> +files/pmcs.patch,
+  +pbbuttonsd-0.8.1-r1.ebuild:
+  Added patch to remove hdparm settings for bug #185341.
 
 *pbbuttonsd-0.8.1 (07 Jul 2007)
 
