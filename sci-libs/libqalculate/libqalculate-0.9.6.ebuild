@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.6.ebuild,v 1.1 2007/07/09 15:44:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.6.ebuild,v 1.2 2007/07/19 02:02:29 josejx Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/qalculate/${P}.tar.gz"
 
 SLOT="0"
 IUSE="readline"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 COMMON_DEPEND=">=sci-libs/cln-1.1
 	dev-libs/libxml2
