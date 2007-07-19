@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.1.100.ebuild,v 1.1 2007/04/05 20:34:03 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.1.100.ebuild,v 1.2 2007/07/19 02:06:52 iluxa Exp $
 
 inherit eutils apache-module
 
@@ -28,4 +28,6 @@ src_compile() {
 
 src_install() {
 	emake PREFIX=/usr ADON_BUILD=release DESTDIR="${D}" install || die "emake install failed"
+	insinto "${APACHE2_MODULES_CONFDIR}"
+	doins "${FILESDIR}/${APACHE2_MOD_CONF}.conf" || die "internal ebuild error: '${FILESDIR}/${APACHE2_MOD_CONF}.conf' not found"
 }
