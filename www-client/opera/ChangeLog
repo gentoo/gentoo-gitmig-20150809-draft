@@ -1,6 +1,14 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.106 2007/07/10 18:39:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.107 2007/07/19 11:10:50 jer Exp $
+
+*opera-9.22 (19 Jul 2007)
+*opera-9.22_rc652 (19 Jul 2007)
+*opera-9.22_rc651 (19 Jul 2007)
+
+  19 Jul 2007; Jeroen Roovers <jer@gentoo.org> +opera-9.22_rc651.ebuild,
+  +opera-9.22_rc652.ebuild, +opera-9.22.ebuild:
+  Version bump. Move weekly ebuilds to _rc version format.
 
 *opera-9.22.652 (10 Jul 2007)
 
