@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.95 2007/07/18 00:51:49 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.96 2007/07/19 13:06:21 armin76 Exp $
+
+  19 Jul 2007; Raúl Porcel <armin76@gentoo.org> koffice-i18n-1.6.3.ebuild:
+  alpha/ia64/x86 stable wrt #178697
 
   18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org>
   -koffice-i18n-1.5.2.ebuild, -koffice-i18n-1.6.2.ebuild,
