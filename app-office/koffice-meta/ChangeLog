@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice-meta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.70 2007/07/18 08:03:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.71 2007/07/19 14:10:42 armin76 Exp $
+
+  19 Jul 2007; Raúl Porcel <armin76@gentoo.org> koffice-meta-1.6.3.ebuild:
+  alpha/ia64/x86 stable wrt #178697
 
   18 Jul 2007; Jeroen Roovers <jer@gentoo.org> koffice-meta-1.6.3.ebuild:
   Restoring ~hppa.
