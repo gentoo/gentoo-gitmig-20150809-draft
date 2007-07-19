@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvmovie2vdr/tvmovie2vdr-0.5.13.ebuild,v 1.2 2007/07/13 05:03:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvmovie2vdr/tvmovie2vdr-0.5.13.ebuild,v 1.3 2007/07/19 11:00:48 zzam Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.2.0
+DEPEND="
 	>=dev-perl/DateManip-5.42a-r1
 	>=dev-perl/Compress-Zlib-1.22
 	>=dev-perl/Archive-Zip-1.14
