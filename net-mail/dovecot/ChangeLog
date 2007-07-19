@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.110 2007/07/15 19:17:07 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.111 2007/07/19 16:17:26 uberlord Exp $
+
+*dovecot-1.0.2-r1 (19 Jul 2007)
+*dovecot-1.0_rc29-r1 (19 Jul 2007)
+
+  19 Jul 2007; Roy Marples <uberlord@gentoo.org>
+  +dovecot-1.0_rc29-r1.ebuild, +dovecot-1.0.2-r1.ebuild:
+  fperms are now u+s for suid.
 
 *dovecot-1.0.2 (15 Jul 2007)
 
