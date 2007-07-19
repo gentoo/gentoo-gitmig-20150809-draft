@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/pyorbit-2.14.3.ebuild,v 1.1 2007/06/30 23:24:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/pyorbit-2.14.3.ebuild,v 1.2 2007/07/19 12:22:12 uberlord Exp $
 
 inherit python gnome2
 
@@ -23,7 +23,7 @@ src_unpack() {
 	unpack ${A}
 	# disable pyc compiling
 	mv ${S}/py-compile ${S}/py-compile.orig
-	ln -s /bin/true ${S}/py-compile
+	ln -s $(type -P true) ${S}/py-compile
 }
 
 src_install() {
