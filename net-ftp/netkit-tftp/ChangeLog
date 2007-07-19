@@ -1,6 +1,18 @@
 # ChangeLog for net-ftp/netkit-tftp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.5 2007/05/15 14:03:32 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.6 2007/07/19 13:27:18 pva Exp $
+
+*netkit-tftp-0.17-r4 (19 Jul 2007)
+
+  19 Jul 2007; <pva@gentoo.org>
+  +files/netkit-tftp-0.17-tftp-connect-segfault.patch,
+  +files/netkit-tftp-0.17-tftp-fix-put-zero-size.diff,
+  +files/netkit-tftp-0.17-tftp-manpage-typo.patch, +files/tftp-dgram,
+  +files/tftp-stream, metadata.xml, +netkit-tftp-0.17-r4.ebuild:
+  Bunch of fixes reported and some fixed in debian: segfault during tftp
+  connect (see debian bug #375365), manpage typo (debian #310347), and put
+  command in tftp now works (debian #88286). Added example files for xinetd,
+  and dodoc now installs README, ChangeLog and BUGS. Took maintenance.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
