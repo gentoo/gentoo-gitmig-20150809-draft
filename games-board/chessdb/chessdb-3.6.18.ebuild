@@ -1,12 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/chessdb/chessdb-3.6.18.ebuild,v 1.1 2007/07/13 22:31:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/chessdb/chessdb-3.6.18.ebuild,v 1.2 2007/07/19 23:38:51 nyhm Exp $
 
 inherit toolchain-funcs eutils games
 
 MY_PN=ChessDB
 MY_P=${MY_PN}-${PV}
-
 DESCRIPTION="A free Chess Database"
 HOMEPAGE="http://chessdb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
@@ -14,14 +13,14 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="tb4"
 
 RDEPEND="dev-lang/tk"
 DEPEND="${RDEPEND}
-	app-arch/unzip"
+	tb4? ( app-arch/unzip )"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
@@ -34,7 +33,8 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure BINDIR="${GAMES_BINDIR}" \
+	./configure \
+		BINDIR="${GAMES_BINDIR}" \
 		COMPILE=$(tc-getCXX) \
 		CC=$(tc-getCC) \
 		LINK=$(tc-getCXX) \
