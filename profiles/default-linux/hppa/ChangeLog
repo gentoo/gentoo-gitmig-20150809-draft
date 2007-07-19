@@ -1,6 +1,11 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.13 2007/05/17 16:39:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.14 2007/07/19 11:39:19 jer Exp $
+
+  19 Jul 2007; Jeroen Roovers <jer@gentoo.org> -2004.2/deprecated,
+  -2004.2/make.defaults, -2004.2/parent, -2004.3/deprecated, -2004.3/parent,
+  -2005.0/deprecated, -2005.0/packages, -2005.0/parent:
+  Remove deprecated profiles (bug #182590).
 
   17 May 2007; Jeroen Roovers <jer@gentoo.org> use.mask:
   Masking the d USE flag (bug #178896).
