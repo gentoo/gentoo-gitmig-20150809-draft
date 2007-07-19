@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/perl-support
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/perl-support/ChangeLog,v 1.17 2007/04/10 07:34:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/perl-support/ChangeLog,v 1.18 2007/07/19 13:54:01 hawking Exp $
+
+*perl-support-3.6.2 (19 Jul 2007)
+
+  19 Jul 2007; Ali Polatel <hawking@gentoo.org> +perl-support-3.6.2.ebuild:
+  Version bump
 
 *perl-support-3.4 (10 Apr 2007)
 
