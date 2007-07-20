@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/figlet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.30 2007/07/20 15:52:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.31 2007/07/20 16:10:55 drac Exp $
+
+  20 Jul 2007; Samuli Suominen <drac@gentoo.org> figlet-222.ebuild:
+  Keyword for ~arm, armin76 made me.
 
   20 Jul 2007; Raúl Porcel <armin76@gentoo.org> figlet-222.ebuild:
   Add ~ia64, we need figlet!
