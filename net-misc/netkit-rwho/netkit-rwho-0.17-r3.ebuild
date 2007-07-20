@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r1.ebuild,v 1.3 2007/03/26 08:07:49 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r3.ebuild,v 1.1 2007/07/20 15:23:14 pva Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 mips ppc s390 sparc x86"
+KEYWORDS="alpha amd64 arm mips ppc s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
@@ -23,6 +23,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${WORKDIR}"/${P}-tiny-packet-dos.patch
 	epatch "${WORKDIR}"/${P}-gentoo.diff
+	epatch "${WORKDIR}"/${P}-debian.patch
 }
 
 src_compile() {
@@ -43,5 +44,9 @@ src_install() {
 	doman ruptime/ruptime.1 rwho/rwho.1 rwhod/rwhod.8
 	dodoc README ChangeLog
 
-	newinitd ${FILESDIR}/${P}-rc rwhod
+	newinitd "${FILESDIR}"/${P}-rc rwhod
+	newconfd "${FILESDIR}"/${P}-confd rwhod
+
+	exeinto /etc/cron.monthly
+	doexe "${FILESDIR}"/${P}-cron
 }

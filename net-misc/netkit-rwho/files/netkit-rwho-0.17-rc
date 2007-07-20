@@ -6,12 +6,12 @@ depend() {
 
 start() {
 	ebegin "Starting rwhod"
-	start-stop-daemon --start --quiet --exec /usr/sbin/rwhod -- $RWHOD_OPTIONS
+	/sbin/start-stop-daemon --start --quiet --exec /usr/sbin/rwhod -- $RWHOD_OPTIONS
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping rwhod"
-	start-stop-daemon --stop --quiet --name rwhod
+	/sbin/start-stop-daemon --stop --quiet --name rwhod
 	eend $?
 }

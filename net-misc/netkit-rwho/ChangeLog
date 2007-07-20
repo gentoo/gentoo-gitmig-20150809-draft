@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/netkit-rwho
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.19 2007/06/20 16:40:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.20 2007/07/20 15:23:14 pva Exp $
+
+*netkit-rwho-0.17-r3 (20 Jul 2007)
+
+  20 Jul 2007; <pva@gentoo.org> files/netkit-rwho-0.17-rc,
+  -netkit-rwho-0.17-r1.ebuild, -netkit-rwho-0.17-r2.ebuild,
+  +netkit-rwho-0.17-r3.ebuild:
+  Fixed bug #174236. ebuild bumped to propagate fixed init.d script to our
+  users. Thank Rod Butler <rbrbrb2004 AT yahoo.com> for report and Uberlord
+  for the fix.
 
   20 Jun 2007; Raúl Porcel <armin76@gentoo.org> netkit-rwho-0.17-r2.ebuild:
   alpha stable wrt #168158
