@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/tvmovie2vdr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvmovie2vdr/ChangeLog,v 1.6 2007/07/19 15:46:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvmovie2vdr/ChangeLog,v 1.7 2007/07/20 11:26:28 zzam Exp $
+
+  20 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
+  tvmovie2vdr-0.5.13.ebuild:
+  Readded vdr dependency, as ebuild relies on existance of user vdr, reverting
+  Bug #185801
 
   19 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
   tvmovie2vdr-0.5.13.ebuild:
