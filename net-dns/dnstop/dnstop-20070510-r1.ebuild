@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/dnstop-20070510-r1.ebuild,v 1.1 2007/06/17 23:50:02 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/dnstop-20070510-r1.ebuild,v 1.2 2007/07/20 17:49:21 gustavoz Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://dnstop.measurement-factory.com/src/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc sparc ~x86"
 
 IUSE="ipv6"
 DEPEND="sys-libs/ncurses

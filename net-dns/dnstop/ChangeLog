@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/dnstop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.17 2007/06/17 23:50:02 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.18 2007/07/20 17:49:21 gustavoz Exp $
+
+  20 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  dnstop-20070510-r1.ebuild:
+  Stable on sparc wrt #185797
 
 *dnstop-20070510-r1 (17 Jun 2007)
 
