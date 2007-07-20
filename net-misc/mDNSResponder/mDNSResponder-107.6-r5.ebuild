@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.6-r5.ebuild,v 1.1 2007/05/05 12:16:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.6-r5.ebuild,v 1.2 2007/07/20 20:23:29 cryos Exp $
 
 inherit eutils base toolchain-funcs flag-o-matic java-pkg-opt-2
 
@@ -14,11 +14,13 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="debug doc"
 
 DEPEND="!net-dns/avahi
-		java? ( >=virtual/jdk-1.4 )"
+	java? ( >=virtual/jdk-1.4 )"
 RDEPEND="!net-dns/avahi
-		java? ( >=virtual/jre-1.4 )"
+	java? ( >=virtual/jre-1.4 )"
 
-PATCHES="${FILESDIR}/mDNSResponder-107.6-Makefiles.diff ${FILESDIR}/mDNSResponder-107.6-java.patch"
+PATCHES="${FILESDIR}/mDNSResponder-107.6-Makefiles.diff
+	${FILESDIR}/mDNSResponder-107.6-java.patch"
+
 pkg_setup() {
 	if use elibc_FreeBSD; then
 		os=freebsd
@@ -31,7 +33,10 @@ pkg_setup() {
 mdnsmake() {
 	local debug jdk
 	use java && jdk="JDK=$(java-config -O)"
-	use debug && debug='DEBUG=1'
+	if use debug; then
+		debug='DEBUG=1'
+		sed -e 's|LIBS = -L../mDNSPosix/build/prod/ -ldns_sd|LIBS = -L../mDNSPosix/build/debug/ -ldns_sd|g' ../Clients/Makefile || die "sed failed"
+	fi
 
 	einfo "Running emake " os="${os}" CC="$(tc-getCC)" LD="$(tc-getCC) -shared" \
 		${jdk} ${debug} OPT_CFLAGS="${CFLAGS}" LIBFLAGS="${LDFLAGS}" \
