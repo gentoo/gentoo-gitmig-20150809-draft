@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.5.1.1.ebuild,v 1.1 2007/07/04 06:32:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.5.1.1.ebuild,v 1.2 2007/07/20 21:32:44 mr_bones_ Exp $
 
 inherit toolchain-funcs bash-completion
 
@@ -16,7 +16,7 @@ IUSE=""
 src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
-		CFLAGS="${CFLAGS} -DLINUX_BIGFILE" \
+		CFLAGS="${CFLAGS} -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64" \
 		LDFLAGS="${LDFLAGS}" \
 		|| die "emake failed"
 }
