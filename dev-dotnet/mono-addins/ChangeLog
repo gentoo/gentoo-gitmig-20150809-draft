@@ -1,0 +1,11 @@
+# ChangeLog for dev-dotnet/mono-addins
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.1 2007/07/20 21:48:43 jurek Exp $
+
+*mono-addins-0.2 (20 Jul 2007)
+
+  20 Jul 2007; Jurek Bartuszek <jurek@gentoo.org>
+  +files/mono-addins-0.2-disable-gui.patch, +metadata.xml,
+  +mono-addins-0.2.ebuild:
+  Initial version
+
