@@ -1,6 +1,21 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.123 2007/07/20 13:46:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.124 2007/07/20 13:50:52 gustavoz Exp $
+
+  20 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/1.4.15-r1/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  +files/1.4.15-r1/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  -files/1.4.15/07_all_lighttpd-1.4.15-duplicated_headers_with_folding_crash
+  .diff,
+  +files/1.4.15-r1/07_all_lighttpd-1.4.15-duplicated_headers_with_folding_cr
+  ash.diff, -files/1.4.15/08_all_lighttpd-1.4.15-mod_acces_bypass.diff,
+  +files/1.4.15-r1/08_all_lighttpd-1.4.15-mod_acces_bypass.diff,
+  -files/1.4.15/09_all_lighttpd-1.4.15-mod_fastcgi_local_dos.diff,
+  +files/1.4.15-r1/09_all_lighttpd-1.4.15-mod_fastcgi_local_dos.diff,
+  -files/1.4.15/10_all_lighttpd-1.4.15-mod_scgi_crash.diff,
+  +files/1.4.15-r1/10_all_lighttpd-1.4.15-mod_scgi_crash.diff,
+  lighttpd-1.4.15-r1.ebuild:
+  Doh, my bad, make 1.4.15-r1 patches sepparate
 
 *lighttpd-1.4.15-r1 (20 Jul 2007)
 
