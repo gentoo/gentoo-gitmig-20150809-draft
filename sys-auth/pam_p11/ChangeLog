@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_p11
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/ChangeLog,v 1.8 2006/11/25 21:42:14 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/ChangeLog,v 1.9 2007/07/20 11:48:30 alonbl Exp $
+
+*pam_p11-0.1.3 (20 Jul 2007)
+
+  20 Jul 2007; Alon Bar-Lev <alonbl@gentoo.org> +pam_p11-0.1.3.ebuild:
+  Version bump
 
   25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> pam_p11-0.1.2.ebuild:
   Add ~alpha keyword, bug 135397.
