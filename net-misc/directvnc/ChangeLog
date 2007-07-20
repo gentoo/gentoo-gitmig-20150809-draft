@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/directvnc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.19 2007/01/08 16:00:37 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.20 2007/07/20 15:42:44 s4t4n Exp $
+
+*directvnc-0.7.5-r1 (20 Jul 2007)
+
+  20 Jul 2007; Michele Noberasco <s4t4n@gentoo.org> +directvnc-0.7.5-r1.ebuild:
+  Revision bump, with patch to make mouse support optional. Closes bug #176970.
+  directvnc-0.7.5.ebuild:
+  Added missing media-libs/jpeg dependancy. Closes bug #176959.
 
   08 Jan 2007; Michele Noberasco <s4t4n@gentoo.org> directvnc-0.7.5.ebuild:
   Added missing x11-proto/xproto dependancy. Fixed DEPEND and RDEPEND.
