@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.07.ebuild,v 1.4 2007/07/05 11:23:51 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.07.ebuild,v 1.5 2007/07/20 12:26:23 pylon Exp $
 
-inherit latex-package elisp-common
+inherit latex-package
 
 DESCRIPTION="LaTeX class for creating presentations using a video projector."
 HOMEPAGE="http://latex-beamer.sourceforge.net/"
@@ -12,18 +12,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-IUSE="doc emacs lyx"
+IUSE="doc lyx"
 
-DEPEND="emacs? ( app-emacs/auctex )
-	lyx? ( app-office/lyx )
+DEPEND="lyx? ( app-office/lyx )
 	>=app-text/tetex-3.0"
-
-src_compile() {
-	if use emacs ; then
-		cd emacs
-		elisp-comp beamer.el || die
-	fi
-}
 
 src_install() {
 	insinto /usr/share/texmf-site/tex/latex/beamer
@@ -38,11 +30,6 @@ src_install() {
 		insinto /usr/share/lyx/examples
 		doins lyx/examples/* || die
 		doins solutions/*/*.lyx || die
-	fi
-
-	if use emacs ; then
-		insinto /usr/share/emacs/site-lisp/auctex/style
-		doins emacs/beamer.el* || die
 	fi
 
 	dodoc AUTHORS ChangeLog FILES TODO README
