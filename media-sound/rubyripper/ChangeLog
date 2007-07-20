@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/rubyripper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.11 2007/07/13 00:50:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.12 2007/07/20 08:35:34 drac Exp $
+
+*rubyripper-0.4.2-r1 (20 Jul 2007)
+
+  20 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +rubyripper-0.4.2-r1.ebuild:
+  Fix .desktop file, license to GPL-3, install bundled documentation, and
+  more. Bug 185922, thanks to Kevin Fullerton and Daniel Pielmeier.
 
 *rubyripper-0.4.2 (13 Jul 2007)
 
