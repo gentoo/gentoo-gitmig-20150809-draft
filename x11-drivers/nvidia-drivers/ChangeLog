@@ -1,6 +1,6 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.57 2007/07/20 13:48:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.58 2007/07/20 16:08:08 armin76 Exp $
 
   20 Jul 2007; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-1.0.7185.ebuild:
@@ -8,7 +8,8 @@
   since they don't exist
 
   19 Jul 2007; Raúl Porcel <armin76@gentoo.org>
-  nvidia-drivers-1.0.9639.ebuild, nvidia-drivers-100.14.09.ebuild:
+  nvidia-drivers-1.0.7185.ebuild, nvidia-drivers-1.0.9639.ebuild,
+  nvidia-drivers-100.14.09.ebuild
   x86 stable wrt security #183567
 
   19 Jul 2007; Doug Goldstein <cardoe@gentoo.org>
