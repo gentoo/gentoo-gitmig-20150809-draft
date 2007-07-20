@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jgoodies-binding
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-binding/ChangeLog,v 1.1 2005/12/10 07:28:18 compnerd Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-binding/ChangeLog,v 1.2 2007/07/20 18:51:02 betelgeuse Exp $
+
+  20 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jgoodies-binding-1.1.2.ebuild:
+  Only depend on dev-java/jgoodies-looks with the examples use flag and use
+  java-pkg_doexamples.
 
 *jgoodies-binding-1.0.3 (10 Dec 2005)
 

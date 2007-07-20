@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-binding/jgoodies-binding-1.1.2.ebuild,v 1.1 2007/01/10 21:43:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-binding/jgoodies-binding-1.1.2.ebuild,v 1.2 2007/07/20 18:51:02 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,16 +14,12 @@ SRC_URI="http://www.jgoodies.com/download/libraries/binding-${MY_V}.zip"
 LICENSE="BSD"
 SLOT="1.0"
 KEYWORDS="~x86"
-IUSE="doc examples source"
+IUSE=""
 
-COMMON_DEP=">=dev-java/jgoodies-looks-1.0.5"
 DEPEND=">=virtual/jdk-1.4.2
-		${COMMON_DEP}
-		dev-java/ant-core
-		app-arch/unzip
-		source? ( app-arch/zip )"
+		app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4.2
-		${COMMON_DEP}"
+		examples? ( >=dev-java/jgoodies-looks-1.0.5 )"
 
 S=${WORKDIR}/binding-${PV}
 
@@ -37,6 +35,7 @@ src_unpack() {
 	xml-rewrite.py -f build.xml -d -e javac -a bootclasspath \
 		|| die "Failed to fix bootclasspath"
 }
+
 src_compile() {
 	eant jar # precompile javadocs
 }
@@ -51,12 +50,9 @@ RESTRICT="test"
 src_install() {
 	java-pkg_dojar build/binding.jar
 
-	dodoc RELEASE-NOTES.txt
-	dohtml README.html
+	dodoc RELEASE-NOTES.txt || die
+	dohtml README.html || die
 	use doc && java-pkg_dohtml -r docs/*
 	use source && java-pkg_dosrc src/core/*
-	if use examples; then
-		insinto /usr/share/doc/${PF}/examples
-		doins -r src/tutorial/com
-	fi
+	use examples && java-pkg_doexamples src/tutorial
 }
