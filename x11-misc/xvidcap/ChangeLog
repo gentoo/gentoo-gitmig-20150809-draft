@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xvidcap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.38 2007/06/30 09:53:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.39 2007/07/20 13:00:29 coldwind Exp $
+
+  20 Jul 2007; Santiago M. Mola <coldwind@gentoo.org>
+  xvidcap-1.1.4_rc1.ebuild:
+  Added missing dep on media-sound/lame
 
   30 Jun 2007; Samuli Suominen <drac@gentoo.org> xvidcap-1.1.6-r2.ebuild:
   Add missing dep gnome-base/libglade.

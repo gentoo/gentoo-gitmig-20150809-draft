@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.4_rc1.ebuild,v 1.5 2006/09/24 09:18:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.4_rc1.ebuild,v 1.6 2007/07/20 13:00:29 coldwind Exp $
 
 inherit eutils autotools
 
@@ -16,6 +16,7 @@ SLOT="0"
 IUSE="gtk"
 
 RDEPEND=">=media-video/ffmpeg-0.4.9_pre1
+	media-sound/lame
 	media-libs/libpng
 	media-libs/jpeg
 	sys-libs/zlib
@@ -27,18 +28,14 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_compile() {
-
-	econf `use_with gtk gtk2` || die "Configuration failed"
+	econf $(use_with gtk gtk2) || die "Configuration failed"
 	emake || die "Compilation failed"
-
 }
 
 src_install() {
-
 	einstall || die "Installation failed"
 
 	# Fix for #58322
 	rm -fr ${D}/usr/share/doc/${PN}_${PV}
 	dodoc NEWS README AUTHORS ChangeLog
-
 }
