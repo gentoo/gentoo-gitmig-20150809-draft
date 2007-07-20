@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.124 2007/07/20 13:50:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.125 2007/07/20 13:56:02 gustavoz Exp $
+
+  20 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  lighttpd-1.4.15-r1.ebuild:
+  And use PVR too
 
   20 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   +files/1.4.15-r1/03_all_lighttpd-1.4.11-errorlog-pipe.diff,

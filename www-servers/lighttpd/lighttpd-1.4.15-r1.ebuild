@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.15-r1.ebuild,v 1.2 2007/07/20 13:50:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.15-r1.ebuild,v 1.3 2007/07/20 13:56:02 gustavoz Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -98,7 +98,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	EPATCH_SUFFIX="diff" EPATCH_OPTS="-l" epatch ${FILESDIR}/${PV} || die "Patching failed!"
+	EPATCH_SUFFIX="diff" EPATCH_OPTS="-l" epatch ${FILESDIR}/${PVR} || die "Patching failed!"
 
 	eautoreconf || die
 
