@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.5.ebuild,v 1.4 2007/07/13 07:04:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.5.ebuild,v 1.5 2007/07/20 11:56:28 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -8,7 +8,7 @@ LANGS="ca cs da de es-ES eu fr ga-IE hu it mk mn nb-NO nl pa-IN pl pt-BR ru sk s
 
 MY_PN="${PN/mozilla-}"
 MY_P="${MY_PN}-${PV}"
-DESCRIPTION="The Mozilla Sunbird Calendar"
+DESCRIPTION="Mozilla Sunbird Calendar"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${PV}/linux-i686/en-US/sunbird-${PV}.en-US.linux-i686.tar.gz"
 HOMEPAGE="http://www.mozilla.org/projects/calendar/sunbird.html"
 RESTRICT="strip"
@@ -23,12 +23,24 @@ IUSE=""
 #  http://releases.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${PV}/langpacks/
 #
 # for i in $LANGS $SHORTLANGS; do wget $i.xpi -O ${P}-$i.xpi; done
+#for X in ${LANGS} ; do
+#	SRC_URI="${SRC_URI}
+#		linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P/-bin/}-xpi/${P/-bin/}-${X}.xpi )"
+#	IUSE="${IUSE} linguas_${X/-/_}"
+	# english is handled internally
+#done
 for X in ${LANGS} ; do
 	SRC_URI="${SRC_URI}
-		linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P/-bin/}-xpi/${P/-bin/}-${X}.xpi )"
+		linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P/-bin}-xpi/${P/-bin/}-${X}.xpi )"
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
+	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
+		SRC_URI="${SRC_URI}
+			linguas_${X%%-*}? ( http://dev.gentooexperimental.org/~armin76/dist/${P/-bin}-xpi/${P/-bin/}-${X}.xpi )"
+		IUSE="${IUSE} linguas_${X%%-*}"
+	fi
 done
+
 
 DEPEND="app-arch/unzip"
 RDEPEND="x11-libs/libXrender
@@ -43,9 +55,9 @@ RDEPEND="x11-libs/libXrender
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
 		app-emulation/emul-linux-x86-compat
 	)
-	>=www-client/mozilla-launcher-1.41"
+	>=www-client/mozilla-launcher-1.56"
 
-S=${WORKDIR}/sunbird
+S="${WORKDIR}/sunbird"
 
 pkg_config() {
 	# This is a binary x86 package => ABI=x86
@@ -54,37 +66,12 @@ pkg_config() {
 	has_multilib_profile && ABI="x86"
 }
 
-linguas() {
-	local LANG SLANG
-	for LANG in ${LINGUAS}; do
-		if has ${LANG} en en_US; then
-			has en ${linguas} || linguas="${linguas:+"${linguas} "}en"
-			continue
-		elif has ${LANG} ${LANGS//-/_}; then
-			has ${LANG//_/-} ${linguas} || linguas="${linguas:+"${linguas} "}${LANG//_/-}"
-			continue
-		elif [[ " ${LANGS} " == *" ${LANG}-"* ]]; then
-			for X in ${LANGS}; do
-				if [[ "${X}" == "${LANG}-"* ]] &&  != *" ${X} "* ]]; then
-					has ${X} ${linguas} || linguas="${linguas:+"${linguas} "}${X}"
-					continue 2
-				fi
-			done
-		fi
-		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
-	done
-}
-
 src_unpack() {
 	unpack ${MY_PN/-bin}-${PV}.en-US.linux-i686.tar.gz
 
-	linguas
-	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_unpack "${P/-bin/}-${X}.xpi"
+	for X in ${A}; do
+		[[ ${X} == *.xpi ]] && xpi_unpack ${X}
 	done
-	if [[ ${linguas} != "" ]]; then
-		einfo "Selected language packs (first will be default): ${linguas}"
-	fi
 }
 
 src_install() {
@@ -92,30 +79,26 @@ src_install() {
 
 	# Install sunbird in /opt
 	dodir ${MOZILLA_FIVE_HOME%/*}
+	touch ${S}/extensions/talkback@mozilla.org/chrome.manifest
 	mv ${S} ${D}${MOZILLA_FIVE_HOME}
 
-	linguas
-	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P/-bin/}-${X}"
+	# Install langpacks
+	for X in ${A}; do
+		[[ ${X} == *.xpi ]] && xpi_install "${WORKDIR}"/${X%.xpi}
 	done
 
-	local LANG=${linguas%% *}
-	if [[ -n ${LANG} && ${LANG} != "en" ]]; then
-		einfo "Setting default locale to ${LANG}"
-		dosed -e "s:general.useragent.locale\", \"en-US\":general.useragent.locale\", \"${LANG}\":" \
-			"${MOZILLA_FIVE_HOME}"/defaults/pref/sunbird.js \
-			"${MOZILLA_FIVE_HOME}"/defaults/pref/sunbird-l10n.js || \
-			die "sed failed to change locale"
-	fi
-
-	keepdir ${MOZILLA_FIVE_HOME}/extensions		# required to run!
+	# Use a langpack depending on the system locale
+	for i in ${D}/"${MOZILLA_FIVE_HOME}"/greprefs/all-gentoo.js \
+		${D}"${MOZILLA_FIVE_HOME}"/defaults/pref/all-gentoo.js;	do
+		echo 'pref("intl.locale.matchOS",                true);' >> $i
+	done
 
 	# Create /usr/bin/sunbird-bin
 	install_mozilla_launcher_stub sunbird-bin ${MOZILLA_FIVE_HOME}
 
 	# Install icon and .desktop for menu entry
-	doicon ${FILESDIR}/icon/mozilla-sunbird-bin-icon.png
-	domenu ${FILESDIR}/icon/mozilla-sunbird-bin.desktop
+	doicon ${FILESDIR}/icon/${PN}-icon.png
+	domenu ${FILESDIR}/icon/${PN}.desktop
 }
 
 pkg_preinst() {
@@ -127,6 +110,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	use amd64 && einfo "NB: You just installed a 32-bit sunbird"
 	update_mozilla_launcher_symlinks
 }
 
