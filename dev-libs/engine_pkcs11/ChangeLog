@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/engine_pkcs11
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.8 2006/11/25 21:40:56 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.9 2007/07/20 11:44:59 alonbl Exp $
+
+*engine_pkcs11-0.1.4 (20 Jul 2007)
+
+  20 Jul 2007; Alon Bar-Lev <alonbl@gentoo.org> +engine_pkcs11-0.1.4.ebuild:
+  Version bump
 
   25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
   engine_pkcs11-0.1.3.ebuild:
