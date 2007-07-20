@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/figlet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.29 2007/04/24 04:08:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.30 2007/07/20 15:52:46 armin76 Exp $
+
+  20 Jul 2007; Raúl Porcel <armin76@gentoo.org> figlet-222.ebuild:
+  Add ~ia64, we need figlet!
 
   24 Apr 2007; Michael Sterrett <mr_bones_@gentoo.org>
   -figlet-221-r1.ebuild:
