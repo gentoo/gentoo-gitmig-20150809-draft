@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7501 2007/07/20 09:48:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7502 2007/07/20 12:20:57 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (20 Jul 2007)
+# Masked for being broken with current stable fluxbox.
+# Bugs 138678, 151782, 96631.
+x11-misc/fluxconf
 
 # Samuli Suominen <drac@gentoo.org> (20 Jul 2007)
 # Orphaned configuration files using devfsd.
