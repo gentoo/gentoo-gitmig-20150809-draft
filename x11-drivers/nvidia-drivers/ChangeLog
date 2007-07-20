@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.56 2007/07/19 19:32:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.57 2007/07/20 13:48:22 cardoe Exp $
+
+  20 Jul 2007; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-1.0.7185.ebuild:
+  remove i2c-hwmon, libnvidia-cfg, nvidia-xconfig, and README.txt from 7185
+  since they don't exist
 
   19 Jul 2007; Raúl Porcel <armin76@gentoo.org>
   nvidia-drivers-1.0.9639.ebuild, nvidia-drivers-100.14.09.ebuild:

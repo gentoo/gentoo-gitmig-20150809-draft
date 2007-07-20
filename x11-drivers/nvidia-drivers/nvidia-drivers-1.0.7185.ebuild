@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.7185.ebuild,v 1.2 2007/07/18 22:53:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.7185.ebuild,v 1.3 2007/07/20 13:48:22 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -182,8 +182,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/NVIDIA_glx-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
 	epatch "${FILESDIR}"/NVIDIA_glx-glheader.patch
-	# allow on board sensors to work with lm_sensors
-	epatch "${FILESDIR}"/NVIDIA_i2c-hwmon.patch
 
 	if ! use x86-fbsd; then
 		# Quiet down warnings the user does not need to see
@@ -262,8 +260,7 @@ src_install() {
 
 	if ! use x86-fbsd; then
 		# Docs
-		newdoc usr/share/doc/README.txt README
-		dodoc usr/share/doc/Copyrights usr/share/doc/NVIDIA_Changelog
+		dodoc usr/share/doc/NVIDIA_Changelog
 		dodoc usr/share/doc/XF86Config.sample
 		dohtml usr/share/doc/html/*
 
@@ -273,9 +270,6 @@ src_install() {
 		dodoc doc/{README,XF86Config.sample,Copyrights}
 		dohtml doc/html/*
 	fi
-
-	# Taking nvidia-xconfig from nvidia-drivers to help config xorg.conf
-	dobin usr/bin/nvidia-xconfig || die
 }
 
 # Install nvidia library:
@@ -338,8 +332,6 @@ src_install-libs() {
 	# The GLX libraries
 	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libGL.so ${sover}
 	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libGLcore.so ${sover}
-
-	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libnvidia-cfg.so ${sover}
 
 	dodir ${NO_TLS_ROOT}
 	donvidia ${NO_TLS_ROOT} ${usrpkglibdir}/libnvidia-tls.so ${sover}
