@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/gaul-devel
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/ChangeLog,v 1.4 2006/10/16 12:40:42 djay Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/ChangeLog,v 1.5 2007/07/20 18:45:10 je_fro Exp $
+
+  20 Jul 2007; Jeff Gardner <je_fro@gentoo.org> gaul-devel-0.1846.ebuild,
+  gaul-devel-0.1849.ebuild:
+  remove keywords for old version (1846)
+
+  20 Jul 2007; Jeff Gardner <je_fro@gentoo.org> gaul-devel-0.1849.ebuild:
+  Fix for slang slotting wrt bug #141947
 
 *gaul-devel-0.1849 (16 Oct 2006)
 
