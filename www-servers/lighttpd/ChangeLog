@@ -1,6 +1,16 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.122 2007/07/15 09:08:40 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.123 2007/07/20 13:46:14 gustavoz Exp $
+
+*lighttpd-1.4.15-r1 (20 Jul 2007)
+
+  20 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/1.4.15/07_all_lighttpd-1.4.15-duplicated_headers_with_folding_crash
+  .diff, +files/1.4.15/08_all_lighttpd-1.4.15-mod_acces_bypass.diff,
+  +files/1.4.15/09_all_lighttpd-1.4.15-mod_fastcgi_local_dos.diff,
+  +files/1.4.15/10_all_lighttpd-1.4.15-mod_scgi_crash.diff,
+  +lighttpd-1.4.15-r1.ebuild:
+  Revbump with security fixes #185442
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to www-servers, as beu is being retired (#66608).
