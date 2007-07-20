@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.6.ebuild,v 1.1 2007/04/26 05:23:40 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.6-r1.ebuild,v 1.1 2007/07/20 08:26:43 s4t4n Exp $
 
-inherit eutils
+inherit elisp-common eutils
 
 GENTOO_THEME_VERSION="2.1"
 
@@ -22,15 +22,14 @@ RDEPEND=">=sys-libs/ncurses-5.4-r6
 	directfb?     ( >=dev-libs/DirectFB-0.9.24 )
 	emacs?        ( virtual/emacs )
 	pam?          ( >=sys-libs/pam-0.75-r11 )
-	X?            ( || ( (
-	                       x11-libs/libX11
-	                       x11-libs/libXScrnSaver
-	                       x11-proto/scrnsaverproto )
-	                       virtual/x11 ) )"
+	X?            ( x11-libs/libX11
+					x11-libs/libXScrnSaver
+					x11-proto/scrnsaverproto )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=sys-apps/sed-4.1.4-r1"
+SITEFILE=50${PN}-gentoo.el
 
 src_unpack()
 {
@@ -73,20 +72,22 @@ src_unpack()
 src_compile()
 {
 	local crypto_support="--disable-crypto"
+	local emacs_support="--disable-emacs"
 
+	use emacs 		 && emacs_support="--enable-emacs --with-lispdir=${SITELISP}/${PN}"
 	use opensslcrypt && crypto_support="--enable-crypto=openssl"
 	use crypt        && crypto_support="--enable-crypto=libgcrypt"
 
 	econf                                      \
 		--sbindir=/sbin                        \
 		--disable-optimizations                \
-		`use_enable emacs`                     \
 		`use_enable pam`                       \
 		`use_enable static static-build`       \
 		`use_enable gpm gpm-lock`              \
 		`use_enable X x-support`               \
 		`use_enable directfb DirectFB-support` \
 		${crypto_support}                      \
+		${emacs_support}					   \
 		|| die "Configuration failed"
 	emake || die "Compilation failed"
 }
@@ -98,25 +99,27 @@ src_install()
 	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS TODO
 
 	# Install the program
-	make DESTDIR=${D} install || die "Installation failed"
+	emake DESTDIR="${D}" install || die "Installation failed"
 
 	# Set the settings file umask to 600, in case somebody
 	# wants to make use of the autologin feature
-	/bin/chmod 600 ${D}/etc/qingy/settings
+	/bin/chmod 600 "${D}/etc/qingy/settings"
 
 	# Install Gentoo theme
 	dodir /usr/share/${PN}/themes/gentoo
-	cp ${WORKDIR}/gentoo/* ${D}/usr/share/${PN}/themes/gentoo \
+	cp "${WORKDIR}"/gentoo/* "${D}/usr/share/${PN}/themes/gentoo" \
 		|| die "Gentoo theme installation failed"
 
 	# Alter config file so that it uses our theme
-	sed -i 's/theme = "default"/theme = "gentoo"/' ${D}/etc/${PN}/settings
+	sed -i 's/theme = "default"/theme = "gentoo"/' "${D}/etc/${PN}/settings"
 
 	# Install log rotation policy if user wants it
 	if use logrotate; then
 		insinto /etc/logrotate.d
-		newins ${FILESDIR}/${PN}-logrotate ${PN} || die "Log rotation policy installation failed"
+		newins "${FILESDIR}/${PN}-logrotate" ${PN} || die "Log rotation policy installation failed"
 	fi
+
+	use emacs && elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 }
 
 pkg_postinst()
@@ -137,4 +140,10 @@ pkg_postinst()
 		ewarn "message. If this is your case, please remove /etc/qingy/public_key"
 		ewarn "and /etc/qingy/private_key and run qingy-keygen again..."
 	fi
+
+	use emacs && echo && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }

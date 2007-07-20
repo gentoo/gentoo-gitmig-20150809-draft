@@ -1,7 +1,15 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.42 2007/04/26 05:23:40 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.43 2007/07/20 08:26:43 s4t4n Exp $
 
+*qingy-0.9.6-r1 (20 Jul 2007)
+
+  20 Jul 2007; Michele Noberasco <s4t4n@gentoo.org> qingy-0.9.6-r1.ebuild:
+  Revision bump, with updated emacs support as well as some QA.
+  Closes bug #184318.
+  qingy-0.9.4.ebuild, qingy 0.9.6:
+  Wiped out previous versions.
+  
 *qingy-0.9.6 (26 Apr 2007)
 
   26 Apr 2007; Michele Noberasco <s4t4n@gentoo.org> qingy-0.9.6.ebuild:
