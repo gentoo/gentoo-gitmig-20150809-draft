@@ -5,4 +5,4 @@ Exec=/usr/bin/seamonkey-bin %U
 Icon=seamonkey-bin.png
 Terminal=false
 Type=Application
-Categories=Application;Network;
+Categories=Network;WebBrowser;
