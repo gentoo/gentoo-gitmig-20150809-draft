@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.2.ebuild,v 1.3 2007/07/01 06:24:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.2.ebuild,v 1.4 2007/07/20 21:48:53 tester Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi bonjour crypt dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc startup-notification tcl tk xscreensaver spell ssl qq msn gadu"
+IUSE="avahi bonjour crypt dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc startup-notification tcl tk xscreensaver spell qq gadu"
 IUSE="${IUSE} gtk sasl ncurses groupwise prediction zephyr" # mono"
 
 RDEPEND="
@@ -36,14 +36,8 @@ RDEPEND="
 		     =media-libs/gst-plugins-good-0.10* )
 	perl? ( >=dev-lang/perl-5.8.2-r1 )
 	gadu?  ( net-libs/libgadu )
-	ssl? (
-		gnutls? ( net-libs/gnutls )
-		!gnutls? ( >=dev-libs/nss-3.11 )
-	)
-	msn? (
-		gnutls? ( net-libs/gnutls )
-		!gnutls? ( >=dev-libs/nss-3.11 )
-	)
+	gnutls? ( net-libs/gnutls )
+	!gnutls? ( >=dev-libs/nss-3.11 )
 	meanwhile? ( net-libs/meanwhile )
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )
 	zephyr? ( >=app-crypt/mit-krb5-1.3.6-r1 )
@@ -65,7 +59,7 @@ DEPEND="$RDEPEND
 S="${WORKDIR}/${MY_PV}"
 
 # Enable Default protocols
-DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple"
+DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn"
 
 # List of plugins yet to be ported (will be removed at some point)
 #   net-im/gaim-bnet
@@ -208,10 +202,6 @@ src_compile() {
 		DYNAMIC_PRPLS="${DYNAMIC_PRPLS},bonjour"
 	fi
 
-	if use msn; then
-		DYNAMIC_PRPLS="${DYNAMIC_PRPLS},msn"
-	fi
-
 	if use groupwise; then
 		DYNAMIC_PRPLS="${DYNAMIC_PRPLS},novell"
 	fi
@@ -220,19 +210,14 @@ src_compile() {
 		DYNAMIC_PRPLS="${DYNAMIC_PRPLS},zephyr"
 	fi
 
-	if use ssl || use msn ; then
-		if use gnutls ; then
-			einfo "Disabling NSS, using GnuTLS"
-			myconf="${myconf} --enable-nss=no --enable-gnutls=yes"
-			myconf="${myconf} --with-gnutls-includes=/usr/include/gnutls"
-			myconf="${myconf} --with-gnutls-libs=/usr/$(get_libdir)"
-		else
-			einfo "Disabling GnuTLS, using NSS"
-			myconf="${myconf} --enable-gnutls=no --enable-nss=yes"
-		fi
+	if use gnutls ; then
+		einfo "Disabling NSS, using GnuTLS"
+		myconf="${myconf} --enable-nss=no --enable-gnutls=yes"
+		myconf="${myconf} --with-gnutls-includes=/usr/include/gnutls"
+		myconf="${myconf} --with-gnutls-libs=/usr/$(get_libdir)"
 	else
-		einfo "No SSL support selected"
-		myconf="${myconf} --enable-gnutls=no --enable-nss=no"
+		einfo "Disabling GnuTLS, using NSS"
+		myconf="${myconf} --enable-gnutls=no --enable-nss=yes"
 	fi
 
 	if use xscreensaver ; then
