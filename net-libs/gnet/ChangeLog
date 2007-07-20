@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.49 2007/07/09 04:17:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.50 2007/07/20 21:44:56 remi Exp $
+
+  20 Jul 2007; Remi Cardona <remi@gentoo.org> -gnet-2.0.5.ebuild:
+  remove version 2.0.5
 
   09 Jul 2007; Jeroen Roovers <jer@gentoo.org> gnet-2.0.7.ebuild:
   Stable for HPPA (bug #184605).
