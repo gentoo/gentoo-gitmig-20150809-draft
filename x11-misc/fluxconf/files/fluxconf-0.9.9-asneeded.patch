@@ -1,0 +1,11 @@
+diff -ur fluxconf-0.9.9.orig/src/Makefile.am fluxconf-0.9.9/src/Makefile.am
+--- fluxconf-0.9.9.orig/src/Makefile.am	2004-02-02 21:45:27.000000000 +0200
++++ fluxconf-0.9.9/src/Makefile.am	2007-07-20 15:07:08.000000000 +0300
+@@ -5,6 +5,7 @@
+ fluxconf_SOURCES=fluxconf.c fluxmenu.c fluxkeys.c fluxbare.c actions.c 
+ fluxconf_INCLUDES=include/globals.h include/defines.h include/functions.h xpm/dalogo.h xpm/fc_menu.xpm xpm/fc_keys.xpm xpm/fc_conf.xpm
+ fluxconf_CFLAGS=-Iinclude/ -Ixpm/ -ggdb -D_GNU_SOURCE -Werror
++fluxconf_LDADD=-lgtk-x11-2.0
+ 
+ #noinst_PROGRAMS=fluxkeys
+ #fluxconf_LDFLAGS=`$(GTKCONF) --libs --cflags`
