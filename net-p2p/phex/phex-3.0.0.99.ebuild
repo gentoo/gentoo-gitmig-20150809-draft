@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/phex-3.0.0.99.ebuild,v 1.1 2007/01/12 14:23:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/phex-3.0.0.99.ebuild,v 1.2 2007/07/21 09:47:27 betelgeuse Exp $
 
 inherit java-pkg-2
 
@@ -16,12 +16,11 @@ RDEPEND=">=virtual/jdk-1.5
 	=dev-java/commons-httpclient-3.0*
 	>=dev-java/commons-logging-1.1
 	>=dev-java/jgoodies-forms-1.0.5
-	>=dev-java/jgoodies-looks-1.3.2"
+	>=dev-java/jgoodies-looks-2.0"
 
 S=${WORKDIR}/${P/-/_}
 
 src_install() {
-	cd ${S}
 	java-pkg_dojar lib/phex.jar
 
 	exeinto /usr/bin
