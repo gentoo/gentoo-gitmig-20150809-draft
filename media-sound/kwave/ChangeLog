@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/kwave
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.1 2007/06/21 06:00:51 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.2 2007/07/21 20:11:55 philantrop Exp $
+
+  21 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kwave-0.7.9-debian-431199.diff,
+  +files/kwave-0.7.9_flac-v1.1.3_and_v1.1.4-support.diff,
+  kwave-0.7.9.ebuild:
+  Added the patches as requested in bug 186009 to fix compilation issues with
+  newer flac versions. Thanks, Roberto and Thomas, for providing all the
+  necessary information!
 
 *kwave-0.7.9 (21 Jun 2007)
 

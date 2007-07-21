@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.9.ebuild,v 1.2 2007/07/17 11:54:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.7.9.ebuild,v 1.3 2007/07/21 20:11:55 philantrop Exp $
 
 inherit kde flag-o-matic
 
@@ -36,6 +36,13 @@ pkg_setup() {
 		eerror "KWave needs aRts, please rebuild kdelibs with arts use flag enabled."
 		die
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}_flac-v1.1.3_and_v1.1.4-support.diff"
+	epatch "${FILESDIR}/${P}-debian-431199.diff"
 }
 
 src_compile() {
