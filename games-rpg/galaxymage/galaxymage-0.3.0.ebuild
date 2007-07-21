@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/galaxymage/galaxymage-0.3.0.ebuild,v 1.2 2007/04/25 16:22:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/galaxymage/galaxymage-0.3.0.ebuild,v 1.3 2007/07/21 19:37:05 nyhm Exp $
 
 inherit eutils games
 
 DESCRIPTION="Tactical/strategic RPG with online multiplayer support"
-HOMEPAGE="http://www.galaxymage.org/"
+HOMEPAGE="https://gna.org/projects/tactics"
 SRC_URI="http://download.gna.org/tactics/${P}.tar.gz"
 
 LICENSE="GPL-2"
