@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.5.ebuild,v 1.5 2007/07/20 11:56:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.5.ebuild,v 1.6 2007/07/21 18:25:19 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -23,12 +23,6 @@ IUSE=""
 #  http://releases.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${PV}/langpacks/
 #
 # for i in $LANGS $SHORTLANGS; do wget $i.xpi -O ${P}-$i.xpi; done
-#for X in ${LANGS} ; do
-#	SRC_URI="${SRC_URI}
-#		linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P/-bin/}-xpi/${P/-bin/}-${X}.xpi )"
-#	IUSE="${IUSE} linguas_${X/-/_}"
-	# english is handled internally
-#done
 for X in ${LANGS} ; do
 	SRC_URI="${SRC_URI}
 		linguas_${X/-/_}? ( http://dev.gentooexperimental.org/~armin76/dist/${P/-bin}-xpi/${P/-bin/}-${X}.xpi )"
@@ -66,12 +60,36 @@ pkg_config() {
 	has_multilib_profile && ABI="x86"
 }
 
+linguas() {
+	local LANG SLANG
+	for LANG in ${LINGUAS}; do
+		if has ${LANG} en en_US; then
+			has en ${linguas} || linguas="${linguas:+"${linguas} "}en"
+			continue
+		elif has ${LANG} ${LANGS//-/_}; then
+			has ${LANG//_/-} ${linguas} || linguas="${linguas:+"${linguas} "}${LANG//_/-}"
+			continue
+		elif [[ " ${LANGS} " == *" ${LANG}-"* ]]; then
+			for X in ${LANGS}; do
+				if [[ "${X}" == "${LANG}-"* ]] &&  != *" ${X} "* ]]; then
+					has ${X} ${linguas} || linguas="${linguas:+"${linguas} "}${X}"
+					continue 2
+				fi
+			done
+		fi
+		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
+	done
+}
+
 src_unpack() {
 	unpack ${MY_PN/-bin}-${PV}.en-US.linux-i686.tar.gz
 
-	for X in ${A}; do
-		[[ ${X} == *.xpi ]] && xpi_unpack ${X}
+	for X in ${linguas}; do
+		[[ ${X} != "en" ]] && xpi_unpack "${P/-bin/}-${X}.xpi"
 	done
+	if [[ ${linguas} != "" ]]; then
+		einfo "Selected language packs (first will be default): ${linguas}"
+	fi
 }
 
 src_install() {
@@ -82,16 +100,19 @@ src_install() {
 	touch ${S}/extensions/talkback@mozilla.org/chrome.manifest
 	mv ${S} ${D}${MOZILLA_FIVE_HOME}
 
-	# Install langpacks
-	for X in ${A}; do
-		[[ ${X} == *.xpi ]] && xpi_install "${WORKDIR}"/${X%.xpi}
+	linguas
+	for X in ${linguas}; do
+		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P/-bin/}-${X}"
 	done
 
-	# Use a langpack depending on the system locale
-	for i in ${D}/"${MOZILLA_FIVE_HOME}"/greprefs/all-gentoo.js \
-		${D}"${MOZILLA_FIVE_HOME}"/defaults/pref/all-gentoo.js;	do
-		echo 'pref("intl.locale.matchOS",                true);' >> $i
-	done
+	local LANG=${linguas%% *}
+	if [[ -n ${LANG} && ${LANG} != "en" ]]; then
+		einfo "Setting default locale to ${LANG}"
+		dosed -e "s:general.useragent.locale\", \"en-US\":general.useragent.locale\", \"${LANG}\":" \
+			"${MOZILLA_FIVE_HOME}"/defaults/pref/sunbird.js \
+			"${MOZILLA_FIVE_HOME}"/defaults/pref/sunbird-l10n.js || \
+			die "sed failed to change locale"
+	fi
 
 	# Create /usr/bin/sunbird-bin
 	install_mozilla_launcher_stub sunbird-bin ${MOZILLA_FIVE_HOME}
