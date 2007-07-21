@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7502 2007/07/20 12:20:57 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7503 2007/07/21 07:45:01 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -910,11 +910,6 @@ net-dns/bind-dns-keygen
 # 138296, 139016, 139629, 143684
 >=sys-devel/gcc-config-2.0.0_rc1
 app-admin/eselect-compiler
-
-# Jonathan Smith <smithj@gentoo.org> (07 Aug 2006)
-# pending removal
-# https://bugs.gentoo.org/show_bug.cgi?id=140498
-media-gfx/xzgv
 
 # Tuấn Văn <langthang@gentoo.org> (04 Aug 2006)
 # Incomplete patch.
