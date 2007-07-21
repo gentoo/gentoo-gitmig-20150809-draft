@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.2.ebuild,v 1.6 2007/06/14 00:38:31 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.2.ebuild,v 1.7 2007/07/21 09:45:36 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc"
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="GUI frontend for BibTeX, written in Java"
-HOMEPAGE="http://${PN}.sourceforge.net/"
+HOMEPAGE="http://jabref.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/JabRef-${PV}-src.tar.bz2"
 
 LICENSE="GPL-2"
@@ -18,7 +18,7 @@ CDEPEND="dev-java/spin
 	>=dev-java/glazedlists-1.5.0
 	>=dev-java/antlr-2.7.3
 	dev-java/jgoodies-forms
-	=dev-java/jgoodies-looks-2.0*
+	>=dev-java/jgoodies-looks-2.0
 	>=dev-java/microba-0.4.3
 	dev-java/jempbox
 	dev-java/pdfbox"

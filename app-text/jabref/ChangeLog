@@ -1,6 +1,10 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.51 2007/07/21 09:39:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.52 2007/07/21 09:45:36 betelgeuse Exp $
+
+  21 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> jabref-2.2.ebuild:
+  Relax dev-java/jgoodies-looks dependency atom so that the 2.1.4 version bump
+  satisfies it.
 
   21 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> -jabref-2.1.ebuild:
   Remove old version.
