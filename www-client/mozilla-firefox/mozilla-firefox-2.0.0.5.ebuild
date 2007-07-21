@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.5.ebuild,v 1.3 2007/07/21 18:06:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.5.ebuild,v 1.4 2007/07/21 18:34:14 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -91,7 +91,9 @@ pkg_setup(){
 	if ! use bindist; then
 		elog "You are enabling official branding. You may not redistribute this build"
 		elog "to any users on your network or the internet. Doing so puts yourself into"
-		elog "a legal problem with mozilla foundation"
+		elog "a legal problem with Mozilla Foundation"
+		elog "You can disable it by emerging ${PN} without the bindist USE-flag"
+
 	fi
 
 	use moznopango && warn_mozilla_launcher_stub
@@ -195,7 +197,7 @@ src_compile() {
 pkg_preinst() {
 	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 
-	elog "Removing old installs though some really ugly code.  It potentially"
+	elog "Removing old installs with some really ugly code.  It potentially"
 	elog "eliminates any problems during the install, however suggestions to"
 	elog "replace this are highly welcome.  Send comments and suggestions to"
 	elog "mozilla@gentoo.org."
