@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.5.ebuild,v 1.2 2007/07/21 18:15:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.5.ebuild,v 1.3 2007/07/21 18:21:26 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -177,7 +177,7 @@ src_compile() {
 pkg_preinst() {
 	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 
-	elog "Removing old installs though some really ugly code.  It potentially"
+	elog "Removing old installs with some really ugly code.  It potentially"
 	elog "eliminates any problems during the install, however suggestions to"
 	elog "replace this are highly welcome.  Send comments and suggestions to"
 	elog "mozilla@gentoo.org."
@@ -244,11 +244,6 @@ pkg_postinst() {
 	# mozilla, mozilla-bin, firefox, firefox-bin, thunderbird and
 	# thunderbird-bin ebuilds.
 	update_mozilla_launcher_symlinks
-
-	elog
-	elog "The behaviour of the langpacks has changed, now ${PN}"
-	elog "will be displayed in your locale"
-	elog
 }
 
 pkg_postrm() {
