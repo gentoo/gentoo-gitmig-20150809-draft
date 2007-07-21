@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.50 2007/06/14 00:38:31 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.51 2007/07/21 09:39:18 betelgeuse Exp $
+
+  21 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> -jabref-2.1.ebuild:
+  Remove old version.
 
   14 Jun 2007; Christoph Mende <angelos@gentoo.org> jabref-2.2.ebuild:
   Stable on amd64 wrt bug 181086
