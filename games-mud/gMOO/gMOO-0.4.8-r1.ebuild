@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/gMOO-0.4.8-r1.ebuild,v 1.12 2006/11/05 02:16:27 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/gMOO-0.4.8-r1.ebuild,v 1.13 2007/07/21 19:32:18 nyhm Exp $
 
 inherit eutils
 
 DESCRIPTION="GTK+ Based MOO client"
-HOMEPAGE="http://www.nowmoo.demon.nl/"
+HOMEPAGE="http://www.gmoo.net/gmoo/"
 SRC_URI="http://www.nowmoo.demon.nl/packages/${P}.tar.bz2"
 
 LICENSE="GPL-2"

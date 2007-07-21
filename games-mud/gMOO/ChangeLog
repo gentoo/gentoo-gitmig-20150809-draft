@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/gMOO
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/ChangeLog,v 1.13 2006/11/05 02:16:27 nyhm Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/ChangeLog,v 1.14 2007/07/21 19:32:18 nyhm Exp $
+
+  21 Jul 2007; Tristan Heaven <nyhm@gentoo.org> gMOO-0.4.8-r1.ebuild:
+  HOMEPAGE update, bug #185459
 
   05 Nov 2006; Tristan Heaven <nyhm@gentoo.org> files/gMOO.patch,
   gMOO-0.4.8-r1.ebuild:
