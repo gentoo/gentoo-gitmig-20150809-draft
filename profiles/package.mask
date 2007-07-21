@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7509 2007/07/21 23:41:20 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7510 2007/07/21 23:44:35 philantrop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -22,7 +22,7 @@
 ##
 
 # Wulf C. Krueger <philantrop@gentoo.org> (21 Jul 2007)
-# Broken by upstream. cf. bug 176297.
+# Broken by upstream. cf. bug 173972.
 =media-video/konverter-0.93
 
 # Samuli Suominen <drac@gentoo.org> (21 Jul 2007)
