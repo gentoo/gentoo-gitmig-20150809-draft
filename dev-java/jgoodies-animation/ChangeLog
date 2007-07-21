@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgoodies-animation
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/ChangeLog,v 1.6 2007/05/27 00:07:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/ChangeLog,v 1.7 2007/07/21 10:08:45 betelgeuse Exp $
+
+  21 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jgoodies-animation-1.2.0.ebuild:
+  Add dependencies needed for examples and use java-pkg_doexamples.
 
   27 May 2007; Vlastimil Babka <caster@gentoo.org>
   jgoodies-animation-1.2.0.ebuild:
