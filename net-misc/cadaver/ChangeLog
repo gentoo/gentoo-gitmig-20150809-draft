@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/cadaver
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.18 2007/05/14 19:45:44 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.19 2007/07/21 20:25:03 graaff Exp $
+
+*cadaver-0.22.5 (21 Jul 2007)
+
+  21 Jul 2007; Hans de Graaff <graaff@gentoo.org> metadata.xml,
+  cadaver-0.22.2.ebuild, cadaver-0.22.3.ebuild, +cadaver-0.22.5.ebuild:
+  Version bump, fixing bug 175958
+  Dropping ppc-macos keyword due to lack of that keyword in neon.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
