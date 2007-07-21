@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.28 2007/07/21 08:17:59 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.29 2007/07/21 08:23:15 keri Exp $
+
+*qu-prolog-8.0 (21 Jul 2007)
+
+  21 Jul 2007; keri <keri@gentoo.org> +files/qu-prolog-8.0-configure.patch,
+  +files/qu-prolog-8.0-debug.patch, +files/qu-prolog-8.0-gcc4.patch,
+  +files/qu-prolog-8.0-portage.patch, +qu-prolog-8.0.ebuild:
+  Version bump.
 
   21 Jul 2007; keri <keri@gentoo.org> qu-prolog-7.4-r1.ebuild:
   Update install target of qt4 xqp
