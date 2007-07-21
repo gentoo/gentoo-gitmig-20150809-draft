@@ -5,7 +5,7 @@ diff -ur qp8.0.orig/Makefile.in qp8.0/Makefile.in
  # objects.
  #
  
-+export QPHOME	= @libdir@/qu-prolog
++export QPHOME	= @prefix@/lib/qu-prolog
  export QPBIN	= @QPHOME@/bin
  
  
