@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.5.ebuild,v 1.1 2007/07/20 15:57:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.5.ebuild,v 1.2 2007/07/21 18:15:48 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -56,6 +56,28 @@ export MOZ_CO_PROJECT=mail
 export BUILD_OFFICIAL=1
 export MOZILLA_OFFICIAL=1
 
+linguas() {
+	local LANG SLANG
+	for LANG in ${LINGUAS}; do
+		if has ${LANG} en en_US; then
+			has en ${linguas} || linguas="${linguas:+"${linguas} "}en"
+			continue
+		elif has ${LANG} ${LANGS//-/_}; then
+			has ${LANG//_/-} ${linguas} || linguas="${linguas:+"${linguas} "}${LANG//_/-}"
+			continue
+		elif [[ " ${LANGS} " == *" ${LANG}-"* ]]; then
+			for X in ${LANGS}; do
+				if [[ "${X}" == "${LANG}-"* ]] && \
+					[[ " ${NOSHORTLANGS} " != *" ${X} "* ]]; then
+					has ${X} ${linguas} || linguas="${linguas:+"${linguas} "}${X}"
+					continue 2
+				fi
+			done
+		fi
+		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
+	done
+}
+
 pkg_setup(){
 	if ! built_with_use x11-libs/cairo X; then
 		eerror "Cairo is not built with X useflag."
@@ -66,7 +88,8 @@ pkg_setup(){
 	if ! use bindist; then
 		elog "You are enabling official branding. You may not redistribute this build"
 		elog "to any users on your network or the internet. Doing so puts yourself into"
-		elog "a legal problem with mozilla foundation"
+		elog "a legal problem with Mozilla Foundation"
+		elog "You can disable it by emerging ${PN} without the bindist USE-flag"
 	fi
 
 	use moznopango && warn_mozilla_launcher_stub
@@ -75,9 +98,13 @@ pkg_setup(){
 src_unpack() {
 	unpack thunderbird-${PV}-source.tar.bz2  ${PATCH}.tar.bz2
 
-	for X in ${A}; do
-		[[ ${X} == *.xpi ]] && xpi_unpack ${X}
+	linguas
+	for X in ${linguas}; do
+		[[ ${X} != "en" ]] && xpi_unpack "${P}-${X}.xpi"
 	done
+	if [[ ${linguas} != "" ]]; then
+		elog "Selected language packs (first will be default): ${linguas}"
+	fi
 
 	# Apply our patches
 	cd "${S}" || die "cd failed"
@@ -164,9 +191,19 @@ src_install() {
 	dodir "${MOZILLA_FIVE_HOME}"
 	cp -RL "${S}"/dist/bin/* "${D}"/"${MOZILLA_FIVE_HOME}"/ || die "cp failed"
 
-	for X in ${A}; do
-		[[ ${X} == *.xpi ]] && xpi_install "${WORKDIR}"/${X%.xpi}
+	linguas
+	for X in ${linguas}; do
+		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P}-${X}"
 	done
+
+	local LANG=${linguas%% *}
+	if [[ ${LANG} != "" && ${LANG} != "en" ]]; then
+		ebegin "Setting default locale to ${LANG}"
+		sed -i "s:pref(\"general.useragent.locale\", \"en-US\"):pref(\"general.useragent.locale\", \"${LANG}\"):" \
+			${D}${MOZILLA_FIVE_HOME}/defaults/pref/all-thunderbird.js \
+			${D}${MOZILLA_FIVE_HOME}/defaults/pref/all-l10n.js
+		eend $? || die "sed failed to change locale"
+	fi
 
 	# Create directory structure to support portage-installed extensions.
 	# See update_chrome() in mozilla-launcher
@@ -187,11 +224,6 @@ src_install() {
 			${PN}.desktop
 	fi
 
-	for i in ${D}"${MOZILLA_FIVE_HOME}"/greprefs/all-gentoo.js \
-		${D}"${MOZILLA_FIVE_HOME}"/defaults/pref/all-gentoo.js; do
-		echo 'pref("intl.locale.matchOS",                true);' >> $i
-	done
-
 	# Install files necessary for applications to build against thunderbird
 	elog "Installing includes and idl files..."
 	cp -LfR "${S}"/dist/include "${D}"/"${MOZILLA_FIVE_HOME}" || die "cp failed"
@@ -203,7 +235,6 @@ src_install() {
 
 	# Warn user that remerging enigmail is neccessary on USE=crypt
 	use crypt && ewarn "Please remerge x11-plugins/enigmail after updating ${PN}."
-
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.84 2007/07/20 15:50:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.85 2007/07/21 18:20:21 armin76 Exp $
+
+  21 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  mozilla-thunderbird-bin-2.0.0.5.ebuild:
+  Revert the langpack thing, bug 182175
 
 *mozilla-thunderbird-bin-2.0.0.5 (20 Jul 2007)
 

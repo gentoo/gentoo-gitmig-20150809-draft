@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-2.0.0.5.ebuild,v 1.1 2007/07/20 15:50:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-2.0.0.5.ebuild,v 1.2 2007/07/21 18:20:21 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -53,12 +53,38 @@ pkg_setup() {
 	has_multilib_profile && ABI="x86"
 }
 
+linguas() {
+	local LANG SLANG
+	for LANG in ${LINGUAS}; do
+		if has ${LANG} en en_US; then
+			has en ${linguas} || linguas="${linguas:+"${linguas} "}en"
+			continue
+		elif has ${LANG} ${LANGS//-/_}; then
+			has ${LANG//_/-} ${linguas} || linguas="${linguas:+"${linguas} "}${LANG//_/-}"
+			continue
+		elif [[ " ${LANGS} " == *" ${LANG}-"* ]]; then
+			for X in ${LANGS}; do
+				if [[ "${X}" == "${LANG}-"* ]] && \
+					[[ " ${NOSHORTLANGS} " != *" ${X} "* ]]; then
+					has ${X} ${linguas} || linguas="${linguas:+"${linguas} "}${X}"
+					continue 2
+				fi
+			done
+		fi
+		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
+	done
+}
+
 src_unpack() {
 	unpack thunderbird-${PV}.tar.gz
 
-	for X in ${A}; do
-		[[ ${X} == *.xpi ]] && xpi_unpack ${X}
+	linguas
+	for X in ${linguas}; do
+		[[ ${X} != en ]] && xpi_unpack ${P/-bin}-${X}.xpi
 	done
+	if [[ ${linguas} != "" ]]; then
+		einfo "Selected language packs (first will be default): ${linguas}"
+	fi
 }
 
 src_install() {
@@ -68,16 +94,19 @@ src_install() {
 	dodir ${MOZILLA_FIVE_HOME%/*}
 	mv ${S} ${D}${MOZILLA_FIVE_HOME}
 
-	# Install langpacks
-	for X in ${A}; do
-		[[ ${X} == *.xpi ]] && xpi_install "${WORKDIR}"/${X%.xpi}
+	linguas
+	for X in ${linguas}; do
+		[[ ${X} != en ]] && xpi_install ${WORKDIR}/${P/-bin}-${X}
 	done
 
-	# Use a langpack depending on the system locale
-	for i in ${D}/"${MOZILLA_FIVE_HOME}"/greprefs/all-gentoo.js \
-		${D}"${MOZILLA_FIVE_HOME}"/defaults/pref/all-gentoo.js;	do
-		echo 'pref("intl.locale.matchOS",                true);' >> $i
-	done
+	local LANG=${linguas%% *}
+	if [[ ${LANG} != "" && ${LANG} != "en" ]]; then
+		ebegin "Setting default locale to ${LANG}"
+		sed -i "s:pref(\"general.useragent.locale\", \"en-US\"):pref(\"general.useragent.locale\", \"${LANG}\"):" \
+			${D}${MOZILLA_FIVE_HOME}/defaults/pref/all-thunderbird.js \
+			${D}${MOZILLA_FIVE_HOME}/defaults/pref/all-l10n.js
+		eend $? || die "sed failed to change locale"
+	fi
 
 	# Install /usr/bin/thunderbird-bin
 	install_mozilla_launcher_stub thunderbird-bin ${MOZILLA_FIVE_HOME}
