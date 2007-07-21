@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.540 2007/07/19 11:01:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.541 2007/07/21 12:04:33 calchan Exp $
+
+  21 Jul 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
+  Masked =net-print/hplip-2.7.6 for testing.
 
   19 Jul 2007; Jeroen Roovers <jer@gentoo.org> package.mask:
   Remove opera-9.22 weeklies mask.

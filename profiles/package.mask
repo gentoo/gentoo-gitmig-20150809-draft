@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7503 2007/07/21 07:45:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7504 2007/07/21 12:04:33 calchan Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Denis Dupeyron <calchan@gentoo.org> (21 Jul 2007)
+# Masked for testing
+=net-print/hplip-2.7.6
 
 # Samuli Suominen <drac@gentoo.org> (20 Jul 2007)
 # Masked for being broken with current stable fluxbox.
