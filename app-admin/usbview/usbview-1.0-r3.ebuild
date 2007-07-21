@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-1.0-r3.ebuild,v 1.1 2007/07/21 12:48:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-1.0-r3.ebuild,v 1.2 2007/07/21 12:54:12 drac Exp $
 
 inherit eutils
 
@@ -23,14 +23,10 @@ src_unpack() {
 	epatch "${WORKDIR}"/${PN}_${PV}-11.diff
 }
 
-src_compile() {
-	econf || die "econf failed."
-	emake || die "emake failed."
-}
-
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README TODO
+	doman usbview.8
 	doicon ${PN}_logo.xpm
 	make_desktop_entry ${PN} ${PN} ${PN}_logo.xpm
 }
