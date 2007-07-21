@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.0-r1.ebuild,v 1.8 2006/01/13 12:21:05 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.0-r1.ebuild,v 1.9 2007/07/21 12:11:23 omp Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,30 +14,28 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
-RDEPEND="|| ( (
-			x11-libs/libX11
-			x11-misc/imake )
-		virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-misc/imake"
 
 DEPEND="${RDEPEND}
-		|| ( x11-proto/xproto virtual/x11 )"
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-overflow.patch
-	epatch ${FILESDIR}/${P}-gcc34.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-overflow.patch"
+	epatch "${FILESDIR}/${P}-gcc34.patch"
 }
 
 src_compile() {
-	xmkmf || die
+	xmkmf || die "xmkmf failed"
 	cp Makefile Makefile.orig
-	make CFLAGS="${CFLAGS} -DSHADOW_PWD" xtrlock || die
+	make CFLAGS="${CFLAGS} -DSHADOW_PWD" xtrlock || die "make failed"
 }
 
 src_install() {
 	dobin xtrlock
-	chmod u+s ${D}/usr/bin/xtrlock
+	chmod u+s "${D}/usr/bin/xtrlock"
 	mv xtrlock.man xtrlock.1
 	doman xtrlock.1
 }
