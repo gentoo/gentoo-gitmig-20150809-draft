@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7508 2007/07/21 17:15:31 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7509 2007/07/21 23:41:20 philantrop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Wulf C. Krueger <philantrop@gentoo.org> (21 Jul 2007)
+# Broken by upstream. cf. bug 176297.
+=media-video/konverter-0.93
 
 # Samuli Suominen <drac@gentoo.org> (21 Jul 2007)
 # Last release from 1999, still using GTK+-1.2.
