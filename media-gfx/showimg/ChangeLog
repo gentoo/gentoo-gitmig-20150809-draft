@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/showimg
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.38 2006/11/23 19:41:07 vivo Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.39 2007/07/21 22:27:40 philantrop Exp $
+
+  21 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org> showimg-0.9.5.ebuild:
+  Corrected the USE flag handling. Fixes bug 185958.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> showimg-0.9.5.ebuild:
   dev-db/mysql => virtual/mysql
