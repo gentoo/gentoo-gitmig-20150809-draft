@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.3.ebuild,v 1.1 2007/07/20 16:48:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.3.ebuild,v 1.2 2007/07/21 10:44:18 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -191,7 +191,7 @@ src_install() {
 	install_mozilla_launcher_stub seamonkey ${MOZILLA_FIVE_HOME}
 
 	# Install icon and .desktop for menu entry
-	doicon ${FILESDIR}/icon/${PN}-icon.png
+	doicon ${FILESDIR}/icon/${PN}.png
 	domenu ${FILESDIR}/icon/${PN}.desktop
 
 	# Fix icons to look the same everywhere
