@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sjsxp/sjsxp-1.0.1.ebuild,v 1.2 2007/05/23 17:02:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sjsxp/sjsxp-1.0.1.ebuild,v 1.3 2007/07/21 11:46:44 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -33,7 +33,6 @@ src_unpack() {
 	java-pkg_jar-from jsr173 jsr173.jar jsr173_1.0_api.jar
 }
 
-EANT_BUILD_TARGET="jar"
 EANT_DOC_TARGET="javadocs"
 
 src_install() {
