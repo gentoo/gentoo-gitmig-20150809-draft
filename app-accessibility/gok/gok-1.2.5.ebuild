@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.2.1.ebuild,v 1.2 2007/07/11 02:34:03 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.2.5.ebuild,v 1.1 2007/07/21 21:27:33 eva Exp $
 
 inherit virtualx gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gok.ca/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc usb"
 
 RDEPEND=">=dev-libs/glib-2.11
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/glib-2.11
 	>=gnome-base/libglade-2
 	>=gnome-base/gconf-2
 	>=gnome-base/orbit-2
-	usb? ( dev-libs/libusb )
+	usb? ( >=dev-libs/libusb-0.1.11 )
 
 	x11-libs/libXi
 	x11-libs/libX11
@@ -49,14 +49,13 @@ DOCS="AUTHORS ChangeLog NEWS README"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
-	# Don't use 'use_enable' for now, because of a bug in gok's configure.in.
-	use usb && G2CONF="--enable-libusb-input"
+	G2CONF="$(use_enable usb libusb-input)"
 }
 
 src_test() {
-	# Remove missing file from the Makefile to fix tests (bug #140265)
+	# Remove missing file from the Makefile to fix tests (bug #140265), and POTFILES.in
 	sed -i -e '/char-frequency.xml.in/d' ${S}/po/Makefile
-
+	sed -i -e '/char-frequency.xml.in/d' ${S}/po/POTFILES.in
 	addwrite "/root/.gnome2_private"
 	Xmake check || die
 }
