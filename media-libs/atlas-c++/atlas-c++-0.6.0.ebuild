@@ -1,12 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.0.ebuild,v 1.4 2007/05/07 21:53:11 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.0.ebuild,v 1.5 2007/07/21 23:24:35 nyhm Exp $
 
 inherit eutils
 
 MY_PN="Atlas-C++"
 MY_P=${MY_PN}-${PV}
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="Atlas protocol, used in role playing games at worldforge."
 HOMEPAGE="http://www.worldforge.org/dev/eng/libraries/atlas_cpp"
 SRC_URI="mirror://sourceforge/worldforge/${MY_P}.tar.bz2"
@@ -18,7 +17,9 @@ IUSE="bzip2 doc zlib"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	app-doc/doxygen"
+	doc? ( app-doc/doxygen )"
+
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	econf \
@@ -32,7 +33,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	use doc && dohtml -r doc/html/*
 	use doc && doman doc/man/*
 	dodoc AUTHORS ChangeLog HACKING NEWS README ROADMAP THANKS TODO
