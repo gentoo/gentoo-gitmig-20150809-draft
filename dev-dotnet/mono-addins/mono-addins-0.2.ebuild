@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/mono-addins-0.2.ebuild,v 1.1 2007/07/20 21:48:43 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/mono-addins-0.2.ebuild,v 1.2 2007/07/21 12:23:19 jurek Exp $
 
 inherit eutils mono
 
-DESCRIPTION="This is a sample skeleton ebuild file"
+DESCRIPTION="A framework for creating extensible applications, and for creating libraries which extend those applications."
 HOMEPAGE="http://www.mono-project.com/Mono.Addins"
 SRC_URI="http://www.go-mono.com/sources/${PN}/${P}.tar.gz"
 
