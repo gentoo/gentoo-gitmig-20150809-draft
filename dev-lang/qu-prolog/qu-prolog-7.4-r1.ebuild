@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.4-r1.ebuild,v 1.2 2007/03/13 07:31:20 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.4-r1.ebuild,v 1.3 2007/07/21 08:17:59 keri Exp $
 
 inherit eutils
 
@@ -54,7 +54,9 @@ src_install() {
 	doexe src/qa src/qdeal src/qem src/ql
 	doexe bin/qc bin/qc1.qup bin/qecat bin/qg bin/qp bin/qppp
 
-	if use qt3 || use qt4; then
+	if use qt4; then
+		doexe src/xqp/qt4/xqp
+	elif use qt3; then
 		doexe src/xqp/xqp
 	fi
 
