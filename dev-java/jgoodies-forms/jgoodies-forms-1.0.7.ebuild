@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.0.7.ebuild,v 1.3 2006/12/09 09:20:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.0.7.ebuild,v 1.4 2007/07/21 10:14:11 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -14,39 +16,36 @@ SRC_URI="http://www.jgoodies.com/download/libraries/${MY_P}.zip"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="doc source"
+IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-core-1.4
-	app-arch/unzip
-	source? ( app-arch/zip )"
+	app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_unpack() {
 	unpack ${A} || die "Unpack failed"
-	cd ${S}
+	cd "${S}"
 
 	# Remove the packaged jars
-	rm *.jar || die "em failed"
+	rm -v *.jar || die "rm failed"
 
 	# No support for junit tests yet
-	rm -rf ${S}/src/test
+	rm -rf "${S}/src/test" || die
 
 	# patch the build.xml:
 	epatch "${FILESDIR}/${P}-build.xml.patch"
 }
 
-src_compile() {
-	eant jar $(use_doc)
-}
+# Comes in the tarball
+EANT_DOC_TARGET=""
 
 src_install() {
 	java-pkg_dojar build/${MY_PN}.jar
 
 	dodoc RELEASE-NOTES.txt README.html
 
-	use doc && java-pkg_dohtml -r build/doc
+	use doc && java-pkg_dohtml -r docs/*
 	use source && java-pkg_dosrc src/{core,extras}/com
 }
