@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.67 2007/06/16 15:21:45 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.68 2007/07/21 12:08:59 calchan Exp $
+
+*hplip-2.7.6 (21 Jul 2007)
+
+  21 Jul 2007; Denis Dupeyron <calchan@gentoo.org> +hplip-2.7.6.ebuild:
+  Major version bump.
 
   16 Jun 2007; Denis Dupeyron <calchan@gentoo.org> -hplip-1.7.3.ebuild,
   -hplip-1.7.4.ebuild, -hplip-1.7.4a.ebuild:
