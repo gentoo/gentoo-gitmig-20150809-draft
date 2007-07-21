@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.25 2007/04/28 17:21:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.26 2007/07/21 20:56:35 antarus Exp $
+
+*ddclient-3.7.2 (21 Jul 2007)
+
+  21 Jul 2007; Alec Warner <antarus@gentoo.org> +ddclient-3.7.2.ebuild:
+  Bump ddclient for bug 124333, thanks to Paul Bredbury and Michael A. Smith
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> ddclient-3.6.3.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)
