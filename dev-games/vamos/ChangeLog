@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/vamos
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.4 2006/02/10 16:25:53 wolf31o2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.5 2007/07/21 23:13:53 nyhm Exp $
+
+*vamos-0.5.7 (21 Jul 2007)
+
+  21 Jul 2007; Tristan Heaven <nyhm@gentoo.org> +vamos-0.5.7.ebuild:
+  Version bump
 
   10 Feb 2006; Chris Gianelloni <wolf31o2@gentoo.org> vamos-0.5.5.ebuild:
   Added modular X dependencies and closing bug #121355.
