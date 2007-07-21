@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.2.12-r1.ebuild,v 1.7 2007/01/05 08:55:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.2.12-r1.ebuild,v 1.8 2007/07/21 17:27:10 dertobi123 Exp $
 
 inherit perl-app eutils
 
@@ -45,7 +45,8 @@ src_unpack() {
 	# When linking with rpm, you need to link with more libraries.
 	sed -e "s:lrpm:lrpm -lrpmio -lrpmdb:" -i configure || die "sed failed"
 
-	epatch "${FILESDIR}/${P}-fPIC.patch"
+	epatch "${FILESDIR}/${PN}-2.2-db45.patch"
+	epatch "${FILESDIR}/${PN}-2.2-fPIC.patch"
 	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 

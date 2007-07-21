@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.2.12.ebuild,v 1.6 2007/01/05 08:55:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.2.13.ebuild,v 1.1 2007/07/21 17:27:10 dertobi123 Exp $
 
 inherit perl-app eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/cyrus-imapd-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~hppa ppc64"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ssl kerberos"
 
 RDEPEND=">=sys-libs/db-3.2
@@ -45,7 +45,8 @@ src_unpack() {
 	# When linking with rpm, you need to link with more libraries.
 	sed -e "s:lrpm:lrpm -lrpmio -lrpmdb:" -i configure || die "sed failed"
 
-	epatch ${FILESDIR}/${P}-fPIC.patch
+	epatch "${FILESDIR}/${PN}-2.2-db45.patch"
+	epatch "${FILESDIR}/${PN}-2.2-fPIC.patch"
 }
 
 src_compile() {
