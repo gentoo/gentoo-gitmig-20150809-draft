@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.0.7.ebuild,v 1.4 2007/07/21 10:14:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.0.7.ebuild,v 1.5 2007/07/21 10:16:13 betelgeuse Exp $
 
-JAVA_PKG_IUSE="doc source"
+JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -48,4 +48,5 @@ src_install() {
 
 	use doc && java-pkg_dohtml -r docs/*
 	use source && java-pkg_dosrc src/{core,extras}/com
+	use examples && java-pkg_doexamples src/tutorial
 }
