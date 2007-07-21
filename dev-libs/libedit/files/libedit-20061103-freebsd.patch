@@ -1,3 +1,8 @@
+OK, FreeBSD sh does not define get_alias_text and until it does we need
+to NOT define the __weak_reference for it here.
+According to bug #157407 this will break heimdal and thunderbird.
+Tough, as our /bin/sh is more important at this time.
+
 Index: work/netbsd-cvs/sys.h
 ===================================================================
 --- work.orig/netbsd-cvs/sys.h
@@ -8,7 +13,7 @@ Index: work/netbsd-cvs/sys.h
  
 +#ifdef __FreeBSD__
 +# undef __weak_reference
-+# define __weak_reference(x) __attribute__((__weakref__))
++/* # define __weak_reference(x) __attribute__((__weakref__)) */
 +#endif
 +
  #if !defined(__attribute__) && (defined(__cplusplus) || !defined(__GNUC__)  || __GNUC__ == 2 && __GNUC_MINOR__ < 8)
