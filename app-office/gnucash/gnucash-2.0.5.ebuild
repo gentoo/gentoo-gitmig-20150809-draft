@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.5.ebuild,v 1.14 2007/07/10 21:39:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.5.ebuild,v 1.15 2007/07/21 12:14:32 tove Exp $
 
 inherit eutils gnome2
 
@@ -116,6 +116,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	gnome2_pkg_postinst
 	elog "Please note that postgresql support has been removed."
 	elog "Please see: https://bugs.gentoo.org/show_bug.cgi?id=146769#c9"
 	elog "for an explanation."
