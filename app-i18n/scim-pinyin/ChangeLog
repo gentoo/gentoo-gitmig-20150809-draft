@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-pinyin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.25 2007/02/10 03:55:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.26 2007/07/22 09:25:03 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org>
+  scim-pinyin-0.5.91.ebuild, scim-pinyin-0.5.91-r1.ebuild:
+  Drop virtual/x11 dependency.
 
   10 Feb 2007; Steve Dibb <beandog@gentoo.org> scim-pinyin-0.5.91-r1.ebuild:
   amd64 stable, bug 159206

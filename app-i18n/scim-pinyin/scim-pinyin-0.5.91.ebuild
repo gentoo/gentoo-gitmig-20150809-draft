@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/scim-pinyin-0.5.91.ebuild,v 1.9 2006/10/16 18:30:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/scim-pinyin-0.5.91.ebuild,v 1.10 2007/07/22 09:25:03 calchan Exp $
 
 inherit kde-functions gnome2
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 ~sparc x86"
 
-RDEPEND="|| ( x11-libs/libXt virtual/x11 )
+RDEPEND="x11-libs/libXt
 	|| ( >=app-i18n/scim-1.1 >=app-i18n/scim-cvs-1.1 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

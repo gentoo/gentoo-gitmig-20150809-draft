@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-1.3.3.ebuild,v 1.6 2007/01/05 16:27:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-1.3.3.ebuild,v 1.7 2007/07/22 09:22:29 calchan Exp $
 
 inherit eutils cvs
 
@@ -24,7 +24,7 @@ GTK_DEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/atk-1
 	>=x11-libs/pango-1
 	>=dev-libs/glib-2"
-RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
+RDEPEND="x11-libs/libX11
 	gtk? ( ${GTK_DEPEND} )
 	immqt? ( ${GTK_DEPEND} )
 	immqt-bc? ( ${GTK_DEPEND} )

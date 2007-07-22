@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.119 2007/07/07 03:49:50 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.120 2007/07/22 09:20:28 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> scim-1.4.5-r1.ebuild:
+  Drop virtual/x11 dependency.
 
 *scim-1.4.7 (07 Jul 2007)
 

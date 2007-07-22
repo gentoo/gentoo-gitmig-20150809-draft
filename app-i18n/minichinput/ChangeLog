@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/minichinput
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/minichinput/ChangeLog,v 1.5 2006/11/05 17:40:48 usata Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/minichinput/ChangeLog,v 1.6 2007/07/22 09:16:50 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> minichinput-0.1.9.ebuild:
+  Drop virtual/x11 dependency.
 
   05 Nov 2006; Mamoru KOMACHI <usata@gentoo.org>
   +files/minichinput-0.1.9-gcc4.patch,

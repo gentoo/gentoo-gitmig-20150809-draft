@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-cvs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/ChangeLog,v 1.15 2007/01/05 16:27:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/ChangeLog,v 1.16 2007/07/22 09:22:29 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> scim-cvs-1.3.3.ebuild:
+  Drop virtual/x11 dependency.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> scim-cvs-1.3.3.ebuild:
   Convert to use elog.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5-r1.ebuild,v 1.9 2007/04/24 14:05:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5-r1.ebuild,v 1.10 2007/07/22 09:20:28 calchan Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -16,14 +16,14 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc gtk kde qt3"
 
-RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
+RDEPEND="x11-libs/libX11
 	gtk? ( >=x11-libs/gtk+-2
 		>=dev-libs/atk-1
 		>=x11-libs/pango-1
 		>=dev-libs/glib-2 )
 	!app-i18n/scim-cvs"
 DEPEND="${RDEPEND}
-	|| ( x11-libs/libXt virtual/x11 )
+	x11-libs/libXt
 	doc? ( app-doc/doxygen
 		app-text/docbook-xsl-stylesheets )
 	dev-lang/perl

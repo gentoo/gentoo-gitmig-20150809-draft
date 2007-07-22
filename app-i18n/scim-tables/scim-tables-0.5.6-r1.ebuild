@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.6-r1.ebuild,v 1.5 2007/07/15 07:12:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.6-r1.ebuild,v 1.6 2007/07/22 09:28:36 calchan Exp $
 
 inherit kde-functions autotools eutils
 
@@ -18,7 +18,7 @@ for i in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${i}"
 done
 
-RDEPEND="|| ( x11-libs/libXt virtual/x11 )
+RDEPEND="x11-libs/libXt
 	|| ( >=app-i18n/scim-1.1 >=app-i18n/scim-cvs-1.1 )
 	!alpha? ( !sparc? ( kde? ( app-i18n/skim ) ) )
 	nls? ( virtual/libintl )"

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/minichinput/minichinput-0.1.9.ebuild,v 1.7 2006/11/05 17:37:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/minichinput/minichinput-0.1.9.ebuild,v 1.8 2007/07/22 09:16:50 calchan Exp $
 
 inherit eutils
 
@@ -16,13 +16,13 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="|| ( x11-libs/libX11 virtual/x11 )
+DEPEND="x11-libs/libX11
 	|| ( x11-libs/libXft virtual/xft )
 	media-libs/fontconfig
 	>=media-libs/imlib-1.9.13
 	!app-i18n/chinput"
 RDEPEND="${DEPEND}
-	|| ( media-fonts/font-sony-misc virtual/x11 )"
+	media-fonts/font-sony-misc"
 
 S=${WORKDIR}/${MY_P}
 
