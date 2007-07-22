@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/xconvers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/ChangeLog,v 1.7 2007/02/22 02:33:04 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/ChangeLog,v 1.8 2007/07/22 09:10:24 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xconvers-0.8.2.ebuild, xconvers-0.8.3.ebuild:
+  Drop virtual/x11 references.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
