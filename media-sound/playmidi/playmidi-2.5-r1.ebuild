@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/playmidi-2.5-r1.ebuild,v 1.3 2006/01/27 22:11:28 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/playmidi-2.5-r1.ebuild,v 1.4 2007/07/22 08:32:18 drac Exp $
 
 IUSE="svga X gtk"
 
@@ -18,20 +18,19 @@ RDEPEND="sys-libs/ncurses
 	svga? ( media-libs/svgalib )
 	gtk? ( =dev-libs/glib-1*
 		=x11-libs/gtk+-1* )
-	X? ( || ( ( x11-libs/libX11
-				x11-libs/libSM
-				x11-libs/libXaw )
-			virtual/x11 ) )"
+	X? ( x11-libs/libX11
+		x11-libs/libSM
+		x11-libs/libXaw )"
 DEPEND="${RDEPEND}
-	X? ( || ( x11-proto/xextproto virtual/x11 ) )"
+	X? ( x11-proto/xextproto )"
 
 S="${WORKDIR}/${P/2.5/2.4}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/${P}.patch"
-	epatch "${FILESDIR}/CAN-2005-0020.patch"
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}.patch
+	epatch "${FILESDIR}"/CAN-2005-0020.patch
 }
 
 src_compile() {

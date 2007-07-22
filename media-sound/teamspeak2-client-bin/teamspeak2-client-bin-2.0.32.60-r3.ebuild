@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.15 2007/07/11 19:30:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.16 2007/07/22 08:30:00 drac Exp $
 
 MY_PV=rc2_2032
 DESCRIPTION="The TeamSpeak voice communication tool"
@@ -10,17 +10,13 @@ SRC_URI="ftp://ftp.freenet.de/pub/4players/teamspeak.org/releases/ts2_client_${M
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86 amd64"
-
 IUSE=""
 
-DEPEND=""
-
-RDEPEND="${DEPEND}
-	|| ( ( x11-libs/libXt ) virtual/x11 )
+DEPEND="x11-libs/libXt
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1.0
-			 >=app-emulation/emul-linux-x86-xlibs-1.0 )"
+		>=app-emulation/emul-linux-x86-xlibs-1.0 )"
 
-S="${WORKDIR}/ts2_client_${MY_PV}/setup.data/image"
+S="${WORKDIR}"/ts2_client_${MY_PV}/setup.data/image
 
 dir="/opt/teamspeak2-client"
 
@@ -32,7 +28,7 @@ src_install() {
 	dohtml manual/*
 
 	into /opt
-	dobin ${FILESDIR}/TeamSpeak
+	dobin "${FILESDIR}"/TeamSpeak
 	dosed "s:%installdir%:/opt/teamspeak2-client:g" /opt/bin/TeamSpeak
 
 	exeinto ${dir}
@@ -53,14 +49,13 @@ src_install() {
 	# Install a teamspeak.protocol file for kde/konqueror to accept
 	# teamspeak:// links
 	insinto /usr/share/services/
-	doins "${FILESDIR}/teamspeak.protocol"
+	doins "${FILESDIR}"/teamspeak.protocol
 
 	# Fix bug #489010
 	dosym /usr/share/doc/${PF}/html ${dir}/manual
 }
 
 pkg_postinst() {
-
 	echo
 	elog
 	elog "Please Note: The new Teamspeak2 Release Candidate 2 Client"
