@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.21.ebuild,v 1.13 2007/07/21 11:20:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.21.ebuild,v 1.14 2007/07/22 07:01:24 drac Exp $
 
 inherit eutils libtool
 
@@ -17,21 +17,18 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	epatch "${FILESDIR}"/libpaper-1.1.14.8-malloc.patch
-
 	elibtoolize
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-
 	dodoc README ChangeLog
-
 	dodir /etc
 	(paperconf 2>/dev/null || echo a4) > "${D}"/etc/papersize
 }
 
 pkg_postinst() {
-	elog "run \"paperconfig -p letter\" to use letter-pagesizes"
+	elog "run \"paperconfig -p letter\" as root to use letter-pagesizes"
+	elog "or paperconf with normal user privileges."
 }
