@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.3.6.ebuild,v 1.2 2007/06/24 19:11:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.3.6.ebuild,v 1.3 2007/07/22 17:30:47 dirtyepic Exp $
 
 inherit eutils rpm font versionator
 
@@ -17,19 +17,11 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-#DEPEND="app-arch/rpm2targz"
-#DEPEND comes from rpm.eclass
-
 S=${WORKDIR}
 FONT_S="${S}"
 FONT_SUFFIX="afm pfb"
 DOCS="ChangeLog README* TODO"
 
-src_install () {
-
+src_install() {
 	font_src_install
-
-	# don't touch our fonts.conf
-	rm -fr "${D}"/etc
-
 }
