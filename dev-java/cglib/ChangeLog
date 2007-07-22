@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.30 2007/07/02 16:33:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.31 2007/07/22 11:14:59 philantrop Exp $
+
+  22 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org> cglib-2.1.3.ebuild:
+  Marked stable on amd64 as per bug 186199.
 
   02 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> cglib-2.1.3.ebuild:
   Fix LICENSE to Apache-2.0 from Apache-1.1 and use java-pkg_dojavadoc.
