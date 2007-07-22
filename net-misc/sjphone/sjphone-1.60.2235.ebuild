@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sjphone/sjphone-1.60.2235.ebuild,v 1.1 2006/05/20 14:15:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sjphone/sjphone-1.60.2235.ebuild,v 1.2 2007/07/22 08:00:32 dberkholz Exp $
 
 inherit eutils
 
@@ -14,13 +14,12 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND="|| ( ( x11-libs/libSM
+RDEPEND="x11-libs/libSM
 	x11-libs/libICE
 	x11-libs/libXext
 	x11-libs/libX11
 	x11-libs/libXau
-	x11-libs/libXdmcp )
-	virtual/x11 )"
+	x11-libs/libXdmcp"
 S=${WORKDIR}/${MY_P}
 
 src_install() {

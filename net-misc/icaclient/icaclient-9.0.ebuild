@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-9.0.ebuild,v 1.8 2007/04/09 16:14:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-9.0.ebuild,v 1.9 2007/07/22 08:19:01 dberkholz Exp $
 
 inherit eutils multilib
 
@@ -15,13 +15,11 @@ IUSE=""
 RESTRICT="fetch"
 
 RDEPEND="virtual/libc
-	|| (
-		( x11-libs/libXp
-			x11-libs/libXaw
-			x11-libs/libX11
-			x11-libs/libSM
-			x11-libs/libICE )
-		 virtual/x11 )
+	x11-libs/libXp
+	x11-libs/libXaw
+	x11-libs/libX11
+	x11-libs/libSM
+	x11-libs/libICE
 	>=x11-libs/openmotif-2.2.2
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 DEPEND="${RDEPEND}

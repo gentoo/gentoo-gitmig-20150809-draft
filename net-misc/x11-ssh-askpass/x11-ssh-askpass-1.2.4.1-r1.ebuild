@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.4.1-r1.ebuild,v 1.9 2006/07/24 11:58:08 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.4.1-r1.ebuild,v 1.10 2007/07/22 08:05:17 dberkholz Exp $
 
 inherit eutils multilib
 
@@ -14,17 +14,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 
 DEPEND="virtual/libc
-	|| 	(
-			(
-				app-text/rman
-				x11-misc/imake
-				x11-libs/libXt
-				x11-libs/libX11
-				x11-libs/libSM
-				x11-libs/libICE
-			)
-			virtual/x11
-		)"
+	app-text/rman
+	x11-misc/imake
+	x11-libs/libXt
+	x11-libs/libX11
+	x11-libs/libSM
+	x11-libs/libICE"
 RDEPEND="${DEPEND}
 	virtual/ssh"
 

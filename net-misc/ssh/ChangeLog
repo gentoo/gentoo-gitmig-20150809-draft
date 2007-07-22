@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ssh
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ChangeLog,v 1.14 2007/02/22 02:48:41 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ChangeLog,v 1.15 2007/07/22 08:14:11 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  ssh-3.2.9.1-r1.ebuild:
+  Drop virtual/x11 references.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

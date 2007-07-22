@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r5.ebuild,v 1.10 2006/12/07 08:44:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r5.ebuild,v 1.11 2007/07/22 08:17:17 dberkholz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -38,7 +38,7 @@ RDEPEND="pam? ( virtual/pam )
 	>=sys-libs/zlib-1.2.3
 	smartcard? ( dev-libs/opensc )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	X? ( || ( x11-apps/xauth virtual/x11 ) )
+	X? ( x11-apps/xauth )
 	userland_GNU? ( sys-apps/shadow )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

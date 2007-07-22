@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.18.1.ebuild,v 1.3 2007/07/12 02:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.18.1.ebuild,v 1.4 2007/07/22 08:08:57 dberkholz Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.12
 	dev-libs/dbus-glib
 	>=gnome-base/orbit-2
 	>=gnome-base/libbonobo-2
-	|| ( x11-libs/libXtst virtual/x11 )
+	x11-libs/libXtst
 	libnotify? ( >=x11-libs/libnotify-0.4.3 )
 	keyring? ( gnome-base/gnome-keyring )
 	avahi? ( >=net-dns/avahi-0.6 )

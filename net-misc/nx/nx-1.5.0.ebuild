@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-1.5.0.ebuild,v 1.2 2007/04/26 10:06:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-1.5.0.ebuild,v 1.3 2007/07/22 08:01:53 dberkholz Exp $
 
 inherit eutils
 
@@ -27,44 +27,35 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="rdesktop vnc"
 
-RDEPEND="|| ( ( x11-libs/libX11
-				x11-libs/libFS
-				x11-libs/libXvMC
-				x11-libs/libICE
-				x11-libs/libXmu
-				x11-libs/libXdmcp
-				x11-libs/libSM
-				x11-libs/libXt
-				x11-libs/libXau
-				x11-libs/libXaw
-				x11-libs/libXp
-				x11-libs/libXpm
-				x11-libs/libXext
-				dev-libs/openssl
-				media-libs/mesa
-			)
-			virtual/x11
-		)
+RDEPEND="x11-libs/libX11
+		x11-libs/libFS
+		x11-libs/libXvMC
+		x11-libs/libICE
+		x11-libs/libXmu
+		x11-libs/libXdmcp
+		x11-libs/libSM
+		x11-libs/libXt
+		x11-libs/libXau
+		x11-libs/libXaw
+		x11-libs/libXp
+		x11-libs/libXpm
+		x11-libs/libXext
+		dev-libs/openssl
+		media-libs/mesa
 		>=media-libs/jpeg-6b-r4
 		>=media-libs/libpng-1.2.8
 		>=sys-libs/zlib-1.2.3
 		virtual/libc"
 
 DEPEND="${RDEPEND}
-		|| ( ( x11-proto/xproto
-				x11-proto/xf86vidmodeproto
-				x11-proto/glproto
-				x11-proto/videoproto
-				x11-proto/xextproto
-				x11-proto/fontsproto
-
-				x11-misc/gccmakedep
-				x11-misc/imake
-
-				app-text/rman
-			)
-			virtual/x11
-		)
+		x11-proto/xproto
+		x11-proto/xf86vidmodeproto
+		x11-proto/glproto
+		x11-proto/videoproto
+		x11-proto/xextproto
+		x11-proto/fontsproto
+		x11-misc/gccmakedep
+		x11-misc/imake
 		app-text/rman
 		"
 S=${WORKDIR}/${PN//x11/X11}

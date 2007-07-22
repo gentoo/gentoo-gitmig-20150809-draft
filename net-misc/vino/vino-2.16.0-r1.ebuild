@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.16.0-r1.ebuild,v 1.1 2007/01/30 21:13:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.16.0-r1.ebuild,v 1.2 2007/07/22 08:08:57 dberkholz Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libgnomeui-2.5.2
 	>=gnome-base/orbit-2
 	>=gnome-base/libbonobo-2
-	|| ( x11-libs/libXtst virtual/x11 )
+	x11-libs/libXtst
 	avahi? ( >=net-dns/avahi-0.6 )
 	crypt? ( >=dev-libs/libgcrypt-1.1.90 )
 	gnutls? ( >=net-libs/gnutls-1 )
