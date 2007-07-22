@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.42 2007/05/06 12:25:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.43 2007/07/22 06:59:26 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; pari-2.3.0.ebuild,
+  pari-2.3.2.ebuild:
+  Drop virtual/x11 references.
 
 *pari-2.3.2 (06 May 2007)
 

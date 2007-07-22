@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.0.ebuild,v 1.4 2006/09/26 15:18:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.0.ebuild,v 1.5 2007/07/22 06:59:26 dberkholz Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -15,7 +15,7 @@ IUSE="doc emacs X"
 
 DEPEND="doc? ( virtual/tetex )
 		sys-libs/readline
-		X? ( || ( x11-libs/libX11 virtual/x11 ) )"
+		X? ( x11-libs/libX11 )"
 
 src_unpack() {
 	unpack ${A}

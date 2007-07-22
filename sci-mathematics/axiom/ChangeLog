@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/axiom
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.13 2007/03/19 00:06:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.14 2007/07/22 06:57:09 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; axiom-3.9-r1.ebuild:
+  Drop virtual/x11 references.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove plasmaroo from metadata.xml due to retirement.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-3.9-r1.ebuild,v 1.4 2006/10/01 13:00:20 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-3.9-r1.ebuild,v 1.5 2007/07/22 06:57:09 dberkholz Exp $
 
 inherit eutils
 
@@ -14,10 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="virtual/tetex
-	|| (
-		x11-libs/libXaw
-		virtual/x11
-	)"
+	x11-libs/libXaw"
 
 S="${WORKDIR}/axiom"
 
