@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.33 2007/06/29 22:01:39 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.34 2007/07/22 10:07:43 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> texmaker-1.11-r1.ebuild,
+  texmaker-1.30.ebuild, texmaker-1.40.ebuild, texmaker-1.50-r1.ebuild:
+  Drop virtual/x11 dependency.
 
   29 Jun 2007; Lars Weiler <pylon@gentoo.org> texmaker-1.50-r1.ebuild:
   Stable on ppc; bug #183633.
