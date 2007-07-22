@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-blas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-blas/ChangeLog,v 1.17 2007/07/20 14:13:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-blas/ChangeLog,v 1.18 2007/07/22 15:31:57 opfer Exp $
+
+  22 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  eselect-blas-0.1.ebuild:
+  stable x86, bug 180713
 
   20 Jul 2007; nixnut <nixnut@gentoo.org> eselect-blas-0.1.ebuild:
   Stable on ppc wrt bug 180713
