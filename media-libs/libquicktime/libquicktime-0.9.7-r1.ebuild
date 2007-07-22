@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.22 2007/07/22 08:51:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.23 2007/07/22 08:53:22 drac Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -8,7 +8,7 @@ WANT_AUTOCONF=latest
 inherit libtool eutils autotools
 
 DESCRIPTION="A library based on quicktime4linux with extensions"
-HOMEPAGE="http://libquicktime.sourceforge.net/"
+HOMEPAGE="http://libquicktime.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://gentoo/${PN}-m4-1.tar.bz2"
 
@@ -23,7 +23,7 @@ RDEPEND="dv? ( media-libs/libdv )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	vorbis? ( media-libs/libvorbis )
-	ieee1394? (	sys-libs/libavc1394	sys-libs/libraw1394	)
+	ieee1394? ( sys-libs/libavc1394 sys-libs/libraw1394 )
 	X? ( x11-libs/libXaw x11-libs/libXv x11-proto/xextproto )
 	!virtual/quicktime"
 DEPEND="${RDEPEND}
