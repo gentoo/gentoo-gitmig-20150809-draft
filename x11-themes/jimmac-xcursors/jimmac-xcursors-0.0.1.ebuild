@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/jimmac-xcursors/jimmac-xcursors-0.0.1.ebuild,v 1.16 2007/06/26 21:04:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/jimmac-xcursors/jimmac-xcursors-0.0.1.ebuild,v 1.17 2007/07/22 05:57:50 dberkholz Exp $
 
 MY_P="6550-Jimmac.tar.gz"
 DESCRIPTION="A high quality set of animated mouse cursors"
@@ -18,7 +18,7 @@ RDEPEND=""
 S=${WORKDIR}/Jimmac
 
 src_install() {
-	#X11_IMPLEM_P="$(best_version virtual/x11)"
+	#X11_IMPLEM_P="$(best_version x11-base/xorg-server)"
 	#X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
 	#X11_IMPLEM="${X11_IMPLEM##*\/}"
 	X11_IMPLEM="xorg-x11"
