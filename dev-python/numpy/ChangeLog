@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.33 2007/07/20 14:21:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.34 2007/07/22 15:39:58 opfer Exp $
+
+  22 Jul 2007; Christian Faulhammer <opfer@gentoo.org> numpy-1.0.3.ebuild:
+  stable x86, bug 180713
 
   20 Jul 2007; nixnut <nixnut@gentoo.org> numpy-1.0.3.ebuild:
   Stable on ppc wrt bug 180713
