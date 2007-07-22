@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.5-r3.ebuild,v 1.13 2007/07/08 04:20:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.5-r3.ebuild,v 1.14 2007/07/22 10:43:01 calchan Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -32,32 +32,28 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 		   =sys-apps/hal-0.5* )
 	zeroconf? ( net-misc/mDNSResponder )
 	xcomposite? ( x11-libs/libXcomposite x11-libs/libXdamage )
-	|| ( (
-			x11-libs/libX11
-			x11-libs/libXau
-			x11-libs/libXfixes
-			x11-libs/libXrender
-			x11-libs/libXtst
-			x11-libs/libXext
-			xscreensaver? ( x11-libs/libXScrnSaver )
-			xinerama? ( x11-libs/libXinerama )
-		) <virtual/x11-7 )"
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXfixes
+	x11-libs/libXrender
+	x11-libs/libXtst
+	x11-libs/libXext
+	xscreensaver? ( x11-libs/libXScrnSaver )
+	xinerama? ( x11-libs/libXinerama )"
 
 RDEPEND="${DEPEND}
 	sys-apps/usbutils
 	java? ( >=virtual/jre-1.4 )
 	kernel_linux? ( || ( >=sys-apps/eject-2.1.5 sys-block/unieject ) )
-	|| ( (
-			x11-apps/xmessage
-			x11-apps/xsetroot
-			x11-apps/xset
-			x11-apps/xrandr
-			x11-apps/mkfontdir
-			x11-apps/xinit
-			|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
-			x11-apps/setxkbmap
-			x11-apps/xprop
-		) <virtual/x11-7 )"
+	x11-apps/xmessage
+	x11-apps/xsetroot
+	x11-apps/xset
+	x11-apps/xrandr
+	x11-apps/mkfontdir
+	x11-apps/xinit
+	|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
+	x11-apps/setxkbmap
+	x11-apps/xprop"
 
 DEPEND="${DEPEND}
 	xcomposite? ( x11-proto/compositeproto x11-proto/damageproto )

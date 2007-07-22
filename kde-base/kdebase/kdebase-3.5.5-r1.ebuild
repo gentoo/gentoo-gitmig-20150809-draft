@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.5-r1.ebuild,v 1.17 2007/07/08 04:20:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.5-r1.ebuild,v 1.18 2007/07/22 10:43:00 calchan Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -45,17 +45,15 @@ RDEPEND="${DEPEND}
 	sys-apps/usbutils
 	java? ( >=virtual/jre-1.4 )
 	kernel_linux? ( || ( >=sys-apps/eject-2.1.5 sys-block/unieject ) )
-	|| ( (
-			x11-apps/xmessage
-			x11-apps/xsetroot
-			x11-apps/xset
-			x11-apps/xrandr
-			x11-apps/mkfontdir
-			x11-apps/xinit
-			|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
-			x11-apps/setxkbmap
-			x11-apps/xprop
-		) <virtual/x11-7 )"
+	x11-apps/xmessage
+	x11-apps/xsetroot
+	x11-apps/xset
+	x11-apps/xrandr
+	x11-apps/mkfontdir
+	x11-apps/xinit
+	|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
+	x11-apps/setxkbmap
+	x11-apps/xprop"
 
 DEPEND="${DEPEND}
 	xcomposite? ( x11-proto/compositeproto x11-proto/damageproto )

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.375 2007/07/20 19:57:48 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.376 2007/07/22 10:43:00 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> kdebase-3.5.5-r1.ebuild,
+  kdebase-3.5.5-r3.ebuild, kdebase-3.5.5-r4.ebuild, kdebase-3.5.6-r1.ebuild,
+  kdebase-3.5.6-r2.ebuild:
+  Drop virtual/x11 dependency.
 
 *kdebase-3.5.7-r2 (20 Jul 2007)
 

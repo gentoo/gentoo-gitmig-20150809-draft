@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r4.ebuild,v 1.11 2007/06/25 17:00:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r4.ebuild,v 1.12 2007/07/22 10:50:03 calchan Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -51,7 +51,8 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 RDEPEND="${RDEPEND}
-	|| ( ( x11-apps/rgb x11-apps/iceauth ) <virtual/x11-7 ) "
+	x11-apps/rgb
+	x11-apps/iceauth"
 
 # Testing code is rather broken and merely for developer purposes, so disable it.
 RESTRICT="test"

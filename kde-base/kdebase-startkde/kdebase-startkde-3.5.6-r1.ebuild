@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.6-r1.ebuild,v 1.2 2007/07/11 01:08:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.6-r1.ebuild,v 1.3 2007/07/22 10:46:19 calchan Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -19,13 +19,12 @@ IUSE=""
 # The kde apps called from the startkde script.
 # kdesktop, kicker etc are started because they put files in $KDEDIR/share/autostart
 # and so in theory they aren't strictly necessary deps.
-RDEPEND="|| ( (		x11-apps/xmessage
-			x11-apps/xsetroot
-			x11-apps/xset
-			x11-apps/xrandr
-			x11-apps/mkfontdir
-			x11-apps/xprop
-		) <virtual/x11-7 )
+RDEPEND="x11-apps/xmessage
+	x11-apps/xsetroot
+	x11-apps/xset
+	x11-apps/xrandr
+	x11-apps/mkfontdir
+	x11-apps/xprop
 $(deprange $PV $MAXKDEVER kde-base/kdesktop)
 $(deprange $PV $MAXKDEVER kde-base/kcminit)
 $(deprange $PV $MAXKDEVER kde-base/ksmserver)
