@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.30.ebuild,v 1.6 2007/02/07 19:45:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.30.ebuild,v 1.7 2007/07/22 04:25:55 omp Exp $
 
 inherit eutils
 
@@ -20,15 +20,13 @@ KEYWORDS="amd64 ppc sparc x86"
 
 IUSE="esd imlib nls spell truetype xinerama minimal debug"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXrandr
-		x11-libs/libXext
-		x11-libs/libXpm
-		x11-libs/libXrender
-		x11-libs/libXft
-		xinerama? ( x11-libs/libXinerama ) )
-	virtual/x11 )
+RDEPEND="x11-libs/libX11
+	x11-libs/libXrandr
+	x11-libs/libXext
+	x11-libs/libXpm
+	x11-libs/libXrender
+	x11-libs/libXft
+	xinerama? ( x11-libs/libXinerama )
 	esd? ( media-sound/esound )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
 	nls? ( sys-devel/gettext )
@@ -36,11 +34,9 @@ RDEPEND="|| ( (
 	media-libs/giflib"
 
 DEPEND="${RDEPEND}
-	|| ( (
-		x11-proto/xproto
-		x11-proto/xextproto
-		xinerama? ( x11-proto/xineramaproto ) )
-	virtual/x11 )
+	x11-proto/xproto
+	x11-proto/xextproto
+	xinerama? ( x11-proto/xineramaproto )
 	>=sys-apps/sed-4"
 
 pkg_setup() {

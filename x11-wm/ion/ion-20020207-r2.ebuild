@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20020207-r2.ebuild,v 1.5 2006/07/15 16:29:14 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20020207-r2.ebuild,v 1.6 2007/07/22 04:24:27 omp Exp $
 
 inherit eutils
 
@@ -13,10 +13,7 @@ SLOT="0"
 KEYWORDS="ppc sparc x86"
 IUSE=""
 
-RDEPEND="|| (
-	x11-libs/libX11
-	virtual/x11
-	)"
+RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}"
 
 src_unpack() {

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/lwm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/ChangeLog,v 1.18 2007/02/21 22:39:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/ChangeLog,v 1.19 2007/07/22 04:22:21 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> lwm-1.2.1.ebuild:
+  Remove virtual/x11 from dependencies.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
