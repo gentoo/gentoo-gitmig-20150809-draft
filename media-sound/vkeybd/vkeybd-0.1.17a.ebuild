@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.17a.ebuild,v 1.1 2006/11/25 11:17:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.17a.ebuild,v 1.2 2007/07/22 08:38:31 drac Exp $
 
 inherit toolchain-funcs eutils
 
@@ -17,16 +17,14 @@ KEYWORDS="~amd64 ~sparc ~x86"
 RDEPEND="alsa? ( >=media-libs/alsa-lib-0.5.0 )
 	>=dev-lang/tk-8.3
 	ladcca? ( >=media-libs/ladcca-0.3.1 )
-	|| ( x11-libs/libX11 virtual/x11 )"
-
+	x11-libs/libX11"
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xf86bigfontproto
-			x11-proto/bigreqsproto
-			x11-proto/xextproto
-			x11-proto/xcmiscproto )
-		virtual/x11 )"
+	x11-proto/xf86bigfontproto
+	x11-proto/bigreqsproto
+	x11-proto/xextproto
+	x11-proto/xcmiscproto"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}"/${PN}
 
 pkg_setup() {
 	TCL_VERSION=`echo 'puts [info tclversion]' | tclsh`
@@ -52,15 +50,14 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-makefile.patch"
+	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
 src_compile() {
-	emake ${myconf} EXTRACFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "Make failed."
+	emake ${myconf} EXTRACFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed."
 }
 
 src_install() {
-	emake ${myconf} DESTDIR="${D}" install-all || die "Installation Failed"
+	emake ${myconf} DESTDIR="${D}" install-all || die "emake install failed."
 	dodoc README ChangeLog
 }
