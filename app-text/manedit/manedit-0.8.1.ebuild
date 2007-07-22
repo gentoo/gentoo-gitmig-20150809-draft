@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.8.1.ebuild,v 1.2 2007/02/19 22:30:29 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.8.1.ebuild,v 1.3 2007/07/22 10:22:14 omp Exp $
 
 inherit eutils
 
@@ -16,10 +16,7 @@ IUSE=""
 RDEPEND="=x11-libs/gtk+-1*
 	sys-libs/zlib
 	app-arch/bzip2
-	|| ( ( x11-libs/libXi
-		)
-		virtual/x11
-	)"
+	x11-libs/libXi"
 
 DEPEND="${RDEPEND}"
 

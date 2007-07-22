@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.55.ebuild,v 1.5 2007/07/04 06:36:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.55.ebuild,v 1.6 2007/07/22 10:18:54 omp Exp $
 
 WANT_AUTOMAKE=1.6
 inherit autotools elisp-common eutils versionator flag-o-matic
@@ -26,7 +26,7 @@ DEP="virtual/libc
 	>=media-libs/libpng-1.2.5
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7
-	X? ( || ( x11-libs/libXt virtual/x11 ) )
+	X? ( x11-libs/libXt )
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	cups? ( >=net-print/cups-1.1.20 )
 	jpeg2k? ( media-libs/jasper )

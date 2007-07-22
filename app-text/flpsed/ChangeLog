@@ -1,6 +1,11 @@
 # ChangeLog for app-text/flpsed
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.12 2007/03/12 23:51:17 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.13 2007/07/22 10:14:31 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> flpsed-0.3.ebuild,
+  flpsed-0.3.2.ebuild, flpsed-0.3.4.ebuild, flpsed-0.3.5.ebuild,
+  flpsed-0.3.7.ebuild:
+  Remove virtual/x11 from dependencies.
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
