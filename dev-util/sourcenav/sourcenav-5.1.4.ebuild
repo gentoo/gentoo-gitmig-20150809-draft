@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.1.4.ebuild,v 1.10 2006/07/20 04:58:45 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.1.4.ebuild,v 1.11 2007/07/22 07:18:14 graaff Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -17,19 +17,13 @@ KEYWORDS="amd64 sparc ppc ppc64 x86"
 IUSE=""
 SN="/opt/sourcenav"
 
-RDEPEND="|| (
-	  ( x11-libs/libX11
-	    x11-libs/libXdmcp
-	    x11-libs/libXaw )
-	virtual/x11
-	)
+RDEPEND="x11-libs/libX11
+	x11-libs/libXdmcp
+	x11-libs/libXaw
 	sys-libs/glibc"
 
 DEPEND="${RDEPEND}
-	|| (
-	 ( x11-proto/xproto )
-	virtual/x11
-	)"
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${A}

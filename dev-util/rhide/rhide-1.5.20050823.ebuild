@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.8 2007/07/12 01:05:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.9 2007/07/22 07:21:22 graaff Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -49,11 +49,10 @@ RDEPEND="virtual/libc
 	>=sys-libs/gpm-1.20.0
 	>=sys-libs/ncurses-5.2
 	aalib? ( media-libs/aalib )
-	X? ( || ( ( x11-libs/libX11
-		x11-libs/libXmu ) virtual/x11 ) )
+	X? ( x11-libs/libX11	x11-libs/libXmu )
 	>=sys-apps/sed-4.0.7"
 DEPEND="${RDEPEND}
-	X? ( || ( x11-proto/xproto virtual/x11 ) )"
+	X? ( x11-proto/xproto )"
 
 TV_S="${WORKDIR}/tvision"
 SE_S="${WORKDIR}/setedit"

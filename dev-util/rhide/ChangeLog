@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rhide
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/ChangeLog,v 1.22 2007/06/25 10:54:44 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/ChangeLog,v 1.23 2007/07/22 07:21:22 graaff Exp $
+
+  22 Jul 2007; Hans de Graaff <graaff@gentoo.org> rhide-1.5.20050823.ebuild:
+  Drop virtual/x11 references.
 
   25 Jun 2007; Piotr Jaroszyński <peper@gentoo.org>
   rhide-1.5.20050823.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.11.ebuild,v 1.12 2006/08/28 18:56:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.11.ebuild,v 1.13 2007/07/22 07:26:22 graaff Exp $
 
 inherit eutils
 
@@ -13,11 +13,8 @@ LICENSE="GPL-2 LGPL-2.1 FDL-1.1"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="|| ( ( x11-libs/libXaw
-			x11-libs/libXp
-		)
-		virtual/x11
-	)
+DEPEND="x11-libs/libXaw
+	x11-libs/libXp
 	>=sys-devel/gcc-3
 	>=sys-devel/gdb-6.4
 	virtual/motif"
