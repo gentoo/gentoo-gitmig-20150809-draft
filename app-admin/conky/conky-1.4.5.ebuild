@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.5.ebuild,v 1.10 2007/07/17 15:05:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.5.ebuild,v 1.11 2007/07/22 08:19:13 omp Exp $
 
 inherit eutils
 # used for epause
@@ -17,16 +17,13 @@ IUSE="truetype X ipv6 audacious bmpx hddtemp mpd vim-syntax"
 DEPEND_COMMON="
 	virtual/libc
 	X? (
-		|| ( ( x11-libs/libICE
-				x11-libs/libXext
-				x11-libs/libX11
-				x11-libs/libSM
-				x11-libs/libXrender
-				x11-libs/libXdamage
-				x11-libs/libXft
-				)
-				virtual/x11
-		)
+		x11-libs/libICE
+		x11-libs/libXext
+		x11-libs/libX11
+		x11-libs/libSM
+		x11-libs/libXrender
+		x11-libs/libXdamage
+		x11-libs/libXft
 		truetype? ( >=media-libs/freetype-2 )
 		audacious? ( >=media-sound/audacious-0.1 )
 		bmpx? ( media-sound/bmpx
@@ -43,12 +40,9 @@ RDEPEND="${DEPEND_COMMON}
 DEPEND="
 	${DEPEND_COMMON}
 	X? (
-		|| ( ( x11-libs/libXt
-				x11-proto/xextproto
-				x11-proto/xproto
-				)
-				virtual/x11
-		)
+		x11-libs/libXt
+		x11-proto/xextproto
+		x11-proto/xproto
 	)"
 
 src_compile() {
