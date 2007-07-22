@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-1.0-r3.ebuild,v 1.11 2006/11/26 23:10:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-1.0-r3.ebuild,v 1.12 2007/07/22 07:33:43 dirtyepic Exp $
 
 inherit eutils
 
@@ -15,9 +15,8 @@ LICENSE="freedist"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
-DEPEND="dev-lang/perl
-		|| ( x11-apps/bdftopcf virtual/x11 )
-		X? ( || ( x11-apps/mkfontdir virtual/x11 ) )"
+DEPEND="x11-apps/bdftopcf
+		x11-apps/mkfontdir"
 RDEPEND=""
 
 FONTPATH="/usr/share/fonts/${PN}"

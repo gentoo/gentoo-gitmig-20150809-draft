@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/unifont
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.24 2006/11/26 23:10:12 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.25 2007/07/22 07:33:43 dirtyepic Exp $
+
+  22 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> -unifont-1.0-r2.ebuild,
+  unifont-1.0-r3.ebuild:
+  Remove virtual/x11, old version.
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> unifont-1.0-r3.ebuild:
   Add ~x86-fbsd keyword, restrict binchecks and strip.
