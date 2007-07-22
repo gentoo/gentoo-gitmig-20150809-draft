@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.20 2007/07/13 06:25:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.21 2007/07/22 08:58:59 graaff Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -57,7 +57,7 @@ RDEPEND="
 	>=dev-lang/perl-5.6.1
 	>=dev-libs/gmp-4.1
 	>=sys-libs/readline-4.2
-	X? ( || ( x11-libs/libX11 virtual/x11 ) )
+	X? ( x11-libs/libX11 )
 	opengl? ( virtual/opengl
 			  virtual/glu virtual/glut
 			  openal? ( media-libs/openal media-libs/freealut ) )"

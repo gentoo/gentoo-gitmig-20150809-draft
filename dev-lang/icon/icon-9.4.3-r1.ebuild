@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.4.3-r1.ebuild,v 1.1 2006/04/01 12:22:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.4.3-r1.ebuild,v 1.2 2007/07/22 08:53:40 graaff Exp $
 
 MY_PV=${PV//./}
 SRC_URI="http://www.cs.arizona.edu/icon/ftp/packages/unix/icon.v${MY_PV}src.tgz"
@@ -9,19 +9,16 @@ DESCRIPTION="very high level language"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc-macos ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 IUSE="X iplsrc"
 
 S=${WORKDIR}/icon.v${MY_PV}src
 
-DEPEND="X? ( || (
-		( x11-proto/xextproto
+DEPEND="X? ( x11-proto/xextproto
 			x11-proto/xproto
 			x11-libs/libX11
 			x11-libs/libXpm
 			x11-libs/libXt )
-		virtual/x11 )
-	)
 	sys-devel/gcc"
 
 src_compile() {
