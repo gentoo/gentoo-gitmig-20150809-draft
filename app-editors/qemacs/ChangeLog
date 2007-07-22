@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.27 2007/06/24 21:05:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.28 2007/07/22 08:58:00 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> qemacs-0.3.1-r3.ebuild:
+  Remove virtual/x11 from dependencies.
 
   24 Jun 2007; Ulrich Mueller <ulm@gentoo.org> qemacs-0.3.1-r3.ebuild,
   qemacs-0.3.2_pre20070226.ebuild:

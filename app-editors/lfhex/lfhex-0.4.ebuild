@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.4.ebuild,v 1.2 2007/07/13 05:34:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.4.ebuild,v 1.3 2007/07/22 08:56:15 omp Exp $
 
 inherit qt4 toolchain-funcs
 
@@ -14,9 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="$(qt4_min_version 4)
-	|| (
-	( >=x11-libs/libXt-1.0.0 )
-	virtual/x11 )"
+	>=x11-libs/libXt-1.0.0"
 
 DEPEND="sys-devel/flex
 	sys-devel/bison

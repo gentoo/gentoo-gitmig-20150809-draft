@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r3.ebuild,v 1.7 2007/06/24 21:05:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r3.ebuild,v 1.8 2007/07/22 08:58:00 omp Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -15,12 +15,11 @@ IUSE="X png unicode xv"
 
 # For those so inclined, the libXv dep can probably
 # be made conditional on the xv USE flag somehow.
-RDEPEND="X? ( || ( x11-libs/libXv virtual/x11 ) )
+RDEPEND="X? ( x11-libs/libXv )
 	png? ( =media-libs/libpng-1.2* )"
 DEPEND="${RDEPEND}
-	X? ( || ( ( x11-libs/libXft
-				x11-proto/xextproto )
-			virtual/x11 ) )"
+	X? ( x11-libs/libXft
+		x11-proto/xextproto )"
 PROVIDE="virtual/editor"
 
 src_unpack() {

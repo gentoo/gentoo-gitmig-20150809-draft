@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.4d-r1.ebuild,v 1.2 2006/01/27 00:46:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.4d-r1.ebuild,v 1.3 2007/07/22 09:00:58 omp Exp $
 
 inherit eutils versionator
 
@@ -23,15 +23,13 @@ IUSE="perl"
 #virtual/x11
 RDEPEND="perl? ( dev-lang/perl )
 	=app-editors/vile-${MY_PV}$(get_version_component_range 3)
-	|| (
-	( >=x11-libs/libX11-1.0.0
+	>=x11-libs/libX11-1.0.0
 	>=x11-libs/libXt-1.0.0
 	>=x11-libs/libICE-1.0.0
 	>=x11-libs/libSM-1.0.0
 	>=x11-libs/libXaw-1.0.1
 	>=x11-libs/libXpm-3.5.4.2
-	>=x11-proto/xproto-7.0.4 )
-	virtual/x11 )"
+	>=x11-proto/xproto-7.0.4"
 DEPEND="${RDEPEND}
 	sys-devel/flex"
 

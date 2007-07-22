@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.3.7.1.ebuild,v 1.2 2006/01/22 01:39:07 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.3.7.1.ebuild,v 1.3 2007/07/22 08:56:15 omp Exp $
 
 inherit eutils
 
@@ -14,9 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="=x11-libs/qt-3*
-	|| (
-	( >=x11-libs/libXt-1.0.0 )
-	virtual/x11 )"
+	>=x11-libs/libXt-1.0.0"
 
 DEPEND="${RDEPEND}
 	sys-devel/flex
