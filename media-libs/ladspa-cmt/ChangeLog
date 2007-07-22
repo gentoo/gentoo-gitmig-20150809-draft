@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.23 2007/07/02 15:53:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.24 2007/07/22 08:26:23 corsair Exp $
+
+  22 Jul 2007; Markus Rothe <corsair@gentoo.org> ladspa-cmt-1.15.ebuild:
+  Added ~ppc64; bug #183570
 
   02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Hand to newly-born proaudio herd.
