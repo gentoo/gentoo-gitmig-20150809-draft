@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.98 2007/07/19 21:59:57 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.99 2007/07/22 10:28:35 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; exim-4.60-r1.ebuild,
+  exim-4.62.ebuild, exim-4.66.ebuild, exim-4.67.ebuild, exim-4.67-r1.ebuild,
+  exim-4.67-r2.ebuild:
+  Drop virtual/x11 references.
 
 *exim-4.67-r2 (19 Jul 2007)
 

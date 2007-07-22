@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.67-r2.ebuild,v 1.1 2007/07/19 21:59:57 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.67-r2.ebuild,v 1.2 2007/07/22 10:28:35 dberkholz Exp $
 
 inherit eutils
 
@@ -29,12 +29,11 @@ DEPEND=">=sys-apps/sed-4.0.5
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.14 )
 	spf? ( >=mail-filter/libspf2-1.2.5-r1 )
 	srs? ( mail-filter/libsrs_alt )
-	X? ( || ( (	x11-proto/xproto
-			x11-libs/libX11
-			x11-libs/libXmu
-			x11-libs/libXt
-			x11-libs/libXaw )
-		virtual/x11 )
+	X? ( x11-proto/xproto
+		x11-libs/libX11
+		x11-libs/libXmu
+		x11-libs/libXt
+		x11-libs/libXaw
 	)
 	sqlite? ( dev-db/sqlite )
 	radius? ( net-dialup/radiusclient )
