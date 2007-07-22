@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2-r2.ebuild,v 1.6 2007/02/10 15:39:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2-r2.ebuild,v 1.7 2007/07/22 09:08:08 graaff Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -21,13 +21,8 @@ IUSE="cairo gnome seamonkey opengl"
 COMMON=">=dev-libs/glib-2.6
 		>=x11-libs/gtk+-2.6.8
 		>=dev-libs/atk-1.10.2
-		||	(
-				(
-					x11-libs/libX11
-					x11-libs/libXtst
-				)
-				virtual/x11
-			)
+		x11-libs/libX11
+		x11-libs/libXtst
 		cairo? ( >=x11-libs/cairo-1.0.2 )
 		gnome?	(
 					=gnome-base/libgnome-2*
