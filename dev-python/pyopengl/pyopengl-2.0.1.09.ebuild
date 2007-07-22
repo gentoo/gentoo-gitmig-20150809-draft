@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.1.09.ebuild,v 1.12 2006/09/12 14:18:01 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.1.09.ebuild,v 1.13 2007/07/22 07:45:06 graaff Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
@@ -18,11 +18,8 @@ IUSE=""
 
 DEPEND="virtual/python
 	virtual/glut
-	|| ( ( x11-libs/libXi
-			x11-libs/libXmu
-		)
-		virtual/x11
-	)
+	x11-libs/libXi
+	x11-libs/libXmu
 	virtual/opengl"
 
 src_unpack() {
