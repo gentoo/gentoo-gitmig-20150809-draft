@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-slide-webdavclient/jakarta-slide-webdavclient-2.1-r2.ebuild,v 1.1 2007/07/22 10:08:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-slide-webdavclient/jakarta-slide-webdavclient-2.1-r2.ebuild,v 1.2 2007/07/22 10:10:34 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
 MY_P="${PN}-src-${PV}"
-DESCRIPTION="! Slide is a content repository which can serve as a basis for a content management system / framework and other purposes"
+DESCRIPTION="A content repository"
 HOMEPAGE="http://jakarta.apache.org/slide/index.html"
 SRC_URI="http://archive.apache.org/dist/jakarta/slide/source/${MY_P}.tar.gz"
 
