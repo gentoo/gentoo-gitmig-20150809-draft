@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.ebuild,v 1.2 2007/07/13 05:03:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.ebuild,v 1.3 2007/07/22 09:01:22 dberkholz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,17 +17,14 @@ KEYWORDS="~x86 ~amd64"
 
 # missing dependencies commons-compress, TVAnytimeAPI, jRegistryKey , gdata-calendar, gdata-client and jcom
 
-RDEPEND="|| ( ( x11-libs/libXt
-			x11-libs/libSM
-			x11-libs/libICE
-			x11-libs/libXext
-			x11-libs/libXtst
-			x11-libs/libX11
-			x11-libs/libXau
-			x11-libs/libXdmcp
-		)
-		virtual/x11
-	)
+RDEPEND="x11-libs/libXt
+	x11-libs/libSM
+	x11-libs/libICE
+	x11-libs/libXext
+	x11-libs/libXtst
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
 	>=virtual/jre-1.5
 	dev-java/junit
 	dev-java/commons-net

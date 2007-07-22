@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2.ebuild,v 1.9 2007/05/01 00:32:48 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2.ebuild,v 1.10 2007/07/22 09:05:57 dberkholz Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=2.5
@@ -16,17 +16,16 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="nls xinerama"
 
-RDEPEND="|| ( ( x11-libs/libSM
-				x11-libs/libICE
-				x11-libs/libX11
-				x11-libs/libXext
-				x11-libs/libXv
-				x11-libs/libXxf86vm
-				xinerama? ( x11-libs/libXinerama )
-				x11-libs/libXtst
-				x11-libs/libXau
-				x11-libs/libXdmcp )
-			<virtual/x11-7 )
+RDEPEND="x11-libs/libSM
+	x11-libs/libICE
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXv
+	x11-libs/libXxf86vm
+	xinerama? ( x11-libs/libXinerama )
+	x11-libs/libXtst
+	x11-libs/libXau
+	x11-libs/libXdmcp
 	>=media-libs/freetype-2
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.2

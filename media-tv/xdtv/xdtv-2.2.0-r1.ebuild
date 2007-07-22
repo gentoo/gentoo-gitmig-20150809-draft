@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.15 2007/06/12 14:01:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.16 2007/07/22 09:03:16 dberkholz Exp $
 
 WANT_AUTOMAKE="1.7"
 WANT_AUTOCONF="2.5"
@@ -87,23 +87,22 @@ RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 	jpeg? ( media-libs/jpeg )
 	lirc? ( app-misc/lirc )
 	alsa? ( >=media-libs/alsa-lib-0.9 )
-	|| ( ( x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXpm
-		x11-libs/libXt
-		x11-libs/libICE
-		x11-libs/libXmu
-		x11-libs/libXxf86vm
-		x11-libs/libXxf86dga
-		x11-libs/libSM
-		x11-libs/libXaw
-		x11-libs/libXv )
-		<virtual/x11-7 )
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXpm
+	x11-libs/libXt
+	x11-libs/libICE
+	x11-libs/libXmu
+	x11-libs/libXxf86vm
+	x11-libs/libXxf86dga
+	x11-libs/libSM
+	x11-libs/libXaw
+	x11-libs/libXv
 	"
 
 DEPEND="${RDEPEND}
 	dvb? ( media-tv/linuxtv-dvb-headers )
-	|| ( x11-proto/videoproto <virtual/x11-7 )"
+	x11-proto/videoproto"
 
 FONT_S="${S}/font"
 FONT_SUFFIX="pcf.gz"

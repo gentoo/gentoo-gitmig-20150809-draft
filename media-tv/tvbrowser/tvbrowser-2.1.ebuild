@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.1.ebuild,v 1.5 2007/01/06 10:04:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.1.ebuild,v 1.6 2007/07/22 09:01:22 dberkholz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -15,17 +15,14 @@ themes? ( http://www.tvbrowser.org/downloads/themepacks/allthemepacks.zip )"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-RDEPEND="|| ( ( x11-libs/libXt
-			x11-libs/libSM
-			x11-libs/libICE
-			x11-libs/libXext
-			x11-libs/libXtst
-			x11-libs/libX11
-			x11-libs/libXau
-			x11-libs/libXdmcp
-		)
-		virtual/x11
-	)
+RDEPEND="x11-libs/libXt
+	x11-libs/libSM
+	x11-libs/libICE
+	x11-libs/libXext
+	x11-libs/libXtst
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
 	>=virtual/jre-1.4
 	dev-java/junit
 	dev-java/commons-net

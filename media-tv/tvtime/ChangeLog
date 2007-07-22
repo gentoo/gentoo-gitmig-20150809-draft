@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.39 2007/05/01 00:32:48 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.40 2007/07/22 09:05:57 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; tvtime-1.0.2.ebuild,
+  tvtime-1.0.2-r1.ebuild:
+  Drop virtual/x11 references.
 
   01 May 2007; Marius Mauch <genone@gentoo.org> tvtime-1.0.2.ebuild,
   tvtime-1.0.2-r1.ebuild:

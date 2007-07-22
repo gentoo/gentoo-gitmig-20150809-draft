@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuppelvideo/nuppelvideo-0.53a.ebuild,v 1.2 2006/11/13 12:08:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuppelvideo/nuppelvideo-0.53a.ebuild,v 1.3 2007/07/22 09:06:38 dberkholz Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -13,7 +13,7 @@ SLOT="0"
 IUSE=""
 
 KEYWORDS="~x86"
-DEPEND="|| ( x11-libs/libXext <virtual/x11-7 )"
+DEPEND="x11-libs/libXext"
 RDEPEND="${DEPEND}
 	media-sound/toolame
 	media-video/mjpegtools

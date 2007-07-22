@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/tvbrowser
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.16 2007/05/18 17:47:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.17 2007/07/22 09:01:22 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; tvbrowser-2.1.ebuild,
+  tvbrowser-2.2.1.ebuild, tvbrowser-2.5.ebuild, tvbrowser-2.5-r1.ebuild:
+  Drop virtual/x11 references.
 
   18 May 2007; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Changing herd to java.

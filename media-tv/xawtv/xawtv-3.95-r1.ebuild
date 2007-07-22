@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.22 2007/03/02 17:26:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.23 2007/07/22 09:04:44 dberkholz Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -24,23 +24,22 @@ KEYWORDS="alpha amd64 ia64 ~ppc ~sparc x86"
 
 RDEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/jpeg-6b
-	X? ( || ( (
-			x11-libs/libFS
-			x11-libs/libXmu
-			x11-libs/libX11
-			x11-libs/libXaw
-			x11-libs/libXt
-			x11-libs/libXext
-			x11-libs/libXrender
-			xext? (
-				x11-libs/libXinerama
-				x11-libs/libXxf86dga
-				x11-libs/libXrandr
-				x11-libs/libXxf86vm
-			)
-			x11-apps/xset
-			xv? ( x11-libs/libXv )
-		) <virtual/x11-7 )
+	X? (
+		x11-libs/libFS
+		x11-libs/libXmu
+		x11-libs/libX11
+		x11-libs/libXaw
+		x11-libs/libXt
+		x11-libs/libXext
+		x11-libs/libXrender
+		xext? (
+			x11-libs/libXinerama
+			x11-libs/libXxf86dga
+			x11-libs/libXrandr
+			x11-libs/libXxf86vm
+		)
+		x11-apps/xset
+		xv? ( x11-libs/libXv )
 	)
 	motif? ( x11-libs/openmotif
 		app-text/recode )
@@ -54,13 +53,12 @@ RDEPEND=">=sys-libs/ncurses-5.1
 		media-libs/libpng )"
 
 DEPEND="${RDEPEND}
-	X? ( || ( (
-				x11-apps/xset
-				x11-apps/bdftopcf
-				x11-proto/videoproto
-				xext? ( x11-proto/xineramaproto )
-			) <virtual/x11-7 )
-		)"
+	X? (
+		x11-apps/xset
+		x11-apps/bdftopcf
+		x11-proto/videoproto
+		xext? ( x11-proto/xineramaproto )
+	)"
 
 pkg_setup() {
 	if use X; then

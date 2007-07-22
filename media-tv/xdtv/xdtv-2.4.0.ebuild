@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.3 2007/07/13 05:03:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.4 2007/07/22 09:03:16 dberkholz Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs
 
@@ -32,7 +32,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 COMMON_DEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 	neXt? ( x11-libs/neXtaw )
 	Xaw3d? ( !neXt? ( x11-libs/Xaw3d ) )
-	!neXt? ( !Xaw3d? ( || ( x11-libs/libXaw <virtual/x11-7 ) ) )
+	!neXt? ( !Xaw3d? ( x11-libs/libXaw ) )
 	xvid? ( >=media-libs/xvid-1.1 )
 	encode? ( >=media-sound/lame-3.93 )
 	jpeg? ( media-libs/jpeg )
@@ -43,29 +43,27 @@ COMMON_DEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 		media-libs/libvorbis )
 	png? ( media-libs/libpng )
 	nls? ( virtual/libintl )
-	|| ( ( x11-libs/libX11
-			x11-libs/libXext
-			x11-libs/libXpm
-			x11-libs/libXt
-			x11-libs/libXmu
-			x11-libs/libXxf86vm
-			x11-libs/libXxf86dga
-			x11-libs/libXv
-			x11-apps/xset
-			xinerama? ( x11-libs/libXinerama )
-		) <virtual/x11-7 )
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXpm
+	x11-libs/libXt
+	x11-libs/libXmu
+	x11-libs/libXxf86vm
+	x11-libs/libXxf86dga
+	x11-libs/libXv
+	x11-apps/xset
+	xinerama? ( x11-libs/libXinerama )
 	ffmpeg? ( media-video/ffmpeg )"
 
 DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )
-	|| ( ( x11-proto/videoproto
-			x11-proto/xproto
-			x11-proto/xextproto
-			x11-apps/bdftopcf
-			x11-apps/mkfontdir
-			x11-apps/mkfontscale
-			xinerama? ( x11-proto/xineramaproto )
-		) <virtual/x11-7 )"
+	x11-proto/videoproto
+	x11-proto/xproto
+	x11-proto/xextproto
+	x11-apps/bdftopcf
+	x11-apps/mkfontdir
+	x11-apps/mkfontscale
+	xinerama? ( x11-proto/xineramaproto )"
 
 RDEPEND="${COMMON_DEPEND}
 	schedule? ( sys-process/at )"

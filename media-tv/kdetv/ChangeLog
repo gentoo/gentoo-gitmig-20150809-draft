@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/kdetv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.30 2007/05/15 15:49:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.31 2007/07/22 09:07:56 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  kdetv-0.8.8-r1.ebuild, kdetv-0.8.9.ebuild:
+  Drop virtual/x11 references.
 
   15 May 2007; Christian Faulhammer <opfer@gentoo.org>
   kdetv-0.8.8-r1.ebuild, kdetv-0.8.9.ebuild:
