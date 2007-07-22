@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-1.7.ebuild,v 1.4 2007/07/12 03:41:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-1.7.ebuild,v 1.5 2007/07/22 04:44:15 omp Exp $
 
 inherit autotools eutils
 
@@ -14,30 +14,20 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~hppa ~ppc x86"
 
-RDEPEND="|| ( (
-				xpm? ( x11-libs/libXpm )
-				truetype? ( x11-libs/libXft )
-				xinerama? ( x11-libs/libXinerama )
-				x11-libs/libXext
-				x11-libs/libXrender
-				x11-libs/libXau
-				x11-libs/libXdmcp
-				)
-				virtual/x11
-			)
-		truetype? ( virtual/xft )
-		png? ( media-libs/libpng )
-		bidi? ( dev-libs/fribidi )
-		dev-libs/expat"
-
+RDEPEND="xpm? ( x11-libs/libXpm )
+	xinerama? ( x11-libs/libXinerama )
+	x11-libs/libXext
+	x11-libs/libXrender
+	x11-libs/libXau
+	x11-libs/libXdmcp
+	truetype? ( virtual/xft )
+	png? ( media-libs/libpng )
+	bidi? ( dev-libs/fribidi )
+	dev-libs/expat"
 DEPEND="${RDEPEND}
-		|| ( (
-				x11-proto/xproto
-				x11-proto/xextproto
-				xinerama? ( x11-proto/xineramaproto )
-			)
-			virtual/x11
-			)"
+	x11-proto/xproto
+	x11-proto/xextproto
+	xinerama? ( x11-proto/xineramaproto )"
 
 src_compile() {
 	econf \
