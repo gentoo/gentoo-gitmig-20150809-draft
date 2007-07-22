@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-atmo
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atmo/ChangeLog,v 1.1 2007/07/22 15:50:38 hd_brummy Exp $
+
+*vdr-atmo-0.1.1 (22 Jul 2007)
+
+  22 Jul 2007; Joerg Bornkessel <hd_brummy@gentoo.org> +files/confd,
+  +files/rc-addon.sh, +metadata.xml, +vdr-atmo-0.1.1.ebuild:
+  initial ebuild; thx to C. Gmeiner (Proxied Maintainer)
+
