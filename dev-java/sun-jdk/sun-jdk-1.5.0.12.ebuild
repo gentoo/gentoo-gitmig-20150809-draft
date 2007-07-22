@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.12.ebuild,v 1.3 2007/07/15 01:46:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.12.ebuild,v 1.4 2007/07/22 09:33:41 graaff Exp $
 
 inherit java-vm-2 eutils pax-utils
 
@@ -128,7 +128,7 @@ pkg_postinst() {
 	java-vm-2_pkg_postinst
 
 	if ! use X; then
-		local xwarn="virtual/x11 and/or"
+		local xwarn="X11 libraries and/or"
 	fi
 
 	echo

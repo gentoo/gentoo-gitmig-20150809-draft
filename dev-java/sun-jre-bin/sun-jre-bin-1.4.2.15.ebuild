@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.15.ebuild,v 1.2 2007/07/02 18:57:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.15.ebuild,v 1.3 2007/07/22 09:29:36 graaff Exp $
 
 inherit eutils pax-utils java-vm-2
 
@@ -123,7 +123,7 @@ pkg_postinst () {
 
 	if ! use X; then
 		echo
-		ewarn "Some parts of Sun's JDK require virtual/x11 to be installed."
+		ewarn "Some parts of Sun's JDK require X11 libraries to be installed."
 		ewarn "Be careful which Java libraries you attempt to use."
 	fi
 }
