@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.13.ebuild,v 1.1 2007/07/22 09:23:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.13.ebuild,v 1.2 2007/07/22 18:59:29 dertobi123 Exp $
 
 inherit autotools eutils ssl-cert fixheadtails pam
 
@@ -187,11 +187,7 @@ src_unpack() {
 
 	# Recreate configure.
 	WANT_AUTOCONF="2.5"
-#	rm -rf configure config.h.in autom4te.cache || die
-#	ebegin "Recreating configure"
-#	sh SMakefile &>/dev/null || die "SMakefile failed"
-#	eend $?
-	eautoreconf 
+	eautoreconf
 
 	# When linking with rpm, you need to link with more libraries.
 	sed -i -e "s:lrpm:lrpm -lrpmio -lrpmdb:" configure || die "sed failed"
