@@ -1,6 +1,6 @@
 # Copyright 2006-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xoo/xoo-0.7.ebuild,v 1.2 2007/03/13 03:33:30 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xoo/xoo-0.7.ebuild,v 1.3 2007/07/22 03:58:23 dberkholz Exp $
 
 DESCRIPTION="Xoo is a graphical wrapper around xnest. You can make Xnest look like a particular device's display and set up buttons on that device."
 HOMEPAGE="http://projects.o-hand.com/xoo"
@@ -13,9 +13,8 @@ IUSE="gnome"
 
 DEPEND="gnome? ( gnome-base/gconf )
 	gnome-base/libglade
-	|| ( (  x11-libs/libXtst
-		x11-base/xorg-server )
-		virtual/x11 )"
+	x11-libs/libXtst
+	x11-base/xorg-server"
 
 src_unpack() {
 	unpack ${A}

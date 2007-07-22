@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/pogo-2.2.ebuild,v 1.12 2006/06/29 16:00:08 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/pogo-2.2.ebuild,v 1.13 2007/07/22 03:56:37 dberkholz Exp $
 
 IUSE=""
 
@@ -12,15 +12,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXext )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXext"
 DEPEND="${RDEPEND}
-	|| ( (
-		x11-proto/xproto
-		x11-proto/xextproto )
-	virtual/x11 )
+	x11-proto/xproto
+	x11-proto/xextproto
 	media-libs/imlib
 	media-libs/jpeg
 	>=sys-apps/sed-4"

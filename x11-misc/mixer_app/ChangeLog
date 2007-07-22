@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/mixer_app
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.18 2007/01/04 23:19:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.19 2007/07/22 03:59:10 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  mixer_app-1.8.0.ebuild:
+  Drop virtual/x11 references.
 
   04 Jan 2007; Steve Dibb <beandog@gentoo.org> mixer_app-1.8.0.ebuild:
   Add ~amd64, bug 155155

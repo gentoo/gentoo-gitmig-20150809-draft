@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/electricsheep
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.39 2007/04/14 00:02:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.40 2007/07/22 04:04:00 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  electricsheep-2.6.7-r1.ebuild, electricsheep-2.6.8.ebuild:
+  Drop virtual/x11 references.
 
   14 Apr 2007; <dan@gentoo.org> electricsheep-2.6.7-r1.ebuild,
   electricsheep-2.6.8.ebuild:

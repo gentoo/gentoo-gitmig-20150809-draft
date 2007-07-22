@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre1.ebuild,v 1.5 2007/06/26 02:59:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre1.ebuild,v 1.6 2007/07/22 04:01:47 dberkholz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ IUSE=""
 DEPEND=">=dev-lang/python-2.3
 	   sys-apps/pciutils"
 RDEPEND=">=dev-lang/python-2.3
-		 || ( x11-base/xorg-server virtual/x11 )"
+		 x11-base/xorg-server"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 src_unpack() {
