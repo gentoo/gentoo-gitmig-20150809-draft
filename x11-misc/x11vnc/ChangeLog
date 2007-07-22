@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.45 2007/07/22 17:10:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.46 2007/07/22 21:36:19 jer Exp $
+
+  22 Jul 2007; Jeroen Roovers <jer@gentoo.org> x11vnc-0.9.1.ebuild:
+  Stable for HPPA (bug #179237).
 
   22 Jul 2007; Joseph Jezak <josejx@gentoo.org> x11vnc-0.9.1.ebuild:
   Marked ppc stable for bug #179237.
