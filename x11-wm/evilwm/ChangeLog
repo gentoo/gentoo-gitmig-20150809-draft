@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/evilwm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.39 2007/06/29 14:50:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.40 2007/07/22 03:54:17 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> evilwm-0.99.25.ebuild:
+  Remove virtual/x11 from dependencies.
 
 *evilwm-1.0.0 (29 Jun 2007)
 
