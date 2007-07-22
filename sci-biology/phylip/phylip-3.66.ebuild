@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.66.ebuild,v 1.1 2006/09/13 04:26:37 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.66.ebuild,v 1.2 2007/07/22 07:31:51 dberkholz Exp $
 
 inherit toolchain-funcs
 
@@ -13,12 +13,10 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~ppc ~ppc-macos ~x86"
 
-RDEPEND="|| ( x11-libs/libXaw
-	virtual/x11 )"
+RDEPEND="x11-libs/libXaw"
 
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xproto
-		virtual/x11 )"
+	x11-proto/xproto"
 
 S="${WORKDIR}/${PN}${PV}/src"
 
