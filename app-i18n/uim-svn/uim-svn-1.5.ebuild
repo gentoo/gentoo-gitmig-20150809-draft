@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-1.5.ebuild,v 1.2 2007/06/24 15:55:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-1.5.ebuild,v 1.3 2007/07/22 09:41:19 calchan Exp $
 
 inherit elisp-common flag-o-matic kde-functions multilib subversion
 
@@ -23,23 +23,17 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-lang/ruby
 	app-text/asciidoc
-	X? ( || ( (
-				x11-proto/xextproto
-				x11-proto/xproto
-			  )
-	   	 	  virtual/x11 ) )
+	X? ( x11-proto/xextproto
+		x11-proto/xproto )
 	nls? ( virtual/libintl )"
 RDEPEND="!app-i18n/uim
-	X? ( || ( (
-	   	 	    x11-libs/libX11
-				x11-libs/libXft
-				x11-libs/libXt
-				x11-libs/libICE
-				x11-libs/libSM
-				x11-libs/libXext
-				x11-libs/libXrender
-			  )
-		   	  virtual/x11 ) )
+	X? ( x11-libs/libX11
+		x11-libs/libXft
+		x11-libs/libXt
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libXext
+		x11-libs/libXrender )
 	anthy? ( || ( app-i18n/anthy app-i18n/anthy-ss ) )
 	canna? ( app-i18n/canna )
 	eb? ( dev-libs/eb )
@@ -176,4 +170,4 @@ pkg_postrm() {
 
 }
 
-# $Id: uim-svn-1.5.ebuild,v 1.2 2007/06/24 15:55:33 matsuu Exp $
+# $Id: uim-svn-1.5.ebuild,v 1.3 2007/07/22 09:41:19 calchan Exp $

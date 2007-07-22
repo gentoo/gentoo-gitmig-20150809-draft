@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/xvnkb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/ChangeLog,v 1.15 2007/01/05 16:37:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/ChangeLog,v 1.16 2007/07/22 09:53:17 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> xvnkb-0.2.8a-r1.ebuild,
+  xvnkb-0.2.9.ebuild, xvnkb-0.2.9a.ebuild:
+  Drop virtual/x11 dependency.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> xvnkb-0.2.8a-r1.ebuild,
   xvnkb-0.2.9.ebuild, xvnkb-0.2.9a.ebuild:

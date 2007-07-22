@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.0.ebuild,v 1.2 2007/04/03 14:24:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.0.ebuild,v 1.3 2007/07/22 09:38:03 calchan Exp $
 
 inherit eutils qt3 multilib elisp-common flag-o-matic
 
@@ -13,16 +13,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="anthy canna eb emacs gnome gtk kde libedit m17n-lib ncurses nls prime qt3 X"
 
-RDEPEND="X? ( || ( (
-			x11-libs/libX11
-			x11-libs/libXft
-			x11-libs/libXt
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libXext
-			x11-libs/libXrender
-		)
-		<virtual/x11-7 ) )
+RDEPEND="X? ( x11-libs/libX11
+		x11-libs/libXft
+		x11-libs/libXt
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libXext
+		x11-libs/libXrender )
 	anthy? ( || ( app-i18n/anthy app-i18n/anthy-ss ) )
 	canna? ( app-i18n/canna )
 	eb? ( dev-libs/eb )
@@ -40,11 +37,8 @@ RDEPEND="X? ( || ( (
 	!<app-i18n/prime-0.9.4"
 
 DEPEND="${RDEPEND}
-	X? ( || ( (
-			x11-proto/xextproto
-			x11-proto/xproto
-		)
-		<virtual/x11-7 ) )"
+	X? ( x11-proto/xextproto
+		x11-proto/xproto )"
 
 pkg_setup() {
 	if use qt3 && ! built_with_use =x11-libs/qt-3* immqt-bc && ! built_with_use =x11-libs/qt-3* immqt; then

@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim-svn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.28 2007/06/24 15:55:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.29 2007/07/22 09:41:19 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> uim-svn-1.5.ebuild:
+  Drop virtual/x11 dependency.
 
   24 Jun 2007; MATSUU Takuto <matsuu@gentoo.org> uim-svn-1.5.ebuild:
   Fixed to use the right condition for calling elisp-site-regen, bug #182639.

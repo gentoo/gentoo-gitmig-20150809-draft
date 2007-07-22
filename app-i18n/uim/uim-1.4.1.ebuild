@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.1.ebuild,v 1.8 2007/07/18 17:24:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.1.ebuild,v 1.9 2007/07/22 09:38:03 calchan Exp $
 
 inherit eutils qt3 multilib elisp-common flag-o-matic
 
@@ -13,15 +13,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 hppa ppc ppc64 sparc x86"
 IUSE="anthy canna eb emacs gnome gtk kde libedit m17n-lib ncurses nls prime qt3 X linguas_zh_CN linguas_ja linguas_ko"
 
-RDEPEND="X? (
-		x11-libs/libX11
+RDEPEND="X? ( x11-libs/libX11
 		x11-libs/libXft
 		x11-libs/libXt
 		x11-libs/libICE
 		x11-libs/libSM
 		x11-libs/libXext
-		x11-libs/libXrender
-	)
+		x11-libs/libXrender )
 	anthy? ( || ( app-i18n/anthy app-i18n/anthy-ss ) )
 	canna? ( app-i18n/canna )
 	eb? ( dev-libs/eb )
@@ -39,10 +37,8 @@ RDEPEND="X? (
 	!<app-i18n/prime-0.9.4"
 
 DEPEND="${RDEPEND}
-	X? (
-		x11-proto/xextproto
-		x11-proto/xproto
-	)"
+	X? ( x11-proto/xextproto
+		x11-proto/xproto )"
 
 RDEPEND="${RDEPEND}
 	X? (

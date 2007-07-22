@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/unicon-3.0.4-r1.ebuild,v 1.3 2006/02/13 02:48:54 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/unicon-3.0.4-r1.ebuild,v 1.4 2007/07/22 09:43:52 calchan Exp $
 
 inherit eutils
 
@@ -23,10 +23,10 @@ IUSE=""
 RDEPEND="virtual/linux-sources
 	dev-libs/newt
 	dev-libs/pth
-	|| ( x11-libs/libX11 virtual/x11 )"
+	x11-libs/libX11"
 
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xproto virtual/x11 )"
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${VD_P}.tar.gz
