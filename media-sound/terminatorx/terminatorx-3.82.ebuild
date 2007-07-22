@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.7 2007/02/15 07:55:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.8 2007/07/22 08:20:41 drac Exp $
 
 inherit gnome2 eutils
 
@@ -22,9 +22,8 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 		|| ( media-sound/mpg123 media-sound/mpg321 ) )
 	>=x11-libs/gtk+-2.2.0
 	>=dev-libs/glib-2.2.0
-	|| ( ( x11-libs/libXi
-			x11-libs/libXxf86dga )
-		virtual/x11 )
+	x11-libs/libXi
+	x11-libs/libXxf86dga
 	dev-libs/libxml
 	media-libs/audiofile
 	media-libs/ladspa-sdk
@@ -32,14 +31,12 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	app-text/scrollkeeper
 	media-libs/liblrdf"
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xproto
-			x11-proto/xf86dgaproto )
-		virtual/x11 )"
+	x11-proto/xproto
+	x11-proto/xf86dgaproto"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	# we need the omf fix, or else we get access violation
 	# errors related to sandbox
 	gnome2_omf_fix "${S}/doc/terminatorX-manual/C/Makefile.in"
@@ -52,12 +49,11 @@ src_compile() {
 		$(use_enable vorbis) \
 		$(use_enable sox) \
 		|| die "econf failed"
-
-	emake || die "make failed"
+	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed."
 	newicon gnome-support/terminatorX-app.png terminatorX.png
 	make_desktop_entry terminatorX terminatorX terminatorX.png AudioVideo
 }

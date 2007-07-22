@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.17 2007/01/05 20:09:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.18 2007/07/22 08:20:41 drac Exp $
 
 inherit gnome2
 
@@ -21,9 +21,8 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	sox? ( media-sound/sox )
 	>=x11-libs/gtk+-2.2.0
 	>=dev-libs/glib-2.2.0
-	|| ( ( x11-libs/libXi
-			x11-libs/libXxf86dga )
-		virtual/x11 )
+	x11-libs/libXi
+	x11-libs/libXxf86dga
 	dev-libs/libxml
 	media-libs/audiofile
 	media-libs/ladspa-sdk
@@ -31,18 +30,15 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	app-text/scrollkeeper
 	media-libs/liblrdf"
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xproto
-			x11-proto/xf86dgaproto )
-		virtual/x11 )"
+	x11-proto/xproto
+	x11-proto/xf86dgaproto"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
+	cd "${S}"
 	# we need the omf fix, or else we get access violation
 	# errors related to sandbox
-	gnome2_omf_fix ${S}/doc/terminatorX-manual/C/Makefile.in
-
+	gnome2_omf_fix "${S}"/doc/terminatorX-manual/C/Makefile.in
 }
 
 src_compile() {
@@ -70,11 +66,11 @@ src_compile() {
 
 	econf ${myconf} || die "econf failed"
 
-	emake || die
+	emake || die "emake failed."
 }
 
 src_install() {
-	make DESTDIR=${D} install
+	make DESTDIR="${D}" install || die "make install failed."
 }
 
 pkg_postinst() {
