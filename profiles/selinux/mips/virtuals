@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/virtuals,v 1.3 2007/02/20 21:29:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/mips/virtuals,v 1.4 2007/07/22 11:06:07 dberkholz Exp $
 
 virtual/alsa			sys-kernel/mips-sources
 virtual/linux-sources		sys-kernel/mips-sources
@@ -8,9 +8,4 @@ virtual/os-headers		sys-kernel/mips-headers
 virtual/dev-manager		sys-fs/udev
 virtual/modutils		sys-apps/module-init-tools
 virtual/logger			app-admin/syslog-ng
-virtual/glu			media-libs/mesa
-virtual/opengl			x11-base/xorg-x11
-virtual/x11			x11-base/xorg-x11
-virtual/xft			x11-base/xorg-x11
-virtual/glut			media-libs/freeglut
 virtual/cdrtools		app-cdr/cdrtools

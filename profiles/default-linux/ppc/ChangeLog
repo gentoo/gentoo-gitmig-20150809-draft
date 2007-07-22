@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.20 2007/06/28 14:29:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.21 2007/07/22 11:06:07 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; 1.0/virtuals,
+  1.0_rc/virtuals, 1.2/virtuals, 1.4/virtuals:
+  Pull old-style X virtuals: glu, glut, opengl, x11, xft.
 
   28 Jun 2007; Joseph Jezak <josejx@gentoo.org> package.use.mask, use.mask:
   Added LCD masks for bug #180683.
