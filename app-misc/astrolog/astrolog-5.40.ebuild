@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40.ebuild,v 1.10 2006/10/27 20:59:14 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40.ebuild,v 1.11 2007/07/22 10:06:45 omp Exp $
 
 DESCRIPTION="A many featured astrology chart calculation program"
 HOMEPAGE="http://www.astrolog.org/astrolog.htm"
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc64 ppc amd64"
 
 IUSE="X"
 
-DEPEND="X? ( || ( x11-libs/libX11 virtual/x11 ) )"
+DEPEND="X? ( x11-libs/libX11 )"
 
 S="${WORKDIR}"
 
