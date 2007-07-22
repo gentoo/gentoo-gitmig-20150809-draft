@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ucblogo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ChangeLog,v 1.5 2007/04/03 22:25:50 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ChangeLog,v 1.6 2007/07/22 08:37:29 graaff Exp $
+
+  22 Jul 2007; Hans de Graaff <graaff@gentoo.org> ucblogo-5.5.ebuild:
+  Drop virtual/x11 references.
 
   03 Apr 2007; Tom Knight <tomk@gentoo.org>
   +files/ucblogo-5.5-no-emacs.patch, metadata.xml, ucblogo-5.5.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.4.1.ebuild,v 1.1 2006/12/19 04:17:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.4.1.ebuild,v 1.2 2007/07/22 08:47:37 graaff Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -21,13 +21,11 @@ RDEPEND=">=dev-lang/perl-5.6.1-r3
 	lapack? ( virtual/lapack )
 	tk? ( dev-lang/tk
 		dev-lang/tcl )
-	X? ( || ( ( x11-libs/libX11 )
-		virtual/x11 ) )"
+	X? ( x11-libs/libX11 )"
 DEPEND="${RDEPEND}
-	X? ( || ( ( x11-proto/xproto
+	X? ( x11-proto/xproto
 		x11-libs/libXt
-		x11-libs/libX11 )
-		virtual/x11 ) )"
+		x11-libs/libX11 )"
 
 pkg_setup() {
 	# Test for a 64 bit architecture - f2c won't work on 64 bit archs with R.

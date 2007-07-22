@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.6_p3.ebuild,v 1.8 2007/02/06 08:57:22 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.6_p3.ebuild,v 1.9 2007/07/22 08:43:03 graaff Exp $
 
 inherit nsplugins libtool flag-o-matic eutils
 
@@ -16,9 +16,7 @@ IUSE="X nas mmx mozilla"
 # a ffi flag would be nice
 
 DEPEND="nas? ( media-libs/nas )
-	X? ( || ( ( x11-libs/libX11
-	            x11-libs/libXext )
-		virtual/x11 ) )"
+	X? ( x11-libs/libX11 x11-libs/libXext )"
 RDEPEND="${DEPEND}
 	virtual/squeak-image"
 DEPEND="${DEPEND}
