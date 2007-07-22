@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/linkage-0.1.2.ebuild,v 1.3 2007/07/22 16:28:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/linkage-0.1.2.ebuild,v 1.4 2007/07/22 16:33:54 drac Exp $
 
-inherit autotools fdo-mime
+inherit autotools eutils fdo-mime
 
 DESCRIPTION="BitTorrent client written in C++ using gtkmm and libtorrent."
 HOMEPAGE="http://code.google.com/p/linkage"
