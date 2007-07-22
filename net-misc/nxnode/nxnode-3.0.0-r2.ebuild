@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0-r1.ebuild,v 1.1 2007/07/02 21:44:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.0.0-r2.ebuild,v 1.1 2007/07/22 14:37:52 voyageur Exp $
 
 inherit eutils
 
 DESCRIPTION="nxnode provides the components that are shared between the different editions of NoMachine's NX Server"
 HOMEPAGE="http://www.nomachine.com/"
-SRC_URI="amd64? ( http://64.34.161.181/download/3.0.0/Linux/nxnode-${PV}-71.x86_64.tar.gz )
-	x86? ( http://64.34.161.181/download/3.0.0/Linux/nxnode-${PV}-71.i386.tar.gz )"
+SRC_URI="amd64? ( http://64.34.161.181/download/3.0.0/Linux/nxnode-${PV}-76.x86_64.tar.gz )
+	x86? ( http://64.34.161.181/download/3.0.0/Linux/nxnode-${PV}-76.i386.tar.gz )"
 
 LICENSE="nomachine"
 SLOT="0"
