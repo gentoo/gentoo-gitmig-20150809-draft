@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-2.2.0.ebuild,v 1.4 2007/07/02 14:21:45 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-2.2.0.ebuild,v 1.5 2007/07/22 10:12:43 calchan Exp $
 
 inherit eutils rpm multilib
 
@@ -20,7 +20,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="virtual/libc
-	|| ( x11-libs/libX11 virtual/x11 )
+	x11-libs/libX11
 	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 
 RESTRICT="mirror strip"

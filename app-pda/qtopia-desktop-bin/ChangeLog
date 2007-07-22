@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/qtopia-desktop-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/ChangeLog,v 1.14 2007/07/02 14:21:45 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/ChangeLog,v 1.15 2007/07/22 10:12:43 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org>
+  qtopia-desktop-bin-2.2.0.ebuild:
+  Drop virtual/x11 dependency.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   qtopia-desktop-bin-2.2.0.ebuild:
