@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_rc4-r1.ebuild,v 1.1 2007/05/26 10:23:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_rc4-r1.ebuild,v 1.2 2007/07/22 06:28:08 pva Exp $
 
 inherit eutils flag-o-matic pax-utils
 
@@ -27,14 +27,11 @@ IUSE="X dga ncurses sdl gtk alsa oss sdl-sound capslib"
 
 # Note: opposed to ./configure --help zlib support required! Check
 # src/Makefile.am that includes zfile.c unconditionaly.
-RDEPEND="X? ( || ( ( x11-libs/libXt
-					 x11-libs/libxkbfile
-					 x11-libs/libXext
-					 dga? ( x11-libs/libXxf86dga
-						    x11-libs/libXxf86vm )
-				   )
-				   virtual/x11
-				)
+RDEPEND="X? ( x11-libs/libXt
+			 x11-libs/libxkbfile
+			 x11-libs/libXext
+			 dga? ( x11-libs/libXxf86dga
+				    x11-libs/libXxf86vm )
 			)
 		!X? ( sdl? ( media-libs/libsdl )
 			  !sdl? ( sys-libs/ncurses ) )
