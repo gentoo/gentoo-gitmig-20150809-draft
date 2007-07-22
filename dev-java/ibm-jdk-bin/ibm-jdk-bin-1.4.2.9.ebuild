@@ -1,38 +1,50 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.7.ebuild,v 1.8 2007/07/11 19:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.9.ebuild,v 1.1 2007/07/22 22:02:08 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
-inherit java-vm-2 eutils versionator rpm
+inherit java-vm-2 eutils versionator
 
 JDK_RELEASE=$(get_version_component_range 1-3)
 SERVICE_RELEASE=$(get_version_component_range 4)
 RPM_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
 
-if use x86 ; then
-	JDK_DIST="IBMJava2-142-ia32-SDK-${RPM_PV}.i386.rpm"
-	JAVACOMM_DIST="IBMJava2-JAVACOMM-${RPM_PV}.i386.rpm"
-	S="${WORKDIR}/opt/IBMJava2-142"
+JDK_DIST_PREFIX="IBMJava2-SDK-${RPM_PV}"
+JAVACOMM_DIST_PREFIX="IBMJava2-JAVACOMM-${RPM_PV}"
+
+X86_JDK_DIST="${JDK_DIST_PREFIX}.tgz"
+X86_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}.tgz"
+
+# wonder why amd64 has this extra special AMD64 in its filename...
+AMD64_JDK_DIST="IBMJava2-SDK-AMD64-${RPM_PV}.x86_64.tgz"
+AMD64_JAVACOMM_DIST="IBMJava2-JAVACOMM-AMD64-${RPM_PV}.x86_64.tgz"
+
+PPC_JDK_DIST="${JDK_DIST_PREFIX}.ppc.tgz"
+PPC_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}.ppc.tgz"
+
+PPC64_JDK_DIST="${JDK_DIST_PREFIX}.ppc64.tgz"
+PPC64_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}.ppc64.tgz"
+
+if use x86; then
+	JDK_DIST=${X86_JDK_DIST}
+	JAVACOMM_DIST=${X86_JAVACOMM_DIST}
+	S="${WORKDIR}/IBMJava2-142"
 	LINK_ARCH="ia32"
-elif use amd64 ; then
-	JDK_DIST="IBMJava2-AMD64-142-SDK-${RPM_PV}.x86_64.rpm"
-	JAVACOMM_DIST="IBMJava2-JAVACOMM-AMD64-${RPM_PV}.x86_64.rpm"
-	S="${WORKDIR}/opt/IBMJava2-amd64-142"
+elif use amd64; then
+	JDK_DIST=${AMD64_JDK_DIST}
+	JAVACOMM_DIST=${AMD64_JAVACOMM_DIST}
+	S="${WORKDIR}/IBMJava2-amd64-142"
 	LINK_ARCH="amd64"
-elif use ppc ; then
-	JDK_DIST="IBMJava2-142-ppc32-SDK-${RPM_PV}.ppc.rpm"
-	JAVACOMM_DIST="IBMJava2-JAVACOMM-${RPM_PV}.ppc.rpm"
-	S="${WORKDIR}/opt/IBMJava2-ppc-142"
+elif use ppc; then
+	JDK_DIST=${PPC_JDK_DIST}
+	JAVACOMM_DIST=${PPC_JAVACOMM_DIST}
+	S="${WORKDIR}/IBMJava2-ppc-142"
 	LINK_ARCH="ip32"
-elif use ppc64 ; then
-	JDK_DIST="IBMJava2-142-ppc64-SDK-${RPM_PV}.ppc64.rpm"
-	JAVACOMM_DIST="IBMJava2-JAVACOMM-${RPM_PV}.ppc64.rpm"
-	S="${WORKDIR}/opt/IBMJava2-ppc64-142"
+elif use ppc64; then
+	JDK_DIST=${PPC64_JDK_DIST}
+	JAVACOMM_DIST=${PPC64_JAVACOMM_DIST}
+	S="${WORKDIR}/IBMJava2-ppc64-142"
 	LINK_ARCH="ip64"
-elif use s390 ; then
-	JDK_DIST="IBMJava2-142-z31-SDK-${RPM_PV}.s390.rpm"
-	S="${WORKDIR}/opt/IBMJava2-s390-142"
-	LINK_ARCH="s39031"
 fi
 
 DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=lxdk&S_PKG=${LINK_ARCH}142sr${SERVICE_RELEASE}&cp=UTF-8&S_TACT=105AGX05&S_CMP=JDK"
@@ -42,22 +54,22 @@ HOMEPAGE="http://www.ibm.com/developerworks/java/jdk/"
 DOWNLOADPAGE="${HOMEPAGE}linux/download.html"
 # bug #125178
 ALT_DOWNLOADPAGE="${HOMEPAGE}linux/older_download.html"
-SRC_URI="x86? ( IBMJava2-142-ia32-SDK-${RPM_PV}.i386.rpm )
-		amd64? ( IBMJava2-AMD64-142-SDK-${RPM_PV}.x86_64.rpm )
-		ppc? ( IBMJava2-142-ppc32-SDK-${RPM_PV}.ppc.rpm )
-		ppc64? ( IBMJava2-142-ppc64-SDK-${RPM_PV}.ppc64.rpm )
-		s390? ( IBMJava2-142-z31-SDK-${RPM_PV}.s390.rpm )
-		javacomm? (
-					x86? ( IBMJava2-JAVACOMM-${RPM_PV}.i386.rpm )
-					amd64? ( IBMJava2-JAVACOMM-AMD64-${RPM_PV}.x86_64.rpm )
-					ppc? ( IBMJava2-142-ppc32-SDK-${RPM_PV}.ppc.rpm )
-					ppc64? ( IBMJava2-142-ppc64-SDK-${RPM_PV}.ppc64.rpm )
-				  )"
+
+SRC_URI="x86? ( ${X86_JDK_DIST} )
+	amd64? ( ${AMD64_JDK_DIST} )
+	ppc? ( ${PPC_JDK_DIST} )
+	ppc64? ( ${PPC64_JDK_DIST} )
+	javacomm? (
+		x86? ( ${X86_JAVACOMM_DIST} )
+		amd64? ( ${AMD64_JAVACOMM_DIST} )
+		ppc? ( ${PPC_JAVACOMM_DIST} )
+		ppc64? ( ${PPC64_JAVACOMM_DIST} )
+		)"
 
 LICENSE="IBM-J1.4"
 SLOT="1.4"
-KEYWORDS="-* amd64 ppc ppc64 x86"
-IUSE="X alsa doc javacomm nsplugin"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
+IUSE="X alsa doc examples javacomm nsplugin"
 
 RDEPEND="
 		=virtual/libstdc++-3.3
@@ -107,7 +119,7 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	rpm_src_unpack
+	unpack ${A}
 	cd "${S}"
 
 	# bug #126105
@@ -128,11 +140,16 @@ src_install() {
 	fi
 
 	# Copy all the files to the designated directory
-	mkdir -p ${D}opt/${P}
+	dodir /opt/${P}
 	cp -pR ${S}/{bin,jre,lib,include} ${D}opt/${P}/
 
-	mkdir -p ${D}/opt/${P}/share
-	cp -pPR ${S}/{demo,src.jar} ${D}opt/${P}/share/
+	dodir /opt/${P}/share
+	if use examples; then
+		cp -pPR ${S}/demo ${D}opt/${P}/share/
+	fi
+
+	cp -pPR ${S}/src.jar "${D}/opt/${P}/"
+	dosym "../src.jar" /opt/${P}/share
 
 	# setting the ppc stuff
 	if use ppc; then
@@ -177,4 +194,12 @@ pkg_postinst() {
 		ewarn "use with your installation."
 		ewarn
 	fi
+	elog ""
+	elog "Starting with 1.4.2.8 demos are installed only with USE=examples"
+	elog ""
+	elog "Starting with 1.4.2.8 the src.jar is installed to the standard"
+	elog "location. It is still symlinked to the old location (/opt/${P}/share)"
+	elog "but it will be removed if there will ever be a version bump."
+	elog "See https://bugs.gentoo.org/show_bug.cgi?id=2241"
+	elog "for more details."
 }

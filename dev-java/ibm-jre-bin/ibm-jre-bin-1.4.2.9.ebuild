@@ -1,28 +1,36 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.6-r5.ebuild,v 1.7 2006/12/18 12:12:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.9.ebuild,v 1.1 2007/07/22 22:05:58 caster Exp $
 
-inherit java-vm-2 eutils versionator rpm
+inherit java-vm-2 eutils versionator
 
 JDK_RELEASE=$(get_version_component_range 1-3)
 SERVICE_RELEASE=$(get_version_component_range 4)
 RPM_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
 
-if use x86 ; then
-	JRE_DIST="IBMJava2-142-ia32-JRE-${RPM_PV}.i386.rpm"
-	S="${WORKDIR}/opt/IBMJava2-142"
+JRE_DIST_PREFIX="IBMJava2-JRE-${RPM_PV}"
+
+X86_JRE_DIST="${JRE_DIST_PREFIX}.tgz"
+# wonder why amd64 has this extra special AMD64 in its filename...
+AMD64_JRE_DIST="IBMJava2-JRE-AMD64-${RPM_PV}.x86_64.tgz"
+PPC_JRE_DIST="${JRE_DIST_PREFIX}.ppc.tgz"
+PPC64_JRE_DIST="${JRE_DIST_PREFIX}.ppc64.tgz"
+
+if use x86; then
+	JRE_DIST=${X86_JRE_DIST}
+	S="${WORKDIR}/IBMJava2-142"
 	LINK_ARCH="ia32"
-elif use amd64 ; then
-	JRE_DIST="IBMJava2-AMD64-142-JRE-${RPM_PV}.x86_64.rpm"
-	S="${WORKDIR}/opt/IBMJava2-amd64-142"
+elif use amd64; then
+	JRE_DIST=${AMD64_JRE_DIST}
+	S="${WORKDIR}/IBMJava2-amd64-142"
 	LINK_ARCH="amd64"
-elif use ppc ; then
-	JRE_DIST="IBMJava2-142-ppc32-JRE-${RPM_PV}.ppc.rpm"
-	S="${WORKDIR}/opt/IBMJava2-ppc-142"
+elif use ppc; then
+	JRE_DIST=${PPC_JRE_DIST}
+	S="${WORKDIR}/IBMJava2-ppc-142"
 	LINK_ARCH="ip32"
-elif use ppc64 ; then
-	JRE_DIST="IBMJava2-142-ppc64-JRE-${RPM_PV}.ppc64.rpm"
-	S="${WORKDIR}/opt/IBMJava2-ppc64-142"
+elif use ppc64; then
+	JRE_DIST=${PPC64_JRE_DIST}
+	S="${WORKDIR}/IBMJava2-ppc64-142"
 	LINK_ARCH="ip64"
 fi
 
@@ -33,14 +41,14 @@ HOMEPAGE="http://www.ibm.com/developerworks/java/jdk/"
 DOWNLOADPAGE="${HOMEPAGE}linux/download.html"
 ALT_DOWNLOADPAGE="${HOMEPAGE}linux/older_download.html"
 
-SRC_URI="x86? ( IBMJava2-142-ia32-JRE-${RPM_PV}.i386.rpm )
-		 amd64? ( IBMJava2-AMD64-142-JRE-${RPM_PV}.x86_64.rpm )
-		 ppc? ( IBMJava2-142-ppc32-JRE-${RPM_PV}.ppc.rpm )
-		 ppc64? ( IBMJava2-142-ppc64-JRE-${RPM_PV}.ppc64.rpm )"
+SRC_URI="x86? ( ${X86_JRE_DIST} )
+	amd64? ( ${AMD64_JRE_DIST} )
+	ppc? ( ${PPC_JRE_DIST} )
+	ppc64? ( ${PPC64_JRE_DIST} )"
 
 LICENSE="IBM-J1.4"
 SLOT="1.4"
-KEYWORDS="-* amd64 ppc ppc64 x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="X alsa nsplugin"
 
 RDEPEND="
