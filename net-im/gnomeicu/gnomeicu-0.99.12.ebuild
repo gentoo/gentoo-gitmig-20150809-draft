@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.12.ebuild,v 1.2 2007/01/18 00:37:52 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.12.ebuild,v 1.3 2007/07/22 07:51:54 drac Exp $
 
 inherit gnome2
 
@@ -24,7 +24,7 @@ DEPEND=">=x11-libs/gtk+-2.10.0
 	>=gnome-base/gconf-2.0
 	sys-devel/gettext
 	spell? ( >=app-text/gtkspell-2.0.4 )
-	|| ( x11-libs/libXScrnSaver virtual/x11 )"
+	x11-libs/libXScrnSaver"
 
 IUSE="spell"
 

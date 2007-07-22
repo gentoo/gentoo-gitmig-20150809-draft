@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnomeicu
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.42 2007/01/18 00:37:52 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.43 2007/07/22 07:51:54 drac Exp $
+
+  22 Jul 2007; Samuli Suominen <drac@gentoo.org> gnomeicu-0.99.10.ebuild,
+  gnomeicu-0.99.12.ebuild:
+  Remove virtual/x11 dep.
 
   18 Jan 2007; Olivier Crête <tester@gentoo.org> gnomeicu-0.99.12.ebuild:
   Stable on amd64
