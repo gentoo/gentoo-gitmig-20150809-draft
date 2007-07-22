@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-art
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.38 2006/09/28 04:47:56 tsunam Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.39 2007/07/22 10:23:20 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  gnustep-back-art-0.10.3.ebuild, gnustep-back-art-0.11.0.ebuild:
+  Drop virtual/x11 references.
 
   28 Sep 2006; Joshua Jackson <tsunam@gentoo.org>
   gnustep-back-art-0.10.3.ebuild:

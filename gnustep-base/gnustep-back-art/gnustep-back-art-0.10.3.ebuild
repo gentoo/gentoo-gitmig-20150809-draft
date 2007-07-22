@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.10.3.ebuild,v 1.5 2007/07/12 16:11:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.10.3.ebuild,v 1.6 2007/07/22 10:23:20 dberkholz Exp $
 
 inherit gnustep
 
@@ -28,20 +28,15 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	gnustep-libs/artresources
 	>=gnustep-base/mknfonts-0.5
 	opengl? ( virtual/opengl virtual/glu )
-	|| (
-		(
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libX11
-			x11-libs/libXext
-			x11-libs/libXi
-			x11-libs/libXmu
-			x11-libs/libXt
-			x11-libs/libXft
-			x11-libs/libXrender
-		)
-		virtual/x11
-	)
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXi
+	x11-libs/libXmu
+	x11-libs/libXt
+	x11-libs/libXft
+	x11-libs/libXrender
 	dev-libs/expat
 	media-libs/fontconfig
 	>=media-libs/freetype-2.1.9
