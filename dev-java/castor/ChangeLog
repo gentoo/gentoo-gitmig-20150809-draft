@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/castor
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.36 2007/06/14 00:29:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.37 2007/07/22 11:18:56 philantrop Exp $
+
+  22 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org> castor-1.1.1.ebuild:
+  Marked stable on amd64 as per bug 186198.
 
   14 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
   castor-0.9.9.1-r2.ebuild:
