@@ -1,0 +1,13 @@
+--- test.orig/unit/alice/tuprolog/ParserTestCase.java	2007-04-23 10:11:04.000000000 +1200
++++ test/unit/alice/tuprolog/ParserTestCase.java	2007-07-22 14:23:06.000000000 +1200
+@@ -45,8 +45,8 @@
+ 	}
+ 	
+ 	public void testListWithTail() throws InvalidTermException {
+-		Parser p = new Parser("[p|Y]");
+-		Struct result = new Struct(new Struct("p"), new Var("Y"));
++		Parser p = new Parser("[p|[q,r,s]]");
++		Struct result = new Struct(new Struct("p"), new Struct(new Term[] {new Struct("q"), new Struct("r"), new Struct("s")}));
+ 		result.resolveTerm();
+ 		assertEquals(result, p.nextTerm(false));
+ 	}
