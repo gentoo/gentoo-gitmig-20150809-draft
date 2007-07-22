@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.4.ebuild,v 1.1 2006/06/16 16:45:22 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.4.ebuild,v 1.2 2007/07/22 08:28:47 graaff Exp $
 
 DESCRIPTION="Library for handling OpenType fonts (OTF)"
 HOMEPAGE="http://www.m17n.org/libotf/"
@@ -11,10 +11,8 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ppc alpha amd64 ppc64 sparc hppa"
 IUSE="X"
-RDEPEND="|| ( ( x11-libs/libXaw
-				x11-libs/libICE
-			  )
-			  virtual/x11 )
+RDEPEND="x11-libs/libXaw
+	x11-libs/libICE
 	>=media-libs/freetype-2.1"
 
 DEPEND="${RDEPEND}

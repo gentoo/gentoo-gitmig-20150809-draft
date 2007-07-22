@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5.8.ebuild,v 1.4 2007/07/12 22:00:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5.8.ebuild,v 1.5 2007/07/22 08:33:04 graaff Exp $
 
 inherit toolchain-funcs
 
@@ -19,17 +19,10 @@ IUSE="X ipv6 tao ciao"
 COMMON_DEPEND="dev-libs/openssl"
 # TODO probably more
 RDEPEND="${COMMON_DEPEND}
-	X? ( || (
-	( x11-libs/libXt
-	x11-libs/libXaw )
-	virtual/x11 )
-	)"
+	X? ( x11-libs/libXt x11-libs/libXaw )"
 
 DEPEND="${COMMON_DEPEND}
-	X? ( || (
-	( x11-proto/xproto )
-	virtual/x11 )
-	)"
+	X? ( x11-proto/xproto )"
 
 S="${WORKDIR}/ACE_wrappers"
 

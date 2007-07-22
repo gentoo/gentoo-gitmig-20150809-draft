@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.19 2007/03/18 10:16:04 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.20 2007/07/22 08:26:57 graaff Exp $
 
 WANT_AUTOCONF=1.9
 WANT_AUTOMAKE=1.4
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="|| ( ( x11-proto/xproto x11-libs/libX11 ) virtual/x11 )"
+DEPEND="x11-proto/xproto
+	x11-libs/libX11"
 
 src_unpack() {
 	unpack "${A}"

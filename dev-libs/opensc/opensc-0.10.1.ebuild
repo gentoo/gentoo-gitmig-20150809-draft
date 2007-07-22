@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.10.1.ebuild,v 1.13 2007/02/27 23:35:54 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.10.1.ebuild,v 1.14 2007/07/22 08:22:44 graaff Exp $
 
 inherit eutils libtool
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc x86"
 IUSE="ldap pcsc-lite X"
 #pam
 
-RDEPEND="X? ( || ( ( >=x11-libs/libX11-1.0.0 >=x11-libs/libXt-1.0.0 ) virtual/x11 ) )
+RDEPEND="X? ( >=x11-libs/libX11-1.0.0 >=x11-libs/libXt-1.0.0 )
 	ldap? ( net-nds/openldap )
 	pcsc-lite? ( sys-apps/pcsc-lite )
 	!pcsc-lite? ( >=dev-libs/openct-0.5.0 )"

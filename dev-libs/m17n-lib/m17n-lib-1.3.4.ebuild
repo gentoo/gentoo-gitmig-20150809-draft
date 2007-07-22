@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.3.4.ebuild,v 1.1 2006/12/24 05:32:53 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.3.4.ebuild,v 1.2 2007/07/22 08:25:23 graaff Exp $
 
 inherit flag-o-matic
 
@@ -14,14 +14,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gd"
 
-DEPEND="|| ( (
-			x11-libs/libXaw
-			x11-libs/libICE
-			x11-libs/libXrender
-			x11-libs/libXft
-		)
-		virtual/x11
-	)
+DEPEND="x11-libs/libXaw
+	x11-libs/libICE
+	x11-libs/libXrender
+	x11-libs/libXft
 	dev-libs/libxml2
 	dev-libs/fribidi
 	>=media-libs/freetype-2.1

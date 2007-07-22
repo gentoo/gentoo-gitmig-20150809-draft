@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5-r1.ebuild,v 1.8 2007/07/12 02:25:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5-r1.ebuild,v 1.9 2007/07/22 08:33:04 graaff Exp $
 
 inherit eutils
 
@@ -19,17 +19,10 @@ IUSE="X ipv6 tao"
 DEPEND="dev-libs/openssl"
 
 RDEPEND="${DEPEND}
-	X? ( || (
-	( x11-libs/libXt
-	x11-libs/libXaw )
-	virtual/x11 )
-	)"
+	X? ( x11-libs/libXt x11-libs/libXaw )"
 
 DEPEND="${DEPEND}
-	X? ( || (
-	( x11-proto/xproto )
-	virtual/x11 )
-	)"
+	X? ( x11-proto/xproto )"
 
 src_compile() {
 	export ACE_ROOT="${S}"
