@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.8.ebuild,v 1.1 2007/06/12 03:02:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.8.ebuild,v 1.2 2007/07/22 03:55:18 williamh Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -14,13 +14,13 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc gpm usb X"
 
 DEPEND=" gpm? ( >=sys-libs/gpm-1.20 )
-	X? ( || ( x11-libs/libXaw virtual/x11 ) )"
+	X? ( x11-libs/libXaw )"
 
 src_compile() {
 	econf --prefix=/ \
-		`use_enable gpm` \
-		`use_with X x` \
-		`use_enable usb usb-support` \
+		$(use_enable gpm) \
+		$(use_with X x) \
+		$(use_enable usb usb-support) \
 		--includedir=/usr/include || die
 	emake || die
 }
