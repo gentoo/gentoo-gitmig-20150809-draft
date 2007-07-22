@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX jakarta-slide-webdavclient-2.1-gentoo.patch 3717 RMD160 fc9d5296e129c3a4e33efa4b9866477824e7d349 SHA1 4f00996372dbed27ce35325cb02b000f7894bdcb SHA256 128d568b55376a0979e497595c32f8396604ae3cbc02c79aa1edadcb57087992
 MD5 e3a02e14fa71493c6d109fcd3ed318e7 files/jakarta-slide-webdavclient-2.1-gentoo.patch 3717
 RMD160 fc9d5296e129c3a4e33efa4b9866477824e7d349 files/jakarta-slide-webdavclient-2.1-gentoo.patch 3717
@@ -7,21 +10,21 @@ EBUILD jakarta-slide-webdavclient-2.1-r1.ebuild 1569 RMD160 17f919237cb931db4fba
 MD5 3d8a515d17d65f526be9b50d7dd4d8d2 jakarta-slide-webdavclient-2.1-r1.ebuild 1569
 RMD160 17f919237cb931db4fba19fb65437331d3befc01 jakarta-slide-webdavclient-2.1-r1.ebuild 1569
 SHA256 1911c6246ca086aaf769fb6c7741cfec18c9c06836ff9634e3512623ad5f31b5 jakarta-slide-webdavclient-2.1-r1.ebuild 1569
-EBUILD jakarta-slide-webdavclient-2.1.ebuild 1700 RMD160 51f9ab4c184f098de16ee1c0b04a5bd577f1d3ff SHA1 3892ebdf24d9496d8b1ec5f7d1cd8ced0a8d7ec1 SHA256 8cb8c1c7d6e98f2cea8df7529a565bd44c711fe7c8734be6deda03f030e1cc5a
-MD5 f8e316ebc4322ea453b34933e38b01c5 jakarta-slide-webdavclient-2.1.ebuild 1700
-RMD160 51f9ab4c184f098de16ee1c0b04a5bd577f1d3ff jakarta-slide-webdavclient-2.1.ebuild 1700
-SHA256 8cb8c1c7d6e98f2cea8df7529a565bd44c711fe7c8734be6deda03f030e1cc5a jakarta-slide-webdavclient-2.1.ebuild 1700
-MISC ChangeLog 864 RMD160 ecc49f5b966dedd77a46d959a0796051c19575ab SHA1 e0052b8d49d3dea515fef20265b830c4379da316 SHA256 d74f18e35016835ef4e58d8fb038b4a5f4e4f30f09492ec114c9edcba122fc95
-MD5 1e991d3d7bbc05855a5e16cc7b401a7b ChangeLog 864
-RMD160 ecc49f5b966dedd77a46d959a0796051c19575ab ChangeLog 864
-SHA256 d74f18e35016835ef4e58d8fb038b4a5f4e4f30f09492ec114c9edcba122fc95 ChangeLog 864
+MISC ChangeLog 992 RMD160 9b3ee8a9a9a3c6f65c758ac546f46bf8c77b227c SHA1 a2ba48aaea96ac365b30ad23cc1c76dae3b9ca33 SHA256 70783f469740421ea3ddc5318cc7cf3922c9f43568546b17689fb8e973273718
+MD5 7122fec81ee623fd5e13c8c1dca075db ChangeLog 992
+RMD160 9b3ee8a9a9a3c6f65c758ac546f46bf8c77b227c ChangeLog 992
+SHA256 70783f469740421ea3ddc5318cc7cf3922c9f43568546b17689fb8e973273718 ChangeLog 992
 MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
-MD5 b0c360ca263678a71a937abdbbaab7ca files/digest-jakarta-slide-webdavclient-2.1 307
-RMD160 f270e155a6fa08ee6f3dd727ffb6e8b9a180707c files/digest-jakarta-slide-webdavclient-2.1 307
-SHA256 748ee565c21fae9f765f564cd1e33f0a1fc7d9dd14813db0caa2a50e23733e46 files/digest-jakarta-slide-webdavclient-2.1 307
 MD5 b0c360ca263678a71a937abdbbaab7ca files/digest-jakarta-slide-webdavclient-2.1-r1 307
 RMD160 f270e155a6fa08ee6f3dd727ffb6e8b9a180707c files/digest-jakarta-slide-webdavclient-2.1-r1 307
 SHA256 748ee565c21fae9f765f564cd1e33f0a1fc7d9dd14813db0caa2a50e23733e46 files/digest-jakarta-slide-webdavclient-2.1-r1 307
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.4 (GNU/Linux)
+
+iD8DBQFGoyvHcxLzpIGCsLQRAmnJAKCRKhV8sZAlbUS4u9CB+/o+fXH29ACfXiAH
+vwIivGebz25IqzbJs0YJ318=
+=GSfa
+-----END PGP SIGNATURE-----
