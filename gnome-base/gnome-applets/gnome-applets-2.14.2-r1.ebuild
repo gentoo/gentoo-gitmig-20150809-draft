@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.14.2-r1.ebuild,v 1.5 2007/07/08 04:40:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.14.2-r1.ebuild,v 1.6 2007/07/22 10:21:36 graaff Exp $
 
 WANT_AUTOMAKE=1.8
 inherit eutils gnome2 autotools
@@ -34,7 +34,8 @@ RDEPEND=">=x11-libs/gtk+-2.5
 	>=gnome-extra/gucharmap-1.4
 	apm? ( sys-apps/apmd )
 	acpi? ( sys-power/acpid )
-	|| ( ( x11-apps/xrdb x11-libs/libX11 ) virtual/x11 )
+	x11-apps/xrdb
+	x11-libs/libX11
 	gstreamer? (
 		>=media-libs/gstreamer-0.10.2
 		>=media-libs/gst-plugins-base-0.10.2

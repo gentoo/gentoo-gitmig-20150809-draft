@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.14.11.ebuild,v 1.7 2007/07/08 05:39:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.14.11.ebuild,v 1.8 2007/07/22 10:26:16 graaff Exp $
 
 inherit eutils pam gnome2
 
@@ -31,23 +31,19 @@ RDEPEND="pam? ( virtual/pam )
 	>=media-libs/libart_lgpl-2.3.11
 	selinux? ( sys-libs/libselinux )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	|| ( (
-			x11-libs/libX11
-			x11-libs/libXdmcp
-			x11-libs/libXi
-			x11-libs/libXext
-			x11-libs/libXinerama
-			x11-libs/libdmx
-			x11-libs/libXau
-			x11-apps/sessreg
-			accessibility? ( x11-libs/libXevie ) )
-		virtual/x11 )"
+	x11-libs/libX11
+	x11-libs/libXdmcp
+	x11-libs/libXi
+	x11-libs/libXext
+	x11-libs/libXinerama
+	x11-libs/libdmx
+	x11-libs/libXau
+	x11-apps/sessreg
+	accessibility? ( x11-libs/libXevie )"
 
 DEPEND="${RDEPEND}
-	|| ( (
-			x11-proto/inputproto
-			x11-proto/dmxproto )
-		virtual/x11 )
+	x11-proto/inputproto
+	x11-proto/dmxproto
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.28
 	sys-devel/gettext
