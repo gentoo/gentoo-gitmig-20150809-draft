@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.3.ebuild,v 1.8 2007/07/12 03:41:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.3.ebuild,v 1.9 2007/07/22 06:02:57 dberkholz Exp $
 
 inherit flag-o-matic eutils
 
@@ -20,26 +20,20 @@ RDEPEND="virtual/libc
 	jpeg? ( >=media-libs/jpeg-6b )
 	gif?  ( >=media-libs/giflib-4.1.0 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
-	|| ( ( x11-libs/libICE
-			x11-libs/libXext
-			x11-libs/libSM
-			x11-libs/libXmu
-			x11-libs/libXt
-			x11-libs/libX11
-			x11-libs/libXpm
-			x11-libs/libXrender
-			xinerama? ( x11-libs/libXinerama )
-		)
-		virtual/x11
-	)"
+	x11-libs/libICE
+	x11-libs/libXext
+	x11-libs/libSM
+	x11-libs/libXmu
+	x11-libs/libXt
+	x11-libs/libX11
+	x11-libs/libXpm
+	x11-libs/libXrender
+	xinerama? ( x11-libs/libXinerama )"
 
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xextproto
-			x11-proto/xproto
-			xinerama? ( x11-proto/xineramaproto )
-		)
-		virtual/x11
-	)"
+	x11-proto/xextproto
+	x11-proto/xproto
+	xinerama? ( x11-proto/xineramaproto )"
 
 S="${WORKDIR}/AfterStep-${PV}"
 

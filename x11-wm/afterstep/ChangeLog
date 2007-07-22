@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.80 2007/04/28 16:30:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.81 2007/07/22 06:02:57 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  afterstep-2.00.05.ebuild, afterstep-2.1.2.ebuild, afterstep-2.2.0.ebuild,
+  afterstep-2.2.1.ebuild, afterstep-2.2.2.ebuild, afterstep-2.2.2-r1.ebuild,
+  afterstep-2.2.3.ebuild, afterstep-2.2.4.ebuild:
+  Drop virtual/x11 references.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> afterstep-2.00.05.ebuild,
   afterstep-2.1.2.ebuild, afterstep-2.2.0.ebuild, afterstep-2.2.1.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040729-r1.ebuild,v 1.3 2006/02/07 09:11:22 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040729-r1.ebuild,v 1.4 2007/07/22 06:03:55 dberkholz Exp $
 
 inherit eutils
 
@@ -11,29 +11,18 @@ LICENSE="LGPL-2.1"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE="xinerama"
-DEPEND="
-	|| (
-		(
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libX11
-			x11-libs/libXext
-			xinerama? ( x11-libs/libXinerama )
-		)
-		virtual/x11
-	)
+DEPEND="x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXext
+	xinerama? ( x11-libs/libXinerama )
 	>=dev-lang/lua-5.0.2
 	>=sys-devel/libtool-1.4.3"
 RDEPEND="${DEPEND}
-	|| (
-		(
-			x11-apps/xmessage
-			x11-proto/xproto
-			x11-proto/xextproto
-			xinerama? ( x11-proto/xineramaproto )
-		)
-		virtual/x11
-	)
+	x11-apps/xmessage
+	x11-proto/xproto
+	x11-proto/xextproto
+	xinerama? ( x11-proto/xineramaproto )
 	app-misc/run-mailcap"
 
 S=${WORKDIR}/ion-2-${PV}

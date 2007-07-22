@@ -1,6 +1,6 @@
-# Copyright 2006-2006 Gentoo Foundation
+# Copyright 2006-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/matchbox-window-manager-1.1.ebuild,v 1.1 2006/08/17 15:54:21 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/matchbox-window-manager-1.1.ebuild,v 1.2 2007/07/22 06:08:47 dberkholz Exp $
 
 inherit eutils versionator gnome2
 
@@ -17,11 +17,9 @@ DEPEND=">=x11-libs/libmatchbox-1.5
 	expat? ( dev-libs/expat )
 	gnome? ( gnome-base/gconf )
 	startup-notification? ( x11-libs/startup-notification )
-	session? ( || (	x11-libs/libSM
-			virtual/x11 ) )
-	xcomposite? ( || ( (	x11-libs/libXcomposite
-				x11-libs/libXdamage )
-			virtual/x11 ) )"
+	session? ( x11-libs/libSM )
+	xcomposite? ( x11-libs/libXcomposite
+				x11-libs/libXdamage )"
 
 src_unpack() {
 	unpack ${A}
