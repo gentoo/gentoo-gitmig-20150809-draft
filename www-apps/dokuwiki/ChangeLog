@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.24 2007/06/28 01:01:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.25 2007/07/22 20:31:53 ticho Exp $
+
+*dokuwiki-20070626b (22 Jul 2007)
+
+  22 Jul 2007; Andrej Kacian <ticho@gentoo.org> +dokuwiki-20070626b.ebuild:
+  Version bump. Security bug #185886. Omitted conf/msg from list of
+  config-protected webapp files, as it has to be updated unconditionally on
+  version change.
 
 *dokuwiki-20070626 (28 Jun 2007)
 
