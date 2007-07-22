@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2-r1.ebuild,v 1.11 2006/08/29 21:20:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2-r1.ebuild,v 1.12 2007/07/22 08:42:46 dberkholz Exp $
 
 inherit eutils libtool
 
@@ -17,17 +17,14 @@ DEPEND=">=media-libs/libdvdcss-1.2.2
 	media-libs/jpeg
 	>=media-libs/libdvdread-0.9.4
 	media-libs/libmad
-	|| ( ( x11-libs/libXinerama
-			x11-libs/libXxf86vm
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-proto/xextproto
-			x11-proto/xf86vidmodeproto
-			x11-proto/xineramaproto
-			xv? ( x11-libs/libXv x11-proto/videoproto )
-		)
-		virtual/x11
-	)
+	x11-libs/libXinerama
+	x11-libs/libXxf86vm
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-proto/xextproto
+	x11-proto/xf86vidmodeproto
+	x11-proto/xineramaproto
+	xv? ( x11-libs/libXv x11-proto/videoproto )
 	>=dev-libs/libxml2-2.4.19
 	>=media-libs/a52dec-0.7.3
 	alsa? ( media-libs/alsa-lib )"

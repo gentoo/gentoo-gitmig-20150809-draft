@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.50 2007/04/17 21:28:36 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.51 2007/07/22 08:45:39 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; mpeg4ip-1.4.1.ebuild,
+  mpeg4ip-1.4.1-r1.ebuild, mpeg4ip-1.5.0.1-r1.ebuild,
+  mpeg4ip-1.5.0.1-r2.ebuild:
+  Drop virtual/x11 references.
 
 *mpeg4ip-1.5.0.1-r2 (17 Apr 2007)
 

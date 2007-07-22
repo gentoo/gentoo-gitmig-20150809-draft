@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1-r1.ebuild,v 1.4 2007/07/12 02:40:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1-r1.ebuild,v 1.5 2007/07/22 08:45:39 dberkholz Exp $
 
 inherit eutils multilib
 
@@ -34,7 +34,7 @@ RDEPEND=" media-libs/libsdl
 		ffmpeg? ( >=media-video/ffmpeg-0.4.7 )
 		x264? ( media-libs/x264-svn )
 	)
-	nas? ( media-libs/nas || ( x11-libs/libXt virtual/x11 ) )
+	nas? ( media-libs/nas x11-libs/libXt )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )

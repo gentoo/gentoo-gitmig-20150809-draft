@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.4.ebuild,v 1.2 2007/04/14 17:49:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.4.ebuild,v 1.3 2007/07/22 08:51:36 dberkholz Exp $
 
 inherit eutils kde
 
@@ -27,11 +27,9 @@ RDEPEND=">=media-libs/libsdl-1.2.8-r1
 	>=media-libs/mlt++-20060601"
 
 DEPEND="${RDEPEND}
-	|| ( (
-			x11-base/xorg-server
-			x11-libs/libXt
-			x11-proto/xextproto
-		) virtual/x11 )
+	x11-base/xorg-server
+	x11-libs/libXt
+	x11-proto/xextproto
 	dev-util/pkgconfig
 	>=sys-devel/autoconf-2.58
 	>=sys-devel/automake-1.8.3"

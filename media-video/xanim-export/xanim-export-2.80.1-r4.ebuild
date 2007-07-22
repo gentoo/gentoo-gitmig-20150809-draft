@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r4.ebuild,v 1.5 2007/07/12 02:40:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r4.ebuild,v 1.6 2007/07/22 08:31:42 dberkholz Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 strip-flags -finline-functions
@@ -67,15 +67,13 @@ IUSE=""
 RDEPEND="virtual/libc
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
-	|| ( ( x11-libs/libXext
-		x11-libs/libXt )
-	<virtual/x11-7 )"
+	x11-libs/libXext
+	x11-libs/libXt"
 
 DEPEND="${RDEPEND}
 	app-arch/ncompress
-	|| ( ( x11-proto/xextproto
-		x11-proto/xproto )
-	<virtual/x11-7 )"
+	x11-proto/xextproto
+	x11-proto/xproto"
 
 S=${WORKDIR}/${MY_P}
 

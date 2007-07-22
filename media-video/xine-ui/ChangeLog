@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.151 2007/05/11 14:50:48 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.152 2007/07/22 08:30:45 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xine-ui-0.99.5_pre20070303.ebuild:
+  Drop virtual/x11 references.
 
   11 May 2007; Steve Dibb <beandog@gentoo.org> xine-ui-0.99.5.ebuild:
   amd64 stable, bug 177008

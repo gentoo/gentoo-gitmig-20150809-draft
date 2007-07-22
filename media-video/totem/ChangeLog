@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.170 2007/07/08 04:57:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.171 2007/07/22 08:39:50 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  totem-1.4.2-r1.ebuild:
+  Drop virtual/x11 references.
 
   08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
   totem-1.2.1-r1.ebuild, totem-2.16.4.ebuild, totem-2.16.5.ebuild,

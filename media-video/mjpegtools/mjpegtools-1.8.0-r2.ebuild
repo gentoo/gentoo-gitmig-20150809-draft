@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r2.ebuild,v 1.2 2006/11/20 13:02:30 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r2.ebuild,v 1.3 2007/07/22 08:49:26 dberkholz Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -23,11 +23,8 @@ RDEPEND="media-libs/jpeg
 	quicktime? ( virtual/quicktime )
 	png? ( media-libs/libpng )
 	sdl? ( >=media-libs/libsdl-1.2.7-r3 )
-	X? ( || ( ( x11-libs/libX11
-				x11-libs/libXt
-			)
-			virtual/x11
-		)
+	X? ( x11-libs/libX11
+		x11-libs/libXt
 	)"
 
 DEPEND="${RDEPEND}

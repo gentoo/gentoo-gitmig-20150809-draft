@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20051122-r3.ebuild,v 1.8 2007/03/07 21:57:40 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20051122-r3.ebuild,v 1.9 2007/07/22 08:43:55 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -27,22 +27,18 @@ IUSE=
 # for.
 DEPEND=">=x11-libs/gtk+-2
 		dev-util/pkgconfig
-		|| ( ( 	x11-base/xorg-server
-				x11-libs/libXt
-				x11-libs/libXv
-				x11-proto/xf86driproto
-				x11-misc/imake
-				x11-misc/gccmakedep )
-			virtual/x11
-		)"
+		x11-base/xorg-server
+		x11-libs/libXt
+		x11-libs/libXv
+		x11-proto/xf86driproto
+		x11-misc/imake
+		x11-misc/gccmakedep"
 RDEPEND="|| (
 			>=x11-drivers/nvidia-drivers-${NVIDIA_NEW_VERSION}
 			>=x11-drivers/nvidia-legacy-drivers-${NVIDIA_LEGACY_VERSION} )
 		>=x11-libs/gtk+-2
-		|| ( (	x11-base/xorg-server
-				x11-libs/libXt )
-			virtual/x11
-		)"
+		x11-base/xorg-server
+		x11-libs/libXt"
 
 src_unpack() {
 	unpack ${A}

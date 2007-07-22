@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.17 2007/04/14 17:49:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.18 2007/07/22 08:51:36 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; kdenlive-0.4.ebuild:
+  Drop virtual/x11 references.
 
   14 Apr 2007; Stefan Schweizer <genstef@gentoo.org> kdenlive-0.4.ebuild:
   Add built_with_use check thanks to Johannes Hirte <johannes-hirte@web.de> in

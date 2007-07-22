@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.3.0.ebuild,v 1.8 2007/02/07 21:03:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.3.0.ebuild,v 1.9 2007/07/22 08:57:53 dberkholz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -37,19 +37,15 @@ RDEPEND="
 	truetype? ( >=media-libs/freetype-2.1.5 )
 	alsa? ( >=media-libs/alsa-lib-1.0.3b-r2 )
 	sdl? ( media-libs/libsdl )
-	|| ( (
-			xv? ( x11-libs/libXv )
-			x11-libs/libX11
-			x11-libs/libXext
-			x11-libs/libXrender
-		) virtual/x11 )"
+	xv? ( x11-libs/libXv )
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXrender"
 
 DEPEND="$RDEPEND
-	|| ( (
-			x11-base/xorg-server
-			x11-libs/libXt
-			x11-proto/xextproto
-		) virtual/x11 )
+	x11-base/xorg-server
+	x11-libs/libXt
+	x11-proto/xextproto
 	dev-util/pkgconfig"
 
 pkg_setup() {

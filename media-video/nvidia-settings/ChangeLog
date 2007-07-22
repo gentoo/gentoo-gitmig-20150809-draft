@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.32 2007/04/13 10:08:32 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.33 2007/07/22 08:43:55 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  nvidia-settings-1.0.20051122-r3.ebuild:
+  Drop virtual/x11 references.
 
   13 Apr 2007; Peter Weller <welp@gentoo.org>
   nvidia-settings-1.0.20070302.ebuild:

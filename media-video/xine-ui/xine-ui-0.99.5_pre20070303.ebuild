@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5_pre20070303.ebuild,v 1.5 2007/05/10 14:53:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5_pre20070303.ebuild,v 1.6 2007/07/22 08:30:45 dberkholz Exp $
 
 # WANT_AUTOCONF=latest
 # WANT_AUTOMAKE=latest
@@ -25,26 +25,24 @@ RDEPEND=">=media-libs/libpng-1.2.8
 	libcaca? ( media-libs/libcaca )
 	curl? ( >=net-misc/curl-7.10.2 )
 	ncurses? ( sys-libs/ncurses )
-	X? ( || ( (
-			x11-libs/libX11
-			x11-libs/libXrender
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libXext
-			x11-libs/libXxf86vm
-			x11-libs/libXv
-			x11-libs/libXtst
-			x11-libs/libXft
-			xinerama? ( x11-libs/libXinerama )
-		) <virtual/x11-7 ) )
+	X? (
+		x11-libs/libX11
+		x11-libs/libXrender
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libXext
+		x11-libs/libXxf86vm
+		x11-libs/libXv
+		x11-libs/libXtst
+		x11-libs/libXft
+		xinerama? ( x11-libs/libXinerama ) )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	X? ( || ( (
-			x11-libs/libXt
-			x11-proto/xf86vidmodeproto
-			xinerama? ( x11-proto/xineramaproto )
-		) <virtual/x11-7 ) )
+	X? (
+		x11-libs/libXt
+		x11-proto/xf86vidmodeproto
+		xinerama? ( x11-proto/xineramaproto ) )
 	dev-util/pkgconfig"
 
 src_compile() {

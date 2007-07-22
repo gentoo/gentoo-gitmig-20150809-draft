@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.85 2007/05/12 10:40:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.86 2007/07/22 08:53:44 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; gxine-0.4.5.ebuild,
+  gxine-0.5.7.ebuild:
+  Drop virtual/x11 references.
 
   12 May 2007; Samuli Suominen <drac@gentoo.org> gxine-0.5.11.ebuild:
   Kill virtual/x11 usage.

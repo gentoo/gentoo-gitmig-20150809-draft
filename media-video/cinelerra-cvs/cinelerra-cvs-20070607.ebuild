@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20070607.ebuild,v 1.1 2007/06/11 19:26:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20070607.ebuild,v 1.2 2007/07/22 08:56:59 dberkholz Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -39,14 +39,12 @@ RDEPEND="media-libs/libpng
 	>=media-libs/libvorbis-1.1.0
 	>=media-libs/libogg-1.1
 	>=media-libs/libtheora-1.0_alpha4-r1
-	|| ( (
-			x11-libs/libX11
-			x11-libs/libXv
-			x11-libs/libXxf86vm
-			x11-libs/libXext
-			x11-libs/libXvMC
-			x11-libs/libXft
-		) virtual/x11 )"
+	x11-libs/libX11
+	x11-libs/libXv
+	x11-libs/libXxf86vm
+	x11-libs/libXext
+	x11-libs/libXvMC
+	x11-libs/libXft"
 
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"

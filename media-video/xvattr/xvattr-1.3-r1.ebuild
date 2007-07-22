@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/xvattr-1.3-r1.ebuild,v 1.13 2006/10/28 00:48:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/xvattr-1.3-r1.ebuild,v 1.14 2007/07/22 08:29:17 dberkholz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -18,17 +18,15 @@ KEYWORDS="amd64 ppc x86"
 IUSE="gtk"
 
 RDEPEND="
-	|| ( (
-			x11-libs/libX11
-			x11-libs/libXv
-			x11-libs/libXext
-		) <virtual/x11-7 )
+	x11-libs/libX11
+	x11-libs/libXv
+	x11-libs/libXext
 	gtk? (
 		=x11-libs/gtk+-1.2*
 		=dev-libs/glib-1.2* )"
 
 DEPEND="${RDEPEND}
-	|| ( x11-libs/libXt <virtual/x11-7 )"
+	x11-libs/libXt"
 
 src_unpack() {
 	unpack ${A}

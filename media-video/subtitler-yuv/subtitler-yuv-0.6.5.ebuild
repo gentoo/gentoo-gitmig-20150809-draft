@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitler-yuv/subtitler-yuv-0.6.5.ebuild,v 1.2 2006/09/14 11:18:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitler-yuv/subtitler-yuv-0.6.5.ebuild,v 1.3 2007/07/22 08:40:37 dberkholz Exp $
 
 inherit toolchain-funcs
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-DEPEND="|| ( ( x11-libs/libXaw )
-	<virtual/x11-7 )"
+DEPEND="x11-libs/libXaw"
 RDEPEND="${DEPEND}"
 
 src_unpack() {

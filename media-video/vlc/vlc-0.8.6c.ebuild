@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6c.ebuild,v 1.6 2007/07/12 02:40:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6c.ebuild,v 1.7 2007/07/22 08:35:38 dberkholz Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -99,12 +99,11 @@ RDEPEND="
 		win32codecs? ( media-libs/win32codecs )
 		hal? ( sys-apps/hal )
 		avahi? ( >=net-dns/avahi-0.6 )
-		X? ( || ( (
-				x11-libs/libX11
-				x11-libs/libXext
-				xv? ( x11-libs/libXv )
-				xinerama? ( x11-libs/libXinerama )
-			) <virtual/x11-7 )
+		X? (
+			x11-libs/libX11
+			x11-libs/libXext
+			xv? ( x11-libs/libXv )
+			xinerama? ( x11-libs/libXinerama )
 			opengl? ( virtual/opengl )
 		)
 		directfb? ( dev-libs/DirectFB )
@@ -121,7 +120,7 @@ RDEPEND="
 			<media-libs/libdc1394-1.9.99 )"
 
 DEPEND="${RDEPEND}
-	X? ( xinerama? ( || ( x11-proto/xineramaproto <virtual/x11-7 ) ) )
+	X? ( xinerama? ( x11-proto/xineramaproto ) )
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"

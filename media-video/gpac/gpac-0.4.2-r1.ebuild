@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2-r1.ebuild,v 1.11 2007/05/14 04:38:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2-r1.ebuild,v 1.12 2007/07/22 08:50:27 dberkholz Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -35,11 +35,9 @@ RDEPEND="aac? ( media-libs/faad2 )
 	xml? ( >=dev-libs/libxml2-2.6.0 )
 	xvid? ( >=media-libs/xvid-1.0.1 )
 	sdl? ( media-libs/libsdl )
-		|| ( (
-			x11-libs/libXt
-			x11-libs/libX11
-			x11-libs/libXext
-		) virtual/x11 )"
+	x11-libs/libXt
+	x11-libs/libX11
+	x11-libs/libXext"
 
 DEPEND="${RDEPEND}"
 
