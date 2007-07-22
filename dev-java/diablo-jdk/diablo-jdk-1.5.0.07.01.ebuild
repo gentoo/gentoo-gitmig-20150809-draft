@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.5.0.07.01.ebuild,v 1.5 2007/07/11 19:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.5.0.07.01.ebuild,v 1.6 2007/07/22 09:45:06 graaff Exp $
 
 inherit java-vm-2 eutils versionator
 
@@ -22,7 +22,7 @@ IUSE="X examples nsplugin jce"
 QA_TEXTRELS_x86="opt/${P}/jre/lib/i386/motif21/libmawt.so opt/${P}/jre/lib/i386/server/libjvm.so opt/${P}/jre/lib/i386/client/libjvm.so"
 
 DEPEND="jce? ( =dev-java/sun-jce-bin-1.5.0* )"
-RDEPEND="X? ( || ( (		x11-libs/libICE
+RDEPEND="X? ( x11-libs/libICE
 				x11-libs/libSM
 				x11-libs/libX11
 				x11-libs/libXau
@@ -33,9 +33,6 @@ RDEPEND="X? ( || ( (		x11-libs/libICE
 				x11-libs/libXt
 				x11-libs/libXtst
 			)
-				virtual/x11
-			)
-		)
 		=sys-freebsd/freebsd-lib-6*
 		=virtual/libstdc++-3.3*
 		${DEPEND}"
@@ -119,7 +116,7 @@ pkg_postinst() {
 	java-vm-2_pkg_postinst
 
 	if ! use X; then
-		local xwarn="virtual/x11 and/or"
+		local xwarn="X11 libraries and/or"
 	fi
 
 	echo

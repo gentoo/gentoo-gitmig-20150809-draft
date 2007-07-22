@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.5.0.5.ebuild,v 1.2 2007/07/11 19:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.5.0.5.ebuild,v 1.3 2007/07/22 09:40:56 graaff Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -53,19 +53,14 @@ IUSE="X alsa nsplugin"
 
 RDEPEND="
 		=virtual/libstdc++-3.3
-		X? ( || (
-					(
-						x11-libs/libXt
-						x11-libs/libX11
-						x11-libs/libXtst
-						x11-libs/libXp
-						x11-libs/libXext
-						x11-libs/libXi
-						x11-libs/libXmu
-						x11-libs/libXft
-					)
-					virtual/x11
-				)
+		X? ( x11-libs/libXt
+			x11-libs/libX11
+			x11-libs/libXtst
+			x11-libs/libXp
+			x11-libs/libXext
+			x11-libs/libXi
+			x11-libs/libXmu
+			x11-libs/libXft
 			)
 		alsa? ( media-libs/alsa-lib )
 		nsplugin? (

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.4.ebuild,v 1.6 2007/07/11 19:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.4.ebuild,v 1.7 2007/07/22 09:39:06 graaff Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -70,19 +70,14 @@ RESTRICT="fetch"
 
 RDEPEND="
 		=virtual/libstdc++-3.3
-		X? ( || (
-					(
-						x11-libs/libXt
-						x11-libs/libX11
-						x11-libs/libXtst
-						x11-libs/libXp
-						x11-libs/libXext
-						x11-libs/libXi
-						x11-libs/libXmu
-						x11-libs/libXft
-					)
-					virtual/x11
-				)
+		X? ( x11-libs/libXt
+			x11-libs/libX11
+			x11-libs/libXtst
+			x11-libs/libXp
+			x11-libs/libXext
+			x11-libs/libXi
+			x11-libs/libXmu
+			x11-libs/libXft
 			)
 		alsa? ( media-libs/alsa-lib )
 		nsplugin? (

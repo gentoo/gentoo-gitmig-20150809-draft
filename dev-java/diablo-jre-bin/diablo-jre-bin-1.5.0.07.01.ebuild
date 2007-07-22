@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jre-bin/diablo-jre-bin-1.5.0.07.01.ebuild,v 1.2 2007/07/11 19:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jre-bin/diablo-jre-bin-1.5.0.07.01.ebuild,v 1.3 2007/07/22 09:41:58 graaff Exp $
 
 inherit java-vm-2 eutils versionator
 
@@ -22,15 +22,12 @@ QA_TEXTRELS_x86="opt/${P}/jre/lib/i386/motif21/libmawt.so opt/${P}/jre/lib/i386/
 JAVA_VM_NO_GENERATION1=true
 
 DEPEND=""
-RDEPEND="X? ( || ( (
-					x11-libs/libX11
-					x11-libs/libXext
-					x11-libs/libXi
-					x11-libs/libXp
-					x11-libs/libXt
-					x11-libs/libXtst
-				)
-				virtual/x11
+RDEPEND="X? ( x11-libs/libX11
+				x11-libs/libXext
+				x11-libs/libXi
+				x11-libs/libXp
+				x11-libs/libXt
+				x11-libs/libXtst
 			)
 		)
 		=sys-freebsd/freebsd-lib-6*
