@@ -2,5 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<longdescription>Blinks keyboard LEDs indicating outgoing and incoming network packets on selected network interface</longdescription>
+<longdescription>
+Blinks keyboard LEDs indicating outgoing and incoming network packets on
+selected network interface
+</longdescription>
 </pkgmetadata>

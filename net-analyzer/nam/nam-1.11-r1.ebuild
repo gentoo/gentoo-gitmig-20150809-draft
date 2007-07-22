@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.11-r1.ebuild,v 1.1 2007/03/18 16:57:03 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.11-r1.ebuild,v 1.2 2007/07/22 07:54:23 pva Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="-amd64 ~ppc ~sparc ~x86"
 IUSE="debug"
-DEPEND="|| ( x11-libs/libXmu virtual/x11 )
+DEPEND="x11-libs/libXmu
 	>=dev-lang/tcl-8.4.4
 	>=dev-lang/tk-8.4.4
 	>=dev-tcltk/otcl-1.0.8a

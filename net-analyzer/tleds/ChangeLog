@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tleds
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.18 2006/08/15 09:14:17 blubb Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.19 2007/07/22 08:04:24 pva Exp $
+
+  22 Jul 2007; <pva@gentoo.org> metadata.xml, tleds-1.05_beta11-r1.ebuild:
+  Removed virtual/x11 dependency.
 
   15 Aug 2006; Simon Stelling <blubb@gentoo.org>
   tleds-1.05_beta11-r1.ebuild:

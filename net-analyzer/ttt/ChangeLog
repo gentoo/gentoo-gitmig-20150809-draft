@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ttt
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ChangeLog,v 1.13 2007/07/09 17:48:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ChangeLog,v 1.14 2007/07/22 08:06:57 pva Exp $
+
+  22 Jul 2007; <pva@gentoo.org> ttt-1.8.1.ebuild, ttt-1.8.1-r1.ebuild:
+  Removed virtual/x11 dependency.
 
   09 Jul 2007; Raúl Porcel <armin76@gentoo.org> ttt-1.8.1-r1.ebuild:
   x86 stable

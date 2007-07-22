@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdude/netdude-0.4.7.ebuild,v 1.4 2007/04/01 22:01:37 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdude/netdude-0.4.7.ebuild,v 1.5 2007/07/22 07:57:08 pva Exp $
 
 DESCRIPTION="Netdude is a front-end to the libnetdude packet manipulation library"
 HOMEPAGE="http://netdude.sourceforge.net/index.html"
@@ -17,10 +17,8 @@ DEPEND="net-libs/libnetdude
 
 RDEPEND="${DEPEND}
 	net-analyzer/tcpdump
-	( || ( virtual/x11
-	( >=x11-libs/libX11-1.0.0
-	>=x11-libs/libXext-1.0.0 )
-	) )"
+	>=x11-libs/libX11-1.0.0
+	>=x11-libs/libXext-1.0.0"
 
 src_compile() {
 	econf $(use_enable doc gtk-doc) || die "econf failed"

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ttt-1.8.1.ebuild,v 1.5 2006/11/20 23:15:28 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ttt-1.8.1.ebuild,v 1.6 2007/07/22 08:06:57 pva Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~ppc x86"
 IUSE="ipv6"
 
 DEPEND="virtual/libc
-	|| ( ( x11-libs/libXt x11-proto/xproto ) virtual/x11 )
+	x11-libs/libXt
+	x11-proto/xproto
 	dev-lang/tcl
 	dev-lang/tk
 	>=dev-tcltk/blt-2.4

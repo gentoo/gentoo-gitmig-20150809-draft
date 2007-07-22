@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/sara-6.0.4.ebuild,v 1.7 2007/07/02 14:40:29 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/sara-6.0.4.ebuild,v 1.8 2007/07/22 08:02:14 pva Exp $
 
 DESCRIPTION="SARA Security Auditor's Research Assistant is a derived work of Security Administrator Tool for Analyzing Networks SATAN"
 SRC_URI="http://www-arc.com/sara/downloads/${P}.tgz"
@@ -19,9 +19,8 @@ DEPEND=">=dev-lang/perl-5.8
 	net-misc/netkit-fingerd
 	net-analyzer/nmap
 	net-ftp/ftp
-	X? ( || ( ( x11-libs/libX11
-				x11-proto/xproto )
-			virtual/x11 ) )"
+	X? ( x11-libs/libX11
+		x11-proto/xproto )"
 
 SARA_HOME=/opt/sara
 

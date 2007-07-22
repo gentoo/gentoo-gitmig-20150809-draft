@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r3.ebuild,v 1.7 2007/07/12 13:40:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r3.ebuild,v 1.8 2007/07/22 07:49:53 pva Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -20,9 +20,7 @@ DEPEND="net-libs/libpcap
 	>=dev-libs/openssl-0.9.6e
 	>=sys-libs/db-4.2.52_p4
 	sys-apps/sed
-	X? (
-		|| ( virtual/x11 x11-libs/libXmu )
-	)"
+	X? ( x11-libs/libXmu )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P/_beta1/}"
