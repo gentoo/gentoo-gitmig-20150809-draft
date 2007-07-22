@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/resolution/resolution-0.2-r1.ebuild,v 1.2 2007/04/07 13:07:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/resolution/resolution-0.2-r1.ebuild,v 1.3 2007/07/22 07:38:19 dberkholz Exp $
 
 ROX_LIB_VER=1.9.3
 inherit rox
@@ -15,12 +15,7 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| ( (
-		x11-apps/xrandr
-	)
-		virtual/x11
-	)
-	"
+RDEPEND="x11-apps/xrandr"
 
 APPNAME=Resolution
 APPCATEGORY="Settings;HardwareSettings"
