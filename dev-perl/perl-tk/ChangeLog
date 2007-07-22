@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.41 2007/01/19 15:22:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.42 2007/07/22 07:49:00 graaff Exp $
+
+  22 Jul 2007; Hans de Graaff <graaff@gentoo.org> perl-tk-804.027.ebuild:
+  Drop virtual/x11 references.
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   perl-tk-804.027.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PGPLOT/PGPLOT-2.19.ebuild,v 1.7 2007/06/13 06:49:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PGPLOT/PGPLOT-2.19.ebuild,v 1.8 2007/07/22 07:53:22 graaff Exp $
 
 inherit perl-module
 
@@ -17,7 +17,6 @@ IUSE=""
 #SRC_TEST="do"
 
 DEPEND="sci-libs/pgplot
-	|| ( x11-base/xorg-server
-			virtual/x11 )
-		>=dev-perl/ExtUtils-F77-1.13
+	x11-base/xorg-server
+	>=dev-perl/ExtUtils-F77-1.13
 	dev-lang/perl"

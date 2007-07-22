@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/X11-Protocol
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.38 2007/01/23 12:59:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.39 2007/07/22 07:51:39 graaff Exp $
+
+  22 Jul 2007; Hans de Graaff <graaff@gentoo.org> X11-Protocol-0.53.ebuild,
+  X11-Protocol-0.54.ebuild, X11-Protocol-0.55.ebuild,
+  X11-Protocol-0.56.ebuild:
+  Drop virtual/x11 references.
 
   23 Jan 2007; Jeroen Roovers <jer@gentoo.org> X11-Protocol-0.56.ebuild:
   Stable for HPPA (bug #153127).
