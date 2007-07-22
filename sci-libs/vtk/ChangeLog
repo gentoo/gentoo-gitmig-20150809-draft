@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.36 2007/06/11 17:41:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.37 2007/07/22 07:03:25 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; vtk-5.0.3.ebuild:
+  Drop virtual/x11 references.
 
   11 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> -vtk-5.0.2.ebuild:
   Remove old version.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2.ebuild,v 1.2 2006/03/30 23:55:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2.ebuild,v 1.3 2007/07/22 07:02:25 dberkholz Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -13,7 +13,7 @@ LICENSE="free-noncomm"
 SLOT="0"
 KEYWORDS="~ia64 ~x86"
 IUSE=""
-RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
+RDEPEND="x11-libs/libX11
 	media-libs/libpng"
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.7 2007/06/11 17:38:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.8 2007/07/22 07:03:25 dberkholz Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3
 
@@ -27,7 +27,7 @@ RDEPEND="mpi? ( virtual/mpi )
 	media-libs/libpng
 	media-libs/tiff
 	virtual/opengl
-	|| ( x11-libs/libXmu virtual/x11 )"
+	x11-libs/libXmu"
 
 DEPEND="${RDEPEND}
 		java? ( >=virtual/jdk-1.5 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.8 2007/03/13 00:45:18 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.9 2007/07/22 07:05:08 dberkholz Exp $
 
 inherit eutils
 
@@ -26,11 +26,9 @@ RDEPEND="virtual/libc
 	  	 jpeg? ( media-libs/gd )
 	  	 png? ( media-libs/gd )
 	  	 truetype? ( media-libs/freetype )
-		 X? ( || (	( x11-libs/libX11
-					  x11-libs/libXau
-					  x11-libs/libXdmcp
-						)
-					virtual/x11 )
+		 X? ( x11-libs/libX11
+				x11-libs/libXau
+				x11-libs/libXdmcp
 				tk? ( dev-lang/tk
 						itcl? ( dev-tcltk/itcl )
 						)
@@ -42,9 +40,7 @@ DEPEND="${RDEPEND}
 	virtual/man
 	app-text/opensp
 	java? ( virtual/jdk )
-	X? ( || ( (	x11-proto/xproto )
-			virtual/x11 )
-	)
+	X? ( x11-proto/xproto )
 	doc? ( sys-apps/texinfo )"
 	# Optional support for libqhull (currently doesn't work).
 	# qhull? ( media-libs/qhull )

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-0.9.8.ebuild,v 1.5 2007/02/01 14:36:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-0.9.8.ebuild,v 1.6 2007/07/22 07:01:45 dberkholz Exp $
 
 inherit multilib python
 
@@ -16,7 +16,7 @@ RDEPEND="virtual/glut
 	>=dev-python/numpy-0.9.8
 	virtual/opengl
 	virtual/glu
-	|| ( x11-libs/libXmu virtual/x11 )"
+	x11-libs/libXmu"
 DEPEND="${RDEPEND}"
 
 src_compile() {
