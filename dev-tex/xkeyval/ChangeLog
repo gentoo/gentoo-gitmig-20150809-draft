@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/xkeyval
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/ChangeLog,v 1.8 2007/03/13 00:39:38 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/ChangeLog,v 1.9 2007/07/22 13:04:53 pylon Exp $
+
+*xkeyval-2.5f (22 Jul 2007)
+
+  22 Jul 2007; Lars Weiler <pylon@gentoo.org> +xkeyval-2.5f.ebuild:
+  Version bump and overlay support for tetex-3.
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
