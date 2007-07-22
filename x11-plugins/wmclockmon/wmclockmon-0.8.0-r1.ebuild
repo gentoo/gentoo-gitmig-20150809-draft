@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.0-r1.ebuild,v 1.7 2007/07/11 20:39:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.0-r1.ebuild,v 1.8 2007/07/22 05:17:41 dberkholz Exp $
 
 WANT_AUTOMAKE="1.4"
 WANT_AUTOCONF="1.4"
@@ -18,20 +18,16 @@ KEYWORDS="amd64 ppc ppc64 sparc x86"
 LICENSE="GPL-2"
 
 RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )
-	|| ( (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXpm
-		x11-libs/libXdmcp
-		x11-libs/libXau )
-	virtual/x11 )"
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXpm
+	x11-libs/libXdmcp
+	x11-libs/libXau"
 
 DEPEND="${RDEPEND}
 	!gtk? ( >=sys-apps/sed-4.1.4-r1 )
-	|| ( (
-		x11-proto/xproto
-		x11-proto/xextproto )
-	virtual/x11 )"
+	x11-proto/xproto
+	x11-proto/xextproto"
 
 src_compile()
 {

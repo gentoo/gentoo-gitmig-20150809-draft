@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asmon
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.21 2007/01/10 17:25:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.22 2007/07/22 05:39:35 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; asmon-0.7.ebuild:
+  Drop virtual/x11 references.
 
   10 Jan 2007; Michael Sterrett <mr_bones_@gentoo.org>
   -files/asmon-cflags.diff, -asmon-0.65.ebuild:

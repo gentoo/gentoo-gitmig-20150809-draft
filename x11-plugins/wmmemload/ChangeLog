@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmemload
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.16 2007/02/21 23:40:17 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.17 2007/07/22 04:53:18 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  wmmemload-0.1.6.ebuild:
+  Drop virtual/x11 references.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

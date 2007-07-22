@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsens/wmmsens-0.29.6.ebuild,v 1.5 2006/02/02 16:30:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsens/wmmsens-0.29.6.ebuild,v 1.6 2007/07/22 04:46:54 dberkholz Exp $
 
 inherit eutils
 
@@ -13,13 +13,11 @@ LICENSE="Artistic"
 KEYWORDS="x86 ~amd64"
 IUSE=""
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXpm )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xextproto virtual/x11 )
+	x11-proto/xextproto
 	sys-apps/lm_sensors"
 
 src_compile() {

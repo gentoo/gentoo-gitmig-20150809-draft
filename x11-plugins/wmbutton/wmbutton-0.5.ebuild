@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.5.ebuild,v 1.10 2006/10/27 08:36:32 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.5.ebuild,v 1.11 2007/07/22 05:20:32 dberkholz Exp $
 
 inherit eutils
 
@@ -11,14 +11,11 @@ SRC_URI="http://www.dockapps.org/download.php/id/454/${P}.tar.gz
 	mirror://gentoo/${PN}-buttons.xpm"
 HOMEPAGE="http://www.dockapps.org/file.php/id/241"
 
-DEPEND="
-	|| ( (
-		x11-proto/xproto
-		x11-proto/xextproto
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXpm )
-	virtual/x11 )"
+DEPEND="x11-proto/xproto
+	x11-proto/xextproto
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXpm"
 
 SLOT="0"
 LICENSE="GPL-2"

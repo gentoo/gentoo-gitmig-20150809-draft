@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmbiff
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.26 2007/02/21 23:32:38 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.27 2007/07/22 05:24:06 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; wmbiff-0.4.25.ebuild,
+  wmbiff-0.4.25-r1.ebuild, wmbiff-0.4.27.ebuild:
+  Drop virtual/x11 references.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

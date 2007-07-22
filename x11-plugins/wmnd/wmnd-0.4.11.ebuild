@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.11.ebuild,v 1.7 2006/01/31 20:03:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.11.ebuild,v 1.8 2007/07/22 04:46:01 dberkholz Exp $
 
 IUSE=""
 DESCRIPTION="WindowMaker Network Devices (dockapp)"
@@ -11,14 +11,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXt
-		x11-libs/libXpm )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXt
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xextproto virtual/x11 )"
+	x11-proto/xextproto"
 
 src_compile() {
 	econf || die "configure failed"

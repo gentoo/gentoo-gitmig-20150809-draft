@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwave/wmwave-0.4.ebuild,v 1.8 2006/01/31 21:06:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwave/wmwave-0.4.ebuild,v 1.9 2007/07/22 04:19:07 dberkholz Exp $
 
 IUSE=""
 S="${WORKDIR}/wmwave"
@@ -11,13 +11,11 @@ HOMEPAGE="http://wmwave.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXpm )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xextproto virtual/x11 )"
+	x11-proto/xextproto"
 
 src_compile() {
 	emake FLAGS="${CFLAGS}" || die "Compilation failed"

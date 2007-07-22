@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-0.0.3.9_pre4.ebuild,v 1.10 2006/01/24 23:15:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-0.0.3.9_pre4.ebuild,v 1.11 2007/07/22 05:09:22 dberkholz Exp $
 
 IUSE=""
 
@@ -11,13 +11,11 @@ DESCRIPTION="WindowMaker dockapp that displays cpu usage as a dancing flame"
 SRC_URI="http://staff.xmms.org/zinx/misc/${MY_P}.tar.gz"
 HOMEPAGE="http://staff.xmms.org/zinx/misc"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXpm )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xextproto virtual/x11 )"
+	x11-proto/xextproto"
 
 SLOT="0"
 LICENSE="GPL-2"

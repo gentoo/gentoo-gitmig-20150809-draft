@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/wmxres-1.2.ebuild,v 1.4 2006/01/31 21:15:04 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/wmxres-1.2.ebuild,v 1.5 2007/07/22 04:15:24 dberkholz Exp $
 
 inherit eutils
 
@@ -10,18 +10,14 @@ DESCRIPTION="Dock application to select your display mode among those possible"
 SRC_URI="http://yalla.free.fr/wn/${PN}-1.1-0.tar.gz"
 HOMEPAGE="http://yalla.free.fr/wn/"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXpm
-		x11-libs/libXxf86vm )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXpm
+	x11-libs/libXxf86vm"
 DEPEND="${RDEPEND}
-	|| ( (
-		x11-proto/xextproto
-		x11-proto/xf86vidmodeproto
-		x11-proto/xf86dgaproto )
-	virtual/x11 )"
+	x11-proto/xextproto
+	x11-proto/xf86vidmodeproto
+	x11-proto/xf86dgaproto"
 
 SLOT="0"
 LICENSE="GPL-1"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmwifi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/ChangeLog,v 1.14 2007/06/15 13:14:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/ChangeLog,v 1.15 2007/07/22 04:16:54 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; wmwifi-0.5.ebuild:
+  Drop virtual/x11 references.
 
   15 Jun 2007; Christoph Mende <angelos@gentoo.org> wmwifi-0.5.ebuild:
   Stable on amd64 wrt bug 179508

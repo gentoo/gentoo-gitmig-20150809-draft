@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmixer
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/ChangeLog,v 1.12 2007/01/25 16:11:30 s4t4n Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/ChangeLog,v 1.13 2007/07/22 04:51:32 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  wmmixer-2.0_beta4-r1.ebuild:
+  Drop virtual/x11 references.
 
   25 Jan 2007; Michele Noberasco <s4t4n@gentoo.org> wmmixer-2.0_beta4-r1.ebuild:
   Fix DEPEND and RDEPEND. Wiped out broken oss support. Fixes bug #150652.

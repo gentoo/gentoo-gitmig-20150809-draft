@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/wminet-2.0.3.ebuild,v 1.12 2006/01/31 19:31:12 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/wminet-2.0.3.ebuild,v 1.13 2007/07/22 05:00:36 dberkholz Exp $
 
 S="${WORKDIR}/${PN}.app"
 IUSE=""
@@ -12,13 +12,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc amd64 ppc"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXpm )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xextproto virtual/x11 )
+	x11-proto/xextproto
 	>=sys-apps/sed-4"
 
 src_unpack() {

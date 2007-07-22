@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/wmhdplop-0.9.7-r1.ebuild,v 1.2 2006/10/18 08:49:28 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/wmhdplop-0.9.7-r1.ebuild,v 1.3 2007/07/22 05:04:45 dberkholz Exp $
 
 inherit eutils
 
@@ -14,15 +14,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXt
-		x11-libs/libXext )
-	virtual/x11 )
+RDEPEND="x11-libs/libX11
+	x11-libs/libXt
+	x11-libs/libXext
 	>=media-fonts/corefonts-1-r2
 	>=media-libs/freetype-2.1.10-r2"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xextproto virtual/x11 )
+	x11-proto/xextproto
 	>=media-libs/imlib2-1.2.0-r2
 	gkrellm? ( >=app-admin/gkrellm-2.1.28-r1 )"
 

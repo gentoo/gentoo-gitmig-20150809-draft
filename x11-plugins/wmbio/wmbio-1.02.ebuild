@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/wmbio-1.02.ebuild,v 1.7 2006/07/08 03:03:21 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/wmbio-1.02.ebuild,v 1.8 2007/07/22 05:21:53 dberkholz Exp $
 
 inherit eutils
 
@@ -10,13 +10,11 @@ DESCRIPTION="a Window Maker applet that shows your biorhythm"
 SRC_URI="http://wmbio.sourceforge.net/${P}.tar.gz"
 HOMEPAGE="http://wmbio.sourceforge.net/"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXpm )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xextproto virtual/x11 )"
+	x11-proto/xextproto"
 
 SLOT="0"
 LICENSE="GPL-2"

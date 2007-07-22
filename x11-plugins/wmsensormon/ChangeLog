@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmsensormon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.17 2007/02/21 23:49:04 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.18 2007/07/22 04:33:49 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  wmsensormon-1.2.1.ebuild:
+  Drop virtual/x11 references.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

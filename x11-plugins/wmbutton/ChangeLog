@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbutton
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.10 2006/10/27 08:36:32 s4t4n Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.11 2007/07/22 05:20:32 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; wmbutton-0.5.ebuild:
+  Drop virtual/x11 references.
 
   24 Jan 2006; Michele Noberasco <s4t4n@gentoo.org> wmbutton-0.5.ebuild:
   Fixed modular X dependancies. Closes bug #150645

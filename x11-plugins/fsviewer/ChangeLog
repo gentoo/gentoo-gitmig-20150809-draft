@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/fsviewer
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.14 2007/01/26 17:16:00 s4t4n Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.15 2007/07/22 05:36:37 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  fsviewer-0.2.5.ebuild:
+  Drop virtual/x11 references.
 
   26 Jan 2006; Michele Noberasco <s4t4n@gentoo.org> fsviewer-0.2.5.ebuild:
   Fixed DEPEND. Closes bug #150634.

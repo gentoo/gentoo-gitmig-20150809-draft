@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b.ebuild,v 1.6 2007/07/11 20:39:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b.ebuild,v 1.7 2007/07/22 04:59:08 dberkholz Exp $
 
 IUSE="gtk"
 
@@ -17,13 +17,10 @@ DEPEND="virtual/libc
 		=app-admin/gkrellm-2*
 		dev-util/pkgconfig
 	)
-	( || (
-	( >=x11-libs/libX11-1.0.0
+	>=x11-libs/libX11-1.0.0
 	>=x11-libs/libXext-1.0.0
 	>=x11-libs/libXpm-3.5.4.2
-	>=x11-proto/xextproto-7.0.2 )
-	virtual/x11 )
-	)"
+	>=x11-proto/xextproto-7.0.2"
 
 RDEPEND="virtual/libc
 	dev-libs/openssl
@@ -32,13 +29,10 @@ RDEPEND="virtual/libc
 		=app-admin/gkrellm-2*
 	)
 	!gtk? ( x11-wm/windowmaker )
-	( || (
-	( >=x11-libs/libX11-1.0.0
+	>=x11-libs/libX11-1.0.0
 	>=x11-libs/libXext-1.0.0
 	>=x11-libs/libXpm-3.5.4.2
-	>=x11-proto/xextproto-7.0.2 )
-	virtual/x11 )
-	)"
+	>=x11-proto/xextproto-7.0.2"
 
 src_compile() {
 	emake build || die

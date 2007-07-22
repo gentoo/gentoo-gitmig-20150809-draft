@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtz
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.15 2007/02/21 23:51:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.16 2007/07/22 04:24:31 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; wmtz-0.7.ebuild:
+  Drop virtual/x11 references.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

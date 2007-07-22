@@ -1,22 +1,18 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/wmMoonClock-1.27.ebuild,v 1.13 2006/01/22 11:55:13 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/wmMoonClock-1.27.ebuild,v 1.14 2007/07/22 05:34:11 dberkholz Exp $
 
 IUSE=""
 DESCRIPTION="dockapp that shows lunar ephemeris to a high accuracy."
 SRC_URI="http://nis-www.lanl.gov/~mgh/WindowMaker/${P}.tar.gz"
 HOMEPAGE="http://nis-www.lanl.gov/~mgh/WindowMaker/DockApps.shtml"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXpm )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	|| ( (
-		x11-proto/xproto
-		x11-proto/xextproto )
-	virtual/x11 )"
+	x11-proto/xproto
+	x11-proto/xextproto"
 
 LICENSE="GPL-2"
 SLOT="0"

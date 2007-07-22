@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbio
-# Copyright 2001-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.12 2006/07/08 03:03:21 squinky86 Exp $
+# Copyright 2001-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.13 2007/07/22 05:21:53 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; wmbio-1.02.ebuild:
+  Drop virtual/x11 references.
 
   08 Jul 2006; Jon Hood <squinky86@gentoo.org> wmbio-1.02.ebuild:
   Adding ~amd64, bug #120555.

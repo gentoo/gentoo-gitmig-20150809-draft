@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/epplets
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.10 2007/05/05 07:44:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.11 2007/07/22 05:38:11 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; epplets-0.9.ebuild,
+  epplets-0.10.ebuild:
+  Drop virtual/x11 references.
 
 *epplets-0.10 (05 May 2007)
 

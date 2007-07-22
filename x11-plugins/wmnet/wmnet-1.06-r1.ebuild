@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/wmnet-1.06-r1.ebuild,v 1.8 2006/01/31 20:06:22 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/wmnet-1.06-r1.ebuild,v 1.9 2007/07/22 04:44:41 dberkholz Exp $
 
 inherit eutils
 
@@ -10,17 +10,13 @@ SRC_URI="http://www.digitalkaos.net/linux/wmnet/download/${P}.tar.gz
 	mirror://gentoo/${P}-misc.patch.bz2"
 HOMEPAGE="http://www.digitalkaos.net/linux/wmnet/"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXext )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXext"
 DEPEND="${RDEPEND}
-	|| ( (
-		x11-proto/xproto
-		x11-proto/xextproto
-		x11-misc/imake
-		app-text/rman )
-	virtual/x11 )"
+	x11-proto/xproto
+	x11-proto/xextproto
+	x11-misc/imake
+	app-text/rman"
 
 SLOT="0"
 LICENSE="GPL-2"

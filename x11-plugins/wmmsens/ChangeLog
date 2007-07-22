@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmsens
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsens/ChangeLog,v 1.8 2007/02/21 23:44:32 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsens/ChangeLog,v 1.9 2007/07/22 04:46:54 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  wmmsens-0.29.6.ebuild:
+  Drop virtual/x11 references.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

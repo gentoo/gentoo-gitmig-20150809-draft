@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wminet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/ChangeLog,v 1.9 2007/02/21 23:36:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/ChangeLog,v 1.10 2007/07/22 05:00:36 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; wminet-2.0.3.ebuild:
+  Drop virtual/x11 references.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/asmon-0.7.ebuild,v 1.6 2007/01/03 01:15:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/asmon-0.7.ebuild,v 1.7 2007/07/22 05:39:35 dberkholz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,11 +12,9 @@ SLOT="0"
 IUSE=""
 KEYWORDS="alpha ~amd64 ppc sparc x86"
 
-RDEPEND="|| ( ( x11-libs/libXpm )
-	<virtual/x11-7 )"
+RDEPEND="x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xextproto )
-	<virtual/x11-7 )"
+	x11-proto/xextproto"
 
 src_unpack() {
 	unpack ${A}
