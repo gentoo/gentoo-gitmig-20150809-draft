@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.3.0-r1.ebuild,v 1.5 2007/07/10 23:09:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.3.0-r1.ebuild,v 1.6 2007/07/22 09:15:01 dberkholz Exp $
 
 inherit vdr-plugin
 
@@ -21,23 +21,19 @@ RDEPEND=">=media-video/vdr-1.3.36
 		dev-libs/DFB++
 	)
 	media-libs/alsa-lib
-	xv? ( || ( ( x11-libs/libX11
-				x11-libs/libXext
-				x11-libs/libXi
-				x11-libs/libXv
-				xinerama? ( x11-libs/libXinerama )
-			)
-			virtual/x11
-		) )"
+	xv? ( x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXi
+		x11-libs/libXv
+		xinerama? ( x11-libs/libXinerama )
+	)"
 
 DEPEND="${RDEPEND}
-	xv? ( || ( ( x11-proto/xproto
-				x11-proto/xextproto
-				x11-libs/libXv
-				xinerama? ( x11-proto/xineramaproto )
-			)
-			virtual/x11
-	) )
+	xv? ( x11-proto/xproto
+		x11-proto/xextproto
+		x11-libs/libXv
+		xinerama? ( x11-proto/xineramaproto )
+	)
 	fbcon? ( sys-kernel/linux-headers )
 	dev-util/pkgconfig"
 

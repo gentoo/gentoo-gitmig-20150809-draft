@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/libvisual-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.35 2007/05/25 06:49:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.36 2007/07/22 09:22:09 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  libvisual-plugins-0.2.0.ebuild, libvisual-plugins-0.4.0.ebuild,
+  libvisual-plugins-0.4.0-r1.ebuild:
+  Drop virtual/x11 references.
 
   25 May 2007; Alexis Ballier <aballier@gentoo.org>
   libvisual-plugins-0.4.0-r1.ebuild:

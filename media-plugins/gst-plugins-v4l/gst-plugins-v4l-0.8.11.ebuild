@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/gst-plugins-v4l-0.8.11.ebuild,v 1.6 2007/07/10 23:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/gst-plugins-v4l-0.8.11.ebuild,v 1.7 2007/07/22 09:20:38 dberkholz Exp $
 
 inherit gst-plugins
 
@@ -10,7 +10,7 @@ KEYWORDS="amd64 ppc x86"
 
 IUSE=""
 
-RDEPEND="|| ( x11-libs/libXv virtual/x11 )"
+RDEPEND="x11-libs/libXv"
 
 DEPEND="${RDEPEND}
 	virtual/os-headers

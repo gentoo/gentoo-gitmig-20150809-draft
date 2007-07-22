@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.2.0.ebuild,v 1.13 2006/07/09 06:17:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.2.0.ebuild,v 1.14 2007/07/22 09:22:09 dberkholz Exp $
 
 inherit eutils
 
@@ -18,15 +18,13 @@ RDEPEND="~media-libs/libvisual-${PV}
 	esd? ( media-sound/esound )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
 	gtk? ( >=x11-libs/gtk+-2 )
-	|| ( (
-			media-libs/fontconfig
-			x11-libs/libX11
-			x11-libs/libXext
-			x11-libs/libXrender
-		) <virtual/x11-7 )"
+	media-libs/fontconfig
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXrender"
 
 DEPEND="${RDEPEND}
-	|| ( x11-libs/libXt <virtual/x11-7 )
+	x11-libs/libXt
 	>=dev-util/pkgconfig-0.14"
 
 src_compile() {

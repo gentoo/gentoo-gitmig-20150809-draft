@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2.ebuild,v 1.3 2007/07/10 23:09:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.0_rc2.ebuild,v 1.4 2007/07/22 09:11:31 dberkholz Exp $
 
 inherit vdr-plugin eutils multilib
 
@@ -22,25 +22,17 @@ RDEPEND=">=media-video/vdr-1.3.42
 		>=media-libs/xine-lib-1.1.1
 		media-libs/jpeg
 		X? (
-			|| ( (
-					x11-proto/xextproto
-					x11-proto/xf86vidmodeproto
-					x11-proto/xproto
-				)
-				virtual/x11
-			)
+			x11-proto/xextproto
+			x11-proto/xf86vidmodeproto
+			x11-proto/xproto
 		)"
 
 DEPEND="${RDEPEND}
 		sys-kernel/linux-headers
 		X? (
-			|| ( (
-					x11-libs/libX11
-					x11-libs/libXv
-					x11-libs/libXext
-				)
-				virtual/x11
-			)
+			x11-libs/libX11
+			x11-libs/libXv
+			x11-libs/libXext
 		)"
 
 #MY_PV=${PV%_p*}

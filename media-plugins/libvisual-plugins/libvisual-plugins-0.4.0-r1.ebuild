@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.11 2007/07/10 23:09:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.12 2007/07/22 09:22:09 dberkholz Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -28,14 +28,12 @@ RDEPEND="~media-libs/libvisual-${PV}
 	gstreamer? ( >=media-libs/gstreamer-0.8 )
 	alsa? ( media-libs/alsa-lib )
 	media-libs/fontconfig
-	|| ( (
-			x11-libs/libX11
-			x11-libs/libXext
-			x11-libs/libXrender
-		) <virtual/x11-7 )"
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXrender"
 
 DEPEND="${RDEPEND}
-	|| ( x11-libs/libXt <virtual/x11-7 )
+	x11-libs/libXt
 	>=dev-util/pkgconfig-0.14"
 
 src_unpack() {
