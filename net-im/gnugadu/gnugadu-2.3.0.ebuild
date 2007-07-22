@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.4 2007/07/12 05:34:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.5 2007/07/22 08:00:23 drac Exp $
 
 IUSE="debug dbus tlen esd oss xosd arts jabber perl spell gnutls"
 
@@ -30,9 +30,9 @@ RDEPEND="net-libs/libgadu
 	spell? ( app-text/gtkspell )
 	gnutls? ( net-libs/gnutls )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
-	|| ( x11-libs/libXScrnSaver virtual/x11 )"
+	x11-libs/libXScrnSaver"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/scrnsaverproto virtual/x11 )"
+	x11-proto/scrnsaverproto"
 
 src_unpack() {
 	unpack ${A}

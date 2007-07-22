@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.23.ebuild,v 1.7 2007/07/08 04:36:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.23.ebuild,v 1.8 2007/07/22 07:57:10 drac Exp $
 
 inherit gnome2 eutils
 
@@ -12,8 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="spell dbus libnotify galago"
 
-RDEPEND="|| ( x11-libs/libXScrnSaver
-		virtual/x11 )
+RDEPEND="x11-libs/libXScrnSaver
 	>=dev-libs/glib-2.12.1
 	>=x11-libs/gtk+-2.10
 	>=gnome-base/libglade-2
@@ -28,7 +27,6 @@ RDEPEND="|| ( x11-libs/libXScrnSaver
 	libnotify? ( >=x11-libs/libnotify-0.4.1 )
 	galago? ( dev-libs/libgalago )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )"
-
 DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3.2
 	app-text/scrollkeeper
