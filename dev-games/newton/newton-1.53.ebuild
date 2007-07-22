@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/newton-1.53.ebuild,v 1.1 2006/09/06 19:29:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/newton-1.53.ebuild,v 1.2 2007/07/22 09:48:15 graaff Exp $
 
 DESCRIPTION="an integrated solution for real time simulation of physics environments"
 HOMEPAGE="http://www.physicsengine.com/"
@@ -13,11 +13,8 @@ KEYWORDS="~x86"
 IUSE="doc"
 
 RDEPEND="doc? (
-	|| (
-		(
-			x11-libs/libXmu
-			x11-libs/libXi )
-		virtual/x11 )
+	x11-libs/libXmu
+	x11-libs/libXi
 	virtual/opengl
 	virtual/glut )"
 

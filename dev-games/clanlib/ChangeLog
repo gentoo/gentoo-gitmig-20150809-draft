@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.38 2007/06/12 23:38:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.39 2007/07/22 09:50:49 graaff Exp $
+
+  22 Jul 2007; Hans de Graaff <graaff@gentoo.org> clanlib-0.6.5-r4.ebuild,
+  clanlib-0.7.8-r2.ebuild:
+  Drop virtual/x11 references.
 
   12 Jun 2007; Tristan Heaven <nyhm@gentoo.org>
   +files/clanlib-0.8.0-gcc42.patch, clanlib-0.8.0.ebuild:

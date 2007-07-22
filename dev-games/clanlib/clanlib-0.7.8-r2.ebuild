@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r2.ebuild,v 1.2 2006/05/12 03:48:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r2.ebuild,v 1.3 2007/07/22 09:50:49 graaff Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,23 +23,13 @@ RDEPEND="media-libs/libpng
 		media-libs/libsdl
 		media-libs/sdl-gfx
 	)
-	|| (
-		(
-			x11-libs/libXmu
-			x11-libs/libXxf86vm
-		)
-		virtual/x11
-	)
+	x11-libs/libXmu
+	x11-libs/libXxf86vm
 	mikmod? ( >=media-libs/libmikmod-3.1.9 )
 	vorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND}
-	|| (
-		(
-			x11-libs/libXt
-			x11-proto/xf86vidmodeproto
-		)
-		virtual/x11
-	)"
+	x11-libs/libXt
+	x11-proto/xf86vidmodeproto"
 
 S="${WORKDIR}/ClanLib-${PV}"
 

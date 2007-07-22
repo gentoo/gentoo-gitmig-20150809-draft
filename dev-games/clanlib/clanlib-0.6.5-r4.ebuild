@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r4.ebuild,v 1.2 2006/09/28 16:55:37 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r4.ebuild,v 1.3 2007/07/22 09:50:49 graaff Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -15,13 +15,10 @@ IUSE="arts oss esd alsa png opengl truetype X vorbis mikmod jpeg directfb joysti
 
 DEPEND=">=media-libs/hermes-1.3.2
 	X? (
-		|| (
-			( media-libs/mesa
-			x11-libs/libXt
-			x11-proto/inputproto
-			x11-proto/xf86vidmodeproto )
-			virtual/x11
-		)
+		media-libs/mesa
+		x11-libs/libXt
+		x11-proto/inputproto
+		x11-proto/xf86vidmodeproto
 	)
 	png? ( media-libs/libpng )
 	jpeg? ( >=media-libs/jpeg-6b )
@@ -30,12 +27,9 @@ DEPEND=">=media-libs/hermes-1.3.2
 	directfb? ( dev-libs/DirectFB )
 	vorbis? ( media-libs/libvorbis )"
 RDEPEND="${DEPEND}
-	|| (
-		( media-libs/mesa
-		x11-libs/libXmu
-		x11-libs/libXxf86vm )
-		virtual/x11
-	)"
+	media-libs/mesa
+	x11-libs/libXmu
+	x11-libs/libXxf86vm"
 
 S=${WORKDIR}/ClanLib-${PV}
 
