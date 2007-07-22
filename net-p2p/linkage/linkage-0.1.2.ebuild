@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/linkage-0.1.2.ebuild,v 1.1 2007/07/22 14:08:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/linkage-0.1.2.ebuild,v 1.2 2007/07/22 14:43:26 drac Exp $
+
+inherit fdo-mime
 
 DESCRIPTION="BitTorrent client written in C++ using gtkmm and libtorrent."
 HOMEPAGE="http://code.google.com/p/linkage"
@@ -23,4 +25,14 @@ DEPEND="${RDEPEND}
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README TODO
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }
