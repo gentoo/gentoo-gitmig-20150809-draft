@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/Tk_Theme/Tk_Theme-23.ebuild,v 1.12 2007/01/02 15:40:51 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/Tk_Theme/Tk_Theme-23.ebuild,v 1.13 2007/07/22 07:34:22 graaff Exp $
 
 DESCRIPTION="Theming library for TCL/TK."
 HOMEPAGE="http://www.xmission.com/~georgeps/Tk_Theme/"
@@ -14,12 +14,11 @@ IUSE=""
 
 RDEPEND="dev-lang/tcl
 	dev-lang/tk
-	|| ( ( x11-libs/libXmu
-		x11-libs/libXpm
-		x11-libs/libXt )
-	virtual/x11 )"
+	x11-libs/libXmu
+	x11-libs/libXpm
+	x11-libs/libXt"
 DEPEND="$RDEPEND
-	|| ( x11-proto/xextproto virtual/x11 )"
+	x11-proto/xextproto"
 
 src_compile() {
 	tclsh configure || die 'configure failed'
