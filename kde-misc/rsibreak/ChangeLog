@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/rsibreak
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.21 2006/11/21 12:35:36 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.22 2007/07/22 10:38:08 philantrop Exp $
+
+  22 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  rsibreak-0.7.0.ebuild, rsibreak-0.8.0.ebuild:
+  Removed virtual/x11 dependencies.
 
   21 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Give this back to kde herd.

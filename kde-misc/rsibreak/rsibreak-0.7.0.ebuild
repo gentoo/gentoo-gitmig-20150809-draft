@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.7.0.ebuild,v 1.5 2006/10/01 17:38:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.7.0.ebuild,v 1.6 2007/07/22 10:38:08 philantrop Exp $
 
 USE_KEG_PACKAGING="yes"
 
@@ -23,14 +23,12 @@ IUSE=""
 
 S="${WORKDIR}/${PN}-${PV/_rc/-rc}"
 
-RDEPEND="|| ( (
-			x11-libs/libXext
-			x11-libs/libX11
-			x11-libs/libXScrnSaver
-		) <virtual/x11-7 )"
+RDEPEND="x11-libs/libXext
+		x11-libs/libX11
+		x11-libs/libXScrnSaver"
 
 DEPEND="${RDEPEND}
-	|| ( x11-proto/scrnsaverproto <virtual/x11-7 )"
+		x11-proto/scrnsaverproto"
 
 need-kde 3.3
 
