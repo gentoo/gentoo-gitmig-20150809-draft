@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.55 2007/04/22 09:58:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.56 2007/07/22 09:06:19 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> canna-3.7_p2.ebuild,
+  canna-3.7_p3.ebuild:
+  Drop virtual/x11 dependency.
 
   22 Apr 2007; MATSUU Takuto <matsuu@gentoo.org>
   -files/canna-3.6_p4-gentoo.diff, -canna-3.6_p4.ebuild,
