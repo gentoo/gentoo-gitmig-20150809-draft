@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.96.ebuild,v 1.1 2007/05/23 13:17:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.96.ebuild,v 1.2 2007/07/22 06:51:22 dberkholz Exp $
 
 inherit toolchain-funcs fortran
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="doc examples"
 
-DEPEND="|| ( x11-libs/libX11 virtual/x11 )"
+DEPEND="x11-libs/libX11"
 
 RESTRICT="test"
 
