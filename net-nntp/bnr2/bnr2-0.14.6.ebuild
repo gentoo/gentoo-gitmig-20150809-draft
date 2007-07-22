@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/bnr2/bnr2-0.14.6.ebuild,v 1.5 2006/02/11 16:17:31 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/bnr2/bnr2-0.14.6.ebuild,v 1.6 2007/07/22 07:59:43 dberkholz Exp $
 
 DESCRIPTION="A great newsreader for alt.binaries.*"
 HOMEPAGE="http://www.bnr2.org/"
@@ -12,9 +12,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="|| ( ( x11-libs/libXext
-				x11-libs/libSM )
-			virtual/x11 )
+RDEPEND="x11-libs/libXext
+	x11-libs/libSM
 	virtual/libc"
 DEPEND=""
 

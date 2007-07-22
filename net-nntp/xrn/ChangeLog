@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/xrn
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/xrn/ChangeLog,v 1.3 2006/11/04 02:18:51 swegener Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/xrn/ChangeLog,v 1.4 2007/07/22 07:56:16 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; xrn-9.02.ebuild:
+  Drop virtual/x11 references.
 
   04 Nov 2006; Sven Wegener <swegener@gentoo.org> xrn-9.02.ebuild:
   Ported to modular X dependencies, bug #153215.

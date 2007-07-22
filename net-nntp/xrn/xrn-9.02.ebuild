@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/xrn/xrn-9.02.ebuild,v 1.3 2007/06/26 02:36:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/xrn/xrn-9.02.ebuild,v 1.4 2007/07/22 07:56:16 dberkholz Exp $
 
 DESCRIPTION="A small and fast news reader for X."
 HOMEPAGE="http://www.mit.edu/people/jik/software/xrn.html"
@@ -11,25 +11,17 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="|| (
-		(
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libX11
-			x11-libs/libXaw
-			x11-libs/libXext
-			x11-libs/libXmu
-			x11-libs/libXp
-			x11-libs/libXpm
-			x11-libs/libXt
-		)
-		virtual/x11
-	)"
+RDEPEND="x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXaw
+	x11-libs/libXext
+	x11-libs/libXmu
+	x11-libs/libXp
+	x11-libs/libXpm
+	x11-libs/libXt"
 DEPEND="${RDEPEND}
-	|| (
-		x11-misc/imake
-		virtual/x11
-	)
+	x11-misc/imake
 	>=sys-apps/sed-4"
 
 src_compile() {

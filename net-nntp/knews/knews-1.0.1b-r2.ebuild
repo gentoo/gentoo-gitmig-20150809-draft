@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/knews/knews-1.0.1b-r2.ebuild,v 1.4 2007/07/15 23:15:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/knews/knews-1.0.1b-r2.ebuild,v 1.5 2007/07/22 07:58:41 dberkholz Exp $
 
 inherit eutils
 
@@ -18,32 +18,22 @@ IUSE="xface png jpeg"
 
 S="${WORKDIR}"/${MY_P}
 
-RDEPEND="|| (
-		(
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libX11
-			x11-libs/libXext
-			x11-libs/libXmu
-			x11-libs/libXpm
-			x11-libs/libXt
-		)
-		virtual/x11
-	)
+RDEPEND="x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXmu
+	x11-libs/libXpm
+	x11-libs/libXt
 	jpeg? ( >=media-libs/jpeg-6 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	xface? ( >=media-libs/compface-1.4 )
 	virtual/mta"
 
 DEPEND="${RDEPEND}
-	|| (
-		(
-			x11-proto/xproto
-			x11-misc/gccmakedep
-			x11-misc/imake
-		)
-		virtual/x11
-	)
+	x11-proto/xproto
+	x11-misc/gccmakedep
+	x11-misc/imake
 	=sys-apps/sed-4*"
 
 src_unpack() {
