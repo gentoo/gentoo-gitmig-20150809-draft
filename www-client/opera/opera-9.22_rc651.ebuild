@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.22_rc651.ebuild,v 1.1 2007/07/19 11:10:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.22_rc651.ebuild,v 1.2 2007/07/22 06:17:43 dberkholz Exp $
 
 GCONF_DEBUG="no"
 
@@ -34,19 +34,16 @@ SRC_URI="
 
 DEPEND=">=sys-apps/sed-4"
 
-RDEPEND="|| ( ( x11-libs/libXrandr
-				x11-libs/libXp
-				x11-libs/libXmu
-				x11-libs/libXi
-				x11-libs/libXft
-				x11-libs/libXext
-				x11-libs/libXcursor
-				x11-libs/libX11
-				x11-libs/libSM
-				x11-libs/libICE
-			  )
-			  virtual/x11
-			)
+RDEPEND="x11-libs/libXrandr
+	x11-libs/libXp
+	x11-libs/libXmu
+	x11-libs/libXi
+	x11-libs/libXft
+	x11-libs/libXext
+	x11-libs/libXcursor
+	x11-libs/libX11
+	x11-libs/libSM
+	x11-libs/libICE
 	>=media-libs/fontconfig-2.1.94-r1
 	amd64? ( qt-static? ( app-emulation/emul-linux-x86-xlibs )
 			 !qt-static? ( app-emulation/emul-linux-x86-qtlibs ) )
