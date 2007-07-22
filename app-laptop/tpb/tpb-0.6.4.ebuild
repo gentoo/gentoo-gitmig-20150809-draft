@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/tpb-0.6.4.ebuild,v 1.4 2007/04/17 14:42:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/tpb-0.6.4.ebuild,v 1.5 2007/07/22 09:43:31 omp Exp $
 
 inherit linux-info eutils
 
@@ -14,8 +14,9 @@ KEYWORDS="~amd64 -ppc x86"
 
 IUSE="nls xosd"
 
-DEPEND="|| ( ( x11-libs/libXt x11-libs/libXext ) virtual/x11 )
-		xosd? ( >=x11-libs/xosd-2.2.0 )"
+DEPEND="x11-libs/libXt
+	x11-libs/libXext
+	xosd? ( >=x11-libs/xosd-2.2.0 )"
 
 CONFIG_CHECK="~NVRAM"
 ERROR_NVRAM="${P} requires /dev/nvram support (CONFIG_NVRAM)"
