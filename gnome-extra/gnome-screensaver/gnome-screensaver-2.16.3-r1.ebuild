@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.2.ebuild,v 1.14 2007/07/08 04:41:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.3-r1.ebuild,v 1.1 2007/07/22 03:06:31 compnerd Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/GnomeScreensaver"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc xinerama opengl pam"
 
 RDEPEND=">=gnome-base/gconf-2.6.1
@@ -66,7 +66,8 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
-	epatch "${FILESDIR}"/${P}-openpam.patch
+	epatch "${FILESDIR}"/${PN}-2.16.2-openpam.patch
+	intltoolize --force || die
 }
 
 src_install() {
@@ -78,7 +79,7 @@ src_install() {
 
 	# Conversion information
 	sed -e "s:\${PF}:${PF}:" \
-		< ${FILESDIR}/xss-conversion.txt > ${S}/xss-conversion.txt
+		< ${FILESDIR}/xss-conversion-2.txt > ${S}/xss-conversion.txt
 
 	dodoc ${S}/xss-conversion.txt
 
@@ -87,7 +88,7 @@ src_install() {
 	# http://bugzilla.gnome.org/show_bug.cgi?id=370847
 	# is fixed.
 	if ! use pam ; then
-		fperms +s /usr/libexec/gnome-screensaver-dialog
+		fperms u+s /usr/libexec/gnome-screensaver-dialog
 	fi
 }
 
