@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r4.ebuild,v 1.16 2006/06/08 13:48:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r4.ebuild,v 1.17 2007/07/22 04:16:44 omp Exp $
 
 inherit alternatives eutils flag-o-matic toolchain-funcs
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="tiff jpeg png"
 
-RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
+RDEPEND="x11-libs/libX11
 	tiff? ( media-libs/tiff )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )"

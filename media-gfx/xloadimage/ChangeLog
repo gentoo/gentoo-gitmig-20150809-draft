@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xloadimage
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.39 2007/05/14 17:29:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.40 2007/07/22 04:16:44 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> xloadimage-4.1-r4.ebuild:
+  Remove virtual/x11 from dependencies.
 
 *xloadimage-4.1-r5 (14 May 2007)
 
