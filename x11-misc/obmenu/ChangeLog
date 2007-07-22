@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obmenu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obmenu/ChangeLog,v 1.4 2007/07/17 07:08:13 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obmenu/ChangeLog,v 1.5 2007/07/22 08:33:06 corsair Exp $
+
+  22 Jul 2007; Markus Rothe <corsair@gentoo.org> obmenu-1.0.ebuild:
+  Added ~ppc
 
   17 Jul 2007; Peter Weller <welp@gentoo.org> obmenu-1.0.ebuild:
   Stable on amd64
