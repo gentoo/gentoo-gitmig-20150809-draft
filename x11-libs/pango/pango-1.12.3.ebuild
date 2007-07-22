@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.12.3.ebuild,v 1.11 2007/07/22 03:01:36 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.12.3.ebuild,v 1.12 2007/07/22 03:02:37 dberkholz Exp $
 
 inherit eutils gnome2
 
@@ -23,7 +23,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
-	|| ( x11-proto/xproto virtual/x11 )
+	x11-proto/xproto
 	doc? (
 		>=dev-util/gtk-doc-1
 		~app-text/docbook-xml-dtd-4.1.2 )"
