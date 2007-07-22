@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.2.0-r1.ebuild,v 1.7 2007/02/09 21:23:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.2.0-r1.ebuild,v 1.8 2007/07/22 08:42:58 omp Exp $
 
 inherit eutils
 
@@ -16,13 +16,11 @@ KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="X"
 
 DEPEND=">=sys-libs/ncurses-5.2
-	X? ( || (
-	( >=x11-proto/xproto-7.0.4
-	>=x11-libs/libX11-1.0.0
-	>=x11-libs/libXt-1.0.0
-	>=x11-libs/libXpm-3.5.4.2
-	>=x11-libs/libXft-2.1.8.2 )
-	virtual/x11 ) )"
+	X? ( >=x11-proto/xproto-7.0.4
+		>=x11-libs/libX11-1.0.0
+		>=x11-libs/libXt-1.0.0
+		>=x11-libs/libXpm-3.5.4.2
+		>=x11-libs/libXft-2.1.8.2 )"
 PROVIDE="virtual/editor"
 
 src_compile() {

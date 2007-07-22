@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20050108-r3.ebuild,v 1.5 2006/10/17 22:07:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20050108-r3.ebuild,v 1.6 2007/07/22 08:45:36 omp Exp $
 
 inherit eutils
 
@@ -15,11 +15,9 @@ KEYWORDS="amd64 ppc -sparc x86"
 IUSE="gpm slang X"
 S=${WORKDIR}/${PN}
 
-RDEPEND="|| ( (
-		x11-libs/libXdmcp
-		x11-libs/libXau
-		x11-libs/libX11
-	) virtual/x11 )
+RDEPEND="x11-libs/libXdmcp
+	x11-libs/libXau
+	x11-libs/libX11
 	>=sys-libs/ncurses-5.2
 	gpm? ( >=sys-libs/gpm-1.20 )"
 DEPEND="${RDEPEND}

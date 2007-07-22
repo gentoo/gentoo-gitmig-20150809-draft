@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.1.ebuild,v 1.1 2007/05/13 13:25:38 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.1.ebuild,v 1.2 2007/07/22 08:39:36 omp Exp $
 
 inherit vim
 
@@ -20,7 +20,7 @@ IUSE="aqua gnome gtk motif nextaw"
 PROVIDE="virtual/editor"
 DEPEND="${DEPEND}
 	~app-editors/vim-core-${PV}
-	|| ( x11-libs/libXext virtual/x11 )
+	x11-libs/libXext
 	!aqua? (
 		gtk? (
 			>=x11-libs/gtk+-2.6
@@ -35,9 +35,7 @@ DEPEND="${DEPEND}
 				nextaw? (
 					x11-libs/neXtaw
 				)
-				!nextaw? (
-					|| ( x11-libs/libXaw virtual/x11 )
-				)
+				!nextaw? ( x11-libs/libXaw )
 			)
 		)
 	)"

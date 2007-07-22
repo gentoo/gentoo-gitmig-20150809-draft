@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/cooledit-3.17.17.ebuild,v 1.2 2006/09/08 22:42:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/cooledit-3.17.17.ebuild,v 1.3 2007/07/22 08:41:07 omp Exp $
 
 inherit eutils
 
@@ -12,10 +12,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
 IUSE="nls spell"
 
-RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
+RDEPEND="x11-libs/libX11
 	app-text/ispell"
 DEPEND="${RDEPEND}
-	|| ( x11-libs/libXpm virtual/x11 )"
+	x11-libs/libXpm"
 
 src_unpack() {
 	unpack ${A}
