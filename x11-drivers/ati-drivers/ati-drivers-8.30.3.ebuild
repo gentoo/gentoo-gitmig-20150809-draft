@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.30.3.ebuild,v 1.5 2007/07/15 05:56:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.30.3.ebuild,v 1.6 2007/07/22 02:31:53 dberkholz Exp $
 
 IUSE="acpi doc opengl"
 
@@ -14,12 +14,12 @@ SRC_URI="${ATI_URL}/ati-driver-installer-${PV}.run"
 LICENSE="ATI"
 KEYWORDS="-* ~amd64 ~x86"
 
-RDEPEND="|| ( x11-base/xorg-server virtual/x11 )
+RDEPEND="x11-base/xorg-server
 	 app-admin/eselect-opengl
 	 || ( sys-libs/libstdc++-v3 =sys-devel/gcc-3.3* )
 	 acpi? (
-	 	|| ( x11-apps/xauth virtual/x11 )
-	 	sys-power/acpid
+		x11-apps/xauth
+		sys-power/acpid
 	 )"
 
 DEPEND=">=virtual/linux-sources-2.4
@@ -114,22 +114,9 @@ pkg_setup(){
 	fi
 
 	# Set up X11 implementation
-	if has_version "x11-base/xorg-server"; then
-		X11_IMPLEM=xorg-x11
-		X11_IMPLEM_V="$(best_version x11-base/xorg-server)"
-		X11_IMPLEM_V="${X11_IMPLEM_V/x11-base\/xorg-server-/}"
-	elif has_version "<x11-base/xorg-x11-6.8.99"; then
-		X11_IMPLEM=xorg-x11
-		X11_IMPLEM_V="$(best_version x11-base/xorg-x11)"
-		X11_IMPLEM_V="${X11_IMPLEM_V/${X11_IMPLEM}-/}"
-		X11_IMPLEM_V="${X11_IMPLEM_V##*\/}"
-	else
-		X11_IMPLEM_P="$(best_version virtual/x11)"
-		X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
-		X11_IMPLEM="${X11_IMPLEM##*\/}"
-		X11_IMPLEM_V="${X11_IMPLEM_P/${X11_IMPLEM}-/}"
-		X11_IMPLEM_V="${X11_IMPLEM_V##*\/}"
-	fi
+	X11_IMPLEM=xorg-x11
+	X11_IMPLEM_V="$(best_version x11-base/xorg-server)"
+	X11_IMPLEM_V="${X11_IMPLEM_V/x11-base\/xorg-server-/}"
 	einfo "X11 implementation is ${X11_IMPLEM}."
 	choose_driver_paths
 }

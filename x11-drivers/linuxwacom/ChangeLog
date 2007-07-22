@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/linuxwacom
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.10 2007/01/13 17:25:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.11 2007/07/22 02:37:30 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  linuxwacom-0.7.4_p3.ebuild:
+  Drop virtual/x11 references.
 
   13 Jan 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   linuxwacom-0.7.4_p3.ebuild:
