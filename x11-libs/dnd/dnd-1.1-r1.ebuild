@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1-r1.ebuild,v 1.12 2007/01/18 06:58:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1-r1.ebuild,v 1.13 2007/07/22 02:47:38 dberkholz Exp $
 
 inherit toolchain-funcs eutils
 
@@ -13,15 +13,13 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
-DEPEND="|| (
-	( >=x11-libs/libX11-1.0.0
+DEPEND=">=x11-libs/libX11-1.0.0
 	>=x11-libs/libXmu-1.0.0
 	>=x11-libs/libXt-1.0.0
 	>=x11-libs/libICE-1.0.0
 	>=x11-libs/libSM-1.0.0
 	>=x11-libs/libXaw-1.0.1
-	>=x11-proto/xproto-7.0.4 )
-	<virtual/x11-7.0 )"
+	>=x11-proto/xproto-7.0.4"
 
 src_unpack() {
 	unpack ${A}

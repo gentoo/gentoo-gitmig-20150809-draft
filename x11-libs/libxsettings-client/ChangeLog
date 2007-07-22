@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxsettings-client
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/ChangeLog,v 1.12 2006/10/25 05:04:20 dberkholz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/ChangeLog,v 1.13 2007/07/22 02:58:49 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  libxsettings-client-0.10.ebuild:
+  Drop virtual/x11 references.
 
   25 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/0.10-as-needed.patch, libxsettings-client-0.10.ebuild:

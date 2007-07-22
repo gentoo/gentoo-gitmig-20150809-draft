@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libast
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.27 2007/06/24 18:21:42 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.28 2007/07/22 02:54:35 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; libast-0.7.ebuild,
+  libast-9999.ebuild:
+  Drop virtual/x11 references.
 
   24 Jun 2007; Piotr Jaroszyński <peper@gentoo.org> libast-9999.ebuild:
   (QA) Don't use KEYWORDS="-*". bug #160519.

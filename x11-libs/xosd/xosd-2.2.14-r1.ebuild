@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.14 2007/07/15 05:53:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.15 2007/07/22 03:11:37 dberkholz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -18,17 +18,14 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="xinerama"
 
-RDEPEND="|| ( ( x11-libs/libX11
-	x11-libs/libXext )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXext"
 
-DEPEND="|| ( (
-	x11-libs/libX11
+DEPEND="x11-libs/libX11
 	x11-libs/libXt
 	x11-proto/xextproto
 	xinerama? ( x11-proto/xineramaproto )
-	x11-proto/xproto )
-	virtual/x11 )
+	x11-proto/xproto
 	${RDEPEND}"
 
 src_unpack() {

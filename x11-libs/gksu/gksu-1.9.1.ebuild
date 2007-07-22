@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.9.1.ebuild,v 1.8 2007/07/15 05:53:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.9.1.ebuild,v 1.9 2007/07/22 02:52:52 dberkholz Exp $
 
 inherit gnome2 fixheadtails
 
@@ -24,9 +24,7 @@ RDEPEND=">=x11-libs/libgksu-1.9.2
 	media-libs/libpng
 	nls? ( sys-devel/gettext )
 	>=dev-libs/glib-2.8.4
-	|| (
-	( >=x11-libs/libX11-1.0.0 )
-	virtual/x11 )"
+	>=x11-libs/libX11-1.0.0"
 
 DEPEND="${RDEPEND}"
 

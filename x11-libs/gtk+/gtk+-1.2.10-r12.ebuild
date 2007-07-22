@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r12.ebuild,v 1.13 2007/06/27 16:52:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r12.ebuild,v 1.14 2007/07/22 02:46:30 dberkholz Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit gnome.org eutils toolchain-funcs autotools
@@ -20,15 +20,11 @@ MY_AVAILABLE_LINGUAS=" az ca cs da de el es et eu fi fr ga gl hr hu it ja ko lt 
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 RDEPEND="=dev-libs/glib-1.2*
-	||	(
-		( x11-libs/libXi x11-libs/libXt )
-		virtual/x11
-	)"
+	x11-libs/libXi
+	x11-libs/libXt"
 DEPEND="${RDEPEND}
-	||	(
-		( x11-proto/inputproto x11-proto/xextproto )
-		virtual/x11
-	)
+	x11-proto/inputproto
+	x11-proto/xextproto
 	nls? ( sys-devel/gettext dev-util/intltool )"
 
 src_unpack() {

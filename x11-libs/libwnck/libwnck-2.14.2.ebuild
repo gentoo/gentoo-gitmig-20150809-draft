@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.14.2.ebuild,v 1.12 2006/10/19 14:49:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.14.2.ebuild,v 1.13 2007/07/22 02:48:54 dberkholz Exp $
 
 inherit gnome2
 
@@ -15,7 +15,7 @@ IUSE="doc"
 RDEPEND=">=x11-libs/gtk+-2.5.4
 	>=dev-libs/glib-2
 	>=x11-libs/startup-notification-0.4
-	|| ( x11-libs/libXres virtual/x11 )"
+	x11-libs/libXres"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext

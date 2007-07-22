@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.456 2007/07/20 20:00:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.457 2007/07/22 03:05:35 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; qt-3.3.4-r8.ebuild,
+  qt-3.3.8-r2.ebuild:
+  Drop virtual/x11 references.
 
   20 Jul 2007; Raúl Porcel <armin76@gentoo.org>
   +files/qt-4.3.0-alpha-threading.patch, qt-4.3.0.ebuild:

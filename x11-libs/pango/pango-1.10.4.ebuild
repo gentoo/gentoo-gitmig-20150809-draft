@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.10.4.ebuild,v 1.2 2006/06/07 14:09:47 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.10.4.ebuild,v 1.3 2007/07/22 03:01:36 dberkholz Exp $
 
 inherit eutils gnome2
 
@@ -12,12 +12,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
-RDEPEND="|| ( (
-		x11-libs/libXrender
-		x11-libs/libX11
-		x11-libs/libXt
-		)
-	virtual/x11 )
+RDEPEND="
+	x11-libs/libXrender
+	x11-libs/libX11
+	x11-libs/libXt
 	virtual/xft
 	>=dev-libs/glib-2.5.7
 	>=media-libs/fontconfig-1.0.1
@@ -26,7 +24,7 @@ RDEPEND="|| ( (
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
-	|| ( x11-proto/xproto virtual/x11 )
+	x11-proto/xproto
 	doc? (
 		>=dev-util/gtk-doc-1
 		~app-text/docbook-xml-dtd-4.1.2 )"

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-2.0-r1.ebuild,v 1.9 2006/09/04 07:15:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-2.0-r1.ebuild,v 1.10 2007/07/22 02:58:03 dberkholz Exp $
 
 inherit eutils
 
@@ -13,17 +13,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE="doc"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libxkbfile )
-	virtual/x11 )
+RDEPEND="x11-libs/libX11
+	x11-libs/libxkbfile
 	dev-libs/libxml2"
 
 DEPEND="${RDEPEND}
-	|| ( (
-		x11-libs/libXt
-		x11-proto/xproto )
-	virtual/x11 )
+	x11-libs/libXt
+	x11-proto/xproto
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
 

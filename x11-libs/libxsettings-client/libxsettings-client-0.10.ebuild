@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.10.ebuild,v 1.11 2006/11/04 11:39:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.10.ebuild,v 1.12 2007/07/22 02:58:49 dberkholz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -15,11 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 arm ppc sh x86"
 IUSE=""
 
-DEPEND="|| ( (
-		x11-proto/xproto
-		x11-libs/libX11
-		x11-libs/libXt )
-	virtual/x11 )"
+DEPEND="x11-proto/xproto
+	x11-libs/libX11
+	x11-libs/libXt"
 
 S=${WORKDIR}/Xsettings-client-${PV}
 

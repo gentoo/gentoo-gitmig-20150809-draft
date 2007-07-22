@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.1.ebuild,v 1.8 2006/11/02 09:10:23 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.1.ebuild,v 1.9 2007/07/22 02:55:34 dberkholz Exp $
 
 WANT_AUTOMAKE="1.5"
 WANT_AUTOCONF="latest"
@@ -17,17 +17,13 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXt
-		x11-libs/libXext
-		x11-libs/libXpm )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXt
+	x11-libs/libXext
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	|| ( (
-		x11-proto/xextproto
-		x11-proto/xproto )
-	virtual/x11 )"
+	x11-proto/xextproto
+	x11-proto/xproto"
 
 S=${WORKDIR}/${P/lib/}
 FONTDIR="/usr/share/fonts/${PN}-fonts"
