@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.20 2007/06/26 01:01:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.21 2007/07/22 02:23:43 dberkholz Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -95,7 +95,7 @@ src_unpack() {
 		# We dont really want to spend twice as long compiling libraries
 		# if they exist of the system allready, so we check and change
 		# respectively here.
-		if [ "`best_version virtual/x11`" ] ; then
+		if [ "`best_version x11-base/xorg-server`" ] ; then
 			echo "#define BuildScreenSaverExt NO" >> config/cf/host.def
 			echo "#define BuildScreenSaverLibrary NO" >> config/cf/host.def
 			echo "#define SharedLibXss NO" >> config/cf/host.def
@@ -199,7 +199,7 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch ${PATCH_DIR}
 
 	# We need to modify xmakefile after it has been created
-	if [ ! "`best_version virtual/x11`" ] ; then
+	if [ ! "`best_version x11-base/xorg-server`" ] ; then
 		ebegin "Creating fake X includes..."
 			MY_PROJROOT="${S}/usr/X11R6/include/"
 			MY_INCROOT="${S}/include"
@@ -289,7 +289,7 @@ src_install() {
 	doexe ${PATCH_DIR}/startxkd
 
 	# Install man pages
-	if [ "`best_version virtual/x11`" ] ; then
+	if [ "`best_version x11-base/xorg-server`" ] ; then
 		doman ${MANDIR}/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
 	else
 		doman ${MANDIR}/${S}/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
