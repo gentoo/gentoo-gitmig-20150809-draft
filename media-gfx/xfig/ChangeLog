@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.49 2007/06/27 06:56:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.50 2007/07/22 07:28:32 pva Exp $
+
+  22 Jul 2007; <pva@gentoo.org> xfig-3.2.4-r3.ebuild, xfig-3.2.5-r1.ebuild:
+  Removed virtual/x11 dependency.
 
   27 Jun 2007; <pva@gentoo.org> -files/xfig-3.2.5_alpha5-gentoo.diff,
   -files/xfig-3.2.5_alpha5-xaw3d.diff, -xfig-3.2.4-r2.ebuild:

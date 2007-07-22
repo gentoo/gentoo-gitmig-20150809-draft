@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.4-r3.ebuild,v 1.9 2007/06/10 21:24:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.4-r3.ebuild,v 1.10 2007/07/22 07:28:32 pva Exp $
 
 inherit eutils multilib
 
@@ -19,21 +19,19 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE=""
 
-RDEPEND="|| ( ( x11-libs/libXaw
-				x11-libs/libXp )
-			virtual/x11 )
-	x11-libs/Xaw3d
-	media-libs/jpeg
-	media-libs/libpng
-	media-gfx/transfig
-	media-libs/netpbm"
+RDEPEND="x11-libs/libXaw
+		x11-libs/libXp
+		x11-libs/Xaw3d
+		media-libs/jpeg
+		media-libs/libpng
+		media-gfx/transfig
+		media-libs/netpbm"
 DEPEND="${RDEPEND}
-	|| ( ( x11-misc/imake
-			app-text/rman
-			x11-proto/xproto
-			x11-proto/inputproto
-			x11-libs/libXi )
-		virtual/x11 )"
+		x11-misc/imake
+		app-text/rman
+		x11-proto/xproto
+		x11-proto/inputproto
+		x11-libs/libXi"
 
 src_unpack() {
 	unpack ${A}
