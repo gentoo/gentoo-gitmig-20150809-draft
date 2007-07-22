@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/kaffeine-mozilla-plugin-0.2.ebuild,v 1.10 2007/02/03 02:41:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/kaffeine-mozilla-plugin-0.2.ebuild,v 1.11 2007/07/22 07:43:10 dberkholz Exp $
 
 inherit nsplugins multilib
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 IUSE=""
 
 RDEPEND=">=media-video/kaffeine-0.4.3
-	|| ( x11-libs/libXaw virtual/x11 )"
+	x11-libs/libXaw"
 DEPEND="${RDEPEND}"
 
 src_compile() {

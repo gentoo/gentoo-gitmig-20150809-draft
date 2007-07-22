@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.31-r1.ebuild,v 1.11 2007/07/04 21:20:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.31-r1.ebuild,v 1.12 2007/07/22 07:42:29 dberkholz Exp $
 
 inherit eutils multilib nsplugins
 
@@ -17,11 +17,8 @@ DEPEND=">=media-video/mplayer-1.0_pre5
 		|| ( www-client/mozilla-firefox
 				www-client/seamonkey
 		)
-		|| ( ( x11-libs/libXpm
-				x11-proto/xextproto
-			)
-			virtual/x11
-		)
+		x11-libs/libXpm
+		x11-proto/xextproto
 		gtk? (
 			>=x11-libs/gtk+-2.2.0
 			dev-libs/atk

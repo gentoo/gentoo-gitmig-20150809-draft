@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.0.ebuild,v 1.4 2007/07/10 18:25:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.0.ebuild,v 1.5 2007/07/22 07:44:54 dberkholz Exp $
 
 inherit nsplugins kde-functions qt3 multilib flag-o-matic autotools
 set-kdedir
@@ -35,14 +35,11 @@ RDEPEND="
 	)
 	!gstreamer? ( media-libs/libsdl )
 	dev-libs/boost
-	|| (
-		( x11-libs/libX11
-		x11-libs/libXi
-		x11-libs/libXmu
-		x11-libs/libXt
-		x11-proto/xproto )
-		virtual/x11
-	)
+	x11-libs/libX11
+	x11-libs/libXi
+	x11-libs/libXmu
+	x11-libs/libXt
+	x11-proto/xproto
 	dev-libs/atk
 	dev-libs/glib
 	>x11-libs/gtk+-2
