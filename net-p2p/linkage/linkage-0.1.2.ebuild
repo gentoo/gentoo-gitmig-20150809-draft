@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/linkage-0.1.2.ebuild,v 1.2 2007/07/22 14:43:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/linkage-0.1.2.ebuild,v 1.3 2007/07/22 16:28:56 drac Exp $
 
-inherit fdo-mime
+inherit autotools fdo-mime
 
 DESCRIPTION="BitTorrent client written in C++ using gtkmm and libtorrent."
 HOMEPAGE="http://code.google.com/p/linkage"
@@ -21,6 +21,18 @@ RDEPEND=">=net-libs/rb_libtorrent-0.12
 	upnp? ( net-libs/libupnp )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-enable-disable-upnp.patch
+	eautoreconf
+}
+
+src_compile() {
+	econf $(use_enable upnp)
+	emake || die "emake failed."
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
