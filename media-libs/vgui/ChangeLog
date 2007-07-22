@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vgui
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/ChangeLog,v 1.8 2007/02/22 02:07:55 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/ChangeLog,v 1.9 2007/07/22 08:57:19 drac Exp $
+
+  22 Jul 2007; Samuli Suominen <drac@gentoo.org> vgui-1.90a-r1.ebuild:
+  Remove virtual/x11 references.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
