@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.5.ebuild,v 1.5 2006/08/19 01:38:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.5.ebuild,v 1.6 2007/07/22 07:49:09 dberkholz Exp $
 
 inherit eutils
 
@@ -19,12 +19,9 @@ DEPEND="virtual/libc
 	media-libs/jpeg
 	media-libs/libpng
 	sys-libs/zlib
-	|| (
-		( x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXft )
-		virtual/x11
-	)"
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXft"
 
 src_unpack() {
 	unpack ${A}
