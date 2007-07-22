@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ciphire-mail-1.1.015.ebuild,v 1.11 2007/07/15 03:33:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ciphire-mail-1.1.015.ebuild,v 1.12 2007/07/22 10:29:45 dberkholz Exp $
 
 inherit eutils qt3
 
@@ -16,9 +16,8 @@ RESTRICT="strip fetch mirror"
 IUSE="X gnome kde"
 
 DEPEND=
-RDEPEND="|| ( ( x11-libs/libSM
-				x11-libs/libXext )
-			virtual/x11 )
+RDEPEND="x11-libs/libSM
+	x11-libs/libXext
 	x86? ( $(qt_min_version 3.2) )
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-2.1.1
 			 >=app-emulation/emul-linux-x86-xlibs-1.2
