@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xnview
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.26 2007/04/09 23:32:21 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.27 2007/07/22 03:19:16 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xnview-1.50-r1.ebuild:
+  Drop virtual/x11 references.
 
   09 Apr 2007; David Shakaryan <omp@gentoo.org> xnview-1.50-r1.ebuild:
   Use doenvd. (bug #173884)

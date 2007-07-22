@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/stripclub
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/ChangeLog,v 1.5 2007/01/28 15:31:19 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/ChangeLog,v 1.6 2007/07/22 03:45:22 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  stripclub-0.9.1.2.ebuild:
+  Drop virtual/x11 references.
 
   28 Jan 2007; Olivier Crête <tester@gentoo.org> stripclub-0.9.1.2.ebuild:
   Added ~amd64 keyword, bug #164230

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.45 2007/02/21 23:57:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.46 2007/07/22 03:44:36 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; synergy-1.2.4.ebuild,
+  synergy-1.2.7.ebuild, synergy-1.2.8.ebuild, synergy-1.3.1.ebuild:
+  Drop virtual/x11 references.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

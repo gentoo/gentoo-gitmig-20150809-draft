@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/temperature-app
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/temperature-app/ChangeLog,v 1.7 2007/02/06 01:31:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/temperature-app/ChangeLog,v 1.8 2007/07/22 03:42:37 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  temperature-app-1.4.ebuild:
+  Drop virtual/x11 references.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

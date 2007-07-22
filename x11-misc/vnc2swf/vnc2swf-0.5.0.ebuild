@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/vnc2swf-0.5.0.ebuild,v 1.1 2006/02/11 12:16:32 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/vnc2swf-0.5.0.ebuild,v 1.2 2007/07/22 03:40:51 dberkholz Exp $
 
 inherit eutils
 
@@ -13,18 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="x11vnc"
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXmu
-		x11-libs/libXt
-		x11-libs/libXaw
-		x11-libs/libXext )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXmu
+	x11-libs/libXt
+	x11-libs/libXaw
+	x11-libs/libXext"
 DEPEND="${RDEPEND}
-	|| ( (
-		x11-proto/xextproto
-		x11-proto/xproto )
-	virtual/x11 )
+	x11-proto/xextproto
+	x11-proto/xproto
 	>=media-libs/ming-0.2a
 	sys-apps/sed
 	x11vnc? ( x11-misc/x11vnc )

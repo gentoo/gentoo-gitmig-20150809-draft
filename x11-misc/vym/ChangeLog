@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/vym
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.12 2007/03/06 17:32:43 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.13 2007/07/22 03:40:02 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; vym-1.8.1.ebuild:
+  Drop virtual/x11 references.
 
 *vym-1.8.1 (06 Mar 2007)
 

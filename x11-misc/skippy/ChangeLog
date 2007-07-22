@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/skippy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/ChangeLog,v 1.12 2007/02/21 23:56:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/ChangeLog,v 1.13 2007/07/22 03:46:29 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; skippy-0.5.0.ebuild:
+  Drop virtual/x11 references.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

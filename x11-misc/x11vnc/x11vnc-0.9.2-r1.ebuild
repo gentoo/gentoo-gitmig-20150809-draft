@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.2-r1.ebuild,v 1.5 2007/07/06 17:03:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.2-r1.ebuild,v 1.6 2007/07/22 03:38:05 dberkholz Exp $
 
 DESCRIPTION="A VNC server for real X displays"
 HOMEPAGE="http://www.karlrunge.com/x11vnc/"
@@ -16,31 +16,21 @@ RDEPEND="system-libvncserver? ( >=net-libs/libvncserver-0.9.1 )
 	jpeg? (	media-libs/jpeg )
 	ssl? ( dev-libs/openssl )
 	avahi? ( >=net-dns/avahi-0.6.4 )
-	|| (
-		(
-			xinerama? ( x11-libs/libXinerama )
-			x11-libs/libXfixes
-			x11-libs/libXrandr
-			x11-libs/libX11
-			x11-libs/libXtst
-			x11-libs/libXdamage
-			x11-libs/libXext
-		)
-		virtual/x11
-	)"
+	xinerama? ( x11-libs/libXinerama )
+	x11-libs/libXfixes
+	x11-libs/libXrandr
+	x11-libs/libX11
+	x11-libs/libXtst
+	x11-libs/libXdamage
+	x11-libs/libXext"
 
 DEPEND="${RDEPEND}
-	|| (
-		(
-			x11-libs/libXt
-			xinerama? ( x11-proto/xineramaproto )
-			x11-proto/trapproto
-			x11-proto/recordproto
-			x11-proto/xproto
-			x11-proto/xextproto
-		)
-		virtual/x11
-	)"
+	x11-libs/libXt
+	xinerama? ( x11-proto/xineramaproto )
+	x11-proto/trapproto
+	x11-proto/recordproto
+	x11-proto/xproto
+	x11-proto/xextproto"
 
 src_compile() {
 	local myconf=""

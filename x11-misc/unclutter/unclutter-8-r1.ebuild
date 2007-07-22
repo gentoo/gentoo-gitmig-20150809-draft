@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/unclutter-8-r1.ebuild,v 1.8 2006/08/01 14:10:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/unclutter-8-r1.ebuild,v 1.9 2007/07/22 03:41:55 dberkholz Exp $
 
 inherit toolchain-funcs
 
@@ -12,13 +12,9 @@ SLOT="0"
 LICENSE="public-domain"
 KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 ~sparc x86"
 IUSE=""
-RDEPEND="|| ( x11-libs/libX11
-			  virtual/x11
-			)"
-DEPEND="|| ( ( x11-libs/libX11
-			   x11-proto/xproto )
-			 virtual/x11
-			)"
+RDEPEND="x11-libs/libX11"
+DEPEND="${RDEPEND}
+	x11-proto/xproto"
 
 src_compile() {
 	# This xmkmf appears unnecessary

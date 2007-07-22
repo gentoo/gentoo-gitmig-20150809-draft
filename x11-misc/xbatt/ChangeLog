@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbatt
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbatt/ChangeLog,v 1.9 2006/09/21 11:47:02 nelchael Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbatt/ChangeLog,v 1.10 2007/07/22 03:29:59 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; xbatt-1.2.1.ebuild:
+  Drop virtual/x11 references.
 
   21 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> xbatt-1.2.1.ebuild:
   Fix bug #148492 - missing dependency on imake.

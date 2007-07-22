@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xfractint
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.43 2007/04/09 12:09:51 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.44 2007/07/22 03:21:47 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xfractint-20.3.01.ebuild, xfractint-20.3.02.ebuild,
+  xfractint-20.4.00.ebuild, xfractint-20.4.03.ebuild:
+  Drop virtual/x11 references.
 
   09 Apr 2007; Michał Januszewski <spock@gentoo.org>
   xfractint-20.3.01.ebuild, xfractint-20.3.02.ebuild,

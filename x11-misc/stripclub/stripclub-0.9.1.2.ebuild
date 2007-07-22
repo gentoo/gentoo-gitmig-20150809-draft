@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/stripclub-0.9.1.2.ebuild,v 1.5 2007/01/28 15:31:19 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/stripclub-0.9.1.2.ebuild,v 1.6 2007/07/22 03:45:22 dberkholz Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND=">=x11-libs/fltk-1.1.4
 		>=dev-libs/libpcre-5.0
 		>=media-libs/libpng-1.2.8
 		>=media-libs/jpeg-6b-r4
-		|| ( x11-libs/libXpm virtual/x11 )"
+		x11-libs/libXpm"
 
 src_unpack() {
 	unpack ${A}

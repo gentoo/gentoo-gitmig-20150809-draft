@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.11 2006/10/11 11:54:14 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.12 2007/07/22 03:46:29 dberkholz Exp $
 
 inherit eutils
 
@@ -14,21 +14,15 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
-RDEPEND="|| ( ( x11-libs/libXext
-		x11-libs/libX11
-		x11-libs/libXinerama
-		x11-libs/libXmu
-		)
-		virtual/x11
-	)
+RDEPEND="x11-libs/libXext
+	x11-libs/libX11
+	x11-libs/libXinerama
+	x11-libs/libXmu
 	virtual/xft"
 
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xproto
-		x11-proto/xineramaproto
-		)
-		virtual/x11
-	)
+	x11-proto/xproto
+	x11-proto/xineramaproto
 	dev-util/pkgconfig
 	>=media-libs/imlib2-1.1.0"
 

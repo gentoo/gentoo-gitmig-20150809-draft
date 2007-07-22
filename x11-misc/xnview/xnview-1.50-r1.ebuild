@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50-r1.ebuild,v 1.4 2007/04/09 23:32:21 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50-r1.ebuild,v 1.5 2007/07/22 03:19:16 dberkholz Exp $
 
 inherit rpm
 
@@ -16,16 +16,14 @@ LICENSE="free-noncomm as-is"
 KEYWORDS="-* ppc"
 IUSE=""
 
-RDEPEND="|| ( (
-		x11-libs/libXau
-		x11-libs/libX11
-		x11-libs/libXt
-		x11-libs/libXext
-		x11-libs/libXp
-		x11-libs/libXdmcp
-		media-fonts/font-bh-lucidatypewriter-100dpi
-		media-fonts/font-bh-lucidatypewriter-75dpi )
-	virtual/x11 )"
+RDEPEND="x11-libs/libXau
+	x11-libs/libX11
+	x11-libs/libXt
+	x11-libs/libXext
+	x11-libs/libXp
+	x11-libs/libXdmcp
+	media-fonts/font-bh-lucidatypewriter-100dpi
+	media-fonts/font-bh-lucidatypewriter-75dpi"
 DEPEND="${RDEPEND}
 	app-arch/rpm2targz"
 

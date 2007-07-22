@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r1.ebuild,v 1.8 2006/04/14 18:55:08 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r1.ebuild,v 1.9 2007/07/22 03:33:36 dberkholz Exp $
 
 inherit eutils
 
@@ -15,17 +15,13 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 ~mips ppc sparc x86"
 IUSE=""
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXtst
-		x11-libs/libXext )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXtst
+	x11-libs/libXext"
 DEPEND="${RDEPEND}
-	|| ( (
-		app-text/rman
-		x11-misc/imake
-		x11-proto/xproto )
-	virtual/x11 )"
+	app-text/rman
+	x11-misc/imake
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${A}
