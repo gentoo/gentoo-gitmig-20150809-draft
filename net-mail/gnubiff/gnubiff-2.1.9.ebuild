@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.1.9.ebuild,v 1.4 2006/10/02 21:23:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.1.9.ebuild,v 1.5 2007/07/22 08:20:53 dberkholz Exp $
 
 inherit eutils
 
@@ -20,9 +20,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 		>=gnome-base/libgnomeui-2.2 )
 	password? ( dev-libs/openssl )
 	fam? ( virtual/fam )
-	|| (
-		x11-proto/xproto
-		virtual/x11 )"
+	x11-proto/xproto"
 DEPEND="${RDEPEND}
 	gnome? ( dev-util/pkgconfig )"
 

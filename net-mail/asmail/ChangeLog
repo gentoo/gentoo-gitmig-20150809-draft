@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/asmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/ChangeLog,v 1.7 2007/02/09 04:36:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/ChangeLog,v 1.8 2007/07/22 08:22:03 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; asmail-0.56.ebuild:
+  Drop virtual/x11 references.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
