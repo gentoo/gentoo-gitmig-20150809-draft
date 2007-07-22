@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/chipmunksystem-20060624.ebuild,v 1.2 2006/07/07 17:21:49 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/chipmunksystem-20060624.ebuild,v 1.3 2007/07/22 07:17:13 dberkholz Exp $
 
 inherit toolchain-funcs
 
@@ -32,16 +32,10 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 RDEPEND="virtual/libc
-	|| (
-		virtual/x11
-		x11-libs/libX11
-	   )"
+	x11-libs/libX11"
 
 DEPEND="${RDEPEND}
-		|| (
-			virtual/x11
-			x11-proto/xproto
-		   )"
+	x11-proto/xproto"
 
 src_compile() {
 	local COMPILING_ERROR

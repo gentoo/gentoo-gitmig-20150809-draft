@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20060822.ebuild,v 1.7 2007/01/28 10:30:09 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20060822.ebuild,v 1.8 2007/07/22 07:16:24 dberkholz Exp $
 
 inherit eutils
 
@@ -17,10 +17,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	media-libs/gd"
 DEPEND="${RDEPEND}
 	=dev-lang/tk-8*
-	|| (
-		virtual/x11
-		x11-proto/xproto
-	   )
+	x11-proto/xproto
 	dev-util/pkgconfig"
 
 src_unpack() {

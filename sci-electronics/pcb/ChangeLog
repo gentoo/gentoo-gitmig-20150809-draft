@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.32 2007/02/18 16:01:36 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.33 2007/07/22 07:16:24 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; pcb-20060822.ebuild,
+  pcb-20070208.ebuild:
+  Drop virtual/x11 references.
 
   18 Feb 2007; Denis Dupeyron <calchan@gentoo.org> pcb-20070208.ebuild:
   Fixed keywords.
