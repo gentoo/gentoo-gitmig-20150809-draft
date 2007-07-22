@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/chuck/chuck-1.2.0.8.ebuild,v 1.1 2007/03/23 20:27:36 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/chuck/chuck-1.2.0.8.ebuild,v 1.2 2007/07/22 15:20:12 opfer Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://chuck.cs.princeton.edu/release/files/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="oss jack alsa examples"
 
 RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
