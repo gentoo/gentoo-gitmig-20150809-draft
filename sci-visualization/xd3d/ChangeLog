@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/xd3d
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.5 2007/03/13 00:49:15 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.6 2007/07/22 06:47:42 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; xd3d-8.2.1.ebuild:
+  Drop virtual/x11 references.
 
   13 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> xd3d-8.2.1.ebuild:
   QA: which -> type -P

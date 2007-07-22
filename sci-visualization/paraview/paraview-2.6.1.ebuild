@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-2.6.1.ebuild,v 1.1 2007/04/26 13:53:43 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-2.6.1.ebuild,v 1.2 2007/07/22 06:45:08 dberkholz Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator python
 
@@ -29,7 +29,7 @@ RDEPEND="hdf5? ( sci-libs/hdf5 )
 	virtual/opengl
 	dev-lang/tcl
 	dev-lang/tk
-	|| ( x11-libs/libXmu virtual/x11 )"
+	x11-libs/libXmu"
 
 DEPEND="${RDEPEND}
 		>=dev-util/cmake-2.4.3"

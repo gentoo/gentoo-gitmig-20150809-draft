@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.3.2-r1.ebuild,v 1.4 2007/07/19 08:16:32 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.3.2-r1.ebuild,v 1.5 2007/07/22 06:50:09 dberkholz Exp $
 
 # Set SMP="no" to force disable of SMP compilation.
 # Set SMP="yes" to force enable of SMP compilation.
@@ -28,13 +28,10 @@ KEYWORDS="amd64 ppc x86"
 
 IUSE="hdf cdf netcdf tiff imagemagick szip" # java doc"
 
-DEPEND="|| ( ( x11-libs/libXmu
-			x11-libs/libXi
-			x11-libs/libXp
-			x11-libs/libXpm
-		)
-		virtual/x11
-	)
+DEPEND="x11-libs/libXmu
+	x11-libs/libXi
+	x11-libs/libXp
+	x11-libs/libXpm
 	x11-libs/openmotif
 	szip? ( sci-libs/szip )
 	hdf? ( sci-libs/hdf )
