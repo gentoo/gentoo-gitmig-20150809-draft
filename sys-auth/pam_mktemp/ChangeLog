@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_mktemp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mktemp/ChangeLog,v 1.1 2007/04/17 20:24:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mktemp/ChangeLog,v 1.2 2007/07/22 13:07:05 swegener Exp $
+
+*pam_mktemp-1.0.3 (22 Jul 2007)
+
+  22 Jul 2007; Sven Wegener <swegener@gentoo.org> +pam_mktemp-1.0.3.ebuild:
+  Version bump.
 
 *pam_mktemp-1.0.2 (17 Apr 2007)
 
