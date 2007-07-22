@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.0.1-r1.ebuild,v 1.3 2007/06/18 17:24:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.0.1-r1.ebuild,v 1.4 2007/07/22 09:10:20 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 inherit java-pkg-2 java-ant-2
@@ -22,10 +22,7 @@ COMMON_DEPEND="
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 DEPEND=">=virtual/jdk-1.4
-	test? (
-		=dev-java/junit-3.8*
-		dev-java/ant-junit
-	)
+	test? ( dev-java/ant-junit )
 	${COMMON_DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -44,9 +41,8 @@ src_unpack() {
 	java-pkg_jar-from commons-codec
 }
 
-src_compile() {
-	eant dist $(use_doc doc)
-}
+EANT_BUILD_TARGET="dist"
+EANT_DOC_TARGET="doc"
 
 src_test() {
 	java-pkg_jar-from --into lib junit
