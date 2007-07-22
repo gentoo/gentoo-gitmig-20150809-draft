@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta10-r4.ebuild,v 1.9 2007/06/08 15:30:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta10-r4.ebuild,v 1.10 2007/07/22 09:22:07 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -11,7 +11,7 @@ MY_PV="b10"
 MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Java API to manipulate XML data"
-SRC_URI="http://www.jdom.org/dist/source/${MY_P}.tar.gz"
+SRC_URI="http://www.jdom.org/dist/source/archive/${MY_P}.tar.gz"
 HOMEPAGE="http://www.jdom.org"
 LICENSE="JDOM"
 SLOT="${PV}"

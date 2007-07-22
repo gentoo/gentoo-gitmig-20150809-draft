@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.54 2007/06/18 17:41:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.55 2007/07/22 09:22:07 betelgeuse Exp $
+
+  22 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jdom-1.0_beta9-r2.ebuild, jdom-1.0_beta10-r4.ebuild:
+  Update SRC_URI as the files have been move to the archive. Fixes bug #186181.
 
   18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
   jdom-1.0_beta9-r2.ebuild:
