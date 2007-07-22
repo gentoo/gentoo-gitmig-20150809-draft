@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/accessx
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.20 2007/02/06 01:23:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.21 2007/07/22 02:43:59 coldwind Exp $
+
+  22 Jul 2007; Santiago M. Mola <coldwind@gentoo.org> accessx-0951.ebuild:
+  virtual/x11 removed and clean up.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
