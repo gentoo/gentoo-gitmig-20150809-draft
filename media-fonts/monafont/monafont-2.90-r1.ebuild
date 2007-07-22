@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90-r1.ebuild,v 1.12 2007/01/05 17:08:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90-r1.ebuild,v 1.13 2007/07/22 07:08:31 dirtyepic Exp $
 
 inherit font
 
@@ -18,7 +18,7 @@ IUSE="X truetype"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	|| ( x11-apps/bdftopcf virtual/x11 )
+	x11-apps/bdftopcf
 	dev-lang/perl
 	>=sys-apps/sed-4
 	app-arch/unzip"

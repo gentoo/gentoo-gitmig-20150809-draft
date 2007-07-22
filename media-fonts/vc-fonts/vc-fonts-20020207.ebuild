@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/vc-fonts-20020207.ebuild,v 1.8 2006/03/23 21:15:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/vc-fonts-20020207.ebuild,v 1.9 2007/07/22 07:05:30 dirtyepic Exp $
 
 S=${WORKDIR}/vc
 DESCRIPTION="Vico bitmap Fonts"
@@ -13,7 +13,7 @@ KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	|| ( x11-apps/mkfontdir virtual/x11 )"
+		x11-apps/mkfontdir"
 IUSE=""
 
 src_install() {
