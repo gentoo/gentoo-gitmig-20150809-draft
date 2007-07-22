@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.0.0-r1.ebuild,v 1.1 2007/07/06 15:47:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.0.0-r2.ebuild,v 1.1 2007/07/22 14:36:22 voyageur Exp $
 
 inherit eutils
 
 DESCRIPTION="NXClient is a X11/VNC/NXServer client especially tuned for using remote desktops over low-bandwidth links such as the Internet"
 HOMEPAGE="http://www.nomachine.com/"
-SRC_URI="amd64? ( http://64.34.161.181/download/${PV}/Linux/nxclient-${PV}-68.x86_64.tar.gz )
-	x86? ( http://64.34.161.181/download/${PV}/Linux/nxclient-${PV}-68.i386.tar.gz )"
+SRC_URI="amd64? ( http://64.34.161.181/download/${PV}/Linux/nxclient-${PV}-73.x86_64.tar.gz )
+	x86? ( http://64.34.161.181/download/${PV}/Linux/nxclient-${PV}-73.i386.tar.gz )"
 LICENSE="nomachine"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"

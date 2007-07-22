@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.0.0-r1.ebuild,v 1.1 2007/07/02 21:56:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.0.0-r2.ebuild,v 1.1 2007/07/22 14:38:37 voyageur Exp $
 
 inherit eutils
 
 DESCRIPTION="Free edition NX server from NoMachine"
 HOMEPAGE="http://www.nomachine.com/"
-SRC_URI="amd64? ( http://64.34.161.181/download/3.0.0/Linux/FE/nxserver-${PV}-61.x86_64.tar.gz )
-	x86? ( http://64.34.161.181/download/3.0.0/Linux/FE/nxserver-${PV}-61.i386.tar.gz )"
+SRC_URI="amd64? ( http://64.34.161.181/download/3.0.0/Linux/FE/nxserver-${PV}-63.x86_64.tar.gz )
+	x86? ( http://64.34.161.181/download/3.0.0/Linux/FE/nxserver-${PV}-63.i386.tar.gz )"
 
 LICENSE="nomachine"
 SLOT="0"
