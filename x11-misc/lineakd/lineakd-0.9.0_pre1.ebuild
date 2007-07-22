@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0_pre1.ebuild,v 1.7 2007/03/22 18:45:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0_pre1.ebuild,v 1.8 2007/07/22 03:22:30 coldwind Exp $
 
 inherit eutils
 
@@ -16,19 +16,15 @@ SLOT="0"
 IUSE=""
 KEYWORDS="amd64 ppc sparc x86"
 
-RDEPEND="|| ( (
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libX11
-			x11-libs/libXext )
-		virtual/x11 )"
+RDEPEND="x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXext"
 DEPEND="${RDEPEND}
-		|| ( (
-			x11-libs/libxkbfile
-			x11-libs/libXt
-			x11-proto/xextproto
-			x11-proto/xproto )
-		virtual/x11 )"
+	x11-libs/libxkbfile
+	x11-libs/libXt
+	x11-proto/xextproto
+	x11-proto/xproto"
 
 src_compile() {
 	econf --with-x || die "econf failed"
