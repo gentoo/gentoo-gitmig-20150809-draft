@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1-r1.ebuild,v 1.4 2006/12/04 23:05:20 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1-r1.ebuild,v 1.5 2007/07/22 05:56:56 dberkholz Exp $
 
 inherit ccc eutils flag-o-matic
 
@@ -12,9 +12,9 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc"
 IUSE=""
-RDEPEND="|| ( x11-libs/libX11 virtual/x11 )"
+RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xproto virtual/x11 )"
+	x11-proto/xproto"
 S=${WORKDIR}/${PN}-1.0
 
 src_unpack() {

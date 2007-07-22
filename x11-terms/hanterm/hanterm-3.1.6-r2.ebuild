@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.21 2006/10/17 09:42:29 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.22 2007/07/22 05:45:44 dberkholz Exp $
 
 IUSE=""
 
@@ -13,9 +13,9 @@ KEYWORDS="x86 ppc ppc-macos"
 LICENSE="X11"
 
 DEPEND="virtual/libc
-	|| ( ( x11-libs/libXmu x11-libs/libICE x11-libs/libXaw )
-	     virtual/x11 )
-	sys-libs/libutempter
+	x11-libs/libXmu
+	x11-libs/libICE
+	x11-libs/libXaw
 	>=x11-libs/Xaw3d-1.5"
 RDEPEND="${DEPEND}
 	media-fonts/baekmuk-fonts"

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.1.ebuild,v 1.6 2006/07/09 01:29:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.1.ebuild,v 1.7 2007/07/22 05:50:25 dberkholz Exp $
 
 inherit eutils
 
@@ -19,15 +19,13 @@ RDEPEND="png? ( media-libs/libpng )
 	truetype? ( virtual/xft
 		media-libs/fontconfig
 		media-libs/freetype )
-	|| ( (
-			x11-libs/libX11
-			x11-libs/libXt
-			x11-libs/libXpm
-			x11-libs/libXrender )
-		virtual/x11 )"
+	x11-libs/libX11
+	x11-libs/libXt
+	x11-libs/libXpm
+	x11-libs/libXrender"
 
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xproto virtual/x11 )"
+	x11-proto/xproto"
 
 src_compile() {
 

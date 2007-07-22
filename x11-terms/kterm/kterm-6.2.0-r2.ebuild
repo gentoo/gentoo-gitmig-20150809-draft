@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r2.ebuild,v 1.9 2006/10/14 10:55:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r2.ebuild,v 1.10 2007/07/22 05:48:10 dberkholz Exp $
 
 inherit eutils
 
@@ -17,8 +17,10 @@ SLOT="0"
 KEYWORDS="x86 ~sparc -alpha ppc ~ppc-macos"
 
 DEPEND="app-text/rman
-	|| ( ( x11-libs/libXmu x11-libs/libXpm x11-libs/libxkbfile x11-libs/libXaw )
-	     virtual/x11 )
+	x11-libs/libXmu
+	x11-libs/libXpm
+	x11-libs/libxkbfile
+	x11-libs/libXaw
 	sys-libs/ncurses
 	Xaw3d? ( x11-libs/Xaw3d )"
 

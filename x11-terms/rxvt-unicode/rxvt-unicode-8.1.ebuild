@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-8.1.ebuild,v 1.9 2007/07/14 21:54:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-8.1.ebuild,v 1.10 2007/07/22 05:53:44 dberkholz Exp $
 
 inherit flag-o-matic
 
@@ -14,25 +14,14 @@ KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="truetype perl iso14755"
 
 # see bug #115992 for modular x deps
-RDEPEND="
-	|| (
-		(
-			x11-libs/libX11
-			x11-libs/libXft
-			x11-libs/libXpm
-			x11-libs/libXrender
-		)
-		virtual/x11
-	)
+RDEPEND="x11-libs/libX11
+	x11-libs/libXft
+	x11-libs/libXpm
+	x11-libs/libXrender
 	perl? ( dev-lang/perl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	|| (
-		(
-			x11-proto/xproto
-		)
-		virtual/x11
-	)"
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${A}

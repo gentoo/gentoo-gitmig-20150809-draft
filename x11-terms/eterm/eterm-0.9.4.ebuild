@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.4.ebuild,v 1.13 2007/06/20 21:01:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.4.ebuild,v 1.14 2007/07/22 05:44:55 dberkholz Exp $
 
 inherit eutils
 
@@ -17,7 +17,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE="escreen etwin minimal mmx sse2 unicode"
 
-DEPEND="|| ( ( x11-libs/libX11 x11-libs/libXmu x11-libs/libXt x11-libs/libICE x11-libs/libSM x11-proto/xextproto x11-proto/xproto ) virtual/x11 )
+DEPEND="x11-libs/libX11
+	x11-libs/libXmu
+	x11-libs/libXt
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-proto/xextproto
+	x11-proto/xproto
 	>=x11-libs/libast-0.6.1
 	media-libs/imlib2
 	etwin? ( app-misc/twin )
