@@ -6,14 +6,18 @@ MD5 e3a02e14fa71493c6d109fcd3ed318e7 files/jakarta-slide-webdavclient-2.1-gentoo
 RMD160 fc9d5296e129c3a4e33efa4b9866477824e7d349 files/jakarta-slide-webdavclient-2.1-gentoo.patch 3717
 SHA256 128d568b55376a0979e497595c32f8396604ae3cbc02c79aa1edadcb57087992 files/jakarta-slide-webdavclient-2.1-gentoo.patch 3717
 DIST jakarta-slide-webdavclient-src-2.1.tar.gz 2123807 RMD160 722abd2860b3814b8878403a1ec41cfcb9c9e0ba SHA1 082a48d505a8612663619c0163a53b5b29cd06f0 SHA256 ab21b3c25534259993ae4e671bde0ffc8bd6bedae6ee888876cbab98f5e1d4a8
-EBUILD jakarta-slide-webdavclient-2.1-r1.ebuild 1569 RMD160 17f919237cb931db4fba19fb65437331d3befc01 SHA1 d1ebef6e14e3e4ba9bf7dd50bd8070c825b46d65 SHA256 1911c6246ca086aaf769fb6c7741cfec18c9c06836ff9634e3512623ad5f31b5
-MD5 3d8a515d17d65f526be9b50d7dd4d8d2 jakarta-slide-webdavclient-2.1-r1.ebuild 1569
-RMD160 17f919237cb931db4fba19fb65437331d3befc01 jakarta-slide-webdavclient-2.1-r1.ebuild 1569
-SHA256 1911c6246ca086aaf769fb6c7741cfec18c9c06836ff9634e3512623ad5f31b5 jakarta-slide-webdavclient-2.1-r1.ebuild 1569
-MISC ChangeLog 992 RMD160 9b3ee8a9a9a3c6f65c758ac546f46bf8c77b227c SHA1 a2ba48aaea96ac365b30ad23cc1c76dae3b9ca33 SHA256 70783f469740421ea3ddc5318cc7cf3922c9f43568546b17689fb8e973273718
-MD5 7122fec81ee623fd5e13c8c1dca075db ChangeLog 992
-RMD160 9b3ee8a9a9a3c6f65c758ac546f46bf8c77b227c ChangeLog 992
-SHA256 70783f469740421ea3ddc5318cc7cf3922c9f43568546b17689fb8e973273718 ChangeLog 992
+EBUILD jakarta-slide-webdavclient-2.1-r1.ebuild 1592 RMD160 b8834bff48a1944cd40c3e306f7bad04b21f5875 SHA1 a5a200fefcd448fabf277cb853ed0eda762f2a69 SHA256 8020f4c3454175fd5c2d056bff69bd8046b6e4c443df85d670c7f3701a54de43
+MD5 4f415ca6ff9c6f80efee795f1714ddfe jakarta-slide-webdavclient-2.1-r1.ebuild 1592
+RMD160 b8834bff48a1944cd40c3e306f7bad04b21f5875 jakarta-slide-webdavclient-2.1-r1.ebuild 1592
+SHA256 8020f4c3454175fd5c2d056bff69bd8046b6e4c443df85d670c7f3701a54de43 jakarta-slide-webdavclient-2.1-r1.ebuild 1592
+EBUILD jakarta-slide-webdavclient-2.1-r2.ebuild 1592 RMD160 e83522eea3ce47777631e973c9310d83ff1287ff SHA1 5913c11121977bba56b65c914fb30de1fd1c7261 SHA256 cc6f256261c1f1f280d742cc2590d50f7bd3aa846a3e19a629674263e5ff4c09
+MD5 58825754c7fff22570b4bd451f68c53c jakarta-slide-webdavclient-2.1-r2.ebuild 1592
+RMD160 e83522eea3ce47777631e973c9310d83ff1287ff jakarta-slide-webdavclient-2.1-r2.ebuild 1592
+SHA256 cc6f256261c1f1f280d742cc2590d50f7bd3aa846a3e19a629674263e5ff4c09 jakarta-slide-webdavclient-2.1-r2.ebuild 1592
+MISC ChangeLog 1271 RMD160 749bb3743de7a3ec62edf82dc33f582b44e3dbb6 SHA1 481551a163bd1af64c33f53aa65c8af7f64a1026 SHA256 189a31f2e38d5682808367516ec01c2b436430bcee8e7c98a14086994b6c5a9a
+MD5 8dbdab7d5e6cf34276b01e8e41250b57 ChangeLog 1271
+RMD160 749bb3743de7a3ec62edf82dc33f582b44e3dbb6 ChangeLog 1271
+SHA256 189a31f2e38d5682808367516ec01c2b436430bcee8e7c98a14086994b6c5a9a ChangeLog 1271
 MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
@@ -21,10 +25,13 @@ SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata
 MD5 b0c360ca263678a71a937abdbbaab7ca files/digest-jakarta-slide-webdavclient-2.1-r1 307
 RMD160 f270e155a6fa08ee6f3dd727ffb6e8b9a180707c files/digest-jakarta-slide-webdavclient-2.1-r1 307
 SHA256 748ee565c21fae9f765f564cd1e33f0a1fc7d9dd14813db0caa2a50e23733e46 files/digest-jakarta-slide-webdavclient-2.1-r1 307
+MD5 b0c360ca263678a71a937abdbbaab7ca files/digest-jakarta-slide-webdavclient-2.1-r2 307
+RMD160 f270e155a6fa08ee6f3dd727ffb6e8b9a180707c files/digest-jakarta-slide-webdavclient-2.1-r2 307
+SHA256 748ee565c21fae9f765f564cd1e33f0a1fc7d9dd14813db0caa2a50e23733e46 files/digest-jakarta-slide-webdavclient-2.1-r2 307
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.4 (GNU/Linux)
 
-iD8DBQFGoyvHcxLzpIGCsLQRAmnJAKCRKhV8sZAlbUS4u9CB+/o+fXH29ACfXiAH
-vwIivGebz25IqzbJs0YJ318=
-=GSfa
+iD8DBQFGoyymcxLzpIGCsLQRAs07AJ0WCn/1pcmuGodrtAi+3lT7htcvSwCdGL1g
+qaZ1Zx1hGWGSan/rO7qg0f0=
+=i646
 -----END PGP SIGNATURE-----

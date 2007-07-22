@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jakarta-slide-webdavclient
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-slide-webdavclient/ChangeLog,v 1.4 2007/07/22 10:04:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-slide-webdavclient/ChangeLog,v 1.5 2007/07/22 10:08:40 betelgeuse Exp $
+
+*jakarta-slide-webdavclient-2.1-r2 (22 Jul 2007)
+
+  22 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jakarta-slide-webdavclient-2.1-r1.ebuild,
+  +jakarta-slide-webdavclient-2.1-r2.ebuild:
+  Build against slot 3 of commons-httpclient and delete bundled jars in
+  src_unpack.
 
   22 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
   -jakarta-slide-webdavclient-2.1.ebuild:
