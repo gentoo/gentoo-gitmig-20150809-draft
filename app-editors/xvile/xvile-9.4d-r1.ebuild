@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.4d-r1.ebuild,v 1.3 2007/07/22 09:00:58 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.4d-r1.ebuild,v 1.4 2007/07/22 09:10:28 omp Exp $
 
 inherit eutils versionator
 
@@ -20,7 +20,6 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="perl"
 
-#virtual/x11
 RDEPEND="perl? ( dev-lang/perl )
 	=app-editors/vile-${MY_PV}$(get_version_component_range 3)
 	>=x11-libs/libX11-1.0.0
