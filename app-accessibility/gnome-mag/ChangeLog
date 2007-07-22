@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gnome-mag
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.112 2007/07/21 22:30:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.113 2007/07/22 08:26:34 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> gnome-mag-0.12.5.ebuild,
+  gnome-mag-0.13.1.ebuild:
+  Remove virtual/x11 from dependencies.
 
 *gnome-mag-0.14.6 (21 Jul 2007)
 

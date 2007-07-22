@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.13.1.ebuild,v 1.8 2007/01/21 22:22:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.13.1.ebuild,v 1.9 2007/07/22 08:26:34 omp Exp $
 
 inherit gnome2
 
@@ -18,18 +18,14 @@ RDEPEND=">=dev-libs/glib-1.3.11
 	>=gnome-extra/at-spi-1.5.2
 	>=gnome-base/orbit-2.3.100
 	dev-libs/popt
-	|| ( (
-			x11-libs/libX11
-			x11-libs/libXtst
-			x11-libs/libXdamage
-			x11-libs/libXfixes )
-		virtual/x11 )"
+	x11-libs/libX11
+	x11-libs/libXtst
+	x11-libs/libXdamage
+	x11-libs/libXfixes"
 
 DEPEND="${RDEPEND}
-	|| ( (
-			x11-proto/xextproto
-			x11-proto/xproto )
-		virtual/x11 )
+	x11-proto/xextproto
+	x11-proto/xproto
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.35"
 
