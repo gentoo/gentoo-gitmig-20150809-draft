@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.0.ebuild,v 1.12 2006/12/07 02:05:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.0.ebuild,v 1.13 2007/07/22 04:11:16 omp Exp $
 
 DESCRIPTION="A small, fast, full-featured window manager for X"
 HOMEPAGE="http://blackboxwm.sourceforge.net/"
@@ -11,11 +11,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="nls truetype debug"
 
-RDEPEND="|| ( ( x11-libs/libXft x11-libs/libXt ) virtual/x11 )
-		nls? ( sys-devel/gettext )
-		truetype? ( media-libs/freetype )"
+RDEPEND="x11-libs/libXft
+	x11-libs/libXt
+	nls? ( sys-devel/gettext )
+	truetype? ( media-libs/freetype )"
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xextproto ) virtual/x11 )
+	x11-proto/xextproto
 	dev-util/pkgconfig
 	>=sys-apps/sed-4"
 

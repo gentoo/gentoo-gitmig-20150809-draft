@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-2.ebuild,v 1.4 2006/07/14 16:23:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-2.ebuild,v 1.5 2007/07/22 04:09:09 omp Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,11 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="python"
 
-DEPEND="|| ( x11-libs/libX11 virtual/x11 )
+DEPEND="x11-libs/libX11
 	python? ( dev-python/pyrex )"
-
 RDEPEND="${DEPEND}
-	|| ( x11-apps/xdpyinfo virtual/x11 )"
+	x11-apps/xdpyinfo"
 
 src_unpack() {
 	unpack "${A}"

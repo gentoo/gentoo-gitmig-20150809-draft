@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/wmii
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.18 2007/02/09 02:29:06 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.19 2007/07/22 04:09:09 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> wmii-2.ebuild:
+  Remove virtual/x11 from dependencies.
 
 *wmii-3.6_rc2 (09 Feb 2007)
 

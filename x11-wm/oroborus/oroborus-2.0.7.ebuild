@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.7.ebuild,v 1.15 2007/02/22 05:55:31 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.7.ebuild,v 1.16 2007/07/22 04:05:58 omp Exp $
 
 DESCRIPTION="Small and fast window manager."
 HOMEPAGE="http://www.dreamind.de/oroborus.shtml"
@@ -10,17 +10,11 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="gnome"
 
-RDEPEND="|| ( ( x11-libs/libXxf86vm
-			x11-libs/libXpm
-		)
-		virtual/x11
-	)"
+RDEPEND="x11-libs/libXxf86vm
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xf86vidmodeproto
-			x11-proto/xextproto
-		)
-		virtual/x11
-	)"
+	x11-proto/xf86vidmodeproto
+	x11-proto/xextproto"
 
 src_compile() {
 

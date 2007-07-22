@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.4-r1.ebuild,v 1.20 2007/07/12 03:41:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.4-r1.ebuild,v 1.21 2007/07/22 04:05:58 omp Exp $
 
 DESCRIPTION="Yet another window manager"
 SRC_URI="http://www.kensden.pwp.blueyonder.co.uk/Oroborus/files/${P}.tar.gz"
@@ -10,17 +10,11 @@ SLOT="0"
 KEYWORDS="x86 sparc ppc"
 IUSE="gnome"
 
-RDEPEND="|| ( ( x11-libs/libXxf86vm
-			x11-libs/libXpm
-		)
-		virtual/x11
-	)"
+RDEPEND="x11-libs/libXxf86vm
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xf86vidmodeproto
-			x11-proto/xextproto
-		)
-		virtual/x11
-	)"
+	x11-proto/xf86vidmodeproto
+	x11-proto/xextproto"
 
 src_compile() {
 

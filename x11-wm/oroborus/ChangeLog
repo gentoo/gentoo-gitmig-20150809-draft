@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/oroborus
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.26 2007/03/12 17:33:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.27 2007/07/22 04:05:58 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> oroborus-2.0.4-r1.ebuild,
+  oroborus-2.0.7.ebuild, oroborus-2.0.9.ebuild, oroborus-2.0.13.ebuild,
+  oroborus-2.0.18.ebuild:
+  Remove virtual/x11 from dependencies.
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> oroborus-2.0.13.ebuild:
   x86 stable
