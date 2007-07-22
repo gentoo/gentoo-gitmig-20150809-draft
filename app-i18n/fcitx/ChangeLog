@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.19 2007/04/27 16:53:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.20 2007/07/22 09:11:42 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> fcitx-3.1.1.ebuild,
+  fcitx-3.2.1.ebuild, fcitx-3.4.ebuild:
+  Drop virtual/x11 dependency.
 
 *fcitx-3.5_pre070403 (27 Apr 2007)
 *fcitx-3.4.2 (27 Apr 2007)
