@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.14.2.ebuild,v 1.12 2007/03/23 15:49:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.14.2.ebuild,v 1.13 2007/07/22 10:31:21 graaff Exp $
 
 inherit eutils gnome2 autotools
 
@@ -15,14 +15,12 @@ IUSE="alsa eds gstreamer"
 RDEPEND=">=gnome-base/gnome-vfs-2.2
 	>=media-libs/fontconfig-1
 	virtual/xft
-	|| ( (
-		x11-apps/xmodmap
-		x11-libs/libXdmcp
-		x11-libs/libICE
-		x11-libs/libSM
-		x11-libs/libXxf86misc
-		x11-libs/libXau )
-	virtual/x11 )
+	x11-apps/xmodmap
+	x11-libs/libXdmcp
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libXxf86misc
+	x11-libs/libXau
 	>=x11-libs/gtk+-2.8.12
 	>=dev-libs/glib-2.8
 	>=gnome-base/libbonobo-2
@@ -44,12 +42,10 @@ RDEPEND=">=gnome-base/gnome-vfs-2.2
 	gstreamer? ( >=media-libs/gst-plugins-base-0.10 )"
 
 DEPEND="${RDEPEND}
-	|| ( (
-		x11-libs/libxkbfile
-		x11-proto/kbproto
-		x11-proto/xf86miscproto
-		x11-proto/scrnsaverproto )
-	virtual/x11 )
+	x11-libs/libxkbfile
+	x11-proto/kbproto
+	x11-proto/xf86miscproto
+	x11-proto/scrnsaverproto
 	app-text/scrollkeeper
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.34.2
