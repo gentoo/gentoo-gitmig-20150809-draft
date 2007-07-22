@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0-r1.ebuild,v 1.2 2007/07/02 13:54:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0-r1.ebuild,v 1.3 2007/07/22 09:18:53 omp Exp $
 
 inherit pax-utils java-vm-2 eutils
 
@@ -22,20 +22,16 @@ IUSE="X alsa nsplugin"
 JAVA_VM_NO_GENERATION1=true
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
-	X? ( || ( ( x11-libs/libICE
-				x11-libs/libSM
-		 		x11-libs/libX11
-				x11-libs/libXau
-				x11-libs/libXdmcp
-				x11-libs/libXext
-				x11-libs/libXi
-				x11-libs/libXp
-				x11-libs/libXt
-				x11-libs/libXtst
-			  )
-				virtual/x11
-			)
-		)"
+	X? ( x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libX11
+		x11-libs/libXau
+		x11-libs/libXdmcp
+		x11-libs/libXext
+		x11-libs/libXi
+		x11-libs/libXp
+		x11-libs/libXt
+		x11-libs/libXtst )"
 
 JAVA_PROVIDE="jdbc-stdext jdbc-rowset"
 

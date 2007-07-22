@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spectemu
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.23 2007/05/13 18:29:23 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.24 2007/07/22 09:29:45 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> spectemu-0.9.4.ebuild,
+  spectemu-0.99.3.ebuild:
+  Remove virtual/x11 from dependencies.
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>

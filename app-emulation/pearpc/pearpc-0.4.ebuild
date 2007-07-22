@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.6 2007/01/25 22:50:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.7 2007/07/22 09:26:13 omp Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -19,7 +19,7 @@ DEPEND="virtual/libc
 	sys-devel/bison
 	x86? ( dev-lang/nasm )
 	jit? ( dev-lang/nasm )
-	X? ( || ( x11-libs/libX11 virtual/x11 ) )
+	X? ( x11-libs/libX11 )
 	sdl? ( >=media-libs/libsdl-1.2.0 )"
 RDEPEND="${DEPEND}
 	sys-apps/net-tools

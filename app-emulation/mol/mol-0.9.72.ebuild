@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72.ebuild,v 1.2 2007/04/11 01:39:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72.ebuild,v 1.3 2007/07/22 09:25:05 omp Exp $
 
 inherit flag-o-matic eutils linux-mod
 
@@ -19,20 +19,12 @@ RDEPEND="net-misc/dhcp
 	net-firewall/iptables
 	alsa? ( media-libs/alsa-lib )
 	vnc? ( net-misc/vnc )
-	X? ( || ( ( x11-libs/libXext
-				dga? ( x11-libs/libXxf86dga )
-			  )
-			  virtual/x11
-			)
-	)"
+	X? ( x11-libs/libXext
+		dga? ( x11-libs/libXxf86dga ) )"
 DEPEND="${RDEPEND}
-	X? ( || ( ( x11-libs/libXt
-				x11-proto/xextproto
-				dga? ( x11-proto/xf86dgaproto )
-			  )
-			  virtual/x11
-			)
-	)"
+	X? ( x11-libs/libXt
+		x11-proto/xextproto
+		dga? ( x11-proto/xf86dgaproto ) )"
 
 MODULE_NAMES="mol(mol:${S}/src/kmod/Linux)
 			  sheep(net:${S}/src/netdriver)"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.3.5.ebuild,v 1.1 2007/05/03 05:06:28 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.3.5.ebuild,v 1.2 2007/07/22 09:15:42 omp Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -15,19 +15,14 @@ SLOT="0"
 KEYWORDS="-* ~x86"
 IUSE="X svga gpm debug"
 
-RDEPEND="X? (
-	|| ( (
-		x11-libs/libXxf86vm
+RDEPEND="X? ( x11-libs/libXxf86vm
 		x11-libs/libXau
 		x11-libs/libXdmcp
 		x11-proto/xf86dgaproto
 		x11-apps/xset
 		x11-apps/xlsfonts
 		x11-apps/bdftopcf
-		x11-apps/mkfontdir
-	)
-	virtual/x11
-	) )
+		x11-apps/mkfontdir )
 	svga? ( media-libs/svgalib )
 	gpm? ( sys-libs/gpm )
 	>=sys-libs/slang-1.4"

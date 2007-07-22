@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.34 2007/07/12 21:16:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.35 2007/07/22 09:18:53 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org>
+  emul-linux-x86-java-1.5.0.11.ebuild, emul-linux-x86-java-1.6.0.ebuild,
+  emul-linux-x86-java-1.6.0-r1.ebuild:
+  Remove virtual/x11 from dependencies.
 
   12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Remove herbs from metadata.xml as in reality this has been maintained by us

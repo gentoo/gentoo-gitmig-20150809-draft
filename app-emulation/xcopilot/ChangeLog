@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xcopilot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xcopilot/ChangeLog,v 1.8 2007/01/25 23:05:16 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xcopilot/ChangeLog,v 1.9 2007/07/22 09:41:41 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> xcopilot-0.6.6.ebuild:
+  Remove virtual/x11 from dependencies.
 
   25 Jan 2007; Marius Mauch <genone@gentoo.org> xcopilot-0.6.6.ebuild:
   Replacing einfo with elog

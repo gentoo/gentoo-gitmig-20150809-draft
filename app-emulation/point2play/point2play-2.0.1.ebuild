@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-2.0.1.ebuild,v 1.3 2006/06/24 07:38:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-2.0.1.ebuild,v 1.4 2007/07/22 09:27:43 omp Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="-* ~amd64 x86"
 IUSE=""
 RESTRICT="fetch"
 
-RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
+RDEPEND="x11-libs/libX11
 	virtual/opengl
 	>=dev-lang/python-2.3
 	>=dev-python/pygtk-2.4"

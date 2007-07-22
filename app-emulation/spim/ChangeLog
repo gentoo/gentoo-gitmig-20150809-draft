@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.42 2007/01/30 05:28:51 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.43 2007/07/22 09:32:36 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> spim-7.2.1-r2.ebuild,
+  spim-7.2.1-r3.ebuild, spim-7.3.ebuild:
+  Remove virtual/x11 from dependencies.
 
   30 Jan 2007; Steve Dibb <beandog@gentoo.org> spim-7.3.ebuild:
   amd64 stable, bug 158402, added strip to restrict

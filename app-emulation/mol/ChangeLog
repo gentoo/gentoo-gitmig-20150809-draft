@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.76 2007/06/25 18:23:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.77 2007/07/22 09:25:05 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> mol-0.9.72.ebuild,
+  mol-0.9.72.1.ebuild:
+  Remove virtual/x11 from dependencies.
 
 *mol-0.9.72.1 (25 Jun 2007)
 

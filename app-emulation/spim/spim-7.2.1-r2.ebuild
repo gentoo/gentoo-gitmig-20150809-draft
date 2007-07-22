@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.2.1-r2.ebuild,v 1.3 2006/08/27 21:37:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.2.1-r2.ebuild,v 1.4 2007/07/22 09:32:36 omp Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,11 +13,13 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ppc-macos ~sparc ~x86"
 IUSE="X"
 
-RDEPEND="X? ( || ( ( x11-libs/libXaw x11-libs/libXp ) virtual/x11 ) )"
+RDEPEND="X? ( x11-libs/libXaw
+		x11-libs/libXp )"
 DEPEND="${RDEPEND}
-		X? ( || ( ( x11-misc/imake x11-proto/xproto ) virtual/x11 ) )
-		>=sys-apps/sed-4
-		sys-devel/bison"
+	X? ( x11-misc/imake
+		x11-proto/xproto )
+	>=sys-apps/sed-4
+	sys-devel/bison"
 
 src_unpack() {
 	unpack ${A}

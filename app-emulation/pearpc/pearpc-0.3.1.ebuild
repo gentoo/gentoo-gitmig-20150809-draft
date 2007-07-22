@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.3.1.ebuild,v 1.9 2007/06/26 01:36:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.3.1.ebuild,v 1.10 2007/07/22 09:26:13 omp Exp $
 
 inherit flag-o-matic
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="x86? ( dev-lang/nasm )
-	|| ( x11-libs/libXt virtual/x11 )"
+	x11-libs/libXt"
 
 RDEPEND="media-libs/libmng
 	media-libs/jpeg

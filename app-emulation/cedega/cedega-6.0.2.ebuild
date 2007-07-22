@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-6.0.2.ebuild,v 1.2 2007/07/02 13:48:05 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-6.0.2.ebuild,v 1.3 2007/07/22 09:08:46 omp Exp $
 
 MY_P="cedega-small-${PV}"
 DESCRIPTION="Cedega replaces WineX, a distribution of Wine with enhanced DirectX for gaming"
@@ -13,7 +13,7 @@ KEYWORDS="-* amd64 x86"
 IUSE="cups dbus opengl"
 RESTRICT="fetch strip"
 
-RDEPEND="|| ( ( x11-libs/libX11 ) virtual/x11 )
+RDEPEND="x11-libs/libX11
 	opengl? ( virtual/opengl )
 	dbus? ( sys-apps/dbus )
 	>=sys-libs/ncurses-5.2

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/spectemu-0.9.4.ebuild,v 1.16 2006/08/04 08:09:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/spectemu-0.9.4.ebuild,v 1.17 2007/07/22 09:29:45 omp Exp $
 
 ### Several versions of specemu exist,  xspect & vgaspect, utilising X11
 ### and/or svgalib. libreadline provides optional runtime features.
@@ -16,15 +16,12 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="X readline svga"
 
-DEPEND="X? ( || (
-	( >=x11-proto/xf86vidmodeproto-2.2.2
-	>=x11-proto/xextproto-7.0.2
-	>=x11-proto/xproto-7.0.4
-	>=x11-libs/libX11-1.0.0
-	>=x11-libs/libXext-1.0.0
-	>=x11-libs/libXxf86vm-1.0.0 )
-	virtual/x11 )
-	)
+DEPEND="X? ( >=x11-proto/xf86vidmodeproto-2.2.2
+		>=x11-proto/xextproto-7.0.2
+		>=x11-proto/xproto-7.0.4
+		>=x11-libs/libX11-1.0.0
+		>=x11-libs/libXext-1.0.0
+		>=x11-libs/libXxf86vm-1.0.0 )
 	readline? ( sys-libs/readline )"
 RDEPEND="svga? ( media-libs/svgalib )"
 

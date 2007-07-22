@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-gsx-console/vmware-gsx-console-3.2.0.14497.ebuild,v 1.5 2007/07/12 06:39:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-gsx-console/vmware-gsx-console-3.2.0.14497.ebuild,v 1.6 2007/07/22 09:35:42 omp Exp $
 
 MY_PN="VMware-console"
 MY_PV=${PV%.*}-${PV##*.}
@@ -20,16 +20,15 @@ RESTRICT="fetch strip"
 
 DEPEND="virtual/libc"
 
-RDEPEND="|| ( ( x11-libs/gtk+
-		 	    x11-libs/libICE
-		 	    x11-libs/libSM
-		 	    x11-libs/libXext
-		 		x11-libs/libXi
-		 		x11-libs/libXpm
-		 		x11-libs/libXtst
-		 		x11-libs/libX11 )
-			  virtual/x11 )
-		 sys-libs/zlib"
+RDEPEND="x11-libs/gtk+
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libXext
+	x11-libs/libXi
+	x11-libs/libXpm
+	x11-libs/libXtst
+	x11-libs/libX11
+	sys-libs/zlib"
 
 pkg_nofetch() {
 	einfo "Please obtain ${FN} and place it in ${DISTDIR}"
