@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.14.0-r1.ebuild,v 1.4 2007/05/05 11:36:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.14.0-r1.ebuild,v 1.5 2007/07/22 09:46:31 omp Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~sparc ~x86"
 IUSE="avfs unicode"
 #S="${WORKDIR}/${P/_}"
 
-DEPEND="|| ( x11-libs/libSM virtual/x11 )
+DEPEND="x11-libs/libSM
 	avfs? ( sys-fs/avfs )"
 
 src_compile() {

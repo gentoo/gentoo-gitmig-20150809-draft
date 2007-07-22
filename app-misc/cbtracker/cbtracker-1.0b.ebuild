@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cbtracker/cbtracker-1.0b.ebuild,v 1.6 2006/03/19 00:02:00 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cbtracker/cbtracker-1.0b.ebuild,v 1.7 2007/07/22 09:56:40 omp Exp $
 
 DESCRIPTION="CheckBook Tracker finance manager"
 HOMEPAGE="http://tony.maro.net/mod.php?mod=userpage&page_id=4"
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 RDEPEND="virtual/libc
-	|| ( x11-libs/libXi virtual/x11 )"
+	x11-libs/libXi"
 DEPEND=""
 
 S="${WORKDIR}/${PN}"

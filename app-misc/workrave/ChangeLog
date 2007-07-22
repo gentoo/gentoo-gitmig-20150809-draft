@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.45 2007/03/16 02:48:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.46 2007/07/22 09:50:08 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> workrave-1.8.3.ebuild:
+  Remove virtual/x11 from dependencies.
 
 *workrave-1.8.4 (16 Mar 2007)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/multimon
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/ChangeLog,v 1.8 2007/05/14 16:47:40 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/ChangeLog,v 1.9 2007/07/22 09:48:36 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> multimon-1.0.ebuild:
+  Remove virtual/x11 from dependencies.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>

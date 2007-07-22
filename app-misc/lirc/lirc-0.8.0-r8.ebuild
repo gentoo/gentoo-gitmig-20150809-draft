@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r8.ebuild,v 1.13 2007/07/12 03:35:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r8.ebuild,v 1.14 2007/07/22 09:54:11 omp Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -49,10 +49,9 @@ IUSE_LIRC_DEVICES="${IUSE_LIRC_DEVICES_DIRECT} ${IUSE_LIRC_DEVICES_SPECIAL}"
 
 RDEPEND="virtual/libc
 	sys-apps/coreutils
-	X? ( || ( (	x11-libs/libX11
-			x11-libs/libSM
-			x11-libs/libICE )
-	virtual/x11 ) )
+	X? ( x11-libs/libX11
+		x11-libs/libSM
+		x11-libs/libICE )
 	lirc_devices_alsa_usb? ( media-libs/alsa-lib )
 	lirc_devices_audio? ( media-libs/portaudio )
 	lirc_devices_irman? ( media-libs/libirman )"

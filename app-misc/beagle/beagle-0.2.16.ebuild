@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.16.ebuild,v 1.6 2007/07/12 03:35:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.16.ebuild,v 1.7 2007/07/22 10:00:00 omp Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -24,14 +24,12 @@ RDEPEND="
 	>=gnome-base/librsvg-2.0
 	>=media-libs/libexif-0.6.0
 	>=dev-libs/libxml2-2.6.19
+	x11-libs/libX11
+	x11-libs/libXScrnSaver
+	x11-libs/libXt
 
 	||		(	>=dev-db/sqlite-3.3.1
 				=dev-db/sqlite-2* )
-
-	||	(	(	x11-libs/libX11
-				x11-libs/libXScrnSaver
-				x11-libs/libXt )
-		virtual/x11 )
 
 	gtk?	(	>=dev-dotnet/gconf-sharp-2.8
 				>=dev-dotnet/glade-sharp-2.8
@@ -54,9 +52,8 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	|| ( (	x11-proto/xproto
-		x11-proto/scrnsaverproto )
-	virtual/x11 )"
+	x11-proto/xproto
+	x11-proto/scrnsaverproto"
 
 pkg_setup() {
 	if built_with_use dev-libs/gmime mono

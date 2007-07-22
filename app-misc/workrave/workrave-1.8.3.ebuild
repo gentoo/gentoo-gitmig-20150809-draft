@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.3.ebuild,v 1.6 2007/07/12 03:35:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.3.ebuild,v 1.7 2007/07/22 09:50:08 omp Exp $
 
 inherit eutils gnome2
 
@@ -32,18 +32,14 @@ RDEPEND=">=dev-libs/glib-2
 		=x11-libs/qt-3*
 		kde-base/kdelibs )
 	arts? ( kde-base/arts )
-	|| ( (
-			x11-libs/libX11
-			x11-libs/libXt
-			x11-libs/libXmu )
-		virtual/x11 )"
+	x11-libs/libX11
+	x11-libs/libXt
+	x11-libs/libXmu"
 
 DEPEND="${RDEPEND}
-	|| ( (
-			x11-proto/xproto
-			x11-proto/inputproto
-			x11-proto/recordproto )
-		virtual/x11 )
+	x11-proto/xproto
+	x11-proto/inputproto
+	x11-proto/recordproto
 	nls? ( sys-devel/gettext )
 	>=dev-util/pkgconfig-0.9"
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/worker
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.46 2007/07/21 14:00:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.47 2007/07/22 09:46:31 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> worker-2.11.1.ebuild,
+  worker-2.13.1.ebuild, worker-2.14.0.ebuild, worker-2.14.0-r1.ebuild,
+  worker-2.14.4.ebuild:
+  Remove virtual/x11 from dependencies.
 
   21 Jul 2007; Raúl Porcel <armin76@gentoo.org> worker-2.14.4.ebuild:
   Re-add ~alpha wrt #172755, thanks to Brian Evans for testing

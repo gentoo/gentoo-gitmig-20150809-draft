@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/joy2key-1.6.ebuild,v 1.22 2006/10/22 21:18:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/joy2key-1.6.ebuild,v 1.23 2007/07/22 09:55:12 omp Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
 IUSE="X"
 
-DEPEND="X? ( || ( x11-libs/libX11 virtual/x11 ) )"
+DEPEND="X? ( x11-libs/libX11 )"
 
 src_unpack() {
 	unpack ${A}

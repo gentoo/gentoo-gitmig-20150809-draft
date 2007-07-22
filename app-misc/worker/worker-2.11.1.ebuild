@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.11.1.ebuild,v 1.7 2006/08/17 11:34:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.11.1.ebuild,v 1.8 2007/07/22 09:46:31 omp Exp $
 
 DESCRIPTION="Worker Filemanager: Amiga Directory Opus 4 clone"
 HOMEPAGE="http://www.boomerangsworld.de/worker/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc sparc x86"
 IUSE=""
 
-DEPEND="|| ( x11-libs/libSM virtual/x11 )"
+DEPEND="x11-libs/libSM"
 
 src_install() {
 	einstall || die "make install failed"
