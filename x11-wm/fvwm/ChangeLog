@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.140 2007/03/23 19:29:55 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.141 2007/07/22 03:59:23 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> fvwm-2.5.18-r1.ebuild,
+  fvwm-2.5.19.ebuild, fvwm-2.5.21.ebuild:
+  Remove virtual/x11 from dependencies.
 
 *fvwm-2.5.21 (23 Mar 2007)
 

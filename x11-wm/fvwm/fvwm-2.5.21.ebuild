@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.21.ebuild,v 1.1 2007/03/23 19:29:55 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.21.ebuild,v 1.2 2007/07/22 03:59:23 omp Exp $
 
 inherit eutils flag-o-matic
 
@@ -27,22 +27,18 @@ RDEPEND="readline? ( sys-libs/readline sys-libs/ncurses )
 		userland_GNU? ( sys-apps/debianutils )
 		dev-lang/perl
 		sys-libs/zlib
-		|| ( (
-			x11-libs/libXpm
-			x11-libs/libXft
-			xinerama? ( x11-libs/libXinerama ) )
-		virtual/x11 )"
+		x11-libs/libXpm
+		x11-libs/libXft
+		xinerama? ( x11-libs/libXinerama )"
 # XXX:	gtk2 perl bindings require dev-perl/gtk2-perl, worth a dependency?
 # XXX:	gtk perl bindings require dev-perl/gtk-perl, worth a dependency?
 # XXX:	netpbm is used by FvwmScript-ScreenDump, worth a dependency?
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig
-		|| ( (
-			x11-libs/libXrandr
-			x11-proto/xextproto
-			x11-proto/xproto
-			xinerama? ( x11-proto/xineramaproto ) )
-		virtual/x11 )"
+		x11-libs/libXrandr
+		x11-proto/xextproto
+		x11-proto/xproto
+		xinerama? ( x11-proto/xineramaproto )"
 
 src_unpack() {
 	unpack ${A}; export EPATCH_OPTS="-F3 -l"
