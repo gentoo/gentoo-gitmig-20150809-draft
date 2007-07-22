@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.12.ebuild,v 1.14 2007/07/14 22:22:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.13.ebuild,v 1.1 2007/07/22 09:23:51 dertobi123 Exp $
 
-inherit eutils ssl-cert fixheadtails pam
+inherit autotools eutils ssl-cert fixheadtails pam
 
 DESCRIPTION="The Cyrus IMAP Server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -10,16 +10,16 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc amd64 ppc hppa ppc64"
-IUSE="afs drac idled kerberos pam snmp ssl tcpd"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+IUSE="afs drac idled kerberos pam snmp ssl tcpd unsupported_8bit"
 
 PROVIDE="virtual/imapd"
 RDEPEND=">=sys-libs/db-3.2
 	>=dev-libs/cyrus-sasl-2.1.13
 	afs? ( >=net-fs/openafs-1.2.2 )
 	pam? (
-			>=sys-libs/pam-0.75
-			>=net-mail/mailbase-0.00-r8
+			virtual/pam
+			>=net-mail/mailbase-1
 		)
 	kerberos? ( virtual/krb5 )
 	snmp? ( net-analyzer/net-snmp )
@@ -30,8 +30,7 @@ RDEPEND=">=sys-libs/db-3.2
 DEPEND="$RDEPEND
 	sys-devel/libtool
 	>=sys-devel/autoconf-2.58
-	sys-devel/automake
-	>=sys-apps/sed-4"
+	sys-devel/automake"
 
 # "borrow" this from eldad in bug 60495 util portage can handle dep USE flags.
 check_useflag() {
@@ -74,6 +73,10 @@ tcpd_flag_check() {
 }
 
 net-snmp_check() {
+	if has_version net-analyzer/ucd-snmp; then
+		tcpd_flag_check net-analyzer/ucd-snmp
+	fi
+
 	if has_version net-analyzer/net-snmp; then
 		tcpd_flag_check net-analyzer/net-snmp
 		# check for minimal USE flag.
@@ -130,12 +133,28 @@ pkg_setup() {
 	if use snmp; then
 		net-snmp_check
 	fi
+
+	enewuser cyrus -1 -1 /usr/cyrus mail
 }
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
 
 	ht_fix_file ${S}/imap/xversion.sh
+
+	# Parallel make fix
+	epatch "${FILESDIR}"/${PN}-parallel.patch
+
+	# db-4.5 fix
+	epatch "${FILESDIR}/${PN}-2.2-db45.patch"
+
+	# Add unsupported patch wrt #18706 and #80630
+	use unsupported_8bit && epatch "${FILESDIR}/${PN}-unsupported-8bit.patch"
+
+	if use afs; then
+		epatch "${FILESDIR}/${P}-afs.patch" || die "epatch failed"
+		epatch "${FILESDIR}/${P}-pts.patch" || die "epatch failed"
+	fi
 
 	# Add drac database support.
 	if use drac ; then
@@ -146,7 +165,7 @@ src_unpack() {
 
 	# Add libwrap defines as we don't have a dynamicly linked library.
 	if use tcpd ; then
-		epatch "${FILESDIR}/${P}-libwrap.patch" || die "epatch failed"
+		epatch "${FILESDIR}/${PN}-2.2-libwrap.patch" || die "epatch failed"
 	fi
 
 	# DB4 detection and versioned symbols.
@@ -156,25 +175,26 @@ src_unpack() {
 
 	# Fix master(8)->cyrusmaster(8) manpage.
 	for i in `grep -rl -e 'master\.8' -e 'master(8)' "${S}"` ; do
-		sed -e 's:master\.8:cyrusmaster.8:g' \
+		sed -i -e 's:master\.8:cyrusmaster.8:g' \
 			-e 's:master(8):cyrusmaster(8):g' \
-			-i "${i}" || die "sed failed" || die "sed failed"
+			"${i}" || die "sed failed" || die "sed failed"
 	done
 	mv man/master.8 man/cyrusmaster.8 || die "mv failed"
-	sed -e "s:MASTER:CYRUSMASTER:g" \
+	sed -i -e "s:MASTER:CYRUSMASTER:g" \
 		-e "s:Master:Cyrusmaster:g" \
 		-e "s:master:cyrusmaster:g" \
-		-i man/cyrusmaster.8 || die "sed failed"
+		man/cyrusmaster.8 || die "sed failed"
 
 	# Recreate configure.
-	export WANT_AUTOCONF="2.5"
-	rm -rf configure config.h.in autom4te.cache || die
-	ebegin "Recreating configure"
-	sh SMakefile &>/dev/null || die "SMakefile failed"
-	eend $?
+	WANT_AUTOCONF="2.5"
+#	rm -rf configure config.h.in autom4te.cache || die
+#	ebegin "Recreating configure"
+#	sh SMakefile &>/dev/null || die "SMakefile failed"
+#	eend $?
+	eautoreconf 
 
 	# When linking with rpm, you need to link with more libraries.
-	sed -e "s:lrpm:lrpm -lrpmio -lrpmdb:" -i configure || die "sed failed"
+	sed -i -e "s:lrpm:lrpm -lrpmio -lrpmdb:" configure || die "sed failed"
 }
 
 src_compile() {
@@ -235,14 +255,7 @@ src_install() {
 
 	newinitd "${FILESDIR}/cyrus.rc6" cyrus
 	newconfd "${FILESDIR}/cyrus.confd" cyrus
-
-	if use pam ; then
-		insinto /etc/pam.d
-	# This is now provided by mailbase-0.00-r8. See #79240
-	# 	newins "${FILESDIR}/imap.pam" imap
-	#	newins "${FILESDIR}/imap.pam" pop3
-		newins "${FILESDIR}/imap.pam" sieve
-	fi
+	newpamd "${FILESDIR}/cyrus.pam-include" sieve
 
 	if use ssl ; then
 		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Cyrus IMAP Server}"
@@ -277,6 +290,8 @@ pkg_postinst() {
 	ewarn "/var/spool/imap you should read step 9 of"
 	ewarn "/usr/share/doc/${P}/html/install-configure.html."
 	echo
+
+	enewuser cyrus -1 -1 /usr/cyrus mail
 
 	if df -T /var/imap | grep -q ' ext[23] ' ; then
 		ebegin "Making /var/imap/user/* and /var/imap/quota/* synchronous."

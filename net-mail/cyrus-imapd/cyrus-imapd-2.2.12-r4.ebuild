@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.12-r4.ebuild,v 1.12 2007/07/14 22:22:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.12-r4.ebuild,v 1.13 2007/07/22 09:23:51 dertobi123 Exp $
 
-inherit eutils ssl-cert fixheadtails pam
+inherit autotools eutils ssl-cert fixheadtails pam
 
 DESCRIPTION="The Cyrus IMAP Server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -149,7 +149,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-parallel.patch
 
 	# db-4.5 fix
-	epatch "${FILESDIR}/${P}-db45.patch"
+	epatch "${FILESDIR}/${PN}-2.2-db45.patch"
 
 	# Add unsupported patch wrt #18706 and #80630
 	use unsupported_8bit && epatch "${FILESDIR}/${PN}-unsupported-8bit.patch"
@@ -163,7 +163,7 @@ src_unpack() {
 
 	# Add libwrap defines as we don't have a dynamicly linked library.
 	if use tcpd ; then
-		epatch "${FILESDIR}/${P}-libwrap.patch" || die "epatch failed"
+		epatch "${FILESDIR}/${PN}-2.2-libwrap.patch" || die "epatch failed"
 	fi
 
 	# DB4 detection and versioned symbols.
@@ -184,11 +184,8 @@ src_unpack() {
 		man/cyrusmaster.8 || die "sed failed"
 
 	# Recreate configure.
-	export WANT_AUTOCONF="2.5"
-	rm -rf configure config.h.in autom4te.cache || die
-	ebegin "Recreating configure"
-	sh SMakefile &>/dev/null || die "SMakefile failed"
-	eend $?
+	WANT_AUTOCONF="2.5"
+	eautoreconf
 
 	# When linking with rpm, you need to link with more libraries.
 	sed -i -e "s:lrpm:lrpm -lrpmio -lrpmdb:" configure || die "sed failed"
