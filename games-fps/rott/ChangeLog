@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/rott
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rott/ChangeLog,v 1.7 2007/03/12 15:08:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rott/ChangeLog,v 1.8 2007/07/22 13:10:50 nyhm Exp $
+
+  22 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/rott-1.0-full-version.patch, rott-1.0.ebuild:
+  Add demo USE flag, bug #178443
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> rott-1.0.ebuild:
   Replacing einfo with elog
