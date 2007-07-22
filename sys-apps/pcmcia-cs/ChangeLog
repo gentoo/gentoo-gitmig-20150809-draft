@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.113 2007/02/22 01:18:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.114 2007/07/22 06:24:05 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  pcmcia-cs-3.2.8-r2.ebuild, pcmcia-cs-3.2.9_pre20050614.ebuild:
+  Drop virtual/x11 references.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.5-r1.ebuild,v 1.3 2007/03/10 19:57:39 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.5-r1.ebuild,v 1.4 2007/07/22 06:24:53 dberkholz Exp $
 
 inherit eutils
 
@@ -16,7 +16,10 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE="X"
 
-DEPEND="X? ( || ( ( x11-libs/libXt x11-libs/libSM x11-libs/libX11 x11-libs/libICE ) virtual/x11 ) )"
+DEPEND="X? ( x11-libs/libXt
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libICE )"
 
 S=${WORKDIR}/${MY_P}
 

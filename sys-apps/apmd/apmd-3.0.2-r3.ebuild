@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r3.ebuild,v 1.22 2007/07/12 05:10:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r3.ebuild,v 1.23 2007/07/22 06:22:14 dberkholz Exp $
 
 inherit eutils
 
@@ -16,14 +16,13 @@ LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ppc"
 
 DEPEND=">=sys-apps/debianutils-1.16
-	X? ( || ( ( x11-libs/libX11
-				x11-libs/libXaw
-				x11-libs/libXmu
-				x11-libs/libSM
-				x11-libs/libICE
-				x11-libs/libXt
-				x11-libs/libXext )
-				virtual/x11 ) )"
+	X? ( x11-libs/libX11
+		x11-libs/libXaw
+		x11-libs/libXmu
+		x11-libs/libSM
+		x11-libs/libICE
+		x11-libs/libXt
+		x11-libs/libXext )"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.1_p4.ebuild,v 1.19 2007/04/28 17:02:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.1_p4.ebuild,v 1.20 2007/07/22 06:22:14 dberkholz Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -19,14 +19,13 @@ KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="X nls"
 
 RDEPEND=">=sys-apps/debianutils-1.16
-	X? ( || ( ( x11-libs/libX11
-				x11-libs/libXaw
-				x11-libs/libXmu
-				x11-libs/libSM
-				x11-libs/libICE
-				x11-libs/libXt
-				x11-libs/libXext )
-				virtual/x11 ) )"
+	X? ( x11-libs/libX11
+		x11-libs/libXaw
+		x11-libs/libXmu
+		x11-libs/libSM
+		x11-libs/libICE
+		x11-libs/libXt
+		x11-libs/libXext )"
 DEPEND="${RDEPEND}
 	virtual/os-headers"
 
