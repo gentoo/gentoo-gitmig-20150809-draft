@@ -1,25 +1,23 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fxred/fxred-0.9.ebuild,v 1.7 2006/01/21 12:06:51 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fxred/fxred-0.9.ebuild,v 1.8 2007/07/22 03:11:03 coldwind Exp $
 
-DESCRIPTION="FXred is handler for the red scroll button of the Logitech TrackMan Marble FX, a trackball."
+DESCRIPTION="a handler for the red scroll button of the Logitech TrackMan Marble
+FX, a trackball."
 HOMEPAGE="http://www.larskrueger.homestead.com/files/index.html#X11"
 SRC_URI="http://www.larskrueger.homestead.com/files/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE=""
 
-RDEPEND="|| ( (
-		x11-libs/libX11
-		x11-libs/libXtst )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXtst"
 DEPEND="${RDEPEND}
-	|| ( (
-		x11-proto/xextproto
-		x11-proto/xproto
-		x11-libs/libXt )
-	virtual/x11 )"
+	x11-proto/xextproto
+	x11-proto/xproto
+	x11-libs/libXt"
 
 src_compile() {
 	./configure \
@@ -31,8 +29,8 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog README TODO
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog README TODO.txt
 	dohtml fxred/docs/en/*.html
 	insinto /etc
 	doins fxredrc
