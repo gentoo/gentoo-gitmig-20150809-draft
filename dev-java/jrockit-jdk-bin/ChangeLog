@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jrockit-jdk-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.36 2007/07/02 14:33:55 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.37 2007/07/22 22:44:36 caster Exp $
+
+*jrockit-jdk-bin-1.5.0.11 (22 Jul 2007)
+*jrockit-jdk-bin-1.4.2.14 (22 Jul 2007)
+
+  22 Jul 2007; Vlastimil Babka <caster@gentoo.org>
+  +jrockit-jdk-bin-1.4.2.14.ebuild, +jrockit-jdk-bin-1.5.0.11.ebuild:
+  Version bump, bug #184339. No more mercuryprofiler in 1.5.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   jrockit-jdk-bin-1.4.2.13.ebuild, jrockit-jdk-bin-1.5.0.06-r1.ebuild,
