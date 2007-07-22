@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r1.ebuild,v 1.6 2007/07/15 03:37:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r1.ebuild,v 1.7 2007/07/22 07:32:02 graaff Exp $
 
 inherit eutils
 
@@ -14,8 +14,8 @@ KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
-	|| ( ( x11-proto/scrnsaverproto
-		x11-proto/xextproto ) <virtual/x11-7 )"
+	x11-proto/scrnsaverproto
+	x11-proto/xextproto"
 
 src_unpack() {
 	unpack ${A}

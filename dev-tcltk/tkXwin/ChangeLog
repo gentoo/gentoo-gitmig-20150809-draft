@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkXwin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.14 2007/02/04 18:55:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.15 2007/07/22 07:32:02 graaff Exp $
+
+  22 Jul 2007; Hans de Graaff <graaff@gentoo.org> tkXwin-1.0-r1.ebuild:
+  Drop virtual/x11 references.
 
   04 Feb 2007; Steve Dibb <beandog@gentoo.org> tkXwin-1.0-r1.ebuild:
   amd64 stable, bug 156217
