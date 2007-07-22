@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.6 2007/07/10 18:42:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.7 2007/07/22 08:06:08 graaff Exp $
 
 inherit elisp-common flag-o-matic
 
@@ -21,7 +21,7 @@ RDEPEND="emacs? ( virtual/emacs )
 	readline? ( sys-libs/readline )
 	>=dev-libs/gmp-4.1
 	tk? ( dev-lang/tk )
-	X? ( || ( ( x11-libs/libXt x11-libs/libXext x11-libs/libXmu x11-libs/libXaw ) virtual/x11 ) )
+	X? ( x11-libs/libXt x11-libs/libXext x11-libs/libXmu x11-libs/libXaw )
 	virtual/tetex"				# pdflatex (see Bug # 157903)
 DEPEND="${RDEPEND}
 	doc? ( virtual/tetex )

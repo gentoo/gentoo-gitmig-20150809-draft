@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation and Matthew Kennedy <mkennedy@gentoo.org>
+# Copyright 1999-2007 Gentoo Foundation and Matthew Kennedy <mkennedy@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/lush-1.1.ebuild,v 1.3 2006/06/20 16:16:10 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/lush-1.1.ebuild,v 1.4 2007/07/22 08:02:26 graaff Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="X"
 
-DEPEND="X? ( || ( ( x11-libs/libX11 x11-libs/libICE x11-libs/libSM ) virtual/x11 ) )"
+DEPEND="X? ( x11-libs/libX11 x11-libs/libICE x11-libs/libSM )"
 
 src_unpack() {
 	unpack ${A}

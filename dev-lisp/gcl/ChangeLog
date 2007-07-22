@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.45 2007/07/14 19:09:06 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.46 2007/07/22 08:06:08 graaff Exp $
+
+  22 Jul 2007; Hans de Graaff <graaff@gentoo.org> gcl-2.6.7.ebuild,
+  gcl-2.6.7-r1.ebuild, gcl-2.6.7-r2.ebuild:
+  Drop virtual/x11 references.
 
   14 Jul 2007; Steve Arnold <nerdboy@gentoo.org>
   +files/gcl-2.6.7-fix-configure.in-bfd.patch, gcl-2.6.7.ebuild:

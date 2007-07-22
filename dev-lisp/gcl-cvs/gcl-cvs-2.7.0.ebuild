@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl-cvs/gcl-cvs-2.7.0.ebuild,v 1.6 2007/07/02 15:04:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl-cvs/gcl-cvs-2.7.0.ebuild,v 1.7 2007/07/22 08:03:17 graaff Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/gcl"
@@ -21,7 +21,7 @@ RESTRICT="$RESTRICT strip"
 
 DEPEND=">=app-text/texi2html-1.64
 	emacs? ( virtual/emacs )
-	X? ( || ( ( x11-libs/libXt x11-libs/libXext x11-libs/libXmu x11-libs/libXaw ) virtual/x11 ) )
+	X? ( x11-libs/libXt x11-libs/libXext x11-libs/libXmu x11-libs/libXaw )
 	readline? ( sys-libs/readline )
 	>=dev-libs/gmp-4.1
 	doc? ( virtual/tetex )
