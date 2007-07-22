@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.3.8-r1.ebuild,v 1.3 2006/01/22 20:56:18 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.3.8-r1.ebuild,v 1.4 2007/07/22 09:01:03 calchan Exp $
 
 inherit eutils
 
@@ -15,11 +15,10 @@ IUSE="nls imlib"
 
 DEPEND="nls? ( sys-devel/gettext )
 	imlib? ( media-libs/imlib )
-	|| ( (  x11-libs/libX11
-		x11-libs/libXpm
-		x11-libs/libXext
-		x11-libs/libXt )
-		virtual/x11 )"
+	x11-libs/libX11
+	x11-libs/libXpm
+	x11-libs/libXext
+	x11-libs/libXt"
 
 src_compile() {
 	epatch ${FILESDIR}/xorg-library-configure.patch
