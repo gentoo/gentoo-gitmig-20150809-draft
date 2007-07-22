@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.243-r1.ebuild,v 1.11 2006/11/18 08:34:09 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.243-r1.ebuild,v 1.12 2007/07/22 04:15:00 omp Exp $
 
 inherit eutils rpm versionator kde-functions
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	media-gfx/icon-slicer
 	dev-util/intltool
 	=sys-devel/automake-1.8*
-	|| ( x11-apps/xcursorgen virtual/x11 )"
+	x11-apps/xcursorgen"
 
 MY_SV=$(get_version_component_range 1-2)
 S=${WORKDIR}/${PN}-${MY_SV}
