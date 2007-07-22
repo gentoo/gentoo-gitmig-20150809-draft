@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/picasa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.8 2007/05/15 09:55:15 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.9 2007/07/22 09:46:19 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  picasa-2.2.2820.5.ebuild:
+  Drop virtual/x11 references.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>

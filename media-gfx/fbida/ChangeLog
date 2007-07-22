@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.39 2007/06/25 18:41:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.40 2007/07/22 09:54:09 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; fbida-2.03-r4.ebuild,
+  fbida-2.05.ebuild, fbida-2.06.ebuild:
+  Drop virtual/x11 references.
 
   25 Jun 2007; Raúl Porcel <armin76@gentoo.org> fbida-2.05.ebuild:
   alpha stable wrt #177324

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/quat/quat-1.20.ebuild,v 1.7 2007/03/15 11:00:38 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/quat/quat-1.20.ebuild,v 1.8 2007/07/22 09:49:32 dberkholz Exp $
 
 DESCRIPTION="A 3D quaternionic fractal generator"
 HOMEPAGE="http://www.physcip.uni-stuttgart.de/phy11733/quat_e.html"
@@ -12,12 +12,9 @@ KEYWORDS="~ppc x86"
 IUSE="X debug"
 
 DEPEND="X? ( >=x11-libs/fltk-1.1
-			|| ( ( x11-libs/libX11
-					x11-libs/libXext
-					x11-libs/libXft
-				)
-				virtual/x11
-			)
+			x11-libs/libX11
+			x11-libs/libXext
+			x11-libs/libXft
 		)
 	>=sys-libs/zlib-1.1.4"
 RDEPEND=""

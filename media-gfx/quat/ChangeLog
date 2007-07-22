@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/quat
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/quat/ChangeLog,v 1.6 2007/03/15 11:00:38 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/quat/ChangeLog,v 1.7 2007/07/22 09:49:32 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; quat-1.20.ebuild:
+  Drop virtual/x11 references.
 
   15 Mar 2007; Michał Januszewski <spock@gentoo.org> quat-1.20.ebuild:
   Don't use 'which' to find 'fluid'.

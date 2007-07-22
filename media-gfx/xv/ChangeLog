@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.80 2007/06/02 18:28:26 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.81 2007/07/22 09:47:08 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; xv-3.10a-r12.ebuild:
+  Drop virtual/x11 references.
 
   02 Jun 2007; Joe Peterson <lavajoe@gentoo.org>
   +files/xv-3.10a-osx-bsd.patch, -files/xv-3.10a-r12-xv-osx.patch,

@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.117 2007/07/15 10:24:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.118 2007/07/22 10:04:27 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  blender-2.41-r1.ebuild, blender-2.42.ebuild, blender-2.42a-r1.ebuild,
+  blender-2.43.ebuild, blender-2.44.ebuild:
+  Drop virtual/x11 references.
 
   15 Jul 2007; Luca Barbato <lu_zero@gentoo.org> blender-2.44.ebuild:
   Add verse support as requested in bug #173124

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.16.ebuild,v 1.8 2007/07/11 17:22:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.16.ebuild,v 1.9 2007/07/22 09:59:49 dberkholz Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime alternatives multilib python
 
@@ -15,7 +15,6 @@ KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="aalib altivec debug doc gtkhtml gimpprint hardened jpeg lcms mmx mng png
 python smp sse svg tiff wmf"
 
-#	X? ( virtual/x11 )"
 RDEPEND=">=dev-libs/glib-2.4.5
 	>=x11-libs/gtk+-2.4.4
 	>=x11-libs/pango-1.4

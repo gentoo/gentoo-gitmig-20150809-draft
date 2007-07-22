@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gifsicle
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.16 2007/06/03 15:42:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.17 2007/07/22 10:00:40 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; gifsicle-1.44.ebuild:
+  Drop virtual/x11 references.
 
   03 Jun 2007; Raúl Porcel <armin76@gentoo.org> gifsicle-1.44.ebuild:
   Add ~alpha wrt #173108

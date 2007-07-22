@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42a-r1.ebuild,v 1.12 2007/07/12 04:08:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42a-r1.ebuild,v 1.13 2007/07/22 10:04:27 dberkholz Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -35,7 +35,7 @@ RDEPEND="
 	virtual/opengl"
 
 DEPEND="dev-util/scons
-	|| ( x11-libs/libXt virtual/x11 )
+	x11-libs/libXt
 	${RDEPEND}"
 
 blend_with() {

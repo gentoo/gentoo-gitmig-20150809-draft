@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r2.ebuild,v 1.13 2007/07/12 04:08:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r2.ebuild,v 1.14 2007/07/22 09:48:04 dberkholz Exp $
 
 inherit alternatives eutils
 
@@ -14,18 +14,15 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 sparc x86"
 IUSE=""
 
-RDEPEND="|| ( x11-libs/libXext virtual/x11 )
+RDEPEND="x11-libs/libXext
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.0.5
 	>=media-libs/jpeg-6b-r2
 	app-arch/bzip2"
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xextproto
-			x11-misc/imake
-			app-text/rman
-		)
-		virtual/x11
-	)"
+	x11-proto/xextproto
+	x11-misc/imake
+	app-text/rman"
 
 S=${WORKDIR}/${PN}-${SNAPSHOT}
 

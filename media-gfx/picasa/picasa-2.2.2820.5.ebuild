@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.2.2820.5.ebuild,v 1.7 2007/01/19 15:31:46 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.2.2820.5.ebuild,v 1.8 2007/07/22 09:46:19 dberkholz Exp $
 
 inherit eutils versionator
 
@@ -26,17 +26,12 @@ RDEPEND="dev-libs/atk
 	dev-libs/libxml2
 	sys-libs/zlib
 	x11-libs/gtk+
-	|| (
-		(
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libX11
-			x11-libs/libXext
-			x11-libs/libXi
-			x11-libs/libXt
-		)
-		virtual/x11
-	)
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXi
+	x11-libs/libXt
 	x11-libs/pango"
 S=${WORKDIR}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r12.ebuild,v 1.16 2007/06/02 18:28:26 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r12.ebuild,v 1.17 2007/07/22 09:47:08 dberkholz Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc-macos ppc64 sparc x86 ~x86-fbsd"
 IUSE="jpeg tiff png"
 
-DEPEND="|| ( x11-libs/libXt virtual/x11 )
+DEPEND="x11-libs/libXt
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.6.1-r2 )
 	png? ( >=media-libs/libpng-1.2 >=sys-libs/zlib-1.1.4 )"

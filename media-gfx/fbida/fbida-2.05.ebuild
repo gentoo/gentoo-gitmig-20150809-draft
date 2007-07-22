@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.05.ebuild,v 1.14 2007/06/25 18:41:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.05.ebuild,v 1.15 2007/07/22 09:54:09 dberkholz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,9 +20,11 @@ RDEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( media-libs/tiff )
 	curl? ( net-misc/curl )
 	lirc? ( app-misc/lirc )
-	X? ( || ( ( x11-libs/libX11 x11-libs/libXt x11-libs/libXpm )
-			virtual/x11 )
-		virtual/motif )
+	X? ( x11-libs/libX11
+		x11-libs/libXt
+		x11-libs/libXpm
+		virtual/motif
+	)
 	!media-gfx/fbi
 	media-libs/libexif
 	>=media-libs/freetype-2.0
@@ -30,8 +32,7 @@ RDEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	media-fonts/ttf-bitstream-vera"
 
 DEPEND="${RDEPEND}
-	X? ( || ( ( x11-proto/xextproto x11-proto/xproto )
-			virtual/x11 ) )"
+	X? ( x11-proto/xextproto x11-proto/xproto )"
 
 src_unpack() {
 	unpack ${A}

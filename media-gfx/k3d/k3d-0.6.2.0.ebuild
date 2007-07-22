@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.6.2.0.ebuild,v 1.3 2007/01/04 23:07:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.6.2.0.ebuild,v 1.4 2007/07/22 09:55:45 dberkholz Exp $
 
 inherit eutils
 
@@ -36,19 +36,13 @@ DEPEND="virtual/opengl
 	gnome-base/librsvg"
 
 RDEPEND="${DEPEND}
-	( || (
-	( x11-libs/libXmu
+	x11-libs/libXmu
 	x11-libs/libXt
 	x11-libs/libICE
-	x11-libs/libSM )
-	virtual/x11 )
-	)"
+	x11-libs/libSM"
 
 DEPEND="${DEPEND}
-	( || (
-	( media-libs/mesa )
-	virtual/x11 )
-	)"
+	media-libs/mesa"
 
 src_unpack() {
 	unpack ${A}
