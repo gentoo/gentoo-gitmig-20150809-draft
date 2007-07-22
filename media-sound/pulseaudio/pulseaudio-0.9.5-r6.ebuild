@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.5-r6.ebuild,v 1.9 2007/06/24 22:02:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.5-r6.ebuild,v 1.10 2007/07/22 08:41:31 drac Exp $
 
 inherit eutils libtool # autotools
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="alsa avahi caps jack lirc oss tcpd X hal"
 
-RDEPEND="X? ( || ( x11-libs/libX11 <virtual/x11-7 ) )
+RDEPEND="X? ( x11-libs/libX11 )
 	caps? ( sys-libs/libcap )
 	>=media-libs/audiofile-0.2.6-r1
 	>=media-libs/libsamplerate-0.1.1-r1
