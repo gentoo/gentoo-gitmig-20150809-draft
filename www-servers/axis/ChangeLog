@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/axis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.14 2007/06/02 17:54:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.15 2007/07/22 10:20:40 betelgeuse Exp $
+
+*axis-1.2_rc2-r3 (22 Jul 2007)
+
+  22 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +axis-1.2_rc2-r3.ebuild:
+  Use slot 3 of commons-httpclient.
 
 *axis-1.2_rc2-r2 (02 Jun 2007)
 
