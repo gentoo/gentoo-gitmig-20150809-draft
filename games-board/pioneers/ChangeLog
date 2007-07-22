@@ -1,6 +1,12 @@
 # ChangeLog for games-board/pioneers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.10 2007/03/12 13:50:22 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.11 2007/07/22 22:19:45 mr_bones_ Exp $
+
+*pioneers-0.11.1 (22 Jul 2007)
+
+  22 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +pioneers-0.11.1.ebuild:
+  version bump
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> pioneers-0.9.33.ebuild:
   Replacing einfo with elog
