@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r5.ebuild,v 1.4 2007/05/07 15:52:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r5.ebuild,v 1.5 2007/07/22 09:18:27 graaff Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit base eutils java-vm-2 flag-o-matic
@@ -11,8 +11,8 @@ HOMEPAGE="http://www.kaffe.org/"
 
 #robilad recommended in bug 103978 that we leave the X and QT
 #awt backends disabled for now. Please check the status of these
-#backends with new upstream versions.
-#	X?( virtual/x11 )
+#backends with new upstream versions. X dependencies to be
+#determined
 #	qt?( =x11-libs/qt-3.3* )
 
 COMMON_DEP="

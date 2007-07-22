@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.92.ebuild,v 1.2 2007/01/05 23:29:06 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.92.ebuild,v 1.3 2007/07/22 09:23:16 graaff Exp $
 
 inherit eutils multilib
 
@@ -22,27 +22,19 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 		dssi? ( >=media-libs/dssi-0.9 )
 		gtk? ( >=x11-libs/gtk+-2.4
 				>=dev-libs/glib-2.0
-				|| ( (
-					   x11-libs/libICE
-					   x11-libs/libSM
-					   x11-libs/libX11
-					   x11-libs/libXtst
-					 )
-				     virtual/x11
-				   )
+				x11-libs/libICE
+				x11-libs/libSM
+				x11-libs/libX11
+				x11-libs/libXtst
 				cairo? ( >=x11-libs/cairo-0.5.0 )
 		     )
 		xml? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )"
 
 DEPEND="app-arch/zip
 		dev-java/jikes
-		gtk? ( || ( (
-					  x11-libs/libXrender
-					  x11-proto/xextproto
-					  x11-proto/xproto
-					)
-					virtual/x11
-				  )
+		gtk? ( x11-libs/libXrender
+			x11-proto/xextproto
+			x11-proto/xproto
 			 )
 		${REPEND}"
 
