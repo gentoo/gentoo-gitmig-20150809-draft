@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.21 2007/04/30 23:18:43 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.22 2007/07/22 08:51:51 drac Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -23,19 +23,9 @@ RDEPEND="dv? ( media-libs/libdv )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	vorbis? ( media-libs/libvorbis )
-	ieee1394? (
-		sys-libs/libavc1394
-		sys-libs/libraw1394
-	)
-	X? ( || ( ( x11-libs/libXaw
-				x11-libs/libXv
-				x11-proto/xextproto
-			)
-			virtual/x11
-		)
-	)
+	ieee1394? (	sys-libs/libavc1394	sys-libs/libraw1394	)
+	X? ( x11-libs/libXaw x11-libs/libXv x11-proto/xextproto )
 	!virtual/quicktime"
-
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4.0.5
 	dev-util/pkgconfig"
@@ -50,13 +40,11 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
 	sed -i -e "s:\(have_libavcodec=\)true:\1false:g" configure.ac
-	epatch "${FILESDIR}/${P}-dv.patch"
-	epatch "${FILESDIR}/${P}-unrice.patch"
-
-	cp ${WORKDIR}/m4/* m4/
+	epatch "${FILESDIR}"/${P}-dv.patch
+	epatch "${FILESDIR}"/${P}-unrice.patch
+	cp "${WORKDIR}"/m4/* m4/
 	AT_M4DIR="m4" eautoreconf
 	elibtoolize
 }
@@ -68,13 +56,12 @@ src_compile() {
 		$(use_enable ieee1394 firewire) \
 		$(use_with dv libdv) \
 		$(use_with X x) \
-		--without-cpuflags || die "econf failed"
-
-	emake || die "emake failed"
+		--without-cpuflags || die "econf failed."
+	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed."
 
 	# Compatibility with software that uses quicktime prefix, but
 	# don't do that when building for Darwin/MacOS

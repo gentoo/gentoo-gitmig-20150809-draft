@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.15 2007/01/05 17:16:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.16 2007/07/22 08:45:50 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,23 +13,18 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="|| (
-		(
-			x11-libs/libXt
-			x11-libs/libXau
-			x11-libs/libXaw
-			x11-libs/libX11
-			x11-libs/libXres
-			x11-libs/libXTrap
-			x11-libs/libXp
-		)
-		virtual/x11
-	)"
+RDEPEND="x11-libs/libXt
+	x11-libs/libXau
+	x11-libs/libXaw
+	x11-libs/libX11
+	x11-libs/libXres
+	x11-libs/libXTrap
+	x11-libs/libXp"
 DEPEND="${RDEPEND}
-	|| (
-		( x11-misc/gccmakedep x11-misc/imake app-text/rman x11-proto/xproto )
-		virtual/x11
-	)"
+	x11-misc/gccmakedep
+	x11-misc/imake
+	app-text/rman
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${A}
