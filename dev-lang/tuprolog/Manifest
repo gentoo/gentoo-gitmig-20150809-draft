@@ -30,10 +30,10 @@ AUX tuprolog-2.1-java1.4.patch 6318 RMD160 621aec83d6f77585f15d4d0109b085c380d6e
 MD5 1381d768e0dd2b7b51681adec3f5abd3 files/tuprolog-2.1-java1.4.patch 6318
 RMD160 621aec83d6f77585f15d4d0109b085c380d6e001 files/tuprolog-2.1-java1.4.patch 6318
 SHA256 35bb62c71b645289242b2bb610879a455f408eddb8f65b6ead7ac71ebdfe12bc files/tuprolog-2.1-java1.4.patch 6318
-AUX tuprolog-2.1-javadocs.patch 6596 RMD160 c59275b89c2f83d53a4fdc471c1b56f9b2c7fd49 SHA1 17f8efaeab59960a066478082c196d4d2fce345e SHA256 e8008da1afbd766c8aa1fa93ff64a26b8a745e57863762c3bbeae2b825e14d0a
-MD5 f403a8a1067cc04c21bd68b84e54d579 files/tuprolog-2.1-javadocs.patch 6596
-RMD160 c59275b89c2f83d53a4fdc471c1b56f9b2c7fd49 files/tuprolog-2.1-javadocs.patch 6596
-SHA256 e8008da1afbd766c8aa1fa93ff64a26b8a745e57863762c3bbeae2b825e14d0a files/tuprolog-2.1-javadocs.patch 6596
+AUX tuprolog-2.1-javadocs.patch 6573 RMD160 0cc1f044ada95113ae638a9cd48c920fa3903a31 SHA1 64206767a27e7fceea9b04f9e65d2846bcd56b9d SHA256 12bc23f7f9300cc6e6d3ca0d3ebac163acec01bc490ad08135127bcded883bef
+MD5 2ccf5407cc838b9190d9b41bd1ad06e2 files/tuprolog-2.1-javadocs.patch 6573
+RMD160 0cc1f044ada95113ae638a9cd48c920fa3903a31 files/tuprolog-2.1-javadocs.patch 6573
+SHA256 12bc23f7f9300cc6e6d3ca0d3ebac163acec01bc490ad08135127bcded883bef files/tuprolog-2.1-javadocs.patch 6573
 AUX tuprolog-2.1-junit.patch 608 RMD160 326fbd3d38a614426d68915d5896896884c7cc2b SHA1 52462a9b873b8711985c33780cedac5555754315 SHA256 29108796895b234c9995ceff291618984a7f7de787a08bc2bc72578c9e732930
 MD5 da82234c76304d2082abc4fef2e3738b files/tuprolog-2.1-junit.patch 608
 RMD160 326fbd3d38a614426d68915d5896896884c7cc2b files/tuprolog-2.1-junit.patch 608
