@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/zsnes
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.34 2007/06/25 21:38:06 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.35 2007/07/22 22:20:21 drizzt Exp $
+
+  22 Jul 2007; Timothy Redaelli <drizzt@gentoo.org>
+  +files/zsnes-1.51-archopt-july-23-update.patch, zsnes-1.51-r1.ebuild:
+  Add patch for latest version of archopt as of July 23. For properly handling
+  if cpu is already set in the main GCC detection if/else. This will fix bug
+  #186111, thanks to Nils Kneuper for reporting and Nach for fixing.
 
 *zsnes-1.51-r1 (25 Jun 2007)
 

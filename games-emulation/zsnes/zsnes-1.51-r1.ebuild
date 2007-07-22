@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r1.ebuild,v 1.1 2007/06/25 21:38:06 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r1.ebuild,v 1.2 2007/07/22 22:20:21 drizzt Exp $
 
 inherit eutils autotools flag-o-matic toolchain-funcs games
 
@@ -31,6 +31,8 @@ src_unpack() {
 
 	# Fixing compilation without libpng installed
 	epatch "${FILESDIR}"/${P}-libpng.patch
+	# Fix bug #186111
+	epatch "${FILESDIR}"/${P}-archopt-july-23-update.patch
 
 	# Remove hardcoded CFLAGS and LDFLAGS
 	if use custom-cflags; then
