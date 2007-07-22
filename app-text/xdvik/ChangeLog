@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xdvik
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.38 2007/04/22 10:55:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.39 2007/07/22 10:24:39 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> xdvik-22.40y-r2.ebuild,
+  xdvik-22.84.5.ebuild:
+  Drop virtual/x11 dependency.
 
   22 Apr 2007; Markus Rothe <corsair@gentoo.org> xdvik-22.84.10.ebuild:
   Stable on ppc64

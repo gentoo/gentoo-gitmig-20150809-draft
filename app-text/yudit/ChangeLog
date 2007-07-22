@@ -1,6 +1,10 @@
 # ChangeLog for app-text/yudit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.21 2007/01/06 01:09:53 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.22 2007/07/22 10:20:20 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> yudit-2.8.1_beta7.ebuild,
+  yudit-2.8.1.ebuild:
+  Drop virtual/x11 dependency.
 
   06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -yudit-2.7.6.ebuild,
   -yudit-2.7.8.ebuild:

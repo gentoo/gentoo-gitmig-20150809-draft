@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2005.ebuild,v 1.4 2007/01/28 06:10:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2005.ebuild,v 1.5 2007/07/22 10:27:06 calchan Exp $
 
 inherit eutils flag-o-matic toolchain-funcs versionator virtualx
 
@@ -37,18 +37,13 @@ BLOCKS="!dev-tex/memoir
 	!dev-tex/eurosym
 	!dev-tex/extsizes"
 
-MODULAR_X_DEPEND="X? ( || ( (
-				x11-libs/libXmu
-				x11-libs/libXp
-				x11-libs/libXpm
-				x11-libs/libICE
-				x11-libs/libSM
-				x11-libs/libXaw
-				x11-libs/libXfont
-			)
-			virtual/x11
-		)
-	)"
+MODULAR_X_DEPEND="X? ( x11-libs/libXmu
+			x11-libs/libXp
+			x11-libs/libXpm
+			x11-libs/libICE
+			x11-libs/libSM
+			x11-libs/libXaw
+			x11-libs/libXfont )"
 
 DEPEND="${MODULAR_X_DEPEND}
 	!app-text/ptex
