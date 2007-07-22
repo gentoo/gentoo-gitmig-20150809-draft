@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.66 2007/07/22 09:43:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.67 2007/07/22 12:10:02 nyhm Exp $
+
+*allegro-4.2.2 (22 Jul 2007)
+
+  22 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/allegro-4.2.2-exec-stack.patch, +files/allegro-4.2.2-flags.patch,
+  +allegro-4.2.2.ebuild:
+  Version bump
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   allegro-4.1.14.ebuild, allegro-4.2.0-r1.ebuild:
