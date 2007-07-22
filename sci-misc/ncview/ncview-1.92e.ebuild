@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-1.92e.ebuild,v 1.1 2006/01/18 08:27:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-1.92e.ebuild,v 1.2 2007/07/22 06:56:34 dberkholz Exp $
 
 DESCRIPTION="X-based viewer for netCDF files"
 SRC_URI="ftp://cirrus.ucsd.edu/pub/ncview/${P}.tar.gz"
@@ -12,7 +12,7 @@ IUSE=""
 KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND="sci-libs/netcdf
-	|| ( x11-libs/libXaw virtual/x11 )"
+	x11-libs/libXaw"
 
 src_compile() {
 	econf || die "./configure failed"

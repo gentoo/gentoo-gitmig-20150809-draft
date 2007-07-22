@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r3.ebuild,v 1.7 2007/05/19 07:49:23 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r3.ebuild,v 1.8 2007/07/22 06:55:39 dberkholz Exp $
 
 inherit eutils wxwidgets
 
@@ -27,11 +27,10 @@ RDEPEND="sys-libs/zlib
 DEPEND=">=sys-devel/gcc-3.0.4
 	>=sys-devel/autoconf-2.59
 	>=sys-devel/automake-1.9.3
-	X? (	|| ( ( x11-libs/libXmu
-				x11-libs/libXt
-				x11-libs/libX11
-				x11-proto/xproto )
-			virtual/x11 )
+	X? ( x11-libs/libXmu
+		x11-libs/libXt
+		x11-libs/libX11
+		x11-proto/xproto
 		virtual/glut
 		virtual/glu
 		media-libs/jpeg )

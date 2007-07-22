@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-1.93b.ebuild,v 1.2 2007/05/04 14:48:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-1.93b.ebuild,v 1.3 2007/07/22 06:56:34 dberkholz Exp $
 
 inherit multilib
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND="sci-libs/netcdf
 	media-libs/netpbm
-	|| ( x11-libs/libXaw virtual/x11 )
+	x11-libs/libXaw
 	udunits? ( sci-libs/udunits )"
 
 src_compile() {

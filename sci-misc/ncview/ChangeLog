@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/ncview
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ChangeLog,v 1.8 2007/05/04 14:48:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ChangeLog,v 1.9 2007/07/22 06:56:34 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; ncview-1.92e.ebuild,
+  ncview-1.93b.ebuild:
+  Drop virtual/x11 references.
 
   04 May 2007; Sébastien Fabbro <bicatali@gentoo.org> ncview-1.93b.ebuild:
   fixed sandbox violation when root installs it (bug #176949)
