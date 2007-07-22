@@ -1,6 +1,9 @@
 # ChangeLog for app-office/magicpoint
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.23 2007/06/30 08:31:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.24 2007/07/22 09:58:40 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> magicpoint-1.11b.ebuild:
+  Drop virtual/x11 dependency.
 
   30 Jun 2007; Ulrich Mueller <ulm@gentoo.org> magicpoint-1.11b.ebuild:
   Fix conditional for calling elisp-site-regen, bug #182639.

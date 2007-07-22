@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.14 2007/06/30 08:31:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.15 2007/07/22 09:58:40 calchan Exp $
 
 inherit elisp-common eutils fixheadtails
 
@@ -14,13 +14,10 @@ SLOT="0"
 KEYWORDS="x86 alpha sparc ppc amd64"
 IUSE="cjk nls m17n-lib emacs truetype gif imlib mng"
 
-MY_DEPEND="|| ( ( x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libXrender
-			x11-libs/libXmu
-		)
-		virtual/x11
-	)
+MY_DEPEND="x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libXrender
+	x11-libs/libXmu
 	gif? ( >=media-libs/giflib-4.0.1 )
 	imlib? ( media-libs/imlib )
 	truetype? ( virtual/xft )
@@ -29,13 +26,10 @@ MY_DEPEND="|| ( ( x11-libs/libICE
 	mng? ( media-libs/libmng )"
 DEPEND="${MY_DEPEND}
 	sys-devel/autoconf
-	|| ( ( x11-proto/xextproto
-			x11-libs/libxkbfile
-			app-text/rman
-			x11-misc/imake
-		)
-		virtual/x11
-	)"
+	x11-proto/xextproto
+	x11-libs/libxkbfile
+	app-text/rman
+	x11-misc/imake"
 RDEPEND="${MY_DEPEND}
 	nls? ( sys-devel/gettext )
 	truetype? ( cjk? ( media-fonts/sazanami ) )"

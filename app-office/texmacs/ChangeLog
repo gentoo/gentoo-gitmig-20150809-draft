@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.56 2007/03/12 23:41:55 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.57 2007/07/22 10:02:33 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> texmacs-1.0.4-r1.ebuild,
+  texmacs-1.0.5.6.ebuild, texmacs-1.0.6-r1.ebuild:
+  Drop virtual/x11 dependency.
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
