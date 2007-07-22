@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.5.ebuild,v 1.10 2007/07/11 01:08:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.5.ebuild,v 1.11 2007/07/22 10:32:29 omp Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -15,10 +15,8 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"
 
 RDEPEND="${RDEPEND}
-	|| ( (
-			|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
-			x11-apps/setxkbmap
-		) <virtual/x11-7 )"
+	|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
+	x11-apps/setxkbmap"
 
 KMEXTRACTONLY="${KMEXTRACTONLY}
 	kdm/configure.in.in"

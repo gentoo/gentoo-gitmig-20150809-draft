@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.5-r2.ebuild,v 1.15 2007/07/07 23:52:59 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.5-r2.ebuild,v 1.16 2007/07/22 10:36:52 omp Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -26,17 +26,15 @@ BOTH_DEPEND="dev-libs/libxslt
 	net-dns/libidn
 	>=dev-libs/glib-2
 	app-crypt/qca
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXrender
 	sametime? ( =net-libs/meanwhile-1.0* )
 	jingle? (
 		>=media-libs/speex-1.1.6
 		dev-libs/expat
 		~net-libs/ortp-0.7.1 )
-	|| ( (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXrender
-		xscreensaver? ( x11-libs/libXScrnSaver )
-		) <virtual/x11-7 )
+	xscreensaver? ( x11-libs/libXScrnSaver )
 	kernel_linux? ( virtual/opengl )
 	sms? ( app-mobilephone/gsmlib )"
 
@@ -52,11 +50,9 @@ RDEPEND="${BOTH_DEPEND}
 
 DEPEND="${BOTH_DEPEND}
 	kernel_linux? ( virtual/os-headers )
-	|| ( (
-			x11-proto/videoproto
-			kernel_linux? ( x11-libs/libXv )
-			xscreensaver? ( x11-proto/scrnsaverproto )
-		) <virtual/x11-7 )"
+	x11-proto/videoproto
+	kernel_linux? ( x11-libs/libXv )
+	xscreensaver? ( x11-proto/scrnsaverproto )"
 
 pkg_setup() {
 	if use kernel_linux && ! built_with_use =x11-libs/qt-3* opengl; then

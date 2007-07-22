@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.92 2007/05/23 10:30:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.93 2007/07/22 10:47:47 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> kdesktop-3.5.5.ebuild,
+  kdesktop-3.5.5-r1.ebuild, kdesktop-3.5.6.ebuild, kdesktop-3.5.6-r1.ebuild:
+  Remove virtual/x11 from dependencies.
 
   23 May 2007; Carsten Lohrke <carlo@gentoo.org> kdesktop-3.5.7.ebuild:
   Correct dependencies.

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.115 2007/07/07 23:52:59 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.116 2007/07/22 10:36:52 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> kopete-3.5.5-r2.ebuild:
+  Remove virtual/x11 from dependencies.
 
   07 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +files/kopete-3.5.5-enable-final-redefines.patch,

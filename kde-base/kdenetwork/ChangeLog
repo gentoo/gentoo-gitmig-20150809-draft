@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.265 2007/07/08 10:27:19 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.266 2007/07/22 10:50:48 omp Exp $
+
+  22 Jul 2007; David Shakaryan <omp@gentoo.org> kdenetwork-3.5.5-r1.ebuild,
+  kdenetwork-3.5.5-r2.ebuild:
+  Remove virtual/x11 from dependencies.
 
   08 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +files/kopete-3.5.5-enable-final-redefines.patch,
