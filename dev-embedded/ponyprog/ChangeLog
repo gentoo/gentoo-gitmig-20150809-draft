@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/ponyprog
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.10 2007/05/19 12:51:06 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.11 2007/07/22 07:49:25 calchan Exp $
+
+  22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> ponyprog-2.06c.ebuild:
+  Removed virtual/x11 (obsolete) and sys-libs/glibc (implicit) dependencies.
 
 *ponyprog-2.07a (19 May 2007)
 
