@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.7 2007/07/13 05:48:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.8 2007/07/22 07:25:12 dberkholz Exp $
 
 inherit toolchain-funcs fortran
 
@@ -20,7 +20,7 @@ RDEPEND="media-libs/jpeg
 	media-libs/tiff"
 
 DEPEND="${RDEPEND}
-	   || ( x11-misc/imake virtual/x11 )"
+	x11-misc/imake"
 
 S="${WORKDIR}/${NAME}_${PV}"
 

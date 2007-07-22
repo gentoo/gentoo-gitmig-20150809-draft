@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2.ebuild,v 1.10 2007/04/07 04:59:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2.ebuild,v 1.11 2007/07/22 07:23:24 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 DEPEND="virtual/motif
-	|| ( x11-libs/libXpm virtual/x11 )
+	x11-libs/libXpm
 	media-libs/mesa
 	media-libs/jpeg
 	media-libs/tiff

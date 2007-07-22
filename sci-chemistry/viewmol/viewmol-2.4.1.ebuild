@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1.ebuild,v 1.2 2005/12/02 19:49:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1.ebuild,v 1.3 2007/07/22 07:23:58 dberkholz Exp $
 
 inherit toolchain-funcs eutils
 
@@ -16,21 +16,13 @@ RDEPEND="media-libs/tiff
 	virtual/motif
 	media-libs/libpng
 	>=dev-lang/python-2.2
-	|| ( (
-			x11-libs/libXmu
-			x11-libs/libXaw
-			x11-libs/libXp
-			x11-libs/libXi
-		)
-		virtual/x11
-	)"
+	x11-libs/libXmu
+	x11-libs/libXaw
+	x11-libs/libXp
+	x11-libs/libXi"
 DEPEND="${RDEPEND}
-	|| ( (
-			x11-proto/inputproto
-			x11-proto/xproto
-		)
-		virtual/x11
-	)"
+	x11-proto/inputproto
+	x11-proto/xproto"
 
 S="${WORKDIR}/${P}/source"
 

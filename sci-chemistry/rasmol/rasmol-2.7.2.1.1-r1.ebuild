@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.2.1.1-r1.ebuild,v 1.5 2007/07/13 05:48:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.2.1.1-r1.ebuild,v 1.6 2007/07/22 07:26:04 dberkholz Exp $
 
 inherit toolchain-funcs
 
@@ -15,20 +15,14 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-RDEPEND="|| ( ( x11-libs/libXext
-			x11-libs/libXi
-			|| ( x11-apps/xdpyinfo x11-apps/xwininfo )
-		)
-		virtual/x11
-	)"
+RDEPEND="x11-libs/libXext
+	x11-libs/libXi
+	|| ( x11-apps/xdpyinfo x11-apps/xwininfo )"
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/inputproto
-			x11-proto/xextproto
-			app-text/rman
-			x11-misc/imake
-		)
-		virtual/x11
-	)"
+	x11-proto/inputproto
+	x11-proto/xextproto
+	app-text/rman
+	x11-misc/imake"
 
 S="${WORKDIR}/${MY_P}"
 

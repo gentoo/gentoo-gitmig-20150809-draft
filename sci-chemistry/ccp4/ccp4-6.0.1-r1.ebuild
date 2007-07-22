@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.1-r1.ebuild,v 1.6 2007/07/02 03:02:23 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.1-r1.ebuild,v 1.7 2007/07/22 07:18:45 dberkholz Exp $
 
 inherit fortran eutils gnuconfig toolchain-funcs
 
@@ -52,14 +52,9 @@ IUSE="X"
 # as do many scripts. app-office/sc can't rename its because that's the name
 # of the package.
 RDEPEND="X? (
-			|| (
-				(
-					x11-libs/libX11
-					x11-libs/libXt
-					x11-libs/libXaw
-				)
-				virtual/x11
-			)
+			x11-libs/libX11
+			x11-libs/libXt
+			x11-libs/libXaw
 		)
 		>=dev-lang/tcl-8.3
 		>=dev-lang/tk-8.3
@@ -74,14 +69,9 @@ RDEPEND="X? (
 		!app-office/sc"
 DEPEND="${RDEPEND}
 		X? (
-			|| (
-				(
-					x11-misc/imake
-					x11-proto/inputproto
-					x11-proto/xextproto
-				)
-				virtual/x11
-			)
+			x11-misc/imake
+			x11-proto/inputproto
+			x11-proto/xextproto
 		)"
 
 S="${WORKDIR}/${PN}-${PV}"

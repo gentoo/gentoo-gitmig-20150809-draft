@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gopenmol/gopenmol-3.00-r1.ebuild,v 1.1 2006/02/21 16:58:18 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gopenmol/gopenmol-3.00-r1.ebuild,v 1.2 2007/07/22 07:22:46 dberkholz Exp $
 
 inherit eutils
 
@@ -19,16 +19,12 @@ RDEPEND="=dev-lang/tcl-8.4*
 	virtual/glut
 	media-libs/jpeg
 	dev-lang/python
-	|| ( (
-			x11-libs/libXmu
-			x11-libs/libICE
-			x11-libs/libXau
-			x11-libs/libXdmcp
-			x11-libs/libXi
-			x11-libs/libXxf86vm
-		)
-		virtual/x11
-	)"
+	x11-libs/libXmu
+	x11-libs/libICE
+	x11-libs/libXau
+	x11-libs/libXdmcp
+	x11-libs/libXi
+	x11-libs/libXxf86vm"
 
 DEPEND="${RDEPEND}"
 

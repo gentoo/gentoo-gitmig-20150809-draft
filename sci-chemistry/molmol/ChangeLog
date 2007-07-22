@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/molmol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.14 2007/04/07 04:57:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.15 2007/07/22 07:23:24 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; molmol-2k_p2.ebuild:
+  Drop virtual/x11 references.
 
   07 Apr 2007; Mike Frysinger <vapier@gentoo.org> molmol-2k_p2.ebuild:
   Replace references to *DESTTREE vars with proper calls to the *into functions.

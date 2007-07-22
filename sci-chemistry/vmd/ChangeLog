@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.15 2007/04/16 12:47:57 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.16 2007/07/22 07:20:11 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; vmd-1.8.5.ebuild,
+  vmd-1.8.6.ebuild:
+  Drop virtual/x11 references.
 
 *vmd-1.8.6 (15 Apr 2007)
 

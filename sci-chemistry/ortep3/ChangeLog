@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/ortep3
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ortep3/ChangeLog,v 1.5 2007/02/22 01:28:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ortep3/ChangeLog,v 1.6 2007/07/22 07:20:46 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; ortep3-1.0.3.ebuild:
+  Drop virtual/x11 references.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

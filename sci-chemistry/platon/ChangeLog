@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/platon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.10 2007/04/26 01:44:07 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.11 2007/07/22 07:21:34 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  platon-20060717.ebuild, platon-20070425.ebuild:
+  Drop virtual/x11 references.
 
 *platon-20070425 (26 Apr 2007)
 

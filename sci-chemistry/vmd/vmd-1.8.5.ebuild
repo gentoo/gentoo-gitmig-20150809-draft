@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.8 2007/07/13 05:48:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.5.ebuild,v 1.9 2007/07/22 07:20:11 dberkholz Exp $
 
 inherit eutils toolchain-funcs python
 
@@ -16,7 +16,7 @@ IUSE="hardened"
 RESTRICT="fetch"
 
 DEPEND="app-shells/tcsh
-	|| ( x11-libs/libXft virtual/x11 )
+	x11-libs/libXft
 	virtual/opengl
 	x11-libs/fltk
 	=dev-lang/tcl-8.4*

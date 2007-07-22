@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20060717.ebuild,v 1.2 2007/04/26 01:44:07 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20060717.ebuild,v 1.3 2007/07/22 07:21:34 dberkholz Exp $
 
 inherit fortran toolchain-funcs
 
@@ -15,7 +15,7 @@ KEYWORDS="~ppc ~x86"
 IUSE=""
 # Can't do libf2c dependent on whether <gcc-4 is selected for the build,
 # so we must always require it
-RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
+RDEPEND="x11-libs/libX11
 	dev-libs/libf2c"
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}"

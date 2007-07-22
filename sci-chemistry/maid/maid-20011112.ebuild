@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maid/maid-20011112.ebuild,v 1.6 2006/07/09 07:09:20 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maid/maid-20011112.ebuild,v 1.7 2007/07/22 07:22:12 dberkholz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ IUSE="X"
 DEPEND="X? ( virtual/motif
 		virtual/glu
 		virtual/opengl
-		|| ( x11-libs/libXt virtual/x11 )
+		x11-libs/libXt
 	)"
 S="${WORKDIR}/glmaid_dist"
 
