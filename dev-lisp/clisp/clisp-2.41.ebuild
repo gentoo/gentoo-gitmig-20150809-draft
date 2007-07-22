@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.41.ebuild,v 1.5 2007/07/22 08:12:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.41.ebuild,v 1.6 2007/07/22 10:36:10 grobian Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -50,7 +50,7 @@ src_compile() {
 	local myconf="--with-dynamic-ffi
 		--with-module=wildcard
 		--with-module=rawsock"
-	use ppc-macos || myconf="${myconf} --with-module=bindings/glibc"
+	use elibc_glibc && myconf="${myconf} --with-module=bindings/glibc"
 	use readline || myconf="${myconf} --with-noreadline"
 	if use X; then
 		if use new-clx; then
