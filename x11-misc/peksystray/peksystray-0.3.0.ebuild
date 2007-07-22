@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/peksystray-0.3.0.ebuild,v 1.3 2007/02/03 03:49:32 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/peksystray-0.3.0.ebuild,v 1.4 2007/07/22 03:52:10 omp Exp $
 
 inherit multilib
 
@@ -13,10 +13,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="|| ( (
-		x11-libs/libXt
-		x11-libs/libX11 )
-	virtual/x11 )"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXt"
 DEPEND="${RDEPEND}"
 
 src_compile() {
