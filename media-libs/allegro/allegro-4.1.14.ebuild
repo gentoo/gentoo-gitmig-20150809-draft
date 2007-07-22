@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.14.ebuild,v 1.16 2006/08/27 19:39:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.14.ebuild,v 1.17 2007/07/22 09:43:17 dberkholz Exp $
 
 IUSE="static mmx sse oss alsa esd arts X fbcon svga tetex doc"
 
@@ -18,26 +18,16 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	esd? ( media-sound/esound )
 	arts? ( kde-base/arts )
 	X? (
-		|| (
-			(
-				x11-libs/libXxf86vm
-				x11-libs/libXxf86dga
-			)
-			virtual/x11
-		)
+		x11-libs/libXxf86vm
+		x11-libs/libXxf86dga
 	)
 	svga? ( media-libs/svgalib )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	X? (
-		|| (
-			(
-				x11-proto/xextproto
-				x11-proto/xf86dgaproto
-				x11-proto/xf86vidmodeproto
-			)
-			virtual/x11
-		)
+		x11-proto/xextproto
+		x11-proto/xf86dgaproto
+		x11-proto/xf86vidmodeproto
 	)
 	tetex? ( virtual/tetex )"
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.65 2007/03/01 00:04:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.66 2007/07/22 09:43:17 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  allegro-4.1.14.ebuild, allegro-4.2.0-r1.ebuild:
+  Drop virtual/x11 references.
 
   28 Feb 2007; Tristan Heaven <nyhm@gentoo.org> allegro-4.2.1.ebuild:
   install setup utility, bug #155123

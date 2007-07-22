@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-3.6.14.ebuild,v 1.3 2006/12/30 12:24:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-3.6.14.ebuild,v 1.4 2007/07/22 09:32:14 dberkholz Exp $
 
 inherit libtool eutils
 
@@ -15,24 +15,14 @@ SLOT="3"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND="|| (
-			(
-				x11-libs/libX11
-				x11-libs/libXau
-				x11-libs/libXdmcp
-				x11-libs/libXext
-			)
-			virtual/x11
-	)
+RDEPEND="x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
+	x11-libs/libXext
 	=media-libs/freetype-1*
 	media-libs/t1lib"
 DEPEND="${RDEPEND}
-	|| (
-		(
-			x11-proto/xproto
-		)
-		virtual/x11
-	)
+	x11-proto/xproto
 	virtual/tetex"
 
 S=${WORKDIR}/${MY_P}

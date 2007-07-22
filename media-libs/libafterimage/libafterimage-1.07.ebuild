@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.07.ebuild,v 1.2 2007/07/12 03:10:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.07.ebuild,v 1.3 2007/07/22 09:27:55 dberkholz Exp $
 
 inherit eutils autotools
 
@@ -16,14 +16,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gif jpeg mmx nls png tiff examples"
 
 RDEPEND="media-libs/freetype
-	|| ( (	x11-libs/libICE
-			x11-libs/libSM
-			x11-libs/libXext
-			x11-libs/libXrender
-			x11-libs/libX11
-		  )
-		virtual/x11
-		)
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libXext
+	x11-libs/libXrender
+	x11-libs/libX11
 	png?  ( >=media-libs/libpng-1.2.5 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	gif?  ( >=media-libs/giflib-4.1 )

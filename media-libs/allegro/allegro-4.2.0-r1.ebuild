@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.0-r1.ebuild,v 1.7 2006/08/28 02:09:59 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.0-r1.ebuild,v 1.8 2007/07/22 09:43:17 dberkholz Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,29 +18,23 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
 	X? (
-		|| (
-			( x11-libs/libX11
-			x11-libs/libXcursor
-			x11-libs/libXext
-			x11-libs/libXpm
-			x11-libs/libXxf86dga
-			x11-libs/libXxf86vm )
-			virtual/x11
-		)
+		x11-libs/libX11
+		x11-libs/libXcursor
+		x11-libs/libXext
+		x11-libs/libXpm
+		x11-libs/libXxf86dga
+		x11-libs/libXxf86vm
 	)
 	svga? ( media-libs/svgalib )"
 
 DEPEND="${RDEPEND}
 	tetex? ( virtual/tetex )
 	X? (
-		|| (
-			( x11-libs/libXt
-			x11-proto/xextproto
-			x11-proto/xf86dgaproto
-			x11-proto/xf86vidmodeproto
-			x11-proto/xproto )
-			virtual/x11
-		)
+		x11-libs/libXt
+		x11-proto/xextproto
+		x11-proto/xf86dgaproto
+		x11-proto/xf86vidmodeproto
+		x11-proto/xproto
 	)"
 
 src_compile() {

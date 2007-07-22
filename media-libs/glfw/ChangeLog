@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glfw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/ChangeLog,v 1.6 2007/02/07 19:27:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/ChangeLog,v 1.7 2007/07/22 09:39:56 dberkholz Exp $
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; glfw-2.5.0.ebuild:
+  Drop virtual/x11 references.
 
 *glfw-2.5.0-r1 (07 Feb 2007)
 

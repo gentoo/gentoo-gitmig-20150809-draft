@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.26 2007/04/30 23:33:16 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.27 2007/07/22 09:33:22 dberkholz Exp $
 
 IUSE="X"
 
@@ -22,11 +22,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha amd64 ia64"
 
 DEPEND="media-libs/libpng
-	X? ( || ( ( x11-libs/libXaw
-				x11-proto/xextproto
-			)
-			virtual/x11
-		)
+	X? ( x11-libs/libXaw
+		x11-proto/xextproto
 	)"
 
 # Filter out k6 from the CFLAGS

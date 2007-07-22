@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9-r2.ebuild,v 1.13 2006/10/28 00:38:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9-r2.ebuild,v 1.14 2007/07/22 09:37:01 dberkholz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -19,9 +19,9 @@ IUSE="ncurses slang doc imlib X"
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
 	slang? ( =sys-libs/slang-1.4* )
 	imlib? ( media-libs/imlib2 )
-	X? ( || ( ( x11-libs/libX11
-		x11-libs/libXt )
-	<virtual/x11-7 ) )"
+	X? ( x11-libs/libX11
+		x11-libs/libXt
+	)"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
