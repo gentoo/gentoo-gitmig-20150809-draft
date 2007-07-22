@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.4.3-r2.ebuild,v 1.7 2007/07/22 08:53:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.4.3-r2.ebuild,v 1.8 2007/07/22 10:22:58 grobian Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_compile() {
 	# select the right compile target.  Note there are many platforms
 	# available
 	local mytarget;
-	if use ppc-macos; then
+	if [[ ${CHOST} == *-darwin* ]]; then
 		mytarget="macintosh"
 	else
 		mytarget="linux"

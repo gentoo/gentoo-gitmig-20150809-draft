@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.4.3.ebuild,v 1.5 2007/07/22 08:53:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.4.3.ebuild,v 1.6 2007/07/22 10:22:58 grobian Exp $
 
 MY_PV=${PV//./}
 SRC_URI="http://www.cs.arizona.edu/icon/ftp/packages/unix/icon.v${MY_PV}src.tgz"
@@ -35,11 +35,7 @@ src_compile() {
 	# select the right compile target.  Note there are many platforms
 	# available
 	local mytarget;
-	if use ppc-macos; then
-		mytarget="ppc_macos"
-	else
-		mytarget="linux"
-	fi
+	mytarget="linux"
 
 	if use X; then
 		emake X-Configure name=${mytarget} -j1 || die
