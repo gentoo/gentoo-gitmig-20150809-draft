@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.8.2.ebuild,v 1.7 2007/07/21 00:01:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.8.2.ebuild,v 1.8 2007/07/22 07:33:27 dberkholz Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,7 +22,7 @@ RDEPEND="virtual/opengl
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	|| ( x11-libs/libXt virtual/x11 )"
+	x11-libs/libXt"
 
 src_unpack() {
 	unpack ${A}
