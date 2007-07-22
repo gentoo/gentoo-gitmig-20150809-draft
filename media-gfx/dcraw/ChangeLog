@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.43 2007/07/21 16:18:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.44 2007/07/22 16:24:54 pylon Exp $
+
+  22 Jul 2007; Lars Weiler <pylon@gentoo.org> dcraw-8.73.ebuild:
+  stable ppc, bug #185078
 
   21 Jul 2007; Jeroen Roovers <jer@gentoo.org> dcraw-8.73.ebuild:
   Stable for HPPA (bug #185078).
