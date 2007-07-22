@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.14.3.ebuild,v 1.8 2007/01/30 16:30:27 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.14.3.ebuild,v 1.9 2007/07/22 10:12:07 graaff Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 
@@ -24,13 +24,8 @@ RDEPEND=">=dev-libs/glib-2.6.0
 	 >=x11-libs/libnotify-0.2.2
 	 >=x11-libs/libwnck-2.10.0
 	 >=x11-misc/notification-daemon-0.2.1
-	 || (
-		(
-		    x11-libs/libX11
-		    x11-libs/libXext
-		)
-		virtual/x11
-	    )
+	 x11-libs/libX11
+	 x11-libs/libXext
 	 sys-devel/gettext"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

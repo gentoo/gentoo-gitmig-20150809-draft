@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.144 2007/07/08 23:19:09 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.145 2007/07/22 10:14:55 graaff Exp $
+
+  22 Jul 2007; Hans de Graaff <graaff@gentoo.org> at-spi-1.7.10.ebuild:
+  Drop virtual/x11 references.
 
 *at-spi-1.18.1-r1 (08 Jul 2007)
 

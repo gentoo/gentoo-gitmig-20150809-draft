@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.43 2007/07/22 03:06:31 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.44 2007/07/22 10:10:12 graaff Exp $
+
+  22 Jul 2007; Hans de Graaff <graaff@gentoo.org>
+  gnome-screensaver-2.14.2-r1.ebuild:
+  Drop virtual/x11 references.
 
 *gnome-screensaver-2.18.2-r1 (22 Jul 2007)
 *gnome-screensaver-2.16.3-r1 (22 Jul 2007)

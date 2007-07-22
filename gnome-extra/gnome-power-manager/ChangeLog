@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.54 2007/07/08 05:47:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.55 2007/07/22 10:12:07 graaff Exp $
+
+  22 Jul 2007; Hans de Graaff <graaff@gentoo.org>
+  gnome-power-manager-2.14.3.ebuild:
+  Drop virtual/x11 references.
 
   08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
   gnome-power-manager-2.16.2.ebuild, gnome-power-manager-2.16.3.ebuild:

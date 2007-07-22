@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.14.2-r1.ebuild,v 1.1 2007/07/22 03:06:31 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.14.2-r1.ebuild,v 1.2 2007/07/22 10:10:12 graaff Exp $
 
 inherit eutils gnome2
 
@@ -21,22 +21,17 @@ RDEPEND=">=sys-apps/dbus-0.35.2
 		 >=gnome-base/gnome-menus-2.11.1
 		 >=media-libs/libexif-0.6.12
 		 >=dev-libs/glib-2.7.0
-		 ||	(
-				(
-					x11-libs/libX11
-					x11-libs/libXext
-					x11-libs/libXrandr
-					x11-libs/libXScrnSaver
-					x11-proto/xextproto
-					x11-proto/randrproto
-					x11-proto/scrnsaverproto
-					xinerama?	(
-									x11-libs/libXinerama
-									x11-proto/xineramaproto
-								)
-				)
-				virtual/x11
-			)
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXrandr
+		x11-libs/libXScrnSaver
+		x11-proto/xextproto
+		x11-proto/randrproto
+		x11-proto/scrnsaverproto
+		xinerama?	(
+						x11-libs/libXinerama
+						x11-proto/xineramaproto
+					)
 		 pam? ( sys-libs/pam )
 		 !pam? ( sys-apps/shadow )
 		 sys-devel/gettext"
