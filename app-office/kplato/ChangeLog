@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.48 2007/07/19 13:45:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.49 2007/07/22 22:10:11 jer Exp $
+
+  22 Jul 2007; Jeroen Roovers <jer@gentoo.org> kplato-1.6.2.ebuild:
+  Stable for HPPA (bug #178697).
 
   19 Jul 2007; Raúl Porcel <armin76@gentoo.org> kplato-1.6.2.ebuild:
   alpha/ia64/x86 stable wrt #178697
