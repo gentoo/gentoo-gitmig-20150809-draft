@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.1.ebuild,v 1.14 2007/07/02 15:26:00 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.1.ebuild,v 1.15 2007/07/22 07:13:53 dberkholz Exp $
 
 inherit eutils
 
@@ -43,24 +43,19 @@ RDEPEND=">=sys-devel/make-3.80
 	opengl? ( virtual/opengl )
 	tk? ( >=dev-lang/tk-8.3.4 )
 	motif? ( x11-libs/openmotif )
-	|| (
-		( x11-libs/libXmu
-		x11-libs/libXext
-		x11-libs/libXp
-		x11-libs/libX11
-		x11-libs/libXt
-		x11-libs/libSM
-		x11-libs/libICE
-		x11-libs/libXpm
-		x11-libs/libXaw )
-	virtual/x11
-	)"
+	x11-libs/libXmu
+	x11-libs/libXext
+	x11-libs/libXp
+	x11-libs/libX11
+	x11-libs/libXt
+	x11-libs/libSM
+	x11-libs/libICE
+	x11-libs/libXpm
+	x11-libs/libXaw"
 
 DEPEND="${RDEPEND}
-	|| (
-		( x11-proto/xproto x11-proto/xextproto )
-			virtual/x11
-	)"
+	x11-proto/xproto
+	x11-proto/xextproto"
 
 src_unpack() {
 	unpack ${A}

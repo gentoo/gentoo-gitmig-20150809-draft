@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.11 2007/04/23 20:13:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-5.4.0.ebuild,v 1.12 2007/07/22 07:13:53 dberkholz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -38,8 +38,8 @@ RDEPEND=">=sys-devel/make-3.80
 	tk? ( >=dev-lang/tk-8.3.4 )
 	truetype? ( >=media-libs/freetype-2.0.0 )
 	motif? ( x11-libs/openmotif )
-	X? ( || (
-		( x11-libs/libXmu
+	X? (
+		x11-libs/libXmu
 		x11-libs/libXext
 		x11-libs/libXp
 		x11-libs/libX11
@@ -47,15 +47,13 @@ RDEPEND=">=sys-devel/make-3.80
 		x11-libs/libSM
 		x11-libs/libICE
 		x11-libs/libXpm
-		x11-libs/libXaw )
-	virtual/x11 )
+		x11-libs/libXaw
 	)"
 
 DEPEND="${RDEPEND}
-	X? ( || (
-		( x11-proto/xproto x11-proto/xextproto )
-			virtual/x11
-		)
+	X? (
+		x11-proto/xproto
+		x11-proto/xextproto
 	)"
 
 src_unpack() {

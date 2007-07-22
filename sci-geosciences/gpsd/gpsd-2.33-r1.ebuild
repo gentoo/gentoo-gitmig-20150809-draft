@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.33-r1.ebuild,v 1.2 2006/10/24 00:43:07 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.33-r1.ebuild,v 1.3 2007/07/22 07:10:12 dberkholz Exp $
 
 inherit eutils libtool distutils
 
@@ -14,8 +14,8 @@ KEYWORDS="~arm ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="dbus ntp static tntc usb X"
 
-RDEPEND="X? ( || (
-		( x11-libs/libXmu
+RDEPEND="X? (
+		x11-libs/libXmu
 		x11-libs/libXext
 		x11-libs/libXp
 		x11-libs/libX11
@@ -23,14 +23,8 @@ RDEPEND="X? ( || (
 		x11-libs/libSM
 		x11-libs/libICE
 		x11-libs/libXpm
-		x11-libs/libXaw )
-		|| (
-		    x11-libs/openmotif
-		    x11-libs/lesstif
-		)
-		( virtual/motif
-			virtual/x11 )
-		)
+		x11-libs/libXaw
+		virtual/motif
 	)
 	dev-lang/python
 	app-text/xmlto
@@ -39,10 +33,9 @@ RDEPEND="X? ( || (
 	usb? ( sys-apps/hotplug )"
 
 DEPEND="${RDEPEND}
-	X? ( || (
-	    ( x11-proto/xproto x11-proto/xextproto )
-		virtual/x11
-	    )
+	X? (
+		x11-proto/xproto
+		x11-proto/xextproto
 	)"
 
 RESTRICT="test"
