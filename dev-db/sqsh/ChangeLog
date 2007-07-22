@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqsh
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/ChangeLog,v 1.20 2006/09/22 14:58:14 steev Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/ChangeLog,v 1.21 2007/07/22 10:01:39 graaff Exp $
+
+  22 Jul 2007; Hans de Graaff <graaff@gentoo.org> sqsh-2.1-r1.ebuild,
+  sqsh-2.1.3-r1.ebuild, sqsh-2.1.4.ebuild:
+  Drop virtual/x11 references.
 
 *sqsh-2.1.4 (22 Sep 2006)
 

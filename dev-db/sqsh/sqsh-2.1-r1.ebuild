@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1-r1.ebuild,v 1.14 2007/07/13 06:38:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1-r1.ebuild,v 1.15 2007/07/22 10:01:39 graaff Exp $
 
 inherit eutils
 
@@ -15,13 +15,12 @@ KEYWORDS="x86 amd64"
 
 DEPEND="dev-db/freetds
 	readline? ( sys-libs/readline )
-	X? ( || ( (
+	X? (
 		x11-libs/libXaw
 		x11-libs/libXt
 		x11-libs/libXext
 		x11-libs/libXmu
 		x11-libs/libX11 )
-	virtual/x11 ) )
 	motif? ( x11-libs/openmotif )
 	virtual/libc"
 
