@@ -1,9 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.0.ebuild,v 1.5 2007/07/22 07:44:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.0.ebuild,v 1.6 2007/07/23 14:36:24 drac Exp $
+
+WANT_AUTOMAKE="1.9"
 
 inherit nsplugins kde-functions qt3 multilib flag-o-matic autotools
-set-kdedir
+set-kdedir eutils
 
 DESCRIPTION="Gnash is a GNU Flash movie player that supports many SWF v7 features"
 HOMEPAGE="http://www.gnu.org/software/gnash"
@@ -49,6 +51,9 @@ RDEPEND="
 	agg? ( x11-libs/agg )"
 	#cairo? ( x11-libs/cairo )
 
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
+
 pkg_setup() {
 	if use agg && use kde; then
 		eerror "Building klash with the agg based renderer is not supported"
@@ -75,13 +80,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	#as-needed breaks, see bug 183714
-	#
-	# TODO - does not work for me
-	#epatch ${FILESDIR}/gnash-no-asneeded.patch
-	#filter-ldflags -Wl,--as-needed --as-needed
-	#eautoconf
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-ffmpeg.patch
+	eautoconf
+	eautomake
 }
 
 src_compile() {

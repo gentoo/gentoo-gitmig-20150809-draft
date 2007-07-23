@@ -1,6 +1,11 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.48 2007/07/22 07:44:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.49 2007/07/23 14:36:24 drac Exp $
+
+  23 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/gnash-0.8.0-ffmpeg.patch, gnash-0.8.0.ebuild:
+  Fix building with --as-needed and swscaler enabled ffmpeg-20070616-r1 for
+  bug 183714.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; gnash-0.8.0.ebuild,
   gnash-9999.ebuild:
