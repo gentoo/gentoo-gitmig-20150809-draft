@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbokid/turbokid-1.0.2.ebuild,v 1.1 2007/07/19 05:58:51 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbokid/turbokid-1.0.2.ebuild,v 1.2 2007/07/23 17:42:53 mr_bones_ Exp $
 
 NEED_PYTHON=2.4
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 src_test() {
 	PYTHONPATH=. "${python}" setup.py test || die "tests failed"
 }
-
