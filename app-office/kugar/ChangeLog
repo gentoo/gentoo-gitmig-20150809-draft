@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kugar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/ChangeLog,v 1.74 2007/07/23 12:57:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/ChangeLog,v 1.75 2007/07/23 17:19:37 nixnut Exp $
+
+  23 Jul 2007; nixnut <nixnut@gentoo.org> kugar-1.6.2.ebuild:
+  Stable on ppc wrt bug 178697
 
   23 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> kugar-1.6.2.ebuild:
   Stable on sparc wrt #178697

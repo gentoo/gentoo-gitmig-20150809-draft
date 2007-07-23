@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kivio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.74 2007/07/23 12:51:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.75 2007/07/23 17:00:46 nixnut Exp $
+
+  23 Jul 2007; nixnut <nixnut@gentoo.org> kivio-1.6.2.ebuild:
+  Stable on ppc wrt bug 178697
 
   23 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> kivio-1.6.2.ebuild:
   Stable on sparc wrt #178697
