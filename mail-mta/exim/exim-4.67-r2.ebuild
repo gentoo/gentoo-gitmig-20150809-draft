@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.67-r2.ebuild,v 1.2 2007/07/22 10:28:35 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.67-r2.ebuild,v 1.3 2007/07/23 17:33:22 mr_bones_ Exp $
 
 inherit eutils
 
@@ -233,7 +233,6 @@ src_compile() {
 	make || die "make failed"
 }
 
-
 src_install () {
 	cd ${S}/build-exim-gentoo
 	exeinto /usr/sbin
@@ -301,7 +300,6 @@ src_install () {
 	DIROPTIONS="--mode=0750 --owner=mail --group=mail"
 	dodir /var/log/${PN}
 }
-
 
 pkg_postinst() {
 	einfo "/etc/exim/system_filter.exim is a sample system_filter."
