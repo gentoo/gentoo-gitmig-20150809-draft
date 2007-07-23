@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.62 2007/07/11 20:09:02 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.63 2007/07/23 13:32:05 gustavoz Exp $
+
+  23 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> STLport-5.1.2.ebuild:
+  Stable on sparc
 
   11 Jul 2007; Tiziano Müller <dev-zero@gentoo.org>
   +files/STLport-5.1.2-fix_bashism.patch, STLport-5.1.2.ebuild:
