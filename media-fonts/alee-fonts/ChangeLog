@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/alee-fonts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/alee-fonts/ChangeLog,v 1.23 2007/03/12 19:17:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/alee-fonts/ChangeLog,v 1.24 2007/07/23 23:46:02 dirtyepic Exp $
+
+*alee-fonts-11.4 (23 Jul 2007)
+
+  23 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> +alee-fonts-11.4.ebuild:
+  Version bump, closes bug #163878.
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> alee-fonts-7.1.ebuild:
   x86 stable
