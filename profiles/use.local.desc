@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2939 2007/07/23 11:05:47 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2940 2007/07/23 19:25:59 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -71,7 +71,6 @@ app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-crypt/gnupg:openct - build using dev-libs/openct compatibility
 app-crypt/gnupg:pcsc-lite - build with pcsc-lite
 app-crypt/gringotts:suid - Install the binary suid, acknowledging the usual risks
-app-crypt/johntheripper:ntlm - enables john to crack Windows NT/2000 MD4 (case-sensitive) password hashes
 app-crypt/ophcrack:ophsmall - Makes use of smaller cracking tables
 app-crypt/seahorse:gedit - Enable the gedit plugin
 app-crypt/seahorse:keyring - Enable support for gnome-keyring
