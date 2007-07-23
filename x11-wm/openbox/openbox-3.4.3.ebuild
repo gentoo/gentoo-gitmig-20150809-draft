@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.2-r1.ebuild,v 1.2 2007/07/19 10:54:16 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.3.ebuild,v 1.1 2007/07/23 05:22:04 omp Exp $
 
 DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager."
 HOMEPAGE="http://icculus.org/openbox/"
-SRC_URI="http://icculus.org/${PN}/releases/${P}.tar.gz"
+SRC_URI="http://icculus.org/openbox/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3"
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	x11-libs/libXt
 	>=x11-libs/pango-1.8
 	nls? ( sys-devel/gettext )
-	startup-notification? ( x11-libs/startup-notification )
+	startup-notification? ( >=x11-libs/startup-notification-0.8 )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
