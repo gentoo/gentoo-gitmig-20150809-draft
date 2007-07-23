@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.14.ebuild,v 1.14 2007/07/02 15:14:10 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.14.ebuild,v 1.15 2007/07/23 18:22:30 armin76 Exp $
 
 IUSE="encode vorbis alsa"
 
@@ -11,7 +11,7 @@ RESTRICT="mirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="amd64 ~hppa ~ppc sparc x86"
 
 DEPEND="encode?	( >=media-sound/lame-1.89 )
 	vorbis? ( >=media-libs/libvorbis-1.0 )

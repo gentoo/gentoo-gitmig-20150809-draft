@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/darkice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.39 2007/07/02 15:14:10 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.40 2007/07/23 18:22:30 armin76 Exp $
+
+  23 Jul 2007; Raúl Porcel <armin76@gentoo.org> darkice-0.14.ebuild,
+  darkice-0.15.ebuild, darkice-0.17.ebuild:
+  Drop alpha keyword
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> darkice-0.14.ebuild:
   (QA) RESTRICT clean up.
