@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.82 2007/07/23 12:47:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.83 2007/07/23 16:36:41 nixnut Exp $
+
+  23 Jul 2007; nixnut <nixnut@gentoo.org> koffice-libs-1.6.3.ebuild:
+  Stable on ppc wrt bug 178697
 
   23 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   koffice-libs-1.6.3.ebuild:
