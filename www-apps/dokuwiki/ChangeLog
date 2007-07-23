@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.25 2007/07/22 20:31:53 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.26 2007/07/23 09:00:41 ticho Exp $
+
+  23 Jul 2007; Andrej Kacian <ticho@gentoo.org> dokuwiki-20070626b.ebuild:
+  Stable on x86, security bug #185886.
 
 *dokuwiki-20070626b (22 Jul 2007)
 
