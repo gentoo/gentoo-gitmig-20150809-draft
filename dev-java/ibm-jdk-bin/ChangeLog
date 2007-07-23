@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.123 2007/07/22 22:02:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.124 2007/07/23 07:40:14 opfer Exp $
+
+  23 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  ibm-jdk-bin-1.4.2.9.ebuild:
+  stable x86, security bug 186277
 
 *ibm-jdk-bin-1.4.2.9 (22 Jul 2007)
 
