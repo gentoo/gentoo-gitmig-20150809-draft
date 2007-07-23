@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r8.ebuild,v 1.9 2007/06/26 18:58:17 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r8.ebuild,v 1.10 2007/07/23 05:31:28 vapier Exp $
 
-inherit eutils pam flag-o-matic toolchain-funcs
+inherit eutils pam toolchain-funcs
 
 PATCHVER="1.0"
 DESCRIPTION="Netkit's Remote Shell Suite: rexec{,d} rlogin{,d} rsh{,d}"
@@ -30,9 +30,6 @@ src_unpack() {
 		EPATCH_SUFFIX="patch"
 		epatch "${WORKDIR}"/patch
 	fi
-	sed -i \
-		-e '/LDFLAGS/s:$: '$(bindnow-flags)':' \
-		r{cp,login,sh}/Makefile
 }
 
 src_compile() {

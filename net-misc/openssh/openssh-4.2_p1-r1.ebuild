@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.2_p1-r1.ebuild,v 1.14 2006/06/08 11:23:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.2_p1-r1.ebuild,v 1.15 2007/07/23 05:30:11 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -74,8 +74,6 @@ src_unpack() {
 		ewarn "Sorry, x509 and smartcard/ldap don't get along"
 	fi
 	[[ -n ${HPN_PATCH} ]] && use hpn && epatch "${DISTDIR}"/${HPN_PATCH}
-
-	sed -i '/LD.*ssh-keysign/s:$: '$(bindnow-flags)':' Makefile.in || die "setuid"
 
 	autoconf || die "autoconf failed"
 }
