@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.7.ebuild,v 1.5 2007/07/15 03:28:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.7.ebuild,v 1.6 2007/07/23 11:02:48 ikelos Exp $
 
 inherit eutils
 

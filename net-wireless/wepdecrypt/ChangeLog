@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wepdecrypt
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.9 2006/10/22 15:16:48 peper Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.10 2007/07/23 11:02:48 ikelos Exp $
+
+  23 Jul 2007; Mike Auty <ikelos@gentoo.org>
+  +files/wepdecrypt-0.8-as-needed.patch, wepdecrypt-0.8.ebuild:
+  Add in as-needed patch, fixes bug 186304.
 
   22 Oct 2006; Piotr Jaroszyński <peper@gentoo.org> wepdecrypt-0.8.ebuild:
   Add ~amd64 keyword. Bug #148308.
