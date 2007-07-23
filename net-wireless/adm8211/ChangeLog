@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/adm8211
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/adm8211/ChangeLog,v 1.7 2007/07/07 11:08:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/adm8211/ChangeLog,v 1.8 2007/07/23 19:53:29 genstef Exp $
+
+*adm8211-20060111 (23 Jul 2007)
+
+  23 Jul 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/01-fix-up-build-breaks-from-2.6.19.patch,
+  +files/04-fix-set-essid-for-WE-21.patch,
+  +files/02-Use-ieee80211_generic_get_stats.patch,
+  +files/05-update-email-address-from-jkmaline-cc.hut.fi-to.patch,
+  +files/03-fix-work_struct-build-breakage.patch, +adm8211-20060111.ebuild:
+  Version bump thanks to Mariusz Czubacki <mariusz.czubacki@gmail.com>
 
   07 Jul 2007; Stefan Schweizer <genstef@gentoo.org>
   +files/linux-2.6.17.patch, +files/linux-2.6.19.patch,
