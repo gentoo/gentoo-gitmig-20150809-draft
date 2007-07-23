@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/pcgen
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/ChangeLog,v 1.12 2006/10/13 15:02:48 nyhm Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/ChangeLog,v 1.13 2007/07/23 23:30:40 nyhm Exp $
+
+*pcgen-5.12.0 (23 Jul 2007)
+
+  23 Jul 2007; Tristan Heaven <nyhm@gentoo.org> +pcgen-5.12.0.ebuild:
+  Version bump, bug #185814
 
 *pcgen-5.10.1 (13 Oct 2006)
 
