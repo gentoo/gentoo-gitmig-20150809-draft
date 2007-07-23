@@ -1,6 +1,10 @@
 # ChangeLog for net-im/silc-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/ChangeLog,v 1.26 2007/07/20 08:48:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/ChangeLog,v 1.27 2007/07/23 11:55:51 armin76 Exp $
+
+  23 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  -silc-server-1.0.2-r1.ebuild, -silc-server-1.0.3.ebuild:
+  old
 
   20 Jul 2007; nixnut <nixnut@gentoo.org> silc-server-1.0.4.ebuild:
   Stable on ppc wrt bug 185535
