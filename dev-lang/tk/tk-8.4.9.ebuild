@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.9.ebuild,v 1.18 2007/07/22 08:39:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.9.ebuild,v 1.19 2007/07/23 20:12:39 mr_bones_ Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="threads"
 RDEPEND="x11-libs/libX11
 	=dev-lang/tcl-${PV}*"
 DEPEND="${RDEPEND}
-	x11-libs/libXt 
+	x11-libs/libXt
 	x11-proto/xproto"
 
 S=${WORKDIR}/${PN}${PV}
