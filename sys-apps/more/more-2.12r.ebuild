@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/more/more-2.12r.ebuild,v 1.1 2007/06/15 23:54:44 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/more/more-2.12r.ebuild,v 1.2 2007/07/23 05:26:55 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -44,7 +44,6 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags $(bindnow-flags)
 	use static && append-ldflags -static
 	export CC="$(tc-getCC)"
 

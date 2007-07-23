@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r7.ebuild,v 1.11 2007/07/12 06:36:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r7.ebuild,v 1.12 2007/07/23 05:26:50 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -143,7 +143,6 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags $(bindnow-flags)
 	use static && append-ldflags -static
 	export CC="$(tc-getCC)"
 
