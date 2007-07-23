@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/h4x0r
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/h4x0r/ChangeLog,v 1.13 2007/07/20 07:25:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/h4x0r/ChangeLog,v 1.14 2007/07/23 07:08:50 opfer Exp $
+
+  23 Jul 2007; Christian Faulhammer <opfer@gentoo.org> -h4x0r-0.13.ebuild,
+  h4x0r-0.13-r1.ebuild:
+  stable x86, bug 185776
 
   20 Jul 2007; nixnut <nixnut@gentoo.org> h4x0r-0.13-r1.ebuild:
   Stable on ppc wrt bug 185776
