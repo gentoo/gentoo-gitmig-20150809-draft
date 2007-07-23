@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.7.2.ebuild,v 1.1 2007/07/21 20:56:35 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.7.2.ebuild,v 1.2 2007/07/23 17:15:08 mr_bones_ Exp $
 
 inherit eutils
 
