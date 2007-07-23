@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/velocity
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.33 2007/06/18 17:38:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.34 2007/07/23 18:16:31 nixnut Exp $
+
+  23 Jul 2007; nixnut <nixnut@gentoo.org> velocity-1.5.ebuild:
+  Stable on ppc wrt bug 186192
 
   18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> velocity-1.5.ebuild:
   Add ~x86-fbsd keyword.
