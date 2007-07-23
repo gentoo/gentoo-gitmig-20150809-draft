@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/kchmviewer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.27 2007/07/22 12:01:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.28 2007/07/23 14:19:01 opfer Exp $
+
+  23 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  kchmviewer-3.1_p2.ebuild:
+  stable x86, bug 186180
 
   22 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
   kchmviewer-3.1_p2.ebuild:
