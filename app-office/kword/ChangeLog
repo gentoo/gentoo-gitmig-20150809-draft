@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kword
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.99 2007/07/22 22:22:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.100 2007/07/23 12:58:48 gustavoz Exp $
+
+  23 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> kword-1.6.3.ebuild:
+  Stable on sparc wrt #178697
 
   22 Jul 2007; Jeroen Roovers <jer@gentoo.org> kword-1.6.3.ebuild:
   Stable for HPPA (bug #178697).

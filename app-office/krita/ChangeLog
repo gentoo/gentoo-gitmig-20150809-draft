@@ -1,6 +1,9 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.79 2007/07/22 22:10:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.80 2007/07/23 12:53:21 gustavoz Exp $
+
+  23 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> krita-1.6.3.ebuild:
+  Stable on sparc wrt #178697
 
   22 Jul 2007; Jeroen Roovers <jer@gentoo.org> krita-1.6.3.ebuild:
   Stable for HPPA (bug #178697).
