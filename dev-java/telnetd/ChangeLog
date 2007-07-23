@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/telnetd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.14 2007/07/23 13:38:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.15 2007/07/23 15:49:23 nixnut Exp $
+
+  23 Jul 2007; nixnut <nixnut@gentoo.org> telnetd-1.0-r2.ebuild:
+  Stable on ppc wrt bug 186330
 
 *telnetd-2.0 (23 Jul 2007)
 
