@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libzrtpcpp
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/ChangeLog,v 1.5 2006/11/10 22:28:45 lu_zero Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/ChangeLog,v 1.6 2007/07/23 12:11:13 opfer Exp $
+
+  23 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  libzrtpcpp-0.9.0.ebuild:
+  stable x86, bug 182352
 
   10 Nov 2006; Luca Barbato <lu_zero@gentoo.org> libzrtpcpp-0.9.0.ebuild:
   Marked ~ppc64
