@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7513 2007/07/22 17:13:45 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7514 2007/07/23 17:12:08 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -641,6 +641,7 @@ dev-tex/lineno
 dev-tex/SIunits
 dev-tex/floatflt
 dev-tex/g-brief
+<dev-tex/pgf-1.18
 dev-tex/xcolor
 dev-tex/vntex
 
