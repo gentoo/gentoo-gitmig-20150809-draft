@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.6.1.ebuild,v 1.8 2007/07/15 09:04:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.6.1.ebuild,v 1.9 2007/07/23 13:02:09 lu_zero Exp $
 
 inherit wxwidgets eutils
 
@@ -23,7 +23,7 @@ DEPEND=">=media-libs/libpano12-2.8.4
 		sift? ( media-gfx/autopano-sift )"
 
 pkg_setup() {
-	if ! built_with_use dev-libs/boost --missing threads ; then
+	if ! built_with_use --missing true dev-libs/boost threads ; then
 		local msg="Build dev-libs/boost with USE=threads"
 		eerror "$msg"
 		die "$msg"

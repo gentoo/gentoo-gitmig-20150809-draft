@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.24 2007/07/15 09:04:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.25 2007/07/23 13:02:09 lu_zero Exp $
+
+  23 Jul 2007; Luca Barbato <lu_zero@gentoo.org> hugin-0.6.1.ebuild,
+  hugin-0.7_beta4.ebuild:
+  Fix the bad fix I committed before
 
   15 Jul 2007; Luca Barbato <lu_zero@gentoo.org> hugin-0.6.1.ebuild,
   hugin-0.7_beta4.ebuild:
