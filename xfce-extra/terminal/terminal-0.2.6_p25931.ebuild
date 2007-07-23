@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.6_p25931.ebuild,v 1.5 2007/07/21 16:55:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.6_p25931.ebuild,v 1.6 2007/07/23 18:03:24 gustavoz Exp $
 
 inherit xfce44
 
@@ -13,7 +13,7 @@ DESCRIPTION="Terminal for Xfce desktop environment, based on vte library."
 HOMEPAGE="http://www.xfce.org/projects/terminal"
 SRC_URI="http://dev.gentooexperimental.org/~drac/distfiles/${MY_P}.tar.bz2"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="dbus debug startup-notification doc"
 
 RESTRICT="test"
