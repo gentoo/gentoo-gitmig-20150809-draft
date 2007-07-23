@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.1.0.ebuild,v 1.1 2007/07/21 10:45:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.1.0.ebuild,v 1.2 2007/07/23 14:38:36 caster Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -32,8 +32,13 @@ src_unpack() {
 	rm -v *.jar || die "rm failed"
 }
 
-# Comes in the tarball
-EANT_DOC_TARGET=""
+src_compile() {
+	# it does not like unset ${build.compiler.executable}
+	# feel free to fix if you want jikes back
+	java-pkg_filter-compiler jikes
+	# not setting the bootcp breaks ecj, javac apparently ignores nonsense
+	eant -Dbuild.boot.classpath="$(java-config -g BOOTCLASSPATH)" jar
+}
 
 #Needs X
 #src_test() {
