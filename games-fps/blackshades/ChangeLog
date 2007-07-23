@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/blackshades
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades/ChangeLog,v 1.1 2007/07/23 12:39:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades/ChangeLog,v 1.2 2007/07/23 16:07:26 nyhm Exp $
+
+*blackshades-20070723 (23 Jul 2007)
+
+  23 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/blackshades-datadir.patch, +blackshades-20070723.ebuild:
+  New snapshot
 
 *blackshades-20031110-r1 (23 Jul 2007)
 
