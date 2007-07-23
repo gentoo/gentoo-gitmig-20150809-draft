@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/acroread-asianfonts
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.21 2007/07/02 15:03:37 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.22 2007/07/23 23:36:34 dirtyepic Exp $
+
+  23 Jul 2007; Ryan Hill <dirtyepic@gentoo.org>
+  -acroread-asianfonts-7.0.20050728.ebuild:
+  Remove old.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   acroread-asianfonts-7.0.8.ebuild, acroread-asianfonts-7.0.20050728.ebuild:
