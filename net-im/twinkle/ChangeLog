@@ -1,6 +1,13 @@
 # ChangeLog for net-im/twinkle
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.31 2007/07/23 07:33:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.32 2007/07/23 09:37:51 dragonheart Exp $
+
+*twinkle-1.1 (23 Jul 2007)
+
+  23 Jul 2007; Daniel Black <dragonheart@gentoo.org>
+  +files/twinkle.desktop.patch, -twinkle-1.0-r1.ebuild,
+  twinkle-1.0.1-r1.ebuild, +twinkle-1.1.ebuild:
+  version bump + .desktop correction thanks to Christian
 
   23 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   twinkle-1.0.1-r1.ebuild:

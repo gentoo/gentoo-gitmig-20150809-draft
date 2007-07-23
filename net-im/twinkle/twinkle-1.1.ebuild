@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0-r1.ebuild,v 1.5 2007/07/12 05:34:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.1.ebuild,v 1.1 2007/07/23 09:37:51 dragonheart Exp $
 
 ARTS_REQUIRED="never"
 inherit eutils qt3 kde
@@ -31,6 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.4.1-badcflags.patch
+	epatch "${FILESDIR}"/twinkle.desktop.patch
 }
 
 src_compile() {
