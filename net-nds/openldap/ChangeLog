@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.277 2007/07/13 14:27:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.278 2007/07/23 19:15:02 jokey Exp $
+
+*openldap-2.3.37 (23 Jul 2007)
+
+  23 Jul 2007; Markus Ullmann <jokey@gentoo.org> +openldap-2.3.37.ebuild:
+  Version bump, just minor bugfixes
 
   13 Jul 2007; Roy Marples <uberlord@gentoo.org> openldap-2.3.36.ebuild:
   Keyworded ~sparc-fbsd
