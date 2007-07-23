@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.3_rc1.ebuild,v 1.1 2007/07/18 20:35:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-0.5.3_rc1.ebuild,v 1.2 2007/07/23 19:27:16 armin76 Exp $
 
 inherit eutils distutils
 
@@ -34,9 +34,8 @@ pkg_setup() {
 }
 
 src_compile() {
-	if use amd64 || use ia64 || use ppc64; then
-		CFLAGS="${CFLAGS} -DAMD64"
-	fi
+	filter-ldflags -Wl,--as-needed
+
 	distutils_src_compile
 }
 
