@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/emelfm2
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.13 2007/07/23 17:42:09 drac Exp $
+
+*emelfm2-0.3.4 (23 Jul 2007)
+
+  23 Jul 2007; Samuli Suominen <drac@gentoo.org> +emelfm2-0.3.4.ebuild:
+  Initial commit from Sunrise, thanks to Uwe Helm, Stefan Schweizer, Juan
+  Aguado, Maarten Maathuis, and many others. Bug 153611.
+
