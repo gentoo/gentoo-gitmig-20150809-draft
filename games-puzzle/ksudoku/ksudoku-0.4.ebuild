@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.4 2007/04/22 22:05:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.5 2007/07/23 20:43:24 nyhm Exp $
 
-inherit flag-o-matic kde
+inherit flag-o-matic multilib kde
 
 DESCRIPTION="Sudoku Puzzle Generator and Solver for KDE"
 HOMEPAGE="http://ksudoku.sourceforge.net/"
