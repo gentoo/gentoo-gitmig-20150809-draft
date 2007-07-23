@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/telnetd-1.0-r2.ebuild,v 1.1 2007/04/28 19:50:37 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/telnetd-1.0-r2.ebuild,v 1.2 2007/07/23 13:25:36 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -20,8 +20,8 @@ COMMON_DEP=">=dev-java/xerces-2.7"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND="|| (
-	=virtual/jdk-1.4*
-	=virtual/jdk-1.5 )
+	=virtual/jdk-1.5*
+	=virtual/jdk-1.4* )
 	${COMMON_DEP}
 	app-arch/unzip"
 
