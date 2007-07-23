@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.13 2007/03/12 18:09:44 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.14 2007/07/23 18:27:23 mr_bones_ Exp $
 
-# 	[x] Base Install Required (+4 MB)
+#	[x] Base Install Required (+4 MB)
 #	[x] Scenarios (+7 MB)
 #	[x] Sounds and Graphics (+118 MB)
 #	[x] Music (+65 MB)
