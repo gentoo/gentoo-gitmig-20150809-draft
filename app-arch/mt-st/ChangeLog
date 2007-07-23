@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/mt-st
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.22 2007/07/20 14:07:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.23 2007/07/23 13:51:27 kumba Exp $
+
+  23 Jul 2007; Joshua Kinard <kumba@gentoo.org> mt-st-0.9b.ebuild:
+  Stable on mips, per #185687.
 
   20 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> mt-st-0.9b.ebuild:
   Stable on sparc wrt #185867
