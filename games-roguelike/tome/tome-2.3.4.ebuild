@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.4.ebuild,v 1.2 2006/12/06 19:25:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.4.ebuild,v 1.3 2007/07/23 05:27:54 vapier Exp $
 
-inherit eutils flag-o-matic games
+inherit eutils games
 
 MY_PV=${PV//./}
 DESCRIPTION="save the world from Morgoth and battle evil (or become evil ;])"
@@ -77,7 +77,6 @@ src_compile() {
 	fi
 	GENTOO_INCLUDES="${GENTOO_INCLUDES} -Ilua -I."
 	GENTOO_DEFINES="${GENTOO_DEFINES} -DUSE_LUA"
-	append-ldflags $(bindnow-flags)
 	cd src
 	make \
 		INCLUDES="${GENTOO_INCLUDES}" \
