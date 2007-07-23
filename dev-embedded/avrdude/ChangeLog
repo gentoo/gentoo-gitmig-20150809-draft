@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.32 2007/07/16 19:10:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.33 2007/07/23 07:12:19 opfer Exp $
+
+  23 Jul 2007; Christian Faulhammer <opfer@gentoo.org> avrdude-5.4.ebuild:
+  stable x86, bug 185195
 
   16 Jul 2007; Markus Rothe <corsair@gentoo.org> avrdude-5.4.ebuild:
   Stable on ppc64; bug #185195
