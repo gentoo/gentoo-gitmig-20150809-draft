@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.95 2007/06/09 00:10:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.96 2007/07/23 16:16:38 vapier Exp $
 
 cd /
 umask 0022 #159111
@@ -34,7 +34,7 @@ Options:
     ${GOOD}--k, --kernel${NORMAL} ver     Specify version of kernel headers to use
     ${GOOD}--l, --libc${NORMAL} ver       Specify version of libc to use
     ${GOOD}-C, --clean${NORMAL} target    Uninstall specified target
-    ${GOOD}-b, -d, -p, -v, -q${NORMAL}    Options to pass to emerge (see emerge(1))
+    ${GOOD}-P, --portage${NORMAL} opts    Options to pass to emerge (see emerge(1))
 Stage Options:
     ${GOOD}-s0, --stage0${NORMAL}         Build just binutils
     ${GOOD}-s1, --stage1${NORMAL}         Also build a C compiler (no libc/C++)
@@ -351,6 +351,7 @@ while [[ $# -gt 0 ]] ; do
 	--with-*)       eval $(set_withval $1);;
 	--without-*)    eval $(set_withval $1);;
 	-x)             SET_X="yes";;
+	-P|--portage)   UOPTS="${UOPTS} $2"; shift;;
 	-b|-d|-p|-v|-q) UOPTS="${UOPTS} $1";;
 	-pv|-vp)        UOPTS="${UOPTS} -p -v";;
 	-h|--help)      usage;;
