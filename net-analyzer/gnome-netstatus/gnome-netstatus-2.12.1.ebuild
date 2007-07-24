@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/gnome-netstatus-2.12.1.ebuild,v 1.2 2007/07/06 07:47:21 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/gnome-netstatus-2.12.1.ebuild,v 1.3 2007/07/24 14:25:47 dang Exp $
 
 inherit eutils gnome2
 
@@ -32,5 +32,6 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
-	use x86-fbsd || epatch ${FILESDIR}/${PN}-2.10.0-amd64.patch
+	# Fix interface listing on all (known) arches; bug #183969
+	epatch "${FILESDIR}"/${P}-fix-iflist.patch
 }
