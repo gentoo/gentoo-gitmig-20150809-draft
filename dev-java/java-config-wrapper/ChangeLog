@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/java-config-wrapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.30 2007/05/01 11:37:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.31 2007/07/24 13:35:15 betelgeuse Exp $
+
+*java-config-wrapper-0.14 (24 Jul 2007)
+
+  24 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +java-config-wrapper-0.14.ebuild:
+  Version bump. Fixes bug #181967 so this works with baselayout-2 and adds one
+  more package.env check to java-check-environment.
 
   01 May 2007; Vlastimil Babka <caster@gentoo.org>
   -files/java-config-wrapper-0.12-generation_1_system_vm.patch,
