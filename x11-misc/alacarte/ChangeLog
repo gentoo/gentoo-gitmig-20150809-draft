@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.33 2007/07/05 16:27:25 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.34 2007/07/24 14:39:21 dang Exp $
+
+  24 Jul 2007; Daniel Gryniewicz <dang@gentoo.org>
+  alacarte-0.11.3-r1.ebuild:
+  Need gnome-python; bug #184067
 
   05 Jul 2007; Roy Marples <uberlord@gentoo.org> alacarte-0.11.3.ebuild,
   alacarte-0.11.3-r1.ebuild:
