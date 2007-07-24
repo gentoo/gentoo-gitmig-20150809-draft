@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.64 2007/07/20 18:31:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.65 2007/07/24 18:19:03 pva Exp $
+
+*wireshark-0.99.6-r1 (24 Jul 2007)
+
+  24 Jul 2007; <pva@gentoo.org> +files/wireshark-0.99.6-asneeded-r1.patch,
+  +files/wireshark-0.99.6-gint64-warnings.patch,
+  +files/wireshark-0.99.6-libgcrypt.patch, +files/wireshark-0.99.6-lm.patch,
+  +wireshark-0.99.6-r1.ebuild:
+  Fixed -lm problem with ulibc (bug #186424; thank Natanael Copa
+  <natanael.copa AT gmail.com> for report. Commited fix for bug #184529 and
+  enabled warnings treated as errors for gtk-2.0 build like upstream wants us.
+  Fix for libgcrypt problem reported by armin76 and fixed by drac.
 
   20 Jul 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   wireshark-0.99.6.ebuild:
