@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/oroborus-extras
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.18 2007/07/02 14:21:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.19 2007/07/24 13:11:18 drac Exp $
+
+  24 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  oroborus-extras-2.0.18.ebuild:
+  Remove redudant depend for GTK+-1.2, nothing in this package is using it.
 
 *oroborus-extras-2.0.18 (02 Jul 2007)
 

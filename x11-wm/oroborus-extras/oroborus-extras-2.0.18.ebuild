@@ -1,25 +1,25 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.18.ebuild,v 1.1 2007/07/02 14:21:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.18.ebuild,v 1.2 2007/07/24 13:11:18 drac Exp $
 
 inherit eutils
-
-S=${WORKDIR}
 
 DESCRIPTION="Other stuff for oroborus"
 SRC_URI="http://www.oroborus.org/debian/dists/sid/main/source/x11/keylaunch_1.3.3.tar.gz
 	http://www.oroborus.org/debian/dists/sid/main/source/x11/deskmenu_1.4.2.tar.gz
 	http://www.oroborus.org/debian/dists/sid/main/source/x11/desklaunch_1.1.5.tar.gz"
 HOMEPAGE="http://www.oroborus.org/"
-LICENSE="GPL-2"
 
-IUSE=""
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+IUSE=""
 
-DEPEND="x11-wm/oroborus
-	=x11-libs/gtk+-1.2*
-	>=x11-libs/gtk+-2.0.3"
+RDEPEND="x11-wm/oroborus
+	>=x11-libs/gtk+-2"
+DEPEND="${RDEPEND}"
+
+S="${WORKDIR}"
 
 src_compile() {
 # Deskmenu first
