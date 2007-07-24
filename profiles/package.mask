@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7516 2007/07/24 01:39:22 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7517 2007/07/24 11:54:36 dirtyepic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,7 +24,8 @@
 # Ryan Hill <dirtyepic@gentoo.org> (23 Jul 2007)
 # duplicated by media-fonts/artwiz-aleczapka-en.  use that instead.
 # Bug #186400
-media-fonts/artwiz-fonts
+# 24 Jul 2007 - unmasked until bug #186431 is fixed
+#media-fonts/artwiz-fonts
 
 # Wulf C. Krueger <philantrop@gentoo.org> (21 Jul 2007)
 # Broken by upstream. cf. bug 173972.
