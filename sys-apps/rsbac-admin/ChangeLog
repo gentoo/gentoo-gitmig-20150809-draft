@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/rsbac-admin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.30 2007/06/20 17:05:40 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.31 2007/07/24 08:19:55 phreak Exp $
+
+*rsbac-admin-1.3.5 (24 Jul 2007)
+
+  24 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml,
+  +rsbac-admin-1.3.5.ebuild:
+  Version bump, as a precaution for #186428. Also fixing the metadata.
 
 *rsbac-admin-1.3.4-r1 (20 Jun 2007)
 
