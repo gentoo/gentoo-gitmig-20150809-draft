@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.546 2007/07/22 11:06:06 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.547 2007/07/24 00:52:56 dirtyepic Exp $
+
+  24 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Mask media-fonts/artwiz-fonts.
 
   21 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   embedded/virtuals, selinux/mips/virtuals:
