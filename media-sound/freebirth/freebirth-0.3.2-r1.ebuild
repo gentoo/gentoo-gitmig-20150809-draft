@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/freebirth-0.3.2-r1.ebuild,v 1.2 2007/07/24 15:08:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/freebirth-0.3.2-r1.ebuild,v 1.3 2007/07/24 15:15:20 drac Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Free software bass synthesizer step sequencer"
 HOMEPAGE="http://www.bitmechanic.com/projects/freebirth"
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
@@ -23,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die "emake failed."
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} $(pkg-config --cflags gtk+-2.0)" || die "emake failed."
 }
 
 src_install() {
