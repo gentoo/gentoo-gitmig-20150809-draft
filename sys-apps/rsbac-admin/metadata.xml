@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>hardened</herd>
 	<maintainer>
-		<name>Guillaume Destuynder</name>
 		<email>kang@gentoo.org</email>
+		<name>Guillaume Destuynder</name>
 	</maintainer>
 </pkgmetadata>
