@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.19 2007/07/11 14:13:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.20 2007/07/24 16:24:02 beandog Exp $
+
+  24 Jul 2007; Steve Dibb <beandog@gentoo.org> builder-2.1.1.ebuild:
+  amd64 stable, bug 181322
 
   11 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> builder-2.1.1.ebuild:
   Stable on sparc wrt #181322
