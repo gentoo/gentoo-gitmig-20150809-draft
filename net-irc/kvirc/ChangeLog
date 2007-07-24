@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.51 2007/07/24 19:56:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.52 2007/07/24 19:58:43 jokey Exp $
+
+  24 Jul 2007; Markus Ullmann <jokey@gentoo.org>
+  -kvirc-3.2.6_pre20070628.ebuild:
+  Kill old stuff
 
 *kvirc-3.2.6_pre20070714 (24 Jul 2007)
 
