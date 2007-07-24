@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.69 2007/07/22 20:51:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.70 2007/07/24 13:52:15 armin76 Exp $
+
+  24 Jul 2007; Raúl Porcel <armin76@gentoo.org> libcdio-0.78.2.ebuild:
+  alpha/ia64 stable
 
   22 Jul 2007; Tony Vroon <chainsaw@gentoo.org> libcdio-0.78.2.ebuild:
   Mark stable on PPC, PPC64 & X86. Tested on PowerBook 5,9; PowerMac 7,2 &
