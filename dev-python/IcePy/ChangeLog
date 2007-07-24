@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/IcePy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/ChangeLog,v 1.4 2007/07/20 19:07:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/ChangeLog,v 1.5 2007/07/24 12:20:12 caleb Exp $
+
+  24 Jul 2007; Caleb Tennis <caleb@gentoo.org>
+  -files/icepy-3.1.0-makefile.patch, -files/icepy-3.1.1-makefile.patch,
+  -IcePy-3.1.0.ebuild, -IcePy-3.1.1.ebuild:
+  remove old versions
 
 *IcePy-3.2.0 (20 Jul 2007)
 
