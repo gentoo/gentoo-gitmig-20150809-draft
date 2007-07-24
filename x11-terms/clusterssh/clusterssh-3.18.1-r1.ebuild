@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/clusterssh-3.18.1-r1.ebuild,v 1.1 2006/08/27 10:04:08 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/clusterssh-3.18.1-r1.ebuild,v 1.2 2007/07/24 16:30:42 beandog Exp $
 
 DESCRIPTION="Concurrent Multi-Server Terminal Access."
 HOMEPAGE="http://clusterssh.sourceforge.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/clusterssh/clusterssh-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6.1
