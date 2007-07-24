@@ -193,7 +193,7 @@ diff -ur freebirth-0.3.2.orig/raw_wave.h freebirth-0.3.2/raw_wave.h
  
  // #define FB_SAMPLES "/usr/local/lib/freebirth"
 -#define FB_SAMPLES "."
-+#define FB_SAMPLES "/usr/lib/freebirth"
++#define FB_SAMPLES "/usr/share/freebirth"
  
  /*
    Local Variables:

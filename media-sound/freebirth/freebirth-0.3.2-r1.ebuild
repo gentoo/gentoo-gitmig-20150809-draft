@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/freebirth-0.3.2-r1.ebuild,v 1.1 2007/07/24 15:03:49 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/freebirth-0.3.2-r1.ebuild,v 1.2 2007/07/24 15:08:41 drac Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_compile() {
 
 src_install() {
 	dobin ${PN}
-	insinto /usr/lib/${PN}/raw
+	insinto /usr/share/${PN}/raw
 	doins raw/*.raw
 	dodoc CHANGES NEXT_VERSION README
 	doicon xpm/${PN}.xpm
