@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.99.ebuild,v 1.6 2007/07/12 05:10:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.99.ebuild,v 1.7 2007/07/24 09:41:34 kang Exp $
 
 inherit eutils subversion
 
