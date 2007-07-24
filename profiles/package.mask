@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7520 2007/07/24 19:20:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7521 2007/07/24 20:14:10 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Markus Ullmann <jokey@gentoo.org> (24 Jul 2007)
+# mask for removal due to security bug #184013
+net-firewall/fireflier
 
 # Ryan Hill <dirtyepic@gentoo.org> (23 Jul 2007)
 # duplicated by media-fonts/artwiz-aleczapka-en.  use that instead.
