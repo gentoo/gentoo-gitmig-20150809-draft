@@ -1,6 +1,21 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.91 2007/06/19 10:59:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.92 2007/07/24 22:01:42 eva Exp $
+
+*gnome-speech-0.4.15 (24 Jul 2007)
+
+  24 Jul 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-speech-0.4.9.ebuild, -gnome-speech-0.4.10.ebuild,
+  -gnome-speech-0.4.10-r1.ebuild, +gnome-speech-0.4.15.ebuild:
+  bump to 0.4.15. old unstable versions cleanup. Since 0.4.11:
+  * Fix for bug 454954 - Compatibility with eSpeak >=1.27 (Gilles Casse)
+  * Fix for bug 443989 - when building Java platform support, add -cp option
+    to work in the presence of environments where CLASSPATH might be set
+  * Fix for bug 448184 - viavoicesynthesisdriver.c:718: warning: control
+    reaches end of non-void function (Mario Lang)
+  * Fix for bug 440169 - swift driver hardcodes voice language to en_US (Mario
+    Lang)
+  * Fix for bug 437867 to support festival languages without dialects.
 
   19 Jun 2007; Raúl Porcel <armin76@gentoo.org> gnome-speech-0.4.11.ebuild:
   ia64 stable wrt #171107

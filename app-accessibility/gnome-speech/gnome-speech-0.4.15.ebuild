@@ -1,15 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.9.ebuild,v 1.3 2007/07/11 02:34:03 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.15.ebuild,v 1.1 2007/07/24 22:01:42 eva Exp $
 
-inherit java-pkg gnome2
+JAVA_PKG_OPT_USE="freetts"
+
+inherit java-pkg-opt-2 gnome2
 
 DESCRIPTION="Simple general API for producing text-to-speech output"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 # espeak not added; it needs tons of keywords
 IUSE="freetts"
 
@@ -25,9 +27,7 @@ RDEPEND="$COMMON_DEPEND
 	app-accessibility/festival"
 
 DEPEND="$COMMON_DEPEND
-	freetts? (
-		>=virtual/jdk-1.4
-		dev-java/java-config )
+	freetts? ( >=virtual/jdk-1.4 )
 	>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS ChangeLog NEWS README"
@@ -36,7 +36,7 @@ pkg_setup() {
 	G2CONF="--with-festival --with-speech-dispatcher"
 
 	if use freetts; then
-		java-pkg_pkg_setup
+		java-pkg-opt-2_pkg_setup
 
 		local JABDIR="${ROOT}usr/share/java-access-bridge/lib"
 
