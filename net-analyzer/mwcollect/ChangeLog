@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/mwcollect
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.15 2007/07/14 10:01:55 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.16 2007/07/24 20:55:51 jokey Exp $
+
+  24 Jul 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/mwcollect-3.0.0-capacity.patch,
+  -files/mwcollect-3.0.1-capacity.patch,
+  -files/mwcollect-3.0.1-modules.patch, -files/mwcollect-3.0.1-pic.patch,
+  -files/mwcollect-3.0.1-pid.patch, -mwcollect-2.1.1.ebuild,
+  -mwcollect-3.0.0.ebuild, -mwcollect-3.0.1.ebuild, -mwcollect-3.0.2.ebuild,
+  -mwcollect-3.0.3.ebuild:
+  Clean out old versions
 
   14 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning net-analyzer/mwcollect to m-needed, as chriswhite has been retired
