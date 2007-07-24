@@ -1,6 +1,11 @@
 # ChangeLog for games-kids/tuxmathscrabble
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/ChangeLog,v 1.10 2007/07/22 01:33:35 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/ChangeLog,v 1.11 2007/07/24 17:07:24 nyhm Exp $
+
+*tuxmathscrabble-4.2 (24 Jul 2007)
+
+  24 Jul 2007; Tristan Heaven <nyhm@gentoo.org> +tuxmathscrabble-4.2.ebuild:
+  Version bump
 
 *tuxmathscrabble-4.0 (22 Jul 2007)
 
