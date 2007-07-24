@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.8.ebuild,v 1.1 2007/04/12 19:36:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.8.ebuild,v 1.2 2007/07/24 19:46:06 wolf31o2 Exp $
 
 inherit bash-completion eutils
 
@@ -29,8 +29,8 @@ LICENSE="GPL-2"
 SLOT="0"
 # Please don't touch individual KEYWORDS.  Since this is maintained/tested by
 # Release Engineering, it's easier for us to deal with all arches at once.
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-#KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="ibm selinux"
 
 DEPEND="sys-fs/e2fsprogs
