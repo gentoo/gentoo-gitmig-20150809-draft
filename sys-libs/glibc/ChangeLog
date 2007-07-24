@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.547 2007/07/24 08:10:35 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.548 2007/07/24 11:58:37 drac Exp $
+
+  24 Jul 2007; Samuli Suominen <drac@gentoo.org> Manifest:
+  Fix Manifest. (yoswink)
 
   24 Jul 2007; Jose Luis Rivero <yoswink@gentoo.org> glibc-2.6.ebuild:
   Keyworded ~alpha
