@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/ezra-sil
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ezra-sil/ChangeLog,v 1.6 2006/11/26 23:25:30 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ezra-sil/ChangeLog,v 1.7 2007/07/24 01:57:23 dirtyepic Exp $
+
+*ezra-sil-2.5 (24 Jul 2007)
+
+  24 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> +ezra-sil-2.5.ebuild:
+  Version bump.
 
   26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> ezra-sil-2.0.ebuild:
   Add ~x86-fbsd keyword.
