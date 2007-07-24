@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/ddrescue
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.7 2007/05/11 18:01:51 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.8 2007/07/24 13:19:47 armin76 Exp $
+
+*ddrescue-1.5 (24 Jul 2007)
+
+  24 Jul 2007; Raúl Porcel <armin76@gentoo.org> metadata.xml,
+  -ddrescue-1.2.ebuild, ddrescue-1.3.ebuild, +ddrescue-1.5.ebuild:
+  Version bump, stable x86, remove old, thanks to Jan Simons <jan.simons at
+  web dot de> in bug 186153
 
   11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
   add metadata.xml
