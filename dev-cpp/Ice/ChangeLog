@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/Ice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.7 2007/07/15 09:39:49 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.8 2007/07/24 12:21:41 caleb Exp $
+
+  24 Jul 2007; Caleb Tennis <caleb@gentoo.org>
+  -files/Ice-3.1.1-Makefile.patch, -files/ice-makefile-speedup.patch,
+  -Ice-3.1.1.ebuild:
+  remove old version
 
   15 Jul 2007; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
   cpp-herd taking over
