@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/pam_chroot-0.9.1.ebuild,v 1.6 2007/07/18 05:35:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/pam_chroot-0.9.1.ebuild,v 1.7 2007/07/24 20:15:49 hawking Exp $
 
 inherit toolchain-funcs pam flag-o-matic eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-makefile.patch"
+	epatch "${FILESDIR}/${P}-gcc42.patch"
 }
 
 src_compile() {
