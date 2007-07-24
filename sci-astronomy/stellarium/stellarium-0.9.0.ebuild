@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.9.0.ebuild,v 1.1 2007/07/21 00:01:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.9.0.ebuild,v 1.2 2007/07/24 20:45:17 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils
 
@@ -26,6 +26,13 @@ DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.6
 	nls? ( sys-devel/gettext )
 	x11-libs/libXt"
+
+pkg_setup() {
+	# bug #186194
+	if ! built_with_use '=x11-libs/qt-4*' opengl; then
+		die "=x11-libs/qt-4* built without USE=\"opengl\""
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

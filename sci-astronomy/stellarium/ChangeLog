@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.32 2007/07/22 07:33:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.33 2007/07/24 20:45:17 mr_bones_ Exp $
+
+  24 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  stellarium-0.9.0.ebuild:
+  add a check for x11-libs/qt-4 built with opengl (bug #186194)
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   stellarium-0.8.2.ebuild:
