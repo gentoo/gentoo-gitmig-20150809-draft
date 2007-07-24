@@ -15,8 +15,8 @@ diff -Naur lapack-lite-3.1.1/INSTALL/Makefile.am lapack-lite-3.1.1.new/INSTALL/M
 +testlsame_SOURCES = lsame.f lsametst.f
 +testslamch_SOURCES = slamch.f lsame.f slamchtst.f
 +testdlamch_SOURCES = dlamch.f lsame.f dlamchtst.f
-+testsecond_SOURCES = second_EXT_ETIME.f secondtst.f
-+testdsecnd_SOURCES = dsecnd_EXT_ETIME.f dsecndtst.f
++testsecond_SOURCES = second_INT_CPU_TIME.f secondtst.f
++testdsecnd_SOURCES = dsecnd_INT_CPU_TIME.f dsecndtst.f
 +testieee_SOURCES = tstiee.f
 +
 +EXTRA_DIST = \
@@ -64,7 +64,7 @@ diff -Naur lapack-lite-3.1.1/SRC/Makefile.am lapack-lite-3.1.1.new/SRC/Makefile.
 +	slaset.f slasq1.f slasq2.f slasq3.f slazq3.f slasq4.f slazq4.f slasq5.f slasq6.f \
 +	slasr.f  slasrt.f slassq.f slasv2.f spttrf.f sstebz.f sstedc.f \
 +	ssteqr.f ssterf.f slaisnan.f sisnan.f \
-+	../INSTALL/second_EXT_ETIME.f
++	../INSTALL/second_INT_CPU_TIME.f
 +endif
 +
 +if DOUBLE
@@ -86,7 +86,7 @@ diff -Naur lapack-lite-3.1.1/SRC/Makefile.am lapack-lite-3.1.1.new/SRC/Makefile.
 +	dlaset.f dlasq1.f dlasq2.f dlasq3.f dlazq3.f dlasq4.f dlazq4.f dlasq5.f dlasq6.f \
 +	dlasr.f  dlasrt.f dlassq.f dlasv2.f dpttrf.f dstebz.f dstedc.f \
 +	dsteqr.f dsterf.f dlaisnan.f disnan.f \
-+	../INSTALL/dsecnd_EXT_ETIME.f
++	../INSTALL/dsecnd_INT_CPU_TIME.f
 +endif
 +
 +if S
