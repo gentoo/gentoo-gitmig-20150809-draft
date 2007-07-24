@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.19 2007/07/22 12:48:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.20 2007/07/24 16:20:45 beandog Exp $
+
+  24 Jul 2007; Steve Dibb <beandog@gentoo.org> suite3270-3.3.5_p8.ebuild:
+  amd64 stable, bug 178136
 
   22 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   suite3270-3.3.5_p8.ebuild:
