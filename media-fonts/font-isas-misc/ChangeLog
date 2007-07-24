@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-isas-misc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-isas-misc/ChangeLog,v 1.20 2007/07/18 17:21:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-isas-misc/ChangeLog,v 1.21 2007/07/24 16:48:30 beandog Exp $
+
+  24 Jul 2007; Steve Dibb <beandog@gentoo.org> font-isas-misc-1.0.0.ebuild:
+  amd64 stable, bug 184462
 
   18 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   font-isas-misc-1.0.0.ebuild:
