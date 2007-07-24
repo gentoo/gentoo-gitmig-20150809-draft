@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/openspml2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml2/ChangeLog,v 1.2 2007/04/26 20:24:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml2/ChangeLog,v 1.3 2007/07/24 08:07:00 opfer Exp $
+
+  24 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  openspml2-1.0_rc2.ebuild:
+  stable x86, bug 186196
 
   26 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   openspml2-1.0_rc2.ebuild:

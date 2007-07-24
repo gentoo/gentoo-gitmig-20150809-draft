@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml/openspml-0.5.ebuild,v 1.1 2006/09/11 14:13:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml/openspml-0.5.ebuild,v 1.2 2007/07/24 08:05:07 opfer Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.openspml.org/Files/${PN}_v${PV}.zip"
 
 LICENSE="openspml"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc source"
 
 RDEPEND=">=virtual/jre-1.4"

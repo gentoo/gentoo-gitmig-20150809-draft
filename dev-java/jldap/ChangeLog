@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/ChangeLog,v 1.9 2007/04/28 20:19:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/ChangeLog,v 1.10 2007/07/24 08:08:30 opfer Exp $
+
+  24 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  jldap-20060300.ebuild:
+  stable x86, bug 186196
 
   28 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> jldap-20060300.ebuild:
   Fix REDEND typo to RDEPEND in DEPEND.

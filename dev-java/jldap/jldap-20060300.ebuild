@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20060300.ebuild,v 1.2 2007/04/28 20:19:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20060300.ebuild,v 1.3 2007/07/24 08:08:30 opfer Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/jldap-Mar_ndk_2006-gentoo.tar.bz2"
 
 LICENSE="OPENLDAP"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc source"
 
 RDEPEND=">=virtual/jre-1.4
