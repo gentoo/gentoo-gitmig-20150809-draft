@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/eclass-manpages
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.1 2007/06/16 08:07:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.2 2007/07/24 07:59:21 vapier Exp $
+
+  24 Jul 2007; Mike Frysinger <vapier@gentoo.org>
+  files/eclass-to-manpage.awk:
+  Dont require trailing whitespace to continue paragraphs as that just sets
+  off QA checkers #184779 by Ulrich Mueller.
 
 *eclass-manpages-20070615 (16 Jun 2006)
 
