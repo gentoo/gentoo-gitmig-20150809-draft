@@ -1,17 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.8 2007/07/24 19:56:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.6_pre20070714.ebuild,v 1.1 2007/07/24 19:56:33 jokey Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
-inherit autotools eutils kde-functions subversion
+inherit autotools eutils kde-functions
 
 DESCRIPTION="An advanced IRC Client"
 HOMEPAGE="http://www.kvirc.net/"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="kvirc"
 SLOT="3"
-KEYWORDS=""
+KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
 IUSE="debug esd ipv6 kde oss ssl"
 
 RDEPEND="esd? ( media-sound/esound )
@@ -23,14 +22,14 @@ RDEPEND="esd? ( media-sound/esound )
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
-ESVN_REPO_URI="https://svn.kvirc.de/svn/trunk/kvirc"
-ESVN_PROJECT="kvirc"
-ESVN_BOOTSTRAP="./autogen.sh"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
-	subversion_src_unpack
-	epatch ${FILESDIR}/${PN}-svn-kdedir-fix.patch
-	epatch ${FILESDIR}/${PN}-noipv6.patch
+	unpack ${A}
+	cd "${S}"
+	./autogen.sh
+	epatch "${FILESDIR}"/${PN}-svn-kdedir-fix.patch
+	epatch "${FILESDIR}"/${PN}-noipv6.patch
 }
 
 src_compile() {
@@ -53,11 +52,11 @@ src_compile() {
 	[ "${ARCH}" == "x86" ] && myconf="${myconf} --with-ix86-asm"
 
 	econf ${myconf} || die "econf failed"
-	emake -j1 || die "emake failed"
+	emake -j1 || die "econf failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	emake DESTDIR="${D}" docs || die "emake docs failed"
-	dodoc ChangeLog README TODO
+	dodoc ChangeLog INSTALL README TODO
 }

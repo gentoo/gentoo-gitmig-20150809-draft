@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.50 2007/07/24 19:18:54 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.51 2007/07/24 19:56:33 jokey Exp $
+
+*kvirc-3.2.6_pre20070714 (24 Jul 2007)
+
+  24 Jul 2007; Markus Ullmann <jokey@gentoo.org> +files/kvirc-noipv6.patch,
+  +kvirc-3.2.6_pre20070714.ebuild, kvirc-9999.ebuild:
+  New snapshot + no-ipv6 patch from Bernd Buschinski wrt bug #184709
 
   24 Jul 2007; Markus Ullmann <jokey@gentoo.org> kvirc-9999.ebuild:
   Drop keyword for live ebuild
