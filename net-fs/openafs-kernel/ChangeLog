@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.69 2007/07/24 13:24:37 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.70 2007/07/24 20:34:36 stefaan Exp $
+
+*openafs-kernel-1.4.4_p20070724 (24 Jul 2007)
+
+  24 Jul 2007; Stefaan De Roeck <stefaan@gentoo.org>
+  -openafs-kernel-1.4.4-r1.ebuild, +openafs-kernel-1.4.4_p20070724.ebuild:
+  Add prerelease for compatibility with linux-2.6.22 (bug #185130)
 
 *openafs-kernel-1.4.4-r1 (24 Jul 2007)
 
