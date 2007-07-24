@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7519 2007/07/24 12:38:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7520 2007/07/24 19:20:57 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -857,10 +857,6 @@ dev-db/monetdb
 # masked for testing due to major ebuild and installation changes
 sys-apps/makedev
 >=sys-apps/baselayout-1.13.0_alpha1
-
-# Markus Ullmann <jokey@gentoo.org> (24.09.2006)
-# masking kvirc cvs ebuild
-=net-irc/kvirc-9999
 
 # Alastair Tse <liquidx@gentoo.org> (19 Sep 2006)
 # You must run python-updater for this, masking until we
