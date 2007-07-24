@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.316 2007/07/12 15:07:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.317 2007/07/24 19:19:31 zzam Exp $
+
+*udev-104-r13 (24 Jul 2007)
+
+  24 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-start-104-r13.sh, +files/udev-stop-104-r13.sh,
+  +udev-104-r13.ebuild:
+  Backported creation of /dev/root from udev-110-r1 to 104-r12 as this is
+  needed for sys-apps/hal that is already stable.
 
   12 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/modprobe-113-r2.sh:
