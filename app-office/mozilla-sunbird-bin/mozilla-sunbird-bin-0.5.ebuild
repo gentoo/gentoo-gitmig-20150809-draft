@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.5.ebuild,v 1.7 2007/07/23 20:16:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.5.ebuild,v 1.8 2007/07/24 17:45:13 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -83,6 +83,7 @@ linguas() {
 src_unpack() {
 	unpack ${MY_PN/-bin}-${PV}.en-US.linux-i686.tar.gz
 
+	linguas
 	for X in ${linguas}; do
 		[[ ${X} != "en" ]] && xpi_unpack "${P/-bin/}-${X}.xpi"
 	done
