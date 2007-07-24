@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/arphicfonts
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.38 2007/07/24 03:33:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.39 2007/07/24 12:50:05 grobian Exp $
+
+  24 Jul 2007; Fabian Groffen <grobian@gentoo.org>
+  arphicfonts-0.1-r2.ebuild, arphicfonts-0.1.20060513.ebuild,
+  arphicfonts-0.1.20060928.ebuild:
+  Dropped ppc-macos keyword, see you in prefix
 
   24 Jul 2007; Joseph Jezak <josejx@gentoo.org>
   arphicfonts-0.1.20060928.ebuild:
