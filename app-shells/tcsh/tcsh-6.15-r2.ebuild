@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.15-r1.ebuild,v 1.1 2007/07/03 16:49:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.15-r2.ebuild,v 1.1 2007/07/24 20:53:13 grobian Exp $
 
 inherit eutils
 
-PATCHVER="1.4"
+CONFVER="1.5"
 
 MY_P="${P}.00"
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
 HOMEPAGE="http://www.tcsh.org/"
 SRC_URI="ftp://ftp.astron.com/pub/tcsh/${MY_P}.tar.gz
-	mirror://gentoo/tcsh-config-${PATCHVER}.tar.bz2
-	http://www.gentoo.org/~grobian/distfiles/tcsh-config-${PATCHVER}.tar.bz2"
+	mirror://gentoo/tcsh-config-${CONFVER}.tar.bz2
+	http://www.gentoo.org/~grobian/distfiles/tcsh-config-${CONFVER}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -57,13 +57,17 @@ src_install() {
 		"${WORKDIR}"/tcsh-config/csh.cshrc \
 		"${WORKDIR}"/tcsh-config/csh.login
 
-	insinto /etc/profile.d
-	doins \
-		"${WORKDIR}"/tcsh-config/tcsh-bindkey.csh \
-		"${WORKDIR}"/tcsh-config/tcsh-settings.csh
-
 	dodoc FAQ Fixes NewThings Ported README WishList Y2K
 
 	# bug #119703: add csh -> tcsh symlink
 	dosym /bin/tcsh /bin/csh
+}
+
+pkg_postinst() {
+	elog "This revision of tcsh does use a completely revamped configuration"
+	elog "files system, which is based on the bash equivalents.  It should"
+	elog "fix issues for KDE users, and miscelaneous issues of environment"
+	elog "variables not set that should have, like EDITOR.  If you rely"
+	elog "on the /etc/csh.* files heavily, you may find your setup will be"
+	elog "broken now."
 }
