@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r3.ebuild,v 1.9 2007/06/24 22:04:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r3.ebuild,v 1.10 2007/07/24 21:13:25 jokey Exp $
 
 inherit eutils autotools
 
@@ -96,8 +96,8 @@ src_install() {
 	dodoc AUTHORS CONTENTS ChangeLog MANIFESTO NEWS
 	dodoc PORTING README SUPPORT_NTOP.txt THANKS $(find docs -type f)
 
-	newinitd "${FILESDIR}"/ntop-init-2 ntop
-	newconfd "${FILESDIR}"/ntop-confd-2 ntop
+	newinitd "${FILESDIR}"/ntop-initd ntop
+	newconfd "${FILESDIR}"/ntop-confd ntop
 }
 
 pkg_postinst() {
