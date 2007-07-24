@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.14-r1.ebuild,v 1.5 2007/02/10 18:37:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.14-r1.ebuild,v 1.6 2007/07/24 08:40:41 opfer Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -40,6 +40,7 @@ src_unpack() {
 	rm -rf dist/
 	# Takes javamail from system env without this
 	xml-rewrite.py -f build.xml -c -e available -a ignoresystemclasses -v "true"
+	java-pkg_filter-compiler jikes
 }
 
 src_compile() {
