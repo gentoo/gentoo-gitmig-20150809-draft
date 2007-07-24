@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-1.1.1.ebuild,v 1.2 2007/07/22 11:18:56 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-1.1.1.ebuild,v 1.3 2007/07/24 08:16:02 opfer Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -21,7 +21,7 @@ SRC_URI="http://dist.codehaus.org/${PN}/${PV}/${P}-src.tgz"
 
 LICENSE="Exolab"
 SLOT="1.0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # tests and full documentation when support will be added
@@ -69,6 +69,7 @@ src_unpack() {
 	#java-pkg_jar-from log4j
 	#java-pkg_jar-from servletapi-2.4 servlet-api.jar
 	use doc && mkdir "${S}/bin/lib"
+	java-pkg_filter-compiler jikes
 }
 
 # clean target is borked
