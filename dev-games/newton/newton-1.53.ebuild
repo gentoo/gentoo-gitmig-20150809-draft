@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/newton-1.53.ebuild,v 1.2 2007/07/22 09:48:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/newton-1.53.ebuild,v 1.3 2007/07/24 00:22:44 nyhm Exp $
+
+inherit eutils
 
 DESCRIPTION="an integrated solution for real time simulation of physics environments"
 HOMEPAGE="http://www.physicsengine.com/"
@@ -12,13 +14,11 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc"
 
-RDEPEND="doc? (
-	x11-libs/libXmu
-	x11-libs/libXi
-	virtual/opengl
-	virtual/glut )"
-
-DEPEND="${RDEPEND}"
+DEPEND="doc? (
+		virtual/opengl
+		virtual/glu
+		virtual/glut
+	)"
 
 S=${WORKDIR}/newtonSDK
 
@@ -41,12 +41,11 @@ src_unpack() {
 			tutorial_06_UtilityFuntionality/makefile \
 			tutorial_03_UsingCollisionTree/makefile \
 			|| die "failed fixing sample makefiles"
-		# This is commented out because this thing simply does not compile
-		# with lots of other CFLAGS and I've been unable to determine exactly
-		# what is causing it to fail, but even CFLAGS="-O2" fails.
-#		sed -i \
-#			-e "s:^FLAGS = -g -O0 -c -Wall:FLAGS = ${CFLAGS}:" \
-#			makefile
+		sed -i \
+			-e "/^FLAGS =/s:-g -O0:${CFLAGS}:" \
+			makefile \
+			|| die "sed makefile failed"
+		epatch "${FILESDIR}"/${P}-glut.patch
 	fi
 }
 
@@ -54,27 +53,22 @@ src_compile() {
 	if use doc; then
 		cd samples
 		emake || die "emake samples failed"
+		rm -f */*.elf */*.o
 	fi
 }
 
 src_install() {
-	dolib sdk/libNewton.a
+	dolib.a sdk/libNewton.a || die "dolib.a failed"
 	insinto /usr/include
-	doins sdk/Newton.h
+	doins sdk/Newton.h || die "doins failed"
 
 	if use doc; then
-		find samples -name \*.elf | xargs rm
-		find samples -name \*.o | xargs rm
-
 		insinto /usr/share/${PN}
-		doins -r `ls --ignore=bin samples/*`
+		doins -r samples/* || die "doins samples failed"
 
 		exeinto /usr/share/${PN}/bin
-		dobin samples/bin/tutorial_*
+		doexe samples/bin/tutorial_* || die "doexe failed"
 	fi
 
-	chmod -x doc/*
 	dodoc doc/*
-
-	prepgamesdirs
 }
