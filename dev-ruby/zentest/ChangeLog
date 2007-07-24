@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.15 2007/06/04 21:03:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.16 2007/07/24 07:27:19 graaff Exp $
+
+*zentest-3.6.1 (24 Jul 2007)
+
+  24 Jul 2007; Hans de Graaff <graaff@gentoo.org> -zentest-3.4.3.ebuild,
+  -zentest-3.5.2.ebuild, +zentest-3.6.1.ebuild:
+  Version bump with minor enhancements; remove older versions that won't be
+  promoted to stable
 
 *zentest-3.6.0 (04 Jun 2007)
 
