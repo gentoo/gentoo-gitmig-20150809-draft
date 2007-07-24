@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/abcde
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.31 2007/07/13 01:34:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.32 2007/07/24 15:05:41 beandog Exp $
+
+*abcde-2.3.99.7_p235 (24 Jul 2007)
+
+  24 Jul 2007; Steve Dibb <beandog@gentoo.org> +abcde-2.3.99.7_p235.ebuild:
+  Version bump from Subversion, bug 171360
 
 *abcde-2.3.3-r1 (13 Jul 2007)
 
