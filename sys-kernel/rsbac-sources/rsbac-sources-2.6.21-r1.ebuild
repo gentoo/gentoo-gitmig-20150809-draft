@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.6.21-r1.ebuild,v 1.1 2007/07/19 11:01:59 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.6.21-r1.ebuild,v 1.2 2007/07/24 09:47:12 kang Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base"
@@ -19,7 +19,7 @@ UNIPATCH_LIST="${DISTDIR}/rsbac-patches-${HGPV}.extras.tar.bz2"
 DESCRIPTION="RSBAC Hardened sources for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 
 SRC_URI="${KERNEL_URI} ${HGPV_URI} ${GENPATCHES_URI} ${ARCH_URI}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 K_EXTRAEINFO="Guides are available from the Gentoo Documentation Project for
 this kernel.
