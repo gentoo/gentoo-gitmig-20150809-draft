@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/peksystray
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.16 2007/07/22 03:52:10 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.17 2007/07/24 00:46:55 omp Exp $
+
+*peksystray-0.4.0 (24 Jul 2007)
+
+  24 Jul 2007; David Shakaryan <omp@gentoo.org> +peksystray-0.4.0.ebuild:
+  Version bump. (bug #169278)
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> peksystray-0.2.1.ebuild,
   peksystray-0.3.0.ebuild:
