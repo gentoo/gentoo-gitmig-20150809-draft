@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.0-r1.ebuild,v 1.2 2007/07/15 02:36:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.0-r1.ebuild,v 1.3 2007/07/24 20:08:57 lavajoe Exp $
 
 inherit eutils elisp-common wxwidgets
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
 
 LICENSE="gnuplot"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc emacs gd ggi tetex pdf plotutils png readline svga wxwindows X xemacs"
 
 RDEPEND="
