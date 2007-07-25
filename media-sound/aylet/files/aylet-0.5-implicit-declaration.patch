@@ -1,0 +1,11 @@
+diff -ur aylet-0.5.orig/ui.c aylet-0.5/ui.c
+--- aylet-0.5.orig/ui.c	2003-11-27 21:42:47.000000000 +0200
++++ aylet-0.5/ui.c	2007-07-25 17:03:29.000000000 +0300
+@@ -5,6 +5,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <sys/types.h>
+ #include <signal.h>

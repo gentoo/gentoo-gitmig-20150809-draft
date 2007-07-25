@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/aylet
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.9 2006/10/30 09:28:09 flameeyes Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.10 2007/07/25 14:12:18 drac Exp $
+
+*aylet-0.5 (25 Jul 2007)
+
+  25 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/aylet-0.5-implicit-declaration.patch, +aylet-0.5.ebuild:
+  Version bump.
 
   30 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> aylet-0.3.ebuild:
   Don't die every time the gtk useflag is disabled. Thanks again to Patrick
