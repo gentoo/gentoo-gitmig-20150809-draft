@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.17 2007/07/24 04:38:42 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.18 2007/07/25 01:53:20 compnerd Exp $
+
+  25 Jul 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  tracker-0.6.0.ebuild:
+  minor stylistic cleanups and redigesting for updated tarball
 
 *tracker-0.6.0 (24 Jul 2007)
 
