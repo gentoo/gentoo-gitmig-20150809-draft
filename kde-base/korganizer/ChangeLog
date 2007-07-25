@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.72 2007/07/25 17:28:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.73 2007/07/25 18:22:45 carlo Exp $
+
+  25 Jul 2007; Carsten Lohrke <carlo@gentoo.org>
+  +korganizer-3.5.7-r1.ebuild:
+  Fix free/busy issues plus crash fix, Novell bugs 274438, 274476, KDE bugs
+  77223, 85630, 111419.
 
   25 Jul 2007; Carsten Lohrke <carlo@gentoo.org>
   -korganizer-3.5.7-r1.ebuild:
