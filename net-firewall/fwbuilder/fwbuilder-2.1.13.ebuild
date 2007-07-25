@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-2.1.10.ebuild,v 1.2 2007/05/06 09:41:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-2.1.13.ebuild,v 1.1 2007/07/25 18:43:43 r3pek Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_install() {
 	emake DDIR=${D} install || die
 	insinto /usr/share/pixmaps
 	doins src/gui/icons/firewall_64.png
-	make_desktop_entry fwbuilder21 "Firewall Builder" "/usr/share/pixmaps/firewall_64.png" "System;Qt"
+	make_desktop_entry fwbuilder "Firewall Builder" "/usr/share/pixmaps/firewall_64.png" "System;Qt"
 }
 
 pkg_postinst() {
