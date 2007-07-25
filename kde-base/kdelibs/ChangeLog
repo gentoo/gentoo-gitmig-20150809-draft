@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.469 2007/07/22 10:50:03 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.470 2007/07/25 17:09:36 carlo Exp $
+
+*kdelibs-3.5.7-r1 (25 Jul 2007)
+
+  25 Jul 2007; Carsten Lohrke <carlo@gentoo.org> +kdelibs-3.5.7-r1.ebuild:
+  Fix a problem with colon in path name, multiple kio issues, a crash fix and
+  a minor mem leak closed. Kate cursor and code folding as well as a KHTML
+  rendering fix. KDE bugs 94693, 111760, 130104, 139578, 145428, 146105 among
+  others.
 
   22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> kdelibs-3.5.5-r4.ebuild,
   kdelibs-3.5.5-r10.ebuild:
