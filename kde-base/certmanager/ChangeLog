@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/certmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.80 2007/06/07 15:02:18 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.81 2007/07/25 18:15:50 carlo Exp $
+
+*certmanager-3.5.7-r1 (25 Jul 2007)
+
+  25 Jul 2007; Carsten Lohrke <carlo@gentoo.org>
+  +certmanager-3.5.7-r1.ebuild:
+  Fix a memory leak.
 
   07 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org>
   certmanager-3.5.6.ebuild, certmanager-3.5.7.ebuild:
