@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.13 2007/07/24 08:10:35 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.14 2007/07/25 04:11:49 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,7 +27,7 @@ GLIBC_MANPAGE_VERSION="none"
 GLIBC_INFOPAGE_VERSION="none"
 
 # Gentoo patchset
-PATCH_VER="1.4"
+PATCH_VER="1.5"
 
 GENTOO_TOOLCHAIN_BASE_URI="mirror://gentoo"
 GENTOO_TOOLCHAIN_DEV_URI="http://dev.gentoo.org/~azarah/glibc/XXX http://dev.gentoo.org/~vapier/dist/XXX"
@@ -948,6 +948,10 @@ glibc_do_configure() {
 	cd "${GBUILDDIR}"
 	einfo "Configuring GLIBC for $1 with: ${myconf// /\n\t\t}"
 	"${S}"/configure ${myconf} || die "failed to configure glibc"
+
+	# since we'll be punting them for cross-compilers, and they can cause
+	# problems (ia64+static), we'll just skip building altogether
+	is_crosscompile && sed -i '1ibuild-programs = no' config.make
 }
 
 fix_lib64_symlinks() {
@@ -1082,6 +1086,13 @@ pkg_setup() {
 			eerror " Downgrading glibc is not supported and a sure way to destruction"
 			die "aborting to save your system"
 		fi
+	fi
+
+	# users have had a chance to phase themselves, time to give em the boot
+	if [[ -e ${ROOT}/etc/locale.gen ]] && [[ -e ${ROOT}/etc/locales.build ]] ; then
+		eerror "You still haven't deleted ${ROOT}/etc/locales.build."
+		eerror "Do so now after making sure ${ROOT}/etc/locale.gen is kosher."
+		die "lazy upgrader detected"
 	fi
 
 	if [[ ${CTARGET} == i386-* ]] ; then
