@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.58 2007/07/22 17:15:30 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.59 2007/07/25 19:43:36 carlo Exp $
+
+  25 Jul 2007; Carsten Lohrke <carlo@gentoo.org>
+  -krusader-1.80.0_beta1.ebuild, -krusader-1.80.0_beta2.ebuild:
+  Clean up.
 
 *krusader-1.80.0 (22 Jul 2007)
 
