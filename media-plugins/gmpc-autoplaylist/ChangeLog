@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-autoplaylist
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-autoplaylist/ChangeLog,v 1.4 2007/06/27 18:18:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-autoplaylist/ChangeLog,v 1.5 2007/07/25 12:14:48 gustavoz Exp $
+
+  25 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gmpc-autoplaylist-0.15.0.ebuild:
+  Keyworded ~ppc
 
   27 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gmpc-autoplaylist-0.15.0.ebuild:
