@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.18 2007/07/19 14:10:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.19 2007/07/25 09:14:28 opfer Exp $
+
+  25 Jul 2007; Christian Faulhammer <opfer@gentoo.org> brasero-0.5.2.ebuild:
+  stable x86, bug 185630
 
   19 Jul 2007; Christoph Mende <angelos@gentoo.org> brasero-0.5.2.ebuild:
   Stable on amd64 wrt bug #185630
