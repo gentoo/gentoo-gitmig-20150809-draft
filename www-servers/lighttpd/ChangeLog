@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.128 2007/07/20 21:08:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.129 2007/07/25 07:01:51 opfer Exp $
+
+  25 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  lighttpd-1.4.15-r1.ebuild:
+  stable x86, security bug 185442
 
   20 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   lighttpd-1.4.15-r1.ebuild:
