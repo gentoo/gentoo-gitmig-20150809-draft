@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.6.ebuild,v 1.2 2007/07/25 08:03:29 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.6.ebuild,v 1.3 2007/07/25 10:02:52 calchan Exp $
 
 inherit eutils linux-info
 
@@ -62,6 +62,9 @@ src_unpack() {
 
 	# bug 98428
 	sed -i -e "s:/usr/bin/env python:/usr/bin/python:g" hpssd.py || die "Patching hpssd.py failed"
+
+	# bug 161926, until fixed by upstream probably in 2.7.7
+	sed -i -e "s:if (!localOnly):if (1):" scan/sane/hpaio.c  || die "Patching scan/sane/hpaio.c failed"
 }
 
 src_compile() {
