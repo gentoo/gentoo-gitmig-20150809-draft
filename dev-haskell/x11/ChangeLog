@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/x11
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.1 2007/07/09 12:39:24 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.2 2007/07/25 18:38:18 dcoutts Exp $
+
+  25 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> x11-1.2.ebuild,
+  x11-1.2.1.ebuild, x11-1.2.2.ebuild:
+  Add missing x11-libs/libX11 dependency.
 
 *x11-1.2.2 (09 Jul 2007)
 *x11-1.2.1 (09 Jul 2007)

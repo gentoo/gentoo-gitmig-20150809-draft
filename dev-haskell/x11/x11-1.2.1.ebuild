@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.2.1.ebuild,v 1.1 2007/07/09 12:39:24 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.2.1.ebuild,v 1.2 2007/07/25 18:38:18 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND=">=dev-lang/ghc-6.4"
+DEPEND=">=dev-lang/ghc-6.4
+		x11-libs/libX11"
 
 S="${WORKDIR}/ghc-${GHC_PV}/libraries/${MY_PN}"
 
