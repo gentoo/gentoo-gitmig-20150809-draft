@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.3-r3.ebuild,v 1.4 2007/07/13 17:39:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.3-r3.ebuild,v 1.5 2007/07/25 20:40:51 jer Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://search.cpan.org/CPAN/authors/id/D/DG/DGOEHRIG/SDL_Perl-${PV}.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc sparc x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ~ppc sparc x86"
 IUSE="truetype mpeg"
 
 # Only enable this if you are confirming a bug in this module. The testsrequire
