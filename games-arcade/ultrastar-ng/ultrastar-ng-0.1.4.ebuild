@@ -1,12 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.1.4.ebuild,v 1.2 2007/07/06 21:26:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.1.4.ebuild,v 1.3 2007/07/25 00:10:09 nyhm Exp $
 
 inherit eutils games
 
 MY_PN=UltraStar-ng
 MY_P=${MY_PN}-${PV}
-
 DESCRIPTION="SingStar GPL clone"
 HOMEPAGE="http://sourceforge.net/projects/ultrastar-ng/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
@@ -31,9 +30,10 @@ RDEPEND=">=sci-libs/fftw-3
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
+	games_pkg_setup
 	if use opengl && ! built_with_use media-libs/libsdl opengl; then
 		eerror "opengl flag set, but libsdl wasn't build with opengl support"
 	fi
@@ -61,8 +61,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	keepdir ${GAMES_DATADIR}/${PN}/songs
+	emake DESTDIR="${D}" install || die "emake install failed"
+	keepdir "${GAMES_DATADIR}"/${PN}/songs
 	mv "${D}${GAMES_DATADIR}"/{applications,pixmaps} "${D}"/usr/share/
 	dodoc AUTHORS ChangeLog README TODO
 	prepgamesdirs
