@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-aleczapka-en/artwiz-aleczapka-en-1.3.ebuild,v 1.16 2007/07/25 17:43:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-aleczapka-en/artwiz-aleczapka-en-1.3.ebuild,v 1.17 2007/07/25 21:37:55 angelos Exp $
 
 inherit font
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/artwizaleczapka/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT=0
-KEYWORDS="alpha ~amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
