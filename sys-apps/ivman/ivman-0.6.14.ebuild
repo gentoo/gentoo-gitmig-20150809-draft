@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.14.ebuild,v 1.7 2007/07/15 14:03:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.14.ebuild,v 1.8 2007/07/25 20:54:21 angelos Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Daemon to mount/unmount devices, based on info from HAL"
 HOMEPAGE="http://ivman.sf.net"
 SRC_URI="mirror://sourceforge/ivman/${P}.tar.bz2"
 LICENSE="GPL-2 QPL"
-KEYWORDS="~amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="debug"
 SLOT="0"
 
