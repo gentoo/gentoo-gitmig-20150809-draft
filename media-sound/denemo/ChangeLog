@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/denemo
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.18 2006/10/25 14:15:26 blubb Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.19 2007/07/25 12:03:18 drac Exp $
+
+*denemo-0.7.6 (25 Jul 2007)
+
+  25 Jul 2007; Samuli Suominen <drac@gentoo.org> +denemo-0.7.6.ebuild:
+  Version bump and install denemo.png to correct pixmaps directory.
 
   25 Oct 2006; Simon Stelling <blubb@gentoo.org> denemo-0.5.9.ebuild,
   denemo-0.7.2.ebuild:
