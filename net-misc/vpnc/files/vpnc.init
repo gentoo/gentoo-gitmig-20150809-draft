@@ -1,6 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/files/vpnc.init,v 1.3 2007/07/25 11:37:29 opfer Exp $
 
 VPNDIR="/etc/vpnc"
 VPN="${SVCNAME#*.}"
@@ -43,9 +44,9 @@ start() {
 
 	local args=""
 
-	start-stop-daemon --start --exec /usr/sbin/vpnc --pidfile "${VPNPID}" \
-		-- "${VPNCONF}"
-	eend $? "Check your logs to see why startup failed"
+	start-stop-daemon --start --pidfile "${VPNPID}" --exec /usr/sbin/vpnc \
+		-- --pid-file "${VPNPID}" "${VPNCONF}" >/dev/null
+	eend $?
 }
 
 stop() {
@@ -53,5 +54,3 @@ stop() {
 	start-stop-daemon --stop --exec /usr/sbin/vpnc --pidfile "${VPNPID}"
 	eend $?
 }
-
-# vim: ts=4
