@@ -1,6 +1,12 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.50 2007/07/25 17:14:02 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.51 2007/07/25 17:36:58 hkbst Exp $
+
+*drscheme-360-r3 (25 Jul 2007)
+
+  25 Jul 2007; Marijn Schouten <hkBst@gentoo.org> +files/360p1.patch,
+  +drscheme-360-r3.ebuild:
+  add patch to fix bug 186603
 
   25 Jul 2007; Marijn Schouten <hkBst@gentoo.org> -drscheme-301-r2.ebuild,
   -drscheme-352-r2.ebuild:
