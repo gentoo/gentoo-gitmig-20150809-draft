@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.07.ebuild,v 1.1 2007/06/01 01:53:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.07.ebuild,v 1.2 2007/07/25 04:15:33 mr_bones_ Exp $
 
-inherit gnome2-utils games
+inherit eutils gnome2-utils games
 
 DESCRIPTION="Platform game about a blob and his quest to rescue MIAs from an alien invader"
 HOMEPAGE="http://www.parallelrealities.co.uk/blobWars.php"
@@ -31,6 +31,7 @@ src_unpack() {
 		-e "/GAMEPLAYMANUAL/s:index:html/index:" \
 		makefile \
 		|| die "sed failed"
+	epatch "${FILESDIR}/${P}-es.patch"
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/blobwars
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.29 2007/06/01 01:53:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.30 2007/07/25 04:15:33 mr_bones_ Exp $
+
+  25 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/blobwars-1.07-es.patch, blobwars-1.07.ebuild:
+  add es patch from Pacho Ramos (bug #180620)
 
 *blobwars-1.07 (01 Jun 2007)
 
