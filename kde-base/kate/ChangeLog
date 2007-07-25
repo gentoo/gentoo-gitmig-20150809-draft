@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.78 2007/07/10 18:45:15 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.79 2007/07/25 17:21:11 carlo Exp $
+
+  25 Jul 2007; Carsten Lohrke <carlo@gentoo.org> kate-3.5.7-r1.ebuild:
+  Use updated patch set.
 
 *kate-3.5.7-r1 (10 Jul 2007)
 
