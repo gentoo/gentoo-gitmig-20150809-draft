@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.63 2007/05/24 11:12:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.64 2007/07/25 17:16:17 carlo Exp $
+
+*kcheckpass-3.5.7 (25 Jul 2007)
+
+  25 Jul 2007; Carsten Lohrke <carlo@gentoo.org> +kcheckpass-3.5.7.ebuild:
+  Rule out possible int overflow, PAM compatibility fix.
 
   24 May 2007; Carsten Lohrke <carlo@gentoo.org> kcheckpass-3.5.6.ebuild:
   Adjust MAXKDEVER.
