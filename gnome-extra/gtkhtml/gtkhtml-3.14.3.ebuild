@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.14.0.ebuild,v 1.1 2007/03/27 13:41:27 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.14.3.ebuild,v 1.1 2007/07/25 03:33:54 leio Exp $
 
 inherit gnome2
 
@@ -25,7 +25,7 @@ RDEPEND=">=gnome-base/gail-1.1
 
 DEPEND="${RDEPEND}
 	  sys-devel/gettext
-	>=dev-util/intltool-0.35
+	>=dev-util/intltool-0.35.5
 	>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS BUGS ChangeLog NEWS README TODO"
