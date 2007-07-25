@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkcal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/ChangeLog,v 1.78 2007/05/23 02:12:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/ChangeLog,v 1.79 2007/07/25 18:24:04 carlo Exp $
+
+*libkcal-3.5.7-r1 (25 Jul 2007)
+
+  25 Jul 2007; Carsten Lohrke <carlo@gentoo.org> +libkcal-3.5.7-r1.ebuild:
+  Fix minor mem leak and KDE bug 147602.
 
 *libkcal-3.5.7 (23 May 2007)
 
