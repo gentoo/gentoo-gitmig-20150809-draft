@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.376 2007/07/22 10:43:00 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.377 2007/07/25 17:39:24 carlo Exp $
+
+*kdebase-3.5.7-r3 (25 Jul 2007)
+
+  25 Jul 2007; Carsten Lohrke <carlo@gentoo.org> +kdebase-3.5.7-r3.ebuild:
+  Couple of fxies, see the corresponding split ebuilds for more information.
 
   22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> kdebase-3.5.5-r1.ebuild,
   kdebase-3.5.5-r3.ebuild, kdebase-3.5.5-r4.ebuild, kdebase-3.5.6-r1.ebuild,
