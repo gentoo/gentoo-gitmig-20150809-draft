@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/generator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.18 2007/04/11 20:51:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.19 2007/07/25 17:01:36 nyhm Exp $
+
+*generator-0.35_p3 (25 Jul 2007)
+
+  25 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/generator-0.35_p3-configure.patch,
+  +files/generator-0.35_p3-execstacks.patch, +generator-0.35_p3.ebuild:
+  Version bump, bug #184352
 
   11 Apr 2007; Michael Sterrett <mr_bones_@gentoo.org>
   +files/generator-0.35-configure.patch,
