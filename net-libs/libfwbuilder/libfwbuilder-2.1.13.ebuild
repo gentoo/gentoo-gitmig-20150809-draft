@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-2.1.10.ebuild,v 1.1 2007/04/01 20:09:14 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-2.1.13.ebuild,v 1.1 2007/07/25 18:40:51 r3pek Exp $
 
 inherit eutils
 
-DESCRIPTION="Firewall Builder 2.0 API library and compiler framework"
+DESCRIPTION="Firewall Builder 2.1 API library and compiler framework"
 HOMEPAGE="http://www.fwbuilder.org/"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
 
