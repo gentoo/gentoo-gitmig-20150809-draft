@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1.ebuild,v 1.3 2007/06/25 17:46:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1.ebuild,v 1.4 2007/07/25 13:15:28 markusle Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -29,6 +29,7 @@ S="${WORKDIR}/${MyPN}-lite-${PV}"
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${P}-autotool.patch
+	epatch "${FILESDIR}"/${P}-test-fix.patch
 	cd "${S}"
 	eautoreconf
 
