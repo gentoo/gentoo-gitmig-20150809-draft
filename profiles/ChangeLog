@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.550 2007/07/25 08:14:30 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.551 2007/07/25 18:41:36 dcoutts Exp $
+
+  25 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> package.mask:
+  Unmask ghc-6.6.1 and all the new modular libs. See bug #151012.
 
   25 Jul 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
   Removed mask on hplip-2.7.6 as it seems to work.
