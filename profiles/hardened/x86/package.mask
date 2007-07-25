@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/package.mask,v 1.37 2007/04/18 12:23:43 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/package.mask,v 1.38 2007/07/25 11:28:30 opfer Exp $
 
 # Markus Ullmann <jokey@gentoo.org> (18 Apr 2007)
 # mask because of b0rkage with hardened compiler, works with vanilla compiler
@@ -15,7 +15,7 @@ app-emulation/virtualbox
 # does not work with kernel 2.4, see bug #158271
 >=sys-apps/iproute2-2.6.19.20061214
 # depends on above iproute2 versions
->=net-misc/vpnc-0.3.4_pre20061219
+net-misc/vpnc
 
 # Christian Faulhammer <opfer@gentoo.org> (05 Dec 2006)
 # this version is badly broken on x86, see bug #153280

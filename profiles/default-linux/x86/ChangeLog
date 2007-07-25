@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.89 2007/07/11 03:05:39 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.90 2007/07/25 11:30:16 opfer Exp $
+
+  25 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  no-nptl/2.4/package.mask:
+  mask vpnc all together
 
   11 Jul 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   no-nptl/package.mask:

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.5 2007/04/18 12:23:43 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.6 2007/07/25 11:28:30 opfer Exp $
+
+  25 Jul 2007; Christian Faulhammer <opfer@gentoo.org> package.mask:
+  mask vpnc all together
 
   18 Apr 2007; Markus Ullmann <jokey@gentoo.org> package.mask:
   mask app-emulation/virtualbox for broken hardened compiler support
