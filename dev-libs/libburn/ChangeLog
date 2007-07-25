@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.10 2007/07/19 14:08:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.11 2007/07/25 09:11:34 opfer Exp $
+
+  25 Jul 2007; Christian Faulhammer <opfer@gentoo.org> libburn-0.3.6.ebuild:
+  stable x86, bug 185630
 
   19 Jul 2007; Christoph Mende <angelos@gentoo.org> libburn-0.3.6.ebuild:
   Stable on amd64 wrt bug #185630
