@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.5.ebuild,v 1.10 2007/07/25 05:14:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.5.ebuild,v 1.11 2007/07/25 14:39:32 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -92,7 +92,7 @@ pkg_setup(){
 		elog "You are enabling official branding. You may not redistribute this build"
 		elog "to any users on your network or the internet. Doing so puts yourself into"
 		elog "a legal problem with Mozilla Foundation"
-		elog "You can disable it by emerging ${PN} without the bindist USE-flag"
+		elog "You can disable it by emerging ${PN} _with_ the bindist USE-flag"
 
 	fi
 
