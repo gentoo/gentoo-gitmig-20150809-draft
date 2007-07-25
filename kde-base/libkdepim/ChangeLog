@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.76 2007/05/23 02:19:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.77 2007/07/25 18:25:36 carlo Exp $
+
+*libkdepim-3.5.7-r1 (25 Jul 2007)
+
+  25 Jul 2007; Carsten Lohrke <carlo@gentoo.org> +libkdepim-3.5.7-r1.ebuild:
+  Address completion fix, KDE bug 85539.
 
 *libkdepim-3.5.7 (23 May 2007)
 
