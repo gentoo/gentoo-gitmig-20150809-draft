@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.5.ebuild,v 1.2 2007/07/25 14:27:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.5.ebuild,v 1.3 2007/07/25 14:31:03 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,8 +27,9 @@ src_unpack() {
 src_compile() {
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} -DDRIVER_OSS" \
 		${PN} || die "emake failed."
-	use gtk && emake CC="$(tc-getCC)" \
-		CFLAGS="${CFLAGS} -DDRIVER_OSS" gtk2 || die "emake failed."
+	if use gtk; then
+		emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} -DDRIVER_OSS" gtk2 || die "emake failed."
+	fi
 }
 
 src_install() {
