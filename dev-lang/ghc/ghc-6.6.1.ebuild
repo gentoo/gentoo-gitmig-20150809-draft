@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.1.ebuild,v 1.5 2007/07/13 06:25:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.1.ebuild,v 1.6 2007/07/25 17:49:45 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -44,10 +44,6 @@ SRC_URI="!binary? ( http://haskell.org/ghc/dist/${EXTRA_SRC_URI}/${MY_P}-src.tar
 		 amd64?	( mirror://gentoo/ghc-bin-${PV}-amd64.tbz2 )
 		 ia64?	( mirror://gentoo/ghc-bin-${PV}-ia64.tbz2 )
 		 x86?	( mirror://gentoo/ghc-bin-${PV}-x86.tbz2 )"
-#		 ppc?	( mirror://gentoo/ghc-bin-${PV}-ppc.tbz2 )
-#		 alpha?	( mirror://gentoo/ghc-bin-${PV}-alpha.tbz2 )
-#		 sparc?	( mirror://gentoo/ghc-bin-${PV}-sparc.tbz2 )"
-#	"test? ( http://haskell.org/ghc/dist/${EXTRA_SRC_URI}/ghc-testsuite-${MY_PV}.tar.gz )"
 
 LICENSE="BSD"
 SLOT="0"
@@ -61,6 +57,7 @@ S="${WORKDIR}/${MY_P}"
 PROVIDE="virtual/ghc"
 
 RDEPEND="
+	!dev-lang/ghc-bin
 	>=sys-devel/gcc-2.95.3
 	>=sys-devel/binutils-2.17
 	>=dev-lang/perl-5.6.1
@@ -68,11 +65,12 @@ RDEPEND="
 	=sys-libs/readline-5*"
 
 DEPEND="${RDEPEND}
-	doc? ( !binary? (
-			~app-text/docbook-xml-dtd-4.2
-			app-text/docbook-xsl-stylesheets
-			>=dev-libs/libxslt-1.1.2
-			>=dev-haskell/haddock-0.8 ) )"
+	ghcbootstrap? (	doc? (	~app-text/docbook-xml-dtd-4.2
+							app-text/docbook-xsl-stylesheets
+							>=dev-libs/libxslt-1.1.2
+							>=dev-haskell/haddock-0.8 ) )"
+# In the ghcbootstrap case we rely on the developer having
+# >=ghc-5.04.3 on their $PATH already
 
 PDEPEND=">=dev-haskell/cabal-1.1.6.2"
 
@@ -130,23 +128,18 @@ ghc_setup_cflags() {
 	append-ghc-cflags assemble		"-Wa,--noexecstack"
 }
 
-ghc_setup_wrapper() {
-	echo '#!/bin/sh'
-	echo "GHCBIN=\"$1\";"
-	echo "TOPDIROPT=\"-B$(dirname $1)\";"
-	echo "GHC_CFLAGS=\"${GHC_CFLAGS}\";"
-	echo '# Mini-driver for GHC'
-	echo 'exec $GHCBIN $TOPDIROPT $GHC_CFLAGS ${1+"$@"}'
-}
-
 pkg_setup() {
-	if use ghcbootstrap && [[ -z $(type -P ghc) ]]; then
-		ewarn ""
-		ewarn "You requested bootstrapping,"
-		ewarn "but I could not find a ghc executable to bootstrap with"
-		ewarn ""
-		die "Could not find a ghc executable to bootstrap with"
+	if use ghcbootstrap; then
+		ewarn "You requested ghc bootstrapping, this is usually only used"
+		ewarn "by Gentoo developers to make binary .tbz2 packages for"
+		ewarn "use with the ghc ebuild's USE=\"binary\" feature."
+		use binary && \
+			die "USE=\"ghcbootstrap binary\" is not a valid combination."
+		[[ -z $(type -P ghc) ]] && \
+			die "Could not find a ghc to bootstrap with."
 	fi
+
+	use binary && GHC_PREFIX="/opt/ghc" || GHC_PREFIX="/usr"
 }
 
 src_unpack() {
@@ -161,16 +154,14 @@ src_unpack() {
 		# Move unpacked files to the expected place
 		mv "${WORKDIR}/usr" "${S}"
 
-		# Setup the ghc wrapper script
-		GHCBIN="${LOC}/$(get_libdir)/$P/$P"
-		ghc_setup_wrapper "$GHCBIN" > "${S}/usr/bin/ghc-${PV}"
-
 		# Relocate from /usr to /opt/ghc
 		sed -i -e "s|/usr|${LOC}|g" \
+			"${S}/usr/bin/ghc-${PV}" \
 			"${S}/usr/bin/ghci-${PV}" \
 			"${S}/usr/bin/ghc-pkg-${PV}" \
 			"${S}/usr/bin/hsc2hs" \
-			"${S}/usr/$(get_libdir)/ghc-${PV}/package.conf"
+			"${S}/usr/$(get_libdir)/${P}/package.conf" \
+			|| die "Relocating ghc from /usr to /opt/ghc failed"
 
 		sed -i -e "s|/usr/$(get_libdir)|${LOC}/$(get_libdir)|" \
 			"${S}/usr/bin/ghcprof"
@@ -182,22 +173,16 @@ src_unpack() {
 		echo "GHC_CFLAGS = ${GHC_CFLAGS}"      >> "${S}/driver/ghc/Makefile"
 		sed -i -e 's|$TOPDIROPT|$TOPDIROPT $GHC_CFLAGS|' "${S}/driver/ghc/ghc.sh"
 
-		# Create the setup wrapper
-		if use ghcbootstrap; then
-			# When we are bootstrapping, rely on the developer to have set a
-			# sane environment
-
-			echo -e '#!/bin/sh\nexec ghc $*' > "${T}/ghc.sh"
-		else
-			GHC_TOP="${WORKDIR}/usr/$(get_libdir)/${P}"
-			GHC_CFLAGS="" ghc_setup_wrapper "${GHC_TOP}/${P}" > "${T}/ghc.sh"
-
-			# Fix paths for workdir ghc
+		if ! use ghcbootstrap; then
+			# Relocate from /usr to ${WORKDIR}/usr
 			sed -i -e "s|/usr|${WORKDIR}/usr|g" \
-				"${GHC_TOP}/package.conf"
+				"${WORKDIR}/usr/bin/ghc-${PV}" \
+				"${WORKDIR}/usr/bin/ghci-${PV}" \
+				"${WORKDIR}/usr/bin/ghc-pkg-${PV}" \
+				"${WORKDIR}/usr/bin/hsc2hs" \
+				"${WORKDIR}/usr/$(get_libdir)/${P}/package.conf" \
+				|| die "Relocating ghc from /usr to workdir failed"
 		fi
-
-		chmod +x "${T}/ghc.sh"
 
 		# If we're using the testsuite then move it to into the build tree
 		#	use test && mv "${WORKDIR}/testsuite" "${S}/"
@@ -231,13 +216,14 @@ src_compile() {
 		#	echo "SplitObjs       = NO" >> mk/build.mk
 		#fi
 
-		# determine what to do with documentation
-		if use doc; then
-		  echo XMLDocWays="html" >> mk/build.mk
+		# We can't depend on haddock except when bootstrapping when we
+		# must build docs and include them into the binary .tbz2 package
+		if use ghcbootstrap && use doc; then
+			echo XMLDocWays="html" >> mk/build.mk
 		else
-		  echo XMLDocWays="" >> mk/build.mk
-		  # needed to prevent haddock from being called
-		  echo NO_HADDOCK_DOCS=YES >> mk/build.mk
+			echo XMLDocWays="" >> mk/build.mk
+			# needed to prevent haddock from being called
+			echo NO_HADDOCK_DOCS=YES >> mk/build.mk
 		fi
 
 		# circumvent a very strange bug that seems related with ghc producing too much
@@ -248,68 +234,75 @@ src_compile() {
 		# GHC build system knows to build unregisterised on alpha and hppa,
 		# but we have to tell it to build unregisterised on some other arches
 		if use ppc64 || use sparc; then
-		  echo "GhcUnregisterised=YES" >> mk/build.mk
-		  echo "GhcWithNativeCodeGen=NO" >> mk/build.mk
-		  echo "GhcWithInterpreter=NO" >> mk/build.mk
-		  echo "SplitObjs=NO" >> mk/build.mk
-		  echo "GhcRTSWays := debug" >> mk/build.mk
-		  echo "GhcNotThreaded=YES" >> mk/build.mk
+			echo "GhcUnregisterised=YES" >> mk/build.mk
+			echo "GhcWithNativeCodeGen=NO" >> mk/build.mk
+			echo "GhcWithInterpreter=NO" >> mk/build.mk
+			echo "SplitObjs=NO" >> mk/build.mk
+			echo "GhcRTSWays := debug" >> mk/build.mk
+			echo "GhcNotThreaded=YES" >> mk/build.mk
 		fi
 
-		econf \
-		  --with-ghc="${T}/ghc.sh" \
-		  || die "econf failed"
+		# Get ghc from the unpacked binary .tbz2
+		# except when bootstrapping we just pick ghc up off the path
+		use ghcbootstrap || \
+			export PATH="${WORKDIR}/usr/bin:${PATH}"
 
-		emake all datadir="/usr/share/doc/${PF}" || die "make failed"
+		econf || die "econf failed"
+
+		emake all datadir="/usr/share/doc/${P}" || die "make failed"
 		# the explicit datadir is required to make the haddock entries
 		# in the package.conf file point to the right place ...
-		# TODO: is this still required ?
 
 	fi # ! use binary
 }
 
-src_install () {
+src_install() {
 	if use binary; then
-	  mkdir "${D}/opt"
-	  mv "${S}/usr" "${D}/opt/ghc"
+		mkdir "${D}/opt"
+		mv "${S}/usr" "${D}/opt/ghc"
 
-	  # Remove the docs if not requested
-	  use doc || rm -rf "${D}/opt/ghc/share/doc/${P}/html"
+		# Remove the docs if not requested
+		if ! use doc; then
+			rm -rf "${D}/opt/ghc/share/doc/${P}/html" \
+				|| die "could not remove docs (P vs PF revision mismatch?)"
+		fi
 
-	  doenvd "${FILESDIR}/10ghc"
+		doenvd "${FILESDIR}/10ghc"
 	else
-	  local insttarget
+		local insttarget="install"
 
-	  insttarget="install"
-	  use doc && insttarget="${insttarget} install-docs"
+		# We only built docs if we were bootstrapping, otherwise
+		# we copy them out of the unpacked binary .tbz2
+		if use doc; then
+			if use ghcbootstrap; then
+				insttarget="${insttarget} install-docs"
+			else
+				dohtml -A haddock -r "${WORKDIR}/usr/share/doc/${P}/html/"*
+			fi
+		fi
 
-	  # the libdir0 setting is needed for amd64, and does not
-	  # harm for other arches
-	  #TODO: is this still required?
-	  emake -j1 ${insttarget} \
-		  prefix="${D}/usr" \
-		  datadir="${D}/usr/share/doc/${PF}" \
-		  infodir="${D}/usr/share/info" \
-		  mandir="${D}/usr/share/man" \
-		  libdir0="${D}/usr/$(get_libdir)" \
-		  || die "make ${insttarget} failed"
+		# the libdir0 setting is needed for amd64, and does not
+		# harm for other arches
+		#TODO: are any of these overrides still required? isn't econf enough?
+		emake -j1 ${insttarget} \
+			prefix="${D}/usr" \
+			datadir="${D}/usr/share/doc/${P}" \
+			infodir="${D}/usr/share/info" \
+			mandir="${D}/usr/share/man" \
+			libdir0="${D}/usr/$(get_libdir)" \
+			|| die "make ${insttarget} failed"
 
-	  #need to remove ${D} from ghcprof script
-	  # TODO: does this actually work?
-	  cd "${D}/usr/bin"
-	  mv ghcprof ghcprof-orig
-	  sed -e 's:$FPTOOLS_TOP_ABS:#$FPTOOLS_TOP_ABS:' ghcprof-orig > ghcprof
-	  chmod a+x ghcprof
-	  rm -f ghcprof-orig
+		cd "${S}"
+		dodoc README ANNOUNCE LICENSE VERSION
 
-	  cd "${S}"
-	  dodoc README ANNOUNCE LICENSE VERSION
+		dosbin ${FILESDIR}/ghc-updater
 
-	  dosbin ${FILESDIR}/ghc-updater
+		cp -p "${D}/${GHC_PREFIX}/$(get_libdir)/${P}/package.conf"{,.shipped} \
+			|| die "failed to copy package.conf"
 	fi
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	ghc-reregister
 	elog "If you have dev-lang/ghc-bin installed, you might"
 	elog "want to unmerge it. It is no longer needed."
@@ -334,23 +327,13 @@ pkg_postinst () {
 	ewarn "to re-merge all ghc-based Haskell libraries."
 }
 
-#src_test() {
-#	if use test; then
-#		local summary
-#		summary="${T}/testsuite-summary.txt"
-#
-#		make -C "${S}/testsuite/" boot || die "Preparing the testsuite failed"
-#		make -C "${S}/testsuite/tests/ghc-regress" \
-#				TEST_HC="${S}/ghc/compiler/stage2/ghc-inplace" \
-#				EXTRA_RUNTEST_OPTS="--output-summary=${summary}"
-#
-#		if grep -q ' 0 unexpected failures' "${summary}"; then
-#			einfo "All tests passed ok"
-#		else
-#			ewarn "Some tests failed, for a summary see: ${summary}"
-#		fi
-#	else
-#		ewarn "Sadly, due to some portage limitations you need both"
-#		ewarn "USE=test and FEATURES=test to run the ghc testsuite"
-#	fi
-#}
+pkg_prerm() {
+	# Overwrite the (potentially) modified package.conf with a copy of the
+	# original one, so that it will be removed during uninstall.
+
+	PKG="${ROOT}/${GHC_PREFIX}/$(get_libdir)/${P}/package.conf"
+
+	cp -p "${PKG}"{.shipped,}
+
+	[ -f ${PKG}.old ] && rm "${PKG}.old"
+}
