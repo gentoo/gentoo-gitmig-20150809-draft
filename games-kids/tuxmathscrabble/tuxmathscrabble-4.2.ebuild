@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-4.2.ebuild,v 1.1 2007/07/24 17:07:24 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-4.2.ebuild,v 1.2 2007/07/25 17:38:42 nyhm Exp $
 
 inherit eutils python multilib games
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	rm -f $(find . -name '*.pyc')
+	rm -rf $(find . -name '.svn')
 	mv -f ${MY_PN}/accounts .
 	sed -i "s:'/','var','games':'${GAMES_STATEDIR}':" \
 		asymptopia_0_1_0/environment.py \
