@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-ugly
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.21 2007/06/20 00:56:42 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.22 2007/07/25 22:37:51 gustavoz Exp $
+
+  25 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gst-plugins-ugly-0.10.6.ebuild:
+  Keyworded ~sparc
 
 *gst-plugins-ugly-0.10.6 (20 Jun 2007)
 
