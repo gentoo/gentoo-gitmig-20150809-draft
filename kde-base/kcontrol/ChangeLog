@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.87 2007/07/17 19:06:04 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.88 2007/07/25 17:18:39 carlo Exp $
+
+*kcontrol-3.5.7-r1 (25 Jul 2007)
+
+  25 Jul 2007; Carsten Lohrke <carlo@gentoo.org> +kcontrol-3.5.7-r1.ebuild:
+  FontConfig compatibility fix, KDE bug 146637.
 
   17 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org>
   +files/kcontrol-3.5.7-screensaver-path.patch, kcontrol-3.5.7.ebuild:
