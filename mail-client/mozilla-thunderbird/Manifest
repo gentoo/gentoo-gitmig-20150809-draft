@@ -163,10 +163,10 @@ EBUILD mozilla-thunderbird-2.0.0.4.ebuild 7904 RMD160 e85e05ee7829c0d1d29914f487
 MD5 49665fe12640c718a1f1cad496a67a49 mozilla-thunderbird-2.0.0.4.ebuild 7904
 RMD160 e85e05ee7829c0d1d29914f4879a7d1c7afe92e7 mozilla-thunderbird-2.0.0.4.ebuild 7904
 SHA256 04c3ae575f27470021e8e7383859468bb970c6db993850f4b81f2fc1bcfa0874 mozilla-thunderbird-2.0.0.4.ebuild 7904
-EBUILD mozilla-thunderbird-2.0.0.5.ebuild 7786 RMD160 c9554d1a183c00a9025ae0d5c7d99c40d7f3458d SHA1 8f06a4ba7b47c6ee14589002917a53f82eda7172 SHA256 ee780349ac2a91fd8cf1bbd18c23e7acfedd4b9fc76be679f43d202f976bdb6f
-MD5 d3d54c2e049d885836c610a3ebe7c05e mozilla-thunderbird-2.0.0.5.ebuild 7786
-RMD160 c9554d1a183c00a9025ae0d5c7d99c40d7f3458d mozilla-thunderbird-2.0.0.5.ebuild 7786
-SHA256 ee780349ac2a91fd8cf1bbd18c23e7acfedd4b9fc76be679f43d202f976bdb6f mozilla-thunderbird-2.0.0.5.ebuild 7786
+EBUILD mozilla-thunderbird-2.0.0.5.ebuild 7785 RMD160 3ce2a7eca7339ba832d3886f42728c8661eb7736 SHA1 ac2c45fe055afbfb62fa5b9141377377feaa0bd3 SHA256 710029c55094307d3dfcc9801cf7352edf196ff7d43c623e82847ab2ba6bae48
+MD5 c72c30a452c12c05c9a35db18169adfb mozilla-thunderbird-2.0.0.5.ebuild 7785
+RMD160 3ce2a7eca7339ba832d3886f42728c8661eb7736 mozilla-thunderbird-2.0.0.5.ebuild 7785
+SHA256 710029c55094307d3dfcc9801cf7352edf196ff7d43c623e82847ab2ba6bae48 mozilla-thunderbird-2.0.0.5.ebuild 7785
 MISC ChangeLog 33644 RMD160 4326ccb5792a4a832974fa874b0c3d62efbce2dc SHA1 7c349bd7a6032f701013a5bdbb6d28c9a6c12d43 SHA256 874ef61f878c8cd0245f0dd9d68f481bb5cf5244c2162d6ecc0dda97b466cfe0
 MD5 b69a6deb615297533e26363fcc36d324 ChangeLog 33644
 RMD160 4326ccb5792a4a832974fa874b0c3d62efbce2dc ChangeLog 33644
