@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.7.ebuild,v 1.2 2007/05/31 20:30:05 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.7.ebuild,v 1.3 2007/07/25 16:58:35 carlo Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 need-kde ${PV}
-LANGS="af ar az bg bn br bs ca cs cy da de el en_GB eo es et
+LANGS="af ar az bg bn br bs ca cs csb cy da de el en_GB eo es et
 eu fa fi fr fy ga gl he hi hr hu is it ja kk km ko lt lv mk
 mn ms nb nds nl nn pa pl pt pt_BR ro ru rw se sk sl sr
 sr@Latn ss sv ta tg th tr uk uz vi zh_CN zh_TW"

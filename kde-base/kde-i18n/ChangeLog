@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.134 2007/05/31 20:30:05 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.135 2007/07/25 16:58:35 carlo Exp $
+
+  25 Jul 2007; Carsten Lohrke <carlo@gentoo.org> kde-i18n-3.5.7.ebuild:
+  Kashubian was missing...
 
   31 May 2007; Wulf C. Krueger <philantrop@gentoo.org>
   kde-i18n-3.5.7.ebuild:
