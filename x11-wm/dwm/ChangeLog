@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/dwm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.25 2007/07/16 19:33:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.26 2007/07/25 21:17:51 angelos Exp $
+
+  25 Jul 2007; Christoph Mende <angelos@gentoo.org> dwm-4.2.ebuild:
+  Stable on amd64 wrt bug #185308
 
   16 Jul 2007; Markus Rothe <corsair@gentoo.org> dwm-4.2.ebuild:
   Stable on ppc64; bug #185308
