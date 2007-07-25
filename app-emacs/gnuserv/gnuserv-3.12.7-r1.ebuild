@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.7-r1.ebuild,v 1.4 2007/07/03 07:11:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.7-r1.ebuild,v 1.5 2007/07/25 18:05:09 ulm Exp $
 
 inherit elisp eutils
 
@@ -16,7 +16,6 @@ IUSE=""
 DEPEND=""
 RDEPEND="|| ( ~app-emacs/gnuserv-programs-${PV} virtual/xemacs )"
 
-SITEFILE=50${PN}-gentoo.el
 DOCS="ChangeLog README README.orig"
 
 src_unpack() {

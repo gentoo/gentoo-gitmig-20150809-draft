@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.5.ebuild,v 1.9 2005/05/03 11:42:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.5.ebuild,v 1.10 2007/07/25 18:05:09 ulm Exp $
 
 inherit elisp eutils
 
@@ -15,8 +15,6 @@ IUSE=""
 
 DEPEND="virtual/libc
 	virtual/emacs"
-
-SITEFILE=50gnuserv-gentoo.el
 
 src_compile() {
 	# bug #83112

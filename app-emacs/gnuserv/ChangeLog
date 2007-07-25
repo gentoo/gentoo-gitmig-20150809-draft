@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gnuserv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.18 2007/07/03 07:11:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.19 2007/07/25 18:05:09 ulm Exp $
+
+  25 Jul 2007; Ulrich Mueller <ulm@gentoo.org> gnuserv-3.12.5.ebuild,
+  gnuserv-3.12.7.ebuild, gnuserv-3.12.7-r1.ebuild:
+  Remove SITEFILE definition since it is the eclass default.
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   gnuserv-3.12.7-r1.ebuild:
