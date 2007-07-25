@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.34 2007/07/14 12:18:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.35 2007/07/25 15:06:49 ulm Exp $
+
+*vm-8.0.2.487 (25 Jul 2007)
+
+  25 Jul 2007; Ulrich Mueller <ulm@gentoo.org> +vm-8.0.2.487.ebuild:
+  Version bump. DESTDIR is supported now.
 
   14 Jul 2007; Ulrich Mueller <ulm@gentoo.org> vm-8.0.1.465.ebuild:
   Use "emake -j1 install" to guarantee that the installed .elc files have a
