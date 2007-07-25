@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.16.1.ebuild,v 1.4 2007/07/08 04:54:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.18.3.ebuild,v 1.1 2007/07/25 00:59:48 leio Exp $
 
 inherit gnome2
 
@@ -9,10 +9,10 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc eds"
 
-RDEPEND=">=gnome-base/gnome-desktop-2.11.92
+RDEPEND=">=gnome-base/gnome-desktop-2.12
 	>=x11-libs/gtk+-2.10
 	>=gnome-base/libglade-2.5
 	>=gnome-base/libgnome-2.13
@@ -24,22 +24,24 @@ RDEPEND=">=gnome-base/gnome-desktop-2.11.92
 	>=gnome-base/gconf-2.6.1
 	>=gnome-base/gnome-menus-2.11.1
 	>=gnome-base/libbonobo-2
-	|| ( >=dev-libs/dbus-glib-0.71
-		>=sys-apps/dbus-0.60 )
-	>=x11-libs/cairo-1.0.0
+	>=dev-libs/dbus-glib-0.71
+	x11-libs/libXau
 	media-libs/libpng
+	>=x11-libs/cairo-1.0.0
+	>=x11-libs/pango-1.15.4
 	eds? ( >=gnome-extra/evolution-data-server-1.6 )"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
-	>=app-text/gnome-doc-utils-0.3.2
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.35
+	>=app-text/gnome-doc-utils-0.3.2
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 pkg_setup() {
-	G2CONF="--disable-scrollkeeper $(use_enable eds)"
+	G2CONF="--disable-scrollkeeper $(use_enable eds) \
+			--with-in-process-applets=clock,notification-area,wncklet"
 }
 
 src_unpack() {
