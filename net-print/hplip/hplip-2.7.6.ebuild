@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.6.ebuild,v 1.1 2007/07/21 12:08:59 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.6.ebuild,v 1.2 2007/07/25 08:03:29 calchan Exp $
 
 inherit eutils linux-info
 
@@ -99,5 +99,8 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	elog "You should run hp-setup as root if you are installing hplip for the first time, and may also"
+	elog "need to run it if you are upgrading from an earlier version."
+	elog
 	elog "If your device is connected using USB, users will need to be in the lp group to access it."
 }
