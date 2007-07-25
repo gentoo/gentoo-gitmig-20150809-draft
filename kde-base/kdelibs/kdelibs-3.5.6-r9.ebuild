@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6-r9.ebuild,v 1.4 2007/07/07 13:40:09 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.6-r9.ebuild,v 1.5 2007/07/25 17:13:02 carlo Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -8,7 +8,7 @@ set-kdedir 3.5
 DESCRIPTION="KDE libraries needed by all KDE programs."
 HOMEPAGE="http://www.kde.org/"
 SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
-	mirror://gentoo/kdelibs-3.5-patchset-08.tar.bz2
+	mirror://gentoo/kdelibs-3.5-patchset-09.tar.bz2
 	mirror://gentoo/${PN}-3.5.5-seli-xinerama.patch.bz2"
 
 LICENSE="GPL-2 LGPL-2"
@@ -58,8 +58,6 @@ PDEPEND="avahi? ( kde-misc/kdnssd-avahi )"
 
 # Testing code is rather broken and merely for developer purposes, so disable it.
 RESTRICT="test"
-
-PATCHES="${FILESDIR}/kdelibs-3.5.6-utf8-fix.diff"
 
 pkg_setup() {
 	if use legacyssl ; then
