@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/aylet
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.10 2007/07/25 14:12:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.11 2007/07/25 14:27:42 drac Exp $
+
+  25 Jul 2007; Samuli Suominen <drac@gentoo.org> +files/aylet-0.5-gtk.patch,
+  -files/aylet-0.5-implicit-declaration.patch, aylet-0.5.ebuild:
+  Port to GTK+-2.0.
 
 *aylet-0.5 (25 Jul 2007)
 
