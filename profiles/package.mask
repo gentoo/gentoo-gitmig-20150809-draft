@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7521 2007/07/24 20:14:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7522 2007/07/25 08:14:30 calchan Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -43,10 +43,6 @@ x11-misc/fsv
 # Torsten Veller <tove@gentoo.org> (21 Jul 2007)
 # Masked for testing
 =app-office/gnucash-2.2.0
-
-# Denis Dupeyron <calchan@gentoo.org> (21 Jul 2007)
-# Masked for testing
-=net-print/hplip-2.7.6
 
 # Samuli Suominen <drac@gentoo.org> (20 Jul 2007)
 # Orphaned configuration files using devfsd.
