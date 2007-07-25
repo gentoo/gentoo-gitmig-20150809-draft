@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.23 2007/07/25 18:07:02 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.24 2007/07/25 18:40:29 dcoutts Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 # Maintained by: Haskell herd <haskell@gentoo.org>
