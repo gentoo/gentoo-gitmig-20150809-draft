@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.2.ebuild,v 1.3 2007/07/08 04:57:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.2.ebuild,v 1.4 2007/07/25 23:20:39 gustavoz Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -62,17 +62,16 @@ RDEPEND=">=dev-libs/glib-2.12
 	 nvtv? ( >=media-tv/nvtv-0.4.5 )
 
 	 a52? ( >=media-plugins/gst-plugins-a52dec-0.10 )
-	 !sparc? ( dvd? (
-					>=media-libs/gst-plugins-ugly-0.10
-						>=media-plugins/gst-plugins-a52dec-0.10
-						>=media-plugins/gst-plugins-dvdread-0.10
-						>=media-plugins/gst-plugins-mpeg2dec-0.10
-					)
-			 )
+	 dvd? (
+				>=media-libs/gst-plugins-ugly-0.10
+				>=media-plugins/gst-plugins-a52dec-0.10
+				>=media-plugins/gst-plugins-dvdread-0.10
+				>=media-plugins/gst-plugins-mpeg2dec-0.10
+			)
 	 !sparc? ( ffmpeg? ( >=media-plugins/gst-plugins-ffmpeg-0.10 ) )
 	 flac? ( >=media-plugins/gst-plugins-flac-0.10 )
 	 mad? ( >=media-plugins/gst-plugins-mad-0.10 )
-	 !sparc? ( mpeg? ( >=media-plugins/gst-plugins-mpeg2dec-0.10 ) )
+	 mpeg? ( >=media-plugins/gst-plugins-mpeg2dec-0.10 )
 	 ogg? ( >=media-plugins/gst-plugins-ogg-0.10 )
 	 theora? (
 				>=media-plugins/gst-plugins-ogg-0.10
