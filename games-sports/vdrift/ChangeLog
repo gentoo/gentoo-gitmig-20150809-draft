@@ -1,0 +1,11 @@
+# ChangeLog for games-sports/vdrift
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.1 2007/07/25 15:05:05 nyhm Exp $
+
+*vdrift-20070323 (25 Jul 2007)
+
+  25 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/vdrift-20070323-gcc42.patch, +metadata.xml,
+  +vdrift-20070323.ebuild:
+  Initial commit, bug #98094
+
