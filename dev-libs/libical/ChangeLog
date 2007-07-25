@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libical
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.31 2007/06/24 12:01:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.32 2007/07/25 17:26:55 jer Exp $
+
+  25 Jul 2007; Jeroen Roovers <jer@gentoo.org> libical-0.26.6.ebuild:
+  Stable for HPPA (bug #183440).
 
 *libical-0.26.7 (24 Jun 2007)
 

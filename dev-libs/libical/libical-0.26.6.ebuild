@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.26.6.ebuild,v 1.14 2007/07/12 02:25:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.26.6.ebuild,v 1.15 2007/07/25 17:26:55 jer Exp $
 
 DESCRIPTION="libical is an implementation of basic iCAL protocols"
 HOMEPAGE="http://www.aurore.net/projects/libical/"
 SRC_URI="http://www.aurore.net/projects/libical/${PN}-0.26-6.aurore.tar.bz2"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 LGPL-2 )"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="virtual/libc"
