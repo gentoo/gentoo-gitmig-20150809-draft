@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21.ebuild,v 1.10 2006/10/21 01:16:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21.ebuild,v 1.11 2007/07/25 14:52:51 armin76 Exp $
 
 inherit python
 
@@ -13,7 +13,7 @@ DEPEND="virtual/python
 	>=dev-db/libpq-7.1.3"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ia64 ppc ppc64 sparc x86"
 LICENSE="GPL-2"
 IUSE=""
 
