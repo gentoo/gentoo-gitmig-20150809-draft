@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jhead
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.58 2007/04/21 20:59:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.59 2007/07/25 18:15:43 armin76 Exp $
+
+  25 Jul 2007; Raúl Porcel <armin76@gentoo.org> jhead-2.7.ebuild:
+  alpha stable
 
   21 Apr 2007; Raúl Porcel <armin76@gentoo.org> jhead-2.7.ebuild:
   ia64 stable
