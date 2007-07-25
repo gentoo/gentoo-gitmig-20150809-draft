@@ -1,0 +1,15 @@
+# ChangeLog for app-emacs/nxml-gentoo-schemas
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.1 2007/07/25 09:45:50 opfer Exp $
+
+*nxml-gentoo-schemas-20070710 (25 Jul 2007)
+
+  25 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/81nxml-gentoo-schemas-gentoo.el, +files/book.rnc, +files/gleps.rnc,
+  +files/glsa.rnc, +files/guide.rnc, +files/metadata.rnc,
+  +files/metadoc.rnc, +files/project.rnc, +files/schemas.xml,
+  +files/staffing-needs.rnc, +files/userinfo.rnc, +metadata.xml,
+  +nxml-gentoo-schemas-20070710.ebuild:
+  initial commit from Flameeyes overlay. Prepare nxml-mode for Gentoo XML
+  schemas
+
