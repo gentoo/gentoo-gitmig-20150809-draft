@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.1.ebuild,v 1.1 2007/07/23 21:33:37 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.1.ebuild,v 1.2 2007/07/25 19:07:47 carlo Exp $
 
 inherit kde
 
