@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.71 2007/07/25 17:26:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.72 2007/07/25 17:28:16 carlo Exp $
+
+  25 Jul 2007; Carsten Lohrke <carlo@gentoo.org>
+  -korganizer-3.5.7-r1.ebuild:
+  Uh, incorrect ebuild / commit message.
 
 *korganizer-3.5.7-r1 (25 Jul 2007)
 
