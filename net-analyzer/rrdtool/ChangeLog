@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.120 2007/05/12 13:34:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.121 2007/07/25 20:32:20 gustavoz Exp $
+
+  25 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  rrdtool-1.2.23-r1.ebuild:
+  Stable on sparc wrt #186519
 
 *rrdtool-1.2.23-r1 (12 May 2007)
 
