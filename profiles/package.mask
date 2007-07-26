@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7530 2007/07/26 10:51:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7531 2007/07/26 13:58:18 hkbst Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marijn Schouten <hkBst@gentoo.org> (26 Jul 2007)
+# problems starting drscheme (segfault)
+>=dev-scheme/drscheme-370
 
 # Mike Frysinger <vapier@gentoo.org> (26 Jul 2007)
 # Unsupported upstream; doesnt build with recent tools
