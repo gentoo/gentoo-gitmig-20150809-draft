@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.22-r1.ebuild,v 1.13 2007/07/09 06:41:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.22-r1.ebuild,v 1.14 2007/07/26 18:30:21 corsair Exp $
 
 inherit distutils elisp eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://pymacs.progiciels-bpi.ca/archives/${P/pymacs/Pymacs}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ia64 ppc s390 sh x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ~hppa ia64 ppc ~ppc64 s390 sh x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND="virtual/python"
