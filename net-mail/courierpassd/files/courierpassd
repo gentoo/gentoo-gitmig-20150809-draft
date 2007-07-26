@@ -1,0 +1,14 @@
+service courierpassd
+{
+	port = 106
+	socket_type = stream
+	protocol = tcp
+	user = root
+	server = /usr/sbin/courierpassd
+	server_args = -s imap
+	wait = no
+	only_from = 127.0.0.1
+	instances = 4
+	disable = no
+}
+
