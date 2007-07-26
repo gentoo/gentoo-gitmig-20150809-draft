@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.5.ebuild,v 1.4 2007/07/08 11:02:41 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.5.ebuild,v 1.5 2007/07/26 17:07:24 wolf31o2 Exp $
 
 inherit flag-o-matic
 
@@ -92,5 +92,6 @@ src_install() {
 pkg_postinst() {
 	elog "If you wish to view images emerge:"
 	elog "media-gfx/xloadimage, media-gfx/xli or any other viewer"
-	elog "Remember to use photo-viewer option in configuration file to activate the right viewer"
+	elog "Remember to use photo-viewer option in configuration file to activate"
+	elog "the right viewer"
 }
