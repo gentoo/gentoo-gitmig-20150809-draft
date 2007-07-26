@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.102 2007/07/04 20:46:56 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.103 2007/07/26 03:02:52 aballier Exp $
+
+  26 Jul 2007; Alexis Ballier <aballier@gentoo.org> 2007.0/package.use.mask,
+  package.use.mask:
+  mask mmx and 3dnow for cinelerra-cvs, they are x86-32 only, bug #178033
 
   04 Jul 2007; Peter Weller <welp@gentoo.org>
   2006.1/no-multilib/package.mask, 2007.0/no-multilib/package.mask:
