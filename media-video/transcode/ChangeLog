@@ -1,6 +1,12 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.179 2007/07/03 21:57:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.180 2007/07/26 16:05:11 beandog Exp $
+
+*transcode-1.0.3-r1 (26 Jul 2007)
+
+  26 Jul 2007; Steve Dibb <beandog@gentoo.org>
+  +files/transcode-1.0.3-tomsmocomp-gcc4.patch, +transcode-1.0.3-r1.ebuild:
+  Fix tomsmocomp filter building against gcc4, bug 181239
 
   03 Jul 2007; Alexis Ballier <aballier@gentoo.org>
   +files/transcode-1.0.3-ffmpeg_codecs_are_not_in_public_api.patch,
