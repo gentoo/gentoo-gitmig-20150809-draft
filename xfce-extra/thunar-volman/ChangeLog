@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-volman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.20 2007/07/15 11:03:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.21 2007/07/26 13:38:12 gustavoz Exp $
+
+  26 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  thunar-volman-0.1.3_pre20070523.ebuild:
+  Stable on sparc
 
   14 Jul 2007; Raúl Porcel <armin76@gentoo.org> thunar-volman-0.1.2.ebuild,
   thunar-volman-0.1.3_pre20070523.ebuild:
