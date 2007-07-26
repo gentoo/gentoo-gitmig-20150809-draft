@@ -1,6 +1,12 @@
 # ChangeLog for media-video/cinelerra-cvs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.31 2007/07/22 08:56:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.32 2007/07/26 03:52:32 aballier Exp $
+
+*cinelerra-cvs-20070726 (26 Jul 2007)
+
+  26 Jul 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/cinelerra-cvs-swscaler.patch, +cinelerra-cvs-20070726.ebuild:
+  Version bump, adding a patch to switch to swscaler api, closing bug #185132
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   cinelerra-cvs-20070122.ebuild, cinelerra-cvs-20070607.ebuild:
