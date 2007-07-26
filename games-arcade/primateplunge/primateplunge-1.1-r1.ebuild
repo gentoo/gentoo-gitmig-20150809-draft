@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/primateplunge-1.1-r1.ebuild,v 1.1 2007/05/29 20:40:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/primateplunge-1.1-r1.ebuild,v 1.2 2007/07/26 01:47:50 nyhm Exp $
 
 inherit eutils games
 
-DESCRIPTION="Help poor Monkey navigate his way down through trecherous areas"
+DESCRIPTION="Help poor Monkey navigate his way down through treacherous areas"
 HOMEPAGE="http://www.aelius.com/primateplunge"
-SRC_URI="http://www.ecs.soton.ac.uk/~njh/primateplunge/${P}.tar.gz"
+SRC_URI="http://www.ecs.soton.ac.uk/~njh/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
@@ -17,7 +17,7 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer"
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS README TIPS
 	newicon graphics/idle.bmp ${PN}.bmp
 	make_desktop_entry ${PN} "Primate Plunge" /usr/share/pixmaps/${PN}.bmp
