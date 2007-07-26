@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/wavbreaker
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.18 2007/07/09 18:10:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.19 2007/07/26 20:26:31 drac Exp $
+
+  26 Jul 2007; Samuli Suominen <drac@gentoo.org> -wavbreaker-0.7-r1.ebuild,
+  -wavbreaker-0.8.ebuild, wavbreaker-0.8.1.ebuild:
+  Add missing USE nls, fix depends, drop unused versions.
 
 *wavbreaker-0.8.1 (09 Jul 2007)
 
