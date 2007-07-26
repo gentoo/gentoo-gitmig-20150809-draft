@@ -1,11 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.8.0.ebuild,v 1.2 2007/07/15 02:34:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.8.1.ebuild,v 1.1 2007/07/26 17:01:27 flameeyes Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
-
-inherit libtool multilib eutils pam autotools toolchain-funcs flag-o-matic
+inherit libtool multilib eutils pam toolchain-funcs flag-o-matic
 
 # BDB is internalized to get a non-threaded lib for pam_userdb.so to
 # be built with.  The runtime-only dependency on BDB suggests the user
@@ -38,9 +35,6 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}/${MY_P}-berkdb-uniquename.patch"
-	AT_M4DIR="m4" eautoreconf
 
 	elibtoolize
 }
