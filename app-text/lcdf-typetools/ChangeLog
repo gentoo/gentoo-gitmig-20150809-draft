@@ -1,0 +1,10 @@
+# ChangeLog for app-text/lcdf-typetools
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.1 2007/07/26 17:32:28 aballier Exp $
+
+*lcdf-typetools-2.65 (26 Jul 2007)
+
+  26 Jul 2007; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +lcdf-typetools-2.65.ebuild:
+  Initial import, thanks to everybody in bug #84774
+
