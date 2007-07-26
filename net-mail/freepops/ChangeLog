@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/freepops
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.34 2007/07/26 03:26:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.35 2007/07/26 07:45:58 dragonheart Exp $
+
+  26 Jul 2007; Daniel Black <dragonheart@gentoo.org>
+  -files/freepops-0.0.31-srcmake.patch,
+  -files/freepops-0.0.97-system-lua.patch,
+  -files/freepops-0.0.99-system-lua.patch, -freepops-0.0.31.ebuild,
+  -freepops-0.2.3.ebuild, -freepops-0.2.4.ebuild:
+  mega cleanout
 
   26 Jul 2007; Joseph Jezak <josejx@gentoo.org> freepops-0.2.5.ebuild:
   Marked ppc stable for bug #185651, thanks ndansmith.
