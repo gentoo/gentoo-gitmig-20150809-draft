@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.14 2007/07/25 04:11:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.15 2007/07/26 23:42:35 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -52,7 +52,7 @@ NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-"2.6.9"}
 
 [[ ${CTARGET} == hppa* ]] && NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-2.6.20}
 
-IUSE="build debug nls hardened multilib selinux glibc-omitfp profile glibc-compat20"
+IUSE="debug nls hardened multilib selinux glibc-omitfp profile glibc-compat20"
 [[ -n ${GLIBC_LT_VER} ]] && IUSE="${IUSE} nptl nptlonly"
 
 export CBUILD=${CBUILD:-${CHOST}}
@@ -906,9 +906,8 @@ glibc_do_configure() {
 
 	# Since SELinux support is only required for nscd, only enable it if:
 	# 1. USE selinux
-	# 2. ! USE build
-	# 3. only for the primary ABI on multilib systems
-	if use selinux && ! use build ; then
+	# 2. only for the primary ABI on multilib systems
+	if use selinux ; then
 		if use multilib || has_multilib_profile ; then
 			if is_final_abi ; then
 				myconf="${myconf} --with-selinux"
@@ -1058,9 +1057,9 @@ DEPEND=">=sys-devel/gcc-3.4.4
 	virtual/os-headers
 	nls? ( sys-devel/gettext )
 	>=sys-apps/portage-2.1.2
-	selinux? ( !build? ( sys-libs/libselinux ) )"
+	selinux? ( sys-libs/libselinux )"
 RDEPEND="nls? ( sys-devel/gettext )
-	selinux? ( !build? ( sys-libs/libselinux ) )"
+	selinux? ( sys-libs/libselinux )"
 
 if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 	DEPEND="${DEPEND} ${CATEGORY}/gcc"
