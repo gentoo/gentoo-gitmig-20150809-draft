@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.44 2007/03/23 14:15:09 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.45 2007/07/26 10:37:21 uberlord Exp $
+
+  26 Jul 2007; Roy Marples <uberlord@gentoo.org> ifplugd-0.28-r8.ebuild:
+  RDEPEND on baselayout-1.12, #186418 thanks to Cameron Maxwell.
 
 *ifplugd-0.28-r8 (23 Mar 2007)
 
