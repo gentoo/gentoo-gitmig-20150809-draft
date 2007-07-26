@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/noip-updater
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.22 2007/05/06 09:13:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.23 2007/07/26 11:29:54 uberlord Exp $
+
+*noip-updater-2.1.4-r1 (26 Jul 2007)
+
+  26 Jul 2007; Roy Marples <uberlord@gentoo.org>
+  +files/noip-2.1.4-daemon.patch, +noip-updater-2.1.4-r1.ebuild:
+  Daemonise properly, #185471.
 
   06 May 2007; Marius Mauch <genone@gentoo.org>
   noip-updater-2.1.1-r1.ebuild, noip-updater-2.1.3.ebuild,
