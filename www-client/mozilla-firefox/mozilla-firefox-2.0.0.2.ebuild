@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.2.ebuild,v 1.21 2007/07/26 16:24:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.2.ebuild,v 1.22 2007/07/26 16:26:17 wolf31o2 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -271,7 +271,7 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 
 	elog "Please remember to rebuild any packages that you have built"
-	elog "against firefox. Some packages might be broken by the upgrade; if this"
+	elog "against Firefox. Some packages might be broken by the upgrade; if this"
 	elog "is the case, please search at http://bugs.gentoo.org and open a new bug"
 	elog "if one does not exist. Before filing any bugs, please move or remove"
 	elog " ~/.mozilla and test with a clean profile directory."
