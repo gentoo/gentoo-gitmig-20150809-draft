@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.16.2.1.ebuild,v 1.1 2007/06/04 09:29:58 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.16.4.ebuild,v 1.1 2007/07/26 13:46:41 dragonheart Exp $
 
 inherit distutils
 
