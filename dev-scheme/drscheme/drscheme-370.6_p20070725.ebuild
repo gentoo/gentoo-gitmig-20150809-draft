@@ -1,22 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-370.6_p20070725.ebuild,v 1.1 2007/07/25 16:44:27 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-370.6_p20070725.ebuild,v 1.2 2007/07/26 14:00:00 hkbst Exp $
 
-inherit eutils multilib flag-o-matic libtool
+inherit eutils
 
-DESCRIPTION="DrScheme programming environment. Includes mzscheme."
-HOMEPAGE="http://www.plt-scheme.org/software/drscheme/"
-
-MY_PV=${PV%%_p*}
-
-SRC_URI="mirror://gentoo/plt-${MY_PV}-src-unix.tgz"
+SRC_URI="mirror://gentoo/plt-${PV%%_p*}-src-unix.tgz"
 #         http://pre.plt-scheme.org/installers/plt-${PV}-src-unix.tgz
 #         http://download.plt-scheme.org/bundles/${PV}/plt/plt-${PV}-src-unix.tgz"
 
+DESCRIPTION="DrScheme programming environment. Includes mzscheme."
+HOMEPAGE="http://www.plt-scheme.org/software/drscheme/"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="cgc backtrace cairo doc llvm opengl profile X xft xrender"
+IUSE="backtrace cairo cgc llvm opengl profile X xft xrender"
 
 RDEPEND="X? ( x11-libs/libICE
 			  x11-libs/libSM
@@ -32,7 +29,12 @@ RDEPEND="X? ( x11-libs/libICE
 
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/plt-${MY_PV}"
+S="${WORKDIR}/plt-${PV%%_p*}"
+
+src_unpack() {
+	unpack ${A}; cd "${S}"
+	sed "s,docdir=\"\${datadir}/plt/doc,docdir=\"\${datadir}/doc/${PF}," -i src/configure
+}
 
 src_compile() {
 	cd src
@@ -68,13 +70,6 @@ src_install() {
 	if use cgc; then
 		emake DESTDIR="${D}" install-cgc || die "make install-cgc failed"
 	fi
-
-	use doc && mv -f "${D}"/usr/share/plt/doc/* "${D}/usr/share/doc/${PF}/"
-	rm -rf "${D}/usr/share/plt/doc"
-
-	# needed so online help works
-	keepdir /usr/share/plt
-	dosym "/usr/share/doc/${PF}" "/usr/share/plt/doc"
 
 	if use X; then
 		newicon ../collects/icons/PLT-206.png drscheme.png
