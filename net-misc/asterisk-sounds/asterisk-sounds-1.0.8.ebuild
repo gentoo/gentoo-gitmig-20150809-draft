@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sounds/asterisk-sounds-1.0.8.ebuild,v 1.5 2006/08/02 21:57:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sounds/asterisk-sounds-1.0.8.ebuild,v 1.6 2007/07/26 22:36:19 rajiv Exp $
 
 IUSE=""
 
 DESCRIPTION="Additional sounds for Asterisk"
 HOMEPAGE="http://www.asterisk.org/"
-SRC_URI="ftp://ftp.digium.com/pub/telephony/asterisk/old-releases/${P}.tar.gz"
+SRC_URI="http://ftp.digium.com/pub/telephony/asterisk/old-releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
