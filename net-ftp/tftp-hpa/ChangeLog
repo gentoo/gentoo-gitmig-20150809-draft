@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.31 2007/05/13 17:42:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.32 2007/07/26 19:26:10 armin76 Exp $
+
+  26 Jul 2007; Raúl Porcel <armin76@gentoo.org> tftp-hpa-0.48.ebuild:
+  alpha stable
 
   13 May 2007; Steve Dibb <beandog@gentoo.org> tftp-hpa-0.48.ebuild:
   amd64 stable
