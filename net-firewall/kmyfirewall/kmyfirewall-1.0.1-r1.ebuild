@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/kmyfirewall-1.0.1-r1.ebuild,v 1.3 2007/05/22 19:23:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/kmyfirewall-1.0.1-r1.ebuild,v 1.4 2007/07/26 19:06:53 armin76 Exp $
 
 inherit kde eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/kmyfirewall/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc sparc x86"
+KEYWORDS="alpha ~amd64 ~ppc sparc x86"
 IUSE=""
 
 RDEPEND="net-firewall/iptables"
