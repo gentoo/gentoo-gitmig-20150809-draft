@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/missingh
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.5 2007/07/07 20:31:14 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.6 2007/07/26 16:38:47 dcoutts Exp $
+
+*missingh-0.18.6 (26 Jul 2007)
+
+  26 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> +missingh-0.18.6.ebuild:
+  New version.
 
   07 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> missingh-0.16.0.ebuild:
   Correct dep on quickcheck.
