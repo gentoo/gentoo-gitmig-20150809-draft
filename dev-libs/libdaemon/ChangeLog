@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.43 2007/07/22 03:36:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.44 2007/07/26 21:01:45 gustavoz Exp $
+
+  26 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  libdaemon-0.11-r1.ebuild:
+  Stable on sparc
 
   21 Jul 2007; Tom Gall <tgall@gentoo.org> libdaemon-0.11-r1.ebuild:
   stable ppc64, bug 182918
