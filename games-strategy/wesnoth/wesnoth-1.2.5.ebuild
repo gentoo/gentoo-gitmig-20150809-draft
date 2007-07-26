@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.2.5.ebuild,v 1.3 2007/07/26 01:50:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.2.5.ebuild,v 1.4 2007/07/26 07:13:42 opfer Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/wesnoth/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 sparc ~x86"
+KEYWORDS="~amd64 ppc ppc64 sparc x86"
 IUSE="dedicated editor gnome kde lite nls server tools"
 
 RDEPEND=">=media-libs/libsdl-1.2.7
