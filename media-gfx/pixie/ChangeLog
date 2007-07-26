@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/pixie
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.44 2007/07/26 14:54:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.45 2007/07/26 15:43:13 eradicator Exp $
 
   26 Jul 2007; Jeremy Huddleston <eradicator@gentoo.org>
   -pixie-2.0.2-r1.ebuild:
@@ -8,6 +8,7 @@
 
   26 Jul 2007; Jeremy Huddleston <eradicator@gentoo.org> pixie-2.2.2.ebuild:
   Removed unneccessary edos2unix.
+  Fixed doc cleanup.
 
   26 Jul 2007; Christian Faulhammer <opfer@gentoo.org> pixie-2.2.2.ebuild:
   stable x86, bug 186462
