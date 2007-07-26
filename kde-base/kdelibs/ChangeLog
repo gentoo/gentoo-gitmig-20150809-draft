@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.471 2007/07/25 17:13:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.472 2007/07/26 12:40:44 carlo Exp $
+
+*kdelibs-3.5.7-r2 (26 Jul 2007)
+*kdelibs-3.5.6-r10 (26 Jul 2007)
+
+  26 Jul 2007; Carsten Lohrke <carlo@gentoo.org> +kdelibs-3.5.6-r10.ebuild,
+  +kdelibs-3.5.7-r2.ebuild:
+  Remove sudo patch, bug #178758.
 
   25 Jul 2007; Carsten Lohrke <carlo@gentoo.org> kdelibs-3.5.6-r9.ebuild:
   Use updated patch set.
