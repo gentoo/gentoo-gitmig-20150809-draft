@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.14.ebuild,v 1.2 2007/07/02 21:42:24 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.14.ebuild,v 1.3 2007/07/26 13:05:23 jurek Exp $
 
 inherit autotools eutils fdo-mime mono multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.go-mono.com/sources/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="aspnet aspnetedit boo firefox java seamonkey subversion"
 
 RDEPEND=">=dev-lang/mono-1.1.10

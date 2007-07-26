@@ -1,93 +1,148 @@
---- configure.in.old	2007-07-02 22:59:22.000000000 +0200
-+++ configure.in	2007-07-02 22:59:44.000000000 +0200
-@@ -127,7 +127,7 @@
- AC_ARG_ENABLE(java,
- 	AC_HELP_STRING([--enable-java],
- 		[enable support for Java via ikvm [default=no]]),
--		[PKG_CHECK_MODULES(IKVM, ikvm >= $IKVM_REQUIRED_VERSION, enable_java=yes, enable_java=no)],
-+		[PKG_CHECK_MODULES(IKVM, ikvm >= $IKVM_REQUIRED_VERSION, , enable_java=no)],
- 		enable_java=no)
- AM_CONDITIONAL(ENABLE_JAVA, test x$enable_java = xyes)
- 
-@@ -135,30 +135,30 @@
- AC_ARG_ENABLE(boo,
- 	AC_HELP_STRING([--enable-boo],
- 		[enable support for boo [default=no]]),
--		[PKG_CHECK_MODULES(BOO, boo >= $BOO_REQUIRED_VERSION, enable_boo=yes, enable_boo=no)],
--		enable_boo=no)
--
--AM_CONDITIONAL(ENABLE_BOO, test x$enable_boo = xyes)
--AC_SUBST(BOO_LIBS)
-+		, enable_boo=no)
- 
- if test "x$enable_boo" = "xyes" ; then
-+	PKG_CHECK_MODULES(BOO, boo >= $BOO_REQUIRED_VERSION)
- 	AC_PATH_PROG(BOOC, booc)
- fi
- 
-+AM_CONDITIONAL(ENABLE_BOO, test x$enable_boo = xyes)
-+AC_SUBST(BOO_LIBS)
-+
- NEMERLE_REQUIRED_VERSION=0.9.3.99
- AC_ARG_ENABLE(nemerle,
- 	AC_HELP_STRING([--enable-nemerle],
- 		[enable support for Nemerle [default=no]]),
--		[PKG_CHECK_MODULES(NEMERLE, nemerle >= $NEMERLE_REQUIRED_VERSION, enable_nemerle=yes, enable_nemerle=no)],
--		enable_nemerle=no)
--
--AM_CONDITIONAL(ENABLE_NEMERLE, test x$enable_nemerle = xyes)
--AC_SUBST(NEMERLE_LIBS)
-+		, enable_nemerle=no)
- 
- if test "x$enable_nemerle" = "xyes" ; then
-+	PKG_CHECK_MODULES(NEMERLE, nemerle >= $NEMERLE_REQUIRED_VERSION)
- 	AC_PATH_PROG(NCC, ncc)
- fi
- 
-+AM_CONDITIONAL(ENABLE_NEMERLE, test x$enable_nemerle = xyes)
-+AC_SUBST(NEMERLE_LIBS)
-+
- AC_ARG_ENABLE(monoextensions,
- 	AC_HELP_STRING([--enable-monoextensions],
- 		[enable extensions for Mono development [default=yes]]),
-@@ -295,7 +295,7 @@
- AC_ARG_ENABLE(aspnet,
- 	AC_HELP_STRING([--enable-aspnet],
- 		[enable ASP.NET project support [default=no]]),
--		enable_aspnet=yes, enable_aspnet=no)
-+		, enable_aspnet=no)
- 
- if test "x$enable_aspnet" = "xyes"; then
- 	PKG_CHECK_MODULES(XSP, xsp >= $XSP_VERSION xsp-2 >= $XSP2_VERSION)
-@@ -323,10 +323,10 @@
- 		MOZILLA_HOME=$(grep -h GRE_PATH= /etc/gre.d/*.conf | cut -d '"' -f 2 -d = | head -n 1)
- 	elif [ $(which mozilla 2>/dev/null) ] && grep MOZILLA_FIVE_HOME= "$(which mozilla)" > /dev/null ; then
- 		MOZILLA_HOME=$(grep MOZILLA_FIVE_HOME= $(which mozilla) | cut -d '"' -f 2 | cut -d '=' -f 2 )
--	elif [ $(which firefox 2>/dev/null) ] && grep MOZILLA_FIVE_HOME= "$(which firefox)" > /dev/null ; then
--		MOZILLA_HOME=$(grep MOZILLA_FIVE_HOME= $(which firefox) | cut -d '"' -f 2 | cut -d '=' -f 2 )
- 	elif [ $(which firefox 2>/dev/null) ] && grep MOZILLA_LIBDIR= "$(which firefox)" > /dev/null ; then
--		MOZILLA_HOME=$(grep MOZILLA_LIBDIR= $(which firefox) | cut -d '"' -f 2 | cut -d '=' -f 2)
-+		MOZILLA_HOME=$(grep MOZILLA_LIBDIR= $(which firefox) | cut -d '"' -f 2 | cut -d '=' -f 2 )
-+	elif [ $(which seamonkey 2>/dev/null) ] && grep MOZILLA_LIBDIR= "$(which seamonkey)" > /dev/null ; then
-+		MOZILLA_HOME=$(grep MOZILLA_LIBDIR= $(which seamonkey) | cut -d '"' -f 2 | cut -d '=' -f 2)
- 	else
- 		if test "x$enable_aspnetedit" = "xyes"; then
- 			AC_MSG_ERROR([Cannot detect Mozilla library directory. AspNetEdit addin cannot be built.])
-@@ -342,7 +342,7 @@
- AC_ARG_ENABLE(aspnetedit,
- 	AC_HELP_STRING([--enable-aspnetedit],
- 		[enable ASP.NET visual designer support [default=no]]),
--		enable_aspnetedit=yes, enable_aspnetedit=no)
-+		, enable_aspnetedit=no)
- 
- if test "x$enable_aspnet" = "xno"; then
- 	enable_aspnetedit=no
-@@ -383,7 +383,7 @@
- 
- AC_ARG_ENABLE(update-desktopdb,
-    AC_HELP_STRING([--disable-update-desktopdb],
--                  [disable the update-desktop-database after install [default=np]]),,
-+                  [disable the update-desktop-database after install [default=no]]),,
-                   enable_update_desktopdb=yes)
-    AM_CONDITIONAL(ENABLE_UPDATE_DESKTOPDB, test x$enable_update_desktopdb = xyes)
- 
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/files/monodevelop-0.14-configure.patch,v 1.3 2007/07/26 13:05:23 jurek Exp $
+
+inherit autotools eutils fdo-mime mono multilib
+
+DESCRIPTION="Integrated Development Environemnt for .NET"
+HOMEPAGE="http://www.monodevelop.com/"
+SRC_URI="http://www.go-mono.com/sources/${PN}/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86"
+IUSE="aspnet aspnetedit boo firefox java seamonkey subversion"
+
+RDEPEND=">=dev-lang/mono-1.1.10
+		 >=dev-util/monodoc-1.0
+		 >=dev-dotnet/gtk-sharp-2.8.0
+		 >=dev-dotnet/gconf-sharp-2.4
+		 >=dev-dotnet/glade-sharp-2.4
+		 >=dev-dotnet/gnome-sharp-2.4
+		 >=dev-dotnet/gecko-sharp-0.10
+		 >=dev-dotnet/gtkhtml-sharp-2.4
+		 >=dev-dotnet/gnomevfs-sharp-2.4
+		 >=dev-dotnet/gtksourceview-sharp-0.10
+		 aspnet? ( >=dev-dotnet/xsp-1.2.1 )
+		 aspnetedit? ( dev-dotnet/jscall-sharp )
+		 boo? ( >=dev-lang/boo-0.7.6 )
+	 	 firefox? ( || ( www-client/mozilla-firefox www-client/mozilla-firefox-bin ) )
+		 java? ( || ( >=dev-dotnet/ikvm-0.14.0.1-r1 >=dev-dotnet/ikvm-bin-0.14.0.1 ) )
+		 seamonkey? ( || ( www-client/seamonkey www-client/seamonkey-bin ) )
+		 subversion? ( dev-util/subversion )"
+
+		 # Removed due to nemerle compatibility issues (bugs #158241, #168208)
+		 # nemerle? ( >=dev-lang/nemerle-0.9.3.99 <=dev-lang/nemerle-0.9.3.99.6855 )
+
+DEPEND="${RDEPEND}
+		  x11-misc/shared-mime-info
+		>=dev-util/intltool-0.35
+		>=dev-util/pkgconfig-0.19"
+
+pkg_setup() {
+	if use aspnetedit && ! use aspnet; then
+		eerror
+		eerror "You cannot install the ASP.NET Visual Designer unless you"
+		eerror "add ASP.NET support by enabling the aspnet use flag"
+		eerror
+		die
+	fi
+
+	if use aspnetedit && ! ( use firefox || use seamonkey ); then
+		eerror
+		eerror "You cannot install the ASP.NET Visual Designer unless you"
+		eerror "add support for either Mozilla Firefox or Mozilla Seamonkey"
+		eerror "web browser by enabling the firefox or seamonkey use flag"
+		eerror "respectively"
+		eerror
+		die
+	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-configure.patch
+	epatch ${FILESDIR}/${P}-aspnet-template-fix.patch
+
+	# Bundled jscall version is messed up
+	if use aspnetedit; then
+		ebegin "Fixing bundled jscall"
+		jscalldir=Extras/AspNetEdit/libs/
+		rm ${jscalldir}/jscall.dll
+		ln -s /usr/$(get_libdir)/jscall-sharp/JSCall.js ${jscalldir} \
+			|| die "ln failed"
+		ln -s /usr/$(get_libdir)/jscall-sharp/jscall.dll ${jscalldir} \
+			|| die "ln failed"
+
+		# We handle installation of aspdesigner.jar by ourselves
+		sed -i -e 's#old-install-files install-chrome-text$##g' \
+			-e 's#install-files install-manifest$##g' \
+			Extras/AspNetEdit/chrome/Makefile.am \
+			|| die "sed failed"
+		sed -i -e 's#@prefix@/lib/monodevelop/AddIns/AspNetEdit/##g' \
+			Extras/AspNetEdit/chrome/aspdesigner.manifest.in \
+			|| die "sed failed"
+		eend
+	fi
+
+	eautoreconf || die "eautoreconf failed"
+}
+
+src_compile() {
+	econf --disable-update-mimedb			\
+		  --disable-update-desktopdb		\
+		  --enable-monoextensions			\
+		  --enable-versioncontrol			\
+		  --enable-monoquery				\
+		  --disable-nemerle					\
+		  $(use_enable aspnet)				\
+		  $(use_enable aspnetedit)			\
+		  $(use_enable boo)					\
+		  $(use_enable java)				\
+		  $(use_enable subversion)			\
+	|| die "configure failed"
+
+	emake -j1 || die "make failed"
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die "install failed"
+
+	# We handle installation of aspdesigner.jar by ourselves
+	if use aspnetedit; then
+		if use firefox; then
+			insinto /usr/$(get_libdir)/mozilla-firefox/chrome
+			doins Extras/AspNetEdit/chrome/aspdesigner.{manifest,jar}
+		fi
+		if use seamonkey; then
+			insinto /usr/$(get_libdir)/seamonkey/chrome
+			doins Extras/AspNetEdit/chrome/aspdesigner.{manifest,jar}
+		fi
+	fi
+
+	dodoc ChangeLog README || die "dodoc failed"
+}
+
+pkg_postinst() {
+	fdo-mime_mime_database_update
+	fdo-mime_desktop_database_update
+
+	elog
+	elog "Nemerle support has been explicitly dropped in this release of"
+	elog "monodevelop. This happened mostly because of uncertain status of"
+	elog "bundled nemerle addin. To learn more visit:"
+	elog "http://bugs.gentoo.org/show_bug.cgi?id=168208#c31"
+	elog
+
+	if use aspnetedit; then
+		ewarn
+		ewarn "The ASP.NET visual designer bundled with MonoDevelop is still"
+		ewarn "under heavy development, so it may contain numerous bugs. In case"
+		ewarn "you encounter problems using it, before filing a bug please visit"
+		ewarn "http://bugzilla.ximian.com and check if someone has already"
+		ewarn "reported a similar issue"
+		ewarn
+	fi
+}
