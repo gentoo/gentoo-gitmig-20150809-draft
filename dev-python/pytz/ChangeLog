@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.9 2007/06/03 18:59:33 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.10 2007/07/26 18:11:45 corsair Exp $
+
+  26 Jul 2007; Markus Rothe <corsair@gentoo.org> pytz-2007f.ebuild:
+  Added ~ppc64; bug #186188
 
 *pytz-2007f (03 Jun 2007)
 

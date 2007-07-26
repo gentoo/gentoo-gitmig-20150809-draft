@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/utidylib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.5 2007/01/06 21:19:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.6 2007/07/26 18:21:23 corsair Exp $
+
+  26 Jul 2007; Markus Rothe <corsair@gentoo.org> utidylib-0.2.ebuild:
+  Added ~ppc64; bug #186188
 
   06 Jan 2007; Tiziano Müller <dev-zero@gentoo.org>
   +files/utidylib-0.2-fix_tests.patch, utidylib-0.2.ebuild:

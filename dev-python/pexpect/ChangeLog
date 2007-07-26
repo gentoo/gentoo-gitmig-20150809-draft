@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.28 2007/07/04 20:46:00 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.29 2007/07/26 18:19:42 corsair Exp $
+
+  26 Jul 2007; Markus Rothe <corsair@gentoo.org> pexpect-2.1.ebuild:
+  Added ~ppc64; bug #186188
 
   04 Jul 2007; Ali Polatel <hawking@gentoo.org> pexpect-0.97.ebuild,
   pexpect-0.999.ebuild:
