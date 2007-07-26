@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.3-r1.ebuild,v 1.1 2007/07/26 16:05:11 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.3-r1.ebuild,v 1.2 2007/07/26 16:15:17 beandog Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -56,7 +56,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-ffmpeg_codecs_are_not_in_public_api.patch"
 	epatch "${FILESDIR}/${P}-tomsmocomp-gcc4.patch"
 
-	dosed -i -e "s:\$(datadir)/doc/transcode:\$(datadir)/doc/${PF}:" \
+	sed -i -e "s:\$(datadir)/doc/transcode:\$(datadir)/doc/${PF}:" \
 		"${S}"/Makefile.am "${S}"/docs/Makefile.am "${S}"/docs/html/Makefile.am \
 		"${S}"/docs/release-notes/Makefile.am
 
