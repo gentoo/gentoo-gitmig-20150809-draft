@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.logrotate.hardened,v 1.1 2007/07/25 03:58:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.logrotate.hardened,v 1.2 2007/07/26 20:58:01 mr_bones_ Exp $
 #
 # Syslog-ng logrotate snippet for Hardened Gentoo Linux
 # contributed by Maciej Grela
@@ -58,6 +58,14 @@
 
 # Authentication
 /var/log/auth.log {
+    sharedscripts
+    postrotate
+        /etc/init.d/syslog-ng reload > /dev/null 2>&1 || true
+    endscript
+}
+
+# the rest
+/var/log/messages {
     sharedscripts
     postrotate
         /etc/init.d/syslog-ng reload > /dev/null 2>&1 || true
