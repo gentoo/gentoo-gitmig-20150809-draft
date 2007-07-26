@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/katalog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/ChangeLog,v 1.9 2007/02/16 22:02:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/ChangeLog,v 1.10 2007/07/26 01:54:41 josejx Exp $
+
+  26 Jul 2007; Joseph Jezak <josejx@gentoo.org> katalog-0.4.ebuild:
+  Marked ~ppc for bug #186622.
 
   16 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> katalog-0.4.ebuild:
   Don't abuse ROOT.
