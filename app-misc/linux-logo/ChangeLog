@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.45 2007/07/26 13:27:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.46 2007/07/26 14:20:39 gustavoz Exp $
+
+  26 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  linux-logo-4.16.ebuild:
+  Stable on sparc
 
   26 Jul 2007; Raúl Porcel <armin76@gentoo.org> linux-logo-4.16.ebuild:
   x86 stable
