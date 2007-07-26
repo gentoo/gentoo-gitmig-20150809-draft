@@ -1,17 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.3.4.ebuild,v 1.3 2007/07/25 20:12:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.3.4.ebuild,v 1.4 2007/07/26 03:43:34 drac Exp $
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="A file manager that implements the popular two-pane design based on gtk+-2"
-HOMEPAGE="http://emelfm2.net/"
-SRC_URI="http://emelfm2.net/rel/${P}.tar.gz"
+DESCRIPTION="A file manager that implements the popular two-pane design"
+HOMEPAGE="http://emelfm2.net"
+SRC_URI="http://${PN}.net/rel/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~sparc ~x86"
 IUSE="unicode fam"
+
+RESTRICT="test"
 
 DEPEND=">=x11-libs/gtk+-2.6
 		fam? ( virtual/fam )"
@@ -34,21 +36,13 @@ src_compile() {
 		myconf="${myconf} USE_FAM=0"
 	fi
 
-	# CC= looks bad with CFLAGS, instead the Makefile should be patched
-	emake \
-		ICONDIR="/usr/share/pixmaps" \
-		PREFIX="/usr" \
-		CC="$(tc-getCC) ${CFLAGS}" \
-		${myconf} || die "emake failed"
+	emake ICONDIR="/usr/share/pixmaps" \
+		PREFIX="/usr" CC="$(tc-getCC) ${CFLAGS}" \
+		${myconf} || die "emake failed."
 }
 
 src_install() {
-	dodir /usr/bin
-
-	emake \
-		ICONDIR="${D}/usr/share/pixmaps" \
-		PREFIX="${D}/usr" \
-		install || die "emake install failed"
-
+	emake ICONDIR="${D}"/usr/share/pixmaps \
+		PREFIX="${D}"/usr install || die "emake install failed."
 	prepalldocs
 }

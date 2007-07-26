@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/emelfm2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.14 2007/07/25 20:12:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.15 2007/07/26 03:43:34 drac Exp $
+
+  26 Jul 2007; Samuli Suominen <drac@gentoo.org> emelfm2-0.3.4.ebuild:
+  Restrict test and clean up.
 
   25 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> emelfm2-0.3.4.ebuild:
   Keyworded ~sparc wrt #186562
