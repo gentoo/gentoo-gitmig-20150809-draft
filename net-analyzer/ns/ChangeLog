@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ns
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.24 2007/02/20 00:23:15 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.25 2007/07/26 13:34:36 anant Exp $
+
+  26 Jul 2007; Anant Narayanan <anant@gentoo.org> metadata.xml:
+  Add myself to metadata.
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

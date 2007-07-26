@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>netmon</herd>
 	<maintainer>
-		<email>robbat2@gentoo.org</email>
+		<email>anant@gentoo.org</email>
 	</maintainer>
 	<longdescription>Network Simulator</longdescription>
 </pkgmetadata>
