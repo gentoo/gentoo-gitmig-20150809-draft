@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.3.ebuild,v 1.4 2007/06/16 00:07:50 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.3.ebuild,v 1.5 2007/07/26 17:11:31 wolf31o2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -104,8 +104,8 @@ src_install() {
 
 pkg_postinst() {
 	mp3_warning
-	elog "Note that you need to recompile *all* third-party plugins to use Audacious 1.3 builds."
-	elog "To clarify, that means all plugins *not* contained in this ebuild. Failure to do so may cause "
-	elog "the player to crash. Rebuild, and if that fails, unmerge, any third-party plugins before you "
-	elog "report a bug."
+	elog "Note that you need to recompile *all* third-party plugins to use Audacious"
+	elog "1.3 builds. To clarify, that means all plugins *not* contained in this ebuild."
+	elog "Failure to do so may cause the player to crash. Rebuild, and if that fails,"
+	elog "unmerge any third-party plugins before you report a bug."
 }
