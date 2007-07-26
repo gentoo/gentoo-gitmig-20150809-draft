@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2943 2007/07/25 17:04:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2944 2007/07/26 04:53:07 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1912,7 +1912,6 @@ sys-fs/unionfs:nfs - Adds support for NFS file system
 sys-kernel/ck-sources:ck-server - Tune the kernel for servers
 sys-kernel/gentoo-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/linux-docs:html - Install HTML documentation
-sys-kernel/linux-headers:gcc64 - Use 64-bit kernel compiler
 sys-kernel/mips-headers:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/mips-headers:ip27 - Enables support for SGI Origin (IP27)
 sys-kernel/mips-headers:ip28 - Enables support for SGI Indigo2 Impact R10000 (IP28)
