@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.6-r1.ebuild,v 1.1 2007/07/24 18:19:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.6-r1.ebuild,v 1.2 2007/07/26 17:04:59 wolf31o2 Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
@@ -138,14 +138,18 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "Due to a history of security flaws in this piece of software, it may contain more flaws."
-	ewarn "To protect yourself against malicious damage due to potential flaws in this product we recommend"
-	ewarn "you take the following security precautions when running wireshark in an untrusted environment:"
+	ewarn "Due to a history of security flaws in this piece of software, it may contain"
+	ewarn "more flaws. To protect yourself against malicious damage due to potential"
+	ewarn "flaws in this product, we recommend that you take the following security"
+	ewarn "precautions when running wireshark in an untrusted environment:"
 	ewarn "do not run any longer than you need to;"
-	ewarn "use in a root jail - prefereably one that has been hardened with grsec like rootjail protections;"
+	ewarn "use in a root jail - preferably one that has been hardened with grsec like
+	rootjail protections;"
 	ewarn "use a hardened operating system;"
 	ewarn "do not listen to addition interfaces;"
 	ewarn "if possible, run behind a firewall;"
-	ewarn "take a capture with tcpdump and analyze running wireshark as a least privileged user;"
-	ewarn "and subscribe to wireshark's announce list to be notified of newly discovered vulnerabilities."
+	ewarn "take a capture with tcpdump and analyze running wireshark as a least
+	privileged user;"
+	ewarn "and subscribe to wireshark's announce list to be notified of newly discovered
+	vulnerabilities."
 }

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.66 2007/07/24 20:11:09 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.67 2007/07/26 17:04:59 wolf31o2 Exp $
+
+  26 Jul 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  wireshark-0.99.6.ebuild, wireshark-0.99.6-r1.ebuild:
+  Cosmetic changes only... rearranged some of the post-merge output so it fits
+  properly on 80 columns.
 
   24 Jul 2007; Markus Ullmann <jokey@gentoo.org>
   -files/wireshark-0.99.5-sizet.patch, -wireshark-0.99.5.ebuild:
