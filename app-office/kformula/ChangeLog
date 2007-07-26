@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kformula
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.77 2007/07/23 16:56:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.78 2007/07/26 17:11:46 corsair Exp $
+
+  26 Jul 2007; Markus Rothe <corsair@gentoo.org> ChangeLog:
+  Stable on ppc64; bug #178697
 
   23 Jul 2007; nixnut <nixnut@gentoo.org> kformula-1.6.2.ebuild:
   Stable on ppc wrt bug 178697
