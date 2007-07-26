@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.226 2007/07/23 16:46:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.227 2007/07/26 16:55:51 corsair Exp $
+
+  26 Jul 2007; Markus Rothe <corsair@gentoo.org> koffice-1.6.3.ebuild:
+  Stable on ppc64; bug #178697
 
   23 Jul 2007; nixnut <nixnut@gentoo.org> koffice-1.6.3.ebuild:
   Stable on ppc wrt bug 178697
