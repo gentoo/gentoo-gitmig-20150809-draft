@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/hesiod
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.29 2007/07/15 08:32:55 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.30 2007/07/26 18:47:54 armin76 Exp $
+
+  26 Jul 2007; Raúl Porcel <armin76@gentoo.org> hesiod-3.0.2-r2.ebuild:
+  alpha stable
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning net-dns/hesiod to m-needed, as beu is being retired (#66608).
