@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7532 2007/07/26 19:17:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7533 2007/07/26 20:20:19 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,7 +24,6 @@
 # Ulrich Mueller <ulm@gentoo.org> (26 Jul 2007)
 # CVS snapshots, bug #185106
 =app-emacs/emacs-w3m-1.4.4_p*
-~app-emacs/emacs-w3m-1.4.4.20070704
 
 # Marijn Schouten <hkBst@gentoo.org> (26 Jul 2007)
 # problems starting drscheme (segfault)
