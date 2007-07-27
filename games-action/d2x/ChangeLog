@@ -1,9 +1,6 @@
 # ChangeLog for games-action/d2x
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.19 2007/07/27 20:32:02 mr_bones_ Exp $
-
-  27 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org> d2x-0.2.5-r3.ebuild:
-  marking stable
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.20 2007/07/27 21:01:53 mr_bones_ Exp $
 
   07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> d2x-0.2.5-r2.ebuild,
   d2x-0.2.5-r3.ebuild:
