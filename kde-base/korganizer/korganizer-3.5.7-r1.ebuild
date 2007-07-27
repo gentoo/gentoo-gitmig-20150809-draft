@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.7-r1.ebuild,v 1.5 2007/07/27 16:04:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.7-r1.ebuild,v 1.6 2007/07/27 20:17:17 mr_bones_ Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -52,7 +52,6 @@ KMEXTRA="
 	kgantt
 	kdgantt
 	kontact/plugins/korganizer/" # We add here the kontact's plugin instead of compiling it with kontact because it needs a lot of korganizer deps.
-
 
 src_unpack() {
 	kde-meta_src_unpack
