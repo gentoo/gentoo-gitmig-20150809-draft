@@ -1,6 +1,14 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.116 2007/05/06 11:58:57 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.117 2007/07/27 05:37:33 alonbl Exp $
+
+*psi-0.10-r3 (27 Jul 2007)
+
+  27 Jul 2007; Alon Bar-Lev <alonbl@gentoo.org> +files/psi-0.10-gpg2.patch,
+  +psi-0.10-r3.ebuild:
+  Fixed gpg2 issue, bug#183075.
+  net-im/troll were unavailable.
+  CC crypto if you have any issue with this fix
 
   06 May 2007; Marius Mauch <genone@gentoo.org> psi-0.10.ebuild,
   psi-0.10-r2.ebuild:
