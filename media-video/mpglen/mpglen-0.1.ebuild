@@ -1,12 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpglen/mpglen-0.1.ebuild,v 1.5 2006/03/07 16:45:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpglen/mpglen-0.1.ebuild,v 1.6 2007/07/27 04:50:47 aballier Exp $
 
-inherit toolchain-funcs flag-o-matic
-
-IUSE=""
-
-S=${WORKDIR}/${PN}
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="A program to scan through a MPEG file and count the number of GOPs and frames"
 HOMEPAGE="http://www.iamnota.net/mpglen/"
@@ -15,19 +11,23 @@ SRC_URI="http://www.iamnota.net/mpglen/${PN}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
+IUSE=""
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-
-	sed -i -e 's:gcc .* -o:$(CC) $(CFLAGS) $(LDFLAGS) -o:' ${S}/Makefile
+	cd "${S}"
+	echo 'all: mpglen' > Makefile
+	append-lfs-flags
 }
 
-src_compile () {
-	append-lfs-flags
-	emake CC="$(tc-getCC)" || die
+src_compile() {
+	tc-export CC
+	emake || die "emake failed"
 }
 
 src_install () {
 	dobin ${PN} || die
-	dodoc AUTHORS Changelog README || die
+	dodoc AUTHORS Changelog README
 }

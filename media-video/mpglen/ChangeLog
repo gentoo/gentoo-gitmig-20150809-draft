@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpglen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpglen/ChangeLog,v 1.8 2007/02/22 01:51:58 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpglen/ChangeLog,v 1.9 2007/07/27 04:50:47 aballier Exp $
+
+  27 Jul 2007; Alexis Ballier <aballier@gentoo.org> mpglen-0.1.ebuild:
+  Build fix for bug #185807, thanks to vapier
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
