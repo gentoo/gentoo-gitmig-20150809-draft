@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome2-user-docs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/ChangeLog,v 1.80 2007/07/05 16:10:06 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/ChangeLog,v 1.81 2007/07/27 06:29:57 leio Exp $
+
+*gnome2-user-docs-2.18.2 (27 Jul 2007)
+
+  27 Jul 2007; Mart Raudsepp <leio@gentoo.org>
+  +gnome2-user-docs-2.18.2.ebuild:
+  Version bump, bug 175290
 
   05 Jul 2007; Roy Marples <uberlord@gentoo.org>
   gnome2-user-docs-2.16.1.ebuild:
