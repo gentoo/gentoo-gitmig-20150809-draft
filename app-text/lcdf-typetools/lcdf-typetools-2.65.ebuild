@@ -1,7 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/lcdf-typetools-2.65.ebuild,v 1.1 2007/07/26 17:32:28 aballier Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/lcdf-typetools-2.65.ebuild,v 1.2 2007/07/27 03:26:41 mr_bones_ Exp $
 
 DESCRIPTION="Font utilities for eg manipulating OTF"
 SRC_URI="http://www.lcdf.org/type/${P}.tar.gz"
