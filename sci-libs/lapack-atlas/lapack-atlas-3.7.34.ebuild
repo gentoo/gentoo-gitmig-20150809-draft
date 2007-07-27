@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.34.ebuild,v 1.1 2007/07/24 16:20:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.34.ebuild,v 1.2 2007/07/27 03:29:39 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran versionator
 
@@ -78,7 +78,6 @@ src_unpack() {
 	compdefs="${compdefs} -C if '${FORTRANC}' -F if '${FFLAGS}'"
 	compdefs="${compdefs} -Ss pmake '\$(MAKE) ${MAKEOPTS}'"
 	compdefs="${compdefs} -Si cputhrchk 0 ${archselect}"
-
 
 	cd ${BLD_DIR} && ../configure ${compdefs} \
 		|| die "configure failed"
