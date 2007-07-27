@@ -1,7 +1,7 @@
 /*
  * Copyright 1999-2005 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.5.0.c,v 1.1 2007/05/03 05:20:39 vapier Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.5.0.c,v 1.2 2007/07/27 07:47:07 vapier Exp $
  * Author: Martin Schlemmer <azarah@gentoo.org>
  * az's lackey: Mike Frysinger <vapier@gentoo.org>
  */
@@ -130,17 +130,14 @@ static int find_target_in_envd(struct wrapper_data *data, int cross_compile)
 	char *strp = str;
 	char envd_file[MAXPATHLEN + 1];
 
-	if (!cross_compile) {
-		snprintf(envd_file, MAXPATHLEN, "%s", ENVD_BASE);
-	} else {
-		char *ctarget, *end = strrchr(data->name, '-');
-		if (end == NULL)
-			return 0;
-		ctarget = strdup(data->name);
-		ctarget[end - data->name] = '\0';
-		snprintf(envd_file, MAXPATHLEN, "%s-%s", ENVD_BASE, ctarget);
-		free(ctarget);
-	}
+	char *ctarget, *end = strrchr(data->name, '-');
+	if (end == NULL)
+		return 0;
+	ctarget = strdup(data->name);
+	ctarget[end - data->name] = '\0';
+	snprintf(envd_file, MAXPATHLEN, "%s-%s", ENVD_BASE, ctarget);
+	free(ctarget);
+
 	envfile = fopen(envd_file, "r");
 	if (envfile == NULL)
 		return 0;
@@ -344,17 +341,8 @@ int main(int argc, char *argv[])
 	 */
 	argv[0] = data.bin;
 
-	/* If this is g{cc,++}{32,64}, we need to add -m{32,64}
-	 * otherwise  we need to add ${CFLAGS_${ABI}}
-	 */
-	size = strlen(data.bin) - 2;
-	if(!strcmp(data.bin + size, "32") ) {
-		*(data.bin + size) = '\0';
-		newargv = build_new_argv(argv, "-m32");
-	} else if (!strcmp(data.bin + size, "64") ) {
-		*(data.bin + size) = '\0';
-		newargv = build_new_argv(argv, "-m64");
-	} else if(getenv("ABI")) {
+	/* If $ABI is in env, add appropriate env flags */
+	if (getenv("ABI")) {
 		char envvar[50];
 
 		/* We use CFLAGS_${ABI} for gcc, g++, g77, etc as they are
@@ -364,7 +352,7 @@ int main(int argc, char *argv[])
 
 		if (getenv(envvar)) {
 			newargv = build_new_argv(argv, getenv(envvar));
-			if(!newargv)
+			if (!newargv)
 				wrapper_exit("%s wrapper: out of memory\n", argv[0]);
 		}
 	}
