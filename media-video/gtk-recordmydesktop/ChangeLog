@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gtk-recordmydesktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gtk-recordmydesktop/ChangeLog,v 1.3 2007/07/26 15:38:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gtk-recordmydesktop/ChangeLog,v 1.4 2007/07/27 07:43:38 aballier Exp $
+
+  27 Jul 2007; Alexis Ballier <aballier@gentoo.org>
+  gtk-recordmydesktop-0.3.5.ebuild:
+  restrict test, bug #186752
 
 *gtk-recordmydesktop-0.3.5 (26 Jul 2007)
 
