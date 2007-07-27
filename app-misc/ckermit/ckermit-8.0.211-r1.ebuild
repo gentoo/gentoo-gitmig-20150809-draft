@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211-r1.ebuild,v 1.1 2007/07/27 00:05:40 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211-r1.ebuild,v 1.2 2007/07/27 03:26:22 mr_bones_ Exp $
 
 inherit versionator
 
 # Columbia University only uses the third component, e.g. cku211.tar.gz for
-# what we would call 8.0.211.  
+# what we would call 8.0.211.
 MY_P="cku$( get_version_component_range 3 ${PV} )"
 
 DESCRIPTION="combined serial and network communication software package"
