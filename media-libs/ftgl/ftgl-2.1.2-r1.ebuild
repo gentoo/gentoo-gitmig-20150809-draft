@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2-r1.ebuild,v 1.13 2007/06/15 14:19:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2-r1.ebuild,v 1.14 2007/07/27 14:48:45 seemant Exp $
 
-WANT_AUTOMAKE=1.4
+WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
 inherit eutils flag-o-matic autotools
 
