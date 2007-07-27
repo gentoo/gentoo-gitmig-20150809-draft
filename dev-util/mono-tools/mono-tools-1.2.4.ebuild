@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.2.4.ebuild,v 1.2 2007/06/23 01:48:10 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.2.4.ebuild,v 1.3 2007/07/27 22:59:31 uberlord Exp $
 
 inherit eutils mono multilib autotools
 
@@ -40,6 +40,9 @@ src_unpack() {
 	# Make the browser optional
 	epatch ${FILESDIR}/${PN}-1.1.17-html-renderer-fixes.diff
 
+	# Fix installing on FreeBSD
+	epatch ${FILESDIR}/${P}-install.patch
+
 	# Install all our .dlls under $(libdir), not $(prefix)/lib
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i -e 's:$(prefix)/lib:$(libdir):'                    \
@@ -51,7 +54,7 @@ src_unpack() {
 		|| die "sed failed"
 	fi
 
-	eautoreconf
+	eautoconf
 }
 
 src_compile() {
