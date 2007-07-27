@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/filepath
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/filepath/ChangeLog,v 1.2 2007/07/11 18:10:25 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/filepath/ChangeLog,v 1.3 2007/07/27 09:30:19 kolmodin Exp $
+
+  27 Jul 2007; Lennart Kolmodin <kolmodin@gentoo.org> filepath-1.0.ebuild:
+  Add profile USE flag and sync KEYWORDS with the overlay.
 
   11 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> filepath-1.0.ebuild:
   Marked ~ia64.
