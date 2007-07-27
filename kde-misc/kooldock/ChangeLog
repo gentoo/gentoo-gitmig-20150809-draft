@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kooldock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.22 2007/05/15 16:07:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.23 2007/07/27 19:14:29 carlo Exp $
+
+  27 Jul 2007; Carsten Lohrke <carlo@gentoo.org>
+  -files/kooldock-0.3-configure.patch,
+  -files/kooldock-0.3-fix-left-segfault.patch, -kooldock-0.3-r1.ebuild,
+  -kooldock-0.4.4.ebuild, -kooldock-0.4.5.ebuild:
+  Clean up.
 
   15 May 2007; Christian Faulhammer <opfer@gentoo.org>
   kooldock-0.4.6.ebuild:
