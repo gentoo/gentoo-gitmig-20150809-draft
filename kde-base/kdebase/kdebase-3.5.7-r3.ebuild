@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.7-r3.ebuild,v 1.1 2007/07/25 17:39:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.7-r3.ebuild,v 1.2 2007/07/27 03:27:58 mr_bones_ Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -65,7 +65,6 @@ DEPEND="${DEPEND}
 	x11-apps/xhost"
 
 need-kde 3.5.7
-
 
 pkg_setup() {
 	kde_pkg_setup
@@ -166,7 +165,6 @@ EOF
 		"${D}/${KDEDIR}/share/config/kdm/kdmrc" || die
 
 	rmdir "${D}/${KDEDIR}/share/templates/.source/emptydir"
-
 
 	if use branding ; then
 		dodir ${PREFIX}/share/services/searchproviders

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-3.5.7-r1.ebuild,v 1.2 2007/07/25 18:16:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-3.5.7-r1.ebuild,v 1.3 2007/07/27 03:27:04 mr_bones_ Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -25,4 +25,3 @@ KMCOPYLIB="libkdepim libkdepim
 KMEXTRACTONLY="libkdepim
 	kontact/interfaces"
 KMEXTRA="kontact/plugins/akregator"
-
