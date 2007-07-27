@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/tth
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tth/ChangeLog,v 1.4 2007/07/24 15:56:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tth/ChangeLog,v 1.5 2007/07/27 19:35:27 aballier Exp $
+
+*tth-3.77 (27 Jul 2007)
+
+  27 Jul 2007; Alexis Ballier <aballier@gentoo.org> +tth-3.77.ebuild:
+  bump to latest version, install latex2gif ps2gif ps2png, bug #185328
 
   24 Jul 2007; Steve Dibb <beandog@gentoo.org> tth-3.66.ebuild:
   Add ~amd64, bug 185326
