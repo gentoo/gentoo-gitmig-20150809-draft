@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/freebirth-0.3.2-r1.ebuild,v 1.3 2007/07/24 15:15:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/freebirth-0.3.2-r1.ebuild,v 1.4 2007/07/27 13:24:11 drac Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Free software bass synthesizer step sequencer"
-HOMEPAGE="http://www.bitmechanic.com/projects/freebirth"
+HOMEPAGE="http://freshmeat.net/releases/8834"
 SRC_URI="http://www.bitmechanic.com/projects/freebirth/${P}.tar.gz"
 
 LICENSE="GPL-2"
