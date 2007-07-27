@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.0.3.ebuild,v 1.2 2007/07/27 03:28:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.0.3.ebuild,v 1.3 2007/07/27 15:44:11 aballier Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="multi-track hard disk recording software"
 HOMEPAGE="http://ardour.org/"
@@ -73,6 +73,10 @@ src_compile() {
 	cd "${S}"
 
 	tc-export CC CXX
+
+	# Avoid compiling x86 asm when building on amd64 without using sse
+	# bug #186798
+	use amd64 && append-flags "-DUSE_X86_64_ASM"
 
 	scons \
 		$(ardour_use_enable DEBUG debug) \
