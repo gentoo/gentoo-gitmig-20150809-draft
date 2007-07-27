@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/glmix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glmix/ChangeLog,v 1.7 2007/02/22 00:59:45 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glmix/ChangeLog,v 1.8 2007/07/27 19:29:46 drac Exp $
+
+*glmix-0.3 (27 Jul 2007)
+
+  27 Jul 2007; Samuli Suominen <drac@gentoo.org> +glmix-0.3.ebuild:
+  Version bump.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
