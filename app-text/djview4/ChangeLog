@@ -1,0 +1,11 @@
+# ChangeLog for app-text/djview4
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.1 2007/07/27 16:30:23 aballier Exp $
+
+*djview4-4.1.2 (27 Jul 2007)
+
+  27 Jul 2007; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +djview4-4.1.2.ebuild:
+  Initial import, thanks to Stefan Talpalaru <stefantalpalaru@yahoo.com>, bug
+  #184844
+
