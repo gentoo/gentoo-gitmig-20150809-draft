@@ -1,34 +1,32 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gom/gom-0.29.103-r1.ebuild,v 1.16 2005/07/25 12:35:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gom/gom-0.29.103-r1.ebuild,v 1.17 2007/07/27 14:46:59 drac Exp $
 
-IUSE=""
+inherit toolchain-funcs
 
 DESCRIPTION="Console Mixer Program for OSS"
-SRC_URI="http://www.Fh-Worms.DE./~inf222/code/c/gom/released/${P}.tar.gz"
 HOMEPAGE="http://www.fh-worms.de/~inf222"
-
-DEPEND=">=sys-libs/ncurses-5.2"
+SRC_URI="http://www.Fh-Worms.DE./~inf222/code/c/gom/released/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc sparc x86"
+IUSE=""
+
+DEPEND=">=sys-libs/ncurses-5.2"
 
 src_compile() {
-	econf || die
-	make CFLAGS="${CFLAGS}" || die
+	econf
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed."
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
-
+	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS NEWS ChangeLog README
 	docinto examples
 	dodoc README
 	docinto examples/default
 	dodoc examples/default/*
-	docinto examples/standard
-	dodoc examples/standard/*
 	docinto examples/two-mixers
 	dodoc examples/two-mixers/*
 }

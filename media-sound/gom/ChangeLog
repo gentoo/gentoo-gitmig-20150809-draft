@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gom
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gom/ChangeLog,v 1.9 2007/02/09 07:57:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gom/ChangeLog,v 1.10 2007/07/27 14:46:59 drac Exp $
+
+  27 Jul 2007; Samuli Suominen <drac@gentoo.org> gom-0.29.103-r1.ebuild:
+  Fix digest, and clean up ebuild.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
