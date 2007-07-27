@@ -1,0 +1,12 @@
+Index: libdvdcss-1.2.9/src/dvdcss/dvdcss.h
+===================================================================
+--- libdvdcss-1.2.9.orig/src/dvdcss/dvdcss.h
++++ libdvdcss-1.2.9/src/dvdcss/dvdcss.h
+@@ -1,6 +1,6 @@
+ /**
+  * \file dvdcss.h
+- * \author Stéphane Borel <stef@via.ecp.fr>
++ * \author StÃ©phane Borel <stef@via.ecp.fr>
+  * \author Samuel Hocevar <sam@zoy.org>
+  * \brief The \e libdvdcss public header.
+  *
