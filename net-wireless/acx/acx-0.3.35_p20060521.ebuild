@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/acx-0.3.35_p20060521.ebuild,v 1.4 2007/07/15 03:28:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/acx-0.3.35_p20060521.ebuild,v 1.5 2007/07/27 06:21:23 genstef Exp $
 
 inherit linux-mod
 
@@ -21,7 +21,7 @@ RDEPEND="net-wireless/wireless-tools
 S=${WORKDIR}
 
 MODULE_NAMES="acx(net:${S})"
-CONFIG_CHECK="NET_RADIO FW_LOADER"
+CONFIG_CHECK="WIRELESS_EXT FW_LOADER"
 BUILD_TARGETS="modules"
 
 pkg_setup() {

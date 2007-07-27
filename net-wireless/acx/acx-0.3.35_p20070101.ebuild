@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/acx-0.3.35_p20070101.ebuild,v 1.2 2007/07/15 03:28:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/acx-0.3.35_p20070101.ebuild,v 1.3 2007/07/27 06:21:23 genstef Exp $
 
 inherit linux-mod
 
@@ -22,7 +22,7 @@ RDEPEND="net-wireless/wireless-tools
 S=${WORKDIR}/${PN}-${PATCHLEVEL}
 
 MODULE_NAMES="acx(net:${S})"
-CONFIG_CHECK="NET_RADIO FW_LOADER"
+CONFIG_CHECK="WIRELESS_EXT FW_LOADER"
 BUILD_TARGETS="modules"
 
 pkg_setup() {
@@ -39,6 +39,7 @@ src_unpack() {
 	if ! use debug; then
 		sed -i '/^#define ACX_DEBUG/s/2/0/' acx_config.h || die "Failed to disable debug support"
 	fi
+	kernel_is ge 2 6 22 && epatch ${FILESDIR}/${P}-2.6.22.patch 
 
 }
 

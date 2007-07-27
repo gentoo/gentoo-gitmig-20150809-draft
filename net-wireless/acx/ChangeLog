@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/acx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/ChangeLog,v 1.11 2007/02/04 15:18:39 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/ChangeLog,v 1.12 2007/07/27 06:21:23 genstef Exp $
+
+  27 Jul 2007; Stefan Schweizer <genstef@gentoo.org>
+  -files/acx-0.3.35-2.6.18.patch, +files/acx-0.3.35_p20070101-2.6.22.patch,
+  -acx-0.3.35.ebuild, acx-0.3.35_p20060521.ebuild,
+  acx-0.3.35_p20070101.ebuild:
+  CONFIG_CHECK for WIRELESS_EXT so it also works with 2.6.22 and add a 2.6.22
+  patch thanks to Thomas S. Howard <thoward1120@sbcglobal.net> in bug 185845
 
 *acx-0.3.35_p20070101 (04 Feb 2007)
 
