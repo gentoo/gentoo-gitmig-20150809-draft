@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.1_p1.ebuild,v 1.1 2007/07/27 12:17:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.1_p1.ebuild,v 1.2 2007/07/27 16:35:44 jer Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_p1/-P1}/${P/_p1/-P1}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads resolvconf urandom"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
