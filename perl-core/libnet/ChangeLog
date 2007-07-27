@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/libnet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/libnet/ChangeLog,v 1.11 2007/07/16 15:02:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/libnet/ChangeLog,v 1.12 2007/07/27 16:59:16 armin76 Exp $
+
+  27 Jul 2007; Raúl Porcel <armin76@gentoo.org> libnet-1.21.ebuild:
+  alpha/ia64/x86 stable
 
   16 Jul 2007; Michael Cummings <mcummings@gentoo.org> libnet-1.21.ebuild:
   sparc stable
