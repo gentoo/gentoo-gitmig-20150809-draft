@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.0.3.ebuild,v 1.1 2007/07/26 15:25:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.0.3.ebuild,v 1.2 2007/07/27 03:28:57 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -89,7 +89,6 @@ src_install() {
 	scons install || die "make install failed"
 
 	dodoc DOCUMENTATION/*
-
 
 	doicon "${S}/icons/icon/ardour_icon_mac.png"
 	make_desktop_entry ardour2 Ardour2 ardour_icon_mac.png AudioVideo
