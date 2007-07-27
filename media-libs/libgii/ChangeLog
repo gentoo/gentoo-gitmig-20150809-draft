@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgii
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.38 2007/06/16 01:50:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.39 2007/07/27 11:20:54 uberlord Exp $
+
+  27 Jul 2007; Roy Marples <uberlord@gentoo.org> libgii-1.0.2.ebuild:
+  Keyworded ~x86-fbsd
 
   16 Jun 2007; Christoph Mende <angelos@gentoo.org> libgii-1.0.2.ebuild:
   Stable on amd64 wrt bug 180569
