@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/qjackctl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.43 2007/07/03 11:55:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.44 2007/07/27 17:49:45 flameeyes Exp $
+
+*qjackctl-0.3.1a (27 Jul 2007)
+
+  27 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +qjackctl-0.3.1a.ebuild:
+  Version bump. this new version uses Qt 4, but still has a broken desktop file.
 
 *qjackctl-0.2.23 (03 Jul 2007)
 
