@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.65 2007/07/22 09:12:22 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.66 2007/07/27 17:56:13 lu_zero Exp $
+
+  27 Jul 2007; Luca Barbato <lu_zero@gentoo.org> files/digest-bochs-2.2.6,
+  +files/digest-bochs-2.3, Manifest:
+  Fix the unicode patchset, see bug #161083
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> bochs-2.2.6.ebuild:
   Remove virtual/x11 from dependencies.
