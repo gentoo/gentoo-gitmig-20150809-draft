@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hslogger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.2 2007/07/27 08:45:38 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.3 2007/07/27 23:46:43 dcoutts Exp $
+
+  27 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> hslogger-1.0.1.ebuild:
+  Add missing deps.
 
   27 Jul 2007; Lennart Kolmodin <kolmodin@gentoo.org> hslogger-1.0.1.ebuild:
   Add profile USE flag and fix SRC_URI.
