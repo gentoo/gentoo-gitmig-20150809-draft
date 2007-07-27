@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.4.ebuild,v 1.3 2007/07/12 04:19:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.4.ebuild,v 1.4 2007/07/27 14:19:11 uberlord Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
 
-inherit autotools eutils gnome2
+inherit autotools db-use eutils flag-o-matic gnome2
 
 DESCRIPTION="Gnome Database Access Library"
 HOMEPAGE="http://www.gnome-db.org/"
@@ -56,6 +56,7 @@ pkg_setup() {
 		$(use_with sqlite3 sqlite /usr)     \
 		$(use_with xbase xbase /usr)"
 
+	use berkdb && append-cppflags "-I$(db_includedir)"
 	use oci8 || G2CONF="${G2CONF} --without-oracle"
 
 	# not in portage

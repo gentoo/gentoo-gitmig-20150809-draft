@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-3.0.1.ebuild,v 1.2 2007/07/12 04:19:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-3.0.1.ebuild,v 1.3 2007/07/27 14:19:11 uberlord Exp $
 
 # TODO:
 # * Verify if the parallel compilation problems persist, and if so fix them.
 
-inherit gnome2
+inherit db-use flag-o-matic gnome2
 
 DESCRIPTION="Gnome Database Access Library"
 HOMEPAGE="http://www.gnome-db.org/"
@@ -53,6 +53,7 @@ pkg_setup() {
 		--without-mdb"
 #		$(use_with mdb mdb /usr)           \
 
+	use berkdb && append-cppflags "-I$(db_includedir)"
 	use oci8 || G2CONF="${G2CONF} --without-oracle"
 
 	# Not in portage
