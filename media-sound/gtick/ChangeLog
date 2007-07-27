@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gtick
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.24 2007/06/18 11:28:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.25 2007/07/27 14:44:53 gustavoz Exp $
+
+  27 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> gtick-0.3.15.ebuild:
+  Stable on sparc wrt #186804
 
   18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> gtick-0.3.15.ebuild:
   Add ~x86-fbsd keyword.
