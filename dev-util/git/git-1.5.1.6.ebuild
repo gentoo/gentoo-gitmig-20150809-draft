@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.1.6.ebuild,v 1.12 2007/06/25 04:36:12 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.1.6.ebuild,v 1.13 2007/07/27 01:29:46 robbat2 Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -9,7 +9,7 @@ MY_P="${PN}-${MY_PV}"
 
 DOC_VER=${MY_PV}
 
-DESCRIPTION="GIT - the stupid content tracker"
+DESCRIPTION="GIT - the stupid content tracker, the revision control system heavily used by the Linux kernel team"
 HOMEPAGE="http://git.or.cz/"
 SRC_URI="mirror://kernel/software/scm/git/${MY_P}.tar.bz2
 		mirror://kernel/software/scm/git/${PN}-manpages-${DOC_VER}.tar.bz2
