@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.1.0.ebuild,v 1.3 2007/07/27 16:30:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.1.0.ebuild,v 1.4 2007/07/27 17:38:01 aballier Exp $
 
 inherit eutils wxwidgets
 
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-amd64.patch
+	epatch "${FILESDIR}/${P}-asneeded.patch"
 }
 
 src_compile() {
