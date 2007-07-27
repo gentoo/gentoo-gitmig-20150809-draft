@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.83 2007/07/27 12:18:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.84 2007/07/27 14:59:02 seemant Exp $
+
+  27 Jul 2007; Seemant Kulleen <seemant@gentoo.org>
+  bind-tools-9.4.1_p1.ebuild:
+  fix the version info in the SRC_URI mangling so that the fetch succeeds
 
 *bind-tools-9.4.1_p1 (27 Jul 2007)
 
