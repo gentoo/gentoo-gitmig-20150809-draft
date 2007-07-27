@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.16.2.ebuild,v 1.12 2007/05/21 10:34:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.18.3.ebuild,v 1.1 2007/07/27 05:41:57 leio Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop, merge this package to install"
@@ -11,7 +11,7 @@ IUSE=""
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 #  Note to developers:
 #  This is a wrapper for the 'light' Gnome2 desktop,
@@ -24,48 +24,47 @@ KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 
 #	>=media-gfx/eog-2.2.1
 
-RDEPEND="!gnome-base/gnome-core
-	!gnome-base/gnome
+RDEPEND="!gnome-base/gnome
 
-	>=dev-libs/glib-2.12.4
-	>=x11-libs/gtk+-2.10.6
-	>=dev-libs/atk-1.12.3
-	>=x11-libs/pango-1.14.8
+	>=dev-libs/glib-2.12.12
+	>=x11-libs/gtk+-2.10.13
+	>=dev-libs/atk-1.18.0
+	>=x11-libs/pango-1.16.4
 
-	>=gnome-base/orbit-2.14.2
+	>=gnome-base/orbit-2.14.7
 
-	>=x11-libs/libwnck-2.16.2
-	>=x11-wm/metacity-2.16.3
+	>=x11-libs/libwnck-2.18.3
+	>=x11-wm/metacity-2.18.5
 
-	>=gnome-base/gnome-vfs-2.16.3
-	>=gnome-base/gconf-2.14.0
+	>=gnome-base/gnome-vfs-2.18.1
+	>=gnome-base/gconf-2.18.0.1
 
 	>=gnome-base/gnome-mime-data-2.4.3
 
-	>=gnome-base/libbonobo-2.16.0
-	>=gnome-base/libbonoboui-2.16.0
-	>=gnome-base/libgnome-2.16.0
-	>=gnome-base/libgnomeui-2.16.1
+	>=gnome-base/libbonobo-2.18.0
+	>=gnome-base/libbonoboui-2.18.0
+	>=gnome-base/libgnome-2.18.0
+	>=gnome-base/libgnomeui-2.18.1
 	>=gnome-base/libgnomecanvas-2.14.0
-	>=gnome-base/libglade-2.6.0
+	>=gnome-base/libglade-2.6.1
 
-	>=gnome-base/control-center-2.16.2
+	>=gnome-base/control-center-2.18.1
 
-	>=gnome-base/eel-2.16.3
-	>=gnome-base/nautilus-2.16.3
+	>=gnome-base/eel-2.18.3
+	>=gnome-base/nautilus-2.18.3
 
-	>=gnome-base/gnome-desktop-2.16.2
-	>=gnome-base/gnome-session-2.16.2
-	>=gnome-base/gnome-panel-2.16.2
+	>=gnome-base/gnome-desktop-2.18.3
+	>=gnome-base/gnome-session-2.18.3
+	>=gnome-base/gnome-panel-2.18.3
 
-	>=x11-themes/gnome-icon-theme-2.16.1
-	>=x11-themes/gnome-themes-2.16.2
+	>=x11-themes/gnome-icon-theme-2.18.0
+	>=x11-themes/gnome-themes-2.18.1
 
-	>=x11-terms/gnome-terminal-2.16.1
+	>=x11-terms/gnome-terminal-2.18.1
 
 	>=gnome-base/librsvg-2.16.1
 
-	>=gnome-extra/yelp-2.16.2"
+	>=gnome-extra/yelp-2.18.1"
 
 pkg_postinst () {
 
