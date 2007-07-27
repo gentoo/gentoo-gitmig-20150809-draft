@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.2.ebuild,v 1.5 2007/07/26 15:43:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.2.ebuild,v 1.6 2007/07/27 03:28:38 mr_bones_ Exp $
 
 inherit eutils multilib autotools
 
@@ -57,5 +57,5 @@ src_install() {
 	doins ${S}/textures/checkers.tif
 
 	dodir /usr/share/doc
-	mv ${D}/usr/doc ${D}/usr/share/doc/${PF} 
+	mv ${D}/usr/doc ${D}/usr/share/doc/${PF}
 }
