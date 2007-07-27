@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.48 2007/07/26 13:05:23 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.49 2007/07/27 11:49:39 jurek Exp $
+
+  27 Jul 2007; Jurek Bartuszek <jurek@gentoo.org>
+  files/monodevelop-0.14-configure.patch:
+  Replaced garbage in monodevelop-0.14-configure.patch with real content (fixing
+  bug #186777)
 
   26 Jul 2007; Jurek Bartuszek <jurek@gentoo.org>
   files/monodevelop-0.14-configure.patch, monodevelop-0.14.ebuild:
