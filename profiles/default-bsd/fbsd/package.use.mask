@@ -48,4 +48,7 @@ gnome-base/gnome ldap
 
 # Diego Pettenò <flameeyes@gentoo.org> (18 June 2007)
 # The tests requires JDK 1.4, we don't have it.
-=dev-java/xmlunit-1.0* test 
+=dev-java/xmlunit-1.0* test
+
+# spell causes epiphany to segfault, so disable for the time being
+www-client/epiphany spell
