@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.9.1.ebuild,v 1.2 2006/12/14 16:24:41 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.9.1.ebuild,v 1.3 2007/07/27 18:35:07 armin76 Exp $
 
 DESCRIPTION="Audio editor and live playback tool"
 HOMEPAGE="http://www.metadecks.org/software/sweep/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.metadecks.org/software/sweep/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="alsa ladspa vorbis mp3 speex"
 
 DEPEND="media-libs/libsamplerate

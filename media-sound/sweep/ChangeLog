@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sweep
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.28 2007/07/27 07:25:31 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.29 2007/07/27 18:35:07 armin76 Exp $
+
+  27 Jul 2007; Raúl Porcel <armin76@gentoo.org> sweep-0.8.3.ebuild,
+  sweep-0.9.1.ebuild, sweep-0.9.2.ebuild:
+  Drop alpha keyword, doesn't work
 
   27 Jul 2007; Christian Faulhammer <opfer@gentoo.org> sweep-0.9.2.ebuild:
   stable x86, bug 186506
