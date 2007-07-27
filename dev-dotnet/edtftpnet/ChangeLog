@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/edtftpnet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/edtftpnet/ChangeLog,v 1.2 2007/06/26 01:18:33 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/edtftpnet/ChangeLog,v 1.3 2007/07/27 07:01:29 opfer Exp $
+
+  27 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  edtftpnet-1.2.5.ebuild:
+  stable x86, bug 186684
 
   26 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> edtftpnet-1.2.5.ebuild:
   Fixed GAC symlink
