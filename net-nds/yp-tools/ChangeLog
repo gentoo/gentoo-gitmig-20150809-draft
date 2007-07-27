@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/yp-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.31 2007/06/12 04:46:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.32 2007/07/27 16:34:47 armin76 Exp $
+
+  27 Jul 2007; Raúl Porcel <armin76@gentoo.org> yp-tools-2.9.ebuild:
+  alpha stable
 
   12 Jun 2007; Jeroen Roovers <jer@gentoo.org> yp-tools-2.9.ebuild:
   Marked ~hppa (bug #181672).
