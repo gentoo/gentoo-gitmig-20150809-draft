@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/moosic
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.15 2007/02/22 01:13:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.16 2007/07/27 21:45:24 drac Exp $
+
+*moosic-1.5.4 (27 Jul 2007)
+
+  27 Jul 2007; Samuli Suominen <drac@gentoo.org> +moosic-1.5.4.ebuild:
+  Version bump to Python 2.5 compatible version, switch to distutils,
+  setuptools, and more.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
