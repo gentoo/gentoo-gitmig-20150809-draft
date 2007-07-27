@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sooperlooper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.7 2007/05/14 03:59:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.8 2007/07/27 16:30:43 drac Exp $
+
+  27 Jul 2007; Samuli Suominen <drac@gentoo.org> sooperlooper-1.1.0.ebuild:
+  Stop using upstream optimization flags and respect users. Install bundled
+  documentation. Move epatch from src_compile to src_unpack.
 
   14 May 2007; Ryan Hill <dirtyepic@gentoo.org> -sooperlooper-1.0.8c.ebuild:
   Remove old.
