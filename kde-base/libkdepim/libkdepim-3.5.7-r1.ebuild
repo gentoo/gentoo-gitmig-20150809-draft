@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-3.5.7-r1.ebuild,v 1.1 2007/07/25 18:25:36 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-3.5.7-r1.ebuild,v 1.2 2007/07/27 16:03:13 carlo Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -14,10 +14,11 @@ DESCRIPTION="common library for KDE PIM apps"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcal)
+RDEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcal)
 		!<=kde-base/kmail-3.5.6-r1"
 
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	x11-apps/xhost"
 
 KMCOPYLIB="libkcal libkcal"
 KMEXTRA="libemailfunctions/
@@ -33,6 +34,11 @@ src_unpack() {
 	kde-meta_src_unpack
 	# Call Qt 3 designer
 	sed -i -e "s:\"designer\":\"${QTDIR}/bin/designer\":g" ${S}/libkdepim/kcmdesignerfields.cpp || die "sed failed"
+
+	if ! [[ $(xhost >> /dev/null 2>/dev/null) ]] ; then
+		einfo "User ${USER} has no X access, disabling tests."
+		sed -e "s:tests::" -i libkdepim/Makefile.am || die "sed failed"
+	fi
 }
 
 src_install() {

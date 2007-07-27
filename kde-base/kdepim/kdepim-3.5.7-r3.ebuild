@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.7-r3.ebuild,v 1.1 2007/07/25 18:27:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.7-r3.ebuild,v 1.2 2007/07/27 15:59:40 carlo Exp $
 
 inherit kde-dist
 
@@ -29,7 +29,8 @@ RDEPEND="${DEPEND}
 	crypt? ( app-crypt/pinentry )"
 
 DEPEND="${DEPEND}
-	x11-proto/scrnsaverproto"
+	x11-proto/scrnsaverproto
+	x11-apps/xhost"
 
 src_unpack() {
 	kde_src_unpack
@@ -43,6 +44,14 @@ src_unpack() {
 # 		-i kitchensync/libkonnector2/Makefile.am || die "sed failed"
 # 	sed -e "s:SUBDIRS = . tests test:SUBDIRS = .:" \
 # 		-i kitchensync/libksync/Makefile.am || die "sed failed"
+
+	sed -e "s:check_PROGRAMS = testalarmdlg:check_PROGRAMS =:" \
+		-i korganizer/korgac/Makefile.am || die "sed failed"
+
+        if ! [[ $(xhost >> /dev/null 2>/dev/null) ]] ; then
+                einfo "User ${USER} has no X access, disabling some tests."
+                sed -e "s:tests::" -i libkdepim/Makefile.am || die "sed failed"
+        fi
 }
 
 src_compile() {
