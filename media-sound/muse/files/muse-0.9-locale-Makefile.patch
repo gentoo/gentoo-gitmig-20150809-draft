@@ -1,9 +1,0 @@
---- po/Makefile.orig	2004-04-18 12:37:20.000000000 -0700
-+++ po/Makefile	2004-04-18 12:37:33.000000000 -0700
-@@ -1,5 +1,5 @@
- INSTALL= /usr/bin/install -c
--INSTALLNLSDIR=$(BASEDIR)/usr/local/share/locale
-+INSTALLNLSDIR=$(DESTDIR)/usr/share/locale
- 
- PACKAGE = muse
- 
