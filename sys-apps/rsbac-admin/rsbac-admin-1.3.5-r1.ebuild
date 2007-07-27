@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.7.ebuild,v 1.1 2006/06/07 10:15:35 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.3.5-r1.ebuild,v 1.1 2007/07/27 15:03:02 kang Exp $
 
-inherit eutils libtool
+inherit eutils libtool toolchain-funcs
 
 IUSE="pam"
 
@@ -16,7 +16,7 @@ SRC_URI="http://download.rsbac.org/code/${PV}/rsbac-admin-${PV}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
-NSS="1.2.7"
+NSS="1.3.5"
 
 DEPEND="dev-util/dialog
 	pam? ( sys-libs/pam )
@@ -36,7 +36,7 @@ src_compile() {
 	use pam && {
 		rsbacmakeargs="${makeargs} pam nss"
 	}
-	emake PREFIX=/usr ${rsbacmakeargs} || die "cannot build (${rsbacmakeargs})"
+	emake PREFIX=/usr LIBDIR=/lib ${rsbacmakeargs} || die "cannot build (${rsbacmakeargs})"
 }
 
 src_install() {
@@ -45,7 +45,7 @@ src_install() {
 	use pam && {
 		rsbacinstallargs="${rsbacinstallargs} pam-install nss-install"
 	}
-	make PREFIX=/usr DESTDIR=${D} ${rsbacinstallargs} || \
+	make PREFIX=/usr LIBDIR=/lib DESTDIR=${D} ${rsbacinstallargs} || \
 	die "cannot install (${rsbacinstallargs})"
 	insinto /etc
 	newins ${FILESDIR}/rsbac.conf rsbac.conf ${FILESDIR}/nsswitch.conf
@@ -53,6 +53,12 @@ src_install() {
 	keepdir /secoff
 	dodir /var/log/rsbac
 	keepdir /var/log/rsbac
+	#FHS compliance
+	dodir /usr/lib
+	mv ${D}/lib/librsbac.la ${D}/lib/librsbac.a ${D}/usr/lib
+	mv ${D}/lib/libnss_rsbac.la ${D}/lib/libnss_rsbac.a ${D}/usr/lib
+	gen_usr_ldscript librsbac.so
+	gen_usr_ldscript libnss_rsbac.so
 }
 
 pkg_postinst() {
@@ -69,6 +75,6 @@ pkg_postinst() {
 	die "problem changing ownership of /secoff"
 	einfo "It is suggested to run (for example) a separate copy of syslog-ng to"
 	einfo "log RSBAC messages, as user audit (uid 404) instead of using the deprecated"
-	einfo "rklogd. See http://rsbac.org/documentation/administration_examples/syslog-ng"
+	einfo "rklogd. See http://www.rsbac.org/documentation/administration_examples/syslog-ng"
 	einfo "for more information."
 }
