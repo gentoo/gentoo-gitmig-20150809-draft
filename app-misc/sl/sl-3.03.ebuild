@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03.ebuild,v 1.16 2006/12/30 12:32:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03.ebuild,v 1.17 2007/07/27 22:34:37 grobian Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/sl/${PN}.tar
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 alpha sparc ppc64 ppc ppc-macos ~amd64 hppa"
+KEYWORDS="x86 alpha sparc ppc64 ppc ~amd64 hppa"
 IUSE="linguas_ja debug"
 
 DEPEND="sys-libs/ncurses"
