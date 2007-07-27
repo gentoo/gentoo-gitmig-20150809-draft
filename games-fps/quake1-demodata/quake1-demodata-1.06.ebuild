@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/quake1-demodata-1.06.ebuild,v 1.5 2007/03/12 14:47:19 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/quake1-demodata-1.06.ebuild,v 1.6 2007/07/27 23:11:38 wolf31o2 Exp $
 
 inherit eutils versionator games
 
@@ -42,7 +42,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	lha eq resource.1 || die "lha failed"
+	# File rename for bug #159100
+	mv resource.{1,x}
+
+	lha xfq resource.x || die "lha failed"
 	# Don't want to conflict with the cdinstall files
 	mv id1 demo
 }
