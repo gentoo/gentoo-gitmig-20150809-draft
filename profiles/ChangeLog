@@ -1,6 +1,12 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.551 2007/07/25 18:41:36 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.552 2007/07/27 21:31:14 wolf31o2 Exp $
+
+  27 Jul 2007; Chris Gianelloni <wolf31o2@gentoo.org> thirdpartymirrors:
+  Hopefully fixing the liflg mirrors to use both the old and new locations for
+  a short time until we can determine the correct ones for each mirror. I know
+  I should check all of these first, but I would prefer get it fixed as soon
+  as possible since I have let this sit for a while.
 
   25 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> package.mask:
   Unmask ghc-6.6.1 and all the new modular libs. See bug #151012.
