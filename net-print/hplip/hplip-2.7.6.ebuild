@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.6.ebuild,v 1.3 2007/07/25 10:02:52 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.6.ebuild,v 1.4 2007/07/28 07:50:02 calchan Exp $
 
 inherit eutils linux-info
 
@@ -106,4 +106,6 @@ pkg_postinst() {
 	elog "need to run it if you are upgrading from an earlier version."
 	elog
 	elog "If your device is connected using USB, users will need to be in the lp group to access it."
+	einfo "This release doesn't use an init script anymore, so you should probably do a"
+	einfo "'rc-update del hplip' if you are updating."
 }
