@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/vanilla-dmz-aa-xcursors
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/vanilla-dmz-aa-xcursors/ChangeLog,v 1.6 2007/07/26 18:01:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/vanilla-dmz-aa-xcursors/ChangeLog,v 1.7 2007/07/28 16:31:29 angelos Exp $
+
+  28 Jul 2007; Christoph Mende <angelos@gentoo.org>
+  vanilla-dmz-aa-xcursors-0.4.ebuild:
+  Stable on amd64 wrt bug #184867
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org>
   vanilla-dmz-aa-xcursors-0.4.ebuild:
