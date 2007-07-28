@@ -1,6 +1,16 @@
 # ChangeLog for sys-block/tw_cli
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.18 2007/07/02 15:29:58 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.19 2007/07/28 17:35:05 robbat2 Exp $
+
+*tw_cli-9.4.1.2 (28 Jul 2007)
+
+  28 Jul 2007; Robin H. Johnson <robbat2@gentoo.org> -tw_cli-9.4.1.ebuild,
+  +tw_cli-9.4.1.2.ebuild:
+  Upstream has modified thier site (noted by Gentoo bug 186881) and made CLI
+  versions 9.4.1.0 and 9.4.1.1 point to the 9.4.1.2 release strictly. The
+  9.4.1.2 release fixes a large RAID6 bug. The old 9.4.1.* versions are no
+  longer available. Upstream also provides a nice ChangeLog page that we now
+  link to as HOMEPAGE.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> tw_cli-9.2.1.1.ebuild,
   tw_cli-9.3.0.2.ebuild, tw_cli-9.3.0.3.ebuild, tw_cli-9.3.0.4.ebuild,
