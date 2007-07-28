@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/ChangeLog,v 1.21 2007/04/28 10:08:45 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/ChangeLog,v 1.22 2007/07/28 17:51:31 ikelos Exp $
+
+  28 Jul 2007; Mike Auty <ikelos@gentoo.org>
+  files/digest-vmware-workstation-tools-4.5.3-r1, Manifest:
+  Redigest for vmware-any-any-update112.
 
   28 Apr 2007; Mike Auty <ikelos@gentoo.org>
   files/vmware-workstation-tools.rc:
