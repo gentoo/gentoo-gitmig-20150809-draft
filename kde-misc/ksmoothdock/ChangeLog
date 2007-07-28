@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/ksmoothdock
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ChangeLog,v 1.24 2007/04/19 10:42:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ChangeLog,v 1.25 2007/07/28 06:45:53 nixnut Exp $
+
+  28 Jul 2007; nixnut <nixnut@gentoo.org> ksmoothdock-4.5.ebuild:
+  Stable on ppc wrt bug 186835
 
 *ksmoothdock-4.5 (19 Apr 2007)
 
