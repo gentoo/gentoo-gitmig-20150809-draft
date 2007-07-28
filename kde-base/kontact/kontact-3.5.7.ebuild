@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-3.5.7.ebuild,v 1.2 2007/07/11 01:08:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-3.5.7.ebuild,v 1.3 2007/07/28 15:05:25 philantrop Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -26,3 +26,10 @@ KMEXTRA="
 	kontact/plugins/summary/
 	kontact/plugins/weather/"
 # We remove some plugins that are related to external kdepim's programs, because they needs also libs from korganizer, kpilot etc... so to emerge kontact we'll need also ALL the other programs, it's better to emerge the kontact's plugins in the ebuild of its program
+
+pkg_postinst() {
+	kde_pkg_postinst
+
+	elog "If you're using x11-misc/basket, please re-emerge it now to avoid crashes with ${PN}."
+	elog "cf. https://bugs.gentoo.org/show_bug.cgi?id=174872 for details."
+}
