@@ -1,8 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.6.1.ebuild,v 1.1 2006/10/08 05:46:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.6.1.ebuild,v 1.2 2007/07/28 12:42:33 drac Exp $
 
-DESCRIPTION="Streaming GTK2 Front-End based in Darkice Ice Streamer"
+inherit eutils gnome2-utils
+
+DESCRIPTION="Streaming GTK+ Front-End based in Darkice Ice Streamer"
 HOMEPAGE="http://darksnow.radiolivre.org"
 SRC_URI="http://darksnow.radiolivre.org/${P}.tar.gz"
 
@@ -11,11 +13,27 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2"
-RDEPEND="${DEPEND}
-	>=media-sound/darkice-0.14"
+PDEPEND=">=media-sound/darkice-0.14"
+RDEPEND=">=x11-libs/gtk+-2"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
-src_install () {
-	dobin darksnow || die "could not install darksnow executable"
-	dodoc "${S}"/documentation/{CHANGES,README*}
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-Makefile.patch
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die "emake install failed."
+	dodoc documentation/{CHANGES,CREDITS,README*}
+	make_desktop_entry ${PN} "DarkSnow" ${PN}
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

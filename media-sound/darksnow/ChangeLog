@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/darksnow
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/ChangeLog,v 1.9 2006/10/08 05:46:32 matsuu Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/ChangeLog,v 1.10 2007/07/28 12:42:33 drac Exp $
+
+  28 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/darksnow-0.6.1-Makefile.patch, darksnow-0.6.1.ebuild:
+  Patch Makefile to respect DESTDIR, fixing also bug 152022. Thanks to Lars
+  for reporting.
 
 *darksnow-0.6.1 (08 Oct 2006)
 
