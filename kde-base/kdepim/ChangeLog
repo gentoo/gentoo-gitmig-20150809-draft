@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.278 2007/07/27 16:02:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.279 2007/07/28 15:18:26 philantrop Exp $
+
+  28 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kdepim-3.5.6-r1.ebuild, kdepim-3.5.6-r2.ebuild, kdepim-3.5.6-r3.ebuild,
+  kdepim-3.5.7.ebuild, kdepim-3.5.7-r1.ebuild, kdepim-3.5.7-r2.ebuild,
+  kdepim-3.5.7-r3.ebuild:
+  Added a post-install message about having to re-emerge x11-misc/basket. cf.
+  bug 174872.
 
   27 Jul 2007; Carsten Lohrke <carlo@gentoo.org> kdepim-3.5.7-r3.ebuild:
   Fix space.

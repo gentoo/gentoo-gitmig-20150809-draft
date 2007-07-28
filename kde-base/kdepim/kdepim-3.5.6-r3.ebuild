@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.6-r3.ebuild,v 1.2 2007/06/04 01:09:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.6-r3.ebuild,v 1.3 2007/07/28 15:18:26 philantrop Exp $
 
 inherit kde-dist
 
@@ -52,4 +52,11 @@ src_compile() {
 	DO_NOT_COMPILE="${DO_NOT_COMPILE} kpilot"
 
 	kde_src_compile
+}
+
+pkg_postinst() {
+	kde_pkg_postinst
+
+	elog "If you're using x11-misc/basket, please re-emerge it now to avoid crashes with Kontact."
+	elog "cf. https://bugs.gentoo.org/show_bug.cgi?id=174872 for details."
 }
