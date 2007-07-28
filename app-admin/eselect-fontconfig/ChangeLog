@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/eselect-fontconfig
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-fontconfig/ChangeLog,v 1.1 2007/07/28 02:50:13 dirtyepic Exp $
+
+*eselect-fontconfig-1.0 (28 Jul 2007)
+
+  28 Jul 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/fontconfig.eselect-1.0, +metadata.xml,
+  +eselect-fontconfig-1.0.ebuild:
+  Initial import.  Many thanks to Cardoe for contributing the module.
+
