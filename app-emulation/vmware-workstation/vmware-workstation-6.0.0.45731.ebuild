@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.0.0.45731.ebuild,v 1.4 2007/07/13 00:36:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.0.0.45731.ebuild,v 1.5 2007/07/28 17:48:32 ikelos Exp $
 
 inherit vmware eutils versionator
 
@@ -15,6 +15,7 @@ SRC_URI="
 	amd64? (
 		mirror://vmware/software/wkst/${MY_PN}.x86_64.tar.gz
 		http://download.softpedia.ro/linux/${MY_PN}.x86_64.tar.gz )
+	mirror://gentoo/${ANY_ANY}.tar.gz
 	http://platan.vc.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
 	http://platan.vc.cvut.cz/ftp/pub/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
@@ -112,7 +113,15 @@ pkg_setup() {
 }
 
 pkg_nofetch() {
+	if use x86; then
+		MY_P="${MY_PN}.i386"
+	elif use amd64; then
+		MY_P="${MY_PN}.x86_64"
+	fi
+
 	einfo "Please download the ${MY_PN}.tar.gz at ${HOMEPAGE}"
+	einfo "${ANY_ANY}.tar.gz is also necessary for compilation"
+	einfo "but should already have been fetched."
 }
 
 src_install() {
