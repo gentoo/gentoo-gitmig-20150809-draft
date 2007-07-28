@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.7.ebuild,v 1.5 2007/07/14 22:22:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.8.ebuild,v 1.1 2007/07/28 15:22:26 dertobi123 Exp $
 
-inherit eutils ssl-cert fixheadtails pam
+inherit autotools eutils ssl-cert fixheadtails pam
 
 DESCRIPTION="The Cyrus IMAP Server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
 SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz
 	mirror://gentoo/${P}-uoa.tbz2"
-LIBWRAP_PATCH_VER="2.2.10"
-DRAC_PATCH_VER="2.3.7"
-AUTOCREATE_PATCH_VER="2.3.7"
-AUTOSIEVE_PATCH_VER="2.3.7"
+LIBWRAP_PATCH_VER="2.2"
+DRAC_PATCH_VER="2.3.8"
+AUTOCREATE_PATCH_VER="0.10-0"
+AUTOSIEVE_PATCH_VER="0.6.0"
 
 LICENSE="as-is"
 SLOT="0"
@@ -99,25 +99,27 @@ src_unpack() {
 
 	ht_fix_file ${S}/imap/xversion.sh
 
-	# Add unsupported patch wrt #18706 and #80630
-	# fixed upstream.
-	# use unsupported_8bit && epatch "${FILESDIR}/${PN}-${MY_8BIT_PATCH_VER}-unsupported-8bit.patch"
+	# db-4.5 fix
+	epatch "${FILESDIR}/${PN}-2.2-db45.patch"
 
 	# Unsupported UoA patch. Bug #112912 .
 	# http://email.uoa.gr/projects/cyrus/autocreate/
 	if use autocreate ; then
-		epatch "${WORKDIR}/${PN}-${AUTOCREATE_PATCH_VER}-autocreate.patch"
-		use drac && epatch "${FILESDIR}/${PN}-${DRAC_PATCH_VER}-drac_with_autocreate.patch"
+		epatch "${WORKDIR}/${P}-autocreate-${AUTOCREATE_PATCH_VER}.diff"
+		use drac \
+			&& epatch "${FILESDIR}/${PN}-${DRAC_PATCH_VER}-drac_with_autocreate.patch" \
+			&& epatch "${S}/contrib/drac_auth.patch"
 	else
-		use drac && epatch "${FILESDIR}/${PN}-${DRAC_PATCH_VER}-drac.patch"
+		use drac && epatch "${S}/contrib/drac_auth.patch"
 	fi
 
 	# Unsupported UoA patch. Bug #133187 .
 	# http://email.uoa.gr/projects/cyrus/autosievefolder/
-	use autosieve && epatch "${WORKDIR}/${PN}-${AUTOSIEVE_PATCH_VER}-autosieve.patch"
+	use autosieve && epatch	"${WORKDIR}/${P}-autosieve-${AUTOSIEVE_PATCH_VER}.diff"
 
 	# fix undefine symbols.
-	use afs && epatch "${FILESDIR}/cyrus-imapd-2.3.6-afs.patch"
+	use afs && epatch "${FILESDIR}/cyrus-imapd-2.3.6-afs.patch" \
+		&& epatch "${FILESDIR}/${P}-pts.patch"
 
 	# Add libwrap defines as we don't have a dynamicly linked library.
 	use tcpd && epatch "${FILESDIR}/${PN}-${LIBWRAP_PATCH_VER}-libwrap.patch"
@@ -136,10 +138,7 @@ src_unpack() {
 
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"
-	rm -rf configure config.h.in autom4te.cache || die
-	ebegin "Recreating configure"
-	sh SMakefile &>/dev/null || die "SMakefile failed"
-	eend $?
+	eautoreconf
 
 	# When linking with rpm, you need to link with more libraries.
 	sed -i -e "s:lrpm:lrpm -lrpmio -lrpmdb:" configure || die "sed failed"

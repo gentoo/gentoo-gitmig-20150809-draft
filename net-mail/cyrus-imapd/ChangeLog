@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.97 2007/07/23 18:51:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.98 2007/07/28 15:22:26 dertobi123 Exp $
+
+*cyrus-imapd-2.3.8 (28 Jul 2007)
+
+  28 Jul 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  +files/cyrus-imapd-2.3.8-drac_with_autocreate.patch,
+  +files/cyrus-imapd-2.3.8-pts.patch, -cyrus-imapd-2.3.1.ebuild,
+  -cyrus-imapd-2.3.6.ebuild, -cyrus-imapd-2.3.7.ebuild,
+  +cyrus-imapd-2.3.8.ebuild:
+  Version bump, bug #167659
 
 *cyrus-imapd-2.2.13-r1 (23 Jul 2007)
 
