@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/hearnet
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/ChangeLog,v 1.10 2007/02/03 19:08:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/ChangeLog,v 1.11 2007/07/28 11:46:05 drac Exp $
+
+*hearnet-0.0.9 (28 Jul 2007)
+
+  28 Jul 2007; Samuli Suominen <drac@gentoo.org> +hearnet-0.0.9.ebuild:
+  Version bump for bug 184342, thanks to Daniel Herzog for reporting.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
