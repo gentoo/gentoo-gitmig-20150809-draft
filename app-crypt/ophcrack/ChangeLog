@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/ophcrack
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.12 2007/06/28 07:31:21 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.13 2007/07/28 20:14:08 ikelos Exp $
+
+  28 Jul 2007; Mike Auty <ikelos@gentoo.org> files/digest-ophcrack-2.3.3,
+  files/digest-ophcrack-2.3.4, files/digest-ophcrack-2.4, Manifest:
+  Redigest ophcrack using new pycrypto package.
 
 *ophcrack-2.4 (27 Jun 2007)
 
