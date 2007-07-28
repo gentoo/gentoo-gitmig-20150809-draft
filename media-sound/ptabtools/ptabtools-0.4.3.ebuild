@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ptabtools-0.4.3.ebuild,v 1.1 2007/07/28 14:25:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ptabtools-0.4.3.ebuild,v 1.2 2007/07/28 14:45:34 drac Exp $
+
+inherit multilib
 
 DESCRIPTION="Utilities for PowerTab Guitar files (.ptb)"
 HOMEPAGE="http://jelmer.vernstok.nl/oss/ptabtools"
@@ -18,6 +20,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" libdir="/usr/$(get_libdir)" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog README ROADMAP TODO
 }
