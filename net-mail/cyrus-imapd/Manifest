@@ -38,30 +38,10 @@ AUX cyrus-imapd-2.2.13-pts.patch 647 RMD160 f321203e723a39508df8812e30ba3a660c5b
 MD5 64a35455ea1674129587faeba44a0106 files/cyrus-imapd-2.2.13-pts.patch 647
 RMD160 f321203e723a39508df8812e30ba3a660c5bd526 files/cyrus-imapd-2.2.13-pts.patch 647
 SHA256 d775fbc182402b8bf6aec160bc3eedbbb23f4d44f64f07a8ab0d44ef9ca54f77 files/cyrus-imapd-2.2.13-pts.patch 647
-AUX cyrus-imapd-2.3.1-drac.patch 896 RMD160 8f66ae7ca569964e45f4691cee04e5a078da27e0 SHA1 dec856045905f4f852f6c9748b0a9f5aed3f19c7 SHA256 d8f086c99750e0045215bcc96bf4abbbd1ad48b89b6767de17e3145df170dec0
-MD5 0e81f80785347aff06cecae136fda4e5 files/cyrus-imapd-2.3.1-drac.patch 896
-RMD160 8f66ae7ca569964e45f4691cee04e5a078da27e0 files/cyrus-imapd-2.3.1-drac.patch 896
-SHA256 d8f086c99750e0045215bcc96bf4abbbd1ad48b89b6767de17e3145df170dec0 files/cyrus-imapd-2.3.1-drac.patch 896
 AUX cyrus-imapd-2.3.6-afs.patch 950 RMD160 c42d13e91664b6480a41f0a8afc136b2d0db96b2 SHA1 f0d580b716da43c466dca594daa6f7e94c6291d2 SHA256 72e74e008c9e8bf63e2c8feef542f62e73730e6aafb7d4a2c895671b7b0a6482
 MD5 aa91f37cdb0cfa70b127eb76dcd2a2ee files/cyrus-imapd-2.3.6-afs.patch 950
 RMD160 c42d13e91664b6480a41f0a8afc136b2d0db96b2 files/cyrus-imapd-2.3.6-afs.patch 950
 SHA256 72e74e008c9e8bf63e2c8feef542f62e73730e6aafb7d4a2c895671b7b0a6482 files/cyrus-imapd-2.3.6-afs.patch 950
-AUX cyrus-imapd-2.3.6-drac.patch 907 RMD160 e32a085c57158c580a3a4414101dbcecaf481614 SHA1 6bff857f8fcc5a87f25a8e6ef5c805fa20a8e4b4 SHA256 0a70c14427714fcebfbf123b8d1254bb0069745ec3abe6ebd0ae0323f911e85f
-MD5 729e35cc3b99d17505146dfeabbd16cd files/cyrus-imapd-2.3.6-drac.patch 907
-RMD160 e32a085c57158c580a3a4414101dbcecaf481614 files/cyrus-imapd-2.3.6-drac.patch 907
-SHA256 0a70c14427714fcebfbf123b8d1254bb0069745ec3abe6ebd0ae0323f911e85f files/cyrus-imapd-2.3.6-drac.patch 907
-AUX cyrus-imapd-2.3.6-unsupported-8bit.patch 3342 RMD160 e3ab122fd31d5ddcafd4c7cb2d75f6a90fcd85f3 SHA1 06f6da60f23bb3fe2842d915d88d48a545c96e7e SHA256 039429c8a2eabe010db314b4a4a69cede983df07cd05d2163af9d0bc495b03e9
-MD5 61dfab581ac16c7845cf417dbec5b489 files/cyrus-imapd-2.3.6-unsupported-8bit.patch 3342
-RMD160 e3ab122fd31d5ddcafd4c7cb2d75f6a90fcd85f3 files/cyrus-imapd-2.3.6-unsupported-8bit.patch 3342
-SHA256 039429c8a2eabe010db314b4a4a69cede983df07cd05d2163af9d0bc495b03e9 files/cyrus-imapd-2.3.6-unsupported-8bit.patch 3342
-AUX cyrus-imapd-2.3.7-drac.patch 907 RMD160 e32a085c57158c580a3a4414101dbcecaf481614 SHA1 6bff857f8fcc5a87f25a8e6ef5c805fa20a8e4b4 SHA256 0a70c14427714fcebfbf123b8d1254bb0069745ec3abe6ebd0ae0323f911e85f
-MD5 729e35cc3b99d17505146dfeabbd16cd files/cyrus-imapd-2.3.7-drac.patch 907
-RMD160 e32a085c57158c580a3a4414101dbcecaf481614 files/cyrus-imapd-2.3.7-drac.patch 907
-SHA256 0a70c14427714fcebfbf123b8d1254bb0069745ec3abe6ebd0ae0323f911e85f files/cyrus-imapd-2.3.7-drac.patch 907
-AUX cyrus-imapd-2.3.7-drac_with_autocreate.patch 2263 RMD160 c35df0707dd42101cfc00f827e8458eb064a449a SHA1 03713694e07ff44fb7d5c59603f4c26592f3b289 SHA256 c710a8b52b662b82979fa3bf82b7cc1f3a57cc18c762efba51f7aa8430cf58a1
-MD5 9572a89d39fde94bab2049b8d95078d2 files/cyrus-imapd-2.3.7-drac_with_autocreate.patch 2263
-RMD160 c35df0707dd42101cfc00f827e8458eb064a449a files/cyrus-imapd-2.3.7-drac_with_autocreate.patch 2263
-SHA256 c710a8b52b662b82979fa3bf82b7cc1f3a57cc18c762efba51f7aa8430cf58a1 files/cyrus-imapd-2.3.7-drac_with_autocreate.patch 2263
 AUX cyrus-imapd-2.3.8-drac_with_autocreate.patch 2378 RMD160 a545ffbf21e7d14897d177b2866bc5df9df3130f SHA1 16e29ddddd924877d9d7dd572a6bcafe25c67725 SHA256 f55235912bcec09c91270dfeb9f2846300f70c22eef945781e77473ea7013aa6
 MD5 687f311749b0a998d7cf832aa451fbf5 files/cyrus-imapd-2.3.8-drac_with_autocreate.patch 2378
 RMD160 a545ffbf21e7d14897d177b2866bc5df9df3130f files/cyrus-imapd-2.3.8-drac_with_autocreate.patch 2378
