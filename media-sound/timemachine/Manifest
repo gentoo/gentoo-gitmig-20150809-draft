@@ -1,17 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX timemachine-0.2.4-ladcca-compile.patch 478 RMD160 8ab1ddea5f90a01b6d05d3d2f32a7bafa83140f5 SHA1 b05240d329a89d084c1ef2b21d643b96f02e2a45 SHA256 d15ec12dbc88176c1780a5a4914f73d34bd6d9abd574b1903039b23526b5c01e
-MD5 d36266bdc7ee0e2f641a99ea0c9747dd files/timemachine-0.2.4-ladcca-compile.patch 478
-RMD160 8ab1ddea5f90a01b6d05d3d2f32a7bafa83140f5 files/timemachine-0.2.4-ladcca-compile.patch 478
-SHA256 d15ec12dbc88176c1780a5a4914f73d34bd6d9abd574b1903039b23526b5c01e files/timemachine-0.2.4-ladcca-compile.patch 478
-DIST timemachine-0.2.4.tar.gz 145027 RMD160 93cb8e1fdda3b651697d65af11fb79a73a96d7f5 SHA1 f02efc702db2556c574b26897f90ebffb2edf7ac SHA256 7692a390ada9bf655b157f2001aca3b14e4dcfdafc78a153d2bd92caf2836328
 DIST timemachine-0.3.0.tar.gz 156274 RMD160 1bcd5e1b98a2ceb0b368ada0686fe65b5609a1be SHA1 a70a9d71333679ec9aba59716fd94b4a0456d33c SHA256 7f29759ced522dc8f699d5e78e440cd2a4efe1f8f80a72032ceaa09701f51fc1
 DIST timemachine-0.3.1.tar.gz 158344 RMD160 2bcfc82346f6b11839b6ff7fc3c0c4191da9eab5 SHA1 eab182d47a8cb7e5d3e8a86656cf9681b49b41de SHA256 670ce6e9eff6f7b48fdd08be3678c46b997647c9b4541e46c1db66801cf67a87
-EBUILD timemachine-0.2.4.ebuild 905 RMD160 e3eca8700ba2da759626de165f4f1699b2e10e17 SHA1 a3eff42b4d64d4c718bf312b7f1b4dbfc9860e3a SHA256 62b5846b7167f0761eb8ca86fe40f68d6b02fe3a9d5d41c5e3415fa0f28ae6fe
-MD5 9e022edd9c740c306dd2b9755492e173 timemachine-0.2.4.ebuild 905
-RMD160 e3eca8700ba2da759626de165f4f1699b2e10e17 timemachine-0.2.4.ebuild 905
-SHA256 62b5846b7167f0761eb8ca86fe40f68d6b02fe3a9d5d41c5e3415fa0f28ae6fe timemachine-0.2.4.ebuild 905
 EBUILD timemachine-0.3.0.ebuild 827 RMD160 1a92f9a0a36710217d64b9fcef556da08c3aafc8 SHA1 4802485956e1e96e680f8628c1b18daace7ebdcf SHA256 18d0f551000d8277d3b21baeececa23254197c68beccb7521e6552f726c443c4
 MD5 ba4c5cd7bb90bb1822c91e66618152bd timemachine-0.3.0.ebuild 827
 RMD160 1a92f9a0a36710217d64b9fcef556da08c3aafc8 timemachine-0.3.0.ebuild 827
@@ -28,19 +16,9 @@ MISC metadata.xml 364 RMD160 89be95bb449a7982498a37fb3eb4e9dfd1663899 SHA1 937bd
 MD5 3fb5219a340bed29fc7a11b47fc45b87 metadata.xml 364
 RMD160 89be95bb449a7982498a37fb3eb4e9dfd1663899 metadata.xml 364
 SHA256 9669057cada3dc83d957b750e3b278100686ab05fa0e6ed833eb19a366f3c6a8 metadata.xml 364
-MD5 63ee5ead4b5e167281f255c4e3ff7457 files/digest-timemachine-0.2.4 253
-RMD160 d2ac4ae35004922fab395fc79edd12fc2cbcf8cf files/digest-timemachine-0.2.4 253
-SHA256 f5aabf5cf9bf15ea63a7f46cda3b5e13af56c25b5e584048ca438ab785a59260 files/digest-timemachine-0.2.4 253
 MD5 675bee9728582eb59b57b608f69b3dac files/digest-timemachine-0.3.0 253
 RMD160 126557894040af2e25d3ec1b2d79e28645885a37 files/digest-timemachine-0.3.0 253
 SHA256 e0463055540a6be78c8a49fc0b703cce586b70bb56dbbadd7e32a5ead20fc19d files/digest-timemachine-0.3.0 253
 MD5 bb8c34cdef890aeb82bc95a60d8c611a files/digest-timemachine-0.3.1 253
 RMD160 bd9c44b5458319e9a55e988650d250aea81b93e6 files/digest-timemachine-0.3.1 253
 SHA256 552bb8105890963be907fea26c4ee37d70408c8d1884623936316c0ce744ba16 files/digest-timemachine-0.3.1 253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
-
-iD8DBQFGiRgQAiZjviIA2XgRAqCRAKC0OWdsFW1rqzfOJzESkDkXLyQ7iQCfUids
-uZnuXYms5CXqc9mueWYZ9qM=
-=Zdw2
------END PGP SIGNATURE-----
