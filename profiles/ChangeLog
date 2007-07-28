@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.552 2007/07/27 21:31:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.553 2007/07/28 00:28:37 wolf31o2 Exp $
+
+  28 Jul 2007; Chris Gianelloni <wolf31o2@gentoo.org> updates/3Q-2007:
+  Moved vendetta-online-bin from games-fps to games-rpg for bug #184918.
 
   27 Jul 2007; Chris Gianelloni <wolf31o2@gentoo.org> thirdpartymirrors:
   Hopefully fixing the liflg mirrors to use both the old and new locations for
