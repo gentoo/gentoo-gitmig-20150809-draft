@@ -1,6 +1,20 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.110 2007/07/08 05:51:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.111 2007/07/28 15:30:07 dang Exp $
+
+*liferea-1.2.20 (28 Jul 2007)
+
+  28 Jul 2007; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.2.20.ebuild:
+  Bump to 1.2.20
+  	* Fixes SF #1741243 which caused endless loops on
+  	  LiveJournal authentication.
+  	* Added Brazilian-Portugese localized feed list.
+  	  (Og Maciel)
+  	* Update of Spanish translation by Luis Rodrigo
+  	  Gallardo Cruz
+  	* Fixes a compilation problem on systems without
+  	  getaddrinfo (reported by Gilles Gravier)
+  	* Fixes a bug in the networking code (Hubert Figuiere)
 
   08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
   liferea-1.0.16.ebuild, liferea-1.0.24.ebuild:
