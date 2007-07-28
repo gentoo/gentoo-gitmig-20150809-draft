@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.94 2007/02/19 04:12:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.95 2007/07/28 17:06:20 armin76 Exp $
+
+  28 Jul 2007; Raúl Porcel <armin76@gentoo.org> strace-4.5.15.ebuild:
+  alpha/ia64/x86 stable
 
   19 Feb 2007; Mike Frysinger <vapier@gentoo.org>
   +files/strace-4.5.15-mips-sprintsigmask.patch, strace-4.5.15.ebuild:
