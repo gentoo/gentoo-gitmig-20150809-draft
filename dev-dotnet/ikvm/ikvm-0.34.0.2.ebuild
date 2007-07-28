@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.34.0.2.ebuild,v 1.3 2007/07/01 23:06:00 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.34.0.2.ebuild,v 1.4 2007/07/28 12:46:23 jurek Exp $
 
 inherit eutils mono multilib
 
@@ -27,8 +27,9 @@ DEPEND="${RDEPEND}
 		app-arch/unzip"
 
 src_compile() {
-	# Remove unneccesary binaries
-	rm bin/*.exe
+	# Remove unneccesary executables and
+	# Windows-only libraries (bug #186837)
+	rm bin/*.exe bin/JVM.DLL bin/ikvm-native.dll
 
 	# We use javac instead of ecj because of
 	# memory related problems (see bug #183526)
