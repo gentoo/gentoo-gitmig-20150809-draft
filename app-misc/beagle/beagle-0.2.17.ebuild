@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.16.ebuild,v 1.7 2007/07/22 10:00:00 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.17.ebuild,v 1.1 2007/07/28 16:36:45 dsd Exp $
 
 inherit gnome.org eutils autotools mono
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.beagle-project.org/"
 
 LICENSE="MIT Apache-1.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="chm doc evo galago gtk ole pdf python thunderbird"
 
 RDEPEND="
@@ -75,17 +75,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# To prevent excessive revdep-rebuild, gentoo's libexif is sticking to
-	# soversion 10 for now.
-	sed -i -e 's/EXIF_SOVERSION=12/EXIF_SOVERSION=10/' configure.in
-
 	# Multilib fix
 	sed -i -e 's:prefix mono`/lib:libdir mono`:' \
 		${S}/configure.in || die "sed failed"
 
 	epatch ${FILESDIR}/${PN}-0.2.7-crawltweek.patch
 	epatch ${FILESDIR}/${PN}-log-level-warn.patch
-	epatch ${FILESDIR}/${P}-monofix.patch
 
 	eautoreconf
 }
