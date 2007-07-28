@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/alee-fonts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/alee-fonts/ChangeLog,v 1.28 2007/07/24 18:16:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/alee-fonts/ChangeLog,v 1.29 2007/07/28 18:46:24 beandog Exp $
+
+  28 Jul 2007; Steve Dibb <beandog@gentoo.org> alee-fonts-8.3.ebuild:
+  amd64 stable, bug 186394
 
   24 Jul 2007; Raúl Porcel <armin76@gentoo.org> alee-fonts-8.3.ebuild:
   alpha/ia64 stable wrt #186394
