@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.32 2007/05/24 10:24:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.33 2007/07/28 09:18:56 philantrop Exp $
+
+  28 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  -files/knutclient-0.8.5-arts-configure.patch, -knutclient-0.8.6.ebuild,
+  knutclient-0.9.ebuild, knutclient-0.9.1.ebuild, knutclient-0.9.3.ebuild:
+  Corrected the homepage. Fixes bug 186857. Removed version 0.8.6 which is not
+  fetchable anymore.
 
   24 May 2007; Lars Weiler <pylon@gentoo.org> knutclient-0.9.3.ebuild:
   Stable on ppc; bug #175221.
