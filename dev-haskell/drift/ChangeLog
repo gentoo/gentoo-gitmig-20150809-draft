@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/drift
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/ChangeLog,v 1.14 2006/10/11 23:33:40 dcoutts Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/ChangeLog,v 1.15 2007/07/28 14:39:02 nixnut Exp $
+
+  28 Jul 2007; nixnut <nixnut@gentoo.org> drift-2.2.0.ebuild:
+  Stable on ppc wrt bug 186849
 
 *drift-2.2.0 (11 Oct 2006)
 

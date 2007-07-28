@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/alex
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.26 2007/04/29 17:11:52 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.27 2007/07/28 14:33:07 nixnut Exp $
+
+  28 Jul 2007; nixnut <nixnut@gentoo.org> alex-2.1.0.ebuild:
+  Stable on ppc wrt bug 186849
 
   29 Apr 2007; Duncan Coutts <dcoutts@gentoo.org> alex-2.0.1-r1.ebuild:
   alex-2.0.1 does work with ghc-6.6, adjusting the DEPEND to reflect that

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haxml
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.20 2006/10/14 13:51:04 kolmodin Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.21 2007/07/28 14:43:39 nixnut Exp $
+
+  28 Jul 2007; nixnut <nixnut@gentoo.org> haxml-1.13.2.ebuild:
+  Stable on ppc wrt bug 186849
 
   14 Oct 2006; <kolmodin@gentoo.org> haxml-1.13-r1.ebuild:
   Make haxml-1.13-r1 support profiling

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.23 2007/04/29 17:26:45 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.24 2007/07/28 14:35:33 nixnut Exp $
+
+  28 Jul 2007; nixnut <nixnut@gentoo.org> c2hs-0.14.5.ebuild:
+  Stable on ppc wrt bug 186849
 
   29 Apr 2007; Lennart Kolmodin <kolmodin@gentoo.org> -c2hs-0.13.4.ebuild:
   Removing c2hs-0.13.4 as it does not work with ghc-6.6 and 0.14.5 works
