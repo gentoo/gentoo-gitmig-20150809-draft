@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-image
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.21 2007/07/05 11:34:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.22 2007/07/28 12:01:15 zzam Exp $
+
+  28 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-image-0.2.7-r1.ebuild:
+  Use swscaler only for newer ffmpeg versions.
 
 *vdr-image-0.2.7-r1 (05 Jul 2007)
 
