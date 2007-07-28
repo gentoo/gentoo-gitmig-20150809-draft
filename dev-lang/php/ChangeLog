@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.175 2007/07/28 17:34:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.176 2007/07/28 18:09:12 jer Exp $
+
+  28 Jul 2007; Jeroen Roovers <jer@gentoo.org> php-5.2.3-r3.ebuild:
+  Stable for HPPA (bug #180556).
 
   28 Jul 2007; Steve Dibb <beandog@gentoo.org> php-5.2.3-r3.ebuild:
   amd64 stable, security bug 180556
