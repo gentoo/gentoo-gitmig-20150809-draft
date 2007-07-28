@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.43 2007/07/27 17:07:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.44 2007/07/28 19:21:25 beandog Exp $
+
+  28 Jul 2007; Steve Dibb <beandog@gentoo.org> ethtool-5.ebuild:
+  amd64 stable, bug 186737
 
   27 Jul 2007; Raúl Porcel <armin76@gentoo.org> ethtool-5.ebuild:
   alpha stable wrt #186737, thanks to Tobias Klausmann for testing
