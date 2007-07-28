@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.8.ebuild,v 1.1 2007/07/28 15:22:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.8.ebuild,v 1.2 2007/07/28 15:42:30 dertobi123 Exp $
 
 inherit autotools eutils ssl-cert fixheadtails pam
 
@@ -137,7 +137,7 @@ src_unpack() {
 		man/cyrusmaster.8 || die "sed failed"
 
 	# Recreate configure.
-	export WANT_AUTOCONF="2.5"
+	WANT_AUTOCONF="2.5"
 	eautoreconf
 
 	# When linking with rpm, you need to link with more libraries.

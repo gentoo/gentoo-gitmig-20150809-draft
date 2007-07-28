@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.2.12-r1.ebuild,v 1.8 2007/07/21 17:27:10 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.2.12-r1.ebuild,v 1.9 2007/07/28 15:39:48 dertobi123 Exp $
 
-inherit perl-app eutils
+inherit autotools perl-app eutils
 
 DESCRIPTION="Utilities and Perl modules to administer a Cyrus IMAP server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -32,22 +32,16 @@ S="${WORKDIR}/cyrus-imapd-${PV}"
 src_unpack() {
 	unpack ${A} && cd "${S}"
 
-	# DB4 detection and versioned symbols.
-	#epatch "${FILESDIR}/cyrus-imapd-${PV}-db4.patch"
-
-	# Recreate configure.
-	export WANT_AUTOCONF="2.5"
-	ebegin "Recreating configure"
-	rm -rf configure config.h.in autom4te.cache
-	sh SMakefile &>/dev/null || die "SMakefile failed"
-	eend $?
-
 	# When linking with rpm, you need to link with more libraries.
 	sed -e "s:lrpm:lrpm -lrpmio -lrpmdb:" -i configure || die "sed failed"
 
 	epatch "${FILESDIR}/${PN}-2.2-db45.patch"
 	epatch "${FILESDIR}/${PN}-2.2-fPIC.patch"
 	epatch "${FILESDIR}/${P}-gcc4.patch"
+
+	# Recreate configure.
+	WANT_AUTOCONF="2.5"
+	eautoreconf
 }
 
 src_compile() {
