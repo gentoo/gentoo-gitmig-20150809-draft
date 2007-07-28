@@ -1,1 +1,2 @@
 dev-lang/swig ocaml pike
+app-editors/vim vim-with-x
