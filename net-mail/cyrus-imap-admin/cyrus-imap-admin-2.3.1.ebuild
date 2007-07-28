@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.3.1.ebuild,v 1.2 2007/01/05 08:55:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.3.1.ebuild,v 1.3 2007/07/28 07:52:19 dertobi123 Exp $
 
 inherit perl-app eutils
 
-PIC_PATCH_VER="2.2.10"
+PIC_PATCH_VER="2.2"
 DESCRIPTION="Utilities and Perl modules to administer a Cyrus IMAP server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
 SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/cyrus-imapd-${PV}.tar.gz"
