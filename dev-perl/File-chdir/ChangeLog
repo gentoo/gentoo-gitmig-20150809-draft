@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-chdir
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/ChangeLog,v 1.10 2007/06/25 10:09:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/ChangeLog,v 1.11 2007/07/28 20:03:29 armin76 Exp $
+
+  28 Jul 2007; Raúl Porcel <armin76@gentoo.org> File-chdir-0.08.ebuild:
+  ia64/x86 stable
 
 *File-chdir-0.08 (25 Jun 2007)
 
