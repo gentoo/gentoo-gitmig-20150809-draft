@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hxt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.7 2007/03/24 00:30:07 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.8 2007/07/28 17:58:47 dcoutts Exp $
+
+*hxt-7.2 (28 Jul 2007)
+
+  28 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> +hxt-7.2.ebuild:
+  New version, fixing bug #163547.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
