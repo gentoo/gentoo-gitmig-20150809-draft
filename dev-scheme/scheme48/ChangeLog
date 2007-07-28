@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/scheme48
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/ChangeLog,v 1.7 2007/07/05 23:35:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/ChangeLog,v 1.8 2007/07/28 20:06:56 araujo Exp $
+
+*scheme48-1.6 (28 Jul 2007)
+
+  28 Jul 2007; <araujo@gentoo.org> +scheme48-1.6.ebuild:
+  Added new version. bug #179996
 
   05 Jul 2007; Ulrich Mueller <ulm@gentoo.org> scheme48-1.3-r1.ebuild,
   scheme48-1.5.ebuild:
