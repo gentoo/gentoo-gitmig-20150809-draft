@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.3.1.ebuild,v 1.3 2007/07/28 07:52:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.3.8.ebuild,v 1.1 2007/07/28 15:09:48 dertobi123 Exp $
 
 inherit perl-app eutils
 
