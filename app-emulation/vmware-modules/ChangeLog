@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.21 2007/07/12 23:44:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.22 2007/07/28 17:37:39 ikelos Exp $
+
+  28 Jul 2007; Mike Auty <ikelos@gentoo.org>
+  +files/1.0.0.16-kernel-2.6.22.patch, vmware-modules-1.0.0.16.ebuild:
+  Redigest for vmware-any-any-update112.
 
   12 Jul 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -vmware-modules-1.0.0.11.ebuild, vmware-modules-1.0.0.11-r1.ebuild,
