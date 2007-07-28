@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r3.ebuild,v 1.10 2007/07/24 21:13:25 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r3.ebuild,v 1.11 2007/07/28 09:46:13 vapier Exp $
 
 inherit eutils autotools
 
@@ -46,7 +46,7 @@ pkg_setup() {
 				eerror "You have both ipv6 and snmp enabled."
 				eerror "This require ipv6 support in net-analyzer/net-snmp."
 				eerror "However, net-analyzer/net-snmp was compiled with ipv6 flag disabled."
-				eerror "Please, reemrege net-analyzer/net-snmp with USE=\"ipv6\"."
+				eerror "Please, re-emerge net-analyzer/net-snmp with USE=\"ipv6\"."
 				die "net-analyzer/net-snmp was build without ipv6."
 			fi
 		fi
