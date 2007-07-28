@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.09.ebuild,v 1.6 2007/07/19 19:32:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.09.ebuild,v 1.7 2007/07/28 03:57:37 beandog Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -17,7 +17,7 @@ SRC_URI="x86? ( http://us.download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86 ~x86-fbsd"
+KEYWORDS="-* amd64 x86 ~x86-fbsd"
 IUSE="gtk multilib"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
