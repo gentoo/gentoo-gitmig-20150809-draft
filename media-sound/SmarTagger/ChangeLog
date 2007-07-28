@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/SmarTagger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/SmarTagger/ChangeLog,v 1.7 2007/07/28 15:39:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/SmarTagger/ChangeLog,v 1.8 2007/07/28 16:57:23 armin76 Exp $
+
+  28 Jul 2007; Raúl Porcel <armin76@gentoo.org> SmarTagger-0.1-r1.ebuild:
+  x86 stable
 
 *SmarTagger-0.1-r1 (28 Jul 2007)
 
