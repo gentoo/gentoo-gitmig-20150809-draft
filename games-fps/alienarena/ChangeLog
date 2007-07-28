@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/alienarena
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.4 2007/06/14 20:47:25 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.5 2007/07/28 09:13:00 nyhm Exp $
+
+  28 Jul 2007; Tristan Heaven <nyhm@gentoo.org> alienarena-20070613.ebuild:
+  Fix dependencies for USE=sdl
 
 *alienarena-20070613 (14 Jun 2007)
 

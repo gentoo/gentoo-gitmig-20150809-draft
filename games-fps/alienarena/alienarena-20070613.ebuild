@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20070613.ebuild,v 1.1 2007/06/14 20:47:25 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20070613.ebuild,v 1.2 2007/07/28 09:13:00 nyhm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs games
 
@@ -15,21 +15,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="dedicated opengl sdl"
 
-UIRDEPEND="media-libs/jpeg
+UIDEPEND="media-libs/jpeg
 	virtual/glu
 	virtual/opengl
 	x11-libs/libXxf86dga
-	x11-libs/libXxf86vm
-	sdl? ( media-libs/libsdl )"
-UIDEPEND="x11-proto/xf86dgaproto
-	x11-proto/xf86vidmodeproto
-	x11-proto/xproto"
-RDEPEND="opengl? ( ${UIRDEPEND} )
-	!opengl? ( !dedicated? ( ${UIRDEPEND} ) )"
-DEPEND="${RDEPEND}
-	app-arch/unzip
+	x11-libs/libXxf86vm"
+RDEPEND="!dedicated? ( ${UIDEPEND} )
 	opengl? ( ${UIDEPEND} )
-	!opengl? ( !dedicated? ( ${UIDEPEND} ) )"
+	sdl? ( ${UIDEPEND} media-libs/libsdl )"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}/${MY_PN}
 
