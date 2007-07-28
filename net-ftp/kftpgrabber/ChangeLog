@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/kftpgrabber
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.23 2007/07/26 13:58:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.24 2007/07/28 09:57:34 philantrop Exp $
+
+  28 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kftpgrabber-0.8.1-r1.ebuild:
+  Marked stable on amd64 as per bug 186674.
 
   26 Jul 2007; Raúl Porcel <armin76@gentoo.org>
   kftpgrabber-0.8.1-r1.ebuild:
