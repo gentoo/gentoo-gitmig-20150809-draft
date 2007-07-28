@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ksmoothdock-4.5.ebuild,v 1.2 2007/07/28 06:45:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ksmoothdock-4.5.ebuild,v 1.3 2007/07/28 09:29:27 philantrop Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc ~x86"
 IUSE=""
 
 need-kde 3.4
