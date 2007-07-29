@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/electric
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.22 2007/02/18 14:04:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.23 2007/07/29 10:08:25 calchan Exp $
+
+  29 Jul 2007; Denis Dupeyron <calchan@gentoo.org> electric-8.04.ebuild:
+  Fixed desktop entry.
 
   18 Feb 2007; nixnut <nixnut@gentoo.org> electric-8.04.ebuild:
   Added ~ppc wrt bug 166908
