@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/liberation-fonts-ttf-3-r1.ebuild,v 1.5 2007/07/15 23:23:47 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts-ttf/liberation-fonts-ttf-3-r1.ebuild,v 1.6 2007/07/29 22:18:55 dirtyepic Exp $
 
 inherit font
 
@@ -21,7 +21,7 @@ S="${FONT_S}"
 FONT_SUFFIX="ttf"
 DOCS="License.txt"
 
-FONT_CONF="60-liberation.conf"
+FONT_CONF="${FILESDIR}"/60-liberation.conf
 
 pkg_postinst() {
 	font_pkg_postinst
