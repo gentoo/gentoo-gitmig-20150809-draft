@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.57 2007/07/29 21:28:33 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.58 2007/07/29 21:35:59 spock Exp $
+
+  29 Jul 2007; Michał Januszewski <spock@gentoo.org>
+  -files/hddtemp-0.3_beta13-setsid.patch, -hddtemp-0.3_beta13.ebuild,
+  -hddtemp-0.3_beta15.ebuild:
+  Remove old ebuilds.
 
 *hddtemp-0.3_beta15-r2 (29 Jul 2007)
 
