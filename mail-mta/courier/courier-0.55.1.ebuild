@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.55.1.ebuild,v 1.2 2007/07/15 07:06:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.55.1.ebuild,v 1.3 2007/07/29 16:58:58 phreak Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -29,7 +29,7 @@ DEPEND="
 	>=dev-libs/openssl-0.9.6
 	>=sys-libs/gdbm-1.8.0
 	dev-libs/libpcre
-	|| ( app-misc/mime-types net-www/apache )
+	|| ( app-misc/mime-types www-servers/apache )
 	fax? ( >=media-libs/netpbm-9.12 virtual/ghostscript >=net-dialup/mgetty-1.1.28 )
 	pam? ( >=sys-libs/pam-0.75 )
 	mysql? ( virtual/mysql )
