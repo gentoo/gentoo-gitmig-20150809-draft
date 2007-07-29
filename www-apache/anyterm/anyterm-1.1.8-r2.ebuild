@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.8-r2.ebuild,v 1.3 2007/05/26 11:08:14 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.8-r2.ebuild,v 1.4 2007/07/29 17:13:50 phreak Exp $
 
 inherit apache-module eutils toolchain-funcs webapp
 
@@ -17,7 +17,7 @@ DEPEND="dev-libs/boost
 		>=dev-libs/rote-0.2.8
 		>=sys-devel/gcc-3
 		virtual/ssh
-		pam? ( net-www/mod_auth_pam )"
+		pam? ( www-apache/mod_auth_pam )"
 RDEPEND="${DEPEND}"
 
 APACHE2_MOD_CONF="50_${PN}"
@@ -36,8 +36,8 @@ pkg_setup() {
 
 	apache-module_pkg_setup
 
-	use ssl && ! built_with_use net-www/apache ssl && \
-		eerror "Build net-www/apache with USE=ssl."
+	use ssl && ! built_with_use www-servers/apache ssl && \
+		eerror "Build www-servers/apache with USE=ssl."
 }
 
 src_unpack() {
