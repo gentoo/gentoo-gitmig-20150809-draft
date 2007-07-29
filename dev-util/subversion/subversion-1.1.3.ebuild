@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.28 2007/07/12 01:05:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.29 2007/07/29 16:56:48 phreak Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
@@ -14,8 +14,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="ssl apache2 berkdb python emacs perl java nls"
 
 # Presently subversion doesn't build with swig-1.3.22, bug 65424
-RDEPEND="apache2? ( >=net-www/apache-2.0.48 !>=net-www/apache-2.0.54-r30 )
-	!apache2? ( !>=net-www/apache-2 )
+RDEPEND="apache2? ( >=www-servers/apache-2.0.48 !>=net-www/apache-2.0.54-r30 )
+	!apache2? ( !>=www-servers/apache-2 )
 	!dev-libs/apr
 	python? ( =dev-lang/swig-1.3.21 >=dev-lang/python-2.0 )
 	perl? ( =dev-lang/swig-1.3.21
@@ -163,7 +163,7 @@ src_install () {
 
 	make DESTDIR=${D} install || die "Installation of subversion failed"
 	if [[ -e ${D}/usr/lib/apache2 ]]; then
-		if has_version '>=net-www/apache-2.0.48-r2'; then
+		if has_version '>=www-servers/apache-2.0.48-r2'; then
 			mv ${D}/usr/lib/apache2/modules ${D}/usr/lib/apache2-extramodules
 			rmdir ${D}/usr/lib/apache2
 		else
@@ -171,7 +171,7 @@ src_install () {
 		fi
 	fi
 
-	if has_version '>=net-www/apache-2.0.48-r2'; then
+	if has_version '>=www-servers/apache-2.0.48-r2'; then
 		chown -R root:root ${D}/usr/include/apr-0/
 	fi
 
