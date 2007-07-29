@@ -7,3 +7,4 @@ move net-www/mod_watch www-apache/mod_watch
 move net-www/mod_roaming www-apache/mod_roaming
 move net-www/mod_loopback www-apache/mod_loopback
 move net-www/mod_ftpd www-apache/mod_ftpd
+move net-www/mod_bw www-apache/mod_bw
