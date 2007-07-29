@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/cppserv
 # Copyright 2006-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.10 2007/07/19 02:25:08 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.11 2007/07/29 16:45:37 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> cppserv-0.1.99.ebuild,
+  cppserv-0.1.100.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   19 Jul 2007; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
   cppserv-0.1.100.ebuild:
