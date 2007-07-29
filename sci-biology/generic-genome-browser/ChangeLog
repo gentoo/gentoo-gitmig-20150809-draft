@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/generic-genome-browser
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/generic-genome-browser/ChangeLog,v 1.9 2006/11/23 17:22:04 vivo Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/generic-genome-browser/ChangeLog,v 1.10 2007/07/29 17:07:38 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org>
+  generic-genome-browser-1.58.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org>
   generic-genome-browser-1.58.ebuild:
