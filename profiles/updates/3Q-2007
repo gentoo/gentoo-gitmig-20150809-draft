@@ -16,3 +16,4 @@ move net-www/mod_pcgi2 www-apache/mod_pcgi2
 move net-www/mod_scgi www-apache/mod_scgi
 move net-www/mod_vdbh www-apache/mod_vdbh
 move net-www/mod_xslt www-apache/mod_xslt
+move net-www/mod_transform www-apache/mod_transform
