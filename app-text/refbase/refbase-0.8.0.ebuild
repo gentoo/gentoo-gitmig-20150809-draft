@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/refbase-0.8.0.ebuild,v 1.2 2006/11/23 20:11:51 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/refbase-0.8.0.ebuild,v 1.3 2007/07/29 16:44:22 phreak Exp $
 
 inherit webapp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 IUSE=""
-RDEPEND="net-www/apache
+RDEPEND="www-servers/apache
 	app-admin/webapp-config
 	>=virtual/php-4.1.0
 	>=virtual/mysql-4.1
