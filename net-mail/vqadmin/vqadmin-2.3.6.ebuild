@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/vqadmin-2.3.6.ebuild,v 1.8 2007/01/05 09:02:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/vqadmin-2.3.6.ebuild,v 1.9 2007/07/29 17:02:17 phreak Exp $
 
 DESCRIPTION="A web based control pannel to manage Virtual Qmail Domains. Works with qmailadmin"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -13,7 +13,7 @@ DEPEND=">=net-mail/vpopmail-5.3
 		virtual/qmail"
 RDEPEND="${DEPEND}
 	net-mail/qmailadmin
-	net-www/apache"
+	www-servers/apache"
 
 src_compile() {
 	local dir_vhost="/var/www/localhost/"

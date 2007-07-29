@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.9.ebuild,v 1.3 2007/06/12 13:04:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.9.ebuild,v 1.4 2007/07/29 17:02:25 phreak Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="virtual/qmail
 	net-mail/autorespond
 	maildrop? ( >=mail-filter/maildrop-2.0.1 )"
 RDEPEND="${DEPEND}
-	net-www/apache"
+	www-servers/apache"
 
 S=${WORKDIR}/${MY_P}
 

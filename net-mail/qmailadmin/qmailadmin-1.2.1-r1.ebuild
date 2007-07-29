@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.1-r1.ebuild,v 1.2 2007/06/12 13:04:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.1-r1.ebuild,v 1.3 2007/07/29 17:02:25 phreak Exp $
 
 MY_PV="${PV/_rc/-rc}"
 MY_P="${PN}-${MY_PV}"
@@ -17,7 +17,7 @@ DEPEND="virtual/qmail
 	>=net-mail/vpopmail-5.3
 	net-mail/autorespond"
 RDEPEND="${DEPEND}
-	net-www/apache"
+	www-servers/apache"
 
 S=${WORKDIR}/${MY_P}
 

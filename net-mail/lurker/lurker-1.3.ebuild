@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lurker/lurker-1.3.ebuild,v 1.4 2007/06/12 12:35:19 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lurker/lurker-1.3.ebuild,v 1.5 2007/07/29 17:04:06 phreak Exp $
 
 inherit eutils webapp
 
@@ -15,7 +15,7 @@ IUSE=""
 DEPEND=">=sys-devel/gcc-2.95
 	dev-libs/libxslt
 	sys-libs/zlib
-	net-www/apache"
+	www-servers/apache"
 
 INSTALLDIR="/usr/local/lurker"
 

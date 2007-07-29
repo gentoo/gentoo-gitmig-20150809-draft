@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vqadmin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/ChangeLog,v 1.6 2007/02/22 01:56:00 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/ChangeLog,v 1.7 2007/07/29 17:02:17 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> vqadmin-2.3.6.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.93 2007/06/16 14:14:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.94 2007/07/29 17:03:51 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> mailman-2.1.9_rc1.ebuild,
+  mailman-2.1.9.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   16 Jun 2007; Christoph Mende <angelos@gentoo.org> mailman-2.1.9.ebuild:
   Stable on amd64 wrt bug 164720
