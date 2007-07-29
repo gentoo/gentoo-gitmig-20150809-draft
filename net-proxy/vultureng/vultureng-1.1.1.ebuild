@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/vultureng-1.1.1.ebuild,v 1.2 2006/10/13 15:55:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/vultureng-1.1.1.ebuild,v 1.3 2007/07/29 13:55:15 phreak Exp $
 
 inherit flag-o-matic eutils depend.php
 
@@ -27,7 +27,7 @@ DEPEND="dev-lang/perl
 	dev-libs/openssl"
 RDEPEND="${DEPEND}
 	>=net-www/apache-2.0.52
-	net-www/mod_security
+	www-apache/mod_security
 	app-admin/sudo"
 
 S="${WORKDIR}/VultureNG-${PV}"
