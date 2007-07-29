@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/supercollider
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/supercollider/ChangeLog,v 1.8 2007/05/01 00:26:46 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/supercollider/ChangeLog,v 1.9 2007/07/29 13:22:35 drac Exp $
+
+*supercollider-20040903-r1 (29 Jul 2007)
+
+  29 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/supercollider-20040903-gcc4.patch,
+  +supercollider-20040903-r1.ebuild:
+  Fix building with >= GCC 4.x, bug 153363. Thanks to Maximilian Grothusmann
+  for patch, and Evil Compile Person for reporting.
 
   01 May 2007; Marius Mauch <genone@gentoo.org>
   supercollider-20040903.ebuild:
