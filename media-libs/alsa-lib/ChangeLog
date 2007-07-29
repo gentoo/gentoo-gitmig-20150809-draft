@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.235 2007/07/01 16:41:31 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.236 2007/07/29 20:17:22 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org>
+  alsa-lib-1.0.14a-r1.ebuild:
+  Fixing #186365, enabling the PCM plugins asym, dmix, empty, iec958, ioplug,
+  plug, softvol by default till upstream fixes that issue. Thanks to William
+  L. Thomson Jr.
 
 *alsa-lib-1.0.14a-r1 (01 Jul 2007)
 

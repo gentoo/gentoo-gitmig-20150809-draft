@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.14a-r1.ebuild,v 1.1 2007/07/01 16:41:31 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.14a-r1.ebuild,v 1.2 2007/07/29 20:17:22 phreak Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -23,8 +23,7 @@ RDEPEND=">=media-sound/alsa-headers-${PV/14a/14}"
 DEPEND="${RDEPEND}
 	doc? ( >=app-doc/doxygen-1.2.6 )"
 
-IUSE_PCM_PLUGIN="copy linear route mulaw alaw adpcm rate plug multi shm file null empty share meter hooks lfloat ladspa dmix dshare dsnoop asym iec958
-softvol extplug ioplug"
+IUSE_PCM_PLUGIN="adpcm alaw copy dshare dsnoop extplug file hooks ladspa lfloat linear meter mulaw multi null rate route share shm"
 
 for plugin in ${IUSE_PCM_PLUGIN}; do
 	IUSE="${IUSE} alsa_pcm_plugins_${plugin}"
@@ -45,6 +44,8 @@ src_compile() {
 	# needed to avoid gcc looping internaly
 	use hppa && export CFLAGS="-O1 -pipe"
 
+	# Enabling asym, dmix, empty, iec958, ioplug, plug, softvol for now by
+	# _DEFAULT_ since alsa seems to need it.
 	econf \
 		--enable-static \
 		--enable-shared \
@@ -53,7 +54,7 @@ src_compile() {
 		$(use_enable alisp) \
 		$(use_enable midi instr) \
 		$(use_enable midi seq) $(use_enable midi aload) \
-		"--with-pcm-plugins=${ALSA_PCM_PLUGINS}" \
+		"--with-pcm-plugins=asym dmix empty iec958 ioplug plug softvol ${ALSA_PCM_PLUGINS}" \
 		--disable-dependency-tracking \
 		|| die "configure failed"
 
