@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/supercollider/supercollider-20040903-r1.ebuild,v 1.1 2007/07/29 13:22:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/supercollider/supercollider-20040903-r1.ebuild,v 1.2 2007/07/29 23:56:12 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc4.patch
-	
+
 	# Change default config file location from /etc to /etc/supercollider
 	sed -i -e "s:/etc/sclang.cfg:/etc/supercollider/sclang.cfg:" source/lang/LangSource/SC_LanguageClient.cpp
 	sed -i -e "s:/etc/sclang.cfg:/etc/supercollider/sclang.cfg:" linux/examples/sclang.cfg.in
