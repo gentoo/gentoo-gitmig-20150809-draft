@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/jpgraph-2.1.3.ebuild,v 1.8 2007/03/08 19:07:37 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/jpgraph-2.1.3.ebuild,v 1.9 2007/07/29 16:54:25 phreak Exp $
 
 inherit php-lib-r1
 
@@ -27,7 +27,7 @@ pkg_setup() {
 	require_gd
 
 	# check to wich user:group the cache dir will go
-	if has_version "net-www/apache" ; then
+	if has_version "www-servers/apache" ; then
 		HTTPD_USER="apache"
 		HTTPD_GROUP="apache"
 		einfo "Configuring ${JPGRAPH_CACHEDIR} for Apache."
