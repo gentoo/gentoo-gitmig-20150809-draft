@@ -12,3 +12,4 @@ move net-www/mod_log_sql www-apache/mod_log_sql
 move net-www/mod_layout www-apache/mod_layout
 move net-www/mod_limitipconn www-apache/mod_limitipconn
 move net-www/mod_ldap_userdir www-apache/mod_ldap_userdir
+move net-www/mod_pcgi2 www-apache/mod_pcgi2
