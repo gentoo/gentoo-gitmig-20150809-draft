@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.151 2007/07/29 09:42:18 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.152 2007/07/29 11:04:18 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> spamassassin-3.1.8.ebuild,
+  spamassassin-3.1.8-r1.ebuild, spamassassin-3.2.0.ebuild,
+  spamassassin-3.2.0-r1.ebuild, spamassassin-3.2.1.ebuild,
+  spamassassin-3.2.1-r1.ebuild:
+  Fixing the SRC_URI, as UPSTREAM decided to remove the DISTFILE from its
+  mirrors. See #186715 for further details.
 
 *spamassassin-3.2.2 (29 Jul 2007)
 
