@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4.5.4.ebuild,v 1.6 2007/05/12 04:28:30 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4.5.4.ebuild,v 1.7 2007/07/29 17:30:49 phreak Exp $
 
 inherit webapp
 MY_P="Metadot${PV}"
@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~ppc"
 DEPEND=""
 RDEPEND="
 	>=dev-lang/perl-5.6
-	=net-www/apache-2*
+	=www-servers/apache-2*
 	=www-apache/mod_perl-2*
 	dev-perl/DBI
 	>=dev-perl/DBD-mysql-2.1027

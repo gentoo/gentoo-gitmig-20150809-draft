@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.3.13_rc1.ebuild,v 1.1 2007/05/10 12:57:53 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.3.13_rc1.ebuild,v 1.2 2007/07/29 17:33:28 phreak Exp $
 
 inherit webapp depend.php
 
@@ -16,7 +16,7 @@ KEYWORDS="~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="virtual/php
-	net-www/apache"
+	www-servers/apache"
 
 src_unpack() {
 	require_php_with_use pcre

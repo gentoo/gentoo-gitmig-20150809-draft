@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ids-0.83_beta2-r1.ebuild,v 1.5 2005/07/11 01:15:35 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ids-0.83_beta2-r1.ebuild,v 1.6 2007/07/29 17:28:27 phreak Exp $
 
 inherit webapp
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 IUSE=""
 KEYWORDS="~x86 ~sparc ~ppc"
-RDEPEND="net-www/apache
+RDEPEND="www-servers/apache
 	>=dev-lang/perl-5.6.1
 	dev-perl/ImageInfo
 	dev-perl/Archive-Zip

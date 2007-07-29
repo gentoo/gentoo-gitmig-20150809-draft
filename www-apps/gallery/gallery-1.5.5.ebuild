@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.5.ebuild,v 1.2 2007/05/12 04:25:27 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.5.ebuild,v 1.3 2007/07/29 17:27:25 phreak Exp $
 
 inherit webapp
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="imagemagick netpbm unzip zip"
 
-RDEPEND=">=net-www/apache-2.0
+RDEPEND=">=www-servers/apache-2.0
 	virtual/php
 	media-libs/jpeg
 	netpbm? ( >=media-libs/netpbm-9.12 >=media-gfx/jhead-2.2 )

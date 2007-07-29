@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mod_survey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/ChangeLog,v 1.2 2007/05/12 04:30:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/ChangeLog,v 1.3 2007/07/29 17:30:56 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> mod_survey-3.2.4.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org> mod_survey-3.2.4.ebuild:
   Apache 1.X masking (fix ebuilds to not require apache-1*).

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moregroupware/moregroupware-0.7.4.ebuild,v 1.3 2007/01/02 22:41:13 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moregroupware/moregroupware-0.7.4.ebuild,v 1.4 2007/07/29 17:31:44 phreak Exp $
 
 inherit webapp
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="virtual/php
-	net-www/apache"
+	www-servers/apache"
 
 src_install() {
 	webapp_src_preinst

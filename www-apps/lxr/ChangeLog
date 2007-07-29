@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/lxr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.13 2007/07/02 14:35:38 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.14 2007/07/29 17:28:37 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> lxr-0.9.5.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> lxr-0.3.1.ebuild:
   (QA) RESTRICT clean up.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.6.ebuild,v 1.11 2007/05/12 04:20:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.6.ebuild,v 1.12 2007/07/29 17:24:24 phreak Exp $
 
 inherit webapp
 
@@ -32,7 +32,7 @@ RDEPEND="
 	dev-perl/perl-ldap
 	>=dev-perl/PatchReader-0.9.4
 	dev-perl/XML-Parser
-	>=net-www/apache-2.0"
+	>=www-servers/apache-2.0"
 
 src_unpack() {
 	unpack ${A}

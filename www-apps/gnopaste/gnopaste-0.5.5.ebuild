@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/gnopaste-0.5.5.ebuild,v 1.2 2007/05/11 20:04:43 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/gnopaste-0.5.5.ebuild,v 1.3 2007/07/29 17:27:15 phreak Exp $
 
 inherit webapp
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND="virtual/mysql
-	net-www/apache
+	www-servers/apache
 	dev-lang/php"
 
 src_install() {

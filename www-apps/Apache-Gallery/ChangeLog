@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/Apache-Gallery
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.28 2007/06/13 12:20:01 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.29 2007/07/29 17:24:54 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org>
+  Apache-Gallery-1.0_rc3.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   13 Jun 2007; Luca Longinotti <chtekk@gentoo.org>
   -Apache-Gallery-0.6.ebuild:

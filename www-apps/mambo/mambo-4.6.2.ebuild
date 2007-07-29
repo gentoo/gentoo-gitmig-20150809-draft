@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.6.2.ebuild,v 1.1 2007/05/16 15:22:30 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.6.2.ebuild,v 1.2 2007/07/29 17:29:39 phreak Exp $
 
 inherit webapp depend.php
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="
 	virtual/httpd-php
-	net-www/apache"
+	www-servers/apache"
 
 pkg_setup () {
 	webapp_pkg_setup

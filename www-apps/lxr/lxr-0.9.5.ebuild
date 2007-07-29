@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.5.ebuild,v 1.3 2007/01/02 22:35:26 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.5.ebuild,v 1.4 2007/07/29 17:28:37 phreak Exp $
 
 inherit perl-module webapp multilib eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="cvs freetext mysql postgres"
 
 RDEPEND="dev-util/ctags
-	net-www/apache
+	www-servers/apache
 	freetext? ( >=www-apps/swish-e-2.1 )
 	dev-lang/perl
 	dev-perl/DBI

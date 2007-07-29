@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.4.ebuild,v 1.2 2007/05/12 04:20:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.4.ebuild,v 1.3 2007/07/29 17:24:24 phreak Exp $
 
 inherit webapp
 
@@ -17,7 +17,7 @@ RDEPEND="
 	>=dev-lang/perl-5.6.1
 	postgres? ( >=dev-perl/DBD-Pg-1.43 )
 	mysql? ( <=dev-perl/DBD-mysql-3.0002 )
-	>=net-www/apache-2.0
+	>=www-servers/apache-2.0
 	graphviz? ( media-gfx/graphviz )
 	>=dev-perl/AppConfig-1.52
 	>=virtual/perl-CGI-2.93

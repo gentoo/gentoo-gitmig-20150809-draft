@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.9 2007/05/24 14:35:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.10 2007/07/29 17:24:54 phreak Exp $
 
 inherit depend.apache perl-module webapp
 
@@ -19,7 +19,7 @@ S=${WORKDIR}/${MY_P}
 
 DEPEND="${DEPEND}
 	=dev-lang/perl-5*
-	>=net-www/apache-2.0.43-r1
+	>=www-servers/apache-2.0.43-r1
 	=www-misc/libapreq2-2*
 	>=media-libs/imlib2-1.0.6-r1
 	dev-perl/URI
