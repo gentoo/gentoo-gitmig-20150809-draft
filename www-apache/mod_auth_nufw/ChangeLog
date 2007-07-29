@@ -1,0 +1,34 @@
+# ChangeLog for net-www/mod_auth_nufw
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/ChangeLog,v 1.1 2007/07/29 16:07:35 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org>
+  +files/50_mod_auth_nufw.conf,
+  +files/mod_auth_nufw-2.2.0-configure_in.patch, +metadata.xml,
+  +mod_auth_nufw-2.2.0.ebuild:
+  Moving net-www/mod_auth_nufw to www-apache/mod_auth_nufw (#81244). Fixing
+  metadata.xml.
+
+  28 Jan 2007; Luca Longinotti <chtekk@gentoo.org>
+  mod_auth_nufw-2.2.0.ebuild:
+  Fix apr dep.
+
+  15 Jan 2007; Luca Longinotti <chtekk@gentoo.org>
+  mod_auth_nufw-2.2.0.ebuild:
+  WANT_* unneeded (defaults to latest), fix alphabetical ordering of deps.
+
+  15 Jan 2007; Cedric Krier <cedk@gentoo.org> mod_auth_nufw-2.2.0.ebuild:
+  Fix arp slotting
+
+  13 Jan 2007; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
+  mod_auth_nufw-2.2.0.ebuild:
+  This is an Apache module, add apache as herd. Cleanup, don't need to add the
+  apache2 USE flag, eclass does that.
+
+*mod_auth_nufw-2.2.0 (31 Dec 2006)
+
+  31 Dec 2006; Cedric Krier <cedk@gentoo.org> +files/50_mod_auth_nufw.conf,
+  +files/mod_auth_nufw-2.2.0-configure_in.patch, +metadata.xml,
+  +mod_auth_nufw-2.2.0.ebuild:
+  New ebuild for bug #138500
+
