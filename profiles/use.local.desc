@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2947 2007/07/29 14:43:31 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2948 2007/07/29 16:34:38 phreak Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2018,6 +2018,15 @@ www-client/seamonkey:xforms - XForms is a standard to split up XHTML into XForms
 www-client/w3m:async - Enables asynchronous fetch
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/nsxml:xslt - Enables xslt support
+www-servers/apache:mpm-event - (experimental) Event MPM - a varient of the worker MPM that tries to solve the keep alive problem - requires epoll support and kernel 2.6
+www-servers/apache:mpm-itk - (experimental) Itk MPM - child processes have seperate user/group ids
+www-servers/apache:mpm-leader - (experimental) Leader MPM - leaders/followers varient of worker MPM
+www-servers/apache:mpm-peruser - (experimental) Peruser MPM - child processes have seperate user/group ids
+www-servers/apache:mpm-prefork - Prefork MPM - non-threaded, forking MPM - similiar manner to Apache 1.3
+www-servers/apache:mpm-threadpool - (experimental) Threadpool MPM - keeps pool of idle threads to handle requests
+www-servers/apache:mpm-worker - Worker MPM - hybrid multi-process multi-thread MPM
+www-servers/apache:no-suexec - Don't install suexec with apache
+www-servers/apache:static-modules - Build modules into apache instead of having them load at run time
 www-servers/cherokee:coverpage - Installs the default cherokee coverpage
 www-servers/fnord:auth - Enable HTTP authentication support
 www-servers/lighttpd:memcache - Enable memcache support for mod_cml and mod_trigger_b4_dl
