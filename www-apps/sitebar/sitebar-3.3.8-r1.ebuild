@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.8-r1.ebuild,v 1.4 2007/01/02 22:53:41 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.8-r1.ebuild,v 1.5 2007/07/29 17:38:58 phreak Exp $
 
 inherit webapp eutils
 
@@ -17,7 +17,7 @@ S=${WORKDIR}/${MY_PN}-${PV}
 
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tar.bz2"
 
-DEPEND="net-www/apache
+DEPEND="www-servers/apache
 		virtual/php"
 LICENSE="GPL-2"
 

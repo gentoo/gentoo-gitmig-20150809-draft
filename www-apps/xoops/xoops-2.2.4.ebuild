@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.2.4.ebuild,v 1.4 2007/07/13 06:13:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.2.4.ebuild,v 1.5 2007/07/29 17:42:53 phreak Exp $
 
 inherit webapp
 
@@ -16,7 +16,7 @@ S=${WORKDIR}
 IUSE=""
 
 RDEPEND="virtual/php
-	net-www/apache"
+	www-servers/apache"
 
 src_unpack() {
 	unpack ${A} && cd ${S}

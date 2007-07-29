@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.51 2007/05/12 04:44:46 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.52 2007/07/29 17:39:19 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> rt-3.4.5.ebuild,
+  rt-3.6.3.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org> -rt-3.2.1.ebuild,
   rt-3.4.5.ebuild, rt-3.6.3.ebuild:

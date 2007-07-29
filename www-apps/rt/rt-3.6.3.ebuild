@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.3.ebuild,v 1.6 2007/05/12 04:44:46 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.3.ebuild,v 1.7 2007/07/29 17:39:19 phreak Exp $
 
 inherit webapp eutils
 
@@ -87,7 +87,7 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	virtual/mta
-	!lighttpd? ( >=net-www/apache-2 )
+	!lighttpd? ( >=www-servers/apache-2 )
 	lighttpd? ( >=www-servers/lighttpd-1.3.13 )
 "
 

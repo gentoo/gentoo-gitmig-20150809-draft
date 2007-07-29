@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.2_p20041207-r1.ebuild,v 1.7 2006/04/12 00:08:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.2_p20041207-r1.ebuild,v 1.8 2007/07/29 17:41:28 phreak Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND="|| (
 		dev-util/subversion
 	)
 	sys-apps/diffutils
-	net-www/apache"
+	www-servers/apache"
 S=${WORKDIR}/${PN}
 
 WWW="/var/www/localhost/viewcvs"

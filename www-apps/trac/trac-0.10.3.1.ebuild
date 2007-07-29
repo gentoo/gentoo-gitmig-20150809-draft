@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.3.1.ebuild,v 1.3 2007/03/20 20:25:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.3.1.ebuild,v 1.4 2007/07/29 17:41:24 phreak Exp $
 
 inherit distutils webapp
 
@@ -45,7 +45,7 @@ DEPEND="${DEPEND}
 #
 # Usage: built_with_use_error <category/package> <functionality> [<USE flag>]
 #    ex: built_with_use_error dev-util/subversion python
-#    or: built_with_use_error net-www/apache LDAP ldap
+#    or: built_with_use_error www-servers/apache LDAP ldap
 #
 # Typical usage:
 #	if ! built_with_use dev-util/subversion python ; then

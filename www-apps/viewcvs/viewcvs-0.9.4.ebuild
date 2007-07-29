@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.4.ebuild,v 1.4 2006/04/12 00:08:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.4.ebuild,v 1.5 2007/07/29 17:41:28 phreak Exp $
 
 inherit webapp
 
@@ -21,7 +21,7 @@ RDEPEND="|| (
 	sys-apps/diffutils
 	cvsgraph? ( dev-util/cvsgraph )
 	enscript? ( app-text/enscript )
-	net-www/apache"
+	www-servers/apache"
 
 src_install() {
 	webapp_src_preinst

@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/viewcvs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.29 2007/05/12 23:50:16 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.30 2007/07/29 17:41:28 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org>
+  viewcvs-0.9.2_p20041207-r1.ebuild, viewcvs-0.9.3.ebuild,
+  viewcvs-0.9.4.ebuild, viewcvs-1.0_pre20050523.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org>
   viewcvs-1.0_pre20050929.ebuild:
