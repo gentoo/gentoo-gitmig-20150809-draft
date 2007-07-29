@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.4-r9.ebuild,v 1.1 2007/07/29 16:32:00 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.4-r9.ebuild,v 1.2 2007/07/29 17:23:43 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -31,7 +31,7 @@ DEPEND="dev-lang/perl
 	ldap? ( =net-nds/openldap-2* )
 	selinux? ( sec-policy/selinux-apache )
 	ssl? ( dev-libs/openssl )
-	!=net-www/apache-1*
+	!=www-servers/apache-1*
 	!=app-admin/apache-tools-2.2.4-r2"
 
 RDEPEND="${DEPEND}
@@ -345,7 +345,7 @@ pkg_postinst() {
 
 	# Previous installations of apache-2.2 installed the upstream configuration
 	# files, which shouldn't even have been installed!
-	if has_version '>=net-www/apache-2.2.4' ; then
+	if has_version '>=www-servers/apache-2.2.4' ; then
 		[ -f "${ROOT}"/etc/apache2/apache2.conf ] && \
 			rm -f "${ROOT}"/etc/apache2/apache2.conf >/dev/null 2>&1
 
@@ -356,7 +356,7 @@ pkg_postinst() {
 	fi
 
 	# Note for new location of Listen
-	if has_version '<net-www/apache-2.2.4-r7' ; then
+	if has_version '<www-servers/apache-2.2.4-r7' ; then
 		elog
 		elog "Listen directives have been moved into the default virtual host"
 		elog "configuation. Therefore you have to enabled at least one of"
@@ -366,7 +366,7 @@ pkg_postinst() {
 	fi
 
 	# Note the user of the config changes
-	if has_version '<net-www/apache-2.2.4-r5' ; then
+	if has_version '<www-servers/apache-2.2.4-r5' ; then
 		elog
 		elog "Please make sure that you update your /etc directory."
 		elog "Between the versions, we had to changes some config files"
@@ -379,7 +379,7 @@ pkg_postinst() {
 	fi
 
 	# Check for dual/upgrade install
-	if has_version '<net-www/apache-2.2.0' ; then
+	if has_version '<www-servers/apache-2.2.0' ; then
 		elog
 		elog "When upgrading from versions below 2.2.0 to this version, you"
 		elog "need to rebuild all your modules. Please do so for your modules"
@@ -403,7 +403,7 @@ pkg_postinst() {
 		elog "To keep from accidentally downgrading to Apache 2.0, you should"
 		elog "add the following to ${ROOT}/etc/portage/package.mask:"
 		elog
-		elog "    <net-www/apache-2.2.0"
+		elog "    <www-servers/apache-2.2.0"
 		elog
 	fi
 

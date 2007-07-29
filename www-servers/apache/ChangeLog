@@ -1,6 +1,12 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.1 2007/07/29 16:32:00 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.2 2007/07/29 17:23:43 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> apache-2.0.58-r2.ebuild,
+  apache-2.0.59-r2.ebuild, apache-2.2.4-r6.ebuild, apache-2.2.4-r7.ebuild,
+  apache-2.2.4-r8.ebuild, apache-2.2.4-r9.ebuild, apache-2.2.4-r10.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
 *apache-2.2.4-r6 (29 Jul 2007)
 

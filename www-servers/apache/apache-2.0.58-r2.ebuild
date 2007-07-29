@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.0.58-r2.ebuild,v 1.1 2007/07/29 16:32:00 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.0.58-r2.ebuild,v 1.2 2007/07/29 17:23:43 phreak Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib
 
@@ -344,7 +344,7 @@ pkg_postinst() {
 	fi
 
 	# Check for dual/upgrade install
-	if has_version '=net-www/apache-1*' || ! use apache2 ; then
+	if has_version '=www-servers/apache-1*' || ! use apache2 ; then
 		ewarn
 		ewarn "Please add the 'apache2' flag to your USE variable and (re)install"
 		ewarn "any additional DSO modules you may wish to use with Apache-2.x."
@@ -360,7 +360,7 @@ pkg_postinst() {
 	done
 	[ -n "${list}" ] && einfo "You should delete these old symlinks: ${list}"
 
-	if has_version '<net-www/apache-2.0.54-r30' && has_version '>=net-www/apache-2.0.0' ; then
+	if has_version '<www-servers/apache-2.0.54-r30' && has_version '>=www-servers/apache-2.0.0' ; then
 		einfo "Configuration locations have changed, you will need to migrate"
 		einfo "your configuration from /etc/apache2/conf/apache2.conf and"
 		einfo "/etc/apache2/conf/commonapache2.conf to /etc/apache2/httpd.conf."
