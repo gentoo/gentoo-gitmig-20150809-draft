@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r3.ebuild,v 1.8 2007/07/22 06:55:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r3.ebuild,v 1.9 2007/07/29 17:09:48 phreak Exp $
 
 inherit eutils wxwidgets
 
@@ -19,7 +19,7 @@ IUSE="server X"
 
 RDEPEND="sys-libs/zlib
 	X? ( =x11-libs/wxGTK-2.6* )
-	server? ( net-www/apache
+	server? ( www-servers/apache
 		>=virtual/mysql-4.0
 		virtual/php
 		>=dev-lang/python-2.2.3
