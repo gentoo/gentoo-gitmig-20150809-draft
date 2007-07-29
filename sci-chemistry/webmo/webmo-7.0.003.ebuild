@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-7.0.003.ebuild,v 1.1 2007/05/08 06:43:35 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-7.0.003.ebuild,v 1.2 2007/07/29 17:07:47 phreak Exp $
 
 inherit eutils webapp
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86"
 RESTRICT="fetch"
 IUSE=""
 RDEPEND="dev-lang/perl
-	net-www/apache"
+	www-servers/apache"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_SRC_PN}.install"
