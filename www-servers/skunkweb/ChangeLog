@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/skunkweb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.17 2007/05/12 03:52:33 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.18 2007/07/29 17:45:36 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> skunkweb-3.4.0.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org> skunkweb-3.4.0.ebuild,
   skunkweb-3.4.0-r1.ebuild, skunkweb-3.4.1.ebuild, skunkweb-3.4.3.ebuild:

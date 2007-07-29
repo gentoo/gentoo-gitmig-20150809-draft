@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/gorg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.14 2007/04/23 18:46:18 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.15 2007/07/29 17:45:25 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> gorg-0.5.ebuild,
+  gorg-0.6.3.ebuild, gorg-0.6.3-r1.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   23 Apr 2007; <rb@gentoo.org> gorg-0.6.3-r1.ebuild:
   EAPI shouldn't have been set

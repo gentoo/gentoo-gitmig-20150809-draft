@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.0.ebuild,v 1.8 2007/05/12 03:52:33 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.0.ebuild,v 1.9 2007/07/29 17:45:36 phreak Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE="apache2 doc"
 DEPEND=">=dev-lang/python-2.2
 		>=dev-python/egenix-mx-base-2.0.4
-		apache2? ( >=net-www/apache-2.0.47 )"
+		apache2? ( >=www-servers/apache-2.0.47 )"
 
 pkg_setup() {
 	enewgroup skunkweb
