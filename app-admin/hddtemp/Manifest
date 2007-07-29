@@ -9,6 +9,18 @@ AUX hddtemp-0.3_beta15-byteswap.patch 1037 RMD160 969720123d9d100ae83f6d9f3b48d2
 MD5 bed032d7702ec78e736362ce4a9d5796 files/hddtemp-0.3_beta15-byteswap.patch 1037
 RMD160 969720123d9d100ae83f6d9f3b48d2c4cd2b58b5 files/hddtemp-0.3_beta15-byteswap.patch 1037
 SHA256 85eeaff97c96d2f77a93caa3270ee598f756c4eb0da6753e5ee8602fa1a5bdec files/hddtemp-0.3_beta15-byteswap.patch 1037
+AUX hddtemp-0.3_beta15-execinfo.patch 751 RMD160 a5ca235ce4c4601c4eec82182a9ef825ef2db46a SHA1 17cf64c2d445950d52d90ff883338e84b8b403c8 SHA256 8f896c478f8f2b1776ff4e16fe1f12f0829d044a14e37df48e098aec80812c5c
+MD5 4d5dca7b120fc5d1d5bdaa2faff61a48 files/hddtemp-0.3_beta15-execinfo.patch 751
+RMD160 a5ca235ce4c4601c4eec82182a9ef825ef2db46a files/hddtemp-0.3_beta15-execinfo.patch 751
+SHA256 8f896c478f8f2b1776ff4e16fe1f12f0829d044a14e37df48e098aec80812c5c files/hddtemp-0.3_beta15-execinfo.patch 751
+AUX hddtemp-0.3_beta15-iconv.patch 780 RMD160 b6209e93ec0db66eff2b12653cac0209482d5d56 SHA1 dffe2d4300dfd2632545d9c63539c4d4f056b795 SHA256 542f5b064098961b2fae4ab0185731b47d412c7e4cc8d8972694228f9bb1415f
+MD5 0eafead9c9d8cdad96276f4fe5a23d7e files/hddtemp-0.3_beta15-iconv.patch 780
+RMD160 b6209e93ec0db66eff2b12653cac0209482d5d56 files/hddtemp-0.3_beta15-iconv.patch 780
+SHA256 542f5b064098961b2fae4ab0185731b47d412c7e4cc8d8972694228f9bb1415f files/hddtemp-0.3_beta15-iconv.patch 780
+AUX hddtemp-0.3_beta15-nls.patch 414 RMD160 85adfd2f30ddeed6ab147cc9f3e1c02bc5c1cbec SHA1 1814fa835a292870a754a21e86189a3acb9d3390 SHA256 c81efff92e3cd52257438b834df652cfea8535140fe8b67ebded14fd29c3dd9c
+MD5 0bce27567ed33a113d376a1c78dae895 files/hddtemp-0.3_beta15-nls.patch 414
+RMD160 85adfd2f30ddeed6ab147cc9f3e1c02bc5c1cbec files/hddtemp-0.3_beta15-nls.patch 414
+SHA256 c81efff92e3cd52257438b834df652cfea8535140fe8b67ebded14fd29c3dd9c files/hddtemp-0.3_beta15-nls.patch 414
 AUX hddtemp-0.3_beta15-satacmds.patch 986 RMD160 445eb1a1c77738b0d62595a15955708c93310b16 SHA1 c81c89d0c8770aae5f667b5416e22c75518d122b SHA256 f3ae8ebd08d598cf9292d08e5fe07f54f894da7a90f02dcc9c46bb8d37afde56
 MD5 e817c43d60b715e6097b624f42bba2fe files/hddtemp-0.3_beta15-satacmds.patch 986
 RMD160 445eb1a1c77738b0d62595a15955708c93310b16 files/hddtemp-0.3_beta15-satacmds.patch 986
@@ -35,14 +47,18 @@ EBUILD hddtemp-0.3_beta15-r1.ebuild 1391 RMD160 709a4da43da58d5347aedd1e2f8a7157
 MD5 0de319ba6032c688fd0cafe8d1cc16ed hddtemp-0.3_beta15-r1.ebuild 1391
 RMD160 709a4da43da58d5347aedd1e2f8a71577f21173c hddtemp-0.3_beta15-r1.ebuild 1391
 SHA256 c23598cbefdecc7bd28ec416a008a594d109bca2f37fb71b49438946ca578520 hddtemp-0.3_beta15-r1.ebuild 1391
+EBUILD hddtemp-0.3_beta15-r2.ebuild 1553 RMD160 3fccf1e2727dfe2021e54545c51694a4cb18a986 SHA1 68f4dae360e02c811b18a07eb3695d5a2529629b SHA256 b9ccc685bab4f5faac7d0c2a590ec00b5c1bf946cc9a4f68f1df47369d80c2ee
+MD5 2c9d2f637ff8c6e09cb04f42ece719b4 hddtemp-0.3_beta15-r2.ebuild 1553
+RMD160 3fccf1e2727dfe2021e54545c51694a4cb18a986 hddtemp-0.3_beta15-r2.ebuild 1553
+SHA256 b9ccc685bab4f5faac7d0c2a590ec00b5c1bf946cc9a4f68f1df47369d80c2ee hddtemp-0.3_beta15-r2.ebuild 1553
 EBUILD hddtemp-0.3_beta15.ebuild 1354 RMD160 7caa67dee0bba04a735a32cf48ab6d239ff5ca59 SHA1 a5c0b51cdc6c1bdbd40f762c2ba3d236db0b183c SHA256 4a73f9306d42245a9bd7a69f69cc7cd98c0463b715e8d69cb9ee59afd1394425
 MD5 731c6612dde81f724596d31aeabb12d7 hddtemp-0.3_beta15.ebuild 1354
 RMD160 7caa67dee0bba04a735a32cf48ab6d239ff5ca59 hddtemp-0.3_beta15.ebuild 1354
 SHA256 4a73f9306d42245a9bd7a69f69cc7cd98c0463b715e8d69cb9ee59afd1394425 hddtemp-0.3_beta15.ebuild 1354
-MISC ChangeLog 9525 RMD160 33c98c9f367934c1e3b7958c08fd05d43401c64a SHA1 f2ba75a73b3e2e4cd7af13c7e7c63bdd265065c5 SHA256 1a68f8870b8a09044bf106d69814627e1a2bf143388af7f3a5fcf819191de161
-MD5 8f9c66e27a92c266f38b47b0a45d2ad0 ChangeLog 9525
-RMD160 33c98c9f367934c1e3b7958c08fd05d43401c64a ChangeLog 9525
-SHA256 1a68f8870b8a09044bf106d69814627e1a2bf143388af7f3a5fcf819191de161 ChangeLog 9525
+MISC ChangeLog 9813 RMD160 f9321a1c62d0beb871229adfbaafa482a1d57da5 SHA1 47ee274b5350d6f8d79dc9137d15020b1c3ba1b2 SHA256 e3deb12966f857e7e6b3134a8008376aabd30bdf73a192809e972e7052edcb9e
+MD5 a4046069699297242001c8c60ec19929 ChangeLog 9813
+RMD160 f9321a1c62d0beb871229adfbaafa482a1d57da5 ChangeLog 9813
+SHA256 e3deb12966f857e7e6b3134a8008376aabd30bdf73a192809e972e7052edcb9e ChangeLog 9813
 MISC metadata.xml 220 RMD160 6bb03cb6947aadf2672a58c61c1fb7aa405eaf86 SHA1 7810907f03c5a3ee23eeaa4b42699ce17bc5c3a7 SHA256 969b4125e7620e2fe0d616cb3cabbe52bd79e6c4bdd725ce807d5f4c7c1ad75d
 MD5 87131e5c56922624f8a0c7fe61cd28da metadata.xml 220
 RMD160 6bb03cb6947aadf2672a58c61c1fb7aa405eaf86 metadata.xml 220
@@ -56,10 +72,13 @@ SHA256 f1e970e75b2db44f6ea4fabf3af2526ecbac353e200074709cb6c7bdf241b131 files/di
 MD5 f39545c75ab43d19430ab8abfe9ea3b9 files/digest-hddtemp-0.3_beta15-r1 259
 RMD160 0c7e37e16231df916c483eb49074bb7529f400ec files/digest-hddtemp-0.3_beta15-r1 259
 SHA256 f1e970e75b2db44f6ea4fabf3af2526ecbac353e200074709cb6c7bdf241b131 files/digest-hddtemp-0.3_beta15-r1 259
+MD5 f39545c75ab43d19430ab8abfe9ea3b9 files/digest-hddtemp-0.3_beta15-r2 259
+RMD160 0c7e37e16231df916c483eb49074bb7529f400ec files/digest-hddtemp-0.3_beta15-r2 259
+SHA256 f1e970e75b2db44f6ea4fabf3af2526ecbac353e200074709cb6c7bdf241b131 files/digest-hddtemp-0.3_beta15-r2 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
+Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGBs8ichej4aZK9/cRAnJNAJ4vmY9ieTPxyiKNPbHDe9T0GvWZdgCfemQr
-yP2bs/rfV9HgnMxRxjswTgc=
-=lB7O
+iD8DBQFGrQZuchej4aZK9/cRAhEIAJ9y36ypbIBrck+Z2p4v8I8wrC3VBgCfYKmn
+qePrqXaI9AdHvs93N4h5RAo=
+=6Kwy
 -----END PGP SIGNATURE-----

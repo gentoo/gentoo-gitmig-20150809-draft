@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.56 2007/03/25 19:35:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.57 2007/07/29 21:28:33 spock Exp $
+
+*hddtemp-0.3_beta15-r2 (29 Jul 2007)
+
+  29 Jul 2007; Michał Januszewski <spock@gentoo.org>
+  +files/hddtemp-0.3_beta15-execinfo.patch,
+  +files/hddtemp-0.3_beta15-iconv.patch,
+  +files/hddtemp-0.3_beta15-nls.patch, +hddtemp-0.3_beta15-r2.ebuild:
+  Add support for uclibc (bug #132308).
 
   25 Mar 2007; Michał Januszewski <spock@gentoo.org> files/hddtemp-init:
   Use --exec instead of --name in the initscript to make it compatible with
