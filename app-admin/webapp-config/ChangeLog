@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.51 2007/06/07 14:29:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.52 2007/07/29 23:47:43 hollow Exp $
+
+*webapp-config-1.50.16-r1 (29 Jul 2007)
+
+  29 Jul 2007; Benedikt Böhm <hollow@gentoo.org>
+  +files/webapp-config-1.50.16-apache-move.patch,
+  +webapp-config-1.50.16-r1.ebuild:
+  fix for move from net-www/apache to www-servers/apache
 
   07 Jun 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
   modified ChangeLog to meet common standards
