@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r2.ebuild,v 1.1 2007/07/29 07:02:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r2.ebuild,v 1.2 2007/07/29 09:53:27 drac Exp $
 
 GCONF_DEBUG="no"
 
@@ -24,7 +24,11 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	python? ( dev-python/pygtk )
 	x11-misc/xdg-utils"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	!media-plugins/streamtuner-xiph
+	!media-plugins/streamtuner-local
+	!media-plugins/streamtuner-live365
+	!media-plugins/streamtuner-python"
 
 DOCS="AUTHORS NEWS README TODO"
 

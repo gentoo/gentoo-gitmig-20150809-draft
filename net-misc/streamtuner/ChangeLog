@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/streamtuner
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.28 2007/07/29 07:02:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.29 2007/07/29 09:53:27 drac Exp $
+
+  29 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  streamtuner-0.99.99-r2.ebuild:
+  Add blockers to old plugins wrt bug 97195.
 
 *streamtuner-0.99.99-r2 (29 Jul 2007)
 
