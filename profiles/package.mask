@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7539 2007/07/29 01:49:06 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7540 2007/07/29 06:08:33 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -139,22 +139,6 @@ x11-themes/gdm-themes
 app-text/yodl
 
 # Samuli Suominen <drac@gentoo.org> (02 Jul 2007)
-# Replaced by glipper, klipper, xclipboard or xfce4-clipman.
-# Upstream has no HOMEPAGE anymore. Still using GTK+-1.2.
-# Masked for removal in 30 days.
-x11-misc/gclipper
-
-# Samuli Suominen <drac@gentoo.org> (02 Jul 2007)
-# Still using GTK+-1.2. Replaced by x11-misc/gcolor2.
-# Masked for removal in 30 days.
-x11-misc/gcolor
-
-# Samuli Suominen <drac@gentoo.org> (02 Jul 2007)
-# Upstream gone, last release from 2004. Still using GTK+-1.2.
-# Masked for removal in 30 days. Use x11-misc/gtodo instead.
-x11-misc/ntodo
-
-# Samuli Suominen <drac@gentoo.org> (02 Jul 2007)
 # Orphaned library. Masked for removal in 30 days. Bug 153439.
 media-libs/allegromp3
 
@@ -189,15 +173,6 @@ x11-misc/xnview
 # dbus. Removal in 30 days unless someone else takes this
 # package and fixes the problems.
 kde-misc/kdbus
-
-# Samuli Suominen <drac@gentoo.org> (01 Jul 2007)
-# Large amount of TEXTRELS, installs shared ELF libraries
-# into /usr/share, large amount of invalid declaration of functions,
-# autotools usage is completely wrong, installs desktop files into
-# deprecated locations, installs invalid patch conditionally, upstream is 
-# likely dead plus there is open bug 152864. Unless you're willing 
-# to fix *all* this. Package will be removed in 30 days.
-x11-misc/gwhere
 
 # Roy Marples <uberlord@gentoo.org> (29 Jun 2007)
 # Masked due to several connectivity issues.
