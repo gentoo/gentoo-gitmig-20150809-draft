@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.116 2007/07/28 18:29:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.117 2007/07/29 21:33:38 jer Exp $
+
+  29 Jul 2007; Jeroen Roovers <jer@gentoo.org> -opera-9.21.ebuild,
+  -opera-9.21-r1.ebuild, -opera-9.22_rc651.ebuild, -opera-9.22_rc652.ebuild:
+  Clean up of vulnerable versions and weeklies.
 
   28 Jul 2007; Steve Dibb <beandog@gentoo.org> opera-9.22.ebuild:
   amd64 stable, security bug 185497
