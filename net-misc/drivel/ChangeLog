@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/drivel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.28 2007/07/21 19:21:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.29 2007/07/29 18:41:47 dertobi123 Exp $
+
+  29 Jul 2007; Tobias Scherbaum <dertobi123@gentoo.org> drivel-2.0.3.ebuild:
+  ppc stable, bug #186146
 
   21 Jul 2007; Hans de Graaff <graaff@gentoo.org> -drivel-1.2.1.ebuild,
   -drivel-1.2.4-r1.ebuild:
