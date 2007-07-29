@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2948 2007/07/29 16:34:38 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2949 2007/07/29 21:42:02 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1670,18 +1670,11 @@ net-www/apache:no-suexec - Don't install suexec with apache
 net-www/apache:static-modules - Build modules into apache instead of having them load at run time
 net-www/gentoo-webroot-default:no-htdocs - Don't install anything in the default webroot (/var/www/localhost)
 net-www/gnash:agg - Rendering based on the Anti-Grain Geometry Rendering Engine library
-net-www/mod_auth_ldap:diskcache - Enables support for disk cache.
-net-www/mod_auth_ldap:memcache - Enables support for memory cache.
-net-www/mod_ftpd:dbi - Enables support for libDBI
-net-www/mod_log_sql:dbi - Enables support for libDBI
 net-www/mplayerplug-in:divx - Divx Playback Support
 net-www/mplayerplug-in:gmedia - Google Media Playback Support
 net-www/mplayerplug-in:mplayer-bin - Use binary mplayer for 32 bit codecs on amd64
 net-www/mplayerplug-in:realmedia - Real Media Playback Support
 net-www/mplayerplug-in:wmp - Windows Media Playback Support
-net-www/pwauth:domain-aware - Ignore leading domain names in username (Windows compat)
-net-www/pwauth:faillog - Log failed login attempts
-net-www/pwauth:ignore-case - Ignore string case in username (mostly Windows compat)
 rox-extra/archive:ace - Enable .ace support via unace package
 rox-extra/archive:compress - Enable tar.Z and *.Z via ncompress package
 rox-extra/archive:cpio - Enable .cpio extraction via cpio package
@@ -1959,6 +1952,9 @@ www-apache/mod_suphp:checkpath - Check if script resides in DOCUMENT_ROOT
 www-apache/mod_suphp:mode-force - Run scripts with UID/GID specified in Apache configuration
 www-apache/mod_suphp:mode-owner - Run scripts with owner UID/GID
 www-apache/mod_suphp:mode-paranoid - Run scripts with owner UID/GID but also check if they match the UID/GID specified in the Apache configuration
+www-apache/pwauth:domain-aware - Ignore leading domain names in username (Windows compat)
+www-apache/pwauth:faillog - Log failed login attempts
+www-apache/pwauth:ignore-case - Ignore string case in username (mostly Windows compat)
 www-apps/Embperl:modperl - Enable modperl support
 www-apps/Embperl:xalan - Enable xalan support
 www-apps/bugzilla:extras - optional Perl modules
