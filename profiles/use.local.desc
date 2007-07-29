@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2949 2007/07/29 21:42:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2950 2007/07/29 22:27:51 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1659,16 +1659,6 @@ net-wireless/wifiscanner:wireshark - use wireshark's wtap library
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
 net-wireless/wpa_supplicant:gsm - Add support for EAP-SIM authentication algorithm
 net-wireless/wpa_supplicant:madwifi - Add support for madwifi (Atheros chipset)
-net-www/apache:mpm-event - (experimental) Event MPM - a varient of the worker MPM that tries to solve the keep alive problem - requires epoll support and kernel 2.6
-net-www/apache:mpm-itk - (experimental) Itk MPM - child processes have seperate user/group ids
-net-www/apache:mpm-leader - (experimental) Leader MPM - leaders/followers varient of worker MPM
-net-www/apache:mpm-peruser - (experimental) Peruser MPM - child processes have seperate user/group ids
-net-www/apache:mpm-prefork - Prefork MPM - non-threaded, forking MPM - similiar manner to Apache 1.3
-net-www/apache:mpm-threadpool - (experimental) Threadpool MPM - keeps pool of idle threads to handle requests
-net-www/apache:mpm-worker - Worker MPM - hybrid multi-process multi-thread MPM
-net-www/apache:no-suexec - Don't install suexec with apache
-net-www/apache:static-modules - Build modules into apache instead of having them load at run time
-net-www/gentoo-webroot-default:no-htdocs - Don't install anything in the default webroot (/var/www/localhost)
 net-www/gnash:agg - Rendering based on the Anti-Grain Geometry Rendering Engine library
 net-www/mplayerplug-in:divx - Divx Playback Support
 net-www/mplayerplug-in:gmedia - Google Media Playback Support
