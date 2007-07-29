@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.38.ebuild,v 1.1 2007/05/30 15:09:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.38.ebuild,v 1.2 2007/07/29 18:08:25 drac Exp $
 
 WANT_AUTOMAKE=1.10
 inherit libtool gnome.org eutils autotools flag-o-matic
@@ -70,5 +70,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	eselect esd update --if-unset
+	eselect esd update --if-unset \
+		|| die "eselect failed, try removing /usr/bin/esd and re-emerging."
 }

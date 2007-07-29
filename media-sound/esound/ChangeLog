@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.96 2007/05/30 15:09:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.97 2007/07/29 18:08:25 drac Exp $
+
+  29 Jul 2007; Samuli Suominen <drac@gentoo.org> esound-0.2.38.ebuild:
+  Make postinst die if eselect fails for bug 175361.
 
 *esound-0.2.38 (30 May 2007)
 
