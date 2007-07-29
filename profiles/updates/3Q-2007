@@ -23,3 +23,4 @@ move net-www/mod_auth_mysql www-apache/mod_auth_mysql
 move net-www/mod_auth_nufw www-apache/mod_auth_nufw
 move net-www/mod_auth_pam www-apache/mod_auth_pam
 move net-www/mod_auth_pgsql www-apache/mod_auth_pgsql
+move net-www/apache www-servers/apache
