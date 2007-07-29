@@ -1,2 +1,2 @@
 ROOTPATH="/var/vpopmail/bin"
-CONFIG_PROTECT="/var/vpopmail/domains /var/vpopmail/etc"
+CONFIG_PROTECT="/var/vpopmail/etc"
