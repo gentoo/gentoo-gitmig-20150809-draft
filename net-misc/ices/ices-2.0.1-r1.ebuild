@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-2.0.1-r1.ebuild,v 1.1 2007/07/29 08:26:44 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-2.0.1-r1.ebuild,v 1.2 2007/07/29 08:40:21 drac Exp $
 
 inherit eutils
 
-DESCRIPTION="icecast OGG streaming client. supports on the fly re-encoding"
+DESCRIPTION="Icecast OGG streaming client, supports on the fly re-encoding."
 HOMEPAGE="http://www.icecast.org/ices.php"
 SRC_URI="http://downloads.xiph.org/releases/${PN}/${P}.tar.bz2"
 
@@ -29,7 +29,7 @@ src_compile() {
 	emake || die "emake failed."
 }
 
-src_install () {
+src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS README TODO
 	insinto /etc/ices2
