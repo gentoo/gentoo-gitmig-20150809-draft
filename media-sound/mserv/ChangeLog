@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mserv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.22 2007/06/15 16:14:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.23 2007/07/29 16:58:37 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> mserv-0.35-r1.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   15 Jun 2007; Alexis Ballier <aballier@gentoo.org> -mserv-0.35.ebuild:
   remove version using obsolete webapp-apache eclass, bug #182129
