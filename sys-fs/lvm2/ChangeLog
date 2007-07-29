@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.105 2007/07/29 22:34:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.106 2007/07/29 22:42:50 robbat2 Exp $
+
+  29 Jul 2007; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Update metadata.
 
 *lvm2-2.02.27 (29 Jul 2007)
 
