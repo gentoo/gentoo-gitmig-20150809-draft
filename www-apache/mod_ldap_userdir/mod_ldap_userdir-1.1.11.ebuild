@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ldap_userdir/mod_ldap_userdir-1.1.11.ebuild,v 1.1 2007/07/29 19:10:41 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ldap_userdir/mod_ldap_userdir-1.1.11.ebuild,v 1.2 2007/07/29 19:17:40 phreak Exp $
 
 inherit apache-module
 
@@ -22,7 +22,7 @@ DOCFILES="DIRECTIVES README user-ldif posixAccount-objectclass"
 APACHE2_MOD_CONF="47_mod_ldap_userdir"
 APACHE2_MOD_DEFINE="LDAP_USERDIR"
 
-need_apache2.2
+need_apache2_2
 
 src_compile() {
 	local myargs="-lldap -llber"
