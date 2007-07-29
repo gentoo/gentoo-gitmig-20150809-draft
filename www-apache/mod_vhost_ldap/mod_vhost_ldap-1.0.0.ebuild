@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/mod_vhost_ldap-1.0.0.ebuild,v 1.2 2007/01/15 19:40:25 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/mod_vhost_ldap-1.0.0.ebuild,v 1.3 2007/07/29 17:11:08 phreak Exp $
 
 inherit eutils apache-module
 
@@ -24,7 +24,7 @@ DOCFILES="AUTHORS ChangeLog INSTALL README"
 need_apache2
 
 pkg_setup() {
-	if ! built_with_use net-www/apache ldap ; then
+	if ! built_with_use www-servers/apache ldap ; then
 		eerror
 		eerror "Apache2 needs to be built with ldap support to get this module working!"
 		eerror
