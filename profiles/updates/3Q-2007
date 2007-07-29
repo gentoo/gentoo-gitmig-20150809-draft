@@ -14,3 +14,4 @@ move net-www/mod_limitipconn www-apache/mod_limitipconn
 move net-www/mod_ldap_userdir www-apache/mod_ldap_userdir
 move net-www/mod_pcgi2 www-apache/mod_pcgi2
 move net-www/mod_scgi www-apache/mod_scgi
+move net-www/mod_vdbh www-apache/mod_vdbh
