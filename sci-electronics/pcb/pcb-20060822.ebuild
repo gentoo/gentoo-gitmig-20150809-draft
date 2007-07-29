@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20060822.ebuild,v 1.8 2007/07/22 07:16:24 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20060822.ebuild,v 1.9 2007/07/29 09:02:44 calchan Exp $
 
 inherit eutils
 
@@ -39,5 +39,5 @@ src_install() {
 	make DESTDIR=${D} install || die "Installation failed"
 	dodoc AUTHORS ChangeLog NEWS README
 	newicon win32/pcb_icon_big.xpm pcb.xpm
-	make_desktop_entry pcb PCB pcb.xpm Electronics
+	make_desktop_entry pcb PCB pcb.xpm "Application;Engineering;Electronics"
 }
