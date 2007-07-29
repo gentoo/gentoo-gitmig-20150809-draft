@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/hmake
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.31 2007/07/28 14:45:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.32 2007/07/29 13:48:46 dcoutts Exp $
+
+*hmake-3.13 (29 Jul 2007)
+
+  29 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> hmake-3.11.ebuild,
+  +hmake-3.13.ebuild:
+  New minor version and fix building with ghc-6.6.1.
 
   28 Jul 2007; nixnut <nixnut@gentoo.org> ChangeLog:
   Stable on ppc wrt bug 186849
