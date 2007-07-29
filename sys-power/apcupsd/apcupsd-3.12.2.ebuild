@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.2.ebuild,v 1.2 2006/10/22 19:49:01 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.2.ebuild,v 1.3 2007/07/29 17:11:41 phreak Exp $
 
 inherit eutils depend.apache
 
@@ -15,7 +15,7 @@ IUSE="doc snmp usb apache2 cgi threads ncurses nls lighttpd"
 
 DEPEND="snmp? ( net-analyzer/net-snmp )
 	cgi? ( >=media-libs/gd-1.8.4
-		apache2? ( >=net-www/apache-2.0.54-r30 )
+		apache2? ( >=www-servers/apache-2.0.54-r30 )
 		lighttpd? ( www-servers/lighttpd )
 		)
 	ncurses? ( sys-libs/ncurses )
