@@ -1,0 +1,2 @@
+# extra options for conntrackd
+CONNTRACKD_OPTS="-S"
