@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-araneida/cl-araneida-0.9.ebuild,v 1.5 2005/05/24 18:48:32 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-araneida/cl-araneida-0.9.ebuild,v 1.6 2007/07/29 16:46:51 phreak Exp $
 
 inherit common-lisp eutils
 
@@ -14,7 +14,7 @@ IUSE=""
 DEPEND="dev-lisp/cl-split-sequence
 	dev-lisp/cl-net-telent-date"
 RDEPEND="${DEPEND}
-	|| ( net-www/apache www-servers/pound )"
+	|| ( www-servers/apache www-servers/pound )"
 
 CLPACKAGE=araneida
 

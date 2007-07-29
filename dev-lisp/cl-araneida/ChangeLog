@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-araneida
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-araneida/ChangeLog,v 1.8 2007/02/22 01:19:51 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-araneida/ChangeLog,v 1.9 2007/07/29 16:46:51 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> cl-araneida-0.9.ebuild,
+  cl-araneida-0.90.1.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
