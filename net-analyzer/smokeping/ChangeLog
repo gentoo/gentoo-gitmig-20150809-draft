@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.10 2007/05/17 15:13:05 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.11 2007/07/29 16:59:40 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> smokeping-2.0.9.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   17 May 2007; Luca Longinotti <chtekk@gentoo.org> smokeping-2.0.9.ebuild:
   Fix bug #157690.

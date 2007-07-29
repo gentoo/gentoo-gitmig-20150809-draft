@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/aimsniff
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.25 2007/07/02 14:35:04 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.26 2007/07/29 17:01:03 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> aimsniff-0.9-r1.ebuild,
+  aimsniff-0.9-r2.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> aimsniff-0.9-r1.ebuild,
   aimsniff-0.9-r2.ebuild:

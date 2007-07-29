@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.13 2007/05/01 17:54:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.14 2007/07/29 16:59:58 phreak Exp $
 
 inherit webapp
 
@@ -15,7 +15,7 @@ KEYWORDS="~ppc ~x86"
 DEPEND="virtual/mysql
 	virtual/libpcap
 	media-libs/gd"
-RDEPEND="net-www/apache
+RDEPEND="www-servers/apache
 	virtual/httpd-php"
 
 pkg_setup() {

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/jffnms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/ChangeLog,v 1.8 2007/02/01 16:37:54 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/ChangeLog,v 1.9 2007/07/29 17:00:36 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> jffnms-0.8.2-r1.ebuild,
+  jffnms-0.8.3-r1.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   01 Feb 2007; Markus Ullmann <jokey@gentoo.org> -files/mysql_db,
   -files/postgresql_db, -files/postgresql_db_table, -jffnms-0.8.2.ebuild,

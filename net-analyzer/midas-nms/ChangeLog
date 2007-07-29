@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/midas-nms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/ChangeLog,v 1.10 2007/05/01 17:54:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/ChangeLog,v 1.11 2007/07/29 16:59:58 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> midas-nms-2.2f.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   01 May 2007; Marius Mauch <genone@gentoo.org> midas-nms-2.2f.ebuild:
   Replacing einfo with elog
