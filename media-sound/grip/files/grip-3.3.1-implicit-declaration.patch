@@ -1,0 +1,11 @@
+diff -ur grip-3.3.1.orig/src/status_window.c grip-3.3.1/src/status_window.c
+--- grip-3.3.1.orig/src/status_window.c	2004-04-15 21:21:37.000000000 +0300
++++ grip-3.3.1/src/status_window.c	2007-07-29 18:08:48.000000000 +0300
+@@ -23,6 +23,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <unistd.h>
++#include <string.h>
+ #include <fcntl.h>
+ #include <vte/vte.h>
+ #include "status_window.h"

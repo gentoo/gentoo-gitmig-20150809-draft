@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.75 2007/06/20 19:47:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.76 2007/07/29 15:16:24 drac Exp $
+
+*grip-3.3.1-r1 (29 Jul 2007)
+
+  29 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/grip-3.3.1-implicit-declaration.patch, +grip-3.3.1-r1.ebuild:
+  Fix warning, implicit declaration of built-in function strlen.
 
   20 Jun 2007; Raúl Porcel <armin76@gentoo.org> grip-3.3.1.ebuild:
   alpha/ia64 stable wrt #136137, thanks to Tobias Klausmann for testing
