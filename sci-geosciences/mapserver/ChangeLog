@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.4 2007/05/02 22:51:22 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.5 2007/07/29 17:09:16 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> mapserver-4.10.0.ebuild,
+  mapserver-4.10.0-r1.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   02 May 2007; Vlastimil Babka <caster@gentoo.org>
   mapserver-4.10.0-r1.ebuild:
