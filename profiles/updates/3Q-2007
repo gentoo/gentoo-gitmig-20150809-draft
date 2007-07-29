@@ -3,3 +3,4 @@ move sys-apps/pam_mount sys-auth/pam_mount
 move games-fps/blackshades-cvs games-fps/blackshades
 move games-fps/vendetta-online-bin games-rpg/vendetta-online-bin
 move net-www/mod_security www-apache/mod_security
+move net-www/mod_watch www-apache/mod_watch
