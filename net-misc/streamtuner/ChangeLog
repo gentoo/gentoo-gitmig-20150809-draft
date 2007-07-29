@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/streamtuner
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.27 2007/07/12 15:51:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.28 2007/07/29 07:02:31 drac Exp $
+
+*streamtuner-0.99.99-r2 (29 Jul 2007)
+
+  29 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/streamtuner-0.99.99-gentoo.patch, +streamtuner-0.99.99-r2.ebuild:
+  Merge patches and changes by Pacho Ramos from bug 184869, thanks.
 
   12 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   streamtuner-0.12.4.ebuild:
