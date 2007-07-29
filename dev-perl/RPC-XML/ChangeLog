@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.37 2007/05/12 12:32:56 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.38 2007/07/29 16:48:58 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> RPC-XML-0.54.ebuild,
+  RPC-XML-0.58.ebuild, RPC-XML-0.59.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org> RPC-XML-0.54.ebuild,
   RPC-XML-0.58.ebuild, RPC-XML-0.59.ebuild:

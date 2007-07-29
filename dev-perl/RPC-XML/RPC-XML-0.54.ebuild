@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.54.ebuild,v 1.11 2007/05/12 12:32:56 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.54.ebuild,v 1.12 2007/07/29 16:48:58 phreak Exp $
 
 inherit perl-module
 
@@ -23,7 +23,7 @@ pkg_postinst() {
 	perl-module_pkg_postinst
 
 	SETWARN=0
-	has_version '=net-www/apache-2*' && HAVE_APACHE2=1
+	has_version '=www-servers/apache-2*' && HAVE_APACHE2=1
 	has_version '>=www-apache/mod_perl-2.0' && HAVE_MP2=2
 
 	[ -n "${HAVE_APACHE2}" ] && SETWARN=1

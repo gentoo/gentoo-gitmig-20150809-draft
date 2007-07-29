@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CUFlow/CUFlow-1.5.ebuild,v 1.5 2007/06/02 22:15:49 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CUFlow/CUFlow-1.5.ebuild,v 1.6 2007/07/29 16:53:13 phreak Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="dev-lang/perl
 		net-analyzer/FlowScan
-		net-www/apache"
+		www-servers/apache"
 DEPEND=""
 
 src_unpack() {

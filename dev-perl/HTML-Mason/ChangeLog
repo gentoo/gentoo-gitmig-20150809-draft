@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.70 2007/07/16 14:21:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.71 2007/07/29 16:51:18 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> HTML-Mason-1.32.ebuild,
+  HTML-Mason-1.33.ebuild, HTML-Mason-1.35.ebuild, HTML-Mason-1.36.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   16 Jul 2007; Michael Cummings <mcummings@gentoo.org>
   HTML-Mason-1.36.ebuild:
