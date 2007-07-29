@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20070525.ebuild,v 1.4 2007/07/07 08:44:26 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20070525.ebuild,v 1.5 2007/07/29 08:51:24 calchan Exp $
 
 inherit wxwidgets
 
@@ -67,7 +67,7 @@ src_install() {
 	doexe eeschema/plugins/netlist_form_pads-pcb || die "Installation failed"
 	newicon kicad_icon.png kicad.png
 	make_wrapper kicad "/usr/lib/${PN}/linux/kicad"
-	make_desktop_entry kicad Kicad kicad.png Electronics
+	make_desktop_entry kicad Kicad kicad.png "Application;Engineering;Electronics"
 
 	# kicad requires everything to be in the same place
 	cp -pPR library ${D}/usr/lib/${PN}
