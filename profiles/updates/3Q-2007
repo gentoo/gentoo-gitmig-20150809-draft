@@ -19,3 +19,4 @@ move net-www/mod_xslt www-apache/mod_xslt
 move net-www/mod_transform www-apache/mod_transform
 move net-www/mod_auth_external www-apache/mod_auth_external
 move net-www/mod_auth_kerb www-apache/mod_auth_kerb
+move net-www/mod_auth_mysql www-apache/mod_auth_mysql
