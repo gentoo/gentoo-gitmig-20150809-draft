@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.2.ebuild,v 1.7 2007/07/21 09:45:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.2.ebuild,v 1.8 2007/07/29 12:04:21 caster Exp $
 
 JAVA_PKG_IUSE="doc"
 inherit eutils java-pkg-2 java-ant-2
@@ -17,7 +17,7 @@ IUSE=""
 CDEPEND="dev-java/spin
 	>=dev-java/glazedlists-1.5.0
 	>=dev-java/antlr-2.7.3
-	dev-java/jgoodies-forms
+	<dev-java/jgoodies-forms-1.1.0
 	>=dev-java/jgoodies-looks-2.0
 	>=dev-java/microba-0.4.3
 	dev-java/jempbox

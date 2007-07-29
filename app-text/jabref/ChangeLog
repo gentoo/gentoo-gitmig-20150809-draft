@@ -1,6 +1,10 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.52 2007/07/21 09:45:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.53 2007/07/29 12:04:21 caster Exp $
+
+  29 Jul 2007; Vlastimil Babka <caster@gentoo.org> jabref-2.2.ebuild:
+  Force jgoodies-forms version to be <1.1.0 as a temporary workaround of bug
+  #186941.
 
   21 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> jabref-2.2.ebuild:
   Relax dev-java/jgoodies-looks dependency atom so that the 2.1.4 version bump
