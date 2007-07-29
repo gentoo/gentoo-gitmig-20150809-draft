@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/nitro
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nitro/ChangeLog,v 1.11 2007/05/20 17:03:00 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nitro/ChangeLog,v 1.12 2007/07/29 16:55:00 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org> nitro-0.40.0.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
   20 May 2007; Richard Brown <rbrown@gentoo.org> metadata.xml,
   -nitro-0.29.0.ebuild:
