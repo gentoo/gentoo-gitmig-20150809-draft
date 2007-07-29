@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.5 2007/05/27 20:11:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.6 2007/07/29 16:43:05 phreak Exp $
+
+  29 Jul 2007; Christian Heim <phreak@gentoo.org>
+  apache-tools-2.2.4-r2.ebuild, apache-tools-2.2.4-r3.ebuild:
+  Fixing the DEPEND/RDEPEND for the move of net-www/apache to
+  www-servers/apache (#78622).
 
 *apache-tools-2.2.4-r3 (27 May 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.4-r3.ebuild,v 1.1 2007/05/27 20:11:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.4-r3.ebuild,v 1.2 2007/07/29 16:43:05 phreak Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,7 +18,7 @@ RDEPEND="=dev-libs/apr-1*
 	=dev-libs/apr-util-1*
 	dev-libs/libpcre
 	ssl? ( dev-libs/openssl )
-	!<net-www/apache-2.2.4"
+	!<www-servers/apache-2.2.4"
 
 DEPEND="${RDEPEND}"
 

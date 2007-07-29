@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-httpd/system-config-httpd-1.3.3.ebuild,v 1.2 2006/09/05 21:54:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-httpd/system-config-httpd-1.3.3.ebuild,v 1.3 2007/07/29 16:41:53 phreak Exp $
 
 inherit python eutils rpm
 
@@ -19,7 +19,7 @@ RDEPEND="dev-libs/alchemist
 	=dev-python/pygtk-2*
 	dev-lang/python
 	=dev-python/gnome-python-2*
-	>=net-www/apache-2.0.52-r3
+	>=www-servers/apache-2.0.52-r3
 	sys-apps/usermode
 	dev-libs/libxslt"
 DEPEND="${RDEPEND}
