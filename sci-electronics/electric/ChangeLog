@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/electric
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.23 2007/07/29 10:08:25 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.24 2007/07/29 13:36:35 calchan Exp $
+
+*electric-8.05 (29 Jul 2007)
+
+  29 Jul 2007; Denis Dupeyron <calchan@gentoo.org> +electric-8.05.ebuild:
+  Version bump.
 
   29 Jul 2007; Denis Dupeyron <calchan@gentoo.org> electric-8.04.ebuild:
   Fixed desktop entry.
