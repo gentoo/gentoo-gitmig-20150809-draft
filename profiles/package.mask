@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7542 2007/07/29 15:04:51 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7543 2007/07/29 16:08:26 hollow Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Benedikt Boehm <hollow@gentoo.org> (29 Jul 2007)
+# Masked for removal: Does not work with apache 2.2
+# and no release since 2004, use mod_transform instead
+www-apache/mod_xslt
 
 # Zac Medico <zmedico@gentoo.org> (28 Jul 2007)
 # Mask due to 'OSError: out of pty devices', bug #186876
