@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>desktop-misc</herd>
-	<longdescription>GClipper is a multiple buffer clipboard that automatically fetches new selections and maintains them in a history. It shows a listview with the fetched selections and allows the visualization of their details. The selected row in the listview will be used to determine the data for selection retrieval (paste).</longdescription>
-</pkgmetadata>
