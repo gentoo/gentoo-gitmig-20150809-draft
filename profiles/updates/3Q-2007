@@ -8,3 +8,4 @@ move net-www/mod_roaming www-apache/mod_roaming
 move net-www/mod_loopback www-apache/mod_loopback
 move net-www/mod_ftpd www-apache/mod_ftpd
 move net-www/mod_bw www-apache/mod_bw
+move net-www/mod_log_sql www-apache/mod_log_sql
