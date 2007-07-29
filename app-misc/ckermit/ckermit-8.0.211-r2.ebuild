@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211-r1.ebuild,v 1.2 2007/07/27 03:26:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211-r2.ebuild,v 1.1 2007/07/29 02:29:42 mjolnir Exp $
 
 inherit versionator
 
@@ -19,7 +19,6 @@ IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
 RDEPEND="${DEPEND}
-	net-dialup/xc
 	net-dialup/lrzsz"
 
 S=${WORKDIR}
@@ -37,13 +36,11 @@ src_compile() {
 src_install() {
 	dodir /usr/bin
 	dodir /usr/share/man/man1
-	dodir /usr/share/doc/${P}
 
 	emake \
 		DESTDIR=${D} \
 		BINDIR=/usr/bin \
 		MANDIR=${D}/usr/share/man/man1 \
-		INFODIR=/usr/share/doc/${P} \
 		MANEXT=1 \
 		install || die
 
@@ -54,4 +51,5 @@ src_install() {
 	#the ckermit.ini script is calling the wrong kermit binary -- the one
 	# from ${D}
 	dosed /usr/bin/ckermit.ini
+	dodoc COPYING.TXT UNINSTALL *.txt
 }
