@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/horgand
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.11 2007/02/03 19:09:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.12 2007/07/29 10:43:08 drac Exp $
+
+*horgand-1.07 (29 Jul 2007)
+
+  29 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  +files/horgand-1.07-debug.patch, +horgand-1.07.ebuild:
+  Version bump, fixing also bug 135469. Thanks to Jouni Rinne for reporting
+  and Dominique Michel for ebuild ideas and patches.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

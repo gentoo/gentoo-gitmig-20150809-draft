@@ -1,0 +1,84 @@
+--- src/organMIDIIn.C	2004-06-23 17:34:05.000000000 +0200
++++ src/organMIDIIn.C	2006-09-22 22:38:53.000000000 +0200
+@@ -30,22 +30,26 @@
+ {
+ 
+   int l1;
++  printf("DEBUG: IN 1\n");
+   snd_seq_event_t *midievent;
+-
++  printf("DEBUG: IN 2\n");
+   midievent = NULL;
++  printf("DEBUG: IN 3\n");
+   snd_seq_event_input (MidiInPuerto[keIN].midi_in, &midievent);
++  printf("DEBUG: IN 4\n");
+   if (midievent == NULL)
+     return;
+-
++  printf("DEBUG: IN noreturn_5\n");
+ 
+   switch (midievent->type)
+     {
+     case SND_SEQ_EVENT_PITCHBEND:
++      printf("DEBUG: IN switch_1\n");
+       pitch = (float) midievent->data.control.value / 8192.0;
+       break;
+ 
+     case SND_SEQ_EVENT_PGMCHANGE:
+-
++	printf("DEBUG: IN switch_2\n");
+ 
+       if ((midievent->data.control.value > 0)
+ 	  && (midievent->data.control.value < 33))
+@@ -57,6 +61,7 @@
+ 
+     case SND_SEQ_EVENT_CONTROLLER:
+ 
++	printf("DEBUG: IN switch_3\n");
+       if (midievent->data.control.param == 1)
+ 	modulation = (float) midievent->data.control.value / 12.7;
+  
+@@ -85,7 +90,8 @@
+ 
+ 
+     case SND_SEQ_EVENT_NOTEON:
+-
++	
++	printf("DEBUG: IN switch_4\n");
+       if (midievent->data.note.velocity != 0)
+ 	{
+ 	  for (l1 = 0; l1 < POLY; l1++)
+@@ -135,6 +141,7 @@
+ 
+     case SND_SEQ_EVENT_NOTEOFF:
+ 
++	printf("DEBUG: IN switch_5\n");
+       vumvum = vum;
+       vum = 0;
+       for (l1 = 0; l1 < POLY; l1++)
+--- src/main.C.orig	2006-09-22 22:41:42.000000000 +0200
++++ src/main.C	2006-09-22 22:43:40.000000000 +0200
+@@ -52,17 +52,22 @@
+ void *
+ thread1 (void *arg)
+ {
++   printf("DEBUG: thread_1\n");
+    pon_realtime();
++   printf("DEBUG: thread_1 realtime_on\n");
+   while (Pexitprogram ==0)  hor.midievents(1);
++  printf("DEBUG: thread_1 while ends\n");
+   return (0);
+ };
+ 
+ void *
+ thread2 (void *arg)
+ {
+-    
++    printf("DEBUG: thread_2\n");
+     pon_realtime();
++    printf("DEBUG: thread_2 realtime_on\n");
+     while (Pexitprogram ==0)  hor.Alg1s(hor.PERIOD,0);
++    printf("DEBUG: thread_2 while ends\n");
+     return(0);
+ 
+ };
