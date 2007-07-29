@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.96 2007/07/23 16:16:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.97 2007/07/29 04:36:29 vapier Exp $
 
 cd /
 umask 0022 #159111
@@ -33,6 +33,7 @@ Options:
     ${GOOD}--g, --gcc${NORMAL} ver        Specify version of gcc to use
     ${GOOD}--k, --kernel${NORMAL} ver     Specify version of kernel headers to use
     ${GOOD}--l, --libc${NORMAL} ver       Specify version of libc to use
+    ${GOOD}-S, --stable${NORMAL}          Use latest stable versions as default
     ${GOOD}-C, --clean${NORMAL} target    Uninstall specified target
     ${GOOD}-P, --portage${NORMAL} opts    Options to pass to emerge (see emerge(1))
 Stage Options:
@@ -45,9 +46,9 @@ Extra Fun (must be run after above stages):
     ${GOOD}--ex-only${NORMAL}             Skip the stage steps above
     ${GOOD}--ex-gcc${NORMAL}              Build extra gcc targets (gcj/ada/etc...)
     ${GOOD}--ex-gdb${NORMAL}              Build a cross gdb
+    ${GOOD}--ex-insight${NORMAL}          Build a cross insight
 
-${BRACKET}Target (-t)${NORMAL}:   takes the form: ${BRACKET}ARCH-VENDOR-OS-LIBC${NORMAL}
-    Run 'crossdev -t help' for examples
+${BRACKET}Target (-t)${NORMAL} takes a tuple ${BRACKET}ARCH-VENDOR-OS-LIBC${NORMAL}; see 'crossdev -t help'
 EOF
 	[[ -n $* ]] && echo && eerror "Error: $*"
 	exit ${exit_status}
@@ -295,9 +296,10 @@ is_s5()    { is_stage 5 ; }
 
 with_headers()   { [[ ${WITH_HEADERS}   == "yes" ]] ; }
 
-ex_fast()  { [[ ${EX_FAST} == "yes" ]] ; }
-ex_gcc()   { [[ ${EX_GCC}  == "yes" ]] ; }
-ex_gdb()   { [[ ${EX_GDB}  == "yes" ]] ; }
+ex_fast()    { [[ ${EX_FAST}    == "yes" ]] ; }
+ex_gcc()     { [[ ${EX_GCC}     == "yes" ]] ; }
+ex_gdb()     { [[ ${EX_GDB}     == "yes" ]] ; }
+ex_insight() { [[ ${EX_INSIGHT} == "yes" ]] ; }
 
 hr() {
 	local c=${COLUMNS:-0}
@@ -323,10 +325,11 @@ TARCH=
 HARCH=$(unset ARCH ; portageq envvar ARCH)
 CTARGET=
 STAGE=""
-BCAT="sys-devel"  ; BPKG="binutils"      ; BVER="[latest]" ; BUSE=""
-GCAT="sys-devel"  ; GPKG="gcc"           ; GVER="[latest]" ; GUSE=""
-KCAT="sys-kernel" ; KPKG="linux-headers" ; KVER="[latest]" ; KUSE=""
-LCAT="sys-libs"   ; LPKG=""              ; LVER="[latest]" ; LUSE=""
+BCAT="sys-devel"  ; BPKG="binutils"      ; BVER="" ; BUSE=""
+GCAT="sys-devel"  ; GPKG="gcc"           ; GVER="" ; GUSE=""
+KCAT="sys-kernel" ; KPKG="linux-headers" ; KVER="" ; KUSE=""
+LCAT="sys-libs"   ; LPKG=""              ; LVER="" ; LUSE=""
+DEFAULT_VER="[latest]"
 GUSE_DISABLE="-boundschecking -fortran -gtk -gcj -mudflap -objc -objc++ -objc-gc -d"
 GUSE_DISABLE_STAGE_2=${GUSE_DISABLE/-fortran}
 WITH_HEADERS="COW"   WITH_DEF_HEADERS="no"
@@ -343,11 +346,13 @@ while [[ $# -gt 0 ]] ; do
 	--g|--gcc)      shift; GVER=$1;;
 	--k|--kernel)   shift; KVER=$1;;
 	--l|--libc)     shift; LVER=$1;;
+	-S|--stable)    DEFAULT_VER="[stable]";;
 	-C|--clean)     shift; parse_target $1; uninstall;;
 	-s?|--stage?)   STAGE=${1:0-1};;
 	--ex-only)      EX_FAST="yes";;
 	--ex-gcc)       EX_GCC="yes";;
 	--ex-gdb)       EX_GDB="yes";;
+	--ex-insight)   EX_INSIGHT="yes";;
 	--with-*)       eval $(set_withval $1);;
 	--without-*)    eval $(set_withval $1);;
 	-x)             SET_X="yes";;
@@ -362,6 +367,10 @@ while [[ $# -gt 0 ]] ; do
 done
 [[ ${SET_X} == "yes" ]] && set -x
 
+BVER=${BVER:-${DEFAULT_VER}}
+GVER=${GVER:-${DEFAULT_VER}}
+KVER=${KVER:-${DEFAULT_VER}}
+LVER=${LVER:-${DEFAULT_VER}}
 STAGE=${STAGE:-${STAGE_DEFAULT}}
 [[ -z ${CTARGET} ]] && usage 1
 for with in HEADERS ; do
@@ -441,6 +450,9 @@ einfo "Extra: gcc pass:       DO IT"
 ex_gdb && {
 einfo "Extra: gdb:            DO IT"
 }
+ex_insight && {
+einfo "Extra: insight:        DO IT"
+}
 echo
 einfo "PORTDIR_OVERLAY:       ${PORTDIR_OVERLAY}"
 einfo "PORT_LOGDIR:           ${PORT_LOGDIR}"
@@ -463,8 +475,14 @@ set_keywords() {
 	else
 		output="package.keywords/cross-${CTARGET}"
 	fi
-	if [[ ${ver} == "[latest]" ]] || [[ -z ${ver} ]] ; then
-		echo "cross-${CTARGET}/${pkg} ${TARCH} ~${TARCH}" >> ${output}
+	if [[ ${ver} == "["*"]" ]] || [[ -z ${ver} ]] ; then
+		local keywords=""
+		case ${ver} in
+			"[stable]") keywords="${TARCH}";;
+			*)          keywords="${TARCH} ~${TARCH}";;
+		esac
+		[[ "${TARCH}" != "${HARCH}" ]] && keywords="${keywords} -${HARCH} -~${HARCH}"
+		echo "cross-${CTARGET}/${pkg} ${keywords}" >> ${output}
 	else
 		echo "cross-${CTARGET}/${pkg} * ~* -* **" >> ${output}
 		if [[ -f package.mask ]] ; then
@@ -530,6 +548,7 @@ set_portage ${GCAT} ${GPKG} ${GVER}
 set_portage ${KCAT} ${KPKG} ${KVER}
 set_portage ${LCAT} ${LPKG} ${LVER}
 set_portage sys-devel gdb
+set_portage dev-util insight
 
 #################
 emerged_with_use() {
@@ -572,6 +591,9 @@ EOPTS_UP="${EOPTS_DEF} -u"
 EOPTS=${EOPTS_UP}
 # keep things like --ask from screwing us up
 export EMERGE_DEFAULT_OPTS=""
+
+# maybe someday this work, but that day != today
+USE="${USE} -selinux"
 
 # make sure multilib crap doesn't screw us over
 export ABI=${ABI:-pos} LIBDIR_pos="lib" CFLAGS_pos="" LDFLAGS_pos=""
@@ -617,5 +639,6 @@ USE="${GUSE} ${USE} ${GUSE_DISABLE_STAGE_2}" \
 EOPTS="${EOPTS_UP} --newuse"
 ex_gcc && USE="${GUSE} ${USE}" doemerge ${GPKG} ${GPKG}-extra
 ex_gdb && doemerge gdb
+ex_insight && doemerge insight
 
 exit 0
