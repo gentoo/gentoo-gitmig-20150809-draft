@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.46 2007/07/17 02:45:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.47 2007/07/30 08:00:18 opfer Exp $
+
+  30 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  banshee-0.12.1.ebuild:
+  stable x86, bug 185631
 
   17 Jul 2007; <metalgod@gentoo.org> -banshee-0.12.0.ebuild,
   banshee-0.12.1.ebuild:
