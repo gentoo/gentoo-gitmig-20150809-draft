@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.6.1.ebuild,v 1.3 2007/07/28 18:56:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.6.1.ebuild,v 1.4 2007/07/30 13:56:23 gustavoz Exp $
 
 inherit eutils gnome2-utils
 
@@ -10,7 +10,7 @@ SRC_URI="http://darksnow.radiolivre.org/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc sparc ~x86"
 IUSE=""
 
 PDEPEND=">=media-sound/darkice-0.14"
