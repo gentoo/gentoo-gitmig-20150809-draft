@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.29 2007/07/02 14:06:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.30 2007/07/30 07:57:02 opfer Exp $
+
+  30 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  sg3_utils-1.24.ebuild:
+  stable x86, bug 185631
 
   02 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> sg3_utils-1.24.ebuild:
   Stable on sparc
