@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX tesseract-1.0.xterm-path.patch 629 RMD160 bcfd96f1ee65420c9a20260f67b52d3968bed6a4 SHA1 f1e88fb8dcb275b7ada4ca89a09069efa1f12c2c SHA256 14d0ea0dbfa35f8b457da1c568af95c01a5401392f1fc92f3f30f1b1146cd88a
 MD5 295f0f50f90c5be7176218c9f943c251 files/tesseract-1.0.xterm-path.patch 629
 RMD160 bcfd96f1ee65420c9a20260f67b52d3968bed6a4 files/tesseract-1.0.xterm-path.patch 629
@@ -48,3 +51,10 @@ SHA256 bb1eeb414fe8c21dda8908c52807c44b79806eee29cd020149e8818a0685a037 files/di
 MD5 40458904eb2ffa6a618d3349a069fffd files/digest-tesseract-2.00 1798
 RMD160 f17605959bdfaa7aba4e1decbda4c255c1a18700 files/digest-tesseract-2.00 1798
 SHA256 cd1e89784495a2f1c4279828e61873acd5d916a98f332f44cbc8ff93a0558fb9 files/digest-tesseract-2.00 1798
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFGrj/0Wt/XSf2CZdkRAlMsAKCR3yS+Bl2Bir/Eq871kYnx/nxgugCff9A2
+rLSS07RbI6MzwfxI32h5tbo=
+=Dqus
+-----END PGP SIGNATURE-----
