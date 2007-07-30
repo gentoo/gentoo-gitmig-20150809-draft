@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r3.ebuild,v 1.9 2007/07/12 02:40:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r3.ebuild,v 1.10 2007/07/30 11:00:46 zzam Exp $
 
 inherit eutils
 
@@ -26,6 +26,9 @@ RDEPEND="${DEPEND}
 	dev-lang/perl
 	media-tv/vdrplugin-rebuild
 	>=media-tv/gentoo-vdr-scripts-0.2.2"
+
+# pull in vdr-setup to get the xml files, else menu will not work
+PDEPEND="setup-plugin? ( media-plugins/vdr-setup )"
 
 # Relevant Pathes for vdr on gentoo
 DVB_DIR=/usr/include
