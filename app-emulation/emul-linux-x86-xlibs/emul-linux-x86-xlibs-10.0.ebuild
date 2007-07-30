@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-10.0.ebuild,v 1.4 2007/03/02 15:02:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-10.0.ebuild,v 1.5 2007/07/30 07:42:25 dberkholz Exp $
 
 inherit emul-libs
 
@@ -44,10 +44,9 @@ LICENSE="fontconfig FTL GPL-2 LGPL-2 glut libdrm libICE libSM libX11 libXau
 KEYWORDS="-* amd64"
 IUSE="opengl"
 
-DEPEND=""
+DEPEND="opengl? ( app-admin/eselect-opengl )"
 RDEPEND=">=app-emulation/emul-linux-x86-baselibs-10.0
-	x11-libs/libX11
-	opengl? ( app-admin/eselect-opengl )"
+	x11-libs/libX11"
 
 pkg_postinst() {
 	#update GL symlinks

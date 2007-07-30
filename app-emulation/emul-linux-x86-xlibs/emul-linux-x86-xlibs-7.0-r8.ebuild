@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-7.0-r8.ebuild,v 1.4 2007/07/02 13:58:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-7.0-r8.ebuild,v 1.5 2007/07/30 07:42:25 dberkholz Exp $
 
 inherit eutils
 
@@ -43,9 +43,8 @@ RESTRICT="strip"
 QA_TEXTRELS_amd64="emul/linux/x86/usr/lib/opengl/xorg-x11/lib/libGL.so.1.2"
 QA_EXECSTACK_amd64="emul/linux/x86/usr/lib/opengl/xorg-x11/lib/libGL.so.1.2"
 
-DEPEND=""
-RDEPEND="opengl? ( app-admin/eselect-opengl )
-	virtual/libc
+DEPEND="opengl? ( app-admin/eselect-opengl )"
+RDEPEND="virtual/libc
 	>=app-emulation/emul-linux-x86-baselibs-2.5.5-r2"
 
 S=${WORKDIR}
