@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.3.4.ebuild,v 1.4 2007/07/26 03:43:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.3.4.ebuild,v 1.5 2007/07/30 12:09:21 corsair Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.net/rel/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~ppc64 ~sparc ~x86"
 IUSE="unicode fam"
 
 RESTRICT="test"
