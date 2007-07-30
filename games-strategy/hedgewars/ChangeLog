@@ -1,0 +1,11 @@
+# ChangeLog for games-strategy/hedgewars
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.1 2007/07/30 11:20:21 nyhm Exp $
+
+*hedgewars-0.9.0 (30 Jul 2007)
+
+  30 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/hedgewars-0.9.0-debug-file.patch, +metadata.xml,
+  +hedgewars-0.9.0.ebuild:
+  Initial commit, ebuild by Igor Ulyanov, bug #155872
+
