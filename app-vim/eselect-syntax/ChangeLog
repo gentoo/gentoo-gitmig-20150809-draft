@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/eselect-syntax
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/eselect-syntax/ChangeLog,v 1.5 2007/07/30 12:19:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/eselect-syntax/ChangeLog,v 1.6 2007/07/30 15:56:16 jer Exp $
+
+  30 Jul 2007; Jeroen Roovers <jer@gentoo.org>
+  eselect-syntax-20070506.ebuild:
+  Stable for HPPA (bug #185691).
 
   30 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   eselect-syntax-20070506.ebuild:
