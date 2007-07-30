@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.10.0.ebuild,v 1.3 2007/07/06 17:47:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.10.0.ebuild,v 1.4 2007/07/30 04:52:36 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -38,19 +38,23 @@ pkg_setup() {
 }
 
 src_unpack() {
+	local f
+
 	unpack ${A}
 	cd "${S}"
-	if use x86 ; then
-		local f
-		for f in graphics/scaler/{hq3x_i386.asm,hq2x_i386.asm}
-		do
-		cat >> $f <<EOF
-		%ifidn __OUTPUT_FORMAT__,elf
-		section .note.GNU-stack noalloc noexec nowrite progbits
-		%endif
+	# -g isn't needed for nasm here
+	sed -i \
+		-e '/NASMFLAGS/ s/-g//' \
+		./Makefile.common \
+		|| die "sed failed"
+	for f in graphics/scaler/{hq3x_i386.asm,hq2x_i386.asm}
+	do
+	cat >> $f <<EOF
+	%ifidn __OUTPUT_FORMAT__,elf
+	section .note.GNU-stack noalloc noexec nowrite progbits
+	%endif
 EOF
-		done
-	fi
+	done
 }
 
 src_compile() {
