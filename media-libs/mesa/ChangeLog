@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.152 2007/07/02 13:49:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.153 2007/07/30 07:40:08 dberkholz Exp $
+
+  30 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; mesa-6.5-r3.ebuild,
+  mesa-6.5.1-r1.ebuild, mesa-6.5.1-r4.ebuild, mesa-6.5.2.ebuild,
+  mesa-6.5.2-r1.ebuild, mesa-6.5.3.ebuild:
+  Move eselect-opengl into DEPEND only, so it can be uninstalled later.
 
   02 Jul 2007; Raúl Porcel <armin76@gentoo.org> mesa-6.5.2-r1.ebuild:
   alpha stable wrt #175465

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.15 2007/07/02 02:56:52 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.16 2007/07/30 07:40:08 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -44,7 +44,6 @@ RDEPEND="dev-libs/expat
 	x11-libs/libXmu
 	>=x11-libs/libdrm-2.0.1
 	x11-libs/libICE
-	app-admin/eselect-opengl
 	motif? ( virtual/motif )
 	doc? ( app-doc/opengl-manpages )
 	!<=x11-base/xorg-x11-6.9"
@@ -52,6 +51,7 @@ DEPEND="${RDEPEND}
 	x11-misc/makedepend
 	x11-proto/inputproto
 	x11-proto/xextproto
+	app-admin/eselect-opengl
 	!hppa? ( x11-proto/xf86driproto )
 	x11-proto/xf86vidmodeproto
 	>=x11-proto/glproto-1.4.4
