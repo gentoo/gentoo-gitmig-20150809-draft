@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.69 2007/07/30 07:20:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.70 2007/07/30 07:27:23 leio Exp $
+
+  30 Jul 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/meld-1.1.4-syntax.patch, -files/fix-po.patch,
+  -meld-1.1.4-r1.ebuild:
+  Remove old
 
   30 Jul 2007; Christian Faulhammer <opfer@gentoo.org> meld-1.1.5.1.ebuild:
   stable x86, bug 186773
