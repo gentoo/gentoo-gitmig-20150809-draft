@@ -1,6 +1,6 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.91 2007/07/25 15:58:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.92 2007/07/30 00:20:42 dsd Exp $
 
   25 Jul 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   Fix net-misc/kvpnc mask
@@ -32,6 +32,9 @@
   15 May 2007; Christian Heim <phreak@gentoo.org> make.defaults:
   VIDEO_CARDS="ati" has been split into three different drivers
   (mach64 r128 radeon)
+
+  30 Jul 2007; Daniel Drake <dsd@gentoo.org> no-nptl/2.4/package.mask:
+  Mask evolution-sharp dependant packages on 2.4 profile
 
   11 May 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   no-nptl/2.4/package.mask:
