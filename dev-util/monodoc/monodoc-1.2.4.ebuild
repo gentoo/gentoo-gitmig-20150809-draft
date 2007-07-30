@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.2.4.ebuild,v 1.2 2007/07/27 22:33:02 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.2.4.ebuild,v 1.3 2007/07/30 08:38:59 jurek Exp $
 
 inherit mono multilib
 
@@ -18,6 +18,8 @@ RDEPEND=">=dev-lang/mono-1.1
 DEPEND="${RDEPEND}
 		app-arch/unzip"
 PDEPEND="X? ( >=dev-util/mono-tools-1.1.17 )"
+
+RESTRICT="test"
 
 # Parallel build unfriendly
 MAKEOPTS="${MAKEOPTS} -j1"
