@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mhwaveedit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.22 2007/07/29 15:10:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.23 2007/07/30 13:58:04 gustavoz Exp $
+
+  30 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  mhwaveedit-1.4.12.ebuild:
+  Stable on sparc wrt #186923
 
   29 Jul 2007; Raúl Porcel <armin76@gentoo.org> mhwaveedit-1.4.12.ebuild:
   x86 stable wrt #186923
