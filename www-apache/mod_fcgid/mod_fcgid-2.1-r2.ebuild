@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.1-r2.ebuild,v 1.1 2007/07/29 15:58:50 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.1-r2.ebuild,v 1.2 2007/07/30 08:57:08 hollow Exp $
 
 inherit apache-module eutils multilib
 
@@ -13,12 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-DEPEND="=dev-libs/apr-1*"
-RDEPEND="${DEPEND}"
-
 S="${WORKDIR}/${PN}.${PV}"
 
-APACHE2_MOD_CONF="20_${PN}"
+APACHE2_MOD_CONF="${PV}/20_${PN}"
 APACHE2_MOD_DEFINE="FCGID"
 
 APXS2_ARGS="-I ${S} -c ${PN}.c fcgid_bridge.c \
