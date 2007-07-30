@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/drift
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/ChangeLog,v 1.15 2007/07/28 14:39:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/ChangeLog,v 1.16 2007/07/30 12:52:07 fmccor Exp $
+
+  30 Jul 2007; Ferris McCormick <fmccor@gentoo.org> drift-2.2.0.ebuild:
+  Add sparc keyword --- Bug #186849 --- good on sparc since October, 2006.
 
   28 Jul 2007; nixnut <nixnut@gentoo.org> drift-2.2.0.ebuild:
   Stable on ppc wrt bug 186849
