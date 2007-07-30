@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.1.0.ebuild,v 1.5 2007/07/30 12:48:45 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.1.0.ebuild,v 1.6 2007/07/30 16:23:46 corsair Exp $
 
 CABAL_FEATURES="bin"
 inherit autotools haskell-cabal
@@ -11,7 +11,7 @@ SRC_URI="http://www.haskell.org/alex/dist/${PV}/${P/_/}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc ~ppc64 sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ppc ppc64 sparc ~x86"
 IUSE="doc"
 # java use flag disabled because of bug #107019
 
