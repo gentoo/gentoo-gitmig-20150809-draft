@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2954 2007/07/30 18:14:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2955 2007/07/30 23:34:12 opfer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1013,6 +1013,10 @@ media-sound/bmpx:p2p - Enable support for downloading songs from the SoulSeek p2
 media-sound/bmpx:sid - Build with SID (Commodore 64 Audio) support
 media-sound/cmus:modplug - Build with modplug support
 media-sound/cmus:mp4 - enable mp4 decoding
+media-sound/cmus:pidgin - install support script for net-im/pidgin
+media-sound/cmus:wavpack - add support for wavpack
+media-sound/cmus:wma - add support for Windows Media Audio
+media-sound/cmus:zsh-completion - enable zsh completion support
 media-sound/darkice:twolame - Build with twolame support
 media-sound/dir2ogg:wma - Add support for wma files through mplayer
 media-sound/easytag:wavpack - Add support for wavpack
