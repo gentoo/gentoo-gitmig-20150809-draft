@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105.ebuild,v 1.3 2007/02/03 22:20:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105.ebuild,v 1.4 2007/07/30 16:25:59 dertobi123 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch ${FILESDIR}/${P}.patch
+	epatch ${FILESDIR}/bytesex.h.patch
 
 	# Correct hard coded values
 	sed -i "9s:gcc:$(tc-getCC):" Makefile.in
