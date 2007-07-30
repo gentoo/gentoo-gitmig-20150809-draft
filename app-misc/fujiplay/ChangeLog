@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/fujiplay
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fujiplay/ChangeLog,v 1.10 2007/01/28 05:12:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fujiplay/ChangeLog,v 1.11 2007/07/30 22:53:24 swegener Exp $
+
+  30 Jul 2007; Sven Wegener <swegener@gentoo.org>
+  fujiplay-1.33-unterminated-strings.patch:
+  Disable CVS keyword replacement for bug #109226.
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> fujiplay-1.33.ebuild:
   Replacing einfo with elog
