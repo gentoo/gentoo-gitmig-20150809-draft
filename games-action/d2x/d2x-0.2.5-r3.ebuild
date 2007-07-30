@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r3.ebuild,v 1.4 2007/07/27 21:01:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r3.ebuild,v 1.5 2007/07/30 18:18:39 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -32,6 +32,16 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PV}-shellscripts.patch"
 	epatch "${FILESDIR}/${P}-dofpcalcs-macro.patch"
+
+	sed -i \
+		-e '/NASMFLAGS/s/-d/-D/g' \
+		configure \
+		2d/Makefile.in \
+		|| die "sed failed"
+	sed -i \
+		-e 's/@@/l@@/' \
+		2d/tmerge_a.asm \
+		|| die "sed failed"
 }
 
 src_compile() {
