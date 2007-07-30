@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.10.2.ebuild,v 1.1 2007/07/29 20:56:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.10.2.ebuild,v 1.2 2007/07/30 13:25:33 gustavoz Exp $
 
 DESCRIPTION="Converts Mp3, M4a, Wma, and Wav files to Ogg Vorbis format."
 HOMEPAGE="http://jak-linux.org/projects/dir2ogg"
@@ -8,7 +8,7 @@ SRC_URI="http://jak-linux.org/projects/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc ~x86"
 IUSE="aac wma"
 
 DEPEND=""
