@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/streamtranscoder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamtranscoder/ChangeLog,v 1.8 2007/07/29 08:57:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamtranscoder/ChangeLog,v 1.9 2007/07/30 14:17:00 gustavoz Exp $
+
+  30 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  streamtranscoder-3.1.11.ebuild:
+  Rekeyworded ~sparc wrt #186990
 
 *streamtranscoder-3.1.11 (29 Jul 2007)
 
