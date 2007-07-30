@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.92 2007/07/30 00:20:42 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.93 2007/07/30 00:24:00 dsd Exp $
+
+  30 Jul 2007; Daniel Drake <dsd@gentoo.org> no-nptl/2.4/use.mask:
+  Mask beagle USE flag on 2.4 profiles
 
   25 Jul 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   Fix net-misc/kvpnc mask

@@ -1,6 +1,10 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/use.mask,v 1.8 2007/07/15 20:04:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/use.mask,v 1.9 2007/07/30 00:24:00 dsd Exp $
+
+# Daniel Drake <dsd@gentoo.org> (29 July 2007)
+# Beagle is now masked on 2.4
+beagle
 
 # Raúl Porcel <armin76@gentoo.org> (23 Apr 2007)
 # Needs >=gnome-2.16, bug 175712
