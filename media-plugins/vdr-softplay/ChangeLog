@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-softplay
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softplay/ChangeLog,v 1.3 2007/07/30 16:08:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softplay/ChangeLog,v 1.4 2007/07/30 16:47:41 zzam Exp $
+
+  30 Jul 2007; Matthias Schwarzott <zzam@gentoo.org> +files/new-ffmpeg.diff,
+  vdr-softplay-0.0.2.20070730.ebuild:
+  Added patch to compile against newer ffmpeg.
 
 *vdr-softplay-0.0.2.20070730 (30 Jul 2007)
 
