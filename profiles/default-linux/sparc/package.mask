@@ -1,0 +1,7 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/package.mask,v 1.1 2007/07/30 14:09:15 gustavoz Exp $
+
+# Gustavo Zacarias <gustavoz@gentoo.org>
+# Broken, no way to test it, see bug #155887 and bug #186958
+app-accessibility/brltty
