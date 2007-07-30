@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.32 2007/05/25 17:00:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.33 2007/07/30 10:05:57 vapier Exp $
+
+*fakeroot-1.7.1 (30 Jul 2007)
+
+  30 Jul 2007; Mike Frysinger <vapier@gentoo.org> +fakeroot-1.7.1.ebuild:
+  Version bump #186397 by Arfrever Frehtes Taifersar Arahesis.
 
   25 May 2007; Raúl Porcel <armin76@gentoo.org> fakeroot-1.5.10.ebuild:
   alpha stable wrt #172158
