@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7544 2007/07/29 16:39:03 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7545 2007/07/30 17:38:26 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (30 Jul 2007)
+# Mask alpha releases.
+=media-sound/moc-2.5.0_alpha*
 
 # Benedikt Boehm <hollow@gentoo.org> (29 Jul 2007)
 # Masked for removal: Does not work with apache 2.2
