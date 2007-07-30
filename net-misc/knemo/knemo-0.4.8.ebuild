@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.4.8.ebuild,v 1.4 2007/07/28 17:59:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.4.8.ebuild,v 1.5 2007/07/30 13:19:16 gustavoz Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.kde-apps.org/CONTENT/content-files/12956-${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="wifi"
 
 RDEPEND="kernel_linux? ( sys-apps/net-tools )
