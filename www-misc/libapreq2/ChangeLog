@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/libapreq2
 # Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/libapreq2/ChangeLog,v 1.12 2007/07/29 17:44:10 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/libapreq2/ChangeLog,v 1.13 2007/07/30 22:14:49 armin76 Exp $
+
+  30 Jul 2007; Raúl Porcel <armin76@gentoo.org> libapreq2-2.08-r1.ebuild:
+  alpha/x86 stable
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> libapreq2-2.08.ebuild,
   libapreq2-2.08-r1.ebuild:
