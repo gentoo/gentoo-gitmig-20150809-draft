@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/eselect-syntax
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/eselect-syntax/ChangeLog,v 1.6 2007/07/30 15:56:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/eselect-syntax/ChangeLog,v 1.7 2007/07/30 17:52:35 armin76 Exp $
+
+  30 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  eselect-syntax-20070506.ebuild:
+  alpha/ia64 stable wrt #185691
 
   30 Jul 2007; Jeroen Roovers <jer@gentoo.org>
   eselect-syntax-20070506.ebuild:
