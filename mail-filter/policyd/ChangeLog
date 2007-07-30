@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/policyd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd/ChangeLog,v 1.1 2007/01/12 00:23:21 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd/ChangeLog,v 1.2 2007/07/30 00:58:02 strerror Exp $
+
+*policyd-1.81 (30 Jul 2007)
+
+  30 Jul 2007; Benjamin Smee <strerror@gentoo.org> +policyd-1.81.ebuild:
+  Version bump for bug #181324
 
   12 Jan 2007; Benjamin Smee <strerror@gentoo.org> ChangeLog:
   Initial import. Thanks to those who contributed to bug #112261
