@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-emacs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.22 2007/07/30 11:21:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.23 2007/07/30 12:21:01 gustavoz Exp $
+
+  30 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  eselect-emacs-1.1.ebuild:
+  Stable on sparc wrt #187057
 
   30 Jul 2007; Markus Rothe <corsair@gentoo.org> eselect-emacs-1.1.ebuild:
   Stable on ppc64; bug #187057
