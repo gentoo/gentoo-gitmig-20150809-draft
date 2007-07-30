@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.26 2007/07/28 14:42:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.27 2007/07/30 13:11:14 fmccor Exp $
+
+  30 Jul 2007; Ferris McCormick <fmccor@gentoo.org> happy-1.16.ebuild:
+  Sparc stable --- Bug #186849 --- all as expected.
 
   28 Jul 2007; nixnut <nixnut@gentoo.org> happy-1.16.ebuild:
   Stable on ppc wrt bug 186849
