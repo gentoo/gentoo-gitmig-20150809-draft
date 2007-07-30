@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-2.0.3.ebuild,v 1.4 2007/07/29 18:41:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-2.0.3.ebuild,v 1.5 2007/07/30 19:36:41 opfer Exp $
 
 inherit gnome2
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 IUSE="dbus spell"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 
 RDEPEND=">=dev-libs/glib-2.4
 	>=x11-libs/gtk+-2.4
