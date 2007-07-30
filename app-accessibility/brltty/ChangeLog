@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.58 2007/07/29 05:06:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.59 2007/07/30 11:18:04 corsair Exp $
+
+  30 Jul 2007; Markus Rothe <corsair@gentoo.org> brltty-3.8.ebuild:
+  Stable on ppc64; bug #186958
 
   29 Jul 2007; William Hubbs <williamh@gentoo.org> brltty-3.8.ebuild:
   Stable x86 #186958.
