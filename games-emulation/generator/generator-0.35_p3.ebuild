@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35_p3.ebuild,v 1.1 2007/07/25 17:01:36 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35_p3.ebuild,v 1.2 2007/07/30 21:14:33 mr_bones_ Exp $
 
 inherit autotools eutils toolchain-funcs games
 
@@ -31,6 +31,11 @@ src_unpack() {
 	epatch \
 		"${FILESDIR}"/${P}-execstacks.patch \
 		"${FILESDIR}"/${P}-configure.patch
+	# make it yasm-syntax-friendly
+	sed -i \
+		-e 's/-praze/-Praze/' \
+		raze/Makefile.am \
+		|| die "sed failed"
 	eautoreconf
 }
 
