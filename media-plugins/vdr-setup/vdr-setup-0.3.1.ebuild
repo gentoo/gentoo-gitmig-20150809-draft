@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1.ebuild,v 1.9 2007/07/29 23:13:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1.ebuild,v 1.10 2007/07/30 15:27:39 zzam Exp $
 
 inherit vdr-plugin
 
@@ -43,7 +43,7 @@ src_install() {
 	fowners vdr:vdr /var/vdr/sysconfig-setup
 
 	insinto /etc/vdr/plugins/setup
-	doins ${FILESDIR}/vdr-setup.xml
+	newins ${FILESDIR}/vdr-setup.de.xml vdr-setup.xml
 
 	insinto /etc/vdr/plugins/setup/help
 	doins ${S}/Examples/help/*.hlp
