@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/boo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.14 2007/06/28 01:28:08 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.15 2007/07/30 07:48:55 opfer Exp $
+
+  30 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  boo-0.7.6.2237-r1.ebuild:
+  stable x86, bug 185631
 
   28 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> boo-0.7.5.2013-r1.ebuild,
   boo-0.7.6.2237-r1.ebuild:
