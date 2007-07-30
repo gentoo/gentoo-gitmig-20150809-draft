@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-setup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.16 2007/07/30 15:27:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.17 2007/07/30 15:39:25 zzam Exp $
+
+*vdr-setup-0.3.1-r1 (30 Jul 2007)
+
+  30 Jul 2007; Matthias Schwarzott <zzam@gentoo.org> +files/vdr-menu.de.xml,
+  +files/vdr-menu.en.xml, +files/vdr-setup.en.xml,
+  +vdr-setup-0.3.1-r1.ebuild:
+  Added partly translated vdr-setup file, moved vdr-menu.xml from vdr to here.
+  Try to guess language for conf-files from LINGUAS, Bug #183863.
 
   30 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
   +files/vdr-setup.de.xml, -files/vdr-setup.xml, vdr-setup-0.3.1.ebuild:
