@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.76 2007/05/06 23:07:33 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.77 2007/07/30 13:22:38 gustavoz Exp $
+
+  30 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gentoo-syntax-20070506.ebuild:
+  Stable on sparc wrt #185691
 
 *gentoo-syntax-20070506 (06 May 2007)
 
