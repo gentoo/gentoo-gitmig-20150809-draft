@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-fontconfig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-fontconfig/ChangeLog,v 1.5 2007/07/28 23:59:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-fontconfig/ChangeLog,v 1.6 2007/07/30 12:22:53 gustavoz Exp $
+
+  30 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  eselect-fontconfig-1.0.ebuild:
+  Keyworded ~sparc wrt #180231
 
   28 Jul 2007; Luca Barbato <lu_zero@gentoo.org>
   eselect-fontconfig-1.0.ebuild:
