@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2951 2007/07/29 22:59:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2952 2007/07/30 00:44:55 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -577,7 +577,6 @@ dev-scheme/drscheme:cgc - compile and install additional executables which use t
 dev-scheme/drscheme:llvm - add support for compiling to the low-level virtual machine (llvm)
 dev-scheme/drscheme:xft - add support for xft
 dev-scheme/drscheme:xrender - add support for xrender
-dev-scheme/drscheme:sgc - use Senora GC instead of the Boehm GC
 dev-scheme/gambit:big-iron - use expensive GCC optimizations and compile syntax-case macro system, try only if you have more than 2GB RAM
 dev-scheme/gauche-gl:cg - enable NVidia Cg binding
 dev-scheme/gauche-gtk:glgd - enable GL graph draw
