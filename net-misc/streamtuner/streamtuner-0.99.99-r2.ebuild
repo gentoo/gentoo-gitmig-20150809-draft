@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r2.ebuild,v 1.2 2007/07/29 09:53:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r2.ebuild,v 1.3 2007/07/30 17:20:56 drac Exp $
 
 GCONF_DEBUG="no"
 
@@ -14,12 +14,12 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="python"
+IUSE="python shout xiph"
 
 RDEPEND=">=x11-libs/gtk+-2.4
 	net-misc/curl
 	app-text/scrollkeeper
-	dev-libs/libxml2
+	xiph? ( dev-libs/libxml2 )
 	>=media-libs/taglib-1.2
 	python? ( dev-python/pygtk )
 	x11-misc/xdg-utils"
@@ -41,6 +41,7 @@ src_unpack() {
 
 src_compile() {
 	# live365 causes parse errors at connect time.
-	econf --disable-live365 $(use_enable python)
+	econf --disable-live365 $(use_enable python) \
+		$(use_enable shout shoutcast) $(use_enable xiph)
 	emake || die "emake failed."
 }
