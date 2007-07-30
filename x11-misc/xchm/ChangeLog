@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xchm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.53 2007/07/19 13:53:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.54 2007/07/30 02:31:07 dirtyepic Exp $
+
+  30 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> -xchm-1.9.ebuild,
+  xchm-1.13.ebuild:
+  Use check_wxuse.  Remove old.
 
   19 Jul 2007; Christoph Mende <angelos@gentoo.org> xchm-1.13.ebuild:
   Stable on amd64 wrt bug #185334

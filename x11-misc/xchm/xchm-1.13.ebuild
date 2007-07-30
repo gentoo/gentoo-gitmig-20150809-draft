@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.13.ebuild,v 1.5 2007/07/19 13:53:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-1.13.ebuild,v 1.6 2007/07/30 02:31:07 dirtyepic Exp $
 
 inherit wxwidgets flag-o-matic fdo-mime gnome2-utils
 
@@ -22,6 +22,7 @@ src_compile() {
 	export WX_GTK_VER="2.6"
 
 	if use unicode; then
+		check_wxuse unicode
 		need-wxwidgets unicode
 	else
 		need-wxwidgets gtk2
