@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.09.ebuild,v 1.7 2007/07/28 03:57:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.09.ebuild,v 1.8 2007/07/30 07:51:23 dberkholz Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -28,11 +28,11 @@ COMMON="x11-base/xorg-server
 	!app-emulation/emul-linux-x86-nvidia
 	!x11-drivers/nvidia-legacy-drivers"
 DEPEND="${COMMON}
-	kernel_linux? ( virtual/linux-sources )"
+	kernel_linux? ( virtual/linux-sources )
+	app-admin/eselect-opengl"
 RDEPEND="${COMMON}
 	kernel_linux? ( virtual/modutils )
-	media-libs/mesa
-	app-admin/eselect-opengl"
+	media-libs/mesa"
 PDEPEND="gtk? ( media-video/nvidia-settings )"
 
 QA_TEXTRELS_x86="usr/lib/xorg/libXvMCNVIDIA.so.${PV}

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9746-r1.ebuild,v 1.4 2007/07/05 22:29:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9746-r1.ebuild,v 1.5 2007/07/30 07:51:23 dberkholz Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic
 
@@ -22,11 +22,11 @@ IUSE=""
 RESTRICT="strip"
 EMULTILIB_PKG="true"
 
-DEPEND="kernel_linux? ( virtual/linux-sources )"
+DEPEND="kernel_linux? ( virtual/linux-sources )
+	app-admin/eselect-opengl"
 RDEPEND="kernel_linux? ( virtual/modutils )
 	x11-base/xorg-server
 	media-libs/mesa
-	app-admin/eselect-opengl
 	kernel_FreeBSD? ( !media-video/nvidia-freebsd )
 	!app-emulation/emul-linux-x86-nvidia
 	!x11-drivers/nvidia-legacy-drivers"

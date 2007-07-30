@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.59 2007/07/28 03:57:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.60 2007/07/30 07:51:23 dberkholz Exp $
+
+  30 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  nvidia-drivers-1.0.7185.ebuild, nvidia-drivers-1.0.8776-r1.ebuild,
+  nvidia-drivers-1.0.9631-r1.ebuild, nvidia-drivers-1.0.9639.ebuild,
+  nvidia-drivers-1.0.9746-r1.ebuild, nvidia-drivers-1.0.9755-r1.ebuild,
+  nvidia-drivers-100.14.09.ebuild, nvidia-drivers-100.14.11.ebuild:
+  Move eselect-opengl into DEPEND only, so it can be uninstalled later.
 
   28 Jul 2007; Steve Dibb <beandog@gentoo.org>
   nvidia-drivers-1.0.7185.ebuild, nvidia-drivers-1.0.9639.ebuild,
