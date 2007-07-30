@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3blaster
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.28 2007/03/01 18:54:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.29 2007/07/30 12:14:26 corsair Exp $
+
+  30 Jul 2007; Markus Rothe <corsair@gentoo.org> mp3blaster-3.2.3.ebuild:
+  Added ~ppc64; bug #187111
 
   01 Mar 2007; Alexis Ballier <aballier@gentoo.org> mp3blaster-3.2.0.ebuild,
   mp3blaster-3.2.3.ebuild:
