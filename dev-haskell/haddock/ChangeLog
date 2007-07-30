@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.46 2007/07/30 13:03:43 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.47 2007/07/30 15:41:43 jer Exp $
+
+  30 Jul 2007; Jeroen Roovers <jer@gentoo.org> haddock-0.8.ebuild:
+  Stable for HPPA (bug #186849).
 
   30 Jul 2007; Ferris McCormick <fmccor@gentoo.org> haddock-0.8.ebuild:
   Sparc stable --- Bug #186849 --- all as expected.
