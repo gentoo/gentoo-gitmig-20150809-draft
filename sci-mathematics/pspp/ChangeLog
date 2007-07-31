@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/pspp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.3 2007/07/31 12:07:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.4 2007/07/31 17:36:52 bicatali Exp $
+
+  31 Jul 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  files/50pspp-gentoo.el:
+  update site-init file, thanks to Ulrich Mueller <ulm@gentoo.org>
 
   31 Jul 2007; Sébastien Fabbro <bicatali@gentoo.org>
   +files/50pspp-gentoo.el, pspp-0.4.0.ebuild:
