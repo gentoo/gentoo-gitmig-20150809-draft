@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0.ebuild,v 1.14 2007/07/26 16:20:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0.ebuild,v 1.15 2007/07/31 23:11:10 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -19,16 +19,12 @@ IUSE_INPUT_DEVICES="input_devices_wacom"
 
 IUSE="accessibility cups dbus debug doc examples firebird gif glib jpeg mng mysql nas nis odbc opengl pch png postgres qt3support sqlite sqlite3 ssl tiff xinerama zlib ${IUSE_INPUT_DEVICES}"
 
-DEPEND="x11-libs/libXrandr
+RDEPEND="x11-libs/libXrandr
 	x11-libs/libXcursor
-	x11-libs/libXi
 	x11-libs/libXfont
 	x11-libs/libSM
-	x11-proto/xextproto
-	x11-proto/inputproto
-	dev-util/pkgconfig
-	xinerama? ( x11-proto/xineramaproto x11-libs/libXinerama )
-	virtual/xft
+	xinerama? ( x11-libs/libXinerama )
+	media-libs/fontconfig
 	>=media-libs/freetype-2
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
@@ -47,7 +43,13 @@ DEPEND="x11-libs/libXrandr
 	glib? ( dev-libs/glib )
 	dbus? ( >=sys-apps/dbus-1.0.2 )
 	ssl? ( dev-libs/openssl )
-	input_devices_wacom? ( x11-drivers/linuxwacom )"
+	input_devices_wacom? ( x11-libs/libXi x11-drivers/linuxwacom )"
+
+DEPEND="${RDEPEND}
+	xinerama? ( x11-proto/xineramaproto )
+	x11-proto/xextproto
+	input_device_wacom? ( x11-proto/inputproto )
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	QTBASEDIR=/usr/$(get_libdir)/qt4
