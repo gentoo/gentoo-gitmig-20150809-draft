@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.115 2007/06/26 22:17:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.116 2007/07/31 21:08:01 wolf31o2 Exp $
+
+*parted-1.8.7 (31 Jul 2007)
+
+  31 Jul 2007; Chris Gianelloni <wolf31o2@gentoo.org> -parted-1.8.2.ebuild,
+  +parted-1.8.7.ebuild:
+  Version bump and cleaning up older versions.  Closing bug #184233.
 
   26 Jun 2007; Raúl Porcel <armin76@gentoo.org> parted-1.8.6.ebuild:
   alpha/ia64 stable wrt #182358
