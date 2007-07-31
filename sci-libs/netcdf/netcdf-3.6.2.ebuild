@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.2.ebuild,v 1.2 2007/04/27 09:06:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.2.ebuild,v 1.3 2007/07/31 03:56:48 nerdboy Exp $
 
 inherit fortran eutils toolchain-funcs flag-o-matic
 
@@ -49,6 +49,7 @@ src_compile() {
 			*)
 				myconf="${myconf} --enable-f77 --enable-f90"
 				myconf="${myconf} FC=gfortran F90=gfortran F77=gfortran"
+				export F90FLAGS="-i4  ${F90FLAGS}"
 				;;
 		esac
 	else
@@ -66,6 +67,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	find "${D}usr/$(get_libdir)" -name \*.la -exec rm -f {} \;
+
 	dodoc README RELEASE_NOTES VERSION || die "dodoc failed"
 	# keep only pdf,txt and html docs, info were already installed
 	if use doc; then

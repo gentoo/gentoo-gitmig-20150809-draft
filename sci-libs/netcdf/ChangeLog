@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.35 2007/04/27 09:06:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.36 2007/07/31 03:56:48 nerdboy Exp $
+
+  31 Jul 2007; Steve Arnold <nerdboy@gentoo.org> netcdf-3.6.2.ebuild:
+  Added FFLAGS fix for build failure on amd64 (real size mis-match). AFAIK
+  this is a gfortran F90 thing; needs testing with other F90 compilers.
 
   27 Apr 2007; Sébastien Fabbro <bicatali@gentoo.org> netcdf-3.6.2.ebuild:
   Removed blocking of hdf-4, thanks to Erik Zeek <zeekec@mad.scientist.com>.
