@@ -1,6 +1,12 @@
 # ChangeLog for www-client/urlgfe
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/urlgfe/ChangeLog,v 1.19 2007/03/10 22:16:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/urlgfe/ChangeLog,v 1.20 2007/07/31 00:18:53 swegener Exp $
+
+*urlgfe-1.0.2 (31 Jul 2007)
+
+  31 Jul 2007; Sven Wegener <swegener@gentoo.org>
+  +files/urlgfe-1.0.2-gettext-mkinstalldirs.patch, +urlgfe-1.0.2.ebuild:
+  Version bump.
 
   10 Mar 2007; Sven Wegener <swegener@gentoo.org> -urlgfe-0.98a.ebuild,
   -urlgfe-0.98b.ebuild:
