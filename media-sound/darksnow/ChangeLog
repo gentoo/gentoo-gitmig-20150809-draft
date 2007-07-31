@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/darksnow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/ChangeLog,v 1.12 2007/07/30 13:56:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/ChangeLog,v 1.13 2007/07/31 09:56:27 diox Exp $
+
+  31 Jul 2007; Dimitry Bradt <diox@gentoo.org> darksnow-0.6.1.ebuild:
+  x86 stable wrt #186889
 
   30 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> darksnow-0.6.1.ebuild:
   Stable on sparc wrt #186889
