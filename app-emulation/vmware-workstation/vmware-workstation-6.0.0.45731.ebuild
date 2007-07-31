@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.0.0.45731.ebuild,v 1.5 2007/07/28 17:48:32 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.0.0.45731.ebuild,v 1.6 2007/07/31 20:45:10 wolf31o2 Exp $
 
 inherit vmware eutils versionator
 
@@ -119,7 +119,7 @@ pkg_nofetch() {
 		MY_P="${MY_PN}.x86_64"
 	fi
 
-	einfo "Please download the ${MY_PN}.tar.gz at ${HOMEPAGE}"
+	einfo "Please download the ${MY_P}.tar.gz at ${HOMEPAGE}"
 	einfo "${ANY_ANY}.tar.gz is also necessary for compilation"
 	einfo "but should already have been fetched."
 }
