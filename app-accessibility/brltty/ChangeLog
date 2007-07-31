@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.60 2007/07/30 18:15:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.61 2007/07/31 02:28:33 williamh Exp $
+
+  31 Jul 2007; William Hubbs <williamh@gentoo.org> brltty-3.7.2.ebuild,
+  brltty-3.7.2-r1.ebuild, brltty-3.8.ebuild:
+  Dropped sparc keywords wrt #186958.
 
   30 Jul 2007; Raúl Porcel <armin76@gentoo.org> brltty-3.8.ebuild:
   alpha/ia64 stable wrt #186958
