@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.7-r1.ebuild,v 1.1 2007/07/30 18:05:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.7-r1.ebuild,v 1.2 2007/07/31 16:37:17 mr_bones_ Exp $
 
 inherit kde-dist eutils
 
@@ -32,7 +32,6 @@ RDEPEND="${DEPEND}
 		 app-text/ptex
 		 app-text/cstetex
 		 app-text/dvipdfm ) )"
-
 
 PATCHES="${FILESDIR}/post-3.5.7-kdegraphics-CVE-2007-3387.diff"
 
