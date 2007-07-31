@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/hachoir-regex
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-regex/ChangeLog,v 1.1 2007/07/14 13:22:49 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-regex/ChangeLog,v 1.2 2007/07/31 17:28:33 phreak Exp $
+
+  31 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Correcting <herd> tag, it's either no <herd> tag at all, or just
+  <herd>no-herd/<herd>.
 
 *hachoir-regex-1.0.2 (14 Jul 2007)
 
