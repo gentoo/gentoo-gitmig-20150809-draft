@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9.ebuild,v 1.9 2007/07/29 17:03:51 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9.ebuild,v 1.10 2007/07/31 12:26:24 peper Exp $
 
 inherit eutils depend.apache
 IUSE="postfix sendmail qmail courier exim xmail"
@@ -15,6 +15,7 @@ KEYWORDS="amd64 ppc sparc x86"
 
 DEPEND=">=dev-lang/python-2.3
 	virtual/mta
+	virtual/cron
 	|| ( www-servers/apache www-servers/lighttpd )"
 
 INSTALLDIR="/usr/local/mailman"
@@ -35,8 +36,6 @@ elif use xmail; then
 else
 	MAILGID="280"
 fi
-
-S=${WORKDIR}/${P}
 
 pkg_setup() {
 	# Bug #58526: switch to enew{group,user}.
