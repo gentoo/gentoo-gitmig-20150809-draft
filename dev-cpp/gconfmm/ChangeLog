@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.50 2007/03/28 00:54:27 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.51 2007/07/31 03:39:21 compnerd Exp $
+
+  31 Jul 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -gconfmm-2.0.2.ebuild:
+  Drop old unused versions (bug #161452)
 
 *gconfmm-2.18.0 (28 Mar 2007)
 
