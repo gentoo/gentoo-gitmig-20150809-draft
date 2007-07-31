@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/hachoir-urwid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hachoir-urwid/ChangeLog,v 1.1 2007/07/14 13:28:01 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hachoir-urwid/ChangeLog,v 1.2 2007/07/31 15:52:34 phreak Exp $
+
+  31 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Correcting <herd> tag, it's either no <herd> tag at all, or just
+  <herd>no-herd/<herd>.
 
 *hachoir-urwid-1.0.1 (14 Jul 2007)
 
