@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.2.8-r1.ebuild,v 1.2 2007/07/08 20:21:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.2.8-r1.ebuild,v 1.3 2007/07/31 10:35:02 phreak Exp $
 
 inherit autotools eutils flag-o-matic libtool db-use
 
@@ -19,7 +19,7 @@ IUSE="berkdb gdbm ldap mysql postgres sqlite sqlite3"
 RESTRICT="test"
 
 DEPEND="dev-libs/expat
-	~dev-libs/apr-${PV}
+	>=dev-libs/apr-${PV}
 	berkdb? ( =sys-libs/db-4* )
 	gdbm? ( sys-libs/gdbm )
 	ldap? ( =net-nds/openldap-2* )
