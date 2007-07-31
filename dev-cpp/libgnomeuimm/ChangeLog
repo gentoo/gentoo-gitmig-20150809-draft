@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.46 2007/03/28 01:04:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.47 2007/07/31 03:33:04 compnerd Exp $
+
+  31 Jul 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/libgnomeuimm-2.0.0-gcc2_fix.patch, -libgnomeuimm-2.0.0.ebuild:
+  Remove unused version of libgnomeuimm (bug #161452)
 
 *libgnomeuimm-2.18.0 (28 Mar 2007)
 
