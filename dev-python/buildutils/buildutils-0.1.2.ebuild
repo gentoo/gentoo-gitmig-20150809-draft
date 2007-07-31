@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/buildutils/buildutils-0.1.2.ebuild,v 1.3 2007/07/04 19:59:16 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/buildutils/buildutils-0.1.2.ebuild,v 1.4 2007/07/31 09:10:13 dev-zero Exp $
 
 NEED_PYTHON=2.4
 
@@ -16,8 +16,7 @@ SLOT="0"
 IUSE="doc test"
 
 DEPEND="dev-python/setuptools
-	doc? ( dev-python/pudge )
-	test? ( dev-python/nose )"
+	doc? ( dev-python/pudge )"
 RDEPEND=""
 
 src_compile() {
@@ -31,8 +30,4 @@ src_compile() {
 src_install() {
 	distutils_src_install
 	use doc && dohtml -r doc/html/*
-}
-
-src_test() {
-	PYTHONPATH=. "${python}" setup.py nosetests || die "test failed"
 }
