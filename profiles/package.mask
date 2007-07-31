@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7545 2007/07/30 17:38:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7546 2007/07/31 07:13:33 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -146,12 +146,6 @@ x11-themes/gdm-themes
 # Upstream discontinued development more than 4 years ago.
 # Masked for removal in 60 days.
 app-text/yodl
-
-# Ulrich Mueller <ulm@gentoo.org> (02 Jul 2007)
-# Gnus alpha branch, obsolete since 2003. Last release was ognus-0.24
-# which was replaced by the identical gnus-5.10.1.
-# Masked for removal in 30 days.
-app-emacs/ognus
 
 # Raúl Porcel <armin76@gentoo.org> (01 Jul 2007)
 # For treecleaners
