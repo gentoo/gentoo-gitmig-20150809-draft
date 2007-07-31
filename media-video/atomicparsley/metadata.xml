@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
+	<herd>video</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>drac@gentoo.org</email>
 	</maintainer>
 	<longdescription>command line program for reading, parsing and setting iTunes-style metadata in MPEG4 files</longdescription>
 </pkgmetadata>
