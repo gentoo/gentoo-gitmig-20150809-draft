@@ -1,6 +1,14 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.33 2007/07/22 08:43:55 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.34 2007/07/31 11:50:52 peper Exp $
+
+*nvidia-settings-1.0.20070621 (31 Jul 2007)
+
+  31 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  nvidia-settings-1.0.20051122-r3.ebuild,
+  nvidia-settings-1.0.20061102.ebuild, nvidia-settings-1.0.20070302.ebuild,
+  +nvidia-settings-1.0.20070621.ebuild:
+  Add 1.0.20070621 and remove nvidia-legacy-drivers from deps.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   nvidia-settings-1.0.20051122-r3.ebuild:

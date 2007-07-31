@@ -1,14 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20061102.ebuild,v 1.2 2007/03/07 21:57:40 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20061102.ebuild,v 1.3 2007/07/31 11:50:52 peper Exp $
 
 inherit eutils toolchain-funcs multilib
 
-# The following were added to work with the new nvidia-drivers and
-# nvidia-legacy-drivers ebuilds.
-NVIDIA_NEW_VERSION="1.0.9625"
-NVIDIA_LEGACY_VERSION="1.0.7182"
-S="${WORKDIR}/${PN}-1.0"
 DESCRIPTION="NVIDIA Linux X11 Settings Utility"
 HOMEPAGE="http://www.nvidia.com/"
 SRC_URI="mirror://gentoo/${P}.tar.gz
@@ -33,12 +28,12 @@ DEPEND=">=x11-libs/gtk+-2
 		x11-proto/xf86driproto
 		x11-misc/imake
 		x11-misc/gccmakedep"
-RDEPEND="|| (
-			>=x11-drivers/nvidia-drivers-${NVIDIA_NEW_VERSION}
-			>=x11-drivers/nvidia-legacy-drivers-${NVIDIA_LEGACY_VERSION} )
+RDEPEND="x11-drivers/nvidia-drivers
 		>=x11-libs/gtk+-2
 		x11-base/xorg-server
 		x11-libs/libXt"
+
+S="${WORKDIR}/${PN}-1.0"
 
 src_unpack() {
 	unpack ${A}
