@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.1 2007/05/05 12:29:14 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.2 2007/07/31 09:10:06 dev-zero Exp $
+
+  31 Jul 2007; Tiziano Müller <dev-zero@gentoo.org> py-0.9.0.ebuild:
+  keyworded ~x86
 
 *py-0.9.0 (05 May 2007)
 
