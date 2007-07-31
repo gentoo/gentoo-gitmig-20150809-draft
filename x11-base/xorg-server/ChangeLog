@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.248 2007/07/02 16:05:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.249 2007/07/31 18:52:11 cardoe Exp $
+
+  31 Jul 2007; Doug Goldstein <doug@gentoo.org> xorg-server-1.1.1-r1.ebuild,
+  xorg-server-1.1.1-r5.ebuild, xorg-server-1.2.0-r3.ebuild,
+  xorg-server-1.2.99.0.ebuild, xorg-server-1.3.0.0.ebuild:
+  nvidia-legacy-drivers moved to nvidia-drivers
 
   02 Jul 2007; Raúl Porcel <armin76@gentoo.org>
   xorg-server-1.2.0-r3.ebuild:
