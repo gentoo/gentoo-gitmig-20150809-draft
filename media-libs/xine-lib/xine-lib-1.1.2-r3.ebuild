@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2-r3.ebuild,v 1.12 2007/07/27 04:39:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2-r3.ebuild,v 1.13 2007/07/31 14:29:54 cardoe Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -44,8 +44,7 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	xv? ( x11-libs/libXv )
 	xvmc? (
 		x11-libs/libXvMC
-		video_cards_nvidia? ( || ( x11-drivers/nvidia-drivers
-			x11-drivers/nvidia-legacy-drivers ) )
+		video_cards_nvidia? ( x11-drivers/nvidia-drivers )
 		video_cards_via? ( x11-drivers/xf86-video-via )
 		video_cards_i810? ( x11-drivers/xf86-video-i810 )
 	)
