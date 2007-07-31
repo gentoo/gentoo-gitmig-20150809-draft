@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.46 2007/07/29 10:41:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.47 2007/07/31 20:25:16 zzam Exp $
+
+*vdr-softdevice-0.4.0.20070711-r1 (31 Jul 2007)
+
+  31 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/patches-0.4.0/series, +files/patches-0.4.0/stream-repacker.diff,
+  +vdr-softdevice-0.4.0.20070711-r1.ebuild:
+  Solved audio problems with older recordings and similar stuff, Bug #175490.
 
   29 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
   -vdr-softdevice-0.4.0.20070515.ebuild:
