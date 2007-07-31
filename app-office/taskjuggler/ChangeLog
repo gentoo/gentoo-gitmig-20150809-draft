@@ -1,6 +1,10 @@
 # ChangeLog for app-office/taskjuggler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/ChangeLog,v 1.6 2007/05/15 09:45:54 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskjuggler/ChangeLog,v 1.7 2007/07/31 13:35:06 caleb Exp $
+
+  31 Jul 2007; Caleb Tennis <caleb@gentoo.org> taskjuggler-2.2.0-r1.ebuild,
+  taskjuggler-2.3.0.ebuild:
+  Lock to Qt3
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
