@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-gammu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.28 2007/07/01 10:38:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.29 2007/07/31 23:54:21 angelos Exp $
+
+  31 Jul 2007; Christoph Mende <angelos@gentoo.org>
+  python-gammu-0.20.ebuild:
+  Stable on amd64 wrt bug #178635
 
 *python-gammu-0.21 (01 Jul 2007)
 
