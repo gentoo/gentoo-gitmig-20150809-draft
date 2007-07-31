@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.4.0.ebuild,v 1.2 2007/07/13 05:28:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.4.0.ebuild,v 1.3 2007/07/31 12:07:37 bicatali Exp $
 
 inherit elisp-common
 
@@ -17,10 +17,12 @@ DEPEND=">=sci-libs/gsl-1.6
 	>=sys-devel/gettext-0.14.1
 	>=dev-lang/perl-5.6
 	ncurses? ( >=sys-libs/ncurses-5.4 )
-	plotutils? ( >=media-libs/plotutils-2.4.1 )"
+	plotutils? ( >=media-libs/plotutils-2.4.1 )
+	emacs? ( virtual/emacs )"
 
 # make check gave 39 failures of out 96 tests
 RESTRICT="test"
+SITEFILE=50${PN}-gentoo.el
 
 src_compile() {
 	econf \
@@ -32,6 +34,9 @@ src_compile() {
 	if use doc; then
 		emake html || die "emake html failed"
 	fi
+
+	use emacs && elisp-compile *.el
+
 }
 
 src_install() {
@@ -42,7 +47,10 @@ src_install() {
 	docinto examples && dodoc examples/{ChangeLog,descript.stat}
 
 	use doc && dohtml doc/pspp.html/*
-	use emacs && elisp-site-file-install pspp-mode.el
+	if use emacs; then
+		elisp-install ${PN} *.el *.elc
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+	fi
 }
 
 pkg_postinst () {
