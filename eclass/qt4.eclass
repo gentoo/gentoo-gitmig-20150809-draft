@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.20 2007/07/31 13:39:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.21 2007/07/31 13:42:23 caleb Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -14,6 +14,8 @@
 #    - Caleb Tennis <caleb@gentoo.org>
 
 inherit eutils multilib toolchain-funcs versionator
+
+IUSE="${IUSE} debug"
 
 QTPKG="x11-libs/qt-"
 QT4MAJORVERSIONS="4.3 4.2 4.1 4.0"

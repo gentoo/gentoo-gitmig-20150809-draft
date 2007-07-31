@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt3.eclass,v 1.27 2007/07/31 13:41:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt3.eclass,v 1.28 2007/07/31 13:42:23 caleb Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -15,6 +15,8 @@
 # Currently, the ebuild assumes that a minimum version of Qt3 is NOT satisfied by Qt4
 
 inherit toolchain-funcs versionator
+
+IUSE="${IUSE} debug"
 
 QTPKG="x11-libs/qt-"
 QT3MAJORVERSIONS="3.3 3.2 3.1 3.0"
