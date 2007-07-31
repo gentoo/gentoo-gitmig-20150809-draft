@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.160 2007/07/02 15:31:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.161 2007/07/31 13:52:59 cardoe Exp $
+
+  31 Jul 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-0.20.1_p13344.ebuild, mythtv-0.20.1_p13783.ebuild,
+  mythtv-0.21_pre13285.ebuild, mythtv-0.21_pre13775.ebuild:
+  nvidia-legacy-drivers has merged with nvidia-drivers
 
   02 Jul 2007; Doug Goldstein <cardoe@gentoo.org>
   files/mythtv-trunk-mcpu-march-2.patch:
