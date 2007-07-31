@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.30 2007/07/17 07:08:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.31 2007/07/31 14:05:37 cardoe Exp $
+
+  31 Jul 2007; Doug Goldstein <cardoe@gentoo.org> googleearth-4.ebuild:
+  nvidia-legacy-drivers has merged with nvidia-drivers
 
   17 Jul 2007; Stefan Schweizer <genstef@gentoo.org>
   files/digest-googleearth-4, Manifest:
