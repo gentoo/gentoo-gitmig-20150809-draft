@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1407.ebuild,v 1.7 2006/12/05 17:16:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1407.ebuild,v 1.8 2007/07/31 14:33:56 cardoe Exp $
 
 inherit eutils games
 
@@ -21,7 +21,6 @@ RDEPEND="x11-libs/libXext
 		|| (
 			>=app-emulation/emul-linux-x86-xlibs-7.0
 			x11-drivers/nvidia-drivers
-			x11-drivers/nvidia-legacy-drivers
 			>=x11-drivers/ati-drivers-8.8.25-r1 ) )"
 DEPEND=">=sys-apps/portage-2.1"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302-r2.ebuild,v 1.7 2007/03/15 14:44:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302-r2.ebuild,v 1.8 2007/07/31 14:32:50 cardoe Exp $
 
 inherit eutils games
 
@@ -28,7 +28,6 @@ RDEPEND="sys-libs/glibc
 		|| (
 			>=app-emulation/emul-linux-x86-xlibs-7.0
 			x11-drivers/nvidia-drivers
-			x11-drivers/nvidia-legacy-drivers
 			>=x11-drivers/ati-drivers-8.8.25-r1 ) )"
 
 S=${WORKDIR}

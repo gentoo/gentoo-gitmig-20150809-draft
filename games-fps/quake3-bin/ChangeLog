@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.24 2007/03/12 14:56:24 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.25 2007/07/31 14:35:28 cardoe Exp $
+
+  31 Jul 2007; Doug Goldstein <cardoe@gentoo.org> quake3-bin-1.32c.ebuild,
+  quake3-bin-1.32c-r1.ebuild:
+  nvidia-legacy-drivers has merged with nvidia-drivers
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> quake3-bin-1.32c.ebuild,
   quake3-bin-1.32c-r1.ebuild:
