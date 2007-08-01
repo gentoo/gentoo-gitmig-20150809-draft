@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7547 2007/07/31 11:21:41 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7548 2007/08/01 16:58:05 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (01 Aug 2007)
+# Fails to link with ffmpeg-0.4.9_p20070616-r1, because
+# img_convert is obsolete.
+games-arcade/stepmania
 
 # Samuli Suominen <drac@gentoo.org> (30 Jul 2007)
 # Mask alpha releases.
@@ -459,12 +464,6 @@ media-libs/hermes
 games-sports/trophy
 games-action/clanbomber
 games-puzzle/pingus
-
-# Michael Sterrett <mr_bones_@gentoo.org> (19 Mar 2007)
-# Version in portage doesn't work with lua-5.1.
-# Masked so lua-5.1 can be stablized.
-# http://bugs.gentoo.org/show_bug.cgi?id=168792
-games-arcade/stepmania
 
 # Raúl Porcel <armin76@gentoo.org> (15 Mar 2007)
 # Mask snapshots
