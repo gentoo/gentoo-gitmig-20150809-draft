@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.4.4.ebuild,v 1.9 2007/07/15 16:29:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.4.4.ebuild,v 1.10 2007/08/01 17:56:14 drac Exp $
 
 inherit eutils
 
@@ -15,10 +15,7 @@ IUSE="doc"
 
 RDEPEND=">=x11-libs/gtk+-2.6
 		>=dev-libs/glib-2.6
-		||	(
-				( >=dev-libs/dbus-glib-0.71 )
-				>=sys-apps/dbus-0.60
-			)
+		>=dev-libs/dbus-glib-0.71
 		|| ( x11-misc/notification-daemon xfce-extra/notification-daemon-xfce )"
 DEPEND="${RDEPEND}
 		doc? ( >=dev-util/gtk-doc-1.4 )"
