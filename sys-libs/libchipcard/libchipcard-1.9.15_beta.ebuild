@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-1.9.15_beta.ebuild,v 1.7 2007/07/15 02:08:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-1.9.15_beta.ebuild,v 1.8 2007/08/01 10:20:40 hanno Exp $
 
 inherit eutils
 
