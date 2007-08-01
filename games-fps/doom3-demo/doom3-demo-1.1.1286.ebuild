@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.19 2007/03/12 14:33:32 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.20 2007/08/01 06:04:12 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -24,7 +24,6 @@ RDEPEND="opengl? ( virtual/opengl )
 		|| (
 			>=app-emulation/emul-linux-x86-xlibs-7.0
 			x11-drivers/nvidia-drivers
-			x11-drivers/nvidia-legacy-drivers
 			>=x11-drivers/ati-drivers-8.8.25-r1 ) )
 	dedicated? ( app-misc/screen )"
 
