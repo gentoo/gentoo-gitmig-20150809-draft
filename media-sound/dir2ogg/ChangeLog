@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/dir2ogg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/ChangeLog,v 1.16 2007/08/01 18:09:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/ChangeLog,v 1.17 2007/08/01 18:13:38 drac Exp $
+
+  01 Aug 2007; Samuli Suominen <drac@gentoo.org> dir2ogg-0.9.3.ebuild,
+  dir2ogg-0.10.2.ebuild:
+  Add media-libs/mutagen to rdepends, thanks to armin76 at gentoo.org
 
   01 Aug 2007; Raúl Porcel <armin76@gentoo.org> dir2ogg-0.9.3.ebuild:
   x86 stable wrt #155916
