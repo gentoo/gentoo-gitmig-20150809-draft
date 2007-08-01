@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ktoblzcheck-1.11.ebuild,v 1.7 2006/11/06 20:23:54 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ktoblzcheck-1.11.ebuild,v 1.8 2007/08/01 00:56:10 hanno Exp $
 
 DESCRIPTION="Library to check account numbers and bank codes of German banks"
 HOMEPAGE="http://ktoblzcheck.sourceforge.net/"
