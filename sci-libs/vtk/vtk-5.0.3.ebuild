@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.8 2007/07/22 07:03:25 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.9 2007/08/01 13:00:50 markusle Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.vtk.org"
 SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
 		examples? ( http://www.${PN}.org/files/release/${SPV}/${PN}data-${PV}.tar.gz )"
 
-LICENSE="BSD"
+LICENSE="BSD LGPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="doc examples mpi patented python tcl tk threads qt3 qt4"
