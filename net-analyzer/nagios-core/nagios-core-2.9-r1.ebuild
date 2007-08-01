@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.9-r1.ebuild,v 1.3 2007/06/10 16:33:18 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.9-r1.ebuild,v 1.4 2007/08/01 21:00:26 marineam Exp $
 
 inherit eutils apache-module toolchain-funcs
 
@@ -44,9 +44,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/2.x-series-nsca.patch
+	epatch "${FILESDIR}"/2.x-series-nsca.patch
 
 	local strip="$(echo '$(MAKE) strip-post-install')"
 	sed -i -e "s:${strip}::" {cgi,base}/Makefile.in || die "sed failed in Makefile.in"
@@ -86,7 +86,7 @@ src_compile() {
 
 	if use !noweb ; then
 		# Only compile the CGI's if "noweb" useflag is not set.
-		make CC=$(tc-getCC) DESTDIR=${D} cgis || die
+		make CC=$(tc-getCC) DESTDIR="${D}" cgis || die
 	fi
 
 	emake -C contrib all || "contrib make filed"
@@ -106,18 +106,18 @@ src_install() {
 
 	sed -i -e 's/^contactgroups$//g' Makefile
 
-	make DESTDIR=${D} install
-	make DESTDIR=${D} install-config
-	make DESTDIR=${D} install-commandmode
+	make DESTDIR="${D}" install
+	make DESTDIR="${D}" install-config
+	make DESTDIR="${D}" install-commandmode
 
 	docinto sample-configs
-	dodoc ${D}/etc/nagios/*
-	rm ${D}/etc/nagios/*
+	dodoc "${D}"/etc/nagios/*
+	rm "${D}"/etc/nagios/*
 
 	newdoc ${WORKDIR}/nagios-2.0b.cfg-sample nagios.cfg-sample
 
 	#contribs are not configured by the configure script, we'll configure them overselves...
-	find ${S}/contrib/ -type f | xargs sed -e 's:/usr/local/nagios/var/rw:/var/nagios/rw:;
+	find "${S}"/contrib/ -type f | xargs sed -e 's:/usr/local/nagios/var/rw:/var/nagios/rw:;
 						s:/usr/local/nagios/libexec:/usr/nagios/libexec:;
 						s:/usr/local/nagios/etc:/etc/nagios:;
 						s:/usr/local/nagios/sbin:/usr/nagios/sbin:;' -i
@@ -125,28 +125,33 @@ src_install() {
 	insinto /usr/share/doc/${PF}/contrib
 	doins -r contrib/eventhandlers
 
-	doinitd ${FILESDIR}/nagios
-	newconfd ${FILESDIR}/conf.d nagios
+	doinitd "${FILESDIR}"/nagios
+	newconfd "${FILESDIR}"/conf.d nagios
 
-	chmod 644 ${S}/contrib/*.cgi
+	chmod 644 "${S}"/contrib/*.cgi
 	into /usr/nagios
 	for bin in `find contrib/ -type f -perm 0755 -maxdepth 1` ; do
-		dobin $bin
+		dobin "$bin"
 	done
 
 	# Apache Module
 	if use !noweb; then
-		insinto ${APACHE2_MODULES_CONFDIR}
-		doins ${FILESDIR}/99_nagios.conf
+		insinto "${APACHE2_MODULES_CONFDIR}"
+		doins "${FILESDIR}"/99_nagios.conf
 
 		if use perl; then
 			into /usr/nagios ; dosbin contrib/traceroute.cgi
 		fi
 	fi
 
-	for dir in etc/nagios usr/nagios var/nagios ; do
-		chown -R nagios:nagios ${D}/${dir} || die "Failed chown of ${D}/${dir}"
+	for dir in etc/nagios var/nagios ; do
+		chown -R nagios:nagios "${D}/${dir}" || die "Failed chown of ${D}/${dir}"
 	done
+
+	chown -R root:root "${D}"/usr/nagios
+	find "${D}"/usr/nagios -type d -print0 | xargs -0 chmod 755
+	find "${D}"/usr/nagios/*bin -type f -print0 | xargs -0 chmod 755
+	find "${D}"/usr/nagios/share -type f -print0 | xargs -0 chmod 644
 
 	keepdir /etc/nagios
 	keepdir /var/nagios
@@ -155,13 +160,13 @@ src_install() {
 	keepdir /var/nagios/rw
 
 	if use noweb; then
-		chown -R nagios:nagios ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
+		chown -R nagios:nagios "${D}"/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	else
-		chown -R nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
+		chown -R nagios:apache "${D}"/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	fi
 
-	chmod ug+s ${D}/var/nagios/rw || die "Failed Chmod of ${D}/var/nagios/rw"
-	chmod 0750 ${D}/etc/nagios || die "Failed chmod of ${D}/etc/nagios"
+	chmod ug+s "${D}"/var/nagios/rw || die "Failed Chmod of ${D}/var/nagios/rw"
+	chmod 0750 "${D}"/etc/nagios || die "Failed chmod of ${D}/etc/nagios"
 
 	cat << EOF > "${T}"/55-nagios-core-revdep
 SEARCH_DIRS="/usr/nagios/bin /usr/nagios/libexec"

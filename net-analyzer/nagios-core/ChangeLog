@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.102 2007/06/10 16:33:18 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.103 2007/08/01 21:00:26 marineam Exp $
+
+  01 Aug 2007; Michael Marineau <marineam@gentoo.org>
+  nagios-core-2.9-r1.ebuild:
+  Change ownership of /usr/nagios to root:root to play nice with grsec trusted
+  path execution and properly quote a handful of variables.
 
   10 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   -nagios-core-2.3.1-r1.ebuild, -nagios-core-2.4-r1.ebuild,
