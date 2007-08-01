@@ -1,0 +1,54 @@
+diff -ur StepMania-3.9-src.orig/autoconf/m4/lua.m4 StepMania-3.9-src/autoconf/m4/lua.m4
+--- StepMania-3.9-src.orig/autoconf/m4/lua.m4	2007-08-01 12:57:59.000000000 +0300
++++ StepMania-3.9-src/autoconf/m4/lua.m4	2007-08-01 12:58:06.000000000 +0300
+@@ -44,16 +44,24 @@
+ 	LUA_LIBS="$LIB_LUA $LIB_LUA_LIB"
+ fi
+ if test "$LUA_MISSING" = "yes"; then
+-	echo
+-	echo "*** liblua is required to build StepMania; please make sure that"
+-	echo "*** it is installed to continue the installation process."
+-	exit 1;
+-fi
+-if test "$LUA_LIB_MISSING" = "yes"; then
++	LUA_CFLAGS=
++	LUA_LIBS=
++	PKG_PROG_PKG_CONFIG
++	PKG_CHECK_MODULES(LUA, lua >= 5.1, [LUA_MISSING=no])
++
++	if test "$LUA_MISSING" = "yes"; then
++		echo
++		echo "*** liblua is required to build StepMania; please make sure that"
++		echo "*** it is installed to continue the installation process."
++		exit 1
++	else
++		AC_DEFINE([HAVE_LUA51], [1], [The system has Lua 5.1 instead of Lua 5.0])
++	fi
++elif test "$LUA_LIB_MISSING" = "yes"; then
+ 	echo
+ 	echo "*** liblualib is required to build StepMania; please make sure that"
+ 	echo "*** it is installed to continue the installation process."
+-	exit 1;
++	exit 1
+ fi
+ 
+ AC_SUBST(LUA_CFLAGS)
+diff -ur StepMania-3.9-src.orig/src/LuaFunctions.h StepMania-3.9-src/src/LuaFunctions.h
+--- StepMania-3.9-src.orig/src/LuaFunctions.h	2007-08-01 12:57:59.000000000 +0300
++++ StepMania-3.9-src/src/LuaFunctions.h	2007-08-01 12:58:12.000000000 +0300
+@@ -4,11 +4,15 @@
+ #include "LuaHelpers.h"
+ #include "RageUtil.h" /* for ssprintf */
+ 
++#ifdef HAVE_LUA51
++#include <lua.hpp>
++#else
+ extern "C"
+ {
+ #include <lua.h>
+ #include <lualib.h>
+ }
++#endif
+ 
+ /* Argument helpers: */
+ #define LUA_ASSERT( expr, err ) if( !(expr) ) { Lua::Fail( L, err ); }

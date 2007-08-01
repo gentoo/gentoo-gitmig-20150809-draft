@@ -1,0 +1,21 @@
+diff -ur StepMania-3.9-src.orig/src/arch/Sound/ALSA9Helpers.cpp StepMania-3.9-src/src/arch/Sound/ALSA9Helpers.cpp
+--- StepMania-3.9-src.orig/src/arch/Sound/ALSA9Helpers.cpp	2007-07-31 00:17:55.000000000 +0300
++++ StepMania-3.9-src/src/arch/Sound/ALSA9Helpers.cpp	2007-07-31 00:20:55.000000000 +0300
+@@ -256,6 +256,7 @@
+ 	{
+ 		CHECKPOINT;
+ 		dsnd_pcm_close(pcm);
++		pcm = 0;
+ 		CHECKPOINT;
+ 	}
+ 	else
+@@ -264,7 +265,8 @@
+ 
+ Alsa9Buf::~Alsa9Buf()
+ {
+-	dsnd_pcm_close(pcm);
++	if(pcm)
++		dsnd_pcm_close(pcm);
+ }
+ 
+ 

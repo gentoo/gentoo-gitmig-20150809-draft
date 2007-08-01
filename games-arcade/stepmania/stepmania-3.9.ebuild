@@ -1,8 +1,7 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.8 2006/12/12 17:51:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.9 2007/08/01 16:53:05 drac Exp $
 
-WANT_AUTOCONF=latest
 inherit eutils autotools games
 
 MY_PV="${PV/_/-}"
@@ -13,20 +12,22 @@ SRC_URI="mirror://sourceforge/stepmania/StepMania-${MY_PV}-src.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug gtk jpeg mp3 mpeg vorbis force-oss"
+
 RESTRICT="test"
 
-DEPEND="gtk? ( >=x11-libs/gtk+-2.0 )
+RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
 	mp3? ( media-libs/libmad )
-	>=dev-lang/lua-5.0
+	>=dev-lang/lua-5
 	media-libs/libsdl
 	jpeg? ( media-libs/jpeg )
 	media-libs/libpng
-	mpeg? ( media-video/ffmpeg )
+	mpeg? ( ~media-video/ffmpeg-0.4.9_p20070330 )
 	vorbis? ( media-libs/libvorbis )
 	virtual/opengl
 	virtual/glu"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/StepMania-${MY_PV}-src
 
@@ -50,8 +51,14 @@ src_unpack() {
 		"${FILESDIR}/${P}"-vorbis.patch \
 		"${FILESDIR}/${P}"-sdl.patch \
 		"${FILESDIR}/${P}"-alsa.patch \
-		"${FILESDIR}/${P}"-alias.patch
-	eautoconf
+		"${FILESDIR}/${P}"-alias.patch \
+		"${FILESDIR}/${P}"-gettid.patch \
+		"${FILESDIR}/${P}"-lua51.patch \
+		"${FILESDIR}/${P}"-ffmpeg-stdint.patch \
+		"${FILESDIR}/${P}"-crashfix.patch
+
+	AT_M4DIR="autoconf/m4"
+	eautoreconf
 }
 
 src_compile() {
@@ -64,7 +71,7 @@ src_compile() {
 		$(use_enable gtk gtk2) \
 		$(use_enable force-oss) \
 		|| die
-	emake || die "emake failed"
+	emake || die "emake failed."
 }
 
 src_install() {

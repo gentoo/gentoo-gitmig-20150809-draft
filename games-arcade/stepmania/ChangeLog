@@ -1,6 +1,14 @@
 # ChangeLog for games-arcade/stepmania
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.16 2006/12/12 17:51:33 wolf31o2 Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.17 2007/08/01 16:53:05 drac Exp $
+
+  01 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  +files/stepmania-3.9-crashfix.patch,
+  +files/stepmania-3.9-ffmpeg-stdint.patch,
+  +files/stepmania-3.9-gettid.patch, +files/stepmania-3.9-lua51.patch,
+  files/stepmania-3.9-vorbis.patch, stepmania-3.9.ebuild:
+  Fix building with lua-5.1, ffmpeg-0.4.9_p20070330, glibc-2.5, bugs 159023,
+  165266. Thanks to Stephen Bridges, Nicolas Litchinko and Petri Lehtinen.
 
   12 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/stepmania-3.9-alias.patch, stepmania-3.9.ebuild:

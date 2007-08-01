@@ -1,5 +1,6 @@
---- aclocal.m4.orig	2006-05-05 19:12:10.412237750 -0600
-+++ aclocal.m4	2006-05-05 19:12:22.568997500 -0600
+diff -ur StepMania-3.9-src.orig/autoconf/m4/audio.m4 StepMania-3.9-src/autoconf/m4/audio.m4
+--- StepMania-3.9-src.orig/autoconf/m4/audio.m4 2007-07-30 23:19:43.000000000 +0300
++++ StepMania-3.9-src/autoconf/m4/audio.m4      2007-07-30 23:17:41.000000000 +0300
 @@ -1,6 +1,6 @@
  AC_DEFUN(SM_AUDIO, [
  
