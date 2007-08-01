@@ -1,29 +1,30 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2.7.ebuild,v 1.10 2007/06/24 22:15:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3.1.ebuild,v 1.1 2007/08/01 23:19:13 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
 DESCRIPTION="The Portage Package Management System. The primary package management and distribution system for Gentoo."
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 PROVIDE="virtual/portage"
 SLOT="0"
 # USE_EXPAND_HIDDEN hides ELIBC and USERLAND expansions from emerge output (see make.conf.5).
 IUSE_ELIBC="elibc_glibc elibc_uclibc elibc_FreeBSD"
-IUSE_USERLAND="userland_Darwin userland_GNU"
-IUSE="build doc epydoc selinux linguas_pl ${IUSE_ELIBC} ${IUSE_USERLAND}"
-DEPEND=">=dev-lang/python-2.3
+IUSE="build doc epydoc selinux linguas_pl userland_GNU ${IUSE_ELIBC}"
+DEPEND=">=dev-lang/python-2.4
 	!build? ( >=sys-apps/sed-4.0.5 )
+	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
 	epydoc? ( >=dev-python/epydoc-2.0 )"
-RDEPEND=">=dev-lang/python-2.3
+RDEPEND=">=dev-lang/python-2.4
 	!build? ( >=sys-apps/sed-4.0.5
 		dev-python/python-fchksum
-		!userland_Darwin? ( >=app-shells/bash-3.0 ) )
+		>=app-shells/bash-3.0 )
+	elibc_FreeBSD? ( dev-python/py-freebsd )
 	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 )
 	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 )
-	!userland_Darwin? ( >=app-misc/pax-utils-0.1.13 )
+	>=app-misc/pax-utils-0.1.13
 	userland_GNU? ( >=sys-apps/coreutils-6.4 )
 	selinux? ( >=dev-python/python-selinux-2.16 )
 	doc? ( app-portage/portage-manpages )
@@ -35,12 +36,13 @@ SRC_ARCHIVES="http://dev.gentoo.org/~zmedico/portage/archives"
 
 PV_PL="2.1.2"
 PATCHVER_PL=""
-SRC_URI="mirror://gentoo/${PN}-${PV%.*}.tar.bz2
-	${SRC_ARCHIVES}/${PN}-${PV%.*}.tar.bz2
+TARBALL_PV="${PV%.*}"
+SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
+	${SRC_ARCHIVES}/${PN}-${TARBALL_PV}.tar.bz2
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
 	${SRC_ARCHIVES}/${PN}-man-pl-${PV_PL}.tar.bz2 )"
 
-PATCHVER=${PVR}
+PATCHVER="${PVR}"
 if [ -n "${PATCHVER}" ]; then
 	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PATCHVER}.patch.bz2
 	${SRC_ARCHIVES}/${PN}-${PATCHVER}.patch.bz2"
@@ -51,7 +53,7 @@ if [ -n "${PATCHVER_PL}" ]; then
 	${SRC_ARCHIVES}/${PN}-man-pl-${PV_PL}${PATCHVER_PL}.patch.bz2 )"
 fi
 
-S="${WORKDIR}"/${PN}-${PV%.*}
+S="${WORKDIR}"/${PN}-${TARBALL_PV}
 S_PL="${WORKDIR}"/${PN}-${PV_PL}
 
 portage_docs() {
@@ -85,10 +87,11 @@ src_compile() {
 	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o tbz2tool tbz2tool.c || \
 		die "Failed to build tbz2tool"
 
-	if use elibc_FreeBSD; then
-		cd "${S}"/src/bsd-flags
-		chmod +x setup.py
-		./setup.py build || die "Failed to install bsd-chflags module"
+	if use doc; then
+		cd "${S}"/doc
+		touch fragment/date
+		sed -i "s/svn-trunk/${PVR}/" fragment/version
+		make xhtml-nochunks || die "failed to make docs"
 	fi
 
 	if use epydoc; then
@@ -96,10 +99,12 @@ src_compile() {
 		mkdir "${WORKDIR}"/api
 		local my_modules
 		my_modules="$(find "${S}/pym" -name "*.py" \
-			| sed -e 's:.*__init__.py$::' -e 's:\.py$::' -e "s:^${S}/pym/::" \
+			| sed -e 's:/__init__.py$::' -e 's:\.py$::' -e "s:^${S}/pym/::" \
 			 -e 's:/:.:g')" || die "error listing modules"
 		PYTHONPATH="${S}/pym:${PYTHONPATH}" epydoc -o "${WORKDIR}"/api \
-			-qqqqq --ignore-param-mismatch ${my_modules} || die "epydoc failed"
+			-qqqqq --ignore-param-mismatch --no-frames --show-imports \
+			--name "${PN}" --url "${HOMEPAGE}" \
+			${my_modules} || die "epydoc failed"
 	fi
 }
 
@@ -126,11 +131,8 @@ src_install() {
 		newins make.conf make.conf.example
 	fi
 
-	if use elibc_FreeBSD; then
-		cd "${S}"/src/bsd-flags
-		./setup.py install --root "${D}" || \
-			die "Failed to install bsd-chflags module"
-	fi
+	insinto /etc/logrotate.d
+	doins "${S}"/cnf/logrotate.d/elog-save-summary
 
 	dodir ${portage_base}/bin
 	exeinto ${portage_base}/bin
@@ -158,6 +160,7 @@ src_install() {
 	dodoc "${S}"/ChangeLog
 	dodoc "${S}"/NEWS
 	dodoc "${S}"/RELEASE-NOTES
+	use doc && dohtml "${S}"/doc/*.html
 	use epydoc && dohtml -r "${WORKDIR}"/api
 
 	dodir /usr/bin
@@ -196,12 +199,8 @@ pkg_preinst() {
 		mv "${D}"/${portage_base}/bin/tbz2tool "${T}"
 		rm -rf "${D}"/${portage_base}/bin/*
 		mv "${T}"/tbz2tool "${D}"/${portage_base}/bin/
-	else
-		for mydir in bin pym pym/cache pym/elog_modules; do
-			rm "${ROOT}"/${portage_base}/${mydir}/*.pyc >& /dev/null
-			rm "${ROOT}"/${portage_base}/${mydir}/*.pyo >& /dev/null
-		done
 	fi
+	remove_python_bytecodes
 }
 
 pkg_postinst() {
@@ -219,12 +218,27 @@ pkg_postinst() {
 		[ -e "${x}" ] && mv -f "${x}" "${ROOT}etc/make.globals"
 	done
 
-	ewarn "In portage-2.1.2, installation actions do not necessarily pull in build time"
-	ewarn "dependencies that are not strictly required.  This behavior is adjustable"
-	ewarn "via the new --with-bdeps option that is documented in the emerge(1) man page."
-	ewarn "For more information regarding this change, please refer to bug #148870."
-	echo
-	elog "See NEWS and RELEASE-NOTES for further changes."
-	echo
+	elog
+	elog "The world file now supports slot atoms such as 'sys-devel/gcc:3.4'. In some"
+	elog "cases, emerge --depclean may remove slots that it would not have removed"
+	elog "in the past. The emerge --noreplace command can be used to add an atom to"
+	elog "the world file and prevent matching packages from being removed.  A slot"
+	elog "atom will be recorded in the world file for any atom that is precise enough"
+	elog "to identify a specific slot."
+
 	portage_docs
+}
+
+pkg_postrm() {
+	remove_python_bytecodes
+}
+
+remove_python_bytecodes() {
+	local d="${ROOT}/usr/$(get_libdir)/portage/pym"
+	[ -d "${d}" ] || return
+	find "${d}" -type d -print0 | \
+	while read -d $'\0' d ; do
+		cd "${d}"
+		rm -f *.pyc *.pyo
+	done
 }
