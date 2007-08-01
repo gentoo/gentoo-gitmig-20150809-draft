@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.44 2007/07/25 18:23:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.45 2007/08/01 10:16:38 hanno Exp $
+
+*gwenhywfar-2.6.1 (01 Aug 2007)
+
+  01 Aug 2007; Hanno Boeck <hanno@gentoo.org> +gwenhywfar-2.6.1.ebuild:
+  Version bump.
 
   25 Jul 2007; Guy Martin <gmsoft@gentoo.org> gwenhywfar-2.5.4.ebuild:
   Added ~hppa to KEYWORDS.
