@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.4-r6.ebuild,v 1.2 2007/07/29 17:23:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.4-r11.ebuild,v 1.1 2007/08/01 22:42:13 hollow Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
 # latest gentoo apache files
-GENTOO_PATCHNAME="gentoo-${P}-r5"
-GENTOO_PATCHSTAMP="20070605"
-GENTOO_DEVSPACE="phreak"
+GENTOO_PATCHNAME="gentoo-${PF}"
+GENTOO_PATCHSTAMP="20070802"
+GENTOO_DEVSPACE="hollow"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
 DESCRIPTION="The Apache Web Server."
@@ -17,7 +17,6 @@ SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2
 
 # some helper scripts are apache-1.1, thus both are here
 LICENSE="Apache-2.0 Apache-1.1"
-
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc ldap mpm-event mpm-itk mpm-peruser mpm-prefork mpm-worker no-suexec selinux ssl static-modules threads"
@@ -89,6 +88,7 @@ pkg_setup() {
 		elog "You can manipulate several configure options of suexec"
 		elog "through the following environment variables:"
 		elog
+		elog " SUEXEC_SAFEPATH: Default PATH for suexec (default: /usr/local/bin:/usr/bin:/bin)"
 		elog "  SUEXEC_LOGFILE: Path to the suexec logfile (default: /var/log/apache2/suexec_log)"
 		elog "   SUEXEC_CALLER: Name of the user Apache is running as (default: apache)"
 		elog "  SUEXEC_DOCROOT: Directory in which suexec will run scripts (default: /var/www)"
@@ -116,19 +116,7 @@ src_unpack() {
 	# 60-79 Version specific (60_all_${PV}_some-title.patch)
 	# 80-99 Security patches (80_all_${PV}_cve-####-####.patch)
 
-	EPATCH_SUFFIX="patch"
-	epatch "${GENTOO_PATCHDIR}"/patches/[0-1]*
-	if $(ls "${GENTOO_PATCHDIR}"/patches/[2-3]?_*_${mpm}_* &>/dev/null) ; then
-		epatch "${GENTOO_PATCHDIR}"/patches/[2-3]?_*_${mpm}_*
-	fi
-	for uf in ${IUSE} ; do
-		if use ${uf} && $(ls "${GENTOO_PATCHDIR}"/patches/[4-5]?_*_${uf}_* &>/dev/null) ; then
-			epatch "${GENTOO_PATCHDIR}"/patches/[4-5]?_*_${uf}_*
-		fi
-	done
-	if $(ls "${GENTOO_PATCHDIR}"/patches/[6-9]?_*_${PV}_* &>/dev/null) ; then
-		epatch "${GENTOO_PATCHDIR}"/patches/[6-9]?_*_${PV}_*
-	fi
+	epatch "${GENTOO_PATCHDIR}"/patches/*.patch
 
 	# setup the filesystem layout config
 	cat "${GENTOO_PATCHDIR}"/patches/config.layout >> "${S}"/config.layout || \
@@ -148,6 +136,9 @@ src_compile() {
 	# Thanks to Harald van Dijk
 	append-ldflags -Wl,--no-as-needed
 
+	# peruser MPM debugging with -X is nearly impossible
+	use mpm-peruser && use debug && append-flags -DMPM_PERUSER_DEBUG
+
 	use static-modules && modtype="static"
 	select_modules_config || die "determining modules failed"
 
@@ -165,7 +156,7 @@ src_compile() {
 	if use no-suexec ; then
 		myconf="${myconf} --disable-suexec"
 	else
-		myconf="${myconf} --with-suexec-safepath='/usr/local/bin:/usr/bin:/bin'"
+		myconf="${myconf} --with-suexec-safepath=${SUEXEC_SAFEPATH:-/usr/local/bin:/usr/bin:/bin}"
 		myconf="${myconf} --with-suexec-logfile=${SUEXEC_LOGFILE:-/var/log/apache2/suexec_log}"
 		myconf="${myconf} --with-suexec-bin=/usr/sbin/suexec"
 		myconf="${myconf} --with-suexec-userdir=${SUEXEC_USERDIR:-public_html}"
@@ -210,13 +201,27 @@ src_install () {
 
 	# This is a mapping of module names to the -D options in APACHE2_OPTS
 	# Used for creating optional LoadModule lines
-	mod_defines="info:INFO status:INFO
-				ldap:LDAP authnz_ldap:AUTH_LDAP
-				proxy:PROXY proxy_connect:PROXY proxy_http:PROXY
-				proxy_ajp:PROXY proxy_balancer:PROXY
-				ssl:SSL
-				suexec:SUEXEC
-				userdir:USERDIR"
+	mod_defines="
+		authnz_ldap:AUTH_LDAP
+		cache:CACHE
+		dav:DAV
+		dav_fs:DAV
+		dav_lock:DAV
+		disk_cache:CACHE
+		file_cache:CACHE
+		info:INFO
+		ldap:LDAP
+		mem_cache:CACHE
+		proxy:PROXY
+		proxy_ajp:PROXY
+		proxy_balancer:PROXY
+		proxy_connect:PROXY
+		proxy_http:PROXY
+		ssl:SSL
+		status:INFO
+		suexec:SUEXEC
+		userdir:USERDIR
+	"
 
 	# create our LoadModule lines
 	if ! use static-modules ; then
@@ -278,6 +283,7 @@ src_install () {
 
 	# Install some documentation
 	dodoc ABOUT_APACHE CHANGES LAYOUT README README.platforms VERSIONING
+	dodoc "${GENTOO_PATCHDIR}"/docs/*
 
 	# drop in a convenient link to the manual
 	if use doc ; then
@@ -291,6 +297,7 @@ src_install () {
 	ebegin "Installing default webroot to /usr/share/doc/${PF}"
 	mv -f "${D}/var/www/localhost" "${D}/usr/share/doc/${PF}/webroot"
 	eend $?
+	keepdir /var/www/localhost/htdocs
 
 	if ! use no-suexec ; then
 		# Set some sane permissions for suexec
@@ -354,6 +361,18 @@ pkg_postinst() {
 		done
 	fi
 
+	# Note the changes regarding DEFAULT_VHOST and SSL_DEFAULT_VHOST
+	if has_version '<www-servers/apache-2.2.4-r7' ; then
+		elog
+		elog "Listen directives have been moved into the default virtual host"
+		elog "configuation. At least DEFAULT_VHOST has been enabled for you"
+		elog "(depending on your USE-flags."
+		elog
+		elog "If you disable DEFAULT_VHOST or SSL_DEFAULT_VHOST, there would"
+		elog "be no listening sockets available."
+		elog
+	fi
+
 	# Note the user of the config changes
 	if has_version '<www-servers/apache-2.2.4-r5' ; then
 		elog
@@ -388,20 +407,16 @@ pkg_postinst() {
 		elog "and the upgrading guide at:"
 		elog "http://httpd.apache.org/docs/2.2/upgrading.html"
 		elog
-		elog "Some modules do not yet work with Apache 2.2."
-		elog "To keep from accidentally downgrading to Apache 2.0, you should"
-		elog "add the following to ${ROOT}/etc/portage/package.mask:"
-		elog
-		elog "    <www-servers/apache-2.2.0"
-		elog
 	fi
+
+	# Cleanup the vim backup files, placed in /etc/apache2 by the last
+	# patchtarball (gentoo-apache-2.2.4-r7-20070615)
+	rm -f "${ROOT}/etc/apache2/modules.d/*.conf~"
 }
 
 pkg_config() {
 	einfo "Installing default webroot to ${ROOT}/var/www/localhost"
-	mkdir -p "${ROOT}"/var/www/localhost
 	cp -R "${ROOT}"/usr/share/doc/${PF}/webroot/* "${ROOT}"/var/www/localhost
-	chown -R apache:0 "${ROOT}"/var/www/localhost
 }
 
 parse_modules_config() {
