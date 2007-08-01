@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.0.ebuild,v 1.1 2007/07/30 11:20:21 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.0.ebuild,v 1.2 2007/08/01 16:57:42 angelos Exp $
 
 inherit eutils qt4 games
 
@@ -11,7 +11,7 @@ SRC_URI="http://hedgewars.org/download/${PN}-src-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="$(qt4_min_version 4.2)
