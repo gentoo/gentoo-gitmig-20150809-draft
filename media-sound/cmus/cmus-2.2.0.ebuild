@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.2.0.ebuild,v 1.1 2007/07/30 23:46:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.2.0.ebuild,v 1.2 2007/08/01 06:10:24 opfer Exp $
 
 inherit eutils multilib
 
@@ -27,13 +27,14 @@ DEPEND="sys-libs/ncurses
 	mp4? ( media-libs/libmp4v2
 		media-libs/faad2 )
 	musepack? ( >=media-libs/libmpcdec-1.2 )
-	pidgin? ( net-im/pidgin
-		dev-python/dbus-python )
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	wavpack? ( media-sound/wavpack )
-	wma? ( media-video/ffmpeg )
-	zsh-completion? ( app-shells/zsh )"
-RDEPEND="${DEPEND}"
+	wma? ( media-video/ffmpeg )"
+RDEPEND="${DEPEND}
+	zsh-completion? ( app-shells/zsh )
+	pidgin? ( net-im/pidgin
+		dev-python/dbus-python )"
+
 
 my_config() {
 	local value
