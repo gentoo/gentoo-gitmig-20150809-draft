@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.45 2007/07/15 16:33:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.46 2007/08/01 17:53:58 drac Exp $
+
+  01 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  notification-daemon-0.3.6-r1.ebuild, notification-daemon-0.3.7.ebuild:
+  Fix fscked up dbus deps for bug 187369.
 
   15 Jul 2007; nixnut <nixnut@gentoo.org> notification-daemon-0.3.7.ebuild:
   Stable on ppc wrt bug 184615
