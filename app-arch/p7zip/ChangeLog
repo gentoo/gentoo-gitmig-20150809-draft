@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.66 2007/08/01 10:59:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.67 2007/08/01 23:02:10 radek Exp $
+
+*p7zip-4.51 (01 Aug 2007)
+
+  01 Aug 2007; Radoslaw Stachowiak <radek@gentoo.org> +p7zip-4.51.ebuild:
+  version bump, closes #187308, introduces lzma binary.
 
   01 Aug 2007; Raúl Porcel <armin76@gentoo.org> p7zip-4.48.ebuild:
   x86 stable
