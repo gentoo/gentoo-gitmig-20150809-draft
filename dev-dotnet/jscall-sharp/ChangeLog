@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/jscall-sharp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/jscall-sharp/ChangeLog,v 1.6 2007/06/27 16:11:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/jscall-sharp/ChangeLog,v 1.7 2007/08/01 03:20:22 metalgod Exp $
+
+  01 Aug 2007; <metalgod@gentoo.org> jscall-sharp-0.0.3_pre20070621.ebuild:
+  Added ~amd64 keyword. Closes bug #185808.
 
   27 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
   jscall-sharp-0.0.2_pre20061125.ebuild:
