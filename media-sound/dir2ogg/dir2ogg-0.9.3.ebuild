@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.9.3.ebuild,v 1.5 2007/07/31 19:43:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.9.3.ebuild,v 1.6 2007/08/01 18:09:27 armin76 Exp $
 
 DESCRIPTION="Converts Mp3, M4a, Wma, and Wav files to Ogg Vorbis format."
 HOMEPAGE="http://badcomputer.org/unix/dir2ogg/"
@@ -8,7 +8,7 @@ SRC_URI="http://badcomputer.org/unix/dir2ogg/src/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="aac wma"
 
 DEPEND=""
