@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/vdrift
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.1 2007/07/25 15:05:05 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.2 2007/08/01 18:40:28 angelos Exp $
+
+  01 Aug 2007; Christoph Mende <angelos@gentoo.org> vdrift-20070323.ebuild:
+  Added ~amd64 for bug #186753
 
 *vdrift-20070323 (25 Jul 2007)
 
