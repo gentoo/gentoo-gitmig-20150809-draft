@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.18 2007/07/17 13:58:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.19 2007/08/01 03:59:25 angelos Exp $
+
+  01 Aug 2007; Christoph Mende <angelos@gentoo.org> qmpdclient-1.0.8.ebuild:
+  Added ~amd64 wrt bug #183593
 
   17 Jul 2007; Andrej Kacian <ticho@gentoo.org> qmpdclient-1.0.8.ebuild:
   Added QMAKE_CC and QMAKE_LINK to qmake call. By Davide Pesavento <davidepesa
