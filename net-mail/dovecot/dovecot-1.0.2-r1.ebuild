@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0.2-r1.ebuild,v 1.1 2007/07/19 16:17:26 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0.2-r1.ebuild,v 1.2 2007/08/01 11:01:14 uberlord Exp $
 
 inherit autotools eutils ssl-cert
 
@@ -9,7 +9,7 @@ S="${WORKDIR}/${MY_P}"
 SIEVE="dovecot-sieve-1.0.1"
 SIEVE_S="${WORKDIR}/${SIEVE}"
 
-SRC_URI="http://dovecot.org/releases/${MY_P}.tar.gz
+SRC_URI="http://dovecot.org/releases/1.0/${MY_P}.tar.gz
 sieve? ( http://dovecot.org/releases/sieve/${SIEVE}.tar.gz )"
 
 DESCRIPTION="An IMAP and POP3 server written with security primarily in mind"
