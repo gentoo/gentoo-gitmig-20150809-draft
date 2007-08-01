@@ -16,6 +16,7 @@ net-libs/c-client pam
 net-proxy/squid -ipf-transparent -pf-transparent
 sys-apps/baselayout pam
 sys-apps/coreutils acl
+sys-apps/hal dell disk-partition
 sys-apps/help2man nls
 
 # NetworkManager is Linux-only, Zephyr requires kerberos
