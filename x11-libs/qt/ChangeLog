@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.461 2007/07/31 23:11:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.462 2007/08/01 23:36:28 angelos Exp $
+
+  01 Aug 2007; Christoph Mende <angelos@gentoo.org> qt-4.3.0.ebuild:
+  Stable on amd64 wrt bug #186670
 
   31 Jul 2007; Caleb Tennis <caleb@gentoo.org> qt-4.3.0.ebuild:
   Incorporate dep changes from flameeyes at bug #181199
