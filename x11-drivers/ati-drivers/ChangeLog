@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.82 2007/08/01 22:32:06 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.83 2007/08/01 22:48:37 je_fro Exp $
+
+  01 Aug 2007; Jeff Gardner <je_fro@gentoo.org>
+  ati-drivers-8.37.6-r1.ebuild:
+  Fix kernel_is syntax.
 
   01 Aug 2007; Jeff Gardner <je_fro@gentoo.org>
   +files/8.37.6/fix-ioctl-for-2.6.22.patch, ati-drivers-8.37.6-r1.ebuild:
