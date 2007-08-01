@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-nv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.52 2007/07/14 04:52:20 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.53 2007/08/01 06:15:45 dberkholz Exp $
+
+  01 Aug 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xf86-video-nv-1.1.2.ebuild, xf86-video-nv-1.2.0.ebuild,
+  xf86-video-nv-1.2.2.1.ebuild, xf86-video-nv-2.0.1.ebuild,
+  xf86-video-nv-2.0.2.ebuild, xf86-video-nv-2.1.2.ebuild:
+  No need to shout NVIDIA; just say Nvidia. We speak English, not marketing
+  gobbledygook.
 
 *xf86-video-nv-2.1.2 (14 Jul 2007)
 
