@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.23b.ebuild,v 1.13 2007/07/01 11:54:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.23b.ebuild,v 1.14 2007/08/01 12:15:45 vapier Exp $
 
 inherit eutils
 
@@ -15,8 +15,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbs
 IUSE=""
 
 RDEPEND="sys-devel/gnuconfig
-	>=sys-devel/autoconf-2.59
-	>=sys-devel/automake-1.9"
+	>=sys-devel/autoconf-2.60
+	>=sys-devel/automake-1.10"
 DEPEND="${RDEPEND}
 	sys-apps/help2man"
 
