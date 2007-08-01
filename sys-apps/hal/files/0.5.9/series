@@ -21,6 +21,7 @@
 21_pm-suspend_correct_options.patch
 22_pm-hibernate_correct_options.patch
 23_runner_64bit_values.patch
+24_libparted_1_8_7.patch
 95_gentoo_man_page.patch
 96_plugdev_allow_send.patch
 97_ignore_fixed_drives.patch

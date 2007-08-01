@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1-r1.ebuild,v 1.2 2007/08/01 13:40:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1-r1.ebuild,v 1.3 2007/08/01 13:51:20 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -30,7 +30,8 @@ RDEPEND=">=dev-libs/glib-2.6
 		x86? ( >=sys-apps/dmidecode-2.7 )
 		ia64? ( >=sys-apps/dmidecode-2.7 )
 		dell? ( >=sys-libs/libsmbios-0.13.4 )
-		disk-partition? ( >=sys-apps/parted-1.7.1 )
+		disk-partition? ( >=sys-apps/parted-1.7.1
+						<=sys-apps/parted-1.8.7 )
 		kernel_linux? ( crypt? ( >=sys-fs/cryptsetup-luks-1.0.1 ) )
 		selinux? ( sys-libs/libselinux
 					sec-policy/selinux-hal )"
@@ -115,6 +116,7 @@ src_unpack() {
 	# Gentoo patchset
 	epatch ${FILESDIR}/0.5.9/07_malloc_h_for_stdlib_h.patch
 	epatch ${FILESDIR}/0.5.9/23_runner_64bit_values.patch
+	epatch ${FILESDIR}/0.5.9/24_libparted_1_8_7.patch
 	#epatch ${FILESDIR}/0.5.9/95_gentoo_man_page.patch
 	epatch ${FILESDIR}/0.5.9/96_plugdev_allow_send.patch
 	epatch ${FILESDIR}/0.5.9/97_ignore_fixed_drives.patch
