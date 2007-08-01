@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rat
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rat/ChangeLog,v 1.9 2007/02/22 01:22:33 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rat/ChangeLog,v 1.10 2007/08/01 13:57:15 drac Exp $
+
+*rat-4.3.00 (01 Aug 2007)
+
+  01 Aug 2007; Samuli Suominen <drac@gentoo.org> +rat-4.3.00.ebuild:
+  Version bump.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
