@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0.ebuild,v 1.11 2007/07/31 18:52:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0.ebuild,v 1.12 2007/08/01 22:19:57 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -261,6 +261,17 @@ PDEPEND="
 		video_cards_fglrx? ( >=x11-drivers/ati-drivers-8.37.6 )
 	)"
 LICENSE="${LICENSE} MIT"
+
+PATCHES="
+	${FILESDIR}/1.2.0-fix-amd-cpu-detection.patch
+	${FILESDIR}/1.2.0-properly-free-device-devprivates-memory-leak-fix.patch
+	${FILESDIR}/1.2.0-typo-fix.patch
+	${FILESDIR}/1.2.0-zero-out-client-devprivates-on-allocation.patch
+	${FILESDIR}/1.3.0.0-use-proc-instead-of-sys.patch
+	${FILESDIR}/avoid-crash-on-minimized-xv-window.patch
+	${FILESDIR}/xorg-server-sam225bw-quirks.patch
+	${FILESDIR}/1.3-alpha-build-fix.patch
+	"
 
 pkg_setup() {
 	use minimal || ensure_a_server_is_building

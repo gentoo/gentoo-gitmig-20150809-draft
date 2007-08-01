@@ -54,6 +54,14 @@ AUX 1.2.0-client-leak.patch 363 RMD160 788a7468df4305319ee3a05137ce0b90e76b982a 
 MD5 c46eeebdde41ceb57f1dca6ef4b1a8b7 files/1.2.0-client-leak.patch 363
 RMD160 788a7468df4305319ee3a05137ce0b90e76b982a files/1.2.0-client-leak.patch 363
 SHA256 5969bf63e88ab4030c6913237379b76fb55e9e1f249a058eb17487a4b7103b87 files/1.2.0-client-leak.patch 363
+AUX 1.2.0-fix-amd-cpu-detection.patch 1715 RMD160 7290fd57dc2a9e2dd8edbe08da5074a30815486c SHA1 b749e5ac35fad295fd7a1f13cfee2e42a2a06035 SHA256 0126a880eb5f21eb8dbbd119a425e7412b37689e1321c2b9ff63c5dc8de47f6a
+MD5 cd4cb28e832a2232b4a7c492f964d5bb files/1.2.0-fix-amd-cpu-detection.patch 1715
+RMD160 7290fd57dc2a9e2dd8edbe08da5074a30815486c files/1.2.0-fix-amd-cpu-detection.patch 1715
+SHA256 0126a880eb5f21eb8dbbd119a425e7412b37689e1321c2b9ff63c5dc8de47f6a files/1.2.0-fix-amd-cpu-detection.patch 1715
+AUX 1.2.0-properly-free-device-devprivates-memory-leak-fix.patch 1199 RMD160 c55891ff6797d1b161524cd5c3e9a4382ec0bcad SHA1 98e07d5a542bc1e990921234f8f6399120ae5a63 SHA256 ba60d2fbb7944da45344f5ffc1431bf0e812ab861f4455522592ecb0c475138c
+MD5 a4b32046f3cfde77ae5f964faabf0254 files/1.2.0-properly-free-device-devprivates-memory-leak-fix.patch 1199
+RMD160 c55891ff6797d1b161524cd5c3e9a4382ec0bcad files/1.2.0-properly-free-device-devprivates-memory-leak-fix.patch 1199
+SHA256 ba60d2fbb7944da45344f5ffc1431bf0e812ab861f4455522592ecb0c475138c files/1.2.0-properly-free-device-devprivates-memory-leak-fix.patch 1199
 AUX 1.2.0-server-damage-version.patch 1322 RMD160 25ba5ce01bc338d3a906ec959a0f1ad3303c5dd2 SHA1 129565a0151d42b85c43f273da507396111bdc9b SHA256 28a049c39e7995f7768eed34993f12252da416093e2f919c1ae84cb2dfee9f09
 MD5 789e294aaa7f8a03551f639dc022c568 files/1.2.0-server-damage-version.patch 1322
 RMD160 25ba5ce01bc338d3a906ec959a0f1ad3303c5dd2 files/1.2.0-server-damage-version.patch 1322
@@ -62,10 +70,30 @@ AUX 1.2.0-server-randr-version.patch 444 RMD160 05a4c38c141bf5dddd1f94eb61dba62b
 MD5 e14a71605039b6cded7ce9541ded2f1e files/1.2.0-server-randr-version.patch 444
 RMD160 05a4c38c141bf5dddd1f94eb61dba62b79f17658 files/1.2.0-server-randr-version.patch 444
 SHA256 226560c2d5c0c76987e2e315c2eef805e96ee9189aa3394148968fa13392f17e files/1.2.0-server-randr-version.patch 444
+AUX 1.2.0-typo-fix.patch 1321 RMD160 237c072869df15afbc2b35dfd8cc6e5143cb59f9 SHA1 3a22190fde5487b84c0d9a8862421f102bf41c63 SHA256 9dbf526f9cb3bf2596ffdc1795eda16181384db33562daf4fd1ddb359b5a77bd
+MD5 5e95f0f8fcc3af424c4404a1fcf485ca files/1.2.0-typo-fix.patch 1321
+RMD160 237c072869df15afbc2b35dfd8cc6e5143cb59f9 files/1.2.0-typo-fix.patch 1321
+SHA256 9dbf526f9cb3bf2596ffdc1795eda16181384db33562daf4fd1ddb359b5a77bd files/1.2.0-typo-fix.patch 1321
+AUX 1.2.0-zero-out-client-devprivates-on-allocation.patch 1284 RMD160 28bdf0c7b868736a788da69b8f4c6b1e0a88f425 SHA1 0cfd5dcb57c42197e39e5469032833ea932c0b4f SHA256 55cda19958996c484f4713ed022d6d9e80a4ab7e2f2f59ee26019d291a433a34
+MD5 2da60d0b56f71d5443510127e368031b files/1.2.0-zero-out-client-devprivates-on-allocation.patch 1284
+RMD160 28bdf0c7b868736a788da69b8f4c6b1e0a88f425 files/1.2.0-zero-out-client-devprivates-on-allocation.patch 1284
+SHA256 55cda19958996c484f4713ed022d6d9e80a4ab7e2f2f59ee26019d291a433a34 files/1.2.0-zero-out-client-devprivates-on-allocation.patch 1284
 AUX 1.2.99.0-fix-sysconfdir-references.patch 421 RMD160 4af58784b1af8c02ebe395530da3e0a3f619c9a9 SHA1 3c836428f18aa6e42a8ab243c59c9693af57100e SHA256 216905a6ac45ae01cbec53c5a8a5ebd53e9c8f647e91d57d926f9109a73cef24
 MD5 cceefbe34d34bd2d776d95d63851ec51 files/1.2.99.0-fix-sysconfdir-references.patch 421
 RMD160 4af58784b1af8c02ebe395530da3e0a3f619c9a9 files/1.2.99.0-fix-sysconfdir-references.patch 421
 SHA256 216905a6ac45ae01cbec53c5a8a5ebd53e9c8f647e91d57d926f9109a73cef24 files/1.2.99.0-fix-sysconfdir-references.patch 421
+AUX 1.3-alpha-build-fix.patch 1151 RMD160 b7eda6096e95835d998731c97aa70f13ec0c771c SHA1 210ef43db8ad8080db21a86c31f7744dbdb7e439 SHA256 4242b7679c24005c3a06ec1b37d98ce6b339724067876cf43ed05429f8f07186
+MD5 57ebd1cc02ac21fcb364e4b72dfa7fb9 files/1.3-alpha-build-fix.patch 1151
+RMD160 b7eda6096e95835d998731c97aa70f13ec0c771c files/1.3-alpha-build-fix.patch 1151
+SHA256 4242b7679c24005c3a06ec1b37d98ce6b339724067876cf43ed05429f8f07186 files/1.3-alpha-build-fix.patch 1151
+AUX 1.3.0.0-use-proc-instead-of-sys.patch 686 RMD160 26e9bee2d1be197fa456efdd5be16a8087b947cb SHA1 44112c3643d026f318850f2b763f3ca3952bb686 SHA256 12a737b236e90f2ca2a1cdb86ac87caec4a5bc38441dd72bb3628ef950e53f54
+MD5 27f7679638163b088c8b1ede97ac6070 files/1.3.0.0-use-proc-instead-of-sys.patch 686
+RMD160 26e9bee2d1be197fa456efdd5be16a8087b947cb files/1.3.0.0-use-proc-instead-of-sys.patch 686
+SHA256 12a737b236e90f2ca2a1cdb86ac87caec4a5bc38441dd72bb3628ef950e53f54 files/1.3.0.0-use-proc-instead-of-sys.patch 686
+AUX avoid-crash-on-minimized-xv-window.patch 1970 RMD160 a41e37359a05b4dc4c796e569b3f00e9dcb210d4 SHA1 54447e96f4f10e2993e0e675091f6026e63b56b6 SHA256 6e1cbe4f588674d70d3564962a79b4b7d271162040f9a2390f29f03cfeac87bd
+MD5 c5f6f5dad5315cd737565bfbc58ff862 files/avoid-crash-on-minimized-xv-window.patch 1970
+RMD160 a41e37359a05b4dc4c796e569b3f00e9dcb210d4 files/avoid-crash-on-minimized-xv-window.patch 1970
+SHA256 6e1cbe4f588674d70d3564962a79b4b7d271162040f9a2390f29f03cfeac87bd files/avoid-crash-on-minimized-xv-window.patch 1970
 AUX xorg-conf-example.patch 1924 RMD160 04325d6624ad01ee69702b069be3665b5e96b647 SHA1 2d7b8328c695dc179e4f6e1d0e4609bb449159ee SHA256 ceb0dd0ccc6b02a026b599f1c838fc0a0c3f789f58407e85ee783ddaf9989350
 MD5 f2c08e04fd4d36bf1e9e5fd25102c243 files/xorg-conf-example.patch 1924
 RMD160 04325d6624ad01ee69702b069be3665b5e96b647 files/xorg-conf-example.patch 1924
@@ -74,6 +102,10 @@ AUX xorg-server-1.1.1-install-libxf86config-headers.patch 422 RMD160 297df8f5478
 MD5 f17556037156af0294c22e094172d1f6 files/xorg-server-1.1.1-install-libxf86config-headers.patch 422
 RMD160 297df8f5478195a8e0c0589436c9dad457c91539 files/xorg-server-1.1.1-install-libxf86config-headers.patch 422
 SHA256 85de5a76afb5a6c6ab0ac0d0f7d7decad99035cbbc04362e69a1627f04d86269 files/xorg-server-1.1.1-install-libxf86config-headers.patch 422
+AUX xorg-server-sam225bw-quirks.patch 380 RMD160 c4f7729a9f042e881feafcb5b0f97b05c80ab667 SHA1 20bae2bbe682b23feec54fdca23dde3598bab423 SHA256 7ad46b36407256b426a22b78f1646ffbc4f0197af49b068fdb5e56455cae2517
+MD5 40692dd1eba5bf76e835a955a54b5b7b files/xorg-server-sam225bw-quirks.patch 380
+RMD160 c4f7729a9f042e881feafcb5b0f97b05c80ab667 files/xorg-server-sam225bw-quirks.patch 380
+SHA256 7ad46b36407256b426a22b78f1646ffbc4f0197af49b068fdb5e56455cae2517 files/xorg-server-sam225bw-quirks.patch 380
 AUX xorg-x11-server-1.1.1-mesa-6.5.1.patch 1684 RMD160 8a6142a781d0ee626b4569f2324c6884234c7856 SHA1 287d09b104826c0ac852d401457c230fa96f7296 SHA256 8428c09c0bd11e7db9fbf0807754312cfb7c2659b2c203f8ad9741fc35c356c0
 MD5 f6f3f09436867be5b09782fed580b6f3 files/xorg-x11-server-1.1.1-mesa-6.5.1.patch 1684
 RMD160 8a6142a781d0ee626b4569f2324c6884234c7856 files/xorg-x11-server-1.1.1-mesa-6.5.1.patch 1684
@@ -108,14 +140,14 @@ EBUILD xorg-server-1.2.99.0.ebuild 16696 RMD160 da1537253a8d5e86c2e18046c0e361a2
 MD5 09584fb92a92abae07c2259846de21cd xorg-server-1.2.99.0.ebuild 16696
 RMD160 da1537253a8d5e86c2e18046c0e361a276e75404 xorg-server-1.2.99.0.ebuild 16696
 SHA256 81e948a22410d8f62ef6a338cbed7c7a1c72f60572a60a0be2996c410b1ecc47 xorg-server-1.2.99.0.ebuild 16696
-EBUILD xorg-server-1.3.0.0.ebuild 16165 RMD160 a39c8ad857c6c5cf0870039d1b8fe85ba517cf4b SHA1 cdd1d3245111be1b51fcecdaafb19f0195732644 SHA256 46beefa7b517655f6bcbac840d2a295801ba5af5880d92dfec9c15be8ddda36a
-MD5 83b6c0b4ab7bb00b45e4ff2135c2d29d xorg-server-1.3.0.0.ebuild 16165
-RMD160 a39c8ad857c6c5cf0870039d1b8fe85ba517cf4b xorg-server-1.3.0.0.ebuild 16165
-SHA256 46beefa7b517655f6bcbac840d2a295801ba5af5880d92dfec9c15be8ddda36a xorg-server-1.3.0.0.ebuild 16165
-MISC ChangeLog 52122 RMD160 70eaefc2ca4ed265cb701653d34e43a6f5deaf4b SHA1 cb8acd1456126eaf74f370503ac56be5da865140 SHA256 ce33c04850d83b72f6cf4543531932caefd240793a93cc34adb5866ba1a03967
-MD5 7e37cd57e8684750057d8103e4211c40 ChangeLog 52122
-RMD160 70eaefc2ca4ed265cb701653d34e43a6f5deaf4b ChangeLog 52122
-SHA256 ce33c04850d83b72f6cf4543531932caefd240793a93cc34adb5866ba1a03967 ChangeLog 52122
+EBUILD xorg-server-1.3.0.0.ebuild 16595 RMD160 c4737ef1e3439e47612d537e745ee89afe74ac4b SHA1 a9f92f9196fd6ac9414eac5a6eda90f44d92c2fb SHA256 6603fcb40a0b34f21702d667da198887a429403682201e5ec6e63853f02edeb3
+MD5 2b0ecbd298467ddd5bb83da2fc0ab249 xorg-server-1.3.0.0.ebuild 16595
+RMD160 c4737ef1e3439e47612d537e745ee89afe74ac4b xorg-server-1.3.0.0.ebuild 16595
+SHA256 6603fcb40a0b34f21702d667da198887a429403682201e5ec6e63853f02edeb3 xorg-server-1.3.0.0.ebuild 16595
+MISC ChangeLog 52858 RMD160 9c1e7c7027915b79fd4d0d70278a3fe141e003d8 SHA1 a44bc50551e52121afd1629d9b599a8b70db8a1c SHA256 a38c7706926ee21bba729ebd894eb4651e93d9abd85de57ed8a6fd72475d6e01
+MD5 da5f33650ad3407bed66f01574187132 ChangeLog 52858
+RMD160 9c1e7c7027915b79fd4d0d70278a3fe141e003d8 ChangeLog 52858
+SHA256 a38c7706926ee21bba729ebd894eb4651e93d9abd85de57ed8a6fd72475d6e01 ChangeLog 52858
 MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
