@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tdfsb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.18 2007/07/05 01:45:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.19 2007/08/01 22:24:19 angelos Exp $
+
+  01 Aug 2007; Christoph Mende <angelos@gentoo.org> tdfsb-0.0.10.ebuild:
+  Stable on amd64
 
   05 Jul 2007; Christoph Mende <angelos@gentoo.org> tdfsb-0.0.9.ebuild:
   Fixed homepage
