@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/mono-basic-1.2.4.ebuild,v 1.1 2007/06/21 20:28:27 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/mono-basic-1.2.4.ebuild,v 1.2 2007/08/01 03:07:47 metalgod Exp $
 
 inherit mono multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://go-mono.com/sources/${PN}/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 X11 )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="=dev-lang/mono-${PV}*"
