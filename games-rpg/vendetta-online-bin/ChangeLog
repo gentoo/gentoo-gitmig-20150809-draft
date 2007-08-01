@@ -1,6 +1,6 @@
-# ChangeLog for games-fps/vendetta-online-bin
+# ChangeLog for games-rpg/vendetta-online-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/ChangeLog,v 1.1 2007/07/28 00:25:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/ChangeLog,v 1.2 2007/08/01 01:31:18 nyhm Exp $
 
   28 Jul 2007; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
   +vendetta-online-bin-1-r2.ebuild:
