@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.417 2007/08/02 12:48:27 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.418 2007/08/02 16:27:39 vapier Exp $
+
+  02 Aug 2007; Mike Frysinger <vapier@gentoo.org> portage-2.1.3.1.ebuild:
+  Pull in newer eclass-manpages rather than portage-manpages via USE=doc.
 
   02 Aug 2007; Jose Luis Rivero <yoswink@gentoo.org>
   portage-2.1.2.11.ebuild:
