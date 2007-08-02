@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/xorg-docs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.37 2007/08/01 23:22:55 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.38 2007/08/02 17:37:02 dberkholz Exp $
+
+  02 Aug 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-docs-1.4-r1.ebuild:
+  (#187504) Move xorg-sgml-doctools dep into doc USE flag, and clean up
+  configure options (Arfrever Frehtes Taifersar Arahesis).
 
 *xorg-docs-1.4-r1 (01 Aug 2007)
 
