@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.3.ebuild,v 1.2 2007/07/30 07:57:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.3.ebuild,v 1.3 2007/08/02 06:15:22 mr_bones_ Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="|| ( >=dev-libs/dbus-glib-0.71
-			>=sys-apps/dbus-0.30 )
+RDEPEND=">=dev-libs/dbus-glib-0.71
 	>=sys-apps/hal-0.5.2
 	sys-apps/pmount
 	virtual/eject"
