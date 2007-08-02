@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.557 2007/08/01 22:44:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.558 2007/08/02 05:10:13 dberkholz Exp $
+
+  02 Aug 2007; Donnie Berkholz <dberkholz@gentoo.org>; package.mask:
+  Unmask mesa 6.5.3.
 
   01 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
   sci-mathematics/freemat:arpack - Add sparse eigen value support via 
