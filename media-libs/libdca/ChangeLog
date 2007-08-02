@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdca
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.8 2007/07/28 16:11:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.9 2007/08/02 12:26:56 uberlord Exp $
+
+  02 Aug 2007; Roy Marples <uberlord@gentoo.org> libdca-0.0.5.ebuild:
+  Keyworded ~x86-fbsd, #175164
 
   28 Jul 2007; Samuli Suominen <drac@gentoo.org> libdca-0.0.5.ebuild:
   Add ~arm wrt bug 175164.
