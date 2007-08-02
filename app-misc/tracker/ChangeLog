@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.18 2007/07/25 01:53:20 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.19 2007/08/02 05:02:15 mr_bones_ Exp $
+
+  02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  tracker-0.5.4-r1.ebuild:
+  correct dbus deps (bug #187369)
 
   25 Jul 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   tracker-0.6.0.ebuild:
