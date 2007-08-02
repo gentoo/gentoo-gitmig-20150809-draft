@@ -1,6 +1,13 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.53 2007/07/28 10:29:42 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.54 2007/08/02 10:20:04 hkbst Exp $
+
+*drscheme-370.6_p20070725-r1 (02 Aug 2007)
+
+  02 Aug 2007; Marijn Schouten <hkBst@gentoo.org>
+  +drscheme-370.6_p20070725-r1.ebuild:
+  add new revision which enables xft and xrender, such that it won't segfault
+  or fail to compile
 
   28 Jul 2007; Marijn Schouten <hkBst@gentoo.org>
   drscheme-370.6_p20070725.ebuild:
