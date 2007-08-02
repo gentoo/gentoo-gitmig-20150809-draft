@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7552 2007/08/02 09:49:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7553 2007/08/02 10:16:49 hkbst Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -47,7 +47,7 @@ media-sound/sonic-rainbow
 
 # Marijn Schouten <hkBst@gentoo.org> (26 Jul 2007)
 # problems starting drscheme (segfault)
->=dev-scheme/drscheme-370
+=dev-scheme/drscheme-370.6_p20070725
 
 # Mike Frysinger <vapier@gentoo.org> (26 Jul 2007)
 # Unsupported upstream; doesnt build with recent tools
