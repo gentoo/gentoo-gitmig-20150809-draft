@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eclass-manpages
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.2 2007/07/24 07:59:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.3 2007/08/02 18:48:51 zmedico Exp $
+
+  02 Aug 2007; Zac Medico <zmedico@gentoo.org> eclass-manpages-20070615.ebuild:
+  Block app-portage/portage-manpages due to eutils.eclass.5 file collision.
 
   24 Jul 2007; Mike Frysinger <vapier@gentoo.org>
   files/eclass-to-manpage.awk:
