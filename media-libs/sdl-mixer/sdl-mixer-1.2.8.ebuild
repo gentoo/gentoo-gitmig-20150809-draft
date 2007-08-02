@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.8.ebuild,v 1.1 2007/07/21 19:44:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.8.ebuild,v 1.2 2007/08/02 16:18:43 vapier Exp $
 
-inherit eutils autotools
+inherit eutils
 
 MY_P=${P/sdl-/SDL_}
 DESCRIPTION="Simple Direct Media Layer Mixer Library"
@@ -25,12 +25,10 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-1.2.7-build.patch
 	sed -i \
 		-e 's:/usr/local/lib/timidity:/usr/share/timidity:' \
 		timidity/config.h \
 		|| die "sed timidity/config.h failed"
-	eautoreconf
 }
 
 src_compile() {
