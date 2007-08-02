@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.67 2007/07/26 17:04:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.68 2007/08/02 15:48:29 falco Exp $
+
+  02 Aug 2007; Raphael Marichez <falco@gentoo.org> wireshark-0.99.6.ebuild,
+  wireshark-0.99.6-r1.ebuild:
+  Remove redundant econf lines, reported by steev
 
   26 Jul 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   wireshark-0.99.6.ebuild, wireshark-0.99.6-r1.ebuild:

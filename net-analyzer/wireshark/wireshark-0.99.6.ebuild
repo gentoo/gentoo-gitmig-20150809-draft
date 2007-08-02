@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.6.ebuild,v 1.10 2007/07/26 17:04:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.6.ebuild,v 1.11 2007/08/02 15:48:29 falco Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -104,8 +104,6 @@ src_compile() {
 		--enable-editcap \
 		--enable-capinfos \
 		--enable-text2pcap \
-		--enable-dftest \
-		--enable-randpkt \
 		--disable-warnings-as-errors \
 		${myconf} || die "econf failed"
 
