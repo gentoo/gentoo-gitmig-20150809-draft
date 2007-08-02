@@ -1,19 +1,20 @@
---- sparse-0.3/work/sparse-0.3/Makefile	2007-06-15 14:21:33.000000000 +0200
-+++ sparse-0.3-new/work/sparse-0.3/Makefile	2007-06-15 14:21:51.000000000 +0200
-@@ -16,9 +16,9 @@ AR=ar
+--- sparse-0.3/Makefile
++++ sparse-0.3/Makefile
+@@ -16,9 +16,9 @@
  CFLAGS += -DDEBUG
  
  DESTDIR=
 -PREFIX=$(HOME)
 -BINDIR=$(PREFIX)/bin
 -LIBDIR=$(PREFIX)/lib
+-INCLUDEDIR=$(PREFIX)/include
 +PREFIX=
 +BINDIR=$(PREFIX)/usr/bin
 +LIBDIR=$(PREFIX)/usr/lib
- INCLUDEDIR=$(PREFIX)/include
++INCLUDEDIR=$(PREFIX)/usr/include
  PKGCONFIGDIR=$(LIBDIR)/pkgconfig
  
-@@ -38,7 +38,7 @@ LIB_OBJS= target.o parse.o tokenize.o pr
+@@ -38,7 +38,7 @@
  LIB_FILE= libsparse.a
  SLIB_FILE= libsparse.so
  
@@ -22,3 +23,12 @@
  
  all: $(PROGRAMS) sparse.pc
  
+@@ -101,7 +101,7 @@
+ 	$(AR) rcs $@ $(LIB_OBJS)
+ 
+ $(SLIB_FILE): $(LIB_OBJS)
+-	$(CC) -shared -o $@ $(LIB_OBJS)
++	$(CC) $(LDFLAGS) -Wl,-soname,$@ -shared -o $@ $(LIB_OBJS)
+ 
+ evaluate.o: $(LIB_H)
+ expression.o: $(LIB_H)
