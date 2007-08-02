@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.215 2007/07/22 10:26:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.216 2007/08/02 05:16:46 mr_bones_ Exp $
+
+  02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org> gdm-2.18.2.ebuild,
+  gdm-2.18.3.ebuild:
+  correct dbus deps (bug #187369)
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> gdm-2.14.9-r1.ebuild,
   gdm-2.14.11.ebuild:
