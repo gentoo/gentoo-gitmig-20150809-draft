@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/beryl-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/beryl-plugins/ChangeLog,v 1.13 2007/07/18 04:28:30 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/beryl-plugins/ChangeLog,v 1.14 2007/08/02 06:43:30 mr_bones_ Exp $
+
+  02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  beryl-plugins-0.2.1.ebuild, beryl-plugins-0.2.1-r1.ebuild:
+  correct dbus deps (bug #187369)
 
 *beryl-plugins-0.2.1-r1 (18 Jul 2007)
 
