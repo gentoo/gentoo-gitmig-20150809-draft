@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/xf86-input-keyboard
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-keyboard/ChangeLog,v 1.41 2007/07/03 12:59:40 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-keyboard/ChangeLog,v 1.42 2007/08/02 00:03:14 dberkholz Exp $
+
+*xf86-input-keyboard-1.2.0-r1 (02 Aug 2007)
+*xf86-input-keyboard-1.1.1-r1 (02 Aug 2007)
+
+  02 Aug 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/dont-release-keys-on-newer-servers.patch,
+  +files/fix-key-led-update.patch, +xf86-input-keyboard-1.1.1-r1.ebuild,
+  +xf86-input-keyboard-1.2.0-r1.ebuild:
+  (#63732) Revbump for keyboard LED fixes.
 
   03 Jul 2007; Lars Weiler <pylon@gentoo.org>
   xf86-input-keyboard-1.1.1.ebuild:

@@ -1,0 +1,30 @@
+From: Daniel Stone <daniel@fooishbar.org>
+Date: Fri, 8 Dec 2006 07:09:24 +0000 (+0200)
+Subject: don't release keys on newer servers
+X-Git-Url: http://gitweb.freedesktop.org/?p=xorg/driver/xf86-input-keyboard.git;a=commitdiff;h=caeb0f364c1a95a9ad3e64dd722c8ddc88077a86
+
+don't release keys on newer servers
+On newer servers, we take care of the key release over VT switch already,
+so don't do it twice; that will lead to hilarious results.
+---
+
+--- a/src/kbd.c
++++ b/src/kbd.c
+@@ -419,6 +419,8 @@ InitKBD(InputInfoPtr pInfo, Bool init)
+   kevent.u.keyButtonPointer.rootX = 0;
+   kevent.u.keyButtonPointer.rootY = 0;
+ 
++/* The server does this for us with i-h. */
++#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) < 1
+   /*
+    * Hmm... here is the biggest hack of every time !
+    * It may be possible that a switch-vt procedure has finished BEFORE
+@@ -448,6 +450,8 @@ InitKBD(InputInfoPtr pInfo, Bool init)
+           (* pKeyboard->public.processInputProc)(&kevent, pKeyboard, 1);
+         }
+       }
++#endif
++
+   pKbd->scanPrefix      = 0;
+ 
+   if (init) {

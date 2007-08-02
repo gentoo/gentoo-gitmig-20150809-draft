@@ -1,0 +1,46 @@
+From: Samuel Thibault <samuel.thibault@ens-lyon.org>
+Date: Mon, 5 Feb 2007 22:29:54 +0000 (-0800)
+Subject: Fix key led update
+X-Git-Url: http://gitweb.freedesktop.org/?p=xorg/driver/xf86-input-keyboard.git;a=commitdiff;h=05dd89ef03cee6853e7c2db518b6b22785cc3e7c
+
+Fix key led update
+
+Cf: https://bugs.freedesktop.org/show_bug.cgi?id=313
+    https://bugs.freedesktop.org/attachment.cgi?id=8396&action=view
+
+ ------- Comment  #8 From Samuel Thibault  2007-01-14 14:28:16  [reply] -------
+
+Created an attachment (id=8396) [details]
+fix key led update
+
+Ok, found the problem: when XKB is used (!pKbd->noXkb), pKbd->keyLeds is not
+updated, so that UpdateLeds(), even if it called at the right places, actually
+just clears all LEDs.  Here is a patch.
+---
+
+--- a/src/kbd.c
++++ b/src/kbd.c
+@@ -383,7 +383,22 @@ KbdCtrl( DeviceIntPtr device, KeybdCtrl 
+    InputInfoPtr pInfo = (InputInfoPtr) device->public.devicePrivate;
+    KbdDevPtr pKbd = (KbdDevPtr) pInfo->private;
+ 
+-   if ( ctrl->leds & XCOMP ) {
++   if ( ctrl->leds & XLED1) {
++       pKbd->keyLeds |= CAPSFLAG;
++   } else {
++       pKbd->keyLeds &= ~CAPSFLAG;
++   }
++   if ( ctrl->leds & XLED2) {
++       pKbd->keyLeds |= NUMFLAG;
++   } else {
++       pKbd->keyLeds &= ~NUMFLAG;
++   }
++   if ( ctrl->leds & XLED3) {
++       pKbd->keyLeds |= SCROLLFLAG;
++   } else {
++       pKbd->keyLeds &= ~SCROLLFLAG;
++   }
++   if ( ctrl->leds & (XCOMP|XLED4) ) {
+        pKbd->keyLeds |= COMPOSEFLAG;
+    } else {
+        pKbd->keyLeds &= ~COMPOSEFLAG;
