@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.334 2007/07/08 05:52:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.335 2007/08/02 05:04:48 mr_bones_ Exp $
+
+  02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  openoffice-2.2.1.ebuild:
+  correct dbus deps (bug #187369)
 
   08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
   openoffice-2.2.1.ebuild:
