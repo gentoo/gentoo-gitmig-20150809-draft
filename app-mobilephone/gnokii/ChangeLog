@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.57 2007/07/28 16:39:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.58 2007/08/02 11:52:17 mrness Exp $
+
+  02 Aug 2007; Alin Năstac <mrness@gentoo.org>
+  -files/gnokii-0.6.7-smsd-glib2.patch,
+  -files/gnokii-0.6.8-smsd-glib2.patch, -files/gnokii.desktop,
+  -files/gnokii-bindir.patch, -gnokii-0.6.7-r1.ebuild,
+  -gnokii-0.6.7-r2.ebuild, -gnokii-0.6.8.ebuild, -gnokii-0.6.10.ebuild,
+  -gnokii-0.6.12.ebuild, -gnokii-0.6.14.ebuild:
+  Remove obsolete versions (#183440).
 
   28 Jul 2007; Christoph Mende <angelos@gentoo.org> gnokii-0.6.14-r2.ebuild:
   Stable on amd64 wrt bug #183440
