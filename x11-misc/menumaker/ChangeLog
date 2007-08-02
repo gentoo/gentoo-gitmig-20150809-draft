@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/menumaker
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/menumaker/ChangeLog,v 1.3 2007/02/09 06:20:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/menumaker/ChangeLog,v 1.4 2007/08/02 13:06:23 uberlord Exp $
+
+  02 Aug 2007; Roy Marples <uberlord@gentoo.org> menumaker-0.17.ebuild:
+  Keyworded ~x86-fbsd, #156902 thanks to Marc Kowarsky.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
