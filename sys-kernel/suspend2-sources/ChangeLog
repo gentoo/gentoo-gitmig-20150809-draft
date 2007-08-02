@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/suspend2-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.103 2007/07/30 17:46:52 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.104 2007/08/02 20:35:40 opfer Exp $
+
+  02 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  suspend2-sources-2.6.21-r7.ebuild:
+  stable x86, bug 187157
 
 *suspend2-sources-2.6.21-r7 (30 Jul 2007)
 
