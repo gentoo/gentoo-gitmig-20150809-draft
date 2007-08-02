@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.2.ebuild,v 1.2 2007/07/06 19:50:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.2.ebuild,v 1.3 2007/08/02 04:55:42 mr_bones_ Exp $
 
 inherit kde eutils
 
@@ -18,9 +18,7 @@ IUSE="alsa css dvdr dvdread encode ffmpeg flac hal kde mp3 musepack musicbrainz
 	sndfile vcd vorbis emovix"
 
 DEPEND="kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
-	hal? ( || ( dev-libs/dbus-qt3-old
-				>=sys-apps/dbus-0.30 )
-		sys-apps/hal )
+	hal? ( dev-libs/dbus-qt3-old sys-apps/hal )
 	media-libs/libsamplerate
 	media-libs/taglib
 	>=media-sound/cdparanoia-3.9.8
