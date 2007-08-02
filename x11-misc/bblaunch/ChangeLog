@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bblaunch
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bblaunch/ChangeLog,v 1.9 2007/02/09 08:42:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bblaunch/ChangeLog,v 1.10 2007/08/02 13:48:29 uberlord Exp $
+
+  02 Aug 2007; Roy Marples <uberlord@gentoo.org> bblaunch-0.0.3.ebuild:
+  Keyworded ~x86-fbsd, #156902 thanks to Marc Kowarsky.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

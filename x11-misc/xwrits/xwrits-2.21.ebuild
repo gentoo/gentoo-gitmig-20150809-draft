@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/xwrits-2.21.ebuild,v 1.16 2006/10/22 00:15:30 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/xwrits-2.21.ebuild,v 1.17 2007/08/02 13:44:55 uberlord Exp $
 
 DESCRIPTION="Xwrits reminds you to take wrist breaks, which will hopefully help you prevent repetitive stress injury."
 HOMEPAGE="http://www.lcdf.org/xwrits/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.lcdf.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc sparc x86 ~amd64"
+KEYWORDS="~amd64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
