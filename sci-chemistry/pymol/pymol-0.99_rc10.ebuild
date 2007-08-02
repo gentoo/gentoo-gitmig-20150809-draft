@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.99_rc10.ebuild,v 1.6 2007/07/04 18:00:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.99_rc10.ebuild,v 1.7 2007/08/02 09:08:02 je_fro Exp $
 
 inherit distutils eutils multilib subversion
 
-ESVN_REPO_URI="https://svn.sourceforge.net/svnroot/pymol/branches/b099/pymol"
+ESVN_REPO_URI="https://pymol.svn.sourceforge.net/svnroot/pymol/branches/b099/pymol"
 ESVN_UPDATE_CMD="svn -r 2974 update"
 
 DESCRIPTION="A Python-extensible molecular graphics system."
