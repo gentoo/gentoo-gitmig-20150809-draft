@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xmountains
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.14 2007/02/22 00:07:04 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.15 2007/08/02 13:20:33 uberlord Exp $
+
+  02 Aug 2007; Roy Marples <uberlord@gentoo.org> xmountains-2.7.ebuild:
+  Keyworded ~x86-fbsd, #156902 thanks to Marc Kowarsky.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
