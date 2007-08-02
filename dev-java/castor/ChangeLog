@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/castor
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.38 2007/07/24 08:16:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.39 2007/08/02 02:34:57 nichoj Exp $
+
+  02 Aug 2007; Joshua Nichols <nichoj@gentoo.org> metadata.xml:
+  Removed myself from maintainer.
 
   24 Jul 2007; Christian Faulhammer <opfer@gentoo.org> castor-1.1.1.ebuild:
   stable x86, bug 186198; filtered jikes

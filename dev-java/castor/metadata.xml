@@ -3,11 +3,6 @@
 
 <pkgmetadata>
 	<herd>java</herd>
-	<maintainer>
-		<email>nichoj@gentoo.org</email>
-		<name>Joshua Nichols</name>
-		<description>Maintainer</description>
-	</maintainer>
 	<longdescription>
 Castor is an Open Source data binding framework for Java[tm]. It's the shortest
 path between Java objects, XML documents and relational tables. Castor provides
