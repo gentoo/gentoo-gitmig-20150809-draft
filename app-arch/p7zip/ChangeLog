@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.67 2007/08/01 23:02:10 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.68 2007/08/02 05:38:21 joker Exp $
+
+  02 Aug 2007; Christian Birchinger <joker@gentoo.org> p7zip-4.48.ebuild:
+  Added sparc stable keyword
 
 *p7zip-4.51 (01 Aug 2007)
 
