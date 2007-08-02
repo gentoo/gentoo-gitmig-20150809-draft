@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/velocity
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.36 2007/08/01 23:33:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.37 2007/08/02 08:22:11 betelgeuse Exp $
+
+  02 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -velocity-1.4-r4.ebuild:
+  Remove old version.
 
   01 Aug 2007; Christoph Mende <angelos@gentoo.org> velocity-1.5.ebuild:
   Stable on amd64 wrt bug #186192
