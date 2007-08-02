@@ -1,6 +1,11 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.115 2007/07/08 04:30:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.116 2007/08/02 06:38:59 mr_bones_ Exp $
+
+  02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  epiphany-2.14.2.1-r1.ebuild, epiphany-2.14.3.ebuild,
+  epiphany-2.16.3.ebuild, epiphany-2.18.1.ebuild:
+  correct dbus deps (bug #187369)
 
   08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
   epiphany-2.14.2.1-r1.ebuild, epiphany-2.14.3.ebuild,
