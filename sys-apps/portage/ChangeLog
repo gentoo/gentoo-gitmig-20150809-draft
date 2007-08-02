@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.418 2007/08/02 16:27:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.419 2007/08/02 18:34:40 zmedico Exp $
+
+*portage-2.1.3.2 (02 Aug 2007)
+
+  02 Aug 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.3.2.ebuild:
+  2.1.3.2 bump. This fixes bugs #187480 and #187518. Bug #181949 tracks
+  all bugs fixed since 2.1.2.x.
 
   02 Aug 2007; Mike Frysinger <vapier@gentoo.org> portage-2.1.3.1.ebuild:
   Pull in newer eclass-manpages rather than portage-manpages via USE=doc.
