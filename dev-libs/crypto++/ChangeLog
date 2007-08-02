@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.29 2007/07/22 03:14:27 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.30 2007/08/02 23:35:53 alonbl Exp $
+
+*crypto++-5.5.1 (02 Aug 2007)
+
+  02 Aug 2007; Alon Bar-Lev <alonbl@gentoo.org> +crypto++-5.5.1.ebuild:
+  Version bump
 
   21 Jul 2007; Tom Gall <tgall@gentoo.org> crypto++-5.4-r1.ebuild:
   stable on ppc64
