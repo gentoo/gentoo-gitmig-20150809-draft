@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdbus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdbus/ChangeLog,v 1.6 2007/07/08 05:55:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdbus/ChangeLog,v 1.7 2007/08/02 06:04:43 mr_bones_ Exp $
+
+  02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org> kdbus-0.8.6.ebuild:
+  correct dbus deps (bug #187369)
 
   08 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org> kdbus-0.8.6.ebuild:
   remove reference to old, removed dbus (bug #183696)
