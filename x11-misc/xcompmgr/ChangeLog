@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xcompmgr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.22 2007/07/22 03:25:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.23 2007/08/02 00:52:18 dberkholz Exp $
+
+*xcompmgr-1.1.3-r1 (02 Aug 2007)
+
+  02 Aug 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/fix-unmapped-window-opacity.patch, +xcompmgr-1.1.3-r1.ebuild:
+  (#186879) Add a patch to update opacity on unmapped windows.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   xcompmgr-1.1.2.ebuild, xcompmgr-1.1.3.ebuild:
