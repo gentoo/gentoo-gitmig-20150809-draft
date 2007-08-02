@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.463 2007/08/02 16:44:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.464 2007/08/02 18:33:55 corsair Exp $
+
+  02 Aug 2007; Markus Rothe <corsair@gentoo.org> qt-3.3.8-r3.ebuild:
+  Stable on ppc64; bug #185446
 
 *qt-4.3.0-r1 (02 Aug 2007)
 *qt-3.3.8-r3 (02 Aug 2007)
