@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.30 2007/05/04 17:49:46 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.31 2007/08/02 12:50:51 uberlord Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://debian/pool/main/g/grun/${PN}_${PV}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc amd64"
+KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 IUSE="nls"
 
 RDEPEND=">=dev-libs/glib-2

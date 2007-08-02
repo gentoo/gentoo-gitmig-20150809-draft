@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/genmenu-1.0.7.ebuild,v 1.6 2005/10/13 01:46:15 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/genmenu-1.0.7.ebuild,v 1.7 2007/08/02 12:47:33 uberlord Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://gtk.no/archive/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/libc"
