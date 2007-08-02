@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.0_rc3.ebuild,v 1.1 2007/08/02 15:57:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.0_rc3.ebuild,v 1.2 2007/08/02 19:18:00 drac Exp $
 
 inherit fdo-mime gnome2-utils versionator
 
@@ -14,7 +14,7 @@ SRC_URI="http://files.beep-media-player.org/releases/${MY_PR}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="aac debug hal modplug ofa sid startup-notification"
 
 RDEPEND=">=net-libs/libsoup-2.2
@@ -22,9 +22,9 @@ RDEPEND=">=net-libs/libsoup-2.2
 	>=dev-libs/glib-2.10
 	>=dev-cpp/glibmm-2.8.3
 	>=dev-libs/libsigc++-2
-	>=x11-libs/gtk+-2.8
+	>=x11-libs/gtk+-2.10
 	>=gnome-base/librsvg-2.14
-	>=dev-cpp/gtkmm-2.8.2
+	>=dev-cpp/gtkmm-2.10
 	>=dev-cpp/libglademm-2.6
 	>=dev-cpp/cairomm-0.6
 	>=dev-cpp/libsexymm-0.1.9
@@ -38,7 +38,6 @@ RDEPEND=">=net-libs/libsoup-2.2
 	media-libs/alsa-lib
 	dev-libs/boost
 	ofa? ( >=media-libs/libofa-0.9.3 )
-	media-libs/musicbrainz
 	hal? ( >=sys-apps/hal-0.5.7.1 )
 	aac? ( media-libs/faad2 )
 	sid? ( media-libs/libsidplay )
