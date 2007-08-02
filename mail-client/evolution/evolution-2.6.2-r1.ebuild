@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.2-r1.ebuild,v 1.12 2007/07/08 05:00:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.6.2-r1.ebuild,v 1.13 2007/08/02 06:10:24 mr_bones_ Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -54,9 +54,7 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10 )
-	dbus? ( || (
-		dev-libs/dbus-glib
-		>=sys-apps/dbus-0.61 ) )
+	dbus? ( dev-libs/dbus-glib )
 	mono? ( >=dev-lang/mono-1 )
 	bogofilter? ( mail-filter/bogofilter )
 	!bogofilter? ( mail-filter/spamassassin )"
