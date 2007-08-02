@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.16.3.ebuild,v 1.9 2007/07/08 05:08:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.16.3.ebuild,v 1.10 2007/08/02 05:32:18 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -24,10 +24,7 @@ RDEPEND=">=dev-libs/glib-2.6
 		 >=x11-libs/libnotify-0.2.1
 		 >=gnome-base/gconf-2
 		 >=gnome-base/gnome-keyring-0.5.1
-		 || (
-				>=dev-libs/dbus-glib-0.71
-				>=sys-apps/dbus-0.35
-			)
+		 >=dev-libs/dbus-glib-0.71
 		 esd? ( >=media-sound/esound-0.2.26 )
 		 tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 DEPEND="${RDEPEND}
