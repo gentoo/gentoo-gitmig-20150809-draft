@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/brutefir
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/ChangeLog,v 1.12 2007/05/12 18:14:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/ChangeLog,v 1.13 2007/08/02 21:12:24 opfer Exp $
+
+  02 Aug 2007; Christian Faulhammer <opfer@gentoo.org> brutefir-1.0i.ebuild:
+  stable x86
 
 *brutefir-1.0i (12 May 2007)
 
