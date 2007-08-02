@@ -1,0 +1,31 @@
+diff -ur notecase-1.6.1.orig/Makefile notecase-1.6.1/Makefile
+--- notecase-1.6.1.orig/Makefile	2007-08-02 14:58:33.000000000 +0200
++++ notecase-1.6.1/Makefile	2007-08-02 15:01:33.000000000 +0200
+@@ -83,13 +83,6 @@
+ QC=@echo '===> Compiling $<'; 
+ QL=@echo '===> Linking $@'; 
+ 
+-# using "--as-needed" to cut down link requirements (check by "readelf -d /usr/bin/notecase | grep NEEDED") 
+-ifdef OSX_BUILD
+- LDFLAGS=-Os -Wl -bind_at_load
+-else
+- LDFLAGS=-Os -Wl,--as-needed
+-endif 
+-
+ # define compile/link command line with flags
+ CC=$(QC) $(CXX) $(DEBUG) $(PROFILE) -DENABLE_NLS
+ ifdef WINDIR
+@@ -121,7 +114,7 @@
+  $(OBJ)/IOProcess.o $(OBJ)/IOLayerZlib.o $(OBJ)/IOLayerFile64.o $(OBJ)/IOLayerBase.o \
+  $(OBJ)/IOLayerRedirect.o $(OBJ)/FileExportDlg.o $(OBJ)/FormatIOTxt.o $(OBJ)/FindReplaceDlg.o \
+  $(OBJ)/FindReplaceInfo.o $(OBJ)/LinkInfo.o $(OBJ)/LinkPropertiesDlg.o $(OBJ)/ExecuteFile.o \
+- $(OBJ)/FileSaveAsDlg.o $(OBJ)/CircularBuffer.o $(OBJ)/FormatIOMMLX.o $(OBJ)/libz.a $(OBJ)/ProgressDlg.o \
++ $(OBJ)/FileSaveAsDlg.o $(OBJ)/CircularBuffer.o $(OBJ)/FormatIOMMLX.o $(OBJ)/ProgressDlg.o \
+  $(OBJ)/DocActionPix.o $(OBJ)/DocActionFinish.o $(OBJ)/DocActionFmt.o $(OBJ)/FmtInfo.o $(OBJ)/FileAttachmentDlg.o \
+  $(OBJ)/DocActionAtt.o $(OBJ)/PixPropertiesDlg.o $(OBJ)/DocActionFinishDel.o  $(OBJ)/ShortcutsList.o $(OBJ)/ShortcutsListDlg.o \
+  $(OBJ)/DateTimeDlg.o $(OBJ)/AboutDlg.o
+@@ -650,3 +643,4 @@
+ 
+ 
+ .PHONY : all help poinstall pouninstall install uninstall rpm pack packdos updatesrcdos updatesrc updatemime clean ipk deb weexpc check install2
++
