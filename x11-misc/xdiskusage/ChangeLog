@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdiskusage
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/ChangeLog,v 1.14 2007/02/03 23:06:19 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/ChangeLog,v 1.15 2007/08/02 13:26:20 uberlord Exp $
+
+  02 Aug 2007; Roy Marples <uberlord@gentoo.org> xdiskusage-1.48.ebuild:
+  Keyworded ~x86-fbsd, #156902 thanks to Marc Kowarsky.
 
   03 Feb 2007; David Shakaryan <omp@gentoo.org> xdiskusage-1.48.ebuild:
   Remove virtual/glut from dependencies. (bug #45141)

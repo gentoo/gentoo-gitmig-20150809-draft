@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/xsnow-1.42.ebuild,v 1.19 2006/10/21 21:40:00 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/xsnow-1.42.ebuild,v 1.20 2007/08/02 13:32:05 uberlord Exp $
 
 DESCRIPTION="snow, reindeer, and santa on the root window"
 SRC_URI="http://www.euronet.nl/~rja/Xsnow/${P}.tar.gz"
 HOMEPAGE="http://www.euronet.nl/~rja/Xsnow/"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 LICENSE="as-is"
 IUSE=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48.ebuild,v 1.6 2007/02/03 23:06:19 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48.ebuild,v 1.7 2007/08/02 13:26:20 uberlord Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://xdiskusage.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="x11-libs/fltk"

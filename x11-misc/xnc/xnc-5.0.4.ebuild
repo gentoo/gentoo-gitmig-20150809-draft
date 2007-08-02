@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnc/xnc-5.0.4.ebuild,v 1.10 2007/07/22 03:20:10 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnc/xnc-5.0.4.ebuild,v 1.11 2007/08/02 13:28:02 uberlord Exp $
 
 DESCRIPTION="file manager for X Window system very similar to Norton Commander"
 HOMEPAGE="http://xnc.dubna.su/"
@@ -8,7 +8,7 @@ SRC_URI="http://xnc.dubna.su/src-5/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE="nls"
 
 RDEPEND="x11-libs/libX11
