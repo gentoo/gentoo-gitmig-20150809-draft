@@ -1,0 +1,10 @@
+# ChangeLog for sci-astronomy/ds9
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.1 2007/08/02 17:27:33 bicatali Exp $
+
+*ds9-4.13 (02 Aug 2007)
+
+  02 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/ds9-4.13-Makefile.patch, +metadata.xml, +ds9-4.13.ebuild:
+  Initial import. Closing bug #65657
+
