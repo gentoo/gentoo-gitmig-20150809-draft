@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.21 2007/07/31 13:42:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.22 2007/08/02 11:22:40 caleb Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -15,7 +15,7 @@
 
 inherit eutils multilib toolchain-funcs versionator
 
-IUSE="${IUSE} debug"
+IUSE="${IUSE}"
 
 QTPKG="x11-libs/qt-"
 QT4MAJORVERSIONS="4.3 4.2 4.1 4.0"
@@ -85,7 +85,7 @@ eqmake4() {
 	echo >> ${LOGFILE}
 
 	# as a workaround for broken qmake, put everything into file
-	if use debug; then
+	if has debug ${IUSE} && use debug; then
 		echo -e "$CONFIG -= release\nCONFIG += no_fixpath debug" >> ${projprofile}
 	else
 		echo -e "$CONFIG -= debug\nCONFIG += no_fixpath release" >> ${projprofile}

@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt3.eclass,v 1.28 2007/07/31 13:42:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt3.eclass,v 1.29 2007/08/02 11:22:40 caleb Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -16,7 +16,7 @@
 
 inherit toolchain-funcs versionator
 
-IUSE="${IUSE} debug"
+IUSE="${IUSE}"
 
 QTPKG="x11-libs/qt-"
 QT3MAJORVERSIONS="3.3 3.2 3.1 3.0"
@@ -92,7 +92,7 @@ eqmake3() {
 	# some standard config options
 	local configoptplus="CONFIG += no_fixpath"
 	local configoptminus="CONFIG -="
-	if use debug; then
+	if has debug ${IUSE} && use debug; then
 		configoptplus="${configoptplus} debug"
 		configoptminus="${configoptminus} release"
 	else
