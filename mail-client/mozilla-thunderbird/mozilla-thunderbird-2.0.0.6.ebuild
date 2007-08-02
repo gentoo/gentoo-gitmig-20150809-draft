@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.6.ebuild,v 1.1 2007/08/02 09:41:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-2.0.0.6.ebuild,v 1.2 2007/08/02 14:51:28 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -44,7 +44,7 @@ RDEPEND=">=www-client/mozilla-launcher-1.56
 	>=dev-libs/nss-3.11.5
 	>=dev-libs/nspr-4.6.5-r1"
 
-PDEPEND="crypt? ( >=x11-plugins/enigmail-0.95.2 )
+PDEPEND="crypt? ( >=x11-plugins/enigmail-0.95.2-r1 )
 		replytolist? ( x11-plugins/replytolist )"
 
 S="${WORKDIR}/mozilla"
