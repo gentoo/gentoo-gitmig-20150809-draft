@@ -1,6 +1,10 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.107 2007/07/19 14:24:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.108 2007/08/02 05:07:59 mr_bones_ Exp $
+
+  02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  evince-0.5.3-r1.ebuild, evince-0.6.1-r3.ebuild:
+  correct dbus deps (bug #187369)
 
 *evince-0.8.3 (19 Jul 2007)
 
