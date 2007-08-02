@@ -1,3 +1,7 @@
+AUX reiserfsprogs-3.6.19-fsck-n.patch 657 RMD160 db1743daa987ea162a9a574adcf4e2f841d645a3 SHA1 fa42d0f5ea6b3210932fe4f16e1dd24caa7a55b0 SHA256 5e35c0846d7995a7a02fe9f6c08b3267a614fbc18249f9c2a40f4165bf577e9b
+MD5 2a4b9de13b5df4d4e5b00e441d743a97 files/reiserfsprogs-3.6.19-fsck-n.patch 657
+RMD160 db1743daa987ea162a9a574adcf4e2f841d645a3 files/reiserfsprogs-3.6.19-fsck-n.patch 657
+SHA256 5e35c0846d7995a7a02fe9f6c08b3267a614fbc18249f9c2a40f4165bf577e9b files/reiserfsprogs-3.6.19-fsck-n.patch 657
 AUX reiserfsprogs-3.6.19-unaligned.patch 1129 RMD160 7429d2e600301a61502018af1134d56e4daba151 SHA1 fd97c2e9c9a8dc2064e74e41e7f6b4d8e3b61a09 SHA256 9e076de8c0318dcae6f1eae0949f6e1098ac875a2dfc3e1cbe0815b8e5f8e573
 MD5 8c9ad6ad3f0498966eab7cbac519bf6e files/reiserfsprogs-3.6.19-unaligned.patch 1129
 RMD160 7429d2e600301a61502018af1134d56e4daba151 files/reiserfsprogs-3.6.19-unaligned.patch 1129
@@ -12,6 +16,10 @@ EBUILD reiserfsprogs-3.6.19-r1.ebuild 846 RMD160 a40b39548eee19ec7fbacafe6adceb0
 MD5 ad954c934a7eb26ad5582a8ddd83c2a1 reiserfsprogs-3.6.19-r1.ebuild 846
 RMD160 a40b39548eee19ec7fbacafe6adceb0a2f27065f reiserfsprogs-3.6.19-r1.ebuild 846
 SHA256 e5b1ca5f3190d6935b2148c58acdfbad04e803de2d431d1d13033e9b5e707c7f reiserfsprogs-3.6.19-r1.ebuild 846
+EBUILD reiserfsprogs-3.6.19-r2.ebuild 898 RMD160 aabd883c02d6f52f6861c7d95d064cd3a0fd408b SHA1 9e4749a338c8ae8a01c26c6ca9a27e409db78515 SHA256 c100da6ac49b0fb013acea033cdf26b8a6430bae6d72f350682c128421730aff
+MD5 33238c99e7d4aaa238acc7d420c7321f reiserfsprogs-3.6.19-r2.ebuild 898
+RMD160 aabd883c02d6f52f6861c7d95d064cd3a0fd408b reiserfsprogs-3.6.19-r2.ebuild 898
+SHA256 c100da6ac49b0fb013acea033cdf26b8a6430bae6d72f350682c128421730aff reiserfsprogs-3.6.19-r2.ebuild 898
 EBUILD reiserfsprogs-3.6.19.ebuild 666 RMD160 7f4fe3a45bf315082710e521910a68052d68cf2d SHA1 f79a3fb07cc1450705254245045a7eaf9e572f7b SHA256 9f453559a4fee87cb6acefd7940e09e00dadee4a507fc6bc2e3f3e6219baf713
 MD5 ea977b4c371b9a7bc67079fcbf463fc5 reiserfsprogs-3.6.19.ebuild 666
 RMD160 7f4fe3a45bf315082710e521910a68052d68cf2d reiserfsprogs-3.6.19.ebuild 666
@@ -24,10 +32,10 @@ EBUILD reiserfsprogs-3.6.20.ebuild 730 RMD160 a8f5ce2d4c6efdc443c0f0a4c3622ae3bc
 MD5 5f77a31e4edd6f9d9e4f7b04e1365c07 reiserfsprogs-3.6.20.ebuild 730
 RMD160 a8f5ce2d4c6efdc443c0f0a4c3622ae3bc5ff028 reiserfsprogs-3.6.20.ebuild 730
 SHA256 6505a3463aca4ac1e719224021a7097223704ac73adba516018cfe70abc32dd3 reiserfsprogs-3.6.20.ebuild 730
-MISC ChangeLog 9821 RMD160 335ad6a1894230cde642dad5c44347b5328e1467 SHA1 e645d97477caf500b3f73d1c19ad8b9c958e6fef SHA256 b31fa6c40635a25f4c86db8ab6112034d840aa7eb76d79f2bbd1c2b276bcf5c5
-MD5 6153455e109a27a8c0f9ad2145918d27 ChangeLog 9821
-RMD160 335ad6a1894230cde642dad5c44347b5328e1467 ChangeLog 9821
-SHA256 b31fa6c40635a25f4c86db8ab6112034d840aa7eb76d79f2bbd1c2b276bcf5c5 ChangeLog 9821
+MISC ChangeLog 9937 RMD160 9ad84e8f3b4ee70322c1eca80388b84677d79da4 SHA1 6d58d329474ed4a5adea695ef0b28cef62e35965 SHA256 9b556c95e02400f8b005f89edfcddf4d1f867c7f8260240cd37b012b92d4c41f
+MD5 2b83561bcdcc8217b3b341817d4a59c6 ChangeLog 9937
+RMD160 9ad84e8f3b4ee70322c1eca80388b84677d79da4 ChangeLog 9937
+SHA256 9b556c95e02400f8b005f89edfcddf4d1f867c7f8260240cd37b012b92d4c41f ChangeLog 9937
 MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
@@ -38,6 +46,9 @@ SHA256 9f943ea12c6c3168f7cebc02ba721619d6e54b1d390c34405b246f6e97999db0 files/di
 MD5 61afa9dc62653e58f20fd74452fea9d8 files/digest-reiserfsprogs-3.6.19-r1 262
 RMD160 6a04580f2912548b2bf44ebd27e9b176a4b4622b files/digest-reiserfsprogs-3.6.19-r1 262
 SHA256 9f943ea12c6c3168f7cebc02ba721619d6e54b1d390c34405b246f6e97999db0 files/digest-reiserfsprogs-3.6.19-r1 262
+MD5 61afa9dc62653e58f20fd74452fea9d8 files/digest-reiserfsprogs-3.6.19-r2 262
+RMD160 6a04580f2912548b2bf44ebd27e9b176a4b4622b files/digest-reiserfsprogs-3.6.19-r2 262
+SHA256 9f943ea12c6c3168f7cebc02ba721619d6e54b1d390c34405b246f6e97999db0 files/digest-reiserfsprogs-3.6.19-r2 262
 MD5 9573520829903a49edbab0108fa649fb files/digest-reiserfsprogs-3.6.20 262
 RMD160 875df15cf4eff4524ba2b0ebed3f373ea0582d38 files/digest-reiserfsprogs-3.6.20 262
 SHA256 01c34718a761d25552745efc5713f687f0dfbfdb66602264ad620c91e4de0e5b files/digest-reiserfsprogs-3.6.20 262
