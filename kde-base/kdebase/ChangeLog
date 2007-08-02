@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.378 2007/07/25 17:42:19 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.379 2007/08/02 05:57:37 mr_bones_ Exp $
+
+  02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  kdebase-3.5.5-r1.ebuild, kdebase-3.5.5-r3.ebuild, kdebase-3.5.5-r4.ebuild,
+  kdebase-3.5.6-r1.ebuild, kdebase-3.5.6-r2.ebuild, kdebase-3.5.6-r3.ebuild,
+  kdebase-3.5.6-r4.ebuild, kdebase-3.5.7.ebuild, kdebase-3.5.7-r1.ebuild,
+  kdebase-3.5.7-r2.ebuild, kdebase-3.5.7-r3.ebuild:
+  correct dbus deps (bug #187369)
 
 *kdebase-3.5.6-r4 (25 Jul 2007)
 
