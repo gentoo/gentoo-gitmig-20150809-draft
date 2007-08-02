@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libtimidity
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.1 2007/08/02 13:01:21 drac Exp $
+
+*libtimidity-0.1.0 (02 Aug 2007)
+
+  02 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  +files/libtimidity-0.1.0-automagic.patch, +libtimidity-0.1.0.ebuild:
+  Initial commit for bug 169786, thanks to Hendrik Iben for reporting and
+  original ebuild. This is a required dep of >=media-sound/moc-2.5.0_alpha2.
+
