@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.18.0.ebuild,v 1.3 2007/07/25 03:22:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.18.0.ebuild,v 1.4 2007/08/02 05:49:28 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -23,8 +23,7 @@ RDEPEND=">=gnome-base/gconf-2
 	>=dev-libs/libxslt-1.1.4
 	>=x11-libs/startup-notification-0.8
 	>=dev-libs/glib-2
-	|| ( >=dev-libs/dbus-glib-0.71
-		>=sys-apps/dbus-0.30 )
+	>=dev-libs/dbus-glib-0.71
 	beagle? ( >=app-misc/beagle-0.2.4 )
 	!xulrunner? ( >=www-client/mozilla-firefox-1.5 )
 	xulrunner? ( net-libs/xulrunner )
