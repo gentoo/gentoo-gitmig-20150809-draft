@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.42 2007/07/31 23:53:13 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.43 2007/08/02 11:41:45 mrness Exp $
+
+  02 Aug 2007; Alin Năstac <mrness@gentoo.org>
+  -files/gammu-1.09.00-as-needed.patch,
+  -files/gammu-1.09.00-backup-limits.patch,
+  -files/gammu-1.09.00-sony-obexmode.patch,
+  -files/gammu-1.10.0-configure.patch, -files/gammu-1.10.0-printf.patch,
+  -gammu-1.09.00.ebuild, -gammu-1.10.0-r1.ebuild:
+  Remove obsolete versions.
 
   31 Jul 2007; Christoph Mende <angelos@gentoo.org> gammu-1.11.0.ebuild:
   Stable on amd64 wrt bug #178635
