@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.gentoo,v 1.6 2007/06/12 21:15:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.gentoo,v 1.7 2007/08/02 04:52:18 mr_bones_ Exp $
 #
 # Syslog-ng default configuration file for Gentoo Linux
 # contributed by Michael Sterrett
@@ -17,7 +17,7 @@ options {
 source src {
     unix-stream("/dev/log" max-connections(256));
     internal();
-    pipe("/proc/kmsg");
+    file("/proc/kmsg");
 };
 
 destination messages { file("/var/log/messages"); };
