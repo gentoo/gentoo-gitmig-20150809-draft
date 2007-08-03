@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.86 2007/08/03 11:41:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.87 2007/08/03 13:50:29 opfer Exp $
+
+  03 Aug 2007; Christian Faulhammer <opfer@gentoo.org> tor-0.1.2.16.ebuild:
+  stable x86, security bug 186644
 
 *tor-0.1.2.16 (03 Aug 2007)
 
