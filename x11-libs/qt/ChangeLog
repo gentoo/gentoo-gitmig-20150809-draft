@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.466 2007/08/03 13:42:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.467 2007/08/03 23:44:21 carlo Exp $
+
+*qt-4.3.0-r2 (03 Aug 2007)
+
+  03 Aug 2007; Carsten Lohrke <carlo@gentoo.org> +qt-4.3.0-r2.ebuild:
+  Patch wasn't applied in previous ebuild revision due to a typo.
 
   03 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> qt-3.3.8-r3.ebuild,
   qt-4.3.0-r1.ebuild:
