@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/castor
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.39 2007/08/02 02:34:57 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.40 2007/08/03 17:25:04 betelgeuse Exp $
+
+  03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> -castor-1.0.5.ebuild:
+  Remove old version.
 
   02 Aug 2007; Joshua Nichols <nichoj@gentoo.org> metadata.xml:
   Removed myself from maintainer.
