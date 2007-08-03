@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.39.4.ebuild,v 1.1 2007/08/03 07:56:32 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.39.4.ebuild,v 1.2 2007/08/03 18:47:36 mr_bones_ Exp $
 
 IUSE="acpi multilib"
 
@@ -120,11 +120,11 @@ src_unpack() {
 	# the offset by hand.
 	local offset=$(grep -am1 SKIP "${src}" | sed -e 's/SKIP="\([0-9]\+\)"/\1/')
 
-	#Switching to a standard way to extract the files since otherwise no signature file 
+	#Switching to a standard way to extract the files since otherwise no signature file
 	#would be created
 	chmod u+x "${src}"
 	"${src}" --extract "${S}" 2&>1 /dev/null
- 
+
 	gunzip common/usr/share/man/man8/atieventsd.8 || die "manpage unzip failed"
 
 	# These are the userspace utilities that we also have source for.
