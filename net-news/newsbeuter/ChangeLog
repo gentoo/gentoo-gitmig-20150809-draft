@@ -1,6 +1,14 @@
 # ChangeLog for net-news/newsbeuter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.4 2007/05/31 08:00:05 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.5 2007/08/03 21:47:21 ticho Exp $
+
+*newsbeuter-0.5 (03 Aug 2007)
+
+  03 Aug 2007; Andrej Kacian <ticho@gentoo.org> newsbeuter-0.4.ebuild,
+  +newsbeuter-0.5.ebuild:
+  Version bump. Fixed dependencies so both older versions and 0.5 pull in
+  correct versions of various libraries. See bug #185871 by Tim Weber
+  <gentoo.bugs at scytale.de>.
 
   31 May 2007; Andrej Kacian <ticho@gentoo.org> newsbeuter-0.3.ebuild,
   newsbeuter-0.4.ebuild:

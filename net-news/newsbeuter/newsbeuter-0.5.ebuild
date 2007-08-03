@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-0.4.ebuild,v 1.3 2007/08/03 21:47:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-0.5.ebuild,v 1.1 2007/08/03 21:47:21 ticho Exp $
 
 inherit toolchain-funcs
 
@@ -13,10 +13,10 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="<net-libs/libnxml-0.18
-		<net-libs/libmrss-0.18
+DEPEND=">=net-libs/libnxml-0.18
+		>=net-libs/libmrss-0.18
 		=dev-db/sqlite-3*
-		<dev-libs/stfl-0.9
+		>=dev-libs/stfl-0.9
 		net-misc/curl"
 
 src_unpack() {
