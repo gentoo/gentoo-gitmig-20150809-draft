@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/vdr-radio-0.2.1.ebuild,v 1.1 2007/07/30 16:33:48 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/vdr-radio-0.2.1.ebuild,v 1.2 2007/08/03 17:20:57 zzam Exp $
 
 inherit vdr-plugin eutils
 
 DESCRIPTION="VDR plugin: show background image for radio and decode RDS Text"
 HOMEPAGE="http://www.vdr-portal.de/board/thread.php?threadid=58795"
-SRC_URI="http://www.egal-vdr.de/plugins/in_progress/${P}.tgz"
+SRC_URI="http://www.egal-vdr.de/plugins/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
