@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.7-r1.ebuild,v 1.1 2007/08/03 03:49:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.7-r1.ebuild,v 1.2 2007/08/03 18:47:14 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -33,7 +33,7 @@ src_compile() {
 	use reiserfs || myconf="${myconf} --without-reiserfs"
 	use ntfs || myconf="${myconf} --without-ntfs"
 	use jpeg || myconf="${myconf} --without-jpeg"
-	
+
 	# this is static method is the same used by upstream for their 'static' make
 	# target, but better, as it doesn't break.
 	use static && append-ldflags -static
