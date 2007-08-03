@@ -1,6 +1,16 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.93 2007/07/30 00:24:00 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.94 2007/08/03 18:45:37 wolf31o2 Exp $
+
+  03 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +dev/2007.1/desktop/make.defaults, +dev/2007.1/desktop/parent,
+  +dev/2007.1/desktop/virtuals, +dev/2007.1/make.defaults,
+  +dev/2007.1/packages, +dev/2007.1/parent,
+  +dev/2007.1/server/make.defaults, +dev/2007.1/server/parent,
+  +dev/2007.1/server/profile.bashrc:
+  Add an initial set of 2007.1 development profiles as a direct copy of the
+  current 2007.0 profiles. Added ppds and startup-notification to default USE
+  for the desktop profile.
 
   30 Jul 2007; Daniel Drake <dsd@gentoo.org> no-nptl/2.4/use.mask:
   Mask beagle USE flag on 2.4 profiles
