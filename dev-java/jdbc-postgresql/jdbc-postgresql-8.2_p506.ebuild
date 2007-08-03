@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.1_p409.ebuild,v 1.3 2007/07/11 19:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.2_p506.ebuild,v 1.1 2007/08/03 19:27:50 fordfrog Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -15,43 +15,33 @@ HOMEPAGE="http://jdbc.postgresql.org/"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="examples java5 test"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+IUSE="java5 test"
 
 DEPEND=">=dev-java/java-config-2.0.31
 	!java5? ( =virtual/jdk-1.4* )
 	java5? ( =virtual/jdk-1.5* )
-	doc? ( dev-libs/libxslt
-		app-text/docbook-xsl-stylesheets )
+	doc? (
+		dev-libs/libxslt
+		app-text/docbook-xsl-stylesheets
+	)
 	!test? ( >=dev-java/ant-core-1.6 )
-	test? ( =dev-java/junit-3.8*
+	test? (
+		=dev-java/junit-3.8*
 		>=dev-java/ant-1.6
-		dev-db/postgresql )"
-RDEPEND=">=virtual/jre-1.4"
+		dev-java/ant-junit
+		dev-db/postgresql
+	)"
+RDEPEND="!java5? ( >=virtual/jre-1.4 )
+	java5? ( >=virtual/jre-1.5 )"
 
 S="${WORKDIR}/${MY_P}"
-
-pkg_setup() {
-	if use java5; then
-		JAVA_PKG_NV_DEPEND="=virtual/jdk-1.5*"
-
-		# We must specify source/target versions because currently it is not
-		# correctly picked up from NV_DEPEND for build.xml rewrite
-		JAVA_PKG_WANT_SOURCE="1.5"
-		JAVA_PKG_WANT_TARGET="1.5"
-	else
-		JAVA_PKG_NV_DEPEND="=virtual/jdk-1.4*"
-	fi
-
-	java-pkg-2_pkg_setup
-}
 
 src_unpack() {
 	unpack ${A}
 
-	# patch to make junit test work + correction for doc target
 	cd ${S}
-	epatch ${FILESDIR}/${P}-build.xml.patch
+	java-ant_rewrite-classpath
 }
 
 src_compile() {
@@ -66,24 +56,6 @@ src_compile() {
 	fi
 }
 
-src_install() {
-	java-pkg_newjar jars/postgresql.jar jdbc-postgresql.jar
-
-	if use_doc; then
-		java-pkg_dojavadoc build/publicapi
-		dohtml build/doc/pgjdbc.html
-	fi
-
-	if use examples; then
-		dodir /usr/share/doc/${PF}/examples
-		insinto /usr/share/doc/${PF}/examples
-		doins ${S}/example/*
-		java-pkg_newjar jars/postgresql-examples.jar jdbc-postgresql-examples.jar
-	fi
-
-	use source && java-pkg_dosrc org
-}
-
 src_test() {
 	einfo "In order to run the tests successfully, you have to have:"
 	einfo "1) PostgreSQL server running"
@@ -94,8 +66,16 @@ src_test() {
 	einfo "You can find a general info on how to perform these steps at"
 	einfo "http://gentoo-wiki.com/HOWTO_Configure_Postgresql"
 
-	mkdir lib
-	java-pkg_jar-from --into lib junit
+	ANT_TASKS="ant-junit" eant test -Dgentoo.classpath=$(java-pkg_getjars --build-only junit)
+}
 
-	ANT_TASKS="ant-junit" eant test
+src_install() {
+	java-pkg_newjar jars/postgresql.jar jdbc-postgresql.jar
+
+	if use doc ; then
+		java-pkg_dojavadoc build/publicapi
+		dohtml build/doc/pgjdbc.html
+	fi
+
+	use source && java-pkg_dosrc org
 }
