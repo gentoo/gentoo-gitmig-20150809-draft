@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0.ebuild,v 1.16 2007/08/01 23:36:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.0.ebuild,v 1.17 2007/08/03 23:30:23 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -48,7 +48,7 @@ RDEPEND="x11-libs/libXrandr
 DEPEND="${RDEPEND}
 	xinerama? ( x11-proto/xineramaproto )
 	x11-proto/xextproto
-	input_device_wacom? ( x11-proto/inputproto )
+	input_devices_wacom? ( x11-proto/inputproto )
 	dev-util/pkgconfig"
 
 pkg_setup() {
