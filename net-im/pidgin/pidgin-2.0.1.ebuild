@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.1.ebuild,v 1.4 2007/05/29 17:15:59 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.1.ebuild,v 1.5 2007/08/03 14:19:09 nyhm Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -53,7 +53,7 @@ RDEPEND="
 	doc? ( app-doc/doxygen )
 	dev-libs/libxml2
 	networkmanager? ( net-misc/networkmanager )
-	prediction? ( =dev-db/sqlite-3.3* )"
+	prediction? ( =dev-db/sqlite-3* )"
 	#mono? ( dev-lang/mono )"
 
 DEPEND="$RDEPEND

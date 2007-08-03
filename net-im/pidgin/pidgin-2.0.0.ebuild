@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0.ebuild,v 1.7 2007/05/26 20:34:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0.ebuild,v 1.8 2007/08/03 14:19:09 nyhm Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools perl-app gnome2
 
@@ -52,7 +52,7 @@ RDEPEND="
 	doc? ( app-doc/doxygen )
 	dev-libs/libxml2
 	networkmanager? ( net-misc/networkmanager )
-	prediction? ( =dev-db/sqlite-3.3* )"
+	prediction? ( =dev-db/sqlite-3* )"
 	#mono? ( dev-lang/mono )"
 
 DEPEND="$RDEPEND
