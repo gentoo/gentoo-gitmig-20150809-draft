@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jfreechart
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.27 2007/06/01 18:14:18 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.28 2007/08/03 22:50:42 betelgeuse Exp $
+
+  03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jfreechart-1.0.4.ebuild:
+  Use split ant for src_test dependencies.
 
   01 Jun 2007; Vlastimil Babka <caster@gentoo.org>
   -jfreechart-0.9.21.ebuild, -jfreechart-0.9.21-r1.ebuild:
