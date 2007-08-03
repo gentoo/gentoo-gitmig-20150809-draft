@@ -1,6 +1,10 @@
 # ChangeLog for games-util/searchtool
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/searchtool/ChangeLog,v 1.9 2007/05/25 22:14:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/searchtool/ChangeLog,v 1.10 2007/08/03 17:04:19 betelgeuse Exp $
+
+  03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
+  searchtool-0.4.4.ebuild:
+  Remove DEPEND on dev-java/ant.
 
   25 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   searchtool-0.4.4.ebuild:
