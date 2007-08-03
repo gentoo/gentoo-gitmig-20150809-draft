@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/scim-qtimm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.46 2007/05/31 20:32:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.47 2007/08/03 00:09:51 matsuu Exp $
+
+*scim-qtimm-0.9.4-r1 (03 Aug 2007)
+
+  03 Aug 2007; MATSUU Takuto <matsuu@gentoo.org>
+  +files/scim-qtimm-0.9.4-disable-debug.patch,
+  +files/scim-qtimm-0.9.4-fix-crashes.patch,
+  +files/suse-bugzilla-116220-keyboard-layout.patch,
+  +scim-qtimm-0.9.4-r1.ebuild:
+  Fixed bug 177344 and 184913.
 
   31 May 2007; Raúl Porcel <armin76@gentoo.org> scim-qtimm-0.9.4.ebuild:
   Add ~alpha wrt #151413
