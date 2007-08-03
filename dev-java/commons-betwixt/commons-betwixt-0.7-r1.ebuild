@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.7-r1.ebuild,v 1.4 2007/01/20 22:03:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.7-r1.ebuild,v 1.5 2007/08/03 15:57:40 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc test source"
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -11,7 +13,7 @@ SRC_URI="mirror://apache/jakarta/commons/betwixt/source/${P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0.7"
 KEYWORDS="~amd64 ~x86 ~ppc"
-IUSE="doc test source"
+IUSE=""
 
 COMMON_DEP="
 	>=dev-java/commons-logging-1.0.2
@@ -21,13 +23,10 @@ RDEPEND=">=virtual/jre-1.3
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.3
 	${COMMON_DEP}
-	!test? ( dev-java/ant-core )
 	test? (
-		dev-java/ant
-		dev-java/junit
+		dev-java/ant-junit
 		>=dev-java/xerces-2.7
-	)
-	source? ( app-arch/zip )"
+	)"
 
 S="${WORKDIR}/${P}-src/"
 
@@ -42,8 +41,6 @@ src_unpack() {
 	java-pkg_jar-from commons-beanutils-1.7
 	java-pkg_jar-from commons-digester
 	java-pkg_jar-from commons-logging
-	use test && java-pkg_jar-from --build-only xerces-2
-	use test && java-pkg_jar-from --build-only junit
 }
 
 EANT_BUILD_TARGET="init jar"
@@ -60,5 +57,6 @@ src_install() {
 }
 
 src_test() {
-	eant test -DJunit.present=true
+	java-pkg_jar-from --into target/lib xerces-2,junit
+	ANT_TASKS="ant-junit" eant test -DJunit.present=true
 }
