@@ -1,8 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r5.ebuild,v 1.12 2007/04/06 22:07:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r5.ebuild,v 1.13 2007/08/03 15:30:33 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source test"
+
 inherit java-pkg-2 java-ant-2 eutils
 
 DESCRIPTION="The CLI library provides a simple and easy to use API for working with the command line arguments and options."
@@ -19,15 +20,14 @@ CDEPEND="dev-java/commons-logging
 RDEPEND=">=virtual/jre-1.4
 	${CDEPEND}"
 DEPEND=">=virtual/jdk-1.4
-	test? ( || ( dev-java/ant-junit dev-java/ant-tasks ) )
-	dev-java/ant-core
+	test? ( dev-java/ant-junit )
 	${CDEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-build.xml.patch
+	epatch "${FILESDIR}/${P}-build.xml.patch"
 
 	mkdir lib && cd lib
 	java-pkg_jar-from commons-logging commons-logging.jar
