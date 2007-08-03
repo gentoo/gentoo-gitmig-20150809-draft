@@ -1,8 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/xjavadoc-1.1-r1.ebuild,v 1.6 2007/04/26 21:24:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/xjavadoc-1.1-r1.ebuild,v 1.7 2007/08/03 15:46:13 betelgeuse Exp $
 
 JAVA_PKG_IUSE="source"
+WANT_ANT_TASKS="ant-nodeps"
+
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="A standalone implementation of JavaDoc engine suited for XDoclet"
@@ -21,7 +23,6 @@ COMMON_DEPEND="dev-java/commons-collections
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 DEPEND=">=virtual/jdk-1.4
-	|| ( dev-java/ant-nodeps dev-java/ant-tasks )
 	dev-java/javacc
 	${COMMON_DEPEND}"
 
@@ -37,8 +38,6 @@ src_unpack() {
 	java-pkg_jar-from commons-collections,junit
 	java-pkg_jar-from --build-only javacc
 }
-
-EANT_ANT_TASKS="ant-nodeps"
 
 src_install() {
 	java-pkg_dojar target/${PN}.jar

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.4c.ebuild,v 1.7 2007/05/09 14:53:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.4c.ebuild,v 1.8 2007/08/03 15:46:01 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -20,10 +20,7 @@ IUSE="test"
 
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
-	test? (
-		=dev-java/junit-3.8*
-		|| ( dev-java/ant-junit dev-java/ant-tasks )
-	)"
+	test? ( dev-java/ant-junit )"
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${MY_P}
