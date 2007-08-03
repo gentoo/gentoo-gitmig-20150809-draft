@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.558 2007/08/02 05:10:13 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.559 2007/08/03 22:45:33 betelgeuse Exp $
+
+  03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Remove <=app-misc/jbidwatcher-0.9.9 mask as the ebuilds are gone.
 
   02 Aug 2007; Donnie Berkholz <dberkholz@gentoo.org>; package.mask:
   Unmask mesa 6.5.3.
