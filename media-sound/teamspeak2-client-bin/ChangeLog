@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/teamspeak2-client-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/ChangeLog,v 1.24 2007/07/22 08:30:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/ChangeLog,v 1.25 2007/08/03 18:34:33 mjolnir Exp $
+
+  03 Aug 2007; Martin Jackson <mjolnir@gentoo.org> metadata.xml:
+  Take ownership
 
   22 Jul 2007; Samuli Suominen <drac@gentoo.org>
   teamspeak2-client-bin-2.0.32.60-r3.ebuild:
