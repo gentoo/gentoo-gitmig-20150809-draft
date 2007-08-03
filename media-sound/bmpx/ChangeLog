@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.58 2007/08/02 19:18:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.59 2007/08/03 14:45:20 drac Exp $
+
+  03 Aug 2007; Samuli Suominen <drac@gentoo.org> bmpx-0.40.0_rc3.ebuild:
+  Ofa should not be optional according to upstream. Also, filter asneeded for
+  this release candidate and remove the filtering with next version bump
+  (final release in 5 days) as it has been fixed in upstream.
 
   02 Aug 2007; Samuli Suominen <drac@gentoo.org> bmpx-0.40.0_rc3.ebuild:
   Raise gtk+ and gtkmm deps to 2.10, remove musicbrainz dep. Unkeyword ~ppc

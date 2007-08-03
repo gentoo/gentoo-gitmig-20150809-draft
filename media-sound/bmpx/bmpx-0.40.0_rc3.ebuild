@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.0_rc3.ebuild,v 1.2 2007/08/02 19:18:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.0_rc3.ebuild,v 1.3 2007/08/03 14:45:20 drac Exp $
 
-inherit fdo-mime gnome2-utils versionator
+inherit fdo-mime flag-o-matic gnome2-utils versionator
 
 MY_PR="$(get_version_component_range 1-2 ${PV})"
 MY_PV=${PV/_rc/RC}
@@ -15,7 +15,7 @@ SRC_URI="http://files.beep-media-player.org/releases/${MY_PR}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="aac debug hal modplug ofa sid startup-notification"
+IUSE="aac debug hal modplug sid startup-notification"
 
 RDEPEND=">=net-libs/libsoup-2.2
 	>=dev-db/sqlite-3.3
@@ -37,7 +37,7 @@ RDEPEND=">=net-libs/libsoup-2.2
 	app-arch/zip
 	media-libs/alsa-lib
 	dev-libs/boost
-	ofa? ( >=media-libs/libofa-0.9.3 )
+	>=media-libs/libofa-0.9.3
 	hal? ( >=sys-apps/hal-0.5.7.1 )
 	aac? ( media-libs/faad2 )
 	sid? ( media-libs/libsidplay )
@@ -53,14 +53,18 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"/${MY_P}
 
 src_compile() {
-	econf $(use_enable modplug) \
+	# This has been fixed in upstream. Remove this line with version bump!
+	filter-ldflags -Wl,--as-needed --as-needed
+
+	econf --enable-ofa \
+		$(use_enable modplug) \
 		$(use_enable aac mp4v2) \
 		$(use_enable hal) \
-		$(use_enable ofa) \
 		$(use_enable sid) \
 		$(use_enable startup-notification sn) \
 		$(use_enable debug)
-	emake || die "emake failed."
+
+	emake -j1 || die "emake failed."
 }
 
 src_install() {
