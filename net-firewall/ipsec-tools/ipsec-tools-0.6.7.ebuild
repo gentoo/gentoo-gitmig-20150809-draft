@@ -1,27 +1,26 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.10 2007/07/13 07:21:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.6.7.ebuild,v 1.11 2007/08/03 16:01:48 vapier Exp $
 
 inherit eutils flag-o-matic autotools linux-info
 
 DESCRIPTION="A port of KAME's IPsec utilities to the Linux-2.6 IPsec implementation"
 HOMEPAGE="http://ipsec-tools.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+
 LICENSE="BSD"
-KEYWORDS="amd64 ppc sparc x86"
 SLOT="0"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="idea ipv6 pam rc5 readline selinux ldap kerberos nat hybrid iconv"
 
 # FIXME: what is the correct syntax for ~sparc ???
-DEPEND="virtual/libc
-	!sparc? ( >=sys-kernel/linux-headers-2.6 )
+DEPEND="!sparc? ( >=sys-kernel/linux-headers-2.6 )
 	readline? ( sys-libs/readline )
 	pam? ( sys-libs/pam )
 	ldap? ( net-nds/openldap )
 	kerberos? ( virtual/krb5 )
 	>=dev-libs/openssl-0.9.8
 	iconv? ( virtual/libiconv )"
-
 #	radius? ( net-dialup/gnuradius )
 
 RDEPEND="${DEPEND}
