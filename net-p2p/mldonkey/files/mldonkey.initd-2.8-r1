@@ -68,8 +68,9 @@ stop() {
 		sleep 1
 		((timeout--))
 	done
-
+	if `pgrep -u ${USER} mlnet &>/dev/null`; then
 	start-stop-daemon --oknodo --stop -x ${MLDONKEY_BINARY} &>${LOG}
+	fi	
 
 	eend $?
 }
