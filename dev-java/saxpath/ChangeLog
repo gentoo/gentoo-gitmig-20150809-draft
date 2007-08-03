@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/saxpath
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/ChangeLog,v 1.26 2007/05/09 15:12:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/ChangeLog,v 1.27 2007/08/03 15:37:38 betelgeuse Exp $
+
+  03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> saxpath-1.0-r2.ebuild:
+  Remove monolithic ant support as split ant is stable now.
 
   09 May 2007; Raúl Porcel <armin76@gentoo.org> saxpath-1.0-r2.ebuild:
   Add ~ia64 wrt #160813

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/glazedlists
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.10 2007/04/14 20:59:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.11 2007/08/03 15:36:06 betelgeuse Exp $
+
+  03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
+  glazedlists-1.5.0.ebuild:
+  Remove monolithic ant support as split ant is stable now.
 
   14 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   glazedlists-1.5.0.ebuild:
