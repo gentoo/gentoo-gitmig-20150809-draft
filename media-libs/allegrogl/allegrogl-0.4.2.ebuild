@@ -1,13 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.4.0.ebuild,v 1.2 2007/01/30 20:15:13 mr_bones_ Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.4.2.ebuild,v 1.1 2007/08/03 19:44:18 nyhm Exp $
 
 MY_PN="alleggl"
-
 DESCRIPTION="A library to mix OpenGL graphics with Allegro routines"
-HOMEPAGE="http://allegrogl.sourceforge.net"
+HOMEPAGE="http://allegrogl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="ZLIB"
@@ -15,15 +12,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
-DEPEND=">=media-libs/allegro-4.2.0
+DEPEND=">=media-libs/allegro-4.2
 	virtual/opengl
 	virtual/glu"
 
 S=${WORKDIR}/${MY_PN}
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i 's:-Wl:${LDFLAGS} -Wl:' configure || die "sed failed"
+}
+
 src_compile() {
-	econf || die "econf failed"
-	emake -j1 || die "emake failed"
+	econf || die
+	emake CFLAGS="${CFLAGS}" lib || die "emake failed"
 }
 
 src_install() {
@@ -31,7 +34,7 @@ src_install() {
 	dodoc changelog {bugs,extensions,faq,howto,quickstart,readme,todo}.txt
 	dohtml -r docs/html/*
 	if use examples ; then
-		insinto /usr/share/${PF}/examples
+		insinto /usr/share/doc/${PF}/examples
 		doins examp/*.{bmp,c,dat,h,pcx,tga} || die "doins failed"
 	fi
 }
