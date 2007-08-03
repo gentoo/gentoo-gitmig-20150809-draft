@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-4.13.ebuild,v 1.1 2007/08/02 17:27:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-4.13.ebuild,v 1.2 2007/08/03 01:53:49 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -40,7 +40,7 @@ src_compile() {
 	ln -s make.${ds9arch} make.include
 
 	# This is a long and fragile compilation
-	# which recompiles tcl/tk, tkimg, blt, funtools, 
+	# which recompiles tcl/tk, tkimg, blt, funtools,
 	# and a lot of other packages
 	emake -j1 OPTS="${CXXFLAGS}" || die "emake failed"
 }
