@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.13-r1.ebuild,v 1.1 2007/08/03 16:26:18 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.13-r1.ebuild,v 1.2 2007/08/03 17:50:56 araujo Exp $
 
 inherit base haskell-cabal
 
@@ -19,7 +19,7 @@ DEPEND=">=dev-lang/ghc-6.6
 RDEPEND=""
 
 pkg_setup() {
-	if ! built_with_use -o dev-haskell/gtk2hs firefox ; then
+	if ! built_with_use -o dev-haskell/gtk2hs firefox seamonkey xulrunner; then
 		echo
 		eerror "gtk2hs was not merged with the firefox USE flag."
 		eerror "Himerge requires gtk2hs be compiled with any of these flags."
@@ -28,8 +28,7 @@ pkg_setup() {
 }
 
 src_install() {
-	cabal-copy
-	cabal-pkg
+	cabal_src_install
 	einfo "Installing data files."
 	mkdir -p ${D}/usr/local/share/himerge/{css,icons}
 	cp ${S}/data/himerge/css/himerge.css ${D}/usr/local/share/himerge/css
