@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rome/rome-0.9.ebuild,v 1.5 2007/03/11 20:33:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rome/rome-0.9.ebuild,v 1.6 2007/08/03 16:56:53 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,17 +13,12 @@ SRC_URI="https://rome.dev.java.net/source/browse/*checkout*/rome/www/dist/${P}-s
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
-IUSE="doc source test"
+IUSE=""
 
 COMMON_DEPEND=">=dev-java/jdom-1.0"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
-	source? ( app-arch/zip )
-	test? (
-		dev-java/ant
-		=dev-java/junit-3.8*
-	)
-	!test? ( dev-java/ant-core )
+	test? ( dev-java/ant-junit )
 	${COMMON_DEPEND}"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
@@ -37,7 +34,6 @@ src_unpack() {
 	mkdir -p target/lib
 	cd target/lib
 	java-pkg_jar-from jdom-1.0
-	use test && java-pkg_jar-from --build-only junit
 }
 
 src_install() {
@@ -48,5 +44,6 @@ src_install() {
 }
 
 src_test() {
-	eant test
+	java-pkg_jar-from --into target/lib junit
+	ANT_TASKS="ant-junit" eant test
 }
