@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.48 2007/08/02 23:51:16 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.49 2007/08/03 11:35:07 armin76 Exp $
+
+  03 Aug 2007; Raúl Porcel <armin76@gentoo.org> xulrunner-1.8.1.6.ebuild:
+  alpha/ia64/x86 stable wrt security #187205
 
   02 Aug 2007; Carlos Silva <r3pek@gentoo.org> xulrunner-1.8.1.6.ebuild:
   amd64 stable wrt bug #187205
