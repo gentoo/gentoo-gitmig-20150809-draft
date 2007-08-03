@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.16 2007/08/02 21:09:31 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.17 2007/08/03 00:31:23 lavajoe Exp $
 
 # As soon as the ~x86-fbsd keyword is spread enough, drop the extra masking
 # used to limit usage of unsupported packages.
@@ -31,9 +31,6 @@ media-sound/mpg123
 # Don't use them, use the one in base system
 dev-util/yacc
 dev-util/byacc
-
-# Portage 2.1.3.1 breaks on g/fbsd
-=sys-apps/portage-2.1.3.1
 
 # revdep-rebuild is broken for g/fbsd in this version
 =app-portage/gentoolkit-0.2.4_pre6
