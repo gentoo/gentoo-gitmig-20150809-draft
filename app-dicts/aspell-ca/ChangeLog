@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-ca
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ca/ChangeLog,v 1.8 2007/08/03 14:16:33 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ca/ChangeLog,v 1.9 2007/08/04 16:37:27 philantrop Exp $
+
+  04 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  aspell-ca-0.60.20040130.ebuild:
+  Marked stable on amd64 as per bug 178690.
 
 *aspell-ca-0.60.20040130 (03 Aug 2007)
 
