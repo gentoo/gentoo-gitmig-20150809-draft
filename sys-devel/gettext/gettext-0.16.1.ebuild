@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.16.1.ebuild,v 1.12 2007/03/16 17:24:25 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.16.1.ebuild,v 1.13 2007/08/04 15:28:13 grobian Exp $
 
 inherit flag-o-matic eutils multilib toolchain-funcs mono libtool elisp-common
 
@@ -71,12 +71,11 @@ src_install() {
 	fi
 	rm -f "${D}"/usr/share/locale/locale.alias "${D}"/usr/lib/charset.alias
 
-	if [[ ${USERLAND} == "BSD" ]] ; then
-		libname="libintl$(get_libname 8)"
+	if use !elibc_glibc ; then
 		# Move dynamic libs and creates ldscripts into /usr/lib
 		dodir /$(get_libdir)
-		mv "${D}"/usr/$(get_libdir)/${libname}* "${D}"/$(get_libdir)/
-		gen_usr_ldscript ${libname}
+		mv "${D}"/usr/$(get_libdir)/libintl*$(get_libname 8)* "${D}"/$(get_libdir)/
+		gen_usr_ldscript libintl$(get_libname 8)
 	fi
 
 	if use doc ; then
