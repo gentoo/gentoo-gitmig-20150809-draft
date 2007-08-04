@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-20070630.ebuild,v 1.2 2007/07/03 18:18:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-20070804.ebuild,v 1.1 2007/08/04 16:53:49 swegener Exp $
 
 inherit linux-info eutils
 
@@ -22,7 +22,7 @@ S="${WORKDIR}"/src
 
 CONFIG_CHECK="KPROBES ~RELAY ~DEBUG_FS"
 ERROR_KPROBES="${PN} requires support for KProbes Instrumentation (KPROBES) - this can be enabled in 'Instrumentation Support -> Kprobes'."
-ERROR_RELAY="${PN} works with support kernel to user space relay support (RELAY) - this can be enabled in 'General setup -> Kernel->user space relay support (formerly relayfs)'."
+ERROR_RELAY="${PN} works with support for user space relay support (RELAY) - this can be enabled in 'General setup -> Kernel->user space relay support (formerly relayfs)'."
 ERROR_DEBUG_FS="${PN} works best with support for Debug Filesystem (DEBUG_FS) - this can be enabled in 'Kernel hacking -> Debug Filesystem'."
 
 src_unpack() {
@@ -35,7 +35,6 @@ src_unpack() {
 src_install() {
 	emake install DESTDIR="${D}" || die "make install failed"
 	dodoc AUTHORS ChangeLog HACKING NEWS README
-	keepdir /var/cache/systemtap
 }
 
 pkg_postinst() {
