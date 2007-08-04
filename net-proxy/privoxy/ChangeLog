@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.23 2007/06/17 07:06:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.24 2007/08/04 14:53:37 corsair Exp $
+
+  04 Aug 2007; Markus Rothe <corsair@gentoo.org> privoxy-3.0.6.ebuild:
+  Added ~ppc64
 
   17 Jun 2007; Alin Năstac <mrness@gentoo.org>
   -files/privoxy-3.0.3-zlib.patch, +files/privoxy.initd, -files/privoxy.rc7,
