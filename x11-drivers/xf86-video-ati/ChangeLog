@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.49 2007/05/21 05:25:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.50 2007/08/04 20:45:16 dberkholz Exp $
+
+*xf86-video-ati-6.6.193 (04 Aug 2007)
+
+  04 Aug 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-video-ati-6.6.193.ebuild:
+  Bump. Main features include a crasher fix in DPMS (monitor power
+  management), adding an EXA hook for zero-copy texture-from-pixmap, RS480
+  support.
 
 *xf86-video-ati-6.6.192 (21 May 2007)
 
