@@ -1,6 +1,6 @@
 diff -Nur Jubler-3.3.0/build.xml Jubler-3.3.0_patched/build.xml
 --- Jubler-3.3.0/build.xml	2007-07-21 19:32:19.000000000 +0300
-+++ Jubler-3.3.0_patched/build.xml	2007-08-04 03:00:30.000000000 +0300
++++ Jubler-3.3.0_patched/build.xml	2007-08-04 19:30:49.000000000 +0300
 @@ -69,22 +69,6 @@
  
  
@@ -36,7 +36,7 @@ diff -Nur Jubler-3.3.0/build.xml Jubler-3.3.0_patched/build.xml
  	<target name="MacSystem" depends="findsystem" if="isMac">
 diff -Nur Jubler-3.3.0/resources/ffdecode/Makefile Jubler-3.3.0_patched/resources/ffdecode/Makefile
 --- Jubler-3.3.0/resources/ffdecode/Makefile	2007-07-19 01:30:08.000000000 +0300
-+++ Jubler-3.3.0_patched/resources/ffdecode/Makefile	2007-08-04 05:13:00.000000000 +0300
++++ Jubler-3.3.0_patched/resources/ffdecode/Makefile	2007-08-04 19:30:49.000000000 +0300
 @@ -12,9 +12,6 @@
  # Name of the produced library
  PROJ=ffdecode
@@ -80,7 +80,7 @@ diff -Nur Jubler-3.3.0/resources/ffdecode/Makefile Jubler-3.3.0_patched/resource
  clean:
 diff -Nur Jubler-3.3.0/src/com/panayotis/jubler/information/HelpBrowser.java Jubler-3.3.0_patched/src/com/panayotis/jubler/information/HelpBrowser.java
 --- Jubler-3.3.0/src/com/panayotis/jubler/information/HelpBrowser.java	2007-07-19 01:30:05.000000000 +0300
-+++ Jubler-3.3.0_patched/src/com/panayotis/jubler/information/HelpBrowser.java	2007-08-04 03:18:39.000000000 +0300
++++ Jubler-3.3.0_patched/src/com/panayotis/jubler/information/HelpBrowser.java	2007-08-04 19:30:49.000000000 +0300
 @@ -31,7 +31,7 @@
          
          history = new ArrayList<String>();
@@ -90,9 +90,26 @@ diff -Nur Jubler-3.3.0/src/com/panayotis/jubler/information/HelpBrowser.java Jub
          setPage(initpage);
          history.add(initpage);
          
+diff -Nur Jubler-3.3.0/src/com/panayotis/jubler/Main.java Jubler-3.3.0_patched/src/com/panayotis/jubler/Main.java
+--- Jubler-3.3.0/src/com/panayotis/jubler/Main.java	2007-07-19 01:30:07.000000000 +0300
++++ Jubler-3.3.0_patched/src/com/panayotis/jubler/Main.java	2007-08-04 19:35:01.000000000 +0300
+@@ -97,13 +97,6 @@
+         }
+         splash.dispose();
+         loader.start();
+-        
+-        Thread t = new Thread() {
+-            public void run() {
+-                StaticJubler.initVersion();
+-            }
+-        };
+-        t.start();
+     }
+     
+     
 diff -Nur Jubler-3.3.0/src/com/panayotis/jubler/os/SystemDependent.java Jubler-3.3.0_patched/src/com/panayotis/jubler/os/SystemDependent.java
 --- Jubler-3.3.0/src/com/panayotis/jubler/os/SystemDependent.java	2007-07-21 19:23:13.000000000 +0300
-+++ Jubler-3.3.0_patched/src/com/panayotis/jubler/os/SystemDependent.java	2007-08-04 03:39:16.000000000 +0300
++++ Jubler-3.3.0_patched/src/com/panayotis/jubler/os/SystemDependent.java	2007-08-04 19:30:49.000000000 +0300
 @@ -25,10 +25,6 @@
  
  import static com.panayotis.jubler.i18n.I18N._;
@@ -326,7 +343,7 @@ diff -Nur Jubler-3.3.0/src/com/panayotis/jubler/os/SystemDependent.java Jubler-3
 -}
 diff -Nur Jubler-3.3.0/src/com/panayotis/jubler/os/SystemFileFinder.java Jubler-3.3.0_patched/src/com/panayotis/jubler/os/SystemFileFinder.java
 --- Jubler-3.3.0/src/com/panayotis/jubler/os/SystemFileFinder.java	2007-07-19 01:30:05.000000000 +0300
-+++ Jubler-3.3.0_patched/src/com/panayotis/jubler/os/SystemFileFinder.java	2007-08-04 03:34:35.000000000 +0300
++++ Jubler-3.3.0_patched/src/com/panayotis/jubler/os/SystemFileFinder.java	2007-08-04 19:30:49.000000000 +0300
 @@ -58,15 +58,12 @@
      }
      

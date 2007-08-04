@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.3.0.ebuild,v 1.1 2007/08/04 18:45:49 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.3.0.ebuild,v 1.2 2007/08/04 18:51:09 fordfrog Exp $
 
 inherit eutils java-pkg-2 java-utils-2 java-ant-2 toolchain-funcs flag-o-matic
 
@@ -48,8 +48,8 @@ src_compile() {
 	use nls && anttasks_opt="i18n"
 	eant ${anttasks_opt} jar faq || die "eant failed"
 	cp -v dist/help/jubler-faq.html build/classes/help || die "cp failed"
-	cd resources/ffdecode
-	CC=$(tc-getCC) emake linuxdyn
+	cd resources/ffdecode || die
+	CC=$(tc-getCC) emake linuxdyn || "make failed"
 }
 
 src_install() {
