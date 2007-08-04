@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-ca
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ca/ChangeLog,v 1.9 2007/08/04 16:37:27 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ca/ChangeLog,v 1.10 2007/08/04 18:41:35 fmccor Exp $
+
+  04 Aug 2007; Ferris McCormick <fmccor@gentoo.org>
+  aspell-ca-0.60.20040130.ebuild:
+  Sparc stable --- Part of Bug #178690
 
   04 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
   aspell-ca-0.60.20040130.ebuild:
