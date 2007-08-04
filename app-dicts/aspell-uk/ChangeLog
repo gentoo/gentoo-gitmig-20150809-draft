@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-uk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-uk/ChangeLog,v 1.10 2007/08/03 15:16:25 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-uk/ChangeLog,v 1.11 2007/08/04 13:14:37 philantrop Exp $
+
+  04 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  aspell-uk-1.1.0.ebuild:
+  Tested on alpha and re-added the ~alpha keyword.
 
 *aspell-uk-1.4.0.0 (03 Aug 2007)
 
