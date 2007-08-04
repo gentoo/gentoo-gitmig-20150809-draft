@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/doc++
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.23 2007/07/04 17:46:15 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.24 2007/08/04 21:47:21 anant Exp $
+
+*doc++-3.4.10-r3 (02 Aug 2007)
+
+  02 Aug 2007; Anant Narayanan <anant@gentoo.org> +doc++-3.4.10-r3.ebuild:
+  Install latex style files too. (Bug #187743)
 
   04 Jul 2007; Christoph Mende <angelos@gentoo.org> doc++-3.4.10-r2.ebuild:
   Stable on amd64 wrt bug #169429
