@@ -1,6 +1,9 @@
 # ChangeLog for net-news/newsbeuter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.5 2007/08/03 21:47:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.6 2007/08/04 08:12:28 ticho Exp $
+
+  04 Aug 2007; Andrej Kacian <ticho@gentoo.org> newsbeuter-0.5.ebuild:
+  Depend on >=stfl-0.14. Bug #187587.
 
 *newsbeuter-0.5 (03 Aug 2007)
 

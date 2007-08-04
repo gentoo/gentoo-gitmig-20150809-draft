@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-0.5.ebuild,v 1.1 2007/08/03 21:47:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-0.5.ebuild,v 1.2 2007/08/04 08:12:28 ticho Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="A RSS feed reader for the text console."
+DESCRIPTION="A RSS/Atom feed reader for the text console."
 HOMEPAGE="http://synflood.at/newsbeuter.html"
 SRC_URI="http://synflood.at/${PN}/${P}.tar.gz"
 LICENSE="MIT"
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=">=net-libs/libnxml-0.18
 		>=net-libs/libmrss-0.18
 		=dev-db/sqlite-3*
-		>=dev-libs/stfl-0.9
+		>=dev-libs/stfl-0.14
 		net-misc/curl"
 
 src_unpack() {
