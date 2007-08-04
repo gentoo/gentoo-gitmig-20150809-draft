@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockmaker/mockmaker-1.12.0_p20050104.ebuild,v 1.4 2005/07/15 20:43:42 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockmaker/mockmaker-1.12.0_p20050104.ebuild,v 1.5 2007/08/04 10:59:59 fordfrog Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 amd64 ppc"
 IUSE="doc jikes"
 
 RDEPEND=">=virtual/jre-1.4
-	~dev-java/qdox-20050104"
+	dev-java/qdox"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	jikes? ( >=dev-java/jikes-1.21 )

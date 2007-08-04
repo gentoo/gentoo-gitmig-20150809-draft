@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r2.ebuild,v 1.5 2007/07/11 19:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r2.ebuild,v 1.6 2007/08/04 11:01:47 fordfrog Exp $
 
 JAVA_PKG_BSFIX="off"
 # no rewriting required since we patch build.xml to contain target/source
@@ -23,7 +23,7 @@ RDEPEND=">=virtual/jre-1.3
 	dev-java/junit
 	>=dev-java/junitperf-1.9.1
 	dev-java/trove
-	~dev-java/qdox-20050104"
+	dev-java/qdox"
 DEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( >=virtual/jdk-1.3 )
 	>=dev-java/java-config-2.0.31

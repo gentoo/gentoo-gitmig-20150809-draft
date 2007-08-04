@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/aspectwerkz
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.14 2007/03/13 22:02:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.15 2007/08/04 11:01:47 fordfrog Exp $
+
+  04 Aug 2007; Miroslav Šulc <fordfrog@gentoo.org>
+  aspectwerkz-2.0_rc2.ebuild, aspectwerkz-2.0_rc2-r2.ebuild:
+  Removed restriction on dev-java/qdox version as qdox versioning scheme has
+  changed and upgrade to new version of qdox would be impossible.
 
   13 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   -aspectwerkz-2.0_rc2-r1.ebuild:
