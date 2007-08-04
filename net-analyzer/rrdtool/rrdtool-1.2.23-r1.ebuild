@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.23-r1.ebuild,v 1.7 2007/07/30 11:04:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.23-r1.ebuild,v 1.8 2007/08/04 20:16:26 graaff Exp $
 
 inherit autotools eutils flag-o-matic multilib perl-module
 
@@ -18,7 +18,8 @@ RDEPEND="tcl? ( dev-lang/tcl )
 	>=media-libs/freetype-2.1.5
 	>=media-libs/libart_lgpl-2.3.16
 	>=media-libs/libpng-1.2.5
-	rrdcgi? ( >=dev-libs/cgilib-0.5 )"
+	rrdcgi? ( >=dev-libs/cgilib-0.5 )
+	ruby? ( !dev-ruby/ruby-rrd )"
 
 DEPEND="${RDEPEND}
 	perl? ( dev-lang/perl )
