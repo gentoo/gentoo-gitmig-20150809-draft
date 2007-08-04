@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-de
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.13 2007/08/04 16:39:38 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.14 2007/08/04 18:57:39 fmccor Exp $
+
+  04 Aug 2007; Ferris McCormick <fmccor@gentoo.org>
+  aspell-de-0.60_pre20030222.ebuild:
+  Sparc stable --- part of Bug #178690
 
   04 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
   aspell-de-0.60_pre20030222.ebuild:
