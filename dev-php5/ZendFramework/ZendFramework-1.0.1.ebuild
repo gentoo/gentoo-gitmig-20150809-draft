@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.0.0.ebuild,v 1.1 2007/07/03 17:28:41 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.0.1.ebuild,v 1.1 2007/08/04 15:37:50 gurligebis Exp $
 
 PHP_LIB_NAME="Zend"
 
