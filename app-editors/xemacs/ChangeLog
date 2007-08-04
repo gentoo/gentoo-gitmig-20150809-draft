@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.91 2007/06/23 11:27:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.92 2007/08/04 11:06:18 graaff Exp $
+
+*xemacs-21.4.20-r5 (04 Aug 2007)
+
+  04 Aug 2007; Hans de Graaff <graaff@gentoo.org>
+  +files/font-lock-keywords.patch, +xemacs-21.4.20-r5.ebuild:
+  Add support for GNU Emacs font-lock-add-keywords and related code. This code
+  will also be in the next xemacs 21.4.x release and is needed for
+  gentoo-syntax.
 
 *xemacs-21.4.20-r4 (23 Jun 2007)
 
