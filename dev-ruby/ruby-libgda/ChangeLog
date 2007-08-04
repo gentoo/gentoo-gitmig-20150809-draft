@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-libgda
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libgda/ChangeLog,v 1.14 2007/08/04 13:24:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libgda/ChangeLog,v 1.15 2007/08/04 13:37:32 graaff Exp $
+
+  04 Aug 2007; Hans de Graaff <graaff@gentoo.org> ruby-libgda-0.12.0.ebuild,
+  ruby-libgda-0.15.0.ebuild:
+  Make DEPEND on libgda more restrictive to fix issues with forthcoming
+  libgda-3.x, as per bug #172106.
 
   04 Aug 2007; Hans de Graaff <graaff@gentoo.org>
   -ruby-libgda-0.10.1.ebuild, -ruby-libgda-0.14.1.ebuild:
