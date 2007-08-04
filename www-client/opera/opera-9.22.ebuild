@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.22.ebuild,v 1.8 2007/08/04 04:39:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.22.ebuild,v 1.9 2007/08/04 17:11:31 jer Exp $
 
 GCONF_DEBUG="no"
 
 inherit eutils gnome2
 
-DESCRIPTION="Opera web browser."
-HOMEPAGE="http://www.opera.com"
+DESCRIPTION="Opera web browser"
+HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-9.0"
