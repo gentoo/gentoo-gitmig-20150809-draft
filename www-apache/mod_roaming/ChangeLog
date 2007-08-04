@@ -1,6 +1,6 @@
-# ChangeLog for net-www/mod_roaming
+# ChangeLog for www-apache/mod_roaming
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_roaming/ChangeLog,v 1.1 2007/07/29 14:11:12 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_roaming/ChangeLog,v 1.2 2007/08/04 17:24:26 swegener Exp $
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org>
   +files/18_mod_roaming.conf, +metadata.xml, +mod_roaming-2.0.0-r1.ebuild:

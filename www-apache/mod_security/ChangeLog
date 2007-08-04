@@ -1,6 +1,6 @@
-# ChangeLog for net-www/mod_security
+# ChangeLog for www-apache/mod_security
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.1 2007/07/29 13:47:06 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.2 2007/08/04 17:25:27 swegener Exp $
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org>
   +files/mod_security-2.1.1-request_interception.patch,

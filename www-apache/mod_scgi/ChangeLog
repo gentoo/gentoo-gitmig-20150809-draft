@@ -1,6 +1,6 @@
-# ChangeLog for net-www/mod_scgi
+# ChangeLog for www-apache/mod_scgi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_scgi/ChangeLog,v 1.2 2007/07/29 15:38:16 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_scgi/ChangeLog,v 1.3 2007/08/04 17:24:57 swegener Exp $
 
 *mod_scgi-1.12 (29 Jul 2007)
 

@@ -1,6 +1,6 @@
-# ChangeLog for net-www/mod_ftpd
+# ChangeLog for www-apache/mod_ftpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ftpd/ChangeLog,v 1.1 2007/07/29 14:24:52 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ftpd/ChangeLog,v 1.2 2007/08/04 17:17:43 swegener Exp $
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> +files/45_mod_ftpd.conf,
   +metadata.xml, +mod_ftpd-0.13.0.ebuild, +mod_ftpd-0.13.1.ebuild,

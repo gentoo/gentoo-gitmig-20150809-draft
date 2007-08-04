@@ -1,6 +1,6 @@
-# ChangeLog for net-www/mod_vdbh
+# ChangeLog for www-apache/mod_vdbh
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vdbh/ChangeLog,v 1.1 2007/07/29 15:18:08 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vdbh/ChangeLog,v 1.2 2007/08/04 17:27:05 swegener Exp $
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> +files/21_mod_vdbh.conf,
   +metadata.xml, +mod_vdbh-1.0.3-r1.ebuild:

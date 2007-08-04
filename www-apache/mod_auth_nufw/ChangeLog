@@ -1,6 +1,6 @@
-# ChangeLog for net-www/mod_auth_nufw
+# ChangeLog for www-apache/mod_auth_nufw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/ChangeLog,v 1.1 2007/07/29 16:07:35 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/ChangeLog,v 1.2 2007/08/04 17:14:56 swegener Exp $
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org>
   +files/50_mod_auth_nufw.conf,

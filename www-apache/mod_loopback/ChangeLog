@@ -1,6 +1,6 @@
-# ChangeLog for net-www/mod_loopback
+# ChangeLog for www-apache/mod_loopback
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_loopback/ChangeLog,v 1.1 2007/07/29 14:18:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_loopback/ChangeLog,v 1.2 2007/08/04 17:23:26 swegener Exp $
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org>
   +files/28_mod_loopback.conf, +metadata.xml, +mod_loopback-2.01-r1.ebuild:

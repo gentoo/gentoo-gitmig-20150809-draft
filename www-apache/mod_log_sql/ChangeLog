@@ -1,6 +1,6 @@
-# ChangeLog for net-www/mod_log_sql
+# ChangeLog for www-apache/mod_log_sql
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/ChangeLog,v 1.1 2007/07/29 14:41:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/ChangeLog,v 1.2 2007/08/04 17:22:59 swegener Exp $
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org>
   +files/42_mod_log_sql.conf, +metadata.xml, +mod_log_sql-1.100.ebuild,

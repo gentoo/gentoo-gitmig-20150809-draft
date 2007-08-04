@@ -1,6 +1,6 @@
-# ChangeLog for net-www/mod_transform
+# ChangeLog for www-apache/mod_transform
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/ChangeLog,v 1.1 2007/07/29 15:30:50 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/ChangeLog,v 1.2 2007/08/04 17:26:37 swegener Exp $
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org>
   +files/10_mod_transform.conf, +metadata.xml, +mod_transform-0.6.0.ebuild:

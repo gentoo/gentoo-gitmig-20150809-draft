@@ -1,6 +1,6 @@
-# ChangeLog for net-www/mod_xslt
+# ChangeLog for www-apache/mod_xslt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_xslt/ChangeLog,v 1.1 2007/07/29 15:25:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_xslt/ChangeLog,v 1.2 2007/08/04 17:29:12 swegener Exp $
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> +files/25_mod_xslt.conf,
   +metadata.xml, +mod_xslt-2.0.4.ebuild:
