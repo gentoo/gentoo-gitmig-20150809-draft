@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7561 2007/08/04 09:24:28 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7562 2007/08/04 19:47:03 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,11 +20,6 @@
 ##
 ##   End example
 ##
-
-# Christian Heim <phreak@gentoo.org> (04 Aug 2007)
-# Masking vserver-sources-2.2.0-r1 till genpatches-2.6.20-13.extras hits the
-# mirrors again
-=sys-kernel/vserver-sources-2.2.0-r1
 
 # Jeroen Roovers <jer@gentoo.org> (04 Aug 2007)
 # Masking Opera 9.23 weeklies
