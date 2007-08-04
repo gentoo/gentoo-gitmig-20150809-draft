@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.8.12.ebuild,v 1.2 2007/06/26 02:14:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.8.12.ebuild,v 1.3 2007/08/04 23:01:38 chainsaw Exp $
 
 inherit flag-o-matic gnome2
 
@@ -17,7 +17,7 @@ SLOT="0"
 IUSE=""
 
 #-sparc: 2.4.4: Application crashes on startup (Gnome crash detection)
-KEYWORDS="~amd64 ~ppc -sparc ~x86"
+KEYWORDS="~amd64 ~ppc -sparc ~x86 ~ppc64"
 
 # Yes, these dependencies are not elegant. However, the upstream configure
 # script offers no flexibility on this point. Sorry.
