@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tie-Cache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Cache/ChangeLog,v 1.4 2007/07/03 10:30:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Cache/ChangeLog,v 1.5 2007/08/04 15:36:11 ticho Exp $
+
+  04 Aug 2007; Andrej Kacian <ticho@gentoo.org> Tie-Cache-0.17.ebuild:
+  Stable on x86.
 
   03 Jul 2007; Raúl Porcel <armin76@gentoo.org> Tie-Cache-0.17.ebuild:
   Add ~alpha wrt #182519
