@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gnomedb-sharp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomedb-sharp/ChangeLog,v 1.27 2007/04/13 19:03:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomedb-sharp/ChangeLog,v 1.28 2007/08/04 14:02:15 jurek Exp $
+
+  04 Aug 2007; Jurek Bartuszek <jurek@gentoo.org>
+  gnomedb-sharp-1.0.10.ebuild:
+  Changing gnome-extra/libgnomedb dependency (addressing bug #172106)
 
   13 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   -gnomedb-sharp-1.0.8.ebuild, -gnomedb-sharp-1.0.8-r1.ebuild:
