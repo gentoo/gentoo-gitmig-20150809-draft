@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.33 2007/07/28 17:10:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.34 2007/08/04 15:49:22 dertobi123 Exp $
+
+*postgrey-1.30 (04 Aug 2007)
+
+  04 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  -files/postgrey.conf, -files/postgrey.rc, -postgrey-1.21-r2.ebuild,
+  -postgrey-1.27.ebuild, -postgrey-1.28.ebuild, -postgrey-1.29.ebuild,
+  +postgrey-1.30.ebuild:
+  Version bump and clean up
 
 *postgrey-1.29 (28 Jul 2007)
 

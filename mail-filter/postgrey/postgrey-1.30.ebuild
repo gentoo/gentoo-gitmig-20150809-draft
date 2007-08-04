@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.28.ebuild,v 1.4 2007/06/27 16:53:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.30.ebuild,v 1.1 2007/08/04 15:49:22 dertobi123 Exp $
 
 inherit eutils
 
