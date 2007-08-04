@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.84 2007/08/03 07:56:32 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.85 2007/08/04 22:25:43 je_fro Exp $
+
+  04 Aug 2007; Jeff Gardner <je_fro@gentoo.org> ati-drivers-8.39.4.ebuild:
+  Switch to EMULTILIB_PKG thanks to Jakub Moc and bug 187706.
 
 *ati-drivers-8.39.4 (03 Aug 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.39.4.ebuild,v 1.2 2007/08/03 18:47:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.39.4.ebuild,v 1.3 2007/08/04 22:25:43 je_fro Exp $
 
 IUSE="acpi multilib"
 
@@ -32,12 +32,12 @@ DEPEND="${RDEPEND}
 	x11-proto/xf86miscproto
 	x11-proto/xf86vidmodeproto"
 
-# EMULTILIB_PKG="true"
+EMULTILIB_PKG="true"
 
 # Ignore QA warnings about multilib-pkg-force not existing:
 # multilib.eclass uses it (without it we do not install the 32 bit
 # libraries on amd64) --marienz
-RESTRICT="multilib-pkg-force"
+# RESTRICT="multilib-pkg-force"
 
 QA_EXECSTACK_x86="usr/lib/dri/fglrx_dri.so
 	usr/lib/opengl/ati/lib/libGL.so.1.2
