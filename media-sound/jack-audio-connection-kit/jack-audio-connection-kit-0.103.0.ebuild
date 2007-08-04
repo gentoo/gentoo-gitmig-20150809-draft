@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.103.0.ebuild,v 1.6 2007/08/02 21:07:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.103.0.ebuild,v 1.7 2007/08/04 12:28:54 grobian Exp $
 
 inherit flag-o-matic eutils multilib linux-info autotools multilib
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/jackit/${P}.tar.gz netjack? ( mirror://sourceforge
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ppc64 ~sh sparc x86"
-IUSE="altivec alsa caps coreaudio doc debug jack-tmpfs mmx oss portaudio sse netjack cpudetection userland_Darwin"
+IUSE="altivec alsa caps coreaudio doc debug jack-tmpfs mmx oss portaudio sse netjack cpudetection"
 
 RDEPEND=">=media-libs/libsndfile-1.0.0
 	sys-libs/ncurses
@@ -60,7 +60,7 @@ src_compile() {
 		myconf="${myconf} --with-default-tmpdir=/var/run/jack"
 	fi
 
-	if use userland_Darwin ; then
+	if [[ ${CHOST} == *-darwin* ]] ; then
 		append-flags -fno-common
 		use altivec && append-flags -force_cpusubtype_ALL \
 			-maltivec -mabi=altivec -mhard-float -mpowerpc-gfxopt

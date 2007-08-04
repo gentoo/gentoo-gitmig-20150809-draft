@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0-r3.ebuild,v 1.3 2007/02/28 22:16:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0-r3.ebuild,v 1.4 2007/08/04 12:28:54 grobian Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,18 +22,15 @@ RDEPEND="dev-libs/glib
 	alsa? ( >=media-libs/alsa-lib-0.9.1 )
 	!media-sound/jack-cvs"
 DEPEND="${RDEPEND}
-	!ppc-macos? ( sys-devel/autoconf )
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if use !ppc-macos ; then
-		# Add doc option and fix --march=pentium2 in caps test
-		epatch ${FILESDIR}/${PN}-0.98.1-configure.patch && \
-		WANT_AUTOCONF=2.5 autoconf
-	fi
+	# Add doc option and fix --march=pentium2 in caps test
+	epatch ${FILESDIR}/${PN}-0.98.1-configure.patch && \
+	WANT_AUTOCONF=2.5 autoconf
 
 	# compile and install jackstart, see #92895, #94887
 	if use caps ; then

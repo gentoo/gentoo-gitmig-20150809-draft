@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.102.20.ebuild,v 1.6 2007/06/29 12:37:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.102.20.ebuild,v 1.7 2007/08/04 12:28:54 grobian Exp $
 
 inherit flag-o-matic eutils multilib linux-info
 
@@ -66,7 +66,7 @@ src_compile() {
 		myconf="${myconf} --with-default-tmpdir=/var/run/jack"
 	fi
 
-	if use userland_Darwin ; then
+	if [[ ${CHOST} == *-darwin* ]] ; then
 		append-flags -fno-common
 		use altivec && append-flags -force_cpusubtype_ALL \
 			-maltivec -mabi=altivec -mhard-float -mpowerpc-gfxopt

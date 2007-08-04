@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0-r1.ebuild,v 1.11 2007/07/11 19:30:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0-r1.ebuild,v 1.12 2007/08/04 12:28:54 grobian Exp $
 
 IUSE="altivec alsa caps doc debug jack-tmpfs oss portaudio"
 
@@ -24,18 +24,15 @@ RDEPEND=">=media-libs/libsndfile-1.0.0
 	!media-sound/jack-cvs"
 
 DEPEND="${RDEPEND}
-	!ppc-macos? ( sys-devel/autoconf )
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if use !ppc-macos ; then
-		# Add doc option and fix --march=pentium2 in caps test
-		epatch ${FILESDIR}/${PN}-0.98.1-configure.patch && WANT_AUTOCONF=2.5 autoconf \
-			|| die
-	fi
+	# Add doc option and fix --march=pentium2 in caps test
+	epatch ${FILESDIR}/${PN}-0.98.1-configure.patch && WANT_AUTOCONF=2.5 autoconf \
+		|| die
 }
 
 src_compile() {
