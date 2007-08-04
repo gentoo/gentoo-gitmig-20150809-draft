@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.72 2007/07/24 18:38:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.73 2007/08/04 06:54:34 graaff Exp $
+
+*rmagick-1.15.8 (04 Aug 2007)
+
+  04 Aug 2007; Hans de Graaff <graaff@gentoo.org> +rmagick-1.15.8.ebuild:
+  Version bump. Bug fixes to composite function and documentation fixes.
 
   24 Jul 2007; Raúl Porcel <armin76@gentoo.org> rmagick-1.15.7-r1.ebuild:
   alpha/ia64 stable
