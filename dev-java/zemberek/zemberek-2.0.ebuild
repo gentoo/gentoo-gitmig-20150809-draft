@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/zemberek-2.0.ebuild,v 1.1 2007/08/04 18:18:18 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/zemberek-2.0.ebuild,v 1.2 2007/08/04 19:34:24 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -9,7 +9,6 @@ inherit eutils java-pkg-2 java-ant-2
 DESCRIPTION="Zemberek NLP library"
 HOMEPAGE="http://code.google.com/p/zemberek/"
 SRC_URI="http://${PN}.googlecode.com/files/${P}-src.zip"
-
 
 LICENSE="MPL-1.1"
 SLOT="0"
