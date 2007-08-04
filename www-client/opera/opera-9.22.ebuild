@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.22.ebuild,v 1.9 2007/08/04 17:11:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.22.ebuild,v 1.10 2007/08/04 17:16:46 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -167,7 +167,7 @@ pkg_postinst() {
 	if use x86-fbsd; then
 		elog
 		elog "To improve shared memory usage please set:"
-		elog "$	sysctl kern.ipc.shm_allow_removed=1"
+		elog "$ sysctl kern.ipc.shm_allow_removed=1"
 	fi
 }
 
