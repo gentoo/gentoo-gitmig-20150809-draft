@@ -1,11 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r3.ebuild,v 1.9 2007/08/03 19:00:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r3.ebuild,v 1.10 2007/08/04 16:42:16 drac Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
-
-inherit eutils autotools
+inherit autotools eutils multilib
 
 IUSE="vorbis mad flac"
 
@@ -31,13 +28,11 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	epatch "${FILESDIR}/${P}-Makefile.patch"
 	epatch "${FILESDIR}/${P}-gcc4.patch"
 	epatch "${FILESDIR}/${P}+flac-1.1.3.patch"
 	epatch "${FILESDIR}/${P}-metadata.patch"
 	epatch "${FILESDIR}/${P}-sigkill.patch"
-
 	eautoreconf
 }
 
@@ -46,15 +41,14 @@ src_compile() {
 	      $(use_enable vorbis) \
 	      $(use_enable flac) \
 	      $(use_enable mad mp3) \
-	      $(use_enable mad id3) || die "could not configure"
-
-	emake -j1 || die "emake failed"
+	      $(use_enable mad id3)
+	emake -j1 || die "emake failed."
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" libdir="/usr/$(get_libdir)" \
+		install || die "emake install failed."
 	dodoc README TODO API
-
 	newinitd "${FILESDIR}"/bossogg.initd bossogg
 }
 
