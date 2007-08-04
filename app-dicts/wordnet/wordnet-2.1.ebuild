@@ -1,15 +1,18 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-2.1.ebuild,v 1.4 2007/02/10 23:05:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-2.1.ebuild,v 1.5 2007/08/04 20:36:12 philantrop Exp $
 
-inherit eutils
+inherit flag-o-matic
 
 DESCRIPTION="A lexical database for the English language"
 HOMEPAGE="http://wordnet.princeton.edu/"
 SRC_URI="ftp://ftp.cogsci.princeton.edu/pub/wordnet/${PV}/WordNet-${PV}.tar.gz"
-DEPEND="tk? ( dev-lang/tk )"
+# In contrast to what the configure script seems to imply, Tcl/Tk is NOT optional.
+# cf. bug 163478 for details
+DEPEND="dev-lang/tcl
+	dev-lang/tk"
 LICENSE="Princeton"
-IUSE="tk"
+IUSE=""
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
 S=${WORKDIR}/WordNet-${PV}
@@ -22,12 +25,12 @@ src_unpack() {
 }
 
 src_compile() {
+	append-flags -DUNIX -I${T}/usr/include
 	MAKEOPTS="-e"
 	PLATFORM=linux WN_ROOT="${T}/usr" \
 	WN_DICTDIR="${T}/usr/share/wordnet/dict" \
 	WN_MANDIR="${T}/usr/share/man" \
 	WN_DOCDIR="${T}/usr/share/doc/wordnet-${PV}" \
-	CFLAGS="${CFLAGS} -DUNIX -I${T}/usr/include" \
 	econf || die "Configuration Failed"
 	emake || die "Make Failed"
 }

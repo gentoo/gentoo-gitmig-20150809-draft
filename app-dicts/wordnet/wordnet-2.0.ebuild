@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-2.0.ebuild,v 1.6 2005/11/12 17:50:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-2.0.ebuild,v 1.7 2007/08/04 20:36:12 philantrop Exp $
 
-inherit eutils
+inherit flag-o-matic
 
 DESCRIPTION="WordNet : a lexical database for the English language"
 HOMEPAGE="http://www.cogsci.princeton.edu/~wn/"
@@ -22,12 +22,12 @@ src_unpack() {
 }
 
 src_compile() {
+	append-flags -DUNIX -I${T}/usr/include
 	MAKEOPTS="-e"
 	PLATFORM=linux WN_ROOT=${T}/usr \
 	WN_DICTDIR=${T}/usr/share/wordnet/dict \
 	WN_MANDIR=${T}/usr/share/man \
 	WN_DOCDIR=${T}/usr/share/doc/wordnet-${PV} \
-	CFLAGS="${CFLAGS} -DUNIX -I${T}/usr/include" \
 	emake SrcWorld || die
 }
 
