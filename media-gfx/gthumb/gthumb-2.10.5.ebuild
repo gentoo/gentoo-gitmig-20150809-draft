@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.5.ebuild,v 1.1 2007/08/04 15:14:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.5.ebuild,v 1.2 2007/08/04 19:34:45 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -42,4 +42,3 @@ pkg_setup() {
 		$(use_enable jpeg) \
 		$(use_enable tiff)"
 }
-
