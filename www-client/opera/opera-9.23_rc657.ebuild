@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.23_rc657.ebuild,v 1.1 2007/08/04 04:22:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.23_rc657.ebuild,v 1.2 2007/08/04 04:39:23 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -50,7 +50,9 @@ RDEPEND="x11-libs/libXrandr
 	!amd64? ( media-libs/libexif
 			  spell? ( app-text/aspell )
 			  x86? ( !qt-static? ( =x11-libs/qt-3* ) )
-			  media-libs/jpeg )"
+			  media-libs/jpeg )
+	x86-fbsd? ( =virtual/libstdc++-3*
+			    !qt-static? ( =x11-libs/qt-3* ) )"
 
 S=${WORKDIR}/${A/.tar.bz2/}
 
@@ -87,7 +89,7 @@ src_install() {
 	dodir /etc
 
 	# Opera's native installer.
-	if [ ${ARCH} = "amd64" ]; then
+	if use amd64; then
 		linux32 ./install.sh --prefix="${D}"/opt/opera || die
 	else
 		./install.sh --prefix="${D}"/opt/opera || die
@@ -132,7 +134,7 @@ src_install() {
 	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > ${D}/etc/revdep-rebuild/90opera
 
 	# Change libz.so.3 to libz.so.1 for gentoo/freebsd
-	if [ ${ARCH} = "x86-fbsd" ]; then
+	if use x86-fbsd; then
 		scanelf -qR -N libz.so.3 -F "#N" "${D}"/opt/${PN}/ | \
 		while read i; do
 			if [[ $(strings "$i" | fgrep -c libz.so.3) -ne 1 ]];

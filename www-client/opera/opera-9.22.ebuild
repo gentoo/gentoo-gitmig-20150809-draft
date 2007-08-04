@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.22.ebuild,v 1.7 2007/07/28 18:29:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.22.ebuild,v 1.8 2007/08/04 04:39:23 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -74,7 +74,7 @@ src_unpack() {
 		-e 's:read str_answer:return 0:' \
 		-e "s:/opt/kde:${D}/usr/kde:" \
 		-e "s:\(str_localdirplugin=\).*$:\1/opt/opera/lib/opera/plugins:" \
-		install.sh || die
+		install.sh || die "sed failed"
 }
 
 src_compile() {
