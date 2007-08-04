@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-pl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pl/ChangeLog,v 1.8 2007/08/03 14:45:12 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pl/ChangeLog,v 1.9 2007/08/04 17:12:00 philantrop Exp $
+
+  04 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  aspell-pl-6.0.20061121.0.ebuild:
+  Marked stable on amd64 as per bug 178690.
 
 *aspell-pl-6.0.20061121.0 (03 Aug 2007)
 
