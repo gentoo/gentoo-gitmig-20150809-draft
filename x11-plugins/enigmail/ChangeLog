@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.91 2007/08/05 15:33:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.92 2007/08/05 19:06:30 corsair Exp $
+
+  05 Aug 2007; Markus Rothe <corsair@gentoo.org> enigmail-0.95.2-r1.ebuild:
+  Stable on ppc64; bug #187205
 
   04 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   enigmail-0.94.4.ebuild:
