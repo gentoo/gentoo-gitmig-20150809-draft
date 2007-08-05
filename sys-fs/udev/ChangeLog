@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.323 2007/07/29 14:04:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.324 2007/08/05 16:05:19 zzam Exp $
+
+*udev-114 (05 Aug 2007)
+
+  05 Aug 2007; Matthias Schwarzott <zzam@gentoo.org> +files/modprobe-114.sh,
+  +udev-114.ebuild:
+  Version bumped. This contains updated rules and a slightly improved
+  modprobe-wrapper. Now one can match on SYMLINK. persistent-net is improved
+  to not match on dynamic mac addresses, supports s390 now.
 
   29 Jul 2007; Joseph Jezak <josejx@gentoo.org> udev-104-r13.ebuild:
   Marked ppc/ppc64 stable for bug #186508.
