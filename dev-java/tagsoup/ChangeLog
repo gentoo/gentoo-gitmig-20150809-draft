@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/tagsoup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.22 2007/08/03 15:41:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.23 2007/08/05 15:21:15 nixnut Exp $
+
+  05 Aug 2007; nixnut <nixnut@gentoo.org> tagsoup-1.1.ebuild:
+  Stable on ppc wrt bug 187602
 
   03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> tagsoup-1.1.ebuild:
   Remove monolithic ant support as split ant has been stable for a while.
