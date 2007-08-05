@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.7-r1.ebuild,v 1.5 2007/03/15 17:08:54 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9_pre7.ebuild,v 1.1 2007/08/05 19:22:12 drac Exp $
 
 inherit eutils
 
 DESCRIPTION="A streaming server for MP3, OGG vorbis and other streamable files"
 HOMEPAGE="http://www.gnump3d.org/"
-SRC_URI="http://savannah.gnu.org/download/${PN}/${P}.tar.bz2"
+SRC_URI="http://savannah.gnu.org/download/${PN}/${PN}-2.9.7.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,6 +17,8 @@ DEPEND="sys-apps/sed"
 RDEPEND=">=dev-lang/perl-5.8.0"
 
 RESTRICT="test"
+
+S="${WORKDIR}"/${PN}-2.9.7
 
 pkg_setup() {
 	enewuser gnump3d '' '' '' nogroup || die "couldnt add new user"
