@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1_rc4.ebuild,v 1.1 2007/07/26 10:28:24 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1_rc4.ebuild,v 1.2 2007/08/05 12:06:31 spock Exp $
 
 inherit linux-info
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="dev-libs/klibc
-	x86? ( sys-libs/lrmi )"
+DEPEND="dev-libs/klibc"
 RDEPEND=""
 
 S="${WORKDIR}/${P//_*/}"
