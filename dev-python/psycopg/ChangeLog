@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.60 2007/08/05 21:10:36 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.61 2007/08/05 21:42:19 mjolnir Exp $
+
+  05 Aug 2007; Martin Jackson <mjolnir@gentoo.org> -psycopg-1.1.18.ebuild:
+  Remove 1.1.18
 
 *psycopg-2.0.6 (05 Aug 2007)
 
