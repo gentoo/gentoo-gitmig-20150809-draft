@@ -6,11 +6,11 @@
 # Licensed under the GNU General Public License, v2
 #
 # Major changes:
-#    20070855: 
+#    20070805: 
 #       Removed phase hooks because Portage does proper env saving now.
 #       <betelgeuse@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-opt-2.eclass,v 1.6 2007/08/05 08:17:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-opt-2.eclass,v 1.7 2007/08/05 08:24:30 betelgeuse Exp $
 
 inherit java-utils-2
 
