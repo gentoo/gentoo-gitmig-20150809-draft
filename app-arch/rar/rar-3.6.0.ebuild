@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.6.0.ebuild,v 1.6 2007/07/10 13:07:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.6.0.ebuild,v 1.7 2007/08/05 04:25:44 rajiv Exp $
 
 inherit toolchain-funcs
 
@@ -36,7 +36,7 @@ src_install() {
 
 pkg_postinst() {
 	if [[ $(gcc-major-version) = "3" && $(gcc-minor-version) -lt 4 ]]; then
-		ewarn "System gcc is too old to run $PN}."
+		ewarn "System gcc is too old to run ${PN}."
 		ewarn "${PN} requires >=sys-devel/gcc-3.4 to run."
 	fi
 }
