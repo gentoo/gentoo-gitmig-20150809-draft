@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/mindterm-3.1.2.ebuild,v 1.1 2007/04/29 13:30:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/mindterm-3.1.2.ebuild,v 1.2 2007/08/05 15:16:48 nixnut Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.appgate.com/products/80_MindTerm/110_MindTerm_Download/${P/-
 
 LICENSE="mindterm"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="doc examples"
 COMMON_DEP="dev-java/jzlib"
 RDEPEND=">=virtual/jre-1.4
