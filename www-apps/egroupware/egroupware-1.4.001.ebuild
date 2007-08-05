@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.4.001.ebuild,v 1.6 2007/06/22 13:38:06 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.4.001.ebuild,v 1.7 2007/08/05 00:15:09 rl03 Exp $
 
 inherit webapp depend.php
 
@@ -67,4 +67,5 @@ pkg_postinst() {
 		einfo "http://www.egroupware.org/index.php?page_name=wiki&wikipage=ManualSetupUpdate"
 		einfo "before running the egroupware setup"
 	fi
+	webapp_pkg_postinst
 }
