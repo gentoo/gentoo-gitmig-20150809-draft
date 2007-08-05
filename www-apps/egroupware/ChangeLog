@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.76 2007/07/29 17:26:15 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.77 2007/08/05 00:13:54 rl03 Exp $
+
+  05 Aug 2007; Renat Lumpau <rl03@gentoo.org> -egroupware-1.2.106.ebuild,
+  -egroupware-1.2.106.2.ebuild:
+  Clean out old versions
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> egroupware-1.2.106.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to
