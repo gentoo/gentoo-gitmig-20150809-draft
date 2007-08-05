@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.90 2007/08/04 13:14:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.91 2007/08/05 15:33:00 tove Exp $
 
   04 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   enigmail-0.94.4.ebuild:
@@ -25,7 +25,7 @@
 
 *enigmail-0.95.2-r1 (02 Aug 2007)
 
-  02 Aug 2007; RaÃºl Porcel <armin76@gentoo.org> +enigmail-0.95.2-r1.ebuild:
+  02 Aug 2007; Raúl Porcel <armin76@gentoo.org> +enigmail-0.95.2-r1.ebuild:
   Add revbump for 2.0.0.6
 
   01 Aug 2007; Markus Rothe <corsair@gentoo.org> enigmail-0.95.2.ebuild:
@@ -35,7 +35,7 @@
   enigmail-0.94.4.ebuild, enigmail-0.95.2.ebuild:
   Stable on sparc wrt #187365
 
-  01 Aug 2007; RaÃºl Porcel <armin76@gentoo.org> enigmail-0.94.4.ebuild,
+  01 Aug 2007; Raúl Porcel <armin76@gentoo.org> enigmail-0.94.4.ebuild,
   enigmail-0.95.2.ebuild:
   alpha/ia64/x86 stable wrt #187358
 
@@ -53,36 +53,36 @@
   enigmail-0.95.1.ebuild:
   Stable on sparc wrt security #185737
 
-  23 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> enigmail-0.95.1.ebuild,
+  23 Jul 2007; Raúl Porcel <armin76@gentoo.org> enigmail-0.95.1.ebuild,
   enigmail-0.95.2.ebuild:
   Use 2.0.0.5 on 0.95.{1,2}
 
-  16 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> enigmail-0.95.1.ebuild:
+  16 Jul 2007; Raúl Porcel <armin76@gentoo.org> enigmail-0.95.1.ebuild:
   alpha/ia64/x86 stable
 
 *enigmail-0.95.2 (02 Jul 2007)
 *enigmail-0.94.4 (02 Jul 2007)
 
-  02 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> +enigmail-0.94.4.ebuild,
+  02 Jul 2007; Raúl Porcel <armin76@gentoo.org> +enigmail-0.94.4.ebuild,
   +enigmail-0.95.2.ebuild:
   Version bump
 
-  19 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> enigmail-0.95.0.ebuild:
+  19 Jun 2007; Raúl Porcel <armin76@gentoo.org> enigmail-0.95.0.ebuild:
   Build 0.95.0 with 2.0.0.4
 
 *enigmail-0.95.1 (17 Jun 2007)
 
-  17 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> +enigmail-0.95.1.ebuild:
+  17 Jun 2007; Raúl Porcel <armin76@gentoo.org> +enigmail-0.95.1.ebuild:
   Version bump, thanks to duebel <gentoosecurity at duebel dot dyndns dot org>
   in bug 182209 and Caster the ricer
 
-  15 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> enigmail-0.95.0.ebuild:
+  15 Jun 2007; Raúl Porcel <armin76@gentoo.org> enigmail-0.95.0.ebuild:
   alpha stable wrt #178983
 
   07 Jun 2007; Markus Rothe <corsair@gentoo.org> enigmail-0.95.0.ebuild:
   Stable on ppc64; bug #178983
 
-  22 May 2007; RaÃºl Porcel <armin76@gentoo.org>
+  22 May 2007; Raúl Porcel <armin76@gentoo.org>
   files/0.95.0-replytolist.patch:
   Update patch to hide list-post header, thanks to Cardoe for reporting
 
@@ -97,10 +97,10 @@
   enigmail-0.95.0.ebuild:
   Stable on sparc wrt #178983
 
-  18 May 2007; RaÃºl Porcel <armin76@gentoo.org> enigmail-0.95.0.ebuild:
+  18 May 2007; Raúl Porcel <armin76@gentoo.org> enigmail-0.95.0.ebuild:
   ia64 + x86 stable wrt #178983
 
-  17 May 2007; RaÃºl Porcel <armin76@gentoo.org> enigmail-0.94.3.ebuild,
+  17 May 2007; Raúl Porcel <armin76@gentoo.org> enigmail-0.94.3.ebuild,
   enigmail-0.95.0.ebuild:
   0.94.3 stable on alpha wrt #174165, keyword 0.95.0 ~alpha wrt #175267 and
   add es_ES langpack to 0.95.0
@@ -111,25 +111,25 @@
   want to do some more thorough testing before I bump it to ~mips. Testing and
   feedback welcome.
 
-  08 May 2007; RaÃºl Porcel <armin76@gentoo.org> enigmail-0.95.0.ebuild:
+  08 May 2007; Raúl Porcel <armin76@gentoo.org> enigmail-0.95.0.ebuild:
   Add more langpacks to 0.95.0
 
   24 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   enigmail-0.94.3.ebuild:
   ppc stable, bug #174165
 
-  21 Apr 2007; RaÃºl Porcel <armin76@gentoo.org>
+  21 Apr 2007; Raúl Porcel <armin76@gentoo.org>
   +files/0.95.0-replytolist.patch, enigmail-0.95.0.ebuild:
   Add patch to make replytolist work if >enigmail-0.95.0, thanks to Caster for
   testing this
 
-  19 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> -enigmail-0.94.3-r2.ebuild,
+  19 Apr 2007; Raúl Porcel <armin76@gentoo.org> -enigmail-0.94.3-r2.ebuild,
   enigmail-0.95.0.ebuild:
   Remove useless ebuild and redigest
 
 *enigmail-0.95.0 (19 Apr 2007)
 
-  19 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> +enigmail-0.95.0.ebuild:
+  19 Apr 2007; Raúl Porcel <armin76@gentoo.org> +enigmail-0.95.0.ebuild:
   Version bump, for tb-2.0 only
 
   16 Apr 2007; <welp@gentoo.org> enigmail-0.94.3.ebuild:
@@ -139,12 +139,12 @@
   enigmail-0.94.3.ebuild:
   Stable on sparc wrt #174165
 
-  11 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> enigmail-0.94.3.ebuild:
+  11 Apr 2007; Raúl Porcel <armin76@gentoo.org> enigmail-0.94.3.ebuild:
   ia64 + x86 stable wrt bug 174165
 
 *enigmail-0.94.3-r2 (08 Apr 2007)
 
-  08 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> -enigmail-0.94.3-r1.ebuild,
+  08 Apr 2007; Raúl Porcel <armin76@gentoo.org> -enigmail-0.94.3-r1.ebuild,
   +enigmail-0.94.3-r2.ebuild:
   Version bump, for tb-2.0.0.0_rc1
 
@@ -152,19 +152,19 @@
   enigmail-0.94.3-r1.ebuild:
   Added ~x86-fbsd keyword.
 
-  11 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> enigmail-0.94.3-r1.ebuild:
+  11 Mar 2007; Raúl Porcel <armin76@gentoo.org> enigmail-0.94.3-r1.ebuild:
   for tb-2.0, bump patchset to latest version, and fix patches not applying,
   thanks to Walter Meinl <wuno at lsvw dot de> in bug 170484
 
 *enigmail-0.94.3-r1 (11 Mar 2007)
 *enigmail-0.94.3 (11 Mar 2007)
 
-  11 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> -enigmail-0.94.2.ebuild,
+  11 Mar 2007; Raúl Porcel <armin76@gentoo.org> -enigmail-0.94.2.ebuild,
   -enigmail-0.94.2-r1.ebuild, +enigmail-0.94.3.ebuild,
   +enigmail-0.94.3-r1.ebuild:
   Version bump, wrt security bug, and make it work with tb-2.0, bug 170418
 
-  07 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> -enigmail-0.94.0-r4.ebuild,
+  07 Mar 2007; Raúl Porcel <armin76@gentoo.org> -enigmail-0.94.0-r4.ebuild,
   -enigmail-0.94.0-r5.ebuild, -enigmail-0.94.1-r2.ebuild:
   drop old, dropping the stable keywords for the tbird2.0 version as its not
   stable
@@ -172,24 +172,24 @@
 *enigmail-0.94.2-r1 (17 Feb 2007)
 *enigmail-0.94.2 (17 Feb 2007)
 
-  17 Feb 2007; RaÃºl Porcel <armin76@gentoo.org> -enigmail-0.94.1-r1.ebuild,
+  17 Feb 2007; Raúl Porcel <armin76@gentoo.org> -enigmail-0.94.1-r1.ebuild,
   +enigmail-0.94.2.ebuild, +enigmail-0.94.2-r1.ebuild:
   Version bump, bug 166932
 
-  08 Jan 2007; Bryan Ãstergaard <kloeri@gentoo.org> enigmail-0.94.1.ebuild,
+  08 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> enigmail-0.94.1.ebuild,
   enigmail-0.94.1-r2.ebuild:
   Stable on Alpha.
 
-  06 Jan 2007; Bryan Ãstergaard <kloeri@gentoo.org>
+  06 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   enigmail-0.94.0-r4.ebuild, enigmail-0.94.0-r5.ebuild,
   enigmail-0.94.1.ebuild, enigmail-0.94.1-r1.ebuild,
   enigmail-0.94.1-r2.ebuild:
   Fix license + homepage, bug 160338.
 
-  29 Dec 2006; Bryan Ãstergaard <kloeri@gentoo.org> enigmail-0.94.1.ebuild:
+  29 Dec 2006; Bryan Østergaard <kloeri@gentoo.org> enigmail-0.94.1.ebuild:
   Add ~alpha keyword.
 
-  26 Dec 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  26 Dec 2006; Bryan Østergaard <kloeri@gentoo.org>
   enigmail-0.94.0-r5.ebuild:
   Add ~alpha keyword.
 
@@ -199,20 +199,20 @@
 
 *enigmail-0.94.1-r2 (10 Dec 2006)
 
-  10 Dec 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  10 Dec 2006; Bryan Østergaard <kloeri@gentoo.org>
   +enigmail-0.94.1-r2.ebuild:
   Bump enigmail due to new thunderbird-2.0 beta.
 
   17 Nov 2006; Alin Nastac <mrness@gentoo.org> enigmail-0.94.1.ebuild:
   Stable on amd64.
 
-  12 Nov 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  12 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
   enigmail-0.94.1-r1.ebuild:
   Add ~alpha keyword.
 
 *enigmail-0.94.1-r1 (23 Oct 2006)
 
-  23 Oct 2006; Piotr JaroszyÅski <peper@gentoo.org>
+  23 Oct 2006; Piotr Jaroszyński <peper@gentoo.org>
   +enigmail-0.94.1-r1.ebuild:
   Revbump from anarchy.
 
@@ -220,7 +220,7 @@
   Fix for bug #143158 on AMD64. All work and credit goes to Anarchy who was
   great with this.
 
-  10 Oct 2006; Bryan Ãstergaard <kloeri@gentoo.org> enigmail-0.94.1.ebuild:
+  10 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> enigmail-0.94.1.ebuild:
   Stable on ia64.
 
   06 Oct 2006; <nixnut@gentoo.org> enigmail-0.94.1.ebuild:
@@ -257,7 +257,7 @@
   enigmail-0.94.0-r5.ebuild:
   Stable on sparc
 
-  03 Sep 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
   enigmail-0.94.0-r4.ebuild:
   Stable on ia64.
 
@@ -266,7 +266,7 @@
 
 *enigmail-0.94.0-r5 (30 Jul 2006)
 
-  30 Jul 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  30 Jul 2006; Bryan Østergaard <kloeri@gentoo.org>
   +enigmail-0.94.0-r5.ebuild:
   Bump patches to match thunderbird-1.5.0.5. Patch provided by Joshua Baergen
   <joshuabaergen@gentoo.org>.
@@ -277,7 +277,7 @@
   unstable mips keyword. See thunderbird changelog for the parent change
   cauing the patchball update.
 
-  15 Jul 2006; Bryan Ãstergaard <kloeri@gentoo.org> metadata.xml:
+  15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove anarchy from metadata.xml as he's retired.
 
   06 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
