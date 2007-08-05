@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/bossogg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/ChangeLog,v 1.28 2007/08/05 13:57:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/ChangeLog,v 1.29 2007/08/05 16:18:54 angelos Exp $
+
+  05 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  bossogg-0.13.6-r3.ebuild:
+  Stable on amd64 wrt bug #187626
 
   05 Aug 2007; Samuli Suominen <drac@gentoo.org>
   +files/bossogg-0.13.6-multilib.patch, bossogg-0.13.6-r3.ebuild:
