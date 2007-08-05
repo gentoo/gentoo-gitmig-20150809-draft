@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/bossogg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/ChangeLog,v 1.27 2007/08/04 16:42:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/ChangeLog,v 1.28 2007/08/05 13:57:28 drac Exp $
+
+  05 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  +files/bossogg-0.13.6-multilib.patch, bossogg-0.13.6-r3.ebuild:
+  Multilib fix, this time for real.
 
   04 Aug 2007; Samuli Suominen <drac@gentoo.org> bossogg-0.13.6-r3.ebuild:
   Multilib fix.

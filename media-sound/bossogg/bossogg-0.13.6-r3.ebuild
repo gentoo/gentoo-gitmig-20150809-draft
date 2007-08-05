@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r3.ebuild,v 1.10 2007/08/04 16:42:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r3.ebuild,v 1.11 2007/08/05 13:57:28 drac Exp $
 
 inherit autotools eutils multilib
 
@@ -28,11 +28,12 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-Makefile.patch"
-	epatch "${FILESDIR}/${P}-gcc4.patch"
-	epatch "${FILESDIR}/${P}+flac-1.1.3.patch"
-	epatch "${FILESDIR}/${P}-metadata.patch"
-	epatch "${FILESDIR}/${P}-sigkill.patch"
+	epatch "${FILESDIR}"/${P}-Makefile.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}+flac-1.1.3.patch
+	epatch "${FILESDIR}"/${P}-metadata.patch
+	epatch "${FILESDIR}"/${P}-sigkill.patch
+	epatch "${FILESDIR}"/${P}-multilib.patch
 	eautoreconf
 }
 

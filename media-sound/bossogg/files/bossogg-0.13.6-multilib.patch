@@ -1,0 +1,14 @@
+diff -ur bossogg-0.13.6.orig/configure.in bossogg-0.13.6/configure.in
+--- bossogg-0.13.6.orig/configure.in	2004-04-02 13:42:50.000000000 +0300
++++ bossogg-0.13.6/configure.in	2007-08-05 16:49:44.000000000 +0300
+@@ -34,9 +34,7 @@
+ PYTHON_LIB_FLAGS=`python-config`
+ LIBS="$LIBS $PYTHON_LIB_FLAGS"
+ PYTHON_INCLUDE_FLAGS=`python -c "import os,sys; print '-I' + os.path.join(sys.prefix, 'include', 'python' + sys.version[[:3]])"`
+-if test $prefix = NONE; then
+-	pythondir=`python -c "import os,sys; print os.path.join(sys.prefix, 'lib', 'python' + sys.version[[:3]], 'site-packages')"`
+-fi
++pythondir=`python -c 'from distutils.sysconfig import get_python_lib; import os; print os.path.normcase(os.path.realpath(get_python_lib()))'`
+ PYTHON_PREFIX=`python -c "import os,sys; print sys.prefix"`
+ PYTHON_EXEC_PREFIX=`python -c "import os,sys; print sys.exec_prefix"`
+ CFLAGS="$CFLAGS $PYTHON_INCLUDE_FLAGS"
