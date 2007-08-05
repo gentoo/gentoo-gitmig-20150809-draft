@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/nipper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/ChangeLog,v 1.7 2007/07/12 12:40:05 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/ChangeLog,v 1.8 2007/08/05 21:47:07 ikelos Exp $
+
+*nipper-0.10.3 (05 Aug 2007)
+
+  05 Aug 2007; Mike Auty <ikelos@gentoo.org>
+  -files/nipper-0.9.4-banner-exclamation.patch,
+  -files/nipper-0.9.4-pix-xml.patch, -nipper-0.9.4.ebuild,
+  -nipper-0.10.0.ebuild, -nipper-0.10.1.ebuild, +nipper-0.10.3.ebuild:
+  Version bump which enhances the XML output functionality, and clean out old
+  versions.
 
   12 Jul 2007; Mike Auty <ikelos@gentoo.org> nipper-0.10.2.ebuild:
   Adding ~amd64 keyword.
