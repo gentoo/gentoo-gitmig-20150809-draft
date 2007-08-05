@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-io
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/ChangeLog,v 1.28 2007/08/05 07:57:11 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/ChangeLog,v 1.29 2007/08/05 14:52:25 nixnut Exp $
+
+  05 Aug 2007; nixnut <nixnut@gentoo.org> commons-io-1.3.1.ebuild:
+  Stable on ppc wrt bug 187611
 
   05 Aug 2007; Miroslav Šulc <fordfrog@gentoo.org> commons-io-1.3.2.ebuild:
   Fixed sandbox violation (bug #187721).
