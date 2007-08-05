@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.39.4.ebuild,v 1.3 2007/08/04 22:25:43 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.39.4.ebuild,v 1.4 2007/08/05 18:09:52 je_fro Exp $
 
 IUSE="acpi multilib"
 
@@ -122,8 +122,7 @@ src_unpack() {
 
 	#Switching to a standard way to extract the files since otherwise no signature file
 	#would be created
-	chmod u+x "${src}"
-	"${src}" --extract "${S}" 2&>1 /dev/null
+	sh "${src}" --extract "${S}" 2&>1 /dev/null
 
 	gunzip common/usr/share/man/man8/atieventsd.8 || die "manpage unzip failed"
 
