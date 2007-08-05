@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-2.0.ebuild,v 1.7 2007/08/04 20:36:12 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-2.0.ebuild,v 1.8 2007/08/05 08:37:11 grobian Exp $
 
 inherit flag-o-matic
 
@@ -12,13 +12,12 @@ DEPEND="dev-lang/tcl
 LICENSE="Princeton"
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 S=${WORKDIR}/WordNet-${PV}
 
 src_unpack() {
 	unpack $A
 	epatch ${FILESDIR}/Makefiles.diff
-	epatch "${FILESDIR}/${P}"-macos.patch
 }
 
 src_compile() {
