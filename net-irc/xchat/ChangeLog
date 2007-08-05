@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.258 2007/08/01 16:05:00 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.259 2007/08/05 15:13:33 jer Exp $
+
+  05 Aug 2007; Jeroen Roovers <jer@gentoo.org> xchat-2.8.4-r1.ebuild:
+  Stable for HPPA (bug #187365).
 
   01 Aug 2007; <metalgod@gentoo.org> xchat-2.8.4-r1.ebuild:
   Stable on amd64. Bug #187365.
