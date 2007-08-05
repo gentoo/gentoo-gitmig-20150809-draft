@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7564 2007/08/05 07:59:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7565 2007/08/05 17:23:36 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (05 Aug 2007)
+# Temp. mask new flac since it could potentially
+# break many apps.
+~media-libs/flac-1.2.0
 
 # Hans de Graaff <graaff@gentoo.org> (05 Aug 2007)
 # Renamed to dev-ruby/capistrano more than a year ago.
