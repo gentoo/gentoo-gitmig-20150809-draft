@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.64 2007/03/15 23:26:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.65 2007/08/05 16:16:37 drac Exp $
+
+  05 Aug 2007; Samuli Suominen <drac@gentoo.org> sox-12.17.9.ebuild,
+  sox-12.18.2.ebuild:
+  QA: Stop using prepallman in ebuilds for bug 140697.
 
   15 Mar 2007; Alexis Ballier <aballier@gentoo.org>
   +files/sox-13.0.0-oggautomagic.patch, sox-13.0.0.ebuild:

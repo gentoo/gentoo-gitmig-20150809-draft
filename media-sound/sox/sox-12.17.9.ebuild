@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.9.ebuild,v 1.11 2007/07/11 19:30:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.9.ebuild,v 1.12 2007/08/05 16:16:37 drac Exp $
 
 inherit flag-o-matic eutils
 
@@ -50,7 +50,5 @@ src_compile () {
 
 src_install() {
 	make DESTDIR="${D}" install install-play || die "make install failed"
-	prepallman
-
 	dodoc Changelog README TODO *.txt
 }
