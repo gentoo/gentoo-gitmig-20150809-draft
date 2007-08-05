@@ -1,6 +1,10 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.46 2007/07/29 17:05:59 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.47 2007/08/05 00:09:58 rl03 Exp $
+
+  05 Aug 2007; Renat Lumpau <rl03@gentoo.org> files/digest-awstats-6.5-r1,
+  files/digest-awstats-6.5-r2, Manifest:
+  Fix digests, bug #185151
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> awstats-6.5-r1.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to
