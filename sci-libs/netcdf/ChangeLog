@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.36 2007/07/31 03:56:48 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.37 2007/08/05 12:07:03 bicatali Exp $
+
+  05 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/netcdf-3.6.2-parallel-make.patch, -files/gcc3-gentoo.patch,
+  -netcdf-3.5.0-r3.ebuild, -netcdf-3.6.0-r1.ebuild, netcdf-3.6.2.ebuild:
+  Fixed parallel-make for fortran. Closing bug #187759, thanks to Ed Catmur
+  <ed@catmur.co.uk>. Removed obsolete versions.
 
   31 Jul 2007; Steve Arnold <nerdboy@gentoo.org> netcdf-3.6.2.ebuild:
   Added FFLAGS fix for build failure on amd64 (real size mis-match). AFAIK
