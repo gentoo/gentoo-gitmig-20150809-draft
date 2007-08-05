@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.283 2007/08/04 04:30:19 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.284 2007/08/05 10:46:48 leio Exp $
+
+  05 Aug 2007; Mart Raudsepp <leio@gentoo.org> gnome-2.18.2-r1.ebuild:
+  Lower the minimum version requirements for ekiga, dasher, gnome-mag and
+  gnome-speech in order to not have to rush these to stable yet
 
 *gnome-2.18.2-r1 (04 Aug 2007)
 

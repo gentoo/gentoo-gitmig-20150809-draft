@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.18.2-r1.ebuild,v 1.1 2007/08/04 04:30:19 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.18.2-r1.ebuild,v 1.2 2007/08/05 10:46:48 leio Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -132,7 +132,7 @@ RDEPEND="
 	>=app-admin/pessulus-2.16.2
 	ldap? (
 		>=app-admin/sabayon-2.18.1
-		>=net-im/ekiga-2.0.9
+		>=net-im/ekiga-2.0.7
 		)
 
 	>=gnome-extra/gnome-screensaver-2.18.2
@@ -144,9 +144,9 @@ RDEPEND="
 		>=gnome-extra/libgail-gnome-1.18.0
 		>=gnome-base/gail-1.18.0
 		>=gnome-extra/at-spi-1.18.1
-		>=app-accessibility/dasher-4.4.2
-		>=app-accessibility/gnome-mag-0.14.4
-		>=app-accessibility/gnome-speech-0.4.12
+		>=app-accessibility/dasher-4.4.1
+		>=app-accessibility/gnome-mag-0.14.3
+		>=app-accessibility/gnome-speech-0.4.11
 		>=app-accessibility/gok-1.2.5
 		>=app-accessibility/orca-2.18.1 )
 	cups? ( >=net-print/gnome-cups-manager-0.31-r2 )
