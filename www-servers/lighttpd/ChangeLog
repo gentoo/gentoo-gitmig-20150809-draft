@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.132 2007/07/31 19:35:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.133 2007/08/05 12:51:59 bangert Exp $
+
+*lighttpd-1.4.16 (05 Aug 2007)
+
+  05 Aug 2007; Thilo Bangert <bangert@gentoo.org>
+  +files/1.4.16/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  +files/1.4.16/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  +lighttpd-1.4.16.ebuild:
+  version bump
 
   31 Jul 2007; Christoph Mende <angelos@gentoo.org>
   lighttpd-1.4.15-r1.ebuild:
