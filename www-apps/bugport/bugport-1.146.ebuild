@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugport/bugport-1.146.ebuild,v 1.1 2006/11/05 22:47:27 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugport/bugport-1.146.ebuild,v 1.2 2007/08/05 01:21:27 jmglov Exp $
 
 inherit webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.incogen.com/index.php?type=General&param=bugport"
 SRC_URI="http://www.incogen.com/downloads/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 IUSE=""
 RDEPEND=">=virtual/php-4.3
