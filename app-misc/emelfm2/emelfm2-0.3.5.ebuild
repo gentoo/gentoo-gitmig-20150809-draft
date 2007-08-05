@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.3.4.ebuild,v 1.5 2007/07/30 12:09:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.3.5.ebuild,v 1.1 2007/08/05 12:19:15 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,6 +18,12 @@ RESTRICT="test"
 DEPEND=">=x11-libs/gtk+-2.6
 		fam? ( virtual/fam )"
 RDEPEND="${DEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i -e "s:emelfm2/emelfm2_48.png:emelfm2.png:" docs/desktop_environment/emelfm2.desktop
+}
 
 src_compile() {
 	local myconf
@@ -44,5 +50,6 @@ src_compile() {
 src_install() {
 	emake ICONDIR="${D}"/usr/share/pixmaps \
 		PREFIX="${D}"/usr install || die "emake install failed."
+	newicon icons/emelfm2_48.png emelfm2.png
 	prepalldocs
 }

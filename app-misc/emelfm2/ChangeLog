@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/emelfm2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.16 2007/07/30 12:09:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.17 2007/08/05 12:19:15 drac Exp $
+
+*emelfm2-0.3.5 (05 Aug 2007)
+
+  05 Aug 2007; Samuli Suominen <drac@gentoo.org> +emelfm2-0.3.5.ebuild:
+  Version bump.
 
   30 Jul 2007; Markus Rothe <corsair@gentoo.org> emelfm2-0.3.4.ebuild:
   Added ~ppc64; bug #186562
