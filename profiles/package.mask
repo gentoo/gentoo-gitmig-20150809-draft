@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7563 2007/08/05 01:57:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7564 2007/08/05 07:59:33 graaff Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# Hans de Graaff <graaff@gentoo.org> (05 Aug 2007)
+# Renamed to dev-ruby/capistrano more than a year ago.
+dev-ruby/switchtower
 
 # Daniel Black <dragonheart@gentoo.org> (05 Aug 2007)
 # pending removal see gentoo-dev-announce@lists....
