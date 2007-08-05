@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-ca
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ca/ChangeLog,v 1.11 2007/08/04 18:47:37 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ca/ChangeLog,v 1.12 2007/08/05 11:13:58 nixnut Exp $
+
+  05 Aug 2007; nixnut <nixnut@gentoo.org> aspell-ca-0.60.20040130.ebuild:
+  Stable on ppc wrt bug 178690
 
   04 Aug 2007; Ferris McCormick <fmccor@gentoo.org> ChangeLog:
   Fix digests.

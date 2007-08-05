@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-sr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-sr/ChangeLog,v 1.8 2007/08/04 18:35:20 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-sr/ChangeLog,v 1.9 2007/08/05 11:18:31 nixnut Exp $
+
+  05 Aug 2007; nixnut <nixnut@gentoo.org> aspell-sr-0.60.ebuild:
+  Stable on ppc wrt bug 178690
 
   04 Aug 2007; Ferris McCormick <fmccor@gentoo.org> aspell-sr-0.60.ebuild:
   Sparc stable --- part of Bug #178690

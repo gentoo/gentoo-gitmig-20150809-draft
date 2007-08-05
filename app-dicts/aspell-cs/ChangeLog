@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-cs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-cs/ChangeLog,v 1.10 2007/08/04 18:45:09 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-cs/ChangeLog,v 1.11 2007/08/05 11:12:26 nixnut Exp $
+
+  05 Aug 2007; nixnut <nixnut@gentoo.org> aspell-cs-0.60.20040614.ebuild:
+  Stable on ppc wrt bug 178690
 
   04 Aug 2007; Ferris McCormick <fmccor@gentoo.org>
   aspell-cs-0.60.20040614.ebuild:
