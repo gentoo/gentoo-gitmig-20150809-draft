@@ -1,12 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.0.0_beta3_p1149.ebuild,v 1.1 2007/08/01 21:44:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.0.0_beta4.ebuild,v 1.1 2007/08/05 14:50:01 armin76 Exp $
 
 inherit eutils qt4
 
+MY_P="${P/_/}"
+
 DESCRIPTION="BitTorrent client in C++ and Qt."
 HOMEPAGE="http://www.qbittorrent.org/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"
 SLOT="0"
