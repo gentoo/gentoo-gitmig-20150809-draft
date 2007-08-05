@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.185 2007/08/02 06:10:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.186 2007/08/05 03:35:07 leio Exp $
+
+  05 Aug 2007; Mart Raudsepp <leio@gentoo.org> evolution-2.10.2.ebuild:
+  Drop networkmanager IUSE, so that evolution-2.10 can be stabilized, while
+  networkmanager isn't ready yet for stabilization. If you want networkmanager
+  support in evolution, you should be able to just emerge it and evolution
+  should pick it up over D-Bus regardless
 
   02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
   evolution-2.6.2-r1.ebuild:
