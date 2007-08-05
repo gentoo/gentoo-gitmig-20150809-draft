@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pqiv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.6 2007/07/27 11:53:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.7 2007/08/05 15:02:35 drac Exp $
+
+*pqiv-0.4 (05 Aug 2007)
+
+  05 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  +files/pqiv-0.4-Makefile.patch, +pqiv-0.4.ebuild:
+  Version bump.
 
 *pqiv-0.4_rc1 (27 Jul 2007)
 
