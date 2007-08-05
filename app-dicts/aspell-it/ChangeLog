@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-it
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.15 2007/08/05 11:03:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.16 2007/08/05 14:43:59 armin76 Exp $
+
+  05 Aug 2007; Raúl Porcel <armin76@gentoo.org>
+  aspell-it-2.2.20050523.ebuild:
+  alpha/ia64/x86 stable wrt #178690
 
   05 Aug 2007; nixnut <nixnut@gentoo.org> aspell-it-2.2.20050523.ebuild:
   Stable on ppc wrt bug 178690
