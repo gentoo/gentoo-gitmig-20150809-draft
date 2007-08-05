@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/queequeg-0.91.ebuild,v 1.7 2007/01/19 14:50:21 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/queequeg-0.91.ebuild,v 1.8 2007/08/05 09:01:24 philantrop Exp $
 
 inherit distutils multilib
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://queequeg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 
 DEPEND=">=dev-lang/python-2.3
@@ -21,7 +21,7 @@ src_compile() {
 
 	local dictdir=/usr/dict
 
-	if has_version =app-dicts/wordnet-2.0; then
+	if has_version ">=app-dicts/wordnet-2.0"; then
 		dictdir=/usr/share/wordnet/dict
 	fi
 
