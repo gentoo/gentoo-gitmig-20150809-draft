@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.1.1.ebuild,v 1.3 2007/07/13 05:28:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.3.ebuild,v 1.1 2007/08/05 17:20:48 markusle Exp $
 
-inherit eutils
+inherit eutils flag-o-matic autotools multilib
 
 PV_MAJOR=${PV%.*}
 MY_PV=${PV//./-}
@@ -11,45 +11,52 @@ MY_PV_MAJOR=${MY_PV%-*}
 
 DESCRIPTION="Computer algebra system for polynomial computations"
 HOMEPAGE="http://www.singular.uni-kl.de/"
-SRC_URI="ftp://www.mathematik.uni-kl.de/pub/Math/Singular/src/$MY_PV_MAJOR/${MY_PN}-${MY_PV}.tar.gz
-		ftp://www.mathematik.uni-kl.de/pub/Math/Singular/UNIX/${MY_PN}-3-0-1-share.tar.gz"
+SRC_URI="http://www.mathematik.uni-kl.de/ftp/pub/Math/Singular/SOURCES/3-0-3/${MY_PV}/${MY_PN}-${MY_PV}.tar.gz
+	http://www.mathematik.uni-kl.de/ftp/pub/Math/Singular/UNIX/${MY_PN}-${MY_PV}-share.tar.gz"
 
-LICENSE="singular"
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
-IUSE="doc emacs"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="doc emacs boost"
 
 DEPEND=">=dev-lang/perl-5.6
 		>=dev-libs/gmp-4.1-r1
-		emacs? ( || ( app-editors/xemacs
-					app-editors/emacs ) )"
+		emacs? ( || ( virtual/xemacs
+					virtual/emacs ) )
+		boost? ( dev-libs/boost )"
 
-S="${WORKDIR}"/${MY_PN}-${MY_PV_MAJOR}
+S="${WORKDIR}"/${MY_PN}-${MY_PV}
 
 src_unpack () {
 	unpack ${A}
-	epatch  $FILESDIR/${PN}-${PV_MAJOR}-gentoo.diff
-	sed -e "s/PFSUBST/${PF}/" -i ${S}/kernel/feResource.cc || \
+	epatch "${FILESDIR}"/${P}-gentoo.diff
+
+	cd "${S}"/kernel
+	sed -e "s/PFSUBST/${PF}/" -i feResource.cc || \
 		die "sed failed on feResource.cc"
+
+	cd "${S}"/Singular
+	if ! use boost; then
+		sed -e "s/AC_CHECK_HEADERS(boost/#AC_CHECK_HEADERS(boost/" \
+			-i configure.in || \
+			die "failed to fix detection of boost headers"
+	else
+		# -no-exceptions and boost don't play well
+		sed -e "/CXXFLAGS/ s/--no-exceptions//g" \
+			-i configure.in || \
+			die "sed failed on configure"
+	fi
+	eautoconf
 }
 
 src_compile() {
-	local myconf="${myconf} --disable-doc --without-MP --with-factory --with-libfac --prefix=${S}"
-	econf ${myconf} || die "econf failed"
-	emake || die "make failed"
+	local myconf="${myconf} --disable-doc --with-MP --with-factory --with-libfac --with-gmp --prefix=${S}"
+	econf $(use_enable emacs) \
+		${myconf} || die "econf failed"
+	emake -j1 || die "make failed"
 }
 
 src_install () {
-	local myarchprefix
-	case ${ARCH} in
-		x86)
-			myarchprefix=ix86
-			;;
-		*)
-			myarchprefix=${ARCH}
-			;;
-	esac
-
 	# install basic docs
 	cd "${S}" && dodoc BUGS ChangeLog || \
 		die "failed to install docs"
@@ -62,7 +69,7 @@ src_install () {
 	cd gftables && doins * \
 		|| die "failed to install files int LIB/gftables"
 
-	cd "${S}/${myarchprefix}"-Linux
+	cd "${S}"/*-Linux
 
 	# install binaries
 	rm ${MY_PN} || die "failed to remove ${MY_PN}"
@@ -74,15 +81,15 @@ src_install () {
 	fi
 
 	# install libraries
-	insinto /usr/lib/${PN}
+	insinto /usr/$(get_libdir)/${PN}
 	doins *.so || die "failed to install libraries"
 
 	# create symbolic link
-	dosym /usr/bin/${MY_PN}-${MY_PV_MAJOR} /usr/bin/${MY_PN} || \
+	dosym /usr/bin/${MY_PN}-${MY_PV} /usr/bin/${MY_PN} || \
 		die "failed to create symbolic link"
 
 	# install examples
-	cd "${WORKDIR}"/${MY_PN}/${MY_PV_MAJOR}
+	cd "${WORKDIR}"/${MY_PN}/${MY_PV}
 	insinto /usr/share/${PN}/examples
 	doins examples/* || die "failed to install examples"
 
@@ -91,7 +98,7 @@ src_install () {
 		dohtml -r html/* || die "failed to install html docs"
 
 		cp info/${PN}.hlp info/${PN}.info &&
-		doinfo info/${PN}.help || \
+		doinfo info/${PN}.info || \
 		die "failed to install info files"
 	fi
 

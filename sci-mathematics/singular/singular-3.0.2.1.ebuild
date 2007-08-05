@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.2.1.ebuild,v 1.3 2007/07/13 05:28:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.2.1.ebuild,v 1.4 2007/08/05 17:20:48 markusle Exp $
 
 inherit eutils flag-o-matic autotools multilib
 
@@ -11,8 +11,8 @@ MY_PV_MAJOR=${MY_PV%-*}
 
 DESCRIPTION="Computer algebra system for polynomial computations"
 HOMEPAGE="http://www.singular.uni-kl.de/"
-SRC_URI="ftp://www.mathematik.uni-kl.de/pub/Math/Singular/src/$MY_PV_MAJOR/${MY_PN}-${MY_PV}.tar.gz
-		ftp://www.mathematik.uni-kl.de/pub/Math/Singular/UNIX/${MY_PN}-3-0-2-share.tar.gz"
+SRC_URI="http://www.mathematik.uni-kl.de/ftp/pub/Math/Singular/SOURCES/$MY_PV_MAJOR/${MY_PN}-${MY_PV}.tar.gz
+	http://www.mathematik.uni-kl.de/ftp/pub/Math/Singular/UNIX/${MY_PN}-${MY_PV_MAJOR}-share.tar.gz"
 
 LICENSE="singular"
 SLOT="0"

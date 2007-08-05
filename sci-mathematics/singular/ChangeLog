@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.16 2007/05/19 21:56:11 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.17 2007/08/05 17:20:48 markusle Exp $
+
+*singular-3.0.3 (04 Aug 2007)
+
+  04 Aug 2007; Markus Dittrich <markusle@gentoo.org>
+  -singular-3.0.1.1.ebuild, singular-3.0.2.1.ebuild, 
+  +files/singular-3.0.3-gentoo.diff, +singular-3.0.3.ebuild:
+  Version bump and removed old ebuild (see bug #187562).
 
   19 May 2007; Peter Weller <welp@gentoo.org> singular-3.0.2.1.ebuild:
   Multilib-strict fix, keyworded ~amd64
