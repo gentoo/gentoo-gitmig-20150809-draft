@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.3.2.ebuild,v 1.1 2007/08/03 16:24:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.3.2.ebuild,v 1.2 2007/08/05 07:57:11 fordfrog Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -29,18 +29,16 @@ src_unpack() {
 	java-ant_rewrite-classpath
 }
 
+src_compile() {
+	eant jar $(use_doc javadoc) -Duser.home=${T}
+}
+
 src_test() {
-	if hasq userpriv ${FEATURES}; then
-		#By default libdir is ${HOME}/.maven so it can be /root/.maven
-		ANT_OPTS="-Djava.io.tmpdir=${T}" \
-		ANT_TASKS="ant-junit" \
-			eant test \
-			-Dgentoo.classpath="$(java-pkg_getjars junit)" \
-			-Dlibdir="libdir"
-	else
-		elog "Tests require userpriv in FEATURES because they test"
-		elog "accessing files which always succeeds for root."
-	fi
+	ANT_OPTS="-Djava.io.tmpdir=${T} -Duser.home=${T}" \
+	ANT_TASKS="ant-junit" \
+		eant test \
+		-Dgentoo.classpath="$(java-pkg_getjars junit)" \
+		-Dlibdir="libdir"
 }
 
 src_install() {
