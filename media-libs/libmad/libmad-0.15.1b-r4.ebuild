@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b-r3.ebuild,v 1.3 2007/08/06 20:26:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b-r4.ebuild,v 1.1 2007/08/06 20:26:40 dirtyepic Exp $
 
 inherit eutils autotools libtool flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mad/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND=""
@@ -29,8 +29,6 @@ src_unpack() {
 }
 
 src_compile() {
-	use ppc && append-flags -fno-strict-aliasing
-
 	local myconf="--enable-accuracy"
 	# --enable-speed		 optimize for speed over accuracy
 	# --enable-accuracy		 optimize for accuracy over speed
@@ -44,6 +42,7 @@ src_compile() {
 	[[ $(tc-arch) == "amd64" ]] && myconf="${myconf} --enable-fpm=64bit"
 	[[ $(tc-arch) == "x86" ]] && myconf="${myconf} --enable-fpm=intel"
 	[[ $(tc-arch) == "ppc" ]] && myconf="${myconf} --enable-fpm=ppc"
+	[[ $(tc-arch) == "ppc64" ]] && myconf="${myconf} --enable-fpm=64bit"
 
 	econf \
 		$(use_enable debug debugging) \
