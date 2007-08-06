@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speechd-el
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.10 2007/02/21 19:24:40 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.11 2007/08/06 18:04:10 williamh Exp $
+
+  06 Aug 2007; William Hubbs <williamh@gentoo.org> speechd-el-1.0.ebuild:
+  Emacs compatibility fixes #186243.
 
   21 Feb 2007; <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

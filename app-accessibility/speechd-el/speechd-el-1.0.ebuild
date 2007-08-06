@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/speechd-el-1.0.ebuild,v 1.2 2007/01/23 15:11:29 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/speechd-el-1.0.ebuild,v 1.3 2007/08/06 18:04:10 williamh Exp $
 
-inherit elisp-common
+inherit elisp
 
-DESCRIPTION="emacs speech support"
+DESCRIPTION="Emacs speech support"
 HOMEPAGE="http://www.freebsoft.org/speechd-el"
 SRC_URI="http://www.freebsoft.org/pub/projects/speechd-el/${P}.tar.gz"
 
@@ -17,12 +17,11 @@ DEPEND=">=app-emacs/elib-1.0
 	>=app-accessibility/speech-dispatcher-0.5"
 
 src_compile() {
-	einfo "Nothing to compile."
+	einfo "Nothing to compile"
 }
 
 src_install() {
-	insinto /usr/share/emacs/site-lisp/speechd-el
-	doins *.el
+	elisp-install ${PN} *.el
 	exeinto /usr/bin
 	doexe speechd-log-extractor
 	dodoc ANNOUNCE ChangeLog EMACSPEAK* NEWS README speechd-speak.pdf
