@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3.3.ebuild,v 1.1 2007/08/03 19:40:56 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3.3.ebuild,v 1.2 2007/08/06 22:52:32 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -218,6 +218,10 @@ pkg_postinst() {
 		[ -e "${x}" ] && mv -f "${x}" "${ROOT}etc/make.globals"
 	done
 
+	elog
+	elog "FEATURES=\"userfetch\" is now enabled by default. Depending on your \${DISTDIR}"
+	elog "permissions, this may result in Permission Denied errors. If you would like"
+	elog "to fetch with superuser privileges, add FEATURES=\"-userfetch\" to make.conf."
 	elog
 	elog "The world file now supports slot atoms such as 'sys-devel/gcc:3.4'. In some"
 	elog "cases, emerge --depclean may remove slots that it would not have removed"
