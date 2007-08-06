@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/videogen-0.32.ebuild,v 1.8 2006/02/23 23:20:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/videogen-0.32.ebuild,v 1.9 2007/08/06 06:22:59 dberkholz Exp $
 
 inherit toolchain-funcs
 
@@ -22,5 +22,5 @@ src_unpack() {
 src_install() {
 	dobin videogen
 	doman videogen.1x
-	dodoc BUGS CHANGES INSTALL README THANKS videogen.sample
+	dodoc BUGS CHANGES README THANKS videogen.sample
 }
