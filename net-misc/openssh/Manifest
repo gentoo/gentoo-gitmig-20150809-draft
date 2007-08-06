@@ -141,6 +141,10 @@ AUX openssh-4.6_p1-ChallengeResponseAuthentication.patch 1681 RMD160 f38aecbbb7b
 MD5 c10ecb0c4fd19f757dc56086d5bfdb9d files/openssh-4.6_p1-ChallengeResponseAuthentication.patch 1681
 RMD160 f38aecbbb7bf992dd70fc0283555954d9e2998a6 files/openssh-4.6_p1-ChallengeResponseAuthentication.patch 1681
 SHA256 4b84df57b5cf6c7fd78f7a44f343ce8ec7b0a2feaeeb90293f07832b2ba5ba68 files/openssh-4.6_p1-ChallengeResponseAuthentication.patch 1681
+AUX openssh-4.6_p1-chan-read-failed.patch 1053 RMD160 3b1233c55521f31356b42d1699e95b1d8288c8a8 SHA1 a3891d86cd7b650f4eb2b5ad661217b3c104cd52 SHA256 e8a4df9829bc8ef34f16ee0544e6088d577cfdc574c90f5ea47c46a6cb472e09
+MD5 7dfea546e36fd7bedecfcde896fb6f1f files/openssh-4.6_p1-chan-read-failed.patch 1053
+RMD160 3b1233c55521f31356b42d1699e95b1d8288c8a8 files/openssh-4.6_p1-chan-read-failed.patch 1053
+SHA256 e8a4df9829bc8ef34f16ee0544e6088d577cfdc574c90f5ea47c46a6cb472e09 files/openssh-4.6_p1-chan-read-failed.patch 1053
 AUX openssh-4.6_p1-include-string-header.patch 283 RMD160 6ca0ed9b00370904be03d1ab5b61a5893ca56768 SHA1 0f2cbdd460488741d8cf71db04f38df48215b335 SHA256 75c3850ece441da13f15c14a4836ff57bf67381590d5403be38c5b2aa097c57e
 MD5 31f7b865121071c12310d3e398e82bf8 files/openssh-4.6_p1-include-string-header.patch 283
 RMD160 6ca0ed9b00370904be03d1ab5b61a5893ca56768 files/openssh-4.6_p1-include-string-header.patch 283
@@ -251,10 +255,14 @@ EBUILD openssh-4.6_p1-r3.ebuild 5390 RMD160 f55f1ca226614f0ccf4c0dae04e3b9c1b1e6
 MD5 0e8d64a10bcee6f3402d9a3401b1cd4e openssh-4.6_p1-r3.ebuild 5390
 RMD160 f55f1ca226614f0ccf4c0dae04e3b9c1b1e6de0d openssh-4.6_p1-r3.ebuild 5390
 SHA256 22882343c576b93e21f2dbe241896dd95837ff464e487c1f000269fdbb077db7 openssh-4.6_p1-r3.ebuild 5390
-MISC ChangeLog 39941 RMD160 c1f95dd3bdd34ee6051046326ab1d083dfbbf9c9 SHA1 acc0bea8eae00d1c450847ed165a26ff3c601146 SHA256 9af121f71bed9a2f6ea93f9070a3eab7a0ee088eda97c030606c146871a8854a
-MD5 d3d04ded73b736860191b0f64655ee57 ChangeLog 39941
-RMD160 c1f95dd3bdd34ee6051046326ab1d083dfbbf9c9 ChangeLog 39941
-SHA256 9af121f71bed9a2f6ea93f9070a3eab7a0ee088eda97c030606c146871a8854a ChangeLog 39941
+EBUILD openssh-4.6_p1-r4.ebuild 5461 RMD160 142224f6894f6487fd95353f985c7ec229829ac8 SHA1 0c973da88a841693038aea2da13f4666dd1db54d SHA256 0f68b2fba53fb61fb89fc4b034a8bd4249543a9b3876817202d5cc472f68da54
+MD5 5356e0826e12d95b1c0796d19927a907 openssh-4.6_p1-r4.ebuild 5461
+RMD160 142224f6894f6487fd95353f985c7ec229829ac8 openssh-4.6_p1-r4.ebuild 5461
+SHA256 0f68b2fba53fb61fb89fc4b034a8bd4249543a9b3876817202d5cc472f68da54 openssh-4.6_p1-r4.ebuild 5461
+MISC ChangeLog 40167 RMD160 88bf91937c34e07c2bf0882cd3b265108b88c0ef SHA1 ae01e8d48145c5d63947f1f149ce9b7de5cdaed9 SHA256 2ca71cea550fafa038e3788c706687a5696f5136a2cfc8faf0d622bffca9e91e
+MD5 d04022822d64dff8518c7104374b7f0f ChangeLog 40167
+RMD160 88bf91937c34e07c2bf0882cd3b265108b88c0ef ChangeLog 40167
+SHA256 2ca71cea550fafa038e3788c706687a5696f5136a2cfc8faf0d622bffca9e91e ChangeLog 40167
 MISC metadata.xml 1287 RMD160 9be6778c10712b2613792647256f309898f52828 SHA1 38d05973334ed37cb9ee3778df3cf3b1369b6b81 SHA256 fbd731005f40dec6baf09aae0ba15a994e1ae448f4aa70ecd078db4b1a2feda3
 MD5 d536c311ded25994241e9708f293c9f7 metadata.xml 1287
 RMD160 9be6778c10712b2613792647256f309898f52828 metadata.xml 1287
@@ -292,10 +300,13 @@ SHA256 155a2bda9084c47e1e7df6b2ed84cd947b7f6511c6c6a09a1a4620eb7d587e9a files/di
 MD5 b44a2d9a9f14d872853cbae7c2f88d02 files/digest-openssh-4.6_p1-r3 1051
 RMD160 87dedd6d23c67349300f83492937320aa5736e62 files/digest-openssh-4.6_p1-r3 1051
 SHA256 21cd53d18dc04f1321b2e9e948befdd8bb705dc8c3e9d4678d5c643e7bba5ec6 files/digest-openssh-4.6_p1-r3 1051
+MD5 b44a2d9a9f14d872853cbae7c2f88d02 files/digest-openssh-4.6_p1-r4 1051
+RMD160 87dedd6d23c67349300f83492937320aa5736e62 files/digest-openssh-4.6_p1-r4 1051
+SHA256 21cd53d18dc04f1321b2e9e948befdd8bb705dc8c3e9d4678d5c643e7bba5ec6 files/digest-openssh-4.6_p1-r4 1051
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGtofap/wUKkr7RBoRArf9AKDhuUafwjlo36GbW5ZKskNP6lFE1wCgvfiC
-YKC6ezsdFb4c/dt48P/g8Bw=
-=G4cU
+iD8DBQFGttddp/wUKkr7RBoRApDSAJ4jQ/+nUuJp7tIv1c0bdN5l71lZdwCfWbi7
+BRMcm4rfZ9xjTaqH/W7K3gc=
+=TUs9
 -----END PGP SIGNATURE-----
