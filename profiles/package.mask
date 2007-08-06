@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7565 2007/08/05 17:23:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7566 2007/08/06 06:51:46 mcummings Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -150,10 +150,6 @@ sci-chemistry/nmrview
 # Mask zaptel-1.2.18-r1 since it seems to have some issues and is experimental
 # See bug #185268
 =net-misc/zaptel-1.2.18-r1
-
-# Michael Cummings <mcummings@gentoo.org> (11 Jul 2007)
-# Masking for removal
-app-admin/gentoo-bugger
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (10 Jul 2007)
 # Masking to test
