@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.89 2007/08/04 14:56:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.90 2007/08/06 14:07:59 gustavoz Exp $
+
+  06 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> tor-0.1.2.16.ebuild:
+  Stable on sparc wrt security #186644
 
   04 Aug 2007; Markus Rothe <corsair@gentoo.org> tor-0.1.2.16.ebuild:
   Stable on ppc64; bug #186644
