@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20040821-r1.ebuild,v 1.7 2007/06/26 02:09:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20040821-r1.ebuild,v 1.8 2007/08/06 11:10:44 spock Exp $
 
 DESCRIPTION="A collection of Bootsplash themes"
 HOMEPAGE="http://www.bootsplash.de/"
@@ -122,7 +122,7 @@ LICENSE="freedist"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="|| ( media-gfx/bootsplash >=media-gfx/splashutils-1.1.9.6 )"
+RDEPEND=">=media-gfx/splashutils-1.1.9.6"
 DEPEND="net-misc/wget ${RDEPEND}"
 S="${WORKDIR}"
 
