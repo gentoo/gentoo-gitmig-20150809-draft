@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.0.ebuild,v 1.2 2007/08/06 11:13:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.0.ebuild,v 1.3 2007/08/06 19:19:30 drac Exp $
 
 inherit autotools eutils libtool toolchain-funcs
 
-PATCHLEVEL="13"
+PATCHLEVEL="15"
 
 DESCRIPTION="free lossless audio encoder and decoder"
 HOMEPAGE="http://flac.sourceforge.net"
@@ -32,7 +32,7 @@ src_unpack() {
 
 	# Enable only for GCC 4.1 and later
 	[[ $(gcc-major-version)$(gcc-minor-version) -ge 41 ]] || \
-		export EPATCH_EXCLUDE="130_all_visibility.patch 160_all_protected.patch"
+		export EPATCH_EXCLUDE="180_all_visibility.patch"
 
 	EPATCH_SUFFIX="patch" \
 	epatch "${WORKDIR}/patches"
