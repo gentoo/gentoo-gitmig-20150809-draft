@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.41 2007/08/06 09:46:15 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.42 2007/08/06 15:46:05 uberlord Exp $
+
+  06 Aug 2007; Roy Marples <uberlord@gentoo.org>
+  +files/freebsd-sbin-6.2-ipfilter.patch, freebsd-sbin-6.2-r2.ebuild:
+  Grab upstream patches to build ipfilter, #124257
 
 *freebsd-sbin-6.2-r2 (06 Aug 2007)
 
