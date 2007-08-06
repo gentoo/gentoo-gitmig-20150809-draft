@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.16 2007/07/28 21:01:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.17 2007/08/06 09:45:23 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -676,7 +676,12 @@ setup_flags() {
 		[[ -z ${CTARGET_OPT} ]] && CTARGET_OPT=$(get_abi_CHOST)
 	fi
 
-	case $(tc-arch) in
+	case $(tc-arch ${CTARGET_OPT}) in
+		x86)
+			# -march needed for #185404
+			local t=${CTARGET_OPT:-${CTARGET}}
+			export CFLAGS="-march=${t%%-*} ${CFLAGS}"
+		;;
 		amd64)
 			# Punt this when amd64's 2004.3 is removed
 			CFLAGS_x86="-m32"
