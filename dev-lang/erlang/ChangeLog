@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.67 2007/07/17 21:47:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.68 2007/08/06 14:46:05 uberlord Exp $
+
+  06 Aug 2007; Roy Marples <uberlord@gentoo.org>
+  +files/erlang-11.2.5-gethostbyname.patch, erlang-11.2.5.ebuild:
+  Fix gethostbyname problem on FreeBSD and keyword ~x86-fbsd, #182001 thanks
+  to Pierre Guinoiseau.
 
   17 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> erlang-11.2.5.ebuild:
   Stable on sparc wrt security #184592
