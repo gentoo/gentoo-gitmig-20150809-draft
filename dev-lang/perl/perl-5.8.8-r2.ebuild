@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.35 2007/07/13 06:25:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.36 2007/08/06 10:21:33 ian Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -32,7 +32,8 @@ DEPEND="berkdb? ( sys-libs/db )
 
 RDEPEND="~sys-devel/libperl-${PV}
 	berkdb? ( sys-libs/db )
-	gdbm? ( >=sys-libs/gdbm-1.8.3 )"
+	gdbm? ( >=sys-libs/gdbm-1.8.3 )
+	build? ( !perl-core/Test-Harness )"
 
 PDEPEND=">=app-admin/perl-cleaner-1.03
 		!build? (
