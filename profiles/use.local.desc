@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2959 2007/08/05 21:30:05 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2960 2007/08/06 20:42:24 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1465,7 +1465,6 @@ net-irc/xchat-xsys:audacious - Enables Audacious (media player) integration
 net-irc/xchat-xsys:buttons - Enables the buttons near the nickname list
 net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a patch
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
-net-irc/xchat:xchattext - Enables the text/console front end to XChat
 net-irc/znc:nomodules - Don't build modules
 net-libs/aqbanking:chipcard - Enable support for DDV/RSA-chipcards
 net-libs/aqbanking:dtaus - Enable dtaus backend
