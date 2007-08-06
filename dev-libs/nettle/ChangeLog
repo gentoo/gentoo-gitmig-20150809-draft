@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.15 2007/02/22 01:08:11 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.16 2007/08/06 00:08:11 alonbl Exp $
+
+*nettle-1.15 (06 Aug 2007)
+
+  06 Aug 2007; Alon Bar-Lev <alonbl@gentoo.org> +nettle-1.15.ebuild:
+  Version bump, bug#187862
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
