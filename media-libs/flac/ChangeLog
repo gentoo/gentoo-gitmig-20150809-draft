@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.111 2007/08/06 02:54:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.112 2007/08/06 11:13:17 drac Exp $
+
+  06 Aug 2007; Samuli Suominen <drac@gentoo.org> flac-1.2.0.ebuild:
+  Apply patch from upstream to fix bug 187882, thanks to Marty Rosenberg for
+  reporting.
 
   06 Aug 2007; Joshua Kinard <kumba@gentoo.org> flac-1.1.2-r8.ebuild:
   Stable on mips, per #136490.
