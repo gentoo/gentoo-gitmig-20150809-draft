@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/dictd-wn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.17 2007/02/21 20:32:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.18 2007/08/06 17:28:41 philantrop Exp $
+
+  06 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> dictd-wn-2.0.ebuild:
+  Removed deprecated gnuconfig_update as econf works fine now. Fixes bug 160176.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
