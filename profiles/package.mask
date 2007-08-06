@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7568 2007/08/06 18:05:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7569 2007/08/06 19:03:47 pylon Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Lars Weiler <pylon@gentoo.org> (06 Aug 2007)
+# included in aircrack-ng since version 0.9.0
+net-wireless/aircrack-ptw
 
 # Doug Goldstein <cardoe@gentoo.org> (06 Aug 2007)
 # new fixes branch that pulls straight from svn
