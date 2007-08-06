@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.161 2007/07/31 13:52:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.162 2007/08/06 21:46:13 cardoe Exp $
+
+*mythtv-0.20.1_p14146 (06 Aug 2007)
+
+  06 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.20.1_p14146.ebuild:
+  rev bump. Major change is change over to using svn to checkout the sources
+  since there are binary changes now. fixes bug #183268
 
   31 Jul 2007; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.20.1_p13344.ebuild, mythtv-0.20.1_p13783.ebuild,
