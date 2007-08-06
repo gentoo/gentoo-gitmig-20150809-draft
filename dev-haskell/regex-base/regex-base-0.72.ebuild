@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/regex-base-0.72.ebuild,v 1.1 2007/08/05 19:15:18 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/regex-base-0.72.ebuild,v 1.2 2007/08/06 17:00:43 kolmodin Exp $
 
 CABAL_FEATURES="profile haddock lib"
 inherit eutils haskell-cabal
@@ -14,7 +14,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${MY_PV}/${MY_P}.tar.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.6"
