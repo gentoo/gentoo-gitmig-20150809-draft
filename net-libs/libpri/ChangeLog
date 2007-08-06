@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpri
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.67 2007/07/17 19:45:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.68 2007/08/06 20:20:22 angelos Exp $
+
+  06 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  +files/libpri-1.2.5-multilib.patch, libpri-1.2.5.ebuild:
+  Fixed multilib install paths for libpri-1.2.5 and marked it stable on amd64
 
   17 Jul 2007; Christian Faulhammer <opfer@gentoo.org> libpri-1.2.5.ebuild:
   stable x86, security bug 171884

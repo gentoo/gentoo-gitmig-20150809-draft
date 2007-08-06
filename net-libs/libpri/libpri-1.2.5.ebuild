@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.5.ebuild,v 1.3 2007/07/17 19:45:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.5.ebuild,v 1.4 2007/08/06 20:20:22 angelos Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ S_BRI="${WORKDIR}/bristuff-${BRI_VERSION}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 DEPEND="virtual/libc"
 
@@ -31,6 +31,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.2.5-gentoo.diff
+	epatch ${FILESDIR}/${P}-multilib.patch
 
 	if use bri; then
 		einfo "Patching libpri w/ BRI stuff (${BRI_VERSION})"
@@ -50,7 +51,7 @@ src_compile() {
 }
 
 src_install() {
-	make INSTALL_PREFIX=${D} install || die
+	make INSTALL_PREFIX=${D} LIBDIR="${D}/usr/$(get_libdir)" install || die
 
 	dodoc ChangeLog README TODO LICENSE
 }
