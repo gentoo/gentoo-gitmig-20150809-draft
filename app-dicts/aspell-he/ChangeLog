@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-he
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.18 2007/08/05 14:33:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.19 2007/08/06 03:23:54 kumba Exp $
+
+  06 Aug 2007; Joshua Kinard <kumba@gentoo.org> aspell-he-1.0.0.ebuild:
+  Stable on mips.
 
   05 Aug 2007; Raúl Porcel <armin76@gentoo.org> aspell-he-1.0.0.ebuild:
   alpha/ia64/x86 stable wrt #178690
