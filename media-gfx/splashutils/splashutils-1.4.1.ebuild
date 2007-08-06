@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.1.ebuild,v 1.6 2007/07/16 22:21:56 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.4.1.ebuild,v 1.7 2007/08/06 11:13:14 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -37,7 +37,6 @@ RDEPEND="truetype? ( >=media-libs/freetype-2 )
 	>=media-libs/jpeg-6b
 	>=sys-apps/baselayout-1.9.4-r5
 	app-arch/cpio
-	!media-gfx/bootsplash
 	media-gfx/fbgrab"
 DEPEND="${RDEPEND}
 	>=dev-libs/klibc-1.4.13"
