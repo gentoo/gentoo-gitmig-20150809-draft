@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.52 2007/07/12 09:07:59 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.53 2007/08/06 14:27:31 uberlord Exp $
+
+  06 Aug 2007; Roy Marples <uberlord@gentoo.org>
+  +files/freebsd-lib-6.2-bluetooth.patch, freebsd-lib-6.2-r1.ebuild:
+  Fix building bluetooth, #181883 thanks to Sascha Lucas
 
   12 Jul 2007; Roy Marples <uberlord@gentoo.org> +files/libmap.conf,
   freebsd-lib-6.2.ebuild, freebsd-lib-6.2-r1.ebuild:

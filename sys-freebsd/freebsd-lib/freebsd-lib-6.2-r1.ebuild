@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2-r1.ebuild,v 1.4 2007/07/15 02:20:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2-r1.ebuild,v 1.5 2007/08/06 14:27:31 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -81,6 +81,7 @@ PATCHES="${FILESDIR}/${PN}-bsdxml.patch
 	${FILESDIR}/${PN}-6.0-binutils-asm.patch
 	${FILESDIR}/${PN}-6.0-ssp.patch
 	${FILESDIR}/${PN}-6.1-csu.patch
+	${FILESDIR}/${PN}-6.2-bluetooth.patch
 	${FILESDIR}/${PN}-6.2-gcc41.patch
 	${FILESDIR}/${PN}-6.2-sparc64.patch"
 
