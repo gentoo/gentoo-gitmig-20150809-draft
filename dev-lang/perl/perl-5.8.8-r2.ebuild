@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.36 2007/08/06 10:21:33 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.37 2007/08/06 16:35:36 truedfx Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -97,6 +97,10 @@ src_unpack() {
 	# /bin/ksh really is executable. Should fix bug 42665.
 	# rac 2004.06.09
 	cd ${S}; epatch ${FILESDIR}/${PN}-noksh.patch
+
+	# makedepend.SH contains a syntax error which is ignored by bash but causes
+	# dash to abort
+	epatch ${FILESDIR}/${P}-makedepend-syntax.patch
 
 	# We do not want the build root in the linked perl module's RUNPATH, so
 	# strip paths containing PORTAGE_TMPDIR if its set.  This is for the
