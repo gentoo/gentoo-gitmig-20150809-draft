@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.40 2007/07/12 08:26:18 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.41 2007/08/06 09:46:15 uberlord Exp $
+
+*freebsd-sbin-6.2-r2 (06 Aug 2007)
+
+  06 Aug 2007; Roy Marples <uberlord@gentoo.org>
+  +files/freebsd-sbin-6.2-ldconfig.patch, +freebsd-sbin-6.2-r2.ebuild:
+  Always add /lib and /usr/lib to our search paths for ldconfig.
+  This patch will need changing if we move to a multilib system.
 
   12 Jul 2007; Roy Marples <uberlord@gentoo.org> files/devd.initd:
   Fix devd for baselayout-2.0.0_alpha4.
