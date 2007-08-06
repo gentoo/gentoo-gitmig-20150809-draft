@@ -1,6 +1,16 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.549 2007/08/01 23:19:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.550 2007/08/06 09:46:50 vapier Exp $
+
+  06 Aug 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/eblits/common.eblit, +files/eblits/src_compile.eblit,
+  +files/eblits/src_install.eblit, +files/eblits/src_test.eblit,
+  +files/eblits/src_unpack.eblit, glibc-2.6.1.ebuild:
+  Introduce eblits.
+
+  06 Aug 2007; Mike Frysinger <vapier@gentoo.org>
+  glibc-2.6.ebuild, glibc-2.6.1.ebuild:
+  Add default -march for x86 builds based on CHOST #185404.
 
 *glibc-2.6.1 (01 Aug 2007)
 *glibc-2.5.1 (01 Aug 2007)
