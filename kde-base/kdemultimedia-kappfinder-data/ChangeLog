@@ -1,9 +1,6 @@
 # ChangeLog for kde-base/kdemultimedia-kappfinder-data
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kappfinder-data/ChangeLog,v 1.66 2007/08/07 21:42:43 josejx Exp $
-
-  07 Aug 2007; Joseph Jezak <josejx@gentoo.org> ChangeLog:
-  Marked ppc stable.
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kappfinder-data/ChangeLog,v 1.67 2007/08/07 21:44:19 josejx Exp $
 
   07 Aug 2007; Joseph Jezak <josejx@gentoo.org>
   kdemultimedia-kappfinder-data-3.5.7.ebuild:
