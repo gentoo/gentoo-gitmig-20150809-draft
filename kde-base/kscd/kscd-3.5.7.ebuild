@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/kscd-3.5.7.ebuild,v 1.3 2007/08/07 18:07:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/kscd-3.5.7.ebuild,v 1.4 2007/08/07 21:39:07 josejx Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -10,7 +10,7 @@ inherit kde-meta eutils
 SRC_URI="${SRC_URI}"
 
 DESCRIPTION="KDE CD player"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcddb)"

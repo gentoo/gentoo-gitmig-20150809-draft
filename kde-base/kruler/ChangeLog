@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kruler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kruler/ChangeLog,v 1.63 2007/08/07 17:45:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kruler/ChangeLog,v 1.64 2007/08/07 21:54:11 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org> kruler-3.5.7.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> kruler-3.5.7.ebuild:
   Stable on sparc wrt #176297
