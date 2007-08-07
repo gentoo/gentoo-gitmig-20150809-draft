@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-crack
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-crack/ChangeLog,v 1.13 2007/07/31 12:52:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-crack/ChangeLog,v 1.14 2007/08/07 16:39:53 nixnut Exp $
+
+  07 Aug 2007; nixnut <nixnut@gentoo.org> pecl-crack-0.4.ebuild:
+  Stable on ppc wrt bug 187234
 
   31 Jul 2007; Markus Rothe <corsair@gentoo.org> ChangeLog:
   Stable on ppc64; bug #187234
