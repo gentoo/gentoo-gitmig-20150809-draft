@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.70 2007/08/04 15:14:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.71 2007/08/07 13:52:54 eva Exp $
+
+  07 Aug 2007; Gilles Dartiguelongue <eva@gentoo.org> gthumb-2.10.5.ebuild:
+  * remove jpeg use, it seems it is not optional any more
+  * fix bug #188001, missing gnome-doc-utils dependency
 
 *gthumb-2.10.5 (04 Aug 2007)
 
