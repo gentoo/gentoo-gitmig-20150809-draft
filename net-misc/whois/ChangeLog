@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.87 2007/07/01 11:55:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.88 2007/08/07 12:03:10 uberlord Exp $
+
+*whois-4.7.22 (07 Aug 2007)
+
+  07 Aug 2007; Roy Marples <uberlord@gentoo.org> +whois-4.7.22.ebuild:
+  Bump, #187954 thanks to Raúl Porcel.
 
   01 Jul 2007; Tobias Scherbaum <dertobi123@gentoo.org> whois-4.7.21.ebuild:
   hppa stable, bug #183412
