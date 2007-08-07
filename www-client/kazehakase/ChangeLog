@@ -1,6 +1,9 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.43 2007/08/05 13:53:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.44 2007/08/07 11:46:38 armin76 Exp $
+
+  07 Aug 2007; Raúl Porcel <armin76@gentoo.org> kazehakase-0.4.7.ebuild:
+  x86 stable wrt #187558
 
   05 Aug 2007; nixnut <nixnut@gentoo.org> kazehakase-0.4.7.ebuild:
   Stable on ppc wrt bug 187558
