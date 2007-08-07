@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7570 2007/08/06 19:04:58 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7571 2007/08/07 14:00:59 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -25,10 +25,6 @@
 # included in aircrack-ng since version 0.9.0
 # masked for removal in 30 days
 net-wireless/aircrack-ptw
-
-# Doug Goldstein <cardoe@gentoo.org> (06 Aug 2007)
-# new fixes branch that pulls straight from svn
-=media-tv/mythtv-0.20.1_p14146
 
 # Samuli Suominen <drac@gentoo.org> (05 Aug 2007)
 # Temp. mask new flac since it could potentially
