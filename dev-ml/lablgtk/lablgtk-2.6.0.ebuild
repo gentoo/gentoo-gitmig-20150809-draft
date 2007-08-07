@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.6.0.ebuild,v 1.12 2007/05/26 16:43:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.6.0.ebuild,v 1.13 2007/08/07 13:13:29 uberlord Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND=">=x11-libs/gtk+-2.4
 		>=x11-libs/gtkglarea-1.9 )"
 
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86 ~x86-fbsd"
 
 src_unpack() {
 	unpack ${A}

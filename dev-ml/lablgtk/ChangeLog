@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.51 2007/05/26 16:43:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.52 2007/08/07 13:13:29 uberlord Exp $
+
+  07 Aug 2007; Roy Marples <uberlord@gentoo.org> lablgtk-2.6.0.ebuild:
+  Keyworded ~x86-fbsd
 
   26 May 2007; Raúl Porcel <armin76@gentoo.org> lablgtk-2.6.0.ebuild:
   alpha stable wrt #143311
