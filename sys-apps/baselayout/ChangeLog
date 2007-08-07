@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.428 2007/08/04 20:38:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.429 2007/08/07 09:23:10 armin76 Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  07 Aug 2007; Raúl Porcel <armin76@gentoo.org>
+  baselayout-2.0.0_rc2-r1.ebuild:
+  Add ~alpha/~ia64 wrt #187487
 
 *baselayout-2.0.0_rc2-r1 (04 Aug 2007)
 
