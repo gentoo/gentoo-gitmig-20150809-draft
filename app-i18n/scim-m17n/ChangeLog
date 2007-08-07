@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-m17n
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.24 2007/01/05 16:29:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.25 2007/08/07 16:00:05 matsuu Exp $
+
+  07 Aug 2007; MATSUU Takuto <matsuu@gentoo.org> -scim-m17n-0.2.0.ebuild,
+  -scim-m17n-0.2.1.ebuild, scim-m17n-0.2.2.ebuild:
+  Fixed dependency, bug #186551.
+  Removed old versions.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> scim-m17n-0.1.3.ebuild,
   scim-m17n-0.2.0.ebuild, scim-m17n-0.2.1.ebuild, scim-m17n-0.2.2.ebuild:
