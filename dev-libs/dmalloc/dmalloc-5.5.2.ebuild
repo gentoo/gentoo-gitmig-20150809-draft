@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2.ebuild,v 1.1 2007/07/09 20:44:36 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2.ebuild,v 1.2 2007/08/07 17:53:28 drizzt Exp $
 
 inherit eutils autotools
 
 DESCRIPTION="A Debug Malloc Library"
 HOMEPAGE="http://dmalloc.com/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
+SRC_URI="http://dmalloc.com/releases/${P}.tgz"
 
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
