@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.141 2007/07/22 03:59:23 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.142 2007/08/07 10:08:54 uberlord Exp $
+
+  07 Aug 2007; Roy Marples <uberlord@gentoo.org> fvwm-2.5.21.ebuild:
+  Keyworded ~x86-fbsd, #141142 thanks to Robert Annessi
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> fvwm-2.5.18-r1.ebuild,
   fvwm-2.5.19.ebuild, fvwm-2.5.21.ebuild:
