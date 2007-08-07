@@ -1,0 +1,41 @@
+Index: writeffmpeg.c
+===================================================================
+--- blender.orig/source/blender/blenkernel/intern/writeffmpeg.c	(revision 11354)
++++ blender/source/blender/blenkernel/intern/writeffmpeg.c	(working copy)
+@@ -32,6 +32,7 @@
+ #include <ffmpeg/avformat.h>
+ #include <ffmpeg/avcodec.h>
+ #include <ffmpeg/rational.h>
++#include <ffmpeg/swscale.h>
+ 
+ #if LIBAVFORMAT_VERSION_INT < (49 << 16)
+ #define FFMPEG_OLD_FRAME_RATE 1
+@@ -258,6 +259,7 @@
+ static AVFrame* generate_video_frame(uint8_t* pixels) 
+ {
+ 	uint8_t* rendered_frame;
++	static struct SwsContext *img_convert_ctx;
+ 
+ 	AVCodecContext* c = get_codec_from_stream(video_stream);
+ 	int width = c->width;
+@@ -317,8 +319,18 @@
+ 	}
+ 
+ 	if (c->pix_fmt != PIX_FMT_RGBA32) {
+-		img_convert((AVPicture*)current_frame, c->pix_fmt, 
+-			(AVPicture*)rgb_frame, PIX_FMT_RGBA32, width, height);
++		if (img_convert_ctx == NULL)
++			img_convert_ctx = sws_getContext(c->width, c->height,
++							 PIX_FMT_RGBA32,
++							 c->width, c->height,
++							 c->pix_fmt,
++							 SWS_BICUBIC,
++							 NULL, NULL, NULL);
++		sws_scale(img_convert_ctx, rgb_frame->data,
++			  rgb_frame->linesize, 0, c->height, 
++			  current_frame->data, current_frame->linesize);
++//		img_convert((AVPicture*)current_frame, c->pix_fmt, 
++//			(AVPicture*)rgb_frame, PIX_FMT_RGBA32, width, height);
+ 		delete_picture(rgb_frame);
+ 	}
+ 	return current_frame;

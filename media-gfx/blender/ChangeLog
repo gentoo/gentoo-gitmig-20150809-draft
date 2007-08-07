@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.118 2007/07/22 10:04:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.119 2007/08/07 23:31:21 lu_zero Exp $
+
+  07 Aug 2007; Luca Barbato <lu_zero@gentoo.org>
+  +files/blender-2.44-swscale.patch, blender-2.44.ebuild:
+  make blender use swscale
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   blender-2.41-r1.ebuild, blender-2.42.ebuild, blender-2.42a-r1.ebuild,
