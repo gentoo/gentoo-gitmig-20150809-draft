@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/tagsoup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.23 2007/08/05 15:21:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.24 2007/08/07 15:29:57 corsair Exp $
+
+  07 Aug 2007; Markus Rothe <corsair@gentoo.org> tagsoup-1.1.ebuild:
+  Stable on ppc64; bug #187602
 
   05 Aug 2007; nixnut <nixnut@gentoo.org> tagsoup-1.1.ebuild:
   Stable on ppc wrt bug 187602
