@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3.ebuild,v 1.15 2007/04/22 21:04:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3.ebuild,v 1.16 2007/08/07 19:59:29 swegener Exp $
+
+WANT_AUTOCONF="2.5"
 
 inherit eutils flag-o-matic toolchain-funcs pam autotools
 
@@ -19,8 +21,7 @@ RDEPEND=">=sys-libs/ncurses-5.2
 		sec-policy/selinux-screen
 		>=sec-policy/selinux-base-policy-20050821
 	)"
-DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.58"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	# Make sure utmp group exists, as it's used later on.
@@ -69,8 +70,8 @@ src_unpack() {
 		doc/screen.1 \
 		|| die "sed doc/screen.1 failed"
 
-	# configure as delivered with screen is made with autoconf-2.5
-	WANT_AUTOCONF=2.5 eautoconf
+	# reconfigure
+	eautoconf
 }
 
 src_compile() {

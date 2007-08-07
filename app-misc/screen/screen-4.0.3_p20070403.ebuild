@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3_p20070403.ebuild,v 1.1 2007/08/07 19:50:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3_p20070403.ebuild,v 1.2 2007/08/07 19:59:29 swegener Exp $
 
 WANT_AUTOCONF="2.5"
 
@@ -125,4 +125,7 @@ pkg_postinst() {
 	elog "Some dangerous key bindings have been removed or changed to more safe values."
 	elog "We enable some xterm hacks in our default screenrc, which might break some"
 	elog "applications. Please check /etc/screenrc for information on these changes."
+
+	ewarn "Please terminate your running screen sessions, as screen now uses sockets"
+	ewarn "instead of fifos and the new version can't attach to the old sessions."
 }
