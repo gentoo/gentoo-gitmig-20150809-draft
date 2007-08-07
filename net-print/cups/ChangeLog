@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.246 2007/07/21 13:52:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.247 2007/08/07 11:59:35 armin76 Exp $
+
+  07 Aug 2007; Raúl Porcel <armin76@gentoo.org> cups-1.2.10-r1.ebuild:
+  ia64 stable wrt #180906
 
   21 Jul 2007; Raúl Porcel <armin76@gentoo.org> cups-1.2.10-r1.ebuild:
   alpha stable wrt #180909, thanks to Brian Evans and Tobias Klausmann for
