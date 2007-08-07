@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.106 2007/08/07 14:24:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.107 2007/08/07 19:52:39 dertobi123 Exp $
+
+  07 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  gtkhtml-3.14.3.ebuild:
+  Stable on ppc wrt bug #185823.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> gtkhtml-3.14.3.ebuild:
   Stable on sparc wrt #185823
