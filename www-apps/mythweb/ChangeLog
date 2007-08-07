@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.35 2007/06/28 19:13:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.36 2007/08/07 16:49:27 cardoe Exp $
+
+*mythweb-0.20.1_p14146 (07 Aug 2007)
+
+  07 Aug 2007; Doug Goldstein <cardoe@gentoo.org> mythweb-0.20.1.ebuild,
+  +mythweb-0.20.1_p14146.ebuild:
+  stable 0.20.1 to match rest of MythTV. upstream fixes in new ebuild. use
+  subversion builds.
 
 *mythweb-0.21_pre13775 (28 Jun 2007)
 

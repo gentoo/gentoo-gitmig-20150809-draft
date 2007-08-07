@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.20.1.ebuild,v 1.2 2007/08/07 16:49:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.20.1_p14146.ebuild,v 1.1 2007/08/07 16:49:27 cardoe Exp $
 
-inherit mythtv webapp depend.php
+inherit mythtv webapp depend.php subversion
 
 DESCRIPTION="PHP scripts intended to manage MythTV from a web browser."
 IUSE=""
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="virtual/httpd-php
 		dev-perl/DBI
@@ -23,7 +23,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
+	subversion_src_unpack
 	cd "${S}/.."
 	mythtv-fixes_patch
 	cd "${S}"
