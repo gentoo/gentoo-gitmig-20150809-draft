@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.36 2007/08/07 15:16:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.37 2007/08/07 19:45:02 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org>
+  mDNSResponder-107.6-r5.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   mDNSResponder-107.6-r5.ebuild:
