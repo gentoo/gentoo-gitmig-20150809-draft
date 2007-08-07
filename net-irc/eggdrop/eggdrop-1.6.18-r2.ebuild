@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.18-r2.ebuild,v 1.6 2007/08/06 02:59:59 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.18-r2.ebuild,v 1.7 2007/08/07 20:34:37 swegener Exp $
 
 inherit eutils
 
@@ -10,8 +10,7 @@ PATCHSET_V="1.2"
 DESCRIPTION="An IRC bot extensible with C or Tcl."
 HOMEPAGE="http://www.eggheads.org/"
 SRC_URI="ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/${MY_P}.tar.bz2
-	mirror://gentoo/${P}-patches-${PATCHSET_V}.tar.bz2
-	http://dev.gentoo.org/~swegener/distfiles/${P}-patches-${PATCHSET_V}.tar.bz2"
+	mirror://gentoo/${P}-patches-${PATCHSET_V}.tar.bz2"
 KEYWORDS="alpha amd64 ia64 mips ppc sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
@@ -35,7 +34,7 @@ src_unpack()  {
 		elog "Excluding patches, that install additional modules. This effectively"
 		elog "disables the mysql, postgres and ssl USE flags."
 		echo
-		rm "${WORKDIR}"/patch/[1-8]*.patch
+		rm -f "${WORKDIR}"/patch/[1-8]*.patch
 	fi
 
 	EPATCH_SUFFIX="patch" epatch || die "epatch failed"
