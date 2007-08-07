@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/libthrowable-1.0.0.ebuild,v 1.4 2007/07/10 19:22:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/libthrowable-1.0.0.ebuild,v 1.5 2007/08/07 02:58:57 vapier Exp $
 
 inherit eutils
 
@@ -29,9 +29,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	econf $(use_enable threads pthreads) \
-		|| die "econf failed"
-
+	econf $(use_enable threads pthreads) || die "econf failed"
 	emake || die "emake failed"
 }
 
@@ -45,7 +43,7 @@ src_install() {
 	fi
 }
 
-pkg_postinstall() {
+pkg_postinst() {
 	elog "Please run revdep-rebuild from app-portage/gentoolkit or rebuild"
 	elog "all depending packages yourself."
 }
