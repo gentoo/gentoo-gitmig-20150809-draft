@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.46 2007/08/05 15:08:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.47 2007/08/07 15:04:34 corsair Exp $
+
+  07 Aug 2007; Markus Rothe <corsair@gentoo.org> jaxen-1.1.1.ebuild:
+  Stable on ppc64; bug #187614
 
   05 Aug 2007; nixnut <nixnut@gentoo.org> jaxen-1.1.1.ebuild:
   Stable on ppc wrt bug 187614
