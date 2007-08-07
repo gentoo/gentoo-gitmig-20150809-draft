@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.306 2007/07/30 18:05:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.307 2007/08/07 15:25:43 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  kdegraphics-3.5.7-r1.ebuild:
+  Stable on sparc wrt #176297
 
 *kdegraphics-3.5.7-r1 (30 Jul 2007)
 

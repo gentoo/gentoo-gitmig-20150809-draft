@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.188 2007/06/03 22:30:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.189 2007/08/07 15:27:10 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  kdeartwork-3.5.7.ebuild:
+  Stable on sparc wrt #176297
 
   03 Jun 2007; Joshua Kinard <kumba@gentoo.org> kdeartwork-3.5.6.ebuild:
   Marked unstable on mips.

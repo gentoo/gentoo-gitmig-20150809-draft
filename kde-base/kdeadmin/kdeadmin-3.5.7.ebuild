@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.5.7.ebuild,v 1.1 2007/05/22 21:47:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.5.7.ebuild,v 1.2 2007/08/07 15:40:28 gustavoz Exp $
 
 inherit kde-dist
 
 DESCRIPTION="KDE administration tools (user manager, etc.)"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 sparc ~x86"
 IUSE="kdehiddenvisibility"
 
 DEPEND="~kde-base/kdebase-${PV}"
