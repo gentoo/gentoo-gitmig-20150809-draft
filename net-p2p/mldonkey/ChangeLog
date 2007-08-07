@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.173 2007/08/03 15:10:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.174 2007/08/07 07:20:47 killerfox Exp $
+
+  07 Aug 2007; René Nussbaumer <killerfox@gentoo.org>
+  mldonkey-2.9.0.ebuild:
+  Stable on hppa. See bug #186885.
 
   03 Aug 2007; Raúl Porcel <armin76@gentoo.org>
   files/mldonkey.initd-2.8-r1:
