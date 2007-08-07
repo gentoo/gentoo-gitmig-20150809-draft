@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.7_p20070327-r2.ebuild,v 1.4 2007/07/09 02:47:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.7_p20070327-r2.ebuild,v 1.5 2007/08/07 07:39:56 vapier Exp $
 
 ARTS_REQUIRED="never"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://gtk-qt.ecs.soton.ac.uk"
 SRC_URI="http://gentooexperimental.org/~genstef/dist/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 DEPEND="${DEPEND}
 	$(qt_min_version 3.3.8)
@@ -27,5 +27,5 @@ S=${WORKDIR}/${MY_PN}-${PV}
 
 src_install() {
 	kde_src_install
-	mv ${D}/usr/local/share/{locale,applications} ${D}/usr/share/
+	mv "${D}"/usr/local/share/{locale,applications} "${D}"/usr/share/ || die
 }
