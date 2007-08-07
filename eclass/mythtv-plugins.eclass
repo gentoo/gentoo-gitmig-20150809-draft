@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.25 2007/06/28 19:19:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.26 2007/08/07 16:24:42 cardoe Exp $
 #
 # Author: Doug Goldstein <cardoe@gentoo.org>
 #
@@ -46,7 +46,12 @@ mythtv-plugins_pkg_setup() {
 }
 
 mythtv-plugins_src_unpack() {
-	unpack ${A}
+	if [ -n "${SVNREV}" ]; then
+		subversion_src_unpack
+	else
+		unpack ${A}
+	fi
+
 	mythtv-plugins_src_unpack_patch
 }
 
