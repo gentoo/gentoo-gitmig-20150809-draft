@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-0.50.ebuild,v 1.2 2007/06/27 09:28:55 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-0.50.ebuild,v 1.3 2007/08/07 03:53:06 metalgod Exp $
 
 inherit eutils mono
 
@@ -10,7 +10,7 @@ SRC_URI="http://go-mono.com/sources/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
