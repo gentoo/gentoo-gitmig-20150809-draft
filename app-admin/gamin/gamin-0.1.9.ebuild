@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.9.ebuild,v 1.2 2007/08/07 15:55:49 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.9.ebuild,v 1.3 2007/08/07 16:41:16 uberlord Exp $
 
 inherit autotools eutils libtool
 
@@ -25,6 +25,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch "${FILESDIR}/${P}-user-cflags.patch"
+	epatch "${FILESDIR}/${P}-freebsd.patch"
 
 	# FreeBSD requires a newer install-sh - luckily either
 	# elibtoolize or eautoreconf will give us a new one
