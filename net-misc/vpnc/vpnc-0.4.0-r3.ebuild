@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.4.0-r3.ebuild,v 1.1 2007/07/25 11:37:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.4.0-r3.ebuild,v 1.2 2007/08/07 02:58:00 vapier Exp $
 
 inherit linux-info
 
@@ -22,10 +22,6 @@ pkg_setup()	 {
 	check_extra_config
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
 	emake PREFIX="/usr" DESTDIR="${D}" install || die "emake install failed"
 	dodoc README TODO VERSION
@@ -35,7 +31,7 @@ src_install() {
 	newinitd "${FILESDIR}/vpnc.init" vpnc
 }
 
-pkg_postinstall() {
+pkg_postinst() {
 	elog "You can generate a configuration file from the original Cisco profiles of your"
 	elog "connection by using /usr/bin/pcf2vpnc to convert the .pcf file"
 	elog "A guide is to be found in http://www.gentoo.org/doc/en/vpnc-howto.xml"
