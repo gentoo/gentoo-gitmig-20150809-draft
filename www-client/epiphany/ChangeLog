@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.116 2007/08/02 06:38:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.117 2007/08/07 14:49:50 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  epiphany-2.18.2.ebuild:
+  Stable on sparc wrt #185823
 
   02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
   epiphany-2.14.2.1-r1.ebuild, epiphany-2.14.3.ebuild,
