@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/makedev-3.23.1.ebuild,v 1.3 2007/01/03 06:07:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/makedev-3.23.1.ebuild,v 1.4 2007/08/07 14:51:37 uberlord Exp $
 
 inherit toolchain-funcs
 
@@ -17,6 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="build selinux"
 
+RDEPEND="!<sys-apps/baselayout-2.0.0_rc"
 DEPEND=""
 
 S=${WORKDIR}/${MY_P}
