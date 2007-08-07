@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7571 2007/08/07 14:00:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7572 2007/08/07 14:50:31 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -56,11 +56,6 @@ kde-misc/kxdocker-resources
 # Deprecated plugin, use pgpmime/pgpinline plugins shipped directly with
 # claws-mail and claws-mail-smime plugin shipped as a separate package.
 mail-client/claws-mail-etpan-privacy
-
-# Samuli Suominen <drac@gentoo.org> (01 Aug 2007)
-# Fails to link with ffmpeg-0.4.9_p20070616-r1, because
-# img_convert is obsolete, needs swscale patch.  Bug 183885.
-games-arcade/stepmania
 
 # Samuli Suominen <drac@gentoo.org> (30 Jul 2007)
 # Mask alpha releases.
