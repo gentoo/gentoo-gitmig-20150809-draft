@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.7.ebuild,v 1.3 2007/07/15 23:07:08 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.7.ebuild,v 1.4 2007/08/07 21:04:43 gustavoz Exp $
 
 inherit db-use kde-dist
 
@@ -8,7 +8,7 @@ DESCRIPTION="KDE SDK: Cervisia, KBabel, KCachegrind, Kompare, Umbrello,..."
 
 SRC_URI="${SRC_URI} mirror://gentoo/kdesdk-3.5-patchset-01.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc sparc ~x86"
 IUSE="berkdb kdehiddenvisibility subversion"
 
 DEPEND="!alpha? ( !sparc? ( !ia64? ( >=dev-util/valgrind-3.2.0 ) ) )

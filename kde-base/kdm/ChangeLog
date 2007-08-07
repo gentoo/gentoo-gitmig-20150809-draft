@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.93 2007/07/22 10:42:14 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.94 2007/08/07 17:38:02 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> kdm-3.5.7.ebuild:
+  Stable on sparc wrt #176297
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> kdm-3.5.5-r1.ebuild,
   kdm-3.5.6.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdeedu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.60 2007/05/23 02:15:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.61 2007/08/07 19:16:26 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  libkdeedu-3.5.7.ebuild:
+  Stable on sparc wrt #176297
 
 *libkdeedu-3.5.7 (23 May 2007)
 

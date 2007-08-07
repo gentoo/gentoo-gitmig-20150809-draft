@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/dcoppython
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.54 2007/05/27 17:00:37 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.55 2007/08/07 20:48:42 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  dcoppython-3.5.7.ebuild:
+  Stable on sparc wrt #176297
 
   27 May 2007; Marcus D. Hanwell <cryos@gentoo.org> dcoppython-3.5.7.ebuild:
   Remove patch, no longer needed. Closes bug 179969.

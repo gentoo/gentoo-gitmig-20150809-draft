@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kreversi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.64 2007/05/23 01:13:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.65 2007/08/07 18:25:41 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> kreversi-3.5.7.ebuild:
+  Stable on sparc wrt #176297
 
 *kreversi-3.5.7 (23 May 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/kdesu-3.5.7.ebuild,v 1.1 2007/05/22 23:22:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/kdesu-3.5.7.ebuild,v 1.2 2007/08/07 17:18:14 gustavoz Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-3.5-patchset-04.tar.bz2"
 
 DESCRIPTION="KDE: gui for su(1)"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.73 2007/05/22 21:05:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.74 2007/08/07 20:13:53 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  kaddressbook-3.5.7.ebuild:
+  Stable on sparc wrt #176297
 
 *kaddressbook-3.5.7 (22 May 2007)
 

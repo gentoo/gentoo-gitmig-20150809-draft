@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.53 2007/05/24 11:13:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.54 2007/08/07 17:11:42 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> kcminit-3.5.6.ebuild:
+  Stable on sparc wrt #176297
 
   24 May 2007; Carsten Lohrke <carlo@gentoo.org> kcminit-3.5.6.ebuild:
   Adjust MAXKDEVER.

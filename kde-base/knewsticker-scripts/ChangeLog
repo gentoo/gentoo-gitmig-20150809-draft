@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knewsticker-scripts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker-scripts/ChangeLog,v 1.63 2007/05/23 11:48:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker-scripts/ChangeLog,v 1.64 2007/08/07 20:39:40 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  knewsticker-scripts-3.5.7.ebuild:
+  Stable on sparc wrt #176297
 
   23 May 2007; Carsten Lohrke <carlo@gentoo.org>
   knewsticker-scripts-3.5.7.ebuild:

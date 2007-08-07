@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kontact
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.73 2007/07/28 15:05:25 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.74 2007/08/07 20:12:57 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  kontact-3.5.7-r1.ebuild:
+  Stable on sparc wrt #176297
 
   28 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org> kontact-3.5.6.ebuild,
   kontact-3.5.7.ebuild:

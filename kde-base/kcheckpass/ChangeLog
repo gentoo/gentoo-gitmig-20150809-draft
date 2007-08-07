@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.64 2007/07/25 17:16:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.65 2007/08/07 17:10:39 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  kcheckpass-3.5.7.ebuild:
+  Stable on sparc wrt #176297
 
 *kcheckpass-3.5.7 (25 Jul 2007)
 

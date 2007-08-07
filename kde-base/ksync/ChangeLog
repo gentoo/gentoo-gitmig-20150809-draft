@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksync
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksync/ChangeLog,v 1.67 2007/05/31 21:04:37 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksync/ChangeLog,v 1.68 2007/08/07 21:12:15 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> ksync-3.5.6.ebuild:
+  Stable on sparc wrt #176297
 
   31 May 2007; Wulf C. Krueger <philantrop@gentoo.org> ksync-3.5.6.ebuild:
   Changed MAXKDEVER to 3.5.7 to allow further use without pulling in old stuff.

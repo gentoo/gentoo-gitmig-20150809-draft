@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/secpolicy/secpolicy-3.5.6.ebuild,v 1.4 2007/05/24 11:27:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/secpolicy/secpolicy-3.5.6.ebuild,v 1.5 2007/08/07 19:32:08 gustavoz Exp $
 KMNAME=kdeadmin
 MAXKDEVER=3.5.7
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE: Display PAM security policies"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"
 DEPEND=""
 
