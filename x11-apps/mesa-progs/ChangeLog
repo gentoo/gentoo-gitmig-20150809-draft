@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/mesa-progs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.40 2007/07/02 13:52:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.41 2007/08/07 13:23:01 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  mesa-progs-6.5.2.ebuild:
+  Stable on sparc wrt #175465
 
   02 Jul 2007; Raúl Porcel <armin76@gentoo.org> mesa-progs-6.5.2.ebuild:
   alpha stable wrt #175465
