@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/patchutils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.34 2007/02/22 02:20:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.35 2007/08/07 11:41:19 uberlord Exp $
+
+  07 Aug 2007; Roy Marples <uberlord@gentoo.org> patchutils-0.2.30.ebuild:
+  Keyworded ~x86-fbsd, #141142 thanks to Robert Annessi
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
