@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.211 2007/08/07 15:39:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.212 2007/08/07 19:24:43 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org> kdeedu-3.5.7.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> kdeedu-3.5.7.ebuild:
   Stable on sparc wrt #176297

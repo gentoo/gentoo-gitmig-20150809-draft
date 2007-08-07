@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.380 2007/08/07 15:22:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.381 2007/08/07 19:08:29 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org> kdebase-3.5.7-r3.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   kdebase-3.5.7-r3.ebuild:
