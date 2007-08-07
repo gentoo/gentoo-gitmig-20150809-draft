@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.139 2007/08/07 13:49:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.140 2007/08/07 19:15:55 dertobi123 Exp $
+
+  07 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> cairo-1.4.10.ebuild:
+  Stable on ppc wrt bug #185823.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> cairo-1.4.10.ebuild:
   Stable on sparc wrt #185823
