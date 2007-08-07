@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-volume-manager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/ChangeLog,v 1.87 2007/08/02 05:37:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/ChangeLog,v 1.88 2007/08/07 14:41:11 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-volume-manager-2.17.0.ebuild:
+  Stable on sparc wrt #185823
 
   02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
   gnome-volume-manager-2.15.0.ebuild, gnome-volume-manager-2.15.0-r1.ebuild,
