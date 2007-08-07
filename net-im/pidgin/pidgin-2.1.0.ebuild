@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.0.ebuild,v 1.8 2007/08/03 14:19:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.1.0.ebuild,v 1.1 2007/08/07 02:19:41 tester Exp $
+
+WANT_AUTOMAKE=1.9
 
 inherit flag-o-matic eutils toolchain-funcs multilib autotools perl-app gnome2
 
@@ -13,9 +15,8 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi bonjour cjk crypt dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc startup-notification tcl tk xscreensaver spell ssl qq msn gadu"
-IUSE="${IUSE} gtk sasl ncurses groupwise prediction" # mono"
-IUSE="${IUSE} krb4"
+IUSE="avahi bonjour crypt dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc startup-notification tcl tk xscreensaver spell qq gadu"
+IUSE="${IUSE} gtk sasl ncurses groupwise prediction zephyr" # mono"
 
 RDEPEND="
 	bonjour? ( !avahi? ( net-misc/howl )
@@ -35,17 +36,11 @@ RDEPEND="
 		     =media-libs/gst-plugins-good-0.10* )
 	perl? ( >=dev-lang/perl-5.8.2-r1 )
 	gadu?  ( net-libs/libgadu )
-	ssl? (
-		gnutls? ( net-libs/gnutls )
-		!gnutls? ( >=dev-libs/nss-3.11 )
-	)
-	msn? (
-		gnutls? ( net-libs/gnutls )
-		!gnutls? ( >=dev-libs/nss-3.11 )
-	)
+	gnutls? ( net-libs/gnutls )
+	!gnutls? ( >=dev-libs/nss-3.11 )
 	meanwhile? ( net-libs/meanwhile )
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )
-	krb4? ( >=app-crypt/mit-krb5-1.3.6-r1 )
+	zephyr? ( >=app-crypt/mit-krb5-1.3.6-r1 )
 	tcl? ( dev-lang/tcl )
 	tk? ( dev-lang/tk )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
@@ -61,31 +56,43 @@ DEPEND="$RDEPEND
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-# PDEPEND="crypt? ( >=x11-plugins/gaim-encryption-3.0_beta5 )"
-
 S="${WORKDIR}/${MY_PV}"
 
 # Enable Default protocols
-DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple"
+DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn"
 
 # List of plugins yet to be ported (will be removed at some point)
-#   app-accessibility/festival-gaim
-#   net-im/gaim-blogger
 #   net-im/gaim-bnet
-#   net-im/gaim-meanwhile (integrated in gaim)
-#   net-im/gaim-snpp (will soon be net-im/pidgin-snpp)
 #   x11-plugins/autoprofile
-#   x11-plugins/gaim-assistant
-#   x11-plugins/gaim-latex
-#   x11-plugins/gaim-otr
-#   x11-plugins/gaimosd
 #   x11-plugins/gaim-xfire
+#   x11-plugins/gaim-galago
+#   x11-themes/gaim-smileys (get liquidx to fix it)
+
+# Abandonned
+#   x11-plugins/ignorance
+#   x11-plugins/bangexec
+#   x11-plugins/gaim-assistant
+# Last release in 2004
+#   net-im/gaim-blogger
+#   x11-plugins/gaimosd
+# Last release in 2005
+#   app-accessibility/festival-gaim
+# Merged into something else
+#   net-im/gaim-meanwhile (integrated in gaim)
+#   net-im/gaim-snpp (merged into the plugin pack)
+#   x11-plugins/gaim-slashexec (integrated into plugin pack)
 
 # List of plugins
-#   x11-plugins/pidgin-extprefs
+#   net-im/librvp
 #   x11-plugins/gaim-rhythmbox
 #   x11-plugins/guifications
 #   x11-plugins/pidgin-encryption
+#   x11-plugins/pidgin-extprefs
+#   x11-plugins/pidgin-hotkeys
+#   x11-plugins/pidgin-latex
+#   x11-plugins/pidgin-libnotify
+#   x11-plugins/pidgin-otr
+#   x11-plugins/purple-plugin_pack
 
 print_pidgin_warning() {
 	ewarn
@@ -110,7 +117,6 @@ print_pidgin_warning() {
 	ewarn
 	ewarn "Please read the pidgin FAQ at http://developer.pidgin.im/wiki/FAQ"
 	ewarn
-	einfo
 }
 
 pkg_setup() {
@@ -140,27 +146,21 @@ pkg_setup() {
 		die "Configure failed"
 	fi
 
-	if ! use gtk && ! use ncurses; then
+	if ! use gtk && ! use ncurses ; then
 		einfo
 		elog "As you did not pick gtk or ncurses use flag, building"
 		elog "console only."
 		einfo
 	fi
 
-	if use krb4 && ! built_with_use app-crypt/mit-krb5 krb4 ; then
+	if use zephyr && ! built_with_use app-crypt/mit-krb5 krb4 ; then
 		eerror
-		eerror You need to rebuild app-crypt/mit-krb5 with USE=krb4 in order to
-		eerror enable krb4 support for the zephyr protocol in gaim.
+		eerror "You need to rebuild app-crypt/mit-krb5 with USE=krb4 in order to"
+		eerror "enable krb4 support for the zephyr protocol in pidgin"
 		eerror
 		die "Configure failed"
 	fi
-}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-cchar_t-undeclared.patch"
 }
 
 src_compile() {
@@ -195,27 +195,22 @@ src_compile() {
 		DYNAMIC_PRPLS="${DYNAMIC_PRPLS},bonjour"
 	fi
 
-	if use msn; then
-		DYNAMIC_PRPLS="${DYNAMIC_PRPLS},msn"
-	fi
-
 	if use groupwise; then
 		DYNAMIC_PRPLS="${DYNAMIC_PRPLS},novell"
 	fi
 
-	if use ssl || use msn ; then
-		if use gnutls ; then
-			einfo "Disabling NSS, using GnuTLS"
-			myconf="${myconf} --enable-nss=no --enable-gnutls=yes"
-			myconf="${myconf} --with-gnutls-includes=/usr/include/gnutls"
-			myconf="${myconf} --with-gnutls-libs=/usr/$(get_libdir)"
-		else
-			einfo "Disabling GnuTLS, using NSS"
-			myconf="${myconf} --enable-gnutls=no --enable-nss=yes"
-		fi
+	if use zephyr; then
+		DYNAMIC_PRPLS="${DYNAMIC_PRPLS},zephyr"
+	fi
+
+	if use gnutls ; then
+		einfo "Disabling NSS, using GnuTLS"
+		myconf="${myconf} --enable-nss=no --enable-gnutls=yes"
+		myconf="${myconf} --with-gnutls-includes=/usr/include/gnutls"
+		myconf="${myconf} --with-gnutls-libs=/usr/$(get_libdir)"
 	else
-		einfo "No SSL support selected"
-		myconf="${myconf} --enable-gnutls=no --enable-nss=no"
+		einfo "Disabling GnuTLS, using NSS"
+		myconf="${myconf} --enable-gnutls=no --enable-nss=yes"
 	fi
 
 	if use xscreensaver ; then
@@ -223,7 +218,7 @@ src_compile() {
 	fi
 
 	if ! use ncurses && ! use gtk; then
-		myconf="${myconf} --enable-consoleui"
+		myconf="${myconf} --enable-consoleui --disable-gtkui"
 	else
 		myconf="${myconf} $(use_enable ncurses consoleui) $(use_enable gtk gtkui)"
 	fi
@@ -246,7 +241,7 @@ src_compile() {
 		$(use_enable doc doxygen) \
 		$(use_enable prediction cap) \
 		$(use_enable networkmanager nm) \
-		$(use_with krb4) \
+		$(use_with zephyr krb4) \
 		"--with-dynamic-prpls=${DYNAMIC_PRPLS}" \
 		--disable-mono \
 		${myconf} || die "Configuration failed"
