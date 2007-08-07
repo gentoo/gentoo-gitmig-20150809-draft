@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/gnocky
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnocky/ChangeLog,v 1.1 2005/10/31 10:31:50 s4t4n Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnocky/ChangeLog,v 1.2 2007/08/07 16:38:51 mrness Exp $
+
+*gnocky-0.0.4 (07 Aug 2007)
+
+  07 Aug 2007; Alin Năstac <mrness@gentoo.org> +gnocky-0.0.4.ebuild:
+  Version bump (#187986). Add ~amd64 keyword.
 
 *gnocky-0.0.3 (31 Oct 2005)
 
