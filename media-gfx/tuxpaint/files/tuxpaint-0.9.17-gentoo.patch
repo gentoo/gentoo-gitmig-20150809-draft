@@ -1,0 +1,153 @@
+diff -NurdB tuxpaint-0.9.17/Makefile tuxpaint-0.9.17-patched/Makefile
+--- tuxpaint-0.9.17/Makefile	2007-07-01 10:05:57.000000000 -0500
++++ tuxpaint-0.9.17-patched/Makefile	2007-08-06 20:27:53.000000000 -0500
+@@ -18,7 +18,7 @@
+ 
+ # Where to install things:
+ 
+-PREFIX=/usr/local
++PREFIX=/usr
+ 
+ 
+ # Root directory to place files when creating packages.
+@@ -62,11 +62,14 @@
+ 
+ ICON_PREFIX=$(PKG_ROOT)$(PREFIX)/share/pixmaps
+ X11_ICON_PREFIX=$(PKG_ROOT)$(PREFIX)/X11R6/include/X11/pixmaps
+-GNOME_PREFIX=`gnome-config --prefix 2> /dev/null`
+-KDE_PREFIX=`kde-config --install apps --expandvars 2> /dev/null`
+-KDE_ICON_PREFIX=`kde-config --install icon --expandvars 2> /dev/null`
++GNOME_PREFIX=
++KDE_PREFIX=
++KDE_ICON_PREFIX=
++DESKTOP_ICON_PREFIX=$(PREFIX)/share/icons
+ 
+ 
++ENABLE_GETTEXT=0
++
+ # Built with sound by default  (override with "make nosound")
+ 
+ NOSOUNDFLAG=__SOUND
+@@ -117,7 +120,7 @@
+ 
+ #-ffast-math
+ OPTFLAGS=-O2
+-CFLAGS=$(OPTFLAGS) -W -Wall -fno-common -ffloat-store \
++CFLAGS += -W -Wall -fno-common -ffloat-store \
+ 	-Wcast-align -Wredundant-decls \
+ 	-Wbad-function-cast -Wwrite-strings \
+ 	-Waggregate-return \
+@@ -141,7 +144,10 @@
+ 
+ # "make" with no arguments builds the program and man page from sources:
+ 
+-all:	tuxpaint translations
++all:	tuxpaint
++	@if [ -n "$(ENABLE_GETTEXT)" ] && [ $(ENABLE_GETTEXT) -eq 1 ]; then \
++		make translations; \
++	fi
+ 	@echo
+ 	@echo "--------------------------------------------------------------"
+ 	@echo
+@@ -284,10 +290,13 @@
+ # to do this as superuser ("root"))
+ 
+ install:	install-bin install-data install-man install-doc \
+-		install-icon install-gettext install-im install-importscript \
++		install-icon install-im install-importscript \
+ 		install-default-config install-example-stamps \
+ 		install-example-starters \
+-		install-gnome install-kde install-kde-icons
++		install-desktop-data
++	@if [ -n "$(ENABLE_GETTEXT)" ] && [ $(ENABLE_GETTEXT) -eq 1 ]; then \
++		make install-gettext; \
++	fi
+ 	@echo
+ 	@echo "--------------------------------------------------------------"
+ 	@echo
+@@ -505,16 +514,49 @@
+ 
+ # Install a launcher icon in the Gnome menu, under "Graphics"
+ 
+-install-gnome:
++install-desktop-data:
+ 	@echo
+-	@echo "...Installing launcher icon into GNOME..."
+-	@if [ "x$(GNOME_PREFIX)" != "x" ]; then \
+-	 install -d $(PKG_ROOT)$(GNOME_PREFIX)/share/pixmaps; \
+-	 cp data/images/icon.png $(PKG_ROOT)/$(GNOME_PREFIX)/share/pixmaps/tuxpaint.png; \
+-	 chmod 644 $(PKG_ROOT)$(GNOME_PREFIX)/share/pixmaps/tuxpaint.png; \
+-	 install -d $(PKG_ROOT)$(GNOME_PREFIX)/share/gnome/apps/Graphics; \
+-	 cp src/tuxpaint.desktop $(PKG_ROOT)$(GNOME_PREFIX)/share/gnome/apps/Graphics/; \
+-	 chmod 644 $(PKG_ROOT)$(GNOME_PREFIX)/share/gnome/apps/Graphics/tuxpaint.desktop; \
++	@echo "...Installing launcher entry..."
++	@if [ "x$(PREFIX)" != "x" ]; then \
++	 install -d $(PKG_ROOT)$(PREFIX)/share/applications; \
++	 cp src/tuxpaint.desktop $(PKG_ROOT)$(PREFIX)/share/applications/; \
++	 chmod 644 $(PKG_ROOT)$(PREFIX)/share/applications/tuxpaint.desktop; \
++	 install -d $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/scalable/apps/; \
++	 install -d $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/192x192/apps/; \
++	 install -d $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/128x128/apps/; \
++	 install -d $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/96x96/apps/; \
++	 install -d $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/64x64/apps/; \
++	 install -d $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/48x48/apps/; \
++	 install -d $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/32x32/apps/; \
++	 install -d $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/22x22/apps/; \
++	 install -d $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/16x16/apps/; \
++	 cp data/images/tuxpaint-icon.svg \
++		$(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/scalable/apps/tuxpaint.svg; \
++	 chmod 644 $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/scalable/apps/tuxpaint.svg; \
++	 cp data/images/icon192x192.png \
++		$(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/192x192/apps/tuxpaint.png; \
++	 chmod 644 $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/192x192/apps/tuxpaint.png; \
++	 cp data/images/icon128x128.png \
++		$(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/128x128/apps/tuxpaint.png; \
++	 chmod 644 $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/128x128/apps/tuxpaint.png; \
++	 cp data/images/icon96x96.png \
++		$(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/96x96/apps/tuxpaint.png; \
++	 chmod 644 $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/96x96/apps/tuxpaint.png; \
++	 cp data/images/icon64x64.png \
++		$(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/64x64/apps/tuxpaint.png; \
++	 chmod 644 $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/64x64/apps/tuxpaint.png; \
++	 cp data/images/icon48x48.png \
++		$(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/48x48/apps/tuxpaint.png; \
++	 chmod 644 $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/48x48/apps/tuxpaint.png; \
++	 cp data/images/icon32x32.png \
++		$(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/32x32/apps/tuxpaint.png; \
++	 chmod 644 $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/32x32/apps/tuxpaint.png; \
++	 cp data/images/icon22x22.png \
++		$(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/22x22/apps/tuxpaint.png; \
++	 chmod 644 $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/22x22/apps/tuxpaint.png; \
++	 cp data/images/icon16x16.png \
++		$(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/16x16/apps/tuxpaint.png; \
++	 chmod 644 $(PKG_ROOT)$(DESKTOP_ICON_PREFIX)/hicolor/16x16/apps/tuxpaint.png; \
+ 	fi
+ 
+ 
+@@ -608,9 +650,6 @@
+ 	@install -d $(ICON_PREFIX)
+ 	@cp data/images/icon.png $(ICON_PREFIX)/tuxpaint.png
+ 	@chmod 644 $(ICON_PREFIX)/tuxpaint.png
+-	@install -d $(X11_ICON_PREFIX)
+-	@cp data/images/icon32x32.xpm $(X11_ICON_PREFIX)/tuxpaint.xpm
+-	@chmod 644 $(X11_ICON_PREFIX)/tuxpaint.xpm
+ 
+ 
+ # Install the program:
+@@ -723,7 +762,7 @@
+ 		$(SDL_LIBS) \
+ 		$(SVG_LIB) \
+ 		$(PAPER_LIB) \
+-		-lm $(ARCH_LINKS)
++		-lm -lpng12 $(ARCH_LINKS)
+ 	@$(RSRC_CMD)
+ 	@$(MIMESET_CMD)
+ 
+diff -NurdB tuxpaint-0.9.17/src/tuxpaint.desktop tuxpaint-0.9.17-patched/src/tuxpaint.desktop
+--- tuxpaint-0.9.17/src/tuxpaint.desktop	2007-05-09 02:46:21.000000000 -0500
++++ tuxpaint-0.9.17-patched/src/tuxpaint.desktop	2007-08-06 20:23:04.000000000 -0500
+@@ -182,3 +182,4 @@
+ Comment[xh]=Inkqubo yokuzoba yabantwana.
+ Comment[zh_cn]=孩子的绘图程序。
+ Comment[zh_tw]=適合兒童的畫圖程式
++Categories=Application;Graphics;
