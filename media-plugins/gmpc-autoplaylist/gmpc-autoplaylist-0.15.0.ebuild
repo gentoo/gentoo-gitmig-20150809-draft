@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-autoplaylist/gmpc-autoplaylist-0.15.0.ebuild,v 1.4 2007/07/25 12:14:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-autoplaylist/gmpc-autoplaylist-0.15.0.ebuild,v 1.5 2007/08/07 15:54:18 gustavoz Exp $
 
 DESCRIPTION="The plugin allows you to generate a playlist based on a set of rules"
 HOMEPAGE="http://sarine.nl/gmpc-plugins-autoplaylist"
@@ -8,7 +8,7 @@ SRC_URI="http://download.sarine.nl/gmpc-${PV}/plugins/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc ~x86"
 IUSE=""
 
 DEPEND=">=media-sound/gmpc-${PV}
