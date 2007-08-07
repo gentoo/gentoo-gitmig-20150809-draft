@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gnome-keyring-manager-2.16.0-select-segfault.patch 790 RMD160 49ce0e51985e415cdcabff187f153ed028a81086 SHA1 080a2112a6f4983750a087314867c70b82f5ac90 SHA256 7eab4f7a2dc35f9718f56a266e59596033feba72fe1955c82bd5f5f060d93a95
 MD5 8feb8c85b0506dda188aa995bdd1a451 files/gnome-keyring-manager-2.16.0-select-segfault.patch 790
 RMD160 49ce0e51985e415cdcabff187f153ed028a81086 files/gnome-keyring-manager-2.16.0-select-segfault.patch 790
@@ -13,14 +16,14 @@ EBUILD gnome-keyring-manager-2.16.0-r1.ebuild 981 RMD160 391f74fa28f200499fdd430
 MD5 bfd4bb453c7c2c2387950a69dfd60155 gnome-keyring-manager-2.16.0-r1.ebuild 981
 RMD160 391f74fa28f200499fdd430ab943600d0ad7b329 gnome-keyring-manager-2.16.0-r1.ebuild 981
 SHA256 e30d5b697e53ccfb92b3c743ff21f5cc46c71286ce331440cb4e13a270f0539e gnome-keyring-manager-2.16.0-r1.ebuild 981
-EBUILD gnome-keyring-manager-2.18.0.ebuild 890 RMD160 676e7b7099c58749754c4e37ec9dff9bf95142c5 SHA1 66b663251d94e302e2a637bc962825ef584c87d4 SHA256 d0a494e12b081c6030dafa4105862cad631c86e3ec440a8cda2218c612e2d155
-MD5 ed272879c6029260d6bb18aa2d17ccd2 gnome-keyring-manager-2.18.0.ebuild 890
-RMD160 676e7b7099c58749754c4e37ec9dff9bf95142c5 gnome-keyring-manager-2.18.0.ebuild 890
-SHA256 d0a494e12b081c6030dafa4105862cad631c86e3ec440a8cda2218c612e2d155 gnome-keyring-manager-2.18.0.ebuild 890
-MISC ChangeLog 5826 RMD160 f6568574624fee7aafe8e6717cd1f8693492b29a SHA1 30eb169cdbd6e2e2feb037c4d60b6d9d888613fc SHA256 bc9f3a7f8a8c3f58459d2307f88f4eef6c3e9ed9b3c844405a779bbe397b9574
-MD5 edc5556362b9c628928313831bec25b6 ChangeLog 5826
-RMD160 f6568574624fee7aafe8e6717cd1f8693492b29a ChangeLog 5826
-SHA256 bc9f3a7f8a8c3f58459d2307f88f4eef6c3e9ed9b3c844405a779bbe397b9574 ChangeLog 5826
+EBUILD gnome-keyring-manager-2.18.0.ebuild 889 RMD160 c2dbf9993a9752202a5f88331bdd777a69874747 SHA1 e6129708cfe9e6bf71ddb4a2b5ab792af32011fb SHA256 2062f6298f678a132bcc6a1717fda8fb992a945e0ced4a6ba44fd9efa7197626
+MD5 89cb71830113381d06b7cca0483b97bb gnome-keyring-manager-2.18.0.ebuild 889
+RMD160 c2dbf9993a9752202a5f88331bdd777a69874747 gnome-keyring-manager-2.18.0.ebuild 889
+SHA256 2062f6298f678a132bcc6a1717fda8fb992a945e0ced4a6ba44fd9efa7197626 gnome-keyring-manager-2.18.0.ebuild 889
+MISC ChangeLog 5950 RMD160 7c45b5d9ef5febe1efccd1f77ddf08b02467ef44 SHA1 a694dae9f393616f3b35ca67be27a7968bc17dcb SHA256 f377c3fccc203c9ed78a2825d7a0f911912eee270eda439f6b1ba12eb7a774e5
+MD5 d69deccab96eaa1943e1d7bfb066a297 ChangeLog 5950
+RMD160 7c45b5d9ef5febe1efccd1f77ddf08b02467ef44 ChangeLog 5950
+SHA256 f377c3fccc203c9ed78a2825d7a0f911912eee270eda439f6b1ba12eb7a774e5 ChangeLog 5950
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -34,3 +37,10 @@ SHA256 bceee51919fee83461ce333ce77454325242ce2b3b405a96df509fdb48d598b6 files/di
 MD5 c3fe579293bf5e2b4c74b82eb3546250 files/digest-gnome-keyring-manager-2.18.0 289
 RMD160 200ddd82c56ac3c08b20e9a2b250e81695e281fe files/digest-gnome-keyring-manager-2.18.0 289
 SHA256 26c93cb99286f4fb0e2c53d868b2fd78017f4318f5f4c13ac943feab4e6a12a3 files/digest-gnome-keyring-manager-2.18.0 289
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFGuHw+KRy60XGEcJIRApdbAJ9Wmaa8U3NLr2vcJVlxCep3OtaymACeJqdx
+Pq+OVoY/SxHAqzCEpXcDcgA=
+=yMMB
+-----END PGP SIGNATURE-----
