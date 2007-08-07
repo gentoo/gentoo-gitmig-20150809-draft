@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.58 2007/07/13 18:45:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.59 2007/08/07 16:17:17 cardoe Exp $
+
+*mythmusic-0.20.1_p14146 (07 Aug 2007)
+
+  07 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  +mythmusic-0.20.1_p14146.ebuild:
+  upstream fixes including fix for FLAC 1.1.4 bug #187796.
 
   13 Jul 2007; Doug Goldstein <cardoe@gentoo.org>
   mythmusic-0.20.1_p13375.ebuild, mythmusic-0.21_pre13775.ebuild:
