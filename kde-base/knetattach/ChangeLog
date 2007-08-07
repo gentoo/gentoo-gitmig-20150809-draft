@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knetattach
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetattach/ChangeLog,v 1.66 2007/08/07 17:34:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetattach/ChangeLog,v 1.67 2007/08/07 22:30:07 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org> knetattach-3.5.7.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   knetattach-3.5.7.ebuild:

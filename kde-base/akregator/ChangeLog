@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.77 2007/08/07 20:23:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.78 2007/08/07 22:57:32 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org> akregator-3.5.7-r1.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   akregator-3.5.7-r1.ebuild:

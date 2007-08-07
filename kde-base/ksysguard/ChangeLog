@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.84 2007/08/07 17:19:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.85 2007/08/07 22:33:46 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org> ksysguard-3.5.7.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   ksysguard-3.5.7.ebuild:

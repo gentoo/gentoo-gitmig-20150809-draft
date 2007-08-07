@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.95 2007/08/07 17:25:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.96 2007/08/07 23:00:07 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org>
+  kdebase-kioslaves-3.5.7-r1.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   kdebase-kioslaves-3.5.7-r1.ebuild:

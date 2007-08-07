@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu-applnk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-applnk/ChangeLog,v 1.62 2007/08/07 19:21:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-applnk/ChangeLog,v 1.63 2007/08/07 22:21:42 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org> kdeedu-applnk-3.5.7.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   kdeedu-applnk-3.5.7.ebuild:

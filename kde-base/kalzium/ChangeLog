@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.69 2007/08/07 19:29:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.70 2007/08/07 22:28:01 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org> kalzium-3.5.7.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> kalzium-3.5.7.ebuild:
   Stable on sparc wrt #176297
