@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.38 2007/07/30 18:15:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.39 2007/08/07 13:23:50 drac Exp $
+
+  07 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  +files/moc-2.5.0_alpha2-endianess.patch, moc-2.5.0_alpha2.ebuild:
+  Apply endianess fixes from bug 169785, by Damian Pietras, Elimar Riesebieter
+  and Hendrik Iben.
 
 *moc-2.5.0_alpha2 (30 Jul 2007)
 
