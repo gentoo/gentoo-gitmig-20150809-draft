@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.2-r1.ebuild,v 1.12 2007/07/30 07:40:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.2-r1.ebuild,v 1.13 2007/08/07 12:48:39 gustavoz Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://mesa3d.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mesa3d/${MY_SRC_P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE_VIDEO_CARDS="
 	video_cards_i810
 	video_cards_mach64
