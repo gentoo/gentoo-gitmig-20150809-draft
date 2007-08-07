@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/udept
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/ChangeLog,v 1.9 2007/06/02 03:22:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/ChangeLog,v 1.10 2007/08/07 19:36:36 fuzzyray Exp $
+
+  07 Aug 2007; Paul Varner <fuzzyray@gentoo.org>
+  files/udept.default-use.patch:
+  Updated default use patch to account for env.d in USE_ORDER. Bug #187979
 
   02 Jun 2007; Joshua Kinard <kumba@gentoo.org> udept-0.5.96.2.ebuild:
   Mark unstable on mips.

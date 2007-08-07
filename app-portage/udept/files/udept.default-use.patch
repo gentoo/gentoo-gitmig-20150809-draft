@@ -11,7 +11,7 @@ Index: dep.in
  	local component="$1" cpv="$2"
  	case "$component" in
  		env) sed 's/[[:space:]]\+/\n/g' <<<"$USE" | tac;;
-@@ -1154,8 +1156,10 @@
+@@ -1154,8 +1156,11 @@
  				dep_satisfies "$cpv" $package && echo $use
  			done | sed 's/[[:space:]]\+/\n/g';;
  		conf) sed 's/[[:space:]]\+/\n/g' <<<"$__conf_USE";;
@@ -19,6 +19,7 @@ Index: dep.in
  		auto) autouse;;
  		defaults);;
 +		pkginternal);;
++		env.d);;
  		*) format_error <<<"Unknown USE component: $component" >&2;;
  	esac
  }
