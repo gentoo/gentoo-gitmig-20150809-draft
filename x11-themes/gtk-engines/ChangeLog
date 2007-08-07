@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.101 2007/07/11 02:44:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.102 2007/08/07 13:42:32 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gtk-engines-2.10.2.ebuild:
+  Stable on sparc wrt #185823
 
   11 Jul 2007; Mart Raudsepp <leio@gentoo.org>
   -files/gtk-engines-2.8.2-smooth-arrow.patch, gtk-engines-2.6.9.ebuild,
