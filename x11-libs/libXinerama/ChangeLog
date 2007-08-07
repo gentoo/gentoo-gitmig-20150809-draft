@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXinerama
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/ChangeLog,v 1.36 2007/08/06 06:21:49 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/ChangeLog,v 1.37 2007/08/07 13:12:10 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  libXinerama-1.0.2.ebuild:
+  Stable on sparc wrt #175465
 
   06 Aug 2007; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Fix up changelog to stop gentoo.tamperd.net/stable/ warning.
