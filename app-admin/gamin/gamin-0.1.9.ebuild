@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.9.ebuild,v 1.1 2007/08/07 15:36:23 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.9.ebuild,v 1.2 2007/08/07 15:55:49 uberlord Exp $
 
 inherit autotools eutils libtool
 
@@ -25,6 +25,10 @@ src_unpack() {
 
 	cd ${S}
 	epatch "${FILESDIR}/${P}-user-cflags.patch"
+
+	# FreeBSD requires a newer install-sh - luckily either
+	# elibtoolize or eautoreconf will give us a new one
+	rm -f install-sh
 
 	# autoconf is required as the user-cflags patch modifies configure.in
 	# however, elibtoolize is also required, so when the above patch is
