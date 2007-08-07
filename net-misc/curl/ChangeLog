@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.97 2007/08/07 12:44:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.98 2007/08/07 14:14:16 corsair Exp $
+
+  07 Aug 2007; Markus Rothe <corsair@gentoo.org> curl-7.16.4.ebuild:
+  Stable on ppc64; bug #187731
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> curl-7.16.4.ebuild:
   Stable on sparc wrt #187731
