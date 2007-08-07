@@ -1,9 +1,11 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.39 2007/08/07 02:58:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.40 2007/08/07 03:07:43 vapier Exp $
 
-  07 Aug 2007; Mike Frysinger <vapier@gentoo.org> vpnc-0.4.0-r3.ebuild:
-  Punt useless src_compile() and fix pkg_postinst() typo.
+  07 Aug 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/vpnc-0.4.0-build.patch, vpnc-0.4.0-r3.ebuild:
+  Punt useless src_compile() and fix pkg_postinst() typo.  Respect
+  CFLAGS/LDFLAGS and dont force -O3.
 
 *vpnc-0.4.0-r3 (25 Jul 2007)
 
