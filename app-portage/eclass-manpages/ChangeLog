@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/eclass-manpages
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.4 2007/08/07 01:05:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.5 2007/08/07 01:48:02 vapier Exp $
+
+  07 Aug 2007; Mike Frysinger <vapier@gentoo.org>
+  files/eclass-to-manpage.awk:
+  Add support for @RETURN values.
 
   07 Aug 2007; Mike Frysinger <vapier@gentoo.org>
   files/eclass-to-manpage.awk:
