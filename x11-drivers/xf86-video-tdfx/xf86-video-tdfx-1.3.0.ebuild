@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/xf86-video-tdfx-1.3.0.ebuild,v 1.7 2007/07/03 13:13:13 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/xf86-video-tdfx-1.3.0.ebuild,v 1.8 2007/08/07 12:55:49 gustavoz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="3Dfx video driver"
-KEYWORDS="alpha amd64 arm ia64 ppc sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ia64 ppc sh sparc x86 ~x86-fbsd"
 IUSE="dri"
 RDEPEND=">=x11-base/xorg-server-1.0.99"
 DEPEND="${RDEPEND}

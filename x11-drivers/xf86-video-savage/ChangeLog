@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-savage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/ChangeLog,v 1.35 2007/07/03 13:11:03 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/ChangeLog,v 1.36 2007/08/07 12:55:02 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  xf86-video-savage-2.1.2-r1.ebuild:
+  Stable on sparc wrt #175465
 
   03 Jul 2007; Lars Weiler <pylon@gentoo.org>
   xf86-video-savage-2.1.2-r1.ebuild:
