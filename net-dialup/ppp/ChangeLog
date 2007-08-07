@@ -1,9 +1,20 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.192 2007/08/04 11:08:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.193 2007/08/07 20:31:51 mrness Exp $
+
+  07 Aug 2007; Alin Năstac <mrness@gentoo.org> +ppp-2.4.4-r10.ebuild:
+  Add defaultmetric option and allow setting the default route even if one
+  already exist (but has a different metric). Load ppp_generic kernel module
+  before trying to open /dev/ppp (#163098).
 
   04 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> ppp-2.4.4-r9.ebuild:
   ppc stable, bug #184696
+
+*ppp-2.4.4-r10 (07 Aug 2007)
+
+  07 Aug 2007; Alin Năstac <mrness@gentoo.org> +ppp-2.4.4-r10.ebuild:
+  Add defaultmetric option. Load ppp_generic kernel module before trying to
+  open /dev/ppp (#163098).
 
   28 Jul 2007; Christoph Mende <angelos@gentoo.org> ppp-2.4.4-r9.ebuild:
   Stable on amd64 wrt bug #184696
