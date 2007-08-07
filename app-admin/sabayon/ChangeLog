@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.18 2007/04/24 15:08:10 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.19 2007/08/07 14:34:52 gustavoz Exp $
+
+  07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> sabayon-2.18.1.ebuild:
+  Stable on sparc wrt #185823
 
 *sabayon-2.18.1 (24 Apr 2007)
 
