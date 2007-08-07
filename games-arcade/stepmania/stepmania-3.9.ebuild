@@ -1,29 +1,30 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.9 2007/08/01 16:53:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.10 2007/08/07 14:35:25 drac Exp $
 
-inherit eutils autotools games
+inherit autotools eutils games
 
 MY_PV="${PV/_/-}"
 DESCRIPTION="An advanced DDR simulator"
 HOMEPAGE="http://www.stepmania.com/stepmania/"
 SRC_URI="mirror://sourceforge/stepmania/StepMania-${MY_PV}-src.tar.gz
-	mirror://sourceforge/stepmania/StepMania-${MY_PV}-linux.tar.gz"
+	mirror://sourceforge/stepmania/StepMania-${MY_PV}-linux.tar.gz
+	http://dev.gentoo.org/~drac/distfiles/${PN}-patches-1.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug gtk jpeg mp3 mpeg vorbis force-oss"
+IUSE="debug gtk jpeg mad ffmpeg vorbis force-oss"
 
 RESTRICT="test"
 
 RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
-	mp3? ( media-libs/libmad )
+	mad? ( media-libs/libmad )
 	>=dev-lang/lua-5
 	media-libs/libsdl
 	jpeg? ( media-libs/jpeg )
 	media-libs/libpng
-	mpeg? ( ~media-video/ffmpeg-0.4.9_p20070330 )
+	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070330 )
 	vorbis? ( media-libs/libvorbis )
 	virtual/opengl
 	virtual/glu"
@@ -40,37 +41,25 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	sed "s:/usr/share/games/${PN}:${GAMES_DATADIR}/${PN}:" \
-		"${FILESDIR}"/${P}-gentoo.patch > "${T}"/gentoo.patch \
-		|| die "sed failed"
-	epatch \
-		"${T}"/gentoo.patch \
-		"${FILESDIR}/${P}"-gcc41.patch \
-		"${FILESDIR}/${P}"-64bits.patch \
-		"${FILESDIR}/${P}"-ffmpeg.patch \
-		"${FILESDIR}/${P}"-vorbis.patch \
-		"${FILESDIR}/${P}"-sdl.patch \
-		"${FILESDIR}/${P}"-alsa.patch \
-		"${FILESDIR}/${P}"-alias.patch \
-		"${FILESDIR}/${P}"-gettid.patch \
-		"${FILESDIR}/${P}"-lua51.patch \
-		"${FILESDIR}/${P}"-ffmpeg-stdint.patch \
-		"${FILESDIR}/${P}"-crashfix.patch
+		"${FILESDIR}"/${P}-gentoo.patch > "${T}"/gentoo.patch
+
+	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patches
+	epatch "${T}"/gentoo.patch
 
 	AT_M4DIR="autoconf/m4"
 	eautoreconf
 }
 
 src_compile() {
-	econf \
-		--disable-dependency-tracking \
+	econf --disable-dependency-tracking \
 		$(use_with debug) \
 		$(use_with jpeg) \
 		$(use_with vorbis) \
-		$(use_with mp3) \
+		$(use_with mad mp3) \
 		$(use_enable gtk gtk2) \
-		$(use_enable force-oss) \
-		|| die
+		$(use_enable force-oss)
 	emake || die "emake failed."
 }
 
