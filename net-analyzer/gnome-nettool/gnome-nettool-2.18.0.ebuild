@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-2.18.0.ebuild,v 1.2 2007/04/23 19:46:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-2.18.0.ebuild,v 1.3 2007/08/07 00:36:01 dang Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Collection of network tools"
 HOMEPAGE="http://www.gnome.org/projects/gnome-network/"
@@ -32,4 +32,10 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
 	G2CONF="`use_enable debug`"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	epatch "${FILESDIR}"/${P}-fbsd.patch
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.48 2007/03/27 20:51:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.49 2007/08/07 00:36:01 dang Exp $
+
+  07 Aug 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gnome-nettool-2.18.0-fbsd.patch, gnome-nettool-2.18.0.ebuild:
+  Patch for freebsd; bug #183579
 
 *gnome-nettool-2.18.0 (27 Mar 2007)
 
