@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-bitmapfont/wqy-bitmapfont-0.8.1.ebuild,v 1.1 2007/07/29 22:24:03 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-bitmapfont/wqy-bitmapfont-0.8.1-r1.ebuild,v 1.1 2007/08/07 15:11:22 dirtyepic Exp $
 
 inherit font
 
@@ -16,15 +16,8 @@ S="${WORKDIR}/${PN}"
 FONT_S="${S}"
 FONT_CONF="85-wqy-bitmapsong.conf"
 
-FONT_SUFFIX="pcf.gz"
+FONT_SUFFIX="pcf"
 DOCS="INSTALL* LATEST-IS* STAT README LOGO.PNG CREDIT ChangeLog"
 
 # Only installs fonts
 RESTRICT="strip binchecks"
-
-src_compile() {
-	cd "${FONT_S}"
-	for file in *.pcf; do
-		gzip -9 ${file} || die "gzip failed"
-	done
-}
