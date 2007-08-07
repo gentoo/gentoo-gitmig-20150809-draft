@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.21.0-r2.ebuild,v 1.7 2006/02/17 16:38:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.21.0-r2.ebuild,v 1.8 2007/08/07 20:09:22 swegener Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ DEPEND="virtual/libc
 	msn? ( net-misc/curl )"
 
 RDEPEND="${DEPEND}
+	!net-im/centerim
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
