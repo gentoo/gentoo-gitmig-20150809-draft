@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konsolekalendar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.69 2007/08/07 20:24:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.70 2007/08/07 21:08:18 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org>
+  konsolekalendar-3.5.7.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   konsolekalendar-3.5.7.ebuild:

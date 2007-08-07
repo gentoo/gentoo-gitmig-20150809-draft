@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-meta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.69 2007/08/07 18:05:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.70 2007/08/07 20:27:32 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org>
+  kdeartwork-meta-3.5.7.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   kdeartwork-meta-3.5.7.ebuild:

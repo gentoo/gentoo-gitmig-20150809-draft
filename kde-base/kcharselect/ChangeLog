@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.54 2007/08/07 19:52:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.55 2007/08/07 20:37:32 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org> kcharselect-3.5.7.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   kcharselect-3.5.7.ebuild:

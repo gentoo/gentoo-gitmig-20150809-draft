@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/superkaramba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.49 2007/08/07 19:42:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.50 2007/08/07 20:28:11 josejx Exp $
+
+  07 Aug 2007; Joseph Jezak <josejx@gentoo.org> superkaramba-3.5.7.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   superkaramba-3.5.7.ebuild:
