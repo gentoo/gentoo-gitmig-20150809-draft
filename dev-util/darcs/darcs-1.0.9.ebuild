@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.9.ebuild,v 1.4 2007/08/07 17:04:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.9.ebuild,v 1.5 2007/08/08 19:07:13 kolmodin Exp $
 
 inherit base autotools eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND=">=net-misc/curl-7.10.2
-	>=virtual/ghc-6.2.2
+	>=dev-lang/ghc-6.2.2
 	dev-haskell/quickcheck
 	dev-haskell/mtl
 	dev-haskell/html
@@ -38,8 +38,8 @@ src_unpack() {
 
 	# If we're going to use the CFLAGS with GHC's -optc flag then we'd better
 	# use it with -opta too or it'll break with some CFLAGS, eg -mcpu on sparc
-	sed -i 's:\($(addprefix -optc,$(CFLAGS))\):\1 $(addprefix -opta,$(CFLAGS)):' \
-		${S}/autoconf.mk.in
+	sed -i 's:\($(addprefix -optc,$(CFLAGS) $(CPPFLAGS))\):\1 $(addprefix -opta,$(CFLAGS)):' \
+		"${S}/autoconf.mk.in"
 
 	# On ia64 we need to tone down the level of inlining so we don't break some
 	# of the low level ghc/gcc interaction gubbins.
