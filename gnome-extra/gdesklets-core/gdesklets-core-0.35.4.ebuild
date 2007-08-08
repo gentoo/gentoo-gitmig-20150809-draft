@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.4.ebuild,v 1.10 2007/05/21 12:03:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.4.ebuild,v 1.11 2007/08/08 03:07:17 nixphoeni Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -20,8 +20,10 @@ SLOT="0"
 IUSE="doc"
 KEYWORDS="alpha amd64 ia64 ppc ~sparc x86"
 
+# is libgsf needed for runtime or just compiling?
 RDEPEND=">=dev-lang/python-2.3
 	>=dev-libs/glib-2.4
+	gnome-extra/libgsf
 	>=gnome-base/librsvg-2.8
 	>=gnome-base/libgtop-2.8.2
 	>=dev-python/pygtk-2.4
