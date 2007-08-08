@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.60 2007/08/08 13:05:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.61 2007/08/08 16:38:32 drac Exp $
+
+  08 Aug 2007; Samuli Suominen <drac@gentoo.org> bmpx-0.40.0.ebuild:
+  Inform users to install gst-plugins they want themselfs.
 
 *bmpx-0.40.0 (08 Aug 2007)
 
