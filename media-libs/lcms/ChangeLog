@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.78 2007/03/27 11:12:20 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.79 2007/08/08 22:31:14 genstef Exp $
+
+*lcms-1.17 (08 Aug 2007)
+
+  08 Aug 2007; Stefan Schweizer <genstef@gentoo.org> +lcms-1.17.ebuild:
+  Version bump thanks gergan from the minefield overlay and multilib fix
+  thanks Kenneth Prugh <ken69267@gmail.com> and keytoaster for reporting in
+  bug 185294
 
   27 Mar 2007; Roy Marples <uberlord@gentoo.org> lcms-1.16.ebuild:
   Refresh install-sh from libtool so we correctly install on FreeBSD.
