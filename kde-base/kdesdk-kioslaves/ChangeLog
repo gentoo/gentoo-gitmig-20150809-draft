@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-kioslaves
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.62 2007/08/08 11:02:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.63 2007/08/08 21:09:49 armin76 Exp $
+
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org>
+  kdesdk-kioslaves-3.5.7.ebuild:
+  alpha/ia64 stable wrt #176297
 
   08 Aug 2007; Joseph Jezak <josejx@gentoo.org>
   kdesdk-kioslaves-3.5.7.ebuild:
