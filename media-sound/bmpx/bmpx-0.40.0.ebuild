@@ -1,16 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.0_rc3.ebuild,v 1.3 2007/08/03 14:45:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.0.ebuild,v 1.1 2007/08/08 13:05:15 drac Exp $
 
-inherit fdo-mime flag-o-matic gnome2-utils versionator
+inherit fdo-mime gnome2-utils versionator
 
 MY_PR="$(get_version_component_range 1-2 ${PV})"
-MY_PV=${PV/_rc/RC}
-MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="Next generation Beep Media Player"
 HOMEPAGE="http://www.beep-media-player.org"
-SRC_URI="http://files.beep-media-player.org/releases/${MY_PR}/${MY_P}.tar.bz2"
+SRC_URI="http://files.beep-media-player.org/releases/${MY_PR}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,7 +18,7 @@ IUSE="aac debug hal modplug sid startup-notification"
 RDEPEND=">=net-libs/libsoup-2.2
 	>=dev-db/sqlite-3.3
 	>=dev-libs/glib-2.10
-	>=dev-cpp/glibmm-2.8.3
+	>=dev-cpp/glibmm-2.12
 	>=dev-libs/libsigc++-2
 	>=x11-libs/gtk+-2.10
 	>=gnome-base/librsvg-2.14
@@ -29,7 +27,7 @@ RDEPEND=">=net-libs/libsoup-2.2
 	>=dev-cpp/cairomm-0.6
 	>=dev-cpp/libsexymm-0.1.9
 	>=dev-libs/libxml2-2.6.1
-	>=media-libs/gst-plugins-base-0.10.9
+	>=media-libs/gst-plugins-base-0.10.11
 	>=dev-libs/dbus-glib-0.61
 	virtual/fam
 	>=media-libs/taglib-1.4
@@ -50,13 +48,8 @@ DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt"
 
-S="${WORKDIR}"/${MY_P}
-
 src_compile() {
-	# This has been fixed in upstream. Remove this line with version bump!
-	filter-ldflags -Wl,--as-needed --as-needed
-
-	econf --enable-ofa \
+	econf --with-tr1 \
 		$(use_enable modplug) \
 		$(use_enable aac mp4v2) \
 		$(use_enable hal) \
@@ -69,7 +62,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog README
+	dodoc AUTHORS README
 }
 
 pkg_postinst() {
