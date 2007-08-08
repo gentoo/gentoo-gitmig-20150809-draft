@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libtimidity
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.4 2007/08/02 19:08:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.5 2007/08/08 17:20:45 gustavoz Exp $
+
+  08 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  libtimidity-0.1.0.ebuild:
+  Keyworded ~sparc wrt #187498
 
   02 Aug 2007; Samuli Suominen <drac@gentoo.org> libtimidity-0.1.0.ebuild:
   Keyword ~amd64, tested by Ken69267, with permission from archteam.
