@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.98 2007/08/07 20:01:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.99 2007/08/08 22:28:56 armin76 Exp $
+
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org> gok-1.2.5.ebuild:
+  alpha/ia64 stable wrt #185823
 
   07 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> gok-1.2.5.ebuild:
   Stable on ppc wrt bug #185823.
