@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdeedu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.63 2007/08/08 19:40:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.64 2007/08/08 19:52:41 armin76 Exp $
+
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org> ChangeLog:
+  alpha/ia64 stable wrt #176297
 
   08 Aug 2007; Raúl Porcel <armin76@gentoo.org> libkdeedu-3.5.7.ebuild:
   alpha/ia64 stable wrt #176297

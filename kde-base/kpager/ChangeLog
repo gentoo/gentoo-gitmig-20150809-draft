@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpager/ChangeLog,v 1.67 2007/08/07 22:36:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpager/ChangeLog,v 1.68 2007/08/08 20:00:55 armin76 Exp $
+
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org> kpager-3.5.7.ebuild:
+  alpha/ia64 stable wrt #176297
 
   07 Aug 2007; Joseph Jezak <josejx@gentoo.org> kpager-3.5.7.ebuild:
   Marked ppc stable.
