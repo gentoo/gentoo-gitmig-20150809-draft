@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.55 2007/08/07 23:03:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.56 2007/08/08 20:22:00 armin76 Exp $
+
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org> kcminit-3.5.6.ebuild:
+  alpha/ia64 stable wrt #176297
 
   07 Aug 2007; Joseph Jezak <josejx@gentoo.org> kcminit-3.5.6.ebuild:
   Marked ppc stable.

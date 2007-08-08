@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.69 2007/08/07 23:07:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.70 2007/08/08 20:17:47 armin76 Exp $
+
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org> kdebase-data-3.5.7.ebuild:
+  alpha/ia64 stable wrt #176297
 
   07 Aug 2007; Joseph Jezak <josejx@gentoo.org> kdebase-data-3.5.7.ebuild:
   Marked ppc stable.
