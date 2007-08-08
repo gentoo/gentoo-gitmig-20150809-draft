@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kapptemplate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.47 2007/08/08 11:04:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.48 2007/08/08 21:21:53 armin76 Exp $
+
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org> kapptemplate-3.5.6.ebuild:
+  alpha stable wrt #176297
 
   08 Aug 2007; Joseph Jezak <josejx@gentoo.org> kapptemplate-3.5.6.ebuild:
   Marked ppc stable.

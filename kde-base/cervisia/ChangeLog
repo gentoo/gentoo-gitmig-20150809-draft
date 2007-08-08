@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.63 2007/08/08 10:55:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.64 2007/08/08 21:22:38 armin76 Exp $
+
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org> cervisia-3.5.7.ebuild:
+  alpha stable wrt #176297
 
   08 Aug 2007; Joseph Jezak <josejx@gentoo.org> cervisia-3.5.7.ebuild:
   Marked ppc stable.
