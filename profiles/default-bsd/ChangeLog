@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.7 2007/06/07 18:00:07 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.8 2007/08/08 19:27:22 dev-zero Exp $
+
+  08 Aug 2007; Tiziano Müller <dev-zero@gentoo.org> fbsd/6.2/make.defaults:
+  Removed libg++ USE-flag (bug #148416)
 
   07 Jun 2007; Joe Peterson <lavajoe@gentoo.org> virtuals:
   For FreeBSD, default to the "reference implementation" versions rather
