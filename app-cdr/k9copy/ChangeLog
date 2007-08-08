@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.23 2007/07/09 00:30:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.24 2007/08/08 21:38:05 keytoaster Exp $
+
+*k9copy-1.1.2 (08 Aug 2007)
+
+  08 Aug 2007; Tobias Heinlein <keytoaster@gentoo.org> +k9copy-1.1.2.ebuild:
+  Version bump, see bug 188045
 
   09 Jul 2007; Joseph Jezak <josejx@gentoo.org> k9copy-1.1.1_p3.ebuild:
   Marked ~ppc for bug #184362.
