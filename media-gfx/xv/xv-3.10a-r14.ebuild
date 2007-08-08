@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r13.ebuild,v 1.2 2007/08/04 17:37:40 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r14.ebuild,v 1.1 2007/08/08 17:40:59 lavajoe Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -72,7 +72,10 @@ src_compile() {
 	fi
 	einfo "done."
 
-	emake CC="$(tc-getCC)" CCOPTS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
+	emake	CC="$(tc-getCC)" CCOPTS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
+			PREFIX=/usr \
+			DOCDIR=/usr/share/doc/${P} \
+			LIBDIR=${T} || die
 }
 
 src_install() {
@@ -80,9 +83,9 @@ src_install() {
 	dodir /usr/share/man/man1
 
 	emake	DESTDIR=${D} \
-			BINDIR=/usr/bin \
-			MANDIR=/usr/share/man/man1 \
+			PREFIX=/usr \
+			DOCDIR=/usr/share/doc/${PF} \
 			LIBDIR=${T} install || die
 
-	dodoc README{,.jumbo,.pcd} CHANGELOG BUGS IDEAS docs/*.ps docs/*.doc
+	dodoc CHANGELOG BUGS IDEAS
 }
