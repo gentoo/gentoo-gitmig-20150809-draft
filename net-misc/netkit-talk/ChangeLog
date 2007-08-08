@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-talk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.27 2007/08/08 14:10:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.28 2007/08/08 18:26:00 armin76 Exp $
+
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org> ChangeLog:
+  alpha/ia64 stable wrt #176297
 
   08 Aug 2007; Raúl Porcel <armin76@gentoo.org> netkit-talk-0.17-r4.ebuild:
   ia64 stable wrt #176297
