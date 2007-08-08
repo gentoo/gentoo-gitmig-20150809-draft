@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc2-r1.ebuild,v 1.2 2007/08/07 09:23:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc2-r1.ebuild,v 1.3 2007/08/08 13:33:05 gustavoz Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="bootstrap build pam static unicode kernel_linux kernel_FreeBSD"
 
 RDEPEND="virtual/init
@@ -42,12 +42,6 @@ src_unpack() {
 	# Setup unicode defaults for silly unicode users
 	if use unicode ; then
 		sed -i -e '/^UNICODE=/s:no:yes:' etc/rc.conf
-	fi
-
-	# SPARC does not like stty, so we disable RC_INTERACTIVE which requires it
-	# see Gentoo bug #104067.
-	if use sparc ; then \
-		sed -i -e '/^RC_INTERACTIVE=/s:yes:no:' etc/conf.d/rc || die
 	fi
 }
 
