@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.11 2007/07/25 18:30:23 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.12 2007/08/08 15:57:56 kolmodin Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -28,7 +28,7 @@
 # re-emerge ghc (or ghc-bin). People using vanilla gcc can switch between
 # gcc-3.x and 4.x with no problems.
 
-inherit base eutils flag-o-matic toolchain-funcs ghc-package
+inherit base eutils flag-o-matic toolchain-funcs ghc-package versionator
 
 DESCRIPTION="The Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
@@ -241,6 +241,11 @@ src_compile() {
 			echo "GhcNotThreaded=YES" >> mk/build.mk
 		fi
 
+		# GHC <6.8 doesn't support GCC >=4.2, split objects fails.
+		if version_is_at_least "4.2" "$(gcc-version)"; then
+			echo "SplitObjs=NO" >> mk/build.mk
+		fi
+
 		# Get ghc from the unpacked binary .tbz2
 		# except when bootstrapping we just pick ghc up off the path
 		use ghcbootstrap || \
@@ -262,7 +267,6 @@ src_install() {
 
 		doenvd "${FILESDIR}/10ghc"
 	else
-
 		# the libdir0 setting is needed for amd64, and does not
 		# harm for other arches
 		#TODO: are any of these overrides still required? isn't econf enough?
