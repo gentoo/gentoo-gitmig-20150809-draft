@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/peksystray
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.17 2007/07/24 00:46:55 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.18 2007/08/08 10:08:17 omp Exp $
+
+  08 Aug 2007; David Shakaryan <omp@gentoo.org>
+  +files/peksystray-0.4.0-ldadd.patch, peksystray-0.4.0.ebuild:
+  Fix AMD64 compile bug; thanks to Kenneth Prugh for patch. (bug #186504)
 
 *peksystray-0.4.0 (24 Jul 2007)
 
