@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klines
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klines/ChangeLog,v 1.65 2007/08/07 18:37:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klines/ChangeLog,v 1.66 2007/08/08 02:38:02 josejx Exp $
+
+  08 Aug 2007; Joseph Jezak <josejx@gentoo.org> klines-3.5.7.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> klines-3.5.7.ebuild:
   Stable on sparc wrt #176297
