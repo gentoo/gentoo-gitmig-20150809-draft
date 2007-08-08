@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocurl/ocurl-0.2.1.ebuild,v 1.1 2007/04/17 13:39:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocurl/ocurl-0.2.1.ebuild,v 1.2 2007/08/08 10:36:32 josejx Exp $
 
 inherit eutils findlib
 
@@ -15,7 +15,7 @@ IUSE="doc"
 DEPEND=">=net-misc/curl-7.9.8
 dev-libs/openssl"
 RDEPEND="$DEPEND"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 
 src_compile()
 {
