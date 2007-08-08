@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2961 2007/08/08 09:41:34 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2962 2007/08/08 18:13:00 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1397,6 +1397,10 @@ net-im/bitlbee:openssl - Use OpenSSL for SSL support in MSN and Jabber.
 net-im/centericq:irc - Enable support for the IRC protocol
 net-im/centericq:lj - Enable support for the LiveJournal weblog system
 net-im/centericq:rss - Enable support for RSS/RDF feeds
+net-im/centerim:gadu - Enable support for the Gadu-Gadu protocol
+net-im/centerim:irc - Enable support for the IRC protocol
+net-im/centerim:lj - Enable support for the LiveJournal weblog system
+net-im/centerim:rss - Enable support for RSS/RDF feeds
 net-im/ejabberd:mod_irc - Irc support in ejabberd
 net-im/ejabberd:mod_muc - Multi user chat support in ejabberd
 net-im/ejabberd:mod_pubsub - Pubsub support in ejabberd
