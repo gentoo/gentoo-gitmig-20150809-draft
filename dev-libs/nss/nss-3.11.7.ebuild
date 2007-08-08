@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.7.ebuild,v 1.2 2007/08/08 19:39:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.7.ebuild,v 1.3 2007/08/08 22:00:41 armin76 Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -107,9 +107,9 @@ src_install () {
 	chmod 644 ${D}/usr/$(get_libdir)/pkgconfig/nss.pc
 
 	if use utils; then
-	cd ${S}/mozilla/security/dist/*/bin/
-	for f in *; do
-		newbin ${f} nss${f}
-	done
+		cd ${S}/mozilla/security/dist/*/bin/
+		for f in *; do
+			newbin ${f} nss${f}
+		done
 	fi
 }
