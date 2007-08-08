@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.119 2007/07/21 21:17:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.120 2007/08/08 20:28:52 swegener Exp $
+
+*avahi-0.6.20-r2 (08 Aug 2007)
+*avahi-0.6.19-r2 (08 Aug 2007)
+
+  08 Aug 2007; Sven Wegener <swegener@gentoo.org>
+  +files/avahi-0.6.20-autoipd.patch, +avahi-0.6.19-r2.ebuild,
+  +avahi-0.6.20-r2.ebuild:
+  Revision bump, including a fix from upstream for autoipd.
 
   21 Jul 2007; Sven Wegener <swegener@gentoo.org>
   -files/avahi-0.6.18-inotify-ifdef-fix.patch, -avahi-0.6.17.ebuild,
