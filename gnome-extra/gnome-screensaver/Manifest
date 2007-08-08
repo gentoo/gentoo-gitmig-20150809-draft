@@ -26,14 +26,14 @@ EBUILD gnome-screensaver-2.16.3-r1.ebuild 2897 RMD160 ff5e481f748cbdf7b34b228cc0
 MD5 eed90d249d8b926b4f91bb91bfe17b13 gnome-screensaver-2.16.3-r1.ebuild 2897
 RMD160 ff5e481f748cbdf7b34b228cc0e62933abe9dbad gnome-screensaver-2.16.3-r1.ebuild 2897
 SHA256 55b0d8c1aff1d4c9ce068559afe0465edb400cccf61b14452738414b57994c97 gnome-screensaver-2.16.3-r1.ebuild 2897
-EBUILD gnome-screensaver-2.18.2-r1.ebuild 2859 RMD160 6001ea8af02b5a854a84aa5a5e6b3fbb9f91a9fa SHA1 098a522f36ddb430ab17008e2fb80c74acaee861 SHA256 f48c4b997e35778c9005d4fa9d2776d2de18c44f7a06b3c086cd6c6cc8c06381
-MD5 7ad033c26ef3ee1605ed7416a5882e9c gnome-screensaver-2.18.2-r1.ebuild 2859
-RMD160 6001ea8af02b5a854a84aa5a5e6b3fbb9f91a9fa gnome-screensaver-2.18.2-r1.ebuild 2859
-SHA256 f48c4b997e35778c9005d4fa9d2776d2de18c44f7a06b3c086cd6c6cc8c06381 gnome-screensaver-2.18.2-r1.ebuild 2859
-MISC ChangeLog 7627 RMD160 750572be3b0a4dd2b8a30964dabe9ab7cd999d95 SHA1 da0db86835392ec9a62b3ae31f08b7f32006c9ab SHA256 6a39b6c7401f324d34f991042a14e6719e7f6bb3cdb6ffcc79f1474fff2ff2fc
-MD5 7ee9aa677943b8ccd77bdd2054c82228 ChangeLog 7627
-RMD160 750572be3b0a4dd2b8a30964dabe9ab7cd999d95 ChangeLog 7627
-SHA256 6a39b6c7401f324d34f991042a14e6719e7f6bb3cdb6ffcc79f1474fff2ff2fc ChangeLog 7627
+EBUILD gnome-screensaver-2.18.2-r1.ebuild 2854 RMD160 89207a95d967f189af0bd7dbd7a3cb18dc2fa61b SHA1 3c2c489df04fbff6b903a6fd5d6f7ee03cfb53c2 SHA256 5c18009e1a172e2c207cf9014d78f17980e1b9d632ca0319046a730628d0f811
+MD5 dea0f0a6668920d3874e1d6d7dd9df1d gnome-screensaver-2.18.2-r1.ebuild 2854
+RMD160 89207a95d967f189af0bd7dbd7a3cb18dc2fa61b gnome-screensaver-2.18.2-r1.ebuild 2854
+SHA256 5c18009e1a172e2c207cf9014d78f17980e1b9d632ca0319046a730628d0f811 gnome-screensaver-2.18.2-r1.ebuild 2854
+MISC ChangeLog 7744 RMD160 5e21c8279cb9c1c2fe966cf67ae54ad5943b566b SHA1 069ad664aac58214b4169ce7969ee178730f2fdb SHA256 bd1f044d575e9b34b16e04deaf76e4e2634b00d354a1649eef2145de755f7e82
+MD5 98bdec48953aa0fc57e7983999efec71 ChangeLog 7744
+RMD160 5e21c8279cb9c1c2fe966cf67ae54ad5943b566b ChangeLog 7744
+SHA256 bd1f044d575e9b34b16e04deaf76e4e2634b00d354a1649eef2145de755f7e82 ChangeLog 7744
 MISC metadata.xml 472 RMD160 3fe1221d0cb389cf1be040c98fa9c40dbf3c07e5 SHA1 18913172dba9d94ca5952b7f8bfb2aa13808bb67 SHA256 e70be8f69acbda81bd1e90c1bd3a57a0b5ccb5fa09c7a6f04427ef888e1872bc
 MD5 77f62dae0c1bc21d5cf698695368d2d8 metadata.xml 472
 RMD160 3fe1221d0cb389cf1be040c98fa9c40dbf3c07e5 metadata.xml 472
@@ -47,6 +47,6 @@ SHA256 f481877a69608e5e36f45cdeafd1159ab497f8e490dce100b1bf4774ed59035a files/di
 MD5 6eb1dfb8832c3a270006acb5de9ea2e6 files/digest-gnome-screensaver-2.16.3-r1 202
 RMD160 9d943d97e16018120ab070157cf34c06d2661a80 files/digest-gnome-screensaver-2.16.3-r1 202
 SHA256 e84b5ca1ff1721c594d282b3d2fb946d45341fca7d0c107d6b3d74d59d07b9bb files/digest-gnome-screensaver-2.16.3-r1 202
-MD5 0bf0544d46762a0f4f7f1221e30b45e9 files/digest-gnome-screensaver-2.18.2-r1 202
-RMD160 45c29b308451780feda6c28655771a2730ed2004 files/digest-gnome-screensaver-2.18.2-r1 202
-SHA256 6aaa8d22111d8e253da456d5240c5de6ee007e42d4939b368c7051f9da25d231 files/digest-gnome-screensaver-2.18.2-r1 202
+MD5 93d8b6c2b2e6850ce7919e0c076c7328 files/digest-gnome-screensaver-2.18.2-r1 280
+RMD160 d794dcab6c034f4ae0086574aebb8f5f43e6fd62 files/digest-gnome-screensaver-2.18.2-r1 280
+SHA256 0b7c3fd35ec705257fadffe3764c98a40e45de4a053e3ba0169ac00c8fbba2ea files/digest-gnome-screensaver-2.18.2-r1 280
