@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.142 2007/08/07 19:42:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.143 2007/08/08 22:16:16 armin76 Exp $
+
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org>
+  gnome-terminal-2.18.1.ebuild:
+  alpha/ia64 stable wrt #185823
 
   07 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   gnome-terminal-2.18.1.ebuild:
