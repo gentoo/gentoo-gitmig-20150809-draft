@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.2 2007/08/06 09:50:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.3 2007/08/08 23:23:24 vapier Exp $
 
 toolchain-glibc_src_install() {
 	# These should not be set, else the
@@ -225,7 +225,7 @@ eblit-glibc-src_install() {
 			OABI=${ABI}
 			for ABI in ${abilist} ; do
 				export ABI
-				src_install
+				eblit-glibc-src_install
 			done
 			ABI=${OABI}
 			unset OABI
