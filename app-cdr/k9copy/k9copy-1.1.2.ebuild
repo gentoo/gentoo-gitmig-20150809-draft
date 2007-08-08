@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.1.2.ebuild,v 1.1 2007/08/08 21:38:05 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.1.2.ebuild,v 1.2 2007/08/08 21:50:00 keytoaster Exp $
 
 inherit kde
 
 MY_P="${P/_p/-}"
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="k9copy is a DVD backup utility which allow the copy of one or more titles from a DVD9 to a DVD5"
+DESCRIPTION="k9copy is a DVD backup utility which allows the copy of one or more titles from a DVD9 to a DVD5"
 HOMEPAGE="http://k9copy.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
