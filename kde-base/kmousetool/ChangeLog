@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmousetool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmousetool/ChangeLog,v 1.63 2007/08/07 19:38:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmousetool/ChangeLog,v 1.64 2007/08/08 05:16:15 josejx Exp $
+
+  08 Aug 2007; Joseph Jezak <josejx@gentoo.org> kmousetool-3.5.7.ebuild:
+  Marked ppc stable.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   kmousetool-3.5.7.ebuild:
