@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7573 2007/08/07 19:49:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7574 2007/08/08 15:07:53 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -69,12 +69,6 @@ mail-client/claws-mail-etpan-privacy
 # Masked for removal: Does not work with apache 2.2
 # and no release since 2004, use mod_transform instead
 www-apache/mod_xslt
-
-# Samuli Suominen <drac@gentoo.org> (27 Jul 2007)
-# Incompatible with >= GCC4 and >= FLAC 1.1.3.
-# Upstream missing in action. Masked for removal
-# in 30 days. Bug 151382.
-media-sound/sonic-rainbow
 
 # Ulrich Mueller <ulm@gentoo.org> (26 Jul 2007)
 # CVS snapshots, bug #185106
