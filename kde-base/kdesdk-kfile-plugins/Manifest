@@ -12,10 +12,10 @@ EBUILD kdesdk-kfile-plugins-3.5.6.ebuild 510 RMD160 3940b905af8cc51fa17aeeaa204b
 MD5 8428b3950bd4b52981d65040105b74ea kdesdk-kfile-plugins-3.5.6.ebuild 510
 RMD160 3940b905af8cc51fa17aeeaa204b5d380414a2ca kdesdk-kfile-plugins-3.5.6.ebuild 510
 SHA256 26932c3c1893472c5400baeb4a64e818c2331c0b580e9217cbbfd2b9dc68189b kdesdk-kfile-plugins-3.5.6.ebuild 510
-EBUILD kdesdk-kfile-plugins-3.5.7.ebuild 508 RMD160 e30fa3c0c476fb3f98d69debf4a96bf4a2aa1cbc SHA1 a2a6a3b811f55d7e46fafaa23081c95095b6d5e0 SHA256 8552fd14b51c0fda6817e4f4bc14ff788addfd96e99318f800a179de2f0e295f
-MD5 b1f398c96ef1638f2e06fd94b577c560 kdesdk-kfile-plugins-3.5.7.ebuild 508
-RMD160 e30fa3c0c476fb3f98d69debf4a96bf4a2aa1cbc kdesdk-kfile-plugins-3.5.7.ebuild 508
-SHA256 8552fd14b51c0fda6817e4f4bc14ff788addfd96e99318f800a179de2f0e295f kdesdk-kfile-plugins-3.5.7.ebuild 508
+EBUILD kdesdk-kfile-plugins-3.5.7.ebuild 505 RMD160 be16b858bf130d429cafeb94d091a89df47107e0 SHA1 1ff88814d3b26306672932b9cc83292d38a42788 SHA256 b38199afde257c89bc5edce5f48b80fb1ec724b5c01cd2303f8b35898b702254
+MD5 ac459a00834edd31fdeacb7f901b17ad kdesdk-kfile-plugins-3.5.7.ebuild 505
+RMD160 be16b858bf130d429cafeb94d091a89df47107e0 kdesdk-kfile-plugins-3.5.7.ebuild 505
+SHA256 b38199afde257c89bc5edce5f48b80fb1ec724b5c01cd2303f8b35898b702254 kdesdk-kfile-plugins-3.5.7.ebuild 505
 MISC ChangeLog 6860 RMD160 e5e5cb562d69eb26d09e6f701f0d3a3e761c616a SHA1 cfaa19d1b36b9676ba8a270d0c11ae1de37a10fe SHA256 3ad19cd406164ba17f84fd51cdc53ed0cc7138d1b257e9da40dba92c7f2204f0
 MD5 9dc53dd719f59c72ecb25708e427181f ChangeLog 6860
 RMD160 e5e5cb562d69eb26d09e6f701f0d3a3e761c616a ChangeLog 6860
@@ -34,9 +34,9 @@ MD5 3b54c9dbb4055174b2f9afa78f3487b8 files/digest-kdesdk-kfile-plugins-3.5.7 244
 RMD160 73528337642609126c831aca0720b3f874fffdc8 files/digest-kdesdk-kfile-plugins-3.5.7 244
 SHA256 5b0c42c3810c369ebeba1f641664bcc632a83fdf3f50ea665a66383799c31dc2 files/digest-kdesdk-kfile-plugins-3.5.7 244
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGuN6fKRy60XGEcJIRAsAsAJ42MgmY8rYbaxBm2OE4le1AbRB2MgCfXhhu
-Y/yWfq+Cye3o+Fm7BWvTYsE=
-=SzY7
+iD8DBQFGuaJ+csIHjyDViGQRAm7WAJ4+OIg9cd7Oiy1azEEAgH8n9IZmxwCgm2hH
+R7RS7wG/MZkN0jE0JP5HL+c=
+=6ia6
 -----END PGP SIGNATURE-----
