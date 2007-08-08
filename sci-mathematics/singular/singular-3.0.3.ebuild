@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.3.ebuild,v 1.1 2007/08/05 17:20:48 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.3.ebuild,v 1.2 2007/08/08 13:50:04 markusle Exp $
 
 inherit eutils flag-o-matic autotools multilib
 
@@ -50,7 +50,7 @@ src_unpack () {
 }
 
 src_compile() {
-	local myconf="${myconf} --disable-doc --with-MP --with-factory --with-libfac --with-gmp --prefix=${S}"
+	local myconf="${myconf} --disable-doc --without-MP --with-factory --with-libfac --with-gmp --prefix=${S}"
 	econf $(use_enable emacs) \
 		${myconf} || die "econf failed"
 	emake -j1 || die "make failed"
