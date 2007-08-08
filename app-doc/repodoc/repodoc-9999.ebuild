@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/repodoc/repodoc-9999.ebuild,v 1.1 2007/05/07 22:56:05 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/repodoc/repodoc-9999.ebuild,v 1.2 2007/08/08 16:17:25 ferdy Exp $
 
 EGIT_REPO_URI="git://git.ferdyx.org/repodoc.git"
 EGIT_BRANCH="next"
@@ -15,17 +15,22 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="gtk"
+IUSE="doc gtk"
 
-RDEPEND="${DEPEND}
-	|| ( sys-apps/gawk sys-apps/mawk sys-apps/busybox )"
-
-DEPEND="dev-libs/libxml2
-	app-text/txt2tags
+COMMON_DEPEND="dev-libs/libxml2
 	gtk? ( dev-dotnet/gtk-sharp )"
 
+DEPEND="${COMMON_DEPEND}
+	doc? ( app-text/txt2tags )"
+
+RDEPEND="${COMMON_DEPEND}
+	|| ( sys-apps/gawk sys-apps/mawk sys-apps/busybox )"
+
 src_compile() {
-	econf $(use_enable gtk) || die 'econf failed!'
+	econf \
+		$(use_enable gtk) \
+		$(use_enable doc txt2tags) \
+			|| die 'econf failed!'
 	emake || die 'emake failed!'
 }
 
