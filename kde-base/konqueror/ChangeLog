@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.84 2007/08/08 03:05:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.85 2007/08/08 20:40:01 armin76 Exp $
+
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org> konqueror-3.5.7-r2.ebuild:
+  alpha/ia64 stable wrt #176297
 
   08 Aug 2007; Joseph Jezak <josejx@gentoo.org> konqueror-3.5.7-r2.ebuild:
   Marked ppc stable.
