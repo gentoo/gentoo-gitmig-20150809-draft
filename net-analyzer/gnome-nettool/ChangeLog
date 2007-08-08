@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.52 2007/08/07 19:19:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.53 2007/08/08 22:01:48 armin76 Exp $
+
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org>
+  gnome-nettool-2.18.0.ebuild:
+  alpha/ia64 stable wrt #185823
 
   07 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   gnome-nettool-2.18.0.ebuild:
