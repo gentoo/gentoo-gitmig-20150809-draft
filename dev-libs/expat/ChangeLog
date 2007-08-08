@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.63 2007/08/07 18:56:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.64 2007/08/08 13:54:56 armin76 Exp $
+
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org> expat-2.0.1.ebuild:
+  alpha/ia64 stable wrt #187730
 
   07 Aug 2007; Joseph Jezak <josejx@gentoo.org> expat-2.0.1.ebuild:
   Marked ppc stable.
