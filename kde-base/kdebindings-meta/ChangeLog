@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings-meta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/ChangeLog,v 1.51 2007/05/22 22:38:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/ChangeLog,v 1.52 2007/08/08 10:14:40 josejx Exp $
+
+  08 Aug 2007; Joseph Jezak <josejx@gentoo.org>
+  kdebindings-meta-3.5.7.ebuild:
+  Marked ppc stable.
 
 *kdebindings-meta-3.5.7 (22 May 2007)
 
