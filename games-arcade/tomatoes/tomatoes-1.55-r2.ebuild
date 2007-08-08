@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r2.ebuild,v 1.3 2007/08/08 21:04:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r2.ebuild,v 1.4 2007/08/08 21:04:45 vapier Exp $
 
 inherit eutils games
 
