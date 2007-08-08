@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/lcd-stuff-0.1.2-r1.ebuild,v 1.3 2007/06/17 15:03:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/lcd-stuff-0.1.2-r1.ebuild,v 1.4 2007/08/08 20:43:02 rbu Exp $
 
 inherit eutils
 
@@ -30,6 +30,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-mpd.patch"
+	epatch "${FILESDIR}/${PN}-0.1.3-socket-h.patch"
 }
 
 src_compile() {
