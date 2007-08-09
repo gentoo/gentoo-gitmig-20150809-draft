@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=xmGrace  2D-Plotting Tool
+Name[de]=xmGrace  2D-Diagramme
+Comment=2D Plotting Tool
+Comment[de]=Erstellen von 2D-Diagrammen
+Exec=xmgrace.sh
+Icon=grace.png
+Terminal=false
+Type=Application
+Categories=Application;Graphics;Science;
