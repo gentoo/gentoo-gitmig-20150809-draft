@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.4.ebuild,v 1.1 2007/06/28 12:29:27 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.5.ebuild,v 1.1 2007/08/09 08:46:40 xmerlin Exp $
 
 inherit eutils versionator linux-mod linux-info
 
