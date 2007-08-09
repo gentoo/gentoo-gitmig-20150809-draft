@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.8-r1.ebuild,v 1.1 2007/07/07 02:35:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.8-r1.ebuild,v 1.2 2007/08/09 08:42:09 dragonheart Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
-L7_PV=2.12
+L7_PV=2.13
 L7_P=netfilter-layer7-v${L7_PV}
 IMQ_PATCH=iptables-1.3.6-imq.diff
 
@@ -91,9 +91,9 @@ src_unpack() {
 		#yes choosing 2.6.20 was deliberate - upstream mistake possibly
 		if kernel_is ge 2 6 20
 		then
-			L7_PATCH=iptables-for-kernel-2.6.22forward-layer7-${L7_PV}.patch
+			L7_PATCH=iptables-for-kernel-2.6.20forward-layer7-${L7_PV}.patch
 		else
-			L7_PATCH=iptables-for-kernel-pre2.6.22-layer7-${L7_PV}.patch
+			L7_PATCH=iptables-for-kernel-pre2.6.20-layer7-${L7_PV}.patch
 		fi
 		EPATCH_OPTS="-p1" epatch "${WORKDIR}"/${L7_P}/${L7_PATCH}
 		chmod +x extensions/.layer7-test*
