@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/libkexiv2-0.1.5.ebuild,v 1.3 2007/07/12 03:10:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/libkexiv2-0.1.5.ebuild,v 1.4 2007/08/09 15:54:02 gustavoz Exp $
 
 inherit kde
 
@@ -19,4 +19,4 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc sparc ~x86"
