@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcopperl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.40 2007/08/07 20:49:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.41 2007/08/09 21:23:45 corsair Exp $
+
+  09 Aug 2007; Markus Rothe <corsair@gentoo.org> dcopperl-3.5.6-r1.ebuild:
+  Stable on ppc64; bug #176297
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   dcopperl-3.5.6-r1.ebuild:

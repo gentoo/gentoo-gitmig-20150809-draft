@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kspy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kspy/ChangeLog,v 1.41 2007/08/08 21:16:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kspy/ChangeLog,v 1.42 2007/08/09 21:38:15 corsair Exp $
+
+  09 Aug 2007; Markus Rothe <corsair@gentoo.org> kspy-3.5.6.ebuild:
+  Stable on ppc64; bug #176297
 
   08 Aug 2007; Raúl Porcel <armin76@gentoo.org> kspy-3.5.6.ebuild:
   alpha stable wrt #176297
