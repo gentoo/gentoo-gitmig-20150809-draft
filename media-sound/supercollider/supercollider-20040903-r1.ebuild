@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/supercollider/supercollider-20040903-r1.ebuild,v 1.3 2007/08/02 06:01:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/supercollider/supercollider-20040903-r1.ebuild,v 1.4 2007/08/09 14:30:35 drac Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="-ppc x86"
 IUSE="emacs"
 
 RDEPEND="media-sound/jack-audio-connection-kit
