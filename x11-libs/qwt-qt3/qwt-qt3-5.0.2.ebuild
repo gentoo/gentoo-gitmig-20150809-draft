@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt-qt3/qwt-qt3-5.0.2.ebuild,v 1.1 2007/06/21 18:16:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt-qt3/qwt-qt3-5.0.2.ebuild,v 1.2 2007/08/09 12:01:39 caleb Exp $
 
-inherit multilib eutils
+inherit multilib eutils qt3
 
 MY_P=${P/-qt3/}
 
@@ -18,18 +18,17 @@ QWTVER="5.0.2"
 
 S=${WORKDIR}/${MY_P}
 
-DEPEND="=x11-libs/qt-3*
-	>=sys-apps/sed-4"
+DEPEND="$(qt_min_version 3)"
 
 src_unpack () {
 	unpack ${A}
 
-	cd ${S}
+	cd {S}
 
 	sed -i -e "s:TARGET            = qwt:TARGET            = qwt-qt3:" src/src.pro
 	sed -i -e "s:-lqwt:-lqwt-qt3:" designer/designer.pro
 
-	qwtconfig=${S}/"qwtconfig.pri"
+	qwtconfig="${S}/qwtconfig.pri"
 	echo > ${qwtconfig} ""
 	echo >> ${qwtconfig} "target.path = /usr/$(get_libdir)"
 	echo >> ${qwtconfig} "headers.path = /usr/include/qwt-qt3"
@@ -52,8 +51,8 @@ src_unpack () {
 
 src_compile () {
 	# -j1 due to parallel build failures ( bug # 170625 )
-	/usr/qt/3/bin/qmake QMAKE=/usr/qt/3/bin/qmake qwt.pro
-	MAKEOPTS="$MAKEOPTS -j1" emake || die
+	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake qwt.pro
+	emake -j1 || die
 }
 
 src_install () {
