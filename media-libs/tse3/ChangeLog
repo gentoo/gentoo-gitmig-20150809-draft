@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/tse3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.21 2007/04/13 21:24:47 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.22 2007/08/09 14:16:59 drac Exp $
+
+*tse3-0.3.1-r1 (09 Aug 2007)
+
+  09 Aug 2007; Samuli Suominen <drac@gentoo.org> +files/awe_voice.h,
+  +tse3-0.3.1-r1.ebuild:
+  Fix building with OSS, linux-headers doesn't include awe_voice.h anymore.
+  Bug 188163.
 
   13 Apr 2007; <welp@gentoo.org> tse3-0.3.1.ebuild:
   Stable on amd64 wrt bug 173272
