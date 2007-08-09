@@ -1,6 +1,10 @@
 # ChangeLog for games-board/slibo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/ChangeLog,v 1.10 2007/03/12 13:53:42 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/ChangeLog,v 1.11 2007/08/09 23:15:39 mr_bones_ Exp $
+
+  09 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/slibo-0.4.4-gcc42.patch, slibo-0.4.4.ebuild:
+  Compile fixes for gcc4.2. Submitted by Gene Seto in bug #188069
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> slibo-0.4.4.ebuild:
   Replacing einfo with elog

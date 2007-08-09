@@ -1,0 +1,64 @@
+Compile fixes for gcc4.2.
+Submitted by Gene Seto at
+http://bugs.gentoo.org/show_bug.cgi?id=188069
+
+--- slibo-0.4.4/src/flatview.old	2007-08-09 16:48:34.000000000 +0000
++++ slibo-0.4.4/src/flatview.cpp	2007-08-09 16:54:53.000000000 +0000
+@@ -43,14 +43,14 @@
+ //convert board to screen coordinates
+ 
+ QPoint FlatView::board2screen(CoorFloat q) {
+-    int squaresize = (width() <? height())/8;
++    int squaresize = (width() < height() ? width() : height())/8;
+     return QPoint((int)(q.x*squaresize), (int)((8.0-q.y)*squaresize));
+ }
+ 
+ //convert screen to board coordinates.
+ 
+ CoorFloat FlatView::screen2board(QPoint p1) {
+-    float squaresize = (width() <? height())/8.0;
++    float squaresize = (width() < height() ? width() : height())/8.0;
+     return CoorFloat(p1.x() / squaresize, p1.y() / squaresize);
+ }
+ 
+@@ -65,7 +65,7 @@
+ }
+ 
+ void FlatView::resizeEvent(QResizeEvent *e) {
+-    int squaresize = (e->size().width() <? e->size().height())/8;
++    int squaresize = (e->size().width() < e->size().height() ? e->size().width():  e->size().height())/8;
+     int nsize = squaresize * 8;
+     if (nsize != width() || nsize != height()) {
+         resize(nsize, nsize);
+@@ -92,7 +92,7 @@
+ }
+ 
+ void FlatView::paintEvent(QPaintEvent*) {
+-    int squaresize = (width() <? height())/8;
++    int squaresize = (width() < height() ? width() : height())/8;
+     QTime t = QTime::currentTime();
+ 
+     QValueList<ViewPiece>::iterator i;
+--- slibo-0.4.4/src/glview.old	2007-08-09 16:48:39.000000000 +0000
++++ slibo-0.4.4/src/glview.cpp	2007-08-09 16:56:30.000000000 +0000
+@@ -288,8 +288,8 @@
+ 	q = q + CoorFloat((p2x*vy - p2y*vx), (ux*p2y - uy*p2x)) * (1.0/det);
+ //        q.x += (p2x*vy - p2y*vx) / det;
+ //        q.y += (ux*p2y - uy*p2x) / det;
+-        q.x = 0.0 >? q.x <? 7.0;
+-        q.y = 0.0 >? q.y <? 7.0;
++	q.x = std::min(std::max(0.0, (double)q.x), 7.0);
++	q.y = std::min(std::max(0.0, (double)q.y), 7.0);
+         lastq = q;
+         d *= 0.5;
+     }
+--- slibo-0.4.4/src/sliboengine/main.old	2007-08-09 16:33:22.000000000 +0000
++++ slibo-0.4.4/src/sliboengine/main.c	2007-08-09 16:33:32.000000000 +0000
+@@ -22,6 +22,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <signal.h>
+ #include <unistd.h>
+ #include <getopt.h>

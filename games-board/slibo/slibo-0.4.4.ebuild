@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/slibo-0.4.4.ebuild,v 1.12 2007/03/12 13:53:42 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/slibo-0.4.4.ebuild,v 1.13 2007/08/09 23:15:39 mr_bones_ Exp $
 
 inherit eutils kde
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="=dev-db/sqlite-2*"
 need-kde 3
 
-PATCHES="${FILESDIR}/${PV}-gcc34.patch ${FILESDIR}/${P}-gcc41.patch"
+PATCHES="${FILESDIR}/${PV}-gcc34.patch ${FILESDIR}/${P}-gcc41.patch ${FILESDIR}/${P}-gcc42.patch"
 
 src_install() {
 	kde_src_install
