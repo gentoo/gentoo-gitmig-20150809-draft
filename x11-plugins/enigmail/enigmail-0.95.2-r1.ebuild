@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.95.2-r1.ebuild,v 1.6 2007/08/05 19:06:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.95.2-r1.ebuild,v 1.7 2007/08/09 13:48:54 armin76 Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 WANT_AUTOCONF=2.1
@@ -107,6 +107,10 @@ src_unpack() {
 	epatch ${FILESDIR}/70_enigmail-fix.patch
 	# Make replytolist work with >0.95.0
 	epatch ${FILESDIR}/0.95.0-replytolist.patch
+
+	# Fix for gcc-4.2 and amd64, bug 186089
+	rm -f ${S}/config/gcc_hidden.h
+	touch ${S}/config/gcc_hidden.h
 
 	eautoreconf || die "failed running autoreconf"
 }
