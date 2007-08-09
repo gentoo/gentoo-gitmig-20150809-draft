@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/XML-Generator-1.0.ebuild,v 1.3 2007/07/30 18:53:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/XML-Generator-1.0.ebuild,v 1.4 2007/08/09 14:40:30 gustavoz Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/B/BH/BHOLZMAN/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 Artistic )"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
 IUSE=""
 SRC_TEST="do"
 

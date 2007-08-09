@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Daemon
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.49 2007/08/01 06:36:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.50 2007/08/09 14:34:45 gustavoz Exp $
+
+  09 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  Net-Daemon-0.43.ebuild:
+  Stable on sparc
 
   01 Aug 2007; Joshua Kinard <kumba@gentoo.org> Net-Daemon-0.43.ebuild:
   Stable on mips.
