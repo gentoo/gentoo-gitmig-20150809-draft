@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-It/Lingua-Stem-It-0.02.ebuild,v 1.3 2007/07/29 19:20:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-It/Lingua-Stem-It-0.02.ebuild,v 1.4 2007/08/09 15:35:21 gustavoz Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/A/AC/ACALPINI/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"
