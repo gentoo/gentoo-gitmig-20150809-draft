@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Base
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.31 2007/07/30 18:48:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.32 2007/08/09 15:06:09 gustavoz Exp $
+
+  09 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> Test-Base-0.54.ebuild:
+  Stable on sparc
 
   30 Jul 2007; Raúl Porcel <armin76@gentoo.org> Test-Base-0.54.ebuild:
   alpha/ia64 stable
