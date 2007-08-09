@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.12.ebuild,v 1.1 2007/08/09 11:05:23 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.12.ebuild,v 1.2 2007/08/09 11:12:06 wrobel Exp $
 
-inherit webapp versionator
+inherit webapp versionator depend.php
 
 DESCRIPTION="Feature rich web picture gallery script written in PHP using GD or ImageMagick lib with a MySQL backend."
 HOMEPAGE="http://coppermine.sourceforge.net/"
@@ -19,6 +19,16 @@ RDEPEND=">=www-servers/apache-2.0
 	imagemagick? ( media-gfx/imagemagick )"
 
 S=${WORKDIR}/cpg$(delete_all_version_separators)
+
+pkg_setup() {
+	webapp_pkg_setup
+	if ! PHPCHECKNODIE="yes" require_php_with_use mysql ; then
+		eerror
+		eerror "${PHP_PKG} needs to be re-installed with mysql USE-flag"
+		eerror
+		die "Re-install ${PHP_PKG}"
+	fi
+}
 
 src_install() {
 	webapp_src_preinst
