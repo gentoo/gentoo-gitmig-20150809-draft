@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-<email>lcars@gentoo.org</email>
-<name>Andrea Barisani</name>
-</maintainer>
 <longdescription lang="en">
 Text based LDAP client which uses your standard editor for viewing and changing entries.
 </longdescription>
