@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.101 2007/07/30 22:10:35 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.102 2007/08/09 11:59:21 armin76 Exp $
+
+  09 Aug 2007; Raúl Porcel <armin76@gentoo.org> exim-4.67-r1.ebuild:
+  alpha stable
 
   30 Jul 2007; Colin Morey <peitolm@gentoo.org> exim-4.67-r2.ebuild:
   Re-instating missing archs that were accidently dropped in the new revision. #176487
