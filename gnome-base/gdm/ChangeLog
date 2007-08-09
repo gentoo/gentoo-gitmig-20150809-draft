@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.225 2007/08/08 22:19:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.226 2007/08/09 10:45:09 armin76 Exp $
+
+  09 Aug 2007; Raúl Porcel <armin76@gentoo.org> gdm-2.16.7.ebuild,
+  gdm-2.18.4.ebuild:
+  alpha/ia64 stable wrt security #187919
 
   08 Aug 2007; Raúl Porcel <armin76@gentoo.org> gdm-2.18.2.ebuild:
   alpha/ia64 stable wrt #185823
