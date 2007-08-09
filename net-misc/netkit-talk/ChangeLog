@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-talk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.28 2007/08/08 18:26:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.29 2007/08/09 17:10:51 corsair Exp $
+
+  09 Aug 2007; Markus Rothe <corsair@gentoo.org> netkit-talk-0.17-r4.ebuild:
+  Stable on ppc64; bug #176297
 
   08 Aug 2007; Raúl Porcel <armin76@gentoo.org> ChangeLog:
   alpha/ia64 stable wrt #176297
