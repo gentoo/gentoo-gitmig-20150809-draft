@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-1.10.2.ebuild,v 1.1 2007/08/09 11:27:08 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-1.10.2.ebuild,v 1.2 2007/08/09 11:38:33 wrobel Exp $
 
-inherit webapp eutils
+inherit webapp eutils depend.php
 
 MY_EXT="-2007-06-08"
 
@@ -42,7 +42,7 @@ src_install() {
 	einfo "Done"
 
 	dodoc doc/license.txt doc/install_new.html doc/upgradefrom_b2evo.html doc/upgradefrom_b2.html \
-		doc/upgradefrom_gl.html doc/upgradefrom_miniblog.html doc/upgradefrom_mt.html
+		doc/upgradefrom_mt.html
 
 	# Identify the configuration files that this app uses
 	# User can want to make changes to these!
