@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-1.8.6.ebuild,v 1.2 2007/01/28 01:35:48 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-1.10.2.ebuild,v 1.1 2007/08/09 11:27:08 wrobel Exp $
 
 inherit webapp eutils
 
-MY_EXT="-2006-12-01"
+MY_EXT="-2007-06-08"
 
 DESCRIPTION="Multilingual multiuser multi-blog engine"
 HOMEPAGE="http://www.b2evolution.net"
