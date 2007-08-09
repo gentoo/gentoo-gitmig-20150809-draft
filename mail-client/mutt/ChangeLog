@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.111 2007/08/09 07:34:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.112 2007/08/09 08:26:00 ferdy Exp $
+
+  09 Aug 2007; Fernando J. Pereda <ferdy@gentoo.org> mutt-1.5.16.ebuild:
+  The nntp patch was faulty. Bumping patchset to -r1, no revbump to avoid
+  silly recompiles.
 
   09 Aug 2007; Christian Faulhammer <opfer@gentoo.org> mutt-1.5.16.ebuild:
   stable x86, security bug 178003

@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.16.ebuild,v 1.3 2007/08/09 07:34:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.16.ebuild,v 1.4 2007/08/09 08:26:00 ferdy Exp $
 
 inherit eutils flag-o-matic autotools
 
-PATCHSET_REV=""
+PATCHSET_REV="-r1"
 
 SIDEBAR_PATCH_N="patch-1.5.16.sidebar.20070704.txt"
 
