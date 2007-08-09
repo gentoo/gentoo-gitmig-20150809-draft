@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.6.3.ebuild,v 1.1 2007/08/09 19:46:04 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.6.3.ebuild,v 1.2 2007/08/09 20:05:35 keytoaster Exp $
 
 inherit kde
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://kplayer.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kplayer/${P}.tar.bz2"
 
 SLOT="0"
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
