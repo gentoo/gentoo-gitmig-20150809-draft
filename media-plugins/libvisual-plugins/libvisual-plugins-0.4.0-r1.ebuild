@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.12 2007/07/22 09:22:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.13 2007/08/09 15:08:44 drac Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -25,7 +25,7 @@ RDEPEND="~media-libs/libvisual-${PV}
 	esd? ( media-sound/esound )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
 	gtk? ( >=x11-libs/gtk+-2 )
-	gstreamer? ( >=media-libs/gstreamer-0.8 )
+	gstreamer? ( =media-libs/gstreamer-0.8* )
 	alsa? ( media-libs/alsa-lib )
 	media-libs/fontconfig
 	x11-libs/libX11
