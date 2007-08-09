@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.21.ebuild,v 1.1 2007/08/09 21:26:47 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.21.ebuild,v 1.2 2007/08/09 21:43:47 je_fro Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="WYSIWYG 2D plotting tool for the X Window System"
 HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace/"
 SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/grace/src/stable/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="debug fftw jpeg netcdf pdf png"
 
