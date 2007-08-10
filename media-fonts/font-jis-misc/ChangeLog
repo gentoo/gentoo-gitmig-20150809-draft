@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-jis-misc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-jis-misc/ChangeLog,v 1.21 2007/07/24 16:36:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-jis-misc/ChangeLog,v 1.22 2007/08/10 17:55:52 armin76 Exp $
+
+  10 Aug 2007; Raúl Porcel <armin76@gentoo.org> font-jis-misc-1.0.0.ebuild:
+  alpha stable wrt #184462
 
   24 Jul 2007; Steve Dibb <beandog@gentoo.org> font-jis-misc-1.0.0.ebuild:
   amd64 stable, bug 184462
