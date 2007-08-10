@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.32 2007/08/09 20:05:35 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.33 2007/08/10 10:02:19 armin76 Exp $
+
+  10 Aug 2007; Raúl Porcel <armin76@gentoo.org> kplayer-0.6.3.ebuild:
+  Back to ~arch, went stright to stable
 
   09 Aug 2007; Tobias Heinlein <keytoaster@gentoo.org> kplayer-0.6.3.ebuild:
   Fixing LICENSE, kplayer-0.6.3 and later is licensed under the GPL version 3
