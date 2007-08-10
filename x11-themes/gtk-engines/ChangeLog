@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.104 2007/08/08 21:53:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.105 2007/08/10 12:47:49 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  gtk-engines-2.10.2.ebuild:
+  Stable on amd64 wrt bug #185823
 
   08 Aug 2007; Raúl Porcel <armin76@gentoo.org> gtk-engines-2.10.2.ebuild:
   alpha/ia64 stable wrt #185823
