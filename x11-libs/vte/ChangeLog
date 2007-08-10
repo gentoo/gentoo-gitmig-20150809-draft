@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.163 2007/08/08 22:14:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.164 2007/08/10 13:06:38 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org> vte-0.16.6-r1.ebuild:
+  Stable on amd64 wrt bug #185823
 
   08 Aug 2007; Raúl Porcel <armin76@gentoo.org> vte-0.16.6-r1.ebuild:
   alpha/ia64 stable wrt #185823
