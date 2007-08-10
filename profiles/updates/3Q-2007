@@ -26,3 +26,4 @@ move net-www/mod_auth_pgsql www-apache/mod_auth_pgsql
 move net-www/apache www-servers/apache
 move net-www/pwauth www-apache/pwauth
 move x11-drivers/nvidia-legacy-drivers x11-drivers/nvidia-drivers
+move games-strategy/bos games-strategy/boswars
