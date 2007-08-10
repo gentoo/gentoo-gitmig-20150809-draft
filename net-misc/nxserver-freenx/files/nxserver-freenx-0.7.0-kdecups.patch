@@ -1,0 +1,32 @@
+diff -Naur freenx-0.7.0.orig/node.conf freenx-0.7.0/node.conf
+--- freenx-0.7.0.orig/node.conf	2007-08-10 17:42:19.000000000 +0200
++++ freenx-0.7.0/node.conf	2007-08-10 17:42:41.000000000 +0200
+@@ -289,7 +289,7 @@
+ # CUPS_BACKEND and CUPS_ETC are the corresponding paths of your CUPS 
+ # installation.
+ 
+-#CUPS_BACKEND="/usr/lib/cups/backend"
++#CUPS_BACKEND="/usr/libexec/cups/backend"
+ #CUPS_IPP_BACKEND="$CUPS_BACKEND/nxipp"
+ #CUPS_DEFAULT_SOCK="/var/run/cups/cups.sock"
+ #CUPS_ETC="/etc/cups"
+diff -Naur freenx-0.7.0.orig/nxloadconfig freenx-0.7.0/nxloadconfig
+--- freenx-0.7.0.orig/nxloadconfig	2007-08-10 17:42:19.000000000 +0200
++++ freenx-0.7.0/nxloadconfig	2007-08-10 17:42:55.000000000 +0200
+@@ -152,7 +152,7 @@
+ ENABLE_FOOMATIC="1"
+ COMMAND_FOOMATIC="/usr/lib/cups/driver/foomatic-ppdfile"
+ 
+-CUPS_BACKEND="/usr/lib/cups/backend"
++CUPS_BACKEND="/usr/libexec/cups/backend"
+ CUPS_IPP_BACKEND="$CUPS_BACKEND/nxipp"
+ CUPS_DEFAULT_SOCK="/var/run/cups/cups.sock"
+ CUPS_ETC="/etc/cups/"
+@@ -282,7 +282,6 @@
+ fi 
+ 
+ [ -z "$KDE_PRINTRC" -a -n "$KDEHOME" ] && KDE_PRINTRC="$KDEHOME/share/config/kdeprintrc"
+-[ -z "$KDE_PRINTRC" ] && KDE_PRINTRC=$(kde-config --localprefix)"/share/config/kdeprintrc"
+ [ -z "$KDE_PRINTRC" -o ! -r "$KDE_PRINTRC" ] && KDE_PRINTRC="$HOME/.kde/share/config/kdeprintrc"
+ 
+ #########################################################################

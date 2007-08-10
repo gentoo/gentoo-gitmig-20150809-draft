@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.28 2007/08/10 18:23:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.29 2007/08/10 18:33:35 voyageur Exp $
+
+*nxserver-freenx-0.7.0 (10 Aug 2007)
+
+  10 Aug 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/nxserver-freenx-0.7.0-kdecups.patch,
+  +files/nxserver-freenx-0.7.0-xfsfonts.patch,
+  +nxserver-freenx-0.7.0.ebuild:
+  Version bump, bug #186226
+  Also added a patch to fix font size
 
   10 Aug 2007; Bernard Cafarelli <voyageur@gentoo.org>
   -files/freenx-0.5.0-backingstore.patch, -files/freenx-0.5.0-startup.patch,

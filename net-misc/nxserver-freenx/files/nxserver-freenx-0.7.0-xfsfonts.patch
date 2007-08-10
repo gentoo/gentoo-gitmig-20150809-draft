@@ -1,0 +1,19 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 05_fix_xfs_fonts.dpatch by  <diamond@google.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad freenx-0.6.0+svn334~/nxnode freenx-0.6.0+svn334/nxnode
+--- freenx-0.6.0+svn334~/nxnode	2007-05-31 16:47:23.000000000 +0100
++++ freenx-0.6.0+svn334/nxnode	2007-05-31 16:47:50.000000000 +0100
+@@ -304,6 +304,8 @@
+ 		NODE_WM_PID=$!
+ 	fi
+ 
++	echo "Xft.dpi: 96" | DISPLAY=:$display xrdb -merge >>"$USER_FAKE_HOME/.nx/C-$sess_id/session" 2>&1
++
+ 	#
+ 	# Startup the application
+ 	#
