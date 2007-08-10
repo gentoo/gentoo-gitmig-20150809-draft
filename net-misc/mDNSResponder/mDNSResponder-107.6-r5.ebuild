@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.6-r5.ebuild,v 1.6 2007/08/09 21:17:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.6-r5.ebuild,v 1.7 2007/08/10 13:48:21 angelos Exp $
 
 inherit eutils base toolchain-funcs flag-o-matic java-pkg-opt-2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.opensource.apple.com/darwinsource/tarballs/other/${P}.tar.gz
 LICENSE="APSL-2 BSD"
 
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
 IUSE="debug doc"
 
 DEPEND="!net-dns/avahi

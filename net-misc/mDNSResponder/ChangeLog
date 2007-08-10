@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.39 2007/08/09 21:17:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.40 2007/08/10 13:48:21 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  mDNSResponder-107.6-r5.ebuild:
+  Stable on amd64 wrt bug #176297
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org>
   mDNSResponder-107.6-r5.ebuild:
