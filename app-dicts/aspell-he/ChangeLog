@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-he
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.20 2007/08/09 16:23:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.21 2007/08/10 05:07:21 jer Exp $
+
+  10 Aug 2007; Jeroen Roovers <jer@gentoo.org> aspell-he-1.0.0.ebuild:
+  Stable for HPPA (bug #178690).
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> aspell-he-1.0.0.ebuild:
   Stable on ppc64; bug #178690
