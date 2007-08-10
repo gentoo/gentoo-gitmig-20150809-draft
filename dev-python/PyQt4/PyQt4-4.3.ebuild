@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.3.ebuild,v 1.1 2007/08/09 11:56:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.3.ebuild,v 1.2 2007/08/10 13:49:12 caleb Exp $
 
 inherit distutils
 
@@ -33,9 +33,7 @@ src_compile() {
 	distutils_python_version
 	addpredict ${QTDIR}/etc/settings
 
-	local myconf="-d /usr/$(get_libdir)/python${PYVER}/site-packages/PyQt4 \
-			-b /usr/bin \
-			-v /usr/share/sip"
+	local myconf="-d /usr/$(get_libdir)/python${PYVER}/site-packages -b /usr/bin -v /usr/share/sip"
 	use debug && myconf="${myconf} -u"
 
 	"${python}" configure.py ${myconf}
