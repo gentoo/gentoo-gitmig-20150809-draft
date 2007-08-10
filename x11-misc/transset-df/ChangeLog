@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/transset-df
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset-df/ChangeLog,v 1.1 2007/07/11 02:12:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset-df/ChangeLog,v 1.2 2007/08/10 00:15:33 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org> transset-df-5.ebuild:
+  Stable on amd64
 
 *transset-df-5 (11 Jul 2007)
 
