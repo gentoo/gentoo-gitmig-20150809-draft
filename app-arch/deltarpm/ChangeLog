@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/deltarpm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/deltarpm/ChangeLog,v 1.2 2007/02/21 19:54:32 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/deltarpm/ChangeLog,v 1.3 2007/08/10 17:04:08 gregkh Exp $
+
+  10 Aug 2007; Greg Kroah-Hartman <gregkh@gentoo.org> deltarpm-3.3.ebuild:
+  add ~x86 as it works for me and I need this application on some machines.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
