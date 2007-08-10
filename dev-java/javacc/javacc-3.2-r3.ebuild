@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-3.2-r3.ebuild,v 1.9 2006/01/22 05:08:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-3.2-r3.ebuild,v 1.10 2007/08/10 09:36:52 betelgeuse Exp $
 
 inherit java-pkg eutils
 
 DESCRIPTION="Java Compiler Compiler [tm] (JavaCC [tm]) - The Java Parser Generator"
 HOMEPAGE="https://javacc.dev.java.net/servlets/ProjectHome"
-SRC_URI="https://${PN}.dev.java.net/files/documents/17/3616/${P}.tar.gz"
+SRC_URI="https://${PN}.dev.java.net/files/documents/17/3616/${P}src.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ppc amd64"

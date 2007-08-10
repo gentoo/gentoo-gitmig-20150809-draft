@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javacc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.23 2007/07/15 15:12:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.24 2007/08/10 09:36:52 betelgeuse Exp $
+
+  10 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> javacc-3.2-r3.ebuild:
+  The 3.2 tarball was renamed upstream. Fixes bug #186182.
 
   15 Jul 2007; nixnut <nixnut@gentoo.org> javacc-4.0-r4.ebuild:
   Stable on ppc wrt bug 184561
