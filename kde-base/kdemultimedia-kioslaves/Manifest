@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX kdemultimedia-3.5.5+flac-1.1.3.patch 2456 RMD160 67dfbe88872adb5fc2064ad0cf545931a895500f SHA1 d6a5b9d518eb465b1174c127593f246fb44109e0 SHA256 bb337df8f696f49f1d121ca59113c95f7aef788bfd574ab20fdaf8c7e090021b
 MD5 72791ea8b5767cec50d02375322a2315 files/kdemultimedia-3.5.5+flac-1.1.3.patch 2456
 RMD160 67dfbe88872adb5fc2064ad0cf545931a895500f files/kdemultimedia-3.5.5+flac-1.1.3.patch 2456
@@ -17,14 +20,14 @@ EBUILD kdemultimedia-kioslaves-3.5.6-r1.ebuild 1614 RMD160 c37ee241e458e46558c7d
 MD5 6e092e55dfd63df4dac0b47a363878a0 kdemultimedia-kioslaves-3.5.6-r1.ebuild 1614
 RMD160 c37ee241e458e46558c7d41c0115461129c1c5d4 kdemultimedia-kioslaves-3.5.6-r1.ebuild 1614
 SHA256 c632261a75e6dc5a107bba172c1a11600a4171e633a007c8b4916c1a3cdf73b6 kdemultimedia-kioslaves-3.5.6-r1.ebuild 1614
-EBUILD kdemultimedia-kioslaves-3.5.7.ebuild 1625 RMD160 772c99a5482a2c7b138804232c78b8237ba1426c SHA1 faa31fc971ffa4891d00f0fe36c718cf2ef2b2d4 SHA256 9059efc5c98f37c255bfd2f56d0e8821f69d2b60b164e352f01e4e6bb7d9cc70
-MD5 aec8500d3cc62d249ab1073867bc5687 kdemultimedia-kioslaves-3.5.7.ebuild 1625
-RMD160 772c99a5482a2c7b138804232c78b8237ba1426c kdemultimedia-kioslaves-3.5.7.ebuild 1625
-SHA256 9059efc5c98f37c255bfd2f56d0e8821f69d2b60b164e352f01e4e6bb7d9cc70 kdemultimedia-kioslaves-3.5.7.ebuild 1625
-MISC ChangeLog 10920 RMD160 4bfa0d50b788020f49b73ab11b066af5d14c725a SHA1 7fbdfae5e6fea487164921eace9cb273de8777e5 SHA256 c2e8f8c80fc10f15b6edbeb87ce5b29d4517156dd14121edae0ef16ef864dd3d
-MD5 b917842d8c978a3902730055abaf32bc ChangeLog 10920
-RMD160 4bfa0d50b788020f49b73ab11b066af5d14c725a ChangeLog 10920
-SHA256 c2e8f8c80fc10f15b6edbeb87ce5b29d4517156dd14121edae0ef16ef864dd3d ChangeLog 10920
+EBUILD kdemultimedia-kioslaves-3.5.7.ebuild 1624 RMD160 a3b0025f1562ac3fe09aae5704f27854d47a4bef SHA1 90d94c7cbc56942a150a17dca4c61e4aa2cc65a5 SHA256 a815e5465d878fe81e0e380dcceffdc8975ed3ea6da913ded1581b6512a63b45
+MD5 e3515b58c756bc334f188986505039ef kdemultimedia-kioslaves-3.5.7.ebuild 1624
+RMD160 a3b0025f1562ac3fe09aae5704f27854d47a4bef kdemultimedia-kioslaves-3.5.7.ebuild 1624
+SHA256 a815e5465d878fe81e0e380dcceffdc8975ed3ea6da913ded1581b6512a63b45 kdemultimedia-kioslaves-3.5.7.ebuild 1624
+MISC ChangeLog 11047 RMD160 b1f409dfe441da137ae1d020d3faa2fd3ddfe729 SHA1 4ddf9fdbbe2217adf2e96198990447eabac36ed6 SHA256 912639cc7d76a04008dcc5cf6dea165134bd52b1f9340966ba1fadb835b73575
+MD5 3fc8cab138ab7ae43632a1263d015b60 ChangeLog 11047
+RMD160 b1f409dfe441da137ae1d020d3faa2fd3ddfe729 ChangeLog 11047
+SHA256 912639cc7d76a04008dcc5cf6dea165134bd52b1f9340966ba1fadb835b73575 ChangeLog 11047
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -38,3 +41,10 @@ SHA256 8c8f0b56dd810d9202f532206814eed4c4ff4e6062a88e0bbee4523b8cf5f4d7 files/di
 MD5 a716b7f3a2e7ff27907f056d06c2c804 files/digest-kdemultimedia-kioslaves-3.5.7 265
 RMD160 4e58982f9a58d1c396075128e27acd8a7bbbb98e files/digest-kdemultimedia-kioslaves-3.5.7 265
 SHA256 0da34e9a548299a606ef0fc4a7e23d98b53d3aa5ad01db2831b99b84b859ea5b files/digest-kdemultimedia-kioslaves-3.5.7 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFGvHw9KhnDs22gwa8RAkyOAJ9rCIpLP77ZWQ/0JsVX4A+UNX4VOwCgpBRp
+vslC069tJV+RluCX95KXxOc=
+=F8c7
+-----END PGP SIGNATURE-----
