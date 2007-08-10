@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.18.3.ebuild,v 1.5 2007/08/08 23:47:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.18.3.ebuild,v 1.6 2007/08/10 13:20:59 angelos Exp $
 
 inherit eutils gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="branding esd ipv6 tcpd"
 
 RDEPEND=">=dev-libs/glib-2.6
