@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.37 2007/08/07 20:20:12 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.38 2007/08/10 13:25:18 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  evolution-exchange-2.10.1.ebuild:
+  Stable on amd64 wrt bug #185823
 
   07 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   evolution-exchange-2.10.1.ebuild:
