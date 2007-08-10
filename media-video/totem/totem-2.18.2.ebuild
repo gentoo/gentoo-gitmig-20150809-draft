@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.2.ebuild,v 1.9 2007/08/10 13:25:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.2.ebuild,v 1.10 2007/08/10 21:07:26 eva Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -87,6 +87,7 @@ DEPEND="${RDEPEND}
 	  x11-proto/inputproto
 	  app-text/scrollkeeper
 	  gnome-base/gnome-common
+	  app-text/gnome-doc-utils
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.20"
 
@@ -141,6 +142,13 @@ src_unpack() {
 		epatch ${FILESDIR}/${PN}-2.18.1-browser-plugins.patch
 		eautoreconf
 	fi
+
+	# Remove this when POTFILES.in will be fixed
+	echo "data/totem-handlers.schemas.in" >> ${S}/po/POTFILES.skip
+	echo "data/totem-video-thumbnail.schemas.in" >> ${S}/po/POTFILES.skip
+	echo "data/totem.desktop.in" >> ${S}/po/POTFILES.skip
+	echo "data/totem.desktop.in.in" >> ${S}/po/POTFILES.skip
+	echo "data/vanity.desktop.in" >> ${S}/po/POTFILES.skip
 }
 
 src_install() {
