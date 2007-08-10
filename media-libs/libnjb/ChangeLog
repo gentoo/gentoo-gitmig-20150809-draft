@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.35 2007/02/17 01:01:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.36 2007/08/10 11:50:00 drac Exp $
+
+*libnjb-2.2.5-r1 (10 Aug 2007)
+
+  10 Aug 2007; Samuli Suominen <drac@gentoo.org> +files/libnjb.rules,
+  +libnjb-2.2.5-r1.ebuild:
+  Install udev rules wrt bug 137728.
 
   17 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   -files/libnjb-1.2-gentoo-multilib.patch,
