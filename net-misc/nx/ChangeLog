@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.6 2007/07/22 08:01:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.7 2007/08/10 18:17:14 voyageur Exp $
+
+  10 Aug 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/1.5.0/nx-x11-windows-linux-resume.patch,
+  -files/1.5.0/nx-x11-1.5.0-amd64.patch, -files/1.5.0/nxwrapper,
+  -files/1.5.0/nxcomp-1.5.0-gcc4.patch,
+  -files/1.5.0/nx-x11-1.5.0-plastik-render-fix.patch,
+  -files/1.5.0/nx-x11-1.5.0-xorg7-font-fix.patch, -nx-1.5.0.ebuild:
+  Removing old NX 1.5 version
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; nx-1.5.0.ebuild:
   Drop virtual/x11 references.
