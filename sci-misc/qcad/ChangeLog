@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/qcad
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.22 2006/11/15 12:38:01 corsair Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.23 2007/08/10 19:43:38 je_fro Exp $
+
+*qcad-2.0.4.0-r5 (10 Aug 2007)
+
+  10 Aug 2007; <jeff@gentoo.org> +qcad-2.0.4.0-r5.ebuild:
+  Fix make_desktop_entry.
 
   15 Nov 2006; Markus Rothe <corsair@gentoo.org> qcad-2.0.4.0-r3.ebuild:
   Stable on ppc64; bug #145841

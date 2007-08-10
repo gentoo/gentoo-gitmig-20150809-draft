@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r2.ebuild,v 1.5 2007/08/10 19:43:38 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r5.ebuild,v 1.1 2007/08/10 19:43:38 je_fro Exp $
 
 inherit kde-functions eutils
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.ribbonsoft.com/qcad.html"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 
 DEPEND=">=sys-apps/sed-4"
 need-qt 3.3
@@ -36,6 +36,7 @@ src_unpack() {
 	done
 	epatch ${FILESDIR}/${MY_P}-gentoo.patch
 	epatch ${FILESDIR}/manual.patch-r1
+	epatch ${FILESDIR}/${MY_P}-intptr.patch
 	cd ${S}/scripts
 	sed -i -e 's/^make/make ${MAKEOPTS}/' build_qcad.sh || \
 		die "unable to add MAKEOPTS"
@@ -72,11 +73,13 @@ src_install () {
 	cd qcad
 	mv qcad qcad.bin
 	dobin qcad.bin
-	echo -e "#!/bin/sh\ncd /usr/share/${P}\nqcad.bin \"\$@\"" > qcad
+	echo -e "#!/bin/sh\ncd /usr/share/${P}\nqcad.bin" > qcad
 	chmod ugo+rx qcad
 	dobin qcad
 	dodir /usr/share/${P}
 	cp -pPR patterns examples fonts qm ${D}/usr/share/${P}
+	doicon src/xpm/${PN}.xpm
+	make_desktop_entry ${PN} QCad ${PN}.xpm Office
 	cd ..
 	dodoc README
 	if use doc; then
@@ -84,5 +87,4 @@ src_install () {
 		cd ${WORKDIR}
 		cp -pPR qcaddoc.adp cad ${D}usr/share/doc/${PF}
 	fi
-	make_desktop_entry ${PN} ${PN} ${PN} Office
 }
