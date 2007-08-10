@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.287 2007/08/08 23:57:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.288 2007/08/10 13:29:17 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org> gnome-2.18.2-r1.ebuild:
+  Stable on amd64 wrt bug #185823
 
   08 Aug 2007; Raúl Porcel <armin76@gentoo.org> gnome-2.18.2-r1.ebuild:
   alpha/ia64 stable wrt #185823
