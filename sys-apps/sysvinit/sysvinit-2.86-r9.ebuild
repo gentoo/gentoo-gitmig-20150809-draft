@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86-r6.ebuild,v 1.7 2007/04/05 14:16:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86-r9.ebuild,v 1.1 2007/08/10 08:52:55 uberlord Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -12,8 +12,8 @@ SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
-IUSE="selinux ibm static"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="selinux ibm static kernel_FreeBSD"
 
 RDEPEND="selinux? ( >=sys-libs/libselinux-1.28 )"
 DEPEND="${RDEPEND}
@@ -23,13 +23,15 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd "${S}"
 	cp "${FILESDIR}"/change_console.{c,8} src/ || die
-	epatch "${FILESDIR}"/${P}-docs.patch
-	epatch "${FILESDIR}"/${P}-shutdown-usage.patch
-	epatch "${FILESDIR}"/sysvinit-2.86-off-by-one.patch
-	epatch "${DISTDIR}"/sysvinit-2.86-kexec.patch
-	#epatch "${FILESDIR}"/sysvinit-2.86-POSIX-1003.1e.patch #5818
-	epatch "${FILESDIR}"/sysvinit-2.86-execl.patch
-	epatch "${FILESDIR}"/sysvinit-2.86-utmp-64bit.patch
+	epatch "${FILESDIR}/${P}"-docs.patch
+	epatch "${FILESDIR}/${P}"-shutdown-usage.patch
+	epatch "${FILESDIR}/${P}"-off-by-one.patch
+	epatch "${DISTDIR}/${P}"-kexec.patch
+	#epatch "${FILESDIR}/${P}"-POSIX-1003.1e.patch #5818
+	epatch "${FILESDIR}/${P}"-execl.patch
+	epatch "${FILESDIR}/${P}"-utmp-64bit.patch
+	epatch "${FILESDIR}/${P}"-shutdown-single.patch
+	epatch "${FILESDIR}/${P}"-utmp-smp.patch
 	cd src
 	epatch "${FILESDIR}"/${PV}-gentoo.patch
 	use selinux && epatch "${FILESDIR}"/${PV}-selinux-1.patch
@@ -41,11 +43,18 @@ src_unpack() {
 	use ppc && insert="#psc0:12345:respawn:/sbin/agetty 115200 ttyPSC0 linux\n"
 	use arm && insert='#f0:12345:respawn:/sbin/agetty 9600 ttyFB0 vt100'
 	use hppa && insert='b0:12345:respawn:/sbin/agetty 9600 ttyB0 vt100'
+	use s390 && insert='s0:12345:respawn:/sbin/agetty 38400 console'
 	if use ibm ; then
 		insert="${insert}#hvc0:2345:respawn:/sbin/agetty -L 9600 hvc0"$'\n'
 		insert="${insert}#hvsi:2345:respawn:/sbin/agetty -L 19200 hvsi0"
 	fi
 	(use arm || use mips || use sh || use sparc) && sed -i '/ttyS0/s:#::' inittab
+	# Support kFreeBSD, #121786
+	if use kernel_FreeBSD; then
+		sed -i -e 's/linux/cons25/g' \
+			-e 's/ttyS0/cuaa0/g' \
+			-e 's/ttyS1/cuaa1/g' inittab
+	fi
 	[[ -n ${insert} ]] && echo "# Architecture specific features"$'\n'"${insert}" >> inittab
 }
 
