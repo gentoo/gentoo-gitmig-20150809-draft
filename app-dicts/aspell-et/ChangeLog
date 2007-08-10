@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-et
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-et/ChangeLog,v 1.11 2007/08/09 16:22:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-et/ChangeLog,v 1.12 2007/08/10 05:11:00 jer Exp $
+
+  10 Aug 2007; Jeroen Roovers <jer@gentoo.org> aspell-et-0.1.21.1.ebuild:
+  Stable for HPPA (bug #178690).
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> aspell-et-0.1.21.1.ebuild:
   Stable on ppc64; bug #178690
