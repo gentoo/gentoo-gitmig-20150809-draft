@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.5.ebuild,v 1.12 2007/08/09 16:31:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.5.ebuild,v 1.13 2007/08/10 05:15:34 jer Exp $
 
 # N.B. This is before inherit of autotools, as autotools.eclass adds the
 # relevant dependencies to DEPEND.
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/aspell/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~m68k mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="gpm nls"
 # Note; app-text/aspell-0.6 and app-dicts/aspell-en-0.6 must go stable together
 
