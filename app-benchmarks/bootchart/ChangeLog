@@ -1,6 +1,14 @@
 # ChangeLog for app-benchmarks/bootchart
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.4 2007/03/28 06:10:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.5 2007/08/10 11:13:32 uberlord Exp $
+
+*bootchart-0.9-r2 (10 Aug 2007)
+
+  10 Aug 2007; Roy Marples <uberlord@gentoo.org>
+  +files/bootchart-0.9-sh.patch, +bootchart-0.9-r2.ebuild:
+  Remove a bashism from bootchartd as it uses /bin/sh.
+  Don't install baselayout-1 hooks if we have baselayout-2 installed
+  and give different installation instructions #188278.
 
   28 Mar 2007; Mike Frysinger <vapier@gentoo.org> bootchart-0.9-r1.ebuild:
   Fix install path for rcscript addon #172391 by Georgi Georgiev.
