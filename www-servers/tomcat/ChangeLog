@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.153 2007/08/02 06:50:55 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.154 2007/08/10 06:54:44 opfer Exp $
+
+  10 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  tomcat-5.5.23-r6.ebuild:
+  stable x86, bug 187183
 
   02 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   tomcat-5.5.23-r6.ebuild:
