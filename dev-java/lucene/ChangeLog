@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/lucene
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.34 2007/06/18 17:35:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.35 2007/08/10 07:49:21 wltjr Exp $
+
+  10 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  lucene-1.4.3-r3.ebuild:
+  amd64 stable, bug #187601
 
   18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org> lucene-2.1.0.ebuild:
   Add ~x86-fbsd keyword.
