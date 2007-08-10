@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.0.1.ebuild,v 1.1 2007/08/04 15:37:50 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.0.1-r1.ebuild,v 1.1 2007/08/10 15:38:36 gurligebis Exp $
 
 PHP_LIB_NAME="Zend"
 
 inherit php-lib-r1
 
 KEYWORDS="~amd64 ~x86"
-MY_PV="1.0.0"
+MY_PV="1.0.1"
 
 DESCRIPTION="Zend Framework is a high quality and open source framework for developing Web Applications and Web Services with PHP 5."
 HOMEPAGE="http://framework.zend.com/"
@@ -28,7 +28,9 @@ need_php_by_category
 
 src_install() {
 	php-lib-r1_src_install library/Zend `cd library/Zend ; find . -type f -print`
-	php-lib-r1_src_install incubator/library/Zend `cd incubator/library/Zend ; find . -type f -print`
+
+	# Incubator has been removed, keeping in case it comes back
+	#php-lib-r1_src_install incubator/library/Zend `cd incubator/library/Zend ; find . -type f -print`
 
 	if use examples ; then
 		insinto /usr/share/doc/${P}
