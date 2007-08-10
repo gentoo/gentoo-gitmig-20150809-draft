@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/axion
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/ChangeLog,v 1.21 2007/08/10 18:25:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/ChangeLog,v 1.22 2007/08/10 19:11:17 betelgeuse Exp $
+
+  10 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -axion-1.0_rc2-r2.ebuild:
+  delete generation 1 ebuild
 
   10 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   axion-1.0_rc2-r3.ebuild:
