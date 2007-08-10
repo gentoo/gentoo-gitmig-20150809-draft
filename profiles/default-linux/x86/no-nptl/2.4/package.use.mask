@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.use.mask,v 1.2 2007/06/30 02:26:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.use.mask,v 1.3 2007/08/10 17:21:27 mr_bones_ Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -9,3 +9,7 @@ dev-haskell/gtk2hs gnome
 # Michael Sterrett <mr_bones_@gentoo.org> (29 Jun 2007)
 # needs dev-python/pygobject for test which is masked
 >dev-python/dbus-python-0.71 test
+
+# Michael Sterrett <mr_bones_@gentoo.org> (10 Aug 2007)
+# needs app-misc/lcdproc which is masked
+media-tv/mythtv lcd

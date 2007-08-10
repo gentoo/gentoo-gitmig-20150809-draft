@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.101 2007/07/30 00:43:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.102 2007/08/10 17:21:27 mr_bones_ Exp $
 
 # Daniel Drake <dsd@gentoo.org> (29 July 2007)
 # Directly or indirectly depends on evolution-sharp which requires GNOME 2.16
@@ -260,6 +260,7 @@ x11-plugins/compiz-extra
 # Andrej Kacian <ticho@gentoo.org>
 # Depends on >=2.6.11 headers
 >=app-misc/lcdproc-0.5.0
+app-misc/lcd-stuff
 
 # Luis Medinas <metalgod@gentoo.org>
 # Mask because it needs hal
