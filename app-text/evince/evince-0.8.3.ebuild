@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.8.3.ebuild,v 1.5 2007/08/10 13:22:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.8.3.ebuild,v 1.6 2007/08/10 19:04:51 dang Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils gnome2 autotools
@@ -46,6 +46,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 USE_DESTDIR="1"
 ELTCONF="--portage"
+RESTRICT="test"
 
 pkg_setup() {
 	G2CONF="--disable-scrollkeeper \
