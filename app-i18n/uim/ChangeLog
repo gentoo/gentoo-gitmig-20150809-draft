@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.167 2007/07/24 16:49:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.168 2007/08/10 18:01:52 armin76 Exp $
+
+  10 Aug 2007; Raúl Porcel <armin76@gentoo.org> uim-1.4.1.ebuild:
+  alpha stable wrt #184462
 
   24 Jul 2007; Steve Dibb <beandog@gentoo.org> uim-1.4.1.ebuild:
   amd64 stable, bug 184462
