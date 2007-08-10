@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/yacas
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.16 2007/07/18 02:16:06 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.17 2007/08/10 18:00:16 markusle Exp $
+
+*yacas-1.1.0 (10 Aug 2007)
+
+  10 Aug 2007; Markus Dittrich <markusle@gentoo.org> +yacas-1.1.0.ebuild:
+  Version bump (see bug #187921).
 
   18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> -yacas-1.0.62.ebuild,
   yacas-1.0.63.ebuild:
