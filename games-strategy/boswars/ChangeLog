@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/boswars
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/ChangeLog,v 1.1 2007/08/04 22:56:16 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/ChangeLog,v 1.2 2007/08/10 23:45:10 mr_bones_ Exp $
+
+  10 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org> boswars-2.3.ebuild:
+  match keywords to games-strategy/bos for package move
 
 *boswars-2.3 (04 Aug 2007)
 
