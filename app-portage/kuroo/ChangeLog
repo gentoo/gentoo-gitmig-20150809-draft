@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/kuroo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.16 2007/02/19 21:08:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.17 2007/08/10 16:15:11 philantrop Exp $
+
+*kuroo-0.80.3 (10 Aug 2007)
+
+  10 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> -kuroo-0.71.0.ebuild,
+  -kuroo-0.80.1.ebuild, -kuroo-0.80.2.ebuild, +kuroo-0.80.3.ebuild:
+  Added kuroo-0.80.3 which includes the fixes for bug 188267. Upstream
+  changes: - Fixed crash when loading queue packages and changed emerge syntax
+  color=n . - Disabled size cache and scanning because of changes in portage.
+  Removed obsolete ebuilds.
 
   19 Feb 2007; Raúl Porcel <armin76@gentoo.org> kuroo-0.80.2-r1.ebuild:
   x86 stable wrt bug 144084
