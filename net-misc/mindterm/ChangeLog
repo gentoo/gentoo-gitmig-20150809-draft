@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mindterm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.15 2007/08/09 06:14:49 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.16 2007/08/10 10:03:39 betelgeuse Exp $
+
+  10 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> -mindterm-2.4.2.ebuild:
+  Remove old version.
 
   09 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   mindterm-3.1.2.ebuild:
