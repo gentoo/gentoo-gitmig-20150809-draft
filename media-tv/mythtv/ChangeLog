@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.164 2007/08/08 19:07:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.165 2007/08/10 15:02:25 cardoe Exp $
+
+  10 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-0.20.1_p14146.ebuild:
+  new stable. required for MySQL 5.0.42 and higher.
 
   08 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.21_pre14153.ebuild:
