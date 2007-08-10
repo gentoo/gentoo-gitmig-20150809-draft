@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.166 2007/08/04 09:17:33 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.167 2007/08/10 09:32:03 phreak Exp $
+
+*hardened-sources-2.6.22 (10 Aug 2007)
+
+  10 Aug 2007; Christian Heim <phreak@gentoo.org>
+  +hardened-sources-2.6.22.ebuild:
+  Initial release for 2.6.22. If you are using hardened-sources on a desktop
+  machine (P4 or newer), be aware you might need to disable
+  CONFIG_PAX_PAGEEXEC.
 
   04 Aug 2007; Christian Heim <phreak@gentoo.org>
   hardened-sources-2.6.20-r6.ebuild:
