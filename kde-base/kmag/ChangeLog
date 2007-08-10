@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmag
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.66 2007/08/09 17:35:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.67 2007/08/10 13:51:17 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org> kmag-3.5.7.ebuild:
+  Stable on amd64 wrt bug #176297
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> kmag-3.5.7.ebuild:
   Stable on ppc64; bug #176297

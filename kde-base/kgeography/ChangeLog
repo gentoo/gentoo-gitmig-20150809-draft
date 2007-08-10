@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgeography
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.41 2007/08/09 20:21:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.42 2007/08/10 15:38:15 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org> kgeography-3.5.7.ebuild:
+  Stable on amd64 wrt bug #176297
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> kgeography-3.5.7.ebuild:
   Stable on ppc64; bug #176297

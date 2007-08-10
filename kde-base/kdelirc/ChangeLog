@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelirc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.59 2007/08/09 18:02:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.60 2007/08/10 14:02:30 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org> kdelirc-3.5.7.ebuild:
+  Stable on amd64 wrt bug #176297
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> kdelirc-3.5.7.ebuild:
   Stable on ppc64; bug #176297

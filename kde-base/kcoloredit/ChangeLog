@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcoloredit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcoloredit/ChangeLog,v 1.63 2007/08/09 19:34:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcoloredit/ChangeLog,v 1.64 2007/08/10 15:06:00 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org> kcoloredit-3.5.7.ebuild:
+  Stable on amd64 wrt bug #176297
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> kcoloredit-3.5.7.ebuild:
   Stable on ppc64; bug #176297

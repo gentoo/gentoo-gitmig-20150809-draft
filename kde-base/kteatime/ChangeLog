@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kteatime
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.68 2007/08/09 18:09:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.69 2007/08/10 14:08:22 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org> kteatime-3.5.7.ebuild:
+  Stable on amd64 wrt bug #176297
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> kteatime-3.5.7.ebuild:
   Stable on ppc64; bug #176297

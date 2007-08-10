@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.383 2007/08/09 17:02:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.384 2007/08/10 13:36:44 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org> kdebase-3.5.7-r3.ebuild:
+  Stable on amd64 wrt bug #176297
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> kdebase-3.5.7-r3.ebuild:
   Stable on ppc64; bug #176297

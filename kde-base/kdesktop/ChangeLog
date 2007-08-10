@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.97 2007/08/09 20:47:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.98 2007/08/10 16:08:53 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org> kdesktop-3.5.7.ebuild:
+  Stable on amd64 wrt bug #176297
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> kdesktop-3.5.7.ebuild:
   Stable on ppc64; bug #176297

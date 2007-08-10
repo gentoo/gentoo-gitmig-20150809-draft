@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.64 2007/08/09 18:08:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.65 2007/08/10 14:08:03 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org> ktux-3.5.7.ebuild:
+  Stable on amd64 wrt bug #176297
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> ktux-3.5.7.ebuild:
   Stable on ppc64; bug #176297

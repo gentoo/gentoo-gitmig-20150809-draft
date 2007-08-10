@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.7-r2.ebuild,v 1.5 2007/08/09 18:42:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.7-r2.ebuild,v 1.6 2007/08/10 14:30:06 angelos Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -13,7 +13,7 @@ SRC_URI="${SRC_URI}
 RESTRICT="test"
 
 DESCRIPTION="KMail is the email component of Kontact, the integrated personal information manager of KDE."
-KEYWORDS="alpha ~amd64 ia64 ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="crypt"
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
 	$(deprange $PV $MAXKDEVER kde-base/libkdepim)

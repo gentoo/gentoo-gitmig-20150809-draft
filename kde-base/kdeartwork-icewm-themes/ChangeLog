@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-icewm-themes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/ChangeLog,v 1.57 2007/08/09 17:50:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/ChangeLog,v 1.58 2007/08/10 13:57:26 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  kdeartwork-icewm-themes-3.5.7.ebuild:
+  Stable on amd64 wrt bug #176297
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org>
   kdeartwork-icewm-themes-3.5.7.ebuild:

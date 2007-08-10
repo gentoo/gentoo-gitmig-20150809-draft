@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfloppy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.60 2007/08/09 18:00:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.61 2007/08/10 14:01:39 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org> kfloppy-3.5.7.ebuild:
+  Stable on amd64 wrt bug #176297
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> kfloppy-3.5.7.ebuild:
   Stable on ppc64; bug #176297

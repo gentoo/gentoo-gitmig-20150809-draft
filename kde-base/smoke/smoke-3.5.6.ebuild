@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.5.6.ebuild,v 1.6 2007/08/09 21:20:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.5.6.ebuild,v 1.7 2007/08/10 14:04:26 angelos Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="kalyptus/"
@@ -12,7 +12,7 @@ inherit kde-meta
 DESCRIPTION="Scripting Meta Object Kompiler Engine: a language-agnostic bindings generator for qt and kde"
 HOMEPAGE="http://developer.kde.org/language-bindings/smoke/"
 
-KEYWORDS="~amd64 ppc ppc64 sparc ~x86"
+KEYWORDS="amd64 ppc ppc64 sparc ~x86"
 IUSE=""
 DEPEND="dev-lang/perl
 	dev-python/qscintilla" # QScintilla is an optional dep, there's a configure flag for it, but I don't want

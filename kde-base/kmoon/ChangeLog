@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmoon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmoon/ChangeLog,v 1.68 2007/08/09 18:10:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmoon/ChangeLog,v 1.69 2007/08/10 14:09:02 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org> kmoon-3.5.7.ebuild:
+  Stable on amd64 wrt bug #176297
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> kmoon-3.5.7.ebuild:
   Stable on ppc64; bug #176297

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.86 2007/08/09 20:46:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.87 2007/08/10 16:07:11 angelos Exp $
+
+  10 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  konqueror-3.5.7-r2.ebuild:
+  Stable on amd64 wrt bug #176297
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> konqueror-3.5.7-r2.ebuild:
   Stable on ppc64; bug #176297
