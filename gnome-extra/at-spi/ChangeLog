@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.150 2007/08/11 14:41:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.151 2007/08/11 19:51:59 leio Exp $
+
+  11 Aug 2007; Mart Raudsepp <leio@gentoo.org> -at-spi-1.7.10.ebuild,
+  -at-spi-1.18.0.ebuild, -at-spi-1.18.1.ebuild:
+  Remove old
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org> at-spi-1.18.1-r1.ebuild:
   Stable on x86, bug #185823.
