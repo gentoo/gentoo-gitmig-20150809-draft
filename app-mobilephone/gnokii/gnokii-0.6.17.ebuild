@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.17.ebuild,v 1.3 2007/07/02 17:32:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.17.ebuild,v 1.4 2007/08/11 19:19:09 seemant Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -128,10 +128,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "gnokii does not need it's own group anymore."
+	elog "gnokii does not need its own group anymore."
 	elog "Make sure the user that runs gnokii has read/write access to the device"
 	elog "which your phone is connected to. eg. chown <user> /dev/ttyS0"
 	echo
-	ewarn "We received at least one report of gnokii with usb connection breaking the phone,"
-	ewarn "which was in need to be serviced afterwards. Be careful if you decide to try that..."
+	ewarn "We've received at least one report of gnokii with USB connection"
+	ewarn "breaking the phone, which needed to be serviced afterwards."
+	ewarn "Be careful if you decide to try that..."
 }
