@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.16.ebuild,v 1.8 2007/08/10 17:45:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.16.ebuild,v 1.9 2007/08/11 15:10:31 beandog Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -23,7 +23,7 @@ IUSE="berkdb crypt debug gdbm gnutls gpgme idn imap mbox nls nntp pop qdbm sasl
 sidebar smime smtp ssl vanilla"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 RDEPEND=">=sys-libs/ncurses-5.2
 	qdbm?    ( dev-db/qdbm )
 	!qdbm?   (
