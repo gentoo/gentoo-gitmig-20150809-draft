@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-backgrounds
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.80 2007/08/10 12:51:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.81 2007/08/11 14:45:02 ticho Exp $
+
+  11 Aug 2007; Andrej Kacian <ticho@gentoo.org>
+  gnome-backgrounds-2.18.3.ebuild:
+  Stable on x86, bug #185823.
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org>
   gnome-backgrounds-2.18.3.ebuild:
