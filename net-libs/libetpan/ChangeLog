@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.54 2007/05/26 01:34:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.55 2007/08/11 09:20:33 ticho Exp $
+
+*libetpan-0.52 (11 Aug 2007)
+
+  11 Aug 2007; Andrej Kacian <ticho@gentoo.org> -libetpan-0.42.ebuild,
+  -libetpan-0.43.ebuild, -libetpan-0.45.ebuild, -libetpan-0.46.ebuild,
+  -libetpan-0.46-r1.ebuild, -libetpan-0.47.ebuild, -libetpan-0.48.ebuild,
+  +libetpan-0.52.ebuild:
+  Version bump. Old ebuild cleanup.
 
   26 May 2007; Jeroen Roovers <jer@gentoo.org> libetpan-0.49.ebuild:
   Stable for HPPA (bug #176805).
