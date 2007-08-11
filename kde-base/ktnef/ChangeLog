@@ -1,9 +1,6 @@
 # ChangeLog for kde-base/ktnef
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.77 2007/08/11 17:20:27 armin76 Exp $
-
-  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> ChangeLog:
-  x86 stable wrt #185823
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.78 2007/08/11 17:21:41 armin76 Exp $
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org> ktnef-3.5.7.ebuild:
   x86 stable wrt #185823
