@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.42-r1.ebuild,v 1.2 2007/03/07 11:15:54 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.42-r1.ebuild,v 1.3 2007/08/11 12:51:12 phreak Exp $
 
 inherit bash-completion eutils
 
@@ -15,13 +15,15 @@ IUSE="graphviz"
 
 RDEPEND="sys-apps/ed
 	dev-util/diffstat
-	graphviz? ( media-gfx/graphviz )"
+	graphviz? ( media-gfx/graphviz )
+	sys-apps/mktemp"
 
 # The tests are somewhat broken while being run from within portage, work fine
 # if you run them manually
 RESTRICT="test"
 
 pkg_setup() {
+	use graphviz && return 0
 	echo
 	elog "If you intend to use the folding functionality (graphical illustration of the patch stack)"
 	elog "then you'll need to remerge this package with USE=graphviz."
