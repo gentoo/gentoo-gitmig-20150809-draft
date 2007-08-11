@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.29 2007/08/02 13:30:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.30 2007/08/11 15:37:58 beandog Exp $
+
+  11 Aug 2007; Steve Dibb <beandog@gentoo.org> happy-1.16.ebuild:
+  amd64 stable, bug 186849
 
   02 Aug 2007; Christian Faulhammer <opfer@gentoo.org> happy-1.16.ebuild:
   stable x86, bug 186849

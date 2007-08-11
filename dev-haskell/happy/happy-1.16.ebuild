@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.16.ebuild,v 1.8 2007/08/02 13:30:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.16.ebuild,v 1.9 2007/08/11 15:37:58 beandog Exp $
 
 CABAL_FEATURES="bin"
 inherit haskell-cabal autotools
@@ -11,7 +11,7 @@ SRC_URI="http://haskell.org/happy/dist/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 
 DEPEND=">=virtual/ghc-6.4
