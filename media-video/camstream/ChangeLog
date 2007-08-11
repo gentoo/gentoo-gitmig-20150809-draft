@@ -1,6 +1,9 @@
 # ChangeLog for media-video/camstream
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.17 2007/04/17 10:30:30 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.18 2007/08/11 02:59:53 beandog Exp $
+
+  10 Aug 2007; Steve Dibb <beandog@gentoo.org> camstream-20070315.ebuild:
+  amd64 stable, bug 168317
 
 *camstream-20070315 (17 Apr 2007)
 
