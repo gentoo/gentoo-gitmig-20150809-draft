@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.4.1.ebuild,v 1.5 2007/06/25 10:52:20 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.4.1.ebuild,v 1.6 2007/08/11 15:13:57 corsair Exp $
 
 inherit kde eutils db-use
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://kde/stable/3.5.7/src/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="3"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
 IUSE="ada clearcase cvs fortran haskell java pascal perforce perl php python ruby sql subversion"
 
 DEPEND="sys-devel/gdb
