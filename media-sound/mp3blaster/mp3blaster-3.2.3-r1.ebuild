@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.3-r1.ebuild,v 1.1 2007/08/11 14:05:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.3-r1.ebuild,v 1.2 2007/08/11 14:06:21 drac Exp $
 
 DESCRIPTION="Text console based program for playing audio files."
 HOMEPAGE="http://mp3blaster.sourceforge.net"
@@ -39,7 +39,7 @@ src_compile() {
 		myconf="${myconf} --enable-newthreads --with-pth --with-oss"
 	fi
 
-	econf ${myconf} \		
+	econf ${myconf} \
 		$(use_with lirc) \
 		$(use_with vorbis oggvorbis) \
 		$(use_with nas) \
