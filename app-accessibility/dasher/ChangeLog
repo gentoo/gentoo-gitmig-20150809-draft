@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.100 2007/08/11 14:47:41 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.101 2007/08/11 18:40:32 leio Exp $
+
+  11 Aug 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/dasher-4.0.2-fix_enable_flags.patch,
+  -files/dasher-4.0.2-without_gnome.patch,
+  -files/dasher-4.2.1-sk_conditional_fix.patch, -dasher-4.0.2.ebuild,
+  -dasher-4.2.1.ebuild, -dasher-4.4.0.ebuild:
+  Removing Gnome 2.14
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org> dasher-4.4.1.ebuild:
   Stable on x86, bug #185823.
