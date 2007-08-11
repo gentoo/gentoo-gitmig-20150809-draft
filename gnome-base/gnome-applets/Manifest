@@ -1,14 +1,6 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX gnome-applets-2.14.0-prefs_startup-r1.patch 776 RMD160 d29eadd0748d95f2d0743669114956df10095b0a SHA1 70ac81b01e32bda71147ed80bb2905c065bd0c61 SHA256 54218c81861a721708194738f8933ebdb0f450b0d8d8ecdc4f7514732a8d7213
-MD5 029ed267b1c47fdf2275b1cc71700b62 files/gnome-applets-2.14.0-prefs_startup-r1.patch 776
-RMD160 d29eadd0748d95f2d0743669114956df10095b0a files/gnome-applets-2.14.0-prefs_startup-r1.patch 776
-SHA256 54218c81861a721708194738f8933ebdb0f450b0d8d8ecdc4f7514732a8d7213 files/gnome-applets-2.14.0-prefs_startup-r1.patch 776
-AUX gnome-applets-2.14.2-cpufreq-selector-lazy-binding.patch 336 RMD160 ce8ea9e00cbb4c46d210fda2ef7c5315724d58d1 SHA1 bc5c318f6fadd9fb50c0a5e723b71450e4ce0875 SHA256 b5f18e27bbea207017f76dddb92e31164ab7408faf39f61b1b518cadb7becbe8
-MD5 4a83dadaba785639ff91038bb85007e3 files/gnome-applets-2.14.2-cpufreq-selector-lazy-binding.patch 336
-RMD160 ce8ea9e00cbb4c46d210fda2ef7c5315724d58d1 files/gnome-applets-2.14.2-cpufreq-selector-lazy-binding.patch 336
-SHA256 b5f18e27bbea207017f76dddb92e31164ab7408faf39f61b1b518cadb7becbe8 files/gnome-applets-2.14.2-cpufreq-selector-lazy-binding.patch 336
 AUX gnome-applets-2.16.1-dbus-version.patch 1028 RMD160 8c20fe5bae5767c91525053a1e19cd7a42dc9aab SHA1 d09f99ed5bb97df7e765311a74c8be2f1c0646f8 SHA256 8a88c2c60c7ed9eef3830e4079e3dcdbb246ea904daf411d0ebf4a356cf293f5
 MD5 956fd95fc03154f7267692c23586b83b files/gnome-applets-2.16.1-dbus-version.patch 1028
 RMD160 8c20fe5bae5767c91525053a1e19cd7a42dc9aab files/gnome-applets-2.16.1-dbus-version.patch 1028
@@ -21,17 +13,8 @@ AUX gnome-applets-2.18.0-acpi-procfs.patch 3883 RMD160 751021e9ff5c587f2c199d9cb
 MD5 470e5b7d3e819ad39edf82822c6ab8c8 files/gnome-applets-2.18.0-acpi-procfs.patch 3883
 RMD160 751021e9ff5c587f2c199d9cb4f8a04f985b9448 files/gnome-applets-2.18.0-acpi-procfs.patch 3883
 SHA256 1918684dc294bd1c3a398e660860248a13a8b209cf6274af4d03419c34a4b367 files/gnome-applets-2.18.0-acpi-procfs.patch 3883
-DIST gnome-applets-2.14.2.tar.bz2 6601120 RMD160 34f263b64407514cb65f0ecb3654ee8fc294b219 SHA1 88f58242601b3762cb665e2f30b8459ae89f4ff1 SHA256 4bdd52b47649cfa6dc5d065201124ae02d3da593531cd0defa1a9cf7a761f1df
 DIST gnome-applets-2.16.2.tar.bz2 7127753 RMD160 b8706c57b37702b0bfc64cb549fc594b05da5e5b SHA1 8b912c21e7c390c9aae96bb81fe017fa1f9bf006 SHA256 de3c9d92c5da1597dbcdc5d4a7554235006d0bf6432f97ab7b0a6a5a47dbb67b
 DIST gnome-applets-2.18.0.tar.bz2 7133902 RMD160 c9a18c717fd01ede9476a70784a8522968e52211 SHA1 7bec1f642e827634f74859e81e1502799d3c05a2 SHA256 f8f23e0c5e156afb0811d7a7fcbfec8dc667b8e35fa8a1cfff0b4866014c2157
-EBUILD gnome-applets-2.14.2-r1.ebuild 2386 RMD160 68bcb61b4067eb958216a05a639cf55779b8d0f3 SHA1 d904e82aff44c1b17482d65cf71793b09001c693 SHA256 8a07bb3d4575b026849d0800b9d6cc1c1d986dfa8a2492d17e9422ecc5959186
-MD5 22604fa4234497231897dcb19638f36f gnome-applets-2.14.2-r1.ebuild 2386
-RMD160 68bcb61b4067eb958216a05a639cf55779b8d0f3 gnome-applets-2.14.2-r1.ebuild 2386
-SHA256 8a07bb3d4575b026849d0800b9d6cc1c1d986dfa8a2492d17e9422ecc5959186 gnome-applets-2.14.2-r1.ebuild 2386
-EBUILD gnome-applets-2.14.2.ebuild 2261 RMD160 59fdbbeae38ca3ae8a3183f705d495dbfc527a3a SHA1 5c7359d1f58c46e168268c74281dd5e6fa2ce4e4 SHA256 604ce21af0bc0de1c30674d573de2accc41ad21d9557fbb60c590940e31fee5a
-MD5 2a644e049eb5f5aff03dbb31943861c6 gnome-applets-2.14.2.ebuild 2261
-RMD160 59fdbbeae38ca3ae8a3183f705d495dbfc527a3a gnome-applets-2.14.2.ebuild 2261
-SHA256 604ce21af0bc0de1c30674d573de2accc41ad21d9557fbb60c590940e31fee5a gnome-applets-2.14.2.ebuild 2261
 EBUILD gnome-applets-2.16.2-r1.ebuild 2654 RMD160 09c6ff7cd9a6abc0620635b9422c9dd8c9f990b8 SHA1 d13bb1b12714fcd65fe54170ae326c929d9ea54d SHA256 79d2b670188be4137f8a8e36d6c2002b08653aa99061948d4812cb71582e7bdf
 MD5 d07087990f4bfb3bcc2e4d6cc6cc9c0e gnome-applets-2.16.2-r1.ebuild 2654
 RMD160 09c6ff7cd9a6abc0620635b9422c9dd8c9f990b8 gnome-applets-2.16.2-r1.ebuild 2654
@@ -44,40 +27,27 @@ EBUILD gnome-applets-2.18.0-r2.ebuild 2896 RMD160 8cdc06f8f2267d4b43bffabf582562
 MD5 46cf233324eb0121c4fae161e2e86ec3 gnome-applets-2.18.0-r2.ebuild 2896
 RMD160 8cdc06f8f2267d4b43bffabf582562d0642b0a61 gnome-applets-2.18.0-r2.ebuild 2896
 SHA256 748b4623eb8b64f9b97ff4b905fb21abd09b17d311d2cf8021465af0892ea806 gnome-applets-2.18.0-r2.ebuild 2896
-EBUILD gnome-applets-2.18.0.ebuild 2823 RMD160 cc05bd385dff52dd044d043a4076fec5b84a4716 SHA1 d0bba2a66030609ecef92dcc807b4a18e7b85d75 SHA256 a5f65920543d694d21fc808eabd2bc9730cdf3f1499dc58c332e89b3468d36d8
-MD5 df92a320163b78381fc9cb1ba648e391 gnome-applets-2.18.0.ebuild 2823
-RMD160 cc05bd385dff52dd044d043a4076fec5b84a4716 gnome-applets-2.18.0.ebuild 2823
-SHA256 a5f65920543d694d21fc808eabd2bc9730cdf3f1499dc58c332e89b3468d36d8 gnome-applets-2.18.0.ebuild 2823
-MISC ChangeLog 32339 RMD160 14c5beb075c3af1e9d817e1a78f635e9acc2e609 SHA1 b02b6e174f210ebea63415a8f08594de22f74ba2 SHA256 b74431e686e43a46e40f85f4d1c874db6cc574b83bdd2bf0452b1c5e86c8a017
-MD5 03621de3831c6ea6844f278931ee55ae ChangeLog 32339
-RMD160 14c5beb075c3af1e9d817e1a78f635e9acc2e609 ChangeLog 32339
-SHA256 b74431e686e43a46e40f85f4d1c874db6cc574b83bdd2bf0452b1c5e86c8a017 ChangeLog 32339
+MISC ChangeLog 32626 RMD160 8400aa69e85aec071d26409bf2556de3cd1ed9d0 SHA1 1232a39d3ecb2e863135fb65ab80638bf2645da6 SHA256 6ee6620bd55be65b4b165e42bd81066e889f76fd79944736c590ca1fd01a0af4
+MD5 8dff597c74ffe8b5e88e2df812a5aebe ChangeLog 32626
+RMD160 8400aa69e85aec071d26409bf2556de3cd1ed9d0 ChangeLog 32626
+SHA256 6ee6620bd55be65b4b165e42bd81066e889f76fd79944736c590ca1fd01a0af4 ChangeLog 32626
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
-MD5 7b36fca2101bd54516168d3f3b33449a files/digest-gnome-applets-2.14.2 268
-RMD160 75722a986d754c91d7a5196e9793c68055e56801 files/digest-gnome-applets-2.14.2 268
-SHA256 0ca7cbacc88a45c24e7ae3efc467ef2bf0a7cf20550dd4b73e062052f49707e6 files/digest-gnome-applets-2.14.2 268
-MD5 7b36fca2101bd54516168d3f3b33449a files/digest-gnome-applets-2.14.2-r1 268
-RMD160 75722a986d754c91d7a5196e9793c68055e56801 files/digest-gnome-applets-2.14.2-r1 268
-SHA256 0ca7cbacc88a45c24e7ae3efc467ef2bf0a7cf20550dd4b73e062052f49707e6 files/digest-gnome-applets-2.14.2-r1 268
 MD5 460b94bf82a21fc99a2e6c1df3f884d3 files/digest-gnome-applets-2.16.2 268
 RMD160 8ace2b5e73c68ebfc68e9f8c03b25e285ffa93d9 files/digest-gnome-applets-2.16.2 268
 SHA256 753267861fe4c73102dc09d66bcb41cdac6f39a26cd3c21a6ad95a7b5d100440 files/digest-gnome-applets-2.16.2 268
 MD5 460b94bf82a21fc99a2e6c1df3f884d3 files/digest-gnome-applets-2.16.2-r1 268
 RMD160 8ace2b5e73c68ebfc68e9f8c03b25e285ffa93d9 files/digest-gnome-applets-2.16.2-r1 268
 SHA256 753267861fe4c73102dc09d66bcb41cdac6f39a26cd3c21a6ad95a7b5d100440 files/digest-gnome-applets-2.16.2-r1 268
-MD5 520433101587db3701cc08eb46418763 files/digest-gnome-applets-2.18.0 268
-RMD160 01a80c3ac08eb23693cd2adad2485c19722b518a files/digest-gnome-applets-2.18.0 268
-SHA256 98fa05a12d0c192e46fdff101ebb142fc448aa808ee4cdc30866a81158f20c39 files/digest-gnome-applets-2.18.0 268
 MD5 520433101587db3701cc08eb46418763 files/digest-gnome-applets-2.18.0-r2 268
 RMD160 01a80c3ac08eb23693cd2adad2485c19722b518a files/digest-gnome-applets-2.18.0-r2 268
 SHA256 98fa05a12d0c192e46fdff101ebb142fc448aa808ee4cdc30866a81158f20c39 files/digest-gnome-applets-2.18.0-r2 268
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
+Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGvc5nQlM6RnzZP+IRAlcgAKCKKkPVXdDak+o7vCd4Oe9BRcICbgCgtN6U
-CAEsCbSUcq05seeJBCHMwus=
-=Hwvw
+iD8DBQFGvehdkeYb6olFHJcRAjo/AJ9nu++UBEi6pxKDhYzevfpH4FqpdgCdFu83
+Pv0rH/F77EQO/maHRYLvbnQ=
+=AmfP
 -----END PGP SIGNATURE-----

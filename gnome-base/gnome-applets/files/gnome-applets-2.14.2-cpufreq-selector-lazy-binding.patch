@@ -1,8 +1,0 @@
---- gnome-applets-2.14.2/cpufreq/src/cpufreq-selector/Makefile.am	2006-08-16 16:30:04.000000000 -0500
-+++ gnome-applets-2.14.2/cpufreq/src/cpufreq-selector/Makefile.am	2006-08-16 16:47:33.000000000 -0500
-@@ -18,4 +18,4 @@
- 	main.c
- 
- cpufreq_selector_LDADD = $(CPUFREQ_SELECTOR_LIBS)
--
-+cpufreq_selector_LDFLAGS = $(LDFLAGS) -Wl,-z,now
