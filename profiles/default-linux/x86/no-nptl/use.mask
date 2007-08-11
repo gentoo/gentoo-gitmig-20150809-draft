@@ -1,6 +1,10 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/use.mask,v 1.1 2005/11/16 16:34:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/use.mask,v 1.2 2007/08/11 20:29:30 compnerd Exp $
+
+# 2007/08/11 - Saleem Abdulrasool <compnerd@gentoo.org>
+# This controls the deskbar-applet functionality in tracker
+applet
 
 nptl
 nptlonly

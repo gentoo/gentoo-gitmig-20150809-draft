@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.564 2007/08/08 19:42:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.565 2007/08/11 20:29:30 compnerd Exp $
+
+  11 Aug 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  default-linux/x86/no-nptl/use.mask:
+  Mask deskbar-applet in tracker for x86/no-nptl
 
   08 Aug 2007; Raúl Porcel <armin76@gentoo.org> use.local.desc:
   Add USE-flag for dev-libs/nss
