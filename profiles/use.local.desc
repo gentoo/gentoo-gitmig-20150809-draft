@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2966 2007/08/11 13:27:20 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2967 2007/08/11 13:47:33 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1044,6 +1044,7 @@ media-sound/moc:modplug - Add support for modplug
 media-sound/moc:sid - Build with SID (Commodore 64 Audio) support
 media-sound/moc:timidity - Add support for timidity
 media-sound/moc:wavpack - Add support for wavpack
+media-sound/mp3blaster:sid - Build with SID (Commodore 64 Audio) support
 media-sound/mpd:icecast - Enable support for Icecast2
 media-sound/mpfc:cdaudio - Enable cd audio playback support
 media-sound/mpfc:wav - Enable wav audio codec support
