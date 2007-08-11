@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7576 2007/08/09 18:06:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7577 2007/08/11 13:32:54 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# Fabian Groffen <gnustep@gentoo.org> (11 Aug 2007)
+# Mask PDFkit for bug #188185 and the applications that need it, please
+# use the GNUstep overlay (see layman) for replacements of these
+# packages
+gnustep-libs/pdfkit
+gnustep-apps/viewpdf
+gnustep-apps/gworkspace
 
 # Sven Wegener <swegener@gentoo.org> (07 Aug 2007)
 # CVS snapshot, needs some more testing
