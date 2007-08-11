@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.24 2007/07/16 13:12:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.25 2007/08/11 12:34:57 drac Exp $
+
+  11 Aug 2007; Samuli Suominen <drac@gentoo.org> exaile-0.2.10-r1.ebuild:
+  Check for xulrunner, firefox or seamonkey USE flag in gnome-python-extras
+  for extra features as per bug 184038.
 
   16 Jul 2007; Samuli Suominen <drac@gentoo.org> exaile-0.2.9-r3.ebuild,
   exaile-0.2.10-r1.ebuild:

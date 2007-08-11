@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10-r1.ebuild,v 1.6 2007/07/16 13:12:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10-r1.ebuild,v 1.7 2007/08/11 12:34:57 drac Exp $
 
 inherit eutils fdo-mime multilib python
 
@@ -25,7 +25,7 @@ RDEPEND=">=dev-python/pygtk-2.8.6
 	dev-python/dbus-python
 	libnotify? ( dev-python/notify-python )
 	libsexy? ( dev-python/sexy-python )
-	gnome? ( >=dev-python/gnome-python-extras-2.14
+	gnome? ( >=dev-python/gnome-python-extras-2.14.2-r1
 		>=media-plugins/gst-plugins-gconf-${GVER}
 		>=media-plugins/gst-plugins-gnomevfs-${GVER} )
 	serpentine? ( app-cdr/serpentine )
@@ -53,6 +53,19 @@ pkg_setup() {
 	if use ipod && ! built_with_use media-libs/libgpod python ; then
 		eerror "libgpod has to be built with python support"
 		die "libgpod python use-flag not set"
+	fi
+	
+	if use gnome; then
+		if ! built_with_use dev-python/gnome-python-extras xulrunner; then
+			if ! built_with_use dev-python/gnome-python-extras firefox; then
+				if ! built_with_use dev-python/gnome-python-extras seamonkey; then
+					ewarn "In order to enable extra features provided by gtkmozembed,"
+					ewarn "you have to re-emerge gnome-python-extras with"
+					ewarn "xulrunner, firefox or seamonkey USE flag."
+					epause
+				fi
+			fi
+		fi
 	fi
 }
 
