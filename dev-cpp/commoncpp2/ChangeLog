@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.32 2007/07/23 07:30:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.33 2007/08/11 02:32:08 beandog Exp $
+
+  10 Aug 2007; Steve Dibb <beandog@gentoo.org> commoncpp2-1.5.7.ebuild:
+  amd64 stable, bug 182352
 
   23 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   commoncpp2-1.5.7.ebuild:
