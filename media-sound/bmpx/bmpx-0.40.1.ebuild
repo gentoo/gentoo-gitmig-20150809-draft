@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.0.ebuild,v 1.2 2007/08/08 16:38:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.1.ebuild,v 1.1 2007/08/11 21:24:30 drac Exp $
 
 inherit fdo-mime gnome2-utils versionator
 
@@ -13,10 +13,10 @@ SRC_URI="http://files.beep-media-player.org/releases/${MY_PR}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="aac debug hal modplug sid startup-notification"
+IUSE="debug hal modplug sid startup-notification"
 
-RDEPEND=">=net-libs/libsoup-2.2
-	>=dev-db/sqlite-3.3
+RDEPEND=">=net-libs/libsoup-2.2.100
+	>=dev-db/sqlite-3.3.11
 	>=dev-libs/glib-2.10
 	>=dev-cpp/glibmm-2.12
 	>=dev-libs/libsigc++-2
@@ -29,16 +29,14 @@ RDEPEND=">=net-libs/libsoup-2.2
 	>=dev-libs/libxml2-2.6.1
 	>=media-libs/gst-plugins-base-0.10.11
 	>=dev-libs/dbus-glib-0.61
-	virtual/fam
 	>=media-libs/taglib-1.4
 	media-sound/cdparanoia
 	app-arch/zip
 	media-libs/alsa-lib
-	dev-libs/boost
+	>=dev-libs/boost-1.33.1
 	>=media-libs/libofa-0.9.3
 	hal? ( >=sys-apps/hal-0.5.7.1 )
-	aac? ( media-libs/faad2 )
-	sid? ( media-libs/libsidplay )
+	sid? ( =media-libs/libsidplay-1* )
 	modplug? ( >=media-libs/libmodplug-0.8 )
 	startup-notification? ( x11-libs/startup-notification )"
 DEPEND="${RDEPEND}
@@ -51,7 +49,6 @@ DEPEND="${RDEPEND}
 src_compile() {
 	econf --with-tr1 \
 		$(use_enable modplug) \
-		$(use_enable aac mp4v2) \
 		$(use_enable hal) \
 		$(use_enable sid) \
 		$(use_enable startup-notification sn) \
