@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ezquake-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ChangeLog,v 1.5 2007/03/12 14:38:40 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ChangeLog,v 1.6 2007/08/11 07:36:35 mr_bones_ Exp $
+
+  11 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  ezquake-bin-1517.ebuild:
+  add glib dep for bug #163847
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> ezquake-bin-1517.ebuild:
   Replacing einfo with elog
