@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.57 2007/08/11 11:16:07 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.58 2007/08/11 17:16:40 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kuiviewer-3.5.7.ebuild:
+  x86 stable wrt #185823
 
   11 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
   kuiviewer-3.5.7.ebuild:

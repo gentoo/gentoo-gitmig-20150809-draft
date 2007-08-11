@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/kapptemplate-3.5.6.ebuild,v 1.8 2007/08/11 11:36:57 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/kapptemplate-3.5.6.ebuild,v 1.9 2007/08/11 17:22:52 armin76 Exp $
 
 ARTS_REQUIRED="no"
 RESTRICT="binchecks strip"
@@ -11,7 +11,7 @@ KM_DEPRANGE="3.5.0 $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KAppTemplate - A shell script that will create the necessary framework to develop various KDE applications."
-KEYWORDS="alpha amd64 ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 src_install() {
