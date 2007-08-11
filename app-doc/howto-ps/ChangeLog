@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/howto-ps
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-ps/ChangeLog,v 1.16 2007/03/22 18:21:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-ps/ChangeLog,v 1.17 2007/08/11 21:10:19 dirtyepic Exp $
+
+*howto-ps-20070811 (11 Aug 2007)
+
+  11 Aug 2007; Ryan Hill <dirtyepic@gentoo.org> metadata.xml,
+  +howto-ps-20070811.ebuild:
+  Version bump.
 
 *howto-ps-20070322 (22 Mar 2007)
 
