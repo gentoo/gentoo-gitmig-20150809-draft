@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.59 2007/08/11 14:59:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.60 2007/08/11 16:42:55 leio Exp $
+
+  11 Aug 2007; Mart Raudsepp <leio@gentoo.org>
+  -gnome-python-extras-2.14.0-r1.ebuild, -gnome-python-extras-2.14.2.ebuild:
+  Remove old
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org>
   gnome-python-extras-2.14.2-r1.ebuild:
