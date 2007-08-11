@@ -1,6 +1,13 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.178 2007/08/11 15:01:49 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.179 2007/08/11 16:30:19 leio Exp $
+
+  11 Aug 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/totem-1.4.0-autoconf.patch, -files/totem-1.4.1-nsIDOMWINDOW.patch,
+  -files/totem-1.4.2-nsIURI.patch,
+  -files/totem-2.17.5-browser-plugins.patch, -totem-1.2.1-r1.ebuild,
+  -totem-1.4.2-r1.ebuild, -totem-2.18.1-r1.ebuild:
+  Removing Gnome 2.14
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org> totem-2.18.2.ebuild:
   Stable on x86, bug #185823.
