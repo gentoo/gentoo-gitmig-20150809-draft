@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/io_lib
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/ChangeLog,v 1.9 2006/10/22 16:36:50 ribosome Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/ChangeLog,v 1.10 2007/08/11 13:31:38 fmccor Exp $
+
+  11 Aug 2007; Ferris McCormick <fmccor@gentoo.org> io_lib-1.10.1.ebuild:
+  Add back ~sparc keyword:  Builds as expected and utilities seem to work.
 
 *io_lib-1.10.1 (22 Oct 2006)
 

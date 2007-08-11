@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/io_lib-1.10.1.ebuild,v 1.1 2006/10/22 16:36:50 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/io_lib-1.10.1.ebuild,v 1.2 2007/08/11 13:31:38 fmccor Exp $
 
 DESCRIPTION="A general purpose trace and experiment file reading/writing interface"
 HOMEPAGE="http://staden.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/staden/${P}.tar.gz"
 LICENSE="staden"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 # Prototype changes in io_lib-1.9.0 create incompatibilities with BioPerl. (Only
