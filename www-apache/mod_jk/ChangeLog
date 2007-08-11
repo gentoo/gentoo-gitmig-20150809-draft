@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.40 2007/08/10 21:40:36 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.41 2007/08/11 15:09:58 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> mod_jk-1.2.25.ebuild:
+  Back to ~arch, went straight to stable
 
 *mod_jk-1.2.25 (10 Aug 2007)
 
