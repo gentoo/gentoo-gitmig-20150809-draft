@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2967 2007/08/11 13:47:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2968 2007/08/11 18:07:13 matsuu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2003,7 +2003,6 @@ www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
 www-client/kazehakase:hyperestraier - enable hyperestraier support for full-text search in history.
-www-client/kazehakase:thumbnail - enable thumbnail support.
 www-client/mozilla-firefox:filepicker - enable old gtkfilepicker from 1.0.x firefox
 www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/mozilla-firefox:moznopango - Disable pango during runtime
