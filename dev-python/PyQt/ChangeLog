@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.91 2007/06/24 19:23:36 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.92 2007/08/11 21:09:56 caleb Exp $
+
+*PyQt-3.17.3 (11 Aug 2007)
+
+  11 Aug 2007; Caleb Tennis <caleb@gentoo.org> +PyQt-3.17.3.ebuild:
+  version bump
 
   24 Jun 2007; Tiziano Müller <dev-zero@gentoo.org> PyQt-3.14.1-r1.ebuild,
   PyQt-3.14.1-r2.ebuild, PyQt-3.17.ebuild, PyQt-3.17.2.ebuild:
