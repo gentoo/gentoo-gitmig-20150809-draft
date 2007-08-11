@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mpeglib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/ChangeLog,v 1.49 2007/08/11 14:32:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/ChangeLog,v 1.50 2007/08/11 17:20:44 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> mpeglib-3.5.6.ebuild:
+  alpha/x86 stable wrt #176297
 
   11 Aug 2007; Markus Rothe <corsair@gentoo.org> mpeglib-3.5.6.ebuild:
   Stable on ppc64; bug #176297
