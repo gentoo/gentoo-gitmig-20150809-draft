@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.2-r1.ebuild,v 1.4 2007/08/11 04:12:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.2-r1.ebuild,v 1.5 2007/08/11 16:29:23 ticho Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils autotools multilib
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
 
 IUSE="doc debug nfs samba seamless-hbars usb lirc irman joystick"
 
