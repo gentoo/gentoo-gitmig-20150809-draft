@@ -1,6 +1,17 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.20 2007/06/07 16:50:20 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.21 2007/08/11 08:47:20 alonbl Exp $
+
+  11 Aug 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/truecrypt-4.2a-2.6.19.patch, -files/truecrypt-4.2a-2.6.20.patch,
+  -files/truecrypt-4.2a-makefile.patch,
+  -files/truecrypt-4.2a_kernel-2.6.18-rc1_fix.patch,
+  files/truecrypt-stop.sh, -truecrypt-4.2a-r1.ebuild,
+  -truecrypt-4.2a-r2.ebuild, -truecrypt-4.2a-r3.ebuild:
+  Cleanup
+
+  11 Aug 2007; Alon Bar-Lev <alonbl@gentoo.org> files/truecrypt-stop.sh:
+  Don't fail if no volumes are mounted, bug#168691, thanks to Jakob Truelsen
 
 *truecrypt-4.3a (07 Jun 2007)
 
