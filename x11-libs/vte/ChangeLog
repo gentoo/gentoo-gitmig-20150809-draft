@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.164 2007/08/10 13:06:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.165 2007/08/11 15:01:42 ticho Exp $
+
+  11 Aug 2007; Andrej Kacian <ticho@gentoo.org> vte-0.16.6-r1.ebuild:
+  Stable on x86, bug #185823.
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org> vte-0.16.6-r1.ebuild:
   Stable on amd64 wrt bug #185823
