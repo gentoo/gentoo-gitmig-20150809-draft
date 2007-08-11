@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-200705.ebuild,v 1.7 2007/08/11 14:43:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-200705.ebuild,v 1.8 2007/08/11 17:55:00 matsuu Exp $
 
 DESCRIPTION="Jisyo (dictionary) files for the SKK Japanese-input software"
 HOMEPAGE="http://openlab.ring.gr.jp/skk/dic.html"
@@ -29,6 +29,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# bug 184457
+	unset LANG LC_ALL LC_CTYPE
+
 	for f in SKK-JISYO.* zipcode/SKK-JISYO.* ; do
 		mv ${f} ${f}.annotated
 		awk -f "${FILESDIR}"/unannotation.awk ${f}.annotated > $(basename ${f}) || die
