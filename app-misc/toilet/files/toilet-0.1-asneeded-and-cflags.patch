@@ -1,0 +1,22 @@
+diff -ur toilet-0.1.orig/configure.ac toilet-0.1/configure.ac
+--- toilet-0.1.orig/configure.ac	2006-11-16 02:26:50.000000000 +0200
++++ toilet-0.1/configure.ac	2007-08-12 01:00:20.000000000 +0300
+@@ -67,7 +67,7 @@
+ AC_DEFINE_UNQUOTED(DATE, "$ac_build_date", [Define the version date])
+ 
+ # Optimizations
+-CFLAGS="${CFLAGS} -g -O2 -fno-strength-reduce -fomit-frame-pointer"
++CFLAGS="${CFLAGS} -fno-strength-reduce"
+ # Code qui fait des warnings == code de porc == deux baffes dans ta gueule
+ CFLAGS="${CFLAGS} -Wall -Wpointer-arith -Wcast-align -Wcast-qual -Wstrict-prototypes -Wshadow -Waggregate-return -Wmissing-prototypes -Wnested-externs -Wsign-compare"
+ 
+diff -ur toilet-0.1.orig/src/Makefile.am toilet-0.1/src/Makefile.am
+--- toilet-0.1.orig/src/Makefile.am	2006-11-10 12:47:29.000000000 +0200
++++ toilet-0.1/src/Makefile.am	2007-08-12 01:02:15.000000000 +0300
+@@ -9,5 +9,4 @@
+ 	term.c figlet.c
+ toilet_CPPFLAGS = -DFONTDIR=\"$(datadir)/figlet\"
+ toilet_CFLAGS = `pkg-config --cflags cucul`
+-toilet_LDFLAGS = `pkg-config --libs cucul` @GETOPT_LIBS@ @ZLIB_LIBS@
+-
++toilet_LDADD = -lcucul @GETOPT_LIBS@ @ZLIB_LIBS@
