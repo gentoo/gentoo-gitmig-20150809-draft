@@ -1,13 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST gnome-games-extra-data-2.10.0.tar.bz2 3566365 RMD160 5a53fed878d458f67bf3431a6fd33b1a33c07ac6 SHA1 03471488d6b828577058447eb9e053622699aa9a SHA256 a45141353703ec3ad10bb9fd7724e40cd35997b86bcb34a6fe9a2bcb2655d410
 DIST gnome-games-extra-data-2.12.0.tar.bz2 2644415 RMD160 20bd174543bbacc8b701be264bff1b5dfd63a97b SHA1 050e017b8381e715cf2686c928aaf5999d02bdb6 SHA256 9a82737ba2ddb86514903c8b90c99ab84569e1ce4b5185ace0086f1e0cb54806
 DIST gnome-games-extra-data-2.14.0.tar.bz2 2868801 RMD160 a70e8b1b90b6076b37282686a358122b50563ddc SHA1 fc046df3b950b27922fc8ea5705f57238a3f24e9 SHA256 2785206387d7444f37e27dbb606e587ca282f7ba54723b052e6c44dcca99a39e
-EBUILD gnome-games-extra-data-2.10.0.ebuild 541 RMD160 296f0c8d072c5802edd69dc5e69dbd4c0b904424 SHA1 f29450c942f4d6fbab068cc2ee33b04e46376cb5 SHA256 784b31450671dd41a6094513e77123e1d9c742a63b678eea315f3d011eaa460c
-MD5 c797fa64899399579a858fc191409d49 gnome-games-extra-data-2.10.0.ebuild 541
-RMD160 296f0c8d072c5802edd69dc5e69dbd4c0b904424 gnome-games-extra-data-2.10.0.ebuild 541
-SHA256 784b31450671dd41a6094513e77123e1d9c742a63b678eea315f3d011eaa460c gnome-games-extra-data-2.10.0.ebuild 541
 EBUILD gnome-games-extra-data-2.12.0.ebuild 532 RMD160 458507d1dfb18c94cb67282e5fc8262bfc6dfdf5 SHA1 91de5dfa17806f2b3fbb6ae51725bfb0caed4dd9 SHA256 7ed65c0cf07984d5d004160085b25fd6d4fcd9db9ece544eb58398f2185fdf1c
 MD5 ab892fcbe10bf0db4c96b71845d8bde2 gnome-games-extra-data-2.12.0.ebuild 532
 RMD160 458507d1dfb18c94cb67282e5fc8262bfc6dfdf5 gnome-games-extra-data-2.12.0.ebuild 532
@@ -16,17 +11,14 @@ EBUILD gnome-games-extra-data-2.14.0.ebuild 541 RMD160 4a7661dae2736c908a0a6f741
 MD5 5de800bc7bf51146b9a4c60c6514a4d8 gnome-games-extra-data-2.14.0.ebuild 541
 RMD160 4a7661dae2736c908a0a6f741913726a155682de gnome-games-extra-data-2.14.0.ebuild 541
 SHA256 9fc9766d09b3795bc9a970ae975341b97e70d68f7b262c8d2dee741863b90fec gnome-games-extra-data-2.14.0.ebuild 541
-MISC ChangeLog 5061 RMD160 4bfbf793da19a122a1f36a8695d6943e96b8282f SHA1 12ef7b5e010141acfdbe876b5a66f682b802aab2 SHA256 d949455272bcb7c77d01cd23e462499cbac9da9bffd71ab22fc7fbd36a71c6bd
-MD5 db87d8b96f89995e7ebd40c766c62fb3 ChangeLog 5061
-RMD160 4bfbf793da19a122a1f36a8695d6943e96b8282f ChangeLog 5061
-SHA256 d949455272bcb7c77d01cd23e462499cbac9da9bffd71ab22fc7fbd36a71c6bd ChangeLog 5061
+MISC ChangeLog 5162 RMD160 302f192cbfabac89c9ef20bfb78ead2af22e3494 SHA1 cb1c31092765092dc4fec229511b1be77318ed6c SHA256 7ee8cd8fc818b22051b11c7f34476c6310fbeb528199b91f682146a8e7006526
+MD5 cec19c9f66164cd837d3f4ff0196e92e ChangeLog 5162
+RMD160 302f192cbfabac89c9ef20bfb78ead2af22e3494 ChangeLog 5162
+SHA256 7ee8cd8fc818b22051b11c7f34476c6310fbeb528199b91f682146a8e7006526 ChangeLog 5162
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
-MD5 2877d2d22e0df07acb0985377cbc89e1 files/digest-gnome-games-extra-data-2.10.0 295
-RMD160 6d438d163663e3c1a152c59baae1ba798dc57397 files/digest-gnome-games-extra-data-2.10.0 295
-SHA256 271290daafd6096eb33db0f6cc1166868e92d46c33f3c72f864da1a03897aef1 files/digest-gnome-games-extra-data-2.10.0 295
 MD5 0bddc6daaa6e54815bac5932b30f87f7 files/digest-gnome-games-extra-data-2.12.0 295
 RMD160 6de2570876d4220699349de8f57917a4a88bfaf7 files/digest-gnome-games-extra-data-2.12.0 295
 SHA256 2e701f008d4305d8e1d0dc4cbb0fefac84e7368bafd64bae33c1f9efecd2edbb files/digest-gnome-games-extra-data-2.12.0 295
@@ -34,9 +26,9 @@ MD5 84e75441bc1b0875931a000ffccb1138 files/digest-gnome-games-extra-data-2.14.0 
 RMD160 ce5d64d65e66fda41908829f4a71e981ba759e3b files/digest-gnome-games-extra-data-2.14.0 295
 SHA256 188a0cb70b9ed80ced0fc97f5d429038f9bb7190e0293a629e6b29da5ea66d9f files/digest-gnome-games-extra-data-2.14.0 295
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
+Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGvc/NQlM6RnzZP+IRAnCPAJ0TqoINahVwutSGtZG8bz7ulx/uGgCgkAgY
-dX+65JwPOqAPx1WKXZ0IJuU=
-=LCfB
+iD8DBQFGveEgkeYb6olFHJcRAgfTAJ0Vgv4TNFCGSludc/z9Jne8SMDhrwCg7J+V
+6tSRxkY2pJujdExAVl7Y+4M=
+=xq/B
 -----END PGP SIGNATURE-----
