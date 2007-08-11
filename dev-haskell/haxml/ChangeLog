@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haxml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.23 2007/07/30 16:27:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.24 2007/08/11 15:48:42 beandog Exp $
+
+  11 Aug 2007; Steve Dibb <beandog@gentoo.org> haxml-1.13.2.ebuild:
+  amd64 stable, bug 186849
 
   30 Jul 2007; Markus Rothe <corsair@gentoo.org> haxml-1.13.2.ebuild:
   Stable on ppc64; bug #186849
