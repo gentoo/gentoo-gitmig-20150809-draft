@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.61 2007/08/11 09:03:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.62 2007/08/11 09:05:48 betelgeuse Exp $
+
+  11 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> -libidn-0.5.15.ebuild,
+  -libidn-0.6.9.ebuild:
+  Remove old ebuilds.
 
 *libidn-1.0 (11 Aug 2007)
 
