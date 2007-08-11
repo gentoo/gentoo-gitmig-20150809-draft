@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/oneko
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.11 2007/07/22 04:20:41 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.12 2007/08/11 21:56:17 nelchael Exp $
+
+  11 Aug 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
+  Remove myself from <maintainer>.
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> oneko-1.2.ebuild:
   Remove virtual/x11 from dependencies.
