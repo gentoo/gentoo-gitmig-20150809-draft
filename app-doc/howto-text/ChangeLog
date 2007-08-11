@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/howto-text
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-text/ChangeLog,v 1.18 2007/03/22 17:38:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-text/ChangeLog,v 1.19 2007/08/11 21:19:09 dirtyepic Exp $
+
+*howto-text-20070811 (11 Aug 2007)
+
+  11 Aug 2007; Ryan Hill <dirtyepic@gentoo.org> metadata.xml,
+  +howto-text-20070811.ebuild:
+  Version bump.
 
 *howto-text-20070322 (22 Mar 2007)
 
