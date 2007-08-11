@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/stgit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.23 2007/04/10 18:07:41 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.24 2007/08/11 10:24:34 ferdy Exp $
+
+*stgit-0.13 (11 Aug 2007)
+
+  11 Aug 2007; Fernando J. Pereda <ferdy@gentoo.org> +stgit-0.13.ebuild:
+  New upstream version.
 
 *stgit-0.12.1-r1 (10 Apr 2007)
 
