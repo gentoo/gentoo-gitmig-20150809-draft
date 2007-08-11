@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ipp2p
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ChangeLog,v 1.32 2007/07/30 14:21:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ChangeLog,v 1.33 2007/08/11 03:05:33 beandog Exp $
+
+  10 Aug 2007; Steve Dibb <beandog@gentoo.org> ipp2p-0.8.2-r4.ebuild:
+  amd64 stable, bug 186953
 
   30 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> ipp2p-0.8.2-r4.ebuild:
   Stable on sparc wrt #186953
