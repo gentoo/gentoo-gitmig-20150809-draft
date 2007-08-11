@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/echo2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/echo2/ChangeLog,v 1.4 2007/01/12 21:12:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/echo2/ChangeLog,v 1.5 2007/08/11 21:49:32 nelchael Exp $
+
+  11 Aug 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
+  Remove myself from <maintainer>.
 
   12 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> echo2-2.0.0.ebuild:
   Remove fetch restriction by manually uploading to distfile as versioned to

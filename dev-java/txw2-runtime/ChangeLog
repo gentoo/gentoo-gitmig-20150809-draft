@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/txw2-runtime
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/ChangeLog,v 1.5 2007/05/23 17:30:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/ChangeLog,v 1.6 2007/08/11 21:51:08 nelchael Exp $
+
+  11 Aug 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
+  Remove myself from <maintainer>.
 
   23 May 2007; Diego Pettenò <flameeyes@gentoo.org>
   txw2-runtime-20070407.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/openspml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml/ChangeLog,v 1.2 2007/07/24 08:05:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml/ChangeLog,v 1.3 2007/08/11 21:22:26 nelchael Exp $
+
+  11 Aug 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
+  Remove myself from <maintainer>.
 
   24 Jul 2007; Christian Faulhammer <opfer@gentoo.org> openspml-0.5.ebuild:
   stable x86, bug 186196

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.9 2007/05/23 17:04:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.10 2007/08/11 21:41:12 nelchael Exp $
+
+  11 Aug 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
+  Remove myself from <maintainer>.
 
   23 May 2007; Diego Pettenò <flameeyes@gentoo.org> jaxp-1.4.ebuild:
   Add ~x86-fbsd keyword. Bug #176906.

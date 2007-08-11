@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jibx-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jibx-tools/ChangeLog,v 1.1 2007/05/05 16:11:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jibx-tools/ChangeLog,v 1.2 2007/08/11 21:53:01 nelchael Exp $
+
+  11 Aug 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
+  Remove myself from <maintainer>.
 
 *jibx-tools-1.1.3 (05 May 2007)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/istack-commons-runtime
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.3 2007/05/23 17:00:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.4 2007/08/11 21:20:17 nelchael Exp $
+
+  11 Aug 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
+  Remove myself from <maintainer>.
 
   23 May 2007; Diego Pettenò <flameeyes@gentoo.org>
   istack-commons-runtime-20070122.ebuild:

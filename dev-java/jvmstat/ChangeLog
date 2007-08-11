@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jvmstat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jvmstat/ChangeLog,v 1.4 2007/07/02 14:34:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvmstat/ChangeLog,v 1.5 2007/08/11 21:50:15 nelchael Exp $
+
+  11 Aug 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
+  Remove myself from <maintainer>.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> jvmstat-3.0.ebuild:
   (QA) RESTRICT clean up.
