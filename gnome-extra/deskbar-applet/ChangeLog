@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/deskbar-applet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.61 2007/08/11 15:04:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.62 2007/08/11 16:19:19 leio Exp $
+
+  11 Aug 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/deskbar-applet-2.13.91-multilib.patch,
+  -deskbar-applet-2.14.2.ebuild:
+  Removing Gnome 2.14
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org>
   deskbar-applet-2.18.1.ebuild:
