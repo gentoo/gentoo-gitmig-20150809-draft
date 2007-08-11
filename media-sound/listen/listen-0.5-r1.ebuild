@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.5-r1.ebuild,v 1.3 2007/07/16 15:53:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.5-r1.ebuild,v 1.4 2007/08/11 10:34:15 drac Exp $
 
 inherit eutils virtualx
 
@@ -19,7 +19,7 @@ RDEPEND=">=media-libs/gst-plugins-base-0.10.0
 	>=media-plugins/gst-plugins-cdparanoia-0.10.0
 	>=media-plugins/gst-plugins-xvideo-0.10.0
 	>=media-libs/mutagen-1.6
-	>=dev-python/elementtree-1.2.6
+	|| ( >=dev-lang/python-2.5 >=dev-python/elementtree-1.2.6 )
 	mad? ( >=media-plugins/gst-plugins-mad-0.10.0
 			dev-python/pymad )
 	vorbis? ( >=media-plugins/gst-plugins-ogg-0.10.0

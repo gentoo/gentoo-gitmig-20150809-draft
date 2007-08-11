@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/listen
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.18 2007/07/16 15:53:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.19 2007/08/11 10:34:15 drac Exp $
+
+  11 Aug 2007; Samuli Suominen <drac@gentoo.org> listen-0.5-r1.ebuild:
+  Fix elementtree depends for bug 185533.
 
   16 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org> listen-0.5.ebuild,
   listen-0.5-r1.ebuild:
