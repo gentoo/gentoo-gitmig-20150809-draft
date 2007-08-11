@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.6.ebuild,v 1.3 2006/12/06 10:43:13 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.6.ebuild,v 1.4 2007/08/11 03:28:29 beandog Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs multilib
 
 IUSE="ipv6 mysql radius postgres jabber ldap ssl"
 
@@ -22,7 +22,7 @@ SRC_URI="http://ftp.iptel.org/pub/ser/${PV}/src/${P}_src.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="
 	mysql? ( virtual/mysql )
@@ -130,9 +130,9 @@ src_install () {
 		cfg-prefix="${D}"/etc \
 		cfg-dir=ser/ \
 		cfg-target=/etc/ser/ \
-		modules-prefix="${D}"/usr/lib/ser \
+		modules-prefix="${D}"/usr/$(get_libdir)/ser \
 		modules-dir=modules \
-		modules-target=/usr/lib/ser/modules/ \
+		modules-target=/usr/$(get_libdir)/ser/modules/ \
 		man-prefix="${D}"/usr/share/man \
 		man-dir="" \
 		doc-prefix="${D}"/usr/share/doc \
