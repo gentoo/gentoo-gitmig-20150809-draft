@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.64 2007/07/30 08:38:59 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.65 2007/08/11 14:54:05 beandog Exp $
+
+  11 Aug 2007; Steve Dibb <beandog@gentoo.org> monodoc-1.2.4.ebuild:
+  amd64 stable, bug 186769
 
   30 Jul 2007; Jurek Bartuszek <jurek@gentoo.org> monodoc-1.2.4.ebuild:
   Added test restriction
