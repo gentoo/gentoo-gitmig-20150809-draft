@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-desktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.37 2007/08/11 15:02:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.38 2007/08/11 16:24:00 leio Exp $
+
+  11 Aug 2007; Mart Raudsepp <leio@gentoo.org>
+  -gnome-python-desktop-2.14.0.ebuild:
+  Removing Gnome 2.14
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org>
   gnome-python-desktop-2.18.0.ebuild:
