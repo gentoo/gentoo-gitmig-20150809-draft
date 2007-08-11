@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.1.4.ebuild,v 1.1 2007/08/09 16:36:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.1.4.ebuild,v 1.2 2007/08/11 10:23:51 uberlord Exp $
 
 inherit toolchain-funcs
 
@@ -30,7 +30,9 @@ src_unpack() {
 }
 
 src_compile() {
-	make CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
+	local librt=
+	use elibc_glibc && librt="LIBRT=-lrt"
+	make CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" ${librt} || die
 }
 
 src_install() {
