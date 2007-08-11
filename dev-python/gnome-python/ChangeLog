@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.97 2007/08/11 14:41:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.98 2007/08/11 19:52:23 leio Exp $
+
+  11 Aug 2007; Mart Raudsepp <leio@gentoo.org> -gnome-python-2.12.4.ebuild,
+  -gnome-python-2.18.0.ebuild:
+  Removing Gnome 2.14
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org> gnome-python-2.18.2.ebuild:
   Stable on x86, bug #185823.
