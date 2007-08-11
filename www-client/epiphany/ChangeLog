@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.122 2007/08/11 14:58:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.123 2007/08/11 16:45:49 leio Exp $
+
+  11 Aug 2007; Mart Raudsepp <leio@gentoo.org> -epiphany-2.14.2.1-r1.ebuild,
+  -epiphany-2.14.3.ebuild, -epiphany-2.18.1.ebuild:
+  Removing Gnome 2.14
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org> epiphany-2.18.2.ebuild:
   Stable on x86, bug #185823.
