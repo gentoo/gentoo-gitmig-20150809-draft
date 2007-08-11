@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.99 2007/08/11 05:06:27 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.100 2007/08/11 20:20:20 keri Exp $
+
+  11 Aug 2007; keri <keri@gentoo.org> swi-prolog-5.6.37.ebuild,
+  swi-prolog-5.6.38.ebuild:
+  Handle 64bit JPL conversion of object addresses to tag atoms.
 
 *swi-prolog-5.6.38 (11 Aug 2007)
 
