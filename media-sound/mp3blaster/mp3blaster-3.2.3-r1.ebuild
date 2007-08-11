@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.3-r1.ebuild,v 1.2 2007/08/11 14:06:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.3-r1.ebuild,v 1.3 2007/08/11 14:18:20 drac Exp $
 
 DESCRIPTION="Text console based program for playing audio files."
 HOMEPAGE="http://mp3blaster.sourceforge.net"
@@ -17,7 +17,6 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	nas? ( >=media-libs/nas-1.8b )
 	sid? ( =media-libs/libsidplay-1* )
 	esd? ( media-sound/esound )
-	!sdl? ( dev-libs/pth )
 	sdl? ( media-libs/libsdl )"
 DEPEND="${RDEPEND}
 	x11-misc/imake"
@@ -33,10 +32,11 @@ src_unpack() {
 src_compile() {
 	local myconf
 
+	# newthreads and libpth support is broken.
 	if use sdl; then
 		myconf="${myconf} --disable-newthreads --without-pth --with-sdl --with-oss"
 	else
-		myconf="${myconf} --enable-newthreads --with-pth --with-oss"
+		myconf="${myconf} --disable-newthreads --without-pth --with-oss"
 	fi
 
 	econf ${myconf} \
