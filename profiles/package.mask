@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7577 2007/08/11 13:32:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7578 2007/08/11 13:34:54 nyhm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Tristan Heaven <nyhm@gentoo.org> (11 Aug 2007)
+# Masked until bug #178110 can be resolved properly.
+media-libs/freeimage
 
 # Fabian Groffen <gnustep@gentoo.org> (11 Aug 2007)
 # Mask PDFkit for bug #188185 and the applications that need it, please
