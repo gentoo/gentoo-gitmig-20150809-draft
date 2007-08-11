@@ -1,6 +1,9 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.45 2007/08/08 15:42:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.46 2007/08/11 17:21:41 beandog Exp $
+
+  11 Aug 2007; Steve Dibb <beandog@gentoo.org> kazehakase-0.4.7.ebuild:
+  amd64 stable, bug 187558
 
   08 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   kazehakase-0.4.7.ebuild:
