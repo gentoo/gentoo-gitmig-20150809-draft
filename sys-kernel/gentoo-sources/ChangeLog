@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.419 2007/08/07 14:18:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.420 2007/08/11 03:09:08 beandog Exp $
+
+  10 Aug 2007; Steve Dibb <beandog@gentoo.org>
+  gentoo-sources-2.6.22-r2.ebuild:
+  amd64 stable, bug 187559
 
   07 Aug 2007; Joseph Jezak <josejx@gentoo.org>
   gentoo-sources-2.6.22-r2.ebuild:
