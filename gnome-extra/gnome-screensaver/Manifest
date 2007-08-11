@@ -29,14 +29,14 @@ EBUILD gnome-screensaver-2.16.3-r1.ebuild 2897 RMD160 ff5e481f748cbdf7b34b228cc0
 MD5 eed90d249d8b926b4f91bb91bfe17b13 gnome-screensaver-2.16.3-r1.ebuild 2897
 RMD160 ff5e481f748cbdf7b34b228cc0e62933abe9dbad gnome-screensaver-2.16.3-r1.ebuild 2897
 SHA256 55b0d8c1aff1d4c9ce068559afe0465edb400cccf61b14452738414b57994c97 gnome-screensaver-2.16.3-r1.ebuild 2897
-EBUILD gnome-screensaver-2.18.2-r1.ebuild 2853 RMD160 c91e74e9df9dc2d544cd26cc5edcf2902f31109d SHA1 23d71ecaf10f9829cb5d18345f704a796c6e7a90 SHA256 731b8f7605297dfd97fe19a7a5e15ab0e93459e8bc998b0dff1a6b3b5d146e33
-MD5 adf5ed8fb98bdf64f85532ce275b206a gnome-screensaver-2.18.2-r1.ebuild 2853
-RMD160 c91e74e9df9dc2d544cd26cc5edcf2902f31109d gnome-screensaver-2.18.2-r1.ebuild 2853
-SHA256 731b8f7605297dfd97fe19a7a5e15ab0e93459e8bc998b0dff1a6b3b5d146e33 gnome-screensaver-2.18.2-r1.ebuild 2853
-MISC ChangeLog 7869 RMD160 ac9b74b8e2dcbdaef06fd8aeb909e21a16dc98fa SHA1 1810ef7e5bd92822b23ac07f959b7543340ae1f5 SHA256 dbcf3fb3fa2bee756c3c1dd8a39eaff29e74560184d09d7083be679e07eb4e73
-MD5 7c0d307d385382fe8148757611194aa7 ChangeLog 7869
-RMD160 ac9b74b8e2dcbdaef06fd8aeb909e21a16dc98fa ChangeLog 7869
-SHA256 dbcf3fb3fa2bee756c3c1dd8a39eaff29e74560184d09d7083be679e07eb4e73 ChangeLog 7869
+EBUILD gnome-screensaver-2.18.2-r1.ebuild 2850 RMD160 e36f88a3f54d2e0fdc72e569a9a225e23fcebf96 SHA1 bf9090677bf72fb6b7454049cdaca2f7b7998961 SHA256 a09dc6e4455eeeb0f47bc9c47d8f429f3011d4d537b9854ba11473c24ef9b678
+MD5 637dfced6f775860c8e85a1f19b5bb96 gnome-screensaver-2.18.2-r1.ebuild 2850
+RMD160 e36f88a3f54d2e0fdc72e569a9a225e23fcebf96 gnome-screensaver-2.18.2-r1.ebuild 2850
+SHA256 a09dc6e4455eeeb0f47bc9c47d8f429f3011d4d537b9854ba11473c24ef9b678 gnome-screensaver-2.18.2-r1.ebuild 2850
+MISC ChangeLog 7984 RMD160 414c2b678e3953304e7489a2b75c6eee5dc9e459 SHA1 96121b14d33ab58e1fa37a63c64bd31fb5d2dfc7 SHA256 fa50327b6085926cc2591aa78eca3d8411d03a2e1cd79da9238b307cdbb48c88
+MD5 024e4ea0885b0f739c4dddef01b8612a ChangeLog 7984
+RMD160 414c2b678e3953304e7489a2b75c6eee5dc9e459 ChangeLog 7984
+SHA256 fa50327b6085926cc2591aa78eca3d8411d03a2e1cd79da9238b307cdbb48c88 ChangeLog 7984
 MISC metadata.xml 472 RMD160 3fe1221d0cb389cf1be040c98fa9c40dbf3c07e5 SHA1 18913172dba9d94ca5952b7f8bfb2aa13808bb67 SHA256 e70be8f69acbda81bd1e90c1bd3a57a0b5ccb5fa09c7a6f04427ef888e1872bc
 MD5 77f62dae0c1bc21d5cf698695368d2d8 metadata.xml 472
 RMD160 3fe1221d0cb389cf1be040c98fa9c40dbf3c07e5 metadata.xml 472
@@ -54,9 +54,9 @@ MD5 93d8b6c2b2e6850ce7919e0c076c7328 files/digest-gnome-screensaver-2.18.2-r1 28
 RMD160 d794dcab6c034f4ae0086574aebb8f5f43e6fd62 files/digest-gnome-screensaver-2.18.2-r1 280
 SHA256 0b7c3fd35ec705257fadffe3764c98a40e45de4a053e3ba0169ac00c8fbba2ea files/digest-gnome-screensaver-2.18.2-r1 280
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.5 (GNU/Linux)
+Version: GnuPG v1.4.7 (GNU/Linux)
 
-iD8DBQFGvGMhKhnDs22gwa8RAnclAKC+VA2y1ijQ7mt6Ol09Ru/8vIZ+WgCdHF7L
-W7K+sNIU0639lM5VwRTU600=
-=Zw8O
+iD8DBQFGvc+eQlM6RnzZP+IRAnQ6AKCLJI5rTMFp3RVTg28G7SjaWFjIIgCgpW3g
+9JaOLWSc7uLegN56Tf56+Qo=
+=n98v
 -----END PGP SIGNATURE-----
