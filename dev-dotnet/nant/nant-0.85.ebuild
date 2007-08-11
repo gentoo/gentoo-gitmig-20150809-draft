@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.85.ebuild,v 1.6 2007/07/29 16:40:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.85.ebuild,v 1.7 2007/08/11 04:19:49 beandog Exp $
 
 inherit mono eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/nant/${P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/mono-1.2.2.1"

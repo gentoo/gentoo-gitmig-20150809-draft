@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/nant
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.15 2007/07/29 16:40:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.16 2007/08/11 04:19:49 beandog Exp $
+
+  10 Aug 2007; Steve Dibb <beandog@gentoo.org> nant-0.85.ebuild:
+  amd64 stable, bug 186686
 
   29 Jul 2007; Tobias Scherbaum <dertobi123@gentoo.org> nant-0.85.ebuild:
   ppc stable, bug #186686
