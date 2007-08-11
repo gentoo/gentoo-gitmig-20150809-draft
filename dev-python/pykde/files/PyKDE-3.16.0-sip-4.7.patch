@@ -1,0 +1,1258 @@
+diff -ru PyKDE-3.16.0.orig/configure.py PyKDE-3.16.0/configure.py
+--- PyKDE-3.16.0.orig/configure.py	2006-09-22 09:05:49.000000000 +0100
++++ PyKDE-3.16.0/configure.py	2007-06-23 09:55:29.000000000 +0100
+@@ -54,8 +54,7 @@
+ kde_version_extra  = None
+ kde_max_version    = 0x030503
+ 
+-sip_min_v3_version = 0x040400
+-sip_min_v4_version = 0x040400
++sip_min_v4_version = 0x040501
+ qt_min_version     = 0x030200
+ pyqt_min_version   = 0x031000
+ 
+@@ -176,12 +175,8 @@
+     if sipcfg.sip_version_str[:8] != "snapshot":
+         minv = None
+ 
+-        if sipcfg.sip_version >= 0x040000:
+-            if sipcfg.sip_version < sip_min_v4_version:
+-                minv = sip_min_v4_version
+-        else:
+-            if sipcfg.sip_version < sip_min_v3_version:
+-                minv = sip_min_v3_version
++        if sipcfg.sip_version < sip_min_v4_version:
++            minv = sip_min_v4_version
+ 
+         if minv:
+             sipcfg.error("This version of PyKDE requires SIP v%s or later" % sipcfg.version_to_string(minv))
+diff -ru PyKDE-3.16.0.orig/postproc PyKDE-3.16.0/postproc
+--- PyKDE-3.16.0.orig/postproc	2006-05-25 02:28:45.000000000 +0100
++++ PyKDE-3.16.0/postproc	2007-06-23 09:55:29.000000000 +0100
+@@ -508,9 +508,9 @@
+         sys.exit (-1)
+ 
+ elif operation == "fixQVariant":
+-    if not fixQVariant ():
++    """if not fixQVariant ():
+         print "operation error -- fixQVariant"
+-        sys.exit (-1)
++        sys.exit (-1)"""
+ 
+ elif operation == "fixSignal":
+     if not fixSignal (filelist):
+diff -ru PyKDE-3.16.0.orig/pykdeconfig.py PyKDE-3.16.0/pykdeconfig.py
+--- PyKDE-3.16.0.orig/pykdeconfig.py	2006-09-22 09:04:46.000000000 +0100
++++ PyKDE-3.16.0/pykdeconfig.py	2007-06-25 12:04:57.000000000 +0100
+@@ -28,18 +28,18 @@
+ # These are installation specific values created when PyQt was configured.
+ _pkg_config = {
+     'dist_name':            '',
+-    'kde_version':          0x030402,
+-    'kde_version_extra':    'kde342',
+-    'kde_version_sfx':      '-kde342.diff',
+-    'kde_version_str':      '3.4.2',
+-    'kdebasedir':           '/opt/kde3',
+-    'kdeincdir':            '/opt/kde3/include',
+-    'kdelibdir':            '/opt/kde3/lib64',
++    'kde_version':          0x030503,
++    'kde_version_extra':    'kde353',
++    'kde_version_sfx':      '-kde353.diff',
++    'kde_version_str':      '3.5.3',
++    'kdebasedir':           '/usr/kde/3.5',
++    'kdeincdir':            '/usr/kde/3.5/include',
++    'kdelibdir':            '/usr/kde/3.5/lib',
+     'libdir':               'lib',
+-    'pykde_kde_sip_flags':  '-t ALL -x Qt_STYLE_WINDOWSXP -x Qt_STYLE_INTERLACE -x Qt_STYLE_WINDOWSXP -x VendorID -t WS_X11 -t Qt_3_3_0 -t KDE_3_4_2',
+-    'pykde_mod_dir':        '/usr/lib/python2.4/site-packages',
++    'pykde_kde_sip_flags':  '-t ALL -x Qt_STYLE_WINDOWSXP -x Qt_STYLE_INTERLACE -x Qt_STYLE_WINDOWSXP -x VendorID -t WS_X11 -t Qt_3_3_6 -t KDE_3_5_3',
++    'pykde_mod_dir':        '/home/phil/usr/lib/python2.5/site-packages',
+     'pykde_modules':        'dcop kdecore kdefx kdeui kio kresources kabc kutils kfile kparts khtml kspell kdeprint kmdi',
+-    'pykde_sip_dir':        '/usr/share/sip',
++    'pykde_sip_dir':        '/home/phil/usr/share/sip',
+     'pykde_version':        0x031000,
+     'pykde_version_str':    '3.16.0'
+ }
+diff -ru PyKDE-3.16.0.orig/sip/kabc/addressbook.sip PyKDE-3.16.0/sip/kabc/addressbook.sip
+--- PyKDE-3.16.0.orig/sip/kabc/addressbook.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kabc/addressbook.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -162,7 +162,6 @@
+ {
+ %TypeHeaderCode
+ #include <qptrlist.h>
+-#include <sipkabcKABCResource.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kabc/addressee.sip PyKDE-3.16.0/sip/kabc/addressee.sip
+--- PyKDE-3.16.0.orig/sip/kabc/addressee.sip	2006-05-25 02:27:36.000000000 +0100
++++ PyKDE-3.16.0/sip/kabc/addressee.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -337,7 +337,6 @@
+ {
+ %TypeHeaderCode
+ #include <qvaluelist.h>
+-#include <sipkabcKABCAddressee.h>
+ //typedef QValueList<KABC::Addressee> List;
+ %End
+ 
+@@ -405,7 +404,6 @@
+ {
+ %TypeHeaderCode
+ #include <qvaluelist.h>
+-#include <sipkabcKABCAddress.h>
+ //typedef QValueList<KABC::Address> List;
+ %End
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kabc/distributionlist.sip PyKDE-3.16.0/sip/kabc/distributionlist.sip
+--- PyKDE-3.16.0.orig/sip/kabc/distributionlist.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kabc/distributionlist.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -110,9 +110,7 @@
+ //converts a Python list of KABC::DistributionList::Entry
+ {
+ %TypeHeaderCode
+-#include <qvaluelist.h>
+-#include <sipkabcKABCDistributionListEntry.h>
+-//typedef QValueList<KABC::DistributionList::Entry> List;
++#include <distributionlist.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kabc/field.sip PyKDE-3.16.0/sip/kabc/field.sip
+--- PyKDE-3.16.0.orig/sip/kabc/field.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kabc/field.sip	2007-06-25 12:03:32.000000000 +0100
+@@ -94,9 +94,7 @@
+ //converts a Python list of KABC::Field
+ {
+ %TypeHeaderCode
+-#include <qvaluelist.h>
+-#include <sipkabcKABCField.h>
+-//typedef QValueList<KABC::Field *> List;
++#include <field.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kabc/kabcmod.sip PyKDE-3.16.0/sip/kabc/kabcmod.sip
+--- PyKDE-3.16.0.orig/sip/kabc/kabcmod.sip	2006-09-22 09:02:55.000000000 +0100
++++ PyKDE-3.16.0/sip/kabc/kabcmod.sip	2007-06-25 12:04:03.000000000 +0100
+@@ -64,6 +64,7 @@
+ %Include ldapconfigwidget.sip
+ %Include ldapurl.sip
+ %Include ldif.sip
++%Include ldifconverter.sip
+ %Include lock.sip
+ %Include locknull.sip
+ %Include picture.sip
+diff -ru PyKDE-3.16.0.orig/sip/kabc/key.sip PyKDE-3.16.0/sip/kabc/key.sip
+--- PyKDE-3.16.0.orig/sip/kabc/key.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kabc/key.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -78,7 +78,6 @@
+ {
+ %TypeHeaderCode
+ #include <qvaluelist.h>
+-#include <sipkabcKABCKey.h>
+ //typedef QValueList<KABC::Key> List;
+ %End
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kabc/ldapclient.sip PyKDE-3.16.0/sip/kabc/ldapclient.sip
+--- PyKDE-3.16.0.orig/sip/kabc/ldapclient.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kabc/ldapclient.sip	2007-06-25 11:50:39.000000000 +0100
+@@ -177,9 +177,7 @@
+ //converts a Python list of KABC::LdapREsult
+ {
+ %TypeHeaderCode
+-#include <qvaluelist.h>
+-#include <sipkabcKABCLdapResult.h>
+-//typedef QValueList<KABC::LdapResult> List;
++#include <ldapclient.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kabc/phonenumber.sip PyKDE-3.16.0/sip/kabc/phonenumber.sip
+--- PyKDE-3.16.0.orig/sip/kabc/phonenumber.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kabc/phonenumber.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -125,7 +125,6 @@
+ {
+ %TypeHeaderCode
+ #include <qvaluelist.h>
+-#include <sipkabcKABCPhoneNumber.h>
+ //typedef QValueList<KABC::PhoneNumber> List;
+ %End
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/bytearray.sip PyKDE-3.16.0/sip/kdecore/bytearray.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/bytearray.sip	2006-09-22 06:53:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/bytearray.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -23,7 +23,6 @@
+ 
+ %ModuleHeaderCode
+ #include <qvariant.h>
+-#include <sipdcopQValueList.h>
+ %End
+ 
+ 
+@@ -579,8 +578,6 @@
+ {
+ %TypeHeaderCode
+ #include <qmap.h>
+-#include <sipdcopDCOPRef.h>
+-#include <sipqtQCString.h>
+ //typedef QMap<QCString,DCOPRef> DCOPRefMap;
+ %End
+ 
+@@ -633,7 +630,7 @@
+     QMap<QCString,DCOPRef> *cppmap = new QMap<QCString,DCOPRef>;
+ 
+     PyObject *aelem, *belem;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QCString *acpp;
+     DCOPRef *bcpp;
+ 
+@@ -663,8 +660,6 @@
+ {
+ %TypeHeaderCode
+ #include <qmap.h>
+-#include <sipdcopDCOPRef.h>
+-#include <sipqtQString.h>
+ //typedef QMap<QString,DCOPRef> DCOPRefMap;
+ %End
+ 
+@@ -717,7 +712,7 @@
+     QMap<QString,DCOPRef> *cppmap = new QMap<QString,DCOPRef>;
+ 
+     PyObject *aelem, *belem;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QString *acpp;
+     DCOPRef *bcpp;
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/kaccel.sip PyKDE-3.16.0/sip/kdecore/kaccel.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/kaccel.sip	2006-09-22 04:11:16.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/kaccel.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -161,7 +161,6 @@
+ //converts a Python dict of int:QString
+ {
+ %TypeHeaderCode
+-#include <sipqtQString.h>
+ #include <kaccel.h>
+ %End
+ 
+@@ -209,7 +208,7 @@
+     QMap<int,QString> *map = new QMap<int,QString>;
+ 
+         PyObject *key, *value;
+-        int pos = 0;
++        SIP_SSIZE_T pos = 0;
+         int iKey;
+         QString *sData;
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/kcompletion.sip PyKDE-3.16.0/sip/kdecore/kcompletion.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/kcompletion.sip	2006-09-22 04:11:16.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/kcompletion.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -152,7 +152,6 @@
+ {
+ %TypeHeaderCode
+ #include <kcompletion.h>
+-#include <sipkdecoreKShortcut.h>
+ %End
+ %ConvertFromTypeCode
+ 
+@@ -201,7 +200,7 @@
+     QMap<KCompletionBase::KeyBindingType,KShortcut> *kbmap = new QMap<KCompletionBase::KeyBindingType,KShortcut>;
+ 
+     PyObject *key, *value;
+-        int pos = 0;
++        SIP_SSIZE_T pos = 0;
+         KShortcut *cValue;
+         int iserr;
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/kconfig.sip PyKDE-3.16.0/sip/kdecore/kconfig.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/kconfig.sip	2006-09-22 04:11:16.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/kconfig.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -158,7 +158,7 @@
+     QMap<QString,QString> *cppmap = new QMap<QString,QString>;
+ 
+     PyObject *aelem, *belem;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QString *acpp;
+     QString *bcpp;
+ 
+@@ -193,7 +193,6 @@
+ %TypeHeaderCode
+ #include <ksharedptr.h>
+ #include <kconfig.h>
+-#include <sipkdecoreKSharedConfig.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/kconfigbase.sip PyKDE-3.16.0/sip/kdecore/kconfigbase.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/kconfigbase.sip	2006-09-22 04:11:16.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/kconfigbase.sip	2007-06-24 11:28:00.000000000 +0100
+@@ -24,11 +24,15 @@
+ // 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ 
+ 
++%ModuleHeaderCode
++typedef long long longlong;
++typedef unsigned long long ulonglong;
++%End
++
++
+ class KConfigBase : QObject
+ {
+ %TypeHeaderCode
+-typedef long long longlong;
+-typedef unsigned long long ulonglong;
+ #include <kconfigbase.h>
+ %End
+ 
+@@ -257,7 +261,6 @@
+ //converts a Python long
+ {
+ %TypeHeaderCode
+-#include <sipkdecoreKConfigBase.h>   // typdef for longlong
+ #if PY_MAJOR_VERSION >= 2 && PY_MINOR_VERSION >= 3
+ #define LONG_LONG  PY_LONG_LONG
+ #endif
+@@ -296,7 +299,6 @@
+ //converts a Python long
+ {
+ %TypeHeaderCode
+-#include <sipkdecoreKConfigBase.h>   // typdef for ulonglong
+ #if PY_MAJOR_VERSION >= 2 && PY_MINOR_VERSION >= 3
+ #define LONG_LONG  PY_LONG_LONG
+ #endif
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/kconfigdata.sip PyKDE-3.16.0/sip/kdecore/kconfigdata.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/kconfigdata.sip	2006-09-22 04:11:16.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/kconfigdata.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -92,9 +92,6 @@
+ %TypeHeaderCode
+ #include <qmap.h>
+ #include <kconfigdata.h>
+-#include <sipkdecoreKEntryMap.h>
+-#include <sipkdecoreKEntry.h>
+-#include <sipkdecoreKEntryKey.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -146,7 +143,7 @@
+     KEntryMap *cppmap = new KEntryMap;
+ 
+     PyObject *aelem, *belem;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     KEntryKey *acpp;
+     KEntry *bcpp;
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/kconfigskeleton.sip PyKDE-3.16.0/sip/kdecore/kconfigskeleton.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/kconfigskeleton.sip	2006-09-22 04:11:16.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/kconfigskeleton.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -122,8 +122,6 @@
+ class KConfigSkeleton
+ {
+ %TypeHeaderCode
+-#include <sipkdecorelonglong.h>
+-#include <sipkdecoreulonglong.h>
+ #include <kconfigskeleton.h>
+ typedef QValueList<int> IntList;
+ %End
+@@ -1083,7 +1081,6 @@
+ {
+ %TypeHeaderCode
+ #include <kconfigskeleton.h>
+-#include <sipkdecoreKConfigSkeletonItemEnumChoice.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/kdecoremod.sip PyKDE-3.16.0/sip/kdecore/kdecoremod.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/kdecoremod.sip	2006-09-22 09:02:05.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/kdecoremod.sip	2007-06-25 12:03:40.000000000 +0100
+@@ -110,4 +110,5 @@
+ %Include kmountpoint.sip
+ %Include kpty.sip
+ %Include kshell.sip
++%Include ktimezones.sip
+ %Include kurldrag.sip
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/kiconloader.sip PyKDE-3.16.0/sip/kdecore/kiconloader.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/kiconloader.sip	2006-09-22 04:11:16.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/kiconloader.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -74,6 +74,11 @@
+ 
+ };  // class KIconLoader
+ 
++
++%ModuleCode
++#include <kiconloader.h>
++%End
++
+ QPixmap              DesktopIcon (const QString&, int = 0, int = KIcon ::DefaultState , KInstance* = KGlobal ::instance ());
+ QPixmap              DesktopIcon (const QString&, KInstance*);
+ QIconSet             DesktopIconSet (const QString&, int = 0, KInstance* = KGlobal ::instance ());
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/klocale.sip PyKDE-3.16.0/sip/kdecore/klocale.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/klocale.sip	2006-09-22 04:11:16.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/klocale.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -233,6 +233,11 @@
+ 
+ };  // class KLocale
+ 
++
++%ModuleCode
++#include <klocale.h>
++%End
++
+ QString              i18n (const char*);
+ QString              i18n (const char*, const char*);
+ QString              i18n (const char*, const char*, ulong);
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/klockfile.sip PyKDE-3.16.0/sip/kdecore/klockfile.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/klockfile.sip	2006-09-22 04:11:16.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/klockfile.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -72,7 +72,6 @@
+ %TypeHeaderCode
+ #include <ksharedptr.h>
+ #include <klockfile.h>
+-#include <../kdecore/sipkdecoreKLockFile.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/kmacroexpander.sip PyKDE-3.16.0/sip/kdecore/kmacroexpander.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/kmacroexpander.sip	2006-09-22 04:11:16.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/kmacroexpander.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -119,8 +119,8 @@
+ //converts a Python dict of QChar:QString
+ {
+ %TypeHeaderCode
+-#include <sipqtQString.h>
+-#include <sipqtQChar.h>
++#include <qmap.h>
++#include <qstring.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -169,7 +169,7 @@
+     QMap<QChar,QString> *map = new QMap<QChar,QString>;
+ 
+     PyObject *key, *value;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QChar *cKey;
+     QString *sData;
+ 
+@@ -201,8 +201,9 @@
+ //converts a Python dict of QString:QStringList
+ {
+ %TypeHeaderCode
+-#include <sipqtQString.h>
+-#include <sipqtQStringList.h>
++#include <qmap.h>
++#include <qstring.h>
++#include <qstringlist.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -251,7 +252,7 @@
+     QMap<QString, QStringList> *map = new QMap<QString, QStringList>;
+ 
+     PyObject *key, *value;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QString *sKey;
+     QStringList *slData;
+ 
+@@ -283,8 +284,9 @@
+ //converts a Python dict of QChar:QStringList
+ {
+ %TypeHeaderCode
+-#include <sipqtQStringList.h>
+-#include <sipqtQChar.h>
++#include <qmap.h>
++#include <qstringlist.h>
++#include <qstring.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -334,7 +336,7 @@
+     QMap<QChar,QStringList> *map = new QMap<QChar,QStringList>;
+ 
+     PyObject *key, *value;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QChar *cKey;
+     QStringList *slData;
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/kmountpoint.sip PyKDE-3.16.0/sip/kdecore/kmountpoint.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/kmountpoint.sip	2006-09-22 04:11:16.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/kmountpoint.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -73,7 +73,6 @@
+ %TypeHeaderCode
+ #include <ksharedptr.h>
+ #include <kmountpoint.h>
+-#include <sipkdecoreKMountPoint.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -117,8 +116,6 @@
+ %TypeHeaderCode
+ #include <qvaluelist.h>
+ #include <kmountpoint.h>
+-#include <sipkdecoreKMountPoint.h>
+-#include <sipkdecoreKMountPointPtr.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/kstddirs.sip PyKDE-3.16.0/sip/kdecore/kstddirs.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/kstddirs.sip	2006-05-25 02:27:49.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/kstddirs.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -60,5 +60,10 @@
+ 
+ };  // class KStandardDirs
+ 
++
++%ModuleCode
++#include <kstddirs.h>
++%End
++
+ QString              locate (const char*, const QString&, const KInstance* = KGlobal::instance());
+ QString              locateLocal (const char*, const QString&, const KInstance* = KGlobal::instance());
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/ktimezones.sip PyKDE-3.16.0/sip/kdecore/ktimezones.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/ktimezones.sip	2006-09-22 04:11:16.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/ktimezones.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -140,7 +140,6 @@
+ %TypeHeaderCode
+ #include <ksharedptr.h>
+ #include <ktimezones.h>
+-#include <sipkdecoreKTimezoneSource.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -187,8 +186,6 @@
+ #include <qmap.h>
+ #include <qstring.h>
+ #include <ktimezones.h>
+-#include <sipqtQString.h>
+-#include <sipkdecoreKTimezone.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -240,7 +237,7 @@
+     QMap<QString, KTimezone*> *cppmap = new QMap<QString, KTimezone*>;
+ 
+     PyObject *aelem, *belem;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QString *acpp;
+     KTimezone *bcpp;
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kdecore/kurl.sip PyKDE-3.16.0/sip/kdecore/kurl.sip
+--- PyKDE-3.16.0.orig/sip/kdecore/kurl.sip	2006-09-22 04:11:16.000000000 +0100
++++ PyKDE-3.16.0/sip/kdecore/kurl.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -248,7 +248,8 @@
+ %MethodCode
+ //takes range | (a Python slice) | urlList | (KURL.List)
+ 
+-    int len, start, stop, step, slicelength;
++    int len;
++    SIP_SSIZE_T start, stop, step, slicelength;
+ 
+     len = sipCpp -> count();
+ 
+@@ -291,7 +292,8 @@
+         void                 __delitem__ (SIP_PYSLICE);
+ %MethodCode
+ //takes range | (a Python slice)
+-    int len, start, stop, step, slicelength;
++    int len;
++    SIP_SSIZE_T start, stop, step, slicelength;
+ 
+     len = sipCpp -> count();
+     if (sipConvertFromSliceObject(a0,len,&start,&stop,&step,&slicelength) < 0)
+@@ -322,7 +324,8 @@
+ %MethodCode
+ //returns (KURL.List)
+ //takes range | (a Python slice)
+-    int len, start, stop, step, slicelength;
++    int len;
++    SIP_SSIZE_T start, stop, step, slicelength;
+ 
+     len = sipCpp -> count();
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kdefx/kdrawutil.sip PyKDE-3.16.0/sip/kdefx/kdrawutil.sip
+--- PyKDE-3.16.0.orig/sip/kdefx/kdrawutil.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kdefx/kdrawutil.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -25,8 +25,6 @@
+ 
+ %ModuleHeaderCode
+ #include <kdrawutil.h>
+-#include <sipqtQRegion.h>
+-#include <sipqtQBrush.h>
+ %End
+ 
+ void                 kDrawNextButton (QPainter*, const QRect&, const QColorGroup&, bool = 0, const QBrush* = 0);
+diff -ru PyKDE-3.16.0.orig/sip/kdeprint/kmjobmanager.sip PyKDE-3.16.0/sip/kdeprint/kmjobmanager.sip
+--- PyKDE-3.16.0.orig/sip/kdeprint/kmjobmanager.sip	2006-09-22 04:11:13.000000000 +0100
++++ PyKDE-3.16.0/sip/kdeprint/kmjobmanager.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -128,7 +128,6 @@
+ %TypeHeaderCode
+ #include <qptrlist.h>
+ #include <kmjob.h>
+-#include <sipkdeprintKMJob.h>
+ typedef QPtrList<KMJob> KMJobList;
+ %End
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kdeprint/kmmanager.sip PyKDE-3.16.0/sip/kdeprint/kmmanager.sip
+--- PyKDE-3.16.0.orig/sip/kdeprint/kmmanager.sip	2006-09-22 04:11:13.000000000 +0100
++++ PyKDE-3.16.0/sip/kdeprint/kmmanager.sip	2007-06-23 09:55:29.000000000 +0100
+@@ -149,7 +149,6 @@
+ #include <qptrlist.h>
+ #include <kmmanager.h>
+ #include <kmprinter.h>
+-#include <sipkdeprintKMPrinter.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kdeprint/kprintdialog.sip PyKDE-3.16.0/sip/kdeprint/kprintdialog.sip
+--- PyKDE-3.16.0.orig/sip/kdeprint/kprintdialog.sip	2006-09-22 04:11:13.000000000 +0100
++++ PyKDE-3.16.0/sip/kdeprint/kprintdialog.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -98,7 +98,6 @@
+ %TypeHeaderCode
+ #include <qptrlist.h>
+ #include <kprintdialogpage.h>
+-#include <sipkdeprintKPrintDialogPage.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kdeui/kaction.sip PyKDE-3.16.0/sip/kdeui/kaction.sip
+--- PyKDE-3.16.0.orig/sip/kdeui/kaction.sip	2006-09-22 04:11:15.000000000 +0100
++++ PyKDE-3.16.0/sip/kdeui/kaction.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -694,7 +694,6 @@
+ #include <qvaluelist.h>
+ #include <kaction.h>
+ //typedef QValueList<KAction*> KActionPtrList;
+-#include <sipkdeuiKAction.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kdeui/kdeuimod.sip PyKDE-3.16.0/sip/kdeui/kdeuimod.sip
+--- PyKDE-3.16.0.orig/sip/kdeui/kdeuimod.sip	2006-09-22 09:02:15.000000000 +0100
++++ PyKDE-3.16.0/sip/kdeui/kdeuimod.sip	2007-06-25 12:03:44.000000000 +0100
+@@ -133,11 +133,13 @@
+ %Include kpassivepopup.sip
+ %Include kpixmapregionselectordialog.sip
+ %Include kpixmapregionselectorwidget.sip
++%Include kscrollview.sip
+ %Include kshortcutdialog.sip
+ %Include ksplashscreen.sip
+ %Include ktabbar.sip
+ %Include ktabwidget.sip
+ %Include ktextedit.sip
+ %Include ktimewidget.sip
++%Include ktimezonewidget.sip
+ %Include ktoolbarlabelaction.sip
+ %Include kwindowinfo.sip
+diff -ru PyKDE-3.16.0.orig/sip/kdeui/kkeydialog.sip PyKDE-3.16.0/sip/kdeui/kkeydialog.sip
+--- PyKDE-3.16.0.orig/sip/kdeui/kkeydialog.sip	2006-09-22 04:11:15.000000000 +0100
++++ PyKDE-3.16.0/sip/kdeui/kkeydialog.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -181,8 +181,6 @@
+ {
+ %TypeHeaderCode
+ #include <qdict.h>
+-#include <sipqtQString.h>
+-#include <sipqtQCString.h>
+ typedef QDict<int> IntDict;
+ %End
+ 
+@@ -231,7 +229,7 @@
+     QDict<int>* qdict = new QDict<int>;
+ 
+     PyObject *key, *value;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QString *a0;
+     int a1;
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kdeui/klistview.sip PyKDE-3.16.0/sip/kdeui/klistview.sip
+--- PyKDE-3.16.0.orig/sip/kdeui/klistview.sip	2006-09-22 04:11:15.000000000 +0100
++++ PyKDE-3.16.0/sip/kdeui/klistview.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -268,7 +268,6 @@
+ %TypeHeaderCode
+ #include <qptrlist.h>
+ #include <qlistview.h>
+-#include <sipqtQListViewItem.h>
+ typedef QPtrList<QListViewItem> ListViewItems;
+ %End
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kdeui/kmainwindow.sip PyKDE-3.16.0/sip/kdeui/kmainwindow.sip
+--- PyKDE-3.16.0.orig/sip/kdeui/kmainwindow.sip	2006-09-22 04:11:15.000000000 +0100
++++ PyKDE-3.16.0/sip/kdeui/kmainwindow.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -206,7 +206,6 @@
+ %TypeHeaderCode
+ #include <qptrlist.h>
+ #include <kmainwindow.h>
+-#include <sipkdeuiKMainWindow.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kdeui/kstdguiitem.sip PyKDE-3.16.0/sip/kdeui/kstdguiitem.sip
+--- PyKDE-3.16.0.orig/sip/kdeui/kstdguiitem.sip	2006-09-22 04:11:15.000000000 +0100
++++ PyKDE-3.16.0/sip/kdeui/kstdguiitem.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -292,7 +292,6 @@
+ {
+ %TypeHeaderCode
+ #include <kguiitem.h>
+-#include <sipkdeuiKGuiItem.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kdeui/kxmlguifactory.sip PyKDE-3.16.0/sip/kdeui/kxmlguifactory.sip
+--- PyKDE-3.16.0.orig/sip/kdeui/kxmlguifactory.sip	2006-09-22 04:11:15.000000000 +0100
++++ PyKDE-3.16.0/sip/kdeui/kxmlguifactory.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -89,7 +89,6 @@
+ %TypeHeaderCode
+ #include <qptrlist.h>
+ #include <kaction.h>
+-#include <sipkdeuiKAction.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -161,7 +160,6 @@
+ %TypeHeaderCode
+ #include <qptrlist.h>
+ #include <kxmlguiclient.h>
+-#include <sipkdeuiKXMLGUIClient.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -232,7 +230,6 @@
+ {
+ %TypeHeaderCode
+ #include <qptrlist.h>
+-#include <sipqtQWidget.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kfile/kdirsize.sip PyKDE-3.16.0/sip/kfile/kdirsize.sip
+--- PyKDE-3.16.0.orig/sip/kfile/kdirsize.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kfile/kdirsize.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -27,7 +27,6 @@
+ class KDirSize : KIO::Job
+ {
+ %TypeHeaderCode
+-#include <sipkdecoreulonglong.h>
+ #include <kdirsize.h>
+ %End
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kfile/kfiletreebranch.sip PyKDE-3.16.0/sip/kfile/kfiletreebranch.sip
+--- PyKDE-3.16.0.orig/sip/kfile/kfiletreebranch.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kfile/kfiletreebranch.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -87,7 +87,6 @@
+ %TypeHeaderCode
+ #include <kfiletreeviewitem.h>
+ typedef QPtrList<KFileTreeViewItem> KFileTreeViewItemList;
+-#include <sipkfileKFileTreeViewItem.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -162,7 +161,6 @@
+ {
+ %TypeHeaderCode
+ #include <kfiletreebranch.h>
+-#include <sipkfileKFileTreeBranch.h>
+ //typedef QPtrList<KFileTreeBranch> KFileTreeBList;
+ %End
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kfile/knotifydialog.sip PyKDE-3.16.0/sip/kfile/knotifydialog.sip
+--- PyKDE-3.16.0.orig/sip/kfile/knotifydialog.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kfile/knotifydialog.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -246,7 +246,6 @@
+ %TypeHeaderCode
+ #include <qptrlist.h>
+ #include <knotifydialog.h>
+-#include <sipkfileKNotifyEvent.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/khtml/dom2_events.sip PyKDE-3.16.0/sip/khtml/dom2_events.sip
+--- PyKDE-3.16.0.orig/sip/khtml/dom2_events.sip	2006-09-22 04:11:13.000000000 +0100
++++ PyKDE-3.16.0/sip/khtml/dom2_events.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -86,7 +86,7 @@
+ 
+ public:
+ //force
+-    typedef longlong DOMTimeStamp;
++    typedef long long DOMTimeStamp;
+ //end
+ 
+ };  // class Event
+diff -ru PyKDE-3.16.0.orig/sip/khtml/khtml_settings.sip PyKDE-3.16.0/sip/khtml/khtml_settings.sip
+--- PyKDE-3.16.0.orig/sip/khtml/khtml_settings.sip	2006-09-22 04:11:13.000000000 +0100
++++ PyKDE-3.16.0/sip/khtml/khtml_settings.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -214,9 +214,6 @@
+ #include <qvaluelist.h>
+ #include <qstring.h>
+ #include <khtml_settings.h>
+-#include <sipqtQString.h>
+-#include <sipqtQChar.h>
+-#include <sipkhtmlKHTMLSettings.h>
+ typedef QPair<QString,QChar> AssignPair;
+ %End
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kio/authinfo.sip PyKDE-3.16.0/sip/kio/authinfo.sip
+--- PyKDE-3.16.0.orig/sip/kio/authinfo.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/authinfo.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -127,8 +127,6 @@
+ {
+ //converts a Python dict of QString:QStringList
+ %TypeHeaderCode
+-#include <sipqtQString.h>
+-#include <sipqtQStringList.h>
+ #include <qmap.h>
+ typedef QMap<QString, QStringList> KStringListMap;
+ %End
+@@ -176,7 +174,7 @@
+     QMap<QString, QStringList> *map = new QMap<QString, QStringList>;
+ 
+     PyObject *key, *value;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QString *sKey;
+     QStringList *sData;
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kio/chmodjob.sip PyKDE-3.16.0/sip/kio/chmodjob.sip
+--- PyKDE-3.16.0.orig/sip/kio/chmodjob.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/chmodjob.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -30,15 +30,6 @@
+ {
+ %TypeHeaderCode
+ #include <jobclasses.h>
+-namespace KIO
+-{
+-class ChmodInfo
+-{
+-public:
+-    KURL url;
+-    int permissions;
+-};
+-};
+ #include <chmodjob.h>
+ %End
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kio/global.sip PyKDE-3.16.0/sip/kio/global.sip
+--- PyKDE-3.16.0.orig/sip/kio/global.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/global.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -24,15 +24,13 @@
+ // 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ 
+ %ModuleHeaderCode
+-#include <sipkioKIOUDSEntry.h>
+-#include <sipkioKIOUDSEntryList.h>
+-#include <sipkdecoreulonglong.h>
++#include <kio/global.h>
+ %End
+ 
+ namespace KIO
+ {
+-typedef longlong fileoffset_t;
+-typedef ulonglong filesize_t;
++typedef long long fileoffset_t;
++typedef unsigned long long filesize_t;
+ QString              convertSize (KIO::filesize_t);
+ 
+ %If ( KDE_3_5_0 -  )
+@@ -464,10 +462,6 @@
+     sipRes = a0;
+ %End
+ 
+-%ModuleHeaderCode
+-#include <sipkioKIOUDSEntryList.h>
+-%End
+-
+ KIO::UDSEntryList    testKIOUDSEntryList (KIO::UDSEntryList);
+ %MethodCode
+ //takes list | (KIO.UDSEntryList)
+@@ -476,7 +470,6 @@
+ %End
+ 
+ %ModuleHeaderCode
+-#include <sipkioKIOMetaData.h>
+ #include <qmap.h>
+ %End
+ 
+@@ -509,8 +502,6 @@
+ %TypeHeaderCode
+ #include <qvaluelist.h>
+ #include <global.h>
+-#include <sipkioKIOUDSEntry.h>
+-#include <sipkioKIOUDSAtom.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -579,7 +570,6 @@
+ %TypeHeaderCode
+ #include <qvaluelist.h>
+ #include <global.h>
+-#include <sipkioKIOUDSEntry.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -650,7 +640,6 @@
+ %TypeHeaderCode
+ #include<qmap.h>
+ #include <global.h>
+-#include <sipqtQString.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -702,7 +691,7 @@
+     QMap<QString,QString> *cppmap = new QMap<QString,QString>;
+ 
+     PyObject *aelem, *belem;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QString *acpp;
+     QString *bcpp;
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kio/kacl.sip PyKDE-3.16.0/sip/kio/kacl.sip
+--- PyKDE-3.16.0.orig/sip/kio/kacl.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/kacl.sip	2007-06-25 10:27:09.000000000 +0100
+@@ -94,8 +94,6 @@
+ #include <qvaluelist.h>
+ #include <qstring.h>
+ #include <kacl.h>
+-#include <sipqtQString.h>
+-#include <sipkioKACL.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kio/kdatatool.sip PyKDE-3.16.0/sip/kio/kdatatool.sip
+--- PyKDE-3.16.0.orig/sip/kio/kdatatool.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/kdatatool.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -100,7 +100,6 @@
+ {
+ %TypeHeaderCode
+ #include <kdatatool.h>
+-#include <sipkioKDataToolInfo.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kio/kdirlister.sip PyKDE-3.16.0/sip/kio/kdirlister.sip
+--- PyKDE-3.16.0.orig/sip/kio/kdirlister.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/kdirlister.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -129,7 +129,7 @@
+ //converts a Python list of KFileItem
+ {
+ %TypeHeaderCode
+-#include <sipkioKFileItem.h>
++#include <kfileitem.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -200,7 +200,6 @@
+ {
+ %TypeHeaderCode
+ #include <qregexp.h>
+-#include <sipqtQRegExp.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kio/kiomod.sip PyKDE-3.16.0/sip/kio/kiomod.sip
+--- PyKDE-3.16.0.orig/sip/kio/kiomod.sip	2006-09-22 09:02:30.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/kiomod.sip	2007-06-25 12:03:51.000000000 +0100
+@@ -96,6 +96,7 @@
+ %Include thumbcreator.sip
+ %Include davjob.sip
+ %Include forwardingslavebase.sip
++%Include kacl.sip
+ %Include kar.sip
+ %Include kdcopservicestarter.sip
+ %Include kfileshare.sip
+diff -ru PyKDE-3.16.0.orig/sip/kio/kmimetype.sip PyKDE-3.16.0/sip/kio/kmimetype.sip
+--- PyKDE-3.16.0.orig/sip/kio/kmimetype.sip	2006-09-22 14:11:53.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/kmimetype.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -244,7 +244,6 @@
+ %TypeHeaderCode
+ #include <ksharedptr.h>
+ #include <kmimetype.h>
+-#include <sipkioKMimeType.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -287,8 +286,6 @@
+ {
+ %TypeHeaderCode
+ #include <qvaluelist.h>
+-#include <sipkioKDEDesktopMimeType.h>
+-#include <sipkioKDEDesktopMimeTypeService.h>
+ #include <kmimetype.h>
+ %End
+ 
+@@ -357,7 +354,6 @@
+ {
+ %TypeHeaderCode
+ #include <kmimetype.h>
+-#include <sipkioKMimeType.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kio/kprotocolinfo.sip PyKDE-3.16.0/sip/kio/kprotocolinfo.sip
+--- PyKDE-3.16.0.orig/sip/kio/kprotocolinfo.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/kprotocolinfo.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -179,7 +179,6 @@
+ %TypeHeaderCode
+ #include <ksharedptr.h>
+ #include <kprotocolinfo.h>
+-#include <sipkioKProtocolInfo.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kio/kservice.sip PyKDE-3.16.0/sip/kio/kservice.sip
+--- PyKDE-3.16.0.orig/sip/kio/kservice.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/kservice.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -164,7 +164,6 @@
+ %TypeHeaderCode
+ #include <ksharedptr.h>
+ #include <kservice.h>
+-#include <sipkioKService.h>
+ //typedef KSharedPtr<KService> SvcPtr;
+ //typedef KService::Ptr SvcPtr;
+ %End
+@@ -210,8 +209,6 @@
+ %TypeHeaderCode
+ #include <qvaluelist.h>
+ #include <kservice.h>
+-#include <sipkioKService.h>
+-#include <sipkioKServicePtr.h>
+ //typedef KSharedPtr<KService> Ptr;
+ //typedef QValueList<Ptr> SvcList;
+ //typedef KService::List SvcList;
+diff -ru PyKDE-3.16.0.orig/sip/kio/kservicegroup.sip PyKDE-3.16.0/sip/kio/kservicegroup.sip
+--- PyKDE-3.16.0.orig/sip/kio/kservicegroup.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/kservicegroup.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -165,7 +165,6 @@
+ %TypeHeaderCode
+ #include <ksharedptr.h>
+ #include <kservicegroup.h>
+-#include <sipkioKServiceGroup.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -211,9 +210,6 @@
+ #include <ksharedptr.h>
+ #include <kservice.h>
+ #include <kservicegroup.h>
+-#include <sipkioKService.h>
+-#include <sipkioKServiceGroup.h>
+-#include <sipkioKSycocaEntryPtr.h>
+ #include <qvaluelist.h>
+ %End
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kio/kservicetype.sip PyKDE-3.16.0/sip/kio/kservicetype.sip
+--- PyKDE-3.16.0.orig/sip/kio/kservicetype.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/kservicetype.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -88,7 +88,6 @@
+ %TypeHeaderCode
+ #include <ksharedptr.h>
+ #include <kservicetype.h>
+-#include <sipkioKServiceType.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -132,7 +131,6 @@
+ %TypeHeaderCode
+ #include <qmap.h>
+ #include <qvariant.h>
+-#include <sipqtQString.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -183,7 +181,7 @@
+     QMap<QString,QVariant::Type> *cppmap = new QMap<QString,QVariant::Type>;
+ 
+     PyObject *aelem, *belem;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QString *acpp;
+     QVariant::Type bcpp;
+ 
+@@ -216,8 +214,6 @@
+ {
+ %TypeHeaderCode
+ #include <kservicetype.h>
+-#include <sipkioKServiceType.h>
+-#include <sipkioKServiceTypePtr.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kio/ksycocaentry.sip PyKDE-3.16.0/sip/kio/ksycocaentry.sip
+--- PyKDE-3.16.0.orig/sip/kio/ksycocaentry.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/ksycocaentry.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -71,7 +71,6 @@
+ %TypeHeaderCode
+ #include <ksharedptr.h>
+ #include <ksycocaentry.h>
+-#include <sipkioKSycocaEntry.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -117,12 +116,7 @@
+ #include <kservice.h>
+ #include <kservicegroup.h>
+ #include <ksycocaentry.h>
+-#include <sipkioKSycocaEntry.h>
+ #include <ksycocatype.h>
+-#include <sipkioKService.h>
+-#include <sipkioKServicePtr.h>
+-#include <sipkioKServiceGroup.h>
+-#include <sipkioKServiceGroupPtr.h>
+ #include <qvaluelist.h>
+ %End
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kio/ktrader.sip PyKDE-3.16.0/sip/kio/ktrader.sip
+--- PyKDE-3.16.0.orig/sip/kio/ktrader.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/ktrader.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -57,7 +57,6 @@
+ {
+ %TypeHeaderCode
+ #include <qvaluelist.h>
+-#include <sipkioKServicePtr.h>
+ #include <ktrader.h>
+ %End
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kio/kuserprofile.sip PyKDE-3.16.0/sip/kio/kuserprofile.sip
+--- PyKDE-3.16.0.orig/sip/kio/kuserprofile.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kio/kuserprofile.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -83,7 +83,6 @@
+ #include <qvaluelist.h>
+ #include <kservicetype.h>
+ #include <kuserprofile.h>
+-#include <sipkioKServiceOffer.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -151,7 +150,6 @@
+ %TypeHeaderCode
+ #include <qptrlist.h>
+ #include <kservicetype.h>
+-#include <sipkioKServiceTypeProfile.h>
+ //typedef QPtrList<KServiceTypeProfile> SvcTypeProfileList;
+ %End
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kmdi/kmdichildfrm.sip PyKDE-3.16.0/sip/kmdi/kmdichildfrm.sip
+--- PyKDE-3.16.0.orig/sip/kmdi/kmdichildfrm.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kmdi/kmdichildfrm.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -196,8 +196,6 @@
+ {
+ %TypeHeaderCode
+ #include <qdict.h>
+-#include <sipqtQWidget.h>
+-#include <sipqtQString.h>
+ %End
+ 
+ %ConvertFromTypeCode
+@@ -245,7 +243,7 @@
+     QDict<QWidget::FocusPolicy>* qdict = new QDict<QWidget::FocusPolicy>;
+ 
+     PyObject *key, *value;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QString *a0;
+     QWidget::FocusPolicy a1;
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kparts/browserextension.sip PyKDE-3.16.0/sip/kparts/browserextension.sip
+--- PyKDE-3.16.0.orig/sip/kparts/browserextension.sip	2006-09-22 04:11:15.000000000 +0100
++++ PyKDE-3.16.0/sip/kparts/browserextension.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -30,7 +30,6 @@
+ {
+ %TypeHeaderCode
+ #include <browserextension.h>
+-#include <sipkioKIOMetaData.h>
+ %End
+ 
+ 
+@@ -419,7 +418,7 @@
+     QMap<QCString,QCString> *cppmap = new QMap<QCString,QCString>;
+ 
+     PyObject *aelem, *belem;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QCString *acpp;
+     QCString *bcpp;
+ 
+@@ -503,7 +502,7 @@
+     QMap<QCString,int> *cppmap = new QMap<QCString,int>;
+ 
+     PyObject *aelem, *belem;
+-    int pos = 0;
++    SIP_SSIZE_T pos = 0;
+     QCString *acpp;
+     int bcpp;
+ 
+diff -ru PyKDE-3.16.0.orig/sip/kparts/kpartsmod.sip PyKDE-3.16.0/sip/kparts/kpartsmod.sip
+--- PyKDE-3.16.0.orig/sip/kparts/kpartsmod.sip	2006-09-22 09:03:39.000000000 +0100
++++ PyKDE-3.16.0/sip/kparts/kpartsmod.sip	2007-06-25 12:04:24.000000000 +0100
+@@ -48,4 +48,5 @@
+ %Include part.sip
+ %Include partmanager.sip
+ %Include plugin.sip
++%Include konsole_part.sip
+ %Include statusbarextension.sip
+diff -ru PyKDE-3.16.0.orig/sip/kparts/part.sip PyKDE-3.16.0/sip/kparts/part.sip
+--- PyKDE-3.16.0.orig/sip/kparts/part.sip	2006-09-22 04:11:15.000000000 +0100
++++ PyKDE-3.16.0/sip/kparts/part.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -284,6 +284,8 @@
+ 
+ 
+ %ModuleCode
++#include <klibloader.h>
++
+ KParts::ReadOnlyPart *createReadOnlyPart (const QString& lib, QObject *parent, const QString& name, const char *className,
+                                           const QStringList &args)
+ {
+diff -ru PyKDE-3.16.0.orig/sip/kresources/selectdialog.sip PyKDE-3.16.0/sip/kresources/selectdialog.sip
+--- PyKDE-3.16.0.orig/sip/kresources/selectdialog.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kresources/selectdialog.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -64,7 +64,6 @@
+ %TypeHeaderCode
+ #include <qptrlist.h>
+ #include <resource.h>
+-#include <sipkresourcesKRESResource.h>
+ %End
+ 
+ %ConvertFromTypeCode
+diff -ru PyKDE-3.16.0.orig/sip/kspell/ksconfig.sip PyKDE-3.16.0/sip/kspell/ksconfig.sip
+--- PyKDE-3.16.0.orig/sip/kspell/ksconfig.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kspell/ksconfig.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -102,6 +102,10 @@
+ };  // class KSpellConfig
+ 
+ 
++%ModuleCode
++#include <ksconfig.h>
++%End
++
+ %If ( KDE_3_1_4 -  )
+ 
+ enum Encoding
+diff -ru PyKDE-3.16.0.orig/sip/kspell/kspelldlg.sip PyKDE-3.16.0/sip/kspell/kspelldlg.sip
+--- PyKDE-3.16.0.orig/sip/kspell/kspelldlg.sip	2006-09-22 04:11:14.000000000 +0100
++++ PyKDE-3.16.0/sip/kspell/kspelldlg.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -89,6 +89,10 @@
+ };  // class KSpellDlg
+ 
+ 
++%ModuleCode
++#include <kspelldlg.h>
++%End
++
+ %If ( KDE_3_2_0 -  )
+ 
+ enum KS_RESULT
+diff -ru PyKDE-3.16.0.orig/sip/kutils/kplugininfo.sip PyKDE-3.16.0/sip/kutils/kplugininfo.sip
+--- PyKDE-3.16.0.orig/sip/kutils/kplugininfo.sip	2006-09-22 04:11:15.000000000 +0100
++++ PyKDE-3.16.0/sip/kutils/kplugininfo.sip	2007-06-23 09:55:30.000000000 +0100
+@@ -83,7 +83,6 @@
+ %TypeHeaderCode
+ #include <qvaluelist.h>
+ #include <kplugininfo.h>
+-#include <sipkutilsKPluginInfo.h>
+ %End
+ 
+ %ConvertFromTypeCode
