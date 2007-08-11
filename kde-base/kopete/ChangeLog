@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.121 2007/08/10 14:42:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.122 2007/08/11 12:10:15 philantrop Exp $
+
+*kopete-3.5.7-r1 (11 Aug 2007)
+
+  11 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kopete-3.5.7-videodevice.patch, +kopete-3.5.7-r1.ebuild:
+  Added an upstream patch to allow pwc-driven webcams to work again in Kopete.
+  Fixes bug 187400.
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org> kopete-3.5.7.ebuild:
   Stable on amd64 wrt bug #176297
