@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/gdm-themes
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.24 2007/02/09 08:52:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.25 2007/08/11 21:46:06 beandog Exp $
+
+*gdm-themes-20070811 (11 Aug 2007)
+
+  11 Aug 2007; Steve Dibb <beandog@gentoo.org> metadata.xml,
+  -gdm-themes-2.0-r1.ebuild, -gdm-themes-2.0-r2.ebuild,
+  +gdm-themes-20070811.ebuild:
+  Remove old ebuilds, start over, update maintainers, bug 167379
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
