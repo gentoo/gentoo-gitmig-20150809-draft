@@ -1,0 +1,12 @@
+diff -Naur libqt4-ruby-1.4.9/ruby/qtruby/src/CMakeLists.txt libqt4-ruby-1.4.9.new/ruby/qtruby/src/CMakeLists.txt
+--- libqt4-ruby-1.4.9/ruby/qtruby/src/CMakeLists.txt	2007-04-20 13:02:49.000000000 +0200
++++ libqt4-ruby-1.4.9.new/ruby/qtruby/src/CMakeLists.txt	2007-07-25 16:01:36.000000000 +0200
+@@ -29,7 +29,7 @@
+ add_library(qtrubyinternal STATIC ${qtruby_LIB_SRCS})
+ target_link_libraries(qtrubyinternal ${QT_QTCORE_LIBRARY} ${RUBY_LIBRARY} ${QT_QTNETWORK_LIBRARY} smokekde)
+ 
+-set_target_properties(qtruby4 PROPERTIES VERSION 0.0.0 SOVERSION 0 PREFIX "")
++set_target_properties(qtruby4 PROPERTIES PREFIX "")
+ 
+ install(TARGETS qtruby4  DESTINATION ${RUBY_SITE_ARCH_DIR} )
+
