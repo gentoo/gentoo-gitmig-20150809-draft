@@ -1,6 +1,9 @@
 # ChangeLog for net-im/silc-client
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.41 2007/08/10 18:10:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.42 2007/08/11 20:20:44 beandog Exp $
+
+  11 Aug 2007; Steve Dibb <beandog@gentoo.org> silc-client-1.1.2.ebuild:
+  amd64 stable, bug 18883
 
   10 Aug 2007; Raúl Porcel <armin76@gentoo.org> silc-client-1.1.2.ebuild:
   Fix building on amd64 with yasm, thanks to Alex Rostovtsev <tetromino at
