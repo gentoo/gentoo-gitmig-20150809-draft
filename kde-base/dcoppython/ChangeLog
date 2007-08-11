@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcoppython
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.58 2007/08/10 14:05:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.59 2007/08/11 17:33:00 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> dcoppython-3.5.7.ebuild:
+  alpha/ia64/x86 stable wrt #176297
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org> dcoppython-3.5.7.ebuild:
   Stable on amd64 wrt bug #176297
