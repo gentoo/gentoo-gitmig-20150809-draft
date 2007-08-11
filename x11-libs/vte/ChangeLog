@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.165 2007/08/11 15:01:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.166 2007/08/11 21:11:42 leio Exp $
+
+  11 Aug 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/vte-0.11.13-memory_fix.patch, -files/vte-0.12-nonls.patch,
+  -files/vte-line-scroll.patch, -files/vte-no_lazy_bindings.patch,
+  -vte-0.11.13-r2.ebuild, -vte-0.12.2.ebuild, -vte-0.16.5.ebuild,
+  -vte-0.16.6.ebuild:
+  Removing Gnome 2.14
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org> vte-0.16.6-r1.ebuild:
   Stable on x86, bug #185823.
