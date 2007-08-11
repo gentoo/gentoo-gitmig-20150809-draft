@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/howto-pdf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-pdf/ChangeLog,v 1.16 2007/03/22 18:58:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-pdf/ChangeLog,v 1.17 2007/08/11 19:18:07 dirtyepic Exp $
+
+*howto-pdf-20070811 (11 Aug 2007)
+
+  11 Aug 2007; Ryan Hill <dirtyepic@gentoo.org> metadata.xml,
+  +howto-pdf-20070811.ebuild:
+  Version bump.
 
   22 Mar 2007; Raúl Porcel <armin76@gentoo.org> -howto-pdf-20050504.ebuild,
   +howto-pdf-20070322.ebuild:
