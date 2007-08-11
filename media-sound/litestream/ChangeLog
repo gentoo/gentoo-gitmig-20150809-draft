@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/litestream
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/litestream/ChangeLog,v 1.10 2007/07/31 12:54:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/litestream/ChangeLog,v 1.11 2007/08/11 17:41:22 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> litestream-1.3_rc3.ebuild:
+  x86 stable wrt #153350
 
   31 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   litestream-1.3_rc3.ebuild:
