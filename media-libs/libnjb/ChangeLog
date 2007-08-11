@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.36 2007/08/10 11:50:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.37 2007/08/11 08:57:57 drac Exp $
+
+  11 Aug 2007; Samuli Suominen <drac@gentoo.org> libnjb-2.2.5-r1.ebuild:
+  Change udev rules numbering from 99 to 80.
 
 *libnjb-2.2.5-r1 (10 Aug 2007)
 
