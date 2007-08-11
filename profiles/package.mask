@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7578 2007/08/11 13:34:54 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7579 2007/08/11 19:40:14 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+
+# Carsten Lohrke <carlo@gentoo.org> (11 Aug 2007)
+# Masked since KDE 3.5.7 doesn't come with KSync anymore.
+app-pda/syncekonnector
 
 # Tristan Heaven <nyhm@gentoo.org> (11 Aug 2007)
 # Masked until bug #178110 can be resolved properly.
