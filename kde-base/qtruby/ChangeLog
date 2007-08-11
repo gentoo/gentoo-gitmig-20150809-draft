@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.62 2007/08/10 14:04:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.63 2007/08/11 17:30:49 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> qtruby-3.5.7.ebuild:
+  x86 stable wrt #176297
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org> qtruby-3.5.7.ebuild:
   Stable on amd64 wrt bug #176297

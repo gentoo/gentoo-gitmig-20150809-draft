@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.5.7.ebuild,v 1.5 2007/08/10 14:06:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.5.7.ebuild,v 1.6 2007/08/11 17:34:09 armin76 Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY=qtjava
@@ -11,7 +11,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit java-pkg-2 kde-meta
 
 DESCRIPTION="KDE java bindings"
-KEYWORDS="amd64 ppc ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 COMMONDEPEND="$(deprange-dual $PV $MAXKDEVER kde-base/kwin)
 	$(deprange-dual $PV $MAXKDEVER kde-base/kcontrol)
