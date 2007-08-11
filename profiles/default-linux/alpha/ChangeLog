@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.68 2007/08/08 20:32:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.69 2007/08/11 14:58:52 yoswink Exp $
+
+  11 Aug 2007; Jose Luis Rivero <yoswink@gentoo.org> use.mask:
+  Unmask jack. it's keyworded and works in alpha
 
   08 Aug 2007; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Unmask hal use-flag for xfce-base/xfce4-extras, as thunar-volman has been
