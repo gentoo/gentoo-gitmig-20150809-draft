@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-meta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.66 2007/08/09 21:43:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.67 2007/08/11 11:41:53 philantrop Exp $
+
+  11 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kdesdk-meta-3.5.7.ebuild:
+  Marked stable on amd64 as per bug 176297.
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> kdesdk-meta-3.5.7.ebuild:
   Stable on ppc64; bug #176297

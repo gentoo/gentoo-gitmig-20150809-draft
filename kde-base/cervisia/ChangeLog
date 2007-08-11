@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.65 2007/08/09 21:33:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.66 2007/08/11 11:38:43 philantrop Exp $
+
+  11 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  cervisia-3.5.7.ebuild:
+  Marked stable on amd64 as per bug 176297.
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org> cervisia-3.5.7.ebuild:
   Stable on ppc64; bug #176297
