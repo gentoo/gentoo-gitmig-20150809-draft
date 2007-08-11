@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/slony1
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.14 2007/08/04 10:46:12 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.15 2007/08/11 17:04:01 beandog Exp $
+
+  11 Aug 2007; Steve Dibb <beandog@gentoo.org> slony1-1.2.10.ebuild:
+  amd64 stable, bug 143600
 
   04 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   slony1-1.2.10.ebuild:
