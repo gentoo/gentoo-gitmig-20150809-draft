@@ -1,6 +1,17 @@
 # ChangeLog for gnome-base/gnome-volume-manager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/ChangeLog,v 1.92 2007/08/11 14:52:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/ChangeLog,v 1.93 2007/08/11 17:06:34 leio Exp $
+
+  11 Aug 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/gnome-volume-manager-1.5.1-use-pmount-2.patch,
+  -files/gnome-volume-manager-1.5.2-use-pmount.patch,
+  -files/gnome-volume-manager-1.5.15-no-libnotify.patch,
+  -files/disable-totem-dvd-autoplay.patch,
+  -gnome-volume-manager-1.5.4.ebuild,
+  -gnome-volume-manager-1.5.15-r2.ebuild,
+  -gnome-volume-manager-1.5.15-r3.ebuild,
+  -gnome-volume-manager-2.15.0.ebuild:
+  Removing Gnome 2.14
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org>
   gnome-volume-manager-2.17.0.ebuild:
