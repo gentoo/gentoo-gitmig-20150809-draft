@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.9 2007/08/01 17:06:36 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.10 2007/08/11 17:50:36 cedk Exp $
+
+*pommed-1.8 (11 Aug 2007)
+
+  11 Aug 2007; Cédric Krier <cedk@gentoo.org> +pommed-1.8.ebuild:
+  Version bump
 
   01 Aug 2007; <metalgod@gentoo.org> pommed-1.5.ebuild:
   Stable on amd64. Bug #185314
