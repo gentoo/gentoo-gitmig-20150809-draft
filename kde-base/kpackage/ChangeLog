@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpackage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpackage/ChangeLog,v 1.41 2007/05/23 00:57:48 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpackage/ChangeLog,v 1.42 2007/08/11 17:25:32 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kpackage-3.5.7.ebuild:
+  alpha/ia64/x86 stable wrt #176297
 
 *kpackage-3.5.7 (23 May 2007)
 
