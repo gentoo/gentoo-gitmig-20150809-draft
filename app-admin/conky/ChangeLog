@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.52 2007/08/09 14:07:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.53 2007/08/11 02:29:13 beandog Exp $
+
+  10 Aug 2007; Steve Dibb <beandog@gentoo.org> conky-1.4.6.ebuild:
+  amd64 stable, bug 187984
 
   09 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> conky-1.4.6.ebuild:
   Stable on sparc wrt #187984
