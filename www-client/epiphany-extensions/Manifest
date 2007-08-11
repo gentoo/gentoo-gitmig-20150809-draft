@@ -5,50 +5,34 @@ AUX epiphany-extensions-2.18.0-sessionsaver-v4.patch.gz 9992 RMD160 397765c966f9
 MD5 3506e823b82fe00b45f5006023db5b07 files/epiphany-extensions-2.18.0-sessionsaver-v4.patch.gz 9992
 RMD160 397765c966f94c38e513f80adb73478abedeb0b0 files/epiphany-extensions-2.18.0-sessionsaver-v4.patch.gz 9992
 SHA256 c6e9f279ae93495f4633903ff3fcdfc18bfcfd04ff727b9dc2d5c20917c3f32b files/epiphany-extensions-2.18.0-sessionsaver-v4.patch.gz 9992
-DIST epiphany-extensions-2.14.1.tar.bz2 820099 RMD160 e8668970d0ea94957e8547dea9474919a3bca7db SHA1 f1bfcce1e0b572089a2bd4b484de6a5c2b681595 SHA256 6b97e1160203869741c57c6720b2d1e5d16ad104b83d0391f73169542e72305c
 DIST epiphany-extensions-2.16.1.tar.bz2 810858 RMD160 95e11ed5b39bc1662fa606797c32c413c08326b3 SHA1 c28cb7ca0df2df814cab42c0a64a31a4c7d3f9c2 SHA256 315ef2eeaf2943830bdf04958af613dce62574aa6697acfab335a0b9e4f699c5
-DIST epiphany-extensions-2.18.1.tar.bz2 892073 RMD160 f07c5a6d93fa1d0af2fe5d12d4efa7c7422dbeb2 SHA1 68b523845d15dcce86e0c92ff0b71a20240826cb SHA256 498d4bc15ac850e304ac25d23e7efc24f56487bc5babb90443bbaf6430eee779
 DIST epiphany-extensions-2.18.2.tar.bz2 892954 RMD160 dd32a147060ff01c8ea63262c00f0c6b6fbcf12c SHA1 fb803511ef92fbe3a5316a3e8f635fe5d1ee10d8 SHA256 b2864dcaba10e208e3b43a42279d50b96520b8e3d7c713c1439244f8c7808536
-EBUILD epiphany-extensions-2.14.1-r1.ebuild 1817 RMD160 e3d2df0d3d5009aa8addeab85ad820dbe94381c3 SHA1 7bab59a56c09aed969df77ee0842598345c489ad SHA256 d0225138af3b2726c4cdecb966225dace36aec0668363dbba6221e095cd64e0c
-MD5 4a45fcf98b9d80b584c75859bcd6cbd5 epiphany-extensions-2.14.1-r1.ebuild 1817
-RMD160 e3d2df0d3d5009aa8addeab85ad820dbe94381c3 epiphany-extensions-2.14.1-r1.ebuild 1817
-SHA256 d0225138af3b2726c4cdecb966225dace36aec0668363dbba6221e095cd64e0c epiphany-extensions-2.14.1-r1.ebuild 1817
 EBUILD epiphany-extensions-2.16.1-r1.ebuild 1535 RMD160 edd3c392a366e49a8f98d3e46fd0540f9f2b5b19 SHA1 4b38a4f1e52685429ff4a70857b79322fd387d83 SHA256 3e6414daae7aa7f0c95cbe2b7e496830f8a3a8f83011b0c8c2859768ca900daa
 MD5 2c25f9e8ce656f9ec60c850c9403f2f3 epiphany-extensions-2.16.1-r1.ebuild 1535
 RMD160 edd3c392a366e49a8f98d3e46fd0540f9f2b5b19 epiphany-extensions-2.16.1-r1.ebuild 1535
 SHA256 3e6414daae7aa7f0c95cbe2b7e496830f8a3a8f83011b0c8c2859768ca900daa epiphany-extensions-2.16.1-r1.ebuild 1535
-EBUILD epiphany-extensions-2.18.1.ebuild 1939 RMD160 1a27124d0efceb1104afb5b6a513f90d0ed415c2 SHA1 f6ee15ecea59367afa0b05ced884d98a653cf249 SHA256 2ecde1b402e4db8caa88e389a34060317652f2383a7cd080efb7d25035033e39
-MD5 3d5d67877eb59991bdbd34f350db8edb epiphany-extensions-2.18.1.ebuild 1939
-RMD160 1a27124d0efceb1104afb5b6a513f90d0ed415c2 epiphany-extensions-2.18.1.ebuild 1939
-SHA256 2ecde1b402e4db8caa88e389a34060317652f2383a7cd080efb7d25035033e39 epiphany-extensions-2.18.1.ebuild 1939
 EBUILD epiphany-extensions-2.18.2.ebuild 1936 RMD160 947098063a90e0ecf575251867c1e11de1fcf91d SHA1 7368d098019782c32c4a79ce12a031fa3443f9e6 SHA256 9492accf87edc67553927ed32842d66c213b719fb367bd94a99e8a7b5fa9ea17
 MD5 f650771be640f2b94349e446ac892be5 epiphany-extensions-2.18.2.ebuild 1936
 RMD160 947098063a90e0ecf575251867c1e11de1fcf91d epiphany-extensions-2.18.2.ebuild 1936
 SHA256 9492accf87edc67553927ed32842d66c213b719fb367bd94a99e8a7b5fa9ea17 epiphany-extensions-2.18.2.ebuild 1936
-MISC ChangeLog 11136 RMD160 828c0dde85ac09788529c5337e8bcd05bf2b0bb2 SHA1 9257c185895e34abaacfa6e58b8e14bc8612dfbf SHA256 fdf24d548e2ebaa15f24cda9b1e8808a2528d7d9d2d74a93604c608c4af538a6
-MD5 79f227e17978ac9214d53efb8c33a4d7 ChangeLog 11136
-RMD160 828c0dde85ac09788529c5337e8bcd05bf2b0bb2 ChangeLog 11136
-SHA256 fdf24d548e2ebaa15f24cda9b1e8808a2528d7d9d2d74a93604c608c4af538a6 ChangeLog 11136
+MISC ChangeLog 11282 RMD160 666965b2d95dbc0969e424ec20e47d7ad54f23e6 SHA1 24a829d79198f7015a1979695529e84d2dc89c02 SHA256 2615b2884f1b6a4989d33473c3663e4b00d66098b9de0f37b441cd6067a1b68b
+MD5 37b17e7ae014bd71af19cdf118439c92 ChangeLog 11282
+RMD160 666965b2d95dbc0969e424ec20e47d7ad54f23e6 ChangeLog 11282
+SHA256 2615b2884f1b6a4989d33473c3663e4b00d66098b9de0f37b441cd6067a1b68b ChangeLog 11282
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
-MD5 aa552d5aa1724d7d6a88179cdd7b2c88 files/digest-epiphany-extensions-2.14.1-r1 283
-RMD160 9a6b43bb2a696fe0d3b2b7827a7bbf85819c8301 files/digest-epiphany-extensions-2.14.1-r1 283
-SHA256 44075cc8f545bf9d2dd3478ea74a75fc0ac49aec49136894c60daa7269845a16 files/digest-epiphany-extensions-2.14.1-r1 283
 MD5 c17c84f15737e4e2c66a22a5e4e8f226 files/digest-epiphany-extensions-2.16.1-r1 283
 RMD160 09de95414c32c43e7f7dd040f180f8a0d37b057c files/digest-epiphany-extensions-2.16.1-r1 283
 SHA256 9365a43525ae6ff2b14008d2c007a2fc3d12fe10a8205541c46ee3b5c012db2b files/digest-epiphany-extensions-2.16.1-r1 283
-MD5 f166a232212bc42b323dcd6a60d71e3e files/digest-epiphany-extensions-2.18.1 283
-RMD160 5271827636c947bb684fe31f397123336691b712 files/digest-epiphany-extensions-2.18.1 283
-SHA256 8f931518cbb580463b60c0244bcbca8f6ca886f4008f9c8c4d7c1b7db219987d files/digest-epiphany-extensions-2.18.1 283
 MD5 47385be205697c047efbce8866075ff0 files/digest-epiphany-extensions-2.18.2 283
 RMD160 2cd492ace8203820b20fffb3757c46f6256f7e11 files/digest-epiphany-extensions-2.18.2 283
 SHA256 73dc030386d5011fba58e0beeb56d664c51e3c44f1cf8a89d623ff15a246cb08 files/digest-epiphany-extensions-2.18.2 283
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
+Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGvc6sQlM6RnzZP+IRAgBBAKCu6bdqD6FjoFjMTqP/vG47DE+GgwCcCChi
-VvE57mSmOwrjjxw4Vq3UNro=
-=+Vth
+iD8DBQFGvea0keYb6olFHJcRAuU4AKCSK9zQcliEk16RnTFXogMaC4oG8QCfVri3
+838a+wdxlP5dNz7voeEFfNM=
+=co20
 -----END PGP SIGNATURE-----
