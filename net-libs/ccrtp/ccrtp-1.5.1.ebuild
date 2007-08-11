@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ccrtp-1.5.1.ebuild,v 1.1 2007/07/17 13:05:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ccrtp-1.5.1.ebuild,v 1.2 2007/08/11 02:25:06 beandog Exp $
+
+inherit multilib
 
 DESCRIPTION="GNU ccRTP is an implementation of RTP, the real-time transport protocol from the IETF"
 HOMEPAGE="http://www.gnu.org/software/ccrtp/"
@@ -24,7 +26,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [[ -e "${ROOT}"/usr/lib/libccrtp1-1.4.so.0 ]] ; then
+	if [[ -e "${ROOT}"/usr/$(get_libdir)/libccrtp1-1.4.so.0 ]] ; then
 		elog
 		elog "Please run: revdep-rebuild --library libccrtp1-1.4.so.0"
 		elog
