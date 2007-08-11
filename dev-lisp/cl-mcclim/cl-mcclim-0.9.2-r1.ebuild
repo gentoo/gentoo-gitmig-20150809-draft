@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.2-r1.ebuild,v 1.2 2007/07/14 13:14:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.2-r1.ebuild,v 1.3 2007/08/11 17:08:26 beandog Exp $
 
 inherit common-lisp elisp-common eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://clim.mikemac.com/
 SRC_URI="http://common-lisp.net/project/mcclim/downloads/${P#cl-}.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="emacs doc"
 
 DEPEND="dev-lisp/cl-spatial-trees

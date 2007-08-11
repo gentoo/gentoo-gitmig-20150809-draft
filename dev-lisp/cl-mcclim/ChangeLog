@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-mcclim
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/ChangeLog,v 1.16 2007/07/14 13:14:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/ChangeLog,v 1.17 2007/08/11 17:08:26 beandog Exp $
+
+  11 Aug 2007; Steve Dibb <beandog@gentoo.org> cl-mcclim-0.9.2-r1.ebuild:
+  amd64 stable, bug 185075
 
   14 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   cl-mcclim-0.9.2-r1.ebuild:
