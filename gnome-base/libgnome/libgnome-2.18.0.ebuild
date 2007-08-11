@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.18.0.ebuild,v 1.7 2007/08/10 13:00:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.18.0.ebuild,v 1.8 2007/08/11 14:52:56 ticho Exp $
 
 inherit autotools gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 mips ppc ~ppc64 ~sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 mips ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc esd"
 
 RDEPEND=">=gnome-base/gconf-2
