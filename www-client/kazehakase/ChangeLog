@@ -1,6 +1,10 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.46 2007/08/11 17:21:41 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.47 2007/08/11 18:04:42 matsuu Exp $
+
+  11 Aug 2007; MATSUU Takuto <matsuu@gentoo.org> -kazehakase-0.3.9.ebuild,
+  -kazehakase-0.4.6.ebuild:
+  Removed old versions.
 
   11 Aug 2007; Steve Dibb <beandog@gentoo.org> kazehakase-0.4.7.ebuild:
   amd64 stable, bug 187558
