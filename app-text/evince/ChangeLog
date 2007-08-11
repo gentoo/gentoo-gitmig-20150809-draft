@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.113 2007/08/10 19:04:51 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.114 2007/08/11 14:55:54 ticho Exp $
+
+  11 Aug 2007; Andrej Kacian <ticho@gentoo.org> evince-0.8.3.ebuild:
+  Stable on x86, bug #185823.
 
   10 Aug 2007; Daniel Gryniewicz <dang@gentoo.org> evince-0.8.3.ebuild:
   Restrict tests; they need dogtail (whatever that is).  Bug #188177
