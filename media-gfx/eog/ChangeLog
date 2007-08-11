@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.175 2007/08/11 14:44:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.176 2007/08/11 19:28:28 leio Exp $
+
+  11 Aug 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/eog-2.11.90-pkgconfig_macro.patch, -eog-2.14.2.ebuild,
+  -eog-2.14.3.ebuild, -eog-2.18.1.ebuild:
+  Removing Gnome 2.14
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org> eog-2.18.2.ebuild:
   Stable on x86, bug #185823.
