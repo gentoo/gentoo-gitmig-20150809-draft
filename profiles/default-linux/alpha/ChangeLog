@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.69 2007/08/11 14:58:52 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.70 2007/08/11 19:47:00 yoswink Exp $
+
+  11 Aug 2007; Jose Luis Rivero <yoswink@gentoo.org> package.use.mask:
+  Removed mplayer mask on mp2 amrnb amrwb since all of them are keyworded
+  and working
 
   11 Aug 2007; Jose Luis Rivero <yoswink@gentoo.org> use.mask:
   Unmask jack. it's keyworded and works in alpha
