@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.7.6.2237-r1.ebuild,v 1.3 2007/07/30 07:48:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.7.6.2237-r1.ebuild,v 1.4 2007/08/11 04:26:22 beandog Exp $
 
 inherit mono fdo-mime eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://dist.codehaus.org/${PN}/distributions/${P}-src.tar.bz2"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc examples"
 
 DEPEND=">=dev-lang/mono-1.1.4

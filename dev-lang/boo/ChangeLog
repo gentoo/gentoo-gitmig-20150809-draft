@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/boo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.15 2007/07/30 07:48:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.16 2007/08/11 04:26:22 beandog Exp $
+
+  10 Aug 2007; Steve Dibb <beandog@gentoo.org> boo-0.7.6.2237-r1.ebuild:
+  amd64 stable
 
   30 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   boo-0.7.6.2237-r1.ebuild:
