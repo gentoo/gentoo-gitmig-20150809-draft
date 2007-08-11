@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kasteroids
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kasteroids/ChangeLog,v 1.73 2007/08/10 15:25:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kasteroids/ChangeLog,v 1.74 2007/08/11 16:14:31 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kasteroids-3.5.7.ebuild:
+  x86 stable wrt #185823
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org> kasteroids-3.5.7.ebuild:
   Stable on amd64 wrt bug #176297

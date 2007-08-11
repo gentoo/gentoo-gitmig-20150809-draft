@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.77 2007/08/10 15:59:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.78 2007/08/11 16:48:00 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> khelpcenter-3.5.7.ebuild:
+  x86 stable wrt #185823
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org>
   khelpcenter-3.5.7.ebuild:

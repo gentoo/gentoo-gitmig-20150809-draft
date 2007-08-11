@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.284 2007/08/10 13:47:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.285 2007/08/11 14:53:11 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kdepim-3.5.7-r3.ebuild:
+  x86 stable wrt #185823
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org> kdepim-3.5.7-r3.ebuild:
   Stable on amd64 wrt bug #176297

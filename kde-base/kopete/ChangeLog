@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.122 2007/08/11 12:10:15 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.123 2007/08/11 15:41:13 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kopete-3.5.7.ebuild:
+  x86 stable wrt #185823
 
 *kopete-3.5.7-r1 (11 Aug 2007)
 

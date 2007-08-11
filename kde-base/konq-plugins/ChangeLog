@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konq-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.74 2007/08/10 16:25:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.75 2007/08/11 16:50:25 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> konq-plugins-3.5.7.ebuild:
+  x86 stable wrt #185823
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org>
   konq-plugins-3.5.7.ebuild:

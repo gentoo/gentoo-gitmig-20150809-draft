@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdenetwork
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/ChangeLog,v 1.60 2007/08/10 14:21:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/ChangeLog,v 1.61 2007/08/11 16:55:19 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> libkdenetwork-3.5.7.ebuild:
+  x86 stable wrt #185823
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org>
   libkdenetwork-3.5.7.ebuild:

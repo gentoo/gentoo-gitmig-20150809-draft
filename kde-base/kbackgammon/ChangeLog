@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbackgammon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbackgammon/ChangeLog,v 1.69 2007/08/10 15:23:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbackgammon/ChangeLog,v 1.70 2007/08/11 16:13:04 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kbackgammon-3.5.7.ebuild:
+  x86 stable wrt #185823
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org>
   kbackgammon-3.5.7.ebuild:

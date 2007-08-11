@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.210 2007/08/10 13:37:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.211 2007/08/11 14:46:29 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kdeutils-3.5.7.ebuild:
+  x86 stable wrt #185823
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org> kdeutils-3.5.7.ebuild:
   Stable on amd64 wrt bug #176297

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.74 2007/08/10 15:40:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.75 2007/08/11 16:25:36 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kdeedu-meta-3.5.7.ebuild:
+  x86 stable wrt #185823
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org>
   kdeedu-meta-3.5.7.ebuild:

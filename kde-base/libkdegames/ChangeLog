@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdegames
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.70 2007/08/10 15:08:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.71 2007/08/11 17:00:38 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org> libkdegames-3.5.7.ebuild:
+  x86 stable wrt #185823
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org>
   libkdegames-3.5.7.ebuild:

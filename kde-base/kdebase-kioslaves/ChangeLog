@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.99 2007/08/10 16:05:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.100 2007/08/11 16:47:02 armin76 Exp $
+
+  11 Aug 2007; Raúl Porcel <armin76@gentoo.org>
+  kdebase-kioslaves-3.5.7-r1.ebuild:
+  x86 stable wrt #185823
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org>
   kdebase-kioslaves-3.5.7-r1.ebuild:
