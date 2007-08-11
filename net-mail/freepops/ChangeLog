@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/freepops
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.35 2007/07/26 07:45:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.36 2007/08/11 02:27:09 beandog Exp $
+
+  10 Aug 2007; Steve Dibb <beandog@gentoo.org> freepops-0.2.5.ebuild:
+  amd64 stable, bug 185651
 
   26 Jul 2007; Daniel Black <dragonheart@gentoo.org>
   -files/freepops-0.0.31-srcmake.patch,
