@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.142 2007/08/11 14:54:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.143 2007/08/11 16:57:28 leio Exp $
+
+  11 Aug 2007; Mart Raudsepp <leio@gentoo.org> -gnome-media-2.14.2.ebuild:
+  Removing Gnome 2.14
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org> gnome-media-2.18.0.ebuild:
   Stable on x86, bug #185823.
