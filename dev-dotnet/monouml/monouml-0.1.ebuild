@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monouml/monouml-0.1.ebuild,v 1.4 2007/07/27 07:13:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monouml/monouml-0.1.ebuild,v 1.5 2007/08/11 14:48:14 beandog Exp $
 
 inherit mono eutils
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-lang/mono-1.1.4
 		>=dev-dotnet/glade-sharp-1.9.2
 		app-arch/unzip"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 
 src_unpack() {
