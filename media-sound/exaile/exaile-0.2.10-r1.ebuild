@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10-r1.ebuild,v 1.7 2007/08/11 12:34:57 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.10-r1.ebuild,v 1.8 2007/08/11 12:36:11 drac Exp $
 
 inherit eutils fdo-mime multilib python
 
@@ -54,7 +54,7 @@ pkg_setup() {
 		eerror "libgpod has to be built with python support"
 		die "libgpod python use-flag not set"
 	fi
-	
+
 	if use gnome; then
 		if ! built_with_use dev-python/gnome-python-extras xulrunner; then
 			if ! built_with_use dev-python/gnome-python-extras firefox; then
