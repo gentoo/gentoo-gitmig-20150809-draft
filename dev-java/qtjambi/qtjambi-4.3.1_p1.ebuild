@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.1_p1.ebuild,v 1.1 2007/08/09 20:17:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qtjambi/qtjambi-4.3.1_p1.ebuild,v 1.2 2007/08/11 20:24:59 caleb Exp $
 
 inherit eutils java-pkg-2
 
@@ -30,7 +30,7 @@ RDEPEND="~x11-libs/qt-${QTVERSION}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/generator.patch
+	epatch ${FILESDIR}/generator-4.3.1.patch
 	epatch ${FILESDIR}/qtjambi_base.pri.diff
 	epatch ${FILESDIR}/jambi.pri.diff
 

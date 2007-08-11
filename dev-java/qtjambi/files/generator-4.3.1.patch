@@ -1,0 +1,10 @@
+--- generator/main.h.orig	2007-08-11 16:21:02.000000000 -0400
++++ generator/main.h	2007-08-11 16:21:25.000000000 -0400
+@@ -74,7 +74,6 @@
+         if (qtdir.isEmpty()) {
+             qWarning("QTDIR environment variable not set. This may cause problems with finding the necessary include files.");
+         } else {
+-            qtdir += "/include";
+             includes << qtdir;
+             includes << (qtdir + "/QtXml");
+             includes << (qtdir + "/QtNetWork");
