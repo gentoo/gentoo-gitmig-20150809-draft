@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.14 2007/05/22 17:36:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.15 2007/08/11 13:24:28 nyhm Exp $
+
+*cegui-0.5.0b-r3 (11 Aug 2007)
+
+  11 Aug 2007; Tristan Heaven <nyhm@gentoo.org> -cegui-0.5.0b-r2.ebuild,
+  +cegui-0.5.0b-r3.ebuild:
+  Remove freeimage USE flag, bug #178110
 
 *cegui-0.5.0b-r2 (22 May 2007)
 

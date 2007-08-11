@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.1.ebuild,v 1.2 2007/06/12 00:09:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.3-r1.ebuild,v 1.1 2007/08/11 13:23:41 nyhm Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/ogre/ogre-linux_osx-v${PV//./-}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc cegui cg devil double-precision examples freeimage gtk openexr threads"
+IUSE="doc cegui cg devil double-precision examples gtk openexr threads"
 RESTRICT="test" #139905
 
 RDEPEND="dev-libs/zziplib
@@ -25,7 +25,6 @@ RDEPEND="dev-libs/zziplib
 	cegui? ( >=dev-games/cegui-0.5 )
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	devil? ( media-libs/devil )
-	freeimage? ( media-libs/freeimage )
 	gtk? (
 		>=dev-cpp/gtkmm-2.4
 		>=dev-cpp/libglademm-2.4
@@ -65,6 +64,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--disable-dependency-tracking \
+		--disable-freeimage \
 		--disable-ogre-demos \
 		--enable-static \
 		--with-platform=GLX \
@@ -73,7 +73,6 @@ src_compile() {
 		$(use_enable cg) \
 		$(use_enable devil) \
 		$(use_enable double-precision double) \
-		$(use_enable freeimage) \
 		$(use_enable openexr) \
 		$(use_enable threads threading) \
 		|| die

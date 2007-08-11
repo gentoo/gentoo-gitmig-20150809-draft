@@ -1,6 +1,14 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.40 2007/07/19 18:25:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.41 2007/08/11 13:23:41 nyhm Exp $
+
+*ogre-1.4.3-r1 (11 Aug 2007)
+
+  11 Aug 2007; Tristan Heaven <nyhm@gentoo.org>
+  -files/ogre-1.4.1-cegui.patch, -files/ogre-1.4.2-cegui.patch,
+  -ogre-1.4.1.ebuild, -ogre-1.4.2.ebuild, -ogre-1.4.3.ebuild,
+  +ogre-1.4.3-r1.ebuild:
+  Remove freeimage USE flag, bug #178110
 
 *ogre-1.4.3 (19 Jul 2007)
 
