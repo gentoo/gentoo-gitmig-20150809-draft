@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/mythtv-themes-extra-2.ebuild,v 1.1 2007/05/12 21:44:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/mythtv-themes-extra-0.20.1.ebuild,v 1.1 2007/08/12 15:44:20 beandog Exp $
 
 DESCRIPTION="User-contributed MythTV themes"
 HOMEPAGE="http://www.mythtv.org/wiki/index.php/Themes"
