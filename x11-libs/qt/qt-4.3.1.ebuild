@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.1.ebuild,v 1.3 2007/08/09 13:05:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.1.ebuild,v 1.4 2007/08/12 19:30:52 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -243,10 +243,10 @@ src_install() {
 
 	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.la
 	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.prl
-	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.pc
+	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/pkgconfig/*.pc
 
 	# pkgconfig files refer to WORKDIR/bin as the moc and uic locations.  Fix:
-	sed -i -e "s:${S}/bin:${QTBINDIR}:g" ${D}/${QTLIBDIR}/*.pc
+	sed -i -e "s:${S}/bin:${QTBINDIR}:g" ${D}/${QTLIBDIR}/pkgconfig/*.pc
 
 	# Move .pc files into the pkgconfig directory
 	dodir ${QTPCDIR}
