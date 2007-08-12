@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.102 2007/08/11 13:29:31 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.103 2007/08/12 08:10:35 spock Exp $
+
+  12 Aug 2007; Michał Januszewski <spock@gentoo.org>
+  splashutils-1.5.ebuild:
+  Change ewarn's to elog's.
 
 *splashutils-1.5 (11 Aug 2007)
 

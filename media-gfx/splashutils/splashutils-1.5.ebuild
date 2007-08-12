@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.ebuild,v 1.1 2007/08/11 13:29:31 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.ebuild,v 1.2 2007/08/12 08:10:35 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -171,25 +171,25 @@ src_install() {
 
 pkg_postinst() {
 	if has_version sys-fs/devfsd || ! has_version sys-fs/udev ; then
-		ewarn "This package has been designed with udev in mind. Other solutions, such as"
-		ewarn "devfs or a static /dev tree might work, but are generally discouraged and"
-		ewarn "not supported. If you decide to switch to udev, you might want to have a"
-		ewarn "look at 'The Gentoo udev Guide', which can be found at"
-		ewarn "  http://www.gentoo.org/doc/en/udev-guide.xml"
-		ewarn ""
+		elog "This package has been designed with udev in mind. Other solutions, such as"
+		elog "devfs or a static /dev tree might work, but are generally discouraged and"
+		elog "not supported. If you decide to switch to udev, you might want to have a"
+		elog "look at 'The Gentoo udev Guide', which can be found at"
+		elog "  http://www.gentoo.org/doc/en/udev-guide.xml"
+		elog ""
 	fi
 
 	if has_version '<media-gfx/splashutils-1.0' ; then
-		ewarn "Since you are upgrading from a pre-1.0 version, please make sure that you"
-		ewarn "rebuild your initrds. You can use the splash_geninitramfs script to do that."
-		ewarn ""
+		elog "Since you are upgrading from a pre-1.0 version, please make sure that you"
+		elog "rebuild your initrds. You can use the splash_geninitramfs script to do that."
+		elog ""
 	fi
 
 	if ! test -f /proc/cmdline ||
 		! egrep -q '(console|CONSOLE)=(tty1|/dev/tty1)' /proc/cmdline ; then
-		ewarn "It is required that you add 'console=tty1' to your kernel"
-		ewarn "command line parameters."
-		ewarn ""
+		elog "It is required that you add 'console=tty1' to your kernel"
+		elog "command line parameters."
+		elog ""
 		elog "After these modifications, the relevant part of the kernel command"
 		elog "line might look like:"
 		elog "  splash=silent,fadein,theme:emergence console=tty1"
@@ -204,12 +204,12 @@ pkg_postinst() {
 		elog "  media-gfx/splash-themes-gentoo"
 	fi
 
-	ewarn "Please note that the 'fbsplash' kernel patch has now been renamed to"
-	ewarn "'fbcondecor'.  Accordingly, the old 'splash' initscript is now called"
-	ewarn "'fbcondecor'.  Make sure you update your system.  See:"
-	ewarn "    http://dev.gentoo.org/~spock/projects/fbcondecor/#history"
-	ewarn "for further info about the name changes."
-	ewarn ""
-	ewarn "Also note that splash_util has now been split into splash_util, fbsplashd"
-	ewarn "and fbcondecor_ctl."
+	elog "Please note that the 'fbsplash' kernel patch has now been renamed to"
+	elog "'fbcondecor'.  Accordingly, the old 'splash' initscript is now called"
+	elog "'fbcondecor'.  Make sure you update your system.  See:"
+	elog "    http://dev.gentoo.org/~spock/projects/fbcondecor/#history"
+	elog "for further info about the name changes."
+	elog ""
+	elog "Also note that splash_util has now been split into splash_util, fbsplashd"
+	elog "and fbcondecor_ctl."
 }
