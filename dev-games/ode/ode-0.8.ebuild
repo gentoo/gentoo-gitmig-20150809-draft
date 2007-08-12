@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.8.ebuild,v 1.5 2007/07/05 03:59:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.8.ebuild,v 1.6 2007/08/12 20:41:27 malc Exp $
 
 inherit eutils autotools
 
@@ -35,6 +35,7 @@ src_unpack() {
 	sed -i -e "s/..\/..\/drawstuff\/textures/\/usr\/share\/${PF}\/examples/" ode/test/*.c*
 	sed -i -e "s/fn.path_to_textures = 0/fn.path_to_textures = \"\/usr\/share\/${PF}\/examples\"/" drawstuff/dstest/dstest.cpp
 	sed -i -e "s/inline_[\t]*void[\t*]ResetCountDown/void ResetCountDown/" OPCODE/OPC_TreeCollider.h
+	sed -i -e "s|\$(prefix)/lib|\$(prefix)/$(get_libdir)|g" ode/src/Makefile.in
 }
 
 src_compile() {

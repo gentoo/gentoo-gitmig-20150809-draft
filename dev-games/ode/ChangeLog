@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.41 2007/07/05 03:59:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.42 2007/08/12 20:41:27 malc Exp $
+
+  12 Aug 2007; <malc@gentoo.org> ode-0.8.ebuild:
+  Add multilib-strict fix - thank to Tiago Cunha, bug #187037
 
   04 Jul 2007; Tom Gall <tgall@gentoo.org> ode-0.8.ebuild:
   stable on ppc64
