@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/nero
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.32 2007/08/11 16:34:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.33 2007/08/12 18:33:43 drac Exp $
+
+  12 Aug 2007; Samuli Suominen <drac@gentoo.org> nero-3.0.1.3.ebuild:
+  Re-add AMD64 hack to make burning work again, upstream failed to keep their
+  promise.
 
 *nero-3.0.1.3 (11 Aug 2007)
 

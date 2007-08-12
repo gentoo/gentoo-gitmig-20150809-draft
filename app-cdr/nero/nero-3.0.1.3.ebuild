@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.1.3.ebuild,v 1.1 2007/08/11 16:34:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.0.1.3.ebuild,v 1.2 2007/08/12 18:33:43 drac Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -55,6 +55,11 @@ src_install() {
 	use doc && dodoc usr/share/doc/${PN}/*.pdf
 
 	make_wrapper ${PN} ./${PN} /opt/${PN} /opt/${PN}/$(get_libdir) || die "make_wrapper failed."
+
+	# This is a ugly hack to fix burning in x86_64 which can be removed in future releases.
+	# Update: It should have been fixed allready, upstream failed to keep their word.
+	# http://club.cdfreaks.com/showthread.php?t=218041
+	use amd64 && cp usr/share/${PN}/Nero*.txt "${D}"/opt/${PN}/$(get_libdir)/${PN}
 }
 
 pkg_postinst() {
