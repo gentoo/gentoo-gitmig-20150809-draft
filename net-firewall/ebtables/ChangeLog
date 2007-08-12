@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/ebtables
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.13 2007/07/16 18:21:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.14 2007/08/12 10:11:21 pva Exp $
+
+*ebtables-2.0.8.1 (12 Aug 2007)
+
+  12 Aug 2007; <pva@gentoo.org> +files/ebtables-2.0.8.1-fix-textrel.patch,
+  +files/ebtables-2.0.8.1-scripts-build.patch, metadata.xml,
+  +ebtables-2.0.8.1.ebuild:
+  Version bump. Fixed bug #159371 and bug #167769. Thank Jochen Schlick,
+  Olivier Huber, Richard Benjamin Voigt and others mentioned in that bugs.
 
   16 Jul 2007; <pva@gentoo.org> metadata.xml:
   Grabed from solar.

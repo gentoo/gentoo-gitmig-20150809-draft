@@ -1,0 +1,11 @@
+--- ./Makefile.orig	2007-08-12 13:02:55.000000000 +0400
++++ ./Makefile	2007-08-12 13:03:04.000000000 +0400
+@@ -87,7 +87,7 @@
+ 	$(CC) $(CFLAGS) $(CFLAGS_SH_LIB) $(PROGSPECS) -c -o $@ $< -Iinclude/
+ 
+ ebtables.o: ebtables.c include/ebtables_u.h
+-	$(CC) $(CFLAGS) $(PROGSPECS) -c -o $@ $< -I$(KERNEL_INCLUDES)
++	$(CC) $(CFLAGS) $(CFLAGS_SH_LIB) $(PROGSPECS) -c -o $@ $< -I$(KERNEL_INCLUDES)
+ 
+ ebtables-standalone.o: ebtables-standalone.c include/ebtables_u.h
+ 	$(CC) $(CFLAGS) $(PROGSPECS) -c $< -o $@ -I$(KERNEL_INCLUDES)
