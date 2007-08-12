@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86-r9.ebuild,v 1.1 2007/08/10 08:52:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86-r9.ebuild,v 1.2 2007/08/12 16:34:40 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -40,7 +40,7 @@ src_unpack() {
 	cd "${WORKDIR}"
 	cp "${FILESDIR}"/inittab . || die "cp inittab"
 	local insert=""
-	use ppc && insert="#psc0:12345:respawn:/sbin/agetty 115200 ttyPSC0 linux\n"
+	use ppc && insert='#psc0:12345:respawn:/sbin/agetty 115200 ttyPSC0 linux'
 	use arm && insert='#f0:12345:respawn:/sbin/agetty 9600 ttyFB0 vt100'
 	use hppa && insert='b0:12345:respawn:/sbin/agetty 9600 ttyB0 vt100'
 	use s390 && insert='s0:12345:respawn:/sbin/agetty 38400 console'
