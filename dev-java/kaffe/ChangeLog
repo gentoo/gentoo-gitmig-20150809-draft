@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.71 2007/07/22 09:18:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.72 2007/08/12 09:18:41 betelgeuse Exp $
+
+*kaffe-1.1.7-r6 (12 Aug 2007)
+
+  12 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> +kaffe-1.1.7-r6.ebuild:
+  Use system installed copies of fastjar and zlib. Fixes bug #188542.
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> kaffe-1.1.7-r4.ebuild,
   kaffe-1.1.7-r5.ebuild:
