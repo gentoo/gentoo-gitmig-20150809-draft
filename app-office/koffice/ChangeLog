@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.233 2007/08/03 05:44:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.234 2007/08/12 14:40:42 beandog Exp $
+
+  12 Aug 2007; Steve Dibb <beandog@gentoo.org> koffice-1.6.3-r1.ebuild:
+  amd64 stable, security bug 187139
 
   03 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   koffice-1.6.3-r1.ebuild:
