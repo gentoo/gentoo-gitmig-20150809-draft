@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocurl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocurl/ChangeLog,v 1.4 2007/08/08 10:36:32 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocurl/ChangeLog,v 1.5 2007/08/12 22:14:44 opfer Exp $
+
+  12 Aug 2007; Christian Faulhammer <opfer@gentoo.org> ocurl-0.2.1.ebuild:
+  stable x86, bug 187731
 
   08 Aug 2007; Joseph Jezak <josejx@gentoo.org> ocurl-0.2.1.ebuild:
   Marked ppc stable for bug #187731.
