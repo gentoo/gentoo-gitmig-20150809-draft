@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-Local
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.33 2007/07/04 19:41:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.34 2007/08/12 20:35:14 tgall Exp $
+
+  12 Aug 2007; Tom Gall <tgall@gentoo.org> Time-Local-1.17.ebuild:
+  stable on ppc64
 
   04 Jul 2007; Raúl Porcel <armin76@gentoo.org> Time-Local-1.17.ebuild:
   alpha/ia64/x86 stable

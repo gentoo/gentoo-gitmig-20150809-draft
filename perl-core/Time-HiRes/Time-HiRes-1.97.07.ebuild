@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/Time-HiRes-1.97.07.ebuild,v 1.4 2007/08/09 15:43:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/Time-HiRes-1.97.07.ebuild,v 1.5 2007/08/12 20:32:29 tgall Exp $
 
 inherit perl-module versionator
 
@@ -13,7 +13,8 @@ SRC_URI="mirror://cpan/authors/id/J/JH/JHI/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh 
+sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
