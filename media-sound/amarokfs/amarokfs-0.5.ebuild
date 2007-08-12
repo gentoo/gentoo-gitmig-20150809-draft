@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarokfs/amarokfs-0.5.ebuild,v 1.4 2007/05/22 21:36:58 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarokfs/amarokfs-0.5.ebuild,v 1.5 2007/08/12 23:17:00 philantrop Exp $
 
 inherit qt3 kde-functions toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.kde-apps.org/CONTENT/content-files/52641-${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 
 IUSE=""
 
@@ -33,7 +33,7 @@ src_unpack() {
 	sed -i -e 's:/usr/share/icons/:\0hicolor/128x128/apps/:' "${S}/${MY_PN}-xml.pro" || die "fix icon installation failed"
 	sed -i -e '/qDebug/s:" + \(func\|query\):%s", \1.data():' "${S}"/*.cpp || die "fix for qDebug() calls failed."
 
-	epatch ${FILESDIR}/${P}-FixMountPointIdQuery.patch
+	epatch "${FILESDIR}/${P}-FixMountPointIdQuery.patch"
 }
 
 src_compile() {
