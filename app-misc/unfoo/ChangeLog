@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/unfoo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.21 2007/05/24 19:14:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.22 2007/08/12 18:23:24 pva Exp $
+
+*unfoo-1.0.6 (12 Aug 2007)
+
+  12 Aug 2007; <pva@gentoo.org> -unfoo-1.0.4.ebuild, +unfoo-1.0.6.ebuild:
+  Version bump. Thank Marcus Hermansson <mashnu AT gmail.com> for report in
+  bug #144961. Cleaned old.
 
   24 May 2007; Steve Dibb <beandog@gentoo.org> unfoo-1.0.5.ebuild:
   Add ~x86-fbsd
