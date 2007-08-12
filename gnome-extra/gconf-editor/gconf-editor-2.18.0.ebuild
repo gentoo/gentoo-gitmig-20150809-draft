@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/gconf-editor-2.18.0.ebuild,v 1.9 2007/08/12 13:33:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/gconf-editor-2.18.0.ebuild,v 1.10 2007/08/12 16:54:14 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -28,4 +28,3 @@ DOCS="AUTHORS ChangeLog NEWS README"
 pkg_setup() {
 	    G2CONF="${G2CONF} --disable-scrollkeeper"
 }
-
