@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2968 2007/08/11 18:07:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2969 2007/08/12 07:26:06 pva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1247,7 +1247,7 @@ net-analyzer/bmon:dbi - Enables libdbi support
 net-analyzer/bmon:rrdtool - Enables librrd support
 net-analyzer/bwm-ng:csv - enable csv output
 net-analyzer/bwm-ng:html - enable html output
-net-analyzer/cacti:bundled-adodb - use adodb bundled with cacti itself instead of external one. 
+net-analyzer/cacti:bundled-adodb - use adodb bundled with web-application instead of system wide
 net-analyzer/echoping:http - enable support for http protocol.
 net-analyzer/echoping:icp - enable support for ICP (used to monitor proxies).
 net-analyzer/echoping:priority - enable socket priority support.
@@ -1979,6 +1979,7 @@ www-apps/knowledgetree:opendoc - Allow to search in opendoc documents
 www-apps/knowledgetree:ps - Allow to search in postscript documents
 www-apps/lxr:cvs - Adds support for indexing CVS
 www-apps/lxr:freetext - Adds support for freetext search using swish-e
+www-apps/mantisbt:bundled-adodb - use adodb bundled with web-application instead of system wide
 www-apps/mediawiki:math - Adds math rendering support
 www-apps/mediawiki:restrict - Initial setup will only allow sysop user to create new accounts, read and edit any pages
 www-apps/moinmoin:rss - Add RSS support

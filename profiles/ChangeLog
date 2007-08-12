@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.565 2007/08/11 20:29:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.566 2007/08/12 07:26:06 pva Exp $
+
+  12 Aug 2007; Peter Volkov <pva@gentoo.org> use.local.desc:
+  Add www-apps/mantisbt:bundled-adodb
+  Update net-analyzer/cacti:bundled-adodb
 
   11 Aug 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   default-linux/x86/no-nptl/use.mask:
