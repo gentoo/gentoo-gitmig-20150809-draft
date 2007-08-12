@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-3.0.2.ebuild,v 1.1 2007/08/12 10:29:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-3.0.2.ebuild,v 1.2 2007/08/12 10:31:46 drac Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Application for tagging and renaming audio files."
 HOMEPAGE="http://cantus.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.src.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
