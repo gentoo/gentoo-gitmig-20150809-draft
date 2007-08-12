@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.2 2007/08/05 01:40:05 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.3 2007/08/12 21:11:17 malc Exp $
 
 inherit versionator distutils
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-cpp/gtkmm-2.4
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	sed -i -e 's@INST_PIXMAPDIR=\"$INST_PREFIX/lib/$EXECUTABLE\"/INST_PIXMAPDIR=\"/usr/lib/$EXECUTABLE\"@g' build.sh
+	sed -i -e 's@INST_PIXMAPDIR=\"$INST_PREFIX/lib/$EXECUTABLE\"@INST_PIXMAPDIR=\"/usr/lib/$EXECUTABLE\"@g' build.sh
 	# Crazy build system...
 	./build.sh --prefix "${D}/usr" || die "./build failed"
 }
