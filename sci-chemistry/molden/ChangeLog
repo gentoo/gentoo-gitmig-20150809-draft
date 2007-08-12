@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/molden
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.24 2007/08/12 04:09:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.25 2007/08/12 04:59:22 je_fro Exp $
+
+  12 Aug 2007; <jeff@gentoo.org> -molden-4.3.ebuild:
+  Removed old version.
 
   11 Aug 2007; Steve Dibb <beandog@gentoo.org> molden-4.4.ebuild:
   amd64 stable, bug 187124
