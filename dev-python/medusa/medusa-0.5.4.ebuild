@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/medusa-0.5.4.ebuild,v 1.11 2007/07/04 20:29:12 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/medusa-0.5.4.ebuild,v 1.12 2007/08/12 17:14:06 beandog Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.amk.ca/files/python/${P}.tar.gz"
 IUSE=""
 LICENSE="PYTHON"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ppc ppc-macos ~sparc x86"
+KEYWORDS="amd64 ia64 ppc ppc-macos ~sparc x86"
 
 src_install() {
 	DOCS="CHANGES.txt docs/*.txt"
