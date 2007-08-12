@@ -1,0 +1,18 @@
+Index: trunk/avahi-utils/avahi-browse.c
+===================================================================
+--- trunk/avahi-utils/avahi-browse.c	(revision 1518)
++++ trunk/avahi-utils/avahi-browse.c	(revision 1519)
+@@ -586,9 +586,12 @@
+                 "%s [options] -a\n"
+                 "%s [options] -D\n"
+ #if defined(HAVE_GDBM) || defined(HAVE_DBM)
+-                "%s [options] -b\n",
++                "%s [options] -b\n"
+ #endif
+                 "\n",
++#if defined(HAVE_GDBM) || defined(HAVE_DBM)
++                argv0,
++#endif
+                 argv0, argv0, argv0);
+ 
+             fprintf(f, 

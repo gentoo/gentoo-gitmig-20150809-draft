@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.121 2007/08/12 17:16:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.122 2007/08/12 19:10:34 swegener Exp $
+
+  12 Aug 2007; Sven Wegener <swegener@gentoo.org>
+  +files/avahi-0.6.21-browse-help.patch, avahi-0.6.21.ebuild:
+  Small patch that fixes avahi-browse --help output.
 
 *avahi-0.6.21 (12 Aug 2007)
 
