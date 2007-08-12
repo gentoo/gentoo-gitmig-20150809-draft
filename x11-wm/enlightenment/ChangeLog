@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.66 2007/06/24 18:23:46 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.67 2007/08/12 01:15:45 vapier Exp $
+
+*enlightenment-0.16.8.9 (12 Aug 2007)
+
+  12 Aug 2007; Mike Frysinger <vapier@gentoo.org>
+  +enlightenment-0.16.8.9.ebuild:
+  Version bump.
 
   24 Jun 2007; Piotr Jaroszyński <peper@gentoo.org>
   enlightenment-0.16.9999.ebuild:
