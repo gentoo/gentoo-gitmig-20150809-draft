@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.3-r1.ebuild,v 1.3 2007/08/11 14:18:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.3-r1.ebuild,v 1.4 2007/08/12 13:52:03 mr_bones_ Exp $
 
 DESCRIPTION="Text console based program for playing audio files."
 HOMEPAGE="http://mp3blaster.sourceforge.net"
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# File collision with media-sound/splay.	
+	# File collision with media-sound/splay.
 	sed -i -e "s:splay.1:splay_mp3blaster.1:" Makefile.in
 	mv splay.1 splay_mp3blaster.1
 }
