@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.5.2_rc3.ebuild,v 1.1 2007/07/28 09:09:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.5.2_rc3.ebuild,v 1.2 2007/08/12 07:53:43 drac Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND="media-sound/jack-audio-connection-kit
 	>=media-libs/alsa-lib-0.9
 	media-libs/libsamplerate
 	media-libs/libsndfile
-	media-libs/phat
+	>=media-libs/phat-0.4
 	dev-libs/libxml2
 	>=x11-libs/gtk+-2
 	gnome-base/libgnomecanvas

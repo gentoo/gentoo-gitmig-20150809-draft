@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/specimen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.14 2007/07/28 09:09:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.15 2007/08/12 07:53:43 drac Exp $
+
+  12 Aug 2007; Samuli Suominen <drac@gentoo.org> specimen-0.5.2_rc3.ebuild:
+  Fix phat depend for bug 166457.
 
 *specimen-0.5.2_rc3 (28 Jul 2007)
 
