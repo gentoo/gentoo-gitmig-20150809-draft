@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.17 2007/04/08 12:37:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.18 2007/08/12 19:14:55 drac Exp $
+
+*ffmpeg2theora-0.19 (12 Aug 2007)
+
+  12 Aug 2007; Samuli Suominen <drac@gentoo.org> +ffmpeg2theora-0.19.ebuild:
+  Version bump. This version is using swscale api and supports largefile on
+  32bit systems.
 
   08 Apr 2007; Markus Rothe <corsair@gentoo.org> ffmpeg2theora-0.18.ebuild:
   Added ~ppc64; bug #173258
