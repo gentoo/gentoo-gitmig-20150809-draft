@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-4.0.6.ebuild,v 1.1 2006/06/20 19:52:31 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-5.2.0.ebuild,v 1.1 2007/08/12 17:48:37 pva Exp $
 
 inherit flag-o-matic
 
@@ -25,7 +25,9 @@ src_install () {
 	dobin multitail
 	insinto /etc
 	doins multitail.conf
-	dodoc Changes INSTALL license.txt readme.txt
-	dohtml manual.html
+	insinto /etc/multitail/
+	doins colors-example.pl colors-example.sh convert-geoip.pl convert-simple.pl
+	dodoc Changes readme.txt thanks.txt
+	dohtml manual.html manual-nl.html
 	doman multitail.1
 }
