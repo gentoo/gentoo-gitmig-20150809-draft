@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/jircii
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/ChangeLog,v 1.30 2007/06/12 15:25:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/ChangeLog,v 1.31 2007/08/12 14:25:41 beandog Exp $
+
+  12 Aug 2007; Steve Dibb <beandog@gentoo.org> jircii-41.ebuild:
+  Add ~amd64, bug 187654
 
   12 Jun 2007; Raúl Porcel <armin76@gentoo.org> -jircii-40.ebuild,
   jircii-41.ebuild:
