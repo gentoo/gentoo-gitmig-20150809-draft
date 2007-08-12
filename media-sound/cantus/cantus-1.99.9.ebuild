@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-1.99.9.ebuild,v 1.13 2006/10/28 01:39:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-1.99.9.ebuild,v 1.14 2007/08/12 10:29:35 drac Exp $
 
 IUSE="vorbis"
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://www.debain.org/?session=&site=project&project=3"
 SRC_URI="http://sam.homeunix.com/software.manicsadness.com-step4/releases/cantus_2/${PN}_2-${PV}-1.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="2"
-KEYWORDS="amd64 ~ppc sparc x86"
+SLOT="0"
+KEYWORDS="amd64 x86"
 
 RDEPEND="vorbis? ( media-libs/libvorbis media-libs/libogg )
 	>=x11-libs/gtk+-2.2

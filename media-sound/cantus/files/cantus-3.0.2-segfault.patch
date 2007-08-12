@@ -1,0 +1,35 @@
+diff -ur cantus-3.0.2-testing.orig/configure.ac cantus-3.0.2-testing/configure.ac
+--- cantus-3.0.2-testing.orig/configure.ac	2007-07-27 23:48:43.000000000 +0300
++++ cantus-3.0.2-testing/configure.ac	2007-08-12 12:46:58.000000000 +0300
+@@ -166,18 +166,6 @@
+ #
+ echo 
+ echo $PACKAGE $VERSION
+-echo
+-echo
+-echo Build with MP3 support........... : yes
+-echo Build with Ogg support........... : no
+-echo
+-echo Plugins which will be compiled... : id3v1,id3v2,id3copier,vorbis,mpegheader,tag2filename
+-echo
+-echo Print debugging messages......... : $enable_debug
+-echo 
+-echo Build for cpu architecture....... : $build_cpu
+-echo Build for operating system....... : $build_os
+-echo 
+ echo 
+ eval eval echo Cantus binaries will be installed in $bindir.
+ eval eval echo Cantus libraries will be installed in $libdir.
+diff -ur cantus-3.0.2-testing.orig/source/cantus/gui_controller.cc cantus-3.0.2-testing/source/cantus/gui_controller.cc
+--- cantus-3.0.2-testing.orig/source/cantus/gui_controller.cc	2007-07-27 01:40:01.000000000 +0300
++++ cantus-3.0.2-testing/source/cantus/gui_controller.cc	2007-08-12 13:01:27.000000000 +0300
+@@ -85,8 +85,7 @@
+  ******************************************************************************/
+ void GUIController::init(void)
+ {
+-  preferences = new PreferencesWindow(PACKAGE_LIB_DIR "cantus-3.glade",
+-                                      "preferences");
++  preferences = new PreferencesWindow( PACKAGE_DATA_DIR "/cantus/glade/cantus.glade", "preferences" );
+   preferences->signal_preference_changed.connect(
+      sigc::mem_fun(*this, &GUIController::on_preferences_preference_changed));
+ }

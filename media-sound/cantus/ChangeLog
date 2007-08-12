@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/cantus
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.22 2007/02/22 00:51:34 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.23 2007/08/12 10:29:35 drac Exp $
+
+*cantus-3.0.2 (12 Aug 2007)
+
+  12 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  +files/cantus-3.0.2-segfault.patch, cantus-1.99.9.ebuild,
+  +cantus-3.0.2.ebuild, cantus-20060206.ebuild:
+  Version bump.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
