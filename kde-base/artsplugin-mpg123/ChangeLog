@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/artsplugin-mpg123
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpg123/ChangeLog,v 1.41 2007/05/24 11:05:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpg123/ChangeLog,v 1.42 2007/08/12 14:35:52 philantrop Exp $
+
+  12 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  artsplugin-mpg123-3.5.6.ebuild:
+  Marked stable on amd64 as per bug 176297.
 
   24 May 2007; Carsten Lohrke <carlo@gentoo.org>
   artsplugin-mpg123-3.5.6.ebuild:
