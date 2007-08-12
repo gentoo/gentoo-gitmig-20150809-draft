@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/megapov
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/megapov/ChangeLog,v 1.6 2007/04/30 22:39:19 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/megapov/ChangeLog,v 1.7 2007/08/12 16:44:40 malc Exp $
+
+  12 Aug 2007; <malc@gentoo.org> megapov-1.2.1.ebuild:
+  Add ~amd64 - bug #183761
 
   30 Apr 2007; Marius Mauch <genone@gentoo.org> megapov-1.0.ebuild,
   megapov-1.2.1.ebuild:
