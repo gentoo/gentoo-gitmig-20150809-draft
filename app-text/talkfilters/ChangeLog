@@ -1,6 +1,14 @@
 # ChangeLog for app-text/talkfilters
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/ChangeLog,v 1.20 2007/03/19 01:38:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/ChangeLog,v 1.21 2007/08/12 17:31:39 pva Exp $
+
+*talkfilters-2.3.7 (12 Aug 2007)
+
+  12 Aug 2007; <pva@gentoo.org> metadata.xml, -talkfilters-2.1.ebuild,
+  -talkfilters-2.3.3-r1.ebuild, +talkfilters-2.3.7.ebuild:
+  Version bump. Thank Matthias Vill <gentoo AT cconstruct.de> for report in
+  bug #131672. Cleaned old versions. AC_PROG_RANLIB is now not filtered out as
+  seems that bug which cased it (may be bug 80147) seems not reproducable now.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
