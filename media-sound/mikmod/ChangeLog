@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mikmod
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.14 2007/02/03 19:43:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.15 2007/08/12 16:06:58 drac Exp $
+
+*mikmod-3.2.2_beta1 (12 Aug 2007)
+
+  12 Aug 2007; Samuli Suominen <drac@gentoo.org> +mikmod-3.2.2_beta1.ebuild:
+  Version bump.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
