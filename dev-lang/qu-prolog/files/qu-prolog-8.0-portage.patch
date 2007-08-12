@@ -94,6 +94,15 @@ diff -ur qp8.0.orig/prolog/compiler/Makefile.in qp8.0/prolog/compiler/Makefile.i
 -	$(COMPILE.qc) -c -o $@ $<
 +	@QPHOME@/src/qa -i $< -o $@
  
+diff -ur qp8.0.orig/prolog/library/Makefile.in qp8.0/prolog/library/Makefile.in
+--- qp8.0.orig/prolog/library/Makefile.in	2007-07-09 10:37:47.000000000 +1200
++++ qp8.0/prolog/library/Makefile.in	2007-08-12 16:38:23.000000000 +1200
+@@ -99,4 +99,4 @@
+ 
+ 
+ %.qo: %.qs
+-	$(COMPILE.qc) -c -o $@ $<
++	@QPHOME@/src/qa -i $< -o $@
 diff -ur qp8.0.orig/prolog/qc1/Makefile.in qp8.0/prolog/qc1/Makefile.in
 --- qp8.0.orig/prolog/qc1/Makefile.in	2007-07-09 10:37:47.000000000 +1200
 +++ qp8.0/prolog/qc1/Makefile.in	2007-07-21 18:46:20.000000000 +1200

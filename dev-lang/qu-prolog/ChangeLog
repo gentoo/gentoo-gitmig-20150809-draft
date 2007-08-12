@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.30 2007/07/21 20:40:35 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.31 2007/08/12 04:45:47 keri Exp $
+
+  12 Aug 2007; keri <keri@gentoo.org> files/qu-prolog-8.0-portage.patch:
+  Call bootstrap prolog assembler when compiling libraries.
 
   21 Jul 2007; keri <keri@gentoo.org> files/qu-prolog-8.0-portage.patch:
   Fix QPHOME export.
