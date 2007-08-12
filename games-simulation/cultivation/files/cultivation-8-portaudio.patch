@@ -1,0 +1,42 @@
+--- game2/gameSource/sound/SoundPlayer.h
++++ game2/gameSource/sound/SoundPlayer.h
+@@ -52,8 +52,8 @@
+ #include "SoundFilter.h"
+ #include "PlayableSound.h"
+ 
+-#include "minorGems/sound/portaudio/pa_common/portaudio.h"
+-#include "minorGems/sound/portaudio/pablio/pablio.h"
++#include <portaudio/portaudio.h>
++#include <portaudio/pablio.h>
+ 
+ 
+ #include "minorGems/util/SimpleVector.h"
+--- game2/Makefile.common
++++ game2/Makefile.common
+@@ -52,7 +52,7 @@
+ 
+ 
+ 
+-COMPILE_FLAGS = -Wall ${DEBUG_FLAG} ${PLATFORM_COMPILE_FLAGS} ${PROFILE_FLAG} ${OPTIMIZE_FLAG} -I${ROOT_PATH} -I${PORT_AUDIO_PATH}/pa_common
++COMPILE_FLAGS = -Wall ${PLATFORM_COMPILE_FLAGS} $(CXXFLAGS) -I${ROOT_PATH}
+ 
+ 
+ COMPILE = ${GXX} ${COMPILE_FLAGS} -c
+--- game2/Makefile.GnuLinux
++++ game2/Makefile.GnuLinux
+@@ -20,12 +20,12 @@
+ 
+ # various GL and X windows  librariesneeded for linux
+ # also need portaudio library (which in turn needs pthreads)
+-PLATFORM_LINK_FLAGS = -L/usr/X11R6/lib -lGL -lglut -lGLU -lX11 ${PORT_AUDIO_PATH}/lib/libportaudio.a -lpthread
++PLATFORM_LINK_FLAGS = -lGL -lglut -lGLU -lX11 -lportaudio -lpthread
+ 
+ 
+ # All platforms but OSX support g++ and need no linker hacks
+-GXX = g++ 
+-LINK_FLAGS = 
++GXX = $(CXX)
++LINK_FLAGS = $(LDFLAGS)
+ 
+ 
+ 

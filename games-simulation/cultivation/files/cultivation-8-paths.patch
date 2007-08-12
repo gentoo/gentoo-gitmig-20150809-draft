@@ -1,0 +1,51 @@
+--- game2/gameSource/features.cpp
++++ game2/gameSource/features.cpp
+@@ -57,7 +57,7 @@
+ 
+ 
+ void initializeFeatures() {
+-    FILE *featuresFile = fopen( "features.txt", "r" );
++    FILE *featuresFile = fopen( "@GENTOO_DATADIR@/features.txt", "r" );
+ 
+     char stringBuffer[100];
+     int switchValue;
+--- game2/gameSource/game.cpp
++++ game2/gameSource/game.cpp
+@@ -592,7 +592,7 @@
+       mStartTimeSeconds( time( NULL ) ),
+       mPaused( false ),
+       mMaxFrameRate( 400 ),  // don't limit frame rate
+-      mPrintFrameRate( true ),
++      mPrintFrameRate( false ),
+       mNumFrames( 0 ), mFrameBatchSize( 100 ),
+       mFrameBatchStartTimeSeconds( time( NULL ) ),
+       mFrameBatchStartTimeMilliseconds( 0 ),
+@@ -902,7 +902,7 @@
+     // load font image
+     TGAImageConverter tga;
+ 
+-    File fontFile( NULL, "font.tga" );
++    File fontFile( NULL, "@GENTOO_DATADIR@/font.tga" );
+     FileInputStream fontInput( &fontFile );
+ 
+     Image *fontImage = tga.deformatImage( &fontInput );
+@@ -985,7 +985,7 @@
+     mCurrentTipStoredItem = -1;
+     
+     // translation language for tool tips
+-    File languageNameFile( NULL, "language.txt" );
++    File languageNameFile( NULL, "@GENTOO_DATADIR@/language.txt" );
+ 
+     if( languageNameFile.exists() ) {
+         char *languageNameText = languageNameFile.readFileContents();
+--- minorGems/util/TranslationManager.cpp
++++ minorGems/util/TranslationManager.cpp
+@@ -147,7 +147,7 @@
+       mNaturalLanguageStrings( NULL ) {
+ 
+     // default
+-    setDirectoryAndLanguage( "languages", "English" );
++    setDirectoryAndLanguage( "@GENTOO_DATADIR@/languages", "English" );
+     }
+ 
+ 
