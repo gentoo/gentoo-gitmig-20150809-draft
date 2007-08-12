@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.156 2007/08/11 08:47:04 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.157 2007/08/12 05:12:36 dberkholz Exp $
+
+  12 Aug 2007; Donnie Berkholz <dberkholz@gentoo.org>; mesa-6.5-r3.ebuild,
+  mesa-6.5.1-r1.ebuild, mesa-6.5.1-r4.ebuild, mesa-6.5.2.ebuild,
+  mesa-6.5.2-r1.ebuild, mesa-6.5.3.ebuild:
+  Backport GCC 4.2 -O2 workaround for ivopts bug from 7.0.1.
 
 *mesa-7.0.1 (11 Aug 2007)
 

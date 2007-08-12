@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.16 2007/07/30 07:40:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.17 2007/08/12 05:12:36 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -68,6 +68,11 @@ pkg_setup() {
 	fi
 
 	append-flags -fno-strict-aliasing
+
+	# gcc 4.2 has buggy ivopts
+	if [[ $(gcc-version) = "4.2" ]]; then
+		append-flags -fno-ivopts
+	fi
 
 	if [[ ${KERNEL} == "FreeBSD" ]]; then
 		CONFIG="freebsd"
