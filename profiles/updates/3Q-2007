@@ -1,3 +1,4 @@
+slotmove media-sound/cantus 2 0
 move app-arch/bsdtar app-arch/libarchive
 move sys-apps/pam_mount sys-auth/pam_mount
 move games-fps/blackshades-cvs games-fps/blackshades
