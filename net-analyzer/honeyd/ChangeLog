@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/honeyd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.30 2007/01/28 15:02:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.31 2007/08/12 20:29:54 pva Exp $
+
+*honeyd-1.5c (12 Aug 2007)
+
+  12 Aug 2007; <pva@gentoo.org> +honeyd-1.5c.ebuild:
+  Version bump. Thank FieldySnuts <sgtphou AT fire-eyes.org> for report in bug
+  #187763.
 
   28 Jan 2007; <pva@gentoo.org> files/honeyd.initd:
   Fixed init script to handle multiple HONEYD_NETS. Thank Jeremy Hanmer
