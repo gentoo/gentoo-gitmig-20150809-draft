@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/fuhquake-bin-0.31.ebuild,v 1.5 2006/09/19 19:22:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/fuhquake-bin-0.31.ebuild,v 1.6 2007/08/12 19:52:41 malc Exp $
 
 inherit games
 
@@ -12,13 +12,14 @@ SRC_URI="http://www.fuhquake.net/files/releases/v${PV}/fuhquake-linux-v${PV}.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 RESTRICT="strip"
 IUSE="opengl svga"
 
 RDEPEND="!svga? (
 	x11-libs/libXext )
 	svga? ( media-libs/svgalib )
+	amd64? ( app-emulation/emul-linux-x86-xlibs )
 	opengl? (
 		virtual/opengl
 	    x11-libs/libXext )"

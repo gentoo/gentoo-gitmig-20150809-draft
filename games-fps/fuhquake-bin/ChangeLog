@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/fuhquake-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/ChangeLog,v 1.4 2007/02/21 23:39:34 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/ChangeLog,v 1.5 2007/08/12 19:52:41 malc Exp $
+
+  12 Aug 2007; <malc@gentoo.org> fuhquake-bin-0.31.ebuild:
+  Add dep on app-emulation/emul-linux-x86-xlibs for amd64, add ~amd64 - bug
+  #112656
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
