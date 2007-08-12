@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.104 2007/08/08 19:27:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.105 2007/08/12 19:51:48 malc Exp $
+
+  12 Aug 2007; <malc@gentoo.org> 2006.1/no-multilib/package.mask,
+  2007.0/no-multilib/package.mask:
+  pmask games-fps/fuhquake-bin on no-multilib profiles
 
   08 Aug 2007; Tiziano Müller <dev-zero@gentoo.org> 2006.1/make.defaults,
   dev/32bit-userland/make.defaults, 2007.0/make.defaults:
