@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.6.ebuild,v 1.1 2007/04/20 03:26:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.6.ebuild,v 1.2 2007/08/12 15:15:37 beandog Exp $
 
 inherit eutils flag-o-matic perl-module
 
@@ -34,20 +34,29 @@ RDEPEND="${DEPEND}
 	>=media-video/lsdvd-0.15"
 
 pkg_setup() {
+
+	local rebuild=0
+
 	if ! built_with_use x11-libs/gtk+ jpeg; then
 		eerror "Please re-emerge x11-libs/gtk+ with the jpeg use flag"
+		rebuild=1
 	fi
 	if ! built_with_use media-video/transcode dvdread; then
 		eerror "Please re-emerge media-video/transcode with the dvdread"
 		eerror "USE flag."
+		rebuild=1
 	fi
 	if built_with_use media-video/transcode extrafilters; then
 		eerror "Please re-emerge media-video/transcode without the"
 		eerror "extrafilters USE flag."
+		rebuild=1
 	fi
-	if ! built_with_use media-video/transcode dvdread || \
-		built_with_use media-video/transcode extrafilters || \
-		! built_with_use x11-libs/gtk+ jpeg; then
+	if use vcd && ! built_with_use media-video/transcode mjpeg; then
+		eerror "Please re-emerge media-video/transcode with the"
+		eerror "mjpeg USE flag."
+		rebuild=1
+	fi
+	if [[ rebuild -eq 1 ]]; then
 		die "Fix use flags and re-emerge."
 	fi
 }
