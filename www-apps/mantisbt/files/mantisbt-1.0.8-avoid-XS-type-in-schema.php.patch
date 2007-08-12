@@ -1,0 +1,87 @@
+--- admin/schema.php.orig	2007-08-12 09:51:24.000000000 +0400
++++ admin/schema.php	2007-08-12 09:53:25.000000000 +0400
+@@ -26,7 +26,7 @@
+ 			  user_id I DEFAULT '0' PRIMARY,
+ 			  access_reqd I DEFAULT '0',
+ 			  type I DEFAULT '90',
+-			  value XS NOTNULL",
++			  value XL NOTNULL",
+ Array('mysql' => 'TYPE=MyISAM', 'pgsql' => 'WITHOUT OIDS')));
+ $upgrade[] = Array('CreateIndexSQL',Array('idx_config',config_get('mantis_config_table'),'config_id'));
+ 
+@@ -108,9 +108,9 @@
+ 
+ $upgrade[] = Array('CreateTableSQL',Array(config_get('mantis_bug_text_table'),"
+   id 			 I  PRIMARY UNSIGNED NOTNULL AUTOINCREMENT,
+-  description 		XS NOTNULL,
+-  steps_to_reproduce 	XS NOTNULL,
+-  additional_information XS NOTNULL
++  description 		XL NOTNULL,
++  steps_to_reproduce 	XL NOTNULL,
++  additional_information XL NOTNULL
+ ",Array('mysql' => 'TYPE=MyISAM', 'pgsql' => 'WITHOUT OIDS')));
+ 
+ $upgrade[] = Array('CreateTableSQL',Array(config_get('mantis_bugnote_table'),"
+@@ -129,7 +129,7 @@
+ 
+ $upgrade[] = Array('CreateTableSQL',Array(config_get('mantis_bugnote_text_table'),"
+   id 			 I  UNSIGNED NOTNULL PRIMARY AUTOINCREMENT,
+-  note 			XS NOTNULL
++  note 			XL NOTNULL
+ ",Array('mysql' => 'TYPE=MyISAM', 'pgsql' => 'WITHOUT OIDS')));
+ 
+ $upgrade[] = Array('CreateTableSQL',Array(config_get('mantis_custom_field_project_table'),"
+@@ -174,7 +174,7 @@
+   project_id 		 I  NOTNULL DEFAULT '0',
+   is_public 		L DEFAULT NULL,
+   name 			C(64) NOTNULL DEFAULT \" '' \",
+-  filter_string 	XS NOTNULL
++  filter_string 	XL NOTNULL
+ ",Array('mysql' => 'TYPE=MyISAM', 'pgsql' => 'WITHOUT OIDS')));
+ 
+ $upgrade[] = Array('CreateTableSQL',Array(config_get('mantis_news_table'),"
+@@ -186,7 +186,7 @@
+   view_state 		I2 NOTNULL DEFAULT '10',
+   announcement 		L NOTNULL DEFAULT '0',
+   headline 		C(64) NOTNULL DEFAULT \" '' \",
+-  body 			XS NOTNULL
++  body 			XL NOTNULL
+ ",Array('mysql' => 'TYPE=MyISAM', 'pgsql' => 'WITHOUT OIDS')));
+ 
+ $upgrade[] = Array('CreateTableSQL',Array(config_get('mantis_project_category_table'),"
+@@ -222,7 +222,7 @@
+   view_state 		I2 NOTNULL DEFAULT '10',
+   access_min 		I2 NOTNULL DEFAULT '10',
+   file_path 		C(250) NOTNULL DEFAULT \" '' \",
+-  description 		XS NOTNULL
++  description 		XL NOTNULL
+ ",Array('mysql' => 'TYPE=MyISAM', 'pgsql' => 'WITHOUT OIDS')));
+ $upgrade[] = Array('CreateIndexSQL',Array('idx_project_id',config_get('mantis_project_table'),'id'));
+ $upgrade[] = Array('CreateIndexSQL',Array('idx_project_name',config_get('mantis_project_table'),'name',Array('UNIQUE')));
+@@ -240,7 +240,7 @@
+   project_id 		 I  UNSIGNED NOTNULL DEFAULT '0',
+   version 		C(64) NOTNULL DEFAULT \" '' \",
+   date_order 		T NOTNULL DEFAULT '1970-01-01 00:00:01',
+-  description 		XS NOTNULL,
++  description 		XL NOTNULL,
+   released 		L NOTNULL DEFAULT '1'
+ ",Array('mysql' => 'TYPE=MyISAM', 'pgsql' => 'WITHOUT OIDS')));
+ $upgrade[] = Array('CreateIndexSQL',Array('idx_project_version',config_get('mantis_project_version_table'),'project_id,version',Array('UNIQUE')));
+@@ -265,7 +265,7 @@
+ 			  type I NOTNULL,
+ 			  timestamp T NOTNULL,
+ 			  expiry T,
+-			  value XS NOTNULL",
++			  value XL NOTNULL",
+ Array('mysql' => 'TYPE=MyISAM', 'pgsql' => 'WITHOUT OIDS')));
+ 
+ $upgrade[] = Array('CreateTableSQL',Array(config_get('mantis_user_pref_table'),"
+@@ -313,7 +313,7 @@
+   platform 		C(32) NOTNULL DEFAULT \" '' \",
+   os 			C(32) NOTNULL DEFAULT \" '' \",
+   os_build 		C(32) NOTNULL DEFAULT \" '' \",
+-  description 		XS NOTNULL
++  description 		XL NOTNULL
+ ",Array('mysql' => 'TYPE=MyISAM', 'pgsql' => 'WITHOUT OIDS')));
+ 
+ $upgrade[] = Array('CreateTableSQL',Array(config_get('mantis_user_table'),"

@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.42 2007/07/29 17:29:41 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.43 2007/08/12 07:28:50 pva Exp $
+
+*mantisbt-1.0.8 (12 Aug 2007)
+
+  12 Aug 2007; <pva@gentoo.org>
+  +files/mantisbt-1.0.8-avoid-XS-type-in-schema.php.patch,
+  +mantisbt-1.0.8.ebuild:
+  Version bump. Thank Philippe Chaintreuil <pchaintreuil AT syrres.com> for
+  report in bug #184953.
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> mantisbt-1.0.7.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to
