@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.25 2007/07/04 21:46:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.26 2007/08/13 22:04:48 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  thttpd-2.25b-r7.ebuild:
+  ppc. stable
 
   04 Jul 2007; Raúl Porcel <armin76@gentoo.org> thttpd-2.25b-r7.ebuild:
   x86 stable
