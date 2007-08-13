@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-20070315.ebuild,v 1.2 2007/08/11 02:59:53 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-20070315.ebuild,v 1.3 2007/08/13 06:31:56 opfer Exp $
 
 inherit eutils libtool autotools
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.smcc.demon.nl/camstream/"
 SRC_URI="http://www.smcc.demon.nl/camstream/download/camstream-snapshot-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 # amd64, please update the patch
-KEYWORDS="amd64 -ppc ~x86"
+KEYWORDS="amd64 -ppc x86"
 SLOT="0"
 IUSE="doc mmx"
 
