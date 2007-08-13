@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nload
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.22 2007/06/03 07:56:25 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.23 2007/08/13 21:22:59 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  nload-0.6.0-r2.ebuild:
+  ppc. stable
 
 *nload-0.6.0-r2 (03 Jun 2007)
 

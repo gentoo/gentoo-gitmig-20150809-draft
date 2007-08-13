@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r3.ebuild,v 1.8 2007/07/22 07:49:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r3.ebuild,v 1.9 2007/08/13 21:20:30 dertobi123 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://monkey.org/~dugsong/dsniff/beta/${P/_beta/b}.tar.gz
 
 LICENSE="DSNIFF"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 ppc ~sparc x86"
 IUSE="X"
 
 DEPEND="net-libs/libpcap

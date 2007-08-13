@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.125 2007/08/04 20:16:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.126 2007/08/13 21:25:48 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  rrdtool-1.2.23-r1.ebuild:
+  ppc. stable
 
   04 Aug 2007; Hans de Graaff <graaff@gentoo.org> rrdtool-1.2.23-r1.ebuild:
   Add a blocker on dev-ruby/ruby-rrd because those bindings are now included in
