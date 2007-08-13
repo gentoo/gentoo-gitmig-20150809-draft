@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/advancemame
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.43 2007/03/13 01:26:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.44 2007/08/13 07:44:16 mr_bones_ Exp $
+
+  13 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  advancemame-0.106.0.ebuild:
+  sdl is required (bug #158417)
 
   13 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   advancemame-0.104.0.ebuild, advancemame-0.106.0.ebuild:

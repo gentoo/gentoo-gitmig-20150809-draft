@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.106.0.ebuild,v 1.4 2007/03/13 01:26:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.106.0.ebuild,v 1.5 2007/08/13 07:44:16 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -13,9 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="alsa expat fbcon oss sdl slang static svga truetype zlib"
 
+# sdl is required (bug #158417)
 RDEPEND="app-arch/unzip
 	app-arch/zip
-	sdl? ( media-libs/libsdl )
+	media-libs/libsdl
 	slang? ( =sys-libs/slang-1* )
 	alsa? ( media-libs/alsa-lib )
 	expat? ( >=dev-libs/expat-1.95.6 )
@@ -38,8 +39,7 @@ src_unpack() {
 
 	use x86 && \
 		ln -s $(type -P nasm) "${T}/${CHOST}-nasm"
-	use sdl && \
-		ln -s $(type -P sdl-config) "${T}/${CHOST}-sdl-config"
+	ln -s $(type -P sdl-config) "${T}/${CHOST}-sdl-config"
 	use truetype && \
 		ln -s $(type -P freetype-config) "${T}/${CHOST}-freetype-config"
 }
@@ -52,11 +52,11 @@ src_compile() {
 
 	PATH="${PATH}:${T}"
 	egamesconf \
+		--enable-sdl \
 		$(use_enable alsa) \
 		$(use_enable expat) \
 		$(use_enable fbcon fb) \
 		$(use_enable oss) \
-		$(use_enable sdl) \
 		$(use_enable slang) \
 		$(use_enable static) \
 		$(use_enable svga svgalib) \
