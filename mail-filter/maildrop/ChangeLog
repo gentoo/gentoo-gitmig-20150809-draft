@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.74 2007/04/26 19:29:24 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.75 2007/08/13 22:34:35 ferdy Exp $
+
+  13 Aug 2007; Fernando J. Pereda <ferdy@gentoo.org> maildrop-2.0.4.ebuild:
+  Do not use bindnow-flags
 
   26 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org>
   +files/maildrop-2.0.4-makedat.patch, maildrop-2.0.4.ebuild:
