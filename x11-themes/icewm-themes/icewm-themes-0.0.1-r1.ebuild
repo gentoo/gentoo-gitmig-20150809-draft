@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1-r1.ebuild,v 1.9 2007/07/02 14:56:08 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1-r1.ebuild,v 1.10 2007/08/13 22:08:12 dertobi123 Exp $
 
 DESCRIPTION="Collection of IceWM themes"
 HOMEPAGE="http://www.icewm.org/
@@ -22,7 +22,7 @@ SRC_URI="${THEME_URI}/icecrack/icecrack-default-2.0.0.tar.gz
 # greyscaled -> Public Domain
 # 1in1-xp -> freedist
 LICENSE="GPL-2 public-domain freedist"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 SLOT="0"
 IUSE=""
 

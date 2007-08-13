@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/icewm-themes
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.16 2007/07/02 14:56:08 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.17 2007/08/13 22:08:12 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  icewm-themes-0.0.1-r1.ebuild:
+  ppc. stable
 
   02 Jul 2007; Santiago M. Mola <coldwind@gentoo.org>
   icewm-themes-0.0.1.ebuild, icewm-themes-0.0.1-r1.ebuild,
