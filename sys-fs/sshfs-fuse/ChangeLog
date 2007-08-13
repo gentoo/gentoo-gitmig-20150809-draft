@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/sshfs-fuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.31 2007/06/15 13:13:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.32 2007/08/13 21:55:06 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  sshfs-fuse-1.8.ebuild:
+  ppc. stable
 
   15 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> sshfs-fuse-1.8.ebuild:
   Stable on sparc
