@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libkudzu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.28 2007/06/22 18:19:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.29 2007/08/13 21:55:59 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  libkudzu-1.2.57.1.ebuild:
+  ppc. stable
 
   22 Jun 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   libkudzu-1.1.62-r1.ebuild, libkudzu-1.2.57.1.ebuild:
