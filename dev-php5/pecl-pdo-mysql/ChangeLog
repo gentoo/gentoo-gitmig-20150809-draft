@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-pdo-mysql
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-mysql/ChangeLog,v 1.20 2007/03/04 23:41:45 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-mysql/ChangeLog,v 1.21 2007/08/13 10:08:23 jokey Exp $
+
+  13 Aug 2007; Markus Ullmann <jokey@gentoo.org>
+  pecl-pdo-mysql-1.0.2.ebuild:
+  Fix depstring wrt bug #170446
 
   04 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
   pecl-pdo-mysql-1.0.2.ebuild:
