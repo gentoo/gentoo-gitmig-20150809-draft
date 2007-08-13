@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/suhosin/suhosin-0.9.18.ebuild,v 1.5 2007/07/16 18:07:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/suhosin/suhosin-0.9.18.ebuild,v 1.6 2007/08/13 20:35:07 dertobi123 Exp $
 
 PHP_EXT_NAME="suhosin"
 PHP_EXT_INI="yes"
@@ -14,7 +14,7 @@ SRC_URI="http://www.hardened-php.net/suhosin/_media/${P}.tgz"
 
 LICENSE="PHP-3"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
