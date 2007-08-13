@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.12 2007/08/02 12:05:04 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.13 2007/08/13 20:16:09 dertobi123 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/regina-rexx/Regina-REXX-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc s390 sparc ~x86"
+KEYWORDS="~amd64 hppa ppc s390 sparc ~x86"
 IUSE=""
 
 DEPEND=""

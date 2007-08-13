@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.31 2007/05/13 18:32:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.32 2007/08/13 20:17:49 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  spidermonkey-1.5-r2.ebuild:
+  ppc. stable
 
 *spidermonkey-1.6 (13 May 2007)
 
