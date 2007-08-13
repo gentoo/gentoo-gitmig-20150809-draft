@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/hesiod
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.30 2007/07/26 18:47:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.31 2007/08/13 21:30:11 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  hesiod-3.0.2-r2.ebuild:
+  ppc. stable
 
   26 Jul 2007; Raúl Porcel <armin76@gentoo.org> hesiod-3.0.2-r2.ebuild:
   alpha stable
