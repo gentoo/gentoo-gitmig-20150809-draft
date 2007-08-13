@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.16 2007/05/03 02:49:26 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.17 2007/08/13 21:36:08 hanno Exp $
+
+*compiz-0.5.2 (13 Aug 2007)
+
+  13 Aug 2007; Hanno Boeck <hanno@gentoo.org> +compiz-0.5.2.ebuild:
+  Version bump.
 
   03 May 2007; Hanno Boeck <hanno@gentoo.org> files/compiz-start,
   compiz-0.5.0.ebuild:
