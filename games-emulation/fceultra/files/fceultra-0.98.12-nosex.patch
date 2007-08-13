@@ -1,0 +1,51 @@
+# By default SEXYAL is used.  This doesn't seem to work
+# on some systems.  We need to use SDL's native sound
+# support and there is no ./configure argument to do
+# that.
+
+diff -ru fceu.old/configure.ac fceu/configure.ac
+--- fceu.old/configure.ac	2004-08-17 18:29:13.000000000 -0400
++++ fceu/configure.ac	2006-11-14 14:46:59.000000000 -0500
+@@ -48,10 +48,10 @@
+ if test x$use_nativewin32 = xyes; then
+  LIBS="$LIBS -mwindows -lddraw -ldinput -ldsound -lgdi32 -ldxguid -lwinmm -lshell32 -lwsock32 -lcomdlg32 -lole32"
+  AM_CONDITIONAL(NATIVEWIN32,true)
+-else
+- AM_CONDITIONAL(USE_SEXYAL, true)
+- AC_DEFINE([USE_SEXYAL])
+- LIBS="$LIBS -ldsound -lwinmm"
++dnl else
++dnl AM_CONDITIONAL(USE_SEXYAL, true)
++dnl AC_DEFINE([USE_SEXYAL])
++dnl LIBS="$LIBS -ldsound -lwinmm"
+ fi
+ 
+ 
+@@ -61,9 +61,9 @@
+ AC_DEFINE([PSS_STYLE],[1])
+ AC_DEFINE([NETWORK],[1])
+ 
+-AC_CHECK_HEADER([sys/soundcard.h],
+-        AM_CONDITIONAL(USE_SEXYAL, true)
+-	AC_DEFINE([USE_SEXYAL]),[])
++dnl AC_CHECK_HEADER([sys/soundcard.h],
++dnl        AM_CONDITIONAL(USE_SEXYAL, true)
++dnl	AC_DEFINE([USE_SEXYAL]),[])
+ fi
+ 
+ dnl if expr x"$target" : 'x.*darwin' > /dev/null; then
+diff -ru fceu.old/src/drivers/pc/dface.h fceu/src/drivers/pc/dface.h
+--- fceu.old/src/drivers/pc/dface.h	2004-08-17 18:10:49.000000000 -0400
++++ fceu/src/drivers/pc/dface.h	2006-11-14 14:49:36.000000000 -0500
+@@ -17,7 +17,7 @@
+ 
+ int InitSound(FCEUGI *gi);
+ void WriteSound(int32 *Buffer, int Count);
+-int KillSound(void);
++void KillSound(void);
+ uint32 GetMaxSound(void);
+ uint32 GetWriteSound(void);
+ 
+ 
+
+ 

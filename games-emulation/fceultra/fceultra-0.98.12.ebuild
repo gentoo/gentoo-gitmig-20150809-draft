@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.98.12.ebuild,v 1.6 2006/09/26 20:56:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.98.12.ebuild,v 1.7 2007/08/13 16:52:11 mr_bones_ Exp $
 
-inherit eutils games
+inherit autotools eutils games
 
 DESCRIPTION="A portable NES/Famicom emulator"
 HOMEPAGE="http://www.emulator-zone.com/doc.php/nes/fceultra.html"
@@ -26,7 +26,13 @@ S=${WORKDIR}/fceu
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-mkdir.patch
+	chmod a-x Documentation/tech/exp/*
+
+	# bug #155153 - disable SEXYAL system
+	epatch \
+		"${FILESDIR}"/${P}-mkdir.patch \
+		"${FILESDIR}"/${P}-nosex.patch
+	eautoreconf
 }
 
 src_compile() {
