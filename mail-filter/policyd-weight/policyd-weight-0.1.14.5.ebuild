@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/policyd-weight-0.1.14.5.ebuild,v 1.3 2007/08/04 15:31:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/policyd-weight-0.1.14.5.ebuild,v 1.4 2007/08/13 12:12:03 angelos Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.policyd-weight.org/old/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha x86"
+KEYWORDS="~alpha ~amd64 x86"
 IUSE=""
 
 DEPEND=""
