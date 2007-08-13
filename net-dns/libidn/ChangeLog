@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.63 2007/08/13 12:20:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.64 2007/08/13 13:47:26 betelgeuse Exp $
+
+  13 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> libidn-1.0.ebuild:
+  Improve the emacs removal code so it works with xemacs. Fixes bug #188587.
 
   13 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   libidn-0.6.9-r1.ebuild:

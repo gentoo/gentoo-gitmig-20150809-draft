@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.0.ebuild,v 1.1 2007/08/11 09:03:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.0.ebuild,v 1.2 2007/08/13 13:47:26 betelgeuse Exp $
 
 inherit java-pkg-opt-2 mono autotools
 
@@ -39,7 +39,12 @@ src_install() {
 	dodoc AUTHORS ChangeLog FAQ NEWS README THANKS TODO || die
 
 	if ! use emacs; then
-		rm -r ${D}/usr/share/emacs || die
+		if [ -e "${D}/usr/share/emacs" ] ; then
+			rm -r "${D}/usr/share/emacs" || die
+		fi
+		if [ -e "${D}/usr/lib/xemacs" ] ; then
+			rm -r "${D}/usr/lib/xemacs" || die
+		fi
 	fi
 
 	if use doc; then
