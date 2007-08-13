@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-4.33.ebuild,v 1.1 2007/08/13 15:19:45 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-4.33.ebuild,v 1.2 2007/08/13 18:11:39 dang Exp $
 
 DESCRIPTION="Nokia's implementation of a Telepathy Mission Control"
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/Mission_Control"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/mission-control/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND=">=net-libs/libtelepathy-0.0.54
