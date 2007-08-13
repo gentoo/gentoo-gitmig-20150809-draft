@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/phpunit-3.0.5.ebuild,v 1.2 2007/06/20 13:23:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/phpunit-3.0.5.ebuild,v 1.3 2007/08/13 09:49:51 jokey Exp $
 
 inherit php-pear-lib-r1
 
@@ -26,5 +26,5 @@ need_php_by_category
 
 pkg_setup() {
 	has_php
-	require_php_with_use pcre reflection spl xml
+	require_php_with_use pcre reflection spl xml tokenizer
 }

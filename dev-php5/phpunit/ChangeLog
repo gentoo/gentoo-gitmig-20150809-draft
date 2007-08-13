@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/phpunit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.4 2007/06/20 13:23:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.5 2007/08/13 09:49:51 jokey Exp $
+
+  13 Aug 2007; Markus Ullmann <jokey@gentoo.org> phpunit-3.0.5.ebuild:
+  Fix for php use dependencies as noted in bug #173496
 
   20 Jun 2007; Christoph Mende <angelos@gentoo.org> phpunit-3.0.5.ebuild:
   Added ~amd64 wrt 173460
