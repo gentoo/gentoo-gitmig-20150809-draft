@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.9 2007/07/11 19:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.10 2007/08/13 12:58:24 opfer Exp $
 
 JAVA_PKG_IUSE="source"
 WANT_ANT_TASKS="ant-nodeps ant-trax"
@@ -12,7 +12,7 @@ HOMEPAGE="http://xdoclet.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV}.tgz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 CDEPEND=">=dev-java/bsf-2.3
