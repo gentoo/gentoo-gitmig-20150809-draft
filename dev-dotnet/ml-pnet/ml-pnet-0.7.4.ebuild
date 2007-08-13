@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ml-pnet-0.7.4.ebuild,v 1.8 2007/06/24 00:30:31 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ml-pnet-0.7.4.ebuild,v 1.9 2007/08/13 20:13:24 dertobi123 Exp $
 
 DESCRIPTION="Mono C# libraries for Portable.NET"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.southern-storm.com.au/download/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 X11 )"
 SLOT="0"
-KEYWORDS="amd64 arm ia64 ~ppc x86"
+KEYWORDS="amd64 arm ia64 ppc x86"
 IUSE=""
 
 DEPEND="=dev-dotnet/pnetlib-${PV}*"
