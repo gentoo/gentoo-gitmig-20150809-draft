@@ -1,6 +1,9 @@
 # ChangeLog for media-video/devede
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.5 2007/07/02 13:20:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.6 2007/08/13 12:40:38 angelos Exp $
+
+  13 Aug 2007; Christoph Mende <angelos@gentoo.org> devede-3.01.ebuild:
+  Added ~amd64 wrt bug #183944
 
   02 Jul 2007; Samuli Suominen <drac@gentoo.org> devede-3.01.ebuild:
   Make psyco optional for bug 183944.
