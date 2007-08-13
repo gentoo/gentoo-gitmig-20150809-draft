@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usbview
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.17 2007/07/30 03:13:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.18 2007/08/13 19:44:42 gustavoz Exp $
+
+  13 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> usbview-1.0-r3.ebuild:
+  Stable on sparc wrt #187920
 
   30 Jul 2007; Samuli Suominen <drac@gentoo.org> metadata.xml:
   Take over maintainership.
