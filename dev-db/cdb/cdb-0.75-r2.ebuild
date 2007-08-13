@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75-r2.ebuild,v 1.5 2007/07/11 13:59:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75-r2.ebuild,v 1.6 2007/08/13 20:11:41 dertobi123 Exp $
 
 inherit eutils toolchain-funcs
 
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~ppc ~ppc-macos ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ppc ~ppc-macos ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 
 DESCRIPTION="Fast, reliable, simple package for creating and reading constant databases."
 HOMEPAGE="http://cr.yp.to/cdb.html"

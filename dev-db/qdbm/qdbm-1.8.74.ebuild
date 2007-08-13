@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.74.ebuild,v 1.9 2007/07/16 18:06:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.74.ebuild,v 1.10 2007/08/13 20:12:34 dertobi123 Exp $
 
 inherit eutils java-pkg-opt-2 multilib
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://qdbm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="alpha ~amd64 arm ia64 ~ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha ~amd64 arm ia64 ppc ppc64 s390 sh sparc x86"
 SLOT="0"
 
 RDEPEND="java? ( >=virtual/jre-1.4 )
