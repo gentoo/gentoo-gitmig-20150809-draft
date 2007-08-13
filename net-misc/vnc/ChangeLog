@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.85 2007/08/07 15:10:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.86 2007/08/13 21:49:42 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> vnc-4.1.2-r3.ebuild:
+  ppc. stable
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> vnc-4.1.2-r3.ebuild:
   Stable on sparc wrt #175985
