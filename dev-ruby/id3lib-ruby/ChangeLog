@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/id3lib-ruby
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/id3lib-ruby/ChangeLog,v 1.1 2007/08/13 02:46:20 omp Exp $
+
+*id3lib-ruby-0.5.0 (13 Aug 2007)
+
+  13 Aug 2007; David Shakaryan <omp@gentoo.org> +metadata.xml,
+  +id3lib-ruby-0.5.0.ebuild:
+  Initial commit.
+
