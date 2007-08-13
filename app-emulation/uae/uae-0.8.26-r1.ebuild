@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.26.ebuild,v 1.3 2007/08/13 09:58:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.26-r1.ebuild,v 1.1 2007/08/13 14:00:19 pva Exp $
 
 inherit eutils
 
@@ -43,7 +43,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gtk-ui-cleanup.patch
 	epatch "${FILESDIR}"/uae-0.8.25-makefile_more_cleaning.diff
 	epatch "${FILESDIR}"/uae-0.8.25-memory_leaks_in_gui.diff
-	epatch "${FILESDIR}"/uae-0.8.25-preserve_home_in_writing_optionsfile.diff
 	epatch "${FILESDIR}"/uae-0.8.25-struct_uae_wrong_fields_name.diff
 	epatch "${FILESDIR}"/${P}-uae_reset_args.diff
 	cp "${FILESDIR}"/sdlgfx.h "${S}"/src

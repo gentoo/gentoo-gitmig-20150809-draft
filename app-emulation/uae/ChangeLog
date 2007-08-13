@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/uae
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.30 2007/08/13 09:58:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.31 2007/08/13 14:00:19 pva Exp $
+
+*uae-0.8.26-r1 (13 Aug 2007)
+
+  13 Aug 2007; <pva@gentoo.org>
+  -files/uae-0.8.25-preserve_home_in_writing_optionsfile.diff,
+  -uae-0.8.26.ebuild, +uae-0.8.26-r1.ebuild:
+  preserve_home_in_writing_optionsfile clobbers random memory. Removed by
+  Bernd request.
 
   13 Aug 2007; <pva@gentoo.org> -files/uae-0.8.25-gtk-ui-cleanup.patch,
   -files/uae-0.8.25-uae_reset_args.diff, +files/sdlgfx.h,
