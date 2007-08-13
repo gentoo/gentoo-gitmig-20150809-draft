@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/iv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/ChangeLog,v 1.16 2007/04/01 23:01:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/ChangeLog,v 1.17 2007/08/13 20:57:12 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> iv-2.1.2.ebuild:
+  ppc. stable
 
 *iv-2.1.4 (01 Apr 2007)
 
