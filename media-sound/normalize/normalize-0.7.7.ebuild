@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.7.ebuild,v 1.6 2007/07/12 14:05:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.7.ebuild,v 1.7 2007/08/13 21:17:22 dertobi123 Exp $
 
 DESCRIPTION="Audio file volume normalizer"
 HOMEPAGE="http://normalize.nongnu.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="mad audiofile nls userland_BSD"
 
 RDEPEND="mad? ( media-libs/libmad )

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.46 2007/06/27 17:17:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.47 2007/08/13 21:16:31 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> mpc-0.12.1.ebuild:
+  ppc. stable
 
   27 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> mpc-0.12.1.ebuild:
   Stable on sparc
