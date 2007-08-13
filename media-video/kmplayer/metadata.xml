@@ -4,9 +4,9 @@
 <herd>kde</herd>
 <herd>video</herd>
 <maintainer>
-  <email>media-video@gentoo.org</email>
+	<email>media-video@gentoo.org</email>
 </maintainer>
 <maintainer>
-  <email>kde@gentoo.org</email>
+	<email>kde@gentoo.org</email>
 </maintainer>
 </pkgmetadata>

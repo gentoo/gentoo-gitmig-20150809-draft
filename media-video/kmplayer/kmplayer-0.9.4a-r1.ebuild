@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.4a-r1.ebuild,v 1.6 2007/07/12 02:40:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.4a-r1.ebuild,v 1.7 2007/08/13 17:19:09 philantrop Exp $
 
 inherit kde eutils
 
@@ -21,12 +21,15 @@ RDEPEND="mplayer? ( || ( media-video/mplayer media-video/mplayer-bin ) )
 	gstreamer? ( || ( =media-libs/gst-plugins-base-0.10* =media-libs/gst-plugins-0.8* ) )
 	cairo? ( x11-libs/cairo )"
 
-DEPEND="xine? ( >=media-libs/xine-lib-1.1.1 )
+DEPEND="x11-libs/libXv
+	xine? ( >=media-libs/xine-lib-1.1.1 )
 	gstreamer? ( || ( =media-libs/gst-plugins-base-0.10* =media-libs/gst-plugins-0.8* ) )
 	cairo? ( x11-libs/cairo )"
 
 LANGS="ar br bs ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ka
 lt mt nb nl pa pl pt_BR pt ro ru rw sk sr@Latn sr sv ta tr uk zh_CN"
+
+LANGS_DOC="da de en es et fr it nl pt ru sv"
 
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
@@ -58,6 +61,12 @@ src_unpack() {
 	for X in ${LANGS} ; do
 		use linguas_${X} || rm -f "${X}."*
 	done
+
+	MAKE_DOC=$(echo $(echo "${LINGUAS} ${LANGS_DOC}" | tr ' ' '\n' | sort | uniq -d))
+	[[ -n ${MAKE_DOC} ]] && [[ -n ${DOC_DIR_SUFFIX} ]] && MAKE_DOC=$(echo "${MAKE_DOC}" | tr '\n' ' ') && MAKE_DOC="${MAKE_DOC// /${DOC_DIR_SUFFIX} }"
+	sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_DOC}:" \
+		"${KDE_S}/doc/Makefile.am" || die "sed for locale failed"
+
 	rm -f "${S}/configure"
 }
 
