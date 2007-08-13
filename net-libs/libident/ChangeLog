@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libident
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libident/ChangeLog,v 1.17 2007/05/13 17:44:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libident/ChangeLog,v 1.18 2007/08/13 21:39:40 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  libident-0.32.ebuild:
+  ppc. stable
 
   13 May 2007; Steve Dibb <beandog@gentoo.org> libident-0.32.ebuild:
   amd64 stable
