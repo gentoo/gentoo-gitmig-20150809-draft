@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.1-r6.ebuild,v 1.6 2007/08/06 13:42:40 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.1-r6.ebuild,v 1.7 2007/08/13 21:09:30 dertobi123 Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.portaudio.com/archives/${MY_P}.zip"
 
 LICENSE="GPL-2"
 SLOT="18"
-KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~mips ~ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~mips ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=""
