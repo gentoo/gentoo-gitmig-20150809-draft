@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.26.ebuild,v 1.2 2007/08/12 15:36:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.26.ebuild,v 1.3 2007/08/13 09:58:58 pva Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.coresystems.de/pub/uae/sources/develop/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="sdl X dga svga aalib alsa sdl-sound scsi ui"
+IUSE="sdl X dga svga aalib oss alsa sdl-sound scsi ui"
 
 DEPEND="sdl? ( media-libs/libsdl
 			   media-libs/sdl-gfx
@@ -46,10 +46,18 @@ src_unpack() {
 	epatch "${FILESDIR}"/uae-0.8.25-preserve_home_in_writing_optionsfile.diff
 	epatch "${FILESDIR}"/uae-0.8.25-struct_uae_wrong_fields_name.diff
 	epatch "${FILESDIR}"/${P}-uae_reset_args.diff
+	cp "${FILESDIR}"/sdlgfx.h "${S}"/src
 }
 
 pkg_setup() {
 	# See configure.in for possible pathes of logic...
+	echo
+	elog "It was told by upstream developer Bernd Schmidt that sdl-sound is"
+	elog "broken now and alsa driver seems to be not in best shape. So OSS"
+	elog "(don't forget alsa emulation of OSS) is prefered, but it'll be"
+	elog "autodetected and thus it's possible that uae misses it and you'll"
+	elog "have no error but no sound too. Be carful and report this cases."
+	echo
 	if use sdl ; then
 		elog "Enabling sdl for video output."
 		my_config="$(use_with sdl) $(use_with sdl sdl-gfx)"
@@ -61,7 +69,11 @@ pkg_setup() {
 			elog "You do not have ui in USE. Disabling UI"
 			my_config="${my_config} --disable-ui"
 		fi
-		if use sdl-sound ; then
+		if use oss ; then
+			elog "Disabling alsa and sdl-sound and falling back on oss autodetection."
+			elog "You'll have to be carefull: if that fails you'll have no audio."
+			my_config="${my_config} --without-sdl-sound --without-alsa"
+		elif use sdl-sound ; then
 			elog "Enabling sdl-sound for sound output."
 			my_config="${my_config} $(use_with sdl-sound)"
 		elif use alsa ; then
@@ -124,7 +136,11 @@ pkg_setup() {
 				fi
 			fi
 		fi
-		if use alsa ; then
+		if use oss ; then
+			elog "Disabling alsa and sdl-sound and falling back on oss autodetection."
+			elog "You'll have to be carefull: if that fails you'll have no audio."
+			my_config="${my_config} --without-sdl-sound --without-alsa"
+		elif use alsa ; then
 			elog "Enabling alsa for sound output."
 			my_config="${my_config} $(use_with alsa)"
 		else
@@ -134,7 +150,7 @@ pkg_setup() {
 			my_config="${my_config} --enable-file-sound"
 		fi
 	fi
-
+	echo
 	my_config="${my_config} $(use_enable scsi scsi-device)"
 	my_config="${my_config} --enable-threads"
 }
@@ -147,8 +163,16 @@ src_compile() {
 src_install() {
 	dobin uae readdisk || die
 	cp docs/unix/README docs/README.unix
+	rm -r docs/{AmigaOS,BeOS,pOS,translated,unix}
 	dodoc docs/*
 
 	insinto /usr/share/uae/amiga-tools
 	doins amiga/{*hack,trans*,uae*}
+}
+
+pkg_postinst() {
+	elog
+	elog "Upstream recomends using SDL graphics (with an environment variable"
+	elog "SDL_VIDEO_X11_XRANDR=1 for fullscreen support."
+	echo
 }

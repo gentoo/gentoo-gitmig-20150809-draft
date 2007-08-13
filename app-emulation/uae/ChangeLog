@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/uae
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.29 2007/08/12 15:15:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.30 2007/08/13 09:58:58 pva Exp $
+
+  13 Aug 2007; <pva@gentoo.org> -files/uae-0.8.25-gtk-ui-cleanup.patch,
+  -files/uae-0.8.25-uae_reset_args.diff, +files/sdlgfx.h,
+  -uae-0.8.25.ebuild, -uae-0.8.25-r1.ebuild, uae-0.8.26.ebuild:
+  Fix missing sdlgfx.h. Adding OSS. Cleaning old.
 
 *uae-0.8.26 (12 Aug 2007)
 
