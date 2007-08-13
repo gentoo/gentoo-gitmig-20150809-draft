@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/suhosin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.16 2007/07/23 21:31:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.17 2007/08/13 20:36:02 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  suhosin-0.9.18.ebuild:
+  ppc. stable
 
 *suhosin-0.9.20 (23 Jul 2007)
 
