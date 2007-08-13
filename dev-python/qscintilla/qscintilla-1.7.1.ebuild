@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.7.1.ebuild,v 1.6 2007/06/24 20:58:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.7.1.ebuild,v 1.7 2007/08/13 20:41:23 dertobi123 Exp $
 
 inherit eutils toolchain-funcs qt3
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.riverbankcomputing.com/Downloads/QScintilla1/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND="$(qt_min_version 3.3)"

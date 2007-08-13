@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/py-smbpasswd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-smbpasswd/ChangeLog,v 1.10 2007/06/27 13:33:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-smbpasswd/ChangeLog,v 1.11 2007/08/13 20:38:34 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  py-smbpasswd-1.0.1.ebuild:
+  ppc. stable
 
   27 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   py-smbpasswd-1.0.1.ebuild:
