@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.5.ebuild,v 1.1 2007/06/08 01:02:10 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.5.ebuild,v 1.2 2007/08/13 19:14:10 coldwind Exp $
 
 inherit eutils games
 
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-home.patch
+	epatch "${FILESDIR}"/${P}-python25.patch
 }
 
 src_compile() {
