@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.93 2007/07/25 21:42:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.94 2007/08/13 00:14:23 eva Exp $
+
+*gnome-speech-0.4.16 (13 Aug 2007)
+
+  13 Aug 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-speech-0.4.16.ebuild:
+  bump to 0.4.16
+  * Fix for bug 458990 - Update max speech rate in eSpeak driver 
+    (Gilles Casse)
 
   25 Jul 2007; Raúl Porcel <armin76@gentoo.org> gnome-speech-0.4.11.ebuild:
   alpha stable wrt #171107
