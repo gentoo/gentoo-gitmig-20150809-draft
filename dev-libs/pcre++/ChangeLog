@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pcre++
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcre++/ChangeLog,v 1.14 2007/04/24 14:32:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcre++/ChangeLog,v 1.15 2007/08/13 20:31:13 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  pcre++-0.9.5-r1.ebuild:
+  ppc. stable
 
   24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   pcre++-0.9.5-r1.ebuild:

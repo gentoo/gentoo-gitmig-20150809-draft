@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.107 2007/08/13 12:28:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.108 2007/08/13 20:23:22 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  elfutils-0.127.ebuild:
+  ppc. stable
 
   13 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> elfutils-0.127.ebuild:
   Stable on sparc
