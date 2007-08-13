@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/oroborus
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.28 2007/08/03 18:05:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.29 2007/08/13 22:09:57 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  oroborus-2.0.18.ebuild:
+  ppc. stable
 
   03 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   oroborus-2.0.18.ebuild:

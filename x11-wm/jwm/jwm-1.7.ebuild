@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-1.7.ebuild,v 1.5 2007/07/22 04:44:15 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-1.7.ebuild,v 1.6 2007/08/13 22:09:06 dertobi123 Exp $
 
 inherit autotools eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://joewing.net/programs/jwm/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~hppa ~ppc x86"
+KEYWORDS="~hppa ppc x86"
 
 RDEPEND="xpm? ( x11-libs/libXpm )
 	xinerama? ( x11-libs/libXinerama )
