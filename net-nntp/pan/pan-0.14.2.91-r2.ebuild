@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.14.2.91-r2.ebuild,v 1.3 2006/11/04 01:19:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.14.2.91-r2.ebuild,v 1.4 2007/08/13 21:50:39 dertobi123 Exp $
 
 inherit eutils libtool
 
@@ -11,7 +11,7 @@ SRC_URI="http://pan.rebelbase.com/download/releases/${PV}/SOURCE/${P}.tar.bz2"
 HOMEPAGE="http://pan.rebelbase.com/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~hppa ~ppc ~sparc ~amd64 ppc64"
+KEYWORDS="~amd64 ~hppa ppc ppc64 ~sparc ~x86"
 SLOT="0"
 
 RDEPEND=">=dev-libs/glib-2.0.4
