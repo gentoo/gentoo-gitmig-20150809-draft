@@ -1,0 +1,28 @@
+diff -ur Xnee-3.01.orig/pnee/Makefile.in Xnee-3.01/pnee/Makefile.in
+--- Xnee-3.01.orig/pnee/Makefile.in	2007-07-04 16:41:27.000000000 +0300
++++ Xnee-3.01/pnee/Makefile.in	2007-08-13 20:18:15.000000000 +0300
+@@ -508,8 +508,8 @@
+ 
+ install-data-local: pnee.server
+ 	@$(NORMAL_INSTALL)
+-	mkdir -p $(PANEL_SERVER_DIR)
+-	cp pnee.server   $(PANEL_SERVER_DIR)/
++	mkdir -p $(DESTDIR)$(PANEL_SERVER_DIR)
++	cp pnee.server $(DESTDIR)$(PANEL_SERVER_DIR)/
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+diff -ur Xnee-3.01.orig/pnee/src/Makefile.in Xnee-3.01/pnee/src/Makefile.in
+--- Xnee-3.01.orig/pnee/src/Makefile.in	2007-07-04 16:41:27.000000000 +0300
++++ Xnee-3.01/pnee/src/Makefile.in	2007-08-13 20:14:18.000000000 +0300
+@@ -513,8 +513,8 @@
+ 
+ 
+ install-exec-local: $(PNEE)	
+-	mkdir -p $(PANEL_APPLET_DIR)
+-	cp $(PNEE)  $(PANEL_APPLET_DIR)
++	mkdir -p $(DESTDIR)$(PANEL_APPLET_DIR)
++	cp $(PNEE) $(DESTDIR)$(PANEL_APPLET_DIR)
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

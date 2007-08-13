@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/xnee
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.1 2007/08/13 17:30:56 drac Exp $
+
+*xnee-3.01 (13 Aug 2007)
+
+  13 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  +files/xnee-3.01-destdir.patch, +xnee-3.01.ebuild:
+  Initial commit for bug 87725. Thanks to Philipp Serr and Florian Steinel.
+
