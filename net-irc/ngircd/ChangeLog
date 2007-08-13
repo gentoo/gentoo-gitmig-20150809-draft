@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.29 2007/08/05 20:41:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.30 2007/08/13 14:50:33 mabi Exp $
+
+  13 Aug 2007; Matti Bickel <mabi@gentoo.org> ngircd-0.10.2.ebuild:
+  ppc stable (bug #185565)
 
 *ngircd-0.10.3 (05 Aug 2007)
 

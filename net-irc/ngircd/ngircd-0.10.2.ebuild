@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-0.10.2.ebuild,v 1.2 2007/07/16 18:01:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-0.10.2.ebuild,v 1.3 2007/08/13 14:50:33 mabi Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="zlib tcpd debug ident"
 RESTRICT="test"
 
