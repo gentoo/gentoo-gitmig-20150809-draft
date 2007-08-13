@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/lucene
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.35 2007/08/10 07:49:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.36 2007/08/13 07:44:56 opfer Exp $
+
+  13 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  lucene-1.4.3-r3.ebuild:
+  stable x86, bug 187601
 
   10 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   lucene-1.4.3-r3.ebuild:

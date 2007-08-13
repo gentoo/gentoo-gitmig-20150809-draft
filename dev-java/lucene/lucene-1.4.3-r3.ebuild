@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3-r3.ebuild,v 1.3 2007/08/10 07:49:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3-r3.ebuild,v 1.4 2007/08/13 07:44:56 opfer Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 inherit java-pkg-2 java-ant-2
@@ -10,7 +10,7 @@ HOMEPAGE="http://jakarta.apache.org/lucene"
 SRC_URI="mirror://apache/jakarta/lucene/source/${P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="1"
-KEYWORDS="amd64 ~ia64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4
 	test? (
