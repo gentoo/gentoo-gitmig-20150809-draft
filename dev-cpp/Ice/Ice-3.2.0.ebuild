@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.2.0.ebuild,v 1.1 2007/03/13 12:27:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.2.0.ebuild,v 1.2 2007/08/13 09:03:55 caleb Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_unpack() {
 	fi
 
 	if ! use ncurses; then
-		sed -i -e "s#   USE_READLINE.*#   USE_READLINE := no#g" \
+		sed -i -e "s#^USE_READLINE.*#USE_READLINE      ?= yes#g" \
 		${S}/config/Make.rules || die "Failed to set no readline"
 	fi
 
