@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/offo-hyphenation
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/offo-hyphenation/ChangeLog,v 1.1 2007/05/16 23:19:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/offo-hyphenation/ChangeLog,v 1.2 2007/08/13 07:03:33 opfer Exp $
+
+  13 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  offo-hyphenation-1.0.ebuild:
+  stable x86, bug 187600
 
 *offo-hyphenation-1.0 (16 May 2007)
 

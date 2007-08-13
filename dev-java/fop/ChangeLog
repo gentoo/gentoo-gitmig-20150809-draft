@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.48 2007/05/31 16:50:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.49 2007/08/13 07:05:19 opfer Exp $
+
+  13 Aug 2007; Christian Faulhammer <opfer@gentoo.org> fop-0.93-r1.ebuild:
+  stable x86, bug 187600
 
   31 May 2007; Petteri Räty <betelgeuse@gentoo.org> fop-0.93-r1.ebuild:
   Remove test from IUSE as we RESTRICT test.
