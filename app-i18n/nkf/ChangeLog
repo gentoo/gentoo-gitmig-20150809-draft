@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.41 2007/06/01 19:41:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.42 2007/08/13 20:05:06 dertobi123 Exp $
+
+  13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> nkf-2.0.7.ebuild:
+  ppc. stable
 
   01 Jun 2007; nixnut <nixnut@gentoo.org> ChangeLog:
   Stable on ppc wrt bug 178899
