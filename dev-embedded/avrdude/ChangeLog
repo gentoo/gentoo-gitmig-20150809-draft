@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.34 2007/08/13 20:14:23 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.35 2007/08/13 21:59:14 gustavoz Exp $
+
+  13 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> -avrdude-5.1.ebuild,
+  -avrdude-5.2.ebuild, -avrdude-5.3.1.ebuild:
+  Remove old
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> avrdude-5.4.ebuild:
   ppc. stable
