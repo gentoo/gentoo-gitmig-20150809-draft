@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.2.6.ebuild,v 1.4 2007/07/12 13:48:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.2.6.ebuild,v 1.5 2007/08/13 02:44:48 angelos Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 sparc ~x86"
+KEYWORDS="amd64 sparc ~x86"
 IUSE=""
 
 DEPEND="x11-proto/xproto
