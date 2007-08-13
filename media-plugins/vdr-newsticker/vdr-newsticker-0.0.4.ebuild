@@ -1,6 +1,6 @@
 # Copyright 2003-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-newsticker/vdr-newsticker-0.0.4.ebuild,v 1.4 2007/07/10 23:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-newsticker/vdr-newsticker-0.0.4.ebuild,v 1.5 2007/08/13 12:36:42 angelos Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ inherit vdr-plugin eutils
 DESCRIPTION="VDR plugin: Show rdf Newsticker on TV"
 HOMEPAGE="http://www.wontorra.net"
 SRC_URI="http://www.wontorra.net/filemgmt_data/files/${P}.tar.gz"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 

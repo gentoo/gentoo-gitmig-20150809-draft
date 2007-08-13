@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-newsticker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-newsticker/ChangeLog,v 1.5 2007/05/24 07:48:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-newsticker/ChangeLog,v 1.6 2007/08/13 12:36:42 angelos Exp $
+
+  13 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  vdr-newsticker-0.0.4.ebuild:
+  Added ~amd64 wrt bug #181006
 
   24 May 2007; Matthias Schwarzott <zzam@gentoo.org>
   vdr-newsticker-0.0.4.ebuild:
