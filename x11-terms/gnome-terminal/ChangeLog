@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.145 2007/08/11 15:03:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.146 2007/08/13 12:02:39 leio Exp $
+
+  13 Aug 2007; Mart Raudsepp <leio@gentoo.org>
+  -gnome-terminal-2.14.2.ebuild, -gnome-terminal-2.14.2-r1.ebuild,
+  -gnome-terminal-2.18.0.ebuild:
+  Removing Gnome 2.14
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org>
   gnome-terminal-2.18.1.ebuild:
