@@ -3,8 +3,12 @@
 <pkgmetadata>
 	<herd>base-system</herd>
 	<maintainer>
-		<email>solar@gentoo.org</email>
-		<description>Primary Maintainer</description>
+		<email>pva@gentoo.org</email>
+		<name>Peter Volkov</name>
 	</maintainer>
-	<longdescription>The vconfig program allows you to create and remove vlan-devices on a vlan enabled kernel. Vlan-devices are virtual ethernet devices which represents the virtual lans on the physical lan.</longdescription>
+	<longdescription>
+		The vconfig program allows you to create and remove vlan-devices on a
+		vlan enabled kernel. Vlan-devices are virtual ethernet devices which
+		represents the virtual lans on the physical lan.
+	</longdescription>
 </pkgmetadata>
