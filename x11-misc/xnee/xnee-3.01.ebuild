@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.01.ebuild,v 1.1 2007/08/13 17:30:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.01.ebuild,v 1.2 2007/08/14 15:44:42 drac Exp $
 
 inherit eutils
 
@@ -52,5 +52,11 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS BUGS ChangeLog FAQ NEWS README TODO
+
 	dolib libxnee/src/libxnee*
+
+	if use gtk; then
+		doicon pixmap/xnee.png
+		make_desktop_entry gnee Gnee xnee.png "Utility;GTK"
+	fi
 }
