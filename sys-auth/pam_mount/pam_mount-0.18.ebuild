@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-0.18.ebuild,v 1.1 2007/07/13 16:22:58 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-0.18.ebuild,v 1.2 2007/08/14 15:49:42 strerror Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND=">=sys-libs/pam-0.72
 	dev-libs/openssl
 	>=dev-libs/glib-2.0.0"
 RDEPEND="$DEPEND
-	crypt? ( sys-fs/cryptsetup-luks )
+	crypt? ( || ( >=sys-fs/cryptsetup-1.0.5 sys-fs/cryptsetup-luks ) )
 	sys-process/lsof"
 
 src_unpack() {
