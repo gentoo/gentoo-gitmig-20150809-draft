@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.45 2007/06/02 15:07:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.46 2007/08/14 12:50:16 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -215,7 +215,7 @@ vdr-plugin_src_unpack() {
 
 			einfo "Patching Makefile"
 			[[ -e Makefile ]] || die "Makefile of plugin can not be found!"
-			cp Makefile Makefile.orig
+			cp Makefile "${WORKDIR}"/Makefile.before
 
 			sed -i Makefile \
 				-e '1i\#Makefile was patched by vdr-plugin.eclass'
@@ -276,7 +276,7 @@ vdr-plugin_copy_source_tree() {
 	pushd . >/dev/null
 	cp -r ${S} ${T}/source-tree
 	cd ${T}/source-tree
-	mv Makefile.orig Makefile
+	cp "${WORKDIR}"/Makefile.before Makefile
 	sed -i Makefile \
 		-e "s:^DVBDIR.*$:DVBDIR = ${DVB_INCLUDE_DIR}:" \
 		-e 's:^CXXFLAGS:#CXXFLAGS:' \
@@ -324,12 +324,12 @@ vdr-plugin_src_compile() {
 
 vdr-plugin_src_install() {
 	[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin_install_source_tree
-	cd ${S}
+	cd "${WORKDIR}"
 
 	if [[ -n ${VDR_MAINTAINER_MODE} ]]; then
 		local mname=${P}-Makefile
 		cp Makefile ${mname}.patched
-		cp Makefile.orig ${mname}.before
+		cp Makefile.before ${mname}.before
 
 		diff -u ${mname}.before ${mname}.patched > ${mname}.diff
 
@@ -344,6 +344,7 @@ vdr-plugin_src_install() {
 
 	fi
 
+	cd "${S}"
 	insinto "${VDR_PLUGIN_DIR}"
 	doins libvdr-*.so.*
 	local docfile
