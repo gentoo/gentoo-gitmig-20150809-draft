@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.14 2007/06/26 02:47:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.15 2007/08/14 15:45:46 strerror Exp $
 
 inherit eutils linux-info
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	dev-libs/libusb
 	virtual/eject
 	dmi? ( >=sys-apps/dmidecode-2.7 )
-	crypt? ( >=sys-fs/cryptsetup-luks-1.0.1 )
+	crypt? ( || ( >=sys-fs/cryptsetup-1.0.5 >=sys-fs/cryptsetup-luks-1.0.1 ) )
 	selinux? ( sys-libs/libselinux )"
 
 DEPEND="${RDEPEND}
