@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.155 2007/08/13 20:17:40 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.156 2007/08/14 18:29:58 corsair Exp $
+
+  14 Aug 2007; Markus Rothe <corsair@gentoo.org> tomcat-6.0.13-r3.ebuild:
+  Stable on ppc64; bug #188734
 
 *tomcat-6.0.14 (13 Aug 2007)
 
