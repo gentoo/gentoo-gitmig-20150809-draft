@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.65 2007/08/14 11:50:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.66 2007/08/14 18:15:44 corsair Exp $
+
+  14 Aug 2007; Markus Rothe <corsair@gentoo.org> libidn-0.6.9-r1.ebuild:
+  Stable on ppc64; bug #188420
 
   14 Aug 2007; Raúl Porcel <armin76@gentoo.org> libidn-0.6.9-r1.ebuild:
   alpha/ia64/x86 stable wrt #188420
