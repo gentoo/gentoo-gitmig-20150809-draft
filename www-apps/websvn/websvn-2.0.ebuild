@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-2.0.ebuild,v 1.1 2007/08/14 06:33:11 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-2.0.ebuild,v 1.2 2007/08/14 17:33:43 opfer Exp $
 
 inherit depend.php eutils webapp
 
@@ -11,7 +11,7 @@ SRC_URI="http://websvn.tigris.org/files/documents/1380/39378/websvn-${MY_PV}.tar
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 IUSE="enscript"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc x86"
 
 RDEPEND="virtual/php
 	dev-util/subversion

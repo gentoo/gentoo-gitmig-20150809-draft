@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.17 2007/05/15 14:22:04 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.18 2007/08/14 17:33:43 opfer Exp $
+
+  14 Aug 2007; Christian Faulhammer <opfer@gentoo.org> websvn-2.0.ebuild:
+  stable x86, security bug 180879
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
