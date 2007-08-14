@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/howto-html-single
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.20 2007/08/11 20:06:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.21 2007/08/14 18:20:26 corsair Exp $
+
+  14 Aug 2007; Markus Rothe <corsair@gentoo.org>
+  howto-html-single-20061216.ebuild:
+  Stable on ppc64; bug #188490
 
   11 Aug 2007; Steve Dibb <beandog@gentoo.org>
   howto-html-single-20061216.ebuild:
