@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.17.ebuild,v 1.1 2007/08/08 22:31:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.17.ebuild,v 1.2 2007/08/14 18:55:28 dang Exp $
 
 inherit libtool eutils multilib
 
@@ -23,6 +23,9 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Fix multilib-strict; bug #185294
+	epatch "${FILESDIR}"/${P}-multilib.patch
 
 	# We need to refresh this for the BSD's
 	cp /usr/share/libtool/install-sh .
