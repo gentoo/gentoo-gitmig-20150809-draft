@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-1.0-r3.ebuild,v 1.4 2007/08/13 19:44:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-1.0-r3.ebuild,v 1.5 2007/08/14 18:54:53 corsair Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.kroah.com/linux-usb/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc sparc ~amd64 ~ppc64 ~alpha"
+KEYWORDS="~alpha ~amd64 ~ppc ppc64 sparc ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2"
