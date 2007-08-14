@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.86 2007/08/05 18:09:52 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.87 2007/08/14 04:24:40 je_fro Exp $
+
+*ati-drivers-8.40.4 (14 Aug 2007)
+
+  14 Aug 2007; <jeff@gentoo.org> +files/8.40.4/ati-drivers-2.6.23.patch,
+  +files/8.40.4/ati-drivers-8.40.4-warnings.patch,
+  +ati-drivers-8.40.4.ebuild:
+  revbump thanks to Jory Pratt
 
   05 Aug 2007; Jeff Gardner <je_fro@gentoo.org> ati-drivers-8.39.4.ebuild:
   Change to 'sh ${src}' instead of chmodding wrt bug #187821
