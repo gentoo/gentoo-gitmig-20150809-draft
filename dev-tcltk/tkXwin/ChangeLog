@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkXwin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.15 2007/07/22 07:32:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.16 2007/08/14 12:57:34 fmccor Exp $
+
+  14 Aug 2007; Ferris McCormick <fmccor@gentoo.org> tkXwin-1.0-r1.ebuild:
+  Sparc stable --- builds and works as expected.
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> tkXwin-1.0-r1.ebuild:
   Drop virtual/x11 references.
