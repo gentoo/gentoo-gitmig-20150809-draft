@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7584 2007/08/14 07:37:38 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7585 2007/08/14 16:58:15 robbat2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Robin H. Johnson <robbat2@gentoo.org> (14 Aug 2007)
+# Mask pending removal per mail to -dev.
+# You must move to sa-update instead, read -dev for more information.
+mail-filter/spamassassin-ruledujour
 
 # Jeff Gardner <je_fro@gentoo.org> (14 Aug 2007)
 # Annoying watermark shows on testing versions.

@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.570 2007/08/14 07:37:38 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.571 2007/08/14 16:58:15 robbat2 Exp $
+
+  14 Aug 2007; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  Mask mail-filter/spamassassin-ruledujour pending removal. See mail to -dev
+  about moving to sa-update instead.
 
   14 Aug 2007; Jeff Gardner <je_fro@gentoo.org> package.mask:
   Mask testing ati-drivers because of annoying watermark.
