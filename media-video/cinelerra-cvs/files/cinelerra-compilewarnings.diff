@@ -1,0 +1,51 @@
+--- cinelerra-cvs/libmpeg3/audio/mpeg3audio.c	2007-01-29 22:36:44.000000000 +0100
++++ cinelerra-cvs-1/libmpeg3/audio/mpeg3audio.c	2007-07-31 21:13:30.000000000 +0200
+@@ -3,7 +3,7 @@
+ 
+ #include <math.h>
+ #include <stdlib.h>
+-
++#include <string.h>
+ 
+ 
+ 
+--- cinelerra-cvs/libmpeg3/video/subtitle.c	2007-01-29 22:36:48.000000000 +0100
++++ cinelerra-cvs-1/libmpeg3/video/subtitle.c	2007-07-31 21:15:47.000000000 +0200
+@@ -2,6 +2,7 @@
+ #include "mpeg3protos.h"
+ 
+ #include <stdlib.h>
++#include <string.h>
+ 
+ static unsigned char get_nibble(unsigned char **ptr, int *nibble)
+ {
+--- cinelerra-cvs/quicktime/interlacemodes.c	2007-01-29 22:35:57.000000000 +0100
++++ cinelerra-cvs-1/quicktime/interlacemodes.c	2007-07-31 21:18:22.000000000 +0200
+@@ -17,6 +17,7 @@
+ 
+ #include <stdlib.h>
+ #include <stdint.h>
++#include <string.h>
+ 
+ #ifndef HAVE_STDINT_H
+ #define HAVE_STDINT_H
+--- cinelerra-cvs/mpeg2enc/putbits.c	2007-01-29 22:36:44.000000000 +0100
++++ cinelerra-cvs-1/mpeg2enc/putbits.c	2007-07-31 21:19:40.000000000 +0200
+@@ -28,6 +28,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <string.h>
+ #include "config.h"
+ #include "global.h"
+ 
+--- cinelerra-cvs/mpeg2enc/readpic.c	2007-01-29 22:36:44.000000000 +0100
++++ cinelerra-cvs-1/mpeg2enc/readpic.c	2007-07-31 21:20:31.000000000 +0200
+@@ -29,6 +29,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include "colormodels.h"
+ #include "config.h"
+ #include "global.h"

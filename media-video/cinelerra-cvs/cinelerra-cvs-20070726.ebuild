@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20070726.ebuild,v 1.1 2007/07/26 03:52:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20070726.ebuild,v 1.2 2007/08/14 13:49:04 hanno Exp $
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -65,6 +65,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/recentffmpeg.patch"
 	epatch "${FILESDIR}/${PN}-swscaler.patch"
+	epatch "${FILESDIR}/cinelerra-compilewarnings.diff"
 }
 
 src_compile() {

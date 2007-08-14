@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cinelerra-cvs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.32 2007/07/26 03:52:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.33 2007/08/14 13:49:04 hanno Exp $
+
+  14 Aug 2007; Hanno Boeck <hanno@gentoo.org>
+  +files/cinelerra-compilewarnings.diff, cinelerra-cvs-20070726.ebuild:
+  Fix QA warnings, patch sent upstream.
 
 *cinelerra-cvs-20070726 (26 Jul 2007)
 
