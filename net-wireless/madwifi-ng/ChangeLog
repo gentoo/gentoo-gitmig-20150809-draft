@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.42 2007/08/14 20:05:28 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.43 2007/08/14 21:42:11 ticho Exp $
+
+  14 Aug 2007; Andrej Kacian <ticho@gentoo.org> madwifi-ng-0.9.3.2.ebuild:
+  Stable on x86, security bug #188902.
 
 *madwifi-ng-0.9.3.2 (14 Aug 2007)
 
