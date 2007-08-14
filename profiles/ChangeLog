@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.569 2007/08/14 03:12:51 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.570 2007/08/14 07:37:38 je_fro Exp $
+
+  14 Aug 2007; Jeff Gardner <je_fro@gentoo.org> package.mask:
+  Mask testing ati-drivers because of annoying watermark.
 
   14 Aug 2007; Saleem Abdulrasool <compnerd@gentoo.org> use.local.desc:
   Add useflag for devhelp plugin for anjuta

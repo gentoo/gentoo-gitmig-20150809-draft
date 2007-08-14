@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7583 2007/08/13 19:53:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7584 2007/08/14 07:37:38 je_fro Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jeff Gardner <je_fro@gentoo.org> (14 Aug 2007)
+# Annoying watermark shows on testing versions.
+=x11-drivers/ati-drivers-8.40.4
 
 # Raúl Porcel <armin76@gentoo.org> (13 Aug 2007)
 # Vulnerable, unsupported, was supposed to go away
