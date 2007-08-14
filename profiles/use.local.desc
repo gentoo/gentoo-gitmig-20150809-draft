@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2972 2007/08/14 16:03:48 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2973 2007/08/14 21:53:57 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -557,7 +557,6 @@ dev-python/paste:flup - enable support for flup (and therefore for various wgsi 
 dev-python/paste:openid - enable OpenID support
 dev-python/psycopg:mxdatetime - choose MX DateTime support instead of built-in datetime
 dev-python/pycairo:numeric - enable Numeric support
-dev-python/pykde:kjs - include the kjs module (don't enable, if unsure)
 dev-python/pyzor:pyzord - enable support for pyzord
 dev-python/soya:ode - include support for Open Dynamics Engine
 dev-python/twisted:serial - include serial port support
