@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/freetds
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.39 2007/07/16 15:10:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.40 2007/08/14 10:53:54 hkbst Exp $
+
+  14 Aug 2007; Marijn Schouten <hkBst@gentoo.org> freetds-0.62.3.ebuild,
+  freetds-0.64.ebuild:
+  restrict tests, bug 143021
 
   16 Jul 2007; Raúl Porcel <armin76@gentoo.org> freetds-0.64.ebuild:
   alpha/ia64 stable
