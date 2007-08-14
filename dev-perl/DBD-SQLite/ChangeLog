@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.57 2007/05/06 15:41:57 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.58 2007/08/14 12:28:51 ian Exp $
+
+  14 Aug 2007; Christian Hartmann <ian@gentoo.org> +DBD-SQLite-1.12.ebuild:
+  Resurrect 1.12; bug #188811
 
   06 May 2007; Christian Hartmann <ian@gentoo.org>
   +DBD-SQLite-0.31-r1.ebuild:
