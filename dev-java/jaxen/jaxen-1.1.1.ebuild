@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1.1.ebuild,v 1.3 2007/08/07 15:04:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1.1.ebuild,v 1.4 2007/08/14 07:31:38 opfer Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 
@@ -13,7 +13,7 @@ SRC_URI="http://dist.codehaus.org/${PN}/distributions/${MY_P}-src.tar.gz"
 
 LICENSE="jaxen"
 SLOT="1.1"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc source test"
 
 COMMON_DEP="~dev-java/jdom-1.0
