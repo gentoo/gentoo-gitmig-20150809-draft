@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.46 2007/08/14 12:50:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.47 2007/08/14 14:47:21 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -328,7 +328,7 @@ vdr-plugin_src_install() {
 
 	if [[ -n ${VDR_MAINTAINER_MODE} ]]; then
 		local mname=${P}-Makefile
-		cp Makefile ${mname}.patched
+		cp "${S}"/Makefile ${mname}.patched
 		cp Makefile.before ${mname}.before
 
 		diff -u ${mname}.before ${mname}.patched > ${mname}.diff
