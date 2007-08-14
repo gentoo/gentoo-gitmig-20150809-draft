@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzzub/libzzub-0.2.3.ebuild,v 1.3 2007/07/12 03:10:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzzub/libzzub-0.2.3.ebuild,v 1.4 2007/08/14 13:53:25 hanno Exp $
 
-DESCRIPTION="Media library for Aldrin."
+DESCRIPTION="Music tracking and sequencing library compatible to Jesokla Buzz"
 HOMEPAGE="http://trac.zeitherrschaft.org/zzub/"
 SRC_URI="mirror://sourceforge/aldrin/${P}.tar.bz2"
 LICENSE="GPL-2"
