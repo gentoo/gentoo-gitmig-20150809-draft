@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-1.10.2.ebuild,v 1.4 2007/08/11 14:57:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-1.10.2.ebuild,v 1.5 2007/08/14 18:15:31 dertobi123 Exp $
 
 inherit webapp eutils depend.php
 
@@ -10,7 +10,7 @@ DESCRIPTION="Multilingual multiuser multi-blog engine"
 HOMEPAGE="http://www.b2evolution.net"
 SRC_URI="mirror://sourceforge/evocms/${P}${MY_EXT}.zip"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~ppc x86"
+KEYWORDS="alpha amd64 ppc x86"
 IUSE=""
 RDEPEND="virtual/httpd-php"
 
