@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/yaggui/yaggui-0.9.2.ebuild,v 1.1 2007/06/09 11:35:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/yaggui/yaggui-0.9.2.ebuild,v 1.2 2007/08/14 08:19:02 opfer Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://yaggui.sourceforge.net/"
 SRC_URI="mirror://sourceforge/yaggui/${MY_P/y/Y}.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 COMMON_DEP="=dev-java/jgoodies-looks-1.2*"
@@ -32,6 +32,7 @@ src_unpack() {
 	sed -e '/<unzip/d' -i build.xml || die
 	rm -v lib/*.jar || die
 	java-pkg_jar-from jgoodies-looks-1.2 looks.jar lib/plastic-1.1.2.jar
+	java-pkg_filter-compiler jikes
 }
 
 src_install() {
