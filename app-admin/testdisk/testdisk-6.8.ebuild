@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.7.ebuild,v 1.2 2007/07/13 06:07:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.8.ebuild,v 1.1 2007/08/14 11:50:09 dragonheart Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Multi-platform tool to check and undelete partition, supports reiserfs, ntfs, fat32, ext2/3 and many others. Also includes PhotoRec to recover pictures from digital camera memory."
 HOMEPAGE="http://www.cgsecurity.org/wiki/TestDisk"
@@ -20,11 +20,6 @@ DEPEND=">=sys-libs/ncurses-5.2
 	  	>=sys-fs/e2fsprogs-1.35"
 RDEPEND="!static? ( ${DEPEND} )"
 
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}"/${P}-constdef.patch
-}
-
 src_compile() {
 	local myconf="--without-ewf"
 	# --with-foo are broken, any use of --with/--without disable the
@@ -33,6 +28,10 @@ src_compile() {
 	use reiserfs || myconf="${myconf} --without-reiserfs"
 	use ntfs || myconf="${myconf} --without-ntfs"
 	use jpeg || myconf="${myconf} --without-jpeg"
+
+	# this is static method is the same used by upstream for their 'static' make
+	# target, but better, as it doesn't break.
+	use static && append-ldflags -static
 
 	econf ${myconf} || die
 
@@ -46,10 +45,6 @@ src_compile() {
 	if useq jpeg && egrep -q 'undef HAVE_LIBJPEG\>' ${S}/config.h ; then
 		die "Failed to find jpeg library."
 	fi
-
-	# this is static method is the same used by upstream for their 'static' make
-	# target, but better, as it doesn't break.
-	use static && append-ldflags -static
 
 	emake || die
 }
