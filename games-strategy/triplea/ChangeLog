@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/triplea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.34 2007/07/24 07:54:31 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.35 2007/08/14 05:24:19 wltjr Exp $
+
+  14 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  triplea-0.9.0.2-r1.ebuild:
+  amd64 stable, bug #186078
 
   24 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   triplea-0.9.0.2-r1.ebuild:

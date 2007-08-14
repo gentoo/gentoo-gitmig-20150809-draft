@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.9.0.2-r1.ebuild,v 1.3 2007/07/24 07:54:31 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.9.0.2-r1.ebuild,v 1.4 2007/08/14 05:24:19 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2 versionator games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${MY_PV}_source_code_only.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="=dev-java/jgoodies-looks-2*
