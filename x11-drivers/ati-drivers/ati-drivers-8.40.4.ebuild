@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.40.4.ebuild,v 1.1 2007/08/14 04:24:40 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.40.4.ebuild,v 1.2 2007/08/14 18:10:08 je_fro Exp $
 
 IUSE="acpi multilib"
 
@@ -287,7 +287,7 @@ src_install() {
 	# etc.
 	insinto /etc/ati
 	# Everything except for the authatieventsd.sh script.
-	doins common/etc/ati/{fglrxprofiles.csv,fglrxrc,logo*,control,atiogl.xml}
+	doins common/etc/ati/{fglrxprofiles.csv,fglrxrc,logo*,control,atiogl.xml,signature}
 	if use acpi; then
 		doins common/etc/ati/authatieventsd.sh
 	fi
