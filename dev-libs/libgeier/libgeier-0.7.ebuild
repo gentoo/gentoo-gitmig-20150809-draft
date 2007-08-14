@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.5.2.ebuild,v 1.2 2007/07/12 02:25:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.7.ebuild,v 1.1 2007/08/14 15:24:15 wrobel Exp $
 
 inherit versionator
 
@@ -9,13 +9,12 @@ MY_PV=$(replace_version_separator 2 '-')
 
 DESCRIPTION="Libgeier provides a library to access the german digital tax project ELSTER."
 HOMEPAGE="http://www.taxbird.de/"
-
 SRC_URI="http://www.taxbird.de/download/${PN}/${MY_PVD}/${PN}-${MY_PV}.tar.gz"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
@@ -24,6 +23,7 @@ dev-libs/openssl
 dev-libs/libxml2
 dev-libs/libxslt
 dev-libs/xmlsec
+net-libs/xulrunner
 sys-libs/zlib"
 
 src_compile() {
@@ -37,6 +37,6 @@ src_install() {
 
 	dodoc README
 
-	einstall || die "Installation failed!"
+	emake DESTDIR="${D}" install || die "Installation failed!"
 
 }
