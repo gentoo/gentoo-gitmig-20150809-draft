@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.11 2007/07/22 07:05:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.12 2007/08/14 03:37:21 markusle Exp $
+
+  14 Aug 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/plplot-5.5.2-macro-fix.patch, plplot-5.5.2.ebuild:
+  Fixed problems with octave files and added a patch to correct
+  a bug in a C macro (see bug #182949).
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; plplot-5.5.2.ebuild:
   Drop virtual/x11 references.

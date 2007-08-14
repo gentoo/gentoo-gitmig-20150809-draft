@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.9 2007/07/22 07:05:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.10 2007/08/14 03:37:21 markusle Exp $
 
 inherit eutils
 
@@ -59,9 +59,16 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# Fix compilation problems on GCC 3.4 and the octave bindings, thanks to the
-	# patch from Debian's BTS bug 274359.
+	# Fix compilation problems on GCC 3.4 and the octave 
+	# bindings, thanks to the patch from Debian's BTS bug 274359.
 	epatch ${FILESDIR}/${PN}-5.5.1-gcc-3.4-fix.patch
+	epatch ${FILESDIR}/${P}-macro-fix.patch
+
+	# properly detect octave 2.9.x
+	sed -e "s:filepath:filedir:" \
+		-e "s:plplot_octave$:plplot/octave:" \
+		-i configure \
+		|| die "Failed to make configure octave 2.9.x aware"
 }
 
 src_compile() {
@@ -154,14 +161,6 @@ src_install() {
 	if use java; then
 		mv ${D}/usr/lib/java/plplot ${D}/usr/share/${PN}/lib
 		rm -r ${D}/usr/lib/java
-	fi
-	if use octave; then
-		# fix the path to plplot's .m files
-		mv ${D}/usr/share/plplot_octave ${D}/usr/share/plplot/octave || die \
-			"Error moving octave files."
-		sed -i -e 's|/usr/share/plplot_octave|/usr/share/plplot/octave|' \
-			${D}/usr/share/octave/site/m/PLplot/plplot_octave_path.m \
-			|| die "sed replacement of octave path failed."
 	fi
 
 	# Fix permissions and gzip the basic documentation.
