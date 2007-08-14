@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.3.ebuild,v 1.1 2007/08/13 15:16:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.3.ebuild,v 1.2 2007/08/14 21:44:55 mr_bones_ Exp $
 
 inherit eutils flag-o-matic autotools qt4
 
@@ -36,7 +36,6 @@ src_unpack() {
 	# fix 64bits pointer
 	epatch "${FILESDIR}"/${P}-pointer.patch
 }
-
 
 src_compile() {
 	# -O3 won't compile for freemat-3.2
