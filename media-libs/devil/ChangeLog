@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/devil
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.28 2007/06/06 03:57:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.29 2007/08/14 17:20:57 nyhm Exp $
+
+*devil-1.6.7-r2 (14 Aug 2007)
+
+  14 Aug 2007; Tristan Heaven <nyhm@gentoo.org> +devil-1.6.7-r2.ebuild:
+  Revision bump for gcc-4.2 patch
 
   06 Jun 2007; Michael Sterrett <mr_bones_@gentoo.org>
   +files/devil-1.6.7-gcc42.patch, devil-1.6.7-r1.ebuild:
