@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.183 2007/08/14 18:02:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.184 2007/08/14 18:24:25 dertobi123 Exp $
+
+  14 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  php-5.2.4_pre200708051230-r2.ebuild:
+  ppc stable, bug #180556
 
   14 Aug 2007; Markus Rothe <corsair@gentoo.org>
   php-5.2.4_pre200708051230-r2.ebuild:
