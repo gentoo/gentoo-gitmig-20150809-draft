@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.568 2007/08/13 10:04:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.569 2007/08/14 03:12:51 compnerd Exp $
+
+  14 Aug 2007; Saleem Abdulrasool <compnerd@gentoo.org> use.local.desc:
+  Add useflag for devhelp plugin for anjuta
 
   13 Aug 2007; Peter Volkov <pva@gentoo.org> package.mask:
   Unmask app-emulation/uae.
