@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/sax-2.2.1-r2.ebuild,v 1.5 2007/08/13 08:12:37 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/sax-2.2.1-r2.ebuild,v 1.6 2007/08/14 07:54:11 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://sax.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sax/sax2r3.zip"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4
 		app-arch/unzip"
