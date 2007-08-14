@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/jmeter
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.28 2007/08/03 22:38:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.29 2007/08/14 08:39:00 opfer Exp $
+
+  14 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  jmeter-2.0.1-r2.ebuild:
+  stable x86, bug 187665; filter jikes
 
   03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> -jmeter-2.0.1.ebuild,
   -jmeter-2.0.1-r1.ebuild:

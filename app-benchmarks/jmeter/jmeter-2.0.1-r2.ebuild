@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r2.ebuild,v 1.1 2007/05/05 20:48:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r2.ebuild,v 1.2 2007/08/14 08:39:00 opfer Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -20,7 +20,7 @@ RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="beanshell doc"
 
 S=${WORKDIR}/jakarta-${P}
@@ -34,6 +34,7 @@ src_unpack() {
 	java-pkg_jar-from bsf-2.3
 	java-pkg_jar-from junit
 	java-pkg_jar-from sun-javamail
+	java-pkg_filter-compiler jikes
 }
 
 src_compile() {
