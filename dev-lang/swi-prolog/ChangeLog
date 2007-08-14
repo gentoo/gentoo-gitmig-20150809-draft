@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.102 2007/08/14 07:24:07 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.103 2007/08/14 08:40:40 keri Exp $
+
+  14 Aug 2007; keri <keri@gentoo.org> files/digest-swi-prolog-5.6.37,
+  files/digest-swi-prolog-5.6.38, Manifest:
+  Handle concurrent goals in first_solution/3 predicate.
 
   14 Aug 2007; keri <keri@gentoo.org> swi-prolog-5.6.37.ebuild,
   swi-prolog-5.6.38.ebuild:
