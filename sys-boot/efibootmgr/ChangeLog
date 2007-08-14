@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/efibootmgr
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/ChangeLog,v 1.14 2007/07/11 14:18:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/ChangeLog,v 1.15 2007/08/14 21:26:02 wolf31o2 Exp $
+
+  14 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  efibootmgr-0.5.3.ebuild:
+  Modified to use the same built_with_use logic as other ebuilds in the tree
+  and added --missing as reported on bug #188221.
 
   11 Jul 2007; Raúl Porcel <armin76@gentoo.org> efibootmgr-0.5.3.ebuild:
   Fix build failure if pciutils is built with zlib, thanks to Alexander
