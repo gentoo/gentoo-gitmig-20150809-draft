@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tre
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.27 2007/08/14 18:10:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.28 2007/08/14 18:58:26 corsair Exp $
+
+  14 Aug 2007; Markus Rothe <corsair@gentoo.org> tre-0.7.4.ebuild:
+  Stable on ppc64; bug #188698
 
   14 Aug 2007; Raúl Porcel <armin76@gentoo.org> tre-0.7.4.ebuild:
   alpha stable wrt security #188698
