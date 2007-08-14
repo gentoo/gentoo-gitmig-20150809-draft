@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gnome-vfsmm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.42 2007/03/28 00:57:19 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.43 2007/08/14 13:53:32 gustavoz Exp $
+
+  14 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-vfsmm-2.18.0.ebuild:
+  Stable on sparc
 
 *gnome-vfsmm-2.18.0 (28 Mar 2007)
 
