@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.101 2007/08/11 21:56:19 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.102 2007/08/14 07:24:07 keri Exp $
+
+  14 Aug 2007; keri <keri@gentoo.org> swi-prolog-5.6.37.ebuild,
+  swi-prolog-5.6.38.ebuild:
+  Do not run rational-arithmetic rfc2202 tests with -gmp in USE variable
 
   11 Aug 2007; keri <keri@gentoo.org> swi-prolog-5.6.37.ebuild,
   swi-prolog-5.6.38.ebuild:
