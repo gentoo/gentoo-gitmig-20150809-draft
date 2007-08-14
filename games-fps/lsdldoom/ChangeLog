@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/lsdldoom
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/ChangeLog,v 1.11 2007/02/21 23:41:07 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/ChangeLog,v 1.12 2007/08/14 19:50:14 nyhm Exp $
+
+*lsdldoom-1.4.4.4-r1 (14 Aug 2007)
+
+  14 Aug 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/lsdldoom-1.4.4.4-keys.patch, +lsdldoom-1.4.4.4-r1.ebuild:
+  Patch for broken key configuration, bug #103324
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
