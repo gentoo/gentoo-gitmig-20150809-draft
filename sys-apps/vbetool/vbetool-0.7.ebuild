@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/vbetool-0.7.ebuild,v 1.2 2007/06/22 17:59:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/vbetool-0.7.ebuild,v 1.3 2007/08/14 21:21:48 wolf31o2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -26,7 +26,7 @@ src_compile() {
 	if use zlib
 	then
 		append-ldflags -lz
-	elif built_with_use sys-apps/pciutils zlib
+	elif built_with_use --missing false sys-apps/pciutils zlib
 	then
 		die "You need to build with USE=zlib to match sys-apps/pcituils"
 	fi

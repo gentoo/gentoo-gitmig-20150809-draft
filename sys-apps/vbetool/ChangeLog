@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/vbetool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.9 2007/06/22 17:59:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.10 2007/08/14 21:21:48 wolf31o2 Exp $
+
+  14 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> vbetool-0.7.ebuild:
+  Added a --missing false since not all versions of pciutils support the zlib
+  USE flag. This was reported to bug #188221 by Åsmund Grammeltvedt
+  <asmundg@big-oil.org>.
 
   22 Jun 2007; Chris Gianelloni <wolf31o2@gentoo.org> vbetool-0.7.ebuild:
   Added USE=zlib and a check on sys-apps/pciutils so we'll link with zlib when
