@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.47 2007/08/14 08:48:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.48 2007/08/14 17:37:37 armin76 Exp $
+
+  14 Aug 2007; Raúl Porcel <armin76@gentoo.org> abs-guide-5.0.ebuild:
+  alpha stable wrt #188490
 
   14 Aug 2007; Christian Faulhammer <opfer@gentoo.org> abs-guide-5.0.ebuild:
   stable x86, bug 188490
