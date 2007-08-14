@@ -8,7 +8,7 @@ depend() {
 
 start() {
 	ebegin "Starting DenyHosts daemon"
-	start-stop-daemon --start --exec /usr/bin/denyhosts -- --daemon -c /etc/denyhosts.conf
+	start-stop-daemon --name denyhosts --start --exec /usr/bin/denyhosts -- --daemon -c /etc/denyhosts.conf
 	eend $?
 }
 

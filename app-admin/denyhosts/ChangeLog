@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.26 2007/05/13 08:08:11 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.27 2007/08/14 18:10:41 strerror Exp $
+
+  14 Aug 2007; Benjamin Smee <strerror@gentoo.org> files/denyhosts.init:
+  fix for bug #174501
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add herd
