@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.327 2007/08/14 20:43:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.328 2007/08/14 20:51:13 angelos Exp $
+
+  14 Aug 2007; Christoph Mende <angelos@gentoo.org> udev-114.ebuild:
+  Stable on amd64 wrt bug #188796
 
   14 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> udev-114.ebuild:
   Stable on sparc wrt #188796
