@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.66 2007/07/25 18:01:36 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.67 2007/08/14 20:13:40 peper Exp $
+
+*paludis-0.24.6 (14 Aug 2007)
+
+  14 Aug 2007; Piotr Jaroszyński <peper@gentoo.org> +paludis-0.24.6.ebuild:
+  Add 0.24.6.
 
   25 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> paludis-0.24.5.ebuild:
   Fix deps.
