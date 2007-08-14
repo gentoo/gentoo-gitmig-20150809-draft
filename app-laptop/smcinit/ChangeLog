@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/smcinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/ChangeLog,v 1.7 2007/06/22 18:14:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/ChangeLog,v 1.8 2007/08/14 20:54:41 wolf31o2 Exp $
+
+  14 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> smcinit-0.4.ebuild:
+  Added a --missing false since not all versions of pciutils support the zlib
+  USE flag. This was reported to bug #188221 by Åsmund Grammeltvedt
+  <asmundg@big-oil.org>.
 
   22 Jun 2007; Chris Gianelloni <wolf31o2@gentoo.org> smcinit-0.4.ebuild:
   I forgot to add the DEPEND on sys-libs/zlib.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/smcinit-0.4.ebuild,v 1.7 2007/06/22 18:14:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/smcinit-0.4.ebuild,v 1.8 2007/08/14 20:54:41 wolf31o2 Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_compile()
 	if use zlib
 	then
 		LIBS="-lpci -lz"
-	elif built_with_use sys-apps/pciutils zlib
+	elif built_with_use --missing false sys-apps/pciutils zlib
 	then
 		die "You need to build with USE=zlib to match sys-apps/pcituils"
 	fi
