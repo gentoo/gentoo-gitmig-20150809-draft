@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sablecc-anttask
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc-anttask/ChangeLog,v 1.7 2007/06/20 17:52:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc-anttask/ChangeLog,v 1.8 2007/08/14 08:45:33 opfer Exp $
+
+  14 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  sablecc-anttask-1.1.0-r1.ebuild:
+  stable x86, bug 187668
 
 *sablecc-anttask-1.1.0-r1 (20 Jun 2007)
 
