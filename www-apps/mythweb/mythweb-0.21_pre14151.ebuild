@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.21_pre14151.ebuild,v 1.1 2007/08/10 21:01:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.21_pre14151.ebuild,v 1.2 2007/08/14 18:53:46 cardoe Exp $
 
 inherit mythtv webapp depend.php subversion
 
@@ -38,11 +38,13 @@ src_install() {
 	dodir ${MY_HTDOCSDIR}/data
 
 	cp -R ${S}/${PN}/[[:lower:]]* ${D}${MY_HTDOCSDIR}
-	cp ${S}/mythweb.conf.apache ${MY_SERVERCONFIGDIR}/
+	cp ${S}/${PN}/mythweb.conf.apache ${MY_SERVERCONFIGDIR}/
+	cp ${S}/${PN}/mythweb.conf.lighttpd ${MY_SERVERCONFIGDIR}/
 
 	webapp_serverowned ${MY_HTDOCSDIR}/data
 
 	webapp_configfile ${MY_SERVERCONFIGDIR}/mythweb.conf.apache
+	webapp_configfile ${MY_SERVERCONFIGDIR}/mythweb.conf.lighttpd
 
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en-0.21.txt
 

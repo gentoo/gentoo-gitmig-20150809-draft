@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.40 2007/08/10 21:01:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.41 2007/08/14 18:53:46 cardoe Exp $
+
+  14 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythweb-0.21_pre14151.ebuild:
+  fix path to apache config file. install lighttpd config file as well.
 
 *mythweb-0.21_pre14151 (10 Aug 2007)
 
