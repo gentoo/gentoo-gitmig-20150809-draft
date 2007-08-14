@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libkudzu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.29 2007/08/13 21:55:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.30 2007/08/14 21:27:56 wolf31o2 Exp $
+
+  14 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  libkudzu-1.1.62-r1.ebuild, libkudzu-1.2.57.1.ebuild:
+  Added a --missing false since not all versions of pciutils support the zlib
+  USE flag. This was reported to bug #188221 by Åsmund Grammeltvedt
+  <asmundg@big-oil.org>.
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   libkudzu-1.2.57.1.ebuild:
