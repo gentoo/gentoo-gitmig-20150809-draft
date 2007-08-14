@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.9.ebuild,v 1.13 2006/10/31 01:11:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.9.ebuild,v 1.14 2007/08/14 15:37:11 strerror Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="crypt"
 DEPEND=">=sys-apps/dbus-0.33
 	>=sys-apps/hal-0.5.2
 	>=sys-fs/sysfsutils-1.3.0
-	crypt? ( sys-fs/cryptsetup-luks )"
+	crypt? ( || ( >=sys-fs/cryptsetup-1.0.5 sys-fs/cryptsetup-luks ) )"
 
 pkg_setup() {
 	enewgroup plugdev
