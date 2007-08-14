@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7585 2007/08/14 16:58:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7586 2007/08/14 20:34:58 nyhm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Tristan Heaven <nyhm@gentoo.org> (14 Aug 2007)
+# Breaks games-rpg/tmw-0.0.23
+# https://bugs.gentoo.org/show_bug.cgi?id=188753
+>=dev-games/guichan-0.7
 
 # Robin H. Johnson <robbat2@gentoo.org> (14 Aug 2007)
 # Mask pending removal per mail to -dev.
