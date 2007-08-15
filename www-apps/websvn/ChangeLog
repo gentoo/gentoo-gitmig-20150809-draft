@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.18 2007/08/14 17:33:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.19 2007/08/15 19:54:10 wrobel Exp $
+
+  15 Aug 2007; <wrobel@gentoo.org> -websvn-1.61.ebuild:
+  Removed vulnerable websvn-1.61.
 
   14 Aug 2007; Christian Faulhammer <opfer@gentoo.org> websvn-2.0.ebuild:
   stable x86, security bug 180879
