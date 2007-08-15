@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.67 2007/06/11 15:50:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.68 2007/08/15 11:29:16 opfer Exp $
+
+  15 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  netbeans-5.5-r6.ebuild:
+  stable x86, bug 187681
 
   11 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> netbeans-5.5-r6.ebuild:
   Remove build requirement on sun-jmx as Netbeans builds just fine with the
