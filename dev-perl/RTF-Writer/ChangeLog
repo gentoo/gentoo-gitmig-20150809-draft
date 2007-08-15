@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/RTF-Writer
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RTF-Writer/ChangeLog,v 1.1 2007/08/15 18:16:30 ian Exp $
+
+*RTF-Writer-1.11 (15 Aug 2007)
+
+  15 Aug 2007; Christian Hartmann <ian@gentoo.org> +metadata.xml,
+  +RTF-Writer-1.11.ebuild:
+  New package
+
