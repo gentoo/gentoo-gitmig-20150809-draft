@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.123 2007/08/15 14:23:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.124 2007/08/15 14:29:30 jer Exp $
+
+  15 Aug 2007; Jeroen Roovers <jer@gentoo.org> -opera-9.23_rc657.ebuild,
+  -opera-9.23_rc660.ebuild:
+  Remove weeklies now the final is out.
 
 *opera-9.23 (15 Aug 2007)
 
