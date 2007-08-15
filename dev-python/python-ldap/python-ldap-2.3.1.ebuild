@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.ebuild,v 1.1 2007/03/28 15:58:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.1.ebuild,v 1.1 2007/08/15 11:12:27 dev-zero Exp $
 
-NEED_PYTHON=2.0
+NEED_PYTHON=2.4
 
 inherit distutils multilib
 
@@ -18,7 +18,8 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc examples sasl ssl"
 
 DEPEND=">=net-nds/openldap-2.3
-	sasl? ( dev-libs/cyrus-sasl )"
+	sasl? ( dev-libs/cyrus-sasl )
+	dev-python/setuptools"
 RDEPEND="${DEPEND}"
 
 # Installs some script-files directly in site-packages
