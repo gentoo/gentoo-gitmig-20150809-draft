@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.128 2007/07/28 22:40:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.129 2007/08/15 14:07:18 beandog Exp $
+
+*icewm-1.2.32 (15 Aug 2007)
+
+  15 Aug 2007; Steve Dibb <beandog@gentoo.org> +icewm-1.2.32.ebuild:
+  Version bump, bug 188951
 
 *icewm-1.2.30-r1 (28 Jul 2007)
 
