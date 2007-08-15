@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtkglext
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.34 2007/08/07 14:34:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.35 2007/08/15 04:17:51 jer Exp $
+
+  15 Aug 2007; Jeroen Roovers <jer@gentoo.org> pygtkglext-1.1.0.ebuild:
+  Stable for HPPA (bug #187656).
 
   07 Aug 2007; Markus Rothe <corsair@gentoo.org> pygtkglext-1.1.0.ebuild:
   Stable on ppc64; bug #187656
