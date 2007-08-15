@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/ChangeLog,v 1.11 2007/08/15 15:35:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/ChangeLog,v 1.12 2007/08/15 15:37:14 betelgeuse Exp $
+
+  15 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  jldap-20060300.ebuild:
+  Shorten description and remove trailing white space from metadata.xml.
 
   15 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> jldap-20060300.ebuild:
   Switch to java-pkg_dojavadoc so that they are installed to the right

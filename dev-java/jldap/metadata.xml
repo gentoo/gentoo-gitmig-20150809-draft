@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>java</herd>
 <longdescription>
-The LDAP Class Libraries for Java (JLDAP) enable you to write applications to 
-access, manage, update, and search for information stored in directories 
+The LDAP Class Libraries for Java (JLDAP) enable you to write applications to
+access, manage, update, and search for information stored in directories
 accessible using LDAPv3. JLDAP was developed by Novell.
 </longdescription>
 </pkgmetadata>

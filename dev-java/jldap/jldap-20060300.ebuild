@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20060300.ebuild,v 1.4 2007/08/15 15:35:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20060300.ebuild,v 1.5 2007/08/15 15:37:14 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="The LDAP Class Libraries for Java (JLDAP) enable you to write applications to access, manage, update, and search for information stored in directories accessible using LDAPv3."
+DESCRIPTION="LDAP Class Libraries for Java (JLDAP)"
 HOMEPAGE="http://www.openldap.org/jldap/"
 SRC_URI="mirror://gentoo/jldap-Mar_ndk_2006-gentoo.tar.bz2"
 
