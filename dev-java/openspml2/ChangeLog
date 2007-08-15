@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/openspml2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml2/ChangeLog,v 1.4 2007/08/11 21:31:27 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml2/ChangeLog,v 1.5 2007/08/15 22:01:58 wltjr Exp $
+
+  15 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  openspml2-1.0_rc2.ebuild:
+  amd64 stable, bug #186196.
 
   11 Aug 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
   Remove myself from <maintainer>.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/openspml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml/ChangeLog,v 1.4 2007/08/15 15:29:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml/ChangeLog,v 1.5 2007/08/15 22:00:53 wltjr Exp $
+
+  15 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  openspml-0.5.ebuild:
+  amd64 stable, bug #186196.
 
   15 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> openspml-0.5.ebuild:
   Switch to java-pkg_dojavadoc. Problem found in bug #186196. Add
