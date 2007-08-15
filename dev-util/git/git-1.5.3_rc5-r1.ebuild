@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.3_rc5.ebuild,v 1.1 2007/08/15 12:00:03 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.3_rc5-r1.ebuild,v 1.1 2007/08/15 23:20:15 ferdy Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -70,6 +70,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	epatch "${FILESDIR}"/${P}-read-tree.patch
 	epatch "${FILESDIR}"/${PN}-1.5.3-symlinks.patch
 
 	sed -i \
