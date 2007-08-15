@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.58 2007/08/15 18:33:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.59 2007/08/15 23:46:44 philantrop Exp $
+
+  15 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  ktorrent-2.1.4.ebuild:
+  Marked stable on amd64 as per bug 188823.
 
   15 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> ktorrent-2.1.4.ebuild:
   Stable on sparc wrt #188823
