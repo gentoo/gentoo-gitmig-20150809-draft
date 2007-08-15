@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/splash-themes-livecd-2007.0.ebuild,v 1.2 2007/05/08 23:05:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/splash-themes-livecd-2007.0.ebuild,v 1.3 2007/08/15 10:01:40 zzam Exp $
 
 inherit eutils
 
@@ -26,6 +26,12 @@ pkg_setup() {
 		ewarn "MNG support is missing from splashutils.  You will not see the"
 		ewarn "service icons as services are starting."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -e 's-/sbin/functions.sh-/etc/init.d/functions.sh-' scripts/rc_init-pre
 }
 
 src_install() {

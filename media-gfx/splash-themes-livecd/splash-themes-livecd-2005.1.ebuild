@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/splash-themes-livecd-2005.1.ebuild,v 1.4 2007/02/15 15:23:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/splash-themes-livecd-2005.1.ebuild,v 1.5 2007/08/15 10:01:40 zzam Exp $
 
 MY_P="gentoo-livecd-${PV}"
 MY_REV="0.9.2"
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i -e '/^\/bin\/umount -l "\/etc\/splash\/${SPLASH_THEME}"$/s/^\(.*\)$/\1 \&>\/dev\/null/' scripts/rc_exit-post
+	sed -i -e 's-/sbin/functions.sh-/etc/init.d/functions.sh-' scripts/rc_init-pre
 }
 
 src_install() {

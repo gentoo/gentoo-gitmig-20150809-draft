@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/splash-themes-livecd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/ChangeLog,v 1.14 2007/05/08 23:05:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/ChangeLog,v 1.15 2007/08/15 10:01:40 zzam Exp $
+
+  15 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  splash-themes-livecd-2005.0.ebuild, splash-themes-livecd-2005.1.ebuild,
+  splash-themes-livecd-2006.0.ebuild, splash-themes-livecd-2006.1.ebuild,
+  splash-themes-livecd-2007.0.ebuild:
+  Fixed splash-themes livecd to work with baselayout2 by using
+  /etc/init.d/functions.sh instead of /sbin/functions.sh, bug #177626.
 
   08 May 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   splash-themes-livecd-2007.0.ebuild:
