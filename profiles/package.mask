@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7593 2007/08/15 19:33:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7594 2007/08/15 21:11:06 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (15 Aug 2007)
+# Temporary mask to give arch teams time to keyword
+# media-gfx/raw-thumbnailer
+>=xfce-extra/thunar-thumbnailers-0.3
 
 # Caleb Tennis <caleb@gentoo.org> (15 Aug 2007)
 # Masking for some longer term testing
