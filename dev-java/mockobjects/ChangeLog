@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/mockobjects
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.17 2007/08/05 14:58:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.18 2007/08/15 06:25:12 opfer Exp $
+
+  15 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  mockobjects-0.09-r2.ebuild:
+  stable x86, bug 187629
 
   05 Aug 2007; nixnut <nixnut@gentoo.org> mockobjects-0.09-r2.ebuild:
   Stable on ppc wrt bug 187629
