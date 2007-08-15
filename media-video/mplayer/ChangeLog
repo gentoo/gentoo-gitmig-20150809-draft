@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.506 2007/08/15 06:47:53 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.507 2007/08/15 18:08:49 drac Exp $
+
+  15 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  mplayer-1.0.20070814.ebuild:
+  Flip libdts and libdca deps around, so libdca gets installed over libdts
+  primarily.
 
 *mplayer-1.0.20070814 (14 Aug 2007)
 

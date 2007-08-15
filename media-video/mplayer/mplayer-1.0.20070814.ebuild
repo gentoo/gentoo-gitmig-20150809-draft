@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20070814.ebuild,v 1.1 2007/08/15 06:47:53 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20070814.ebuild,v 1.2 2007/08/15 18:08:49 drac Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -57,7 +57,7 @@ RDEPEND="sys-libs/ncurses
 	cdio? ( dev-libs/libcdio )
 	cdparanoia? ( media-sound/cdparanoia )
 	directfb? ( dev-libs/DirectFB )
-	dts? ( || ( media-libs/libdts media-libs/libdca ) )
+	dts? ( || ( media-libs/libdca media-libs/libdts ) )
 	dv? ( media-libs/libdv )
 	dvb? ( media-tv/linuxtv-dvb-headers )
 	encode? (
