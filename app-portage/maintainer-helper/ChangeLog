@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/maintainer-helper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/ChangeLog,v 1.1 2007/08/07 00:53:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/ChangeLog,v 1.2 2007/08/15 11:27:17 jokey Exp $
+
+*maintainer-helper-0.1.1 (15 Aug 2007)
+
+  15 Aug 2007; Markus Ullmann <jokey@gentoo.org>
+  +maintainer-helper-0.1.1.ebuild:
+  Version bump. Git Tag Info: Clean up missing import and fix a bug in refresh
+  after bump / drop
 
 *maintainer-helper-0.1 (07 Aug 2007)
 
