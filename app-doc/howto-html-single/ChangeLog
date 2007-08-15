@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/howto-html-single
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.21 2007/08/14 18:20:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.22 2007/08/15 03:23:20 jer Exp $
+
+  15 Aug 2007; Jeroen Roovers <jer@gentoo.org>
+  howto-html-single-20061216.ebuild:
+  Stable for HPPA (bug #188490).
 
   14 Aug 2007; Markus Rothe <corsair@gentoo.org>
   howto-html-single-20061216.ebuild:
