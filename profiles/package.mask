@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7591 2007/08/15 15:03:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7592 2007/08/15 16:23:30 gustavoz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -99,10 +99,6 @@ kde-misc/kxdocker-dcop
 kde-misc/kxdocker
 kde-misc/kxdocker-trayiconlogger
 kde-misc/kxdocker-resources
-
-# Jeroen Roovers <jer@gentoo.org> (04 Aug 2007)
-# Masking Opera 9.23 weeklies
-=www-client/opera-9.23*
 
 # Marius Mauch <genone@gentoo.org> (03 Aug 2007)
 # Masked for testing, also waiting for updated plugins due to license check

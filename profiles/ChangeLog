@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.574 2007/08/15 15:03:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.575 2007/08/15 16:23:30 gustavoz Exp $
+
+  15 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> package.mask:
+  Remove opera mask wrt #188987
 
   15 Aug 2007; Steve Dibb <beandog@gentoo.org> package.mask:
   Update p.mask for transcode
