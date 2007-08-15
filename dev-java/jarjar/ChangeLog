@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jarjar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.19 2007/05/30 13:35:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.20 2007/08/15 17:04:10 opfer Exp $
+
+  15 Aug 2007; Christian Faulhammer <opfer@gentoo.org> jarjar-0.9.ebuild:
+  stable x86, bug 187751
 
   30 May 2007; Petteri Räty <betelgeuse@gentoo.org> jarjar-0.9.ebuild:
   Fix src_test.
