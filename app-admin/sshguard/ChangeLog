@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sshguard
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/ChangeLog,v 1.3 2007/07/08 10:08:16 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/ChangeLog,v 1.4 2007/08/15 13:54:57 beandog Exp $
+
+  15 Aug 2007; Steve Dibb <beandog@gentoo.org> sshguard-1.0.ebuild:
+  add ~amd64, bug 188693
 
   08 Jul 2007; Ali Polatel <hawking@gentoo.org> sshguard-1.0.ebuild:
   Added support for g/fbsd (bug #182926 thanks to Pierre Guinoiseau)
