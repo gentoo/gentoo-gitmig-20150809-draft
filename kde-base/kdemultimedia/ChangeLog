@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.253 2007/08/11 14:51:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.254 2007/08/15 05:04:42 jer Exp $
+
+  15 Aug 2007; Jeroen Roovers <jer@gentoo.org> kdemultimedia-3.5.7.ebuild:
+  Stable for HPPA (bug #176297).
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kdemultimedia-3.5.7.ebuild:
   x86 stable wrt #185823
