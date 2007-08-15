@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.189 2007/08/11 14:51:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.190 2007/08/15 04:57:48 jer Exp $
+
+  15 Aug 2007; Jeroen Roovers <jer@gentoo.org> kdegames-3.5.7.ebuild:
+  Stable for HPPA (bug #176297).
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kdegames-3.5.7.ebuild:
   x86 stable wrt #185823
