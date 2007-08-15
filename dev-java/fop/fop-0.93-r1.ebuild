@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93-r1.ebuild,v 1.5 2007/08/13 07:05:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93-r1.ebuild,v 1.6 2007/08/15 21:12:52 dertobi123 Exp $
 
 # TODO: if 'doc' use flag is used then should build also extra docs ('docs' ant target), currently it cannot
 #       be built as it needs forrest which we do not have
@@ -17,7 +17,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 # doesn't work with java.awt.headless
 RESTRICT="test"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ia64 ppc ~ppc64 x86"
 IUSE="hyphenation jai jimi"
 
 COMMON_DEPEND="
