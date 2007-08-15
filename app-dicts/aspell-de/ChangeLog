@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-de
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.17 2007/08/09 16:29:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.18 2007/08/15 04:45:37 jer Exp $
+
+  15 Aug 2007; Jeroen Roovers <jer@gentoo.org>
+  aspell-de-0.60_pre20030222.ebuild:
+  Stable for HPPA (bug #178690).
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org>
   aspell-de-0.60_pre20030222.ebuild:
