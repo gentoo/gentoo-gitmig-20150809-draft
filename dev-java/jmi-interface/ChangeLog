@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jmi-interface
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmi-interface/ChangeLog,v 1.9 2007/01/16 12:07:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmi-interface/ChangeLog,v 1.10 2007/08/15 09:54:04 opfer Exp $
+
+  15 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  jmi-interface-1.0-r3.ebuild:
+  stable x86, bug 187681
 
 *jmi-interface-1.0-r3 (16 Jan 2007)
 
