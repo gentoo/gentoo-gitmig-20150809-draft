@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml/openspml-0.5.ebuild,v 1.2 2007/07/24 08:05:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openspml/openspml-0.5.ebuild,v 1.3 2007/08/15 15:29:56 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -17,6 +17,7 @@ IUSE="doc source"
 
 RDEPEND=">=virtual/jre-1.4"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	>=virtual/jdk-1.4"
 
 S="${WORKDIR}/${PN}"
@@ -49,6 +50,6 @@ src_install() {
 
 	use source && java-pkg_dosrc "${S}/src/*"
 	dodoc README history.txt
-	use doc && java-pkg_dohtml -r doc
+	use doc && java-pkg_dojavadoc doc
 
 }
