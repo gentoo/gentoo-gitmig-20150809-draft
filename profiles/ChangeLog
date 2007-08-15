@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.573 2007/08/15 06:45:48 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.574 2007/08/15 15:03:52 beandog Exp $
+
+  15 Aug 2007; Steve Dibb <beandog@gentoo.org> package.mask:
+  Update p.mask for transcode
 
   14 Aug 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
   Add teletext, cdio local use flags for media-video/mplayer
