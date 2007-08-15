@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-it
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.17 2007/08/09 16:30:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.18 2007/08/15 04:46:46 jer Exp $
+
+  15 Aug 2007; Jeroen Roovers <jer@gentoo.org>
+  aspell-it-2.2.20050523.ebuild:
+  Stable for HPPA (bug #178690).
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org>
   aspell-it-2.2.20050523.ebuild:

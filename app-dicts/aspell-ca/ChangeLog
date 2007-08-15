@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-ca
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ca/ChangeLog,v 1.14 2007/08/09 16:26:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ca/ChangeLog,v 1.15 2007/08/15 04:42:11 jer Exp $
+
+  15 Aug 2007; Jeroen Roovers <jer@gentoo.org>
+  aspell-ca-0.60.20040130.ebuild:
+  Stable for HPPA (bug #178690).
 
   09 Aug 2007; Markus Rothe <corsair@gentoo.org>
   aspell-ca-0.60.20040130.ebuild:
