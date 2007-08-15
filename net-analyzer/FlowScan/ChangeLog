@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/FlowScan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/ChangeLog,v 1.11 2007/06/02 22:14:41 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/ChangeLog,v 1.12 2007/08/15 11:55:18 jokey Exp $
+
+*FlowScan-1.006-r3 (15 Aug 2007)
+
+  15 Aug 2007; Markus Ullmann <jokey@gentoo.org> files/flowscan.init,
+  -FlowScan-1.006-r2.ebuild, +FlowScan-1.006-r3.ebuild:
+  Fix minor bug in init script wrt bug #186700
 
   02 Jun 2007; Markus Ullmann <jokey@gentoo.org> FlowScan-1.006-r2.ebuild:
   Stable on x86

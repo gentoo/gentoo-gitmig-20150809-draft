@@ -8,8 +8,9 @@ depend() {
 
 start() {
 	ebegin "Starting flowscan processing"
-	cd /var/lib/flows ; start-stop-daemon --start --quiet -c flows:flows --exec bin/flowscan \
+	start-stop-daemon --start --quiet -c flows:flows --exec /var/lib/flows/bin/flowscan \
 	-p /var/run/flows/flowscan.pid -m -b >> /var/log/flowscan 2>&1 </dev/null & >/dev/null
+	eend $?
 }
 
 stop() {

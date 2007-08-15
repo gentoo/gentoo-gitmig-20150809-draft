@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/FlowScan-1.006-r2.ebuild,v 1.6 2007/06/02 22:14:41 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/FlowScan-1.006-r3.ebuild,v 1.1 2007/08/15 11:55:18 jokey Exp $
 
 inherit eutils
 
@@ -21,7 +21,6 @@ RDEPEND="|| ( app-shells/pdksh app-shells/ksh )
 	dev-perl/HTML-Table
 	dev-perl/Net-Patricia
 	dev-perl/Cflow"
-
 DEPEND="|| ( app-shells/pdksh app-shells/ksh )
 		<net-analyzer/rrdtool-1.2"
 
