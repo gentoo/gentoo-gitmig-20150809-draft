@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.42 2007/08/11 17:13:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.43 2007/08/15 05:34:37 jer Exp $
+
+  15 Aug 2007; Jeroen Roovers <jer@gentoo.org>
+  mDNSResponder-107.6-r5.ebuild:
+  Stable for HPPA (bug #176297).
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org>
   mDNSResponder-107.6-r5.ebuild:
