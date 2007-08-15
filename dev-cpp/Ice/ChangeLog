@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/Ice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.9 2007/08/13 09:03:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.10 2007/08/15 11:51:48 caleb Exp $
+
+*Ice-3.2.1 (15 Aug 2007)
+
+  15 Aug 2007; Caleb Tennis <caleb@gentoo.org>
+  +files/Ice-3.2.1-Makefile.patch, +Ice-3.2.1.ebuild:
+  version bump
 
   12 Aug 2007; Caleb Tennis <caleb@gentoo.org> Ice-3.2.0.ebuild:
   Fix ncurses support from bug #175404
