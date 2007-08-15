@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.18.4.ebuild,v 1.6 2007/08/11 14:51:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.18.4.ebuild,v 1.7 2007/08/15 10:42:17 eva Exp $
 
 inherit eutils gnome2
 
@@ -45,6 +45,9 @@ src_unpack() {
 
 	# use a local rpm2cpio script to avoid the dep
 	epatch ${FILESDIR}/${PN}-2.10-use_fr_rpm2cpio.patch
+
+	# fix localized documentation, bug #126643
+	epatch ${FILESDIR}/${PN}-2.18.4-doc-fixes.patch
 }
 
 src_install() {

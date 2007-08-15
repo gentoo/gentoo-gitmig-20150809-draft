@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.210 2007/08/11 17:19:04 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.211 2007/08/15 10:42:17 eva Exp $
+
+  15 Aug 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/file-roller-2.18.4-doc-fixes.patch, file-roller-2.18.4.ebuild:
+  fix es, it, de, nl documentation and drop uk since it doesn't look like uk
+  at all. See bug #126643
 
   11 Aug 2007; Mart Raudsepp <leio@gentoo.org> -file-roller-2.14.3.ebuild,
   -file-roller-2.14.4.ebuild, -file-roller-2.18.3.ebuild:

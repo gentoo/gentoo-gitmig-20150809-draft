@@ -1,0 +1,91 @@
+--- help/Makefile.in	2007-08-15 11:43:24.000000000 +0200
++++ help/Makefile.in	2007-08-15 11:43:57.000000000 +0200
+@@ -347,7 +347,7 @@
+ 	figures/file-roller_rightarrow.png	\
+ 	figures/file-roller_uparrow.png
+ 
+-DOC_LINGUAS = bg de es fr it nl ru sv uk
++DOC_LINGUAS = bg de es fr it nl ru sv
+ all: all-am
+ 
+ .SUFFIXES:
+--- help/es/file-roller.xml	2007-08-15 11:52:40.000000000 +0200
++++ help/es/file-roller.xml	2007-08-15 11:52:50.000000000 +0200
+@@ -564,7 +564,7 @@
+         </note>
+         </listitem>
+         </orderedlist></para>
+-      <para>El <application>Gestor de archivadores</application> ofrece también formas de extraer archivos de un archivador dentro de una ventana del administrador de archivos, sin tener que abrir una ventana del <application>Gestor de archivadores</application>. Para obtener más información, consulte la <xef linkend="file-roller-fmgr"/>.</para>
++      <para>El <application>Gestor de archivadores</application> ofrece también formas de extraer archivos de un archivador dentro de una ventana del administrador de archivos, sin tener que abrir una ventana del <application>Gestor de archivadores</application>. Para obtener más información, consulte la <xref linkend="file-roller-fmgr"/>.</para>
+     <para>La operación de extracción extrae una <emphasis>copia</emphasis> de los archivos especificados del archivo. Los archivos extraídos tienen los mismos permisos y fecha de modificación que los archivos originales que fueron añadidos al archivador.</para>
+     <para>La operación de extracción no cambia el contenido del archivador. Para más información sobre cómo borrar archivos desde dentro de un archivador, vea la <xref linkend="file-roller-delete-files"/>.</para>
+ </sect2>
+--- help/it/file-roller.xml	2007-08-15 11:53:22.000000000 +0200
++++ help/it/file-roller.xml	2007-08-15 11:53:35.000000000 +0200
+@@ -861,7 +861,7 @@
+ 	  </varlistentry>
+ 	  <varlistentry>
+ 	    <term><guilabel>Tipo</guilabel></term>
+-	    <listitem><para>Il tipo di file. Per una cartella, il campo <guilabel>Tipo</guilabel> è <leteral>Cartella.
++	    <listitem><para>Il tipo di file. Per una cartella, il campo <guilabel>Tipo</guilabel> è <literal>Cartella.
+ 	  
+ 	  
+ 	    Data di modifica
+@@ -871,7 +871,7 @@
+ 	    Posizione
+ 	    La posizione del file in all'iterno dell'archivio. Per una cartella, il campo Posizione 
+ 	  
+-        </leteral></para></listitem></varlistentry></variablelist></para>
++        </literal></para></listitem></varlistentry></variablelist></para>
+       <para>Se un altro programma ha modificato l'archivio dopo l'ultima apertura con <application>Gestore di archivi</application>, scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Aggiorna</guimenuitem></menuchoice> per ricaricare il contenuto dell'archivio dal disco.</para>
+       <para>Per informazioni su come personalizzare la visualizzazione dei contenuti di un archivio con <application>Gestore di archivi</application>, consultare <xref linkend="file-roller-archive-custom"/>.</para>
+       <para>Per svolgere azioni più complesse, utilizzare un'altra applicazione presente all'interno del sistema. Per maggiori informazioni consultare <xref linkend="file-roller-view-archive-file"/>.</para>
+--- help/de/file-roller.xml	2007-07-02 18:41:01.000000000 +0200
++++ help/de/file-roller.xml	2007-08-15 12:02:59.000000000 +0200
+@@ -165,7 +165,7 @@
+                 </revision>
+          </revhistory>
+ 
+-    <releaseinfo>In diesem Handbuch wird Version 2.14.0 des <application>Archivmanagers</application> beschrieben.</releaseinfo> 
++    <releaseinfo>In diesem Handbuch wird Version 2.14.0 des Archivmanagers beschrieben.</releaseinfo> 
+     <legalnotice> 
+         <title>Feedback</title>
+         <para>Wenn Sie Fehler finden oder Vorschläge zur <application>Archivmanager</application>-Anwendung oder diesem Handbuch haben, befolgen Sie bitte die Anweisungen auf der <ulink url="ghelp:gnome-feedback" type="help">GNOME Feedback Page</ulink>.</para>
+@@ -212,7 +212,7 @@
+      the application is and what it does. -->
+ <sect1 id="file-roller-intro"> 
+     <title>Einführung</title> 
+-    <para>Die <application>Archivmanager</application>-Anwendung dient zum Erstellen, Anzeigen, Ändern und Entpacken von Archiven. Ein Archiv ist eine Datei, die als &ldquor;Behälter" für andere Dateien fungiert. Archive können zahlreiche Dateien, Ordner sowie Unterordner enthalten, die normalerweise in komprimierter Form vorliegen.</para>
++    <para>Die <application>Archivmanager</application>-Anwendung dient zum Erstellen, Anzeigen, Ändern und Entpacken von Archiven. Ein Archiv ist eine Datei, die als "Behälter" für andere Dateien fungiert. Archive können zahlreiche Dateien, Ordner sowie Unterordner enthalten, die normalerweise in komprimierter Form vorliegen.</para>
+     <para>Der <application>Archivmanager</application> stellt lediglich eine grafische Benutzeroberfläche dar. Die Archivoperationen selbst werden von Befehlszeilendienstprogrammen wie <command>tar</command>, <command>gzip</command> und <command>bzip2</command> durchgeführt.</para>
+     <para>Wenn die entsprechenden Befehlszeilentools auf Ihrem System installiert sind, bietet der <application>Archivmanager</application> Unterstützung für RPM- und Stuff-Dateien, so wie die nachfolgend aufgeführten Archivformate.</para> 
+       <informaltable frame="all">
+@@ -495,7 +495,7 @@
+             </row>
+             <row valign="top">               
+               <entry><para><filename>*.tar*</filename></para></entry>
+-              <entry align="left"><para>Alle Dateien mit der Erweiterung <filename>tar</filename>, einschließlich solcher, bei welchen auf die Erweiterung <filename>tar</filename> eine beliebige Zeichenfolge folgt, wie z.&nbsp;B. <filename>filename.tar.gz</filename></para></entry>
++              <entry align="left"><para>Alle Dateien mit der Erweiterung <filename>tar</filename>, einschließlich solcher, bei welchen auf die Erweiterung <filename>tar</filename> eine beliebige Zeichenfolge folgt, wie z. B. <filename>filename.tar.gz</filename></para></entry>
+             </row>
+             <row valign="top">               
+               <entry><para><filename>*.jpg; *.jpeg</filename></para></entry>
+@@ -1236,7 +1236,7 @@
+               <varlistentry>
+                 <term><guilabel>Dateien</guilabel></term>
+                 <listitem>
+-                  <para>Extrahieren aller Dateien im aktuell geöffneten Archiv, die mit einem gegebenen Muster übereinstimmen. Weitere Informationen über Dateinamenmuster finden Sie in <xref linkend="file-roller-advanced-options"/>.</para>
++                  <para>Extrahieren aller Dateien im aktuell geöffneten Archiv, die mit einem gegebenen Muster übereinstimmen. Weitere Informationen über Dateinamenmuster finden Sie in <xref linkend="file-roller-pattern"/>.</para>
+                 </listitem>
+               </varlistentry>
+             </variablelist>
+--- help/nl/file-roller.xml	2007-08-15 12:22:13.000000000 +0200
++++ help/nl/file-roller.xml	2007-08-15 12:22:41.000000000 +0200
+@@ -425,7 +425,7 @@
+                   </varlistentry>
+                   <varlistentry> <term>Statusbalk</term>
+                          <listitem>
+-                                <para>De statusbalk toont informatie over de huidige actie van het <application>archiefbeheer</application> en toont tevens contextgevoelige informatie over de inhoud van het archief. <application>Archiefbeheer</application> geeft standaard zijn statusbalk weer. U kunt deze uitschakelen via <menuchoice><guimenu>Beeld</guimenu><guimenuitem>Statusbalk</guimenuitem>. Om deze weer te tonen kiest u wederom <menuchoice><guimenu>Beeld</guimenu><guimenuitem>Statusbalk</guimenuitem></menuchoice>.</menuchoice></para>
++				 <para>De statusbalk toont informatie over de huidige actie van het <application>archiefbeheer</application> en toont tevens contextgevoelige informatie over de inhoud van het archief. <application>Archiefbeheer</application> geeft standaard zijn statusbalk weer. U kunt deze uitschakelen via <menuchoice><guimenu>Beeld</guimenu><guimenuitem>Statusbalk</guimenuitem></menuchoice>. Om deze weer te tonen kiest u wederom <menuchoice><guimenu>Beeld</guimenu><guimenuitem>Statusbalk</guimenuitem></menuchoice>.</para>
+                          </listitem>
+                   </varlistentry>
+                 </variablelist>
