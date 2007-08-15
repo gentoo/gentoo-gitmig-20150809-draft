@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ical4j-1.0_beta2.ebuild,v 1.5 2007/06/16 18:57:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ical4j-1.0_beta2.ebuild,v 1.6 2007/08/15 09:38:11 opfer Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -34,8 +34,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	java-ant_rewrite-classpath
-	rm -v lib/*.jar || die
-	mkdir bin || die
+	rm -v lib/*.jar || die "rm jar failed"
+	mkdir bin || die "mkdir bin failed"
+	java-pkg_filter-compiler jikes
 }
 
 EANT_ANT_TASKS="emma"
@@ -53,8 +54,8 @@ src_test() {
 
 src_install() {
 	java-pkg_dojar build/*.jar
-	dodoc README AUTHORS CHANGELOG || die
-	dodoc etc/FAQ etc/TODO etc/standard_deviations.txt || die
+	dodoc README AUTHORS CHANGELOG etc/FAQ \
+		etc/TODO etc/standard_deviations.txt || die "dodoc failed"
 	use doc && java-pkg_dojavadoc docs/api
 	use source && java-pkg_dosrc source/net
 	use examples && java-pkg_doexamples etc/samples
