@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.4-r1.ebuild,v 1.1 2007/05/21 06:27:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.5-r1.ebuild,v 1.1 2007/08/15 07:54:06 opfer Exp $
 
 inherit elisp-common eutils flag-o-matic multilib versionator
 
@@ -25,7 +25,7 @@ SRC_URI="http://www.erlang.org/download/${MY_P}.tar.gz
 
 LICENSE="EPL"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc emacs hipe java kpoll odbc smp ssl tk"
 
 RDEPEND=">=dev-lang/perl-5.6.1
@@ -40,16 +40,6 @@ S="${WORKDIR}/${MY_P}"
 
 SITEFILE=50erlang-gentoo.el
 
-pkg_setup() {
-	if use hipe; then
-		ewarn
-		ewarn "You enabled High performance Erlang. Be aware that this extension"
-		ewarn "can break the compilation in many ways, especially on hardened systems."
-		ewarn "Don't cry, don't file bugs, just disable it!"
-		ewarn
-	fi
-}
-
 src_unpack() {
 	## fix compilation on hardened systems, see bug #154338
 	filter-flags "-fstack-protector"
@@ -60,10 +50,17 @@ src_unpack() {
 
 	# needed for amd64
 	epatch "${FILESDIR}/${PN}-10.2.6-export-TARGET.patch"
+	# needed for FreeBSD
+	epatch "${FILESDIR}/${PN}-11.2.5-gethostbyname.patch"
 	use odbc || sed -i 's: odbc : :' lib/Makefile
 
-	# delete internal copy of zlib, so the system one is used, see bug #178996
-	rm "${S}/erts/emulator/zlib/zconf.h" "${S}/erts/emulator/zlib/zlib.h"
+	if use hipe; then
+		ewarn
+		ewarn "You enabled High performance Erlang. Be aware that this extension"
+		ewarn "can break the compilation in many ways, especially on hardened systems."
+		ewarn "Don't cry, don't file bugs, just disable it!"
+		ewarn
+	fi
 }
 
 src_compile() {
@@ -95,28 +92,28 @@ src_install() {
 	local ERL_ERTS_VER=$(extract_version erts VSN)
 
 	emake -j1 INSTALL_PREFIX="${D}" install || die "install failed"
-	dodoc AUTHORS EPLICENCE README
+	dodoc AUTHORS README
 
-	dosym ${ERL_LIBDIR}/bin/erl /usr/bin/erl
-	dosym ${ERL_LIBDIR}/bin/erlc /usr/bin/erlc
-	dosym ${ERL_LIBDIR}/bin/ear /usr/bin/ear
-	dosym ${ERL_LIBDIR}/bin/escript /usr/bin/escript
+	dosym "${ERL_LIBDIR}/bin/erl" /usr/bin/erl
+	dosym "${ERL_LIBDIR}/bin/erlc" /usr/bin/erlc
+	dosym "${ERL_LIBDIR}/bin/ear" /usr/bin/ear
+	dosym "${ERL_LIBDIR}/bin/escript" /usr/bin/escript
 	dosym \
-		${ERL_LIBDIR}/lib/erl_interface-${ERL_INTERFACE_VER}/bin/erl_call \
+		"${ERL_LIBDIR}/lib/erl_interface-${ERL_INTERFACE_VER}/bin/erl_call" \
 		/usr/bin/erl_call
-	dosym ${ERL_LIBDIR}/erts-${ERL_ERTS_VER}/bin/beam /usr/bin/beam
+	dosym "${ERL_LIBDIR}/erts-${ERL_ERTS_VER}/bin/beam" /usr/bin/beam
 
 	## Remove ${D} from the following files
-	dosed ${ERL_LIBDIR}/bin/erl
-	dosed ${ERL_LIBDIR}/bin/start
-	grep -rle "${D}" "${D}"/${ERL_LIBDIR}/erts-${ERL_ERTS_VER} | xargs sed -i -e "s:${D}::g"
+	dosed "${ERL_LIBDIR}/bin/erl"
+	dosed "${ERL_LIBDIR}/bin/start"
+	grep -rle "${D}" "${D}/${ERL_LIBDIR}/erts-${ERL_ERTS_VER}" | xargs sed -i -e "s:${D}::g"
 
 	## Clean up the no longer needed files
-	rm "${D}"/${ERL_LIBDIR}/Install
+	rm "${D}/${ERL_LIBDIR}/Install"
 
 	if use doc ; then
 		for i in "${WORKDIR}"/man/man* ; do
-			dodir /usr/share/${i##${WORKDIR}}erl
+			dodir "/usr/share/${i##${WORKDIR}}erl"
 		done
 		for file in "${WORKDIR}"/man/man*/*.[1-9]; do
 			# Avoid namespace collisions
@@ -138,6 +135,10 @@ src_install() {
 		elisp-site-file-install "${FILESDIR}"/${SITEFILE}
 		popd
 	fi
+
+	# prepare erl for SMP, fixes bug #188112
+	use smp && sed -i -e 's:\(exec.*erlexec\):\1 -smp:' \
+		"${D}/${ERL_LIBDIR}/bin/erl"
 }
 
 pkg_postinst() {
@@ -146,7 +147,7 @@ pkg_postinst() {
 	elog "If you need a symlink to one of erlang's binaries,"
 	elog "please open a bug and tell the maintainers."
 	elog
-	elog "Gentoo's versioning scheme differs from the author's, so please refer to this version as R11B-4"
+	elog "Gentoo's versioning scheme differs from the author's, so please refer to this version as R11B-5"
 	elog
 }
 

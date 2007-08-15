@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.68 2007/08/06 14:46:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.69 2007/08/15 07:54:06 opfer Exp $
+
+*erlang-11.2.5-r1 (15 Aug 2007)
+
+  15 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  files/50erlang-gentoo.el, -files/10.2.6-manpage-emacs-gentoo.patch,
+  -erlang-11.2.1.ebuild, -erlang-11.2.4-r1.ebuild, +erlang-11.2.5-r1.ebuild:
+  clean up; let erl binary use several CPUs if USE=smp is set. Reported by
+  astro@spaceboyz.net on bug 188858; don't install license file; add a lot of
+  quotes around variables; fix Emacs support file to use require and not
+  load-library
 
   06 Aug 2007; Roy Marples <uberlord@gentoo.org>
   +files/erlang-11.2.5-gethostbyname.patch, erlang-11.2.5.ebuild:
