@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.11 2007/08/14 17:20:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt-svn/gatt-svn-9999.ebuild,v 1.12 2007/08/15 20:57:21 opfer Exp $
 
 inherit subversion
 
 ESVN_REPO_URI="svn://80.108.115.144/gatt/trunk"
-ESVN_PROJECT="GATT"
+ESVN_PROJECT="Gatt"
 
 DESCRIPTION="Gentoo Arch Tester Tool"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/x86/at.xml
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/boost-1.33.1
 
 pkg_setup() {
 	ewarn
-	ewarn "This is an Subversion snapshot, so no functionality is"
+	ewarn "This is a Subversion snapshot, so no functionality is"
 	ewarn "guaranteed!	Better not use it as root for now and backup"
 	ewarn "at least your data in /etc/portage/!"
 	elog
