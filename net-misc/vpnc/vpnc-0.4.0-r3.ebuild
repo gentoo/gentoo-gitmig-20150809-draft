@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.4.0-r3.ebuild,v 1.3 2007/08/07 03:07:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.4.0-r3.ebuild,v 1.4 2007/08/15 12:02:27 opfer Exp $
 
 inherit eutils linux-info
 
@@ -24,6 +24,7 @@ pkg_setup()	 {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	# not needed anymore with releases >0.4.0
 	epatch "${FILESDIR}"/${P}-build.patch
 }
 
