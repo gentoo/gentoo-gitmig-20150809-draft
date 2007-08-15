@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.183 2007/07/27 02:55:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.184 2007/08/15 15:05:40 beandog Exp $
+
+*transcode-1.0.4_rc3 (15 Aug 2007)
+
+  15 Aug 2007; Steve Dibb <beandog@gentoo.org> +transcode-1.0.4_rc3.ebuild:
+  Version bump
 
 *transcode-1.1.0_pre20070705 (27 Jul 2007)
 
