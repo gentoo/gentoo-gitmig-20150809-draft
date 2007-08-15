@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.139 2007/08/14 18:04:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.140 2007/08/15 01:55:54 jer Exp $
+
+  15 Aug 2007; Jeroen Roovers <jer@gentoo.org> lighttpd-1.4.16.ebuild:
+  Stable for HPPA (bug #185442).
 
   14 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   lighttpd-1.4.16.ebuild:
