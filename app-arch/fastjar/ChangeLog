@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/fastjar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/ChangeLog,v 1.5 2007/08/14 18:07:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/ChangeLog,v 1.6 2007/08/15 09:20:12 caster Exp $
+
+  15 Aug 2007; Vlastimil Babka <caster@gentoo.org> fastjar-0.95.ebuild:
+  Add block to <=dev-java/kaffe-1.1.7-r5 to ensure kaffe is upgraded first and
+  there are no file collisions, bug #188542.
 
   14 Aug 2007; Markus Rothe <corsair@gentoo.org> fastjar-0.95.ebuild:
   Added ~ppc64; bug #188082

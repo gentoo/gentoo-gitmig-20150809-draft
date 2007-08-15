@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/fastjar-0.95.ebuild,v 1.2 2007/08/14 18:07:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/fastjar-0.95.ebuild,v 1.3 2007/08/15 09:20:12 caster Exp $
 
 DESCRIPTION="A jar program written in C"
 HOMEPAGE="https://savannah.nongnu.org/projects/fastjar"
@@ -12,7 +12,8 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 IUSE=""
 
-RDEPEND=""
+# bug #188542
+RDEPEND="!<=dev-java/kaffe-1.1.7-r5"
 DEPEND=""
 
 src_install() {
