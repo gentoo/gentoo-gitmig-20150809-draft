@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.385 2007/08/11 14:54:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.386 2007/08/15 04:49:46 jer Exp $
+
+  15 Aug 2007; Jeroen Roovers <jer@gentoo.org> kdebase-3.5.7-r3.ebuild:
+  Stable for HPPA (bug #176297).
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kdebase-3.5.7-r3.ebuild:
   x86 stable wrt #185823
