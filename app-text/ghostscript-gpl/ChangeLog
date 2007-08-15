@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.13 2007/08/15 12:24:38 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.14 2007/08/15 12:30:22 fmccor Exp $
+
+  15 Aug 2007; Ferris McCormick <fmccor@gentoo.org> ChangeLog:
+  That's Bug #187280 we need the ~sparc keyword for, of course.  This cures it.
 
   15 Aug 2007; Ferris McCormick <fmccor@gentoo.org>
   ghostscript-gpl-8.57.ebuild:
