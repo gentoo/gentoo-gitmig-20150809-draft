@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/gaupol-0.7.2.ebuild,v 1.2 2007/05/01 00:43:56 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/gaupol-0.7.2.ebuild,v 1.3 2007/08/15 23:47:35 beandog Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://home.gna.org/gaupol/"
 SRC_URI="http://download.gna.org/gaupol/0.7/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="spell"
 
 RDEPEND=">=dev-python/pygtk-2.8
