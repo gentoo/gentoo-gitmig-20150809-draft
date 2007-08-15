@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/nanoxml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nanoxml/ChangeLog,v 1.15 2007/07/12 22:31:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nanoxml/ChangeLog,v 1.16 2007/08/15 05:49:19 wltjr Exp $
+
+  15 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  nanoxml-2.2.3-r2.ebuild:
+  amd64 stable, bug #188631
 
   12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
   nanoxml-2.2.3-r2.ebuild:
