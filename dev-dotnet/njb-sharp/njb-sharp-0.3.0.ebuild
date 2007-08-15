@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/njb-sharp/njb-sharp-0.3.0.ebuild,v 1.2 2007/07/30 07:45:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/njb-sharp/njb-sharp-0.3.0.ebuild,v 1.3 2007/08/15 23:58:22 dertobi123 Exp $
 
 inherit mono
 
@@ -10,7 +10,7 @@ SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/mono-1.1.10
