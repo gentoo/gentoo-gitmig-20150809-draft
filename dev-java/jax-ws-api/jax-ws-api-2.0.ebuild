@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws-api/jax-ws-api-2.0.ebuild,v 1.2 2007/05/23 17:32:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws-api/jax-ws-api-2.0.ebuild,v 1.3 2007/08/15 11:13:35 opfer Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -12,7 +12,7 @@ SRC_URI="https://jax-ws.dev.java.net/files/documents/4202/34734/jaxws-api-fcs-sr
 
 LICENSE="CDDL"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 
 IUSE=""
 

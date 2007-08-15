@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.10 2007/08/11 21:41:12 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.11 2007/08/15 10:36:47 opfer Exp $
+
+  15 Aug 2007; Christian Faulhammer <opfer@gentoo.org> jaxp-1.4.ebuild:
+  stable x86, bug 187681
 
   11 Aug 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
   Remove myself from <maintainer>.

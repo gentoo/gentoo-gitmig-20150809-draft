@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jax-ws
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws/ChangeLog,v 1.4 2007/08/11 21:32:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws/ChangeLog,v 1.5 2007/08/15 11:10:48 opfer Exp $
+
+  15 Aug 2007; Christian Faulhammer <opfer@gentoo.org> jax-ws-2.0.1.ebuild:
+  stable x86, bug 187681
 
   11 Aug 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
   Remove myself from <maintainer>.
