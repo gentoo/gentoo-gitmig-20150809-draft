@@ -1,0 +1,7 @@
+# Copyright 2007 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.use.mask,v 1.1 2007/08/15 18:20:54 drac Exp $
+
+# Samuli Suominen <drac@gentoo.org> (15 Aug 2007)
+# librsvg is masked in this profile, no more svg support in vlc
+media-video/vlc svg
