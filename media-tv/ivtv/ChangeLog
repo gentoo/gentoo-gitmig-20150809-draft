@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.86 2007/08/03 19:43:45 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.87 2007/08/15 15:16:17 beandog Exp $
+
+  15 Aug 2007; Steve Dibb <beandog@gentoo.org> ivtv-0.10.5.ebuild:
+  Mark stable
 
   03 Aug 2007; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
   Bump to 1.0.1 which supports 2.6.22 kernels only.
