@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/jdbc-informix
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/ChangeLog,v 1.13 2007/07/02 14:31:56 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/ChangeLog,v 1.14 2007/08/15 09:09:50 caster Exp $
+
+*jdbc-informix-3.00.3 (15 Aug 2007)
+*jdbc-informix-2.21.5 (15 Aug 2007)
+
+  15 Aug 2007; Vlastimil Babka <caster@gentoo.org>
+  +jdbc-informix-2.21.5.ebuild, +jdbc-informix-3.00.3.ebuild,
+  -jdbc-informix-221-r4.ebuild, -jdbc-informix-221-r5.ebuild:
+  Version bump, migrated to gen-2 eclass. Adds examples USE flag to install
+  demos. Remove unused version and change 221-r5 to more proper 2.21.5. Will
+  seem like a downgrade, that's fine.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   jdbc-informix-221-r4.ebuild, jdbc-informix-221-r5.ebuild:
