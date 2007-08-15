@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0-r2.ebuild,v 1.5 2007/08/14 08:53:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0-r2.ebuild,v 1.6 2007/08/15 21:08:15 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/-/}.zip"
 HOMEPAGE="http://xmlunit.sourceforge.net/"
 LICENSE="BSD"
 SLOT="1"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 # We depend on jdk-1.4 as tests fail with jdk > 1.4
 # see http://sourceforge.net/tracker/index.php?func=detail&aid=1614984&group_id=23187&atid=377768
