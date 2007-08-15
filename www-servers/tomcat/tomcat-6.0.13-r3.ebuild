@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.13-r3.ebuild,v 1.5 2007/08/14 18:29:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.13-r3.ebuild,v 1.6 2007/08/15 18:18:04 opfer Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -12,7 +12,7 @@ MY_P="apache-${P}-src"
 SLOT="6"
 SRC_URI="mirror://apache/${PN}/${PN}-6/v${PV/_/-}/src/${MY_P}.tar.gz"
 HOMEPAGE="http://tomcat.apache.org/"
-KEYWORDS="~amd64 ~ppc ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ppc64 x86 ~x86-fbsd"
 LICENSE="Apache-2.0"
 
 IUSE="doc examples source test"
