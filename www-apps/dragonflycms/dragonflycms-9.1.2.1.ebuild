@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.0.6.1.ebuild,v 1.7 2007/01/02 22:22:11 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.1.2.1.ebuild,v 1.1 2007/08/15 06:45:13 wrobel Exp $
 
 inherit webapp depend.php
 
@@ -11,11 +11,19 @@ HOMEPAGE="http://dragonflycms.org"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
 http://dev.gentoo.org/~sejo/files/${MY_P}.tar.bz2"
 
+RESTRICT="fetch"
+
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~x86"
 IUSE=""
 
 need_php
+
+pkg_nofetch() {
+	einfo "Please download ${MY_P}.tar.bz2 from:"
+	einfo "http://dragonflycms.org/Downloads/get=28.html"
+	einfo "and move it to ${DISTDIR}"
+}
 
 src_install() {
 
@@ -32,27 +40,22 @@ src_install() {
 
 	#identiy the configuration file the app uses
 
-	webapp_configfile ${MY_HTDOCSDIR}/config.php
+	webapp_configfile ${MY_HTDOCSDIR}/install/config.php
 
 	# add the postinstall instructions
 
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
 
-	# done, now strut the stuff
-
-	webapp_src_install
-
 	# manually changing the permissions on the directories
 	# if no-suexec then perms should be 777 else 755
 
-	if useq no-suexec; then
-		PERMS=777
-	else
-		PERMS=755
-	fi
-	fperms 600 ${D}/cpg_error.log
-	fperms ${PERMS} ${D}/cache
-	fperms ${PERMS} ${D}/modules/coppermine/albums
-	fperms ${PERMS} ${D}/modules/coppermine/albums/userpics
-	fperms ${PERMS} ${D}/uploads/{avatars,forums}
+	for WS in cpg_error.log includes cache modules/coppermine/albums \
+	          modules/coppermine/albums/userpics uploads/avatars     \
+	          uploads/forums
+	do
+	  webapp_serverowned ${MY_HTDOCSDIR}/${WS}
+	done
+
+	webapp_src_install
+
 }
