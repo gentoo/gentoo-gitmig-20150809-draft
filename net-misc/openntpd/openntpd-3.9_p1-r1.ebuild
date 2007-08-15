@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.9_p1-r1.ebuild,v 1.4 2007/08/13 21:47:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.9_p1-r1.ebuild,v 1.5 2007/08/15 23:53:44 angelos Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://openbsd/OpenNTPD/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="ssl selinux"
 
 RDEPEND="ssl? ( dev-libs/openssl )

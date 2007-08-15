@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.32 2007/08/13 21:47:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.33 2007/08/15 23:53:44 angelos Exp $
+
+  15 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  openntpd-3.9_p1-r1.ebuild:
+  Stable on amd64
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   openntpd-3.9_p1-r1.ebuild:
