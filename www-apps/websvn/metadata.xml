@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>web-apps</herd>
-	<maintainer>
-		<email>uberlord@gentoo.org</email>
-		<name>Roy Marples</name>
-	</maintainer>
 	<longdescription>Web based Subversion repository browser written in PHP</longdescription>
 </pkgmetadata>

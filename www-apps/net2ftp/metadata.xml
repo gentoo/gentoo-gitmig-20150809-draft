@@ -1,10 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-	<maintainer>
-		<email>uberlord@gentoo.org</email>
-		<name>Roy Marples</name>
-	</maintainer>
+<herd>web-apps</herd>
 	<longdescription>Web-based FTP client in php</longdescription>
 </pkgmetadata>
