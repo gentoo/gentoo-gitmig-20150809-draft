@@ -1,0 +1,116 @@
+--- Makefile.orig	2007-03-13 08:29:51.000000000 -0400
++++ Makefile	2007-03-13 08:31:16.000000000 -0400
+@@ -13,13 +13,13 @@
+ 
+ SUBDIRS		= src ruby
+ 
+-INSTALL_SUBDIRS	= $(install_libdir) $(install_rubydir)
++INSTALL_SUBDIRS	= $(install_rubylibdir) $(install_rubyarchdir)
+ 
+ install::
+ 	@if test ! -d $(prefix) ; \
+ 	then \
+ 	    echo "Creating $(prefix)..." ; \
+-	    $(call mkdir,$(prefix)) ; \
++            mkdir -p $(prefix) ; \
+ 	fi
+ 	@for subdir in $(INSTALL_SUBDIRS); \
+ 	do \
+@@ -38,9 +38,5 @@
+ 	    ( cd $$subdir && $(MAKE) $@ ) || exit 1; \
+ 	done
+ 
+-install::
+-	$(call installdata,ICE_LICENSE,$(prefix))
+-	$(call installdata,LICENSE,$(prefix))
+-
+ test::
+ 	@python $(top_srcdir)/allTests.py
+--- ruby/Makefile.orig	2007-03-13 08:31:21.000000000 -0400
++++ ruby/Makefile	2007-03-13 08:31:50.000000000 -0400
+@@ -128,8 +128,8 @@
+ 	@echo "Installing generated code"
+ 	@for i in $(MODULES) ; \
+ 	do \
+-	    $(INSTALL_DATA) $${i}.rb $(install_rubydir) ; \
+-	    $(INSTALL_DATA) -r $$i $(install_rubydir) ; \
++	    $(INSTALL_DATA) $${i}.rb $(install_rubylibdir) ; \
++	    $(INSTALL_DATA) -r $$i $(install_rubylibdir) ; \
+ 	done
+ 
+ clean::
+--- src/IceRuby/Makefile.orig	2007-03-13 08:31:58.000000000 -0400
++++ src/IceRuby/Makefile	2007-03-13 08:35:59.000000000 -0400
+@@ -48,6 +48,6 @@
+ 	ln -s $(SONAME) $@
+ 
+ install:: all
+-	$(call installlib,$(install_libdir),$(libdir),$(LIBFILENAME),$(SONAME),$(LIBNAME))
++	$(call installlib,$(install_rubyarchdir),$(libdir),$(LIBFILENAME),$(SONAME),$(LIBNAME))
+ 
+ include .depend
+--- config/Make.rules.orig	2007-03-13 08:33:15.000000000 -0400
++++ config/Make.rules	2007-03-13 08:35:04.000000000 -0400
+@@ -18,13 +18,13 @@
+ # if it does not exist.
+ #
+ 
+-prefix			= /opt/IceRuby-$(VERSION)
++prefix			= $(DESTDIR)/usr
+ 
+ #
+ # The "root directory" for runpath embedded in executables. Can be unset
+ # to avoid adding a runpath to Ice executables.
+ #
+-embedded_runpath_prefix  ?= /opt/Ice-$(VERSION_MAJOR).$(VERSION_MINOR)
++#embedded_runpath_prefix  ?= /opt/Ice-$(VERSION_MAJOR).$(VERSION_MINOR)
+ 
+ #
+ # Define OPTIMIZE as yes if you want to build with optimization.
+@@ -51,8 +51,10 @@
+     RUBY = ruby
+ endif
+ 
+-RUBY_INCLUDE_DIR	= $(shell $(RUBY) -e 'require "rbconfig"; puts Config::expand("$$(archdir)")')
+-RUBY_LIB_DIR		= $(shell $(RUBY) -e 'require "rbconfig"; puts Config::expand("$$(libdir)")')
++RUBY_ARCH_DIR	= $(shell $(RUBY) -e 'require "rbconfig"; puts Config::expand("$$(archdir)")')
++RUBY_LIB_DIR		= $(shell $(RUBY) -e 'require "rbconfig"; puts Config::expand("$$(rubylibdir)")')
++RUBY_SITEARCH_DIR	= $(shell $(RUBY) -e 'require "rbconfig"; puts Config::expand("$$(sitearchdir)")')
++RUBY_SITELIB_DIR		= $(shell $(RUBY) -e 'require "rbconfig"; puts Config::expand("$$(sitelibdir)")')
+ 
+ RUBY_SHARED		= $(shell $(RUBY) -e 'require "rbconfig"; puts Config::MAKEFILE_CONFIG["ENABLE_SHARED"]')
+ 
+@@ -62,7 +64,7 @@
+     RUBY_LIB		= $(shell $(RUBY) -e 'require "rbconfig"; puts Config::expand("-l$$(RUBY_SO_NAME)-static")')
+ endif
+ 
+-RUBY_FLAGS		= -I$(RUBY_INCLUDE_DIR)
++RUBY_FLAGS		= -I$(RUBY_ARCH_DIR)
+ RUBY_LIBS		= -L$(RUBY_LIB_DIR) $(RUBY_LIB)
+ 
+ ifneq ($(ICE_HOME),)
+@@ -100,7 +102,8 @@
+ endif
+ 
+ install_bindir		= $(prefix)/bin
+-install_rubydir		= $(prefix)/ruby
++install_rubylibdir	= $(DESTDIR)/$(RUBY_SITELIB_DIR)
++install_rubyarchdir	= $(DESTDIR)/$(RUBY_SITEARCH_DIR)
+ 
+ INSTALL			= cp -fp
+ INSTALL_PROGRAM		= ${INSTALL}
+--- config/Make.rules.orig	2007-03-13 09:51:34.000000000 -0400
++++ config/Make.rules	2007-03-13 09:51:59.000000000 -0400
+@@ -93,11 +93,7 @@
+ libdir			= $(top_srcdir)/ruby
+ rubydir			= $(top_srcdir)/ruby
+ 
+-ifneq ($(ICE_HOME),)
+-    slicedir		= $(ICE_HOME)/slice
+-else
+-    slicedir		= /usr/share/Ice-$(VERSION)/slice
+-endif
++slicedir		= /usr/share/Ice/slice
+ 
+ install_bindir		= $(prefix)/bin
+ install_rubydir		= $(prefix)/ruby
