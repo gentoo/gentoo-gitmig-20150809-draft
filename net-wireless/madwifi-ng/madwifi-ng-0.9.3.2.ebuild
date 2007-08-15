@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3.2.ebuild,v 1.3 2007/08/15 17:15:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3.2.ebuild,v 1.4 2007/08/15 21:29:30 dertobi123 Exp $
 
 inherit linux-mod
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/madwifi/madwifi-${PV}.tar.bz2"
 LICENSE="atheros-hal
 	|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="injection"
 
 DEPEND="app-arch/sharutils"
