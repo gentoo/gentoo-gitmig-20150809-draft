@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r5.ebuild,v 1.5 2007/07/22 09:18:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r5.ebuild,v 1.6 2007/08/15 09:20:59 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit base eutils java-vm-2 flag-o-matic
@@ -32,10 +32,11 @@ COMMON_DEP="
 
 # kaffe builds it's own copy of fastjar so we don't need fastjar at
 # runtime. Hopefully next upstream release uses the system one.
-DEPEND="${COMMON_DEP}
-	app-arch/fastjar"
+DEPEND="${COMMON_DEP}"
 
-RDEPEND="${COMMON_DEP}"
+# fastjar block for bug #188542
+RDEPEND="${COMMON_DEP}
+	!>=app-arch/fastjar-0.95"
 
 # We need to build this after kaffe because it is implemented in java
 PDEPEND="dev-java/gjdoc"

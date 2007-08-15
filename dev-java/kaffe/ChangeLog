@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.72 2007/08/12 09:18:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.73 2007/08/15 09:20:59 caster Exp $
+
+  15 Aug 2007; Vlastimil Babka <caster@gentoo.org> kaffe-1.1.7-r4.ebuild,
+  kaffe-1.1.7-r5.ebuild:
+  Add blockers to >=app-arch/fastjar-0.95 because of file collisions, bug
+  #188542.
 
 *kaffe-1.1.7-r6 (12 Aug 2007)
 
