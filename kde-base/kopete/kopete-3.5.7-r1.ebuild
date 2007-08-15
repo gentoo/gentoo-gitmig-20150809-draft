@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.7-r1.ebuild,v 1.1 2007/08/11 12:10:15 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.7-r1.ebuild,v 1.2 2007/08/15 21:54:10 philantrop Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -40,10 +40,11 @@ BOTH_DEPEND="dev-libs/libxslt
 
 RDEPEND="${BOTH_DEPEND}
 	ssl? ( app-crypt/qca-tls )
-	!kde-base/kdenetwork
 	latex? ( virtual/tetex
 		media-gfx/imagemagick )
 	crypt? ( app-crypt/gnupg )"
+
+#	!kde-base/kdenetwork is handled by the eclass.
 #	gnomemeeting is deprecated and ekiga is not yet ~ppc64
 #	only needed for calling
 #	netmeeting? ( net-im/gnomemeeting )"
