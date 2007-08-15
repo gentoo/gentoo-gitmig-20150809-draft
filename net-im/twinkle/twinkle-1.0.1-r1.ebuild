@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0.1-r1.ebuild,v 1.5 2007/08/11 02:38:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0.1-r1.ebuild,v 1.6 2007/08/15 23:51:34 dertobi123 Exp $
 
 ARTS_REQUIRED="never"
 inherit eutils qt3 kde
@@ -11,7 +11,7 @@ SRC_URI="http://www.xs4all.nl/~mfnboer/twinkle/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="arts speex ilbc zrtp kdehiddenvisibility"
 
 # Requires libqt-mt actually...  Is that *always* built, or do we need to check?
