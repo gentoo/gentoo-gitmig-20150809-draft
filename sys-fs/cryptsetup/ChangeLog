@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.40 2007/08/14 16:05:16 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.41 2007/08/15 20:51:18 strerror Exp $
+
+  15 Aug 2007; Benjamin Smee <strerror@gentoo.org>
+  files/1.0.5-dm-crypt-start.sh:
+  Change to 1.0.5-dm-crypt-start.sh to fix misplaced bin
 
 *cryptsetup-1.0.5 (14 Aug 2007)
 

@@ -46,7 +46,7 @@ dm_crypt_execute_dmcrypt() {
 
 	cryptsetup isLuks ${source} 2>/dev/null && { arg1="luksOpen"; arg2="$source"; arg3="$target"; luks=1; }
 
-	if /bin/cryptsetup status ${target} | egrep -q '\<active:' ; then
+	if /sbin/cryptsetup status ${target} | egrep -q '\<active:' ; then
 		einfo "dm-crypt mapping ${target} is already configured"
 		return
 	fi
@@ -176,7 +176,7 @@ dm_crypt_execute_localmount() {
 
 	[ -z "$target" ] && [ -z "$post_mount" ] && return
 
-	if ! /bin/cryptsetup status ${target} | egrep -q '\<active:' ; then
+	if ! /sbin/cryptsetup status ${target} | egrep -q '\<active:' ; then
 		ewarn "Skipping unmapped target ${target}"
 		cryptfs_status=1
 		return
@@ -198,7 +198,7 @@ dm_crypt_execute_localmount() {
 local cryptfs_status=0
 local gpg_options key loop_file target targetline options pre_mount post_mount source swap remdev
 
-if [[ -f /etc/conf.d/dmcrypt ]] && [[ -x /bin/cryptsetup ]] ; then
+if [[ -f /etc/conf.d/dmcrypt ]] && [[ -x /sbin/cryptsetup ]] ; then
 	ebegin "Setting up dm-crypt mappings"
 
 	# Fix for baselayout-1.12.10 (bug 174256)
