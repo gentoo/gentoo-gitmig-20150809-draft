@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.1.4.ebuild,v 1.3 2007/08/14 20:14:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.1.4.ebuild,v 1.4 2007/08/15 18:33:23 gustavoz Exp $
 
 inherit kde
 
@@ -14,7 +14,7 @@ SRC_URI="http://ktorrent.org/downloads/${MY_PV}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="kdeenablefinal"
 
 DEPEND="dev-libs/gmp"
