@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.122 2007/08/09 14:45:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.123 2007/08/15 14:23:43 jer Exp $
+
+*opera-9.23 (15 Aug 2007)
+
+  15 Aug 2007; Jeroen Roovers <jer@gentoo.org> metadata.xml,
+  +opera-9.23.ebuild:
+  Version bump (bug #188987). Removed axxo from metadata.xml.
 
 *opera-9.23_rc660 (09 Aug 2007)
 
