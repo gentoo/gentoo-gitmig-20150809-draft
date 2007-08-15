@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/maintainer-helper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/ChangeLog,v 1.2 2007/08/15 11:27:17 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/ChangeLog,v 1.3 2007/08/15 23:17:23 jokey Exp $
+
+  15 Aug 2007; Markus Ullmann <jokey@gentoo.org>
+  maintainer-helper-0.1.1.ebuild:
+  Depending on gvim is a good idea if we use it
 
 *maintainer-helper-0.1.1 (15 Aug 2007)
 
