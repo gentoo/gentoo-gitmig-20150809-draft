@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.12 2007/07/13 12:35:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.13 2007/08/15 12:24:38 fmccor Exp $
+
+  15 Aug 2007; Ferris McCormick <fmccor@gentoo.org>
+  ghostscript-gpl-8.57.ebuild:
+  Add ~sparc keyword.  Builds as expected, gv works, and this also fixes Bug
+  #187502 --- needed in preparation of retiring ghostscript-esp.
 
   13 Jul 2007; Roy Marples <uberlord@gentoo.org>
   ghostscript-gpl-8.57.ebuild:
