@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7594 2007/08/15 21:11:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7595 2007/08/16 17:16:37 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -511,9 +511,7 @@ games-puzzle/pingus
 
 # Steve Dibb <beandog@gentoo.org> (12 Mar 2007)
 # needs testing
-# >=media-video/transcode-1.1.0_pre0
-# needs masked libmpeg3
->=media-video/transcode-1.0.4_rc3
+>=media-video/transcode-1.1.0_pre0
 
 # MATSUU Takuto <matsuu@gentoo.org> (12 Mar 2007)
 # Mask for removal. Use app-text/hyperestraier, bug 168179
