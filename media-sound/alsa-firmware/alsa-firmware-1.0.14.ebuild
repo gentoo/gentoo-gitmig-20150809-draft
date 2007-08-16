@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.14.ebuild,v 1.1 2007/06/27 15:50:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.14.ebuild,v 1.2 2007/08/16 15:09:42 gustavoz Exp $
 
 MY_P="${P/_rc/rc}"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://alsaproject/firmware/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 sparc ~x86"
 
 ECHOAUDIO_CARDS="alsa_cards_darla20 alsa_cards_gina20
 alsa_cards_layla20 alsa_cards_darla24 alsa_cards_gina24
