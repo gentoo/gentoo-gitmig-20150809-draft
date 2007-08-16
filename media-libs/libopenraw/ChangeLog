@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libopenraw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.2 2007/08/10 17:32:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.3 2007/08/16 14:17:22 gustavoz Exp $
+
+  16 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  libopenraw-0.0.2.ebuild:
+  Keyworded ~sparc wrt #189043
 
   10 Aug 2007; Christoph Mende <angelos@gentoo.org> libopenraw-0.0.2.ebuild:
   Added ~amd64
