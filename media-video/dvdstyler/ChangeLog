@@ -1,6 +1,12 @@
 # ChangeLog for media-video/dvdstyler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.27 2007/07/24 19:56:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.28 2007/08/16 09:20:15 dragonheart Exp $
+
+*dvdstyler-1.5.1 (16 Aug 2007)
+
+  16 Aug 2007; Daniel Black <dragonheart@gentoo.org>
+  +dvdstyler-1.5.1.ebuild:
+  version bump
 
   24 Jul 2007; Daniel Black <dragonheart@gentoo.org>
   -files/dvdstyler-1.4-gcc4.patch, -dvdstyler-1.4.ebuild,
