@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/ChangeLog,v 1.13 2007/08/15 22:03:26 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/ChangeLog,v 1.14 2007/08/16 00:08:01 dertobi123 Exp $
+
+  16 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  jldap-20060300.ebuild:
+  ppc stable, bug #186196
 
   15 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   jldap-20060300.ebuild:
