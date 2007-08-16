@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.86 2007/03/20 19:22:59 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.87 2007/08/16 10:47:01 jokey Exp $
+
+*PEAR-PEAR-1.6.1 (16 Aug 2007)
+
+  16 Aug 2007; Markus Ullmann <jokey@gentoo.org> +PEAR-PEAR-1.6.1.ebuild:
+  Version bump for bug #189075 from php overlay as requested on irc
 
 *PEAR-PEAR-1.5.1 (20 Mar 2007)
 
