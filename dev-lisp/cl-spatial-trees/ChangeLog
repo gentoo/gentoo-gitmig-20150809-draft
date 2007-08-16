@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-spatial-trees
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-spatial-trees/ChangeLog,v 1.5 2007/08/11 17:06:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-spatial-trees/ChangeLog,v 1.6 2007/08/16 09:59:12 dertobi123 Exp $
+
+  16 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  cl-spatial-trees-0.2.ebuild:
+  ppc stable
 
   11 Aug 2007; Steve Dibb <beandog@gentoo.org> cl-spatial-trees-0.2.ebuild:
   amd64 stable, bug 185075
