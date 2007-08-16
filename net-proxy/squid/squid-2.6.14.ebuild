@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.13.ebuild,v 1.6 2007/07/05 19:49:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.14.ebuild,v 1.1 2007/08/16 17:35:03 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -19,7 +19,7 @@ SRC_URI="http://www.squid-cache.org/Versions/v2/${S_PV}/${S_PP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="pam ldap samba sasl nis ssl snmp selinux logrotate qos zero-penalty-hit \
 	pf-transparent ipf-transparent \
 	elibc_uclibc kernel_linux"
@@ -153,7 +153,7 @@ src_install() {
 	doman helpers/basic_auth/LDAP/*.8
 	dodoc helpers/basic_auth/SASL/squid_sasl_auth*
 
-	newpamd "${FILESDIR}/squid.pam" squid
+	newpamd "${FILESDIR}/squid.pam.1" squid
 	newconfd "${FILESDIR}/squid.confd" squid
 	if use logrotate; then
 		newinitd "${FILESDIR}/squid.initd-logrotate" squid

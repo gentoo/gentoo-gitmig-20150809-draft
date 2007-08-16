@@ -1,0 +1,311 @@
+diff -Nru squid-2.6.STABLE14.orig/src/cache_cf.c squid-2.6.STABLE14/src/cache_cf.c
+--- squid-2.6.STABLE14.orig/src/cache_cf.c	2007-06-24 01:50:18.000000000 +0300
++++ squid-2.6.STABLE14/src/cache_cf.c	2007-08-16 20:11:00.000000000 +0300
+@@ -891,6 +891,65 @@
+     }
+ }
+ 
++CBDATA_TYPE(acl_priority);
++
++static void
++dump_acl_priority(StoreEntry * entry, const char *name, acl_priority * head)
++{
++    acl_priority *l;
++    for (l = head; l; l = l->next) {
++	if (l->priority > 0)
++	    storeAppendPrintf(entry, "%s %04X:%04X", name,
++	                      l->priority >> 16, l->priority & 0xFFFF);
++	else
++	    storeAppendPrintf(entry, "%s none", name);
++	dump_acl_list(entry, l->acl_list);
++	storeAppendPrintf(entry, "\n");
++    }
++}
++
++static void
++freed_acl_priority(void *data)
++{
++    acl_priority *l = data;
++    aclDestroyAclList(&l->acl_list);
++}
++
++static void
++parse_acl_priority(acl_priority ** head)
++{
++    acl_priority *l;
++    acl_priority **tail = head;	/* sane name below */
++    unsigned long priority, t1, t2;
++    char junk;
++    char *token = strtok(NULL, w_space);
++    if (!token)
++	self_destruct();
++    if (sscanf(token, "%x:%x%c", &t1, &t2, &junk) != 2)
++	self_destruct();
++    if (t1 < 0 || t1 > 0xFFFF || t2 < 0 || t2 > 0xFFFF)
++	self_destruct();
++    priority = t1 << 16 | t2;
++    CBDATA_INIT_TYPE_FREECB(acl_priority, freed_acl_priority);
++    l = cbdataAlloc(acl_priority);
++    l->priority = priority;
++    aclParseAclList(&l->acl_list);
++    while (*tail)
++	tail = &(*tail)->next;
++    *tail = l;
++}
++
++static void
++free_acl_priority(acl_priority ** head)
++{
++    while (*head) {
++	acl_priority *l = *head;
++	*head = l->next;
++	l->next = NULL;
++	cbdataFree(l);
++    }
++}
++
+ #if DELAY_POOLS
+ 
+ /* do nothing - free_delay_pool_count is the magic free function.
+diff -Nru squid-2.6.STABLE14.orig/src/cf.data.pre squid-2.6.STABLE14/src/cf.data.pre
+--- squid-2.6.STABLE14.orig/src/cf.data.pre	2007-08-16 20:10:44.000000000 +0300
++++ squid-2.6.STABLE14/src/cf.data.pre	2007-08-16 20:11:00.000000000 +0300
+@@ -3218,6 +3218,27 @@
+ 	Default: 255 (TOS from server is not changed).
+ DOC_END
+ 
++NAME: tcp_outgoing_priority
++TYPE: acl_priority
++DEFAULT: none
++LOC: Config.accessList.outgoing_priority
++DOC_START
++	Allows you to select the priority of the outgoing connection, 
++	based on the username or source address making the request. The
++	priority can be used by Linux QoS Qdiscs for classification.
++
++	tcp_outgoing_priority priority [!]aclname ...
++
++	Example where requests from special_service_net are assigned
++	priority 10:100
++
++	acl special_service_net src 10.0.0.0/255.255.255.0
++	tcp_outgoing_priority 10:100 special_service_net
++
++	Processing proceeds in the order specified, and stops at first fully
++	matching line.
++DOC_END
++
+ NAME: tcp_outgoing_address
+ TYPE: acl_address
+ DEFAULT: none
+diff -Nru squid-2.6.STABLE14.orig/src/comm.c squid-2.6.STABLE14/src/comm.c
+--- squid-2.6.STABLE14.orig/src/comm.c	2007-04-17 12:39:56.000000000 +0300
++++ squid-2.6.STABLE14/src/comm.c	2007-08-16 20:11:00.000000000 +0300
+@@ -162,7 +162,7 @@
+     int flags,
+     const char *note)
+ {
+-    return comm_openex(sock_type, proto, addr, port, flags, 0, note);
++    return comm_openex(sock_type, proto, addr, port, flags, 0, 0, note);
+ }
+ 
+ 
+@@ -175,10 +175,12 @@
+     u_short port,
+     int flags,
+     unsigned char TOS,
++    unsigned long PRIORITY,
+     const char *note)
+ {
+     int new_socket;
+     int tos = 0;
++    unsigned long priority = 0;
+     fde *F = NULL;
+ 
+     /* Create socket for accepting new connections. */
+@@ -209,12 +211,25 @@
+ 	debug(5, 0) ("comm_open: setsockopt(IP_TOS) not supported on this platform\n");
+ #endif
+     }
++    if (PRIORITY) {
++#ifdef SO_PRIORITY
++	priority = PRIORITY;
++        enter_suid();
++	if (setsockopt(new_socket, SOL_SOCKET, SO_PRIORITY, (char *) &priority, sizeof(unsigned long)) < 0)
++		debug(50, 1) ("comm_open: setsockopt(SO_PRIORITY) on FD %d: %s\n",
++		new_socket, xstrerror());
++        leave_suid();
++#else
++	debug(50, 0) ("comm_open: setsockopt(SO_PRIORITY) not supported on this platform\n");
++#endif
++    }
+     /* update fdstat */
+     debug(5, 5) ("comm_open: FD %d is a new socket\n", new_socket);
+     fd_open(new_socket, FD_SOCKET, note);
+     F = &fd_table[new_socket];
+     F->local_addr = addr;
+     F->tos = tos;
++    F->priority = priority;
+     if (!(flags & COMM_NOCLOEXEC))
+ 	commSetCloseOnExec(new_socket);
+     if ((flags & COMM_REUSEADDR))
+@@ -382,6 +397,15 @@
+ 	        debug(5, 1) ("commResetFD: setsockopt(IP_TOS) on FD %d: %s\n", cs->fd, xstrerror());
+     }
+ #endif
++#ifdef SO_PRIORITY
++    if (F->priority) {
++        unsigned long priority = F->priority;
++        enter_suid();
++	if (setsockopt(cs->fd, SOL_SOCKET, SO_PRIORITY, (char *)&priority, sizeof(unsigned long)) < 0)
++		debug(50, 1) ("commResetFD: setsockopt(SO_PRIORITY) on FD %d: %s\n", cs->fd, xstrerror());
++        leave_suid();
++    }
++#endif
+     if (F->flags.close_on_exec)
+ 	commSetCloseOnExec(cs->fd);
+     if (F->flags.nonblocking)
+diff -Nru squid-2.6.STABLE14.orig/src/forward.c squid-2.6.STABLE14/src/forward.c
+--- squid-2.6.STABLE14.orig/src/forward.c	2007-04-17 12:35:17.000000000 +0300
++++ squid-2.6.STABLE14/src/forward.c	2007-08-16 20:11:00.000000000 +0300
+@@ -418,6 +418,17 @@
+     return 0;
+ }
+ 
++static unsigned long
++aclMapPriority(acl_priority * head, aclCheck_t * ch)
++{
++    acl_priority *l;
++    for (l = head; l; l = l->next) {
++        if (aclMatchAclList(l->acl_list, ch))
++            return l->priority;
++    }
++    return 0;
++}
++
+ struct in_addr
+ getOutgoingAddr(request_t * request)
+ {
+@@ -446,6 +457,20 @@
+     return aclMapTOS(Config.accessList.outgoing_tos, &ch);
+ }
+ 
++unsigned long
++getOutgoingPriority(request_t * request)
++{
++    aclCheck_t ch;
++    memset(&ch, '\0', sizeof(aclCheck_t));
++    if (request) {
++        ch.src_addr = request->client_addr;
++	ch.my_addr = request->my_addr;
++	ch.my_port = request->my_port;
++	ch.request = request;
++    }
++    return aclMapPriority(Config.accessList.outgoing_priority, &ch);
++}
++
+ static void
+ fwdConnectStart(void *data)
+ {
+@@ -462,6 +487,7 @@
+     int ftimeout = Config.Timeout.forward - (squid_curtime - fwdState->start);
+     struct in_addr outgoing;
+     unsigned short tos;
++    unsigned long priority;
+ #if LINUX_TPROXY
+     struct in_tproxy itp;
+ #endif
+@@ -547,15 +573,17 @@
+ #endif
+     outgoing = getOutgoingAddr(fwdState->request);
+     tos = getOutgoingTOS(fwdState->request);
++    priority = getOutgoingPriority(fwdState->request);
+ 
+-    debug(17, 3) ("fwdConnectStart: got addr %s, tos %d\n",
+-	inet_ntoa(outgoing), tos);
++    debug(17, 3) ("fwdConnectStart: got addr %s, tos %d, priority %lu\n",
++	inet_ntoa(outgoing), tos, priority);
+     fd = comm_openex(SOCK_STREAM,
+ 	IPPROTO_TCP,
+ 	outgoing,
+ 	0,
+ 	COMM_NONBLOCKING,
+ 	tos,
++	priority,
+ 	url);
+     if (fd < 0) {
+ 	debug(50, 4) ("fwdConnectStart: %s\n", xstrerror());
+diff -Nru squid-2.6.STABLE14.orig/src/protos.h squid-2.6.STABLE14/src/protos.h
+--- squid-2.6.STABLE14.orig/src/protos.h	2007-07-15 12:52:17.000000000 +0300
++++ squid-2.6.STABLE14/src/protos.h	2007-08-16 20:11:00.000000000 +0300
+@@ -160,7 +160,7 @@
+ extern void comm_init(void);
+ extern int comm_listen(int sock);
+ extern int comm_open(int, int, struct in_addr, u_short port, int, const char *note);
+-extern int comm_openex(int, int, struct in_addr, u_short, int, unsigned char TOS, const char *);
++extern int comm_openex(int, int, struct in_addr, u_short, int, unsigned char TOS, unsigned long PRIORITY, const char *);
+ extern u_short comm_local_port(int fd);
+ 
+ extern void commDeferFD(int fd);
+@@ -735,6 +735,7 @@
+ #endif
+ struct in_addr getOutgoingAddr(request_t * request);
+ unsigned long getOutgoingTOS(request_t * request);
++unsigned long getOutgoingPriority(request_t * request);
+ 
+ extern void urnStart(request_t *, StoreEntry *);
+ 
+diff -Nru squid-2.6.STABLE14.orig/src/ssl.c squid-2.6.STABLE14/src/ssl.c
+--- squid-2.6.STABLE14.orig/src/ssl.c	2007-02-03 23:53:38.000000000 +0200
++++ squid-2.6.STABLE14/src/ssl.c	2007-08-16 20:11:00.000000000 +0300
+@@ -524,6 +524,7 @@
+ 	0,
+ 	COMM_NONBLOCKING,
+ 	getOutgoingTOS(request),
+++	getOutgoingPriority(request),
+ 	url);
+     if (sock == COMM_ERROR) {
+ 	debug(26, 4) ("sslStart: Failed because we're out of sockets.\n");
+diff -Nru squid-2.6.STABLE14.orig/src/structs.h squid-2.6.STABLE14/src/structs.h
+--- squid-2.6.STABLE14.orig/src/structs.h	2007-08-16 20:10:44.000000000 +0300
++++ squid-2.6.STABLE14/src/structs.h	2007-08-16 20:11:00.000000000 +0300
+@@ -296,6 +296,12 @@
+     int tos;
+ };
+ 
++struct _acl_priority {
++    acl_priority *next;
++    acl_list *acl_list;
++    unsigned long priority;
++};
++
+ struct _aclCheck_t {
+     const acl_access *access_list;
+     struct in_addr src_addr;
+@@ -705,6 +711,7 @@
+ 	acl_access *reply;
+ 	acl_address *outgoing_address;
+ 	acl_tos *outgoing_tos;
++	acl_priority *outgoing_priority;
+ #if USE_HTCP
+ 	acl_access *htcp;
+ 	acl_access *htcp_clr;
+@@ -876,6 +883,7 @@
+     u_short remote_port;
+     struct in_addr local_addr;
+     unsigned char tos;
++    unsigned long priority;
+     char ipaddr[16];		/* dotted decimal address of peer */
+     char desc[FD_DESC_SZ];
+     struct {
+diff -Nru squid-2.6.STABLE14.orig/src/typedefs.h squid-2.6.STABLE14/src/typedefs.h
+--- squid-2.6.STABLE14.orig/src/typedefs.h	2006-09-02 17:08:42.000000000 +0300
++++ squid-2.6.STABLE14/src/typedefs.h	2007-08-16 20:11:00.000000000 +0300
+@@ -102,6 +102,7 @@
+ typedef struct _acl_access acl_access;
+ typedef struct _acl_address acl_address;
+ typedef struct _acl_tos acl_tos;
++typedef struct _acl_priority acl_priority;
+ typedef struct _aclCheck_t aclCheck_t;
+ typedef struct _wordlist wordlist;
+ typedef struct _intlist intlist;
