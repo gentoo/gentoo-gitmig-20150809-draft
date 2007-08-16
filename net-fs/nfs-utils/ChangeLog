@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.104 2007/05/13 21:08:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.105 2007/08/16 23:35:19 vapier Exp $
+
+*nfs-utils-1.0.12-r4 (16 Aug 2007)
+
+  16 Aug 2007; Mike Frysinger <vapier@gentoo.org> files/nfs.initd,
+  files/nfsmount.initd, +nfs-utils-1.0.12-r4.ebuild:
+  Only force kerb init.d scripts when the NFSv4 mount needs it #180428 by
+  Maurice Volaski. Load the nfs module in the nfsmount client script, not
+  nfsd.
 
   13 May 2007; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.1.0.ebuild:
   Make sure we pull in >=app-crypt/libgssapi-0.11 #178217 by Markus Ullmann.

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.5 2007/05/12 11:27:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.6 2007/08/16 23:35:19 vapier Exp $
 
 opts="reload"
 
@@ -16,15 +16,13 @@ exportfs=/usr/sbin/exportfs
 smnotify=/usr/sbin/sm-notify
 
 depend() {
-	local myneed="" myuse=""
-	local nfs_mounts=$(awk '!/^[[:space:]]*#/ && $3=="nfs4" { print $0 }' /etc/fstab)
-	if [ -n "${nfs_mounts}" ] ; then
-		myneed="rpc.idmapd rpc.gssd"
-	else
-		myuse="rpc.idmapd rpc.gssd"
-	fi
-	use ypbind net dns rpc.rquotad ${myuse}
+	local myneed=""
+	awk '!/^[[:space:]]*#/ && $3 == "nfs4" { exit ($4 ~ /sec=krb/ ? 1 : 2) }' /etc/fstab
+	local ret=$?
+	[ ${ret} -ne 0 ] && myneed="${myneed} rpc.idmapd"
+	[ ${ret} -eq 1 ] && myneed="${myneed} rpc.gssd"
 	need portmap rpc.statd ${myneed}
+	use ypbind net dns rpc.rquotad rpc.idmapd rpc.gssd
 	after quota
 }
 
@@ -44,7 +42,7 @@ waitfor_exportfs() {
 mount_nfsd() {
 	# Make sure nfs support is loaded in the kernel #64709
 	if [ -e /proc/modules ] && ! grep -qs nfsd /proc/filesystems ; then
-		modprobe nfsd &> /dev/null
+		modprobe -q nfsd
 	fi
 
 	# This is the new "kernel 2.6 way" to handle the exports file
