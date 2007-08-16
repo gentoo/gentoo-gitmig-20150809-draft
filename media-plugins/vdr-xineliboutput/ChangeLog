@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.28 2007/07/22 09:11:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.29 2007/08/16 17:59:24 zzam Exp $
+
+  16 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-xineliboutput-1.0.0_rc2.ebuild:
+  Disable automatic conversion to gettext for vdr-1.5.7.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   vdr-xineliboutput-1.0.0_rc1.ebuild, vdr-xineliboutput-1.0.0_rc2.ebuild:
