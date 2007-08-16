@@ -1,0 +1,63 @@
+--- /var/tmp/portage/net-irc/konversation-1.0.1-r2/work/konversation-1.0.1/konversation/src/konsolepanel.h	2006-10-06 18:43:29.000000000 +0200
++++ konversation/src/konsolepanel.h	2007-08-16 16:25:09.000000000 +0200
+@@ -13,8 +13,10 @@
+ #define KONSOLE_PANEL_H
+ 
+ #include "chatwindow.h"
++
+ #include <kparts/part.h>
+ 
++
+ class KonsolePanel : public ChatWindow
+ {
+     Q_OBJECT
+@@ -25,6 +27,8 @@
+ 
+         virtual void setName(const QString& newName) { ChatWindow::setName(newName); }
+ 
++        QWidget* getWidget();
++
+     signals:
+         void closeView(ChatWindow* view);
+ 
+--- /var/tmp/portage/net-irc/konversation-1.0.1-r2/work/konversation-1.0.1/konversation/src/konsolepanel.cpp	2006-10-06 18:43:29.000000000 +0200
++++ konversation/src/konsolepanel.cpp	2007-08-16 16:25:09.000000000 +0200
+@@ -9,15 +9,16 @@
+   Copyright (C) 2003 Mickael Marchand <marchand@kde.org>
+ */
+ 
++#include "konsolepanel.h"
++#include "common.h"
++#include "viewcontainer.h"
++
+ #include <kdebug.h>
+ #include <klibloader.h>
+ #include <klocale.h>
+ 
+-#include "konsolepanel.h"
+-#include "common.h"
+-#include "viewcontainer.h"
+ 
+-KonsolePanel::KonsolePanel(QWidget *p) : ChatWindow( p )
++KonsolePanel::KonsolePanel(QWidget *p) : ChatWindow( p ), k_part (0)
+ {
+     setName(i18n("Konsole"));
+     setType(ChatWindow::Konsole);
+@@ -46,8 +47,17 @@
+     }
+ }
+ 
++QWidget* KonsolePanel::getWidget()
++{
++    if (k_part)
++        return k_part->widget();
++    else
++        return 0;
++}
++
+ void KonsolePanel::childAdjustFocus()
+ {
++    if (k_part) k_part->widget()->setFocus();
+ }
+ 
+ void KonsolePanel::partDestroyed()

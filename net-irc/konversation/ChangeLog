@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/konversation
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.54 2007/06/27 12:17:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.55 2007/08/16 16:20:19 philantrop Exp $
+
+*konversation-1.0.1-r2 (16 Aug 2007)
+
+  16 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/konversation-1.0.1-konsolepanel.patch,
+  +konversation-1.0.1-r2.ebuild:
+  Added an upstream patch (thanks, Eike, for providing it only *minutes* after
+  the report) to avoid a crash if konsole is not installed. Fixes bug 189057.
 
   27 Jun 2007; Lars Weiler <pylon@gentoo.org> konversation-1.0.1-r1.ebuild:
   Stable on ppc; bug #182589.
