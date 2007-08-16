@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeartwork-kworldclock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kworldclock/ChangeLog,v 1.69 2007/08/11 15:09:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kworldclock/ChangeLog,v 1.70 2007/08/16 23:29:52 zmedico Exp $
+
+  16 Aug 2007; Zac Medico <zmedico@gentoo.org>
+  kdeartwork-kworldclock-3.5.5.ebuild, kdeartwork-kworldclock-3.5.6.ebuild,
+  kdeartwork-kworldclock-3.5.7.ebuild:
+  Bug #188707 - update deps for package move kworldwatch -> kworldclock.
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org>
   kdeartwork-kworldclock-3.5.7.ebuild:
