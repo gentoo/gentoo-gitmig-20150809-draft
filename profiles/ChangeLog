@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.575 2007/08/15 16:23:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.576 2007/08/16 01:38:03 beandog Exp $
+
+  16 Aug 2007; Steve Dibb <beandog@gentoo.org> use.local.desc:
+  Add pvr local flag for media-video/mplayer
 
   15 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> package.mask:
   Remove opera mask wrt #188987
