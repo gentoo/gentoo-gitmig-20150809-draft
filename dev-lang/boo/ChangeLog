@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/boo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.16 2007/08/11 04:26:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.17 2007/08/16 00:02:29 dertobi123 Exp $
+
+  16 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  boo-0.7.6.2237-r1.ebuild:
+  ppc stable, bug #185631
 
   10 Aug 2007; Steve Dibb <beandog@gentoo.org> boo-0.7.6.2237-r1.ebuild:
   amd64 stable
