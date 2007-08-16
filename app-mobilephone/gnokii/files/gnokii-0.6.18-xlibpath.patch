@@ -1,0 +1,23 @@
+diff -Nru gnokii-0.6.18.orig/configure.in gnokii-0.6.18/configure.in
+--- gnokii-0.6.18.orig/configure.in	2007-07-24 23:31:35.000000000 +0300
++++ gnokii-0.6.18/configure.in	2007-08-16 23:26:21.000000000 +0300
+@@ -468,11 +469,16 @@
+       fi
+       CPPFLAGS="$CPPFLAGS $XINCL"
+       AC_CHECK_HEADERS(X11/xpm.h,
+-          [ AC_CHECK_LIB(Xpm, XpmWriteFileFromXpmImage,
+-                [ XPM_CFLAGS="$XINCL" XPM_LIBS="-L$x_libraries -lXpm -lX11"
++          [ XLIBPATH=""
++            if test "x$x_libraries" != "x"; then
++              XLIBPATH="-L$x_libraries"
++            fi
++            AC_CHECK_LIB(Xpm, XpmWriteFileFromXpmImage,
++                [ XPM_CFLAGS="$XINCL"
++                  XPM_LIBS="$XLIBPATH -lXpm -lX11"
+                   AC_DEFINE(XPM) ],
+                 AC_MSG_WARN(Cannot found library libXpm - disabling XPM support.),
+-                [ -L$x_libraries -lX11 ]
++                [ $XLIBPATH -lX11 ]
+             )
+           ]
+       )
