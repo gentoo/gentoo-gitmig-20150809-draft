@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.33 2007/07/24 20:45:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.34 2007/08/16 20:06:49 mr_bones_ Exp $
+
+  16 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  stellarium-0.9.0.ebuild:
+  use the qt4 eclass more; fix qt dep for bug #189055
 
   24 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
   stellarium-0.9.0.ebuild:
