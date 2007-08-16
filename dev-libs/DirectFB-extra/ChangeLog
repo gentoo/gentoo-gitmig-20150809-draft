@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/DirectFB-extra
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.18 2007/03/20 04:14:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.19 2007/08/16 16:42:56 vapier Exp $
+
+*DirectFB-extra-1.0.0 (16 Aug 2007)
+
+  16 Aug 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/DirectFB-extra-1.0.0-CFLAGS.patch, +DirectFB-extra-1.0.0.ebuild:
+  Version bump.
 
   20 Mar 2007; Mike Frysinger <vapier@gentoo.org>
   +files/DirectFB-extra-0.9.25-CFLAGS.patch, DirectFB-extra-0.9.25.ebuild:
