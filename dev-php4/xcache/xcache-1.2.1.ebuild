@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/xcache/xcache-1.2.1.ebuild,v 1.1 2007/07/07 13:33:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/xcache/xcache-1.2.1.ebuild,v 1.2 2007/08/16 08:53:59 jokey Exp $
 
 PHP_EXT_NAME="xcache"
 PHP_EXT_INI="yes"
@@ -16,6 +16,9 @@ SRC_URI="http://xcache.lighttpd.net/pub/Releases/${PV}/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 IUSE=""
+
+# make test would just run php's test and as such need the full php source
+RESTRICT="test"
 
 DEPEND="!dev-php4/eaccelerator !dev-php4/pecl-apc"
 RDEPEND="${DEPEND}"
@@ -45,7 +48,7 @@ src_compile() {
 
 src_install() {
 	php-ext-source-r1_src_install
-	dodoc-php AUTHORS CHANGELOG INSTALL COPYING
+	dodoc-php AUTHORS ChangeLog INSTALL COPYING
 
 	php-ext-base-r1_addtoinifiles "auto_globals_jit" '"0"'
 	php-ext-base-r1_addtoinifiles "xcache.cacher" '"1"'

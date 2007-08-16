@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/xcache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/xcache/ChangeLog,v 1.6 2007/07/07 13:33:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/xcache/ChangeLog,v 1.7 2007/08/16 08:53:59 jokey Exp $
+
+  16 Aug 2007; Markus Ullmann <jokey@gentoo.org> -xcache-1.2.0.ebuild,
+  xcache-1.2.1.ebuild:
+  From hoffie: adding RESTRICT=test and s/CHANGELOG/ChangeLog/
 
 *xcache-1.2.1 (07 Jul 2007)
 
