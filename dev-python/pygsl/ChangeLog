@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/pygsl
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/ChangeLog,v 1.1 2007/08/16 12:52:12 bicatali Exp $
+
+*pygsl-0.9.1 (16 Aug 2007)
+
+  16 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +pygsl-0.9.1.ebuild:
+  Initial import. Initial ebuild submitted by Pablo De Nápoli
+  <pdenapo@yahoo.com>. Closing bug #65354.
+
