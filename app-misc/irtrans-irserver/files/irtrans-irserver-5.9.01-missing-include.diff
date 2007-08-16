@@ -1,0 +1,13 @@
+Joerg Bornkessel <hd_brummy@gentoo.org> 16 Aug 2007
+
+diff -Naur linuxserio.c.orig linuxserio.c
+--- linuxserio.c.orig	2007-08-16 12:24:22.000000000 +0200
++++ linuxserio.c	2007-08-16 12:24:49.000000000 +0200
+@@ -13,6 +13,7 @@
+ #include <netinet/in.h>
+ #include <sys/un.h>
+ #include <arpa/inet.h>
++#include <stdlib.h>
+ 
+ #include "remote.h"
+ #include "errcode.h"
