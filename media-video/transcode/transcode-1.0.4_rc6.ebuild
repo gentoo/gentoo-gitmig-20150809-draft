@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.4_rc6.ebuild,v 1.1 2007/08/16 16:20:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.4_rc6.ebuild,v 1.2 2007/08/16 16:35:30 beandog Exp $
 
 WANT_AUTOMAKE=1.8
 
@@ -27,7 +27,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	lzo? ( =dev-libs/lzo-1* )
 	fame? ( >=media-libs/libfame-0.9.1 )
 	imagemagick? ( >=media-gfx/imagemagick-5.5.6.0 )
-	mpeg? ( >=media-libs/libmpeg3-1.7 )
+	mpeg? ( media-libs/libmpeg3 )
 	mp3? ( >=media-sound/lame-3.93 )
 	sdl? ( media-libs/libsdl )
 	quicktime? ( >=media-libs/libquicktime-0.9.8 )
