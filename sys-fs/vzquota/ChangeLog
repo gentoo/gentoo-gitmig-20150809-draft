@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/vzquota
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/ChangeLog,v 1.19 2007/01/18 14:51:48 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/ChangeLog,v 1.20 2007/08/16 09:40:26 phreak Exp $
+
+*vzquota-3.0.11 (16 Aug 2007)
+
+  16 Aug 2007; Christian Heim <phreak@gentoo.org> +vzquota-3.0.11.ebuild:
+  Version bump, thanks to Kir Kolyshkin <kir at openvz.org> for notifying us.
 
   18 Jan 2007; Christian Heim <phreak@gentoo.org> vzquota-3.0.9.ebuild:
   Adding ~ia64 to the KEYWORDS.
