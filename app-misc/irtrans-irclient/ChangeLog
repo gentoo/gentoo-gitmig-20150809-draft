@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/irtrans-irclient
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irclient/ChangeLog,v 1.1 2007/08/16 13:41:44 hd_brummy Exp $
+
+*irtrans-irclient-5.9.01 (16 Aug 2007)
+
+  16 Aug 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/irtrans-irclient-5.9.01-missing-include.diff, +metadata.xml,
+  +irtrans-irclient-5.9.01.ebuild:
+  initial ebuild, thanks to M.Fetka ( proxied Maintainer ) on bug #187099
+

@@ -1,0 +1,31 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX irtrans-irclient-5.9.01-missing-include.diff 363 RMD160 fff180d91331e6a0b1939e320a5ee7854bae2de6 SHA1 6a0b103619a802ceb541cee15d8436ac32e995b0 SHA256 48753faa1661c2519dc55fcb95da93319e36cebdc5ea48ece4f633b36fdcc288
+MD5 f923d8a7bc401c6a0737e679850dace0 files/irtrans-irclient-5.9.01-missing-include.diff 363
+RMD160 fff180d91331e6a0b1939e320a5ee7854bae2de6 files/irtrans-irclient-5.9.01-missing-include.diff 363
+SHA256 48753faa1661c2519dc55fcb95da93319e36cebdc5ea48ece4f633b36fdcc288 files/irtrans-irclient-5.9.01-missing-include.diff 363
+DIST irserver-src-5.9.01.tar.gz 131750 RMD160 16373378b0eb8d126faf81f8afa9c62c46f9b7e6 SHA1 e03916231f5cb4247c3428906ad37bfa7eba1629 SHA256 90491893f93f952a85d6db39a7700be562156bd6510cee16c1432bf6c93a7ff4
+EBUILD irtrans-irclient-5.9.01.ebuild 841 RMD160 444b3753c86c83bebe15a5eceeb7177c2b4c6c62 SHA1 c9b25fa5f8e4dc8e82289472771433e29349871f SHA256 faacf63a0c345225898b9011f1f2d7d9f97c153e4439c511a495e5ea2ed3ddf6
+MD5 cfa178c037221d40e74b1c12a7af649b irtrans-irclient-5.9.01.ebuild 841
+RMD160 444b3753c86c83bebe15a5eceeb7177c2b4c6c62 irtrans-irclient-5.9.01.ebuild 841
+SHA256 faacf63a0c345225898b9011f1f2d7d9f97c153e4439c511a495e5ea2ed3ddf6 irtrans-irclient-5.9.01.ebuild 841
+MISC ChangeLog 501 RMD160 279a9a083a2e9e758bea4f55d96bfe531338e317 SHA1 c860d504747c9027d0ec2358f245e35bf51e71d9 SHA256 d518bda3db6f8f59db2ee051b8341feefc0d5de215c75728b7116a3d0be75f59
+MD5 97c407e522e612a38bedd428d289465f ChangeLog 501
+RMD160 279a9a083a2e9e758bea4f55d96bfe531338e317 ChangeLog 501
+SHA256 d518bda3db6f8f59db2ee051b8341feefc0d5de215c75728b7116a3d0be75f59 ChangeLog 501
+MISC metadata.xml 434 RMD160 f5c371b2dbc822ab770051681c5bcdf643188f9a SHA1 517ee2493df8d34d878b177bcfb1649640903de6 SHA256 9db7a61b2d24510fab1e37a5196171485af7d74862fc6f0888c41e1240c36ce1
+MD5 29467ae341f5a905560f63ba5facf376 metadata.xml 434
+RMD160 f5c371b2dbc822ab770051681c5bcdf643188f9a metadata.xml 434
+SHA256 9db7a61b2d24510fab1e37a5196171485af7d74862fc6f0888c41e1240c36ce1 metadata.xml 434
+MD5 607185512aec3e9a6d6ac1bc6b2461f6 files/digest-irtrans-irclient-5.9.01 259
+RMD160 3ac0a08aef1e436475e61984ca35df89ee0dacb4 files/digest-irtrans-irclient-5.9.01 259
+SHA256 202ec158a51805e39b9285727dab55a74d25a6c4987577ae67a3d313c6f4ce9b files/digest-irtrans-irclient-5.9.01 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+Comment: added by hd_brummy@gentoo.org
+
+iD8DBQFGxFQndn07HTTCgIoRArDEAJwKfeSLjZW3db1rHbnEHek6+od+rwCgrJoE
+Ec/0KhexFjHNKkQ2qf1nSO8=
+=83Mm
+-----END PGP SIGNATURE-----
