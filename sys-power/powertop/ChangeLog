@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.15 2007/08/13 12:12:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.16 2007/08/16 00:22:11 angelos Exp $
+
+  16 Aug 2007; Christoph Mende <angelos@gentoo.org> powertop-1.7.ebuild:
+  Stable on amd64 wrt bug #188590
 
   13 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> powertop-1.7.ebuild:
   Stable on sparc wrt #188590
