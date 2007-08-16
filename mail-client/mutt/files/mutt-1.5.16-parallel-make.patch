@@ -1,16 +1,34 @@
-diff --git a/doc/Makefile.am b/doc/Makefile.am
-index 173f352..1d974f9 100644
---- a/doc/Makefile.am
-+++ b/doc/Makefile.am
-@@ -132,10 +132,9 @@ EDIT = sed -e 's,@sysconfdir\@,$(sysconfdir),g' \
- mutt.1: $(srcdir)/mutt.man
- 	$(EDIT) $(srcdir)/mutt.man > $@
+diff --git a/Makefile.am b/Makefile.am
+index 1f36629..20d205e 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -2,14 +2,16 @@
+ ## Use aclocal -I m4; automake --foreign
  
--stamp-doc-xml: $(top_srcdir)/makedoc.c $(top_srcdir)/makedoc-defs.h $(top_srcdir)/init.h \
-+stamp-doc-xml: ../makedoc$(EXEEXT) $(top_srcdir)/makedoc.c $(top_srcdir)/makedoc-defs.h $(top_srcdir)/init.h \
-                manual.xml.head $(top_srcdir)/functions.h $(top_srcdir)/OPS* manual.xml.tail \
-                $(srcdir)/gen-map-doc $(top_srcdir)/VERSION $(top_srcdir)/ChangeLog
--	$(MAKE) ../makedoc$(EXEEXT) # we do not want to rebuild the documentation in tarball builds
- 	( date=`head -n 1 $(top_srcdir)/ChangeLog | LC_ALL=C cut -d ' ' -f 1` && \
- 	  sed -e "s/@VERSION\@/`cat $(top_srcdir)/VERSION` ($$date)/" $(srcdir)/manual.xml.head && \
- 	  $(MAKEDOC_CPP) $(top_srcdir)/init.h | ../makedoc -s && \
+ AUTOMAKE_OPTIONS = 1.6 foreign
+-EXTRA_PROGRAMS = mutt_dotlock pgpring pgpewrap makedoc
++EXTRA_PROGRAMS = mutt_dotlock pgpring pgpewrap
++
++noinst_PROGRAMS = makedoc
+ 
+ if BUILD_IMAP
+ IMAP_SUBDIR = imap
+ IMAP_INCLUDES = -I$(top_srcdir)/imap
+ endif
+ 
+-SUBDIRS = m4 po intl doc contrib $(IMAP_SUBDIR)
++SUBDIRS = m4 po intl $(IMAP_SUBDIR) . doc contrib
+ 
+ bin_SCRIPTS = muttbug flea @SMIMEAUX_TARGET@
+ 
+@@ -37,10 +39,6 @@ mutt_LDADD = @MUTT_LIB_OBJECTS@ @LIBOBJS@ $(LIBIMAP) $(MUTTLIBS) \
+ mutt_DEPENDENCIES = @MUTT_LIB_OBJECTS@ @LIBOBJS@ $(LIBIMAPDEPS) \
+ 	$(INTLDEPS)
+ 
+-makedoc_SOURCES = makedoc.c
+-makedoc_LDADD =
+-makedoc_DEPENDENCIES = 
+-
+ # $(makedoc_OBJECTS): $(makedoc_SOURCES)
+ # 	$(HOST_CC) $(DEFS) $(AM_CPPFLAGS) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) -c $<
+ 

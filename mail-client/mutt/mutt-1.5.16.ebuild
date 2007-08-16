@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.16.ebuild,v 1.9 2007/08/11 15:10:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.16.ebuild,v 1.10 2007/08/16 20:30:10 ferdy Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -64,15 +64,10 @@ src_unpack() {
 	unpack ${A//${SIDEBAR_PATCH_N}} && cd "${S}" || die "unpack failed"
 
 	if ! use vanilla && ! use sidebar ; then
-		epatch "${FILESDIR}"/${P}-parallel-make.patch
-
 		use nntp || rm "${PATCHDIR}"/06-nntp.patch
-
 		for p in "${PATCHDIR}"/*.patch ; do
 			epatch "${p}"
 		done
-
-		AT_M4DIR="m4" eautoreconf
 	fi
 
 	if use sidebar ; then
@@ -80,6 +75,9 @@ src_unpack() {
 			ewarn "The sidebar patch is only applied to a vanilla mutt tree."
 		epatch "${DISTDIR}"/${SIDEBAR_PATCH_N}
 	fi
+
+	epatch "${FILESDIR}"/${P}-parallel-make.patch
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
