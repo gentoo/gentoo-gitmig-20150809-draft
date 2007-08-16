@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/trommler
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.13 2007/07/25 10:38:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.14 2007/08/16 19:06:27 gustavoz Exp $
+
+  16 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> trommler-3.3.ebuild,
+  trommler-3.7.ebuild:
+  -sparc see #189143
 
 *trommler-3.7 (25 Jul 2007)
 
