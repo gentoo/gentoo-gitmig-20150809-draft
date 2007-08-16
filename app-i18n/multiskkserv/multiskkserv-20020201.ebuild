@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.12 2007/04/23 14:10:31 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.13 2007/08/16 16:12:55 matsuu Exp $
 
 inherit eutils fixheadtails
 
@@ -19,12 +19,18 @@ KEYWORDS="x86 ppc sparc alpha"
 IUSE=""
 
 DEPEND="virtual/libc
-	app-i18n/skk-jisyo-cdb"
+	|| (
+		>=app-i18n/skk-jisyo-200705
+		app-i18n/skk-jisyo-cdb
+	)"
 PROVIDE="virtual/skkserv"
 
 pkg_setup() {
-	elog "If you want to add some extra SKK dictionaries,"
-	elog "please emerge app-i18n/skk-jisyo-extra first."
+	if has_version '>=app-i18n/skk-jisyo-200705' && ! built_with_use '>=app-i18n/skk-jisyo-200705' cdb ; then
+		eerror "multiskkserv requires skk-jisyo to be built with cdb support. Please add"
+		eerror "'cdb' to your USE flags, and re-emerge app-i18n/skk-jisyo."
+		die "Missing cdb USE flag."
+	fi
 }
 
 src_unpack() {

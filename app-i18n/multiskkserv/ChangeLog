@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/multiskkserv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/ChangeLog,v 1.10 2007/04/23 14:10:31 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/ChangeLog,v 1.11 2007/08/16 16:12:55 matsuu Exp $
+
+  16 Aug 2007; MATSUU Takuto <matsuu@gentoo.org>
+  multiskkserv-20020201.ebuild, multiskkserv-20051220.ebuild:
+  Added app-i18n/skk-jisyo-200705 to DEPEND.
 
 *multiskkserv-20051220 (23 Apr 2007)
 
