@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r3.ebuild,v 1.2 2007/07/19 08:39:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r4.ebuild,v 1.1 2007/08/17 18:19:27 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
