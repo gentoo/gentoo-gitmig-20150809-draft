@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.15 2007/08/14 09:40:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.16 2007/08/17 16:10:59 angelos Exp $
+
+  17 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  mozilla-sunbird-0.5.ebuild:
+  Stable on amd64 wrt bug #188716
 
   14 Aug 2007; Raúl Porcel <armin76@gentoo.org> mozilla-sunbird-0.5.ebuild:
   x86 stable wrt #188716
