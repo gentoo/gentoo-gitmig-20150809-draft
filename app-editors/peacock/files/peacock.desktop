@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Peacock
+Comment=Create web pages
+Comment[de]=Webseiten erstellen
+Comment[fr]=Éditeur pour développeurs web
+Comment[ca]=Creeu pàgines web
+Comment[es]=Crear páginas web
+Exec=peacock-2 %U
+Terminal=false
+Type=Application
+Icon=text-editor
+Categories=GTK;GNOME;Application;Development;WebDevelopment;
+Encoding=UTF-8
+MimeType=text/html;

@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/peacock
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/peacock/ChangeLog,v 1.9 2007/03/12 21:00:32 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/peacock/ChangeLog,v 1.10 2007/08/17 04:13:14 leonardop Exp $
+
+*peacock-1.9.1-r1 (17 Aug 2007)
+
+  17 Aug 2007; Leonardo Boshell <leonardop@gentoo.org>
+  +files/peacock.desktop, +peacock-1.9.1-r1.ebuild:
+  Added gtkhtml-3.0 dependency (bug #137846). Install a .desktop file and
+  cleaned up dependencies. Based on contributions by Carles Escrig and
+  Davide Italiano.
 
   12 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
   Re-assigning to the sgml herd, after text-markup split.
