@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xclip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.19 2007/06/02 16:55:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.20 2007/08/17 13:03:22 gustavoz Exp $
+
+  17 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> xclip-0.08-r2.ebuild:
+  Keyworded ~sparc
 
 *xclip-0.08-r2 (02 Jun 2007)
 
