@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/roadsend-php-2.9.1_p6.ebuild,v 1.1 2007/08/14 16:18:44 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/roadsend-php-2.9.1_p6.ebuild,v 1.2 2007/08/17 08:22:22 opfer Exp $
 
 MY_PVL=${PV/_p/-r}
 MY_PV=${PV%%_p[0-9]}
@@ -12,7 +12,7 @@ HOMEPAGE="http://code.roadsend.com/pcc"
 SRC_URI="http://code.roadsend.com/snaps/${MY_PL}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="dev-scheme/bigloo
 		>=net-misc/curl-7.15.1-r1
