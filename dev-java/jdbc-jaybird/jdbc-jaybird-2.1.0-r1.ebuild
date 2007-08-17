@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.0-r1.ebuild,v 1.5 2007/06/16 14:05:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.0-r1.ebuild,v 1.6 2007/08/17 21:29:05 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source examples test"
 
-inherit eutils java-pkg-2
+inherit eutils java-pkg-2 java-ant-2
 
 At="Jaybird-${PV/_/}-src"
 DESCRIPTION="JDBC Type 2 and 4 drivers for Firebird SQL server"
@@ -23,12 +23,16 @@ DEPEND="|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
 		jni? ( dev-java/cpptasks )
 		test? (
 			dev-java/junit
-			dev-java/ant
+			dev-java/ant-junit
 		)"
 
 S="${WORKDIR}/client-java"
 
 MY_PN="jaybird"
+
+# The build.xml breaks if -source gets rewritten
+# This ebuild should probably have a java5 use flag
+JAVA_PKG_BSFIX="off"
 
 src_unpack() {
 	unpack "${A}"
@@ -98,5 +102,5 @@ src_test() {
 	ewarn "without Firebird installed and running locally. The tests will"
 	ewarn "complete without Firebird, but network timeouts prolong the"
 	ewarn "testing phase considerably."
-	eant all-tests-pure-java
+	ANT_TASKS="ant-junit" eant all-tests-pure-java
 }
