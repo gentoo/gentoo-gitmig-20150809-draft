@@ -1,12 +1,6 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.78 2007/08/17 23:27:43 zzam Exp $
-
-  17 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
-  device-mapper-1.02.19-r1.ebuild:
-  Added blocker suggested in bug 189227. Wanted to avoid this, but it seems to
-  work better these days as it seems. And if it does not work I dont get the
-  bug, but portage-team ;)
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.79 2007/08/17 23:42:19 zzam Exp $
 
   15 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   device-mapper-1.02.19-r1.ebuild:
