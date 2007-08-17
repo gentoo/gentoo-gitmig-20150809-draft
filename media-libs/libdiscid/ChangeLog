@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libdiscid
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdiscid/ChangeLog,v 1.1 2007/08/17 10:28:00 coldwind Exp $
+
+*libdiscid-0.1.1 (17 Aug 2007)
+
+  17 Aug 2007; Santiago M. Mola <coldwind@gentoo.org> +metadata.xml,
+  +libdiscid-0.1.1.ebuild:
+  Initial ebuild wrt bug #155606. Thanks to Dick Marinus and Marti Raudsepp.
+
