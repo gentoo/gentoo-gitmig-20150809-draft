@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2977 2007/08/17 10:44:58 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2978 2007/08/17 20:44:49 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -707,7 +707,7 @@ games-strategy/heroes3:sounds - Installs optional sound data
 games-strategy/uqm:music - download and install music files (large)
 games-strategy/uqm:remix - download and install music remix files (large)
 games-strategy/uqm:voice - download and install voice files (large)
-games-strategy/wesnoth:editor - Enable compilation editor
+games-strategy/wesnoth:editor - Enable compilation of map editor
 games-strategy/wesnoth:lite - Lite install
 games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
