@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/text-format
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.14 2007/08/17 06:54:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.15 2007/08/17 06:56:59 graaff Exp $
+
+  17 Aug 2007; Hans de Graaff <graaff@gentoo.org> -text-format-0.61.ebuild:
+  Remove old version
 
   17 Aug 2007; Hans de Graaff <graaff@gentoo.org> text-format-0.64.ebuild:
   Change USE_RUBY from 'any' to 'ruby18' to avoid emerge errors.
