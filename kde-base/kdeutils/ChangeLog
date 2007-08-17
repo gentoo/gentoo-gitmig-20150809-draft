@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.212 2007/08/15 05:01:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.213 2007/08/17 08:57:02 philantrop Exp $
+
+*kdeutils-3.5.7-r1 (17 Aug 2007)
+
+  17 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/klaptopdaemon-3.5.7-has_acpi_sleep.patch,
+  +kdeutils-3.5.7-r1.ebuild:
+  Added patch to enable hibernating using klaptopdaemon with newer kernels as
+  provided by Sergey Temerkhanov (thanks, Sergey!) on bug 188760.
 
   15 Aug 2007; Jeroen Roovers <jer@gentoo.org> kdeutils-3.5.7.ebuild:
   Stable for HPPA (bug #176297).
