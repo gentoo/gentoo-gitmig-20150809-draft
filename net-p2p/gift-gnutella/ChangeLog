@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gift-gnutella
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/ChangeLog,v 1.40 2007/07/12 14:33:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/ChangeLog,v 1.41 2007/08/17 22:56:49 coldwind Exp $
+
+  17 Aug 2007; Santiago M. Mola <coldwind@gentoo.org> files/cacheupdate.sh,
+  gift-gnutella-0.0.11.ebuild:
+  Upgraded cacheupdate.sh, bug #162313
 
   12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
   gift-gnutella-0.0.11.ebuild:
