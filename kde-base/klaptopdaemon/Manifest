@@ -1,3 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX klaptopdaemon-3.5.7-has_acpi_sleep.patch 1138 RMD160 b0962ab67f13688c7bf169b3337b8e34ddfb9c99 SHA1 24d51da049f13bf4ea1927b2d10be6e6a828dd69 SHA256 40df6cc42c49ae615c27f1ea8b8ae7f4d1cd9dcd5e295c1396b00e3daae083b7
+MD5 4071a9d553ac1ff2c7b5f64652b49cf0 files/klaptopdaemon-3.5.7-has_acpi_sleep.patch 1138
+RMD160 b0962ab67f13688c7bf169b3337b8e34ddfb9c99 files/klaptopdaemon-3.5.7-has_acpi_sleep.patch 1138
+SHA256 40df6cc42c49ae615c27f1ea8b8ae7f4d1cd9dcd5e295c1396b00e3daae083b7 files/klaptopdaemon-3.5.7-has_acpi_sleep.patch 1138
 AUX klaptopdaemon-3.5.7-libXss-linking.patch 629 RMD160 49f69d98b3addf18d264aba8f10f7286e8726a20 SHA1 892b9b6178ba8667d771cdfbb12f9a96a5ad2336 SHA256 356c94da4a3e4c94c0097d65db4dc6203d582dacf225b87c4181f554031ad80b
 MD5 98d40e51d61be53e054fcd4d608fb590 files/klaptopdaemon-3.5.7-libXss-linking.patch 629
 RMD160 49f69d98b3addf18d264aba8f10f7286e8726a20 files/klaptopdaemon-3.5.7-libXss-linking.patch 629
@@ -19,14 +26,18 @@ EBUILD klaptopdaemon-3.5.6.ebuild 687 RMD160 e63eacec13ded5fe14630e6aac278a76e66
 MD5 15fb81b2a5c12d79c3bc57eba426a445 klaptopdaemon-3.5.6.ebuild 687
 RMD160 e63eacec13ded5fe14630e6aac278a76e6601e79 klaptopdaemon-3.5.6.ebuild 687
 SHA256 86a07e6144124bbcaf8c3a5e2d031d079e49dd4bfd8e49f1a093c256b56c23de klaptopdaemon-3.5.6.ebuild 687
+EBUILD klaptopdaemon-3.5.7-r1.ebuild 963 RMD160 bd60a436b93c0afc7bfc46b15be71be119be4f1c SHA1 88fb53cad46be9de9c2e31b807c94e54c4b0f58d SHA256 b4921a94b6e35f3eef94ffee3bda498f987125e8b4234dd8c7403b236722b14b
+MD5 7141a9a3bb0c63e1ad5b6fe89fd85f34 klaptopdaemon-3.5.7-r1.ebuild 963
+RMD160 bd60a436b93c0afc7bfc46b15be71be119be4f1c klaptopdaemon-3.5.7-r1.ebuild 963
+SHA256 b4921a94b6e35f3eef94ffee3bda498f987125e8b4234dd8c7403b236722b14b klaptopdaemon-3.5.7-r1.ebuild 963
 EBUILD klaptopdaemon-3.5.7.ebuild 910 RMD160 f32349f452370bf4d1054c5013fa9cde0b047295 SHA1 1d419fd441cab9763db4bf92c1e2b9eee300b504 SHA256 f6bcfffe773bebc66fb0a195ee84044966cd88de05cb3cbc95a50adf43aa3be9
 MD5 0bc9ef47343c8efbd02fe27d2ea82123 klaptopdaemon-3.5.7.ebuild 910
 RMD160 f32349f452370bf4d1054c5013fa9cde0b047295 klaptopdaemon-3.5.7.ebuild 910
 SHA256 f6bcfffe773bebc66fb0a195ee84044966cd88de05cb3cbc95a50adf43aa3be9 klaptopdaemon-3.5.7.ebuild 910
-MISC ChangeLog 11527 RMD160 c1042d5e4bead5dc18ccb4a8848798fe33c01a88 SHA1 dde750cb70cf5190d6009eee2cc136d66bb834cf SHA256 f9c1568647e424f2383404432b2c4b059de9d42b1682d50db83cfee25650d33b
-MD5 71512e5a96125a0a4283d4514ab845e2 ChangeLog 11527
-RMD160 c1042d5e4bead5dc18ccb4a8848798fe33c01a88 ChangeLog 11527
-SHA256 f9c1568647e424f2383404432b2c4b059de9d42b1682d50db83cfee25650d33b ChangeLog 11527
+MISC ChangeLog 11834 RMD160 6d9eca7f642e6d3a87ac1b66013b2cfaa95c93fc SHA1 effca3b96af2c6f50bc3f9e65742b46fe55e1248 SHA256 a202ef3bd4134da89788628ca8fa2047752dada9d088155a52dc3788092f471f
+MD5 ad2682d5162aa65af921f6455d44d7b9 ChangeLog 11834
+RMD160 6d9eca7f642e6d3a87ac1b66013b2cfaa95c93fc ChangeLog 11834
+SHA256 a202ef3bd4134da89788628ca8fa2047752dada9d088155a52dc3788092f471f ChangeLog 11834
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -43,3 +54,13 @@ SHA256 9d6b8cec5ff7bee1a1c29a523b269690a5daa668be616527933902c4b5fd1fda files/di
 MD5 101c735be2be027c3bbf46e9ec13ee3c files/digest-klaptopdaemon-3.5.7 521
 RMD160 e33c42e37807d7b54f80fb8df3d7f244f8be3f54 files/digest-klaptopdaemon-3.5.7 521
 SHA256 bbc34c0763584ef1da811fb4b3dee8d9a0bed32b306d649b67dfdb14b83485fa files/digest-klaptopdaemon-3.5.7 521
+MD5 101c735be2be027c3bbf46e9ec13ee3c files/digest-klaptopdaemon-3.5.7-r1 521
+RMD160 e33c42e37807d7b54f80fb8df3d7f244f8be3f54 files/digest-klaptopdaemon-3.5.7-r1 521
+SHA256 bbc34c0763584ef1da811fb4b3dee8d9a0bed32b306d649b67dfdb14b83485fa files/digest-klaptopdaemon-3.5.7-r1 521
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFGxVV1CkvF58q80IkRAnxkAKCcg2jTfF9uhBuu5MtmFVHYfzVisQCgip+l
+4cgOMqn8POiwKVvbQGcy8gI=
+=Ydi5
+-----END PGP SIGNATURE-----
