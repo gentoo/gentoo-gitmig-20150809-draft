@@ -1,0 +1,22 @@
+--- tramp-2.1.10.orig/texi/tramp.texi	2007-07-22 13:28:32.000000000 +0200
++++ tramp-2.1.10/texi/tramp.texi	2007-08-18 00:01:24.000000000 +0200
+@@ -2030,8 +2030,8 @@
+ @cindex filename examples
+ 
+ To access the file @var{localname} on the remote machine @var{machine}
+-you would specify the filename @file{@trampfn{, , @var{machine},
+-@var{localname}}}.  This will connect to @var{machine} and transfer
++you would specify the filename @file{@trampfn{, , machine,
++localname}}.  This will connect to @var{machine} and transfer
+ the file using the default method.  @xref{Default Method}.
+ 
+ Some examples of @value{tramp} filenames are shown below.
+@@ -2067,7 +2067,7 @@
+ part of the filename.
+ 
+ To log in to the remote machine as a specific user, you use the syntax
+-@file{@trampfn{, @var{user}, @var{machine}, @var{path/to.file}}}.
++@file{@trampfn{, user, machine, path/to.file}}.
+ That means that connecting to @code{melancholia} as @code{daniel} and
+ editing @file{.emacs} in your home directory you would specify
+ @file{@trampfn{, daniel, melancholia, .emacs}}.

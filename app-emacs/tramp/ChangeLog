@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/tramp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.37 2007/04/20 04:36:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.38 2007/08/17 22:15:40 ulm Exp $
+
+*tramp-2.1.10 (17 Aug 2007)
+*tramp-2.0.55 (17 Aug 2007)
+
+  17 Aug 2007; Ulrich Mueller <ulm@gentoo.org>
+  +files/tramp-2.1.10-fix-texinfo.patch, +tramp-2.0.55.ebuild,
+  -tramp-2.1.9.ebuild, tramp-2.1.9-r1.ebuild, +tramp-2.1.10.ebuild:
+  Version bump. Fix texinfo, backported from upstream CVS. Remove old revision.
 
   20 Apr 2007; Ulrich Mueller <ulm@gentoo.org> -tramp-2.1.2.ebuild:
   Removed old version.
