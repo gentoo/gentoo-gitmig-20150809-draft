@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jarjar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.21 2007/08/15 21:14:01 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.22 2007/08/17 00:30:47 dertobi123 Exp $
+
+  17 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> jarjar-0.9.ebuild:
+  ppc stable
 
   15 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org> jarjar-0.9.ebuild:
   amd64 stable, bug #187751.
