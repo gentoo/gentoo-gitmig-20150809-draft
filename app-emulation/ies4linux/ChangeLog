@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/ies4linux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ChangeLog,v 1.4 2007/07/14 08:43:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ChangeLog,v 1.5 2007/08/17 21:09:11 rbu Exp $
+
+  17 Aug 2007; Robert Buchholz <rbu@gentoo.org> ies4linux-2.5_beta6.ebuild:
+  Keyworded ~amd64 (bug #184168)
 
   14 Jul 2007; Stefan Schweizer <genstef@gentoo.org>
   ies4linux-2.5_beta6.ebuild:

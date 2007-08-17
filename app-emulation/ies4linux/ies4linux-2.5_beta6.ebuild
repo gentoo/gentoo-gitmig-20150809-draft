@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ies4linux-2.5_beta6.ebuild,v 1.2 2007/07/14 08:43:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ies4linux-2.5_beta6.ebuild,v 1.3 2007/08/17 21:09:11 rbu Exp $
 
 inherit eutils versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.ies4linux.org/downloads/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="gtk kde"
 
 DEPEND=">=app-arch/cabextract-1.0
