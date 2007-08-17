@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/xorg-docs-1.4-r1.ebuild,v 1.2 2007/08/02 17:37:02 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/xorg-docs-1.4-r1.ebuild,v 1.3 2007/08/17 05:22:52 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -17,7 +17,8 @@ DEPEND="${RDEPEND}
 	doc? (
 		>=app-doc/xorg-sgml-doctools-1.2
 		app-text/docbook-sgml-utils
-		=app-text/docbook-sgml-dtd-4.2*
+		~app-text/docbook-sgml-dtd-4.2
+		app-text/docbook-dsssl-stylesheets
 	)"
 
 IUSE="doc"

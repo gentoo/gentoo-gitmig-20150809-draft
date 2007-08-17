@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/xorg-docs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.39 2007/08/07 12:58:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.40 2007/08/17 05:22:52 dberkholz Exp $
+
+  17 Aug 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-docs-1.4-r1.ebuild:
+  (#189165) Minor changes to dependency listing (Leonardo Boshell).
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> xorg-docs-1.4.ebuild:
   Stable on sparc wrt #175465
