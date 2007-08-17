@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.17.ebuild,v 1.8 2007/08/15 14:48:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.17.ebuild,v 1.9 2007/08/17 16:29:53 hanno Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime alternatives multilib python
 
@@ -46,6 +46,7 @@ RDEPEND=">=dev-libs/glib-2.4.5
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	dev-util/intltool
+	sys-devel/gettext
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 src_unpack() {
