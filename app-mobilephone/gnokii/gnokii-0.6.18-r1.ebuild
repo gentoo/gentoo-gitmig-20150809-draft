@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.18.ebuild,v 1.1 2007/08/16 20:40:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.18-r1.ebuild,v 1.1 2007/08/17 07:48:04 mrness Exp $
 
 inherit eutils flag-o-matic linux-info autotools
 
@@ -48,8 +48,8 @@ src_unpack() {
 		fi
 
 		sed -i \
-			-e "s/^DB_OBJS.*=.*file[.]lo/DB_OBJS = ${MY_SMSD_DB_OBJS}/" \
-			-e "s/^DB_LIBS.*=.*libfile[.]la/DB_LIBS = ${MY_SMSD_DB_LIBS}/" \
+			-e "s/^\(DB_OBJS[\t ]*=\).*$/\1 ${MY_SMSD_DB_OBJS}/" \
+			-e "s/^\(DB_LIBS[\t ]*=\).*$/\1 ${MY_SMSD_DB_LIBS}/" \
 			-e 's/\(^.*LIBTOOL.*--mode=finish.*$\)/#\1/' \
 			smsd/Makefile
 
@@ -60,8 +60,7 @@ src_unpack() {
 		elif use mysql ; then
 			MY_DEFAULT_DB_MODULE="mysql"
 		fi
-		[[ ${MY_DEFAULT_DB_MODULE} == "file" ]] || \
-				sed -i -e "s/\"file\"/\"${MY_DEFAULT_DB_MODULE}\"/" smsd/smsd.c
+		sed -i -e "s/\(smsdConfig[.]dbMod[\t ]*=.*\"\).*\(\"\)/\1${MY_DEFAULT_DB_MODULE}\2/" smsd/smsd.c
 	fi
 
 	eautoconf
