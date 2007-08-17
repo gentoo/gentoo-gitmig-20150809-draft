@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.1.ebuild,v 1.7 2007/07/28 13:36:16 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.1.ebuild,v 1.8 2007/08/17 16:16:55 kolmodin Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -28,7 +28,7 @@
 # re-emerge ghc (or ghc-bin). People using vanilla gcc can switch between
 # gcc-3.x and 4.x with no problems.
 
-inherit base eutils flag-o-matic toolchain-funcs ghc-package versionator
+inherit base bash-completion eutils flag-o-matic toolchain-funcs ghc-package versionator
 
 DESCRIPTION="The Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
@@ -72,7 +72,11 @@ DEPEND="${RDEPEND}
 # In the ghcbootstrap case we rely on the developer having
 # >=ghc-5.04.3 on their $PATH already
 
-PDEPEND=">=dev-haskell/cabal-1.1.6.2"
+PDEPEND=">=dev-haskell/cabal-1.1.6.2
+		 >=dev-haskell/filepath-1.0
+		 >=dev-haskell/regex-base-0.72
+		 >=dev-haskell/regex-posix-0.71
+		 >=dev-haskell/regex-compat-0.71"
 
 append-ghc-cflags() {
 	local flag compile assemble link
@@ -139,6 +143,12 @@ pkg_setup() {
 			die "Could not find a ghc to bootstrap with."
 	fi
 
+	set_config
+}
+
+set_config() {
+	# make this a separate function and call it several times as portage doesn't
+	# remember the variables properly between the fuctions.
 	use binary && GHC_PREFIX="/opt/ghc" || GHC_PREFIX="/usr"
 }
 
@@ -232,11 +242,13 @@ src_compile() {
 		echo "SRC_HC_OPTS+=-fno-warn-deprecations" >> mk/build.mk
 
 		# GHC build system knows to build unregisterised on alpha and hppa,
-		# but we have to tell it to build unregisterised on some other arches
-		if use ppc64 || use sparc; then
+		# but we have to tell it to build unregisterised on some arches
+		if use alpha || use hppa || use ppc64; then
 			echo "GhcUnregisterised=YES" >> mk/build.mk
-			echo "GhcWithNativeCodeGen=NO" >> mk/build.mk
 			echo "GhcWithInterpreter=NO" >> mk/build.mk
+		fi
+		if use alpha || use hppa || use ppc64 || use sparc; then
+			echo "GhcWithNativeCodeGen=NO" >> mk/build.mk
 			echo "SplitObjs=NO" >> mk/build.mk
 			echo "GhcRTSWays := debug" >> mk/build.mk
 			echo "GhcNotThreaded=YES" >> mk/build.mk
@@ -272,6 +284,11 @@ src_install() {
 				|| die "could not remove docs (P vs PF revision mismatch?)"
 		fi
 
+		# TODO: this will not be necessary after version 6.6.1 since the .tbz2
+		# packages will have been regenerated with package.conf.shipped files.
+		cp -p "${D}/${GHC_PREFIX}/$(get_libdir)/${P}/package.conf"{,.shipped} \
+			|| die "failed to copy package.conf"
+
 		doenvd "${FILESDIR}/10ghc"
 	else
 		local insttarget="install"
@@ -302,6 +319,8 @@ src_install() {
 
 		dosbin ${FILESDIR}/ghc-updater
 
+		dobashcompletion "${FILESDIR}/ghc-bash-completion"
+
 		cp -p "${D}/${GHC_PREFIX}/$(get_libdir)/${P}/package.conf"{,.shipped} \
 			|| die "failed to copy package.conf"
 	fi
@@ -309,9 +328,6 @@ src_install() {
 
 pkg_postinst() {
 	ghc-reregister
-	elog "If you have dev-lang/ghc-bin installed, you might"
-	elog "want to unmerge it. It is no longer needed."
-	elog
 
 	if use binary; then
 		elog "The envirenment has been set to use the binary distribution of"
@@ -330,15 +346,19 @@ pkg_postinst() {
 		ewarn "      /usr/sbin/ghc-updater"
 	fi
 	ewarn "to re-merge all ghc-based Haskell libraries."
+
+	bash-completion_pkg_postinst
 }
 
 pkg_prerm() {
 	# Overwrite the (potentially) modified package.conf with a copy of the
 	# original one, so that it will be removed during uninstall.
 
+	set_config # load GHC_PREFIX
+
 	PKG="${ROOT}/${GHC_PREFIX}/$(get_libdir)/${P}/package.conf"
 
 	cp -p "${PKG}"{.shipped,}
 
-	[ -f ${PKG}.old ] && rm "${PKG}.old"
+	[[ -f ${PKG}.old ]] && rm "${PKG}.old"
 }

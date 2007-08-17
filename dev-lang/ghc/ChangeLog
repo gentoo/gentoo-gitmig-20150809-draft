@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.132 2007/08/08 15:57:56 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.133 2007/08/17 16:16:55 kolmodin Exp $
+
+  17 Aug 2007; Lennart Kolmodin <kolmodin@gentoo.org>
+  +files/ghc-bash-completion, ghc-6.6.1.ebuild:
+  Add optional bash completion support for ghc-pkg.
+  Fixes to properly remove the leftover package.conf{,.old} files upon
+  uninstall of this package.
+  Tweaking mk/build.mk regarding arches we don't yet support for this GHC
+  version.
 
   08 Aug 2007; Lennart Kolmodin <kolmodin@gentoo.org> ghc-6.6.ebuild:
   Set SplitObjs=NO if >=gcc-4.2 is used.
