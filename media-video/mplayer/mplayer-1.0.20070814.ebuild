@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20070814.ebuild,v 1.3 2007/08/16 01:51:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20070814.ebuild,v 1.4 2007/08/17 00:35:02 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -282,8 +282,6 @@ src_compile() {
 			--disable-dvb --disable-dvbhead --disable-tv-teletext \
 			--disable-pvr"
 	fi
-
-
 
 	#########
 	# Codecs #
