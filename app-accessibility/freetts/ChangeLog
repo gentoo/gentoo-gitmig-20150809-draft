@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/freetts
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/ChangeLog,v 1.27 2007/08/13 19:59:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/ChangeLog,v 1.28 2007/08/17 07:14:36 opfer Exp $
+
+  17 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  freetts-1.2.1-r1.ebuild:
+  stable x86, bug 187606
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   freetts-1.2.1-r1.ebuild:
