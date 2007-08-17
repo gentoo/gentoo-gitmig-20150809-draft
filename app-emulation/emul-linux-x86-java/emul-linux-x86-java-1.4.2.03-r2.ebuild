@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r2.ebuild,v 1.5 2007/07/02 13:54:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r2.ebuild,v 1.6 2007/08/17 10:18:50 betelgeuse Exp $
 
 inherit multilib java-vm-2 versionator
 
@@ -18,9 +18,8 @@ SLOT="1.4.2"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="-* amd64"
 IUSE="nsplugin"
-DEPEND="virtual/libc
-	>=sys-apps/sed-4"
-RDEPEND="virtual/libc
+DEPEND=">=sys-apps/sed-4"
+RDEPEND="
 	app-emulation/emul-linux-x86-xlibs
 	app-emulation/emul-linux-x86-soundlibs"
 
