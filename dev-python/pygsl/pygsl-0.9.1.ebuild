@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/pygsl-0.9.1.ebuild,v 1.1 2007/08/16 12:52:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/pygsl-0.9.1.ebuild,v 1.2 2007/08/17 00:34:29 mr_bones_ Exp $
 
 inherit distutils
 
@@ -15,7 +15,6 @@ IUSE="examples"
 
 DEPEND=">=sci-libs/gsl-1.8
 	>=dev-python/numpy-1.0"
-
 
 src_test() {
 	cd "${S}/tests"
