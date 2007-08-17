@@ -1,6 +1,18 @@
 # ChangeLog for www-apache/mod_caucho
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.18 2007/06/16 22:46:57 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.19 2007/08/17 08:21:44 nelchael Exp $
+
+*mod_caucho-3.1.2 (17 Aug 2007)
+*mod_caucho-3.0.24 (17 Aug 2007)
+
+  17 Aug 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/mod_caucho-3.0.24-disable-sticky-sessions.patch,
+  +files/mod_caucho-3.0.24-gentoo.patch,
+  +files/mod_caucho-3.0.24-java.patch, +files/mod_caucho-3.0.24-ssl.patch,
+  +files/mod_caucho-3.1.2-gentoo.patch, +files/mod_caucho-3.1.2-java.patch,
+  +files/mod_caucho-3.1.2-ssl.patch, +mod_caucho-3.0.24.ebuild,
+  +mod_caucho-3.1.2.ebuild:
+  Version bump.
 
 *mod_caucho-3.1.1-r1 (16 Jun 2007)
 *mod_caucho-3.0.23-r1 (16 Jun 2007)

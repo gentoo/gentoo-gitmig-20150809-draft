@@ -1,0 +1,30 @@
+diff -Nru resin-3.0.23.vanilla/modules/c/src/apache2/mod_caucho.c resin-3.0.23/modules/c/src/apache2/mod_caucho.c
+--- resin-3.0.23.vanilla/modules/c/src/apache2/mod_caucho.c	2006-11-01 19:09:04.000000000 +0100
++++ resin-3.0.23/modules/c/src/apache2/mod_caucho.c	2007-05-22 11:02:20.000000000 +0200
+@@ -391,6 +391,16 @@
+ }
+ 
+ /**
++ * Parse the CauchoDisableStickySessions configuration in the apache config file.
++ */
++static const char cse_disable_sticky_sessions(cmd_parms *cmd, void *pconfig, int on)
++{
++  config_t *config = pconfig;
++  config->disable_sticky_sessions = on;
++  return 0;
++}
++
++/**
+  * Parse the CauchoBackup configuration in the apache config file.
+  */
+ static const char *
+@@ -1215,6 +1225,9 @@
+     AP_INIT_TAKE1("CauchoConfigCacheDirectory", resin_config_cache_command,
+ 		  NULL, RSRC_CONF|ACCESS_CONF,
+ 		  "Configures the saved configuration file."),
++    AP_INIT_FLAG("CauchoDisableStickySessions", cse_disable_sticky_sessions,
++		  NULL, RSRC_CONF,
++		  "Disable sticky sessions."),
+     {NULL}
+ };
+ 
