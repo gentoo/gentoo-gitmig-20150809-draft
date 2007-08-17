@@ -1,21 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX tuxzap-programs-0.5.4-gcc-34.diff 1598 RMD160 f06f0b32c5e6cd63ded7af1b218681dc6a01cfed SHA1 4ed03bca6b00a451a4b855d83a73378f3dbbee35 SHA256 c21e185f3e4a5835a8e0e3ff03adf22ab766ea19b6dad3a21fe405f83afc9dc5
 MD5 aa422f8889e05f02494f7c4bf2f61cd8 files/tuxzap-programs-0.5.4-gcc-34.diff 1598
 RMD160 f06f0b32c5e6cd63ded7af1b218681dc6a01cfed files/tuxzap-programs-0.5.4-gcc-34.diff 1598
 SHA256 c21e185f3e4a5835a8e0e3ff03adf22ab766ea19b6dad3a21fe405f83afc9dc5 files/tuxzap-programs-0.5.4-gcc-34.diff 1598
-DIST tuxzap_programs-0.2.3.tar.gz 162160 RMD160 a0cb1e55f75f969777a769d58c29b65fd5e9d2d6 SHA1 8d630934d06f7690ad6bc545e662e458264977dc SHA256 985307b9f20ba6f25876d76c7e2f3f5db1741259b0e12d798d86bea15fc7611e
-DIST tuxzap_programs-0.2.5.tar.gz 162615 RMD160 b1586e310289e887fb602394bb393f6f9dfe9cb4 SHA1 5c550bbca0ab6a7b8012040e1b93e38cbbbe64ba SHA256 216915251a79ceebbe87d2514e9606c2451b9515335b21e5b631a1c5751a8749
 DIST tuxzap_programs-0.5.4.tar.gz 165710 RMD160 9e41f953f799062d6987c2b2f696fd81811c8e2b SHA1 10d987ff8b77dfa5fdb91ad7db8100123fee4c42 SHA256 a1f967f05dee48f1d28073baed6ceae2f1ea4e2760fbd60895e531f010255aa9
-EBUILD tuxzap-programs-0.2.3.ebuild 1124 RMD160 5d967d96f779766ebe4e33705a5882efff6d740d SHA1 b788f2dd44fac2150d9e30b979879278b4642d48 SHA256 feed6da447e869794c7562e751b0e59427c36ef824f30ab62a11bf02ecb857f5
-MD5 d3fae28967d77d8ff32c7bb69c0c3a98 tuxzap-programs-0.2.3.ebuild 1124
-RMD160 5d967d96f779766ebe4e33705a5882efff6d740d tuxzap-programs-0.2.3.ebuild 1124
-SHA256 feed6da447e869794c7562e751b0e59427c36ef824f30ab62a11bf02ecb857f5 tuxzap-programs-0.2.3.ebuild 1124
-EBUILD tuxzap-programs-0.2.5.ebuild 1116 RMD160 1f9cf9e2412885397744e72a3318bed4d7de76bf SHA1 61a13ba337bdf9c0ed2293bb28c6fa2720eab449 SHA256 4f0892ff800dee00006cacac680bcb8f66075785ff6682db142f9134482e349e
-MD5 336310433200e3324e0953504cf45ce1 tuxzap-programs-0.2.5.ebuild 1116
-RMD160 1f9cf9e2412885397744e72a3318bed4d7de76bf tuxzap-programs-0.2.5.ebuild 1116
-SHA256 4f0892ff800dee00006cacac680bcb8f66075785ff6682db142f9134482e349e tuxzap-programs-0.2.5.ebuild 1116
 EBUILD tuxzap-programs-0.5.4.ebuild 1085 RMD160 e8a43c193971e10b2277ec567576f60b9f6a9f1e SHA1 76af25087c427dc6ca090a979ec08f850faf3671 SHA256 d26e499fc65308ce0d9a48a3aea6b15b4b8a32df3f253b55074aa23c20f51975
 MD5 f474d25f1b6789307289e68717042dbd tuxzap-programs-0.5.4.ebuild 1085
 RMD160 e8a43c193971e10b2277ec567576f60b9f6a9f1e tuxzap-programs-0.5.4.ebuild 1085
@@ -28,19 +15,6 @@ MISC metadata.xml 223 RMD160 86b42c49b694db39ddb3fdc60b98a3ad1a0c3392 SHA1 ea8c3
 MD5 0338bfb24d7bfb6450aac4dd025c0096 metadata.xml 223
 RMD160 86b42c49b694db39ddb3fdc60b98a3ad1a0c3392 metadata.xml 223
 SHA256 dd48e823ec9a151bc3611121402ed26ee24eb3304aa62870b1e875a8fa0ac812 metadata.xml 223
-MD5 4237c1cb8f097da97df3d71bccec23fc files/digest-tuxzap-programs-0.2.3 265
-RMD160 8be109c8a59875ea12f31812da9f5e2b0c512bd5 files/digest-tuxzap-programs-0.2.3 265
-SHA256 83ff0b893e2e51a0e37fbacb8908166cd442485e4090ea237b2768a8ab079868 files/digest-tuxzap-programs-0.2.3 265
-MD5 c65faa0d1f9ba1bea92503acafb57251 files/digest-tuxzap-programs-0.2.5 265
-RMD160 525e2f63bc5c0c11ac4dcab7f0f515b2f8125a94 files/digest-tuxzap-programs-0.2.5 265
-SHA256 884a0ee91b70a30aaf8cf5a7eef52446be1009065a9b8fd932891c97cd304193 files/digest-tuxzap-programs-0.2.5 265
 MD5 b83ff9d96ad892d4425a40ddc831622e files/digest-tuxzap-programs-0.5.4 265
 RMD160 85f0f2ac33943cfa6b4503088e1054b871437f77 files/digest-tuxzap-programs-0.5.4 265
 SHA256 fd527ca563e05ae4feab754051b6fc46cba1ff8d522bc5e784eb35c6e1aebccd files/digest-tuxzap-programs-0.5.4 265
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEeaGCZfSl1Kp5KmoRAqAtAJ9ME4fUxc+e2sSL9WJ6vzmJckWZFwCg4ooo
-WN4464kWfdWib4VdGimX0hw=
-=srUx
------END PGP SIGNATURE-----
