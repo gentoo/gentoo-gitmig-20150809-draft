@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-4.13.ebuild,v 1.3 2007/08/16 19:15:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-4.13.ebuild,v 1.4 2007/08/17 09:54:01 bicatali Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,7 +15,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXdmcp
 	x11-libs/libXau"
 DEPEND="${RDEPEND}
-	virtual/emacs
+	|| ( virtual/emacs virtual/xemacs )
 	app-arch/zip"
 
 RESTRICT="strip test"
@@ -47,9 +47,11 @@ src_compile() {
 }
 
 src_install () {
-	dobin bin/ds9
-	dobin bin/xpa*
-	doman man/man?/xpa*
-	dodoc README acknowledgement
-	use doc && dohtml -r doc/*
+	dobin bin/ds9 || die "failed installing ds9 binary"
+	dobin bin/xpa* || die "failed installing xpa* binaries"
+	doman man/man?/xpa* || die " failed installing man pages"
+	dodoc README acknowledgement || die "failed installing basic doc"
+	if use doc; then
+		dohtml -r doc/* || die "failed installing html doc"
+	fi
 }
