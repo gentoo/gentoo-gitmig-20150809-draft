@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/kdetoys-meta-3.5.6.ebuild,v 1.1 2007/01/16 20:25:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/kdetoys-meta-3.5.6.ebuild,v 1.2 2007/08/17 07:29:13 opfer Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -21,5 +21,5 @@ $(deprange $PV $MAXKDEVER kde-base/kodo)
 $(deprange $PV $MAXKDEVER kde-base/kteatime)
 $(deprange $PV $MAXKDEVER kde-base/ktux)
 $(deprange $PV $MAXKDEVER kde-base/kweather)
-$(deprange $PV $MAXKDEVER kde-base/kworldwatch)
+$(deprange $PV $MAXKDEVER kde-base/kworldclock)
 "
