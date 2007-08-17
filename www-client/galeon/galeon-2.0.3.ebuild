@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.3.ebuild,v 1.1 2007/04/11 01:38:17 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.3.ebuild,v 1.2 2007/08/17 15:46:01 hanno Exp $
 
 inherit gnome2 eutils
 
@@ -9,11 +9,14 @@ HOMEPAGE="http://galeon.sourceforge.net"
 SRC_URI="mirror://sourceforge/galeon/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-IUSE="seamonkey"
+IUSE="seamonkey xulrunner"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 SLOT="0"
-RDEPEND="seamonkey? ( www-client/seamonkey )
-	!seamonkey? ( >=www-client/mozilla-firefox-1.5.0.4 )
+RDEPEND="xulrunner? ( >=net-libs/xulrunner-1.8 )
+	!xulrunner? (
+		seamonkey? ( www-client/seamonkey )
+		!seamonkey? ( >=www-client/mozilla-firefox-1.5.0.4 )
+		)
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2.4.0
 	>=dev-libs/libxml2-2.6.6
@@ -40,8 +43,13 @@ src_unpack() {
 }
 
 src_compile() {
-	use seamonkey && myconf="--with-mozilla=seamonkey"
-	use seamonkey || myconf="--with-mozilla=firefox"
+	if use xulrunner; then
+		myconf="--with-mozilla=xulrunner"
+	elif use seamonkey; then
+		myconf="--with-mozilla=seamonkey"
+	else
+		myconf="--with-mozilla=firefox"
+	fi
 
 	econf ${myconf} || die "configure failed"
 	emake || die "compile failed"

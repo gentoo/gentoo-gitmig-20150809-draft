@@ -1,6 +1,9 @@
 # ChangeLog for www-client/galeon
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.34 2007/04/11 01:38:17 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.35 2007/08/17 15:46:01 hanno Exp $
+
+  17 Aug 2007; Hanno Boeck <hanno@gentoo.org> galeon-2.0.3.ebuild:
+  Add xulrunner support.
 
 *galeon-2.0.3 (11 Apr 2007)
 
