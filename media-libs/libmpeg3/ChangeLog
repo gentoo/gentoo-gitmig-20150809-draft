@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.62 2007/02/17 00:47:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.63 2007/08/17 15:33:11 drac Exp $
+
+  17 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  +files/libmpeg3-1.7-memcpy.patch, libmpeg3-1.7.ebuild:
+  Fix missing include string.h for implicit declaration of memcpy.
 
   17 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   libmpeg3-1.5.2-r3.ebuild, libmpeg3-1.7.ebuild:
