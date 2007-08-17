@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.95 2007/08/08 19:27:26 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.96 2007/08/17 04:12:29 leonardop Exp $
+
+  17 Aug 2007; Leonardo Boshell <leonardop@gentoo.org>
+  no-nptl/2.4/package.mask:
+  Masking tuxpaint and peacock because of dependencies masked by the GNOME
+  block.
 
   08 Aug 2007; Tiziano Müller <dev-zero@gentoo.org> 2006.0/make.defaults,
   gcc2/make.defaults, 2006.1/make.defaults, 2007.0/make.defaults,
