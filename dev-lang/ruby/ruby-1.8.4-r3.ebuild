@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.21 2007/07/02 14:50:46 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.22 2007/08/17 19:37:18 graaff Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -116,7 +116,7 @@ src_install() {
 	dosym libruby${SLOT/./}.so.${PV%_*} /usr/$(get_libdir)/libruby.so.${PV%.*}
 	dosym libruby${SLOT/./}.so.${PV%_*} /usr/$(get_libdir)/libruby.so.${PV%_*}
 
-	dodoc COPYING* ChangeLog MANIFEST README* ToDo
+	dodoc COPYING* ChangeLog README* ToDo
 }
 
 pkg_postinst() {
