@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.23.22.ebuild,v 1.1 2007/08/16 00:14:05 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.23.22-r1.ebuild,v 1.1 2007/08/17 03:09:52 mjolnir Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ BASE_PV="2.0.23.19"
 DESCRIPTION="The Teamspeak Voice Communication Server"
 HOMEPAGE="http://www.goteamspeak.com/"
 SRC_URI="ftp://ftp.freenet.de/pub/4players/teamspeak.org/releases/ts2_server_rc2_${BASE_PV//./}.tar.bz2
-		mirror://gentoo/server_linux-${PV//./}.tar.bz2"
+		mirror://gentoo/server_linux-${PVR//./}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
