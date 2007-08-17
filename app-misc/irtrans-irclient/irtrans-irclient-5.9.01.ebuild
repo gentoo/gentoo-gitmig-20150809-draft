@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irclient/irtrans-irclient-5.9.01.ebuild,v 1.1 2007/08/16 13:41:44 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irclient/irtrans-irclient-5.9.01.ebuild,v 1.2 2007/08/17 00:34:08 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -36,4 +36,3 @@ src_install() {
 
 	dobin ${WORKDIR}/irclient
 }
-
