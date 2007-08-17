@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcut/ChangeLog,v 1.11 2007/03/09 08:28:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcut/ChangeLog,v 1.12 2007/08/17 13:10:21 gustavoz Exp $
+
+  17 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> xcut-0.2-r1.ebuild:
+  Keyworded ~sparc
 
   09 Mar 2007; Samuli Suominen <drac@gentoo.org> xcut-0.2-r1.ebuild:
   Stop using virtual/x11.
