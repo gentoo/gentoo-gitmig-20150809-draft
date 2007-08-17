@@ -1,6 +1,6 @@
 # ChangeLog for games-fps/quake3-cpma
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-cpma/ChangeLog,v 1.16 2007/08/17 23:26:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-cpma/ChangeLog,v 1.17 2007/08/17 23:27:40 wolf31o2 Exp $
 
 *quake3-cpma-1.43 (17 Aug 2007)
 
@@ -9,7 +9,7 @@
   -quake3-cpma-1.31.ebuild, -quake3-cpma-1.32.ebuild,
   +quake3-cpma-1.43.ebuild:
   Cleaning up older versions and bumping to 1.43 using some modifications
-  suggested by Paul Bredburyr <brebs@sent.com>. Closing bug #157164.
+  suggested by Paul Bredbury <brebs@sent.com>. Closing bug #157164.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
