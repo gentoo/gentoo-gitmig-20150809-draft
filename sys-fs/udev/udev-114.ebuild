@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-114.ebuild,v 1.6 2007/08/15 07:06:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-114.ebuild,v 1.7 2007/08/17 20:04:08 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -218,8 +218,8 @@ pkg_preinst() {
 		[[ -f "${ROOT}"/etc/udev/rules.d/64-device-mapper.rules ]] &&
 		has_version sys-fs/device-mapper
 	then
-		# change mtime to definitely keep the file
-		touch "${ROOT}"/etc/udev/rules.d/64-device-mapper.rules
+		# change mtime AND CONTENT to definitely keep the file
+		echo >> "${ROOT}"/etc/udev/rules.d/64-device-mapper.rules
 	fi
 }
 
