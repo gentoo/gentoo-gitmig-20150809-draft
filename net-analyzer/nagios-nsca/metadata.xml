@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>netmon</herd>
 	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<name>Lance Albertson</name>
+		<email>dertobi123@gentoo.org</email>
+		<name>Tobias Scherbaum</name>
 	</maintainer>
 	<longdescription lang="en">
 		This program is designed to accept passive service check results from
