@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-114.ebuild,v 1.7 2007/08/17 20:04:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-114.ebuild,v 1.8 2007/08/17 23:46:17 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -14,7 +14,8 @@ KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x8
 IUSE="selinux"
 
 DEPEND="selinux? ( sys-libs/libselinux )"
-RDEPEND="!sys-apps/coldplug"
+RDEPEND="!sys-apps/coldplug
+	!<sys-fs/device-mapper-1.02.19-r1"
 RDEPEND="${DEPEND} ${RDEPEND}
 	>=sys-apps/baselayout-1.12.5"
 # We need the lib/rcscripts/addon support
@@ -212,14 +213,6 @@ pkg_preinst() {
 	if [ -f "${ROOT}/etc/init.d/coldplug" ]
 	then
 		coldplug_stale="1"
-	fi
-
-	if has_version "<sys-fs/udev-113" &&
-		[[ -f "${ROOT}"/etc/udev/rules.d/64-device-mapper.rules ]] &&
-		has_version sys-fs/device-mapper
-	then
-		# change mtime AND CONTENT to definitely keep the file
-		echo >> "${ROOT}"/etc/udev/rules.d/64-device-mapper.rules
 	fi
 }
 
