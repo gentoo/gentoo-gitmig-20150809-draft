@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/aspell-pt-br
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt-br/ChangeLog,v 1.1 2007/08/17 17:12:29 philantrop Exp $
+
+*aspell-pt-br-6.0.20070411 (17 Aug 2007)
+
+  17 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +aspell-pt-br-6.0.20070411.ebuild:
+  Initial ebuild, inspired the one provided by Fabrício Nihues on bug 188884.
+
