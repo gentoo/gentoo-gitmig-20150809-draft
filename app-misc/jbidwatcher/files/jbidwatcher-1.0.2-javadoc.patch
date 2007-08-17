@@ -1,0 +1,13 @@
+--- build.xml.orig	2007-08-11 12:24:46.000000000 +0200
++++ build.xml	2007-08-17 19:09:58.000000000 +0200
+@@ -221,4 +221,10 @@
+   <target name="run" description="Start Application">
+     <java fork="true" jar="${BINARY}" args="-Xmx512m -Xms256m"/>
+   </target>
++
++  <target name="javadoc">
++  	<javadoc destdir="${javadoc.dir}">
++		<fileset dir="${src.dir}" includes="**/*.java"/>
++	</javadoc>
++  </target>
+ </project>
