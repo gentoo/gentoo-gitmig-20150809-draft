@@ -1,11 +1,5 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.4 2007/06/13 14:42:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.5 2007/08/18 21:30:42 drac Exp $
 
-# Samuli Suominen <drac@gentoo.org> (13 Jun 2007)
-# >=media-video/ffmpeg-20070330 required which fails.
-# Error: selected processor does not support pld [r1].
-# Mask until new snapshot gets unmasked and tested.
+# Samuli Suominen <drac@gentoo.org> (18 Aug 2007)
+# media-video/ffmpegthumbnailer needs to be stabilized first.
 xfce-extra/thunar-thumbnailers ffmpeg
-
-# Steve Dibb <beandog@gentoo.org> (03 Mar 2007)
-# media-sound/twolame not tested
-media-video/mplayer mp2
