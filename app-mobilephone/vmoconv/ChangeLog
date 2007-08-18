@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/vmoconv
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/vmoconv/ChangeLog,v 1.2 2005/10/10 19:26:16 mrness Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/vmoconv/ChangeLog,v 1.3 2007/08/18 08:19:38 mrness Exp $
+
+  18 Aug 2007; Alin Năstac <mrness@gentoo.org> vmoconv-1.0.ebuild:
+  Add ~amd64 keyword.
 
   10 Oct 2005; Alin Nastac <mrness@gentoo.org> vmoconv-1.0.ebuild:
   Remove INSTALL and COPYING from docs.
