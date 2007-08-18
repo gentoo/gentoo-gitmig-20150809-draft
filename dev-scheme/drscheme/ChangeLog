@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.54 2007/08/02 10:20:04 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.55 2007/08/18 10:05:57 hkbst Exp $
+
+*drscheme-371 (18 Aug 2007)
+
+  18 Aug 2007; Marijn Schouten <hkBst@gentoo.org> +drscheme-371.ebuild:
+  add 371, still same problems with xft and xrender, so still forcing to on
 
 *drscheme-370.6_p20070725-r1 (02 Aug 2007)
 
