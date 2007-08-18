@@ -1,0 +1,8 @@
+# Config file for /etc/init.d/dictd
+
+EARGS="-s "
+DICTDCONF=/etc/dict/dictd.conf
+# Set DICTDCONF_MOD if you have a custom umask. cf. bug 90657 on bugs.gentoo.org 
+DICTDCONF_MOD=""
+DLIBDIR=/usr/lib/dict
+TMPCONF=/etc/dict/dictd.conf.$$
