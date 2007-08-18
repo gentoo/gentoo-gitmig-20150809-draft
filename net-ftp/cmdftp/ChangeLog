@@ -1,0 +1,9 @@
+# ChangeLog for net-ftp/cmdftp
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/cmdftp/ChangeLog,v 1.1 2007/08/18 02:02:30 jsin Exp $
+
+*cmdftp-0.9.6 (17 Aug 2007)
+
+  17 Aug 2007; <jason@gentoo.org> +metadata.xml, +cmdftp-0.9.6.ebuild:
+  Created new ebuild for package cmdftp, see bug 104018
+
