@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/proxool-0.8.3-r1.ebuild,v 1.4 2007/04/25 19:39:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/proxool-0.8.3-r1.ebuild,v 1.5 2007/08/18 11:08:21 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-nodeps"
@@ -38,9 +38,7 @@ RDEPEND="
 DEPEND="
 	>=virtual/jdk-1.4
 	${COMMON_DEP}
-	dev-java/ant-core
-	dev-util/checkstyle
-	source? ( app-arch/zip )"
+	dev-util/checkstyle"
 
 EANT_BUILD_TARGET="build-jar"
 
@@ -59,7 +57,7 @@ src_unpack() {
 src_install() {
 	java-pkg_newjar build/${P}.jar ${PN}.jar
 
-	dodoc README.txt
+	dodoc README.txt || die
 	# dohtml valid as there are other docs too
 	use doc && java-pkg_dohtml -r doc/*
 	use source && java-pkg_dosrc src/java/*
