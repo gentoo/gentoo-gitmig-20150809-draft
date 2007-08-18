@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.155 2007/06/24 09:03:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.156 2007/08/18 15:36:46 lavajoe Exp $
+
+  18 Aug 2007; Joe Peterson <lavajoe@gentoo.org> xpdf-3.01-r8.ebuild:
+  Add ~x86-fbsd keyword (bug #189260)
 
   24 Jun 2007; Stefan Schweizer <genstef@gentoo.org>
   +files/poppler-0.5.9.patch, xpdf-3.01-r8.ebuild:
