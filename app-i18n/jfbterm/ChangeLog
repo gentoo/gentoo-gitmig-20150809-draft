@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/jfbterm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.43 2007/07/22 02:53:17 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.44 2007/08/18 02:08:20 matsuu Exp $
+
+*jfbterm-0.4.7-r4 (18 Aug 2007)
+
+  18 Aug 2007; MATSUU Takuto <matsuu@gentoo.org>
+  +files/jfbterm-0.4.7-gentoo.patch, +jfbterm-0.4.7-r4.ebuild:
+  Fixed compile issue, bug #185360. This patch is based on debian patch.
+  Clean up ebuild. Added media-fonts/intlfonts to DEPEND.
+  Removed ppc64 arch because media-fonts/intlfonts has no ppc64 KEYWORDS.
 
   21 Jul 2007; Tom Gall <tgall@gentoo.org> jfbterm-0.4.7-r3.ebuild:
   stable on ppc64 bug 162676
