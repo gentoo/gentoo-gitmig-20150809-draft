@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/aspell-la
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-la/ChangeLog,v 1.1 2007/08/18 18:09:25 philantrop Exp $
+
+*aspell-la-6.0.20020503.0 (18 Aug 2007)
+
+  18 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +aspell-la-6.0.20020503.0.ebuild:
+  Initial ebuild as submitted by Michael Wilcox on bug 156039 for Latin.
+
