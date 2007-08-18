@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7601 2007/08/18 11:08:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7602 2007/08/18 14:32:54 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+
+# Fabian Groffen <gnustep@gentoo.org> (18 Aug 2007)
+# No longer needed for GNUstep, please stop using it.
+gnustep-base/gnustep-env
 
 # Samuli Suominen <drac@gentoo.org> (17 Aug 2007)
 # Code has been merged or replaced in 2.6 series kernels.
