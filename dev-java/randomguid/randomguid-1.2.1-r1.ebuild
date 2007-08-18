@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/randomguid-1.2.1-r1.ebuild,v 1.1 2007/01/10 10:26:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/randomguid-1.2.1-r1.ebuild,v 1.2 2007/08/18 15:13:06 nixnut Exp $
 
 inherit java-pkg-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.javaexchange.com"
 SRC_URI="ftp://www.javaexchange.com/javaexchange/RandomGUID.tar"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4"
