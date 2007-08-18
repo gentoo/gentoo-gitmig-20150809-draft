@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/nwn-data
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.28 2007/03/12 13:16:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.29 2007/08/18 01:12:00 wolf31o2 Exp $
+
+  18 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  nwn-data-1.29-r1.ebuild:
+  Added NWN Gold support via a patch from Ian Leonard <antonlacon@gmail.com>.
+  Closing bug #61990 and bug #183344.
 
   12 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   nwn-data-1.29-r1.ebuild:

@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.12 2007/03/12 13:16:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r1.ebuild,v 1.13 2007/08/18 01:12:00 wolf31o2 Exp $
 
 inherit eutils games
 
 # Diamond DVD - NWN, SoU, HotU (1 disk)
 # Platinum CD/DVD - NWN, SoU, HotU (4 disks/1 disk)
 # Deluxe CD - NWN, SoU, HotU (5 disks)
-# Gold CD - NWN, SoU
+# Gold CD - NWN, SoU (4 disks)
 # Original CD - NWN (1 disk)
 
 LANGUAGES="linguas_fr linguas_it linguas_es linguas_de linguas_en"
@@ -82,6 +82,10 @@ get_nwn_set() {
 		then
 			NWN_SET="platinum_cd"
 			einfo "Neverwinter Nights Platinum DVD/CD set found..."
+		elif [[ -f "${CD_ROOT}"/ArcadeInstallNWNXP1_12d.EXE ]]
+		then
+			NWN_SET="gold_cd"
+			einfo "Neverwinter Nights Gold CD set found..."
 		elif [[ -f "${CD_ROOT}"/ArcadeInstallNWN109.exe ]]
 		then
 			NWN_SET="original_cd"
@@ -99,6 +103,10 @@ get_nwn_set() {
 		then
 			NWN_SET="platinum_cd"
 			einfo "Neverwinter Nights Platinum DVD/CD set found..."
+		elif [[ -f "${CD_ROOT_1}"/ArcadeInstallNWNXP1_12d.EXE ]]
+		then
+			NWN_SET="gold_cd"
+			einfo "Neverwinter Nights Gold CD set found..."
 		elif [[ -f "${CD_ROOT_1}"/ArcadeInstallNWN109.exe ]]
 		then
 			NWN_SET="original_cd"
@@ -118,6 +126,10 @@ get_nwn_set() {
 			then
 				NWN_SET="platinum_cd"
 				einfo "Neverwinter Nights Platinum DVD/CD set found..."
+			elif [[ -f "${mline}"/ArcadeInstallNWNXP1_12d.EXE ]]
+			then
+				NWN_SET="gold_cd"
+				einfo "Neverwinter Nights Gold CD set found..."
 			elif [[ -f "${mline}"/ArcadeInstallNWN109.exe ]]
 			then
 				NWN_SET="original_cd"
@@ -155,6 +167,24 @@ get_cd_set() {
 		export CDROM_NAME_4="CD4"
 		cdrom_get_cds ArcadeInstallNWNXP213f.EXE \
 			disk2.zip disk3.zip disk4.zip
+		;;
+	gold_cd)
+		einfo "Shadow of Undrentide will be installed from your CDS along"
+		einfo "with the original Neverwinter Nights. If you have the"
+		einfo "Hordes of the Underdark expansion, it will be installed after."
+		touch .metadata/orig || die "touch orig"
+		touch .metadata/sou || die "touch sou"
+		export CDROM_NAME_4="CD4"
+		if use hou
+		then
+			einfo "You will also need the HoU CDs for this installation."
+			export CDROM_NAME_5="HoU"
+			cdrom_get_cds ArcadeInstallNWNXP1_12d.EXE disk2.zip \
+				disk3.zip disk4.zip ArcadeInstallNWNXP213f.EXE
+		else
+			cdrom_get_cds ArcadeInstallNWNXP1_12d.EXE disk2.zip \
+				disk3.zip disk4.zip
+		fi
 		;;
 	original_cd)
 		einfo "We will be installing the original Neverwinter Nights.  If"
@@ -259,6 +289,41 @@ src_unpack() {
 				unzip -qo "${CDROM_ROOT}"/disk4.zip || die "unpacking"
 				unzip -qo "${CDROM_ROOT}"/xp1.zip || die "unpacking"
 				unzip -qo "${CDROM_ROOT}"/xp1_data.zip || die "unpacking"
+			fi
+			;;
+		gold_cd)
+			# Variety of ZIP's off 4 CD's
+			mkdir -p "${S}"
+			cd "${S}"
+			einfo "Unpacking files..."
+			einfo "Copying files from CD1"
+			cp "${CDROM_ROOT}"/Data_Shared.zip . || die "unpacking"
+			cp "${CDROM_ROOT}"/Language_data.zip . || die "unpacking"
+			cp "${CDROM_ROOT}"/Language_update.zip . || die "unpacking"
+			# Yay cd switching
+			cdrom_load_next_cd
+			unzip -qo "${CDROM_ROOT}"/disk2.zip || die "unpacking"
+			cdrom_load_next_cd
+			unzip -qo "${CDROM_ROOT}"/disk3.zip || die "unpacking"
+			cdrom_load_next_cd
+			unzip -qo "${CDROM_ROOT}"/disk4.zip || die "unpacking"
+			# Amazingly enough, the order of operations matter.
+			unzip -qo "${S}"/Data_Shared.zip || die "unpacking"
+			unzip -qo "${S}"/Language_data.zip || die "unpacking"
+			unzip -qo "${S}"/Language_update.zip || die "unpacking"
+			rm -f Data_Shared.zip
+			rm -f Language_data.zip
+			rm -f Language_update.zip
+			# Expansion pack
+			if use hou
+			then
+				rm -f xp1patch.key data/xp1patch.bif override/*
+				cdrom_load_next_cd
+				einfo "Unpacking files..."
+				unzip -qo "${CDROM_ROOT}"/Data_Shared.zip || die "unpacking"
+				unzip -qo "${CDROM_ROOT}"/Language_data.zip || die "unpacking"
+				unzip -qo "${CDROM_ROOT}"/Language_update.zip || die "unpacking"
+				touch .metadata/hou || die "touching hou"
 			fi
 			;;
 		original_cd)
