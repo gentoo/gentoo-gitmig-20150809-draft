@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/gaupol-0.9.ebuild,v 1.1 2007/08/18 18:46:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/gaupol-0.9.ebuild,v 1.2 2007/08/18 18:49:57 drac Exp $
 
 inherit distutils fdo-mime gnome2-utils versionator
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="spell"
 
-RDEPEND=">=dev-python/pygtk-2.8
+RDEPEND=">=dev-lang/python-2.5.1
+	>=dev-python/pygtk-2.10
 	dev-python/chardet
 	spell? ( >=dev-python/pyenchant-1.1.3
 		app-text/iso-codes )"
