@@ -1,26 +1,26 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.1-r1.ebuild,v 1.4 2007/01/30 00:40:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.1-r1.ebuild,v 1.5 2007/08/18 11:00:07 betelgeuse Exp $
+
+JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Various reusable SWING components"
 HOMEPAGE="http://swidgets.tigris.org"
-SRC_URI="http://swidgets.tigris.org/files/documents/1472/18566/swidgets-${PV}-src.zip"
+SRC_URI="http://swidgets.tigris.org/files/documents/1472/18566/${P}-src.zip"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="source"
+IUSE=""
 
 RDEPEND=">=virtual/jre-1.3
-		 dev-java/toolbar"
+		dev-java/toolbar"
 
 DEPEND="${RDEPEND}
-		dev-java/ant-core
 		>=virtual/jdk-1.3
-		app-arch/unzip
-		source? ( app-arch/zip )"
+		app-arch/unzip"
 
 src_unpack() {
 	unpack ${A}
