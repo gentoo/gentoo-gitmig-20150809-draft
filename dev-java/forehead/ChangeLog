@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/forehead
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/forehead/ChangeLog,v 1.5 2007/08/18 10:54:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/forehead/ChangeLog,v 1.6 2007/08/18 10:56:40 betelgeuse Exp $
+
+  18 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Remove compnerd from metadata.xml.
 
   18 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
   -forehead-1.0_beta5.ebuild:
