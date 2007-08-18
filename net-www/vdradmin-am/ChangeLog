@@ -1,6 +1,12 @@
 # ChangeLog for net-www/vdradmin-am
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.19 2007/06/26 17:06:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.20 2007/08/18 20:38:25 zzam Exp $
+
+*vdradmin-am-3.6.0_beta (18 Aug 2007)
+
+  18 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +vdradmin-am-3.6.0_beta.ebuild:
+  Version bumped.
 
   26 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
   -files/vdradmin-am-3.4.7_opera-search.diff, -vdradmin-am-3.4.7-r1.ebuild:
