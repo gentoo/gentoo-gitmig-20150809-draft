@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.55 2007/01/31 22:31:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.56 2007/08/18 01:02:17 wolf31o2 Exp $
+
+  18 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml,
+  nwn-1.68-r1.ebuild:
+  Removed downloading of additional dialog files per bug #183344.
 
   31 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.68-r1.ebuild:
   Fixed DESCRIPTION to be only one line. Thanks to Denis Dupeyron

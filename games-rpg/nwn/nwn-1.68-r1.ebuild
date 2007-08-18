@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r1.ebuild,v 1.6 2007/02/22 04:43:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r1.ebuild,v 1.7 2007/08/18 01:02:17 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -8,7 +8,6 @@ LANGUAGES="linguas_fr linguas_it linguas_es linguas_de linguas_en"
 
 MY_PV=${PV//.}
 PATCH_URL_BASE=http://files.bioware.com/neverwinternights/updates/linux/${MY_PV}
-DIALOG_URL_BASE=http://nwdownloads.bioware.com/neverwinternights/patch/dialog
 PACKAGE_NAME=_linuxclient${MY_PV}_orig.tar.gz
 SOU_NAME=_linuxclient${MY_PV}_xp1.tar.gz
 HOU_NAME=_linuxclient${MY_PV}_xp2.tar.gz
@@ -16,28 +15,23 @@ HOU_NAME=_linuxclient${MY_PV}_xp2.tar.gz
 DESCRIPTION="role-playing game set in a huge medieval fantasy world of Dungeons and Dragons"
 HOMEPAGE="http://nwn.bioware.com/downloads/linuxclient.html"
 SRC_URI="linguas_fr? (
-		${PATCH_URL_BASE}/French${PACKAGE_NAME}
-		${DIALOG_URL_BASE}/french/NWNFrench${PV}dialog.zip
+		!sou? ( !hou? ( ${PATCH_URL_BASE}/French${PACKAGE_NAME} ) )
 		sou? ( ${PATCH_URL_BASE}/French${SOU_NAME} )
 		hou? ( ${PATCH_URL_BASE}/French${HOU_NAME} ) )
 	linguas_it? (
-		${PATCH_URL_BASE}/Italian${PACKAGE_NAME}
-		${DIALOG_URL_BASE}/italian/NWNItalian${PV}dialog.zip
+		!sou? ( !hou? ( ${PATCH_URL_BASE}/Italian${PACKAGE_NAME} ) )
 		sou? ( ${PATCH_URL_BASE}/Italian${SOU_NAME} )
 		hou? ( ${PATCH_URL_BASE}/Italian${HOU_NAME} ) )
 	linguas_en? (
-		${PATCH_URL_BASE}/English${PACKAGE_NAME}
-		${DIALOG_URL_BASE}/english/NWNEnglish${PV}dialog.zip
+		!sou? ( !hou? ( ${PATCH_URL_BASE}/English${PACKAGE_NAME} ) )
 		sou? ( ${PATCH_URL_BASE}/English${SOU_NAME} )
 		hou? ( ${PATCH_URL_BASE}/English${HOU_NAME} ) )
 	linguas_es? (
-		${PATCH_URL_BASE}/Spanish${PACKAGE_NAME}
-		${DIALOG_URL_BASE}/spanish/NWNSpanish${PV}dialog.zip
+		!sou? ( !hou? ( ${PATCH_URL_BASE}/Spanish${PACKAGE_NAME} ) )
 		sou? ( ${PATCH_URL_BASE}/Spanish${SOU_NAME} )
 		hou? ( ${PATCH_URL_BASE}/Spanish${HOU_NAME} ) )
 	linguas_de? (
-		${PATCH_URL_BASE}/German${PACKAGE_NAME}
-		${DIALOG_URL_BASE}/german/NWNGerman${PV}dialog.zip
+		!sou? ( !hou? ( ${PATCH_URL_BASE}/German${PACKAGE_NAME} ) )
 		sou? ( ${PATCH_URL_BASE}/German${SOU_NAME} )
 		hou? ( ${PATCH_URL_BASE}/German${HOU_NAME} ) )
 	!linguas_en? (
@@ -45,8 +39,7 @@ SRC_URI="linguas_fr? (
 			!linguas_de? (
 				!linguas_fr? (
 					!linguas_it? (
-		${PATCH_URL_BASE}/English${PACKAGE_NAME}
-		${DIALOG_URL_BASE}/english/NWNEnglish${PV}dialog.zip
+		!sou? ( !hou? ( ${PATCH_URL_BASE}/English${PACKAGE_NAME} ) )
 		sou? ( ${PATCH_URL_BASE}/English${SOU_NAME} )
 		hou? ( ${PATCH_URL_BASE}/English${HOU_NAME} ) ) ) ) ) )"
 
