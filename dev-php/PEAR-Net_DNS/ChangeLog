@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Net_DNS
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.23 2007/02/21 23:29:10 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.24 2007/08/18 15:27:53 hoffie Exp $
+
+*PEAR-Net_DNS-1.0.0 (18 Aug 2007)
+
+  18 Aug 2007; Christian Hoffmann <hoffie@gentoo.org>
+  +PEAR-Net_DNS-1.0.0.ebuild:
+  version bump wrt bug 158633, thanks to Jakub Moc
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
