@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.23.22-r1.ebuild,v 1.1 2007/08/17 03:09:52 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.23.22-r1.ebuild,v 1.2 2007/08/18 18:59:40 opfer Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.freenet.de/pub/4players/teamspeak.org/releases/ts2_server_rc2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* ~amd64 x86"
 IUSE="mysql"
 
 S="${WORKDIR}/tss2_rc2"

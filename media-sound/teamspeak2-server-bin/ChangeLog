@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/teamspeak2-server-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/ChangeLog,v 1.25 2007/08/17 03:09:52 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/ChangeLog,v 1.26 2007/08/18 18:59:40 opfer Exp $
+
+  18 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  teamspeak2-server-bin-2.0.23.22-r1.ebuild:
+  stable x86, security bug 178517
 
 *teamspeak2-server-bin-2.0.23.22-r1 (16 Aug 2007)
 
