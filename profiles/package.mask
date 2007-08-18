@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7602 2007/08/18 14:32:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7603 2007/08/18 18:48:44 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# Samuli Suominen <drac@gentoo.org> (18 Aug 2007)
+# Needs Python 2.5, masked here also.
+>=media-video/gaupol-0.9
 
 # Fabian Groffen <gnustep@gentoo.org> (18 Aug 2007)
 # No longer needed for GNUstep, please stop using it.
