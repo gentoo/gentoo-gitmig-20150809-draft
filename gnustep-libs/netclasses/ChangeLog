@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/netclasses
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/netclasses/ChangeLog,v 1.1 2006/06/25 14:11:45 grobian Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/netclasses/ChangeLog,v 1.2 2007/08/18 15:26:21 angelos Exp $
+
+  18 Aug 2007; Christoph Mende <angelos@gentoo.org> netclasses-1.06.ebuild:
+  Added ~amd64 wrt bug #170433
 
 *netclasses-1.06 (25 Jun 2006)
 
