@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pt/ispell-pt-20041027.ebuild,v 1.2 2007/07/11 05:41:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pt/ispell-pt-20041027.ebuild,v 1.3 2007/08/18 17:12:34 philantrop Exp $
 
 S=${WORKDIR}"/portugues"
 DESCRIPTION="A Portuguese dictionary for ispell"
