@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.8.ebuild,v 1.3 2006/11/15 22:19:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.8.ebuild,v 1.4 2007/08/18 07:04:59 mrness Exp $
 
 inherit gnome2 eutils autotools
 
 DESCRIPTION="a program created to allow you to control aspects of your mobile phone from your GNOME 2 desktop"
-HOMEPAGE="http://usefulinc.com/software/phonemgr/"
+HOMEPAGE="http://live.gnome.org/PhoneManager"
 SRC_URI="http://ftp.gnome.org/pub/GNOME/sources/${PN}/${PV}/${P}.tar.bz2 "
 
 LICENSE="GPL-2"
