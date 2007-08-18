@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-1.10.0.ebuild,v 1.1 2007/07/14 07:31:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-1.10.0.ebuild,v 1.2 2007/08/18 13:51:34 nixnut Exp $
 
 inherit ruby gems
 
@@ -9,7 +9,7 @@ DESCRIPTION="Ruby GetText Package is Native Language Support Library and Tools w
 HOMEPAGE="http://www.yotabanana.com/hiki/ruby-gettext.html"
 SRC_URI="http://gems.rubyforge.org/gems/${MY_P}.gem"
 
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ppc ~sparc ~x86"
 IUSE=""
 USE_RUBY="ruby18"
 SLOT="0"
