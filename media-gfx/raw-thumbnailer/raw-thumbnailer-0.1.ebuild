@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/raw-thumbnailer-0.1.ebuild,v 1.3 2007/08/16 14:18:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/raw-thumbnailer-0.1.ebuild,v 1.4 2007/08/18 21:14:38 drac Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~sparc ~x86"
 IUSE=""
 
 RDEPEND="media-libs/libopenraw
