@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-base/gnustep-back-art
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.39 2007/07/22 10:23:20 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.40 2007/08/18 15:17:47 grobian Exp $
+
+*gnustep-back-art-0.12.0 (18 Aug 2007)
+
+  18 Aug 2007; Fabian Groffen <grobian@gentoo.org>
+  +gnustep-back-art-0.12.0.ebuild:
+  Bump from GNUstep overlay.  Using new gnustep eclasses
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   gnustep-back-art-0.10.3.ebuild, gnustep-back-art-0.11.0.ebuild:
