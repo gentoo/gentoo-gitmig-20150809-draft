@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-HTML_Template_IT
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_IT/ChangeLog,v 1.28 2007/02/21 23:20:57 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_IT/ChangeLog,v 1.29 2007/08/18 17:22:26 hoffie Exp $
+
+*PEAR-HTML_Template_IT-1.2.1 (18 Aug 2007)
+
+  18 Aug 2007; Christian Hoffmann <hoffie@gentoo.org>
+  +PEAR-HTML_Template_IT-1.2.1.ebuild:
+  version bump wrt bug 158633, thanks to Jakub Moc
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
