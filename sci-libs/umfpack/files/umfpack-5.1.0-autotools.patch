@@ -1,0 +1,321 @@
+diff -Nur ../UMFPACK.orig/configure.ac ./configure.ac
+--- ../UMFPACK.orig/configure.ac	1970-01-01 01:00:00.000000000 +0100
++++ ./configure.ac	2007-08-18 18:18:41.664550371 +0100
+@@ -0,0 +1,16 @@
++#                                               -*- Autoconf -*-
++AC_PREREQ(2.59)
++AC_INIT(umfpack, 5.1.0, davis@cise.ufl.edu)
++AC_CONFIG_SRCDIR([Source/umf_solve.c])
++AC_CONFIG_HEADER([config.h])
++AM_INIT_AUTOMAKE([foreign])
++AC_PROG_INSTALL
++AC_PROG_F77
++AC_PROG_LIBTOOL
++AC_CHECK_LIB(m, sqrt)
++AC_CHECK_LIB(blas, dgemv_)
++AC_CHECK_LIB(amd, amd_aat)
++AC_CONFIG_FILES([Source/Makefile
++		 Include/Makefile	
++		 Makefile])
++AC_OUTPUT
+diff -Nur ../UMFPACK.orig/Demo/Makefile ./Demo/Makefile
+--- ../UMFPACK.orig/Demo/Makefile	2007-05-05 20:56:55.000000000 +0100
++++ ./Demo/Makefile	2007-08-18 19:05:37.999937028 +0100
+@@ -5,16 +5,13 @@
+ # UMFPACK Version 4.4, Copyright (c) 2005 by Timothy A. Davis.
+ # All Rights Reserved.  See ../Doc/License for License.
+ 
+-default: libs run
++default: run
+ 
+-include ../../UFconfig/UFconfig.mk
++C = $(CC) $(CFLAGS) -I../Include
+ 
+-C = $(CC) $(CFLAGS) $(UMFPACK_CONFIG) -I../Include -I../../AMD/Include \
+-    -I../../UFconfig
++INC = ../Include/umfpack.h
+ 
+-INC = ../Include/umfpack.h ../../AMD/Include/amd.h ../../UFconfig/UFconfig.h
+-
+-LIBS = $(BLAS) $(XERBLA) $(LIB)
++LIBS = -lblas -lm -lamd
+ 
+ ../Lib/libumfpack.a:
+ 	( cd ../Lib ; $(MAKE) )
+@@ -22,7 +19,7 @@
+ ../../AMD/Lib/libamd.a:
+ 	( cd ../../AMD ; $(MAKE) library )
+ 
+-UMFPACK = ../Lib/libumfpack.a ../../AMD/Lib/libamd.a
++UMFPACK = ../Source/.libs/libumfpack.a
+ 
+ libs:
+ 	( cd ../Lib ; $(MAKE) )
+diff -Nur ../UMFPACK.orig/Include/Makefile.am ./Include/Makefile.am
+--- ../UMFPACK.orig/Include/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ ./Include/Makefile.am	2007-08-18 18:17:17.031524193 +0100
+@@ -0,0 +1,34 @@
++include_HEADERS = \
++	umfpack.h \
++	umfpack_col_to_triplet.h \
++	umfpack_defaults.h \
++	umfpack_free_numeric.h \
++	umfpack_free_symbolic.h \
++	umfpack_get_determinant.h \
++	umfpack_get_lunz.h \
++	umfpack_get_numeric.h \
++	umfpack_get_symbolic.h \
++	umfpack_global.h \
++	umfpack_load_numeric.h \
++	umfpack_load_symbolic.h \
++	umfpack_numeric.h \
++	umfpack_qsymbolic.h \
++	umfpack_report_control.h \
++	umfpack_report_info.h \
++	umfpack_report_matrix.h \
++	umfpack_report_numeric.h \
++	umfpack_report_perm.h \
++	umfpack_report_status.h \
++	umfpack_report_symbolic.h \
++	umfpack_report_triplet.h \
++	umfpack_report_vector.h \
++	umfpack_save_numeric.h \
++	umfpack_save_symbolic.h \
++	umfpack_scale.h \
++	umfpack_solve.h \
++	umfpack_symbolic.h \
++	umfpack_tictoc.h \
++	umfpack_timer.h \
++	umfpack_transpose.h \
++	umfpack_triplet_to_col.h \
++	umfpack_wsolve.h
+diff -Nur ../UMFPACK.orig/Makefile.am ./Makefile.am
+--- ../UMFPACK.orig/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ ./Makefile.am	2007-08-18 18:17:17.031524193 +0100
+@@ -0,0 +1,2 @@
++SUBDIRS = Source Include
++EXTRA_DIST = README.txt
+diff -Nur ../UMFPACK.orig/Source/Makefile.am ./Source/Makefile.am
+--- ../UMFPACK.orig/Source/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ ./Source/Makefile.am	2007-08-18 18:17:17.031524193 +0100
+@@ -0,0 +1,220 @@
++AM_CPPFLAGS = -I$(top_srcdir)/Include
++lib_LTLIBRARIES = libumfpack.la
++
++# non-user-callable umf_*.[ch] files:
++UMFCH = umf_assemble umf_blas3_update umf_build_tuples umf_create_element \
++	umf_dump umf_extend_front umf_garbage_collection umf_get_memory \
++	umf_init_front umf_kernel umf_kernel_init umf_kernel_wrapup \
++	umf_local_search umf_lsolve umf_ltsolve umf_mem_alloc_element \
++	umf_mem_alloc_head_block umf_mem_alloc_tail_block \
++	umf_mem_free_tail_block umf_mem_init_memoryspace \
++	umf_report_vector umf_row_search umf_scale_column \
++	umf_set_stats umf_solve umf_symbolic_usage umf_transpose \
++	umf_tuple_lengths umf_usolve umf_utsolve umf_valid_numeric \
++	umf_valid_symbolic umf_grow_front umf_start_front umf_2by2 \
++	umf_store_lu umf_scale
++
++# non-user-callable umf_*.[ch] files, int/UF_long versions only (no real/complex):
++UMFINT = umf_analyze umf_apply_order umf_colamd umf_free umf_fsize \
++	umf_is_permutation umf_malloc umf_realloc umf_report_perm \
++	umf_singletons
++
++# non-user-callable, created from umf_ltsolve.c, umf_utsolve.c,
++# umf_triplet.c, and umf_assemble.c , with int/UF_long and real/complex versions:
++UMF_CREATED = umf_lhsolve umf_uhsolve umf_triplet_map_nox \
++	umf_triplet_nomap_x umf_triplet_nomap_nox umf_triplet_map_x \
++	umf_assemble_fixq umf_store_lu_drop
++
++# non-user-callable, int/UF_long and real/complex versions:
++UMF = $(UMF_CREATED) $(UMFCH)
++
++# user-callable umfpack_*.[ch] files (int/UF_long and real/complex):
++UMFPACK = umfpack_col_to_triplet umfpack_defaults umfpack_free_numeric \
++	umfpack_free_symbolic umfpack_get_numeric umfpack_get_lunz \
++	umfpack_get_symbolic umfpack_get_determinant umfpack_numeric \
++	umfpack_qsymbolic umfpack_report_control umfpack_report_info \
++	umfpack_report_matrix umfpack_report_numeric umfpack_report_perm \
++	umfpack_report_status umfpack_report_symbolic umfpack_report_triplet \
++	umfpack_report_vector umfpack_solve umfpack_symbolic \
++	umfpack_transpose umfpack_triplet_to_col umfpack_scale \
++	umfpack_load_numeric umfpack_save_numeric \
++	umfpack_load_symbolic umfpack_save_symbolic
++
++# user-callable, created from umfpack_solve.c (umfpack_wsolve.h exists, though):
++# with int/UF_long and real/complex versions:
++UMFPACKW = umfpack_wsolve
++
++USER = $(UMFPACKW) $(UMFPACK)
++
++# user-callable, only one version for int/UF_long, real/complex, *.[ch] files:
++GENERIC = umfpack_timer umfpack_tictoc umfpack_global
++
++
++#-------------------------------------------------------------------------------
++# object files for each version
++#-------------------------------------------------------------------------------
++
++DI = $(addsuffix .lo, $(subst umf_,umf_di_,$(UMF)) $(subst umfpack_,umfpack_di_,$(USER)))
++DL = $(addsuffix .lo, $(subst umf_,umf_dl_,$(UMF)) $(subst umfpack_,umfpack_dl_,$(USER)))
++ZI = $(addsuffix .lo, $(subst umf_,umf_zi_,$(UMF)) $(subst umfpack_,umfpack_zi_,$(USER)))
++ZL = $(addsuffix .lo, $(subst umf_,umf_zl_,$(UMF)) $(subst umfpack_,umfpack_zl_,$(USER)))
++II = $(addsuffix .lo, $(subst umf_,umf_i_,$(UMFINT)))
++LL = $(addsuffix .lo, $(subst umf_,umf_l_,$(UMFINT)))
++GN = $(addsuffix .lo, $(subst umfpack_,umfpack_gn_,$(GENERIC)))
++
++#-------------------------------------------------------------------------------
++# compile each int and UF_long routine (with no real/complex version)
++#-------------------------------------------------------------------------------
++
++umf_i_%.lo: umf_%.c $(INC)
++	$(LTCOMPILE) -DDINT -c $< -o $@
++
++umf_l_%.lo: umf_%.c $(INC)
++	$(LTCOMPILE) -DDLONG -c $< -o $@
++
++#-------------------------------------------------------------------------------
++# compile each routine in the DI version
++#-------------------------------------------------------------------------------
++
++umf_di_%.lo: umf_%.c $(INC)
++	$(LTCOMPILE) -DDINT -c $< -o $@
++
++umf_di_%hsolve.lo: umf_%tsolve.c $(INC)
++	$(LTCOMPILE) -DDINT -DCONJUGATE_SOLVE -c $< -o $@
++
++umf_di_triplet_map_x.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DDINT -DDO_MAP -DDO_VALUES -c $< -o $@
++
++umf_di_triplet_map_nox.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DDINT -DDO_MAP -c $< -o $@
++
++umf_di_triplet_nomap_x.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DDINT -DDO_VALUES -c $< -o $@
++
++umf_di_triplet_nomap_nox.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DDINT -c $< -o $@
++
++umf_di_assemble_fixq.lo: umf_assemble.c $(INC)
++	$(LTCOMPILE) -DDINT -DFIXQ -c $< -o $@
++
++umf_di_store_lu_drop.lo: umf_store_lu.c $(INC)
++	$(LTCOMPILE) -DDINT -DDROP -c $< -o $@
++
++umfpack_di_wsolve.lo: umfpack_solve.c $(INC)
++	$(LTCOMPILE) -DDINT -DWSOLVE -c $< -o $@
++
++umfpack_di_%.lo: umfpack_%.c $(INC)
++	$(LTCOMPILE) -DDINT -c $< -o $@
++
++#-------------------------------------------------------------------------------
++# compile each routine in the DL version
++#-------------------------------------------------------------------------------
++
++umf_dl_%.lo: umf_%.c $(INC)
++	$(LTCOMPILE) -DDLONG -c $< -o $@
++
++umf_dl_%hsolve.lo: umf_%tsolve.c $(INC)
++	$(LTCOMPILE) -DDLONG -DCONJUGATE_SOLVE -c $< -o $@
++
++umf_dl_triplet_map_x.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DDLONG -DDO_MAP -DDO_VALUES -c $< -o $@
++
++umf_dl_triplet_map_nox.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DDLONG -DDO_MAP -c $< -o $@
++
++umf_dl_triplet_nomap_x.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DDLONG -DDO_VALUES -c $< -o $@
++
++umf_dl_triplet_nomap_nox.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DDLONG -c $< -o $@
++
++umf_dl_assemble_fixq.lo: umf_assemble.c $(INC)
++	$(LTCOMPILE) -DDLONG -DFIXQ -c $< -o $@
++
++umf_dl_store_lu_drop.lo: umf_store_lu.c $(INC)
++	$(LTCOMPILE) -DDLONG -DDROP -c $< -o $@
++
++umfpack_dl_wsolve.lo: umfpack_solve.c $(INC)
++	$(LTCOMPILE) -DDLONG -DWSOLVE -c $< -o $@
++
++umfpack_dl_%.lo: umfpack_%.c $(INC)
++	$(LTCOMPILE) -DDLONG -c $< -o $@
++
++#-------------------------------------------------------------------------------
++# compile each routine in the ZI version
++#-------------------------------------------------------------------------------
++
++umf_zi_%.lo: umf_%.c $(INC)
++	$(LTCOMPILE) -DZINT -c $< -o $@
++
++umf_zi_%hsolve.lo: umf_%tsolve.c $(INC)
++	$(LTCOMPILE) -DZINT -DCONJUGATE_SOLVE -c $< -o $@
++
++umf_zi_triplet_map_x.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DZINT -DDO_MAP -DDO_VALUES -c $< -o $@
++
++umf_zi_triplet_map_nox.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DZINT -DDO_MAP -c $< -o $@
++
++umf_zi_triplet_nomap_x.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DZINT -DDO_VALUES -c $< -o $@
++
++umf_zi_triplet_nomap_nox.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DZINT -c $< -o $@
++
++umf_zi_assemble_fixq.lo: umf_assemble.c $(INC)
++	$(LTCOMPILE) -DZINT -DFIXQ -c $< -o $@
++
++umf_zi_store_lu_drop.lo: umf_store_lu.c $(INC)
++	$(LTCOMPILE) -DZINT -DDROP -c $< -o $@
++
++umfpack_zi_wsolve.lo: umfpack_solve.c $(INC)
++	$(LTCOMPILE) -DZINT -DWSOLVE -c $< -o $@
++
++umfpack_zi_%.lo: umfpack_%.c $(INC)
++	$(LTCOMPILE) -DZINT -c $< -o $@
++
++#-------------------------------------------------------------------------------
++# compile each routine in the ZL version
++#-------------------------------------------------------------------------------
++
++umf_zl_%.lo: umf_%.c $(INC)
++	$(LTCOMPILE) -DZLONG -c $< -o $@
++
++umf_zl_%hsolve.lo: umf_%tsolve.c $(INC)
++	$(LTCOMPILE) -DZLONG -DCONJUGATE_SOLVE -c $< -o $@
++
++umf_zl_triplet_map_x.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DZLONG -DDO_MAP -DDO_VALUES -c $< -o $@
++
++umf_zl_triplet_map_nox.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DZLONG -DDO_MAP -c $< -o $@
++
++umf_zl_triplet_nomap_x.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DZLONG -DDO_VALUES -c $< -o $@
++
++umf_zl_triplet_nomap_nox.lo: umf_triplet.c $(INC)
++	$(LTCOMPILE) -DZLONG -c $< -o $@
++
++umf_zl_assemble_fixq.lo: umf_assemble.c $(INC)
++	$(LTCOMPILE) -DZLONG -DFIXQ -c $< -o $@
++
++umf_zl_store_lu_drop.lo: umf_store_lu.c $(INC)
++	$(LTCOMPILE) -DZLONG -DDROP -c $< -o $@
++
++umfpack_zl_wsolve.lo: umfpack_solve.c $(INC)
++	$(LTCOMPILE) -DZLONG -DWSOLVE -c $< -o $@
++
++umfpack_zl_%.lo: umfpack_%.c $(INC)
++	$(LTCOMPILE) -DZLONG -c $< -o $@
++
++#-------------------------------------------------------------------------------
++# Create the generic routines (GN) using a generic rule
++#-------------------------------------------------------------------------------
++
++umfpack_gn_%.lo: umfpack_%.c $(INC)
++	$(LTCOMPILE) -c $< -o $@
++
++
++libumfpack_la_SOURCES =
++libumfpack_la_LIBADD = $(II) $(LL) $(GN) $(DI) $(DL) $(ZI) $(ZL)

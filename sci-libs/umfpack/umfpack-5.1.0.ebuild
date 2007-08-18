@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.0.3.ebuild,v 1.2 2007/08/18 18:17:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.1.0.ebuild,v 1.1 2007/08/18 18:17:09 bicatali Exp $
 
 inherit autotools eutils
 
@@ -16,28 +16,27 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 DEPEND="virtual/blas
 	>=sci-libs/amd-2.0"
-RESTRICT="test"
+
 S="${WORKDIR}/${MY_PN}"
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/${P}-autotools.patch
 	cd "${S}"
-	rm -f Makefile */*akefile
+	epatch "${FILESDIR}"/${P}-autotools.patch
 	eautoreconf
 }
 
 src_test() {
 	cd "${S}"/Demo
-	# test is still buggy but worth testing
-	make > test.log || die "test failed"
+	# test is still a bit buggy
+	make || die "test failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README.txt Doc/ChangeLog
+	dodoc README.txt Doc/ChangeLog || die "dodoc failed"
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins Doc/*.pdf
+		doins Doc/*.pdf || die "doins failed"
 	fi
 }

@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/umfpack
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.1 2007/02/19 10:39:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.2 2007/08/18 18:17:09 bicatali Exp $
+
+*umfpack-5.1.0 (18 Aug 2007)
+
+  18 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/umfpack-5.1.0-autotools.patch, umfpack-5.0.3.ebuild,
+  +umfpack-5.1.0.ebuild:
+  Version bump. Fixed autotools patch
 
 *umfpack-5.0.3 (19 Feb 2007)
 
