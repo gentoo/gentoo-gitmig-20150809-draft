@@ -1,0 +1,10 @@
+# ChangeLog for sys-block/fio
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.1 2007/08/18 22:39:17 robbat2 Exp $
+
+*fio-1.17 (18 Aug 2007)
+
+  18 Aug 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +fio-1.17.ebuild:
+  Initial Commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
