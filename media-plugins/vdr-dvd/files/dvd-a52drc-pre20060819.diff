@@ -1,0 +1,78 @@
+Add switch to enable A52 DRC Support
+
+written by
+Sebastian Kemper <sebastian_ml@gmx.net> ( 14 Jul 2006 )
+update
+Joerg Bornkessel <hd_brummy@gentoo.org> ( 19 Jul 2006 )
+Index: dvd-cvs-20070819/i18n.c
+===================================================================
+--- dvd-cvs-20070819.orig/i18n.c
++++ dvd-cvs-20070819/i18n.c
+@@ -408,5 +408,30 @@ const tI18nPhrase DvdPhrases[] = {
+         "Seçilen audio ses bulunamadý!"                     // Türkçe
+ #endif
+     },
++	{
++		"Setup.DVD$A52 DRC",
++		"A52 DRC",                                             // Deutsch
++		"A52 DRC",                                             // Slovenski
++		"A52 DRC",                                             // Italiano
++		"A52 DRC",                                             // Nederlands
++		"A52 DRC",                                             // Portugus
++		"A52 DRC",                                             // Franais
++		"A52 DRC",                                             // Norsk
++		"A52 DRC",                                             // suomi
++		"A52 DRC",                                             // Polski
++		"A52 DRC",                                             // Espanol
++		"A52 DRC",                                             // ÅëëçíéêÜ (Greek)
++		"A52 DRC",                                             // Svenska
++		"A52 DRC",                                             // Romaneste
++		"A52 DRC",                                             // Magyar
++		"A52 DRC",                                             // Catal
++		"A52 DRC",                                             // ÀãááÚØÙ (Russian)
++		"A52 DRC",                                             // Hrvatski (Croatian)
++		"A52 DRC",                                             // Eesti
++		"A52 DRC",                                             // Dansk
++#if VDRVERSNUM >= 10342
++		"A52 DRC",												// Czech
++#endif	
++    },
+     { NULL }
+ };
+Index: dvd-cvs-20070819/setup-dvd.c
+===================================================================
+--- dvd-cvs-20070819.orig/setup-dvd.c
++++ dvd-cvs-20070819/setup-dvd.c
+@@ -34,7 +34,7 @@ cDVDSetup::cDVDSetup(void)
+     ReadAHead     = 0;
+     Gain          = 4;
+ 
+-    AC3dynrng     = 0;
++    AC3dynrng     = 1;
+ }
+ 
+ bool cDVDSetup::SetupParse(const char *Name, const char *Value)
+@@ -48,6 +48,7 @@ bool cDVDSetup::SetupParse(const char *N
+     else if (!strcasecmp(Name, "HideMainMenu"))  HideMainMenu  = atoi(Value);
+     else if (!strcasecmp(Name, "ReadAHead"))     ReadAHead     = atoi(Value);
+     else if (!strcasecmp(Name, "Gain"))          Gain          = atoi(Value);
++	else if (!strcasecmp(Name, "AC3dynrng"))     AC3dynrng     = atoi(Value);
+     else
+ 	return false;
+     return true;
+@@ -73,6 +74,7 @@ cMenuSetupDVD::cMenuSetupDVD(void)
+     Add(new cMenuEditBoolItem(tr("Setup.DVD$Hide Mainmenu Entry"),         &data.HideMainMenu));
+     Add(new cMenuEditBoolItem(tr("Setup.DVD$ReadAHead"),                   &data.ReadAHead));
+     Add(new cMenuEditIntItem( tr("Setup.DVD$Gain (analog)"),               &data.Gain, 0, 10));
++	Add(new cMenuEditBoolItem(tr("Setup.DVD$A52 DRC"),                     &data.AC3dynrng));
+ }
+ 
+ void cMenuSetupDVD::Store(void)
+@@ -86,6 +88,7 @@ void cMenuSetupDVD::Store(void)
+     SetupStore("HideMainMenu",  DVDSetup.HideMainMenu  );
+     SetupStore("ReadAHead",     DVDSetup.ReadAHead  );
+     SetupStore("Gain",          DVDSetup.Gain  );
++	SetupStore("AC3dynrng",     DVDSetup.AC3dynrng  );
+ }
+ 
+ 
