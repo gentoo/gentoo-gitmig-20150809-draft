@@ -1,6 +1,16 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.29 2007/06/17 06:01:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.30 2007/08/18 14:34:42 mrness Exp $
+
+*dansguardian-2.9.9.0_beta (18 Aug 2007)
+
+  18 Aug 2007; Alin Năstac <mrness@gentoo.org>
+  +files/dansguardian-2.9.9.0-gentoo.patch,
+  +files/dansguardian-2.9.9.0-no-default-lists.patch,
+  +files/dansguardian-2.9.9.0-uclibc++.patch,
+  dansguardian-2.8.0.6-r1.ebuild, dansguardian-2.9.8.5_beta.ebuild,
+  +dansguardian-2.9.9.0_beta.ebuild:
+  Version bump. Remove dansguardian-dgav block atom from DEPENDs.
 
   17 Jun 2007; Alin Năstac <mrness@gentoo.org>
   -files/dansguardian-2.9.8.2-gentoo.patch,
