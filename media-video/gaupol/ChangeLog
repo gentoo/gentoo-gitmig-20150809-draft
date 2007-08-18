@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gaupol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.4 2007/08/15 23:47:35 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.5 2007/08/18 18:46:50 drac Exp $
+
+*gaupol-0.9 (18 Aug 2007)
+
+  18 Aug 2007; Samuli Suominen <drac@gentoo.org> +gaupol-0.9.ebuild:
+  Version bump.
 
   15 Aug 2007; Steve Dibb <beandog@gentoo.org> gaupol-0.7.2.ebuild:
   amd64 stable
