@@ -1,0 +1,11 @@
+--- mfhdf/libsrc/file.c.orig	2007-08-17 19:29:53.599016858 +0100
++++ mfhdf/libsrc/file.c	2007-08-17 19:29:11.936642654 +0100
+@@ -31,7 +31,7 @@
+ 
+ /* Maximum number of files can be opened at one time; subtract 3 from
+    the system allowed to account for stdin, stdout, and stderr */
+-#define MAX_AVAIL_OPENFILES          (MAX_SYS_OPENFILES - 3)
++#define MAX_AVAIL_OPENFILES          (MAX_SYS_OPENFILES - 10)
+ 
+ static int _ncdf = 0 ; /*  high water mark on open cdf's */
+ static NC **_cdfs;
