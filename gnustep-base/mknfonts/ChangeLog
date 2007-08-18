@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-base/mknfonts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.14 2007/02/09 07:49:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.15 2007/08/18 14:56:40 grobian Exp $
+
+*mknfonts-0.5-r1 (18 Aug 2007)
+
+  18 Aug 2007; Fabian Groffen <grobian@gentoo.org>
+  +files/mknfonts-rename.patch, +mknfonts-0.5-r1.ebuild:
+  Bump from GNUstep overlay.  Using new gnustep eclasses
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
