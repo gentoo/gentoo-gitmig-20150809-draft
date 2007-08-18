@@ -1,6 +1,20 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.110 2007/06/29 06:06:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.111 2007/08/18 05:55:48 mrness Exp $
+
+*wvstreams-4.4 (18 Aug 2007)
+
+  18 Aug 2007; Alin Năstac <mrness@gentoo.org>
+  +files/wvstreams-4.4-MOC-fix.patch, +files/wvstreams-4.4-as-needed.patch,
+  +files/wvstreams-4.4-external-xplc.patch,
+  +files/wvstreams-4.4-linux-serial.patch,
+  +files/wvstreams-4.4-sane-cflags.patch,
+  +files/wvstreams-4.4-sigaction.patch,
+  +files/wvstreams-4.4-type-punned.patch,
+  +files/wvstreams-4.4-uniconfd-ini.patch,
+  +files/wvstreams-4.4-wireless-user.patch,
+  +files/wvstreams-4.4-wvconfemu.patch, +wvstreams-4.4.ebuild:
+  Version bump.
 
   29 Jun 2007; Alin Năstac <mrness@gentoo.org>
   -files/wvstreams-4.2.2-MOC-fix.patch,

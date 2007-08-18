@@ -1,0 +1,45 @@
+diff -Nru wvstreams-4.4.orig/configure.ac wvstreams-4.4/configure.ac
+--- wvstreams-4.4.orig/configure.ac	2007-07-20 00:22:57.000000000 +0300
++++ wvstreams-4.4/configure.ac	2007-08-17 22:41:34.000000000 +0300
+@@ -460,16 +460,19 @@
+         wv_cv_with_qt=no
+         CPPFLAGS_save="$CPPFLAGS"
+         LDFLAGS_save="$LDFLAGS"
++        LIBS_save="$LIBS"
+         for wv_qtdir in $with_qt $QTDIR $QT_SEARCH_PATH; do
+             eval wv_qtdir="$wv_qtdir"
+             CPPFLAGS="$CPPFLAGS_save -I$wv_qtdir/include -I$wv_qtdir/include/qt3"
+-            LDFLAGS="$LDFLAGS_save -L$wv_qtdir/lib -lqt-mt"
++            LDFLAGS="$LDFLAGS_save -L$wv_qtdir/lib"
++            LIBS="$LIBS_save -lqt-mt"
+             AC_TRY_LINK([#include <qstring.h>],
+                         [QString x("hello"); return 0; ],
+                         [wv_cv_with_qt=$wv_qtdir; break])
+         done
+         CPPFLAGS="$CPPFLAGS_save"
+         LDFLAGS="$LDFLAGS_save"
++        LIBS="$LIBS_save"
+     ])
+     with_qt=$wv_cv_with_qt
+     if test "$with_qt" != no; then
+diff -Nru wvstreams-4.4.orig/wvrules.mk wvstreams-4.4/wvrules.mk
+--- wvstreams-4.4.orig/wvrules.mk	2007-07-20 19:36:55.000000000 +0300
++++ wvstreams-4.4/wvrules.mk	2007-08-17 22:41:34.000000000 +0300
+@@ -60,7 +60,7 @@
+ 		  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
+ CFLAGS += $(COPTS) $(C_AND_CXX_FLAGS) 
+ CXXFLAGS += $(CXXOPTS) $(C_AND_CXX_FLAGS)
+-LDFLAGS += $(LDOPTS) -L$(WVSTREAMS_LIB)
++LDFLAGS += $(LDOPTS) -L$(WVSTREAMS_LIB) -Wl,-rpath-link,$(WVSTREAMS_LIB)
+ 
+ # Default compiler we use for linking
+ WVLINK_CC = gcc
+@@ -270,7 +270,7 @@
+ %.so: SONAME=$@$(if $(SO_VERSION),.$(SO_VERSION))
+ wvsoname=$(if $($1-SONAME),$($1-SONAME),$(if $(SONAME),$(SONAME),$1))
+ define wvlink_so
+-	$(LINK_MSG)$(WVLINK_CC) $(LDFLAGS) $($1-LDFLAGS) -Wl,-soname,$(call wvsoname,$1) -shared -o $1 $(filter %.o %.a %.so,$2) $($1-LIBS) $(LIBS) $(XX_LIBS)
++	$(LINK_MSG)$(WVLINK_CC) $(LDFLAGS) $($1-LDFLAGS) -Wl,-soname,$(call wvsoname,$1) -shared -o $1 $(filter %.o %.a,$2) $(filter %.so,$2) $($1-LIBS) $(LIBS) $(XX_LIBS)
+ 	$(if $(filter-out $(call wvsoname,$1),$1),$(call wvlns,$1,$(call wvsoname,$1)))
+ endef
+ 

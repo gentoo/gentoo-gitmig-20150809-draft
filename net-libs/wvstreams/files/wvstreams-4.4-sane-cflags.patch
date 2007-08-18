@@ -1,0 +1,59 @@
+diff -Nru wvstreams-4.4.orig/vars.mk wvstreams-4.4/vars.mk
+--- wvstreams-4.4.orig/vars.mk	2007-07-20 00:22:57.000000000 +0300
++++ wvstreams-4.4/vars.mk	2007-08-17 22:43:29.000000000 +0300
+@@ -52,10 +52,10 @@
+ CXXFLAGS+=-D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
+ CFLAGS+=-D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
+ 
+-ifeq ($(DEBUG),)
+-CXXFLAGS+=-g
+-CFLAGS+=-g
+-endif
++#ifeq ($(DEBUG),)
++#CXXFLAGS+=-g
++#CFLAGS+=-g
++#endif
+ 
+ ifneq ($(DEBUG),)
+ CXXFLAGS+=-ggdb -DDEBUG$(if $(filter-out yes,$(DEBUG)), -DDEBUG_$(DEBUG))
+@@ -77,9 +77,9 @@
+ endif
+ 
+ ifneq ("$(enable_optimization)", "no")
+-CXXFLAGS+=-O2
++#CXXFLAGS+=-O2
+ #CXXFLAGS+=-felide-constructors
+-CFLAGS+=-O2
++#CFLAGS+=-O2
+ endif
+ 
+ ifneq ("$(enable_warnings)", "no")
+diff -Nru wvstreams-4.4.orig/wvrules.mk wvstreams-4.4/wvrules.mk
+--- wvstreams-4.4.orig/wvrules.mk	2007-08-17 22:43:47.000000000 +0300
++++ wvstreams-4.4/wvrules.mk	2007-08-17 22:43:29.000000000 +0300
+@@ -82,9 +82,9 @@
+ endif
+ 
+ ifneq ("$(enable_optimization)", "no")
+-  CXXFLAGS+=-O2
++  #CXXFLAGS+=-O2
+   #CXXFLAGS+=-felide-constructors
+-  CFLAGS+=-O2
++  #CFLAGS+=-O2
+ endif
+ 
+ ifneq ("$(enable_warnings)", "no")
+@@ -175,11 +175,11 @@
+   C_AND_CXX_FLAGS += -ggdb -DDEBUG=1
+   LDFLAGS += -ggdb
+ else
+-  C_AND_CXX_FLAGS += -g -DDEBUG=0
++  C_AND_CXX_FLAGS += -DDEBUG=0
+   #CFLAGS += -DNDEBUG    # I don't like disabling assertions...
+   #CFLAGS += -fomit-frame-pointer  # really evil
+   #CXXFLAGS += -fno-implement-inlines  # causes trouble with egcs 1.0
+-  LDFLAGS += -g
++  #LDFLAGS += -g
+ endif
+ 
+ ifeq ($(PROFILE),1)
