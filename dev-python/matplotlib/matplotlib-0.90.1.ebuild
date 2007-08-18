@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.1.ebuild,v 1.2 2007/06/26 12:23:56 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.1.ebuild,v 1.3 2007/08/18 18:32:14 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -29,8 +29,13 @@ DEPEND="|| (
 	sys-libs/zlib
 	gtk? ( >=dev-python/pygtk-2.2 )
 	dev-python/pytz
-	dev-python/python-dateutil
+	dev-python/python-dateutil"
+
+RDEPEND="${DEPEND}
+	app-text/dvipng
 	media-fonts/ttf-bitstream-vera"
+
+
 
 DOCS="INTERACTIVE API_CHANGES NUMARRAY_ISSUES"
 
