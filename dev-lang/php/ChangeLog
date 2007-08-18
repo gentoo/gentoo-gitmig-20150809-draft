@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.185 2007/08/15 01:48:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.186 2007/08/18 13:11:23 hoffie Exp $
+
+*php-4.4.8_pre20070816 (18 Aug 2007)
+
+  18 Aug 2007; Christian Hoffmann <hoffie@gentoo.org>
+  +php-4.4.8_pre20070816.ebuild:
+  version bump to fix several security issues, see bug 189172
 
   15 Aug 2007; Jeroen Roovers <jer@gentoo.org>
   php-5.2.4_pre200708051230-r2.ebuild:
