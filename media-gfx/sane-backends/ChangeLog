@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.116 2007/04/30 22:41:46 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.117 2007/08/18 14:56:36 zzam Exp $
+
+*sane-backends-1.0.18-r3 (18 Aug 2007)
+
+  18 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-rule-2.patch, +sane-backends-1.0.18-r3.ebuild:
+  Updated udev rules, to work with newer kernels, Bug #188573. This requires
+  new udev-syntax, so block versions before udev-114.
 
   30 Apr 2007; Marius Mauch <genone@gentoo.org> sane-backends-1.0.17.ebuild,
   sane-backends-1.0.18-r2.ebuild:
