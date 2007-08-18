@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/autoconf-mode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.6 2007/08/15 21:59:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.7 2007/08/18 16:00:28 nixnut Exp $
+
+  18 Aug 2007; nixnut <nixnut@gentoo.org> autoconf-mode-2.61.ebuild:
+  Stable on ppc wrt bug 189029
 
   15 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   autoconf-mode-2.61.ebuild:
