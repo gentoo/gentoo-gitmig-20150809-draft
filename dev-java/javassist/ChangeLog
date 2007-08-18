@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javassist
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/ChangeLog,v 1.13 2007/04/02 16:27:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/ChangeLog,v 1.14 2007/08/18 11:24:14 betelgeuse Exp $
+
+  18 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> javassist-3.4.ebuild:
+  Cleanup ebuild.
 
   02 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -javassist-2.6.ebuild,
   javassist-2.6-r1.ebuild:

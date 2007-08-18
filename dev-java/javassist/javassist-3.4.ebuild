@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/javassist-3.4.ebuild,v 1.2 2007/03/19 02:36:42 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/javassist-3.4.ebuild,v 1.3 2007/08/18 11:24:14 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -17,24 +17,22 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
-	app-arch/unzip
-	>=dev-java/ant-core-1.5
-	source? ( app-arch/zip )"
+	app-arch/unzip"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	rm -v *.jar || die
 	java-ant_rewrite-classpath build.xml
 }
 
 src_compile() {
-	cd "${S}"
 	eant clean jar $(use_doc javadocs) -Dgentoo.classpath=$(java-config --tools)
 }
 
 src_install() {
 	java-pkg_dojar ${PN}.jar
-	java-pkg_dohtml Readme.html
+	dohtml Readme.html || die
 	use doc && java-pkg_dojavadoc html
 	use source && java-pkg_dosrc src/main/javassist
 }
