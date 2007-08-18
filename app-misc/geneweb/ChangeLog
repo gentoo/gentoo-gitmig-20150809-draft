@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/geneweb
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.1 2007/08/18 14:21:28 tupone Exp $
+
+*geneweb-5.00 (18 Aug 2007)
+
+  18 Aug 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/geneweb-5.00-gentoo.patch, +files/geneweb.confd,
+  +files/geneweb.initd, +metadata.xml, +geneweb-5.00.ebuild:
+  New ebuild. Based on bug #22239 by David Grant
+
