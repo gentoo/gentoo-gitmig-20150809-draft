@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.43 2007/05/06 08:17:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.44 2007/08/18 05:56:45 mrness Exp $
+
+*wvdial-1.60 (18 Aug 2007)
+
+  18 Aug 2007; Alin Năstac <mrness@gentoo.org>
+  +files/wvdial-1.60-destdir.patch, wvdial-1.56.ebuild, +wvdial-1.60.ebuild:
+  Version bump. Change HOMEPAGE and SRC_URI.
 
   06 May 2007; Marius Mauch <genone@gentoo.org> wvdial-1.56.ebuild:
   Replacing einfo with elog

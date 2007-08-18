@@ -1,19 +1,19 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.56.ebuild,v 1.8 2007/08/18 05:56:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.60.ebuild,v 1.1 2007/08/18 05:56:45 mrness Exp $
 
 inherit eutils
 
 DESCRIPTION="Excellent program to automatically configure PPP sessions"
-HOMEPAGE="http://open.nit.ca/wiki/?page=WvDial"
-SRC_URI="http://open.nit.ca/download/${P}.tar.gz"
+HOMEPAGE="http://alumnit.ca/wiki/?WvDial"
+SRC_URI="http://alumnit.ca/download/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="<net-libs/wvstreams-4.4"
+DEPEND=">=net-libs/wvstreams-4.4"
 RDEPEND="${DEPEND}
 	net-dialup/ppp"
 
