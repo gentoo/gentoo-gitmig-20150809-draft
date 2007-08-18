@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.60 2007/08/17 07:48:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.61 2007/08/18 07:45:58 mrness Exp $
+
+  18 Aug 2007; Alin Năstac <mrness@gentoo.org> gnokii-0.6.14-r2.ebuild:
+  Modify postinst message according to bug #189270.
 
 *gnokii-0.6.18-r1 (17 Aug 2007)
 
