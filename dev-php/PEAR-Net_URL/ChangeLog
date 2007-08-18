@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Net_URL
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL/ChangeLog,v 1.23 2006/05/21 00:44:13 chtekk Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL/ChangeLog,v 1.24 2007/08/18 14:57:37 hoffie Exp $
+
+*PEAR-Net_URL-1.0.15 (18 Aug 2007)
+
+  18 Aug 2007; Christian Hoffmann <hoffie@gentoo.org>
+  +PEAR-Net_URL-1.0.15.ebuild:
+  version bump wrt bug 158633, thanks to Jakub Moc
 
   21 May 2006; Luca Longinotti <chtekk@gentoo.org>
   -PEAR-Net_URL-1.0.14.ebuild:
