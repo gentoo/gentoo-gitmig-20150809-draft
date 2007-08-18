@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.109 2007/06/07 18:48:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.110 2007/08/18 14:41:38 angelos Exp $
+
+  18 Aug 2007; Christoph Mende <angelos@gentoo.org> xfce4-4.4.1.ebuild:
+  Moved xfce4-appfinder dependency to !minimal
 
   07 Jun 2007; Samuli Suominen <drac@gentoo.org> xfce4-4.4.1.ebuild:
   Stable on arm.

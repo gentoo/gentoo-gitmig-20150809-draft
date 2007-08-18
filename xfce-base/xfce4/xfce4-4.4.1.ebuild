@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.1.ebuild,v 1.10 2007/06/07 18:48:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.1.ebuild,v 1.11 2007/08/18 14:41:38 angelos Exp $
 
 inherit xfce44
 
@@ -20,7 +20,6 @@ RDEPEND=">=x11-themes/gtk-engines-xfce-2.4
 	>=xfce-base/xfce-utils-${XFCE_MASTER_VERSION}
 	>=xfce-base/xfdesktop-${XFCE_MASTER_VERSION}
 	>=xfce-base/xfce4-session-${XFCE_MASTER_VERSION}
-	>=xfce-extra/xfce4-appfinder-${XFCE_MASTER_VERSION}
 	>=xfce-extra/xfce4-icon-theme-${XFCE_MASTER_VERSION}
 	alsa? ( >=xfce-extra/xfce4-mixer-${XFCE_MASTER_VERSION} )
 	oss? ( >=xfce-extra/xfce4-mixer-${XFCE_MASTER_VERSION} )
@@ -28,7 +27,8 @@ RDEPEND=">=x11-themes/gtk-engines-xfce-2.4
 	!minimal? ( >=xfce-base/orage-${XFCE_MASTER_VERSION}
 		>=xfce-extra/mousepad-0.2.12
 		>=xfce-extra/xfwm4-themes-${XFCE_MASTER_VERSION}
-		>=xfce-extra/terminal-0.2.6 )
+		>=xfce-extra/terminal-0.2.6
+		>=xfce-extra/xfce4-appfinder-${XFCE_MASTER_VERSION} )
 	xscreensaver? ( >=x11-misc/xscreensaver-5.02 )"
 DEPEND="${RDEPEND}"
 
