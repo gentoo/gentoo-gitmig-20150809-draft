@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.3.8.ebuild,v 1.1 2007/03/30 08:47:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.3.12.ebuild,v 1.1 2007/08/18 14:43:07 mrness Exp $
 
 inherit linux-info
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="pcre"
 
 DEPEND="pcre? ( >=dev-libs/libpcre-6.3 )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	local ARGS="TARGET=linux${KV_MAJOR}${KV_MINOR}"
