@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-base/gnustep-back-xlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.22 2007/07/22 10:24:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.23 2007/08/18 15:09:40 grobian Exp $
+
+*gnustep-back-xlib-0.12.0 (18 Aug 2007)
+
+  18 Aug 2007; Fabian Groffen <grobian@gentoo.org>
+  -files/font-make-fix.patch-0.9.5, -gnustep-back-xlib-0.9.5.ebuild,
+  -gnustep-back-xlib-0.9.6.ebuild, +gnustep-back-xlib-0.12.0.ebuild:
+  Bump from GNUstep overlay.  Using new gnustep eclasses
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   gnustep-back-xlib-0.10.3.ebuild:
