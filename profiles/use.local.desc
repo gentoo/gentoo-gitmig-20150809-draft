@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2978 2007/08/17 20:44:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2979 2007/08/18 03:37:03 angelos Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1559,6 +1559,7 @@ net-misc/nx:vnc - Add support for vnc to remote servers
 net-misc/nxnode:vnc - Add support for vnc to remote servers
 net-misc/nxserver-2xterminalserver:vnc - Add support for vnc to remote servers
 net-misc/nxserver-freenx:nxclient - Add support for the commercial nxclient
+net-misc/oidentd:masquerade - Enable support for masqueraded/NAT connections
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:chroot - Enable chrooting support
 net-misc/openssh:hpn - Enable high performance ssh
