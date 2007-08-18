@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.8-r1.ebuild,v 1.6 2007/07/09 08:16:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.8-r1.ebuild,v 1.7 2007/08/18 03:36:54 angelos Exp $
 
 DESCRIPTION="Another (RFC1413 compliant) ident daemon"
 HOMEPAGE="http://dev.ojnk.net/"
@@ -9,14 +9,20 @@ SRC_URI="mirror://sourceforge/ojnk/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc sparc x86 ~x86-fbsd"
-IUSE="ipv6"
+IUSE="debug ipv6 masquerade"
 
 DEPEND=""
 RDEPEND=""
 
 src_compile() {
-	econf $( use_enable ipv6 ) || die "econf failed!"
-	emake || die "emake failed!"
+	local myconf
+	econf \
+		$(use_enable debug) \
+		$(use_enable ipv6) \
+		$(use_enable masquerade masq) \
+		$(use_enable masquerade nat) \
+		|| die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
