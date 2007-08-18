@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-base/gnustep-env
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.30 2007/04/28 16:41:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.31 2007/08/18 17:32:07 voyageur Exp $
+
+*gnustep-env-1000 (18 Aug 2007)
+
+  18 Aug 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +gnustep-env-1000.ebuild:
+  Bump for the new gnustep eclasses
+  gnustep-env will be removed when new gnustep-base is marked stable
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org>
   gnustep-env-0.1.6-r1.ebuild, gnustep-env-0.1.8.ebuild:
