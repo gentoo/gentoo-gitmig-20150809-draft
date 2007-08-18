@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysnmp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.21 2007/08/15 02:38:19 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.22 2007/08/18 12:53:17 mjolnir Exp $
+
+  18 Aug 2007; Martin Jackson <mjolnir@gentoo.org> -pysnmp-4.1.7a.ebuild:
+  Remove old version
 
 *pysnmp-4.1.8a (15 Aug 2007)
 
