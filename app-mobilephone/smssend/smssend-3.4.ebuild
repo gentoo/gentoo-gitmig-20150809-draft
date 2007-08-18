@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/smssend-3.4.ebuild,v 1.4 2006/09/02 16:23:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/smssend-3.4.ebuild,v 1.5 2007/08/18 08:15:16 mrness Exp $
 
 inherit eutils
 
 DESCRIPTION="Universal SMS sender"
-HOMEPAGE="http://zekiller.skytech.org/smssend_menu_en.html"
-SRC_URI="http://zekiller.skytech.org/fichiers/${PN}/${P}.tar.gz"
+HOMEPAGE="None available" # was http://zekiller.skytech.org/smssend_menu_en.html
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
