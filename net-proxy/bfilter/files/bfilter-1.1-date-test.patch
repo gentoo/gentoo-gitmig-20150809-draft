@@ -1,0 +1,14 @@
+diff -Nru bfilter-1.1.orig/tests/DateTestSuite.cpp bfilter-1.1/tests/DateTestSuite.cpp
+--- bfilter-1.1.orig/tests/DateTestSuite.cpp	2007-06-12 16:56:51.000000000 +0300
++++ bfilter-1.1/tests/DateTestSuite.cpp	2007-08-18 15:06:15.000000000 +0300
+@@ -48,7 +48,9 @@
+ 	time_t const y2k = Date::parse(BString("Thu, 01 Jan 2000 00:00:00 GMT"));
+ 	
+ 	for (int i = 0; i < 1000; ++i) {
+-		time_t const time = rand() - rand();
++		time_t time = rand() - rand();
++		if (time < 0)
++			time *= -1;
+ 		BOOST_REQUIRE(check_time(time, Date::RFC822));
+ 		BOOST_REQUIRE(check_time(time, Date::ASCTIME));
+ 		if (time >= low && time < y2k) {

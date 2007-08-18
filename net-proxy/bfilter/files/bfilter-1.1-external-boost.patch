@@ -1,0 +1,36 @@
+diff -Nru bfilter-1.1.orig/main/daemon/Makefile.am bfilter-1.1/main/daemon/Makefile.am
+--- bfilter-1.1.orig/main/daemon/Makefile.am	2007-01-19 21:21:02.000000000 +0200
++++ bfilter-1.1/main/daemon/Makefile.am	2007-08-18 13:09:38.000000000 +0300
+@@ -6,7 +6,7 @@
+ $(top_builddir)/boost/libs/program_options/libprogram_options.la
+ else
+ BOOST_CPPFLAGS =
+-BOOST_LIBS     =
++BOOST_LIBS     = -lboost_regex-mt -lboost_program_options-mt
+ endif
+ 
+ AM_CPPFLAGS = -DSYSCONFDIR=\"$(sysconfdir)\" \
+diff -Nru bfilter-1.1.orig/main/gui/gtk/Makefile.am bfilter-1.1/main/gui/gtk/Makefile.am
+--- bfilter-1.1.orig/main/gui/gtk/Makefile.am	2007-01-12 23:22:57.000000000 +0200
++++ bfilter-1.1/main/gui/gtk/Makefile.am	2007-08-18 13:08:22.000000000 +0300
+@@ -49,7 +49,7 @@
+ BOOST_LIBS     = $(top_builddir)/boost/libs/regex/libregex.la
+ else
+ BOOST_CPPFLAGS =
+-BOOST_LIBS     =
++BOOST_LIBS     = -lboost_regex-mt
+ endif
+ 
+ if WITH_GUI
+diff -Nru bfilter-1.1.orig/tests/Makefile.am bfilter-1.1/tests/Makefile.am
+--- bfilter-1.1.orig/tests/Makefile.am	2007-05-07 17:19:40.000000000 +0300
++++ bfilter-1.1/tests/Makefile.am	2007-08-18 13:10:15.000000000 +0300
+@@ -6,7 +6,7 @@
+                  $(top_builddir)/boost/libs/regex/libregex.la
+ else
+ BOOST_CPPFLAGS =
+-BOOST_LIBS     =
++BOOST_LIBS     = -lboost_regex-mt -lboost_unit_test_framework-mt
+ endif
+ 
+ AM_CPPFLAGS = -I$(top_srcdir) -I$(top_builddir) \

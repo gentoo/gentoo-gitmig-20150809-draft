@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/bfilter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.14 2007/08/02 12:04:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.15 2007/08/18 13:27:09 mrness Exp $
+
+*bfilter-1.1 (18 Aug 2007)
+
+  18 Aug 2007; Alin Năstac <mrness@gentoo.org>
+  +files/bfilter-1.1-date-test.patch,
+  +files/bfilter-1.1-external-boost.patch, +bfilter-1.1.ebuild:
+  Version bump. Use dev-lib/boost instead the included version of the library.
 
   02 Aug 2007; Alin Năstac <mrness@gentoo.org> -bfilter-1.0.6.ebuild,
   -bfilter-1.0.7.ebuild:
