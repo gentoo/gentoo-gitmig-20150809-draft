@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/grpn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/ChangeLog,v 1.9 2007/02/21 23:39:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/ChangeLog,v 1.10 2007/08/18 16:21:49 drac Exp $
+
+*grpn-1.1.2-r1 (18 Aug 2007)
+
+  18 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  +files/grpn-1.1.2-implicit-declarations.patch, +grpn-1.1.2-r1.ebuild:
+  rewrite grpn ebuild, fix QA warnings.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
