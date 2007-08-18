@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/ufconfig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.1 2007/02/19 10:21:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.2 2007/08/18 17:11:47 bicatali Exp $
+
+*ufconfig-3.0.0 (18 Aug 2007)
+
+  18 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +ufconfig-3.0.0.ebuild:
+  Version bump.
 
 *ufconfig-2.4.0 (19 Feb 2007)
 
