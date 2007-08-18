@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/tramp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.38 2007/08/17 22:15:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.39 2007/08/18 16:37:25 ulm Exp $
+
+*tramp-2.0.56 (18 Aug 2007)
+
+  18 Aug 2007; Ulrich Mueller <ulm@gentoo.org>
+  +files/tramp-2.0.56-configure.patch, metadata.xml, +tramp-2.0.56.ebuild:
+  Version bump. Fix spelling of longdescription.
 
 *tramp-2.1.10 (17 Aug 2007)
 *tramp-2.0.55 (17 Aug 2007)

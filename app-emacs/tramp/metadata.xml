@@ -5,7 +5,7 @@
 <longdescription>
 TRAMP (Transparent Remote Access, Multiple Protocols) is a package for
 editing remote files, similar to ange-ftp. Whereas ange-ftp uses FTP
-to conn ect to the remote host and to transfer the files, TRAMP uses a
-remote shell conn ection (rlogin, telnet, ssh)
+to connect to the remote host and to transfer the files, TRAMP uses a
+remote shell connection (rlogin, telnet, ssh)
 </longdescription>
 </pkgmetadata>

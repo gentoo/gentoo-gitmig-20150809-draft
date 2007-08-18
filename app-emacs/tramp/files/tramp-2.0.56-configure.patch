@@ -1,0 +1,28 @@
+--- tramp-2.0.56.orig/configure	2007-05-28 10:36:38.000000000 +0200
++++ tramp-2.0.56/configure	2007-08-18 18:18:49.003204055 +0200
+@@ -3973,4 +3973,23 @@
+ 
+ 
+ # configure is writing to config.log, and then calls config.status.
+-# config.status does its own redirection, appendi
+\ No newline at end of file
++# config.status does its own redirection, appending to config.log.
++# Unfortunately, on DOS this fails, as config.log is still kept open
++# by configure, so config.status won't be able to write to it; its
++# output is simply discarded.  So we exec the FD to /dev/null,
++# effectively closing config.log, so it can be properly (re)opened and
++# appended to by config.status.  When coming back to configure, we
++# need to make the FD available again.
++if test "$no_create" != yes; then
++  ac_cs_success=:
++  ac_config_status_args=
++  test "$silent" = yes &&
++    ac_config_status_args="$ac_config_status_args --quiet"
++  exec 5>/dev/null
++  $SHELL $CONFIG_STATUS $ac_config_status_args || ac_cs_success=false
++  exec 5>>config.log
++  # Use ||, not &&, to avoid exiting from the if with $? = 1, which
++  # would make configure fail if this is the last instruction.
++  $ac_cs_success || { (exit 1); exit 1; }
++fi
++
