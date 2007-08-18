@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7603 2007/08/18 18:48:44 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7604 2007/08/18 21:34:53 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -174,11 +174,6 @@ net-firewall/fireflier
 # Wulf C. Krueger <philantrop@gentoo.org> (21 Jul 2007)
 # Broken by upstream. cf. bug 173972.
 =media-video/konverter-0.93
-
-# Samuli Suominen <drac@gentoo.org> (21 Jul 2007)
-# Last release from 1999, still using GTK+-1.2.
-# Masked for removal in 30 days.
-x11-misc/fsv
 
 # Torsten Veller <tove@gentoo.org> (21 Jul 2007)
 # Masked for testing
