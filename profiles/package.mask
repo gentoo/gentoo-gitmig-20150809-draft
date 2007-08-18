@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7600 2007/08/17 19:19:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7601 2007/08/18 11:08:50 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -99,8 +99,9 @@ gnustep-apps/gworkspace
 net-wireless/aircrack-ptw
 
 # Samuli Suominen <drac@gentoo.org> (05 Aug 2007)
-# Temp. mask new flac since it could potentially
-# break many apps.
+# Text relocation regression compared to 1.1.4
+# with hand written asm when nasm is installed on
+# x86..
 ~media-libs/flac-1.2.0
 
 # Hans de Graaff <graaff@gentoo.org> (05 Aug 2007)
