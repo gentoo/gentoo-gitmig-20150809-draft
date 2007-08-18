@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.122 2007/08/12 19:10:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.123 2007/08/18 19:42:29 swegener Exp $
+
+  18 Aug 2007; Sven Wegener <swegener@gentoo.org> -avahi-0.6.19-r1.ebuild,
+  -avahi-0.6.20-r1.ebuild:
+  Cleanup.
 
   12 Aug 2007; Sven Wegener <swegener@gentoo.org>
   +files/avahi-0.6.21-browse-help.patch, avahi-0.6.21.ebuild:
