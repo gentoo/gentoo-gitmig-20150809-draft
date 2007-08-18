@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-base/gnustep-make
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.43 2007/03/18 01:33:13 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.44 2007/08/18 13:26:56 grobian Exp $
+
+*gnustep-make-2.0.1 (18 Aug 2007)
+
+  18 Aug 2007; Fabian Groffen <grobian@gentoo.org>
+  +files/gnustep-make-2.0.1-destdir.patch, +files/gnustep-2.csh,
+  +files/gnustep-2.sh, +gnustep-make-2.0.1.ebuild:
+  Adding newest gnustep-make from GNUstep overlay, using new gnustep eclasses.
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org>
   gnustep-make-1.10.0-r2.ebuild, gnustep-make-1.12.0-r1.ebuild,
