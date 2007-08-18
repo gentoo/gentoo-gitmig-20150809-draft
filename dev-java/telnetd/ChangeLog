@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/telnetd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.17 2007/08/15 05:57:35 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.18 2007/08/18 17:19:10 betelgeuse Exp $
+
+  18 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> -telnetd-1.0-r1.ebuild:
+  Remove generation 1 ebuild.
 
   15 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   telnetd-1.0-r2.ebuild:
