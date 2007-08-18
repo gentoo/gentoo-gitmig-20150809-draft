@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/galicesms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/galicesms/ChangeLog,v 1.5 2007/03/26 09:11:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/galicesms/ChangeLog,v 1.6 2007/08/18 07:01:32 mrness Exp $
+
+*galicesms-1.61 (18 Aug 2007)
+
+  18 Aug 2007; Alin Năstac <mrness@gentoo.org> -galicesms-1.4.0.ebuild,
+  +galicesms-1.61.ebuild:
+  Version bump. Add ~amd64 keyword.
 
 *galicesms-1.51 (26 Mar 2007)
 
