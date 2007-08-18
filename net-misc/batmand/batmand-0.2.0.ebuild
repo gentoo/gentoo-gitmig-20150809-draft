@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batmand/batmand-0.2.0.ebuild,v 1.1 2007/06/23 12:49:02 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batmand/batmand-0.2.0.ebuild,v 1.2 2007/08/18 16:25:58 hanno Exp $
 
 inherit eutils toolchain-funcs
 
 MY_PV="0.2-rv451_sources"
 
-DESCRIPTION="Better approach to modile Ad-Hoc networking"
+DESCRIPTION="Better approach to mobile Ad-Hoc networking"
 HOMEPAGE="http://open-mesh.net/batman"
 SRC_URI="http://downloads.open-mesh.net/batman/stable/sources/${PN}_${MY_PV}.tgz"
 
