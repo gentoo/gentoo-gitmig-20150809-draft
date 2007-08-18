@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/talksoup
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/talksoup/ChangeLog,v 1.5 2006/06/25 14:16:27 grobian Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/talksoup/ChangeLog,v 1.6 2007/08/18 15:26:54 angelos Exp $
+
+  18 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  talksoup-1.0_alpha1.ebuild:
+  Added ~amd64 wrt bug #170433
 
   25 Jun 2006; Fabian Groffen <grobian@gentoo.org> ChangeLog:
   Added new talksoup ebuild, with thanks to <sourav at) sourav [dot. net> (bug

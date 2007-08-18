@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/helpviewer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/helpviewer/ChangeLog,v 1.6 2007/02/06 14:12:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/helpviewer/ChangeLog,v 1.7 2007/08/18 15:20:36 angelos Exp $
+
+  18 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  helpviewer-0.3-r1.ebuild:
+  Added ~amd64 wrt bug #170433
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

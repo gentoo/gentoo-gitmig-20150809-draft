@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gridlock
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/ChangeLog,v 1.8 2007/06/11 15:51:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/ChangeLog,v 1.9 2007/08/18 15:19:45 angelos Exp $
+
+  18 Aug 2007; Christoph Mende <angelos@gentoo.org> gridlock-1.9-r1.ebuild:
+  Added ~amd64 wrt bug #170433
 
   11 Jun 2007; Bernard Cafarelli <voyageur@gentoo.org> -gridlock-1.9.ebuild:
   Remove old ebuild

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/addresses-0.4.6-r1.ebuild,v 1.4 2005/08/25 18:57:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/addresses-0.4.6-r1.ebuild,v 1.5 2007/08/18 15:15:42 angelos Exp $
 
 inherit gnustep eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://giesler.biz/bjoern/en/sw_addr.html"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/contrib/${P/a/A}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 
 IUSE=""
 DEPEND="${GS_DEPEND}"

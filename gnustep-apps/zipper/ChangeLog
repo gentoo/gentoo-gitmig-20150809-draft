@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/zipper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/ChangeLog,v 1.7 2007/02/22 00:22:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/ChangeLog,v 1.8 2007/08/18 15:29:43 angelos Exp $
+
+  18 Aug 2007; Christoph Mende <angelos@gentoo.org> zipper-1.1.ebuild:
+  Added ~amd64 wrt bug #170433
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
