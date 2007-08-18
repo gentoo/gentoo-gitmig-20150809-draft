@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ispell
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.30 2007/02/21 23:32:14 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.31 2007/08/18 13:37:30 philantrop Exp $
+
+  18 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/ispell-3.2.06-stripping.diff, ispell-3.2.06-r6.ebuild:
+  Removed stripping from the Makefiles. Fixes bug 137640. Removed dependencies
+  on packages now in the base profile.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

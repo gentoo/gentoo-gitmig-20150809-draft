@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r6.ebuild,v 1.16 2006/03/25 06:38:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r6.ebuild,v 1.17 2007/08/18 13:37:30 philantrop Exp $
 
 inherit eutils
 
@@ -15,16 +15,15 @@ LICENSE="as-is"
 KEYWORDS="alpha amd64 hppa mips ppc ppc-macos sparc x86"
 IUSE=""
 
-DEPEND="sys-apps/sed
-	sys-devel/bison
-	sys-apps/miscfiles
-	>=sys-libs/ncurses-5.2"
+DEPEND="sys-apps/miscfiles
+		>=sys-libs/ncurses-5.2"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${WORKDIR}/${PF}-gentoo-${PATCH_VER}.diff
-	epatch ${FILESDIR}/${P}-patch.diff
+	cd "${S}"
+	epatch "${WORKDIR}/${PF}-gentoo-${PATCH_VER}.diff"
+	epatch "${FILESDIR}/${P}-patch.diff"
+	epatch "${FILESDIR}/${P}-stripping.diff"
 }
 
 src_compile() {
@@ -57,7 +56,7 @@ src_install() {
 	rmdir ${D}/usr/share/man/man5
 	rmdir ${D}/usr/share/info
 
-	dodoc Contributors README WISHES
+	dodoc Contributors README WISHES || die "installing docs failed"
 
 	dosed ${D}/usr/share/man/man1/ispell.1
 }

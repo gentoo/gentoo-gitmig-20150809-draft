@@ -1,0 +1,30 @@
+diff -Naur ispell-3.2.06.orig/Makefile ispell-3.2.06/Makefile
+--- ispell-3.2.06.orig/Makefile	2007-08-18 15:15:59.000000000 +0200
++++ ispell-3.2.06/Makefile	2007-08-18 15:17:44.000000000 +0200
+@@ -254,7 +254,6 @@
+ 	@. ./config.sh; \
+ 	  set -x; \
+ 	  cd $$BINDIR; \
+-	  strip ispell; \
+ 	  chmod 755 ispell
+ 	@. ./config.sh; \
+ 	  set -x; \
+@@ -294,7 +293,6 @@
+ 	@. ./config.sh; \
+ 	  set -x; \
+ 	  cd $$BINDIR; \
+-	  strip buildhash icombine ijoin sq unsq; \
+ 	  chmod 755 buildhash icombine ijoin \
+ 	    munchlist findaffix tryaffix sq unsq
+ 	@. ./config.sh; \
+diff -Naur ispell-3.2.06.orig/deformatters/Makefile ispell-3.2.06/deformatters/Makefile
+--- ispell-3.2.06.orig/deformatters/Makefile	2001-07-25 23:51:48.000000000 +0200
++++ ispell-3.2.06/deformatters/Makefile	2007-08-18 15:25:47.000000000 +0200
+@@ -76,7 +76,6 @@
+ 	@. ../config.sh; \
+ 	  set -x; \
+ 	  cd $$BINDIR; \
+-	  strip $(PROGRAMS); \
+ 	  chmod 755 $(PROGRAMS)
+ 
+ clean:
