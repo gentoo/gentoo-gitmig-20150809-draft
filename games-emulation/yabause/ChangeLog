@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/yabause
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/ChangeLog,v 1.17 2007/06/29 03:34:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/ChangeLog,v 1.18 2007/08/19 18:19:40 mr_bones_ Exp $
+
+*yabause-0.8.6 (19 Aug 2007)
+
+  19 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +yabause-0.8.6.ebuild:
+  version bump
 
 *yabause-0.8.5 (29 Jun 2007)
 
