@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.4 2007/08/04 17:32:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.5 2007/08/19 15:26:22 hollow Exp $
+
+*apache-2.2.4-r12 (19 Aug 2007)
+
+  19 Aug 2007; Benedikt Böhm <hollow@gentoo.org> +apache-2.2.4-r12.ebuild:
+  fix patch for CVE 2007-3304 and adapt mpm-itk; backport mod_dbd from trunk,
+  maybe fixes #182430
 
 *apache-2.2.4-r11 (01 Aug 2007)
 
