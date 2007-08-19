@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity-eawpatches
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/ChangeLog,v 1.37 2007/02/24 15:24:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/ChangeLog,v 1.38 2007/08/19 10:19:36 drac Exp $
+
+  19 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  timidity-eawpatches-12-r4.ebuild:
+  arm stable.
 
   24 Feb 2007; Jeroen Roovers <jer@gentoo.org>
   timidity-eawpatches-12-r5.ebuild:
