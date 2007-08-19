@@ -1,0 +1,224 @@
+diff -ur gramofile-1.6P.orig/clrscr.c gramofile-1.6P/clrscr.c
+--- gramofile-1.6P.orig/clrscr.c	2000-03-29 00:07:25.000000000 +0300
++++ gramofile-1.6P/clrscr.c	2007-08-19 11:33:41.000000000 +0300
+@@ -13,7 +13,7 @@
+ #else
+ #include <curses.h>
+ #endif
+-
++#include <string.h>
+ 
+ void
+ header (char *headertext)
+diff -ur gramofile-1.6P.orig/errorwindow.c gramofile-1.6P/errorwindow.c
+--- gramofile-1.6P.orig/errorwindow.c	2000-11-26 02:55:58.000000000 +0200
++++ gramofile-1.6P/errorwindow.c	2007-08-19 11:32:53.000000000 +0300
+@@ -20,6 +20,7 @@
+ #else
+ #include <stdio.h>
+ #endif
++#include <string.h>
+ 
+ void
+ error_window_display (char *text, char *buttontext)
+diff -ur gramofile-1.6P.orig/gramofile.c gramofile-1.6P/gramofile.c
+--- gramofile-1.6P.orig/gramofile.c	2000-03-29 00:07:25.000000000 +0300
++++ gramofile-1.6P/gramofile.c	2007-08-19 11:32:24.000000000 +0300
+@@ -12,6 +12,7 @@
+ #include <signal.h>
+ #include <unistd.h>
+ #include <string.h>
++#include <stdlib.h>
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+ #else
+diff -ur gramofile-1.6P.orig/mainmenu.c gramofile-1.6P/mainmenu.c
+--- gramofile-1.6P.orig/mainmenu.c	2000-03-29 00:07:25.000000000 +0300
++++ gramofile-1.6P/mainmenu.c	2007-08-19 11:45:08.000000000 +0300
+@@ -21,6 +21,7 @@
+ #include "tracksplit.h"
+ #include <stdlib.h>
+ #include <unistd.h>
++#include <string.h>
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+ #else
+Only in gramofile-1.6P.orig/perl-swig: errorwindow.c
+diff -ur gramofile-1.6P.orig/perl-swig/signpr_cmf2.c gramofile-1.6P/perl-swig/signpr_cmf2.c
+--- gramofile-1.6P.orig/perl-swig/signpr_cmf2.c	2007-08-19 11:30:54.000000000 +0300
++++ gramofile-1.6P/perl-swig/signpr_cmf2.c	2007-08-19 11:35:42.000000000 +0300
+@@ -35,6 +35,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <math.h>
++#include <string.h>
+ #ifndef SWIG
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+diff -ur gramofile-1.6P.orig/perl-swig/signpr_cmf.c gramofile-1.6P/perl-swig/signpr_cmf.c
+--- gramofile-1.6P.orig/perl-swig/signpr_cmf.c	2000-11-26 02:56:00.000000000 +0200
++++ gramofile-1.6P/perl-swig/signpr_cmf.c	2007-08-19 11:34:23.000000000 +0300
+@@ -33,6 +33,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <math.h>
++#include <string.h>
+ #ifndef SWIG
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+diff -ur gramofile-1.6P.orig/perl-swig/signpr_doubmed.c gramofile-1.6P/perl-swig/signpr_doubmed.c
+--- gramofile-1.6P.orig/perl-swig/signpr_doubmed.c	2000-11-26 02:56:02.000000000 +0200
++++ gramofile-1.6P/perl-swig/signpr_doubmed.c	2007-08-19 11:35:08.000000000 +0300
+@@ -19,6 +19,7 @@
+ #endif
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <string.h>
+ #ifndef SWIG
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+diff -ur gramofile-1.6P.orig/perl-swig/signpr_mean.c gramofile-1.6P/perl-swig/signpr_mean.c
+--- gramofile-1.6P.orig/perl-swig/signpr_mean.c	2000-11-26 02:56:04.000000000 +0200
++++ gramofile-1.6P/perl-swig/signpr_mean.c	2007-08-19 11:34:54.000000000 +0300
+@@ -19,6 +19,7 @@
+ #endif
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <string.h>
+ #ifndef SWIG
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+diff -ur gramofile-1.6P.orig/perl-swig/signpr_median.c gramofile-1.6P/perl-swig/signpr_median.c
+--- gramofile-1.6P.orig/perl-swig/signpr_median.c	2000-11-26 02:56:05.000000000 +0200
++++ gramofile-1.6P/perl-swig/signpr_median.c	2007-08-19 11:34:04.000000000 +0300
+@@ -19,6 +19,7 @@
+ #endif
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <string.h>
+ #ifndef SWIG
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+diff -ur gramofile-1.6P.orig/perl-swig/signpr_rms.c gramofile-1.6P/perl-swig/signpr_rms.c
+--- gramofile-1.6P.orig/perl-swig/signpr_rms.c	2000-11-26 02:56:05.000000000 +0200
++++ gramofile-1.6P/perl-swig/signpr_rms.c	2007-08-19 11:36:13.000000000 +0300
+@@ -20,6 +20,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <math.h>
++#include <string.h>
+ #ifndef SWIG
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+diff -ur gramofile-1.6P.orig/signpr_cmf2.c gramofile-1.6P/signpr_cmf2.c
+--- gramofile-1.6P.orig/signpr_cmf2.c	2007-08-19 11:30:54.000000000 +0300
++++ gramofile-1.6P/signpr_cmf2.c	2007-08-19 11:35:42.000000000 +0300
+@@ -35,6 +35,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <math.h>
++#include <string.h>
+ #ifndef SWIG
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+diff -ur gramofile-1.6P.orig/signpr_cmf3.c gramofile-1.6P/signpr_cmf3.c
+--- gramofile-1.6P.orig/signpr_cmf3.c	2007-08-19 11:30:59.000000000 +0300
++++ gramofile-1.6P/signpr_cmf3.c	2007-08-19 11:36:03.000000000 +0300
+@@ -36,6 +36,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <math.h>
++#include <string.h>
+ #ifndef SWIG
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+diff -ur gramofile-1.6P.orig/signpr_cmf.c gramofile-1.6P/signpr_cmf.c
+--- gramofile-1.6P.orig/signpr_cmf.c	2000-11-26 02:56:00.000000000 +0200
++++ gramofile-1.6P/signpr_cmf.c	2007-08-19 11:34:23.000000000 +0300
+@@ -33,6 +33,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <math.h>
++#include <string.h>
+ #ifndef SWIG
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+diff -ur gramofile-1.6P.orig/signpr_doubmed.c gramofile-1.6P/signpr_doubmed.c
+--- gramofile-1.6P.orig/signpr_doubmed.c	2000-11-26 02:56:02.000000000 +0200
++++ gramofile-1.6P/signpr_doubmed.c	2007-08-19 11:35:08.000000000 +0300
+@@ -19,6 +19,7 @@
+ #endif
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <string.h>
+ #ifndef SWIG
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+diff -ur gramofile-1.6P.orig/signpr_mean.c gramofile-1.6P/signpr_mean.c
+--- gramofile-1.6P.orig/signpr_mean.c	2000-11-26 02:56:04.000000000 +0200
++++ gramofile-1.6P/signpr_mean.c	2007-08-19 11:34:54.000000000 +0300
+@@ -19,6 +19,7 @@
+ #endif
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <string.h>
+ #ifndef SWIG
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+diff -ur gramofile-1.6P.orig/signpr_median.c gramofile-1.6P/signpr_median.c
+--- gramofile-1.6P.orig/signpr_median.c	2000-11-26 02:56:05.000000000 +0200
++++ gramofile-1.6P/signpr_median.c	2007-08-19 11:34:04.000000000 +0300
+@@ -19,6 +19,7 @@
+ #endif
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <string.h>
+ #ifndef SWIG
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+diff -ur gramofile-1.6P.orig/signpr_rms.c gramofile-1.6P/signpr_rms.c
+--- gramofile-1.6P.orig/signpr_rms.c	2000-11-26 02:56:05.000000000 +0200
++++ gramofile-1.6P/signpr_rms.c	2007-08-19 11:36:13.000000000 +0300
+@@ -20,6 +20,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <math.h>
++#include <string.h>
+ #ifndef SWIG
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+diff -ur gramofile-1.6P.orig/stringinput.c gramofile-1.6P/stringinput.c
+--- gramofile-1.6P.orig/stringinput.c	2000-03-29 00:07:26.000000000 +0300
++++ gramofile-1.6P/stringinput.c	2007-08-19 11:33:08.000000000 +0300
+@@ -13,7 +13,7 @@
+ #else
+ #include <curses.h>
+ #endif
+-
++#include <string.h>
+ 
+ void
+ stringinput_display (stringinput_t * data)
+diff -ur gramofile-1.6P.orig/tracksplit_parammenu.c gramofile-1.6P/tracksplit_parammenu.c
+--- gramofile-1.6P.orig/tracksplit_parammenu.c	2000-03-29 00:07:26.000000000 +0300
++++ gramofile-1.6P/tracksplit_parammenu.c	2007-08-19 11:35:27.000000000 +0300
+@@ -16,6 +16,7 @@
+ #include "helpline.h"
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <string.h>
+ #ifndef OLD_CURSES
+ #include <ncurses.h>
+ #else
+diff -ur gramofile-1.6P.orig/yesnowindow.c gramofile-1.6P/yesnowindow.c
+--- gramofile-1.6P.orig/yesnowindow.c	2000-03-29 00:07:26.000000000 +0300
++++ gramofile-1.6P/yesnowindow.c	2007-08-19 11:33:28.000000000 +0300
+@@ -16,7 +16,7 @@
+ #else
+ #include <curses.h>
+ #endif
+-
++#include <string.h>
+ 
+ int
+ yesno_window (char *text, char *yestext, char *notext, int preselected)
