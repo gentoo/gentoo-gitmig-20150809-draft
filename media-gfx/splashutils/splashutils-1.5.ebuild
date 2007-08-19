@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.ebuild,v 1.3 2007/08/14 20:17:45 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.ebuild,v 1.4 2007/08/19 21:22:30 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -66,7 +66,8 @@ src_unpack() {
 	rm ${S}/libs/zlib-${V_ZLIB}/Makefile
 
 	cd ${SG}
-	epatch ${FILESDIR}/splashutils-1.5-fbsplash.patch
+	epatch ${FILESDIR}/${P}-fbsplash.patch
+	epatch ${FILESDIR}/${P}-baselayout-1.patch
 
 	cd ${S}
 	ln -sf ${S} ${WORKDIR}/core

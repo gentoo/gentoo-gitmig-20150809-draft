@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.104 2007/08/14 20:17:45 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.105 2007/08/19 21:22:30 spock Exp $
+
+  19 Aug 2007; Michał Januszewski <spock@gentoo.org>
+  +files/splashutils-1.5-baselayout-1.patch, splashutils-1.5.ebuild:
+  Fix keyboard detection in baselayout-1 splash-functions.sh.
 
   14 Aug 2007; Michał Januszewski <spock@gentoo.org>
   +files/splashutils-1.5-fbsplash.patch, splashutils-1.5.ebuild:
