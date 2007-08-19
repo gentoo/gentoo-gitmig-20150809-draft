@@ -1,6 +1,6 @@
-diff -ur gsm-1.0-pl10-orig/inc/private.h gsm-1.0-pl10/inc/private.h
---- gsm-1.0-pl10-orig/inc/private.h	2005-03-25 00:35:41.000000000 +0100
-+++ gsm-1.0-pl10/inc/private.h	2005-03-25 00:36:05.000000000 +0100
+diff -ur gsm-1.0-pl12.orig/inc/private.h gsm-1.0-pl12/inc/private.h
+--- gsm-1.0-pl12.orig/inc/private.h	2006-04-26 22:17:01.000000000 +0300
++++ gsm-1.0-pl12/inc/private.h	2007-08-19 12:23:02.000000000 +0300
 @@ -10,10 +10,10 @@
  #define	PRIVATE_H
  

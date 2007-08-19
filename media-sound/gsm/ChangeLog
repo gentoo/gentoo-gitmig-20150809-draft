@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/gsm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/ChangeLog,v 1.15 2007/03/09 03:17:53 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/ChangeLog,v 1.16 2007/08/19 09:34:29 drac Exp $
+
+*gsm-1.0.12 (19 Aug 2007)
+
+  19 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  +files/gsm-1.0.12-64bit.patch, +files/gsm-1.0.12-memcpy.patch,
+  +gsm-1.0.12.ebuild:
+  Version bump.
 
 *gsm-1.0.10-r1 (09 Mar 2007)
 
