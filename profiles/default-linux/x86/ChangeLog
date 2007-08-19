@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.96 2007/08/17 04:12:29 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.97 2007/08/19 12:29:57 betelgeuse Exp $
+
+  19 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
+  no-nptl/2.4/package.mask:
+  Mask >=dev-java/java-gnome-4.0 as it needs GNOME 2.18 that is also masked here.
 
   17 Aug 2007; Leonardo Boshell <leonardop@gentoo.org>
   no-nptl/2.4/package.mask:
