@@ -1,0 +1,109 @@
+--- configure.in	2007-07-31 19:56:11.000000000 +0200
++++ configure.in.new	2007-08-07 11:00:08.000000000 +0200
+@@ -22,15 +22,9 @@
+ 
+ dnl Add MD's mimetypes to mime and desktop databases
+ AC_PATH_PROG(UPDATE_MIME_DB, update-mime-database, no)
+-if test "x$UPDATE_MIME_DB" = "xno"; then
+-   AC_MSG_ERROR([You need to install update-mime-database])
+-fi
+ AC_SUBST(UPDATE_MIME_DB)
+ 
+ AC_PATH_PROG(UPDATE_DESKTOP_DB, update-desktop-database, no)
+-if test "x$UPDATE_DESKTOP_DB" = "xno"; then
+-   AC_MSG_ERROR([You need to install update-desktop-database])
+-fi
+ AC_SUBST(UPDATE_DESKTOP_DB)
+ 
+ dnl Find pkg-config
+@@ -127,7 +121,7 @@
+ AC_ARG_ENABLE(java,
+ 	AC_HELP_STRING([--enable-java],
+ 		[enable support for Java via ikvm [default=no]]),
+-		[PKG_CHECK_MODULES(IKVM, ikvm >= $IKVM_REQUIRED_VERSION, enable_java=yes, enable_java=no)],
++		[PKG_CHECK_MODULES(IKVM, ikvm >= $IKVM_REQUIRED_VERSION, , enable_java=no)],
+ 		enable_java=no)
+ AM_CONDITIONAL(ENABLE_JAVA, test x$enable_java = xyes)
+ 
+@@ -135,30 +129,30 @@
+ AC_ARG_ENABLE(boo,
+ 	AC_HELP_STRING([--enable-boo],
+ 		[enable support for boo [default=no]]),
+-		[PKG_CHECK_MODULES(BOO, boo >= $BOO_REQUIRED_VERSION, enable_boo=yes, enable_boo=no)],
+-		enable_boo=no)
+-
+-AM_CONDITIONAL(ENABLE_BOO, test x$enable_boo = xyes)
+-AC_SUBST(BOO_LIBS)
++		, enable_boo=no)
+ 
+ if test "x$enable_boo" = "xyes" ; then
++	PKG_CHECK_MODULES(BOO, boo >= $BOO_REQUIRED_VERSION)
+ 	AC_PATH_PROG(BOOC, booc)
+ fi
+ 
++AM_CONDITIONAL(ENABLE_BOO, test x$enable_boo = xyes)
++AC_SUBST(BOO_LIBS)
++
+ NEMERLE_REQUIRED_VERSION=0.9.3.99
+ AC_ARG_ENABLE(nemerle,
+ 	AC_HELP_STRING([--enable-nemerle],
+ 		[enable support for Nemerle [default=no]]),
+-		[PKG_CHECK_MODULES(NEMERLE, nemerle >= $NEMERLE_REQUIRED_VERSION, enable_nemerle=yes, enable_nemerle=no)],
+-		enable_nemerle=no)
+-
+-AM_CONDITIONAL(ENABLE_NEMERLE, test x$enable_nemerle = xyes)
+-AC_SUBST(NEMERLE_LIBS)
++		, enable_nemerle=no)
+ 
+ if test "x$enable_nemerle" = "xyes" ; then
++	PKG_CHECK_MODULES(NEMERLE, nemerle >= $NEMERLE_REQUIRED_VERSION)
+ 	AC_PATH_PROG(NCC, ncc)
+ fi
+ 
++AM_CONDITIONAL(ENABLE_NEMERLE, test x$enable_nemerle = xyes)
++AC_SUBST(NEMERLE_LIBS)
++
+ AC_ARG_ENABLE(monoextensions,
+ 	AC_HELP_STRING([--enable-monoextensions],
+ 		[enable extensions for Mono development [default=yes]]),
+@@ -301,7 +295,7 @@
+ AC_ARG_ENABLE(aspnet,
+ 	AC_HELP_STRING([--enable-aspnet],
+ 		[enable ASP.NET project support [default=no]]),
+-		enable_aspnet=yes, enable_aspnet=no)
++		, enable_aspnet=no)
+ 
+ if test "x$enable_aspnet" = "xyes"; then
+ 	PKG_CHECK_MODULES(XSP, xsp >= $XSP_VERSION xsp-2 >= $XSP2_VERSION)
+@@ -329,10 +323,10 @@
+ 		MOZILLA_HOME=$(grep -h GRE_PATH= /etc/gre.d/*.conf | cut -d '"' -f 2 -d = | head -n 1)
+ 	elif [ $(which mozilla 2>/dev/null) ] && grep MOZILLA_FIVE_HOME= "$(which mozilla)" > /dev/null ; then
+ 		MOZILLA_HOME=$(grep MOZILLA_FIVE_HOME= $(which mozilla) | cut -d '"' -f 2 | cut -d '=' -f 2 )
+-	elif [ $(which firefox 2>/dev/null) ] && grep MOZILLA_FIVE_HOME= "$(which firefox)" > /dev/null ; then
+-		MOZILLA_HOME=$(grep MOZILLA_FIVE_HOME= $(which firefox) | cut -d '"' -f 2 | cut -d '=' -f 2 )
+ 	elif [ $(which firefox 2>/dev/null) ] && grep MOZILLA_LIBDIR= "$(which firefox)" > /dev/null ; then
+-		MOZILLA_HOME=$(grep MOZILLA_LIBDIR= $(which firefox) | cut -d '"' -f 2 | cut -d '=' -f 2)
++		MOZILLA_HOME=$(grep MOZILLA_LIBDIR= $(which firefox) | cut -d '"' -f 2 | cut -d '=' -f 2 )
++	elif [ $(which seamonkey 2>/dev/null) ] && grep MOZILLA_LIBDIR= "$(which seamonkey)" > /dev/null ; then
++		MOZILLA_HOME=$(grep MOZILLA_LIBDIR= $(which seamonkey) | cut -d '"' -f 2 | cut -d '=' -f 2 )
+ 	else
+ 		if test "x$enable_aspnetedit" = "xyes"; then
+ 			AC_MSG_ERROR([Cannot detect Mozilla library directory. AspNetEdit addin cannot be built.])
+@@ -348,7 +342,7 @@
+ AC_ARG_ENABLE(aspnetedit,
+ 	AC_HELP_STRING([--enable-aspnetedit],
+ 		[enable ASP.NET visual designer support [default=no]]),
+-		enable_aspnetedit=yes, enable_aspnetedit=no)
++		, enable_aspnetedit=no)
+ 
+ if test "x$enable_aspnet" = "xno"; then
+ 	enable_aspnetedit=no
+@@ -389,7 +383,7 @@
+ 
+ AC_ARG_ENABLE(update-desktopdb,
+    AC_HELP_STRING([--disable-update-desktopdb],
+-                  [disable the update-desktop-database after install [default=np]]),,
++                  [disable the update-desktop-database after install [default=no]]),,
+                   enable_update_desktopdb=yes)
+    AM_CONDITIONAL(ENABLE_UPDATE_DESKTOPDB, test x$enable_update_desktopdb = xyes)
+ 

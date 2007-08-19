@@ -1,0 +1,12 @@
+--- Extras/AspNetAddIn/Templates/WebApplication.xpt.xml	2007-07-31 19:56:09.000000000 +0200
++++ Extras/AspNetAddIn/Templates/WebApplication.xpt.xml.new	2007-08-07 11:14:43.000000000 +0200
+@@ -58,6 +58,9 @@
+ 
+ 	public class ${Name} : Page
+ 	{
++		protected TextBox textBox1;
++		protected Button button1;
++		
+ 		public void onButtonClick (object sender, EventArgs e)
+ 		{
+ 			textBox1.Text ="Hello World";
