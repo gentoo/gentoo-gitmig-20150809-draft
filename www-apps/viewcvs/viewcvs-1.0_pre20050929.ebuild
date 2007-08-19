@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-1.0_pre20050929.ebuild,v 1.6 2007/05/12 23:50:16 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-1.0_pre20050929.ebuild,v 1.7 2007/08/19 12:27:59 phreak Exp $
 
 inherit webapp depend.apache eutils
 
@@ -22,7 +22,7 @@ RDEPEND="|| ( >=dev-util/cvs-1.11
 		sys-apps/diffutils
 		cvsgraph? ( dev-util/cvsgraph )
 		enscript? ( app-text/enscript )
-		apache2? ( mod_python? ( dev-python/mod_python ) )
+		apache2? ( mod_python? ( www-apache/mod_python ) )
 		!apache2? ( www-servers/lighttpd )
 		mysql? ( virtual/mysql
 				 dev-python/mysql-python )"

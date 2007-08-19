@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.3.ebuild,v 1.6 2007/05/24 12:54:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.0.3.ebuild,v 1.7 2007/08/19 12:29:05 phreak Exp $
 
 inherit python eutils
 
@@ -28,7 +28,7 @@ RDEPEND="
 		cvsgraph? ( >=dev-util/cvsgraph-1.5.0 )
 		enscript? ( app-text/enscript )
 		highlight? ( >=app-text/highlight-2.2.10 )
-		mod_python? ( dev-python/mod_python )
+		mod_python? ( www-apache/mod_python )
 		mysql? (
 			>=dev-python/mysql-python-0.9.0
 		)
