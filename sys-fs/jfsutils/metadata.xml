@@ -2,13 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-  <herd>kernel</herd>
-  <maintainer>
-    <email>kernel@gentoo.org</email>
-    <name>kernel team</name>
-    <description>Actively maintained</description>
-  </maintainer>
-  <longdescription>
-    utilities for working with IBM's journaled file system
-  </longdescription>
+	<herd>kernel-misc</herd>
+	<longdescription>
+		Utilities for working with IBM's journaled file system
+	</longdescription>
 </pkgmetadata>
