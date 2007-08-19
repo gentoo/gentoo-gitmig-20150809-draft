@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.3.1.ebuild,v 1.4 2007/07/29 17:41:24 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.10.3.1.ebuild,v 1.5 2007/08/19 10:05:14 dju Exp $
 
 inherit distutils webapp
 
@@ -32,7 +32,7 @@ DEPEND="${DEPEND}
 	)
 	sqlite? (
 		>=dev-db/sqlite-3.3.4
-		>=dev-python/pysqlite-2.3
+		|| ( >=dev-lang/python-2.5 >=dev-python/pysqlite-2.3 )
 	)
 	postgres? ( >=dev-python/psycopg-2 )
 	enscript? ( app-text/enscript )
@@ -73,6 +73,18 @@ pkg_setup () {
 		eerror "You must select at least one database backend, by enabling"
 		eerror "at least one of the 'mysql', 'postgres' or 'sqlite' USE flags."
 		die "no database backend selected"
+	fi
+
+	# python has built-in sqlite support starting from 2.5
+	if use sqlite && \
+		has_version ">=dev-lang/python-2.5" && \
+		! has_version ">=dev-python/pysqlite-2.3" && \
+		! built_with_use dev-lang/python sqlite ; then
+		eerror "To use the sqlite database backend, you must either:"
+		eerror "- build dev-lang/python with sqlite support, using the 'sqlite'"
+		eerror "  USE flag, or"
+		eerror "- emerge dev-python/pysqlite"
+		die "missing python sqlite support"
 	fi
 
 	if ! built_with_use dev-util/subversion python ; then
