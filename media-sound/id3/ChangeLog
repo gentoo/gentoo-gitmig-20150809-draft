@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/id3
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3/ChangeLog,v 1.10 2006/11/12 16:02:58 aballier Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3/ChangeLog,v 1.11 2007/08/19 15:50:18 drac Exp $
+
+  19 Aug 2007; Samuli Suominen <drac@gentoo.org> id3-0.15.ebuild:
+  Stop pre-stripping id3 binary.
 
 *id3-0.15 (12 Nov 2006)
 
