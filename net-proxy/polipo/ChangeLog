@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/polipo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.18 2007/06/17 07:44:18 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.19 2007/08/19 09:26:23 mrness Exp $
+
+*polipo-1.0.1 (19 Aug 2007)
+
+  19 Aug 2007; Alin Năstac <mrness@gentoo.org> +polipo-1.0.1.ebuild:
+  Version bump.
 
   17 Jun 2007; Alin Năstac <mrness@gentoo.org> files/polipo.crond:
   Verify that the service is running before purging old objects from cache.
