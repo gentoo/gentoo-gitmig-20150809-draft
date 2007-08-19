@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060907.4.ebuild,v 1.3 2007/07/13 05:48:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20060907.4.ebuild,v 1.4 2007/08/19 01:01:30 markusle Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 

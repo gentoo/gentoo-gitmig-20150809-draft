@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.1.ebuild,v 1.4 2007/07/13 05:48:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.1.ebuild,v 1.5 2007/08/19 01:01:30 markusle Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -19,7 +19,7 @@ DEPEND="app-shells/tcsh
 	hardened? ( sys-apps/paxctl )
 	blas? ( virtual/blas )"
 
-RDEPEND="app-shells/tcsh
+RDEPEND="${DEPEND}
 	net-misc/openssh"
 
 S="${WORKDIR}/${PN}"

@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.21 2007/07/03 17:40:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.22 2007/08/19 01:01:30 markusle Exp $
+
+  19 Aug 2007; Markus Dittrich <markusle@gentoo.org>
+  gamess-20070324.1.ebuild:
+  Fixed bad RDEPEND.
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   gamess-20070324.1.ebuild:
