@@ -1,6 +1,9 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.22 2007/08/19 09:39:52 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.23 2007/08/19 19:58:59 jer Exp $
+
+  19 Aug 2007; Jeroen Roovers <jer@gentoo.org> po4a-0.32.ebuild:
+  Stable for HPPA (bug #189440).
 
 *po4a-0.32 (19 Aug 2007)
 
