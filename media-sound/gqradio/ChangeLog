@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gqradio
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.13 2006/12/21 06:23:45 compnerd Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.14 2007/08/19 07:42:35 drac Exp $
+
+  19 Aug 2007; Samuli Suominen <drac@gentoo.org> gqradio-1.9.2.ebuild:
+  Remove USE flags gnome and nls which didn't do anything but installed
+  .desktop file to invalid location. Remove COPYING and INSTALL from dodoc.
 
   21 Dec 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   -gqradio-0.99.0.ebuild, -gqradio-1.0.ebuild, -gqradio-1.9.1.ebuild:

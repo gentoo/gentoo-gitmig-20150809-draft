@@ -1,37 +1,22 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/gqradio-1.9.2.ebuild,v 1.2 2005/09/04 21:47:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/gqradio-1.9.2.ebuild,v 1.3 2007/08/19 07:42:35 drac Exp $
 
-IUSE="nls gnome"
-
-DESCRIPTION="GQradio is an FM radio tuner app from the people who brought you GQmpeg."
+DESCRIPTION="An FM radio tuner app from the people who brought you GQmpeg."
 HOMEPAGE="http://gqmpeg.sourceforge.net/radio.html"
 SRC_URI="mirror://sourceforge/gqmpeg/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2.4.0"
-
-RDEPEND="nls? ( sys-devel/gettext )"
-
-src_compile() {
-	local myconf
-	use nls || myconf="--disable-nls"
-
-	econf ${myconf} || die
-	emake || die
-}
+RDEPEND=">=x11-libs/gtk+-2.4"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	sys-devel/gettext"
 
 src_install() {
-	make DESTDIR=${D} install || die
-
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README SKIN-SPECS TODO
-
-	use gnome && ( \
-		insinto /usr/share/gnome/apps/Multimedia
-		doins ${FILESDIR}/gqmpeg.desktop
-	)
-
+	emake DESTDIR="${D}" install || die "emake install failed."
+	dodoc AUTHORS ChangeLog NEWS README SKIN-SPECS TODO
 }
