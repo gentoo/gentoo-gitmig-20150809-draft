@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.8 2007/07/25 21:14:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.9 2007/08/19 04:09:45 markusle Exp $
+
+  19 Aug 2007; Markus Dittrich <markusle@gentoo.org>
+  -files/paraview-2.4.4-hdf5-zlib.patch, -files/paraview-2.4.4-png.patch,
+  -files/paraview-2.4.4-python-wrap.patch, -paraview-2.4.4.ebuild,
+  -paraview-2.6.0.ebuild, -paraview-2.6.1.ebuild:
+  Removed obsolete versions.
 
 *paraview-2.6.2 (25 Jul 2007)
 
