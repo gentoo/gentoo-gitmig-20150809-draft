@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Authen-SASL
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.37 2007/05/12 04:06:13 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.38 2007/08/19 10:06:04 ian Exp $
+
+*Authen-SASL-2.10-r1 (19 Aug 2007)
+
+  19 Aug 2007; Christian Hartmann <ian@gentoo.org>
+  +Authen-SASL-2.10-r1.ebuild:
+  New conditional dep for bug #188568
 
   12 May 2007; Joshua Kinard <kumba@gentoo.org> Authen-SASL-2.10.ebuild:
   Stable on mips.
