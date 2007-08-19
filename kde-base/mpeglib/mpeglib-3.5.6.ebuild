@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/mpeglib-3.5.6.ebuild,v 1.7 2007/08/12 14:27:24 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/mpeglib-3.5.6.ebuild,v 1.8 2007/08/19 15:06:04 nixnut Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=3.5.7
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE mpeg library"
-KEYWORDS="alpha amd64 ~ppc ppc64 x86"
+KEYWORDS="alpha amd64 ppc ppc64 x86"
 IUSE=""
 RDEPEND="media-sound/cdparanoia
 	x11-libs/libXext

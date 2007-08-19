@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.58 2007/08/11 17:16:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.59 2007/08/19 15:16:22 nixnut Exp $
+
+  19 Aug 2007; nixnut <nixnut@gentoo.org> ChangeLog:
+  Stable on ppc wrt bug 176297
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kuiviewer-3.5.7.ebuild:
   x86 stable wrt #185823

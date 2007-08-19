@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysv/ChangeLog,v 1.43 2007/08/12 15:01:00 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysv/ChangeLog,v 1.44 2007/08/19 15:14:15 nixnut Exp $
+
+  19 Aug 2007; nixnut <nixnut@gentoo.org> ksysv-3.5.7.ebuild:
+  Stable on ppc wrt bug 176297
 
   12 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> ksysv-3.5.7.ebuild:
   Marked stable on amd64 as per bug 176297.

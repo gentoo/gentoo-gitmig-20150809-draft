@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/artsplugin-mpeglib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpeglib/ChangeLog,v 1.67 2007/08/12 14:30:07 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpeglib/ChangeLog,v 1.68 2007/08/19 15:08:01 nixnut Exp $
+
+  19 Aug 2007; nixnut <nixnut@gentoo.org> artsplugin-mpeglib-3.5.7.ebuild:
+  Stable on ppc wrt bug 176297
 
   12 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
   artsplugin-mpeglib-3.5.7.ebuild:
