@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ifp-gnome
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ifp-gnome/ChangeLog,v 1.2 2007/02/03 19:19:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ifp-gnome/ChangeLog,v 1.3 2007/08/19 16:54:31 drac Exp $
+
+  19 Aug 2007; Samuli Suominen <drac@gentoo.org> ifp-gnome-0.7.ebuild:
+  Clean up install functions.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
