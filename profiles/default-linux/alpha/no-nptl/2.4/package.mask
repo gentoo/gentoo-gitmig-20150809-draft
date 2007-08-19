@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.24 2007/07/15 20:07:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.25 2007/08/19 09:03:20 drac Exp $
+
+# Samuli Suominen <drac@gentoo.org> (19 Aug 2007)
+# Needs x11-libs/vte, also masked here
+media-sound/grip
 
 # Raúl Porcel <armin76@gentoo.org> (14 Jul 2007)
 # Needs hal, so needs headers-2.6
