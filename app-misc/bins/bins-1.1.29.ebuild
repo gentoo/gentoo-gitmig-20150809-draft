@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.29.ebuild,v 1.12 2006/11/17 23:52:18 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.29.ebuild,v 1.13 2007/08/19 10:35:37 ian Exp $
 
 inherit eutils
 
@@ -38,6 +38,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-install.patch
+	sed -i -e  's|MAN="\$PREFIX/man/man1"|MAN="${D}usr/share/man/man1"|' ${S}/install.sh
 }
 
 src_install() {
