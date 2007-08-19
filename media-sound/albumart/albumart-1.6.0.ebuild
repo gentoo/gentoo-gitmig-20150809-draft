@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.6.0.ebuild,v 1.2 2007/02/17 00:49:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.6.0.ebuild,v 1.3 2007/08/19 11:18:05 drac Exp $
 
 inherit eutils qt3
 
@@ -13,8 +13,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=dev-python/PyQt-3.14.1-r1
-	>=dev-python/imaging-1.0.0"
+RDEPEND=">=dev-python/PyQt-3.14.1-r1
+	>=dev-python/imaging-1"
+DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-unicode.patch
+}
 
 src_compile() {
 	cd ${S}/lib/albumart
