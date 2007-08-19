@@ -1,6 +1,14 @@
 # ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.41 2007/04/14 12:12:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.42 2007/08/19 17:02:26 jurek Exp $
+
+*pnet-0.7.4-r1 (19 Aug 2007)
+*pnet-0.6.12-r1 (19 Aug 2007)
+
+  19 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> +pnet-0.6.12-r1.ebuild,
+  pnet-0.7.4.ebuild, +pnet-0.7.4-r1.ebuild:
+  - Moved gc related docs destination directory (bug #187379)
+  - Removed ~ppc-macos flag as dev-util/treecc dependency is not satisfiable
 
   14 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -pnet-0.6.10.ebuild,
   -pnet-0.7.0.ebuild, -pnet-0.7.2.ebuild:
