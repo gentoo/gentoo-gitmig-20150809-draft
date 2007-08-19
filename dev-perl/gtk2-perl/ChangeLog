@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/gtk2-perl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.87 2007/08/09 15:31:08 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.88 2007/08/19 09:31:56 ian Exp $
+
+  19 Aug 2007; Christian Hartmann <ian@gentoo.org> gtk2-perl-1.101.ebuild,
+  gtk2-perl-1.101-r1.ebuild, gtk2-perl-1.102.ebuild,
+  gtk2-perl-1.102-r1.ebuild, gtk2-perl-1.122.ebuild,
+  gtk2-perl-1.122-r1.ebuild, gtk2-perl-1.140.ebuild,
+  gtk2-perl-1.140-r1.ebuild, gtk2-perl-1.141.ebuild,
+  gtk2-perl-1.141-r1.ebuild, gtk2-perl-1.142-r1.ebuild,
+  gtk2-perl-1.143.ebuild, gtk2-perl-1.144.ebuild, gtk2-perl-1.145.ebuild:
+  Fixed bug #189011
 
   09 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   gtk2-perl-1.144.ebuild:

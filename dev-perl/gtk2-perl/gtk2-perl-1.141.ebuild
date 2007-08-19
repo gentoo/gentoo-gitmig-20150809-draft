@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-1.141.ebuild,v 1.4 2007/01/11 14:51:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-1.141.ebuild,v 1.5 2007/08/19 09:31:56 ian Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ DESCRIPTION="Perl bindings for GTK2"
 HOMEPAGE="http://search.cpan.org/~tsch/${MY_P}/"
 SRC_URI="mirror://cpan/authors/id/T/TS/TSCH/${MY_P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 sparc ~x86"
 IUSE=""
