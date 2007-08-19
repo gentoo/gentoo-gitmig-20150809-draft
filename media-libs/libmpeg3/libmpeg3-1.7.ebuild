@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.7.ebuild,v 1.12 2007/08/17 15:33:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.7.ebuild,v 1.13 2007/08/19 02:18:14 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -42,7 +42,7 @@ src_unpack() {
 	epatch "${WORKDIR}/${P}-a52.patch"
 	epatch "${WORKDIR}/${P}-all_gcc4.patch"
 	epatch "${WORKDIR}/${P}-all_pthread.patch"
-	
+
 	# warning: incompatible implicit declaration of built-in function memcpy
 	epatch "${FILESDIR}"/${P}-memcpy.patch
 }
