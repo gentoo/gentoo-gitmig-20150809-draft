@@ -30,3 +30,5 @@ move x11-drivers/nvidia-legacy-drivers x11-drivers/nvidia-drivers
 move games-strategy/bos games-strategy/boswars
 move kde-base/kworldwatch kde-base/kworldclock
 move www-misc/libapreq2 www-apache/libapreq2
+move dev-python/mod_python www-apache/mod_python
+move dev-ruby/mod_ruby www-apache/mod_ruby
