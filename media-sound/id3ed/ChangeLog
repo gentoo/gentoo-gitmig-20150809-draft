@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/id3ed
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/ChangeLog,v 1.12 2006/08/13 15:00:16 yuval Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/ChangeLog,v 1.13 2007/08/19 16:06:32 drac Exp $
+
+  19 Aug 2007; Samuli Suominen <drac@gentoo.org> id3ed-1.10.4.ebuild:
+  Stop pre-stripping id3ed binary. Use correct CXX by using toolchain-funcs.
+  Use DESTDIR for installing, as it's supported.
 
   13 Aug 2006; <yuval@gentoo.org> id3ed-1.10.4.ebuild:
   Updated HOMEPAGE and SRC_URI
