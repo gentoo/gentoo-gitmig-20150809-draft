@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7604 2007/08/18 21:34:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7605 2007/08/19 03:00:21 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -25,7 +25,7 @@
 # Needs Python 2.5, masked here also.
 >=media-video/gaupol-0.9
 
-# Fabian Groffen <gnustep@gentoo.org> (18 Aug 2007)
+# Fabian Groffen <grobian@gentoo.org> (18 Aug 2007)
 # No longer needed for GNUstep, please stop using it.
 gnustep-base/gnustep-env
 
@@ -1163,3 +1163,14 @@ games-fps/aaut
 # <lu_zero@gentoo.org> (16 Mar 2003)
 # to be tested, seems unstable
 net-dialup/hcfusbmodem
+
+# Alec Warner <antarus@gentoo.org> (13 Aug 2007)
+# testing
+# Last Rights 30 days from now
+sys-apps/testing
+
+# Alec Warner <antarus@gentoo.org> (13 Aug 2007)
+# This is a 
+# Last Rights 30 days from now
+sys-apps/testing
+
