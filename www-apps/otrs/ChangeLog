@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/otrs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.33 2007/07/29 17:32:27 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.34 2007/08/19 11:40:10 hollow Exp $
+
+  19 Aug 2007; Benedikt Böhm <hollow@gentoo.org> otrs-2.0.4.ebuild,
+  otrs-2.1.5.ebuild:
+  move www-misc/libapreq2 to www-apache/libapreq2
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> otrs-2.0.4.ebuild,
   otrs-2.1.5.ebuild:
