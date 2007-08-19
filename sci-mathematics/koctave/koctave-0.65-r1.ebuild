@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/koctave-0.65-r1.ebuild,v 1.6 2007/07/13 05:28:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/koctave-0.65-r1.ebuild,v 1.7 2007/08/19 00:47:25 markusle Exp $
 
 inherit kde
 
@@ -15,9 +15,8 @@ KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="arts"
 
 DEPEND="virtual/libc
-	sci-mathematics/octave"
-
-RDEPEND="|| ( kde-base/konsole kde-base/kdebase )"
+	sci-mathematics/octave
+	|| ( kde-base/konsole kde-base/kdebase )"
 
 S=${WORKDIR}/${PN}3-${PV}
 
