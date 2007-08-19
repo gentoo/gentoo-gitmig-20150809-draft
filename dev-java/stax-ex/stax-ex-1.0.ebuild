@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/stax-ex/stax-ex-1.0.ebuild,v 1.3 2007/08/15 11:08:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/stax-ex/stax-ex-1.0.ebuild,v 1.4 2007/08/19 18:46:30 wltjr Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -12,7 +12,7 @@ SRC_URI="https://stax-ex.dev.java.net/files/documents/4480/44372/${P}-src.tar.gz
 
 LICENSE="CDDL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 
 IUSE=""
 

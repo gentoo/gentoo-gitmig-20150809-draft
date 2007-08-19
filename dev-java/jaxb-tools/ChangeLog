@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jaxb-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/ChangeLog,v 1.4 2007/08/15 11:18:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/ChangeLog,v 1.5 2007/08/19 18:40:18 wltjr Exp $
+
+  19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  jaxb-tools-2.1.2.ebuild:
+  amd64 stable, bug #187681.
 
   15 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   jaxb-tools-2.1.2.ebuild:

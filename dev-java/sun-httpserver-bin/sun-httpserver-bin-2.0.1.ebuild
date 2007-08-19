@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-httpserver-bin/sun-httpserver-bin-2.0.1.ebuild,v 1.3 2007/08/15 11:05:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-httpserver-bin/sun-httpserver-bin-2.0.1.ebuild,v 1.4 2007/08/19 18:50:12 wltjr Exp $
 
 inherit java-pkg-2
 
@@ -12,7 +12,7 @@ SRC_URI="https://jax-ws.dev.java.net/jax-ws-201-m1/${MY_P}"
 
 LICENSE="CDDL"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.5"
