@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/id3v2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.25 2007/05/14 12:15:08 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.26 2007/08/19 16:46:38 drac Exp $
+
+  19 Aug 2007; Samuli Suominen <drac@gentoo.org> id3v2-0.1.11.ebuild:
+  Fix license from GPL-2 to LGPL-2.1.
 
   14 May 2007; Timothy Redaelli <drizzt@gentoo.org> id3v2-0.1.11.ebuild:
   Add ~x86-fbsd keyword.
