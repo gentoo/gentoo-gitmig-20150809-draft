@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.6 2007/06/17 15:58:52 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.7 2007/08/19 16:06:12 humpback Exp $
+
+*vidalia-0.0.13 (19 Aug 2007)
+
+  19 Aug 2007; Gustavo Felisberto <humpback@gentoo.org>
+  vidalia-0.0.12.ebuild, +vidalia-0.0.13.ebuild:
+  Fixed dependencies on 0.0.12 and bumped to 0.0.13.
 
 *vidalia-0.0.12 (17 Jun 2007)
 
