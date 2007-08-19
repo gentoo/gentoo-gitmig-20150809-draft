@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsr101
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/ChangeLog,v 1.4 2007/08/15 10:30:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/ChangeLog,v 1.5 2007/08/19 19:19:08 wltjr Exp $
+
+  19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org> jsr101-1.1.ebuild:
+  amd64 stable, bug #187681.
 
   15 Aug 2007; Christian Faulhammer <opfer@gentoo.org> jsr101-1.1.ebuild:
   stable x86, bug 187681
