@@ -1,6 +1,20 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.166 2007/08/11 21:11:42 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.167 2007/08/19 23:20:56 eva Exp $
+
+*vte-0.16.8 (19 Aug 2007)
+
+  19 Aug 2007; Gilles Dartiguelongue <eva@gentoo.org> +vte-0.16.8.ebuild:
+  bump to 0.16.8
+  - Quick followup release with no code changes, to fix missing documentation
+    index in the tarball.
+  - Bug 337252 – ALT + Arrow keys don't work in irssi through gnome-terminal
+    Patch by James Bowes
+  - Bug 448259 – Mapping for Ctrl-_ Patch by Andrey Melnikov.
+  - Bug 449809 – use python-config to get python includes.
+    Patch by Sebastien Bacher.
+  - Bug 450745 – VTE's response to CSI 2 1 t incorrectly formatted.
+    Patch by Dale Sedivec.
 
   11 Aug 2007; Mart Raudsepp <leio@gentoo.org>
   -files/vte-0.11.13-memory_fix.patch, -files/vte-0.12-nonls.patch,
