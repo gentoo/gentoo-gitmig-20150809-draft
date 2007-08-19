@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.335 2007/08/02 05:04:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.336 2007/08/19 16:22:40 suka Exp $
+
+  19 Aug 2007; Andreas Proschofsky <suka@gentoo.org> ChangeLog:
+  Raise fontconfig dependency, see bug #187646
 
   02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
   openoffice-2.2.1.ebuild:
