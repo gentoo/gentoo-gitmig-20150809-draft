@@ -1,0 +1,65 @@
+diff -burN libapreq2-2.04-dev.orig/Makefile.PL libapreq2-2.04-dev/Makefile.PL
+--- libapreq2-2.04-dev.orig/Makefile.PL	2004-08-29 16:30:15.000000000 -0700
++++ libapreq2-2.04-dev/Makefile.PL	2004-09-27 23:40:29.184738303 -0700
+@@ -23,7 +23,7 @@
+     system(@args) == 0 or die "system @args failed: $?";
+ }
+ else {
+-    my @opts = qw(with-apache2-apxs with-apache2-src
++    my @opts = qw(with-apache2-apxs with-apache2-src with-apache2-httpd
+                   with-apr-config with-apu-config apxs);
+ 
+     my @flags = qw/enable-maintainer-mode enable-perl-glue disable-perl-glue/;
+diff -burN libapreq2-2.04-dev.orig/acinclude.m4 libapreq2-2.04-dev/acinclude.m4
+--- libapreq2-2.04-dev.orig/acinclude.m4	2004-09-27 23:33:48.000000000 -0700
++++ libapreq2-2.04-dev/acinclude.m4	2004-09-27 23:37:03.659353161 -0700
+@@ -12,6 +12,9 @@
+         AC_ARG_WITH(apache2-apxs,
+                 AC_HELP_STRING([--with-apache2-apxs],[path to apache2's apxs]),
+                 [APACHE2_APXS=$withval],[APACHE2_APXS="apxs"])
++        AC_ARG_WITH(apache2-httpd,
++                AC_HELP_STRING([--with-apache2-httpd],[path to apache2 httpd binary]),
++                [APACHE2_HTTPD=$withval],[APACHE2_HTTPD=""])
+         AC_ARG_WITH(apache2-src,
+                 AC_HELP_STRING([--with-apache2-src],[path to httpd-2 source]),
+                 [APACHE2_SRC=$withval],[APACHE2_SRC=""])
+@@ -25,7 +28,9 @@
+                     AC_MSG_ERROR([invalid Apache2 source directory]))
+ 
+                 APACHE2_INCLUDES=-I$APACHE2_SRC/include
++								if test -z "${APACHE2_HTTPD}"; then
+                 APACHE2_HTTPD=$APACHE2_SRC/httpd
++								fi
+                 AC_ARG_WITH(apr-config,
+                     AC_HELP_STRING([  --with-apr-config],[path to apr-config (requires --with-apache2-src)]),
+                     [APR_CONFIG=$withval],[APR_CONFIG="$APACHE2_SRC/srclib/apr/apr-config"])
+@@ -35,7 +40,9 @@
+ 
+         else
+                 APACHE2_INCLUDES=-I`$APACHE2_APXS -q INCLUDEDIR`
++								if test -z "${APACHE2_HTTPD}"; then
+                 APACHE2_HTTPD=`$APACHE2_APXS -q SBINDIR`/httpd
++								fi
+                 APR_MAJOR_VERSION=`$APACHE2_APXS -q APR_VERSION | cut -d. -f 1`
+                 if test ${APR_MAJOR_VERSION:=0} -eq 0; then
+                     APR_CONFIG=apr-config
+@@ -47,6 +54,7 @@
+                 APR_CONFIG=`$APACHE2_APXS -q APR_BINDIR`/$APR_CONFIG
+                 APU_CONFIG=`$APACHE2_APXS -q APU_BINDIR`/$APU_CONFIG
+ 
++								echo "checking with $APACHE2_HTTPD"
+                 if test -z "`$prereq_check apache2 $APACHE2_HTTPD`"; then
+                     AC_MSG_ERROR([Bad apache2 version])
+                 fi
+diff -burN libapreq2-2.04-dev.orig/glue/Makefile.am libapreq2-2.04-dev/glue/Makefile.am
+--- libapreq2-2.04-dev.orig/glue/Makefile.am	2004-06-21 15:19:10.000000000 -0700
++++ libapreq2-2.04-dev/glue/Makefile.am	2004-09-28 00:00:08.547277068 -0700
+@@ -6,7 +6,7 @@
+ 	cd perl; @PERL@ ../../build/xsbuilder.pl run
+ 
+ perl/Makefile: perl/xsbuilder perl/Makefile.PL
+-	cd perl; @PERL@ Makefile.PL -apxs @APACHE2_APXS@
++	cd perl; @PERL@ Makefile.PL INSTALLDIRS=vendor -apxs @APACHE2_APXS@
+ 
+ perl_glue: perl/Makefile
+ 	cd perl; $(MAKE)
