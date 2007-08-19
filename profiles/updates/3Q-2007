@@ -29,3 +29,4 @@ move net-www/pwauth www-apache/pwauth
 move x11-drivers/nvidia-legacy-drivers x11-drivers/nvidia-drivers
 move games-strategy/bos games-strategy/boswars
 move kde-base/kworldwatch kde-base/kworldclock
+move www-misc/libapreq2 www-apache/libapreq2
