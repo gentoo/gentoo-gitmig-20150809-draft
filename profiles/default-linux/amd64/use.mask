@@ -1,8 +1,12 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.59 2007/06/27 17:22:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.60 2007/08/19 14:29:01 angelos Exp $
 
 # SECTION: Unmask
+
+# 2007/08/19 - Christoph Mende <angelos@gentoo.org>
+# Unmask support for dev-db/oracle-instantclient-basic
+-oci8-instant-client
 
 # 2007/03/10 - Mike Frysinger <vapier@gentoo.org>
 # NVRAM works on x86/amd64 hosts
