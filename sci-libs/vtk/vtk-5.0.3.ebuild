@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.9 2007/08/01 13:00:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.10 2007/08/19 03:50:36 markusle Exp $
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3
 
@@ -21,6 +21,8 @@ RDEPEND="mpi? ( virtual/mpi )
 	tcl? ( >=dev-lang/tcl-8.2.3 )
 	tk? ( >=dev-lang/tk-8.2.3 )
 	java? ( >=virtual/jre-1.5 )
+	qt3? ( $(qt_min_version 3.3.4) )
+	qt4? ( >=x11-libs/qt-4.1.0 )
 	dev-libs/expat
 	media-libs/freetype
 	media-libs/jpeg
@@ -31,9 +33,7 @@ RDEPEND="mpi? ( virtual/mpi )
 
 DEPEND="${RDEPEND}
 		java? ( >=virtual/jdk-1.5 )
-		>=dev-util/cmake-2.2.3
-		qt3? ( $(qt_min_version 3.3.4) )
-		qt4? ( >=x11-libs/qt-4.1.0 )"
+		>=dev-util/cmake-2.2.3"
 
 S="${WORKDIR}"/VTK
 

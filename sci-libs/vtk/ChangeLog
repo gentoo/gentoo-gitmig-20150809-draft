@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.38 2007/08/01 13:00:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.39 2007/08/19 03:50:36 markusle Exp $
+
+  19 Aug 2007; Markus Dittrich <markusle@gentoo.org> vtk-5.0.3.ebuild:
+  Fixed incomplete RDEPEND.
 
   01 Aug 2007; Markus Dittrich <markusle@gentoo.org> vtk-5.0.3.ebuild:
   Added LGPL-2 to LICENSE since it is needed for gl2ps (see bug 146019).
