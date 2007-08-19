@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/oidentd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.36 2007/08/18 03:36:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.37 2007/08/19 00:26:42 drac Exp $
+
+  19 Aug 2007; Samuli Suominen <drac@gentoo.org> oidentd-2.0.8-r1.ebuild:
+  Stable on arm, bug 184255.
 
   18 Aug 2007; Christoph Mende <angelos@gentoo.org> oidentd-2.0.8-r1.ebuild:
   Added debug and masquerade USE flags
