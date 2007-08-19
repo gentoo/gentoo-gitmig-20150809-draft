@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastinfoset/fastinfoset-1.2.1.ebuild,v 1.4 2007/08/15 10:13:35 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastinfoset/fastinfoset-1.2.1.ebuild,v 1.5 2007/08/19 19:40:36 wltjr Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -12,7 +12,7 @@ SRC_URI="https://fi.dev.java.net/files/documents/2634/45735/FastInfoset_src_${PV
 
 LICENSE="CDDL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 COMMON_DEP="dev-java/jsr173"

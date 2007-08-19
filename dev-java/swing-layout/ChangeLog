@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swing-layout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.10 2007/08/15 10:12:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.11 2007/08/19 19:42:47 wltjr Exp $
+
+  19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  swing-layout-1.0.1-r1.ebuild:
+  amd64 stable, bug #187681.
 
   15 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   swing-layout-1.0.1-r1.ebuild:
