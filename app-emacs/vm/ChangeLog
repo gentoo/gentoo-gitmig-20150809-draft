@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.35 2007/07/25 15:06:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.36 2007/08/19 12:41:08 ulm Exp $
+
+*vm-8.0.3.495 (19 Aug 2007)
+
+  19 Aug 2007; Ulrich Mueller <ulm@gentoo.org> -vm-8.0.1.465.ebuild,
+  +vm-8.0.3.495.ebuild:
+  Version bump.
 
 *vm-8.0.2.487 (25 Jul 2007)
 

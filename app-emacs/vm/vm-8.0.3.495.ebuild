@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.1.465.ebuild,v 1.2 2007/07/14 12:18:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.3.495.ebuild,v 1.1 2007/08/19 12:41:08 ulm Exp $
 
 inherit elisp eutils versionator
 
@@ -21,8 +21,6 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${VM_P}"
 
-SITEFILE=50${PN}-gentoo.el
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -36,20 +34,14 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use bbdb && myconf="--with-other-dirs=${SITELISP}/bbdb"
-	econf --with-emacs="emacs" ${myconf} || die "econf failed"
+	econf --with-emacs="emacs" \
+		--with-pixmapdir="/usr/share/pixmaps/vm" \
+		${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	dodir /usr/bin
-	emake -j1 prefix="${D}/usr" \
-		info_dir="${D}/usr/share/info" \
-		install || die "emake install failed"
-
-	# move pixmaps to a more reasonable location
-	dodir /usr/share/pixmaps
-	mv "${D}/${SITELISP}/vm/pixmaps" "${D}/usr/share/pixmaps/vm"
-
+	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	dodoc NEWS README TODO example.vm || die "dodoc failed"
 }
