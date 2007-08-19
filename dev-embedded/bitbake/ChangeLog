@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/bitbake
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.14 2007/07/09 23:32:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.15 2007/08/19 07:17:56 vapier Exp $
+
+*bitbake-1.8.8 (19 Aug 2007)
+
+  19 Aug 2007; Mike Frysinger <vapier@gentoo.org> +bitbake-1.8.8.ebuild:
+  Version bump #189421 by Luis Vitorio Crgnini.
 
 *bitbake-1.8.6 (09 Jul 2007)
 
