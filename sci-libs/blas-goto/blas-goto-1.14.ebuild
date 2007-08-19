@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.14.ebuild,v 1.2 2007/06/06 13:10:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.14.ebuild,v 1.3 2007/08/19 00:30:51 markusle Exp $
 
 inherit eutils fortran flag-o-matic toolchain-funcs
 
@@ -93,10 +93,10 @@ src_unpack() {
 
 	# Respect CFLAGS/FFLAGS
 	sed -i \
-		-e "/^COMMON_OPT +=  -O2$/d" \
+		-e "/^COMMON_OPT += -O2$/d" \
 		"${S}"/Makefile.rule
 	sed -i \
-		-e "s:^\(CCOMMON_OPT +=\)$:\1 ${CFLAGS}:g" \
+		-e "s:^\(CCOMMON_OPT += -D_GNU_SOURCE\)$:\1 ${CFLAGS}:g" \
 		-e "s:^\(FCOMMON_OPT +=\)$:\1 ${FFLAGS:- -O2}:g" \
 		"${S}"/Makefile.rule
 }
@@ -132,7 +132,7 @@ src_install() {
 	doins libgoto_*.a
 	dosym libgoto_*.a ${DIR}/libgoto.a
 
-	dodoc 01 Readme.txt 03History.txt 04FAQ.txt
+	dodoc 01Readme.txt 03History.txt 04FAQ.txt
 
 	eselect blas add $(get_libdir) "${FILESDIR}"/eselect-goto goto
 }
