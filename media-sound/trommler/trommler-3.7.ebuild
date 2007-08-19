@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.7.ebuild,v 1.4 2007/08/19 00:16:06 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.7.ebuild,v 1.5 2007/08/19 00:49:58 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,7 +29,10 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${PN} wav2smp playsample
+	exeinto /usr/libexec
+	doexe ${PN}
+	newbin "${FILESDIR}"/${PN}.wrapper ${PN}
+	dobin wav2smp playsample
 	use sox && dobin smp2wav
 	insinto /usr/share/${PN}/Drums
 	doins Drums/*.smp

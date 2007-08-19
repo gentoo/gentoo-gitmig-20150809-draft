@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/trommler
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.15 2007/08/19 00:16:06 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.16 2007/08/19 00:49:58 drac Exp $
+
+  19 Aug 2007; Samuli Suominen <drac@gentoo.org> +files/trommler.wrapper,
+  trommler-3.7.ebuild:
+  Install a wrapper so sample file and drums are found in default directories.
 
   19 Aug 2007; Christoph Mende <angelos@gentoo.org> trommler-3.7.ebuild:
   Stable on amd64 wrt bug #189143
