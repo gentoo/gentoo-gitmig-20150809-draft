@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/peacock/peacock-1.9.1-r1.ebuild,v 1.1 2007/08/17 04:13:14 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/peacock/peacock-1.9.1-r1.ebuild,v 1.2 2007/08/19 02:17:08 mr_bones_ Exp $
 
 inherit fdo-mime
 
@@ -21,7 +21,6 @@ RDEPEND=">=gnome-base/libgnomeui-2.2
 
 RDEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
-
 
 src_install() {
 	make "DESTDIR=${D}" install || die "Installation failed"
