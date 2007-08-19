@@ -1,14 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-371.ebuild,v 1.1 2007/08/18 10:05:57 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-371.ebuild,v 1.2 2007/08/19 02:17:53 mr_bones_ Exp $
 
 inherit eutils
 
 SRC_URI="http://download.plt-scheme.org/bundles/${PV}/plt/plt-${PV}-src-unix.tgz
 		 http://pre.plt-scheme.org/installers/plt-${PV}-src-unix.tgz"
 #"mirror://gentoo/plt-${PV%%_p*}-src-unix.tgz"
-
-
 
 DESCRIPTION="DrScheme programming environment. Includes mzscheme."
 HOMEPAGE="http://www.plt-scheme.org/software/drscheme/"
