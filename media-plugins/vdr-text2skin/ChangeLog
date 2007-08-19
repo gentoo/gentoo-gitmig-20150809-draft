@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-text2skin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/ChangeLog,v 1.1 2007/05/15 14:12:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/ChangeLog,v 1.2 2007/08/19 12:13:11 zzam Exp $
+
+  19 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/20070506/05_vdr-1.5.4.diff, +files/20070506/06_vdr-1.5.7.diff,
+  files/20070506/series, vdr-text2skin-1.0.20070506.ebuild:
+  Added patches to make it compile with vdr-1.5.7
 
 *vdr-text2skin-1.0.20070506 (15 May 2007)
 

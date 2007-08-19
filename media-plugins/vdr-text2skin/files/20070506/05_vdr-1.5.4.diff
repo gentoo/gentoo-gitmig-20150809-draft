@@ -1,0 +1,66 @@
+Index: text2skin-1.1-cvs_ext-0.10/graphtft/font.c
+===================================================================
+--- text2skin-1.1-cvs_ext-0.10.orig/graphtft/font.c
++++ text2skin-1.1-cvs_ext-0.10/graphtft/font.c
+@@ -38,6 +38,15 @@ cGraphtftFont::~cGraphtftFont()
+ 
+ bool cGraphtftFont::Load(string Filename, string CacheName, int Size, int Language, int Width, int format)
+ {
++#if VDRVERSNUM >= 10507
++    if ( _cache.find(CacheName) != _cache.end() )
++        return true;
++    cFont* newFont = cFont::CreateFont(Filename.c_str(), Size);
++    if ( newFont == NULL )
++        return false;
++    _cache[CacheName] = newFont;
++    return true;
++#else
+ 	if ( _cache.find(CacheName) != _cache.end() )
+ 		return true;	
+ 	
+@@ -187,6 +196,7 @@ bool cGraphtftFont::Load(string Filename
+ 	delete(font_data);
+ 	// Something went wrong!
+ 	return false;
++#endif
+ }
+ 
+ const cFont* cGraphtftFont::GetFont(string CacheName){
+@@ -209,11 +219,13 @@ void cGraphtftFont::Clear()
+ 	for (; it != _cache.end(); ++it)
+ 		delete((*it).second);
+ 	_cache.clear();
++#if VDRVERSNUM < 10507
+ 
+ 	del_map::iterator del_it = _del.begin();
+ 	for (; del_it != _del.end(); ++del_it)
+ 		delete((*del_it).second);
+ 	_del.clear();
++#endif
+ }
+ 				
+ cGraphtftFont GraphtftFont;
+Index: text2skin-1.1-cvs_ext-0.10/graphtft/font.h
+===================================================================
+--- text2skin-1.1-cvs_ext-0.10.orig/graphtft/font.h
++++ text2skin-1.1-cvs_ext-0.10/graphtft/font.h
+@@ -24,7 +24,9 @@ class cGraphtftFont
+ {
+ private:
+ 	typedef map<string,cFont*> cache_map;
++#if VDRVERSNUM < 10507
+ 	typedef map<string,cFont::tPixelData*> del_map;
++#endif
+ 	
+ public:
+ 	cGraphtftFont();
+@@ -40,7 +42,9 @@ private:
+ 	FT_Face			_face;
+ 	FT_GlyphSlot		_slot;
+ 	cache_map 		_cache;
++#if VDRVERSNUM < 10507
+ 	del_map			_del;
++#endif
+ 
+ };
+ 
