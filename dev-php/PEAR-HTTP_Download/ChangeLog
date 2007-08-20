@@ -1,6 +1,17 @@
 # ChangeLog for dev-php/PEAR-HTTP_Download
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Download/ChangeLog,v 1.1 2006/09/29 06:19:08 sebastian Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Download/ChangeLog,v 1.2 2007/08/20 21:44:44 jokey Exp $
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org>
+  PEAR-HTTP_Download-1.1.1.ebuild:
+  Porting from project overlay
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> PEAR-HTTP_Download-1.1.1.ebuild:
+  USE=minimal for optional dep; add pkg_postinst info
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-HTTP_Download-1.1.1.ebuild:
+  Version bump, Bug 158633
 
 *PEAR-HTTP_Download-1.1.1 (29 Sep 2006)
 

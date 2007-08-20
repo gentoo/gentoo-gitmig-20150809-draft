@@ -1,6 +1,19 @@
 # ChangeLog for dev-php/PEAR-DB_Table
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/ChangeLog,v 1.26 2007/02/21 23:13:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/ChangeLog,v 1.27 2007/08/20 21:38:56 jokey Exp $
+
+*PEAR-DB_Table-1.5.0 (20 Aug 2007)
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org>
+  -PEAR-DB_Table-1.2.1.ebuild, +PEAR-DB_Table-1.5.0.ebuild:
+  Porting from project overlay
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> PEAR-DB_Table-1.5.0.ebuild:
+  USE=minimal for optional deps
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-DB_Table-1.5.0.ebuild:
+  Version bump, Bug 158633
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

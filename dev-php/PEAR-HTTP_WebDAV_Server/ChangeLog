@@ -1,6 +1,20 @@
 # ChangeLog for dev-php/PEAR-HTTP_WebDAV_Server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_WebDAV_Server/ChangeLog,v 1.25 2007/02/21 23:23:14 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_WebDAV_Server/ChangeLog,v 1.26 2007/08/20 21:46:13 jokey Exp $
+
+*PEAR-HTTP_WebDAV_Server-1.0.0_rc4 (20 Aug 2007)
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org>
+  +PEAR-HTTP_WebDAV_Server-1.0.0_rc4.ebuild:
+  Porting from project overlay
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org>
+  PEAR-HTTP_WebDAV_Server-1.0.0_rc4.ebuild:
+  Remove unneeded dependency
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-HTTP_WebDAV_Server-1.0.0_rc4.ebuild:
+  Version bump, Bug 158633
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
