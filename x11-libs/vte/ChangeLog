@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.167 2007/08/19 23:20:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.168 2007/08/20 10:55:56 eva Exp $
+
+  20 Aug 2007; Gilles Dartiguelongue <eva@gentoo.org> vte-0.16.8.ebuild:
+  fix vte-0.16.8 ebuild wrt to bug #189556
 
 *vte-0.16.8 (19 Aug 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.16.8.ebuild,v 1.1 2007/08/19 23:20:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.16.8.ebuild,v 1.2 2007/08/20 10:55:56 eva Exp $
 
 inherit eutils gnome2 autotools
 
@@ -46,10 +46,12 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
-	epatch ${FILESDIR}/${PN}-0.13.2-no-lazy-bindings.patch
-
 	# Fix LINGUAS handling, remove when upstream fixes their po/Makefile.in.in
 	intltoolize --force || die
 
-	eautoreconf
+	epatch ${FILESDIR}/${PN}-0.13.2-no-lazy-bindings.patch
+	cd ${S}/gnome-pty-helper
+
+	# eautoreconf will break on systems without gtk-doc
+	eautomake
 }
