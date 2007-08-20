@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTTP_Client
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Client/ChangeLog,v 1.2 2007/08/18 15:19:38 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Client/ChangeLog,v 1.3 2007/08/20 05:56:34 jer Exp $
+
+  20 Aug 2007; Jeroen Roovers <jer@gentoo.org>
+  PEAR-HTTP_Client-1.1.1.ebuild:
+  Marked ~hppa (bug #189411).
 
 *PEAR-HTTP_Client-1.1.1 (18 Aug 2007)
 
