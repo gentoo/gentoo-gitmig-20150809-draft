@@ -1,6 +1,19 @@
 # ChangeLog for dev-php/PEAR-Net_SMTP
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.28 2006/05/21 00:46:25 chtekk Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.29 2007/08/20 22:15:18 jokey Exp $
+
+*PEAR-Net_SMTP-1.2.10 (20 Aug 2007)
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org>
+  -PEAR-Net_SMTP-1.2.8.ebuild, +PEAR-Net_SMTP-1.2.10.ebuild:
+  Porting from project overlay
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> PEAR-Net_SMTP-1.2.10.ebuild:
+  USE=minimal for optional dependency
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-Net_SMTP-1.2.10.ebuild:
+  Version bump, Bug 158633
 
   21 May 2006; Luca Longinotti <chtekk@gentoo.org>
   -PEAR-Net_SMTP-1.2.6.ebuild:

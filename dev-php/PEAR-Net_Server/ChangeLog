@@ -1,6 +1,20 @@
 # ChangeLog for dev-php/PEAR-Net_Server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/ChangeLog,v 1.18 2007/02/21 23:31:35 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/ChangeLog,v 1.19 2007/08/20 22:20:05 jokey Exp $
+
+*PEAR-Net_Server-1.0.2 (20 Aug 2007)
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org>
+  +PEAR-Net_Server-1.0.2.ebuild:
+  Porting from project overlay
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> PEAR-Net_Server-1.0.2.ebuild:
+  Move pcntl check to pkg_postinst and make it non-fatal as itis an optional
+  feature
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-Net_Server-1.0.2.ebuild:
+  Version bump, Bug 158633
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
