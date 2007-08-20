@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/PEAR-Tree
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Tree/ChangeLog,v 1.23 2007/02/21 23:39:48 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Tree/ChangeLog,v 1.24 2007/08/20 23:01:30 jokey Exp $
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-Tree-0.3.2.ebuild:
+  Version bump, Bug 158633
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-Tree-0.3.2.ebuild:
+  Version bump, Bug 158633. USE=minimal for optional deps
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

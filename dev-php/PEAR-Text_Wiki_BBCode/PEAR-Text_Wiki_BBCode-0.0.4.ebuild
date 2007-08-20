@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki_BBCode/PEAR-Text_Wiki_BBCode-0.0.3.ebuild,v 1.4 2006/11/25 19:52:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki_BBCode/PEAR-Text_Wiki_BBCode-0.0.4.ebuild,v 1.1 2007/08/20 23:00:06 jokey Exp $
 
 inherit php-pear-r1
 
