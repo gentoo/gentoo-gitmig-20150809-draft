@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/aylet
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.13 2007/08/16 00:26:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.14 2007/08/20 17:25:43 jokey Exp $
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org> aylet-0.5.ebuild:
+  Stable on x86 wrt bug #188881
 
   16 Aug 2007; Christoph Mende <angelos@gentoo.org> aylet-0.5.ebuild:
   Stable on amd64 wrt bug #188881
