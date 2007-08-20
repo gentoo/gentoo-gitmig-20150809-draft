@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.6-r1.ebuild,v 1.1 2007/05/14 20:06:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.6-r1.ebuild,v 1.2 2007/08/20 10:23:48 jokey Exp $
 
 inherit eutils ssl-cert versionator multilib
 
@@ -9,7 +9,6 @@ MY_P=Unreal${PV}
 DESCRIPTION="aimed to be an advanced (not easy) IRCd"
 HOMEPAGE="http://www.unrealircd.com/"
 SRC_URI="http://unreal.brueggisite.de/${MY_P}.tar.gz
-	http://www.secureirc.org/unrealircd/${MY_P}.tar.gz
 	http://www.blurryfox.com/unreal/${MY_P}.tar.gz
 	mirror://gentoo/${MY_P}.tar.gz"
 
