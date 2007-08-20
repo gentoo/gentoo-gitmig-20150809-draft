@@ -1,0 +1,47 @@
+--- src/kbddef.c.org	2003-08-15 13:20:45.000000000 +0200
++++ src/kbddef.c	2003-08-15 13:21:06.000000000 +0200
+@@ -37,8 +37,8 @@
+  */
+ #include "XF86keysym.h"
+ 
+-#include <xmlmemory.h>
+-#include <parser.h>
++#include <libxml2/libxml/xmlmemory.h>
++#include <libxml2/libxml/parser.h>
+ 
+ #include "hotkeys.h"
+ #include "kbddef.h"
+
+--- src/Makefile.in	2002-12-08 15:34:44.000000000 +0100
++++ src/Makefile.in	2003-08-27 22:36:18.000000000 +0200
+@@ -102,7 +102,7 @@
+ man_MANS = hotkeys.1
+ 
+ CFLAGS = @CFLAGS@ @X_CFLAGS@ @XML_CFLAGS@ @LIBXOSD_CFLAGS@ @GTK_CFLAGS@ -I.. # -DDEBUG 
+-LIBS = @LIBS@ @X_LIBS@ @XML_LIBS@ @LIBXOSD_LIBS@ @GTK_LIBS@
++LIBS = @LIBS@ @X_LIBS@ @XML_LIBS@ @LIBXOSD_LIBS@ @GTK_LIBS@ @libdir@/libdb.so.3
+ DEFS = @DEFS@ -DSHAREDIR=\"@datadir@/@PACKAGE@\"               -DCONFDIR=\"@sysconfdir@\" -DCONFIG_NAME=\"@PACKAGE@.conf\"
+ 
+ 
+--- src/conf.c	2002-11-27 20:30:08.000000000 +0100
++++ src/conf.c	2003-08-27 22:19:14.000000000 +0200
+@@ -25,7 +25,7 @@
+ #include "common.h"
+
+ #include <stdio.h>
+-#include <db.h>
++#include <db3/db.h>
+ #include <string.h>
+ #include <sys/param.h>
+
+--- src/hotkeys.c	2002-12-03 20:26:32.000000000 +0100
++++ src/hotkeys.c	2003-08-27 22:19:31.000000000 +0200
+@@ -37,7 +37,7 @@
+ #include <stdio.h>
+ #include <unistd.h>
+ #include <stdarg.h>
+-#include <db.h>
++#include <db3/db.h>
+ #include <errno.h>
+ #ifdef HAVE_GETOPT_LONG
+ #include <getopt.h>
