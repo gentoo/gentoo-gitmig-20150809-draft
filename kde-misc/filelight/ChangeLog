@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/filelight
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.20 2007/06/24 16:47:49 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.21 2007/08/20 10:14:32 philantrop Exp $
+
+  20 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> filelight-1.0.ebuild:
+  Corrected desktop entry. Fixes bug 189551.
 
   24 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> filelight-1.0.ebuild:
   Added a post-install message about localisation support being available via
