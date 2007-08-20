@@ -1,11 +1,12 @@
-diff -Naurp gtkspell-2.0.11.orig/gtkspell/gtkspell.c gtkspell-2.0.11/gtkspell/gtkspell.c
---- gtkspell-2.0.11.orig/gtkspell/gtkspell.c	2006-05-26 20:59:21 -0500
-+++ gtkspell-2.0.11/gtkspell/gtkspell.c	2006-05-26 21:03:04 -0500
-@@ -5,12 +5,16 @@
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN gtkspell-2.0.11.orig/gtkspell/gtkspell.c gtkspell-2.0.11/gtkspell/gtkspell.c
+--- gtkspell-2.0.11.orig/gtkspell/gtkspell.c	2005-05-27 17:09:10.000000000 -0400
++++ gtkspell-2.0.11/gtkspell/gtkspell.c	2007-08-20 16:17:28.000000000 -0400
+@@ -5,12 +5,17 @@
  /* vim: set ts=4 sw=4 wm=5 : */
  
  #include <gtk/gtk.h>
 -#include <libintl.h>
++#include <string.h>
  #include <locale.h>
  #include "../config.h"
  #include "gtkspell.h"
