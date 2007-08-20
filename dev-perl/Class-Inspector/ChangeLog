@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Class-Inspector
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.43 2007/03/05 11:25:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.44 2007/08/20 09:06:45 yuval Exp $
+
+*Class-Inspector-1.17 (20 Aug 2007)
+
+  20 Aug 2007; Yuval Yaari <yuval@gentoo.org> +Class-Inspector-1.17.ebuild:
+  Version bump
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Class-Inspector-1.16.ebuild:
   Stable on x86, bug #169152.
