@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.44 2007/08/20 19:29:54 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.45 2007/08/20 19:31:18 jokey Exp $
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org> pnet-0.7.4-r1.ebuild:
+  Stable on x86 wrt bug #189497
 
   20 Aug 2007; Markus Ullmann <jokey@gentoo.org> pnet-0.6.12-r1.ebuild:
   Stable on x86 wrt bug #189497
