@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.6.ebuild,v 1.1 2007/06/03 07:55:36 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.6.ebuild,v 1.2 2007/08/20 04:17:12 redhatter Exp $
 
 DESCRIPTION="A small window mananger based on aewm++"
 HOMEPAGE="http://www.pekwm.org/"
@@ -9,7 +9,7 @@ SRC_URI="http://pekwm.org/files/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="debug perl truetype xinerama"
 
 DEPEND="media-libs/jpeg

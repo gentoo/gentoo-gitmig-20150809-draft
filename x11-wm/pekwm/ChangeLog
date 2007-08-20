@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.36 2007/06/03 07:55:36 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.37 2007/08/20 04:17:12 redhatter Exp $
+
+  20 Aug 2007; Stuart Longland <redhatter@gentoo.org> pekwm-0.1.6.ebuild:
+  Tested and working on MIPS.  Keyworded ~mips as per bug #114498.
 
 *pekwm-0.1.6 (03 Jun 2007)
 
