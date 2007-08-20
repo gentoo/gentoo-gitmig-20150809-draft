@@ -1,10 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.5.13.ebuild,v 1.2 2006/11/14 22:32:52 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.5.13.ebuild,v 1.3 2007/08/20 19:51:43 vapier Exp $
 
 inherit eutils autotools
-
-IUSE="static doc"
 
 DESCRIPTION="masquerading SIP proxy"
 HOMEPAGE="http://siproxd.sourceforge.net/"
@@ -12,10 +10,16 @@ SRC_URI="mirror://sourceforge/siproxd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
+IUSE="static doc"
 
 DEPEND=">=net-libs/libosip-2.0.0
 	doc? ( app-text/docbook-sgml-utils )"
+
+pkg_setup() {
+	enewgroup siproxd
+	enewuser siproxd -1 -1 /dev/null siproxd
+}
 
 src_unpack() {
 	unpack ${A}
@@ -30,14 +34,10 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-
-	use static && \
-		myconf="--enable-static"
-
-	econf ${myconf} \
-		`use_enable doc docs` || die "configure failed"
-
+	econf \
+		$(use_enable doc docs) \
+		$(use_enable static) \
+		|| die "configure failed"
 	emake || die "make failed"
 }
 
@@ -46,14 +46,9 @@ src_install() {
 
 	newinitd "${FILESDIR}"/siproxd.rc6 siproxd
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO RELNOTES
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO RELNOTES
 
 	# Set up siproxd directories
 	keepdir /var/{lib,run}/siproxd
 	fowners siproxd:siproxd /var/{lib,run}/siproxd
-}
-
-pkg_setup() {
-	enewgroup siproxd
-	enewuser siproxd -1 -1 /dev/null siproxd
 }
