@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/trommler
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.16 2007/08/19 00:49:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.17 2007/08/20 23:35:32 jokey Exp $
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org> trommler-3.7.ebuild:
+  Stable on x86 wrt bug #189143
 
   19 Aug 2007; Samuli Suominen <drac@gentoo.org> +files/trommler.wrapper,
   trommler-3.7.ebuild:
