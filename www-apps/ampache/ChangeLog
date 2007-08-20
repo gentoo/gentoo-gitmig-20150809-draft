@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.27 2007/08/16 00:04:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.28 2007/08/20 22:52:35 marineam Exp $
+
+*ampache-3.3.3.5 (20 Aug 2007)
+
+  20 Aug 2007; Michael Marineau <marineam@gentoo.org> -ampache-3.3.3.ebuild,
+  -ampache-3.3.3.1.ebuild, -ampache-3.3.3.3.ebuild, +ampache-3.3.3.5.ebuild:
+  Version bump, fixes 2 non-critical sql injection issues.
+  Clean out a few old versions.
 
   16 Aug 2007; Christoph Mende <angelos@gentoo.org> ampache-3.3.3.4.ebuild:
   Stable on amd64 wrt bug #185478
