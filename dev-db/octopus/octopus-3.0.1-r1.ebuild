@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r1.ebuild,v 1.6 2007/07/12 22:23:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r1.ebuild,v 1.7 2007/08/20 16:19:10 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -24,11 +24,11 @@ COMMON_DEP="
 	>=dev-java/ant-core-1.4"
 
 # Does not like org.w3c.dom.Node
-# from 1.6
+# from 1.5+
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 
-DEPEND="|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
+DEPEND="=virtual/jdk-1.4*
 	${COMMON_DEP}"
 
 TOPDIR="${PN}-$(get_version_component_range 1-2)"
