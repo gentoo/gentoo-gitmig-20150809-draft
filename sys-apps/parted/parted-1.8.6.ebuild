@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.8.6.ebuild,v 1.7 2007/07/23 02:55:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.8.6.ebuild,v 1.8 2007/08/20 20:36:24 jokey Exp $
 
 DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
 HOMEPAGE="http://www.gnu.org/software/parted"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls readline debug selinux device-mapper"
 
 # specific version for gettext needed
