@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/log4net-1.2.10-r1.ebuild,v 1.1 2007/06/26 01:00:24 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/log4net-1.2.10-r1.ebuild,v 1.2 2007/08/20 19:01:30 jokey Exp $
 
 inherit eutils mono
 
@@ -10,7 +10,7 @@ SRC_URI="http://cvs.apache.org/dist/incubator/${PN}/${PV}/incubating-${P}.zip"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="doc examples"
 
 DEPEND=">=dev-lang/mono-1.2.1
