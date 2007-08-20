@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.4.2.ebuild,v 1.1 2007/08/18 01:16:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.4.2.ebuild,v 1.2 2007/08/20 17:23:52 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://idsoftware/quake4/linux/quake4-linux-${PV}.x86.run"
 LICENSE="QUAKE4"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="alsa cdinstall dedicated linguas_cz linguas_fr linguas_it linguas_pl linguas_ru opengl"
+IUSE="alsa cdinstall dedicated linguas_cs linguas_fr linguas_it linguas_pl linguas_ru opengl"
 
 RESTRICT="strip"
 
@@ -72,7 +72,7 @@ src_unpack() {
 
 	# Am including the Spanish files because Spanish is the default language
 	#zpaklang es spanish
-	zpaklang cz czech
+	zpaklang cs czech
 	zpaklang fr french
 	zpaklang it italian
 	zpaklang pl polish

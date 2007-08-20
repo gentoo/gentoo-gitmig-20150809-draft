@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake4-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.33 2007/08/18 01:16:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.34 2007/08/20 17:23:52 wolf31o2 Exp $
+
+  20 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake4-bin-1.4.2.ebuild:
+  The Czech linguas variable is cs, not cz. Thanks to Mr_Bones_ for pointing
+  it out.
 
 *quake4-bin-1.4.2 (18 Aug 2007)
 
