@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/xsim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.14 2007/02/21 22:16:03 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.15 2007/08/20 16:13:18 matsuu Exp $
+
+*xsim-0.3.9.4-r4 (20 Aug 2007)
+
+  20 Aug 2007; MATSUU Takuto <matsuu@gentoo.org>
+  +files/xsim-0.3.9.4-64bit.patch, +xsim-0.3.9.4-r4.ebuild:
+  Fixed compile issue, bug #108680 and #189555.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
