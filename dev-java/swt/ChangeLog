@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.71 2007/07/22 09:08:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.72 2007/08/20 17:58:51 caster Exp $
+
+*swt-3.3 (20 Aug 2007)
+
+  20 Aug 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/swt-3.3-callback-pointer-dereferencing.patch,
+  -files/swt-3.3_rc4-callback-pointer-dereferencing.patch,
+  swt-3.3_rc4.ebuild, +swt-3.3.ebuild:
+  Version bump, bug #189617.
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> swt-3.2-r2.ebuild:
   Drop virtual/x11 references.

@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3_rc4.ebuild,v 1.3 2007/08/20 17:58:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.ebuild,v 1.1 2007/08/20 17:58:51 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2 toolchain-funcs
 
-MY_PV="${PV/_rc/RC}"
-#MY_PV="${PV}"
-MY_DMF="S-${MY_PV}-200706081718"
+#MY_PV="${PV/_rc/RC}"
+MY_PV="${PV}"
+MY_DMF="R-${MY_PV}-200706251500"
 MY_P="${PN}-${MY_PV}"
 # https://overlays.gentoo.org/svn/proj/java/other/swt-patches
 #PATCHSET="${P}-gentoo-patches-r1"
@@ -85,7 +85,6 @@ src_unpack() {
 
 	# Cleanup the redirtied directory structure
 	rm -rf about_files/ || die
-#	rm -v .classpath .project || die
 
 	# Replace the build.xml to allow compilation without Eclipse tasks
 	cp "${FILESDIR}"/build.xml ${S}/build.xml || die "Unable to update build.xml"
@@ -103,7 +102,7 @@ src_unpack() {
 		|| die "Failed to tweak make_linux.mak"
 
 	# kill some strict-aliasing warnings
-	epatch "${FILESDIR}/${PN}-3.3-callback-pointer-dereferencing.patch"
+	epatch "${FILESDIR}/${P}-callback-pointer-dereferencing.patch"
 }
 
 get_gecko() {
@@ -213,3 +212,4 @@ src_install() {
 
 	dohtml about.html || die
 }
+
