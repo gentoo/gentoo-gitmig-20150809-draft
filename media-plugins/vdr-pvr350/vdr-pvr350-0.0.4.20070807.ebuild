@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-0.0.4.20070807.ebuild,v 1.1 2007/08/19 11:42:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-0.0.4.20070807.ebuild,v 1.2 2007/08/20 03:16:35 mr_bones_ Exp $
 inherit vdr-plugin eutils versionator
 
 IUSE="yaepg"
@@ -40,4 +40,3 @@ pkg_setup() {
 		VDRPLUGIN_MAKE_TARGET="all SET_VIDEO_WINDOW=1"
 	fi
 }
-
