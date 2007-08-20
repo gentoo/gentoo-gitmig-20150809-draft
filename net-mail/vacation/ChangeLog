@@ -1,9 +1,15 @@
 # ChangeLog for net-mail/vacation
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/ChangeLog,v 1.9 2007/08/19 14:22:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/ChangeLog,v 1.10 2007/08/20 08:05:25 phosphan Exp $
 
   19 Aug 2007; Christoph Mende <angelos@gentoo.org> vacation-1.2.6.2.ebuild:
   Stable on amd64 wrt bug #189111
+
+*vacation-1.2.6.3 (17 Aug 2007)
+
+  17 Aug 2007; Patrick Kursawe <phosphan@gentoo.org>
+  +vacation-1.2.6.3.ebuild:
+  Version bump. Also installing vaclook now.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
