@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.2.4.ebuild,v 1.4 2007/08/20 08:42:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.2.4.ebuild,v 1.5 2007/08/20 09:53:10 jurek Exp $
 
 inherit eutils mono multilib autotools
 
@@ -54,7 +54,7 @@ src_unpack() {
 		|| die "sed failed"
 	fi
 
-	eautoconf
+	eautoreconf
 }
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.30 2007/07/27 22:59:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.31 2007/08/20 09:53:10 jurek Exp $
+
+  20 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> mono-tools-1.2.4.ebuild:
+  Fixed compilation error with USE=-gtkhtml
 
   27 Jul 2007; Roy Marples <uberlord@gentoo.org>
   +files/mono-tools-1.2.4-install.patch, mono-tools-1.2.4.ebuild:
@@ -24,7 +27,7 @@
   mono-tools-1.2.3.ebuild:
   Replacing einfo with elog
 
-  22 Feb 2007; Raúl Porcel <armin76@gentoo.org> -mono-tools-1.1.11.ebuild:
+  22 Feb 2007; RaĂşl Porcel <armin76@gentoo.org> -mono-tools-1.1.11.ebuild:
   Drop old version depending in mozilla
 
   20 Feb 2007; Daniel Gryniewicz <dang@gentoo.org> mono-tools-1.2.1.ebuild:
@@ -55,7 +58,7 @@
   mono-tools-1.1.17-r1.ebuild:
   Fix typo on gtkhtml useflag (bug #164431)
 
-  29 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
+  29 Jan 2007; Bryan Ăstergaard <kloeri@gentoo.org>
   files/digest-mono-tools-1.1.9, files/digest-mono-tools-1.1.10, Manifest:
   Fix Manifest.
 
