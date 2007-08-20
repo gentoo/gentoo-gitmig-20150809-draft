@@ -14,5 +14,7 @@ start() {
 }
 
 stop() {
+	ebegin "Stopping flowscan processing"
 	start-stop-daemon --stop --quiet -p /var/run/flows/flowscan.pid
+	eend $?
 }
