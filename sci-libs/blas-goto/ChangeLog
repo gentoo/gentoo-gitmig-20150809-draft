@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/blas-goto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.7 2007/08/19 00:30:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.8 2007/08/20 13:42:22 markusle Exp $
+
+*blas-goto-1.16 (20 Aug 2007)
+
+  20 Aug 2007; Markus Dittrich <markusle@gentoo.org> +blas-goto-1.16.ebuild:
+  Version bump (see bug #180601).
 
   18 Aug 2007; Markus Dittrich <markusle@gentoo.org> blas-goto-1.14.ebuild:
   Fixed problems with failing seds to Makefile.rule.
