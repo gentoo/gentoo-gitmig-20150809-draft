@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.3.0.ebuild,v 1.2 2007/03/31 06:34:24 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.3.2.ebuild,v 1.1 2007/08/20 19:54:01 nyhm Exp $
 
 inherit eutils versionator linux-info
 
@@ -32,9 +32,6 @@ src_unpack() {
 	sed -i 's/install-data-local//1' \
 		keytouch{-acpid,d,-init}/Makefile.in \
 		|| die "sed failed"
-
-	sed -i 's/gnome-calculator/gcalctool/' \
-		keyboards/* || die "sed failed"
 }
 
 src_compile() {
