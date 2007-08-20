@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/xcache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/xcache/ChangeLog,v 1.8 2007/08/20 08:56:04 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/xcache/ChangeLog,v 1.9 2007/08/20 09:47:16 hoffie Exp $
+
+  20 Aug 2007; Christian Hoffmann <hoffie@gentoo.org> metadata.xml:
+  removing jokey and gentoofying my email address (metadata.xml)
 
   20 Aug 2007; Markus Ullmann <jokey@gentoo.org> xcache-1.2.1.ebuild:
   Stable on x86 wrt bug #189531

@@ -3,11 +3,7 @@
 <pkgmetadata>
 	<herd>php</herd>
 	<maintainer>
-		<email>jokey@gentoo.org</email>
-		<name>Markus Ullmann</name>
-	</maintainer>
-	<maintainer>
-		<email>christian@hoffie.info</email>
+		<email>hoffie@gentoo.org</email>
 		<name>Christian Hoffmann</name>
 	</maintainer>
 </pkgmetadata>
