@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usbview
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.21 2007/08/19 17:14:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.22 2007/08/20 09:21:59 jokey Exp $
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org> usbview-1.0-r3.ebuild:
+  Stable on x86 wrt bug #187920
 
   19 Aug 2007; Christoph Mende <angelos@gentoo.org> usbview-1.0-r3.ebuild:
   Stable on amd64 wrt bug #187920
