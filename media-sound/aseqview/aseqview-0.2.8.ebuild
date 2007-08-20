@@ -1,8 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/aseqview-0.2.8.ebuild,v 1.2 2007/08/16 19:04:04 gustavoz Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/aseqview-0.2.8.ebuild,v 1.3 2007/08/20 18:12:30 drac Exp $
 
 DESCRIPTION="ALSA sequencer event viewer/filter."
 HOMEPAGE="http://www.alsa-project.org/~iwai/alsa.html"
@@ -27,5 +25,4 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog README
-	make_desktop_entry ${PN} "ALSA Sequencer Viewer"
 }

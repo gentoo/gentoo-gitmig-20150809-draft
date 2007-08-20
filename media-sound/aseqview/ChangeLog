@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/aseqview
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/ChangeLog,v 1.16 2007/08/16 19:04:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/ChangeLog,v 1.17 2007/08/20 18:12:30 drac Exp $
 
   16 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> aseqview-0.2.8.ebuild:
   Stable on sparc wrt #189137
@@ -8,7 +8,7 @@
 *aseqview-0.2.8 (25 Jul 2007)
 
   25 Jul 2007; Samuli Suominen <drac@gentoo.org> +aseqview-0.2.8.ebuild:
-  Version bump to GTK+-2.0 version, install desktop entry, and more.
+  Version bump.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
