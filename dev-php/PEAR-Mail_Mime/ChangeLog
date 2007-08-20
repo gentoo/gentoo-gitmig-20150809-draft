@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Mail_Mime
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/ChangeLog,v 1.45 2007/08/17 15:38:24 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/ChangeLog,v 1.46 2007/08/20 06:00:46 jer Exp $
+
+  20 Aug 2007; Jeroen Roovers <jer@gentoo.org> PEAR-Mail_Mime-1.5.2.ebuild:
+  Marked ~hppa (bug #189243).
 
 *PEAR-Mail_Mime-1.5.2 (17 Aug 2007)
 
