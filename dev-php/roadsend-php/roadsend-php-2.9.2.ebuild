@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/roadsend-php-2.9.1_p6.ebuild,v 1.2 2007/08/17 08:22:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/roadsend-php-2.9.2.ebuild,v 1.1 2007/08/20 10:18:28 hkbst Exp $
 
 MY_PVL=${PV/_p/-r}
 MY_PV=${PV%%_p[0-9]}
@@ -26,19 +26,19 @@ DEPEND="dev-scheme/bigloo
 RDEPEND="${DEPEND}"
 SLOT="0"
 
-#IUSE="debug fastcgi mysql odbc pcre sqlite3 xml"
-IUSE="fastcgi mysql odbc pcre sqlite3 xml"
+IUSE="debug fastcgi mysql odbc pcre sqlite3 xml"
+#IUSE="fastcgi mysql odbc pcre sqlite3 xml"
 
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	econf $(use_with pcre) $(use_with fastcgi fcgi) $(use_with xml) $(use_with mysql) $(use_with sqlite3) $(use_with odbc)
 
-#	if use debug; then
+	if use debug; then
 		emake -j1 || die "make debug failed"
-#	else
-#		emake -j1 unsafe || die "make failed"
-#	fi
+	else
+		emake -j1 unsafe || die "make failed"
+	fi
 }
 
 src_test() {

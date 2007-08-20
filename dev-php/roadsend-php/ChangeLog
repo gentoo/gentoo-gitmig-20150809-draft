@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/roadsend-php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/ChangeLog,v 1.2 2007/08/17 08:22:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/ChangeLog,v 1.3 2007/08/20 10:18:28 hkbst Exp $
+
+*roadsend-php-2.9.2 (20 Aug 2007)
+
+  20 Aug 2007; Marijn Schouten <hkBst@gentoo.org>
+  -roadsend-php-2.9.1_p6.ebuild, +roadsend-php-2.9.2.ebuild:
+  bump, fixes some segfaults, turn on unsafe building
 
   17 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   roadsend-php-2.9.1_p6.ebuild:
