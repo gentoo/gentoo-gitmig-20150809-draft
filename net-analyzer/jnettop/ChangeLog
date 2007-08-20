@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/jnettop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/ChangeLog,v 1.18 2007/03/20 14:42:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/ChangeLog,v 1.19 2007/08/20 09:48:15 jokey Exp $
+
+*jnettop-0.13.0-r1 (20 Aug 2007)
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org> -jnettop-0.11.0.ebuild,
+  -jnettop-0.13.0.ebuild, +jnettop-0.13.0-r1.ebuild:
+  Add example config to docs wrt bug #187748
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> jnettop-0.13.0.ebuild:
   x86 stable
