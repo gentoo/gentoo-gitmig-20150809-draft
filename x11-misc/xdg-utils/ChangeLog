@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.31 2007/07/09 20:27:58 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.32 2007/08/20 15:39:59 drac Exp $
+
+*xdg-utils-1.0.2 (20 Aug 2007)
+
+  20 Aug 2007; Samuli Suominen <drac@gentoo.org> +xdg-utils-1.0.2.ebuild:
+  Version bump.
 
   09 Jul 2007; Samuli Suominen <drac@gentoo.org> metadata.xml,
   -xdg-utils-1.0.ebuild:
