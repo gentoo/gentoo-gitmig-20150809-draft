@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5-r4.ebuild,v 1.6 2007/07/15 13:52:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5-r4.ebuild,v 1.7 2007/08/20 16:22:12 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -68,5 +68,5 @@ src_install() {
 	java-pkg_dolauncher jxtray --main jxtray.Jxtray
 
 	dodoc CHANGELOG.txt README.txt
-	use doc && java-pkg_dojavadoc -r ${S}/javadoc
+	use doc && java-pkg_dojavadoc ${S}/javadoc
 }
