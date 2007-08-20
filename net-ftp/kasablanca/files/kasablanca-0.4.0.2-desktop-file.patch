@@ -1,0 +1,10 @@
+diff -Naur kasablanca-0.4.0.2.orig/src/kasablanca.desktop kasablanca-0.4.0.2/src/kasablanca.desktop
+--- kasablanca-0.4.0.2.orig/src/kasablanca.desktop	2004-03-22 19:58:39.000000000 +0100
++++ kasablanca-0.4.0.2/src/kasablanca.desktop	2007-08-21 00:48:55.000000000 +0200
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Encoding=UTF-8
++Categories=Network;FileTransfer;
+ Name=kasablanca
+ Name[xx]=xxkasablancaxx
+ Exec=kasablanca

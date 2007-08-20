@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/kasablanca
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.20 2006/10/04 20:46:35 josejx Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.21 2007/08/20 23:14:28 philantrop Exp $
+
+  20 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kasablanca-0.4.0.2-desktop-file.patch, kasablanca-0.4.0.2.ebuild:
+  Added a patch to correct the desktop file. Fixes bug 187371.
 
   04 Oct 2006; Joseph Jezak <josejx@gentoo.org> ChangeLog:
   Marked ppc stable.
