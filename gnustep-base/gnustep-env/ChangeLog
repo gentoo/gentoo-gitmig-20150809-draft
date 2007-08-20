@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-env
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.31 2007/08/18 17:32:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.32 2007/08/20 07:55:11 voyageur Exp $
+
+  20 Aug 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  gnustep-env-1000.ebuild:
+  Drop some keywords until bug #189372 is solved
 
 *gnustep-env-1000 (18 Aug 2007)
 
