@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.28 2007/05/22 14:27:54 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.29 2007/08/20 18:42:25 keytoaster Exp $
+
+  20 Aug 2007; Tobias Heinlein <keytoaster@gentoo.org>
+  +files/kdiff3-0.9.92-fix-desktop-file.patch, kdiff3-0.9.92.ebuild:
+  Adding a patch to fix .desktop file, bug 186942
 
   22 May 2007; Wulf C. Krueger <philantrop@gentoo.org> kdiff3-0.9.92.ebuild:
   Added LINGUAS support, fixes bug 134605.

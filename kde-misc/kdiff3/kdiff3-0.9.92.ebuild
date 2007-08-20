@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.92.ebuild,v 1.8 2007/05/22 14:27:54 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.92.ebuild,v 1.9 2007/08/20 18:42:25 keytoaster Exp $
 
 inherit kde
 
@@ -60,4 +60,7 @@ src_unpack() {
 			rm -f "${KDE_S}/configure"
 		fi
 	fi
+
+	# Fixes bug 186942
+	epatch ${FILESDIR}/${P}-fix-desktop-file.patch
 }

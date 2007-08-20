@@ -1,0 +1,21 @@
+--- kdiff3-0.9.92.orig/src/kdiff3.desktop	2006-11-04 12:44:14.000000000 +0100
++++ kdiff3-0.9.92/src/kdiff3.desktop	2007-08-20 20:13:35.000000000 +0200
+@@ -1,6 +1,5 @@
+ 
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=KDiff3
+ Name[hi]=के-डिफ3
+ Name[sv]=Kdiff3
+@@ -46,9 +45,10 @@
+ GenericName[xx]=xxDiff/Patch Frontendxx
+ GenericName[zh_CN]=Diff/Patch 前端
+ GenericName[zu]=Diff/PatchIsiqalo sokugcina
+-Exec=kdiff3 %i %m -caption "%c"
++Exec=kdiff3 %i -caption "%c" --miniicon
+ Icon=kdiff3
+ Type=Application
++Categories=Qt;KDE;Development;
+ DocPath=kdiff3/index.html
+ Comment=A File And Directory Comparison And Merge Tool
+ Comment[ar]=أداة مقارنة  و دمج ملفات و دلائل (مجلًدات )
