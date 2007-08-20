@@ -1,6 +1,20 @@
 # ChangeLog for dev-php5/eaccelerator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.16 2007/05/12 14:28:32 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.17 2007/08/20 21:02:53 jokey Exp $
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/eaccelerator-0.9.5.1-optimize-catch-exceptions.patch,
+  eaccelerator-0.9.5.1.ebuild:
+  Porting from project overlay
+
+  20 Aug 2007; Jakub Moc <jakub@gentoo.org> eaccelerator-0.9.5.1.ebuild:
+  This ebuild mistakenly assumed that apache user and group exist. Make
+  HTTPD_{USER,GROUP} configurable and fix pkg_setup accordingly.
+
+  20 Aug 2007; Jakub Moc <jakub@gentoo.org>
+  +files/eaccelerator-0.9.5.1-optimize-catch-exceptions.patch,
+  +metadata.xml, +eaccelerator-0.9.5.1.ebuild:
+  Add patch for Bug 184439
 
 *eaccelerator-0.9.5.1 (12 May 2007)
 

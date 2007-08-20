@@ -1,0 +1,30 @@
+Index: eaccelerator/trunk/ChangeLog
+===================================================================
+--- eaccelerator/trunk/ChangeLog (revision 308)
++++ eaccelerator/trunk/ChangeLog (revision 323)
+@@ -1,2 +1,8 @@
++2007-08-14  Hans Rakers <hans at react.nl>
++
++	* Optimizer fix for #242. PHP-5.2.1 introduces a ZEND_JMP before a
++	  ZEND_FETCH_CLASS/ZEND_CATCH which the optimizer did not handle
++	  correctly, resulting in uncaught exceptions. (Thanks to warwickshaw)
++
+ 2007-05-09  Bart Vanbrabant <bart.vanbrabant at zoeloelip.be>
+ 
+Index: eaccelerator/trunk/optimize.c
+===================================================================
+--- eaccelerator/trunk/optimize.c (revision 322)
++++ eaccelerator/trunk/optimize.c (revision 323)
+@@ -2976,4 +2976,11 @@
+ 						op->extended_value = 0;
+ 					}
++#  if (PHP_MAJOR_VERSION == 5 && PHP_MINOR_VERSION >= 2 && PHP_RELEASE_VERSION >= 1) || PHP_MAJOR_VERSION >= 6
++					/* php > 5.2.1 introduces a ZEND_JMP before a ZEND_FETCH_CLASS and ZEND_CATCH
++					   this leaves those blocks intact */
++					else if ((op+1)->opcode == ZEND_FETCH_CLASS && (op+2)->opcode == ZEND_CATCH) { /* fix for #242 */
++						p->follow = &bb[line_num];
++					}
++#  endif
+ #endif
+ 					break;
+
