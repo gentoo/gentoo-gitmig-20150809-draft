@@ -1,6 +1,16 @@
 # ChangeLog for app-portage/kuroo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.20 2007/08/14 21:04:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.21 2007/08/20 16:22:02 philantrop Exp $
+
+*kuroo-0.80.31 (20 Aug 2007)
+
+  20 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kuroo-desktop-file.patch, kuroo-0.80.2-r1.ebuild,
+  kuroo-0.80.3.ebuild, +kuroo-0.80.31.ebuild:
+  Added kuroo-0.80.31 which includes further fixes for bug 188267. 
+  Corrected the desktop file for all versions to be standards-compliant. 
+  Upstream changes: 
+  - Parsing arch correctly from emerge --info.
 
   14 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   kuroo-0.80.2-r1.ebuild:
