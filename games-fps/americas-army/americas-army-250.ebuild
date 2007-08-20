@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.16 2007/07/31 14:31:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.17 2007/08/20 22:34:00 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -26,7 +26,7 @@ UIDEPEND="virtual/opengl
 			app-emulation/emul-linux-x86-xlibs
 			|| (
 				>=app-emulation/emul-linux-x86-xlibs-7.0
-			 	x11-drivers/nvidia-drivers
+				x11-drivers/nvidia-drivers
 				>=x11-drivers/ati-drivers-8.8.25-r1 ) )
 		x86? (
 			x11-libs/libXext
