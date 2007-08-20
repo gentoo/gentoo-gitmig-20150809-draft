@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Numbers_Words
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Numbers_Words/ChangeLog,v 1.18 2007/02/21 23:33:51 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Numbers_Words/ChangeLog,v 1.19 2007/08/20 22:29:26 jokey Exp $
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-Numbers_Words-0.15.0.ebuild:
+  Version bump, Bug 158633
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
