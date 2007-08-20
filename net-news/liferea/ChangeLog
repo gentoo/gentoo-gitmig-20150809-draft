@@ -1,6 +1,18 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.113 2007/08/02 14:27:09 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.114 2007/08/20 14:32:41 dang Exp $
+
+*liferea-1.2.22 (20 Aug 2007)
+
+  20 Aug 2007; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.2.22.ebuild:
+  Bump to 1.2.22
+  	* Added new Belarusian Latin translation
+  	  (Ihar Hrachyshka)
+  	* Fix to avoid displaying incorrectly calculated
+  	  negative unread count values.
+  	* Provides a workaround for libgtkhtml2 bug that
+  	  causes freezes when parsing CSS comments.
+  	  (patch from Jean Diraison)
 
   02 Aug 2007; Daniel Gryniewicz <dang@gentoo.org>
   -files/liferea-1.0.16-seamonkey.diff, -liferea-1.0.16.ebuild,
