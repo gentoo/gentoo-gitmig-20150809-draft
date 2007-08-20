@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.20.ebuild,v 1.14 2007/08/15 21:21:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.20.ebuild,v 1.15 2007/08/20 23:58:59 jokey Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/grace/src/stable/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="debug png jpeg pdf fftw netcdf"
 
 RDEPEND="virtual/motif
