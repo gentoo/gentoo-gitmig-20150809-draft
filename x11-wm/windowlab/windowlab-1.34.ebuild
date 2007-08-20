@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/windowlab-1.34.ebuild,v 1.1 2007/06/29 11:05:50 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/windowlab-1.34.ebuild,v 1.2 2007/08/20 04:32:12 redhatter Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.nickgravgaard.com/${PN}/${P}.tar"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~x86"
 IUSE="truetype"
 
 RDEPEND="truetype? ( virtual/xft )

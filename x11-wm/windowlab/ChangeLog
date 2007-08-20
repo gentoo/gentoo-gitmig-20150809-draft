@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowlab
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.22 2007/07/22 04:07:50 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.23 2007/08/20 04:32:12 redhatter Exp $
+
+  20 Aug 2007; Stuart Longland <redhatter@gentoo.org> windowlab-1.34.ebuild:
+  Tested and working on MIPS.  Keyworded ~mips as per bug #114498.
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> windowlab-1.30.ebuild,
   windowlab-1.31.ebuild:
