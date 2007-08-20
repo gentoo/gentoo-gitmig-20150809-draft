@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/id3
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3/ChangeLog,v 1.12 2007/08/19 16:25:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3/ChangeLog,v 1.13 2007/08/20 09:04:09 jokey Exp $
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org> id3-0.15.ebuild:
+  Stable on x86 wrt bug #189486
 
   19 Aug 2007; Christoph Mende <angelos@gentoo.org> id3-0.15.ebuild:
   Stable on amd64 wrt bug #189486
