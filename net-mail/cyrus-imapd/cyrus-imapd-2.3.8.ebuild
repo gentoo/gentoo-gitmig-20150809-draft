@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.8.ebuild,v 1.2 2007/07/28 15:42:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.8.ebuild,v 1.3 2007/08/20 13:18:24 dertobi123 Exp $
 
 inherit autotools eutils ssl-cert fixheadtails pam
 
@@ -16,7 +16,7 @@ AUTOSIEVE_PATCH_VER="0.6.0"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~hppa ~ppc64"
-IUSE="afs autocreate autosieve drac idled kerberos nntp pam snmp ssl tcpd"
+IUSE="afs autocreate autosieve drac idled kerberos nntp pam replication snmp ssl tcpd"
 
 PROVIDE="virtual/imapd"
 RDEPEND=">=sys-libs/db-3.2
@@ -154,6 +154,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable kerberos gssapi) $(use_enable kerberos krb5afspts)"
 	myconf="${myconf} $(use_enable idled)"
 	myconf="${myconf} $(use_enable nntp nntp)"
+	myconf="${myconf} $(use_enable replication)"
 
 	if use kerberos; then
 		myconf="${myconf} --with-auth=krb5"
