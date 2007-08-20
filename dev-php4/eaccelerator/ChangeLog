@@ -1,6 +1,20 @@
 # ChangeLog for dev-php4/eaccelerator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/ChangeLog,v 1.21 2007/05/12 14:33:50 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/ChangeLog,v 1.22 2007/08/20 21:00:40 jokey Exp $
+
+*eaccelerator-0.9.5.1 (20 Aug 2007)
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org> -eaccelerator-0.9.5.ebuild,
+  +eaccelerator-0.9.5.1.ebuild:
+  Porting from project overlay
+
+  20 Aug 2007; Jakub Moc <jakub@gentoo.org> eaccelerator-0.9.5.1.ebuild:
+  This ebuild mistakenly assumed that apache user and group exist. Make
+  HTTPD_{USER,GROUP} configurable and fix pkg_setup accordingly.
+
+  20 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +eaccelerator-0.9.5.1.ebuild:
+  Version bump
 
   12 May 2007; Luca Longinotti <chtekk@gentoo.org>
   eaccelerator-0.9.5.ebuild:

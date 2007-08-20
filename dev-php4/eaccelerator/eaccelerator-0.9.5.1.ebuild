@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.5.ebuild,v 1.9 2007/05/12 14:33:50 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.5.1.ebuild,v 1.1 2007/08/20 21:00:40 jokey Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
@@ -8,7 +8,7 @@ PHP_EXT_ZENDEXT="yes"
 
 [[ -z "${EACCELERATOR_CACHEDIR}" ]] && EACCELERATOR_CACHEDIR="/var/cache/eaccelerator-php4/"
 
-inherit php-ext-source-r1
+inherit php-ext-source-r1 depend.apache
 
 KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
 
@@ -22,11 +22,12 @@ IUSE="contentcache debug disassembler inode session sharedmem"
 DEPEND="!dev-php4/pecl-apc !dev-php4/xcache"
 RDEPEND="${DEPEND}"
 
-# Webserver user and group, here for Apache.
-HTTPD_USER="apache"
-HTTPD_GROUP="apache"
+# Webserver user and group, here for Apache by default
+HTTPD_USER="${HTTPD_USER:-apache}"
+HTTPD_GROUP="${HTTPD_GROUP:-apache}"
 
 need_php_by_category
+want_apache
 
 pkg_setup() {
 	has_php
@@ -37,6 +38,21 @@ pkg_setup() {
 		require_php_with_use session zlib
 	else
 		require_php_with_use zlib
+	fi
+
+	if ! use apache2 ; then
+		if [[ ${HTTPD_USER} == "apache" ]] || [[ ${HTTPD_GROUP} == "apache" ]] ; then
+			eerror "You did not enable apache2 USE flag, so you need to define"
+			eerror "the user and group that will be used for ${PN} yourself."
+			eerror
+			eerror "This should (generally) match the user and group that your webserver uses, e.g.:"
+			eerror "HTTPD_USER=\"lighttpd\" HTTPD_GROUP=\"lighttpd\" if using www-servers/lighttpd"
+			eerror
+			die "Either enable USE=\"apache2\" or re-emerge this with HTTPD_USER and HTTPD_GROUP set"
+		else
+			enewgroup ${HTTPD_GROUP}
+			enewuser ${HTTPD_USER} -1 -1 /var/www ${HTTPD_GROUP}
+		fi
 	fi
 }
 
