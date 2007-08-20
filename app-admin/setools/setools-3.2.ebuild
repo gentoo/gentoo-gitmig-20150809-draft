@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.2.ebuild,v 1.1 2007/05/10 03:14:19 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.2.ebuild,v 1.2 2007/08/20 04:23:58 pebenito Exp $
 
 inherit java-pkg-opt-2
 
@@ -40,7 +40,7 @@ RDEPEND=">=sys-libs/libsepol-1.16.3
 	python? ( >=dev-lang/python-2.4 )
 	X? (
 		>=dev-lang/tk-8.4.9
-		>=dev-tcltk/bwidget-1.7
+		>=dev-tcltk/bwidget-1.8
 		>=gnome-base/libglade-2.0
 		>=x11-libs/gtk+-2.8
 	)"

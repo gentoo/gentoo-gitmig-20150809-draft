@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/setools
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.52 2007/08/04 18:00:46 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.53 2007/08/20 04:23:58 pebenito Exp $
+
+  20 Aug 2007; Chris PeBenito <pebenito@gentoo.org> setools-3.1.ebuild,
+  setools-3.2.ebuild:
+  Set bwidget dep to 1.8 to fix #175415.
 
 *setools-3.3 (04 Aug 2007)
 

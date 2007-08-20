@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.1.ebuild,v 1.1 2007/02/16 00:54:14 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.1.ebuild,v 1.2 2007/08/20 04:23:58 pebenito Exp $
 
 inherit autotools
 
@@ -29,7 +29,7 @@ RDEPEND=">=sys-libs/libsepol-1.12.27
 	dev-libs/libxml2
 	X? (
 		dev-lang/tk
-		>=dev-tcltk/bwidget-1.4.1
+		>=dev-tcltk/bwidget-1.8
 		>=gnome-base/libglade-2.0
 	)"
 
