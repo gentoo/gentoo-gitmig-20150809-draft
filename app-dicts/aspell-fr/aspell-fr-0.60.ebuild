@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fr/aspell-fr-0.60.ebuild,v 1.1 2007/08/19 20:39:50 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fr/aspell-fr-0.60.ebuild,v 1.2 2007/08/20 11:30:48 fmccor Exp $
 
 ASPELL_LANG="French"
 ASPOSTFIX="6"
@@ -11,7 +11,7 @@ ASPOSTFIX="6"
 inherit aspell-dict
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 
 FILENAME="aspell-fr-0.50-3"
 SRC_URI="mirror://gnu/aspell/dict/fr/${FILENAME}.tar.bz2"
