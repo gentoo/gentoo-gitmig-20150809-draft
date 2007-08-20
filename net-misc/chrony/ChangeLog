@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.36 2007/03/22 14:32:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.37 2007/08/20 12:55:42 tove Exp $
+
+  20 Aug 2007; Torsten Veller <tove@gentoo.org> files/chronyd.conf:
+  Fix bug #189037
 
   22 Mar 2007; Torsten Veller <tove@gentoo.org> files/chronyd.rc:
   Removed bashism from initscript (#171752)
