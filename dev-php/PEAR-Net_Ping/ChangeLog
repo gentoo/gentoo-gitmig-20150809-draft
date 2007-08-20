@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_Ping
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Ping/ChangeLog,v 1.6 2007/02/21 23:31:08 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Ping/ChangeLog,v 1.7 2007/08/20 21:58:03 jokey Exp $
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-Net_Ping-2.4.2.ebuild:
+  Version bump, Bug 158633
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
