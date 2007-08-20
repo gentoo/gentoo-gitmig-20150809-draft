@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.581 2007/08/20 13:33:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.582 2007/08/20 14:33:33 dev-zero Exp $
+
+  20 Aug 2007; Tiziano Müller <dev-zero@gentoo.org> use.local.desc:
+  Updated description for graphviz's pango USE flag
 
   20 Aug 2007; Torsten Veller <tove@gentoo.org> package.mask:
   Masked app-office/gnucash-2.2.1
