@@ -1,0 +1,8 @@
+# ChangeLog for dev-php/PEAR-Net_LDAP
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP/ChangeLog,v 1.1 2007/08/20 21:56:20 jokey Exp $
+
+  17 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-Net_LDAP-1.0.0_rc3.ebuild:
+  New ebuild for Bug 143170
+
