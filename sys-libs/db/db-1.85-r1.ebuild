@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.32 2006/02/28 09:45:44 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.33 2007/08/20 11:40:20 caleb Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.sleepycat.com/releases/db.${PV}.tar.gz
 
 LICENSE="DB"
 SLOT="1"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="mips"
 IUSE=""
 
 DEPEND="virtual/libc"
