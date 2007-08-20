@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.582 2007/08/20 14:33:33 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.583 2007/08/20 17:20:27 wolf31o2 Exp $
+
+  20 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  hardened/ppc/package.mask, use.local.desc:
+  Added local USE flags for games-strategy/ufo-ai and masked it on hardened ppc.
 
   20 Aug 2007; Tiziano Müller <dev-zero@gentoo.org> use.local.desc:
   Updated description for graphviz's pango USE flag
