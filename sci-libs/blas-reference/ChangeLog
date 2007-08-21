@@ -1,6 +1,18 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.25 2007/06/29 17:42:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.26 2007/08/21 15:44:32 bicatali Exp $
+
+*blas-reference-20070226 (21 Aug 2007)
+
+  21 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/blas-reference-20070226-autotool.patch,
+  +files/eselect.blas.reference, metadata.xml,
+  +blas-reference-20070226.ebuild:
+  Updated sources from lapack-reference-3.1.1 (mainly better 
+  documentation in sources + tests), updated autotools patch (was missing 
+  scabs1.f), add a working make check, and a blas.pc file. Added doc 
+  USE flag, longdescription in metadata.xml. New eselect file including the 
+  pkg-config file. Ready for new style virtual. General clean-up.
 
   29 Jun 2007; Jeroen Roovers <jer@gentoo.org>
   blas-reference-19940131-r4.ebuild:
