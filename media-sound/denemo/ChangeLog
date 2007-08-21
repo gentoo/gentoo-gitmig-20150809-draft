@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/denemo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.20 2007/08/16 19:02:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.21 2007/08/21 23:00:02 jurek Exp $
+
+  21 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> denemo-0.7.6.ebuild:
+  x86 stable (bug #189135)
 
   16 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> denemo-0.7.6.ebuild:
   Stable on sparc wrt #189135
