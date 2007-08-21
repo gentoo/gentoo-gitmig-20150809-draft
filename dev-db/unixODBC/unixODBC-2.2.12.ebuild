@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.12.ebuild,v 1.9 2007/07/13 06:38:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.12.ebuild,v 1.10 2007/08/21 08:49:50 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -19,24 +19,19 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="qt3 gnome"
 
-DEPEND=">=sys-libs/readline-4.1
+RDEPEND=">=sys-libs/readline-4.1
 		>=sys-libs/ncurses-5.2
 		qt3? ( =x11-libs/qt-3* )
 		gnome? ( gnome-base/libgnomeui )"
-RDEPEND="${DEPEND}"
+
+DEPEND="${RDEPEND}
+	gnome? ( dev-util/cvs )" # see Bug 173256
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${WORKDIR}/${PATCH_P}/*
-	#epatch "${FILESDIR}/${P}-configure.in.patch"
-	#epatch "${FILESDIR}/${P}-qt.m4.patch"
-	#epatch "${FILESDIR}/${P}-gODBCConfig-Makefile.am.patch"
-	#epatch "${FILESDIR}/${P}-gODBCConfig-configure.in.patch"
-	#epatch "${FILESDIR}/${P}-gODBCConfig-odbcconfig.c.patch"
-	#epatch "${FILESDIR}/${P}-gODBCConfig-support.c.patch"
-	#epatch "${FILESDIR}/${P}-gODBCConfig-support.h.patch"
+	epatch "${WORKDIR}"/${PATCH_P}/*
 }
 
 src_compile() {
@@ -48,8 +43,7 @@ src_compile() {
 		myconf="--enable-gui=no"
 	fi
 
-# Detect mips systems properly
-	gnuconfig_update
+	# Detect mips systems properly
 	eautoreconf
 
 	econf --host=${CHOST} \
@@ -63,16 +57,16 @@ src_compile() {
 
 	if use gnome; then
 		# Symlink for configure
-		ln -s ${S}/odbcinst/.libs ./lib
+		ln -s "${S}"/odbcinst/.libs ./lib
 		# Symlink for libtool
-		ln -s ${S}/odbcinst/.libs ./lib/.libs
+		ln -s "${S}"/odbcinst/.libs ./lib/.libs
 
 		cd gODBCConfig
 		touch ChangeLog
 		gnuconfig_update
 		autoreconf --install
 		econf --host=${CHOST} \
-			--with-odbc=${S} \
+			--with-odbc="${S}" \
 			--enable-static \
 			--prefix=/usr \
 			--sysconfdir=/etc/${PN} || die "econf gODBCConfig failed"
@@ -90,7 +84,7 @@ src_install() {
 	if use gnome;
 	then
 		cd gODBCConfig
-		emake DESTDIR=${D} install || die "emake gODBCConfig install failed"
+		emake DESTDIR="${D}" install || die "emake gODBCConfig install failed"
 		cd ..
 	fi
 
