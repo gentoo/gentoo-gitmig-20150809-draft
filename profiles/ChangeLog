@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.583 2007/08/20 17:20:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.584 2007/08/21 08:34:17 bicatali Exp $
+
+  21 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  Added proj local USE flag for dev-lang/gdl
 
   20 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   hardened/ppc/package.mask, use.local.desc:
