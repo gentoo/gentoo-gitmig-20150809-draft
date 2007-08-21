@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GSSAPI
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.2 2007/08/20 02:32:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.3 2007/08/21 15:23:30 gustavoz Exp $
+
+  21 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> GSSAPI-0.24.ebuild:
+  Keyworded ~sparc wrt #189441
 
   20 Aug 2007; Jeroen Roovers <jer@gentoo.org> GSSAPI-0.24.ebuild:
   Marked ~hppa (bug #189441).
