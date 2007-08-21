@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.0_beta1.ebuild,v 1.1 2007/08/21 18:28:07 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.0_beta1.ebuild,v 1.2 2007/08/21 22:45:12 philantrop Exp $
 
 inherit kde
 
@@ -36,12 +36,11 @@ src_install() {
 pkg_postinst() {
 	echo
 	elog "${P} can use the following optional tools:"
-	elog "- Adobbe Reader (PDF Viewer)			- app-text/acroread"
-	elog "- DVIPNG (PNG previews)			- (not in Portage)"
+	elog "- Adobe Reader (PDF Viewer)			- app-text/acroread"
+	elog "- DVIPNG (PNG previews)			- app-text/dvipng"
 	elog "- ImageMagick (PNG previews)			- media-gfx/imagemagick"
 	elog "- zip (Archive)				- app-arch/zip"
-	elog "- DBlatex (Docbook to LaTeX)			- (not in Portage)"
-	elog "- Metapost					- (not in Portage)"
+	elog "- DBlatex (Docbook to LaTeX)			- cf. Gentoo bug 129368"
 	elog "- Asymptote					- media-gfx/asymptote"
 	elog "- Tex4ht (LaTeX to Web)			- dev-tex/tex4ht"
 	elog "- Lilypond (Music Typesetting)		- media-sound/lilypond"
@@ -50,10 +49,9 @@ pkg_postinst() {
 	elog "						- www-client/seamonkey"
 	elog "For viewing BibTeX files:"
 	elog "- Kbibtex					- app-text/kbibtex"
-	elog "- KBib					- (not in Portage)"
+	elog "- KBib					- cf. Gentoo bug 147057"
 	elog "- JabRef					- app-text/jabref"
 	elog "- pybliographer				- app-office/pybliographer"
-	elog "- gbib					- (not in Portage)"
 	echo
-	elog "If you want to use either of these, please emerge them separately."
+	elog "If you want to use either of these, please install them separately."
 }
