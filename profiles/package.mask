@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7616 2007/08/21 18:25:29 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7617 2007/08/21 20:57:03 ranger Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+# Brent J. Baude <ranger@gentoo.org> (21 Aug 2007)
+# Masking out librtas-2.0.0 in favor of new version with smaller version number
+# to force an upgrade.
+=sys-libs/librtas-2.0.0
 
 # Wulf C. Krueger <philantrop@gentoo.org> (21 Aug 2007)
 # Temporary mask. Beta release.
