@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7617 2007/08/21 20:57:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7618 2007/08/21 21:24:00 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Ulrich Mueller <ulm@gentoo.org> (21 Aug 2007)
+# Masking due to issues with customisation dependencies.
+# Bug reported upstream.
+=app-emacs/vm-8.0.3.495
+
 # Brent J. Baude <ranger@gentoo.org> (21 Aug 2007)
 # Masking out librtas-2.0.0 in favor of new version with smaller version number
 # to force an upgrade.
