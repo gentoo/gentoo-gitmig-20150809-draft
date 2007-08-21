@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythgame
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.40 2007/06/28 21:04:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.41 2007/08/21 15:56:01 cardoe Exp $
+
+*mythgame-0.21_pre12242 (21 Aug 2007)
+
+  21 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  +mythgame-0.21_pre12242.ebuild:
+  trunk ebuild from Dave Oxley <dave@daveoxley.co.uk>
 
   28 Jun 2007; Doug Goldstein <cardoe@gentoo.org> -mythgame-0.20.ebuild,
   -mythgame-0.20_p13239.ebuild:
