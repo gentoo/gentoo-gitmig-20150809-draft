@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.3.ebuild,v 1.2 2007/08/10 13:49:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.3.ebuild,v 1.3 2007/08/21 20:43:18 caleb Exp $
 
-inherit distutils
+inherit distutils qt4
 
 MY_P=PyQt-x11-gpl-${PV}
 
@@ -20,6 +20,8 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
 S=${WORKDIR}/${MY_P}
+
+QT4_BUILT_WITH_USE_CHECK="zlib"
 
 src_unpack() {
 	unpack ${A}
