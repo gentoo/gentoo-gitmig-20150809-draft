@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2.ebuild,v 1.5 2007/06/26 02:44:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2.ebuild,v 1.6 2007/08/21 20:43:48 pbienst Exp $
 
 inherit fortran
 
@@ -9,7 +9,7 @@ SRC_URI="http://ab-initio.mit.edu/mpb/${P}.tar.gz"
 HOMEPAGE="http://ab-initio.mit.edu/mpb/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 SLOT="0"
 
