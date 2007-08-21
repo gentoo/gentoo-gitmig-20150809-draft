@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.5 2007/08/19 15:26:22 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.6 2007/08/21 00:40:22 hollow Exp $
+
+*apache-2.0.59-r3 (21 Aug 2007)
+
+  21 Aug 2007; Benedikt Böhm <hollow@gentoo.org> +apache-2.0.59-r3.ebuild:
+  fix #187258 for 2.0.59
 
 *apache-2.2.4-r12 (19 Aug 2007)
 
