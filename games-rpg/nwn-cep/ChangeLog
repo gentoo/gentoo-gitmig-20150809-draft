@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/nwn-cep
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.8 2007/01/31 21:01:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.9 2007/08/21 18:31:40 wolf31o2 Exp $
+
+  21 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml,
+  nwn-cep-2.0.ebuild:
+  Added a patch from Denis Dupeyron <calchan@gentoo.org> to improve the
+  quality of the ebuild and also to change to using the RAR to save space.
+  Closing bug #180010.
 
 *nwn-cep-2.0 (31 Jan 2007)
 

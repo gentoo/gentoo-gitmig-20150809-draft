@@ -1,33 +1,24 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/nwn-cep-2.0.ebuild,v 1.2 2007/02/22 04:42:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/nwn-cep-2.0.ebuild,v 1.3 2007/08/21 18:31:40 wolf31o2 Exp $
 
-inherit eutils games
+inherit games
 
-DESCRIPTION="The Community Expansion Pack is a high quality custom content addon for Neverwinter Nights"
-HOMEPAGE="http://nwn.bioware.com/players/cep.html"
-SRC_URI="cepv2_Part_A.zip cepv2_Part_B.zip"
+DESCRIPTION="High quality custom content addon for Neverwinter Nights"
+HOMEPAGE="http://nwvault.ign.com/cep/"
+SRC_URI="http://vnfiles.ign.com/nwvault.ign.com/fms/files/hakpaks/7000/CEPv2_full.rar"
 
 LICENSE="as-is"
 SLOT="2"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
-RESTRICT="fetch"
 
-DEPEND="app-arch/unzip"
+DEPEND="app-arch/unrar"
 RDEPEND=">=games-rpg/nwn-1.68"
 
 S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/nwn
-Ddir=${D}/${dir}
-
-pkg_nofetch() {
-	einfo "Please visit http://nwvault.ign.com/cep/downloads/"
-	einfo "and download the .zip versions of ${A}."
-	einfo "Then move the files you downloaded to:"
-	einfo "${DISTDIR}"
-}
 
 pkg_setup() {
 	games_pkg_setup
