@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.432 2007/08/21 05:38:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.433 2007/08/21 08:24:55 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-2.0.0_rc3-r1 (21 Aug 2007)
+
+  21 Aug 2007; Roy Marples <uberlord@gentoo.org>
+  +files/baselayout-2.0.0_rc3-ppp.patch, +baselayout-2.0.0_rc3-r1.ebuild:
+  Fix ppp getting the interface metric
 
   21 Aug 2007; Jeroen Roovers <jer@gentoo.org> baselayout-2.0.0_rc3.ebuild:
   Marked ~hppa (bug #187487).
