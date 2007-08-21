@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/qdox-1.6.3.ebuild,v 1.1 2007/08/04 11:09:46 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/qdox-1.6.3.ebuild,v 1.2 2007/08/21 15:44:07 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -9,7 +9,7 @@ HOMEPAGE="http://qdox.codehaus.org/"
 SRC_URI="http://repository.codehaus.org/com/thoughtworks/${PN}/${PN}/${PV}/${P}-sources.jar"
 LICENSE="Apache-2.0"
 SLOT="1.6"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 CDEPEND="dev-java/ant-core

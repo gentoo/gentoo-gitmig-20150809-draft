@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/qdox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.11 2007/08/21 05:05:45 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.12 2007/08/21 15:44:07 wltjr Exp $
+
+  21 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org> qdox-1.6.3.ebuild:
+  ~amd64, bug #187981. Bogus stable commit, nothing committed but changelog :(
 
   21 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org> ChangeLog:
   amd64 stable, bug #187981.
