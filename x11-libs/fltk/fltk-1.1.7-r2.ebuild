@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r2.ebuild,v 1.4 2007/08/02 13:25:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r2.ebuild,v 1.5 2007/08/21 18:28:23 coldwind Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -78,10 +78,10 @@ src_compile() {
 
 src_install() {
 	einstall \
-		includedir=${D}${INCDIR} \
-		libdir=${D}${LIBDIR} || die "Installation Failed"
+		includedir="${D}${INCDIR}" \
+		libdir="${D}${LIBDIR}" || die "Installation Failed"
 
-	ranlib ${D}${LIBDIR}/*.a
+	ranlib "${D}${LIBDIR}"/*.a
 
 	insinto /usr/share/cmake/Modules
 	doins "${FILESDIR}"/FLTKConfig.cmake CMake/FLTKUse.cmake
@@ -93,10 +93,9 @@ src_install() {
 
 	doenvd 99fltk-${SLOT}
 
-	dodir /usr/share/doc/${P}/html
-	mv ${D}/usr/share/doc/fltk/* ${D}/usr/share/doc/${PF}/html
-	rmdir ${D}/usr/share/doc/fltk
-	rm -rf ${D}/usr/share/man/cat{1,3}
+	dohtml -A xbm,xpm,h,cxx,fl -r "${D}"/usr/share/doc/fltk/*
+	rm -rf "${D}"/usr/share/doc/fltk
+	rm -rf "${D}"/usr/share/man/cat{1,3}
 }
 
 pkg_postinst() {
