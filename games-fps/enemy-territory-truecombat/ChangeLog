@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/enemy-territory-truecombat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-truecombat/ChangeLog,v 1.9 2007/01/30 22:36:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-truecombat/ChangeLog,v 1.10 2007/08/21 00:54:24 wolf31o2 Exp $
+
+  21 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  enemy-territory-truecombat-0.49b.ebuild:
+  Updated with an ebuild by Paul Bredbury <brebs@sent.com> to close bug
+  #175514 and bug #186113.
 
 *enemy-territory-truecombat-0.49b (30 Jan 2007)
 
