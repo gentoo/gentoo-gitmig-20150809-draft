@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/ufo-ai
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.13 2007/08/17 23:33:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.14 2007/08/21 19:04:06 mr_bones_ Exp $
+
+  21 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org> ufo-ai-2.1.1.ebuild:
+  fix HOMEPAGE; tidy
 
 *ufo-ai-2.1.1 (17 Aug 2007)
 

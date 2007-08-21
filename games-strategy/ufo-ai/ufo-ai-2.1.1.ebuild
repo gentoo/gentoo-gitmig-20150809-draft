@@ -1,28 +1,24 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.1.1.ebuild,v 1.1 2007/08/17 23:33:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.1.1.ebuild,v 1.2 2007/08/21 19:04:06 mr_bones_ Exp $
 
 inherit eutils autotools games
 
 MY_PV=${PV/_rc/-RC}
 MY_P="ufoai-${MY_PV}"
-MY_SF="mirror://sourceforge/ufoai"
 
 DESCRIPTION="UFO: Alien Invasion - X-COM inspired strategy game"
 HOMEPAGE="http://www.ufoai.net/"
-SRC_URI="${MY_SF}/music.tar.bz2
-	${MY_SF}/${MY_P}-data.tar
-	${MY_SF}/${MY_P}-source.tar.bz2
-	${MY_SF}/${MY_P}-i18n.tar.bz2"
-# Map data is already in the main data tarball
-# 	${MY_SF}/${MY_P}-mapsource.tar.bz2
+SRC_URI="mirror://sourceforge/ufoai/music.tar.bz2
+	mirror://sourceforge/ufoai/${MY_P}-data.tar
+	mirror://sourceforge/ufoai/${MY_P}-source.tar.bz2
+	mirror://sourceforge/ufoai/${MY_P}-i18n.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="alsa arts debug dedicated dga doc ipv6 jack master oss paranoid"
 
-# Info at http://ufoai.ninex.info/wiki/index.php/Compile_for_Linux
 UIRDEPEND="virtual/opengl
 	virtual/glu
 	>=media-libs/libsdl-1.2.7
@@ -85,8 +81,6 @@ src_unpack() {
 }
 
 src_compile() {
-	yesno() { useq $1 && echo yes || echo no ; }
-
 # Forces building of client.
 # gettext is required to show the intro text.
 # egamesconf fails with openal.
@@ -136,16 +130,11 @@ src_install() {
 		dogamesbin ufo2map || die
 	fi
 
-	local libdir=$(games_get_libdir)/${PN}
-	exeinto "${libdir}"
-	local f
-	for f in *.so base/game.so ; do
-		doexe "${f}" || die "doexe ${f} failed"
-	done
+	exeinto "$(games_get_libdir)/${PN}"
+	doexe *.so base/game.so || die "doexe ${f} failed"
 
 	insinto "${dir}"
-	doins -r "${WORKDIR}"/{base,music} \
-		|| die "doins -r failed"
+	doins -r "${WORKDIR}"/{base,music} || die "doins -r failed"
 
 	if use doc ; then
 		dohtml -r "${WORKDIR}"/docs/html/*
