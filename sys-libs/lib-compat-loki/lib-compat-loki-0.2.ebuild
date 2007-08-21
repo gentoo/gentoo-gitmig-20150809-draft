@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat-loki/lib-compat-loki-0.2.ebuild,v 1.4 2007/01/11 14:54:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat-loki/lib-compat-loki-0.2.ebuild,v 1.5 2007/08/21 23:34:28 wolf31o2 Exp $
 
 DESCRIPTION="Compatibility libc6 libraries for Loki games"
 HOMEPAGE="http://www.gentoo.org/"
@@ -13,7 +13,9 @@ KEYWORDS="amd64 x86" # ppc
 IUSE=""
 
 RDEPEND="x86? ( sys-libs/lib-compat )
-	amd64? ( app-emulation/emul-linux-x86-compat )"
+	amd64? (
+		app-emulation/emul-linux-x86-compat
+		app-emulation/emul-linux-x86-sdl )"
 
 # I'm not quite sure if this is necessary:
 RESTRICT="strip"
