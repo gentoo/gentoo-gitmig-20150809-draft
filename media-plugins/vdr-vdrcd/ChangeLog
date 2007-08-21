@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-vdrcd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrcd/ChangeLog,v 1.6 2007/04/17 09:48:04 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrcd/ChangeLog,v 1.7 2007/08/21 12:57:38 zzam Exp $
+
+  21 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-vdrcd-0.0.10.1-r1.ebuild:
+  Disabling gettext hack for this plugin.
 
   17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh:
   Removed bash specific stuff.
