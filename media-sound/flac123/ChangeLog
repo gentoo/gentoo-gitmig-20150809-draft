@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/flac123
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/ChangeLog,v 1.21 2007/08/21 14:59:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/ChangeLog,v 1.22 2007/08/21 16:53:26 angelos Exp $
+
+  21 Aug 2007; Christoph Mende <angelos@gentoo.org> flac123-0.0.11.ebuild:
+  Stable on amd64 wrt security bug #186220
 
   21 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> flac123-0.0.11.ebuild:
   Stable on sparc wrt security #186220
