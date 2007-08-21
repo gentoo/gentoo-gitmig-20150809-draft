@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/sobby-0.4.3.ebuild,v 1.1 2007/08/18 23:00:42 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/sobby-0.4.4.ebuild,v 1.1 2007/08/21 12:32:34 dev-zero Exp $
+
+inherit eutils
 
 DESCRIPTION="Standalone Obby server"
 HOMEPAGE="http://gobby.0x539.de/"
