@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1.ebuild,v 1.11 2007/06/25 05:57:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1.ebuild,v 1.12 2007/08/21 22:57:37 ulm Exp $
 
 WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
@@ -198,6 +198,11 @@ emacs-infodir-rebuild() {
 pkg_postinst() {
 	test -f ${ROOT}/usr/share/emacs/site-lisp/subdirs.el ||
 		cp ${ROOT}/usr/share/emacs{/${FULL_VERSION},}/site-lisp/subdirs.el
+
+	local f
+	for f in ${ROOT}/var/lib/games/emacs/{snake,tetris}-scores; do
+		test -e ${f} || touch ${f}
+	done
 
 	elisp-site-regen
 	emacs-infodir-rebuild
