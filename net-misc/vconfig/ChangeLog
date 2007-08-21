@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vconfig
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.23 2007/08/13 13:41:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.24 2007/08/21 07:52:45 jokey Exp $
+
+  21 Aug 2007; Markus Ullmann <jokey@gentoo.org> vconfig-1.9.ebuild:
+  Stable on x86 wrt bug #188700
 
   13 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> vconfig-1.9.ebuild:
   Stable on sparc wrt #188700
