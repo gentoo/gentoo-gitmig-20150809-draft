@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.2.2-r1.ebuild,v 1.1 2007/08/21 06:24:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.2.2-r1.ebuild,v 1.2 2007/08/21 11:20:15 opfer Exp $
 
 inherit eutils
 
@@ -32,10 +32,8 @@ src_compile() {
 src_install() {
 	dobin bin/keepass
 
-	insinto /usr/share/keepass/
-	doins -r share/keepass/i18n
-	insinto /usr/share/keepass/
-	doins -r share/keepass/icons
+	insinto /usr/share/
+	doins -r share/*
 
 	dosym /usr/share/keepass/icons/${PN}.png \
 		/usr/share/pixmaps/${PN}.png
