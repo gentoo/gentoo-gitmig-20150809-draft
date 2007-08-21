@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.1-r1.ebuild,v 1.7 2007/08/13 06:41:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.1-r1.ebuild,v 1.8 2007/08/21 19:29:50 opfer Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
@@ -48,6 +48,7 @@ src_unpack() {
 	java-pkg_jar-from sun-jms
 	java-pkg_jar-from sun-javamail
 	java-pkg_jar-from log4j
+	java-pkg_filter-compiler jikes
 }
 
 src_test() {
