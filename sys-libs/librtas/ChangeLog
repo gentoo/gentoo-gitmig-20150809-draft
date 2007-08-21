@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/librtas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/ChangeLog,v 1.6 2007/05/29 17:03:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/ChangeLog,v 1.7 2007/08/21 20:53:49 ranger Exp $
+
+  21 Aug 2007; Brent Baude <ranger@gentoo.org> librtas-1.3.1.ebuild:
+  Marking librtas-1.3.1 ppc and ppc64 stable
 
   29 May 2007; Brent Baude <ranger@gentoo.org> librtas-1.3.1.ebuild:
   fixing dorked keywords for 1.3.1

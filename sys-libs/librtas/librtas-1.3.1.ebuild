@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/librtas-1.3.1.ebuild,v 1.4 2007/07/15 02:08:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/librtas-1.3.1.ebuild,v 1.5 2007/08/21 20:53:49 ranger Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://librtas.ozlabs.org/"
 
 SLOT="0"
 LICENSE="IPL-1"
-KEYWORDS="~ppc ~ppc64"
+KEYWORDS="ppc ppc64"
 IUSE=""
 
 src_unpack() {
