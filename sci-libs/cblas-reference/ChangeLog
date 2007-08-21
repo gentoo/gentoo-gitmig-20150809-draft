@@ -1,6 +1,17 @@
 # ChangeLog for sci-libs/cblas-reference
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.17 2007/06/25 17:52:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.18 2007/08/21 15:45:30 bicatali Exp $
+
+*cblas-reference-20030223-r4 (21 Aug 2007)
+
+  21 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  files/cblas-reference-20030223-autotool.patch,
+  +files/eselect.cblas.reference, metadata.xml,
+  +cblas-reference-20030223-r4.ebuild:
+  Added a new autotool patch which add a working src_test, a 
+  pkg-config file cblas.pc. Now installs two examples, eselect file to 
+  link the include file and the pkg-config file. General clean-up. Also
+  added longdescription in metadata.xml. 
 
   25 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   cblas-reference-20030223-r3.ebuild:

@@ -1,114 +1,84 @@
-diff -Nur CBLAS.orig/configure.ac CBLAS/configure.ac
---- CBLAS.orig/configure.ac	1970-01-01 01:00:00.000000000 +0100
-+++ CBLAS/configure.ac	2006-10-10 17:20:23.000000000 +0100
-@@ -0,0 +1,65 @@
-+#                                               -*- Autoconf -*-
-+# Process this file with autoconf to produce a configure script.
-+
-+AC_PREREQ(2.59)
+--- configure.ac 	1970-01-01 01:00:00.000000000 +0100
++++ configure.ac	2007-08-16 11:32:24.000000000 +0100
+@@ -0,0 +1,30 @@
++AC_PREREQ(2.61)
 +AC_INIT(cblas, 20030223, lapack@cs.utk.edu)
 +AC_CONFIG_SRCDIR([cblas_example2.c])
 +AC_CONFIG_HEADER([config.h])
 +AM_INIT_AUTOMAKE([foreign])
 +
-+# Checks for programs.
++AC_LANG(C)
 +AC_PROG_CC
 +AC_PROG_F77
-+AC_PROG_LIBTOOL
-+AC_PROG_MAKE_SET
-+
-+# Needed when mixing Fortran and C in the same program/library
 +AC_F77_LIBRARY_LDFLAGS
++dnl ACX_F77_CMAIN_FFLAGS
++dnl FFLAGS=$FFLAGS $F77_CMAIN_FFLAGS
++AC_PROG_LIBTOOL
 +
-+AC_ARG_ENABLE(single-real,        AS_HELP_STRING([--disable-single-real],
-+             [Enable single real precision (default: enabled)]),
-+             [S=$enableval], [S=yes SINGLE=yes])
++AC_F77_FUNC(sgemm)
 +
-+AC_ARG_ENABLE(double-real,        AS_HELP_STRING([--disable-double-real],
-+             [Enable double real precision (default: enabled)]),
-+             [D=$enableval], [D=yes])
-+
-+AC_ARG_ENABLE(single-complex,        AS_HELP_STRING([--disable-single-complex],
-+             [Enable single complex precision (default: enabled)]),
-+             [C=$enableval], [C=yes SINGLE=yes])
-+
-+AC_ARG_ENABLE(double-complex,        AS_HELP_STRING([--disable-double-complex],
-+             [Enable double complex precision (default: enabled)]),
-+             [Z=$enableval], [Z=yes])
-+
-+AC_ARG_ENABLE(examples,        AS_HELP_STRING([--enable-examples],
-+             [Build example programs (default: disabled)]),
-+             [EXAMPLES=$enableval], [EXAMPLES=no])
-+
-+AC_ARG_ENABLE(tests,        AS_HELP_STRING([--enable-tests],
-+             [Build test programs (default: disabled)]),
-+             [DO_TEST=$enableval], [DO_TEST=no])
-+
-+if test "x$S" = "xno" \
-+	&& test "x$D" = "xno" \
-+	&& test "x$C" = "xno" \
-+	&& test "x$Z" = "xno"; then
-+	AC_MSG_ERROR([You must enable at least one precision!])
++PKG_PROG_PKG_CONFIG
++if test -n "$PKG_CONFIG"; then
++   PKG_CHECK_MODULES([BLAS], [blas])
++else
++   AC_CHECK_LIB(blas, $sgemm)
++   BLAS_LIBS=-lblas
++   AC_SUBST(BLAS_LIBS)
 +fi
-+
-+if test "x$DO_TEST" = "xyes"; then
-+	TESTING=testing
-+fi
-+
-+AM_CONDITIONAL([SINGLE], [test "x$SINGLE" = "xyes"])
-+AM_CONDITIONAL([S], [test "x$S" = "xyes"])
-+AM_CONDITIONAL([D], [test "x$D" = "xyes"])
-+AM_CONDITIONAL([C], [test "x$C" = "xyes"])
-+AM_CONDITIONAL([Z], [test "x$Z" = "xyes"])
-+AM_CONDITIONAL([EXAMPLES], [test "x$EXAMPLES" = "xyes"])
-+AC_SUBST(TESTING)
 +
 +AC_CONFIG_FILES([Makefile
 +		 src/Makefile
-+                 testing/Makefile])
++		 testing/Makefile
++		 cblas.pc])
 +AC_OUTPUT
-diff -Nur CBLAS.orig/Makefile.am CBLAS/Makefile.am
---- CBLAS.orig/Makefile.am	1970-01-01 01:00:00.000000000 +0100
-+++ CBLAS/Makefile.am	2006-10-10 17:24:37.000000000 +0100
-@@ -0,0 +1,15 @@
-+SUBDIRS = src $(TESTING)
+--- Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ Makefile.am	2007-08-14 11:39:12.000000000 +0100
+@@ -0,0 +1,8 @@
++SUBDIRS = src testing
 +
-+if EXAMPLES
-+noinst_PROGRAMS = \
-+	example1 \
-+	example2
-+endif
++pkgconfigdir = $(libdir)
++pkgconfig_DATA = cblas.pc
 +
-+LDADD = -lblas src/libcblas.la
-+AM_CFLAGS = -I$(top_srcdir)/src -DADD_
++EXTRA = cblas.pc
 +
-+example1_SOURCES = cblas_example1.c
-+example2_SOURCES = cblas_example2.c
 +
-+EXTRA_DIST = README
-diff -Nur CBLAS.orig/src/Makefile.am CBLAS/src/Makefile.am
---- CBLAS.orig/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
-+++ CBLAS/src/Makefile.am	2006-10-10 17:49:31.000000000 +0100
-@@ -0,0 +1,239 @@
+--- cblas.pc.in 	1970-01-01 01:00:00.000000000 +0100
++++ cblas.pc.in	2007-08-17 11:38:46.000000000 +0100
+@@ -0,0 +1,13 @@
++prefix=@prefix@
++exec_prefix=@exec_prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name: @PACKAGE_NAME@
++Description: Basic Linear Algebra Subprograms C reference wrapper
++Version: @PACKAGE_VERSION@
++Requires: blas
++URL: http://www.netlib.org/blas/
++Libs: -lcblas
++Libs.private: @FLIBS@
++Cflags: -I${includedir}
+--- src/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ src/Makefile.am	2007-08-16 12:21:02.000000000 +0100
+@@ -0,0 +1,232 @@
 +lib_LTLIBRARIES = libcblas.la
++
++pkgincludedir = $(includedir)/cblas
 +pkginclude_HEADERS = cblas.h
 +
-+AM_CFLAGS = -DADD_
++AM_CPPFLAGS = -DADD_
 +
 +ERRHAND_SOURCES = \
 +	cblas_globals.c \
 +	cblas_xerbla.c \
 +	xerbla.c
 +
-+if SINGLE
 +SINGLE_SOURCES = \
 +	cblas_scasum.c \
 +	cblas_scnrm2.c \
 +	scasumsub.f \
 +	scnrm2sub.f
-+endif
 +
-+if S
 +SLEV_SOURCES = \
 +	isamaxsub.f \
 +	sdotsub.f \
@@ -156,9 +126,7 @@ diff -Nur CBLAS.orig/src/Makefile.am CBLAS/src/Makefile.am
 +	cblas_ssyr2k.c \
 +	cblas_strmm.c \
 +	cblas_strsm.c
-+endif
 +
-+if D
 +DLEV_SOURCES = \
 +	ddotsub.f \
 +	dsdotsub.f \
@@ -206,9 +174,7 @@ diff -Nur CBLAS.orig/src/Makefile.am CBLAS/src/Makefile.am
 +	cblas_dsyr2k.c \
 +	cblas_dtrmm.c \
 +	cblas_dtrsm.c
-+endif
 +
-+if C
 +CLEV_SOURCES = \
 +	cdotcsub.f \
 +	cdotusub.f \
@@ -253,9 +219,7 @@ diff -Nur CBLAS.orig/src/Makefile.am CBLAS/src/Makefile.am
 +	cblas_ctrsm.c \
 +	cblas_csyrk.c \
 +	cblas_csyr2k.c
-+endif
 +
-+if Z
 +ZLEV_SOURCES = \
 +	zdotcsub.f \
 +	zdotusub.f \
@@ -304,7 +268,6 @@ diff -Nur CBLAS.orig/src/Makefile.am CBLAS/src/Makefile.am
 +	cblas_ztrsm.c \
 +	cblas_zsyrk.c \
 +	cblas_zsyr2k.c
-+endif
 +
 +libcblas_la_SOURCES = \
 +	cblas_f77.h \
@@ -328,27 +291,25 @@ diff -Nur CBLAS.orig/src/Makefile.am CBLAS/src/Makefile.am
 +	$(CLEV3_SOURCES) \
 +	$(ZLEV3_SOURCES)
 +
-+libcblas_la_LIBADD = $(FLIBS)
-diff -Nur CBLAS.orig/testing/Makefile.am CBLAS/testing/Makefile.am
---- CBLAS.orig/testing/Makefile.am	1970-01-01 01:00:00.000000000 +0100
-+++ CBLAS/testing/Makefile.am	2006-10-10 17:35:55.000000000 +0100
-@@ -0,0 +1,73 @@
-+noinst_PROGRAMS = \
-+	xscblat1 \
-+	xscblat2 \
-+	xscblat3 \
-+	xdcblat1 \
-+	xdcblat2 \
-+	xdcblat3 \
-+	xccblat1 \
-+	xccblat2 \
-+	xccblat3 \
-+	xzcblat1 \
-+	xzcblat2 \
-+	xzcblat3
++libcblas_la_LIBADD = @BLAS_LIBS@
 +
-+LDADD = -lblas $(top_builddir)/src/libcblas.la $(FLIBS)
-+AM_CFLAGS = -I$(top_srcdir)/src -DADD_
+--- testing/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ testing/Makefile.am	2007-08-16 12:16:57.000000000 +0100
+@@ -0,0 +1,71 @@
++TESTS = cblas_tests
++
++cblas_tests:
++	@install -m0755 cblas_tests.sh cblas_tests
++
++check_PROGRAMS = \
++	xscblat1 xdcblat1 xccblat1 xzcblat1 \
++	xscblat2 xdcblat2 xccblat2 xzcblat2 \
++	xscblat3 xdcblat3 xccblat3 xzcblat3
++
++LDADD = $(top_builddir)/src/libcblas.la @BLAS_LIBS@
++
++AM_CPPFLAGS = -I$(top_srcdir)/src -DADD_
++AM_FFLAGS = @BLAS_CFLAGS@
 +
 +AUX_SOURCES = \
 +	auxiliary.c \
@@ -406,3 +367,14 @@ diff -Nur CBLAS.orig/testing/Makefile.am CBLAS/testing/Makefile.am
 +	c_z3chke.c \
 +	c_zblat3.f \
 +	$(AUX_SOURCES)
+--- testing/cblas_tests.sh 	1970-01-01 01:00:00.000000000 +0100
++++ testing/cblas_tests.sh	2007-07-16 01:50:16.000000000 +0100
+@@ -0,0 +1,8 @@
++#!/bin/sh
++
++for t in x*blat1; do
++    ./${t}
++done
++for t in x*blat{2,3}; do
++    ./${t} < ${t:1:1}in${t:7:1}
++done
