@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7611 2007/08/20 13:33:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7612 2007/08/21 09:24:33 eva Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -25,11 +25,6 @@
 # Unmaintained and non-functional due to changes by ebay.
 # Bug #178382
 net-misc/ebayagent
-
-# Mart Raudsepp <leio@gentoo.org> (20 Aug 2007)
-# automake fails, python-config from our current python2.4
-# package not suitable, see bug #189556
-=x11-libs/vte-0.16.8
 
 # Samuli Suominen <drac@gentoo.org> (19 Aug 2007)
 # MySQL API has changed. Broken wrt bug 131111.
