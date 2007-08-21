@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ldapvi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ChangeLog,v 1.16 2007/08/21 20:16:12 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ChangeLog,v 1.17 2007/08/21 20:23:56 hansmi Exp $
+
+  21 Aug 2007; Michael Hanselmann <hansmi@gentoo.org> -ldapvi-1.5.ebuild:
+  Drop old version.
 
   21 Aug 2007; René Nussbaumer <killerfox@gentoo.org> ldapvi-1.7.ebuild:
   Stable on hppa.
