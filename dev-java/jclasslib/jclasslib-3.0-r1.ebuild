@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/jclasslib-3.0-r1.ebuild,v 1.2 2007/08/18 14:56:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/jclasslib-3.0-r1.ebuild,v 1.3 2007/08/21 19:18:11 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_unix_${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 
 DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
