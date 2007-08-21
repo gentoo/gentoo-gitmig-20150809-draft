@@ -1,0 +1,12 @@
+Index: hplip-2.7.7/55-hpmud.rules
+===================================================================
+--- hplip-2.7.7.orig/55-hpmud.rules
++++ hplip-2.7.7/55-hpmud.rules
+@@ -1,5 +1,5 @@
+ # TODO: add PROGRAM rule for 7/xx/xx printer class interface
+-SUBSYSTEM!="usb_device", GOTO="hpmud_rules_end"
++SUBSYSTEM!="usb|usb_device", GOTO="hpmud_rules_end"
+ ACTION!="add", GOTO="hpmud_rules_end"
+-SYSFS{idVendor}=="03f0", GROUP="lp"
++ATTR{idVendor}=="03f0", GROUP="lp"
+ LABEL="hpmud_rules_end"
