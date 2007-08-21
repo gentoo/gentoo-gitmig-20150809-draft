@@ -1,0 +1,12 @@
+# ChangeLog for net-dialup/openadsl
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/openadsl/ChangeLog,v 1.1 2007/08/21 20:55:09 mrness Exp $
+
+*openadsl-4.0.24 (21 Aug 2007)
+
+  21 Aug 2007; Alin Năstac <mrness@gentoo.org>
+  +files/openadsl-makefile.2.6.patch, +metadata.xml,
+  +openadsl-4.0.24.ebuild:
+  Initial import from bug 144834. Credit goes to Alan Hourihane <alanh at
+  fairlite dot demon dot co dot uk>.
+

@@ -1,0 +1,11 @@
+--- makefile.2.6.old	2007-08-03 00:19:53.045547531 +0100
++++ makefile.2.6	2007-08-03 00:20:21.297216989 +0100
+@@ -5,7 +5,7 @@
+ 
+ ifneq ($(KERNELRELEASE),)
+ 
+-GCC	= $(shell ${CC} --version | head -n 1 | sed -e 's/[^0-9. ]//g;s/^ *//;s\[.].*\\g')
++GCC	= $(shell ${CC} --version | head -n 1 | sed -e 's/[[:alnum:]-]*//;s/[^0-9. ]//g;s/^ *//;s\[.].*\\g')
+ 
+ obj-m		:= pulsar_atm.o
+ pulsar_atm-lib	:= libpulsar_fw$(GCC).a
