@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r6.ebuild,v 1.28 2007/07/30 23:08:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r6.ebuild,v 1.29 2007/08/21 22:53:25 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -57,6 +57,8 @@ PROVIDE="virtual/editor"
 
 S="${WORKDIR}/${ECVS_LOCALNAME}"
 
+EMACS_SUFFIX="emacs-${SLOT}"
+
 src_unpack() {
 	cvs_src_unpack
 
@@ -70,6 +72,8 @@ src_unpack() {
 	echo
 	einfo "Emacs CVS branch: ${ECVS_BRANCH}"
 	einfo "Emacs version number: ${FULL_VERSION}"
+	[ "${FULL_VERSION}" = ${PV} ] \
+		|| die "Upstream version number changed to ${FULL_VERSION}"
 	echo
 
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
@@ -149,8 +153,8 @@ src_compile() {
 	myconf="${myconf} $(use_with gpm)"
 
 	econf \
-		--program-suffix=-emacs-${SLOT} \
-		--infodir=/usr/share/info/emacs-${SLOT} \
+		--program-suffix=-${EMACS_SUFFIX} \
+		--infodir=/usr/share/info/${EMACS_SUFFIX} \
 		--without-carbon \
 		${myconf} || die "econf emacs failed"
 
@@ -160,21 +164,21 @@ src_compile() {
 src_install () {
 	emake install DESTDIR="${D}" || die "make install failed"
 
-	rm "${D}"/usr/bin/emacs-${FULL_VERSION}-emacs-${SLOT} \
+	rm "${D}"/usr/bin/emacs-${FULL_VERSION}-${EMACS_SUFFIX} \
 		|| die "removing duplicate emacs executable failed"
-	mv "${D}"/usr/bin/emacs-emacs-${SLOT} "${D}"/usr/bin/emacs-${SLOT} \
+	mv "${D}"/usr/bin/emacs-${EMACS_SUFFIX} "${D}"/usr/bin/${EMACS_SUFFIX} \
 		|| die "moving Emacs executable failed"
 
 	# move info documentation to the correct place
 	einfo "Fixing info documentation ..."
-	for i in "${D}"/usr/share/info/emacs-${SLOT}/*; do
+	for i in "${D}"/usr/share/info/${EMACS_SUFFIX}/*; do
 		mv ${i} ${i}.info || die "mv info failed"
 	done
 
 	# move man pages to the correct place
 	einfo "Fixing manpages ..."
 	for m in "${D}"/usr/share/man/man1/* ; do
-		mv ${m} ${m%.1}-emacs-${SLOT}.1 || die "mv man failed"
+		mv ${m} ${m%.1}-${EMACS_SUFFIX}.1 || die "mv man failed"
 	done
 
 	# avoid collision between slots, see bug #169033 e.g.
@@ -203,7 +207,7 @@ emacs-infodir-rebuild() {
 	# or removed. It is only rebuilt by Portage if our directory is in
 	# INFOPATH, which is not guaranteed. So we rebuild it ourselves.
 
-	local infodir=/usr/share/info/emacs-${SLOT} f
+	local infodir=/usr/share/info/${EMACS_SUFFIX} f
 	einfo "Regenerating Info directory index in ${infodir} ..."
 	rm -f ${ROOT}${infodir}/dir{,.*}
 	for f in ${ROOT}${infodir}/*.info*; do
@@ -216,6 +220,11 @@ emacs-infodir-rebuild() {
 pkg_postinst() {
 	test -f ${ROOT}/usr/share/emacs/site-lisp/subdirs.el ||
 		cp ${ROOT}/usr/share/emacs{/${FULL_VERSION},}/site-lisp/subdirs.el
+
+	local f
+	for f in ${ROOT}/var/lib/games/emacs/{snake,tetris}-scores; do
+		test -e ${f} || touch ${f}
+	done
 
 	elisp-site-regen
 	emacs-infodir-rebuild

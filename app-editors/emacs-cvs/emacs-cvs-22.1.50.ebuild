@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50.ebuild,v 1.22 2007/07/25 05:59:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50.ebuild,v 1.23 2007/08/21 22:53:25 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -69,7 +69,7 @@ src_unpack() {
 		| sed -e 's/^[^"]*"\([^"]*\)".*$/\1/')
 	[ "${FULL_VERSION}" ] || die "Cannot determine current Emacs version"
 	echo
-	einfo "Emacs CVS trunk"
+	einfo "Emacs CVS branch: ${ECVS_BRANCH}"
 	einfo "Emacs version number: ${FULL_VERSION}"
 	[ "${FULL_VERSION}" = ${PV} ] \
 		|| die "Upstream version number changed to ${FULL_VERSION}"
@@ -215,6 +215,11 @@ emacs-infodir-rebuild() {
 pkg_postinst() {
 	test -f ${ROOT}/usr/share/emacs/site-lisp/subdirs.el ||
 		cp ${ROOT}/usr/share/emacs{/${FULL_VERSION},}/site-lisp/subdirs.el
+
+	local f
+	for f in ${ROOT}/var/lib/games/emacs/{snake,tetris}-scores; do
+		test -e ${f} || touch ${f}
+	done
 
 	elisp-site-regen
 	emacs-infodir-rebuild
