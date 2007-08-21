@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silky/silky-0.5.5.ebuild,v 1.3 2007/08/13 21:36:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silky/silky-0.5.5.ebuild,v 1.4 2007/08/21 22:40:19 ticho Exp $
 
 DESCRIPTION="Simple and easy to use GTK+ based os-independent SILC client."
 HOMEPAGE="http://silky.sourceforge.net/"
@@ -15,7 +15,7 @@ DEPEND=">=gnome-base/libglade-2
 	>=x11-libs/gtk+-2.2
 	x11-libs/pango
 	app-misc/mime-types
-	>=net-im/silc-toolkit-0.9.12-r2"
+	=net-im/silc-toolkit-1.0*"
 
 src_compile() {
 	econf || die "econf failed"
