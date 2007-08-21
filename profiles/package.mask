@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7612 2007/08/21 09:24:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7613 2007/08/21 11:20:13 hawking Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -266,12 +266,6 @@ kde-misc/kdbus
 # Doug Goldstein <cardoe@gentoo.org> (28 Jun 2007)
 # masked due to security issues see bug #177630
 www-apps/otrs
-
-# Ali Polatel <hawking@gentoo.org> (28 Jun 2007)
-# Included in python standard library with python-2.1.
-# See bug #145154 for details.
-# Masked for removal in 30 days.
-dev-python/pyunit
 
 # Wulf C. Krueger <philantrop@gentoo.org> (26 Jun 2007)
 # Broken in several ways, see bug 171493 for details.
