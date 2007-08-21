@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.154 2007/08/11 10:23:51 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.155 2007/08/21 10:53:21 uberlord Exp $
+
+*dhcpcd-3.1.5 (21 Aug 2007)
+
+  21 Aug 2007; Roy Marples <uberlord@gentoo.org> +dhcpcd-3.1.5.ebuild:
+  Bumpage
 
   11 Aug 2007; Roy Marples <uberlord@gentoo.org> dhcpcd-3.1.4.ebuild:
   Fix linker error when coreutils is statically built, #188333.
