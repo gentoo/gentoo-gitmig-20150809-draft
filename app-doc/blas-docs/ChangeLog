@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/blas-docs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/blas-docs/ChangeLog,v 1.4 2007/08/21 17:42:59 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/blas-docs/ChangeLog,v 1.5 2007/08/21 17:58:47 jer Exp $
+
+  21 Aug 2007; Jeroen Roovers <jer@gentoo.org> blas-docs-3.1.1.ebuild:
+  Stable for HPPA (bug #189725).
 
   21 Aug 2007; Ferris McCormick <fmccor@gentoo.org> blas-docs-3.1.1.ebuild:
   Sparc stable --- part of Bug #189725 --- nothing but documentation files.
