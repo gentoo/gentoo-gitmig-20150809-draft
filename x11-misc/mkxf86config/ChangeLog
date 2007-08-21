@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/mkxf86config
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.34 2007/08/01 00:39:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.35 2007/08/21 17:36:14 wolf31o2 Exp $
+
+  21 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  -mkxf86config-0.9.8.ebuild, mkxf86config-0.9.9.ebuild:
+  Marking stable and removing older ebuilds since this version is only a
+  single change and I'm planning on using it for 2007.1's release.
 
 *mkxf86config-0.9.9 (01 Aug 2007)
 
