@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.28 2007/02/17 00:03:36 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.29 2007/08/21 23:30:21 wolf31o2 Exp $
+
+*pyparted-1.8.9 (21 Aug 2007)
+
+  21 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +pyparted-1.8.9.ebuild:
+  Version bump.  Ebuild by Mike Mazur <mmazur@osgdc.org>.  Closing bug #180612.
 
   17 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> metadata.xml:
   Removed allanonjl from metadata.xml
