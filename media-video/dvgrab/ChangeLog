@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvgrab
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.22 2007/04/08 12:38:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.23 2007/08/21 08:10:00 aballier Exp $
+
+*dvgrab-3.0 (21 Aug 2007)
+
+  21 Aug 2007; Alexis Ballier <aballier@gentoo.org> +dvgrab-3.0.ebuild:
+  version bump
 
   08 Apr 2007; Markus Rothe <corsair@gentoo.org> dvgrab-2.1.ebuild:
   Added ~ppc64; bug #173258
