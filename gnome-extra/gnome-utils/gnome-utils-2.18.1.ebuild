@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.18.1.ebuild,v 1.8 2007/08/11 14:57:03 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.18.1.ebuild,v 1.9 2007/08/21 17:48:34 dang Exp $
 
 inherit gnome2
 
@@ -37,5 +37,6 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README THANKS"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable hal)"
+	G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable hal)
+	$(use_enable hal gfloppy)"
 }
