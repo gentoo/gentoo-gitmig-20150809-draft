@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnuplot-py
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.19 2007/07/26 18:25:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.20 2007/08/21 12:00:25 fmccor Exp $
+
+  21 Aug 2007; Ferris McCormick <fmccor@gentoo.org>
+  gnuplot-py-1.7-r1.ebuild:
+  Add ~sparc keyword as complement to gnuplot; appears to work fine.
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org> gnuplot-py-1.7-r1.ebuild:
   Added ~ppc64; bug #186188
