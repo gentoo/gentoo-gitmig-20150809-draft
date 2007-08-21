@@ -1,5 +1,8 @@
 service courierpassd
 {
+# This is for quick on or off of the service
+	disable	= yes
+
 	port = 106
 	socket_type = stream
 	protocol = tcp
@@ -7,8 +10,6 @@ service courierpassd
 	server = /usr/sbin/courierpassd
 	server_args = -s imap
 	wait = no
-	only_from = 127.0.0.1
 	instances = 4
-	disable = no
 }
 
