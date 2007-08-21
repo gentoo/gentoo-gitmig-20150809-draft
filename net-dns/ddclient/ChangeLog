@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.27 2007/08/08 03:17:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.28 2007/08/21 13:46:09 uberlord Exp $
+
+*ddclient-3.7.3 (21 Aug 2007)
+
+  21 Aug 2007; Roy Marples <uberlord@gentoo.org> +ddclient-3.7.3.ebuild:
+  Rework the install section so we don't have to change back to the root/wheel
+  group so we can install on FreeBSD Keyworded ~x86-fbsd and bumped, #170708.
 
 *ddclient-3.7.2-r1 (08 Aug 2007)
 
