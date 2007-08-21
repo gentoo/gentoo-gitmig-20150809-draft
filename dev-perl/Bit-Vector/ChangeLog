@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Bit-Vector
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/ChangeLog,v 1.25 2007/03/23 22:57:53 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/ChangeLog,v 1.26 2007/08/21 13:46:56 jer Exp $
+
+  21 Aug 2007; Jeroen Roovers <jer@gentoo.org> Bit-Vector-6.4.ebuild:
+  Stable for HPPA (bug #153189).
 
   23 Mar 2007; René Nussbaumer <killerfox@gentoo.org>
   Bit-Vector-6.4.ebuild:
