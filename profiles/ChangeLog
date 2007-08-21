@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.587 2007/08/21 18:25:29 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.588 2007/08/21 19:54:01 mrness Exp $
+
+  21 Aug 2007; Alin Năstac <mrness@gentoo.org> updates/3Q-2007:
+  Move net-proxy/vultureng to net-proxy/vulture.
 
   21 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> package.mask:
   Added ~app-editors/kile-2.0_beta1.
