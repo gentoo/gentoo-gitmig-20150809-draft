@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.188 2007/08/20 21:28:54 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.189 2007/08/21 17:47:14 gustavoz Exp $
+
+  21 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  php-4.4.8_pre20070816.ebuild:
+  Stable on sparc wrt security #189172
 
   20 Aug 2007; Markus Ullmann <jokey@gentoo.org>
   php-4.4.8_pre20070816.ebuild:
