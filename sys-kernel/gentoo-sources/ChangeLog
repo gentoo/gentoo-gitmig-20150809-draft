@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.424 2007/08/16 16:23:47 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.425 2007/08/21 16:12:44 phreak Exp $
+
+*gentoo-sources-2.6.22-r5 (21 Aug 2007)
+
+  21 Aug 2007; Christian Heim <phreak@gentoo.org>
+  +gentoo-sources-2.6.22-r5.ebuild:
+  Revision bump for Linux 2.6.22 and #187175 for ia64.
 
 *gentoo-sources-2.6.22-r4 (16 Aug 2007)
 
