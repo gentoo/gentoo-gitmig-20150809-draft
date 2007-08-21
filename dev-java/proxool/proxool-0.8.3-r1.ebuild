@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/proxool-0.8.3-r1.ebuild,v 1.5 2007/08/18 11:08:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/proxool-0.8.3-r1.ebuild,v 1.6 2007/08/21 19:26:25 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-nodeps"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-source.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 # Tests disabled because they would need hibernate
