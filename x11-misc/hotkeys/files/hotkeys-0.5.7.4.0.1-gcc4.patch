@@ -1,0 +1,21 @@
+--- src/fixVMware.c~	2004-12-24 16:03:55.000000000 +0100
++++ src/fixVMware.c	2007-08-20 16:37:34.000000000 +0200
+@@ -19,6 +19,8 @@
+     $Id: hotkeys-0.5.7.4.0.1-gcc4.patch,v 1.1 2007/08/21 14:01:54 ulm Exp $
+ */
+ 
++#include <stdlib.h>
++#include <strings.h>
+ #include <signal.h>
+ #include <unistd.h>
+ #include <pthread.h>
+--- src/splash.c~	2002-12-03 19:13:14.000000000 +0100
++++ src/splash.c	2007-08-20 16:38:19.000000000 +0200
+@@ -27,6 +27,7 @@
+ 
+ #if HAVE_GTK
+ 
++#include <stdlib.h>
+ #include <gtk/gtk.h>
+ #include <X11/X.h>
+ #include <X11/Xatom.h>
