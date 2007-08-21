@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.9.1-r2.ebuild,v 1.2 2007/04/11 14:59:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.9.1-r2.ebuild,v 1.3 2007/08/21 19:25:15 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -14,7 +14,7 @@ SRC_URI="https://jdic.dev.java.net/files/documents/880/16466/${MY_P}-src.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="examples"
 
 DEPEND=">=virtual/jdk-1.4
