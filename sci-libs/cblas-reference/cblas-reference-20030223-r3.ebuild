@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r3.ebuild,v 1.3 2007/06/25 17:52:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r3.ebuild,v 1.4 2007/08/21 16:46:48 bicatali Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -27,8 +27,8 @@ src_unpack() {
 	unpack ${A}
 	# Must patch before changing to S. Patches that create new files
 	# will happily apply anywhere.
-	epatch "${FILESDIR}"/${P}-autotool.patch
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-autotool.patch
 	eautoreconf
 }
 
