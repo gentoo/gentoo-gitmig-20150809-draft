@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.1 2007/08/21 15:47:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.2 2007/08/21 17:19:57 bicatali Exp $
 
 inherit eutils autotools flag-o-matic fortran multilib
 
@@ -55,7 +55,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		--libdir=/usr/$(get_libdir)/lapack/reference \
+		--libdir="/usr/$(get_libdir)/lapack/reference" \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
@@ -67,12 +67,14 @@ src_install() {
 }
 
 src_test() {
-	cd TESTING/MATGEN && emake || die "Failed to create tmglib.a"
-	cd ../ && emake || die "lapack-reference tests failed."
+	cd "${S}"/TESTING/MATGEN
+	emake || die "Failed to create tmglib.a"
+	cd "${S}"/TESTING
+	emake || die "lapack-reference tests failed."
 }
 
 pkg_postinst() {
 	[[ -z "$(eselect lapack show)" ]] && eselect lapack set reference
 	elog "To use LAPACK reference implementation, you have to issue (as root):"
-	elog "\n\teselect lapack set reference\n"
+	elog "\t eselect lapack set reference"
 }

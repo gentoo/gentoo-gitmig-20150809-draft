@@ -50,10 +50,10 @@ EBUILD lapack-reference-3.1.0.ebuild 1878 RMD160 9c678fdcd43a5cfd03050232d5d82f9
 MD5 40dcc1492243328c065141bfb98ead3c lapack-reference-3.1.0.ebuild 1878
 RMD160 9c678fdcd43a5cfd03050232d5d82f9cebcc30a7 lapack-reference-3.1.0.ebuild 1878
 SHA256 84fe3c2ee90d9b80575e520af49547ee4482669090c5b168a8afbc51c05917e1 lapack-reference-3.1.0.ebuild 1878
-EBUILD lapack-reference-3.1.1-r1.ebuild 2143 RMD160 37fa13b3af67148596daf49b4966b3b7799e24cd SHA1 d1c3021a50ddcec73e74b28f6d659d70de51d253 SHA256 a53eb0d21358b3f84647de8b841df6357bbd334a227952bf0b029a14e2cf8f89
-MD5 9042a1ce2efe1787da73dc88b9db0ab5 lapack-reference-3.1.1-r1.ebuild 2143
-RMD160 37fa13b3af67148596daf49b4966b3b7799e24cd lapack-reference-3.1.1-r1.ebuild 2143
-SHA256 a53eb0d21358b3f84647de8b841df6357bbd334a227952bf0b029a14e2cf8f89 lapack-reference-3.1.1-r1.ebuild 2143
+EBUILD lapack-reference-3.1.1-r1.ebuild 2156 RMD160 2cb46243c1ba351cfd807fcb226567db0033baec SHA1 404dd845d16faeb9ace0dbcc89ff7a7168814b0b SHA256 55efb170553b0abd698596605696bd3f59c20066248789b43b0f6d063a2b535f
+MD5 28051751d528f2c62c28d3bfeba57e39 lapack-reference-3.1.1-r1.ebuild 2156
+RMD160 2cb46243c1ba351cfd807fcb226567db0033baec lapack-reference-3.1.1-r1.ebuild 2156
+SHA256 55efb170553b0abd698596605696bd3f59c20066248789b43b0f6d063a2b535f lapack-reference-3.1.1-r1.ebuild 2156
 EBUILD lapack-reference-3.1.1.ebuild 1938 RMD160 e00a043f6e59dd117dd9370c16e9535814d8acb9 SHA1 7d7ceae1e41bce46bf548457b6fd8184783b5ced SHA256 7230c07237e9e18a60a297fcdafbf6850d2a779d6eaf94f776d86dfe7656b158
 MD5 1cbc9977f3066182f7fcc37c613594e5 lapack-reference-3.1.1.ebuild 1938
 RMD160 e00a043f6e59dd117dd9370c16e9535814d8acb9 lapack-reference-3.1.1.ebuild 1938
@@ -84,7 +84,7 @@ SHA256 34e0e977049b900a8d9c1a0f8a1a9065a6147dc38b4c0850d13f0b75a9be101a files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.7 (GNU/Linux)
 
-iD8DBQFGywkF1ycZbhPLE2ARAqspAJ9i5ft8kodg1U0DtQ5zhd/Ftzst9wCePpY4
-lBV2NrN29TNy/8PmP4r/rzo=
-=lfmj
+iD8DBQFGyx7E1ycZbhPLE2ARAhiaAJ9BJVMuQR7XchClBPigKab8FpMCfwCgrFUL
+bTsrsibWBtc8XhvPlQ6RjFk=
+=gZ/0
 -----END PGP SIGNATURE-----
