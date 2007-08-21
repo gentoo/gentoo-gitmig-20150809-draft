@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gnome-vfsmm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.43 2007/08/14 13:53:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.44 2007/08/21 08:32:43 jokey Exp $
+
+  21 Aug 2007; Markus Ullmann <jokey@gentoo.org> gnome-vfsmm-2.18.0.ebuild:
+  Stable on x86 wrt bug #188838
 
   14 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-vfsmm-2.18.0.ebuild:

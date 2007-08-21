@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.51 2007/08/14 13:56:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.52 2007/08/21 08:38:29 jokey Exp $
+
+  21 Aug 2007; Markus Ullmann <jokey@gentoo.org>
+  libgnomecanvasmm-2.16.0.ebuild:
+  Stable on x86 wrt bug #188838
 
   14 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   libgnomecanvasmm-2.16.0.ebuild:
