@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mhwaveedit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.23 2007/07/30 13:58:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.24 2007/08/21 09:47:18 aballier Exp $
+
+*mhwaveedit-1.4.12-r1 (21 Aug 2007)
+
+  21 Aug 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/mhwaveedit-1.4.12-pkgconfig_init.patch,
+  +mhwaveedit-1.4.12-r1.ebuild:
+  always initializes pkg.m4 variables to avoid problems such that bug #188179
 
   30 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   mhwaveedit-1.4.12.ebuild:
