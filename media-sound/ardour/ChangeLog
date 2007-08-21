@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.63 2007/07/27 15:44:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.64 2007/08/21 10:57:59 aballier Exp $
+
+*ardour-2.0.5 (21 Aug 2007)
+
+  21 Aug 2007; Alexis Ballier <aballier@gentoo.org> +ardour-2.0.5.ebuild:
+  version bump, bug #187708
 
   27 Jul 2007; Alexis Ballier <aballier@gentoo.org> ardour-2.0.3.ebuild:
   Avoid building x86 asm on amd64 when sse useflag is not on, bug #186798
