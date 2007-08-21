@@ -1,9 +1,11 @@
 [Desktop Entry]
-Encoding=UTF-8
-Name=KeePass
-Exec=keepass
-Icon=/usr/share/keepass/icons/keepassx.png
+Version=1.0
 Type=Application
-DocPath=keepass/index.html
+Name=KeePassX
 GenericName=Password Manager
-Categories=Qt;KDE;
+GenericName[de]=Passwortverwaltung
+Comment=Cross Platform Password Manager
+Comment[de]=Plattformübergreifende Passwortverwaltung
+Exec=keepass
+Icon=keepassx.png
+Categories=Qt;KDE;Utility;Security;
