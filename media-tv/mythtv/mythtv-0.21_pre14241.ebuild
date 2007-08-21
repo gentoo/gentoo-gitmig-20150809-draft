@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14241.ebuild,v 1.1 2007/08/21 15:34:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14241.ebuild,v 1.2 2007/08/21 20:44:32 cardoe Exp $
 
 inherit flag-o-matic multilib eutils qt3 mythtv subversion
 
@@ -254,4 +254,14 @@ pkg_postinst() {
 		elog "c8:2345:respawn:/sbin/mingetty --autologin mythtv tty8"
 	fi
 
+}
+
+pkg_info() {
+	/usr/bin/mythfrontend --version
+}
+
+pkg_config() {
+	echo "Creating mythtv MySQL user and mythconverg database if it does not"
+	echo "already exist. You will be prompted for your MySQL root password."
+	/usr/bin/mysql -u root -p < /usr/share/mythtv/database/mc.sql
 }
