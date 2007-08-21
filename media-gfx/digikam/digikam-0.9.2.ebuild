@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.2.ebuild,v 1.3 2007/08/09 15:59:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.2.ebuild,v 1.4 2007/08/21 00:22:52 philantrop Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -25,7 +25,7 @@ DEPEND=">=media-libs/libgphoto2-2.2
 	>=dev-db/sqlite-3
 	>=media-libs/libkipi-0.1.5
 	>=media-libs/tiff-3.8.2
-	>=media-libs/lcms-1.14
+	<media-libs/lcms-1.17
 	>=media-libs/libpng-1.2
 	>=media-libs/jasper-1.7
 	>=media-libs/libkexiv2-0.1.3

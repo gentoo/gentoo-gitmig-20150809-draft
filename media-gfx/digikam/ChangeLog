@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.94 2007/08/13 20:56:23 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.95 2007/08/21 00:22:52 philantrop Exp $
+
+  21 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> digikam-0.9.0.ebuild,
+  digikam-0.9.1.ebuild, digikam-0.9.2.ebuild:
+  Changed the dependency on lcms to <media-libs/lcms-1.17 because digikam
+  won't compile with 1.17. Fixes bug 189004.
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   digikam-0.9.1.ebuild:
