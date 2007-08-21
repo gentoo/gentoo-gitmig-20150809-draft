@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-m17n
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.25 2007/08/07 16:00:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.26 2007/08/21 15:35:30 gustavoz Exp $
+
+  21 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  scim-m17n-0.2.2.ebuild:
+  Stable on sparc wrt #189292
 
   07 Aug 2007; MATSUU Takuto <matsuu@gentoo.org> -scim-m17n-0.2.0.ebuild,
   -scim-m17n-0.2.1.ebuild, scim-m17n-0.2.2.ebuild:
