@@ -1,17 +1,18 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.8.11.ebuild,v 1.4 2007/08/21 08:58:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_pre5.ebuild,v 1.1 2007/08/21 08:58:21 bicatali Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
+MYP=${P/_/}
 DESCRIPTION="An Interactive Data Language compatible incremental compiler"
 LICENSE="GPL-2"
 HOMEPAGE="http://gnudatalanguage.sourceforge.net/"
-SRC_URI="mirror://sourceforge/gnudatalanguage/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gnudatalanguage/${MYP}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="python fftw hdf hdf5 netcdf imagemagick"
+IUSE="python fftw hdf hdf5 netcdf imagemagick proj"
 
 RDEPEND=">=sys-libs/readline-4.3
 	sci-libs/gsl
@@ -20,23 +21,25 @@ RDEPEND=">=sys-libs/readline-4.3
 	hdf? ( sci-libs/hdf )
 	hdf5? ( sci-libs/hdf5 )
 	netcdf? ( sci-libs/netcdf )
-	python? ( dev-lang/python
+	python? ( virtual/python
 			dev-python/numarray
 			dev-python/matplotlib )
-	fftw? ( sci-libs/fftw )"
+	fftw? ( >=sci-libs/fftw-3 )
+	proj? ( sci-libs/proj )"
 
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
-RESTRICT=test
+S="${WORKDIR}/${MYP}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc4-gentoo.patch
+	epatch "${FILESDIR}"/${P}-proj4.patch
 }
 
 src_compile() {
+	use proj && append-cppflags -DPJ_LIB__
 	econf \
 	  $(use_with python) \
 	  $(use_with fftw) \
@@ -44,13 +47,21 @@ src_compile() {
 	  $(use_with hdf5) \
 	  $(use_with netcdf) \
 	  $(use_with imagemagick Magick) \
-	  || die "econf failed!"
+	  $(use_with proj libproj4) \
+	  || die "econf failed"
 
 	emake || die "emake failed"
 }
 
+src_test() {
+	cd ${S}/testsuite
+	PATH=${S}/src gdl <<EOF
+test_suite
+EOF
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "failed to install"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	insinto /usr/share/${PN}
 	doins -r src/pro
