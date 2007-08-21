@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7615 2007/08/21 16:05:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7616 2007/08/21 18:25:29 philantrop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Wulf C. Krueger <philantrop@gentoo.org> (21 Aug 2007)
+# Temporary mask. Beta release.
+~app-editors/kile-2.0_beta1
 
 # Wulf C. Krueger <philantrop@gentoo.org> (21 Aug 2007)
 # Stable version doesn't compile, unstable version is partly broken.
