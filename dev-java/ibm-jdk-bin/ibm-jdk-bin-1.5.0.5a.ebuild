@@ -1,6 +1,6 @@
-	# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.5a.ebuild,v 1.1 2007/08/21 09:44:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.5a.ebuild,v 1.2 2007/08/21 09:46:29 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
