@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.0.ebuild,v 1.10 2007/08/22 06:32:44 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.0.ebuild,v 1.11 2007/08/22 06:42:54 wltjr Exp $
 
 inherit eutils java-pkg-2
 
@@ -14,9 +14,9 @@ KEYWORDS="~amd64 x86"
 IUSE="doc examples source test"
 
 COMMON_DEPEND="dev-java/log4j"
-RDEPEND="|| ( =virtual/jre-1.4* =virtual/jre-1.5* )
+RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
-DEPEND=">=virtual/jdk-1.4
+DEPEND="|| ( =virtual/jdk-1.4* =virtual/jdk-1.5* )
 	app-arch/unzip
 	dev-java/cpptasks
 	test? (
