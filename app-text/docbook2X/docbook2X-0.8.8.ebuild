@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8.ebuild,v 1.1 2007/08/21 22:00:02 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8.ebuild,v 1.2 2007/08/22 16:45:41 mr_bones_ Exp $
 
 DESCRIPTION="Tools to convert docbook to man and info"
 SRC_URI="mirror://sourceforge/docbook2x/${P}.tar.gz"
@@ -17,7 +17,6 @@ RDEPEND=">=dev-perl/XML-Writer-0.4
 	>=dev-perl/XML-XSLT-0.31
 	>=dev-perl/SGMLSpm-1.03
 	dev-libs/libxslt"
-
 
 src_compile() {
 	econf \

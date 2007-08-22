@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-4.1.2.5.ebuild,v 1.1 2007/08/21 23:02:05 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-4.1.2.5.ebuild,v 1.2 2007/08/22 16:45:20 mr_bones_ Exp $
 
 DESCRIPTION="Simplified Docbook DTD for XML"
 HOMEPAGE="http://www.oasis-open.org/docbook/xml/simple/4.1.2.5/"
@@ -16,7 +16,6 @@ DEPEND=">=app-arch/unzip-5.41
 RDEPEND=""
 
 S=${WORKDIR}
-
 
 xml_catalog_setup() {
 	CATALOG="${ROOT}etc/xml/catalog"
