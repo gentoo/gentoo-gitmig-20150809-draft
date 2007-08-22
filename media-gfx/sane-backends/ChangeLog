@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.119 2007/08/21 14:39:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.120 2007/08/22 13:51:17 zzam Exp $
+
+*sane-backends-1.0.18-r4 (22 Aug 2007)
+
+  22 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-rule-3.patch, +sane-backends-1.0.18-r4.ebuild:
+  Sadly the udev-rules did break for older kernels. Using ATTRS instead of
+  ATTR makes them finally work for old AND new kernels, Bug 188573.
 
   21 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sane-backends-1.0.18-r3.ebuild:
