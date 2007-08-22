@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.122 2007/07/10 17:42:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.123 2007/08/22 09:51:17 uberlord Exp $
+
+*rsync-2.6.9-r3 (22 Aug 2007)
+
+  22 Aug 2007; Roy Marples <uberlord@gentoo.org>
+  +files/rsync-2.6.9-fname-obo.patch, +rsync-2.6.9-r3.ebuild:
+  Fix off-by-one errors, #189132 thanks to Tobias Scherbaum.
 
   10 Jul 2007; Christoph Mende <angelos@gentoo.org> rsync-2.6.9-r2.ebuild:
   Stable on amd64 wrt bug #184685
