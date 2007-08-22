@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.41 2007/07/22 08:50:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.42 2007/08/22 17:39:17 aballier Exp $
+
+*gpac-0.4.4 (22 Aug 2007)
+
+  22 Aug 2007; Alexis Ballier <aballier@gentoo.org> +gpac-0.4.4.ebuild:
+  version bump, bug #189692, dropping some keywords for missing openjpeg lib
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; gpac-0.4.2.ebuild,
   gpac-0.4.2-r1.ebuild:
