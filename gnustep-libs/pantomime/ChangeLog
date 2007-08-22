@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/pantomime
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.16 2006/10/11 20:21:55 grobian Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.17 2007/08/22 16:26:57 uberlord Exp $
+
+  22 Aug 2007; Roy Marples <uberlord@gentoo.org>
+  pantomime-1.2.0.20060925.ebuild:
+  Keyworded ~x86-fbsd, #183467 thanks to Nathan Smith.
 
 *pantomime-1.2.0.20060925 (11 Oct 2006)
 
