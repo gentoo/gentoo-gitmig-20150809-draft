@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-ssl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.7 2007/08/22 07:21:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.8 2007/08/22 13:54:00 jurek Exp $
+
+  22 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> ocaml-ssl-0.4.2.ebuild:
+  x86 stable (bug #189794)
 
   22 Aug 2007; Alexis Ballier <aballier@gentoo.org> -ocaml-ssl-0.4.1.ebuild:
   remove unused version
