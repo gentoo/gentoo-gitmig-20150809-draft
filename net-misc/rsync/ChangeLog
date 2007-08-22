@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.124 2007/08/22 15:29:55 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.125 2007/08/22 18:04:00 gustavoz Exp $
+
+  22 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> rsync-2.6.9-r3.ebuild:
+  Stable on sparc wrt security #189132
 
   22 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   rsync-2.6.9-r3.ebuild:
