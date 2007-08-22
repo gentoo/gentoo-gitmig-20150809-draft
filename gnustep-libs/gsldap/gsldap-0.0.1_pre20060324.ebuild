@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsldap/gsldap-0.0.1_pre20060324.ebuild,v 1.1 2006/03/26 12:31:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsldap/gsldap-0.0.1_pre20060324.ebuild,v 1.2 2007/08/22 16:58:13 angelos Exp $
 
 inherit gnustep subversion
 
@@ -11,7 +11,7 @@ ESVN_STORE_DIR="${DISTDIR}/svn-src/svn.gna.org-gnustep/libs"
 DESCRIPTION="GNUstep LDAP library for open ldap C libraries"
 HOMEPAGE="http://www.gnustep.org/"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
