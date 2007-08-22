@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/jgoodies-animation-1.2.0.ebuild,v 1.4 2007/08/21 19:30:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/jgoodies-animation-1.2.0.ebuild,v 1.5 2007/08/22 06:41:15 opfer Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 
@@ -39,6 +39,7 @@ src_unpack() {
 	# cp ${FILESDIR}/build-${PV}.xml ${S}
 	java-ant_xml-rewrite -f build.xml -d -e javac -a bootclasspath \
 		|| die "Failed to fix bootclasspath"
+	java-pkg_filter-compiler jikes
 }
 
 # precompiled javadocs
