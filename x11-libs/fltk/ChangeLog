@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.86 2007/08/22 16:42:24 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.87 2007/08/22 17:26:22 jurek Exp $
+
+  22 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> fltk-1.1.7-r2.ebuild:
+  x86 stable (bug #189796)
 
   22 Aug 2007; Santiago M. Mola <coldwind@gentoo.org>
   +files/fltk-1.1.7-maxmin-typo.patch, fltk-1.1.7-r2.ebuild:

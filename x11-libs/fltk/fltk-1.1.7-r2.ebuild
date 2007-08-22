@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r2.ebuild,v 1.8 2007/08/22 16:42:24 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r2.ebuild,v 1.9 2007/08/22 17:26:22 jurek Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="C++ user interface toolkit for X and OpenGL."
 HOMEPAGE="http://www.fltk.org"
 SRC_URI="http://ftp.easysw.com/pub/${PN}/${PV}/${P}-source.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 LICENSE="FLTK LGPL-2"
 
 PV_MAJOR=${PV/.*/}
