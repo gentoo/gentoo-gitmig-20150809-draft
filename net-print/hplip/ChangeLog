@@ -1,6 +1,14 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.73 2007/08/21 12:06:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.74 2007/08/22 13:35:39 zzam Exp $
+
+*hplip-2.7.7-r2 (22 Aug 2007)
+
+  22 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/hplip-2.7.7-udev-kernel.2.6.22.diff, -hplip-2.7.7-r1.ebuild,
+  +hplip-2.7.7-r2.ebuild:
+  Changed ATTR to ATTRS to also make it back working with old
+  usb-kernel-interface, Bug #186906.
 
 *hplip-2.7.7-r1 (21 Aug 2007)
 
