@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.ebuild,v 1.1 2007/08/20 17:58:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.ebuild,v 1.2 2007/08/22 16:46:07 mr_bones_ Exp $
 
 inherit eutils java-pkg-2 java-ant-2 toolchain-funcs
 
@@ -212,4 +212,3 @@ src_install() {
 
 	dohtml about.html || die
 }
-
