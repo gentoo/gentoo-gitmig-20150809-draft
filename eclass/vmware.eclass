@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.26 2007/08/22 00:10:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.27 2007/08/22 00:24:41 wolf31o2 Exp $
 
 # This eclass is for all vmware-* ebuilds in the tree and should contain all
 # of the common components across the multiple packages.
@@ -142,7 +142,8 @@ vmware_src_unpack() {
 		# Remove PAX MPROTECT flag from all applicable files in /bin, /sbin for
 		# the vmware package only (since modules, tools and console should not
 		# need to generate code on the fly in memory).
-		[[ "${product}" == "vmware" ]] && pax-mark -m $(list-paxables ${S}/{bin,sbin}/{vmware-serverd,vmware-vmx})
+		[[ "${product}" == "vmware" ]] && pax-mark -m \
+		$(list-paxables ${S}/{bin{,-debug},sbin}/{vmware-serverd,vmware-vmx})
 
 		# Run through any patches that might need to be applied
 		cd "${S}"
@@ -269,7 +270,7 @@ vmware_src_install() {
 	fi
 
 	# Do we have vmware-ping/vmware-vmx?  If so, make them setuid.
-	for p in /bin/vmware-ping /lib/bin/vmware-vmx /lib/bin-debug/vmware-vm /sbin/vmware-authd;
+	for p in /bin/vmware-ping /lib/bin/vmware-vmx /lib/bin-debug/vmware-vmx /sbin/vmware-authd;
 	do
 		if [ -x "${D}${VMWARE_INSTALL_DIR}${p}" ]
 		then
