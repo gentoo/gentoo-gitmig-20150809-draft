@@ -1,6 +1,11 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.73 2007/08/08 19:27:26 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.74 2007/08/22 06:33:57 leio Exp $
+
+  22 Aug 2007; Mart Raudsepp <leio@gentoo.org>
+  sparc32/2006.1/2.4/package.mask, sparc64/2006.1/2.4/package.mask:
+  Relaxing librsvg mask to 2.17, so that there is an unmasked librsvg for the
+  subprofiles
 
   08 Aug 2007; Tiziano Müller <dev-zero@gentoo.org>
   sparc64/2007.0/make.defaults:
