@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.53 2007/08/21 08:28:00 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.54 2007/08/22 10:53:15 uberlord Exp $
+
+  22 Aug 2007; Roy Marples <uberlord@gentoo.org> gconfmm-2.18.0.ebuild:
+  Keyworded ~x86-fbsd.
 
   21 Aug 2007; Markus Ullmann <jokey@gentoo.org> gconfmm-2.18.0.ebuild:
   Stable on x86 wrt bug #188838
