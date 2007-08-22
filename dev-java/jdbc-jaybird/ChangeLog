@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-jaybird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.21 2007/08/22 06:42:54 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.22 2007/08/22 08:28:40 betelgeuse Exp $
+
+  22 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jdbc-jaybird-2.0.1.ebuild, jdbc-jaybird-2.1.0.ebuild:
+  Prefer 1.5 over 1.4
 
   22 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   jdbc-jaybird-2.0.1.ebuild, jdbc-jaybird-2.1.0.ebuild:
