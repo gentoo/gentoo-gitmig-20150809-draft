@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.46 2007/06/28 10:42:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.47 2007/08/22 06:21:06 aballier Exp $
+
+*mutagen-1.12 (22 Aug 2007)
+
+  22 Aug 2007; Alexis Ballier <aballier@gentoo.org> +mutagen-1.12.ebuild:
+  version bump
 
   28 Jun 2007; Raúl Porcel <armin76@gentoo.org> mutagen-1.11.ebuild:
   Add ~ia64 wrt #183481
