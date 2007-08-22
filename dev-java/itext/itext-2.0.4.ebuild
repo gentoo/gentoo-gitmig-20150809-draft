@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.4.ebuild,v 1.3 2007/06/16 12:29:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.4.ebuild,v 1.4 2007/08/22 06:23:11 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -24,9 +24,9 @@ IUSE="cjk"
 
 COMMON_DEPEND=">=dev-java/bcmail-1.36
 	>=dev-java/bcprov-1.36"
-DEPEND="|| ( =virtual/jdk-1.6 =virtual/jdk-1.5 =virtual/jdk-1.4* )
+DEPEND="|| ( =virtual/jdk-1.6* =virtual/jdk-1.5* =virtual/jdk-1.4* )
 	${COMMON_DEPEND}"
-RDEPEND="|| ( =virtual/jre-1.6 =virtual/jre-1.5 =virtual/jre-1.4* )
+RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 
 S=${WORKDIR}

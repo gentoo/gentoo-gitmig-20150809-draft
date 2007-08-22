@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.47 2007/06/16 12:29:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.48 2007/08/22 06:23:11 wltjr Exp $
+
+  22 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org> itext-1.4.8.ebuild,
+  itext-2.0.4.ebuild:
+  Remove older versions cleaned up ebuilds per bug #186323
 
   16 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org> itext-2.0.4.ebuild:
   Added ~ppc, bug #180394
