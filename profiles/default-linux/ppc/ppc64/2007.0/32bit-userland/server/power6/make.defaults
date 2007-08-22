@@ -1,0 +1,7 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/2007.0/32bit-userland/server/power6/make.defaults,v 1.1 2007/08/22 14:30:30 ranger Exp $
+
+CFLAGS="-O2 -pipe -mtune=power6 -mcpu=power6 -mabi=altivec"
+CXXFLAGS=${CFLAGS}
+USE="ibm"
