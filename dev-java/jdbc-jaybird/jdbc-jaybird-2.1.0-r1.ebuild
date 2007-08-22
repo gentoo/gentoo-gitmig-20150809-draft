@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.0-r1.ebuild,v 1.6 2007/08/17 21:29:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.0-r1.ebuild,v 1.7 2007/08/22 06:32:44 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source examples test"
 
@@ -16,15 +16,15 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="jni"
 
 RDEPEND=">=virtual/jre-1.4
-		dev-java/log4j"
+	dev-java/log4j"
 DEPEND="|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
-		app-arch/unzip
-		dev-java/log4j
-		jni? ( dev-java/cpptasks )
-		test? (
-			dev-java/junit
-			dev-java/ant-junit
-		)"
+	app-arch/unzip
+	dev-java/log4j
+	jni? ( dev-java/cpptasks )
+	test? (
+		dev-java/junit
+		dev-java/ant-junit
+	)"
 
 S="${WORKDIR}/client-java"
 
