@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.63 2007/08/22 15:19:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.64 2007/08/22 16:24:37 opfer Exp $
+
+  22 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  id3lib-3.8.3-r6.ebuild:
+  stable x86, security bug 189610
 
   22 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   id3lib-3.8.3-r6.ebuild:
