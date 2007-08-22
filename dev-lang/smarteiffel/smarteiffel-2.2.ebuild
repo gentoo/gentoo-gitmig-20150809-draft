@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-2.2.ebuild,v 1.2 2007/07/13 06:25:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-2.2.ebuild,v 1.3 2007/08/22 21:29:50 truedfx Exp $
 
-inherit toolchain-funcs multilib
+inherit flag-o-matic toolchain-funcs multilib
 
 MY_PV="${PV/./-}"
 S="${WORKDIR}/SmartEiffel"
@@ -20,6 +20,11 @@ DEPEND="tcc? ( >=dev-lang/tcc-0.9.14 )"
 
 # Destination directory to hold most of the SmartEiffel distribution.
 SE_DIR="/usr/$(get_libdir)/SmartEiffel"
+
+pkg_setup() {
+	# bug #189782
+	append-flags $(test-flags -fno-strict-overflow)
+}
 
 src_compile() {
 	use tcc && CFLAGS=""
