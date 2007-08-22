@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/zile
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.28 2006/12/06 18:27:42 opfer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.29 2007/08/22 10:33:59 ulm Exp $
+
+*zile-2.2.41 (22 Aug 2007)
+
+  22 Aug 2007; Ulrich Mueller <ulm@gentoo.org> zile-2.2.24.ebuild,
+  +zile-2.2.41.ebuild:
+  Version bump, #189816. Remove redundant src_compile function. Add some
+  messages to die commands.
 
 *zile-2.2.24 (06 Dec 2006)
 
