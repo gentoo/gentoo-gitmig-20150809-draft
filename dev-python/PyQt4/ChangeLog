@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.14 2007/08/21 20:43:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.15 2007/08/22 23:58:05 rbu Exp $
+
+  22 Aug 2007; Robert Buchholz <rbu@gentoo.org> PyQt4-4.3.ebuild:
+  Added ~ppc (bug #188998)
 
   21 Aug 2007; Caleb Tennis <caleb@gentoo.org> PyQt4-4.3.ebuild:
   add a check for zlib, per bug #188389
