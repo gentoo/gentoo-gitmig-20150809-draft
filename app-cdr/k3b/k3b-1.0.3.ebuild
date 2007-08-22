@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.3.ebuild,v 1.2 2007/08/02 04:55:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.3.ebuild,v 1.3 2007/08/22 12:07:13 uberlord Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/k3b/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="alsa css dvdr dvdread encode ffmpeg flac hal kde mp3 musepack musicbrainz
 	sndfile vcd vorbis emovix"
 
@@ -133,8 +133,10 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	local group=cdrom
+	use kernel_linux || group=operator
 	echo
 	elog "Make sure you have proper read/write permissions on the cdrom device(s)."
-	elog "Usually, it is sufficient to be in the cdrom group."
+	elog "Usually, it is sufficient to be in the ${group} group."
 	echo
 }
