@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.171 2007/07/24 19:46:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.172 2007/08/22 02:19:49 wolf31o2 Exp $
+
+  22 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  -genkernel-3.4.6.ebuild, -genkernel-3.4.7.ebuild, genkernel-3.4.8.ebuild:
+  Added a small fix for bug #184007 and removing older versions from the tree.
 
   24 Jul 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   genkernel-3.4.8.ebuild:

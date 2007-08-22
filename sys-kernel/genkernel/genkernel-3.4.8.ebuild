@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.8.ebuild,v 1.2 2007/07/24 19:46:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.8.ebuild,v 1.3 2007/08/22 02:19:49 wolf31o2 Exp $
 
 inherit bash-completion eutils
 
@@ -19,6 +19,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://dev.gentoo.org/~wolf31o2/sources/${PN}/${P}.tar.bz2
 	http://dev.gentoo.org/~wolf31o2/sources/${PN}/${PN}-pkg-${VERSION_PKG}.tar.bz2
 	http://people.redhat.com/~heinzm/sw/dmraid/src/dmraid-${VERSION_DMRAID}.tar.bz2
+	http://people.redhat.com/~heinzm/sw/dmraid/src/old/dmraid-${VERSION_DMRAID}.tar.bz2
 	ftp://sources.redhat.com/pub/lvm2/old/LVM2.${VERSION_LVM2}.tgz
 	ftp://sources.redhat.com/pub/dm/old/device-mapper.${VERSION_DMAP}.tgz
 	ftp://ftp.fsl.cs.sunysb.edu/pub/unionfs/unionfs-1.x/snapshots/unionfs-${VERSION_UNIONFS}.tar.gz
