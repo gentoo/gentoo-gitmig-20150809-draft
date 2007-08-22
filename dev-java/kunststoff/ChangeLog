@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/kunststoff
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kunststoff/ChangeLog,v 1.8 2007/05/06 07:56:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kunststoff/ChangeLog,v 1.9 2007/08/22 06:09:35 opfer Exp $
+
+  22 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  kunststoff-2.0.2-r1.ebuild:
+  stable x86, bug 189379
 
   06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   kunststoff-2.0.2-r1.ebuild:
