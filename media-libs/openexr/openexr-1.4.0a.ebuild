@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.4.0a.ebuild,v 1.2 2007/07/19 20:49:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.4.0a.ebuild,v 1.3 2007/08/22 17:54:50 aballier Exp $
 
 WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.9
@@ -56,4 +56,11 @@ src_install () {
 	dodoc AUTHORS Changelog README* ChangeLog LICENSE NEWS
 	newdoc exrdisplay/README README.exrdisplay
 	use doc && dodoc doc/*pdf
+}
+
+pkg_postinst() {
+	ewarn "${PN} may had ABI changes"
+	ewarn "Please run revdep-rebuild"
+	ewarn "to rebuild programs using it"
+	ewarn "(like kdelibs, krita, imagemagick, etc.)"
 }
