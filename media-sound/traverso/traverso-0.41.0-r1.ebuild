@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.41.0-r1.ebuild,v 1.2 2007/07/09 19:14:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.41.0-r1.ebuild,v 1.3 2007/08/22 07:56:14 aballier Exp $
 
 inherit eutils qt4 toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="$(qt4_min_version 4.2.3)
+RDEPEND="$(qt4_min_version 4.3.1)
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
 	>=dev-libs/glib-2.8

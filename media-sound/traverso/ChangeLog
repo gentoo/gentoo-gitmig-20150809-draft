@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/traverso
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.10 2007/08/22 07:54:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.11 2007/08/22 07:56:14 aballier Exp $
+
+  22 Aug 2007; Alexis Ballier <aballier@gentoo.org>
+  traverso-0.41.0-r1.ebuild:
+  depend on qt 4.3.1 as per http://traverso-daw.org/requirements.html
 
   22 Aug 2007; Alexis Ballier <aballier@gentoo.org>
   -files/traverso-0.30.1-execstack.patch,
