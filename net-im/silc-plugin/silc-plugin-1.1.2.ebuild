@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.1.2.ebuild,v 1.2 2007/08/22 05:21:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.1.2.ebuild,v 1.3 2007/08/22 06:48:08 ticho Exp $
 
 inherit eutils perl-module
 
@@ -79,13 +79,12 @@ pkg_postinst() {
 	elog "enter a passphrase for this keypair twice. If you leave the passphrase"
 	elog "empty, your key will not be stored encrypted."
 	elog
-	elog "To make full use of silc-plugin, you should load the following perl scripts"
-	elog "into irssi:"
+	elog "To make full use of silc-plugin, you should load the following perl script"
+	elog "into Irssi:"
 	elog
 	elog "\t/SCRIPT LOAD silc"
-	elog "\t/SCRIPT LOAD silc-mime"
 	elog
-	elog "To connect to the SILCNet, you can use following command in Irssi:"
+	elog "To connect to the SILCNet, you can use following command:"
 	elog
 	elog "\t/CONNECT -silcnet SILCNet silc.silcnet.org"
 	elog
