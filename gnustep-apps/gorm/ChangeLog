@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gorm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.18 2007/08/22 16:23:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.19 2007/08/22 16:53:00 angelos Exp $
+
+  22 Aug 2007; Christoph Mende <angelos@gentoo.org> gorm-1.1.0.ebuild:
+  Added ~amd64 wrt bug #170433
 
   22 Aug 2007; Roy Marples <uberlord@gentoo.org> gorm-1.1.0.ebuild:
   Keyworded ~x86-fbsd, #183467 thanks to Nathan Smith.

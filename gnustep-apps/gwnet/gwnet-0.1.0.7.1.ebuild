@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gwnet/gwnet-0.1.0.7.1.ebuild,v 1.3 2005/08/25 18:57:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gwnet/gwnet-0.1.0.7.1.ebuild,v 1.4 2007/08/22 16:53:46 angelos Exp $
 
 inherit gnustep
 
@@ -10,7 +10,7 @@ DESCRIPTION="A GNUstep network filesystem file browser."
 HOMEPAGE="http://www.gnustep.it/enrico/gworkspace/"
 SRC_URI="http://www.gnustep.it/enrico/gworkspace/gworkspace-${PV/0.1.}.tar.gz"
 
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
 

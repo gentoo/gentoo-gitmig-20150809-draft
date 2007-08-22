@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/textedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/ChangeLog,v 1.9 2007/02/22 00:22:01 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/ChangeLog,v 1.10 2007/08/22 16:57:11 angelos Exp $
+
+  22 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  textedit-0.95_pre20060324.ebuild:
+  Added ~amd64 wrt bug #170433
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

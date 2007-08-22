@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/terminal
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.13 2007/08/22 16:28:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.14 2007/08/22 16:56:18 angelos Exp $
+
+  22 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  terminal-0.9.5_pre20060324.ebuild:
+  Added ~amd64 wrt bug #170433
 
   22 Aug 2007; Roy Marples <uberlord@gentoo.org>
   terminal-0.9.5_pre20060324.ebuild:

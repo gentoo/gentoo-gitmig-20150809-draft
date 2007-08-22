@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preferences/preferences-1.3.0_pre20061204.ebuild,v 1.1 2006/12/05 19:12:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preferences/preferences-1.3.0_pre20061204.ebuild,v 1.2 2007/08/22 16:54:33 angelos Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="cvs.savannah.nongnu.org:/sources/backbone"
@@ -19,7 +19,7 @@ DESCRIPTION="Preferences is the GNUstep program with which you define your own p
 HOMEPAGE="http://www.nongnu.org/backbone/apps.html"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 
 IUSE=""
