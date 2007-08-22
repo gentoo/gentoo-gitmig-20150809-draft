@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r2.ebuild,v 1.7 2007/08/22 15:42:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r2.ebuild,v 1.8 2007/08/22 16:42:24 coldwind Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -39,6 +39,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-amd64.patch"
 	epatch "${FILESDIR}/${P}-as-needed.patch"
 	epatch "${FILESDIR}/${P}-dieonerrors.patch"
+	epatch "${FILESDIR}/${P}-maxmin-typo.patch"
 
 	sed -i -e '/C\(XX\)\?FLAGS=/s:@C\(XX\)\?FLAGS@::' \
 		"${S}/fltk-config.in" || die "unable to sed out compile flags"
