@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-extprefs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-extprefs/ChangeLog,v 1.1 2007/05/01 03:08:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-extprefs/ChangeLog,v 1.2 2007/08/22 13:30:56 gustavoz Exp $
+
+  22 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  pidgin-extprefs-0.7.ebuild:
+  Stable on sparc wrt #189781
 
   01 May 2007; Olivier Crête <tester@gentoo.org> ChangeLog:
   Add renamed version of x11-plugins/gaim-extprefs

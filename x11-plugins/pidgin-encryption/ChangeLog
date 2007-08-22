@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-encryption
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/ChangeLog,v 1.1 2007/05/09 13:14:06 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/ChangeLog,v 1.2 2007/08/22 13:30:17 gustavoz Exp $
+
+  22 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  pidgin-encryption-3.0.ebuild:
+  Stable on sparc wrt #189781
 
 *pidgin-encryption-3.0 (09 May 2007)
 
