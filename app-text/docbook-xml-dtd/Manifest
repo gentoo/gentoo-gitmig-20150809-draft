@@ -27,10 +27,10 @@ EBUILD docbook-xml-dtd-4.4-r1.ebuild 1401 RMD160 461a63b9da0542633af36971c87a02e
 MD5 602d720f56bfcba03d29a3b818e2c4ec docbook-xml-dtd-4.4-r1.ebuild 1401
 RMD160 461a63b9da0542633af36971c87a02e71859aeca docbook-xml-dtd-4.4-r1.ebuild 1401
 SHA256 193dced73e9c2a1b85664253f0415b84b27e01c18fb416d83f08d20c32db5efc docbook-xml-dtd-4.4-r1.ebuild 1401
-EBUILD docbook-xml-dtd-4.5.ebuild 1405 RMD160 51ee4ebcf242d30ada95a841f1ec9db2149adabb SHA1 d0f33a11fb80b313191d0f5ed1ea8b0dfc71cda7 SHA256 bae00c4ce75723f34e7b1f64b63fd0fdb4151a2778c0495cbfbfccaac68c8e61
-MD5 a8d1c6e2031be1f18bd9997f67980a78 docbook-xml-dtd-4.5.ebuild 1405
-RMD160 51ee4ebcf242d30ada95a841f1ec9db2149adabb docbook-xml-dtd-4.5.ebuild 1405
-SHA256 bae00c4ce75723f34e7b1f64b63fd0fdb4151a2778c0495cbfbfccaac68c8e61 docbook-xml-dtd-4.5.ebuild 1405
+EBUILD docbook-xml-dtd-4.5.ebuild 1403 RMD160 51c433446004a3d047a409ff4d9165a4655d4a2f SHA1 1cedfd44afb70d03bd235ac84624833a00f0a453 SHA256 d90f86bded8cc42a99306d07aff376d6f553d47476f0b37a75ff0fdbbbfeafca
+MD5 45b0d303a9a67e6d7a3d86e937af9642 docbook-xml-dtd-4.5.ebuild 1403
+RMD160 51c433446004a3d047a409ff4d9165a4655d4a2f docbook-xml-dtd-4.5.ebuild 1403
+SHA256 d90f86bded8cc42a99306d07aff376d6f553d47476f0b37a75ff0fdbbbfeafca docbook-xml-dtd-4.5.ebuild 1403
 MISC ChangeLog 8533 RMD160 fe6b1488dfb466c9e8516aed6aa8ed5ec1d30605 SHA1 206017c2b8550dcc684bfc2ced1e06c4a696aba8 SHA256 13db2db0bc93ba5242ca352b508d5284a9a3cfa02d8f4b19dd46093fac445e82
 MD5 47b3cca01ea57dbdf63e8e491ecd1979 ChangeLog 8533
 RMD160 fe6b1488dfb466c9e8516aed6aa8ed5ec1d30605 ChangeLog 8533
