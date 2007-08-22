@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.44 2007/07/22 06:25:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.45 2007/08/22 06:31:26 s4t4n Exp $
+
+  22 Aug 2007; Michele Noberasco <s4t4n@gentoo.org> qingy-0.9.6-r1.ebuild:
+  Stable for x86.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; qingy-0.7.4.ebuild:
   Drop virtual/x11 references.
