@@ -1,0 +1,13 @@
+diff --git a/extras/rule_generator/75-persistent-net-generator.rules b/extras/rule_generator/75-persistent-net-generator.rules
+index cfb13f1..543b9a5 100644
+--- a/extras/rule_generator/75-persistent-net-generator.rules
++++ b/extras/rule_generator/75-persistent-net-generator.rules
+@@ -27,7 +27,7 @@ DRIVERS!="?*", ENV{NETDEV}=="?*", IMPORT{program}="write_net_rules --driver $env
+ # skip "locally administered" MAC addresses
+ ATTR{address}=="?[2367abef]:*", GOTO="persistent_net_generator_end"
+ 
+-DRIVERS!="?*", ENV{NETDEV}!="?*", IMPORT{program}="write_net_rules $attr{address}"
++DRIVERS=="?*", ENV{NETDEV}!="?*", IMPORT{program}="write_net_rules $attr{address}"
+ ENV{INTERFACE_NEW}=="?*", NAME="$env{INTERFACE_NEW}"
+ 
+ LABEL="persistent_net_generator_end"

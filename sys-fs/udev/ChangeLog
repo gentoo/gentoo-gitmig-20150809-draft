@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.334 2007/08/21 13:27:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.335 2007/08/22 14:04:07 zzam Exp $
+
+*udev-114-r2 (22 Aug 2007)
+
+  22 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-114-fix-persistent-net.diff, +udev-114-r2.ebuild:
+  Fixed persistent-net to now really ignore devices without DRIVERS having a
+  value, Bug 189042.
 
   21 Aug 2007; Jeroen Roovers <jer@gentoo.org> udev-114.ebuild:
   Stable for HPPA (bug #188796).
