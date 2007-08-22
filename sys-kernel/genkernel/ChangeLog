@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.172 2007/08/22 02:19:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.173 2007/08/22 19:55:04 wolf31o2 Exp $
+
+*genkernel-3.4.9_pre1 (22 Aug 2007)
+
+  22 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +genkernel-3.4.9_pre1.ebuild:
+  Version bump to a pre-release genkernel version. This should resolve bug
+  #144703, bug #150697, bug #170753, bug #173766, bug #174188, bug #174294,
+  bug #176543, bug #179480, bug #179739, bug #180111, bug #180161, bug
+  #180211, bug #183406, bug #185827, bug #186378, bug #186650, bug #186654,
+  bug #188273, bug #188398, and bug #188954.
 
   22 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -genkernel-3.4.6.ebuild, -genkernel-3.4.7.ebuild, genkernel-3.4.8.ebuild:
