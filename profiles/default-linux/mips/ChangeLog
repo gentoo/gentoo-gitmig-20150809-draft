@@ -1,6 +1,9 @@
 # ChangeLog for MIPS profile directory
 # Copyright 2007-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.4 2007/07/22 11:06:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.5 2007/08/22 02:56:41 redhatter Exp $
+
+  22 Aug 2007; Stuart Longland <redhatter@gentoo.org> use.mask:
+  Took 'dbus' out of use.mask.  dbus-1.0.2-r2 is stable on MIPS and functional.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; virtuals:
   Pull old-style X virtuals: glu, glut, opengl, x11, xft.

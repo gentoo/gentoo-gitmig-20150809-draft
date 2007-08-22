@@ -1,8 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.94 2007/07/08 03:49:58 kumba Exp $
-
-# Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
-# no tested dbus on mips. Masking for now.
-dbus
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.95 2007/08/22 02:56:41 redhatter Exp $
 
 # Samuli Suominen <drac@gentoo.org>
 # No batteries on mips.
