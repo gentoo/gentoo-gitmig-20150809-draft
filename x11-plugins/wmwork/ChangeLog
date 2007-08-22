@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmwork
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwork/ChangeLog,v 1.1 2007/07/20 14:49:18 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwork/ChangeLog,v 1.2 2007/08/22 06:27:43 s4t4n Exp $
+
+  22 Aug 2007; Michele Noberasco <s4t4n@gentoo.org> wmwork-0.2.5.ebuild:
+  Stable for x86.
 
 *wmwork-0.2.5 (20 Jul 2007)
 
