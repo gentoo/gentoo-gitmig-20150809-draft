@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gaim-otr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/ChangeLog,v 1.18 2007/08/22 03:32:33 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/ChangeLog,v 1.19 2007/08/22 03:39:05 tester Exp $
+
+  22 Aug 2007; Olivier Crête <tester@gentoo.org> -gaim-otr-9999.ebuild:
+  Removed upgrade helper, we will just package.mask the old ones
 
 *gaim-otr-9999 (22 Aug 2007)
 
