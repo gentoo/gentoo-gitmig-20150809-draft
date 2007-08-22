@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gaim-otr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/ChangeLog,v 1.17 2007/02/21 23:24:32 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/ChangeLog,v 1.18 2007/08/22 03:32:33 tester Exp $
+
+*gaim-otr-9999 (22 Aug 2007)
+
+  22 Aug 2007; Olivier Crête <tester@gentoo.org> +gaim-otr-9999.ebuild:
+  Add filnew ebuild to pull in pidgin-otr
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
