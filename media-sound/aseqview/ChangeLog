@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/aseqview
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/ChangeLog,v 1.17 2007/08/20 18:12:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/ChangeLog,v 1.18 2007/08/22 18:46:16 jurek Exp $
+
+  22 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> aseqview-0.2.8.ebuild:
+  x86 stable (bug #189137)
 
   16 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> aseqview-0.2.8.ebuild:
   Stable on sparc wrt #189137
