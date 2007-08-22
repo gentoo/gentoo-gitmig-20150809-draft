@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gmines
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gmines/ChangeLog,v 1.6 2007/08/18 15:18:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gmines/ChangeLog,v 1.7 2007/08/22 16:28:02 uberlord Exp $
+
+  22 Aug 2007; Roy Marples <uberlord@gentoo.org> gmines-0.1-r1.ebuild:
+  Keyworded ~x86-fbsd, #183467 thanks to Nathan Smith.
 
   18 Aug 2007; Christoph Mende <angelos@gentoo.org> gmines-0.1-r1.ebuild:
   Added ~amd64 wrt bug #170433

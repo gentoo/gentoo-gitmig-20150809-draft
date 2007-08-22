@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/addresses
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/ChangeLog,v 1.8 2007/08/18 15:15:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/ChangeLog,v 1.9 2007/08/22 16:25:38 uberlord Exp $
+
+  22 Aug 2007; Roy Marples <uberlord@gentoo.org> addresses-0.4.6-r1.ebuild:
+  Keyworded ~x86-fbsd, #183467 thanks to Nathan Smith.
 
   18 Aug 2007; Christoph Mende <angelos@gentoo.org>
   addresses-0.4.6-r1.ebuild:

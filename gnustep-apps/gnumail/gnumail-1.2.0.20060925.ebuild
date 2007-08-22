@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.20060925.ebuild,v 1.3 2007/07/13 07:00:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.20060925.ebuild,v 1.4 2007/08/22 16:24:43 uberlord Exp $
 
 inherit gnustep
 
@@ -13,7 +13,7 @@ DESCRIPTION="A fully featured mail application for GNUstep"
 HOMEPAGE="http://www.collaboration-world.com/gnumail/"
 SRC_URI="http://www.collaboration-world.com/gnumail.data/releases/Stable/${MY_PN}-${MY_PV}pre2.tar.gz"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~x86 ~x86-fbsd"
 LICENSE="GPL-2"
 SLOT="0"
 
