@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.41.0-r1.ebuild,v 1.3 2007/08/22 07:56:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.41.0-r1.ebuild,v 1.4 2007/08/22 08:12:48 aballier Exp $
 
 inherit eutils qt4 toolchain-funcs
 
@@ -43,8 +43,6 @@ src_unpack() {
 	sed -ie "s:^\(DESTDIR_TARGET\ =\) \(.*\):\1 /usr/bin:" src/traverso/traverso.pro
 	#  Removing forced cxxflags
 	sed -ie "s:^\(.*QMAKE_CXXFLAGS_RELEASE.*\):#\1:" src/base.pri
-	# adding our cxxflags
-	sed -ie "s:^\(.*release\ {.*\):\1\n QMAKE_CXXFLAGS_RELEASE\ =\ ${CXXFLAGS}:" src/base.pri
 }
 
 src_compile() {
@@ -54,9 +52,8 @@ src_compile() {
 	use lv2 || echo "DEFINES -= LV2_SUPPORT" >> src/base.pri
 	use opengl || echo "DEFINES -= QT_OPENGL_SUPPORT" >> src/base.pri
 
-	QMAKE="/usr/bin/qmake"
-	$QMAKE -recursive traverso.pro -after "QMAKE_STRIP=\"/usr/bin/true\"" || die "qmake failed"
-	emake -j1 CC=$(tc-getCC) CXX=$(tc-getCXX) LINK=$(tc-getCXX) || die "emake failed"
+	eqmake4 traverso.pro || die "qmake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
