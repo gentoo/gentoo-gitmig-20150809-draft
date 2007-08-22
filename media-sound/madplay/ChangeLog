@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/madplay
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.42 2007/08/22 21:27:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.43 2007/08/22 22:31:17 jurek Exp $
+
+  22 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> madplay-0.15.2b-r1.ebuild:
+  x86 stable (bug #189875)
 
   22 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   madplay-0.15.2b-r1.ebuild:
