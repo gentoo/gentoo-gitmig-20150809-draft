@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r1.ebuild,v 1.4 2007/08/21 18:28:23 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r1.ebuild,v 1.5 2007/08/22 09:25:10 coldwind Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -92,7 +92,7 @@ src_install() {
 
 	doenvd 99fltk-${SLOT}
 
-	dohtml -A xbm,xpm,h,cxx,fl -r "${D}"/usr/share/doc/fltk/*
+	dohtml -A xbm,xpm,h,cxx,fl,menu -r "${D}"/usr/share/doc/fltk/*
 	rm -rf "${D}"/usr/share/doc/fltk
 	rm -rf "${D}"/usr/share/man/cat{1,3}
 }
