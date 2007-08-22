@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/vnc2swf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.17 2007/07/22 03:40:51 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.18 2007/08/22 17:20:45 coldwind Exp $
+
+  22 Aug 2007; Santiago M. Mola <coldwind@gentoo.org> metadata.xml:
+  Fix metadata.xml. bug #187277 thanks to Daniel Pielmeier
+  <daniel.pielmeier@googlemail.com>
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; vnc2swf-0.5.0.ebuild:
   Drop virtual/x11 references.
