@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.167 2007/08/21 20:44:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.168 2007/08/22 15:01:20 cardoe Exp $
+
+  22 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-0.20.1_p14146.ebuild, mythtv-0.21_pre14153.ebuild,
+  mythtv-0.21_pre14241.ebuild:
+  recursively copy contrib directory. Always build red_eye changer. build
+  6200ch, sa3250ch and firewire_tester when USE=ieee1394
 
   21 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.21_pre14153.ebuild, mythtv-0.21_pre14241.ebuild:

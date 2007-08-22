@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14153.ebuild,v 1.3 2007/08/21 20:44:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14153.ebuild,v 1.4 2007/08/22 15:01:20 cardoe Exp $
 
-inherit flag-o-matic multilib eutils qt3 mythtv subversion
+inherit flag-o-matic multilib eutils qt3 mythtv subversion toolchain-funcs
 
 DESCRIPTION="Homebrew PVR project"
 SLOT="0"
@@ -180,6 +180,27 @@ src_compile() {
 	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake -o "Makefile" mythtv.pro || die "qmake failed"
 	emake || die "emake failed"
 
+	# firewire support should build the tester
+	if use ieee1394; then
+		cd contrib
+		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../firewire_tester firewire_tester.c \
+			${LDFLAGS} -liec61883 -lraw1394 || \
+			die "failed to compile firewire_tester"
+
+		cd channel_changers
+		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../6200ch 6200ch.c \
+			${LDFLAGS} -lrom1394 -lavc1394 -lraw1394 || \
+			die "failed to compile 6200ch"
+		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../sa3250ch sa3250ch.c \
+			${LDFLAGS} -lrom1394 -lavc1394 -lraw1394 || \
+			die "failed to compile sa3250ch"
+#		LDLIBS="-liec61883 -lraw1394" CC=$(tc-getCC) emake firewire_tester || \
+#			die	"failed to compile firewire_tester"
+	fi
+
+	cd ${S}/contrib/channel_changers
+	$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../red_eye red_eye.c  ${LDFLAGS} || \
+		die "failed to compile red_eye"
 }
 
 src_install() {
@@ -210,7 +231,7 @@ src_install() {
 	newins "${FILESDIR}"/mythtv.logrotate.d mythtv
 
 	insinto /usr/share/mythtv/contrib
-	doins contrib/*
+	doins -r contrib/*
 
 	insinto /usr/share/mythtv/configfiles
 	doins configfiles/*
@@ -225,6 +246,20 @@ src_install() {
 		newins "${FILESDIR}"/bash_profile .bash_profile
 		newins "${FILESDIR}"/xinitrc .xinitrc
 	fi
+
+	if use ieee1394; then
+		dobin firewire_tester || die "failed to install firewire_tester"
+		dodoc contrib/firewire_tester-README
+
+		dobin 6200ch || die "failed to install 6200ch"
+		dodoc contrib/channel_changers/6200ch-README
+
+		dobin sa3250ch || die "failed to install sa3250ch"
+		dodoc contrib/channel_changers/sa3250ch-README
+	fi
+
+	dobin red_eye || die "failed to install red_eye"
+	dodoc contrib/channel_changers/red_eye-README
 }
 
 pkg_preinst() {
