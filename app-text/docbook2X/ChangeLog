@@ -1,6 +1,11 @@
 # ChangeLog for app-text/docbook2X
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.21 2007/08/21 22:00:02 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.22 2007/08/22 18:39:37 ticho Exp $
+
+  22 Aug 2007; Andrej Kacian <ticho@gentoo.org> docbook2X-0.8.7-r1.ebuild,
+  docbook2X-0.8.8.ebuild:
+  Added missing dependency on dev-perl/XML-SAX, bug #189862, fix pushed by
+  Philip Kovacs <kovacsp3@comcast.net>.
 
 *docbook2X-0.8.8 (21 Aug 2007)
 
