@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.1.1_p3.ebuild,v 1.4 2007/08/08 21:50:00 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.1.1_p3.ebuild,v 1.5 2007/08/22 20:41:18 keytoaster Exp $
 
 inherit kde
 
@@ -25,6 +25,13 @@ DEPEND="media-video/dvdauthor
 	media-video/mplayer"
 
 need-kde 3.5
+
+src_unpack() {
+	kde_src_unpack
+
+	# Fix the desktop file for compliance with the spec.
+	sed -i -e '/MimeTypes/d' ${S}/src/${PN}.desktop
+}
 
 src_install() {
 	kde_src_install
