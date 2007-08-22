@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.2.ebuild,v 1.4 2007/08/21 00:22:52 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.2.ebuild,v 1.5 2007/08/22 10:22:10 philantrop Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit kde
+inherit kde eutils
 
 MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
@@ -25,7 +25,7 @@ DEPEND=">=media-libs/libgphoto2-2.2
 	>=dev-db/sqlite-3
 	>=media-libs/libkipi-0.1.5
 	>=media-libs/tiff-3.8.2
-	<media-libs/lcms-1.17
+	>=media-libs/lcms-1.14
 	>=media-libs/libpng-1.2
 	>=media-libs/jasper-1.7
 	>=media-libs/libkexiv2-0.1.3
@@ -54,6 +54,9 @@ pkg_setup(){
 
 src_unpack(){
 	kde_src_unpack
+
+	epatch "${FILESDIR}/${PN}-lcms-1.17.patch"
+
 	rm -f "${S}/configure" "${S_DOC}/configure"
 
 	local MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | tr '\n' ' ')

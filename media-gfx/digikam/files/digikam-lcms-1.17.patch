@@ -1,0 +1,16 @@
+Index: libs/lprof/lcmsprf.h
+===================================================================
+--- digikam-orig/digikam/libs/lprof/lcmsprf.h	(revisione 702957)
++++ digikam/digikam/libs/lprof/lcmsprf.h	(copia locale)
+@@ -70,6 +70,11 @@
+     } MATN,FAR* LPMATN;
+
+
++
++#if (LCMS_VERSION > 116)
++typedef LCMSBOOL BOOL;
++#endif
++
+ LPMATN      cdecl MATNalloc(int Rows, int Cols);
+ void        cdecl MATNfree (LPMATN mat);
+ LPMATN      cdecl MATNmult(LPMATN a1, LPMATN a2);

@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.95 2007/08/21 00:22:52 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.96 2007/08/22 10:22:10 philantrop Exp $
+
+  22 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/digikam-lcms-1.17.patch, -digikam-0.9.0.ebuild,
+  digikam-0.9.1.ebuild, digikam-0.9.2.ebuild:
+  Added an upstream patch to allow for compatibility with all lcms versions in
+  the tree. cf. bug 189004. Thanks to Ingmar van Hassel for his good work on
+  this! 
+  Removed the obsolete version 0.9.0.
 
   21 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> digikam-0.9.0.ebuild,
   digikam-0.9.1.ebuild, digikam-0.9.2.ebuild:
