@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.8.8.ebuild,v 1.1 2007/08/21 23:41:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.8.8.ebuild,v 1.2 2007/08/22 17:32:37 wolf31o2 Exp $
 
 DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
 HOMEPAGE="http://www.gnu.org/software/parted"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls readline debug selinux device-mapper"

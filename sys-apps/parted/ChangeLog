@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.118 2007/08/21 23:41:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.119 2007/08/22 17:32:37 wolf31o2 Exp $
+
+  22 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> parted-1.8.8.ebuild:
+  Changing LICENSE.
 
 *parted-1.8.8 (21 Aug 2007)
 
