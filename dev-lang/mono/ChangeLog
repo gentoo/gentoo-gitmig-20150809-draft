@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.122 2007/07/02 09:53:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.123 2007/08/22 03:40:35 compnerd Exp $
+
+  22 Aug 2007; Saleem Abdulrasool <compnerd@gentoo.org> ChangeLog:
+  Add restrict=test back as it still fails for some people
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> mono-1.1.16.1.ebuild:
   (QA) RESTRICT clean up.

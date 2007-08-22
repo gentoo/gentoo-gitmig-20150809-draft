@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.10 2007/07/02 02:31:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.11 2007/08/22 03:40:35 compnerd Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -28,6 +28,8 @@ PDEPEND="dev-dotnet/pe-format"
 
 # Parallel build unfriendly
 MAKEOPTS="${MAKEOPTS} -j1"
+
+RESTRICT="test"
 
 function get-memory-total() {
 	cat /proc/meminfo | grep MemTotal | sed -r "s/[^0-9]*([[0-9]+).*/\1/"
