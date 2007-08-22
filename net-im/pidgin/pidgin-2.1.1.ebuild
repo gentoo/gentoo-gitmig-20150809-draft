@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.0.2.ebuild,v 1.5 2007/08/03 14:19:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.1.1.ebuild,v 1.1 2007/08/22 02:50:21 tester Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -15,12 +15,11 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi bonjour crypt dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc startup-notification tcl tk xscreensaver spell qq gadu"
+IUSE="bonjour dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc startup-notification tcl tk xscreensaver spell qq gadu"
 IUSE="${IUSE} gtk sasl ncurses groupwise prediction zephyr" # mono"
 
 RDEPEND="
-	bonjour? ( !avahi? ( net-misc/howl )
-		   avahi? ( net-dns/avahi ) )
+	bonjour? ( net-dns/avahi )
 	dbus? ( >=dev-libs/dbus-glib-0.71
 		>=dev-python/dbus-python-0.71
 		>=sys-apps/dbus-0.90
@@ -63,9 +62,7 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn"
 
 # List of plugins yet to be ported (will be removed at some point)
 #   net-im/gaim-bnet
-#   net-im/gaim-snpp (will soon be net-im/pidgin-snpp)
 #   x11-plugins/autoprofile
-#   x11-plugins/gaim-otr
 #   x11-plugins/gaim-xfire
 #   x11-plugins/gaim-galago
 #   x11-themes/gaim-smileys (get liquidx to fix it)
@@ -81,17 +78,19 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn"
 #   app-accessibility/festival-gaim
 # Merged into something else
 #   net-im/gaim-meanwhile (integrated in gaim)
-#   x11-plugins/gaim-libnotify (integrated into pidgin)
+#   net-im/gaim-snpp (merged into the plugin pack)
 #   x11-plugins/gaim-slashexec (integrated into plugin pack)
 
 # List of plugins
 #   net-im/librvp
-#   x11-plugins/gaim-rhythmbox
 #   x11-plugins/guifications
 #   x11-plugins/pidgin-encryption
 #   x11-plugins/pidgin-extprefs
 #   x11-plugins/pidgin-hotkeys
 #   x11-plugins/pidgin-latex
+#   x11-plugins/pidgin-libnotify
+#   x11-plugins/pidgin-otr
+#   x11-plugins/pidgin-rhythmbox
 #   x11-plugins/purple-plugin_pack
 
 print_pidgin_warning() {
@@ -103,8 +102,7 @@ print_pidgin_warning() {
 	ewarn "other external files not properly being found."
 	ewarn
 	ewarn "If you are merging ${MY_P} from an earlier version of gaim,"
-	ewarn "you may need to re-merge any plugins like gaim-encryption or"
-	ewarn " gaim-snpp (when they are ported to pidgin!)."
+	ewarn "you may need to re-merge any plugins like gaim-encryption."
 	ewarn
 	ewarn "If you experience problems with pidgin, file them as bugs with"
 	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org.  DO NOT report them"
@@ -121,14 +119,6 @@ print_pidgin_warning() {
 
 pkg_setup() {
 	print_pidgin_warning
-
-	if use bonjour && use avahi && ! built_with_use net-dns/avahi howl-compat ; then
-	eerror
-	eerror "You need to rebuild net-dns/avahi with USE=howl-compat in order"
-	eerror  "to enable howl support for the bonjour protocol in pidgin."
-	eerror
-	die "Configure failed"
-	fi
 
 	if use gadu && built_with_use net-libs/libgadu ssl ; then
 	eerror
@@ -161,13 +151,6 @@ pkg_setup() {
 		die "Configure failed"
 	fi
 
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${PN}-2.0.0-cchar_t-undeclared.patch"
 }
 
 src_compile() {
