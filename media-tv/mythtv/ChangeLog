@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.169 2007/08/22 15:06:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.170 2007/08/22 21:33:20 cardoe Exp $
+
+*mythtv-0.20.1_p14260 (22 Aug 2007)
+
+  22 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.20.1_p14260.ebuild:
+  MythTV 0.20.2 pre-release. masked, requires plugins rebuild due to ABI
+  break. contains fix for bug #167963. contains Schedules Direct support
 
 *mythtv-0.21_pre14251 (22 Aug 2007)
 
