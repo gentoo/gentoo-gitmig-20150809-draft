@@ -1,6 +1,6 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.99 2007/08/22 06:19:35 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.100 2007/08/22 19:11:14 tove Exp $
 
   22 Aug 2007; Mart Raudsepp <leio@gentoo.org> no-nptl/2.4/package.mask:
   Relaxing librsvg mask to 2.17, so that there is an unmasked librsvg for the
@@ -10,7 +10,7 @@
   no-nptl/2.4/package.mask:
   Masking media-sound/denemo becuase of dependencies masked by the GNOME block.
 
-  19 Aug 2007; Petteri RĂ¤ty <betelgeuse@gentoo.org>
+  19 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
   no-nptl/2.4/package.mask:
   Mask >=dev-java/java-gnome-4.0 as it needs GNOME 2.18 that is also masked here.
 
@@ -19,7 +19,7 @@
   Masking tuxpaint and peacock because of dependencies masked by the GNOME
   block.
 
-  08 Aug 2007; Tiziano MĂźller <dev-zero@gentoo.org> 2006.0/make.defaults,
+  08 Aug 2007; Tiziano Müller <dev-zero@gentoo.org> 2006.0/make.defaults,
   gcc2/make.defaults, 2006.1/make.defaults, 2007.0/make.defaults,
   dev/2007.1/make.defaults, no-nptl/make.defaults, xbox/make.defaults:
   Removed libg++ USE-flag (bug #148416)
@@ -37,7 +37,7 @@
   30 Jul 2007; Daniel Drake <dsd@gentoo.org> no-nptl/2.4/use.mask:
   Mask beagle USE flag on 2.4 profiles
 
-  25 Jul 2007; RaĂşl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  25 Jul 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   Fix net-misc/kvpnc mask
 
   25 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
@@ -75,15 +75,15 @@
   no-nptl/2.4/package.mask:
   Mask giggle on x86/2.4/no-nptl
 
-  11 May 2007; Petteri RĂ¤ty <betelgeuse@gentoo.org>
+  11 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   no-nptl/2.4/package.mask:
   Package.mask >=net-wireless/bluez-hcidump-1.35 on 2.4 kernel.
 
-  11 May 2007; Petteri RĂ¤ty <betelgeuse@gentoo.org>
+  11 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   no-nptl/2.4/package.mask:
   package.mask bluez-gnome for needing bluez-utils-3*
 
-  11 May 2007; Petteri RĂ¤ty <betelgeuse@gentoo.org>
+  11 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   no-nptl/2.4/package.mask:
   Package.mask bluez >=3.0 on 2.4 kernel because it requires udev.
 
@@ -98,7 +98,7 @@
   Add nm-applet to the default-linux/x86/no-nptl/2.4 package.mask as it needs
   both hal and networkmanager
 
-  30 Apr 2007; RaĂşl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  30 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   P.mask gnome-2.18 on 2.4 profiles, bug 176517
 
   29 Apr 2007; Duncan Coutts <dcoutts@gentoo.org>
@@ -111,10 +111,10 @@
   Block sys-cluster/keepalived-1.1.13-r1 on 2.4 profiles as it needs the 2.6
   kernel headers.
 
-  25 Apr 2007; RaĂşl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  25 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   Remove useless mask of mozilla-firefox-1.5
 
-  23 Apr 2007; RaĂşl Porcel <armin76@gentoo.org> no-nptl/2.4/use.mask:
+  23 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/use.mask:
   Use.mask networkmanager in 2.4 profiles, since it needs >=gnome-2.16, bug
   175712
 
@@ -137,19 +137,19 @@
   using it yourself without knowing the implications of what it will affect
   for you.
 
-  10 Apr 2007; RaĂşl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  10 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   Unmask sys-fs/{fuse,ntfs3g} on 2.4 profile since they have a lot of deps and
   it can work with older versions of fuse
 
-  09 Apr 2007; Petteri RĂ¤ty <betelgeuse@gentoo.org>
+  09 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   no-nptl/2.4/package.mask:
   Package.mask >=sys-auth/pam_usb-0.4.0 because it needs sys-apps/hal.
 
-  09 Apr 2007; RaĂşl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  09 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   P.mask sys-fs/fuse and sys-fs/ntfs3g in 2.4 profiles since it 
   needs kernel-2.6
 
-  03 Apr 2007; RaĂşl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
+  03 Apr 2007; Raúl Porcel <armin76@gentoo.org> no-nptl/2.4/package.mask:
   unmask www-client/mozilla-firefox-1.5* wrt bug 173250 in 2.4 profile
 
   23 Mar 2007; Saleem Abdulrasool <compnerd@gentoo.org> no-nptl/package.mask:
@@ -205,7 +205,7 @@
   since it is only a small lib used by certain gnome packages, and does not
   require gnome or any bits that are 2.6 only
 
-  01 Feb 2007; Bryan Ăstergaard <kloeri@gentoo.org>
+  01 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
   no-nptl/2.4/package.mask:
   Update mono mask in no-nptl/2.4.
 
@@ -213,7 +213,7 @@
   no-nptl/2.4/package.mask:
   Masked >=dev-util/anjuta-2.0 in no-nptl/2.4
 
-  29 Jan 2007; Bryan Ăstergaard <kloeri@gentoo.org>
+  29 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   no-nptl/2.4/package.mask:
   Masked dev-util/mono-tools-1.1.17-r1 in no-nptl/2.4.
 
@@ -230,10 +230,10 @@
   12 Jan 2007; Christian Faulhammer <opfer@gentoo.org> package.mask:
   unmask net-p2p/phex again, on armin76's request
 
-  04 Jan 2007; Diego PettenĂ˛ <flameeyes@gentoo.org> use.mask:
+  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> use.mask:
   Revert masking of PHP binary useflags.
 
-  29 Dec 2006; Diego PettenĂ˛ <flameeyes@gentoo.org> use.mask:
+  29 Dec 2006; Diego Pettenò <flameeyes@gentoo.org> use.mask:
   Mask fdftk useflag on base profile and unmask for x86 only.
 
   28 Dec 2006; Tristan Heaven <nyhm@gentoo.org> no-nptl/2.4/package.mask:
@@ -282,7 +282,7 @@
   suggest that nobody uses it quite yet, as I know I'll be breaking it quite a
   bit in the near future.
 
-  28 Oct 2006; Diego PettenĂ˛ <flameeyes@gentoo.org> 2005.1/make.defaults,
+  28 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> 2005.1/make.defaults,
   gcc2/make.defaults, 2006.0/make.defaults, no-nptl/make.defaults,
   xbox/make.defaults:
   Remove xmms useflag from defaults.
@@ -290,7 +290,7 @@
   23 Oct 2006; Simon Stelling <blubb@gentoo.org> package.use.mask:
   mask sse2 flag for x11-terms/eterms as it is amd64-only asm
 
-  22 Oct 2006; Petteri RĂ¤ty <betelgeuse@gentoo.org> +package.use.mask:
+  22 Oct 2006; Petteri Räty <betelgeuse@gentoo.org> +package.use.mask:
   Added package.use.mask to handle jdk/jre nsplugin use flag that is not
   available on all arches.
 
