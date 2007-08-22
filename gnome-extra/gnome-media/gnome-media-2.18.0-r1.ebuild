@@ -1,21 +1,21 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.18.0.ebuild,v 1.9 2007/08/22 02:57:52 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.18.0-r1.ebuild,v 1.1 2007/08/22 02:57:52 dang Exp $
 
-inherit gnome2
+inherit gnome2 eutils autotools
 
 DESCRIPTION="Multimedia related programs for the GNOME desktop"
 HOMEPAGE="http://ronald.bitfreak.net/gnome-media.php"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
-IUSE="ipv6 mad ogg vorbis"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="esd ipv6 mad ogg vorbis"
 
 RDEPEND=">=dev-libs/glib-1.3.7
 	>=gnome-base/libgnome-2.13.7
 	>=gnome-base/libgnomeui-2.13.2
-	>=media-sound/esound-0.2.23
+	esd? ( >=media-sound/esound-0.2.23 )
 	>=gnome-base/libbonobo-2
 	>=x11-libs/gtk+-2.10
 	>=media-libs/gstreamer-0.10.3
@@ -40,7 +40,14 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable ipv6) --disable-esdtest"
+	G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable ese vumeter)
+	--disable-esdtest"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	epatch "${FILESDIR}"/${P}-noesd.patch
 }
 
 src_compile() {
