@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/smbkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/smbkit/ChangeLog,v 1.10 2007/02/22 00:31:02 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/smbkit/ChangeLog,v 1.11 2007/08/22 16:50:57 angelos Exp $
+
+  22 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  smbkit-0.0.1.20060324.ebuild:
+  Added ~amd64 wrt bug #170433
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
