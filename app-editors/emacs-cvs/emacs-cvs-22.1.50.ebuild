@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50.ebuild,v 1.23 2007/08/21 22:53:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50.ebuild,v 1.24 2007/08/22 05:59:24 opfer Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -20,7 +20,7 @@ SRC_URI=""
 LICENSE="GPL-3 FDL-1.2"
 SLOT="22"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="alsa gif gpm gtk gzip-el hesiod jpeg motif png spell sound source tiff toolkit-scroll-bars X Xaw3d xpm"
+IUSE="alsa gif gpm gtk gzip-el hesiod jpeg motif png spell sound source svg  tiff toolkit-scroll-bars X Xaw3d xpm"
 RESTRICT="strip"
 
 X_DEPEND="x11-libs/libXmu x11-libs/libXt x11-misc/xbitmaps"
@@ -39,6 +39,7 @@ RDEPEND="sys-libs/ncurses
 		jpeg? ( media-libs/jpeg )
 		tiff? ( media-libs/tiff )
 		png? ( media-libs/libpng )
+		svg? ( >=gnome-base/librsvg-2.0 )
 		xpm? ( x11-libs/libXpm )
 		gtk? ( =x11-libs/gtk+-2* )
 		!gtk? (
@@ -114,14 +115,15 @@ src_compile() {
 	fi
 
 	if use X; then
-		# GTK+ is the default toolkit if USE=gtk is chosen with other
-		# possibilities. Emacs upstream thinks this should be standard
-		# policy on all distributions
 		myconf="${myconf} --with-x"
-		myconf="${myconf} $(use_with xpm)"
 		myconf="${myconf} $(use_with toolkit-scroll-bars)"
 		myconf="${myconf} $(use_with jpeg) $(use_with tiff)"
 		myconf="${myconf} $(use_with gif) $(use_with png)"
+		myconf="${myconf} $(use_with xpm) $(use_with svg rsvg)"
+
+		# GTK+ is the default toolkit if USE=gtk is chosen with other
+		# possibilities. Emacs upstream thinks this should be standard
+		# policy on all distributions
 		if use gtk; then
 			echo
 			einfo "Configuring to build with GTK support, disabling all other toolkits"
