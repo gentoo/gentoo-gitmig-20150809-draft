@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.2.ebuild,v 1.2 2006/11/04 15:47:25 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.2.ebuild,v 1.3 2007/08/22 11:50:24 uberlord Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cdrdao/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gnome debug encode pccts"
 RESTRICT="strip"
 
@@ -28,6 +28,12 @@ DEPEND="pccts? ( >=dev-util/pccts-1.33.24-r1 )
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# FreeBSD needs this patch
+	# I think the correct define should be linux, but this will maintain
+	# the status quo for the time being.
+	# Upstream bug #1596097
+	epatch "${FILESDIR}/${P}"-nonlinux.patch
 
 	# Display better SCSI messages (advise from Bug 43003)
 	cd scsilib/include

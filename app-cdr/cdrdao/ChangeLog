@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrdao
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.98 2006/11/04 15:46:40 metalgod Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.99 2007/08/22 11:50:24 uberlord Exp $
+
+  22 Aug 2007; Roy Marples <uberlord@gentoo.org>
+  +files/cdrdao-1.2.2-nonlinux.patch, cdrdao-1.2.2.ebuild:
+  Add a patch to not compile linux code for non linux machines.
+  Keyworded ~x86-fbsd.
 
 *cdrdao-1.2.2 (04 Nov 2006)
 
