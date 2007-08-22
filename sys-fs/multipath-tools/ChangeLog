@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/multipath-tools
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.13 2006/09/28 08:55:06 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.14 2007/08/22 14:28:00 zzam Exp $
+
+*multipath-tools-0.4.7-r2 (22 Aug 2007)
+
+  22 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/multipath-tools-0.4.7-udev-rules.patch,
+  +multipath-tools-0.4.7-r2.ebuild:
+  Finally fixed udev-rules to have no udev-internal race conditions, bug 171590.
 
 *multipath-tools-0.4.7-r1 (28 Sep 2006)
 
