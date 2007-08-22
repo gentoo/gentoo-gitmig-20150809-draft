@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.98 2007/08/21 22:54:01 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.99 2007/08/22 06:19:35 leio Exp $
+
+  22 Aug 2007; Mart Raudsepp <leio@gentoo.org> no-nptl/2.4/package.mask:
+  Relaxing librsvg mask to 2.17, so that there is an unmasked librsvg for the
+  subprofile
 
   21 Aug 2007; Jurek Bartuszek <jurek@gentoo.org>
   no-nptl/2.4/package.mask:
