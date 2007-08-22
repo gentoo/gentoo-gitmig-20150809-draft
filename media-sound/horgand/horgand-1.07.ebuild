@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.07.ebuild,v 1.4 2007/08/21 15:18:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.07.ebuild,v 1.5 2007/08/22 17:29:25 jurek Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://download.berlios.de/horgand/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/fltk-1.1.2
