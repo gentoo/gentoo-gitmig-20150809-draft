@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14241.ebuild,v 1.3 2007/08/22 15:01:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14251.ebuild,v 1.1 2007/08/22 15:06:43 cardoe Exp $
 
 inherit flag-o-matic multilib eutils qt3 mythtv subversion toolchain-funcs
 

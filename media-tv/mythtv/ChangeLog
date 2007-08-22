@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.168 2007/08/22 15:01:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.169 2007/08/22 15:06:43 cardoe Exp $
+
+*mythtv-0.21_pre14251 (22 Aug 2007)
+
+  22 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-0.21_pre13285.ebuild, -mythtv-0.21_pre13775.ebuild,
+  -mythtv-0.21_pre14241.ebuild, +mythtv-0.21_pre14251.ebuild:
+  remove old trunk build. bump trunk for segfault fix. upnp fixes too.
 
   22 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.20.1_p14146.ebuild, mythtv-0.21_pre14153.ebuild,
