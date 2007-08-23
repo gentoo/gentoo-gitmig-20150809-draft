@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/stripclub
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/ChangeLog,v 1.6 2007/07/22 03:45:22 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/ChangeLog,v 1.7 2007/08/23 17:56:30 jer Exp $
+
+  23 Aug 2007; Jeroen Roovers <jer@gentoo.org> stripclub-0.9.1.2.ebuild:
+  Marked ~hppa too.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   stripclub-0.9.1.2.ebuild:
