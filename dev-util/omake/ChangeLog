@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/omake
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.14 2007/08/23 09:07:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.15 2007/08/23 09:16:48 aballier Exp $
+
+*omake-0.9.8.5 (23 Aug 2007)
+
+  23 Aug 2007; Alexis Ballier <aballier@gentoo.org> +omake-0.9.8.5.ebuild:
+  version bump
 
   23 Aug 2007; Alexis Ballier <aballier@gentoo.org> -omake-0.9.6.9.ebuild,
   -omake-0.9.8.1.ebuild:
