@@ -1,10 +1,11 @@
 # ChangeLog for dev-python/kaa-base
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.2 2007/08/23 00:19:28 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.3 2007/08/23 00:47:04 rbu Exp $
 
 *kaa-base-0.1.3-r1 (23 Aug 2007)
 
-  23 Aug 2007; Robert Buchholz <rbu@gentoo.org> +kaa-base-0.1.3-r1.ebuild:
+  23 Aug 2007; Robert Buchholz <rbu@gentoo.org> +kaa-base-0.1.3-r1.ebuild,
+  kaa-base-0.1.3.ebuild:
   Remove pynotifier files from kaa-sources and depend on dev-python/pynotifier
 
 *kaa-base-0.1.3 (11 Jul 2007)
