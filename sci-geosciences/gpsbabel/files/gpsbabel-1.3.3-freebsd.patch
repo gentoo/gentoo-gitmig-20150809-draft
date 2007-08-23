@@ -1,0 +1,21 @@
+--- configure.orig	2007-02-25 16:24:09 -0700
++++ configure	2007-05-12 23:54:11 -0600
+@@ -3173,6 +3173,8 @@
+ 			xpathdr=/sw/include/
+ 		fi
+ 		;;
++	*-gentoo-freebsd*)
++		;;
+ 	*-*-freebsd*)
+  		if test -f /usr/local/include/expat.h ; then
+ 			xpathdr=/usr/local/include
+@@ -3211,6 +3213,9 @@
+ 
+ 		fi
+ 		;;
++	*-gentoo-freebsd*)
++			EXPAT_LIB=-lexpat
++		;;
+ 	*-*-freebsd*)
+ 		if test -f /usr/local/lib/libexpat.a ; then
+ 			EXPAT_LIB=/usr/local/lib/libexpat.a
