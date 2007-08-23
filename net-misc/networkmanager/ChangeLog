@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.14 2007/05/15 20:33:11 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.15 2007/08/23 12:06:26 rbu Exp $
+
+*networkmanager-0.6.5_p20070823 (23 Aug 2007)
+
+  23 Aug 2007; Robert Buchholz <rbu@gentoo.org> metadata.xml,
+  +networkmanager-0.6.5_p20070823.ebuild:
+  Version bump to a current 0.6 branch state, adding myself to metadata
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>

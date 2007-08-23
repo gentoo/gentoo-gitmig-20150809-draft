@@ -7,8 +7,12 @@
 <name>Luis Medinas</name>
 </maintainer>
 <maintainer>
-<email>steev@gentoo.org</email>
-<name>Stephen Klimaszewski</name>
+	<email>steev@gentoo.org</email>
+	<name>Stephen Klimaszewski</name>
+</maintainer>
+<maintainer>
+	<email>rbu@gentoo.org</email>
+	<name>Robert Buchholz</name>
 </maintainer>
 <longdescription lang="en">
 </longdescription>
