@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/pcre-ocaml
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.12 2007/02/09 07:37:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.13 2007/08/23 08:50:31 aballier Exp $
+
+*pcre-ocaml-5.12.1 (23 Aug 2007)
+
+  23 Aug 2007; Alexis Ballier <aballier@gentoo.org>
+  +pcre-ocaml-5.12.1.ebuild:
+  version bump, bug #119114
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
