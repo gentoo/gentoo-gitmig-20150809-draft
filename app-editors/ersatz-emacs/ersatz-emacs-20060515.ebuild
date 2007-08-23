@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ersatz-emacs-20060515.ebuild,v 1.1 2007/06/15 08:53:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ersatz-emacs-20060515.ebuild,v 1.2 2007/08/23 20:10:53 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -35,6 +35,8 @@ src_compile() {
 }
 
 src_install() {
+	# Note: /usr/bin/ee is "easy edit" on FreeBSD, so if this
+	# is ever keyworded *-fbsd the binary has to be renamed.
 	dobin ee
 	doman ee.1
 	dodoc ChangeLog ERSATZ.keys README || die "dodoc failed"
