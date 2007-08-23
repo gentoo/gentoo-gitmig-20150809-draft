@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.22 2007/08/02 06:13:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.23 2007/08/23 00:39:06 metalgod Exp $
+
+*f-spot-0.4.0 (23 Aug 2007)
+
+  23 Aug 2007; <metalgod@gentoo.org> +f-spot-0.4.0.ebuild:
+  Version Bump. Closes Bug #188228.
 
   02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org> f-spot-0.3.3.ebuild,
   f-spot-0.3.4.ebuild, f-spot-0.3.5.ebuild, f-spot-0.3.5-r1.ebuild:
