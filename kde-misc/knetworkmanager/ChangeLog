@@ -1,0 +1,14 @@
+# ChangeLog for kde-misc/knetworkmanager
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.1 2007/08/23 12:35:13 rbu Exp $
+
+*knetworkmanager-0.2 (23 Aug 2007)
+
+  23 Aug 2007; Robert Buchholz <rbu@gentoo.org>
+  +files/knetworkmanager-0.2-fix-desktop-icon.patch,
+  +files/knetworkmanager-0.2-fixbuild_u64-hschaa-01.patch,
+  +files/knetworkmanager-0.2-kppp.patch,
+  +files/knetworkmanager-0.2-pam_console-fix.patch, +metadata.xml,
+  +knetworkmanager-0.2.ebuild:
+  Initial ebuild based on Gentopia's. (Bugs #153727 and #135331)
+

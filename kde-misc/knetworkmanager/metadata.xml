@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>kde</herd>
+	<maintainer>
+		<email>rbu@gentoo.org</email>
+		<name>Robert Buchholz</name>
+	</maintainer>
+	<longdescription lang="en">
+		KNetworkManager is the KDE front end for NetworkManager. It
+		provides a sophisticated and intuitive user interface which
+		enables users easily to switch their network environment.
+		The range of functions encompasses the features implemented by
+		NetworkManager daemon. It supports Wired Ethernet, Wireless
+		Ethernet Devices (Unencrypted, WEP, WPA), Virtual Private
+		Networks (OpenVPN, VPNC, PPTP) and Dial-Up (PPP).
+	</longdescription>
+</pkgmetadata>
