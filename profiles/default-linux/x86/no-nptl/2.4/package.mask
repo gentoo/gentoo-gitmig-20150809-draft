@@ -1,10 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.117 2007/08/23 00:07:23 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.118 2007/08/23 00:18:13 rbu Exp $
 
 # Robert Buchholz <rbu@gentoo.org> (23 Aug 2007)
-# Needs dev-python/pygobject, which is masked here
+# Freevo friends that need dev-python/pygobject, which is masked here
 dev-python/pynotifier
+dev-python/kaa-base
+dev-python/kaa-imlib2
+dev-python/kaa-metadata
+>=media-tv/freevo-1.7.2
 
 # Samuli Suominen <drac@gentoo.org> (22 Aug 2007)
 # needs gnome-icon-theme
