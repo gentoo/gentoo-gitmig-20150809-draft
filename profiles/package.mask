@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7622 2007/08/23 14:51:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7623 2007/08/23 16:32:33 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,23 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (23 Aug 2007)
+# Deprecated GTK+-1.2 applications.
+# app-misc/dfm broken wrt bug 186100.
+# app-misc/emelfm replaced by app-misc/emelfm2,
+# bug 186351. Masked for treecleaners, removed in
+# 60 days.
+app-misc/dfm
+app-misc/emelfm
+
+# Samuli Suominen <drac@gentoo.org> (23 Aug 2007)
+# Obsolete ebuild for XFree86 and X.org 6.x.
+# Broken wrt bugs 130176 and 149872.
+# Gatos code has been relicensed and merged into
+# upstream xf86-video-ati RandR 1.2 branch.
+# Masked for treecleaners, removed in 60 days.
+media-video/ati-gatos
 
 # Doug Goldste <cardoe@gentoo.org> (22 Aug 2007)
 # MythTV 0.20.2 pre-release, masked due to ABI
