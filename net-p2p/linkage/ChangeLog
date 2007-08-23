@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/linkage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/ChangeLog,v 1.3 2007/07/22 16:28:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/ChangeLog,v 1.4 2007/08/23 16:00:43 drac Exp $
+
+*linkage-0.1.4 (23 Aug 2007)
+
+  23 Aug 2007; Samuli Suominen <drac@gentoo.org> +linkage-0.1.4.ebuild:
+  Version bump for bug 189920.
 
   22 Jul 2007; Samuli Suominen <drac@gentoo.org>
   +files/linkage-0.1.2-enable-disable-upnp.patch, linkage-0.1.2.ebuild:
