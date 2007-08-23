@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.47 2007/08/23 05:43:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.48 2007/08/23 08:25:42 ticho Exp $
+
+  23 Aug 2007; Andrej Kacian <ticho@gentoo.org> ed-0.6.ebuild:
+  Stable on x86, bug #189888.
 
   23 Aug 2007; Joshua Kinard <kumba@gentoo.org> ed-0.6.ebuild:
   Stable on mips, per #189888.
