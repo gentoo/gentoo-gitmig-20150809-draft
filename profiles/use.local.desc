@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2987 2007/08/23 12:33:44 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2988 2007/08/23 15:58:54 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1638,6 +1638,7 @@ net-p2p/gift:fasttrack - pull in FastTrack plugin
 net-p2p/gift:gnutella - pull in Gnutella plugin
 net-p2p/gift:openft - pull in OpenFT plugin
 net-p2p/linkage:upnp - Enables support for Intel UPnP stack.
+net-p2p/linkage:xfce - Adds Xfce4 support
 net-p2p/mldonkey:fasttrack - enable fasttrack support
 net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
 net-p2p/mldonkey:guionly - enable client build only
