@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7621 2007/08/23 14:24:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7622 2007/08/23 14:51:47 seemant Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -355,8 +355,8 @@ dev-java/odmg
 
 # Stefan Schweizer <genstef@gentoo.org> (31 May 2007)
 # release candidate
-~app-text/poppler-0.5.9
-~app-text/poppler-bindings-0.5.9
+=app-text/poppler-0.5.9*
+=app-text/poppler-bindings-0.5.9*
 
 # Roy Marples <uberlord@gentoo.org> (31 May 2007)
 # Masked, pending removal. Remove in 30 days

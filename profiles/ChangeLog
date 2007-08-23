@@ -1,12 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.590 2007/08/23 14:14:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.591 2007/08/23 14:51:47 seemant Exp $
 
   23 Aug 2007; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Unmasking python-2.5
 
   23 Aug 2007; Robert Buchholz <rbu@gentoo.org> use.local.desc:
   Add useflags for kde-misc/knetworkmanager
+
+  23 Aug 2007; Seemant Kulleen <seemant@gentoo.org> package.mask:
+  mask out all the 0.5.9* versions of poppler and poppler bindings
 
   21 Aug 2007; Alin Năstac <mrness@gentoo.org> updates/3Q-2007:
   Move net-proxy/vultureng to net-proxy/vulture.
