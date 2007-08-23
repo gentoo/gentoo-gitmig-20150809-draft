@@ -1,10 +1,14 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.478 2007/08/23 17:47:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.479 2007/08/23 22:51:01 caleb Exp $
 
   23 Aug 2007; Markus Rothe <corsair@gentoo.org>
   +files/qt-4.3.1-powerpc64.patch, qt-4.3.1.ebuild:
   Added patch for ppc64 and mark ebuild ~ppc64; bug #178779
+
+  23 Aug 2007; Caleb Tennis <caleb@gentoo.org> -qt-3.3.8-r2.ebuild,
+  -qt-4.3.0.ebuild, -qt-4.3.0-r1.ebuild:
+  remove some older versions
 
   15 Aug 2007; Jeroen Roovers <jer@gentoo.org> qt-4.3.0-r2.ebuild:
   Stable for HPPA (bug #185446).
