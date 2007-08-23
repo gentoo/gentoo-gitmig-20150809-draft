@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.49 2007/08/23 16:01:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.50 2007/08/23 16:27:51 jer Exp $
+
+  23 Aug 2007; Jeroen Roovers <jer@gentoo.org> ed-0.6.ebuild:
+  Stable for HPPA (bug #189888).
 
   23 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> ed-0.6.ebuild:
   Stable on sparc wrt #189888
