@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.1.0_p20070726.ebuild,v 1.1 2007/08/23 12:24:26 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.1.0_p20070726.ebuild,v 1.2 2007/08/23 20:01:40 mr_bones_ Exp $
 
 inherit gnome2 eutils autotools
 
@@ -12,7 +12,6 @@ HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 #SRC_URI="http://dev.gentoo.org/~rbu/distfiles/${MY_P}.tar.gz"
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz
 	mirror://gentoo/${P}-pppd-plugindir.patch.bz2"
-
 
 LICENSE="GPL-2"
 SLOT="0"
