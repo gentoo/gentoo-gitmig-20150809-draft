@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/f2c-20060507.ebuild,v 1.1 2006/05/14 07:31:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/f2c-20060507.ebuild,v 1.2 2007/08/23 13:18:06 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="libf2c"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE=""
 RDEPEND="dev-libs/libf2c"
