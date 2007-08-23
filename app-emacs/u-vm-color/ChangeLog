@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/u-vm-color
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/ChangeLog,v 1.15 2007/08/22 23:58:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/ChangeLog,v 1.16 2007/08/23 06:56:26 opfer Exp $
+
+  23 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  u-vm-color-2.8.1.ebuild:
+  stable x86, bug 189465
 
   22 Aug 2007; Christoph Mende <angelos@gentoo.org> u-vm-color-2.8.1.ebuild:
   Stable on amd64 wrt bug #189465
