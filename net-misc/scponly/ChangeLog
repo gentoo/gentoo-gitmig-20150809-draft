@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.29 2007/05/14 19:45:45 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.30 2007/08/23 05:11:32 kumba Exp $
+
+  23 Aug 2007; Joshua Kinard <kumba@gentoo.org> scponly-4.6-r2.ebuild:
+  Marked unstable on mips, per #189008.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
