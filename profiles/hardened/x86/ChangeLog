@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.7 2007/08/22 06:36:37 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.8 2007/08/23 00:19:38 leio Exp $
+
+  23 Aug 2007; Mart Raudsepp <leio@gentoo.org> package.mask:
+  Relaxing vte mask to 0.16, so that there is an unmasked vte for the profile
 
   22 Aug 2007; Mart Raudsepp <leio@gentoo.org> package.mask:
   Relaxing librsvg mask to 2.17, so that there is an unmasked librsvg for the
