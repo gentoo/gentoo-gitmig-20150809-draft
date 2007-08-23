@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7620 2007/08/23 14:14:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7621 2007/08/23 14:24:50 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -25,6 +25,7 @@
 # MythTV 0.20.2 pre-release, masked due to ABI
 # change that requires plugin rebuild
 =media-tv/mythtv-0.20.1_p14260
+=media-tv/mythtv-0.20.1_p14267
 
 # Ulrich Mueller <ulm@gentoo.org> (21 Aug 2007)
 # Masking due to issues with customisation dependencies.
