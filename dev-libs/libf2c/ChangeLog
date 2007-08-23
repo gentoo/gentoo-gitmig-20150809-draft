@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.21 2007/02/22 00:56:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.22 2007/08/23 13:12:09 uberlord Exp $
+
+  23 Aug 2007; Roy Marples <uberlord@gentoo.org> libf2c-20051004.ebuild:
+  Keyworded ~x86-fbsd.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
