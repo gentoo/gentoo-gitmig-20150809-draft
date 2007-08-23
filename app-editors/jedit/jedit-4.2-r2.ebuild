@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r2.ebuild,v 1.9 2007/05/29 09:21:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r2.ebuild,v 1.10 2007/08/23 08:36:09 betelgeuse Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -18,15 +18,14 @@ IUSE="doc"
 RDEPEND=">=virtual/jre-1.4"
 # FIXME doesn't like Java 1.6 for some reason
 DEPEND="|| (
-		=virtual/jdk-1.4*
 		=virtual/jdk-1.5*
+		=virtual/jdk-1.4*
 	)
 	doc? (
 		=app-text/docbook-xml-dtd-4.3*
 		>=app-text/docbook-xsl-stylesheets-1.65.1
 		dev-libs/libxslt
-	)
-	>=dev-java/ant-core-1.5.4"
+	)"
 
 S="${WORKDIR}/jEdit"
 
@@ -46,9 +45,11 @@ src_unpack() {
 		echo "docbook.xsl=${xsl}" >> build.properties
 	fi
 }
-src_compile() {
-	eant dist $(use_doc javadoc docs-html)
-}
+
+# Fails to build if asm gets pulled in via ant classpath
+ANT_TASKS=" "
+EANT_BUILD_TARGET="dist"
+EANT_DOC_TARGET="javadoc docs-html"
 
 src_install() {
 	dodir /usr/share/jedit

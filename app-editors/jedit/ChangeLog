@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.76 2007/06/17 10:48:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.77 2007/08/23 08:36:09 betelgeuse Exp $
+
+  23 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> jedit-4.2-r2.ebuild:
+  Use empty ant classpath so asm doesn't get pulled in there and break
+  building. Prefer 1.5 over 1.4.
 
   17 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> jedit-4.3_pre9.ebuild:
   Migrate to splitted ant.
