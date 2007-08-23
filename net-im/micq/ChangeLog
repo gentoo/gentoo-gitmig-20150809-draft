@@ -1,6 +1,10 @@
 # ChangeLog for net-im/micq
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.43 2007/08/23 19:10:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.44 2007/08/23 19:15:40 jokey Exp $
+
+  23 Aug 2007; Markus Ullmann <jokey@gentoo.org> metadata.xml,
+  -micq-0.4.12.ebuild, -micq-0.5.1.ebuild, -micq-0.5.2.ebuild:
+  Clean up and set me up as maintainer
 
 *micq-0.5.4.2 (23 Aug 2007)
 
