@@ -1,6 +1,11 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.114 2007/08/11 14:55:54 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.115 2007/08/23 20:03:34 dang Exp $
+
+*evince-0.9.3 (23 Aug 2007)
+
+  23 Aug 2007; Daniel Gryniewicz <dang@gentoo.org> +evince-0.9.3.ebuild:
+  Pre-release version of evince to go with the pre-release version of poppler
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org> evince-0.8.3.ebuild:
   Stable on x86, bug #185823.
