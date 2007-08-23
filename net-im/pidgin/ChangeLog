@@ -1,6 +1,10 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.23 2007/08/23 03:48:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.24 2007/08/23 03:52:18 tester Exp $
+
+  23 Aug 2007; Olivier Crête <tester@gentoo.org> pidgin-2.1.1.ebuild:
+  Removed separate xscreensaver and startup-notification use flags, they are
+  now enabled by the gtk use flag
 
   23 Aug 2007; Jeroen Roovers <jer@gentoo.org> pidgin-2.1.0.ebuild:
   Stable for HPPA (bug #189781).

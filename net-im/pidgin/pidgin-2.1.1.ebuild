@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.1.1.ebuild,v 1.1 2007/08/22 02:50:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.1.1.ebuild,v 1.2 2007/08/23 03:52:18 tester Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="bonjour dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc startup-notification tcl tk xscreensaver spell qq gadu"
+IUSE="bonjour dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc tcl tk spell qq gadu"
 IUSE="${IUSE} gtk sasl ncurses groupwise prediction zephyr" # mono"
 
 RDEPEND="
@@ -27,8 +27,8 @@ RDEPEND="
 	gtk? (
 		spell? ( >=app-text/gtkspell-2.0.2 )
 		>=x11-libs/gtk+-2.0
-		startup-notification? ( >=x11-libs/startup-notification-0.5 )
-		xscreensaver? (	x11-libs/libXScrnSaver )
+		>=x11-libs/startup-notification-0.5
+		x11-libs/libXScrnSaver
 		eds? ( gnome-extra/evolution-data-server ) 	)
 	>=dev-libs/glib-2.0
 	gstreamer? ( =media-libs/gstreamer-0.10*
@@ -203,10 +203,6 @@ src_compile() {
 		myconf="${myconf} --enable-gnutls=no --enable-nss=yes"
 	fi
 
-	if use xscreensaver ; then
-			myconf="${myconf} --x-includes=/usr/include/X11"
-	fi
-
 	if ! use ncurses && ! use gtk; then
 		myconf="${myconf} --enable-consoleui --disable-gtkui"
 	else
@@ -216,12 +212,12 @@ src_compile() {
 	econf \
 		$(use_enable nls) \
 		$(use_enable perl) \
-		$(use_enable startup-notification) \
-		$(use_enable tcl) \
+		$(use_enable gtk startup-notification) \
+		$(use_enable gtk screensaver) \
 		$(use_enable gtk sm) \
+		$(use_enable tcl) \
 		$(use_enable spell gtkspell) \
 		$(use_enable tk) \
-		$(use_enable xscreensaver screensaver) \
 		$(use_enable debug) \
 		$(use_enable dbus) \
 		$(use_enable meanwhile) \
@@ -234,6 +230,7 @@ src_compile() {
 		$(use_with zephyr krb4) \
 		"--with-dynamic-prpls=${DYNAMIC_PRPLS}" \
 		--disable-mono \
+		--x-includes=/usr/include/X11 \
 		${myconf} || die "Configuration failed"
 		#$(use_enable mono) \
 
