@@ -1,6 +1,11 @@
 # ChangeLog for net-im/micq
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.42 2007/02/22 02:22:39 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.43 2007/08/23 19:10:34 jokey Exp $
+
+*micq-0.5.4.2 (23 Aug 2007)
+
+  23 Aug 2007; Markus Ullmann <jokey@gentoo.org> +micq-0.5.4.2.ebuild:
+  Bumping as this is, err, shop-soiled, also fixes bug #178776
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
