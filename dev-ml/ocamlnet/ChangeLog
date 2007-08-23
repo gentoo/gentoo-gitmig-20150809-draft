@@ -1,6 +1,13 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.17 2007/05/12 09:07:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.18 2007/08/23 09:02:23 aballier Exp $
+
+*ocamlnet-2.2.8.1 (23 Aug 2007)
+
+  23 Aug 2007; Alexis Ballier <aballier@gentoo.org>
+  -files/ocamlnet-2.2.4-configure-fix.patch, -ocamlnet-2.2.4.ebuild,
+  +ocamlnet-2.2.8.1.ebuild:
+  version bump, remove unused version
 
 *ocamlnet-2.2.7 (12 May 2007)
 

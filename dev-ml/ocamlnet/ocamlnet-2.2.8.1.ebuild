@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-2.2.4.ebuild,v 1.3 2007/06/26 01:56:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-2.2.8.1.ebuild,v 1.1 2007/08/23 09:02:23 aballier Exp $
 
 inherit eutils findlib
 
@@ -24,26 +24,36 @@ DEPEND="!dev-ml/equeue
 		gtk? ( >=dev-ml/lablgtk-2 )
 		ssl? ( dev-ml/ocaml-ssl )"
 
-src_unpack() {
-	cd "${S}"
-	unpack ${A}
-	epatch "${FILESDIR}/ocamlnet-2.2.4-configure-fix.patch"
-}
-
 pkg_setup() {
 	if use tk && ! built_with_use 'dev-lang/ocaml' tk ;
 		 then die "If you want to enable tcl/tk, you need to rebuild dev-lang/ocaml with the 'tk' USE flag";
 	fi
 }
 
+ocamlnet_use_with() {
+	if use $1; then
+		echo "-with-$2"
+	else
+		echo "-without-$2"
+	fi
+}
+
+ocamlnet_use_enable() {
+	if use $1; then
+		echo "-enable-$2"
+	else
+		echo "-disable-$2"
+	fi
+}
+
 src_compile() {
 	./configure \
-	    --bindir /usr/bin \
-		--datadir /usr/share/${PN} \
-		$(use_enable gtk gtk2) \
-		$(use_enable ssl) \
-		$(use_enable tk tcl) \
-		$(use_with httpd nethttpd) \
+	    -bindir /usr/bin \
+		-datadir /usr/share/${PN} \
+		$(ocamlnet_use_enable gtk gtk2) \
+		$(ocamlnet_use_enable ssl ssl) \
+		$(ocamlnet_use_enable tk tcl) \
+		$(ocamlnet_use_with httpd nethttpd) \
 		|| die "Error : econf failed!"
 
 	emake -j1 all opt || die "make failed"
