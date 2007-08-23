@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.09-r1.ebuild,v 1.1 2007/01/13 05:38:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.09-r1.ebuild,v 1.2 2007/08/23 06:23:47 nerdboy Exp $
 
 inherit autotools
 
 DESCRIPTION="GPS navigation system with NMEA and Garmin support, zoomable map display, waypoints, etc."
-HOMEPAGE="http://gpsdrive.kraftvoll.at/index.shtml"
-SRC_URI="http://gpsdrive.kraftvoll.at/${P}.tar.gz"
+HOMEPAGE="http://www.gpsdrive.de/"
+SRC_URI="${HOMEPAGE}/gpsdrive.tar/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -55,7 +55,7 @@ src_install() {
 pkg_postinst() {
 	if use mysql; then
 		echo -e "\n"
-		elog "Be sure to read ${ROOT}usr/share/doc/${PF}/README.SQL.gz for information"
-		elog "on using MySQL with gpsdrive.\n"
+		elog "Be sure to see the README.SQL file in /usr/share/doc/${PF}"
+		elog "for information on using MySQL with gpsdrive.\n"
 	fi
 }

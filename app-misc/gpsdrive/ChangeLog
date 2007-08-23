@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.24 2007/01/13 05:38:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.25 2007/08/23 06:23:47 nerdboy Exp $
+
+  23 Aug 2007; Steve Arnold <nerdboy@gentoo.org> gpsdrive-2.09-r1.ebuild:
+  updated homepage and src_uri per bug #189580
 
 *gpsdrive-2.09-r1 (13 Jan 2007)
 
