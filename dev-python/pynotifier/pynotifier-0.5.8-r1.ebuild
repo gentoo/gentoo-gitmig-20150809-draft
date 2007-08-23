@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/pynotifier-0.5.8.ebuild,v 1.1 2007/08/23 00:08:08 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/pynotifier-0.5.8-r1.ebuild,v 1.1 2007/08/23 10:45:51 rbu Exp $
 
 inherit distutils
 
@@ -11,15 +11,18 @@ SRC_URI="http://www.bitkipper.net/bytes/pynotifier/source/${PN}_${PV}-1.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="qt4 gtk"
 
 DEPEND=""
-RDEPEND="dev-python/pygobject
-	dev-python/PyQt4"
+RDEPEND="gtk? ( dev-python/pygobject )
+	qt4? ( dev-python/PyQt4 )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	use qt4 || rm notifier/nf_qt.py
+	use gtk || rm notifier/nf_gtk.py
 
 	# This would need dev-python/wxpython
 	# pynotifier's source: "the WX notifier is deprecated and is no longer maintained"
