@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.121 2007/08/22 18:41:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.122 2007/08/23 05:25:17 jer Exp $
+
+  23 Aug 2007; Jeroen Roovers <jer@gentoo.org>
+  sane-backends-1.0.18-r4.ebuild:
+  Stable for HPPA (bug #188573).
 
   22 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sane-backends-1.0.18-r4.ebuild:
