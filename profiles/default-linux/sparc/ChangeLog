@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.74 2007/08/22 06:33:57 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.75 2007/08/23 00:12:40 leio Exp $
+
+  23 Aug 2007; Mart Raudsepp <leio@gentoo.org>
+  sparc32/2006.1/2.4/package.mask, sparc64/2006.1/2.4/package.mask:
+  Relaxing vte mask to 0.16, so that there is an unmasked vte for the subprofiles
 
   22 Aug 2007; Mart Raudsepp <leio@gentoo.org>
   sparc32/2006.1/2.4/package.mask, sparc64/2006.1/2.4/package.mask:

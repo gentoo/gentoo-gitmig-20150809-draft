@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.1/2.4/package.mask,v 1.32 2007/08/22 06:33:57 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.1/2.4/package.mask,v 1.33 2007/08/23 00:12:40 leio Exp $
 
 # Hanno Boeck <hanno@gentoo.org> (28 Apr 2007)
 # Requires pygtk-2.10
@@ -168,7 +168,7 @@ x11-drivers/xf86-input-evdev
 >=gnome-extra/nautilus-cd-burner-2.16.0
 >=media-sound/sound-juicer-2.16.0
 >=media-video/totem-2.16.0
->=x11-libs/vte-0.14.0
+>=x11-libs/vte-0.16.0
 >=gnome-extra/yelp-2.16.0
 >=gnome-extra/zenity-2.16.0
 >=dev-python/gnome-python-2.16.0
