@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.43 2007/08/23 14:49:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.44 2007/08/23 15:51:41 uberlord Exp $
+
+  23 Aug 2007; Roy Marples <uberlord@gentoo.org> gpac-0.4.4.ebuild:
+  Keyworded ~x860-fbsd, #189692
 
   23 Aug 2007; Alexis Ballier <aballier@gentoo.org> gpac-0.4.4.ebuild:
   Update bsd patch, thanks to uberlord (bug #189692), add a patch to have
