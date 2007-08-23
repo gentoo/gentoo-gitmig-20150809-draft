@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.29 2007/08/21 18:09:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.30 2007/08/23 15:36:32 bicatali Exp $
+
+  23 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  blas-reference-20070226.ebuild:
+  Removed f2c as a possible fortran compiler
 
   21 Aug 2007; Jeroen Roovers <jer@gentoo.org>
   blas-reference-20070226.ebuild:
