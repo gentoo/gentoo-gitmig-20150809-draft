@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1.ebuild,v 1.4 2007/07/22 07:13:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.2.1.ebuild,v 1.5 2007/08/23 06:19:16 nerdboy Exp $
 
 inherit eutils autotools
 
-DESCRIPTION="An open-source GIS with raster and vector functionality"
+DESCRIPTION="An open-source GIS with raster and vector functionality, as well as 3D vizualization."
 HOMEPAGE="http://grass.itc.it/"
 SRC_URI="http://grass.itc.it/grass62/source/${P}.tar.gz"
 
@@ -68,40 +68,64 @@ DEPEND="${RDEPEND}
 	)"
 
 src_unpack() {
+	local myblas
+	if use gmath; then
+		for d in $(eselect lapack show); do myblas=${d}; done
+		if [[ -z "${myblas/reference/}" ]] && [[ -z "${myblas/atlas/}" ]]; then
+			ewarn "You need to set lapack to atlas or reference. Do:"
+			ewarn "   eselect lapack set <impl>"
+			ewarn "where <impl> is atlas, threaded-atlas or reference"
+			die "setup failed"
+		fi
+		for d in $(eselect blas show); do myblas=${d}; done
+		if [[ -z "${myblas/reference/}" ]] && [[ -z "${myblas/atlas/}" ]]; then
+			ewarn "You need to set blas to atlas or reference. Do:"
+			ewarn "   eselect blas set <impl>"
+			ewarn "where <impl> is atlas, threaded-atlas or reference"
+			die "setup failed"
+		fi
+	fi
+
 	if use glw && ! use opengl; then
 		ewarn "You set USE='glw -opengl'. GLw support needs OpenGL."
 		ewarn "OpenGL support also requires Tcl and Tk support."
-		die "Set opengl, tcl, and tk useflags!"
+		die "Set opengl, tcl, and tk useflags."
 	fi
+
 	if use glw && ! built_with_use media-libs/mesa motif; then
 		ewarn "GRASS OpenGL support needs mesa with motif headers."
 		ewarn "Please rebuild mesa with motif support."
-		die "re-emerge mesa with motif"
+		die "Re-emerge mesa with motif."
+	fi
+
+	if use opengl && ! use {tcl,tk}; then
+		ewarn "GRASS OpenGL support needs both Tcl and Tk."
+		die "Please set tcl and tk useflags."
 	fi
 
 	if use tcl && ! use tk; then
 		ewarn "You set USE='tcl -tk'. GRASS needs both tcl and tk."
-		die "Set 'tk' useflag!"
+		die "Set tk useflag."
 	fi
 
 	if use tk && ! use tcl; then
 		ewarn "You set USE='-tcl tk'. GRASS needs both tcl and tk."
-		die "Set 'tcl' useflag!"
+		die "Set tcl useflag."
 	fi
 
 	if use tcl && built_with_use dev-lang/tcl threads; then
 		ewarn "GRASS nviz will not work with Tcl compiled with threads!"
 		ewarn "Please disable either opengl or tcl threads."
-		die "emerge TCL without threads"
+		die "Emerge TCL without threads."
 	fi
 	if use tk && built_with_use dev-lang/tk threads; then
 		ewarn "GRASS nviz will not work with Tk compiled with threads!"
 		ewarn "Please disable either opengl or tk threads."
-		die "emerge tk without threads"
+		die "Emerge tk without threads."
 	fi
 	unpack ${A}
 	cd ${S}
-
+	use ffmpeg && epatch ${FILESDIR}/${P}-ffmpeg-fix.patch
 	epatch rpm/fedora/grass-readline.patch
 	elibtoolize
 }
@@ -121,6 +145,17 @@ src_compile() {
 		myconf="${myconf} --without-tcltk --without-x"
 	fi
 
+	if use opengl; then
+	    epatch ${FILESDIR}/${P}-html-nviz-fix.patch
+	    myconf="${myconf} --with-opengl --with-opengl-libs=/usr/$(get_libdir)/opengl/xorg-x11/lib"
+	    if use glw; then
+		myconf="${myconf} --with-glw"
+	    fi
+	else
+	    epatch ${FILESDIR}/${P}-html-nonviz.patch
+	    myconf="${myconf} --without-opengl --without-glw"
+	fi
+
 	if use ffmpeg; then
 		myconf="${myconf} --with-ffmpeg --with-ffmpeg-includes=/usr/include/ffmpeg --with-ffmpeg-libs=/usr/lib"
 	else
@@ -137,16 +172,6 @@ src_compile() {
 		myconf="${myconf} --without-mysql"
 	fi
 
-	if use opengl; then
-	    myconf="${myconf} --with-opengl --with-opengl-libs=/usr/$(get_libdir)/opengl/xorg-x11/lib"
-	    if use glw; then
-		myconf="${myconf} --with-glw"
-	    fi
-	else
-	    epatch ${FILESDIR}/${P}-html-nonviz.patch
-	    myconf="${myconf} --without-opengl --without-glw"
-	fi
-
 	if use sqlite; then
 		myconf="${myconf} --with-sqlite --with-sqlite-includes=/usr/include
 		--with-sqlite-libs=/usr/lib"
@@ -158,8 +183,6 @@ src_compile() {
 	econf ${myconf} --with-libs=/usr/$(get_libdir) \
 		$(use_enable amd64 64bit) \
 		$(use_with fftw) \
-		$(use_with gmath blas) \
-		$(use_with gmath lapack) \
 		$(use_with jpeg) \
 		$(use_enable largefile) \
 		$(use_with motif) \
@@ -170,21 +193,21 @@ src_compile() {
 		$(use_with python) \
 		$(use_with readline) \
 		$(use_with tiff) \
-		$(use_with tcl tcltk) || die "Error: configure failed!"
+		$(use_with tcl tcltk) || die "configure failed!"
 	# patch missing math functions
 	sed -i 's:EXTRA_LIBS=:EXTRA_LIBS=-lm :g' ${S}/lib/gmath/Makefile
 	sed -i 's:EXTRA_LIBS = :EXTRA_LIBS = -lm :g' ${S}/lib/gis/Makefile
 
-	emake -j1 || die "Error: emake failed!"
+	emake -j1 || die "emake failed!"
 }
 
 src_install() {
 	make install UNIX_BIN=${D}usr/bin BINDIR=${D}usr/bin \
 		PREFIX=${D}usr INST_DIR=${D}usr/grass62 \
-		|| die "Error: make install failed!"
+		|| die "make install failed!"
 
 	sed -i "s:^GISBASE=.*$:GISBASE=/usr/grass62:" \
-		${D}usr/bin/grass62 || die "Error: sed failed!"
+		${D}usr/bin/grass62 || die "sed failed!"
 
 	# Grass Extension Manager conflicts with ruby gems
 	mv ${D}usr/bin/gem ${D}usr/grass62/bin/

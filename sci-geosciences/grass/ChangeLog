@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.43 2007/07/22 07:13:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.44 2007/08/23 06:19:16 nerdboy Exp $
+
+  23 Aug 2007; Steve Arnold <nerdboy@gentoo.org>
+  +files/grass-6.2.1-ffmpeg-fix.patch,
+  +files/grass-6.2.1-html-nviz-fix.patch, grass-6.2.1.ebuild:
+  Updated with some blas and lapack checking, as well as an opengl check,
+  a patch for ffmpeg, and an install script.  Closes bug #189299.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; grass-5.4.0.ebuild,
   grass-6.0.1.ebuild, grass-6.2.0-r1.ebuild, grass-6.2.1.ebuild:
