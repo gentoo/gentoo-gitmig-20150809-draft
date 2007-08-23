@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/ksniffer
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ksniffer/ChangeLog,v 1.1 2007/08/23 21:33:38 philantrop Exp $
+
+*ksniffer-0.3 (23 Aug 2007)
+
+  23 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +ksniffer-0.3.ebuild:
+  Initial ebuild as provided by Bo Ørsted Andresen on bug 153283. Thanks Bo!
+
