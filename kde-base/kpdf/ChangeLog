@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.137 2007/08/11 15:53:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.138 2007/08/23 15:14:39 philantrop Exp $
+
+*kpdf-3.5.7-r2 (23 Aug 2007)
+
+  23 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kpdf-3.5.7-hash_path.diff, +kpdf-3.5.7-r2.ebuild:
+  Added an upstream patch to fix bug 189898. Thanks to Matthias Raffelsieper
+  for informing us and providing the patch.
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kpdf-3.5.7-r1.ebuild:
   x86 stable wrt #185823
