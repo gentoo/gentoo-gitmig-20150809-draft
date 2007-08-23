@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.119 2007/08/23 12:12:18 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.120 2007/08/23 12:33:44 rbu Exp $
 
 # Robert Buchholz <rbu@gentoo.org> (23 Aug 2007)
-# Networkmanager vpn plugins need HAL
+# knm and networkmanager vpn plugins need HAL
 net-misc/networkmanager-pptp
 net-misc/networkmanager-openvpn
 net-misc/networkmanager-vpnc
+kde-misc/knetworkmanager
 
 # Robert Buchholz <rbu@gentoo.org> (23 Aug 2007)
 # Freevo friends that need dev-python/pygobject, which is masked here

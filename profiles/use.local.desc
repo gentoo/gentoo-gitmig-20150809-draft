@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2986 2007/08/23 12:14:14 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2987 2007/08/23 12:33:44 rbu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -795,9 +795,9 @@ kde-base/kopete:webpresence - Builds Web Presence plugin
 kde-base/kopete:winpopup - Builds WinPopUp protocol handler
 kde-base/ksysguard:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
-net-misc/knetworkmanager:cisco - Adds support for the Cisco VPN client (vpnc)
-net-misc/knetworkmanager:openvpn - Adds support for the OpenVPN client
-net-misc/knetworkmanager:pptp - Adds support for the PPTP (PPP) VPN client
+kde-misc/knetworkmanager:cisco - Adds support for the Cisco VPN client (vpnc)
+kde-misc/knetworkmanager:openvpn - Adds support for the OpenVPN client
+kde-misc/knetworkmanager:pptp - Adds support for the PPTP (PPP) VPN client
 kde-misc/ksensors:hddtemp - Enable monitoring of disk temperatures (app-admin/hddtemp)
 kde-misc/ksensors:ibmacpi - Enable monitoring of ACPI sensor data on IBM Thinkpad notebooks.
 mail-client/balsa:gtkspell - Use gtkspell for dictionary support
