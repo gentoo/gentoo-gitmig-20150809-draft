@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt-qt3/qwt-qt3-5.0.2-r1.ebuild,v 1.1 2007/08/23 18:50:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt-qt3/qwt-qt3-5.0.2-r1.ebuild,v 1.2 2007/08/23 20:02:00 mr_bones_ Exp $
 
 inherit multilib qt3
 
@@ -47,7 +47,7 @@ src_compile () {
 src_install () {
 	emake INSTALL_ROOT="${D}" install || die "emake install failed"
 
-#	Can't remember right now why this was here.  Commenting out until we either remove it 
+#	Can't remember right now why this was here.  Commenting out until we either remove it
 #	or remember why it was	put into place.  caleb@gentoo.org - 08.22.07
 
 #	rm "${D}"/usr/$(get_libdir)/libqwt-qt3.so
