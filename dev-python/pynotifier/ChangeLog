@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/pynotifier
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/ChangeLog,v 1.1 2007/08/23 00:08:08 rbu Exp $
+
+*pynotifier-0.5.8 (22 Aug 2007)
+
+  22 Aug 2007; Robert Buchholz <rbu@gentoo.org> +metadata.xml,
+  +pynotifier-0.5.8.ebuild:
+  Initial version, thanks to Dirk Meyer and Frittella Laurento
+  (bug #156497)
+
