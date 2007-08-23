@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/lapack-docs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/lapack-docs/ChangeLog,v 1.4 2007/05/03 10:34:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/lapack-docs/ChangeLog,v 1.5 2007/08/23 15:34:56 bicatali Exp $
+
+  23 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  lapack-docs-3.1.1.ebuild:
+  do bash loop instead of rename, as blas-docs.
 
 *lapack-docs-3.1.1 (03 May 2007)
 
