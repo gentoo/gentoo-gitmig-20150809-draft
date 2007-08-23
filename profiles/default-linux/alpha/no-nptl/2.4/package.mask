@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.26 2007/08/22 06:24:20 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.27 2007/08/23 00:09:40 leio Exp $
 
 # Samuli Suominen <drac@gentoo.org> (19 Aug 2007)
 # Needs x11-libs/vte, also masked here
@@ -168,7 +168,7 @@ x11-drivers/xf86-input-evdev
 >=gnome-extra/nautilus-cd-burner-2.16.0
 >=media-sound/sound-juicer-2.16.0
 >=media-video/totem-2.16.0
->=x11-libs/vte-0.14.0
+>=x11-libs/vte-0.16.0
 >=gnome-extra/yelp-2.16.0
 >=gnome-extra/zenity-2.16.0
 >=dev-python/gnome-python-2.16.0

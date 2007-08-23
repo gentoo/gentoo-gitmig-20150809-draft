@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.116 2007/08/23 00:04:08 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.117 2007/08/23 00:07:23 leio Exp $
 
 # Robert Buchholz <rbu@gentoo.org> (23 Aug 2007)
 # Needs dev-python/pygobject, which is masked here
@@ -287,7 +287,7 @@ dev-db/mysql-gui-tools
 >=gnome-extra/nautilus-cd-burner-2.16.0
 >=media-sound/sound-juicer-2.16.0
 >=media-video/totem-2.16.0
->=x11-libs/vte-0.14.0
+>=x11-libs/vte-0.16.0
 >=gnome-extra/yelp-2.16.0
 >=gnome-extra/zenity-2.16.0
 >=dev-python/gnome-python-2.16.0

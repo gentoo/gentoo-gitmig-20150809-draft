@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.101 2007/08/23 00:04:08 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.102 2007/08/23 00:07:23 leio Exp $
+
+  23 Aug 2007; Mart Raudsepp <leio@gentoo.org> no-nptl/2.4/package.mask:
+  Relaxing vte mask to 0.16, so that there is an unmasked vte for the subprofile
 
   23 Aug 2007; Robert Buchholz <rbu@gentoo.org> no-nptl/2.4/package.mask:
   Masking dev-python/pynotifier for 2.4 because it needs a gnome component
