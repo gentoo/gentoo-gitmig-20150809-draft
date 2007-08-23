@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/freevo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.49 2007/07/16 23:00:38 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.50 2007/08/23 01:06:29 rbu Exp $
+
+*freevo-1.7.3 (23 Aug 2007)
+
+  23 Aug 2007; Robert Buchholz <rbu@gentoo.org> +freevo-1.7.3.ebuild:
+  Version bump with tons of minor changes, see bug 188126 for a full list
 
   16 Jul 2007; Robert Buchholz <rbu@gentoo.org> freevo-1.7.2.ebuild:
   Changing dependancy to =dev-python/twisted-web-0.6* as 0.7 needs twisted-2.5
