@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libopenraw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.4 2007/08/18 21:13:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.5 2007/08/23 20:40:38 jer Exp $
+
+  23 Aug 2007; Jeroen Roovers <jer@gentoo.org> libopenraw-0.0.2.ebuild:
+  Marked ~hppa (bug #189043).
 
   18 Aug 2007; Samuli Suominen <drac@gentoo.org> libopenraw-0.0.2.ebuild:
   Keyworded ~arm wrt #189043
