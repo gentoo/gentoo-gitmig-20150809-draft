@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.1.ebuild,v 1.4 2007/08/12 19:30:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.1.ebuild,v 1.5 2007/08/23 17:47:56 corsair Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE_INPUT_DEVICES="input_devices_wacom"
 
@@ -118,6 +118,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/qt-4.2.3-hppa-ldcw-fix.patch
+	epatch ${FILESDIR}/qt-4.3.1-powerpc64.patch
 
 	cd ${S}/mkspecs/$(qt_mkspecs_dir)
 	# set c/xxflags and ldflags
