@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ndoutils-1.4_beta4.ebuild,v 1.1 2007/07/01 08:29:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ndoutils-1.4_beta4.ebuild,v 1.2 2007/08/23 14:19:13 dertobi123 Exp $
 
 inherit eutils
 
@@ -51,6 +51,8 @@ src_install() {
 cat << EOF > "${T}"/55-ndoutils-revdep
 SEARCH_DIRS="/usr/nagios/bin"
 EOF
+
+	sed -i s:socket_name=/usr/local/nagios/var/ndo.sock:socket_name=/var/nagios/ndo.sock:g ${S}/config/ndo2db.cfg
 
 	insinto /etc/revdep-rebuild
 	doins "${T}"/55-ndoutils-revdep
