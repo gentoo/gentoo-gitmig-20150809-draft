@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/knetworkmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.1 2007/08/23 12:35:13 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.2 2007/08/24 10:38:29 rbu Exp $
+
+  24 Aug 2007; Robert Buchholz <rbu@gentoo.org> knetworkmanager-0.2.ebuild:
+  Depend on either kppp or kdenetwork (bug #190013), install DOCS
 
 *knetworkmanager-0.2 (23 Aug 2007)
 

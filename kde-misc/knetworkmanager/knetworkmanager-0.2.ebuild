@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-0.2.ebuild,v 1.1 2007/08/23 12:35:13 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-0.2.ebuild,v 1.2 2007/08/24 10:38:29 rbu Exp $
 
 inherit kde eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="cisco openvpn pptp"
 
 DEPEND="net-misc/networkmanager
-	kde-base/kppp
+	|| ( kde-base/kppp kde-base/kdenetwork )
 	>=kde-base/kdelibs-3.2
 	|| ( >=dev-libs/dbus-qt3-old-0.70 =sys-apps/dbus-0.62-r1 )
 	sys-apps/hal
@@ -53,8 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	kde_src_install make
-	dodoc knetworkmanager/{AUTHORS,NEWS,README}
+	kde_src_install
 
 	# kde.eclass sets sysconfdir too weird for us, delete conf from there and reinstall to /etc
 	set-kdedir
