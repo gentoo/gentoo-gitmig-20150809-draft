@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mytharchive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.17 2007/08/21 15:46:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.18 2007/08/24 14:11:03 cardoe Exp $
+
+*mytharchive-0.20.2_p14282 (24 Aug 2007)
+
+  24 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  +mytharchive-0.20.2_p14282.ebuild:
+  bump to 0.20.2
 
 *mytharchive-0.21_pre14242 (21 Aug 2007)
 
