@@ -1,6 +1,13 @@
 # ChangeLog for games-roguelike/angband
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.22 2007/03/12 16:43:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.23 2007/08/24 15:55:41 tupone Exp $
+
+*angband-3.0.9 (24 Aug 2007)
+
+  24 Aug 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/angband-3.0.9-gentoo.patch, +angband-3.0.9.ebuild:
+  Version bump to 3.0.9 bug #177186 by Nathan Russel
+  Add ncurses and sdl use flags
 
   12 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org> angband-3.0.6.ebuild:
   Stable on sparc wrt #168294
