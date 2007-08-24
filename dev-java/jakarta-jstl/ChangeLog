@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jakarta-jstl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.15 2007/08/15 21:40:59 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.16 2007/08/24 23:19:50 dertobi123 Exp $
+
+  24 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  jakarta-jstl-1.1.2-r1.ebuild:
+  ppc stable
 
   15 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   jakarta-jstl-1.1.2-r1.ebuild:
