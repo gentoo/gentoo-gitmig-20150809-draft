@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-hotkeys
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/ChangeLog,v 1.2 2007/08/23 15:49:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/ChangeLog,v 1.3 2007/08/24 07:13:26 opfer Exp $
+
+  24 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  pidgin-hotkeys-0.2.3.ebuild:
+  stable x86, bug 189781
 
   23 Aug 2007; Jeroen Roovers <jer@gentoo.org> pidgin-hotkeys-0.2.3.ebuild:
   Stable for HPPA (bug #189781).

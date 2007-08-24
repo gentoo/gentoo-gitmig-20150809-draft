@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/guifications
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.46 2007/08/23 15:56:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.47 2007/08/24 07:08:27 opfer Exp $
+
+  24 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  guifications-2.14.ebuild:
+  stable x86, bug 189781
 
   23 Aug 2007; Jeroen Roovers <jer@gentoo.org> guifications-2.14.ebuild:
   Stable for HPPA (bug #189781).
