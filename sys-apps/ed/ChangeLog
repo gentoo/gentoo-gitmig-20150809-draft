@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.51 2007/08/24 03:51:35 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.52 2007/08/24 18:26:53 armin76 Exp $
+
+  24 Aug 2007; Raúl Porcel <armin76@gentoo.org> ed-0.6.ebuild:
+  alpha/ia64 stable wrt #189888
 
   24 Aug 2007; <metalgod@gentoo.org> ed-0.6.ebuild:
   Stable on amd64. Bug #189888.
