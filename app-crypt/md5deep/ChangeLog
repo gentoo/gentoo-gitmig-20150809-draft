@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/md5deep
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.22 2007/02/21 20:25:14 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.23 2007/08/24 09:12:55 nyhm Exp $
+
+*md5deep-1.13 (24 Aug 2007)
+
+  24 Aug 2007; Tristan Heaven <nyhm@gentoo.org>
+  -files/md5deep-0.16-gentoo.diff, -md5deep-1.5.ebuild,
+  -md5deep-1.5-r1.ebuild, +md5deep-1.13.ebuild:
+  Version bump, bug #189988
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
