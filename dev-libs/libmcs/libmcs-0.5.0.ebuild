@@ -1,18 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.4.1.ebuild,v 1.8 2007/08/24 23:33:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.5.0.ebuild,v 1.1 2007/08/24 23:33:02 chainsaw Exp $
 
 inherit flag-o-matic kde-functions multilib
 
-MY_P=${P/lib/}
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="Abstracts the storage of configuration settings away from userland applications."
 HOMEPAGE="http://sacredspiral.co.uk/~nenolod/mcs/"
-SRC_URI="http://distfiles.atheme.org/${MY_P}.tgz"
+SRC_URI="http://distfiles.atheme.org/${P}.tgz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gnome kde"
 
 RDEPEND="gnome? ( >=gnome-base/gconf-2.6.0 )

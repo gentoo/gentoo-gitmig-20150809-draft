@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libmcs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.17 2007/05/27 00:59:11 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/ChangeLog,v 1.18 2007/08/24 23:33:02 chainsaw Exp $
+
+*libmcs-0.5.0 (24 Aug 2007)
+
+  24 Aug 2007; Tony Vroon <chainsaw@gentoo.org> libmcs-0.3.1.ebuild,
+  libmcs-0.3.3.ebuild, libmcs-0.4.1.ebuild, +libmcs-0.5.0.ebuild:
+  Version bump. Change SRC_URI to point to new dedicated Atheme mirror network
+  for all versions.
 
   27 May 2007; Joshua Kinard <kumba@gentoo.org> libmcs-0.4.1.ebuild:
   Stable on mips.
