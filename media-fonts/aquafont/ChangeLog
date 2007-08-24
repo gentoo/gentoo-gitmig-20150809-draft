@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/aquafont
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.19 2007/08/24 17:05:48 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.20 2007/08/24 20:52:55 armin76 Exp $
+
+  24 Aug 2007; Raúl Porcel <armin76@gentoo.org> aquafont-2.8.ebuild:
+  alpha/ia64/x86 stable wrt #189979
 
   24 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> aquafont-2.8.ebuild:
   Marked stable on amd64 as per bug 189979.
