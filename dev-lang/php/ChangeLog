@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.191 2007/08/23 00:05:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.192 2007/08/24 15:53:36 armin76 Exp $
+
+  24 Aug 2007; Raúl Porcel <armin76@gentoo.org>
+  php-4.4.8_pre20070816.ebuild:
+  alpha/ia64 stable wrt security #189172
 
   23 Aug 2007; Christoph Mende <angelos@gentoo.org>
   php-4.4.8_pre20070816.ebuild:
