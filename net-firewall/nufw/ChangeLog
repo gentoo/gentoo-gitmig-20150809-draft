@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/nufw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.14 2007/08/24 18:42:02 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.15 2007/08/24 20:45:36 cedk Exp $
+
+  24 Aug 2007; Cédric Krier <cedk@gentoo.org>
+  -files/nufw-2.2.0-nuauth_command.patch, -nufw-2.2.0.ebuild:
+  Remove for bug #190030
 
   24 Aug 2007; Cédric Krier <cedk@gentoo.org> -nufw-2.1.1.ebuild:
   Remove old ebuild
