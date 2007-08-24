@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.432 2007/08/24 18:10:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.433 2007/08/24 18:16:03 armin76 Exp $
+
+  24 Aug 2007; Raúl Porcel <armin76@gentoo.org> portage-2.1.2.12.ebuild:
+  alpha/ia64 stable wrt #189289
 
   24 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   portage-2.1.2.12.ebuild:
