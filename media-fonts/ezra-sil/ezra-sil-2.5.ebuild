@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ezra-sil/ezra-sil-2.5.ebuild,v 1.3 2007/08/24 20:56:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ezra-sil/ezra-sil-2.5.ebuild,v 1.4 2007/08/24 22:49:18 dirtyepic Exp $
 
 inherit font
 
@@ -25,3 +25,4 @@ IUSE=""
 DOCS="README.txt"
 FONT_SUFFIX="ttf"
 S="${WORKDIR}"
+FONT_S="${S}"
