@@ -1,0 +1,11 @@
+--- simulation/metaserver.cpp.old	2007-08-09 15:50:01.000000000 +0200
++++ simulation/metaserver.cpp	2007-08-09 15:50:52.000000000 +0200
+@@ -192,7 +192,7 @@
+ 		"Connection: close\r\n"
+ 		"User-Agent: " + PACKAGE + "/" + VERSION + "\r\n"
+ 		"Content-Type: application/x-www-form-urlencoded\r\n"
+-		"Content-Length: " + data.length() + "\r\n"
++		"Content-Length: " + (unsigned int)data.length() + "\r\n"
+ 		"\r\n"
+ 		+ data + "\r\n";
+ 

@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/ultimatestunts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.15 2007/08/09 07:33:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.16 2007/08/24 18:18:48 wolf31o2 Exp $
+
+  24 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/ultimatestunts-0.7.2-amd64.patch, ultimatestunts-0.7.2.ebuild:
+  Added a patch to fix compilation on amd64. Thanks to Bernd Steinhauser
+  <bernd.steinhauser@gmx.net> for pointing it out. Closing bug #188234.
 
 *ultimatestunts-0.7.2 (09 Aug 2007)
 
