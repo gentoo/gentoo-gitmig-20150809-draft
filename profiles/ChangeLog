@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.593 2007/08/24 23:18:51 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.594 2007/08/24 23:31:47 marineam Exp $
+
+  24 Aug 2007; Michael Marineau <marineam@gentoo.org> package.mask:
+  Hardmask xen-sources-2.6.16* for the sake of security.
 
   24 Aug 2007; Michael Marineau <marineam@gentoo.org>
   default-linux/amd64/2006.0/no-multilib/use.mask,
