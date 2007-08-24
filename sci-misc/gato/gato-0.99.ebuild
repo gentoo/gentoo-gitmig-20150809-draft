@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-0.98p.ebuild,v 1.3 2007/08/24 13:29:01 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-0.99.ebuild,v 1.1 2007/08/24 13:29:01 markusle Exp $
 
 inherit eutils
 
 MY_P="Gato"
-MY_PV="0.98P"
+MY_PV="0.99"
 
 DESCRIPTION="Graph Animation Toolbox"
 LICENSE="LGPL-2"
@@ -28,7 +28,7 @@ src_unpack() {
 	unpack ${A}
 
 	# convert to python2.4
-	epatch "${FILESDIR}"/gato-python2.4-gentoo.patch
+	epatch "${FILESDIR}"/${P}-python.patch
 
 	cd "${S}"
 	# change TKinter call to avoid crashing of X

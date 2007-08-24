@@ -1,0 +1,22 @@
+diff -Naur Gato/DataStructures.py Gato-patched/DataStructures.py
+--- Gato/DataStructures.py	2006-09-05 07:13:38.000000000 -0500
++++ Gato-patched/DataStructures.py	2007-08-23 18:54:01.000000000 -0500
+@@ -37,8 +37,8 @@
+ ################################################################################
+ 
+ 
+-from GatoGlobals import *
+ from __future__ import generators #Needed for PQImplementation
++from GatoGlobals import *
+ 
+ 
+ ################################################################################
+diff -Naur Gato/Gato.py Gato-patched/Gato.py
+--- Gato/Gato.py	2006-09-05 07:13:38.000000000 -0500
++++ Gato-patched/Gato.py	2007-08-23 18:49:04.000000000 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.3
++#!/usr/bin/env python
+ ################################################################################
+ #
+ #       This file is part of Gato (Graph Animation Toolbox) 

@@ -1,6 +1,13 @@
 # ChangeLog for sci-misc/gato
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/ChangeLog,v 1.6 2007/02/09 05:26:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/ChangeLog,v 1.7 2007/08/24 13:29:01 markusle Exp $
+
+*gato-0.99 (24 Aug 2007)
+
+  24 Aug 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/gato-0.99-python.patch, +gato-0.99.ebuild:
+  Version bump (see bug #189978). Thanks much to Andres Becerra 
+  Sandoval <abecerra@puj.edu.co> for his ebuild.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
