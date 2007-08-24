@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.20 2007/07/29 18:17:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.21 2007/08/24 03:32:52 metalgod Exp $
+
+  24 Aug 2007; <metalgod@gentoo.org> brasero-0.6.0.ebuild:
+  Fix USE=libnotify on the ebuild. Thanks to Nirbheek Chauhan
+  <nirbheek.chauhan@gmail.com> on Bug #189779.
 
   29 Jul 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   brasero-0.5.2.ebuild:
