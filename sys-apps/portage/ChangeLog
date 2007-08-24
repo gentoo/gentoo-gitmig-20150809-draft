@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.431 2007/08/24 02:16:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.432 2007/08/24 18:10:33 dertobi123 Exp $
+
+  24 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  portage-2.1.2.12.ebuild:
+  ppc stable, bug #189289
 
   24 Aug 2007; Zac Medico <zmedico@gentoo.org> portage-2.1.3.6.ebuild:
   Bug #189324 - Compile bytecodes in ${ROOT} during postinst.
