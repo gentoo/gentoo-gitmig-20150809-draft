@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcdbd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.6 2007/07/16 13:40:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.7 2007/08/24 06:54:06 opfer Exp $
+
+  24 Aug 2007; Christian Faulhammer <opfer@gentoo.org> dhcdbd-2.8-r1.ebuild:
+  stable x86, bug 189781
 
 *dhcdbd-2.8-r1 (16 Jul 2007)
 
