@@ -1,0 +1,10 @@
+# ChangeLog for dev-games/ois
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ChangeLog,v 1.1 2007/08/24 13:07:18 nyhm Exp $
+
+*ois-1.0 (24 Aug 2007)
+
+  24 Aug 2007; Tristan Heaven <nyhm@gentoo.org> +metadata.xml,
+  +ois-1.0.ebuild:
+  Initial commit, bug #129365
+
