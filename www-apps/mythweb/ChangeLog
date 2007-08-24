@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.42 2007/08/15 13:43:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.43 2007/08/24 00:56:29 cardoe Exp $
+
+*mythweb-0.20.1_p14269 (24 Aug 2007)
+
+  24 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  +mythweb-0.20.1_p14269.ebuild:
+  upstream fix for bug #183770
 
   15 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
   mythweb-0.21_pre14151.ebuild:
