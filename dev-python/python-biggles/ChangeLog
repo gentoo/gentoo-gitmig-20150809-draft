@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-biggles
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/ChangeLog,v 1.9 2007/07/21 16:07:33 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/ChangeLog,v 1.10 2007/08/24 23:12:49 coldwind Exp $
+
+  24 Aug 2007; Santiago M. Mola <coldwind@gentoo.org>
+  python-biggles-1.6.3.ebuild, python-biggles-1.6.4.ebuild,
+  python-biggles-1.6.4-r1.ebuild:
+  Check for media-libs/plotutils built with USE="X" and add X deps. Closes bug
+  #152072 Thanks to Patrick Lauer
 
 *python-biggles-1.6.4-r1 (21 Jul 2007)
 
