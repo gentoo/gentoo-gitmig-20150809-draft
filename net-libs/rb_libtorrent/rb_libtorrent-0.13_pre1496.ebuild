@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13_pre1437.ebuild,v 1.1 2007/08/11 10:10:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13_pre1496.ebuild,v 1.1 2007/08/24 15:24:58 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -37,6 +37,8 @@ src_compile() {
 			--with-boost-thread=boost_thread-mt \
 			--with-boost-regex=boost_regex-mt \
 			--with-boost-program_options=boost_program_options-mt"
+
+	AT_M4DIR="m4" eautoreconf
 
 	econf $(use_enable debug) \
 		 ${BOOST_LIBS} \
