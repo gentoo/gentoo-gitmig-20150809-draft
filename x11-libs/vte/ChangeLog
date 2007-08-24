@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.168 2007/08/20 10:55:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.169 2007/08/24 21:24:41 dang Exp $
+
+  24 Aug 2007; Daniel Gryniewicz <dang@gentoo.org> vte-0.16.8.ebuild:
+  We need at least python 2.4.4-r5 with the fixed python-config; bug #189770
 
   20 Aug 2007; Gilles Dartiguelongue <eva@gentoo.org> vte-0.16.8.ebuild:
   fix vte-0.16.8 ebuild wrt to bug #189556

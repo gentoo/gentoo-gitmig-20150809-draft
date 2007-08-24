@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.16.8.ebuild,v 1.2 2007/08/20 10:55:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.16.8.ebuild,v 1.3 2007/08/24 21:24:41 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/glib-2.9
 			)
 	python? (
 				>=dev-python/pygtk-2.4
-				>=dev-lang/python-2.2
+				>=dev-lang/python-2.4.4-r5
 			)
 	x11-libs/libX11
 	virtual/xft"
