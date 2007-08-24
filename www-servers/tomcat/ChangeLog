@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.159 2007/08/24 20:36:06 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.160 2007/08/24 23:33:13 wltjr Exp $
+
+  24 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  tomcat-6.0.14.ebuild:
+  amd64 stable, bug #188871.
 
   24 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   tomcat-6.0.14.ebuild:
