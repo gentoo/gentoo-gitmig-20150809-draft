@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/b43-fwcutter
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/ChangeLog,v 1.1 2007/08/24 16:29:04 josejx Exp $
+
+*b43-fwcutter-008 (24 Aug 2007)
+
+  24 Aug 2007; Joseph Jezak <josejx@gentoo.org> +metadata.xml,
+  +b43-fwcutter-008.ebuild:
+  Added new fwcutter tool for the b43 (mac80211) version of bcm43xx.
+
