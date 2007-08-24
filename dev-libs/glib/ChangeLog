@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.277 2007/08/06 04:37:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.278 2007/08/24 14:34:47 gustavoz Exp $
+
+  24 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> glib-2.12.13.ebuild:
+  Stable on sparc wrt #190019
 
   06 Aug 2007; Joshua Kinard <kumba@gentoo.org> glib-2.12.12.ebuild:
   Stable on mips, per #185823.
