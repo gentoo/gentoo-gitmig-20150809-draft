@@ -1,24 +1,22 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r4.ebuild,v 1.5 2007/07/12 06:39:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.0.ebuild,v 1.1 2007/08/24 23:21:52 marineam Exp $
 
-inherit mount-boot flag-o-matic distutils eutils multilib
+inherit flag-o-matic distutils eutils multilib
 
 DESCRIPTION="Xend daemon and tools"
-HOMEPAGE="http://xen.sourceforge.net"
-SRC_URI="http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/xen-${PV}-src.tgz"
-S="${WORKDIR}/xen-${PV}"
+HOMEPAGE="http://www.xensource.com/xen/xen/"
+SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/src.tgz/xen-${PV}-src.tgz"
+S="${WORKDIR}/xen-${PV}-src"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc debug screen custom-cflags pygrub vnc sdl"
+IUSE="doc debug screen custom-cflags pygrub hvm"
 
 CDEPEND="dev-lang/python
 	sys-libs/zlib
-	sdl? ( media-libs/libsdl )
-	vnc? ( media-libs/libsdl )
-	pygrub? ( >=sys-fs/progsreiserfs-0.3.1_rc8 )"
+	hvm? ( media-libs/libsdl )"
 
 DEPEND="${CDEPEND}
 	sys-devel/gcc
@@ -28,10 +26,13 @@ DEPEND="${CDEPEND}
 		dev-tex/latex2html
 		media-gfx/transfig
 	)
-	vnc? ( net-libs/libvncserver )"
+	hvm? (
+		x11-proto/xproto
+		net-libs/libvncserver
+		sys-devel/dev86
+	)"
 
 RDEPEND="${CDEPEND}
-	~app-emulation/xen-${PV}
 	sys-apps/iproute2
 	net-misc/bridge-utils
 	screen? (
@@ -42,14 +43,19 @@ RDEPEND="${CDEPEND}
 
 PYTHON_MODNAME="xen grub"
 
+# hvmloader is used to bootstrap a fully virtualized kernel
+# Approved by QA team in bug #144032
+QA_WX_LOAD="usr/lib/xen/boot/hvmloader"
+
 pkg_setup() {
-	if use vnc && ! use sdl ; then
-		ewarn "You have the 'vnc' USE flag set, but not 'sdl'."
-		ewarn "VNC functionality requires SDL support, so it"
-		ewarn "will be enabled anyway."
+	if ! use x86 && ! has x86 $(get_all_abis) && use hvm; then
+		eerror "HVM (VT-x and AMD-v) cannot be built on this system. An x86 or"
+		eerror "an amd64 multilib profile is required. Remove the hvm use flag"
+		eerror "to build xen-tools on your current profile."
+		die "USE=hvm is unsupported on this system."
 	fi
 
-	if [[ "$(scanelf -s __guard -q `type -P python`)" ]] ; then
+	if [[ "$(scanelf -s __guard -q `which python`)" ]] ; then
 		ewarn "xend may not work when python is built with stack smashing protection (ssp)."
 		ewarn "If 'xm create' fails with '<ProtocolError for /RPC2: -1 >', see bug #141866"
 	fi
@@ -82,63 +88,39 @@ src_unpack() {
 			-i {} \;
 	fi
 
-	# xen tries to be smart and filter out CFLAGs not supported by gcc.
-	# It doesn't handle no* flags though, but flag-o-matic's test-flag-CC does.
-	for FLAG in -nopie -fno-stack-protector -fno-stack-protector-all; do
-		test-flag-CC ${FLAG} && HARDFLAGS="${HARDFLAGS} ${FLAG}"
-	done
-	sed  -i "s/^CFLAGS :=$/& ${HARDFLAGS}/" \
-		"${S}"/tools/firmware/{hvmloader,vmxassist}/Makefile
-
-	# Disable the 32bit-only vmxassist if we are not on x86
-	# and we don't support the x86 ABI
-	if ! use x86 && ! has x86 $(get_all_abis); then
-		sed -i -e "/SUBDIRS += vmxassist/d" "${S}"tools/firmware/Makefile
+	# Disable hvm support on systems that don't support x86_32 binaries. 
+	if ! use hvm; then
+		chmod 644 tools/check/check_x11_devel
+		sed -i -e '/^CONFIG_IOEMU := y$/d' "${S}"/config/*.mk
+		sed -i -e '/SUBDIRS-$(CONFIG_X86) += firmware/d' "${S}"/tools/Makefile
 	fi
 
-	if use pygrub; then
-		# Upstream use Debian and hence progsreiserfs-0.3.0,
-		# which has a different API to 0.3.1
-		epatch "${FILESDIR}/${P}"-pygrub-progsreiserfs-0.3.1.patch
-	else
-		sed -i -e "/^SUBDIRS += pygrub$/d" "${S}"/tools/Makefile
+	if ! use pygrub; then
+		sed -i -e "/^SUBDIRS-y += pygrub$/d" "${S}"/tools/Makefile
 	fi
-
-	# Fixes for hardened and amd64
-	epatch "${FILESDIR}"/${P}-bxclobber.patch
-	epatch "${FILESDIR}"/${P}-pushpop.patch
 
 	# Allow --as-needed LDFLAGS
-	epatch "${FILESDIR}/${P}"--as-needed.patch
+	epatch "${FILESDIR}/${PN}-3.0.4_p1--as-needed.patch"
 
-	# Allow building with python-2.5 (bug #149138)
-	# Backported from upstream - should be in 3.0.3
-	sed -i 's/\.2|^2\.3|^2\.4/.[2345]/' "${S}"/tools/check/check_python
+	# Fix network broadcast on bridged networks
+	epatch "${FILESDIR}/${PN}-3.0.4_p1-network-bridge-broadcast.patch"
 
-	# Fix upstream's broken test cases (bug #141233)
-	epatch "${FILESDIR}/${P}"-test-uuid.patch
-	epatch "${FILESDIR}/${P}"-test-xauthority.patch
-
-	# Fix compilation error with newer glibc (bug #151014)
-	# Backported from upstream - should be in 3.0.3
-	epatch "${FILESDIR}/${P}"-xc_ptrace.patch
+	# Also look in python's site packages for xen, as it installs there
+	epatch "${FILESDIR}/${PN}-3.1.0-python-site-packages.patch"
 }
 
 src_compile() {
 	local myopt myconf
 	use debug && myopt="${myopt} debug=y"
 
-	myconf="${myconf} $(use_enable vnc)"
-	if use vnc ; then
-		myconf="${myconf} --enable-sdl"
-	else
-		myconf="${myconf} $(use_enable sdl)"
+	use custom-cflags || unset CFLAGS
+	#gcc-specs-ssp && append-flags -fno-stack-protector -fno-stack-protector-all
+
+	if use hvm; then
+		myconf="${myconf} --disable-system --disable-user"
+		(cd tools/ioemu && econf ${myconf}) || die "configure failured"
 	fi
 
-	use custom-cflags || unset CFLAGS
-	gcc-specs-ssp && append-flags -fno-stack-protector -fno-stack-protector-all
-
-	(cd tools/ioemu && econf ${myconf}) || die "configure failured"
 	emake -C tools ${myopt} || die "compile failed"
 
 	if use doc; then
@@ -152,7 +134,7 @@ src_compile() {
 src_install() {
 	local myopt="XEN_PYTHON_NATIVE_INSTALL=1"
 
-	make DESTDIR="${D}" ${myopt} install-tools \
+	make DESTDIR="${D}" -C tools ${myopt} install \
 		|| die "install failed"
 
 	# Remove RedHat-specific stuff
@@ -166,9 +148,12 @@ src_install() {
 
 	doman docs/man?/*
 
-	newinitd "${FILESDIR}"/xend.initd xend
-	newconfd "${FILESDIR}"/xendomains.confd xendomains
-	newinitd "${FILESDIR}"/xendomains.initd xendomains
+	newinitd "${FILESDIR}"/xend.initd xend \
+		|| die "Couldn't install xen.initd"
+	newconfd "${FILESDIR}"/xendomains.confd xendomains \
+		|| die "Couldn't install xendomains.confd"
+	newinitd "${FILESDIR}"/xendomains.initd xendomains \
+		|| die "Couldn't install xendomains.initd"
 
 	if use screen; then
 		cat "${FILESDIR}"/xendomains-screen.confd >> "${D}"/etc/conf.d/xendomains
@@ -177,17 +162,36 @@ src_install() {
 	fi
 
 	# xend expects these to exist
-	keepdir /var/run/xenstored /var/lib/xenstored /var/xen/dump
+	keepdir /var/run/xenstored /var/lib/xenstored /var/xen/dump /var/lib/xen /var/log/xen
+
+	# for xendomains
+	keepdir /etc/xen/auto
 }
 
 pkg_postinst() {
 	elog "Please visit the Xen and Gentoo wiki:"
 	elog "http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
 
+	if [[ "$(scanelf -s __guard -q `which python`)" ]] ; then
+		echo
+		ewarn "xend may not work when python is built with stack smashing protection (ssp)."
+		ewarn "If 'xm create' fails with '<ProtocolError for /RPC2: -1 >', see bug #141866"
+		ewarn "This probablem may be resolved as of Xen 3.0.4, if not post in the bug."
+	fi
+
 	if ! built_with_use dev-lang/python ncurses; then
 		echo
 		ewarn "NB: Your dev-lang/python is built without USE=ncurses."
 		ewarn "Please rebuild python with USE=ncurses to make use of xenmon.py."
+	fi
+
+	if ! use hvm; then
+		echo
+		elog "HVM (VT-x and AMD-V) support has been disabled. If you need hvm"
+		elog "support enable the hvm use flag."
+		elog "An x86 or amd64 multilib system is required to build HVM support."
+		echo
+		elog "The ioemu use flag has been removed and replaced with hvm."
 	fi
 
 	if grep -qsF XENSV= "${ROOT}/etc/conf.d/xend"; then

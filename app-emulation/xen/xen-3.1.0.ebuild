@@ -1,28 +1,28 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.10 2007/07/12 06:39:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.1.0.ebuild,v 1.1 2007/08/24 23:22:32 marineam Exp $
 
 inherit mount-boot flag-o-matic
 
 DESCRIPTION="The Xen virtual machine monitor"
-HOMEPAGE="http://xen.sourceforge.net"
-MY_PV=${PV/_p/_}
-SRC_URI="http://bits.xensource.com/oss-xen/release/${MY_PV/_/-}/src.tgz/xen-${MY_PV}-src.tgz"
+HOMEPAGE="http://www.xensource.com/xen/xen/"
+SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/src.tgz/xen-${PV}-src.tgz"
+S="${WORKDIR}/xen-${PV}-src"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug custom-cflags pae hardened"
+IUSE="debug custom-cflags pae"
 
 RDEPEND="|| ( sys-boot/grub
-		 sys-boot/grub-static )
-		 ~sys-kernel/xen-sources-2.6.16.28"
+		sys-boot/grub-static )
+		>=sys-kernel/xen-sources-2.6.18"
 PDEPEND="~app-emulation/xen-tools-${PV}"
 
 RESTRICT="test"
 
 # Approved by QA team in bug #144032
-QA_WX_LOAD="boot/xen-syms-${MY_PV/_/-}"
+QA_WX_LOAD="boot/xen-syms-${PV}"
 
 pkg_setup() {
 	if [[ -z ${XEN_TARGET_ARCH} ]]; then
@@ -50,10 +50,6 @@ src_unpack() {
 			-e 's/CFLAGS\(.*\)=\(.*\)-O2\(.*\)/CFLAGS\1=\2\3/' \
 			-i {} \;
 	fi
-	if use hardened; then
-		cd "${S}"
-		epatch "${FILESDIR}/${PN}"-3.0.2-nopiessp.patch
-	fi
 }
 
 src_compile() {
@@ -76,7 +72,7 @@ src_install() {
 	use debug && myopt="${myopt} debug=y"
 	use pae && myopt="${myopt} pae=y"
 
-	make DESTDIR="${D}" install-xen ${myopt} || die "install failed"
+	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${D}" -C xen ${myopt} install || die "install failed"
 }
 
 pkg_postinst() {
