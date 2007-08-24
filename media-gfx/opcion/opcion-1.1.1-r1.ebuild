@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opcion/opcion-1.1.1-r1.ebuild,v 1.3 2007/08/22 06:19:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opcion/opcion-1.1.1-r1.ebuild,v 1.4 2007/08/24 19:00:08 dertobi123 Exp $
 
 inherit java-pkg-2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://opcion.sourceforge.net/"
 SRC_URI="mirror://sourceforge/opcion/${MY_P}_src.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 COMMON_DEP="=dev-java/jgoodies-looks-1.2*"
 RDEPEND=">=virtual/jre-1.4
