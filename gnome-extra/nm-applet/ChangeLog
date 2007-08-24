@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.5 2007/05/14 16:29:08 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.6 2007/08/24 07:01:13 opfer Exp $
+
+  24 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  nm-applet-0.6.5.ebuild:
+  stable x86, bug 189781
 
   14 May 2007; Steev Klimaszewski <steev@gentoo.org> ChangeLog:
   Fix the homepage url, fixes bug #178101, Thanks to Pacho Ramos
