@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.17 2007/04/30 12:03:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.18 2007/08/24 06:59:12 opfer Exp $
+
+  24 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  libnl-1.0_pre6.ebuild:
+  stable x86, bug 189781
 
   30 Apr 2007; Raúl Porcel <armin76@gentoo.org>
   +files/libnl-1.0_pre5-__u64_x86_64.patch,
