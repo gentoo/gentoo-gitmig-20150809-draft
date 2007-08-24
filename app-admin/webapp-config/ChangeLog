@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.59 2007/08/03 17:57:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.60 2007/08/24 18:19:16 drac Exp $
+
+  24 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  webapp-config-1.50.16-r1.ebuild:
+  String comparison, not integer.
 
   03 Aug 2007; Christoph Mende <angelos@gentoo.org>
   webapp-config-1.50.16-r1.ebuild:
