@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.30 2007/08/23 15:36:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.31 2007/08/24 14:02:45 uberlord Exp $
+
+  24 Aug 2007; Roy Marples <uberlord@gentoo.org>
+  blas-reference-20070226.ebuild:
+  Keyworded ~x86-fbsd, #189725.
 
   23 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
   blas-reference-20070226.ebuild:
