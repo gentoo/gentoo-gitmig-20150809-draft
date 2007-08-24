@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.2_p14282.ebuild,v 1.1 2007/08/24 13:28:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.2_p14282.ebuild,v 1.2 2007/08/24 16:16:18 cardoe Exp $
 
 inherit mythtv flag-o-matic multilib eutils qt3 subversion toolchain-funcs
 
@@ -10,7 +10,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
 
-IUSE="alsa altivec autostart backendonly crciprec debug dbox2 dts dvb dvd freebox frontendonly hdhomerun ieee1394 ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
+IUSE="alsa altivec autostart backendonly crciprec dbox2 debug directv dts dvb dvd freebox frontendonly hdhomerun ieee1394 ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -33,6 +33,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	dvd? ( 	media-libs/libdvdnav
 		media-libs/libdts )
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
+	directv? ( virtual/perl-Time-HiRes )
 	ivtv? ( media-tv/ivtv )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
@@ -292,6 +293,11 @@ src_install() {
 
 	dobin red_eye || die "failed to install red_eye"
 	dodoc contrib/channel_changers/red_eye-README
+
+	if use directv; then
+		dobin contrib/channel_changers/d10control.pl || die "failed to install d10control"
+		dodoc contrib/channel_changers/d10control-README
+	fi
 }
 
 pkg_preinst() {
