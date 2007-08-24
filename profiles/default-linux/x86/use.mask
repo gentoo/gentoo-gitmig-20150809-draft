@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.32 2007/06/22 18:53:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.33 2007/08/24 22:03:45 bicatali Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # x86 profile.  This works, for example, if another architecture's
@@ -94,3 +94,7 @@ video_cards_newport
 
 # tcc is x86 only
 -tcc
+
+# Sébastien Fabbro <bicatali@gentoo.org> (24 Aug 2007)
+# cernlib has been tested on x86
+-cern

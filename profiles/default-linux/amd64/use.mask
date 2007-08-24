@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.60 2007/08/19 14:29:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.61 2007/08/24 22:05:27 bicatali Exp $
 
 # SECTION: Unmask
 
@@ -131,5 +131,9 @@ capslib
 #-clvm
 #-gulm
 #-cman
+
+# 2007/08/24 - Sébastien Fabbro <bicatali@gentoo.org>
+# cernlib tested on amd64
+-cern
 
 # NOT NECESSARY - SECTION
