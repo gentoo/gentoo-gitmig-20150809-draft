@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.6 2007/07/30 16:39:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.7 2007/08/24 03:00:31 metalgod Exp $
+
+*libisofs-0.2.8 (24 Aug 2007)
+
+  24 Aug 2007; <metalgod@gentoo.org> +libisofs-0.2.8.ebuild:
+  Version Bump. Closes Bug #188351.
 
   30 Jul 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   libisofs-0.2.4.ebuild:
