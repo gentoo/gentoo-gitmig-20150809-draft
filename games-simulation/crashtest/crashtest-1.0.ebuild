@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/crashtest-1.0.ebuild,v 1.2 2007/05/22 02:38:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/crashtest-1.0.ebuild,v 1.3 2007/08/24 14:21:01 nyhm Exp $
 
 inherit eutils games
 
 DESCRIPTION="Educational car crash simulator"
-HOMEPAGE="http://stolk.org/crashtest/"
-SRC_URI="http://stolk.org/${PN}/${P}.tar.gz"
+HOMEPAGE="http://bram.creative4vision.nl/crashtest/"
+SRC_URI="http://bram.creative4vision.nl/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
