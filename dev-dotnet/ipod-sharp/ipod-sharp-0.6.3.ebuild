@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ipod-sharp-0.6.3.ebuild,v 1.3 2007/08/15 23:57:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ipod-sharp-0.6.3.ebuild,v 1.4 2007/08/24 03:24:00 metalgod Exp $
 
 inherit mono
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.snorp.net/files/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/mono-1.1.10
