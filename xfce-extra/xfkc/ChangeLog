@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfkc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfkc/ChangeLog,v 1.1 2007/08/20 18:46:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfkc/ChangeLog,v 1.2 2007/08/24 13:41:02 angelos Exp $
+
+  24 Aug 2007; Christoph Mende <angelos@gentoo.org> xfkc-0.2.ebuild:
+  Added ~amd64
 
 *xfkc-0.2 (20 Aug 2007)
 
