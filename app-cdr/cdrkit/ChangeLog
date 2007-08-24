@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.49 2007/08/24 02:52:30 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.50 2007/08/24 10:39:16 uberlord Exp $
+
+  24 Aug 2007; Roy Marples <uberlord@gentoo.org> cdrkit-1.1.6.ebuild:
+  Fix broken depend
 
   24 Aug 2007; <metalgod@gentoo.org> cdrkit-1.1.6.ebuild:
   Add libcap dependency. Closes Bug #189482.

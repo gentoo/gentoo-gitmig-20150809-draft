@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.6.ebuild,v 1.9 2007/08/24 02:52:30 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.6.ebuild,v 1.10 2007/08/24 10:39:16 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,7 @@ DEPEND=">=dev-util/cmake-2.4
 	unicode? ( virtual/libiconv )
 	hfs? ( sys-apps/file )"
 RDEPEND="unicode? ( virtual/libiconv )
-	sys-libs/libcap"
+	kernel_linux? ( sys-libs/libcap )"
 
 PROVIDE="virtual/cdrtools"
 
