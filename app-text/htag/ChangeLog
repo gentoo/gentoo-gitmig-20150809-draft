@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htag
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.11 2007/02/09 01:04:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.12 2007/08/24 06:25:45 wrobel Exp $
+
+  24 Aug 2007; <wrobel@gentoo.org> htag-0.0.22.ebuild, htag-0.0.23.ebuild:
+  Marked as unstable on amd64.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
