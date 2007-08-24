@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.1_p14276.ebuild,v 1.1 2007/08/24 00:50:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.1_p14276.ebuild,v 1.2 2007/08/24 12:52:56 cardoe Exp $
 
 inherit mythtv flag-o-matic multilib eutils qt3 subversion toolchain-funcs
 
@@ -128,11 +128,8 @@ src_compile() {
 	use hdhomerun || myconf="${myconf} --disable-hdhomerun"
 	use crciprec || myconf="${myconf} --disable-crciprec"
 	use altivec || myconf="${myconf} --disable-altivec"
-	use xvmc && myconf="${myconf} --enable-xvmc --enable-xvmc-opengl"
+	use xvmc && myconf="${myconf} --enable-xvmc"
 	use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc-pro"
-	use xvmc && use video_cards_nvidia && myconf="${myconf} --disable-xvmcw"
-	use xvmc && use video_cards_i810 && myconf="${myconf} --disable-xvmcw"
-	use xvmc && use video_cards_via && myconf="${myconf} --disable-xvmcw"
 	use perl && myconf="${myconf} --with-bindings=perl"
 	myconf="${myconf}
 		--disable-audio-arts
