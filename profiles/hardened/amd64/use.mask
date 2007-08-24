@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.26 2007/06/22 18:53:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.27 2007/08/24 23:18:52 marineam Exp $
 
 multilib
 
@@ -52,6 +52,10 @@ asm
 kdexdeltas
 
 # WON'T BUILD - SECTION
+
+# 2007/08/24 Michael Marineau <marineam@gentoo.org>
+# Xen HVM support requires building 32-bit binaries.
+hvm
 
 # 2007/01/18 - Jeffrey Gardner <je_fro@gentoo.org>
 # Mask gamess support temporarily.

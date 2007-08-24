@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2990 2007/08/24 21:51:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2991 2007/08/24 23:18:51 marineam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -148,9 +148,9 @@ app-emulation/virtualbox:sdk - Enable building of SDK
 app-emulation/virtualbox:vboxbfe - Install simple SDL frontend useful for debugging purposes
 app-emulation/virtualbox:vditool - Install the Virtual Disk Image Manager vditool
 app-emulation/xen-tools:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS (not supported)
+app-emulation/xen-tools:hvm - Enable support for hardware based virtualization (VT-x, AMD-v)
 app-emulation/xen-tools:pygrub - Install the pygrub boot loader
 app-emulation/xen-tools:screen - Enable support for running domain U consoles in a screen session
-app-emulation/xen-tools:vnc - Enable support for VNC as a video device for domainUs
 app-emulation/xen-tools:ioemu - Enable support for emulated io devices including video via VNC for domainUs
 app-emulation/xen:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS (not supported)
 app-emulation/xen:pae - Enable support for PAE kernels (usually x86-32 with >4GB memory)

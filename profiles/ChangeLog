@@ -1,6 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.592 2007/08/24 21:51:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.593 2007/08/24 23:18:51 marineam Exp $
+
+  24 Aug 2007; Michael Marineau <marineam@gentoo.org>
+  default-linux/amd64/2006.0/no-multilib/use.mask,
+  default-linux/amd64/2006.1/no-multilib/use.mask,
+  default-linux/amd64/2007.0/no-multilib/use.mask,
+  hardened/amd64/multilib/use.mask, hardened/amd64/use.mask, use.local.desc:
+  Add hvm USE flag for Xen HVM support in xen-tools. Mask on no-multilib
+  profiles.
 
   24 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
   Added cern local USE flag to sci-physics/root
