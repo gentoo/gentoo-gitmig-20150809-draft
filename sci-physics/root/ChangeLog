@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.7 2007/07/22 06:53:29 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.8 2007/08/24 22:09:08 bicatali Exp $
+
+*root-5.16.00 (24 Aug 2007)
+
+  24 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/root-5.16.00-fortran.patch, +root-5.16.00.ebuild:
+  Version bump. Added cern use flag. Upstream fixed xrootd for sparc and
+  parallell makes.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; root-3.05.04.ebuild,
   root-3.10.02-r1.ebuild, root-4.02.00.ebuild:
