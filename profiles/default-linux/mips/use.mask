@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.95 2007/08/22 02:56:41 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.96 2007/08/24 02:27:57 redhatter Exp $
 
 # Samuli Suominen <drac@gentoo.org>
 # No batteries on mips.
@@ -32,10 +32,6 @@ qt4
 gstreamer
 gtkhtml
 gnome
-
-# We don't use this (yet).  It's a dep for gnome-vfs with four of its own.
-# Excluding it on mips until someone reports a need for it.
-avahi
 
 # Until someone actually needs fuse, we'll mask it as
 # it holds up stablizing ntfsprogs
