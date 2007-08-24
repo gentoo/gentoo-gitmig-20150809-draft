@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.17 2007/08/10 16:23:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.18 2007/08/24 23:41:14 chainsaw Exp $
+
+*libmowgli-0.4.0 (24 Aug 2007)
+
+  24 Aug 2007; Tony Vroon <chainsaw@gentoo.org> -libmowgli-0.1.4.ebuild,
+  libmowgli-0.1.5.ebuild, libmowgli-0.2.0.ebuild, libmowgli-0.3.0.ebuild,
+  libmowgli-0.3.1.ebuild, +libmowgli-0.4.0.ebuild:
+  Version bump. Change SRC_URI to point to new dedicated Atheme mirror network
+  for all versions. Remove old ebuild.
 
 *libmowgli-0.3.1 (10 Aug 2007)
 
