@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.170 2007/08/22 21:33:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.171 2007/08/24 00:50:05 cardoe Exp $
+
+*mythtv-0.20.1_p14276 (24 Aug 2007)
+
+  24 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-0.20.1_p14260.ebuild, +mythtv-0.20.1_p14276.ebuild:
+  another MythTV 0.20.2 pre-release. fix bug #179052. switch from XvMCW to
+  nVidia XvMC, i810 XvMC, and VIA XvMC
 
 *mythtv-0.20.1_p14260 (22 Aug 2007)
 

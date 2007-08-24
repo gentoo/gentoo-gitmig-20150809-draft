@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.1_p14260.ebuild,v 1.1 2007/08/22 21:33:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.1_p14276.ebuild,v 1.1 2007/08/24 00:50:05 cardoe Exp $
 
 inherit mythtv flag-o-matic multilib eutils qt3 subversion toolchain-funcs
 
@@ -29,7 +29,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	$(qt_min_version 3.3)
 	virtual/mysql
 	alsa? ( >=media-libs/alsa-lib-0.9 )
-	dts? ( media-libs/libdts )
+	dts? ( || ( media-libs/libdca media-libs/libdts ) )
 	dvd? ( 	media-libs/libdvdnav
 		media-libs/libdts )
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
@@ -108,6 +108,12 @@ src_unpack() {
 	# As needed fix since they don't know how to write qmake let alone a real
 	# make system
 	epatch "${FILESDIR}"/${PN}-0.20-as-needed.patch
+
+	# upstream wants the revision number in their version.cpp
+	# since the subversion.eclass strips out the .svn directory
+	# svnversion in MythTV's build doesn't work
+	sed -e "s:\`(svnversion \$\${SVNTREEDIR} 2>\/dev\/null) || echo Unknown\`:${SVNREV}:" \
+		-i "${S}"/version.pro || die "svnversion sed failed"
 }
 
 src_compile() {
@@ -122,8 +128,11 @@ src_compile() {
 	use hdhomerun || myconf="${myconf} --disable-hdhomerun"
 	use crciprec || myconf="${myconf} --disable-crciprec"
 	use altivec || myconf="${myconf} --disable-altivec"
-	use xvmc && myconf="${myconf} --enable-xvmc"
+	use xvmc && myconf="${myconf} --enable-xvmc --enable-xvmc-opengl"
 	use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc-pro"
+	use xvmc && use video_cards_nvidia && myconf="${myconf} --disable-xvmcw"
+	use xvmc && use video_cards_i810 && myconf="${myconf} --disable-xvmcw"
+	use xvmc && use video_cards_via && myconf="${myconf} --disable-xvmcw"
 	use perl && myconf="${myconf} --with-bindings=perl"
 	myconf="${myconf}
 		--disable-audio-arts
