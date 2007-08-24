@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.5.2.1.ebuild,v 1.1 2007/08/24 13:35:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.5.2.1.ebuild,v 1.2 2007/08/24 19:23:08 mr_bones_ Exp $
 
 NEED_PYTHON=2.3
 
@@ -57,7 +57,6 @@ scipy_fortran_setup() {
 	use amd64 && [[ -n "${FFLAGS}" ]] && FFLAGS="${FFLAGS} -fPIC"
 	export SCIPY_FCONFIG="config_fc --fcompiler=${fc}"
 }
-
 
 # see numpy ebuild about unsetting LDFLAGS
 LDFLAGS_sav="${LDFLAGS}"
