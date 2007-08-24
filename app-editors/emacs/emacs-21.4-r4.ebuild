@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r4.ebuild,v 1.16 2007/06/25 07:22:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r4.ebuild,v 1.17 2007/08/24 07:25:28 ulm Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -8,6 +8,7 @@ DESCRIPTION="An incredibly powerful, extensible text editor"
 HOMEPAGE="http://www.gnu.org/software/emacs"
 SRC_URI="mirror://gnu/emacs/${P}a.tar.gz
 	mirror://gentoo/emacs-21-patches.tar.bz2
+	mirror://gentoo/emacs-21-files.tar.bz2
 	leim? ( mirror://gnu/emacs/leim-${PV}.tar.gz )"
 
 LICENSE="GPL-2"
@@ -57,7 +58,7 @@ src_unpack() {
 	epatch "${WORKDIR}/emacs-21.2-sh.patch"
 	use ppc64 && epatch "${WORKDIR}/emacs-21.3-ppc64.patch"
 
-	epatch ${FILESDIR}/emacs-subdirs-el-gentoo.diff
+	epatch "${WORKDIR}/emacs-subdirs-el-gentoo.diff"
 
 	# This will need to be updated for X-Compilation
 	sed -i -e "s:/usr/lib/\([^ ]*\).o:/usr/$(get_libdir)/\1.o:g" \
@@ -135,7 +136,7 @@ src_install() {
 	mv ${T}/emacs-${SLOT} ${D}/usr/share/info
 	mv ${T}/dir ${D}/usr/share/info/emacs-${SLOT}
 
-	newenvd ${FILESDIR}/60emacs-${SLOT}.envd 60emacs-${SLOT}
+	newenvd "${WORKDIR}/60emacs-${SLOT}.envd" 60emacs-${SLOT}
 
 	einfo "Fixing manpages..."
 	for m in ${D}/usr/share/man/man1/* ; do
@@ -152,7 +153,7 @@ src_install() {
 	dodoc BUGS ChangeLog README
 
 	insinto /usr/share/applications
-	doins ${FILESDIR}/${DFILE}
+	doins "${WORKDIR}/${DFILE}"
 }
 
 update-alternatives() {
