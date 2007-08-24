@@ -1,6 +1,14 @@
 # ChangeLog for games-action/btanks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.1 2007/08/20 23:41:14 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.2 2007/08/24 21:31:01 vapier Exp $
+
+*btanks-0.5.4740-r1 (24 Aug 2007)
+
+  24 Aug 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/btanks-0.5.4740-scons-blows.patch, +btanks-0.5.4740-r1.ebuild:
+  Make sure user build env settings are respected and make sure rpath gets set
+  properly in the binary (thus no need for a wrapper script) #190065 by
+  Torsten Kaiser.
 
 *btanks-0.5.4740 (20 Aug 2007)
 

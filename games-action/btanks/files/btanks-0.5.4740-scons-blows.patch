@@ -1,0 +1,54 @@
+Respect env build settings, dont force crappy flags, and make sure -rpath is added properly.
+
+--- SConstruct
++++ SConstruct
+@@ -41,6 +41,18 @@
+ debug = buildmode == "debug"
+ Export('debug')
+ 
++import SCons.Util
++if os.environ.has_key('CC'):
++	env['CC'] = os.environ['CC']
++if os.environ.has_key('CFLAGS'):
++	env['CCFLAGS'] += SCons.Util.CLVar(os.environ['CFLAGS'])
++if os.environ.has_key('CXX'):
++	env['CXX'] = os.environ['CXX']
++if os.environ.has_key('CXXFLAGS'):
++	env['CXXFLAGS'] += SCons.Util.CLVar(os.environ['CXXFLAGS'])
++if os.environ.has_key('LDFLAGS'):
++	env['LINKFLAGS'] += SCons.Util.CLVar(os.environ['LDFLAGS'])
++
+ if (env['gcc_visibility']): 
+ 	env.Append(CCFLAGS=' -fvisibility-inlines-hidden -fvisibility=hidden -DGCC_HASCLASSVISIBILITY ')
+ 	env.Append(CXXFLAGS=' -fvisibility-inlines-hidden -fvisibility=hidden -DGCC_HASCLASSVISIBILITY ')
+@@ -81,16 +81,10 @@
+ 	if env['gcc_visibility']: 
+ 		env.Append(CCFLAGS=' -fvisibility-inlines-hidden -fvisibility=hidden ');
+ 		env.Append(CPPFLAGS=' -fvisibility-inlines-hidden -fvisibility=hidden ');
+-	if debug:
+-		env.Append(CCFLAGS='-ggdb ')
+-		env.Append(CPPFLAGS='-ggdb ')
+-	else: 
+-		env.Append(CCFLAGS='-O3 ')
+-		env.Append(CPPFLAGS='-O3 ')
+ 		
+ 	al_lib = 'openal'
+-	env.Append(CPPFLAGS=' -Wall -pedantic -Wno-long-long -pipe -pthread ')
+-	env.Append(CCFLAGS=' -Wall -pedantic -Wno-long-long -pipe -pthread ')
++	env.Append(CPPFLAGS=' -Wall -pedantic -Wno-long-long -pthread ')
++	env.Append(CCFLAGS=' -Wall -pedantic -Wno-long-long -pthread ')
+ 
+ 
+ conf_env = env.Copy()
+--- SConscript
++++ SConscript
+@@ -94,7 +94,7 @@
+ 
+ Import('lib_dir')
+ if sys.platform != 'win32':
+-	bt_env.Append(LINKFLAGS=' -Wl,-rpath '+ lib_dir + ' -Wl,-rpath-link build/' + env['mode'] + '/mrt')
+-	bt_env.Append(LINKFLAGS=' -Wl,-rpath '+ lib_dir + ' -Wl,-rpath-link build/' + env['mode'] + '/sdlx')
++	bt_env.Append(LINKFLAGS=' -Wl,-rpath,'+ lib_dir + ' -Wl,-rpath-link,build/' + env['mode'] + '/mrt')
++	bt_env.Append(LINKFLAGS=' -Wl,-rpath,'+ lib_dir + ' -Wl,-rpath-link,build/' + env['mode'] + '/sdlx')
+ 
+ bt_main = bt_env.Program('bt', bt_main_sources, LIBS=bt_main_libs, RPATH=[lib_dir])
