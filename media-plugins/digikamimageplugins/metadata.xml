@@ -2,4 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>kde</herd>
+<longdescription>DigikamImagePlugins are a collection of plugins for digiKam Image Editor and ShowFoto. These plugins add new image treatment options like colour management, filters, or special effects.</longdescription>
 </pkgmetadata>

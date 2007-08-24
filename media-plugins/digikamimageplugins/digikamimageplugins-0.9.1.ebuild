@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.9.1.ebuild,v 1.7 2007/08/13 21:12:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/digikamimageplugins-0.9.1.ebuild,v 1.8 2007/08/24 19:20:32 philantrop Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -11,9 +11,7 @@ P_DOC="${PN}-doc-0.8.2"
 MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="DigikamImagePlugins are a collection of plugins for digiKam Image
-Editor and ShowFoto. These plugins add new image treatment options like color
-management, filters, or special effects."
+DESCRIPTION="DigikamImagePlugins contains plugins for digiKam. They add new options like colour management, filters, special effects."
 HOMEPAGE="http://extragear.kde.org/apps/digikamimageplugins/"
 SRC_URI="mirror://sourceforge/digikam/${MY_P}.tar.bz2
 	mirror://sourceforge/digikam/${P_DOC}.tar.bz2"
