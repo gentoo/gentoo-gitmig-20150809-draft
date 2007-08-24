@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libipoddevice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.16 2007/08/15 23:59:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.17 2007/08/24 03:22:28 metalgod Exp $
+
+  24 Aug 2007; <metalgod@gentoo.org> libipoddevice-0.5.3.ebuild:
+  Stable on amd64. Bug #185631.
 
   15 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   libipoddevice-0.5.3.ebuild:
