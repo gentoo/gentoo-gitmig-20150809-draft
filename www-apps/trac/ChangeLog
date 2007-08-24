@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.60 2007/08/19 10:05:14 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.61 2007/08/24 18:31:22 beandog Exp $
+
+  24 Aug 2007; Steve Dibb <beandog@gentoo.org> trac-0.10.3.1.ebuild:
+  amd64 stable
 
   19 Aug 2007; Julien Allanos <dju@gentoo.org> trac-0.10.3.1.ebuild,
   trac-0.10.4.ebuild:
