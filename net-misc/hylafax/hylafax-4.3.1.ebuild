@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.1.ebuild,v 1.5 2007/04/28 22:30:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.1.ebuild,v 1.6 2007/08/24 03:42:26 nerdboy Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
 
@@ -51,6 +51,8 @@ src_compile() {
 	[ $(gcc-major-version) -eq 3 ] && [ $(gcc-minor-version) -ge 4 ] \
 		&& filter-flags -fstack-protector -fstack-protector-all
 
+	epatch ${FILESDIR}/gentoo-gcc-version.patch || die "epatch failed"
+
 	local my_conf="
 		--with-DIR_BIN=/usr/bin
 		--with-DIR_SBIN=/usr/sbin
@@ -98,6 +100,8 @@ src_compile() {
 	#--enable-pam isn't valid
 	use pam || my_conf="${my_conf} $(use_enable pam)"
 
+	myconf="CC=$(tc-getCC) CXX=$(tc-getCXX) ${my_conf}"
+
 	# eval required for quoting in ${my_conf} to work properly, better way?
 	eval ./configure --nointeractive ${my_conf} || die "./configure failed"
 
@@ -126,6 +130,9 @@ src_install() {
 	keepdir /var/spool/fax/{archive,client,etc,pollq,recvq,tmp}
 	keepdir /var/spool/fax/{status,sendq,log,info,doneq,docq,dev}
 
+	dosed "s:hostname:hostname -f:g" \
+	    /var/spool/fax/bin/{faxrcvd,pollrcvd} || die "dosed failed"
+
 	einfo "Adding env.d entry for Hylafax"
 	newenvd ${FILESDIR}/99hylafax-4.2 99hylafax
 
@@ -138,9 +145,19 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	einfo "See the docs and man pages for detailed configuration info."
-	echo
-	einfo "Now run faxsetup and (if necessary) faxaddmodem."
-	echo
+	elog
+	elog "There are additional files included in the hylafax/files dir."
+	elog
+	elog "Note 1: hylafax.cron is provided for vixie-cron users and"
+	elog "should be placed in /etc/cron.d.  Use as-is or adapt it to"
+	elog "your system config."
+	elog
+	elog "Note 2: if you need to use hylafax with iptables, then you"
+	elog "need to specify the port and use ip_conntrack_ftp as shown"
+	elog "in the included example modules file."
+	elog
+	elog "See the docs and man pages for detailed configuration info."
+	elog
+	elog "Now run faxsetup and (if necessary) faxaddmodem."
+	elog
 }

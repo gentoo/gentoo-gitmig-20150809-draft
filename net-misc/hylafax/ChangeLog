@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.76 2007/04/28 16:55:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.77 2007/08/24 03:42:26 nerdboy Exp $
+
+  24 Aug 2007; Steve Arnold <nerdboy@gentoo.org>
+  +files/gentoo-gcc-version.patch, +files/hylafax.cron,
+  +files/hylafax.modules, hylafax-4.3.0.ebuild, hylafax-4.3.1.ebuild:
+  Added fixes for bugs #138393, #179428, and #187118 - a patch (fixed
+  upstream in trunk) and some ebuild updates, along with a couple of
+  example files for the faxqclean cron job and iptables (left as an
+  install exercise for the user).  Thanks to several people for the
+  patch and other files (see the relevant bugs).
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> hylafax-4.2.5.ebuild,
   hylafax-4.3.0.ebuild, hylafax-4.3.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.0.ebuild,v 1.9 2007/04/28 22:30:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.0.ebuild,v 1.10 2007/08/24 03:42:26 nerdboy Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
 
@@ -50,6 +50,8 @@ src_compile() {
 	# so drop the flags until a better solution comes along
 	[ $(gcc-major-version) -eq 3 ] && [ $(gcc-minor-version) -ge 4 ] \
 		&& filter-flags -fstack-protector -fstack-protector-all
+
+	epatch ${FILESDIR}/gentoo-gcc-version.patch || die "epatch failed"
 
 	local my_conf="
 		--with-DIR_BIN=/usr/bin
