@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/notification-daemon-xfce
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/notification-daemon-xfce/ChangeLog,v 1.10 2007/07/31 20:26:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/notification-daemon-xfce/ChangeLog,v 1.11 2007/08/24 23:23:12 angelos Exp $
+
+  24 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  notification-daemon-xfce-0.3.7.ebuild:
+  Stable on amd64
 
   31 Jul 2007; Tony Vroon <chainsaw@gentoo.org>
   notification-daemon-xfce-0.3.7.ebuild:

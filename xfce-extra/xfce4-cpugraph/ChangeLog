@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-cpugraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph/ChangeLog,v 1.22 2007/08/04 13:41:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph/ChangeLog,v 1.23 2007/08/24 23:25:20 angelos Exp $
+
+  24 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  xfce4-cpugraph-0.3.0-r1.ebuild:
+  Stable on amd64
 
 *xfce4-cpugraph-0.3.0-r1 (04 Aug 2007)
 

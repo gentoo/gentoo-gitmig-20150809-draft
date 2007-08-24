@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-cellmodem
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/ChangeLog,v 1.3 2007/03/10 10:26:14 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/ChangeLog,v 1.4 2007/08/24 23:23:43 angelos Exp $
+
+  24 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  xfce4-cellmodem-0.0.5.ebuild:
+  Stable on amd64
 
   10 Mar 2007; Peter Weller <welp@gentoo.org> xfce4-cellmodem-0.0.5.ebuild:
   Keyworded on amd64 wrt bug 169987
