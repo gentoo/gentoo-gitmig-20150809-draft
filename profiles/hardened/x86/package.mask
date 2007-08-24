@@ -1,15 +1,11 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/package.mask,v 1.40 2007/08/23 00:19:38 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/package.mask,v 1.41 2007/08/24 15:06:16 armin76 Exp $
 
 # Markus Ullmann <jokey@gentoo.org> (18 Apr 2007)
 # mask because of b0rkage with hardened compiler, works with vanilla compiler
 # see bug #174813
 app-emulation/virtualbox
-
-# Raúl Porcel <armin76@gentoo.org> (03 Apr 2007)
-# Unmasking firefox-1.5 for <epiphany-2.16
--=www-client/mozilla-firefox-1.5*
 
 # Christian Faulhammer <opfer@gentoo.org> (04 Mar 2007)
 # does not work with kernel 2.4, see bug #158271
