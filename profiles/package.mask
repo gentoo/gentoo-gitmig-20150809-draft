@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7627 2007/08/24 12:27:37 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7628 2007/08/24 13:06:30 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -46,6 +46,22 @@ media-video/ati-gatos
 # MythTV 0.20.2 pre-release, masked due to ABI
 # change that requires plugin rebuild
 =media-tv/mythtv-0.20.1_p14276
+>=media-tv/mythtv-0.20.2_p14282
+>=x11-themes/mythtv-themes-0.20.2_p14282
+>=media-plugins/mytharchive-0.20.2_p14282
+>=media-plugins/mythbrowser-0.20.2_p14282
+>=media-plugins/mythcontrols-0.20.2_p14282
+>=media-plugins/mythdvd-0.20.2_p14282
+>=media-plugins/mythflix-0.20.2_p14282
+>=media-plugins/mythgallery-0.20.2_p14282
+>=media-plugins/mythgame-0.20.2_p14282
+>=media-plugins/mythmovies-0.20.2_p14282
+>=media-plugins/mythmusic-0.20.2_p14282
+>=media-plugins/mythnews-0.20.2_p14282
+>=media-plugins/mythphone-0.20.2_p14282
+>=media-plugins/mythvideo-0.20.2_p14282
+>=media-plugins/mythweather-0.20.2_p14282
+>=www-apps/mythweb-0.20.2_p14282
 
 # Ulrich Mueller <ulm@gentoo.org> (21 Aug 2007)
 # Masking due to issues with customisation dependencies.
@@ -591,22 +607,22 @@ net-misc/xsupplicant
 # complain upstream if something is broken
 # or if it's Gentoo specific any bugs that get
 # filed require a patch
->media-tv/mythtv-0.20.1_p99999
->x11-themes/mythtv-themes-0.20.1_p99999
->media-plugins/mytharchive-0.20.1_p99999
->media-plugins/mythbrowser-0.20.1_p99999
->media-plugins/mythcontrols-0.20.1_p99999
->media-plugins/mythdvd-0.20.1_p99999
->media-plugins/mythflix-0.20.1_p99999
->media-plugins/mythgallery-0.20.1_p99999
->media-plugins/mythgame-0.20.1_p99999
->media-plugins/mythmovies-0.20.1_p99999
->media-plugins/mythmusic-0.20.1_p99999
->media-plugins/mythnews-0.20.1_p99999
->media-plugins/mythphone-0.20.1_p99999
->media-plugins/mythvideo-0.20.1_p99999
->media-plugins/mythweather-0.20.1_p99999
->www-apps/mythweb-0.20.1_p99999
+>media-tv/mythtv-0.20.9_p99999
+>x11-themes/mythtv-themes-0.20.9_p99999
+>media-plugins/mytharchive-0.20.9_p99999
+>media-plugins/mythbrowser-0.20.9_p99999
+>media-plugins/mythcontrols-0.20.9_p99999
+>media-plugins/mythdvd-0.20.9_p99999
+>media-plugins/mythflix-0.20.9_p99999
+>media-plugins/mythgallery-0.20.9_p99999
+>media-plugins/mythgame-0.20.9_p99999
+>media-plugins/mythmovies-0.20.9_p99999
+>media-plugins/mythmusic-0.20.9_p99999
+>media-plugins/mythnews-0.20.9_p99999
+>media-plugins/mythphone-0.20.9_p99999
+>media-plugins/mythvideo-0.20.9_p99999
+>media-plugins/mythweather-0.20.9_p99999
+>www-apps/mythweb-0.20.9_p99999
 >media-plugins/mythzoneminder-0.20.1_p99999
 
 # Stefan Cornelius <dercorny@gentoo.org> (3 Mar 2007)
