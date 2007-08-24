@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2a.ebuild,v 1.2 2007/08/21 09:02:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2a.ebuild,v 1.3 2007/08/24 21:01:52 alonbl Exp $
 
-inherit linux-mod eutils
+inherit linux-mod
 
 MY_P="${PN/aes/AES}-v${PV}"
 DESCRIPTION="Linux kernel module to encrypt local file systems and disk partitions with AES cipher."
