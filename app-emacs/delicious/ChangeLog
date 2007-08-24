@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/delicious
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/ChangeLog,v 1.5 2007/07/02 06:39:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/ChangeLog,v 1.6 2007/08/24 06:33:58 wrobel Exp $
+
+  24 Aug 2007; <wrobel@gentoo.org> delicious-0.3-r1.ebuild:
+  Marked as unstable on amd64.
 
 *delicious-0.3-r1 (02 Jul 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/delicious-0.3-r1.ebuild,v 1.1 2007/07/02 06:39:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/delicious-0.3-r1.ebuild,v 1.2 2007/08/24 06:33:58 wrobel Exp $
 
 NEED_EMACS=22
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.wjsullivan.net/darcs/delicious-el/delicious-el-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 IUSE="planner"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 SLOT="0"
 
