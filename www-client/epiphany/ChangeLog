@@ -1,6 +1,15 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.123 2007/08/11 16:45:49 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.124 2007/08/24 15:43:15 leio Exp $
+
+*epiphany-2.18.3 (24 Aug 2007)
+
+  24 Aug 2007; Mart Raudsepp <leio@gentoo.org> +epiphany-2.18.3.ebuild:
+  Version bump to 2.18.3. This includes the following upstream fixes:
+  * Make User-Agent Firefox compatible with USE=xulrunner too
+  * Cancel already progressing print jobs properly
+  * Fix go button behaviour to open the link in a new tab on middle button
+  release, not press
 
   11 Aug 2007; Mart Raudsepp <leio@gentoo.org> -epiphany-2.14.2.1-r1.ebuild,
   -epiphany-2.14.3.ebuild, -epiphany-2.18.1.ebuild:
