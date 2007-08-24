@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7628 2007/08/24 13:06:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7629 2007/08/24 14:26:37 jer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -42,7 +42,7 @@ app-misc/emelfm
 # Masked for treecleaners, removed in 60 days.
 media-video/ati-gatos
 
-# Doug Goldste <cardoe@gentoo.org> (22 Aug 2007)
+# Doug Goldstein <cardoe@gentoo.org> (22 Aug 2007)
 # MythTV 0.20.2 pre-release, masked due to ABI
 # change that requires plugin rebuild
 =media-tv/mythtv-0.20.1_p14276
