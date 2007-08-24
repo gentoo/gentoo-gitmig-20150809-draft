@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.433 2007/08/24 18:16:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.434 2007/08/24 18:42:36 zmedico Exp $
+
+*portage-2.1.3.7 (24 Aug 2007)
+
+  24 Aug 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.3.7.ebuild:
+  2.1.3.7 bump. This fixes bugs #184443, #188703, #189219, #189743,
+  and #189791. This release also includes a performance optimization
+  that makes large dependency calculations significantly faster.
+  Bug #181949 tracks all bugs fixed since 2.1.2.x.
 
   24 Aug 2007; Raúl Porcel <armin76@gentoo.org> portage-2.1.2.12.ebuild:
   alpha/ia64 stable wrt #189289
