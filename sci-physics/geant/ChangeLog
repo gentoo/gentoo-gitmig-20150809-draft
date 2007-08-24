@@ -1,0 +1,10 @@
+# ChangeLog for sci-physics/geant
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.1 2007/08/24 21:43:26 bicatali Exp $
+
+*geant-3.21.14 (24 Aug 2007)
+
+  24 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +geant-3.21.14.ebuild:
+  Initial import.
+
