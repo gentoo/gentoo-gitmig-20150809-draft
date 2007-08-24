@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.41 2007/07/15 18:00:11 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.42 2007/08/24 23:20:39 marineam Exp $
+
+*xen-sources-2.6.20-r2 (24 Aug 2007)
+*xen-sources-2.6.18-r3 (24 Aug 2007)
+
+  24 Aug 2007; Michael Marineau <marineam@gentoo.org>
+  -files/xen-sources-2.6.16.28-CVE-2006-3468.patch,
+  -files/xen-sources-2.6.16.28-CVE-2006-6333.patch,
+  -files/CVE-2005-4352.patch, -files/CVE-2006-4572.patch,
+  -files/CVE-2006-5619.patch, -files/CVE-2006-6056.patch,
+  -files/CVE-2006-6060.patch, -files/dvb-core-ule-sndu.patch,
+  -xen-sources-2.6.16.28.ebuild, -xen-sources-2.6.16.28-r1.ebuild,
+  -xen-sources-2.6.16.28-r2.ebuild, -xen-sources-2.6.16.33.ebuild,
+  -xen-sources-2.6.16.49.ebuild, +xen-sources-2.6.18-r3.ebuild,
+  +xen-sources-2.6.20-r2.ebuild:
+  Copy Xen 3.1.0 related ebuilds over from the Xen project overlay.
+  Remove Xen 3.0.2.
 
   15 Jul 2007; Michael Marineau <marineam@gentoo.org>
   +files/xen-sources-2.6.16.52-sctp-skb_linearize-fix.patch,
@@ -14,7 +30,7 @@
   +xen-sources-2.6.16.52.ebuild:
   Version bump and fix ip tables REJECT compile failure
 
-  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  02 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org>
   xen-sources-2.6.16.28.ebuild, xen-sources-2.6.16.28-r1.ebuild:
   (QA) RESTRICT clean up.
 
