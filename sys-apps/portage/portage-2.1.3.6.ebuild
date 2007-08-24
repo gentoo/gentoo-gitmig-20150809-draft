@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3.6.ebuild,v 1.1 2007/08/15 22:14:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3.6.ebuild,v 1.2 2007/08/24 02:16:46 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -200,7 +200,10 @@ pkg_preinst() {
 		rm -rf "${D}"/${portage_base}/bin/*
 		mv "${T}"/tbz2tool "${D}"/${portage_base}/bin/
 	fi
-	remove_python_bytecodes
+
+	# Save a list of specific python sources to compile during postinst.
+	find "${D}"${portage_base}/pym -name "*.py" -print | \
+		sed -e "s:^${D}::" > "${T}"/pym_src_file_list
 }
 
 pkg_postinst() {
@@ -218,6 +221,18 @@ pkg_postinst() {
 		[ -e "${x}" ] && mv -f "${x}" "${ROOT}etc/make.globals"
 	done
 
+	# Wipe out existing bytecodes to prevent possible interference
+	# when the new and old version have namespace differences.
+	remove_python_bytecodes
+
+	# Compile only the source files that have just been installed.
+	python -c 'import py_compile; py_compile.main()' \
+		$(while read x; do echo "${ROOT%/}${x}"; done \
+		< "${T}"/pym_src_file_list)
+	python -O -c 'import py_compile; py_compile.main()' \
+		$(while read x; do echo "${ROOT%/}${x}"; done \
+		< "${T}"/pym_src_file_list)
+
 	elog
 	elog "FEATURES=\"userfetch\" is now enabled by default. Depending on your \${DISTDIR}"
 	elog "permissions, this may result in Permission Denied errors. If you would like"
@@ -231,10 +246,6 @@ pkg_postinst() {
 	elog "to identify a specific slot."
 
 	portage_docs
-}
-
-pkg_postrm() {
-	remove_python_bytecodes
 }
 
 remove_python_bytecodes() {
