@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7626 2007/08/24 00:27:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7627 2007/08/24 12:27:37 metalgod Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Luis Medinas <metalgod@gentoo.org> (24 Aug 2007)
+# Mask libisofs 0.2.8 until i fix Brasero
+=dev-libs/libisofs-0.2.8
 
 # Samuli Suominen <drac@gentoo.org> (23 Aug 2007)
 # Deprecated GTK+-1.2 applications.
