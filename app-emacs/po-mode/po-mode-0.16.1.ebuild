@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/po-mode-0.16.1.ebuild,v 1.5 2007/08/19 19:45:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/po-mode-0.16.1.ebuild,v 1.6 2007/08/24 20:03:02 armin76 Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/gettext/gettext-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ppc ~ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ppc ~ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}/gettext-${PV}/gettext-tools/misc"
