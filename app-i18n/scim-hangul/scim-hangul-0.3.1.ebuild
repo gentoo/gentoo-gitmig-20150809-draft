@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/scim-hangul-0.3.1.ebuild,v 1.3 2007/08/17 07:23:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/scim-hangul-0.3.1.ebuild,v 1.4 2007/08/24 18:03:55 armin76 Exp $
 
 DESCRIPTION="Hangul IMEngine for SCIM ported from imhangul"
 HOMEPAGE="http://www.scim-im.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 x86"
+KEYWORDS="alpha ~amd64 x86"
 IUSE="kde nls"
 
 RDEPEND="|| ( >=app-i18n/scim-0.99.8 >=app-i18n/scim-cvs-0.99.8 )
