@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ezra-sil/ezra-sil-2.5.ebuild,v 1.2 2007/08/24 14:01:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ezra-sil/ezra-sil-2.5.ebuild,v 1.3 2007/08/24 20:56:41 armin76 Exp $
 
 inherit font
 
@@ -19,7 +19,7 @@ DEPEND="app-arch/unzip"
 RDEPEND=""
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~s390 ~sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ia64 ~ppc ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DOCS="README.txt"
