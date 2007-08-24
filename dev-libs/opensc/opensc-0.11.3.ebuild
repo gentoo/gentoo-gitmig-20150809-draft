@@ -1,10 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.3.ebuild,v 1.3 2007/08/23 20:54:34 gustavoz Exp $
-
-WANT_AUTOMAKE="1.9"
-
-inherit eutils libtool autotools
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.3.ebuild,v 1.4 2007/08/24 16:45:21 alonbl Exp $
 
 DESCRIPTION="SmartCard library and applications"
 HOMEPAGE="http://www.opensc-project.org/opensc/"
@@ -43,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die
 
 	dodoc NEWS README
 	dohtml doc/*.{html,css}
