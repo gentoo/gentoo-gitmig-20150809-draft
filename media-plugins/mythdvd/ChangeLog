@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythdvd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.44 2007/08/07 16:32:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.45 2007/08/24 15:32:09 cardoe Exp $
+
+*mythdvd-0.20.2_p14282 (24 Aug 2007)
+
+  24 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  +mythdvd-0.20.2_p14282.ebuild:
+  bump to 0.20.2
 
 *mythdvd-0.20.1_p14146 (07 Aug 2007)
 
