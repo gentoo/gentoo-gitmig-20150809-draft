@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/ezra-sil
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ezra-sil/ChangeLog,v 1.7 2007/07/24 01:57:23 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ezra-sil/ChangeLog,v 1.8 2007/08/24 14:01:59 gustavoz Exp $
+
+  24 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> ezra-sil-2.5.ebuild:
+  Stable on sparc wrt #189977
 
 *ezra-sil-2.5 (24 Jul 2007)
 
