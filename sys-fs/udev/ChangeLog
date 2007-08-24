@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.335 2007/08/22 14:04:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.336 2007/08/24 14:05:55 armin76 Exp $
+
+  24 Aug 2007; Raúl Porcel <armin76@gentoo.org> udev-114.ebuild:
+  alpha/ia64 stable wrt #188796
 
 *udev-114-r2 (22 Aug 2007)
 
