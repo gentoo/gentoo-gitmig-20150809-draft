@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.6-r2.ebuild,v 1.2 2007/07/09 14:57:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.6-r2.ebuild,v 1.3 2007/08/25 17:13:38 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -27,6 +27,7 @@ src_unpack() {
 	[[ -n ${PV_SNAP} ]] && epatch "${WORKDIR}"/${MY_P}-${PV_SNAP}-patch.sh
 	epatch "${WORKDIR}"/${P}-coverity.patch
 	epatch "${FILESDIR}"/${PN}-5.6-gfbsd.patch
+	epatch "${FILESDIR}"/${PN}-5.6-build.patch #184700
 }
 
 src_compile() {
@@ -83,7 +84,7 @@ do_compile() {
 		--enable-const \
 		--enable-colorfgbg \
 		--enable-echo \
-		--enable-warnings \
+		$(use_enable !ada warnings) \
 		$(use_with debug assertions) \
 		$(use_with !debug leaks) \
 		$(use_with debug expanded) \
