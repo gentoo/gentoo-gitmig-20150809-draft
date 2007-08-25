@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-114-r2.ebuild,v 1.1 2007/08/22 14:04:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-114-r2.ebuild,v 1.2 2007/08/25 12:59:26 zzam Exp $
 
-inherit eutils flag-o-matic multilib toolchain-funcs linux-info
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
@@ -38,7 +38,22 @@ pkg_setup() {
 			extras/root_link"
 
 	use selinux && myconf="${myconf} USE_SELINUX=true"
-	if kernel_is le 2 6 14 >/dev/null; then
+
+	# comparing kernel version without linux-info.eclass to not pull
+	# virtual/linux-sources
+	local KV=$(uname -r)
+	local KV_MAJOR=${KV%%.*}
+	local x=${KV#*.}
+	local KV_MINOR=${x%%.*}
+	x=${KV#*.*.}
+	local KV_MICRO=${x%%-*}
+
+	local ok=0
+	if [[ "${KV_MAJOR}" == 2 ]] && [[ "${KV_MINOR}" == 6 ]] && [[ "${KV_MICRO}" -ge 15 ]]; then
+		ok=1
+	fi
+
+	if [[ "$ok" = "0" ]]; then
 		ewarn
 		ewarn "${P} does not support Linux kernel before version 2.6.15!"
 		ewarn "If you want to use udev you need to update"
