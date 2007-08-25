@@ -16,10 +16,10 @@ EBUILD xf86-input-mouse-1.2.0.ebuild 590 RMD160 8001bca44626d6eb96af641d45323c98
 MD5 6fb78846b1839165ecda1dc689f22c1d xf86-input-mouse-1.2.0.ebuild 590
 RMD160 8001bca44626d6eb96af641d45323c98e5bb0a5b xf86-input-mouse-1.2.0.ebuild 590
 SHA256 bab05e2cc9f5aa5e530b53e0ae7950ee04b76f20a1c5e28471dbace63ba4a6df xf86-input-mouse-1.2.0.ebuild 590
-EBUILD xf86-input-mouse-1.2.1.ebuild 586 RMD160 a31a2db8aab5e5a984edf411485d38754bbd4fb7 SHA1 2bdbcf97a3a8ba4aa9d73396dcba0b38c7d2e1e0 SHA256 3d3fb8af787471663d9db5e8e7dabdd24783a1c2b96e0d265337cf5b3c5d1e2a
-MD5 42fbeefe6d0e58a8e10dadd4755151a8 xf86-input-mouse-1.2.1.ebuild 586
-RMD160 a31a2db8aab5e5a984edf411485d38754bbd4fb7 xf86-input-mouse-1.2.1.ebuild 586
-SHA256 3d3fb8af787471663d9db5e8e7dabdd24783a1c2b96e0d265337cf5b3c5d1e2a xf86-input-mouse-1.2.1.ebuild 586
+EBUILD xf86-input-mouse-1.2.1.ebuild 582 RMD160 f501f26af46bc97c016e72014ce74acea8b991c0 SHA1 d976bc0293e984b0d6e55847378e1b3a0a2de4d3 SHA256 5b05c4d58eb2c5212aa4790dce58ee497cd54a0967874442d8e5a9f770dcbb4e
+MD5 28e47925c7b97baaef46693b24973629 xf86-input-mouse-1.2.1.ebuild 582
+RMD160 f501f26af46bc97c016e72014ce74acea8b991c0 xf86-input-mouse-1.2.1.ebuild 582
+SHA256 5b05c4d58eb2c5212aa4790dce58ee497cd54a0967874442d8e5a9f770dcbb4e xf86-input-mouse-1.2.1.ebuild 582
 EBUILD xf86-input-mouse-1.2.2.ebuild 595 RMD160 7ee19382767fa45c74445db5d5299b95ed04845a SHA1 4dc6f14b6bb8a150f5506dd4f164f3ed1b574258 SHA256 7b912a4781e68b8c442930c3d0b4debfb45de9c4f0d11caceee258203fca67cf
 MD5 cd90ab27fd91510f9e31b243a2859584 xf86-input-mouse-1.2.2.ebuild 595
 RMD160 7ee19382767fa45c74445db5d5299b95ed04845a xf86-input-mouse-1.2.2.ebuild 595
@@ -45,9 +45,9 @@ MD5 666f8c995d5d3834b22ad81d34cdeb04 files/digest-xf86-input-mouse-1.2.2 527
 RMD160 6f2f786bbc10c6ea13a05466f6ae09d94d86a118 files/digest-xf86-input-mouse-1.2.2 527
 SHA256 3cd9d2c8d639386c329ebd5e79c0dde27f512a743e083c43975816b151e9f785 files/digest-xf86-input-mouse-1.2.2 527
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGuGsaKRy60XGEcJIRAgzlAJ91vwYybmq8vwA57ebzJB88wRVfMQCdFEkw
-dWStdgykFpi6W8weeYj5AYg=
-=xCUy
+iD8DBQFG0CVmp/wUKkr7RBoRAlwXAJ4oxMbPNa/21Q6Ag0sLLXuuEuf9wgCgsFtw
+8oKIKHFeaBBsmbLk9AVkQdU=
+=mAG0
 -----END PGP SIGNATURE-----
