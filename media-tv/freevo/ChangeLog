@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/freevo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.50 2007/08/23 01:06:29 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.51 2007/08/25 23:09:51 beandog Exp $
+
+  25 Aug 2007; Steve Dibb <beandog@gentoo.org> freevo-1.7.2.ebuild:
+  amd64 stable, bug 190238
 
 *freevo-1.7.3 (23 Aug 2007)
 
