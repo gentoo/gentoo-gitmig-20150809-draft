@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.69 2007/07/11 04:52:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.70 2007/08/25 05:07:39 mrness Exp $
+
+*freeradius-1.1.7 (25 Aug 2007)
+
+  25 Aug 2007; Alin Năstac <mrness@gentoo.org>
+  +files/freeradius-1.1.7-qa-fixes.patch, +files/freeradius-1.1.7-ssl.patch,
+  +files/freeradius-1.1.7-versionless-la-files.patch,
+  +freeradius-1.1.7.ebuild:
+  Version bump.
 
   11 Jul 2007; Alin Năstac <mrness@gentoo.org>
   -files/freeradius-1.1.3-nostrip.patch, -files/freeradius-1.1.3-ssl.patch,
