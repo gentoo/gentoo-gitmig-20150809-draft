@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-prof
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.3 2007/07/11 19:42:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.4 2007/08/25 13:36:44 graaff Exp $
+
+*ruby-prof-0.5.2 (25 Aug 2007)
+
+  25 Aug 2007; Hans de Graaff <graaff@gentoo.org> +ruby-prof-0.5.2.ebuild:
+  Version bump: performance improvements, bug fixes, and a rails plugin.
 
 *ruby-prof-0.5.0 (11 Jul 2007)
 
