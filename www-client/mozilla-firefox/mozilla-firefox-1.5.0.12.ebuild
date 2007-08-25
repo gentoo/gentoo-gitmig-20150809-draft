@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.12.ebuild,v 1.6 2007/07/13 16:00:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.12.ebuild,v 1.7 2007/08/25 14:29:05 vapier Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/source/firefox-${PV}-source.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2"
 
-KEYWORDS="-* amd64 ~arm hppa ia64 ~mips ppc sparc x86 ~x86-fbsd"
+KEYWORDS="-* amd64 arm hppa ia64 ~mips ppc sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="java mozdevelop"
