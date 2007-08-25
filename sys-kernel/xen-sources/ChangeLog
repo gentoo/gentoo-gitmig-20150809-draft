@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.42 2007/08/24 23:20:39 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.43 2007/08/25 23:02:43 marineam Exp $
+
+  25 Aug 2007; Michael Marineau <marineam@gentoo.org>
+  xen-sources-2.6.20-r2.ebuild:
+  Restore the dependency on >=binutils-2.17 that was accidently dropped.
 
 *xen-sources-2.6.20-r2 (24 Aug 2007)
 *xen-sources-2.6.18-r3 (24 Aug 2007)

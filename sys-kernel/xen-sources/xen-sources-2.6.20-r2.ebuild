@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.20-r2.ebuild,v 1.1 2007/08/24 23:20:39 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.20-r2.ebuild,v 1.2 2007/08/25 23:02:43 marineam Exp $
 
 ETYPE="sources"
 UNIPATCH_STRICTORDER="1"
@@ -21,3 +21,5 @@ XENPATCHES_URI="mirror://gentoo/${XENPATCHES}"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${XENPATCHES_URI}"
 
 UNIPATCH_LIST="${DISTDIR}/${XENPATCHES}"
+
+DEPEND="${DEPEND} >=sys-devel/binutils-2.17"
