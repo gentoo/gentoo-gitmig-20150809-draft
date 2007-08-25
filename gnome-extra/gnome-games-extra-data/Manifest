@@ -7,10 +7,10 @@ EBUILD gnome-games-extra-data-2.12.0.ebuild 532 RMD160 458507d1dfb18c94cb67282e5
 MD5 ab892fcbe10bf0db4c96b71845d8bde2 gnome-games-extra-data-2.12.0.ebuild 532
 RMD160 458507d1dfb18c94cb67282e5fc8262bfc6dfdf5 gnome-games-extra-data-2.12.0.ebuild 532
 SHA256 7ed65c0cf07984d5d004160085b25fd6d4fcd9db9ece544eb58398f2185fdf1c gnome-games-extra-data-2.12.0.ebuild 532
-EBUILD gnome-games-extra-data-2.14.0.ebuild 541 RMD160 4a7661dae2736c908a0a6f741913726a155682de SHA1 3b70cdd5530b85d5890d0748f11dff0aa66b9e31 SHA256 9fc9766d09b3795bc9a970ae975341b97e70d68f7b262c8d2dee741863b90fec
-MD5 5de800bc7bf51146b9a4c60c6514a4d8 gnome-games-extra-data-2.14.0.ebuild 541
-RMD160 4a7661dae2736c908a0a6f741913726a155682de gnome-games-extra-data-2.14.0.ebuild 541
-SHA256 9fc9766d09b3795bc9a970ae975341b97e70d68f7b262c8d2dee741863b90fec gnome-games-extra-data-2.14.0.ebuild 541
+EBUILD gnome-games-extra-data-2.14.0.ebuild 541 RMD160 2b2e6aa45ac05b0d3a3cae6c1b9ea4578ee6dd7e SHA1 74ace321e6e906b6912c398593e888cd92c34fb0 SHA256 6fa30c7baa213b39a9cde25d4768f0efff22545068a54c5b3ee08ad7cc325f42
+MD5 dfd48b394c106a442abe32dd195fae81 gnome-games-extra-data-2.14.0.ebuild 541
+RMD160 2b2e6aa45ac05b0d3a3cae6c1b9ea4578ee6dd7e gnome-games-extra-data-2.14.0.ebuild 541
+SHA256 6fa30c7baa213b39a9cde25d4768f0efff22545068a54c5b3ee08ad7cc325f42 gnome-games-extra-data-2.14.0.ebuild 541
 MISC ChangeLog 5162 RMD160 302f192cbfabac89c9ef20bfb78ead2af22e3494 SHA1 cb1c31092765092dc4fec229511b1be77318ed6c SHA256 7ee8cd8fc818b22051b11c7f34476c6310fbeb528199b91f682146a8e7006526
 MD5 cec19c9f66164cd837d3f4ff0196e92e ChangeLog 5162
 RMD160 302f192cbfabac89c9ef20bfb78ead2af22e3494 ChangeLog 5162
@@ -28,7 +28,7 @@ SHA256 188a0cb70b9ed80ced0fc97f5d429038f9bb7190e0293a629e6b29da5ea66d9f files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGveEgkeYb6olFHJcRAgfTAJ0Vgv4TNFCGSludc/z9Jne8SMDhrwCg7J+V
-6tSRxkY2pJujdExAVl7Y+4M=
-=xq/B
+iD8DBQFG0Dsep/wUKkr7RBoRAmT/AKDiTd1RZOayMuprdbSyDDre8Wf2aQCffbxV
+kQDtznSPUBWC74n8O32MqJE=
+=GCpp
 -----END PGP SIGNATURE-----

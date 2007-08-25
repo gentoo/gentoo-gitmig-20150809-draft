@@ -7,10 +7,10 @@ EBUILD libgail-gnome-1.1.3.ebuild 722 RMD160 d5e1d8bd01582ff8f7ba2d52d717e84441b
 MD5 00ecfe280ba326c676803514ff2ddc52 libgail-gnome-1.1.3.ebuild 722
 RMD160 d5e1d8bd01582ff8f7ba2d52d717e84441bff0e0 libgail-gnome-1.1.3.ebuild 722
 SHA256 ddc778140c966745599c5ae3b0c97bd1cc93167ac87af7ffbd0ff5220124cbc3 libgail-gnome-1.1.3.ebuild 722
-EBUILD libgail-gnome-1.18.0.ebuild 734 RMD160 a439b7fdfbdd0c3430117d29ee9d6d9cd46a6f21 SHA1 911d263992469f52b9af86a8f081c5bf0e75fef4 SHA256 1c9276fb871ab0e73e0ef0ba4a9907db88abd3365b8aeb2735b52f476a37e048
-MD5 bf534f0de8a65f9969be29b83c6061f3 libgail-gnome-1.18.0.ebuild 734
-RMD160 a439b7fdfbdd0c3430117d29ee9d6d9cd46a6f21 libgail-gnome-1.18.0.ebuild 734
-SHA256 1c9276fb871ab0e73e0ef0ba4a9907db88abd3365b8aeb2735b52f476a37e048 libgail-gnome-1.18.0.ebuild 734
+EBUILD libgail-gnome-1.18.0.ebuild 734 RMD160 f49cd9759710b635b035cc74a57a17ed96f42df0 SHA1 e4e0a5149b74edb3b1a6ab97309018f53290a1da SHA256 2117861ccbb20115903d114bda03ca9b7273f531a12b775b5a0db61ac5acbc5e
+MD5 645e5ff569e42bdc87d5b1c2dc149a0d libgail-gnome-1.18.0.ebuild 734
+RMD160 f49cd9759710b635b035cc74a57a17ed96f42df0 libgail-gnome-1.18.0.ebuild 734
+SHA256 2117861ccbb20115903d114bda03ca9b7273f531a12b775b5a0db61ac5acbc5e libgail-gnome-1.18.0.ebuild 734
 MISC ChangeLog 9320 RMD160 d680d1d7295f2e2d6c1974cdafb1532d4810944c SHA1 c81555439cd1b47b7e4d1806e3593366b272e9e8 SHA256 921606b9c21a3770f20d48ada269aa69d92aabd051b3a1ca41f04d328ee603ac
 MD5 fdf2815e8cdd7df4b2ff5cbf54b93e3b ChangeLog 9320
 RMD160 d680d1d7295f2e2d6c1974cdafb1532d4810944c ChangeLog 9320
@@ -26,9 +26,9 @@ MD5 f9a3928c773ae3dd3cefc5f37aeba6e9 files/digest-libgail-gnome-1.18.0 265
 RMD160 c4f6dad4401fac41e18e3f8f9285889b191aee6f files/digest-libgail-gnome-1.18.0 265
 SHA256 566e86644339e28cc34a81ef5e38989fcc2e53ada5772acf4388f37b3f51a22f files/digest-libgail-gnome-1.18.0 265
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
+Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGvcvGQlM6RnzZP+IRAsZCAJ9ukiVdjyG2Wkj16I1iGA7vuF4/kwCfVnjM
-drxMEXKg+O/cOHQ+BaWSXSI=
-=k1vK
+iD8DBQFG0Dstp/wUKkr7RBoRAlHDAJ9K/vbd4Z/fpV7U19Mhdku3TbRAPwCeJ0k8
+2fzu3rF75oYueWC/+8nEYvI=
+=1dwv
 -----END PGP SIGNATURE-----
