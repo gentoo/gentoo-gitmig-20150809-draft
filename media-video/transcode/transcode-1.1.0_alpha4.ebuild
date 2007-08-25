@@ -1,20 +1,22 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.0_pre20070315-r1.ebuild,v 1.2 2007/03/31 13:39:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.0_alpha4.ebuild,v 1.1 2007/08/25 14:35:52 beandog Exp $
 
-WANT_AUTOMAKE=latest
-WANT_AUTOCONF=latest
+WANT_AUTOCONF="2.5"
+WANT_AUTOMAKE="1.10"
 
 inherit libtool flag-o-matic eutils multilib autotools
 
-S=${WORKDIR}/${PN}
+MY_PV=${PV/_alpha/alpha}
+MY_P=${PN}-${MY_PV}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="video stream processing tool"
 HOMEPAGE="http://www.transcoding.org/cgi-bin/transcode"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://fromani.exit1.org/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="X 3dnow a52 aac altivec dv dvdread gtk iconv imagemagick jpeg lzo mjpeg mp3 mmx nuv ogg oss postproc quicktime sdl sse sse2 theora truetype v4l2 vorbis x264 xvid xml"
+IUSE="X 3dnow a52 aac alsa altivec dv dvdread iconv imagemagick jpeg lzo mjpeg mp3 mmx nuv ogg oss postproc quicktime sdl sse sse2 theora truetype v4l2 vorbis x264 xvid xml"
 
 RDEPEND="a52? ( media-libs/a52dec )
 	dv? ( media-libs/libdv )
@@ -30,7 +32,6 @@ RDEPEND="a52? ( media-libs/a52dec )
 	ogg? ( media-libs/libogg )
 	theora? ( media-libs/libtheora )
 	jpeg? ( media-libs/jpeg )
-	gtk? ( =x11-libs/gtk+-1.2* )
 	truetype? ( >=media-libs/freetype-2 )
 	>=media-video/ffmpeg-0.4.9_p20050226-r3
 	|| ( sys-libs/glibc dev-libs/libiconv )
@@ -77,6 +78,7 @@ src_compile() {
 		$(use_enable sse2) \
 		$(use_enable altivec) \
 		$(use_enable v4l2 v4l) \
+		$(use_enable alsa) \
 		$(use_enable oss) \
 		$(use_enable postproc libpostproc) \
 		$(use_enable truetype freetype2) \
@@ -95,7 +97,6 @@ src_compile() {
 		$(use_enable xml libxml2) \
 		$(use_enable mjpeg mjpegtools) \
 		$(use_enable sdl) \
-		$(use_enable gtk) \
 		$(use_enable imagemagick) \
 		$(use_enable jpeg libjpeg) \
 		$(use_enable iconv) \
