@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14.ebuild,v 1.2 2007/07/11 19:30:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14.ebuild,v 1.3 2007/08/25 18:25:17 beandog Exp $
 
 inherit autotools linux-mod flag-o-matic eutils multilib
 
@@ -19,7 +19,7 @@ fi
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc ~ppc64 ~x86"
 IUSE="oss debug midi"
 
 IUSE_CARDS="seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401

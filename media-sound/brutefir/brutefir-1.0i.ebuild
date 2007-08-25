@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0i.ebuild,v 1.2 2007/08/02 21:12:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0i.ebuild,v 1.3 2007/08/25 18:27:27 beandog Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ludd.luth.se/~torger/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND=">=media-libs/alsa-lib-0.9.1
 	media-sound/jack-audio-connection-kit
