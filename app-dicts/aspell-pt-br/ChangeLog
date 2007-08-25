@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-pt-br
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt-br/ChangeLog,v 1.3 2007/08/20 06:20:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt-br/ChangeLog,v 1.4 2007/08/25 20:34:37 armin76 Exp $
+
+  25 Aug 2007; Raúl Porcel <armin76@gentoo.org>
+  aspell-pt-br-6.0.20070411.ebuild:
+  Add ~ia64 wrt #189262
 
   20 Aug 2007; Jeroen Roovers <jer@gentoo.org>
   aspell-pt-br-6.0.20070411.ebuild:
