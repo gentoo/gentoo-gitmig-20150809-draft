@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.7.0.ebuild,v 1.1 2007/08/25 15:11:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.7.0.ebuild,v 1.2 2007/08/25 19:30:34 vapier Exp $
 
 inherit eutils flag-o-matic savedconfig
 
@@ -58,7 +58,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="debug pam static savedconfig make-symlinks selinux"
+IUSE="debug pam static make-symlinks selinux"
 RESTRICT="test"
 
 DEPEND="selinux? ( sys-libs/libselinux )"
@@ -123,7 +123,12 @@ src_unpack() {
 	busybox_config_option y FEATURE_SH_IS_ASH
 	busybox_config_option n FEATURE_SH_IS_NONE
 
-	busybox_config_option pam PAM
+	if use static && use pam ; then
+		ewarn "You cannot have USE='static pam'.  Assuming static is more important."
+	fi
+	use static \
+		&& busybox_config_option n PAM \
+		|| busybox_config_option pam PAM
 	busybox_config_option static STATIC
 	busybox_config_option debug DEBUG
 	use debug \
@@ -149,7 +154,7 @@ src_compile() {
 	unset KBUILD_OUTPUT #88088
 
 	emake busybox || die "build failed"
-	if ! use static ; then
+	if ! use static && ! use pam ; then
 		mv busybox_unstripped{,.bak}
 		emake CONFIG_STATIC=y busybox || die "static build failed"
 		mv busybox_unstripped bb
@@ -163,10 +168,12 @@ src_install() {
 
 	into /
 	newbin busybox_unstripped busybox || die
-	use static \
-		&& dosym busybox /bin/bb \
-		|| dobin bb
-	dosym bb /bin/busybox.static
+	if use static || use pam ; then
+		dosym busybox /bin/bb || die
+		dosym bb /bin/busybox.static || die
+	else
+		dobin bb || die
+	fi
 
 	insinto /$(get_libdir)/rcscripts/addons
 	doins "${FILESDIR}"/mdev-start.sh || die
