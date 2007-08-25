@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.17.ebuild,v 1.1 2007/05/12 15:06:55 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.17.ebuild,v 1.2 2007/08/25 15:28:30 hattya Exp $
 
 IUSE="chasen cjk emacs kakasi nls tk"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.namazu.org/"
 SRC_URI="http://www.namazu.org/stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 SLOT="0"
 
 DEPEND=">=dev-perl/File-MMagic-1.20
