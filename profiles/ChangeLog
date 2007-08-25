@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.596 2007/08/25 11:39:35 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.597 2007/08/25 15:26:11 mrness Exp $
+
+  25 Aug 2007; Alin Năstac <mrness@gentoo.org> package.mask:
+  Mask net-dialup/l2tpd.
 
   25 Aug 2007; Marius Mauch <genone@gentoo.org> info_pkgs:
   add baselayout to replace /etc/gentoo-release parsing in portage-2.2
