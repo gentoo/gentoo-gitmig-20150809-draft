@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GSSAPI
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.4 2007/08/24 18:08:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.5 2007/08/25 21:05:02 ian Exp $
+
+  25 Aug 2007; Christian Hartmann <ian@gentoo.org> GSSAPI-0.24.ebuild:
+  Fixed bug #189883
 
   24 Aug 2007; Raúl Porcel <armin76@gentoo.org> GSSAPI-0.24.ebuild:
   Add ~alpha/~ia64 wrt #189441
