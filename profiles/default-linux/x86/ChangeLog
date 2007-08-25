@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.105 2007/08/25 08:28:02 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.106 2007/08/25 19:03:02 philantrop Exp $
+
+  25 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  no-nptl/2.4/package.mask:
+  Added >=app-pda/pilot-link-0.12.2 as it needs bluez-libs-3*.
 
   25 Aug 2007; Mart Raudsepp <leio@gentoo.org> no-nptl/2.4/package.mask:
   A lot of further masking and mask tweaking to make the deptree good in the
