@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_mimeDecode/PEAR-Mail_mimeDecode-1.5.0.ebuild,v 1.3 2007/08/21 18:02:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_mimeDecode/PEAR-Mail_mimeDecode-1.5.0.ebuild,v 1.4 2007/08/25 22:07:20 vapier Exp $
 
 inherit php-pear-r1 eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Provides a class to decode mime messages (split from PEAR-Mail_Mime
 
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 # >=PEAR-Mail_Mime-1.5.2 in in DEPEND to avoid blockers and circular deps
