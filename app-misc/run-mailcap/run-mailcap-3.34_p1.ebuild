@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/run-mailcap-3.34_p1.ebuild,v 1.7 2007/04/22 10:48:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/run-mailcap-3.34_p1.ebuild,v 1.8 2007/08/25 16:42:42 beandog Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://packages.debian.org/unstable/net/mime-support.html"
 SRC_URI="mirror://debian/pool/main/m/mime-support/mime-support_${MY_PV}.tar.gz"
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 mips ppc ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND=""
 RDEPEND=">=dev-lang/perl-5.6
