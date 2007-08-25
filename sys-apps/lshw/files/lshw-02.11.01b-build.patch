@@ -1,0 +1,63 @@
+--- lshw-B.02.11.01/src/core/Makefile
++++ lshw-B.02.11.01/src/core/Makefile
+@@ -1,9 +1,10 @@
+ PACKAGENAME?=lshw
+ 
+-CXX=c++
++CXX?=c++
+ INCLUDES=
+ DEFINES=-DPREFIX=\"$(PREFIX)\" -DSBINDIR=\"$(SBINDIR)\" -DMANDIR=\"$(MANDIR)\" -DDATADIR=\"$(DATADIR)\"
+-CXXFLAGS=-g -Wall $(INCLUDES) $(DEFINES) $(RPM_OPT_FLAGS)
++CXXFLAGS ?= -g
++CXXFLAGS += -Wall $(INCLUDES) $(DEFINES) $(RPM_OPT_FLAGS)
+ LDFLAGS=
+ LDSTATIC=
+ LIBS=
+--- lshw-B.02.11.01/src/gui/Makefile
++++ lshw-B.02.11.01/src/gui/Makefile
+@@ -7,11 +7,11 @@
+ DEFINES=-DPREFIX=\"$(PREFIX)\" -DSBINDIR=\"$(SBINDIR)\" -DMANDIR=\"$(MANDIR)\" -DDATADIR=\"$(DATADIR)\"
+ GTKINCLUDES=$(shell pkg-config gtk+-2.0 --cflags)
+ INCLUDES=-I../core $(GTKINCLUDES)
+-CXXFLAGS=-g -Wall $(INCLUDES) $(DEFINES) $(RPM_OPT_FLAGS)
+-CFLAGS=$(CXXFLAGS) $(DEFINES)
++CXXFLAGS ?= -g
++CXXFLAGS += -Wall $(INCLUDES) $(DEFINES) $(RPM_OPT_FLAGS)
++CFLAGS += -Wall $(INCLUDES) $(DEFINES) $(RPM_OPT_FLAGS)
+ GTKLIBS=$(shell pkg-config gtk+-2.0 --libs)
+ LIBS=-L../core -llshw $(GTKLIBS)
+-LDFLAGS=
+ ifneq ($(shell $(LD) --help 2| grep -- --as-needed), )
+ 	LDFLAGS+= -Wl,--as-needed
+ endif
+@@ -34,7 +34,6 @@
+ 	$(CXX) $(LDFLAGS) -o $@ $^ $(LIBS)
+ 
+ install: all
+-	$(STRIP) gtk-$(PACKAGENAME)
+ 	
+ clean:
+ 	rm -f $(OBJS) gtk-$(PACKAGENAME) gtk-lshw.glade.bak gtk-lshw.gladep.bak interface.c.bak interface.h.bak callbacks.c.bak callbacks.h.bak Makefile.bak
+--- lshw-B.02.11.01/src/Makefile
++++ lshw-B.02.11.01/src/Makefile
+@@ -18,8 +18,10 @@
+ CXX?=c++
+ INCLUDES=-I./core/
+ DEFINES=-DPREFIX=\"$(PREFIX)\" -DSBINDIR=\"$(SBINDIR)\" -DMANDIR=\"$(MANDIR)\" -DDATADIR=\"$(DATADIR)\"
+-CXXFLAGS=-g -Wall -g $(INCLUDES) $(DEFINES) $(RPM_OPT_FLAGS)
+-LDFLAGS=-L./core/ -g
++CXXFLAGS ?= -g
++CXXFLAGS += -Wall $(INCLUDES) $(DEFINES) $(RPM_OPT_FLAGS)
++LDFLAGS ?= -g
++LDFLAGS += -L./core/
+ ifneq ($(shell $(LD) --help 2| grep -- --as-needed), )
+ 	LDFLAGS+= -Wl,--as-needed
+ endif
+@@ -49,7 +51,6 @@
+ 
+ $(PACKAGENAME)-static: core core/lib$(PACKAGENAME).a $(PACKAGENAME).o
+ 	$(CXX) $(LDSTATIC) $(LDFLAGS) -o $@ $(PACKAGENAME).o $(LIBS)
+-	$(STRIP) $@
+ 
+ .PHONY: compressed
+ compressed: $(PACKAGENAME)-compressed
