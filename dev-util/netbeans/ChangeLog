@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.69 2007/08/19 20:05:59 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.70 2007/08/25 17:30:07 fordfrog Exp $
+
+*netbeans-5.5.1 (25 Aug 2007)
+
+  25 Aug 2007; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/5.5.1/jdbcstorage-build.xml-comments.patch,
+  +files/5.5.1/jspparser-build.xml.patch,
+  +files/5.5.1/mdrant-build.xml-comments.patch, +files/5.5.1/startscript.sh,
+  +netbeans-5.5.1.ebuild:
+  Version bump. Added support for C/C++ Pack, based on bug #162914,
+  contributed by Sergey Belyashov <Sergey.Belyashov@gmail.com>.
 
   19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   netbeans-5.5-r6.ebuild:
