@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/texpower
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.23 2007/03/13 00:37:15 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.24 2007/08/25 17:39:39 beandog Exp $
+
+  25 Aug 2007; Steve Dibb <beandog@gentoo.org> texpower-0.2.ebuild:
+  amd64 stable
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
