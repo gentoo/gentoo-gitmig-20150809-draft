@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.44.ebuild,v 1.4 2007/07/16 20:03:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.44.ebuild,v 1.5 2007/08/25 22:35:52 vapier Exp $
 
 MY_EXTRAS_VER="20070710"
 SERVER_URI="ftp://ftp.mysql.com/pub/mysql/src/mysql-${PV//_/-}.tar.gz"
@@ -8,7 +8,7 @@ SERVER_URI="ftp://ftp.mysql.com/pub/mysql/src/mysql-${PV//_/-}.tar.gz"
 inherit toolchain-funcs mysql
 
 # REMEMBER: also update eclass/mysql*.eclass before committing!
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm ~hppa ia64 ppc ~ppc64 s390 sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
 
 # When MY_EXTRAS is bumped, the index should be revised to exclude these.
 EPATCH_EXCLUDE=''
