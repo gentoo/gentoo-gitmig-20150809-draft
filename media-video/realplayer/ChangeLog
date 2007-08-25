@@ -1,6 +1,11 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.63 2007/07/02 15:23:56 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.64 2007/08/25 14:02:15 beandog Exp $
+
+*realplayer-10.0.9 (25 Aug 2007)
+
+  25 Aug 2007; Steve Dibb <beandog@gentoo.org> +realplayer-10.0.9.ebuild:
+  Security bump, bug 183421
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   realplayer-10.0.8.ebuild, realplayer-10.0.8-r1.ebuild,
