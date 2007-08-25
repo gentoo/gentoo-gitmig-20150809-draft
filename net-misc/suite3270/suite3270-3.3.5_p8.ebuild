@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.5_p8.ebuild,v 1.5 2007/07/24 16:20:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.5_p8.ebuild,v 1.6 2007/08/25 14:34:07 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.geocities.com/SiliconValley/Peaks/7814/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ~s390 sparc x86"
+KEYWORDS="amd64 ppc s390 sparc x86"
 
 RDEPEND="X? ( x11-libs/libX11
 			  x11-libs/libXaw
