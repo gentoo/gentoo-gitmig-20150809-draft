@@ -1,4 +1,10 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.96 2007/08/24 02:27:57 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.97 2007/08/25 07:56:52 redhatter Exp $
+
+# Stuart Longland <redhatter@gentoo.org>
+# Seems unmasking "avahi" without versions stable breaks stuff like gnome-vfs.
+# But it *does* work, and I'll un-USE.mask it when I get around to
+# stabalising avahi.
+avahi
 
 # Samuli Suominen <drac@gentoo.org>
 # No batteries on mips.

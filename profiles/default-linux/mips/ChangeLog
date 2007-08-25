@@ -1,6 +1,9 @@
 # ChangeLog for MIPS profile directory
 # Copyright 2007-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.5 2007/08/22 02:56:41 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.6 2007/08/25 07:56:52 redhatter Exp $
+
+  25 Aug 2007; Stuart Longland <redhatter@gentoo.org> use.mask:
+  Added 'avahi' back to USE.mask ... repoman was complaining about broken deps.
 
   22 Aug 2007; Stuart Longland <redhatter@gentoo.org> use.mask:
   Took 'dbus' out of use.mask.  dbus-1.0.2-r2 is stable on MIPS and functional.
