@@ -1,11 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX fontconfig.eselect-1.0 4529 RMD160 e4b0d8e5445bb0ee63e6064ae1d18d54b1f7ebb4 SHA1 bb1ba95e9ea0fdc421a4a1c05167957ee017d3f0 SHA256 a2b54711b26789604647c6bb104bf95720d62336acea35042983e53ab1e2eb18
 MD5 c3262e8cf2b1266c4470ece4ece6587d files/fontconfig.eselect-1.0 4529
 RMD160 e4b0d8e5445bb0ee63e6064ae1d18d54b1f7ebb4 files/fontconfig.eselect-1.0 4529
 SHA256 a2b54711b26789604647c6bb104bf95720d62336acea35042983e53ab1e2eb18 files/fontconfig.eselect-1.0 4529
-EBUILD eselect-fontconfig-1.0.ebuild 652 RMD160 5dafb8881bb8a7e709bd2c82154b832b5d00186a SHA1 85023964fd6fd8ec5b6aaa3920f742c4b50fafca SHA256 1d2c1ae4c2bc7ef16d38846bdc97a61ff7d28b08acf3b09c9edb958da6fe9f74
-MD5 6fd1f6cb5cb67e17842a229fabd9b5f5 eselect-fontconfig-1.0.ebuild 652
-RMD160 5dafb8881bb8a7e709bd2c82154b832b5d00186a eselect-fontconfig-1.0.ebuild 652
-SHA256 1d2c1ae4c2bc7ef16d38846bdc97a61ff7d28b08acf3b09c9edb958da6fe9f74 eselect-fontconfig-1.0.ebuild 652
+EBUILD eselect-fontconfig-1.0.ebuild 668 RMD160 2d06e60130a84a44aa78cab6f7555bf4d6cb38a9 SHA1 f5a7f6b4c39babafaa488313def1a68fecd2654c SHA256 7b99bad65cd60e3486d985826f7e3a47376ea93d5e32f0051e7d73bab40a445c
+MD5 9902812ca214220c62537bbb88b3bba0 eselect-fontconfig-1.0.ebuild 668
+RMD160 2d06e60130a84a44aa78cab6f7555bf4d6cb38a9 eselect-fontconfig-1.0.ebuild 668
+SHA256 7b99bad65cd60e3486d985826f7e3a47376ea93d5e32f0051e7d73bab40a445c eselect-fontconfig-1.0.ebuild 668
 MISC ChangeLog 1238 RMD160 0ff2611dec538a2fb187d6c50ddac4cef728c9ba SHA1 6e833bf020c3109baea90cc90820cd63d330d8d3 SHA256 ecc45ba549e4b227b56c749be020e3f0652cdf902b94762454ec9ebf4209c5e8
 MD5 831e41f276dbd749e90e3a1abe2491fc ChangeLog 1238
 RMD160 0ff2611dec538a2fb187d6c50ddac4cef728c9ba ChangeLog 1238
@@ -17,3 +20,10 @@ SHA256 952d89bc3335f3d2f69460945016b173913db58759fe7d906f3927909120c890 metadata
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-eselect-fontconfig-1.0 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-eselect-fontconfig-1.0 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-eselect-fontconfig-1.0 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG0K47p/wUKkr7RBoRAmjwAJwLDcn0CP0bYdvGorpEE5XvLGRq1ACeJqzr
+ujyJ+Q3HQoMp1/IsFdCOaz8=
+=HHK4
+-----END PGP SIGNATURE-----
