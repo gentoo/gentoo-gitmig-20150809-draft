@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.171 2007/07/20 18:38:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.172 2007/08/25 22:38:56 caster Exp $
+
+  25 Aug 2007; Vlastimil Babka <caster@gentoo.org>
+  -files/java-config-2.profiled.csh, -files/60-java,
+  -files/java-config-2.profiled.sh-r1, -java-config-2.0.32.ebuild:
+  Remove unused version.
 
   20 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
   -java-config-2.0.33.ebuild:
