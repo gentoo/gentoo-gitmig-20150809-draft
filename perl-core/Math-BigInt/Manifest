@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX yaml-node-makefile.patch 340 RMD160 1206b60fab24088a1de14f8ddfa8323b5189cb48 SHA1 be6d3284a89152d425ec9b6f6437941964ab9c6f SHA256 1d67d191ab11c04c9ea9663ee21fcce763776292cf6695ca3f7f6d14a649f303
 MD5 f79d878023540437599fc07d3dedd45b files/yaml-node-makefile.patch 340
 RMD160 1206b60fab24088a1de14f8ddfa8323b5189cb48 files/yaml-node-makefile.patch 340
@@ -72,3 +75,10 @@ SHA256 4adc952d6564d0fa64e04d39898d933d5eb3ee5e8afc80b29ed3a323ffbe6831 files/di
 MD5 14fa62d811a1099705fbb11d9289493b files/digest-Math-BigInt-1.86 250
 RMD160 05ae266d71921eee9ca848794da2a1bf88742f1c files/digest-Math-BigInt-1.86 250
 SHA256 58c779a8ea9f4ab06aa8a39e58d1b035ea16102e38c093ba6ee2791e5ed66757 files/digest-Math-BigInt-1.86 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0C8fp/wUKkr7RBoRAl8vAJ9pVzxoZQQoRj84wUa544UO7SAsBgCeIBCJ
+ncTEdc+Ipzdzf+er8guK5rs=
+=iZ4Y
+-----END PGP SIGNATURE-----
