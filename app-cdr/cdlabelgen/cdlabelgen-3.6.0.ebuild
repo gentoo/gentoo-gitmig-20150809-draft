@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/cdlabelgen-3.6.0.ebuild,v 1.4 2007/05/05 14:57:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/cdlabelgen-3.6.0.ebuild,v 1.5 2007/08/25 16:29:31 beandog Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.aczoom.com/tools/cdinsert"
 SRC_URI="http://www.aczoom.com/pub/tools/${P}.tgz"
 LICENSE="aczoom"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.6.1"
