@@ -1,0 +1,11 @@
+# ChangeLog for games-arcade/bitefusion
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bitefusion/ChangeLog,v 1.1 2007/08/25 18:45:44 tupone Exp $
+
+*bitefusion-1.0.1 (25 Aug 2007)
+
+  25 Aug 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/bitefusion-1.0.1-gentoo.patch, +metadata.xml,
+  +bitefusion-1.0.1.ebuild:
+  New package requested via bug #178733 by Piotr Szymaniak
+
