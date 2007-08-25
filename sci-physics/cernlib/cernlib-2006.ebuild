@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006.ebuild,v 1.1 2007/08/24 21:31:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006.ebuild,v 1.2 2007/08/25 22:58:25 mr_bones_ Exp $
 
 inherit eutils multilib fortran
 
@@ -30,7 +30,6 @@ DEPEND="virtual/motif
 RDEPEND="virtual/motif
 	virtual/lapack
 	dev-lang/cfortran"
-
 
 S=${WORKDIR}/${DEB_PN}-${DEB_PV}.orig
 

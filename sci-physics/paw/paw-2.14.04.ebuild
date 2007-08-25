@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04.ebuild,v 1.1 2007/08/24 21:38:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04.ebuild,v 1.2 2007/08/25 22:58:47 mr_bones_ Exp $
 
 inherit eutils multilib fortran
 
@@ -62,7 +62,6 @@ src_unpack() {
 	# create local LaTeX cache directory
 	mkdir -p .texmf-var
 }
-
 
 src_compile() {
 	emake -j1 \
