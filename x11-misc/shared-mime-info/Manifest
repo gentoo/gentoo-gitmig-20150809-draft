@@ -12,10 +12,10 @@ EBUILD shared-mime-info-0.20.ebuild 923 RMD160 339c325527a33554e1ebe7025a2c7f9d4
 MD5 101284a35dc30ce231695df48aadc83b shared-mime-info-0.20.ebuild 923
 RMD160 339c325527a33554e1ebe7025a2c7f9d4adb5fd2 shared-mime-info-0.20.ebuild 923
 SHA256 9ea66419efb82db9a5a7bf2f32790071bf35b0d34040b7edd273bb08c4f97adf shared-mime-info-0.20.ebuild 923
-EBUILD shared-mime-info-0.21-r1.ebuild 1042 RMD160 c89456fb109b3d21030ba499115ab430c33281d6 SHA1 1090035e2708876b8bfd9d4e6cb9da3af3391663 SHA256 2bb8d864dba65f4661d38eb805ad5010fc36e0314f419cec441bdde256901cbc
-MD5 8e8a18ae88c092005474bc99677ac283 shared-mime-info-0.21-r1.ebuild 1042
-RMD160 c89456fb109b3d21030ba499115ab430c33281d6 shared-mime-info-0.21-r1.ebuild 1042
-SHA256 2bb8d864dba65f4661d38eb805ad5010fc36e0314f419cec441bdde256901cbc shared-mime-info-0.21-r1.ebuild 1042
+EBUILD shared-mime-info-0.21-r1.ebuild 1040 RMD160 421f5308dce0865442b1e3093b93c15c0c9f9a22 SHA1 7609eda12ef9b33382b48ad37879a183c6d02431 SHA256 fe0c87e1c2b41ec656cc5dd02633e9e265e01eedfe0d6e08f101ea9042a7fdc8
+MD5 61f46166c6b467a67d68d314dc781147 shared-mime-info-0.21-r1.ebuild 1040
+RMD160 421f5308dce0865442b1e3093b93c15c0c9f9a22 shared-mime-info-0.21-r1.ebuild 1040
+SHA256 fe0c87e1c2b41ec656cc5dd02633e9e265e01eedfe0d6e08f101ea9042a7fdc8 shared-mime-info-0.21-r1.ebuild 1040
 EBUILD shared-mime-info-0.22.ebuild 1051 RMD160 5d1227f485982cb706a819dc122acbdb2106a5e8 SHA1 3b2038e78332b5c3cc5f7cc8fcef2b8905bf541e SHA256 9a796922a38ebf1d018f265f49a29cd87150c1ffa72b170e87620406624219bf
 MD5 fb8025d072cd105864627c8a399b9409 shared-mime-info-0.22.ebuild 1051
 RMD160 5d1227f485982cb706a819dc122acbdb2106a5e8 shared-mime-info-0.22.ebuild 1051
@@ -38,9 +38,9 @@ MD5 61f7a249cc5f71e265351758617450ed files/digest-shared-mime-info-0.22 268
 RMD160 c9486aa31a218f6ec51bfbab34a0dfa522230923 files/digest-shared-mime-info-0.22 268
 SHA256 aee99cbaed5d50b02e212b7dc64c4bc3e61855cdb61144ce5e3cb92c1ecdd0a1 files/digest-shared-mime-info-0.22 268
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
+Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGvcvnQlM6RnzZP+IRApnjAKCVxgdZcgPzR8u3clxkpq2hyNXJ/wCdEplJ
-dVznlH67hbKYYsKfz5Q3zyU=
-=neVC
+iD8DBQFG0CYLp/wUKkr7RBoRAjC4AKDLM5IK1n3kl0tftnyeDOOETgswTgCfUyda
+LdC9xcW9FeYx5yDEG2IktUc=
+=KiJS
 -----END PGP SIGNATURE-----
