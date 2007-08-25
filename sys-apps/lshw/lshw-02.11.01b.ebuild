@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.11.01b.ebuild,v 1.2 2007/08/25 18:55:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.11.01b.ebuild,v 1.3 2007/08/25 19:10:18 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -44,6 +44,6 @@ src_install() {
 	dodoc README docs/*
 	if use gtk ; then
 		emake DESTDIR="${D}" install-gui || die "install gui failed"
-		make_desktop_entry gtk-lshw "Hardware Lister" "/usr/share/lshw/artwork/logo.svg"
+		make_desktop_entry /usr/sbin/gtk-lshw "Hardware Lister" "/usr/share/lshw/artwork/logo.svg"
 	fi
 }
