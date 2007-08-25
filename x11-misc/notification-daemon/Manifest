@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX notification-daemon-0.3.6-binding-tool.patch 1562 RMD160 40d290931cd7027784f9f1cb64e987c9ee2b0542 SHA1 5c1e98c7c81702c5e4b421d18c29b696880f1949 SHA256 c1334df4dc7ec53f806f030a4edc15ca608fb703cb0931cdb2050a0b9e9fac59
 MD5 c1ee2a9533c4bd60a31e83964728cdd4 files/notification-daemon-0.3.6-binding-tool.patch 1562
 RMD160 40d290931cd7027784f9f1cb64e987c9ee2b0542 files/notification-daemon-0.3.6-binding-tool.patch 1562
@@ -8,10 +11,10 @@ EBUILD notification-daemon-0.3.6-r1.ebuild 1079 RMD160 c86c293c3df0ce15642f8dda1
 MD5 d48e727b09202eaf7621b21c3935c318 notification-daemon-0.3.6-r1.ebuild 1079
 RMD160 c86c293c3df0ce15642f8dda1593c7a4dfed7057 notification-daemon-0.3.6-r1.ebuild 1079
 SHA256 4c3a9becd642eb6a9aeb9f75baffede7e80149df1b610da7c9d24b8c9f2ac8f3 notification-daemon-0.3.6-r1.ebuild 1079
-EBUILD notification-daemon-0.3.7.ebuild 836 RMD160 b9f987bc99c1bc4d5d164cec1883b4219b47eb8e SHA1 eb3d523d3ff98152fbbf12a255f74d87cf31c06d SHA256 40d7ddd43b0b304262789ba8433303e515c24461eb67d7225743471755c782ed
-MD5 0ac6e5a323feeacf82557af8e772d21f notification-daemon-0.3.7.ebuild 836
-RMD160 b9f987bc99c1bc4d5d164cec1883b4219b47eb8e notification-daemon-0.3.7.ebuild 836
-SHA256 40d7ddd43b0b304262789ba8433303e515c24461eb67d7225743471755c782ed notification-daemon-0.3.7.ebuild 836
+EBUILD notification-daemon-0.3.7.ebuild 836 RMD160 b0930063e7bfdf5e214ad5a25b597ef43e472494 SHA1 285347297bc9b004d499930c40f2d0a9bef5f0a7 SHA256 be20c7b5fde4c09af7f117f2713535ac3376d847bf9db1c19227f029ef3e2dcf
+MD5 86080868e4407d3ae1d59e30a867d498 notification-daemon-0.3.7.ebuild 836
+RMD160 b0930063e7bfdf5e214ad5a25b597ef43e472494 notification-daemon-0.3.7.ebuild 836
+SHA256 be20c7b5fde4c09af7f117f2713535ac3376d847bf9db1c19227f029ef3e2dcf notification-daemon-0.3.7.ebuild 836
 MISC ChangeLog 6983 RMD160 d62457559f304a6c41cb231fdd1ffa20f0441652 SHA1 3c06914332bd9043e04314903eb69f7fec7c39c0 SHA256 8b9f09d21a953ff25ed4236c8867f6ac3aa0ce68571913d736e599ebf26737e9
 MD5 5d668c1a04dbe59c85c4f1f15e4f131c ChangeLog 6983
 RMD160 d62457559f304a6c41cb231fdd1ffa20f0441652 ChangeLog 6983
@@ -26,3 +29,10 @@ SHA256 58241ee9626d375cd855a74b73765d666319ecbfe5adad9228f5b3ba05c1eaa5 files/di
 MD5 fd07ce6476a5157ec93010de97f1fcff files/digest-notification-daemon-0.3.7 277
 RMD160 b9d9800ae8ba7dd5335358c35de791763f8dde3e files/digest-notification-daemon-0.3.7 277
 SHA256 fff000852dd7d2adc2cc33e6c80f01ca039d4c6eb6f0ccf39ceae0bda934ffa4 files/digest-notification-daemon-0.3.7 277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0DYSp/wUKkr7RBoRAjjTAJsFyH5bQ/tU/znVKcSc3uJQolzj1gCeMxDu
+Biz03VNJhxtbUbHRG1Ohxbk=
+=S7Rv
+-----END PGP SIGNATURE-----

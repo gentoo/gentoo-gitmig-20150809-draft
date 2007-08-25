@@ -6,10 +6,10 @@ MD5 338a913c66b3ea69961298aec7d622d8 files/icon-naming-utils-0.8.2-pkgconfig.pat
 RMD160 e64b08f8ef2db011e0c0fbcc1bdea18472c65a1f files/icon-naming-utils-0.8.2-pkgconfig.patch 471
 SHA256 8084e51e6efdd4bc5954e98609f86d2401ca3feda1d68b8804a660a84f0b10e4 files/icon-naming-utils-0.8.2-pkgconfig.patch 471
 DIST icon-naming-utils-0.8.2.tar.gz 66393 RMD160 8fc999afcc5d50d47282272ef858403bc3e36251 SHA1 b69e6fd89d7ccdc4dfe335a78e7bd8fd34cde019 SHA256 87fe398d5f4853400afb6afbb41835db3cde954845369e406d739d66b3058056
-EBUILD icon-naming-utils-0.8.2-r1.ebuild 958 RMD160 17437cc4589e05343e0dfb38eeea8bc9cdd485e7 SHA1 274804f5795f35c9129507263c0616a4cebb20a3 SHA256 b0393b55ae7c7c5daccbf090dcf8ecc8e77b38c3b48840c1c898790b73f6c378
-MD5 0992f93136c9bb895cfce375850fc7eb icon-naming-utils-0.8.2-r1.ebuild 958
-RMD160 17437cc4589e05343e0dfb38eeea8bc9cdd485e7 icon-naming-utils-0.8.2-r1.ebuild 958
-SHA256 b0393b55ae7c7c5daccbf090dcf8ecc8e77b38c3b48840c1c898790b73f6c378 icon-naming-utils-0.8.2-r1.ebuild 958
+EBUILD icon-naming-utils-0.8.2-r1.ebuild 955 RMD160 532e0d6c3023e387b6ca7ec26a0753b7ed5adc1a SHA1 48e087db576ce9b1b373df7c67e3614558dff5ae SHA256 b5c19497238f6625e0fbef74e26a401536bce5701a703ce24237cfc17d37d3c8
+MD5 1576602250f8981f1fadd2a82054aa2b icon-naming-utils-0.8.2-r1.ebuild 955
+RMD160 532e0d6c3023e387b6ca7ec26a0753b7ed5adc1a icon-naming-utils-0.8.2-r1.ebuild 955
+SHA256 b5c19497238f6625e0fbef74e26a401536bce5701a703ce24237cfc17d37d3c8 icon-naming-utils-0.8.2-r1.ebuild 955
 EBUILD icon-naming-utils-0.8.2.ebuild 809 RMD160 6d250c5495eaf907bcbdb9d7202051797cd44799 SHA1 c2819b00a6f54a1c2243613205776538064fed9e SHA256 e1ff47650bf8f98d3b601cafdc55d42a7f909b95b476c1b40a06fb4b10f15635
 MD5 1cff353c2004e41ebf41188826c781c8 icon-naming-utils-0.8.2.ebuild 809
 RMD160 6d250c5495eaf907bcbdb9d7202051797cd44799 icon-naming-utils-0.8.2.ebuild 809
@@ -31,7 +31,7 @@ SHA256 fc7de4daf2b93eba5713f1f36cda49e4342f5335b499e7ec88bc69a61399b5eb files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGvGF+KhnDs22gwa8RAphRAKCWHKuTqtIvZljqtatH1SKCojeXIACgtV8/
-jpjUERpe8+rqz0cdd2FxKo0=
-=ddRk
+iD8DBQFG0DYJp/wUKkr7RBoRAmVDAKCGgygtZF29U2KgLF2BF2Sb1h9dxgCfX+1v
+MN1tQGQYWh4WVMmFJaTV9lw=
+=jMQs
 -----END PGP SIGNATURE-----
