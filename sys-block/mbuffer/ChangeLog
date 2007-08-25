@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/mbuffer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.13 2007/04/12 19:49:01 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.14 2007/08/25 15:40:03 vapier Exp $
+
+*mbuffer-20070518 (25 Aug 2007)
+
+  25 Aug 2007; Mike Frysinger <vapier@gentoo.org> +mbuffer-20070518.ebuild:
+  Version bump and make sure we link with the right ssl library #189040.
 
   12 Apr 2007; <welp@gentoo.org> mbuffer-20050730.ebuild:
   Stable on amd64 wrt bug 172996
