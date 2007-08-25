@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.5-r2.ebuild,v 1.1 2007/08/21 06:31:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.5-r2.ebuild,v 1.2 2007/08/25 23:20:21 opfer Exp $
 
 inherit elisp-common eutils flag-o-matic multilib versionator
 
@@ -122,6 +122,10 @@ src_install() {
 			# doman sucks so we can't use it
 			cp ${file} "${D}/${ERL_LIBDIR}"/man/man${file##*.}/
 		done
+		# extend MANPATH, so the normal man command can find it
+		# see bug 189639
+		dodir /etc/env.d/
+		echo "MANPATH=\"${ERL_LIBDIR}/man\"" > "${D}/etc/env.d/90erlang"
 		dohtml -A README,erl,hrl,c,h,kwc,info -r \
 			"${WORKDIR}"/doc "${WORKDIR}"/lib "${WORKDIR}"/erts-*
 	fi

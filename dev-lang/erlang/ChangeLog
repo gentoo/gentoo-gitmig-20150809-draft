@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.72 2007/08/22 06:48:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.73 2007/08/25 23:20:21 opfer Exp $
+
+  25 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  erlang-11.2.5-r2.ebuild:
+  ferdy suggested in bug 189639 to extend MANPATH, so the normal man command
+  can find the man pages, not only the erl -man command
 
   22 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   +erlang-11.2.4-r1.ebuild:
