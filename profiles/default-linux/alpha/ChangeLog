@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.72 2007/08/23 00:09:40 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.73 2007/08/25 08:47:07 leio Exp $
+
+  25 Aug 2007; Mart Raudsepp <leio@gentoo.org> no-nptl/2.4/package.mask:
+  A lot of further masking and mask tweaking to make the deptree good in the
+  linux 2.4 subprofile after Gnome 2.14 partial removal
 
   23 Aug 2007; Mart Raudsepp <leio@gentoo.org> no-nptl/2.4/package.mask:
   Relaxing vte mask to 0.16, so that there is an unmasked vte for the subprofile
