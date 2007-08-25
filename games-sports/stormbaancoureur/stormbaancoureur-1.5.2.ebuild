@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/stormbaancoureur-1.5.2.ebuild,v 1.1 2007/08/24 07:50:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/stormbaancoureur-1.5.2.ebuild,v 1.2 2007/08/25 08:09:24 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="virtual/opengl
 	virtual/glu
 	virtual/glut
-	>=dev-games/ode-0.6
+	>=dev-games/ode-0.8
 	>=media-libs/plib-1.8.4
 	media-libs/alsa-lib"
 
