@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.5 2007/03/19 03:10:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.6 2007/08/25 12:24:21 graaff Exp $
+
+*tzinfo-0.3.4 (25 Aug 2007)
+
+  25 Aug 2007; Hans de Graaff <graaff@gentoo.org> -tzinfo-0.3.2.ebuild,
+  +tzinfo-0.3.4.ebuild:
+  Version bump: Updated to tzdata version 2007g. Remove old version.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove flameeyes from metadata.xml due to retirement.
