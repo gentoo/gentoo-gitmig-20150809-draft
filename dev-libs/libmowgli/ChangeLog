@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.18 2007/08/24 23:41:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.19 2007/08/25 17:01:28 beandog Exp $
+
+  25 Aug 2007; Steve Dibb <beandog@gentoo.org> libmowgli-0.3.0.ebuild:
+  amd64 stable
 
 *libmowgli-0.4.0 (24 Aug 2007)
 
