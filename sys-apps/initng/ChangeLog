@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/initng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/ChangeLog,v 1.42 2007/08/25 17:56:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/ChangeLog,v 1.43 2007/08/25 17:59:38 vapier Exp $
+
+  25 Aug 2007; Mike Frysinger <vapier@gentoo.org> initng-0.6.10.1.ebuild,
+  initng-9999.ebuild:
+  Fix from Togge for proper multilib paths #179447.
 
 *initng-0.6.10.1 (25 Aug 2007)
 

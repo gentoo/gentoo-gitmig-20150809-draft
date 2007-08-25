@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-9999.ebuild,v 1.11 2007/06/24 18:06:38 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-9999.ebuild,v 1.12 2007/08/25 17:59:38 vapier Exp $
 
 ESVN_REPO_URI="http://svn.initng.org/initng/trunk"
 ESVN_PROJECT="initng"
-inherit subversion
+inherit subversion multilib
 
 DESCRIPTION="A next generation init replacement"
 HOMEPAGE="http://initng.org/"
@@ -48,7 +48,10 @@ src_compile() {
 			cmake_opts="${cmake_opts} -D${x}=OFF"
 		fi
 	done
-	cmake -DCMAKE_INSTALL_PREFIX=/ ${cmake_opts} || die
+	cmake \
+		-DCMAKE_INSTALL_PREFIX=/ \
+		-DLIB_INSTALL_DIR=/$(get_libdir) \
+		${cmake_opts} || die
 	emake || die
 }
 

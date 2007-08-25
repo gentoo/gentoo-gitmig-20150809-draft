@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.6.10.1.ebuild,v 1.1 2007/08/25 17:56:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.6.10.1.ebuild,v 1.2 2007/08/25 17:59:38 vapier Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="A next generation init replacement"
 HOMEPAGE="http://initng.org/"
@@ -50,7 +50,10 @@ src_compile() {
 			cmake_opts="${cmake_opts} -D${x}=OFF"
 		fi
 	done
-	cmake -DCMAKE_INSTALL_PREFIX=/ ${cmake_opts} || die
+	cmake \
+		-DCMAKE_INSTALL_PREFIX=/ \
+		-DLIB_INSTALL_DIR=/$(get_libdir) \
+		${cmake_opts} || die
 	emake || die
 }
 
