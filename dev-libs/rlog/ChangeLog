@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/rlog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/ChangeLog,v 1.13 2007/06/11 13:33:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/ChangeLog,v 1.14 2007/08/25 17:24:02 beandog Exp $
+
+  25 Aug 2007; Steve Dibb <beandog@gentoo.org> rlog-1.3.7.ebuild:
+  amd64 stable
 
   11 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> rlog-1.3.7.ebuild:
   Stable on sparc
