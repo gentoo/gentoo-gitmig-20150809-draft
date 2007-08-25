@@ -1,6 +1,6 @@
---- debian/cron.daily.orig	2006-04-21 01:21:18.000000000 -0400
-+++ debian/cron.daily	2006-04-21 01:21:34.000000000 -0400
-@@ -1,12 +1,12 @@
+--- debian/cron.daily
++++ debian/cron.daily
+@@ -1,12 +1,11 @@
  #! /bin/sh
  
 -if [ -x /usr/bin/slocate ]
@@ -15,5 +15,4 @@
 +		nice /usr/bin/updatedb -f proc
  	fi
 -	chown root.slocate /var/lib/slocate/slocate.db
-+	chown root:locate /var/lib/slocate/slocate.db
  fi
