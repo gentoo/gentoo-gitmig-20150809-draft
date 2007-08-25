@@ -1,6 +1,35 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.121 2007/08/23 17:07:22 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.122 2007/08/25 08:28:02 leio Exp $
+
+# Mart Raudsepp <leio@gentoo.org> (25 Aug 2007)
+# needs gnome-applets which is masked here
+gnome-extra/shermans-aquarium
+
+# Mart Raudsepp <leio@gentoo.org> (25 Aug 2007)
+# needs gnome-session which is masked here
+sys-auth/pam_keyring
+
+# Mart Raudsepp <leio@gentoo.org> (25 Aug 2007)
+# need directly or indirectly gnome-python-desktop or nautilus-cd-burner,
+# which are masked here due to dependency on HAL
+app-backup/pybackpack
+app-cdr/serpentine
+dev-util/meld
+>=gnome-extra/music-applet-2.1.0
+net-im/gajim
+net-voip/cohoba
+rox-base/tasktray
+x11-misc/service-discovery-applet
+app-portage/cfg-update
+gnome-extra/nautilus-sendto
+>=media-sound/rhythmbox-0.9
+x11-plugins/gaim-rhythmbox
+x11-plugins/pidgin-rhythmbox
+media-sound/listen
+media-sound/exaile
+media-sound/acast
+app-crypt/seahorse
 
 # Robert Buchholz <rbu@gentoo.org> (23 Aug 2007)
 # knm and networkmanager vpn plugins need HAL
@@ -230,11 +259,11 @@ dev-db/mysql-gui-tools
 >=gnome-extra/gnome2-user-docs-2.16.0
 >=app-admin/pessulus-2.16.0
 >=app-admin/sabayon-2.12.4
->=gnome-base/gail-1.9.2
->=gnome-base/gnome-vfs-2.16.0
+>=gnome-base/gail-1.10
+>=gnome-base/gnome-vfs-2.17.0
 >=gnome-base/gnome-vfs-monikers-2.15.3
 >=gnome-base/libbonobo-2.16.0
->=gnome-base/libbonoboui-2.16.0
+>=gnome-base/libbonoboui-2.17.0
 >=gnome-base/libgnome-2.16.0
 >=x11-libs/pango-1.14.3
 >=x11-misc/alacarte-0.10.0
@@ -242,32 +271,32 @@ dev-db/mysql-gui-tools
 >=gnome-base/control-center-2.16.0
 >=app-accessibility/dasher-4.2.0
 >=gnome-extra/deskbar-applet-2.16.0
->=gnome-base/eel-2.16.0
+>=gnome-base/eel-2.17.0
 >=media-gfx/eog-2.16.0.1
->=www-client/epiphany-2.16.0
->=mail-client/evolution-2.8.0
->=gnome-extra/evolution-data-server-1.8.0
+>=www-client/epiphany-2.17.0
+>=mail-client/evolution-2.9.0
+>=gnome-extra/evolution-data-server-1.9.0
 >=gnome-extra/evolution-exchange-2.8.0
 >=gnome-extra/evolution-webcal-2.8.0
 >=gnome-extra/fast-user-switch-applet-2.16.0
 >=app-arch/file-roller-2.16.0
 >=gnome-extra/gcalctool-5.8.24
 >=gnome-extra/gconf-editor-2.16.0
->=gnome-base/gdm-2.16.0
+>=gnome-base/gdm-2.17.0
 >=app-editors/gedit-2.16.0
 >=gnome-base/gnome-applets-2.16.0.1
 >=x11-themes/gnome-backgrounds-2.15.92
->=gnome-base/gnome-desktop-2.16.0
+>=gnome-base/gnome-desktop-2.17.0
 >=app-text/gnome-doc-utils-0.8.0
 >=gnome-extra/gnome-games-2.15.92
 >=x11-themes/gnome-icon-theme-2.16.0.1
 >=gnome-base/gnome-keyring-0.6.0
 >=gnome-extra/gnome-keyring-manager-2.16.0
->=app-accessibility/gnome-mag-0.13.1
+>=app-accessibility/gnome-mag-0.14.0
 >=gnome-extra/gnome-media-2.16.1
->=gnome-base/gnome-menus-2.16.0
+>=gnome-base/gnome-menus-2.17.0
 >=net-analyzer/gnome-nettool-2.15.92
->=gnome-base/gnome-panel-2.16.0
+>=gnome-base/gnome-panel-2.17.0
 >=gnome-extra/gnome-power-manager-2.16.0
 >=dev-python/gnome-python-desktop-2.16.0
 >=gnome-extra/gnome-screensaver-2.16.0
@@ -279,22 +308,20 @@ dev-db/mysql-gui-tools
 >=gnome-base/gnome-volume-manager-2.15.0
 >=app-accessibility/gok-1.2.0
 >=x11-themes/gtk-engines-2.8.0
->=gnome-extra/gtkhtml-3.12.0
+>=gnome-extra/gtkhtml-3.13.0
 >=x11-libs/gtksourceview-1.8.0
 >=gnome-extra/gucharmap-1.8.0
 >=gnome-base/librsvg-2.17.0
 >=x11-libs/libwnck-2.16.0
 >=x11-wm/metacity-2.16.0
->=gnome-base/nautilus-2.16.0
+>=gnome-base/nautilus-2.17.0
 >=gnome-extra/nautilus-cd-burner-2.16.0
 >=media-sound/sound-juicer-2.16.0
 >=media-video/totem-2.16.0
 >=x11-libs/vte-0.16.0
 >=gnome-extra/yelp-2.16.0
->=gnome-extra/zenity-2.16.0
->=dev-python/gnome-python-2.16.0
->=dev-python/pygobject-2.12.1
->=dev-python/pygtk-2.10.1
+>=gnome-extra/zenity-2.17.0
+>=dev-python/gnome-python-2.17.0
 >=x11-libs/libxklavier-3.0
 >=www-client/epiphany-extensions-2.16.0
 >=gnome-base/gconf-2.16.0
