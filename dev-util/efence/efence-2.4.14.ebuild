@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/efence-2.4.14.ebuild,v 1.7 2007/07/25 17:34:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/efence-2.4.14.ebuild,v 1.8 2007/08/25 22:59:49 vapier Exp $
 
 inherit eutils versionator toolchain-funcs multilib
 
@@ -13,7 +13,7 @@ RESTRICT="test"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86"
+KEYWORDS="alpha ~amd64 ia64 ~mips ~ppc ~ppc64 sh ~sparc x86"
 IUSE=""
 
 DEPEND=""
