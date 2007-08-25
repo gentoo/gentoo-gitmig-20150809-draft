@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7635 2007/08/25 15:59:24 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7636 2007/08/25 17:12:04 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -609,7 +609,7 @@ games-puzzle/pingus
 
 # Steve Dibb <beandog@gentoo.org> (12 Mar 2007)
 # needs testing
->=media-video/transcode-1.1.0_pre0
+>=media-video/transcode-1.1.0_alpha4
 
 # Joe Sapp <nixphoeni@gentoo.org> (09 Mar 2007)
 # Masking until I can verify this works with a more recent
