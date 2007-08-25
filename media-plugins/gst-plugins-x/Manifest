@@ -12,10 +12,10 @@ EBUILD gst-plugins-x-0.10.10.ebuild 552 RMD160 2e9d07cea71502ff0fb5b2555e4b8a522
 MD5 c1a5d5b8809f4d910f8ea5346e665098 gst-plugins-x-0.10.10.ebuild 552
 RMD160 2e9d07cea71502ff0fb5b2555e4b8a52255e6180 gst-plugins-x-0.10.10.ebuild 552
 SHA256 332bfc3c28948ba47ba0849fa7bd5eedff8ce5288632b0bcf480c0f9e78db5c3 gst-plugins-x-0.10.10.ebuild 552
-EBUILD gst-plugins-x-0.10.11.ebuild 557 RMD160 45ab45659d2cbc6d4267196482e80b99161c95f9 SHA1 99d0cc85b26a097d27217b85d4a1db1a1a90a85a SHA256 105338629374c5442efaec03aed9f93d0ea59c31d8aead96bd710244d53a3a8d
-MD5 5b937db2d7b0942bb16456434fa4e06e gst-plugins-x-0.10.11.ebuild 557
-RMD160 45ab45659d2cbc6d4267196482e80b99161c95f9 gst-plugins-x-0.10.11.ebuild 557
-SHA256 105338629374c5442efaec03aed9f93d0ea59c31d8aead96bd710244d53a3a8d gst-plugins-x-0.10.11.ebuild 557
+EBUILD gst-plugins-x-0.10.11.ebuild 552 RMD160 71d76ba6b648478c9b179eda1d8a24c737728f75 SHA1 70dd70a314fb1da2f0fc26fb71adfe8d1f54d2f2 SHA256 a761a6f7ae96d08b0ba0d7fe56dd84fe1cab8215153449aa375e3d806ec889b1
+MD5 918c7fbe1ce1f743570da5c9cf59fdf2 gst-plugins-x-0.10.11.ebuild 552
+RMD160 71d76ba6b648478c9b179eda1d8a24c737728f75 gst-plugins-x-0.10.11.ebuild 552
+SHA256 a761a6f7ae96d08b0ba0d7fe56dd84fe1cab8215153449aa375e3d806ec889b1 gst-plugins-x-0.10.11.ebuild 552
 EBUILD gst-plugins-x-0.10.12.ebuild 560 RMD160 fd48f9024857050c2fb2aecef92a204261d071b3 SHA1 950fd5f6e5cb60d19bcbc26044ae985bb160b117 SHA256 c13db4e0a75c24f9e062a1d346713dadfc0e43472f2b7532e9dd01eee1ae0134
 MD5 ec8eaf71a72100efa42d5f7152fab63c gst-plugins-x-0.10.12.ebuild 560
 RMD160 fd48f9024857050c2fb2aecef92a204261d071b3 gst-plugins-x-0.10.12.ebuild 560
@@ -66,9 +66,9 @@ MD5 7ce537e51ee617c9ee048f4ac69cca7e files/digest-gst-plugins-x-0.10.9 277
 RMD160 9d96682e02c0781fec575fef3e6f9bdd1e53684f files/digest-gst-plugins-x-0.10.9 277
 SHA256 e134e257d23eae065d30d0457b3084a5ab5c51438cce341e43bf5d49222e661f files/digest-gst-plugins-x-0.10.9 277
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGqKh1KRy60XGEcJIRAv4rAJ9MLEEK1c2LhMBnmHuWVQVMTaxhhACfY2Ji
-uwLdMgUNWyr2W7R07x7VeU0=
-=yk0W
+iD8DBQFG0Dqmp/wUKkr7RBoRArkCAJ9g9WbM5rue6ettsVpN43qsfaD23gCfR3Gf
+0DxtprkyhFeUpurR4CJC4P4=
+=/2sR
 -----END PGP SIGNATURE-----
