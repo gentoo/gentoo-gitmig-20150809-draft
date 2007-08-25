@@ -16,10 +16,10 @@ EBUILD xf86-video-savage-2.1.1.ebuild 856 RMD160 675b516c3305afdf16edad420aeca81
 MD5 f7f53cd5f8004cc77d1a5b9078930ca5 xf86-video-savage-2.1.1.ebuild 856
 RMD160 675b516c3305afdf16edad420aeca81c802dcaf8 xf86-video-savage-2.1.1.ebuild 856
 SHA256 832fbda03baeada536e36619adf6cd235778b7f9c71830859bbcda1736eb60e3 xf86-video-savage-2.1.1.ebuild 856
-EBUILD xf86-video-savage-2.1.2-r1.ebuild 1104 RMD160 fe709fadfa1613f947ca86e02ad0a858a867e19e SHA1 798a012a3f65c4442b3ec08874204ecba31615a2 SHA256 088d279c01263186a4f0ecc14cceb7249c12ed579a2aa99ff37aa37f0b54074d
-MD5 31f1bda275778e2350fe32ebf2ace50b xf86-video-savage-2.1.2-r1.ebuild 1104
-RMD160 fe709fadfa1613f947ca86e02ad0a858a867e19e xf86-video-savage-2.1.2-r1.ebuild 1104
-SHA256 088d279c01263186a4f0ecc14cceb7249c12ed579a2aa99ff37aa37f0b54074d xf86-video-savage-2.1.2-r1.ebuild 1104
+EBUILD xf86-video-savage-2.1.2-r1.ebuild 1100 RMD160 7e42db36d51c7d9400abd0af08175c86be593367 SHA1 54940e017d60989678e6cec1619131931168a7e7 SHA256 87529e2003ffa0e30d76b5cc1653eb1b1c8cc2cc2c600acfe222670cec8cbc5e
+MD5 dc8d21fd4c5bc6bdc411e26ac55cd930 xf86-video-savage-2.1.2-r1.ebuild 1100
+RMD160 7e42db36d51c7d9400abd0af08175c86be593367 xf86-video-savage-2.1.2-r1.ebuild 1100
+SHA256 87529e2003ffa0e30d76b5cc1653eb1b1c8cc2cc2c600acfe222670cec8cbc5e xf86-video-savage-2.1.2-r1.ebuild 1100
 EBUILD xf86-video-savage-2.1.2.ebuild 1050 RMD160 8ab4020fb7e64b260add50bcd3ad11a7b9527de8 SHA1 2ae8228858d2b1e31c71cbc029679a4a283d6520 SHA256 9ff8d8b7d896f70f54204e4668a498775c7f87909e56fea9802ed1bbc8e1b224
 MD5 66a001ad03987af2e9a1dcc19014c6d7 xf86-video-savage-2.1.2.ebuild 1050
 RMD160 8ab4020fb7e64b260add50bcd3ad11a7b9527de8 xf86-video-savage-2.1.2.ebuild 1050
@@ -42,9 +42,9 @@ MD5 1eb14abd1c4ef3affbc6cf40342852f6 files/digest-xf86-video-savage-2.1.2-r1 530
 RMD160 86fb8bf0e021b03787cc053c3ebfd3174d95e572 files/digest-xf86-video-savage-2.1.2-r1 530
 SHA256 c6c19e248c8db1c931d56bcfb2bbda00d9d129843d7bf533298d67ce3ea9d93c files/digest-xf86-video-savage-2.1.2-r1 530
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGuGusKRy60XGEcJIRAn7MAJsFuK0KUlzc8ovWM9k0cW5OFIH5BACeObBL
-LLN9Z2yA0nZyL9+HQRtVQ9Y=
-=sh3A
+iD8DBQFG0DT3p/wUKkr7RBoRAtNeAJ9l/Nx6tjW7L9943R+pxX1pHqvfrACfXpZT
+DTc5fvuNim9JYqCDI5T/0fo=
+=cnTW
 -----END PGP SIGNATURE-----
