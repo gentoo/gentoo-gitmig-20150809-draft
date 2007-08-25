@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.ebuild,v 1.6 2007/07/16 17:50:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.ebuild,v 1.7 2007/08/25 09:50:10 eva Exp $
 
 inherit gnome2 fdo-mime
 
@@ -12,18 +12,18 @@ LICENSE="GPL-2"
 KEYWORDS="alpha ~amd64 ppc sparc x86"
 IUSE="doc libgda python"
 
-RDEPEND=">=dev-libs/glib-2.4
-	>=x11-libs/gtk+-2.4
-	>=gnome-base/libgnomecanvas-2.6
-	>=gnome-base/libgnomeui-2.6
+RDEPEND=">=dev-libs/glib-2.6
+	>=x11-libs/gtk+-2.6
+	>=gnome-base/libgnomecanvas-2.10
+	>=gnome-base/libgnomeui-2.10
 	>=gnome-base/libglade-2.4
-	>=gnome-base/gnome-vfs-2.6
-	>=gnome-base/libgnomeprintui-2.6
+	>=gnome-base/gnome-vfs-2.10
+	>=gnome-base/libgnomeprintui-2.10
 	>=gnome-base/gconf-2.6
 	>=dev-libs/libxml2-2.6
 	>=dev-libs/libxslt-1.1
 	libgda? ( =gnome-extra/libgda-1* )
-	python? ( >=dev-python/pygtk-2.0.0-r1 )"
+	python? ( >=dev-python/pygtk-2.6 )"
 # disable eds backend for now, its experimental
 #	eds? ( >=gnome-extra/evolution-data-server-1.1 )"
 #		>=mail-client/evolution-2.1.3 )"
