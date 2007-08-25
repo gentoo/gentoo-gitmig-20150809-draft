@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gnome-keyring-0.6.0-fbsd.patch 1268 RMD160 55a9f7eef3f95e59ee5235587b9c32b4681e85c6 SHA1 5ddd51a7929d52c408fc415e3824bf8b776deec3 SHA256 b20766b51197376bb22eae4a03aea84226e4b4147ea9297ab6cd3e2a3ab19acd
 MD5 87200f5a1af8eb556a5271a1113e8b7f files/gnome-keyring-0.6.0-fbsd.patch 1268
 RMD160 55a9f7eef3f95e59ee5235587b9c32b4681e85c6 files/gnome-keyring-0.6.0-fbsd.patch 1268
@@ -34,3 +37,10 @@ SHA256 c05189f869ad876daad2f33c9ed9126db57a822c79f897fba786b758e6889e75 files/di
 MD5 a47cec36a7d2da7f058b1536d8a16422 files/digest-gnome-keyring-0.8.1 262
 RMD160 b4fa93f9571ac051507f1d1283f5e063c8d8674e files/digest-gnome-keyring-0.8.1 262
 SHA256 76e112c978f80806f7b2c9766275a7751d9a0979fb482232a2e47de4186c55fe files/digest-gnome-keyring-0.8.1 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0Dwap/wUKkr7RBoRAlqdAKDJd3jcJnwfQg+GrsENpqluu9QAKACfd7kC
+tgmJ79rOorcTZif0pChAleA=
+=lfZ6
+-----END PGP SIGNATURE-----

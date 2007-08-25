@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX control-center-2.11-gentoo_xcursor.patch 527 RMD160 bf455b0cf0c98c303c0885d5bcc7a72005b63108 SHA1 dc3e5afcb696034069d2ddc4d87c2905532e914c SHA256 682ed264c5ac0ed848b5cf3e856ee4440201be94f81b3dad4066233aaec48d9a
 MD5 6d346011e61ca1c016c3c391881f9a4a files/control-center-2.11-gentoo_xcursor.patch 527
 RMD160 bf455b0cf0c98c303c0885d5bcc7a72005b63108 files/control-center-2.11-gentoo_xcursor.patch 527
@@ -46,3 +49,10 @@ SHA256 f99a2c73b62026d56e94fdc85a28fe8ddf14e45f03626524dcfbd62f55c7323d files/di
 MD5 f84d983b3484feb31c85348fa89d37d0 files/digest-control-center-2.18.1 271
 RMD160 f191c70a67df5a477abd305cfb019055a3bb6c45 files/digest-control-center-2.18.1 271
 SHA256 cf2bc498f431016785a9c2b0d2dca076c48dc66ac884bcfd4a8593f0be501df7 files/digest-control-center-2.18.1 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0DwYp/wUKkr7RBoRAqoCAKDI6jSPCySUUNzNQISKbSnyJGkKawCdGGAK
+l6SGUt8DtHsXAReKHUMyx/M=
+=GnIn
+-----END PGP SIGNATURE-----

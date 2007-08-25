@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX Makefile.in.am-2.4.2-xmlcatalog.patch 1331 RMD160 d47a94fb8ef65dbb6974936e0284fc691dc9c54f SHA1 c8bf1cf951f32de6b2f05176cf197e3d4b0ca6f9 SHA256 e1bb6b353fcacb54948ecbb3886dfa8a9a199370bef53cf38868bf744f02f0a0
 MD5 f9bf50cb0d304288f8fe07db3385bdeb files/Makefile.in.am-2.4.2-xmlcatalog.patch 1331
 RMD160 d47a94fb8ef65dbb6974936e0284fc691dc9c54f files/Makefile.in.am-2.4.2-xmlcatalog.patch 1331
@@ -34,3 +37,10 @@ SHA256 d023ee5cad606c05573fd63ab36943fcf31550cccd12a74276ae8c3011ce535b files/di
 MD5 cadc373e6cce8283b4cab44dec17290e files/digest-libglade-2.6.1 247
 RMD160 1d302362cb9b5a50c65d77054ad83450e4c7c2d3 files/digest-libglade-2.6.1 247
 SHA256 38526f4fbe8970f27c6599f665c23c165918e3b1dad7c4232d57e63e4c31c2bd files/digest-libglade-2.6.1 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0DwZp/wUKkr7RBoRArN2AKCBzVw+wBcHZH5tHBn79WnuZ+kf3ACeOIuG
+GJGc/k6CCqcOZqAujBOIUvo=
+=0g79
+-----END PGP SIGNATURE-----

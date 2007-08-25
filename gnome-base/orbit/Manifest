@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX orbit-2.14.8-fix_races.patch 4266 RMD160 ff4fb138383fed88b66f5fac00a1f78ef69ed166 SHA1 abb8d66cd9b305445bcdbfe2d96d323c77de1cc7 SHA256 565ab3e4e7c23d8d7fc0d2239ec0fe89e2b5d3f114afbe822b8edbbb548e4dc2
 MD5 ffc0b9f944a454b965df798b40a43d9d files/orbit-2.14.8-fix_races.patch 4266
 RMD160 ff4fb138383fed88b66f5fac00a1f78ef69ed166 files/orbit-2.14.8-fix_races.patch 4266
@@ -45,3 +48,10 @@ SHA256 1d8516aa2515f2a54057451e3bdba73ac8d37f56011acdca69854e28f8a7453d files/di
 MD5 ba7923ba96ef915407f7cc7fc3b087be files/digest-orbit-2.14.8-r3 244
 RMD160 15b2c821bbb8b10d67cd4eeb33978fe436330149 files/digest-orbit-2.14.8-r3 244
 SHA256 1d8516aa2515f2a54057451e3bdba73ac8d37f56011acdca69854e28f8a7453d files/digest-orbit-2.14.8-r3 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0Dwap/wUKkr7RBoRAvQPAJsFCL9rYwI1gdX+MW1nbArqTrDcpACeIg1O
++7EuX+0JVxyujAb9Id9hLOc=
+=gi0F
+-----END PGP SIGNATURE-----

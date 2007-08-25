@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX libgnomeui-2.13.2-gentoo.patch 3851 RMD160 7939b9a03e8eed1e04a2b2482a2a185c99d9254f SHA1 b2716ff83c387d5fdfd508b2d234a3eb214eaa49 SHA256 db4a93f86075ff1b719de5a4342c9371cd2d887453d7c7be4a39525534178db5
 MD5 b7ab109f9a0fa0592832f15427911d8a files/libgnomeui-2.13.2-gentoo.patch 3851
 RMD160 7939b9a03e8eed1e04a2b2482a2a185c99d9254f files/libgnomeui-2.13.2-gentoo.patch 3851
@@ -38,3 +41,10 @@ SHA256 4195432d81b1ba0099c3968fc24ccd0c3289d787e533759edc300581dd21348e files/di
 MD5 501a78c6e79f6885855f094066f00e3d files/digest-libgnomeui-2.18.1 259
 RMD160 bb00bcf503fa319ca103022a99d58eaa5844f4f8 files/digest-libgnomeui-2.18.1 259
 SHA256 d42a8865c59cda2fae9c1b9b7a2e8f161258edce52abc6f4446f13f342c55718 files/digest-libgnomeui-2.18.1 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0Dwap/wUKkr7RBoRApsbAKCjhid2T9BgAiU2VbROHR9Ln6qdLQCgt4oo
+yyDdDlU0GUCMTdfFT54aGy8=
+=bRkE
+-----END PGP SIGNATURE-----

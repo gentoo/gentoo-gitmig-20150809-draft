@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX librsvg-2.15.90-die-gtk-doc-die.patch 581 RMD160 94e7da4d6260daebd5e7b298911d1888f234ce91 SHA1 fe31e163db3afbe028b6499a20301c5278ab3966 SHA256 b85d7c1b58905258c75fd86a360a0ba2eebd5d530793d359e4be7913fffb2201
 MD5 83cc3db2d44688434536e2470020a2af files/librsvg-2.15.90-die-gtk-doc-die.patch 581
 RMD160 94e7da4d6260daebd5e7b298911d1888f234ce91 files/librsvg-2.15.90-die-gtk-doc-die.patch 581
@@ -40,3 +43,10 @@ SHA256 f6489e69f2820d8401eec1ae48aeac109aeaccde26dfb0681895322fe151f787 files/di
 MD5 ab99525f3daaac5586f216d17dfa3dde files/digest-librsvg-2.16.1-r2 247
 RMD160 ce4d7ae96c7ec8cd9d22a11d2f9ce377e27baf88 files/digest-librsvg-2.16.1-r2 247
 SHA256 f6489e69f2820d8401eec1ae48aeac109aeaccde26dfb0681895322fe151f787 files/digest-librsvg-2.16.1-r2 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0DwZp/wUKkr7RBoRAgllAKCHiPp4kCzGAg2otLkLGPGTR2qr1ACeNaxG
+45MbOkyyJQNToP41z5mKwcA=
+=0/OM
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gnome-mount-0.4-ntfs3g.patch 765 RMD160 95cfd9ea57cc0b38fab0b2732bfffef61e0a947a SHA1 ef8af3919b4082245ddb60acf9a67cac12a12edb SHA256 b3d74f64f4cae0731e33df00c213750a815a77971cba6aa6795e898682966ca9
 MD5 534285925d6d02bead2c5fdd1bc7ef00 files/gnome-mount-0.4-ntfs3g.patch 765
 RMD160 95cfd9ea57cc0b38fab0b2732bfffef61e0a947a files/gnome-mount-0.4-ntfs3g.patch 765
@@ -46,3 +49,10 @@ SHA256 67029697bb73ba7329bd85fa5ab80e7585b9c5d247d0fb82d0679c68a9a056e7 files/di
 MD5 2e7b9998243252b8f9489edcc1de5287 files/digest-gnome-mount-0.6 247
 RMD160 acc176b33339e8367ae5e91f7400491adee84432 files/digest-gnome-mount-0.6 247
 SHA256 cba435705bb090d74a12cbbeb2c612e5d5b55cdcc616ac14e6272fb3e1c8dded files/digest-gnome-mount-0.6 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0Dwap/wUKkr7RBoRAtF6AJ9xxcJK4x3cb1FUaFYlp9pRN+YO6ACgqS4S
+eK23bUpn4iSMNSl9n68OMig=
+=MKFg
+-----END PGP SIGNATURE-----

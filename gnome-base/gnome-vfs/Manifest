@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gnome-vfs-2-CAN-2005-0706.patch 490 RMD160 b0609022ed5ce0b782342ab7f1771ded69b44fbf SHA1 02c00c90e00aaa2d6cc0dbcb095a9f343e6fc3a8 SHA256 aa360ff6aff9ad766b97f96659f3440a7c5fddad80166170b7cf2e43f3bf0964
 MD5 ba8ad5c040af8bd498c9ec71ac1df40e files/gnome-vfs-2-CAN-2005-0706.patch 490
 RMD160 b0609022ed5ce0b782342ab7f1771ded69b44fbf files/gnome-vfs-2-CAN-2005-0706.patch 490
@@ -69,3 +72,10 @@ SHA256 835094a7022fd132b2fe440cf39b51e57961a11c434bd44fc6e9fda283d99e9a files/di
 MD5 6fd90715dc3fa94c666f453dc18a7a06 files/digest-gnome-vfs-2.18.1 256
 RMD160 4e9f7e301783b2f30cefcbbd2b438d3b0d5202e7 files/digest-gnome-vfs-2.18.1 256
 SHA256 b2720a70fba484df557c141fb4c3db683b4842d7dbac9b95ec518df94f78a54b files/digest-gnome-vfs-2.18.1 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0DwYp/wUKkr7RBoRAkn7AKCQVdAnanFs7yJbEhn2f64WVAm3RACfXnku
+Mjw22wrJU7CKMFVg/ROTWvk=
+=kLuO
+-----END PGP SIGNATURE-----

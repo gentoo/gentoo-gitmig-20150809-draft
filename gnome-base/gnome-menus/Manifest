@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gnome-menus-2.10.2-legacy_dirs.patch 669 RMD160 970a32433d6311cddd4f1339c3001e23076eb3d6 SHA1 8a9235c02e888df4e450e7deb90934fc9f3b7aba SHA256 791869ce91b9403f9479ac3f1bbdc616cd09b3c529c25c4e48be599f4b7c1d05
 MD5 1a51e652f467b181dcbb71a42db7b5bf files/gnome-menus-2.10.2-legacy_dirs.patch 669
 RMD160 970a32433d6311cddd4f1339c3001e23076eb3d6 files/gnome-menus-2.10.2-legacy_dirs.patch 669
@@ -26,3 +29,10 @@ SHA256 0231cb5b9d8d5f7632183cbcdf435268e00b61ff9253efbfa055ce041812e488 files/di
 MD5 cf0c90d7f3dbf8c0d5e0b106c2ed5851 files/digest-gnome-menus-2.18.2 259
 RMD160 c83320bff5a9b074a728d8a2fd09f88cdd777ca3 files/digest-gnome-menus-2.18.2 259
 SHA256 d7ab702abe6bd199885b476f3f7bce0f91ec15e2509ce21a343a03fd625ab205 files/digest-gnome-menus-2.18.2 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0DwYp/wUKkr7RBoRAlaiAJ9e4WV1DOEJ/DVPlk+vqFEw0GC+9wCg4Bpr
+o61FILwi7N6w4dTtubmKoWM=
+=rQfl
+-----END PGP SIGNATURE-----

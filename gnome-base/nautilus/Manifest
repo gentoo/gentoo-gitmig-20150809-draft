@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX nautilus-2.16.0-idl_include.patch 575 RMD160 8ee41c84f597683e2d34eea5acdb43f5592d3262 SHA1 738a2e9bb13aab07ed256e37af3ddc10fa2dfe0e SHA256 07cd75e4cf1c34c5fcd3f4d2257ae1d9c578cb2c2f014e69280e511de28862f0
 MD5 c496549444ef2727f6c0555b590ef4fe files/nautilus-2.16.0-idl_include.patch 575
 RMD160 8ee41c84f597683e2d34eea5acdb43f5592d3262 files/nautilus-2.16.0-idl_include.patch 575
@@ -34,3 +37,10 @@ SHA256 9c0e94500dc877ab6d9db51551a37fbc5d1760924654e4cbe4e93ef645bd3673 files/di
 MD5 75c3755092fda800ebe3adbd2b908858 files/digest-nautilus-2.18.3 253
 RMD160 29b0345f5e918dab5ee50dbb77ffff61919e1d6e files/digest-nautilus-2.18.3 253
 SHA256 fa243747bb67794ea26d8725f7d1c60d6eaea66227d0162e19438bac3f3f716e files/digest-nautilus-2.18.3 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0DwYp/wUKkr7RBoRAiwfAJ0c4ApRWrn8trSybzL5hIm5fhapuQCgzRG/
+GkAY3Dybb4HI6Dnz3CkdoD4=
+=r+co
+-----END PGP SIGNATURE-----
