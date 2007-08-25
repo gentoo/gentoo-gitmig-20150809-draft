@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/muse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.16 2007/06/21 17:19:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.17 2007/08/25 13:00:48 ulm Exp $
+
+*muse-3.11 (25 Aug 2007)
+
+  25 Aug 2007; Ulrich Mueller <ulm@gentoo.org> +muse-3.11.ebuild:
+  Version bump. Update LICENSE to GPL-3.
 
 *muse-3.03 (21 Jun 2007)
 
