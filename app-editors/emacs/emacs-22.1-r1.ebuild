@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r1.ebuild,v 1.1 2007/08/24 07:25:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r1.ebuild,v 1.2 2007/08/25 12:35:48 ulm Exp $
 
 WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
@@ -141,7 +141,7 @@ src_compile() {
 
 	einfo "Recompiling patched lisp files..."
 	(cd lisp; emake recompile) || die "emake recompile failed"
-	rm etc/DOC-*
+	(cd src; emake versionclean)
 	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
