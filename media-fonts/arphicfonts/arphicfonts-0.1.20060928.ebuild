@@ -1,12 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1.20060928.ebuild,v 1.10 2007/07/28 18:48:41 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1.20060928.ebuild,v 1.11 2007/08/25 11:34:07 vapier Exp $
 
 inherit font
 
 DESCRIPTION="Chinese TrueType Arphic Fonts"
-HOMEPAGE="http://www.arphic.com.tw/
-	http://www.freedesktop.org/wiki/Software_2fCJKUnifonts"
+HOMEPAGE="http://www.arphic.com.tw/ http://www.freedesktop.org/wiki/Software_2fCJKUnifonts"
 SRC_URI="mirror://gnu/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz
 	mirror://gnu/non-gnu/chinese-fonts-truetype/bkai00mp.ttf.gz
 	mirror://gnu/non-gnu/chinese-fonts-truetype/bsmi00lp.ttf.gz
@@ -16,7 +15,7 @@ SRC_URI="mirror://gnu/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz
 
 LICENSE="Arphic"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="X"
 
 S=${WORKDIR}
