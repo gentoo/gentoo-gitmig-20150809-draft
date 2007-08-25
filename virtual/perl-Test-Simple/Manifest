@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 EBUILD perl-Test-Simple-0.62.ebuild 532 RMD160 d76b2e784547397ad8fd0cb141d25e7fab672a4a SHA1 e98a3da33c1af134384e5a752248ca4855ed3199 SHA256 1bb084536f7ce563ae1b6e20638f8effe487fb8328de50e1983b5094124ca231
 MD5 73a05fa45b8dffb5f8341cdf2fe6a3de perl-Test-Simple-0.62.ebuild 532
 RMD160 d76b2e784547397ad8fd0cb141d25e7fab672a4a perl-Test-Simple-0.62.ebuild 532
@@ -55,3 +58,10 @@ SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/di
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-perl-Test-Simple-0.70 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-perl-Test-Simple-0.70 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-perl-Test-Simple-0.70 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0C8tp/wUKkr7RBoRAiEVAKC4wJb+tchHgO4zsfy4hkhncyE+0QCgoGnw
+SAf/nfSSRjE+JMC+muygVDU=
+=FzEm
+-----END PGP SIGNATURE-----
