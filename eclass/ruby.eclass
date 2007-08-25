@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.67 2007/08/25 06:06:20 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.68 2007/08/25 18:49:44 graaff Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -214,48 +214,54 @@ erubyinstall() {
 	ruby_einstall "$@"
 }
 
-# prepall adds SLOT support for ruby.eclass
+# prepall adds SLOT support for ruby.eclass. SLOT support currently
+# does not work for gems, so if a gem is installed we skip all the
+# SLOT code to avoid possible errors, in particular the mv command
+# that is part of the USE_RUBY="any" case.
 prepall() {
 
-	[[ ! -x /usr/bin/ruby16 ]] && export USE_RUBY=${USE_RUBY/ruby16/}
-	[[ ! -x /usr/bin/ruby18 ]] && export USE_RUBY=${USE_RUBY/ruby18/}
-	[[ ! -x /usr/bin/ruby19 ]] && export USE_RUBY=${USE_RUBY/ruby19/}
+	if [ -z "${GEM_SRC}" ]; then
 
-	local ruby_slots=$(echo "${USE_RUBY}" | wc -w)
+		[[ ! -x /usr/bin/ruby16 ]] && export USE_RUBY=${USE_RUBY/ruby16/}
+		[[ ! -x /usr/bin/ruby18 ]] && export USE_RUBY=${USE_RUBY/ruby18/}
+		[[ ! -x /usr/bin/ruby19 ]] && export USE_RUBY=${USE_RUBY/ruby19/}
 
-	if [ "$ruby_slots" -ge 2 ] || (use ppc-macos && [ "$ruby_slots" -ge 1 ])
-	then
-		einfo "Now we are building the package for ${USE_RUBY}"
-		for rb in ${USE_RUBY} ruby ; do
-			einfo "Using $rb"
-			export RUBY=/usr/bin/$rb
-			ruby() { /usr/bin/$rb "$@" ; }
-			mkdir -p ${S}
-			cd ${WORKDIR}
-			einfo "Unpacking for $rb"
-			src_unpack || die "src_unpack failed"
-			cd ${S}
-			find . -name '*.[ao]' -exec rm {} \;
-			einfo "Building for $rb"
-			src_compile || die "src_compile failed"
-			cd ${S}
-			einfo "Installing for $rb"
-			src_install || die "src_install failed"
-		done
-	elif [ "${USE_RUBY}" == "any" ] ; then
-		siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
-		# in case no directories found in siteruby
-		local shopts=$-
-		set -o noglob # so that bash doen't expand "*"
+		local ruby_slots=$(echo "${USE_RUBY}" | wc -w)
 
-		for x in ${D}/${siteruby}/* ; do
-			mv $x ${D}/${siteruby}/..
-		done
-		if [ -d ${D}${siteruby} ] ; then
-			rmdir --ignore-fail-on-non-empty ${D}/${siteruby}
+		if [ "$ruby_slots" -ge 2 ] || (use ppc-macos && [ "$ruby_slots" -ge 1 ])
+			then
+			einfo "Now we are building the package for ${USE_RUBY}"
+			for rb in ${USE_RUBY} ruby ; do
+				einfo "Using $rb"
+				export RUBY=/usr/bin/$rb
+				ruby() { /usr/bin/$rb "$@" ; }
+				mkdir -p ${S}
+				cd ${WORKDIR}
+				einfo "Unpacking for $rb"
+				src_unpack || die "src_unpack failed"
+				cd ${S}
+				find . -name '*.[ao]' -exec rm {} \;
+				einfo "Building for $rb"
+				src_compile || die "src_compile failed"
+				cd ${S}
+				einfo "Installing for $rb"
+				src_install || die "src_install failed"
+			done
+		elif [ "${USE_RUBY}" == "any" ] ; then
+			siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
+			# in case no directories found in siteruby
+			local shopts=$-
+			set -o noglob # so that bash doen't expand "*"
+			
+			for x in ${D}/${siteruby}/* ; do
+				mv $x ${D}/${siteruby}/..
+			done
+			if [ -d ${D}${siteruby} ] ; then
+				rmdir --ignore-fail-on-non-empty ${D}/${siteruby}
+			fi
+			
+			set +o noglob; set -$shopts # reset old shell opts
 		fi
-
-		set +o noglob; set -$shopts # reset old shell opts
 	fi
 
 	# Continue with the regular prepall, see bug 140697
