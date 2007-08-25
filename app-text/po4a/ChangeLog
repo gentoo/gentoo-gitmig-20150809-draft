@@ -1,6 +1,12 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.24 2007/08/19 20:35:09 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.25 2007/08/25 17:54:23 ian Exp $
+
+*po4a-0.32-r1 (25 Aug 2007)
+
+  25 Aug 2007; Christian Hartmann <ian@gentoo.org> +po4a-0.32-r1.ebuild:
+  Fix test failures on sgml test mentioned in bug #189440 - many thanks go to
+  upstream (nekral in #po4a on oftc) for helping me fix this one!
 
   19 Aug 2007; Ferris McCormick <fmccor@gentoo.org> po4a-0.32.ebuild:
   Sparc stable --- Security Bug #189440 --- builds itself and passes all 134
