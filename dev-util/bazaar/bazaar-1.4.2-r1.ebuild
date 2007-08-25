@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.4.2-r1.ebuild,v 1.3 2007/06/04 23:07:51 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.4.2-r1.ebuild,v 1.4 2007/08/25 18:04:50 beandog Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://bazaar-vcs.org/Baz1x"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DIR="thelove@canonical.com---dists--bazaar--1.4"
