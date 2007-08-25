@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.5.ebuild,v 1.10 2007/07/08 04:57:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.5.ebuild,v 1.11 2007/08/25 14:19:04 vapier Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gnome.org/projects/totem/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 
 # pitdfdll has not come out with a 0.10 release, should be soon though -AJL
 # IUSE="win32codecs"
