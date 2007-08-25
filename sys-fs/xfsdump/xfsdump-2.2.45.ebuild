@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.45.ebuild,v 1.7 2007/06/16 03:29:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.45.ebuild,v 1.8 2007/08/25 18:03:03 vapier Exp $
 
 inherit eutils autotools
 
@@ -14,10 +14,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 -sparc x86"
 IUSE=""
 
-DEPEND="sys-fs/e2fsprogs
+RDEPEND="sys-fs/e2fsprogs
 	sys-fs/xfsprogs
 	sys-apps/dmapi
 	>=sys-apps/attr-2.4.19"
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
 
 src_unpack() {
 	unpack ${A}
