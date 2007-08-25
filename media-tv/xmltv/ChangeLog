@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.70 2007/08/12 09:26:55 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.71 2007/08/25 23:04:59 beandog Exp $
+
+  25 Aug 2007; Steve Dibb <beandog@gentoo.org> xmltv-0.5.45.ebuild,
+  xmltv-0.5.46.ebuild:
+  amd64 stable
 
 *xmltv-0.5.47 (12 Aug 2007)
 
