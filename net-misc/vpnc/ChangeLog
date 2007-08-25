@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.43 2007/08/19 12:22:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.44 2007/08/25 15:29:00 opfer Exp $
+
+*vpnc-0.4.0-r4 (25 Aug 2007)
+
+  25 Aug 2007; Christian Faulhammer <opfer@gentoo.org> +files/vpnc-1.init,
+  +files/vpnc.confd, +vpnc-0.4.0-r4.ebuild:
+  revision bump which installs a conf.d file to control whether output of
+  vpnc's init script should be redirected to oblivion or not; requested by
+  Gautam Iyer <gi1242@users.sourceforge.net> in bug 189867
 
   19 Aug 2007; nixnut <nixnut@gentoo.org> vpnc-0.4.0-r3.ebuild:
   Stable on ppc wrt bug 186577

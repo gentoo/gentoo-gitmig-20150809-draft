@@ -1,0 +1,66 @@
+#!/sbin/runscript
+
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/files/vpnc-1.init,v 1.1 2007/08/25 15:29:00 opfer Exp $
+
+VPNDIR="/etc/vpnc"
+VPN="${SVCNAME#*.}"
+if [ -n ${VPN} ] && [ ${SVCNAME} != "vpnc" ]; then
+	VPNPID="/var/run/vpnc/${VPN}.pid"
+else
+	VPNPID="/var/run/vpnc.pid"
+fi
+VPNCONF="${VPNDIR}/${VPN}.conf"
+
+depend() {
+	need net
+	before netmount
+}
+
+checktundevice() {
+	if [ ! -e /dev/net/tun ]; then
+		if ! modprobe tun ; then
+			eerror "TUN/TAP support is not available in this kernel"
+			return 1
+		fi
+	fi
+	if [ -h /dev/net/tun ] && [ -c /dev/misc/net/tun ]; then
+		ebegin "Detected broken /dev/net/tun symlink, fixing..."
+		rm -f /dev/net/tun
+		ln -s /dev/misc/net/tun /dev/net/tun
+		eend $?
+	fi
+}
+
+screenoutput() {
+    if [ "${VPNCOUTPUT}" = "yes" ]; then
+	export SCREEN_OUTPUT="/dev/stdout"
+    elif [ "${VPNCOUTPUT}" = "no" ]; then
+	export SCREEN_OUTPUT="/dev/null"
+    fi
+}
+
+start() {
+	ebegin "Starting VPNC: ${VPN}"
+
+	checktundevice || return 1
+	screenoutput
+
+	if [ ! -e "${VPNCONF}" ]; then
+		eend 1 "${VPNCONF} does not exist"
+		return 1
+	fi
+
+	local args=""
+
+	start-stop-daemon --start --pidfile "${VPNPID}" --exec /usr/sbin/vpnc \
+		-- --pid-file "${VPNPID}" "${VPNCONF}" > ${SCREEN_OUTPUT}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping VPNC: ${VPN}"
+	start-stop-daemon --stop --exec /usr/sbin/vpnc --pidfile "${VPNPID}"
+	eend $?
+}
