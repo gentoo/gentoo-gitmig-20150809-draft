@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2005.01.31-r1.ebuild,v 1.6 2006/12/31 14:57:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2005.01.31-r1.ebuild,v 1.7 2007/08/25 14:37:19 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.sixxs.net/archive/sixxs/${PN}/unix/${PN}_${PV}.tar.gz"
 
 LICENSE="AICCU"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc x86"
+KEYWORDS="~amd64 arm ~hppa ~ppc x86"
 IUSE=""
 DEPEND="sys-apps/iproute2"
 S=${WORKDIR}/${PN}
