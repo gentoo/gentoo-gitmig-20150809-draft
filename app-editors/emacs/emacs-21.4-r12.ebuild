@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.29 2007/08/25 12:35:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r12.ebuild,v 1.30 2007/08/25 20:55:18 opfer Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/emacs/${P}a.tar.gz
 	mirror://gentoo/emacs-21-patches.tar.bz2
 	leim? ( mirror://gnu/emacs/leim-${PV}.tar.gz )"
 
-LICENSE="GPL-2 FDL-1.1"
+LICENSE="GPL-2 FDL-1.1 BSD"
 SLOT="21"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="X Xaw3d leim lesstif motif nls nosendmail"

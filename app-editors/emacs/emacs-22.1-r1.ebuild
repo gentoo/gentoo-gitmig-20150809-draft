@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r1.ebuild,v 1.2 2007/08/25 12:35:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r1.ebuild,v 1.3 2007/08/25 20:55:18 opfer Exp $
 
 WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
@@ -11,7 +11,7 @@ DESCRIPTION="The extensible, customizable, self-documenting real-time display ed
 HOMEPAGE="http://www.gnu.org/software/emacs/"
 SRC_URI="mirror://gnu/emacs/${P}.tar.gz"
 
-LICENSE="GPL-2 FDL-1.2"
+LICENSE="GPL-2 FDL-1.2 BSD"
 SLOT="22"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="alsa gif gtk gzip-el hesiod jpeg motif png spell sound source tiff toolkit-scroll-bars X Xaw3d xpm"
