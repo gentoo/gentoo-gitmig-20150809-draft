@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.5.ebuild,v 1.2 2007/08/18 23:07:49 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.5.ebuild,v 1.3 2007/08/25 18:37:40 humpback Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ pkg_setup() {
 
 src_compile() {
 	econf \
-		--with-gtksourceview \
+		--with-gtksourceview$(has_version '>=x11-libs/gtksourceview-1.90' && echo 2) \
 		$(use_with gnome) \
 		 || die "econf failed"
 	emake || die "make failed"
