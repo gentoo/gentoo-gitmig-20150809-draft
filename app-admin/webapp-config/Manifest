@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX webapp-config-1.50.16-apache-move.patch 507 RMD160 f86f9a966c0848c36a4404a93e2974357b4e9d6a SHA1 b963fb9cc2b6f10e6dbcf5a3db1178be20268fd6 SHA256 9a78c618d750c79a16d216e00f0b8a9c4058e7ba3d23011d999206e9de825790
 MD5 c2e150d2872b946a23105d1244449c3e files/webapp-config-1.50.16-apache-move.patch 507
 RMD160 f86f9a966c0848c36a4404a93e2974357b4e9d6a files/webapp-config-1.50.16-apache-move.patch 507
@@ -8,10 +11,10 @@ EBUILD webapp-config-1.50.15.ebuild 1879 RMD160 cc2d06c20f9f815a4f7958cd66d64e2f
 MD5 3ea0e2500b820fcaafe41f4677042773 webapp-config-1.50.15.ebuild 1879
 RMD160 cc2d06c20f9f815a4f7958cd66d64e2f12927f4f webapp-config-1.50.15.ebuild 1879
 SHA256 25bb02dcb43dfc501274d97e2b93f8abeffe19458b098ac58ba298de96bda78c webapp-config-1.50.15.ebuild 1879
-EBUILD webapp-config-1.50.16-r1.ebuild 1945 RMD160 917d45872c2b550a45616450d1a290bc231b9eca SHA1 3efdd359e564003d96ddb30bcd5bf192a8e53ee1 SHA256 7ce27defbf34320346179397d65aaa1c8a681ec57674a031b19c6eacfb52bac4
-MD5 6266de72d2a0d16630fabf27b37eb1fb webapp-config-1.50.16-r1.ebuild 1945
-RMD160 917d45872c2b550a45616450d1a290bc231b9eca webapp-config-1.50.16-r1.ebuild 1945
-SHA256 7ce27defbf34320346179397d65aaa1c8a681ec57674a031b19c6eacfb52bac4 webapp-config-1.50.16-r1.ebuild 1945
+EBUILD webapp-config-1.50.16-r1.ebuild 1944 RMD160 8f419a2b5b2ed2025f1219c3d3977c818f3e09a3 SHA1 3701c901854ba8baf2a84e1cb1c3e567e32987bb SHA256 90a1400ec225dcd57c0e5fffab61c387fa0cc513feb4812e7eef2a0ca22c65c9
+MD5 8a6714e521986075b2440649d79a1ff2 webapp-config-1.50.16-r1.ebuild 1944
+RMD160 8f419a2b5b2ed2025f1219c3d3977c818f3e09a3 webapp-config-1.50.16-r1.ebuild 1944
+SHA256 90a1400ec225dcd57c0e5fffab61c387fa0cc513feb4812e7eef2a0ca22c65c9 webapp-config-1.50.16-r1.ebuild 1944
 EBUILD webapp-config-1.50.16.ebuild 1882 RMD160 0b5ac82fe3eed0b19669229af3f9a7d2333be17a SHA1 1a97a2bde53ed336c76ba5832197963e8ea87d06 SHA256 d48ad4be30d1f9cb2a7ed6792043032fd49c6bd80cfe92a04dd0ed9baa25e017
 MD5 ae42996be315be55c4b583e8a8f6dffb webapp-config-1.50.16.ebuild 1882
 RMD160 0b5ac82fe3eed0b19669229af3f9a7d2333be17a webapp-config-1.50.16.ebuild 1882
@@ -33,3 +36,10 @@ SHA256 ca173a95748f9c13bb67a7cdc3b5a2d4331635d4cd3da463886c0c320d8939b9 files/di
 MD5 9d0c6677cd89cd41836333c4a5ec1723 files/digest-webapp-config-1.50.16-r1 265
 RMD160 a463796b307e9cd1f7e8ff8f31859cb62f5396f2 files/digest-webapp-config-1.50.16-r1 265
 SHA256 ca173a95748f9c13bb67a7cdc3b5a2d4331635d4cd3da463886c0c320d8939b9 files/digest-webapp-config-1.50.16-r1 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0BaEp/wUKkr7RBoRAnerAKCBOsbxFqjcm19nMYx0UByWlBOBhQCgvKFN
+hE0sdmJUKKqqiEFpK5DDeIc=
+=16aK
+-----END PGP SIGNATURE-----
