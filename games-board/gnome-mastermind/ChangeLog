@@ -1,0 +1,11 @@
+# ChangeLog for games-board/gnome-mastermind
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mastermind/ChangeLog,v 1.1 2007/08/25 11:51:17 tupone Exp $
+
+*gnome-mastermind-0.3 (25 Aug 2007)
+
+  25 Aug 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/gnome-mastermind-0.3-gentoo.patch, +metadata.xml,
+  +gnome-mastermind-0.3.ebuild:
+  New package, requested via bug #177365 by Mikel Olasagasti.
+
