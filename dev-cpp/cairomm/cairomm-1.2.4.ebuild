@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/cairomm-1.2.4.ebuild,v 1.8 2007/07/10 17:33:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/cairomm-1.2.4.ebuild,v 1.9 2007/08/25 12:53:22 vapier Exp $
 
 inherit eutils
 
@@ -10,12 +10,12 @@ SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
 RDEPEND=">=x11-libs/cairo-1.2.0"
 DEPEND="${RDEPEND}
-		doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack "${A}"
@@ -37,6 +37,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	if use examples; then
-		cp -R examples ${D}/usr/share/doc/${PF}
+		cp -R examples "${D}"/usr/share/doc/${PF}
 	fi
 }
