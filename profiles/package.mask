@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7634 2007/08/25 15:26:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7635 2007/08/25 15:59:24 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Steve Dibb <beandog@gentoo.org> (25 Aug 2007)
+# Masked for removal
+# Makefile needs a lot of love, someone can move to overlay
+media-video/mmsv2
 
 # Alin Năstac <mrness@gentoo.org> (25 Aug 2007)
 # Has been inactive for several years; scheduled for removal in 60 days.
