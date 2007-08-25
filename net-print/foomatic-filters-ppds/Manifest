@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX foomatic-filters-ppds-20070501-remove-bashisms.patch 1833 RMD160 7a731bf782225ce35fbc9552a2d9b0278949412d SHA1 2742e209c85a9c9a0190e80c6d3c5e9c0816c3c6 SHA256 3ce1d7a43218dc1326947ba6ef61ac901cf5c918ea40bc089ef99c64b34fbe01
 MD5 432c0d53450dbb11d27f5c4bdcdbe97e files/foomatic-filters-ppds-20070501-remove-bashisms.patch 1833
 RMD160 7a731bf782225ce35fbc9552a2d9b0278949412d files/foomatic-filters-ppds-20070501-remove-bashisms.patch 1833
@@ -8,10 +11,10 @@ EBUILD foomatic-filters-ppds-20060720.ebuild 971 RMD160 978fdc6bbbd4762f84257477
 MD5 6e655246f9b4bc4e3dcca6b90ffe1400 foomatic-filters-ppds-20060720.ebuild 971
 RMD160 978fdc6bbbd4762f84257477332fde73750080b4 foomatic-filters-ppds-20060720.ebuild 971
 SHA256 a4e0c9eb9d9bcbe3932c76c3cb0fd5db5f1a2223457459e6b4dd43cbf3c94b68 foomatic-filters-ppds-20060720.ebuild 971
-EBUILD foomatic-filters-ppds-20070501.ebuild 1264 RMD160 acfd46f5a261ce02b0367964d69944f9755b6700 SHA1 de81b91550e58bef06653004b2efc3db49c7b473 SHA256 6b8021170abf8c7142111bfd4fd92acb4b0b1bd369a58a0eb96879c3d5e2f16e
-MD5 6f4a49e25360d270ea99f0d5885a3ae7 foomatic-filters-ppds-20070501.ebuild 1264
-RMD160 acfd46f5a261ce02b0367964d69944f9755b6700 foomatic-filters-ppds-20070501.ebuild 1264
-SHA256 6b8021170abf8c7142111bfd4fd92acb4b0b1bd369a58a0eb96879c3d5e2f16e foomatic-filters-ppds-20070501.ebuild 1264
+EBUILD foomatic-filters-ppds-20070501.ebuild 1260 RMD160 99c396b1c4c77a1ab2a805afbf6b4ca87199a720 SHA1 6625fc321ae4c3f1816c6944bf10864474855acc SHA256 80b3b7b8d72a4caae9a32be25d4bae38818627e2a4175ecd7c5488d2e1f88813
+MD5 51b1356a7c84c16c2e7a2ef1f80be5bf foomatic-filters-ppds-20070501.ebuild 1260
+RMD160 99c396b1c4c77a1ab2a805afbf6b4ca87199a720 foomatic-filters-ppds-20070501.ebuild 1260
+SHA256 80b3b7b8d72a4caae9a32be25d4bae38818627e2a4175ecd7c5488d2e1f88813 foomatic-filters-ppds-20070501.ebuild 1260
 MISC ChangeLog 3403 RMD160 7a1cfa623974fd68ed5a37c2fa90f8c6db958878 SHA1 ef7906cb26a5cfeb4fefb398efcafc730501d4d6 SHA256 86839a490a6deaac4249f5982afd97b0cdfe2632b1982cb822ab90211fa47c10
 MD5 2f00ab8bb15f2d3a1171567caa4b51fe ChangeLog 3403
 RMD160 7a1cfa623974fd68ed5a37c2fa90f8c6db958878 ChangeLog 3403
@@ -26,3 +29,10 @@ SHA256 988c75cdb994e994bcf3f92a4b84a54dc401b7216cc58198ec8bc92d2796ddf6 files/di
 MD5 94120cb3dc8661d76e945f8b22e47ee2 files/digest-foomatic-filters-ppds-20070501 298
 RMD160 a30192a0aa0e2d89222f1d431169391474cd6624 files/digest-foomatic-filters-ppds-20070501 298
 SHA256 92afc9bd9d7e5ec2dfb235ab44e67b2c4fc16e8a43393a94155ffe1d495c5ac1 files/digest-foomatic-filters-ppds-20070501 298
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0D5+p/wUKkr7RBoRAkYgAKCpSVRH95pqCHwg5jvwKrOoPAWa7wCgqsmu
+coLaVhJmefyw72c6e2C8D7k=
+=ze2D
+-----END PGP SIGNATURE-----
