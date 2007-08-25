@@ -1,6 +1,11 @@
 # ChangeLog for games-board/glchess
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/ChangeLog,v 1.13 2007/03/19 19:36:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/ChangeLog,v 1.14 2007/08/25 19:13:24 tupone Exp $
+
+*glchess-1.0.6 (25 Aug 2007)
+
+  25 Aug 2007; Tupone Alfredo <tupone@gentoo.org> +glchess-1.0.6.ebuild:
+  Version bump to 1.0.6. Bug #179111 by Renato Alves
 
   19 Mar 2007; Tristan Heaven <nyhm@gentoo.org> glchess-1.0.2.ebuild:
   Block gnome-games-2.18, bug #171255
