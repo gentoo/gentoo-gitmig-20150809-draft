@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-ttxtsubs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ttxtsubs/ChangeLog,v 1.11 2007/02/17 01:27:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ttxtsubs/ChangeLog,v 1.12 2007/08/25 20:58:49 zzam Exp $
+
+*vdr-ttxtsubs-0.0.5_p2-r1 (25 Aug 2007)
+
+  25 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +vdr-ttxtsubs-0.0.5_p2-r1.ebuild:
+  Added patch for vdr-1.5.8
 
   17 Feb 2007; Matthias Schwarzott <zzam@gentoo.org>
   vdr-ttxtsubs-0.0.5_p1.ebuild, vdr-ttxtsubs-0.0.5_p2.ebuild:
