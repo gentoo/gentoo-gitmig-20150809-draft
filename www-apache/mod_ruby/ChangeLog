@@ -1,6 +1,6 @@
-# ChangeLog for dev-ruby/mod_ruby
+# ChangeLog for www-apache/mod_ruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.1 2007/08/19 12:34:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.2 2007/08/25 21:56:19 swegener Exp $
 
   19 Aug 2007; Christian Heim <phreak@gentoo.org>:
   Moving dev-ruby/mod_ruby to www-apache.

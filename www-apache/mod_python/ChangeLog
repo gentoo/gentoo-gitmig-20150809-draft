@@ -1,6 +1,6 @@
-# ChangeLog for dev-python/mod_python
+# ChangeLog for www-apache/mod_python
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.1 2007/08/19 11:53:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.2 2007/08/25 21:55:50 swegener Exp $
 
   19 Aug 2007; Christian Heim <phreak@gentoo.org>:
   Moving dev-python/mod_python to www-apache.

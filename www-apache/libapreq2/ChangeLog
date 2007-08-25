@@ -1,6 +1,6 @@
-# ChangeLog for www-misc/libapreq2
+# ChangeLog for www-apache/libapreq2
 # Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.22 2007/08/19 11:50:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.23 2007/08/25 21:55:06 swegener Exp $
 
 *libapreq2-2.08-r2 (19 Aug 2007)
 
