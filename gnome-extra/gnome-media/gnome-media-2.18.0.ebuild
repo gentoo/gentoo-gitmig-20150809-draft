@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.18.0.ebuild,v 1.9 2007/08/22 02:57:52 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.18.0.ebuild,v 1.10 2007/08/25 14:21:08 vapier Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ronald.bitfreak.net/gnome-media.php"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ~ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="ipv6 mad ogg vorbis"
 
 RDEPEND=">=dev-libs/glib-1.3.7
