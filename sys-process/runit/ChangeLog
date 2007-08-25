@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/runit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.21 2007/07/03 11:23:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.22 2007/08/25 18:27:49 vapier Exp $
+
+*runit-1.7.0 (25 Aug 2007)
+
+  25 Aug 2007; Mike Frysinger <vapier@gentoo.org> +runit-1.7.0.ebuild:
+  Version bump #180649 by Radek Podgorny.
 
   03 Jul 2007; Raúl Porcel <armin76@gentoo.org> runit-1.5.0.ebuild:
   alpha stable wrt #178046
