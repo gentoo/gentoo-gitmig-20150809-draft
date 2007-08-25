@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc3-r1.ebuild,v 1.2 2007/08/25 11:42:09 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc3-r1.ebuild,v 1.3 2007/08/25 21:57:30 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -118,7 +118,7 @@ pkg_preinst() {
 }
 
 src_install() {
-	make $(make_opts) DESTDIR="${D}" install
+	emake $(make_opts) DESTDIR="${D}" install || die
 	dodoc ChangeLog COPYRIGHT
 
 	# Should this belong in another ebuild? Like say binutils?
