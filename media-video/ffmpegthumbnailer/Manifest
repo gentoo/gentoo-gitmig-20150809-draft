@@ -1,12 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX ffmpegthumbnailer-1.1.2-ffmpeg.patch 1110 RMD160 9b4b0bf218e091b2f893067217ebf9009a025f6f SHA1 5857fa27c52a117ac1ad8414bb4c6cffcf0f9758 SHA256 bd534ece192bae0bcd83bc8e11bf7032d06b9e9360d8c5462107e9c290df64b6
 MD5 677073d80d659b3529dc3d95dcc96c50 files/ffmpegthumbnailer-1.1.2-ffmpeg.patch 1110
 RMD160 9b4b0bf218e091b2f893067217ebf9009a025f6f files/ffmpegthumbnailer-1.1.2-ffmpeg.patch 1110
 SHA256 bd534ece192bae0bcd83bc8e11bf7032d06b9e9360d8c5462107e9c290df64b6 files/ffmpegthumbnailer-1.1.2-ffmpeg.patch 1110
 DIST ffmpegthumbnailer-1.1.2.tar.gz 80137 RMD160 74b7b3817b0cd9db50ca664ab01ab5ecad944c3d SHA1 53f2464df719605bd9ae7afca868592b98ebded1 SHA256 cbe626b3d39f887d34f823c862ad25783ab0fef823c933b7fa848197ca752c4c
-EBUILD ffmpegthumbnailer-1.1.2.ebuild 866 RMD160 e0f38799c65e2b58cba11416745925376a82a3fa SHA1 9074938c97735c5f6d649a6f4d343c2e61521c67 SHA256 aedf147a57a62208c34d656baf7b1d3b94a4b3480def4b45db6d746a4f37e6f4
-MD5 36cb204916175288be9a70ac951f5af1 ffmpegthumbnailer-1.1.2.ebuild 866
-RMD160 e0f38799c65e2b58cba11416745925376a82a3fa ffmpegthumbnailer-1.1.2.ebuild 866
-SHA256 aedf147a57a62208c34d656baf7b1d3b94a4b3480def4b45db6d746a4f37e6f4 ffmpegthumbnailer-1.1.2.ebuild 866
+EBUILD ffmpegthumbnailer-1.1.2.ebuild 868 RMD160 5e2bc3c9283e9dc14c52e184fff82184434cf82f SHA1 2e5e704d2ee99f8a82d243263f443c066961e1c7 SHA256 a14d1f81b51d1dd77fbe677ec57a26cde0d9f885644e51c8deda354e2cac7762
+MD5 ad5826715bc6328dee214ab8463bbb42 ffmpegthumbnailer-1.1.2.ebuild 868
+RMD160 5e2bc3c9283e9dc14c52e184fff82184434cf82f ffmpegthumbnailer-1.1.2.ebuild 868
+SHA256 a14d1f81b51d1dd77fbe677ec57a26cde0d9f885644e51c8deda354e2cac7762 ffmpegthumbnailer-1.1.2.ebuild 868
 MISC ChangeLog 4498 RMD160 a0e8fd082b2ba7d8c7101655c8e05b5b934efd10 SHA1 99633d429cb906ec44e07981d46db2402c867d33 SHA256 70d88cd2afce780f0d6645d4014fa02f0de528fd4624f0c9487fd2e9c0876187
 MD5 72d92310663bc7eb6f0bce91488d50f9 ChangeLog 4498
 RMD160 a0e8fd082b2ba7d8c7101655c8e05b5b934efd10 ChangeLog 4498
@@ -18,3 +21,10 @@ SHA256 891d6b3e01002001a70ec76ba1fc11af4970298db89286e0fe41c300054fe366 metadata
 MD5 49c0b8527487f1ffc5f59d7718c97a73 files/digest-ffmpegthumbnailer-1.1.2 268
 RMD160 d67db96e56a70da46fea220a2abd49e78b36a31c files/digest-ffmpegthumbnailer-1.1.2 268
 SHA256 2ae381725eb1bbeb37bb8953f53750d3ecccf7309df5f625829db4ef995e7b4d files/digest-ffmpegthumbnailer-1.1.2 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0Dp/p/wUKkr7RBoRAsRCAJ46ErWNgNTp1DtIKiNyuR7EelhBrwCfZn+5
+xBDjgwKvaCqeIShi9/2uEXg=
+=LAmr
+-----END PGP SIGNATURE-----
