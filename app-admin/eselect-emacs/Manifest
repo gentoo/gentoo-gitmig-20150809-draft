@@ -8,10 +8,10 @@ EBUILD eselect-emacs-0.8-r1.ebuild 678 RMD160 91d4f5e87d187126cffb14a38e6c559519
 MD5 f2e0db9dc9c7da99019b4739b6bd316e eselect-emacs-0.8-r1.ebuild 678
 RMD160 91d4f5e87d187126cffb14a38e6c559519eb3d6e eselect-emacs-0.8-r1.ebuild 678
 SHA256 fe602f2be1c3c682e49894a1c9adace90c4273e88b5a3bfbc7b4ba85f9b032bb eselect-emacs-0.8-r1.ebuild 678
-EBUILD eselect-emacs-1.1.ebuild 720 RMD160 de6f0b726b2a457ae3104394427273d71a910c00 SHA1 e5faa854cd569a80d92d8fbeaa9cb17b55dcbb32 SHA256 10ea68c627b4b29de74566236de18e81b1ea99ad590068806f153ac7b88c180d
-MD5 103d57f2303c657f446cb5b249684f50 eselect-emacs-1.1.ebuild 720
-RMD160 de6f0b726b2a457ae3104394427273d71a910c00 eselect-emacs-1.1.ebuild 720
-SHA256 10ea68c627b4b29de74566236de18e81b1ea99ad590068806f153ac7b88c180d eselect-emacs-1.1.ebuild 720
+EBUILD eselect-emacs-1.1.ebuild 714 RMD160 5ed3e14a57dd5d7e6d2ef6c1f24979cd7e3b1657 SHA1 83c66bf53ae22a6110425d8314f70dfb116879c3 SHA256 97cea73f4a36af21ce95715b2024c1009308a7f5561e8d6f02ff5a65185d7d47
+MD5 92f4585e2d5333cdaaf8bb50a77f9847 eselect-emacs-1.1.ebuild 714
+RMD160 5ed3e14a57dd5d7e6d2ef6c1f24979cd7e3b1657 eselect-emacs-1.1.ebuild 714
+SHA256 97cea73f4a36af21ce95715b2024c1009308a7f5561e8d6f02ff5a65185d7d47 eselect-emacs-1.1.ebuild 714
 EBUILD eselect-emacs-1.2.ebuild 721 RMD160 6a062a85efce765a4ffec371be69507a1a6f75b6 SHA1 6034c8130c4f24b2de9c0748c7369cae09280cca SHA256 6fc1744e7e8820a0370177a2ffce6a804b7dead52ecaa8d6a383210eefac30f4
 MD5 7a18ce860209be6859f5fb10ff13a913 eselect-emacs-1.2.ebuild 721
 RMD160 6a062a85efce765a4ffec371be69507a1a6f75b6 eselect-emacs-1.2.ebuild 721
@@ -34,9 +34,9 @@ MD5 63c0d627c7c2f6990160c742bd097378 files/digest-eselect-emacs-1.2 250
 RMD160 0c1556c0687eb00d8845a121e8b933b18a3db4c2 files/digest-eselect-emacs-1.2 250
 SHA256 f2236de54b8bca6bdebba4ba3b2e52e53b9c3e5f58fbc8c97e690f0270f9371f files/digest-eselect-emacs-1.2 250
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
+Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGzLyNOeoy/oIi7uwRArluAJ9pWrD9ZkPw/TpJG4DzkR+mepxXvQCgnOdw
-Ju+oMOAZR3jQNS3ZjkX1arw=
-=RemW
+iD8DBQFG0BZup/wUKkr7RBoRAvsjAJ9gkCwwsrxvLRqwrouLt2CfZz80uwCdGWhp
+v/Sz6147f4sDAxVIDS5XwZE=
+=EiDI
 -----END PGP SIGNATURE-----
