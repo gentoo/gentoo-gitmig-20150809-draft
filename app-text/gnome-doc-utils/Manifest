@@ -9,10 +9,10 @@ EBUILD gnome-doc-utils-0.10.1.ebuild 1143 RMD160 2ae71481ed44fedc16de13097128cef
 MD5 0137b8c0371d24cef5e8fda083bdb202 gnome-doc-utils-0.10.1.ebuild 1143
 RMD160 2ae71481ed44fedc16de13097128cef036a6547c gnome-doc-utils-0.10.1.ebuild 1143
 SHA256 e7958700eec83a6756aa0198e30512af9af50c5f4f3f9f944e55ee8988162f89 gnome-doc-utils-0.10.1.ebuild 1143
-EBUILD gnome-doc-utils-0.10.3.ebuild 1137 RMD160 665c7638d91b8a401d04fef1913ea1a5d87c7337 SHA1 cc907cfaab04d9806a5b04af6c9c0bd9476d3a64 SHA256 168ffa17a29a5c8f432e6630ca436f86ea192f9d8cd2e8a07126cd81b4cac1b7
-MD5 70987231cc7db740f811ad045d5db1ba gnome-doc-utils-0.10.3.ebuild 1137
-RMD160 665c7638d91b8a401d04fef1913ea1a5d87c7337 gnome-doc-utils-0.10.3.ebuild 1137
-SHA256 168ffa17a29a5c8f432e6630ca436f86ea192f9d8cd2e8a07126cd81b4cac1b7 gnome-doc-utils-0.10.3.ebuild 1137
+EBUILD gnome-doc-utils-0.10.3.ebuild 1136 RMD160 ebd8f63c5aea070b631331c19a3241a50acc0dbc SHA1 59718ea366060f610c408ddc9c9b8931b320eea7 SHA256 f259038a32038ecff869b5196fb7f835a6ef5f30c9e4fa920ea11250ddf411be
+MD5 b969458b2c0ac8c6db9598b5cd7fba5e gnome-doc-utils-0.10.3.ebuild 1136
+RMD160 ebd8f63c5aea070b631331c19a3241a50acc0dbc gnome-doc-utils-0.10.3.ebuild 1136
+SHA256 f259038a32038ecff869b5196fb7f835a6ef5f30c9e4fa920ea11250ddf411be gnome-doc-utils-0.10.3.ebuild 1136
 EBUILD gnome-doc-utils-0.6.1.ebuild 1116 RMD160 38837f02b2b0c09b315798fc4cb50638c4973700 SHA1 6026354b227ef91b8cdfdf1c08d945338c960157 SHA256 7f938cd621ee421c4dc824044854a528a1b59d4353dc2532175dce4a270e960d
 MD5 01b954d494d963051127d11a349e6ded gnome-doc-utils-0.6.1.ebuild 1116
 RMD160 38837f02b2b0c09b315798fc4cb50638c4973700 gnome-doc-utils-0.6.1.ebuild 1116
@@ -42,9 +42,9 @@ MD5 2baa18ba0a37cb222eb2956d499f4405 files/digest-gnome-doc-utils-0.8.0 268
 RMD160 5d2486a39e4ddec48c978160f3fc9e54940b01da files/digest-gnome-doc-utils-0.8.0 268
 SHA256 a77b94437079e6c40ad07a580404b260208998764673156237ebab0be0b11c13 files/digest-gnome-doc-utils-0.8.0 268
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
+Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGvc3/QlM6RnzZP+IRAnJnAKCD9vQYng/CycV8CJ961YTEXf0+LgCfSiI6
-yDvKV4B6KeGxVnd6LWSEkrI=
-=/HYv
+iD8DBQFG0Bjkp/wUKkr7RBoRAqcFAJoCK7AbzTHmwYi4iG26ma5+0hgfrQCfcjbv
+xpg+vcWtS3PZ+TPvBpboiok=
+=zuMu
 -----END PGP SIGNATURE-----

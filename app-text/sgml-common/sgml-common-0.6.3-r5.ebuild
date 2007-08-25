@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r5.ebuild,v 1.15 2007/08/24 07:45:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r5.ebuild,v 1.16 2007/08/25 11:54:41 vapier Exp $
 
 WANT_AUTOCONF="2.1"
 WANT_AUTOMAKE="1.5"
@@ -13,7 +13,7 @@ SRC_URI="mirror://kde/devel/docbook/SOURCES/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm hppa ~ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
