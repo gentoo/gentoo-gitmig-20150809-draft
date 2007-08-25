@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX jack-audio-connection-kit-0.100.0-coreaudio.patch 13398 RMD160 2309f12bef00445dab5c52461e1e957e498bbf4e SHA1 509af453842e3f07212818f8b6cdd0f4adb90b0c SHA256 5abce05da2206f824b733d900378471f63a22ceee9553d632d05c37cb61ed71b
 MD5 464df562168e8de76000186ea43932b7 files/jack-audio-connection-kit-0.100.0-coreaudio.patch 13398
 RMD160 2309f12bef00445dab5c52461e1e957e498bbf4e files/jack-audio-connection-kit-0.100.0-coreaudio.patch 13398
@@ -48,10 +51,10 @@ EBUILD jack-audio-connection-kit-0.102.20.ebuild 4336 RMD160 52f5e652cb9c0f21d0c
 MD5 bcbae59c4d2e98c4dd75b7fa40d460a9 jack-audio-connection-kit-0.102.20.ebuild 4336
 RMD160 52f5e652cb9c0f21d0c52bbda68a0441c14a615d jack-audio-connection-kit-0.102.20.ebuild 4336
 SHA256 ac1165773f8f3b626ce985928cd7dc90d31876077ff9b0ca79af1aafa6caa220 jack-audio-connection-kit-0.102.20.ebuild 4336
-EBUILD jack-audio-connection-kit-0.103.0.ebuild 3899 RMD160 18ed1d1e119b4f42740321ec4a65a68da46a9fd1 SHA1 33237b1aaf9fa773143a45aac85b07c52d25a637 SHA256 cd3e2eefc2ec7ae4236240244e5fe77a2c7ffa385fb6f76bfd0a69436306a5cc
-MD5 c7de5c10d5fea2084daf532e7979ca92 jack-audio-connection-kit-0.103.0.ebuild 3899
-RMD160 18ed1d1e119b4f42740321ec4a65a68da46a9fd1 jack-audio-connection-kit-0.103.0.ebuild 3899
-SHA256 cd3e2eefc2ec7ae4236240244e5fe77a2c7ffa385fb6f76bfd0a69436306a5cc jack-audio-connection-kit-0.103.0.ebuild 3899
+EBUILD jack-audio-connection-kit-0.103.0.ebuild 3893 RMD160 35f0ae44a04c57c3fbeb9969909f2ebff0628ad2 SHA1 37add3898815234a89340cb8f0b2bb46c6ea61f7 SHA256 ad73ccae81c7c168a7b4363ae87c00ca28b29903407be3f2ffd4ee7658b2c7d2
+MD5 0bec3320f2da5b0fe74318f9268fa295 jack-audio-connection-kit-0.103.0.ebuild 3893
+RMD160 35f0ae44a04c57c3fbeb9969909f2ebff0628ad2 jack-audio-connection-kit-0.103.0.ebuild 3893
+SHA256 ad73ccae81c7c168a7b4363ae87c00ca28b29903407be3f2ffd4ee7658b2c7d2 jack-audio-connection-kit-0.103.0.ebuild 3893
 EBUILD jack-audio-connection-kit-0.99.0-r1.ebuild 2083 RMD160 c0b6d255195d597ee8cd140d8b19fecfae155e9b SHA1 9b7cee8fd3821be4b14b81a5e6eaac4b0babd756 SHA256 caf3b47a41f6a9c64d6f7591865d7da74f716b9e3c52a96f839a9ac6d8144aa4
 MD5 3fafe4bf68ec8637e67790cbb0b36fe6 jack-audio-connection-kit-0.99.0-r1.ebuild 2083
 RMD160 c0b6d255195d597ee8cd140d8b19fecfae155e9b jack-audio-connection-kit-0.99.0-r1.ebuild 2083
@@ -90,3 +93,10 @@ SHA256 d04628356c94d8ae7aff997a114e19b465a72df80e8cdcdd314cccff439fd492 files/di
 MD5 ee655b59aa071a7f20a758b5216b65b5 files/digest-jack-audio-connection-kit-0.99.0-r3 298
 RMD160 acfece15a3851e748c2e086da436b8cd0ca960ff files/digest-jack-audio-connection-kit-0.99.0-r3 298
 SHA256 d04628356c94d8ae7aff997a114e19b465a72df80e8cdcdd314cccff439fd492 files/digest-jack-audio-connection-kit-0.99.0-r3 298
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.5 (GNU/Linux)
+
+iD8DBQFG0DoZp/wUKkr7RBoRAkpVAJ4olS3AtziMI6sZPHzNrd4wxx/RvQCgyrMU
+WWdH6T4EH9AFIi5NRKTToWg=
+=UQAn
+-----END PGP SIGNATURE-----
