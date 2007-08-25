@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsvg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.28 2007/06/25 16:56:27 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.29 2007/08/25 18:56:21 beandog Exp $
+
+  25 Aug 2007; Steve Dibb <beandog@gentoo.org> libsvg-0.1.4.ebuild:
+  amd64 stable
 
   25 Jun 2007; Piotr Jaroszyński <peper@gentoo.org> metadata.xml,
   libsvg-0.1.2.ebuild, libsvg-0.1.3.ebuild, libsvg-0.1.4.ebuild:
