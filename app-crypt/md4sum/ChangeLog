@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/md4sum
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md4sum/ChangeLog,v 1.4 2007/04/22 03:34:51 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md4sum/ChangeLog,v 1.5 2007/08/25 00:19:56 hanno Exp $
+
+  25 Aug 2007; Hanno Boeck <hanno@gentoo.org> -md4sum-0.02.01.ebuild,
+  -md4sum-0.02.02.ebuild, md4sum-0.02.03.ebuild:
+  Fix QA issues and remove some old versions.
 
 *md4sum-0.02.03 (22 Apr 2007)
 
