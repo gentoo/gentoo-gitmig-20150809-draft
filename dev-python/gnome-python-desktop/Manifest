@@ -7,10 +7,10 @@ EBUILD gnome-python-desktop-2.16.0.ebuild 1579 RMD160 0913b7b4f89a9bb310abe53b54
 MD5 abd72b864c06ee2c51a67631bd2f5162 gnome-python-desktop-2.16.0.ebuild 1579
 RMD160 0913b7b4f89a9bb310abe53b5413c4fce6c7fc6e gnome-python-desktop-2.16.0.ebuild 1579
 SHA256 99481d357763699da6401fd7aed1bc22919e6dc54cca73c0361c6573f62cfc7b gnome-python-desktop-2.16.0.ebuild 1579
-EBUILD gnome-python-desktop-2.18.0.ebuild 1584 RMD160 fadac1dfd07698113448145907c3c4bd16ebee1b SHA1 588c330c4ae0cf64b828e94adb9d4b9eef7bfc5f SHA256 08a7ab49f779d54047218361d82c5424395c4e4cd15f717e1718ffc8e97972d7
-MD5 4b9028e5378f25a9d5914a974affc63f gnome-python-desktop-2.18.0.ebuild 1584
-RMD160 fadac1dfd07698113448145907c3c4bd16ebee1b gnome-python-desktop-2.18.0.ebuild 1584
-SHA256 08a7ab49f779d54047218361d82c5424395c4e4cd15f717e1718ffc8e97972d7 gnome-python-desktop-2.18.0.ebuild 1584
+EBUILD gnome-python-desktop-2.18.0.ebuild 1584 RMD160 c88a498a0ed123f4d0a1bdc8ec8f09f6912316d5 SHA1 5d5349ef4a94d89c3135f05668d40db04d4a8a96 SHA256 5cddf2ba49b2185f5bf3ef16caa2ea33c281cf0ddcd4d3dce94edf19fdd78099
+MD5 8226a31a6f99669cb4389502f9adfde6 gnome-python-desktop-2.18.0.ebuild 1584
+RMD160 c88a498a0ed123f4d0a1bdc8ec8f09f6912316d5 gnome-python-desktop-2.18.0.ebuild 1584
+SHA256 5cddf2ba49b2185f5bf3ef16caa2ea33c281cf0ddcd4d3dce94edf19fdd78099 gnome-python-desktop-2.18.0.ebuild 1584
 MISC ChangeLog 5147 RMD160 2ca3b06498e9119f65d7ebfc1a4444fc8cd8a305 SHA1 8ca85999d1c905a914e2c7cb691cb1e39ee145bb SHA256 79268bb257eb925d01bcf7fe2eaf21e24fce74cd945b1bce96093e60dc9592ec
 MD5 1570c833bf55102969174a89e59fb2b3 ChangeLog 5147
 RMD160 2ca3b06498e9119f65d7ebfc1a4444fc8cd8a305 ChangeLog 5147
@@ -28,7 +28,7 @@ SHA256 35b6e5f455b8834fabcfe527a645eb4179ac83965e541131ffe5f43f56036b26 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGveJNkeYb6olFHJcRAu6KAJ45fiBT26hPtL+CV5CkN7+2j+PtdwCfcfEK
-2vnJ/g0m1C3ik4v3dh2Zdr4=
-=U3s0
+iD8DBQFG0Dftp/wUKkr7RBoRArdTAKCkRT5tAgnLy9BHUj/95n0i9NLMHACgz1Ty
+o4i1uI4rW+rlEYuZ7yvW9oY=
+=YY+L
 -----END PGP SIGNATURE-----
