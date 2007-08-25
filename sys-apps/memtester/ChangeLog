@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/memtester
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.21 2007/06/15 16:11:40 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.22 2007/08/25 17:00:34 vapier Exp $
+
+*memtester-4.0.7 (25 Aug 2007)
+
+  25 Aug 2007; Mike Frysinger <vapier@gentoo.org> +memtester-4.0.7.ebuild:
+  Version bump #181914.
 
   15 Jun 2007; Christoph Mende <angelos@gentoo.org> memtester-4.0.5.ebuild:
   Stable on amd64 wrt bug 181966
