@@ -1,6 +1,13 @@
 # ChangeLog for games-server/crossfire-server
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.11 2006/12/06 20:15:39 wolf31o2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.12 2007/08/25 23:38:20 tupone Exp $
+
+*crossfire-server-1.10.0 (25 Aug 2007)
+
+  25 Aug 2007; Tupone Alfredo <tupone@gentoo.org>
+  +crossfire-server-1.10.0.ebuild:
+  Version bumped to 1.10.0. bug #179705 by Epicanis.
+  Keyword ~amd64 added
 
   06 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   crossfire-server-1.9.0.ebuild:
