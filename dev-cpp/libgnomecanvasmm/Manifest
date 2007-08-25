@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 2.0.1-gcc3.4-after-cvs.patch 2679 RMD160 6b964aee7746944bc70b426acf82b839adedf570 SHA1 98e90f3e521e7c068fc94e1ecc5d0ff3e12ba33a SHA256 57ab39a490fc66f80f64c6acc5a40477943d78df5cd87c74ae7310621c75d19a
 MD5 c411f9f7919161492f9a879b4011fe03 files/2.0.1-gcc3.4-after-cvs.patch 2679
 RMD160 6b964aee7746944bc70b426acf82b839adedf570 files/2.0.1-gcc3.4-after-cvs.patch 2679
@@ -62,3 +65,10 @@ SHA256 180bc861f74210f69ade638ba36bf10e1c5a8952e81a709c1305619e4b131e89 files/di
 MD5 fc55c4faf75cb1f5f8d5416ad6ed30a3 files/digest-libgnomecanvasmm-2.6.1 271
 RMD160 fe126301290ec530d9c164cfae20cc26dc7a0063 files/digest-libgnomecanvasmm-2.6.1 271
 SHA256 dc19d13a3fb6a35fa201d95903ab3bd1285e2bfbab1e6b04346195c04d03cecc files/digest-libgnomecanvasmm-2.6.1 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG0LDHp/wUKkr7RBoRAhbZAJ9ASWLhJ9gySP9RfE9vknhTjb5kRQCfYlXq
+WFlxtp93jWxzqoVqE7zkquY=
+=zXmg
+-----END PGP SIGNATURE-----

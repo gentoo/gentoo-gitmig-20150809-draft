@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX libgnomemm-2.0.0-pkgconfig.patch 1083 RMD160 fe4f23b20c563acbad261c5666aaf4abf97854ab SHA1 c95ec916216fa4ce2a2ef2eadd7905ad2966ca35 SHA256 6f52e0461633585bd1a4b22e94650455c7fd4d39a1c9d0b01b2ffaa70f65ea0a
 MD5 2d32d65a8f8c930689fc0c23f769946e files/libgnomemm-2.0.0-pkgconfig.patch 1083
 RMD160 fe4f23b20c563acbad261c5666aaf4abf97854ab files/libgnomemm-2.0.0-pkgconfig.patch 1083
@@ -74,3 +77,10 @@ SHA256 71c2ad3b0619fa5638938a8b25b5e0acda1973dbfd90b934c758f3291cadaecb files/di
 MD5 cf4ada0d25552d2334929d5ceb057860 files/digest-libgnomemm-2.6.0 253
 RMD160 f38d3a9c4d82023d1ca31cfc920f48691225e04b files/digest-libgnomemm-2.6.0 253
 SHA256 87ab7c5ee6b409b2e88819b9aa9828d1bd2e1e8da1ebbe75ecade18f497b2d37 files/digest-libgnomemm-2.6.0 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG0LDHp/wUKkr7RBoRAhD4AJwJEokaEbH352QoSbW2o+4UeZ6C2wCgmkis
+Sc8vcyWLBxYroNRPbT/jV78=
+=DoMI
+-----END PGP SIGNATURE-----
