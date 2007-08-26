@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/velocity
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.37 2007/08/02 08:22:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.38 2007/08/26 14:22:12 betelgeuse Exp $
+
+  26 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> velocity-1.5.ebuild:
+  Relax commons-lang dependency to match 2.3
 
   02 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
   -velocity-1.4-r4.ebuild:

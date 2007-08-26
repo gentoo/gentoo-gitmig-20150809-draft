@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2.ebuild,v 1.8 2007/07/11 19:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2.ebuild,v 1.9 2007/08/26 14:24:11 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples java5 source"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 COMMON_DEPS="
-	=dev-java/commons-lang-2.1*
+	>=dev-java/commons-lang-2.1
 	=dev-java/cglib-2.1*
 	>=dev-java/dom4j-1.3
 	dev-java/jsr173

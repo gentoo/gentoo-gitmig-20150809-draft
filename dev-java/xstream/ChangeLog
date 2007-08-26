@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xstream
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.7 2007/07/11 17:41:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.8 2007/08/26 14:24:11 betelgeuse Exp $
+
+  26 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> xstream-1.2.ebuild:
+  Relax commons-lang dependency to match 2.3
 
   11 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> xstream-1.2.ebuild:
   Add src_test as RESTRICT=test until the needed deps are keyworded.
