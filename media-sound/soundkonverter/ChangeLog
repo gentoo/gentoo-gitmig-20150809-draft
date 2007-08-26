@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/soundkonverter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/ChangeLog,v 1.1 2007/08/12 15:41:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/ChangeLog,v 1.2 2007/08/26 00:10:47 beandog Exp $
+
+  26 Aug 2007; Steve Dibb <beandog@gentoo.org> soundkonverter-0.3.4.ebuild:
+  lame use flag to mp3
 
 *soundkonverter-0.3.4 (12 Aug 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.4.ebuild,v 1.1 2007/08/12 15:41:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.4.ebuild,v 1.2 2007/08/26 00:10:47 beandog Exp $
 
 inherit kde eutils qt3
 
@@ -11,13 +11,13 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="~amd64"
-IUSE="ffmpeg flac kdeenablefinal lame musepack vorbis"
+IUSE="ffmpeg flac kdeenablefinal mp3 musepack vorbis"
 
 DEPEND=">=media-libs/taglib-1.4
 	>=media-sound/cdparanoia-3.9.8-r5
 	$(qt_min_version 3)"
 
-RDEPEND="lame? ( >=media-sound/lame-3.96 )
+RDEPEND="mp3? ( >=media-sound/lame-3.96 )
 	vorbis? ( >=media-sound/vorbis-tools-1.0 )
 	flac? ( >=media-libs/flac-1.1.1 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.8 )
