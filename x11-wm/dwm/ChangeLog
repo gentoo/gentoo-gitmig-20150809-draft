@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/dwm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.27 2007/08/23 17:35:59 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.28 2007/08/26 11:36:27 cedk Exp $
+
+*dwm-4.4.1 (26 Aug 2007)
+
+  26 Aug 2007; Cédric Krier <cedk@gentoo.org> +dwm-4.4.1.ebuild:
+  Version bump
 
 *dwm-4.4 (23 Aug 2007)
 
