@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.89 2007/08/24 21:09:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.90 2007/08/26 07:11:12 philantrop Exp $
+
+  26 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> fltk-1.1.7-r2.ebuild:
+  Marked stable on amd64 as per bug 189796.
 
   24 Aug 2007; Raúl Porcel <armin76@gentoo.org> fltk-1.1.7-r2.ebuild:
   alpha/ia64 stable wrt #189796
