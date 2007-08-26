@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-otr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.5 2007/08/24 07:28:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.6 2007/08/26 12:42:12 philantrop Exp $
+
+  26 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  pidgin-otr-3.0.0.ebuild:
+  Marked stable on amd64 as per bug 189781.
 
   24 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   pidgin-otr-3.0.0.ebuild:

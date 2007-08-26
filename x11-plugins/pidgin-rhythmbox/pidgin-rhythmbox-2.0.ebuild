@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-rhythmbox/pidgin-rhythmbox-2.0.ebuild,v 1.4 2007/08/24 07:17:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-rhythmbox/pidgin-rhythmbox-2.0.ebuild,v 1.5 2007/08/26 12:43:04 philantrop Exp $
 
 DESCRIPTION="automatically update your pidgin profile with current info from Rhythmbox"
 HOMEPAGE="http://jon.oberheide.org/projects/pidgin-rhythmbox"
@@ -8,7 +8,7 @@ SRC_URI="http://jon.oberheide.org/projects/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="net-im/pidgin
