@@ -42,6 +42,7 @@ sec-policy/selinux-desktop
 >=sec-policy/selinux-dhcp-20060101
 >=sec-policy/selinux-distcc-20060101
 >=sec-policy/selinux-djbdns-20060101
+sec-policy/selinux-dnsmasq
 >=sec-policy/selinux-ftpd-20060101
 sec-policy/selinux-games
 >=sec-policy/selinux-gnupg-20060101

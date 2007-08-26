@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.mask,v 1.13 2007/07/07 16:13:17 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.mask,v 1.14 2007/08/26 01:41:41 pebenito Exp $
 
 # Mask pam_ldap and nss_ldap - openldap dep missing.
 sys-auth/pam_ldap
@@ -53,6 +53,7 @@ sec-policy/selinux-desktop
 >=sec-policy/selinux-dhcp-20060101
 >=sec-policy/selinux-distcc-20060101
 >=sec-policy/selinux-djbdns-20060101
+sec-policy/selinux-dnsmasq
 >=sec-policy/selinux-ftpd-20060101
 sec-policy/selinux-games
 >=sec-policy/selinux-gnupg-20060101

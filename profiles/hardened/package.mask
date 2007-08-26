@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.34 2007/07/30 14:01:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.35 2007/08/26 01:41:41 pebenito Exp $
 
 # Fails on hardened, bug 187120
 =dev-lang/php-5.2.3-r3
@@ -60,6 +60,7 @@ sec-policy/selinux-desktop
 >=sec-policy/selinux-dhcp-20060101
 >=sec-policy/selinux-distcc-20060101
 >=sec-policy/selinux-djbdns-20060101
+sec-policy/selinux-dnsmasq
 >=sec-policy/selinux-ftpd-20060101
 sec-policy/selinux-games
 >=sec-policy/selinux-gnupg-20060101
