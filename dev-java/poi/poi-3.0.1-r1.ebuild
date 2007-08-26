@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.0.1-r1.ebuild,v 1.1 2007/08/05 09:54:32 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.0.1-r1.ebuild,v 1.2 2007/08/26 14:18:04 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 java-ant-2
@@ -17,7 +17,7 @@ IUSE="test"
 
 COMMON_DEPEND="
 	=dev-java/commons-beanutils-1.7*
-	=dev-java/commons-lang-2.1*
+	>=dev-java/commons-lang-2.1
 	>=dev-java/commons-logging-1.1"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
