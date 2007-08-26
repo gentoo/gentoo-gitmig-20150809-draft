@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.62 2007/07/28 18:26:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.63 2007/08/26 22:00:49 philantrop Exp $
+
+*kdebluetooth-1.0_beta6 (26 Aug 2007)
+
+  26 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdebluetooth-1.0_beta6.ebuild:
+  Version bump to Beta6 as per bug 190296.
 
   28 Jul 2007; Guy Martin <gmsoft@gentoo.org> kdebluetooth-1.0_beta3.ebuild:
   Added ~hppa to KEYWORDS.
