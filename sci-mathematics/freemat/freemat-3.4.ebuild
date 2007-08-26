@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.4.ebuild,v 1.1 2007/08/20 16:09:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.4.ebuild,v 1.2 2007/08/26 13:01:30 bicatali Exp $
 
 inherit eutils flag-o-matic autotools qt4
 
@@ -11,7 +11,7 @@ DESCRIPTION="Environment for rapid engineering and scientific prototyping and da
 HOMEPAGE="http://freemat.sourceforge.net/"
 SRC_URI="mirror://sourceforge/freemat/${MY_P}.tar.gz"
 
-IUSE="ncurses ffcall fftw umfpack arpack"
+IUSE="ncurses ffcall fftw umfpack arpack portaudio"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
