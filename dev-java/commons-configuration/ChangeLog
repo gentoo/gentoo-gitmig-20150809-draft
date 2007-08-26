@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/commons-configuration
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/ChangeLog,v 1.1 2007/08/26 14:52:59 betelgeuse Exp $
+
+*commons-configuration-1.4 (26 Aug 2007)
+
+  26 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +files/commons-configuration-1.4-gentoo.patch, +metadata.xml,
+  +commons-configuration-1.4.ebuild:
+  New ebuild. Work done by fordfrog, caster and me. Fixes bug #161436.
+
