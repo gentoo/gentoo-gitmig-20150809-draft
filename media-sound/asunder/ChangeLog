@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/asunder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.5 2007/02/03 18:37:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.6 2007/08/26 19:55:33 drac Exp $
+
+*asunder-0.8 (26 Aug 2007)
+
+  26 Aug 2007; Samuli Suominen <drac@gentoo.org> +asunder-0.8.ebuild:
+  Version bump for bug 190175, thanks to Igor for reporting.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
