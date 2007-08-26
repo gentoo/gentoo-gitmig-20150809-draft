@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7638 2007/08/25 20:00:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7639 2007/08/26 10:18:13 armin76 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -168,11 +168,6 @@ www-apps/ids
 # Mask pending removal per mail to -dev.
 # You must move to sa-update instead, read -dev for more information.
 mail-filter/spamassassin-ruledujour
-
-# Raúl Porcel <armin76@gentoo.org> (13 Aug 2007)
-# Vulnerable, unsupported, was supposed to go away
-# some months ago, pending removal in 15 days
-=www-client/mozilla-firefox-1*
 
 # Steve Dibb <beandog@gentoo.org> (11 Aug 2007)
 # Old, unmaintained, pending removal
