@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/pppconfig-2.3.17.ebuild,v 1.2 2007/08/26 15:05:59 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/pppconfig-2.3.17-r1.ebuild,v 1.1 2007/08/26 16:12:12 mrness Exp $
 
 DESCRIPTION="A text menu based utility for configuring ppp."
 SRC_URI="http://http.us.debian.org/debian/pool/main/p/pppconfig/${PN}_${PV}.tar.gz"
@@ -26,7 +26,7 @@ src_install () {
 	dosbin 0dns-down 0dns-up dns-clean
 	newsbin pppconfig pppconfig.real
 	dosbin "${FILESDIR}/pppconfig"
-	doman pppconfig.8
+	doman man/pppconfig.8
 	dodoc debian/{copyright,changelog}
 
 	if use nls; then
