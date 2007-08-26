@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115.ebuild,v 1.2 2007/08/26 13:40:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115.ebuild,v 1.3 2007/08/26 21:06:11 zzam Exp $
 
-inherit eutils flag-o-matic multilib toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
@@ -41,12 +41,11 @@ pkg_setup() {
 
 	# comparing kernel version without linux-info.eclass to not pull
 	# virtual/linux-sources
+
 	local KV=$(uname -r)
-	local KV_MAJOR=${KV%%.*}
-	local x=${KV#*.}
-	local KV_MINOR=${x%%.*}
-	x=${KV#*.*.}
-	local KV_MICRO=${x%%-*}
+	local KV_MAJOR=$(get_major_version ${KV})
+	local KV_MINOR=$(get_version_component_range 2 ${KV})
+	local KV_MICRO=$(get_version_component_range 3 ${KV})
 
 	local ok=0
 	if [[ "${KV_MAJOR}" == 2 ]] && [[ "${KV_MINOR}" == 6 ]] && [[ "${KV_MICRO}" -ge 15 ]]; then
