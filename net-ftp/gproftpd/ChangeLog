@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/gproftpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.17 2007/05/06 10:58:10 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.18 2007/08/26 18:55:44 dertobi123 Exp $
+
+*gproftpd-8.3.2 (26 Aug 2007)
+
+  26 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  -gproftpd-8.2.8.ebuild, -gproftpd-8.3.1.ebuild, +gproftpd-8.3.2.ebuild:
+  Version bump, purge old version
 
   06 May 2007; Marius Mauch <genone@gentoo.org> gproftpd-8.1.9.ebuild,
   gproftpd-8.2.8.ebuild, gproftpd-8.3.1.ebuild:
