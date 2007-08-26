@@ -1,6 +1,12 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.25 2007/08/24 07:06:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.26 2007/08/26 12:32:50 philantrop Exp $
+
+  26 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> pidgin-2.1.0.ebuild:
+  Marked stable on amd64 as per bug 189781.
+
+  26 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> pidgin-2.1.0.ebuild:
+  Marked stable on amd64 as per bug 189781.
 
   24 Aug 2007; Christian Faulhammer <opfer@gentoo.org> pidgin-2.1.0.ebuild:
   stable x86, bug 189781
