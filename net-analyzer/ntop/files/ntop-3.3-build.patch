@@ -1,0 +1,15 @@
+diff -ru ntop-3.3~/configure.in ntop-3.3/configure.in
+--- ntop-3.3~/configure.in	2007-08-19 14:36:35.000000000 +0200
++++ ntop-3.3/configure.in	2007-08-19 14:43:37.000000000 +0200
+@@ -508,11 +508,6 @@
+     LOCALEDIR="/usr/lib/locale"
+ fi
+ 
+-dnl> Add /usr/local/
+-CFLAGS="${CFLAGS} -I/usr/local/include"
+-CPPFLAGS="${CPPFLAGS} -I/usr/local/include"
+-LDFLAGS="${LDFLAGS} -L/usr/local/lib"
+-
+ 
+ 
+ echo
