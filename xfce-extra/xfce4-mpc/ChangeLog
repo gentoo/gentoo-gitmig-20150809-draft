@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-mpc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc/ChangeLog,v 1.3 2007/08/08 17:07:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc/ChangeLog,v 1.4 2007/08/26 20:12:20 armin76 Exp $
+
+  26 Aug 2007; Raúl Porcel <armin76@gentoo.org> xfce4-mpc-0.3.2.ebuild:
+  x86 stable wrt #190072
 
   08 Aug 2007; Christoph Mende <angelos@gentoo.org> xfce4-mpc-0.3.2.ebuild:
   Stable on amd64 and removed unneeded dependency on mpd
