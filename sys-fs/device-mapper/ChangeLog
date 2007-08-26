@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.81 2007/08/24 14:07:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.82 2007/08/26 14:06:14 zzam Exp $
+
+*device-mapper-1.02.22 (26 Aug 2007)
+
+  26 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/64-device-mapper.rules-1.02.22,
+  +files/device-mapper-1.02.22-export-format.diff,
+  +device-mapper-1.02.22.ebuild:
+  Version bumped. Added patch for option info --export, and updated udev-rules
+  to use these. That should solve bug #189404.
 
   24 Aug 2007; Raúl Porcel <armin76@gentoo.org>
   device-mapper-1.02.19-r1.ebuild:
