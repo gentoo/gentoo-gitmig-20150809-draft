@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/irtrans-irserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/ChangeLog,v 1.1 2007/08/16 14:07:42 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/ChangeLog,v 1.2 2007/08/26 11:13:22 hd_brummy Exp $
+
+*irtrans-irserver-5.9.04 (26 Aug 2007)
+
+  26 Aug 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +irtrans-irserver-5.9.04.ebuild:
+  version bump, thanks to M.Fetka on bug 190278
 
 *irtrans-irserver-5.9.01 (16 Aug 2007)
 
