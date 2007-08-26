@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.141 2007/08/22 06:43:44 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.142 2007/08/26 16:25:26 bangert Exp $
+
+  26 Aug 2007; Thilo Bangert <bangert@gentoo.org> files/lighttpd.confd:
+  fix note about export SHELL, which is only used by include_shell config option
 
   22 Aug 2007; Thilo Bangert <bangert@gentoo.org> lighttpd-1.4.16.ebuild:
   use latest init.d script - fixes bug #189698.
