@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.79 2007/08/11 12:46:54 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.80 2007/08/26 10:20:16 armin76 Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -123,10 +123,6 @@ nvtv
 # dspam and dspam-web use this one
 # We've never supported cyrus-imapd because nobody asked for
 cyrus
-
-# Masked until firefox is removed from package.mask 	 
-# See security Bug #135254 ; all other versions are broken, Bug #128777. 	 
-firefox
 
 # Masked until bmpx works and is re-keyworded, see Bug #111975
 bmpx

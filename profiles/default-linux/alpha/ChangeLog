@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.73 2007/08/25 08:47:07 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.74 2007/08/26 10:20:16 armin76 Exp $
+
+  26 Aug 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Unmask firefox USE-flag again, since firefox-1* has been removed
 
   25 Aug 2007; Mart Raudsepp <leio@gentoo.org> no-nptl/2.4/package.mask:
   A lot of further masking and mask tweaking to make the deptree good in the
