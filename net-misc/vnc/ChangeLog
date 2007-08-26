@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.87 2007/08/14 21:56:11 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.88 2007/08/26 10:14:38 armin76 Exp $
+
+  26 Aug 2007; Raúl Porcel <armin76@gentoo.org> -vnc-4.1.2.ebuild,
+  -vnc-4.1.2-r1.ebuild:
+  old
 
   14 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> vnc-4.1.2-r3.ebuild:
   Revert ppc stable keyword, blame repoman
