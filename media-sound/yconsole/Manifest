@@ -1,15 +1,3 @@
-AUX 3.0.1-makefile-cflags.patch 306 RMD160 56bef444b6dc3cffef8f152174975844ec8ed875 SHA1 73c02ad4e818b687e3615367cb52025a2c3f4e62 SHA256 5c6efa32d8598403bb43bbf7d4e1de69bbb9b61022e35fba9ff1cd5ffd27be4e
-MD5 ea7949504c3791cd699a231f82feef7e files/3.0.1-makefile-cflags.patch 306
-RMD160 56bef444b6dc3cffef8f152174975844ec8ed875 files/3.0.1-makefile-cflags.patch 306
-SHA256 5c6efa32d8598403bb43bbf7d4e1de69bbb9b61022e35fba9ff1cd5ffd27be4e files/3.0.1-makefile-cflags.patch 306
-AUX 3.0.5-makefile-cflags.patch 306 RMD160 56bef444b6dc3cffef8f152174975844ec8ed875 SHA1 73c02ad4e818b687e3615367cb52025a2c3f4e62 SHA256 5c6efa32d8598403bb43bbf7d4e1de69bbb9b61022e35fba9ff1cd5ffd27be4e
-MD5 ea7949504c3791cd699a231f82feef7e files/3.0.5-makefile-cflags.patch 306
-RMD160 56bef444b6dc3cffef8f152174975844ec8ed875 files/3.0.5-makefile-cflags.patch 306
-SHA256 5c6efa32d8598403bb43bbf7d4e1de69bbb9b61022e35fba9ff1cd5ffd27be4e files/3.0.5-makefile-cflags.patch 306
-AUX yconsole-3.0.8-gcc33.patch 893 RMD160 1ed824a6b847f5a2e41046ca0c1859c73aad352f SHA1 188979f9526b59ec64903c3ab3c36845a4991b2c SHA256 80bf5a103324226417ff64eec1cb2d902624d6c21acb57790a449a3aa6e69fdc
-MD5 a4365a6d385c83b622eba2ea65a6a436 files/yconsole-3.0.8-gcc33.patch 893
-RMD160 1ed824a6b847f5a2e41046ca0c1859c73aad352f files/yconsole-3.0.8-gcc33.patch 893
-SHA256 80bf5a103324226417ff64eec1cb2d902624d6c21acb57790a449a3aa6e69fdc files/yconsole-3.0.8-gcc33.patch 893
 AUX yconsole-3.4.3-Makefile.patch 2406 RMD160 387954bac97a2ca4bd7e8b6dd86c18b272c63f0b SHA1 0774b5cf7e0d7f673becff0ae8739efc2edf4069 SHA256 f9a263c72f584037acdc88fca828664fd91cd4f16547162fc28b0b52c0b30f6f
 MD5 c7c2b9246cb5fa4a7eecbc61940bdc63 files/yconsole-3.4.3-Makefile.patch 2406
 RMD160 387954bac97a2ca4bd7e8b6dd86c18b272c63f0b files/yconsole-3.4.3-Makefile.patch 2406
@@ -18,17 +6,7 @@ AUX yconsole-3.4.3-implicit-declaration.patch 669 RMD160 877bf9143b057edb4dfdf91
 MD5 566c6bcca2ba0ffd55d4fc437f7b5274 files/yconsole-3.4.3-implicit-declaration.patch 669
 RMD160 877bf9143b057edb4dfdf918362927ac1eab2f7d files/yconsole-3.4.3-implicit-declaration.patch 669
 SHA256 f66ca1137304aff659d7fe3ca653c4214e1b006dab87a90d60f8749bff97169f files/yconsole-3.4.3-implicit-declaration.patch 669
-DIST yconsole-3.0.5.tar.bz2 498018 RMD160 648202bd25d6099f30a95328a6cdc28a62e867eb SHA1 86448b560c60e774b27ffdfff2f436215cba3222 SHA256 a2a409cf8167721dd000255b7396e2e71a366dc0150c94d88148120249e97849
-DIST yconsole-3.0.8.tar.bz2 498099 RMD160 12627705a27e098bf9ea74d646a3412fdb5c7f28 SHA1 291410b2cf227025ee90ec3e1188a1a9bdd01b86 SHA256 4c7866fbd149984b2c7005e23c5f859ff8efc5559cf09dcc9ef56dd41b677763
 DIST yconsole-3.4.3.tar.bz2 510444 RMD160 5fb9f8eb229d50d7f54a1bf7bce09d1b59762356 SHA1 fb96cb3f2351fa8543e7f7edc938bfeb8c0c7d49 SHA256 c5235c29344fecc8e244ccab26b7461699a6ae95286cf223ebcd75490bf1c99c
-EBUILD yconsole-3.0.5.ebuild 763 RMD160 c7fc0c7b09effcec1dfdfbbfefbb0399a7c17d53 SHA1 518b42203da4424cdd6a1be9d038b33e1b953379 SHA256 cb25bb64fa06d59e80d5ab68ee6a021b02cf771adce75068d3face0773acb40a
-MD5 bc6f2000136cfa447de05c3682a75e99 yconsole-3.0.5.ebuild 763
-RMD160 c7fc0c7b09effcec1dfdfbbfefbb0399a7c17d53 yconsole-3.0.5.ebuild 763
-SHA256 cb25bb64fa06d59e80d5ab68ee6a021b02cf771adce75068d3face0773acb40a yconsole-3.0.5.ebuild 763
-EBUILD yconsole-3.0.8.ebuild 813 RMD160 1f753a878ecbf2d642cb7e25ba44d31f31c15dac SHA1 32af19196f4cb80704463e86da459a61a3b4a852 SHA256 6f2900784b473902a6e7a53fc86811e84699f46104b79bc2c583ff89a10fa4f1
-MD5 38540dfad57b38b11541d13be3c6726d yconsole-3.0.8.ebuild 813
-RMD160 1f753a878ecbf2d642cb7e25ba44d31f31c15dac yconsole-3.0.8.ebuild 813
-SHA256 6f2900784b473902a6e7a53fc86811e84699f46104b79bc2c583ff89a10fa4f1 yconsole-3.0.8.ebuild 813
 EBUILD yconsole-3.4.3.ebuild 950 RMD160 408fb2f323a7bfa65d0549b217c6738a4fdbe2b7 SHA1 14b92331b9f3af1c8fa6507988ca0c9fdcac7bf7 SHA256 d98e28a4c28966e075d1a48e743cbc668142dd276aa1cace3c0b3afe0f7b4bb4
 MD5 af5aeae43c79988729691b86bc60a10c yconsole-3.4.3.ebuild 950
 RMD160 408fb2f323a7bfa65d0549b217c6738a4fdbe2b7 yconsole-3.4.3.ebuild 950
@@ -41,12 +19,6 @@ MISC metadata.xml 541 RMD160 d1a1f1eb9a7f70f1cf6ac6d7de10654a816f1682 SHA1 500a4
 MD5 e341a446a33b3cce8c5793bc9630b7ba metadata.xml 541
 RMD160 d1a1f1eb9a7f70f1cf6ac6d7de10654a816f1682 metadata.xml 541
 SHA256 de7e01b49453fa783a3bce07960723c59eaf0ef820277d83753442d50b1ba017 metadata.xml 541
-MD5 de2f09466779e3c7ff8bb0f48eb076a7 files/digest-yconsole-3.0.5 247
-RMD160 b8490aac84164d358f4b9b7e410356437dcee02b files/digest-yconsole-3.0.5 247
-SHA256 422237cd647324214e80fc9a4a037f21076bce0a1d5c90974148e6d34762eab9 files/digest-yconsole-3.0.5 247
-MD5 10a27c7656cdae1a9aaf7859e5b94f12 files/digest-yconsole-3.0.8 247
-RMD160 cbe329f28d7da2ec619499bd49ae275ab19e7425 files/digest-yconsole-3.0.8 247
-SHA256 c9c8e39bf5fea12802a93ecf65fa7f547afc962c587cbba29a964f8ccfdbd452 files/digest-yconsole-3.0.8 247
 MD5 78c64631653bcf5de32c02d1b2f41848 files/digest-yconsole-3.4.3 247
 RMD160 0643c79d8f3ed2f16aea68428fe200f2961e75ea files/digest-yconsole-3.4.3 247
 SHA256 668b0e42a454a28f24ade497399fe9360b7fe2ce2215d4955a6ef66098be9e65 files/digest-yconsole-3.4.3 247
