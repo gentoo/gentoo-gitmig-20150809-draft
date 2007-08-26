@@ -1,10 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.134 2007/08/26 18:02:11 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.135 2007/08/26 18:16:50 kolmodin Exp $
 
   26 Aug 2007; Lennart Kolmodin <kolmodin@gentoo.org> files/ghc-updater:
   Update ghc-updater to new baselayout.
-  Thanks to Jeroen Roovers <jer@gentoo.org>
+  Thanks to Jeroen Roovers <jer@gentoo.org>.
 
   17 Aug 2007; Lennart Kolmodin <kolmodin@gentoo.org>
   +files/ghc-bash-completion, ghc-6.6.1.ebuild:
