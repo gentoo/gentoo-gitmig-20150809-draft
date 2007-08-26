@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.337 2007/08/25 12:59:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.338 2007/08/26 11:36:02 zzam Exp $
+
+*udev-115 (26 Aug 2007)
+
+  26 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-115-rules-update.diff, +files/udev.conf.post_114,
+  +udev-115.ebuild:
+  Version bumped. No longer disable s390 persistent-net. Small improvements to
+  rule and conf-file installation.
 
   25 Aug 2007; Matthias Schwarzott <zzam@gentoo.org> udev-114-r2.ebuild:
   Now warn about unappropriate kernel version with just using uname -r, and no
