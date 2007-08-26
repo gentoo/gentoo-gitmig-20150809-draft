@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/jfsutils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.40 2007/08/19 09:00:26 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.41 2007/08/26 16:13:02 phreak Exp $
+
+*jfsutils-1.1.12 (26 Aug 2007)
+
+  26 Aug 2007; Christian Heim <phreak@gentoo.org> +jfsutils-1.1.12.ebuild:
+  Version bump (thanks to Roy).
 
   19 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fixing the metadata.xml, this package should be kernel-misc and not kernel@.
