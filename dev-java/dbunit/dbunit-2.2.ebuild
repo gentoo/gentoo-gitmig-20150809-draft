@@ -1,28 +1,29 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.2.ebuild,v 1.5 2007/03/15 05:27:03 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.2.ebuild,v 1.6 2007/08/26 14:14:43 betelgeuse Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="DBUnit is a JUnit extension targeted for database-driven projects."
 HOMEPAGE="http://www.dbunit.org"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
+IUSE=""
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="doc source"
 
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/poi-2.0
 	dev-java/junit
 	>=dev-java/ant-core-1.6
 	dev-java/commons-logging
-	=dev-java/commons-lang-2.1*
+	>=dev-java/commons-lang-2.1
 	dev-java/commons-collections"
 DEPEND=">=virtual/jdk-1.4
-	${RDEPEND}
-	source? ( app-arch/zip )"
+	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/dbunit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.14 2007/03/15 05:27:03 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.15 2007/08/26 14:14:43 betelgeuse Exp $
+
+  26 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> -dbunit-2.1.ebuild,
+  dbunit-2.2.ebuild:
+  Remove generation 1 ebuild and relax commons-lang dependency for upcoming
+  version bump to 2.3
 
   15 Mar 2007; Joshua Nichols <nichoj@gentoo.org> dbunit-2.2.ebuild:
   Stable on amd64 for bug #166744.
