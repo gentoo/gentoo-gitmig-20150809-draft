@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX automake-1.4-ansi2knr-stdlib.patch 249 RMD160 f17983551ea326df6dc03f8389c02df3670eb475 SHA1 f6f23af88bde758dcc6893c01c98adb502a4c1e1 SHA256 8a29de01493b888f392388a0cffc0e4e2c0f4d81bc2ff34a4b65d27fab804210
 MD5 b04899a3860b0623bd45c705258ceabd files/automake-1.4-ansi2knr-stdlib.patch 249
 RMD160 f17983551ea326df6dc03f8389c02df3670eb475 files/automake-1.4-ansi2knr-stdlib.patch 249
@@ -22,10 +25,10 @@ AUX automake-1.5-target_hook.patch 1132 RMD160 7f0614d273825d415ef30eff9de9c37ce
 MD5 fbf3743bc8590dcb5bd34c675cb9d9f0 files/automake-1.5-target_hook.patch 1132
 RMD160 7f0614d273825d415ef30eff9de9c37ce7defed3 files/automake-1.5-target_hook.patch 1132
 SHA256 7169c860060faeeb698195ed82cd742162e5375cec0d2b4037b0cbb09998a421 files/automake-1.5-target_hook.patch 1132
-AUX automake-1.5-test-fixes.patch 1277 RMD160 93e86ddc6bb847a82ec698c5f4a578593d51e5e8 SHA1 bcf8b3a2ead934dad96f0c7b3c220720861f5457 SHA256 f99b8961328a25712b1ac441da300360c69acf8cbf7a31028a5292fbe2b56e5e
-MD5 c61e7a15e98bc67ff3c01d38d7729892 files/automake-1.5-test-fixes.patch 1277
-RMD160 93e86ddc6bb847a82ec698c5f4a578593d51e5e8 files/automake-1.5-test-fixes.patch 1277
-SHA256 f99b8961328a25712b1ac441da300360c69acf8cbf7a31028a5292fbe2b56e5e files/automake-1.5-test-fixes.patch 1277
+AUX automake-1.5-test-fixes.patch 1300 RMD160 02d88482792d77972aeb5fbf1cbb207bd0d53278 SHA1 5e31b7413ed7dbc1fb61084bf0c448befed62080 SHA256 117bdb7848b0c7daf8ed6253e81de265c92f427176e703c28f9de4bdbb13c235
+MD5 17454a36a949f506e04aa10da3df112a files/automake-1.5-test-fixes.patch 1300
+RMD160 02d88482792d77972aeb5fbf1cbb207bd0d53278 files/automake-1.5-test-fixes.patch 1300
+SHA256 117bdb7848b0c7daf8ed6253e81de265c92f427176e703c28f9de4bdbb13c235 files/automake-1.5-test-fixes.patch 1300
 AUX automake-1.7.9-infopage-namechange.patch 592 RMD160 78f09d0a4ce09d0389cd3d3f54edc16b7df8541d SHA1 816b31bd1887bad43a50e34f04d4bfe7aa702474 SHA256 3e0dae801e4ff79dc2d5a469a8be1efb5df09344f566cf39b897f385b39212ee
 MD5 e93136e02eb000c938f564484d306d76 files/automake-1.7.9-infopage-namechange.patch 592
 RMD160 78f09d0a4ce09d0389cd3d3f54edc16b7df8541d files/automake-1.7.9-infopage-namechange.patch 592
@@ -81,10 +84,10 @@ EBUILD automake-1.9.6-r2.ebuild 1655 RMD160 3a02eb3137fa4d1ff113fc557bd980a82c5e
 MD5 7d9d0e5d0a940aeec37979ba2fee2192 automake-1.9.6-r2.ebuild 1655
 RMD160 3a02eb3137fa4d1ff113fc557bd980a82c5e88c7 automake-1.9.6-r2.ebuild 1655
 SHA256 57b924b576ef3789eecccd42de1a6c07c25cc464098fbdb625d39863d4234a92 automake-1.9.6-r2.ebuild 1655
-MISC ChangeLog 16240 RMD160 6abfae76bb28dedf7f0135b99785c37f5ac6092e SHA1 4f81428aceb9d00c3d55bf27ac5086e6350a9491 SHA256 a346daac9d12c996553d21c9cde4da726c052066fce3098bdb6cb150ecef9bf1
-MD5 9a90c94b4d66c155c3c6343d719fc5cc ChangeLog 16240
-RMD160 6abfae76bb28dedf7f0135b99785c37f5ac6092e ChangeLog 16240
-SHA256 a346daac9d12c996553d21c9cde4da726c052066fce3098bdb6cb150ecef9bf1 ChangeLog 16240
+MISC ChangeLog 16404 RMD160 4b9050c185bb7877bd95a95da0807224cfa5f82c SHA1 5e8ab6fa8248ae536376fccb4bed017159b945cd SHA256 ee1ed6510cee0ffacba1f096246eb0c1d8a1f75ea10eb6aa87805e2a2b9056ab
+MD5 22262f4457406de8fdd4110b6a3e7e51 ChangeLog 16404
+RMD160 4b9050c185bb7877bd95a95da0807224cfa5f82c ChangeLog 16404
+SHA256 ee1ed6510cee0ffacba1f096246eb0c1d8a1f75ea10eb6aa87805e2a2b9056ab ChangeLog 16404
 MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
@@ -110,3 +113,10 @@ SHA256 eb63f2735ea5d0089eea235eb9a796cffccf3d31fd27ee62a5c0846d26ccb378 files/di
 MD5 5412d32f0701bf03d3e1163b357ba622 files/digest-automake-1.9.6-r2 247
 RMD160 45e4e1eca50ab3121e9925c1135fea9c1cf06052 files/digest-automake-1.9.6-r2 247
 SHA256 f525c02c9dfbac954de241d9fcdb48591042c8455d993d8bcc3d04559ed2d374 files/digest-automake-1.9.6-r2 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG0exXp/wUKkr7RBoRAq9LAJ9L+UeYyAFqP8pEI2SOP6L3DG6siQCdE3u1
+5Bxy24t4cXWMEz50icWQJek=
+=OuOk
+-----END PGP SIGNATURE-----
