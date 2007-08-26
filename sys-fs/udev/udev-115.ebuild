@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115.ebuild,v 1.1 2007/08/26 11:36:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115.ebuild,v 1.2 2007/08/26 13:40:57 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -158,10 +158,8 @@ src_install() {
 	rm -f "${D}/usr/$(get_libdir)/libvolume_id.so"
 	gen_usr_ldscript libvolume_id.so
 
-
 	# Add gentoo stuff to udev.conf
 	cat "${FILESDIR}"/udev.conf.post_114 >> "${D}"/etc/udev/udev.conf
-
 
 	# Now installing rules
 	cd etc/udev
