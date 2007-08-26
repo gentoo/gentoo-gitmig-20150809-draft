@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.7.ebuild,v 1.2 2007/08/26 17:21:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.7.ebuild,v 1.3 2007/08/26 22:29:41 spock Exp $
 
 inherit eutils autotools
 
@@ -52,14 +52,14 @@ src_compile() {
 		`use_with threads pthread` \
 		`use_with jpeg libjpeg` \
 		`use_with gif libgif` \
-		`use_enable zlib` \
+		`use_with zlib` \
 		`use_enable spell aspell` \
-		`use_enable ssl openssl` \
+		`use_with ssl openssl` \
 	|| die
 	emake || die
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc docs/* docs/api/*
+	dodoc docs/{*.txt,ULOTKA,TODO,README,FAQ}
 }
