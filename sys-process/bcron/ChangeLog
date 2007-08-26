@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/bcron
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.5 2007/02/26 21:19:44 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.6 2007/08/26 20:03:07 bangert Exp $
+
+  26 Aug 2007; Thilo Bangert <bangert@gentoo.org> files/crontab:
+  remove reference to vixie-cron
 
   26 Feb 2007; Thilo Bangert <bangert@gentoo.org> bcron-0.09.ebuild:
   fix ROOT misuse

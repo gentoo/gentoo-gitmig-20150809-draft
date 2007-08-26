@@ -1,6 +1,6 @@
-# for vixie cron
+# for bcron
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/files/crontab,v 1.1 2006/05/16 12:06:30 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/files/crontab,v 1.2 2007/08/26 20:03:07 bangert Exp $
 #
 #
 
