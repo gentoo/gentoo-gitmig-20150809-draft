@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.1.ebuild,v 1.1 2007/08/18 13:27:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.1.ebuild,v 1.2 2007/08/26 17:26:34 mrness Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -18,11 +18,18 @@ IUSE="X debug"
 RDEPEND="sys-libs/zlib
 	>=dev-libs/ace-5.4.6
 	=dev-libs/libsigc++-2.0*
-	X? ( >=dev-cpp/gtkmm-2.4 )"
+	X? ( >=dev-cpp/gtkmm-2.4 )
+	dev-libs/boost"
 DEPEND="${RDEPEND}
 	dev-util/scons
-	dev-util/pkgconfig
-	dev-libs/boost"
+	dev-util/pkgconfig"
+
+pkg_setup() {
+	if ! built_with_use --missing true dev-libs/boost threads ; then
+		eerror "${PN} needs dev-libs/boost with threads support."
+		die "Re-compile dev-libs/boost with USE=threads."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
