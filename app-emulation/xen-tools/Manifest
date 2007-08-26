@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xen-consoles.logrotate 63 RMD160 035bd8baf1ba68a5525bab4379c0c4e350001a74 SHA1 6f88a4da3349aade6070dfc5c4465e2c00f3e68c SHA256 0da87a4b9094f934e3de937e8ef8d3afc752e76793aa3d730182d0241e118b19
 MD5 9df68ac65dc3f372f5d61183abdc83ff files/xen-consoles.logrotate 63
 RMD160 035bd8baf1ba68a5525bab4379c0c4e350001a74 files/xen-consoles.logrotate 63
@@ -66,3 +69,10 @@ SHA256 66cfb008cc25de8a507359e492d6896908bc619901d901ae018fb135d2d91345 files/di
 MD5 b2e86effae6681cbbecdbf864b193b4a files/digest-xen-tools-3.1.0 235
 RMD160 2366b7298f0125f11d41aca0c6088c20863dbed1 files/digest-xen-tools-3.1.0 235
 SHA256 12c130912c624791e6855ebeb932368fc8889371876db396055b02ac9a3b9892 files/digest-xen-tools-3.1.0 235
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7 (GNU/Linux)
+
+iD8DBQFG0fSaiP+LossGzjARArakAJsGgBhGOXFQKzXydbYPLY8oKzSX9wCfTjrF
+sSq5xjmf2zMS1kti1+ij2gU=
+=Ba+j
+-----END PGP SIGNATURE-----
