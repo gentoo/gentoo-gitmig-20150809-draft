@@ -1,7 +1,7 @@
 /*
- * Copyright 1999-2005 Gentoo Foundation
+ * Copyright 1999-2007 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.5.0.c,v 1.2 2007/07/27 07:47:07 vapier Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.5.0.c,v 1.3 2007/08/26 03:21:02 vapier Exp $
  * Author: Martin Schlemmer <azarah@gentoo.org>
  * az's lackey: Mike Frysinger <vapier@gentoo.org>
  */
@@ -130,13 +130,20 @@ static int find_target_in_envd(struct wrapper_data *data, int cross_compile)
 	char *strp = str;
 	char envd_file[MAXPATHLEN + 1];
 
-	char *ctarget, *end = strrchr(data->name, '-');
-	if (end == NULL)
-		return 0;
-	ctarget = strdup(data->name);
-	ctarget[end - data->name] = '\0';
-	snprintf(envd_file, MAXPATHLEN, "%s-%s", ENVD_BASE, ctarget);
-	free(ctarget);
+	if (!cross_compile) {
+		/* for the sake of speed, we'll keep a symlink around for
+		 * the native compiler.  #190260
+		 */
+		snprintf(envd_file, sizeof(envd_file)-1, "/etc/env.d/gcc/NATIVE");
+	} else {
+		char *ctarget, *end = strrchr(data->name, '-');
+		if (end == NULL)
+			return 0;
+		ctarget = strdup(data->name);
+		ctarget[end - data->name] = '\0';
+		snprintf(envd_file, MAXPATHLEN, "%s-%s", ENVD_BASE, ctarget);
+		free(ctarget);
+	}
 
 	envfile = fopen(envd_file, "r");
 	if (envfile == NULL)
@@ -178,7 +185,7 @@ static int find_target_in_envd(struct wrapper_data *data, int cross_compile)
 		strp = str;
 	}
 
-bail:
+ bail:
 	fclose(envfile);
 	return (cross_compile ? 0 : find_target_in_envd(data, 1));
 }
@@ -271,7 +278,10 @@ static char **build_new_argv(char **argv, const char *newflags_str)
 	retargv = argv;
 
 	/* make sure user hasn't specified any ABI flags already ...
-	 * if they have, lets just get out of here */
+	 * if they have, lets just get out of here ... this of course
+	 * is by no means complete, it's merely a hack that works most
+	 * of the time ...
+	 */
 	for (argc = 0; argv[argc]; ++argc)
 		for (i = 0; abi_flags[i]; ++i)
 			if (!strncmp(argv[argc], abi_flags[i], strlen(abi_flags[i])))
@@ -361,5 +371,5 @@ int main(int argc, char *argv[])
 	if (execv(data.bin, newargv) < 0)
 		wrapper_exit("Could not run/locate \"%s\"\n", data.name);
 
-	return 0;
+	return 123;
 }
