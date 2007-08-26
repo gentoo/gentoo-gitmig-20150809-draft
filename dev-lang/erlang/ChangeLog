@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.73 2007/08/25 23:20:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.74 2007/08/26 00:49:48 vapier Exp $
+
+  26 Aug 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/erlang-11.2.5-build.patch, erlang-11.2.5-r2.ebuild:
+  Make sure failures in subdirs are not ignored #184419.
 
   25 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   erlang-11.2.5-r2.ebuild:
