@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/gambit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.9 2007/07/09 13:37:31 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.10 2007/08/26 09:49:51 hkbst Exp $
+
+*gambit-4.0.0 (26 Aug 2007)
+
+  26 Aug 2007; Marijn Schouten <hkBst@gentoo.org> +gambit-4.0.0.ebuild:
+  bump to version 4 final
 
   09 Jul 2007; Marijn Schouten <hkBst@gentoo.org> gambit-4.0_beta22.ebuild:
   add emacs pre- and postlude, bug 184621
