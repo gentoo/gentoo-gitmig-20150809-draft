@@ -1,13 +1,16 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.35 2007/08/24 13:31:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.36 2007/08/26 21:27:50 bicatali Exp $
+
+  26 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org> -numpy-0.9.8.ebuild:
+  Removed old version
 
 *numpy-1.0.3.1 (24 Aug 2007)
 
   24 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
   +numpy-1.0.3.1.ebuild:
   Version bump. Removed fortran dependencies, closing bug #186913.
-  Cleaned various configure settings.
+  Cleaned various configure settings. Thanks Vincent Legoll for his work.
 
   22 Jul 2007; Christian Faulhammer <opfer@gentoo.org> numpy-1.0.3.ebuild:
   stable x86, bug 180713
