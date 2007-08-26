@@ -1,0 +1,11 @@
+--- lisp/vm-mime.el~	2007-07-25 00:21:40.000000000 +0200
++++ lisp/vm-mime.el	2007-08-26 04:41:18.000000000 +0200
+@@ -1536,7 +1537,7 @@
+ 		    (throw 'done nil))))
+ 	       ;; Couldn't do any magic with vm-coding-system-priorities. Pass
+ 	       ;; back a Japanese iso-2022 MIME character set.
+-	       (t "iso-2022-jp")))
++	       (t (or vm-mime-8bit-composition-charset "iso-2022-jp"))))
+ 	  ;; If we're non-MULE and there are eight bit characters, use a
+ 	  ;; sensible default.
+ 	  (goto-char (point-min))
