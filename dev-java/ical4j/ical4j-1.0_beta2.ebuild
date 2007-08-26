@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ical4j-1.0_beta2.ebuild,v 1.8 2007/08/19 20:02:49 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ical4j-1.0_beta2.ebuild,v 1.9 2007/08/26 14:14:39 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -19,7 +19,7 @@ KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 COMMON_DEP="
 	dev-java/commons-logging
 	dev-java/commons-codec
-	=dev-java/commons-lang-2.1*
+	>=dev-java/commons-lang-2.1
 	"
 
 RDEPEND=">=virtual/jre-1.4

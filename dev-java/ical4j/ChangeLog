@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ical4j
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ChangeLog,v 1.8 2007/08/19 20:02:49 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ChangeLog,v 1.9 2007/08/26 14:14:39 betelgeuse Exp $
+
+  26 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
+  ical4j-1.0_beta2.ebuild:
+  Relax commons-lang dependency so that it matches the 2.3 version bump too.
 
   19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   ical4j-1.0_beta2.ebuild:
