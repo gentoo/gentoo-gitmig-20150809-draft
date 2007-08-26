@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/dhcpdump
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dhcpdump/ChangeLog,v 1.1 2007/08/26 20:53:29 bangert Exp $
+
+*dhcpdump-1.7 (26 Aug 2007)
+
+  26 Aug 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml,
+  +dhcpdump-1.7.ebuild:
+  initial import - thanks Adam Carheden - bug #121895
+
