@@ -1,14 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc2-r1.ebuild,v 1.8 2007/05/16 20:21:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc3.ebuild,v 1.1 2007/08/26 12:39:36 chtekk Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="acl authfile clamav hardened ifsession ipv6 ldap mysql ncurses nls noauthunix opensslcrypt pam postgres radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
 
-SHAPER_VER="0.6.2"
+SHAPER_VER="0.6.3"
 VROOT_VER="0.7.2"
 
 DESCRIPTION="An advanced and very configurable FTP server."
@@ -52,11 +52,6 @@ src_unpack() {
 	unpack ${P/_/}.tar.bz2
 
 	cd "${S}"
-
-	# Fix bugs #164612, #167003 and #175082
-	epatch "${FILESDIR}/${P}-bug164612.patch"
-	epatch "${FILESDIR}/${P}-bug167003.patch"
-	epatch "${FILESDIR}/${P}-bug175082.patch"
 
 	# Fix stripping of files
 	sed -e "s| @INSTALL_STRIP@||g" -i Make*
@@ -182,6 +177,7 @@ src_install() {
 		COPYING CREDITS ChangeLog NEWS README* \
 		doc/license.txt
 	dohtml doc/*.html
+	dohtml doc/howto/*.html
 
 	use shaper && dohtml mod_shaper/mod_shaper.html
 

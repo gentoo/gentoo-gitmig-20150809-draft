@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.163 2007/06/28 18:51:46 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.164 2007/08/26 12:39:36 chtekk Exp $
+
+*proftpd-1.3.1_rc3 (26 Aug 2007)
+
+  26 Aug 2007; Luca Longinotti <chtekk@gentoo.org>
+  -proftpd-1.3.1_rc2-r1.ebuild, proftpd-1.3.1_rc2-r3.ebuild,
+  +proftpd-1.3.1_rc3.ebuild:
+  AMD64 stable of 1.3.1_rc2-r3 to get rid of the broken 1.3.1_rc2-r1.
+  Added 1.3.1_rc3 and updated mod_shaper to 0.6.3, fixes bug #186656.
 
   28 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   proftpd-1.3.1_rc2-r3.ebuild:
