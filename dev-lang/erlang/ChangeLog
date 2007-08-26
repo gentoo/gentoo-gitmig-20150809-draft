@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.75 2007/08/26 01:00:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.76 2007/08/26 07:43:47 opfer Exp $
+
+  26 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  erlang-11.2.5-r2.ebuild:
+  comment about fix done here taken upstream (caps in man page sections);
+  correct path for correction of man pages, so they are processed
 
   26 Aug 2007; Mike Frysinger <vapier@gentoo.org> erlang-11.2.5-r2.ebuild:
   Make sure we force linking with ssl dynamically #184419.

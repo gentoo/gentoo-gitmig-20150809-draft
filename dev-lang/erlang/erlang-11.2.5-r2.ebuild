@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.5-r2.ebuild,v 1.4 2007/08/26 01:00:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.5-r2.ebuild,v 1.5 2007/08/26 07:43:47 opfer Exp $
 
 inherit elisp-common eutils flag-o-matic multilib versionator
 
@@ -121,8 +121,8 @@ src_install() {
 		done
 		for file in "${WORKDIR}"/man/man*/*.[1-9]; do
 			# Man page processing tools expect a capitalized "SEE ALSO" section
-			# header
-			sed -i -e 's,\.SH See Also,\.SH SEE ALSO,g' ${newfile}
+			# header, has been reported upstream, should be fixed in R12
+			sed -i -e 's,\.SH See Also,\.SH SEE ALSO,g' ${file}
 			# doman sucks so we can't use it
 			cp ${file} "${D}/${ERL_LIBDIR}"/man/man${file##*.}/
 		done
