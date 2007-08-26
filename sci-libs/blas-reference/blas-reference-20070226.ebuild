@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226.ebuild,v 1.6 2007/08/24 14:02:45 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226.ebuild,v 1.7 2007/08/26 17:40:19 armin76 Exp $
 
 inherit eutils autotools fortran multilib flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.netlib.org/lapack/${LAPACKPN}-${LAPACKPV}.tgz"
 
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~amd64 hppa sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ia64 sparc x86 ~x86-fbsd"
 
 DEPEND="app-admin/eselect-blas
 	doc? ( app-doc/blas-docs )"
