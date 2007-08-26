@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.0.ebuild,v 1.2 2007/08/25 22:56:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.0.ebuild,v 1.3 2007/08/26 21:40:41 marineam Exp $
 
 inherit flag-o-matic distutils eutils multilib
 
@@ -107,6 +107,9 @@ src_unpack() {
 
 	# Also look in python's site packages for xen, as it installs there
 	epatch "${FILESDIR}/${PN}-3.1.0-python-site-packages.patch"
+
+	# Fix building small dumb utility called 'xen-detect' on hardened
+	epatch "${FILESDIR}/${PN}-3.1.0-xen-detect-nopie-fix.patch"
 }
 
 src_compile() {
