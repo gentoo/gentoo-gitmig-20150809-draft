@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/soundtracker
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.25 2007/08/23 21:15:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/ChangeLog,v 1.26 2007/08/26 01:22:45 philantrop Exp $
+
+  26 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  soundtracker-0.6.8.ebuild:
+  Marked stable on amd64 as per bug 189878.
 
   23 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   soundtracker-0.6.8.ebuild:
