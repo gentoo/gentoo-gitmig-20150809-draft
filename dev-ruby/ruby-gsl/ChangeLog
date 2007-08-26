@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ruby-gsl
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gsl/ChangeLog,v 1.1 2007/08/26 20:20:39 graaff Exp $
+
+*ruby-gsl-0.2.0 (26 Aug 2007)
+
+  26 Aug 2007; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
+  +ruby-gsl-0.2.0.ebuild:
+  Initial version. Proxy-maintained by Ramana Kumar, see bug #188337.
+
