@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/mini_httpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/ChangeLog,v 1.8 2007/05/10 15:03:37 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/ChangeLog,v 1.9 2007/08/26 21:20:21 bangert Exp $
+
+  26 Aug 2007; Thilo Bangert <bangert@gentoo.org>
+  files/mini_httpd.confd-1.19, -files/mini_httpd.conf.sample,
+  -files/mini_httpd.confd, files/mini_httpd.init:
+  fix docroot issue (bug #187113 - thanks throw_away_2002) - remove stale files
 
   10 May 2007; Ferris McCormick <fmccor@gentoo.org> mini_httpd-1.19.ebuild:
   Add ~sparc keyword at user (renihs) request --- Bug #177923 --- no problems

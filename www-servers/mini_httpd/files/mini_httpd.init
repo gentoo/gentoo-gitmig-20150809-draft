@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/files/mini_httpd.init,v 1.1 2004/08/08 17:37:46 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/files/mini_httpd.init,v 1.2 2007/08/26 21:20:21 bangert Exp $
 
 depend() {
 	need net
@@ -12,10 +12,6 @@ start() {
 	if [ ! -d "$MINI_HTTPD_DOCROOT" ]; then
 		eend 1 "MINI_HTTPD_DOCROOT not set correctly in /etc/conf.d/mini_httpd"
 		exit 1
-	fi
-	cd $MINI_HTTPD_DOCROOT
-	if [ $? -ne 0 ]; then
-		eend $? "ERROR: cannot change to docroot \"$MINI_HTTPD_DOCROOT\""
 	fi
 	start-stop-daemon --quiet --start --startas /usr/sbin/mini_httpd \
 		--pidfile /var/run/mini_httpd.pid -- ${MINI_HTTPD_OPTS}
