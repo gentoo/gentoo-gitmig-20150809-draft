@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.55 2007/08/25 16:55:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.56 2007/08/27 13:36:44 armin76 Exp $
+
+  27 Aug 2007; Raúl Porcel <armin76@gentoo.org> gconfmm-2.18.0.ebuild:
+  alpha/ia64 stable wrt #188838
 
   25 Aug 2007; Steve Dibb <beandog@gentoo.org> gconfmm-2.18.0.ebuild:
   amd64 stable
