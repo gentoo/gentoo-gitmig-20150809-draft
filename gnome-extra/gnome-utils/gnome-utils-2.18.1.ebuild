@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.18.1.ebuild,v 1.9 2007/08/21 17:48:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.18.1.ebuild,v 1.10 2007/08/27 18:35:51 dang Exp $
 
 inherit gnome2
 
@@ -30,6 +30,7 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	hal? ( >=sys-apps/hal-0.5 )"
 
 DEPEND="${RDEPEND}
+	app-text/gnome-doc-utils
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9"

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.154 2007/08/21 17:48:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.155 2007/08/27 18:35:51 dang Exp $
+
+  27 Aug 2007; Daniel Gryniewicz <dang@gentoo.org>
+  gnome-utils-2.18.1.ebuild:
+  Add dep on gnome-doc-utils; bug #190440
 
   21 Aug 2007; Daniel Gryniewicz <dang@gentoo.org>
   gnome-utils-2.18.1.ebuild:
