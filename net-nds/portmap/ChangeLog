@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/portmap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.37 2007/05/12 20:41:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.38 2007/08/27 12:24:53 gustavoz Exp $
+
+  27 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> portmap-6.0.ebuild:
+  Stable on sparc wrt #190182
 
   12 May 2007; Roy Marples <uberlord@gentoo.org>
   +files/portmap-6.0-tcpd.patch, portmap-6.0.ebuild:
