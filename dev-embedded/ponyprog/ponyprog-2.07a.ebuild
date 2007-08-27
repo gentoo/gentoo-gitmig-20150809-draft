@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a.ebuild,v 1.1 2007/05/19 12:51:06 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a.ebuild,v 1.2 2007/08/27 16:44:19 angelos Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.lancos.com/ppwin95.html"
 SRC_URI="mirror://sourceforge/${PN}/PonyProg2000-${PV}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="epiphany firefox seamonkey"
 RDEPEND="x11-libs/libXaw
 	x11-libs/libXmu
