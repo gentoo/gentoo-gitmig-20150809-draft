@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.47 2007/08/24 18:59:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.48 2007/08/27 12:18:00 armin76 Exp $
+
+  27 Aug 2007; Raúl Porcel <armin76@gentoo.org> pnet-0.6.12-r1.ebuild,
+  pnet-0.7.4-r1.ebuild:
+  ia64 stable wrt #189497
 
   24 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   pnet-0.6.12-r1.ebuild, pnet-0.7.4-r1.ebuild:
