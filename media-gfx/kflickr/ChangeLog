@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kflickr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kflickr/ChangeLog,v 1.6 2007/08/27 11:57:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kflickr/ChangeLog,v 1.7 2007/08/27 17:01:30 philantrop Exp $
+
+  27 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> metadata.xml,
+  kflickr-0.8.ebuild:
+  Marked stable on amd64. Brought the lost sheep back to its herd - kde.
 
 *kflickr-0.9 (27 Aug 2007)
 
