@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7639 2007/08/26 10:18:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7640 2007/08/27 09:28:28 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Ulrich Mueller <ulm@gentoo.org> (27 Aug 2007)
+# Live CVS broken due to upstream changes, pending removal in 30 days.
+app-emacs/slime-cvs
 
 # Alfredo Tupone <tupone@gentoo.org> (25 Aug 2007)
 # Masked for removal
