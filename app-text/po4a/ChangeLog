@@ -1,6 +1,9 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.26 2007/08/25 18:03:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.27 2007/08/27 11:44:56 fmccor Exp $
+
+  27 Aug 2007; Ferris McCormick <fmccor@gentoo.org> po4a-0.32-r1.ebuild:
+  Sparc stable --- security Bug #189440 --- Builds itself and runs test suite.
 
   25 Aug 2007; Christoph Mende <angelos@gentoo.org> po4a-0.32-r1.ebuild:
   Stable on amd64 wrt security bug #189440
