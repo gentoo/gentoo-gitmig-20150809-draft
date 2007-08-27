@@ -1,0 +1,14 @@
+default-linux/alpha/2007.0/desktop
+# There are several possible profiles that you can use to replace this one.
+
+# default-linux/alpha/2007.0
+# default-linux/alpha/2007.0/desktop
+# default-linux/alpha/2007.0/server
+
+# By default, we use the desktop profile.
+
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/alpha/2007.0/desktop make.profile
+

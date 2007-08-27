@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.76 2007/08/27 19:14:58 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.77 2007/08/27 19:23:46 wolf31o2 Exp $
+
+  27 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +no-nptl/2.4/deprecated:
+  Adding back the deprecation notice but without a removal date, since some
+  alpha hardware requires a 2.4 setup and we'll instead be masking packages
+  which don't work with 2.4 in the profile.
 
   27 Aug 2007; Fernando J. Pereda <ferdy@gentoo.org>
   -no-nptl/2.4/deprecated:
