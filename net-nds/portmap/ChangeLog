@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/portmap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.39 2007/08/27 15:48:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.40 2007/08/27 15:59:56 armin76 Exp $
+
+  27 Aug 2007; Raúl Porcel <armin76@gentoo.org> portmap-6.0.ebuild:
+  alpha/ia64 stable wrt #190182
 
   27 Aug 2007; Christoph Mende <angelos@gentoo.org> portmap-6.0.ebuild:
   Stable on amd64 wrt bug #190182
