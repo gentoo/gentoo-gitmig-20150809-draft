@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/bitefusion
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bitefusion/ChangeLog,v 1.1 2007/08/25 18:45:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bitefusion/ChangeLog,v 1.2 2007/08/27 23:47:11 tupone Exp $
+
+  27 Aug 2007; <tupone@gentoo.org> bitefusion-1.0.1.ebuild:
+  Added ~x86 keyword
 
 *bitefusion-1.0.1 (25 Aug 2007)
 
