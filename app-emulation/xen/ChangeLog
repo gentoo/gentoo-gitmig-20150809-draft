@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.47 2007/07/10 17:01:29 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.48 2007/08/27 17:19:12 marineam Exp $
+
+  27 Aug 2007; Michael Marineau <marineam@gentoo.org> xen-3.0.4_p1.ebuild,
+  xen-3.1.0.ebuild:
+  Die if both x86 and amd64 are set in USE.
+
+*xen-3.1.0 (24 Aug 2007)
+
+  24 Aug 2007; Michael Marineau <marineam@gentoo.org>
+  -xen-3.0.2.ebuild, +xen-3.1.0.ebuild:
+  Copy Xen 3.1.0 related ebuilds over from the Xen project overlay.
+  Remove Xen 3.0.2.
 
   10 Jul 2007; Michael Marineau <marineam@gentoo.org> xen-3.0.4_p1.ebuild:
   Fix building with --as-needed
