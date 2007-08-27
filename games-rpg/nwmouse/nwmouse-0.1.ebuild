@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-0.1.ebuild,v 1.5 2007/03/12 17:25:48 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-0.1.ebuild,v 1.6 2007/08/27 20:24:38 wolf31o2 Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="http://home.woh.rr.com/nwmovies/cursors.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 # I've looked at this stuff, and I can't find the problem myself, so I'm just
 # removing the warnings.  If someone feels like finding the patch, that would be
 # great and I'll gladly include it.
