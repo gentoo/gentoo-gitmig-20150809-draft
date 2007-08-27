@@ -1,0 +1,13 @@
+diff -Naur slime.old/swank.lisp slime/swank.lisp
+--- slime.old/swank.lisp	2007-06-06 08:46:20.000000000 +0200
++++ slime/swank.lisp	2007-06-28 18:06:14.000000000 +0200
+@@ -1282,7 +1282,8 @@
+          value-or-values))
+   (values))
+ 
+-(defvar *swank-wire-protocol-version* nil
++(defvar *swank-wire-protocol-version*
++  "@SWANK-WIRE-PROTOCOL-VERSION@"
+   "The version of the swank/slime communication protocol.")
+ 
+ (defslimefun connection-info ()

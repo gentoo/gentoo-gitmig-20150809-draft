@@ -2,10 +2,10 @@
 TMP=`mktemp -d -t new-slime-ball.XXXXXX`
 trap "rm -r $TMP* 2>/dev/null" 0
 DIR=${PWD}
-THEIR_PV=2.0.0			# whatever they're calling the current release
+THEIR_PV=2.0			# whatever they're calling the current release
 OUR_PV=`date +'%Y%m%d'`
-PV="${THEIR_PV}.${OUR_PV}"
+PV="${THEIR_PV}_p${OUR_PV}"
 cd $TMP
 cvs -z9 -d:pserver:anonymous@common-lisp.net:/project/slime/cvsroot co slime || exit 1
 mv slime slime-${PV}
-tar cvfz ${DIR}/slime-${PV}.tar.gz slime-${PV} --exclude CVS --exclude .cvsignore
+tar cvjf ${DIR}/slime-${PV}.tar.bz2 slime-${PV} --exclude CVS --exclude .cvsignore
