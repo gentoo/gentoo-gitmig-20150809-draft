@@ -1,6 +1,15 @@
 # ChangeLog for dev-php4/pecl-http
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-http/ChangeLog,v 1.4 2007/03/06 19:51:07 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-http/ChangeLog,v 1.5 2007/08/27 11:07:11 jokey Exp $
+
+*pecl-http-1.5.4 (27 Aug 2007)
+
+  27 Aug 2007; Markus Ullmann <jokey@gentoo.org> +pecl-http-1.5.4.ebuild:
+  Version bump from project overlay
+
+  27 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +pecl-http-1.5.4.ebuild:
+  Version bump, Bug 190381
 
 *pecl-http-1.5.2 (06 Mar 2007)
 
