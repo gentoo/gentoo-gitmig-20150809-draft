@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/speex
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.57 2007/08/13 21:11:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.58 2007/08/27 15:01:06 drac Exp $
+
+*speex-1.2_beta2 (27 Aug 2007)
+
+  27 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  +files/speex-1.2_beta2-optional-ogg-and-cflags.patch,
+  +speex-1.2_beta2.ebuild:
+  Version bump with patch optionalizing ogg as requested in previous ebuild.
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> speex-1.1.12.ebuild:
   ppc. stable
