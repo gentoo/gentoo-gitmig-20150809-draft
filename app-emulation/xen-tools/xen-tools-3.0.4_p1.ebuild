@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.4_p1.ebuild,v 1.4 2007/07/10 17:28:02 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.4_p1.ebuild,v 1.5 2007/08/27 17:20:23 marineam Exp $
 
 inherit flag-o-matic distutils eutils multilib
 
@@ -55,7 +55,9 @@ pkg_setup() {
 	fi
 
 	if [[ -z ${XEN_TARGET_ARCH} ]] ; then
-		if use x86 ; then
+		if use x86 && use amd64; then
+			die "Confusion! Both x86 and amd64 are set in your use flags!"
+		elif use x86; then
 			export XEN_TARGET_ARCH="x86_32"
 		elif use amd64 ; then
 			export XEN_TARGET_ARCH="x86_64"
