@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/randomguid-1.2.1-r1.ebuild,v 1.4 2007/08/27 15:44:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/randomguid-1.2.1-r1.ebuild,v 1.5 2007/08/27 15:52:29 betelgeuse Exp $
 
 inherit java-pkg-2
 
@@ -24,6 +24,8 @@ src_compile() {
 	# com.javaexchange package. This is necessary to prevent
 	# class lookup failures, such as when used with Tomcat
 	# (which has a different <default> package for JSP files).
+
+	epatch "${FILESDIR}/1.2.1-examples-package.patch"
 	cd com/javaexchange
 	echo >RandomGUID.java "package com.javaexchange;"
 	cat RandomGUID.java~ >>RandomGUID.java
