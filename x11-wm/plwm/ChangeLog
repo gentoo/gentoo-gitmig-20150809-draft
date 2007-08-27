@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/plwm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.12 2007/07/01 21:45:32 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.13 2007/08/27 13:44:50 coldwind Exp $
+
+  27 Aug 2007; Santiago M. Mola <coldwind@gentoo.org>
+  +files/plwm-2.5-pep0263.patch, +files/plwm-2.6_alpha-pep0263.patch,
+  plwm-2.5-r1.ebuild, plwm-2.6_alpha-r1.ebuild:
+  Encoding declarations fixed to be Python 2.5 compatible.
 
   01 Jul 2007; Santiago M. Mola <coldwind@gentoo.org> -plwm-2.5.ebuild,
   -plwm-2.6_alpha.ebuild:

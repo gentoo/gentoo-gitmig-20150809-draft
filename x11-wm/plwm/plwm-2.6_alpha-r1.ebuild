@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.6_alpha-r1.ebuild,v 1.1 2007/06/29 13:53:58 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.6_alpha-r1.ebuild,v 1.2 2007/08/27 13:44:50 coldwind Exp $
 
 NEED_PYTHON="2.2"
 
@@ -28,6 +28,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}.patch"
 
 	epatch "${FILESDIR}/${P}-python2.5.patch"
+	epatch "${FILESDIR}/${P}-pep0263.patch"
 }
 
 src_install() {
