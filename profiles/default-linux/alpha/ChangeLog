@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.75 2007/08/27 18:43:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.76 2007/08/27 19:14:58 ferdy Exp $
+
+  27 Aug 2007; Fernando J. Pereda <ferdy@gentoo.org>
+  -no-nptl/2.4/deprecated:
+  Revert Chris' commit.
 
   27 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +no-nptl/2.4/deprecated:
