@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2994 2007/08/26 00:07:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2995 2007/08/27 15:03:14 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -960,6 +960,7 @@ media-libs/sdl-mixer:timidity - Add support for timidity
 media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/sge:image - enable sdl-image support
 media-libs/speex:vorbis-psy - Enable Vorbis-style psychoacoustics
+media-libs/speex:wideband - Enable Wideband codec
 media-libs/svgalib:no-helper - Do not build the helper kernel module
 media-libs/urt:gs - Add support for postscript
 media-libs/win32codecs:real - Installs the real video codecs
