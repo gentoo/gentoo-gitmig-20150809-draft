@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.8.11.ebuild,v 1.1 2007/08/25 14:51:43 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.8.11-r1.ebuild,v 1.1 2007/08/27 15:45:07 hattya Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -26,6 +26,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-gauche.m4.diff
 	epatch "${FILESDIR}"/${PN}-runpath.diff
+	epatch "${FILESDIR}"/${P}-socket-buffering.diff
 	eautoconf
 
 }
