@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.35 2007/08/24 13:31:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.36 2007/08/27 12:57:13 cardoe Exp $
+
+*mythtv-themes-0.20.2_p14301 (27 Aug 2007)
+
+  27 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-themes-0.20.2_p14301.ebuild:
+  bump. fix vanishing icons
 
 *mythtv-themes-0.20.2_p14282 (24 Aug 2007)
 
