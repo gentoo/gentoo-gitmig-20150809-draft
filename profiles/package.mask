@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7640 2007/08/27 09:28:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7641 2007/08/27 16:55:17 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -77,27 +77,6 @@ app-misc/emelfm
 # upstream xf86-video-ati RandR 1.2 branch.
 # Masked for treecleaners, removed in 60 days.
 media-video/ati-gatos
-
-# Doug Goldstein <cardoe@gentoo.org> (22 Aug 2007)
-# MythTV 0.20.2 pre-release, masked due to ABI
-# change that requires plugin rebuild
-=media-tv/mythtv-0.20.1_p14276
->=media-tv/mythtv-0.20.2_p14282
->=x11-themes/mythtv-themes-0.20.2_p14282
->=media-plugins/mytharchive-0.20.2_p14282
->=media-plugins/mythbrowser-0.20.2_p14282
->=media-plugins/mythcontrols-0.20.2_p14282
->=media-plugins/mythdvd-0.20.2_p14282
->=media-plugins/mythflix-0.20.2_p14282
->=media-plugins/mythgallery-0.20.2_p14282
->=media-plugins/mythgame-0.20.2_p14282
->=media-plugins/mythmovies-0.20.2_p14282
->=media-plugins/mythmusic-0.20.2_p14282
->=media-plugins/mythnews-0.20.2_p14282
->=media-plugins/mythphone-0.20.2_p14282
->=media-plugins/mythvideo-0.20.2_p14282
->=media-plugins/mythweather-0.20.2_p14282
->=www-apps/mythweb-0.20.2_p14282
 
 # Ulrich Mueller <ulm@gentoo.org> (21 Aug 2007)
 # Masking due to issues with customisation dependencies.
@@ -630,9 +609,9 @@ x11-plugins/desklet-hypertail
 net-misc/xsupplicant
 
 # Doug Goldstein <cardoe@gentoo.org> (5 Mar 2007)
-# experimental SVN to quell the masses
+# upstream MythTV development versions
 # complain upstream if something is broken
-# or if it's Gentoo specific any bugs that get
+# or if it's Gentoo specific, any bugs that get
 # filed require a patch
 >media-tv/mythtv-0.20.9_p99999
 >x11-themes/mythtv-themes-0.20.9_p99999
