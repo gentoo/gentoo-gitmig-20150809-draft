@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.111 2007/08/13 21:28:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.112 2007/08/27 22:02:37 cedk Exp $
+
+*tcpdump-3.9.7-r1 (27 Aug 2007)
+
+  27 Aug 2007; Cédric Krier <cedk@gentoo.org> +tcpdump-3.9.7-r1.ebuild:
+  Re-enable drop privileges for bug #176391
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   tcpdump-3.9.6-r1.ebuild:
