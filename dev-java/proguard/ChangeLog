@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/proguard
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.7 2007/03/11 23:50:34 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.8 2007/08/27 10:47:47 betelgeuse Exp $
+
+*proguard-3.9 (27 Aug 2007)
+
+  27 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> +proguard-3.9.ebuild:
+  Version bump.
 
 *proguard-3.8 (11 Mar 2007)
 
