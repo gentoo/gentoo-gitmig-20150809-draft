@@ -1,5 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2006.0/make.defaults,v 1.16 2007/08/08 19:27:26 dev-zero Exp $
-
-USE="alsa apache2 apm arts cups eds emboss encode esd foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib jpeg kde libwww mad mikmod motif mp3 mpeg nptl ogg opengl oss png qt3 qt4 quicktime sdl spell truetype vorbis X xml xv"

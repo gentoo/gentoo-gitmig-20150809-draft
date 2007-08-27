@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.106 2007/08/25 19:03:02 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.107 2007/08/27 18:40:15 wolf31o2 Exp $
+
+  27 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> -2006.0/deprecated,
+  -2006.0/make.defaults, -2006.0/packages, -2006.0/parent:
+  Removing 2006.0 profile, which was slated for removal on June 1st.
 
   25 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
   no-nptl/2.4/package.mask:
