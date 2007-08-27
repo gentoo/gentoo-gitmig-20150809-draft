@@ -1,6 +1,9 @@
 # ChangeLog for app-text/antixls
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antixls/ChangeLog,v 1.3 2007/05/14 20:13:35 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antixls/ChangeLog,v 1.4 2007/08/27 16:53:27 angelos Exp $
+
+  27 Aug 2007; Christoph Mende <angelos@gentoo.org> antixls-0.2b.ebuild:
+  Added ~amd64 wrt bug #189025
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
