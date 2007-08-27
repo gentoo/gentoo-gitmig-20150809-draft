@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.13.1.ebuild,v 1.3 2007/08/21 08:39:58 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.13.1.ebuild,v 1.4 2007/08/27 13:41:09 armin76 Exp $
 
 inherit gnome2 eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnome/sources/libxml++/${PV%.*}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="2.6"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ~ppc sparc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/libxml2-2.6.1
