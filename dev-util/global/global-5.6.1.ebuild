@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.2.ebuild,v 1.1 2006/08/19 17:31:53 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.6.1.ebuild,v 1.1 2007/08/27 17:15:47 armin76 Exp $
 
 inherit elisp-common
 
 DESCRIPTION="GNU Global is a tag system to find the locations of a specified object in C, C++, Yacc, Java and assembler sources."
 HOMEPAGE="http://www.gnu.org/software/global/global.html"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"

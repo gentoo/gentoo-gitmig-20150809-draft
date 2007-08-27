@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/global
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.23 2007/05/15 09:10:31 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.24 2007/08/27 17:15:47 armin76 Exp $
+
+*global-5.6.1 (27 Aug 2007)
+
+  27 Aug 2007; Raúl Porcel <armin76@gentoo.org> -global-4.5.ebuild,
+  global-4.7.2.ebuild, -global-5.2.ebuild, global-5.3.ebuild,
+  +global-5.6.1.ebuild:
+  Version bump, bug 175417, x86 stable, remove old
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
