@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.29 2007/08/21 23:30:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.30 2007/08/27 19:59:18 wolf31o2 Exp $
+
+  27 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> pyparted-1.8.9.ebuild:
+  Changed python dependency from =2.4 to >=2.4 since this works fine with
+  python-2.5, according to Andrew Gaffney <agaffney@gentoo.org>. Closing bug
+  #190187.
 
 *pyparted-1.8.9 (21 Aug 2007)
 

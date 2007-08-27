@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-1.8.9.ebuild,v 1.1 2007/08/21 23:30:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-1.8.9.ebuild,v 1.2 2007/08/27 19:59:18 wolf31o2 Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,7 @@ DEPEND="sys-libs/ncurses"
 IUSE=""
 
 # Needed to build...
-DEPEND="=dev-lang/python-2.4*
+DEPEND=">=dev-lang/python-2.4
 	>=sys-apps/parted-1.7.0
 	>=app-arch/rpm-4"
 
