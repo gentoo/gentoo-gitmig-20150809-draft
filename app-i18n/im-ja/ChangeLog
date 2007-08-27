@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.51 2007/02/21 22:03:47 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.52 2007/08/27 17:11:16 jurek Exp $
+
+  27 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> im-ja-1.5.ebuild:
+  x86 stable (bug #133667)
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
