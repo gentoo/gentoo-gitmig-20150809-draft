@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/komparator
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/komparator/ChangeLog,v 1.1 2007/08/27 15:50:03 keytoaster Exp $
+
+*komparator-0.6 (27 Aug 2007)
+
+  27 Aug 2007; Tobias Heinlein <keytoaster@gentoo.org>
+  +komparator-0.6.ebuild:
+  New ebuild, see bug 118726
+
