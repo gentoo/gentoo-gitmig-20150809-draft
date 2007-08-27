@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.1.ebuild,v 1.2 2007/08/25 22:01:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.1.ebuild,v 1.3 2007/08/27 14:23:22 beandog Exp $
 
 inherit eutils linux-mod
 
@@ -61,6 +61,12 @@ pkg_setup() {
 		ewarn "to pick one yourself!"
 		ewarn ""
 	fi
+
+	ewarn ""
+	ewarn "Make sure that your I2C and V4L kernel drivers are loaded as"
+	ewarn "modules, and not compiled into the kernel, or IVTV will not"
+	ewarn "work."
+	ewarn ""
 
 	linux-mod_pkg_setup
 

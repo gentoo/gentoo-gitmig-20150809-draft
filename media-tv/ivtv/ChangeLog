@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.89 2007/08/27 13:58:02 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.90 2007/08/27 14:23:22 beandog Exp $
+
+  27 Aug 2007; Steve Dibb <beandog@gentoo.org> ivtv-1.0.1.ebuild,
+  ivtv-1.0.2.ebuild:
+  Add ewarn to compile kernel options as modules
 
 *ivtv-1.0.2 (27 Aug 2007)
 
