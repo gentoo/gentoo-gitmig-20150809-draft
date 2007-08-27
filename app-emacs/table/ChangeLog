@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/table
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/table/ChangeLog,v 1.15 2007/05/16 17:30:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/table/ChangeLog,v 1.16 2007/08/27 19:14:53 ulm Exp $
+
+*table-1.5.54-r2 (27 Aug 2007)
+
+  27 Aug 2007; Ulrich Mueller <ulm@gentoo.org> +files/50table-gentoo.el,
+  +table-1.5.54-r2.ebuild:
+  Deactivate table for Emacs 22 where it is already included. Output a
+  corresponding message in pkg_postinst.
 
   16 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   -files/50table-gentoo.el, -table-1.5.54.ebuild, table-1.5.54-r1.ebuild:
