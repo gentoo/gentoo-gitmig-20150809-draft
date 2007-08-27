@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/sun-j2me-bin-2.2-r3.ebuild,v 1.5 2007/02/27 16:34:58 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/sun-j2me-bin-2.2-r3.ebuild,v 1.6 2007/08/27 10:40:32 betelgeuse Exp $
 
 inherit java-pkg-2
 
@@ -17,11 +17,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 RESTRICT="fetch"
-DEPEND="dev-java/sun-jaf
-		dev-java/sun-javamail
-		dev-java/xsdlib"
-RDEPEND="${DEPEND}
-		>=virtual/jdk-1.4.2"
+
+COMMON_DEP="
+	dev-java/sun-jaf
+	dev-java/sun-javamail
+	dev-java/xsdlib"
+RDEPEND="${COMMON_DEP}
+	>=virtual/jdk-1.4.2"
+DEPEND="${COMMON_DEP}
+	app-arch/unzip"
 
 S=${WORKDIR}
 
@@ -95,7 +99,8 @@ src_install() {
 	java-pkg_jar-from xsdlib xsdlib.jar
 
 	einfo "Registering jar files"
-	java-pkg_regjar \
+	# The zip files are somehow broken and python zip handling errors on them
+	JAVA_PKG_STRICT= java-pkg_regjar \
 		${D}${DIR}/lib/*.jar \
 		${D}${DIR}/wtklib/kenv.zip \
 		${D}${DIR}/wtklib/*.jar

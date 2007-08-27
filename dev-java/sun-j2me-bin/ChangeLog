@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sun-j2me-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/ChangeLog,v 1.7 2007/02/27 16:34:58 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/ChangeLog,v 1.8 2007/08/27 10:40:32 betelgeuse Exp $
+
+  27 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
+  sun-j2me-bin-2.2-r3.ebuild:
+  Disable bytecode version verification because python zip handling errors on
+  the jar files.
 
   27 Feb 2007; Vlastimil Babka <caster@gentoo.org>
   sun-j2me-bin-2.2-r3.ebuild:
