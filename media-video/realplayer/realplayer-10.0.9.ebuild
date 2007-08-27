@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.9.ebuild,v 1.1 2007/08/25 14:02:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.9.ebuild,v 1.2 2007/08/27 13:44:51 beandog Exp $
 
 inherit nsplugins eutils rpm
 
@@ -39,7 +39,7 @@ S="${WORKDIR}/usr/local/${MY_PN}"
 
 pkg_nofetch() {
 	einfo "Download RealPlayer manually from Real's website at"
-	einfo ${DOWNLOADPAGE}
+	einfo ${HOMEPAGE}
 	einfo ""
 	einfo "Choose Linux/x86 Releases: RealPlayer 10.0.9 Gold: RPM"
 	einfo "https://helixcommunity.org/projects/player/files/download/2479"
