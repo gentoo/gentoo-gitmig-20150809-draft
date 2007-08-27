@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/IceRuby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/ChangeLog,v 1.7 2007/08/15 15:45:54 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/ChangeLog,v 1.8 2007/08/27 11:26:53 caleb Exp $
+
+*IceRuby-3.2.1-r1 (27 Aug 2007)
+
+  27 Aug 2007; Caleb Tennis <caleb@gentoo.org>
+  +files/IceRuby-3.2.1-ice_type.patch, +IceRuby-3.2.1-r1.ebuild:
+  A patch to fix proxy passing via argument
 
 *IceRuby-3.2.1 (15 Aug 2007)
 

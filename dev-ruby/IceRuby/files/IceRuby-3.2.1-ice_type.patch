@@ -1,0 +1,13 @@
+--- ruby/Ice.rb.orig	2007-08-27 07:23:03.000000000 -0400
++++ ruby/Ice.rb	2007-08-27 07:23:33.000000000 -0400
+@@ -43,7 +43,10 @@
+     end
+ 
+     T_Object.defineClass(nil, true, nil, [], [])
++    Object_mixin::ICE_TYPE = T_Object
++
+     T_ObjectPrx.defineProxy(ObjectPrx, T_Object)
++    ObjectPrx::ICE_TYPE = T_ObjectPrx
+ 
+     #
+     # LocalObject.
