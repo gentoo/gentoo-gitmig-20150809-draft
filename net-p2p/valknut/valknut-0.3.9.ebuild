@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.9.ebuild,v 1.5 2007/08/22 07:25:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.9.ebuild,v 1.6 2007/08/27 15:01:24 angelos Exp $
 
 inherit qt3 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/wxdcgui/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 x86"
 IUSE="ssl"
 
 DEPEND="$(qt_min_version 3)
