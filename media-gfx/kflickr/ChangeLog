@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/kflickr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kflickr/ChangeLog,v 1.5 2007/04/12 21:52:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kflickr/ChangeLog,v 1.6 2007/08/27 11:57:28 armin76 Exp $
+
+*kflickr-0.9 (27 Aug 2007)
+
+  27 Aug 2007; Raúl Porcel <armin76@gentoo.org> kflickr-0.8.ebuild,
+  +kflickr-0.9.ebuild:
+  Version bump, bug #188994, and x86 stable
 
 *kflickr-0.8 (12 Apr 2007)
 
