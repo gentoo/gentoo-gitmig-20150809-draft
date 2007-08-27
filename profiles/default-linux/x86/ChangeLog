@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.107 2007/08/27 18:40:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.108 2007/08/27 18:42:24 wolf31o2 Exp $
+
+  27 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +no-nptl/2.4/deprecated:
+  Adding deprecation notice to the 2.4 sub-profile for no-nptl as we no longer
+  provide support for 2.4 kernels.
 
   27 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> -2006.0/deprecated,
   -2006.0/make.defaults, -2006.0/packages, -2006.0/parent:

@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.74 2007/08/26 10:20:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.75 2007/08/27 18:43:56 wolf31o2 Exp $
+
+  27 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +no-nptl/2.4/deprecated:
+  Adding deprecation notice to the 2.4 sub-profile for no-nptl as we no longer
+  provide support for 2.4 kernels.
 
   26 Aug 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
   Unmask firefox USE-flag again, since firefox-1* has been removed
