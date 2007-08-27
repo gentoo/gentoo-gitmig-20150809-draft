@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/icu
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.59 2007/08/27 10:52:09 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.60 2007/08/27 10:59:53 jokey Exp $
+
+  27 Aug 2007; Markus Ullmann <jokey@gentoo.org> -icu-2.8.ebuild,
+  -icu-3.2.ebuild, -icu-3.4.1.ebuild:
+  some cleanup
 
 *icu-3.6-r1 (27 Aug 2007)
 
