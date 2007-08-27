@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.7 2007/08/26 15:41:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.8 2007/08/27 08:41:50 phreak Exp $
+
+  27 Aug 2007; Christian Heim <phreak@gentoo.org> -apache-2.0.59-r3.ebuild:
+  Removing apache-2.0.59-r3, as it was kinda buggy (thanks to me -- see #189916).
 
 *apache-2.0.59-r4 (26 Aug 2007)
 
