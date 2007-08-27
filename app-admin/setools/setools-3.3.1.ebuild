@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.2.ebuild,v 1.2 2007/08/20 04:23:58 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.1.ebuild,v 1.1 2007/08/27 02:50:31 pebenito Exp $
 
 inherit java-pkg-opt-2
 
@@ -17,6 +17,7 @@ DEPEND=">=sys-libs/libsepol-1.16.3
 	sys-libs/libselinux
 	sys-devel/bison
 	sys-devel/flex
+	>=dev-db/sqlite-3.2
 	dev-libs/libxml2
 	dev-util/pkgconfig
 	java? (
@@ -35,6 +36,7 @@ DEPEND=">=sys-libs/libsepol-1.16.3
 
 RDEPEND=">=sys-libs/libsepol-1.16.3
 	sys-libs/libselinux
+	>=dev-db/sqlite-3.2
 	dev-libs/libxml2
 	java? ( >=virtual/jre-1.4 )
 	python? ( >=dev-lang/python-2.4 )
@@ -54,10 +56,11 @@ src_compile() {
 		--disable-bwidget-check \
 		$(use_enable python swig-python) \
 		$(use_enable java swig-java) \
+		$(use_enable X swig-tcl) \
 		$(use_enable X gui) \
 		$(use_enable debug)
 
-	emake
+	emake || die
 }
 
 src_install() {
