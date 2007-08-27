@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r2.ebuild,v 1.12 2007/08/25 14:34:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r2.ebuild,v 1.13 2007/08/27 11:54:50 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -50,6 +50,7 @@ DEPEND="${RDEPEND}
 		x11-proto/damageproto
 		x11-proto/fixesproto
 		x11-proto/fontsproto
+		x11-proto/inputproto
 		x11-proto/randrproto
 		x11-proto/resourceproto
 		x11-proto/scrnsaverproto
