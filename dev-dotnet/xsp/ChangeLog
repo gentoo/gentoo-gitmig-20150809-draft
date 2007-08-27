@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.45 2007/07/01 03:02:45 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.46 2007/08/27 20:55:11 jurek Exp $
+
+*xsp-1.2.4-r1 (27 Aug 2007)
+
+  27 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> +xsp-1.2.4-r1.ebuild:
+  Fix multilib/symlink issue
 
   01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   +files/digest-xsp-1.2.1, +files/digest-xsp-1.2.3, +files/digest-xsp-1.2.4,
