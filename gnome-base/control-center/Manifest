@@ -17,13 +17,8 @@ AUX control-center-2.18.1-gnome-doc-utils-fix.patch 370 RMD160 1cee6610e683dbf6f
 MD5 6149c16d446894940948cf2e21234bab files/control-center-2.18.1-gnome-doc-utils-fix.patch 370
 RMD160 1cee6610e683dbf6f162bd9c7d174f3555f3a435 files/control-center-2.18.1-gnome-doc-utils-fix.patch 370
 SHA256 197eafa5b4d445977b3a878d5642f6c5de621a410dc31524221816e4bf5a1675 files/control-center-2.18.1-gnome-doc-utils-fix.patch 370
-DIST control-center-2.16.2.tar.bz2 2022817 RMD160 f8a45a1c3cbfc3c04d4bd562482e281deea0682b SHA1 0fafa169a358c2c4fcf7d3eadbb1a980416fae17 SHA256 6862b8ae46535ddc0344fe4a9705b7b55cb40cb447344d7e681995313c70bc62
 DIST control-center-2.16.3.tar.bz2 2025478 RMD160 313804094b0ad0f5dd801d71fc1214798290ed99 SHA1 fcf34601399a2f432fb7189b354007d37803f87b SHA256 6bffec96f9014b3742df80f193b68877e31b26b2a1cc0ba961fcba15a22af9d9
 DIST control-center-2.18.1.tar.bz2 2150134 RMD160 f3980d2348a699f646d87ec27c61f27057594302 SHA1 4325caeb94de9b77cd57fc210f1ba623458a2aa8 SHA256 3bb1474a6914d5a210a6f21368c48c9c302918a4ab94a5282b84b57ebc432c87
-EBUILD control-center-2.16.2.ebuild 2293 RMD160 416e500b64fed8be17ba16b92dc0b37970ae25b1 SHA1 45deaebace8a97ead05f2ae02d49a133e84c742a SHA256 79ecede332dff77287b6b7c2624f0c0874830902a896dd83619c171fdf952d4f
-MD5 cd71cc3c0343a14cc7e8c28c05b154d3 control-center-2.16.2.ebuild 2293
-RMD160 416e500b64fed8be17ba16b92dc0b37970ae25b1 control-center-2.16.2.ebuild 2293
-SHA256 79ecede332dff77287b6b7c2624f0c0874830902a896dd83619c171fdf952d4f control-center-2.16.2.ebuild 2293
 EBUILD control-center-2.16.3.ebuild 2397 RMD160 d581e605800e354d49d5e8d17af868e480ce93aa SHA1 df7d748fb53ee866c8e4f854fdb828ac43bda3c9 SHA256 ed137b18fe4606b610db059b84aee69aeb3b36fd4579d7da4aec656928564de0
 MD5 057928836013226f90c8ce45fe0cf787 control-center-2.16.3.ebuild 2397
 RMD160 d581e605800e354d49d5e8d17af868e480ce93aa control-center-2.16.3.ebuild 2397
@@ -40,9 +35,6 @@ MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
-MD5 6c6a2af9b35bec3cab050a984ee4633e files/digest-control-center-2.16.2 271
-RMD160 6f3b680b481367cb5ff9e986c9ef8e76888fbb58 files/digest-control-center-2.16.2 271
-SHA256 74e651694c629f647562cc363d47c94a79210a7489ec1e35273f794a0b29c441 files/digest-control-center-2.16.2 271
 MD5 9845a7e8752a9870fb044cffcd7d900b files/digest-control-center-2.16.3 271
 RMD160 1bcbf1083ca7265f8391f293e2b41b22847bb551 files/digest-control-center-2.16.3 271
 SHA256 f99a2c73b62026d56e94fdc85a28fe8ddf14e45f03626524dcfbd62f55c7323d files/digest-control-center-2.16.3 271
@@ -50,9 +42,9 @@ MD5 f84d983b3484feb31c85348fa89d37d0 files/digest-control-center-2.18.1 271
 RMD160 f191c70a67df5a477abd305cfb019055a3bb6c45 files/digest-control-center-2.18.1 271
 SHA256 cf2bc498f431016785a9c2b0d2dca076c48dc66ac884bcfd4a8593f0be501df7 files/digest-control-center-2.18.1 271
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.5 (GNU/Linux)
+Version: GnuPG v2.0.6 (GNU/Linux)
 
-iD8DBQFG0DwYp/wUKkr7RBoRAqoCAKDI6jSPCySUUNzNQISKbSnyJGkKawCdGGAK
-l6SGUt8DtHsXAReKHUMyx/M=
-=GnIn
+iD8DBQFG0pV1keYb6olFHJcRAjX4AJ9eJzVCcna2Y5uhNbHKuO8opOeRpwCdEUmn
+AGmSIjQ1csIWV7ye+O/T+IY=
+=a/Uy
 -----END PGP SIGNATURE-----
