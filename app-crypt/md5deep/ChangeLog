@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/md5deep
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.24 2007/08/25 23:32:40 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.25 2007/08/27 10:17:31 armin76 Exp $
+
+  27 Aug 2007; Raúl Porcel <armin76@gentoo.org> md5deep-1.12.ebuild:
+  x86 stable wrt #189986
 
   25 Aug 2007; Robert Buchholz <rbu@gentoo.org> md5deep-1.12.ebuild:
   amd64 stable (bug #189986)
