@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.2_p14307.ebuild,v 1.1 2007/08/27 12:55:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.2_p14307.ebuild,v 1.2 2007/08/27 15:57:11 cardoe Exp $
 
 inherit mythtv flag-o-matic multilib eutils qt3 subversion toolchain-funcs
 
@@ -217,7 +217,7 @@ src_compile() {
 			die "failed to compile firewire_tester"
 
 		cd channel_changers
-		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../6200ch 6200ch.c \
+		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -std=gnu99 -o ../../6200ch 6200ch.c \
 			${LDFLAGS} -lrom1394 -lavc1394 -lraw1394 || \
 			die "failed to compile 6200ch"
 		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../sa3250ch sa3250ch.c \

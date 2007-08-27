@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14153.ebuild,v 1.4 2007/08/22 15:01:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14327.ebuild,v 1.1 2007/08/27 15:57:11 cardoe Exp $
 
 inherit flag-o-matic multilib eutils qt3 mythtv subversion toolchain-funcs
 
@@ -10,7 +10,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
 
-IUSE="alsa altivec autostart debug dbox2 dts dvb dvd hdhomerun ieee1394 iptv ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
+IUSE="alsa altivec autostart dbox2 debug directv dts dvb dvd hdhomerun ieee1394 iptv ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -33,6 +33,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	dvd? ( 	media-libs/libdvdnav
 		media-libs/libdts )
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
+	directv? ( virtual/perl-Time-HiRes )
 	ivtv? ( media-tv/ivtv )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
@@ -97,15 +98,16 @@ pkg_setup() {
 src_unpack() {
 	subversion_src_unpack
 
-	# mcpu to march
-	#epatch "${FILESDIR}"/${PN}-trunk-mcpu-march-2.patch
-	# let upstream deal with this.. only so many times I can tell them of the
-	# issue
-
 	# As needed fix since they don't know how to write qmake let alone a real
 	# make system. And they won't accept this upstream since it comes from
 	# Gentoo
 	#epatch "${FILESDIR}"/${PN}-0.20-as-needed.patch
+
+	# upstream wants the revision number in their version.cpp
+	# since the subversion.eclass strips out the .svn directory
+	# svnversion in MythTV's build doesn't work
+	sed -e "s:\`(svnversion \$\${SVNTREEDIR} 2>\/dev\/null) || echo Unknown\`:${SVNREV}:" \
+		-i "${S}"/version.pro || die "svnversion sed failed"
 }
 
 src_compile() {
@@ -188,7 +190,7 @@ src_compile() {
 			die "failed to compile firewire_tester"
 
 		cd channel_changers
-		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../6200ch 6200ch.c \
+		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -std=gnu99 -o ../../6200ch 6200ch.c \
 			${LDFLAGS} -lrom1394 -lavc1394 -lraw1394 || \
 			die "failed to compile 6200ch"
 		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../sa3250ch sa3250ch.c \
@@ -199,7 +201,7 @@ src_compile() {
 	fi
 
 	cd ${S}/contrib/channel_changers
-	$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../red_eye red_eye.c  ${LDFLAGS} || \
+	$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../red_eye red_eye.c ${LDFLAGS} || \
 		die "failed to compile red_eye"
 }
 
@@ -260,6 +262,11 @@ src_install() {
 
 	dobin red_eye || die "failed to install red_eye"
 	dodoc contrib/channel_changers/red_eye-README
+
+	if use directv; then
+		dobin contrib/channel_changers/d10control.pl || die "failed to install d10control"
+		dodoc contrib/channel_changers/d10control-README
+	fi
 }
 
 pkg_preinst() {
