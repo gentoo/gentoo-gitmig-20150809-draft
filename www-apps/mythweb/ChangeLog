@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.44 2007/08/25 23:54:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.45 2007/08/27 14:37:33 cardoe Exp $
+
+*mythweb-0.21_pre14235 (27 Aug 2007)
+
+  27 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythweb-0.20.2_p14282.ebuild, -mythweb-0.21_pre13285.ebuild,
+  -mythweb-0.21_pre13775.ebuild, -mythweb-0.21_pre14151.ebuild,
+  +mythweb-0.21_pre14235.ebuild:
+  fix trunk and 0.20.2 svn mythweb install issues. remove old trunk builds
+  add new trunk
 
 *mythweb-0.20.2_p14282 (25 Aug 2007)
 
