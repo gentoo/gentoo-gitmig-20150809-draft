@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-7.0.4-r2.ebuild,v 1.4 2007/07/12 13:51:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-7.0.4-r2.ebuild,v 1.5 2007/08/28 15:37:02 jer Exp $
 
 inherit multilib
 
 DESCRIPTION="System performance tools for Linux"
 HOMEPAGE="http://perso.wanadoo.fr/sebastien.godard/"
-SRC_URI="http://perso.orange.fr/sebastien.godard/sysstat-${PV}.tar.gz"
+SRC_URI="http://perso.orange.fr/sebastien.godard/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,6 +27,7 @@ CONFIGVARS="PREFIX=\"${ROOT}usr\"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	sed -i -e "s:-O2:${CFLAGS}:" Makefile || die "sed Makefile failed"
 }
 
@@ -36,9 +37,7 @@ src_compile() {
 			die "sed CONFIG failed"
 	fi
 
-	emake LFLAGS="${LDFLAGS}" \
-		${CONFIGVARS} \
-		|| die "make failed"
+	emake LFLAGS="${LDFLAGS}" ${CONFIGVARS} || die "make failed"
 }
 
 src_install() {
