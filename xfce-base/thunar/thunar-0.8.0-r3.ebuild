@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.8.0-r3.ebuild,v 1.10 2007/07/01 09:18:32 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.8.0-r3.ebuild,v 1.11 2007/08/28 18:26:30 drac Exp $
 
 inherit eutils virtualx xfce44
 
@@ -70,7 +70,7 @@ src_unpack() {
 }
 
 src_test() {
-	Xemake check || "emake check failed."
+	Xemake check || die "emake check failed."
 }
 
 DOCS="AUTHORS ChangeLog HACKING FAQ THANKS TODO README NEWS"
