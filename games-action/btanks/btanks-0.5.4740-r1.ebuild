@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.5.4740-r1.ebuild,v 1.2 2007/08/24 21:32:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.5.4740-r1.ebuild,v 1.3 2007/08/28 20:22:24 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -39,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin bt || die "newgamesbin"
+	newgamesbin bt btanks || die "newgamesbin"
 
 	insinto "$(games_get_libdir)"/${PN}
 	doins lib{mrt,bt,sdlx}.so || die "doins for lib.so failed"
