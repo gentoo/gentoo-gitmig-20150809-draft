@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ekg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.36 2007/08/26 22:29:41 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.37 2007/08/28 17:59:28 philantrop Exp $
+
+  28 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> ekg-1.7.ebuild:
+  Marked stable on amd64 as per bug 189735.
 
   26 Aug 2007; Michał Januszewski <spock@gentoo.org> ekg-1.7.ebuild:
   Fix issues pointed out in bug #189735.
