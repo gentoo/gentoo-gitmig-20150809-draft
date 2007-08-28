@@ -1,9 +1,4 @@
-DIST xfce-mcs-manager-4.4.0.tar.bz2 611521 RMD160 560154ee8b04e9cc0359312a255f2af586f25256 SHA1 c5e8d0d9af45eac5b065f0da10981e42ef36c025 SHA256 2499dc521feaba0594ecbdfa2ddf4f8a286fb3d58ca82855a2e161800ddd231e
 DIST xfce-mcs-manager-4.4.1.tar.bz2 653240 RMD160 5c2c7259f10f51c4456e15677aef089394e61df6 SHA1 c03e83ebe5a315aa2a1333624cd2f04dafba6a15 SHA256 ba7e44062d8def39ec71c9e7c476bdd3844bd84c602f3af5abe4ec7ebbb3669c
-EBUILD xfce-mcs-manager-4.4.0.ebuild 806 RMD160 8d17d58344a533232c2b90fa1c1116c0c76b94a0 SHA1 ab47ee0937b34ad7981560e493340a1f98a00dcc SHA256 48b0e268e41a14a3afcff8801d2a329b22256d6f7b1cfa446b3133abad3df58e
-MD5 2a28fd5cb7f9170c3a490cbd7d66f5a9 xfce-mcs-manager-4.4.0.ebuild 806
-RMD160 8d17d58344a533232c2b90fa1c1116c0c76b94a0 xfce-mcs-manager-4.4.0.ebuild 806
-SHA256 48b0e268e41a14a3afcff8801d2a329b22256d6f7b1cfa446b3133abad3df58e xfce-mcs-manager-4.4.0.ebuild 806
 EBUILD xfce-mcs-manager-4.4.1.ebuild 779 RMD160 86482c5b0359e7730b988cb560df11cfcbf0332a SHA1 1b2a0a8e36ca4f7e5d2b8869d144688ffba1d916 SHA256 bcfc0848059828dd888a82c2e17f8879a7be1aec042fa34ea4db672ebfc541d2
 MD5 5c0645f99bca981fe6696dd67caf01a3 xfce-mcs-manager-4.4.1.ebuild 779
 RMD160 86482c5b0359e7730b988cb560df11cfcbf0332a xfce-mcs-manager-4.4.1.ebuild 779
@@ -16,9 +11,6 @@ MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae9
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
-MD5 3a3f085f88369a911ed76786ca124b73 files/digest-xfce-mcs-manager-4.4.0 271
-RMD160 67d402d75d652fb72851ede6c5199cf040674989 files/digest-xfce-mcs-manager-4.4.0 271
-SHA256 c0e35f2083af6546c83e0dfd70db5f85b8313ee7aca5abe575df521c298083a7 files/digest-xfce-mcs-manager-4.4.0 271
 MD5 60e9c41ce7310d0f07020a5dbcc4efcc files/digest-xfce-mcs-manager-4.4.1 271
 RMD160 f473f0a3a2c5cda888941e94c91a26799c67c2a5 files/digest-xfce-mcs-manager-4.4.1 271
 SHA256 ad7b819bf24286cc05a78bdb5d55731a775d031fb66362b8409b54f6dec3ed2a files/digest-xfce-mcs-manager-4.4.1 271

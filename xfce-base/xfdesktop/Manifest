@@ -2,12 +2,7 @@ AUX xfdesktop-4.4.1-translation.patch 16569 RMD160 7bbd9d40a212f13ab3e94ad49d1f6
 MD5 6435a1847154ad95f304acd9a83e79f7 files/xfdesktop-4.4.1-translation.patch 16569
 RMD160 7bbd9d40a212f13ab3e94ad49d1f6e129fc47788 files/xfdesktop-4.4.1-translation.patch 16569
 SHA256 c5a4895f1db46ba0d5c32095c00d0108a80c326b8b2cfb42956eeafdb0721bd1 files/xfdesktop-4.4.1-translation.patch 16569
-DIST xfdesktop-4.4.0.tar.bz2 3150198 RMD160 edeef28d1a0ac374e6fe11d8da83563a3e1dabb8 SHA1 f59d12cbc4980ce83b3739efc785c47fba09249c SHA256 f6837480d87b61827e25d47ed1ca92565f975a8dff89ab950aefb1fb392fd34b
 DIST xfdesktop-4.4.1.tar.bz2 3067577 RMD160 10e182f2cebd309ed7e2b18d00331861e21f4528 SHA1 46324ad37bb782ec7a5da11c619d9e76a0f54133 SHA256 abf8c93af0df9d6ec730917e02c57783546c40b8be091a74a5160bbf59ee4a80
-EBUILD xfdesktop-4.4.0-r3.ebuild 2215 RMD160 1df6d9cff077ad59f3c297377b66980208a443a7 SHA1 472b5042963d150cebc71e4956077971e1fb8a3b SHA256 8d8c5feea80b95ec8db21b38e54841d8ec4ea2cfbcbc7d5c2b4f792cc4939c3c
-MD5 6f8a94adf72821d66e2b6a8cf78d8fd4 xfdesktop-4.4.0-r3.ebuild 2215
-RMD160 1df6d9cff077ad59f3c297377b66980208a443a7 xfdesktop-4.4.0-r3.ebuild 2215
-SHA256 8d8c5feea80b95ec8db21b38e54841d8ec4ea2cfbcbc7d5c2b4f792cc4939c3c xfdesktop-4.4.0-r3.ebuild 2215
 EBUILD xfdesktop-4.4.1-r1.ebuild 2339 RMD160 fcf4e27a94b90096c9dff487b9382028f6d363c5 SHA1 3e97defe0b9754da395311bc46310815ae3b628c SHA256 f844565d7e01da8918c9c34cce7eb75673aa24c35eb007c2d4b5436ce7d930e4
 MD5 2e47f24923bec388e5a6a26873aa2585 xfdesktop-4.4.1-r1.ebuild 2339
 RMD160 fcf4e27a94b90096c9dff487b9382028f6d363c5 xfdesktop-4.4.1-r1.ebuild 2339
@@ -20,9 +15,6 @@ MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae9
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
-MD5 db027821b7e60e49379b3973b26fb969 files/digest-xfdesktop-4.4.0-r3 253
-RMD160 4a58b0833a20674e9b5c1d148477eac92ca561e7 files/digest-xfdesktop-4.4.0-r3 253
-SHA256 4d72ecec4468ad413db51f9e36be65a2430535ef756ce08e6b54eb4a54b72391 files/digest-xfdesktop-4.4.0-r3 253
 MD5 0b193eba97f4d5f86746f47d6eca4bb7 files/digest-xfdesktop-4.4.1-r1 253
 RMD160 331a1eab011b0b30a5ee74dceb5f9502c9172df5 files/digest-xfdesktop-4.4.1-r1 253
 SHA256 4d54e57f1f9b6ad05a5e4b2fd4b79c6a8ee44855a6f5fcaef4475d062d63e45b files/digest-xfdesktop-4.4.1-r1 253

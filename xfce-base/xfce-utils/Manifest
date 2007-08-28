@@ -2,20 +2,11 @@ AUX Gentoo 644 RMD160 29853c59779a2eb685aa4082bf5c312588fbe633 SHA1 01f2135774ea
 MD5 930471c0f790dbd6ba87c44e21dfd801 files/Gentoo 644
 RMD160 29853c59779a2eb685aa4082bf5c312588fbe633 files/Gentoo 644
 SHA256 1ddff80be5707ff8eb888d8f41d9cd0df5c7e0e1bd84c28ed962b4c71028efc1 files/Gentoo 644
-AUX xfce-utils-4.4.0-xdg_data_dirs.patch 1410 RMD160 939fb237b8c02ab7ae38696466cdd99fe0b120e0 SHA1 a603accada17f787042de04907bb066dfa240026 SHA256 a01d7595ebd9c0a42101ef88f44a1d37b57d5441af0bf5cc92604fdce5488a25
-MD5 82899bfaed4b9cb7b648ff4422dae5d5 files/xfce-utils-4.4.0-xdg_data_dirs.patch 1410
-RMD160 939fb237b8c02ab7ae38696466cdd99fe0b120e0 files/xfce-utils-4.4.0-xdg_data_dirs.patch 1410
-SHA256 a01d7595ebd9c0a42101ef88f44a1d37b57d5441af0bf5cc92604fdce5488a25 files/xfce-utils-4.4.0-xdg_data_dirs.patch 1410
 AUX xfce-utils-4.4.1-xdg_data_dirs.patch 558 RMD160 92caf2870718a3ca2fd225460b1cb5ddea37c676 SHA1 11ecbd5397973b5d6481eb894773cf94a1ecf459 SHA256 a25b288dd3b0ebd4f903b9ef6e335cadd8de140067f817a1201309b55d187140
 MD5 ae66765a949d129427073cbdec3f651f files/xfce-utils-4.4.1-xdg_data_dirs.patch 558
 RMD160 92caf2870718a3ca2fd225460b1cb5ddea37c676 files/xfce-utils-4.4.1-xdg_data_dirs.patch 558
 SHA256 a25b288dd3b0ebd4f903b9ef6e335cadd8de140067f817a1201309b55d187140 files/xfce-utils-4.4.1-xdg_data_dirs.patch 558
-DIST xfce-utils-4.4.0.tar.bz2 559900 RMD160 4e7668bd6827cfd8ed60b6e2a3b60b70cc2f05a2 SHA1 181dadd737a7ff4f7085729318d3b7a3aebb9a69 SHA256 37ab42beaeea0d846920ec805213fcf8987bd74ac1f78153493ae9af3d5b2441
 DIST xfce-utils-4.4.1.tar.bz2 608154 RMD160 65ed96acb6491829d0f97e8b1e4b5cba64a73e63 SHA1 69ab30d45bbe252993f783e2f4d7f184226cacbb SHA256 80355762effab1e47110ac411d705b3044326e3b2cc357afefdb51e2c6f76cae
-EBUILD xfce-utils-4.4.0-r3.ebuild 1080 RMD160 29f684095bd780e1a8fdf43e6c6c3739a3d99400 SHA1 185a3c9729770747e51c0defe1352f16fe8d4d44 SHA256 9498eb189a2e39d5ade6e2769dd8ef7efe6f30b20fb48207a494bc0aa01bd7e2
-MD5 2f073f2751806baea09dae3f489b8d08 xfce-utils-4.4.0-r3.ebuild 1080
-RMD160 29f684095bd780e1a8fdf43e6c6c3739a3d99400 xfce-utils-4.4.0-r3.ebuild 1080
-SHA256 9498eb189a2e39d5ade6e2769dd8ef7efe6f30b20fb48207a494bc0aa01bd7e2 xfce-utils-4.4.0-r3.ebuild 1080
 EBUILD xfce-utils-4.4.1-r1.ebuild 1194 RMD160 9a9db0c9e6d3208ffc76e1cb01e9c7f377e7b8bd SHA1 8f139ccb77396d9b9f373e7a98234537c30345f9 SHA256 08a41b4cb2d80009112c643775b97ca5147443afb40f1c9d63d08721cb1beb8b
 MD5 24e21e8058a3d9688427ee1ab62c21e5 xfce-utils-4.4.1-r1.ebuild 1194
 RMD160 9a9db0c9e6d3208ffc76e1cb01e9c7f377e7b8bd xfce-utils-4.4.1-r1.ebuild 1194
@@ -28,9 +19,6 @@ MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae9
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
-MD5 647e6fbc8e329f415a2b8c434d4e3970 files/digest-xfce-utils-4.4.0-r3 253
-RMD160 6bcf776bab98f4c2a6a81425a1ccf5bcda4ae6ae files/digest-xfce-utils-4.4.0-r3 253
-SHA256 ce45e806ecb968c9c13e4ef00b768a7bea71f0a9f46c2b6c246d739fa5bab939 files/digest-xfce-utils-4.4.0-r3 253
 MD5 c43c810897ba7b4b82f9a3b0b6d669a2 files/digest-xfce-utils-4.4.1-r1 253
 RMD160 ac5c698c978b4379382ea5b3eb813aeed1144637 files/digest-xfce-utils-4.4.1-r1 253
 SHA256 63e872c24850434e986cf46833cd1d42100f8ae83096dce411fdfc96208588d2 files/digest-xfce-utils-4.4.1-r1 253
