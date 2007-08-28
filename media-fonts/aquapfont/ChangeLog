@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/aquapfont
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.24 2007/08/24 20:54:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.25 2007/08/28 09:43:10 nixnut Exp $
+
+  28 Aug 2007; nixnut <nixnut@gentoo.org> aquapfont-2.6.ebuild:
+  Stable on ppc wrt bug 189979
 
   24 Aug 2007; Raúl Porcel <armin76@gentoo.org> aquapfont-2.6.ebuild:
   alpha/ia64/x86 stable wrt #189979
