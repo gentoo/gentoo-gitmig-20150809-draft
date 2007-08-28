@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3.7.ebuild,v 1.1 2007/08/24 18:42:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3.7.ebuild,v 1.2 2007/08/28 09:00:17 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -200,10 +200,6 @@ pkg_preinst() {
 		rm -rf "${D}"/${portage_base}/bin/*
 		mv "${T}"/tbz2tool "${D}"/${portage_base}/bin/
 	fi
-
-	# Save a list of specific python sources to compile during postinst.
-	find "${D}"${portage_base}/pym -name "*.py" -print | \
-		sed -e "s:^${D}::" > "${T}"/pym_src_file_list
 }
 
 pkg_postinst() {
@@ -221,17 +217,9 @@ pkg_postinst() {
 		[ -e "${x}" ] && mv -f "${x}" "${ROOT}etc/make.globals"
 	done
 
-	# Wipe out existing bytecodes to prevent possible interference
-	# when the new and old version have namespace differences.
-	remove_python_bytecodes
-
-	# Compile only the source files that have just been installed.
-	python -c 'import py_compile; py_compile.main()' \
-		$(while read x; do echo "${ROOT%/}${x}"; done \
-		< "${T}"/pym_src_file_list)
-	python -O -c 'import py_compile; py_compile.main()' \
-		$(while read x; do echo "${ROOT%/}${x}"; done \
-		< "${T}"/pym_src_file_list)
+	# Compile all source files recursively. Any orphans
+	# will be identified and removed in postrm.
+	compile_all_python_bytecodes "${ROOT}usr/$(get_libdir)/portage/pym"
 
 	elog
 	elog "FEATURES=\"userfetch\" is now enabled by default. Depending on your \${DISTDIR}"
@@ -248,12 +236,21 @@ pkg_postinst() {
 	portage_docs
 }
 
-remove_python_bytecodes() {
-	local d="${ROOT}/usr/$(get_libdir)/portage/pym"
-	[ -d "${d}" ] || return
-	find "${d}" -type d -print0 | \
-	while read -d $'\0' d ; do
-		cd "${d}"
-		rm -f *.pyc *.pyo
+pkg_postrm() {
+	remove_orphan_python_bytecodes "${ROOT}usr/$(get_libdir)/portage/pym"
+}
+
+compile_all_python_bytecodes() {
+	python -c "from compileall import compile_dir; compile_dir('${1}', quiet=True)"
+	python -O -c "from compileall import compile_dir; compile_dir('${1}', quiet=True)"
+}
+
+remove_orphan_python_bytecodes() {
+	[[ -d ${1} ]] || return
+	find "${1}" -name '*.py[co]' -print0 | \
+	while read -d $'\0' f ; do
+		src_py=${f%[co]}
+		[[ -f ${src_py} ]] && continue
+		rm -f "${src_py}"[co]
 	done
 }
