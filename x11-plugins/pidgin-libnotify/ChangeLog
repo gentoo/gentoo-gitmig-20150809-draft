@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-libnotify
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/ChangeLog,v 1.4 2007/08/26 12:39:47 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/ChangeLog,v 1.5 2007/08/28 14:51:03 nixnut Exp $
+
+  28 Aug 2007; nixnut <nixnut@gentoo.org> pidgin-libnotify-0.13.ebuild:
+  Stable on ppc wrt bug 190200
 
   26 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
   pidgin-libnotify-0.13.ebuild:
