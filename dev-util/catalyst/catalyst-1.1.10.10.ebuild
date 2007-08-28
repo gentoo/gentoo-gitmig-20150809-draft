@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10.10.ebuild,v 1.7 2007/04/07 04:20:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10.10.ebuild,v 1.8 2007/08/28 18:34:24 wolf31o2 Exp $
 
 inherit eutils
 
@@ -15,8 +15,6 @@ IUSE="doc ccache cdr examples"
 
 DEPEND=""
 RDEPEND="dev-lang/python
-	amd64? ( sys-apps/setarch )
-	ppc64? ( sys-apps/setarch )
 	ccache? ( dev-util/ccache )
 	cdr? (
 		virtual/cdrtools
@@ -72,5 +70,7 @@ pkg_postinst() {
 	elog "You can find more information about catalyst by checking out the"
 	elog "catalyst project page at:"
 	elog "http://www.gentoo.org/proj/en/releng/catalyst/index.xml"
+	echo
+	elog "This version of catalyst is considered obsolete. Please use 2.x or better"
 	echo
 }
