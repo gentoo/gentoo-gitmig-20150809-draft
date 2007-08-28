@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/hcfusbmodem-1.11.ebuild,v 1.2 2007/05/02 08:07:45 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/hcfusbmodem-1.11-r1.ebuild,v 1.1 2007/08/28 19:00:02 mrness Exp $
 
 inherit linux-info eutils
 
@@ -19,6 +19,12 @@ DEPEND="dev-lang/perl
 S="${WORKDIR}/${P}powerpcfull"
 
 QA_EXECSTACK="usr/lib/hcfusbmodem/modules/imported/hcfblam-powerpc.O usr/lib/hcfusbmodem/modules/imported/hcfengine-powerpc.O"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch "${FILESDIR}"/${P}-unset-locale.patch
+}
 
 src_compile() {
 	emake all || die "make failed"

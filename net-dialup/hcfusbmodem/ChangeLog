@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/hcfusbmodem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/ChangeLog,v 1.22 2007/05/02 08:07:45 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/ChangeLog,v 1.23 2007/08/28 19:00:02 mrness Exp $
+
+*hcfusbmodem-1.11-r1 (28 Aug 2007)
+
+  28 Aug 2007; Alin Năstac <mrness@gentoo.org>
+  +files/hcfusbmodem-1.11-unset-locale.patch, -hcfusbmodem-1.11.ebuild,
+  +hcfusbmodem-1.11-r1.ebuild:
+  Unset locale environment vars (#185193).
 
   02 May 2007; Marius Mauch <genone@gentoo.org> hcfusbmodem-1.11.ebuild:
   Replacing einfo with elog

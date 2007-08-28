@@ -1,0 +1,49 @@
+diff -Nru hcfusbmodem-1.11powerpcfull.orig/makefile hcfusbmodem-1.11powerpcfull/makefile
+--- hcfusbmodem-1.11powerpcfull.orig/makefile	2007-01-31 19:03:44.000000000 +0200
++++ hcfusbmodem-1.11powerpcfull/makefile	2007-08-28 21:54:34.000000000 +0300
+@@ -211,7 +211,7 @@
+ 		mv debian/changelog.tmp debian/changelog; \
+ 		( echo "TARGET_DISTRO=$$d" ; echo "TARGET_KERNEL=$$k" ; echo "DISTROKERNHDRSDIR=$(DISTROKERNHDRSDIR)" ; echo "PACKAGE_NAME=$(@F)" ; echo "PACKAGE_ARCH=$(*D)" ) > debian/target.mak; \
+ 	fi
+-	unset LANG; unset LOCALE; unset LC_TIME; dpkg-buildpackage -a$(IMPORTED_ARCH) -us -uc || true
++	unset LANG; unset LOCALE; unset LC_ALL; unset LC_TIME; dpkg-buildpackage -a$(IMPORTED_ARCH) -us -uc || true
+ 	rm -f debian/target.mak
+ 	mv ../$(CNXTTARGET)modem_*.deb packages/DEBS/$(*D)/$(@F)
+ 	rm -f ../$(CNXTTARGET)modem_* ../$(CNXTTARGET)modem-doc_*
+diff -Nru hcfusbmodem-1.11powerpcfull.orig/modules/kernelcompiler.sh hcfusbmodem-1.11powerpcfull/modules/kernelcompiler.sh
+--- hcfusbmodem-1.11powerpcfull.orig/modules/kernelcompiler.sh	2005-10-21 19:15:04.000000000 +0300
++++ hcfusbmodem-1.11powerpcfull/modules/kernelcompiler.sh	2007-08-28 21:55:54.000000000 +0300
+@@ -8,7 +8,7 @@
+ KERNELVER="$1"
+ KERNELSRC="$2"
+ 
+-unset LANG
++unset LANG LOCALE LC_ALL
+ 
+ if [ -n "${RPM_BUILD_ROOT}${DEB_HOST_GNU_SYSTEM}" ]; then
+ 	if [ -f "${KERNELSRC}/kernelcompiler" ]; then
+diff -Nru hcfusbmodem-1.11powerpcfull.orig/scripts/cnxtconfig.in hcfusbmodem-1.11powerpcfull/scripts/cnxtconfig.in
+--- hcfusbmodem-1.11powerpcfull.orig/scripts/cnxtconfig.in	2007-01-31 18:59:11.000000000 +0200
++++ hcfusbmodem-1.11powerpcfull/scripts/cnxtconfig.in	2007-08-28 21:55:54.000000000 +0300
+@@ -2563,7 +2563,7 @@
+ 	exit $?
+ fi
+ 
+-unset LANG
++unset LANG LOCALE LC_ALL
+ 
+ umask 022
+ 
+diff -Nru hcfusbmodem-1.11powerpcfull.orig/scripts/patcher.in hcfusbmodem-1.11powerpcfull/scripts/patcher.in
+--- hcfusbmodem-1.11powerpcfull.orig/scripts/patcher.in	2005-12-08 05:33:35.000000000 +0200
++++ hcfusbmodem-1.11powerpcfull/scripts/patcher.in	2007-08-28 21:55:54.000000000 +0300
+@@ -285,8 +285,7 @@
+ # Safe environment...
+ PATH=/usr/sbin:/sbin:/usr/bin:/bin:/usr/local/sbin:/usr/local/bin
+ export PATH
+-unset LANG
+-unset LOCALE
++unset LANG LOCALE LC_ALL
+ umask 022
+ 
+ if check_tools gawk; then
