@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.56 2007/08/28 13:40:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.57 2007/08/28 20:15:09 jer Exp $
+
+  28 Aug 2007; Jeroen Roovers <jer@gentoo.org> libxmlpp-2.13.1.ebuild:
+  Stable for HPPA (bug #188838).
 
   28 Aug 2007; nixnut <nixnut@gentoo.org> libxmlpp-2.13.1.ebuild:
   Stable on ppc wrt bug 188838
