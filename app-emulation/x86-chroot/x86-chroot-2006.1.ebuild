@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/x86-chroot-2006.1.ebuild,v 1.6 2007/06/26 01:39:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/x86-chroot-2006.1.ebuild,v 1.7 2007/08/28 11:58:41 angelos Exp $
 
 inherit linux-info
 
@@ -13,8 +13,7 @@ SLOT="${PV}"
 KEYWORDS="-* ~amd64"
 IUSE="X"
 
-RDEPEND="sys-apps/setarch
-	X? ( x11-apps/xhost )"
+RDEPEND="X? ( x11-apps/xhost )"
 
 RESTRICT="userpriv" #178935
 

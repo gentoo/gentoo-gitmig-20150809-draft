@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/x86-chroot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/ChangeLog,v 1.9 2007/06/01 02:06:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/ChangeLog,v 1.10 2007/08/28 11:58:41 angelos Exp $
+
+  28 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  x86-chroot-2006.1.ebuild:
+  Removed redundant dependency on sys-apps/setarch
 
   01 Jun 2007; Christoph Mende <angelos@gentoo.org>
   x86-chroot-2006.1.ebuild:
