@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/berusky
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/berusky/ChangeLog,v 1.1 2007/08/28 15:31:36 tupone Exp $
+
+*berusky-1.1 (28 Aug 2007)
+
+  28 Aug 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/berusky-1.1-gentoo.patch, +metadata.xml, +berusky-1.1.ebuild:
+  New package, requested via bug #180372 by Matija Suklje
+
