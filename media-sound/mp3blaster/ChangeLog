@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3blaster
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.32 2007/08/17 01:58:09 drac Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.33 2007/08/28 15:31:24 vapier Exp $
+
+  28 Aug 2007; Mike Frysinger <vapier@gentoo.org>
+  mp3blaster-3.2.3-r1.ebuild:
+  Playback is screwed on ppc, so explicitly mark as -ppc.
 
   17 Aug 2007; Samuli Suominen <drac@gentoo.org> mp3blaster-3.2.3-r1.ebuild:
   Disable broken feature, nas.

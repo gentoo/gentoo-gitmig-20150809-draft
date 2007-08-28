@@ -1,14 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.3-r1.ebuild,v 1.5 2007/08/17 01:58:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.3-r1.ebuild,v 1.6 2007/08/28 15:31:24 vapier Exp $
 
-DESCRIPTION="Text console based program for playing audio files."
-HOMEPAGE="http://mp3blaster.sourceforge.net"
+DESCRIPTION="Text console based program for playing audio files"
+HOMEPAGE="http://mp3blaster.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc64 ~sparc ~x86"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 -ppc ~ppc64 ~sparc ~x86"
 IUSE="esd lirc sdl sid vorbis"
 
 RDEPEND=">=sys-libs/ncurses-5.2
