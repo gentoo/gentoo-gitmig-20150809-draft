@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.43 2007/08/27 21:08:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.44 2007/08/28 06:12:19 ulm Exp $
 
 *slime-2.0_p20070822 (27 Aug 2007)
 *slime-2.0_p20061118 (27 Aug 2007)
@@ -10,7 +10,8 @@
   +files/swank-loader.lisp, +slime-2.0_p20061118.ebuild,
   +slime-2.0_p20070822.ebuild:
   Version bump: new CVS snapshot, everything contributed by Stelian Ionescu
-  <stelian.ionescu-zeus@poste.it>. Rename old ebuild according to policy.
+  <sionescu@common-lisp.net>. Rename old ebuild according to Gentoo policy.
+  Update "LICENSE".
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   slime-2.0.0.20061118.ebuild:
