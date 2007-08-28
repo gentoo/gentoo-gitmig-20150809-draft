@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.60.00.09.ebuild,v 1.1 2007/07/14 08:42:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.60.00.09-r1.ebuild,v 1.1 2007/08/28 18:46:33 mrness Exp $
 
 inherit eutils linux-info
 
@@ -42,6 +42,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${MY_ARCH_S}"
 	epatch "${FILESDIR}/${P}-udev-group.patch"
+	epatch "${FILESDIR}/${P}-unset-locale.patch"
 }
 
 src_compile() {
