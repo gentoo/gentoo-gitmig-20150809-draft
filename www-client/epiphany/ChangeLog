@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.124 2007/08/24 15:43:15 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.125 2007/08/28 19:30:53 jer Exp $
+
+  28 Aug 2007; Jeroen Roovers <jer@gentoo.org> epiphany-2.18.2.ebuild:
+  Stable for HPPA (bug #185823).
 
 *epiphany-2.18.3 (24 Aug 2007)
 
