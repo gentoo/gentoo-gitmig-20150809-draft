@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-3.2.ebuild,v 1.7 2007/08/25 13:57:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-3.2.ebuild,v 1.8 2007/08/28 17:54:07 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gswitchit/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ~ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="||	( x11-misc/xkeyboard-config x11-misc/xkbdata )
