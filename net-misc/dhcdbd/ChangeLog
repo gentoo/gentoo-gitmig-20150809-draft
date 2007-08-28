@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcdbd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.8 2007/08/26 12:11:18 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.9 2007/08/28 14:35:09 nixnut Exp $
+
+  28 Aug 2007; nixnut <nixnut@gentoo.org> dhcdbd-2.8-r1.ebuild:
+  Stable on ppc wrt bug 189781
 
   26 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> dhcdbd-2.8-r1.ebuild:
   Marked stable on amd64 as per bug 189781.
