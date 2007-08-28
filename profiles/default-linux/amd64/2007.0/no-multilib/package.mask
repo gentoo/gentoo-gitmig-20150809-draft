@@ -1,7 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2007.0/no-multilib/package.mask,v 1.15 2007/08/27 16:40:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2007.0/no-multilib/package.mask,v 1.16 2007/08/28 16:24:56 angelos Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
+app-accessibility/mbrola
 app-antivirus/bitdefender-console
 app-antivirus/f-prot
 app-antivirus/vlnx
