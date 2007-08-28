@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.20.2_p14282.ebuild,v 1.2 2007/08/27 14:37:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.20.2_p14282.ebuild,v 1.3 2007/08/28 23:14:24 cardoe Exp $
 
 ESVN_PROJECT="mythplugins"
 
@@ -40,6 +40,8 @@ src_install() {
 
 	webapp_serverowned ${MY_HTDOCSDIR}/data
 	webapp_serverowned ${MY_HTDOCSDIR}/.htaccess
+
+	webapp_configfile ${MY_HTDOCSDIR}/.htaccess
 
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en-0.20.txt
 
