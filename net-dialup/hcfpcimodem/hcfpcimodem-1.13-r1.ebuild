@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.13.ebuild,v 1.2 2007/07/15 04:52:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.13-r1.ebuild,v 1.1 2007/08/28 18:53:06 mrness Exp $
 
 inherit eutils linux-info
 
@@ -52,6 +52,7 @@ src_unpack() {
 	unpack ${A}
 
 	epatch "${FILESDIR}/${P}-implicit-declarations.patch"
+	epatch "${FILESDIR}/${P}-unset-locale.patch"
 }
 
 src_compile() {

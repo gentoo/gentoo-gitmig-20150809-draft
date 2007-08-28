@@ -1,0 +1,49 @@
+diff -Nru hcfpcimodem-1.13full.orig/makefile hcfpcimodem-1.13full/makefile
+--- hcfpcimodem-1.13full.orig/makefile	2007-05-10 21:06:08.000000000 +0300
++++ hcfpcimodem-1.13full/makefile	2007-08-28 21:49:33.000000000 +0300
+@@ -229,7 +229,7 @@
+ 		mv debian/changelog.tmp debian/changelog; \
+ 		( echo CNXTDRIVER=$(CNXTDRIVER); echo "TARGET_DISTRO=$$d"; echo "TARGET_KERNEL=$$k"; echo "DISTROKERNHDRSDIR=$(DISTROKERNHDRSDIR)"; echo "PACKAGE_NAME=$(@F)"; echo "PACKAGE_ARCH=$(*D)" ) > debian/target.mak; \
+ 	fi
+-	unset LANG; unset LOCALE; unset LC_TIME; dpkg-buildpackage -a$(IMPORTED_ARCH_DEBIAN) -us -uc || true
++	unset LANG; unset LOCALE; unset LC_ALL; unset LC_TIME; dpkg-buildpackage -a$(IMPORTED_ARCH_DEBIAN) -us -uc || true
+ 	rm -f debian/target.mak
+ 	mv ../$(CNXTTARGET)modem_*.deb packages/DEBS/$(*D)/$(@F)
+ 	rm -f ../$(CNXTTARGET)modem_* ../$(CNXTTARGET)modem-doc_*
+diff -Nru hcfpcimodem-1.13full.orig/modules/kernelcompiler.sh hcfpcimodem-1.13full/modules/kernelcompiler.sh
+--- hcfpcimodem-1.13full.orig/modules/kernelcompiler.sh	2007-04-20 17:30:51.000000000 +0300
++++ hcfpcimodem-1.13full/modules/kernelcompiler.sh	2007-08-28 21:48:52.000000000 +0300
+@@ -8,7 +8,7 @@
+ KERNELVER="$1"
+ KERNELSRC="$2"
+ 
+-unset LANG
++unset LANG LOCALE LC_ALL
+ 
+ if [ -n "${RPM_BUILD_ROOT}${DEB_HOST_GNU_SYSTEM}" ]; then
+ 	if [ -f "${KERNELSRC}/kernelcompiler" ]; then
+diff -Nru hcfpcimodem-1.13full.orig/scripts/cnxtconfig.in hcfpcimodem-1.13full/scripts/cnxtconfig.in
+--- hcfpcimodem-1.13full.orig/scripts/cnxtconfig.in	2007-05-10 21:06:08.000000000 +0300
++++ hcfpcimodem-1.13full/scripts/cnxtconfig.in	2007-08-28 21:48:52.000000000 +0300
+@@ -2635,7 +2635,7 @@
+ 	exit $?
+ fi
+ 
+-unset LANG
++unset LANG LOCALE LC_ALL
+ 
+ umask 022
+ 
+diff -Nru hcfpcimodem-1.13full.orig/scripts/patcher.in hcfpcimodem-1.13full/scripts/patcher.in
+--- hcfpcimodem-1.13full.orig/scripts/patcher.in	2005-12-08 05:33:35.000000000 +0200
++++ hcfpcimodem-1.13full/scripts/patcher.in	2007-08-28 21:48:52.000000000 +0300
+@@ -285,8 +285,7 @@
+ # Safe environment...
+ PATH=/usr/sbin:/sbin:/usr/bin:/bin:/usr/local/sbin:/usr/local/bin
+ export PATH
+-unset LANG
+-unset LOCALE
++unset LANG LOCALE LC_ALL
+ umask 022
+ 
+ if check_tools gawk; then

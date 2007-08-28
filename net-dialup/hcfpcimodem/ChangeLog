@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/hcfpcimodem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.31 2007/07/14 07:41:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.32 2007/08/28 18:53:06 mrness Exp $
+
+*hcfpcimodem-1.13-r1 (28 Aug 2007)
+
+  28 Aug 2007; Alin Năstac <mrness@gentoo.org>
+  +files/hcfpcimodem-1.13-unset-locale.patch, -hcfpcimodem-1.13.ebuild,
+  +hcfpcimodem-1.13-r1.ebuild:
+  Unset locale environment vars (#185193).
 
 *hcfpcimodem-1.13 (14 Jul 2007)
 
