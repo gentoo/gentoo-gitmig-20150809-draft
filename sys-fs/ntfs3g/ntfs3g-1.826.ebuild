@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.616-r2.ebuild,v 1.1 2007/06/26 00:18:48 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.826.ebuild,v 1.1 2007/08/28 13:53:44 chutzpah Exp $
 
 inherit multilib toolchain-funcs
 
