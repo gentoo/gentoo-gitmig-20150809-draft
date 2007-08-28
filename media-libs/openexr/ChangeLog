@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openexr
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.49 2007/08/22 17:54:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.50 2007/08/28 18:25:05 nixnut Exp $
+
+  28 Aug 2007; nixnut <nixnut@gentoo.org> openexr-1.4.0a.ebuild:
+  Stable on ppc wrt bug 181063
 
   22 Aug 2007; Alexis Ballier <aballier@gentoo.org> openexr-1.4.0a.ebuild:
   add some warnings about abi changes
