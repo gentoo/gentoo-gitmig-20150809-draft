@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.53 2007/08/28 13:35:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.54 2007/08/28 20:18:53 jer Exp $
+
+  28 Aug 2007; Jeroen Roovers <jer@gentoo.org> libgnomeuimm-2.18.0.ebuild:
+  Stable for HPPA (bug #188838).
 
   28 Aug 2007; nixnut <nixnut@gentoo.org> libgnomeuimm-2.18.0.ebuild:
   Stable on ppc wrt bug 188838
