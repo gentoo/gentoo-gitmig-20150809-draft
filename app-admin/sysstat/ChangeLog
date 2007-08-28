@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.64 2007/08/28 15:37:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.65 2007/08/28 15:44:54 jer Exp $
+
+  28 Aug 2007; Jeroen Roovers <jer@gentoo.org> -sysstat-7.1.5.ebuild:
+  Remove deprecated development version.
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org> sysstat-7.0.4-r2.ebuild:
   Fix trivial (QA) issues.
