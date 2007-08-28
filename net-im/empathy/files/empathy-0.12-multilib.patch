@@ -1,0 +1,38 @@
+--- empathy-0.12.orig/configure.ac	2007-08-24 17:49:42.000000000 -0400
++++ empathy-0.12/configure.ac	2007-08-27 17:14:19.000000000 -0400
+@@ -177,7 +177,12 @@ if test "x$have_python" = "xno"; then
+ 	enable_python="no (missing dependencies)"
+ else
+ 	if test "x$enable_python" != "xno"; then
+-		enable_python="yes"
++		AM_PATH_PYTHON
++		if test -z "$PYTHON" ; then
++			enable_python="no"
++		else
++			enable_python="yes"
++		fi
+ 	else
+ 		enable_python="no (disabled)"
+ 	fi
+--- empathy-0.12.orig/python/pyempathy/Makefile.am	2007-08-24 17:29:46.000000000 -0400
++++ empathy-0.12/python/pyempathy/Makefile.am	2007-08-27 17:15:07.000000000 -0400
+@@ -12,7 +12,7 @@ AM_CPPFLAGS =                           
+ BUILT_SOURCES = 					\
+ 	pyempathy.c					
+ 
+-pyempathydir = $(prefix)/lib/`pyversions -d`/site-packages
++pyempathydir = $(pyexecdir)
+ pyempathy_LTLIBRARIES = empathy.la
+ 
+ empathy_la_SOURCES =					\
+--- empathy-0.12.orig/python/pyempathygtk/Makefile.am	2007-08-24 17:29:46.000000000 -0400
++++ empathy-0.12/python/pyempathygtk/Makefile.am	2007-08-27 17:15:43.000000000 -0400
+@@ -11,7 +11,7 @@ AM_CPPFLAGS =                           
+ BUILT_SOURCES = 					\
+ 	pyempathygtk.c					
+ 
+-pyempathygtkdir = $(prefix)/lib/`pyversions -d`/site-packages
++pyempathygtkdir = $(pyexecdir)
+ pyempathygtk_LTLIBRARIES = empathygtk.la
+ 
+ empathygtk_la_SOURCES =					\

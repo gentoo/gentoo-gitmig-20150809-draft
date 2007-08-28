@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.12.ebuild,v 1.1 2007/08/26 19:12:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.12-r1.ebuild,v 1.1 2007/08/28 20:33:16 coldwind Exp $
 
-inherit gnome2
+inherit gnome2 eutils autotools
 
 DESCRIPTION="Empathy Telepathy client"
 HOMEPAGE="http://live.gnome.org/Empathy"
@@ -11,7 +11,7 @@ SRC_URI="http://ftp.gnome.org/pub/GNOME/sources/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="spell python"
+IUSE="python spell"
 
 RDEPEND=">=dev-libs/dbus-glib-0.51
 	>=dev-libs/glib-2.12
@@ -33,6 +33,12 @@ DOCS="CONTRIBUTORS AUTHORS README"
 
 pkg_setup() {
 	G2CONF="$(use_enable spell aspell) $(use_enable python)"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+	epatch "${FILESDIR}/${P}-multilib.patch"
+	eautoreconf
 }
 
 pkg_postinst() {
