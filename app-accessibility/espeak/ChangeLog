@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.24 2007/08/28 02:27:50 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.25 2007/08/28 20:43:56 jer Exp $
+
+  28 Aug 2007; Jeroen Roovers <jer@gentoo.org> files/digest-espeak-1.29,
+  Manifest:
+  Fixed digest for 1.29.
 
 *espeak-1.29 (28 Aug 2007)
 
