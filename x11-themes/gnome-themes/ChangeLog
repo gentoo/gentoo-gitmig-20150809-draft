@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.168 2007/08/11 14:55:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.169 2007/08/28 17:18:44 jer Exp $
+
+  28 Aug 2007; Jeroen Roovers <jer@gentoo.org> gnome-themes-2.18.1.ebuild:
+  Stable for HPPA (bug #185823).
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org> gnome-themes-2.18.1.ebuild:
   Stable on x86, bug #185823.
