@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/deskbar-applet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.62 2007/08/11 16:19:19 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.63 2007/08/28 19:52:14 jer Exp $
+
+  28 Aug 2007; Jeroen Roovers <jer@gentoo.org> deskbar-applet-2.18.1.ebuild:
+  Stable for HPPA (bug #185823).
 
   11 Aug 2007; Mart Raudsepp <leio@gentoo.org>
   -files/deskbar-applet-2.13.91-multilib.patch,
