@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome2-user-docs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/ChangeLog,v 1.86 2007/08/11 14:56:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/ChangeLog,v 1.87 2007/08/28 18:19:50 jer Exp $
+
+  28 Aug 2007; Jeroen Roovers <jer@gentoo.org>
+  gnome2-user-docs-2.18.2.ebuild:
+  Stable for HPPA (bug #185823).
 
   11 Aug 2007; Andrej Kacian <ticho@gentoo.org>
   gnome2-user-docs-2.18.2.ebuild:
