@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.7-r2.ebuild,v 1.1 2007/08/23 17:40:16 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.7-r2.ebuild,v 1.2 2007/08/28 20:39:08 philantrop Exp $
 
 inherit kde-dist eutils
 
@@ -34,7 +34,8 @@ RDEPEND="${DEPEND}
 		app-text/dvipdfm ) )"
 
 PATCHES="${FILESDIR}/post-3.5.7-kdegraphics-CVE-2007-3387.diff
-		${FILESDIR}/kpdf-3.5.7-hash_path.diff"
+		${FILESDIR}/kpdf-3.5.7-hash_path.diff
+		${FILESDIR}/kdegraphics-kfile-plugins-3.5.7-openexr-1.6.0.patch"
 
 pkg_setup() {
 	kde_pkg_setup

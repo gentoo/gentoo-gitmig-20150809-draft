@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.314 2007/08/23 17:40:16 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.315 2007/08/28 20:39:08 philantrop Exp $
+
+  28 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kdegraphics-kfile-plugins-3.5.7-openexr-1.6.0.patch,
+  kdegraphics-3.5.7-r1.ebuild, kdegraphics-3.5.7-r2.ebuild:
+  Added an upstream patch to fix compilation with openexr-1.6.0 as per bug
+  189798.
 
 *kdegraphics-3.5.7-r2 (23 Aug 2007)
 
