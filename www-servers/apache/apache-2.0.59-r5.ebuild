@@ -1,13 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.0.59-r4.ebuild,v 1.1 2007/08/26 15:41:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.0.59-r5.ebuild,v 1.1 2007/08/28 08:02:29 hollow Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib
 
 # latest gentoo apache files
-#GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHNAME="gentoo-apache-${PV}-r3"
-GENTOO_PATCHSTAMP="20070821"
+GENTOO_PATCHNAME="gentoo-apache-${PVR}"
+GENTOO_PATCHSTAMP="20070828"
 GENTOO_DEVSPACE="hollow"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
@@ -296,30 +295,6 @@ src_install () {
 	insinto /etc/logrotate.d
 	newins ${GENTOO_PATCHDIR}/scripts/apache2-logrotate apache2
 
-	# create our LoadModule lines
-	if ! use static-modules ; then
-		load_module=""
-		moddir="${D}/usr/$(get_libdir)/apache2/modules"
-		for m in ${mods} ; do
-			endid="no"
-
-			if [[ -e "${moddir}/mod_${m}.so" ]] ; then
-				for def in ${mod_defines} ; do
-					if [[ "${m}" == "${def%:*}" ]] ; then
-						load_module="${load_module}\n<IfDefine ${def#*:}>"
-						endid="yes"
-					fi
-				done
-				load_module="${load_module}\nLoadModule ${m}_module modules/mod_${m}.so"
-				if [[ "${endid}" == "yes" ]] ; then
-					load_module="${load_module}\n</IfDefine>"
-				fi
-			fi
-		done
-	fi
-	sed -i -e "s:%%LOAD_MODULE%%:${load_module}:" \
-		"${GENTOO_PATCHDIR}"/conf/httpd.conf || die "sed failed"
-
 	insinto /etc/apache2
 	doins ${GENTOO_PATCHDIR}/conf/apache2-builtin-mods
 	doins ${GENTOO_PATCHDIR}/conf/httpd.conf
@@ -455,47 +430,26 @@ select_mpms() {
 parse_modules_config() {
 	local name=""
 	local disable=""
-	local version="undef"
-	MY_BUILTINS=""
-	mods=""
-	[[ -f "${1}" ]] || return 1
+	[ -f ${1} ] || return 1
 
-	for i in $(sed 's/#.*//' < $1) ; do
-		if [[ "$i" == "VERSION:" ]] ; then
-			version="select"
-		elif [[ "${version}" == "select" ]] ; then
-			version="$i"
-		# start with - option for backwards compatibility only
-		elif [[ "$i" == "-" ]] ; then
+	for i in `cat $1 | sed "s/^#.*//"`; do
+		if [ $i == "-" ]; then
 			disable="true"
-		elif [[ -z "${name}" ]] && [[ "$i" != "${i/mod_/}" ]] ; then
-			name="${i/mod_/}"
-		elif [[ -n "${disable}" ]] || [[ "$i" == "disabled" ]] ; then
-			MY_BUILTINS="${MY_BUILTINS} --disable-${name}"
+		elif [ -z "$name" ] && [ ! -z "`echo $i | grep "mod_"`" ]; then
+			name=`echo $i | sed "s/mod_//"`
+		elif [ "$disable" ] && ( [ $i == "static" ] || [ $i == "shared" ] ); then
+			MY_BUILTINS="${MY_BUILTINS} --disable-$name"
 			name="" ; disable=""
-		elif [[ "$i" == "static" ]] || use static-modules ; then
-			MY_BUILTINS="${MY_BUILTINS} --enable-${name}=static"
+		elif [ $i == "static" ] || useq static-modules; then
+			MY_BUILTINS="${MY_BUILTINS} --enable-$name=yes"
 			name="" ; disable=""
-		elif [[ "$i" == "shared" ]] ; then
-			MY_BUILTINS="${MY_BUILTINS} --enable-${name}=shared"
-			mods="${mods} ${name}"
+		elif [ $i == "shared" ]; then
+			MY_BUILTINS="${MY_BUILTINS} --enable-$name=shared"
 			name="" ; disable=""
-		else
-			ewarn "Parse error in ${1} - unknown option: $i"
 		fi
 	done
 
-	# reject the file if it's unversioned or doesn't match our
-	# package major.minor. This is to make upgrading work smoothly.
-	if [[ "${version}" != "${PV%.*}" ]] ; then
-		mods=""
-		MY_BUILTINS=""
-		return 1
-	fi
-
-	einfo "Using ${1}"
-	einfo "options: ${MY_BUILTINS}"
-	einfo "LoadModules: ${mods}"
+	einfo "${1} options:\n${MY_BUILTINS}"
 }
 
 select_modules_config() {
