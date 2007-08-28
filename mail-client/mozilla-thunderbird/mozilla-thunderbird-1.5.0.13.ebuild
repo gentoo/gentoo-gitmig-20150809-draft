@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.13.ebuild,v 1.1 2007/08/28 09:59:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.13.ebuild,v 1.2 2007/08/28 18:32:39 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.mozilla.com/thunderbird/"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/source/thunderbird-${PV}-source.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ia64 ~mips ~ppc ~sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="ldap crypt"
