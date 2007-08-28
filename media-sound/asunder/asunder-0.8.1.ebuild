@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/asunder-0.8.ebuild,v 1.1 2007/08/26 19:55:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/asunder-0.8.1.ebuild,v 1.1 2007/08/28 17:51:39 drac Exp $
 
 DESCRIPTION="Asunder is a graphical CD ripper and encoder"
 HOMEPAGE="http://littlesvr.ca/asunder"
