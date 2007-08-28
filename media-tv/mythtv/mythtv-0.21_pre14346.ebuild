@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14346.ebuild,v 1.1 2007/08/28 20:37:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14346.ebuild,v 1.2 2007/08/28 20:48:27 cardoe Exp $
 
 inherit flag-o-matic multilib eutils qt3 mythtv subversion toolchain-funcs
 
@@ -28,6 +28,8 @@ RDEPEND=">=media-libs/freetype-2.0
 	)
 	$(qt_min_version 3.3)
 	virtual/mysql
+	virtual/opengl
+	virtual/glu
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	dts? ( media-libs/libdts )
 	dvd? ( 	media-libs/libdvdnav
@@ -39,7 +41,6 @@ RDEPEND=">=media-libs/freetype-2.0
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
 	vorbis? ( media-libs/libvorbis )
-	opengl? ( virtual/opengl )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
 			>=sys-libs/libavc1394-0.5.0
 			>=media-libs/libiec61883-1.0.0 )
