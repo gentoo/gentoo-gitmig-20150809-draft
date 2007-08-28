@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/cfortran-4.4.ebuild,v 1.1 2007/02/07 16:41:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/cfortran-4.4.ebuild,v 1.2 2007/08/28 12:49:10 fmccor Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Header file allowing to call Fortran routines from C and C++"
 SRC_URI="mirror://debian/pool/main/c/${PN}/${PN}_${PV}.orig.tar.gz
 	mirror://debian/pool/main/c/${PN}/${PN}_${PV}-${DEB_PR}.diff.gz"
 HOMEPAGE="http://www-zeus.desy.de/~burow/cfortran/"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 LICENSE="LGPL-2"
 IUSE="examples"
 SLOT="0"

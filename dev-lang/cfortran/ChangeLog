@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/cfortran
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.1 2007/02/07 16:41:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.2 2007/08/28 12:49:10 fmccor Exp $
+
+  28 Aug 2007; Ferris McCormick <fmccor@gentoo.org> cfortran-4.4.ebuild:
+  Add ~sparc keyword (headers only, test works, and needed for general testing).
 
 *cfortran-4.4 (07 Feb 2007)
 
