@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.115 2007/08/23 20:03:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.116 2007/08/28 17:47:58 jer Exp $
+
+  28 Aug 2007; Jeroen Roovers <jer@gentoo.org> evince-0.8.3.ebuild:
+  Stable for HPPA (bug #185823).
 
 *evince-0.9.3 (23 Aug 2007)
 
