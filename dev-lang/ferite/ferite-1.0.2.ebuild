@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.7 2007/04/22 09:55:33 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.8 2007/08/28 16:33:43 angelos Exp $
 
 inherit multilib
 
@@ -29,6 +29,7 @@ src_unpack() {
 		scripts/test/Makefile.in
 	sed -i -e '/^testscriptsdir/s:$(prefix)/share/doc/ferite/:/usr/share/doc/${PF}/:' \
 		scripts/test/rmi/Makefile.in
+	sed -i -e "s|\$prefix/lib|\$prefix/$(get_libdir)|g" configure
 }
 
 src_compile() {
