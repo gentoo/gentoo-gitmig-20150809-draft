@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/berusky/berusky-1.1.ebuild,v 1.1 2007/08/28 15:31:36 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/berusky/berusky-1.1.ebuild,v 1.2 2007/08/28 16:50:17 mr_bones_ Exp $
 
 inherit autotools eutils games
 
@@ -12,11 +12,10 @@ SRC_URI="http://www.anakreon.cz/download/${PN}/tar.gz/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl"
-RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -24,14 +23,16 @@ src_unpack() {
 	mv ../${DATAFILE}/{berusky.ini,GameData,Graphics,Levels} . \
 		|| die "failed moving data"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-	sed -i -e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
+	sed -i \
+		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		-e "s:@GENTOO_BINDIR@:${GAMES_BINDIR}:" \
-		src/defines.h berusky.ini || die "sed for patching path failed"
+		src/defines.h berusky.ini \
+		|| die "sed for patching path failed"
 	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r berusky.ini GameData Graphics Levels \
