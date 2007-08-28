@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.76 2007/08/27 18:56:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.77 2007/08/28 14:49:09 fmccor Exp $
+
+  28 Aug 2007; Ferris McCormick <fmccor@gentoo.org> use.mask:
+  Enable USE=cern for testing at developer request: <bicatali@gentoo.org>, Bug
+  #190963 Comment #3.
 
   27 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +sparc32/2006.1/2.4/deprecated, +sparc64/2006.1/2.4/deprecated:

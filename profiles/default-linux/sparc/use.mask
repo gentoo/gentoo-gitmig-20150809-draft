@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.118 2007/07/30 14:09:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.119 2007/08/28 14:49:09 fmccor Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -247,3 +247,7 @@ krb4
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # It doesn't even build
 d
+
+# Ferris McCormick <fmccor@gentoo.org>
+# Enable cern for cernlib testing with sci-physics/root)
+-cern
