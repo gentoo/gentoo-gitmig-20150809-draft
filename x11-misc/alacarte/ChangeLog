@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.40 2007/08/11 18:26:44 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.41 2007/08/28 18:52:31 jer Exp $
+
+  28 Aug 2007; Jeroen Roovers <jer@gentoo.org> alacarte-0.11.3-r1.ebuild:
+  Stable for HPPA (bug #185823).
 
   11 Aug 2007; Mart Raudsepp <leio@gentoo.org> -alacarte-0.10.1-r1.ebuild,
   -alacarte-0.11.3.ebuild:
