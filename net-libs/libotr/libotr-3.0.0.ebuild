@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/libotr-3.0.0.ebuild,v 1.8 2007/08/26 12:26:29 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/libotr-3.0.0.ebuild,v 1.9 2007/08/28 16:27:58 nixnut Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cypherpunks.ca/otr/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~hppa ~ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="dev-libs/libgpg-error
