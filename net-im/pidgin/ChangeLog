@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.27 2007/08/27 11:31:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.28 2007/08/28 14:42:04 nixnut Exp $
+
+  28 Aug 2007; nixnut <nixnut@gentoo.org> pidgin-2.1.0.ebuild:
+  Stable on ppc wrt bug 189781
 
   27 Aug 2007; Raúl Porcel <armin76@gentoo.org> pidgin-2.1.1.ebuild:
   Add ~alpha/~ia64 wrt #189781
