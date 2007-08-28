@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ml-pnet-0.8.0.ebuild,v 1.1 2007/08/19 21:19:45 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ml-pnet-0.8.0.ebuild,v 1.2 2007/08/28 23:39:13 jurek Exp $
 
 DESCRIPTION="Mono C# libraries for Portable.NET"
 HOMEPAGE="http://www.dotgnu.org/"
-SRC_URI="http://www.southern-storm.com.au/download/${P}.tar.gz"
+SRC_URI="http://www.southern-storm.com.au/download/${P}.tar.gz
+		 http://download.savannah.gnu.org/releases/dotgnu-pnet/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 X11 )"
 SLOT="0"
