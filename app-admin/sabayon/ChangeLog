@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.24 2007/08/11 18:23:29 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.25 2007/08/28 17:52:32 jer Exp $
+
+  28 Aug 2007; Jeroen Roovers <jer@gentoo.org> sabayon-2.18.1.ebuild:
+  Stable for HPPA (bug #185823).
 
   11 Aug 2007; Mart Raudsepp <leio@gentoo.org> -sabayon-2.18.0.ebuild:
   Remove old
