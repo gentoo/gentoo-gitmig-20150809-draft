@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/libjit-0.1.0.ebuild,v 1.1 2007/08/19 21:30:20 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/libjit-0.1.0.ebuild,v 1.2 2007/08/28 23:34:18 jurek Exp $
 
 inherit eutils
 
 DESCRIPTION="Just-In-Time compilation functionality and is designed to be independent of any particular virtual machine bytecode format or language"
 HOMEPAGE="http://www.southern-storm.com.au/libjit.html"
-SRC_URI="http://www.southern-storm.com.au/download/${P}.tar.gz"
+SRC_URI="http://www.southern-storm.com.au/download/${P}.tar.gz
+		 http://download.savannah.gnu.org/releases/dotgnu-pnet/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
