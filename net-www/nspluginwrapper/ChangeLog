@@ -1,6 +1,14 @@
 # ChangeLog for net-www/nspluginwrapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.13 2007/05/12 09:02:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.14 2007/08/28 13:33:48 chutzpah Exp $
+
+*nspluginwrapper-0.9.91.5 (28 Aug 2007)
+
+  28 Aug 2007; Patrick McLean <chutzpah@gentoo.org>
+  -nspluginwrapper-0.9.91.2.ebuild, -nspluginwrapper-0.9.91.3.ebuild,
+  nspluginwrapper-0.9.91.4.ebuild, +nspluginwrapper-0.9.91.5.ebuild:
+  Version bump, update ebuilds to depend on sys-apps/setarch or
+  sys-apps/util-linux-2.13 (bug #190476). Clean out older versions.
 
   12 May 2007; Steve Dibb <beandog@gentoo.org>
   nspluginwrapper-0.9.91.4.ebuild:

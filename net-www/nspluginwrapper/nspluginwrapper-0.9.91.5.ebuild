@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-0.9.91.3.ebuild,v 1.1 2007/03/09 01:39:35 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-0.9.91.5.ebuild,v 1.1 2007/08/28 13:33:48 chutzpah Exp $
 
 inherit nsplugins flag-o-matic multilib
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND=">=x11-libs/gtk+-2
 	app-emulation/emul-linux-x86-xlibs
 	app-emulation/emul-linux-x86-gtklibs
-	sys-apps/setarch"
+	|| ( >=sys-apps/util-linux-2.13 sys-apps/setarch )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
