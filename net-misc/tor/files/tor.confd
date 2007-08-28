@@ -1,8 +1,0 @@
-# If you wish to run tor in a chroot, run:
-# ebuild /var/db/pkg/net-misc/<tor-version>/<tor-version>.ebuild config
-# and un-comment the following line.
-# You can specify a different chroot directory but MAKE SURE it's empty.
-# CHROOT="/chroot/tor"
-
-# Location of pid file relative to $CHROOT
-# PIDFILE="/var/run/tor.pid"
