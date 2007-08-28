@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.48 2007/04/11 19:37:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.49 2007/08/28 04:59:24 williamh Exp $
+
+*speech-tools-1.2.96_beta (28 Aug 2007)
+
+  28 Aug 2007; William Hubbs <williamh@gentoo.org>
+  +speech-tools-1.2.96_beta.ebuild:
+  Version bump #188820.
+  Also, I have been able to re-instate festival's dependency on this package for
+  this version.
 
   11 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   speech-tools-1.2.3-r2.ebuild:
