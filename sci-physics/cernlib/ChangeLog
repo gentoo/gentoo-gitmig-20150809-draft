@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/cernlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.1 2007/08/24 21:31:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.2 2007/08/28 14:33:45 fmccor Exp $
+
+  28 Aug 2007; Ferris McCormick <fmccor@gentoo.org> cernlib-2006.ebuild:
+  Add ~sparc for testing (Bug #190163 comment 3) --- but please see Bug #190534
+  (very poor choice of compiler flags for a high performance library).
 
 *cernlib-2006 (24 Aug 2007)
 
