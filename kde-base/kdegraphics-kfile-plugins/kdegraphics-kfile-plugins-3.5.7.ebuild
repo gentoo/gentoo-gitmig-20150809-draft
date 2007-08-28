@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/kdegraphics-kfile-plugins-3.5.7.ebuild,v 1.7 2007/08/11 15:58:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-kfile-plugins/kdegraphics-kfile-plugins-3.5.7.ebuild,v 1.8 2007/08/28 19:57:17 philantrop Exp $
 
 KMNAME=kdegraphics
 KMMODULE=kfile-plugins
@@ -19,6 +19,9 @@ DEPEND="media-libs/tiff
 
 # ps installed with kghostview, pdf installed with kpdf
 KMEXTRACTONLY="kfile-plugins/ps kfile-plugins/pdf"
+
+# cf. bug 189798. Applied unconditonally as it's downwards compatible.
+PATCHES="${FILESDIR}/${P}-openexr-1.6.0.patch"
 
 src_compile() {
 	local myconf="$myconf $(use_with openexr)"
