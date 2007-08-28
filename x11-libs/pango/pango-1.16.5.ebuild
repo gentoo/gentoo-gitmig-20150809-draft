@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.16.5.ebuild,v 1.5 2007/08/28 03:24:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.16.5.ebuild,v 1.6 2007/08/28 11:24:23 nixnut Exp $
 
 inherit eutils gnome2 multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.pango.org/"
 
 LICENSE="LGPL-2 FTL"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ~ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="x11-libs/libXrender
