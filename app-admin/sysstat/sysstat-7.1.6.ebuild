@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-7.1.6.ebuild,v 1.1 2007/07/24 12:30:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-7.1.6.ebuild,v 1.2 2007/08/28 15:10:36 jer Exp $
 
 inherit eutils multilib
 
 DESCRIPTION="System performance tools for Linux"
 HOMEPAGE="http://perso.wanadoo.fr/sebastien.godard/"
-SRC_URI="http://perso.orange.fr/sebastien.godard/sysstat-${PV}.tar.gz"
+SRC_URI="http://perso.orange.fr/sebastien.godard/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch ${FILESDIR}/${PN}-7.1.4-strip.patch || die "${P}-strip.patch failed"
 }
@@ -32,7 +32,8 @@ src_compile() {
 src_install() {
 	keepdir /var/log/sa
 
-	emake DESTDIR=${D} DOC_DIR=/usr/share/doc/${PF} install || die "make install failed"
+	emake DESTDIR=${D} DOC_DIR=/usr/share/doc/${PF} \
+		install || die "make install failed"
 
 	newdoc sysstat.crond.sample crontab.example
 	newinitd "${FILESDIR}"/sysstat.init.d sysstat
