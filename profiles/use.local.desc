@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2995 2007/08/27 15:03:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2996 2007/08/28 20:38:56 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1103,6 +1103,7 @@ media-tv/mythtv:hdhomerun - Enable support for HDHomeRun boxes
 media-tv/mythtv:iptv - Enables support for IP TV based devices
 media-tv/mythtv:ivtv - Enables ivtv support
 media-tv/mythtv:lcd - Enable LCD display support using lcdproc
+media-tv/mythtv:opengl - Use OpenGL for vsync
 media-tv/mythtv:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
 media-tv/tvbrowser:themes - Install extra theme packs
 media-tv/xawtv:xext - Enable use of XFree extensions (DGA,VidMode,DPMS)
