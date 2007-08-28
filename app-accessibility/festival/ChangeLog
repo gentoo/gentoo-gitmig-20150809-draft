@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.67 2007/07/06 10:39:12 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.68 2007/08/28 05:17:33 williamh Exp $
+
+*festival-1.96_beta (28 Aug 2007)
+
+  28 Aug 2007; William Hubbs <williamh@gentoo.org>
+  +festival-1.96_beta.ebuild:
+  Version bump #188821.
+  Also, I have been able to re-enstate the dependency on speech-tools.
 
   06 Jul 2007; Roy Marples <uberlord@gentoo.org>
   +files/festival-1.95_beta-fbsd.patch, festival-1.95_beta-r4.ebuild:
