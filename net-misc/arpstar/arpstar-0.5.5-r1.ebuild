@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpstar/arpstar-0.5.5-r1.ebuild,v 1.4 2007/02/25 09:21:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpstar/arpstar-0.5.5-r1.ebuild,v 1.5 2007/08/29 19:06:08 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -25,7 +25,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/${P}-2.6.16.patch || die "epatch failed"
+	epatch "${FILESDIR}"/${P}-2.6.16.patch
+	epatch "${FILESDIR}"/2.6.22.patch
 }
 
 src_install() {

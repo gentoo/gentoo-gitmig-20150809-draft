@@ -1,0 +1,61 @@
+--- arpstar.c.orig	2007-08-21 16:07:16.000000000 +0200
++++ arpstar.c	2007-08-21 16:10:06.000000000 +0200
+@@ -113,7 +113,7 @@
+ 	struct in_ifaddr * ifa;
+ 
+ 	dev=(*skb)->dev;
+- 	arp = (*skb)->nh.arph;
++ 	arp = arp_hdr(*skb);
+ 	arp_ptr= (unsigned char *)(arp+1);
+ 	sha     = arp_ptr;
+ 	arp_ptr += dev->addr_len;
+@@ -132,7 +132,7 @@
+ 		goto out;
+ 	if(arpop==1) /*received ARP request*/
+ 	{
+-		e2dst=(unsigned char *)(*skb)->mac.raw;
++		e2dst=skb_mac_header(*skb);
+ 		/*check if it's for us and send reply if it is*/
+ 		ifa=indev->ifa_list;
+                 while(ifa!=NULL)
+@@ -239,7 +239,7 @@
+ 	unsigned int status=NF_DROP;
+ 
+  	dev=(*skb)->dev;
+-	arp = (*skb)->nh.arph;
++	arp = arp_hdr(*skb);
+ 	arp_ptr= (unsigned char *)(arp+1);
+ 	sha     = arp_ptr;
+ 	arp_ptr += dev->addr_len;
+@@ -267,9 +267,9 @@
+ {
+ 	u8 prot=1;
+ 	u32 ip;
+-	if((*skb)->h.ipiph->protocol==prot)		/*looking for icmp*/
++	if(ip_hdr(*skb)->protocol==prot)		/*looking for icmp*/
+ 	{
+-		ip=(*skb)->h.ipiph->saddr;
++		ip=ip_hdr(*skb)->saddr;
+ 		if(!check_ip(&ip,WAICMP))
+ 			add_ip(&ip,WAICMP);
+ 	}
+@@ -527,7 +527,7 @@
+ 
+ 	if(skb->len>=42||skb->len==28)	/*28 is for wireless drivers that cut off ethernet header even though it's still accessible*/
+ 	{
+-   		arp = skb->nh.arph;
++   		arp = arp_hdr(skb);
+ 		arp_ptr= (unsigned char *)(arp+1);
+ 		arpsrc     = arp_ptr;
+ 		arp_ptr += dev->addr_len;
+@@ -535,8 +535,8 @@
+ 		arp_ptr += 4;
+ 		arpdst     = arp_ptr;
+ 		arp_ptr += dev->addr_len;
+-		e2dst=(unsigned char *)skb->mac.raw;
+-		e2src=(unsigned char *)skb->mac.raw+ADDRLEN;
++		e2dst=skb_mac_header(skb);
++		e2src=skb_mac_header(skb)+ADDRLEN;
+ 		ifa=indev->ifa_list;
+ 		while(ifa!=NULL)
+ 		{
