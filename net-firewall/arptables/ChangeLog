@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/arptables
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.7 2007/08/13 12:48:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.8 2007/08/29 11:25:02 pva Exp $
+
+*arptables-0.0.3.3 (29 Aug 2007)
+
+  29 Aug 2007; <pva@gentoo.org> metadata.xml, +arptables-0.0.3.3.ebuild:
+  Version bump (bug #189939 reported by Olivier Huber <oli.huber _AT_
+  gmail.com>). Fixes bug #162886, reported by Richard Benjamin Voigt
+  <richardvoigt AT gmail.com>. Added base-system in metadata.
 
   13 Aug 2007; <pva@gentoo.org> metadata.xml:
   Took from solar per his request on -dev.
