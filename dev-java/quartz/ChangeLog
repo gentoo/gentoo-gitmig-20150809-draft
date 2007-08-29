@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/quartz
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.21 2007/06/09 22:06:32 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.22 2007/08/29 23:12:21 betelgeuse Exp $
+
+  29 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> -quartz-1.4.5.ebuild:
+  Remove old ebuild.
 
 *quartz-1.4.5-r1 (09 Jun 2007)
 
