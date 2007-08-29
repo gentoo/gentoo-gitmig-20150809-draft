@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.33 2007/08/11 15:26:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.34 2007/08/29 01:11:06 jer Exp $
+
+  29 Aug 2007; Jeroen Roovers <jer@gentoo.org> cabal-1.1.6.2.ebuild:
+  Stable for HPPA too.
 
   11 Aug 2007; Steve Dibb <beandog@gentoo.org> cabal-1.1.6.2.ebuild:
   amd64 stable
