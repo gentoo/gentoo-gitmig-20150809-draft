@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/ciphire-mail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ChangeLog,v 1.16 2007/07/22 10:29:45 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ChangeLog,v 1.17 2007/08/29 17:08:31 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing azarah from metadata due to his retirement (see #173055 for
+  reference).
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   ciphire-mail-1.1.015.ebuild, ciphire-mail-1.2.047.ebuild:
