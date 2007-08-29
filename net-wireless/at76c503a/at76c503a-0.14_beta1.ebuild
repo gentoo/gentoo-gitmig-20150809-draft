@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-0.14_beta1.ebuild,v 1.5 2007/06/24 09:52:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-0.14_beta1.ebuild,v 1.6 2007/08/29 18:48:08 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -20,8 +20,8 @@ S=${WORKDIR}/${MY_P}
 MODULE_NAMES="at76_usb(net:)"
 BUILD_TARGETS="all"
 
-CONFIG_CHECK="NET_RADIO"
-NET_RADIO_ERROR="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+CONFIG_CHECK="WIRELESS_EXT"
+WIRELESS_EXT_ERROR="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_WIRELESS_EXT)."
 
 pkg_setup() {
 	linux-mod_pkg_setup

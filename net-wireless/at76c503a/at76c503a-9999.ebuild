@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-9999.ebuild,v 1.1 2007/05/09 18:48:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-9999.ebuild,v 1.2 2007/08/29 18:48:08 genstef Exp $
 
 inherit linux-mod cvs
 
@@ -20,8 +20,8 @@ S=${WORKDIR}/${ECVS_MODULE}
 MODULE_NAMES="at76_usb(net:)"
 BUILD_TARGETS="all"
 
-CONFIG_CHECK="NET_RADIO"
-NET_RADIO_ERROR="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+CONFIG_CHECK="WIRELESS_EXT"
+WIRELESS_EXT_ERROR="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_WIRELESS_EXT)."
 
 # CVS eclass options
 ECVS_SERVER="cvs.${PN}.berlios.de:/cvsroot/${PN}"

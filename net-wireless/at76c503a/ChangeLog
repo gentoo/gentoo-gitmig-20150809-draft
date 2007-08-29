@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/at76c503a
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.16 2007/06/24 09:52:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.17 2007/08/29 18:48:08 genstef Exp $
+
+*at76c503a-9999.ebuild (29 Aug 2007)
+*at76c503a-0.14_beta1.ebuild (29 Aug 2007)
+
+  29 Aug 2007; Stefan Schweizer <genstef@gentoo.org>
+  at76c503a-0.14_beta1.ebuild, at76c503a-9999.ebuild:
+  use WIRELESS_EXT to make it work in newer kernels thanks Sonny Lander
+  <spock255@hotmail.com> in bug 188876
 
   24 Jun 2007; Stefan Schweizer <genstef@gentoo.org>
   +files/at76c503a-2.6.20-init_work.patch, at76c503a-0.14_beta1.ebuild:
