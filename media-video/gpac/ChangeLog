@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.44 2007/08/23 15:51:41 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.45 2007/08/29 04:26:04 aballier Exp $
+
+  29 Aug 2007; Alexis Ballier <aballier@gentoo.org> gpac-0.4.4.ebuild:
+  opengl also needs glut, fixing deps, thanks to Rickard Närström
+  <rickard.narstrom@gmail.com>, bug #190263
 
   23 Aug 2007; Roy Marples <uberlord@gentoo.org> gpac-0.4.4.ebuild:
   Keyworded ~x860-fbsd, #189692
