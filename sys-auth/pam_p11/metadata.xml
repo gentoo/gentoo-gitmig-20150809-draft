@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>crypto</herd>
-<maintainer>
-  <email>kaiowas@gentoo.org</email>
-    <name>Petre Rodan</name>
-</maintainer>
-<longdescription>
-pam_p11 is a plugable authentication module package for using
-cryptographic tokens for authentication
-</longdescription>
+	<herd>crypto</herd>
+	<longdescription>
+		pam_p11 is a plugable authentication module package for using
+		cryptographic tokens for authentication.
+	</longdescription>
 </pkgmetadata>
