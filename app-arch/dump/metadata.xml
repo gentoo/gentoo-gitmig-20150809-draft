@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>agriffis@gentoo.org</email>
-</maintainer>
-<longdescription>A utility to help backup and restore files on a harddrive.</longdescription>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+	</maintainer>
+	<longdescription>
+		A utility to help backup and restore files on a harddrive.
+	</longdescription>
 </pkgmetadata>
