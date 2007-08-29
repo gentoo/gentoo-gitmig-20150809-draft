@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/stumpwm-cvs
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm-cvs/ChangeLog,v 1.1 2006/04/06 16:11:36 mkennedy Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm-cvs/ChangeLog,v 1.2 2007/08/29 15:28:03 hkbst Exp $
+
+  29 Aug 2007; Marijn Schouten <hkBst@gentoo.org> stumpwm-cvs-0.ebuild:
+  remove last-rited slime-cvs or-dep
 
 *stumpwm-cvs-0 (06 Apr 2006)
 

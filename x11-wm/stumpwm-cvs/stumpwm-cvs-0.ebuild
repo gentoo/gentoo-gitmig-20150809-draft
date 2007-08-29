@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm-cvs/stumpwm-cvs-0.ebuild,v 1.2 2007/01/29 02:31:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm-cvs/stumpwm-cvs-0.ebuild,v 1.3 2007/08/29 15:28:03 hkbst Exp $
 
 inherit common-lisp cvs eutils
 
@@ -32,7 +32,7 @@ DEPEND="dev-lisp/common-lisp-controller
 # If clisp is selected, we need at least dev-lisp/clisp-2.38-r2
 
 RDEPEND="${DEPEND}
-	emacs? ( || ( app-emacs/slime app-emacs/slime-cvs ) )
+	emacs? ( app-emacs/slime )
 	!clisp? ( !sbcl? ( !amd64? ( dev-lisp/cmucl ) ) )
 	clisp? ( >=dev-lisp/clisp-2.38-r2 )
 	sbcl?  ( dev-lisp/sbcl dev-lisp/cl-clx )"
