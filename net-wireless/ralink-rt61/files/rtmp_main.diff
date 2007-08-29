@@ -1,0 +1,12 @@
+diff -Nur IS_Linux_STA_6x_D_1.1.1.0/Module/rtmp_main.c IS_Linux_STA_6x_D_1.1.1.0/Module/rtmp_main.c
+--- IS_Linux_STA_6x_D_1.1.1.0/Module/rtmp_main.c	2007-08-16 21:29:20.000000000 +1000
++++ IS_Linux_STA_6x_D_1.1.1.0/Module/rtmp_main.c	2007-07-27 12:34:54.000000000 +1000
+@@ -888,7 +888,7 @@
+ //
+ static INT __init rt61_init_module(VOID)
+ {
+-    return pci_module_init(&rt61_driver);
++    return pci_register_driver(&rt61_driver);
+ }
+ 
+ //

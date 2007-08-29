@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ralink-rt61/ralink-rt61-1.1.0.0.ebuild,v 1.5 2007/08/29 19:32:07 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ralink-rt61/ralink-rt61-1.1.1.0.ebuild,v 1.1 2007/08/29 19:32:07 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -8,9 +8,9 @@ DESCRIPTION="Driver for the RaLink RT61 wireless chipset"
 HOMEPAGE="http://www.ralinktech.com/"
 LICENSE="GPL-2"
 
-MY_P=${P/${PN}-/RT61_Linux_STA_Drv}
+MY_P=${P/${PN}-/IS_Linux_STA_6x_D_}
 
-SRC_URI="http://www.ralinktech.com/drivers/Linux/${MY_P}.tar.gz"
+SRC_URI="http://www.ralinktech.com.tw/data/${MY_P}.tar.gz"
 
 KEYWORDS="-* amd64 x86"
 IUSE=""
@@ -30,7 +30,7 @@ CONFIG_CHECK="WIRELESS_EXT"
 ERROR_WIRELESS_EXT="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_WIRELESS_EXT)."
 
 src_compile() {
-	epatch ${FILESDIR}/rt61-wireless-ext-v21.diff
+	epatch ${FILESDIR}/rtmp_main.diff
 	if kernel_is 2 6; then
 		cp Module/Makefile.6 Module/Makefile
 	elif kernel_is 2 4; then
@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
 	linux-mod_src_install
 
-	dodoc Module/{ReleaseNote,STA_iwpriv_ATE_usage.txt,readme,iwpriv_usage.txt}
+	dodoc Module/{ReleaseNote,STA_iwpriv_ATE_usage.txt,README,iwpriv_usage.txt}
 
 	insinto /etc/Wireless/RT61STA
 	insopts -m 0600
