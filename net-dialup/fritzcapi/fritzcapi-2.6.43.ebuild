@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.15 2007/07/23 19:45:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.43.ebuild,v 1.16 2007/08/29 18:45:40 genstef Exp $
 
 inherit linux-mod rpm eutils
 
@@ -98,7 +98,6 @@ pkg_setup() {
 src_unpack() {
 	rpm_unpack "${DISTDIR}/${A}" || die "failed to unpack ${A} file"
 
-	use x86 && epatch ${FILESDIR}/fritzcapi-2.6.22.patch
 	cd "${S}"
 	mkdir -p "${WORKDIR}/var/lib/fritz"
 	ln fritz.*/lib/*-lib.o "${WORKDIR}/var/lib/fritz"
@@ -116,10 +115,12 @@ src_unpack() {
 	  epatch ${FILESDIR}/2.6.43-linux-2.6.19-irq_handler.patch
 	  kernel_is ge 2 6 17 && epatch ${FILESDIR}/2.6.43-fcpcmcia.patch
 	  kernel_is ge 2 6 20 && epatch ${FILESDIR}/fritzcapi-2.6.20.patch
+	  kernel_is ge 2 6 22 && epatch ${FILESDIR}/fritzcapi-2.6.22.patch
 	else
 	  epatch ${FILESDIR}/2.6.43-linux-2.6.19-irq_handler.amd64.patch
 	  kernel_is ge 2 6 17 && epatch ${FILESDIR}/2.6.43-fcpcmcia.amd64.patch
 	  kernel_is ge 2 6 20 && epatch ${FILESDIR}/fritzcapi-2.6.20.amd64.patch
+	  kernel_is ge 2 6 22 && epatch ${FILESDIR}/2.6.43-linux-2.6.22-pci_module_init.patch
 	fi
 	find -name \*.[hc] -print0 | xargs -0 sed -i '
 		s:#include <linux/config\.h>:#include <linux/autoconf.h>:;

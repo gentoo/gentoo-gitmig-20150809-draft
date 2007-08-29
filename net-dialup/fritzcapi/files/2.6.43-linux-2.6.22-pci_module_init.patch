@@ -1,0 +1,12 @@
+diff -ur usr.orig/src/kernel-modules/fritzcapi/fritz.pci/src/main.c usr/src/kernel-modules/fritzcapi/fritz.pci/src/main.c
+--- usr.orig/src/kernel-modules/fritzcapi/fritz.pci/src/main.c	2007-08-25 09:54:42.000000000 +0200
++++ usr/src/kernel-modules/fritzcapi/fritz.pci/src/main.c	2007-08-25 09:55:02.000000000 +0200
+@@ -364,7 +364,7 @@
+ #endif
+ 
+ #if defined (__fcpci__)	
+-	if (0 == (err = pci_module_init (&fcpci_driver))) {
++	if (0 == (err = pci_register_driver (&fcpci_driver))) {
+ 		LOG("PCI driver registered.\n");
+ 		register_capi_driver (&fritz_capi_driver);
+ 		LOG("CAPI driver registered.\n");
