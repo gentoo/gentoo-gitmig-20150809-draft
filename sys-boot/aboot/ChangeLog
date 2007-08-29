@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/aboot
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/ChangeLog,v 1.10 2007/07/15 07:07:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/ChangeLog,v 1.11 2007/08/29 16:37:30 yoswink Exp $
+
+*aboot-1.0_pre20040408-r2 (29 Aug 2007)
+
+  29 Aug 2007; Jose Luis Rivero <yoswink@gentoo.org>
+  +files/aboot-pt_note.patch, +aboot-1.0_pre20040408-r2.ebuild:
+  New version which can boot kernels >2.6.23. A change in the ELF kernel
+  headers (PT_NOTE) breaks previous versions, see
+  http://lkml.org/lkml/2007/8/14/259 for details.
 
 *aboot-1.0_pre20040408-r1 (15 Jul 2007)
 
