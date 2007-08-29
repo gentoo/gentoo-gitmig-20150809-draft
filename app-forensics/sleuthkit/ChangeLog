@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.26 2007/04/11 22:20:06 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.27 2007/08/29 14:49:32 falco Exp $
+
+*sleuthkit-2.09 (29 Aug 2007)
+
+  29 Aug 2007; Raphael Marichez <falco@gentoo.org> +sleuthkit-2.09.ebuild:
+  Version bump, security bug #181977 and dstat collision issue #131268
 
 *sleuthkit-2.08 (11 Apr 2007)
 
