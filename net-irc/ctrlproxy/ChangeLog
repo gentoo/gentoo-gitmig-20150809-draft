@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ctrlproxy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.21 2007/07/23 17:18:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.22 2007/08/29 16:44:07 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing agriffis from metadata due to his retirement (see #182294 for
+  reference).
 
 *ctrlproxy-3.0.3 (23 Jul 2007)
 
