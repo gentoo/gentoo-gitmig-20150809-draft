@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.44 2007/07/25 20:39:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.45 2007/08/29 18:58:36 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing kaiowas from metadata due to his retirement (see #61930 for
+  reference).
 
   25 Jul 2007; Guy Martin <gmsoft@gentoo.org> openct-0.6.11-r1.ebuild:
   Stable on hppa

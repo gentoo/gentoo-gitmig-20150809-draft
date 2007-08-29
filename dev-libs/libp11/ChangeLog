@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.14 2007/07/26 19:19:18 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.15 2007/08/29 18:56:04 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing kaiowas from metadata due to his retirement (see #61930 for
+  reference).
 
   26 Jul 2007; Guy Martin <gmsoft@gentoo.org> libp11-0.2.3.ebuild:
   Added ~hppa to KEYWORDS.
