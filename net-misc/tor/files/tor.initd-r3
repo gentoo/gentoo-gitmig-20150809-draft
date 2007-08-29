@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/files/tor.initd-r3,v 1.1 2007/08/28 23:31:14 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/files/tor.initd-r3,v 1.2 2007/08/29 11:49:42 humpback Exp $
 
 opts="${opts} checkconfig reload"
 PIDFILE=/var/run/tor/tor.pid
@@ -35,13 +35,13 @@ start() {
 	checkconfig || return 1
         ebegin "Starting Tor"
         HOME=/var/lib/tor
-	start-stop-daemon --start --quiet --chuid tor --exec /usr/bin/tor -- --runasdaemon 1 &> /dev/null
+	start-stop-daemon --start --pidfile "${PIDFILE}" --quiet --chuid tor --exec /usr/bin/tor  -- --runasdaemon 1 --PidFile "${PIDFILE}" &> /dev/null
         eend $?
 }
 
 stop() {
         ebegin "Stopping Tor"
-	start-stop-daemon --stop --quiet --chuid tor --exec /usr/bin/tor
+	start-stop-daemon --stop --pidfile "${PIDFILE}" --chuid tor --exec /usr/bin/tor -- --PidFile "${PIDFILE}"
         eend $?
 }
 
