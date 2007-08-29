@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/glew
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.25 2007/08/13 20:59:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.26 2007/08/29 17:55:44 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing joshuabaergen from metadata due to his retirement (see #92210 for
+  reference).
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> glew-1.3.5.ebuild:
   ppc. stable
