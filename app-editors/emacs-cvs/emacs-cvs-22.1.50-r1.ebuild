@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r6.ebuild,v 1.30 2007/08/25 21:15:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50-r1.ebuild,v 1.1 2007/08/29 06:46:10 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
 ECVS_MODULE="emacs"
-ECVS_BRANCH="emacs-unicode-2"
-ECVS_LOCALNAME="emacs-unicode"
+ECVS_BRANCH="EMACS_22_BASE"
+ECVS_LOCALNAME="emacs-22"
 
 WANT_AUTOCONF="2.61"
 WANT_AUTOMAKE="latest"
@@ -18,9 +18,9 @@ HOMEPAGE="http://www.gnu.org/software/emacs/"
 SRC_URI=""
 
 LICENSE="GPL-3 FDL-1.2 BSD"
-SLOT="23"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="alsa gif gpm gtk gzip-el hesiod jpeg motif png spell sound source tiff toolkit-scroll-bars X Xaw3d xft xpm"
+SLOT="22"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+IUSE="alsa gif gtk gzip-el hesiod jpeg motif png spell sound source tiff toolkit-scroll-bars X Xaw3d xpm"
 RESTRICT="strip"
 
 X_DEPEND="x11-libs/libXmu x11-libs/libXt x11-misc/xbitmaps"
@@ -31,7 +31,6 @@ RDEPEND="sys-libs/ncurses
 	hesiod? ( net-dns/hesiod )
 	spell? ( || ( app-text/ispell app-text/aspell ) )
 	alsa? ( media-sound/alsa-headers )
-	gpm? ( sys-libs/gpm )
 	X? (
 		$X_DEPEND
 		x11-misc/emacs-desktop
@@ -40,7 +39,6 @@ RDEPEND="sys-libs/ncurses
 		tiff? ( media-libs/tiff )
 		png? ( media-libs/libpng )
 		xpm? ( x11-libs/libXpm )
-		xft? ( media-libs/fontconfig virtual/xft >=dev-libs/libotf-0.9.4 )
 		gtk? ( =x11-libs/gtk+-2* )
 		!gtk? (
 			Xaw3d? ( x11-libs/Xaw3d )
@@ -57,7 +55,7 @@ PROVIDE="virtual/editor"
 
 S="${WORKDIR}/${ECVS_LOCALNAME}"
 
-EMACS_SUFFIX="emacs-${SLOT}"
+EMACS_SUFFIX="emacs-${SLOT}-cvs"
 
 src_unpack() {
 	cvs_src_unpack
@@ -87,6 +85,7 @@ src_unpack() {
 			|| die "unable to sed configure.in"
 	fi
 
+	epatch "${FILESDIR}/${PN}-Xaw3d-headers.patch"
 	epatch "${FILESDIR}/${PN}-freebsd-sparc.patch"
 	# ALSA is detected and used even if not requested by the USE=alsa flag.
 	# So remove the automagic check
@@ -122,9 +121,6 @@ src_compile() {
 		myconf="${myconf} --with-x"
 		myconf="${myconf} $(use_with xpm)"
 		myconf="${myconf} $(use_with toolkit-scroll-bars)"
-		myconf="${myconf} $(use_enable xft font-backend)"
-		myconf="${myconf} $(use_with xft freetype)"
-		myconf="${myconf} $(use_with xft)"
 		myconf="${myconf} $(use_with jpeg) $(use_with tiff)"
 		myconf="${myconf} $(use_with gif) $(use_with png)"
 		if use gtk; then
@@ -150,7 +146,6 @@ src_compile() {
 	fi
 
 	myconf="${myconf} $(use_with hesiod)"
-	myconf="${myconf} $(use_with gpm)"
 
 	econf \
 		--program-suffix=-${EMACS_SUFFIX} \
@@ -199,7 +194,7 @@ src_install () {
 		elisp-site-file-install 00${PN}-${SLOT}-gentoo.el
 	fi
 
-	dodoc AUTHORS BUGS CONTRIBUTE README README.unicode || die "dodoc failed"
+	dodoc AUTHORS BUGS CONTRIBUTE README || die "dodoc failed"
 }
 
 emacs-infodir-rebuild() {
