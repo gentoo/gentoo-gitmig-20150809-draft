@@ -1,0 +1,10 @@
+# ChangeLog for games-rpg/coe2
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/coe2/ChangeLog,v 1.1 2007/08/29 21:38:39 tupone Exp $
+
+*coe2-2007 (29 Aug 2007)
+
+  29 Aug 2007; Tupone Alfredo <tupone@gentoo.org> +metadata.xml,
+  +coe2-2007.ebuild:
+  New package, requested via bug #181732 by Paul Bredbury
+
