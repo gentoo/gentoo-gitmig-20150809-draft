@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.129 2007/08/15 14:07:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.130 2007/08/29 17:13:24 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing bcowan from metadata due to his retirement (see #133108 for
+  reference).
 
 *icewm-1.2.32 (15 Aug 2007)
 
