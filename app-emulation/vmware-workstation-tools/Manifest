@@ -33,7 +33,7 @@ AUX xorg.conf 2646 RMD160 c3e2e153b3b9520fc8d5fa20e9e8f7a6c3790084 SHA1 a44f4240
 MD5 bd0505ab92d03f82b898858d45787f58 files/xorg.conf 2646
 RMD160 c3e2e153b3b9520fc8d5fa20e9e8f7a6c3790084 files/xorg.conf 2646
 SHA256 2503352f7fd53f23e51d53017f76167a2da0fdfbb9eb434c85573108c6bc53c8 files/xorg.conf 2646
-DIST vmware-any-any-update112.tar.gz 469362 RMD160 380bd15513583055cf0810c16ae11642454fafd3 SHA1 8d583e3779950362c1e07c5fb839f77a45a2d3ca SHA256 f6da5636812cdb72cc8036da2f23df1abe6dbe7714c029f89ad3f042b092abb2
+DIST vmware-any-any-update113.tar.gz 469321 RMD160 a4de5c17489dffade015f5bc3036f6ab882f749c SHA1 695e01d1d09f2d33db8ad8e6e2274b8b4a74b96d SHA256 ed15e61811f188e3c009d9fd8878cc74fd45e2b5644e21e4fe3010731841c99d
 EBUILD vmware-workstation-tools-4.5.3-r1.ebuild 2437 RMD160 f704de264bd54e591f98d062285a19cc01ce282f SHA1 64fb989b794fa8c2cf893c25bae484f992443aac SHA256 257c05d530f011cbe3807b342b88fae3affcf7ebacab50bc11b9ae5dfc8cf635
 MD5 fdeaf0bb526c3f8678b9716fbab77764 vmware-workstation-tools-4.5.3-r1.ebuild 2437
 RMD160 f704de264bd54e591f98d062285a19cc01ce282f vmware-workstation-tools-4.5.3-r1.ebuild 2437
@@ -58,9 +58,9 @@ MISC metadata.xml 159 RMD160 fc7f68a382390e5916b0fb43f37a893fad4f9798 SHA1 f46b0
 MD5 7cc95faad4185e8ed375248bc73a17fc metadata.xml 159
 RMD160 fc7f68a382390e5916b0fb43f37a893fad4f9798 metadata.xml 159
 SHA256 8581ae1c90a48f50fa0542c7fb28cb8984baaf12f50fa18f33e467081effb215 metadata.xml 159
-MD5 c2bbeab719f7cf63c26e23767d4cb53b files/digest-vmware-workstation-tools-4.5.3-r1 274
-RMD160 059487f89566ff382d87c29ee1299e9398ca292b files/digest-vmware-workstation-tools-4.5.3-r1 274
-SHA256 8f9d468557f995c1d08b41506224f72fb1360db1bc3fa88b04688d6fcf67024e files/digest-vmware-workstation-tools-4.5.3-r1 274
+MD5 4b537193601a6e6c57094fe3f93a6275 files/digest-vmware-workstation-tools-4.5.3-r1 274
+RMD160 be743bc729df43dbe1845aeef80bfe7ffb8eff13 files/digest-vmware-workstation-tools-4.5.3-r1 274
+SHA256 8237bf1713f5b51a027a4b275f678357ba3176fd727f6dc554c40d7c2f035347 files/digest-vmware-workstation-tools-4.5.3-r1 274
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-vmware-workstation-tools-5.5.1-r2 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-vmware-workstation-tools-5.5.1-r2 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-vmware-workstation-tools-5.5.1-r2 0
@@ -73,7 +73,7 @@ SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.5 (GNU/Linux)
 
-iD8DBQFGq4Iuu7rWomwgFXoRAnKpAJ9xb1INrZRbHTJhB6mclshsBn3xZQCgo0+7
-JnZTfHs6fjvM8ttxqvOU2YE=
-=WoPC
+iD8DBQFG1asQkT4lNIS36YERAtXmAJ9uV6eEvvmo2M1k2aS8UfablPqFRgCffQY7
+2KgrgciZoaOBHyEpZJVQTk4=
+=Sp3z
 -----END PGP SIGNATURE-----
