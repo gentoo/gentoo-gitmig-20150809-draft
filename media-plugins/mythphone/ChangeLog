@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythphone
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/ChangeLog,v 1.23 2007/08/25 23:21:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/ChangeLog,v 1.24 2007/08/29 15:29:27 cardoe Exp $
+
+  29 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythphone-0.20.2_p14282.ebuild:
+  stable 0.20.2 for Schedules Direct support needed by Sept 1
 
 *mythphone-0.20.2_p14282 (25 Aug 2007)
 

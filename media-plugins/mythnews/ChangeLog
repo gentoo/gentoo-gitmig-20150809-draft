@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythnews
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/ChangeLog,v 1.31 2007/08/25 23:16:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/ChangeLog,v 1.32 2007/08/29 15:28:39 cardoe Exp $
+
+  29 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythnews-0.20.2_p14282.ebuild:
+  stable 0.20.2 for Schedules Direct support needed by Sept 1
 
 *mythnews-0.20.2_p14282 (25 Aug 2007)
 
