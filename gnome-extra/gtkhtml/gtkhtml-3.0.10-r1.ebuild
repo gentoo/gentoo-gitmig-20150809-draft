@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.0.10-r1.ebuild,v 1.2 2007/02/16 16:57:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.0.10-r1.ebuild,v 1.3 2007/08/29 14:49:33 cardoe Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc sparc x86"
 IUSE=""
 
 RDEPEND="=gnome-extra/gal-1.99.11*
