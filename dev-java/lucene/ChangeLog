@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/lucene
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.37 2007/08/15 21:14:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.38 2007/08/29 13:55:44 betelgeuse Exp $
+
+  29 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -lucene-1.4.3-r2.ebuild:
+  Remove unused revision.
 
   15 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   lucene-1.4.3-r3.ebuild:
@@ -107,6 +111,7 @@
   use java-pkg_dohtml instead of dohtml to also install the package-list in
   case of api docs: #50740
 
+*lucene-1.4.1 (31 Aug 2004)
 *lucene-1.4 (31 Aug 2004)
 
   31 Aug 2004; Thomas Matthijs <axxo@gentoo.org> +lucene-1.4.1.ebuild,
