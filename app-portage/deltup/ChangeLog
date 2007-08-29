@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/deltup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.15 2007/07/13 11:43:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.16 2007/08/29 18:07:40 genstef Exp $
+
+*deltup-0.4.4.ebuild (29 Aug 2007)
+
+  29 Aug 2007; Stefan Schweizer <genstef@gentoo.org> -deltup-0.4.3.ebuild,
+  deltup-0.4.4.ebuild:
+  Use CHOST specific g++ thanks to Chris Slycord <cslycord@gmail.com> in bug
+  186718
 
 *deltup-0.4.4 (13 Jul 2007)
 
