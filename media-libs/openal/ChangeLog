@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.80 2007/03/28 20:45:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.81 2007/08/29 18:55:14 wolf31o2 Exp $
+
+*openal-0.0.8-r2 (29 Aug 2007)
+
+  29 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> -openal-0.0.8.ebuild,
+  -openal-0.0.8-r1.ebuild, +openal-0.0.8-r2.ebuild:
+  I am forcing a revision bump here so everybody rebuilds with the latest
+  patch. I had thought that it was only needed to build with gcc-4.2, but
+  apparently it is required that openal is built with the patch for anything
+  built with gcc-4.2 that links against it. Since there is no change in
+  content, I'm putting this straight to stable.
 
   28 Mar 2007; Raúl Porcel <armin76@gentoo.org> openal-0.0.8-r1.ebuild:
   ia64 stable wrt bug 154377

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8.ebuild,v 1.10 2006/09/04 06:55:46 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8-r2.ebuild,v 1.1 2007/08/29 18:55:14 wolf31o2 Exp $
 
 inherit eutils
 
@@ -10,8 +10,8 @@ SRC_URI="http://www.openal.org/openal_webstf/downloads/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86"
-IUSE="alsa arts esd sdl debug vorbis mp3"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+IUSE="alsa arts debug esd mp3 sdl vorbis"
 
 RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0.2 )
 	arts? ( kde-base/arts )
@@ -24,6 +24,17 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	sys-devel/automake
 	sys-devel/libtool"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	EPATCH_SUFFIX="patch"
+	epatch ${FILESDIR}/${PV} || die
+
+	sed -i \
+		-e "/^Requires:/d" \
+		admin/pkgconfig/openal.pc.in || die "sed openal.pc.in failed"
+}
 
 src_compile() {
 	export WANT_AUTOCONF=2.5
