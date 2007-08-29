@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/jpilot-plucker
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/ChangeLog,v 1.6 2006/08/29 04:31:12 chriswhite Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/ChangeLog,v 1.7 2007/08/29 16:53:17 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing agriffis from metadata due to his retirement (see #182294 for
+  reference).
 
   29 Aug 2006; Chris White <chriswhite@gentoo.org>
   jpilot-plucker-0.01.ebuild:
