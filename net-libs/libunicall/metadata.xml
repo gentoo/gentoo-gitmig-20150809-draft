@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>voip</herd>
-<maintainer>
-  <email>gustavoz@gentoo.org</email>
-  <name>Gustavo Zacarias</name>
-</maintainer>
+	<herd>voip</herd>
 </pkgmetadata>
