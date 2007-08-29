@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ec-fonts-mftraced
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ec-fonts-mftraced/ChangeLog,v 1.8 2007/02/22 01:12:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ec-fonts-mftraced/ChangeLog,v 1.9 2007/08/29 16:49:17 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing agriffis from metadata due to his retirement (see #182294 for
+  reference).
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
