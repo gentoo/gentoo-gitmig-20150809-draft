@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.21 2007/02/27 07:34:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.22 2007/08/29 19:05:19 genstef Exp $
 
 inherit linux-mod cvs
 
@@ -24,8 +24,8 @@ for x in ${IUSE_RT2X00_DEVICES} ${IUSE_RT2X00_EXTRA} ; do
 done
 
 pkg_setup() {
-	CONFIG_CHECK="NET_RADIO"
-	ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+	CONFIG_CHECK="WIRELESS_EXT"
+	ERROR_WIRELESS_EXT="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_WIRELESS_EXT)."
 
 	# dScape requires some crypto
 	CONFIG_CHECK="${CONFIG_CHECK} CRYPTO_AES CRYPTO_ARC4"

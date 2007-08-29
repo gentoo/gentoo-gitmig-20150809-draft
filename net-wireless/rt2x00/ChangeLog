@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/rt2x00
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.22 2007/05/14 06:24:32 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.23 2007/08/29 19:05:19 genstef Exp $
+
+*rt2x00-9999.ebuild (29 Aug 2007)
+*rt2x00-2.0.0_beta3.ebuild (29 Aug 2007)
+
+  29 Aug 2007; Stefan Schweizer <genstef@gentoo.org>
+  rt2x00-2.0.0_beta3.ebuild, rt2x00-9999.ebuild:
+  CONFIG_CHECK fix, NET_RADIO -> WIRELESS_EXT
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>

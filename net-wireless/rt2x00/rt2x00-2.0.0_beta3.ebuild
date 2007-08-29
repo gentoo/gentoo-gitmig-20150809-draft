@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-2.0.0_beta3.ebuild,v 1.3 2006/08/17 11:55:34 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-2.0.0_beta3.ebuild,v 1.4 2007/08/29 19:05:19 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -24,8 +24,8 @@ MODULE_NAMES="
 	rt2500pci(net/wireless:) rt2500usb(net/wireless:)
 "
 
-CONFIG_CHECK="NET_RADIO"
-ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+CONFIG_CHECK="WIRELESS_EXT"
+ERROR_WIRELESS_EXT="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_WIRELESS_EXT)."
 
 pkg_setup() {
 	kernel_is lt 2 6 13 && die "${P} requires at least kernel 2.6.13"
