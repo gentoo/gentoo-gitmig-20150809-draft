@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.44 2007/08/28 06:12:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.45 2007/08/29 14:30:43 ulm Exp $
+
+  29 Aug 2007; Ulrich Mueller <ulm@gentoo.org> -slime-2.0.0.20061118.ebuild:
+  Remove old ebuild, it is identical with slime-2.0_p20061118.
 
 *slime-2.0_p20070822 (27 Aug 2007)
 *slime-2.0_p20061118 (27 Aug 2007)
@@ -11,7 +14,7 @@
   +slime-2.0_p20070822.ebuild:
   Version bump: new CVS snapshot, everything contributed by Stelian Ionescu
   <sionescu@common-lisp.net>. Rename old ebuild according to Gentoo policy.
-  Update "LICENSE".
+  Update "LICENSE" to include xref.lisp, bug #168616.
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   slime-2.0.0.20061118.ebuild:
