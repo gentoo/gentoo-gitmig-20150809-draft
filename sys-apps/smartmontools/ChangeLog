@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.66 2007/02/10 19:51:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.67 2007/08/29 17:28:40 angelos Exp $
+
+  29 Aug 2007; Christoph Mende <angelos@gentoo.org>
+  smartmontools-5.37.ebuild:
+  Stable on amd64 wrt bug #190306
 
 *smartmontools-5.37 (10 Feb 2007)
 
