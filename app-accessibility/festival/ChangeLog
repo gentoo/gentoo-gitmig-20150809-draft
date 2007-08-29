@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.68 2007/08/28 05:17:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.69 2007/08/29 13:57:47 williamh Exp $
+
+  29 Aug 2007; William Hubbs <williamh@gentoo.org>
+  +files/festival-1.96_beta-init-scm.patch:
+  Fixed patch bug #190619.
 
 *festival-1.96_beta (28 Aug 2007)
 
