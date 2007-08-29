@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nepenthes
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.14 2007/02/20 00:15:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.15 2007/08/29 19:05:08 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing kaiowas from metadata due to his retirement (see #61930 for
+  reference).
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
