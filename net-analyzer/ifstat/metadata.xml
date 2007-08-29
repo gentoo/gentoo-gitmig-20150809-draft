@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>netmon</herd>
-<maintainer>
-  <email>gustavoz@gentoo.org</email>
-  <name>Gustavo Zacarias</name>
-  <description>Primary Maintainer</description>
-</maintainer>
-<longdescription>ifstat is a utility to monitor network interface bandwidth usage, with vmstat look and feel.</longdescription>
+	<herd>netmon</herd>
+	<longdescription>
+		ifstat is a utility to monitor network interface bandwidth usage, with
+		vmstat look and feel.
+	</longdescription>
 </pkgmetadata>
