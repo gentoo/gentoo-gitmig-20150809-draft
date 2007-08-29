@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/rt2570-20070209.ebuild,v 1.1 2007/02/10 07:30:31 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/rt2570-20070209.ebuild,v 1.2 2007/08/29 19:00:26 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -14,7 +14,7 @@ DEPEND="net-wireless/wireless-tools"
 
 pkg_setup() {
 	MODULE_NAMES="rt2570(net:${S}/Module)"
-	CONFIG_CHECK="NET_RADIO BROKEN_ON_SMP"
+	CONFIG_CHECK="WIRELESS_EXT BROKEN_ON_SMP"
 	BROKEN_ON_SMP_ERROR="SMP Processors and Kernels are currently not supported"
 	linux-mod_pkg_setup
 	if use_m

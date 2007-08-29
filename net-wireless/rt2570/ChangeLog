@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/rt2570
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/ChangeLog,v 1.8 2007/02/10 07:30:31 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/ChangeLog,v 1.9 2007/08/29 19:00:26 genstef Exp $
+
+*rt2570-20070209.ebuild (29 Aug 2007)
+*rt2570-1.1.0_beta2.ebuild (29 Aug 2007)
+*rt2570-1.1.0_beta1.ebuild (29 Aug 2007)
+
+  29 Aug 2007; Stefan Schweizer <genstef@gentoo.org>
+  rt2570-1.1.0_beta1.ebuild, rt2570-1.1.0_beta2.ebuild,
+  rt2570-20070209.ebuild:
+  CONFIG_CHECK fix, NET_RADIO -> WIRELESS_EXT, bug 185618
 
 *rt2570-20070209 (10 Feb 2007)
 
