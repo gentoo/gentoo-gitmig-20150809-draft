@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-1.1.3-r2.ebuild,v 1.1 2007/07/13 14:32:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-1.1.3-r2.ebuild,v 1.2 2007/08/29 16:22:20 opfer Exp $
 
 inherit eutils multilib versionator
 
@@ -19,7 +19,7 @@ IUSE="debug mod_irc mod_muc mod_pubsub ldap odbc ssl web"
 
 DEPEND=">=net-im/jabber-base-0.01
 	>=dev-libs/expat-1.95
-	<dev-lang/erlang-11.2.5
+	>=dev-lang/erlang-10.2.0
 	odbc? ( dev-db/unixODBC )
 	ldap? ( =net-nds/openldap-2* )
 	ssl? ( >=dev-libs/openssl-0.9.8e )"
@@ -29,10 +29,10 @@ S=${WORKDIR}/${P}/src
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Bug #171427
-	epatch ${FILESDIR}/${PV}-missing-declaration.patch
+	epatch "${FILESDIR}/${PV}-missing-declaration.patch"
 }
 
 src_compile() {
@@ -55,10 +55,10 @@ src_compile() {
 
 src_install() {
 	make								\
-		DESTDIR=${D}						\
-		EJABBERDDIR=${D}/usr/$(get_libdir)/erlang/lib/${P}	\
-		ETCDIR=${D}${JABBER_ETC}				\
-		LOGDIR=${D}${JABBER_LOG}				\
+		DESTDIR="${D}"						\
+		EJABBERDDIR="${D}/usr/$(get_libdir)/erlang/lib/${P}"	\
+		ETCDIR="${D}${JABBER_ETC}"				\
+		LOGDIR="${D}${JABBER_LOG}"				\
 		install							\
 		|| die "install failed"
 
@@ -72,7 +72,7 @@ src_install() {
 	#
 	# Create /usr/bin/ejabberd
 	#
-	cat <<EOF > ${T}/ejabberd
+	cat <<EOF > "${T}/ejabberd"
 #!/bin/bash
 
 erl -pa /usr/$(get_libdir)/erlang/lib/${P}/ebin \\
@@ -90,7 +90,7 @@ EOF
 	#
 	# Create /usr/bin/ejabberdctl
 	#
-	cat <<EOF > ${T}/ejabberdctl
+	cat <<EOF > "${T}/ejabberdctl"
 #!/bin/sh
 
 exec env HOME=${JABBER_RUN} \\
@@ -102,17 +102,17 @@ exec env HOME=${JABBER_RUN} \\
 		-extra \$@
 EOF
 
-	dobin ${T}/ejabberdctl
-	dobin ${T}/ejabberd
+	dobin "${T}/ejabberdctl"
+	dobin "${T}/ejabberd"
 
-	newinitd ${FILESDIR}/ejabberd-1.1.1-r1.initd ${PN}
-	newconfd ${FILESDIR}/${P}.confd ${PN}
+	newinitd"${FILESDIR}/ejabberd-1.1.1-r1.initd" ${PN}
+	newconfd "${FILESDIR}/${P}.confd" ${PN}
 
 	insinto ${JABBER_ETC}
-	doins ${FILESDIR}/inetrc
+	doins "${FILESDIR}/inetrc"
 	if useq ssl ; then
-		doins ${FILESDIR}/ssl.cnf
-		newins ${FILESDIR}/self-cert-v2.sh self-cert.sh
+		doins "${FILESDIR}/ssl.cnf"
+		newins "${FILESDIR}/self-cert-v2.sh" self-cert.sh
 	fi
 }
 
