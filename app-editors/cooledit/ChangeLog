@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/cooledit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.21 2007/07/22 08:41:07 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.22 2007/08/29 16:48:16 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing agriffis from metadata due to his retirement (see #182294 for
+  reference).
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> cooledit-3.17.12.ebuild,
   cooledit-3.17.17.ebuild:
