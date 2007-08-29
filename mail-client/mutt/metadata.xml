@@ -3,9 +3,6 @@
 <pkgmetadata>
 	<herd>net-mail</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-	</maintainer>
-	<maintainer>
 		<email>ferdy@gentoo.org</email>
 		<name>Fernando J. Pereda</name>
 	</maintainer>
