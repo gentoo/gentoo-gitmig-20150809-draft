@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.107 2007/08/28 19:30:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.108 2007/08/29 02:07:19 dang Exp $
+
+*gconf-editor-2.18.2 (29 Aug 2007)
+
+  29 Aug 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +gconf-editor-2.18.2.ebuild:
+  Bump to 2.18.2
+  	- Make search actually work again after I broke it. (Kjartan)
+  	- Possibly fix a lot of crashers when searching. (Kjartan)
+  	- Cleanups (Kristof Vansant, Kjartan)
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org> gconf-editor-2.18.0.ebuild:
   Stable for HPPA (bug #185823).
