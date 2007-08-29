@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-0.2.ebuild,v 1.2 2007/08/24 10:38:29 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-0.2.ebuild,v 1.3 2007/08/29 21:32:53 rbu Exp $
 
 inherit kde eutils
 
@@ -16,7 +16,7 @@ IUSE="cisco openvpn pptp"
 DEPEND="net-misc/networkmanager
 	|| ( kde-base/kppp kde-base/kdenetwork )
 	>=kde-base/kdelibs-3.2
-	|| ( >=dev-libs/dbus-qt3-old-0.70 =sys-apps/dbus-0.62-r1 )
+	>=dev-libs/dbus-qt3-old-0.70
 	sys-apps/hal
 	net-wireless/wireless-tools
 	dev-libs/libnl
