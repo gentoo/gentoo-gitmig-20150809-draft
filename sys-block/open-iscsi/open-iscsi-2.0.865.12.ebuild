@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.865.12.ebuild,v 1.1 2007/08/28 05:08:05 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.865.12.ebuild,v 1.2 2007/08/29 07:11:49 mr_bones_ Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
@@ -43,7 +43,6 @@ src_unpack() {
 	find ${S} -name '*~' -exec rm \{} \; >/dev/null 2>/dev/null
 }
 
-
 src_compile() {
 	use debug && append-flags -DDEBUG_TCP -DDEBUG_SCSI
 
@@ -59,7 +58,7 @@ src_compile() {
 src_install() {
 	einfo "Installing kernel modules"
 	export KSRC="${KERNEL_DIR}"
-	#S=${S}/kernel 
+	#S=${S}/kernel
 	linux-mod_src_install
 
 	einfo "Installing userspace"
