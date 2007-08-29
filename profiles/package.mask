@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7643 2007/08/28 16:27:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7644 2007/08/29 06:32:59 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Ulrich Mueller <ulm@gentoo.org> (29 Aug 2007)
+# Live CVS ebuild for Emacs unicode-2 branch
+~app-editors/emacs-cvs-23.0.0
+>=virtual/emacs-23
 
 # Ulrich Mueller <ulm@gentoo.org> (27 Aug 2007)
 # CVS snapshot, masked for testing.
@@ -436,11 +441,6 @@ net-wireless/mcs7780
 # Marijn Schouten <hkBst@gentoo.org> (14 May 2007)
 # development version
 =media-sound/lilypond-2.11*
-
-# Ulrich Mueller <ulm@gentoo.org> (13 May 2007)
-# Live CVS ebuilds for Emacs
->=app-editors/emacs-cvs-23
->=virtual/emacs-23
 
 # Ryan Hill <dirtyepic@gentoo.org> (13 May 2007)
 #   Mask for testing.
