@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/acer_acpi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/ChangeLog,v 1.10 2007/08/21 21:19:09 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/ChangeLog,v 1.11 2007/08/29 13:32:37 angelos Exp $
+
+  29 Aug 2007; Christoph Mende <angelos@gentoo.org> acer_acpi-0.5.ebuild:
+  Stable on amd64 wrt bug #189569
 
   21 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> acer_acpi-0.5.ebuild:
   x86 stable (bug #189569)
