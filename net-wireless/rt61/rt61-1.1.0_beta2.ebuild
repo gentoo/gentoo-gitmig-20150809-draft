@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61/rt61-1.1.0_beta2.ebuild,v 1.1 2007/05/09 16:16:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61/rt61-1.1.0_beta2.ebuild,v 1.2 2007/08/29 18:56:55 genstef Exp $
 
 inherit linux-mod
 
@@ -20,8 +20,8 @@ RDEPEND="net-wireless/wireless-tools
 S="${WORKDIR}/${MY_P}"
 MODULE_NAMES="rt61(net:${S}/Module)"
 
-CONFIG_CHECK="NET_RADIO"
-ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+CONFIG_CHECK="WIRELESS_EXT"
+ERROR_WIRELESS_EXT="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_WIRELESS_EXT)."
 
 MODULESD_RT61_ALIASES=('ra? rt61')
 
