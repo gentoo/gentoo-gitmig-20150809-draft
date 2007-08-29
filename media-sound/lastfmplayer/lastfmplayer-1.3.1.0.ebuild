@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.3.1.0.ebuild,v 1.1 2007/07/27 20:06:20 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.3.1.0.ebuild,v 1.2 2007/08/29 18:30:00 genstef Exp $
 
-inherit eutils
+inherit eutils qt4
+
+MY_P="${P/lastfmplayer/last.fm}"
 
 DESCRIPTION="The player allows you to listen to last.fm radio streams"
 HOMEPAGE="http://www.last.fm/help/player"
-MY_P="${P/lastfmplayer/last.fm}"
 SRC_URI="http://static.last.fm/client/Linux/${MY_P}.src.tar.bz2"
 
 LICENSE="GPL-2"
@@ -14,20 +15,18 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 RESTRICT="mirror"
-S="${WORKDIR}/${MY_P}"
 
-DEPEND=">=x11-libs/qt-4.2
+DEPEND="$(qt4_min_version 4.2)
 	media-libs/alsa-lib"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch ${FILESDIR}/qt4.patch
-}
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	./configure
-	emake qmake_all || die "emake qmake_all failed"
+	eqmake4 LastFM.pro
+	for subdir in src src/libLastFmTools src/httpinput src/mp3transcode \
+			src/output/alsa-playback src/output/portAudio ; do
+		eqmake4 "${subdir}/${subdir##*/}.pro" -o ${subdir}/Makefile
+	done
 	emake || die "emake failed"
 }
 
@@ -45,7 +44,7 @@ src_install() {
 	dodir ${destination}
 
 	# Install the player
-	cp -R * ${D}/${destination}
+	cp -R * "${D}"/${destination}
 
 	# Make a folder such that album art cache works
 	diropts -m0775 -g audio
@@ -58,10 +57,12 @@ src_install() {
 	make_desktop_entry lastfm "Last.fm Player" lastfm.png
 
 	# make sure no hanging instance of lastfm is running
-	sed -i -e 's:exec:if ! ps aux | grep "^$USER.*last.fm.app" | grep Sl >/dev/null 2>\&1; then killall -u $USER last.fm.app >/dev/null 2>\&1; fi\nexec:' ${D}/usr/bin/lastfm
+	sed -i -e 's:exec:if ! ps aux | grep "^$USER.*last.fm.app" | grep Sl >/dev/null 2>\&1; \
+			then killall -u $USER last.fm.app >/dev/null 2>\&1; fi\nexec:' \
+			"${D}"/usr/bin/lastfm
 
 	insinto /usr/share/services
-	doins ${FILESDIR}/lastfm.protocol
+	doins "${FILESDIR}"/lastfm.protocol
 }
 
 pkg_postinst() {
@@ -72,5 +73,5 @@ pkg_postinst() {
 	elog " 4. For the name: network.protocol-handler.app.lastfm"
 	elog " 5. For the value: /usr/bin/lastfm"
 	elog
-	elog "If you experiance awkward fonts or widgets, try running qtconfig."
+	elog "If you experience awkward fonts or widgets, try running qtconfig."
 }
