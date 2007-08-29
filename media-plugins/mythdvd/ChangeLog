@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythdvd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.46 2007/08/29 15:38:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.47 2007/08/29 18:28:41 cardoe Exp $
+
+  29 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythdvd-0.20.2_p14282.ebuild:
+  add eject properly as a depend
 
   29 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
   mythdvd-0.20.2_p14282.ebuild:
