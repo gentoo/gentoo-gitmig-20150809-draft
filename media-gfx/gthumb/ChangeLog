@@ -1,6 +1,34 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.71 2007/08/07 13:52:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.72 2007/08/29 02:52:44 dang Exp $
+
+*gthumb-2.10.6 (29 Aug 2007)
+
+  29 Aug 2007; Daniel Gryniewicz <dang@gentoo.org> +gthumb-2.10.6.ebuild:
+  Bump to 2.10.6
+  	* Added shift+x keybinding to always perform zoom to fit.
+  	* Added a shift-w keybinding to force a fit width action.
+  	* Faster browsing of remote locations.
+  	* Keep the ui responsive when loading and saving remote images and
+  	  when creating video thumbnails.
+  	* Much faster loading of exif DataTime tags. This provides faster 
+  	  folder loading in the sort-by-DateTime mode.
+  	* Rename tool breaks if template = "%f1%e"
+  	* Should delete the thumbnails of deleted files
+  	* Check for invalid unicode in embedded comments. 
+  	* Invalid free when selecting Print in the menu.
+  	* Theme uses the wrong captions in the thumbnails.
+  	* The default import folder was not properly set to the correct XDG 
+  	  "PICTURES" folder. Fixed.
+  	* Symlink/vfs problem (Ubuntu bug 109579).
+  	* Preload more thumbnails into memory in browser mode.
+  	* Sort by Exif DateTime broken in list mode.
+  	* Fixed Ctrl+H (show/hide hidden files) function.
+  	* Add/fix a busy cursor when loading folders and preloading the
+  	  selected image.
+  	* Preview area always shows last selected image.
+  	* Names with '#' character break rotation.
+  	* gThumb deletes pictures on failed import.
 
   07 Aug 2007; Gilles Dartiguelongue <eva@gentoo.org> gthumb-2.10.5.ebuild:
   * remove jpeg use, it seems it is not optional any more
