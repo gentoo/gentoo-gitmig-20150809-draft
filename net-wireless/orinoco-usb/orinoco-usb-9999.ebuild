@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-usb/orinoco-usb-9999.ebuild,v 1.3 2007/05/14 16:21:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-usb/orinoco-usb-9999.ebuild,v 1.4 2007/08/29 19:07:45 genstef Exp $
 
 inherit linux-mod subversion
 
@@ -20,9 +20,9 @@ RDEPEND="!net-wireless/orinoco-sn
 
 BUILD_TARGETS="all"
 
-CONFIG_CHECK="FW_LOADER NET_RADIO USB"
+CONFIG_CHECK="FW_LOADER WIRELESS_EXT USB"
 ERROR_FW_LOADER="${P} requires support for loading firmware (CONFIG_FWLOADER)."
-ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+ERROR_WIRELESS_EXT="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_WIRELESS_EXT)."
 ERROR_USB="${P} requires USB support (CONFIG_USB)."
 
 pkg_setup() {
