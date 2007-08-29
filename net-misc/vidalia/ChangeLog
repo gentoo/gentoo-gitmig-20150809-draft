@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.7 2007/08/19 16:06:12 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.8 2007/08/29 17:21:17 humpback Exp $
+
+  29 Aug 2007; Gustavo Felisberto <humpback@gentoo.org>
+  -vidalia-0.0.12.ebuild:
+  Removed version because of broken deps (needs old tor). Credit goes to Mr
+  Bones :)
 
 *vidalia-0.0.13 (19 Aug 2007)
 
