@@ -1,0 +1,12 @@
+diff -ur cloop-2.05~20060829.original/compressed_loop.c cloop-2.05~20060829/compressed_loop.c
+--- cloop-2.05~20060829.original/compressed_loop.c	2006-12-04 00:07:02.000000000 +0100
++++ cloop-2.05~20060829/compressed_loop.c	2007-08-20 09:20:20.289119997 +0200
+@@ -625,7 +625,7 @@
+     if(clo->compressed_buffer) { vfree(clo->compressed_buffer); clo->compressed_buffer = NULL; }
+     zlib_inflateEnd(&clo->zstream);
+     if(clo->zstream.workspace) { vfree(clo->zstream.workspace); clo->zstream.workspace = NULL; }
+-    invalidate_bdev(bdev, 0);
++    invalidate_bdev(bdev);
+     set_capacity(clo->disk, 0);
+     return 0;
+ }
