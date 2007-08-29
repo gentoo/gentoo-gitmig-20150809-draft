@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.180 2007/08/28 20:48:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.181 2007/08/29 14:59:06 cardoe Exp $
+
+*mythtv-0.21_pre14358 (29 Aug 2007)
+*mythtv-0.20.2_p14357 (29 Aug 2007)
+
+  29 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-0.20.2_p14348.ebuild, +mythtv-0.20.2_p14357.ebuild,
+  -mythtv-0.21_pre14327.ebuild, +mythtv-0.21_pre14358.ebuild:
+  DVD player fixes. trac #3805
 
   28 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.20.2_p14348.ebuild, mythtv-0.21_pre14346.ebuild:
