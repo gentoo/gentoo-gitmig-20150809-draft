@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/madwifi-old
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-old/ChangeLog,v 1.4 2007/02/19 21:33:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-old/ChangeLog,v 1.5 2007/08/29 18:54:05 genstef Exp $
+
+*madwifi-old-0.0.1417.20060128.ebuild (29 Aug 2007)
+
+  29 Aug 2007; Stefan Schweizer <genstef@gentoo.org>
+  madwifi-old-0.0.1417.20060128.ebuild:
+  use WIRELESS_EXT to make it work in newer kernels, bug 190390
 
   19 Feb 2007; <genstef@gentoo.org> +files/2.6.20.patch,
   madwifi-old-0.0.1417.20060128.ebuild:

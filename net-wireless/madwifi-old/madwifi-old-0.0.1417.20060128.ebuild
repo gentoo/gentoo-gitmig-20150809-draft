@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-old/madwifi-old-0.0.1417.20060128.ebuild,v 1.2 2007/02/19 21:33:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-old/madwifi-old-0.0.1417.20060128.ebuild,v 1.3 2007/08/29 18:54:05 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -20,9 +20,9 @@ DEPEND="app-arch/sharutils"
 RDEPEND="!net-wireless/madwifi-ng
 		>=net-wireless/madwifi-old-tools-${PV}"
 
-CONFIG_CHECK="CRYPTO NET_RADIO SYSCTL"
+CONFIG_CHECK="CRYPTO WIRELESS_EXT SYSCTL"
 ERROR_CRYPTO="${P} requires Cryptographic API support (CONFIG_CRYPTO)."
-ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+ERROR_WIRELESS_EXT="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_WIRELESS_EXT)."
 ERROR_SYSCTL="${P} requires Sysctl support (CONFIG_SYSCTL)."
 BUILD_TARGETS="all"
 MODULESD_ATH_PCI_DOCS="README"
