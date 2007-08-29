@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.175 2007/08/26 16:22:23 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.176 2007/08/29 11:15:55 phreak Exp $
+
+*hardened-sources-2.4.35-r1 (29 Aug 2007)
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org>
+  +hardened-sources-2.4.35-r1.ebuild:
+  Revision bump, new grsecurity patch.
 
 *hardened-sources-2.6.20-r8 (26 Aug 2007)
 
