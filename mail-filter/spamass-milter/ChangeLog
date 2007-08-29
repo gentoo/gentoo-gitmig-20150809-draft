@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamass-milter
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.18 2007/03/18 04:50:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.19 2007/08/29 17:18:46 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing gustavoz from metadata due to his retirement (see #36010 for
+  reference).
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org>
   spamass-milter-0.3.1-r1.ebuild:
