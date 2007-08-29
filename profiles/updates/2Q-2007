@@ -14,8 +14,6 @@ slotmove app-editors/emacs-cvs 22.0.94 22
 slotmove app-editors/emacs-cvs 22.0.95 22
 slotmove app-editors/emacs-cvs 22.0.96 22
 slotmove app-editors/emacs-cvs 22.0.97 22
-slotmove app-editors/emacs-cvs 22.0.0 23
-slotmove app-editors/emacs-cvs 23.0.0 23
 move app-editors/elisp-manual app-doc/elisp-manual
 move app-crypt/aes-crypt app-crypt/aesutil
 move media-fonts/cjkuni-fonts media-fonts/arphicfonts
