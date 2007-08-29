@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bdelta/bdelta-0.1.0.ebuild,v 1.4 2005/08/13 23:57:57 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bdelta/bdelta-0.1.0.ebuild,v 1.5 2007/08/29 18:02:30 genstef Exp $
 
-inherit multilib
+inherit multilib toolchain-funcs
 
 DESCRIPTION="Binary Delta - Efficient difference algorithm and format"
 HOMEPAGE="http://deltup.sourceforge.net"
@@ -21,7 +21,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake -j1 || die "emake failed"
+	emake CC="$(tc-getCC)" CXXFLAGS="${CXXFLAGS}" -j1 || die "emake failed"
 }
 
 src_install() {
