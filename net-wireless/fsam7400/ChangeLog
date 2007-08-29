@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/fsam7400
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/fsam7400/ChangeLog,v 1.1 2007/03/31 21:26:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/fsam7400/ChangeLog,v 1.2 2007/08/29 18:59:00 genstef Exp $
+
+*fsam7400-0.5.1.ebuild (29 Aug 2007)
+
+  29 Aug 2007; Stefan Schweizer <genstef@gentoo.org> fsam7400-0.5.1.ebuild:
+  Fix CONFIG_CHECK for newer kernels(wireless ext) bug 189965
 
 *fsam7400-0.5.1 (31 Mar 2007)
 

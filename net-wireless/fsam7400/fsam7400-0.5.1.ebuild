@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/fsam7400/fsam7400-0.5.1.ebuild,v 1.1 2007/03/31 21:26:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/fsam7400/fsam7400-0.5.1.ebuild,v 1.2 2007/08/29 18:59:00 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -19,8 +19,8 @@ REPEND=""
 
 BUILD_TARGETS="clean fsam7400.ko"
 MODULE_NAMES="fsam7400(net/wireless)"
-CONFIG_CHECK="NET_RADIO"
-ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-harmradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+CONFIG_CHECK="WIRELESS_EXT"
+ERROR_WIRELESS_EXT="${P} requires support for Wireless LAN drivers (non-harmradio) & Wireless Extensions (CONFIG_WIRELESS_EXT)."
 
 pkg_setup() {
 	kernel_is lt 2 6 && die "${P} needs a kernel >=2.6"
