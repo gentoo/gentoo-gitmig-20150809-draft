@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.51 2007/08/21 05:13:44 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.52 2007/08/29 13:52:58 betelgeuse Exp $
+
+  29 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> -fop-0.20.5-r3.ebuild,
+  -fop-0.93.ebuild:
+  Remove old ebuilds.
 
   21 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org> fop-0.93-r1.ebuild:
   amd64 stable, bug #187600.
