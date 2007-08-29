@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20060409.ebuild,v 1.4 2007/01/23 16:14:46 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20060409.ebuild,v 1.5 2007/08/29 18:55:52 genstef Exp $
 
 inherit eutils linux-info
 
@@ -21,7 +21,7 @@ RDEPEND=""
 S="${WORKDIR}"
 
 CONFIG_CHECK="SENSORS_HDAPS"
-ERROR_NET_RADIO="${P} requires support for HDAPS (CONFIG_SENSORS_HDAPS)"
+ERROR_SENSORS_HDAPS="${P} requires support for HDAPS (CONFIG_SENSORS_HDAPS)"
 
 src_compile() {
 	cd "${WORKDIR}"

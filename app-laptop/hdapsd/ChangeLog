@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/hdapsd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.6 2007/04/19 11:19:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.7 2007/08/29 18:55:52 genstef Exp $
+
+*hdapsd-20060409-r1.ebuild (29 Aug 2007)
+*hdapsd-20060409.ebuild (29 Aug 2007)
+
+  29 Aug 2007; Stefan Schweizer <genstef@gentoo.org> hdapsd-20060409.ebuild,
+  hdapsd-20060409-r1.ebuild:
+  Fix config checks, thanks jieryn <jieryn@gmail.com> in bug 190047
 
   19 Apr 2007; Tony Vroon <chainsaw@gentoo.org> metadata.xml:
   Taking maintainership.
