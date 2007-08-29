@@ -1,6 +1,10 @@
 # ChangeLog for www-client/rabbitticker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rabbitticker/ChangeLog,v 1.7 2007/05/13 18:37:13 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rabbitticker/ChangeLog,v 1.8 2007/08/29 17:59:32 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing jstubbs from metadata due to his retirement (see #39944 for
+  reference).
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
