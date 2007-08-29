@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/prism54
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/ChangeLog,v 1.12 2007/02/25 09:04:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/ChangeLog,v 1.13 2007/08/29 18:52:15 genstef Exp $
+
+*prism54-20050125.ebuild (29 Aug 2007)
+
+  29 Aug 2007; Stefan Schweizer <genstef@gentoo.org>
+  prism54-20050125.ebuild:
+  use WIRELESS_EXT to make it work in newer kernels, bug 188727
 
   25 Feb 2007; <genstef@gentoo.org> prism54-20050125.ebuild:
   use KV_DIR only after linux mod pkg setup, bug 168051
