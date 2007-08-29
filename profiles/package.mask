@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7644 2007/08/29 06:32:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7645 2007/08/29 17:45:44 metalgod Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -61,14 +61,6 @@ net-dialup/l2tpd
 # Michael Marineau <marineam@gentoo.org> (24 Aug 2007)
 # Not maintained for security issues, will be removed soonish.
 =sys-kernel/xen-sources-2.6.16*
-
-# Samuli Suominen <drac@gentoo.org> (24 Aug 2007)
-# Needs libisofs 0.2.8, unmask same time.
->=xfce-extra/xfburn-0.3.0_pre20070824
-
-# Luis Medinas <metalgod@gentoo.org> (24 Aug 2007)
-# Mask libisofs 0.2.8 until i fix Brasero
-=dev-libs/libisofs-0.2.8
 
 # Samuli Suominen <drac@gentoo.org> (23 Aug 2007)
 # Deprecated GTK+-1.2 applications.
