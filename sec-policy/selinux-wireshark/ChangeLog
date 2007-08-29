@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-wireshark
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-wireshark/ChangeLog,v 1.2 2006/07/20 20:23:45 kaiowas Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-wireshark/ChangeLog,v 1.3 2007/08/29 18:46:16 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing kaiowas from metadata due to his retirement (see #61930 for
+  reference).
 
   20 Jul 2006; Petre Rodan <kaiowas@gentoo.org>
   selinux-wireshark-20060720.ebuild:

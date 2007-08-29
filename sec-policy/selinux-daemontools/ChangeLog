@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-daemontools
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.24 2007/06/04 00:26:42 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.25 2007/08/29 18:29:18 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing kaiowas from metadata due to his retirement (see #61930 for
+  reference).
 
   04 Jun 2007; Chris PeBenito <pebenito@gentoo.org>
   selinux-daemontools-20070329.ebuild:
