@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/rhide
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/ChangeLog,v 1.23 2007/07/22 07:21:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/ChangeLog,v 1.24 2007/08/29 17:09:57 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing azarah from metadata due to his retirement (see #173055 for
+  reference).
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> rhide-1.5.20050823.ebuild:
   Drop virtual/x11 references.
