@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/jpilot-backup
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.8 2006/08/29 04:29:48 chriswhite Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.9 2007/08/29 16:50:35 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing agriffis from metadata due to his retirement (see #182294 for
+  reference).
 
   29 Aug 2006; Chris White <chriswhite@gentoo.org>
   jpilot-backup-0.50.ebuild:

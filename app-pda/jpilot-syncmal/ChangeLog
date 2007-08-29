@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/jpilot-syncmal
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/ChangeLog,v 1.4 2006/08/29 04:27:33 chriswhite Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/ChangeLog,v 1.5 2007/08/29 16:51:22 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing agriffis from metadata due to his retirement (see #182294 for
+  reference).
 
   29 Aug 2006; Chris White <chriswhite@gentoo.org>
   jpilot-syncmal-0.72.1.ebuild:
