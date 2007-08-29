@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tipcutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tipcutils/ChangeLog,v 1.1 2007/01/26 19:07:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tipcutils/ChangeLog,v 1.2 2007/08/29 17:25:28 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing gustavoz from metadata due to his retirement (see #36010 for
+  reference).
 
 *tipcutils-1.0.4 (26 Jan 2007)
 
