@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.52 2007/08/29 13:52:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.53 2007/08/29 13:54:37 betelgeuse Exp $
+
+  29 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> fop-0.20.5-r7.ebuild:
+  Remove dependency on ant-tasks as split ant is stable.
 
   29 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> -fop-0.20.5-r3.ebuild,
   -fop-0.93.ebuild:
