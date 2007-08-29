@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX icon/mozilla-thunderbird-unbranded.desktop 187 RMD160 cf07583a0f333aa1b5d774117363412e499e758a SHA1 220ab2c5eb90f75b6ece5502f9b15cef19d03d86 SHA256 2b2fc919861c249122a0e77778327b9aeaf39d6653caf223bad02b0d820b917f
 MD5 3955754b4185cf8d5cbc75c8c58ab251 files/icon/mozilla-thunderbird-unbranded.desktop 187
 RMD160 cf07583a0f333aa1b5d774117363412e499e758a files/icon/mozilla-thunderbird-unbranded.desktop 187
@@ -154,10 +157,10 @@ EBUILD mozilla-thunderbird-1.5.0.12.ebuild 8156 RMD160 ba6b29813e5c03059034bd6c1
 MD5 580a14ef8b793bd0a2ee8cef6f709b42 mozilla-thunderbird-1.5.0.12.ebuild 8156
 RMD160 ba6b29813e5c03059034bd6c116341818722c597 mozilla-thunderbird-1.5.0.12.ebuild 8156
 SHA256 e5d2b89dbaa0343f7b239e16fec9de4429ed2440047c6189ecd82698d8599d60 mozilla-thunderbird-1.5.0.12.ebuild 8156
-EBUILD mozilla-thunderbird-1.5.0.13.ebuild 8159 RMD160 49ead7cb7876bb628947f1a2a7ac94c0a0d9c65a SHA1 3d12d326bf77bd30989197a9f8f3610cb70463d7 SHA256 f25772c3f49b71fcfd987a04f589b246b1af8cbafc8a4744ea3882f73f585157
-MD5 db115216b90f0386a37ece5e53d3bae5 mozilla-thunderbird-1.5.0.13.ebuild 8159
-RMD160 49ead7cb7876bb628947f1a2a7ac94c0a0d9c65a mozilla-thunderbird-1.5.0.13.ebuild 8159
-SHA256 f25772c3f49b71fcfd987a04f589b246b1af8cbafc8a4744ea3882f73f585157 mozilla-thunderbird-1.5.0.13.ebuild 8159
+EBUILD mozilla-thunderbird-1.5.0.13.ebuild 8158 RMD160 c751d8aca0b5bd88285a629293f13b5ef598666c SHA1 58c1c251594dfc78bd29127d35dcc210dfef342c SHA256 50fc2b5164eecdfaed82a14ada89fc1453fd2723ffb06f77bf2015614a4c4113
+MD5 42dd1367aa569dd2357cdc1f5c0052f9 mozilla-thunderbird-1.5.0.13.ebuild 8158
+RMD160 c751d8aca0b5bd88285a629293f13b5ef598666c mozilla-thunderbird-1.5.0.13.ebuild 8158
+SHA256 50fc2b5164eecdfaed82a14ada89fc1453fd2723ffb06f77bf2015614a4c4113 mozilla-thunderbird-1.5.0.13.ebuild 8158
 EBUILD mozilla-thunderbird-1.5.0.8.ebuild 7681 RMD160 94cad0b426db53dfc2e7796745b501930419f23b SHA1 09c6e106cd40a246ffa5912189d712818c1af320 SHA256 12a5ddd99c5e1623be617e06fe85745f78e80c1f4816c23d966083d29c2bff89
 MD5 49389e4480919e1c5a3d90d366ed66d3 mozilla-thunderbird-1.5.0.8.ebuild 7681
 RMD160 94cad0b426db53dfc2e7796745b501930419f23b mozilla-thunderbird-1.5.0.8.ebuild 7681
@@ -166,10 +169,10 @@ EBUILD mozilla-thunderbird-2.0.0.6.ebuild 7782 RMD160 1611bbfb8c8b81749af96a3df9
 MD5 ffb0a9d0973e258d4f1d180f017b3e58 mozilla-thunderbird-2.0.0.6.ebuild 7782
 RMD160 1611bbfb8c8b81749af96a3df9be5b4bbc55e9d9 mozilla-thunderbird-2.0.0.6.ebuild 7782
 SHA256 8cbfc68a13c0faea4b8446382e413e6b8675c099bb031ca2a1e66d0a39b77c9b mozilla-thunderbird-2.0.0.6.ebuild 7782
-MISC ChangeLog 35560 RMD160 4b0aab09fe076be55ffbc9230d438b62f8a05eee SHA1 a0f9e6906d6c62eff3c9d7491dfb159dfcfd3e85 SHA256 b0ed9db7c400cda7297c1556584947b8c0824c41a5710a88d595cac8a05cc1ea
-MD5 d421f1fac10e9b62b6d8ad2f2ae8cb31 ChangeLog 35560
-RMD160 4b0aab09fe076be55ffbc9230d438b62f8a05eee ChangeLog 35560
-SHA256 b0ed9db7c400cda7297c1556584947b8c0824c41a5710a88d595cac8a05cc1ea ChangeLog 35560
+MISC ChangeLog 35695 RMD160 ed0009df40ad65f8c9041572852363e86de1e091 SHA1 cff622b70771fd7f6490450a6f580bd5691e76f5 SHA256 a0b934c2ea9f330d5935eb382a1bb6aba5cc7d9e88a8d4aaf36e185574a1aeaf
+MD5 4545f04b79960eb9f6e2721110580ffa ChangeLog 35695
+RMD160 ed0009df40ad65f8c9041572852363e86de1e091 ChangeLog 35695
+SHA256 a0b934c2ea9f330d5935eb382a1bb6aba5cc7d9e88a8d4aaf36e185574a1aeaf ChangeLog 35695
 MISC metadata.xml 160 RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 SHA1 5015c07af2083f20f9552d7fb11afb5ea69af345 SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 metadata.xml 160
@@ -186,3 +189,10 @@ SHA256 06225888dbccef70140220a43a35f722e32594f333a02007d188ce658edd3d4f files/di
 MD5 951fc23b256948a3cd66f9acf7ddce3a files/digest-mozilla-thunderbird-2.0.0.6 10055
 RMD160 16d568d7bf0fbdeb79f86895d718b10517068e9d files/digest-mozilla-thunderbird-2.0.0.6 10055
 SHA256 a383e42368d79e06b7508861eeeee4b48e2afb2e3e2a547c76a84ca45f6f7416 files/digest-mozilla-thunderbird-2.0.0.6 10055
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG1Vp7KhnDs22gwa8RAh/hAJ4gagY1Va474oou0/1UzoT+PTgguQCdHKgR
+0oMVUGscVOQjCl2SauH/BLw=
+=ia2Y
+-----END PGP SIGNATURE-----
