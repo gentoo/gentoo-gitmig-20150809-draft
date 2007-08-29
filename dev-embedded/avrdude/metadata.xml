@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-
 	<herd>dev-embedded</herd>
-
 	<maintainer>
 		<email>dragonheart@gentoo.org</email>
 		<name>Daniel Black</name>
-	</maintainer>
-
-	<maintainer>
-		<email>gustavoz@gentoo.org</email>
-		<name>Gustavo Zacarias</name>
 	</maintainer>
 </pkgmetadata>

@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/avr-libc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.39 2007/05/21 14:13:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.40 2007/08/29 17:19:56 phreak Exp $
+
+  29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing gustavoz from metadata due to his retirement (see #36010 for
+  reference).
 
 *avr-libc-1.4.6 (21 May 2007)
 
