@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>java</herd>
-  <longdescription>
-    The JBoss/Server is the leading Open Source, standards-compliant,
-    J2EE based application server implemented in 100% Pure Java.
-  </longdescription>
+	<herd>java</herd>
+	<longdescription>
+		The JBoss/Server is the leading Open Source, standards-compliant,
+		J2EE based application server implemented in 100% Pure Java.
+	</longdescription>
 </pkgmetadata>
