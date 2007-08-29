@@ -2,7 +2,7 @@
 
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/files/vpnc-1.init,v 1.1 2007/08/25 15:29:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/files/vpnc-1.init,v 1.2 2007/08/29 13:32:55 opfer Exp $
 
 VPNDIR="/etc/vpnc"
 VPN="${SVCNAME#*.}"
@@ -36,7 +36,7 @@ checktundevice() {
 screenoutput() {
     if [ "${VPNCOUTPUT}" = "yes" ]; then
 	export SCREEN_OUTPUT="/dev/stdout"
-    elif [ "${VPNCOUTPUT}" = "no" ]; then
+    else
 	export SCREEN_OUTPUT="/dev/null"
     fi
 }
