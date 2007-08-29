@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.6-r3.ebuild,v 1.8 2007/04/04 19:30:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.6-r3.ebuild,v 1.9 2007/08/29 17:34:21 hkbst Exp $
 
 inherit eutils autotools
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 #looks like parallel build and install fails occasionally
 src_compile() {
-	econf --with-glib
+	econf --with-glib --disable-Werror
 	emake -j1 || die 'make failed'
 	emake -j1 -C libffi || die 'make libffi failed'
 }
