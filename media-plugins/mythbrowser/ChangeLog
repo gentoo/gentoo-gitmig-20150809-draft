@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythbrowser
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.30 2007/08/24 18:00:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.31 2007/08/29 15:09:27 cardoe Exp $
+
+  29 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythbrowser-0.20.2_p14282.ebuild:
+  stable 0.20.2 for Schedules Direct support needed by Sept 1
 
 *mythbrowser-0.20.2_p14282 (24 Aug 2007)
 

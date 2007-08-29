@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythgallery
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.44 2007/08/25 23:26:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.45 2007/08/29 15:17:50 cardoe Exp $
+
+  29 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythgallery-0.20.2_p14282.ebuild:
+  stable 0.20.2 for Schedules Direct support needed by Sept 1
 
 *mythgallery-0.20.2_p14282 (25 Aug 2007)
 
