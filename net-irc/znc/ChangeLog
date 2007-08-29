@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.2 2007/04/20 11:27:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.3 2007/08/29 10:21:08 armin76 Exp $
+
+*znc-0.050 (29 Aug 2007)
+
+  29 Aug 2007; Raúl Porcel <armin76@gentoo.org> +znc-0.050.ebuild:
+  Version bump, bug #188736
 
   20 Apr 2007; Raúl Porcel <armin76@gentoo.org> znc-0.047.ebuild:
   Better handling of CXXFLAGS
