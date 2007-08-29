@@ -1,5 +1,9 @@
 # USE flags masked because providing packages have ABI=x86
 
+# 2007/08/29 Christoph Mende <angelos@gentoo.org>
+# app-accessibility/mbrola is x86 only
+mbrola
+
 # 2006/06/04 Stuart Herbert <stuart@gentoo.org>
 # net-misc/nxclient is x86 only
 nxclient
