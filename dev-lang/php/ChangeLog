@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.192 2007/08/24 15:53:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.193 2007/08/29 10:22:06 corsair Exp $
+
+  29 Aug 2007; Markus Rothe <corsair@gentoo.org>
+  php-4.4.8_pre20070816.ebuild:
+  Stable on ppc64; bug #189172
 
   24 Aug 2007; Raúl Porcel <armin76@gentoo.org>
   php-4.4.8_pre20070816.ebuild:
