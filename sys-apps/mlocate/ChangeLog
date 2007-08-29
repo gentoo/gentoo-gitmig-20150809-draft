@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.3 2007/08/24 07:06:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.4 2007/08/29 06:13:39 opfer Exp $
+
+*mlocate-0.18 (29 Aug 2007)
+
+  29 Aug 2007; Christian Faulhammer <opfer@gentoo.org> +mlocate-0.18.ebuild:
+  version bump, adds some information to man pages and fixes a memory leak.
+  See bug 190562
 
   24 Aug 2007; Christian Faulhammer <opfer@gentoo.org> mlocate-0.17.ebuild:
   stable x86
