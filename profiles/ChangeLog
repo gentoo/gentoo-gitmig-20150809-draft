@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.604 2007/08/30 06:03:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.605 2007/08/30 12:33:29 aballier Exp $
+
+  30 Aug 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask camlp5, needs ocaml 3.10
 
   30 Aug 2007; William Hubbs <williamh@gentoo.org> use.local.desc:
   Added the flite use flag for speech-dispatcher.
