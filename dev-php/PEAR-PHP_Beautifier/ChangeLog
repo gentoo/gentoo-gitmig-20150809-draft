@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-PHP_Beautifier
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_Beautifier/ChangeLog,v 1.1 2007/08/30 12:37:44 jokey Exp $
+
+*PEAR-PHP_Beautifier-0.1.13 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +PEAR-PHP_Beautifier-0.1.13.ebuild:
+  Port from project overlay
+

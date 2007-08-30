@@ -1,0 +1,14 @@
+# ChangeLog for dev-php/PEAR-PEAR_PackageFileManager
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_PackageFileManager/ChangeLog,v 1.1 2007/08/30 12:34:19 jokey Exp $
+
+*PEAR-PEAR_PackageFileManager-1.6.1 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +PEAR-PEAR_PackageFileManager-1.6.1.ebuild:
+  Port from project overlay
+
+  17 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-PEAR_PackageFileManager-1.6.1.ebuild:
+  New ebuild
+
