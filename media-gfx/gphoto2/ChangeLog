@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gphoto2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.53 2007/06/06 16:15:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.54 2007/08/30 12:41:15 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing liquidx from metadata due to his retirement (see #171155 for
+  reference).
 
   06 Jun 2007; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   I do no longer maintain gphoto. Added to herd graphics.
