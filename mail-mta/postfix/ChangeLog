@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.130 2007/07/12 08:45:12 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.131 2007/08/30 12:02:36 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing langthang from metadata due to his retirement (see #53239 for
+  reference).
 
   12 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/postfix.rc6.2.2.9:
