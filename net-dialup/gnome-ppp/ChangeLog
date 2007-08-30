@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gnome-ppp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.22 2007/07/14 06:09:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.23 2007/08/30 16:31:13 pclouds Exp $
+
+  30 Aug 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> metadata.xml:
+  Remove myself from maintainer position
 
 *gnome-ppp-0.3.23-r1 (14 Jul 2007)
 
