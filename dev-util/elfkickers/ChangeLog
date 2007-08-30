@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/elfkickers
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.14 2007/05/16 19:37:09 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.15 2007/08/30 14:12:08 pva Exp $
+
+*elfkickers-2.0a-r3 (30 Aug 2007)
+
+  30 Aug 2007; <pva@gentoo.org> +elfkickers-2.0a-r3.ebuild:
+  Fixes problem reported in bug #178790 comment 2 by Pat Erley.
 
 *elfkickers-2.0a-r2 (16 May 2007)
 
