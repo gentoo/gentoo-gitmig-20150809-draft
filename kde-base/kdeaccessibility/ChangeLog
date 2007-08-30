@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeaccessibility
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.140 2007/08/15 05:12:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.141 2007/08/30 17:16:17 drac Exp $
+
+  30 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  kdeaccessibility-3.5.5.ebuild, kdeaccessibility-3.5.6.ebuild,
+  kdeaccessibility-3.5.7.ebuild:
+  Remove USE gstreamer as 0.8 is going away.
 
   15 Aug 2007; Jeroen Roovers <jer@gentoo.org>
   kdeaccessibility-3.5.7.ebuild:
