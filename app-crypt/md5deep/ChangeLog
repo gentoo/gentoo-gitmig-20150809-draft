@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/md5deep
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.27 2007/08/28 09:55:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.28 2007/08/30 12:24:20 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing liquidx from metadata due to his retirement (see #171155 for
+  reference).
 
   28 Aug 2007; nixnut <nixnut@gentoo.org> md5deep-1.12.ebuild:
   Stable on ppc wrt bug 189986
