@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50-r1.ebuild,v 1.1 2007/08/29 06:46:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50-r1.ebuild,v 1.2 2007/08/30 12:38:26 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -115,14 +115,15 @@ src_compile() {
 	fi
 
 	if use X; then
-		# GTK+ is the default toolkit if USE=gtk is chosen with other
-		# possibilities. Emacs upstream thinks this should be standard
-		# policy on all distributions
 		myconf="${myconf} --with-x"
-		myconf="${myconf} $(use_with xpm)"
 		myconf="${myconf} $(use_with toolkit-scroll-bars)"
 		myconf="${myconf} $(use_with jpeg) $(use_with tiff)"
 		myconf="${myconf} $(use_with gif) $(use_with png)"
+		myconf="${myconf} $(use_with xpm)"
+
+		# GTK+ is the default toolkit if USE=gtk is chosen with other
+		# possibilities. Emacs upstream thinks this should be standard
+		# policy on all distributions
 		if use gtk; then
 			echo
 			einfo "Configuring to build with GTK support, disabling all other toolkits"
