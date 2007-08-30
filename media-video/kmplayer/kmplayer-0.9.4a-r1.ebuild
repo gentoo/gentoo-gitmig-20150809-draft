@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.4a-r1.ebuild,v 1.7 2007/08/13 17:19:09 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.4a-r1.ebuild,v 1.8 2007/08/30 17:03:18 drac Exp $
 
 inherit kde eutils
 
@@ -14,16 +14,13 @@ SRC_URI="http://kmplayer.kde.org/pkgs/${MY_P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc ppc64 x86"
-IUSE="gstreamer mplayer xine cairo"
+IUSE="mplayer xine cairo"
 
 RDEPEND="mplayer? ( || ( media-video/mplayer media-video/mplayer-bin ) )
 	xine? ( >=media-libs/xine-lib-1.1.1 )
-	gstreamer? ( || ( =media-libs/gst-plugins-base-0.10* =media-libs/gst-plugins-0.8* ) )
 	cairo? ( x11-libs/cairo )"
-
 DEPEND="x11-libs/libXv
 	xine? ( >=media-libs/xine-lib-1.1.1 )
-	gstreamer? ( || ( =media-libs/gst-plugins-base-0.10* =media-libs/gst-plugins-0.8* ) )
 	cairo? ( x11-libs/cairo )"
 
 LANGS="ar br bs ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ka
@@ -40,12 +37,11 @@ need-kde 3.5
 PATCHES="${FILESDIR}/kmplayer-0.9.4a-vop2vf.patch"
 
 pkg_setup() {
-	if ! use mplayer && ! use xine && ! use gstreamer && ! use cairo; then
+	if ! use mplayer && ! use xine && ! use cairo; then
 		echo
-		ewarn "Neither the mplayer, xine, gstreamer or cairo use flags have"
-		ewarn "been set. One of them is required. From them, mplayer can be"
-		ewarn "installed afterwards; however, xine and gstreamer will require"
-		ewarn "you to recompile kmplayer."
+		ewarn "Neither the mplayer, xine or cairo use flags have been set."
+		ewarn "One of them is required. From them, mplayer can be installed"
+		ewarn "afterwards; however and xine will require you to recompile."
 	fi
 }
 
@@ -71,7 +67,7 @@ src_unpack() {
 }
 
 src_compile(){
-	local myconf="$(use_with gstreamer) $(use_with xine) $(use_with cairo)"
+	local myconf="--without-gstreamer $(use_with xine) $(use_with cairo)"
 	kde_src_compile
 }
 
