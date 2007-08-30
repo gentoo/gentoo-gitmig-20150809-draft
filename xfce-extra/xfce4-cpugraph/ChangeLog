@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-cpugraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph/ChangeLog,v 1.25 2007/08/27 13:30:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph/ChangeLog,v 1.26 2007/08/30 03:24:54 jer Exp $
+
+  30 Aug 2007; Jeroen Roovers <jer@gentoo.org>
+  xfce4-cpugraph-0.3.0-r1.ebuild:
+  Stable for HPPA (bug #190072).
 
   27 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   xfce4-cpugraph-0.3.0-r1.ebuild:
