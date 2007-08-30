@@ -1,0 +1,14 @@
+# ChangeLog for dev-php/PEAR-Console_Getargs
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Getargs/ChangeLog,v 1.1 2007/08/30 11:46:07 jokey Exp $
+
+*PEAR-Console_Getargs-1.3.4 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +PEAR-Console_Getargs-1.3.4.ebuild:
+  Port from project overlay
+
+  17 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-Console_Getargs-1.3.4.ebuild:
+  New ebuild
+

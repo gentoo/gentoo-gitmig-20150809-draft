@@ -1,0 +1,13 @@
+# ChangeLog for dev-php/PEAR-Config
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Config/ChangeLog,v 1.1 2007/08/30 11:43:52 jokey Exp $
+
+*PEAR-Config-1.10.11 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +PEAR-Config-1.10.11.ebuild:
+  Port from project overlay
+
+  28 Aug 2007; Jakub Moc <jakub@gentoo.org> ChangeLog:
+  New ebuild, Bug 169258
+

@@ -1,0 +1,14 @@
+# ChangeLog for dev-php/PEAR-HTML_QuickForm_ElementGrid
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm_ElementGrid/ChangeLog,v 1.1 2007/08/30 11:48:37 jokey Exp $
+
+*PEAR-HTML_QuickForm_ElementGrid-0.1.1 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +PEAR-HTML_QuickForm_ElementGrid-0.1.1.ebuild:
+  Port from project overlay
+
+  14 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PEAR-HTML_QuickForm_ElementGrid-0.1.1.ebuild:
+  New ebuild for Bug 167215
+
