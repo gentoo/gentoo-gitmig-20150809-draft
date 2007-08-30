@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3000 2007/08/30 06:03:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3001 2007/08/30 16:10:59 pva Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -807,7 +807,6 @@ mail-client/claws-mail:bogofilter - Build bogofilter plugin
 mail-client/claws-mail:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
 mail-client/claws-mail:spamassassin - Build spamassassin plugin
 mail-client/evolution:bogofilter - Use bogofilter instead of spamassassin
-mail-client/mail-notification:evolution - Provide an Evolution plugin
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:pop - Enable support for pop
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by sylpheed
