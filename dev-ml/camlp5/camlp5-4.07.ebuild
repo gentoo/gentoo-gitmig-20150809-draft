@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-4.07.ebuild,v 1.1 2007/08/30 12:41:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-4.07.ebuild,v 1.2 2007/08/30 18:37:31 mr_bones_ Exp $
 
 inherit multilib eutils
 
@@ -21,7 +21,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/install_destdir.dpatch"
 }
-
 
 src_compile() {
 	./configure \
