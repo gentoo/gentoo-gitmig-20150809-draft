@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.57 2007/08/28 13:27:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.58 2007/08/30 16:27:52 jer Exp $
+
+  30 Aug 2007; Jeroen Roovers <jer@gentoo.org> gconfmm-2.18.0.ebuild:
+  Stable for HPPA (bug #188838).
 
   28 Aug 2007; nixnut <nixnut@gentoo.org> gconfmm-2.18.0.ebuild:
   Stable on ppc wrt bug 188838
