@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-9999.ebuild,v 1.4 2007/07/22 07:44:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-9999.ebuild,v 1.5 2007/08/30 07:52:00 genstef Exp $
 
 WANT_AUTOCONF=latest
 inherit nsplugins autotools cvs kde-functions qt3 multilib
@@ -51,6 +51,7 @@ RDEPEND="
 	kde? ( kde-base/kdelibs )
 	agg? ( x11-libs/agg )"
 	#cairo? ( x11-libs/cairo )
+DEPEND="${RDEPEND} dev-util/pkgconfig"
 
 pkg_setup() {
 	if use agg && use kde; then
