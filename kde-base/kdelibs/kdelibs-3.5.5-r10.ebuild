@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r10.ebuild,v 1.15 2007/08/30 21:50:21 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r10.ebuild,v 1.16 2007/08/30 22:22:46 philantrop Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -139,11 +139,7 @@ src_compile() {
 		myconf="${myconf} --disable-dnssd"
 	fi
 
-	if use spell; then
-		myconf="${myconf} $(use_with linguas_he hspell)"
-	else
-		myconf="${myconf} --without-hspell"
-	fi
+	myconf="${myconf} --without-hspell"
 
 	if has_version x11-apps/rgb; then
 		myconf="${myconf} --with-rgbfile=/usr/share/X11/rgb.txt"
