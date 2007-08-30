@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-time-out/xfce4-time-out-0.1.1.ebuild,v 1.4 2007/08/27 13:28:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-time-out/xfce4-time-out-0.1.1.ebuild,v 1.5 2007/08/30 03:39:40 jer Exp $
 
 inherit xfce44
 
 xfce44
 
 DESCRIPTION="Panel plugin to take a break from computer work."
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~ppc ~ppc64 sparc x86"
 IUSE="debug"
 
 RDEPEND=""
