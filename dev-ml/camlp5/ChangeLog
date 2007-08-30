@@ -1,0 +1,11 @@
+# ChangeLog for dev-ml/camlp5
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.1 2007/08/30 12:41:22 aballier Exp $
+
+*camlp5-4.07 (30 Aug 2007)
+
+  30 Aug 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/install_destdir.dpatch, +metadata.xml, +camlp5-4.07.ebuild:
+  Initial import, old school camlp4 released as a standalone version called
+  camlp5 as it has been removed in ocaml 3.10
+

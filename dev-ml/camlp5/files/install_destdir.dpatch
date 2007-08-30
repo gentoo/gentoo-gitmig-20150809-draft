@@ -1,0 +1,28 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## install_destdir.dpatch by Stefano Zacchiroli <zack@debian.org>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad trunk~/Makefile trunk/Makefile
+--- trunk~/Makefile	2007-07-11 09:46:18.000000000 +0000
++++ trunk/Makefile	2007-07-16 16:25:00.000000000 +0000
+@@ -40,10 +40,13 @@
+ 	for i in $(DIRS) compile; do (cd $$i; $(MAKE) depend); done
+ 
+ install:
+-	@test ! -d "$(LIBDIR)/$(NAME)/Camlp4Parsers" || \
+-	 (/bin/rm -rf "$(LIBDIR)/omain"; \
+-	  mv "$(LIBDIR)/$(NAME)" "$(LIBDIR)/o$(NAME)")
+-	for i in $(DIRS) compile; do (cd $$i; $(MAKE) install); done
++	for i in $(DIRS) compile; do (cd $$i; \
++		$(MAKE) install \
++			OLIBDIR=$(DESTDIR)$(OLIBDIR) \
++			BINDIR=$(DESTDIR)$(BINDIR) \
++			LIBDIR=$(DESTDIR)$(LIBDIR) \
++			MANDIR=$(DESTDIR)$(MANDIR) \
++	); done
+ 
+ uninstall:
+ 	rm -rf "$(LIBDIR)/$(NAME)"
