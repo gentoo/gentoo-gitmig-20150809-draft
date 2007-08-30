@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/ezc-Archive
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Archive/ChangeLog,v 1.11 2006/11/25 22:25:48 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Archive/ChangeLog,v 1.12 2007/08/30 13:27:50 jokey Exp $
+
+*ezc-Archive-1.2.3 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +ezc-Archive-1.2.3.ebuild:
+  Version bump for eZC 2007.1.1
 
   25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> ezc-Archive-1.1.ebuild:
   Add ~alpha + ~ia64 keywords, bug 134717.
