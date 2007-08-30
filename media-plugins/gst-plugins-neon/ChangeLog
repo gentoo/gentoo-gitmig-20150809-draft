@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-neon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.4 2007/02/22 02:20:01 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.5 2007/08/30 10:00:55 drac Exp $
+
+*gst-plugins-neon-0.10.5 (30 Aug 2007)
+
+  30 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  +gst-plugins-neon-0.10.5.ebuild:
+  Version bump.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
