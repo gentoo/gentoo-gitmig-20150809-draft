@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/ezc-EventLogDatabaseTiein
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-EventLogDatabaseTiein/ChangeLog,v 1.7 2006/11/25 22:38:17 kloeri Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-EventLogDatabaseTiein/ChangeLog,v 1.8 2007/08/30 13:45:30 jokey Exp $
+
+*ezc-EventLogDatabaseTiein-1.0.2 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org>
+  +ezc-EventLogDatabaseTiein-1.0.2.ebuild:
+  Version bump for eZC 2007.1.1
 
   25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org>
   ezc-EventLogDatabaseTiein-1.0.ebuild:

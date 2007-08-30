@@ -1,0 +1,19 @@
+# ChangeLog for dev-php5/ezc-SignalSlot
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-SignalSlot/ChangeLog,v 1.1 2007/08/30 13:54:46 jokey Exp $
+
+*ezc-SignalSlot-1.1 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +ezc-SignalSlot-1.1.ebuild:
+  Version bump for eZC 2007.1.1
+
+  30 Aug 2007; Jakub Moc <jakub@gentoo.org> +ezc-SignalSlot-1.1.ebuild:
+  Version bump for eZC 2007.1.1
+
+*ezc-SignalSlot-1.0 (23 Jan 2006)
+
+  23 Jan 2006; Tobias Schlitt <toby@php.net> +metadata.xml,
+  +ezc-SignalSlot-1.0.ebuild:
+  Initial ebuild.
+
