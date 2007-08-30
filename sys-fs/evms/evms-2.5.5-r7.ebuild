@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r6.ebuild,v 1.1 2007/07/15 20:23:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r7.ebuild,v 1.1 2007/08/30 22:01:52 dev-zero Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -13,8 +13,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug gtk ncurses nls"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="debug gtk hb hb2 ncurses nls"
 
 #EVMS uses libuuid from e2fsprogs
 RDEPEND="virtual/libc
@@ -23,9 +23,18 @@ RDEPEND="virtual/libc
 	>=sys-apps/baselayout-1.9.4-r6
 	gtk? ( =x11-libs/gtk+-1*
 		=dev-libs/glib-1* )
+	hb? ( !hb2? ( =sys-cluster/heartbeat-1* ) )
+	hb2? ( >=sys-cluster/heartbeat-2 )
 	ncurses? ( sys-libs/ncurses
 		>=dev-libs/glib-2.12.4-r1 )"
 DEPEND="${RDEPEND}"
+
+pkg_setup() {
+	if use hb && use hb2 ; then
+		ewarn "It's not possible to have support for heartbeat version 1 and 2 at the same time."
+		ewarn "Assuming  that you want heartbeat-2, if not, please do not enable the hb2 use flag."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -33,7 +42,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PV}/md_super_fix.patch"
 	epatch "${FILESDIR}/${PV}/ntfs_unmkfs.patch"
-	epatch "${FILESDIR}/${PV}/raid5_degrade_fix.patch"
+	epatch "${FILESDIR}/${PV}/raid5_degrade_fix_v2.patch"
 	epatch "${FILESDIR}/${PV}/raid5_remove_spare_fix.patch"
 	epatch "${FILESDIR}/${PV}/raid5_remove_spare_fix_2.patch"
 	epatch "${FILESDIR}/${PV}/raid5_algorithm.patch"
@@ -62,6 +71,10 @@ src_compile() {
 	use ncurses || excluded_interfaces="--disable-text-mode"
 	use gtk || excluded_interfaces="${excluded_interfaces} --disable-gui"
 
+	# hb2 should override hb
+	local myconf="$(use_enable hb ha) --disable-hb2"
+	use hb2 && myconf="--disable-ha --enable-hb2"
+
 	# We have to link statically against glib because evmsn resides in /sbin
 	econf \
 		--libdir=/$(get_libdir) \
@@ -70,6 +83,7 @@ src_compile() {
 		--with-static-glib \
 		$(use_with debug) \
 		$(use_enable nls) \
+		${myconf} \
 		${excluded_interfaces} || die "Failed configure"
 	emake || die "Failed emake"
 }
@@ -112,6 +126,8 @@ src_install() {
 
 	# Needed for bug #51252
 	dosym libevms-2.5.so.0.0 /$(get_libdir)/libevms-2.5.so.0
+
+	newinitd "${FILESDIR}/evms.initd"
 }
 
 src_test() {

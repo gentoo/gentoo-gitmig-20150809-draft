@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.67 2007/07/15 20:23:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.68 2007/08/30 22:01:52 dev-zero Exp $
+
+*evms-2.5.5-r7 (30 Aug 2007)
+
+  30 Aug 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/2.5.5/raid5_degrade_fix_v2.patch, +files/evms.initd,
+  -files/evms2-start.sh, -evms-2.5.5-r6.ebuild, +evms-2.5.5-r7.ebuild:
+  Updated raid5_degrade patch (bug #187944, thanks to Daniel Marmander), added
+  hb and hb2 USE flags (bug #177516, thanks to Peter Fern), added
+  init.d-script needed for baselayout-2).
 
 *evms-2.5.5-r6 (15 Jul 2007)
 
