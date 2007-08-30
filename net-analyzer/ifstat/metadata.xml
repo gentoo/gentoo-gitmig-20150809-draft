@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>netmon</herd>
+	<maintainer>
+		<email>jer@gentoo.org</email>
+	</maintainer>
 	<longdescription>
 		ifstat is a utility to monitor network interface bandwidth usage, with
 		vmstat look and feel.
