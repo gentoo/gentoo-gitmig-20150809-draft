@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/phpsysinfo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.33 2007/08/13 21:15:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.34 2007/08/30 14:18:39 wrobel Exp $
+
+*phpsysinfo-2.5.4 (30 Aug 2007)
+
+  30 Aug 2007; <wrobel@gentoo.org> +phpsysinfo-2.5.4.ebuild:
+  phpsysinfo version bump to 2.5.4 because of security issue #186931.
 
   13 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   phpsysinfo-2.5.3.ebuild:
