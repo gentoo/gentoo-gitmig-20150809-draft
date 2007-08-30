@@ -1,13 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.6.1-r1.ebuild,v 1.3 2007/03/12 13:52:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.6.1-r2.ebuild,v 1.1 2007/08/30 10:49:10 tupone Exp $
 
 inherit eutils games
 
 DESCRIPTION="a free chess database application"
 HOMEPAGE="http://scid.sourceforge.net/"
 SRC_URI="mirror://sourceforge/scid/${P}.tar.gz
-	http://www.visi.com/~veldy/gentoo/scid-extras-08232002.tar.bz2
 	mirror://sourceforge/scid/photos.zip
 	mirror://sourceforge/scid/ratings.zip
 	mirror://sourceforge/scid/scidlet40k.zip"
@@ -28,10 +27,10 @@ DEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-snack.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 	sed -i \
 		-e "s:@snack_path@:/lib/snack2.2:" \
-		-e "s:@GENTOO_DATA@:${GAMES_DATADIR}/${PN}:" \
+		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		tcl/start.tcl
 }
 
@@ -56,9 +55,8 @@ src_install() {
 	dohtml help/*.html
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r sounds || die "doins failed"
-	cd "${WORKDIR}"
-	doins scidlet40k.sbk gm.spf historic.spf ratings.ssp scid.eco \
+	doins -r scid.eco sounds spelling.ssp \
+		../{gm.spf,historic.spf,ratings.ssp,scidlet40k.sbk} \
 		|| die "doins failed"
 
 	prepgamesdirs

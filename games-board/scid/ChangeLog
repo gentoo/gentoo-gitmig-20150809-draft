@@ -1,6 +1,13 @@
 # ChangeLog for games-board/scid
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.14 2007/03/12 13:52:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.15 2007/08/30 10:49:10 tupone Exp $
+
+*scid-3.6.1-r2 (30 Aug 2007)
+
+  30 Aug 2007; <tupone@gentoo.org> +files/scid-3.6.1-gentoo.patch,
+  -files/scid-3.6.1-snack.patch, -scid-3.6.1-r1.ebuild,
+  +scid-3.6.1-r2.ebuild:
+  Fix for wrong files path, one raising bug #181804 by R. Stephan
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> scid-3.6.1-r1.ebuild:
   Replacing einfo with elog
