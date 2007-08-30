@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2007.06.06.ebuild,v 1.1 2007/06/07 13:50:53 agorf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2007.08.24.ebuild,v 1.1 2007/08/30 15:46:43 agorf Exp $
 
 DESCRIPTION="A small command-line program to download videos from YouTube."
 HOMEPAGE="http://www.arrakis.es/~rggi3/youtube-dl/"
