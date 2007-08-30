@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7653 2007/08/30 17:41:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7654 2007/08/30 18:17:39 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -25,6 +25,7 @@
 # GStreamer 0.8 removal mask.
 # Discontinued by upstream, several open bugs and
 # some plugins are incompatible with current libs.
+# Bug 190800. Removed in 30 days.
 =dev-python/gst-python-0.8*
 =media-plugins/gst-plugins-a52dec-0.8*
 =media-plugins/gst-plugins-alsa-0.8*
