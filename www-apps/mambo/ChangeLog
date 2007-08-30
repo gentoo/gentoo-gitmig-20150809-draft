@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mambo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.31 2007/07/29 17:29:39 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.32 2007/08/30 14:15:47 wrobel Exp $
+
+  30 Aug 2007; <wrobel@gentoo.org> -mambo-4.6.1.ebuild:
+  Removed mambo version affected by #176915.
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> mambo-4.6.1.ebuild,
   mambo-4.6.2.ebuild:
