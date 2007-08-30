@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.13 2007/08/09 15:08:44 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.14 2007/08/30 12:23:36 drac Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -18,14 +18,13 @@ LICENSE="GPL-2"
 
 SLOT="0.4"
 KEYWORDS="amd64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="alsa debug esd gtk gstreamer jack mplayer opengl"
+IUSE="alsa debug esd gtk jack mplayer opengl"
 
 RDEPEND="~media-libs/libvisual-${PV}
 	opengl? ( virtual/opengl )
 	esd? ( media-sound/esound )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
 	gtk? ( >=x11-libs/gtk+-2 )
-	gstreamer? ( =media-libs/gstreamer-0.8* )
 	alsa? ( media-libs/alsa-lib )
 	media-libs/fontconfig
 	x11-libs/libX11
@@ -50,7 +49,7 @@ src_compile() {
 	econf $(use_enable debug) \
 		$(use_enable debug inputdebug) \
 		$(use_enable gtk gdkpixbuf-plugin) \
-		$(use_enable gstreamer gstreamer-plugin) \
+		--disable-gstreamer-plugin \
 		$(use_enable alsa) \
 		$(use_enable opengl gltest) \
 		$(use_enable opengl nastyfft) \
