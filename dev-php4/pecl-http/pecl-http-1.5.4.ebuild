@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-http/pecl-http-1.5.4.ebuild,v 1.1 2007/08/27 11:07:11 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-http/pecl-http-1.5.4.ebuild,v 1.2 2007/08/30 12:39:47 jokey Exp $
 
 PHP_EXT_NAME="http"
 PHP_EXT_PECL_PKG="pecl_http"
@@ -32,8 +32,8 @@ src_compile() {
 
 pkg_postinst() {
 	has_php
-	if ! built_with_use --missing true =${PHP_PKG} iconv mhash session ; then
-		elog "${PN} can optionally use iconv, mhash and session features."
+	if ! built_with_use --missing true =${PHP_PKG} iconv session ; then
+		elog "${PN} can optionally use iconv and session features."
 		elog "If you want those, recompile ${PHP_PKG} with those flags in USE."
 	fi
 }

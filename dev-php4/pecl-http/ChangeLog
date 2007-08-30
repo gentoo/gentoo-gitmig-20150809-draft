@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-http
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-http/ChangeLog,v 1.5 2007/08/27 11:07:11 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-http/ChangeLog,v 1.6 2007/08/30 12:39:47 jokey Exp $
+
+  28 Aug 2007; Jakub Moc <jakub@gentoo.org> pecl-http-1.5.4.ebuild:
+  Remove mhash from postinst check
 
 *pecl-http-1.5.4 (27 Aug 2007)
 
