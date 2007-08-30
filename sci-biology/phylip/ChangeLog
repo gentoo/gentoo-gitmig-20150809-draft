@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/phylip
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.25 2007/07/22 07:31:51 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.26 2007/08/30 21:00:59 ribosome Exp $
+
+  30 Aug 2007; Olivier Fisette <ribosome@gentoo.org> phylip-3.66.ebuild:
+  Added to ~amd64.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   phylip-3.65-r1.ebuild, phylip-3.66.ebuild:
