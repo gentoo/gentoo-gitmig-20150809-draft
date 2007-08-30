@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.173 2007/08/22 19:55:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.174 2007/08/30 18:32:53 wolf31o2 Exp $
+
+*genkernel-3.4.9_pre2 (30 Aug 2007)
+
+  30 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  -genkernel-3.4.9_pre1.ebuild, +genkernel-3.4.9_pre2.ebuild:
+  Version bump to 3.4.9_pre2 to remove suspend support until we have a better
+  idea of how to support it.
 
 *genkernel-3.4.9_pre1 (22 Aug 2007)
 
