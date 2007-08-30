@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7652 2007/08/30 17:40:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7653 2007/08/30 17:41:37 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,7 +21,7 @@
 ##   End example
 ##
 
-# <drac@gentoo.org> (30 Aug 2007)
+# Samuli Suominen <drac@gentoo.org> (30 Aug 2007)
 # GStreamer 0.8 removal mask.
 # Discontinued by upstream, several open bugs and
 # some plugins are incompatible with current libs.
