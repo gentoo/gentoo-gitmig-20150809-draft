@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.44.ebuild,v 1.5 2007/08/07 23:31:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.44.ebuild,v 1.6 2007/08/30 16:58:53 voyageur Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -68,13 +68,14 @@ src_unpack() {
 		mv ${T}/Makefile ${T}/common.mak ffmpeg
 	fi
 	# pass compiler flags to the scons build system
-	# and set python version to newest stable in portage
+	# and set python version to current version in use
+	python_version
 	cat <<- EOF >> ${S}/user-config.py
 		CFLAGS += '${CFLAGS}'
-		BF_PYTHON_VERSION="2.4"
-		BF_PYTHON_INC="/usr/include/python2.4"
-		BF_PYTHON_BINARY="/usr/bin/python2.4"
-		BF_PYTHON_LIB="python2.4"
+		BF_PYTHON_VERSION="${PYVER}"
+		BF_PYTHON_INC="/usr/include/python${PYVER}"
+		BF_PYTHON_BINARY="/usr/bin/python${PYVER}"
+		BF_PYTHON_LIB="python${PYVER}"
 	EOF
 
 }

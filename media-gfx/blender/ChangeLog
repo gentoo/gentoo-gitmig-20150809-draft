@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.119 2007/08/07 23:31:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.120 2007/08/30 16:58:53 voyageur Exp $
+
+  30 Aug 2007; Bernard Cafarelli <voyageur@gentoo.org> blender-2.44.ebuild:
+  Compilation fix for python versions other than 2.4, closes bug #152700
 
   07 Aug 2007; Luca Barbato <lu_zero@gentoo.org>
   +files/blender-2.44-swscale.patch, blender-2.44.ebuild:
