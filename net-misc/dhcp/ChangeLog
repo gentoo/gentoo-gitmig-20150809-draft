@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.132 2007/08/30 17:24:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.133 2007/08/30 19:14:26 jurek Exp $
+
+  30 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> dhcp-3.0.6.ebuild,
+  dhcp-3.1.0.ebuild:
+  x86 stable (bug #190775)
 
   30 Aug 2007; Jeroen Roovers <jer@gentoo.org> dhcp-3.0.6.ebuild,
   dhcp-3.1.0.ebuild:
