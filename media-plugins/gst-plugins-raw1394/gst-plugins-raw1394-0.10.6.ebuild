@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-raw1394/gst-plugins-raw1394-0.10.5.ebuild,v 1.1 2007/01/25 19:48:11 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-raw1394/gst-plugins-raw1394-0.10.6.ebuild,v 1.1 2007/08/30 19:56:22 drac Exp $
 
 inherit gst-plugins-good
 
@@ -9,11 +9,12 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 DESCRIPTION="GStreamer plugin to capture firewire video"
 
 IUSE=""
-RDEPEND="sys-libs/libraw1394
-	sys-libs/libavc1394
-	>=media-libs/gstreamer-0.10.10
-	>=media-libs/gst-plugins-base-0.10.10.1"
 
+RDEPEND="media-libs/libiec61883
+	sys-libs/libraw1394
+	sys-libs/libavc1394
+	>=media-libs/gstreamer-0.10.13
+	>=media-libs/gst-plugins-base-0.10.13"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
