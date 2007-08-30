@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-3.0.ebuild,v 1.6 2007/07/15 03:33:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-3.0.ebuild,v 1.7 2007/08/30 16:08:54 pva Exp $
 
 inherit eutils gnome2 multilib flag-o-matic versionator
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ppc sparc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-IUSE="imap ipv6 ssl sasl gmail evolution sylpheed mbox maildir pop"
+IUSE="imap ipv6 ssl sasl gmail evo sylpheed mbox maildir pop"
 
 # gmime is actually optional, but it's used by so much of the package it's
 # pointless making it optional.
@@ -30,11 +30,11 @@ DEPEND=">=x11-libs/gtk+-2.6
 	dev-perl/XML-Parser
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
-	evolution? ( >=mail-client/evolution-2.4 )
+	evo? ( >=mail-client/evolution-2.4 )
 	sylpheed? ( virtual/sylpheed )"
 
 pkg_setup() {
-	if use evolution ; then
+	if use evo ; then
 		EVO_INSTALLED="$(best_version mail-client/evolution)"
 		EVO_INSTALLED="${EVO_INSTALLED##*/}"
 		EVO_INSTALLED="${EVO_INSTALLED#*-}"
@@ -48,7 +48,7 @@ pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable imap)"
 	G2CONF="${G2CONF} $(use_enable pop pop3)"
 	G2CONF="${G2CONF} $(use_enable gmail)"
-	G2CONF="${G2CONF} $(use_enable evolution)"
+	G2CONF="${G2CONF} $(use_enable evo evolution)"
 	G2CONF="${G2CONF} --with-evolution-source-dir=/usr/include/evolution-${EVO_VERSION}"
 	G2CONF="${G2CONF} $(use_enable sylpheed)"
 }

@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.40 2007/01/29 21:57:08 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.41 2007/08/30 16:08:54 pva Exp $
+
+  30 Aug 2007; <pva@gentoo.org> mail-notification-2.0.ebuild,
+  mail-notification-3.0.ebuild, mail-notification-4.0_rc2.ebuild,
+  mail-notification-4.0.ebuild:
+  evolution->evo USE flag change, bug #157265
 
   29 Jan 2007; Tom Martin <slarti@gentoo.org> mail-notification-4.0.ebuild:
   Fix numerous cock-ups. Thanks to Ed Catmur <ed@catmur.co.uk> in bug #164072.
