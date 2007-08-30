@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-weather
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/ChangeLog,v 1.39 2007/07/26 13:22:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/ChangeLog,v 1.40 2007/08/30 03:27:11 jer Exp $
+
+  30 Aug 2007; Jeroen Roovers <jer@gentoo.org>
+  xfce4-weather-0.6.0-r1.ebuild:
+  Stable for HPPA (bug #190072).
 
   26 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   xfce4-weather-0.6.0-r1.ebuild:
