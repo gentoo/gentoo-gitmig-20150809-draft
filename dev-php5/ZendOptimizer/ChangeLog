@@ -1,0 +1,15 @@
+# ChangeLog for dev-php5/ZendOptimizer
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendOptimizer/ChangeLog,v 1.1 2007/08/30 12:58:10 jokey Exp $
+
+*ZendOptimizer-3.3.0a (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +ZendOptimizer-3.3.0a.ebuild:
+  Port from project overlay
+
+  29 Aug 2007; Jakub Moc <jakub@gentoo.org> -ZendOptimizer-3.0.1.ebuild,
+  -ZendOptimizer-3.3.0.ebuild, +ZendOptimizer-3.3.0a.ebuild
+  Bump to 3.3.0a, add QA_{TEXTRELS,EXECSTACK} variables to silence portage QA
+  warnings.
+

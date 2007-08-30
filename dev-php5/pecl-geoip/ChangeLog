@@ -1,0 +1,14 @@
+# ChangeLog for dev-php5/pecl-geoip
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-geoip/ChangeLog,v 1.1 2007/08/30 13:02:22 jokey Exp $
+
+*pecl-geoip-1.0.1 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +pecl-geoip-1.0.1.ebuild:
+  Port from project overlay
+
+  28 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +pecl-geoip-1.0.1.ebuild:
+  New ebuild, Bug 187405
+
