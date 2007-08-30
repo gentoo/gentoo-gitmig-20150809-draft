@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.91 2007/08/28 14:25:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.92 2007/08/30 04:15:53 jer Exp $
+
+  30 Aug 2007; Jeroen Roovers <jer@gentoo.org>
+  iproute2-2.6.20.20070313.ebuild:
+  Stable for HPPA (bug #190200).
 
   28 Aug 2007; nixnut <nixnut@gentoo.org> iproute2-2.6.20.20070313.ebuild:
   Stable on ppc wrt bug 190200
