@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/fenris
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/ChangeLog,v 1.16 2007/03/26 08:09:34 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/ChangeLog,v 1.17 2007/08/30 13:25:24 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing liquidx from metadata due to his retirement (see #171155 for
+  reference).
 
   26 Mar 2007; Alec Warner <antarus@gentoo.org> fenris-0.07m-r2.ebuild:
   Remove dependency on portage: ref bug 162516

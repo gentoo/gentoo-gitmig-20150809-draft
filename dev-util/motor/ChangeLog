@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/motor
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/ChangeLog,v 1.11 2006/09/19 20:08:38 liquidx Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/ChangeLog,v 1.12 2007/08/30 13:24:40 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing liquidx from metadata due to his retirement (see #171155 for
+  reference).
 
   19 Sep 2006; Alastair Tse <liquidx@gentoo.org> -motor-3.3.0.ebuild,
   -motor-3.3.0-r1.ebuild, -motor-3.4.0.ebuild, motor-3.4.0-r1.ebuild:
