@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.45 2007/08/29 14:30:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.46 2007/08/30 22:58:35 ulm Exp $
+
+*slime-2.0_p20070809 (30 Aug 2007)
+
+  30 Aug 2007; Ulrich Mueller <ulm@gentoo.org> +slime-2.0_p20070809.ebuild:
+  New CVS snapshot, should fix the issues of 20070822.
 
   29 Aug 2007; Ulrich Mueller <ulm@gentoo.org> -slime-2.0.0.20061118.ebuild:
   Remove old ebuild, it is identical with slime-2.0_p20061118.
