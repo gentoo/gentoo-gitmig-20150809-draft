@@ -6,6 +6,14 @@ AUX nautilus-sendto-0.12-configure-options.patch 6308 RMD160 0c8ebc3c7d1263468df
 MD5 077ad16818464917c1bae1fee7baa5ad files/nautilus-sendto-0.12-configure-options.patch 6308
 RMD160 0c8ebc3c7d1263468df9c0396153a6c1d5095873 files/nautilus-sendto-0.12-configure-options.patch 6308
 SHA256 4aded457b4caa45238ec797417ff39a20bbbc699a757452d7d5fdf5c920cc915 files/nautilus-sendto-0.12-configure-options.patch 6308
+AUX nautilus-sendto-0.12-debug-statements.patch 622 RMD160 997cf21fa4c6bad856d3ea796d459044ec9ba803 SHA1 b816e8420331dc058c5884034a9cf3f2856322d0 SHA256 0b042e854679f470c7e9f3f3925b12454c07363355dce185b8ac67ba4f304134
+MD5 fb3839ccb70c492fae6059ea2412e41b files/nautilus-sendto-0.12-debug-statements.patch 622
+RMD160 997cf21fa4c6bad856d3ea796d459044ec9ba803 files/nautilus-sendto-0.12-debug-statements.patch 622
+SHA256 0b042e854679f470c7e9f3f3925b12454c07363355dce185b8ac67ba4f304134 files/nautilus-sendto-0.12-debug-statements.patch 622
+AUX nautilus-sendto-0.12-pidgin-plugin-versioning.patch 833 RMD160 0d4df889e48a0c42da3b25994a1e6e7d687cf285 SHA1 ded905aad8a6425748428236ec69c4c5cdd0de08 SHA256 579919a85f514749ef679ab1102bc45944389becbc77cd386d8ade339be39c14
+MD5 6de0d11d813cc484d6869f7f4dcb5113 files/nautilus-sendto-0.12-pidgin-plugin-versioning.patch 833
+RMD160 0d4df889e48a0c42da3b25994a1e6e7d687cf285 files/nautilus-sendto-0.12-pidgin-plugin-versioning.patch 833
+SHA256 579919a85f514749ef679ab1102bc45944389becbc77cd386d8ade339be39c14 files/nautilus-sendto-0.12-pidgin-plugin-versioning.patch 833
 AUX nautilus-sendto-0.7-configure-options.patch 6139 RMD160 e870d3d45e3424fa32ca4f4a6795136cb38c0f40 SHA1 b726b4b591875d135b32867e4f18203c9ea48842 SHA256 cb66185c5734450dc087fb9789bdd4987b932ea980b11f1ed1ae8aab8feeeaac
 MD5 578ce7a03e6e914320128069c5996871 files/nautilus-sendto-0.7-configure-options.patch 6139
 RMD160 e870d3d45e3424fa32ca4f4a6795136cb38c0f40 files/nautilus-sendto-0.7-configure-options.patch 6139
@@ -29,6 +37,10 @@ EBUILD nautilus-sendto-0.10.ebuild 2123 RMD160 558cf0b6c9648d22300bbc339d921061c
 MD5 a263b30927d46c58388f43ae2631cdbc nautilus-sendto-0.10.ebuild 2123
 RMD160 558cf0b6c9648d22300bbc339d921061c8fe6f0d nautilus-sendto-0.10.ebuild 2123
 SHA256 bb6b0937fdfd81d1f8b50dd97d13604d957071bf7fe606e053483308f5678cc1 nautilus-sendto-0.10.ebuild 2123
+EBUILD nautilus-sendto-0.12-r1.ebuild 2232 RMD160 59f585555cf90cdbfce64b33dc567f3ebbfa6b1a SHA1 900bdecaf344b64b674a061ab41dcd182c18f32e SHA256 dce8787dafb5f949fc59e9960547b89d59a98790e9e73e7d1309257e46d69753
+MD5 e98bb5f6f2db48a59a3c0e1f20757686 nautilus-sendto-0.12-r1.ebuild 2232
+RMD160 59f585555cf90cdbfce64b33dc567f3ebbfa6b1a nautilus-sendto-0.12-r1.ebuild 2232
+SHA256 dce8787dafb5f949fc59e9960547b89d59a98790e9e73e7d1309257e46d69753 nautilus-sendto-0.12-r1.ebuild 2232
 EBUILD nautilus-sendto-0.12.ebuild 2026 RMD160 563ad9a87ffb3e290f3efc59b3c5f240fab18c75 SHA1 78a99438818d2bf391d2f19b10f63200aa38c836 SHA256 41e56a42f3b15a71723b6d445f86f3da682a53d3b36c0c36b73301ff132ada50
 MD5 3b86d58ee915bc2b2575131910fa263e nautilus-sendto-0.12.ebuild 2026
 RMD160 563ad9a87ffb3e290f3efc59b3c5f240fab18c75 nautilus-sendto-0.12.ebuild 2026
@@ -37,10 +49,10 @@ EBUILD nautilus-sendto-0.8-r1.ebuild 2206 RMD160 6ee85236a817bf3aab8f9b9398697bf
 MD5 81ca2545c31a522b46a5c8d40f5f5272 nautilus-sendto-0.8-r1.ebuild 2206
 RMD160 6ee85236a817bf3aab8f9b9398697bfbdced21d2 nautilus-sendto-0.8-r1.ebuild 2206
 SHA256 c93723cbf2cb65ec8d17775d31509be99eaa158732fa5297e6e5c462206c04f2 nautilus-sendto-0.8-r1.ebuild 2206
-MISC ChangeLog 3381 RMD160 894dace61de0ddf2acf78bb9902d66bfe252d602 SHA1 201f9e703d6ad03c6d32c78ec5c883c22eec8802 SHA256 b08040d19b0fb05107a0020cccaf9befa15ee78f3b5c7e346974a3e9afc6174c
-MD5 c47cd90ab3c9a3ca5aeda6c5795ef6db ChangeLog 3381
-RMD160 894dace61de0ddf2acf78bb9902d66bfe252d602 ChangeLog 3381
-SHA256 b08040d19b0fb05107a0020cccaf9befa15ee78f3b5c7e346974a3e9afc6174c ChangeLog 3381
+MISC ChangeLog 3714 RMD160 5bb73a8a5ba45567408a4fe1d58047192c2a652c SHA1 2b555cf0c1d04183e63b8617c0cf76e52c52690f SHA256 ece0a40539738cad63984fa8d151670b141e087a6224231de19f2c91c7ced398
+MD5 717055ba3f63dc566baacdea597f2086 ChangeLog 3714
+RMD160 5bb73a8a5ba45567408a4fe1d58047192c2a652c ChangeLog 3714
+SHA256 ece0a40539738cad63984fa8d151670b141e087a6224231de19f2c91c7ced398 ChangeLog 3714
 MISC metadata.xml 311 RMD160 868d0eab62db916aa47b7f440a3f4efecc6163b1 SHA1 0e56da7be32af7c553c07179c574cd7837298702 SHA256 774cc71e08a317563fb2700d5aac76af10e3e31ae7c1c58325730bfa0fbb110a
 MD5 def57195a8a8fbc9ff84bded4f4c6772 metadata.xml 311
 RMD160 868d0eab62db916aa47b7f440a3f4efecc6163b1 metadata.xml 311
@@ -51,6 +63,9 @@ SHA256 efaafd9e63510d5d6037a4dbb5d77d64514f2eb2389572bc9eeae5e4af6190ab files/di
 MD5 4c1a276fca706b0b74a8e9d2066eceeb files/digest-nautilus-sendto-0.12 265
 RMD160 99266dbad69df16f77384c516333ab8d2fd9f6fb files/digest-nautilus-sendto-0.12 265
 SHA256 2212009c95178ee04de8957ed7fec0d6a7b0a21f9c0d868ff6ba9e2b98fb4af2 files/digest-nautilus-sendto-0.12 265
+MD5 4c1a276fca706b0b74a8e9d2066eceeb files/digest-nautilus-sendto-0.12-r1 265
+RMD160 99266dbad69df16f77384c516333ab8d2fd9f6fb files/digest-nautilus-sendto-0.12-r1 265
+SHA256 2212009c95178ee04de8957ed7fec0d6a7b0a21f9c0d868ff6ba9e2b98fb4af2 files/digest-nautilus-sendto-0.12-r1 265
 MD5 3eb361530f754a6c25cf4ffb97023216 files/digest-nautilus-sendto-0.8-r1 262
 RMD160 c63c72445346d41a9b1fc11c6e9d87006ddfa67c files/digest-nautilus-sendto-0.8-r1 262
 SHA256 140d0f2c21e7dcb6a00ddbbacfc0ce5799cafe69d0f18e4b7a1273f63f36c2b7 files/digest-nautilus-sendto-0.8-r1 262

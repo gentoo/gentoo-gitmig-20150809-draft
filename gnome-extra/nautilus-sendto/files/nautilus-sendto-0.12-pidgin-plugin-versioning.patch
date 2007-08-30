@@ -1,0 +1,21 @@
+--- pidgin_plugin/Makefile.am.orig	2007-08-29 22:15:29.000000000 -0700
++++ pidgin_plugin/Makefile.am	2007-08-29 22:15:52.000000000 -0700
+@@ -6,6 +6,7 @@
+ nautilus_la_LDFLAGS = -module -avoid-version
+ 
+ AM_CPPFLAGS = 					\
++	-DVERSION=\"$(VERSION)\"	\
+ 	-DLIBDIR=\"$(PIDGIN_LIBDIR)/pidgin/\" 	\
+ 	-DDATADIR=\"$(PIDGIN_DATADIR)\" 		\
+ 	$(NAUTILUS_SENDTO_CFLAGS)		\
+--- pidgin_plugin/nautilus-sendto-plugin.c.orig	2007-08-29 22:13:55.000000000 -0700
++++ pidgin_plugin/nautilus-sendto-plugin.c	2007-08-29 22:16:23.000000000 -0700
+@@ -306,7 +306,7 @@
+     
+     "gtk-nautilus",					/* id */
+     N_("Nautilus Integration"),				/* name */
+-    "0.8",						/* version */
++    VERSION,						/* version */
+     N_("Provides integration with Nautilus"),		/* summary */ 
+     N_("Provides integration with Nautilus"),		/* description */
+     

@@ -1,0 +1,15 @@
+--- pidgin_plugin/nautilus-sendto-plugin.c.orig	2007-08-29 22:10:10.000000000 -0700
++++ pidgin_plugin/nautilus-sendto-plugin.c	2007-08-29 22:10:26.000000000 -0700
+@@ -123,10 +123,10 @@
+ 	    fclose (fd);
+ 	    g_string_free (buddies_str, TRUE);
+ 	    buddies_str = str;
+-	    gaim_debug_info ("nautilus", "save blist online\n");
++	    purple_debug_info ("nautilus", "save blist online\n");
+ 	}else{
+ 	    g_string_free (str, TRUE);
+-	    gaim_debug_info ("nautilus", "don't save blist online. No change\n");
++	    purple_debug_info ("nautilus", "don't save blist online. No change\n");
+ 	}
+ 	g_free (fd_name);
+     }else{
