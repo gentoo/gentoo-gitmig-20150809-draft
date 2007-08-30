@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/xfce-mcs-plugins-4.4.1-r1.ebuild,v 1.6 2007/07/26 13:16:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-plugins/xfce-mcs-plugins-4.4.1-r1.ebuild,v 1.7 2007/08/30 03:23:45 jer Exp $
 
 inherit eutils xfce44
 
@@ -8,7 +8,7 @@ XFCE_VERSION=4.4.1
 xfce44
 
 DESCRIPTION="Setting plugins"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="debug"
 
