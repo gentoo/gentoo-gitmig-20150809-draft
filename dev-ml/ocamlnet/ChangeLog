@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.18 2007/08/23 09:02:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.19 2007/08/30 13:35:11 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing mattam from metadata due to his retirement (see #30021 for reference).
 
 *ocamlnet-2.2.8.1 (23 Aug 2007)
 
