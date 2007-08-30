@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/modlogan
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.30 2006/11/23 15:07:20 vivo Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.31 2007/08/30 12:09:08 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing liquidx from metadata due to his retirement (see #171155 for
+  reference).
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> modlogan-0.8.13.ebuild:
   dev-db/mysql => virtual/mysql
