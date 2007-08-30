@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/openslp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.42 2007/07/13 13:20:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.43 2007/08/30 13:18:53 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing liquidx from metadata due to his retirement (see #171155 for
+  reference).
 
 *openslp-1.2.1-r1 (13 Jul 2007)
 
