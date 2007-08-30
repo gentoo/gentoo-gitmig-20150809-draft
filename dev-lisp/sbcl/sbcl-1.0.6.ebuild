@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.6.ebuild,v 1.1 2007/05/28 14:36:21 joslwah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.6.ebuild,v 1.2 2007/08/30 05:44:55 redhatter Exp $
 
 inherit common-lisp-common-3 eutils flag-o-matic
 
@@ -25,7 +25,7 @@ SLOT="0"
 
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-IUSE="ldb source threads unicode doc"
+IUSE="ldb source threads unicode doc cobalt"
 
 DEPEND="doc? ( sys-apps/texinfo )"
 
