@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/mon
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.25 2007/07/09 22:47:42 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.26 2007/08/30 13:38:13 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing mcummings from metadata due to his retirement (see #105718 for
+  reference).
 
 *mon-0.99.2-r5 (09 Jul 2007)
 
