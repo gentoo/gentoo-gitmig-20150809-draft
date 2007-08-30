@@ -1,0 +1,14 @@
+# ChangeLog for dev-php4/ffmpeg-php
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/ffmpeg-php/ChangeLog,v 1.1 2007/08/30 12:46:32 jokey Exp $
+
+*ffmpeg-php-0.5.1 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +ffmpeg-php-0.5.1.ebuild:
+  Port from project overlay
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> -ffmpeg-php-0.5.0.ebuild,
+  +ffmpeg-php-0.5.0.ebuild:
+  Version bump, check for gd support in PHP
+
