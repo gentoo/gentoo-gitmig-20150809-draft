@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7649 2007/08/30 12:33:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7650 2007/08/30 12:49:31 aballier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -401,6 +401,7 @@ app-shells/ash
 >=dev-ml/ulex-1.0
 >=dev-ml/ocamlduce-3.10.0
 dev-ml/camlp5
+>=app-misc/ledit-1.15
 
 # Andrej Kacian <ticho@gentoo.org> (26 May 2007)
 # Use mail-client/claws-mail - upstream changed application name after 2.6.0.
