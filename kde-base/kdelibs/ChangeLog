@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.480 2007/08/15 04:49:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.481 2007/08/30 21:50:20 philantrop Exp $
+
+  30 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kdelibs-3.5.5-r10.ebuild:
+  Dropped the obsolete dependency on hspell as per bug 177707.
 
   15 Aug 2007; Jeroen Roovers <jer@gentoo.org> kdelibs-3.5.7-r2.ebuild:
   Stable for HPPA (bug #176297).

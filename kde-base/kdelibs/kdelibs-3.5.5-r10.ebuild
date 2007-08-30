@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r10.ebuild,v 1.14 2007/07/22 10:50:03 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r10.ebuild,v 1.15 2007/08/30 21:50:21 philantrop Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -45,8 +45,7 @@ RDEPEND="$(qt_min_version 3.3.3)
 	utempter? ( sys-libs/libutempter )
 	!kde-base/kde-env
 	lua? ( dev-lang/lua )
-	spell? ( app-text/aspell app-dicts/aspell-en
-		linguas_he? ( >=app-text/hspell-1.0 ) )"
+	spell? ( app-text/aspell app-dicts/aspell-en )"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
