@@ -1,0 +1,59 @@
+--- configure.in.orig	2007-08-27 20:04:18.000000000 +0200
++++ configure.in	2007-08-27 20:10:52.000000000 +0200
+@@ -189,26 +189,33 @@
+   AC_MSG_ERROR(Unable to find mplayer in the PATH. You need mplayer to use OGMRip. Find it on http://www.mplayerhq.hu)
+ fi
+ 
+-if $MPLAYER_PROG 2> /dev/null | grep -q "MPlayer dev-\(CVS\|SVN\)"; then
+-  have_mplayer_dev=yes
+-  MPLAYER_MAJOR_VERSION=99
+-  MPLAYER_MINOR_VERSION=99
+-  MPLAYER_PRE_VERSION=99
+-  MPLAYER_RC_VERSION=99
+-  AC_MSG_WARN(Mplayer SVN/CVS detected - USE AT YOUR OWN RISK)
+-else
++MPLAYER_VERSION=`$MPLAYER_PROG 2> /dev/null | grep "^MPlayer"`
++
++if echo $MPLAYER_VERSION | grep -q "MPlayer [[0-1]]\.[[0-9]]\+\(\(rc\|pre\)[[0-9]]\+\)\?"; then
+   have_mplayer_dev=no
+-  MPLAYER_MAJOR_VERSION=`$MPLAYER_PROG 2> /dev/null | grep "^MPlayer" | $SED_PROG -e 's%^MPlayer \([[0-1]]\).*%\1%'`
+-  MPLAYER_MINOR_VERSION=`$MPLAYER_PROG 2> /dev/null | grep "^MPlayer" | $SED_PROG -e 's%^MPlayer [[0-1]]\.\([[0-9]]\).*%\1%'`
++  MPLAYER_MAJOR_VERSION=`echo $MPLAYER_VERSION | grep "^MPlayer" | $SED_PROG -e 's%^MPlayer \([[0-1]]\).*%\1%'`
++  MPLAYER_MINOR_VERSION=`echo $MPLAYER_VERSION | grep "^MPlayer" | $SED_PROG -e 's%^MPlayer [[0-1]]\.\([[0-9]]\).*%\1%'`
+   MPLAYER_PRE_VERSION=0
+   MPLAYER_RC_VERSION=0
+ 
+-  if $MPLAYER_PROG 2> /dev/null | grep -q "^MPlayer [[0-1]]\.[[0-9]]\+pre[[0-9]]\+.*"; then
+-    MPLAYER_PRE_VERSION=`$MPLAYER_PROG 2> /dev/null | grep "^MPlayer" | $SED_PROG -e 's%^MPlayer [[0-1]]\.[[0-9]]\+pre\([[0-9]]\+\).*%\1%'`
++  if echo $MPLAYER_VERSION | grep -q "^MPlayer [[0-1]]\.[[0-9]]\+pre[[0-9]]\+.*"; then
++    MPLAYER_PRE_VERSION=`echo $MPLAYER_VERSION | grep "^MPlayer" | $SED_PROG -e 's%^MPlayer [[0-1]]\.[[0-9]]\+pre\([[0-9]]\+\).*%\1%'`
+   fi
+ 
+-  if $MPLAYER_PROG 2> /dev/null | grep -q "^MPlayer [[0-1]]\.[[0-9]]\+rc[[0-9]]\+.*"; then
+-    MPLAYER_RC_VERSION=`$MPLAYER_PROG 2> /dev/null | grep "^MPlayer" | $SED_PROG -e 's%^MPlayer [[0-1]]\.[[0-9]]\+rc\([[0-9]]\+\).*%\1%'`
++  if echo $MPLAYER_VERSION | grep -q "^MPlayer [[0-1]]\.[[0-9]]\+rc[[0-9]]\+.*"; then
++    MPLAYER_RC_VERSION=`echo $MPLAYER_VERSION | grep "^MPlayer" | $SED_PROG -e 's%^MPlayer [[0-1]]\.[[0-9]]\+rc\([[0-9]]\+\).*%\1%'`
++  fi
++else
++  if echo $MPLAYER_VERSION | grep -q "dev-\(CVS\|SVN\)" || \
++     echo $MPLAYER_VERSION | grep -q "SVN-"; then
++    have_mplayer_dev=yes
++    MPLAYER_MAJOR_VERSION=99
++    MPLAYER_MINOR_VERSION=99
++    MPLAYER_PRE_VERSION=99
++    MPLAYER_RC_VERSION=99
++    AC_MSG_WARN(Mplayer SVN/CVS detected - USE AT YOUR OWN RISK)
++  else
++    AC_MSG_ERROR(Unable to determine the version number of mplayer or the version number you specified with --with-version-number is invalid.)
+   fi
+ fi
+ 
+@@ -315,7 +322,7 @@
+ dnl **************************************************************
+ 
+ AC_MSG_CHECKING([for DTS support])
+-if $MPLAYER_PROG -ac help 2> /dev/null | grep -q "^ffdts.*working.*$"; then
++if $MPLAYER_PROG -ac help 2> /dev/null | grep -q "^\(ffdts\|ffdca\|dts\).*working.*$"; then
+   have_dts_support=yes
+ else
+   have_dts_support=no

@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.10.3.ebuild,v 1.2 2007/04/18 19:42:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.10.3.ebuild,v 1.3 2007/08/30 01:32:11 beandog Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils autotools
 
 DESCRIPTION="Graphical frontend and libraries for ripping DVDs and encoding to AVI/OGM/MKV/MP4"
 HOMEPAGE="http://ogmrip.sourceforge.net/"
@@ -42,6 +42,13 @@ G2CONF="${G2CONF}
 	$(use_enable theora theora-support)"
 
 DOCS="AUTHORS ChangeLog README NEWS TODO"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-mplayer-dts.patch"
+	eautoreconf
+}
 
 pkg_setup() {
 	if ! built_with_use -a media-video/mplayer dvd encode xvid; then
