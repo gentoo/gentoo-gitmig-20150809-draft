@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.90 2007/08/27 14:23:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.91 2007/08/30 21:49:03 cardoe Exp $
+
+  30 Aug 2007; Doug Goldstein <cardoe@gentoo.org> ivtv-1.0.1.ebuild,
+  ivtv-1.0.2.ebuild:
+  bug that VIDEO_IVTV doesn't auto-pull in I2C_ALGO_BIT. reported upstream to
+  Hans, who fixed it and it will be pulled into 2.6.24. Have ebuild check that
+  you enabled I2C_ALGO_BIT.
 
   27 Aug 2007; Steve Dibb <beandog@gentoo.org> ivtv-1.0.1.ebuild,
   ivtv-1.0.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.1.ebuild,v 1.4 2007/08/30 15:35:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.1.ebuild,v 1.5 2007/08/30 21:49:03 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -19,7 +19,7 @@ pkg_setup() {
 
 	MODULE_NAMES="saa717x(extra:${S}/i2c-drivers)"
 	BUILD_TARGETS="all"
-	CONFIG_CHECK="EXPERIMENTAL HAS_IOMEM FW_LOADER I2C VIDEO_DEV
+	CONFIG_CHECK="EXPERIMENTAL HAS_IOMEM FW_LOADER I2C I2C_ALGO_BIT VIDEO_DEV
 		VIDEO_CAPTURE_DRIVERS VIDEO_V4L1 VIDEO_V4L2 !VIDEO_HELPER_CHIPS_AUTO
 		VIDEO_IVTV"
 
