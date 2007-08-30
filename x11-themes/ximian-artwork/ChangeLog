@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/ximian-artwork
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.31 2007/07/22 05:58:38 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.32 2007/08/30 12:26:03 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing liquidx from metadata due to his retirement (see #171155 for
+  reference).
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   ximian-artwork-0.2.29.0.6.3.ebuild:
