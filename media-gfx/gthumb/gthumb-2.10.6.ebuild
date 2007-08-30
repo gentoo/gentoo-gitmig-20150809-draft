@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.6.ebuild,v 1.1 2007/08/29 02:52:44 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.6.ebuild,v 1.2 2007/08/30 20:15:58 eva Exp $
 
 inherit eutils gnome2
 
@@ -33,6 +33,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	tiff? ( media-libs/tiff )"
 
 DEPEND="${RDEPEND}
+	  x11-proto/inputproto
 	>=dev-util/pkgconfig-0.9.0
 	  app-text/scrollkeeper
 	>=dev-util/intltool-0.29
