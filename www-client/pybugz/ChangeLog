@@ -1,6 +1,10 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.20 2007/08/11 10:10:42 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.21 2007/08/30 12:04:44 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing liquidx from metadata due to his retirement (see #171155 for
+  reference).
 
   11 Aug 2007; Santiago M. Mola <coldwind@gentoo.org> pybugz-0.7.0.ebuild:
   Python 2.5 elementtree dependency updated wrt bug #186410, thanks to James
