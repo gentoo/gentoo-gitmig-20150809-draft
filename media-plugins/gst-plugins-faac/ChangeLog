@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-faac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faac/ChangeLog,v 1.23 2007/08/15 23:55:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faac/ChangeLog,v 1.24 2007/08/30 10:14:52 drac Exp $
+
+*gst-plugins-faac-0.10.5 (30 Aug 2007)
+
+  30 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  +gst-plugins-faac-0.10.5.ebuild:
+  Version bump.
 
   15 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   gst-plugins-faac-0.10.4.ebuild:
