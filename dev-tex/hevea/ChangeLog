@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.13 2007/04/28 16:17:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.14 2007/08/30 13:30:59 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing mattam from metadata due to his retirement (see #30021 for reference).
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> hevea-1.07-r1.ebuild,
   hevea-1.08.ebuild:
