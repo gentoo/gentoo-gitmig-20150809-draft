@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>web-apps</herd>
+<maintainer>
+<email>web-apps@gentoo.org</email>
+<name>Gentoo Web Application Packages Maintainers</name>
+</maintainer>
 </pkgmetadata>

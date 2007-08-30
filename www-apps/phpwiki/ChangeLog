@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phpwiki
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/ChangeLog,v 1.22 2007/08/14 18:13:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/ChangeLog,v 1.23 2007/08/30 14:25:50 wrobel Exp $
+
+  30 Aug 2007; <wrobel@gentoo.org> -files/phpwiki-1.3.10-xmlrpc.patch,
+  metadata.xml, -phpwiki-1.3.10-r3.ebuild, -phpwiki-1.3.13_rc1.ebuild:
+  Removed older phpwiki ebuilds affected by security bugs #174451 and #181692.
 
   14 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   phpwiki-1.3.14.ebuild:
