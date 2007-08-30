@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-bluefw
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/ChangeLog,v 1.14 2006/08/12 13:30:58 liquidx Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/ChangeLog,v 1.15 2007/08/30 13:26:08 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing liquidx from metadata due to his retirement (see #171155 for
+  reference).
 
   12 Aug 2006; Alastair Tse <liquidx@gentoo.org>
   -bluez-bluefw-0.9-r1.ebuild, bluez-bluefw-1.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/libbtctl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.34 2007/08/01 00:00:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.35 2007/08/30 13:27:04 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing liquidx from metadata due to his retirement (see #171155 for
+  reference).
 
   31 Jul 2007; Christoph Mende <angelos@gentoo.org>
   libbtctl-0.6.0-r1.ebuild:
