@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/hkscs-ming
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/ChangeLog,v 1.11 2007/07/02 15:04:42 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/ChangeLog,v 1.12 2007/08/30 13:29:18 phreak Exp $
+
+  30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing liquidx from metadata due to his retirement (see #171155 for
+  reference).
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   hkscs-ming-1.0_pre20030919-r1.ebuild:
