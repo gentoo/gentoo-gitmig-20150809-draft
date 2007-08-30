@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.8.ebuild,v 1.2 2007/04/18 21:04:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.16.ebuild,v 1.1 2007/08/30 17:06:51 ticho Exp $
 
 inherit perl-module toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="A library which implements a curses-based widget set for text termi
 HOMEPAGE="http://www.clifford.at/stfl/"
 SRC_URI="http://www.clifford.at/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~x86"
 
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 	sed -i \
-		-e "s!-O0 -ggdb!!" \
+		-e "s!-Os -ggdb!!" \
 		-e "s!^all:.*!all: libstfl.a!" \
 		Makefile
 
@@ -49,7 +49,7 @@ src_install() {
 	local exdir="/usr/share/doc/${PF}/examples"
 
 	dodir /usr/lib/python2.4/lib-dynload
-	emake prefix="${D}/usr" DESTDIR="${D}" install || die "make install failed"
+	emake -j1 prefix="/usr" DESTDIR="${D}" install || die "make install failed"
 
 	dodoc README
 
