@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.85 2007/05/14 06:22:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.86 2007/08/31 17:14:33 wolf31o2 Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -52,7 +52,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.85 2007/05/14 06:22:21 kumba Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.86 2007/08/31 17:14:33 wolf31o2 Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -217,6 +217,9 @@ fi
 # gettext should only be needed when used with nls
 for opt in ${ORIGUSE} ; do
 	case "${opt}" in
+		bindist)
+			ALLOWED_USE="${ALLOWED_USE} bindist"
+			;;
 		nls)
 			USE_NLS=1
 			ALLOWED_USE="${ALLOWED_USE} nls"
