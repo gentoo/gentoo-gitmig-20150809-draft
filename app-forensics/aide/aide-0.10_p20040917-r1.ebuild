@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.10_p20040917-r1.ebuild,v 1.4 2007/01/24 03:12:05 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.10_p20040917-r1.ebuild,v 1.5 2007/08/31 15:05:28 mabi Exp $
 WANT_AUTOCONF='2.5'
 WANT_AUTOMAKE='1.7'
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86"
 IUSE="nls postgres zlib crypt"
 
 DEPEND="app-arch/gzip
