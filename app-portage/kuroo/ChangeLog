@@ -1,6 +1,16 @@
 # ChangeLog for app-portage/kuroo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.21 2007/08/20 16:22:02 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.22 2007/08/31 18:34:49 philantrop Exp $
+
+*kuroo-0.81_rc1 (31 Aug 2007)
+
+  31 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> -kuroo-0.80.3.ebuild,
+  +kuroo-0.81_rc1.ebuild:
+  Removed the obsolete 0.80.3.
+  Added 0.81_rc1 as per bug 190837. It has several bugfixes and some minor new
+  features.
+  Thanks to David Carlos Manuelda (new upstream developer) for providing the
+  ebuild!
 
 *kuroo-0.80.31 (20 Aug 2007)
 
