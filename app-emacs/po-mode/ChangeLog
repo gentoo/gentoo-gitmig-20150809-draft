@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/po-mode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.6 2007/08/24 20:03:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.7 2007/08/31 13:56:11 angelos Exp $
+
+  31 Aug 2007; Christoph Mende <angelos@gentoo.org> po-mode-0.16.1.ebuild:
+  Stable on amd64 wrt bug #189031
 
   24 Aug 2007; Raúl Porcel <armin76@gentoo.org> po-mode-0.16.1.ebuild:
   alpha/ia64 stable wrt #189031
