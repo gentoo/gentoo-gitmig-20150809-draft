@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.11 2007/08/31 17:41:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.12 2007/08/31 19:58:56 angelos Exp $
+
+  31 Aug 2007; Christoph Mende <angelos@gentoo.org> apache-2.2.4-r12.ebuild:
+  Stable on amd64 wrt bug #190331
 
   31 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   apache-2.0.59-r5.ebuild:
