@@ -1,6 +1,14 @@
 # ChangeLog for dev-php5/pecl-radius
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-radius/ChangeLog,v 1.5 2007/03/18 00:48:12 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-radius/ChangeLog,v 1.6 2007/08/31 09:54:01 jokey Exp $
+
+*pecl-radius-1.2.5 (31 Aug 2007)
+
+  31 Aug 2007; Markus Ullmann <jokey@gentoo.org> +pecl-radius-1.2.5.ebuild:
+  Port from project overlay
+
+  30 Aug 2007; Jakub Moc <jakub@gentoo.org> +pecl-radius-1.2.5.ebuild:
+  Version bump, install examples
 
   18 Mar 2007; Luca Longinotti <chtekk@gentoo.org> pecl-radius-1.2.4.ebuild:
   Cleanup.
