@@ -3,3 +3,8 @@
 
 sys-devel/gcc -hardened
 www-apps/mediawiki math
+
+# Michael Sterrett <mr_bones_@gentoo.org> (30 Aug 2007)
+# Security bug #190835
+games-fps/doom-data doomsday
+games-fps/freedoom doomsday
