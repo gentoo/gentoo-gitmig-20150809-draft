@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ctorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.31 2007/08/29 09:41:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.32 2007/08/31 20:21:40 angelos Exp $
+
+  31 Aug 2007; Christoph Mende <angelos@gentoo.org> ctorrent-3.2.ebuild:
+  Stable on amd64 wrt bug #185080
 
   29 Aug 2007; Raúl Porcel <armin76@gentoo.org> ctorrent-3.2.ebuild:
   x86 stable wrt #185080
