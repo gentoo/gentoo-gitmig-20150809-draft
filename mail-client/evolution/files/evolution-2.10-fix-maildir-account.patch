@@ -1,0 +1,99 @@
+   http://bugs.gentoo.org/show_bug.cgi?id=133504
+
+   2007-08-13  Milan Crha  <mcrha@redhat.com>
+
+   ** Fix for bug #352346
+
+   * em-migrate.c (em_update_accounts_2_11), (em_migrate):
+   Added function to change "spool" to "spooldir" for those
+   spools which points on directories.
+
+diff -Naur evolution-2.10.2.orig/mail/em-account-editor.c evolution-2.10.2/mail/em-account-editor.c
+--- evolution-2.10.2.orig/mail/em-account-editor.c	2007-04-09 17:09:27.000000000 +0400
++++ evolution-2.10.2/mail/em-account-editor.c	2007-08-13 14:14:21.000000000 +0400
+@@ -1665,8 +1665,18 @@
+ 	}
+ 	if (url->user)
+ 		gtk_entry_set_text(service->username, url->user);
+-	if (service->pathentry && url->path)
+-		gtk_file_chooser_set_filename (GTK_FILE_CHOOSER (service->pathentry), url->path);
++	if (service->pathentry) {
++		GtkFileChooserAction action = GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER;
++
++		if (service->provider && (service->provider->url_flags & CAMEL_URL_NEED_PATH_DIR) == 0)
++			action = GTK_FILE_CHOOSER_ACTION_OPEN;
++
++		if (action != gtk_file_chooser_get_action (GTK_FILE_CHOOSER (service->pathentry)))
++			gtk_file_chooser_set_action (GTK_FILE_CHOOSER (service->pathentry), action);
++
++		if (url->path)
++			gtk_file_chooser_set_filename (GTK_FILE_CHOOSER (service->pathentry), url->path);
++	}
+ 
+ 	tmp = camel_url_get_param(url, "use_ssl");
+ 	if (tmp == NULL)
+diff -Naur evolution-2.10.2.orig/mail/em-migrate.c evolution-2.10.2/mail/em-migrate.c
+--- evolution-2.10.2.orig/mail/em-migrate.c	2007-04-09 17:09:27.000000000 +0400
++++ evolution-2.10.2/mail/em-migrate.c	2007-08-13 14:15:15.000000000 +0400
+@@ -2638,6 +2638,39 @@
+ 	return 0;
+ }
+ 
++static void
++em_update_accounts_2_11 (void)
++{
++	EAccountList *accounts;
++	EIterator *iter;
++	gboolean changed = FALSE;
++
++	if (!(accounts = mail_config_get_accounts ()))
++		return;
++
++	iter = e_list_get_iterator ((EList *) accounts);
++	while (e_iterator_is_valid (iter)) {
++		EAccount *account = (EAccount *) e_iterator_get (iter);
++
++		if (g_str_has_prefix (account->source->url, "spool://")) {
++			if (g_file_test (account->source->url + 8, G_FILE_TEST_IS_DIR)) {
++				char *str = g_strdup_printf ("spooldir://%s", account->source->url + 8);
++
++				g_free (account->source->url);
++				account->source->url = str;
++				changed = TRUE;
++			}
++		}
++
++		e_iterator_next (iter);
++	}
++
++	g_object_unref (iter);
++
++	if (changed)
++		mail_config_save_accounts ();
++}
++
+ #endif
+ 
+ static int
+@@ -2780,6 +2813,10 @@
+ 		
+ 		g_free (path);
+ 	}
++
++	if (major < 2 || (major == 2 && minor < 12)) {
++		em_update_accounts_2_11 ();
++	}
+ #endif	/* !G_OS_WIN32 */
+ 	return 0;
+ }
+diff -Naur evolution-2.10.2.orig/mail/mail-config.glade evolution-2.10.2/mail/mail-config.glade
+--- evolution-2.10.2.orig/mail/mail-config.glade	2007-04-09 17:09:27.000000000 +0400
++++ evolution-2.10.2/mail/mail-config.glade	2007-08-13 14:15:53.000000000 +0400
+@@ -1354,7 +1354,6 @@
+ 				  <property name="right_attach">2</property>
+ 				  <property name="top_attach">2</property>
+ 				  <property name="bottom_attach">3</property>
+-				  <property name="x_options">fill</property>
+ 				  <property name="y_options"></property>
+ 				</packing>
+ 			      </child>
