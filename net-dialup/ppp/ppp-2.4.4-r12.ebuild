@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r12.ebuild,v 1.1 2007/08/31 08:44:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r12.ebuild,v 1.2 2007/08/31 09:02:32 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -274,7 +274,7 @@ pkg_postinst() {
 		[ -x /sbin/update-modules ] && /sbin/update-modules || /sbin/modules-update
 	fi
 
-	#create *-secrets files if not exists
+	# create *-secrets files if not exists
 	[ -f "${ROOT}/etc/ppp/pap-secrets" ] || \
 		cp -pP "${ROOT}/etc/ppp/pap-secrets.example" "${ROOT}/etc/ppp/pap-secrets"
 	[ -f "${ROOT}/etc/ppp/chap-secrets" ] || \
@@ -294,4 +294,13 @@ pkg_postinst() {
 	elog "Pon, poff and plog scripts have been supplied for experienced users."
 	elog "Users needing particular scripts (ssh,rsh,etc.) should check out the"
 	elog "/usr/share/doc/${PF}/scripts directory."
+
+	# move the old user-defined files into ip-{up,down}.d directories
+	local i
+	for i in ip-up ip-down; do
+		if [ -f "${ROOT}"/etc/ppp/${i}.local ]; then
+			mv /etc/ppp/${i}.local /etc/ppp/${i}.d/90-local && \
+				einfo "/etc/ppp/${i}.local has been moved to /etc/ppp/${i}.d/90-local"
+		fi
+	done
 }
