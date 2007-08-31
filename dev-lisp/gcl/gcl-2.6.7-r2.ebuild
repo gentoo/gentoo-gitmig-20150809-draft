@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.7 2007/07/22 08:06:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.8 2007/08/31 10:16:53 hkbst Exp $
 
 inherit elisp-common flag-o-matic
 
@@ -59,14 +59,14 @@ src_compile() {
 		--enable-emacsdir=/usr/share/emacs/site-lisp/gcl"
 	einfo "Configuring with the following:
 ${myconfig}"
-	econf ${myconfig} || die
-	make || die
+	econf ${myconfig}
+	make || die "make failed"
 	sed -e 's,@EXT@,,g' debian/in.gcl.1 >gcl.1
 }
 
 src_install() {
 	export SANDBOX_ON=0
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die "make install failed"
 
 	rm -rf ${D}/usr/lib/${P}/info
 	mv ${D}/default.el elisp/
