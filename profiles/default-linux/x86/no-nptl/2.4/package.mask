@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.123 2007/08/25 19:03:02 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.124 2007/08/31 03:24:51 mr_bones_ Exp $
 
 # Wulf C. Krueger <philantrop@gentoo.org> (25 Aug 2007)
 # requires bluez-libs-3*
@@ -28,6 +28,8 @@ x11-misc/service-discovery-applet
 app-portage/cfg-update
 gnome-extra/nautilus-sendto
 >=media-sound/rhythmbox-0.9
+=net-misc/drivel-2.0.2
+x11-plugins/desklet-sidecandyrhythmbox
 x11-plugins/gaim-rhythmbox
 x11-plugins/pidgin-rhythmbox
 media-sound/listen
