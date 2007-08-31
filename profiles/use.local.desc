@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3004 2007/08/31 16:08:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3005 2007/08/31 18:37:15 rbu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -799,6 +799,7 @@ kde-base/kopete:winpopup - Builds WinPopUp protocol handler
 kde-base/ksysguard:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
 kde-misc/knetworkmanager:cisco - Adds support for the Cisco VPN client (vpnc)
+kde-misc/knetworkmanager:dialup - Enables Dialup (PPP) support
 kde-misc/knetworkmanager:openvpn - Adds support for the OpenVPN client
 kde-misc/knetworkmanager:pptp - Adds support for the PPTP (PPP) VPN client
 kde-misc/ksensors:hddtemp - Enable monitoring of disk temperatures (app-admin/hddtemp)
