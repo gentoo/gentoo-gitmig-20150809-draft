@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST gst-plugins-0.8.11-conffix.patch.bz2 463 RMD160 070ca474768776984765390d97d02de8e62376ff SHA1 afac762694a48c3b982638b8cb8310fa80c1bf08 SHA256 c8b6e6d7e231b69be598a5cedef278716bb71eec0136500946490ef992bc48de
 DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA1 4a9be6b62dd0e8a73616e8e93f7a3ace8aec8c59 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
 DIST gst-plugins-0.8.12.tar.bz2 2506926 RMD160 cc0bbf3d790cb5791ce982fe6493bf2d8496a507 SHA1 3b65fe96aa849c463f5f968830ad76143c4b9952 SHA256 8728da4f71bc87e10fb064d28154220d66a3d8332482fd2c8a7ed47c5f0a03ba
 DIST gst-plugins-base-0.10.11.tar.bz2 1409996 RMD160 94deb9061cd732139fddbf8608b125bbaa3d87f2 SHA1 93d18094a3459e02c0f640d69d4014bf02223d25 SHA256 2193e3f940f0fd2ca10a137efbb79bc1edc8a12543b618b9a97f680f9d15bfb4
 DIST gst-plugins-base-0.10.12.tar.bz2 1460658 RMD160 30ab89cb22b0e596749a651eea86421c72ba0425 SHA1 b323589b67f0ee3790d69341be2e545870d0a0e9 SHA256 b88a85b21499bd064a531a3b5d06ae69ee025ad5f88b6e86ed4af245509247ee
-DIST gst-plugins-base-0.10.4.tar.bz2 1097817 RMD160 da837968b10a130dbeaa1953a3ad9f27586ba683 SHA1 1874bfc701f75ff859615c6b6e5b65c50df6f53a SHA256 6c556051191364eacf05dcf01a9f3101240a6b6155e331e4cbcbfca55a91ca42
+DIST gst-plugins-base-0.10.14.tar.bz2 1625388 RMD160 507666ea6d2a4657d315dfe54c8869ab74a59351 SHA1 54e7b2d482f6eef4dbbe7d4b5f59ada033e447ab SHA256 ffd88d23227f54aae30fdc0ef60ea8eaffe8cc03c069b234ed23c4ea82dcff46
 EBUILD gst-plugins-libvisual-0.10.11.ebuild 419 RMD160 0a5ec1fb00c7284076bfbaf822aa6628b9479e1c SHA1 6ec0a40393df16c98a13fa14d042f907b55da32b SHA256 89ef0e6b0042e0c8f3ced7dc5a03e67efbfa9cfea47972555b7cc2801cd21786
 MD5 797ca06e9c0f8e0de4c5af0f3dbb8bf6 gst-plugins-libvisual-0.10.11.ebuild 419
 RMD160 0a5ec1fb00c7284076bfbaf822aa6628b9479e1c gst-plugins-libvisual-0.10.11.ebuild 419
@@ -15,10 +12,10 @@ EBUILD gst-plugins-libvisual-0.10.12.ebuild 431 RMD160 132e5eec61f5ea408d8830328
 MD5 c73f7fd4b9d4c2d9f524bcbbaa67f136 gst-plugins-libvisual-0.10.12.ebuild 431
 RMD160 132e5eec61f5ea408d8830328fc7b9bebff9de6b gst-plugins-libvisual-0.10.12.ebuild 431
 SHA256 534d27f35b8d2e214854a589a52356195ff83b7a8ef7c2ef2b0c4a4a219aaaee gst-plugins-libvisual-0.10.12.ebuild 431
-EBUILD gst-plugins-libvisual-0.10.4.ebuild 400 RMD160 6a8d0ade02a55fe03c1e56cc8e241d25cb5027f5 SHA1 5d93c59066edecd36bd03c7ba2eeda7ef1f10990 SHA256 b26333bffe94a32584874c52eae75df5269cd369518897be360acc61c94c13fe
-MD5 f1c236a216551cea96b63736653ce494 gst-plugins-libvisual-0.10.4.ebuild 400
-RMD160 6a8d0ade02a55fe03c1e56cc8e241d25cb5027f5 gst-plugins-libvisual-0.10.4.ebuild 400
-SHA256 b26333bffe94a32584874c52eae75df5269cd369518897be360acc61c94c13fe gst-plugins-libvisual-0.10.4.ebuild 400
+EBUILD gst-plugins-libvisual-0.10.14.ebuild 430 RMD160 35a6fe06bc3919fd83af5b7e9e5ef580a7b03be3 SHA1 1e6c9ca71262848b7518914769fd1a21859e6a44 SHA256 bbae3efa69c3a61af4aa9bcf021722ebabdc3cb9c59c9279824aaf19f41ab250
+MD5 667b48ead3ac8b0d8427415c4a7a494d gst-plugins-libvisual-0.10.14.ebuild 430
+RMD160 35a6fe06bc3919fd83af5b7e9e5ef580a7b03be3 gst-plugins-libvisual-0.10.14.ebuild 430
+SHA256 bbae3efa69c3a61af4aa9bcf021722ebabdc3cb9c59c9279824aaf19f41ab250 gst-plugins-libvisual-0.10.14.ebuild 430
 EBUILD gst-plugins-libvisual-0.8.11.ebuild 348 RMD160 02f7faa26c1892e28f560ec6d253bb86460075fd SHA1 f49136894826a7f7f7f546781ca36915ea1d4cd3 SHA256 43830c548f1e7e0bcfce49847c49c2a1a554b8317b73a4745577cf82d4926cbb
 MD5 ea9cbaa131d3891a43dc594f92594909 gst-plugins-libvisual-0.8.11.ebuild 348
 RMD160 02f7faa26c1892e28f560ec6d253bb86460075fd gst-plugins-libvisual-0.8.11.ebuild 348
@@ -27,10 +24,10 @@ EBUILD gst-plugins-libvisual-0.8.12.ebuild 351 RMD160 814bad8980f3fff01f11d1ce0a
 MD5 eda5615c65d869f1e869c064cdb8e6fb gst-plugins-libvisual-0.8.12.ebuild 351
 RMD160 814bad8980f3fff01f11d1ce0a14c6d18677e592 gst-plugins-libvisual-0.8.12.ebuild 351
 SHA256 4727c5aa5363d562249bfaa047ca40e206bb696a072e84b6384a18c530b0283e gst-plugins-libvisual-0.8.12.ebuild 351
-MISC ChangeLog 6823 RMD160 45a1a8b8c2e631da849e34dcfeb63fa90a018622 SHA1 a97792427fdfb1f068fc8eef9477bdc9c7ba5d38 SHA256 bc697e29feda519090818c92027816f69bc8a33428a89ed6323906ba39e64799
-MD5 1e0846a74f3d4ee764a0d469f72f182b ChangeLog 6823
-RMD160 45a1a8b8c2e631da849e34dcfeb63fa90a018622 ChangeLog 6823
-SHA256 bc697e29feda519090818c92027816f69bc8a33428a89ed6323906ba39e64799 ChangeLog 6823
+MISC ChangeLog 6972 RMD160 79daf4ea193fb40aa6817eca95535dc0d2834641 SHA1 c6815f5e251e8aaade1edcbafb38b5a0974a709f SHA256 f8c45905fd58c83adaa07da099c622a43ac0cdc3972b7c88dd84cd02551aa2db
+MD5 5aaa0acefee8500492834455bc192d60 ChangeLog 6972
+RMD160 79daf4ea193fb40aa6817eca95535dc0d2834641 ChangeLog 6972
+SHA256 f8c45905fd58c83adaa07da099c622a43ac0cdc3972b7c88dd84cd02551aa2db ChangeLog 6972
 MISC metadata.xml 162 RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 SHA1 f46f8ccd62374b17183b5aca523c4dcf60d718f9 SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
 RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
@@ -41,19 +38,12 @@ SHA256 48e1ce06b28edcfea1294dbc106ad0ca6dda6f33e9509b430d95b101c8bf63fb files/di
 MD5 569b21ec15a384fbb25bc5c4235230c3 files/digest-gst-plugins-libvisual-0.10.12 280
 RMD160 b1b4d4c2ae6992ef0895f54cb8501224778cbdfd files/digest-gst-plugins-libvisual-0.10.12 280
 SHA256 6def950590c49906fc5d265f27cfdf7f8c8fff582ea429650b7b685c62d435f8 files/digest-gst-plugins-libvisual-0.10.12 280
-MD5 3477ec0d04649ccfcc545e28e0911bd3 files/digest-gst-plugins-libvisual-0.10.4 277
-RMD160 bee1889727ca635912779fbcac2958f0ceba48b0 files/digest-gst-plugins-libvisual-0.10.4 277
-SHA256 f47f4fd7829d14012ef690db4a45f568549f7a5015a00bd9ba03a41f3584e654 files/digest-gst-plugins-libvisual-0.10.4 277
+MD5 ffaafbf1b0ba473102067a3f5bed3b6e files/digest-gst-plugins-libvisual-0.10.14 280
+RMD160 3e029b507016a59d7cfc525a548e324ea338401b files/digest-gst-plugins-libvisual-0.10.14 280
+SHA256 5e6dff0c6f35621cc62916fa4748b962570271878583b308524d96309c76fa63 files/digest-gst-plugins-libvisual-0.10.14 280
 MD5 cdfd36869f155250b4f6deea0beac30a files/digest-gst-plugins-libvisual-0.8.11 542
 RMD160 680795b56b96f93ec1bec74d3a5f0e37e341f780 files/digest-gst-plugins-libvisual-0.8.11 542
 SHA256 027f38a921af2acdde43732296cc6a00f5a4f712931d17fb18b2254719ee03b6 files/digest-gst-plugins-libvisual-0.8.11 542
 MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-libvisual-0.8.12 262
 RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-libvisual-0.8.12 262
 SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-libvisual-0.8.12 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFGuIlhKRy60XGEcJIRAnvnAJ9vRIl2Ki31mGLmf2avz/Oh0AZkagCeNjQZ
-jNa1R284Wkk4+9VS8YS/3/0=
-=dV+r
------END PGP SIGNATURE-----
