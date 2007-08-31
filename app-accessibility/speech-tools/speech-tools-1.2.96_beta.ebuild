@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.3 2007/08/29 07:11:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.4 2007/08/31 04:12:37 williamh Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,6 +27,9 @@ src_unpack() {
 	local CONFIG=${S}/config/config.in
 
 	unpack ${A}
+
+	# apply a patch for gcc 4.2
+	epatch ${FILESDIR}/${P}-gcc42.patch
 
 # set compiler flags for base_class
 	sed -i -e "s:-O3:\$(OPTIMISE_CXXFLAGS):" ${S}/base_class/Makefile
