@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.66 2007/04/28 17:46:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.67 2007/08/31 13:31:07 fmccor Exp $
+
+  31 Aug 2007; Ferris McCormick <fmccor@gentoo.org>
+  heartbeat-1.2.5-r1.ebuild, heartbeat-2.0.8.ebuild:
+  Add ~sparc for testing --- Needed by Bug #190828 (option 3).
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> heartbeat-1.2.5.ebuild,
   heartbeat-1.2.5-r1.ebuild, heartbeat-2.0.7-r2.ebuild,
