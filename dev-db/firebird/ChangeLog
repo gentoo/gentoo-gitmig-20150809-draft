@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.67 2007/07/02 14:27:47 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.68 2007/08/31 04:23:05 wltjr Exp $
+
+*firebird-2.0.2.12964.0 (31 Aug 2007)
+
+  31 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/firebird-2.0.2.12964.0-external-libs.patch,
+  +files/firebird-2.0.2.12964.0-make-deps.patch,
+  +firebird-2.0.2.12964.0.ebuild:
+  Bumped to latest release. Addresses security bug #190833, but will still
+  need to be tested and likely rush stabilized.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   firebird-1.5.4-r3.ebuild:
