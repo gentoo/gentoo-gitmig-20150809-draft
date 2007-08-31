@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.29 2007/07/06 22:41:25 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.30 2007/08/31 12:20:48 george Exp $
+
+*kdesvn-0.13.0 (31 Aug 2007)
+
+  31 Aug 2007; George Shapovalov <george@gentoo.org> +kdesvn-0.13.0.ebuild:
+  new version out. The sed in src_unpack is no longer needed (upstream took it
+  in finally).
 
 *kdesvn-0.12.1 (06 Jul 2007)
 
