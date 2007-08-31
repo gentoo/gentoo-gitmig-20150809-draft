@@ -14,3 +14,8 @@ sys-libs/glibc hardened
 # QA team or Council override.
 # Chris Gianelloni <wolf31o2@gentoo.org>
 #sys-apps/pciutils zlib
+
+# Michael Sterrett <mr_bones_@gentoo.org> (30 Aug 2007)
+# Security bug #190835
+games-fps/doom-data doomsday
+games-fps/freedoom doomsday
