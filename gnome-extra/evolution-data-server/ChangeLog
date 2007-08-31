@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.144 2007/08/31 10:47:10 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.145 2007/08/31 13:15:01 fmccor Exp $
+
+  31 Aug 2007; Ferris McCormick <fmccor@gentoo.org>
+  evolution-data-server-1.10.3.1.ebuild:
+  Sparc stable --- Security Bug #190861 --- installs as expected.
 
 *evolution-data-server-1.10.3.1 (31 Aug 2007)
 
