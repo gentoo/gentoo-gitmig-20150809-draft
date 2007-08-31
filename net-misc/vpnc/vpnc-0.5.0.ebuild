@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.0.ebuild,v 1.1 2007/08/31 06:30:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.0.ebuild,v 1.2 2007/08/31 14:43:54 opfer Exp $
 
-inherit eutils linux-info
+inherit linux-info
 
 DESCRIPTION="Free client for Cisco VPN routing software"
 HOMEPAGE="http://www.unix-ag.uni-kl.de/~massar/vpnc/"
@@ -15,6 +15,9 @@ IUSE=""
 
 DEPEND=">=dev-libs/libgcrypt-1.1.91
 	>=sys-apps/iproute2-2.6.19.20061214"
+
+RDEPEND="${DEPEND}
+	net-dns/resolvconf-gentoo"
 
 pkg_setup()	 {
 	local CONFIG_CHECK="TUN"
