@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3003 2007/08/30 21:46:37 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3004 2007/08/31 16:08:30 tupone Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -662,6 +662,7 @@ games-emulation/xmess:net - Add network support
 games-emulation/zsnes:custom-cflags - Enables custom cflags (not supported)
 games-engines/exult:timidity - Add sound support (timidity)
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
+games-fps/alephone:smpeg - Enables use of smpeg 
 games-fps/darkplaces:cdsound - Enables using CD audio in the engine
 games-fps/darkplaces:demo - Uses the demo data from quake1 (quake1-demodata)
 games-fps/darkplaces:dpmod - Sets up the darkplaces mod from icculus
