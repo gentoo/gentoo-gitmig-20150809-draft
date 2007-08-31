@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ezc-Workflow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Workflow/ChangeLog,v 1.1 2007/08/30 13:59:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Workflow/ChangeLog,v 1.2 2007/08/31 15:09:04 jer Exp $
+
+  31 Aug 2007; Jeroen Roovers <jer@gentoo.org> ezc-Workflow-1.0.1.ebuild:
+  Marked ~hppa (bug #190787).
 
 *ezc-Workflow-1.0.1 (30 Aug 2007)
 

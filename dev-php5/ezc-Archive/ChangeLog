@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ezc-Archive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Archive/ChangeLog,v 1.12 2007/08/30 13:27:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Archive/ChangeLog,v 1.13 2007/08/31 14:37:13 jer Exp $
+
+  31 Aug 2007; Jeroen Roovers <jer@gentoo.org> ezc-Archive-1.2.3.ebuild:
+  Marked ~hppa (bug #190787).
 
 *ezc-Archive-1.2.3 (30 Aug 2007)
 

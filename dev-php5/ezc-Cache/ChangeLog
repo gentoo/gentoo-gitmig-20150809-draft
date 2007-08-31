@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ezc-Cache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Cache/ChangeLog,v 1.15 2007/08/30 13:41:49 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Cache/ChangeLog,v 1.16 2007/08/31 14:44:15 jer Exp $
+
+  31 Aug 2007; Jeroen Roovers <jer@gentoo.org> ezc-Cache-1.2.ebuild:
+  Marked ~hppa (bug #190787).
 
 *ezc-Cache-1.2 (30 Aug 2007)
 
