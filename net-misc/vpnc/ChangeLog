@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.45 2007/08/29 13:32:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.46 2007/08/31 06:30:04 opfer Exp $
+
+*vpnc-0.5.0 (31 Aug 2007)
+
+  31 Aug 2007; Christian Faulhammer <opfer@gentoo.org> +vpnc-0.5.0.ebuild:
+  version bump: hybrid auth support disabled in the ebuild for now, until
+  legal matters are considered; various bug fixes on upstream side to take
+  into account the user environment when building (important for Gentoo, e.g.
+  custom CFLAGS); code clean-up in source
 
   29 Aug 2007; Christian Faulhammer <opfer@gentoo.org> files/vpnc-1.init:
   make fall back possible on VPNCOUTPUT...if it is not defined or not yes,
