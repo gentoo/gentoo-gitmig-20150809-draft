@@ -1,6 +1,9 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.16 2007/08/17 16:10:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.17 2007/08/31 11:37:43 armin76 Exp $
+
+  31 Aug 2007; Raúl Porcel <armin76@gentoo.org> mozilla-sunbird-0.5.ebuild:
+  Fix MAKEOPTS, bug #190755
 
   17 Aug 2007; Christoph Mende <angelos@gentoo.org>
   mozilla-sunbird-0.5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.5.ebuild,v 1.6 2007/08/17 16:10:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.5.ebuild,v 1.7 2007/08/31 11:37:43 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -153,7 +153,8 @@ src_compile() {
 	# requirements while compiling
 	edit_makefiles
 
-	emake || die
+	[ "${WANT_MP}" = "true" ] && jobs=${MAKEOPTS} || jobs="-j1"
+	emake ${jobs} || die
 }
 
 pkg_preinst() {
