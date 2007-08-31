@@ -1,24 +1,24 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r4.ebuild,v 1.17 2007/08/25 14:31:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r12.ebuild,v 1.1 2007/08/31 08:44:55 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20061124.tar.gz
+	mirror://gentoo/${P}-gentoo-20070831.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="activefilter atm dhcp eap-tls gtk ipv6 mppe-mppc pam radius"
 
 DEPEND="activefilter? ( >=virtual/libpcap-0.9.4 )
 	atm? ( net-dialup/linux-atm )
 	pam? ( sys-libs/pam )
-	gtk? ( =x11-libs/gtk+-1* )
+	gtk? ( >=x11-libs/gtk+-2.8 )
 	eap-tls? ( net-misc/curl >=dev-libs/openssl-0.9.7 )"
 
 pkg_setup() {
@@ -46,6 +46,13 @@ src_unpack() {
 	epatch "${WORKDIR}/patch/maxoctets-2Glimit.patch"
 	epatch "${WORKDIR}/patch/defaultgateway.patch"
 	epatch "${WORKDIR}/patch/mschapv2-initialize-response.patch"
+	epatch "${WORKDIR}/patch/linkpidfile.patch"
+	epatch "${WORKDIR}/patch/qa-fixes.patch"
+	epatch "${WORKDIR}/patch/kill-pg.patch"
+	epatch "${WORKDIR}/patch/auth-fail.patch"
+	epatch "${WORKDIR}/patch/defaultmetric.patch"
+	epatch "${WORKDIR}/patch/dev-ppp.patch"
+	epatch "${WORKDIR}/patch/gtk2.patch"
 
 	use eap-tls && {
 		# see http://eaptls.spe.net/index.html for more info
@@ -133,13 +140,18 @@ pkg_preinst() {
 }
 
 src_install() {
-	local y
-	for y in chat pppd pppdump pppstats
+	local i
+	for i in chat pppd pppdump pppstats
 	do
-		doman ${y}/${y}.8
-		dosbin ${y}/${y}
+		doman ${i}/${i}.8
+		dosbin ${i}/${i}
 	done
-	chmod u+s-w "${D}/usr/sbin/pppd"
+	fperms u+s-w /usr/sbin/pppd
+
+	# Install pppd header files
+	pushd pppd && \
+		make INSTROOT="${D}" install-devel && \
+		popd || die "make install-devel failed"
 
 	dosbin pppd/plugins/rp-pppoe/pppoe-discovery
 
@@ -152,13 +164,15 @@ src_install() {
 	insopts -m0644
 	doins etc.ppp/options
 
-	insopts -m0755
-	doins "${FILESDIR}/ip-up"
-	doins "${FILESDIR}/ip-down"
+	exeinto /etc/ppp
+	for i in ip-up ip-down ; do
+		doexe "${WORKDIR}/scripts/${i}"
+		insinto /etc/ppp/${i}.d
+		doins "${WORKDIR}/scripts/${i}.d"/*
+	done
 
 	if use pam; then
 		insinto /etc/pam.d
-		insopts -m0644
 		newins pppd/ppp.pam ppp || die "not found ppp.pam"
 	fi
 

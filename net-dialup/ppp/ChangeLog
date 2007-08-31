@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.194 2007/08/17 08:03:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.195 2007/08/31 08:44:55 mrness Exp $
+
+*ppp-2.4.4-r12 (31 Aug 2007)
+
+  31 Aug 2007; Alin Năstac <mrness@gentoo.org> -ppp-2.4.4-r4.ebuild,
+  +ppp-2.4.4-r12.ebuild:
+  Use gtk+-2 library (#189350). Add support for /etc/ppp/ip-{up,down}.d
+  directories (#190143).
 
 *ppp-2.4.4-r11 (17 Aug 2007)
 
