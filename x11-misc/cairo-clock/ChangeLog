@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/cairo-clock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/ChangeLog,v 1.2 2007/03/02 13:09:41 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/ChangeLog,v 1.3 2007/08/31 00:47:41 omp Exp $
+
+  31 Aug 2007; David Shakaryan <omp@gentoo.org> metadata.xml:
+  Remove myself as sole maintainer; still part of desktop-misc herd.
 
   02 Mar 2007; Roy Marples <uberlord@gentoo.org> cairo-clock-0.3.2.ebuild:
   Add ~x86-fbsd keyword.
