@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/gst-plugins-cdparanoia-0.10.13.ebuild,v 1.1 2007/07/25 15:45:58 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/gst-plugins-cdparanoia-0.10.14.ebuild,v 1.1 2007/08/31 18:43:29 drac Exp $
 
 inherit gst-plugins-base
 
@@ -8,7 +8,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="media-sound/cdparanoia
-	>=media-libs/gst-plugins-base-0.10.13"
+	>=media-libs/gst-plugins-base-0.10.13.1"
 
 DEPEND="${RDEPEND}"
 
