@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7657 2007/08/31 05:01:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7658 2007/08/31 08:43:59 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Alin Năstac <mrness@gentoo.org> (31 Aug 2007)
+# Need to be tested
+=net-dialup/ppp-2.4.4-r12
 
 # Michael Sterrett <mr_bones_@gentoo.org> (30 Aug 2007)
 # Security bug #190835

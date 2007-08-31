@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.607 2007/08/30 21:46:37 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.608 2007/08/31 08:43:59 mrness Exp $
+
+  31 Aug 2007; Alin Năstac <mrness@gentoo.org> package.mask:
+  Mask ppp-2.4.4-r12.
 
   30 Aug 2007; Tiziano Müller <dev-zero@gentoo.org> use.local.desc:
   Added hb and hb2 USE-flags for sys-fs/evms
