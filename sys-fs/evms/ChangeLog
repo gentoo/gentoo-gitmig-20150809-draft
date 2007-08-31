@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.69 2007/08/30 22:12:26 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.70 2007/08/31 05:16:34 dev-zero Exp $
+
+  31 Aug 2007; Tiziano Müller <dev-zero@gentoo.org> +files/evms2-start.sh:
+  Re-added evms2-start.sh (bug #190838).
 
   30 Aug 2007; Tiziano Müller <dev-zero@gentoo.org> +evms-2.5.5-r6.ebuild:
   Readding -r6 to not drop unstable keywords
