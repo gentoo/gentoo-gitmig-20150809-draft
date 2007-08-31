@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/knetworkmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.3 2007/08/29 21:32:53 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.4 2007/08/31 18:38:43 rbu Exp $
+
+*knetworkmanager-0.2_p20070831 (31 Aug 2007)
+
+  31 Aug 2007; Robert Buchholz <rbu@gentoo.org>
+  +files/knetworkmanager-0.2_p20070831-optional-dialup.patch,
+  +knetworkmanager-0.2_p20070831.ebuild:
+  Version bump to svn snapshot with optional (k)ppp dependancy and upstream fixes
 
   29 Aug 2007; Robert Buchholz <rbu@gentoo.org> knetworkmanager-0.2.ebuild:
   Removed stale dep
