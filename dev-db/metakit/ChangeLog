@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/metakit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.42 2007/05/15 09:29:19 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.43 2007/08/31 16:03:37 jer Exp $
+
+*metakit-2.4.9.7 (31 Aug 2007)
+
+  31 Aug 2007; Jeroen Roovers <jer@gentoo.org> +metakit-2.4.9.7.ebuild:
+  Version bump.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
