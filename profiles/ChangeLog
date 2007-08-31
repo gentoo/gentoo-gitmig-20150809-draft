@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.609 2007/08/31 18:37:15 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.610 2007/08/31 21:51:16 opfer Exp $
+
+  31 Aug 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
+  adding USE flag hybrid-auth for net-misc/vpnc
 
   31 Aug 2007; Robert Buchholz <rbu@gentoo.org> use.local.desc:
   Add dialup use flag for knetworkmanager
