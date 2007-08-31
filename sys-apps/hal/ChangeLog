@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.208 2007/08/28 21:33:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.209 2007/08/31 14:19:51 cardoe Exp $
+
+  31 Aug 2007; Doug Goldstein <cardoe@gentoo.org> hal-0.5.9-r1.ebuild,
+  hal-0.5.9.1-r1.ebuild, hal-0.5.9.1-r2.ebuild:
+  change libparted depend as suggested by agaffney in bug #190860
 
 *hal-0.5.9.1-r2 (28 Aug 2007)
 
