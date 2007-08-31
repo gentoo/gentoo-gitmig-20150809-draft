@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.30 2007/08/31 12:20:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.31 2007/08/31 12:47:12 george Exp $
+
+  31 Aug 2007; George Shapovalov <george@gentoo.org> kdesvn-0.11.2.ebuild,
+  kdesvn-0.12.1.ebuild, kdesvn-0.13.0.ebuild:
+  added debug use flag. Thanks to rf for suggestion (#190783)
 
 *kdesvn-0.13.0 (31 Aug 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.12.1.ebuild,v 1.1 2007/07/06 22:41:25 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-0.12.1.ebuild,v 1.2 2007/08/31 12:47:12 george Exp $
 
 inherit eutils versionator kde-functions toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.alwins-world.de/programs/download/${PN}/${My_PV}.x/${P}.tar.
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="debug"
 
 DEPEND=">=dev-util/subversion-1.3
 		net-misc/neon
@@ -30,6 +30,11 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
+	if use debug ; then
+		myconf="-DCMAKE_BUILD_TYPE=Debug"
+	fi
+
 	cmake \
 		-DCMAKE_INSTALL_PREFIX=/usr					\
 		-DCMAKE_BUILD_TYPE=Release					\
@@ -37,7 +42,7 @@ src_compile() {
 		-DCMAKE_CXX_COMPILER=$(type -P $(tc-getCXX))	\
 		-DCMAKE_CXX_FLAGS="-DQT_THREAD_SUPPORT"		\
 		-DLIB_INSTALL_DIR=/usr/$(get_libdir) 		\
-		|| die
+		${myconf} || die
 
 	emake || die
 }
