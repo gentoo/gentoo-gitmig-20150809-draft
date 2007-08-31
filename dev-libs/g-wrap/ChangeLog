@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.55 2007/08/29 18:41:20 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.56 2007/08/31 14:10:37 angelos Exp $
+
+  31 Aug 2007; Christoph Mende <angelos@gentoo.org> g-wrap-1.9.8.ebuild:
+  Added ~amd64 wrt bug #190673
 
   29 Aug 2007; Ferris McCormick <fmccor@gentoo.org> g-wrap-1.9.8.ebuild:
   Re-keyword ~sparc --- Bug #190673 --- everything as expected.
