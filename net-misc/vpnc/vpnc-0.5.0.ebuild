@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.0.ebuild,v 1.2 2007/08/31 14:43:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.0.ebuild,v 1.3 2007/08/31 22:03:10 opfer Exp $
 
 inherit linux-info
 
@@ -11,17 +11,31 @@ SRC_URI="http://www.unix-ag.uni-kl.de/~massar/${PN}/${P}.tar.gz"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="hybrid-auth bindist"
 
 DEPEND=">=dev-libs/libgcrypt-1.1.91
-	>=sys-apps/iproute2-2.6.19.20061214"
+	>=sys-apps/iproute2-2.6.19.20061214
+	!bindist? ( hybrid-auth? ( dev-libs/openssl ) )"
 
 RDEPEND="${DEPEND}
 	net-dns/resolvconf-gentoo"
 
 pkg_setup()	 {
+	if use hybrid-auth && use bindist; then
+		ewarn "Hybrid authentication will be disabled for this packages as you will"
+		ewarn "redistribute it in binary form.  This is not allowed due to linking"
+		ewarn "of OpenSSL."
+	fi
 	local CONFIG_CHECK="TUN"
 	check_extra_config
+}
+
+src_compile() {
+	# only allowed if not distributed in binary form!
+	if use hybrid-auth && ! use bindist; then
+		hybridauthopts="OPENSSL_GPL_VIOLATION=-DOPENSSL_GPL_VIOLATION OPENSSLLIBS=-lcrypto"
+	fi
+	emake ${hybridauthopts} || die "emake failed"
 }
 
 src_install() {
