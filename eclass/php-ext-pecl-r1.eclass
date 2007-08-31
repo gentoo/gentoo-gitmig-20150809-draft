@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r1.eclass,v 1.5 2007/03/05 01:50:47 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r1.eclass,v 1.6 2007/08/31 09:42:34 jokey Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Luca Longinotti <chtekk@gentoo.org>
@@ -44,4 +44,15 @@ php-ext-pecl-r1_src_install() {
 
 	# Those two are always present
 	dodoc-php "${WORKDIR}/package.xml" CREDITS
+	
+	# You can add more docs to be installed by defining DOCS variable in ebuild
+	for doc in ${DOCS} ; do
+		[[ -s ${doc} ]] && dodoc-php ${doc}
+	done
+	
+	# To install examples if the package supplies them, just add examples to IUSE
+	if has examples ${IUSE} && use examples ; then
+		insinto /usr/share/doc/${CATEGORY}/${PF}/examples
+		doins -r examples/*
+	fi
 }
