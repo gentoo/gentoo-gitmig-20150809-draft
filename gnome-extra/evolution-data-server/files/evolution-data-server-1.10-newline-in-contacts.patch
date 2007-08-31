@@ -1,0 +1,26 @@
+2007-08-14  Milan Crha  <mcrha@redhat.com>
+
+** Fix for bug #356176 by Patrick Ohly
+
+  * libebook/e-vcard.c: (read_attribute_value):
+  Skip over folding by calling skip_newline() to find
+  the next real character after a backslash.
+
+http://bugzilla.gnome.org/show_bug.cgi?id=356176
+https://bugs.gentoo.org/show_bug.cgi?id=175516
+
+--- trunk/addressbook/libebook/e-vcard.c	2007/08/14 13:53:49	7954
++++ trunk/addressbook/libebook/e-vcard.c	2007/08/14 14:17:12	7955
+@@ -273,6 +273,12 @@
+ 				g_string_append_c (str, '\\');
+ 				break;
+ 			}
++
++			/* beware, there might be a line break due to folding,
++			 * need next real character
++			 */
++			lp = skip_newline (lp, quoted_printable);
++
+ 			switch (*lp) {
+ 			case 'n': g_string_append_c (str, '\n'); break;
+ 			case 'N': g_string_append_c (str, '\n'); break;
