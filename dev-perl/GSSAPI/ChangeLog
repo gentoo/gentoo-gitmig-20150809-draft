@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GSSAPI
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.5 2007/08/25 21:05:02 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.6 2007/08/31 14:00:11 angelos Exp $
+
+  31 Aug 2007; Christoph Mende <angelos@gentoo.org> GSSAPI-0.24.ebuild:
+  Added ~amd64 wrt bug #189441
 
   25 Aug 2007; Christian Hartmann <ian@gentoo.org> GSSAPI-0.24.ebuild:
   Fixed bug #189883
