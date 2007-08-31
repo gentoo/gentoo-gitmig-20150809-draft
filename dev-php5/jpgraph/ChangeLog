@@ -1,6 +1,17 @@
 # ChangeLog for dev-php5/jpgraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.19 2007/07/29 16:54:25 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.20 2007/08/31 09:38:43 jokey Exp $
+
+*jpgraph-2.2 (31 Aug 2007)
+
+  31 Aug 2007; Markus Ullmann <jokey@gentoo.org> +jpgraph-2.2.ebuild:
+  Port from project overlay
+
+  30 Aug 2007; Jakub Moc <jakub@gentoo.org> jpgraph-2.2.ebuild:
+  Make HTTPD_{USER,GROUP} configurable.
+
+  30 Aug 2007; Jakub Moc <jakub@gentoo.org> +jpgraph-2.2.ebuild:
+  Version bump
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> jpgraph-2.1.3.ebuild,
   jpgraph-2.1.4.ebuild:
