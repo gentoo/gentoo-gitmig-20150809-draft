@@ -1,7 +1,6 @@
-diff -ur notecase-1.6.1.orig/Makefile notecase-1.6.1/Makefile
---- notecase-1.6.1.orig/Makefile	2007-08-02 14:58:33.000000000 +0200
-+++ notecase-1.6.1/Makefile	2007-08-02 15:01:33.000000000 +0200
-@@ -83,13 +83,6 @@
+--- Makefile.orig	2007-08-31 13:29:17.000000000 +0200
++++ Makefile	2007-08-31 13:29:35.000000000 +0200
+@@ -97,13 +97,6 @@
  QC=@echo '===> Compiling $<'; 
  QL=@echo '===> Linking $@'; 
  
@@ -12,10 +11,10 @@ diff -ur notecase-1.6.1.orig/Makefile notecase-1.6.1/Makefile
 - LDFLAGS=-Os -Wl,--as-needed
 -endif 
 -
- # define compile/link command line with flags
- CC=$(QC) $(CXX) $(DEBUG) $(PROFILE) -DENABLE_NLS
- ifdef WINDIR
-@@ -121,7 +114,7 @@
+ ifneq ($(NOKIA_MAEMO_BUILD),)
+  LDFLAGS += -ansi
+ endif
+@@ -139,7 +132,7 @@
   $(OBJ)/IOProcess.o $(OBJ)/IOLayerZlib.o $(OBJ)/IOLayerFile64.o $(OBJ)/IOLayerBase.o \
   $(OBJ)/IOLayerRedirect.o $(OBJ)/FileExportDlg.o $(OBJ)/FormatIOTxt.o $(OBJ)/FindReplaceDlg.o \
   $(OBJ)/FindReplaceInfo.o $(OBJ)/LinkInfo.o $(OBJ)/LinkPropertiesDlg.o $(OBJ)/ExecuteFile.o \
@@ -24,8 +23,3 @@ diff -ur notecase-1.6.1.orig/Makefile notecase-1.6.1/Makefile
   $(OBJ)/DocActionPix.o $(OBJ)/DocActionFinish.o $(OBJ)/DocActionFmt.o $(OBJ)/FmtInfo.o $(OBJ)/FileAttachmentDlg.o \
   $(OBJ)/DocActionAtt.o $(OBJ)/PixPropertiesDlg.o $(OBJ)/DocActionFinishDel.o  $(OBJ)/ShortcutsList.o $(OBJ)/ShortcutsListDlg.o \
   $(OBJ)/DateTimeDlg.o $(OBJ)/AboutDlg.o
-@@ -650,3 +643,4 @@
- 
- 
- .PHONY : all help poinstall pouninstall install uninstall rpm pack packdos updatesrcdos updatesrc updatemime clean ipk deb weexpc check install2
-+
