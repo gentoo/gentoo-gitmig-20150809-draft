@@ -1,6 +1,15 @@
 # ChangeLog for dev-php4/pecl-zip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-zip/ChangeLog,v 1.34 2007/08/13 20:34:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-zip/ChangeLog,v 1.35 2007/08/31 09:51:00 jokey Exp $
+
+*pecl-zip-1.8.10 (31 Aug 2007)
+
+  31 Aug 2007; Markus Ullmann <jokey@gentoo.org> +pecl-zip-1.8.10.ebuild:
+  Port from project overlay
+
+  30 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +pecl-zip-1.8.10.ebuild:
+  Version bump, add examples USE flag
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   pecl-zip-1.8.8.ebuild:
