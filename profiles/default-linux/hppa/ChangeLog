@@ -1,6 +1,9 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.14 2007/07/19 11:39:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.15 2007/08/31 16:13:10 jer Exp $
+
+  31 Aug 2007; Jeroen Roovers <jer@gentoo.org> +package.mask:
+  Mask dev-db/metakit (bug #169509).
 
   19 Jul 2007; Jeroen Roovers <jer@gentoo.org> -2004.2/deprecated,
   -2004.2/make.defaults, -2004.2/parent, -2004.3/deprecated, -2004.3/parent,
