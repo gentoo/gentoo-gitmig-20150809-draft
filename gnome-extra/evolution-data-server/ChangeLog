@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.143 2007/08/31 08:55:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.144 2007/08/31 10:47:10 leio Exp $
+
+*evolution-data-server-1.10.3.1 (31 Aug 2007)
+
+  31 Aug 2007; Mart Raudsepp <leio@gentoo.org>
+  -evolution-data-server-1.10.2-r1.ebuild,
+  +evolution-data-server-1.10.3.1.ebuild:
+  Version bump for regular bug fixes and reintroducing imap overflow security
+  fix that was lost in our 1.10.2 revision, bug 190861
 
 *evolution-data-server-1.10.2-r1 (31 Aug 2007)
 
