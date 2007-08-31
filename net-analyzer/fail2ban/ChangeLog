@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.34 2007/07/05 22:49:55 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.35 2007/08/31 15:06:17 falco Exp $
+
+*fail2ban-0.8.1 (31 Aug 2007)
+
+  31 Aug 2007; Raphael Marichez <falco@gentoo.org> +fail2ban-0.8.1.ebuild:
+  Version bump, bug 190852. And adding virtual/mta runtime dependency.
 
   05 Jul 2007; Raphael Marichez <falco@gentoo.org> fail2ban-0.8.0.ebuild,
   fail2ban-0.8.0-r1.ebuild:
