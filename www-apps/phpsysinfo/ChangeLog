@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpsysinfo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.36 2007/08/31 15:46:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.37 2007/08/31 17:15:21 angelos Exp $
+
+  31 Aug 2007; Christoph Mende <angelos@gentoo.org> phpsysinfo-2.5.4.ebuild:
+  Stable on amd64 wrt security bug #186931
 
   31 Aug 2007; Raúl Porcel <armin76@gentoo.org> phpsysinfo-2.5.4.ebuild:
   alpha/x86 stable wrt security #186931
