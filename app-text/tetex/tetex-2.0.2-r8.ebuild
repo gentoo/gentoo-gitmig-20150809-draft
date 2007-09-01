@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r8.ebuild,v 1.15 2007/02/28 22:02:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r8.ebuild,v 1.16 2007/09/01 16:59:06 rbu Exp $
 
 inherit tetex-2 flag-o-matic
 

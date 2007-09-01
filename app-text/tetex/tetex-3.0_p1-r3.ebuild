@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r3.ebuild,v 1.17 2007/06/11 19:39:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0_p1-r3.ebuild,v 1.18 2007/09/01 16:59:06 rbu Exp $
 
 inherit tetex-3 flag-o-matic versionator virtualx
 
@@ -26,6 +26,10 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 # these are defined in tetex.eclass and tetex-3.eclass
 IUSE=""
 DEPEND=""
+
+# please leave until 2. sept. 2007
+# see bug 189716
+RESTRICT="mirror"
 
 src_unpack() {
 	tetex-3_src_unpack
