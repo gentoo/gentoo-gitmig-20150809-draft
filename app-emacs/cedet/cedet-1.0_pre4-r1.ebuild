@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre4-r1.ebuild,v 1.1 2007/07/15 13:15:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre4-r1.ebuild,v 1.2 2007/09/01 15:55:53 nixnut Exp $
 
 inherit elisp eutils versionator
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/cedet/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 
 DEPEND="!app-emacs/semantic
