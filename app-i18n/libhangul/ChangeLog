@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/libhangul
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.7 2007/08/24 18:02:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.8 2007/09/01 13:43:17 nixnut Exp $
+
+  01 Sep 2007; nixnut <nixnut@gentoo.org> libhangul-0.0.4.ebuild:
+  Added ~ppc wrt bug 188190
 
   24 Aug 2007; Raúl Porcel <armin76@gentoo.org> libhangul-0.0.4.ebuild:
   alpha stable wrt #188190
