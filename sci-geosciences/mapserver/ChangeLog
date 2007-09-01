@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.5 2007/07/29 17:09:16 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.6 2007/09/01 16:58:36 nerdboy Exp $
+
+*mapserver-4.10.3 (01 Sep 2007)
+
+  01 Sep 2007; Steve Arnold <nerdboy@gentoo.org> +mapserver-4.10.3.ebuild:
+  Adding current release to fixes and related security issues.  Tested on
+  x86 (including Java 1.5 using the jBox example applet) and built on
+  amd64 (but not tested yet).  Addresses bugs 170556 and 190108.
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> mapserver-4.10.0.ebuild,
   mapserver-4.10.0-r1.ebuild:
