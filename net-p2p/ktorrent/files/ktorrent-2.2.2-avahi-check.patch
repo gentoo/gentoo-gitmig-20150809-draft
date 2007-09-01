@@ -1,0 +1,34 @@
+diff -Naur ktorrent-2.2.2.orig/configure.in.in ktorrent-2.2.2/configure.in.in
+--- ktorrent-2.2.2.orig/configure.in.in	2007-08-28 19:31:57.000000000 +0200
++++ ktorrent-2.2.2/configure.in.in	2007-09-01 15:34:25.000000000 +0200
+@@ -179,15 +179,20 @@
+ m4_pattern_allow(PKG_CONFIG_MIN_VERSION)
+ PKG_PROG_PKG_CONFIG
+ 
+-PKG_CHECK_MODULES( AVAHI,  avahi-client >= 0.6.10, 
+-[ 
+-	AC_SUBST(AVAHI_CFLAGS)
+-	AC_SUBST(AVAHI_LIBS)
+-	avahi=true
+-],
+-[
+-	missing_avahi_warning=yes
+-	avahi=false
+-])
++AC_ARG_WITH([avahi], AS_HELP_STRING([--without-avahi], [Build without avahi/ZeroConf support (default: test)]))
++
++avahi=false
++if test "x$with_avahi" != "xno"; then
++	PKG_CHECK_MODULES( AVAHI,  avahi-client >= 0.6.10, 
++	[ 
++		AC_SUBST(AVAHI_CFLAGS)
++		AC_SUBST(AVAHI_LIBS)
++		avahi=true
++	],
++	[
++		missing_avahi_warning=yes
++		avahi=false
++	])
++fi
+ 
+ AM_CONDITIONAL(COMPILE_ZEROCONF, test x$avahi = xtrue)

@@ -1,0 +1,12 @@
+diff -Naur ktorrent-2.2.2.orig/configure.in.in ktorrent-2.2.2/configure.in.in
+--- ktorrent-2.2.2.orig/configure.in.in	2007-09-01 15:51:27.000000000 +0200
++++ ktorrent-2.2.2/configure.in.in	2007-09-01 16:11:59.000000000 +0200
+@@ -134,7 +134,7 @@
+              else
+                 AC_MSG_ERROR(cannot enable system geoip. GeoIP library headers were not found on your system)
+              fi ;;
+-        no) system_geoip=true ;;
++        no) system_geoip=false ;;
+         *) AC_MSG_ERROR(bad value ${enableval} for --enable-system-geoip) ;;
+     esac],[system_geoip=false])
+ 
