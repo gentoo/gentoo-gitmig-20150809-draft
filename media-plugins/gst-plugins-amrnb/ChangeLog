@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/gst-plugins-amrnb
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-amrnb/ChangeLog,v 1.1 2007/09/01 07:03:29 drac Exp $
+
+*gst-plugins-amrnb-0.10.6 (01 Sep 2007)
+
+  01 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  +gst-plugins-amrnb-0.10.6.ebuild:
+  Initial commit for bug 176448.
+
