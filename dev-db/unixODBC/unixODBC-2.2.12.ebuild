@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.12.ebuild,v 1.11 2007/08/25 22:35:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.12.ebuild,v 1.12 2007/09/01 15:51:47 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -32,6 +32,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${WORKDIR}"/${PATCH_P}/*
+	epatch "${FILESDIR}"/350-${P}-gODBCConfig-as-needed.patch
 }
 
 src_compile() {
