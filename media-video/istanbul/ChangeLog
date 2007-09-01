@@ -1,6 +1,9 @@
 # ChangeLog for media-video/istanbul
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.10 2007/02/23 12:42:39 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.11 2007/09/01 06:17:37 drac Exp $
+
+  01 Sep 2007; Samuli Suominen <drac@gentoo.org> istanbul-0.2.2.ebuild:
+  Add USE encode check for libtheora wrt #168989.
 
 *istanbul-0.2.2 (23 Feb 2007)
 
