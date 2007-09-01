@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.15-r2.ebuild,v 1.7 2007/09/01 14:20:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.15-r2.ebuild,v 1.8 2007/09/01 16:46:29 armin76 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.astron.com/pub/tcsh/${MY_P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="perl catalogs"
 RESTRICT="test"
 
