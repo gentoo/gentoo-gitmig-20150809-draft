@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.4 2007/06/25 17:07:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.5 2007/09/01 12:54:46 ulm Exp $
+
+*gentoo-syntax-1.7 (01 Sep 2007)
+
+  01 Sep 2007; Ulrich Mueller <ulm@gentoo.org>
+  -files/ebuild-mode-1.5-fix-tabify.patch, -files/50gentoo-syntax-gentoo.el,
+  -gentoo-syntax-1.3.ebuild, -gentoo-syntax-1.5-r3.ebuild,
+  +gentoo-syntax-1.7.ebuild:
+  Version bump and clean up.
 
   25 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
   gentoo-syntax-1.6-r1.ebuild:
