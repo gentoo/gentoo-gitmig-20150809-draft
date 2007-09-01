@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.23 2007/09/01 09:40:39 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.24 2007/09/01 10:01:36 phreak Exp $
+
+*redland-1.0.6-r1 (01 Sep 2007)
+
+  01 Sep 2007; Christian Heim <phreak@gentoo.org>
+  +files/redland-1.0.6-db4.5.patch, +redland-1.0.6-r1.ebuild:
+  Fixing compilation against >db-4.4, as mentioned by Roy in #190682.
 
   01 Sep 2007; Christian Heim <phreak@gentoo.org>
   +files/redland-1.0.6-fbsd.patch, redland-1.0.6.ebuild:
