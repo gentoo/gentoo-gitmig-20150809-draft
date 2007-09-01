@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/polipo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.21 2007/09/01 06:24:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.22 2007/09/01 23:51:10 angelos Exp $
+
+  01 Sep 2007; Christoph Mende <angelos@gentoo.org> polipo-1.0.2-r1.ebuild:
+  Stable on amd64 wrt security bug #190617
 
 *polipo-1.0.2-r1 (01 Sep 2007)
 
