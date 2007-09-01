@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gst-plugins-good
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.35 2007/08/30 10:50:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.36 2007/09/01 06:24:02 drac Exp $
+
+  01 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  gst-plugins-good-0.10.6.ebuild:
+  Add block against old gst-plugins-bad since some plugins have been moved
+  around. Bug 190941, thanks to Olivier Crete for reporting.
 
 *gst-plugins-good-0.10.6 (30 Aug 2007)
 
