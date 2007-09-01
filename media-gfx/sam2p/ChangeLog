@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sam2p
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.14 2007/02/12 18:36:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.15 2007/09/01 11:31:03 nixnut Exp $
+
+  01 Sep 2007; nixnut <nixnut@gentoo.org> sam2p-0.45.ebuild:
+  Stable on ppc wrt bug 154787
 
   12 Feb 2007; Simon Stelling <blubb@gentoo.org> sam2p-0.45.ebuild:
   RESTRICT=test as it doesn't work and mark ~amd64; bug 155062
