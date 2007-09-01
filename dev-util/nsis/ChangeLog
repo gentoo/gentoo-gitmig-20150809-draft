@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/nsis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.12 2007/07/27 08:35:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.13 2007/09/01 20:04:44 mrness Exp $
+
+*nsis-2.30 (01 Sep 2007)
+
+  01 Sep 2007; Alin Năstac <mrness@gentoo.org> -nsis-2.27.ebuild,
+  +nsis-2.30.ebuild:
+  Version bump. Readd -m32 compiler flag on amd64.
 
 *nsis-2.29 (27 Jul 2007)
 
