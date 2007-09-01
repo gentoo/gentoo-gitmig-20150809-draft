@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libxcrypt
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libxcrypt/ChangeLog,v 1.6 2007/02/09 06:08:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libxcrypt/ChangeLog,v 1.7 2007/09/01 11:58:58 phreak Exp $
+
+  01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing method from metadata due to his retirement (see #175298 for
+  reference).
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
