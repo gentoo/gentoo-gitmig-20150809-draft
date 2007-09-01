@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywavelets/pywavelets-0.1.6.ebuild,v 1.1 2007/03/01 10:20:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywavelets/pywavelets-0.1.6.ebuild,v 1.2 2007/09/01 22:10:05 bicatali Exp $
 
 NEED_PYTHON=2.4
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 DEPEND="app-arch/unzip"
-RDEPEND=">=dev-python/numpy-1.0.1"
+RDEPEND=">=dev-python/numpy-1.0.3.1"
 
 S="${WORKDIR}/${MY_P}"
 
