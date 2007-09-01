@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.31 2007/07/22 06:03:55 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.32 2007/09/01 13:16:47 phreak Exp $
+
+  01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing twp from metadata due to his retirement (see #190561 for reference).
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   ion2-20040729-r1.ebuild:
