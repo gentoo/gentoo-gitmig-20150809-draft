@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.286 2007/08/15 05:17:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.287 2007/09/01 17:41:46 philantrop Exp $
+
+  01 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kdepim-3.5.7-r3.ebuild:
+  Removed the crypt USE flag because if it was disabled, kdepim would just use
+  the bundled crypto stuff which just loves to fail to compile.
 
   15 Aug 2007; Jeroen Roovers <jer@gentoo.org> kdepim-3.5.7-r3.ebuild:
   Stable for HPPA (bug #176297).
