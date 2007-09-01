@@ -1,0 +1,69 @@
+http://bugs.gentoo.org/190523
+http://oss.sgi.com/bugzilla/show_bug.cgi?id=766
+
+--- db/Makefile
++++ db/Makefile
+@@ -16,7 +16,7 @@
+ 	attrset.h
+ CFILES = $(HFILES:.h=.c)
+ LSRCFILES = xfs_admin.sh xfs_check.sh xfs_ncheck.sh xfs_metadump.sh
+-LLDLIBS	= $(LIBXFS) $(LIBXLOG) $(LIBUUID) $(LIBRT)
++LLDLIBS	= $(LIBXFS) $(LIBXLOG) $(LIBUUID) $(LIBRT) $(LIBPTHREAD)
+ LTDEPENDENCIES = $(LIBXFS) $(LIBXLOG)
+ LLDFLAGS += -static
+ 
+--- growfs/Makefile
++++ growfs/Makefile
+@@ -9,7 +9,7 @@
+ 
+ CFILES = xfs_growfs.c
+ 
+-LLDLIBS = $(LIBXFS) $(LIBXCMD) $(LIBUUID) $(LIBRT)
++LLDLIBS = $(LIBXFS) $(LIBXCMD) $(LIBUUID) $(LIBRT) $(LIBPTHREAD)
+ LTDEPENDENCIES = $(LIBXFS) $(LIBXCMD)
+ LLDFLAGS = -static
+ LSRCFILES = xfs_info.sh
+--- logprint/Makefile
++++ logprint/Makefile
+@@ -12,7 +12,7 @@
+ 	 log_copy.c log_dump.c log_misc.c \
+ 	 log_print_all.c log_print_trans.c
+ 
+-LLDLIBS	= $(LIBXFS) $(LIBXLOG) $(LIBUUID) $(LIBRT)
++LLDLIBS	= $(LIBXFS) $(LIBXLOG) $(LIBUUID) $(LIBRT) $(LIBPTHREAD)
+ LTDEPENDENCIES = $(LIBXFS) $(LIBXLOG)
+ LLDFLAGS = -static
+ 
+--- mdrestore/Makefile
++++ mdrestore/Makefile
+@@ -8,7 +8,7 @@
+ LTCOMMAND = xfs_mdrestore
+ CFILES = xfs_mdrestore.c
+ 
+-LLDLIBS = $(LIBXFS) $(LIBRT)
++LLDLIBS = $(LIBXFS) $(LIBRT) $(LIBPTHREAD)
+ LTDEPENDENCIES = $(LIBXFS)
+ LLDFLAGS = -static
+ 
+--- mkfs/Makefile
++++ mkfs/Makefile
+@@ -11,7 +11,7 @@
+ HFILES = xfs_mkfs.h
+ CFILES = maxtrres.c proto.c xfs_mkfs.c 
+ 
+-LLDLIBS = $(LIBXFS) $(LIBUUID) $(LIBDISK) $(LIBRT)
++LLDLIBS = $(LIBXFS) $(LIBUUID) $(LIBDISK) $(LIBRT) $(LIBPTHREAD)
+ LTDEPENDENCIES = $(LIBXFS) $(LIBDISK)
+ LLDFLAGS = -static
+ 
+--- quota/Makefile
++++ quota/Makefile
+@@ -14,7 +14,7 @@
+ PCFILES = darwin.c freebsd.c irix.c linux.c
+ LSRCFILES = $(shell echo $(PCFILES) | sed -e "s/$(PKG_PLATFORM).c//g")
+ 
+-LLDLIBS = $(LIBXCMD)
++LLDLIBS = $(LIBXCMD) $(LIBPTHREAD)
+ LTDEPENDENCIES = $(LIBXCMD)
+ LLDFLAGS = -static
+ 
