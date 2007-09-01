@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.99.2.ebuild,v 1.1 2007/08/31 19:43:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.99.2.ebuild,v 1.2 2007/09/01 01:57:34 mr_bones_ Exp $
 
 inherit eutils findlib multilib
 
@@ -52,7 +52,6 @@ use_enable_default() {
 	fi
 }
 
-
 src_compile() {
 	./configure \
 		--temproot "${D}" \
@@ -87,4 +86,3 @@ src_install() {
 
 	dodoc README
 }
-
