@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/away
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/away/ChangeLog,v 1.11 2007/05/14 16:47:40 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/away/ChangeLog,v 1.12 2007/09/01 15:58:30 angelos Exp $
+
+  01 Sep 2007; Christoph Mende <angelos@gentoo.org> away-0.9.5.ebuild:
+  Added ~amd64
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
