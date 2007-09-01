@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r3.ebuild,v 1.1 2007/02/23 23:43:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r5.ebuild,v 1.1 2007/09/01 22:24:30 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -15,15 +15,13 @@ SRC_URI="mirror://sourceforge/numpy/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~arm ~mips ~s390"
 IUSE="doc"
 
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-
-	use doc && cp "${DISTDIR}"/numpy.pdf ${S}/
 
 	# fix list problem
 	epatch "${FILESDIR}"/${P}-arrayobject.patch
@@ -33,8 +31,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-eigen.patch
 	# fix a bug in the test
 	epatch "${FILESDIR}"/${P}-test.patch
-	# fix for python-2.5
-	epatch "${FILESDIR}"/${P}-python25.patch
+	# fix only for python-2.5
+	distutils_python_version
+	[[ "${PYVER}" == 2.5 ]] && epatch "${FILESDIR}"/${P}-python25.patch
+	# fix for dotblas from uncommited cvs
+	epatch "${FILESDIR}"/${P}-dotblas.patch
 }
 
 src_test() {
@@ -45,7 +46,6 @@ src_test() {
 
 src_install() {
 	distutils_src_install
-	distutils_python_version
 
 	# install various README from packages
 	newdoc Packages/MA/README README.MA
@@ -54,7 +54,7 @@ src_install() {
 	# install tutorial and docs
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins -r Test Demo/NumTut || die
-		newins "${S}"/numpy.pdf numeric.pdf || die
+		doins -r Test Demo/NumTut || die "install tutorial failed"
+		newins "${DISTDIR}"/numpy.pdf numeric.pdf || die "install doc failed"
 	fi
 }
