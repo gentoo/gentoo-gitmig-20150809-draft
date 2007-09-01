@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-1.4.1.ebuild,v 1.6 2007/04/16 08:50:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-1.4.1.ebuild,v 1.7 2007/09/01 19:55:26 nichoj Exp $
 
 inherit ruby gems
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://rubyforge.org/projects/capistrano/"
 SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="1"
 KEYWORDS="amd64 ia64 ppc64 x86"
 IUSE=""
 #RESTRICT="test"

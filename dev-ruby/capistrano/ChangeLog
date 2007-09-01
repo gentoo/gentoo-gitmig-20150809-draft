@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/capistrano
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.18 2007/07/21 19:15:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.19 2007/09/01 19:55:26 nichoj Exp $
+
+  01 Sep 2007; Joshua Nichols <nichoj@gentoo.org> capistrano-1.4.1.ebuild,
+  capistrano-1.99.1.ebuild, capistrano-1.99.3.ebuild:
+  Added slots.
 
   21 Jul 2007; Hans de Graaff <graaff@gentoo.org> -capistrano-1.1.0.ebuild,
   -capistrano-1.4.0.ebuild:
