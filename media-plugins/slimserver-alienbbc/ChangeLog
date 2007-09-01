@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/slimserver-alienbbc
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/slimserver-alienbbc/ChangeLog,v 1.1 2006/11/13 19:58:25 twp Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/slimserver-alienbbc/ChangeLog,v 1.2 2007/09/01 13:08:00 phreak Exp $
+
+  01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing twp from metadata due to his retirement (see #190561 for reference).
 
 *slimserver-alienbbc-1.06 (13 Nov 2006)
 
