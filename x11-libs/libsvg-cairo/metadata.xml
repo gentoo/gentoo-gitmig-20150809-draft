@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>latexer@gentoo.org</email>
-  <name>Peter Johanson</name>
-</maintainer>
-<maintainer>
-  <email>twp@gentoo.org</email>
-  <name>Tom Payne</name>
-</maintainer>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>latexer@gentoo.org</email>
+		<name>Peter Johanson</name>
+	</maintainer>
 </pkgmetadata>
