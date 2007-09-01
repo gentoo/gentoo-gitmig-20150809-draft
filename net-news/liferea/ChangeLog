@@ -1,6 +1,20 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.114 2007/08/20 14:32:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.115 2007/09/01 01:49:35 dang Exp $
+
+*liferea-1.2.23 (01 Sep 2007)
+
+  01 Sep 2007; Daniel Gryniewicz <dang@gentoo.org> +liferea-1.2.23.ebuild:
+  Bump to 1.2.23
+  	* Fix for ISO8601 date format second fraction parsing that caused missing
+  	* timezone information for item dates.  (patch from Alexander Hess)
+  	* Fix for incorrect double UTF-8 conversion in the date format handling. 
+  	  (patch from Vincent Lefevre)
+  	* - GNOME proxy settings not handled correctly (reported by Luca Di
+  	* Stefano)
+  	* - Ctrl-N hotkey assigned twice
+  	* - no labels in toolbar when text and icons configured (reported by
+  	* Jérôme Guelfucci)
 
 *liferea-1.2.22 (20 Aug 2007)
 
