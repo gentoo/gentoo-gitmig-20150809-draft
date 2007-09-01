@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/libertine-ttf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/ChangeLog,v 1.1 2007/08/06 02:57:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/ChangeLog,v 1.2 2007/09/01 15:53:06 angelos Exp $
+
+  01 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  libertine-ttf-2.6.9.ebuild:
+  Added ~amd64
 
 *libertine-ttf-2.6.9 (06 Aug 2007)
 
