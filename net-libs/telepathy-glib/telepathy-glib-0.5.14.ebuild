@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.5.10.ebuild,v 1.3 2007/06/30 17:38:03 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.5.14.ebuild,v 1.1 2007/09/01 10:24:53 peper Exp $
 
 DESCRIPTION="GLib binding for the Telepathy D-Bus protocol."
 HOMEPAGE="http://telepathy.freedesktop.org"
@@ -31,8 +31,7 @@ src_compile() {
 src_test() {
 	vecho ">>> Test phase [check]: ${CATEGORY}/${PF}"
 	if ! dbus-launch emake -j1 check; then
-		hasq test $FEATURES && die "Make check failed. See above for details."
-		hasq test $FEATURES || eerror "Make check failed.  See above for details."
+		die "Make check failed. See above for details."
 	fi
 }
 
