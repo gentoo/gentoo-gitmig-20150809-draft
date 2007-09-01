@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.65 2007/09/01 14:20:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.66 2007/09/01 16:19:24 jer Exp $
+
+  01 Sep 2007; Jeroen Roovers <jer@gentoo.org> stunnel-4.20.ebuild:
+  Stable for HPPA (bug #113778).
 
   01 Sep 2007; Joseph Jezak <josejx@gentoo.org> stunnel-4.20.ebuild:
   Marked ppc stable and re-added ~ppc64 for bug #113778.
