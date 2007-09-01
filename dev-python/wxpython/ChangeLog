@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.58 2007/05/07 10:30:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.59 2007/09/01 09:28:24 dirtyepic Exp $
+
+*wxpython-2.6.4.0 (01 Sep 2007)
+
+  01 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> +wxpython-2.6.4.0.ebuild:
+  Version bump. No major groundbreakery. Masked due to dep on
+  =x11-libs/wxGTK-2.6.4.0.
 
   07 May 2007; Bryan Østergaard <kloeri@gentoo.org>
   wxpython-2.6.3.3.ebuild:
