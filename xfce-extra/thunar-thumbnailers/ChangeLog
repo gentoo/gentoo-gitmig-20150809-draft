@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-thumbnailers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/ChangeLog,v 1.35 2007/08/30 03:20:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/ChangeLog,v 1.36 2007/09/01 12:29:25 drac Exp $
+
+  01 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  thunar-thumbnailers-0.3.0.ebuild:
+  Unkeyword ppc and ppc64 wrt #189043.
 
   30 Aug 2007; Jeroen Roovers <jer@gentoo.org>
   thunar-thumbnailers-0.2.2.ebuild:
