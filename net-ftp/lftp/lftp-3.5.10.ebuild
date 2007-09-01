@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.5.10.ebuild,v 1.10 2007/06/24 22:07:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.5.10.ebuild,v 1.11 2007/09/01 09:07:27 phreak Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://lftp.yar.ru/"
 
 #SRC_URI="http://the.wiretapped.net/mirrors/lftp/${P}.tar.bz2"
 # Was a bit too slow and unreliable last time I tried (dragonheart)
-SRC_URI="ftp://lftp.yar.ru/lftp/${P}.tar.bz2"
+SRC_URI="ftp://lftp.yar.ru/lftp/old/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
