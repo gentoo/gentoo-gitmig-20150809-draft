@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.8.ebuild,v 1.1 2007/08/31 18:58:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.8.ebuild,v 1.2 2007/09/01 06:30:31 drac Exp $
 
 NEED_PYTHON=2.3
 
-inherit python
+inherit flag-o-matic python
 
 DESCRIPTION="A Python Interface to GStreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org"
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 		doc? ( app-text/xmlto )"
 
 src_compile() {
+	filter-ldflags -Wl,-z,now
 	econf $(use_enable doc docs) || die
 	emake || die
 }
