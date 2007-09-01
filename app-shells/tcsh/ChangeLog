@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.76 2007/08/08 17:57:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.77 2007/09/01 12:54:25 angelos Exp $
+
+  01 Sep 2007; Christoph Mende <angelos@gentoo.org> tcsh-6.15-r2.ebuild:
+  Stable on amd64 wrt bug #190949
 
   08 Aug 2007; Fabian Groffen <grobian@gentoo.org>
   +files/tcsh-6.14-use-ncurses.patch, tcsh-6.15-r2.ebuild:
