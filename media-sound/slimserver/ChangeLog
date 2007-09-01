@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/slimserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/ChangeLog,v 1.10 2007/08/21 20:48:57 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/slimserver/ChangeLog,v 1.11 2007/09/01 13:09:16 phreak Exp $
+
+  01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing twp from metadata due to his retirement (see #190561 for reference).
 
 *slimserver-6.5.4 (21 Aug 2007)
 
