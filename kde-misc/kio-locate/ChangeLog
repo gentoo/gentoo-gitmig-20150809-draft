@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kio-locate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.30 2007/04/18 20:43:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.31 2007/09/01 22:43:42 philantrop Exp $
+
+  01 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  kio-locate-0.4.5.ebuild:
+  Added sys-apps/mlocate to RDEPEND as another alternative to the other locate
+  implementations. Fixes bug 190573.
 
   18 Apr 2007; Wulf C. Krueger <philantrop@gentoo.org>
   -files/kde.py-bksys-1.5.1.diff, metadata.xml, -kio-locate-0.3.4.ebuild,

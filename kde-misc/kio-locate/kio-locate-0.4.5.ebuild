@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.4.5.ebuild,v 1.7 2007/04/18 20:43:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.4.5.ebuild,v 1.8 2007/09/01 22:43:42 philantrop Exp $
 
 inherit kde
 
@@ -14,8 +14,9 @@ KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND=">=dev-util/scons-0.96.1"
-RDEPEND="|| ( sys-apps/slocate sys-apps/rlocate )"
-need-kde 3.4
+RDEPEND="|| ( sys-apps/slocate sys-apps/rlocate sys-apps/mlocate )"
+
+need-kde 3.5
 
 PATCHES="${FILESDIR}/kio-locate-0.4.4-bksys.diff"
 
@@ -34,5 +35,5 @@ src_compile() {
 
 src_install() {
 	scons install DESTDIR="${D}" languages="$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))"
-	dodoc AUTHORS ChangeLog
+	dodoc AUTHORS ChangeLog || die "installing docs failed"
 }
