@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>kernel</herd>
-<herd>hardened</herd>
-<maintainer>
-  <email>solar@gentoo.org</email>
-  <name>Ned Ludd</name>
-  <description>Maintainer 2.4.x</description>
-</maintainer>
-<maintainer>
-	<email>johnm@gentoo.org</email>
-	<name>John Mylchreest</name>
-	<description>Maintainer 2.6.x, Kernel Liason</description>
-</maintainer>
-<maintainer>
-	<email>phreak@gentoo.org</email>
-	<name>Christian Heim</name>
-	<description>Maintainer 2.6.x, another helping hand from Gentoo kernel team</description>
-</maintainer>
-<maintainer>
-	<email>pappy@gentoo.org</email>
-	<name>Alexander Gabert</name>
-	<description>Maintainer 2.4.x and 2.6.x, pax, grsecurity</description>
-</maintainer>
-<longdescription>This kernel source is the security hardened version of the Linux Kernel.</longdescription>
+	<herd>kernel</herd>
+	<herd>hardened</herd>
+	<maintainer>
+		<email>solar@gentoo.org</email>
+		<name>Ned Ludd</name>
+		<description>Maintainer 2.4</description>
+	</maintainer>
+	<maintainer>
+		<email>johnm@gentoo.org</email>
+		<name>John Mylchreest</name>
+		<description>Maintainer 2.6, Kernel Liason</description>
+	</maintainer>
+	<maintainer>
+		<email>phreak@gentoo.org</email>
+		<name>Christian Heim</name>
+	</maintainer>
+	<maintainer>
+		<email>pappy@gentoo.org</email>
+		<name>Alexander Gabert</name>
+	</maintainer>
+	<longdescription>
+		hardened-sources is based upon genpatches-base, and adds the grsecurity
+		patch from http://www.grsecurity.net, which also includes PaX.
+	</longdescription>
 </pkgmetadata>
