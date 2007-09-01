@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.8.ebuild,v 1.2 2007/09/01 06:30:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.8.ebuild,v 1.3 2007/09/01 06:39:08 drac Exp $
 
 NEED_PYTHON=2.3
 
@@ -15,15 +15,15 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-python/pygtk-2.6.3
-		>=dev-libs/glib-2.6
-		>=x11-libs/gtk+-2.6
-		>=media-libs/gstreamer-0.10.13
-		>=media-libs/gst-plugins-base-0.10.13.1
-		dev-libs/libxml2"
-
+	>=dev-libs/glib-2.8
+	>=x11-libs/gtk+-2.6
+	>=dev-python/pygobject-2.11.2
+	>=media-libs/gstreamer-0.10.2
+	>=media-libs/gst-plugins-base-0.10.0.2
+	dev-libs/libxml2"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig
-		doc? ( app-text/xmlto )"
+	dev-util/pkgconfig
+	doc? ( app-text/xmlto )"
 
 src_compile() {
 	filter-ldflags -Wl,-z,now
