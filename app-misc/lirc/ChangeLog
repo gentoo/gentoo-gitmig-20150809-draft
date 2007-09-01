@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.150 2007/08/14 18:46:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.151 2007/09/01 08:12:58 josejx Exp $
+
+  01 Sep 2007; Joseph Jezak <josejx@gentoo.org> lirc-0.8.2-r1.ebuild:
+  Marked ppc stable for bug #187822.
 
   14 Aug 2007; Markus Rothe <corsair@gentoo.org> lirc-0.8.2-r1.ebuild:
   Stable on ppc64; bug #187822
