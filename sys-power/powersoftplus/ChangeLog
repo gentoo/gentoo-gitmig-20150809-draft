@@ -1,0 +1,11 @@
+# ChangeLog for sys-power/powersoftplus
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersoftplus/ChangeLog,v 1.1 2007/09/01 23:49:23 jurek Exp $
+
+*powersoftplus-0.1.8 (01 Sep 2007)
+
+  01 Sep 2007; Jurek Bartuszek <jurek@gentoo.org>
+  +files/powersoftplus-0.1.8-reduceverbosity.patch, +files/powersoftplus,
+  +metadata.xml, +powersoftplus-0.1.8.ebuild:
+  Initial version
+
