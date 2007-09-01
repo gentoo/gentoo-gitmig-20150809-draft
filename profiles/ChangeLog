@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.611 2007/09/01 08:13:23 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.612 2007/09/01 09:25:10 dirtyepic Exp $
+
+  01 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Also mask wxpython-2.6.4.0.
 
   01 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Mask =x11-libs/wxGTK-2.6.4.0 for testing.
