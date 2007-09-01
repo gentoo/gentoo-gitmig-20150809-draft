@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsvg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/ChangeLog,v 1.17 2007/03/16 18:48:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsvg/ChangeLog,v 1.18 2007/09/01 12:49:41 phreak Exp $
+
+  01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing twp from metadata due to his retirement (see #190561 for reference).
 
   16 Mar 2007; nixnut <nixnut@gentoo.org> xsvg-0.2.1.ebuild:
   Stable on ppc wrt bug 134328

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sam2p
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.16 2007/09/01 11:45:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.17 2007/09/01 12:48:15 phreak Exp $
+
+  01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing twp from metadata due to his retirement (see #190561 for reference).
 
   01 Sep 2007; Christian Faulhammer <opfer@gentoo.org> sam2p-0.45.ebuild:
   stable x86, bug 154787; make it properly die with FEATURES=distcc and revamp
