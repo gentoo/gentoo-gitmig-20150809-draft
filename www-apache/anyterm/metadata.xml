@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>apache</herd>
-	<maintainer>
-		<email>twp@gentoo.org</email>
-		<name>Tom Payne</name>
-	</maintainer>
 </pkgmetadata>

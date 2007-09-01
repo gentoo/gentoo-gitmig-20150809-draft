@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/anyterm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/ChangeLog,v 1.6 2007/07/29 17:13:50 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/ChangeLog,v 1.7 2007/09/01 13:12:44 phreak Exp $
+
+  01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing twp from metadata due to his retirement (see #190561 for reference).
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> anyterm-1.1.8-r2.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to
