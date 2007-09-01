@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.428 2007/09/01 09:13:49 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.429 2007/09/01 10:54:49 phreak Exp $
+
+  01 Sep 2007; Christian Heim <phreak@gentoo.org>
+  gentoo-sources-2.6.22-r6.ebuild:
+  gentoo-sources-2.6.22-r6 wasn't supposed to go straight to stable.
 
 *gentoo-sources-2.6.22-r6 (01 Sep 2007)
 
