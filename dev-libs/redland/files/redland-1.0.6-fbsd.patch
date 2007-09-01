@@ -1,0 +1,13 @@
+--- redland-1.0.6/librdf/rdf_init_internal.h	2007-08-29 19:43:08 +0200
++++ redland-1.0.6/librdf/rdf_init_internal.h	2007-08-29 19:43:32 +0200
+@@ -28,6 +28,10 @@
+ #ifndef LIBRDF_INIT_INTERNAL_H
+ #define LIBRDF_INIT_INTERNAL_H
+ 
++#ifdef WITH_THREADS
++#include <pthread.h>
++#endif
++
+ #ifdef __cplusplus
+ extern "C" {
+ #endif

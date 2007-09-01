@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.22 2007/06/14 07:52:15 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.23 2007/09/01 09:40:39 phreak Exp $
+
+  01 Sep 2007; Christian Heim <phreak@gentoo.org>
+  +files/redland-1.0.6-fbsd.patch, redland-1.0.6.ebuild:
+  Fixing compilation on FreeBSD (thanks to Toffanin [WiredTEK] <equilibrium at
+  gechi.it> in #190682 for the patch).
 
   14 Jun 2007; Christian Heim <phreak@gentoo.org> redland-1.0.4.ebuild,
   redland-1.0.5.ebuild, redland-1.0.6.ebuild:

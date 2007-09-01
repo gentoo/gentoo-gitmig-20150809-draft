@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.6.ebuild,v 1.2 2007/06/14 07:52:15 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.6.ebuild,v 1.3 2007/09/01 09:40:39 phreak Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ DEPEND="mysql? ( virtual/mysql )
 src_unpack() {
 	unpack ${A}
 	rm -r "${S}"/{raptor,rasqal}
+	epatch "${FILESDIR}"/${P}-fbsd.patch
 }
 
 src_compile() {
