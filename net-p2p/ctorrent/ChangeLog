@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ctorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.33 2007/09/01 11:39:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.34 2007/09/01 11:43:05 armin76 Exp $
+
+  01 Sep 2007; Raúl Porcel <armin76@gentoo.org> -ctorrent-2.2.ebuild,
+  -ctorrent-3.1.ebuild:
+  Remove old
 
   01 Sep 2007; nixnut <nixnut@gentoo.org> ctorrent-3.2.ebuild:
   Stable on ppc wrt bug 185080
