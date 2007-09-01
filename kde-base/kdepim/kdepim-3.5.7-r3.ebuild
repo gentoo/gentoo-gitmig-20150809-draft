@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.7-r3.ebuild,v 1.12 2007/09/01 17:41:46 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.7-r3.ebuild,v 1.13 2007/09/01 17:49:37 philantrop Exp $
 
 inherit kde-dist
 
@@ -9,7 +9,7 @@ SRC_URI="${SRC_URI}
 
 DESCRIPTION="KDE PIM (Personal Information Management) applications: KOrganizer, KMail, KNode,..."
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="gnokii"
 
 RESTRICT="test"
