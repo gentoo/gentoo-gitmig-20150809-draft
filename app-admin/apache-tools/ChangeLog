@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.10 2007/08/31 19:58:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.11 2007/09/01 17:43:19 armin76 Exp $
+
+  01 Sep 2007; Raúl Porcel <armin76@gentoo.org>
+  apache-tools-2.2.4-r4.ebuild:
+  x86 stable wrt #190331
 
   31 Aug 2007; Christoph Mende <angelos@gentoo.org>
   apache-tools-2.2.4-r4.ebuild:
