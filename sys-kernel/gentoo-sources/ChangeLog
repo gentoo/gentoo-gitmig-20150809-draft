@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.427 2007/08/24 15:18:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.428 2007/09/01 09:13:49 phreak Exp $
+
+*gentoo-sources-2.6.22-r6 (01 Sep 2007)
+
+  01 Sep 2007; Christian Heim <phreak@gentoo.org>
+  +gentoo-sources-2.6.22-r6.ebuild:
+  Revision bump for Linux 2.6.22.5 and 2.6.22.6. Also fixing #187522 (thanks
+  to Mike Doty) and #188521 (thanks to Mike Pagano).
 
   24 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gentoo-sources-2.6.22-r5.ebuild:
