@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/crow-designer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/ChangeLog,v 1.5 2007/07/22 07:13:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/ChangeLog,v 1.6 2007/09/01 13:48:18 pva Exp $
+
+*crow-designer-2.11.1 (01 Sep 2007)
+
+  01 Sep 2007; <pva@gentoo.org> -crow-designer-2.8.1.ebuild,
+  +crow-designer-2.11.1.ebuild:
+  Version bump. License change: GPL-2 -> MIT.
 
 *crow-designer-2.11.0 (22 Jul 2007)
 
