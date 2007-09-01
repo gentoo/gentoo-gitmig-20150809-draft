@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/libgeotiff
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/ChangeLog,v 1.14 2007/02/22 01:21:27 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/ChangeLog,v 1.15 2007/09/01 19:59:10 nerdboy Exp $
+
+*libgeotiff-1.2.4 (01 Sep 2007)
+
+  01 Sep 2007; Steve Arnold <nerdboy@gentoo.org>
+  +files/libgeotiff-1.2.4-soname.patch, -libgeotiff-1.2.0.ebuild,
+  +libgeotiff-1.2.4.ebuild:
+  Added latest upstream version and removed oldest stale version.  Added
+  soname patch and api docs for latest version (fixes bug #182304).
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
