@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/judy
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.15 2007/03/01 00:02:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.16 2007/09/01 12:40:17 phreak Exp $
+
+  01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing twp from metadata due to his retirement (see #190561 for reference).
 
   01 Mar 2007; Jason Wever <weeve@gentoo.org> judy-1.0.3.ebuild:
   Stable on SPARC wrt bug #151934.
