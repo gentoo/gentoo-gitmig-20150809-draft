@@ -9,11 +9,6 @@
   <description>Maintainer 2.4.x</description>
 </maintainer>
 <maintainer>
-  <email>tocharian@gentoo.org</email>
-  <name>Adam Mondl</name>
-  <description>Maintainer 2.6.x</description>
-</maintainer>
-<maintainer>
 	<email>johnm@gentoo.org</email>
 	<name>John Mylchreest</name>
 	<description>Maintainer 2.6.x, Kernel Liason</description>
