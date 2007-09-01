@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-freedb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ChangeLog,v 1.13 2007/01/21 08:12:55 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ChangeLog,v 1.14 2007/09/01 12:42:03 phreak Exp $
+
+  01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing twp from metadata due to his retirement (see #190561 for reference).
 
   21 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   ruby-freedb-0.5.ebuild:
