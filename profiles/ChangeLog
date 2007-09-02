@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.614 2007/09/01 22:01:17 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.615 2007/09/02 16:02:35 genstef Exp $
+
+  02 Sep 2007; Stefan Schweizer <genstef@gentoo.org> package.mask:
+  last-rite bpalogin for mark_alec
 
   01 Sep 2007; Joshua Nichols <nichoj@gentoo.org> package.mask:
   Removed capistrano and palmtree from package.mask.

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7663 2007/09/02 09:57:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7664 2007/09/02 16:02:35 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (02 Sep 2007)
+# last-rite bpalogin for mark_alec, as the package is useless now (ISP
+# no longer needs it) and the initscript is broken with baselayout2
+net-dialup/bpalogin
 
 # Ryan Hill <dirtyepic@gentoo.org> (01 Sep 2007)
 # mask for testing
