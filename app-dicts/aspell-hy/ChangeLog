@@ -1,0 +1,11 @@
+# ChangeLog for app-dicts/aspell-hy
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-hy/ChangeLog,v 1.1 2007/09/02 09:07:24 philantrop Exp $
+
+*aspell-hy-0.10.0 (02 Sep 2007)
+
+  02 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +aspell-hy-0.10.0.ebuild:
+  Added an Armenian dictionary as per bug 186228. Thanks to Karl Hakimian for
+  providing the ebuild!
+
