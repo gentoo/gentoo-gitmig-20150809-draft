@@ -1,13 +1,9 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.13 2007/09/02 14:04:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.14 2007/09/02 14:56:24 hollow Exp $
 
   02 Sep 2007; nixnut <nixnut@gentoo.org> apache-tools-2.2.4-r4.ebuild:
   Stable on ppc wrt bug 190331
-
-  01 Sep 2007; Christian Heim <phreak@gentoo.org>
-  apache-tools-2.2.4-r4.ebuild:
-  Block on <2.0.59-r5 instead of <2.2.4.
 
   01 Sep 2007; Raúl Porcel <armin76@gentoo.org>
   apache-tools-2.2.4-r4.ebuild:
