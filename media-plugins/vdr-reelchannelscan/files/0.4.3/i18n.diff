@@ -60,6 +60,24 @@ Index: reelchannelscan-0.4.3/i18n.c
    { "Scanning on transponder",
      "Durchsuche Transponder",
      "",
+@@ -524,7 +568,7 @@
+     "",
+     "",
+     "",
+-    "Haku käynnissä %s.\tOdota hetkinen...",
++    "",
+     "",
+     "",
+     "",
+@@ -546,7 +590,7 @@
+     "",
+     "",
+     "",
+-    "Haku käynnissä %s.\tOdota hetkinen...",
++    "",
+     "",
+     "",
+     "",
 Index: reelchannelscan-0.4.3/csmenu.c
 ===================================================================
 --- reelchannelscan-0.4.3.orig/csmenu.c
