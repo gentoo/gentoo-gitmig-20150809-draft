@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.14 2007/08/30 12:23:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r1.ebuild,v 1.15 2007/09/02 16:21:15 drac Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -41,6 +41,9 @@ src_unpack() {
 	sed -i -e "s:@MKINSTALLDIRS@:${S}/mkinstalldirs:" "${S}"/po/Makefile.*
 
 	cd "${S}"
+	
+	epatch "${FILESDIR}"/${P}-qa.patch
+
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	AT_M4DIR="${WORKDIR}/m4" eautoreconf
 }

@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/libvisual-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.38 2007/08/30 12:23:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.39 2007/09/02 16:21:15 drac Exp $
+
+  02 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  +files/libvisual-plugins-0.4.0-qa.patch,
+  libvisual-plugins-0.4.0-r1.ebuild:
+  Fix QA warnings wrt #190961.
 
   30 Aug 2007; Samuli Suominen <drac@gentoo.org>
   libvisual-plugins-0.4.0-r1.ebuild:
