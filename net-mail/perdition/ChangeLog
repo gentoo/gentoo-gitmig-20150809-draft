@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/perdition
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/ChangeLog,v 1.7 2007/03/04 20:11:31 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/ChangeLog,v 1.8 2007/09/02 11:38:18 ferdy Exp $
+
+  02 Sep 2007; Fernando J. Pereda <ferdy@gentoo.org> perdition-1.17.ebuild:
+  Parallel make seems to fail as per bug #134802. Disable it.
 
   04 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> perdition-1.17.ebuild:
   Fix incomplete net-mail/mailx -> mail-client/mailx and net-mail/nmh ->
