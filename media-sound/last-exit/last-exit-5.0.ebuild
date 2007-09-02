@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-5.0.ebuild,v 1.1 2007/08/21 14:17:17 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-5.0.ebuild,v 1.2 2007/09/02 14:48:52 steev Exp $
 
 inherit mono gnome2 eutils autotools
 
@@ -25,7 +25,8 @@ RDEPEND=">=gnome-base/gconf-2.0
 		>=dev-dotnet/gnome-sharp-1.9.2
 		>=dev-dotnet/glade-sharp-1.9.2
 		>=dev-dotnet/gconf-sharp-1.9.2
-		>=dev-libs/dbus-glib-0.71"
+		>=dev-libs/dbus-glib-0.71
+		>=x11-libs/libsexy-0.1.7"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${PN}-5
@@ -40,5 +41,4 @@ src_install() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	elog "You will unfortunately, need to restart X for this to work properly."
 }
