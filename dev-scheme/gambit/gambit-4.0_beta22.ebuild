@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta22.ebuild,v 1.7 2007/07/09 13:37:31 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0_beta22.ebuild,v 1.8 2007/09/02 11:43:22 hkbst Exp $
 
 inherit eutils elisp-common check-reqs autotools multilib
 
@@ -47,7 +47,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --enable-shared --enable-single-host $(use_enable big-iron)
+	econf --enable-shared --enable-single-host $(use_enable big-iron gcc-opts)
 	emake || die "emake failed"
 
 	if use emacs; then

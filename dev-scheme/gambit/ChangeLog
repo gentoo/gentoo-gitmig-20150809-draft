@@ -1,6 +1,14 @@
 # ChangeLog for dev-scheme/gambit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.10 2007/08/26 09:49:51 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.11 2007/09/02 11:43:22 hkbst Exp $
+
+  02 Sep 2007; Marijn Schouten <hkBst@gentoo.org> gambit-4.0_beta22.ebuild,
+  gambit-4.0.0.ebuild:
+  add static use flag and move the gambcext config file to /etc where it
+  should be automatically config-protected (both after a request from Etienne
+  Bergeron <bergeret@iro.umontreal.ca>). Don't force -O1 anymore and move
+  single-host to big-iron as otherwise it crashes my machine as it runs out of
+  memory. Fix big-iron for beta22.
 
 *gambit-4.0.0 (26 Aug 2007)
 

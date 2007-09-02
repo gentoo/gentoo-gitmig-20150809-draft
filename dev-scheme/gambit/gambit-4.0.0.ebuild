@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0.0.ebuild,v 1.1 2007/08/26 09:49:51 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.0.0.ebuild,v 1.2 2007/09/02 11:43:22 hkbst Exp $
 
 inherit eutils elisp-common check-reqs autotools multilib
 
@@ -22,19 +22,25 @@ SITEFILE="50gambit-gentoo.el"
 
 S=${WORKDIR}/${MY_P}
 
-IUSE="emacs big-iron"
+IUSE="big-iron emacs static"
 
 pkg_setup() {
 	if ! use big-iron; then
-		ewarn "not using gcc specific optimizations and not compiling syntax-case macro system"
+		ewarn "NOT compiling each Scheme module as a single C function"
+		ewarn "NOT using gcc specific optimizations"
+		ewarn "NOT compiling syntax-case macro system"
 		ewarn "approximately 0.5GB ram will be needed"
-		ewarn "if you experience thrashing, try disabling parallel building"
+		ewarn "if you experience thrashing, try disabling parallel building or setting -O1"
 		# need this much memory in MBytes (does *not* check swap)
 		CHECKREQS_MEMORY="768" check_reqs
 	else
-		ewarn "using gcc specific optimizations and compiling syntax-case macro system"
-		ewarn "this will cause approximately 2GB ram to be used instead of 0.5GB."
-		ewarn "this will cause heavy thrashing of your system unless your system is big iron"
+		ewarn "compiling each Scheme module as a single C function"
+		ewarn "using gcc specific optimizations"
+		ewarn "compiling syntax-case macro system"
+		ewarn "approximately 2GB ram will be needed instead of 0.5GB"
+		ewarn "this will cause heavy thrashing of your system"
+		ewarn "and may cause your compiler to crash when it runs out of memory"
+		ewarn "unless your system is BIG IRON"
 		# need this much memory in MBytes (does *not* check swap)
 		CHECKREQS_MEMORY="2560"	check_reqs
 	fi
@@ -45,12 +51,15 @@ src_unpack() {
 #	cp configure.ac configure.ac.old
 	sed -e 's:PACKAGE_SUBDIR="/$PACKAGE_VERSION"::' \
 		-e 's:#PACKAGE_SUBDIR="":PACKAGE_SUBDIR="":' -i configure.ac
+	#don't force -O1
+	sed 's:$DASH_O1::' -i configure.ac
 	eautoreconf
 #	diff -u configure.ac.old configure.ac
 }
 
 src_compile() {
-	econf --enable-shared --enable-single-host $(use_enable big-iron)
+	econf $(if use static; then echo --disable-shared; else echo --enable-shared; fi) \
+		$(use_enable big-iron single-host) $(use_enable big-iron gcc-opts)
 	emake || die "emake failed"
 
 	if use emacs; then
@@ -99,8 +108,11 @@ src_install() {
 	dosym gsi usr/bin/gambit-interpreter
 
 	# automatically load syntax-case for r5rs+ goodness
-	dodir /etc/env.d/ && echo "GAMBCOPT=\"=/usr/\"" > ${D}/etc/env.d/50gambit
-	echo "(load \"/usr/$(get_libdir)/syntax-case\")" > ${D}/usr/gambcext
+#	dodir /etc/env.d/ && echo "GAMBCOPT=\"=/usr/\"" > ${D}/etc/env.d/50gambit
+	echo "GAMBCOPT=\"=/usr/\"" > "${T}/50gambit" && doenvd "${T}/50gambit"
+
+	dosym /etc/gambcext /usr/gambcext
+	echo "(load \"/usr/$(get_libdir)/syntax-case\")" > ${D}/etc/gambcext
 }
 
 pkg_postinst() {
