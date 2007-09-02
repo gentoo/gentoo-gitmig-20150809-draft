@@ -1,0 +1,11 @@
+ebtables.initd and ebtables.confd are init script and its configuration file.
+
+If you want to use this run the following commands:
+# cd /usr/share/doc/ebtables*/init-scripts
+# cp ebtables.initd /etc/init.d/ebtables
+# cp ebtables.confd /etc/conf.d/ebtables
+
+Note: we are not suppling them by default and you have to put them into
+/etc/{init.d,conf.d} directories by yourself as they are NOT working in case
+ebtables kernel components are NOT built as modules. If you build ebtables
+kernel components as modules they should work. See bugs.gentoo.org/189315 .

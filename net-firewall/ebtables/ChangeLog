@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/ebtables
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.14 2007/08/12 10:11:21 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.15 2007/09/02 10:02:35 pva Exp $
+
+*ebtables-2.0.8.1-r1 (02 Sep 2007)
+
+  02 Sep 2007; <pva@gentoo.org> +files/README.gentoo.init,
+  +files/ebtables.confd, +files/ebtables.initd, -ebtables-2.0.6.ebuild,
+  +ebtables-2.0.8.1-r1.ebuild:
+  Added init scripts into /usr/share/doc. See README.gentoo.init and bug
+  #189315 for details. Thank Lech Perczak <lech.perczak AT multivision.pl> for
+  report.
 
 *ebtables-2.0.8.1 (12 Aug 2007)
 
