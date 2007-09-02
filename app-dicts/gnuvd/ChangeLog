@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/gnuvd
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gnuvd/ChangeLog,v 1.1 2007/09/02 19:36:52 philantrop Exp $
+
+*gnuvd-1.0.3 (02 Sep 2007)
+
+  02 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +gnuvd-1.0.3.ebuild:
+  Initial ebuild as per bug 35500.
+
