@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.11.ebuild,v 1.3 2007/08/03 18:55:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.11.ebuild,v 1.4 2007/09/02 17:01:48 nixnut Exp $
 
 DESCRIPTION="GTK+ based fast and lightweight IDE"
 HOMEPAGE="http://geany.uvena.de"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2 Scintilla"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc minimal"
 
 RDEPEND=">=x11-libs/gtk+-2.6

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.5 2007/08/03 18:55:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.6 2007/09/02 17:01:48 nixnut Exp $
+
+  02 Sep 2007; nixnut <nixnut@gentoo.org> geany-0.11.ebuild:
+  Added ~ppc wrt bug 188105
 
   03 Aug 2007; Raúl Porcel <armin76@gentoo.org> geany-0.11.ebuild:
   x86 stable
