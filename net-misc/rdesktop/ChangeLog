@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.94 2007/09/01 13:27:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.95 2007/09/02 21:35:28 kumba Exp $
+
+  02 Sep 2007; Joshua Kinard <kumba@gentoo.org> rdesktop-1.5.0-r3.ebuild:
+  Stable on mips, per #190927.
 
   01 Sep 2007; Christoph Mende <angelos@gentoo.org>
   rdesktop-1.5.0-r3.ebuild:
