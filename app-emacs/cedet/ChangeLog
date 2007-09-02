@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.29 2007/09/02 12:42:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.30 2007/09/02 20:11:16 ulm Exp $
+
+  02 Sep 2007; Ulrich Mueller <ulm@gentoo.org> files/60cedet-gentoo.el:
+  Suppress startup message.
 
   02 Sep 2007; Christoph Mende <angelos@gentoo.org>
   cedet-1.0_pre4-r1.ebuild:
