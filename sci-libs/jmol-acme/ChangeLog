@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/jmol-acme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/jmol-acme/ChangeLog,v 1.2 2007/06/21 23:21:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/jmol-acme/ChangeLog,v 1.3 2007/09/02 07:36:31 opfer Exp $
+
+  02 Sep 2007; Christian Faulhammer <opfer@gentoo.org> jmol-acme-1.0.ebuild:
+  filter jikes
 
   21 Jun 2007; Vlastimil Babka <caster@gentoo.org> jmol-acme-1.0.ebuild:
   Add ~x86 keyword, remove bundled .class files in src_unpack(), small style

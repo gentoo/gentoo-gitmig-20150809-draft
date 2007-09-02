@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/jmol-acme/jmol-acme-1.0.ebuild,v 1.2 2007/06/21 23:21:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/jmol-acme/jmol-acme-1.0.ebuild,v 1.3 2007/09/02 07:36:30 opfer Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -28,6 +28,7 @@ src_unpack() {
 
 	mkdir -p classes
 	find . -name \*.class -delete
+	java-pkg_filter-compiler jikes
 }
 
 src_compile() {
