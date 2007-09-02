@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.342 2007/09/02 10:25:23 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.343 2007/09/02 13:21:02 zzam Exp $
+
+  02 Sep 2007; Matthias Schwarzott <zzam@gentoo.org> udev-114.ebuild,
+  udev-115.ebuild:
+  Delete file from correct lib-dir (multilib), correcting bug 191043.
 
   02 Sep 2007; Matthias Schwarzott <zzam@gentoo.org> udev-114.ebuild:
   Also doing lib install cleanup for stable version.

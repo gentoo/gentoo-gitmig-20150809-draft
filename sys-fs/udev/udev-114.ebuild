@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-114.ebuild,v 1.12 2007/09/02 10:25:23 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-114.ebuild,v 1.13 2007/09/02 13:21:02 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -126,7 +126,7 @@ src_install() {
 
 	# vol_id library (needed by mount and HAL)
 	into /
-	rm ${D}/lib/libvolume_id.so* 2>/dev/null
+	rm "${D}/$(get_libdir)"/libvolume_id.so* 2>/dev/null
 	dolib extras/volume_id/lib/*.so* || die "Failed installing libvolume_id.so"
 	into /usr
 	dolib extras/volume_id/lib/*.a || die "Failed installing libvolume_id.a"
