@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/konq-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.75 2007/08/11 16:50:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.76 2007/09/02 01:41:02 philantrop Exp $
+
+  02 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/konq-plugins-parallel-make.patch, konq-plugins-3.5.6-r1.ebuild,
+  konq-plugins-3.5.7.ebuild:
+  Added a patch to fix a parallel make issue. Not a problem in kdeaddons and
+  therefore not applied there. Fixes bug 112214.
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org> konq-plugins-3.5.7.ebuild:
   x86 stable wrt #185823
