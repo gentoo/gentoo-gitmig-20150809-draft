@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.57 2007/06/27 16:15:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.58 2007/09/02 09:13:11 pva Exp $
+
+*iptraf-3.0.0-r4 (02 Sep 2007)
+
+  02 Sep 2007; <pva@gentoo.org> +files/iptraf-3.0.0-add-devnames.patch,
+  -iptraf-3.0.0-r2.ebuild, +iptraf-3.0.0-r4.ebuild:
+  bnep, ath and misc additional devices reported in bug #190032 by Rui Santos
+  <rsantos AT ruisantos.com> are integrated in one patch and added. Cleaned
+  old ebuild.
 
   27 Jun 2007; Raúl Porcel <armin76@gentoo.org> iptraf-3.0.0-r3.ebuild:
   alpha stable wrt #183386
