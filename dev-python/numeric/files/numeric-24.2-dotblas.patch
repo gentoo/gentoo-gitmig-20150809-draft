@@ -96,12 +96,3 @@
      }
    }
    else {
-@@ -703,7 +705,7 @@
-     /* Add some symbolic constants to the module */
-     d = PyModule_GetDict(m);
- 
--    s = PyString_FromString("$Id: numeric-24.2-dotblas.patch,v 1.1 2007/09/01 22:24:30 bicatali Exp $");
-+    s = PyString_FromString("$Id: numeric-24.2-dotblas.patch,v 1.1 2007/09/01 22:24:30 bicatali Exp $");
-     PyDict_SetItemString(d, "__version__", s);
-     Py_DECREF(s);
- 

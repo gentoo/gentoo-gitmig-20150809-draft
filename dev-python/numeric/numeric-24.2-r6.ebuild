@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r6.ebuild,v 1.1 2007/09/01 22:24:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r6.ebuild,v 1.2 2007/09/02 03:20:38 markusle Exp $
 
 NEED_PYTHON=2.3
 
@@ -73,6 +73,11 @@ src_unpack() {
 				-e "s:g2c:${flib}:g" \
 				-e "s:'atlas',::g" \
 				-e "s:include/atlas:include/cblas:g" \
+				"${S}"/customize.py \
+				|| die "sed for lapack failed"
+		elif [[ "${mycblas}" == atlas ]]; then
+			sed -i \
+				-e "s:g2c:${flib}:g" \
 				"${S}"/customize.py \
 				|| die "sed for lapack failed"
 		fi
