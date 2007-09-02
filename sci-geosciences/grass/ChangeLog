@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.44 2007/08/23 06:19:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.45 2007/09/02 11:03:33 angelos Exp $
+
+  02 Sep 2007; Christoph Mende <angelos@gentoo.org> grass-6.2.0-r1.ebuild:
+  Stable on amd64
 
   23 Aug 2007; Steve Arnold <nerdboy@gentoo.org>
   +files/grass-6.2.1-ffmpeg-fix.patch,
