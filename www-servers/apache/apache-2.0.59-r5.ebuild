@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.0.59-r5.ebuild,v 1.4 2007/09/02 14:03:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.0.59-r5.ebuild,v 1.5 2007/09/02 14:48:10 hollow Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib
 
@@ -32,8 +32,6 @@ RDEPEND="dev-lang/perl
 	!mips? ( ldap? ( =net-nds/openldap-2* ) )"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.59-r4"
-PDEPEND="${PDEPEND}
-	app-admin/apache-tools"
 
 S="${WORKDIR}/httpd-${PV}"
 
@@ -79,6 +77,7 @@ src_unpack() {
 		|| die "sed failed"
 
 	EPATCH_SUFFIX="patch"
+	EPATCH_EXCLUDE="03_all_gentoo-apache-tools.patch"
 	epatch ${GENTOO_PATCHDIR}/patches/[0-8]* || die "internal ebuild error"
 
 	# security patches are version based
