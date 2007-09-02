@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.340 2007/08/30 08:28:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.341 2007/09/02 09:53:03 zzam Exp $
+
+  02 Sep 2007; Matthias Schwarzott <zzam@gentoo.org> udev-115.ebuild:
+  Cleaning up libvolume_id installation. Now die if dolib fails to prevent
+  broken udev installs, bug 190994.
 
   30 Aug 2007; Matthias Schwarzott <zzam@gentoo.org> udev-114-r2.ebuild:
   Backported fix to kernel version check by Polynomial-C
