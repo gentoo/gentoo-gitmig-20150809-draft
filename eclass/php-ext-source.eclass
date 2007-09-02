@@ -1,50 +1,29 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.11 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.12 2007/09/02 19:17:44 jokey Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
 #
 # The php-ext-source eclass provides a unified interface for compiling and
 # installing standalone PHP extensions ('modules') from source code
-#
-# To use this eclass, you must add the following to your ebuild:
-#
-# inherit php-ext-source
 
-inherit php-ext-base
+# DEPRECATED!!! 
+# STOP USING THIS ECLASS, use php-ext-source-r1.eclass instead!
 
+inherit php-ext-source-r1
 
-EXPORT_FUNCTIONS src_compile src_install
+deprecation_warning() {
+        eerror "Please upgrade ${PF} to use php-ext-source-r1.eclass!"
+}
 
-# ---begin ebuild configurable settings
-
-# Wether or not to add a line in the php.ini for the extension
-# (defaults to "yes" and shouldn't be changed in most cases)
-[ -z "$PHP_EXT_INI" ] && PHP_EXT_INI="yes"
-
-# ---end ebuild configurable settings
-
-DEPEND="${DEPEND}
-		dev-php/php
-		>=sys-devel/m4-1.4
-		>=sys-devel/libtool-1.4.3"
-
-RDEPEND="${RDEPEND}
-		virtual/php"
 
 php-ext-source_src_compile() {
-	addpredict /usr/share/snmp/mibs/.index
-	#phpize creates configure out of config.m4
-	phpize
-	econf $myconf
-	emake || die
+	deprecation_warning
+	php-ext-source-r1_src_compile
 }
 
 php-ext-source_src_install() {
-	addpredict /usr/share/snmp/mibs/.index
-	chmod +x build/shtool
-	insinto $EXT_DIR
-	doins modules/$PHP_EXT_NAME.so
-	php-ext-base_src_install
+	deprecation_warning
+	php-ext-source-r1_src_install
 }
