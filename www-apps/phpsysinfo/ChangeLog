@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpsysinfo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.38 2007/09/01 08:07:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.39 2007/09/02 15:03:28 corsair Exp $
+
+  02 Sep 2007; Markus Rothe <corsair@gentoo.org> phpsysinfo-2.5.4.ebuild:
+  Stable on ppc64; bug #186931
 
   01 Sep 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   phpsysinfo-2.5.4.ebuild:
