@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.133 2007/08/30 19:14:26 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.134 2007/09/02 14:43:09 armin76 Exp $
+
+  02 Sep 2007; Raúl Porcel <armin76@gentoo.org> dhcp-3.0.6.ebuild,
+  dhcp-3.1.0.ebuild:
+  alpha stable wrt #190775, thanks to Tobias Klausmann for testing
 
   30 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> dhcp-3.0.6.ebuild,
   dhcp-3.1.0.ebuild:
