@@ -1,0 +1,11 @@
+# ChangeLog for app-dicts/freedict-deu-eng
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/freedict-deu-eng/ChangeLog,v 1.1 2007/09/02 11:44:14 philantrop Exp $
+
+*freedict-deu-eng-1.0 (02 Sep 2007)
+
+  02 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +freedict-deu-eng-1.0.ebuild:
+  Added a German-English dictionary as per bug 101576. Thanks to Yosef Meller
+  for providing the ebuild!
+
