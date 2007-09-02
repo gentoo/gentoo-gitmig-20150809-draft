@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/jmol
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.4 2007/07/05 00:17:58 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.5 2007/09/02 23:29:48 je_fro Exp $
+
+  02 Sep 2007; <jeff@gentoo.org> jmol-11.0.3-r1.ebuild:
+  Fix conditional code moving netscape.jar wrt bug #191032
 
   05 Jul 2007; Jeff Gardner <je_fro@gentoo.org> jmol-11.0.3-r1.ebuild:
   Protecting netscape.jar from removal on amd64.
