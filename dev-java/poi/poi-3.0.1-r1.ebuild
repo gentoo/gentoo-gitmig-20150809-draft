@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.0.1-r1.ebuild,v 1.4 2007/09/01 18:17:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-3.0.1-r1.ebuild,v 1.5 2007/09/02 07:42:02 opfer Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 java-ant-2
@@ -44,6 +44,8 @@ src_unpack() {
 	cd "${S}/src/contrib/lib"
 	java-pkg_jar-from commons-beanutils-1.7 commons-beanutils.jar commons-beanutils-1.7.0.jar
 	java-pkg_jar-from commons-lang-2.1 commons-lang.jar commons-lang-2.1.jar
+
+	java-pkg_filter-compiler jikes
 }
 
 src_compile() {

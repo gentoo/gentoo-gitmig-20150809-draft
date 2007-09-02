@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/poi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.37 2007/09/01 18:17:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.38 2007/09/02 07:42:02 opfer Exp $
+
+  02 Sep 2007; Christian Faulhammer <opfer@gentoo.org> poi-3.0.1-r1.ebuild:
+  filter jikes
 
   01 Sep 2007; nixnut <nixnut@gentoo.org> poi-3.0.1-r1.ebuild:
   Stable on ppc wrt bug 190303
