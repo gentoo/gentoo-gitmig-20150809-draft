@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.37.ebuild,v 1.2 2007/08/29 17:28:40 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.37.ebuild,v 1.3 2007/09/02 20:12:41 opfer Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc-macos ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc-macos ~sparc x86 ~x86-fbsd"
 IUSE="static"
 
 RDEPEND=""
