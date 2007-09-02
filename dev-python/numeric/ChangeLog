@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numeric
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.33 2007/09/02 03:20:38 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.34 2007/09/02 13:41:16 bicatali Exp $
+
+  02 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  files/numeric-24.2-python25.patch:
+  fixed patch for python-2.5
 
   02 Sep 2007; Markus Dittrich <markusle@gentoo.org>
   files/numeric-24.2-arrayobject.patch, files/numeric-24.2-dotblas.patch,
