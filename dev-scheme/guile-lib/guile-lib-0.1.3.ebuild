@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/guile-lib-0.1.3.ebuild,v 1.5 2007/07/04 21:12:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/guile-lib-0.1.3.ebuild,v 1.6 2007/09/02 12:55:40 hkbst Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 RDEPEND="dev-scheme/guile"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND} !<dev-libs/g-wrap-1.9.8"
 
 pkg_setup() {
 	local g=$(guile --version|line)
