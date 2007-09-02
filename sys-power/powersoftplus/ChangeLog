@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/powersoftplus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersoftplus/ChangeLog,v 1.1 2007/09/01 23:49:23 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersoftplus/ChangeLog,v 1.2 2007/09/02 19:12:49 jurek Exp $
+
+*powersoftplus-0.1.8-r1 (02 Sep 2007)
+
+  02 Sep 2007; Jurek Bartuszek <jurek@gentoo.org>
+  -powersoftplus-0.1.8.ebuild, +powersoftplus-0.1.8-r1.ebuild:
+  - Build against installed system library
+  - Added notice regarding USB device usage
 
 *powersoftplus-0.1.8 (01 Sep 2007)
 
