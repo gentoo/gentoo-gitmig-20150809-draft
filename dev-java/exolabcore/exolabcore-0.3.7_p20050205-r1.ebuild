@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205-r1.ebuild,v 1.2 2007/02/14 19:51:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205-r1.ebuild,v 1.3 2007/09/02 20:31:01 opfer Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 
 LICENSE="Exolab"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc source test"
 
 COMMON_DEP="
