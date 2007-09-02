@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.50 2007/08/04 14:37:10 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.51 2007/09/02 16:41:55 pylon Exp $
+
+*openttd-0.5.3_rc3 (02 Sep 2007)
+
+  02 Sep 2007; Lars Weiler <pylon@gentoo.org> +openttd-0.5.3_rc3.ebuild:
+  Version bump to a new RC-tree.
 
   04 Aug 2007; Lars Weiler <pylon@gentoo.org> -openttd-0.4.8.ebuild,
   -openttd-0.5.0.ebuild, -openttd-0.5.1.ebuild:
