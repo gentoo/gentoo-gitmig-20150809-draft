@@ -1,11 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/open-cobol/open-cobol-0.32.ebuild,v 1.1 2007/09/01 19:56:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/open-cobol/open-cobol-0.32.ebuild,v 1.2 2007/09/02 01:37:37 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="an open-source COBOL compiler"
 HOMEPAGE="http://www.open-cobol.org/"
 SRC_URI="mirror://sourceforge/open-cobol/${P}.tar.gz"
-inherit eutils
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
