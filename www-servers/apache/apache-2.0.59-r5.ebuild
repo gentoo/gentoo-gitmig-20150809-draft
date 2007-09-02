@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.0.59-r5.ebuild,v 1.2 2007/08/31 17:41:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.0.59-r5.ebuild,v 1.3 2007/09/02 07:58:20 hollow Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib
 
@@ -32,6 +32,8 @@ RDEPEND="dev-lang/perl
 	!mips? ( ldap? ( =net-nds/openldap-2* ) )"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.59-r4"
+PDEPEND="${PDEPEND}
+	app-admin/apache-tools"
 
 S="${WORKDIR}/httpd-${PV}"
 
