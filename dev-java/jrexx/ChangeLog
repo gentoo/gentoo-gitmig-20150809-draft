@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jrexx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrexx/ChangeLog,v 1.6 2007/02/18 20:07:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrexx/ChangeLog,v 1.7 2007/09/02 20:23:04 opfer Exp $
+
+  02 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  jrexx-1.1.1-r1.ebuild:
+  stable x86, bug 190425; filter jikes
 
   18 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> jrexx-1.1.1-r1.ebuild:
   Use ejavac instead of javac with proper args
