@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gambit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.11 2007/09/02 11:43:22 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.12 2007/09/02 11:52:29 hkbst Exp $
+
+  02 Sep 2007; Marijn Schouten <hkBst@gentoo.org> gambit-4.0.0.ebuild:
+  inform the user about syntax-case per Etienne
 
   02 Sep 2007; Marijn Schouten <hkBst@gentoo.org> gambit-4.0_beta22.ebuild,
   gambit-4.0.0.ebuild:
