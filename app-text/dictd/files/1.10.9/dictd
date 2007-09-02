@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/files/1.10.9/dictd,v 1.1 2007/08/18 01:15:54 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/files/1.10.9/dictd,v 1.2 2007/09/02 12:16:07 philantrop Exp $
 
 # NB: Config is in /etc/conf.d/dictd
 
@@ -64,7 +64,7 @@ depend() {
 start() {
 	ebegin "Starting dictd"
 	prepconfig || return 1
-	start-stop-daemon --start --quiet --exec /usr/sbin/dictd -- --locale=C $EARGS
+	start-stop-daemon --start --quiet --exec /usr/sbin/dictd -- $EARGS
 	eend $?
 }
 
