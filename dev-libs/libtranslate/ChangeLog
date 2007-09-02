@@ -1,0 +1,15 @@
+# ChangeLog for dev-libs/libtranslate
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtranslate/ChangeLog,v 1.1 2007/09/02 18:47:02 philantrop Exp $
+
+*libtranslate-0.99 (02 Sep 2007)
+
+  02 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/libtranslate-0.99-charsetparse.diff,
+  +files/libtranslate-0.99-condfix.diff,
+  +files/libtranslate-0.99-int64.diff,
+  +files/libtranslate_0.99-0ubuntu3.diff,
+  +files/libtranslate-0.99-man-page.diff, +metadata.xml,
+  +libtranslate-0.99.ebuild:
+  Initial ebuild as per bug 81423. Thanks to all who helped!
+

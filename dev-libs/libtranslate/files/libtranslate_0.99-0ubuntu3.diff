@@ -1,0 +1,284 @@
+--- libtranslate-0.99.orig/debian/control
++++ libtranslate-0.99/debian/control
+@@ -0,0 +1,40 @@
++Source: libtranslate
++Priority: optional
++Maintainer: Gauvain Pocentek <gauvainpocentek@yahoo.fr>
++Build-Depends: cdbs, debhelper (>= 5.0.0), libxml-parser-perl, libglib2.0-dev, libsoup2.2-dev
++Standards-Version: 3.6.2
++Section: libs
++
++Package: libtranslate-dev
++Section: libdevel
++Architecture: any
++Depends: libtranslate0 (= ${Source-Version})
++Description: Development files for libtranslate
++ This package contains the files necessary for compiling programs
++ that depend on libtranslate.
++ .
++ Web page: http://www.nongnu.org/libtranslate/
++
++Package: libtranslate0
++Section: libs
++Architecture: any
++Depends: ${shlibs:Depends}
++Description: library for translating text and web pages
++ libtranslate is a library for translating text and web pages
++ between natural languages. Its modular infrastructure allows
++ the implementation of new translation services separately
++ from the core library.
++ .
++ Web page: http://www.nongnu.org/libtranslate/
++
++Package: libtranslate-bin
++Section: 
++Architecture: any
++Depends: ${shlibs:Depends}
++Description: command line translator
++ translate-translator is a command line tool to translate
++ texts to natural languages, based on the libtranslate
++ library.
++ .
++ Web page: http://www.nongnu.org/libtranslate/
++
+--- libtranslate-0.99.orig/debian/rules
++++ libtranslate-0.99/debian/rules
+@@ -0,0 +1,12 @@
++#!/usr/bin/make -f
++
++include /usr/share/cdbs/1/rules/simple-patchsys.mk
++include /usr/share/cdbs/1/rules/debhelper.mk
++include /usr/share/cdbs/1/class/autotools.mk
++
++install/libtranslate-bin::
++	mv debian/tmp/usr/bin/translate \
++		debian/tmp/usr/bin/translate-bin
++	mv debian/tmp/usr/share/man/man1/translate.1 \
++		debian/tmp/usr/share/man/man1/translate-bin.1
++
+--- libtranslate-0.99.orig/debian/shlibs.local
++++ libtranslate-0.99/debian/shlibs.local
+@@ -0,0 +1 @@
++libtranslate 0 libtranslate0
+--- libtranslate-0.99.orig/debian/changelog
++++ libtranslate-0.99/debian/changelog
+@@ -0,0 +1,26 @@
++libtranslate (0.99-0ubuntu3) feisty; urgency=low
++
++  * Rebuild to get rid of libgnutls12. 
++
++ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Thu, 14 Dec 2006 09:08:26 +0100
++
++libtranslate (0.99-0ubuntu2) dapper; urgency=low
++
++  * Switch to cdbs
++  * Add a new binary package: libtranslate-bin
++  * Change binary name to translate-bin
++  * Add missing files in the 3 packages
++
++ -- Gauvain Pocentek <gauvainpocentek@ubuntu.com>  Wed, 25 Jan 2006 07:45:25 +0100
++
++libtranslate (0.99-0ubuntu1) dapper; urgency=low
++
++  * Initial release
++  * 01_man_translate.dpatch: replaces bad french characters
++  * Apply 3 upstream patches:
++      02_charsetparse.dpatch, fixes HTTP charset parsing
++      03_condfix.dpatch, fixes occasional translate_session_translate_text() lockup
++      04_memory_64.dpatch, fixes memory exhaustion on 64-bit platforms
++
++ -- Gauvain Pocentek <gauvainpocentek@yahoo.fr>  Wed, 14 Dec 2005 18:39:27 +0100
++
+--- libtranslate-0.99.orig/debian/compat
++++ libtranslate-0.99/debian/compat
+@@ -0,0 +1 @@
++5
+--- libtranslate-0.99.orig/debian/libtranslate-dev.links
++++ libtranslate-0.99/debian/libtranslate-dev.links
+@@ -0,0 +1,2 @@
++/usr/share/gtk-doc/html/libtranslate /usr/share/doc/libtranslate0-dev/html
++/usr/share/gtk-doc/html/libtranslate /usr/share/devhelp/books/libtranslate
+--- libtranslate-0.99.orig/debian/libtranslate-bin.install
++++ libtranslate-0.99/debian/libtranslate-bin.install
+@@ -0,0 +1,2 @@
++debian/tmp/usr/bin/*
++debian/tmp/usr/share/man/man1/*
+--- libtranslate-0.99.orig/debian/patches/04_memory_64.patch
++++ libtranslate-0.99/debian/patches/04_memory_64.patch
+@@ -0,0 +1,12 @@
++diff -Naur  libtranslate-0.99.orig/src/translate-util.c libtranslate-0.99/src//translate-util.c
++--- libtranslate-0.99.orig/src//translate-util.c	Mon Apr 11 22:44:53 2005
+++++ libtranslate-0.99/src//translate-util.c	Mon Apr 11 22:51:48 2005
++@@ -136,7 +136,7 @@
++   g_return_val_if_fail(big != NULL, NULL);
++   g_return_val_if_fail(little != NULL, NULL);
++ 
++-  lower_big = g_ascii_strdown(big, big_len);
+++  lower_big = g_ascii_strdown(big, (int) big_len);
++   lower_little = g_ascii_strdown(little, -1);
++ 
++   s = strstr(lower_big, lower_little);
+\ No newline at end of file
+--- libtranslate-0.99.orig/debian/patches/03_condfix.patch
++++ libtranslate-0.99/debian/patches/03_condfix.patch
+@@ -0,0 +1,39 @@
++diff -Naur  libtranslate-0.99.orig/src/translate-session.c libtranslate-0.99/src/translate-session.c
++--- libtranslate-0.99.orig/src/translate-session.c	Mon Apr 11 22:44:53 2005
+++++ libtranslate-0.99/src/translate-session.c	Mon Apr 11 22:51:48 2005
++@@ -703,7 +703,14 @@
++ 	  GError *tmp_err = NULL;
++ 
++ 	  g_mutex_lock(info->mutex);
++-	  ret = info->err != NULL;
+++	  if (info->err)
+++	    {
+++	      ret = TRUE;
+++	      if (info->progress_cond)
+++		g_cond_signal(info->progress_cond);
+++	    }
+++	  else
+++	    ret = FALSE;
++ 	  g_mutex_unlock(info->mutex);
++ 
++ 	  if (ret)
++@@ -728,6 +735,9 @@
++ 		  else
++ 		    g_propagate_error(&info->err, tmp_err);
++ 
+++		  if (info->progress_cond)
+++		    g_cond_signal(info->progress_cond);
+++
++ 		  g_mutex_unlock(info->mutex);
++ 
++ 		  return;
++@@ -759,6 +769,9 @@
++ 	info->err = g_error_new(TRANSLATE_SESSION_ERROR,
++ 				TRANSLATE_SESSION_ERROR_NO_SERVICE,
++ 				_("no service could translate chunk"));
+++
+++      if (info->progress_cond)
+++	g_cond_signal(info->progress_cond);
++     }
++   
++   g_mutex_unlock(info->mutex);
+--- libtranslate-0.99.orig/debian/patches/02_charsetparse.patch
++++ libtranslate-0.99/debian/patches/02_charsetparse.patch
+@@ -0,0 +1,48 @@
++diff -Naur  libtranslate-0.99.orig/src/modules/translate-generic-service.c libtranslate-0.99/src/modules/translate-generic-service.c
++--- libtranslate-0.99.orig/src/modules/translate-generic-service.c	Mon Apr 11 23:08:47 2005
+++++ libtranslate-0.99/src/modules/translate-generic-service.c	Mon Apr 11 23:15:54 2005
++@@ -484,7 +484,7 @@
++ 
++   if (SOUP_STATUS_IS_SUCCESSFUL(message->status_code))
++     {
++-      const char *charset = NULL;
+++      char *charset = NULL;
++       
++       if (flags & TRANSFER_CONVERT)
++ 	{
++@@ -493,14 +493,31 @@
++ 	  content_type = translate_generic_service_get_header(message, &info, "Content-Type");
++ 	  if (content_type)
++ 	    {
++-	      charset = translate_ascii_strcasestr(content_type, "charset=");
++-	      if (charset)
++-		charset += 8;
+++	      const char *tmp;
+++	      
+++	      tmp = translate_ascii_strcasestr(content_type, "charset=");
+++	      if (tmp)
+++		{
+++		  int len;
+++
+++		  tmp += 8;
+++		  if (*tmp == '\'' || *tmp == '"')
+++		    tmp++;
+++
+++		  len = strlen(tmp);
+++		  if (len > 0 && (tmp[len - 1] == '\'' || tmp[len - 1] == '"'))
+++		    len--;
+++
+++		  charset = g_strndup(tmp, len);
+++		}
++ 	    }
++ 	}
++ 
++       if (charset)
++-	response = g_convert(message->response.body, message->response.length, "UTF-8", charset, NULL, NULL, err);
+++	{
+++	  response = g_convert(message->response.body, message->response.length, "UTF-8", charset, NULL, NULL, err);
+++	  g_free(charset);
+++	}
++       else
++ 	{
++ 	  if ((flags & TRANSFER_CONVERT) && ! g_utf8_validate(message->response.body, message->response.length, NULL))
+--- libtranslate-0.99.orig/debian/patches/01_man_translate.patch
++++ libtranslate-0.99/debian/patches/01_man_translate.patch
+@@ -0,0 +1,12 @@
++diff -Naur  libtranslate-0.99.orig/docs/man/translate.1 libtranslate-0.99/docs/man/translate.1
++--- libtranslate-0.99.orig/docs/man/translate.1	2005-01-28 13:37:26.000000000 +0100
+++++ libtranslate-0.99/docs/man/translate.1	2005-12-20 17:31:07.000000000 +0100
++@@ -149,7 +149,7 @@
++ Translates the contents of the file document1 from German to Spanish and prints the result to standard output\&.
++ 
++ .TP
++-\fBecho\fR "Le problème est résolu\&." | \fBtranslate\fR \fB\-f\fR fr \fB\-t\fR en
+++\fBecho\fR "Le probl\(`eme est r\('esolu\&." | \fBtranslate\fR \fB\-f\fR fr \fB\-t\fR en
++ Translates the text given on standard input from French to English and prints the result to standard output\&.
++ 
++ .TP
+--- libtranslate-0.99.orig/debian/copyright
++++ libtranslate-0.99/debian/copyright
+@@ -0,0 +1,34 @@
++This package was debianized by Gauvain Pocentek <gauvainpocentek@yahoo.fr> on
++Wed, 14 Dec 2005 18:39:27 +0100.
++
++It was downloaded from http://www.nongnu.org/libtranslate/
++
++Copyright (C) 2004, 2005 Jean-Yves Lefort <jylefort@brutele.be>
++
++License:
++
++Redistribution and use in source and binary forms, with or without
++modification, are permitted provided that the following conditions
++are met:
++1. Redistributions of source code must retain the above copyright
++   notice, this list of conditions and the following disclaimer.
++2. Redistributions in binary form must reproduce the above copyright
++   notice, this list of conditions and the following disclaimer in the
++   documentation and/or other materials provided with the distribution.
++3. Neither the name of Jean-Yves Lefort nor the names of its contributors
++   may be used to endorse or promote products derived from this software
++   without specific prior written permission.
++
++THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
++CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
++INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
++MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
++DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
++BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
++EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
++TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
++DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
++ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
++OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
++POSSIBILITY OF SUCH DAMAGE.
+--- libtranslate-0.99.orig/debian/libtranslate-dev.install
++++ libtranslate-0.99/debian/libtranslate-dev.install
+@@ -0,0 +1,7 @@
++debian/tmp/usr/lib/*a
++debian/tmp/usr/lib/lib*.so
++debian/tmp/usr/lib/pkgconfig/*
++debian/tmp/usr/lib/*.la
++debian/tmp/usr/lib/libtranslate/modules/*{a,la}
++debian/tmp/usr/share/gtk-doc/*
++debian/tmp/usr/include/libtranslate/*
+--- libtranslate-0.99.orig/debian/libtranslate0.install
++++ libtranslate-0.99/debian/libtranslate0.install
+@@ -0,0 +1,5 @@
++debian/tmp/usr/lib/lib*.so.0.0.0
++debian/tmp/usr/lib/lib*.so.0
++debian/tmp/usr/lib/libtranslate/modules/*so
++debian/tmp/usr/share/libtranslate/*
++debian/tmp/usr/share/man/man5/*

@@ -1,0 +1,12 @@
+diff -Naur  libtranslate-0.99.orig/docs/man/translate.1 libtranslate-0.99/docs/man/translate.1
+--- libtranslate-0.99.orig/docs/man/translate.1	2005-01-28 13:37:26.000000000 +0100
++++ libtranslate-0.99/docs/man/translate.1	2005-12-20 17:31:07.000000000 +0100
+@@ -149,7 +149,7 @@
+ Translates the contents of the file document1 from German to Spanish and prints the result to standard output\&.
+ 
+ .TP
+-\fBecho\fR "Le problème est résolu\&." | \fBtranslate\fR \fB\-f\fR fr \fB\-t\fR en
++\fBecho\fR "Le probl\(`eme est r\('esolu\&." | \fBtranslate\fR \fB\-f\fR fr \fB\-t\fR en
+ Translates the text given on standard input from French to English and prints the result to standard output\&.
+ 
+ .TP
