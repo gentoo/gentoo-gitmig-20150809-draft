@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.93 2007/08/29 11:49:42 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.94 2007/09/02 06:51:32 opfer Exp $
+
+*tor-0.1.2.17 (02 Sep 2007)
+
+  02 Sep 2007; Christian Faulhammer <opfer@gentoo.org> +tor-0.1.2.17.ebuild:
+  version bump and stable x86, security bug 190968
 
   29 Aug 2007; Gustavo Felisberto <humpback@gentoo.org> files/tor.initd-r3:
   Adding correct init script.
