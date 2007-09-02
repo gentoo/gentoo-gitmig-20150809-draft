@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.18.4.ebuild,v 1.8 2007/08/28 17:57:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.18.4.ebuild,v 1.9 2007/09/02 16:14:28 remi Exp $
 
 inherit eutils gnome2
 
@@ -53,4 +53,17 @@ src_unpack() {
 src_install() {
 	gnome2_src_install
 	dobin ${FILESDIR}/rpm2cpio-file-roller
+}
+
+pkg_postinst() {
+	elog
+	elog "${PN} is a frontend for several archiving utility. If you want a"
+	elog "particular achive format support, see $HOMEPAGE"
+	elog "and install the relevant package."
+	elog
+	elog "for example:"
+	elog "  rar   - app-arch/unrar"
+	elog "  lha   - app-arch/lha"
+	elog "  7-zip - app-arch/p7zip"
+	elog
 }

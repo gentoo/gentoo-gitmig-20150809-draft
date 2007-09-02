@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.212 2007/08/28 17:57:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.213 2007/09/02 16:14:28 remi Exp $
+
+  02 Sep 2007; Remi Cardona <remi@gentoo.org> file-roller-2.18.4.ebuild:
+  adding elog message about supported archive formats (work done by eva,
+  see bug #144627)
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org> file-roller-2.18.4.ebuild:
   Stable for HPPA (bug #185823).
