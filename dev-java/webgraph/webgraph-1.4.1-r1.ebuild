@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/webgraph-1.4.1-r1.ebuild,v 1.1 2007/04/28 19:28:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/webgraph-1.4.1-r1.ebuild,v 1.2 2007/09/02 07:17:18 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -11,7 +11,7 @@ SRC_URI="http://webgraph.dsi.unimi.it/${P}-src.tar.gz"
 HOMEPAGE="http://webgraph.dsi.unimi.it"
 LICENSE="LGPL-2.1"
 SLOT="1.4"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 COMMON_DEP="=dev-java/java-getopt-1.0*
