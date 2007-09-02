@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.8-r2.ebuild,v 1.2 2007/08/26 11:36:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.8-r2.ebuild,v 1.3 2007/09/02 15:05:17 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -143,7 +143,7 @@ src_defs() {
 	if ! use l7filter && ! use imq && ! use extensions ; then
 		export KERNEL_DIR=$(
 			# ugh -- iptables has scripts which check for the existence of
-			# files so we need to give it the right path to our toolchain's
+			# files so we need to give it the right path to our toolchains
 			# include dir where the linux headers are.
 			# FYI IPTABLES: YOU FAIL
 			echo '#include <linux/limits.h>' | $(tc-getCPP) - | grep -o '/[^"]*linux/limits.h' | sed s:/include/linux/limits.h::
