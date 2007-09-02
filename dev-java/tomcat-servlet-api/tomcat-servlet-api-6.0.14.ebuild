@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-6.0.14.ebuild,v 1.4 2007/08/31 21:39:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-6.0.14.ebuild,v 1.5 2007/09/02 15:05:55 corsair Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://apache/tomcat/tomcat-6/v${PV/_/-}/src/${MY_P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="2.5"
-KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 
 DEPEND=">=virtual/jdk-1.5"
 RDEPEND=">=virtual/jre-1.5"
