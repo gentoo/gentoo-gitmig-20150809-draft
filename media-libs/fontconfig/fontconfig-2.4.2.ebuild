@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.4.2.ebuild,v 1.13 2007/07/12 05:11:22 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.4.2.ebuild,v 1.14 2007/09/02 15:02:47 dirtyepic Exp $
 
 inherit eutils libtool autotools
 
@@ -55,7 +55,6 @@ src_install() {
 
 	insinto /etc/fonts
 	doins "${S}"/fonts.conf
-	newins "${S}"/fonts.conf fonts.conf.new
 
 	cd "${S}"
 	newman doc/fonts-conf.5 fonts-conf.5
@@ -71,21 +70,24 @@ src_install() {
 	fi
 
 	dodoc AUTHORS ChangeLog NEWS README
-}
 
-pkg_postinst() {
 	# Changes should be made to /etc/fonts/local.conf, and as we had
 	# too much problems with broken fonts.conf, we force update it ...
 	# <azarah@gentoo.org> (11 Dec 2002)
+	echo 'CONFIG_PROTECT_MASK="/etc/fonts/fonts.conf"' > "${T}"/37fontconfig
+	doenvd "${T}"/37fontconfig
+}
+
+pkg_postinst() {
+	echo
 	ewarn "Please make fontconfig configuration changes in /etc/fonts/conf.d/"
 	ewarn "and NOT to /etc/fonts/fonts.conf, as it will be replaced!"
-	mv -f ${ROOT}/etc/fonts/fonts.conf.new ${ROOT}/etc/fonts/fonts.conf
-	rm -f ${ROOT}/etc/fonts/._cfg????_fonts.conf
+	echo
 
 	if [ "${ROOT}" = "/" ]
 	then
 		ebegin "Creating global font cache..."
-		/usr/bin/fc-cache -s
+		/usr/bin/fc-cache -sr
 		eend $?
 	fi
 }
