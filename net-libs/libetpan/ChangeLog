@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.55 2007/08/11 09:20:33 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.56 2007/09/02 21:48:43 ticho Exp $
+
+*libetpan-0.52-r1 (02 Sep 2007)
+
+  02 Sep 2007; Andrej Kacian <ticho@gentoo.org> +libetpan-0.52-r1.ebuild:
+  Make liblockfile usage optional. Bug #165345 by TGL <degrenier at
+  easyconnect.fr>.
 
 *libetpan-0.52 (11 Aug 2007)
 
