@@ -1,0 +1,10 @@
+# ChangeLog for dev-embedded/libftd2xx
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/ChangeLog,v 1.1 2007/09/02 19:05:52 jurek Exp $
+
+*libftd2xx-0.4.13 (02 Sep 2007)
+
+  02 Sep 2007; Jurek Bartuszek <jurek@gentoo.org> +metadata.xml,
+  +libftd2xx-0.4.13.ebuild:
+  Initial version
+
