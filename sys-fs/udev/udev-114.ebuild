@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-114.ebuild,v 1.11 2007/08/25 14:43:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-114.ebuild,v 1.12 2007/09/02 10:25:23 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -126,9 +126,10 @@ src_install() {
 
 	# vol_id library (needed by mount and HAL)
 	into /
-	dolib extras/volume_id/lib/*.so*
+	rm ${D}/lib/libvolume_id.so* 2>/dev/null
+	dolib extras/volume_id/lib/*.so* || die "Failed installing libvolume_id.so"
 	into /usr
-	dolib extras/volume_id/lib/*.a
+	dolib extras/volume_id/lib/*.a || die "Failed installing libvolume_id.a"
 
 	# handle static linking bug #4411
 	rm -f "${D}/usr/$(get_libdir)/libvolume_id.so"
@@ -247,7 +248,7 @@ pkg_postinst() {
 	# Removing some old file
 	if has_version "<sys-fs/udev-104-r5"; then
 		rm -f "${ROOT}"/etc/dev.d/net/hotplug.dev
-		rmdir --ignore-fail-on-non-empty "${ROOT}"/etc/dev.d/net
+		rmdir --ignore-fail-on-non-empty "${ROOT}"/etc/dev.d/net 2>/dev/null
 	fi
 
 	if has_version "<sys-fs/udev-106-r5"; then
@@ -258,7 +259,7 @@ pkg_postinst() {
 
 	# Try to remove /etc/dev.d as that is obsolete
 	if [[ -d "${ROOT}"/etc/dev.d ]]; then
-		rmdir --ignore-fail-on-non-empty "${ROOT}"/etc/dev.d/default "${ROOT}"/etc/dev.d
+		rmdir --ignore-fail-on-non-empty "${ROOT}"/etc/dev.d/default "${ROOT}"/etc/dev.d 2>/dev/null
 		if [[ -d "${ROOT}"/etc/dev.d ]]; then
 			ewarn "You still have the directory /etc/dev.d on your system."
 			ewarn "This is no longer used by udev and can be removed."
