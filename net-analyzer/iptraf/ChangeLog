@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.58 2007/09/02 09:13:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.59 2007/09/03 05:40:10 jer Exp $
+
+  03 Sep 2007; Jeroen Roovers <jer@gentoo.org> iptraf-3.0.0-r4.ebuild:
+  Back to ~arch (bug #190032).
 
 *iptraf-3.0.0-r4 (02 Sep 2007)
 
