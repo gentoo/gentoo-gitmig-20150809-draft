@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r3.ebuild,v 1.9 2007/09/03 05:29:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r3.ebuild,v 1.10 2007/09/03 17:51:40 mrness Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils autotools
 
 MY_P=${P/_/-}
 
@@ -13,8 +13,9 @@ SRC_URI="mirror://sourceforge/speedtouch/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ~ppc x86"
-IUSE="static debug"
+IUSE="static"
 
+DEPEND=""
 RDEPEND=">=net-dialup/ppp-2.4.1
 	!net-dialup/speedtouch-usb"
 
@@ -23,23 +24,24 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 
-	# Patch to fix gcc-4.* compile error (bug #99759)
+	# Patch to fix gcc-4.* compile error (bug 99759)
 	epatch "${FILESDIR}/${P}-gcc4.patch"
 
-	#Increase minlevel of reports in atm.c
-	#At least one of the reports could affect performance due to call frequency
+	# Increase minlevel of reports in atm.c
+	# At least one of the reports could affect performance due to call frequency
 	sed -i -e 's/report(0/report(1/' "${S}/src/atm.c"
+
+	# Remove stupid --enable debug option (bug 191118)
+	epatch "${FILESDIR}/${P}-debug.patch"
+	cd "${S}"
+	eautoreconf
 }
 
 src_compile() {
-	local myconf=
-	use debug && myconf="--enable-debug"
-	use static && myconf="${myconf} --enable-static"
-
 	filter-flags -mpowerpc-gfxopt -mpowerpc-gpopt
 	econf \
 		--enable-syslog \
-		${myconf} || die "./configure failed"
+		$(use_enable static) || die "./configure failed"
 
 	emake || die "make failed"
 }
@@ -64,7 +66,7 @@ src_install() {
 
 	dosbin doc-linux/adsl-conf-pppd
 
-	#allows hotplug to modprobe the speedtch module automatically
+	# allows hotplug to modprobe the speedtch module automatically
 	mv "${D}"/etc/hotplug/usb/speedtouch.usermap "${D}"/etc/hotplug/usb/speedtch.usermap
 	exeinto /etc/hotplug/usb ; newexe "${FILESDIR}/speedtch-hotplug" speedtch
 	rm "${D}"/etc/hotplug/usb/speedtouch
