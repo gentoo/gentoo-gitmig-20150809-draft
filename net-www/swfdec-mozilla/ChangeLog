@@ -1,0 +1,10 @@
+# ChangeLog for net-www/swfdec-mozilla
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/swfdec-mozilla/ChangeLog,v 1.1 2007/09/03 09:26:59 pclouds Exp $
+
+*swfdec-mozilla-0.5.2 (03 Sep 2007)
+
+  03 Sep 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
+  +swfdec-mozilla-0.5.2.ebuild:
+  Initial version from lots of contributors, detail list at #105823
+

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+    <email>pclouds@gentoo.org</email>
+    <name>Nguyễn Thái Ngọc Duy</name>
+</maintainer>
+<longdescription lang="C">
+    Swfdec-mozilla is Flash&#xAE; plugin for Gecko-based browsers.
+	It uses media-libs/swfdec as Flash engine.
+</longdescription>
+</pkgmetadata>
