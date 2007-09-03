@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.3_rc3.ebuild,v 1.1 2007/09/02 16:41:55 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.3_rc3.ebuild,v 1.2 2007/09/03 02:32:56 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -77,7 +77,7 @@ src_compile() {
 		--with-network \
 		${myopts} \
 		|| die "configure failed"
-	
+
 	emake \
 		MANUAL_CONFIG=1 \
 		INSTALL=1 \
