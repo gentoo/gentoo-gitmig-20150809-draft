@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.0.ebuild,v 1.4 2007/08/27 17:20:23 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.0.ebuild,v 1.5 2007/09/03 19:40:30 marineam Exp $
 
 inherit flag-o-matic distutils eutils multilib
 
@@ -25,6 +25,7 @@ DEPEND="${CDEPEND}
 	doc? (
 		dev-tex/latex2html
 		media-gfx/transfig
+		media-gfx/graphviz
 	)
 	hvm? (
 		x11-proto/xproto
@@ -70,6 +71,13 @@ pkg_setup() {
 		else
 			die "Unsupported architecture!"
 		fi
+	fi
+
+	if use doc && ! built_with_use -o dev-tex/latex2html png gif; then
+		# die early instead of later
+		eerror "USE=doc requires latex2html with image support. Please add"
+		eerror "'png' and/or 'gif' to your use flags and re-emerge latex2html"
+		die "latex2html missing both png and gif flags"
 	fi
 }
 
