@@ -1,0 +1,21 @@
+--- src/packlib/minuit/examples/Imakefile.orig	1997-10-23 18:04:15.000000000 +0100
++++ src/packlib/minuit/examples/Imakefile	2007-08-30 18:01:46.000000000 +0100
+@@ -9,6 +9,6 @@
+ FDEBUGFLAGS=NoOpFortranDebugFlags
+ #endif
+ 
+-CernlibFortranProgramTarget(minuit,$(OBJS),$(PACKAGE_LIB),$(PACKAGE_LIB),NullParameter)
++CernlibFortranProgramTarget(minuit,$(OBJS),$(PACKAGE_LIB),$(PACKAGE_LIB),packlib)
+ 
+ TestTarget(minuit,NullParameter,NullParameter)
+--- src/mathlib/gen/tests/Imakefile.orig	2005-03-24 16:40:10.000000000 +0000
++++ src/mathlib/gen/tests/Imakefile	2007-08-30 18:09:04.000000000 +0100
+@@ -63,7 +63,7 @@
+ 
+ DefinePackageLibrary(gentest)
+ 
+-CernlibFortranProgramTarget(gent,main.o,$(PACKAGE_LIB),$(PACKAGE_LIB),kernlib)
++CernlibFortranProgramTarget(gent,main.o,$(PACKAGE_LIB),$(PACKAGE_LIB),kernlib packlib mathlib)
+ 
+ 
+ TestTarget(gent,NullParameter,NullParameter)

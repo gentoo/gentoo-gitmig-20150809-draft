@@ -1,0 +1,17 @@
+--- debian/add-ons/cernlib.mk.orig	2007-08-29 09:49:42.000000000 +0100
++++ debian/add-ons/cernlib.mk	2007-08-29 09:51:55.000000000 +0100
+@@ -185,6 +185,14 @@
+ 		fi ; \
+ 	done
+ 
++test: all
++	set -e ; \
++	for package in $(TEST_PACKAGES) ; do \
++		if [ -d $(CVSCOSRC)/$$package ] ; then \
++			cd $(CERN_BUILDDIR)/$$package && $(MAKE) test; \
++		fi ; \
++	done ; \
++
+ clean:
+ 	rm -rf stampdir src doc bin lib shlib build 200?
+ 	rm -f $(PATCHDIR)/9[0-9][0-9]*.dpatch

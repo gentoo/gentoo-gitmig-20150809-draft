@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/cernlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.2 2007/08/28 14:33:45 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.3 2007/09/03 15:48:46 bicatali Exp $
+
+  03 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/cernlib-2006-maketest.patch, +files/cernlib-2006-test64.patch,
+  +files/cernlib-2006-testlink.patch, cernlib-2006.ebuild:
+  now allow user' FFLAGS and added a src_test. should close bug #190534.
 
   28 Aug 2007; Ferris McCormick <fmccor@gentoo.org> cernlib-2006.ebuild:
   Add ~sparc for testing (Bug #190163 comment 3) --- but please see Bug #190534

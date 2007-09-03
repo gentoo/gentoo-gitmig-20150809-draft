@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006.ebuild,v 1.3 2007/08/28 14:33:45 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006.ebuild,v 1.4 2007/09/03 15:48:46 bicatali Exp $
 
 inherit eutils multilib fortran
 
@@ -41,16 +41,17 @@ src_unpack() {
 	epatch "${DEB_P}-${DEB_PR}".diff
 
 	cd "${S}"
-	# temporary fix for threading support (might be supported by eselect)
+	# temporary fix for lapack libs (will need to change with new blas/lapack)
 	if eselect blas show | grep -q threaded-atlas; then
 		einfo "Fixing threads linking for blas"
 		sed -i \
 			-e 's/$DEPS -lm/$DEPS -lm -lpthread/' \
 			-e 's/$DEPS -l$1 -lm/$DEPS -l$1 -lm -lpthread/' \
+			-e 's:-llapack-3:-llapack:g' \
 			debian/add-ons/bin/cernlib.in || die "sed failed"
 	fi
 
-	# fix X11 library path
+	# fix X11 library paths
 	sed -i \
 		-e "s:L/usr/X11R6/lib:L/usr/$(get_libdir)/X11:g" \
 		-e "s:XDIR=/usr/X11R6/lib:XDIR=/usr/$(get_libdir)/X11:g" \
@@ -85,13 +86,35 @@ src_unpack() {
 	# fix an ifort problem
 	sed -i \
 		-e 's/= $(CLIBS) -nofor_main/+= -nofor_main/' \
-		src/packlib/kuip/programs/kxterm/Imakefile || die "sed failed"
+		src/packlib/kuip/programs/kxterm/Imakefile || die "sed ifc failed"
+
+	# respect users flags
+	sed -i \
+		-e "s/-O3/-O2/g" \
+		-e "s/-O2/${CFLAGS}/g" \
+		src/config/linux.cf	|| die "sed linux.cf failed"
+
+	# fix tests
+	# this first one adds a test target on the common cernlib.mk for all cernlib packages
+	epatch "${FILESDIR}"/${P}-maketest.patch
+	# remove buggy tests on 64 bits arches
+	epatch "${FILESDIR}"/${P}-test64.patch
+	# fix linking of a few tests
+	epatch "${FILESDIR}"/${P}-testlink.patch
 }
 
 src_compile() {
 	emake -j1 \
 		DEB_BUILD_OPTIONS="${FORTRANC} nostrip" \
 		|| die "emake failed"
+}
+
+src_test() {
+	cd "${S}"
+	LD_LIBRARY_PATH="${S}"/shlib make \
+		TEST_PACKAGES="kernlib packlib mathlib graflib" \
+		DEB_BUILD_OPTIONS="${FORTRANC} nostrip" \
+		test || die "make test failed"
 }
 
 src_install() {
