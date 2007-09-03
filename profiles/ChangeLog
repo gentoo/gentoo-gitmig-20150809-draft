@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.615 2007/09/02 16:02:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.616 2007/09/03 10:14:21 mrness Exp $
+
+  03 Sep 2007; Alin Năstac <mrness@gentoo.org> package.mask:
+  Unmask net-dialup/ppp-2.4.4-r12
 
   02 Sep 2007; Stefan Schweizer <genstef@gentoo.org> package.mask:
   last-rite bpalogin for mark_alec
