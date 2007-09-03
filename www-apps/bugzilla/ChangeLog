@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.89 2007/08/17 13:18:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.90 2007/09/03 07:20:54 wrobel Exp $
+
+*bugzilla-3.0.1 (03 Sep 2007)
+*bugzilla-2.22.3 (03 Sep 2007)
+*bugzilla-2.20.5 (03 Sep 2007)
+
+  03 Sep 2007; <wrobel@gentoo.org> +bugzilla-2.20.5.ebuild,
+  +bugzilla-2.22.3.ebuild, -bugzilla-3.0.ebuild, +bugzilla-3.0.1.ebuild:
+  Added updated bugzilla ebuilds to the tree (see #190112).
 
   17 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   bugzilla-2.22.2.ebuild:
