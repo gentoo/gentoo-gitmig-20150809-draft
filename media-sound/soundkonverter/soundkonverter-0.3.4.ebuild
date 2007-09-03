@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.4.ebuild,v 1.2 2007/08/26 00:10:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.4.ebuild,v 1.3 2007/09/03 13:12:04 armin76 Exp $
 
 inherit kde eutils qt3
 
@@ -10,7 +10,7 @@ SRC_URI="http://hessijames.googlepages.com/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="ffmpeg flac kdeenablefinal mp3 musepack vorbis"
 
 DEPEND=">=media-libs/taglib-1.4
