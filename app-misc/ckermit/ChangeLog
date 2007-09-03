@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ckermit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.23 2007/09/01 20:08:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.24 2007/09/03 22:25:06 jurek Exp $
+
+  03 Sep 2007; Jurek Bartuszek <jurek@gentoo.org> ckermit-8.0.211-r2.ebuild:
+  x86 stable (bug #190923)
 
   01 Sep 2007; Christoph Mende <angelos@gentoo.org>
   ckermit-8.0.211-r2.ebuild:
