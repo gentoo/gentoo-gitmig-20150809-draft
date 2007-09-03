@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r2.ebuild,v 1.1 2007/04/26 10:11:04 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r2.ebuild,v 1.2 2007/09/03 06:09:55 opfer Exp $
 
 JAVA_PKG_IUSE="doc"
 WANT_ANT_TASKS="ant-antlr"
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 DESCRIPTION="Open Java Messaging System"
 HOMEPAGE="http://openjms.sourceforge.net/"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz mirror://gentoo/${P}-scripts.tar.gz"
 IUSE=""
 RDEPEND="=virtual/jre-1.4*
