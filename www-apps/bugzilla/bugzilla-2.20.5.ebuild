@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.5.ebuild,v 1.1 2007/09/03 07:20:54 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.5.ebuild,v 1.2 2007/09/03 18:12:28 dertobi123 Exp $
 
 inherit webapp
 
@@ -9,7 +9,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz"
 HOMEPAGE="http://www.bugzilla.org"
 
 LICENSE="MPL-1.1 NPL-1.1"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~ppc64 ~sparc ~x86"
 
 IUSE="graphviz mysql postgres"
 
