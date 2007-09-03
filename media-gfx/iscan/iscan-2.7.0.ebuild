@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.7.0.ebuild,v 1.1 2007/07/14 21:14:31 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.7.0.ebuild,v 1.2 2007/09/03 20:59:34 sbriesen Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -121,6 +121,7 @@ usermap_to_udev() {
 	echo '#'
 	echo 'ACTION!="add", GOTO="iscan_rules_end"'
 	echo 'SUBSYSTEM!="usb*", GOTO="iscan_rules_end"'
+	echo 'KERNEL=="lp[0-9]*", GOTO="iscan_rules_end"'
 	echo
 	sed -n -e "s|^\(# SEIKO EPSON.*\)|\1|p" \
 		-e "s|^\(#*\)i*scan-device *0x0003 *0x\([^ ]\+\) *0x\([^ ]\+\)*.*|${DEVICE}, ${ACTION}|p" "${1}"
