@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-ogg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ogg/ChangeLog,v 1.101 2007/08/31 17:40:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ogg/ChangeLog,v 1.102 2007/09/03 02:27:58 jer Exp $
+
+  03 Sep 2007; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-ogg-0.10.14.ebuild:
+  Stable for HPPA (bug #190900).
 
 *gst-plugins-ogg-0.10.14 (31 Aug 2007)
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-a52dec
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.71 2007/07/26 14:00:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.72 2007/09/03 02:17:11 jer Exp $
+
+  03 Sep 2007; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-a52dec-0.10.6.ebuild:
+  Stable for HPPA (bug #190900).
 
   26 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gst-plugins-a52dec-0.10.6.ebuild:
