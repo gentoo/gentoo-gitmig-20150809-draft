@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.16.8.ebuild,v 1.3 2007/08/24 21:24:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.16.8.ebuild,v 1.4 2007/09/03 02:41:39 vapier Exp $
 
 inherit eutils gnome2 autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 # pcre is broken in this release
 IUSE="debug doc python opengl"
 
@@ -20,13 +20,13 @@ RDEPEND=">=dev-libs/glib-2.9
 	media-libs/fontconfig
 	sys-libs/ncurses
 	opengl? (
-				virtual/opengl
-				virtual/glu
-			)
+		virtual/opengl
+		virtual/glu
+	)
 	python? (
-				>=dev-python/pygtk-2.4
-				>=dev-lang/python-2.4.4-r5
-			)
+		>=dev-python/pygtk-2.4
+		>=dev-lang/python-2.4.4-r5
+	)
 	x11-libs/libX11
 	virtual/xft"
 
