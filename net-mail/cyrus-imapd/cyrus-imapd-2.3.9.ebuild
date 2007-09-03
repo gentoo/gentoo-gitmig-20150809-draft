@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.8.ebuild,v 1.3 2007/08/20 13:18:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.9.ebuild,v 1.1 2007/09/03 19:47:05 dertobi123 Exp $
 
 inherit autotools eutils ssl-cert fixheadtails pam
 
@@ -16,12 +16,11 @@ AUTOSIEVE_PATCH_VER="0.6.0"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~hppa ~ppc64"
-IUSE="afs autocreate autosieve drac idled kerberos nntp pam replication snmp ssl tcpd"
+IUSE="autocreate autosieve drac idled kerberos nntp pam replication snmp ssl tcpd"
 
 PROVIDE="virtual/imapd"
 RDEPEND=">=sys-libs/db-3.2
 	>=dev-libs/cyrus-sasl-2.1.13
-	afs? ( >=net-fs/openafs-1.2.2 )
 	pam? (
 			virtual/pam
 			>=net-mail/mailbase-1
@@ -99,9 +98,6 @@ src_unpack() {
 
 	ht_fix_file ${S}/imap/xversion.sh
 
-	# db-4.5 fix
-	epatch "${FILESDIR}/${PN}-2.2-db45.patch"
-
 	# Unsupported UoA patch. Bug #112912 .
 	# http://email.uoa.gr/projects/cyrus/autocreate/
 	if use autocreate ; then
@@ -116,10 +112,6 @@ src_unpack() {
 	# Unsupported UoA patch. Bug #133187 .
 	# http://email.uoa.gr/projects/cyrus/autosievefolder/
 	use autosieve && epatch	"${WORKDIR}/${P}-autosieve-${AUTOSIEVE_PATCH_VER}.diff"
-
-	# fix undefine symbols.
-	use afs && epatch "${FILESDIR}/cyrus-imapd-2.3.6-afs.patch" \
-		&& epatch "${FILESDIR}/${P}-pts.patch"
 
 	# Add libwrap defines as we don't have a dynamicly linked library.
 	use tcpd && epatch "${FILESDIR}/${PN}-${LIBWRAP_PATCH_VER}-libwrap.patch"
@@ -146,7 +138,6 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	use afs && myconf="${myconf} -with-afs=/usr"
 	myconf="${myconf} $(use_with drac)"
 	myconf="${myconf} $(use_with ssl openssl)"
 	myconf="${myconf} $(use_with snmp ucdsnmp)"
