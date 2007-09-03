@@ -1,0 +1,4 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2006.1/use.mask,v 1.1 2007/09/03 17:52:56 kumba Exp $
+
+# Mask dbus on 2006.1, as it breaks dependencies on a few things, like gimp
+dbus

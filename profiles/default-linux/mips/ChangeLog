@@ -1,6 +1,9 @@
 # ChangeLog for MIPS profile directory
 # Copyright 2007-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.6 2007/08/25 07:56:52 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.7 2007/09/03 17:52:56 kumba Exp $
+
+  03 Sep 2007; Joshua Kinard <kumba@gentoo.org> +2006.1/use.mask:
+  Masked dbus USE on 2006.1 only to fix some dependencies.
 
   25 Aug 2007; Stuart Longland <redhatter@gentoo.org> use.mask:
   Added 'avahi' back to USE.mask ... repoman was complaining about broken deps.
