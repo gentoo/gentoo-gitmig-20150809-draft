@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gnome-terminal-2-default_shell.patch 490 RMD160 22b0e40dc8a6cae17d391e2e21dc0dda60201d23 SHA1 cb9a4b23285cc70eb36a17919463bd3796d7974f SHA256 89248a85b8c921274d336467ba355032d6621fb09efd1a6ab86c64ee90d69c5b
 MD5 1c5aaf13eb2a8bd0b2b03c529d5c8740 files/gnome-terminal-2-default_shell.patch 490
 RMD160 22b0e40dc8a6cae17d391e2e21dc0dda60201d23 files/gnome-terminal-2-default_shell.patch 490
@@ -20,10 +23,10 @@ EBUILD gnome-terminal-2.16.1.ebuild 1677 RMD160 cce9e0f08ce73e5c2535a49390c148f8
 MD5 d164e7808422b24964cdecfa7fb85bc1 gnome-terminal-2.16.1.ebuild 1677
 RMD160 cce9e0f08ce73e5c2535a49390c148f89508e799 gnome-terminal-2.16.1.ebuild 1677
 SHA256 c80e84a6442543945993ccac64251984a6fc1482e78d46dc842e19a0d100d1b0 gnome-terminal-2.16.1.ebuild 1677
-EBUILD gnome-terminal-2.18.1.ebuild 1508 RMD160 dd804d912e50f610399a1d9ef1399a07e517089a SHA1 af3f47c673ab651224bd64b1f12db0b3e0a426c5 SHA256 e659b63cee47807e7fb3c974bad0b9db119780ed090ab9e8f2ca7523743ac87b
-MD5 4f2b4d083a653c7c00c46d2b59e611d2 gnome-terminal-2.18.1.ebuild 1508
-RMD160 dd804d912e50f610399a1d9ef1399a07e517089a gnome-terminal-2.18.1.ebuild 1508
-SHA256 e659b63cee47807e7fb3c974bad0b9db119780ed090ab9e8f2ca7523743ac87b gnome-terminal-2.18.1.ebuild 1508
+EBUILD gnome-terminal-2.18.1.ebuild 1518 RMD160 bb56c428b86a9f4c1a745c0e207a5e378d04f1f3 SHA1 bb0ab0aa886524060c08f3344b026d8347bec78b SHA256 dff06d459cc3dd8187b8db851fabdff8de4aa084c1883b7c11c25abc9d18a39d
+MD5 de7d61690d27a5c6b4b4cb035c78ec06 gnome-terminal-2.18.1.ebuild 1518
+RMD160 bb56c428b86a9f4c1a745c0e207a5e378d04f1f3 gnome-terminal-2.18.1.ebuild 1518
+SHA256 dff06d459cc3dd8187b8db851fabdff8de4aa084c1883b7c11c25abc9d18a39d gnome-terminal-2.18.1.ebuild 1518
 MISC ChangeLog 18158 RMD160 ea7c8a2cd2be6dce4fe93901ad7a583fd5290341 SHA1 33ce11e3e44ce32484de39936afa681c5985c240 SHA256 a3302c8c230f05202161ea564ba5be57af8b34673388a484c25a68b655eccc98
 MD5 813ab8968dbc64e7ef6b64c059e486f0 ChangeLog 18158
 RMD160 ea7c8a2cd2be6dce4fe93901ad7a583fd5290341 ChangeLog 18158
@@ -38,3 +41,10 @@ SHA256 0baed1082dc284ebe2d10c9561283e156d51be7b0e50e34b0410f32ab19df55b files/di
 MD5 7e065ec7bbedb792945ffe13641c8a83 files/digest-gnome-terminal-2.18.1 271
 RMD160 a6a0303561dbf8bd6a6a751e5794615002f18df0 files/digest-gnome-terminal-2.18.1 271
 SHA256 7d9ae1cbbf5eb5803307321adc5a3528468b87dd5321e3075a3e8368b12e8673 files/digest-gnome-terminal-2.18.1 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG23Tap/wUKkr7RBoRApWfAJ0Qo+91DpN2d901eBVEHmrr0MtcwgCgiCAj
+YNsADwRAYseBetCUQtW5tdY=
+=PlTh
+-----END PGP SIGNATURE-----
