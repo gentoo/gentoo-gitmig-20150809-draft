@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r6.ebuild,v 1.2 2007/09/02 03:20:38 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r6.ebuild,v 1.3 2007/09/03 15:09:31 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -67,20 +67,27 @@ src_unpack() {
 			flib=gfortran
 		elif [[ "${FORTRANC}" == if* ]]; then
 			flib=imf
+		elif [[ "${FORTRANC}" == g77 ]]; then
+			flib=g2c
 		fi
+		local cblaslib= cblasinc=
 		if [[ "${mycblas}" == reference ]]; then
-			sed -i \
-				-e "s:g2c:${flib}:g" \
-				-e "s:'atlas',::g" \
-				-e "s:include/atlas:include/cblas:g" \
-				"${S}"/customize.py \
-				|| die "sed for lapack failed"
+			cblaslib="'blas','cblas'"
+			cblasinc="'/usr/include/cblas'"
 		elif [[ "${mycblas}" == atlas ]]; then
-			sed -i \
-				-e "s:g2c:${flib}:g" \
-				"${S}"/customize.py \
-				|| die "sed for lapack failed"
+			cblaslib="'blas','cblas','atlas'"
+			cblasinc="'/usr/include/atlas'"
+		elif [[ "${mycblas}" == threaded-atlas ]]; then
+			cblaslib="'blas','cblas','atlas','pthread'"
+			cblasinc="'/usr/include/atlas'"
 		fi
+		sed -i \
+			-e "s:@FLIB@:${flib}:g" \
+			-e "s:@LAPACKLIB@:'lapack':g" \
+			-e "s:@CBLASLIB@:${cblaslib}:g" \
+			-e "s:@CBLASINC@:${cblasinc}:g" \
+			"${S}"/customize.py \
+			|| die "sed for lapack support failed"
 	fi
 }
 
