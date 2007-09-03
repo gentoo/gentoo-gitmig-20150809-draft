@@ -1,24 +1,23 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-1.5.ebuild,v 1.3 2007/07/22 09:41:19 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-1.5.ebuild,v 1.4 2007/09/03 14:31:52 hattya Exp $
 
 inherit elisp-common flag-o-matic kde-functions multilib subversion
 
 IUSE="X anthy canna dict eb emacs fep gtk immqt libedit m17n-lib nls qt3"
 
 DESCRIPTION="a multilingual input method library"
-HOMEPAGE="http://uim.freedesktop.org/"
+HOMEPAGE="http://code.google.com/p/uim/"
 SRC_URI=""
 
-LICENSE="BSD GPL-2 LGPL-2.1"
+LICENSE="|| ( BSD GPL-2 LGPL-2.1 )"
 KEYWORDS="~x86"
 SLOT="0"
 
-#	>=dev-util/intltool-0.35.2
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.60b
 	>=sys-devel/automake-1.10
-	>=dev-util/intltool-0.35.0
+	>=dev-util/intltool-0.35.2
 	gnome-base/librsvg
 	dev-lang/perl
 	dev-lang/ruby
@@ -46,7 +45,16 @@ RDEPEND="!app-i18n/uim
 
 src_unpack() {
 
-	local repo_uri="http://anonsvn.freedesktop.org/svn/uim"
+	local repo_uri="http://uim.googlecode.com/svn"
+
+	subversion_wc_info ${repo_uri}/trunk
+
+	if [[ $? -eq 0 ]] && [ "${ESVN_WC_URL}" != "${repo_uri}/trunk" ]; then
+		eerror "uim's repository is moved to Google Code."
+		eerror "please remove ${ESVN_STORE_DIR}/${ESVN_PROJECT}."
+
+		die
+	fi
 
 	subversion_fetch ${repo_uri}/trunk
 	subversion_fetch ${repo_uri}/sigscheme-trunk sigscheme
@@ -141,12 +149,8 @@ src_install() {
 		dosed "s:@IM@:${im}:" ${SITELISP}/50uim-gentoo.el
 	fi
 
-	# move sigscheme documents into ${P}
-	mv ${D}/usr/share/doc/{sigscheme,${P}/}
-
-	# remove sigscheme headers and a pkgconfig file
+	# remove sigscheme headers
 	rm -rf ${D}/usr/include/sigscheme
-	rm -f ${D}/usr/lib/pkgconfig/sigscheme.pc
 
 }
 
@@ -169,5 +173,3 @@ pkg_postrm() {
 	use emacs && elisp-site-regen
 
 }
-
-# $Id: uim-svn-1.5.ebuild,v 1.3 2007/07/22 09:41:19 calchan Exp $
