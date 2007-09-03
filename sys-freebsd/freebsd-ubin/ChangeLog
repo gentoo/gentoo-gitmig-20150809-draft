@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.46 2007/07/10 22:35:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.47 2007/09/03 14:49:36 uberlord Exp $
+
+  03 Sep 2007; Roy Marples <uberlord@gentoo.org> freebsd-ubin-6.2.ebuild:
+  Move touch back to /usr/bin as baselayout no longer uses it.
 
   10 Jul 2007; Roy Marples <uberlord@gentoo.org> freebsd-ubin-6.2.ebuild:
   Don't move awk, mkfifo, uname, true, false or tty to /bin

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2.ebuild,v 1.3 2007/07/10 22:35:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2.ebuild,v 1.4 2007/09/03 14:49:36 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -94,7 +94,7 @@ src_install() {
 
 	# baselayout requires these in /bin
 	dodir /bin
-	for bin in sed touch; do
+	for bin in sed; do
 		mv "${D}/usr/bin/${bin}" "${D}/bin/" || die "mv ${bin} failed"
 		dosym /bin/${bin} /usr/bin/${bin} || die "dosym ${bin} failed"
 	done
