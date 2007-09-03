@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r13.ebuild,v 1.1 2007/09/03 10:11:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r13.ebuild,v 1.2 2007/09/03 10:18:41 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -300,8 +300,8 @@ pkg_postinst() {
 	local i
 	for i in ip-up ip-down; do
 		if [ -f "${ROOT}"/etc/ppp/${i}.local ]; then
-			mv /etc/ppp/${i}.local /etc/ppp/${i}.d/90-local && \
-				einfo "/etc/ppp/${i}.local has been moved to /etc/ppp/${i}.d/90-local"
+			mv /etc/ppp/${i}.local /etc/ppp/${i}.d/90-local.sh && \
+				einfo "/etc/ppp/${i}.local has been moved to /etc/ppp/${i}.d/90-local.sh"
 		fi
 	done
 }
