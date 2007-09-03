@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.64 2007/03/19 01:02:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.65 2007/09/03 17:28:30 caleb Exp $
+
+*libevent-1.3d (03 Sep 2007)
+
+  03 Sep 2007; Caleb Tennis <caleb@gentoo.org> +libevent-1.3d.ebuild:
+  version bump
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
