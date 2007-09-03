@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.616 2007/09/03 10:14:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.617 2007/09/03 23:12:26 dragonheart Exp $
+
+  03 Sep 2007; Daniel Black <dragonheart@gentoo.org> package.mask:
+  removed kde-misc/kxdocker*
 
   03 Sep 2007; Alin Năstac <mrness@gentoo.org> package.mask:
   Unmask net-dialup/ppp-2.4.4-r12

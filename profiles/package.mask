@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7669 2007/09/03 19:59:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7670 2007/09/03 23:12:26 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -257,15 +257,6 @@ net-wireless/aircrack-ptw
 # Hans de Graaff <graaff@gentoo.org> (05 Aug 2007)
 # Renamed to dev-ruby/capistrano more than a year ago.
 dev-ruby/switchtower
-
-# Daniel Black <dragonheart@gentoo.org> (05 Aug 2007)
-# pending removal see gentoo-dev-announce@lists....
-kde-misc/kxdocker-configurator
-kde-misc/kxdocker-i18n
-kde-misc/kxdocker-dcop
-kde-misc/kxdocker
-kde-misc/kxdocker-trayiconlogger
-kde-misc/kxdocker-resources
 
 # Andrej Kacian <ticho@gentoo.org> (02 Aug 2007)
 # Deprecated plugin, use pgpmime/pgpinline plugins shipped directly with
