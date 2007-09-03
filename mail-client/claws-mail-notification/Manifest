@@ -15,10 +15,10 @@ EBUILD claws-mail-notification-0.11.ebuild 759 RMD160 430505e4c57225efdaac212715
 MD5 65fb858805d0ecd0c02b7426bb84d3b4 claws-mail-notification-0.11.ebuild 759
 RMD160 430505e4c57225efdaac212715ed1767ff15274f claws-mail-notification-0.11.ebuild 759
 SHA256 680cdd452f5b8eab60813235eaec6e1ea8c3c288f5b771e81b5b036e77332980 claws-mail-notification-0.11.ebuild 759
-EBUILD claws-mail-notification-0.12.ebuild 758 RMD160 a25f3e3230d4898ab8650246987f3ff7f5962c09 SHA1 70cdea44852dfbf51fe4a8c00cc0c86aea7af362 SHA256 bfe163623d5cfbfb856b41c1f5d8ecfc1e6c1152474fcae9997fb6ae01eee996
-MD5 c34d1e75f1905c08b99d31fd464bd8e4 claws-mail-notification-0.12.ebuild 758
-RMD160 a25f3e3230d4898ab8650246987f3ff7f5962c09 claws-mail-notification-0.12.ebuild 758
-SHA256 bfe163623d5cfbfb856b41c1f5d8ecfc1e6c1152474fcae9997fb6ae01eee996 claws-mail-notification-0.12.ebuild 758
+EBUILD claws-mail-notification-0.12.ebuild 781 RMD160 0773b216f96dc23aedd7d0b1bdf9020f134a1055 SHA1 dc9376ddc62570aab8c642969a30f3be0f9f987c SHA256 67ab89ff3f8f4560bfd709f354975434cb6c23346d0d7dcca93511b1936c2873
+MD5 bffa23c15a644443b9a1d9195ba256b9 claws-mail-notification-0.12.ebuild 781
+RMD160 0773b216f96dc23aedd7d0b1bdf9020f134a1055 claws-mail-notification-0.12.ebuild 781
+SHA256 67ab89ff3f8f4560bfd709f354975434cb6c23346d0d7dcca93511b1936c2873 claws-mail-notification-0.12.ebuild 781
 EBUILD claws-mail-notification-0.7.ebuild 756 RMD160 dcc55aaff983b30c69298d0db0102cdc6fee04de SHA1 81108c9d11daa2493ffec033cce96035a041669d SHA256 c9aed65cbf9b2e7195c569ae4c9a64c587abc5dd99ebca893c018e7a12fb4364
 MD5 f1fbe71465381c0609fe088f0a63d83a claws-mail-notification-0.7.ebuild 756
 RMD160 dcc55aaff983b30c69298d0db0102cdc6fee04de claws-mail-notification-0.7.ebuild 756
@@ -60,7 +60,7 @@ SHA256 4335b028f7e30a1e9a9fcd460fbaf2b1b2bda782bbb1d94d5e036b922ef5fd0b files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.7 (GNU/Linux)
 
-iD8DBQFG3GJdQlM6RnzZP+IRAos9AKCRfCVUoOJaVjTBdjpxixccZ4MIYwCgk/LX
-DogwL1SP/JGck2jd3zIEgbI=
-=Dupu
+iD8DBQFG3GNMQlM6RnzZP+IRAnoWAJkBeiZuTCUxcdia6kKuLqPUJGTyWQCfQfUD
+2lCIxdv7RmorYqmynWhWLqc=
+=3OtA
 -----END PGP SIGNATURE-----
