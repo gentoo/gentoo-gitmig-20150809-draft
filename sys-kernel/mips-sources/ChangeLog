@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.112 2007/06/14 05:34:59 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.113 2007/09/03 02:12:39 kumba Exp $
+
+*mips-sources-2.6.22.6 (03 Sep 2007)
+*mips-sources-2.6.20.18 (03 Sep 2007)
+
+  03 Sep 2007; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.6.16.47.ebuild, -mips-sources-2.6.17.14.ebuild,
+  -mips-sources-2.6.20.14.ebuild, +mips-sources-2.6.20.18.ebuild,
+  +mips-sources-2.6.22.6.ebuild:
+  Removed 2.6.16.* and 2.6.17.* ebuilds; Upgraded 2.6.20 to .18 from .14;
+  Added 2.6.22.6 to unstable for testing. Also tweaked pkg_setup to allow for
+  marking of machines as needing 'testing' -- that is, booting on real
+  hardware, as I can't always test each machine that I forward-port the
+  patches for.
 
 *mips-sources-2.6.20.14 (14 Jun 2007)
 

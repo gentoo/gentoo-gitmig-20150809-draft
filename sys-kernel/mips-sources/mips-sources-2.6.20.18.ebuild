@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.16.47.ebuild,v 1.3 2007/07/14 23:11:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.20.18.ebuild,v 1.1 2007/09/03 02:12:39 kumba Exp $
+
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org GIT snapshot diff from 14 Sep 2005
+# 2) linux-mips.org GIT snapshot diff from 02 Sep 2007
 # 3) Generic Fixes
 # 4) Patch for IP30 Support			(http://www.linux-mips.org/~skylark/)
 # 5) Patch for IP28 Support			(http://home.alphastar.de/fuerst/download.html)
@@ -12,12 +13,15 @@
 # 7) Patch for Remaining Cobalt Bits		(http://www.colonel-panic.org/cobalt-mips/)
 # 8) Experimental patches (IP27 hacks, et al)
 
+
 #//------------------------------------------------------------------------------
+
+
 
 # Version Data
 OKV=${PV/_/-}
-GITDATE="20070415"			# Date of diff between kernel.org and lmo GIT
-GENPATCHVER="1.27"			# Tarball version for generic patches
+GITDATE="20070902"			# Date of diff between kernel.org and lmo GIT
+GENPATCHVER="1.30"			# Tarball version for generic patches
 EXTRAVERSION="-mipsgit-${GITDATE}"
 KV="${OKV}${EXTRAVERSION}"
 F_KV="${OKV}"				# Fetch KV, used to know what mipsgit diff to grab.
@@ -38,27 +42,29 @@ SLOT="${OKV}"
 PROVIDE="virtual/linux-sources virtual/alsa"
 KEYWORDS="-* mips"
 IUSE="cobalt ip27 ip28 ip30 ip32r10k"
-DEPEND=">=sys-devel/gcc-3.4.6"
+DEPEND=">=sys-devel/gcc-4.1.1"
+
 
 # Version Control Variables
 USE_RC="no"				# If set to "yes", then attempt to use an RC kernel
 USE_PNT="yes"				# If set to "yes", then attempt to use a point-release (2.6.x.y)
 
 # Machine Support Control Variables
-DO_IP22="no"				# If "yes", enable IP22 support		(SGI Indy, Indigo2 R4x00)
-DO_IP27="yes"				# 		   IP27 support		(SGI Origin)
-DO_IP28="yes"				# 		   IP28 support		(SGI Indigo2 Impact R10000)
+DO_IP22="yes"				# If "yes", enable IP22 support		(SGI Indy, Indigo2 R4x00)
+DO_IP27="test"				# 		   IP27 support		(SGI Origin)
+DO_IP28="test"				# 		   IP28 support		(SGI Indigo2 Impact R10000)
 DO_IP30="yes"				# 		   IP30 support		(SGI Octane)
 DO_IP32="yes"				# 		   IP32 support		(SGI O2, R5000/RM5200 Only)
-DO_CBLT="yes"				# 		   Cobalt Support	(Cobalt Microsystems)
+DO_CBLT="test"				# 		   Cobalt Support	(Cobalt Microsystems)
 
 # Machine Stable Version Variables
-SV_IP22="2.6.17.10"			# If set && DO_IP22 == "no", indicates last "good" IP22 version
+SV_IP22=""				# If set && DO_IP22 == "no", indicates last "good" IP22 version
 SV_IP27=""				# 	    DO_IP27 == "no", 			   IP27
 SV_IP28=""				# 	    DO_IP28 == "no", 			   IP28
 SV_IP30=""				# 	    DO_IP30 == "no", 			   IP30
 SV_IP32=""				# 	    DO_IP32 == "no", 			   IP32
 SV_CBLT=""				# 	    DO_CBLT == "no", 			   Cobalt
+
 
 # If USE_RC == "yes", use a release candidate kernel (2.6.X-rcY)
 if [ "${USE_RC}" = "yes" ]; then
@@ -83,15 +89,20 @@ if [ "${USE_PNT}" = "yes" ]; then
 	USE_RC="no"
 fi
 
+
 DESCRIPTION="Linux-Mips GIT sources for MIPS-based machines, dated ${GITDATE}"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${STABLEVER}.tar.bz2
 		mirror://gentoo/mipsgit-${F_KV}-${GITDATE}.diff.bz2
 		mirror://gentoo/${PN}-generic_patches-${GENPATCHVER}.tar.bz2
 		${PATCHVER}"
 
+
+
 #//------------------------------------------------------------------------------
 
-# Error messages
+
+
+# Error/Warning messages
 err_only_one_mach_allowed() {
 	echo -e ""
 	eerror "A patchset for a specific machine-type has already been selected."
@@ -106,6 +117,7 @@ err_disabled_mach() {
 	local mach_name="${1}"
 	local mach_abbr="${2}"
 	local mach_use="${3}"
+	local need_test="${4}"
 
 	# Get stable version, if exists
 	local stable_ver="SV_${mach_abbr}"
@@ -117,15 +129,30 @@ err_disabled_mach() {
 
 	# Print error && (maybe) die
 	echo -e ""
-	eerror "${mach_name} Support has been disabled in this ebuild"
-	eerror "revision.  If you wish to merge ${mach_name} sources, then"
-	eerror "run ${has_use}emerge =mips-sources-${stable_ver}"
-	[ "${mach_use}" != "skip" ] && die "${mach_name} Support disabled."
+	if [ "${need_test}" != "test" ]; then
+		eerror "${mach_name} Support has been disabled in this ebuild"
+		eerror "revision.  If you wish to merge ${mach_name} sources, then"
+		eerror "run ${has_use}emerge =mips-sources-${stable_ver}"
+		[ "${mach_use}" != "skip" ] && die "${mach_name} Support disabled."
+	else
+		ewarn "${mach_name} Support has been marked as needing testing in this"
+		ewarn "ebuild revision.  This usually means that any patches to support"
+		ewarn "${mach_name} have been forward ported and maybe even compile-tested,"
+		ewarn "but not yet booted on real hardware, possibly due to a lack of access"
+		ewarn "to such hardware.  If you happen to boot this kernel and have no"
+		ewarn "problems at all, then please inform the maintainer.  Otherwise, if"
+		ewarn "experience a bug, an oops/panic, or some other oddity, then please"
+		ewarn "file a bug at bugs.gentoo.org, and assign it to the mips team."
+	fi
 
 	return 0
 }
 
+
+
 #//------------------------------------------------------------------------------
+
+
 
 # Machine Information Messages
 #
@@ -135,71 +162,54 @@ err_disabled_mach() {
 
 show_ip22_info() {
 	echo -e ""
-	einfo "IP22 systems should work well with this release, however, R4600"
-	einfo "setups may still experience bugs.  Please report any encountered"
-	einfo "problems."
+	einfo "IP22 systems with an R5000 processor should work well with this release."
+	einfo "The R4x00 series of processors tend to be rather flaky, especially the"
+	einfo "R4600.  If you have to run an R4x00 processor, then try to use an R4400."
 	einfo ""
 	einfo "Some Notes:"
 	einfo "\t- Supported graphics card right now is Newport (XL)."
-	einfo "\t- A driver for Extreme (XZ) is in the works, but remains"
-	einfo "\t\040\040unreleased by its author for public consumption."
-	einfo "\t- 64bit support works, but it is not widely tested, thus"
-	einfo "\t\040\040it is not supported at the present time."
+	einfo "\t- A driver for Extreme (XZ) supposedly exists, but its author"
+	einfo "\t\040\040has steadfastly refused to release the code for various reasons."
+	einfo "\t\040\040Any questions regarding its status should be directed to "onion" in"
+	einfo "\t\040\040#mipslinux on the Freenode IRC network.  Given he is the author, he"
+	einfo "\t\040\040will know the most current status of the driver."
 	echo -e ""
 }
 
 show_ip27_info() {
 	echo -e ""
-	einfo "IP27 support can be considered a game of Russian Roulette.  It'll work"
-	einfo "great for some but not for others.  It also uses some rather horrible"
-	einfo "hacks to get going -- hopefully these will be repaired in the future."
-	echo -e ""
-	ewarn "Please keep all kittens and any other small, cute, and fluffy creatures"
-	ewarn "away from an IP27 Box running these sources.  Failure to do so may cause"
-	ewarn "the IP27 to consume the hapless creature.  Consider this your only"
-	ewarn "warning regarding the experimental nature of this particular machine."
+	ewarn "IP27 support can be considered a game of Russian Roulette.  It'll work"
+	ewarn "great for some but not for others.  We don't get a chance to test this"
+	ewarn "machine very often with each new kernel, so your mileage may vary."
 	echo -e ""
 }
 
 show_ip28_info() {
 	echo -e ""
-	einfo "Support for the Indigo2 Impact R10000 is very experimental.  If you do not"
-	einfo "have a clue in the world about what an IP28 is, what the mips architecture"
-	einfo "is about, or are new to Gentoo, then it is highly advised that you steer"
-	einfo "clear of messing with this machine.  Due to the experimental nature of this"
-	einfo "particular class of system, we have to provide such warnings, as it is only"
-	einfo "for use by those who know what they are doing."
+	einfo "Support for the Indigo2 Impact R10000 is experimental, and will likely remain so."
+	einfo "As such, If you do not have a clue in the world about what an IP28 is, what the"
+	einfo "mips architecture is about, are new to Gentoo, or even Linux in particular, then"
+	einfo "it is highly advised that you steer clear of messing with this machine.  Due to"
+	einfo "the experimental nature of this particular class of system, we have to provide"
+	einfo "such warnings, as it is only for use by those who know what they are doing."
 	echo -e ""
-	einfo "Be advised that attempting to run Gentoo/Linux (or any Linux distro) on this"
-	einfo "system may cause the sudden, unexplained disappearence of any nearby furry"
-	einfo "creatures.  So please keep any and all small pets away from this system at"
-	einfo "all times."
-	echo -e ""
-	ewarn "That said, support for this system REQUIRES that you use the ip28 cascade"
-	ewarn "profile (default-linux/mips/mips64/ip28/XXXX.Y), because a very special"
-	ewarn "patch is used on the system gcc, kernel-gcc (gcc-mips64) and the kernel"
-	ewarn "itself in order to support this machine.  These patches will only be applied"
-	ewarn "if \"ip28\" is defined in USE, which the profile sets.  If you wish to"
-	ewarn "cross-compile a kernel, you _must_ make sure that the \"ip28\" USE is"
-	ewarn "defined in your host system's /etc/make.conf file before using crossdev"
-	ewarn "to build a mips64 kernel compiler for this system."
-	echo -e ""
-	ewarn "As a final warning, _nothing_ is guaranteed to work smoothly.  However,"
-	ewarn "the Impact console driver and X driver do work somewhat decently."
+	ewarn "Remember, due to the R10000 Speculative Execution issue that exists with this"
+	ewarn "machine class, _nothing_ is guaranteed to work smoothly.  Your mileage may vary."
 	echo -e ""
 }
 
 show_ip30_info() {
 	echo -e ""
 	einfo "Things to keep in mind when building a kernel for an SGI Octane:"
-	einfo "\t- The scsi driver to use is qla1280; qlogicisp is gone."
 	einfo "\t- Impact (MGRAS) console and X driver work, please report any bugs."
 	einfo "\t- VPro (Odyssey) console works, but no X driver exists yet."
 	einfo "\t- PCI Card Cages should work for many devices, except certain types like"
 	einfo "\t\040\040PCI-to-PCI bridges (USB hubs, USB flash card readers for example)."
-	einfo "\t- Do not plug more than two devices into a OHCI-based USB PCI card, as"
-	einfo "\t\040\040there is a known problem with OHCI USB cards and Octane, which will"
-	einfo "\t\040\040prevent the machine from booting into userland."
+	einfo "\t- Do not use OHCI-based USB cards in Octane.  They're broke on this machine."
+	einfo "\t\040\040Patches are welcome to fix the issue."
+	einfo "\t- Equally, UHCI Cards are showing issues in this release, but should still"
+	einfo "\t\040\040function somewhat.  This issue manifests itself when using pl2303 USB->Serial"
+	einfo "\t\040\040adapters."
 	einfo "\t- Other XIO-based devices like MENET and various Impact addons remain"
 	einfo "\t\040\040untested and are not guaranteed to work.  This applies to various"
 	einfo "\t\040\040digital video conversion boards as well."
@@ -209,20 +219,19 @@ show_ip30_info() {
 show_ip32_info() {
 	echo -e ""
 	einfo "IP32 systems function well, however there are some notes:"
-	einfo "\t- No driver exists yet for the sound card."
+	einfo "\t- No driver exists yet for the sound card.  There is active work on one,"
+	einfo "\t\040\040however.  Interested parties are encouraged to browse the Linux/MIPS"
+	einfo "\t\040\040mailing list archives during the first few months of 2007 for more"
+	einfo "\t\040\040information on this driver's status."
 	einfo "\t- Framebuffer console is limited to 4MB.  Anything greater"
 	einfo "\t\040\040specified when building the kernel will likely oops or panic"
 	einfo "\t\040\040the kernel."
 	einfo "\t- X support is limited to the generic fbdev driver.  No X gbefb"
-	einfo "\t\040\040driver exists for O2 yet."
-	ewarn "\t- When building an O2 Kernel, do not enable CONFIG_BUILD_ELF64."
-	ewarn "\t\040\040Pass 'make vmlinux' instead, and you will get a bootable"
-	ewarn "\t\040\040kernel image.  Please note, this behavior WILL change"
-	ewarn "\t\040\040when gcc-4.x becomes mainstream."
+	einfo "\t\040\040driver exists for O2 yet.  Patches are welcome, however :)"
 	echo -e ""
 
 	if use ip32r10k; then
-		eerror "R10000/R12000 Support on IP32 is HIGHLY EXPERIMENTAL!"
+		eerror "R10000/R12000 Support on IP32 is ${HILITE}HIGHLY EXPERIMENTAL!${NORMAL}"
 		eerror "This is intended ONLY for people interested in fixing it up.  And"
 		eerror "by that, I mean people willing to SEND IN PATCHES!  If you're not"
 		eerror "interested in debugging this issue seriously or just want to run it"
@@ -239,11 +248,23 @@ show_ip32_info() {
 		eerror "manual, or those who are familiar with the IP32 chipset and the feature"
 		eerror "called \"Juice\"."
 		echo -e ""
-		eerror "To build this kernel tree, make sure you re-merge your kernel compiler"
-		eerror "with the \"ip32r10k\" USE flag enabled via crossdev.  This uses a"
-		eerror "tweaked version of the gcc cache barriers patch that makes gcc emit "
-		eerror "more barriers, as IP32 needs them to have any hope of staying online."
 	fi
+
+	eerror "!!! BIG FAT WARNING"
+	eerror "!!! To Build 64bit kernels for SGI O2 (IP32) or SGI Indy/Indigo2 R4x00 (IP22)"
+	eerror "!!! systems, you _need_ to be using a >=gcc-4.1.1 compiler, have CONFIG_BUILD_ELF64"
+	eerror "!!! disabled in your kernel config, and building with the ${HILITE}vmlinux.32${NORMAL} make target."
+	eerror "!!! In prior times, an ugly hack was used to build an ELF64 binary that resembled"
+	eerror "!!! an ELF32 binary in order to make the ARCS PROMs on these systems boot the"
+	eerror "!!! kernel. This hack is no longer in use nor supported in 2.6.17 and beyond.  In"
+	eerror "!!! order to achieve the same effect, a new flag available in >=gcc-4.x is used,"
+	eerror "!!! and as such, makes >=gcc-4.1.1 the preferred compiler for 2.6.17 and beyond."
+	eerror ""
+	eerror "!!! Remember, build your IP22 and IP32 kernels with the following command:"
+	eerror "!!! following make command: ${GOOD}make vmlinux.32${NORMAL}"
+	eerror "!!! Once done, copy the ${GOOD}vmlinux.32${NORMAL} file and boot that.  Do not use the"
+	eerror "!!! ${BAD}vmlinux${NORMAL} file -- this will either not boot on IP22 or result in"
+	eerror "!!! undocumented weirdness on IP32 systems."
 }
 
 show_cobalt_info() {
@@ -258,7 +279,11 @@ show_cobalt_info() {
 	echo -e ""
 }
 
+
+
 #//------------------------------------------------------------------------------
+
+
 
 # Check our USE flags for machine-specific flags and give appropriate warnings/errors.
 # Hope the user isn't crazy enough to try using combinations of these flags.
@@ -276,7 +301,10 @@ pkg_setup() {
 	# See if we're on a cobalt system first (must use the cobalt-mips profile)
 	if use cobalt; then
 		arch_is_selected="yes"
-		[ "${DO_CBLT}" = "no" ] && err_disabled_mach "Cobalt Microsystems" "CBLT" "cobalt"
+		[ "${DO_CBLT}" = "test" ] 						\
+			&& err_disabled_mach "Cobalt Microsystems" "CBLT" "cobalt" "test"
+		[ "${DO_CBLT}" = "no" ] 						\
+			&& err_disabled_mach "Cobalt Microsystems" "CBLT" "cobalt"
 		show_cobalt_info
 	fi
 
@@ -284,7 +312,7 @@ pkg_setup() {
 	# These are not allowed to be mixed together, thus only one of them may be applied
 	# to a tree per merge.
 	for x in									\
-		"ip27 SGI Origin"							\
+		"ip27 SGI Origin 200/2000"						\
 		"ip28 SGI Indigo2 Impact R10000"					\
 		"ip30 SGI Octane"
 	do
@@ -303,7 +331,9 @@ pkg_setup() {
 				&& arch_is_selected="yes"				\
 				|| err_only_one_mach_allowed
 
-			# Is the machine support enabled or not?
+			# Is the machine support disabled or marked as needing testing?
+			[ "${mach_enable}" = "test" ]					\
+				&& err_disabled_mach "${mach_name}" "${mach_ip/ip/IP}" "${mach_ip}" "test"
 			[ "${mach_enable}" = "no" ]					\
 				&& err_disabled_mach "${mach_name}" "${mach_ip/ip/IP}" "${mach_ip}"
 
@@ -326,43 +356,37 @@ pkg_setup() {
 	fi
 }
 
+
+
 #//------------------------------------------------------------------------------
+
+
 
 # Generic Patches - Safe to use globally
 do_generic_patches() {
 	echo -e ""
 	ebegin ">>> Generic Patches"
-		echo -e ""
 
 		# IP22 Patches
-		epatch ${MIPS_PATCHES}/misc-2.6.15-ip22-hal2-kconfig-tweaks.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.16-ip22-vino-64bit-ioctl-fixes.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.17-ip22-rtc-brown-paper-bag.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.20-ip22-pf-enhance-scsi.patch
 
 		# IP32 Patches
 		epatch ${MIPS_PATCHES}/misc-2.6.11-ip32-mace-is-always-eth0.patch
 
 		# Cobalt Patches
-		epatch ${MIPS_PATCHES}/misc-2.6.16-cobalt-bits.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.20-cobalt-bits.patch
 
 		# Generic
-		epatch ${MIPS_PATCHES}/misc-2.6.16-ths-mips-tweaks.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.17-ths-mips-tweaks.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.15-mips-iomap-functions.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.12-seccomp-no-default.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.11-add-byteorder-to-proc.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.15-r14k-cpu-prid.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.15-add-4k_cache_defines.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.16-rev-i18n.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.15-fix-4k-cache-macros.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.15-vgacon-accesses-unmapped-space.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.16-fix-futex_atomic_op_inuser.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.16-fix-fpu_save_double-on-64bit.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.16-disable-stupid-nls-cruft.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.16-def-arch_has_irq_per_cpu-for-smp.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.16-tweak-makefiles.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.16-squashfs-3.2-r2.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.20-frank-kill-build_elf64.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.20-squashfs-3.2-r2.patch
 	eend
 }
+
 
 # NOT safe for production systems
 # Use at own risk, do _not_ file bugs on effects of these patches
@@ -373,7 +397,7 @@ do_sekrit_patches() {
 		# Modified version of the IP28 cache barriers patch for the kernel
 		# that removes all the IP28 specific pieces and leaves behind only
 		# the generic segments.
-		epatch ${MIPS_PATCHES}/misc-2.6.16-ip32-r10k-support.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.20-ip32-r10k-support.patch
 	fi
 
 ##	# No Sekrit Patches!
@@ -382,40 +406,45 @@ do_sekrit_patches() {
 	# /* EXPERIMENTAL - DO NOT USE IN PRODUCTION KERNELS */
 }
 
+
+
 #//------------------------------------------------------------------------------
+
+
 
 # Exclusive Machine Patchsets
 
 # SGI Origin (IP27)
 do_ip27_support() {
 	echo -e ""
-	einfo ">>> Patching kernel for SGI Origin (IP27) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.16-ioc3-metadriver-r26.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.13-ip27-horrible-hacks_may-eat-kittens.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.14-ip27-rev-pci-tweak.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.16-ip27-fix-collision-with-hardcode.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.16-ip27-hack-attack.patch
+	einfo ">>> Patching kernel for SGI Origin 200/2000 (IP27) support ..."
+	epatch ${MIPS_PATCHES}/misc-2.6.19-ioc3-metadriver-r27.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.17-ip27-horrible-hacks_may-eat-kittens.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.17-ip27-rev-pci-tweak.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.19-ip27-hack-attack.patch
 }
 
 # SGI Indigo2 Impact R10000 (IP28)
 do_ip28_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Indigo2 Impact R10000 (IP28) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.16-ip28-i2_impact-support.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.17-ip28-impact-mmapfix.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.17-ip28-wd93cac-tweak.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.20-ip28-i2_impact-support-r2.patch
 }
+
 
 # SGI Octane 'Speedracer' (IP30)
 do_ip30_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Octane (IP30) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.16-ioc3-metadriver-r26.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.16-ip30-octane-support-r27.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.17-ip30-impact-vpro-mmapfix.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.19-ioc3-metadriver-r27.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.20-ip30-octane-support-r28.patch
 }
 
+
+
 #//------------------------------------------------------------------------------
+
+
 
 # Renames source trees for the few machines that we have separate patches for
 rename_source_tree() {
@@ -427,7 +456,11 @@ rename_source_tree() {
 	fi
 }
 
+
+
 #//------------------------------------------------------------------------------
+
+
 
 src_unpack() {
 	local x
@@ -435,6 +468,7 @@ src_unpack() {
 	unpack ${A}
 	mv ${WORKDIR}/linux-${STABLEVER} ${WORKDIR}/linux-${OKV}-${GITDATE}
 	cd ${S}
+
 
 	# If USE_RC == "yes", use a release candidate kernel (2.6.x-rcy)
 	# OR
@@ -444,6 +478,7 @@ src_unpack() {
 		einfo ">>> linux-${STABLEVER} --> linux-${OKV} ..."
 		epatch ${WORKDIR}/patch-${OKV}
 	fi
+
 
 	# Update the vanilla sources with linux-mips GIT changes
 	echo -e ""
@@ -461,9 +496,11 @@ src_unpack() {
 	# Patches for experimental use
 	do_sekrit_patches
 
+
 	# All done, resume normal portage work
 	kernel_universal_unpack
 }
+
 
 src_install() {
 	# Rename the source trees for exclusive machines
@@ -487,5 +524,6 @@ pkg_postinst() {
 		ln -sf ${my_ksrc} ${ROOT}/usr/src/linux
 	fi
 }
+
 
 #//------------------------------------------------------------------------------
