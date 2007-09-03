@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.109 2007/08/24 18:57:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.110 2007/09/03 08:25:33 keri Exp $
+
+  03 Sep 2007; keri <keri@gentoo.org> swi-prolog-5.6.37.ebuild:
+  Fix freeStacks() in builds without dynamic stack shifting. Reported by Sven
+  Wehner in bug #189408.
 
   24 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   swi-prolog-5.6.37.ebuild:
