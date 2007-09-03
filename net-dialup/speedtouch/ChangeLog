@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/speedtouch
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.37 2007/05/06 08:15:01 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.38 2007/09/03 05:29:50 jer Exp $
+
+  03 Sep 2007; Jeroen Roovers <jer@gentoo.org> speedtouch-1.3.1-r3.ebuild:
+  Stable for HPPA (bug #185747).
 
   06 May 2007; Marius Mauch <genone@gentoo.org> speedtouch-1.3.1-r2.ebuild,
   speedtouch-1.3.1-r3.ebuild:
