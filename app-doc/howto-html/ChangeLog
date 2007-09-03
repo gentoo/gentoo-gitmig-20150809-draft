@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/howto-html
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.25 2007/08/15 21:25:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.26 2007/09/03 16:45:48 dirtyepic Exp $
+
+  03 Sep 2007; Ryan Hill <dirtyepic@gentoo.org>
+  files/digest-howto-html-20050504, Manifest:
+  Fix digest.
 
   15 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   howto-html-20070202.ebuild:
