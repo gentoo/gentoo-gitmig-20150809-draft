@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r11.ebuild,v 1.11 2007/08/25 14:44:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r11.ebuild,v 1.12 2007/09/03 17:07:56 caleb Exp $
 
 inherit gnuconfig libtool eutils db java-pkg-opt-2
 
@@ -15,12 +15,11 @@ SLOT="3"
 KEYWORDS="~alpha amd64 arm ~hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="doc java"
 
-RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	=sys-libs/db-1.85*
 	sys-devel/libtool
 	sys-devel/m4
-	java? ( >=virtual/jdk-1.4 )"
+	java? ( >=virtual/jre-1.4 )"
 # We need m4 too else build fails without config.guess
 
 # This doesn't build without exceptions
