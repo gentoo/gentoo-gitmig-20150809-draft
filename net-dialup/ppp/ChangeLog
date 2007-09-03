@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.195 2007/08/31 08:44:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.196 2007/09/03 10:11:59 mrness Exp $
+
+*ppp-2.4.4-r13 (03 Sep 2007)
+
+  03 Sep 2007; Alin Năstac <mrness@gentoo.org> -ppp-2.4.4-r12.ebuild,
+  +ppp-2.4.4-r13.ebuild:
+  Improve up/down scripts (#190143).
 
 *ppp-2.4.4-r12 (31 Aug 2007)
 

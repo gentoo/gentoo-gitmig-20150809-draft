@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r12.ebuild,v 1.2 2007/08/31 09:02:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r13.ebuild,v 1.1 2007/09/03 10:11:59 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-gentoo-20070831.tar.gz
+	mirror://gentoo/${P}-gentoo-20070903.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
@@ -168,6 +168,7 @@ src_install() {
 	for i in ip-up ip-down ; do
 		doexe "${WORKDIR}/scripts/${i}"
 		insinto /etc/ppp/${i}.d
+		use ipv6 && dosym ${i} /etc/ppp/${i/ip/ipv6}
 		doins "${WORKDIR}/scripts/${i}.d"/*
 	done
 
