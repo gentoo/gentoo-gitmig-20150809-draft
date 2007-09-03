@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.27 2007/09/01 06:39:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.28 2007/09/03 17:41:40 drac Exp $
+
+  03 Sep 2007; Samuli Suominen <drac@gentoo.org> gst-python-0.10.8.ebuild:
+  Instead of filtering -z,now, append -z,lazy wrt #166221.
 
   01 Sep 2007; Samuli Suominen <drac@gentoo.org> gst-python-0.10.8.ebuild:
   Fix depends.

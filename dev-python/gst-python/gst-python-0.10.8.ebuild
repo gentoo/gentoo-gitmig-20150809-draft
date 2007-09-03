@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.8.ebuild,v 1.3 2007/09/01 06:39:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.8.ebuild,v 1.4 2007/09/03 17:41:40 drac Exp $
 
 NEED_PYTHON=2.3
 
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-text/xmlto )"
 
 src_compile() {
-	filter-ldflags -Wl,-z,now
+	append-ldflags -Wl,-z,lazy
 	econf $(use_enable doc docs) || die
 	emake || die
 }
