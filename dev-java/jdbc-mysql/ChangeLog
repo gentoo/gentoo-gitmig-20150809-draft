@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.51 2007/06/07 11:32:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.52 2007/09/03 05:57:52 opfer Exp $
+
+  03 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  jdbc-mysql-5.0.6.ebuild:
+  stable x86, bug 190664
 
   07 Jun 2007; Markus Rothe <corsair@gentoo.org> jdbc-mysql-5.0.6.ebuild:
   Added ~ppc64; bug #180467
