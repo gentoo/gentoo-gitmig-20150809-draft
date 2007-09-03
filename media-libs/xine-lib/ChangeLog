@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.475 2007/07/31 14:29:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.476 2007/09/03 11:38:17 drac Exp $
+
+*xine-lib-1.1.8 (03 Sep 2007)
+
+  03 Sep 2007; Samuli Suominen <drac@gentoo.org> +xine-lib-1.1.8.ebuild:
+  Version bump wrt #191094.
 
   31 Jul 2007; Doug Goldstein <cardoe@gentoo.org> xine-lib-1.1.2-r3.ebuild:
   nvidia-legacy-drivers has merged with nvidia-drivers
