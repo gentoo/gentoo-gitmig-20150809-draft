@@ -1,6 +1,12 @@
 # ChangeLog for net-news/rsstool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/ChangeLog,v 1.1 2007/08/25 19:56:31 jsin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/ChangeLog,v 1.2 2007/09/03 16:49:34 jsin Exp $
+
+*rsstool-1.0.0_rc3 (03 Sep 2007)
+
+  03 Sep 2007; Jason Smathers (jsin) <jsin@gentoo.org>
+  +rsstool-1.0.0_rc3.ebuild:
+  Bumped to rc3, patches no longer required as they were incorperated upstream.
 
 *rsstool-1.0.0_rc2-r1 (25 Aug 2007)
 
