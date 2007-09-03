@@ -1,7 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.20.18.ebuild,v 1.1 2007/09/03 02:12:39 kumba Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.20.18.ebuild,v 1.2 2007/09/03 05:32:03 mr_bones_ Exp $
 
 # INCLUDED:
 # 1) linux sources from kernel.org
@@ -13,10 +12,7 @@
 # 7) Patch for Remaining Cobalt Bits		(http://www.colonel-panic.org/cobalt-mips/)
 # 8) Experimental patches (IP27 hacks, et al)
 
-
 #//------------------------------------------------------------------------------
-
-
 
 # Version Data
 OKV=${PV/_/-}
@@ -44,7 +40,6 @@ KEYWORDS="-* mips"
 IUSE="cobalt ip27 ip28 ip30 ip32r10k"
 DEPEND=">=sys-devel/gcc-4.1.1"
 
-
 # Version Control Variables
 USE_RC="no"				# If set to "yes", then attempt to use an RC kernel
 USE_PNT="yes"				# If set to "yes", then attempt to use a point-release (2.6.x.y)
@@ -64,7 +59,6 @@ SV_IP28=""				# 	    DO_IP28 == "no", 			   IP28
 SV_IP30=""				# 	    DO_IP30 == "no", 			   IP30
 SV_IP32=""				# 	    DO_IP32 == "no", 			   IP32
 SV_CBLT=""				# 	    DO_CBLT == "no", 			   Cobalt
-
 
 # If USE_RC == "yes", use a release candidate kernel (2.6.X-rcY)
 if [ "${USE_RC}" = "yes" ]; then
@@ -89,18 +83,13 @@ if [ "${USE_PNT}" = "yes" ]; then
 	USE_RC="no"
 fi
 
-
 DESCRIPTION="Linux-Mips GIT sources for MIPS-based machines, dated ${GITDATE}"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${STABLEVER}.tar.bz2
 		mirror://gentoo/mipsgit-${F_KV}-${GITDATE}.diff.bz2
 		mirror://gentoo/${PN}-generic_patches-${GENPATCHVER}.tar.bz2
 		${PATCHVER}"
 
-
-
 #//------------------------------------------------------------------------------
-
-
 
 # Error/Warning messages
 err_only_one_mach_allowed() {
@@ -148,11 +137,7 @@ err_disabled_mach() {
 	return 0
 }
 
-
-
 #//------------------------------------------------------------------------------
-
-
 
 # Machine Information Messages
 #
@@ -279,11 +264,7 @@ show_cobalt_info() {
 	echo -e ""
 }
 
-
-
 #//------------------------------------------------------------------------------
-
-
 
 # Check our USE flags for machine-specific flags and give appropriate warnings/errors.
 # Hope the user isn't crazy enough to try using combinations of these flags.
@@ -356,11 +337,7 @@ pkg_setup() {
 	fi
 }
 
-
-
 #//------------------------------------------------------------------------------
-
-
 
 # Generic Patches - Safe to use globally
 do_generic_patches() {
@@ -387,7 +364,6 @@ do_generic_patches() {
 	eend
 }
 
-
 # NOT safe for production systems
 # Use at own risk, do _not_ file bugs on effects of these patches
 do_sekrit_patches() {
@@ -406,11 +382,7 @@ do_sekrit_patches() {
 	# /* EXPERIMENTAL - DO NOT USE IN PRODUCTION KERNELS */
 }
 
-
-
 #//------------------------------------------------------------------------------
-
-
 
 # Exclusive Machine Patchsets
 
@@ -431,7 +403,6 @@ do_ip28_support() {
 	epatch ${MIPS_PATCHES}/misc-2.6.20-ip28-i2_impact-support-r2.patch
 }
 
-
 # SGI Octane 'Speedracer' (IP30)
 do_ip30_support() {
 	echo -e ""
@@ -440,11 +411,7 @@ do_ip30_support() {
 	epatch ${MIPS_PATCHES}/misc-2.6.20-ip30-octane-support-r28.patch
 }
 
-
-
 #//------------------------------------------------------------------------------
-
-
 
 # Renames source trees for the few machines that we have separate patches for
 rename_source_tree() {
@@ -456,11 +423,7 @@ rename_source_tree() {
 	fi
 }
 
-
-
 #//------------------------------------------------------------------------------
-
-
 
 src_unpack() {
 	local x
@@ -468,7 +431,6 @@ src_unpack() {
 	unpack ${A}
 	mv ${WORKDIR}/linux-${STABLEVER} ${WORKDIR}/linux-${OKV}-${GITDATE}
 	cd ${S}
-
 
 	# If USE_RC == "yes", use a release candidate kernel (2.6.x-rcy)
 	# OR
@@ -478,7 +440,6 @@ src_unpack() {
 		einfo ">>> linux-${STABLEVER} --> linux-${OKV} ..."
 		epatch ${WORKDIR}/patch-${OKV}
 	fi
-
 
 	# Update the vanilla sources with linux-mips GIT changes
 	echo -e ""
@@ -496,11 +457,9 @@ src_unpack() {
 	# Patches for experimental use
 	do_sekrit_patches
 
-
 	# All done, resume normal portage work
 	kernel_universal_unpack
 }
-
 
 src_install() {
 	# Rename the source trees for exclusive machines
@@ -524,6 +483,5 @@ pkg_postinst() {
 		ln -sf ${my_ksrc} ${ROOT}/usr/src/linux
 	fi
 }
-
 
 #//------------------------------------------------------------------------------
