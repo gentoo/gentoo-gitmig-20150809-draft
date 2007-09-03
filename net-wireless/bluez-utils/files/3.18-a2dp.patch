@@ -1,0 +1,32 @@
+Index: unix.c
+===================================================================
+RCS file: /cvsroot/bluez/utils/audio/unix.c,v
+retrieving revision 1.44
+diff -u -3 -p -u -r1.44 unix.c
+--- audio/unix.c	31 Aug 2007 11:51:43 -0000	1.44
++++ audio/unix.c	3 Sep 2007 13:21:12 -0000
+@@ -347,9 +347,23 @@ static void a2dp_setup_complete(struct a
+ 	cfg->fd_opt = CFG_FD_OPT_WRITE;
+ 
+ 	sbc_cap = (void *) codec_cap;
+-	cfg->mode = sbc_cap->channel_mode;
+ 	cfg->sample_size = 2;
+ 
++	switch (sbc_cap->channel_mode) {
++	case A2DP_CHANNEL_MODE_MONO:
++		cfg->mode = CFG_MODE_MONO;
++		break;
++	case A2DP_CHANNEL_MODE_DUAL_CHANNEL:
++		cfg->mode = CFG_MODE_DUAL_CHANNEL;
++		break;
++	case A2DP_CHANNEL_MODE_STEREO:
++		cfg->mode = CFG_MODE_STEREO;
++		break;
++	case A2DP_CHANNEL_MODE_JOINT_STEREO:
++		cfg->mode = CFG_MODE_JOINT_STEREO;
++		break;
++	}
++
+ 	switch (sbc_cap->frequency) {
+ 	case A2DP_SAMPLING_FREQ_16000:
+ 		cfg->rate = 16000;
