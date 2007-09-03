@@ -1,0 +1,121 @@
+http://bugs.gentoo.org/191111
+http://thread.gmane.org/gmane.linux.utilities.util-linux-ng/614
+
+Move all locale/nls related includes to nls.h and make sure they are only
+pulled in when ENABLE_NLS.  When !ENABLE_NLS, don't include any locale/nls
+related headers and stub out setlocale() as well.
+
+Signed-off-by: Mike Frysinger <vapier@gentoo.org>
+---
+ include/nls.h      |    5 ++++-
+ misc-utils/cal.c   |    1 -
+ misc-utils/look.c  |    1 -
+ misc-utils/write.c |    1 -
+ text-utils/colrm.c |    2 +-
+ text-utils/more.c  |    1 -
+ text-utils/pg.c    |    2 --
+ 7 files changed, 5 insertions(+), 8 deletions(-)
+
+diff --git a/include/nls.h b/include/nls.h
+index f571ca5..e9f7927 100644
+--- a/include/nls.h
++++ b/include/nls.h
+@@ -9,6 +9,8 @@ int main(int argc, char *argv[]);
+ 
+ #ifdef ENABLE_NLS
+ # include <libintl.h>
++# include <locale.h>
++# include <nl_types.h>
+ # define _(Text) gettext (Text)
+ # ifdef gettext_noop
+ #  define N_(String) gettext_noop (String)
+@@ -16,9 +18,10 @@ int main(int argc, char *argv[]);
+ #  define N_(String) (String)
+ # endif
+ #else
+-# include <locale.h>
+ # undef bindtextdomain
+ # define bindtextdomain(Domain, Directory) /* empty */
++# undef setlocale
++# define setlocale(Category, Locale) /* empty */
+ # undef textdomain
+ # define textdomain(Domain) /* empty */
+ # define _(Text) (Text)
+diff --git a/misc-utils/cal.c b/misc-utils/cal.c
+index f5ede93..77333d8 100644
+--- a/misc-utils/cal.c
++++ b/misc-utils/cal.c
+@@ -63,7 +63,6 @@
+ #include <string.h>
+ #include <time.h>
+ #include <unistd.h>
+-#include <locale.h>
+ #include "errs.h"
+ #include "nls.h"
+ 
+diff --git a/misc-utils/look.c b/misc-utils/look.c
+index 5c7e30c..9e25596 100644
+--- a/misc-utils/look.c
++++ b/misc-utils/look.c
+@@ -59,7 +59,6 @@
+ #include <strings.h>
+ #include <ctype.h>
+ #include <getopt.h>
+-#include <locale.h>
+ #include "pathnames.h"
+ #include "nls.h"
+ 
+diff --git a/misc-utils/write.c b/misc-utils/write.c
+index b3c96d1..46b8f0a 100644
+--- a/misc-utils/write.c
++++ b/misc-utils/write.c
+@@ -54,7 +54,6 @@
+ #include <pwd.h>
+ #include <string.h>
+ #include <stdlib.h>
+-#include <locale.h>
+ #include <signal.h>
+ #include <sys/param.h>
+ #include <sys/signal.h>
+diff --git a/text-utils/colrm.c b/text-utils/colrm.c
+index 5e18a6f..e8b1ea4 100644
+--- a/text-utils/colrm.c
++++ b/text-utils/colrm.c
+@@ -40,8 +40,8 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+-#include <locale.h>
+ 
++#include "nls.h"
+ #include "widechar.h"
+ 
+ /*
+diff --git a/text-utils/more.c b/text-utils/more.c
+index 19c4417..5dcae7b 100644
+--- a/text-utils/more.c
++++ b/text-utils/more.c
+@@ -55,7 +55,6 @@
+ #include <sys/file.h>
+ #include <sys/wait.h>
+ #include <a.out.h>
+-#include <locale.h>
+ #include "xstrncpy.h"
+ #include "nls.h"
+ #include "widechar.h"
+diff --git a/text-utils/pg.c b/text-utils/pg.c
+index 10bdd15..3e1b25e 100644
+--- a/text-utils/pg.c
++++ b/text-utils/pg.c
+@@ -49,8 +49,6 @@
+ #include <unistd.h>
+ #include <signal.h>
+ #include <setjmp.h>
+-#include <locale.h>
+-#include <nl_types.h>
+ #include <libgen.h>
+ 
+ #ifdef HAVE_NCURSES_H
+-- 
+1.5.3.rc7
+
