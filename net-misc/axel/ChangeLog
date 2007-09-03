@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/axel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.29 2007/09/03 21:32:36 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.30 2007/09/03 21:34:30 drizzt Exp $
+
+  03 Sep 2007; Timothy Redaelli <drizzt@gentoo.org> axel-1.0b-r2.ebuild:
+  Ops
 
 *axel-1.0b-r2 (03 Sep 2007)
 
