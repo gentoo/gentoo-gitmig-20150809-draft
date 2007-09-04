@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phpgroupware
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.30 2007/09/04 12:50:33 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.31 2007/09/04 18:27:18 armin76 Exp $
+
+  04 Sep 2007; Raúl Porcel <armin76@gentoo.org>
+  phpgroupware-0.9.16.012.ebuild:
+  alpha stable wrt security #189253
 
 *phpgroupware-0.9.16.012 (04 Sep 2007)
 
