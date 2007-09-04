@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2.ebuild,v 1.4 2007/09/03 14:49:36 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2.ebuild,v 1.5 2007/09/04 14:50:45 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -55,6 +55,7 @@ PATCHES="${FILESDIR}/${PN}-6.0-bsdcmp.patch
 	${FILESDIR}/${PN}-lint-stdarg.patch
 	${FILESDIR}/${PN}-6.0-kdump-ioctl.patch
 	${FILESDIR}/${PN}-6.1-gcc41.patch
+	${FILESDIR}/${PN}-6.2-make-sinclude.patch
 	${FILESDIR}/${PN}-6.2-rpcgen-gcc4.1.patch
 	${FILESDIR}/${PN}-6.2-sparc64.patch"
 

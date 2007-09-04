@@ -1,0 +1,60 @@
+--- usr.bin/make/parse.c.orig	2007-09-04 14:39:07 +0100
++++ usr.bin/make/parse.c	2007-09-04 14:51:00 +0100
+@@ -1602,8 +1602,8 @@
+  * ParseTraditionalInclude  --
+  *	Push to another file.
+  *
+- *	The input is the line minus the "include".  The file name is
+- *	the string following the "include".
++ *	The input is the current line. The file name(s) are
++ *	following the "include".
+  *
+  * Results:
+  *	None
+@@ -1614,10 +1614,12 @@
+  *---------------------------------------------------------------------
+  */
+ static void
+-ParseTraditionalInclude(char *file)
++ParseTraditionalInclude(char *line)
+ {
+ 	char	*fullname;	/* full pathname of file */
+ 	char	*cp;		/* current position in file spec */
++	int	silent = (line[0] != 'i') ? 1 : 0;
++	char	*file = &line[silent + 7];
+ 
+ 	/*
+ 	 * Skip over whitespace
+@@ -1665,7 +1667,9 @@
+ 	}
+ 
+ 	if (fullname == NULL) {
+-		Parse_Error(PARSE_FATAL, "Could not find %s", file);
++		if (!silent) {
++			Parse_Error(PARSE_FATAL, "Could not find %s", file);
++		}
+ 		/* XXXHB free(file) */
+ 		return;
+ 	}
+@@ -2416,14 +2420,16 @@
+ 				}
+ 			}
+ #ifdef SYSVINCLUDE
+-		} else if (strncmp(line, "include", 7) == 0 &&
+-		    isspace((unsigned char)line[7]) &&
+-		    strchr(line, ':') == NULL) {
++		} else if (((strncmp(line, "include", 7) == 0 &&
++				isspace((unsigned char) line[7])) ||
++					((line[0] == 's' || line[0] == '-') &&
++						strncmp(&line[1], "include", 7) == 0 &&
++						isspace((unsigned char) line[8]))) &&
++					strchr(line, ':') == NULL) {
+ 			/*
+ 			 * It's an S3/S5-style "include".
+ 			 */
+-			ParseTraditionalInclude(line + 7);
+-			goto nextLine;
++			ParseTraditionalInclude(line);
+ #endif
+ 		} else if (Parse_IsVar(line)) {
+ 			ParseFinishLine();
