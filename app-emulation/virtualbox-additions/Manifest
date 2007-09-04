@@ -7,10 +7,10 @@ EBUILD virtualbox-additions-1.4.0.ebuild 774 RMD160 ba0df4787f0b33a6f2c43ea68266
 MD5 a450fcb1272e6ebb7f74d09b7ac5bb7c virtualbox-additions-1.4.0.ebuild 774
 RMD160 ba0df4787f0b33a6f2c43ea68266bfbc1126b7f3 virtualbox-additions-1.4.0.ebuild 774
 SHA256 90645ca7dea3d2822aec2fd074883839c1f69185f0094087e6fa9760f9a8e5be virtualbox-additions-1.4.0.ebuild 774
-EBUILD virtualbox-additions-1.5.0.ebuild 766 RMD160 f9e910f3ac0a1e2dab5af931a57d5d6bc15efde5 SHA1 15ddc7ddeb8c16cb38026a9560ecbd35d141a4cd SHA256 cfe912559118cfe00961118ee6d73bcf0a9edb64a5078b498e0725cb1034c41d
-MD5 058cecd2b64df880b26de58386f97743 virtualbox-additions-1.5.0.ebuild 766
-RMD160 f9e910f3ac0a1e2dab5af931a57d5d6bc15efde5 virtualbox-additions-1.5.0.ebuild 766
-SHA256 cfe912559118cfe00961118ee6d73bcf0a9edb64a5078b498e0725cb1034c41d virtualbox-additions-1.5.0.ebuild 766
+EBUILD virtualbox-additions-1.5.0.ebuild 767 RMD160 46697baf3dc2ba7d0f79a077c99ca5a39635b926 SHA1 0d5190457540ece49d307e1a019c6b166eb23ed2 SHA256 d330fee602033a921bcdf7c3a17e2da1d0fd40069940c079fd7dab1203ca078b
+MD5 b93f488ff5f5adeeee2beda905111d6b virtualbox-additions-1.5.0.ebuild 767
+RMD160 46697baf3dc2ba7d0f79a077c99ca5a39635b926 virtualbox-additions-1.5.0.ebuild 767
+SHA256 d330fee602033a921bcdf7c3a17e2da1d0fd40069940c079fd7dab1203ca078b virtualbox-additions-1.5.0.ebuild 767
 MISC ChangeLog 1951 RMD160 3a04c2dffb42e84c3979e88c473e22c957dbbd5f SHA1 c1a754d628e15cc4ea9a74edc43db6324d8782ac SHA256 b0aabfc7d4d03552ebdecf685fe2cf44ea1fb73b88d41a5c6b7d92d685f8ac72
 MD5 eaf52e2f61c526c153bc8d2cc2e6aea3 ChangeLog 1951
 RMD160 3a04c2dffb42e84c3979e88c473e22c957dbbd5f ChangeLog 1951
@@ -28,7 +28,7 @@ SHA256 e7c0350dc0c324a828b1550affb91a861d4f15c7527456334da772f164d9af49 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.6 (GNU/Linux)
 
-iD8DBQFG3evvz974XjDVpbkRAmpNAKC0spzhJzd9H+z6mkQOlgOPmMIfCQCgxOms
-a6qaqwns48f3KduZvr7bwGM=
-=wOZ4
+iD8DBQFG3e0lz974XjDVpbkRAr/gAKDe7ZI89Cn4Ftqd00gMLOa2pKqV6gCghGYj
+c3LOYtC00vfgKPGqC8UMN48=
+=c13A
 -----END PGP SIGNATURE-----
