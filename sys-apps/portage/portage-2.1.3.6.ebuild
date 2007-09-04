@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3.6.ebuild,v 1.2 2007/08/24 02:16:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.3.6.ebuild,v 1.3 2007/09/04 21:35:07 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -19,7 +19,6 @@ DEPEND=">=dev-lang/python-2.4
 	epydoc? ( >=dev-python/epydoc-2.0 )"
 RDEPEND=">=dev-lang/python-2.4
 	!build? ( >=sys-apps/sed-4.0.5
-		dev-python/python-fchksum
 		>=app-shells/bash-3.0 )
 	elibc_FreeBSD? ( dev-python/py-freebsd )
 	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 )
@@ -28,7 +27,7 @@ RDEPEND=">=dev-lang/python-2.4
 	userland_GNU? ( >=sys-apps/coreutils-6.4 )
 	selinux? ( >=dev-python/python-selinux-2.16 )
 	doc? ( || ( app-portage/eclass-manpages app-portage/portage-manpages ) )
-	>=dev-python/pycrypto-2.0.1-r5
+	|| ( >=dev-lang/python-2.5 >=dev-python/pycrypto-2.0.1-r6 )
 	>=net-misc/rsync-2.6.4"
 # coreutils-6.4 rdep is for date format in emerge-webrsync #164532
 # rsync-2.6.4 rdep is for the --filter option #167668
