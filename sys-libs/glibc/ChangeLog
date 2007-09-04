@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.550 2007/08/06 09:46:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.551 2007/09/04 06:15:41 kumba Exp $
+
+  04 Sep 2007; Joshua Kinard <kumba@gentoo.org> glibc-2.6.1.ebuild:
+  Update the patchset to 1.1 to pull in a patch for mips to enable support for
+  .gnu.hash capabilities, and mark unstable on mips.
 
   06 Aug 2007; Mike Frysinger <vapier@gentoo.org>
   +files/eblits/common.eblit, +files/eblits/src_compile.eblit,
