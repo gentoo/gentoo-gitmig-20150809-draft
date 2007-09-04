@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3008 2007/09/02 17:59:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3009 2007/09/04 18:31:17 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -989,6 +989,7 @@ media-plugins/gst-plugins-farsight:gsm - Support for the gsm lossy speech compre
 media-plugins/gst-plugins-farsight:jingle - Enables voice calls for jabber
 media-plugins/gst-plugins-farsight:jrtplib - Support for the Real-time Transport Protocol (RTP) library
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
+media-plugins/mythmusic:libvisual - Enables libvisual support for effects
 media-plugins/mythphone:festival - Enable festival support
 media-plugins/vdr-burn:projectx - Enables support fur projectx
 media-plugins/vdr-dvdconvert:projectx - Enables support for projectx 
