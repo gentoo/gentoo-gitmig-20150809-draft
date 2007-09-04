@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.17 2007/06/23 15:56:20 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.18 2007/09/04 23:56:09 jokey Exp $
 
 inherit eutils flag-o-matic linux-mod qt3 subversion toolchain-funcs
 
@@ -42,6 +42,10 @@ pkg_setup() {
 
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
+
+	# Add the vboxusers group before src_install
+	# see (bug #184504)
+	enewgroup vboxusers
 }
 
 src_compile() {
@@ -127,10 +131,6 @@ src_install() {
 	insinto /usr/share/applications
 	doins "${FILESDIR}"/${PN}.desktop
 	dosed -e "s/Version=/Version=${PV}/" /usr/share/applications/${PN}.desktop
-}
-
-pkg_preinst() {
-	enewgroup vboxusers
 }
 
 pkg_postinst() {

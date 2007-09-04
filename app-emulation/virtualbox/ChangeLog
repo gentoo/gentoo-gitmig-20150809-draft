@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.23 2007/09/04 23:38:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.24 2007/09/04 23:56:09 jokey Exp $
+
+  04 Sep 2007; Markus Ullmann <jokey@gentoo.org> virtualbox-9999.ebuild:
+  fix group creation, bug #184504
 
 *virtualbox-1.5.0 (04 Sep 2007)
 
