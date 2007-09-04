@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.201 2007/09/03 15:22:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.202 2007/09/04 00:12:44 vapier Exp $
+
+  04 Sep 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.13-ioprio-syscalls.patch, util-linux-2.13-r1.ebuild:
+  Stub out ioprio syscalls on dated systems #190613 by Panagiotis Christopoulos.
 
   03 Sep 2007; Mike Frysinger <vapier@gentoo.org>
   util-linux-2.12r-r7.ebuild:

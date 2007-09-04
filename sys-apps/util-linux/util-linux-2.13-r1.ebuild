@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13-r1.ebuild,v 1.1 2007/09/03 15:20:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13-r1.ebuild,v 1.2 2007/09/04 00:12:44 vapier Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
 inherit eutils
@@ -41,6 +41,7 @@ src_unpack() {
 		unpack ${A}
 		cd "${S}"
 		epatch "${FILESDIR}"/${P}-locale.patch #191111
+		epatch "${FILESDIR}"/${P}-ioprio-syscalls.patch #190613
 	fi
 }
 
