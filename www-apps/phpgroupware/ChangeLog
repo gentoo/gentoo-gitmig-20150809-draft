@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/phpgroupware
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.29 2007/02/22 00:33:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.30 2007/09/04 12:50:33 wrobel Exp $
+
+*phpgroupware-0.9.16.012 (04 Sep 2007)
+
+  04 Sep 2007; <wrobel@gentoo.org> +phpgroupware-0.9.16.012.ebuild:
+  Added phpgroupware-0.9.16.012 to the tree (response to #189253)
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
