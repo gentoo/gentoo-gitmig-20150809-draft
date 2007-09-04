@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler-bindings
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.67 2007/09/04 06:53:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.68 2007/09/04 10:43:47 genstef Exp $
+
+  04 Sep 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/poppler-0.6-bindings.patch:
+  add forgotten patch thanks Florian Steinel
 
 *poppler-bindings-0.6 (04 Sep 2007)
 
