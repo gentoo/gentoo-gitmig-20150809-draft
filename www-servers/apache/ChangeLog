@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.15 2007/09/02 14:48:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.16 2007/09/04 18:37:12 armin76 Exp $
+
+  04 Sep 2007; Raúl Porcel <armin76@gentoo.org> apache-2.0.59-r5.ebuild,
+  apache-2.2.4-r12.ebuild:
+  alpha/ia64/x86 stable wrt #190331
 
   02 Sep 2007; Benedikt Böhm <hollow@gentoo.org> apache-2.0.59-r5.ebuild:
   fix #190966
