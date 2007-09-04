@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.6.ebuild,v 1.1 2007/03/25 18:44:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.6.ebuild,v 1.2 2007/09/04 23:07:54 jurek Exp $
 
 inherit qt3 eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/prokyon3/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="flac mp3 musicbrainz taglib vorbis"
 
 DEPEND="$(qt_min_version 3.2)
