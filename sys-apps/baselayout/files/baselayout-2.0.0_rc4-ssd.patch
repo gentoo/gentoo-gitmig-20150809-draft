@@ -1,0 +1,13 @@
+Index: src/librc-daemon.c
+===================================================================
+--- src/librc-daemon.c	(revision 2865)
++++ src/librc-daemon.c	(working copy)
+@@ -118,7 +118,7 @@
+ 			continue;
+ 
+ 		if (uid) {
+-			snprintf (buffer, sizeof (buffer), "/proc/%d", pid);
++			snprintf (buffer, sizeof (buffer), "/proc/%d", p);
+ 			if (stat (buffer, &sb) != 0 || sb.st_uid != uid)
+ 				continue;
+ 		}
