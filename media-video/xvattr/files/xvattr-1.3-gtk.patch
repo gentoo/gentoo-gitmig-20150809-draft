@@ -1,6 +1,6 @@
 diff -ur xvattr-1.3.orig/configure.in xvattr-1.3/configure.in
 --- xvattr-1.3.orig/configure.in	2002-06-13 22:40:33.000000000 +0300
-+++ xvattr-1.3/configure.in	2007-08-11 12:29:54.000000000 +0300
++++ xvattr-1.3/configure.in	2007-09-04 14:02:56.000000000 +0300
 @@ -17,7 +17,14 @@
  AC_PATH_XTRA
  
@@ -9,7 +9,7 @@ diff -ur xvattr-1.3.orig/configure.in xvattr-1.3/configure.in
 +AC_ARG_WITH(gtk,
 +       [--without-gtk     Disable GTK support (default: enabled)])
 +if test "x$with_gtk" != "xno"; then
-+       AM_PATH_GTK_2_0
++       PKG_CHECK_MODULES(GTK, gtk+-2.0)
 +else
 +       no_gtk="yes"
 +fi
@@ -19,7 +19,7 @@ diff -ur xvattr-1.3.orig/configure.in xvattr-1.3/configure.in
  AC_ARG_WITH(xv-path,[  --with-xv-path=path    Where libXv is installed],
 diff -ur xvattr-1.3.orig/Makefile.am xvattr-1.3/Makefile.am
 --- xvattr-1.3.orig/Makefile.am	2002-06-13 22:22:00.000000000 +0300
-+++ xvattr-1.3/Makefile.am	2007-08-11 12:31:42.000000000 +0300
++++ xvattr-1.3/Makefile.am	2007-09-04 13:58:14.000000000 +0300
 @@ -1,12 +1,19 @@
  # 
  
