@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.119 2007/08/22 17:32:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.120 2007/09/04 21:31:18 wolf31o2 Exp $
+
+  04 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/parted-1.8.8-t3100-test-success.patch, parted-1.8.8.ebuild:
+  Added a patch from Ryan Hill <dirtyepic@gentoo.org> to fix the tests
+  failing. Closing bug #191116.
 
   22 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> parted-1.8.8.ebuild:
   Changing LICENSE.
