@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.58 2007/09/04 19:36:32 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.59 2007/09/04 20:12:02 calchan Exp $
+
+  04 Sep 2007; Denis Dupeyron <calchan@gentoo.org> nwn-1.68-r1.ebuild:
+  Applied locale dir fix to current stable version (see bug #183344
+  comment #6).
 
 *nwn-1.68-r2 (04 Sep 2007)
 
