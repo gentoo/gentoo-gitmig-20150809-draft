@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.27 2007/07/28 18:21:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.28 2007/09/04 14:45:33 mrness Exp $
+
+*obexftp-0.22_rc6 (04 Sep 2007)
+
+  04 Sep 2007; Alin Năstac <mrness@gentoo.org>
+  -files/obexftp-0.19-cobex_write.patch, +files/obexftp-0.22-no_iconv.patch,
+  -obexftp-0.19-r1.ebuild, +obexftp-0.22_rc6.ebuild:
+  Version bump (#190751) and homepage update.
 
   28 Jul 2007; Guy Martin <gmsoft@gentoo.org> obexftp-0.21.ebuild:
   Stable on hppa
