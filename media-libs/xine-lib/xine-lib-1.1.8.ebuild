@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.8.ebuild,v 1.1 2007/09/03 11:38:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.8.ebuild,v 1.2 2007/09/04 12:22:40 drac Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -81,6 +81,14 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/libtool
 	nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Bug 183692.
+	epatch "${FILESDIR}"/${P}-dxr3.patch
+}
 
 src_compile() {
 	#prevent quicktime crashing

@@ -1,0 +1,12 @@
+diff -ur xine-lib-1.1.8.orig/src/libffmpeg/ffmpeg_encoder.c xine-lib-1.1.8/src/libffmpeg/ffmpeg_encoder.c
+--- xine-lib-1.1.8.orig/src/libffmpeg/ffmpeg_encoder.c	2007-08-19 02:36:50.000000000 +0300
++++ xine-lib-1.1.8/src/libffmpeg/ffmpeg_encoder.c	2007-09-04 15:04:41.000000000 +0300
+@@ -76,7 +76,7 @@
+   lavc_data_t* this;
+   avcodec_init();
+ 
+-  register_avcodec(&mpeg1video_encoder);  
++  avcodec_register_all();
+   lprintf("lavc init , version %x\n", avcodec_version());
+   this = xine_xmalloc(sizeof(lavc_data_t));
+   if (!this) return 0;
