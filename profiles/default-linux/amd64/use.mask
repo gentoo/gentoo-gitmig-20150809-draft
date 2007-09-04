@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.61 2007/08/24 22:05:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.62 2007/09/04 16:55:04 philantrop Exp $
 
 # SECTION: Unmask
 
@@ -57,6 +57,10 @@
 -lcd_devices_luise
 
 # SECTION: Unavailable/Broken
+
+# 2007/09/04 - Wulf C. Krueger <philantrop@gentoo.org>
+# networkmanager doesn't work reliably. Requested by steev64.
+networkmanager
 
 # 2007/04/07 - Petteri Räty <betelgeuse@gentoo.org>
 # libemf does not build on amd64
