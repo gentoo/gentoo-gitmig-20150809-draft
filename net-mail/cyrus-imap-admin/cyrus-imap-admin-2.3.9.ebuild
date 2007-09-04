@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.3.8.ebuild,v 1.2 2007/07/28 15:39:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.3.9.ebuild,v 1.1 2007/09/04 18:06:04 dertobi123 Exp $
 
 inherit autotools perl-app eutils
 
@@ -33,8 +33,7 @@ S="${WORKDIR}/cyrus-imapd-${PV}"
 src_unpack() {
 	unpack ${A} && cd "${S}"
 
-	# DB4 detection and versioned symbols.
-	epatch "${FILESDIR}/${PN}-2.2-db45.patch"
+	# Versioned symbols.
 	epatch "${FILESDIR}/${PN}-${PIC_PATCH_VER}-fPIC.patch"
 
 	# Recreate configure.
