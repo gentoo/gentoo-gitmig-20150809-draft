@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7673 2007/09/04 16:04:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7674 2007/09/04 17:20:02 calchan Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Denis Dupeyron <calchan@gentoo.org> (04 Sep 2007)
+# Masking new Neverwinter Nights ebuilds until they're confirmed to work
+=games-rpg/nwn-data-1.29-r2
+=games-rpg/nwn-1.68-r2
 
 # Jeroen Roovers <jer@gentoo.org> (04 Sep 2007)
 # Opera Kestrel (alpha) is not deemed stable enough yet. Beware!

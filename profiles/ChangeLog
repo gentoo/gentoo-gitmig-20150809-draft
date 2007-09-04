@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.621 2007/09/04 17:06:25 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.622 2007/09/04 17:20:02 calchan Exp $
+
+  04 Sep 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
+  Masking new Neverwinter Nights ebuilds until they're confirmed to work.
 
   04 Sep 2007; Jeroen Roovers <jer@gentoo.org> package.mask:
   Masking Opera Kestrel (9.50 alphas).
