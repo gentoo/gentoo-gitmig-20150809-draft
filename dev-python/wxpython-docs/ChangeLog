@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/wxpython-docs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.24 2007/05/20 13:34:28 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.25 2007/09/04 05:27:17 dirtyepic Exp $
+
+*wxpython-docs-2.6.4.0 (04 Sep 2007)
+
+  04 Sep 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/wxpython-docs-2.6.4.0-writable.patch,
+  +wxpython-docs-2.6.4.0.ebuild:
+  Version bump.
 
   20 May 2007; <leio@gentoo.org> -files/viewdocs-2.4.2.4.patch,
   -wxpython-docs-2.4.2.4-r1.ebuild:
