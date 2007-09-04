@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc4.ebuild,v 1.1 2007/09/02 13:16:21 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc4.ebuild,v 1.2 2007/09/04 23:12:28 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -139,7 +139,7 @@ src_install() {
 	fi
 
 	# rc-scripts version for testing of features that *should* be present
-	echo "Gentoo Base System release ${PV}" > "${D}"/etc/gentoo-release
+	echo "Gentoo Base System release ${PV}-${PR}" > "${D}"/etc/gentoo-release
 
 	# Remove the installed runlevels, as we don't know about $ROOT yet
 	rm -rf "${D}/etc/runlevels"
