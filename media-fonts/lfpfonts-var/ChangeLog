@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/lfpfonts-var
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-var/ChangeLog,v 1.15 2007/07/24 02:17:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-var/ChangeLog,v 1.16 2007/09/04 02:39:04 dirtyepic Exp $
+
+  04 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> lfpfonts-var-0.84.ebuild:
+  Use font-ebdftopcf.eclass to process bdf files.  Bug #171251 by James Rowe.
 
   24 Jul 2007; Ryan Hill <dirtyepic@gentoo.org>
   -lfpfonts-var-0.83-r2.ebuild:
