@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/aide
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.22 2007/09/04 14:04:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.23 2007/09/04 18:16:06 armin76 Exp $
+
+  04 Sep 2007; Raúl Porcel <armin76@gentoo.org>
+  aide-0.10_p20040917-r1.ebuild:
+  alpha/x86 stable wrt #151271
 
   04 Sep 2007; Christoph Mende <angelos@gentoo.org>
   aide-0.10_p20040917-r1.ebuild:
