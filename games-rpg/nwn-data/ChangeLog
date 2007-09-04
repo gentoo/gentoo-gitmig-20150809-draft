@@ -1,6 +1,13 @@
 # ChangeLog for games-rpg/nwn-data
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.30 2007/08/27 21:19:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.31 2007/09/04 17:36:16 calchan Exp $
+
+*nwn-data-1.29-r2 (04 Sep 2007)
+
+  04 Sep 2007; Denis Dupeyron <calchan@gentoo.org> +nwn-data-1.29-r2.ebuild:
+  Remove the softlink to the built-in SDL library so that we don't have to
+  re-install this whole thing whenever we need to update to a different custom
+  SDL.
 
   27 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> -nwn-data-1.29.ebuild,
   nwn-data-1.29-r1.ebuild:
