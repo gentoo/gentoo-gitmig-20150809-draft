@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-4.1.3.2007.ebuild,v 1.3 2007/09/04 14:06:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-4.1.3.2007-r1.ebuild,v 1.1 2007/09/04 14:06:48 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -50,8 +50,13 @@ pkg_setup() {
 }
 
 # we need to override the eclass defined src_unpack
+# and change gcc to gnatgcc where appropriate
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	for fn in asis/a4g-gnat_int.adb gnat/snames.adb tools/tool_utils/asis_ul-common.adb; do
+		sed -i -e "s:\"gcc:\"gnatgcc:" ${fn}
+	done
 }
 
 src_compile() {
