@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/synopsis
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/ChangeLog,v 1.9 2007/07/15 08:28:18 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/ChangeLog,v 1.10 2007/09/04 04:28:37 dirtyepic Exp $
+
+*synopsis-0.9 (04 Sep 2007)
+
+  04 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> +synopsis-0.9.ebuild:
+  Version bump for bug #180643 by Kent Fredric.
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning dev-util/synopsis to m-needed, as beu is being retired (#66608).
