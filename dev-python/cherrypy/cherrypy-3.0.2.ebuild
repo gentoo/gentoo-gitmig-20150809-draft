@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.0.1.ebuild,v 1.2 2007/02/27 22:47:19 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.0.2.ebuild,v 1.1 2007/09/04 09:22:30 lucass Exp $
 
 inherit distutils
 
@@ -17,7 +17,7 @@ LICENSE="BSD"
 DEPEND=""
 RDEPEND=""
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
