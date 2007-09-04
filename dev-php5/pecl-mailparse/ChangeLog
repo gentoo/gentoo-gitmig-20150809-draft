@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-mailparse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/ChangeLog,v 1.9 2007/03/18 00:10:11 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/ChangeLog,v 1.10 2007/09/04 18:41:28 jokey Exp $
+
+*pecl-mailparse-2.1.1-r1 (04 Sep 2007)
+
+  04 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  +pecl-mailparse-2.1.1-r1.ebuild:
+  Rev bump from project overlay; Fix segfaults on 64bit platforms
 
   18 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
   pecl-mailparse-2.1.1.ebuild:
