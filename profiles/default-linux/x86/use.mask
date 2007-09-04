@@ -1,10 +1,14 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.33 2007/08/24 22:03:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.34 2007/09/04 18:06:47 armin76 Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # x86 profile.  This works, for example, if another architecture's
 # profile have a USE flag associated with (such as altivec, mmx, etc).
+
+# Raúl Porcel <armin76@gentoo.org> (4 Sep 2007)
+# Doesn't work fine, requested by steev
+networkmanager
 
 # pbbuttonsd and macbook for KDE and pbuttonsd it
 #-pbbuttonsd

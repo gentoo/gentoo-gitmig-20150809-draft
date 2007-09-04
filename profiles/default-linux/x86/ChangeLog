@@ -1,9 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.109 2007/09/04 16:57:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.110 2007/09/04 18:06:47 armin76 Exp $
 
-  04 Sep 2007; Raúl Porcel <armin76@gentoo.org> package.use.mask:
-  Mask networkmanager USE-flag for net-im/pidgin, as requested by steev
+  04 Sep 2007; Raúl Porcel <armin76@gentoo.org> package.use.mask, use.mask:
+  Use.mask networkmanager as it doesn't work fine, requested by steev
 
   27 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +no-nptl/2.4/deprecated:
