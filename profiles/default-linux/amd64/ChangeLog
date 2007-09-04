@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.111 2007/08/29 17:14:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.112 2007/09/04 17:06:25 philantrop Exp $
+
+  04 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> use.mask:
+  use.masked networkmanager as it doesn't work reliably at the moment.
+  Requested by steev64.
 
   29 Aug 2007; Christoph Mende <angelos@gentoo.org>
   2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask,
