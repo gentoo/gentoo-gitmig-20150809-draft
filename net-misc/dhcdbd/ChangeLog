@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/dhcdbd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.9 2007/08/28 14:35:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.10 2007/09/04 18:55:01 steev Exp $
+
+  04 Sep 2007; Steev Klimaszewski <steev@gentoo.org>
+  +files/dhcdbd-3.0-daemon.patch, +files/dhcdbd-3.0-dbus.patch,
+  -dhcdbd-2.7.ebuild, +dhcdbd-3.0.ebuild:
+  Add patch so that 3.0 works with dbus 1.0.2, reported by rbu while testing.
+
+*dhcdbd-3.0 (04 Sep 2007)
+
+  04 Sep 2007; Steev Klimaszewski <steev@gentoo.org>
+  +files/dhcdbd-3.0-daemon.patch, -dhcdbd-2.7.ebuild, +dhcdbd-3.0.ebuild:
+  New upstream release, works with dhcp 3.1+ as well as lower. This should fix
+  stable from being broken once we stablize it
 
   28 Aug 2007; nixnut <nixnut@gentoo.org> dhcdbd-2.8-r1.ebuild:
   Stable on ppc wrt bug 189781
