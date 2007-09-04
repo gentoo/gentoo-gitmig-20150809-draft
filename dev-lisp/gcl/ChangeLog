@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.48 2007/08/31 11:12:16 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.49 2007/09/04 11:21:56 hkbst Exp $
+
+  04 Sep 2007; Marijn Schouten <hkBst@gentoo.org> gcl-2.6.7-r3.ebuild:
+  put back sandbox workaround (commented this time), bug 190950
 
 *gcl-2.6.7-r3 (31 Aug 2007)
 

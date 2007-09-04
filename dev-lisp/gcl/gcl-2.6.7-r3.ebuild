@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r3.ebuild,v 1.1 2007/08/31 11:12:16 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r3.ebuild,v 1.2 2007/09/04 11:21:56 hkbst Exp $
 
 #removing flag-o-matic results in make install failing due to a segfault
 inherit elisp-common flag-o-matic
@@ -66,7 +66,8 @@ ${myconfig}"
 }
 
 src_install() {
-#	export SANDBOX_ON=0
+	# workaround for bug 161041, see bug 164656 for follow up
+	export SANDBOX_ON=0
 	make DESTDIR="${D}" install || die "make install failed"
 
 	rm -rf ${D}/usr/lib/${P}/info
