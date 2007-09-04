@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ttf-sil-doulos
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-doulos/ChangeLog,v 1.9 2007/03/25 22:10:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-doulos/ChangeLog,v 1.10 2007/09/04 14:57:09 jer Exp $
+
+  04 Sep 2007; Jeroen Roovers <jer@gentoo.org>
+  ttf-sil-doulos-4.100.0.ebuild:
+  Stable for HPPA (bug #187764).
 
   25 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   ttf-sil-doulos-4.0.14.ebuild, ttf-sil-doulos-4.100.0.ebuild:
