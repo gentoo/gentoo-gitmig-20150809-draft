@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/freebirth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/ChangeLog,v 1.14 2007/08/22 18:42:47 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/ChangeLog,v 1.15 2007/09/04 14:06:03 angelos Exp $
+
+  04 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  freebirth-0.3.2-r1.ebuild:
+  Stable on amd64 wrt bug #189139
 
   22 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> freebirth-0.3.2-r1.ebuild:
   x86 stable (bug #189139)
