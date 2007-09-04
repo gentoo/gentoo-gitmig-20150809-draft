@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.9.0-r1.ebuild,v 1.2 2007/07/04 20:27:04 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.9.1.ebuild,v 1.1 2007/09/04 09:31:39 lucass Exp $
 
 NEED_PYTHON=2.3
 
@@ -19,7 +19,7 @@ IUSE="postgres mysql sqlite firebird doc"
 
 RDEPEND="postgres? ( dev-python/psycopg )
 		mysql? ( >=dev-python/mysql-python-0.9.2-r1 )
-		sqlite? ( dev-python/pysqlite )
+		sqlite? ( || ( dev-python/pysqlite >=dev-lang/python-2.5 ) )
 		firebird? ( >=dev-python/kinterbasdb-3.0.2 )
 		>=dev-python/formencode-0.2.2"
 DEPEND="${RDEPEND}
