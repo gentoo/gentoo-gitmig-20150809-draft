@@ -1,6 +1,13 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.101 2007/08/12 15:15:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.102 2007/09/04 04:16:39 beandog Exp $
+
+*dvdrip-0.98.8 (02 Sep 2007)
+*dvdrip-0.98.7 (02 Sep 2007)
+
+  02 Sep 2007; Steve Dibb <beandog@gentoo.org> +dvdrip-0.98.7.ebuild,
+  +dvdrip-0.98.8.ebuild:
+  Version bump
 
   12 Aug 2007; Steve Dibb <beandog@gentoo.org> dvdrip-0.98.6.ebuild:
   vcd useflag requires transcode + mjpeg use flag, bug 178417
