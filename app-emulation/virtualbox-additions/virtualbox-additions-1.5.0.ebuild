@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/virtualbox-additions-1.3.8.ebuild,v 1.3 2007/06/23 19:36:12 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/virtualbox-additions-1.5.0.ebuild,v 1.1 2007/09/04 23:36:06 jokey Exp $
 
 inherit eutils
 
