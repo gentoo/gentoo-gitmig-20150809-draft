@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.63 2007/08/29 15:26:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.64 2007/09/04 18:29:40 cardoe Exp $
+
+  04 Sep 2007; Doug Goldstein <cardoe@gentoo.org>
+  -mythmusic-0.21_pre14242.ebuild, mythmusic-0.21_pre14320.ebuild:
+  fix up depends. add libvisual support
 
   29 Aug 2007; Doug Goldstein <cardoe@gentoo.org>
   mythmusic-0.20.2_p14282.ebuild:
