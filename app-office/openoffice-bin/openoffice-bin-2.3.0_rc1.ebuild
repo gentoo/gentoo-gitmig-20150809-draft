@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.3.0_rc1.ebuild,v 1.1 2007/09/04 19:17:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.3.0_rc1.ebuild,v 1.2 2007/09/04 21:09:27 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -108,17 +108,14 @@ src_install () {
 	insinto /usr/share/mime/packages
 	doins ${WORKDIR}/usr/share/mime/packages/openoffice.org.xml
 
-	# Install wrapper script
-	newbin ${FILESDIR}/${PV}/ooo-wrapper2 ooffice
-	sed -i -e s/PV/${PV}/g ${D}/usr/bin/ooffice || die
-	sed -i -e "s|INSTDIR|${INSTDIR}|g" ${D}/usr/bin/ooffice || die
-
 	# Component symlinks
-	for app in base calc draw fromtemplate impress math web writer; do
-		dosym ooffice /usr/bin/oo${app}
+	for app in base calc draw impress math writer; do
+		dosym ${INSTDIR}/program/s${app} /usr/bin/oo${app}
 	done
 
 	dosym ${INSTDIR}/program/spadmin.bin /usr/bin/ooffice-printeradmin
+	dosym ${INSTDIR}/program/soffice /usr/bin/soffice
+	dosym ${INSTDIR}/program/soffice.bin /usr/bin/ooffice
 
 	# Change user install dir
 	sed -i -e s/.openoffice.org2/.ooo-2.0/g ${D}${INSTDIR}/program/bootstraprc || die
@@ -130,7 +127,7 @@ src_install () {
 	rm -f ${D}${INSTDIR}/share/dict/ooo/*
 
 	# prevent revdep-rebuild from attempting to rebuild all the time
-	insinto /etc/revdep-rebuild && doins ${FILESDIR}/${PV}/50-openoffice-bin
+	insinto /etc/revdep-rebuild && doins ${FILESDIR}/50-openoffice-bin
 
 }
 
@@ -149,8 +146,7 @@ pkg_postinst() {
 	elog
 	elog " Also, for individual components, you can use any of:"
 	elog
-	elog " oobase, oocalc, oodraw, oofromtemplate, ooimpress, oomath,"
-	elog " ooweb or oowriter"
+	elog " oobase, oocalc, oodraw, ooimpress, oomath, or oowriter"
 	elog
 	elog " Spell checking is now provided through our own myspell-ebuilds, "
 	elog " if you want to use it, please install the correct myspell package "
