@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/libiodbc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.27 2007/07/16 15:21:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.28 2007/09/04 17:26:00 jokey Exp $
+
+*libiodbc-3.52.5 (04 Sep 2007)
+
+  04 Sep 2007; Markus Ullmann <jokey@gentoo.org> +libiodbc-3.52.5.ebuild:
+  Version bump from project overlay
+
+  03 Sep 2007; Jakub Moc <jakub@gentoo.org> +libiodbc-3.52.5.ebuild:
+  Version bump, fix USE=gtk handling and dependency
 
   16 Jul 2007; Raúl Porcel <armin76@gentoo.org> libiodbc-3.52.4.ebuild:
   alpha stable
