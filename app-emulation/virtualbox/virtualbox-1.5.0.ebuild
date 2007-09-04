@@ -1,18 +1,18 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.3.8.ebuild,v 1.7 2007/06/26 01:37:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.5.0.ebuild,v 1.1 2007/09/04 23:38:07 jokey Exp $
 
 inherit eutils flag-o-matic qt3 toolchain-funcs
 
-MY_P=VirtualBox-OSE-${PV}
+MY_P=VirtualBox-${PV}_OSE
 DESCRIPTION="Softwarefamily of powerful x86 virtualization"
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64 x86"
-IUSE="additions alsa nowrapper sdk vboxbfe vditool"
+KEYWORDS="~amd64 ~x86"
+IUSE="additions alsa hal nowrapper sdk vboxbfe"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
@@ -22,17 +22,17 @@ RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/xerces-c
 	media-libs/libsdl
 	x11-libs/libXcursor
-	$(qt_min_version 3.3.5)"
+	$(qt_min_version 3.3.5)
+	hal? ( sys-apps/hal )"
 DEPEND="${RDEPEND}
 	sys-devel/bin86
 	sys-devel/dev86
 	sys-power/iasl
-	alsa? ( >=media-libs/alsa-lib-1.0.13 )
-	=virtual/libstdc++-3.3"
+	alsa? ( >=media-libs/alsa-lib-1.0.13 )"
 RDEPEND="${RDEPEND}
 	additions? ( ~app-emulation/virtualbox-additions-${PV} )"
 
-S=${WORKDIR}/vbox-ose-${PV}
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	# The VBoxSDL frontend needs media-libs/libsdl compiled
@@ -57,7 +57,14 @@ src_unpack() {
 
 src_compile() {
 	cd "${S}"
-	./configure || die "configure failed"
+
+	local myconf
+	if ! use hal; then
+		myconf="${myconf} --without-hal"
+	fi
+
+	./configure \
+	${myconf} || die "configure failed"
 	source ./env.sh
 
 	# Force kBuild to respect C[XX]FLAGS and MAKEOPTS (bug #178529)
@@ -78,16 +85,13 @@ src_install() {
 	if use sdk; then
 		doins -r sdk
 		make_wrapper xpidl "sdk/bin/xpidl" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-		fperms 0755 /opt/VirtualBox/sdk/bin/xpidl
-	fi
-	if use vditool; then
-		doins vditool
-		make_wrapper vditool "./vditool" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-		fperms 0755 /opt/VirtualBox/vditool
+		fowners root:vboxusers /opt/VirtualBox/sdk/bin/xpidl
+		fperms 0750 /opt/VirtualBox/sdk/bin/xpidl
 	fi
 	if use vboxbfe; then
 		doins VBoxBFE
-		fperms 0755 /opt/VirtualBox/VBoxBFE
+		fowners root:vboxusers /opt/VirtualBox/VBoxBFE
+		fperms 0750 /opt/VirtualBox/VBoxBFE
 
 		if use nowrapper ; then
 			make_wrapper vboxbfe "./VBoxBFE" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
@@ -100,7 +104,8 @@ src_install() {
 
 	doins -r *
 	for each in VBox{Manage,SDL,SVC,XPCOMIPCD} VirtualBox ; do
-		fperms 0755 /opt/VirtualBox/${each}
+		fowners root:vboxusers /opt/VirtualBox/${each}
+		fperms 0750 /opt/VirtualBox/${each}
 	done
 
 	if use nowrapper ; then
@@ -111,6 +116,9 @@ src_install() {
 	else
 		exeinto /opt/VirtualBox
 		newexe "${FILESDIR}/${PN}-wrapper" "wrapper.sh"
+		fowners root:vboxusers /opt/VirtualBox/wrapper.sh
+		fperms 0750 /opt/VirtualBox/wrapper.sh
+
 		dosym /opt/VirtualBox/wrapper.sh /usr/bin/virtualbox
 		dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxmanage
 		dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxsdl
@@ -121,6 +129,7 @@ src_install() {
 	newins "${S}"/src/VBox/Frontends/VirtualBox/images/ico32x01.png ${PN}.png
 	insinto /usr/share/applications
 	doins "${FILESDIR}"/${PN}.desktop
+	dosed -e "s/Version=/Version=${PV}/" /usr/share/applications/${PN}.desktop
 }
 
 pkg_postinst() {
@@ -133,7 +142,8 @@ pkg_postinst() {
 		elog "To launch VirtualBox just type: \"virtualbox\""
 	fi
 	elog ""
-	elog "You must be in the vboxusers group to use VirtualBox."
+	elog "You must be in the vboxusers group to use VirtualBox,"
+	elog "\"vditool\" is now deprecated, use \"VBoxManage\" instead."
 	elog ""
 	elog "The last user manual is available for download at:"
 	elog "http://www.virtualbox.org/download/UserManual.pdf"

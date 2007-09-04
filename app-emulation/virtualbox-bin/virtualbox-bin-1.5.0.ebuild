@@ -1,44 +1,48 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.3.8-r1.ebuild,v 1.4 2007/06/23 16:10:40 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.0.ebuild,v 1.1 2007/09/04 23:44:01 jokey Exp $
 
 inherit eutils qt3 pax-utils
 
-MY_P=VirtualBox_${PV}_Linux_x86.run
+MY_P=VirtualBox_${PV}_Linux_${ARCH}.run
 
 DESCRIPTION="Softwarefamily of powerful x86 virtualization"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}
-	vditool? ( http://www.virtualbox.org/download/testcase/vditool )"
+SRC_URI="amd64? ( http://www.virtualbox.org/download/${PV}/VirtualBox_${PV}_Linux_amd64.run )
+	x86? ( http://www.virtualbox.org/download/${PV}/VirtualBox_${PV}_Linux_x86.run )"
 
 LICENSE="PUEL"
 SLOT="0"
-KEYWORDS="-amd64 x86"
-IUSE="additions nowrapper sdk vditool"
+KEYWORDS="~amd64 ~x86"
+IUSE="additions nowrapper sdk"
 
-DEPEND=">=sys-libs/glibc-2.3.5"
 RDEPEND="!app-emulation/virtualbox
 	~app-emulation/virtualbox-modules-${PV}
-	sdk? ( dev-libs/libIDL )
-	amd64? (
-		>=app-emulation/emul-linux-x86-baselibs-2.5.5-r3
-		>=app-emulation/emul-linux-x86-qtlibs-3.4.4
-		app-emulation/emul-linux-x86-compat
-		app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-sdl )
-	x86? (
-		virtual/xft
-		x11-libs/libX11
-		x11-libs/libXtst
-		x11-libs/libXext
-		x11-libs/libXt
-		x11-libs/libICE
-		x11-libs/libSM
-		x11-libs/libXrender
-		=virtual/libstdc++-3.3
-		x11-libs/libXcursor
-		media-libs/libsdl
-		$(qt_min_version 3.3.5) )"
+	virtual/xft
+	x11-libs/libXi
+	x11-libs/libX11
+	x11-libs/libXft
+	x11-libs/libXtst
+	x11-libs/libXext
+	x11-libs/libXt
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libXrender
+	x11-libs/libXrandr
+	x11-libs/libXau
+	x11-libs/libXcursor
+	x11-libs/libXdmcp
+	x11-libs/libXfixes
+	dev-libs/libxml2
+	media-libs/libsdl
+	media-libs/libmng
+	media-libs/jpeg
+	media-libs/libpng
+	media-libs/freetype
+	media-libs/fontconfig
+	$(qt_min_version 3.3.5)
+	x86? ( =virtual/libstdc++-3.3 )
+	sdk? ( dev-libs/libIDL )"
 
 S=${WORKDIR}
 
@@ -73,32 +77,32 @@ src_install() {
 	dosed -e "5d" /usr/share/applications/virtualbox.desktop
 	dosed -e "s/VirtualBox/virtualbox/" /usr/share/applications/virtualbox.desktop
 	dosed -e "s/VBox.png/virtualbox.png/" /usr/share/applications/virtualbox.desktop
+	dosed -e "s/innotek virtualbox/Innotek VirtualBox/" /usr/share/applications/virtualbox.desktop
+	dosed -e "s/X-MandrivaLinux-System;//" /usr/share/applications/virtualbox.desktop
 
 	insinto /opt/VirtualBox
 	doins UserManual.pdf
+
 	if use additions; then
 		doins -r additions
 	fi
 	if use sdk; then
 		doins -r sdk
-		fperms 0755 /opt/VirtualBox/sdk/bin/xpidl
+		fowners root:vboxusers /opt/VirtualBox/sdk/bin/xpidl
+		fperms 0750 /opt/VirtualBox/sdk/bin/xpidl
 		pax-mark -m "${D}"/opt/VirtualBox/sdk/bin/xpidl
 		make_wrapper xpidl "sdk/bin/xpidl" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-	fi
-	if use vditool; then
-		doins "${DISTDIR}"/vditool
-		fperms 0755 /opt/VirtualBox/vditool
-		pax-mark -m "${D}"/opt/VirtualBox/vditool
-		make_wrapper vditool "./vditool" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
 	fi
 
 	rm -rf src sdk tst* UserManual.pdf rdesktop-vrdp.tar.gz deffiles install.sh \
 	routines.sh runlevel.sh vboxdrv.sh VBox.sh VBox.png kchmviewer additions \
-	VirtualBox.desktop VirtualBox.chm VirtualBox.tar.bz2 LICENSE
+	VirtualBox.desktop VirtualBox.chm VirtualBox.tar.bz2 vditool VBoxAddIF.sh \
+	vboxnet.sh LICENSE
 
 	doins -r *
 	for each in VBox{Manage,SDL,SVC,XPCOMIPCD,VRDP} VirtualBox ; do
-		fperms 0755 /opt/VirtualBox/${each}
+		fowners root:vboxusers /opt/VirtualBox/${each}
+		fperms 0750 /opt/VirtualBox/${each}
 		pax-mark -m "${D}"/opt/VirtualBox/${each}
 	done
 
@@ -111,6 +115,9 @@ src_install() {
 	else
 		exeinto /opt/VirtualBox
 		newexe "${FILESDIR}/${PN}-wrapper" "wrapper.sh"
+		fowners root:vboxusers /opt/VirtualBox/wrapper.sh
+		fperms 0750 /opt/VirtualBox/wrapper.sh
+
 		dosym /opt/VirtualBox/wrapper.sh /usr/bin/virtualbox
 		dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxmanage
 		dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxsdl
@@ -128,6 +135,7 @@ pkg_postinst() {
 		elog "To launch VirtualBox just type: \"virtualbox\""
 	fi
 	elog ""
-	elog "You must be in the vboxusers group to use VirtualBox."
+	elog "You must be in the vboxusers group to use VirtualBox,"
+	elog "\"vditool\" is now deprecated, use \"VBoxManage\" instead."
 	elog ""
 }

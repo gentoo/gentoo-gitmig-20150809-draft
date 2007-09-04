@@ -1,0 +1,46 @@
+--- configure.orig	2007-08-31 14:42:12.000000000 +0200
++++ configure	2007-09-04 18:21:49.000000000 +0200
+@@ -1281,14 +1281,14 @@
+ # some things are not available in for OSE
+ if [ $OSE -ge 1 ]; then
+   cnf_append "VBOX_OSE" "1"
+-  cnf_append "VBOX_WITH_TESTSUITE" ""
++#  cnf_append "VBOX_WITH_TESTSUITE" ""
+   cnf_append "VBOX_WITH_WIN32_ADDITIONS" ""
+ 
+-  if [ "$OS" = "linux" ]; then
+-    cnf_append "VBOX_WITH_LINUX_ADDITIONS" "1"
+-  else
+-    cnf_append "VBOX_WITH_LINUX_ADDITIONS" ""
+-  fi
++#  if [ "$OS" = "linux" ]; then
++#    cnf_append "VBOX_WITH_LINUX_ADDITIONS" "1"
++#  else
++#    cnf_append "VBOX_WITH_LINUX_ADDITIONS" ""
++#  fi
+   echo >> $CNF
+ fi
+ 
+--- Config.kmk.orig	2007-08-31 15:01:30.000000000 +0200
++++ Config.kmk	2007-09-04 18:20:50.000000000 +0200
+@@ -135,7 +135,7 @@
+ # Build linux / win32 additions.
+ ifeq ($(BUILD_TARGET),linux)
+   VBOX_WITH_LINUX_ADDITIONS = 1
+-  VBOX_WITH_WIN32_ADDITIONS = 1
++#  VBOX_WITH_WIN32_ADDITIONS = 1
+ endif
+ ifeq ($(BUILD_TARGET),l4)
+  VBOX_WITH_LINUX_ADDITIONS = 1
+@@ -206,9 +206,9 @@
+ # Disable WINMM support for Windows (not implemented)
+ VBOX_WITH_WINMM =
+ # Enable the kchmviewer
+-VBOX_WITH_KCHMVIEWER = 1
++#VBOX_WITH_KCHMVIEWER = 1
+ # Build the testsuite.
+-VBOX_WITH_TESTSUITE = 1
++#VBOX_WITH_TESTSUITE = 1
+ # Build the testcases.
+ VBOX_WITH_TESTCASES = 1
+ # Set this to not use COM or XPCOM in places where it can be avoided.
