@@ -1,0 +1,65 @@
+diff -u mysql-ruby-2.7.4/test.rb mysql-ruby-2.7.4.new/test.rb
+--- mysql-ruby-2.7.4/test.rb	2006-12-20 05:31:52.000000000 +0000
++++ mysql-ruby-2.7.4.new/test.rb	2007-04-16 11:34:43.000000000 +0100
+@@ -1,16 +1,22 @@
+-#!/usr/local/bin/ruby
++#!/usr/bin/env ruby
+ # $Id: test.rb,v 1.24 2007-08-21 23:29:37 tommy Exp $
+
+ require "test/unit"
+-require "./mysql.o"
++require "mysql"
++
++ARGV.each do |a|
++    $argv ||= []
++    $argv << a
++end
+ 
+ class TC_Mysql < Test::Unit::TestCase
+   def setup()
+-    @host, @user, @pass, db, port, sock, flag = ARGV
++    @host, @user, @pass, db, port, sock, flag = $argv
+     @db = db || "test"
+     @port = port.to_i
+     @sock = sock.nil? || sock.empty? ? nil : sock
+     @flag = flag.to_i
++
+   end
+   def teardown()
+   end
+@@ -95,7 +101,7 @@
+ 
+ class TC_Mysql2 < Test::Unit::TestCase
+   def setup()
+-    @host, @user, @pass, db, port, sock, flag = ARGV
++    @host, @user, @pass, db, port, sock, flag = $argv
+     @db = db || "test"
+     @port = port.to_i
+     @sock = sock.nil? || sock.empty? ? nil : sock
+@@ -203,7 +209,7 @@
+ 
+ class TC_MysqlRes < Test::Unit::TestCase
+   def setup()
+-    @host, @user, @pass, db, port, sock, flag = ARGV
++    @host, @user, @pass, db, port, sock, flag = $argv
+     @db = db || "test"
+     @port = port.to_i
+     @sock = sock.nil? || sock.empty? ? nil : sock
+@@ -403,7 +409,7 @@
+ 
+ class TC_MysqlStmt < Test::Unit::TestCase
+   def setup()
+-    @host, @user, @pass, db, port, sock, flag = ARGV
++    @host, @user, @pass, db, port, sock, flag = $argv
+     @db = db || "test"
+     @port = port.to_i
+     @sock = sock.nil? || sock.empty? ? nil : sock
+@@ -433,7 +439,7 @@
+ 
+ class TC_MysqlStmt2 < Test::Unit::TestCase
+   def setup()
+-    @host, @user, @pass, db, port, sock, flag = ARGV
++    @host, @user, @pass, db, port, sock, flag = $argv
+     @db = db || "test"
+     @port = port.to_i
+     @sock = sock.nil? || sock.empty? ? nil : sock

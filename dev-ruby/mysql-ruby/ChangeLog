@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.42 2007/06/21 18:31:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.43 2007/09/04 19:31:43 graaff Exp $
+
+*mysql-ruby-2.7.4 (04 Sep 2007)
+
+  04 Sep 2007; Hans de Graaff <graaff@gentoo.org>
+  +files/mysql-ruby-2.7.4-test.patch, -mysql-ruby-2.7.ebuild,
+  +mysql-ruby-2.7.4.ebuild:
+  Version bump, thanks to Brenden Matthews in #191201. Remove older version.
+  
+   * BUG: Mysql::Stmt#execute memory leak.
 
   21 Jun 2007; Raúl Porcel <armin76@gentoo.org> mysql-ruby-2.7.3.ebuild:
   alpha stable wrt #171907

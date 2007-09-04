@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.ebuild,v 1.12 2007/01/05 16:48:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.4.ebuild,v 1.1 2007/09/04 19:31:43 graaff Exp $
 
 inherit ruby
 
@@ -10,12 +10,23 @@ SRC_URI="http://www.tmtm.org/downloads/mysql/ruby/${P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
-USE_RUBY="ruby16 ruby18 ruby19"
+USE_RUBY="ruby18 ruby19"
 DEPEND="virtual/ruby
 	virtual/mysql"
+
+TEST_DIR="/usr/share/${PN}/test/"
+
+src_unpack() {
+	unpack ${A}
+	if use hppa; then
+		sed -e 's/LONG_LONG/long long/' -i "${S}"/mysql.c.in
+	fi
+
+	epatch ${FILESDIR}/${P}-test.patch
+}
 
 src_compile() {
 	ruby extconf.rb || die
@@ -26,14 +37,17 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	dohtml *
+
+	insinto $TEST_DIR
+	doins test.rb
 }
 
 src_test() {
 	elog
 	elog "To test the programme you need to start mysql first."
-	elog "Then extract the tarball and run"
+	elog "Then run:"
 	elog
-	elog "	% ruby test.rb hostname user password"
+	elog "	% ruby ${TEST_DIR}test.rb hostname user password"
 	elog
 	elog "See /usr/share/doc/${PF}/html/README.html for detail."
 	elog
