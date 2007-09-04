@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsmbios
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/ChangeLog,v 1.11 2007/07/14 15:49:03 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/ChangeLog,v 1.12 2007/09/04 20:16:01 cedk Exp $
+
+*libsmbios-0.13.10 (04 Sep 2007)
+
+  04 Sep 2007; Cédric Krier <cedk@gentoo.org> +libsmbios-0.13.10.ebuild:
+  Version bump
 
   14 Jul 2007; Cédric Krier <cedk@gentoo.org> -libsmbios-0.13.2.ebuild:
   Remove old
