@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r2.ebuild,v 1.2 2007/07/09 06:29:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r2.ebuild,v 1.3 2007/09/04 22:06:16 jurek Exp $
 
 inherit eutils kde-functions autotools multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/hydrogen/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="alsa debug doc flac jack ladspa oss portaudio"
 
 RDEPEND="dev-libs/libxml2
