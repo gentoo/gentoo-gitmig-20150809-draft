@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.343 2007/09/02 13:21:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.344 2007/09/04 22:19:14 zzam Exp $
+
+*udev-115-r1 (04 Sep 2007)
+
+  04 Sep 2007; Matthias Schwarzott <zzam@gentoo.org> +files/modprobe-115.sh,
+  +udev-115-r1.ebuild:
+  Updated ebuild to git code of udev. This contains rule updates, mainly to
+  share more code with upstream. In this turn also changing modprobe.sh to be
+  able to load multiple modules at once. Now installing extras/collect. Adding
+  rules directory to CONFIG_PROTECT_MASK.
 
   02 Sep 2007; Matthias Schwarzott <zzam@gentoo.org> udev-114.ebuild,
   udev-115.ebuild:
