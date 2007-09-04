@@ -1,6 +1,16 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.57 2007/08/27 21:32:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.58 2007/09/04 19:36:32 calchan Exp $
+
+*nwn-1.68-r2 (04 Sep 2007)
+
+  04 Sep 2007; Denis Dupeyron <calchan@gentoo.org> +nwn-1.68-r2.ebuild:
+  Replaced provided libSDL with a custom version which should fix
+  compatibility with USE=xcb (bug #170644). Included patch based on
+  http://home.woh.rr.com/nwmovies/fullscreen-toggle-1211.patch which provides
+  fullscreen toggling and nwmovies compatibility fixes. See
+  http://home.woh.rr.com/nwmovies/libsdl.html for details. Also, fixed
+  behavior described in comment #6 of bug #183344.
 
   27 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> -nwn-1.68.ebuild,
   nwn-1.68-r1.ebuild:
