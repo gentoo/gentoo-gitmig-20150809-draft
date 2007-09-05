@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.3.4.ebuild,v 1.10 2007/07/22 10:03:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.3.4.ebuild,v 1.11 2007/09/05 20:17:34 vapier Exp $
 
 inherit eutils autotools
 
@@ -34,7 +34,6 @@ src_unpack() {
 	sed -i -e "/^docsdir =/s:doc/feh:share/doc/${PF}:" Makefile.am || die
 	# the bundled autotool code was generated with automake-1.4
 	# but there's no reason to restrict to that version #141427
-	export WANT_AUTOMAKE=1.9
 	eautoreconf
 }
 
@@ -44,6 +43,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog README TODO
 }
