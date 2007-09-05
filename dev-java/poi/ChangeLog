@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/poi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.38 2007/09/02 07:42:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.39 2007/09/05 03:04:34 wltjr Exp $
+
+  05 Sep 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  poi-3.0.1-r1.ebuild:
+  amd64 stable, bug #190303.
 
   02 Sep 2007; Christian Faulhammer <opfer@gentoo.org> poi-3.0.1-r1.ebuild:
   filter jikes
