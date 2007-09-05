@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gqradio
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.14 2007/08/19 07:42:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.15 2007/09/05 17:55:28 phreak Exp $
+
+  05 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing weeve from metadata due to his retirement (see #181019 for reference).
 
   19 Aug 2007; Samuli Suominen <drac@gentoo.org> gqradio-1.9.2.ebuild:
   Remove USE flags gnome and nls which didn't do anything but installed
