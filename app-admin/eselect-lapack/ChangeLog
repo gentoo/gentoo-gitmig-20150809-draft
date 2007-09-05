@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-lapack
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.16 2007/06/07 18:28:54 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.17 2007/09/05 15:31:58 jer Exp $
+
+  05 Sep 2007; Jeroen Roovers <jer@gentoo.org> eselect-lapack-0.1.ebuild:
+  Stable for HPPA (bug #189738).
 
   07 Jun 2007; Joe Peterson <lavajoe@gentoo.org> eselect-lapack-0.1.ebuild:
   Add ~x86-fbsd keyword
