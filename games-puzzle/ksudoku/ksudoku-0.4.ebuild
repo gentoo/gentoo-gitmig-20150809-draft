@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.6 2007/09/05 16:13:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.7 2007/09/05 17:42:32 angelos Exp $
 
 inherit flag-o-matic multilib kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND=">=dev-util/cmake-2.4.6"
