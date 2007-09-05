@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3010 2007/09/04 21:36:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3011 2007/09/05 16:53:16 r3pek Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1492,8 +1492,9 @@ net-libs/aqbanking:hbci - Enable support for HBCI
 net-libs/aqbanking:yellownet - Enable support for Yellownet
 net-libs/courier-authlib:vpopmail - Enable vpopmail support
 net-libs/libetpan:liblockfile - Enable support for liblockfile library
-net-libs/libssh2:libgcrypt - Use libgcrypt for crypto
+net-libs/libfwbuilder:stlport - Enagle support for STLport
 net-libs/libpri:bri - Enable ISDN BRI support (bristuff)
+net-libs/libssh2:libgcrypt - Use libgcrypt for crypto
 net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/libvncserver:nobackchannel - disable backchannel support
 net-libs/opal:noaudio - Disable audio codecs
