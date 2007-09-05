@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>cedk@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		Bitlbee as an IRC to IM gateway. It provides an irc server that allows
