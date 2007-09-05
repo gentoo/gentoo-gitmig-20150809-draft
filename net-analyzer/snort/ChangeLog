@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.129 2007/04/22 06:21:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.130 2007/09/05 20:07:45 jokey Exp $
+
+*snort-2.7.0.1 (05 Sep 2007)
+
+  05 Sep 2007; Markus Ullmann <jokey@gentoo.org> +snort-2.7.0.1.ebuild:
+  Version bump wrt bug #185501, needs more testing
 
   22 Apr 2007; Daniel Black <dragonheart@gentoo.org> +files/snort.rc7,
   -files/snort.rc9, +snort-2.4.5.ebuild, snort-2.6.1.4.ebuild,
