@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.23.ebuild,v 1.2 2007/09/05 17:36:59 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.1.ebuild,v 1.1 2007/09/05 17:36:59 dang Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
-inherit gnome2 flag-o-matic eutils autotools
+inherit gnome2
 
 DESCRIPTION="News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds"
 HOMEPAGE="http://liferea.sourceforge.net/"
@@ -12,24 +12,27 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="dbus firefox gtkhtml gnutls libnotify lua networkmanager seamonkey xulrunner"
 
-RDEPEND=">=x11-libs/gtk+-2.8
-	x11-libs/pango
-	>=gnome-base/gconf-2
-	>=dev-libs/libxml2-2.6.27
-	>=dev-libs/libxslt-1.1.19
-	>=dev-libs/glib-2
+RDEPEND="
+	libnotify? ( >=x11-libs/libnotify-0.3.2 )
+	lua? ( >=dev-lang/lua-5.1 )
 	xulrunner? ( net-libs/xulrunner )
 	!xulrunner? ( firefox? ( www-client/mozilla-firefox ) )
 	!xulrunner? ( !firefox? ( seamonkey? ( www-client/seamonkey ) ) )
 	!amd64? ( !xulrunner? ( !firefox? ( !seamonkey? ( =gnome-extra/gtkhtml-2* ) ) ) )
 	!amd64? ( gtkhtml? ( =gnome-extra/gtkhtml-2* ) )
+	>=x11-libs/gtk+-2.8
+	x11-libs/pango
+	>=gnome-base/gconf-2
+	>=dev-libs/libxml2-2.6.27
+	>=dev-libs/libxslt-1.1.19
+	>=dev-db/sqlite-3.3
+	>=dev-libs/glib-2
+	>=gnome-base/libglade-2
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
-	libnotify? ( >=x11-libs/libnotify-0.3.2 )
 	networkmanager? ( net-misc/networkmanager )
-	lua? ( >=dev-lang/lua-5.1 )
 	gnutls? ( net-libs/gnutls )"
 
 DEPEND="${RDEPEND}
@@ -37,14 +40,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-
-src_unpack() {
-	gnome2_src_unpack
-
-	epatch "${FILESDIR}/${PN}-1.1.0-libnotify.patch"
-
-	eautoreconf || die "Autoreconf failed"
-}
 
 pkg_setup() {
 	# On amd64, gtkhtml isn't supported.  You need one of the gecko use flags
