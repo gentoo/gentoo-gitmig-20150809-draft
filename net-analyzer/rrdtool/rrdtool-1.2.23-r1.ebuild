@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.23-r1.ebuild,v 1.13 2007/08/25 23:05:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.23-r1.ebuild,v 1.14 2007/09/05 19:41:44 solar Exp $
 
 inherit autotools eutils flag-o-matic multilib perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="http://oss.oetiker.ch/rrdtool/pub/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="doc perl python ruby rrdcgi tcl uclibc"
+IUSE="doc perl python ruby rrdcgi tcl"
 
 RDEPEND="tcl? ( dev-lang/tcl )
 	>=sys-libs/zlib-1.2.1
@@ -38,7 +38,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-tclbindings.patch
 	use ruby && epatch "${FILESDIR}"/${P}-ruby-binding-compile.patch
 	use ruby && epatch "${FILESDIR}"/${P}-ruby-binding-configure.patch
-	use uclibc && epatch "${FILESDIR}"/${PN}-1.2.15-no-man.patch
 	eautoreconf
 }
 
