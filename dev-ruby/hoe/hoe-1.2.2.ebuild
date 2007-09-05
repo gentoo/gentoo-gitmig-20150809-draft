@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-1.2.2.ebuild,v 1.2 2007/08/26 17:52:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-1.2.2.ebuild,v 1.3 2007/09/05 14:29:22 angelos Exp $
 
 inherit ruby gems
 
@@ -10,7 +10,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ia64 ~ppc ~ppc64 x86"
 IUSE=""
 
 USE_RUBY="ruby18"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/zentest-3.6.1.ebuild,v 1.2 2007/08/26 17:54:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/zentest-3.6.1.ebuild,v 1.3 2007/09/05 14:29:50 angelos Exp $
 
 inherit ruby gems
 
@@ -15,7 +15,7 @@ LICENSE="Ruby"
 # change the filename on the end, it still downloads the same file.
 SRC_URI="http://gems.rubyforge.org/gems/${MY_P}.gem"
 
-KEYWORDS="~amd64 ia64 x86"
+KEYWORDS="amd64 ia64 x86"
 SLOT="0"
 IUSE=""
 
