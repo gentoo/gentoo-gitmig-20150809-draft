@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/konversation
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.55 2007/08/16 16:20:19 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.56 2007/09/05 12:54:37 keytoaster Exp $
+
+*konversation-1.0.1-r3 (05 Sep 2007)
+
+  05 Sep 2007; Tobias Heinlein <keytoaster@gentoo.org>
+  +files/konversation-1.0.1-media-script-vulnerability.patch,
+  +konversation-1.0.1-r3.ebuild:
+  Adding patch wrt security bug #189255
 
 *konversation-1.0.1-r2 (16 Aug 2007)
 
