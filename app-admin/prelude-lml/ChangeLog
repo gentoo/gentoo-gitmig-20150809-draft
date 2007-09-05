@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/prelude-lml
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.32 2007/04/22 10:09:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.33 2007/09/05 16:48:26 jokey Exp $
+
+*prelude-lml-0.9.10.1 (05 Sep 2007)
+
+  05 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  -prelude-lml-0.9.8.1.ebuild, +prelude-lml-0.9.10.1.ebuild:
+  Version bump wrt bug #186049
 
   22 Apr 2007; <pva@gentoo.org> prelude-lml-0.9.1.ebuild:
   Use do{conf,init}d, bug #174266.

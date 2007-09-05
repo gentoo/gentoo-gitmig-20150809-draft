@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/prelude-lml-0.9.8.1.ebuild,v 1.1 2007/01/07 14:11:44 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/prelude-lml-0.9.10.1.ebuild,v 1.1 2007/09/05 16:48:26 jokey Exp $
 
 inherit flag-o-matic
 
