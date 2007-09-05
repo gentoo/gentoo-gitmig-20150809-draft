@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5_p20070823.ebuild,v 1.2 2007/09/05 20:10:14 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5_p20070823.ebuild,v 1.3 2007/09/05 20:37:03 rbu Exp $
 
 inherit gnome2 eutils
 
@@ -53,8 +53,14 @@ G2CONF="${G2CONF} \
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack () {
+pkg_setup() {
+	if built_with_use sys-apps/iproute2 minimal ; then
+		eerror "Please rebuild sys-apps/iproute2 without the minimal useflag."
+		die "Fix iproute2 first."
+	fi
+}
 
+src_unpack () {
 	unpack ${A}
 	cd "${S}"
 
