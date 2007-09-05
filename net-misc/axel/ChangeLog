@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/axel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.32 2007/09/05 07:53:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.33 2007/09/05 10:14:42 yoswink Exp $
+
+  05 Sep 2007; Jose Luis Rivero <yoswink@gentoo.org> axel-1.0b-r2.ebuild:
+  Stable on sparc wrt security bug #162005
 
   05 Sep 2007; Markus Rothe <corsair@gentoo.org> axel-1.0b-r2.ebuild:
   Stable on ppc64; bug #162005
