@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-oodict
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.20 2007/09/02 10:15:10 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.21 2007/09/05 18:27:00 opfer Exp $
+
+  05 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  eselect-oodict-20061117.ebuild:
+  stable x86, bug 182397
 
   02 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> metadata.xml,
   eselect-oodict-20061117.ebuild:
