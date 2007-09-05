@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115.ebuild,v 1.5 2007/09/02 13:21:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115.ebuild,v 1.6 2007/09/05 09:03:46 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -82,6 +82,8 @@ src_unpack() {
 	sed -ie '/^DEBUG/ c\DEBUG = false' Makefile
 	# Do not use optimization flags from the package
 	sed -ie 's|$(OPTIMIZATION)||g' Makefile
+	# Do not require xmlto to refresh manpages
+	sed -ie 's|$(MAN_PAGES)||g' Makefile
 
 	# Make sure there is no sudden changes to udev.rules.gentoo
 	# (more for my own needs than anything else ...)

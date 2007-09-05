@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.344 2007/09/04 22:19:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.345 2007/09/05 09:03:46 zzam Exp $
+
+  05 Sep 2007; Matthias Schwarzott <zzam@gentoo.org> udev-115.ebuild,
+  udev-115-r1.ebuild:
+  Fix make trying to rebuild manpages using xmlto, thanks to jakub, bug 191338.
 
 *udev-115-r1 (04 Sep 2007)
 
