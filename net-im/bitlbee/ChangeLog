@@ -1,6 +1,12 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.81 2007/09/05 19:07:36 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.82 2007/09/05 21:35:23 cedk Exp $
+
+*bitlbee-1.0.4 (05 Sep 2007)
+
+  05 Sep 2007; Cédric Krier <cedk@gentoo.org> +files/bitlbeed.confd2,
+  +files/bitlbeed.initd, +bitlbee-1.0.4.ebuild:
+  Version bump and use bitlbee user instead of nobody
 
   05 Sep 2007; Cédric Krier <cedk@gentoo.org> metadata.xml:
   Add cedk

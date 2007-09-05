@@ -1,0 +1,27 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or
+# later
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/files/bitlbeed.initd,v 1.1 2007/09/05 21:35:23 cedk Exp $
+
+BITLBEED_EXEC=/usr/bin/bitlbeed
+
+depend() {
+	need logger net
+}
+
+start () {
+	ebegin "Starting bitlbeed"
+	start-stop-daemon --start --startas ${BITLBEED_EXEC} \
+		-c bitlbee:bitlbee  --exec ${BITLBEED_EXEC} -- \
+		${BITLBEED_OPTS} /usr/sbin/bitlbee
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping bitlbeed"
+	start-stop-daemon --stop --signal 9 \
+		--exec ${BITLBEED_EXEC}
+	eend $?
+}
+
