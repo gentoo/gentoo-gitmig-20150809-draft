@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/obexfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/ChangeLog,v 1.7 2007/09/04 14:47:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/ChangeLog,v 1.8 2007/09/05 14:03:16 mrness Exp $
+
+*obexfs-0.11_rc3 (05 Sep 2007)
+
+  05 Sep 2007; Alin Năstac <mrness@gentoo.org> -obexfs-0.11_rc2.ebuild,
+  +obexfs-0.11_rc3.ebuild:
+  Version bump.
 
 *obexfs-0.11_rc2 (04 Sep 2007)
 
