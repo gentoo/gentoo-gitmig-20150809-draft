@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.44 2007/09/05 05:51:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.45 2007/09/05 14:14:12 jer Exp $
+
+  05 Sep 2007; Jeroen Roovers <jer@gentoo.org> mysql-ruby-2.7.4.ebuild:
+  Back to ~arch.
 
   05 Sep 2007; Hans de Graaff <graaff@gentoo.org> Manifest:
   Tell CVS to keep it's grubby keyword-changing hands off of the patch so that
