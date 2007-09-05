@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.67 2007/09/05 06:12:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.68 2007/09/05 11:30:49 armin76 Exp $
+
+  05 Sep 2007; Raúl Porcel <armin76@gentoo.org> stunnel-4.20.ebuild:
+  alpha stable wrt #113778, thanks to Tobias Klausmann for testing
 
   05 Sep 2007; Christian Faulhammer <opfer@gentoo.org> stunnel-4.20.ebuild:
   stable x86, bug 113778
