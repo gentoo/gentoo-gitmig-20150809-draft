@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0_rc3_p4983.ebuild,v 1.3 2007/07/22 04:33:42 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0_rc3_p4983.ebuild,v 1.4 2007/09/05 18:04:18 lack Exp $
 
 inherit eutils autotools versionator
 
@@ -62,7 +62,7 @@ src_unpack() {
 	# We need to be able to include directories rather than just plain
 	# files in menu [include] items. This patch will allow us to do clever
 	# things with style ebuilds.
-	epatch "${FILESDIR}/${PV}/gentoo_style_location.patch"
+	epatch "${FILESDIR}/${MY_PBASE}/gentoo_style_location.patch"
 
 	# Add in the Gentoo -r number to fluxbox -version output.
 	if [[ "${PR}" == "r0" ]] ; then
