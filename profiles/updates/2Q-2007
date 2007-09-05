@@ -4,6 +4,7 @@ move net-misc/linphone net-voip/linphone
 move net-im/wengophone net-voip/wengophone-bin
 slotmove app-editors/emacs 21.3.50 22
 slotmove app-editors/emacs 22.0.50 22
+slotmove <=app-editors/emacs-cvs-21.3.50 0 22
 slotmove app-editors/emacs-cvs 21.3.50 22
 slotmove app-editors/emacs-cvs 22.0.50 22
 slotmove app-editors/emacs-cvs 22.0.90 22
