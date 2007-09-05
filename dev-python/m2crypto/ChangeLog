@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.28 2007/06/17 14:56:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.29 2007/09/05 17:19:02 hawking Exp $
+
+*m2crypto-0.18 (05 Sep 2007)
+
+  05 Sep 2007; Ali Polatel <hawking@gentoo.org> +m2crypto-0.18.ebuild:
+  version bump.
 
   17 Jun 2007; Raúl Porcel <armin76@gentoo.org> m2crypto-0.17-r1.ebuild:
   Add ~alpha wrt #172817
