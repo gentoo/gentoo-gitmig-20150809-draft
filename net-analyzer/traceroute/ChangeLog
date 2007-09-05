@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.44 2007/09/04 17:15:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.45 2007/09/05 14:44:11 uberlord Exp $
+
+  05 Sep 2007; Roy Marples <uberlord@gentoo.org> traceroute-2.0.8.ebuild:
+  Version 2 looks like it's Linux only, so FreeBSD keywords are dropped.
 
 *traceroute-2.0.8 (04 Sep 2007)
 
