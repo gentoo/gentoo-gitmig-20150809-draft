@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/dhcdbd-3.0.ebuild,v 1.1 2007/09/04 18:55:01 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/dhcdbd-3.0.ebuild,v 1.2 2007/09/05 20:07:08 philantrop Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://dcantrel.fedorapeople.org/dhcdbd/${P}.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug"
 
 DEPEND="sys-apps/dbus
