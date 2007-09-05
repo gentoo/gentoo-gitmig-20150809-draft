@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.3.3.1-r2.ebuild,v 1.1 2007/08/19 17:42:58 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.3.3.1-r3.ebuild,v 1.1 2007/09/05 18:38:08 wltjr Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Anti-Spam SMTP Proxy written in Perl."
 HOMEPAGE="http://assp.sourceforge.net/"
 MY_PN=ASSP_${PV}-Install
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}.zip
-	mirror://gentoo/${P}.patch.tbz2"
+	mirror://gentoo/${PF}.patch.tbz2"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -58,7 +58,7 @@ src_unpack() {
 		die "Could not fix upstream bug with PopB4SMTPMerak -> $PopB4SMTPMerak"
 
 	# patch is against unix-format, so patch after dos2unix
-	epatch ${WORKDIR}/assp-${PV}.patch
+	epatch ${WORKDIR}/${PF}.patch
 
 	# remove windows stuff
 	rm "${S}/addservice.pl" || die "Could not remove ${S}/addservice.pl"
