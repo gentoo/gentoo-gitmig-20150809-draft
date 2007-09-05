@@ -1,0 +1,48 @@
+--- mailparse-1.49.c	2006-09-30 18:42:45.000000000 +0400
++++ mailparse.c	2006-09-30 22:03:37.000000000 +0400
+@@ -231,7 +231,7 @@
+ 	php_mimepart *part;
+ 	zval *zpart;
+ 	char *mode;
+-	long mode_len;
++	int mode_len;
+ 	zval *source = NULL;
+ 
+ 	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "sz!", &mode,&mode_len, &source) == FAILURE)
+@@ -839,7 +839,7 @@
+ PHP_FUNCTION(mailparse_rfc822_parse_addresses)
+ {
+ 	char *addresses;
+-	long addresses_len;
++	int addresses_len;
+ 	php_rfc822_tokenized_t *toks = NULL;
+ 	php_rfc822_addresses_t *addrs = NULL;
+ 	int i;
+@@ -1031,7 +1031,7 @@
+ PHP_FUNCTION(mailparse_msg_parse)
+ {
+ 	char *data;
+-	long data_len;
++	int data_len;
+ 	zval *arg;
+ 	php_mimepart *part;
+ 
+@@ -1053,7 +1053,7 @@
+ PHP_FUNCTION(mailparse_msg_parse_file)
+ {
+ 	char *filename;
+-	long filename_len;
++	int filename_len;
+ 	php_mimepart *part;
+ 	char *filebuf;
+ 	php_stream *stream;
+@@ -1501,7 +1501,7 @@
+ 	zval *arg;
+ 	php_mimepart *part, *foundpart;
+ 	char *mimesection;
+-	long mimesection_len;
++	int mimesection_len;
+ 
+ 	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "rs", &arg,&mimesection, &mimesection_len) == FAILURE)	{
+ 		RETURN_FALSE; 
+

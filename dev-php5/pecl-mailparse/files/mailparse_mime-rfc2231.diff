@@ -1,0 +1,97 @@
+--- php_mailparse_mime.c.orig	Mon Feb 28 14:21:45 2005
++++ php_mailparse_mime.c	Fri Dec 15 10:57:16 2006
+@@ -54,7 +54,11 @@
+ {
+ 	struct php_mimeheader_with_attributes *attr;
+ 	int i, first_semi, next_semi, comments_before_semi, netscape_bug = 0;
+-	
++    char *name_buf = NULL;
++    smart_str value_buf = {0};
++    int is_rfc2231_name = 0;
++    char *check_name;
++
+ 	attr = ecalloc(1, sizeof(struct php_mimeheader_with_attributes));
+ 
+ 	MAKE_STD_ZVAL(attr->attributes);
+@@ -106,7 +110,7 @@
+ 
+ 				/* count those tokens; we expect "token = token" (3 tokens); if there are
+ 				 * more than that, then something is quite possibly wrong - Netscape Bug! */
+-				if (next_semi <= toks->ntokens
++				if (next_semi < toks->ntokens
+ 						&& toks->tokens[next_semi].token != ';'
+ 						&& next_semi - first_semi - comments_before_semi > 3) {
+ 					next_semi = i + 1;
+@@ -117,9 +121,56 @@
+ 						PHP_RFC822_RECOMBINE_STRTOLOWER|PHP_RFC822_RECOMBINE_IGNORE_COMMENTS);
+ 				value = php_rfc822_recombine_tokens(toks, i, next_semi - i,
+ 						PHP_RFC822_RECOMBINE_IGNORE_COMMENTS);
+-			
+-				add_assoc_string(attr->attributes, name, value, 0);
+-				efree(name);
++	
++                /* support rfc2231 mime parameter value 
++                 *
++                 * Parameter Value Continuations:
++                 *
++                 * Content-Type: message/external-body; access-type=URL;
++                 * URL*0="ftp://";
++                 * URL*1="cs.utk.edu/pub/moore/bulk-mailer/bulk-mailer.tar"
++                 * 
++                 * is semantically identical to
++                 *
++                 * Content-Type: message/external-body; access-type=URL;
++                 * URL="ftp://cs.utk.edu/pub/moore/bulk-mailer/bulk-mailer.tar"
++                 * 
++                 * Parameter Value Character Set and Language Information: 
++                 *
++                 * Content-Type: application/x-stuff;
++                 * title*=us-ascii'en-us'This%20is%20%2A%2A%2Afun%2A%2A%2A
++                 *
++                 * Modify by Zhao Wei
++                 * E-mail: zhaowei@eyou.net
++                 */
++                check_name = name;
++                while (*check_name) {
++                    if (*check_name == '*')
++                        break;
++                    check_name++;
++                }
++                if (*check_name == '*') {
++                    *check_name = 0;
++                    if (NULL == name_buf)
++                        name_buf = name;
++                    else
++                        efree(name);
++                    smart_str_appends(&value_buf, value);
++                    efree(value);
++                    is_rfc2231_name = 1;
++                }
++                
++                if (1 == is_rfc2231_name) {
++                    if (*name != 0 && strcmp(name_buf, name) != 0) {
++                        add_assoc_string(attr->attributes, name_buf, estrndup(value_buf.c, value_buf.len), 0);
++                        efree(name_buf);
++                        smart_str_free(&value_buf);
++                        is_rfc2231_name = 0;
++                    }
++                } else {
++                    add_assoc_string(attr->attributes, name, value, 0);
++                    efree(name);
++                }
+ 			}
+ 		}
+ 		if (next_semi < toks->ntokens && !netscape_bug)
+@@ -128,6 +179,13 @@
+ 		first_semi = next_semi;
+ 		netscape_bug = 0;
+ 	}
++    if (1 == is_rfc2231_name) {
++        add_assoc_string(attr->attributes, name_buf, estrndup(value_buf.c, value_buf.len), 0);
++        efree(name_buf);
++        smart_str_free(&value_buf);
++    }
++
++
+ 	return attr;
+ }
