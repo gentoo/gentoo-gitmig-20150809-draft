@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-1.1.2-r2.ebuild,v 1.5 2007/08/15 21:22:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-1.1.2-r2.ebuild,v 1.6 2007/09/05 14:30:55 armin76 Exp $
 
 inherit eutils
 
@@ -40,6 +40,7 @@ src_compile() {
 		--libdir=/usr/$(get_libdir)/${PN} \
 		--docdir=/usr/share/doc/${PF} \
 		--disable-optimizations \
+		--with-simdir=/usr/$(get_libdir)/${PN}/modules \
 		$(use_enable debug) \
 		${myconf}
 
