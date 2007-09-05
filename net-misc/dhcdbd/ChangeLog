@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcdbd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.11 2007/09/05 20:07:08 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.12 2007/09/05 21:23:24 tester Exp $
+
+  05 Sep 2007; <tester@gentoo.org> dhcdbd-3.0.ebuild:
+  Stable on x86 per bug #191302
 
   05 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> dhcdbd-3.0.ebuild:
   Marked stable on amd64 as per bug 191302 to make sure stable systems
