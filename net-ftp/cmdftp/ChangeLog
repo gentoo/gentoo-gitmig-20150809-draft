@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/cmdftp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/cmdftp/ChangeLog,v 1.3 2007/09/05 20:05:23 jsin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/cmdftp/ChangeLog,v 1.4 2007/09/05 22:17:08 jsin Exp $
+
+  05 Sep 2007; Jason Smathers (jsin) <jsin@gentoo.org> cmdftp-0.9.7.ebuild:
+  added ~x86-fbsd keyword
 
 *cmdftp-0.9.7 (05 Sep 2007)
 
