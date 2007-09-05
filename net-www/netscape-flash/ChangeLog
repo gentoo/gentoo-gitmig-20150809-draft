@@ -1,6 +1,12 @@
 # ChangeLog for net-www/netscape-flash
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.56 2007/07/19 16:48:16 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.57 2007/09/05 19:06:38 lack Exp $
+
+*netscape-flash-9.0.60.0_beta082207 (05 Sep 2007)
+
+  05 Sep 2007; Jim Ramsay <lack@gentoo.org>
+  +netscape-flash-9.0.60.0_beta082207.ebuild:
+  Adding the beta release with h.264 support (bug 189833)
 
 *netscape-flash-9.0.48.0-r1 (19 Jul 2007)
 
