@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.12-r1.ebuild,v 1.1 2007/08/28 20:33:16 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.12-r1.ebuild,v 1.2 2007/09/05 13:45:33 coldwind Exp $
 
 inherit gnome2 eutils autotools
 
@@ -27,7 +27,8 @@ RDEPEND=">=dev-libs/dbus-glib-0.51
 	spell? ( app-text/aspell )
 	python? ( >=dev-lang/python-2.4.4-r5 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0"
+	>=dev-util/pkgconfig-0.12.0
+	dev-util/gtk-doc"
 
 DOCS="CONTRIBUTORS AUTHORS README"
 
