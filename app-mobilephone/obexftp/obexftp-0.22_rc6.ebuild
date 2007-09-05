@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22_rc6.ebuild,v 1.1 2007/09/04 14:45:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22_rc6.ebuild,v 1.2 2007/09/05 08:18:40 mrness Exp $
 
-WANT_AUTOMAKE="none"
+WANT_AUTOMAKE="1.9"
 
 inherit eutils perl-module flag-o-matic autotools
 
@@ -13,7 +13,7 @@ SRC_URI="http://triq.net/obexftp/${P/_/-}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="bluetooth debug nls perl python swig tcl"
+IUSE="bluetooth debug iconv perl python swig tcl"
 
 RDEPEND=">=dev-libs/openobex-1.3
 	bluetooth? ( >=net-wireless/bluez-libs-2.25 )
@@ -23,18 +23,16 @@ RDEPEND=">=dev-libs/openobex-1.3
 	swig? ( >=dev-lang/swig-1.3.31 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	nls? ( sys-devel/gettext )"
+	iconv? ( sys-devel/gettext )"
 
 S="${WORKDIR}"/${P%_*}
 
 src_unpack() {
 	unpack ${A}
 
-	if ! use nls ; then
-		cd "${S}"
-		epatch "${FILESDIR}/${P%_*}-no_iconv.patch"
-		eautoconf
-	fi
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-iconv.patch"
+	eautoreconf
 }
 
 src_compile() {
@@ -48,6 +46,7 @@ src_compile() {
 	fi
 
 	econf \
+		$(use_enable iconv) \
 		$(use_enable bluetooth) \
 		$(use_enable swig) \
 		$(use_enable perl) \
