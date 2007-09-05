@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8-r2.ebuild,v 1.1 2007/08/29 18:55:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8-r2.ebuild,v 1.2 2007/09/05 17:04:05 wolf31o2 Exp $
 
-inherit eutils
+inherit autotools eutils
 
-DESCRIPTION="OpenAL, the Open Audio Library, is an open, vendor-neutral, cross-platform API for interactive, primarily spatialized audio"
+DESCRIPTION="the Open Audio Library is an open, vendor-neutral, cross-platform API for interactive, primarily spatialized audio"
 HOMEPAGE="http://www.openal.org"
 SRC_URI="http://www.openal.org/openal_webstf/downloads/${P}.tar.gz"
 
@@ -20,10 +20,7 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0.2 )
 	vorbis? ( media-libs/libvorbis )
 	mp3? ( media-libs/libmad )"
 
-DEPEND="${RDEPEND}
-	sys-devel/autoconf
-	sys-devel/automake
-	sys-devel/libtool"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -37,8 +34,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export WANT_AUTOCONF=2.5
-	autoconf \
+	eautoconf \
 		|| die "autoconf failed"
 
 	econf \
@@ -57,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install \
+	emake DESTDIR="${D}" install \
 		|| die "make install failed"
 
 	dodoc AUTHORS ChangeLog NEWS NOTES README TODO

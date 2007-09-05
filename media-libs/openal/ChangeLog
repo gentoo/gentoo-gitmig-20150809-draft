@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.81 2007/08/29 18:55:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.82 2007/09/05 17:04:05 wolf31o2 Exp $
+
+  05 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  openal-0.0.8-r2.ebuild:
+  Updated the ebuild with changes from Renato Caldas
+  <seventhguardian@gmail.com>. Closing bug #191048.
 
 *openal-0.0.8-r2 (29 Aug 2007)
 
