@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libpreludedb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.32 2007/03/03 23:02:09 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.33 2007/09/05 16:43:50 jokey Exp $
+
+*libpreludedb-0.9.13 (05 Sep 2007)
+
+  05 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/libpreludedb-0.9.11.1-makefile.patch,
+  -libpreludedb-0.9.11.1.ebuild, +libpreludedb-0.9.13.ebuild:
+  Version bump wrt bug #186046
 
   03 Mar 2007; Marius Mauch <genone@gentoo.org> libpreludedb-0.9.2.ebuild,
   libpreludedb-0.9.11.1.ebuild:

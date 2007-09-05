@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.11.1.ebuild,v 1.3 2007/03/03 23:02:09 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.13.ebuild,v 1.1 2007/09/05 16:43:50 jokey Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,13 +19,7 @@ DEPEND="virtual/libc
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql )
 	sqlite3? ( =dev-db/sqlite-3* )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${P}-makefile.patch
-}
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	local myconf
