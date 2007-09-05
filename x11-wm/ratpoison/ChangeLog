@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.47 2007/08/02 15:21:50 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.48 2007/09/05 18:05:37 phreak Exp $
+
+  05 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing weeve from metadata due to his retirement (see #181019 for reference).
 
   02 Aug 2007; Roy Marples <uberlord@gentoo.org> ratpoison-1.4.1.ebuild:
   Keyworded ~x86-fbsd, #157553 thanks to Marc Kowarsky.
