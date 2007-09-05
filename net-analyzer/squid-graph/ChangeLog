@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/squid-graph
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.17 2007/05/01 22:40:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.18 2007/09/05 16:06:58 jokey Exp $
+
+*squid-graph-3.2 (05 Sep 2007)
+
+  05 Sep 2007; Markus Ullmann <jokey@gentoo.org> +squid-graph-3.2.ebuild:
+  Version bump and new upstream url wrt bug #191104
 
   01 May 2007; Marius Mauch <genone@gentoo.org> squid-graph-3.1.ebuild,
   squid-graph-3.1-r1.ebuild:
