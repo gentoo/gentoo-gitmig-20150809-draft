@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/lapack-docs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/lapack-docs/ChangeLog,v 1.5 2007/08/23 15:34:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/lapack-docs/ChangeLog,v 1.6 2007/09/05 15:29:06 jer Exp $
+
+  05 Sep 2007; Jeroen Roovers <jer@gentoo.org> lapack-docs-3.1.1.ebuild:
+  Stable for HPPA (bug #189738).
 
   23 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
   lapack-docs-3.1.1.ebuild:
