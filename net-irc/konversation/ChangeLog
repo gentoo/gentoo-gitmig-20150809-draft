@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/konversation
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.56 2007/09/05 12:54:37 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.57 2007/09/05 14:15:43 angelos Exp $
+
+  05 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  konversation-1.0.1-r3.ebuild:
+  Stable on amd64 wrt security bug #189255
 
 *konversation-1.0.1-r3 (05 Sep 2007)
 
