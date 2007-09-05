@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>weeve@gentoo.org</email>
-  <name>Jason Wever</name>
-</maintainer>
-<longdescription>
-  Bitlbee as an IRC to IM gateway.  It provides an irc server that allows you
-  to log on and then connect to various instant messaging protocols (AIM, MSN,
-  Yahoo, Jabber, etc).
-</longdescription>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+	</maintainer>
+	<longdescription>
+		Bitlbee as an IRC to IM gateway. It provides an irc server that allows
+		you to log on and then connect to various instant messaging protocols
+		(AIM, MSN, Yahoo, Jabber, etc).
+	</longdescription>
 </pkgmetadata>
