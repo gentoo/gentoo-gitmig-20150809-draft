@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7676 2007/09/04 21:10:52 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7677 2007/09/05 17:35:28 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Daniel Gryniewicz <dang@gentoo.org> (05 Sep 2007)
+# Masked for testing  bug #191408
+>=net-news/liferea-1.4
 
 # Andreas Proschofsky <suka@gentoo.org> (04 Sep 2007)
 # Release Candidate for OpenOffice.org 2.3.0
