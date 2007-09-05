@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.6.3-r1.ebuild,v 1.3 2007/07/29 17:45:25 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.6.3-r1.ebuild,v 1.4 2007/09/05 01:29:25 nichoj Exp $
 
 inherit ruby eutils
 
 DESCRIPTION="Back-end XSLT processor for an XML-based web site"
 HOMEPAGE="http://gentoo.neysx.org/mystuff/gorg/gorg.xml"
 SRC_URI="http://gentoo.neysx.org/mystuff/gorg/${P}.tgz"
-IUSE="apache fastcgi mysql"
+IUSE="mysql"
 
 SLOT="0"
 USE_RUBY="ruby18"
@@ -18,10 +18,6 @@ DEPEND="virtual/ruby
 	>=dev-libs/libxml2-2.6.16
 	>=dev-libs/libxslt-1.1.12"
 RDEPEND="${DEPEND}
-	apache? ( www-servers/apache )
-	fastcgi? ( >=dev-ruby/ruby-fcgi-0.8.5-r1
-		apache? ( >=www-apache/mod_fcgid-1.05 )
-	)
 	mysql? ( >=dev-ruby/ruby-dbi-0.0.21 >=dev-ruby/mysql-ruby-2.5 )"
 
 pkg_setup() {
@@ -52,4 +48,11 @@ src_install() {
 	diropts -m0770 -o gorg -g gorg; keepdir /var/cache/gorg
 
 	dodoc Changelog README
+}
+
+pkg_postinst() {
+	elog "To use with apache, do:"
+	elog "\t emerge www-servers/apache"
+	elog "To use with fastcgi, do:"
+	elog "\t emerge >=www-apache/mod_fcgid-1.05 >=dev-ruby/ruby-fcgi-0.8.5-r1"
 }
