@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phpgroupware
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.31 2007/09/04 18:27:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.32 2007/09/05 14:16:38 angelos Exp $
+
+  05 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  phpgroupware-0.9.16.012.ebuild:
+  Stable on amd64 wrt security bug #189253
 
   04 Sep 2007; Raúl Porcel <armin76@gentoo.org>
   phpgroupware-0.9.16.012.ebuild:
