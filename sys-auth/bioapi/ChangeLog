@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/bioapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/ChangeLog,v 1.4 2007/04/09 16:14:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/ChangeLog,v 1.5 2007/09/05 20:21:35 wolf31o2 Exp $
+
+  05 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
+  Changed maintainer to Mike Frysinger <vapier@gentoo.org>.
 
   09 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org> bioapi-1.2.2.ebuild:
   Change insinto /etc/env.d ; doins -> doenvd for bug #173884.
