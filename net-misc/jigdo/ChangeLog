@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jigdo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.18 2007/02/22 02:28:01 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.19 2007/09/05 18:03:14 phreak Exp $
+
+  05 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing weeve from metadata due to his retirement (see #181019 for reference).
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
