@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-20070716.ebuild,v 1.1 2007/07/16 17:54:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-20070906.ebuild,v 1.1 2007/09/06 17:54:52 armin76 Exp $
 
 inherit eutils
 
