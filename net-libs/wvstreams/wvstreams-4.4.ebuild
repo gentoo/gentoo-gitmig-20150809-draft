@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.4.ebuild,v 1.1 2007/08/18 05:55:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.4.ebuild,v 1.2 2007/09/06 11:09:12 mrness Exp $
 
 WANT_AUTOCONF=2.59
 WANT_AUTOMAKE=none
@@ -18,14 +18,14 @@ IUSE="qt3 qdbm pam slp doc debug"
 
 RESTRICT="test"
 
-RDEPEND=">=sys-libs/db-3
-	>=sys-libs/zlib-1.1.4
-	>=dev-libs/openssl-0.9.7
+RDEPEND=">=sys-libs/db-4
+	>=sys-libs/zlib-1.2.3
+	>=dev-libs/openssl-0.9.8e
 	>=dev-libs/xplc-0.3.13
 	qt3? ( $(qt_min_version 3.1) )
 	qdbm? ( dev-db/qdbm )
-	pam? ( >=sys-libs/pam-0.75 )
-	slp? ( >=net-libs/openslp-1.0.9a )"
+	pam? ( >=sys-libs/pam-0.78 )
+	slp? ( >=net-libs/openslp-1.2.1 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
