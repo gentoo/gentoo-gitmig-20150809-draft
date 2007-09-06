@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0_rc3_p4983.ebuild,v 1.4 2007/09/05 18:04:18 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0_rc3_p4983.ebuild,v 1.5 2007/09/06 10:57:31 armin76 Exp $
 
 inherit eutils autotools versionator
 
@@ -40,7 +40,7 @@ PROVIDE="virtual/blackbox"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 pkg_setup() {
 	if use imlib ; then
