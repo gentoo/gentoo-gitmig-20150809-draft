@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.345 2007/09/05 09:03:46 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.346 2007/09/06 12:50:42 zzam Exp $
+
+*udev-115-r2 (06 Sep 2007)
+
+  06 Sep 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-115-add-special-rule-files.diff, +udev-115-r2.ebuild:
+  Added masked revision for testing new rules/merged with upstream.
 
   05 Sep 2007; Matthias Schwarzott <zzam@gentoo.org> udev-115.ebuild,
   udev-115-r1.ebuild:
