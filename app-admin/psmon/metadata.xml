@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>ticho@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		A perl script that monitors processes to make sure they are running as
