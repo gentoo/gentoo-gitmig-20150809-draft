@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.113 2007/08/28 07:48:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.114 2007/09/06 14:56:29 armin76 Exp $
+
+  06 Sep 2007; Raúl Porcel <armin76@gentoo.org> tcpdump-3.9.7-r1.ebuild:
+  alpha/ia64/x86 stable
 
   28 Aug 2007; <pva@gentoo.org> -tcpdump-3.9.7.ebuild:
   Cleaned tcpdump ebuild without drop priviledges feature.
