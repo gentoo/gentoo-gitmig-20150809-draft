@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.53 2007/09/01 16:27:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.54 2007/09/06 15:20:49 armin76 Exp $
+
+  06 Sep 2007; Raúl Porcel <armin76@gentoo.org> im-ja-1.5.ebuild:
+  alpha stable wrt #133667
 
   01 Sep 2007; Joseph Jezak <josejx@gentoo.org> im-ja-1.5.ebuild:
   Marked ppc stable for bug #133667.

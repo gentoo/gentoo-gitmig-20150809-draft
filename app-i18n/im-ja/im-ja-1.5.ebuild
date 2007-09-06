@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5.ebuild,v 1.4 2007/09/01 16:27:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5.ebuild,v 1.5 2007/09/06 15:20:49 armin76 Exp $
 
 inherit gnome2 eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://im-ja.sourceforge.net/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 ppc ~sparc x86"
 IUSE="gnome canna freewnn skk anthy"
 # --enable-debug causes build failure with gtk+-2.4
 #IUSE="${IUSE} debug"
