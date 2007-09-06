@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-env
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.33 2007/09/05 19:37:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.34 2007/09/06 22:59:50 voyageur Exp $
+
+  06 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -gnustep-env-0.1.6-r1.ebuild, gnustep-env-1000.ebuild:
+  Remove old version, bug #139385
 
   05 Sep 2007; Joseph Jezak <josejx@gentoo.org> gnustep-env-0.1.8.ebuild:
   Marked ppc stable for bug #139385.
