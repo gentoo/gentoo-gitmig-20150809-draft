@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/knocker
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/ChangeLog,v 1.11 2007/02/09 04:03:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/ChangeLog,v 1.12 2007/09/06 08:06:45 jokey Exp $
+
+*knocker-0.7.1-r1 (06 Sep 2007)
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/knocker-0.7.1-free.patch, +knocker-0.7.1-r1.ebuild:
+  Apply free patch for bug #185364 thanks to cmuelle8
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
