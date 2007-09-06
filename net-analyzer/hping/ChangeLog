@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.43 2007/07/30 16:25:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.44 2007/09/06 16:42:08 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -hping-2.0.0_rc2-r1.ebuild,
+  -hping-2.0.0_rc3.ebuild:
+  Cleanup
 
   30 Jul 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   hping-3_pre20051105.ebuild:

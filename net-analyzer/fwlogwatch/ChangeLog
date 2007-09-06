@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fwlogwatch
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.17 2007/04/10 07:24:02 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.18 2007/09/06 16:41:00 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -fwlogwatch-1.0.ebuild:
+  Cleanup
 
   10 Apr 2007; Peter Weller <welp@gentoo.org> fwlogwatch-1.1.ebuild:
   Stable on amd64 wrt bug 173981
