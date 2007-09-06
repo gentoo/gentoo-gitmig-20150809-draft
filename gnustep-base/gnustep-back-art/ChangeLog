@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-art
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.42 2007/09/05 19:38:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.43 2007/09/06 15:32:41 armin76 Exp $
+
+  06 Sep 2007; Raúl Porcel <armin76@gentoo.org>
+  gnustep-back-art-0.12.0.ebuild:
+  Add ~alpha wrt #189372
 
   05 Sep 2007; Joseph Jezak <josejx@gentoo.org>
   gnustep-back-art-0.11.0.ebuild:

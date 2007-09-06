@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.45 2007/09/05 19:36:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.46 2007/09/06 15:29:16 armin76 Exp $
+
+  06 Sep 2007; Raúl Porcel <armin76@gentoo.org> gnustep-base-1.14.0.ebuild:
+  Add ~alpha wrt #189372
 
   05 Sep 2007; Joseph Jezak <josejx@gentoo.org>
   gnustep-base-1.13.0-r1.ebuild:
