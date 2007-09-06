@@ -1,0 +1,242 @@
+--- ./configure.in      2007-08-21 22:24:22.000000000 +0200
++++ ./configure.in      2007-11-02 22:04:14.000000000 +0100
+@@ -1864,14 +1864,20 @@
+ [  --enable-coverage       Enable coverage testing],
+ [CFLAGS="$CFLAGS -fprofile-arcs -ftest-coverage"])
+ 
+-
+ dnl ---------------------------------------------------------------------
+ dnl PHP/MapScript module options
+ dnl ---------------------------------------------------------------------
+ 
+-AC_CHECKING(for PHP/MapScript module options)
+-AC_ARG_WITH(php,
+-[  --with-php=DIR          Specify directory where PHP4's include files are
++AC_CHECKING(for PHP4/MapScript module options)
++AC_ARG_WITH(php4,
++[  --with-php4=DIR          Specify directory where PHP4's include files are
++                          installed (or a pointer to the full source tree)
++                          Required in order to compile the PHP/MapScript 
++                          module.],,)
++
++AC_CHECKING(for PHP5/MapScript module options)
++AC_ARG_WITH(php5,
++[  --with-php5=DIR          Specify directory where PHP5's include files are
+                           installed (or a pointer to the full source tree)
+                           Required in order to compile the PHP/MapScript 
+                           module.],,)
+@@ -1882,8 +1888,11 @@
+                           link php_mapscript.so.  Try this only if the default
+                           internal macro didn't work.],,)
+ 
+-if test -n "$with_php" -a -d "$with_php" ; then
+-  AC_EXPAND_PATH($with_php, PHP_SRC_DIR)
++dnl --------------------------------------------------------------------------
++dnl  No php version specific
++dnl --------------------------------------------------------------------------
++
++if test -n "$with_php4" -o -n "$with_php5" ; then
+   dnl
+   dnl Checks for shared library linking.
+   dnl
+@@ -1916,6 +1925,102 @@
+     PHP_LD="$PHP_LD_SHARED"
+   fi
+ 
++fi
++
++if test -n "$with_php5" -a -d "$with_php5" ; then
++  AC_EXPAND_PATH($with_php5, PHP5_SRC_DIR)
++
++  dnl
++  dnl Look for PHP4's config.h or PHP5's php_config.h.
++  dnl We'll need the config file to find info about the PHP configuration
++  dnl
++  AC_MSG_CHECKING([for location of config.h or php_config.h])
++  dnl In PHP3, it was called config.h
++  test -f "$PHP5_SRC_DIR/config.h" && PHP5_CONFIG_H="$PHP5_SRC_DIR/config.h"
++
++  dnl In PHP 4.0.1 to 4.0.3, it was php-4.0.x/php_config.h
++  test -f "$PHP5_SRC_DIR/php_config.h" && PHP5_CONFIG_H="$PHP5_SRC_DIR/php_config.h"
++
++  dnl Starting with PHP 4.0.4, it's php-4.0.x/main/php_config.h
++  test -f "$PHP5_SRC_DIR/main/php_config.h" && PHP5_CONFIG_H="$PHP5_SRC_DIR/main/php_config.h"
++
++  dnl If php was installed, then the headers are under $prefix/include/php/*
++  test -f "$PHP5_SRC_DIR/include/php/main/php_config.h" && PHP5_SRC_DIR="$PHP5_SRC_DIR/include/php/" && PHP5_CONFIG_H="$PHP5_SRC_DIR/main/php_config.h"
++
++  if test -n "$PHP5_CONFIG_H" ; then
++    AC_MSG_RESULT([$PHP5_CONFIG_H])
++  else
++    AC_MSG_ERROR([
++!!! Could not find config.h or php_config.h in $PHP5_SRC_DIR.          !!!
++!!! Has PHP5 been configured yet?                                      !!!])
++  fi
++
++  dnl
++  dnl Check which PHP5 version we're using.
++  dnl Default is PHP3, and if ZEND_API is set then we assume that we have PHP4.
++  dnl
++  AC_MSG_CHECKING([whether we have PHP3 or PHP4])
++  if test -n "`grep 'ZEND_API' $PHP5_CONFIG_H`"  ; then
++    PHP5_VERSION_FLAG="-DPHP4"
++  else
++    PHP5_VERSION_FLAG="-DPHP3"
++    AC_MSG_ERROR([
++!!! PHP MapScript now requires PHP 4.1.2 or more recent.              !!!
++!!! Support for PHP3 has been dropped after MapServer version 3.5.    !!!])
++  fi
++  AC_MSG_RESULT([$PHP5_VERSION_FLAG])
++
++  dnl
++  dnl Check if PHP was compiled with the bundled regex, and if so then
++  dnl use the same version to compile MapServer.
++  dnl
++  AC_MSG_CHECKING([whether we should use PHP5's regex])
++  if test -n "`grep 'define REGEX 1' $PHP5_CONFIG_H`"  ; then
++    AC_MSG_RESULT(yes)
++
++    dnl We'll check for regex_extra.h - that might let use build
++    dnl without the source using libphp_common.so
++    test -f "$PHP5_SRC_DIR/regex/regex_extra.h" && PHP5_NO_SOURCE="1"
++        if test -n "$PHP5_NO_SOURCE" ; then
++          dnl Found regex_extra.h
++          USE_PHP5_REGEX="-DUSE_PHP_REGEX"
++          PHP5_REGEX_OBJ=php_regex.o
++          AC_MSG_RESULT([        found regex_extra.h - building PHP5 MapScript with PHP's bundled regex ])
++        else
++          AC_MSG_ERROR([
++!!! PHP uses its bundled regex library but regex/regex_extra.h cannot be !!!
++!!! found.                                                               !!!])
++       fi
++
++  else
++    AC_MSG_RESULT(no)
++  fi
++
++  PHP5MS_MAKEFILE=mapscript/php5/Makefile
++  MAKE_PHP5MS=php5_mapscript
++  MAKE_PHP5MS_CLEAN=php_mapscript_clean
++
++  AC_SUBST(PHP5_VERSION_FLAG, $PHP5_VERSION_FLAG)
++  AC_SUBST(PHP5_SRC_DIR, $PHP5_SRC_DIR)
++  AC_SUBST(PHP_CC, $PHP_CC)
++  AC_SUBST(PHP_LD, $PHP_LD)
++  AC_SUBST(PHP5_REGEX_INC, $PHP5_REGEX_INC)
++  AC_SUBST(PHP5_REGEX_OBJ, $PHP5_REGEX_OBJ)
++  AC_SUBST(USE_PHP5_REGEX, $USE_PHP5_REGEX)
++
++  AC_MSG_RESULT([        PHP5/MapScript module configured.])
++elif test -n "$with_php5" -a "$with_php5" != "no" ; then
++  AC_MSG_ERROR([Missing or invalid PHP5 source directory in --with-php5=DIR.])
++else
++  AC_MSG_RESULT([        PHP5/MapScript module not configured.])
++fi
++
++AC_SUBST(MAKE_PHP5MS, $MAKE_PHP5MS)
++AC_SUBST(MAKE_PHP5MS_CLEAN, $MAKE_PHP5MS_CLEAN)
++
++if test -n "$with_php4" -a -d "$with_php4" ; then
++  AC_EXPAND_PATH($with_php4, PHP_SRC_DIR)
++
+   dnl
+   dnl Look for PHP3's config.h or PHP4's php_config.h.
+   dnl We'll need the config file to find info about the PHP configuration
+@@ -2162,6 +2267,6 @@
+ AC_SUBST(ALL_STATIC_LIB, $ALL_STATIC_LIB)
+ AC_SUBST(RPATHS, [$RPATHS])
+ 
+-AC_OUTPUT(Makefile $PHPMS_MAKEFILE mapscript/java/Makefile mapscript/csharp/Makefile)
++AC_OUTPUT(Makefile $PHPMS_MAKEFILE $PHP5MS_MAKEFILE mapscript/java/Makefile mapscript/csharp/Makefile)
+ 
+ 
+--- ./mapscript/php3/Makefile.in	2007-08-21 22:24:22.000000000 +0200
++++ ./mapscript/php3/Makefile.in	2007-11-02 21:15:36.000000000 +0100
+@@ -77,7 +77,7 @@
+ 
+ CFLAGS112 = $(CFLAGS) $(MS_DEFINE) $(MS_INC) $(PHP_INC) $(PHP_REGEX_INC)
+ 
+-all: php_mapscript.so
++all: php_mapscript.so php_proj.so
+ 
+ PHPMS_OBJS =  php_mapscript_util.o php_mapscript.o mapscript_i.o $(PHP_REGEX_OBJ)
+ 
+--- ./mapscript/php5/Makefile.in	2007-11-02 20:34:05.000000000 +0100
++++ ./mapscript/php5/Makefile.in	2007-11-02 21:15:38.000000000 +0100
+@@ -35,13 +35,13 @@
+ 
+ CC =     @PHP_CC@
+ LD =     @PHP_LD@
+-CFLAGS = @CFLAGS@ @USE_PHP_REGEX@ -DCOMPILE_DL=1 @PHP_VERSION_FLAG@
++CFLAGS = @CFLAGS@ @USE_PHP5_REGEX@ -DCOMPILE_DL=1 @PHP5_VERSION_FLAG@
+ RUNPATHS= @RPATHS@
+ 
+ #
+ # Set PHP_SRC_DIR to point to the root of the PHP source tree
+ #
+-PHP_SRC_DIR = @PHP_SRC_DIR@
++PHP_SRC_DIR = @PHP5_SRC_DIR@
+ 
+ PHP_INC = -I$(PHP_SRC_DIR) -I$(PHP_SRC_DIR)/dl -I$(PHP_SRC_DIR)/main \
+ 	  -I$(PHP_SRC_DIR)/Zend -I$(PHP_SRC_DIR)/include \
+@@ -53,8 +53,8 @@
+ # In order to compile the PHP_MAPSCRIPT module, we have to make MapServer
+ # uses the same version of the REGEX library that PHP was compiled with:
+ #
+-PHP_REGEX_OBJ=@PHP_REGEX_OBJ@
+-PHP_REGEX_INC=@PHP_REGEX_INC@
++PHP_REGEX_OBJ=@PHP5_REGEX_OBJ@
++PHP_REGEX_INC=@PHP5_REGEX_INC@
+ 
+ 
+ #
+@@ -75,20 +75,20 @@
+ # The rest of the file should not have to be edited...
+ #
+ 
+-CFLAGS112 = $(CFLAGS) $(MS_DEFINE) $(MS_INC) $(PHP_INC) $(PHP_REGEX_INC)
++CFLAGS112 = $(CFLAGS) $(MS_DEFINE) $(MS_INC) $(PHP_INC) $(PHP5_REGEX_INC)
+ 
+ all: php_mapscript.so
+ 
+-PHPMS_OBJS =  php_mapscript_util.o php_mapscript.o mapscript_i.o $(PHP_REGEX_OBJ)
++PHP5MS_OBJS =  php_mapscript_util.o php_mapscript.o mapscript_i.o $(PHP5_REGEX_OBJ)
+ 
+-PHPPROJ_OBJS = php_mapscript_util.o php_proj.o $(PHP_REGEX_OBJ)
++PHP5PROJ_OBJS = php_mapscript_util.o php_proj.o $(PHP5_REGEX_OBJ)
+ 
+ 
+-php_mapscript.so: $(PHPMS_OBJS) ../../libmapserver.a
+-	$(LD) -o $@ $(PHPMS_OBJS) $(MS_LIBS)
++php_mapscript.so: $(PHP5MS_OBJS) ../../libmapserver.a
++	$(LD) -o $@ $(PHP5MS_OBJS) $(MS_LIBS)
+ 
+-php_proj.so:  $(PHPPROJ_OBJS)
+-	$(LD) -o $@ $(PHPPROJ_OBJS) $(MS_LIBS)
++php_proj.so:  $(PHP5PROJ_OBJS)
++	$(LD) -o $@ $(PHP5PROJ_OBJS) $(MS_LIBS)
+ 
+ %.o: %.c php_mapscript_util.h php_mapscript.h
+ 	$(CC) $(CFLAGS112) -c -o $@ $<
+
+--- ./Makefile.in	2007-11-02 21:58:58.000000000 +0100
++++ ./Makefile.in	2007-11-02 22:54:14.000000000 +0100
+@@ -241,7 +241,7 @@
+ #
+ # --- You shouldn't have to edit anything else. ---
+ #
+-all: $(MAKE_GD) $(LIBMAP_STATIC) $(EXTRA_DEFAULT) $(EXE_LIST) @MAKE_PHPMS@ 
++all: $(MAKE_GD) $(LIBMAP_STATIC) $(EXTRA_DEFAULT) $(EXE_LIST) @MAKE_PHPMS@ @MAKE_PHP5MS@
+ 
+ #
+ # Non-gnumake's don't seem to use this pattern rule, 
+@@ -257,6 +257,9 @@
+ php3_mapscript:: $(LIBMAP_STATIC)
+ 	cd mapscript/php3; $(MAKE); cd ../..
+ 
++php5_mapscript:: $(LIBMAP_STATIC)
++	cd mapscript/php5; $(MAKE); cd ../..
++
+ maplexer.o: maplexer.c map.h mapfile.h
+ 
+ maplexer.c: maplexer.l

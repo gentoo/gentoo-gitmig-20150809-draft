@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.3.ebuild,v 1.1 2007/09/01 16:58:36 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.3.ebuild,v 1.2 2007/09/06 01:17:33 djay Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -40,6 +40,7 @@ DEPEND="media-libs/libpng
 	python? ( dev-lang/python dev-lang/swig )
 	java? ( >=virtual/jdk-1.4 dev-lang/swig )
 	tcl? ( dev-lang/tcl dev-lang/swig )"
+RDEPEND="${DEPEND}"
 
 WEBAPP_MANUAL_SLOT=yes
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0.ebuild,v 1.7 2007/07/29 17:09:16 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0.ebuild,v 1.8 2007/09/06 01:17:33 djay Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -42,6 +42,7 @@ DEPEND="media-libs/libpng
 	python? ( dev-lang/python dev-lang/swig )
 	java? ( =virtual/jdk-1.4* dev-java/java-config dev-lang/swig )
 	tcl? ( dev-lang/tcl dev-lang/swig )"
+RDEPEND="${DEPEND}"
 
 WEBAPP_MANUAL_SLOT=yes
 
@@ -68,6 +69,30 @@ pkg_setup(){
 		toD="$(if [ ${np} -gt 1 ]; then echo s; fi)"
 		einfo "Using ${np} PHP version${toD}"
 	fi
+
+	elog "Checking for gd compiled with truetype support..."
+	if built_with_use media-libs/gd truetype; then
+		elog "Found truetype support; continuing..."
+	else
+		ewarn "media-libs/gd must be compiled with truetype support,"
+		ewarn "and you probably want jpeg and png support also."
+		elog "Please re-emerge gd with the truetype USE flag."
+		die "gd not merged with truetype USE flag"
+	fi
+
+	if use gdal && use tiff; then
+		ewarn "The MapServer tiff support is not compatible"
+		ewarn "with gdal tiff support."
+		elog "Please disable tiff support for mapserver."
+		die "mapserver has tiff USE flag enabled"
+	fi
+
+	if use java && !use threads; then
+		ewarn "The MapServer Java support needs threads."
+		elog "Please enable thread support for mapserver."
+		die "mapserver has threads USE flag disabled"
+	fi
+
 }
 
 src_unpack() {
