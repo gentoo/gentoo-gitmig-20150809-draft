@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall-lite
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.19 2007/09/06 11:26:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.20 2007/09/06 11:32:46 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  -shorewall-lite-3.2.10.ebuild, -shorewall-lite-3.4.3.ebuild,
+  -shorewall-lite-3.4.5.ebuild:
+  Drop old
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> metadata.xml:
   Add Vieri as co-maintainer
