@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.6_pre20070714.ebuild,v 1.5 2007/08/01 00:40:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.6_pre20070714.ebuild,v 1.6 2007/09/06 12:13:35 jokey Exp $
 
 inherit autotools eutils kde-functions
 
@@ -30,6 +30,7 @@ src_unpack() {
 	./autogen.sh
 	epatch "${FILESDIR}"/${PN}-svn-kdedir-fix.patch
 	epatch "${FILESDIR}"/${PN}-noipv6.patch
+	epatch "${FILESDIR}"/${PN}-gendoc.patch
 }
 
 src_compile() {
