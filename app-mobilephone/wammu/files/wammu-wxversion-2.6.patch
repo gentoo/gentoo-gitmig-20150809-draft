@@ -1,0 +1,11 @@
+--- wammu.py.old	2007-09-04 22:45:00.000000000 +0200
++++ wammu.py	2007-09-04 22:45:25.000000000 +0200
+@@ -24,6 +24,8 @@
+ 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ '''
+ 
++import wxversion
++wxversion.select("2.6")
+ import os
+ import sys
+ import getopt
