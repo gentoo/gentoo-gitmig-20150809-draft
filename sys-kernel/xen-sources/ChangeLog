@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.44 2007/09/01 12:24:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.45 2007/09/06 03:58:30 marineam Exp $
+
+*xen-sources-2.6.20-r3 (06 Sep 2007)
+*xen-sources-2.6.18-r4 (06 Sep 2007)
+
+  06 Sep 2007; Michael Marineau <marineam@gentoo.org>
+  +xen-sources-2.6.18-r4.ebuild, +xen-sources-2.6.20-r3.ebuild:
+  2.6.18-r4 adds a handful of security patches, I thought I had committed this
+  last week, oops. 2.6.20-r3 syncs up with the latest patches in Fedora and should
+  fix a handful of bugs.
 
   25 Aug 2007; Michael Marineau <marineam@gentoo.org>
   xen-sources-2.6.20-r2.ebuild:
@@ -34,7 +43,7 @@
   +xen-sources-2.6.16.52.ebuild:
   Version bump and fix ip tables REJECT compile failure
 
-  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  02 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org>
   xen-sources-2.6.16.28.ebuild, xen-sources-2.6.16.28-r1.ebuild:
   (QA) RESTRICT clean up.
 
