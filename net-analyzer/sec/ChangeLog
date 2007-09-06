@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sec
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sec/ChangeLog,v 1.9 2007/03/20 19:00:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sec/ChangeLog,v 1.10 2007/09/06 18:09:35 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -sec-2.3.1.ebuild,
+  -sec-2.3.2.ebuild:
+  Cleanup
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> sec-2.4.0.ebuild:
   x86 stable
