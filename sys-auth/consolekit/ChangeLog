@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.19 2007/08/28 19:25:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.20 2007/09/06 20:49:29 cardoe Exp $
+
+  06 Sep 2007; Doug Goldstein <cardoe@gentoo.org>
+  -files/consolekit-0.2.0-gdk-to-x11.patch,
+  -files/consolekit-0.2.0-pam-lib-fix.patch, -consolekit-0.2.0-r1.ebuild,
+  consolekit-0.2.1.ebuild:
+  remove old version. got Jon to make a website for it.
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org> consolekit-0.2.1.ebuild:
   Stable for HPPA (bug #185823).

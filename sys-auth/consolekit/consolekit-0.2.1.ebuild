@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.1.ebuild,v 1.13 2007/08/28 19:25:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.1.ebuild,v 1.14 2007/09/06 20:49:29 cardoe Exp $
 
 inherit eutils autotools multilib
 
 MY_PN="ConsoleKit"
 
 DESCRIPTION="Framework for defining and tracking users, login sessions and seats."
-HOMEPAGE="http://if.only.it.had.one"
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/ConsoleKit"
 SRC_URI="http://people.freedesktop.org/~mccann/dist/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
