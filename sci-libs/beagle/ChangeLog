@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/beagle
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/ChangeLog,v 1.6 2007/02/07 20:59:20 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/ChangeLog,v 1.7 2007/09/06 02:48:40 markusle Exp $
+
+  06 Sep 2007; Markus Dittrich <markusle@gentoo.org> beagle-2.2.0.ebuild,
+  beagle-3.0.1.ebuild:
+  Added app-misc/beagle as blocker to DEPEND since there are file 
+  collisions (see bug #141137).
 
 *beagle-3.0.1 (07 Feb 2007)
 

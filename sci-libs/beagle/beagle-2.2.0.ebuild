@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/beagle-2.2.0.ebuild,v 1.3 2005/08/24 16:30:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/beagle-2.2.0.ebuild,v 1.4 2007/09/06 02:48:40 markusle Exp $
 
 inherit libtool
 
@@ -15,7 +15,8 @@ KEYWORDS="x86"
 
 DEPEND=">=sys-devel/gcc-2.96
 	sys-libs/zlib
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+	!app-misc/beagle"
 
 src_compile() {
 	elibtoolize
