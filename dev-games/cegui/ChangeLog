@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.17 2007/09/02 13:33:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.18 2007/09/06 07:28:52 opfer Exp $
+
+  06 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  cegui-0.5.0b-r3.ebuild:
+  stable x86, bug 188632
 
   02 Sep 2007; Christoph Mende <angelos@gentoo.org> cegui-0.5.0b-r3.ebuild:
   Stable on amd64 wrt bug #188632
