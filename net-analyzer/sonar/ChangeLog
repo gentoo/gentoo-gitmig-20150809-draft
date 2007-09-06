@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sonar
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/ChangeLog,v 1.16 2007/07/02 14:41:27 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/ChangeLog,v 1.17 2007/09/06 18:22:10 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -files/1.2.1-libtool.patch,
+  -sonar-1.2.1.ebuild, sonar-1.2.2-r1.ebuild:
+  Cleanup
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> sonar-1.2.1.ebuild,
   sonar-1.2.2-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpreen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreen/ChangeLog,v 1.9 2007/03/20 19:40:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreen/ChangeLog,v 1.10 2007/09/06 18:25:52 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -tcpreen-1.2.4.ebuild,
+  -tcpreen-1.4.2.ebuild:
+  Cleanup
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> tcpreen-1.4.3.ebuild:
   x86 stable
