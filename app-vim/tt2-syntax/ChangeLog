@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/tt2-syntax
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/tt2-syntax/ChangeLog,v 1.1 2007/09/06 14:41:07 hawking Exp $
+
+*tt2-syntax-1.13 (06 Sep 2007)
+
+  06 Sep 2007; Ali Polatel <hawking@gentoo.org> +metadata.xml,
+  +tt2-syntax-1.13.ebuild:
+  Initial commit.
+
