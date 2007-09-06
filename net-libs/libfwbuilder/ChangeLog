@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.68 2007/07/30 21:34:10 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.69 2007/09/06 00:29:38 r3pek Exp $
+
+  06 Sep 2007; Carlos Silva <r3pek@gentoo.org>
+  libfwbuilder-2.1.13-r1.ebuild:
+  Updated ebuild from bug #187545 thx to Davide Pesavento. Also dropped alpha
+  and sparc keyword, see bug #187186
 
 *libfwbuilder-2.1.13-r1 (30 Jul 2007)
 
