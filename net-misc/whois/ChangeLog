@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.88 2007/08/07 12:03:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.89 2007/09/06 11:55:49 armin76 Exp $
+
+  06 Sep 2007; Raúl Porcel <armin76@gentoo.org> whois-4.7.22.ebuild:
+  alpha/ia64/x86 stable
 
 *whois-4.7.22 (07 Aug 2007)
 
