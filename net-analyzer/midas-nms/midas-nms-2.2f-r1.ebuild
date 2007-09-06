@@ -1,15 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.14 2007/07/29 16:59:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f-r1.ebuild,v 1.1 2007/09/06 12:00:53 jokey Exp $
 
 inherit webapp
 
-S="${WORKDIR}/MIDAS-${PV}"
 DESCRIPTION="Monitoring, Intrusion Detection, Administration System"
 SRC_URI="mirror://sourceforge/midas-nms/MIDAS-${PV}.tar.gz"
 HOMEPAGE="http://midas-nms.sf.net"
-LICENSE="MIT"
 
+LICENSE="MIT"
 KEYWORDS="~ppc ~x86"
 
 DEPEND="virtual/mysql
@@ -18,12 +17,14 @@ DEPEND="virtual/mysql
 RDEPEND="www-servers/apache
 	virtual/httpd-php"
 
+S="${WORKDIR}/MIDAS-${PV}"
+
 pkg_setup() {
 	webapp_pkg_setup
 }
 
 src_compile() {
-	econf || die "./configure failed"
+	econf --sysconfdir=/etc/midas-nms || die "./configure failed"
 	emake || die
 }
 
@@ -32,21 +33,18 @@ src_install () {
 
 #	make DESTDIR=${D} install || die
 
-	dodir /usr/etc
-	dodir /usr/bin
+	insinto /etc/midas-nms
+	doins MIDASa/MIDASa.cf.dist
+	doins MIDASb/MIDASb.cf.dist
+	doins MIDASc/MIDASc.cf.dist
+	doins MIDASd/MIDASd.cf.dist
+	doins MIDASs/MIDASs.cf.dist
+	doins MIDASn/MIDASn.cf.dist
 
-	cp MIDASa/MIDASa.cf.dist ${D}/usr/etc
-	cp MIDASb/MIDASb.cf.dist ${D}/usr/etc
-	cp MIDASc/MIDASc.cf.dist ${D}/usr/etc
-	cp MIDASd/MIDASd.cf.dist ${D}/usr/etc
-	cp MIDASs/MIDASs.cf.dist ${D}/usr/etc
-	cp MIDASn/MIDASn.cf.dist ${D}/usr/etc
-	cp MIDASa/MIDASa ${D}/usr/bin
-	cp MIDASb/MIDASb ${D}/usr/bin
-	cp MIDASc/MIDASc ${D}/usr/bin
-	cp MIDASd/MIDASd ${D}/usr/bin
-	cp MIDASs/MIDASs ${D}/usr/bin
-	cp MIDASn/MIDASn ${D}/usr/bin
+	for each in a b c d n s
+	do
+	    dobin MIDAS${each}/MIDAS${each}
+	done
 
 	dodir /usr/share/midas-nms
 	dodir /usr/share/midas-nms/sql
@@ -54,7 +52,7 @@ src_install () {
 	doins sql/* /usr/share/midas-nms/sql/
 
 	# web
-	cp -r MIDAS/* ${D}${MY_HTDOCSDIR}/
+	doins -r MIDAS/* ${MY_HTDOCSDIR}
 	webapp_serverowned ${MY_HTDOCSDIR}
 	webapp_src_install
 
@@ -70,12 +68,10 @@ src_install () {
 
 pkg_postinst() {
 	webapp_pkg_postinst
-	chown -R :apache /var/www/localhost/htdocs/midas-nms/{inc/config,php-graph}
-	chmod g+w /var/www/localhost/htdocs/midas-nms/{inc/config,php-graph}
-	cp ${FILESDIR}/install.php /var/www/localhost/htdocs/midas-nms/install
 
 	elog
-	elog "To install the web interface go to:"
+	elog "To install the web interface setup the app and copy"
+	elog "${FILESDIR}/install.php to (adapt to your install root):"
 	elog "http://localhost/midas-nms/install/install.php"
 	elog
 	elog "The conf files are located in /usr/etc/MIDAS*.cf.dist"

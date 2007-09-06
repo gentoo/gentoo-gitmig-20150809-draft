@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/midas-nms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/ChangeLog,v 1.11 2007/07/29 16:59:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/ChangeLog,v 1.12 2007/09/06 12:00:53 jokey Exp $
+
+*midas-nms-2.2f-r1 (06 Sep 2007)
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/midas-nms-2.2f-sysconfdir.patch, -midas-nms-2.2f.ebuild,
+  +midas-nms-2.2f-r1.ebuild:
+  Fix for correct configfile path wrt bug #101846 thanks to Tomoyuki Sakurai
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> midas-nms-2.2f.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to
