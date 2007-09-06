@@ -6,7 +6,7 @@ diff -Nrup yaboot-1.3.13.orig/Config.gentoo yaboot-1.3.13/Config.gentoo
 +	then echo "$(1)"; else echo "$(2)"; fi)
 +
 +CFLAGS     += $(call check_gcc, -fno-stack-protector)
-+CFLAGS     += $(call check_gcc, -nopie)
++CFLAGS     += $(call check_gcc, --nopie)
 +
 diff -Nrup yaboot-1.3.13.orig/Makefile yaboot-1.3.13/Makefile
 --- yaboot-1.3.13.orig/Makefile	2004-07-11 20:12:03.000000000 +0000
