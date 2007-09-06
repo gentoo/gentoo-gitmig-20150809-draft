@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PhpDocumentor
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/ChangeLog,v 1.29 2007/08/18 15:52:24 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/ChangeLog,v 1.30 2007/09/06 15:51:20 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  -PEAR-PhpDocumentor-1.3.0.ebuild:
+  Cleanup
 
 *PEAR-PhpDocumentor-1.4.0 (18 Aug 2007)
 

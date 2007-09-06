@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTTP_Client
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Client/ChangeLog,v 1.4 2007/08/21 17:58:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Client/ChangeLog,v 1.5 2007/09/06 15:39:44 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  -PEAR-HTTP_Client-1.1.0.ebuild:
+  Cleanup
 
   21 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   PEAR-HTTP_Client-1.1.1.ebuild:

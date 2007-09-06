@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-MDB2_Driver_pgsql
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_pgsql/ChangeLog,v 1.3 2007/05/21 14:36:02 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_pgsql/ChangeLog,v 1.4 2007/09/06 15:45:44 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  -PEAR-MDB2_Driver_pgsql-1.1.0.ebuild:
+  Cleanup
 
 *PEAR-MDB2_Driver_pgsql-1.4.1 (21 May 2007)
 
