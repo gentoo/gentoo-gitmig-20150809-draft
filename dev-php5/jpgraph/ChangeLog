@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/jpgraph
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.20 2007/08/31 09:38:43 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.21 2007/09/06 16:03:57 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -jpgraph-2.1.4.ebuild:
+  Cleanup
 
 *jpgraph-2.2 (31 Aug 2007)
 

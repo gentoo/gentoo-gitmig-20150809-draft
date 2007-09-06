@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-imagick
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-imagick/ChangeLog,v 1.9 2007/08/17 12:00:23 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-imagick/ChangeLog,v 1.10 2007/09/06 16:05:43 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  -pecl-imagick-0.9.11.ebuild:
+  Cleanup
 
 *pecl-imagick-2.0.0_rc1 (17 Aug 2007)
 

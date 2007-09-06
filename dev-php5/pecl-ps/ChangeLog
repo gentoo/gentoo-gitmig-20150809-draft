@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-ps
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-ps/ChangeLog,v 1.7 2007/08/31 09:52:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-ps/ChangeLog,v 1.8 2007/09/06 16:06:51 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -pecl-ps-1.3.4.ebuild:
+  Cleanup
 
 *pecl-ps-1.3.5 (31 Aug 2007)
 

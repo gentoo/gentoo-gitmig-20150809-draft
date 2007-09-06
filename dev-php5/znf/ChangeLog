@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/znf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/znf/ChangeLog,v 1.6 2007/08/31 09:56:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/znf/ChangeLog,v 1.7 2007/09/06 16:10:28 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -znf-0.7.6.ebuild:
+  Cleanup
 
 *znf-0.7.9 (31 Aug 2007)
 
