@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-2.0.8.ebuild,v 1.2 2007/09/05 14:44:11 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-2.0.8-r1.ebuild,v 1.1 2007/09/06 09:02:54 jokey Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -18,6 +18,7 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-prestrip.patch
 	use static && append-ldflags -static
 }
 
@@ -31,6 +32,7 @@ src_install() {
 		DESTDIR="${D}" \
 		prefix="/usr" \
 		libdir="/usr/$(get_libdir)" \
+		mandir="/usr/share/man" \
 		install \
 		|| die
 	dodoc ChangeLog CREDITS README TODO

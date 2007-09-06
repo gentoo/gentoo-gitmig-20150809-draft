@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.45 2007/09/05 14:44:11 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.46 2007/09/06 09:02:54 jokey Exp $
+
+*traceroute-2.0.8-r1 (06 Sep 2007)
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/traceroute-2.0.8-prestrip.patch, -traceroute-2.0.8.ebuild,
+  +traceroute-2.0.8-r1.ebuild:
+  Fix man page wrt bug #191293 thanks to Mikael Magnusson. Also fix
+  prestripped binaries wrt bug #191389
 
   05 Sep 2007; Roy Marples <uberlord@gentoo.org> traceroute-2.0.8.ebuild:
   Version 2 looks like it's Linux only, so FreeBSD keywords are dropped.
