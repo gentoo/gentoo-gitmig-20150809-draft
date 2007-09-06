@@ -1,0 +1,41 @@
+diff -Nru python-gammu-0.22.orig/gammu.c python-gammu-0.22/gammu.c
+--- python-gammu-0.22.orig/gammu.c	2007-08-01 16:06:31.000000000 +0300
++++ python-gammu-0.22/gammu.c	2007-09-06 13:09:52.000000000 +0300
+@@ -819,7 +819,7 @@
+ static PyObject *
+ StateMachine_GetManufacturer(StateMachineObject *self, PyObject *args, PyObject *kwds) {
+     GSM_Error           error;
+-    char value[100];
++    char value[GSM_MAX_MANUFACTURER_LENGTH];
+ 
+     if (!PyArg_ParseTuple(args, ""))
+         return NULL;
+@@ -847,7 +847,7 @@
+ static PyObject *
+ StateMachine_GetModel(StateMachineObject *self, PyObject *args, PyObject *kwds) {
+     GSM_Error           error;
+-    char value[100];
++    char value[GSM_MAX_MODEL_LENGTH];
+ 
+     if (!PyArg_ParseTuple(args, ""))
+         return NULL;
+@@ -875,8 +875,8 @@
+ static PyObject *
+ StateMachine_GetFirmware(StateMachineObject *self, PyObject *args, PyObject *kwds) {
+     GSM_Error           error;
+-    char firmware[100];
+-    char date[100];
++    char firmware[GSM_MAX_VERSION_LENGTH];
++    char date[GSM_MAX_VERSION_DATE_LENGTH];
+     double ver;
+ 
+     if (!PyArg_ParseTuple(args, ""))
+@@ -908,7 +908,7 @@
+ static PyObject *
+ StateMachine_GetIMEI(StateMachineObject *self, PyObject *args, PyObject *kwds) {
+     GSM_Error           error;
+-    char value[100];
++    char value[GSM_MAX_IMEI_LENGTH];
+ 
+     if (!PyArg_ParseTuple(args, ""))
+         return NULL;

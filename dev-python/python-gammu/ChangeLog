@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-gammu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.31 2007/08/22 07:14:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.32 2007/09/06 10:14:48 mrness Exp $
+
+*python-gammu-0.22 (06 Sep 2007)
+
+  06 Sep 2007; Alin Năstac <mrness@gentoo.org>
+  +files/python-gammu-0.22-fixups.patch, +python-gammu-0.22.ebuild:
+  Version bump; fix several buffer overflows (#191303).
 
   22 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   python-gammu-0.21.ebuild:
