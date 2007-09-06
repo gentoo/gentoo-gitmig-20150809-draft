@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7683 2007/09/06 19:44:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7684 2007/09/06 22:39:16 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -854,14 +854,6 @@ app-crypt/cli-crypt
 # Mike Frysinger <vapier@gentoo.org> (28 Dec 2006)
 # Build failure on big-endian #154294 and breaks non-default journals #154974
 ~sys-fs/reiserfsprogs-3.6.20
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (28 Dec 2006)
-# These need to be unmasked together
-games-action/descent2-data
-games-action/descent2-demodata
->=games-action/d2x-0.2.5-r3
-games-action/d2x-xl
-games-action/d2x-rebirth
 
 # Konstantin V. Arkhipov <voxus@gentoo.org> (22 Dec 2006)
 # Stability issues on hardened systems: bugs #158217, #158664
