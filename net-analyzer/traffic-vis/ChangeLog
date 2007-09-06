@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traffic-vis
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.15 2007/04/22 10:24:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.16 2007/09/06 18:48:50 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -traffic-vis-0.35.ebuild:
+  Cleanup
 
   22 Apr 2007; <pva@gentoo.org> traffic-vis-0.35.ebuild,
   traffic-vis-0.35-r1.ebuild:
