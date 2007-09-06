@@ -1,0 +1,14 @@
+--- ./default.rules.orig	2007-08-29 16:40:05.000000000 +0200
++++ ./default.rules	2007-09-06 21:13:51.619378204 +0200
+@@ -183,11 +183,3 @@
+ 	$(INSTALL) $(install_includes) $(DESTDIR)$(includedir)
+ endif
+ 	@true
+-ifneq ($(install_manuals),)
+-define inst_man
+-@mkdir -p $(DESTDIR)$(mandir)/man$(suffix $(1))
+-	cp -f $(1) $(DESTDIR)$(mandir)/man$(suffix $(1))
+-	
+-endef
+-	$(foreach man,$(install_manuals),$(call inst_man,$(man)))
+-endif
