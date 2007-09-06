@@ -1,0 +1,63 @@
+diff -Naur fwbuilder-2.1.13/configure.in fwbuilder-2.1.13_external_antlr/configure.in
+--- fwbuilder-2.1.13/configure.in	2007-06-07 03:33:53.000000000 +0100
++++ fwbuilder-2.1.13_external_antlr/configure.in	2007-07-29 13:38:44.000000000 +0100
+@@ -248,11 +248,31 @@
+ 
+ AC_LANG_CPLUSPLUS
+ 
++AC_PATH_PROG(ANTLR_CONFIG, antlr-config, , [$EXTENDED_PATH])
++AC_MSG_CHECKING(antlr)
+ HAVE_ANTLR_RUNTIME="1"
+-ANTLR_INCLUDEPATH="`pwd`/src/"
+-ANTLR_LIBS="`pwd`/src/antlr/libantlr.a"
++HAVE_EXTERNAL_ANTLR="0";
++if test x$ANTLR_CONFIG = x; then
++  ANTLR_INCLUDEPATH="`pwd`/src/"
++  ANTLR_LIBS="`pwd`/src/antlr/libantlr.a"
++  AC_MSG_RESULT(using provided)
++else
++  ANTLR_VERSION="`$ANTLR_CONFIG --version`"
++  if test x$ANTLR_VERSION != x2.7.7; then
++    ANTLR_INCLUDEPATH="`pwd`/src/"
++    ANTLR_LIBS="`pwd`/src/antlr/libantlr.a"
++    AC_MSG_RESULT(using provided)
++  else
++    ANTLR_INCLUDEPATH="`$ANTLR_CONFIG --cflags`"
++    ANTLR_LIBS="`$ANTLR_CONFIG --libs`"
++    HAVE_EXTERNAL_ANTLR="1"
++    AC_MSG_RESULT(using external version $ANTLR_VERSION)
++  fi
++fi
+ AC_DEFINE_UNQUOTED(HAVE_ANTLR_RUNTIME, 1)
++AC_DEFINE_UNQUOTED(HAVE_EXTERNAL_ANTLR, $HAVE_EXTERNAL_ANTLR)
+ AC_SUBST(HAVE_ANTLR_RUNTIME) 
++AC_SUBST(HAVE_EXTERNAL_ANTLR) 
+ AC_SUBST(ANTLR_LIBS)
+ AC_SUBST(ANTLR_INCLUDEPATH)
+ 
+diff -Naur fwbuilder-2.1.13/qmake.inc.in fwbuilder-2.1.13_external_antlr/qmake.inc.in
+--- fwbuilder-2.1.13/qmake.inc.in	2007-05-18 04:16:09.000000000 +0100
++++ fwbuilder-2.1.13_external_antlr/qmake.inc.in	2007-07-29 13:38:44.000000000 +0100
+@@ -11,6 +11,7 @@
+ UI_DIR        = ui
+ 
+ HAVE_ANTLR_RUNTIME = @HAVE_ANTLR_RUNTIME@
++HAVE_EXTERNAL_ANTLR = @HAVE_EXTERNAL_ANTLR@
+ 
+ unix {
+ 	ANTLR_INCLUDEPATH =  @ANTLR_INCLUDEPATH@
+diff -Naur fwbuilder-2.1.13/src/src.pro fwbuilder-2.1.13_external_antlr/src/src.pro
+--- fwbuilder-2.1.13/src/src.pro	2007-06-07 03:33:54.000000000 +0100
++++ fwbuilder-2.1.13_external_antlr/src/src.pro	2007-07-29 13:38:52.000000000 +0100
+@@ -12,7 +12,10 @@
+ # NOTE: 2.1 does not install scripts from src/tools ( fwb_install , fwb_compile_all)
+ 
+ contains( HAVE_ANTLR_RUNTIME, 1 ) {
+-  SUBDIRS += antlr parsers
++  SUBDIRS += parsers
++  contains ( HAVE_EXTERNAL_ANTLR, 0 ) {
++    SUBDIRS += antlr
++  }
+ }
+ 
+ SUBDIRS += gui ipt pflib pf ipf ipfw

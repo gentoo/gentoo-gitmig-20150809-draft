@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.63 2007/07/25 18:43:43 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.64 2007/09/06 00:40:27 r3pek Exp $
+
+*fwbuilder-2.1.13-r1 (06 Sep 2007)
+
+  06 Sep 2007; Carlos Silva <r3pek@gentoo.org>
+  +files/fwbuilder-2.1.13-build-with-external-antlr.patch,
+  -fwbuilder-2.1.13.ebuild, +fwbuilder-2.1.13-r1.ebuild:
+  Revision bump to add a patch to make use of an externel antlr. Updated
+  ebuild from bug #187545 thx to Davide Pesavento. Also dropped alpha and
+  sparc keyword, see bug #187186
 
 *fwbuilder-2.1.13 (25 Jul 2007)
 
