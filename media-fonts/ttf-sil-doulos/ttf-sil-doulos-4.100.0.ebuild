@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-doulos/ttf-sil-doulos-4.100.0.ebuild,v 1.4 2007/09/05 18:05:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-doulos/ttf-sil-doulos-4.100.0.ebuild,v 1.5 2007/09/06 10:39:06 armin76 Exp $
 
 inherit font versionator
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tgz"
 
 LICENSE="OFL"
 SLOT="0"
-KEYWORDS="~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm hppa ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="X doc"
 
 DOCS="FONTLOG.txt OFL.txt OFL-FAQ.txt README.txt"
