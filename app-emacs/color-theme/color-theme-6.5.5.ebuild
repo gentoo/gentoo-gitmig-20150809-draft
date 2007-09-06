@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-6.5.5.ebuild,v 1.2 2006/06/26 23:06:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-6.5.5.ebuild,v 1.3 2007/09/06 14:06:03 ulm Exp $
 
 inherit elisp eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.emacswiki.org/cgi-bin/wiki.pl?ColorTheme"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
 SITEFILE="50${PN}-gentoo.el"
 

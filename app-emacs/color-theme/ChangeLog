@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/color-theme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.30 2007/09/06 13:46:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.31 2007/09/06 14:06:03 ulm Exp $
+
+  06 Sep 2007; Ulrich Mueller <ulm@gentoo.org> color-theme-6.5.4-r1.ebuild,
+  color-theme-6.5.5.ebuild, color-theme-6.6.0.ebuild:
+  Drop ~ppc-macos keyword wrt bug #191336.
 
   06 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   color-theme-6.6.0.ebuild:
