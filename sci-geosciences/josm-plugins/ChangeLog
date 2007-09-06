@@ -1,0 +1,10 @@
+# ChangeLog for sci-geosciences/josm-plugins
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm-plugins/ChangeLog,v 1.1 2007/09/06 23:01:54 hanno Exp $
+
+*josm-plugins-20070907 (06 Sep 2007)
+
+  06 Sep 2007; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
+  +josm-plugins-20070907.ebuild:
+  Initial commit of various josm plugins.
+
