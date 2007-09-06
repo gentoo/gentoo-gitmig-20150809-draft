@@ -1,0 +1,10 @@
+--- ini/pluginpath.ini	2007-09-06 18:12:38 +0200
++++ ini/pluginpath.ini	2007-09-06 18:14:24 +0200
+@@ -21,6 +21,7 @@
+ ; Netscape Plug-in Paths
+ /usr/X11R6/lib/browser_plugins=1
+ $HOME/.netscape/plugins=1
++/usr/lib/nsbrowser/plugins=1
+ 
+ ; FreeBSD Plug-in Paths
+ /usr/local/lib/npapi/symlinks/opera

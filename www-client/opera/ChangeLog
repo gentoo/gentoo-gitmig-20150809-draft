@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.132 2007/09/06 16:31:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.133 2007/09/06 17:00:01 jer Exp $
+
+  06 Sep 2007; Jeroen Roovers <jer@gentoo.org>
+  +files/opera-9.23-pluginpath-fbsd.patch, opera-9.23.ebuild:
+  Apply a different pluginpath.ini patch for elibc_FreeBSD (bug #181300,
+  comment #4).
 
   06 Sep 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_alpha1567.ebuild:
   Remove unneeded amd64? qt-static? for this build.

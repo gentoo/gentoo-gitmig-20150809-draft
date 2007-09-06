@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.23.ebuild,v 1.5 2007/08/15 21:27:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.23.ebuild,v 1.6 2007/09/06 17:00:01 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="OPERA-9.0"
 KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 
-IUSE="qt-static spell gnome"
+IUSE="qt-static spell gnome elibc_FreeBSD"
 RESTRICT="strip mirror"
 
 OPERALNG="en"
@@ -59,8 +59,15 @@ S=${WORKDIR}/${A/.tar.bz2/}-${OPERASUFF}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
 	epatch "${FILESDIR}/${PN}-9.00-install.patch"
-	epatch "${FILESDIR}/${PN}-9.21-pluginpath.patch"
+
+	# bug #181300:
+	if use elibc_FreeBSD; then
+		epatch "${FILESDIR}/${PN}-9.23-pluginpath-fbsd.patch"
+	else
+		epatch "${FILESDIR}/${PN}-9.21-pluginpath.patch"
+	fi
 
 	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
 		-e "s:/usr/share/applnk:${D}/usr/share/applnk:g" \
@@ -133,7 +140,7 @@ src_install() {
 	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > ${D}/etc/revdep-rebuild/90opera
 
 	# Change libz.so.3 to libz.so.1 for gentoo/freebsd
-	if use x86-fbsd; then
+	if use elibc_FreeBSD; then
 		scanelf -qR -N libz.so.3 -F "#N" "${D}"/opt/${PN}/ | \
 		while read i; do
 			if [[ $(strings "$i" | fgrep -c libz.so.3) -ne 1 ]];
@@ -164,7 +171,7 @@ pkg_postinst() {
 	elog "To use the spellchecker (USE=spell) for non-English simply do"
 	elog "$ emerge app-dicts/aspell-[your language]."
 
-	if use x86-fbsd; then
+	if use elibc_FreeBSD; then
 		elog
 		elog "To improve shared memory usage please set:"
 		elog "$ sysctl kern.ipc.shm_allow_removed=1"
