@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/chaosreader
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/chaosreader/ChangeLog,v 1.10 2007/02/20 00:49:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/chaosreader/ChangeLog,v 1.11 2007/09/06 16:18:09 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -chaosreader-0.92.ebuild,
+  -chaosreader-0.93.ebuild:
+  Cleanup
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org>
   files/digest-chaosreader-0.92, files/digest-chaosreader-0.93, Manifest:

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bwm-ng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.7 2007/05/14 06:13:42 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.8 2007/09/06 16:16:39 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -bwm-ng-0.4.ebuild:
+  Cleanup
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.28 2007/04/30 13:21:57 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.29 2007/09/06 16:13:07 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/1.06-libnet-1.0.patch, -arping-1.06-r1.ebuild:
+  Cleanup
 
   30 Apr 2007; Cedric Krier <cedk@gentoo.org> arping-2.05.ebuild:
   Fix HOMEPAGE and add script for bug #175591
