@@ -1,6 +1,13 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.47 2007/08/05 00:09:58 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.48 2007/09/06 18:48:01 hollow Exp $
+
+*awstats-6.7 (06 Sep 2007)
+
+  06 Sep 2007; Benedikt Böhm <hollow@gentoo.org>
+  files/awstats-6.5-CVE-2006-2237-CVE-2006-1945.diff, -awstats-6.6.ebuild,
+  +awstats-6.7.ebuild:
+  fix bug #187994, #187811
 
   05 Aug 2007; Renat Lumpau <rl03@gentoo.org> files/digest-awstats-6.5-r1,
   files/digest-awstats-6.5-r2, Manifest:
