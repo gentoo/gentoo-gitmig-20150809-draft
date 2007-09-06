@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.129 2007/09/05 19:41:44 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.130 2007/09/06 17:54:16 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/rrdtool-1.2.19-as-needed.patch,
+  -files/rrdtool-1.2.19-as-needed.patch-new,
+  -files/rrdtool-1.2.19-tclbindings.patch, -rrdtool-1.0.49.ebuild,
+  -rrdtool-1.2.19.ebuild, -rrdtool-1.2.23.ebuild:
+  Cleanup
 
   05 Sep 2007; <solar@gentoo.org> rrdtool-1.2.23-r1.ebuild:
   - remove failing patch that is no longer need for uclibc. Bug 191345

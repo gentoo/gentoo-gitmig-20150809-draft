@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nbtscan
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.23 2006/10/28 10:46:05 opfer Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.24 2007/09/06 17:33:37 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -nbtscan-1.5.1.ebuild:
+  Cleanup
 
   28 Oct 2006; Christian Faulhammer <opfer@gentoo.org>
   nbtscan-1.5.1-r1.ebuild:

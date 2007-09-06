@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ibmonitor
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ibmonitor/ChangeLog,v 1.15 2007/03/20 14:17:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ibmonitor/ChangeLog,v 1.16 2007/09/06 17:22:08 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -ibmonitor-1.3.ebuild:
+  Cleanup
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> ibmonitor-1.4.ebuild:
   x86 stable

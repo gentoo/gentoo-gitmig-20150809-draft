@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sara
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/ChangeLog,v 1.22 2007/07/22 08:02:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/ChangeLog,v 1.23 2007/09/06 17:55:11 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -sara-6.0.7d.ebuild:
+  Cleanup
 
   22 Jul 2007; <pva@gentoo.org> sara-6.0.4.ebuild, sara-6.0.7d.ebuild,
   sara-7.0.3b.ebuild:

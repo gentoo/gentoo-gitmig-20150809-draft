@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.83 2007/08/04 11:05:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.84 2007/09/06 17:29:52 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -mrtg-2.14.5.ebuild,
+  -mrtg-2.15.0.ebuild, -mrtg-2.15.1.ebuild:
+  Cleanup
 
   04 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> mrtg-2.15.2.ebuild:
   ppc stable, bug #184623

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ipaudit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipaudit/ChangeLog,v 1.8 2007/06/17 11:12:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipaudit/ChangeLog,v 1.9 2007/09/06 17:23:06 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -ipaudit-1.0_beta1.ebuild:
+  Cleanup
 
   17 Jun 2007; Raúl Porcel <armin76@gentoo.org> ipaudit-1.0_beta2.ebuild:
   x86 stable wrt #181590

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/isic
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/ChangeLog,v 1.13 2007/03/20 14:34:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/ChangeLog,v 1.14 2007/09/06 17:25:44 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/isic-0.06-gcc4.patch, -files/isic-0.06-makefile.patch,
+  -isic-0.06.ebuild:
+  Cleanup
 
   20 Mar 2007; Raúl Porcel <armin76@gentoo.org> isic-0.07.ebuild:
   x86 stable

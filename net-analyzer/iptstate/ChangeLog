@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptstate
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.28 2007/08/08 14:13:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.29 2007/09/06 17:25:02 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -iptstate-1.4.ebuild:
+  Cleanup
 
   08 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> iptstate-2.2.1.ebuild:
   Stable on sparc

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/knetscan
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/ChangeLog,v 1.27 2007/02/01 12:14:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/ChangeLog,v 1.28 2007/09/06 17:26:40 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -knetscan-1.0.ebuild:
+  Cleanup
 
   01 Feb 2007; Markus Rothe <corsair@gentoo.org> knetscan-1.0-r1.ebuild:
   Stable on ppc64

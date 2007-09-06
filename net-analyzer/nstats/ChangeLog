@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nstats
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nstats/ChangeLog,v 1.15 2006/08/16 00:58:03 squinky86 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nstats/ChangeLog,v 1.16 2007/09/06 17:46:03 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -nstats-0.4.ebuild:
+  Cleanup
 
   16 Aug 2006; Jon Hood <squinky86@gentoo.org> nstats-0.4-r1.ebuild:
   Stable on amd64, bug #143909. Thanks postmodern <brodigan@pdx.edu>.
