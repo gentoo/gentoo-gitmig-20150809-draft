@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.5.ebuild,v 1.1 2007/07/14 07:08:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.5.ebuild,v 1.2 2007/09/06 11:59:48 armin76 Exp $
 
 inherit libtool eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/radius/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="guile mysql postgres odbc dbm nls snmp pam static debug readline"
 
 DEPEND="!net-dialup/freeradius
