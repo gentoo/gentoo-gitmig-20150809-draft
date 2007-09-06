@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/gwhois
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.23 2007/08/23 18:34:42 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.24 2007/09/06 09:39:25 wschlich Exp $
+
+*gwhois-20070905 (06 Sep 2007)
+
+  06 Sep 2007; Wolfram Schlich <wschlich@gentoo.org>
+  +gwhois-20070905.ebuild:
+  version bump
 
   23 Aug 2007; Wolfram Schlich <wschlich@gentoo.org>
   -gwhois-20050115.ebuild, -gwhois-20050925.ebuild, -gwhois-20060419.ebuild,
