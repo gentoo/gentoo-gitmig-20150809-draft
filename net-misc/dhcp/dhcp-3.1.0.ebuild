@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.1.0.ebuild,v 1.6 2007/09/02 21:50:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.1.0.ebuild,v 1.7 2007/09/06 14:02:38 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -62,9 +62,6 @@ src_unpack() {
 
 	# NetworkManager support patches
 	# If they fail to apply to future versions they will be dropped
-	# Enable eXtended options
-	# dhcp-3.1.0_rc2 has it's own -x option which conflicts here
-	#epatch "${FILESDIR}/${PN}"-3.1.0a1-x-option.patch
 	# Add dbus support to dhclient
 	epatch "${FILESDIR}/${PN}"-3.0.3-dhclient-dbus.patch
 
@@ -142,8 +139,8 @@ src_compile() {
 	MANCAT = man
 	END
 
-	./configure --copts "-DPARANOIA -DEARLY_CHROOT -DEXTENDED_NEW_OPTION_INFO \
-		${CFLAGS}" || die "configure failed"
+	./configure --copts "-DPARANOIA -DEARLY_CHROOT ${CFLAGS}" \
+		|| die "configure failed"
 
 	# Remove server support from the Makefile
 	# We still install some extra crud though
