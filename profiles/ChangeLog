@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.623 2007/09/05 06:17:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.624 2007/09/06 19:44:30 dertobi123 Exp $
+
+  06 Sep 2007; Tobias Scherbaum <dertobi123@gentoo.org> package.mask:
+  Unmasking >=cyrus-imapd-2.3 and >=cyrus-imap-admin-2.3
 
   05 Sep 2007; Ulrich Mueller <ulm@gentoo.org> updates/3Q-2004,
   updates/2Q-2007:

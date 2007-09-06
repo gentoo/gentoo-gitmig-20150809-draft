@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7682 2007/09/06 17:18:47 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7683 2007/09/06 19:44:30 dertobi123 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1134,11 +1134,6 @@ app-shells/csh
 # Alexandre Buisse <nattfodd@gentoo.org> (12 Jan 2006)
 # Masked for testing purposes
 dev-tex/mpm
-
-# Tuan Van <langthang@gentoo.org> (10 Jan 2006)
-# Testing release.
->=net-mail/cyrus-imapd-2.3
->=net-mail/cyrus-imap-admin-2.3
 
 # <robbat2@gentoo.org> (26 Dec 2005)
 # Fails HMAC test on Pentium-M systems
