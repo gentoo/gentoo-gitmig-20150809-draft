@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/anope
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.6 2007/04/21 22:03:18 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.7 2007/09/06 13:16:41 jokey Exp $
+
+*anope-1.7.19 (06 Sep 2007)
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> +anope-1.7.19.ebuild:
+  Version bump
 
   21 Apr 2007; Bjarke Istrup Pedersen <gurligebis@gentoo.org> anope-1.7.18.ebuild:
   replacing insinto with newconfd and newinitd functions
