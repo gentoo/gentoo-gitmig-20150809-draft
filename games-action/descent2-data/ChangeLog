@@ -1,6 +1,10 @@
 # ChangeLog for games-action/descent2-data
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/ChangeLog,v 1.3 2007/03/07 21:40:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/ChangeLog,v 1.4 2007/09/06 22:30:22 wolf31o2 Exp $
+
+  06 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  descent2-data-1.0.ebuild:
+  Removed the RDEPEND section since it was causing dependency issues.
 
   07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   descent2-data-1.0.ebuild:
