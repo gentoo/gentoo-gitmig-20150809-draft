@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.32 2007/09/01 13:16:47 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.33 2007/09/06 11:46:38 coldwind Exp $
+
+  06 Sep 2007; Santiago M. Mola <coldwind@gentoo.org> metadata.xml:
+  Now maintained by desktop-wm.
 
   01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing twp from metadata due to his retirement (see #190561 for reference).
