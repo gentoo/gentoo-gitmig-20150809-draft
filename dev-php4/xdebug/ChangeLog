@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/xdebug
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/xdebug/ChangeLog,v 1.15 2007/08/16 21:44:59 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/xdebug/ChangeLog,v 1.16 2007/09/06 16:02:13 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -xdebug-2.0.0_rc3.ebuild,
+  -xdebug-2.0.0_rc4.ebuild:
+  Cleanup
 
 *xdebug-2.0.0 (16 Aug 2007)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-yaz
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-yaz/ChangeLog,v 1.23 2007/07/01 18:53:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-yaz/ChangeLog,v 1.24 2007/09/06 15:59:03 jokey Exp $
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -pecl-yaz-1.0.4.ebuild:
+  Cleanup
 
   01 Jul 2007; Raúl Porcel <armin76@gentoo.org> pecl-yaz-1.0.8.ebuild:
   alpha stable wrt #173849
