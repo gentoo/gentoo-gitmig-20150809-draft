@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_alpha1567.ebuild,v 1.1 2007/09/05 03:40:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_alpha1567.ebuild,v 1.2 2007/09/06 16:15:41 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="OPERA-9.0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
-IUSE="qt-static spell gnome"
+IUSE="qt-static spell gnome elibc_FreeBSD"
 RESTRICT="strip mirror"
 
 O_LNG=""
@@ -48,12 +48,11 @@ RDEPEND="x11-libs/libXrandr
 	x11-libs/libSM
 	x11-libs/libICE
 	>=media-libs/fontconfig-2.1.94-r1
-	!amd64? ( media-libs/libexif
-			  spell? ( app-text/aspell )
-			  x86? ( !qt-static? ( =x11-libs/qt-3* ) )
-			  media-libs/jpeg )
-	x86-fbsd? ( =virtual/libstdc++-3*
-			    !qt-static? ( =x11-libs/qt-3* ) )"
+	!qt-static? ( =x11-libs/qt-3* )
+	media-libs/libexif
+	spell? ( app-text/aspell )
+	media-libs/jpeg
+	x86-fbsd? ( =virtual/libstdc++-3* )"
 
 S=${WORKDIR}/${A/.tar.bz2/}
 
@@ -62,7 +61,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch "${FILESDIR}/${PN}-9.00-install.patch"
-	epatch "${FILESDIR}/${PN}-9.50-pluginpath.patch"
+	use elibc_FreeBSD || epatch "${FILESDIR}/${PN}-9.50-pluginpath.patch"
 
 	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
 		-e "s:/usr/share/applnk:${D}/usr/share/applnk:g" \
@@ -136,7 +135,7 @@ src_install() {
 	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > ${D}/etc/revdep-rebuild/90opera
 
 	# Change libz.so.3 to libz.so.1 for gentoo/freebsd
-	if use x86-fbsd; then
+	if use elibc_FreeBSD; then
 		scanelf -qR -N libz.so.3 -F "#N" "${D}"/opt/${PN}/ | \
 		while read i; do
 			if [[ $(strings "$i" | fgrep -c libz.so.3) -ne 1 ]];
@@ -167,7 +166,7 @@ pkg_postinst() {
 	elog "To use the spellchecker (USE=spell) for non-English simply do"
 	elog "$ emerge app-dicts/aspell-[your language]."
 
-	if use x86-fbsd; then
+	if use elibc_FreeBSD; then
 		elog
 		elog "To improve shared memory usage please set:"
 		elog "$ sysctl kern.ipc.shm_allow_removed=1"
