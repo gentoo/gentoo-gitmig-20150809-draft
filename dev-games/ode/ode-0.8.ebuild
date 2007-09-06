@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.8.ebuild,v 1.8 2007/08/12 21:47:58 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.8.ebuild,v 1.9 2007/09/06 07:30:39 opfer Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/opende/${PN}-src-${PV}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="double-precision examples nogyroscopic noopcode"
 
 RDEPEND="examples? (

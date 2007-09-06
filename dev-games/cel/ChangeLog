@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.18 2007/03/02 19:46:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.19 2007/09/06 07:30:59 opfer Exp $
+
+  06 Sep 2007; Christian Faulhammer <opfer@gentoo.org> cel-1.0.1.ebuild:
+  stable x86, bug 187093
 
 *cel-1.0.1 (02 Mar 2007)
 
