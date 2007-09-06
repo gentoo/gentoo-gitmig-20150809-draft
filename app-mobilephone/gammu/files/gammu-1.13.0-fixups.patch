@@ -1,0 +1,113 @@
+diff -Nru gammu-1.13.0.orig/common/misc/misc.h gammu-1.13.0/common/misc/misc.h
+--- gammu-1.13.0.orig/common/misc/misc.h	2007-08-03 12:19:04.000000000 +0300
++++ gammu-1.13.0/common/misc/misc.h	2007-09-06 12:55:36.000000000 +0300
+@@ -22,7 +22,7 @@
+ 
+ /* ------------------------------------------------------------------------- */
+ 
+-#define MAX_LINES 50
++#define MAX_LINES 512
+ 
+ typedef struct {
+ 	int numbers[MAX_LINES*2];
+diff -Nru gammu-1.13.0.orig/common/service/backup/backtext.c gammu-1.13.0/common/service/backup/backtext.c
+--- gammu-1.13.0.orig/common/service/backup/backtext.c	2007-08-03 16:20:04.000000000 +0300
++++ gammu-1.13.0/common/service/backup/backtext.c	2007-09-06 12:55:36.000000000 +0300
+@@ -903,7 +903,12 @@
+ 
+ static void SaveRingtoneEntry(FILE *file, GSM_Ringtone *ringtone, bool UseUnicode)
+ {
+-	unsigned char buffer[45000];
++	unsigned char *buffer;
++
++	buffer = (unsigned char *)malloc(32 > 2 * ringtone->NokiaBinary.Length ?
++			32 : 2 * ringtone->NokiaBinary.Length);
++	if (buffer == NULL)
++		return;
+ 
+ 	sprintf(buffer,"Location = %i%c%c",ringtone->Location,13,10);
+ 	SaveBackupText(file, "", buffer, UseUnicode);
+@@ -926,6 +931,8 @@
+ 	}
+ 	sprintf(buffer,"%c%c",13,10);
+ 	SaveBackupText(file, "", buffer, UseUnicode);
++
++	free(buffer);
+ }
+ 
+ static void SaveOperatorEntry(FILE *file, GSM_Bitmap *bitmap, bool UseUnicode)
+diff -Nru gammu-1.13.0.orig/gammu/backup.c gammu-1.13.0/gammu/backup.c
+--- gammu-1.13.0.orig/gammu/backup.c	2007-08-01 17:36:52.000000000 +0300
++++ gammu-1.13.0/gammu/backup.c	2007-09-06 12:55:36.000000000 +0300
+@@ -165,7 +165,7 @@
+  	GSM_FMStation		FMStation;
+  	GSM_GPRSAccessPoint	GPRSPoint;
+ 	bool			DoBackup;
+-	char buffer[100];
++	char buffer[GSM_MAX_INFO_LENGTH];
+ 
+ 	if (argc == 4 && strcasecmp(argv[3],"-yes") == 0) always_answer_yes = true;
+ 
+diff -Nru gammu-1.13.0.orig/gammu/common.c gammu-1.13.0/gammu/common.c
+--- gammu-1.13.0.orig/gammu/common.c	2007-08-01 17:36:52.000000000 +0300
++++ gammu-1.13.0/gammu/common.c	2007-09-06 12:55:36.000000000 +0300
+@@ -224,9 +224,10 @@
+ void GSM_Init(bool checkerror)
+ {
+ 	GSM_File PhoneDB;
+-	char model[100];
+-	char version[100];
+-	unsigned char buff[200], ver[200];
++	char model[GSM_MAX_MODEL_LENGTH];
++	char version[GSM_MAX_VERSION_LENGTH];
++	unsigned char buff[50 + GSM_MAX_MODEL_LENGTH];
++	unsigned char ver[GSM_MAX_VERSION_LENGTH];
+ 	size_t pos = 0, oldpos = 0, i;
+ 	GSM_Error error;
+ 
+diff -Nru gammu-1.13.0.orig/gammu/misc.c gammu-1.13.0/gammu/misc.c
+--- gammu-1.13.0.orig/gammu/misc.c	2007-08-06 12:48:08.000000000 +0300
++++ gammu-1.13.0/gammu/misc.c	2007-09-06 12:55:36.000000000 +0300
+@@ -97,8 +97,8 @@
+ 
+ void Identify(int argc, char *argv[])
+ {
+-	char buffer[100];
+-	char date[100];
++	char buffer[GSM_MAX_INFO_LENGTH];
++	char date[GSM_MAX_VERSION_DATE_LENGTH];
+ 	double num;
+ 	GSM_Error error;
+ 
+diff -Nru gammu-1.13.0.orig/gammu/search.c gammu-1.13.0/gammu/search.c
+--- gammu-1.13.0.orig/gammu/search.c	2007-07-31 19:16:08.000000000 +0300
++++ gammu-1.13.0/gammu/search.c	2007-09-06 12:55:36.000000000 +0300
+@@ -60,7 +60,7 @@
+ void SearchPrintPhoneInfo(OneDeviceInfo * Info, int index, GSM_StateMachine *sm)
+ {
+ 	GSM_Error error;
+-	char buffer[100];
++	char buffer[GSM_MAX_INFO_LENGTH];
+ 
+ 	error = GSM_GetManufacturer(sm, buffer);
+ 
+diff -Nru gammu-1.13.0.orig/include/gammu-limits.h gammu-1.13.0/include/gammu-limits.h
+--- gammu-1.13.0.orig/include/gammu-limits.h	2007-07-23 18:31:42.000000000 +0300
++++ gammu-1.13.0/include/gammu-limits.h	2007-09-06 12:55:36.000000000 +0300
+@@ -49,6 +49,16 @@
+ #define GSM_MAX_IMEI_LENGTH 20
+ 
+ /**
++ * Maximal length of various phone information. Just a shorcut for
++ * functions doing whole identification and use one buffer.
++ *
++ * \ingroup Limits
++ */
++#define GSM_MAX_INFO_LENGTH MAX(MAX(MAX(GSM_MAX_VERSION_LENGTH, \
++	GSM_MAX_IMEI_LENGTH), GSM_MAX_MODEL_LENGTH), \
++	GSM_MAX_MANUFACTURER_LENGTH)
++
++/**
+  * Maximal count of SMS messages in folder.
+  *
+  * \ingroup Limits
