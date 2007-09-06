@@ -109,10 +109,10 @@ AUX udev-114-root-link-2.diff 4677 RMD160 47b040b51ed0dc637ff2197373db5173bc5985
 MD5 fd97ab764c587e21b8fadaa171e2688f files/udev-114-root-link-2.diff 4677
 RMD160 47b040b51ed0dc637ff2197373db5173bc59854e files/udev-114-root-link-2.diff 4677
 SHA256 d212407420bb46a541e547d59862668745dd8b516b6be6e6619cf967ab2124f9 files/udev-114-root-link-2.diff 4677
-AUX udev-115-add-special-rule-files.diff 2949 RMD160 91349805d4d1718af55de405f0a9f2ddf5db5c49 SHA1 e40dd0b30d949fb2857c648936818498e6abdda5 SHA256 cc07c0a4cc51f9ed5076ec28f32aae26f09ad1a49c1c9ed5822389df74872c4a
-MD5 674d965d8841cc5c578744ff4ffb29da files/udev-115-add-special-rule-files.diff 2949
-RMD160 91349805d4d1718af55de405f0a9f2ddf5db5c49 files/udev-115-add-special-rule-files.diff 2949
-SHA256 cc07c0a4cc51f9ed5076ec28f32aae26f09ad1a49c1c9ed5822389df74872c4a files/udev-115-add-special-rule-files.diff 2949
+AUX udev-115-add-special-rule-files.diff 2950 RMD160 30f59b71a82231df23e4eb70c36512a7b6ae96c8 SHA1 3ecb208a05a154e5226ad73da15e344991af7f36 SHA256 8c7c75e82e6326c299a495d82580c8c2eb94de1c1dee065c8d6b4959dbdb93d4
+MD5 623a062cb2aa3bf141c90d7bd4e70801 files/udev-115-add-special-rule-files.diff 2950
+RMD160 30f59b71a82231df23e4eb70c36512a7b6ae96c8 files/udev-115-add-special-rule-files.diff 2950
+SHA256 8c7c75e82e6326c299a495d82580c8c2eb94de1c1dee065c8d6b4959dbdb93d4 files/udev-115-add-special-rule-files.diff 2950
 AUX udev-115-rules-update.diff 4460 RMD160 cfbfaf9f8d640d023cbc82995ff7c31e326adebd SHA1 b8f1e89c9c94f7898c850dea96850e3adcf55373 SHA256 9ae79f4cecf60d7ca5f10e9bc4400821699ca346fc261677f9a92f9f7cfb09af
 MD5 dc602c4f2a2e552ba8c6c50a674a1adb files/udev-115-rules-update.diff 4460
 RMD160 cfbfaf9f8d640d023cbc82995ff7c31e326adebd files/udev-115-rules-update.diff 4460
@@ -311,7 +311,7 @@ SHA256 72db9d525a00b48494c6ad380747ba00f5594b1ac0a05d34e02c0ab5e9868b1d files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.6 (GNU/Linux)
 
-iD8DBQFG3/ewt2vP6XvVdOcRAmkcAKCEnm7/4iCVfXCRqQ0Dfd/9ZrZECwCbBxmq
-Voh7YJVOR4cgVK38a6gia6o=
-=lH2W
+iD8DBQFG4Cxyt2vP6XvVdOcRAhZaAJ9yThZk6jlII2TpNdQo+KaGKt+pHwCfSJsF
+CRxb/8x+1VJ2gnWbwobjqZA=
+=ko+h
 -----END PGP SIGNATURE-----
