@@ -1,0 +1,10 @@
+# ChangeLog for net-firewall/shorewall-common
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/ChangeLog,v 1.1 2007/09/06 11:16:44 jokey Exp $
+
+*shorewall-common-4.0.3 (06 Sep 2007)
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> +files/shorewall.initd,
+  +metadata.xml, +shorewall-common-4.0.3.ebuild:
+  Initial import of shorewall 4.x series wrt bug #174588 thanks to Vieri
+

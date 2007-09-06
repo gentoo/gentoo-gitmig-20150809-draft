@@ -1,0 +1,10 @@
+# ChangeLog for net-firewall/shorewall-shell
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/ChangeLog,v 1.1 2007/09/06 11:15:28 jokey Exp $
+
+*shorewall-shell-4.0.3 (06 Sep 2007)
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +shorewall-shell-4.0.3.ebuild:
+  Initial import of shorewall 4.x series wrt bug #174588 thanks to Vieri
+
