@@ -1,0 +1,11 @@
+--- Gebabbel-0.3/src/MyMainWindow.cpp	2007-07-11 23:55:10.000000000 +0200
++++ Gebabbel-0.3-1/src/MyMainWindow.cpp	2007-09-06 20:19:16.000000000 +0200
+@@ -809,7 +809,7 @@
+ 
+ 		// The options -Si and -Sn replace -s and -N since gpsbabel-1.3.3
+ 		// Separators.setPattern( " -[pwrtTsNixo] " );
+-		Separators.setPattern( " -[pwrtTixo] \| -Sn \| -Si " );
++		Separators.setPattern( " -[pwrtTixoS][in]? " );
+ 
+ 		// Command must start with the path to the gpsbabel executable,
+ 		// which can be an absolute path or only consist of the executable name
