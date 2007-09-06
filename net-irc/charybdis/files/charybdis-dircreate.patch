@@ -1,0 +1,46 @@
+--- ./Makefile.in.orig	2006-05-17 16:49:13.000000000 +0200
++++ ./Makefile.in	2007-09-06 15:35:25.462195923 +0200
+@@ -110,25 +110,25 @@
+ install-mkdirs:
+ 	@echo "ircd: setting up ircd directory structure"
+ 	-@if test ! -d $(DESTDIR)$(prefix); then \
+-		mkdir $(DESTDIR)$(prefix); \
++		mkdir -p $(DESTDIR)$(prefix); \
+ 	fi
+ 	-@if test ! -d $(DESTDIR)$(bindir); then \
+-		mkdir $(DESTDIR)$(bindir); \
++		mkdir -p $(DESTDIR)$(bindir); \
+ 	fi
+ 	-@if test ! -d $(DESTDIR)$(confdir); then \
+-		mkdir $(DESTDIR)$(confdir); \
++		mkdir -p $(DESTDIR)$(confdir); \
+ 	fi
+ 	-@if test ! -d $(DESTDIR)$(mandir); then \
+-		mkdir $(DESTDIR)$(mandir); \
++		mkdir -p $(DESTDIR)$(mandir); \
+ 	fi
+ 	-@if test ! -d $(DESTDIR)$(moduledir); then \
+-		mkdir $(DESTDIR)$(moduledir); \
++		mkdir -p $(DESTDIR)$(moduledir); \
+ 	fi
+ 	-@if test ! -d $(DESTDIR)$(helpdir); then \
+-		mkdir $(DESTDIR)$(helpdir); \
++		mkdir -p $(DESTDIR)$(helpdir); \
+ 	fi
+ 	-@if test ! -d $(DESTDIR)$(logdir); then \
+-		mkdir $(DESTDIR)$(logdir); \
++		mkdir -p $(DESTDIR)$(logdir); \
+ 	fi
+ 	
+ install: install-mkdirs all
+--- ./modules/Makefile.in.orig	2006-03-06 04:43:02.000000000 +0100
++++ ./modules/Makefile.in	2007-09-06 15:37:10.468179952 +0200
+@@ -152,7 +152,7 @@
+ install-mkdirs:
+ 	@echo "ircd: setting up modular directory structure"
+ 	-@if test ! -d $(DESTDIR)$(moduledir); then \
+-                mkdir $(DESTDIR)$(moduledir); \
++                mkdir -p $(DESTDIR)$(moduledir); \
+         fi
+ 	-@if test -d $(DESTDIR)$(moduledir)-old; then \
+ 		rm -rf $(DESTDIR)$(moduledir)-old; \

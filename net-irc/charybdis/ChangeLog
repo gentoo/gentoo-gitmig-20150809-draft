@@ -1,6 +1,15 @@
 # ChangeLog for net-irc/charybdis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.4 2007/02/21 15:37:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.5 2007/09/06 13:46:22 jokey Exp $
+
+*charybdis-2.2.0 (06 Sep 2007)
+*charybdis-2.1.5 (06 Sep 2007)
+
+  06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/charybdis-1.1.0-paths.patch, +files/charybdis-dircreate.patch,
+  -charybdis-1.1.0.ebuild, -charybdis-2.1.0.ebuild, +charybdis-2.1.5.ebuild,
+  +charybdis-2.2.0.ebuild:
+  Version bump and cleanup
 
   21 Feb 2007; Raúl Porcel <armin76@gentoo.org> Manifest:
   Convert to Manifest2
