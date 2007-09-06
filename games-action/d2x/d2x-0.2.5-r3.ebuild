@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r3.ebuild,v 1.5 2007/07/30 18:18:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r3.ebuild,v 1.6 2007/09/06 22:32:18 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -10,7 +10,7 @@ SRC_URI="http://icculus.org/d2x/src/${P}.tar.gz"
 
 LICENSE="D1X"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="cdinstall debug opengl ggi svga"
 
 COMMON="media-libs/libsdl
@@ -86,6 +86,6 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	elog "d2x-rebirth and d2x-xl are more up-to-date versions of this game."
+	elog "d2x-rebirth is a more up-to-date version of this game."
 	echo
 }
