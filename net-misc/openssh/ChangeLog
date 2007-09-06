@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.257 2007/09/06 10:37:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.258 2007/09/06 11:19:43 yoswink Exp $
+
+  06 Sep 2007; Jose Luis Rivero <yoswink@gentoo.org> openssh-4.7_p1.ebuild:
+  Stable on sparc wrt security bug #191321
 
   06 Sep 2007; Raúl Porcel <armin76@gentoo.org> openssh-4.7_p1.ebuild:
   alpha/ia64 stable wrt security #191321
