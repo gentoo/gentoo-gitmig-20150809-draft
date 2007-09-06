@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7679 2007/09/05 19:55:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7680 2007/09/06 12:11:13 hawking Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Ali Polatel <hawking@gentoo.org> (06 Sept 2007)
+# Masked for removal in 30 days. bug 185041
+# Included to python standard library as of 2.3
+dev-python/logging
 
 # Markus Ullmann <jokey@gentoo.org> (05 Sept 2007)
 # masked for testing
