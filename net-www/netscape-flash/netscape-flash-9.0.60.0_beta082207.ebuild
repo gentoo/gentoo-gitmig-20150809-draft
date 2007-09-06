@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.60.0_beta082207.ebuild,v 1.1 2007/09/05 19:06:38 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.60.0_beta082207.ebuild,v 1.2 2007/09/06 15:45:57 jer Exp $
 
 inherit nsplugins versionator
 
@@ -10,7 +10,7 @@ MY_P="install_flash_player_9_linux"
 
 DESCRIPTION="Adobe Flash Player"
 SRC_URI="http://download.macromedia.com/pub/labs/flashplayer9_update/flashplayer9_install_linux_${MY_PV}.tar.gz"
-HOMEPAGE="http://www.adobe.com/"
+HOMEPAGE="http://labs.adobe.com/technologies/flashplayer9/"
 IUSE=""
 SLOT="0"
 

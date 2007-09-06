@@ -1,6 +1,10 @@
 # ChangeLog for net-www/netscape-flash
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.57 2007/09/05 19:06:38 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.58 2007/09/06 15:45:57 jer Exp $
+
+  06 Sep 2007; Jeroen Roovers <jer@gentoo.org>
+  netscape-flash-9.0.60.0_beta082207.ebuild:
+  Fix HOMEPAGE for the new beta version.
 
 *netscape-flash-9.0.60.0_beta082207 (05 Sep 2007)
 
