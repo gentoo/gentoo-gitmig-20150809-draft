@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.82.2.ebuild,v 1.1 2007/09/06 13:14:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.82.2.ebuild,v 1.2 2007/09/07 15:44:20 cardoe Exp $
 
 inherit python multilib
 
@@ -14,7 +14,7 @@ LICENSE="|| ( GPL-2 AFL-2.1 )"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="test"
 
-RDEPEND=">=dev-lang/python-2.4
+RDEPEND=">=dev-lang/python-2.4.4-r5
 	>=dev-python/pyrex-0.9.3-r2
 	>=dev-libs/dbus-glib-0.71
 	>=sys-apps/dbus-0.91"
