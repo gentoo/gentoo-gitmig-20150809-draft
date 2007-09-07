@@ -1,6 +1,21 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.297 2007/07/04 08:09:15 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.298 2007/09/07 21:07:39 dev-zero Exp $
+
+*samba-3.0.25c (07 Sep 2007)
+
+  07 Sep 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/3.0.25c-lazyldflags.patch, +files/3.0.25c-py_smp.patch,
+  +files/3.0.x-libdirsymlink.patch, +files/config/lmhosts,
+  +files/config/nsswitch.conf-winbind, +files/config/nsswitch.conf-wins,
+  +files/config/samba.pam, +files/config/samba.schema,
+  +files/config/smb.conf.example-samba3, +files/config/smbusers,
+  +files/config/swat.xinetd, +files/config/system-auth-winbind,
+  files/samba-init, +files/samba-xinetd, +samba-3.0.25c.ebuild:
+  Version bump (bug #178639, thanks to Johan Andersson for the py_smb-patch).
+  Added ipv6 support (bug #187905). Replaced 'kerberos' with 'ads' USE flag
+  (bug #181558). Added possibility to start daemons seperately (bug #112188).
+  Fixed python-handling (bug #177545).
 
   24 Jun 2007; Tiziano Müller <dev-zero@gentoo.org> -samba-3.0.24.ebuild:
   Dropped old version
