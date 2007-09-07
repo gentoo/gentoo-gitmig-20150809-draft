@@ -1,12 +1,13 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.5 2007/07/08 20:19:10 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.6 2007/09/07 11:53:11 redhatter Exp $
 
 # Christian Heim <phreak@gentoo.org> (07 Jul 2007)
 # virtual/mysql-5 not keyworded yet, still apr-util has the mips keyword.
 dev-libs/apr-util mysql
 
-# Steve Dibb <beandog@gentoo.org> (03 Mar 2007)
-# media-sound/twolame not tested
-media-video/mplayer mp2
+# Stuart Longland <redhatter@gentoo.org> (07 Sep 2007)
+# mplayer not tested with these flags yet.  I may remove these slowly as I test
+# more functions of mplayer.
+media-video/mplayer amrnb amrwb bidi bl cddb cdio cdparanoia cpudetection dga dv dvb enca esd ivtv joystick live mad mp2 openal pnm pvr radio rar rtc srt svga teletext tga tivo v4l2 xanim xinerama zoran
 
 # NPTL only works on >=glibc-2.4 ...
 <sys-lib/glibc-2.4 nptl
