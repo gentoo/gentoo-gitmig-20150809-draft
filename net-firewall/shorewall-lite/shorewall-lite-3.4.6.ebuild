@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-3.4.6.ebuild,v 1.2 2007/09/06 09:28:31 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-3.4.6.ebuild,v 1.3 2007/09/07 14:32:27 jokey Exp $
 
 #MY_P_TREE="development/3.9"
 MY_P_TREE="3.4"
@@ -34,24 +34,24 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Documentation is available at http://www.shorewall.net"
-	einfo "There are man pages for shorewall-lite(8) and for each"
-	einfo "configuration file."
-	einfo
-	einfo "You should have already generated a firewall script with"
-	einfo "'shorewall compile' on the administrative Shorewall."
-	einfo "Please refer to"
-	einfo "http://www.shorewall.net/CompiledPrograms.html"
-	einfo
-	einfo "If you intend to use the 2.6 IPSEC Support, you must retrieve the"
-	einfo "kernel patches from http://shorewall.net/pub/shorewall/contrib/IPSEC/"
-	einfo "or install kernel 2.6.16+ as well as a recent Netfilter iptables"
-	einfo "and compile it with support for policy match."
-	einfo
-	einfo "Note that /etc/shorewall-lite/shorewall.conf has been renamed"
-	einfo "to /etc/shorewall-lite/shorewall-lite.conf"
-	einfo
-	einfo "Known problems:"
-	einfo "http://shorewall.net/pub/shorewall/${MY_P_TREE}/${MY_P}/known_problems.txt"
+	elog
+	elog "Documentation is available at http://www.shorewall.net"
+	elog "There are man pages for shorewall-lite(8) and for each"
+	elog "configuration file."
+	elog
+	elog "You should have already generated a firewall script with"
+	elog "'shorewall compile' on the administrative Shorewall."
+	elog "Please refer to"
+	elog "http://www.shorewall.net/CompiledPrograms.html"
+	elog
+	elog "If you intend to use the 2.6 IPSEC Support, you must retrieve the"
+	elog "kernel patches from http://shorewall.net/pub/shorewall/contrib/IPSEC/"
+	elog "or install kernel 2.6.16+ as well as a recent Netfilter iptables"
+	elog "and compile it with support for policy match."
+	elog
+	elog "Note that /etc/shorewall-lite/shorewall.conf has been renamed"
+	elog "to /etc/shorewall-lite/shorewall-lite.conf"
+	elog
+	elog "Known problems:"
+	elog "http://shorewall.net/pub/shorewall/${MY_P_TREE}/${MY_P}/known_problems.txt"
 }
