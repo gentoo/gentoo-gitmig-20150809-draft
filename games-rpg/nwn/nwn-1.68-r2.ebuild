@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r2.ebuild,v 1.2 2007/09/05 13:29:21 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r2.ebuild,v 1.3 2007/09/07 13:19:50 calchan Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ HOU_NAME=_linuxclient${MY_PV}_xp2.tar.gz
 
 DESCRIPTION="role-playing game set in a huge medieval fantasy world of Dungeons and Dragons"
 HOMEPAGE="http://nwn.bioware.com/downloads/linuxclient.html"
-SRC_URI="http://dev.gentoo.org/~calchan/distfiles/nwn-libsdl-1.2.12.tar.bz2
+SRC_URI="http://dev.gentoo.org/~calchan/distfiles/nwn-libsdl-1.2.12-r1.tar.bz2
 	linguas_fr? (
 		!sou? ( !hou? ( ${PATCH_URL_BASE}/French${PACKAGE_NAME} ) )
 		sou? ( ${PATCH_URL_BASE}/French${SOU_NAME} )
@@ -242,8 +242,8 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	einfo "The included custom libSDL is patched to enable the following key sequences:"
-	einfo "  * Right-Alt & Enter - Toggle between FullScreen/Windowed"
 	einfo "  * Left-Alt & Enter - Iconify Window"
+	einfo "  * Right-Alt & Enter - Toggle between FullScreen/Windowed"
 	einfo "  * Left-Control & G - Disable the mouse grab that keeps the cursor inside the NWN window"
 	einfo "  * Right-Control & G - Re-enable the mouse grab to keep the cursor inside the NWN window"
 	einfo

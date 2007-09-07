@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.60 2007/09/05 13:29:21 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.61 2007/09/07 13:19:50 calchan Exp $
+
+  07 Sep 2007; Denis Dupeyron <calchan@gentoo.org> nwn-1.68-r2.ebuild:
+  Less annoying iconification. Fixed fullscreen toggling for international
+  users with an AltGr key.
 
   05 Sep 2007; Denis Dupeyron <calchan@gentoo.org> nwn-1.68-r2.ebuild:
   Changed URI for custom libSDL. Added postinst message describing new
