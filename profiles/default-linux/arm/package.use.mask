@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.5 2007/08/18 21:30:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.6 2007/09/07 16:27:48 lack Exp $
+
+# Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
+# app-admin/gkrellm may pull in hddtemp, which is not yet available here
+app-admin/gkrellm hddtemp
 
 # Samuli Suominen <drac@gentoo.org> (18 Aug 2007)
 # media-video/ffmpegthumbnailer needs to be stabilized first.

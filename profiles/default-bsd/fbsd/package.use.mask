@@ -1,3 +1,7 @@
+# Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
+# app-admin/gkrellm may pull in hddtemp, which is not yet available here
+app-admin/gkrellm hddtemp
+
 # ptex isn't tested yet
 app-text/xdvik cjk
 

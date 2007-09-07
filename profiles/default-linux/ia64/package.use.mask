@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/package.use.mask,v 1.2 2007/06/22 15:26:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/package.use.mask,v 1.3 2007/09/07 16:27:48 lack Exp $
+
+# Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
+# app-admin/gkrellm may pull in hddtemp, which is not yet available here
+app-admin/gkrellm hddtemp
 
 # Steve Dibb <beandog@gentoo.org> (03 Mar 2007)
 # media-sound/twolame not tested
