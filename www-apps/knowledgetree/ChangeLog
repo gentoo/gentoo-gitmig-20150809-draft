@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/knowledgetree
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/ChangeLog,v 1.11 2007/09/07 14:04:30 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/ChangeLog,v 1.12 2007/09/07 14:06:55 wrobel Exp $
+
+  07 Sep 2007; <wrobel@gentoo.org> -files/config-hook-2.0.0.sh,
+  -files/postinstall-en-2.0.7.txt, -files/config-hook-3.0.2.sh,
+  -files/config-hook-3.0.3.sh, -files/postinstall-en-3.0.3.txt,
+  -files/postupgrade-en-3.0.3.txt:
+  Removed some obsolete files.
 
 *knowledgetree-3.4.3 (07 Sep 2007)
 
