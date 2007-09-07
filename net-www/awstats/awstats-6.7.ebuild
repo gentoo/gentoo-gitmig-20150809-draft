@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.7.ebuild,v 1.1 2007/09/06 18:48:01 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.7.ebuild,v 1.2 2007/09/07 04:43:20 jer Exp $
 
 inherit eutils webapp versionator depend.apache
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://awstats.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="geoip"
 
 RESTRICT="mirror"

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.48 2007/09/06 18:48:01 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.49 2007/09/07 04:43:20 jer Exp $
+
+  07 Sep 2007; Jeroen Roovers <jer@gentoo.org> awstats-6.7.ebuild:
+  Marked ~hppa (bug #191525).
 
 *awstats-6.7 (06 Sep 2007)
 
