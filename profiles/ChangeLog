@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.629 2007/09/07 00:11:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.630 2007/09/07 06:56:24 dev-zero Exp $
+
+  07 Sep 2007; Tiziano Müller <dev-zero@gentoo.org> use.local.desc:
+  Added ads USE flag for net-fs/samba
 
   06 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
   Removing my big Descent 2 mask.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3012 2007/09/05 20:34:33 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3013 2007/09/07 06:56:24 dev-zero Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1379,6 +1379,7 @@ net-firewall/nufw:plaintext - Add support for authentication with plaintext file
 net-firewall/nufw:syslog - Add support user activity logging in syslog
 net-fs/netatalk:xfs - Enable support for XFS Quota
 net-fs/nfs-utils:nonfsv4 - Disable support for NFSv4
+net-fs/samba:ads - Enable Active Directory support
 net-fs/samba:async - Enables asynchronous input/output
 net-fs/samba:automount - Enables automount support
 net-fs/samba:oav - Enables support for anti-virus from the openantivirus.org project
