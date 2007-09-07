@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115-r2.ebuild,v 1.2 2007/09/07 06:30:21 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115-r2.ebuild,v 1.3 2007/09/07 06:32:36 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -94,7 +94,7 @@ src_unpack() {
 	# (more for my own needs than anything else ...)
 	MD5=`md5sum < "${S}/etc/udev/rules.d/50-udev-default.rules"`
 	MD5=${MD5/  -/}
-	if [ "${MD5}" != "756787093a43fa62426b1b905dd0f189" ]
+	if [ "${MD5}" != "644e3c77eb866dee4ff8dda2e95cd187" ]
 	then
 		echo
 		eerror "50-udev-default.rules has been updated, please validate!"
