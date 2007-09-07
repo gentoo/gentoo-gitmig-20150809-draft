@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.1-r1.ebuild,v 1.1 2007/09/06 04:58:29 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.1-r1.ebuild,v 1.2 2007/09/07 03:57:29 mjolnir Exp $
 
 inherit fixheadtails flag-o-matic perl-module python
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="diskio doc elf ipv6 lm_sensors mfd-rewrites minimal perl python rpm selinux smux ssl tcpd X sendmail"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )
@@ -22,7 +22,8 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )
 		>=sys-libs/zlib-1.1.4
 	)
 	elf? ( dev-libs/elfutils )
-	lm_sensors? ( sys-apps/lm_sensors )"
+	lm_sensors? ( sys-apps/lm_sensors )
+	python? ( dev-python/setuptools )"
 
 RDEPEND="${DEPEND}
 	perl? (
