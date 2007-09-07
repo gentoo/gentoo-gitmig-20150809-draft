@@ -1,16 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.3.0_rc1.ebuild,v 1.2 2007/09/04 21:09:27 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.3.0_rc2.ebuild,v 1.1 2007/09/07 18:07:26 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
 IUSE="gnome java kde"
 
-BUILDID="9215"
+BUILDID="9219"
 MY_PV="${PV/_/}"
-MY_PV2="${MY_PV}_20070831"
-MY_PV3="${PV/_rc1/}-${BUILDID}"
-PACKED="OOG680_m3_native_packed-1"
+MY_PV2="${MY_PV}_20070905"
+MY_PV3="${PV/_rc2/}-${BUILDID}"
+PACKED="OOG680_m4_native_packed-1"
+PACKED2="OOG680_m4_native_packed-2"
 S="${WORKDIR}/${PACKED}_en-US.${BUILDID}/RPMS"
 DESCRIPTION="OpenOffice productivity suite"
 
@@ -74,7 +75,7 @@ src_unpack() {
 	for i in ${LINGUAS}; do
 		i="${i/_/-}"
 		if [[ ${i} != "en" ]] ; then
-			LANGDIR="${WORKDIR}/${PACKED}_${i}.${BUILDID}/RPMS/"
+			LANGDIR="${WORKDIR}/${PACKED2}_${i}.${BUILDID}/RPMS/"
 			rpm_unpack ${LANGDIR}/openoffice.org-${i}-${MY_PV3}.i586.rpm
 			rpm_unpack ${LANGDIR}/openoffice.org-${i}-help-${MY_PV3}.i586.rpm
 			rpm_unpack ${LANGDIR}/openoffice.org-${i}-res-${MY_PV3}.i586.rpm
