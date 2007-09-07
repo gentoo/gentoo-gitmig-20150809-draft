@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.ebuild,v 1.3 2007/09/06 22:47:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.ebuild,v 1.4 2007/09/07 06:47:31 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	# snmp doesn't compile in this release, disabled for now
-	
+
 	#if use snmp ; then
 	#	ewarn "snmp plugin is under development and upstream does not recommend"
 	#	ewarn "it for usage in production environment."

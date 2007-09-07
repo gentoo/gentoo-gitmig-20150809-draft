@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.0-r3.ebuild,v 1.1 2007/09/05 20:20:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.0-r3.ebuild,v 1.2 2007/09/07 06:47:09 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,7 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-nostrip.patch
 	# libnl crap, bug 176378
 	epatch "${FILESDIR}"/${P}-libnl-1.0.patch
-	
+
 }
 
 src_compile() {
