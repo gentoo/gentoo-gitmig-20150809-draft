@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/xcache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/ChangeLog,v 1.11 2007/08/20 09:44:48 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/ChangeLog,v 1.12 2007/09/07 12:10:43 angelos Exp $
+
+  07 Sep 2007; Christoph Mende <angelos@gentoo.org> xcache-1.2.1.ebuild:
+  Stable on amd64 wrt bug #189531
 
   20 Aug 2007; Christian Hoffmann <hoffie@gentoo.org> metadata.xml:
   removing jokey and gentoofying my email address (metadata.xml)
