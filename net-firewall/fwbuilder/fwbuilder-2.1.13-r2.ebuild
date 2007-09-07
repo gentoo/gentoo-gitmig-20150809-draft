@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-2.1.13-r1.ebuild,v 1.1 2007/09/06 00:40:27 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-2.1.13-r2.ebuild,v 1.1 2007/09/07 01:26:17 r3pek Exp $
 
-inherit eutils qt3
+inherit eutils qt3 autotools
 
 DESCRIPTION="A firewall GUI"
 HOMEPAGE="http://www.fwbuilder.org/"
@@ -45,6 +45,7 @@ src_compile() {
 	sed -i -e '/^SUBDIRS = po src doc/s/ doc//' fwbuilder2.pro \
 		|| die "sed fwbuilder2.pro failed"
 
+	eautoreconf
 	econf $(use_enable nls) || die "configure failed"
 
 	# use eqmake to generate Makefiles

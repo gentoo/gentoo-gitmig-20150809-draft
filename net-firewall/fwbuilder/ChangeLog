@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.64 2007/09/06 00:40:27 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.65 2007/09/07 01:26:17 r3pek Exp $
+
+*fwbuilder-2.1.13-r2 (07 Sep 2007)
+
+  07 Sep 2007; Carlos Silva <r3pek@gentoo.org> -fwbuilder-2.1.13-r1.ebuild,
+  +fwbuilder-2.1.13-r2.ebuild:
+  rev bump to fix bug #191465. Thx Heiko Helmle for reporting
 
 *fwbuilder-2.1.13-r1 (06 Sep 2007)
 
