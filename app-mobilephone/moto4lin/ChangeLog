@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/moto4lin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.8 2007/03/10 14:51:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.9 2007/09/07 20:07:51 jokey Exp $
+
+  07 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  moto4lin-0.3_p20051125.ebuild:
+  Stable on x86
 
   10 Mar 2007; Alin Năstac <mrness@gentoo.org> moto4lin-0.3.ebuild,
   moto4lin-0.3_p20051125.ebuild:
