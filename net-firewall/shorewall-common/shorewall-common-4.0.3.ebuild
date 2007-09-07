@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/shorewall-common-4.0.3.ebuild,v 1.1 2007/09/06 11:16:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/shorewall-common-4.0.3.ebuild,v 1.2 2007/09/07 10:53:12 jokey Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ IUSE="doc"
 DEPEND=">=net-firewall/iptables-1.2.4
 	sys-apps/iproute2
 	~net-firewall/shorewall-shell-${PV}
-	!<net-firewall/shorewall-4.0.0"
+	!<net-firewall/shorewall-4.0"
 
 pkg_setup() {
 	if built_with_use sys-apps/iproute2 minimal; then
