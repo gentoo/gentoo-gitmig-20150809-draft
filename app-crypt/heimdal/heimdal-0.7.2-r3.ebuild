@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r3.ebuild,v 1.14 2007/05/23 01:34:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r3.ebuild,v 1.15 2007/09/07 11:33:43 dev-zero Exp $
 
 WANT_AUTOMAKE=1.8
 WANT_AUTOCONF=latest
@@ -38,6 +38,8 @@ src_unpack() {
 	cd "${S}"
 
 	EPATCH_SUFFIX="patch" epatch "${GENTOODIR}"/patches
+
+	epatch "${FILESDIR}/${P}-as_needed.patch"
 
 	AT_M4DIR="cf" eautoreconf
 }

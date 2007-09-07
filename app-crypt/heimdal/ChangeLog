@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.117 2007/05/23 01:34:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.118 2007/09/07 11:33:43 dev-zero Exp $
+
+  07 Sep 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/heimdal-0.7.2-as_needed.patch, heimdal-0.7.2-r3.ebuild:
+  Added revised as-needed patch (bug #130464, thanks to James Cassidy for the
+  initial patch)
 
   23 May 2007; Doug Goldstein <cardoe@gentoo.org> heimdal-0.7.2-r3.ebuild:
   heimdal LDAP bits use deprecated functions so we need to define
