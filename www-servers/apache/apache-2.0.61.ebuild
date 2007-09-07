@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.0.59-r2.ebuild,v 1.2 2007/07/29 17:23:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.0.61.ebuild,v 1.1 2007/09/07 21:46:27 hollow Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHSTAMP="20061102"
-GENTOO_DEVSPACE="vericgar"
+GENTOO_PATCHSTAMP="20070907"
+GENTOO_DEVSPACE="hollow"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
 DESCRIPTION="The Apache Web Server"
