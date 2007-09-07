@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdca
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.9 2007/08/02 12:26:56 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.10 2007/09/07 07:31:32 redhatter Exp $
+
+  07 Sep 2007; Stuart Longland <redhatter@gentoo.org> libdca-0.0.5.ebuild:
+  Tested and working on MIPS.  Keyworded ~mips.
 
   02 Aug 2007; Roy Marples <uberlord@gentoo.org> libdca-0.0.5.ebuild:
   Keyworded ~x86-fbsd, #175164
