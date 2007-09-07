@@ -1,9 +1,6 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.55 2007/09/06 23:44:29 pylon Exp $
-
-Sorry, need to test something.  Will be deleted later.
-Test #4
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.56 2007/09/07 06:44:39 pylon Exp $
 
 *openttd-0.5.3_rc3 (02 Sep 2007)
 
