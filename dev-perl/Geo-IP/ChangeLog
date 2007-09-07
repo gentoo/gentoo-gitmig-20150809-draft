@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Geo-IP
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.34 2007/07/07 15:31:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.35 2007/09/07 04:26:56 jer Exp $
+
+  07 Sep 2007; Jeroen Roovers <jer@gentoo.org> Geo-IP-1.28.ebuild:
+  Marked ~hppa (bug #191525).
 
 *Geo-IP-1.28 (07 Jul 2007)
 
