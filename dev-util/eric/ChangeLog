@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.46 2007/06/25 10:58:21 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.47 2007/09/07 13:35:49 hawking Exp $
+
+*eric-4.0.1 (07 Sep 2007)
+
+  07 Sep 2007; Ali Polatel <hawking@gentoo.org> +eric-4.0.1.ebuild:
+  version bump, thanks to everyone on bug 158117 and jokey
 
   25 Jun 2007; Piotr Jaroszyński <peper@gentoo.org> eric-3.7.2-r1.ebuild:
   (QA) Fix ${ROOT} abuse. bug #167271.
