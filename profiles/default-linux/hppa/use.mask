@@ -143,10 +143,6 @@ pri
 # No emboss support on hppa for now
 emboss
 
-# 05 Oct 2004 Guy Martin <gmsoft@gentoo.org>
-# jack is not yet supported on hppa
-jack
-
 # 11 Aug 2004 Guy Martin <gmsoft@gentoo.org>
 # No nptl support yet
 nptl

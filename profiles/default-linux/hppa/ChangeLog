@@ -1,6 +1,9 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.15 2007/08/31 16:13:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.16 2007/09/07 21:18:38 jer Exp $
+
+  07 Sep 2007; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Removed jack (bug #186928).
 
   31 Aug 2007; Jeroen Roovers <jer@gentoo.org> +package.mask:
   Mask dev-db/metakit (bug #169509).
