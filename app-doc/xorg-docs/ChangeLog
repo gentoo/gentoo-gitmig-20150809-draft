@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/xorg-docs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.41 2007/09/07 20:01:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.42 2007/09/07 20:37:58 wolf31o2 Exp $
+
+  07 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  xorg-docs-1.4-r1.ebuild:
+  Stable on amd64 wrt bug #191615.
 
   07 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   xorg-docs-1.4-r1.ebuild:
