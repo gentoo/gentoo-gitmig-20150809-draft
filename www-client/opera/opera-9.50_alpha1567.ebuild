@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_alpha1567.ebuild,v 1.3 2007/09/06 16:31:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_alpha1567.ebuild,v 1.4 2007/09/07 04:11:05 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -62,6 +62,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-9.00-install.patch"
 	use elibc_FreeBSD || epatch "${FILESDIR}/${PN}-9.50-pluginpath.patch"
+	use elibc_FreeBSD && epatch "${FILESDIR}/${PN}-9.50-pluginpath-fbsd.patch"
 
 	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
 		-e "s:/usr/share/applnk:${D}/usr/share/applnk:g" \
