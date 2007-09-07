@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyinotify
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.3 2007/02/17 10:37:55 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.4 2007/09/07 19:15:22 josejx Exp $
+
+  07 Sep 2007; Joseph Jezak <josejx@gentoo.org> pyinotify-0.7.0.ebuild:
+  Marked ~ppc for bug #186636.
 
 *pyinotify-0.7.0 (17 Feb 2007)
 
