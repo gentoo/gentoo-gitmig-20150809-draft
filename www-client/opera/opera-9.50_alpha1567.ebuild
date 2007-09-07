@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_alpha1567.ebuild,v 1.4 2007/09/07 04:11:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_alpha1567.ebuild,v 1.5 2007/09/07 06:47:55 mr_bones_ Exp $
 
 GCONF_DEBUG="no"
 
@@ -20,7 +20,7 @@ O_LNG=""
 O_SUFF="1567"
 O_VER="9.50-20070903"
 
-# opera-9.50-20070903.1-static-qt.ppc-1567.tar.bz2 
+# opera-9.50-20070903.1-static-qt.ppc-1567.tar.bz2
 
 O_URI="http://snapshot.opera.com/unix/9.50-Alpha-1/"
 SRC_URI="
