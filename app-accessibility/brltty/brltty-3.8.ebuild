@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.8.ebuild,v 1.7 2007/08/05 14:18:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.8.ebuild,v 1.8 2007/09/07 20:34:11 jer Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://mielke.cc/brltty/releases/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ppc64 x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 x86"
 IUSE="doc gpm usb X"
 
 DEPEND=" gpm? ( >=sys-libs/gpm-1.20 )
