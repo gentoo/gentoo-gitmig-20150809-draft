@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3013 2007/09/07 06:56:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3014 2007/09/07 16:14:40 lack Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -20,6 +20,7 @@ app-admin/conky:hddtemp - enable monitoring of hdd temperature (app-admin/hddtem
 app-admin/conky:mpd - enable monitoring mpd controlled music  (media-sound/mpd)
 app-admin/diradm:automount - Support for automount data in LDAP
 app-admin/diradm:irixpasswd - Support for storing separate IRIX passwords
+app-admin/gkrellm:hddtemp - enable monitoring of hdd temperature (app-admin/hddtemp)
 app-admin/gnome-system-tools:nfs - Adds support for NFS shares
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-admin/prelude-manager:tcpwrapper - Add support for tcp_wrappers
