@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.7.00.0640-r1.ebuild,v 1.1 2007/09/04 18:35:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.7.00.0640-r1.ebuild,v 1.2 2007/09/07 17:58:44 wolf31o2 Exp $
 
 inherit eutils linux-mod
 
@@ -41,7 +41,7 @@ src_unpack () {
 	then
 		epatch ${FILESDIR}/${PV}-2.6.14.patch
 	fi
-	epatch ${FILESDIR}/2.6.22.patch
+	epatch ${FILESDIR}/${PV}-2.6.22.patch
 }
 
 src_compile () {
