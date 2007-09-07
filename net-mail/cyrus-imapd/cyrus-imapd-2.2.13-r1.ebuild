@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.13-r1.ebuild,v 1.4 2007/09/02 07:48:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.13-r1.ebuild,v 1.5 2007/09/07 19:53:24 dertobi123 Exp $
 
 inherit autotools eutils ssl-cert fixheadtails pam
 
@@ -141,6 +141,9 @@ src_unpack() {
 	unpack ${A} && cd "${S}"
 
 	ht_fix_file ${S}/imap/xversion.sh
+
+	# Fix prestripped binaries
+	epatch "${FILESDIR}/${PN}-strip.patch"
 
 	# fix segfault in deliver wrt #186338
 	epatch "${FILESDIR}/${P}-deliver.patch"

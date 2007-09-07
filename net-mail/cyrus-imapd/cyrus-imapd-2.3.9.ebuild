@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.9.ebuild,v 1.1 2007/09/03 19:47:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.9.ebuild,v 1.2 2007/09/07 19:53:24 dertobi123 Exp $
 
 inherit autotools eutils ssl-cert fixheadtails pam
 
@@ -97,6 +97,9 @@ src_unpack() {
 	unpack ${A} && cd "${S}"
 
 	ht_fix_file ${S}/imap/xversion.sh
+
+	# Fix prestripped binaries
+	epatch "${FILESDIR}/${PN}-strip.patch"
 
 	# Unsupported UoA patch. Bug #112912 .
 	# http://email.uoa.gr/projects/cyrus/autocreate/
