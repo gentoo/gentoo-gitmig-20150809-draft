@@ -1,6 +1,15 @@
 # ChangeLog for games-fps/avp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/ChangeLog,v 1.8 2007/01/30 22:41:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/ChangeLog,v 1.9 2007/09/07 18:38:49 tupone Exp $
+
+  07 Sep 2007; <tupone@gentoo.org> +files/avp-20070130-gcc42.patch,
+  +avp-20070130-r1.ebuild:
+  Fixing gcc-4.2 compilation problem. Bug #184423 by Tristan Heaven
+
+*avp-20070130-r1 (07 Sep 2007)
+
+  07 Sep 2007;  <>  avp-20070130-r1.ebuild files/digest-avp-20070130-r1
+  # INSERT ENTRY HERE
 
 *avp-20070130 (30 Jan 2007)
 
