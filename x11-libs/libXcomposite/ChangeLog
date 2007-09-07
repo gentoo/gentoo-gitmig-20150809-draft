@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXcomposite
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.40 2007/07/14 04:46:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.41 2007/09/07 20:27:46 wolf31o2 Exp $
+
+  07 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  libXcomposite-0.4.0.ebuild:
+  Stable on x86 wrt bug #191615.
 
 *libXcomposite-0.4.0 (14 Jul 2007)
 
