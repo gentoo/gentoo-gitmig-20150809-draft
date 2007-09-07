@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.20 2007/07/27 13:01:38 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.21 2007/09/07 17:24:44 betelgeuse Exp $
+
+*eclipse-ecj-3.3.0-r1 (07 Sep 2007)
+
+  07 Sep 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +eclipse-ecj-3.3.0-r1.ebuild:
+  Use java-pkg_dolauncher instead of the hand written wrapper script.
 
 *eclipse-ecj-3.3.0 (27 Jul 2007)
 
