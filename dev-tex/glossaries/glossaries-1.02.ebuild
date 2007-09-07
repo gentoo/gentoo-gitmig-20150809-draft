@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/glossaries-1.02.ebuild,v 1.1 2007/07/22 13:09:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/glossaries-1.02.ebuild,v 1.2 2007/09/07 12:08:42 angelos Exp $
 
 inherit latex-package
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://tug.ctan.org/tex-archive/macros/latex/contrib/${PN}.zip"
 
 LICENSE="LPPL-1.2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="dev-lang/perl

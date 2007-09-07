@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.1 2007/07/22 13:09:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.2 2007/09/07 12:08:42 angelos Exp $
+
+  07 Sep 2007; Christoph Mende <angelos@gentoo.org> glossaries-1.02.ebuild:
+  Added ~amd64 wrt bug #191469
 
 *glossaries-1.02 (22 Jul 2007)
 
