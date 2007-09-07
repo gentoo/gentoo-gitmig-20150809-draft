@@ -14,7 +14,7 @@ Index: udev-git/etc/udev/gentoo/40-audio.rules
 +KERNEL=="timer",		NAME="snd/%k"
 +KERNEL=="seq",			NAME="snd/%k"
 +
-+# Do we need these? upstream has this in 40-alsa.rules
++# Do we need these? upstream has this in 40-alsa.rules, but we never had these
 +#KERNEL=="mixer0",		SYMLINK+="mixer"
 +#KERNEL=="dsp0",			SYMLINK+="dsp"
 +#KERNEL=="audio0",		SYMLINK+="audio"
@@ -63,7 +63,7 @@ Index: udev-git/etc/udev/gentoo/40-video.rules
 +
 +SUBSYSTEM=="dvb", GROUP="video"
 +
-+# Need to set GROUP? MODE already is 0666 (device node will be /dev/dri/card?)
++# device node will be /dev/dri/card?
 +KERNEL=="card*",	GROUP="video"
 +KERNEL=="nvidia*",	GROUP="video"
 +# drac thinks we do not need this. Please bug us if it is needed.
