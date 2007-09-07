@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/qt4-qtruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.11 2007/06/20 20:27:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.12 2007/09/07 18:41:23 caleb Exp $
+
+*qt4-qtruby-1.4.9-r1 (07 Sep 2007)
+
+  07 Sep 2007; Caleb Tennis <caleb@gentoo.org> files/FindQwt5.cmake.diff,
+  +qt4-qtruby-1.4.9-r1.ebuild:
+  bump, explicit Qwt dep and fix the patch to find Qwt
 
 *qt4-qtruby-1.4.9 (20 Jun 2007)
 

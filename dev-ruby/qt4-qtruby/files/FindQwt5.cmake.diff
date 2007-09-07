@@ -15,7 +15,7 @@
  
  		# Find Qwt5 library linked to Qt4
 -		FIND_LIBRARY( Qwt5_Qt4_TENTATIVE_LIBRARY NAMES qwt5-qt4 qwt-qt4 qwt5 qwt PATHS /usr/local/qwt/lib /usr/local/lib /usr/lib )
-+		FIND_LIBRARY( Qwt5_Qt4_TENTATIVE_LIBRARY NAMES libqwt.so.5 PATHS /usr/lib )
++		FIND_LIBRARY( Qwt5_Qt4_TENTATIVE_LIBRARY qwt PATHS /usr/lib )
  		IF( UNIX AND NOT CYGWIN)
  			IF( Qwt5_Qt4_TENTATIVE_LIBRARY )
  				#MESSAGE("Qwt5_Qt4_TENTATIVE_LIBRARY = ${Qwt5_Qt4_TENTATIVE_LIBRARY}")
