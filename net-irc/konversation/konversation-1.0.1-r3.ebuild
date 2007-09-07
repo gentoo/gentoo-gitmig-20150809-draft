@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.0.1-r3.ebuild,v 1.3 2007/09/05 15:51:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.0.1-r3.ebuild,v 1.4 2007/09/07 14:56:03 dertobi123 Exp $
 
 LANGS="bg ca da de el en_GB es et fi fr hu it ja ka ko nl pt ru sr sr@Latn sv tr zh_TW
 	ar cs gl he lt pa pt_BR ta"
@@ -16,7 +16,7 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 need-kde 3
