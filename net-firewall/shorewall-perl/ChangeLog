@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall-perl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.5 2007/09/07 10:52:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.6 2007/09/07 20:21:22 jer Exp $
+
+  07 Sep 2007; Jeroen Roovers <jer@gentoo.org> shorewall-perl-4.0.3.ebuild:
+  Marked ~hppa (bug #191624).
 
   07 Sep 2007; Markus Ullmann <jokey@gentoo.org>
   shorewall-perl-4.0.3.ebuild:

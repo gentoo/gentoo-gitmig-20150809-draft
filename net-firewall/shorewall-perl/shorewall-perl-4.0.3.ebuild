@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/shorewall-perl-4.0.3.ebuild,v 1.2 2007/09/07 10:52:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/shorewall-perl-4.0.3.ebuild,v 1.3 2007/09/07 20:21:22 jer Exp $
 
 # Choose between experimental, stable and beta:
 #MY_P_TREE="development/4.0"  # experimental and beta
@@ -16,7 +16,7 @@ SRC_URI="http://www1.shorewall.net/pub/shorewall/${MY_P_TREE}/${MY_P}${MY_P_BETA
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE=""
 
 DEPEND="net-firewall/iptables
