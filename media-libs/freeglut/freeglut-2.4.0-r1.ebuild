@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.4.0-r1.ebuild,v 1.10 2007/06/24 21:56:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.4.0-r1.ebuild,v 1.11 2007/09/07 18:04:13 dberkholz Exp $
 
 inherit eutils flag-o-matic
 
@@ -44,6 +44,12 @@ src_unpack() {
 
 	# bug #134586
 	replace-flags -O3 -O2
+}
+
+src_compile() {
+	# (#191589) Don't let -Werror get tagged on
+	econf --disable-warnings || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {

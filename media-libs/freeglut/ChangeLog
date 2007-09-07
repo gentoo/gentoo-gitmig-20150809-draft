@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.49 2007/06/07 16:08:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.50 2007/09/07 18:04:13 dberkholz Exp $
+
+  07 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  freeglut-2.4.0-r1.ebuild:
+  (#191589) Don't let -Werror get tagged on.
 
   07 Jun 2007; Fabian Groffen <grobian@gentoo.org> freeglut-2.2.0.ebuild,
   freeglut-2.4.0.ebuild, freeglut-2.4.0-r1.ebuild:
