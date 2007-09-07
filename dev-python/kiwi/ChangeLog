@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kiwi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.7 2007/07/07 13:22:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.8 2007/09/07 10:30:58 lu_zero Exp $
+
+  07 Sep 2007; Luca Barbato <lu_zero@gentoo.org> kiwi-1.9.15.ebuild:
+  Marked ~ppc
 
   07 Jul 2007; Markus Rothe <corsair@gentoo.org> kiwi-1.9.15.ebuild:
   Added ~ppc64
