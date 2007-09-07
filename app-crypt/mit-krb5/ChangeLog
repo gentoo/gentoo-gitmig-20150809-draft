@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.161 2007/09/07 06:03:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.162 2007/09/07 06:27:33 seemant Exp $
+
+*mit-krb5-1.5.3-r1 (07 Sep 2007)
+
+  07 Sep 2007; Seemant Kulleen <seemant@gentoo.org>
+  -mit-krb5-1.4.3-r3.ebuild, +mit-krb5-1.5.3-r1.ebuild:
+  removed the 1.4 stuff, because it's totally unmaintained upstream and here.
+  Bumped to 1.5.3-r1 for the newest security fix. See bug #191301
 
   07 Sep 2007; Seemant Kulleen <seemant@gentoo.org>
   -mit-krb5-1.5.2-r1.ebuild, -mit-krb5-1.5.2-r2.ebuild,
