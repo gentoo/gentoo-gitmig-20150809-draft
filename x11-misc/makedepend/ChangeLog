@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/makedepend
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/makedepend/ChangeLog,v 1.29 2007/03/31 14:49:31 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/makedepend/ChangeLog,v 1.30 2007/09/07 20:10:44 wolf31o2 Exp $
+
+  07 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  makedepend-1.0.1.ebuild:
+  Stable on x86 wrt bug #191615.
 
 *makedepend-1.0.1 (31 Mar 2007)
 
