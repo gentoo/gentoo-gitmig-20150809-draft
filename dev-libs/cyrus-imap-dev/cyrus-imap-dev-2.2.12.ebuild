@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.2.12.ebuild,v 1.7 2007/01/05 07:32:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.2.12.ebuild,v 1.8 2007/09/07 18:58:27 dertobi123 Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Developer support for the Cyrus IMAP Server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -33,6 +33,9 @@ S="${WORKDIR}/cyrus-imapd-${PV}"
 src_unpack() {
 	unpack ${A} && cd "${S}"
 
+	# db-4.5 fix
+	epatch "${FILESDIR}/${PN}-2.2-db45.patch"
+
 	# Add libwrap defines as we don't have a dynamicly linked library.
 	if use tcpd ; then
 		epatch "${FILESDIR}/cyrus-imapd-libwrap.patch" || die "patch failed"
@@ -40,15 +43,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/2.2.10-imapopts.h.patch || die "imapopts.h.patch failed"
 
-	# DB4 detection and versioned symbols.
-	#epatch "${FILESDIR}/cyrus-imapd-${PV}-db4.patch" || die "patch failed."
-
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"
-	ebegin "Recreating configure"
-	rm -rf configure config.h.in autom4te.cache || die
-	sh SMakefile &>/dev/null || die "SMakefile failed"
-	eend $?
+	eautoreconf
 
 	# When linking with rpm, you need to link with more libraries.
 	sed -e "s:lrpm:lrpm -lrpmio -lrpmdb:" -i configure || die "sed failed"

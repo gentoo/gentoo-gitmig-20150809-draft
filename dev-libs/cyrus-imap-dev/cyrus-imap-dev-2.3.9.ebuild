@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.2.10.ebuild,v 1.9 2007/09/07 18:58:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.3.9.ebuild,v 1.1 2007/09/07 18:58:27 dertobi123 Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/cyrus-imapd-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~ppc64"
 IUSE="afs kerberos snmp ssl tcpd"
 
 RDEPEND="virtual/libc
@@ -38,7 +38,8 @@ src_unpack() {
 		epatch "${FILESDIR}/cyrus-imapd-libwrap.patch" || die "patch failed"
 	fi
 
-	epatch "${FILESDIR}"/${PV}-imapopts.h.patch || die "imapopts.h.patch failed"
+	# DB4 detection and versioned symbols.
+	#epatch "${FILESDIR}/cyrus-imapd-${PV}-db4.patch" || die "patch failed."
 
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"

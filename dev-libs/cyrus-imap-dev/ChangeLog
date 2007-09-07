@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.36 2007/01/05 07:32:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.37 2007/09/07 18:58:27 dertobi123 Exp $
+
+*cyrus-imap-dev-2.3.9 (07 Sep 2007)
+*cyrus-imap-dev-2.2.13 (07 Sep 2007)
+
+  07 Sep 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  +files/cyrus-imap-dev-2.2-db45.patch, cyrus-imap-dev-2.2.10.ebuild,
+  cyrus-imap-dev-2.2.12.ebuild, +cyrus-imap-dev-2.2.13.ebuild,
+  -cyrus-imap-dev-2.3.1.ebuild, +cyrus-imap-dev-2.3.9.ebuild:
+  Version bump(s), db4.5 fixes, fix broken autotools handling (per Bug #160157)
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   cyrus-imap-dev-2.2.10.ebuild, cyrus-imap-dev-2.2.12.ebuild,
