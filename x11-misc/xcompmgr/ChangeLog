@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xcompmgr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.23 2007/08/02 00:52:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.24 2007/09/07 19:37:18 wolf31o2 Exp $
+
+  07 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  xcompmgr-1.1.3-r1.ebuild:
+  Stable on x86 wrt bug #191615.
 
 *xcompmgr-1.1.3-r1 (02 Aug 2007)
 
