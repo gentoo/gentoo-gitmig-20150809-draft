@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.184 2007/09/06 18:20:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.185 2007/09/07 21:14:03 cardoe Exp $
+
+*mythtv-0.21_pre14450 (07 Sep 2007)
+
+  07 Sep 2007; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-0.21_pre14346.ebuild, +mythtv-0.21_pre14450.ebuild:
+  upstream trunk fixes. major item being channel scanner fixes
 
 *mythtv-0.20.2_p14430 (06 Sep 2007)
 
