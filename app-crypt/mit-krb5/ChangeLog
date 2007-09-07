@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.160 2007/09/01 08:37:20 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.161 2007/09/07 06:03:15 seemant Exp $
+
+  07 Sep 2007; Seemant Kulleen <seemant@gentoo.org>
+  -mit-krb5-1.5.2-r1.ebuild, -mit-krb5-1.5.2-r2.ebuild,
+  -mit-krb5-1.5.2-r3.ebuild:
+  remove crufty versions
 
   01 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> ChangeLog, Manifest:
   Fix lost ChangeLog history.
