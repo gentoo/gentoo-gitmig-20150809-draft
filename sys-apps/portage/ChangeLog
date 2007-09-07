@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.434 2007/08/24 18:42:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.435 2007/09/07 19:12:11 zmedico Exp $
+
+*portage-2.1.3.8 (07 Sep 2007)
+
+  07 Sep 2007; Zac Medico <zmedico@gentoo.org> +portage-2.1.3.8.ebuild:
+  2.1.3.8 bump. This fixes bugs #110443, #190144, #190214, #190268,
+  #190406. Bug #181949 tracks all bugs fixed since 2.1.2.x. This release
+  also includes a merge order optimization that causes installed
+  dependencies to be rebuilt earlier which helps avoid build failures
+  during `emerge -e system` after the CHOST has been changed (like when
+  building a stage3 from a stage2).
 
 *portage-2.1.3.7 (24 Aug 2007)
 
