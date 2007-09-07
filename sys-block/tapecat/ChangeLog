@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/tapecat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tapecat/ChangeLog,v 1.1 2007/07/25 08:24:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tapecat/ChangeLog,v 1.2 2007/09/07 01:51:04 robbat2 Exp $
+
+  29 Jul 2007; Robin H. Johnson <robbat2@gentoo.org> tapecat-1.0.0.ebuild:
+  Works on amd64.
 
 *tapecat-1.0.0 (25 Jul 2007)
 
