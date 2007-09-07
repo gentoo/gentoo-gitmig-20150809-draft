@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/ksudoku
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ChangeLog,v 1.10 2007/09/05 17:42:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ChangeLog,v 1.11 2007/09/07 18:58:06 josejx Exp $
+
+  07 Sep 2007; Joseph Jezak <josejx@gentoo.org> ksudoku-0.4.ebuild:
+  Marked ppc/ppc64 stable for bug #186086.
 
   05 Sep 2007; Christoph Mende <angelos@gentoo.org> ksudoku-0.4.ebuild:
   Stable on amd64 wrt bug #186086
