@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/knowledgetree
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/ChangeLog,v 1.10 2006/11/23 17:13:59 vivo Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/ChangeLog,v 1.11 2007/09/07 14:04:30 wrobel Exp $
+
+*knowledgetree-3.4.3 (07 Sep 2007)
+
+  07 Sep 2007; <wrobel@gentoo.org> +files/config-hook-3.4.3.sh,
+  +files/postinstall-en-3.4.3.txt, +files/postupgrade-en-3.4.3.txt,
+  -knowledgetree-2.0.7.ebuild, -knowledgetree-3.0.3.ebuild,
+  +knowledgetree-3.4.3.ebuild:
+  Added knowledgetree-3.4.3 to the tree. Ebuild provided by Kevin G. Fourie
+  <kevin@4e.co.za> (#179576). Closes sec issue #188257.
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> knowledgetree-2.0.7.ebuild,
   knowledgetree-3.0.3.ebuild:

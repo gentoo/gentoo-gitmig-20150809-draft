@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/knowledgetree-3.0.3.ebuild,v 1.3 2006/11/23 17:13:59 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/knowledgetree-3.4.3.ebuild,v 1.1 2007/09/07 14:04:30 wrobel Exp $
 
-inherit webapp
+inherit webapp depend.php
 
-MY_PN=${PN/tree/Tree}
+MY_PN=ktdms-src-oss
 MY_PV=${PV/_/}
 MY_P=${MY_PN}-${MY_PV}
 
@@ -16,25 +16,20 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 IUSE="office opendoc pdf ps"
 
-DEPEND="virtual/httpd-php
-		virtual/mysql
-		office? ( >=app-text/catdoc-0.94.1 )
-		ps? ( app-text/pstotext )
-		pdf? ( app-text/poppler )
-		opendoc? ( app-arch/unzip )"
+DEPEND="office? ( >=app-text/catdoc-0.94.1 )
+	ps? ( app-text/pstotext )
+	pdf? ( app-text/poppler )
+	opendoc? ( app-arch/unzip )"
 
-S=${WORKDIR}/${MY_PN}
+need_php4_httpd
+
+S=${WORKDIR}/knowledgeTree-OSS
 
 src_install() {
 	webapp_src_preinst
 
-	local docs="docs/CREDITS.txt
-				docs/INSTALL.txt
-				docs/README.txt
-				docs/TODO.txt
-				docs/UPGRADE.txt
-				docs/FAQ.txt
-				"
+	# Local docs have been dropped in favour of online docs
+	local docs="docs/README.txt"
 
 	dodoc ${docs}
 
@@ -52,6 +47,8 @@ src_install() {
 	  webapp_configfile ${CFG}
 	done
 
+	keepdir ${MY_HTDOCSDIR}/var/cache
+
 	## Documents will be saved here
 	webapp_serverowned ${MY_HTDOCSDIR}/var/cache
 	webapp_serverowned ${MY_HTDOCSDIR}/var/log
@@ -62,8 +59,9 @@ src_install() {
 
 	webapp_sqlscript mysql    sql/mysql/install/structure.sql
 	webapp_sqlscript mysql    sql/mysql/install/data.sql
-	webapp_sqlscript postgres sql/pgsql/install/tables.sql
-	webapp_sqlscript postgres sql/pgsql/install/functions.sql
+# We don't currently support postgres anymore. Coming soon.
+#	webapp_sqlscript postgres sql/pgsql/install/tables.sql
+#	webapp_sqlscript postgres sql/pgsql/install/functions.sql
 
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en-${PV}.txt
 	webapp_postupgrade_txt en ${FILESDIR}/postupgrade-en-${PV}.txt
