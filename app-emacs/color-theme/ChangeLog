@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/color-theme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.31 2007/09/06 14:06:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.32 2007/09/08 10:18:50 nixnut Exp $
+
+  08 Sep 2007; nixnut <nixnut@gentoo.org> color-theme-6.6.0.ebuild:
+  Stable on ppc wrt bug 191336
 
   06 Sep 2007; Ulrich Mueller <ulm@gentoo.org> color-theme-6.5.4-r1.ebuild,
   color-theme-6.5.5.ebuild, color-theme-6.6.0.ebuild:
