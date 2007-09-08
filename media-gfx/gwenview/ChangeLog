@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gwenview
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.51 2007/09/05 16:59:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.52 2007/09/08 10:03:23 nixnut Exp $
+
+  08 Sep 2007; nixnut <nixnut@gentoo.org> gwenview-1.4.1.ebuild:
+  Stable on ppc wrt bug 191331
 
   05 Sep 2007; Raúl Porcel <armin76@gentoo.org> gwenview-1.4.1.ebuild:
   x86 stable wrt #191331
