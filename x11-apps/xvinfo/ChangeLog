@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xvinfo
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.20 2006/11/27 13:41:26 gustavoz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.21 2007/09/08 06:27:56 dberkholz Exp $
+
+*xvinfo-1.0.2 (08 Sep 2007)
+
+  08 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>; +xvinfo-1.0.2.ebuild:
+  Bump for 7.3.
 
   27 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org> xvinfo-1.0.1.ebuild:
   Stable on sparc wrt #155883

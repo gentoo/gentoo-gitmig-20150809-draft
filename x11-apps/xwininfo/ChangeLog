@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xwininfo
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/ChangeLog,v 1.21 2006/10/10 23:55:18 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/ChangeLog,v 1.22 2007/09/08 06:28:40 dberkholz Exp $
+
+*xwininfo-1.0.3 (08 Sep 2007)
+
+  08 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xwininfo-1.0.3.ebuild:
+  Bump for 7.3.
 
   10 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xwininfo-1.0.2.ebuild:

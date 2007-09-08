@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xcursorgen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcursorgen/ChangeLog,v 1.29 2007/02/04 18:33:18 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcursorgen/ChangeLog,v 1.30 2007/09/08 06:11:47 dberkholz Exp $
+
+*xcursorgen-1.0.2 (08 Sep 2007)
+
+  08 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xcursorgen-1.0.2.ebuild:
+  Bump for 7.3.
 
   04 Feb 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   xcursorgen-1.0.1.ebuild:
