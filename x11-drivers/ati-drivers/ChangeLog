@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.90 2007/08/21 07:58:51 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.91 2007/09/08 18:40:29 angelos Exp $
+
+  08 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  ati-drivers-8.39.4.ebuild:
+  Stable on amd64 wrt bug #188794
 
   21 Aug 2007; Markus Ullmann <jokey@gentoo.org> ati-drivers-8.39.4.ebuild:
   Stable on x86 wrt bug #188794
