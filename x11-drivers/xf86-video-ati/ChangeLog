@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.50 2007/08/04 20:45:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.51 2007/09/08 05:15:18 dberkholz Exp $
+
+*xf86-video-ati-6.7.192 (08 Sep 2007)
+
+  08 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-video-ati-6.7.192.ebuild:
+  Here's a 6.8 prerelease with RandR 1.2 support, TV-out, improved
+  connector-table parsing, zero-copy TFP, and much more.
 
 *xf86-video-ati-6.6.193 (04 Aug 2007)
 
