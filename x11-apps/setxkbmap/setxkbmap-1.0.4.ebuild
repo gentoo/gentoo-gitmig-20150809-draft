@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/setxkbmap/setxkbmap-1.0.4.ebuild,v 1.3 2007/09/07 20:06:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/setxkbmap/setxkbmap-1.0.4.ebuild,v 1.4 2007/09/08 04:22:49 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 # SNAPSHOT="yes"
@@ -11,7 +11,7 @@ PATCHES=""
 
 DESCRIPTION="Controls the keyboard layout of a running X server."
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 s390 sh ~sparc x86 ~x86-fbsd"
 
 RDEPEND="x11-libs/libxkbfile
 	x11-libs/libX11"
