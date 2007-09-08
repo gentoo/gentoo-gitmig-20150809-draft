@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.10.ebuild,v 1.3 2007/09/08 15:19:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.10.ebuild,v 1.4 2007/09/08 20:06:41 hanno Exp $
 
 inherit eutils fdo-mime flag-o-matic
 
@@ -22,9 +22,9 @@ DEPEND="dev-libs/libgeier
 	dev-scheme/guile"
 
 pkg_setup() {
-	if has_version ">=dev-scheme/guile-1.8.0" && ! built_with_use dev-scheme/guile discouraged deprecated; then
-		eerror "This package requires dev-scheme/guile with USE=\"discouraged deprecated\"."
-		die "Please reemerge dev-scheme/guile with USE=\"discouraged deprecated\"."
+	if has_version ">=dev-scheme/guile-1.8.0" && ! built_with_use dev-scheme/guile discouraged deprecated regex; then
+		eerror "This package requires dev-scheme/guile with USE=\"discouraged deprecated regex\"."
+		die "Please reemerge dev-scheme/guile with USE=\"discouraged deprecated regex\"."
 	fi
 
 	filter-ldflags -Wl,--as-needed --as-needed
