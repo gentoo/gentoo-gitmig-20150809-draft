@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.18 2007/09/08 15:42:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.19 2007/09/08 16:02:29 jer Exp $
+
+  08 Sep 2007; <jeroen@gentoo.org> apache-2.0.59-r5.ebuild:
+  Stable for HPPA (bug #190331).
 
   08 Sep 2007; Benedikt Böhm <hollow@gentoo.org> apache-2.2.4-r12.ebuild,
   apache-2.2.6.ebuild:
