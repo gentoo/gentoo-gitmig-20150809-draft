@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.16.ebuild,v 1.1 2007/09/08 07:28:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.16.ebuild,v 1.2 2007/09/08 07:49:59 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -185,9 +185,6 @@ pkg_postinst() {
 	ewarn "   'diskd' is optimized for high levels of traffic, but it might seem slow"
 	ewarn "when there isn't sufficient traffic to keep squid reasonably busy."
 	ewarn "   If your traffic level is low to moderate, use 'aufs' or 'ufs'."
-	echo
-	ewarn "/etc/squid/errors symlink has been removed from your system."
-	ewarn "Error templates can be customized through ${HILITE}error_directory${NORMAL} directive."
 	echo
 	ewarn "Squid can be configured to run in transparent mode like this:"
 	ewarn "   ${HILITE}http_port internal-addr:3128 transparent${NORMAL}"
