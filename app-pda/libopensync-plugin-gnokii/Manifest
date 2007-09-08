@@ -7,14 +7,14 @@ EBUILD libopensync-plugin-gnokii-0.21.ebuild 659 RMD160 ed9326726088a8a5987dcc99
 MD5 508e1ad6614b087fbe745a389d1abae3 libopensync-plugin-gnokii-0.21.ebuild 659
 RMD160 ed9326726088a8a5987dcc994185fe60276bcedb libopensync-plugin-gnokii-0.21.ebuild 659
 SHA256 a9f35acef5fe3e7bce2fc478e68220f4ddb9089546ba9eb271522e0b10afea8a libopensync-plugin-gnokii-0.21.ebuild 659
-EBUILD libopensync-plugin-gnokii-0.22.ebuild 659 RMD160 75bf2f7ed67ae7c42fd201f3c260fcd55bad004b SHA1 7111a4a90523cf910a6761ab1769254468217a9c SHA256 b56c527233314e1d8e702ff5cdccc23103c6acec0ae86936473409aab621e993
-MD5 4eec2bc45638e2ddc4b3d8017e499c15 libopensync-plugin-gnokii-0.22.ebuild 659
-RMD160 75bf2f7ed67ae7c42fd201f3c260fcd55bad004b libopensync-plugin-gnokii-0.22.ebuild 659
-SHA256 b56c527233314e1d8e702ff5cdccc23103c6acec0ae86936473409aab621e993 libopensync-plugin-gnokii-0.22.ebuild 659
-MISC ChangeLog 883 RMD160 f33842fc7309133eeb29e23a5b57ae8b36935e0e SHA1 876b9ce9df1b6cca2bb0e0d1aafa62dbe90fb64a SHA256 20ce6c455c9cd3bf5f5d63a98a92b3d5fef579822211440b802f9718d85efec4
-MD5 ae7f74732c97b7ac3c365bc8fb22732e ChangeLog 883
-RMD160 f33842fc7309133eeb29e23a5b57ae8b36935e0e ChangeLog 883
-SHA256 20ce6c455c9cd3bf5f5d63a98a92b3d5fef579822211440b802f9718d85efec4 ChangeLog 883
+EBUILD libopensync-plugin-gnokii-0.22.ebuild 783 RMD160 85f84930ecfecfe6dde112101172c6929e952402 SHA1 fa1f744ccc1e7029ab6d024424586dc83be6dcbd SHA256 245d069140c62bb053cafee4a0b086b9c3c9c16285ba208560d029fafc27008a
+MD5 0bae143b0e464424233752e2bfda534e libopensync-plugin-gnokii-0.22.ebuild 783
+RMD160 85f84930ecfecfe6dde112101172c6929e952402 libopensync-plugin-gnokii-0.22.ebuild 783
+SHA256 245d069140c62bb053cafee4a0b086b9c3c9c16285ba208560d029fafc27008a libopensync-plugin-gnokii-0.22.ebuild 783
+MISC ChangeLog 1041 RMD160 7cec1ce871e871519041002ab9f8628d2279b67d SHA1 df5b13a4b63138948e6a4de7f4bac28bd471602a SHA256 a5c52477bad20151eb1ed5f80d543a6eedc8451c1f6109fe5a1967e2840b0a5e
+MD5 ff035627b27e82c605c6753eafdc4208 ChangeLog 1041
+RMD160 7cec1ce871e871519041002ab9f8628d2279b67d ChangeLog 1041
+SHA256 a5c52477bad20151eb1ed5f80d543a6eedc8451c1f6109fe5a1967e2840b0a5e ChangeLog 1041
 MISC metadata.xml 304 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 SHA1 b96c72c417192c099990a616b12a1d2f55a06064 SHA256 7fa8df0f64197f3f6c018ed0d6c4cc4da014fbcc9af2da9b633f71657470236a
 MD5 45ae331a9c100ecabad1b4cd916f3d37 metadata.xml 304
 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 metadata.xml 304
@@ -26,9 +26,9 @@ MD5 77ac6f22938ca7290b79953b987d65cc files/digest-libopensync-plugin-gnokii-0.22
 RMD160 a6128094a3c1f5f589e5de64c0a835d5fb4c0580 files/digest-libopensync-plugin-gnokii-0.22 295
 SHA256 11a1601fb6b9fb721b4424ae7751a2ad4bcd60da96159f6db6b8974f9be6af4f files/digest-libopensync-plugin-gnokii-0.22 295
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
+Version: GnuPG v2.0.6 (GNU/Linux)
 
-iD8DBQFGCs1gppoStNGKGywRAqjCAJ9ZyAxYh9VRxc+W6FGf05NqjpvI1gCfeT3I
-3QO8p0PSGrxAEHqOlduGRiA=
-=9dMP
+iD8DBQFG4ortppoStNGKGywRAg7qAJ92ommDUnDTRkRb4CBB9E5BzFzxfACgo6g3
+9Q84oHQDOXanH64GuUatxuQ=
+=vCoW
 -----END PGP SIGNATURE-----
