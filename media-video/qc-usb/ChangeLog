@@ -1,6 +1,9 @@
 # ChangeLog for media-video/qc-usb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.24 2007/08/30 13:30:02 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.25 2007/09/08 12:30:49 eva Exp $
+
+  08 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
+  taking over liquidx package as I own the hardware
 
   30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing liquidx from metadata due to his retirement (see #171155 for
