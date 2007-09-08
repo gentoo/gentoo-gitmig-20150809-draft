@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.1.1.ebuild,v 1.2 2007/08/21 19:04:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.1.1.ebuild,v 1.3 2007/09/08 21:40:58 nyhm Exp $
 
 inherit eutils autotools games
 
@@ -8,7 +8,7 @@ MY_PV=${PV/_rc/-RC}
 MY_P="ufoai-${MY_PV}"
 
 DESCRIPTION="UFO: Alien Invasion - X-COM inspired strategy game"
-HOMEPAGE="http://www.ufoai.net/"
+HOMEPAGE="http://ufoai.ninex.info/"
 SRC_URI="mirror://sourceforge/ufoai/music.tar.bz2
 	mirror://sourceforge/ufoai/${MY_P}-data.tar
 	mirror://sourceforge/ufoai/${MY_P}-source.tar.bz2
@@ -141,11 +141,4 @@ src_install() {
 	fi
 
 	prepgamesdirs
-}
-
-pkg_postinst() {
-	games_pkg_postinst
-
-	elog "To play the game, run:  ${PN}"
-	echo
 }
