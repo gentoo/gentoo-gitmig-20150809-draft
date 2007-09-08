@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 1.2.0-off-by-one.patch 687 RMD160 8bb98a13c933c1142f671216de076f382ec5fc13 SHA1 8d3e9890deed4f6f2844294f7f6142fc7e4c4fac SHA256 7b49de7728a8d7a3a043cecf7a1cfbf5c5401562100681fea9fcfffe2b722407
 MD5 096e2ad3bd799c4514282233e8c68cd3 files/1.2.0-off-by-one.patch 687
 RMD160 8bb98a13c933c1142f671216de076f382ec5fc13 files/1.2.0-off-by-one.patch 687
@@ -28,3 +31,10 @@ SHA256 9340f8307724ad3ae333e5abbc13c738d19e46caa21e12511202e4e7b3ce281c files/di
 MD5 afcef363f4bcdcb9cc043690c2edc21c files/digest-xf86-input-acecad-1.2.0 530
 RMD160 e8d3adc8066d70fcccd58833f6fde119c1cdb737 files/digest-xf86-input-acecad-1.2.0 530
 SHA256 acc29583dfa8a43c609422ce6b05d8b70184c1eb94cca2dd00f795e3634b00ea files/digest-xf86-input-acecad-1.2.0 530
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG4iQop/wUKkr7RBoRAgM7AKCQHFRNxXsOEDDDi+iksXEu1SJ3+gCgzVk1
+TAmxvb1IjsZBWzvguj1CWQI=
+=HITr
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xf86-input-fpit-update1.diff 15185 RMD160 11c5b6db3e3765a6cc4ea536de375378c591c8e7 SHA1 5635ba840af8809352d925ad9ad768361c3fa610 SHA256 8231f2db6167c98a35bcfb744b860c675693ac38351bc8e6cd94bc3e9d3d86cf
 MD5 7c0505e09a79612473f2b5b07659cf65 files/xf86-input-fpit-update1.diff 15185
 RMD160 11c5b6db3e3765a6cc4ea536de375378c591c8e7 files/xf86-input-fpit-update1.diff 15185
@@ -34,3 +37,10 @@ SHA256 654e2c8147174ffec38d6c37eaf2f5a314e2244b80331874059ae61bc2182ef2 files/di
 MD5 13b61983a7ca8af189d8b4c54f02ebdc files/digest-xf86-input-fpit-1.1.0-r1 524
 RMD160 b106a6a652444a115e3978280306a6d80999ef76 files/digest-xf86-input-fpit-1.1.0-r1 524
 SHA256 654e2c8147174ffec38d6c37eaf2f5a314e2244b80331874059ae61bc2182ef2 files/digest-xf86-input-fpit-1.1.0-r1 524
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG4iQop/wUKkr7RBoRAsbJAJ4/buIkGMq9jJNaG+o00L3BSyfrQwCbBIOg
+c66A1IlBb2vafuwM2KV5uRs=
+=jwBA
+-----END PGP SIGNATURE-----

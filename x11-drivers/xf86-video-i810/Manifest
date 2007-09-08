@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 1.6.5-fix_no_dri.patch 1236 RMD160 5ab3bf1c3951c2fe7064fa13ffb573754ef594b1 SHA1 60f13aad5aa5f2a199ebc4b38ff468df9728ce5d SHA256 5b560f31a70b1998749e6cbcbfb6d7a94d3f9caf9ca4dad147662bc6eeb344da
 MD5 2208ca768eace896ac5d3a762c3045c8 files/1.6.5-fix_no_dri.patch 1236
 RMD160 5ab3bf1c3951c2fe7064fa13ffb573754ef594b1 files/1.6.5-fix_no_dri.patch 1236
@@ -64,3 +67,10 @@ SHA256 e41eb46e4c92b8165d2e1010df37ce96a9563d880313b59bde0427ded64d3fff files/di
 MD5 414f2184ac9ba2636077dcc83a65f88b files/digest-xf86-video-i810-2.1.1 271
 RMD160 89ee4de31b8d5d053436b5c0b063421b96135576 files/digest-xf86-video-i810-2.1.1 271
 SHA256 8e44b0e55a8bc373f7c66d4a2cf6e76560ac00cf84192ef8922dc9139c08cc68 files/digest-xf86-video-i810-2.1.1 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG4iQop/wUKkr7RBoRAru4AKCw1SvAf4XcoUu0A80G3EUluUMBLwCglsPM
+KePHBFXVlzTDYYA04KckL+c=
+=P9Pk
+-----END PGP SIGNATURE-----
