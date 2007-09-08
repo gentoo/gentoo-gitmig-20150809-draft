@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.20 2007/09/08 16:23:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.21 2007/09/08 16:52:28 hollow Exp $
+
+  08 Sep 2007; Benedikt Böhm <hollow@gentoo.org> apache-2.2.6.ebuild:
+  fix mod_cgi(d) selection on threaded MPMs
 
   08 Sep 2007; Jeroen Roovers <jer@gentoo.org> apache-2.0.59-r5.ebuild:
   Stable for HPPA (bug #190331).

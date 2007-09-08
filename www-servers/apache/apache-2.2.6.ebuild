@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.6.ebuild,v 1.2 2007/09/08 15:42:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.6.ebuild,v 1.3 2007/09/08 16:52:28 hollow Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -147,7 +147,7 @@ src_compile() {
 		myconf="${myconf} --enable-authnz-ldap=${modtype} --enable-ldap=${modtype}"
 	fi
 
-	if use threads; then
+	if use threads || use mpm-worker || use mpm-event; then
 		mods="${mods} cgid"
 		myconf="${myconf} --enable-cgid=${modtype}"
 	else
