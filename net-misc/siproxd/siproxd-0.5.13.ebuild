@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.5.13.ebuild,v 1.3 2007/08/20 19:51:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.5.13.ebuild,v 1.4 2007/09/08 20:38:26 zmedico Exp $
 
 inherit eutils autotools
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="static doc"
 
 DEPEND=">=net-libs/libosip-2.0.0
-	doc? ( app-text/docbook-sgml-utils )"
+	doc? ( app-text/docbook-sgml-utils ~app-text/docbook-sgml-dtd-4.2 )"
 
 pkg_setup() {
 	enewgroup siproxd
