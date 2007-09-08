@@ -1,6 +1,16 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.163 2007/09/08 00:26:15 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.164 2007/09/08 18:28:30 wltjr Exp $
+
+*tomcat-5.5.25 (08 Sep 2007)
+
+  08 Sep 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/5.5/jsr152_jsr154_examples_build_xml.patch,
+  +files/5.5/main_tomcat_catalina_jasper_build_xml.patch,
+  +tomcat-5.5.25.ebuild:
+  Bumped to latest release, unified multiple patch files into two, partly
+  result of having to re-create patches. Dropped ~x86-fbsd keyword due to it
+  missing on a dep per bug #191729.
 
   08 Sep 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -files/5.5/tomcat.conf, -files/5.5/tomcat.init, -tomcat-5.5.23-r1.ebuild,
