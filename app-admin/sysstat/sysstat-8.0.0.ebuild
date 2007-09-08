@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-8.0.0.ebuild,v 1.1 2007/09/08 11:00:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-8.0.0.ebuild,v 1.2 2007/09/08 11:21:17 jer Exp $
 
 inherit eutils multilib
 
@@ -25,7 +25,8 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable nls) || die "econf failed"
+	sa_lib_dir=/usr/$(get_libdir)/sa \
+		econf $(use_enable nls) || die "econf failed"
 	emake LFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
