@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10-r3.ebuild,v 1.2 2007/09/07 21:23:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10-r3.ebuild,v 1.3 2007/09/08 11:20:38 maekke Exp $
 
 inherit eutils qt3
 
@@ -51,7 +51,7 @@ SRC_URI="mirror://sourceforge/psi/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~sparc x86"
 
 DEPEND=">=app-crypt/qca-1.0-r2
 	$(qt_min_version 3.3)
