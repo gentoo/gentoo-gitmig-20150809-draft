@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.3-r3.ebuild,v 1.8 2007/08/25 22:58:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.4.ebuild,v 1.1 2007/09/08 18:26:36 hoffie Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
 IUSE="cli cgi ${CGI_SAPI_USE} ${APACHE2_SAPI_USE} fastbuild"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
 # NOTE: Portage doesn't support setting PROVIDE based on the USE flags
 #		that have been enabled, so we have to PROVIDE everything for now
@@ -20,12 +20,12 @@ MY_PHP_P="php-${MY_PHP_PV}"
 PHP_PACKAGE="1"
 
 # php patch settings, general
-PHP_PATCHSET_REV="4"
+PHP_PATCHSET_REV="0"
 SUHOSIN_PATCH="suhosin-patch-${MY_PHP_PV}-0.9.6.2-gentoo.patch.gz"
-MULTILIB_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-multilib-search-path.patch"
+MULTILIB_PATCH="${MY_PHP_PV}/opt/multilib-search-path.patch"
 # php patch settings, ebuild specific
-FASTBUILD_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-fastbuild.patch"
-CONCURRENTMODPHP_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-concurrent_apache_modules.patch"
+FASTBUILD_PATCH="${MY_PHP_PV}/opt/fastbuild.patch"
+CONCURRENTMODPHP_PATCH="${MY_PHP_PV}/opt/concurrent_apache_modules.patch"
 
 inherit php5_2-sapi apache-module
 
@@ -465,12 +465,6 @@ pkg_postinst() {
 		ewarn
 	fi
 
-	if use session; then
-		elog "When using open_basedir in conjunction with the session extension"
-		elog "make sure you add the value of session.save_path to open_basedir as"
-		elog "well, e.g.: with session.save_path=/tmp (default) you should have"
-		elog "open_basedir=/your/usual/webdir/:/tmp/"
-	fi
 	php5_2-sapi_pkg_postinst
 }
 
