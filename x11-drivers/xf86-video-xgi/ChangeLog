@@ -1,0 +1,10 @@
+# ChangeLog for x11-drivers/xf86-video-xgi
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-xgi/ChangeLog,v 1.1 2007/09/08 08:29:26 dberkholz Exp $
+
+*xf86-video-xgi-1.5.0 (08 Sep 2007)
+
+  08 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +xf86-video-xgi-1.5.0.ebuild:
+  Add driver for XGI cards: V3XT, Z7, and various releated chips.
+
