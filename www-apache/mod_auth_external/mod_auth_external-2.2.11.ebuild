@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_external/mod_auth_external-2.2.11.ebuild,v 1.1 2007/07/29 15:42:47 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_external/mod_auth_external-2.2.11.ebuild,v 1.2 2007/09/08 17:41:36 hollow Exp $
 
 inherit eutils apache-module
 
@@ -19,4 +19,4 @@ DOCFILES="AUTHENTICATORS CHANGES INSTALL INSTALL.HARDCODE README TODO"
 APACHE2_MOD_CONF="10_${PN}"
 APACHE2_MOD_DEFINE="AUTH_EXTERNAL"
 
-need_apache2
+need_apache2_0

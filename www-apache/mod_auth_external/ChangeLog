@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_auth_external
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_external/ChangeLog,v 1.2 2007/08/04 17:12:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_external/ChangeLog,v 1.3 2007/09/08 17:41:36 hollow Exp $
+
+  08 Sep 2007; Benedikt Böhm <hollow@gentoo.org>
+  mod_auth_external-2.2.9.ebuild, mod_auth_external-2.2.11.ebuild:
+  depend on apache 2.0; see mod_authnz_external for apache 2.2
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org>
   +files/10_mod_auth_external.conf, +metadata.xml,
