@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.3-r1.ebuild,v 1.6 2007/08/28 15:31:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.3-r1.ebuild,v 1.7 2007/09/08 22:48:18 vapier Exp $
 
 DESCRIPTION="Text console based program for playing audio files"
 HOMEPAGE="http://mp3blaster.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 -ppc ~ppc64 ~sparc ~x86"
-IUSE="esd lirc sdl sid vorbis"
+IUSE="esd lirc oss sdl sid vorbis"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	lirc? ( app-misc/lirc )
@@ -30,25 +30,30 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-
-	# newthreads and libpth support is broken.
-	if use sdl; then
-		myconf="${myconf} --disable-newthreads --without-pth --with-sdl --with-oss"
-	else
-		myconf="${myconf} --disable-newthreads --without-pth --with-oss"
+	if ! use esd && ! use sdl && ! use oss ; then
+		ewarn "You've disabled esd, sdl, and oss.  Enabling oss for you."
+		myconf="--with-oss"
 	fi
 
-	econf --without-nas ${myconf} \
+	# newthreads and libpth support is broken.
+	econf \
+		--disable-newthreads \
+		--without-pth \
+		--without-nas \
 		$(use_with lirc) \
 		$(use_with vorbis oggvorbis) \
 		$(use_with sid sidplay) \
-		$(use_with esd)
+		$(use_with esd) \
+		$(use_with sdl) \
+		$(use_with oss) \
+		${myconf} \
+		|| die
 	emake || die "emake failed."
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	# File collision with media-sound/splay.
-	mv "${D}"/usr/bin/splay "${D}"/usr/bin/splay_mp3blaster
+	mv "${D}"/usr/bin/splay "${D}"/usr/bin/splay_mp3blaster || die
 	dodoc AUTHORS BUGS ChangeLog CREDITS FAQ NEWS README TODO
 }
