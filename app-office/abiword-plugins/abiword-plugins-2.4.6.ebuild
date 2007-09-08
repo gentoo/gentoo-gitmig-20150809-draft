@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.10 2007/06/26 07:32:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.11 2007/09/08 11:30:46 eva Exp $
 
 inherit eutils
 
@@ -47,6 +47,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/poppler_abi_change.patch
+
+	# Fix use of poppler API
+	if has_version '>=app-text/poppler-0.6'; then
+		epatch "${FILESDIR}"/${P}-poppler-0.6-api.patch
+	fi
 }
 
 src_compile() {

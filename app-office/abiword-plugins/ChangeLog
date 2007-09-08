@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.34 2007/06/26 07:32:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.35 2007/09/08 11:30:46 eva Exp $
+
+  08 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/abiword-plugins-2.4.6-poppler-0.6-api.patch,
+  -abiword-plugins-2.4.5.ebuild, abiword-plugins-2.4.6.ebuild:
+  Prune older release, fix compilation against poppler-0.6
 
   26 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
   abiword-plugins-2.4.6.ebuild:

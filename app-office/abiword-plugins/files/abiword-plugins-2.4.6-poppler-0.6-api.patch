@@ -1,0 +1,11 @@
+--- abiword-plugins/wp/impexp/pdf/xp/ie_imp_PDF.cpp	2007-09-07 21:45:24.000000000 +0000
++++ abiword-plugins/wp/impexp/pdf/xp/ie_imp_PDF.cpp	2007-09-07 21:49:02.000000000 +0000
+@@ -63,7 +63,7 @@
+   
+     PDFDoc * doc = new PDFDoc(fileName);
+ 
+-    globalParams = new GlobalParams("");
++    globalParams = new GlobalParams();
+     globalParams->setTextEncoding("UTF-8");
+     globalParams->setTextEOL("\n");
+     globalParams->setTextPageBreaks(gFalse);
