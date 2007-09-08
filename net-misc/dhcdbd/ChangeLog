@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcdbd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.12 2007/09/05 21:23:24 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/ChangeLog,v 1.13 2007/09/08 15:47:26 josejx Exp $
+
+  08 Sep 2007; Joseph Jezak <josejx@gentoo.org> dhcdbd-3.0.ebuild:
+  Marked ppc stable for bug #191302.
 
   05 Sep 2007; <tester@gentoo.org> dhcdbd-3.0.ebuild:
   Stable on x86 per bug #191302

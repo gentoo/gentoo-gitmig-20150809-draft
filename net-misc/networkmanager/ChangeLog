@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.20 2007/09/05 20:37:03 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.21 2007/09/08 15:49:49 josejx Exp $
+
+  08 Sep 2007; Joseph Jezak <josejx@gentoo.org>
+  networkmanager-0.6.5_p20070823.ebuild:
+  Marked ppc stable for bug #191302.
 
   05 Sep 2007; Robert Buchholz <rbu@gentoo.org>
   networkmanager-0.6.5_p20070823.ebuild:
