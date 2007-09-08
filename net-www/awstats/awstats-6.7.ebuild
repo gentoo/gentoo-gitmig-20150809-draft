@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.7.ebuild,v 1.2 2007/09/07 04:43:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.7.ebuild,v 1.3 2007/09/08 11:58:41 hollow Exp $
 
 inherit eutils webapp versionator depend.apache
 
@@ -33,29 +33,31 @@ src_unpack() {
 
 	# change default installation directory
 	for file in tools/* wwwroot/cgi-bin/*; do
-	    if [[ -f "${file}" ]]; then
-	        sed -i -e "s#/usr/local/awstats/wwwroot/cgi-bin#${MY_CGIBINDIR}#g" \
-	           -e "s#/usr/local/awstats/wwwroot/icon#${MY_HTDOCSDIR}/icon#g" \
-	           -e "s#/usr/local/awstats/wwwroot/plugins#${MY_HOSTROOTDIR}/plugins#g" \
-	           -e "s#/usr/local/awstats/wwwroot/classes#${MY_HTDOCSDIR}/classes#g" \
-	           -e "s#/usr/local/awstats/wwwroot#${MY_HTDOCSDIR}#g" \
-			   "${file}" || die "sed ${file} failed"
-	    fi
+		if [[ -f "${file}" ]]; then
+			sed \
+				-e "s#/usr/local/awstats/wwwroot/cgi-bin#${MY_CGIBINDIR}#g" \
+				-e "s#/usr/local/awstats/wwwroot/icon#${MY_HTDOCSDIR}/icon#g" \
+				-e "s#/usr/local/awstats/wwwroot/plugins#${MY_HOSTROOTDIR}/plugins#g" \
+				-e "s#/usr/local/awstats/wwwroot/classes#${MY_HTDOCSDIR}/classes#g" \
+				-e "s#/usr/local/awstats/wwwroot#${MY_HTDOCSDIR}#g" \
+				-i "${file}" || die "sed ${file} failed"
+		fi
 	done
 
 	# set the logpath
 	if use apache2; then
-		logpath="apache${USE_APACHE2}/access_log"
+		logpath="apache2/access_log"
 	else
 		logpath="awstats_log"
 	fi
 
 	# set default values for directories
-	sed -i -e "s|^\(LogFile=\).*$|\1\"/var/log/${logpath}\"|" \
-	    -e "s|^\(SiteDomain=\).*$|\1\"localhost\"|" \
-	    -e "s|^\(DirIcons=\).*$|\1\"/awstats/icons\"|" \
-	    -e "s|^\(DirCgi=\).*$|\1\"/cgi-bin/awstats\"|" \
-		"${S}"/wwwroot/cgi-bin/awstats.model.conf || die "sed failed"
+	sed \
+		-e "s|^\(LogFile=\).*$|\1\"/var/log/${logpath}\"|" \
+		-e "s|^\(SiteDomain=\).*$|\1\"localhost\"|" \
+		-e "s|^\(DirIcons=\).*$|\1\"/awstats/icons\"|" \
+		-e "s|^\(DirCgi=\).*$|\1\"/cgi-bin/awstats\"|" \
+		-i "${S}"/wwwroot/cgi-bin/awstats.model.conf || die "sed failed"
 
 	# set version in postinst-en.txt
 	sed -e "s/PVR/${PVR}/g" \
