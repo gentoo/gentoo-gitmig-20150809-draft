@@ -1,0 +1,59 @@
+DEFAULT GENTOO INSTALLATION
+
+The default Gentoo installation is designed to work and be as secure as
+possible out-of-the box as long as you have USE="ssl pam -opera".
+
+
+USE FLAGS
+
++ssl    forces anyterm to only run over secure (HTTPS) connections.
+-ssl    disables secure connections, all data will pass over the network in
+        plain text, including passwords!
++pam    enables PAM authentication, so anyone with an account on your computer
+        can use anyterm without any further configuration.
+-pam    means that you will have to configure your own authentication
+        mechanism.
++opera  Enables a workaround for a bug in the Opera browser, but you will have
+        to modify apache's logging behaviour to prevent snooping by local
+        users.
+-opera  Disables the Opera bug workaround.
+
+
+INSTALLATION INSTRUCTIONS
+
+1. Add the following flags to APACHE2_OPTS in /etc/init.d/apache2:
+    -D ANYTERM
+    -D SSL -D SSL_DEFAULT_VHOST  # if USE=ssl
+    -D AUTH_PAM                  # if USE=pam
+
+2. If you have USE=vhosts then you need to add the following directives to
+   each virtual host's configuration file:
+    <Directory "${MY_INSTALLDIR}">
+        AllowOverride All
+    </Directory>
+
+3. If you have USE=opera then you should disable logging of some requests. In
+   each apache configuration file add env=!DONTLOG to each CustomLog
+   directive. For example:
+
+   USE="ssl -vhosts": edit /etc/apache2/modules.d/41_mod_ssl.default-vhost.conf:
+
+   CustomLog logs/ssl_request_log \
+       "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b" \
+       env=!DONTLOG
+
+   USE="-ssl -vhosts": edit /etc/apache2/modules.d/00_mod_log_config.conf:
+       CustomLog logs/access_log common env=!DONTLOG
+
+4. Restart apache2:
+   /etc/init.d/apache2 restart
+
+5. Browse to:
+   https://${VHOST_HOSTNAME}${VHOST_APPDIR}/${PN}.html  # if USE=ssl
+   http://${VHOST_HOSTNAME}${VHOST_APPDIR}/${PN}.html   # if USE=-ssl
+
+
+MORE INFORMATION
+
+http://anyterm.org/
+http://anyterm.org/security.html

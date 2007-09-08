@@ -1,0 +1,75 @@
+Index: anyterm-1.1.15/browser/anyterm.js
+===================================================================
+--- anyterm-1.1.15.orig/browser/anyterm.js
++++ anyterm-1.1.15/browser/anyterm.js
+@@ -24,16 +24,21 @@ var term;
+ var open=false;
+ var session;
+ 
+-var method="POST";
+-//var method="GET";
++#USE=opera#//var method="POST";
++#USE=opera#var method="GET";
++#USE=-opera#var method="POST";
++#USE=-opera#//var method="GET";
+ 
+ // Random sequence numbers are needed to prevent Opera from caching
+ // replies
+ 
+ var is_opera = navigator.userAgent.toLowerCase().indexOf("opera") != -1;
+-if (is_opera) {
+-  method="GET";
+-}
++#USE=opera#if (is_opera) {
++#USE=opera#  method="GET";
++#USE=opera#}
++#USE=-opera#//if (is_opera) {
++#USE=-opera#//  method="GET";
++#USE=-opera#//}
+ 
+ var seqnum_val=Math.round(Math.random()*100000);
+ function cachebust() {
+Index: anyterm-1.1.15/browser/.htaccess
+===================================================================
+--- anyterm-1.1.15.orig/browser/.htaccess
++++ anyterm-1.1.15/browser/.htaccess
+@@ -6,6 +6,8 @@
+ # will be ignored if the anyterm module has not been loaded.
+ 
+ <IfModule anyterm>
++#USE=ssl#<IfModule mod_ssl.c>
++#USE=pam#<IfModule mod_auth_pam.c>
+ 
+ # Use an anyterm_command directive to specify the command to run
+ # inside the terminal:
+@@ -24,6 +26,16 @@
+ # Example:
+ # anyterm_command '/path/to/anygetty --remotehost "Anyterm: %h" --autologin=%u'
+ 
++# twp: Use ssh to avoid problems with Gentoo's /bin/login.
++anyterm_command '/usr/bin/ssh %u@localhost'
++
++#USE=ssl#SSLRequireSSL
++#USE=ssl#
++#USE=pam#AuthPAM_Enabled on
++#USE=pam#AuthType Basic
++#USE=pam#AuthName "Anyterm"
++#USE=pam#Require valid-user
++#USE=pam#
+ <Files anyterm-module>
+   SetHandler anyterm
+ 
+@@ -34,9 +46,12 @@
+   # CustomLog /path/to/logfile combined env=!DONTLOG
+   # See the Apache documentation for details.  Note "=!" not "!=" !
+ 
+-  # SetEnv DONTLOG
++#USE=opera#  SetEnv DONTLOG
++#USE=-opera#  # SetEnv DONTLOG
+ </Files>
+ 
++#USE=pam#</IfModule>
++#USE=ssl#</IfModule>
+ # Additional Security Issues
+ 
+ # If you're just testing Anyterm on a machine that's not connected to

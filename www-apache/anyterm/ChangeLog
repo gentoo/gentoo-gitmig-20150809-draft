@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/anyterm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/ChangeLog,v 1.7 2007/09/01 13:12:44 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/ChangeLog,v 1.8 2007/09/08 16:30:43 hollow Exp $
+
+*anyterm-1.1.15 (08 Sep 2007)
+
+  08 Sep 2007; Benedikt Böhm <hollow@gentoo.org>
+  +files/anyterm-1.1.15-browser-gentoo.patch,
+  +files/anyterm-1.1.15-postinst-en.txt, +anyterm-1.1.15.ebuild:
+  version bump
 
   01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing twp from metadata due to his retirement (see #190561 for reference).
