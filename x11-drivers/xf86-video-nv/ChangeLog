@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-nv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.55 2007/09/08 08:17:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.56 2007/09/08 21:24:03 josejx Exp $
+
+  08 Sep 2007; Joseph Jezak <josejx@gentoo.org> xf86-video-nv-2.1.2.ebuild:
+  Marked ppc/ppc64 stable for bug #191615.
 
 *xf86-video-nv-2.1.3 (08 Sep 2007)
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-mouse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.48 2007/09/07 20:26:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.49 2007/09/08 21:24:25 josejx Exp $
+
+  08 Sep 2007; Joseph Jezak <josejx@gentoo.org>
+  xf86-input-mouse-1.2.2.ebuild:
+  Marked ppc/ppc64 stable for bug #191615.
 
   07 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   xf86-input-mouse-1.2.2.ebuild:
