@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXtst
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.31 2007/09/08 07:47:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.32 2007/09/08 21:18:39 josejx Exp $
+
+  08 Sep 2007; Joseph Jezak <josejx@gentoo.org> libXtst-1.0.2.ebuild:
+  Marked ppc/ppc64 stable for bug #191615.
 
 *libXtst-1.0.3 (08 Sep 2007)
 
