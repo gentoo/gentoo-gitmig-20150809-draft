@@ -1,0 +1,11 @@
+# ChangeLog for www-apache/mod_authnz_external
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_authnz_external/ChangeLog,v 1.1 2007/09/08 17:38:50 hollow Exp $
+
+*mod_authnz_external-3.1.0 (08 Sep 2007)
+
+  08 Sep 2007; Benedikt Böhm <hollow@gentoo.org>
+  +files/10_mod_authnz_external.conf, +metadata.xml,
+  +mod_authnz_external-3.1.0.ebuild:
+  initial version; #187739
+
