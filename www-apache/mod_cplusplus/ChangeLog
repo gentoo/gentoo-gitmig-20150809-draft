@@ -1,0 +1,10 @@
+# ChangeLog for www-apache/mod_cplusplus
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cplusplus/ChangeLog,v 1.1 2007/09/08 18:48:09 hollow Exp $
+
+*mod_cplusplus-1.5.4 (08 Sep 2007)
+
+  08 Sep 2007; Benedikt Böhm <hollow@gentoo.org>
+  +files/51_mod_cplusplus.conf, +metadata.xml, +mod_cplusplus-1.5.4.ebuild:
+  initial version; #100684
+
