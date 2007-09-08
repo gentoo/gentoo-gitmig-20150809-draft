@@ -1,4 +1,4 @@
-DIST printproto-1.0.3.tar.bz2 43560 RMD160 af2312cd43efc2d2d26dd161a4ef667f2a928155 SHA1 c9b62c20ed50ce44c4835d5fd2d1bb52af66f75f SHA256 8b375f8cda83dfc7d84be44af41eedd484d0e2499acbd19bdca5b4056dec7235
+DIST printproto-1.0.3.tar.bz2 43442 RMD160 adcb049512f3edb9d8b8822a14e9a38e6eb17abe SHA1 24bcde97907cdb12cc38484086a862adb234e2ae SHA256 aca532ca781b5383df51ebb143f4b1355b6c3c3f6441c4871db6a0fafc8abcad
 EBUILD printproto-1.0.3.ebuild 474 RMD160 36daf60bfb34c32b8b474db95ef09cd1708adce2 SHA1 47a2300d4644e5896b0e98f2cada999d1e37620a SHA256 02046bc9b7eecc0c7fd7191eb75c031f416894be2d701368a85aaaabf30a29d2
 MD5 048b9c8dac407582d1987e6551af8046 printproto-1.0.3.ebuild 474
 RMD160 36daf60bfb34c32b8b474db95ef09cd1708adce2 printproto-1.0.3.ebuild 474
@@ -11,6 +11,6 @@ MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 678fb05c0a1ae8f0cedadf819290e091 files/digest-printproto-1.0.3 250
-RMD160 ef5a53c6a4fe228ab096444ea251e9d5996775b8 files/digest-printproto-1.0.3 250
-SHA256 d9e2bd493809a117c4a7883f0d2bcc09579b86eb6fe91cccb76ea210ca8ee7a1 files/digest-printproto-1.0.3 250
+MD5 cbcb682bc6b0bfc1d40c30832606a50c files/digest-printproto-1.0.3 250
+RMD160 b61132e918f5453b92638696db90af50785e849f files/digest-printproto-1.0.3 250
+SHA256 c22feb638f05dc0114871964b9a42964d948fafaafdd685b919ed9b52322d378 files/digest-printproto-1.0.3 250

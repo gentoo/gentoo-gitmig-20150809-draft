@@ -1,4 +1,4 @@
-DIST resourceproto-1.0.2.tar.bz2 36859 RMD160 8b665848d4ec2ccacb243bc058268a41b96124c9 SHA1 ac22c2e439067185ea169d20677f74321da7b34b SHA256 0c33d6fceef5483001459bdc934b5831502250b27f1f4ad370ab044f8ab53487
+DIST resourceproto-1.0.2.tar.bz2 36827 RMD160 01acf0cb35949eed0ef93bc1cea44ea47e742771 SHA1 75c051ea69ad706e31ff9c61c2c6fc9de32a0ca9 SHA256 e3cb3c07f06d4642f06015277c6cd40b1e396cae06e5d2029d3f89805211bbfa
 EBUILD resourceproto-1.0.2.ebuild 483 RMD160 f369abe797df0acc5371ff45a846eeaf49cdd9b5 SHA1 382bf9488233cc3c5278672f7378e2ec1e82b4ef SHA256 5a2cf25e1c06dc478fc912ecc4f2971beb7dc4982932286c1f81dbd6fcef1288
 MD5 946bb9b1c9b9c4d3c76fc541eb5a0121 resourceproto-1.0.2.ebuild 483
 RMD160 f369abe797df0acc5371ff45a846eeaf49cdd9b5 resourceproto-1.0.2.ebuild 483
@@ -11,6 +11,6 @@ MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 f14a3620676fda88dc87abc316ccaa76 files/digest-resourceproto-1.0.2 259
-RMD160 6e4db6d6aac70e81b668a010c1c56b472b4ae11f files/digest-resourceproto-1.0.2 259
-SHA256 14629b71fed8bac6982c3cf2faf88a7bd7d94ffa079c58a2c8b9081c1af36603 files/digest-resourceproto-1.0.2 259
+MD5 38b4b01f51dc65a85f7ad37a53fc5ffb files/digest-resourceproto-1.0.2 259
+RMD160 39e35758b5163cfdf1a050b59b95be6564e5d7cb files/digest-resourceproto-1.0.2 259
+SHA256 be862f95df1d59039930bbbb396a5f867d5874a93cf1fd2ff9bc5b86e4038469 files/digest-resourceproto-1.0.2 259
