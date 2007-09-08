@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.7.ebuild,v 1.6 2007/08/20 23:35:32 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.7.ebuild,v 1.7 2007/09/08 06:05:00 josejx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://muth.org/Robert/${MY_PN}/${P/-/.}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc -sparc x86"
+KEYWORDS="~alpha amd64 ppc -sparc x86"
 IUSE="doc sox"
 
 RDEPEND=">=x11-libs/gtk+-2
@@ -21,6 +21,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}"/${MY_PN}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/trommler-be.patch
+}
 
 src_compile() {
 	emake export.h || die "emake export.h failed."

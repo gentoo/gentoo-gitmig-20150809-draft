@@ -1,0 +1,33 @@
+--- drummer.c	2004-05-10 22:20:47.000000000 -0400
++++ /home/jjezak/Trommler/drummer.c	2007-09-07 22:53:57.000000000 -0400
+@@ -408,6 +408,16 @@
+     fseek(fp,0,SEEK_SET);
+     DRUM_SAMPLE(drum) = calloc(DRUM_LENGTH(drum),sizeof(INT16));
+     fread(DRUM_SAMPLE(drum),sizeof(INT16),DRUM_LENGTH(drum),fp);
++
++    /* Big endian swap fix */
++#ifdef __BIG_ENDIAN__
++    int i;
++    INT16 *p = DRUM_SAMPLE(drum);
++    for(i=0; i<DRUM_LENGTH(drum); i++){
++	*p = (INT16) (*p << 8 | *p >> 8);
++    	p++;
++    }
++#endif /* __BIG_ENDIAN */
+     fclose(fp);    
+ }
+ 
+--- soundcard.c	2004-05-07 18:18:50.000000000 -0400
++++ /home/jjezak/Trommler/soundcard.c	2007-09-07 22:53:57.000000000 -0400
+@@ -105,7 +105,11 @@
+ }Soundcard =
+ {
+     -1,
++#ifdef __BIG_ENDIAN__
++    AFMT_S16_BE,
++#else
+     AFMT_S16_LE,
++#endif /* __BIG_ENDIAN__ */
+ #ifdef MAIN
+     1,
+ #else
