@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.7.8.ebuild,v 1.1 2007/09/08 14:36:52 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.7.8.ebuild,v 1.2 2007/09/08 22:20:00 hanno Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -29,9 +29,10 @@ src_compile() {
 
 	econf \
 		$(use_enable debug) \
-		--disable-xmlrpc-c \			# I want to keep it disabled while >=dev-libs/xmlrpc-c-1.07 is masked
+		--disable-xmlrpc-c \
 		--disable-dependency-tracking \
 		|| die "econf failed"
+	# --disable-xmlrpc-c: I want to keep it disabled while >=dev-libs/xmlrpc-c-1.07 is masked
 
 	emake || die "emake failed"
 }
