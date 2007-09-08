@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/mod_ruby-1.2.4-r2.ebuild,v 1.1 2007/08/19 12:34:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/mod_ruby-1.2.4-r2.ebuild,v 1.2 2007/09/08 14:55:39 hollow Exp $
 
 inherit apache-module
 
@@ -23,7 +23,7 @@ APACHE2_MOD_FILE="${PN}.so"
 
 DOCFILES="ChangeLog COPYING README.*"
 
-need_apache
+need_apache2_0
 
 src_compile() {
 	./configure.rb --with-apxs=${APXS2}
