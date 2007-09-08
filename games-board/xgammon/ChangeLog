@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xgammon
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/ChangeLog,v 1.10 2006/12/01 21:06:41 wolf31o2 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/ChangeLog,v 1.11 2007/09/08 11:09:48 angelos Exp $
+
+  08 Sep 2007; Christoph Mende <angelos@gentoo.org> xgammon-0.98.ebuild:
+  Stable on amd64 wrt bug #190570
 
   01 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org> xgammon-0.98.ebuild:
   Removing old virtual/x11 dependency.
