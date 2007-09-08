@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p6.ebuild,v 1.23 2006/11/03 18:37:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p6.ebuild,v 1.24 2007/09/08 06:46:28 vapier Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_unpack() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" \
+	emake install DESTDIR="${D}" \
 		pkgdatadir=/usr/share/automake-${SLOT} \
 		m4datadir=/usr/share/aclocal-${SLOT} \
 		|| die
@@ -53,9 +53,4 @@ src_install() {
 	for x in guess sub ; do
 		dosym ../gnuconfig/config.${x} /usr/share/${PN}-${SLOT}/config.${x}
 	done
-}
-
-pkg_postinst() {
-	einfo "Please note that the 'WANT_AUTOMAKE_1_4=1' syntax has changed to:"
-	einfo "  WANT_AUTOMAKE=1.4"
 }
