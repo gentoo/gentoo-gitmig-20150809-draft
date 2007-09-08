@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.185 2007/06/26 07:25:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.186 2007/09/08 11:30:22 eva Exp $
+
+  08 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/16_fcfini_crash.dpatch, -abiword-2.4.5.ebuild,
+  -abiword-2.4.5-r1.ebuild:
+  Prune older release
 
   26 Jun 2007; Christian Faulhammer <opfer@gentoo.org> abiword-2.4.6.ebuild:
   stable x86, bug 173960
