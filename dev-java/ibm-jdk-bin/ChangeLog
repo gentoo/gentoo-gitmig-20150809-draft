@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.133 2007/09/08 01:21:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.134 2007/09/08 01:57:02 caster Exp $
+
+  08 Sep 2007; Vlastimil Babka <caster@gentoo.org>
+  -ibm-jdk-bin-1.5.0.4.ebuild, -ibm-jdk-bin-1.5.0.4-r1.ebuild,
+  -ibm-jdk-bin-1.5.0.5.ebuild:
+  Remove old and vulnerable versions.
 
   08 Sep 2007; Steve Dibb <beandog@gentoo.org> ibm-jdk-bin-1.5.0.5a.ebuild:
   amd64 stable, security bug 186277
