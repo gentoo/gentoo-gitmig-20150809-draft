@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/xorg-sgml-doctools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-sgml-doctools/ChangeLog,v 1.16 2007/09/07 20:05:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-sgml-doctools/ChangeLog,v 1.17 2007/09/08 20:38:49 josejx Exp $
+
+  08 Sep 2007; Joseph Jezak <josejx@gentoo.org>
+  xorg-sgml-doctools-1.2.ebuild:
+  Marked ppc/ppc64 stable for bug #191615.
 
   07 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   xorg-sgml-doctools-1.2.ebuild:
