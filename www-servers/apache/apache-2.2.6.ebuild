@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.6.ebuild,v 1.1 2007/09/07 21:46:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.6.ebuild,v 1.2 2007/09/08 15:42:27 hollow Exp $
 
-inherit eutils flag-o-matic gnuconfig multilib autotools
+inherit eutils flag-o-matic multilib autotools
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-${PF}"
@@ -196,7 +196,8 @@ src_compile() {
 		--with-port=80 \
 		--with-program-name=apache2 \
 		--enable-layout=Gentoo \
-		$( use_enable debug maintainer-mode ) \
+		$(use_enable debug maintainer-mode) \
+		$(use_enable debug exception-hook) \
 		${myconf} ${MY_BUILTINS} || die "econf failed!"
 
 	sed -i -e 's:apache2\.conf:httpd.conf:' include/ap_config_auto.h
