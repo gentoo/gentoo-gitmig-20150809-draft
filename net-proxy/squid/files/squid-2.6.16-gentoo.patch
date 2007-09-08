@@ -1,0 +1,325 @@
+diff -Nru squid-2.6.STABLE16.orig/helpers/basic_auth/MSNT/confload.c squid-2.6.STABLE16/helpers/basic_auth/MSNT/confload.c
+--- squid-2.6.STABLE16.orig/helpers/basic_auth/MSNT/confload.c	2002-06-26 22:09:48.000000000 +0300
++++ squid-2.6.STABLE16/helpers/basic_auth/MSNT/confload.c	2007-09-08 08:04:09.000000000 +0300
+@@ -24,7 +24,7 @@
+ 
+ /* Path to configuration file */
+ #ifndef SYSCONFDIR
+-#define SYSCONFDIR "/usr/local/squid/etc"
++#define SYSCONFDIR "/etc/squid"
+ #endif
+ #define CONFIGFILE   SYSCONFDIR "/msntauth.conf"
+ 
+diff -Nru squid-2.6.STABLE16.orig/helpers/basic_auth/MSNT/msntauth.conf.default squid-2.6.STABLE16/helpers/basic_auth/MSNT/msntauth.conf.default
+--- squid-2.6.STABLE16.orig/helpers/basic_auth/MSNT/msntauth.conf.default	2002-06-26 21:44:28.000000000 +0300
++++ squid-2.6.STABLE16/helpers/basic_auth/MSNT/msntauth.conf.default	2007-09-08 08:04:09.000000000 +0300
+@@ -8,6 +8,6 @@
+ server other_PDC	other_BDC	otherdomain
+ 
+ # Denied and allowed users. Comment these if not needed.
+-#denyusers	/usr/local/squid/etc/msntauth.denyusers
+-#allowusers	/usr/local/squid/etc/msntauth.allowusers
++#denyusers	/etc/squid/msntauth.denyusers
++#allowusers	/etc/squid/msntauth.allowusers
+ 
+diff -Nru squid-2.6.STABLE16.orig/helpers/basic_auth/SMB/Makefile.am squid-2.6.STABLE16/helpers/basic_auth/SMB/Makefile.am
+--- squid-2.6.STABLE16.orig/helpers/basic_auth/SMB/Makefile.am	2005-05-17 19:56:26.000000000 +0300
++++ squid-2.6.STABLE16/helpers/basic_auth/SMB/Makefile.am	2007-09-08 08:04:09.000000000 +0300
+@@ -14,7 +14,7 @@
+ ## FIXME: autoconf should test for the samba path.
+ 
+ SMB_AUTH_HELPER	= smb_auth.sh
+-SAMBAPREFIX=/usr/local/samba
++SAMBAPREFIX=/usr
+ SMB_AUTH_HELPER_PATH = $(libexecdir)/$(SMB_AUTH_HELPER)
+ 
+ libexec_SCRIPTS	= $(SMB_AUTH_HELPER)
+diff -Nru squid-2.6.STABLE16.orig/helpers/basic_auth/SMB/smb_auth.sh squid-2.6.STABLE16/helpers/basic_auth/SMB/smb_auth.sh
+--- squid-2.6.STABLE16.orig/helpers/basic_auth/SMB/smb_auth.sh	2001-01-08 01:36:46.000000000 +0200
++++ squid-2.6.STABLE16/helpers/basic_auth/SMB/smb_auth.sh	2007-09-08 08:04:09.000000000 +0300
+@@ -24,7 +24,7 @@
+ read AUTHSHARE
+ read AUTHFILE
+ read SMBUSER
+-read SMBPASS
++read -r SMBPASS
+ 
+ # Find domain controller
+ echo "Domain name: $DOMAINNAME"
+@@ -47,7 +47,7 @@
+   addropt=""
+ fi
+ echo "Query address options: $addropt"
+-dcip=`$SAMBAPREFIX/bin/nmblookup $addropt "$PASSTHROUGH#1c" | awk '/^[0-9.]+ / { print $1 ; exit }'`
++dcip=`$SAMBAPREFIX/bin/nmblookup $addropt "$PASSTHROUGH#1c" | awk '/^[0-9.]+\..+ / { print $1 ; exit }'`
+ echo "Domain controller IP address: $dcip"
+ [ -n "$dcip" ] || exit 1
+ 
+diff -Nru squid-2.6.STABLE16.orig/helpers/external_acl/session/squid_session.8 squid-2.6.STABLE16/helpers/external_acl/session/squid_session.8
+--- squid-2.6.STABLE16.orig/helpers/external_acl/session/squid_session.8	2007-01-06 19:28:35.000000000 +0200
++++ squid-2.6.STABLE16/helpers/external_acl/session/squid_session.8	2007-09-08 08:25:28.000000000 +0300
+@@ -35,7 +35,7 @@
+ .P
+ Configuration example using the default automatic mode
+ .IP
+-external_acl_type session ttl=300 negative_ttl=0 children=1 concurrency=200 %LOGIN /usr/local/squid/libexec/squid_session
++external_acl_type session ttl=300 negative_ttl=0 children=1 concurrency=200 %LOGIN /usr/libexec/squid/squid_session
+ .IP
+ acl session external session
+ .IP
+diff -Nru squid-2.6.STABLE16.orig/helpers/external_acl/unix_group/squid_unix_group.8 squid-2.6.STABLE16/helpers/external_acl/unix_group/squid_unix_group.8
+--- squid-2.6.STABLE16.orig/helpers/external_acl/unix_group/squid_unix_group.8	2006-05-14 18:07:24.000000000 +0300
++++ squid-2.6.STABLE16/helpers/external_acl/unix_group/squid_unix_group.8	2007-09-08 08:25:45.000000000 +0300
+@@ -27,7 +27,7 @@
+ This squid.conf example defines two Squid acls. usergroup1 matches users in group1, and usergroup2
+ matches users in group2 or group3
+ .IP
+-external_acl_type unix_group %LOGIN /usr/local/squid/libexec/squid_unix_group -p
++external_acl_type unix_group %LOGIN /usr/libexec/squid/squid_unix_group -p
+ .IP
+ acl usergroup1 external unix_group group1
+ .IP
+diff -Nru squid-2.6.STABLE16.orig/src/access_log.c squid-2.6.STABLE16/src/access_log.c
+--- squid-2.6.STABLE16.orig/src/access_log.c	2007-06-03 03:40:32.000000000 +0300
++++ squid-2.6.STABLE16/src/access_log.c	2007-09-08 08:04:28.000000000 +0300
+@@ -1225,7 +1225,7 @@
+ 	LogfileStatus = LOG_ENABLE;
+     }
+ #if HEADERS_LOG
+-    headerslog = logfileOpen("/usr/local/squid/logs/headers.log", MAX_URL << 1, 0);
++    headerslog = logfileOpen("/var/log/squid/headers.log", MAX_URL << 1, 0);
+     assert(NULL != headerslog);
+ #endif
+ #if FORW_VIA_DB
+diff -Nru squid-2.6.STABLE16.orig/src/cf.data.pre squid-2.6.STABLE16/src/cf.data.pre
+--- squid-2.6.STABLE16.orig/src/cf.data.pre	2007-09-06 00:50:15.000000000 +0300
++++ squid-2.6.STABLE16/src/cf.data.pre	2007-09-08 08:19:51.000000000 +0300
+@@ -640,6 +640,8 @@
+ acl Safe_ports port 488		# gss-http
+ acl Safe_ports port 591		# filemaker
+ acl Safe_ports port 777		# multiling http
++acl Safe_ports port 901		# SWAT
++acl purge method PURGE
+ acl CONNECT method CONNECT
+ NOCOMMENT_END
+ DOC_END
+@@ -673,6 +675,9 @@
+ # Only allow cachemgr access from localhost
+ http_access allow manager localhost
+ http_access deny manager
++# Only allow purge requests from localhost
++http_access allow purge localhost
++http_access deny purge
+ # Deny requests to unknown ports
+ http_access deny !Safe_ports
+ # Deny CONNECT to other than SSL ports
+@@ -691,6 +696,9 @@
+ #acl our_networks src 192.168.1.0/24 192.168.2.0/24
+ #http_access allow our_networks
+ 
++# Allow the localhost to have access by default
++http_access allow localhost
++
+ # And finally deny all other access to this proxy
+ http_access deny all
+ NOCOMMENT_END
+@@ -3342,11 +3350,11 @@
+ 
+ NAME: cache_mgr
+ TYPE: string
+-DEFAULT: webmaster
++DEFAULT: root
+ LOC: Config.adminEmail
+ DOC_START
+ 	Email-address of local cache manager who will receive
+-	mail if the cache dies. The default is "webmaster".
++	mail if the cache dies. The default is "root".
+ DOC_END
+ 
+ NAME: mail_from
+@@ -3374,12 +3382,12 @@
+ 
+ NAME: cache_effective_user
+ TYPE: string
+-DEFAULT: nobody
++DEFAULT: squid
+ LOC: Config.effectiveUser
+ DOC_START
+ 	If you start Squid as root, it will change its effective/real
+ 	UID/GID to the user specified below.  The default is to change
+-	to UID to nobody.  If you define cache_effective_user, but not
++	to UID to squid.  If you define cache_effective_user, but not
+ 	cache_effective_group, Squid sets the GID to the effective
+ 	user's default group ID (taken from the password file) and
+ 	supplementary group list from the from groups membership of
+@@ -4018,12 +4026,12 @@
+ NAME: snmp_port
+ TYPE: ushort
+ LOC: Config.Port.snmp
+-DEFAULT: 3401
++DEFAULT: 0
+ IFDEF: SQUID_SNMP
+ DOC_START
+ 	Squid can now serve statistics and status information via SNMP.
+-	By default it listens to port 3401 on the machine. If you don't
+-	wish to use SNMP, set this to "0".
++	By default snmp_port is disabled. If you wish to use SNMP, 
++	set this to "3401" (or any other number you like).
+ DOC_END
+ 
+ NAME: snmp_access
+@@ -4094,12 +4102,12 @@
+ NAME: htcp_port
+ IFDEF: USE_HTCP
+ TYPE: ushort
+-DEFAULT: 4827
++DEFAULT: 0
+ LOC: Config.Port.htcp
+ DOC_START
+ 	The port number where Squid sends and receives HTCP queries to
+-	and from neighbor caches.  Default is 4827.  To disable use
+-	"0".
++	and from neighbor caches.  To turn it on you want to set it to
++	4827.  By default it is set to "0" (disabled).
+ DOC_END
+ 
+ NAME: log_icp_queries
+@@ -4936,6 +4944,9 @@
+ 	If you disable this, it will appear as
+ 
+ 		X-Forwarded-For: unknown
++NOCOMMENT_START
++forwarded_for off
++NOCOMMENT_END
+ DOC_END
+ 
+ NAME: cachemgr_passwd
+diff -Nru squid-2.6.STABLE16.orig/src/client_side.c squid-2.6.STABLE16/src/client_side.c
+--- squid-2.6.STABLE16.orig/src/client_side.c	2007-09-03 16:13:36.000000000 +0300
++++ squid-2.6.STABLE16/src/client_side.c	2007-09-08 08:04:36.000000000 +0300
+@@ -4597,14 +4597,7 @@
+ 	debug(83, 2) ("clientNegotiateSSL: Session %p reused on FD %d (%s:%d)\n", SSL_get_session(ssl), fd, fd_table[fd].ipaddr, (int) fd_table[fd].remote_port);
+     } else {
+ 	if (do_debug(83, 4)) {
+-	    /* Write out the SSL session details.. actually the call below, but
+-	     * OpenSSL headers do strange typecasts confusing GCC.. */
+-	    /* PEM_write_SSL_SESSION(debug_log, SSL_get_session(ssl)); */
+-#if defined(OPENSSL_VERSION_NUMBER) && OPENSSL_VERSION_NUMBER >= 0x00908000L
+-	    PEM_ASN1_write((i2d_of_void *) i2d_SSL_SESSION, PEM_STRING_SSL_SESSION, debug_log, (char *) SSL_get_session(ssl), NULL, NULL, 0, NULL, NULL);
+-#else
+ 	    PEM_ASN1_write(i2d_SSL_SESSION, PEM_STRING_SSL_SESSION, debug_log, (char *) SSL_get_session(ssl), NULL, NULL, 0, NULL, NULL);
+-#endif
+ 	    /* Note: This does not automatically fflush the log file.. */
+ 	}
+ 	debug(83, 2) ("clientNegotiateSSL: New session %p on FD %d (%s:%d)\n", SSL_get_session(ssl), fd, fd_table[fd].ipaddr, (int) fd_table[fd].remote_port);
+diff -Nru squid-2.6.STABLE16.orig/src/defines.h squid-2.6.STABLE16/src/defines.h
+--- squid-2.6.STABLE16.orig/src/defines.h	2007-02-04 00:58:20.000000000 +0200
++++ squid-2.6.STABLE16/src/defines.h	2007-09-08 08:04:36.000000000 +0300
+@@ -259,7 +259,7 @@
+ 
+ /* were to look for errors if config path fails */
+ #ifndef DEFAULT_SQUID_ERROR_DIR
+-#define DEFAULT_SQUID_ERROR_DIR "/usr/local/squid/etc/errors"
++#define DEFAULT_SQUID_ERROR_DIR "/usr/share/squid/errors/English"
+ #endif
+ 
+ /* gb_type operations */
+diff -Nru squid-2.6.STABLE16.orig/src/main.c squid-2.6.STABLE16/src/main.c
+--- squid-2.6.STABLE16.orig/src/main.c	2007-08-31 16:52:10.000000000 +0300
++++ squid-2.6.STABLE16/src/main.c	2007-09-08 08:04:43.000000000 +0300
+@@ -372,6 +372,22 @@
+     asnFreeMemory();
+ }
+ 
++#if USE_UNLINKD
++static int
++needUnlinkd(void)
++{
++    int i;
++    int r = 0;
++    for (i = 0; i < Config.cacheSwap.n_configured; i++) {
++       if (strcmp(Config.cacheSwap.swapDirs[i].type, "ufs") == 0 ||
++           strcmp(Config.cacheSwap.swapDirs[i].type, "aufs") == 0 ||
++           strcmp(Config.cacheSwap.swapDirs[i].type, "diskd") == 0)
++          r++;
++    }
++    return r;
++}
++#endif
++
+ static void
+ mainReconfigure(void)
+ {
+@@ -395,6 +411,7 @@
+     locationRewriteShutdown();
+     authenticateShutdown();
+     externalAclShutdown();
++    unlinkdClose();
+     storeDirCloseSwapLogs();
+     storeLogClose();
+     accessLogClose();
+@@ -430,6 +447,9 @@
+ #if USE_WCCPv2
+     wccp2Init();
+ #endif
++#if USE_UNLINKD
++    if (needUnlinkd()) unlinkdInit();
++#endif
+     serverConnectionsOpen();
+     neighbors_init();
+     storeDirOpenSwapLogs();
+@@ -593,7 +613,7 @@
+ 
+     if (!configured_once) {
+ #if USE_UNLINKD
+-	unlinkdInit();
++	if (needUnlinkd()) unlinkdInit();
+ #endif
+ 	urlInitialize();
+ 	cachemgrInit();
+@@ -972,7 +992,7 @@
+     int nullfd;
+     if (*(argv[0]) == '(')
+ 	return;
+-    openlog(appname, LOG_PID | LOG_NDELAY | LOG_CONS, LOG_LOCAL4);
++    openlog(appname, LOG_PID | LOG_NDELAY, LOG_DAEMON);
+     if ((pid = fork()) < 0)
+ 	syslog(LOG_ALERT, "fork failed: %s", xstrerror());
+     else if (pid > 0)
+@@ -1008,7 +1028,7 @@
+ 	mainStartScript(argv[0]);
+ 	if ((pid = fork()) == 0) {
+ 	    /* child */
+-	    openlog(appname, LOG_PID | LOG_NDELAY | LOG_CONS, LOG_LOCAL4);
++	    openlog(appname, LOG_PID | LOG_NDELAY, LOG_LOCAL4);
+ 	    prog = xstrdup(argv[0]);
+ 	    argv[0] = xstrdup("(squid)");
+ 	    execvp(prog, argv);
+@@ -1016,7 +1036,7 @@
+ 	    exit(1);
+ 	}
+ 	/* parent */
+-	openlog(appname, LOG_PID | LOG_NDELAY | LOG_CONS, LOG_LOCAL4);
++	openlog(appname, LOG_PID | LOG_NDELAY, LOG_LOCAL4);
+ 	syslog(LOG_NOTICE, "Squid Parent: child process %d started", pid);
+ 	time(&start);
+ 	squid_signal(SIGINT, SIG_IGN, SA_RESTART);
+diff -Nru squid-2.6.STABLE16.orig/src/Makefile.am squid-2.6.STABLE16/src/Makefile.am
+--- squid-2.6.STABLE16.orig/src/Makefile.am	2007-09-06 00:50:15.000000000 +0300
++++ squid-2.6.STABLE16/src/Makefile.am	2007-09-08 08:04:43.000000000 +0300
+@@ -325,12 +325,12 @@
+ DEFAULT_CONFIG_FILE     = $(sysconfdir)/squid.conf
+ DEFAULT_MIME_TABLE	= $(sysconfdir)/mime.conf
+ DEFAULT_DNSSERVER       = $(libexecdir)/`echo dnsserver | sed '$(transform);s/$$/$(EXEEXT)/'`
+-DEFAULT_LOG_PREFIX	= $(localstatedir)/logs
++DEFAULT_LOG_PREFIX	= $(localstatedir)/log/squid
+ DEFAULT_CACHE_LOG       = $(DEFAULT_LOG_PREFIX)/cache.log
+ DEFAULT_ACCESS_LOG      = $(DEFAULT_LOG_PREFIX)/access.log
+ DEFAULT_STORE_LOG       = $(DEFAULT_LOG_PREFIX)/store.log
+-DEFAULT_PID_FILE        = $(DEFAULT_LOG_PREFIX)/squid.pid
+-DEFAULT_SWAP_DIR        = $(localstatedir)/cache
++DEFAULT_PID_FILE        = $(localstatedir)/run/squid.pid
++DEFAULT_SWAP_DIR        = $(localstatedir)/cache/squid
+ DEFAULT_PINGER		= $(libexecdir)/`echo pinger | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_UNLINKD		= $(libexecdir)/`echo unlinkd | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_DISKD		= $(libexecdir)/`echo diskd-daemon | sed '$(transform);s/$$/$(EXEEXT)/'`
