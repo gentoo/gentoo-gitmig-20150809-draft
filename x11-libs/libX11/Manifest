@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 1.0.99.2-xcb_callback_fix.patch 744 RMD160 5ac5520006cbb0e366ef4e81a8a1347d6756cdec SHA1 f24bb68004265a91650cfaff47149be6e8046312 SHA256 f8e9b4b37442aa736abc485171aeb63603bd1c6788e94ebe8cefbb5a89f892b8
 MD5 a60d40f7777b5aa8a81695d9d826cdde files/1.0.99.2-xcb_callback_fix.patch 744
 RMD160 5ac5520006cbb0e366ef4e81a8a1347d6756cdec files/1.0.99.2-xcb_callback_fix.patch 744
@@ -68,3 +71,10 @@ SHA256 93fb5ad156795665ca5cf3506cb05c2e4cf8903acdfcdd3235aaeefe34363858 files/di
 MD5 ab9c8153767c8fb1f05c5858a9a8f7e0 files/digest-libX11-1.1.2-r1 244
 RMD160 c6d038bcf97902b0de0c2e92f4fb6073cfb0b9f3 files/digest-libX11-1.1.2-r1 244
 SHA256 93fb5ad156795665ca5cf3506cb05c2e4cf8903acdfcdd3235aaeefe34363858 files/digest-libX11-1.1.2-r1 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG4iTwp/wUKkr7RBoRAhYtAKDQEZx7BRGsUMM7HyNpOKnCFrn/MwCeOLSr
+P6RoJ7FglkBlTK/ol3+rNSo=
+=FKyf
+-----END PGP SIGNATURE-----

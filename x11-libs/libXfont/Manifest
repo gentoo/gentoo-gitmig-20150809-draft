@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xorg-libXfont-1.2.7-bdf-fontdir.diff 1445 RMD160 cb92f5a8de08bbd5f4566770dddc0d4be21572c7 SHA1 3e57aca6215e1212e53b1a3b1d243916ac7fa703 SHA256 5fd9a663f637a8cc7984f010d1082d96da977be1afb1f69a39cfe62c299049d2
 MD5 76e3330c9bace76318e096b3c2182101 files/xorg-libXfont-1.2.7-bdf-fontdir.diff 1445
 RMD160 cb92f5a8de08bbd5f4566770dddc0d4be21572c7 files/xorg-libXfont-1.2.7-bdf-fontdir.diff 1445
@@ -49,3 +52,10 @@ SHA256 eec0bf84becd5046aa09907bfa721d057d79d298bb58aee325908e1cc29f01d9 files/di
 MD5 be9dd2ab161c52af99233c09fcd3baaf files/digest-libXfont-1.3.0 247
 RMD160 90b01ff05b936aceca8506ebd7db66087e8fcf09 files/digest-libXfont-1.3.0 247
 SHA256 25b25f3c44d001afd50ef2387dc9824e1ae803ac2e745506d2f97f0fd21dec29 files/digest-libXfont-1.3.0 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG4iTwp/wUKkr7RBoRAmQdAJkBliR40me/95hNT9aMuCiHSC/HUACghH3z
+GY1akhYTTHRCo47Ihwkcsdc=
+=ue5h
+-----END PGP SIGNATURE-----
