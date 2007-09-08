@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-magictouch/xf86-input-magictouch-1.0.0.5.ebuild,v 1.19 2006/10/18 16:46:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-magictouch/xf86-input-magictouch-1.0.0.5.ebuild,v 1.20 2007/09/08 21:46:17 josejx Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -9,7 +9,7 @@ inherit x-modular
 
 DESCRIPTION="MagicTouch input driver"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ppc64 sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh ~sparc x86 ~x86-fbsd"
 
 RDEPEND="x11-base/xorg-server"
 DEPEND="${RDEPEND}
