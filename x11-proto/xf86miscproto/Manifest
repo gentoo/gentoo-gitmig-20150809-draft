@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xf86miscproto-0.9.2.tar.bz2 38429 RMD160 62f3cdf08eb64ba32b80f9e611c675b680e08cfd SHA1 02a57b8c204934289bd51421b8c2a469de4fc2a1 SHA256 4fe0981dcc4c53c7eeec22aebb2014ad5efaf479f0be452baece1eb5171fe076
 EBUILD xf86miscproto-0.9.2.ebuild 483 RMD160 a0be90c1630392ff4ea8e46e564ed4328d4c76b8 SHA1 b9883d8ea88986ab072b9a1984d2da13d28785da SHA256 e7a563af44bc265d4613d9e03aed5a84532134e09292c0a1c256e167de9ce002
 MD5 1abe062701a057b31eb30bdef182f007 xf86miscproto-0.9.2.ebuild 483
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 163cba3a3d32a25807ebe992454fb3dc files/digest-xf86miscproto-0.9.2 259
 RMD160 d1ec97b65be457b7b89cafafdca5ff92850dac76 files/digest-xf86miscproto-0.9.2 259
 SHA256 a0434ac148eb39bbaa26aed5ba0a00993065bde71338d8f0bc82da72dc7ce502 files/digest-xf86miscproto-0.9.2 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG4iKap/wUKkr7RBoRAtVUAJ9T9YgecAUd1bS8Bmd9p6Nuewop0ACgrd/3
+fIuKpn//+RCHUZ6t9RoxziI=
+=RS5T
+-----END PGP SIGNATURE-----

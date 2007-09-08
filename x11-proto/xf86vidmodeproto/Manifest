@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xf86vidmodeproto-2.2.2.tar.bz2 39499 RMD160 09368e81cd5d296c25480a2529167e0e8ac9b83f SHA1 fecdc5fb4d3df6378747818e2bdc9effdaa85626 SHA256 002848c58194f6a8953687ae85223588e7949be03d776a4ba87e6c42de2feda3
 EBUILD xf86vidmodeproto-2.2.2.ebuild 492 RMD160 4f08d19d8786edcaf838aab68e11cfeffd637e93 SHA1 8c35e421398b7c0b120c07cd3f09ce37d8973cff SHA256 010f554e8e4fea08b6063627bbe76ebad758249dc0b394151653428167638a75
 MD5 c9e9d6ee7b43f74cb19b861ab6cf0b40 xf86vidmodeproto-2.2.2.ebuild 492
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 aea954684bd996462695f498080620b6 files/digest-xf86vidmodeproto-2.2.2 268
 RMD160 3273bfcbc7bdbbeb2e4156fe36775ac0c65fbac8 files/digest-xf86vidmodeproto-2.2.2 268
 SHA256 495fbf3d7250aafd7c85de3784b5e2c8c79eac8ce346e88990d231b5dda08ecb files/digest-xf86vidmodeproto-2.2.2 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG4iKcp/wUKkr7RBoRAloMAJ4rRc9bmcVGW3iOteyXwpP5hRnpXgCeILrr
+isUuEcy2BypTpfzdfzEANIo=
+=883s
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xf86bigfontproto-1.1.2.tar.bz2 37338 RMD160 0edfbb34d8ae29fdb9debd2c7c05858b94bf33ab SHA1 057238221d7afa22d7c1797a9600e0897ddf878c SHA256 7e5ce508cfded16d91a41381e836e32b49dbcf5f821de3ace334b53ef2c08b2a
 EBUILD xf86bigfontproto-1.1.2.ebuild 497 RMD160 98b53f9bc8aa57daa02918bb1b66446f9daed081 SHA1 ae3ca4eecac752d2c2fc91f4e5fd2c9a812da47b SHA256 7b874270336ba6e319caf82c6f9b6de4084fffd70dde6ffa59a4ffb8ba863252
 MD5 7fa06123a42ddf626f3ffc6d8c51d8d7 xf86bigfontproto-1.1.2.ebuild 497
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 47130fffeb9a3b4697aa5073683fad7a files/digest-xf86bigfontproto-1.1.2 268
 RMD160 689b1dd4fd7a770fd41f0acc531635faafa8d63d files/digest-xf86bigfontproto-1.1.2 268
 SHA256 07fa6acf832c8d202f9b8d862727d12054925f5bb92542ab4f66840ba4e25a34 files/digest-xf86bigfontproto-1.1.2 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG4iKbp/wUKkr7RBoRAmosAJ9kgkkA3Wv82JCsVfZXLO65pwH5vgCeJNj/
+SJ8rBpEYJLp03yldUVYIrYg=
+=3+1I
+-----END PGP SIGNATURE-----

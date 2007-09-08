@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST resourceproto-1.0.2.tar.bz2 36827 RMD160 01acf0cb35949eed0ef93bc1cea44ea47e742771 SHA1 75c051ea69ad706e31ff9c61c2c6fc9de32a0ca9 SHA256 e3cb3c07f06d4642f06015277c6cd40b1e396cae06e5d2029d3f89805211bbfa
 EBUILD resourceproto-1.0.2.ebuild 483 RMD160 f369abe797df0acc5371ff45a846eeaf49cdd9b5 SHA1 382bf9488233cc3c5278672f7378e2ec1e82b4ef SHA256 5a2cf25e1c06dc478fc912ecc4f2971beb7dc4982932286c1f81dbd6fcef1288
 MD5 946bb9b1c9b9c4d3c76fc541eb5a0121 resourceproto-1.0.2.ebuild 483
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 38b4b01f51dc65a85f7ad37a53fc5ffb files/digest-resourceproto-1.0.2 259
 RMD160 39e35758b5163cfdf1a050b59b95be6564e5d7cb files/digest-resourceproto-1.0.2 259
 SHA256 be862f95df1d59039930bbbb396a5f867d5874a93cf1fd2ff9bc5b86e4038469 files/digest-resourceproto-1.0.2 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG4iKap/wUKkr7RBoRAuyLAKCpMrl0rkInrTojYGT9sWvhEFUxVACfY/lz
+3y632pzOPGQNPH36j8Ijjho=
+=IhAV
+-----END PGP SIGNATURE-----
