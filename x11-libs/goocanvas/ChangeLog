@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.5 2007/08/20 18:45:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.6 2007/09/08 11:06:45 angelos Exp $
+
+  08 Sep 2007; Christoph Mende <angelos@gentoo.org> goocanvas-0.9.ebuild:
+  Added ~amd64 wrt bug #190230
 
 *goocanvas-0.9 (20 Aug 2007)
 
