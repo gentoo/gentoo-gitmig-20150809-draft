@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7689 2007/09/08 19:37:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7690 2007/09/08 19:53:46 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -151,11 +151,6 @@ net-misc/networkmanager-pptp
 # Live CVS ebuild for Emacs unicode-2 branch
 ~app-editors/emacs-cvs-23.0.0
 >=virtual/emacs-23
-
-# Ulrich Mueller <ulm@gentoo.org> (27 Aug 2007)
-# CVS snapshots, masked for testing.
-=app-emacs/slime-2.0_p20070809
-=app-emacs/slime-2.0_p20070822
 
 # Ulrich Mueller <ulm@gentoo.org> (27 Aug 2007)
 # Live CVS broken due to upstream changes, pending removal in 30 days.
