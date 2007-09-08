@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/text-format
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.18 2007/08/26 16:59:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.19 2007/09/08 13:45:28 nixnut Exp $
+
+  08 Sep 2007; nixnut <nixnut@gentoo.org> text-format-1.0.0.ebuild:
+  Added ~ppc wrt bug 189455
 
   26 Aug 2007; Raúl Porcel <armin76@gentoo.org> text-format-1.0.0.ebuild:
   Readd ~ia64 wrt #189455
