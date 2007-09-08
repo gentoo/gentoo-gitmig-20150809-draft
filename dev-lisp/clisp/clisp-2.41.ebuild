@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.41.ebuild,v 1.7 2007/09/04 19:43:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.41.ebuild,v 1.8 2007/09/08 10:46:55 ulm Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -42,6 +42,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch ${FILESDIR}/2.41-fastcgi-Makefile-gentoo.patch
+	epatch ${FILESDIR}/2.41-fastcgi-build.patch
 	epatch ${FILESDIR}/2.41-linux-headers.patch
 }
 
