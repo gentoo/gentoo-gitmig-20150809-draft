@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/thinkfinger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.5 2007/04/11 16:59:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.6 2007/09/08 18:21:42 vapier Exp $
+
+  08 Sep 2007; Mike Frysinger <vapier@gentoo.org> thinkfinger-0.3.ebuild:
+  Make kernel check a warning and use emake in src_install.
 
 *thinkfinger-0.3 (11 Apr 2007)
 
