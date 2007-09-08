@@ -1,6 +1,9 @@
 # ChangeLog for app-office/taxbird
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/ChangeLog,v 1.10 2007/09/07 14:58:37 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/ChangeLog,v 1.11 2007/09/08 15:19:06 hanno Exp $
+
+  08 Sep 2007; Hanno Boeck <hanno@gentoo.org> taxbird-0.10.ebuild:
+  Improve dev-guile use-check.
 
   07 Sep 2007; Hanno Boeck <hanno@gentoo.org> taxbird-0.10.ebuild:
   Add check for guile use-flags.
