@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.162 2007/08/31 21:42:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.163 2007/09/08 00:26:15 wltjr Exp $
+
+  08 Sep 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/5.5/tomcat.conf, -files/5.5/tomcat.init, -tomcat-5.5.23-r1.ebuild,
+  -tomcat-6.0.13-r3.ebuild:
+  House cleaning, removed older versions and older conf/init files from
+  removed 5.5
 
   31 Aug 2007; Christian Faulhammer <opfer@gentoo.org> tomcat-6.0.14.ebuild:
   stable x86, security bug 188871
