@@ -1,0 +1,82 @@
+--- slime-2.0_p20070816-orig/slime.el	2007-08-16 10:26:33.000000000 +0200
++++ slime-2.0_p20070816/slime.el	2007-09-08 19:32:09.000000000 +0200
+@@ -5341,6 +5341,39 @@
+        (set-buffer buffer)
+        (goto-char (point-min))))))
+ 
++(defmacro save-restriction-if-possible (&rest body)
++  "Very similiarly to `save-restriction'. The only difference is
++that it's not enforcing the restriction as strictly: It's only
++enforced if `point' was not moved outside of the restriction
++after executing BODY.
++
++Example: 
++
++  (progn (goto-line 1000)
++         (narrow-to-page) 
++         (save-restriction-if-possible (widen) (goto-line 999)))
++
++  In this case, the buffer is narrowed to the current page, and
++  point is on line 999.
++
++  (progn (goto-char 1000)
++         (narrow-to-page) 
++         (save-restriction-if-possible (widen) (goto-line 1)))
++
++  Whereas in this case, the buffer is widened and point is on
++  line 1."
++  (let ((gcfg (gensym "NARROWING-CFG+"))
++        (gbeg (gensym "OLDBEG+"))
++        (gend (gensym "OLDEND+")))
++    `(let ((,gcfg (current-slime-narrowing-configuration)))
++       (unwind-protect (progn ,@body)
++         (let ((,gbeg (slime-narrowing-configuration.beg ,gcfg))
++               (,gend (slime-narrowing-configuration.end ,gcfg)))
++           (when (and (>= (point) ,gbeg) (<= (point) ,gend))
++             (set-slime-narrowing-configuration ,gcfg)))))))
++
++(put 'save-restriction-if-possible 'lisp-indent-function 0)
++
+ (defun slime-goto-location-position (position)
+   (save-restriction-if-possible         ; try to keep restriction if possible.
+     (widen)
+@@ -11128,39 +11161,6 @@
+           (total (buffer-size)))
+       (or (/= beg 1) (/= end (1+ total))))))
+ 
+-(defmacro save-restriction-if-possible (&rest body)
+-  "Very similiarly to `save-restriction'. The only difference is
+-that it's not enforcing the restriction as strictly: It's only
+-enforced if `point' was not moved outside of the restriction
+-after executing BODY.
+-
+-Example: 
+-
+-  (progn (goto-line 1000)
+-         (narrow-to-page) 
+-         (save-restriction-if-possible (widen) (goto-line 999)))
+-
+-  In this case, the buffer is narrowed to the current page, and
+-  point is on line 999.
+-
+-  (progn (goto-char 1000)
+-         (narrow-to-page) 
+-         (save-restriction-if-possible (widen) (goto-line 1)))
+-
+-  Whereas in this case, the buffer is widened and point is on
+-  line 1."
+-  (let ((gcfg (gensym "NARROWING-CFG+"))
+-        (gbeg (gensym "OLDBEG+"))
+-        (gend (gensym "OLDEND+")))
+-    `(let ((,gcfg (current-slime-narrowing-configuration)))
+-       (unwind-protect (progn ,@body)
+-         (let ((,gbeg (slime-narrowing-configuration.beg ,gcfg))
+-               (,gbeg (slime-narrowing-configuration.end ,gcfg)))
+-           (when (and (>= (point) ,gbeg) (<= (point) ,gend))
+-             (set-slime-current-narrowing-configuration ,gcfg)))))))
+-
+-(put 'save-restriction-if-possible 'lisp-indent-function 0)
+-
+ ;;;;; Common Lisp-style package-qualified symbols
+ 
+ (defun slime-cl-symbol-name (symbol)
