@@ -6,12 +6,17 @@ MD5 ba3d4ac6da724c5c2115b0f506f1bb55 files/evolution-exchange-2.6.2-fix-loop.pat
 RMD160 9f822ac3e0dcf16ac7352b5e0b48b02e00eb2e18 files/evolution-exchange-2.6.2-fix-loop.patch 1030
 SHA256 8569558d23737de244b2153f6330c1270a652060c89cbd3a94cb4f2e5e92d605 files/evolution-exchange-2.6.2-fix-loop.patch 1030
 DIST evolution-exchange-2.10.1.tar.bz2 1046653 RMD160 4ce4cd0c5e5e92f70b1434633c4921626f80f1a1 SHA1 8febf524a73a2394d2d1d45d51c7f36bcafb0014 SHA256 4bad1d2d625f1bc3302b0f8e3a27d8e25323bfc55c34c8fe7e112d067ebb4584
+DIST evolution-exchange-2.10.3.tar.bz2 1046362 RMD160 f689037d33ffe9055f766e5787dab0a26ef7a5e7 SHA1 844e1aa1d67f45039f98f09679fb77b745cf0474 SHA256 281950cce0bc3e21dd7df30bad2bcc9f52413936ba3aaa324ccab069ee494016
 DIST evolution-exchange-2.6.2.tar.bz2 977972 RMD160 c833a220a5eebf4c9adf00b69333aea15b6b4e2d SHA1 e93d2e0ad7aa4790d65fffd7fee0a0c89b9e8024 SHA256 78130edc5b7390c29883e405c1ae0a19bae656c46f1c20224220dee167c49d56
 DIST evolution-exchange-2.8.3.tar.bz2 1034763 RMD160 16020de51b3ae3c75a8d7de12af1a2dc02037deb SHA1 a66d8ce0d11dd15959835540b0d90f1dfb687729 SHA256 987b31056ba8914f2c1b6d0ae64c45f8564dda6d1949fda1ebec11abc1de611b
 EBUILD evolution-exchange-2.10.1.ebuild 1313 RMD160 94b707e2f7b08341fe4ad52f7c6eb76394312038 SHA1 4e2d0080dccd289eaa4c580a77eea8f7dc32a935 SHA256 ea320437bc2ffa5f55a5fc4f76931c4d341f828e9630bc6d9355bb7b3ec5599f
 MD5 306a32ad1074362f6aedee56d3f9a060 evolution-exchange-2.10.1.ebuild 1313
 RMD160 94b707e2f7b08341fe4ad52f7c6eb76394312038 evolution-exchange-2.10.1.ebuild 1313
 SHA256 ea320437bc2ffa5f55a5fc4f76931c4d341f828e9630bc6d9355bb7b3ec5599f evolution-exchange-2.10.1.ebuild 1313
+EBUILD evolution-exchange-2.10.3.ebuild 1315 RMD160 96a2dc3a6c99d2493c7d6eb4bd79e91e361bc8d5 SHA1 f5451f5a4c410b4772e2e9551fb84c4887183dbb SHA256 e7d5d5d7b373a189188f9043ea95f6134985be116c506a9855373ded2699173c
+MD5 c768211268aa13288008ef9fc2aaedb7 evolution-exchange-2.10.3.ebuild 1315
+RMD160 96a2dc3a6c99d2493c7d6eb4bd79e91e361bc8d5 evolution-exchange-2.10.3.ebuild 1315
+SHA256 e7d5d5d7b373a189188f9043ea95f6134985be116c506a9855373ded2699173c evolution-exchange-2.10.3.ebuild 1315
 EBUILD evolution-exchange-2.6.2-r1.ebuild 1421 RMD160 b7cb447a178e730508417e6fe9aba2acccfaa1ed SHA1 4ac2443b657d96ecfacd7f9d20128a4ddfe423d3 SHA256 98d0a9ac855830fb72a57a85ecd76e7ea6821a957a9e2a7ca112ce3cf6c57c45
 MD5 4170326ed05bffcd82373fe5e3477105 evolution-exchange-2.6.2-r1.ebuild 1421
 RMD160 b7cb447a178e730508417e6fe9aba2acccfaa1ed evolution-exchange-2.6.2-r1.ebuild 1421
@@ -20,10 +25,10 @@ EBUILD evolution-exchange-2.8.3.ebuild 1348 RMD160 4437bbc103b491dcd8d8a08e52ca7
 MD5 be7f7a7903ac238557e13c27487a439c evolution-exchange-2.8.3.ebuild 1348
 RMD160 4437bbc103b491dcd8d8a08e52ca75324c5e7eb5 evolution-exchange-2.8.3.ebuild 1348
 SHA256 22cbffe5089a1ff55cda2f3649e96f5456be8d3690d9dccedce3280e4a312221 evolution-exchange-2.8.3.ebuild 1348
-MISC ChangeLog 5963 RMD160 9173fbc7afe92f7d59cd3923b43a073326c6940a SHA1 30fa7691d829fbf27117852ce3e4e2793ad07660 SHA256 374040ddbb4e28ceaab5723bcc4f03f7f810b7471b1539cb0b59c3a1cd858db8
-MD5 18969190025d609dc1b8e9817f92c21b ChangeLog 5963
-RMD160 9173fbc7afe92f7d59cd3923b43a073326c6940a ChangeLog 5963
-SHA256 374040ddbb4e28ceaab5723bcc4f03f7f810b7471b1539cb0b59c3a1cd858db8 ChangeLog 5963
+MISC ChangeLog 6105 RMD160 50abb9f2dfe8bff9bac754bba90a24020076cea9 SHA1 ee0eb52b50140de4b4e84b34aea0d52ff1d61ff7 SHA256 08d3257251fcf00561d7bd8017a28cc325d80b60ddb071096e3c0a8f2d378811
+MD5 a12e336b2c91aa1d36d6abcdb22e3a74 ChangeLog 6105
+RMD160 50abb9f2dfe8bff9bac754bba90a24020076cea9 ChangeLog 6105
+SHA256 08d3257251fcf00561d7bd8017a28cc325d80b60ddb071096e3c0a8f2d378811 ChangeLog 6105
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -31,6 +36,9 @@ SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata
 MD5 5653e498132f6db7027b588acd5a42f4 files/digest-evolution-exchange-2.10.1 283
 RMD160 0419a39d79a7c6ab7e3d589c251af15d7f770c01 files/digest-evolution-exchange-2.10.1 283
 SHA256 69cefbf88cb54f487be4e50477127aa2f6d27f1be7359acdfc424aec05e68923 files/digest-evolution-exchange-2.10.1 283
+MD5 d89d38b8e23f5540155b407d5cd12b63 files/digest-evolution-exchange-2.10.3 283
+RMD160 efdd8f7878b9b50180d92f2193bea411d67f763a files/digest-evolution-exchange-2.10.3 283
+SHA256 ef249e60e0f149574b4935ef154feef2115cc1d736c771f5499374656a0f095d files/digest-evolution-exchange-2.10.3 283
 MD5 de73d84e76f6d2ebbc9762babcc919ec files/digest-evolution-exchange-2.6.2-r1 277
 RMD160 c9a83e910476d43746b88dac336d86437704ed85 files/digest-evolution-exchange-2.6.2-r1 277
 SHA256 d931b00ead8b992440c76f3d00b44c1395ec0c4fab31d6901c73911448beb3c7 files/digest-evolution-exchange-2.6.2-r1 277
@@ -38,9 +46,9 @@ MD5 6e200b1d51cf0228571f03eefa80cee2 files/digest-evolution-exchange-2.8.3 280
 RMD160 29feb63ddd1044e1703b7cc5030a70bdca41fb16 files/digest-evolution-exchange-2.8.3 280
 SHA256 3f38720dfd2953de1eefe90711259ef27c29bfeeeda691f29b4cacc8dab3382b files/digest-evolution-exchange-2.8.3 280
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.5 (GNU/Linux)
+Version: GnuPG v2.0.6 (GNU/Linux)
 
-iD8DBQFGvePAkeYb6olFHJcRAuz7AJ9yhqoiqF1ZQbr2xa+S+pDb+6mChACfT3ID
-M+9KoBvhwWNWrdbhOdNBJ4s=
-=KBTd
+iD8DBQFG4nl2keYb6olFHJcRAqTmAKDfxQJiH27rUmHQQ0TRxCNOSFBkzwCcD9lC
+3WyAeA52VYdvPS6lZ8o8Qh4=
+=cd5E
 -----END PGP SIGNATURE-----
