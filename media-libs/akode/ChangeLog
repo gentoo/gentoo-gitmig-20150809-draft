@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/akode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.31 2007/09/07 15:58:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.32 2007/09/08 09:24:43 nixnut Exp $
+
+  08 Sep 2007; nixnut <nixnut@gentoo.org> akode-2.0.1-r1.ebuild:
+  Stable on ppc wrt bug 191292
 
   07 Sep 2007; Jeroen Roovers <jer@gentoo.org> akode-2.0.1-r1.ebuild:
   Stable for HPPA (bug #191292).
