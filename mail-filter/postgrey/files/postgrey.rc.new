@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/files/postgrey.rc.new,v 1.4 2007/01/30 14:41:18 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/files/postgrey.rc.new,v 1.5 2007/09/08 08:52:04 dertobi123 Exp $
 
 conf="/etc/conf.d/postgrey"
 
@@ -81,7 +81,7 @@ start() {
 		--daemonize \
 		--pidfile=${POSTGREY_PID} \
 		${POSTGREY_DELAY_ARG} \
-		${POSTGREY_TEXT_ARG} \
+		"${POSTGREY_TEXT_ARG}" \
 		${POSTGREY_OPTS}
 	eend ${?}
 }
