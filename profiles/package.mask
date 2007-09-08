@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7688 2007/09/08 10:47:54 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7689 2007/09/08 19:37:30 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Ulrich Mueller <ulm@gentoo.org> (08 Sep 2007)
+# CVS snapshot, masked for testing.
+=app-emacs/slime-2.0_p20070816
 
 # Benedikt Boehm <hollow@gentoo.org> (08 Sep 2007)
 # breaks apr and openldap
