@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/josm-1.5_p320.ebuild,v 1.1 2007/09/06 22:19:47 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/josm-1.5_p320.ebuild,v 1.2 2007/09/08 22:42:01 hanno Exp $
 
 inherit eutils
 
@@ -30,14 +30,17 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${FILESDIR}/josm
+	dobin "${FILESDIR}/josm" || die
 
 	insinto /usr/lib/josm/
-	newins ${DISTDIR}/${MY_P}.jar josm.jar
+	newins "${DISTDIR}/${MY_P}.jar" josm.jar || die
 
 	insinto /usr/lib/josm/plugins
 	use linguas_de && newins ${DISTDIR}/lang-de-20061020.jar lang-de.jar
 	use linguas_en_GB && newins ${DISTDIR}/lang-en_GB-20061020.jar lang-en_GB.jar
 	use linguas_fr && newins ${DISTDIR}/lang-fr-20061020.jar lang-fr.jar
 	use linguas_ro && newins ${DISTDIR}/lang-ro-20061020.jar lang-ro.jar
+
+	domenu "${FILESDIR}/josm.desktop" || die
+	doicon "${FILESDIR}/josm.png" || die
 }
