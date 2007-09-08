@@ -7,14 +7,14 @@ EBUILD libopensync-plugin-sunbird-0.21.ebuild 652 RMD160 1bd9cbada77440c3c87689e
 MD5 f34cb4ebfdaf7375f0ba32ed3370f952 libopensync-plugin-sunbird-0.21.ebuild 652
 RMD160 1bd9cbada77440c3c87689e798dce2941afa664a libopensync-plugin-sunbird-0.21.ebuild 652
 SHA256 5f7eddd54bd3dad0b1014f4005dd8d5c605a99cc96d362dac2c58b5e31b02f0d libopensync-plugin-sunbird-0.21.ebuild 652
-EBUILD libopensync-plugin-sunbird-0.22.ebuild 652 RMD160 63535c87a7f8606ddf662f9aacc9331e98435982 SHA1 8a71d31b535f86ec099ce301e17f457237c9cc1d SHA256 adbf0152811d25effea40c9170c2638d1ebf394c4fc7b362f472f6507b82d56f
-MD5 97a0e0b16fe05741daedb3f3b0d84cd6 libopensync-plugin-sunbird-0.22.ebuild 652
-RMD160 63535c87a7f8606ddf662f9aacc9331e98435982 libopensync-plugin-sunbird-0.22.ebuild 652
-SHA256 adbf0152811d25effea40c9170c2638d1ebf394c4fc7b362f472f6507b82d56f libopensync-plugin-sunbird-0.22.ebuild 652
-MISC ChangeLog 780 RMD160 6cf07ce9f45fec1da6dac273b564b9de2d1b2697 SHA1 1c2fdd2437ad673490b11214ea2a48741edfef0e SHA256 229820f69b91cfe32471b95495bd5f6fc7de95b2ee26cbc02f0653800ae64680
-MD5 31c32ecd0482011640e3fdd1620d19ab ChangeLog 780
-RMD160 6cf07ce9f45fec1da6dac273b564b9de2d1b2697 ChangeLog 780
-SHA256 229820f69b91cfe32471b95495bd5f6fc7de95b2ee26cbc02f0653800ae64680 ChangeLog 780
+EBUILD libopensync-plugin-sunbird-0.22.ebuild 776 RMD160 34e3f5304086d72dd3cac101943748a3ec5fe4ee SHA1 7b33e4bb7817eccefb6d0b0a43c1bdd72c981090 SHA256 51ad18271842a985f865127715d28475da5a17ae47e9e69781c9989294b76986
+MD5 210c45323606455f909a2b6746703625 libopensync-plugin-sunbird-0.22.ebuild 776
+RMD160 34e3f5304086d72dd3cac101943748a3ec5fe4ee libopensync-plugin-sunbird-0.22.ebuild 776
+SHA256 51ad18271842a985f865127715d28475da5a17ae47e9e69781c9989294b76986 libopensync-plugin-sunbird-0.22.ebuild 776
+MISC ChangeLog 939 RMD160 8e327c651f91f227a0b4c8ff62da687b24fd079e SHA1 2856c15c5c0146f6e9bee1b889abcd809a487c08 SHA256 94901fa6a125f22ff942bb18311bdddac1e365274286a1aa2eebf49c0ad9e965
+MD5 358b13543b31dbb7da15bdc8c8ccf1ca ChangeLog 939
+RMD160 8e327c651f91f227a0b4c8ff62da687b24fd079e ChangeLog 939
+SHA256 94901fa6a125f22ff942bb18311bdddac1e365274286a1aa2eebf49c0ad9e965 ChangeLog 939
 MISC metadata.xml 304 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 SHA1 b96c72c417192c099990a616b12a1d2f55a06064 SHA256 7fa8df0f64197f3f6c018ed0d6c4cc4da014fbcc9af2da9b633f71657470236a
 MD5 45ae331a9c100ecabad1b4cd916f3d37 metadata.xml 304
 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 metadata.xml 304
@@ -26,9 +26,9 @@ MD5 073911f7c36d6fe3195e2fab3bc9a878 files/digest-libopensync-plugin-sunbird-0.2
 RMD160 f2702f2d63655bae0c92792de046f45c301cd40d files/digest-libopensync-plugin-sunbird-0.22 298
 SHA256 ddebec79ae69ce98e6597ec31111a5dca39b4ca4f6ee240f59c8ebdf07679240 files/digest-libopensync-plugin-sunbird-0.22 298
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
+Version: GnuPG v2.0.6 (GNU/Linux)
 
-iD8DBQFGCs6mppoStNGKGywRAlguAKCnK7Gj9mwKa3vzRGYl3lwhPlgbnACdHumO
-gMUoJXHW8UMudDZheUieWuk=
-=6g3Z
+iD8DBQFG4nilppoStNGKGywRAqspAJwN263LOyS0LPFmrcAzoi5/dFzFsQCgtQqZ
+wyWorWAAY7S6lIor3tmeuAE=
+=KZLM
 -----END PGP SIGNATURE-----
