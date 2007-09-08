@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/edtftpj
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.32 2007/09/03 16:55:00 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.33 2007/09/08 00:53:31 wltjr Exp $
+
+  08 Sep 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -edtftpj-1.5.4.ebuild:
+  House cleaning, removed older version
 
   03 Sep 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   edtftpj-1.5.5.ebuild:
