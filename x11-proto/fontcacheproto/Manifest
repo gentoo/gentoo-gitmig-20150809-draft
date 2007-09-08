@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-DIST fontcacheproto-0.1.2.tar.bz2 38197 RMD160 7cbbf2b0644b34b13e0c7b26cc2346ec26adc6a5 SHA1 e927013f43363f9457668c4328e6753c991a674c SHA256 1edc2b2d6b8f7a35907860df9acea6a95e3bdcbee2b41fc8bd1aba5d9d460f57
+DIST fontcacheproto-0.1.2.tar.bz2 38233 RMD160 8873d1dd45a39c42e44d7f3f7e6bd779ee40462b SHA1 e927013f43363f9457668c4328e6753c991a674c SHA256 48063ed49b200927376645f9ffe65faa39af84d59ba6f60f2abb2f9c6fa3d9f9
 EBUILD fontcacheproto-0.1.2.ebuild 491 RMD160 92944622da3fedbe4ddba78999bd91dd6c21a0ba SHA1 a9497e9edcb85b68e24a9baefca419abcc69af73 SHA256 295f5e0c9dedeaa2aeea800cb449411d80f795747e433a82535996e1f8d97484
 MD5 3a930189eec93929e7cdfbc6509e0247 fontcacheproto-0.1.2.ebuild 491
 RMD160 92944622da3fedbe4ddba78999bd91dd6c21a0ba fontcacheproto-0.1.2.ebuild 491
@@ -14,13 +11,6 @@ MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 d0a2f89de1bad9b6bb5b1c328bb98a41 files/digest-fontcacheproto-0.1.2 262
-RMD160 efe9cbc336b7d0bd14a433964f8f9e74254c755c files/digest-fontcacheproto-0.1.2 262
-SHA256 eaa53b244ea4e5cad5e123d538842724f5bcbe59620c0871a5cb0f0cf21537ed files/digest-fontcacheproto-0.1.2 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.6 (GNU/Linux)
-
-iD4DBQFG4iKap/wUKkr7RBoRAiw2AJYzl9q1Levk8zYl53bn0K96P3IUAKCGWWNY
-Ij+rWTxu3R7D6L3EixOlkQ==
-=VAEX
------END PGP SIGNATURE-----
+MD5 33aea8ec01ecef629b7408161b8f5c9b files/digest-fontcacheproto-0.1.2 262
+RMD160 ec05f97ba545521d121b586eb3f066d5570eaa63 files/digest-fontcacheproto-0.1.2 262
+SHA256 a7d3ebdfa0a7d39038ec56d6bb7962537478ff3b370e9122be05dcef4d9dc090 files/digest-fontcacheproto-0.1.2 262
