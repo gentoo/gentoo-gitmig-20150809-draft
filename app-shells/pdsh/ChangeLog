@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/pdsh
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.4 2007/04/26 06:48:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.5 2007/09/08 13:31:40 swegener Exp $
+
+*pdsh-2.14 (08 Sep 2007)
+
+  08 Sep 2007; Sven Wegener <swegener@gentoo.org> +pdsh-2.14.ebuild:
+  Version bump.
 
   26 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update for cluster herd split to hp-cluster and ha-cluster.
