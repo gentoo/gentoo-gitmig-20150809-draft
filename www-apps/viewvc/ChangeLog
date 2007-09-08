@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/viewvc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.10 2007/09/06 18:55:24 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.11 2007/09/08 01:21:56 beandog Exp $
+
+  08 Sep 2007; Steve Dibb <beandog@gentoo.org> viewvc-1.0.3.ebuild,
+  viewvc-1.0.4.ebuild:
+  Keyword ~amd64
 
   06 Sep 2007; Steve Dibb <beandog@gentoo.org> viewvc-1.0.3.ebuild,
   viewvc-1.0.4.ebuild:
