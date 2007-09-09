@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.11.ebuild,v 1.1 2007/09/08 20:05:24 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.2.11.ebuild,v 1.2 2007/09/09 07:08:30 hollow Exp $
 
 inherit autotools
 
@@ -11,10 +11,10 @@ SRC_URI="mirror://apache/apr/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="ipv6 urandom debug"
+IUSE="doc ipv6 urandom debug"
 RESTRICT="test"
 
-DEPEND=""
+DEPEND="doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
@@ -42,7 +42,10 @@ src_compile() {
 		myconf="${myconf} --with-devrandom=/dev/random"
 	fi
 
-	use debug && myconf="${myconf} --enable-maintainer-mode"
+	if use debug; then
+		myconf="${myconf} --enable-maintainer-mode"
+		myconf="${myconf} --enable-pool-debug=all"
+	fi
 
 	# We pre-load the cache with the correct answer!  This avoids
 	# it violating the sandbox.  This may have to be changed for
@@ -63,6 +66,10 @@ src_compile() {
 	rm -f "${S}"/libtool
 
 	emake || die "Make failed"
+
+	if use doc; then
+		emake dox || die "make dox failed"
+	fi
 }
 
 src_install() {
@@ -73,6 +80,10 @@ src_install() {
 	rm "${D}"/usr/$(get_libdir)/apr.exp
 
 	dodoc CHANGES NOTICE
+
+	if use doc; then
+		dohtml docs/dox/html/* || die
+	fi
 }
 
 pkg_postinst() {
