@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mecab-python
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.1 2006/07/10 06:02:49 usata Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.2 2007/09/09 13:48:41 hattya Exp $
+
+  09 Sep 2007; Akinori Hattori <hattya@gentoo.org> metadata.xml,
+  mecab-python-0.92.ebuild:
+  update HOMEPAGE and SRC_URI, and remove broken src_test.
 
 *mecab-python-0.92 (10 Jul 2006)
 

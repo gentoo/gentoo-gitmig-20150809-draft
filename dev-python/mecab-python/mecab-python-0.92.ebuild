@@ -1,28 +1,26 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/mecab-python-0.92.ebuild,v 1.2 2007/07/11 06:19:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/mecab-python-0.92.ebuild,v 1.3 2007/09/09 13:48:41 hattya Exp $
 
 inherit distutils
 
-DESCRIPTION="Python Bindings for MeCab"
-HOMEPAGE="http://mecab.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/mecab/20900/${P}.tar.gz"
-
-LICENSE="|| ( GPL-2 LGPL-2.1 BSD )"
-SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+DESCRIPTION="Python binding for MeCab"
+HOMEPAGE="http://mecab.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN/-*}/${P}.tar.gz"
+
+LICENSE="|| ( BSD LGPL-2.1 GPL-2 )"
+KEYWORDS="~amd64 ~x86"
+SLOT="0"
 
 DEPEND=">=app-text/mecab-${PV}"
 
 DOCS="test.py"
 
-src_test() {
-	python test.py || die "test.py failed"
-}
-
 src_install() {
-	DOCS="test.py"
+
 	distutils_src_install
-	dohtml bindings.html || die "dohtml failed"
+	dohtml bindings.html || die
+
 }
