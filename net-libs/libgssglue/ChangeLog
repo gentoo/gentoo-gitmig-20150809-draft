@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libgssglue
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgssglue/ChangeLog,v 1.5 2007/09/08 18:33:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgssglue/ChangeLog,v 1.6 2007/09/09 12:06:49 opfer Exp $
+
+  09 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  libgssglue-0.1.ebuild:
+  stable x86, security bug 191479
 
   08 Sep 2007; Mike Frysinger <vapier@gentoo.org> libgssglue-0.1.ebuild:
   Block libgssapi #191561.

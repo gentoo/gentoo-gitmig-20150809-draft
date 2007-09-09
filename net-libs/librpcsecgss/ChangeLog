@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/librpcsecgss
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/ChangeLog,v 1.15 2007/09/08 00:54:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/ChangeLog,v 1.16 2007/09/09 12:08:52 opfer Exp $
+
+  09 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  librpcsecgss-0.16.ebuild:
+  stable x86, security bug 191479
 
   08 Sep 2007; Steve Dibb <beandog@gentoo.org> librpcsecgss-0.16.ebuild:
   amd64 stable, security bug 191479
