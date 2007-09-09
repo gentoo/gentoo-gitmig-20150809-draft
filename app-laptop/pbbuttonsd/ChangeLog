@@ -1,6 +1,17 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.69 2007/07/19 01:39:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.70 2007/09/09 01:58:39 josejx Exp $
+
+*pbbuttonsd-0.8.1-r2 (09 Sep 2007)
+
+  09 Sep 2007; Joseph Jezak <josejx@gentoo.org> -files/lm-fix.patch,
+  -files/pbbuttonsd-ibam-g++.patch,
+  -files/pbbuttonsd-laptopmode-noatime.patch, +files/wireless,
+  -files/x86-fix.patch, -pbbuttonsd-0.6.6.ebuild, -pbbuttonsd-0.7.4.ebuild,
+  -pbbuttonsd-0.7.8.ebuild, -pbbuttonsd-0.7.9.ebuild,
+  -pbbuttonsd-0.8.0.ebuild, pbbuttonsd-0.8.1-r1.ebuild,
+  +pbbuttonsd-0.8.1-r2.ebuild:
+  Added wireless resume script and cleaned up old ebuilds.
 
 *pbbuttonsd-0.8.1-r1 (19 Jul 2007)
 

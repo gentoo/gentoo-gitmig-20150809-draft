@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.0.ebuild,v 1.7 2007/06/20 20:52:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.1-r2.ebuild,v 1.1 2007/09/09 01:58:39 josejx Exp $
 
-inherit autotools flag-o-matic
+inherit autotools flag-o-matic eutils
 
 DESCRIPTION="Handles power management and special keys on laptops."
 HOMEPAGE="http://pbbuttons.berlios.de"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pbbuttons/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc ~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="acpi alsa debug doc ibam macbook oss"
 
 DEPEND="macbook? ( sys-libs/libsmbios )
@@ -22,6 +22,8 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0 )
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/pmcs.patch
 	eautoconf
 }
 
@@ -66,6 +68,13 @@ src_install() {
 	newinitd ${FILESDIR}/pbbuttonsd.rc6 pbbuttonsd
 	dodoc README
 	use doc && dohtml -r doc/*
+
+	dodir /etc/power/resume.d
+	dodir /etc/power/suspend.d
+	dodir /etc/power/scripts.d
+	exeinto "/etc/power/scripts.d"
+	doexe ${FILESDIR}/wireless
+	ln -s ${D}/etc/power/scripts.d/wireless ${D}/etc/power/resume.d/wireless
 }
 
 pkg_postinst() {
@@ -96,4 +105,9 @@ pkg_postinst() {
 		elog "details, please see the pbbuttonsd man page."
 		elog
 	fi
+
+	elog "A script is now available to reset your wirless connection on resume."
+	elog "Simply uncomment the commented command and set the correct device to"
+	elog "use it.  You can find the script in /etc/power/resume.d/wireless"
+
 }

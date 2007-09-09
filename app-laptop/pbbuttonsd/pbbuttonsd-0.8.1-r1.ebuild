@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.1-r1.ebuild,v 1.1 2007/07/19 01:39:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.1-r1.ebuild,v 1.2 2007/09/09 01:58:39 josejx Exp $
 
 inherit autotools flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pbbuttons/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc ~x86"
 IUSE="acpi alsa debug doc ibam macbook oss"
 
 DEPEND="macbook? ( sys-libs/libsmbios )
