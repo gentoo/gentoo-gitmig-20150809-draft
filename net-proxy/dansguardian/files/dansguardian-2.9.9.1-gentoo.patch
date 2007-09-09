@@ -1,0 +1,12 @@
+diff -Nru dansguardian-2.9.9.1.orig/doc/dansguardian.8 dansguardian-2.9.9.1/doc/dansguardian.8
+--- dansguardian-2.9.9.1.orig/doc/dansguardian.8	2006-10-16 19:17:10.000000000 +0300
++++ dansguardian-2.9.9.1/doc/dansguardian.8	2007-09-09 22:38:51.000000000 +0300
+@@ -3,7 +3,7 @@
+ .SH NAME
+ DansGuardian 2
+ .SH SYNOPSIS
+-/etc/rc.d/init.d/dansguardian [stop|start|status|restart]
++/etc/init.d/dansguardian [stop|start|status|restart|reload]
+ .SH DESCRIPTION
+ An Introduction
+ 
