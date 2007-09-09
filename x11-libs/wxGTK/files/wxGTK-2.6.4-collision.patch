@@ -1,6 +1,6 @@
 diff -Naur wxPython-src-2.6.4.0-orig/Makefile.in wxPython-src-2.6.4.0/Makefile.in
---- wxPython-src-2.6.4.0-orig/Makefile.in	2007-07-29 11:47:53.000000000 -0600
-+++ wxPython-src-2.6.4.0/Makefile.in	2007-07-29 12:35:22.000000000 -0600
+--- wxPython-src-2.6.4.0-orig/Makefile.in	2007-09-08 18:58:36.000000000 -0600
++++ wxPython-src-2.6.4.0/Makefile.in	2007-09-08 19:00:36.000000000 -0600
 @@ -26,6 +26,7 @@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
@@ -44,7 +44,7 @@ diff -Naur wxPython-src-2.6.4.0-orig/Makefile.in wxPython-src-2.6.4.0/Makefile.i
  
 diff -Naur wxPython-src-2.6.4.0-orig/src/common/intl.cpp wxPython-src-2.6.4.0/src/common/intl.cpp
 --- wxPython-src-2.6.4.0-orig/src/common/intl.cpp	2007-03-20 09:25:41.000000000 -0600
-+++ wxPython-src-2.6.4.0/src/common/intl.cpp	2007-07-29 12:29:45.000000000 -0600
++++ wxPython-src-2.6.4.0/src/common/intl.cpp	2007-09-08 19:00:36.000000000 -0600
 @@ -1452,6 +1452,8 @@
    m_initialized = false;
  }
@@ -63,3 +63,14 @@ diff -Naur wxPython-src-2.6.4.0-orig/src/common/intl.cpp wxPython-src-2.6.4.0/sr
  
      // there may be a catalog with toolkit specific overrides, it is not
      // an error if this does not exist
+diff -Naur wxPython-src-2.6.4.0-orig/utils/wxrc/Makefile.in wxPython-src-2.6.4.0/utils/wxrc/Makefile.in
+--- wxPython-src-2.6.4.0-orig/utils/wxrc/Makefile.in	2007-09-08 18:58:36.000000000 -0600
++++ wxPython-src-2.6.4.0/utils/wxrc/Makefile.in	2007-09-08 19:01:46.000000000 -0600
+@@ -125,7 +125,6 @@
+ @COND_USE_XRC_1@	$(INSTALL_DIR) $(DESTDIR)$(bindir)
+ @COND_USE_XRC_1@	$(INSTALL_PROGRAM) wxrc$(EXEEXT) $(DESTDIR)$(bindir)
+ @COND_USE_XRC_1@	mv -f $(DESTDIR)$(bindir)/wxrc$(EXEEXT) $(DESTDIR)$(bindir)/wxrc-$(WX_RELEASE)
+-@COND_USE_XRC_1@	(cd $(DESTDIR)$(bindir) && $(LN_S) wxrc-$(WX_RELEASE) wxrc$(EXEEXT))
+ 
+ @COND_USE_XRC_1@uninstall_wxrc: 
+ @COND_USE_XRC_1@	rm -f $(DESTDIR)$(bindir)/wxrc$(EXEEXT)

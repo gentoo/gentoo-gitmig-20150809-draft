@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0.ebuild,v 1.2 2007/09/02 00:40:08 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0.ebuild,v 1.3 2007/09/09 01:08:22 dirtyepic Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -35,7 +35,8 @@ DEPEND="
 		)"
 
 SLOT="2.6"
-LICENSE="wxWinLL-3 GPL-2
+LICENSE="wxWinLL-3
+		GPL-2
 		odbc? ( LGPL-2 )
 		doc? ( wxWinFDL-3 )"
 
