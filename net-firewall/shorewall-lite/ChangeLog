@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall-lite
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.21 2007/09/07 14:32:27 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.22 2007/09/09 14:51:10 josejx Exp $
+
+  09 Sep 2007; Joseph Jezak <josejx@gentoo.org> shorewall-lite-4.0.3.ebuild:
+  Marked ~ppc/~ppc64 for bug #191624.
 
   07 Sep 2007; Markus Ullmann <jokey@gentoo.org>
   shorewall-lite-3.4.6.ebuild:
