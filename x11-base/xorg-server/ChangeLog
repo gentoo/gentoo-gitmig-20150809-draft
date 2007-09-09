@@ -1,6 +1,19 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.260 2007/09/09 07:37:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.261 2007/09/09 09:22:19 dberkholz Exp $
+
+*xorg-server-1.4 (09 Sep 2007)
+
+  09 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.4-document-new-font-catalogs.patch,
+  +files/1.4-fix-dmx-build.patch, +files/1.4-fix-dmx-link.patch,
+  +files/1.4-fix-xephyr-link.patch, +files/1.4-fix-xprint-build.patch,
+  +files/1.4-fix-xprint-link.patch, +files/1.4-fpic-libxf86config.patch,
+  +xorg-server-1.4.ebuild:
+  Bump. Contains input hotplugging, numerous EXA improvements, improvements to
+  RandR 1.2, and more. Adds a new dependency on pixman for rendering and an
+  optional dependency on hal/dbus for input hotplugging. A few of the
+  fix-*-{build,link} patches still need to go upstream.
 
   09 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.1.1-r1.ebuild, xorg-server-1.1.1-r5.ebuild,
