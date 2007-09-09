@@ -1,8 +1,16 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.357 2007/09/04 18:23:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.358 2007/09/09 01:33:45 josejx Exp $
 
-  04 Sep 2007; Raúl Porcel <armin76@gentoo.org>
+*vanilla-sources-2.6.20.19 (08 Sep 2007)
+*vanilla-sources-2.4.35.2 (08 Sep 2007)
+
+  08 Sep 2007; Joseph Jezak <josejx@gentoo.org>
+  +vanilla-sources-2.4.35.2.ebuild, +vanilla-sources-2.6.20.19.ebuild, 
+  +vanilla-sources-2.6.22.6.ebuild:
+  Added 2.4.35.2, 2.6.22.6 and 2.6.20.19.
+
+  04 Sep 2007; RaÃºl Porcel <armin76@gentoo.org>
   vanilla-sources-2.6.22.1.ebuild:
   alpha/ia64 stable
 
@@ -94,7 +102,7 @@
   +vanilla-sources-2.6.23_rc2.ebuild:
   Added latest version.
 
-  29 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  29 Jul 2007; RaÃºl Porcel <armin76@gentoo.org>
   vanilla-sources-2.6.18.8.ebuild:
   ia64 stable
 
@@ -111,7 +119,7 @@
   +vanilla-sources-2.4.34.6.ebuild:
   Added 2.4.34.6.
 
-  15 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  15 Jul 2007; RaÃºl Porcel <armin76@gentoo.org>
   vanilla-sources-2.6.21.6.ebuild:
   ia64 stable, thanks to kloeri for testing
 
@@ -123,7 +131,7 @@
   vanilla-sources-2.6.21.6.ebuild:
   Marked ppc stable for bug #184203.
 
-  11 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  11 Jul 2007; RaÃºl Porcel <armin76@gentoo.org>
   vanilla-sources-2.6.21.6.ebuild:
   alpha stable wrt #184203, thanks to Tobias Klausmann for testing
 
@@ -215,7 +223,7 @@
   +vanilla-sources-2.6.20.14.ebuild, +vanilla-sources-2.6.21.5.ebuild:
   Linux 2.6.20.14 and Linux 2.6.21.5.
 
-  10 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  10 Jun 2007; RaÃºl Porcel <armin76@gentoo.org>
   vanilla-sources-2.6.19.ebuild, vanilla-sources-2.6.20.ebuild,
   vanilla-sources-2.6.20.1.ebuild, vanilla-sources-2.6.21.ebuild:
   Only stabilize the kernel version was tested on ia64
@@ -237,7 +245,7 @@
   +vanilla-sources-2.6.20.13.ebuild, +vanilla-sources-2.6.21.4.ebuild:
   Bumping Linux 2.6.20 and Linux 2.6.21 for CVE-2007-2453.
 
-  07 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  07 Jun 2007; RaÃºl Porcel <armin76@gentoo.org>
   vanilla-sources-2.6.21.1.ebuild:
   alpha stable as decided
 
@@ -718,7 +726,7 @@
   +vanilla-sources-2.6.18_rc6.ebuild:
   Bump to rc6.
 
-  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
+  03 Sep 2006; Bryan Ãstergaard <kloeri@gentoo.org>
   vanilla-sources-2.4.33.1.ebuild:
   Stable on Alpha.
 
@@ -766,7 +774,7 @@
   Reassigning the package to kernel@g.o, the x86-kernel bugzilla-alias is
   burried/dead.
 
-  12 Aug 2006; Bryan Østergaard <kloeri@gentoo.org>
+  12 Aug 2006; Bryan Ãstergaard <kloeri@gentoo.org>
   vanilla-sources-2.6.16.19.ebuild:
   Stable on alpha, used on 2006.1 installcd.
 
@@ -1271,11 +1279,11 @@
   +vanilla-sources-2.4.32.ebuild:
   Version bump to 2.4.32
 
-  28 Nov 2005; Bryan Østergaard <kloeri@gentoo.org>
+  28 Nov 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   vanilla-sources-2.4.31.ebuild:
   ~alpha keyword.
 
-  28 Nov 2005; Bryan Østergaard <kloeri@gentoo.org>
+  28 Nov 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   vanilla-sources-2.6.14.2.ebuild:
   Stable on alpha.
 
@@ -1361,7 +1369,7 @@
   21 Sep 2005; <chainsaw@gentoo.org> +vanilla-sources-2.6.14_rc2.ebuild:
   Version bump.
 
-  15 Sep 2005; Bryan Østergaard <kloeri@gentoo.org>
+  15 Sep 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   vanilla-sources-2.6.12.5.ebuild:
   Stable on alpha, bug 102582.
 
@@ -1554,7 +1562,7 @@
   vanilla-sources-2.6.11.9.ebuild:
   stable on ia64 #92264
 
-  13 May 2005; Bryan Østergaard <kloeri@gentoo.org>
+  13 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   vanilla-sources-2.4.30.ebuild, vanilla-sources-2.6.11.8.ebuild:
   Bump stable kernels on alpha.
 
@@ -1695,13 +1703,13 @@
 
 *vanilla-sources-2.6.11_rc4 (13 Feb 2005)
 
-  13 Feb 2005; Michał Januszewski <spock@gentoo.org>
+  13 Feb 2005; MichaÅ Januszewski <spock@gentoo.org>
   +vanilla-sources-2.6.11_rc4.ebuild:
   Version bump.
 
 *vanilla-sources-2.6.11_rc3 (04 Feb 2005)
 
-  04 Feb 2005; Michał Januszewski <spock@gentoo.org>
+  04 Feb 2005; MichaÅ Januszewski <spock@gentoo.org>
   +vanilla-sources-2.6.11_rc3.ebuild:
   Version bump.
 
