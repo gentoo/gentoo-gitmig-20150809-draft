@@ -1,0 +1,27 @@
+diff -Naur kipi-plugins-0.1.4.orig/kipi-plugins/configure.in.in kipi-plugins-0.1.4/kipi-plugins/configure.in.in
+--- kipi-plugins-0.1.4.orig/kipi-plugins/configure.in.in	2007-09-03 22:20:18.000000000 +0200
++++ kipi-plugins-0.1.4/kipi-plugins/configure.in.in	2007-09-04 00:00:47.000000000 +0200
+@@ -273,6 +273,12 @@
+ #
+ #------------------------------------------------------------------
+ 
++AC_ARG_WITH(libgpod,
++    AC_HELP_STRING([--without-libgpod],[build kipi-plugins without iPod export plugin [default=check]]),
++    [build_libgpod=$withval],
++    [build_libgpod=check]
++)
++
+ have_libgpod=no
+ if test "$build_libgpod" != "no"; then
+     if test "$PKGCONFIGFOUND" = "yes" ; then
+@@ -290,6 +296,10 @@
+             LDFLAGS="$LDFLAGS $LIBGPOD_LIBS"
+         else
+             AC_MSG_WARN([libgpod is required for the iPod export plugin.])
++            if test "$build_libgpod" = "yes" ; then
++                AC_MSG_ERROR([Failing as --with-libgpod was passed on the command line but not found.])
++                DO_NOT_COMPILE="$DO_NOT_COMPILE kipi-plugins"
++            fi
+         fi
+     fi
+ fi

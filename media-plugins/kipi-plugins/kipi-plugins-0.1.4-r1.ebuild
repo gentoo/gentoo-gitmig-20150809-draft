@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.3-r2.ebuild,v 1.2 2007/07/10 23:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.4-r1.ebuild,v 1.1 2007/09/09 14:10:17 philantrop Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit kde
+inherit kde eutils
 
 MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
@@ -17,25 +17,21 @@ SRC_URI="mirror://sourceforge/kipi/${MY_P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="opengl gphoto2"
+IUSE="opengl gphoto2 ipod"
 
 DEPEND=">=media-libs/libkipi-0.1.5
-	media-libs/libkexiv2
-	gphoto2? ( >=media-libs/libgphoto2-2.3.1 )
-	>=media-libs/imlib2-1.1.0
-	>=media-gfx/imagemagick-6.2.4
-	>=media-video/mjpegtools-1.6.0
-	opengl? ( virtual/opengl )
-	>=media-libs/tiff-3.5
-	>=dev-libs/libxslt-1.1"
-
-RDEPEND="${DEPEND}
-	>=media-gfx/dcraw-8.45"
+		>=media-libs/libkexiv2-0.1.5
+		>=media-libs/libkdcraw-0.1.1
+		gphoto2? ( >=media-libs/libgphoto2-2.3.1 )
+		>=media-libs/imlib2-1.1.0
+		>=media-gfx/imagemagick-6.2.4
+		>=media-video/mjpegtools-1.6.0
+		opengl? ( virtual/opengl )
+		>=media-libs/tiff-3.5
+		>=dev-libs/libxslt-1.1
+		ipod? ( >=media-libs/libgpod-0.4.2 )"
 
 need-kde 3.5
-
-PATCHES="${FILESDIR}/${P}-external-dcraw.patch
-		${FILESDIR}/${P}-exiv2-fedora.patch"
 
 pkg_setup(){
 	slot_rebuild "media-libs/libkipi media-libs/libkexif" && die
@@ -47,7 +43,17 @@ pkg_setup(){
 	fi
 }
 
+src_unpack() {
+	kde_src_unpack
+
+	# Fixes an automagic dependency on libgpod. cf bug 191195.
+	epatch "${FILESDIR}/${P}-ipod-191195.patch"
+
+	# remove configure script to trigger its rebuild during kde_src_compile
+	rm -f ${S}/configure
+}
+
 src_compile() {
-	myconf="$(use_with opengl) $(use_with gphoto2)"
+	myconf="$(use_with opengl) $(use_with gphoto2) $(use_with ipod libgpod)"
 	kde_src_compile all
 }

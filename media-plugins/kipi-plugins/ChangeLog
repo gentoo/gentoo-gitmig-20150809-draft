@@ -1,6 +1,18 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.24 2007/07/17 12:01:47 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.25 2007/09/09 14:10:17 philantrop Exp $
+
+*kipi-plugins-0.1.4-r1 (09 Sep 2007)
+
+  09 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  -files/kipi-plugins-0.1.3-exiv2-fedora.patch,
+  -files/kipi-plugins-0.1.3-external-dcraw.patch,
+  +files/kipi-plugins-0.1.4-ipod-191195.patch, -kipi-plugins-0.1.2.ebuild,
+  -kipi-plugins-0.1.3-r1.ebuild, -kipi-plugins-0.1.3-r2.ebuild,
+  +kipi-plugins-0.1.4-r1.ebuild:
+  Added a patch to correct an automagic dependency on libgpod. Thanks to
+  Matěj Laitl for providing the patch. Fixes bug 191195. Removed obsolete
+  versions.
 
   17 Jul 2007; Tobias Heinlein <keytoaster@gentoo.org>
   kipi-plugins-0.1.4.ebuild:
