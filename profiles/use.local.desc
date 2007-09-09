@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3018 2007/09/09 10:00:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3019 2007/09/09 11:53:22 cedk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1272,6 +1272,7 @@ net-analyzer/echoping:smtp - enable support for SMTP protocol.
 net-analyzer/echoping:tos - enable support for TOS (TYpe Of Service).
 net-analyzer/fprobe:messages - enable console messages
 net-analyzer/iptraf:suid - Allow app to be run with suid root
+net-analyzer/metasploit:httpd - Enable web interface
 net-analyzer/munin:munin-apache - installs deps for monitoring apache
 net-analyzer/munin:munin-dhcp - installs deps for monitoring DHCP
 net-analyzer/munin:munin-irc - installs deps for monitoring IRC
