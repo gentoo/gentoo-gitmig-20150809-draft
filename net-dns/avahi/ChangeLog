@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.124 2007/08/22 03:00:48 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.125 2007/09/09 13:46:55 swegener Exp $
+
+  09 Sep 2007; Sven Wegener <swegener@gentoo.org>
+  -files/avahi-0.6.16-svn-1353.patch, -files/avahi-0.6.16-svn-1361.patch,
+  -files/avahi-0.6.16-svn-1363.patch, -files/avahi-0.6.16-svn-1365.patch,
+  -files/avahi-0.6.16-svn-1366.patch, -files/avahi-0.6.16-svn-1370.patch,
+  -files/avahi-0.6.16-svn-1371.patch, -files/avahi-0.6.16-svn-1372.patch,
+  -files/avahi-0.6.16-svn-1374.patch, -avahi-0.6.16-r1.ebuild:
+  Cleanup.
 
   20 Aug 2007; Stuart Longland <redhatter@gentoo.org> avahi-0.6.21.ebuild:
   Tested and working on MIPS... keyworded ~mips.
