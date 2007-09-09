@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.41 2007/09/09 09:13:29 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.42 2007/09/09 12:54:53 tove Exp $
 
   09 Sep 2007; Luca Barbato <lu_zero@gentoo.org>
   +files/qemu-softmmu-0.9.0-ide-cd.patch, qemu-softmmu-0.9.0.ebuild:
@@ -8,7 +8,7 @@
   Belon <carenas@sajinet.com.pe> for pointing the patch and reporting the
   issue
 
-  02 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   qemu-softmmu-0.8.0.ebuild, qemu-softmmu-0.8.0.20060329.ebuild,
   qemu-softmmu-0.8.1.ebuild, qemu-softmmu-0.8.1-r1.ebuild,
   qemu-softmmu-0.8.2.ebuild, qemu-softmmu-0.8.2-r1.ebuild,
@@ -25,7 +25,7 @@
   08 May 2007; Markus Ullmann <jokey@gentoo.org> qemu-softmmu-0.9.0.ebuild:
   Stable on x86 wrt security bug #176674
 
-  21 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
   10 Feb 2007; Luca Barbato <lu_zero@gentoo.org> qemu-softmmu-0.9.0.ebuild:
@@ -139,7 +139,7 @@
   x86 stable for qemu-softmmu-0.8.0 bug #123972.
 
   08 Jan 2006; Luca Barbato <lu_zero@gentoo.org> qemu-softmmu-0.8.0.ebuild:
-  Disable gcc checks, thanks to Robert FÃ¼hricht <the_master_of_disaster@gmx.at>
+  Disable gcc checks, thanks to Robert Führicht <the_master_of_disaster@gmx.at>
 
 *qemu-softmmu-0.8.0 (23 Dec 2005)
 
