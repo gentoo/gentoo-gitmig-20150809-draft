@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imgseek
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/ChangeLog,v 1.12 2007/05/15 09:55:15 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/ChangeLog,v 1.13 2007/09/09 15:02:11 coldwind Exp $
+
+*imgseek-0.8.6 (09 Sep 2007)
+
+  09 Sep 2007; Santiago M. Mola <coldwind@gentoo.org> +imgseek-0.8.6.ebuild:
+  Bump to 0.8.6, bug #183278
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
