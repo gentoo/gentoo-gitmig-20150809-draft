@@ -1,0 +1,107 @@
+diff -u orig/msfcli ./msfcli
+--- orig/msfcli	2007-03-29 14:06:12.000000000 +0530
++++ ./msfcli	2007-03-29 14:08:23.000000000 +0530
+@@ -5,7 +5,7 @@
+ # or web-based interface.
+ #
+ 
+-msfbase = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
++msfbase = File.symlink?(__FILE__) ? File.expand_path(File.readlink(__FILE__), File.dirname(__FILE__)) : __FILE__
+ $:.unshift(File.join(File.dirname(msfbase), 'lib'))
+ 
+ require 'rex'
+diff -u orig/msfconsole ./msfconsole
+--- orig/msfconsole	2007-03-29 14:06:07.000000000 +0530
++++ ./msfconsole	2007-03-29 14:08:42.000000000 +0530
+@@ -4,7 +4,7 @@
+ # framework.
+ #
+ 
+-msfbase = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
++msfbase = File.symlink?(__FILE__) ? File.expand_path(File.readlink(__FILE__), File.dirname(__FILE__)) : __FILE__
+ $:.unshift(File.join(File.dirname(msfbase), 'lib'))
+ 
+ require 'rex'
+diff -u orig/msfd ./msfd
+--- orig/msfd	2007-03-29 14:06:01.000000000 +0530
++++ ./msfd	2007-03-29 14:08:55.000000000 +0530
+@@ -6,8 +6,8 @@
+ # possible for sessions to to be shared from a single vantage point.
+ #
+ 
+-msfbase = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
+-$:.unshift(File.join(File.dirname(msfbase), 'lib'))
++msfbase = File.symlink?(__FILE__) ? File.expand_path(File.readlink(__FILE__), File.dirname(__FILE__)) : __FILE__
++$:.unshift(File.join(File.dirname(msfbase), 'lib'))
+ 
+ require 'msf/base'
+ require 'msf/ui'
+diff -u orig/msfencode ./msfencode
+--- orig/msfencode	2007-03-29 14:05:56.000000000 +0530
++++ ./msfencode	2007-03-29 14:09:16.000000000 +0530
+@@ -1,6 +1,6 @@
+ #!/usr/bin/env ruby
+ 
+-msfbase = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
++msfbase = File.symlink?(__FILE__) ? File.expand_path(File.readlink(__FILE__), File.dirname(__FILE__)) : __FILE__
+ $:.unshift(File.join(File.dirname(msfbase), 'lib'))
+ 
+ require 'rex'
+diff -u orig/msfgui ./msfgui
+--- orig/msfgui	2007-03-29 14:05:51.000000000 +0530
++++ ./msfgui	2007-03-29 14:09:28.000000000 +0530
+@@ -3,7 +3,7 @@
+ # This is a basic user interface using the Gtk2 GUI library
+ #
+ 
+-msfbase = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
++msfbase = File.symlink?(__FILE__) ? File.expand_path(File.readlink(__FILE__), File.dirname(__FILE__)) : __FILE__
+ $:.unshift(File.join(File.dirname(msfbase), 'lib'))
+ 
+ 
+diff -u orig/msfopcode ./msfopcode
+--- orig/msfopcode	2007-03-29 14:05:43.000000000 +0530
++++ ./msfopcode	2007-03-29 14:09:39.000000000 +0530
+@@ -5,7 +5,7 @@
+ # and to display information about modules.
+ #
+ 
+-msfbase = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
++msfbase = File.symlink?(__FILE__) ? File.expand_path(File.readlink(__FILE__), File.dirname(__FILE__)) : __FILE__
+ $:.unshift(File.join(File.dirname(msfbase), 'lib'))
+ 
+ require 'rex'
+diff -u orig/msfpayload ./msfpayload
+--- orig/msfpayload	2007-03-29 14:05:37.000000000 +0530
++++ ./msfpayload	2007-03-29 14:09:53.000000000 +0530
+@@ -1,6 +1,6 @@
+ #!/usr/bin/env ruby
+ 
+-msfbase = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
++msfbase = File.symlink?(__FILE__) ? File.expand_path(File.readlink(__FILE__), File.dirname(__FILE__)) : __FILE__
+ $:.unshift(File.join(File.dirname(msfbase), 'lib'))
+ 
+ require 'rex'
+diff -u orig/msfpescan ./msfpescan
+--- orig/msfpescan	2007-03-29 14:05:26.000000000 +0530
++++ ./msfpescan	2007-03-29 14:10:02.000000000 +0530
+@@ -1,6 +1,6 @@
+ #!/usr/bin/env ruby
+ 
+-msfbase = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
++msfbase = File.symlink?(__FILE__) ? File.expand_path(File.readlink(__FILE__), File.dirname(__FILE__)) : __FILE__
+ $:.unshift(File.join(File.dirname(msfbase), 'lib'))
+ 
+ require 'rex/peparsey'
+diff -u orig/msfweb ./msfweb
+--- orig/msfweb	2007-03-29 14:05:20.000000000 +0530
++++ ./msfweb	2007-03-29 14:10:13.000000000 +0530
+@@ -3,7 +3,7 @@
+ # This user interface provides users with a web-based interface to the framework
+ #
+ 
+-msfbase = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
++msfbase = File.symlink?(__FILE__) ? File.expand_path(File.readlink(__FILE__), File.dirname(__FILE__)) : __FILE__
+ $:.unshift(File.join(File.dirname(msfbase), 'lib'))
+ 
+ 
