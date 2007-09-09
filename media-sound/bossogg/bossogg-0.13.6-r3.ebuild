@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r3.ebuild,v 1.13 2007/08/05 18:23:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r3.ebuild,v 1.14 2007/09/09 00:49:42 josejx Exp $
 
 inherit autotools eutils multilib
 
@@ -10,7 +10,7 @@ DESCRIPTION="Bossogg Music Server"
 HOMEPAGE="http://bossogg.wishy.org"
 SRC_URI="mirror://sourceforge/bossogg/${P}.tar.gz"
 
-KEYWORDS="amd64 sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
