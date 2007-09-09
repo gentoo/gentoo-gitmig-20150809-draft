@@ -1,10 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/abs-guide-5.0.ebuild,v 1.7 2007/08/15 21:24:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/abs-guide-5.0.ebuild,v 1.8 2007/09/09 13:21:20 dirtyepic Exp $
 
 DESCRIPTION="An advanced reference and a tutorial on bash shell scripting"
-SRC_URI="http://personal.riverusers.com/~thegrendel/${P}.tar.bz2"
 HOMEPAGE="http://www.tldp.org/LDP/abs/html"
+
+# Upstream likes to repackage the tarball without changing the name.
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
+
 S="${WORKDIR}"
 
 IUSE=""
