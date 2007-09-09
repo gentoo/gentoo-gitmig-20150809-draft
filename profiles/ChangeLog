@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.634 2007/09/09 07:31:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.635 2007/09/09 07:42:06 dberkholz Exp $
+
+  09 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>; package.mask:
+  Unmask xf86-input-keyboard-1.2 because xorg-server handles deps properly now.
 
   09 Sep 2007; Hans de Graaff <graaff@gentoo.org> package.mask:
   Remove dev-ruby/switchtower as the package is now removed from the tree.
