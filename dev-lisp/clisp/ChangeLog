@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.62 2007/09/08 10:46:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.63 2007/09/09 18:01:53 josejx Exp $
+
+  09 Sep 2007; Joseph Jezak <josejx@gentoo.org> clisp-2.41.ebuild:
+  Marked ppc stable for bug #173050.
 
   08 Sep 2007; Ulrich Mueller <ulm@gentoo.org>
   +files/2.41-fastcgi-build.patch, clisp-2.41.ebuild:
