@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3017 2007/09/09 09:46:55 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3018 2007/09/09 10:00:17 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2155,6 +2155,6 @@ x11-wm/windowmaker:modelock - Enable XKB language status lock support. README sa
 xfce-base/thunar:plugins - Enable trash panel plugin.
 xfce-base/xfce4-extras:battery - Meta pulls in xfce4-battery dependency.
 xfce-base/xfce4-extras:cpufreq - Meta pulls in xfce4-cpu-freq dependency.
-xfce-extra/thunar-thumbnailers:dcraw - Enable .raw thumbnailers, dcraw support.
 xfce-extra/thunar-thumbnailers:grace - Enable .agr thumbnailers, grace support.
+xfce-extra/thunar-thumbnailers:raw - Enable .raw thumbnailers, dcraw and libopenraw support.
 xfce-extra/xfce4-sensors:hddtemp - Enable monitoring of disk temperatures (app-admin/hddtemp)
