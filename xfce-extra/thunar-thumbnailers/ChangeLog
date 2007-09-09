@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/thunar-thumbnailers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/ChangeLog,v 1.37 2007/09/01 16:51:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/ChangeLog,v 1.38 2007/09/09 10:04:01 drac Exp $
+
+  09 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  thunar-thumbnailers-0.2.1.ebuild, thunar-thumbnailers-0.2.2.ebuild,
+  thunar-thumbnailers-0.3.0.ebuild:
+  Rename USE dcraw to USE raw.
 
   01 Sep 2007; nixnut <nixnut@gentoo.org> thunar-thumbnailers-0.2.2.ebuild:
   Stable on ppc wrt bug 190072
