@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/pppconfig
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.27 2007/09/06 13:57:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.28 2007/09/09 05:44:27 josejx Exp $
+
+  09 Sep 2007; Joseph Jezak <josejx@gentoo.org> pppconfig-2.3.17-r1.ebuild:
+  Marked ppc stable for bug #190185.
 
   06 Sep 2007; Raúl Porcel <armin76@gentoo.org> pppconfig-2.3.17-r1.ebuild:
   x86 stable wrt #190185
