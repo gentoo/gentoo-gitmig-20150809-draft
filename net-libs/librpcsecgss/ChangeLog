@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/librpcsecgss
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/ChangeLog,v 1.17 2007/09/09 15:32:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/ChangeLog,v 1.18 2007/09/09 16:19:04 corsair Exp $
+
+  09 Sep 2007; Markus Rothe <corsair@gentoo.org> librpcsecgss-0.16.ebuild:
+  Stable on ppc64; bug #191479
 
   09 Sep 2007; Raúl Porcel <armin76@gentoo.org> librpcsecgss-0.16.ebuild:
   alpha/ia64 stable wrt security #191479
