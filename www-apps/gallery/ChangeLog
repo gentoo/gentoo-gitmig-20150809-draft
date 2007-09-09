@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.120 2007/09/09 15:53:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.121 2007/09/09 16:22:21 corsair Exp $
+
+  09 Sep 2007; Markus Rothe <corsair@gentoo.org> gallery-2.2.3.ebuild:
+  Stable on ppc64; bug #191587
 
   09 Sep 2007; Raúl Porcel <armin76@gentoo.org> gallery-2.2.3.ebuild:
   alpha stable wrt security #191587
