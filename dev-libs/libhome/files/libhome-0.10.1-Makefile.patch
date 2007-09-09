@@ -1,0 +1,65 @@
+Index: libhome-0.10.1/Makefile.in
+===================================================================
+--- libhome-0.10.1.orig/Makefile.in
++++ libhome-0.10.1/Makefile.in
+@@ -114,27 +114,32 @@ home_expire_cache: home_expire_cache.o l
+ install:: install-man install-lib
+ 
+ install-man:: home.conf.5
+-	${INSTALL_DATA} home.conf.5 ${mandir}/man5/
+-@DO_PROXY@	${INSTALL_DATA} home_proxy.8 ${mandir}/man8/
++	${INSTALL} -d $(DESTDIR)${mandir}/man5
++@DO_PROXY@	${INSTALL} -d $(DESTDIR)${mandir}/man8
++	${INSTALL_DATA} home.conf.5 $(DESTDIR)${mandir}/man5/
++@DO_PROXY@	${INSTALL_DATA} home_proxy.8 $(DESTDIR)${mandir}/man8/
+ 
+ install-lib:: all
+-	${LIBTOOL} --mode=install ${INSTALL_DATA} libhome.la ${libdir}/
++	${INSTALL} -d $(DESTDIR)${libdir}
++	${INSTALL} -d $(DESTDIR)${bindir}
++@DO_PROXY@	${INSTALL} -d $(DESTDIR)${sbindir}
++	${INSTALL} -d $(DESTDIR)${includedir}/home
++	${LIBTOOL} --mode=install ${INSTALL_DATA} libhome.la $(DESTDIR)${libdir}/
+ 	test "@PRELOAD_LIB@" = "" || \
+-	${LIBTOOL} --mode=install ${INSTALL_DATA} @PRELOAD_LIB@ ${libdir}/
+-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} home_finger ${bindir}/
+-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} home_su ${bindir}/
+-	-mkdir -p ${includedir}/home	
+-	${INSTALL_DATA} hpwd.h ${includedir}/home/pwd.h
+-	${INSTALL_DATA} hpwd.h ${includedir}/home/
+-	${INSTALL_DATA} hparam.h ${includedir}/home/
+-	${INSTALL_DATA} home_version.h ${includedir}/home/
++	${LIBTOOL} --mode=install ${INSTALL_DATA} @PRELOAD_LIB@ $(DESTDIR)${libdir}/
++	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} home_finger $(DESTDIR)${bindir}/
++	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} home_su $(DESTDIR)${bindir}/
++	${INSTALL_DATA} -D hpwd.h $(DESTDIR)${includedir}/home/pwd.h
++	${INSTALL_DATA} -D hpwd.h $(DESTDIR)${includedir}/home/
++	${INSTALL_DATA} -D hparam.h $(DESTDIR)${includedir}/home/
++	${INSTALL_DATA} -D home_version.h $(DESTDIR)${includedir}/home/
+ 	chmod +x libhome.sh
+-	${INSTALL_SCRIPT} libhome.sh ${bindir}/
+-@DO_PROXY@	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} home_proxy ${sbindir}/
+-@DO_NSS@	${LIBTOOL} --mode=install ${INSTALL_DATA} ${NSS_LIB} ${libdir}/
++	${INSTALL_SCRIPT} -D libhome.sh $(DESTDIR)${bindir}/
++@DO_PROXY@	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} home_proxy $(DESTDIR)${sbindir}/
++@DO_NSS@	${LIBTOOL} --mode=install ${INSTALL_DATA} ${NSS_LIB} $(DESTDIR)${libdir}/
+ 
+ install-nss:: nss
+-@DO_NSS@	${LIBTOOL} --mode=install ${INSTALL_DATA} ${NSS_LIB} ${libdir}/
++@DO_NSS@	${LIBTOOL} --mode=install ${INSTALL_DATA} ${NSS_LIB} $(DESTDIR)${libdir}/
+ 
+ compat:
+ 	-mkdir compat
+Index: libhome-0.10.1/configure.in
+===================================================================
+--- libhome-0.10.1.orig/configure.in
++++ libhome-0.10.1/configure.in
+@@ -510,7 +510,7 @@ then
+   fi
+   case $db_version in
+   3) AC_SEARCH_LIBS(db_strerror, db-3.3 db-3.2 db-3.1 db-3.0 db-3 db3);;
+-  4) AC_SEARCH_LIBS(db_strerror, db-4.3 db-4.2 db-4.1 db-4.0 db-4 db4,,
++  4) AC_SEARCH_LIBS(db_strerror, db-4.5 db-4.4 db-4.3 db-4.2 db-4.1 db-4.0 db-4 db4,,
+       AC_SEARCH_LIBS(db_strerror_4002, db-4.2));;
+   esac
+ fi

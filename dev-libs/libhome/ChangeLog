@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/libhome
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.1 2007/09/09 09:02:13 hollow Exp $
+
+*libhome-0.10.1 (09 Sep 2007)
+
+  09 Sep 2007; Benedikt Böhm <hollow@gentoo.org>
+  +files/libhome-0.10.1-Makefile.patch, +metadata.xml,
+  +libhome-0.10.1.ebuild:
+  initial version
+
