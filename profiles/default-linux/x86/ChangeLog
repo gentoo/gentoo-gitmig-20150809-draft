@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.111 2007/09/07 13:53:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.112 2007/09/09 09:13:09 dberkholz Exp $
+
+  09 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>; use.mask:
+  Unmask amd, vermilion, and xgi VIDEO_CARDS till they get keyworded for all
+  architectures.
 
   07 Sep 2007; Andrej Kacian <ticho@gentoo.org> use.mask:
   Unmasked ssse3 USE flag.
