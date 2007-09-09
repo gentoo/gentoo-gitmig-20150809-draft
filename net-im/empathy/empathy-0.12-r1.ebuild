@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.12-r1.ebuild,v 1.2 2007/09/05 13:45:33 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-0.12-r1.ebuild,v 1.3 2007/09/09 21:45:55 coldwind Exp $
 
 inherit gnome2 eutils autotools
 
@@ -40,6 +40,13 @@ src_unpack() {
 	gnome2_src_unpack
 	epatch "${FILESDIR}/${P}-multilib.patch"
 	eautoreconf
+}
+
+src_install() {
+	gnome2_src_install
+	make_desktop_entry "${PN}" "Empathy" \
+		"/usr/share/icons/hicolor/scalable/apps/${PN}.svg" \
+		"Network;InstantMessaging"
 }
 
 pkg_postinst() {
