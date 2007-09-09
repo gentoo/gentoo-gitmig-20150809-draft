@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-2.1.ebuild,v 1.1 2007/09/07 13:25:05 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-2.1.ebuild,v 1.2 2007/09/09 21:50:53 hawking Exp $
 
-inherit eutils toolchain-funcs python
+inherit eutils toolchain-funcs python multilib
 
 SCINTILLA_VER="1.73"
 MY_P="${PN/qs/QS}-${SCINTILLA_VER}-gpl-${PV}"
@@ -134,7 +134,7 @@ src_install() {
 		doins ${S}/doc/Scintilla/*
 	fi
 	if use qt4; then
-		insinto /usr/lib/qt4/plugins/
+		insinto /usr/$(get_libdir)/qt4/plugins/
 		insopts  -m0755
 		doins ${S}/designer-Qt4/libqscintillaplugin.so
 	else

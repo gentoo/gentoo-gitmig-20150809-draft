@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/qscintilla
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.76 2007/09/07 13:25:05 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.77 2007/09/09 21:50:53 hawking Exp $
+
+  09 Sep 2007; Ali Polatel <hawking@gentoo.org> qscintilla-2.1.ebuild:
+  Fix multilib issue (bug 191910), thanks to Kenneth Prugh
 
 *qscintilla-2.1 (07 Sep 2007)
 
