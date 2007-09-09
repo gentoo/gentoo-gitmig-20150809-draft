@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.261 2007/09/09 09:22:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.262 2007/09/09 10:27:48 dberkholz Exp $
+
+  09 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/1.2.99.0-fix-sysconfdir-references.patch,
+  -xorg-server-1.2.99.0.ebuild:
+  Drop early input-hotplug snapshot.
 
 *xorg-server-1.4 (09 Sep 2007)
 
