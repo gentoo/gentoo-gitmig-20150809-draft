@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/mecab-perl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mecab-perl/ChangeLog,v 1.6 2007/09/09 14:11:48 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mecab-perl/ChangeLog,v 1.7 2007/09/09 15:11:26 hattya Exp $
+
+  09 Sep 2007; Akinori Hattori <hattya@gentoo.org> mecab-perl-0.92.ebuild:
+  add ~ia64.
 
 *mecab-perl-0.96 (09 Sep 2007)
 
