@@ -1,6 +1,21 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.262 2007/09/09 10:27:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.263 2007/09/09 10:34:45 dberkholz Exp $
+
+  09 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/01-no-move-damage.patch, -files/03-tfp-damage.patch,
+  -files/05-offscreen-pixmaps.patch, -files/1.1.1-fix_acpi_tokenize.patch,
+  -files/02-dont-backfill-bg-none.patch,
+  -files/04-mesa-copy-sub-buffer.patch,
+  -files/06-aiglx-happy-vt-switch.patch, -files/1.1.1-dbe-render.diff,
+  -files/1.1.1-fix-xrandr-zoom-keys.patch,
+  -files/1.1.1-fix_big_endian_glx.patch, -files/1.1.1-fixdualhead.patch,
+  -files/1.1.1-sparc-includes.patch, -files/1.1.1-sparc64-ati-lockups.patch,
+  -files/xorg-server-1.1.1-install-libxf86config-headers.patch,
+  -files/xorg-x11-server-1.1.1-mesa-6.5.1.patch,
+  -files/xorg-conf-example.patch, -xorg-server-1.1.1-r1.ebuild,
+  -xorg-server-1.1.1-r5.ebuild:
+  Drop 1.1, everyone's stable on 1.2 or 1.3.
 
   09 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/1.2.99.0-fix-sysconfdir-references.patch,
