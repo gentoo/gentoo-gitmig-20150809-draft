@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/amd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.2 2007/08/18 17:13:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.3 2007/09/09 14:25:20 josejx Exp $
+
+  09 Sep 2007; Joseph Jezak <josejx@gentoo.org> amd-2.2.0.ebuild:
+  Marked ~ppc for bug #191600.
 
 *amd-2.2.0 (18 Aug 2007)
 

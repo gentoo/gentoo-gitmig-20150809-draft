@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ufconfig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.2 2007/08/18 17:11:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.3 2007/09/09 14:24:35 josejx Exp $
+
+  09 Sep 2007; Joseph Jezak <josejx@gentoo.org> ufconfig-3.0.0.ebuild:
+  Marked ~ppc for bug #191600.
 
 *ufconfig-3.0.0 (18 Aug 2007)
 
