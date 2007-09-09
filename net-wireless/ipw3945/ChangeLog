@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/ipw3945
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.29 2007/07/10 09:49:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.30 2007/09/09 08:35:51 phreak Exp $
+
+*ipw3945-1.2.2 (09 Sep 2007)
+
+  09 Sep 2007; Christian Heim <phreak@gentoo.org> +ipw3945-1.2.2.ebuild:
+  Version bump, fixing #171447 and #177869 (thanks to Momsen Reincke <mreincke
+  at gmx.net> for the preup snippet), #181443 (Mike Arthur <mike at
+  mikearthur.co.uk>, adding SHELL=/bin/bash to BUILD_PARAMS), #190595
+  (genbug.z.sandcrawler at antichef.com).
 
   10 Jul 2007; Stefan Schweizer <genstef@gentoo.org> ipw3945-1.0.5.ebuild,
   ipw3945-1.2.0.ebuild, ipw3945-1.2.1.ebuild:
