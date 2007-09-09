@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6.ebuild,v 1.7 2007/07/22 02:34:11 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/synaptics-0.14.6.ebuild,v 1.8 2007/09/09 20:20:15 genstef Exp $
 
 inherit toolchain-funcs eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 		-e "s:CC = gcc:CC = $(tc-getCC):g" \
 		-e "s:CDEBUGFLAGS = -O2:CDEBUGFLAGS = ${CFLAGS}:g" \
 		${S}/Makefile
+	epatch ${FILESDIR}/synaptics_input_api.diff
 }
 
 src_compile() {
