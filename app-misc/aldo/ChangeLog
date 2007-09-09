@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/aldo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/ChangeLog,v 1.13 2007/02/01 14:01:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/ChangeLog,v 1.14 2007/09/09 14:34:51 coldwind Exp $
+
+*aldo-0.7.4 (09 Sep 2007)
+
+  09 Sep 2007; Santiago M. Mola <coldwind@gentoo.org> aldo-0.7.0.ebuild,
+  aldo-0.7.3.ebuild, +aldo-0.7.4.ebuild:
+  Bump to 0.7.4, bug #190704. Homepage updated.
 
   01 Feb 2007; Steve Dibb <beandog@gentoo.org> aldo-0.7.3.ebuild:
   Add ~amd64, bug 164123
