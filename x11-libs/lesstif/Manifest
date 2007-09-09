@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX CAN-2005-0605.patch 1194 RMD160 a63ab47efb630423f2547dee911ea871071e2aa8 SHA1 ce66f6c23d1c3b5a96ba1363437b1a421b97ac78 SHA256 aaa8f3d35dbabbb65e3280051c9234d5e723bed0b89761cdb19da9f77ce8d2ed
 MD5 10373c1e87b0208cd26888011a4d92de files/CAN-2005-0605.patch 1194
 RMD160 a63ab47efb630423f2547dee911ea871071e2aa8 files/CAN-2005-0605.patch 1194
@@ -20,9 +23,16 @@ MISC metadata.xml 160 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 SHA1 d6147
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
 SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
-MD5 7b6fdc048b405cdf99af0e5d43fe9b92 files/digest-lesstif-0.94.4 182
-RMD160 fb0743ab5686e8a95480ce5d9944e752102cece5 files/digest-lesstif-0.94.4 182
-SHA256 85cc07225b5517eba4eb4ea79b1aa8e3d95e3d50a0a2b3b16ca8332057e8133e files/digest-lesstif-0.94.4 182
-MD5 285f8d06cbf75d30c0a03b64eea8e388 files/digest-lesstif-0.95.0 182
-RMD160 aa8c9f851468ed2e4958aada4665d828de6bc3fd files/digest-lesstif-0.95.0 182
-SHA256 f56a22bc0a0059070d01b03ca01a847600197d806b85a1713943c696d5f07760 files/digest-lesstif-0.95.0 182
+MD5 17109b66132514d0049c6088e326959a files/digest-lesstif-0.94.4 250
+RMD160 8d1ea5e05ec7db3d51aba1bdf12ee6bcb3300aca files/digest-lesstif-0.94.4 250
+SHA256 2af3203f60cbd68756c163d728b0edd3a5dc561f2fffa6fbccdffc5da68ac7f9 files/digest-lesstif-0.94.4 250
+MD5 f15aaee08dfccd717a557a239711be95 files/digest-lesstif-0.95.0 250
+RMD160 fe24c6937ae211c79cec49c6ef1dd1f9b395e0e5 files/digest-lesstif-0.95.0 250
+SHA256 7e991f0a508d859d7fb5caad8fe2a6e58ce35c6a1db42a407169adf7ebd3d730 files/digest-lesstif-0.95.0 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.6 (GNU/Linux)
+
+iD8DBQFG46vu/ejvha5XGaMRAghRAKCU7HDr/YBlQP8x0lFGcZiPd2wwDQCfUQRX
+uPFSW9i68TK+Jl8MJkDVzn0=
+=HzhM
+-----END PGP SIGNATURE-----
