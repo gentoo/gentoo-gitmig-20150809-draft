@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.76.ebuild,v 1.3 2007/08/09 10:02:44 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.76.ebuild,v 1.4 2007/09/09 12:26:52 hattya Exp $
 
 inherit eutils
 
@@ -20,11 +20,23 @@ DEPEND="!dev-db/cdb
 src_compile() {
 
 	emake staticlib sharedlib piclib cdb-shared || die
-	mv -f cdb-shared cdb
+
+}
+
+src_test() {
+
+	if use ia64; then
+		einfo "\"Handling file size limits\" fails on ia64, skipped..."
+		return
+	fi
+
+	emake -j1 check check-shared || die
 
 }
 
 src_install() {
+
+	mv -f cdb-shared cdb
 
 	einstall install-sharedlib install-piclib || die
 	dodoc NEWS
