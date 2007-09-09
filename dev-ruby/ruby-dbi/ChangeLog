@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-dbi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.22 2007/08/27 12:23:59 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.23 2007/09/09 19:02:24 killerfox Exp $
+
+  09 Sep 2007; René Nussbaumer <killerfox@gentoo.org>
+  ruby-dbi-0.1.1.ebuild:
+  Stable on ppc. See bug #190304.
 
   27 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> ruby-dbi-0.1.1.ebuild:
   x86 stable (bug #190304)

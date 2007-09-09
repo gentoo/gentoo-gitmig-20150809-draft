@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-odbc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ChangeLog,v 1.8 2007/08/27 12:21:58 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ChangeLog,v 1.9 2007/09/09 18:58:17 killerfox Exp $
+
+  09 Sep 2007; René Nussbaumer <killerfox@gentoo.org>
+  ruby-odbc-0.9995.ebuild:
+  Stable on ppc. See bug #190304.
 
   27 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> ruby-odbc-0.9995.ebuild:
   x86 stable (bug #190304)
