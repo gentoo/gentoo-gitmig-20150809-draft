@@ -1,28 +1,26 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mecab-perl/mecab-perl-0.92.ebuild,v 1.5 2007/07/10 23:33:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mecab-perl/mecab-perl-0.92.ebuild,v 1.6 2007/09/09 14:09:19 hattya Exp $
 
 inherit perl-module
 
-DESCRIPTION="MeCab library module for Perl."
-HOMEPAGE="http://mecab.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/mecab/20898/${P}.tar.gz"
-
-SLOT="0"
-LICENSE="|| ( GPL-2 LGPL-2.1 BSD )"
-KEYWORDS="amd64 ~x86"
 IUSE=""
+
+DESCRIPTION="Perl binding for MeCab"
+HOMEPAGE="http://mecab.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN/-*}/${P}.tar.gz"
+
+LICENSE="|| ( BSD LGPL-2.1 GPL-2 )"
+KEYWORDS="amd64 ~x86"
+SLOT="0"
 
 DEPEND=">=app-text/mecab-${PV}
 	dev-lang/perl"
 
-src_test() {
-	perl test.pl  || die "test.pl failed"
-	perl test2.pl || die "test2.pl failed"
-}
-
 src_install() {
-	perl-module_src_install || die "perl-module_src_install failed"
-	dohtml bindings.html    || die "dohtml failed"
-	dodoc test.pl test2.pl  || die "dodoc test{,2}.pl failed"
+
+	perl-module_src_install || die
+	dohtml bindings.html || die
+	dodoc test.pl || die
+
 }
