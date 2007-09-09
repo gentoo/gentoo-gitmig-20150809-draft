@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.142 2007/08/26 16:25:26 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.143 2007/09/09 22:19:29 welp Exp $
+
+*lighttpd-1.4.18 (09 Sep 2007)
+
+  09 Sep 2007; Peter Weller <welp@gentoo.org>
+  +files/1.4.18/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  +files/1.4.18/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  +lighttpd-1.4.18.ebuild:
+  Security bump wrt bug 191912 - straight to stable on amd64 and x86 by
+  request of angelos and jokey, respectively
 
   26 Aug 2007; Thilo Bangert <bangert@gentoo.org> files/lighttpd.confd:
   fix note about export SHELL, which is only used by include_shell config option
