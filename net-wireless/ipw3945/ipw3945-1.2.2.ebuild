@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.2.ebuild,v 1.1 2007/09/09 08:35:51 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.2.ebuild,v 1.2 2007/09/09 09:39:46 phreak Exp $
 
 inherit linux-mod eutils
 
@@ -37,16 +37,6 @@ pkg_setup() {
 
 	if kernel_is lt 2 6 18; then
 		die "${P} needs a kernel >=2.6.18! Please set your KERNEL_DIR or /usr/src/linux suitably"
-# I've no idea, why linux-info is passing the above CONFIG_CHECK on any kernel
-# <2.6.22, since they don't even *HAVE* that config option. But still linux-info
-# isn't bailing.
-# 
-#	elif kernel_is ge 2 6 22 ; then
-#		CONFIG_CHECK="${CONFIG_CHECK} WIRELESS_EXT"
-#		ERROR_WIRELESS_EXT="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions"
-#	else
-#		CONFIG_CHECK="${CONFIG_CHECK} NET_RADIO"
-#		ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
 	fi
 
 	linux-mod_pkg_setup
