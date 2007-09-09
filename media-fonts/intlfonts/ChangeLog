@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/intlfonts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/ChangeLog,v 1.12 2007/06/22 03:53:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/ChangeLog,v 1.13 2007/09/09 16:45:12 corsair Exp $
+
+  09 Sep 2007; Markus Rothe <corsair@gentoo.org> intlfonts-1.2.1.ebuild:
+  Added ~ppc64; bug #185360
 
   22 Jun 2007; Ryan Hill <dirtyepic@gentoo.org> intlfonts-1.2.1.ebuild:
   Add bdftopcf DEPEND for bug #149505.
