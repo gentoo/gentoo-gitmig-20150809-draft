@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.66 2007/07/27 17:56:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.67 2007/09/09 11:46:40 lu_zero Exp $
+
+*bochs-2.3 (09 Sep 2007)
+
+  09 Sep 2007; Luca Barbato <lu_zero@gentoo.org>
+  +files/bochs-2.3-floppy.patch, +files/bochs-2.3-ne2k.patch,
+  +files/bochs-2.3-redog.patch, +bochs-2.3.ebuild:
+  New version, patches to make it build and avoid security issues pointed by
+  Carlo Marcelo Arenas Belon <carenas@sajinet.com.pe>, fixes bug #188148 and
+  bug #145446
 
   27 Jul 2007; Luca Barbato <lu_zero@gentoo.org> files/digest-bochs-2.2.6,
   +files/digest-bochs-2.3, Manifest:

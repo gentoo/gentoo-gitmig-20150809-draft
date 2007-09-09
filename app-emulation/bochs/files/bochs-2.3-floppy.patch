@@ -1,0 +1,35 @@
+Index: iodev/floppy.cc
+===================================================================
+RCS file: /cvsroot/bochs/bochs/iodev/floppy.cc,v
+retrieving revision 1.106
+retrieving revision 1.107
+diff -u -p -r1.106 -r1.107
+--- iodev/floppy.cc	6 Apr 2007 15:22:17 -0000	1.106
++++ iodev/floppy.cc	21 Aug 2007 14:18:16 -0000	1.107
+@@ -1785,7 +1785,7 @@ bx_bool bx_floppy_ctrl_c::evaluate_media
+         }
+         media->sectors = media->heads * media->tracks * media->sectors_per_track;
+     }
+-    return(1); // success
++    return (media->sectors > 0); // success
+   }
+ 
+   else if ( S_ISCHR(stat_buf.st_mode)
+@@ -1805,7 +1805,7 @@ bx_bool bx_floppy_ctrl_c::evaluate_media
+       media->heads             = floppy_type[type_idx].hd;
+       media->sectors_per_track = floppy_type[type_idx].spt;
+       media->sectors           = floppy_type[type_idx].sectors;
+-      return 1;
++      return (media->sectors > 0);
+     }
+     media->tracks            = floppy_geom.track;
+     media->heads             = floppy_geom.head;
+@@ -1822,7 +1822,7 @@ bx_bool bx_floppy_ctrl_c::evaluate_media
+     media->sectors_per_track = floppy_type[type_idx].spt;
+     media->sectors           = floppy_type[type_idx].sectors;
+ #endif
+-    return 1; // success
++    return (media->sectors > 0); // success
+   } else {
+     // unknown file type
+     BX_ERROR(("unknown mode type"));
