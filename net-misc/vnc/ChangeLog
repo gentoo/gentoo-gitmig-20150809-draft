@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.91 2007/09/08 21:48:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.92 2007/09/09 16:35:58 armin76 Exp $
+
+  09 Sep 2007; Raúl Porcel <armin76@gentoo.org> vnc-4.1.2-r3.ebuild:
+  alpha/ia64/x86 stable wrt #191828
 
   08 Sep 2007; Joseph Jezak <josejx@gentoo.org> vnc-4.1.2-r3.ebuild:
   Marked ppc/ppc64 stable for bug #191615.
