@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.25.ebuild,v 1.1 2007/09/08 18:28:30 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.25.ebuild,v 1.2 2007/09/09 03:00:18 mr_bones_ Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -328,4 +328,3 @@ pkg_config() {
 		elog "at any time."
 	fi
 }
-
