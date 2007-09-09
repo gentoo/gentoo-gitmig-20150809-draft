@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.37 2007/07/22 09:44:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.38 2007/09/09 15:42:33 coldwind Exp $
 
 inherit eutils libtool
 
@@ -16,13 +16,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="X slang gpm static"
 
-RDEPEND="X? ( x11-libs/libX11 )"
+RDEPEND="X? ( x11-libs/libX11 )
+	slang? ( >=sys-libs/slang-1.4.2 )"
 
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.1
 	X? ( x11-proto/xproto )
-	gpm? ( sys-libs/gpm )
-	slang? ( >=sys-libs/slang-1.4.2 )"
+	gpm? ( sys-libs/gpm )"
 
 src_unpack() {
 	unpack ${A}
