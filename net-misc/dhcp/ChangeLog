@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.138 2007/09/08 15:52:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.139 2007/09/09 17:24:29 uberlord Exp $
+
+  09 Sep 2007; Roy Marples <uberlord@gentoo.org> dhcp-3.1.0.ebuild:
+  Stop installing a blank dhcpd.leases file, #191748 thanks to Kevin Pyle.
 
   08 Sep 2007; Joseph Jezak <josejx@gentoo.org> dhcp-3.0.6.ebuild,
   dhcp-3.1.0.ebuild:
