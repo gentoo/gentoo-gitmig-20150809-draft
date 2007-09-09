@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/bub-n-bros
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/ChangeLog,v 1.14 2007/08/13 19:14:10 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/ChangeLog,v 1.15 2007/09/09 05:59:13 mr_bones_ Exp $
+
+*bub-n-bros-1.6 (09 Sep 2007)
+
+  09 Sep 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/bub-n-bros-1.6-home.patch, +files/bub-n-bros-1.6-python25.patch,
+  +bub-n-bros-1.6.ebuild:
+  version bump (bug #191714) with patch update from Tomasz Mon
 
   13 Aug 2007; Santiago M. Mola <coldwind@gentoo.org>
   +files/bub-n-bros-1.5-python25.patch, bub-n-bros-1.5.ebuild:
