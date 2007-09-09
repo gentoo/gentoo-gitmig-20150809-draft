@@ -1,21 +1,8 @@
 # ChangeLog for net-firewall/shorewall-common
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/ChangeLog,v 1.4 2007/09/07 20:23:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/ChangeLog,v 1.5 2007/09/09 14:39:56 josejx Exp $
 
-  07 Sep 2007; Jeroen Roovers <jer@gentoo.org>
+  09 Sep 2007; Joseph Jezak <josejx@gentoo.org>
   shorewall-common-4.0.3.ebuild:
-  Marked ~hppa (bug #191624).
-
-  07 Sep 2007; Markus Ullmann <jokey@gentoo.org>
-  shorewall-common-4.0.3.ebuild:
-  Update blocker dep
-
-  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> metadata.xml:
-  Add Vieri as co-maintainer
-
-*shorewall-common-4.0.3 (06 Sep 2007)
-
-  06 Sep 2007; Markus Ullmann <jokey@gentoo.org> +files/shorewall.initd,
-  +metadata.xml, +shorewall-common-4.0.3.ebuild:
-  Initial import of shorewall 4.x series wrt bug #174588 thanks to Vieri
+  Marked ~ppc/~ppc64 for bug #191624.
 
