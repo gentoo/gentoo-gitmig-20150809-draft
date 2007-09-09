@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall-shell
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/ChangeLog,v 1.5 2007/09/09 14:39:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/ChangeLog,v 1.6 2007/09/09 16:32:02 armin76 Exp $
+
+  09 Sep 2007; Raúl Porcel <armin76@gentoo.org>
+  shorewall-shell-4.0.3.ebuild:
+  Add ~alpha wrt #191624, thanks to Tobias Klausmann for testing
 
   09 Sep 2007; Joseph Jezak <josejx@gentoo.org>
   shorewall-shell-4.0.3.ebuild:

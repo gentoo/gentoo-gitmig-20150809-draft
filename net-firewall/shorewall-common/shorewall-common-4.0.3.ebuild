@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/shorewall-common-4.0.3.ebuild,v 1.4 2007/09/09 14:39:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/shorewall-common-4.0.3.ebuild,v 1.5 2007/09/09 16:32:45 armin76 Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ SRC_URI="http://www1.shorewall.net/pub/${MY_PN}/${MY_P_TREE}/${MY_P}/${P}${MY_P_
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="doc"
 
 DEPEND=">=net-firewall/iptables-1.2.4

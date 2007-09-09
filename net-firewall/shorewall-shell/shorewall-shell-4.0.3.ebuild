@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/shorewall-shell-4.0.3.ebuild,v 1.4 2007/09/09 14:39:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/shorewall-shell-4.0.3.ebuild,v 1.5 2007/09/09 16:32:02 armin76 Exp $
 
 # Choose between experimental, stable and beta:
 #MY_P_TREE="development/4.0"  # experimental and beta
@@ -16,7 +16,7 @@ SRC_URI="http://www1.shorewall.net/pub/shorewall/${MY_P_TREE}/${MY_P}${MY_P_BETA
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="net-firewall/iptables
