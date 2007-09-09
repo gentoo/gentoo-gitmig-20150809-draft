@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.59 2007/09/05 21:24:40 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.60 2007/09/09 17:22:20 spock Exp $
+
+  09 Sep 2007; Michał Januszewski <spock@gentoo.org> files/hddgentoo.db:
+  HDD DB update (#191834).
 
 *hddtemp-0.3_beta15-r3 (05 Sep 2007)
 
