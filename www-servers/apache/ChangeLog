@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.23 2007/09/09 12:42:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.24 2007/09/09 15:28:11 armin76 Exp $
+
+  09 Sep 2007; Raúl Porcel <armin76@gentoo.org> apache-2.2.6.ebuild:
+  alpha/ia64 stable wrt security #186219
 
   09 Sep 2007; Markus Meier <maekke@gentoo.org> apache-2.2.6.ebuild:
   stable on x86, wrt security bug #186219
