@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mecab-ruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.10 2007/02/22 01:02:03 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.11 2007/09/09 14:43:02 hattya Exp $
+
+  09 Sep 2007; Akinori Hattori <hattya@gentoo.org> metadata.xml,
+  mecab-ruby-0.78.ebuild, mecab-ruby-0.80.ebuild, mecab-ruby-0.92.ebuild:
+  update HOMEPAGE and SRC_URI.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

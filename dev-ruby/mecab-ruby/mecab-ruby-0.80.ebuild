@@ -1,17 +1,24 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/mecab-ruby-0.80.ebuild,v 1.5 2006/09/17 19:03:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/mecab-ruby-0.80.ebuild,v 1.6 2007/09/09 14:43:02 hattya Exp $
 
-inherit ruby eutils
+inherit ruby
 
-DESCRIPTION="MeCab library module for Ruby"
-HOMEPAGE="http://chasen.org/~taku/software/mecab/"
-SRC_URI="http://chasen.org/~taku/software/mecab/bindings/${P}.tar.gz"
-
-LICENSE="LGPL-2.1"
-SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 ~x86"
 IUSE=""
 
-DEPEND="virtual/ruby
-	>=app-text/mecab-0.80"
+DESCRIPTION="Ruby binding for MeCab"
+HOMEPAGE="http://mecab.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN/-*}/${P}.tar.gz"
+
+LICENSE="LGPL-2.1"
+KEYWORDS="~amd64 ~ia64 ppc ppc64 ~x86"
+SLOT="0"
+
+DEPEND=">=app-text/mecab-${PV}"
+
+src_install() {
+
+	ruby_src_install
+	dodoc test.rb || die
+
+}
