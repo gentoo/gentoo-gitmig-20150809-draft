@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.94 2007/08/17 18:19:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.95 2007/09/09 20:29:34 mrness Exp $
+
+*dspam-3.8.0-r5 (09 Sep 2007)
+
+  09 Sep 2007; Alin Năstac <mrness@gentoo.org> -dspam-3.8.0-r4.ebuild,
+  +dspam-3.8.0-r5.ebuild:
+  Don't vacuum the postgres database in purge sql script because it will be
+  vacuumed anyway in cron script (#191271).
 
 *dspam-3.8.0-r4 (17 Aug 2007)
 
