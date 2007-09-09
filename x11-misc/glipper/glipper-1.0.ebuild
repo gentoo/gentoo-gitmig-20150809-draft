@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0.ebuild,v 1.1 2007/09/09 20:20:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0.ebuild,v 1.2 2007/09/09 20:25:40 swegener Exp $
 
 inherit gnome2 python
 
@@ -28,6 +28,9 @@ src_install() {
 
 pkg_postinst() {
 	python_mod_optimize "${ROOT}"/usr/lib*/python*/site-packages/glipper
+
+	elog "Glipper has been completely rewritten as a panel applet. Please remove your"
+	elog "existing ~/.glipper directory and then add glipper as a new panel applet."
 }
 
 pkg_postrm() {
