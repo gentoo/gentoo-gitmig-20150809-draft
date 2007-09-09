@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/wammu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.23 2007/09/06 10:28:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.24 2007/09/09 06:44:22 mrness Exp $
+
+*wammu-0.21-r2 (09 Sep 2007)
+
+  09 Sep 2007; Alin Năstac <mrness@gentoo.org>
+  -files/wammu-wxversion-2.6.patch, +files/wammu-wxversion.patch,
+  -wammu-0.21-r1.ebuild, +wammu-0.21-r2.ebuild:
+  Fix bluetooth dependencies (#191670). Allow usage of all suitable wxpython
+  versions.
 
 *wammu-0.21-r1 (06 Sep 2007)
 

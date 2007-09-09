@@ -5,7 +5,7 @@
  '''
  
 +import wxversion
-+wxversion.select("2.6")
++wxversion.select([WXPYTHON_VER])
  import os
  import sys
  import getopt

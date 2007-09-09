@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.21-r1.ebuild,v 1.1 2007/09/06 10:28:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.21-r2.ebuild,v 1.1 2007/09/09 06:44:22 mrness Exp $
 
-inherit distutils eutils
+inherit distutils eutils versionator
 
 DESCRIPTION="front-end for gammu (Nokia and other mobiles)"
 HOMEPAGE="http://www.cihar.com/gammu/wammu/"
@@ -13,12 +13,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bluetooth"
 
-#gnome-bluetooth is used for additional functionality - see bug #101067
 RDEPEND=">=dev-python/wxpython-2.6.3.3
 	>=dev-python/python-gammu-0.22
 	bluetooth? (
-		dev-python/pybluez
-		net-wireless/gnome-bluetooth
+		|| (
+			dev-python/pybluez
+			net-wireless/gnome-bluetooth
+		)
 	)"
 DEPEND="${RDEPEND}"
 
@@ -30,9 +31,29 @@ IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 src_unpack() {
 	unpack ${A}
 
-	# Select wxpython 2.6 in case there are others available
+	# Select the suitable wxpython versions
+	local wxpy_pkg wxpy_slot MY_WXPYTHON_SLOTS
+	for wxpy_pkg in $(portageq match ${ROOT} '>=dev-python/wxpython-2.6.3.3'); do
+		if built_with_use --hidden --missing false =${wxpy_pkg} unicode ; then
+			wxpy_slot=$(get_version_component_range 1-2 ${wxpy_pkg#*/*-})
+			if [ -z "${MY_WXPYTHON_SLOTS}" ]; then
+				MY_WXPYTHON_SLOTS="'${wxpy_slot}'"
+			else
+				MY_WXPYTHON_SLOTS="${MY_WXPYTHON_SLOTS}, '${wxpy_slot}'"
+			fi
+		fi
+	done
+	if [ -z "${MY_WXPYTHON_SLOTS}" ]; then
+		eerror "None of the dev-python/wxpython installed versions have been built with Unicode support."
+		eerror "Install wxpython with unicode USE flag enabled and try again."
+		die "dev-python/wxpython is missing Unicode support"
+	fi
+
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-wxversion-2.6.patch
+	sed -e "s/WXPYTHON_VER/${MY_WXPYTHON_SLOTS}/" \
+		"${FILESDIR}"/${PN}-wxversion.patch \
+		> "${T}"/${PN}-wxversion.patch
+	epatch "${T}"/${PN}-wxversion.patch
 
 	cd locale || die "locale directory not found"
 	local lang
