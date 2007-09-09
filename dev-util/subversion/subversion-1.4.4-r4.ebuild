@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.4-r4.ebuild,v 1.1 2007/09/08 14:18:08 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.4.4-r4.ebuild,v 1.2 2007/09/09 11:42:26 hollow Exp $
 
 inherit bash-completion depend.apache flag-o-matic elisp-common eutils java-pkg-opt-2 libtool multilib perl-module python
 
@@ -284,7 +284,7 @@ EOF
 
 		elisp-site-file-install "${FILESDIR}"/70svn-gentoo.el
 	fi
-	rm -f contrib/client-side/psvn/
+	rm -fr contrib/client-side/psvn/
 	rm -f contrib/client-side/vc-svn.el*
 
 	# Install extra files
