@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7690 2007/09/08 19:53:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7691 2007/09/09 05:18:23 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Alin Năstac <mrness@gentoo.org> (09 Sep 2007)
+# Development version.
+>=net-proxy/squid-3
 
 # Ulrich Mueller <ulm@gentoo.org> (08 Sep 2007)
 # CVS snapshot, masked for testing.
