@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-ugly
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.23 2007/08/07 15:00:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.24 2007/09/09 14:07:03 drac Exp $
+
+  09 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  gst-plugins-ugly-0.10.6.ebuild:
+  Remove INSTALL and TODO from dodoc.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gst-plugins-ugly-0.10.6.ebuild:

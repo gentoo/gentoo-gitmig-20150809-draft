@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.57 2007/09/03 02:12:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.58 2007/09/09 14:05:45 drac Exp $
+
+  09 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  gst-plugins-base-0.10.14.ebuild:
+  Remove INSTALL and TODO from dodoc.
 
   03 Sep 2007; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-base-0.10.14.ebuild:
