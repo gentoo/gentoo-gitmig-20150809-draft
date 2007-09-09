@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libjit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/ChangeLog,v 1.9 2007/08/28 23:34:18 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/ChangeLog,v 1.10 2007/09/09 18:32:53 jurek Exp $
+
+  09 Sep 2007; Jurek Bartuszek <jurek@gentoo.org>
+  +files/libjit-0.1.0-jit-rules-interp.h, libjit-0.1.0.ebuild:
+  Added missing header file, fixing bug #190483
 
   28 Aug 2007; Jurek Bartuszek <jurek@gentoo.org> libjit-0.1.0.ebuild:
   added secondary SRC_URI
