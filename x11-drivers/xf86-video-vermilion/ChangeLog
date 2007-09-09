@@ -1,0 +1,10 @@
+# ChangeLog for x11-drivers/xf86-video-vermilion
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vermilion/ChangeLog,v 1.1 2007/09/09 09:10:55 dberkholz Exp $
+
+*xf86-video-vermilion-1.0.0 (09 Sep 2007)
+
+  09 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +xf86-video-vermilion-1.0.0.ebuild:
+  Add Intel Vermilion chipset video driver.
+
