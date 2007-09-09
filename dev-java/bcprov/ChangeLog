@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/bcprov
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.19 2007/06/17 08:46:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.20 2007/09/09 19:22:32 wltjr Exp $
+
+*bcprov-1.37 (09 Sep 2007)
+
+  09 Sep 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +bcprov-1.37.ebuild:
+  Bumped to latest release.
 
   17 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> bcprov-1.36-r1.ebuild:
   Depend on >=sys-apps/findutils-4.3 when the userland is GNU to fix bug #182276.
