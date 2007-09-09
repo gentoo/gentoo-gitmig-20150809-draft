@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/nut-12.2.ebuild,v 1.1 2007/01/22 23:48:11 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/nut-12.2.ebuild,v 1.2 2007/09/09 12:41:20 coldwind Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="Record what you eat and analyze your nutrient levels"
-HOMEPAGE="http://www.lafn.org/~av832/"
+HOMEPAGE="http://nut.sourceforge.net/"
 SRC_URI="http://www.lafn.org/~av832/${P}.tar.bz2"
 
 LICENSE="GPL-2"

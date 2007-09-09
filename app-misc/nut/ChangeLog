@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.8 2007/08/29 16:33:06 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.9 2007/09/09 12:41:20 coldwind Exp $
+
+*nut-12.7 (09 Sep 2007)
+
+  09 Sep 2007; Santiago M. Mola <coldwind@gentoo.org> nut-10.15.ebuild,
+  nut-12.2.ebuild, +nut-12.7.ebuild:
+  Bump to 12.7, bug #187179
+  Homepage updated.
 
   29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing agriffis from metadata due to his retirement (see #182294 for
