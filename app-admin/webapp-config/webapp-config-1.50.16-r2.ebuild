@@ -1,20 +1,26 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.16.ebuild,v 1.1 2007/01/04 11:05:10 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.16-r2.ebuild,v 1.1 2007/09/09 21:11:40 hollow Exp $
 
 inherit eutils distutils
 
 DESCRIPTION="Gentoo's installer for web-based applications"
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="http://build.pardus.de/downloads/${PF}.tar.gz"
+SRC_URI="http://build.pardus.de/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
-S=${WORKDIR}/${PF}
 
 DEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-apache-move.patch
+	epatch "${FILESDIR}"/${P}-baselayout2.patch
+}
 
 src_install() {
 
@@ -37,7 +43,7 @@ src_install() {
 src_test() {
 	cd ${S}
 	distutils_python_version
-	if [[ $PYVER_MAJOR > 1 ]] && [[ $PYVER_MINOR > 3 ]] ; then
+	if [[ $PYVER_MAJOR -gt 1 ]] && [[ $PYVER_MINOR -gt 3 ]] ; then
 		elog "Running webapp-config doctests..."
 		if ! PYTHONPATH="." ${python} WebappConfig/tests/dtest.py; then
 			eerror "DocTests failed - please submit a bug report"
