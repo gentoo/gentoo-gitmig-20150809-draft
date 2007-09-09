@@ -1,17 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.4_p1.ebuild,v 1.1 2007/09/09 07:15:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.4.ebuild,v 1.1 2007/09/09 07:25:28 phreak Exp $
 
 inherit eutils
 
-MY_P=${PN}_${PV/_p*/}
-S="${WORKDIR}"/${P/_p*/}
-PATCH_LEVEL=${PV##*_p}
-
 DESCRIPTION="A software watchdog"
-HOMEPAGE="http://www.ibiblio.org/pub/Linux/system/daemons/watchdog/"
-SRC_URI="mirror://debian/pool/main/w/watchdog/${MY_P}.orig.tar.gz
-	mirror://debian/pool/main/w/watchdog/${MY_P}-${PATCH_LEVEL}.diff.gz"
+HOMEPAGE="http://sourceforge.net/projects/watchdog/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,6 +14,7 @@ KEYWORDS="~amd64 ~arm ~m68k ~mips ~ppc ~s390 ~sh ~x86"
 IUSE=""
 
 DEPEND=""
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
