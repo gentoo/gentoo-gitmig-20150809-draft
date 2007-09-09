@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gconf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/ChangeLog,v 1.23 2007/09/03 02:23:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/ChangeLog,v 1.24 2007/09/09 17:24:51 opfer Exp $
+
+  09 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  gst-plugins-gconf-0.10.6.ebuild:
+  x86 stable, bug 190900
 
   03 Sep 2007; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-gconf-0.10.6.ebuild:

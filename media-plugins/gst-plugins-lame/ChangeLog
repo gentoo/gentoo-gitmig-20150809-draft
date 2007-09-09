@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-lame
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-lame/ChangeLog,v 1.53 2007/07/26 14:04:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-lame/ChangeLog,v 1.54 2007/09/09 17:29:18 opfer Exp $
+
+  09 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  gst-plugins-lame-0.10.6.ebuild:
+  x86 stable, bug 190900
 
   26 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gst-plugins-lame-0.10.6.ebuild:
