@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.125 2007/09/09 13:46:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.126 2007/09/09 20:37:32 swegener Exp $
+
+  09 Sep 2007; Sven Wegener <swegener@gentoo.org>
+  +files/avahi-0.6.21-service_name_chosen.patch,
+  +files/avahi-start-after-netmount.patch, avahi-0.6.19-r2.ebuild,
+  avahi-0.6.20-r2.ebuild, avahi-0.6.21.ebuild:
+  Start avahi-daemon before netmount, bug #188719. Print a message that the
+  dbus configuration needs to be reloaded before starting avahi-daemon for the
+  first time, bug #191307.
 
   09 Sep 2007; Sven Wegener <swegener@gentoo.org>
   -files/avahi-0.6.16-svn-1353.patch, -files/avahi-0.6.16-svn-1361.patch,

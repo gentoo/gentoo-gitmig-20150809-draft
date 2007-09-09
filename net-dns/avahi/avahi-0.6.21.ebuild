@@ -1,6 +1,6 @@
 # Copyright 2000-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.21.ebuild,v 1.4 2007/08/22 03:00:48 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.21.ebuild,v 1.5 2007/09/09 20:37:32 swegener Exp $
 
 inherit eutils mono python qt3 qt4
 
@@ -99,6 +99,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.6.1-no-ipv6.patch
 	epatch "${FILESDIR}"/${P}-dbus-compat.patch
 	epatch "${FILESDIR}"/${P}-browse-help.patch
+	epatch "${FILESDIR}"/${P}-service_name_chosen.patch
+	epatch "${FILESDIR}"/avahi-start-after-netmount.patch
 
 	use ipv6 && sed -i -e s/use-ipv6=no/use-ipv6=yes/ avahi-daemon/avahi-daemon.conf
 }
@@ -146,7 +148,7 @@ src_compile() {
 }
 
 src_install() {
-	make install py_compile=true DESTDIR="${D}" || die "make install failed"
+	emake install py_compile=true DESTDIR="${D}" || die "make install failed"
 	use bookmarks || rm -f "${D}"/usr/bin/avahi-bookmarks
 
 	use howl-compat && ln -s avahi-compat-howl.pc "${D}"/usr/$(get_libdir)/pkgconfig/howl.pc
@@ -162,17 +164,25 @@ src_install() {
 }
 
 pkg_postrm() {
-	use python && python_mod_cleanup "${ROOT}"/usr/lib/python*/site-packages/avahi
+	use python && python_mod_cleanup
 }
 
 pkg_postinst() {
-	use python && python_mod_optimize "${ROOT}"/usr/lib/python*/site-packages/avahi
+	use python && python_mod_optimize "${ROOT}"/usr/lib*/python*/site-packages/avahi
 
 	if use autoipd
 	then
 		elog
 		elog "To use avahi-autoipd to configure your interfaces with IPv4LL (RFC3927)"
 		elog "addresses, just set config_<interface>=( autoipd ) in /etc/conf.d/net!"
+		elog
+	fi
+
+	if use dbus
+	then
+		elog
+		elog "If this is your first install of avahi please reload your dbus config"
+		elog "with /etc/init.d/dbus reload before starting avahi-daemon!"
 		elog
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 2000-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.20-r2.ebuild,v 1.1 2007/08/08 20:28:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.20-r2.ebuild,v 1.2 2007/09/09 20:37:32 swegener Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -103,6 +103,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-make-known-answers-not-conflict.patch
 	epatch "${FILESDIR}"/${P}-cleanup-dns-compression-table.patch
 	epatch "${FILESDIR}"/${P}-autoipd.patch
+	epatch "${FILESDIR}"/avahi-start-after-netmount.patch
 
 	use ipv6 && sed -i -e s/use-ipv6=no/use-ipv6=yes/ avahi-daemon/avahi-daemon.conf
 

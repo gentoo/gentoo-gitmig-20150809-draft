@@ -1,0 +1,21 @@
+Index: trunk/avahi-compat-libdns_sd/compat.c
+===================================================================
+--- trunk/avahi-compat-libdns_sd/compat.c	(revision 1535)
++++ trunk/avahi-compat-libdns_sd/compat.c	(revision 1536)
+@@ -990,6 +990,16 @@
+                     return;
+                 }
+             }
++
++            if (!sdref->service_name_chosen) {
++
++                assert(sdref->service_name);
++                
++                if (!(sdref->service_name_chosen = avahi_strdup(sdref->service_name))) {
++                    reg_report_error(sdref, kDNSServiceErr_NoMemory);
++                    return;
++                }
++            }
+             
+             /* Register the service */
+ 
