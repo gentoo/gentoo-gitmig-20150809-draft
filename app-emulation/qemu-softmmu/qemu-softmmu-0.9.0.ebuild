@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.9.0.ebuild,v 1.7 2007/07/02 14:01:30 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.9.0.ebuild,v 1.8 2007/09/09 09:13:29 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -64,6 +64,8 @@ src_unpack() {
 	sed -i 's/\(.\/install.sh\)/#\1/' Makefile
 	# avoid strip
 	sed -i 's:$(INSTALL) -m 755 -s:$(INSTALL) -m 755:' Makefile Makefile.target
+
+	epatch ${FILESDIR}/${P}-ide-cd.patch
 }
 
 src_compile() {
