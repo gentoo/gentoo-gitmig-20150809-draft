@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.10 2007/08/11 17:50:36 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.11 2007/09/09 00:30:36 josejx Exp $
+
+  09 Sep 2007; Joseph Jezak <josejx@gentoo.org> pommed-1.5.ebuild,
+  pommed-1.7.ebuild, pommed-1.8.ebuild:
+  Fixed building on ppc.  Marked pommed-1.5 ppc stable.
 
 *pommed-1.8 (11 Aug 2007)
 

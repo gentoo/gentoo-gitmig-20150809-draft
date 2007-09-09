@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.8.ebuild,v 1.1 2007/08/11 17:50:36 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.8.ebuild,v 1.2 2007/09/09 00:30:36 josejx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -38,7 +38,7 @@ src_unpack() {
 
 src_compile() {
 	cd "${S}"/pommed
-	emake CC=$(tc-getCC) || die "emake pommed failed"
+	emake CC=$(tc-getCC) OFLIB=1 || die "emake pommed failed"
 
 	if use gtk; then
 		cd "${S}"/gpomme

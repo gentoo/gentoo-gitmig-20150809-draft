@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.5.ebuild,v 1.3 2007/08/01 17:06:36 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.5.ebuild,v 1.4 2007/09/09 00:30:36 josejx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://alioth.debian.org/frs/download.php/${ALIOTH_NUMBER}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="gtk X"
 
 DEPEND="media-libs/alsa-lib
@@ -38,7 +38,7 @@ src_unpack() {
 
 src_compile() {
 	cd "${S}"/pommed
-	emake CC=$(tc-getCC) || die "emake pommed failed"
+	emake CC=$(tc-getCC) OFLIB=1 || die "emake pommed failed"
 
 	if use gtk; then
 		cd "${S}"/gpomme
