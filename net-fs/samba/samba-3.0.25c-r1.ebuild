@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.25c-r1.ebuild,v 1.1 2007/09/08 12:05:53 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.25c-r1.ebuild,v 1.2 2007/09/09 10:57:29 dev-zero Exp $
 
 inherit eutils pam python multilib versionator confutils
 
@@ -57,6 +57,8 @@ src_unpack() {
 		-e 's|"lib32" ||' \
 		-e 's|if test -d "$i/$l" ;|if test -d "$i/$l" -o -L "$i/$l";|' \
 		configure || die "sed failed"
+
+	rm "${S}/docs/manpages"/{mount,umount}.cifs.8
 }
 
 src_compile() {
@@ -203,7 +205,7 @@ src_install() {
 	use winbind && doins ${CONFDIR}/system-auth-winbind
 	if use swat ; then
 		insinto /etc/xinetd.d
-		newins "${CONFDIR}/swat.xinetd swat"
+		newins "${CONFDIR}/swat.xinetd" swat
 	else
 		rm -f "${D}/usr/sbin/swat"
 		rm -f "${D}/usr/share/man/man8/swat.8"

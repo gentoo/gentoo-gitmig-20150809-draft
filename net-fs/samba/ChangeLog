@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.299 2007/09/08 12:05:53 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.300 2007/09/09 10:57:29 dev-zero Exp $
+
+  09 Sep 2007; Tiziano Müller <dev-zero@gentoo.org>
+  samba-3.0.25c-r1.ebuild:
+  Fixed newins and removed install of {mount,umount}.cifs.8 (bugs #191804 and
+  #191805 thanks to Jakub Moc)
 
 *samba-3.0.25c-r1 (08 Sep 2007)
 
