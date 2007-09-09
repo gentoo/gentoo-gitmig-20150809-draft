@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.5.ebuild,v 1.9 2007/03/06 11:24:40 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.5.ebuild,v 1.10 2007/09/09 17:58:31 coldwind Exp $
 
 DESCRIPTION="A small window mananger based on aewm++"
 HOMEPAGE="http://www.pekwm.org/"
@@ -44,5 +44,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog
 
+	rm "${WORKDIR}/themes/Ace/.theme.swp"
 	mv "${WORKDIR}/themes/"* "${D}/usr/share/${PN}/themes/"
 }
