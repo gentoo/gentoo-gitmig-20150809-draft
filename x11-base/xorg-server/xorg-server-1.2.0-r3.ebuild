@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.0-r3.ebuild,v 1.12 2007/07/31 18:52:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.0-r3.ebuild,v 1.13 2007/09/09 07:37:23 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -194,7 +194,7 @@ PDEPEND="
 		input_devices_hyperpen? ( >=x11-drivers/xf86-input-hyperpen-1.1.0 )
 		input_devices_jamstudio? ( >=x11-drivers/xf86-input-jamstudio-1.1.0 )
 		input_devices_joystick? ( >=x11-drivers/xf86-input-joystick-1.1.0 )
-		input_devices_keyboard? ( >=x11-drivers/xf86-input-keyboard-1.1.0 )
+		input_devices_keyboard? ( =x11-drivers/xf86-input-keyboard-1.1* )
 		input_devices_magellan? ( >=x11-drivers/xf86-input-magellan-1.1.0 )
 		input_devices_microtouch? ( >=x11-drivers/xf86-input-microtouch-1.1.0 )
 		input_devices_mouse? ( >=x11-drivers/xf86-input-mouse-1.1.0 )
