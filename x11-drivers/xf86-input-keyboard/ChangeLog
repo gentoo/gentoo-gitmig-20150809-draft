@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-keyboard
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-keyboard/ChangeLog,v 1.44 2007/09/09 07:52:57 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-keyboard/ChangeLog,v 1.45 2007/09/09 07:54:22 dberkholz Exp $
+
+  09 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xf86-input-keyboard-1.2.0.ebuild, xf86-input-keyboard-1.2.0-r1.ebuild:
+  Restore keywords to 1.2 series.
 
 *xf86-input-keyboard-1.2.2 (09 Sep 2007)
 
