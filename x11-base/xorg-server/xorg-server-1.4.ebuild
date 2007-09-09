@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.ebuild,v 1.1 2007/09/09 09:22:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.ebuild,v 1.2 2007/09/09 19:58:07 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -99,9 +99,9 @@ IUSE_VIDEO_CARDS="
 	video_cards_via
 	video_cards_vmware
 	video_cards_voodoo
-	video_cards_xgi
-	video_cards_fglrx
-	video_cards_nvidia"
+	video_cards_xgi"
+#	video_cards_fglrx
+#	video_cards_nvidia"
 IUSE_SERVERS="dmx kdrive xorg"
 IUSE="${IUSE_VIDEO_CARDS}
 	${IUSE_INPUT_DEVICES}
@@ -266,9 +266,11 @@ PDEPEND="
 		video_cards_voodoo? ( >=x11-drivers/xf86-video-voodoo-1.1.0 )
 		video_cards_xgi? ( >=x11-drivers/xf86-video-xgi-1.5.0 )
 		video_cards_tdfx? ( 3dfx? ( >=media-libs/glide-v3-3.10 ) )
-		video_cards_nvidia? ( x11-drivers/nvidia-drivers )
-		video_cards_fglrx? ( >=x11-drivers/ati-drivers-8.37.6 )
+		!x11-drivers/nvidia-drivers
+		!x11-drivers/ati-drivers
 	)"
+#		video_cards_nvidia? ( x11-drivers/nvidia-drivers )
+#		video_cards_fglrx? ( >=x11-drivers/ati-drivers-8.37.6 )
 LICENSE="${LICENSE} MIT"
 
 PATCHES="
