@@ -1,0 +1,36 @@
+diff -Naur epix-1.1.15/Makefile.in epix-1.1.15.new/Makefile.in
+--- epix-1.1.15/Makefile.in	2007-08-31 11:35:04.000000000 -0400
++++ epix-1.1.15.new/Makefile.in	2007-09-09 09:59:07.000000000 -0400
+@@ -300,7 +300,7 @@
+ libepix_a_LIBADD = $(libepix_a_CXXSOURCES:.cc=.o)
+ man_MANS = epix.1 elaps.1 flix.1 laps.1
+ EPIX_CONFFILES = bash_completions epix.el
+-EPIX_NOTEFILES = AUTHORS BUGS ChangeLog COPYING INSTALL NEWS POST-INSTALL \
++EPIX_NOTEFILES = AUTHORS BUGS ChangeLog INSTALL NEWS POST-INSTALL \
+ 	README THANKS VERSION
+ 
+ EXTRA_DIST = $(bin_SCRIPTS) $(man_MANS) $(EPIX_CONFFILES) $(EPIX_NOTEFILES) \
+@@ -999,9 +999,8 @@
+ # Extra things to install
+ install-data-local: epix.el
+ 	@echo; echo "Installing notes and configuration files"
+-	./mkinstalldirs $(DESTDIR)$(docdir)/notes $(DESTDIR)$(docdir)/config
+-	$(INSTALL_DATA) $(EPIX_NOTEFILES) $(DESTDIR)$(docdir)/notes
+-	$(INSTALL_DATA) $(EPIX_CONFFILES) $(DESTDIR)$(docdir)/config
++	./mkinstalldirs $(DESTDIR)$(docdir) 
++	$(INSTALL_DATA) $(EPIX_NOTEFILES) $(EPIX_CONFFILES) $(DESTDIR)$(docdir)
+ 
+ # This is being installed by install-exec, but should not be executable
+ install-exec-local: install-pkglibDATA
+diff -Naur epix-1.1.15/doc/Makefile.in epix-1.1.15.new/doc/Makefile.in
+--- epix-1.1.15/doc/Makefile.in	2007-08-31 11:35:03.000000000 -0400
++++ epix-1.1.15.new/doc/Makefile.in	2007-09-09 09:57:57.000000000 -0400
+@@ -148,7 +148,7 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-EPIXFLAGS = --no-defaults -I.. -L.. -lepix -v
++EPIXFLAGS = --no-defaults -I.. -L.. -lepix -q
+ XPS := $(wildcard *.xp)
+ EEPICS = $(XPS:.xp=.eepic)
+ CLEANFILES = *~ *.aux *.dvi *.log *.out *.idx *.ilg *.ind *.toc \
