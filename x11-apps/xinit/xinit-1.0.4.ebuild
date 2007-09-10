@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.4.ebuild,v 1.7 2007/09/09 15:40:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.4.ebuild,v 1.8 2007/09/10 03:13:52 jer Exp $
 
 # Must be before x-modular eclass is inherited
 # This is enabled due to modified Makefile.am from the patches
@@ -11,7 +11,7 @@ inherit x-modular pam
 DESCRIPTION="X Window System initializer"
 
 LICENSE="${LICENSE} GPL-2"
-KEYWORDS="alpha amd64 arm ~hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="minimal"
 
 RDEPEND="x11-apps/xauth
