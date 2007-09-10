@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.6.ebuild,v 1.7 2007/09/09 16:15:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.6.ebuild,v 1.8 2007/09/10 12:03:29 hollow Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -236,7 +236,7 @@ src_install () {
 	if ! use static-modules ; then
 		load_module=""
 		moddir="${D}/usr/$(get_libdir)/apache2/modules"
-		for m in ${mods} ; do
+		for m in $(echo ${mods}|tr ' ' '\n'|sort -u) ; do
 			endid="no"
 
 			if [[ -e "${moddir}/mod_${m}.so" ]] ; then
