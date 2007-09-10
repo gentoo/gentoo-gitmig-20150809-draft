@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-mag
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.121 2007/08/28 18:16:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.122 2007/09/10 04:18:28 tgall Exp $
+
+  09 Sep 2007; Tom Gall <tgall@gentoo.org> gnome-mag-0.14.3.ebuild:
+  stable for ppc64 (bug #185823)
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org> gnome-mag-0.14.3.ebuild:
   Stable for HPPA (bug #185823).
