@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-reference
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.31 2007/08/21 15:47:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.32 2007/09/10 12:59:29 jer Exp $
+
+  10 Sep 2007; Jeroen Roovers <jer@gentoo.org>
+  lapack-reference-3.1.1-r1.ebuild:
+  Stable for HPPA (bug #189738).
 
 *lapack-reference-3.1.1-r1 (21 Aug 2007)
 
