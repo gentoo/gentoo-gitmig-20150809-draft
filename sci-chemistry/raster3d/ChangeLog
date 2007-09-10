@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/raster3d
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.12 2007/07/22 07:25:12 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.13 2007/09/10 12:55:59 markusle Exp $
+
+*raster3d-2.7d (08 Sep 2007)
+
+  08 Sep 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/raster3d-2.7d-gcc4-gentoo.patch,
+  files/raster3d-gcc-4.1-gentoo.patch, +raster3d-2.7d.ebuild:
+  Fixed gcc patch to work with gcc-4.2 and bumped raster3d to new
+  version (see bug #190511).
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; raster3d-2.7c.ebuild:
   Drop virtual/x11 references.
