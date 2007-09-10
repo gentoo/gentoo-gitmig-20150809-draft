@@ -1,0 +1,11 @@
+diff -Naur Cynthiune-0.9.5.orig/Frameworks/Cynthiune/NSCellExtensions.m Cynthiune-0.9.5/Frameworks/Cynthiune/NSCellExtensions.m
+--- Cynthiune-0.9.5.orig/Frameworks/Cynthiune/NSCellExtensions.m	2007-06-30 10:06:22.000000000 +0200
++++ Cynthiune-0.9.5/Frameworks/Cynthiune/NSCellExtensions.m	2007-06-30 10:06:47.000000000 +0200
+@@ -20,6 +20,7 @@
+  * Boston, MA 02111-1307, USA.
+  */
+ 
++#import <AppKit/NSAttributedString.h>
+ #import <AppKit/NSStringDrawing.h>
+ 
+ #import "NSCellExtensions.h"
