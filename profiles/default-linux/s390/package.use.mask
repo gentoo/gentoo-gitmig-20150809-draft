@@ -1,7 +1,12 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/s390/package.use.mask,v 1.4 2007/03/28 04:40:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/s390/package.use.mask,v 1.5 2007/09/10 18:38:27 cardoe Exp $
 
 # Steve Dibb <beandog@gentoo.org> (03 Mar 2007)
 # media-sound/twolame not tested
 media-video/mplayer mp2
 
 media-gfx/graphviz pango
+
+# Doug Goldstein <cardoe@gentoo.org> (10 Sep 2007)
+# bug #172097
+# The app in question is sys-auth/consolekit
+x11-apps/xinit hal
