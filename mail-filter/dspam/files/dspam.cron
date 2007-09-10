@@ -193,7 +193,7 @@ clean_pgsql_drv() {
 		# Optimize the PostgreSQL tables for DSPAM
 		for foo in dspam_preferences dspam_signature_data dspam_stats dspam_token_data dspam_virtual_uids
 		do
-			PGUSER="${DSPAM_PgSQL_USER}" PGPASSWORD="${DSPAM_PgSQL_PWD}" /usr/bin/vacuumdb -q -U "${DSPAM_PgSQL_USER}" -d "${DSPAM_PgSQL_DB}" -p "${DSPAM_PgSQL_PORT}" -h "${DSPAM_PgSQL_HOST}" -f -t "${foo}" >/dev/null 2>&1
+			PGUSER="${DSPAM_PgSQL_USER}" PGPASSWORD="${DSPAM_PgSQL_PWD}" /usr/bin/vacuumdb -q -U "${DSPAM_PgSQL_USER}" -d "${DSPAM_PgSQL_DB}" -p "${DSPAM_PgSQL_PORT}" -h "${DSPAM_PgSQL_HOST}" -z -t "${foo}" >/dev/null 2>&1
 			_RC=$?
 			if [ ${_RC} != 0 ]
 			then
