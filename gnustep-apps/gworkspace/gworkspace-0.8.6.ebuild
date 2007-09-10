@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.8.6.ebuild,v 1.1 2007/09/10 16:24:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.8.6.ebuild,v 1.2 2007/09/10 22:11:32 mr_bones_ Exp $
 
 inherit autotools gnustep-2
 
@@ -60,4 +60,3 @@ src_install() {
 		cp "${S}"/Documentation/*.pdf "${D}"/usr/share/doc/${PF}
 	fi
 }
-
