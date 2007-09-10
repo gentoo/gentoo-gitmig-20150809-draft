@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/libtomoe-gtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/ChangeLog,v 1.6 2007/07/07 05:34:18 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/ChangeLog,v 1.7 2007/09/10 16:41:26 opfer Exp $
+
+  10 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  libtomoe-gtk-0.6.0.ebuild:
+  x86 stable, bug 189292
 
 *libtomoe-gtk-0.6.0 (07 Jul 2007)
 
