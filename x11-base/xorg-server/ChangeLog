@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.270 2007/09/10 09:46:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.271 2007/09/10 10:05:23 dberkholz Exp $
+
+  10 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.4-r1.ebuild:
+  More minimal versions for 7.3 and even earlier releases.
 
   10 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.4-r1.ebuild:

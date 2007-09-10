@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4-r1.ebuild,v 1.2 2007/09/10 09:46:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4-r1.ebuild,v 1.3 2007/09/10 10:05:23 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -111,12 +111,12 @@ IUSE="${IUSE_VIDEO_CARDS}
 RDEPEND="hal? ( sys-apps/hal )
 	>=x11-libs/libXfont-1.3.1
 	>=x11-libs/xtrans-1.0.4
-	x11-libs/libXau
-	x11-libs/libXext
+	>=x11-libs/libXau-1.0.3
+	>=x11-libs/libXext-1.0.2
 	>=x11-libs/libX11-1.1.3
-	x11-libs/libxkbfile
-	x11-libs/libXdmcp
-	x11-libs/libXmu
+	>=x11-libs/libxkbfile-1.0.4
+	>=x11-libs/libXdmcp-1.0.2
+	>=x11-libs/libXmu-1.0.3
 	>=x11-libs/libXrender-0.9.4
 	>=x11-libs/libXi-1.1.3
 	>=x11-libs/pixman-0.9.5
@@ -125,23 +125,23 @@ RDEPEND="hal? ( sys-apps/hal )
 	media-fonts/font-adobe-75dpi
 	media-fonts/font-misc-misc
 	media-fonts/font-cursor-misc
-	x11-misc/xbitmaps
-	x11-misc/xkeyboard-config
-	x11-apps/iceauth
-	x11-apps/rgb
-	x11-apps/xauth
-	x11-apps/xinit
+	>=x11-misc/xbitmaps-1.0.1
+	>=x11-misc/xkeyboard-config-0.9
+	>=x11-apps/iceauth-1.0.2
+	>=x11-apps/rgb-1.0.1
+	>=x11-apps/xauth-1.0.2
+	>=x11-apps/xinit-1.0.5
 	app-admin/eselect-opengl
 	>=x11-libs/libXaw-1.0.4
 	>=x11-libs/libXpm-3.5.7
-	x11-libs/libXxf86misc
-	x11-libs/libXxf86vm
-	dmx? ( x11-libs/libdmx
-			x11-libs/libXfixes )
-	!minimal? ( x11-libs/libXtst
-		x11-libs/libXres )
+	>=x11-libs/libXxf86misc-1.0.1
+	>=x11-libs/libXxf86vm-1.0.1
+	dmx? ( >=x11-libs/libdmx-1.0.2
+			>=x11-libs/libXfixes-4.0.3 )
+	!minimal? ( >=x11-libs/libXtst-1.0.3
+		>=x11-libs/libXres-1.0.3 )
 	>=x11-libs/libxkbui-1.0.2
-	x11-libs/liblbxutil
+	>=x11-libs/liblbxutil-1.0.1
 	kdrive? ( sdl? ( media-libs/libsdl ) )"
 	# Xres is dmx-dependent, xkbui is xorgcfg-dependent
 	# Xaw is dmx- and xorgcfg-dependent
@@ -153,34 +153,34 @@ DEPEND="${RDEPEND}
 	>=x11-proto/renderproto-0.9.3
 	>=x11-proto/fixesproto-4
 	>=x11-proto/damageproto-1.1
-	x11-proto/xextproto
-	x11-proto/xproto
+	>=x11-proto/xextproto-7.0.2
+	>=x11-proto/xproto-7.0.10
 	>=x11-proto/xf86dgaproto-2.0.3
-	x11-proto/xf86miscproto
-	x11-proto/xf86rushproto
-	x11-proto/xf86vidmodeproto
-	x11-proto/xf86bigfontproto
+	>=x11-proto/xf86miscproto-0.9.2
+	>=x11-proto/xf86rushproto-1.1.2
+	>=x11-proto/xf86vidmodeproto-2.2.2
+	>=x11-proto/xf86bigfontproto-1.1.2
 	>=x11-proto/compositeproto-0.4
-	x11-proto/recordproto
-	x11-proto/resourceproto
-	x11-proto/videoproto
+	>=x11-proto/recordproto-1.13.2
+	>=x11-proto/resourceproto-1.0.2
+	>=x11-proto/videoproto-2.2.2
 	>=x11-proto/scrnsaverproto-1.1.0
-	x11-proto/evieext
-	x11-proto/trapproto
+	>=x11-proto/evieext-1.0.2
+	>=x11-proto/trapproto-3.4.3
 	>=x11-proto/xineramaproto-1.1-r1
-	x11-proto/fontsproto
+	>=x11-proto/fontsproto-2.0.2
 	>=x11-proto/kbproto-1.0.3
 	>=x11-proto/inputproto-1.4.2.1
-	x11-proto/bigreqsproto
-	x11-proto/xcmiscproto
+	>=x11-proto/bigreqsproto-1.0.2
+	>=x11-proto/xcmiscproto-1.1.2
 	>=x11-proto/glproto-1.4.8
-	dmx? ( x11-proto/dmxproto )
-	dri? ( x11-proto/xf86driproto
+	dmx? ( >=x11-proto/dmxproto-2.2.2 )
+	dri? ( >=x11-proto/xf86driproto-2.0.3
 		>=x11-libs/libdrm-2.3 )
-	xprint? ( x11-proto/printproto
+	xprint? ( >=x11-proto/printproto-1.0.3
 		>=x11-apps/mkfontdir-1.0.3
-		x11-apps/mkfontscale
-		x11-apps/xplsprinters )"
+		>=x11-apps/mkfontscale-1.0.3
+		>=x11-apps/xplsprinters-1.0.1 )"
 
 # Drivers
 PDEPEND="
