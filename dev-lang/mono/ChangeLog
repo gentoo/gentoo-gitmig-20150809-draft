@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.123 2007/08/22 03:40:35 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.124 2007/09/10 19:10:11 jurek Exp $
+
+*mono-1.2.5 (10 Sep 2007)
+
+  10 Sep 2007; Jurek Bartuszek <jurek@gentoo.org>
+  +files/mono-1.2.4-pic.patch, +files/mono-1.2.5-make-check.patch,
+  mono-1.2.4.ebuild, +mono-1.2.5.ebuild:
+  - Version bump (bug #191541)
+  - Fix ppc compilation with PIC (bug #165547)
 
   22 Aug 2007; Saleem Abdulrasool <compnerd@gentoo.org> ChangeLog:
   Add restrict=test back as it still fails for some people

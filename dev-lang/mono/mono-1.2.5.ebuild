@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.4.ebuild,v 1.12 2007/09/10 19:10:11 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.5.ebuild,v 1.1 2007/09/10 19:10:11 jurek Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.go-mono.com/sources/mono/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 X11 )"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="X nptl"
 
 RDEPEND="!<dev-dotnet/pnet-0.6.12
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 PDEPEND="dev-dotnet/pe-format"
 
 # Parallel build unfriendly
-MAKEOPTS="${MAKEOPTS} -j1"
+# MAKEOPTS="${MAKEOPTS} -j1"
 
 RESTRICT="test"
 
@@ -52,7 +52,7 @@ src_unpack() {
 	|| die "sed failed"
 
 	epatch ${FILESDIR}/${P}-make-check.patch || die "patch failed"
-	epatch ${FILESDIR}/${P}-pic.patch || die "patch failed"
+	epatch ${FILESDIR}/${PN}-1.2.4-pic.patch || die "patch failed"
 
 	# Remove dummy ltconfig and let libtool handle it
 	rm -f ${S}/libgc/ltconfig
