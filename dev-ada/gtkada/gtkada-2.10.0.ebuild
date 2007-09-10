@@ -1,14 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.10.0.ebuild,v 1.2 2007/07/15 04:21:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.10.0.ebuild,v 1.3 2007/09/10 13:38:04 george Exp $
 
 inherit eutils gnat versionator
 
 Name="GtkAda-gpl"
 MajorPV=$(get_version_component_range 1-2)
 DESCRIPTION="Gtk+ bindings to the Ada language"
-HOMEPAGE="https://libre2.adacore.com/GtkAda/"
-SRC_URI="http://dev.gentoo.org/~george/src/${Name}-${PV}.tgz"
+HOMEPAGE="https://libre.adacore.com/GtkAda/"
+SRC_URI="mirror://gentoo/${Name}-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="2"
@@ -73,7 +73,7 @@ src_install() {
 	echo "PATH=%DL%" > ${LibEnv}
 	echo "LDPATH=%DL%" >> ${LibEnv}
 	echo "ADA_OBJECTS_PATH=%DL%" >> ${LibEnv}
-	echo "ADA_INCLUDE_PATH=/usr/lib/ada/adainclude/${PN}" >> ${LibEnv}
+	echo "ADA_INCLUDE_PATH=${AdalibSpecsDir}/${PN}" >> ${LibEnv}
 
 	gnat_src_install
 

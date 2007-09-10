@@ -1,6 +1,11 @@
 # ChangeLog for dev-ada/gtkada
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.26 2007/05/28 07:23:55 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.27 2007/09/10 13:38:04 george Exp $
+
+  10 Sep 2007; <portage-cvs@gentoo.org> gtkada-2.8.0.ebuild,
+  gtkada-2.10.0.ebuild:
+  fixed the ADA_INCLUDE_PATH to point to correct dir. Thanks to Maxim Reznik
+  for spotting this
 
   28 May 2007; George Shapovalov <george@gentoo.org> gtkada-2.8.0.ebuild:
   backported some enhancements from 2.10.0
