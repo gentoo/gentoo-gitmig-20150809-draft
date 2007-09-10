@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/kaa-imlib2-0.2.1.ebuild,v 1.3 2007/08/25 22:39:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/kaa-imlib2-0.2.1.ebuild,v 1.4 2007/09/10 20:34:59 maekke Exp $
 
 inherit python eutils distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/freevo/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=dev-python/kaa-base-0.1.3
