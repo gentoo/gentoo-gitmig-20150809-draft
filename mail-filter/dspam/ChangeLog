@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.95 2007/09/09 20:29:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.96 2007/09/10 04:06:01 mrness Exp $
+
+*dspam-3.8.0-r6 (10 Sep 2007)
+
+  10 Sep 2007; Alin Năstac <mrness@gentoo.org> files/dspam.cron,
+  -dspam-3.8.0-r5.ebuild, +dspam-3.8.0-r6.ebuild:
+  Use Postgres command vacuumdb --analyse instead --full (#191271).
 
 *dspam-3.8.0-r5 (09 Sep 2007)
 
