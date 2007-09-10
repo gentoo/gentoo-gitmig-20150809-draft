@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/gorm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.19 2007/08/22 16:53:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.20 2007/09/10 18:53:49 voyageur Exp $
+
+*gorm-1.2.1 (10 Sep 2007)
+
+  10 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org> -gorm-1.0.4.ebuild,
+  -gorm-1.0.6.ebuild, -gorm-1.1.0.ebuild, +gorm-1.2.1.ebuild:
+  Version bump from the GNUstep overlay
 
   22 Aug 2007; Christoph Mende <angelos@gentoo.org> gorm-1.1.0.ebuild:
   Added ~amd64 wrt bug #170433
