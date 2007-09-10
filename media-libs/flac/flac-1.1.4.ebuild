@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.4.ebuild,v 1.4 2007/09/09 20:51:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.4.ebuild,v 1.5 2007/09/10 03:47:22 jer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/flac/${MY_P}.tar.gz
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="3dnow debug doc ogg sse"
 
 RDEPEND="ogg? ( >=media-libs/libogg-1.1.2 )"
