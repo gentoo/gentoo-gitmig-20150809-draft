@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.0.ebuild,v 1.2 2007/06/19 07:50:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.0.ebuild,v 1.3 2007/09/10 23:02:17 gurligebis Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -60,12 +60,13 @@ generate_config() {
 		echo "CONFIG_DRIVER_MADWIFI=y" >> ${CONFIG}
 	fi
 
-	if [ -e "${KV_DIR}"/net/mac80211 ]; then
-		# Kernel source has the mac80211 subsystem, so we enable the driver
-		echo "CONFIG_DRIVER_DEVICESCAPE=y" >> ${CONFIG}
-		echo "WIRELESS_DEV=\"${KV_DIR}\"" >> ${CONFIG}
-		echo "CFLAGS += -I\$(WIRELESS_DEV)/net/mac80211" >> ${CONFIG}
-	fi
+	# REMOVED FOR NOW, BROKEN
+	#if [ -e "${KV_DIR}"/net/mac80211 ]; then
+	#	# Kernel source has the mac80211 subsystem, so we enable the driver
+	#	echo "CONFIG_DRIVER_DEVICESCAPE=y" >> ${CONFIG}
+	#	echo "WIRELESS_DEV=\"${KV_DIR}\"" >> ${CONFIG}
+	#	echo "CFLAGS += -I\$(WIRELESS_DEV)/net/mac80211" >> ${CONFIG}
+	#fi
 
 	# misc
 	echo "CONFIG_PKCS12=y" >> ${CONFIG}
@@ -151,9 +152,9 @@ pkg_postinst() {
 		einfo "You should remerge ${PN} after upgrading these packages."
 		einfo
 	fi
-	if [ -e "${KV_DIR}"/net/mac80211 ]; then
-		einfo "This package now compiles against the headers installed by"
-		einfo "the kernel source for the mac80211 driver. You should "
-		einfo "re-emerge ${PN} after upgrading your kernel source."
-	fi
+	#if [ -e "${KV_DIR}"/net/mac80211 ]; then
+	#	einfo "This package now compiles against the headers installed by"
+	#	einfo "the kernel source for the mac80211 driver. You should "
+	#	einfo "re-emerge ${PN} after upgrading your kernel source."
+	#fi
 }

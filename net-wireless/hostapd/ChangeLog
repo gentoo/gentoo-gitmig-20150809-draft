@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.74 2007/06/19 07:50:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.75 2007/09/10 23:02:17 gurligebis Exp $
+
+  10 Sep 2007; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  hostapd-0.6.0.ebuild:
+  Removed support for mac80211 since it is broken for now
 
   19 Jun 2007; Stefan Schweizer <genstef@gentoo.org> hostapd-0.4.9.ebuild,
   hostapd-0.5.8.ebuild, hostapd-0.6.0.ebuild:
