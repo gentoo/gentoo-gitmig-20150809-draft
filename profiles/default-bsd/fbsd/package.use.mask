@@ -1,3 +1,12 @@
+# Doug Goldstein <cardoe@gentoo.org> (10 Sep 2007)
+# Joe Marcus Clarke is working on FreeBSD consolekit support
+# Currently there are kernel bugs and such. Requires latest
+# git and latest patches from FreeBSD CVS to have a workaround
+# the kernel bug. The patch in FreeBSD CVS breaks it's functionality
+# on Linux, so we're masking this for now.
+# The app in question is sys-auth/consolekit
+x11-apps/xinit hal
+
 # Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
 # app-admin/gkrellm may pull in hddtemp, which is not yet available here
 app-admin/gkrellm hddtemp
