@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.37 2007/07/01 03:12:35 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.38 2007/09/10 19:41:14 jurek Exp $
+
+*mod_mono-1.2.5 (10 Sep 2007)
+
+  10 Sep 2007; Jurek Bartuszek <jurek@gentoo.org> +mod_mono-1.2.5.ebuild:
+  Version bump
 
   01 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   +files/digest-mod_mono-1.2.1, +files/digest-mod_mono-1.2.4, Manifest:
