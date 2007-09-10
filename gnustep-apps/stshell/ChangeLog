@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-apps/stshell
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stshell/ChangeLog,v 1.10 2007/06/24 18:02:14 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stshell/ChangeLog,v 1.11 2007/09/10 18:10:54 voyageur Exp $
+
+*stshell-0.10.0-r1 (10 Sep 2007)
+
+  10 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -stshell-0.8.3_pre20050312.ebuild, -stshell-0.9.0.ebuild,
+  -stshell-0.9.1.ebuild, -stshell-0.10.0.ebuild, +stshell-0.10.0-r1.ebuild:
+  Version bump from GNUstep overlay
+  Remove old versions
 
   24 Jun 2007; Piotr Jaroszyński <peper@gentoo.org> stshell-0.9.1.ebuild,
   stshell-0.10.0.ebuild:

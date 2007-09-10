@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-apps/zipper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/ChangeLog,v 1.8 2007/08/18 15:29:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/ChangeLog,v 1.9 2007/09/10 18:14:34 voyageur Exp $
+
+*zipper-1.2 (10 Sep 2007)
+
+  10 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org> -zipper-0.9.ebuild,
+  -zipper-1.1.ebuild, +zipper-1.2.ebuild:
+  Version bump from the GNUstep overlay
+  Remove old versions
 
   18 Aug 2007; Christoph Mende <angelos@gentoo.org> zipper-1.1.ebuild:
   Added ~amd64 wrt bug #170433
