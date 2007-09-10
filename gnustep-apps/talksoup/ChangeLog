@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-apps/talksoup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/talksoup/ChangeLog,v 1.6 2007/08/18 15:26:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/talksoup/ChangeLog,v 1.7 2007/09/10 20:53:08 voyageur Exp $
+
+*talksoup-1.0_alpha1-r1 (10 Sep 2007)
+
+  10 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/talksoup-1.0_alpha1-make2_support.patch,
+  -talksoup-1.0_alpha1.ebuild, +talksoup-1.0_alpha1-r1.ebuild:
+  Version bump from the GNUstep overlay
 
   18 Aug 2007; Christoph Mende <angelos@gentoo.org>
   talksoup-1.0_alpha1.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gmines/gmines-0.1-r1.ebuild,v 1.4 2007/08/22 16:28:02 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gmines/gmines-0.1-r2.ebuild,v 1.1 2007/09/10 20:48:31 voyageur Exp $
 
-inherit gnustep
+inherit gnustep-2
 
 S=${WORKDIR}/${PN/gm/GM}
 
@@ -12,9 +12,3 @@ SRC_URI="http://www.gnustep.it/marko/GMines/${PN/gm/GM}.tgz"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="GPL-2"
-
-IUSE=""
-DEPEND="${GS_DEPEND}"
-RDEPEND="${GS_RDEPEND}"
-
-egnustep_install_domain "Local"

@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/gmines
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gmines/ChangeLog,v 1.7 2007/08/22 16:28:02 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gmines/ChangeLog,v 1.8 2007/09/10 20:48:31 voyageur Exp $
+
+*gmines-0.1-r2 (10 Sep 2007)
+
+  10 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -gmines-0.1-r1.ebuild, +gmines-0.1-r2.ebuild:
+  Version bump from the GNUstep overlay
 
   22 Aug 2007; Roy Marples <uberlord@gentoo.org> gmines-0.1-r1.ebuild:
   Keyworded ~x86-fbsd, #183467 thanks to Nathan Smith.

@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-apps/cenon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.3 2007/02/22 00:16:48 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.4 2007/09/10 20:45:46 voyageur Exp $
+
+*cenon-3.82 (10 Sep 2007)
+
+  10 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/cenon-3.80-install.patch, +files/cenon-3.82-install.patch,
+  -cenon-3.80.ebuild, +cenon-3.82.ebuild:
+  Version bump from the GNUstep overlay
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
