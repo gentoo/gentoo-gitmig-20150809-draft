@@ -1,6 +1,16 @@
 # ChangeLog for gnustep-apps/terminal
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.14 2007/08/22 16:56:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.15 2007/09/10 18:31:28 voyageur Exp $
+
+*terminal-0.9.5_pre20060324-r1 (10 Sep 2007)
+
+  10 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/terminal-0.9.5_pre20060324-size_t.patch,
+  +files/terminal-0.9.5_pre20060324-solaris.patch,
+  -terminal-0.9.5_pre20050315.ebuild, -terminal-0.9.5_pre20060324.ebuild,
+  +terminal-0.9.5_pre20060324-r1.ebuild:
+  Version bump from the GNUstep overlay
+  Remove old versions
 
   22 Aug 2007; Christoph Mende <angelos@gentoo.org>
   terminal-0.9.5_pre20060324.ebuild:
