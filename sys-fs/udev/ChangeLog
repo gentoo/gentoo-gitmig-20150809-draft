@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.347 2007/09/07 06:30:21 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.348 2007/09/10 18:34:10 zzam Exp $
+
+  10 Sep 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/udev-115-add-special-rule-files.diff, udev-115-r2.ebuild:
+  Updated to udev-git. Removed /dev/fb subdirectory for framebuffer devices.
 
   07 Sep 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/udev-115-add-special-rule-files.diff, udev-115-r2.ebuild:
