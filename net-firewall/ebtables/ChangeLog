@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ebtables
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.17 2007/09/05 14:32:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.18 2007/09/10 19:20:49 maekke Exp $
+
+  10 Sep 2007; Markus Meier <maekke@gentoo.org> ebtables-2.0.8.1.ebuild:
+  stable on x86, wrt bug #191127
 
   05 Sep 2007; Christoph Mende <angelos@gentoo.org> ebtables-2.0.8.1.ebuild:
   Stable on amd64
