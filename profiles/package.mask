@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7695 2007/09/09 21:18:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7696 2007/09/10 14:22:47 voyageur Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1180,12 +1180,6 @@ dev-lisp/cl-blog
 # all version contains a static copy of zlib-1.2.1.1 which has security
 # issues
 net-misc/zsync
-
-# <grobian@gentoo.org> (26 Mar 2006)
-# ViewPDF is not maintained anymore.  It is replaced by Vindaloo.
-# However, Vindaloo needs PopplerKit, which doesn't compile.
-gnustep-libs/popplerkit
-gnustep-apps/vindaloo
 
 # Aaron Walker <ka0ttic@gentoo.org> (30 Jun 2005)
 # Masked due to constant security bugs.
