@@ -1,0 +1,23 @@
+# ChangeLog for dev-ml/facile
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.1 2007/09/10 21:01:37 philantrop Exp $
+
+*facile-1.1 (10 Sep 2007)
+
+  10 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
+  +facile-1.1.ebuild:
+  Imported from the KDE4 overlay to the tree. Thanks, Zephyrus!
+
+  09 Sep 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it> facile-1.1.ebuild:
+  Added doc support.
+
+  09 Sep 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it> facile-1.1.ebuild:
+  Added missing die
+
+  08 Sep 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it> facile-1.1.ebuild:
+  Keyworded ~amd64
+
+  18 Jul 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it> +metadata.xml,
+  facile-1.1.ebuild:
+  Added Changelog and metadata. Fixed LICENSE.
+
