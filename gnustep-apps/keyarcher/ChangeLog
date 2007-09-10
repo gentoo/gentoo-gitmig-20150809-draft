@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/keyarcher
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/keyarcher/ChangeLog,v 1.1 2007/09/10 21:03:46 voyageur Exp $
+
+*keyarcher-0.1 (10 Sep 2007)
+
+  10 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org> +metadata.xml,
+  +keyarcher-0.1.ebuild:
+  Initial import from the GNUstep overlay
+

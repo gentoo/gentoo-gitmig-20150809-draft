@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/plconv
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/plconv/ChangeLog,v 1.1 2007/09/10 21:00:36 voyageur Exp $
+
+*plconv-0.1 (10 Sep 2007)
+
+  10 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org> +metadata.xml,
+  +plconv-0.1.ebuild:
+  Initial import from the GNUstep overlay
+
