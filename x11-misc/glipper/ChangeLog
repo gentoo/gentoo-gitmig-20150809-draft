@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/glipper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/ChangeLog,v 1.6 2007/09/09 20:20:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/ChangeLog,v 1.7 2007/09/10 17:02:31 swegener Exp $
+
+  10 Sep 2007; Sven Wegener <swegener@gentoo.org> glipper-1.0.ebuild:
+  Install gconf schema files.
 
 *glipper-1.0 (09 Sep 2007)
 
