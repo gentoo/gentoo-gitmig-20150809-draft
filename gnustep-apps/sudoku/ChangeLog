@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/sudoku
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/sudoku/ChangeLog,v 1.1 2007/09/10 21:19:05 voyageur Exp $
+
+*sudoku-6 (10 Sep 2007)
+
+  10 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org> +metadata.xml,
+  +sudoku-6.ebuild:
+  Initial import from the GNUstep overlay
+
