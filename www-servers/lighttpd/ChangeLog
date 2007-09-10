@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.143 2007/09/09 22:19:29 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.144 2007/09/10 10:35:39 armin76 Exp $
+
+  10 Sep 2007; Raúl Porcel <armin76@gentoo.org> lighttpd-1.4.18.ebuild:
+  alpha/ia64 stable wrt security #191912
 
 *lighttpd-1.4.18 (09 Sep 2007)
 
