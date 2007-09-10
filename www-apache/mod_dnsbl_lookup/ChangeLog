@@ -1,0 +1,11 @@
+# ChangeLog for www-apache/mod_dnsbl_lookup
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_dnsbl_lookup/ChangeLog,v 1.1 2007/09/10 10:03:52 hollow Exp $
+
+*mod_dnsbl_lookup-0.91 (10 Sep 2007)
+
+  10 Sep 2007; Benedikt Böhm <hollow@gentoo.org>
+  +files/09_mod_dnsbl_lookup.conf, +metadata.xml,
+  +mod_dnsbl_lookup-0.91.ebuild:
+  initial version
+
