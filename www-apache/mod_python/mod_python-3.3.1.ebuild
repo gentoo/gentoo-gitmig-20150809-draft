@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.3.1.ebuild,v 1.2 2007/09/09 11:28:24 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.3.1.ebuild,v 1.3 2007/09/10 20:23:24 hollow Exp $
 
 inherit python apache-module multilib
 
@@ -29,11 +29,11 @@ src_unpack() {
 
 	# Remove optimisations, we do that outside Portage
 	sed -i -e 's:--optimize 2:--no-compile:' dist/Makefile.in
-	sed -i -e 's/ -Wl,--hash-style//' src/Makefile
 }
 
 src_compile() {
 	econf --with-apxs=${APXS2} || die "econf failed"
+	sed -i -e 's/ -Wl,--hash-style//' src/Makefile
 	emake OPT="`apxs2 -q CFLAGS` -fPIC" || die "econf failed"
 }
 
