@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-input-pad
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/ChangeLog,v 1.3 2007/02/21 22:11:34 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/ChangeLog,v 1.4 2007/09/10 16:24:53 opfer Exp $
+
+  10 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  scim-input-pad-0.1.1.ebuild:
+  x86 stable, bug 189292
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

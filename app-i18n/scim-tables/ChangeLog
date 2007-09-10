@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-tables
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.47 2007/08/21 15:47:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.48 2007/09/10 16:28:49 opfer Exp $
+
+  10 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  scim-tables-0.5.7.ebuild:
+  x86 stable, bug 189292
 
   21 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   scim-tables-0.5.7.ebuild:

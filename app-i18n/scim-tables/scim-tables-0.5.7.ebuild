@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.7.ebuild,v 1.6 2007/08/21 15:47:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.7.ebuild,v 1.7 2007/09/10 16:28:49 opfer Exp $
 
 inherit kde-functions autotools eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc sparc x86"
 IUSE="kde nls"
 LANGS="am ar bn gu hi ja kn ko ml ne pa ru ta te th vi zh"
 for i in ${LANGS} ; do

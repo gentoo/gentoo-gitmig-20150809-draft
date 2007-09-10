@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-prime
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/ChangeLog,v 1.17 2007/02/21 22:12:02 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/ChangeLog,v 1.18 2007/09/10 16:27:23 opfer Exp $
+
+  10 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  scim-prime-1.0.0.ebuild:
+  x86 stable, bug 189292
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

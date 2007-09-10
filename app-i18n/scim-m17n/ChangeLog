@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-m17n
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.26 2007/08/21 15:35:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.27 2007/09/10 16:26:05 opfer Exp $
+
+  10 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  scim-m17n-0.2.2.ebuild:
+  x86 stable, bug 189292
 
   21 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   scim-m17n-0.2.2.ebuild:
