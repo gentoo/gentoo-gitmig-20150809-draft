@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/atop-1.21.ebuild,v 1.1 2007/09/10 01:42:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/atop-1.21.ebuild,v 1.2 2007/09/10 01:53:37 vapier Exp $
 
 DESCRIPTION="Resource-specific view of processes"
 HOMEPAGE="http://www.atcomputing.nl/Tools/atop"
@@ -22,6 +22,7 @@ src_unpack() {
 		Makefile
 	cp "${FILESDIR}"/atop.rc atop.init
 	chmod a+rx atop.init
+	sed -i 's: root : :' atop.cron #191926
 }
 
 src_install() {
