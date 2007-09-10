@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.300 2007/09/09 10:57:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.301 2007/09/10 08:21:23 dev-zero Exp $
+
+  10 Sep 2007; Tiziano Müller <dev-zero@gentoo.org>
+  samba-3.0.25c-r1.ebuild:
+  make better use of pam.eclass (bug #191942 thanks to Jakub Moc)
 
   09 Sep 2007; Tiziano Müller <dev-zero@gentoo.org>
   samba-3.0.25c-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.25c-r1.ebuild,v 1.2 2007/09/09 10:57:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.25c-r1.ebuild,v 1.3 2007/09/10 08:21:23 dev-zero Exp $
 
 inherit eutils pam python multilib versionator confutils
 
@@ -160,12 +160,8 @@ src_install() {
 	fi
 
 	if use pam ; then
-		exeinto /$(get_libdir)/security
-		doexe bin/pam_smbpass.so
-		if use winbind ; then
-			exeinto /$(get_libdir)/security
-			doexe bin/pam_winbind.so
-		fi
+		dopammod bin/pam_smbpass.so
+		use winbind && dopammod bin/pam_winbind.so
 	fi
 
 	if use kernel_linux ; then
