@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.11 2007/01/08 02:36:35 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.12 2007/09/10 20:27:58 bicatali Exp $
+
+*cfitsio-3.060 (10 Sep 2007)
+
+  10 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/cfitsio-3.060-autotools.patch, metadata.xml, +cfitsio-3.060.ebuild:
+  Version bump. Added tests and a proper autotools version, added fortran use
+  flag to enable fortran wrappers. Closing bug #123803
 
   08 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -cfitsio-2.490.ebuild,
   -cfitsio-2.500.ebuild:
