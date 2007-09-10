@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/avp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/ChangeLog,v 1.9 2007/09/07 18:38:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/ChangeLog,v 1.10 2007/09/10 19:37:43 tupone Exp $
+
+  10 Sep 2007; Tupone Alfredo <tupone@gentoo.org> avp-20070130-r1.ebuild:
+  Adding ~amd64 keyword. Bug #192005 by Dizzy
 
   07 Sep 2007; <tupone@gentoo.org> +files/avp-20070130-gcc42.patch,
   +avp-20070130-r1.ebuild:

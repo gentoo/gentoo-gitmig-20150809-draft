@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20070130-r1.ebuild,v 1.1 2007/09/07 18:38:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20070130-r1.ebuild,v 1.2 2007/09/10 19:37:43 tupone Exp $
 
 inherit eutils games
 
@@ -10,11 +10,14 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="AvP"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="media-libs/openal
-	media-libs/libsdl"
+DEPEND="x86? (
+		media-libs/openal
+		media-libs/libsdl
+	)
+	amd64? ( app-emulation/emul-linux-x86-sdl )"
 
 S=${WORKDIR}/${PN}
 
