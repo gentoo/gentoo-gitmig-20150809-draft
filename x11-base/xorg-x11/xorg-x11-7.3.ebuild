@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.3.ebuild,v 1.1 2007/09/09 09:45:15 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.3.ebuild,v 1.2 2007/09/10 09:37:08 dberkholz Exp $
 
 inherit eutils
 
@@ -26,7 +26,8 @@ RDEPEND="${RDEPEND}
 	>=x11-apps/xhost-1.0.2
 	>=x11-apps/xinit-1.0.5
 	>=x11-apps/xmodmap-1.0.3
-	>=x11-apps/xrandr-1.2.2"
+	>=x11-apps/xrandr-1.2.2
+	>=x11-apps/mkfontdir-1.0.3"
 
 # Common Libraries - move these to eclass eventually
 RDEPEND="${RDEPEND}
