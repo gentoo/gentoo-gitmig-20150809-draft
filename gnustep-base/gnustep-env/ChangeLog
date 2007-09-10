@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-env
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.34 2007/09/06 22:59:50 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.35 2007/09/10 01:19:13 josejx Exp $
+
+  10 Sep 2007; Joseph Jezak <josejx@gentoo.org> gnustep-env-1000.ebuild:
+  Marked ~ppc for bug #189372.
 
   06 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
   -gnustep-env-0.1.6-r1.ebuild, gnustep-env-1000.ebuild:
