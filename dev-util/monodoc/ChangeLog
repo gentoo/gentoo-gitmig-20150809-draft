@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.67 2007/08/24 20:36:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.68 2007/09/10 19:48:18 jurek Exp $
+
+*monodoc-1.2.5 (10 Sep 2007)
+
+  10 Sep 2007; Jurek Bartuszek <jurek@gentoo.org> +monodoc-1.2.5.ebuild:
+  Version bump
 
   24 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   monodoc-1.2.4.ebuild:
