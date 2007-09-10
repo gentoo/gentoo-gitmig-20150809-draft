@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.266 2007/09/09 19:58:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.267 2007/09/10 01:52:46 dberkholz Exp $
+
+  10 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.4.ebuild:
+  (#191820) Fix xprint build when neither dmx or kdrive are enabled; forgot to
+  autoreconf.
 
   09 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.4.ebuild:
