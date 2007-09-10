@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/netclasses
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/netclasses/ChangeLog,v 1.3 2007/09/10 18:39:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/netclasses/ChangeLog,v 1.4 2007/09/10 20:50:54 voyageur Exp $
+
+  10 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -netclasses-1.06.ebuild:
+  Remove old version
 
 *netclasses-1.06-r1 (10 Sep 2007)
 
