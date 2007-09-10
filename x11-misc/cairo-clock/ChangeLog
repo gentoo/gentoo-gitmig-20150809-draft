@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/cairo-clock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/ChangeLog,v 1.3 2007/08/31 00:47:41 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/ChangeLog,v 1.4 2007/09/10 16:12:03 drac Exp $
+
+*cairo-clock-0.3.3 (10 Sep 2007)
+
+  10 Sep 2007; Samuli Suominen <drac@gentoo.org> +cairo-clock-0.3.3.ebuild:
+  Version bump for bug 191845, thanks to Arfrever Frehtes Taifersar Arahesis
+  for reporting.
 
   31 Aug 2007; David Shakaryan <omp@gentoo.org> metadata.xml:
   Remove myself as sole maintainer; still part of desktop-misc herd.
