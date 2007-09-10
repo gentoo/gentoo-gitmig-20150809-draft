@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>apache</herd>
-	<herd>common-lisp</herd>
 	<maintainer>
-  		<email>apache-bugs@gentoo.org</email>
+		<email>apache-bugs@gentoo.org</email>
 	</maintainer>
 </pkgmetadata>
