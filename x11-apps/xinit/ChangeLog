@@ -1,6 +1,14 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.99 2007/09/10 03:13:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.100 2007/09/10 18:42:06 steev Exp $
+
+*xinit-1.0.5-r1 (10 Sep 2007)
+
+  10 Sep 2007; Steev Klimaszewski <steev@gentoo.org>
+  +files/xinit-1.0.4-console-kit.patch, +xinit-1.0.5-r1.ebuild:
+  Add the patch from fdo bugzilla 12378 with useflag of hal rather than
+  consoleki, added as a revision bump to 1.0.5. This adds consolekit support
+  to xinit. Also requires dbus be build with the X useflag to properly work."
 
   10 Sep 2007; Jeroen Roovers <jer@gentoo.org> xinit-1.0.4.ebuild:
   Stable for HPPA (bug #191615).
