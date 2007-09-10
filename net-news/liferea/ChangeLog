@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.116 2007/09/05 17:36:59 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.117 2007/09/10 17:08:18 opfer Exp $
+
+  10 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  liferea-1.2.23.ebuild:
+  stable x86, security bug 143301
 
   05 Sep 2007; Daniel Gryniewicz <dang@gentoo.org> liferea-1.2.23.ebuild,
   +liferea-1.4.1.ebuild:
