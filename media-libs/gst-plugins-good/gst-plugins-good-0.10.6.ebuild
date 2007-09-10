@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.6.ebuild,v 1.5 2007/09/09 17:09:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.6.ebuild,v 1.6 2007/09/10 16:28:06 nixnut Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins-good gst-plugins10 gnome2 eutils flag-o-matic libtool
@@ -10,7 +10,7 @@ HOMEPAGE="http://gstreamer.net/"
 SRC_URI="http://gstreamer.freedesktop.org/src/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 
 RDEPEND=">=media-libs/gst-plugins-base-0.10.13
 	 >=media-libs/gstreamer-0.10.13
