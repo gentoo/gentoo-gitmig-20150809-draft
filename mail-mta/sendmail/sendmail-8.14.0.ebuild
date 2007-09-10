@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.0.ebuild,v 1.11 2007/06/15 21:38:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.0.ebuild,v 1.12 2007/09/10 09:09:48 lcars Exp $
 
 inherit eutils
 
@@ -68,7 +68,7 @@ src_compile() {
 }
 
 src_install () {
-	OBJDIR="obj.`uname -s`.`uname -r`.`arch`"
+	OBJDIR="obj.`uname -s`.`uname -r`.`uname -m`"
 	dodir /usr/bin /usr/lib
 	dodir /usr/share/man/man{1,5,8} /usr/sbin /var/log /usr/share/sendmail-cf
 	dodir /var/spool/{mqueue,clientmqueue} /etc/conf.d

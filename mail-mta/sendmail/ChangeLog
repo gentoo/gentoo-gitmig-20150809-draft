@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.76 2007/06/15 21:38:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.77 2007/09/10 09:09:48 lcars Exp $
+
+  10 Sep 2007; Andrea Barisani <lcars@gentoo.org> sendmail-8.13.6-r1.ebuild,
+  sendmail-8.13.7.ebuild, sendmail-8.13.7-r1.ebuild, sendmail-8.13.8.ebuild,
+  sendmail-8.14.0.ebuild, sendmail-8.14.1.ebuild:
+  Replacing arch invocation with uname, bug #191155.
 
   15 Jun 2007; Raúl Porcel <armin76@gentoo.org> sendmail-8.13.8.ebuild,
   sendmail-8.14.0.ebuild:
