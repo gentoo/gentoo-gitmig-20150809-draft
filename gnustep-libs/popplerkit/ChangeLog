@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-libs/popplerkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.5 2007/02/06 14:16:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.6 2007/09/10 14:07:31 voyageur Exp $
+
+*popplerkit-0.2 (10 Sep 2007)
+
+  10 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -popplerkit-0.0.0.20050609.ebuild, -popplerkit-0.0.0.20050720.ebuild,
+  +popplerkit-0.2.ebuild:
+  Bump from GNUstep overlay
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
