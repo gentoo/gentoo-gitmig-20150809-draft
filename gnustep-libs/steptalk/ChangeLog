@@ -1,6 +1,16 @@
 # ChangeLog for gnustep-libs/steptalk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/ChangeLog,v 1.10 2007/06/24 18:03:06 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/ChangeLog,v 1.11 2007/09/10 18:08:10 voyageur Exp $
+
+*steptalk-0.10.0-r1 (10 Sep 2007)
+
+  10 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/steptalk-0.10.0-gnustep-make-2.patch,
+  -steptalk-0.8.3_pre20050312.ebuild, -steptalk-0.9.0.ebuild,
+  -steptalk-0.9.1.ebuild, -steptalk-0.10.0.ebuild,
+  +steptalk-0.10.0-r1.ebuild:
+  Version bump from the GNUstep overlay
+  Remove old versions
 
   24 Jun 2007; Piotr Jaroszyński <peper@gentoo.org> steptalk-0.9.1.ebuild,
   steptalk-0.10.0.ebuild:
