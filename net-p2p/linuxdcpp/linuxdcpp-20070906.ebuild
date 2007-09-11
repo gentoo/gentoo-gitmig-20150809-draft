@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-20070906.ebuild,v 1.1 2007/09/06 17:54:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-20070906.ebuild,v 1.2 2007/09/11 11:29:42 armin76 Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ RDEPEND=">=gnome-base/libglade-2.4
 	app-arch/bzip2
 	dev-libs/openssl"
 DEPEND="${RDEPEND}
+	media-libs/fontconfig
 	>=dev-util/scons-0.96
 	dev-util/pkgconfig"
 
