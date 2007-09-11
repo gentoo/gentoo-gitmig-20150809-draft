@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.3-r1.ebuild,v 1.10 2007/08/09 15:06:55 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.3-r1.ebuild,v 1.11 2007/09/11 03:09:50 jer Exp $
 
 inherit perl-module eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/C/CS/CSOE/${P}.tar.gz"
 
 LICENSE="Artistic as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc sh sparc x86"
 IUSE="opengl badval gsl"
 
 DEPEND=">=sys-libs/ncurses-5.2
@@ -45,7 +45,8 @@ src_unpack() {
 	fi
 
 	# Unconditional -fPIC for the lib (#55238)
-	sed -i -e "s/mycompiler -c -o/mycompiler -fPIC -c -o/" ${S}/Lib/Slatec/Makefile.PL
+	sed -i -e "s/mycompiler -c /mycompiler -fPIC -c /" \
+		${S}/Lib/Slatec/Makefile.PL || die "sed failed"
 }
 
 src_install() {
