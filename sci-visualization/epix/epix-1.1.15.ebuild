@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.1.15.ebuild,v 1.2 2007/09/11 01:31:32 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.1.15.ebuild,v 1.3 2007/09/11 13:33:20 markusle Exp $
 
 inherit elisp-common flag-o-matic toolchain-funcs
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="emacs"
 
-DEPEND="virtual/tetex"
-RDEPEND="emacs? ( virtual/emacs )"
+DEPEND="virtual/tetex
+		emacs? ( virtual/emacs )"
+
 SITEFILE=50${PN}-gentoo.el
 
 src_unpack() {
