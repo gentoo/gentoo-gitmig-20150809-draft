@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-apps/projectcenter
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.13 2007/08/22 16:30:01 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.14 2007/09/11 19:28:10 voyageur Exp $
+
+*projectcenter-0.4.3_p25340 (11 Sep 2007)
+
+  11 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/pc-non-flattened.patch, -projectcenter-0.4.2.ebuild,
+  -projectcenter-0.4.3.ebuild, +projectcenter-0.4.3_p25340.ebuild:
+  Version bump, correct ~amd64 support and gnustep-make-2 compatible
+  Remove old versions
 
   22 Aug 2007; Roy Marples <uberlord@gentoo.org> projectcenter-0.4.3.ebuild:
   Keyworded ~x86-fbsd, #183467 thanks to Nathan Smith.
