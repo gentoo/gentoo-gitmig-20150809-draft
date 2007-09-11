@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7699 2007/09/11 19:00:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7700 2007/09/11 23:13:51 mabi Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Matti Bickel <mabi@gentoo.org> (12 Sep 2007)
+# Broken (bug #167468), use x11-wm/ion3 instead
+x11-wm/ion2
 
 # Bernard Cafarelli <voyageur@gentoo.org> (11 Sep 2007)
 # Mask PDFkit and the applications that use/need it
