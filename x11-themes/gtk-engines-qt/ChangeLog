@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.21 2007/06/18 18:38:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.22 2007/09/11 22:48:06 genstef Exp $
+
+*gtk-engines-qt-0.8 (11 Sep 2007)
+
+  11 Sep 2007; Stefan Schweizer <genstef@gentoo.org>
+  +gtk-engines-qt-0.8.ebuild:
+  version bump thanks to Vladimir <civil.over@gmail.com> in bug 192162
 
   18 Jun 2007; Diego Pettenò <flameeyes@gentoo.org>
   gtk-engines-qt-0.7_p20070327-r2.ebuild:
