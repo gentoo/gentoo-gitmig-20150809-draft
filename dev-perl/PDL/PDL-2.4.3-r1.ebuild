@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.3-r1.ebuild,v 1.11 2007/09/11 03:09:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.3-r1.ebuild,v 1.12 2007/09/11 16:38:06 jer Exp $
 
 inherit perl-module eutils multilib
 
@@ -44,9 +44,8 @@ src_unpack() {
 			${S}/perldl.conf
 	fi
 
-	# Unconditional -fPIC for the lib (#55238)
-	sed -i -e "s/mycompiler -c /mycompiler -fPIC -c /" \
-		${S}/Lib/Slatec/Makefile.PL || die "sed failed"
+	# Unconditional -fPIC for the lib (#55238, #180807)
+	epatch "${FILESDIR}/${P}-PIC.patch"
 }
 
 src_install() {
