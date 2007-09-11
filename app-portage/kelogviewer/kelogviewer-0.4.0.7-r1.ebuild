@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/kelogviewer-0.4.0.7-r1.ebuild,v 1.2 2007/09/11 18:36:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/kelogviewer-0.4.0.7-r1.ebuild,v 1.3 2007/09/11 18:55:04 opfer Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_install() {
 pkg_postinst() {
 	elog
 	elog "In order to use this software, you need to activate"
-	elog "Portage's elog features.	Required is"
+	elog "Portage's elog features.  Required is"
 	elog "		 PORTAGE_ELOG_SYSTEM=\"save\" "
 	elog "and at least one out of "
 	elog "		 PORTAGE_ELOG_CLASSES=\"warn error info log qa\""
