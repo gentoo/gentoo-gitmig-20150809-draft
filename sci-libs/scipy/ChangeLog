@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.21 2007/09/09 14:27:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.22 2007/09/11 17:32:38 bicatali Exp $
+
+  11 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/scipy-0.5.2-cdf.patch, -files/scipy-0.5.2-getpath.patch,
+  -files/scipy-0.5.2-mio.patch, -files/scipy-0.5.2-umfpack.patch,
+  scipy-0.5.2.1.ebuild:
+  fixed conflict with cdf (bug #191593), removed old versions
 
   09 Sep 2007; Joseph Jezak <josejx@gentoo.org> scipy-0.5.2.1.ebuild:
   Marked ~ppc for bug #191600.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.5.2.1.ebuild,v 1.3 2007/09/09 14:27:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.5.2.1.ebuild,v 1.4 2007/09/11 17:32:38 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -61,6 +61,7 @@ scipy_fortran_setup() {
 # see numpy ebuild about unsetting LDFLAGS
 LDFLAGS_sav="${LDFLAGS}"
 unset LDFLAGS
+
 pkg_setup() {
 	[[ -n "${LDFLAGS_sav}" ]] && einfo "Ignoring LDFLAGS=${LDFLAGS_sav}"
 	if use umfpack && ! built_with_use dev-lang/swig python; then
@@ -90,6 +91,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${TP}-minpack.patch
 	epatch "${FILESDIR}"/${TP}-bspline.patch
 	epatch "${FILESDIR}"/${TP}-nonexisting.patch
+	epatch "${FILESDIR}"/${TP}-cdf.patch
 	use sandbox && cp "${FILESDIR}"/enabled_packages.txt Lib/sandbox/
 }
 
