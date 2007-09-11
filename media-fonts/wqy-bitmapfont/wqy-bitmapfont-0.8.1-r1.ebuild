@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-bitmapfont/wqy-bitmapfont-0.8.1-r1.ebuild,v 1.1 2007/08/07 15:11:22 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-bitmapfont/wqy-bitmapfont-0.8.1-r1.ebuild,v 1.2 2007/09/11 02:57:43 jer Exp $
 
 inherit font
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://wqy.sourceforge.net/en/"
 SRC_URI="mirror://sourceforge/wqy/${PN}-pcf-${PV}-7.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm hppa ~ia64 ~ppc ~s390 ~sh ~x86 ~x86-fbsd"
 IUSE=""
 DEPEND=""
 S="${WORKDIR}/${PN}"
