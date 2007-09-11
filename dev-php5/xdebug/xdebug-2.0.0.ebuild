@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/xdebug-2.0.0.ebuild,v 1.1 2007/08/16 21:39:08 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/xdebug-2.0.0.ebuild,v 1.2 2007/09/11 19:35:46 hoffie Exp $
 
 PHP_EXT_NAME="xdebug"
 PHP_EXT_INI="yes"
@@ -34,7 +34,7 @@ src_install() {
 
 	php-ext-base-r1_addtoinifiles "xdebug.auto_trace" '"0"'
 	php-ext-base-r1_addtoinifiles "xdebug.trace_output_dir" '"/tmp"'
-	php-ext-base-r1_addtoinifiles "xdebug.trace_output_name" '"crc32"'
+	php-ext-base-r1_addtoinifiles "xdebug.trace_output_name" '"trace.%c"'
 	php-ext-base-r1_addtoinifiles "xdebug.trace_format" '"0"'
 	php-ext-base-r1_addtoinifiles "xdebug.trace_options" '"0"'
 	php-ext-base-r1_addtoinifiles "xdebug.collect_includes" '"1"'
@@ -61,7 +61,7 @@ src_install() {
 	php-ext-base-r1_addtoinifiles "xdebug.dump_undefined" '"0"'
 	php-ext-base-r1_addtoinifiles "xdebug.profiler_enable" '"0"'
 	php-ext-base-r1_addtoinifiles "xdebug.profiler_output_dir" '"/tmp"'
-	php-ext-base-r1_addtoinifiles "xdebug.profiler_output_name" '"crc32"'
+	php-ext-base-r1_addtoinifiles "xdebug.profiler_output_name" '"cachegrind.out.%p"'
 	php-ext-base-r1_addtoinifiles "xdebug.profiler_enable_trigger" '"0"'
 	php-ext-base-r1_addtoinifiles "xdebug.profiler_append" '"0"'
 	php-ext-base-r1_addtoinifiles "xdebug.profiler_aggregate" '"0"'
