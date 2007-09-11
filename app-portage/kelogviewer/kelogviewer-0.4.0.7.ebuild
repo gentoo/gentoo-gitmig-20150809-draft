@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/kelogviewer-0.4.0.7.ebuild,v 1.8 2007/04/16 18:19:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/kelogviewer-0.4.0.7.ebuild,v 1.9 2007/09/11 18:36:26 opfer Exp $
 
 DESCRIPTION="KDE based utility to parse the contents of elogs created by Portage"
-HOMEPAGE="http://sourceforge.net/projects/elogviewer"
+HOMEPAGE="http://sourceforge.net/projects/elogviewer/"
 SRC_URI="mirror://sourceforge/elogviewer/${P}.tgz"
 
 LICENSE="GPL-2"
