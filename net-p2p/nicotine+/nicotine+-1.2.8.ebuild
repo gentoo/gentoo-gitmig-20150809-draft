@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.8.ebuild,v 1.5 2007/07/08 20:50:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.8.ebuild,v 1.6 2007/09/11 11:13:20 armin76 Exp $
 
 inherit distutils eutils multilib toolchain-funcs
 
@@ -23,6 +23,13 @@ RDEPEND="virtual/python
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-apps/sed-4"
+
+pkg_setup() {
+	if ! built_with_use x11-libs/cairo svg; then
+		eerror "x11-libs/cairo must be built with the 'svg' USE flag"
+		die "Recompile x11-libs/cairo with enabled svg USE flag"
+	fi
+}
 
 src_compile() {
 	distutils_src_compile
