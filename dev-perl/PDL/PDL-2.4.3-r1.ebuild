@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.3-r1.ebuild,v 1.12 2007/09/11 16:38:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.3-r1.ebuild,v 1.13 2007/09/11 17:11:42 jer Exp $
 
 inherit perl-module eutils multilib
 
@@ -31,8 +31,16 @@ mydoc="DEPENDENCIES DEVELOPMENT MANIFEST* Release_Notes TODO"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	cd ${S}; epatch ${FILESDIR}/PDL-2.4.2-makemakerfix.patch
+	epatch "${FILESDIR}/PDL-2.4.2-makemakerfix.patch"
+
+	# Unconditional -fPIC for the lib (#55238, #180807)
+	epatch "${FILESDIR}/${P}-PIC.patch"
+
+	# TODO: everything in this function below this
+	# TODO: line really belongs in src_compile() :
+
 	# This 'fix' breaks compiles for non-opengl users
 	#if ! use opengl ; then
 	#	sed -e "s:WITH_3D => undef:WITH_3D => 0:" \
@@ -40,12 +48,15 @@ src_unpack() {
 	#fi
 
 	if use badval ; then
-		sed -i -e "s:WITH_BADVAL => 0:WITH_BADVAL => 1:" \
-			${S}/perldl.conf
+		sed -i -e "s:WITH_BADVAL => 0:WITH_BADVAL => 1:" "${S}/perldl.conf"
 	fi
 
-	# Unconditional -fPIC for the lib (#55238, #180807)
-	epatch "${FILESDIR}/${P}-PIC.patch"
+	# Turn off GSL automagic:
+	if use gsl ; then
+		sed -i -e "s:WITH_GSL => undef:WITH_GSL => 1:" "${S}/perldl.conf"
+	else
+		sed -i -e "s:WITH_GSL => undef:WITH_GSL => 0:" "${S}/perldl.conf"
+	fi
 }
 
 src_install() {
