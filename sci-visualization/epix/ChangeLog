@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/epix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.14 2007/09/09 14:09:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.15 2007/09/11 01:31:32 markusle Exp $
+
+  11 Sep 2007; Markus Dittrich <markusle@gentoo.org> epix-1.1.15.ebuild:
+  Added emacs support (see bug #182056). Thanks much to
+  <opfer@gentoo.org> for his patch.
 
 *epix-1.1.15 (09 Sep 2007)
 

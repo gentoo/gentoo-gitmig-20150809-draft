@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.1.15.ebuild,v 1.1 2007/09/09 14:09:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.1.15.ebuild,v 1.2 2007/09/11 01:31:32 markusle Exp $
 
-inherit toolchain-funcs flag-o-matic
+inherit elisp-common flag-o-matic toolchain-funcs
 
 DESCRIPTION="2- and 3-D plotter for creating images (to be used in LaTeX)"
 HOMEPAGE="http://mathcs.holycross.edu/~ahwang/current/ePiX.html"
@@ -11,9 +11,11 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="emacs"
 
 DEPEND="virtual/tetex"
+RDEPEND="emacs? ( virtual/emacs )"
+SITEFILE=50${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
@@ -24,5 +26,20 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
+	if use emacs; then
+		# do compilation here as the make install target will
+		# create the .el file
+		elisp-compile *.el || die "elisp-compile failed!"
+		elisp-install ${PN} *.elc *.el || die "elisp-install failed!"
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+	fi
+}
+
+pkg_postinst() {
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
