@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/granule
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/granule/ChangeLog,v 1.1 2007/09/11 19:13:58 angelos Exp $
+
+*granule-1.2.4 (11 Sep 2007)
+
+  11 Sep 2007; Christoph Mende <angelos@gentoo.org> +granule-1.2.4.ebuild:
+  Initial import
+
