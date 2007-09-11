@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/gworkspace
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.22 2007/09/10 16:24:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.23 2007/09/11 18:52:36 voyageur Exp $
+
+  11 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  gworkspace-0.7.1.ebuild:
+  Dropped conditional depend on masked package, updated SRC_URI
 
 *gworkspace-0.8.6 (10 Sep 2007)
 
