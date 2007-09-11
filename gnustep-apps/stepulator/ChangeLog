@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-apps/stepulator
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stepulator/ChangeLog,v 1.5 2007/08/18 15:24:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stepulator/ChangeLog,v 1.6 2007/09/11 11:11:03 voyageur Exp $
+
+*stepulator-1.0-r2 (11 Sep 2007)
+
+  11 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -stepulator-1.0.ebuild, -stepulator-1.0-r1.ebuild,
+  +stepulator-1.0-r2.ebuild:
+  Port to new gnustep eclasses
+  Remove old versions
 
   18 Aug 2007; Christoph Mende <angelos@gentoo.org>
   stepulator-1.0-r1.ebuild:

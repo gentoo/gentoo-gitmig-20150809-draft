@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stepulator/stepulator-1.0-r1.ebuild,v 1.3 2007/08/18 15:24:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stepulator/stepulator-1.0-r2.ebuild,v 1.1 2007/09/11 11:11:03 voyageur Exp $
 
-inherit gnustep
+inherit gnustep-2
 
 S=${WORKDIR}/${PN/s/S}-gs
 
@@ -12,9 +12,3 @@ SRC_URI="http://www.linuks.mine.nu/stepulator/${PN}-gs-${PV}.tar.Z"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-
-IUSE=""
-DEPEND="${GS_DEPEND}"
-RDEPEND="${GS_RDEPEND}"
-
-egnustep_install_domain "Local"
