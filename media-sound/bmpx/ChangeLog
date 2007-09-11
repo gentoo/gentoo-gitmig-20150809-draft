@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.63 2007/08/11 21:24:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.64 2007/09/11 21:16:19 drac Exp $
+
+*bmpx-0.40.3 (11 Sep 2007)
+
+  11 Sep 2007; Samuli Suominen <drac@gentoo.org> +bmpx-0.40.3.ebuild:
+  Version bump.
 
 *bmpx-0.40.1 (11 Aug 2007)
 
