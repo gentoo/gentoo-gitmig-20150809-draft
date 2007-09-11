@@ -1,0 +1,14 @@
+--- /tmp/elogviewer	2007-09-11 20:17:55.000000000 +0200
++++ /var/tmp/portage/app-portage/elogviewer-0.5.1-r1/work/elogviewer	2007-09-11 20:20:03.000000000 +0200
+@@ -226,7 +226,10 @@
+ 		def populate (self):
+ 			self.treestore.clear()
+ 			self.liststore.clear()
+-			for filename in os.listdir(os.getcwd()):
++ 			_tmplist=os.listdir(os.getcwd())
++ 			fileformat=re.compile('.*:.*:.*')
++ 			_tmplist=[ i for i in _tmplist if fileformat.search(i)!=None ]
++			for filename in _tmplist:
+ 				log  = LogEntry(filename)
+ 				### Liststore
+ 				self.liststore.append([log.category, log.package, 

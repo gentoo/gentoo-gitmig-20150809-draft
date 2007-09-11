@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/elogviewer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.16 2007/08/19 22:20:07 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.17 2007/09/11 18:31:52 opfer Exp $
+
+*elogviewer-0.5.1-r2 (11 Sep 2007)
+
+  11 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/elogviewer-0.5.1-filename-read.patch, +elogviewer-0.5.1-r2.ebuild:
+  apply patch to not crash for non-expected filenames; patch taken from bug
+  187595, written by Radice David <david.e.pi.3.14@gmail.com>
 
   19 Aug 2007; Ferris McCormick <fmccor@gentoo.org>
   elogviewer-0.5.1-r1.ebuild:
