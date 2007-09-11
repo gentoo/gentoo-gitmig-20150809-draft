@@ -1,6 +1,15 @@
 # ChangeLog for sci-astronomy/wcstools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.4 2007/06/05 16:35:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.5 2007/09/11 11:21:24 bicatali Exp $
+
+*wcstools-3.7.0 (11 Sep 2007)
+
+  11 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/wcstools-3.6.7-codewarn.patch,
+  +files/wcstools-3.7.0-autotools.patch,
+  +files/wcstools-3.7.0-fix-leaks.patch,
+  +files/wcstools-3.7.0-fix-warnings.patch, +wcstools-3.7.0.ebuild:
+  Version bump. Adapted patches and fixed leaks. Closing bug #191884
 
 *wcstools-3.6.8 (05 Jun 2007)
 

@@ -1,0 +1,1065 @@
+diff -Nur ../wcstools-3.7.0.orig/bincat.c ./bincat.c
+--- ../wcstools-3.7.0.orig/bincat.c	2007-09-11 11:16:02.875152620 +0100
++++ ./bincat.c	2007-09-11 11:16:23.654508873 +0100
+@@ -90,7 +90,7 @@
+     char *lastchar;
+     char filename[128];
+     FILE *flist;
+-    char *listfile;
++    char *listfile = NULL;
+     char rastr[32], decstr[32];
+     double x, y;
+     char cs1;
+diff -Nur ../wcstools-3.7.0.orig/cphead.c ./cphead.c
+--- ../wcstools-3.7.0.orig/cphead.c	2007-09-11 11:16:02.899153988 +0100
++++ ./cphead.c	2007-09-11 11:16:23.670501784 +0100
+@@ -357,7 +357,7 @@
+     double dval;
+     int ival, nch;
+     int iraffile;
+-    int ndec, nbheadout, nbheadin, nbheader;
++    int ndec, nbheadout = 0, nbheadin, nbheader;
+     char newname[128];
+     char string[80];
+     char *kw, *kwe, *filepath, *fname, *ext, *imext, *imext1;
+diff -Nur ../wcstools-3.7.0.orig/crlf.c ./crlf.c
+--- ../wcstools-3.7.0.orig/crlf.c	2007-09-11 11:16:02.899153988 +0100
++++ ./crlf.c	2007-09-11 11:16:23.686494696 +0100
+@@ -99,7 +99,7 @@
+ 		if (buffer[i] == (char) 13)
+ 		    buffer[i] = (char) 10;
+ 		}
+-	    (void) write (1, buffer, nbr);
++	    write (1, buffer, nbr);
+ 	    }
+ 	}
+    return;
+diff -Nur ../wcstools-3.7.0.orig/delhead.c ./delhead.c
+--- ../wcstools-3.7.0.orig/delhead.c	2007-09-11 11:16:02.899153988 +0100
++++ ./delhead.c	2007-09-11 11:16:23.702487608 +0100
+@@ -551,7 +551,7 @@
+ char *header;	/* FITS header */
+ int verbose;	/* If true, print deletion confirmations */
+ {
+-    char *hplace, *hcom, *v, *v1, *v2, *ve;
++    char *hplace, *hcom, *v, *v2, *ve;
+     int i, killcom, nline;
+     int nkill = 0;
+ 
+@@ -585,7 +585,7 @@
+ 
+ 	    /* Fill line with blanks */
+ 	    else {
+-		for (i = 0; i++; i < 80)
++		for (i = 0; i < 80; i++)
+ 		    hcom[i] = ' ';
+ 		hplace = hplace + 80;
+ 		}
+diff -Nur ../wcstools-3.7.0.orig/delwcs.c ./delwcs.c
+--- ../wcstools-3.7.0.orig/delwcs.c	2007-09-11 11:16:02.899153988 +0100
++++ ./delwcs.c	2007-09-11 11:16:23.722478748 +0100
+@@ -114,7 +114,7 @@
+ 
+ {
+     char *header;	/* FITS image header */
+-    char *image;	/* Image pixels */
++    char *image = NULL;	/* Image pixels */
+     int lhead;		/* Maximum number of bytes in FITS header */
+     int nbhead;		/* Actual number of bytes in FITS header */
+     int iraffile;	/* 1 if IRAF image */
+diff -Nur ../wcstools-3.7.0.orig/edhead.c ./edhead.c
+--- ../wcstools-3.7.0.orig/edhead.c	2007-09-11 11:16:02.899153988 +0100
++++ ./edhead.c	2007-09-11 11:16:23.762461027 +0100
+@@ -210,8 +210,8 @@
+ 		    break;
+ 		}
+ 	    nbytes = i + 1;
+-	    (void) fwrite (headline, 1, nbytes, fd);
+-	    (void) fwrite (newline, 1, 1, fd);
++	    fwrite (headline, 1, nbytes, fd);
++	    fwrite (newline, 1, 1, fd);
+ 	    }
+ 	fclose (fd);
+ 	free (header);
+diff -Nur ../wcstools-3.7.0.orig/filename.c ./filename.c
+--- ../wcstools-3.7.0.orig/filename.c	2007-09-11 11:16:02.899153988 +0100
++++ ./filename.c	2007-09-11 11:16:23.786450395 +0100
+@@ -39,7 +39,7 @@
+ {
+     char *fn, *fn0;
+     char *str;
+-    char *name;
++    char *name = NULL;
+     char *is[10];
+     char *endroot;
+     int i, n;
+diff -Nur ../wcstools-3.7.0.orig/getcol.c ./getcol.c
+--- ../wcstools-3.7.0.orig/getcol.c	2007-09-11 11:16:02.923155356 +0100
++++ ./getcol.c	2007-09-11 11:16:23.810439763 +0100
+@@ -447,7 +447,7 @@
+ 		nop++;
+ 		}
+ 	    else
+-		printf (" Constants %s, %s, or operation %s illegal\n",sop1,sop2,opi[0]);
++		printf (" Constants %s, %s, or operation %c illegal\n",sop1,sop2,opi[0]);
+ 	    }
+ 
+ 	/* File to read */
+diff -Nur ../wcstools-3.7.0.orig/getdate.c ./getdate.c
+--- ../wcstools-3.7.0.orig/getdate.c	2007-09-11 11:16:02.923155356 +0100
++++ ./getdate.c	2007-09-11 11:16:23.830430903 +0100
+@@ -409,10 +409,10 @@
+     int year, vyear;
+     int lfd, oldfits;
+     char outform[16];
+-    char *fitsdate, *newfdate, *stdate;
++    char *fitsdate = NULL, *newfdate, *stdate;
+     char temp[64];
+     char fyear[16];
+-    char ts0[8];
++    char ts0[9];
+     char *tchar;
+     int its, its1;
+     time_t lts;
+diff -Nur ../wcstools-3.7.0.orig/getpix.c ./getpix.c
+--- ../wcstools-3.7.0.orig/getpix.c	2007-09-11 11:16:02.923155356 +0100
++++ ./getpix.c	2007-09-11 11:16:23.846423815 +0100
+@@ -68,7 +68,7 @@
+     char *fn;
+     char *rrange;       /* Row range string */
+     char *crange;       /* Column range string */
+-    char *rstr;
++    char *rstr = NULL;
+     char *dstr = NULL;
+     char *cstr;
+     int systemp;
+diff -Nur ../wcstools-3.7.0.orig/gettab.c ./gettab.c
+--- ../wcstools-3.7.0.orig/gettab.c	2007-09-11 11:16:02.923155356 +0100
++++ ./gettab.c	2007-09-11 11:16:23.862416727 +0100
+@@ -558,7 +558,7 @@
+ char	*alias[]; /* Output names of keywords if different from input */
+ 
+ {
+-    char *str;
++    char *str = NULL;
+     char *cstr, *cval, cvalue[64];
+     int pass = 0;
+     int drop;
+diff -Nur ../wcstools-3.7.0.orig/imcat.c ./imcat.c
+--- ../wcstools-3.7.0.orig/imcat.c	2007-09-11 11:16:02.975158319 +0100
++++ ./imcat.c	2007-09-11 11:16:23.886406094 +0100
+@@ -109,9 +109,6 @@
+     char **fn;
+     int i, ic;
+     int nx, ny;
+-    char *header;
+-    double cra, cdec, dra, ddec, secpix;
+-    int wp, hp, bitpix;
+     double x, y;
+     char *refcatname[5];	/* reference catalog name */
+     int ncat = 0;
+@@ -123,7 +120,7 @@
+     int scat = 0;
+     char c1, c, *ccom;
+     double drot;
+-    struct WorldCoor *wcs = NULL; /* World coordinate system structure */
++    /*struct WorldCoor *wcs = NULL;*/ /* World coordinate system structure */
+ 
+     nfile = 0;
+     fn = (char **)calloc (maxnfile, sizeof(char *));
+@@ -1777,7 +1774,7 @@
+ 		    sprintf (headline, "%s	%s	%s	%5.1f	%5.1f	%d",
+ 		     numstr,rastr,decstr,gm[0][i],gm[1][i],gc[i]);
+ 		else if (refcat == SKYBOT)
+-		    sprintf (headline, "%s	%s	%s	%5.2f	%5.2f	%5.2f",
++		    sprintf (headline, "%s	%s	%s	%5.2f	%5.2f	%5.2f %5.2f",
+ 		     numstr,rastr,decstr,gm[0][i],gm[1][i],gm[2][i],gm[3][i]);
+ 		else if (refcat == UJC)
+ 		    sprintf (headline, "%s	%s	%s	%5.2f	%d",
+diff -Nur ../wcstools-3.7.0.orig/imfill.c ./imfill.c
+--- ../wcstools-3.7.0.orig/imfill.c	2007-09-11 11:16:02.975158319 +0100
++++ ./imfill.c	2007-09-11 11:16:23.914393690 +0100
+@@ -313,7 +313,7 @@
+     int nfilled;
+     int nbadpix;
+     int i;
+-    char *irafheader;		/* IRAF image header */
++    char *irafheader = NULL;		/* IRAF image header */
+     char newname[256];		/* Name for revised image */
+     char *ltime;
+     char *endchar;
+diff -Nur ../wcstools-3.7.0.orig/imsmooth.c ./imsmooth.c
+--- ../wcstools-3.7.0.orig/imsmooth.c	2007-09-11 11:16:02.999159687 +0100
++++ ./imsmooth.c	2007-09-11 11:16:23.946379514 +0100
+@@ -263,7 +263,7 @@
+     char *ext = NULL;
+     char *newimage = NULL;
+     char *imext = NULL;
+-    char *imext1;
++    char *imext1 = NULL;
+     char *fname;
+     char extname[16];
+     int lext = 0;
+diff -Nur ../wcstools-3.7.0.orig/imstack.c ./imstack.c
+--- ../wcstools-3.7.0.orig/imstack.c	2007-09-11 11:16:02.999159687 +0100
++++ ./imstack.c	2007-09-11 11:16:23.946379514 +0100
+@@ -194,7 +194,7 @@
+ 	    blanks = (char *) malloc ((size_t) nbytes);
+ 	    for (i = 0;  i < nbytes; i++)
+ 		blanks[i] = 0;
+-	    (void) fwrite (blanks, (size_t) 1, (size_t)nbytes, fstack);
++	    fwrite (blanks, (size_t) 1, (size_t)nbytes, fstack);
+ 	    free (blanks);
+ 	    }
+ 	}
+@@ -449,7 +449,7 @@
+ 			    blanks = (char *) malloc ((size_t) nbytes);
+ 			    for (i = 0;  i < nbytes; i++)
+ 				blanks[i] = 0;
+-			    (void) fwrite (blanks, (size_t) 1, (size_t)nbytes, fstack);
++			    fwrite (blanks, (size_t) 1, (size_t)nbytes, fstack);
+ 			    free (blanks);
+ 			    }
+ 			}
+diff -Nur ../wcstools-3.7.0.orig/libwcs/binread.c ./libwcs/binread.c
+--- ../wcstools-3.7.0.orig/libwcs/binread.c	2007-09-11 11:16:02.771146693 +0100
++++ ./libwcs/binread.c	2007-09-11 11:16:23.970368881 +0100
+@@ -505,7 +505,7 @@
+     struct Star *star;
+     char str[128];
+     int nmag;
+-    int mrv;
++    int mrv = 0;
+ 
+     nstar = 0;
+     starcat = binopen (bincat);
+@@ -694,7 +694,7 @@
+     int nmag;		/* Real number of magnitudes per entry (- rv) */
+     int jstar;
+     int nstar;
+-    double mag;
++    double mag = 0;
+     double num;
+     int magsort;
+     int istar = 0;
+@@ -1372,7 +1372,7 @@
+ 	for (i = 0; i < nmag; i++) {
+ 	    moveb (sc->catline, (char *) st->mag, 2, sc->entmag[0]+(i*2), i*2);
+ 	    if (sc->byteswapped)
+-		binswap2 (&st->mag[i], 2);
++		binswap2 ((char*)&st->mag[i], 2);
+ 	    st->xmag[i] = 0.01 * (double) st->mag[i];
+ 	    }
+ 	}
+diff -Nur ../wcstools-3.7.0.orig/libwcs/catutil.c ./libwcs/catutil.c
+--- ../wcstools-3.7.0.orig/libwcs/catutil.c	2007-09-11 11:16:02.771146693 +0100
++++ ./libwcs/catutil.c	2007-09-11 11:16:23.994358249 +0100
+@@ -737,7 +737,7 @@
+ 	    lname = 0;
+ 	else
+ 	    lname = strlen (refcatname);
+-	catname = (char *)calloc (lname + 16, 1);
++	catname = (char *)calloc (lname + 37, 1);
+ 	if (lname > 0)
+ 	    sprintf (catname, "%s sources", refcatname);
+ 	else
+diff -Nur ../wcstools-3.7.0.orig/libwcs/fileutil.c ./libwcs/fileutil.c
+--- ../wcstools-3.7.0.orig/libwcs/fileutil.c	2007-09-11 11:16:02.771146693 +0100
++++ ./libwcs/fileutil.c	2007-09-11 11:16:24.010351161 +0100
+@@ -343,7 +343,7 @@
+     /* If line can be read, add null at the end of the first token */
+     if (fgets (token, ncmax, diskfile) != NULL) {
+ 	if (token[0] == '#') {
+-	    (void) fgets (token, ncmax, diskfile);
++	    fgets (token, ncmax, diskfile);
+ 	    }
+ 
+ 	/* If only character is a control character, return a NULL */
+diff -Nur ../wcstools-3.7.0.orig/libwcs/findstar.c ./libwcs/findstar.c
+--- ../wcstools-3.7.0.orig/libwcs/findstar.c	2007-09-11 11:16:02.771146693 +0100
++++ ./libwcs/findstar.c	2007-09-11 11:16:24.038338757 +0100
+@@ -747,7 +747,7 @@
+     double sd = 0.0;
+     int i;
+     int npix;
+-    double dnpix;
++    double dnpix = 0;
+     double sum;
+ 
+     pmin = -1.0e20;
+diff -Nur ../wcstools-3.7.0.orig/libwcs/fitsfile.c ./libwcs/fitsfile.c
+--- ../wcstools-3.7.0.orig/libwcs/fitsfile.c	2007-09-11 11:16:02.775146921 +0100
++++ ./libwcs/fitsfile.c	2007-09-11 11:16:24.062328125 +0100
+@@ -874,7 +874,7 @@
+     if (!simple) {
+ 	nbytes = getfilesize (filename) - nbhead;
+ 	if ((image = (char *) malloc (nbytes + 1)) == NULL) {
+-	    snprintf (fitserrmsg,79, "FITSRFULL:  %d-byte image buffer cannot be allocated\n");
++	    snprintf (fitserrmsg,79, "FITSRFULL:  %d-byte image buffer cannot be allocated\n", nbytes);
+ 	    (void)close (fd);
+ 	    return (NULL);
+ 	    }
+diff -Nur ../wcstools-3.7.0.orig/libwcs/gsc2read.c ./libwcs/gsc2read.c
+--- ../wcstools-3.7.0.orig/libwcs/gsc2read.c	2007-09-11 11:16:02.775146921 +0100
++++ ./libwcs/gsc2read.c	2007-09-11 11:16:24.086317492 +0100
+@@ -191,7 +191,7 @@
+ 
+     /* Dump returned file and stop */
+     if (nlog < 0) {
+-	(void) fwrite  (tabtable->tabbuff, tabtable->lbuff, 1, stdout);
++	fwrite  (tabtable->tabbuff, tabtable->lbuff, 1, stdout);
+ 	exit (0);
+ 	}
+ 
+@@ -293,7 +293,7 @@
+     char *databuff;
+     char *lastbuff;
+     char *oldbuff;
+-    char *colhead, *colsep;
++    /*char *colhead, *colsep;*/
+     int lhead, lbuff, i, j;
+     char ctab = (char) 9;
+     char ccom = ',';
+diff -Nur ../wcstools-3.7.0.orig/libwcs/gscread.c ./libwcs/gscread.c
+--- ../wcstools-3.7.0.orig/libwcs/gscread.c	2007-09-11 11:16:02.775146921 +0100
++++ ./libwcs/gscread.c	2007-09-11 11:16:24.114305088 +0100
+@@ -512,7 +512,7 @@
+ 	    }
+ 
+ 	/* Close region input file */
+-	(void) close (ift);
++	close (ift);
+ 	itot = itot + itable;
+ 	if (nlog > 0)
+ 	    fprintf (stderr,"GSCREAD: %4d / %4d: %5d / %5d  / %5d sources from region %4d    \n",
+@@ -549,7 +549,7 @@
+ int	*gtype;		/* Array of object types (returned) */
+ int	nlog;		/* 1 for diagnostics */
+ {
+-    char *table;		/* FITS table */
++    char *table = NULL;		/* FITS table */
+     char inpath[64];		/* Pathname for input FITS table file */
+     char entry[100];		/* Buffer for FITS table row */
+     int class;			/* Object class (0>star, 3>other) */
+@@ -574,7 +574,7 @@
+     double perr0 = 0.0;
+     double ra0 = 0.0;
+     double dec0 = 0.0;
+-    char *str;
++    char *str = NULL;
+     char *url;
+ 
+     itot = 0;
+@@ -756,7 +756,7 @@
+ 	    }
+ 
+ 	/* Close region input file */
+-	(void) close (ift);
++	close (ift);
+ 	itot = itot + itable;
+ 	if (nlog > 0)
+ 	    fprintf (stderr,"GSCRNUM: %4d / %4d: %5d / %5d sources, region %4d.%04d\n",
+@@ -795,7 +795,7 @@
+     int rlist[100];	/* List of input FITS tables files */
+     char inpath[64];	/* Pathname for input FITS table file */
+     char entry[100];	/* Buffer for FITS table row */
+-    int class, class0;	/* Object class (0>star, 3>other) */
++    int class = 0, class0 = 0;	/* Object class (0>star, 3>other) */
+     int sysref=WCS_J2000;	/* Catalog coordinate system */
+     double eqref=2000.0;	/* Catalog equinox */
+     struct Keyword kw[8];	/* Keyword structure */
+@@ -808,9 +808,9 @@
+     int ik,nk,itable,ntable,jstar;
+     int nbline,npos,nbhead;
+     int nbr,nrmax,nstar,i;
+-    int ift, band0, band;
+-    double ra,ra0,rasum,dec,dec0,decsum,perr,perr0,perr2,perrsum,msum;
+-    double mag,mag0,merr,merr0,merr2,merrsum;
++    int ift, band0 = 0., band = 0.;
++    double ra,ra0 = 0.,rasum,dec,dec0 = 0.,decsum,perr,perr0 = 0.,perr2,perrsum,msum;
++    double mag,mag0 = 0.,merr,merr0 = 0.,merr2,merrsum;
+     double rra1, rra2, rdec1, rdec2;
+     double rdist, ddist;
+     char *str;
+@@ -830,11 +830,11 @@
+ 
+     /* Set image parameters */
+     bitpix = 0;
+-    (void)hgeti4 (header, "BITPIX", &bitpix);
++    hgeti4 (header, "BITPIX", &bitpix);
+     w = 0;
+-    (void)hgeti4 (header, "NAXIS1", &w);
++    hgeti4 (header, "NAXIS1", &w);
+     h = 0;
+-    (void)hgeti4 (header, "NAXIS2", &h);
++    hgeti4 (header, "NAXIS2", &h);
+ 
+     if (refcat == GSCACT) {
+ 	if ((str = getenv("GSCACT_NORTH")) == NULL)
+@@ -1080,7 +1080,7 @@
+ 	    }
+ 
+ 	/* Close region input file */
+-	(void) close (ift);
++	close (ift);
+ 	itot = itot + itable;
+ 	if (nlog > 0)
+ 	    fprintf (stderr,"GSCBIN: %4d / %4d: %5d / %5d  / %5d sources from region %4d    \n",
+@@ -1321,7 +1321,7 @@
+ 	jr2 = 0;
+ 	}
+ 
+-    (void) close (ift);
++    close (ift);
+     return (nrgn);
+ }
+ 
+@@ -1381,7 +1381,7 @@
+ double min;		/* Minutes of declination */
+ 
+     /* Get declination sign from table */
+-    (void) ftgetc (fitsline, &rkw[sgncol], sgn, 3);
++    ftgetc (fitsline, &rkw[sgncol], sgn, 3);
+ 
+     /* Get degrees of declination from table */
+     deg = ftgetr8 (fitsline, &rkw[dcol]);
+diff -Nur ../wcstools-3.7.0.orig/libwcs/hput.c ./libwcs/hput.c
+--- ../wcstools-3.7.0.orig/libwcs/hput.c	2007-09-11 11:16:02.775146921 +0100
++++ ./libwcs/hput.c	2007-09-11 11:16:24.142292684 +0100
+@@ -273,7 +273,7 @@
+ const char *cval;	/* character string containing the value for variable
+ 		   keyword.  trailing and leading blanks are removed.  */
+ {
+-    int lroot, lcv, i, ii, nkw, lkw, lval;
++    int lroot = 0, lcv, i, ii, nkw, lkw, lval;
+     int comment = 0;
+     const char *v;
+     char keyroot[8], newkey[12], value[80];
+@@ -599,7 +599,7 @@
+     char squot, slash, space;
+     char line[100];
+     int lkeyword, lcom, lhead, i, lblank, ln, nc, lc;
+-    char *vp, *v1, *v2, *c0, *c1, *q1, *q2;
++    char *vp, *v1, *v2, *c0, *c1, *q1, *q2=NULL;
+ 
+     squot = (char) 39;
+     slash = (char) 47;
+diff -Nur ../wcstools-3.7.0.orig/libwcs/imgetwcs.c ./libwcs/imgetwcs.c
+--- ../wcstools-3.7.0.orig/libwcs/imgetwcs.c	2007-09-11 11:16:02.775146921 +0100
++++ ./libwcs/imgetwcs.c	2007-09-11 11:16:24.158285596 +0100
+@@ -381,7 +381,7 @@
+     double xref, yref, degpix, secpix;
+     struct WorldCoor *wcs;
+     char temp[16];
+-    char *cwcs;
++    char *cwcs = NULL;
+ 
+     /* Set the world coordinate system from the image header */
+     if (strlen (filename) > 0) {
+diff -Nur ../wcstools-3.7.0.orig/libwcs/imhfile.c ./libwcs/imhfile.c
+--- ../wcstools-3.7.0.orig/libwcs/imhfile.c	2007-09-11 11:16:02.775146921 +0100
++++ ./libwcs/imhfile.c	2007-09-11 11:16:24.174278507 +0100
+@@ -910,10 +910,10 @@
+ 
+     /* Write IRAF header to disk file */
+     nbw = write (fd, irafheader, nbhead);
+-    (void) ftruncate (fd, nbhead);
++    ftruncate (fd, nbhead);
+     close (fd);
+     if (nbw < nbhead) {
+-	(void)fprintf(stderr, "IRAF header file %s: %d / %d bytes written.\n",
++	fprintf(stderr, "IRAF header file %s: %d / %d bytes written.\n",
+ 		      hdrname, nbw, nbhead);
+ 	return (-1);
+ 	}
+diff -Nur ../wcstools-3.7.0.orig/libwcs/imrotate.c ./libwcs/imrotate.c
+--- ../wcstools-3.7.0.orig/libwcs/imrotate.c	2007-09-11 11:16:02.775146921 +0100
++++ ./libwcs/imrotate.c	2007-09-11 11:16:24.190271419 +0100
+@@ -371,7 +371,6 @@
+ 
+ {
+     static char flds[15][8];
+-    char ctype1[16], ctype2[16];
+     double ctemp1, ctemp2, ctemp3, ctemp4, naxis1, naxis2;
+     int i, n, ndec1, ndec2, ndec3, ndec4;
+ 
+diff -Nur ../wcstools-3.7.0.orig/libwcs/imsetwcs.c ./libwcs/imsetwcs.c
+--- ../wcstools-3.7.0.orig/libwcs/imsetwcs.c	2007-09-11 11:16:02.775146921 +0100
++++ ./libwcs/imsetwcs.c	2007-09-11 11:16:24.206264331 +0100
+@@ -136,22 +136,22 @@
+     int nmax;		/* Maximum number of matches possible (nrg or nbs) */
+     int lofld = 0;	/* Length of object name field in output */
+     double mag1,mag2;
+-    int refcat;		/* reference catalog switch */
++    int refcat = 0;		/* reference catalog switch */
+     int nmag, mprop;
+     double dxys;
+     char numstr[32];
+     int minstars;
+-    int ngmax;
++    int ngmax = 0;
+     int nbin, nbytes;
+     int iterate, toliterate, nfiterate;
+-    int imag, magsort;
++    int imag, magsort = 0;
+     int niter = 0;
+     int recenter = recenter0;
+     int ret = 0;
+     int is, ig, igs, i, j;
+     char rstr[32], dstr[32];
+     double refeq, refep;
+-    double maxnum;
++    double maxnum = 0;
+     int nnfld;
+     int refsys;
+     char refcoor[8];
+diff -Nur ../wcstools-3.7.0.orig/libwcs/imutil.c ./libwcs/imutil.c
+--- ../wcstools-3.7.0.orig/libwcs/imutil.c	2007-09-11 11:16:02.775146921 +0100
++++ ./libwcs/imutil.c	2007-09-11 11:16:24.226255471 +0100
+@@ -164,7 +164,7 @@
+ {
+ char	*buffret;	/* Modified image buffer (returned) */
+ int	nx,ny;		/* Number of columns and rows in image */
+-int	ix,iy;		/* Pixel around which to compute mean */
++int	ix,iy = 0;	/* Pixel around which to compute mean */
+ int	npix;		/* Number of pixels in image */
+ int	bitpix;		/* Number of bits per pixel (<0=floating point) */
+ int	bitpixb;	/* Number of bits per pixel in bad pixel file */
+@@ -217,7 +217,7 @@
+ 		    if (*bb++) {
+ 			*b2++ = bpvali2;
+ 			nfilled++;
+-			*b1++;
++			b1++;
+ 			}
+ 		    else {
+ 			*b2++ = *b1++;
+@@ -236,7 +236,7 @@
+ 		    if (*bb++) {
+ 			*b2++ = bpvali2;
+ 			nfilled++;
+-			*b1++;
++			b1++;
+ 			}
+ 		    else {
+ 			*b2++ = *b1++;
+@@ -263,7 +263,7 @@
+ 		    if (*bb++) {
+ 			*b2++ = bpvali4;
+ 			nfilled++;
+-			*b1++;
++			b1++;
+ 			}
+ 		    else {
+ 			*b2++ = *b1++;
+@@ -282,7 +282,7 @@
+ 		    if (*bb++) {
+ 			*b2++ = bpvali4;
+ 			nfilled++;
+-			*b1++;
++			b1++;
+ 			}
+ 		    else {
+ 			*b2++ = *b1++;
+@@ -310,7 +310,7 @@
+ 		    if (*bb++) {
+ 			*b2++ = bpvalr4;
+ 			nfilled++;
+-			*b1++;
++			b1++;
+ 			}
+ 		    else {
+ 			*b2++ = *b1++;
+@@ -329,7 +329,7 @@
+ 		    if (*bb++) {
+ 			*b2++ = bpvalr4;
+ 			nfilled++;
+-			*b1++;
++			b1++;
+ 			}
+ 		    else {
+ 			*b2++ = *b1++;
+@@ -355,7 +355,7 @@
+ 		    if (*bb++) {
+ 			*b2++ = bpval;
+ 			nfilled++;
+-			*b1++;
++			b1++;
+ 			}
+ 		    else {
+ 			*b2++ = *b1++;
+@@ -374,7 +374,7 @@
+ 		    if (*bb++) {
+ 			*b2++ = bpval;
+ 			nfilled++;
+-			*b1++;
++			b1++;
+ 			}
+ 		    else {
+ 			*b2++ = *b1++;
+@@ -407,7 +407,7 @@
+ {
+ char	*buffret;	/* Modified image buffer (returned) */
+ int	nx,ny;		/* Number of columns and rows in image */
+-int	ix,iy;		/* Pixel around which to compute mean */
++int	ix,iy = 0;	/* Pixel around which to compute mean */
+ int	npix;		/* Number of pixels in image */
+ int	bitpix;		/* Number of bits per pixel (<0=floating point) */
+ int	checkmin = 0;
+@@ -450,12 +450,12 @@
+ 		if (checkmin && *bb < mnvali2) {
+ 		    *b2++ = bpvali2;
+ 		    nfilled++;
+-		    *b1++;
++		    b1++;
+ 		    }
+ 		else if (checkmax && *bb > mxvali2) {
+ 		    *b2++ = bpvali2;
+ 		    nfilled++;
+-		    *b1++;
++		    b1++;
+ 		    }
+ 		else {
+ 		    *b2++ = *b1++;
+@@ -482,12 +482,12 @@
+ 		if (checkmin && *bb < mnvali4) {
+ 		    *b2++ = bpvali4;
+ 		    nfilled++;
+-		    *b1++;
++		    b1++;
+ 		    }
+ 		else if (checkmax && *bb > mxvali4) {
+ 		    *b2++ = bpvali4;
+ 		    nfilled++;
+-		    *b1++;
++		    b1++;
+ 		    }
+ 		else {
+ 		    *b2++ = *b1++;
+@@ -514,12 +514,12 @@
+ 		if (checkmin && *bb < mnvalr4) {
+ 		    *b2++ = bpvalr4;
+ 		    nfilled++;
+-		    *b1++;
++		    b1++;
+ 		    }
+ 		else if (checkmax && *bb > mxvalr4) {
+ 		    *b2++ = bpvalr4;
+ 		    nfilled++;
+-		    *b1++;
++		    b1++;
+ 		    }
+ 		else {
+ 		    *b2++ = *b1++;
+@@ -546,12 +546,12 @@
+ 		if (checkmin && *bb < mnvalr8) {
+ 		    *b2++ = bpvalr8;
+ 		    nfilled++;
+-		    *b1++;
++		    b1++;
+ 		    }
+ 		else if (checkmax && *bb > mxvalr8) {
+ 		    *b2++ = bpvalr8;
+ 		    nfilled++;
+-		    *b1++;
++		    b1++;
+ 		    }
+ 		else {
+ 		    *b2++ = *b1++;
+@@ -589,7 +589,7 @@
+ {
+ char	*buffret;	/* Modified image buffer (returned) */
+ int	nx,ny;	/* Number of columns and rows in image */
+-int	ix,iy;	/* Pixel around which to compute median */
++int	ix,iy = 0;	/* Pixel around which to compute median */
+ int	npix;	/* Number of pixels in image */
+ int	bitpix;	/* Number of bits per pixel (<0=floating point) */
+ int	naxes;
+@@ -698,7 +698,7 @@
+ {
+ char	*buffret;	/* Modified image buffer (returned) */
+ int	nx,ny;	/* Number of columns and rows in image */
+-int	ix,iy;	/* Pixel around which to compute median */
++int	ix,iy = 0;	/* Pixel around which to compute median */
+ int	npix;	/* Number of pixels in image */
+ int	bitpix;	/* Number of bits per pixel (<0=floating point) */
+ int	naxes;
+@@ -1173,7 +1173,7 @@
+ {
+ char	*buffret;	/* Modified image buffer (returned) */
+ int	nx,ny;	/* Number of columns and rows in image */
+-int	ix,iy;	/* Pixel around which to compute mean */
++int	ix,iy = 0;	/* Pixel around which to compute mean */
+ int	npix;	/* Number of pixels in image */
+ int	bitpix;	/* Number of bits per pixel (<0=floating point) */
+ int	naxes;
+@@ -1278,7 +1278,7 @@
+ {
+ char	*buffret;	/* Modified image buffer (returned) */
+ int	nx,ny;	/* Number of columns and rows in image */
+-int	ix,iy;	/* Pixel around which to compute mean */
++int	ix,iy = 0;	/* Pixel around which to compute mean */
+ int	npix;	/* Number of pixels in image */
+ int	bitpix;	/* Number of bits per pixel (<0=floating point) */
+ int	naxes;
+@@ -1651,7 +1651,7 @@
+ {
+     char *buffret;	/* Modified image buffer (returned) */
+     int nx,ny;		/* Number of columns and rows in image */
+-    int ix,iy;		/* Pixel around which to compute median */
++    int ix,iy = 0;		/* Pixel around which to compute median */
+     int npix;		/* Number of pixels in image */
+     int bitpix;		/* Number of bits per pixel (<0=floating point) */
+     int naxes;
+@@ -1752,7 +1752,7 @@
+ {
+ char	*buffret;	/* Modified image buffer (returned) */
+ int	nx,ny;	/* Number of columns and rows in image */
+-int	ix,iy;	/* Pixel around which to compute median */
++int	ix,iy = 0;	/* Pixel around which to compute median */
+ int	npix;	/* Number of pixels in image */
+ int	bitpix;	/* Number of bits per pixel (<0=floating point) */
+ int	naxes;
+diff -Nur ../wcstools-3.7.0.orig/libwcs/proj.c ./libwcs/proj.c
+--- ../wcstools-3.7.0.orig/libwcs/proj.c	2007-09-11 11:16:02.775146921 +0100
++++ ./libwcs/proj.c	2007-09-11 11:16:24.242248383 +0100
+@@ -3672,7 +3672,7 @@
+ 
+ {
+    int   face;
+-   double cthe, eta, l, m, n, rho, xi;
++   double cthe, eta = 0, l, m, n, rho, xi = 0;
+    const float tol = 1.0e-7;
+ 
+    float a, a2, a2b2, a4, ab, b, b2, b4, ca2, cb2;
+diff -Nur ../wcstools-3.7.0.orig/libwcs/sdssread.c ./libwcs/sdssread.c
+--- ../wcstools-3.7.0.orig/libwcs/sdssread.c	2007-09-11 11:16:02.775146921 +0100
++++ ./libwcs/sdssread.c	2007-09-11 11:16:24.258241295 +0100
+@@ -165,7 +165,7 @@
+ 
+     /* Dump returned file and stop */
+     if (nlog < 0) {
+-	(void) fwrite  (tabtable->tabbuff, tabtable->lbuff, 1, stdout);
++	fwrite  (tabtable->tabbuff, tabtable->lbuff, 1, stdout);
+ 	exit (0);
+ 	}
+ 
+diff -Nur ../wcstools-3.7.0.orig/libwcs/skybotread.c ./libwcs/skybotread.c
+--- ../wcstools-3.7.0.orig/libwcs/skybotread.c	2007-09-11 11:16:02.783147377 +0100
++++ ./libwcs/skybotread.c	2007-09-11 11:16:24.286228890 +0100
+@@ -125,12 +125,11 @@
+ int	nlog;		/* 1 for diagnostics */
+ {
+     char srchurl[LINE];
+-    char cmag;
+     char *obs;
+     char *dstr;
+     struct TabTable *tabtable;
+     struct StarCat *starcat; /* Star catalog data structure */
+-    double dtemp, jdout;
++    double jdout;
+     int nstar, nlog0;
+     double ra, dec, mag, dradi, dradx;
+     char rastr[32], decstr[32], temp[256], tstr[80];
+@@ -281,29 +280,22 @@
+ 
+     char *skybuff;	/* Input comma-separated table */
+ {
+-    char *heading;
+     char *colhead;
+     char *colsep;
+     char *tabbuff;	/* Output tab-separated table */
+     char *tbuff;
+-    char *databuff;
+     char *dbuff;
+     char *buffer;
+     char *lastbuff;
+-    char *endhead;
+     char *colend;
+-    char *chead;
+-    char *head;
+     char *tbuffi;
+     char temp[16], format[16];
+     int lbuff, i, lra, icol;
+-    int lhead, ldata;
++    int lhead;
+     int addname;
+     int lobj;
+     char cbuff;
+-    char *buff;
+     char cbar = '|';
+-    char ccom = ',';
+     char cminus = '-';
+     char cspace = ' ';
+     char ctab = (char) 9;
+diff -Nur ../wcstools-3.7.0.orig/libwcs/tabread.c ./libwcs/tabread.c
+--- ../wcstools-3.7.0.orig/libwcs/tabread.c	2007-09-11 11:16:02.779147149 +0100
++++ ./libwcs/tabread.c	2007-09-11 11:16:24.306220030 +0100
+@@ -147,7 +147,7 @@
+     int lname;
+     int imag;
+     double ra,dec, rapm, decpm;
+-    double mag, parallax, rv;
++    double mag = 0, parallax, rv;
+     double num;
+     int peak, i;
+     int istar, nstars, lstar;
+@@ -596,7 +596,7 @@
+ 		}
+ 
+ 	    /* Check ID number first */
+-	    (void) setoken (&startok, line, "tab");
++	    setoken (&startok, line, "tab");
+ 	    if (!strcmp (sc->isfil,"gsc-server")) {
+    		if (tabgetc (&startok, sc->entid, str, 24))
+ 		    num = 0.0;
+@@ -782,7 +782,7 @@
+     int nstar;
+     int imag;
+     double ra,dec, rapm, decpm;
+-    double mag, parallax, rv;
++    double mag = 0, parallax, rv;
+     double num;
+     int peak;
+     int istar, nstars, lstar;
+@@ -2163,7 +2163,7 @@
+ 	tabtable->lline = (nextline - tabtable->tabdata) * 2;
+ 	tabtable->tabline = (char *) calloc (tabtable->lline, 1);
+ 	fseek (tabtable->tcat, (long) tabtable->lhead, SEEK_SET);
+-	(void) fgets (tabtable->tabline, tabtable->lline, tabtable->tcat);
++	fgets (tabtable->tabline, tabtable->lline, tabtable->tcat);
+ 	lline = strlen (tabtable->tabline);
+ 	if (tabtable->tabline[lline-1] < 32)
+ 	     tabtable->tabline[lline-1] = (char) 0;
+@@ -2173,7 +2173,7 @@
+     /* Close catalog file if not reading one line at a time */
+     else {
+ 	tabtable->lhead = 0;
+-	(void) fclose (fcat);
++	fclose (fcat);
+ 	tabtable->tcat = NULL;
+ 	}
+ 
+@@ -2245,7 +2245,7 @@
+ 	    fseek (tabtable->tcat, (long) tabtable->lhead, SEEK_SET);
+ 	    tabtable->iline = 0;
+ 	    for (i = tabtable->iline; i < iline; i++) {
+-		(void) fgets (tabtable->tabline, tabtable->lline, tabtable->tcat);
++		fgets (tabtable->tabline, tabtable->lline, tabtable->tcat);
+ 		tabtable->iline++;
+ 		}
+ 	    lline = strlen (tabtable->tabline);
+@@ -2648,7 +2648,6 @@
+     return (0);
+ }
+ 
+-
+ /* Search table of column headings for first with string (case-independent) */
+ 
+ static int
+diff -Nur ../wcstools-3.7.0.orig/libwcs/tmcread.c ./libwcs/tmcread.c
+--- ../wcstools-3.7.0.orig/libwcs/tmcread.c	2007-09-11 11:16:02.779147149 +0100
++++ ./libwcs/tmcread.c	2007-09-11 11:16:24.314216486 +0100
+@@ -105,7 +105,7 @@
+     double eqref=2000.0;	/* Catalog equinox */
+     double epref=2000.0;	/* Catalog epoch */
+     double size = 0.0;		/* Semi-major axis of extended source */
+-    struct StarCat *starcat;
++    struct StarCat *starcat = NULL;
+     struct Star *star;
+     int verbose;
+     int wrap;
+@@ -529,7 +529,7 @@
+     int sysref=WCS_J2000;	/* Catalog coordinate system */
+     double eqref=2000.0;	/* Catalog equinox */
+     double epref=2000.0;	/* Catalog epoch */
+-    struct StarCat *starcat;
++    struct StarCat *starcat = NULL;
+     struct Star *star;
+     char *str;
+ 
+diff -Nur ../wcstools-3.7.0.orig/libwcs/wcs.c ./libwcs/wcs.c
+--- ../wcstools-3.7.0.orig/libwcs/wcs.c	2007-09-11 11:16:02.779147149 +0100
++++ ./libwcs/wcs.c	2007-09-11 11:16:24.326211170 +0100
+@@ -1415,8 +1415,8 @@
+ double	x2,y2;	/* (RA,Dec) or (Long,Lat) in degrees */
+ 
+ {
+-	double xr1, xr2, yr1, yr2, r, diffi;
+-	double pos1[3], pos2[3], w, diff, cosb;
++	double diffi, r;
++	double pos1[3], pos2[3], w, diff;
+ 	int i;
+ 
+ 	/* Convert two vectors to direction cosines */
+diff -Nur ../wcstools-3.7.0.orig/libwcs/wcsinit.c ./libwcs/wcsinit.c
+--- ../wcstools-3.7.0.orig/libwcs/wcsinit.c	2007-09-11 11:16:02.779147149 +0100
++++ ./libwcs/wcsinit.c	2007-09-11 11:16:24.334207626 +0100
+@@ -1082,7 +1082,7 @@
+ static void
+ wcseq (hstring, wcs)
+ 
+-char	*hstring;	/* character string containing FITS header information
++const char	*hstring;	/* character string containing FITS header information
+ 		   	in the format <keyword>= <value> [/ <comment>] */
+ struct WorldCoor *wcs;	/* World coordinate system data structure */
+ {
+diff -Nur ../wcstools-3.7.0.orig/libwcs/webread.c ./libwcs/webread.c
+--- ../wcstools-3.7.0.orig/libwcs/webread.c	2007-09-11 11:16:02.779147149 +0100
++++ ./libwcs/webread.c	2007-09-11 11:16:24.342204082 +0100
+@@ -252,7 +252,7 @@
+ 
+     /* Dump returned file and stop */
+     if (nlog < 0) {
+-	(void) fwrite  (tabtable->tabbuff, tabtable->lbuff, 1, stdout);
++	fwrite  (tabtable->tabbuff, tabtable->lbuff, 1, stdout);
+ 	exit (0);
+ 	}
+ 
+@@ -378,7 +378,7 @@
+ 
+     /* Dump returned file and stop */
+     if (nlog < 0) {
+-	(void) fwrite  (tabtable->tabbuff, tabtable->lbuff, 1, stdout);
++	fwrite  (tabtable->tabbuff, tabtable->lbuff, 1, stdout);
+ 	exit (0);
+ 	}
+ 
+@@ -612,7 +612,7 @@
+     fflush(sok);
+     free (server);
+ 
+-    (void) fscanf(sok, "%*s %d %*s\r\n", &status);
++    fscanf(sok, "%*s %d %*s\r\n", &status);
+ 
+     /* Skip continue lines
+     if (status == 100) {
+@@ -647,7 +647,7 @@
+ 	*lbuff = 0;
+ 	ltbuff = 0;
+ 	while (lline > 0) {
+-	    (void) fgets (linebuff, LINE, sok);
++	    fgets (linebuff, LINE, sok);
+ 	    lline = strlen (linebuff);
+ 	    if (lline < 1)
+ 		break;
+@@ -689,7 +689,7 @@
+ 	    else {
+ 		buff = tabbuff + lcbuff;
+ 		}
+-            (void) fread (buff, 1, lchunk, sok);
++            fread (buff, 1, lchunk, sok);
+ 	    buff[lchunk] = (char) 0;
+ 	    if (diag)
+ 		fprintf (stderr, "%s\n", buff);
+@@ -730,7 +730,7 @@
+ 		fprintf (stderr, "%s\n", buff);
+ 	    }
+ 	}
+-    (void) fclose (sok);
++    fclose (sok);
+ 
+     return (tabbuff);
+ }
+@@ -864,7 +864,7 @@
+ space2tab (tabbuff)
+     char *tabbuff;	/* Tab table filled with spaces */
+ {
+-    char *newbuff, *line0, *line1, *ic, *icn, *tstart;
++    char *newbuff, *line0, *line1, *ic, *icn;
+     char cspace, ctab, cdash;
+     int lbuff;
+     int alltab = 0;
+diff -Nur ../wcstools-3.7.0.orig/scat.c ./scat.c
+--- ../wcstools-3.7.0.orig/scat.c	2007-09-11 11:16:03.023161055 +0100
++++ ./scat.c	2007-09-11 11:16:24.378188133 +0100
+@@ -1101,7 +1101,7 @@
+     double crao, cdeco;	/* Output center long/lat or RA/Dec in degrees */
+     double epout = 0.0;
+     int ng;		/* Number of catalog stars */
+-    int ns;		/* Number of brightest catalog stars actually used */
++    int ns = 0;		/* Number of brightest catalog stars actually used */
+     struct Range *range = NULL; /* Range of catalog numbers to list */
+     int nfind;		/* Number of stars to find */
+     int i, is, j, ngmax, nc;
+@@ -1122,7 +1122,7 @@
+     int nlog;
+     int magsort;
+     int typecol;
+-    int band;
++    int band = 0;
+     int imag, nmagr;
+     int sysout = 0;
+     char sortletter = (char) 0;
+@@ -2366,7 +2366,7 @@
+ 			    printf ("	%5.2f	%5.2f	%5.2f	%5.2f %5.2f",
+ 				    gm[0][0],gm[1][0],gm[2][0],gm[4][0],gm[5][0]);
+ 			else
+-			    printf (" %5.2f %5.2f %5.2f %5.2f",
++			    printf (" %5.2f %5.2f %5.2f %5.2f %5.2f",
+ 				    gm[0][0],gm[1][0],gm[2][0],gm[4][0],gm[5][0]);
+ 			}
+ 		    else if (refcat == HIP) {
+diff -Nur ../wcstools-3.7.0.orig/setpix.c ./setpix.c
+--- ../wcstools-3.7.0.orig/setpix.c	2007-09-11 11:16:03.023161055 +0100
++++ ./setpix.c	2007-09-11 11:16:24.390182817 +0100
+@@ -258,9 +258,9 @@
+     int lhead;			/* Maximum number of bytes in FITS header */
+     int nbhead;			/* Actual number of bytes in FITS header */
+     int iraffile;		/* 1 if IRAF image */
+-    char *irafheader;		/* IRAF image header */
++    char *irafheader = NULL;		/* IRAF image header */
+     int i, lext, lroot;
+-    int nx, ny, ix, iy, x, y, ipix;
++    int nx, ny, ix, iy, x, y, ipix = 0;
+     char *imext, *imext1;
+     double bzero;		/* Zero point for pixel scaling */
+     double bscale;		/* Scale factor for pixel scaling */
+diff -Nur ../wcstools-3.7.0.orig/wcshead.c ./wcshead.c
+--- ../wcstools-3.7.0.orig/wcshead.c	2007-09-11 11:16:03.083164474 +0100
++++ ./wcshead.c	2007-09-11 11:16:24.398179273 +0100
+@@ -211,7 +211,7 @@
+     char *GetFITShead();
+     char rastr[32], decstr[32], fform[8];
+     struct WorldCoor *wcs, *GetWCSFITS();
+-    double wfrst, dwl, wlast, dxpix, zvel, vel;
++    double wfrst, dwl, wlast, dxpix, zvel = 0, vel;
+     int logwav = 0;
+ 
+     if (rootdir){
+diff -Nur ../wcstools-3.7.0.orig/xy2sky.c ./xy2sky.c
+--- ../wcstools-3.7.0.orig/xy2sky.c	2007-09-11 11:16:03.083164474 +0100
++++ ./xy2sky.c	2007-09-11 11:16:24.398179273 +0100
+@@ -46,9 +46,9 @@
+ static int ncm = 0;
+ static int printhead = 0;
+ static char printonly = 'n';
+-static int centerset = 0;
++/*static int centerset = 0;
+ static int sizeset = 0;
+-static int scaleset = 0;
++static int scaleset = 0;*/
+ static int version = 0;		/* If 1, print only program name and version */
+ 
+ static char *RevMsg = "XY2SKY WCSTools 3.7.0, 28 August 2007, Doug Mink (dmink@cfa.harvard.edu)";
+@@ -70,9 +70,9 @@
+     int entmag = 0;
+     int i, ic;
+     double x, y, mag;
+-    double cra, cdec, dra, ddec, secpix, drot;
++    double cra, cdec, dra, ddec, secpix;/*, drot;*/
+     double eqout = 0.0;
+-    double eqin = 0.0;
++    /*double eqin = 0.0;*/
+     int sysout = 0;
+     int wp, hp, nx, ny, lhead;
+     FILE *fd = NULL;
+@@ -82,7 +82,7 @@
+     char *header;
+     char *fn;
+     int bitpix = 0;
+-    struct WorldCoor *wcs;
++    struct WorldCoor *wcs = NULL;
+     char xstr[32], ystr[32], mstr[32];
+     char rastr[32], decstr[32];
+     char keyword[16];
