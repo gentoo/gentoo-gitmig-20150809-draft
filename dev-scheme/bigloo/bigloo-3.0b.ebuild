@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0b.ebuild,v 1.1 2007/09/11 09:38:34 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0b.ebuild,v 1.2 2007/09/11 15:32:44 hkbst Exp $
 
 inherit elisp-common multilib
 
@@ -14,13 +14,14 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-DEPEND="emacs? ( virtual/emacs )"
+DEPEND="emacs? ( virtual/emacs )
+		java? ( virtual/jdk )"
 
 S=${WORKDIR}/${MY_P%-*}
 
 SITEFILE="50bigloo-gentoo.el"
 
-IUSE="emacs"
+IUSE="emacs java"
 # fullbee"
 
 src_compile() {
@@ -28,7 +29,11 @@ src_compile() {
 
 	# Bigloo doesn't use autoconf and consequently a lot of options used by econf give errors
 	# Manuel Serrano says: "Please, dont talk to me about autoconf. I simply dont want to hear about it..."
-	./configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info \
+	./configure \
+		$(use java && echo "--jvm=yes --java=$(java-config --java) --javac=$(java-config --javac)") \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
 		--libdir=/usr/$(get_libdir) \
 		--docdir=/usr/share/doc/${PF} \
 		--benchmark=yes \

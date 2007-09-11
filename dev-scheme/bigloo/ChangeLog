@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.19 2007/09/11 09:38:34 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.20 2007/09/11 15:32:44 hkbst Exp $
+
+  11 Sep 2007; Marijn Schouten <hkBst@gentoo.org> bigloo-3.0b.ebuild:
+  add java backend, bug 192131
 
 *bigloo-3.0b (11 Sep 2007)
 
