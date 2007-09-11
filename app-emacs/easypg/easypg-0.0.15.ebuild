@@ -1,15 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/easypg-0.0.11-r2.ebuild,v 1.1 2007/05/23 17:31:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/easypg-0.0.15.ebuild,v 1.1 2007/09/11 06:33:49 opfer Exp $
 
-inherit elisp
+inherit elisp versionator
 
 MY_PN=epg
 
 DESCRIPTION="GnuPG interface for Emacs"
 HOMEPAGE="http://www.easypg.org/"
-SRC_URI="mirror://sourceforge.jp/epg/24683/${MY_PN}-${PV}.tar.gz
-	gnus? ( mirror://sourceforge.jp/epg/24683/pgg-${MY_PN}.el )"
+SRC_URI="mirror://sourceforge.jp/epg/27030/${MY_PN}-${PV}.tar.gz
+	gnus? ( mirror://sourceforge.jp/epg/25608/pgg-${MY_PN}.el )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,17 +22,23 @@ RDEPEND="${DEPEND}
 
 SITEFILE=50${PN}-gentoo.el
 
-S=${WORKDIR}/${MY_PN}-${PV}
+S="${WORKDIR}/${MY_PN}-${PV}"
 
-src_compile(){
-	econf
+src_unpack() {
+	unpack ${A}
+	use gnus && cp "${DISTDIR}/pgg-epg.el" "${S}"
+}
+
+src_compile() {
+	econf || die "econf failed"
 	emake || die "emake failed"
 	elisp-make-autoload-file \
 		|| die "elisp-make-autoload-file failed"
 
-	if use gnus; then
-		cp "${DISTDIR}/pgg-epg.el" "${WORKDIR}"
-		elisp-compile "${WORKDIR}/pgg-epg.el" || die "elisp-compile failed"
+	if use gnus && version_is_at_least 22 "$(elisp-emacs-version)"; then
+		# pgg-epg requires pgg, it will not compile with Emacs 21
+		# it also requires epa, so we must use elisp-comp here
+		elisp-comp pgg-epg.el || die "elisp-comp failed"
 	fi
 }
 
@@ -42,8 +48,9 @@ src_install() {
 	elisp-install ${MY_PN} ${PN}-autoloads.el
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" ${MY_PN}
 	if use gnus; then
-		elisp-install ${MY_PN} "${WORKDIR}"/pgg-epg.el{,c}
+		elisp-install ${MY_PN} pgg-epg.el*
 	fi
+	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 }
 
 elisp_pkg_postinst() {

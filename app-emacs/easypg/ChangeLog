@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/easypg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/ChangeLog,v 1.3 2007/07/15 10:15:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/ChangeLog,v 1.4 2007/09/11 06:33:49 opfer Exp $
+
+*easypg-0.0.15 (11 Sep 2007)
+
+  11 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  -easypg-0.0.11-r2.ebuild, +easypg-0.0.15.ebuild:
+  clean up and version bump
 
 *easypg-0.0.13 (15 Jul 2007)
 
