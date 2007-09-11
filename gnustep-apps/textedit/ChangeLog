@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-apps/textedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/ChangeLog,v 1.10 2007/08/22 16:57:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/ChangeLog,v 1.11 2007/09/11 12:04:42 voyageur Exp $
+
+*textedit-0.95_pre20060928 (11 Sep 2007)
+
+  11 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -textedit-0.95_pre20050315.ebuild, -textedit-0.95_pre20060324.ebuild,
+  +textedit-0.95_pre20060928.ebuild:
+  Port to new GNUstep eclasses, use tarball instead of CVS checkout
+  Remove old versions
 
   22 Aug 2007; Christoph Mende <angelos@gentoo.org>
   textedit-0.95_pre20060324.ebuild:
