@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0.ebuild,v 1.4 2007/09/10 17:02:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0.ebuild,v 1.5 2007/09/11 19:27:35 swegener Exp $
 
 GCONF_DEBUG="no"
 
@@ -15,12 +15,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.4"
-RDEPEND="${DEPEND}
+DEPEND=">=dev-lang/python-2.4
+	>=dev-python/pygobject-2.6
 	>=dev-python/pygtk-2.6
 	>=dev-python/gnome-python-2.10
+	>=dev-python/gnome-python-desktop-2.10
 	>=dev-python/gnome-python-extras-2.10
 	>=gnome-base/gnome-desktop-2.10"
+RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS ChangeLog NEWS"
 
