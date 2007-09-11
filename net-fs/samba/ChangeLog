@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.302 2007/09/11 19:50:49 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.303 2007/09/11 22:55:07 uberlord Exp $
+
+  11 Sep 2007; Roy Marples <uberlord@gentoo.org> files/samba-init:
+  de-bashify the init script
 
 *samba-3.0.25c-r2 (11 Sep 2007)
 
