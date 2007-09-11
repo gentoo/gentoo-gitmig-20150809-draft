@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/predict
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/ChangeLog,v 1.9 2007/01/26 14:43:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/ChangeLog,v 1.10 2007/09/11 15:06:57 bicatali Exp $
+
+  11 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  -predict-2.2.2-r3.ebuild, predict-2.2.3.ebuild, +files/predict-2.2.3-xforms.patch
+  Removed old versions, added longdescription, added a patch for
+  xforms. Should fix bug #140991.
 
   26 Jan 2007; Steve Dibb <beandog@gentoo.org> predict-2.2.3.ebuild:
   amd64 stable, bug 160130

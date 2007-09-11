@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3.ebuild,v 1.3 2007/01/26 14:43:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3.ebuild,v 1.4 2007/09/11 15:06:57 bicatali Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="Satellite tracking and orbital prediction."
 HOMEPAGE="http://www.qsl.net/kd2bd/predict.html"
@@ -17,6 +17,12 @@ DEPEND="sys-libs/ncurses
 	gtk? ( =x11-libs/gtk+-1.2* )
 	xforms? ( x11-libs/xforms )
 	xplanet? ( || ( x11-misc/xplanet x11-misc/xearth ) )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-xforms.patch
+}
 
 src_compile() {
 	# predict uses a ncurses based configure script
@@ -50,7 +56,7 @@ src_compile() {
 	# earthtrack
 	if use xplanet; then
 		einfo "compiling earthtrack"
-		cd ${S}/clients/earthtrack
+		cd "${S}"/clients/earthtrack
 		# fix include path
 		sed -e "s:/usr/local/share/xplanet:/usr/share/xplanet:" \
 			-i earthtrack.c || die "Failed to fix xplanet paths"
@@ -60,14 +66,14 @@ src_compile() {
 
 	# kep_reload
 	einfo "compiling kep_reload"
-	cd ${S}/clients/kep_reload
+	cd "${S}"/clients/kep_reload
 	${COMPILER} kep_reload.c -o kep_reload || \
 		die "Failed compiling kep_reload"
 
 	# map
 	if use xforms; then
 		einfo "compiling map"
-		cd ${S}/clients/map
+		cd "${S}"/clients/map
 		TCOMP="${COMPILER} -I/usr/X11R6/include -L/usr/X11R6/$(get_libdir) -lforms -lX11 -lm map.c map_cb.c map_main.c -o map"
 		${TCOMP} || die "Failed compiling map"
 	fi
@@ -77,7 +83,7 @@ src_compile() {
 		# note there are plugins for gsat but they are missing header files and wont compile
 		use nls || myconf="--disable-nls"
 		einfo "compiling gsat"
-		cd ${S}/clients/gsat-*
+		cd "${S}"/clients/gsat-*
 		./configure --prefix=/usr ${myconf}
 		cd src
 		sed -e "s:#define DEFAULTPLUGINSDIR .*:#define DEFAULTPLUGINSDIR \"/usr/$(get_libdir)/gsat/plugins/\":" -i globals.h
@@ -89,9 +95,9 @@ src_compile() {
 
 src_install() {
 	# install predict
-	cd ${S}
-	dobin predict ${FILESDIR}/predict-update
-	dodoc CHANGES COPYING CREDITS HISTORY README NEWS
+	cd "${S}"
+	dobin predict "${FILESDIR}"/predict-update
+	dodoc CHANGES CREDITS HISTORY README NEWS
 	dodoc docs/pdf/predict.pdf
 	dodoc docs/postscript/predict.ps
 	doman docs/man/predict.1
@@ -112,7 +118,7 @@ src_install() {
 
 	# earthtrack
 	if use xplanet; then
-		cd ${S}/clients/earthtrack
+		cd "${S}"/clients/earthtrack
 		ln -s earthtrack earthtrack2
 		dobin earthtrack earthtrack2
 		mv README README.earthtrack && \
@@ -121,7 +127,7 @@ src_install() {
 	fi
 
 	# kep_reload
-	cd ${S}/clients/kep_reload
+	cd "${S}"/clients/kep_reload
 	dobin kep_reload
 	mv INSTALL INSTALL.kep_reload && \
 	mv README README.kep_reload && \
@@ -130,9 +136,9 @@ src_install() {
 
 	# map
 	if use xforms; then
-		cd ${S}/clients/map
+		cd "${S}"/clients/map
 		dobin map
-		for i in CHANGES README COPYING; do
+		for i in CHANGES README; do
 			mv ${i} ${i}.map && dodoc ${i}.map || \
 				die "Failed to install xforms docs"
 		done
@@ -141,13 +147,13 @@ src_install() {
 	# gsat
 	if use gtk; then
 		# the install seems broken so do manually...
-		cd ${S}/clients/gsat-*
+		cd "${S}"/clients/gsat-*
 		dodir /usr/$(get_libdir)/gsat/plugins
 		keepdir /usr/$(get_libdir)/gsat/plugins
 		cd src
 		dobin gsat
 		cd ..
-		for i in AUTHORS ABOUT-NLS COPYING ChangeLog INSTALL NEWS README Plugin_API; do
+		for i in AUTHORS ABOUT-NLS ChangeLog INSTALL NEWS README Plugin_API; do
 			mv ${i} ${i}.gsat && dodoc ${i}.gsat || \
 				die "Failed to install gsat docs"
 		done
