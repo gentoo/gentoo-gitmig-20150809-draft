@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-libs/objcunit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/objcunit/ChangeLog,v 1.5 2007/08/18 15:28:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/objcunit/ChangeLog,v 1.6 2007/09/11 20:20:41 voyageur Exp $
+
+*objcunit-1.2-r1 (11 Sep 2007)
+
+  11 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org> -objcunit-1.2.ebuild,
+  +objcunit-1.2-r1.ebuild:
+  Port to new GNUstep eclasses
+  Fixed installation for gnustep-make-2
 
   18 Aug 2007; Christoph Mende <angelos@gentoo.org> objcunit-1.2.ebuild:
   Added ~amd64 wrt bug #170433
