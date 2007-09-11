@@ -1,0 +1,44 @@
+diff -NurdpB tuxpaint-0.9.17/src/postscript_print.c tuxpaint-0.9.17-patched/src/postscript_print.c
+--- tuxpaint-0.9.17/src/postscript_print.c	2007-06-25 13:00:50.000000000 -0500
++++ tuxpaint-0.9.17-patched/src/postscript_print.c	2007-09-10 17:46:06.000000000 -0500
+@@ -63,6 +63,19 @@
+ 
+ #define my_min(x,y) ((x < y) ? (x) : (y))
+ 
++int f2int(float f);
++int f2dec(float f);
++
++int f2int(float f)
++{
++  return ((int)f);
++}
++
++int f2dec(float f)
++{
++  return (int)((f - f2int(f)) * 100);
++}
++
+ /* Actually save the PostScript data to the file stream: */
+ int do_ps_save(FILE * fi,
+ 		// const char *restrict const fname,
+@@ -234,14 +247,16 @@ int do_ps_save(FILE * fi,
+   /* 'translate' moves the user space origin to a new position with
+   respect to the current page, leaving the orientation of the axes and
+   the unit lengths unchanged. */
+-  fprintf(fi, "%.2f %.2f translate\n", tlate_x, tlate_y);
++  fprintf(fi, "%d.%02d %d.%02d translate\n",
++	  f2int(tlate_x), f2dec(tlate_x),
++	  f2int(tlate_y), f2dec(tlate_y));
+ 
+   /* 'scale' modiﬁes the unit lengths independently along the current
+   x and y axes, leaving the origin location and the orientation of the
+   axes unchanged. */
+-  fprintf(fi, "%.2f %.2f scale\n",
+-	  (float) printed_img_w * scale,
+-	  (float) printed_img_h * scale);
++  fprintf(fi, "%d.%02d %d.%02d scale\n",
++          f2int(printed_img_w * scale), f2dec(printed_img_w * scale),
++          f2int(printed_img_h * scale), f2dec(printed_img_h * scale));
+ 
+   /* Rotate the image */
+   if (rotate)
