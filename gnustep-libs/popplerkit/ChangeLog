@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/popplerkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.6 2007/09/10 14:07:31 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.7 2007/09/11 09:44:24 voyageur Exp $
+
+  11 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/popplerkit-0.2-poppler6_support.patch, popplerkit-0.2.ebuild:
+  Add patch for poppler 0.6 support
 
 *popplerkit-0.2 (10 Sep 2007)
 
