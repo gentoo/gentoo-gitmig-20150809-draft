@@ -1,6 +1,15 @@
 # ChangeLog for gnustep-apps/easydiff
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.13 2007/08/18 15:18:15 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.14 2007/09/11 11:04:01 voyageur Exp $
+
+*easydiff-0.3.1_pre20061115 (11 Sep 2007)
+
+  11 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -easydiff-0.3.1_pre20050312-r1.ebuild, -easydiff-0.3.1_pre20050614.ebuild,
+  +easydiff-0.3.1_pre20061115.ebuild:
+  Use tarball instead of live CVS checkout
+  Works with gnustep-make-2
+  Remove old versions
 
   18 Aug 2007; Christoph Mende <angelos@gentoo.org>
   easydiff-0.3.1_pre20050614.ebuild:
