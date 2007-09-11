@@ -1,31 +1,34 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.17.ebuild,v 1.13 2007/07/12 02:25:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.22.ebuild,v 1.1 2007/09/11 22:12:20 leonardop Exp $
 
-inherit libtool gnome.org eutils python
+inherit libtool eutils python
 
 DESCRIPTION="XSLT libraries and tools"
 HOMEPAGE="http://www.xmlsoft.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="crypt debug python"
 
-DEPEND=">=dev-libs/libxml2-2.6.25
-	crypt? ( >=dev-libs/libgcrypt-1.1.92 )
+DEPEND=">=dev-libs/libxml2-2.6.27
+	crypt?  ( >=dev-libs/libgcrypt-1.1.92 )
 	python? ( dev-lang/python )"
 
+SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz"
+
+
 src_unpack() {
-	unpack ${A}
+	unpack "${A}"
 	cd "${S}"
 
 	# we still require the 1.1.8 patch for the .m4 file, to add
 	# the CXXFLAGS defines <obz@gentoo.org>
 	epatch "${FILESDIR}"/libxslt.m4-${PN}-1.1.8.patch
 
-	# Respect DESTDIR when creating libxslt-plugins directory
-	epatch "${FILESDIR}"/${PN}-1.1.16-destdir.patch
+	# Using the python bindings causes a core; bug #190388
+	epatch "${FILESDIR}"/${PN}-1.1.20-amd64.patch
 
 	# Patch Makefile to fix bug #99382 so that html gets installed in ${PF}
 	sed -i -e 's:libxslt-$(VERSION):${PF}:' doc/Makefile.in
@@ -38,9 +41,9 @@ src_compile() {
 	# Always pass --with-debugger. It is required by third parties (see
 	# e.g. bug #98345)
 	local myconf="--with-debugger \
-		$(use_with python)          \
-		$(use_with crypt crypto)    \
-		$(use_with debug)           \
+		$(use_with python)       \
+		$(use_with crypt crypto) \
+		$(use_with debug)        \
 		$(use_with debug mem-debug)"
 
 	econf ${myconf} || die "configure failed"
