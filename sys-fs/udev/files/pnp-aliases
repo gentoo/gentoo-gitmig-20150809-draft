@@ -1,7 +1,7 @@
 # /etc/modprobe.d/pnp-aliases
 #
 # These aliases are used by this udev-rule:
-# SUBSYSTEM=="pnp", ENV{MODALIAS}!="?*", RUN+="/bin/sh -c 'while read id; do /lib/udev/modprobe.sh pnp:d$$id; done < /sys$devpath/id'"
+# SUBSYSTEM=="pnp", ENV{MODALIAS}!="?*", RUN+="/bin/sh -c '/sbin/modprobe -a $$(while read id; do echo pnp:d$$id; done < /sys$devpath/id)'"
 #
 # They should help to autoload drivers used by various pnp-devices
 # (if not blacklisted somewhere else)

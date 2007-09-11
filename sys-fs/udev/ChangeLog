@@ -1,6 +1,18 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.348 2007/09/10 18:34:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.349 2007/09/11 21:50:20 zzam Exp $
+
+*udev-115-r3 (11 Sep 2007)
+
+  11 Sep 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/udev-115-add-special-rule-files.diff,
+  +files/udev-115-fix-modprobe-calls.diff, +files/udev-start-115-r3.sh,
+  files/pnp-aliases, +files/udev.conf.post_115, +udev-115-r3.ebuild:
+  No longer use modprobe-wrapper, that should fix bug 191813 and other
+  breakages caused by our wrapper. This also removes auto-blacklisting of
+  modules that get loaded by modules.autoload. It will break blacklisting of
+  some special aliased modules like pcspkr until bug 192201 is fixed. Now also
+  run persistent-net rules when coldplug is disabled, bug 191466.
 
   10 Sep 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/udev-115-add-special-rule-files.diff, udev-115-r2.ebuild:
