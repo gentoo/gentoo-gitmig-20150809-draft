@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.2.ebuild,v 1.2 2007/09/09 09:39:46 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.2.2.ebuild,v 1.3 2007/09/11 15:48:45 phreak Exp $
 
 inherit linux-mod eutils
 
@@ -83,7 +83,7 @@ pkg_postinst() {
 	elog "If you want your wireless device started up by udev, please make sure"
 	elog "you add something like this to your /etc/conf.d/net:"
 	elog "preup() {"
-	elog "	if [[ ${IFACE} = "wlan0" ]]; then"
+	elog "	if [[ \${IFACE} = \"wlan0\" ]]; then"
 	elog "		sleep 3"
 	elog "	fi"
 	elog "	return 0"
