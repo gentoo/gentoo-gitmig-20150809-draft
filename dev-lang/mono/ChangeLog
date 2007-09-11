@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.124 2007/09/10 19:10:11 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.125 2007/09/11 08:10:20 jurek Exp $
+
+  11 Sep 2007; Jurek Bartuszek <jurek@gentoo.org> mono-1.2.5.ebuild:
+  Added -j1 to MAKEOPTS (bug #192059)
 
 *mono-1.2.5 (10 Sep 2007)
 
