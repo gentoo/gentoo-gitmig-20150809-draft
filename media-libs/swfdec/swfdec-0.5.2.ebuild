@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.5.2.ebuild,v 1.2 2007/09/04 21:29:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.5.2.ebuild,v 1.3 2007/09/11 12:07:38 pclouds Exp $
 
 inherit eutils versionator
 
@@ -58,8 +58,7 @@ src_compile() {
 		$(use_enable gnome gnome-vfs) \
 		${myconf} || die "configure failed"
 
-	# parallel build doesn't work, so specify -j1
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
