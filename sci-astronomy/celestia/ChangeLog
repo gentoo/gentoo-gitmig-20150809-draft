@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.35 2007/05/25 11:23:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.36 2007/09/11 11:47:04 bicatali Exp $
+
+  11 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/celestia-1.4.1-gnome-desktop.patch, celestia-1.4.1-r2.ebuild:
+  Fixed desktop for gnome. Thanks Pacho Ramos
+  <pacho@condmat1.ciencias.uniovi.es> for his patch (bug #190999).
 
   25 May 2007; Sébastien Fabbro <bicatali@gentoo.org>
   -files/celestia-1.3.2-noarts.patch, -files/makefile.am.patch,

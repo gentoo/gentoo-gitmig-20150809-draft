@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX celestia-1.4.1-3dsmodels.patch 339 RMD160 a7a8dccf16476dc735c8af2fdea99bd5170f5e7a SHA1 4fa3fa941c944579955be460350aeb26ec329ae2 SHA256 79ae1fabb8b9f5683d483fb74975ea04576cd27d4c8e8a159119e8d85fe61dde
 MD5 f4b2dd94891993478ba04e72ba91345e files/celestia-1.4.1-3dsmodels.patch 339
 RMD160 a7a8dccf16476dc735c8af2fdea99bd5170f5e7a files/celestia-1.4.1-3dsmodels.patch 339
@@ -14,6 +17,10 @@ AUX celestia-1.4.1-gcc-4.1.patch 1191 RMD160 b9bfae5bc1b5bf93a95760e3fd558645668
 MD5 5f63556bba262455321ec2a466ef3bf8 files/celestia-1.4.1-gcc-4.1.patch 1191
 RMD160 b9bfae5bc1b5bf93a95760e3fd558645668cdca6 files/celestia-1.4.1-gcc-4.1.patch 1191
 SHA256 ea26fe154cf92c613c54edd5e0e51c1b8562ee5ccd74ab191a8a386cd8986e67 files/celestia-1.4.1-gcc-4.1.patch 1191
+AUX celestia-1.4.1-gnome-desktop.patch 517 RMD160 8be45cf8b0af6c083c8a6e57f8d00d316e4995fe SHA1 797ab4e29a6cd22f8c000874a454b6528149b860 SHA256 b56f646de0c4b2ae892020f26a0bb0163ab0bc38fad1ba931dcfa0144a281dd2
+MD5 19360a0f17f0c6f167743e7fb8ff7cf5 files/celestia-1.4.1-gnome-desktop.patch 517
+RMD160 8be45cf8b0af6c083c8a6e57f8d00d316e4995fe files/celestia-1.4.1-gnome-desktop.patch 517
+SHA256 b56f646de0c4b2ae892020f26a0bb0163ab0bc38fad1ba931dcfa0144a281dd2 files/celestia-1.4.1-gnome-desktop.patch 517
 AUX celestia-1.4.1-kde-datadir.patch 1672 RMD160 9d5bc7d059e84a8f5212c37088fdd14e4fc85c80 SHA1 1e191da1b8b2ae7e054c6324b55530b7d8f8f278 SHA256 668888ede1c67c170ef47ad4959eb7cd2d618a493ecaf36889a4eec6ca52234e
 MD5 6ddb9dff14b182c853c5d3b1f83ac3ce files/celestia-1.4.1-kde-datadir.patch 1672
 RMD160 9d5bc7d059e84a8f5212c37088fdd14e4fc85c80 files/celestia-1.4.1-kde-datadir.patch 1672
@@ -35,14 +42,14 @@ MD5 298430529ddf2fbf0704ad59ac2a9f3a files/celestia-1.4.1-strictalias.patch 367
 RMD160 b3f79ab12e78d742adb9e8e6f71d4df25b444404 files/celestia-1.4.1-strictalias.patch 367
 SHA256 f38398fef7dd604669e84e46ffe1cbe6514ada92f581b5b30ac0965223d3db54 files/celestia-1.4.1-strictalias.patch 367
 DIST celestia-1.4.1.tar.gz 23966886 RMD160 c66c2540e329613dace12e5b12b2dae2a4c679e0 SHA1 37863498c43d3078b41027706bfa033bccd949a9 SHA256 f9dc34dbc0d53e98534000545802b5ab4a471c3cb3fa08a9c958cbbbeb28d8b5
-EBUILD celestia-1.4.1-r2.ebuild 3914 RMD160 ebccde559d9d27390f631c9fcb09b5d84f8d3ff9 SHA1 071a90e2d1ee6826f3f203d863238deb5de12ea6 SHA256 e2edc19394c65000d7f2495e20582e5d78436eeea3dbf87f40d528335b0aa3b5
-MD5 2543867c700ab4049617a83eb07517f9 celestia-1.4.1-r2.ebuild 3914
-RMD160 ebccde559d9d27390f631c9fcb09b5d84f8d3ff9 celestia-1.4.1-r2.ebuild 3914
-SHA256 e2edc19394c65000d7f2495e20582e5d78436eeea3dbf87f40d528335b0aa3b5 celestia-1.4.1-r2.ebuild 3914
-MISC ChangeLog 10953 RMD160 a462fdbca4788a8a02484d96ac18718c6b9600a4 SHA1 b8febec99cc66d4c17ce05406b86f94b39ea0c3a SHA256 64fcfeaad4d007e08854f3d687bef5309c7cabe407779be488ce27a3d4aa8e70
-MD5 7c821c0e28fe752a5ed5590260208eef ChangeLog 10953
-RMD160 a462fdbca4788a8a02484d96ac18718c6b9600a4 ChangeLog 10953
-SHA256 64fcfeaad4d007e08854f3d687bef5309c7cabe407779be488ce27a3d4aa8e70 ChangeLog 10953
+EBUILD celestia-1.4.1-r2.ebuild 3962 RMD160 12fce9ba966efd5beb147f7ba493cc201f197b72 SHA1 331b5043403b0682066706dd0a5e16822efe54e4 SHA256 bdcf9968d55f3f4cecb3430b200c60f4da8f4d3a687512ec77a26afffef1dbb1
+MD5 f66a55d670c70a69c267addcaa812049 celestia-1.4.1-r2.ebuild 3962
+RMD160 12fce9ba966efd5beb147f7ba493cc201f197b72 celestia-1.4.1-r2.ebuild 3962
+SHA256 bdcf9968d55f3f4cecb3430b200c60f4da8f4d3a687512ec77a26afffef1dbb1 celestia-1.4.1-r2.ebuild 3962
+MISC ChangeLog 11193 RMD160 82038fe30721192553a164fb54442a9eb6f4912c SHA1 349318c3f3214660c685b33c13b15797d236f49d SHA256 71b3edfabbd7887a34eaff9ffb8be6ec5893f45c81d9ce0fbabd470d0e793cf6
+MD5 4d08fe06b4af1c9b34bcfa2d38138cad ChangeLog 11193
+RMD160 82038fe30721192553a164fb54442a9eb6f4912c ChangeLog 11193
+SHA256 71b3edfabbd7887a34eaff9ffb8be6ec5893f45c81d9ce0fbabd470d0e793cf6 ChangeLog 11193
 MISC metadata.xml 705 RMD160 e20a8f5e0de56e9fa102864cab202a0af6b5172c SHA1 712d9a3efc45acc1873bb2ac49cb00e7d6bf59bf SHA256 bd067e5762b23475ca10fd83e68015c504345c929c45174f50fd8ccd48ad12eb
 MD5 4f929f451f87254297e07e7c46707c1c metadata.xml 705
 RMD160 e20a8f5e0de56e9fa102864cab202a0af6b5172c metadata.xml 705
@@ -50,3 +57,10 @@ SHA256 bd067e5762b23475ca10fd83e68015c504345c929c45174f50fd8ccd48ad12eb metadata
 MD5 34161bf1fac09b84a3ffe3d187aa811d files/digest-celestia-1.4.1-r2 250
 RMD160 b55d9c21cfda86365a1be8dcf84705ca0381ac9a files/digest-celestia-1.4.1-r2 250
 SHA256 d638e17dad65f179f89102c209ecffc06c9383a96420f7a9c31a9cabba357fdf files/digest-celestia-1.4.1-r2 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7 (GNU/Linux)
+
+iD8DBQFG5oBA1ycZbhPLE2ARAvEIAJ9Oh6XRakx6di8fcNusxdUUSElgfwCfd3ag
+fIouVn1uhZoxKDzrP4hfZxE=
+=TIws
+-----END PGP SIGNATURE-----
