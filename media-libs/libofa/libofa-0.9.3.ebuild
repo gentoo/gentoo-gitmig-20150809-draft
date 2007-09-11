@@ -1,6 +1,6 @@
 # Copyright 2006-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.12 2007/01/23 15:43:57 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.13 2007/09/11 19:59:00 drac Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="dev-libs/expat
 	net-misc/curl
-	sci-libs/fftw"
+	>=sci-libs/fftw-3"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
