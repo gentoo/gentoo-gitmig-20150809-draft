@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.25c-r1.ebuild,v 1.3 2007/09/10 08:21:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.25c-r2.ebuild,v 1.1 2007/09/11 19:50:49 dev-zero Exp $
 
 inherit eutils pam python multilib versionator confutils
 
@@ -50,6 +50,7 @@ src_unpack() {
 	# Please read ... for further informations
 	epatch "${FILESDIR}/${PV}-lazyldflags.patch"
 	epatch "${FILESDIR}/${PV}-py_smp.patch"
+	epatch "${FILESDIR}/${PV}-CVE-2007-4138.patch"
 
 	# Ok, agreed, this is ugly. But it avoids a patch we
 	# need for every samba version and we don't need autotools
