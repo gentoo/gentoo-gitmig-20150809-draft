@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/watchdog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.20 2007/09/09 07:25:28 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.21 2007/09/11 15:45:07 phreak Exp $
+
+  11 Sep 2007; Christian Heim <phreak@gentoo.org> watchdog-5.4.ebuild:
+  Comment the unused epatch for the Debian patch (for now), thanks to Patrizio
+  Bassi <hetfield666 at gmail.com> in #192040.
 
 *watchdog-5.4 (09 Sep 2007)
 
