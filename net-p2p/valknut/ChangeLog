@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/valknut
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.45 2007/09/09 16:52:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.46 2007/09/11 11:00:46 armin76 Exp $
+
+  11 Sep 2007; Raúl Porcel <armin76@gentoo.org>
+  -files/valknut-0.3.7-gcc41.patch, -valknut-0.3.7.ebuild,
+  -valknut-0.3.8.1.ebuild, -valknut-0.3.9.ebuild:
+  old
 
   09 Sep 2007; Markus Rothe <corsair@gentoo.org> valknut-0.3.10.ebuild:
   Stable on ppc64; bug #186352
