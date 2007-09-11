@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.8.ebuild,v 1.2 2007/07/01 11:06:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.8.ebuild,v 1.3 2007/09/11 14:24:51 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -93,13 +93,13 @@ src_unpack() {
 		echo "CONFIG_READLINE=y" >> .config
 	fi
 
-	if use ssl ; then
-		# SSL authentication methods
-		echo "CONFIG_TLS=openssl" >> .config
-		echo "CONFIG_SMARTCARD=y" >> .config
-	elif use gnutls ; then
+	# SSL authentication methods
+	if use gnutls ; then
 		echo "CONFIG_TLS=gnutls" >> .config
 		echo "CONFIG_GNUTLS_EXTRA=y" >> .config
+	elif use ssl ; then
+		echo "CONFIG_TLS=openssl" >> .config
+		echo "CONFIG_SMARTCARD=y" >> .config
 	else
 		echo "CONFIG_TLS=internal" >> .config
 	fi
