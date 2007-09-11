@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/elogv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.16 2007/08/19 22:15:45 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.17 2007/09/11 18:48:51 opfer Exp $
+
+*elogv-0.6 (11 Sep 2007)
+
+  11 Sep 2007; Christian Faulhammer <opfer@gentoo.org> +elogv-0.6.ebuild:
+  improvements on performance in this version bump
 
   19 Aug 2007; Ferris McCormick <fmccor@gentoo.org> elogv-0.5.1.ebuild:
   Add ~sparc keyword.  Works ans seems useful.
