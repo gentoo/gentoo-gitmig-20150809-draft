@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.5.ebuild,v 1.2 2007/09/06 11:59:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.5.ebuild,v 1.3 2007/09/11 05:39:49 mrness Exp $
 
-inherit libtool eutils
+inherit libtool eutils pam
 
 MY_P="${P#gnu}"
 
@@ -42,7 +42,7 @@ src_compile() {
 
 	local additional_conf=""
 	if use pam ; then
-		additional_conf="--with-pamdir=/$(get_libdir)/security"
+		additional_conf="--with-pamdir=$(getpam_mod_dir)"
 	fi
 	econf --enable-client \
 		$(use_with guile) \
