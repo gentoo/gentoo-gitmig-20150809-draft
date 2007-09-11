@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.65 2007/08/05 16:16:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.66 2007/09/11 21:05:35 aballier Exp $
+
+*sox-14.0.0 (11 Sep 2007)
+
+  11 Sep 2007; Alexis Ballier <aballier@gentoo.org> +sox-14.0.0.ebuild:
+  version bump, dropping mips keyword for ladspa useflag and deps
 
   05 Aug 2007; Samuli Suominen <drac@gentoo.org> sox-12.17.9.ebuild,
   sox-12.18.2.ebuild:
