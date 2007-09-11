@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.5.1.ebuild,v 1.3 2007/07/22 08:47:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.5.1.ebuild,v 1.4 2007/09/11 12:52:59 markusle Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -104,6 +104,10 @@ src_install() {
 		-e "/^R_DOC_DIR=.*/s::R_DOC_DIR=/usr/$(get_libdir)/R/doc:" \
 		-i ${D}/usr/$(get_libdir)/R/bin/R \
 		|| die "sed failed."
+
+	# fix paths in libR.pc pkgconfig file
+	sed -e "s:${D}::" -i ${D}/usr/$(get_libdir)/pkgconfig/libR.pc \
+		|| die "Failed to fix libR.pc file"
 
 	# R installs two identical wrappers under /usr/bin and /usr/lib/R/bin/
 	# the 2nd one is corrected by above sed, the first is replaced by a symlink

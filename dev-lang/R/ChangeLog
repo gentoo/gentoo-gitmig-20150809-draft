@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.88 2007/07/22 08:47:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.89 2007/09/11 12:52:59 markusle Exp $
+
+  11 Sep 2007; Markus Dittrich <markusle@gentoo.org> R-2.5.1.ebuild:
+  Fixed messed up paths in libR.pc pkgconfig file (see bug #191986).
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> R-2.2.1.ebuild,
   R-2.4.1.ebuild, R-2.5.0.ebuild, R-2.5.1.ebuild:
