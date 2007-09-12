@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.1.ebuild,v 1.3 2007/09/12 15:19:20 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.1.ebuild,v 1.4 2007/09/12 21:15:12 nyhm Exp $
 
 inherit eutils games
 
@@ -24,6 +24,15 @@ RDEPEND="virtual/opengl
 	media-libs/speex"
 DEPEND="${RDEPEND}
 	>=dev-util/scons-0.97"
+
+pkg_setup() {
+	games_pkg_setup
+	if has_version "<dev-libs/boost-1.34" && \
+		! built_with_use dev-libs/boost threads
+	then
+		die "Please emerge dev-libs/boost with USE=threads"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
