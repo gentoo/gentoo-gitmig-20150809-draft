@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r6.ebuild,v 1.3 2007/07/01 19:10:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r6.ebuild,v 1.4 2007/09/12 21:41:45 armin76 Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ SRC_URI="http://physionet.caregroup.harvard.edu/physiotools/xview/${MY_PN}.tar.g
 
 SLOT="0"
 IUSE=""
-KEYWORDS="-alpha -amd64 ~ppc ~sparc ~x86"
+KEYWORDS="-alpha -amd64 ~ppc ~sparc x86"
 
 RDEPEND="x11-libs/libXpm
 	x11-proto/xextproto
