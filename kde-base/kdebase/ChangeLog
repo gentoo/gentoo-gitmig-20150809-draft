@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.386 2007/08/15 04:49:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.387 2007/09/12 23:21:21 philantrop Exp $
+
+*kdebase-3.5.7-r4 (12 Sep 2007)
+
+  12 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/konqueror-3.5.7-185603-spoofing.diff, +files/kdm-3.5.7-login.diff,
+  +kdebase-3.5.7-r4.ebuild:
+  Added two security patches for konqueror. Fixes bug 185603. Added an
+  upstream patch to correct a potential login issue.
 
   15 Aug 2007; Jeroen Roovers <jer@gentoo.org> kdebase-3.5.7-r3.ebuild:
   Stable for HPPA (bug #176297).
