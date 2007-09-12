@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.482 2007/08/30 22:22:46 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.483 2007/09/12 23:18:53 philantrop Exp $
+
+*kdelibs-3.5.7-r3 (12 Sep 2007)
+
+  12 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/konqueror-3.5.7-185603-spoofing.diff,
+  +files/kdelibs-3.5.7-kcookiejar.diff, -kdelibs-3.5.5-r4.ebuild,
+  +kdelibs-3.5.7-r3.ebuild:
+  Added two security patches for konqueror. Fixes bug 185603. Removed obsolete
+  version.
 
   30 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
   kdelibs-3.5.5-r10.ebuild:

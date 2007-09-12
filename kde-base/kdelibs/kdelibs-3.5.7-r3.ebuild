@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r4.ebuild,v 1.12 2007/07/22 10:50:03 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.7-r3.ebuild,v 1.1 2007/09/12 23:18:53 philantrop Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -8,43 +8,44 @@ set-kdedir 3.5
 DESCRIPTION="KDE libraries needed by all KDE programs."
 HOMEPAGE="http://www.kde.org/"
 SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
-	mirror://gentoo/kdelibs-3.5-patchset-05.tar.bz2"
+	mirror://gentoo/kdelibs-3.5-patchset-10.tar.bz2
+	mirror://gentoo/${PN}-3.5.7-seli-xinerama.patch.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
-KEYWORDS="alpha ~amd64 ~hppa ia64 mips ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl utempter openexr spell ssl tiff
-zeroconf kernel_linux fam lua kdehiddenvisibility"
-
-# kde.eclass has kdelibs in DEPEND, and we can't have that in here.
-# so we recreate the entire DEPEND from scratch.
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="acl alsa arts branding cups doc jpeg2k kerberos legacyssl utempter openexr spell tiff
+avahi kernel_linux fam lua kdehiddenvisibility"
 
 # Added aspell-en as dependency to work around bug 131512.
+# Made openssl and zeroconf mandatory dependencies, see bug #172972 and #175984
 RDEPEND="$(qt_min_version 3.3.3)
-	arts? ( ~kde-base/arts-${PV} )
+	arts? ( >=kde-base/arts-3.5.5 )
 	app-arch/bzip2
 	>=media-libs/freetype-2
 	media-libs/fontconfig
-	>=dev-libs/libxslt-1.1.15
+	>=dev-libs/libxslt-1.1.16
 	>=dev-libs/libxml2-2.6.6
-	>=dev-libs/libpcre-4.2
+	>=dev-libs/libpcre-6.6
 	media-libs/libart_lgpl
 	net-dns/libidn
+	>=dev-libs/openssl-0.9.7d
 	acl? ( kernel_linux? ( sys-apps/acl ) )
-	ssl? ( >=dev-libs/openssl-0.9.7d )
 	alsa? ( media-libs/alsa-lib )
 	cups? ( >=net-print/cups-1.1.19 )
 	tiff? ( media-libs/tiff )
 	kerberos? ( virtual/krb5 )
 	jpeg2k? ( media-libs/jasper )
 	openexr? ( >=media-libs/openexr-1.2.2-r2 )
-	zeroconf? (	net-misc/mDNSResponder !kde-misc/kdnssd-avahi )
+	!avahi? ( net-misc/mDNSResponder !kde-misc/kdnssd-avahi )
 	fam? ( virtual/fam )
 	virtual/ghostscript
 	utempter? ( sys-libs/libutempter )
 	!kde-base/kde-env
 	lua? ( dev-lang/lua )
-	spell? ( app-text/aspell app-dicts/aspell-en )"
+	spell? ( >=app-text/aspell-0.60.5 >=app-dicts/aspell-en-6.0.0 )
+	>=sys-apps/portage-2.1.2.11
+	!kde-base/ksync"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
@@ -54,8 +55,13 @@ RDEPEND="${RDEPEND}
 	x11-apps/rgb
 	x11-apps/iceauth"
 
+PDEPEND="avahi? ( kde-misc/kdnssd-avahi )"
+
 # Testing code is rather broken and merely for developer purposes, so disable it.
 RESTRICT="test"
+
+PATCHES="${FILESDIR}/konqueror-3.5.7-185603-spoofing.diff
+		${FILESDIR}/${P}-kcookiejar.diff"
 
 pkg_setup() {
 	if use legacyssl ; then
@@ -65,9 +71,10 @@ pkg_setup() {
 		elog "For more information, see bug #128922."
 		echo ""
 	fi
+
 	if ! use utempter ; then
 		echo ""
-		elog "On some setups that relies on the correct update of utmp records, not using"
+		elog "On some setups, which rely on the correct update of utmp records, not using"
 		elog "utempter might not update them correctly. If you experience unexpected"
 		elog "behaviour, try to rebuild kde-base/kdelibs with utempter use-flag enabled."
 		echo ""
@@ -85,40 +92,47 @@ pkg_setup() {
 
 src_unpack() {
 	kde_src_unpack
+
 	if use legacyssl ; then
-		# This patch won't be included upstream, see bug #128922
-		epatch "${WORKDIR}/patches/kdelibs_3.5.4-kssl-3des.patch" || die "Patch did not apply."
+		# This patch won't be included upstream, see bug #128922.
+		epatch "${WORKDIR}/patches/kdelibs_3.5.4-kssl-3des.patch"
 	fi
 
-	# Apply the following patch on the next revision of kdelibs-3.5.5 (fixes kde
-	# bug #135409), which corrects a nasty regression in the cstyle indenter.
-	epatch "${FILESDIR}/${P}-kate-cstyle-indenter-fix.diff"
+	if use utempter ; then
+		# Bug #135818 is the eternal reference.
+		epatch "${WORKDIR}/patches/kdelibs-3.5_libutempter.patch"
+	fi
 
-	# Fix kdeprint timeout when trying to connect to cupsd. Bug #151261.
-	epatch "${FILESDIR}/${P}-kdeprint-cupsd-timeout-fix.patch"
+	if use branding ; then
+		# Add "(Gentoo)" to khtml user agent.
+		epatch "${WORKDIR}/patches/kdelibs_3.5-cattlebrand.diff"
+	fi
 
-	# Fix rendering (see upstream bug #135639).
-	epatch "${FILESDIR}/${P}-khtml.patch"
-
-	# Allow notification with arts disabled
-	epatch "${FILESDIR}/${P}-noarts.patch"
-	epatch "${FILESDIR}/${P}-noarts-2.patch"
+	# Xinerama patch from Lubos Lunak.
+	# http://ktown.kde.org/~seli/xinerama/
+	epatch "${DISTDIR}/${PN}-3.5.7-seli-xinerama.patch.bz2"
 }
 
 src_compile() {
 	rm -f "${S}/configure"
 
 	myconf="--with-distribution=Gentoo --disable-fast-malloc
+			--with-libart --with-libidn --with-ssl
+			--without-hspell
 			$(use_enable fam libfam) $(use_enable kernel_linux dnotify)
-			--with-libart --with-libidn
-			$(use_with acl) $(use_with ssl)
-			$(use_with alsa) $(use_with arts)
+			$(use_with acl) $(use_with alsa)
+			$(use_with arts) $(use_enable cups)
 			$(use_with kerberos gssapi) $(use_with tiff)
 			$(use_with jpeg2k jasper) $(use_with openexr)
-			$(use_enable cups) $(use_enable zeroconf dnssd)
 			$(use_with utempter) $(use_with lua)
 			$(use_enable kernel_linux sendfile) --enable-mitshm
-			$(use_with spell aspell) --without-hspell"
+			$(use_with spell aspell)"
+
+	if ! use avahi; then
+		myconf="${myconf} --enable-dnssd"
+	else
+		myconf="${myconf} --disable-dnssd"
+	fi
 
 	if has_version x11-apps/rgb; then
 		myconf="${myconf} --with-rgbfile=/usr/share/X11/rgb.txt"
@@ -155,6 +169,11 @@ src_install() {
 		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) ${KDEDIR}/lib
 	fi
 
+	# Get rid of the disabled version of the kdnsd libraries
+	if use avahi; then
+		rm -rf "${D}/${PREFIX}"/$(get_libdir)/libkdnssd.*
+	fi
+
 	dodir /etc/env.d
 
 	# List all the multilib libdirs
@@ -163,23 +182,23 @@ src_install() {
 		libdirs="${libdirs}:${PREFIX}/${libdir}"
 	done
 
+	# Please note that the KDE install path has to be the last value in KDEDIRS.
 	cat <<EOF > "${D}"/etc/env.d/45kdepaths-${SLOT} # number goes down with version upgrade
 PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${libdirs:1}
+MANPATH=${PREFIX}/share/man
 CONFIG_PROTECT="${PREFIX}/share/config ${PREFIX}/env ${PREFIX}/shutdown /usr/share/config"
-KDEDIRS="${PREFIX}:/usr:/usr/local"
+KDEDIRS="/usr:/usr/local:${PREFIX}"
 #KDE_IS_PRELINKED=1
+XDG_DATA_DIRS="/usr/share:${PREFIX}/share:/usr/local/share"
+COLON_SEPARATED="XDG_DATA_DIRS"
 EOF
-}
 
-pkg_postinst() {
-	if use zeroconf; then
-		echo
-		elog "To make zeroconf support available in KDE make sure that the 'mdnsd' daemon"
-		elog "is running. Make sure also that multicast dns lookups are enabled by editing"
-		elog "the 'hosts:' line in /etc/nsswitch.conf to include 'mdns', e.g.:"
-		elog "	hosts: files mdns dns"
-		echo
-	fi
+	# Make sure the target for the revdep-rebuild stuff exists. Fixes bug 184441.
+	dodir /etc/revdep-rebuild
+
+cat <<EOF > "${D}"/etc/revdep-rebuild/50-kde3
+SEARCH_DIRS="${PREFIX}/bin ${PREFIX}/lib*"
+EOF
 }
