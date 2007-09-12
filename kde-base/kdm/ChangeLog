@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.100 2007/08/20 12:32:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.101 2007/09/12 23:22:40 philantrop Exp $
+
+*kdm-3.5.7-r2 (12 Sep 2007)
+
+  12 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kdm-3.5.7-login.diff, +kdm-3.5.7-r2.ebuild:
+  Added an upstream patch to correct a potential login issue.
 
 *kdm-3.5.7-r1 (20 Aug 2007)
 
