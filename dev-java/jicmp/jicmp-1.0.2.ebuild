@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jicmp/jicmp-1.0.2.ebuild,v 1.1 2007/09/12 05:11:55 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jicmp/jicmp-1.0.2.ebuild,v 1.2 2007/09/12 05:20:22 wltjr Exp $
 
 inherit eutils java-pkg-2
 
@@ -10,15 +10,11 @@ SLOT="0"
 SRC_URI="mirror://sourceforge/opennms/${P}.tar.gz"
 HOMEPAGE="http://www.opennms.org/"
 KEYWORDS="~amd64 ~x86"
-LICENSE="Apache-2.0"
-
-#COMMON_DEP="net-analyzer/rrdtool"
+LICENSE="GPL-2"
 
 RDEPEND=">=virtual/jre-1.5"
-#	${COMMON_DEP}"
 
 DEPEND=">=virtual/jdk-1.5"
-#	${COMMON_DEP}"
 
 S="${WORKDIR}/${P}"
 
