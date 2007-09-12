@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.2.ebuild,v 1.6 2007/08/31 14:14:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.2.ebuild,v 1.7 2007/09/12 20:26:00 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ivtvdriver.org"
 SRC_URI="http://dl.ivtvdriver.org/ivtv/archive/1.0.x/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="fbcon"
 RDEPEND="|| ( >=sys-fs/udev-103 sys-apps/hotplug )"
 DEPEND="app-arch/unzip"
@@ -28,7 +28,7 @@ pkg_setup() {
 		CONFIG_CHECK="${CONFIG_CHECK} FB FB_TRIDENT FRAMEBUFFER_CONSOLE FONTS"
 	fi
 
-	if ! ( kernel_is 2 6 22 ); then
+	if ! ( kernel_is 2 6 22 || kernel_is 2 6 23 ); then
 		eerror "Each IVTV driver branch will only work with a specific"
 		eerror "linux kernel branch."
 		eerror ""
@@ -37,7 +37,7 @@ pkg_setup() {
 		eerror "b) emerge a different ivtv driver"
 		eerror ""
 		eerror "See http://ivtvdriver.org/ for more information"
-		die "This only works on 2.6.22 kernels"
+		die "This only works on 2.6.22 and greater kernels"
 	fi
 
 	if use fbcon; then
