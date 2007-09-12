@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jicmp
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jicmp/ChangeLog,v 1.1 2007/09/12 05:11:55 wltjr Exp $
+
+*jicmp-1.0.2 (12 Sep 2007)
+
+  12 Sep 2007; William L. Thomson Jr. <wltjr@gentoo.org> +metadata.xml,
+  +jicmp-1.0.2.ebuild:
+  Intial ebuild, dependency for opennms and a useful lib :)
+
