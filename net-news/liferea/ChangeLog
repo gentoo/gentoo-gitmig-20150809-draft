@@ -1,6 +1,26 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.119 2007/09/12 09:08:58 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.120 2007/09/12 22:01:19 dang Exp $
+
+*liferea-1.4.2 (12 Sep 2007)
+
+  12 Sep 2007; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.4.1.ebuild,
+  +liferea-1.4.2.ebuild:
+  Bump to 1.4.2
+  	* Fixes broken 'f' and 'd' hotkeys. (reported by jah)
+  	* Fixes a bug that prevented the next unread item
+  	  selection feature to work correctly with collapsed
+  	  folders. (reported by Luis Rodrigo Gallardo Cruz)
+  	* Fixes SF #1787003: skim through articles only works
+  	  with Ctrl-Space (reported by Chris Conway)
+  	* Fixes using the wrong callback when updating new
+  	  OPML sources right after subscription.
+  	* Fixes "hanging" of next unread item selection feature
+  	  in two pane mode view with unread items.
+  	* Fixes an assertion when changing the popup notification
+  	  option in the preferences dialog.
+  	* Fixes SF #1792568: broken libnotify notifications
+  	  (reported by zodmaner)
 
   12 Sep 2007; Jose Luis Rivero <yoswink@gentoo.org> liferea-1.2.23.ebuild:
   Sparc stable wrt security bug #143301
