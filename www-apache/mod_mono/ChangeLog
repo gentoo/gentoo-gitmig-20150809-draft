@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.38 2007/09/10 19:41:14 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.39 2007/09/12 00:51:53 jurek Exp $
+
+  12 Sep 2007; Jurek Bartuszek <jurek@gentoo.org>
+  +files/1.2.5/70_mod_mono.conf:
+  Added missing config file (bug #192253)
 
 *mod_mono-1.2.5 (10 Sep 2007)
 
