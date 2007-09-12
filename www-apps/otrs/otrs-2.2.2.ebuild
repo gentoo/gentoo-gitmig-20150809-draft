@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.1.5.ebuild,v 1.5 2007/08/19 11:40:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.2.2.ebuild,v 1.1 2007/09/12 07:00:31 wrobel Exp $
 
-inherit webapp eutils
+inherit webapp eutils depend.apache
 
 IUSE="mysql postgres fastcgi ldap gd pdf"
 
@@ -35,17 +35,20 @@ RDEPEND="
 	ldap? ( dev-perl/perl-ldap net-nds/openldap )
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
-	>=www-servers/apache-2
 	fastcgi? ( dev-perl/FCGI )
-	!fastcgi? ( =www-apache/libapreq2-2* )
+	apache2? ( =www-apache/libapreq2-2* )
 	gd? ( dev-perl/GD dev-perl/GDTextUtil dev-perl/GDGraph )
 "
+
+want_apache
 
 LICENSE="GPL-2"
 
 pkg_setup() {
 	webapp_pkg_setup
-	enewuser otrs -1 -1 /dev/null apache
+	if use apache2; then
+		enewuser otrs -1 -1 /dev/null apache
+	fi
 }
 
 src_unpack() {
@@ -106,5 +109,10 @@ pkg_postinst() {
 	ewarn "Don't run webapp-config with -d otrs. Instead, try"
 	ewarn "webapp-config -I -h <host> -d ot ${PN} ${PVR}"
 	ewarn
+	if !use apache2; then
+		ewarn "You did not activate the USE-flag apache2 which means you"
+		ewarn "will need to create the otrs user yourself. Make this user"
+		ewarn "a member of your webserver group."
+	fi
 	# webapp_pkg_postinst
 }
