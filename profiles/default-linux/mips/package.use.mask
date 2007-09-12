@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.7 2007/09/07 16:27:49 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.8 2007/09/12 23:16:26 philantrop Exp $
+
+# Wulf C. Krueger <philantrop@gentoo.org> (13 Sep 2007)
+# dependency can't be fulfilled at the moment
+=kde-base/kdelibs-3.5.5* kerberos
 
 # Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
 # app-admin/gkrellm may pull in hddtemp, which is not yet available here
