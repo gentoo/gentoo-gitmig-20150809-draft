@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.10.2_p1.ebuild,v 1.2 2007/04/06 07:36:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.11.3.ebuild,v 1.1 2007/09/12 21:09:57 dev-zero Exp $
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
@@ -13,6 +13,9 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="ares bittorrent gnutls metalink nls ssl test"
 
+# Tests are broken again on amd64
+RESTRICT="test"
+
 CDEPEND="ssl? (
 		gnutls? ( net-libs/gnutls )
 		!gnutls? ( dev-libs/openssl ) )
@@ -21,7 +24,7 @@ CDEPEND="ssl? (
 	metalink? ( >=dev-libs/libxml2-2.6.26 )"
 DEPEND="${CDEPEND}
 	nls? ( sys-devel/gettext )
-	test? ( dev-util/cppunit  )"
+	test? ( >=dev-util/cppunit-1.12.0 )"
 RDEPEND="${CDEPEND}
 	nls? ( virtual/libiconv virtual/libintl )"
 

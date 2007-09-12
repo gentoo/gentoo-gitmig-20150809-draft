@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.14 2007/04/06 07:36:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.15 2007/09/12 21:09:57 dev-zero Exp $
+
+*aria2-0.11.3 (12 Sep 2007)
+
+  12 Sep 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -aria2-0.10.2_p1.ebuild, +aria2-0.11.3.ebuild:
+  Version bump (bug #187025, tests broken again)
 
   06 Apr 2007; Tiziano Müller <dev-zero@gentoo.org> aria2-0.10.2_p1.ebuild:
   Fixed missing IUSE (thanks to Jakub)
