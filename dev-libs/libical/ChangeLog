@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libical
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.32 2007/07/25 17:26:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.33 2007/09/12 07:59:08 s4t4n Exp $
+
+  12 Sep 2007; Michele Noberasco <s4t4n@gentoo.org> libical-0.26.7.ebuild:
+  Stable on x86. See bug #191035.
+  libical-0.24_rc4-r1.ebuild:
+  Wiped out oldest version.
 
   25 Jul 2007; Jeroen Roovers <jer@gentoo.org> libical-0.26.6.ebuild:
   Stable for HPPA (bug #183440).
