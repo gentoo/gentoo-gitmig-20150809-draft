@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/pam_smb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/ChangeLog,v 1.6 2007/04/28 13:21:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/ChangeLog,v 1.7 2007/09/12 21:22:53 dev-zero Exp $
+
+  12 Sep 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -pam_smb-1.9.9-r1.ebuild, -pam_smb-1.9.9-r2.ebuild,
+  -pam_smb-2.0.0_rc5.ebuild, -pam_smb-2.0.0_rc5-r1.ebuild,
+  -pam_smb-2.0.0_rc6.ebuild, pam_smb-2.0.0_rc6-r1.ebuild:
+  Dropped old versions. Cleanup (bug #192031, thanks to Jakub Moc). Some more
+  cleanup.
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> pam_smb-2.0.0_rc6-r1.ebuild:
   Use newinitd
