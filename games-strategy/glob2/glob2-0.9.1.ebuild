@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.1.ebuild,v 1.2 2007/09/12 11:12:58 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.1.ebuild,v 1.3 2007/09/12 15:19:20 nyhm Exp $
 
 inherit eutils games
 
@@ -24,6 +24,12 @@ RDEPEND="virtual/opengl
 	media-libs/speex"
 DEPEND="${RDEPEND}
 	>=dev-util/scons-0.97"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i '1i SConsignFile()' SConstruct || die "sed failed"
+}
 
 src_compile() {
 	scons \
