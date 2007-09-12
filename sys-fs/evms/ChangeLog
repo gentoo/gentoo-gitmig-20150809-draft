@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.71 2007/08/31 15:13:30 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.72 2007/09/12 08:10:42 dev-zero Exp $
+
+  12 Sep 2007; Tiziano Müller <dev-zero@gentoo.org> files/evms.initd:
+  Un-bash the init-script
 
   31 Aug 2007; Ferris McCormick <fmccor@gentoo.org> evms-2.5.5-r7.ebuild:
   Add ~sparc keyword --- Bug #190828 (third choice) --- Please see the bug for
