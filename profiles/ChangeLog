@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.639 2007/09/12 22:20:10 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.640 2007/09/12 23:03:00 alonbl Exp $
+
+  12 Sep 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
+  Mask app-text/hspell for removal
 
   12 Sep 2007; David Shakaryan <omp@gentoo.org> package.mask:
   Remove a few more dead masks.
