@@ -1,0 +1,55 @@
+Backport dl_iterate_phdr from FreeBSD-7 so that we can use gcc-4
+and not pull in libgcc_s.so.1 into every binary we build.
+
+--- sys/link_elf.h	2005/01/07 02:29:23	1.26
++++ sys/link_elf.h	2007/04/03 18:33:41	1.27
+@@ -41,7 +41,7 @@
+ #ifndef _SYS_LINK_ELF_H_
+ #define _SYS_LINK_ELF_H_
+ 
+-#include <sys/types.h>
++#include <sys/elf.h>
+ 
+ /*
+  * Flags that describe the origin of the entries in Dl_serinfo.
+@@ -75,5 +75,28 @@ struct r_debug {
+ 	    RT_DELETE				/* removing a shared library */
+ 	}		r_state;
+ };
++
++/* Add a define so that libexec and lib can optionally use this */
++#define _GENTOO_DL_ITERATE_PHDR
++
++struct dl_phdr_info
++{
++	Elf_Addr dlpi_addr;			/* module relocation base */
++	const char *dlpi_name;			/* module name */
++	const Elf_Phdr *dlpi_phdr;		/* pointer to module's phdr */
++	Elf_Half dlpi_phnum;			/* number of entries in phdr */
++	unsigned long long int dlpi_adds;	/* total # of loads */
++	unsigned long long int dlpi_subs;	/* total # of unloads */
++	size_t dlpi_tls_modid;
++	void *dlpi_tls_data;
++};
++
++__BEGIN_DECLS
++
++typedef int (*__dl_iterate_hdr_callback)(struct dl_phdr_info *, size_t,
++    void *);
++extern int dl_iterate_phdr(__dl_iterate_hdr_callback, void *);
++
++__END_DECLS
+ 
+ #endif /* _SYS_LINK_ELF_H_ */
+--- sys/elf.h	2007-09-10 14:22:42 +0100
++++ sys/elf.h	2007-09-10 14:25:12 +0100
+@@ -0,0 +1,9 @@
++#ifndef	_SYS_ELF_H_
++#define	_SYS_ELF_H_
++
++#include <sys/types.h>
++#include <machine/elf.h>
++#include <sys/elf32.h>
++#include <sys/elf64.h>
++
++#endif /* !_SYS_ELF_H_ */
