@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.18.2.ebuild,v 1.1 2007/08/29 22:00:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.18.2.ebuild,v 1.2 2007/09/12 23:01:12 eva Exp $
 
 inherit gnome2 eutils
 
@@ -13,6 +13,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc python spell"
 
 RDEPEND=">=gnome-base/gconf-2
+	sys-apps/attr
 	>=dev-libs/glib-2.12
 	>=x11-libs/gtk+-2.10
 	>=x11-libs/gtksourceview-1.8.0
