@@ -1,0 +1,246 @@
+--- libexec/rtld-elf/rtld.h	2005/12/18 04:52:34	1.36
++++ libexec/rtld-elf/rtld.h	2005/12/18 19:43:32	1.37
+@@ -90,6 +90,11 @@ typedef struct Struct_Needed_Entry {
+     unsigned long name;		/* Offset of name in string table */
+ } Needed_Entry;
+ 
++typedef struct Struct_Name_Entry {
++    STAILQ_ENTRY(Struct_Name_Entry) link;
++    char   name[1];
++} Name_Entry;
++
+ /* Lock object */
+ typedef struct Struct_LockInfo {
+     void *context;		/* Client context for creating locks */
+@@ -173,6 +193,9 @@ typedef struct Struct_Obj_Entry {
+     const char *rpath;		/* Search path specified in object */
+     Needed_Entry *needed;	/* Shared objects needed by this one (%) */
+ 
++    STAILQ_HEAD(, Struct_Name_Entry) names; /* List of names for this object we
++					       know about. */
++
+     Elf_Addr init;		/* Initialization function to call */
+     Elf_Addr fini;		/* Termination function to call */
+ 
+diff -ur libexec/rtld-elf/map_object.c libexec/rtld-elf/map_object.c
+--- libexec/rtld-elf/map_object.c	2005-02-27 12:55:40 +0000
++++ libexec/rtld-elf/map_object.c	2007-09-10 11:29:53 +0100
+@@ -61,7 +61,6 @@
+     Elf_Phdr **segs;
+     int nsegs;
+     Elf_Phdr *phdyn;
+-    Elf_Phdr *phphdr;
+     Elf_Phdr *phinterp;
+     Elf_Phdr *phtls;
+     caddr_t mapbase;
+@@ -79,7 +78,8 @@
+     Elf_Addr clear_vaddr;
+     caddr_t clear_addr;
+     caddr_t clear_page;
+-    size_t nclear;
++    Elf_Addr phdr_vaddr;
++    size_t nclear, phsize;
+     Elf_Addr bss_vaddr;
+     Elf_Addr bss_vlimit;
+     caddr_t bss_addr;
+@@ -95,9 +95,11 @@
+      * in that order.
+      */
+     phdr = (Elf_Phdr *) ((char *)hdr + hdr->e_phoff);
++    phsize  = hdr->e_phnum * sizeof (phdr[0]);
+     phlimit = phdr + hdr->e_phnum;
+     nsegs = -1;
+-    phdyn = phphdr = phinterp = phtls = NULL;
++    phdyn = phinterp = phtls = NULL;
++    phdr_vaddr = 0;
+     segs = alloca(sizeof(segs[0]) * hdr->e_phnum);
+     while (phdr < phlimit) {
+ 	switch (phdr->p_type) {
+@@ -108,7 +110,7 @@
+ 
+ 	case PT_LOAD:
+ 	    segs[++nsegs] = phdr;
+-    	    if (segs[nsegs]->p_align < PAGE_SIZE) {
++    	    if ((segs[nsegs]->p_align & (PAGE_SIZE - 1)) != 0) {
+ 		_rtld_error("%s: PT_LOAD segment %d not page-aligned",
+ 		    path, nsegs);
+ 		return NULL;
+@@ -116,7 +118,8 @@
+ 	    break;
+ 
+ 	case PT_PHDR:
+-	    phphdr = phdr;
++	    phdr_vaddr = phdr->p_vaddr;
++	    phsize = phdr->p_memsz;
+ 	    break;
+ 
+ 	case PT_DYNAMIC:
+@@ -211,6 +214,11 @@
+ 		return NULL;
+ 	    }
+ 	}
++	if (phdr_vaddr == 0 && data_offset <= hdr->e_phoff &&
++	  (data_vlimit - data_vaddr + data_offset) >=
++	  (hdr->e_phoff + hdr->e_phnum * sizeof (Elf_Phdr))) {
++	    phdr_vaddr = data_vaddr + hdr->e_phoff - data_offset;
++	}
+     }
+ 
+     obj = obj_new();
+@@ -227,10 +235,19 @@
+     obj->dynamic = (const Elf_Dyn *) (obj->relocbase + phdyn->p_vaddr);
+     if (hdr->e_entry != 0)
+ 	obj->entry = (caddr_t) (obj->relocbase + hdr->e_entry);
+-    if (phphdr != NULL) {
+-	obj->phdr = (const Elf_Phdr *) (obj->relocbase + phphdr->p_vaddr);
+-	obj->phsize = phphdr->p_memsz;
++    if (phdr_vaddr != 0) {
++	obj->phdr = (const Elf_Phdr *) (obj->relocbase + phdr_vaddr);
++    } else {
++	obj->phdr = malloc(phsize);
++	if (obj->phdr == NULL) {
++	    obj_free(obj);
++	    _rtld_error("%s: cannot allocate program header", path);
++	     return NULL;
++	}
++	memcpy((char *)obj->phdr, (char *)hdr + hdr->e_phoff, phsize);
++	obj->phdr_alloc = true;
+     }
++    obj->phsize = phsize;
+     if (phinterp != NULL)
+ 	obj->interp = (const char *) (obj->relocbase + phinterp->p_vaddr);
+     if (phtls != NULL) {
+@@ -308,7 +325,6 @@
+     if (obj->tls_done) {
+ 	free_tls_offset(obj);
+     }
+-    free(obj->path);
+     while (obj->needed != NULL) {
+ 	Needed_Entry *needed = obj->needed;
+ 	obj->needed = needed->next;
+@@ -325,6 +341,7 @@
+ 	free(elm);
+     }
+     free(obj->origin_path);
++	free(obj->path);
+     free(obj->priv);
+     free(obj);
+ }
+diff -ur libexec/rtld-elf/rtld.c libexec/rtld-elf/rtld.c
+--- libexec/rtld-elf/rtld.c	2006-09-02 21:38:13 +0100
++++ libexec/rtld-elf/rtld.c	2007-09-10 11:22:48 +0100
+@@ -153,6 +153,7 @@
+ static Obj_Entry *obj_main;	/* The main program shared object */
+ static Obj_Entry obj_rtld;	/* The dynamic linker shared object */
+ static unsigned int obj_count;	/* Number of objects in obj_list */
++static unsigned int obj_loads;	/* Number of objects in obj_list */
+ 
+ static Objlist list_global =	/* Objects dlopened with RTLD_GLOBAL */
+   STAILQ_HEAD_INITIALIZER(list_global);
+@@ -192,6 +193,9 @@
+     (func_ptr_type) &__tls_get_addr,
+     (func_ptr_type) &_rtld_allocate_tls,
+     (func_ptr_type) &_rtld_free_tls,
++#ifdef _GENTOO_DL_ITERATE_PHDR_
++    (func_ptr_type) &dl_iterate_phdr,
++#endif
+     NULL
+ };
+ 
+@@ -363,6 +365,7 @@
+     *obj_tail = obj_main;
+     obj_tail = &obj_main->next;
+     obj_count++;
++    obj_loads++;
+     /* Make sure we don't call the main program's init and fini functions. */
+     obj_main->init = obj_main->fini = (Elf_Addr)NULL;
+ 
+@@ -1287,6 +1290,7 @@
+ 	*obj_tail = obj;
+ 	obj_tail = &obj->next;
+ 	obj_count++;
++	obj_loads++;
+ 	linkmap_add(obj);	/* for GDB & dlinfo() */
+ 
+ 	dbg("  %p .. %p: %s", obj->mapbase,
+@@ -1951,6 +1955,39 @@
+     return (error);
+ }
+ 
++#ifdef _GENTOO_DL_ITERATE_PHDR
++int
++dl_iterate_phdr(__dl_iterate_hdr_callback callback, void *param)
++{
++    struct dl_phdr_info phdr_info;
++    const Obj_Entry *obj;
++    int error, lockstate;
++
++    lockstate = rlock_acquire(rtld_bind_lock);
++
++    error = 0;
++
++    for (obj = obj_list;  obj != NULL;  obj = obj->next) {
++	phdr_info.dlpi_addr = (Elf_Addr)obj->relocbase;
++	phdr_info.dlpi_name = STAILQ_FIRST(&obj->names) ?
++	    STAILQ_FIRST(&obj->names)->name : obj->path;
++	phdr_info.dlpi_phdr = obj->phdr;
++	phdr_info.dlpi_phnum = obj->phsize / sizeof(obj->phdr[0]);
++	phdr_info.dlpi_tls_modid = obj->tlsindex;
++	phdr_info.dlpi_tls_data = obj->tlsinit;
++	phdr_info.dlpi_adds = obj_loads;
++	phdr_info.dlpi_subs = obj_loads - obj_count;
++
++	if ((error = callback(&phdr_info, sizeof phdr_info, param)) != 0)
++		break;
++
++    }
++    rlock_release(rtld_bind_lock, lockstate);
++
++    return (error);
++}
++#endif
++
+ struct fill_search_info_args {
+     int		 request;
+     unsigned int flags;
+diff -ur libexec/rtld-elf/rtld.h libexec/rtld-elf/rtld.h
+--- libexec/rtld-elf/rtld.h	2005-12-30 22:13:56 +0000
++++ libexec/rtld-elf/rtld.h	2007-09-10 11:22:22 +0100
+@@ -176,15 +176,16 @@
+     Elf_Addr init;		/* Initialization function to call */
+     Elf_Addr fini;		/* Termination function to call */
+ 
+-    bool mainprog;		/* True if this is the main program */
+-    bool rtld;			/* True if this is the dynamic linker */
+-    bool textrel;		/* True if there are relocations to text seg */
+-    bool symbolic;		/* True if generated with "-Bsymbolic" */
+-    bool bind_now;		/* True if all relocations should be made first */
+-    bool traced;		/* Already printed in ldd trace output */
+-    bool jmpslots_done;		/* Already have relocated the jump slots */
+-    bool init_done;		/* Already have added object to init list */
+-    bool tls_done;		/* Already allocated offset for static TLS */
++    bool mainprog : 1;		/* True if this is the main program */
++    bool rtld : 1;		/* True if this is the dynamic linker */
++    bool textrel : 1;		/* True if there are relocations to text seg */
++    bool symbolic : 1;		/* True if generated with "-Bsymbolic" */
++    bool bind_now : 1;		/* True if all relocations should be made first */
++    bool traced : 1;		/* Already printed in ldd trace output */
++    bool jmpslots_done : 1;	/* Already have relocated the jump slots */
++    bool init_done : 1;		/* Already have added object to init list */
++    bool tls_done : 1;		/* Already allocated offset for static TLS */
++    bool phdr_alloc : 1;	/* Phdr is allocated and needs to be freed. */
+ 
+     struct link_map linkmap;	/* for GDB and dlinfo() */
+     Objlist dldags;		/* Object belongs to these dlopened DAGs (%) */
+diff -ur libexec.orig/rtld-elf/rtld_lock.c libexec/rtld-elf/rtld_lock.c
+--- libexec.orig/rtld-elf/rtld_lock.c	2004-11-16 20:45:51 +0000
++++ libexec/rtld-elf/rtld_lock.c	2007-09-10 11:22:22 +0100
+@@ -54,7 +54,7 @@
+ #define RC_INCR		0x2	/* Adjusts count of readers desiring lock */
+ 
+ typedef struct Struct_Lock {
+-	volatile int lock;
++	volatile u_int lock;
+ 	void *base;
+ } Lock;
+ 
