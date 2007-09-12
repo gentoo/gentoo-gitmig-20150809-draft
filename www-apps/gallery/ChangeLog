@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.122 2007/09/12 08:42:20 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.123 2007/09/12 08:50:44 wrobel Exp $
+
+  12 Sep 2007; <wrobel@gentoo.org> -gallery-2.1.2.ebuild,
+  -gallery-2.2.1.ebuild, -gallery-2.2.2.ebuild:
+  Removed insecure versions from the tree (see #191587).
 
   12 Sep 2007; Jose Luis Rivero <yoswink@gentoo.org> gallery-2.2.3.ebuild:
   Sparc stable wrt security #191587
