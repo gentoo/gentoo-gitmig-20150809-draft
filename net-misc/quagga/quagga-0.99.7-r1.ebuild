@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.7.ebuild,v 1.1 2007/05/02 22:01:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.7-r1.ebuild,v 1.1 2007/09/12 07:25:05 mrness Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -10,7 +10,7 @@ inherit eutils multilib autotools linux-info
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20070502.tar.gz"
+	mirror://gentoo/${P}-patches-20070912.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,7 +33,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A} || die "failed to unpack sources"
-
 	cd "${S}" || die "source dir not found"
 	epatch "${WORKDIR}/patch/${P}-link-libcap.patch"
 
@@ -57,6 +56,9 @@ src_unpack() {
 
 	# Realms support (Calin Velea) - http://vcalinus.gemenii.ro/quaggarealms.html
 	use realms && epatch "${WORKDIR}/patch/${P}-realms.diff"
+
+	# Security patches
+	epatch "${WORKDIR}/patch/${P}-backports.patch"
 
 	eautoreconf
 }

@@ -2,7 +2,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.60 2007/06/19 20:18:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.61 2007/09/12 07:25:05 mrness Exp $
+
+*quagga-0.99.7-r1 (12 Sep 2007)
+*quagga-0.98.6-r3 (12 Sep 2007)
+
+  12 Sep 2007; Alin Năstac <mrness@gentoo.org> +quagga-0.98.6-r3.ebuild,
+  -quagga-0.99.7.ebuild, +quagga-0.99.7-r1.ebuild:
+  Backport 2 security patches from quagga-0.99.9 (#192096).
 
   19 Jun 2007; Alin Năstac <mrness@gentoo.org> -quagga-0.99.6-r1.ebuild,
   -quagga-0.99.6-r2.ebuild:
