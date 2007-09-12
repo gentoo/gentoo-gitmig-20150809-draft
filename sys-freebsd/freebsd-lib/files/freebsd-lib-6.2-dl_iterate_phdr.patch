@@ -1,0 +1,29 @@
+Backport dl_iterate_phdr from FreeBSD-7 so that we can use gcc-4
+and not pull in libgcc_s.so.1 into every binary we build.
+
+diff -ur lib/libc/gen/dlfcn.c lib/libc/gen/dlfcn.c
+--- lib/libc/gen/dlfcn.c	2004-03-05 08:10:17 +0000
++++ lib/libc/gen/dlfcn.c	2007-09-10 14:11:12 +0100
+@@ -31,6 +31,7 @@
+  * Linkage to services provided by the dynamic linker.
+  */
+ #include <dlfcn.h>
++#include <link.h>
+ #include <stddef.h>
+ 
+ static const char sorry[] = "Service unavailable";
+@@ -118,3 +119,14 @@
+ {
+ 	_rtld_error(sorry);
+ }
++
++#ifdef _GENTOO_DL_ITERATE_PHDR
++#pragma weak dl_iterate_phdr
++int
++dl_iterate_phdr(int (*callback)(struct dl_phdr_info *, size_t, void *),
++    void *data)
++{
++	_rtld_error(sorry);
++	return 0;
++}
++#endif

@@ -26,6 +26,10 @@ AUX freebsd-lib-6.2-bluetooth.patch 243 RMD160 eaaeafc3f8305d4755070d9d1354289a1
 MD5 391dd728e59c50a12ee853c6841f7e9f files/freebsd-lib-6.2-bluetooth.patch 243
 RMD160 eaaeafc3f8305d4755070d9d1354289a140bf6a1 files/freebsd-lib-6.2-bluetooth.patch 243
 SHA256 4c90cb6d45fa24a07e21255949f219cc561a94011f645c58bce2a68027db6658 files/freebsd-lib-6.2-bluetooth.patch 243
+AUX freebsd-lib-6.2-dl_iterate_phdr.patch 726 RMD160 a70918ba5660f7f034b1893cdd8f61e991e7e842 SHA1 43bc3308c255a8db22e880113c903c855d06810d SHA256 9b77c8ac298b457ae468ece5d9e74009180afffce208f70240ecaa8188af3037
+MD5 5efe0b6b28304a21ba1351de0ac46972 files/freebsd-lib-6.2-dl_iterate_phdr.patch 726
+RMD160 a70918ba5660f7f034b1893cdd8f61e991e7e842 files/freebsd-lib-6.2-dl_iterate_phdr.patch 726
+SHA256 9b77c8ac298b457ae468ece5d9e74009180afffce208f70240ecaa8188af3037 files/freebsd-lib-6.2-dl_iterate_phdr.patch 726
 AUX freebsd-lib-6.2-gcc41.patch 890 RMD160 231bf22bade53a71364c18a00cecaf702cd8803d SHA1 2f26428988501fc9e6b8d0d493e39366d0cf46f7 SHA256 a5aba66f97f445f7d6c6dbfd2ec15506a922b0a38e1ae9ac951767cdf3777651
 MD5 db42cf2a84a14be272f8afed9b156d0a files/freebsd-lib-6.2-gcc41.patch 890
 RMD160 231bf22bade53a71364c18a00cecaf702cd8803d files/freebsd-lib-6.2-gcc41.patch 890
@@ -58,14 +62,18 @@ EBUILD freebsd-lib-6.2-r1.ebuild 8471 RMD160 bdd29e8f2f836247fb5c8dbbd89965341aa
 MD5 f58c30167377021178a700c9f0682f9d freebsd-lib-6.2-r1.ebuild 8471
 RMD160 bdd29e8f2f836247fb5c8dbbd89965341aa9091a freebsd-lib-6.2-r1.ebuild 8471
 SHA256 93f8be649860b0ee12967306eb22163b9c712e0b95eb1e87d223ebd9f2894a14 freebsd-lib-6.2-r1.ebuild 8471
+EBUILD freebsd-lib-6.2-r2.ebuild 8516 RMD160 6aacfc1d910de6d363c05bbcb54170edd0628d1a SHA1 9b864aa2355e9d1f4a6f19ebe549f6624bc96c6f SHA256 0edc6a682f1a762044f9c0f83d8382e771cd9da8019ee6fe45d3da0c7f68b289
+MD5 42a1b3190d141c2bbb17e405ae06edb0 freebsd-lib-6.2-r2.ebuild 8516
+RMD160 6aacfc1d910de6d363c05bbcb54170edd0628d1a freebsd-lib-6.2-r2.ebuild 8516
+SHA256 0edc6a682f1a762044f9c0f83d8382e771cd9da8019ee6fe45d3da0c7f68b289 freebsd-lib-6.2-r2.ebuild 8516
 EBUILD freebsd-lib-6.2.ebuild 8023 RMD160 d99dbb3d0ad6db6028e5c528f14e62de29739fe0 SHA1 39994adbc6e6e8e88d76500b12699a941321c181 SHA256 df9157152e8a81299a3bfea4b0f0a47f5e2dd027f72dcebc94b1c60440b7b1d6
 MD5 5f57ebed318903df6e957f7e3231b4ea freebsd-lib-6.2.ebuild 8023
 RMD160 d99dbb3d0ad6db6028e5c528f14e62de29739fe0 freebsd-lib-6.2.ebuild 8023
 SHA256 df9157152e8a81299a3bfea4b0f0a47f5e2dd027f72dcebc94b1c60440b7b1d6 freebsd-lib-6.2.ebuild 8023
-MISC ChangeLog 14252 RMD160 17c3ef7f61f80dc1dc1ca6a08ba5f6e1da174c09 SHA1 aca69d9888dfd0cf43c8b21328369788f8554a4d SHA256 0136cc8b23a3115f8d1fb4ba69df5339c98f67a838007a106309e5f5bdd44a7f
-MD5 d4d2d06c830f93f5b5d8c29eed24ef73 ChangeLog 14252
-RMD160 17c3ef7f61f80dc1dc1ca6a08ba5f6e1da174c09 ChangeLog 14252
-SHA256 0136cc8b23a3115f8d1fb4ba69df5339c98f67a838007a106309e5f5bdd44a7f ChangeLog 14252
+MISC ChangeLog 14506 RMD160 b0a554f9296b1e7b08bdc872d9f1033c7dd78a1c SHA1 cf2438a1f6e4a6cb8b4c6c82c1f56b23cb95f0aa SHA256 7d2606e94beb47ac3927c25ce9a7d76eb3a7552d09a620300f4939e633e9c47a
+MD5 e84d89cefda9d1922e3cdefb8520a49e ChangeLog 14506
+RMD160 b0a554f9296b1e7b08bdc872d9f1033c7dd78a1c ChangeLog 14506
+SHA256 7d2606e94beb47ac3927c25ce9a7d76eb3a7552d09a620300f4939e633e9c47a ChangeLog 14506
 MISC metadata.xml 156 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 SHA1 d9d9d4f2b5afc58339ea3e562fca490156935f1f SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
@@ -76,3 +84,6 @@ SHA256 49a9a54f56f7cde19e38914f3425617cb36cce9a59cf7dfe81f36c61b7ade919 files/di
 MD5 cfbe490047e77331e6fd3aa1acef40ae files/digest-freebsd-lib-6.2-r1 2072
 RMD160 2b0cd4020a9cb5b7c25aba4badc9b0d0622d3ef3 files/digest-freebsd-lib-6.2-r1 2072
 SHA256 49a9a54f56f7cde19e38914f3425617cb36cce9a59cf7dfe81f36c61b7ade919 files/digest-freebsd-lib-6.2-r1 2072
+MD5 cfbe490047e77331e6fd3aa1acef40ae files/digest-freebsd-lib-6.2-r2 2072
+RMD160 2b0cd4020a9cb5b7c25aba4badc9b0d0622d3ef3 files/digest-freebsd-lib-6.2-r2 2072
+SHA256 49a9a54f56f7cde19e38914f3425617cb36cce9a59cf7dfe81f36c61b7ade919 files/digest-freebsd-lib-6.2-r2 2072
