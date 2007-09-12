@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IMAP/PEAR-Net_IMAP-1.1.0_beta1.ebuild,v 1.1 2007/08/20 21:54:36 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IMAP/PEAR-Net_IMAP-1.1.0_beta1.ebuild,v 1.2 2007/09/12 17:25:55 jer Exp $
 
-# must be set manually due to beta1 in filename
-SRC_URI="http://pear.php.net/get/${PN/PEAR-/}-${PV/_/}.tgz"
+PEAR_PV="${PV/_/}"
 
 inherit php-pear-r1
 
