@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pal
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.22 2007/02/21 22:38:54 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.23 2007/09/12 16:02:31 jer Exp $
+
+  12 Sep 2007; Jeroen Roovers <jer@gentoo.org> pal-0.3.5_pre1.ebuild:
+  Marked ~hppa too.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
