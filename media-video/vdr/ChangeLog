@@ -1,6 +1,17 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.85 2007/09/11 19:06:48 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.86 2007/09/12 08:31:36 hd_brummy Exp $
+
+*vdr-1.4.7-r4 (12 Sep 2007)
+
+  12 Sep 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-add-svdrp-down-0.1.diff,
+  +files/vdr-1.4.7-makefile-destdir.diff,
+  +files/vdr-1.4.7-makefile-install-header.diff,
+  +files/extensions-patch-32-plugin-link-error.diff,
+  +files/vdr-set-dumpable.diff, +vdr-1.4.7-r4.ebuild:
+  versions bump; new patchset handling and a lot of new use-flags up from this
+  version
 
   11 Sep 2007; Matthias Schwarzott <zzam@gentoo.org> vdr-1.4.6.ebuild:
   Marked stable on x86.

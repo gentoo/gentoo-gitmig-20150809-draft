@@ -1,0 +1,21 @@
+--- vdr-1.4.7_extensions.diff	2007-06-24 12:12:15.000000000 +0200
++++ vdr-1.4.7_extensions-linking.diff	2007-07-05 12:51:06.000000000 +0200
+@@ -7987,6 +7987,18 @@
+    dlls.Add(new cDll(buffer, Args));
+    free(buffer);
+    free(s);
++@@ -328,7 +336,11 @@ bool cPluginManager::LoadPlugins(bool Lo
++ {
++   for (cDll *dll = dlls.First(); dll; dll = dlls.Next(dll)) {
++       if (!dll->Load(Log))
+++#ifdef USE_PLUGINMISSING
+++         ;
+++#else
++          return false;
+++#endif /* PLUGINMISSING */
++       }
++   return true;
++ }
+ diff -ruN vdr-1.4.7/rcontroller.c vdr-1.4.7-extensions/rcontroller.c
+ --- vdr-1.4.7/rcontroller.c	1970-01-01 01:00:00.000000000 +0100
+ +++ vdr-1.4.7-extensions/rcontroller.c	2007-06-24 12:25:13.000000000 +0200
