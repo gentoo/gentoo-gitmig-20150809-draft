@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.637 2007/09/12 08:25:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.638 2007/09/12 22:12:00 omp Exp $
+
+  12 Sep 2007; David Shakaryan <omp@gentoo.org> package.mask:
+  Remove a few dead masks.
 
   12 Sep 2007; Joerg Bornkessel <hd_brummy@gentoo.org>;
   media-video:vdr 29 new use-flags for new vdr patchset added

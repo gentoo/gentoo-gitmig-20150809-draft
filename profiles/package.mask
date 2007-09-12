@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7702 2007/09/12 21:57:26 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7703 2007/09/12 22:12:00 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -267,11 +267,6 @@ www-apps/ids
 # https://bugs.gentoo.org/show_bug.cgi?id=188753
 >=dev-games/guichan-0.7
 
-# Robin H. Johnson <robbat2@gentoo.org> (14 Aug 2007)
-# Mask pending removal per mail to -dev.
-# You must move to sa-update instead, read -dev for more information.
-mail-filter/spamassassin-ruledujour
-
 # Steve Dibb <beandog@gentoo.org> (11 Aug 2007)
 # Old, unmaintained, pending removal
 www-client/planet
@@ -310,16 +305,6 @@ mail-client/claws-mail-etpan-privacy
 # Mike Frysinger <vapier@gentoo.org> (26 Jul 2007)
 # Unsupported upstream; doesnt build with recent tools
 dev-lang/ezm3
-
-# Tony Vroon <chainsaw@gentoo.org> (25 Jul 2007)
-# Unsuitable for IXP route server usage
-# Seems incomplete for most other workloads
-# Lost interest in this package, removal on 25 Aug 2007.
-net-misc/bird
-
-# Markus Ullmann <jokey@gentoo.org> (24 Jul 2007)
-# mask for removal due to security bug #184013
-net-firewall/fireflier
 
 # Ryan Hill <dirtyepic@gentoo.org> (23 Jul 2007)
 # duplicated by media-fonts/artwiz-aleczapka-en.  use that instead.
