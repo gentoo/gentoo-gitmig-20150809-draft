@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>vmware</herd>
-<maintainer>
-  <email>mattm@gentoo.org</email>
-  <name>Matthew Marlowe</name>
-</maintainer>
 <longdescription>
 VMWare ESX Console is a remote console for VMware ESX Server.
 </longdescription>

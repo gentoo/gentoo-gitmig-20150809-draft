@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vmware-esx-console
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/ChangeLog,v 1.5 2007/07/22 09:34:35 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-esx-console/ChangeLog,v 1.6 2007/09/12 17:11:25 wolf31o2 Exp $
+
+  12 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
+  Removing mattm from metadata.xml since he is being retired.
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org>
   vmware-esx-console-2.5.2.16390.ebuild,
