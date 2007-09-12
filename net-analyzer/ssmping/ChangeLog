@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ssmping
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssmping/ChangeLog,v 1.5 2007/04/15 05:39:44 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssmping/ChangeLog,v 1.6 2007/09/12 11:57:20 angelos Exp $
+
+  12 Sep 2007; Christoph Mende <angelos@gentoo.org> ssmping-0.9-r1.ebuild:
+  Stable on amd64
 
   15 Apr 2007; Peter Weller <welp@gentoo.org> ssmping-0.9.ebuild,
   ssmping-0.9-r1.ebuild:
