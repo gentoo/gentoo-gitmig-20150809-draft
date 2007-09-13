@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.103 2007/08/28 21:32:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.104 2007/09/13 22:58:14 dragonheart Exp $
+
+*curl-7.17.0-r1 (13 Sep 2007)
+*curl-7.17.0 (13 Sep 2007)
+
+  13 Sep 2007; Daniel Black <dragonheart@gentoo.org>
+  +files/curl-7.17.0-strip-ldflags.patch, +curl-7.17.0.ebuild,
+  +curl-7.17.0-r1.ebuild:
+  version bump - -r1 added for ssh2 testing
 
 *curl-7.17.0_pre20070828 (28 Aug 2007)
 
