@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/metacafe-dl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/metacafe-dl/ChangeLog,v 1.6 2007/08/11 19:15:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/metacafe-dl/ChangeLog,v 1.7 2007/09/13 23:32:36 agorf Exp $
+
+*metacafe-dl-2007.09.13 (13 Sep 2007)
+
+  13 Sep 2007; Aggelos Orfanakos <agorf@gentoo.org>
+  -metacafe-dl-2007.03.27.ebuild, +metacafe-dl-2007.09.13.ebuild:
+  Version bump to 2007.09.13. Removing previous version since it stopped working
+  after the recent Metacafe.com updates.
 
   11 Aug 2007; Markus Rothe <corsair@gentoo.org>
   metacafe-dl-2007.03.27.ebuild:
