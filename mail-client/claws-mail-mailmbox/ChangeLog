@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-mailmbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/ChangeLog,v 1.13 2007/09/03 19:31:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/ChangeLog,v 1.14 2007/09/13 18:37:05 opfer Exp $
+
+  13 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  claws-mail-mailmbox-1.14.ebuild:
+  x86 stable, security bug 190104
 
 *claws-mail-mailmbox-1.14 (03 Sep 2007)
 

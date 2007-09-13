@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-fetchinfo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fetchinfo/ChangeLog,v 1.6 2007/09/03 19:24:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fetchinfo/ChangeLog,v 1.7 2007/09/13 18:32:22 opfer Exp $
+
+  13 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  claws-mail-fetchinfo-0.4.20.ebuild:
+  x86 stable, security bug 190104
 
 *claws-mail-fetchinfo-0.4.20 (03 Sep 2007)
 
