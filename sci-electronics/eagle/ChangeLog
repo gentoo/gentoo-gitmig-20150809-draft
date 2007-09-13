@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.7 2007/08/15 08:29:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.8 2007/09/13 01:42:17 nixphoeni Exp $
+
+  13 Sep 2007; Joe Sapp <nixphoeni@gentoo.org> eagle-4.16_p1.ebuild,
+  eagle-4.16_p2.ebuild:
+  Added PRELINK_PATH_MASK to /etc/env.d/90eagle on suggestion of James
+  Limbouris in bug #191961
 
   15 Aug 2007; Markus Ullmann <jokey@gentoo.org> eagle-4.16_p2.ebuild:
   Stable on x86 wrt bug #188368

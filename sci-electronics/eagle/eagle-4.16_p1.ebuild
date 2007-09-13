@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p1.ebuild,v 1.4 2007/04/29 18:10:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p1.ebuild,v 1.5 2007/09/13 01:42:17 nixphoeni Exp $
 
 inherit eutils
 
@@ -60,7 +60,7 @@ src_install() {
 	# Remove docs left in INSTALLDIR
 	rm -rf "${D}"/${INSTALLDIR}/{README,install,${MANFILE}} "${D}"/${INSTALLDIR}/doc "${D}"/${INSTALLDIR}/man
 
-	echo -e "PATH=${INSTALLDIR}/bin\nROOTPATH=${INSTALLDIR}/bin" > "${S}"/90eagle
+	echo -e "PATH=${INSTALLDIR}/bin\nROOTPATH=${INSTALLDIR}/bin\nPRELINK_PATH_MASK=${INSTALLDIR}" > "${S}"/90eagle
 	doenvd "${S}"/90eagle
 
 	# Create desktop entry
