@@ -72,8 +72,5 @@ mpd
 # app-admin/hddtemp
 hddtemp
 
-# mask qt4 (does not work) - bug #178779
-qt4
-
 # mask pbbuttonsd - reported by Mr Bones, ok'd by dostrow
 pbbuttonsd

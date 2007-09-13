@@ -5,6 +5,3 @@
 mozilla
 firefox
 seamonkey
-
-# mask qt4 (does not work) - bug #178779
-qt4

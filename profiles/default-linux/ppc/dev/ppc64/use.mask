@@ -1,8 +1,5 @@
 # Unmask the "ibm" USE flag on ppc64
 -ibm
 
-# mask qt4 (does not work) - bug #178779
-qt4
-
 # pbbuttonsd deos not work on ppc64 - bug #183035
 pbbuttonsd
