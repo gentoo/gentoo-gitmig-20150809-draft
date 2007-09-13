@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gssdp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.1 2007/08/23 15:28:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.2 2007/09/13 14:54:09 drac Exp $
+
+  13 Sep 2007; Samuli Suominen <drac@gentoo.org> gssdp-0.4.ebuild:
+  Upstream changed tarball download directory. Also change USE minimal to use
+  X as it's more suitable.
 
 *gssdp-0.4 (23 Aug 2007)
 
