@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.1.ebuild,v 1.1 2007/09/13 00:18:48 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.1.ebuild,v 1.2 2007/09/13 06:06:00 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -31,7 +31,6 @@ DEPEND="${RDEPEND}
 	doc? ( >dev-util/gtk-doc-1.1 )"
 
 DOCS="AUTHORS CONTRIBUTORS ChangeLog FAQ NEWS README THANKS TODO"
-
 
 pkg_setup() {
 	G2CONF="--with-croco \
