@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.11.0-r2.ebuild,v 1.3 2007/07/09 01:39:58 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.11.0-r2.ebuild,v 1.4 2007/09/13 14:08:30 bicatali Exp $
 
 inherit eutils elisp-common autotools fdo-mime
 
@@ -18,7 +18,7 @@ RDEPEND=">=sci-visualization/gnuplot-4.0
 	x11-misc/xdg-utils
 	tetex? ( virtual/tetex )
 	emacs? ( virtual/emacs
-	     tetex? ( || ( app-emacs/auctex app-xemacs/auctex ) ) )
+		 tetex? ( || ( app-emacs/auctex app-xemacs/auctex ) ) )
 	clisp? ( >=dev-lisp/clisp-2.33.2-r1 )
 	gcl?   ( >=dev-lisp/gcl-2.6.7 )
 	sbcl?  ( >=dev-lisp/sbcl-0.9.4 app-misc/rlwrap )
@@ -69,7 +69,7 @@ pkg_setup() {
 		fi
 	fi
 
-	if ! built_with_use -a sci-visualization/gnuplot png gd; then
+	if ! built_with_use -a sci-visualization/gnuplot gd; then
 		elog "To benefit full plotting capability of maxima,"
 		elog "enable the png and gd USE flags enabled for"
 		elog "both sci-visualization/gnuplot and media-libs/gd"

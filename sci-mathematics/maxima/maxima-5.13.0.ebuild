@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.11.0-r1.ebuild,v 1.2 2007/07/09 01:39:58 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0.ebuild,v 1.1 2007/09/13 14:08:30 bicatali Exp $
 
-inherit eutils elisp-common autotools fdo-mime
+inherit eutils elisp-common autotools
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
 HOMEPAGE="http://maxima.sourceforge.net/"
@@ -11,14 +11,14 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2 AECA"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="cmucl clisp sbcl gcl tetex emacs auctex tk nls unicode"
+IUSE="cmucl clisp sbcl gcl tetex emacs tk nls unicode"
 
 # rlwrap is recommended for cmucl and sbcl
 RDEPEND=">=sci-visualization/gnuplot-4.0
-	app-text/gv
+	x11-misc/xdg-utils
 	tetex? ( virtual/tetex )
-	emacs? ( virtual/emacs )
-	auctex? ( app-emacs/auctex )
+	emacs? ( virtual/emacs
+		 tetex? ( || ( app-emacs/auctex app-xemacs/auctex ) ) )
 	clisp? ( >=dev-lisp/clisp-2.33.2-r1 )
 	gcl?   ( >=dev-lisp/gcl-2.6.7 )
 	sbcl?  ( >=dev-lisp/sbcl-0.9.4 app-misc/rlwrap )
@@ -27,8 +27,12 @@ RDEPEND=">=sci-visualization/gnuplot-4.0
 	tk? ( >=dev-lang/tk-8.3.3 )"
 
 DEPEND="${RDEPEND} >=sys-apps/texinfo-4.3"
+# the make install already strips maxima exec.
+RESTRICT="strip"
 
-for lang in es pt; do
+LANGS="es pt pt_BR"
+
+for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
 done
 
@@ -66,41 +70,12 @@ pkg_setup() {
 			fi
 		fi
 	fi
-}
 
-# chosen apps are hardcoded in maxima source:
-# - ghostview for postscript (changed to gv)
-# - acroread for pdf
-# - xdvi for dvi. this could change, with pain.
-
-src_unpack() {
-	unpack ${A}
-	# replace obsolete netscape with firefox, add opera as choices
-	epatch "${FILESDIR}"/${P}-default-browser.patch
-	# replace ugly ghostview with gv
-	epatch "${FILESDIR}"/${P}-default-psviewer.patch
-	# no debug during compile
-	epatch "${FILESDIR}"/${P}-sbcl-disable-debugger.patch
-	# diff_form autoloading
-	epatch "${FILESDIR}/${P}-diff_form.patch"
-}
-
-src_compile() {
-	# automake version mismatch otherwise (sbcl only)
-	use sbcl && eautoreconf
-
-	# remove rmaxima if neither cmucl nor sbcl
-	if ! use sbcl && ! use cmucl ; then
-		sed -i -e '/^@WIN32_FALSE@bin_SCRIPTS/s/rmaxima//' src/Makefile.in
-	fi
-
-	# remove xmaxima if no tk
-	local myconf=""
-	if use tk; then
-		myconf="${myconf} --with-wish=wish"
-	else
-		myconf="${myconf} --with-wish=none"
-		sed -i -e '/^SUBDIRS/s/xmaxima//' interfaces/Makefile.in
+	if ! built_with_use -a sci-visualization/gnuplot gd; then
+		elog "To benefit full plotting capability of maxima,"
+		elog "enable the gd USE flag enabled for sci-visualization/gnuplot"
+		elog "Then re-emerge maxima"
+		epause 5
 	fi
 
 	# enable gcl if no other lisp selected
@@ -110,13 +85,37 @@ src_compile() {
 			eerror "Try USE=\"ansi\" emerge gcl"
 			die "This package needs gcl with USE=ansi"
 		fi
-		myconf="${myconf} --enable-gcl"
+		enablegcl="--enable-gcl --enable-gcl-alt-link"
+	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	# use xdg-open to view ps, pdf
+	epatch "${FILESDIR}/${P}-xdg-utils.patch"
+}
+
+src_compile() {
+	eautoreconf
+
+	# remove rmaxima if neither cmucl nor sbcl
+	if ! use sbcl && ! use cmucl ; then
+		sed -i -e '/^@WIN32_FALSE@bin_SCRIPTS/s/rmaxima//' src/Makefile.in
+	fi
+
+	# remove xmaxima if no tk
+	local myconf="${enablegcl}"
+	if use tk; then
+		myconf="${myconf} --with-wish=wish"
+	else
+		myconf="${myconf} --with-wish=none"
+		sed -i -e '/^SUBDIRS/s/xmaxima//' interfaces/Makefile.in
 	fi
 
 	# enable existing translated doc
 	if use nls; then
-		for lang in es pt; do
-			if use linguas_${lang}; then
+		for lang in ${LANGS}; do
+			if use "linguas_${lang}"; then
 				myconf="${myconf} --enable-lang-${lang}"
 				use unicode && myconf="${myconf} --enable-lang-${lang}-utf8"
 			fi
@@ -133,44 +132,37 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	einstall || die "einstall failed"
 
 	use tk && make_desktop_entry xmaxima xmaxima \
-		/usr/share/${PN}/${PV}/xmaxima/maxima-new.png \
-		"Science;Math;Education"
+		/usr/share/${PN}/${PV}/xmaxima/maxima-new.png
 
-	if use emacs; then
-		sed -e "s/PV/${PV}/" "${FILESDIR}"/50maxima-gentoo.el > 50maxima-gentoo.el
-		elisp-site-file-install 50maxima-gentoo.el
-	fi
+	use emacs && \
+		elisp-site-file-install "${FILESDIR}/50maxima-gentoo.el"
 
 	if use tetex; then
 		insinto "${MAXIMA_TEXMFDIR}/tex/latex/emaxima"
 		doins interfaces/emacs/emaxima/emaxima.sty
 	fi
 
-	insinto /usr/share/${PN}/${PV}/doc
+	insinto "/usr/share/${PN}/${PV}/doc"
 	doins AUTHORS ChangeLog COPYING NEWS README*
 	dodir /usr/share/doc
-	dosym /usr/share/${PN}/${PV}/doc /usr/share/doc/${PF}
+	dosym "/usr/share/${PN}/${PV}/doc" "/usr/share/doc/${PF}"
 }
 
 pkg_preinst() {
-	# some lisp do not gunzip info files on the fly
-	if use cmucl || use clisp || use sbcl; then
-		for infofile in $(ls ${D}/usr/share/info/*.gz); do
-			gunzip ${infofile}
-		done
-	fi
+	# all lisps do not bunzip2 info files on the fly
+	for infofile in $(ls ${D}/usr/share/info/*.bz2); do
+		bunzip2 "${infofile}"
+	done
 }
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
 	use tetex && mktexlsr
-	fdo-mime_desktop_database_update
 }
 
 pkg_postrm() {
 	use emacs && elisp-site-regen
-	fdo-mime_desktop_database_update
 }

@@ -1,6 +1,24 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.29 2007/07/09 01:39:58 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.30 2007/09/13 14:08:30 bicatali Exp $
+
+*maxima-5.13.0 (13 Sep 2007)
+
+  13 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/maxima-5.9.1-fix-clisp-getpid.patch,
+  -files/maxima-5.9.1-no-kill-minus-one.patch,
+  -files/maxima-5.9.1-unicode-fix.patch,
+  -files/maxima-5.9.3-default-browser.patch,
+  -files/maxima-5.9.3-emaxima.patch,
+  -files/maxima-5.11.0-default-browser.patch,
+  -files/maxima-5.11.0-default-psviewer.patch,
+  -files/maxima-5.11.0-sbcl-disable-debugger.patch,
+  +files/maxima-5.13.0-xdg-utils.patch, -maxima-5.9.1-r5.ebuild,
+  -maxima-5.11.0.ebuild, -maxima-5.11.0-r1.ebuild, +maxima-5.13.0.ebuild,
+  maxima-5.11.0-r2.ebuild:
+  Version bump. Thanks for Andrey Grozin <A.G.Grozin@inp.nsk.su> to maintain
+  it in the science overlay. Closing bug #191529 and bug #192241. Cleaning
+  old versions.
 
   09 Jul 2007; Steve Arnold <nerdboy@gentoo.org> maxima-5.11.0.ebuild,
   maxima-5.11.0-r1.ebuild, maxima-5.11.0-r2.ebuild:
