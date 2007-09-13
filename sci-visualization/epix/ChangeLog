@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/epix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.16 2007/09/11 13:33:20 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.17 2007/09/13 13:07:17 markusle Exp $
+
+  13 Sep 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/50epix-gentoo.el:
+  Added missing site file (fixes bug #192283).
 
   11 Sep 2007; Markus Dittrich <markusle@gentoo.org> epix-1.1.15.ebuild:
   Moved emacs dependencies into DEPEND.
