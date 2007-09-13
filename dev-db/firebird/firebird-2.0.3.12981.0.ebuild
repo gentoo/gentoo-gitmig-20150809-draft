@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.2.12964.0.ebuild,v 1.2 2007/09/09 13:30:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0.ebuild,v 1.1 2007/09/13 22:12:39 wltjr Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -8,12 +8,13 @@ MY_P=Firebird-$(replace_version_separator 4 -)
 
 DESCRIPTION="A relational database offering many ANSI SQL-99 features"
 HOMEPAGE="http://firebird.sourceforge.net/"
-SRC_URI="mirror://sourceforge/firebird/${MY_P}.tar.bz2
-		 doc? (	ftp://ftpc.inprise.com/pub/interbase/techpubs/ib_b60_doc.zip )"
+#SRC_URI="mirror://sourceforge/firebird/${MY_P}.tar.bz2
+SRC_URI="http://www.firebirdsql.org/download/prerelease/source/${MY_P}.tar.bz2
+	 doc? (	ftp://ftpc.inprise.com/pub/interbase/techpubs/ib_b60_doc.zip )"
 
 LICENSE="Interbase-1.0"
 SLOT="0"
-KEYWORDS="~amd64 -ia64 x86"
+KEYWORDS="~amd64 -ia64 ~x86"
 IUSE="doc xinetd examples debug"
 RESTRICT="userpriv"
 
