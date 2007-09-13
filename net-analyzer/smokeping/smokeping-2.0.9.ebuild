@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.0.9.ebuild,v 1.11 2007/09/13 19:49:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.0.9.ebuild,v 1.12 2007/09/13 20:08:55 hansmi Exp $
 
 inherit perl-module eutils
 
@@ -90,7 +90,7 @@ pkg_postinst() {
 	chown smokeping:smokeping "${ROOT}/var/lib/${PN}"
 	chmod 755 "${ROOT}/var/lib/${PN}"
 	elog
-	elog "Four more steps are needed to get ${PN} un&running:"
+	elog "Four more steps are needed to get ${PN} up and running:"
 	elog "1) You need to edit /etc/${PN}"
 	elog "2) You need to edit the template at /etc/${PN}.template"
 	elog "3) You need to make the fping binary setuid root:"
