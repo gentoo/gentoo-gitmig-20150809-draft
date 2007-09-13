@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/gupnp-tools
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gupnp-tools/ChangeLog,v 1.1 2007/09/13 15:07:47 drac Exp $
+
+*gupnp-tools-0.1.2 (13 Sep 2007)
+
+  13 Sep 2007; Samuli Suominen <drac@gentoo.org> +gupnp-tools-0.1.2.ebuild:
+  Initial commit.
+
