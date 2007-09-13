@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.640 2007/09/12 23:03:00 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.641 2007/09/13 22:56:00 dragonheart Exp $
+
+  13 Sep 2007; Daniel Black <dragonheart@gentoo.org> package.mask,
+  use.local.desc:
+  use.local.desc - added net-misc/curl:libssh2 - Enabled SSH urls in curl
+  using libssh2. package.mask - added curl-7.17.0-r1 for ssh2 testing
 
   12 Sep 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
   Mask app-text/hspell for removal
