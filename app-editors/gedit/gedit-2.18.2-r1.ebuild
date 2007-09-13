@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.18.1-r1.ebuild,v 1.14 2007/09/13 16:09:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.18.2-r1.ebuild,v 1.1 2007/09/13 16:09:17 dang Exp $
 
 inherit gnome2 eutils autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="acl doc python spell"
 
 RDEPEND=">=gnome-base/gconf-2
@@ -59,10 +59,10 @@ src_unpack() {
 	fi
 
 	# chown on fbsd doesn't have --reference.  Bug #183691
-	epatch "${FILESDIR}"/${P}-fbsd.patch
+	epatch "${FILESDIR}"/${PN}-2.18.1-fbsd.patch
 
 	# Make libattr optional; bug #191989
-	epatch "${FILESDIR}"/${PN}-2.18.2-libattr.patch
+	epatch "${FILESDIR}"/${P}-libattr.patch
 
 	AT_M4DIR="./m4" eautoreconf
 }

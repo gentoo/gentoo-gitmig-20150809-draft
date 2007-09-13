@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.198 2007/09/12 23:01:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.199 2007/09/13 16:09:17 dang Exp $
+
+*gedit-2.18.2-r1 (13 Sep 2007)
+
+  13 Sep 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gedit-2.18.2-libattr.patch, gedit-2.18.1-r1.ebuild,
+  +gedit-2.18.2-r1.ebuild:
+  Make libattr optional; bug #191989
 
   12 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
   gedit-2.16.2-r1.ebuild, gedit-2.18.1-r1.ebuild, gedit-2.18.2.ebuild:
