@@ -2,7 +2,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.64 2007/09/13 16:01:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.65 2007/09/13 18:57:44 mrness Exp $
+
+*quagga-0.99.9 (13 Sep 2007)
+
+  13 Sep 2007; Alin Năstac <mrness@gentoo.org> +quagga-0.99.9.ebuild:
+  Version bump (#191976). Add caps USE flag.
 
   13 Sep 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   quagga-0.98.6-r3.ebuild:
