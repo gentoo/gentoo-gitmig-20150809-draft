@@ -1,0 +1,39 @@
+diff -NurdB gurlchecker-0.10.1/configure gurlchecker-0.10.1-patched/configure
+--- gurlchecker-0.10.1/configure	2007-04-24 12:56:30.000000000 -0500
++++ gurlchecker-0.10.1-patched/configure	2007-09-12 18:48:42.000000000 -0500
+@@ -23121,7 +23121,7 @@
+ 
+      want_croco=yes
+      CROCO_FLAGS="-DENABLE_CROCO $CROCO_CFLAGS"
+-     LDFLAGS="$LDFLAGS $want_croco_path"
++     #LDFLAGS="$LDFLAGS $want_croco_path"
+ 
+ fi
+ else
+@@ -23374,7 +23374,7 @@
+ 	      have_tidy=yes
+ 	      TIDY_FLAGS="$TIDY_FLAGS -DHAVE_TIDY_H_IN_SUBDIR"
+         TIDY_LIBS="-ltidy"
+-        LDFLAGS="$LDFLAGS $want_tidy_path"
++        #LDFLAGS="$LDFLAGS $want_tidy_path"
+ 
+ else
+   have_tidy=no
+@@ -23633,7 +23633,7 @@
+ 	      have_clamav=yes
+ 	      CLAMAV_FLAGS="$CLAMAV_FLAGS -DENABLE_CLAMAV"
+         CLAMAV_LIBS="-lclamav"
+-        LDFLAGS="$LDFLAGS $want_clamav_path"
++        #LDFLAGS="$LDFLAGS $want_clamav_path"
+ 
+ else
+   have_clamav=no
+@@ -23943,7 +23943,7 @@
+ 	      have_clamav=yes
+ 	      GNUTLS_FLAGS="$GNUTLS_FLAGS -DENABLE_GNUTLS"
+         GNUTLS_LIBS="-lgnutls"
+-        LDFLAGS="$LDFLAGS $want_gnutls_path"
++        #LDFLAGS="$LDFLAGS $want_gnutls_path"
+ 
+   else
+      if test -f conf.libgnutlstest ; then
