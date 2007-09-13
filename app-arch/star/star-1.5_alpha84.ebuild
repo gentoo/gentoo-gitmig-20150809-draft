@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha84.ebuild,v 1.3 2007/09/13 03:42:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha84.ebuild,v 1.4 2007/09/13 06:04:08 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -48,7 +48,7 @@ src_compile() {
 }
 
 src_install() {
-	# Joerg Schilling suggested to integrate star into the main OS using call: 
+	# Joerg Schilling suggested to integrate star into the main OS using call:
 	# make INS_BASE=/usr DESTDIR="${D}" install
 
 	dobin star/OBJ/*-*-cc/star || die "dobin star failed"
