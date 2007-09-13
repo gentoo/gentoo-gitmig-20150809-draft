@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.485 2007/09/13 19:14:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.486 2007/09/13 20:41:39 corsair Exp $
+
+  13 Sep 2007; Markus Rothe <corsair@gentoo.org> qt-4.3.1.ebuild:
+  Stable on ppc64; bug #192134
 
   13 Sep 2007; Markus Ullmann <jokey@gentoo.org> qt-4.3.1.ebuild:
   Stable on sparc wrt bug #192134
