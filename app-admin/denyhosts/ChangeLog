@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.27 2007/08/14 18:10:41 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.28 2007/09/13 15:09:14 pva Exp $
+
+*denyhosts-2.6-r1 (13 Sep 2007)
+
+  13 Sep 2007; <pva@gentoo.org>
+  +files/denyhosts-2.6-log-injection-regex.patch, +denyhosts-2.6-r1.ebuild:
+  Fixes log injection reported by Sune Kloppenborg Jeppesen in bug #181213.
 
   14 Aug 2007; Benjamin Smee <strerror@gentoo.org> files/denyhosts.init:
   fix for bug #174501
