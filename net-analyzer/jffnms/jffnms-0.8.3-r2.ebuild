@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.3-r1.ebuild,v 1.2 2007/07/29 17:00:36 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.3-r2.ebuild,v 1.1 2007/09/13 17:01:46 pva Exp $
 
 inherit eutils depend.php
 
@@ -50,6 +50,14 @@ pkg_setup() {
 
 	enewgroup jffnms
 	enewuser jffnms -1 /bin/bash -1 jffnms,apache
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Fixes Multiple vulnerabilities bug #192240
+	epatch "${FILESDIR}"/${P}-misc-security-fixes.patch
 }
 
 src_install(){

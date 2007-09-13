@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/jffnms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/ChangeLog,v 1.9 2007/07/29 17:00:36 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/ChangeLog,v 1.10 2007/09/13 17:01:46 pva Exp $
+
+*jffnms-0.8.3-r2 (13 Sep 2007)
+
+  13 Sep 2007; <pva@gentoo.org>
+  +files/jffnms-0.8.3-misc-security-fixes.patch, -jffnms-0.8.2-r1.ebuild,
+  -jffnms-0.8.3-r1.ebuild, +jffnms-0.8.3-r2.ebuild:
+  Fixes Multiple vulnerabilities (CVE-2007-31{89,90,91,92}) reported by Robert
+  Buchholz <rbu AT gentoo.org> in bug #192240.
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> jffnms-0.8.2-r1.ebuild,
   jffnms-0.8.3-r1.ebuild:
