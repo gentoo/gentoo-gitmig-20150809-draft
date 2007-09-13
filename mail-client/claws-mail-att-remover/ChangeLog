@@ -1,10 +1,10 @@
 # ChangeLog for mail-client/claws-mail-att-remover
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-att-remover/ChangeLog,v 1.8 2007/09/13 20:19:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-att-remover/ChangeLog,v 1.9 2007/09/13 20:30:51 corsair Exp $
 
   13 Sep 2007; Markus Rothe <corsair@gentoo.org>
   claws-mail-att-remover-1.0.7.ebuild:
-  Stable on ppc64; bug #192373
+  Stable on ppc64; bug #190104
 
   13 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   claws-mail-att-remover-1.0.7.ebuild:
