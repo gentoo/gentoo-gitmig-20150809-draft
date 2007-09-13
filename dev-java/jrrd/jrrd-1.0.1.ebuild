@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrrd/jrrd-1.0.1.ebuild,v 1.2 2007/09/12 05:21:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrrd/jrrd-1.0.1.ebuild,v 1.3 2007/09/13 06:04:51 mr_bones_ Exp $
 
 inherit eutils java-pkg-2
 
@@ -35,4 +35,3 @@ src_install() {
 # ugly but effective
 	rm -fR "${D}/usr/share/java" || die "Could not remove extra jar"
 }
-

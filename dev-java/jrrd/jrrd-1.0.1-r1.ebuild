@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrrd/jrrd-1.0.1-r1.ebuild,v 1.1 2007/09/12 21:04:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrrd/jrrd-1.0.1-r1.ebuild,v 1.2 2007/09/13 06:04:51 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source"
 WANT_AUTOMAKE="1.9"
@@ -41,4 +41,3 @@ src_install() {
 	use source && java-pkg_dosrc org
 	use doc && java-pkg_dojavadoc javadoc
 }
-
