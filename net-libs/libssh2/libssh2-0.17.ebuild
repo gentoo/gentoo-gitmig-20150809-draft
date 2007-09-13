@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-0.17.ebuild,v 1.1 2007/08/29 17:44:45 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-0.17.ebuild,v 1.2 2007/09/13 23:00:57 dragonheart Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libssh2/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="libgcrypt"
 
 DEPEND="!libgcrypt? ( dev-libs/openssl )
