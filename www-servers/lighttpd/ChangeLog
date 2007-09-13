@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.147 2007/09/13 11:48:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.148 2007/09/13 15:14:56 jer Exp $
+
+  13 Sep 2007; Jeroen Roovers <jer@gentoo.org> lighttpd-1.4.18.ebuild:
+  Stable for SPARC (bug #191912).
 
   13 Sep 2007; Markus Rothe <corsair@gentoo.org> lighttpd-1.4.18.ebuild:
   Stable on ppc64; bug #191912
