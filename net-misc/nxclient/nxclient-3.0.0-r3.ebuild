@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.0.0-r3.ebuild,v 1.1 2007/09/06 15:03:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.0.0-r3.ebuild,v 1.2 2007/09/13 22:20:19 voyageur Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RESTRICT="strip"
 
 DEPEND=""
 RDEPEND="dev-libs/expat
-	dev-libs/openssl
+	>=dev-libs/openssl-0.9.8
 	media-libs/audiofile
 	media-libs/jpeg
 	media-libs/libpng
