@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.95 2007/07/31 12:26:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.96 2007/09/13 20:33:41 hansmi Exp $
+
+  13 Sep 2007; Michael Hanselmann <hansmi@gentoo.org>
+  -mailman-2.1.9_rc1.ebuild:
+  Drop old version.
 
   31 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   mailman-2.1.9_rc1.ebuild, mailman-2.1.9.ebuild:
