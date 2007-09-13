@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/lapack-docs/lapack-docs-3.1.1.ebuild,v 1.3 2007/09/05 15:29:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/lapack-docs/lapack-docs-3.1.1.ebuild,v 1.4 2007/09/13 19:53:47 opfer Exp $
 
 DESCRIPTION="Documentation reference and man pages for lapack implementations"
 HOMEPAGE="http://www.netlib.org/lapack"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/lapack-man-${PV}.tgz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~x86"
+KEYWORDS="~amd64 hppa x86"
 IUSE=""
 
 S=${WORKDIR}/lapack-${PV}/manpages
