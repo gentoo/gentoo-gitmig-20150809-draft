@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0.ebuild,v 1.1 2007/09/13 14:08:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0.ebuild,v 1.2 2007/09/13 22:28:03 bicatali Exp $
 
 inherit eutils elisp-common autotools
 
@@ -21,23 +21,20 @@ RDEPEND=">=sci-visualization/gnuplot-4.0
 		 tetex? ( || ( app-emacs/auctex app-xemacs/auctex ) ) )
 	clisp? ( >=dev-lisp/clisp-2.33.2-r1 )
 	gcl?   ( >=dev-lisp/gcl-2.6.7 )
-	sbcl?  ( >=dev-lisp/sbcl-0.9.4 app-misc/rlwrap )
+	sbcl?  ( >=dev-lisp/sbcl-1.0 app-misc/rlwrap )
 	cmucl? ( >=dev-lisp/cmucl-19a app-misc/rlwrap )
-	!clisp? ( !sbcl? ( !cmucl? ( >=dev-lisp/gcl-2.6.7 ) ) )
+	!clisp? ( !gcl? ( !cmucl? ( >=dev-lisp/gcl-2.6.7 ) ) )
 	tk? ( >=dev-lang/tk-8.3.3 )"
 
 DEPEND="${RDEPEND} >=sys-apps/texinfo-4.3"
-# the make install already strips maxima exec.
-RESTRICT="strip"
 
 LANGS="es pt pt_BR"
-
 for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
 done
 
 pkg_setup() {
-# Don't install in the main tree, as this may cause file collisions
+	# Don't install in the main tree, as this may cause file collisions
 	if use tetex; then
 		local TEXMFPATH="$(kpsewhich -var-value=TEXMFSITE)"
 		local TEXMFCONFIGFILE="$(kpsewhich texmf.cnf)"
@@ -53,8 +50,7 @@ pkg_setup() {
 			# the output to a generic format, so IFS has to be redefined.
 			local IFS="${IFS}:"
 
-			for strippedpath in ${TEXMFPATH}
-			do
+			for strippedpath in ${TEXMFPATH}; do
 				if [ -d ${strippedpath} ]; then
 					MAXIMA_TEXMFDIR="${strippedpath}"
 					break
@@ -79,37 +75,46 @@ pkg_setup() {
 	fi
 
 	# enable gcl if no other lisp selected
-	if use gcl || (! use cmucl && ! use clisp && ! use sbcl ); then
+	if use sbcl || (! use cmucl && ! use clisp && ! use gcl ); then
+		ENABLE_SBCL="--enable-sbcl"
+	fi
+
+	if use gcl; then
+		einfo "Using gcl: it might break, recompile with another lisp, or use default (sbcl)."
 		if ! built_with_use dev-lisp/gcl ansi; then
 			eerror "GCL must be installed with ANSI."
 			eerror "Try USE=\"ansi\" emerge gcl"
 			die "This package needs gcl with USE=ansi"
 		fi
-		enablegcl="--enable-gcl --enable-gcl-alt-link"
 	fi
 }
 
 src_unpack() {
 	unpack ${A}
 	# use xdg-open to view ps, pdf
-	epatch "${FILESDIR}/${P}-xdg-utils.patch"
+	epatch "${FILESDIR}"/${P}-xdg-utils.patch
 }
 
 src_compile() {
 	eautoreconf
 
 	# remove rmaxima if neither cmucl nor sbcl
-	if ! use sbcl && ! use cmucl ; then
-		sed -i -e '/^@WIN32_FALSE@bin_SCRIPTS/s/rmaxima//' src/Makefile.in
+	if !use sbcl && ! use cmucl && [[ -z ${ENABLE_SBCL} ]]; then
+		sed -i \
+			-e '/^@WIN32_FALSE@bin_SCRIPTS/s/rmaxima//' \
+			src/Makefile.in || die "sed for rmaxima failed"
 	fi
 
+	local myconf=${ENABLE_SBCL}
+
 	# remove xmaxima if no tk
-	local myconf="${enablegcl}"
 	if use tk; then
 		myconf="${myconf} --with-wish=wish"
 	else
 		myconf="${myconf} --with-wish=none"
-		sed -i -e '/^SUBDIRS/s/xmaxima//' interfaces/Makefile.in
+		sed -i \
+			-e '/^SUBDIRS/s/xmaxima//' \
+			interfaces/Makefile.in || die "sed for tk failed"
 	fi
 
 	# enable existing translated doc
@@ -125,7 +130,7 @@ src_compile() {
 	econf \
 		$(use_enable cmucl) \
 		$(use_enable clisp) \
-		$(use_enable sbcl) \
+		$(use_enable gcl) \
 		${myconf} \
 		|| die "econf failed"
 	emake || die "emake failed"
@@ -138,17 +143,19 @@ src_install() {
 		/usr/share/${PN}/${PV}/xmaxima/maxima-new.png
 
 	use emacs && \
-		elisp-site-file-install "${FILESDIR}/50maxima-gentoo.el"
+		elisp-site-file-install "${FILESDIR}"/50maxima-gentoo.el
 
 	if use tetex; then
-		insinto "${MAXIMA_TEXMFDIR}/tex/latex/emaxima"
+		insinto "${MAXIMA_TEXMFDIR}"/tex/latex/emaxima
 		doins interfaces/emacs/emaxima/emaxima.sty
 	fi
 
-	insinto "/usr/share/${PN}/${PV}/doc"
-	doins AUTHORS ChangeLog COPYING NEWS README*
+	# do not use dodoc because interfaces can't read compressed files
+	# read COPYING before attempt to remove it
+	insinto /usr/share/${PN}/${PV}/doc
+	doins AUTHORS COPYING ChangeLog-${PV} README README.lisps
 	dodir /usr/share/doc
-	dosym "/usr/share/${PN}/${PV}/doc" "/usr/share/doc/${PF}"
+	dosym /usr/share/${PN}/${PV}/doc /usr/share/doc/${PF}
 }
 
 pkg_preinst() {
