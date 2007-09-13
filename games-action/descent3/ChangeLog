@@ -1,6 +1,11 @@
 # ChangeLog for games-action/descent3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.23 2007/03/12 13:16:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.24 2007/09/13 00:44:29 wolf31o2 Exp $
+
+  13 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  descent3-1.4.0b-r1.ebuild:
+  Changed linking of lib-compat-loki libsmpeg to be used on both amd64 and
+  x86, instead of just x86. Closing bug #191610.
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> descent3-1.4.0b-r1.ebuild:
   Replacing einfo with elog

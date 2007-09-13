@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.11 2007/03/12 13:16:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.12 2007/09/13 00:44:29 wolf31o2 Exp $
 
 inherit eutils multilib games
 
@@ -91,11 +91,8 @@ src_install() {
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find "${Ddir}" -exec touch '{}' \
 
-	if use amd64
-	then
-		dosym /usr/$(get_libdir)/loki_libsmpeg-0.4.so.0 \
-			"${dir}"/libsmpeg-0.4.so.0 || die "failed compatibility symlink"
-	fi
+	dosym /usr/$(get_libdir)/loki_libsmpeg-0.4.so.0 \
+		"${dir}"/libsmpeg-0.4.so.0 || die "failed compatibility symlink"
 
 	games_make_wrapper descent3 ./descent3.dynamic "${dir}" "${dir}"
 	newicon ${CDROM_ROOT}/icon.xpm ${PN}.xpm
