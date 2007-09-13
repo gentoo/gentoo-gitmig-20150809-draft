@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r4.ebuild,v 1.1 2007/09/12 08:31:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r4.ebuild,v 1.2 2007/09/13 06:05:37 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -27,7 +27,6 @@ SRC_URI="ftp://ftp.cadsoft.de/vdr/${P}.tar.bz2
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
-
 
 DEPEND="media-libs/jpeg
 	sys-apps/gawk
@@ -269,7 +268,6 @@ src_unpack() {
 	if [[ -n "${VDRSOURCE_DIR}" ]]; then
 		cp -r ${S} ${T}/source-tree
 	fi
-
 
 	if ! use vanilla; then
 		add_cap CAP_IRCTRL_RUNTIME_PARAM \
