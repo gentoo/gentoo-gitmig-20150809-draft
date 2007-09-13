@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/ilmbase
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.1 2007/09/13 20:58:03 aballier Exp $
+
+*ilmbase-1.0.0 (13 Sep 2007)
+
+  13 Sep 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/ilmbase-1.0.0-asneeded.patch, +metadata.xml, +ilmbase-1.0.0.ebuild:
+  Initial import, split of media-libs/openexr, thanks to : Arfrever Frehtes
+  Taifersar Arahesis <Arfrever.FTA@GMail.Com> for the ebuilds, bug #189798
+
