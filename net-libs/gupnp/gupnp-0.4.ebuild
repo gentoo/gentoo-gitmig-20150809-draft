@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.4.ebuild,v 1.1 2007/08/23 15:31:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.4.ebuild,v 1.2 2007/09/13 14:52:13 drac Exp $
 
 DESCRIPTION="an object-oriented framework for creating UPnP devs and control points."
 HOMEPAGE="http://gupnp.org"
-SRC_URI="http://${PN}.org/sources/${P}.tar.gz"
+SRC_URI="http://${PN}.org/sources/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
