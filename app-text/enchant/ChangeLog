@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.69 2007/06/07 21:04:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.70 2007/09/14 11:43:38 uberlord Exp $
+
+  14 Sep 2007; Roy Marples <uberlord@gentoo.org> enchant-1.2.5.ebuild:
+  elibtoolize now patches install-sh for us.
 
   07 Jun 2007; Daniel Gryniewicz <dang@gentoo.org> enchant-1.1.3.ebuild,
   enchant-1.1.6.ebuild, enchant-1.2.5.ebuild:

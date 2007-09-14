@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.2.5.ebuild,v 1.17 2007/06/28 23:11:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.2.5.ebuild,v 1.18 2007/09/14 11:43:38 uberlord Exp $
 
 inherit libtool
 
@@ -28,10 +28,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	elibtoolize
-
-	# Update the install-sh as the version shipped by upstream
-	# will fail on FreeBSD systems
-	cp /usr/share/libtool/install-sh "${S}"
 }
 
 src_install() {
