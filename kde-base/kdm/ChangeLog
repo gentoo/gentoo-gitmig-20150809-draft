@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.103 2007/09/13 20:15:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.104 2007/09/14 21:35:28 philantrop Exp $
+
+  14 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> kdm-3.5.7-r2.ebuild:
+  Marked stable on amd64 as per bug 192373.
 
   13 Sep 2007; Markus Rothe <corsair@gentoo.org> kdm-3.5.7-r2.ebuild:
   Stable on ppc64
