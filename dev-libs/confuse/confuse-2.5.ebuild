@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.5.ebuild,v 1.25 2007/09/14 08:44:46 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.5.ebuild,v 1.26 2007/09/14 17:37:03 mr_bones_ Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -29,7 +29,7 @@ src_unpack(){
 
 	# We should link to libintl correctly
 	epatch "${FILESDIR}"/${P}-libintl.patch
-	
+
 	eautomake
 	elibtoolize
 }
