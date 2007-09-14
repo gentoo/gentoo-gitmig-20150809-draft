@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/winefish-1.3.3.ebuild,v 1.6 2007/07/12 04:37:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/winefish-1.3.3.ebuild,v 1.7 2007/09/14 18:36:36 nixnut Exp $
 
 inherit eutils fdo-mime
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="spell"
 
 DEPEND=">=x11-libs/gtk+-2.4
