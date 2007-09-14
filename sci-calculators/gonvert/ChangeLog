@@ -1,6 +1,13 @@
 # ChangeLog for sci-calculators/gonvert
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.7 2007/02/22 01:24:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.8 2007/09/14 16:16:10 chainsaw Exp $
+
+*gonvert-0.2.19 (14 Sep 2007)
+
+  14 Sep 2007; Tony Vroon <chainsaw@gentoo.org> +files/0.2.19-paths.patch,
+  +gonvert-0.2.19.ebuild:
+  Version bump, as requested by Arfrever Frehtes Taifersar Arahesis
+  <Arfrever.FTA@GMail.Com> in bug #191891.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
