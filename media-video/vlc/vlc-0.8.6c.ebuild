@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6c.ebuild,v 1.8 2007/08/15 18:21:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6c.ebuild,v 1.9 2007/09/14 11:56:56 uberlord Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -155,9 +155,6 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	AT_M4DIR="m4" eautoreconf
-
-	# Replace install-sh with libtool's copy
-	cp /usr/share/libtool/install-sh "${S}/autotools"
 }
 
 src_compile () {
