@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.485 2007/09/13 14:42:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.486 2007/09/14 04:05:36 jer Exp $
+
+  14 Sep 2007; Jeroen Roovers <jer@gentoo.org> kdelibs-3.5.7-r3.ebuild:
+  Stable for HPPA (bug #185603).
 
   13 Sep 2007; Raúl Porcel <armin76@gentoo.org> kdelibs-3.5.7-r3.ebuild:
   alpha/ia64/x86 stable wrt security #185603
