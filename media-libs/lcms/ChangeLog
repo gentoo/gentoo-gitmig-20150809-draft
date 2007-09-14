@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.80 2007/08/14 18:55:28 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.81 2007/09/14 11:49:00 uberlord Exp $
+
+  14 Sep 2007; Roy Marples <uberlord@gentoo.org> lcms-1.17.ebuild:
+  elibtoolize now patches install-sh for us.
 
   14 Aug 2007; Daniel Gryniewicz <dang@gentoo.org>
   +files/lcms-1.17-multilib.patch, lcms-1.17.ebuild:

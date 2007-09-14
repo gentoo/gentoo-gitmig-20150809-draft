@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.17.ebuild,v 1.2 2007/08/14 18:55:28 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.17.ebuild,v 1.3 2007/09/14 11:49:00 uberlord Exp $
 
 inherit libtool eutils multilib
 
@@ -26,9 +26,6 @@ src_unpack() {
 
 	# Fix multilib-strict; bug #185294
 	epatch "${FILESDIR}"/${P}-multilib.patch
-
-	# We need to refresh this for the BSD's
-	cp /usr/share/libtool/install-sh .
 
 	elibtoolize
 
