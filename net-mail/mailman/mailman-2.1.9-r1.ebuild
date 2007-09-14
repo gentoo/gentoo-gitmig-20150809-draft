@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r1.ebuild,v 1.2 2007/09/14 02:02:44 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r1.ebuild,v 1.3 2007/09/14 17:38:01 mr_bones_ Exp $
 
 inherit eutils depend.apache
 IUSE="postfix sendmail qmail courier exim xmail"
@@ -70,13 +70,12 @@ src_install () {
 	make DESTDIR=${D} doinstall || die
 
 	keepdir ${VAR_PREFIX}/logs
-	keepdir ${VAR_PREFIX}/locks        
+	keepdir ${VAR_PREFIX}/locks
 	keepdir ${VAR_PREFIX}/spam
 	keepdir ${VAR_PREFIX}/archives/public
 	keepdir ${VAR_PREFIX}/archives/private
 	keepdir ${VAR_PREFIX}/lists
 	keepdir ${VAR_PREFIX}/qfiles
-
 
 	insinto ${APACHE2_MODULES_CONFDIR}
 	doins ${FILESDIR}/50_mailman.conf
