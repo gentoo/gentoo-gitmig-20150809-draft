@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0.ebuild,v 1.2 2007/09/13 22:28:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0.ebuild,v 1.3 2007/09/14 08:35:10 bicatali Exp $
 
 inherit eutils elisp-common autotools
 
@@ -19,14 +19,15 @@ RDEPEND=">=sci-visualization/gnuplot-4.0
 	tetex? ( virtual/tetex )
 	emacs? ( virtual/emacs
 		 tetex? ( || ( app-emacs/auctex app-xemacs/auctex ) ) )
-	clisp? ( >=dev-lisp/clisp-2.33.2-r1 )
-	gcl?   ( >=dev-lisp/gcl-2.6.7 )
-	sbcl?  ( >=dev-lisp/sbcl-1.0 app-misc/rlwrap )
+	clisp? ( dev-lisp/clisp )
+	gcl?   ( dev-lisp/gcl )
+	sbcl?  ( dev-lisp/sbcl app-misc/rlwrap )
 	cmucl? ( >=dev-lisp/cmucl-19a app-misc/rlwrap )
-	!clisp? ( !gcl? ( !cmucl? ( >=dev-lisp/gcl-2.6.7 ) ) )
-	tk? ( >=dev-lang/tk-8.3.3 )"
+	!clisp? ( !gcl? ( !cmucl? ( dev-lisp/sbcl app-misc/rlwrap ) ) )
+	tk? ( dev-lang/tk )"
 
-DEPEND="${RDEPEND} >=sys-apps/texinfo-4.3"
+DEPEND="${RDEPEND}
+	sys-apps/texinfo"
 
 LANGS="es pt pt_BR"
 for lang in ${LANGS}; do
