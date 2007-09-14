@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/cryptsetup-luks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.59 2007/07/02 19:38:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.60 2007/09/14 21:34:31 wolf31o2 Exp $
+
+  14 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  cryptsetup-luks-1.0.1-r1.ebuild, cryptsetup-luks-1.0.1-r2.ebuild,
+  cryptsetup-luks-1.0.3-r3.ebuild, cryptsetup-luks-1.0.4.ebuild,
+  cryptsetup-luks-1.0.4-r1.ebuild, cryptsetup-luks-1.0.4-r3.ebuild:
+  Removed check for USE=build since it did nothing because cryptsetup isn't in
+  stage1. Removed call to linux-info_pkg_setup to remove requirement on a
+  configured kernel. This fixes bug #148390 from this end, but changes are
+  still needed in linux-info.eclass, which is tracked at bug #192556.
 
   02 Jul 2007; Raúl Porcel <armin76@gentoo.org>
   cryptsetup-luks-1.0.4-r3.ebuild:

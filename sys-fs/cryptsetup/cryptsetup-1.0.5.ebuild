@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.5.ebuild,v 1.1 2007/08/14 16:05:16 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.5.ebuild,v 1.2 2007/09/14 21:33:34 wolf31o2 Exp $
 
 inherit linux-info eutils flag-o-matic multilib
 
@@ -47,13 +47,9 @@ src_unpack() {
 }
 
 pkg_setup() {
-	# Bug 148390
-	if ! use build ; then
-		linux-info_pkg_setup
-		dm-crypt_check
-		crypto_check
-		cbc_check
-	fi
+	dm-crypt_check
+	crypto_check
+	cbc_check
 }
 
 src_compile() {

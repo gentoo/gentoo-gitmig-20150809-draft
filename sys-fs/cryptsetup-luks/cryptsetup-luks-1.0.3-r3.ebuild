@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.3-r3.ebuild,v 1.2 2007/07/02 15:33:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.3-r3.ebuild,v 1.3 2007/09/14 21:34:31 wolf31o2 Exp $
 
 inherit autotools linux-info eutils flag-o-matic multilib
 
@@ -34,12 +34,8 @@ crypto_check() {
 }
 
 pkg_setup() {
-	# Bug 148390
-	if ! use build ; then
-		linux-info_pkg_setup
-		dm-crypt_check
-		crypto_check
-	fi
+	dm-crypt_check
+	crypto_check
 }
 
 src_unpack() {
