@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.16.1.ebuild,v 1.13 2007/05/27 05:28:20 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.16.1.ebuild,v 1.14 2007/09/14 11:46:44 uberlord Exp $
 
 inherit multilib gnome2 eutils
 
@@ -49,8 +49,6 @@ src_unpack() {
 	if ! use doc; then
 		epatch ${FILESDIR}/${PN}-2.15.90-die-gtk-doc-die.patch
 	fi
-
-	cp /usr/share/libtool/install-sh .
 }
 
 src_install() {
