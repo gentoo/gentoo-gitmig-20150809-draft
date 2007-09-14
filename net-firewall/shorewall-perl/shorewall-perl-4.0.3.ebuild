@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/shorewall-perl-4.0.3.ebuild,v 1.5 2007/09/14 11:53:19 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/shorewall-perl-4.0.3.ebuild,v 1.6 2007/09/14 12:07:53 fmccor Exp $
 
 # Choose between experimental, stable and beta:
 #MY_P_TREE="development/4.0"  # experimental and beta
@@ -22,7 +22,7 @@ IUSE=""
 DEPEND="net-firewall/iptables
 	sys-apps/iproute2
 	dev-lang/perl
-	!<et-firewall/shorewall-4.0"
+	!<net-firewall/shorewall-4.0"
 
 PDEPEND="~net-firewall/shorewall-common-${PV}"
 
