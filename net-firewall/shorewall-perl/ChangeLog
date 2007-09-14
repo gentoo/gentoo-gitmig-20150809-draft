@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall-perl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.7 2007/09/09 14:40:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.8 2007/09/14 11:53:19 fmccor Exp $
+
+  14 Sep 2007; Ferris McCormick <fmccor@gentoo.org>
+  shorewall-perl-4.0.3.ebuild:
+  Add ~sparc keyword --- related to Bug #191624
 
   09 Sep 2007; Joseph Jezak <josejx@gentoo.org> shorewall-perl-4.0.3.ebuild:
   Marked ~ppc/~ppc64 for bug #191624.
