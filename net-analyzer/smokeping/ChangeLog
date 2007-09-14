@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.14 2007/09/13 21:40:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.15 2007/09/14 22:25:17 hansmi Exp $
+
+  14 Sep 2007; Michael Hanselmann <hansmi@gentoo.org>
+  smokeping-2.2.3.ebuild:
+  Depend on dev-perl/Net-DNS, required by the AnotherDNS probe.
 
 *smokeping-2.2.3 (13 Sep 2007)
 
