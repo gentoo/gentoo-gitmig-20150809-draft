@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.21 2007/09/14 17:19:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.22 2007/09/14 17:35:19 angelos Exp $
+
+  14 Sep 2007; Christoph Mende <angelos@gentoo.org> rcairo-1.4.1.ebuild:
+  Stable on amd64 wrt bug #192188
 
   14 Sep 2007; nixnut <nixnut@gentoo.org> rcairo-1.4.1.ebuild:
   Stable on ppc wrt bug 192188
