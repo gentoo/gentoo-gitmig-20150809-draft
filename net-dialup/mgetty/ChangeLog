@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.73 2007/05/06 07:57:44 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.74 2007/09/14 20:33:55 mrness Exp $
+
+*mgetty-1.1.36 (14 Sep 2007)
+
+  14 Sep 2007; Alin Năstac <mrness@gentoo.org>
+  +files/mgetty-1.1.36-callback.patch, +files/mgetty-1.1.36-gentoo.patch,
+  +files/mgetty-1.1.36-qa-fixes.patch, +mgetty-1.1.36.ebuild:
+  Use ghostscript instead acroread and add netpbm and ghostscript to run-time
+  dependencies (#191441).
 
   06 May 2007; Marius Mauch <genone@gentoo.org> mgetty-1.1.35-r2.ebuild:
   Replacing einfo with elog

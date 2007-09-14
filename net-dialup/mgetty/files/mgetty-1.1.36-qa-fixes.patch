@@ -1,0 +1,92 @@
+diff -Nru mgetty-1.1.36.orig/fax/Makefile mgetty-1.1.36/fax/Makefile
+--- mgetty-1.1.36.orig/fax/Makefile	2006-02-22 19:25:30.000000000 +0200
++++ mgetty-1.1.36/fax/Makefile	2007-09-14 23:02:58.000000000 +0300
+@@ -36,7 +36,7 @@
+ 	@cd .. ; $(MAKE) sedscript
+ 
+ faxq-helper: faxq-helper.o 
+-	$(CC) $(CFLAGS) -o faxq-helper faxq-helper.o
++	$(CC) $(LDLAGS) -o faxq-helper faxq-helper.o
+ 
+ faxq-helper.o: faxq-helper.c ../sedscript
+ 	$(CC) $(CFLAGS) -DFAX_SPOOL_OUT=\"$(FAX_SPOOL_OUT)\" \
+diff -Nru mgetty-1.1.36.orig/fax_lib.h mgetty-1.1.36/fax_lib.h
+--- mgetty-1.1.36.orig/fax_lib.h	2007-06-15 09:44:36.000000000 +0300
++++ mgetty-1.1.36/fax_lib.h	2007-09-14 22:29:47.000000000 +0300
+@@ -41,6 +41,7 @@
+ int fax_set_fdcc _PROTO(( int fd, int fine, int maxsp, int minsp ));
+ int fax_set_bor  _PROTO(( int fd, int bit_order ));
+ int fax_set_flowcontrol _PROTO(( int fd, int hw_flow ));
++void fax_init_swaptable _PROTO(( int direct, unsigned char byte_tab[] ));
+ int mdm_identify _PROTO(( int fd ));
+ void fax2_incoming_nsf _PROTO(( char * nsf_hex ));
+ void fax1_incoming_nsf _PROTO(( uch * nsf_bin, int len ));
+diff -Nru mgetty-1.1.36.orig/logfile.c mgetty-1.1.36/logfile.c
+--- mgetty-1.1.36.orig/logfile.c	2005-11-26 15:48:16.000000000 +0200
++++ mgetty-1.1.36/logfile.c	2007-09-14 22:25:13.000000000 +0300
+@@ -58,10 +58,10 @@
+ /* Most systems have these variables but do not declare them. On many
+    of those systems that _do_ declare them, it won't hurt */
+ 
+-#if !defined(__NetBSD__) && !defined( __FreeBSD__ ) && !defined(__OpenBSD__) && !defined(__GLIBC__) && !defined(__MACH__)
++/*#if !defined(__NetBSD__) && !defined( __FreeBSD__ ) && !defined(__OpenBSD__) && !defined(__GLIBC__) && !defined(__MACH__)
+ extern int sys_nerr;
+ extern char *sys_errlist[];
+-#endif
++#endif*/
+ 
+ /* Interactive Unix is a little bit braindead - does not have atexit(),
+  */
+@@ -211,6 +211,7 @@
+ va_list pvar;
+ int     errnr;
+ char * p;
++char *error_string;
+ static int first_open = TRUE;
+ 
+     if ( level > log_level )	/* log level high enough? */
+@@ -327,12 +328,20 @@
+     }
+     else		/* ERROR or FATAL */
+     {
++	error_string = strerror (errnr);
++	if ( error_string == NULL )
++	{
++		if ( errno == EINVAL )
++			error_string = "<error not in list>";
++		else
++			error_string = "<error calling strerror()>";
++	}
++	
+ 	fprintf(log_fp, "\n%02d/%02d %02d:%02d:%02d %s %s: %s",
+ 		             tm->tm_mon+1,  tm->tm_mday,
+ 			     tm->tm_hour, tm->tm_min, tm->tm_sec,
+ 		             log_infix, ws,
+-			     ( errnr <= sys_nerr ) ? sys_errlist[errnr]:
+-			     "<error not in list>" );
++			     strerror (errnr));
+ #ifdef SYSLOG
+ 	syslog( level == L_FATAL? LOG_ALERT: LOG_ERR, "%s: %m", ws );
+ #endif
+diff -Nru mgetty-1.1.36.orig/t/t_g3f_c.c mgetty-1.1.36/t/t_g3f_c.c
+--- mgetty-1.1.36.orig/t/t_g3f_c.c	2007-05-05 15:03:03.000000000 +0300
++++ mgetty-1.1.36/t/t_g3f_c.c	2007-09-14 22:26:36.000000000 +0300
+@@ -19,6 +19,7 @@
+ #include "fax_lib.h"
+ 
+ #include <stdio.h>
++#include <unistd.h>
+ #include <signal.h>
+ #include <errno.h>
+ #include <stdlib.h>
+diff -Nru mgetty-1.1.36.orig/t/t_ring.c mgetty-1.1.36/t/t_ring.c
+--- mgetty-1.1.36.orig/t/t_ring.c	2005-03-23 11:56:21.000000000 +0200
++++ mgetty-1.1.36/t/t_ring.c	2007-09-14 22:25:07.000000000 +0300
+@@ -24,6 +24,7 @@
+ 
+ #include "mgetty.h"
+ #include <stdio.h>
++#include <string.h>
+ #include <signal.h>
+ #include <errno.h>
+ #ifdef T_LOG_VERBOSE
