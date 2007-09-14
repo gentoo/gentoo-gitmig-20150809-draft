@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.10.ebuild,v 1.2 2007/06/26 01:39:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.10.ebuild,v 1.3 2007/09/14 09:13:35 dragonheart Exp $
 
 inherit distutils multilib
 
@@ -28,13 +28,13 @@ RDEPEND="${DEPEND}
 #pkg_setup() { maketarball; }
 maketarball() { #For building the tarball. To be used only by ebuild maintainers
 	local x svnrev
-	svnrev=$(svn log -q --limit 1 https://svn.sourceforge.net/svnroot/${PN}/releases/${PV} | sed -r '/^[^r]/d;s/^r([0-9]+) .*$/\1/')
+	svnrev=$(svn log -q --limit 1 https://bitpim.svn.sourceforge.net/svnroot/${PN}/releases/${PV} | sed -r '/^[^r]/d;s/^r([0-9]+) .*$/\1/')
 	[ $? = 0 ] || return 1
 
 	#Fetch the source (only those directories that are needed)
 	cd "${DISTDIR}" && mkdir ${P} || return 1
 	for x in resources packaging src ; do
-		svn export https://svn.sourceforge.net/svnroot/${PN}/releases/${PV}/${x} ${P}/${x} || return 1
+		svn export https://bitpim.svn.sourceforge.net/svnroot/${PN}/releases/${PV}/${x} ${P}/${x} || return 1
 	done
 
 	#Remove unneeded stuff
