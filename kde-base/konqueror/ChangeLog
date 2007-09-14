@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.91 2007/09/13 14:48:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.92 2007/09/14 21:27:23 philantrop Exp $
+
+  14 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  konqueror-3.5.7-r3.ebuild:
+  Marked stable on amd64 as per bug 185603.
 
   13 Sep 2007; Raúl Porcel <armin76@gentoo.org> konqueror-3.5.7-r3.ebuild:
   alpha/ia64/x86 stable wrt security #185603
