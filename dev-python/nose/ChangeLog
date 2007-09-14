@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.6 2007/09/14 09:24:14 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.7 2007/09/14 09:59:11 hawking Exp $
+
+*nose-0.9.3-r1 (14 Sep 2007)
+
+  14 Sep 2007; Ali Polatel <hawking@gentoo.org>
+  +files/nose-0.9.3-tests-nonetwork.patch,
+  +files/nose-0.10.0_beta1-tests-nonetwork.patch,
+  -files/nose-tests-nonetwork.patch, -nose-0.9.3.ebuild,
+  +nose-0.9.3-r1.ebuild, -nose-0.10.0_alpha2.ebuild,
+  nose-0.10.0_beta1.ebuild:
+  revbumped 0.9.3 backporting the fix, drop old
 
 *nose-0.10.0_beta1 (14 Sep 2007)
 
