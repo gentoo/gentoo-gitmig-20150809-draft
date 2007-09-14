@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/splash-themes-livecd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/ChangeLog,v 1.15 2007/08/15 10:01:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/ChangeLog,v 1.16 2007/09/14 22:48:06 wolf31o2 Exp $
+
+*splash-themes-livecd-2007.0-r1 (14 Sep 2007)
+
+  14 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/splash-themes-livecd-2007.0-rounding.patch,
+  +splash-themes-livecd-2007.0-r1.ebuild:
+  Added a patch from Michal Januszewski <spock@gentoo.org> to fix an icon
+  cycling issue. This closes bug #182065.
 
   15 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
   splash-themes-livecd-2005.0.ebuild, splash-themes-livecd-2005.1.ebuild,
