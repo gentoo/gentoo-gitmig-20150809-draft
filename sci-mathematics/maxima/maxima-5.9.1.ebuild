@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1.ebuild,v 1.4 2006/03/15 04:02:02 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1.ebuild,v 1.5 2007/09/14 08:39:04 bicatali Exp $
 
 inherit eutils
 
@@ -66,6 +66,7 @@ src_install() {
 	#move docs to the appropriate place
 	dodoc AUTHORS ChangeLog COPYING COPYING1 NEWS README*
 	mv ${D}/usr/share/${PN}/${PV}/doc/* ${D}/usr/share/doc/${PF}/
+	dosym /usr/share/doc/${PF} /usr/share/${PN}/${PV}/doc
 }
 
 pkg_postinst() {
