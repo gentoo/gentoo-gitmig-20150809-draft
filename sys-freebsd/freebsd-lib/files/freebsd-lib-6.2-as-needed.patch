@@ -1,0 +1,40 @@
+This enables --as-needed to work fully on FreeBSD.
+This can be pulled for FreeBSD-7.
+
+diff -ur lib.orig/libmp/Makefile lib/libmp/Makefile
+--- lib.orig/libmp/Makefile	2007-09-14 07:40:20 +0100
++++ lib/libmp/Makefile	2007-09-14 07:44:49 +0100
+@@ -2,6 +2,8 @@
+ 
+ LIB=		mp
+ SHLIB_MAJOR=	5
++DPADD=		${LIBCRYPTO}
++LDADD=		-lcrypto
+ MAN=		libmp.3
+ INCS=		mp.h
+ SRCS=		mpasbn.c
+diff -ur lib.orig/libncp/Makefile lib/libncp/Makefile
+--- lib.orig/libncp/Makefile	2007-09-14 07:40:20 +0100
++++ lib/libncp/Makefile	2007-09-14 07:44:49 +0100
+@@ -5,6 +5,8 @@
+ LIB=		ncp
+ 
+ SHLIB_MAJOR=	2
++DPADD=		${LIBIPX}
++LDADD=		-lipx
+ 
+ NO_MAN=
+ 
+diff -ur lib.orig/libsmb/Makefile lib/libsmb/Makefile
+--- lib.orig/libsmb/Makefile	2007-09-14 07:40:20 +0100
++++ lib/libsmb/Makefile	2007-09-14 07:44:49 +0100
+@@ -5,6 +5,8 @@
+
+ LIB=	smb
+ SHLIB_MAJOR=	2
++DPADD=	${LIBKICONV}
++LDADD=	-lkiconv
+ NO_MAN=
+
+ SRCS=	rcfile.c ctx.c cfopt.c subr.c nls.c rap.c mbuf.c rq.c file.c \
+ 

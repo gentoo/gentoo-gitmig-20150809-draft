@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.54 2007/09/12 00:10:29 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.55 2007/09/14 07:50:40 uberlord Exp $
+
+  14 Sep 2007; Roy Marples <uberlord@gentoo.org>
+  +files/freebsd-lib-6.2-as-needed.patch, freebsd-lib-6.2-r2.ebuild:
+  Sync some --as-needed patches from upstream.
 
 *freebsd-lib-6.2-r2 (12 Sep 2007)
 
