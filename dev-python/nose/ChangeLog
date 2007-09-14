@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.5 2007/07/31 08:21:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.6 2007/09/14 09:24:14 hawking Exp $
+
+*nose-0.10.0_beta1 (14 Sep 2007)
+
+  14 Sep 2007; Ali Polatel <hawking@gentoo.org>
+  +files/nose-tests-nonetwork.patch, +nose-0.10.0_beta1.ebuild:
+  Version bump, added twisted use flag and made nose.twistedtools and twisted
+  tests conditional (thanks to Dirkjan Ochtman - bug 187780 )
 
 *nose-0.10.0_alpha2 (31 Jul 2007)
 
