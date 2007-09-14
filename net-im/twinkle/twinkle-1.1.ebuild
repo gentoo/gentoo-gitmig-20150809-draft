@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.1.ebuild,v 1.1 2007/07/23 09:37:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.1.ebuild,v 1.2 2007/09/14 12:05:55 dragonheart Exp $
 
 ARTS_REQUIRED="never"
 inherit eutils qt3 kde
@@ -22,10 +22,19 @@ RDEPEND=">=net-libs/ccrtp-1.5.0
 	dev-libs/boost
 	speex? ( media-libs/speex )
 	ilbc? ( dev-libs/ilbc-rfc3951 )
-	zrtp? ( net-libs/libzrtpcpp )"
+	zrtp? ( net-libs/libzrtpcpp )
+	media-libs/alsa-lib"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+pkg_setup() {
+	if use speex && has_version '>=media-libs/speex-1.2_beta2' &&
+		! built_with_use 'media-libs/speex' 'wideband' ; then
+		eerror "You need to build media-libs/speex with USE=wideband enabled."
+		die "Speex w/o wideband-support detected."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
