@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openexr
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.54 2007/09/13 21:06:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.55 2007/09/14 04:51:57 jer Exp $
+
+  14 Sep 2007; Jeroen Roovers <jer@gentoo.org> openexr-1.6.0.ebuild:
+  Marked ~hppa (bug #189798).
 
 *openexr-1.6.0 (13 Sep 2007)
 
