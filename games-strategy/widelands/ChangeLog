@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.11 2007/03/21 20:56:02 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.12 2007/09/14 14:20:29 nyhm Exp $
+
+*widelands-0.0.11 (14 Sep 2007)
+
+  14 Sep 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/widelands-0.0.11-build.patch, +widelands-0.0.11.ebuild:
+  Version bump by Juan Aguado, bug #192244
 
 *widelands-0.0.10 (21 Mar 2007)
 
