@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/honeyd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.31 2007/08/12 20:29:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.32 2007/09/14 10:53:46 jokey Exp $
+
+  14 Sep 2007; Markus Ullmann <jokey@gentoo.org> honeyd-1.5c.ebuild:
+  Stable on sparc and x86 wrt bug #192446
 
 *honeyd-1.5c (12 Aug 2007)
 
