@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/smclone
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/ChangeLog,v 1.21 2007/09/12 20:58:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/ChangeLog,v 1.22 2007/09/14 17:08:39 nixnut Exp $
+
+  14 Sep 2007; nixnut <nixnut@gentoo.org> smclone-1.0.ebuild:
+  Stable on ppc wrt bug 192055
 
   12 Sep 2007; Christoph Mende <angelos@gentoo.org> smclone-1.0.ebuild:
   Stable on amd64 wrt bug #192055
