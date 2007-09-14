@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.104 2007/09/13 22:58:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.105 2007/09/14 00:05:30 dragonheart Exp $
+
+  14 Sep 2007; Daniel Black <dragonheart@gentoo.org> curl-7.17.0.ebuild:
+  with!= without (libssh2) thanks to Mikachu
 
 *curl-7.17.0-r1 (13 Sep 2007)
 *curl-7.17.0 (13 Sep 2007)
