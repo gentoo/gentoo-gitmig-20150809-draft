@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0.1-r1.ebuild,v 1.7 2007/09/14 12:05:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.0.1-r1.ebuild,v 1.8 2007/09/14 17:37:30 mr_bones_ Exp $
 
 ARTS_REQUIRED="never"
 inherit eutils qt3 kde
@@ -35,7 +35,6 @@ pkg_setup() {
 		die "Speex w/o wideband-support detected."
 	fi
 }
-
 
 src_unpack() {
 	unpack ${A}
