@@ -6,10 +6,10 @@ MD5 0d47bc31b371fce0de3e6b788412472c files/openexr_viewers-1.0.0-nvidia-automagi
 RMD160 0055431676c8bebf943bc15a7f1046d6e5063e2e files/openexr_viewers-1.0.0-nvidia-automagic.patch 685
 SHA256 9ac7325a4f0cb07c441ae66a2ef3c9c589a2a41e93fb8799e4e16c8841acae3b files/openexr_viewers-1.0.0-nvidia-automagic.patch 685
 DIST openexr_viewers-1.0.0.tar.gz 478305 RMD160 02d00cfd3cadeb5ae9f50ae038a4fcf89c625cc6 SHA1 6859a59d356afa12dcc8323354329d9fb4e3b3b0 SHA256 382f3ef9797390328d14b82acf659d735244fd2ea01de98d62543d0dfa61654c
-EBUILD openexr_viewers-1.0.0.ebuild 1412 RMD160 395be20df025c661fac2d0794c978e85b12371ca SHA1 fefdac50f67037395c6d1a277cdb8ef5d5bdabbd SHA256 5dd0682eba45f7a0fbce3996933ce045585d5b8ba3b9177b1f85e8689b165329
-MD5 9292f6da534f9bf7d07164923ac11150 openexr_viewers-1.0.0.ebuild 1412
-RMD160 395be20df025c661fac2d0794c978e85b12371ca openexr_viewers-1.0.0.ebuild 1412
-SHA256 5dd0682eba45f7a0fbce3996933ce045585d5b8ba3b9177b1f85e8689b165329 openexr_viewers-1.0.0.ebuild 1412
+EBUILD openexr_viewers-1.0.0.ebuild 1419 RMD160 e6d960c2e6220305925896cf352f1130c363cd79 SHA1 bff42b50bccd5af90bb5a3a0a38fe1fe561b7bb7 SHA256 d76f458918d684a00de1be17ea87dd91fb5798aa63d9e2aa97a43684829701b5
+MD5 da82d338487bc5b4dc3248c956167b0e openexr_viewers-1.0.0.ebuild 1419
+RMD160 e6d960c2e6220305925896cf352f1130c363cd79 openexr_viewers-1.0.0.ebuild 1419
+SHA256 d76f458918d684a00de1be17ea87dd91fb5798aa63d9e2aa97a43684829701b5 openexr_viewers-1.0.0.ebuild 1419
 MISC ChangeLog 570 RMD160 71ed4964dd79fe64e6a51f1acf505f9021f05e5e SHA1 d9bd4eed8d490b05e64bd5f3be300aaffacf93ca SHA256 8cd9a442aa3aaf37edd02dd7bce80632abf750e6c631e16dc694d692de5e7691
 MD5 e81d3f519a3fa5c4f977160e617acdc6 ChangeLog 570
 RMD160 71ed4964dd79fe64e6a51f1acf505f9021f05e5e ChangeLog 570
@@ -24,7 +24,7 @@ SHA256 28ca03c92abdb0ca412ce5b996b7f7abedb323921d70de037dadebb11d41edd7 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFG6adMvFcC4BYPU0oRApS+AKC2113bQkVgjlUXkZaWDnPlWayRQQCfRYlG
-Vi9hmbfCnEm5qb7BO4xqpfo=
-=yaM8
+iD8DBQFG6gvavFcC4BYPU0oRAs7GAJoC2/MnoS5AW9dn/nsK/3x/1RS6egCgjLfC
+LL/2n+sMAOjRCbUGVhF4xtI=
+=QDmj
 -----END PGP SIGNATURE-----
