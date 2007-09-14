@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.6.ebuild,v 1.1 2007/09/11 18:48:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.6.ebuild,v 1.2 2007/09/14 15:36:51 opfer Exp $
 
 inherit eutils
 
@@ -31,9 +31,9 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}"
-#	 newbin ${PN}.py ${PN}
-#	 dodoc README AUTHORS ChangeLog
+	newbin elogv.py elogv
+	doman elogv.1
+	dodoc README AUTHORS ChangeLog ChangeLog.old
 }
 
 pkg_postinst() {
