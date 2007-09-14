@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/otrs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.35 2007/09/12 07:00:31 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.36 2007/09/14 05:53:38 wrobel Exp $
+
+  14 Sep 2007; <wrobel@gentoo.org> -files/apache1.patch,
+  files/apache2.patch:
+  Fixed the apache2.patch so that the fastcgi USE flag works. Removed unused
+  apache1.patch.
 
 *otrs-2.2.2 (12 Sep 2007)
 
