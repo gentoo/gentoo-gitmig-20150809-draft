@@ -1,0 +1,40 @@
+Fixes #182214
+Hopefully KDE4 will solve this for us FreeBSD users.
+
+--- ltmain.sh	2007-09-13 16:00:38 +0100
++++ ltmain.sh	2004-01-25 12:40:26 +0000
+@@ -2083,17 +2059,6 @@
+ 	if test "$pass" = conv; then
+ 	  # Only check for convenience libraries
+ 	  deplibs="$lib $deplibs"
+-	  tmp_libs=
+-	  for deplib in $dependency_libs; do
+-	    #echo "Adding $deplib to \$deplibs"
+-	    deplibs="$deplib $deplibs"
+-            if test "X$duplicate_deps" = "Xyes" ; then
+-	      case "$tmp_libs " in
+-	      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
+-	      esac
+-            fi
+-	    tmp_libs="$tmp_libs $deplib"
+-	  done
+ 	  if test -z "$libdir"; then
+ 	    if test -z "$old_library"; then
+ 	      $echo "$modename: cannot find name of link library for \`$lib'" 1>&2
+@@ -2102,6 +2067,16 @@
+ 	    # It is a libtool convenience library, so add in its objects.
+ 	    convenience="$convenience $ladir/$objdir/$old_library"
+ 	    old_convenience="$old_convenience $ladir/$objdir/$old_library"
++	    tmp_libs=
++	    for deplib in $dependency_libs; do
++	      deplibs="$deplib $deplibs"
++              if test "X$duplicate_deps" = "Xyes" ; then
++	        case "$tmp_libs " in
++	        *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
++	        esac
++              fi
++	      tmp_libs="$tmp_libs $deplib"
++	    done
+ 	  elif test "$linkmode" != prog && test "$linkmode" != lib; then
+ 	    $echo "$modename: \`$lib' is not a convenience library" 1>&2
+ 	    exit 1
