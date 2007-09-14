@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r1.ebuild,v 1.1 2007/09/13 21:59:22 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r1.ebuild,v 1.2 2007/09/14 02:02:44 hanno Exp $
 
 inherit eutils depend.apache
 IUSE="postfix sendmail qmail courier exim xmail"
@@ -11,15 +11,12 @@ HOMEPAGE="http://www.list.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc sparc x86"
 
 DEPEND=">=dev-lang/python-2.3
 	virtual/mta
 	virtual/cron
 	|| ( www-servers/apache www-servers/lighttpd )"
-
-INSTALLDIR="/usr/local/mailman"
-APACHEGID="81"
 
 if use postfix; then
 	MAILGID="280"
@@ -38,6 +35,10 @@ else
 fi
 
 pkg_setup() {
+	INSTALLDIR=${MAILMAN_PREFIX:-"/usr/lib/mailman"}
+	VAR_PREFIX=${MAILMAN_VAR_PREFIX:-"/var/lib/mailman"}
+	APACHEGID=${MAILMAN_APACHEGID:-81}
+
 	# Bug #58526: switch to enew{group,user}.
 	# need to add mailman here for compile process.
 	# Duplicated at pkg_postinst() for binary install.
@@ -55,27 +56,27 @@ src_unpack() {
 }
 
 src_compile() {
-	econf \
+	econf --without-permcheck \
 		--prefix=${INSTALLDIR} \
 		--with-mail-gid=${MAILGID} \
 		--with-cgi-gid=${APACHEGID} \
+		--with-var-prefix=${VAR_PREFIX} \
 	|| die "configure failed"
 
 	make || die "make failed"
 }
 
 src_install () {
-	ID=${D}${INSTALLDIR}
+	make DESTDIR=${D} doinstall || die
 
-	make prefix=${ID} var_prefix=${ID} doinstall || die
+	keepdir ${VAR_PREFIX}/logs
+	keepdir ${VAR_PREFIX}/locks        
+	keepdir ${VAR_PREFIX}/spam
+	keepdir ${VAR_PREFIX}/archives/public
+	keepdir ${VAR_PREFIX}/archives/private
+	keepdir ${VAR_PREFIX}/lists
+	keepdir ${VAR_PREFIX}/qfiles
 
-	keepdir ${INSTALLDIR}/logs
-	keepdir ${INSTALLDIR}/locks
-	keepdir ${INSTALLDIR}/spam
-	keepdir ${INSTALLDIR}/archives/public
-	keepdir ${INSTALLDIR}/archives/private
-	keepdir ${INSTALLDIR}/lists
-	keepdir ${INSTALLDIR}/qfiles
 
 	insinto ${APACHE2_MODULES_CONFDIR}
 	doins ${FILESDIR}/50_mailman.conf
@@ -85,8 +86,9 @@ src_install () {
 	dodoc contrib/README.check_perms_grsecurity contrib/mm-handler.readme
 	dodoc contrib/virtusertable contrib/mailman.mc
 
-	cp build/contrib/*.py contrib/majordomo2mailman.pl contrib/auto \
-		contrib/mm-handler* ${ID}/bin
+	exeinto ${INSTALLDIR}/bin
+	doexe build/contrib/*.py contrib/majordomo2mailman.pl contrib/auto \
+		contrib/mm-handler* || die
 
 	# Save the old config into the new package as CONFIG_PROTECT
 	# doesn't work for this package.
@@ -95,7 +97,7 @@ src_install () {
 	do
 		if [ -f ${i}/Mailman/mm_cfg.py ]; then
 			cp ${i}/Mailman/mm_cfg.py \
-				${ID}/Mailman/mm_cfg.py
+				${D}/${INSTALLDIR}/Mailman/mm_cfg.py
 			elog "Your old config has been saved as mm_cfg.py"
 			elog "A new config has been installed as mm_cfg.dist"
 		fi
@@ -103,8 +105,8 @@ src_install () {
 
 	newinitd ${FILESDIR}/mailman.rc mailman
 
-	chown -R mailman:mailman ${ID}
-	chmod 2775 ${ID}
+	chown -R mailman:mailman ${D}/${INSTALLDIR}
+	chmod 2775 ${D}/${INSTALLDIR}
 }
 
 pkg_postinst() {
@@ -126,4 +128,9 @@ pkg_postinst() {
 	elog "To enable, you will need to add \"-D MAILMAN\" to"
 	elog "/etc/conf.d/apache2."
 	elog
+
+	ewarn "Default-Paths have changed with 2.1.9-r1. You can change paths with the"
+	ewarn "MAILMAN_INSTALLDIR and MAILMAN_VAR_PREFIX variables."
+	ewarn
+	ebeep
 }
