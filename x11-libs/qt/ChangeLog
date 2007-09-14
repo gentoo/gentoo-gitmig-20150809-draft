@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.486 2007/09/13 20:41:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.487 2007/09/14 21:33:09 caleb Exp $
+
+*qt-4.3.1-r1 (14 Sep 2007)
+*qt-3.3.8-r4 (14 Sep 2007)
+
+  14 Sep 2007; Caleb Tennis <caleb@gentoo.org>
+  +files/qt-3.3.8-unicode-off-by-one.patch,
+  +files/qt-4.3.1-unicode-off-by-one.patch, +qt-3.3.8-r4.ebuild,
+  +qt-4.3.1-r1.ebuild:
+  Bump for security bug #192472
 
   13 Sep 2007; Markus Rothe <corsair@gentoo.org> qt-4.3.1.ebuild:
   Stable on ppc64; bug #192134
