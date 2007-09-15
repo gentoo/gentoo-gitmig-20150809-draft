@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/quake4-deltactf
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-deltactf/ChangeLog,v 1.1 2007/09/15 19:07:46 wolf31o2 Exp $
+
+*quake4-deltactf-1.1 (15 Sep 2007)
+
+  15 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +quake4-deltactf-1.1.ebuild:
+  Initial import. Ebuild by Paul Bredbury <brebs@sent.com>. Closing bug
+  #140780.
+
