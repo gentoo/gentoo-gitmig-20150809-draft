@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.123 2007/09/12 08:50:44 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.124 2007/09/15 12:28:30 drac Exp $
+
+  15 Sep 2007; Samuli Suominen <drac@gentoo.org> gallery-2.2.3.ebuild:
+  Change USE dcraw to raw.
 
   12 Sep 2007; <wrobel@gentoo.org> -gallery-2.1.2.ebuild,
   -gallery-2.2.1.ebuild, -gallery-2.2.2.ebuild:

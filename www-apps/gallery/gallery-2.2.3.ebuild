@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.2.3.ebuild,v 1.7 2007/09/12 08:42:20 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.2.3.ebuild,v 1.8 2007/09/15 12:28:30 drac Exp $
 
 inherit webapp eutils depend.php
 
@@ -10,11 +10,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-full.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
-IUSE="dcraw ffmpeg gd imagemagick mysql netpbm postgres unzip zip"
+IUSE="ffmpeg gd imagemagick mysql netpbm postgres raw unzip zip"
 
 RDEPEND="
 	media-libs/jpeg
-	dcraw? ( >=media-gfx/dcraw-8.03 )
+	raw? ( >=media-gfx/dcraw-8.03 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20051216 )
 	gd? ( >=media-libs/gd-2 )
 	imagemagick? ( >=media-gfx/imagemagick-5.4.9.1-r1 )
