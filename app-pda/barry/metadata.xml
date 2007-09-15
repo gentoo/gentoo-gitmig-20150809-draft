@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>app-pda</herd>
+	<maintainer>
+		<email>jsin@gentoo.org</email>
+		<name>Jason Smathers (jsin)</name>
+	</maintainer>
+	<longdescription lang="en">
+		Barry is an Open Source Linux application that will 
+		allow synchronization, backup, restore, program 
+		management, and charging for BlackBerry devices.
+	</longdescription>
+</pkgmetadata>
