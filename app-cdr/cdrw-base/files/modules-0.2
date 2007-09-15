@@ -1,5 +1,0 @@
-# cdrw support.
-# make sure that we load the scsi emulation for the generic scsi drivers
-alias     /dev/sg*              /dev/sg
-alias     /dev/scsi/*/generic   /dev/sg
-probeall  /dev/sg               sg scsi_mod sr_mod ide-scsi
