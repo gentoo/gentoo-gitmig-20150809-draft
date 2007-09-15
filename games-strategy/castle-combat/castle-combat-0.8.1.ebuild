@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/castle-combat-0.8.1.ebuild,v 1.3 2007/04/04 20:53:17 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/castle-combat-0.8.1.ebuild,v 1.4 2007/09/15 21:24:09 tupone Exp $
 
 inherit eutils games
 
@@ -15,6 +15,13 @@ IUSE=""
 
 RDEPEND="dev-python/twisted
 	dev-python/pygame"
+
+pkg_setup() {
+	games_pkg_setup
+	if ! built_with_use media-libs/sdl-mixer mikmod; then
+		die "Please emerge media-libs/sdl-mixer with USE=mikmod"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

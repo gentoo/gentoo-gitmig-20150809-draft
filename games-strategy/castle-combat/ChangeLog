@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/castle-combat
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/ChangeLog,v 1.8 2006/12/06 17:28:56 wolf31o2 Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/ChangeLog,v 1.9 2007/09/15 21:24:09 tupone Exp $
+
+  15 Sep 2007; Tupone Alfredo <tupone@gentoo.org>
+  castle-combat-0.8.1.ebuild:
+  Check for mikmod use flag in media-libs/sdl-mixer. Fixes bug #188877 by
+  Fabian Kislat
 
   06 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   castle-combat-0.7.4.ebuild:
