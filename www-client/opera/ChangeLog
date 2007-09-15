@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.135 2007/09/07 15:12:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.136 2007/09/15 04:17:30 jer Exp $
+
+*opera-9.50_alpha1581 (15 Sep 2007)
+
+  15 Sep 2007; Jeroen Roovers <jer@gentoo.org> +opera-9.50_alpha1581.ebuild:
+  Version bump (still a snapshot).
 
   07 Sep 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_alpha1567.ebuild:
   Remove temporary comment.
