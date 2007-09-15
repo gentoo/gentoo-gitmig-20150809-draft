@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.2.ebuild,v 1.2 2007/07/22 06:59:26 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.2.ebuild,v 1.3 2007/09/15 12:38:36 markusle Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -29,7 +29,7 @@ src_unpack() {
 src_compile() {
 	# Special handling for sparc
 	local myhost
-	[ "${PROFILE_ARCH}" == "sparc64" ] && myhost="sparc64-linux" \
+	[ "${PROFILE_ARCH}" == "sparc64" ] && myhost="sparcv9-linux" \
 		|| myhost="$(echo ${CHOST} | cut -f "1 3" -d '-')"
 	einfo "Building for ${myhost}"
 

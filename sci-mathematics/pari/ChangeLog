@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.43 2007/07/22 06:59:26 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.44 2007/09/15 12:38:36 markusle Exp $
+
+  15 Sep 2007; Markus Dittrich <markusle@gentoo.org> pari-2.3.2.ebuild:
+  Added fix to allow test routines to pass on sparc (see bug #141206).
+  Thanks much to <fmccor@gentoo.org> for his patch.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; pari-2.3.0.ebuild,
   pari-2.3.2.ebuild:
