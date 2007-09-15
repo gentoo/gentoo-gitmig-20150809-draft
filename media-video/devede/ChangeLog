@@ -1,6 +1,11 @@
 # ChangeLog for media-video/devede
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.6 2007/08/13 12:40:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.7 2007/09/15 16:15:24 drac Exp $
+
+*devede-3.1b (15 Sep 2007)
+
+  15 Sep 2007; Samuli Suominen <drac@gentoo.org> +devede-3.1b.ebuild:
+  Version bump for bug 192604, thanks to Greg Fitzgerald for reporting.
 
   13 Aug 2007; Christoph Mende <angelos@gentoo.org> devede-3.01.ebuild:
   Added ~amd64 wrt bug #183944
