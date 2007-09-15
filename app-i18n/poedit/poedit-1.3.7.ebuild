@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.3.7.ebuild,v 1.1 2007/09/01 23:37:46 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.3.7.ebuild,v 1.2 2007/09/15 23:29:11 dirtyepic Exp $
 
-inherit eutils wxwidgets flag-o-matic
+inherit eutils wxwidgets flag-o-matic fdo-mime
 
 DESCRIPTION="Cross-platform gettext catalogs (.po files) editor."
 SRC_URI="mirror://sourceforge/poedit/${P}.tar.gz"
@@ -37,4 +37,12 @@ src_compile() {
 src_install () {
 	make DESTDIR="${D}" install || die "Install failed"
 	dodoc AUTHORS NEWS README TODO
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
 }
