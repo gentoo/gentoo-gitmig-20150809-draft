@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.60 2007/08/11 16:42:55 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.61 2007/09/15 19:25:27 eva Exp $
+
+  15 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-python-extras-2.14.2-r1.ebuild:
+  changed dependency on gtkhtml to support 2.6 and 2.11
 
   11 Aug 2007; Mart Raudsepp <leio@gentoo.org>
   -gnome-python-extras-2.14.0-r1.ebuild, -gnome-python-extras-2.14.2.ebuild:
