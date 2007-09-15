@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/epix
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.17 2007/09/13 13:07:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.18 2007/09/15 13:15:57 markusle Exp $
+
+*epix-1.1.17 (15 Sep 2007)
+
+  15 Sep 2007; Markus Dittrich <markusle@gentoo.org> +files/epix-1.1.17-doc-gentoo.patch, +epix-1.1.17.ebuild:
+  Version bump. Thanks much to the maintainer Andrew D. Hwang
+  <ahwang@mathcs.holycross.edu> for his efforts to making the epix
+  install on gentoo even smoother!
 
   13 Sep 2007; Markus Dittrich <markusle@gentoo.org>
   +files/50epix-gentoo.el:
