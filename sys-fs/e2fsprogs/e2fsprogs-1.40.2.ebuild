@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.40.2.ebuild,v 1.1 2007/07/14 17:19:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.40.2.ebuild,v 1.2 2007/09/15 08:54:25 uberlord Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/e2fsprogs/${P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="nls static"
 
 RDEPEND="~sys-libs/com_err-${PV}
@@ -30,6 +30,9 @@ src_unpack() {
 	# Clean up makefile to suck less
 	epatch "${FILESDIR}"/e2fsprogs-1.39-makefile.patch
 	epatch "${FILESDIR}"/${PN}-1.40-libintl.patch #122368
+
+	# Fix compile on FreeBSD
+	epatch "${FILESDIR}"/${PN}-1.40-fbsd.patch
 
 	# kernel headers use the same defines as e2fsprogs and can cause issues #48829
 	sed -i \
@@ -58,9 +61,9 @@ src_unpack() {
 
 src_compile() {
 	# Keep the package from doing silly things
-	export LDCONFIG=/bin/true
+	export LDCONFIG=:
 	export CC=$(tc-getCC)
-	export STRIP=/bin/true
+	export STRIP=:
 
 	econf \
 		--bindir=/bin \
@@ -80,6 +83,11 @@ src_compile() {
 	fi
 	# Parallel make sometimes fails
 	emake -j1 COMPILE_ET=compile_et || die
+
+	# Build the FreeBSD helper
+	if use elibc_FreeBSD ; then
+		${CC} "${FILESDIR}"/fsck_ext2fs.c -o fsck_ext2fs || die
+	fi
 }
 
 src_install() {
@@ -104,8 +112,17 @@ src_install() {
 	dosbin "${D}"/sbin/mklost+found
 	rm -f "${D}"/sbin/mklost+found
 
-	# these manpages are already provided by FreeBSD libc
-	use elibc_FreeBSD && \
-		rm -f "${D}"/usr/share/man/man3/{uuid,uuid_compare}.3 \
+	if use elibc_FreeBSD ; then
+		# Install helpers for us
+		dosbin "${S}"/fsck_ext2fs
+		doman "${FILESDIR}"/fsck_ext2fs.8
+
+		# these manpages are already provided by FreeBSD libc
+		# and filefrag is linux only
+		rm -f \
+			"${D}"/sbin/filefrag
+			"${D}"/usr/share/man/man8/filefrag.8
+			"${D}"/usr/share/man/man3/{uuid,uuid_compare}.3 \
 			"${D}"/usr/share/man/man1/uuidgen.1
+	fi
 }
