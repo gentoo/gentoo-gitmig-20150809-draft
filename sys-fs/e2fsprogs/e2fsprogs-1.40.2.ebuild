@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.40.2.ebuild,v 1.2 2007/09/15 08:54:25 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.40.2.ebuild,v 1.3 2007/09/15 14:20:41 uberlord Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -45,6 +45,7 @@ src_unpack() {
 		-e '/^LIB_SUBDIRS/s:lib/et::' \
 		-e '/^LIB_SUBDIRS/s:lib/ss::' \
 		Makefile.in || die "remove subdirs"
+
 	ln -s "${ROOT}"/usr/$(get_libdir)/libcom_err.a lib/libcom_err.a
 	ln -s "${ROOT}"/$(get_libdir)/libcom_err.so lib/libcom_err.so
 	ln -s /usr/bin/mk_cmds lib/ss/mk_cmds
@@ -86,7 +87,8 @@ src_compile() {
 
 	# Build the FreeBSD helper
 	if use elibc_FreeBSD ; then
-		${CC} "${FILESDIR}"/fsck_ext2fs.c -o fsck_ext2fs || die
+		cp "${FILESDIR}"/fsck_ext2fs.c .
+		emake fsck_ext2fs || die
 	fi
 }
 
@@ -114,15 +116,17 @@ src_install() {
 
 	if use elibc_FreeBSD ; then
 		# Install helpers for us
-		dosbin "${S}"/fsck_ext2fs
+		into /
+		dosbin "${S}"/fsck_ext2fs || die
 		doman "${FILESDIR}"/fsck_ext2fs.8
 
 		# these manpages are already provided by FreeBSD libc
 		# and filefrag is linux only
 		rm -f \
-			"${D}"/sbin/filefrag
-			"${D}"/usr/share/man/man8/filefrag.8
+			"${D}"/sbin/filefrag \
+			"${D}"/usr/share/man/man8/filefrag.8 \
+			"${D}"/bin/uuidgen \
 			"${D}"/usr/share/man/man3/{uuid,uuid_compare}.3 \
-			"${D}"/usr/share/man/man1/uuidgen.1
+			"${D}"/usr/share/man/man1/uuidgen.1 || die
 	fi
 }
