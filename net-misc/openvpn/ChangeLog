@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.115 2007/08/16 15:06:56 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.116 2007/09/15 07:30:31 uberlord Exp $
+
+  15 Sep 2007; Roy Marples <uberlord@gentoo.org>
+  -files/openvpn-2.0.4-darwin.patch, openvpn-2.0.6.ebuild,
+  openvpn-2.0.7-r2.ebuild, openvpn-2.1_rc4-r2.ebuild:
+  ppc-macos keyword and patch dropped
 
 *openvpn-2.1_rc4-r2 (16 Aug 2007)
 

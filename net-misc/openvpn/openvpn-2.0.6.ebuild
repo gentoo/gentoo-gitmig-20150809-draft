@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.6.ebuild,v 1.15 2007/04/16 11:43:26 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.6.ebuild,v 1.16 2007/09/15 07:30:31 uberlord Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://openvpn.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc-macos ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sh sparc x86"
 IUSE="examples iproute2 minimal pam passwordsave selinux ssl static threads"
 
 RDEPEND=">=dev-libs/lzo-1.07
@@ -31,12 +31,6 @@ pkg_setup() {
 			die "iproute2 support not available"
 		fi
 	fi
-}
-
-src_unpack() {
-	unpack "${A}"
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}"-2.0.4-darwin.patch
 }
 
 src_compile() {
