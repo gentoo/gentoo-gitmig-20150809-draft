@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/terminal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.51 2007/08/06 02:49:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.52 2007/09/15 07:02:11 drac Exp $
+
+  15 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  terminal-0.2.6_p25931.ebuild:
+  Changed SRC_URI to gentoo mirrors.
 
   06 Aug 2007; Joshua Kinard <kumba@gentoo.org>
   terminal-0.2.6_p25931.ebuild:
