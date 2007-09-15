@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/remind
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.21 2007/08/02 13:07:27 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.22 2007/09/15 07:04:37 tove Exp $
+
+*remind-03.01.02 (15 Sep 2007)
+
+  15 Sep 2007; Torsten Veller <tove@gentoo.org> metadata.xml,
+  +remind-03.01.02.ebuild:
+  Version bump. Add myself as maintainer.
 
   02 Aug 2007; Roy Marples <uberlord@gentoo.org> remind-03.00.24.ebuild:
   Keyworded ~x86-fbsd, #156902 thanks to Marc Kowarsky.
