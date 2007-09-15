@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.68 2007/08/07 20:34:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.69 2007/09/15 19:15:46 solar Exp $
+
+*eggdrop-1.6.18-r3 (15 Sep 2007)
+
+  15 Sep 2007; <solar@gentoo.org> +eggdrop-1.6.18-r3.ebuild:
+  - security bump (again) for bug 179354
 
   07 Aug 2007; Sven Wegener <swegener@gentoo.org> -eggdrop-1.6.18-r1.ebuild,
   eggdrop-1.6.18-r2.ebuild:
