@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/twitter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/ChangeLog,v 1.1 2007/07/14 04:20:46 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/ChangeLog,v 1.2 2007/09/15 02:23:31 nichoj Exp $
+
+  14 Sep 2007; Joshua Nichols <nichoj@gentoo.org> twitter-0.1.1.ebuild:
+  Added missing hoe dependency, as reported by maekke on irc.
 
 *twitter-0.1.1 (14 Jul 2007)
 
