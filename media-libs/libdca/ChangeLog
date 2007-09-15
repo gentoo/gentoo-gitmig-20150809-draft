@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdca
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.10 2007/09/07 07:31:32 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.11 2007/09/15 16:01:57 angelos Exp $
+
+  15 Sep 2007; Christoph Mende <angelos@gentoo.org> libdca-0.0.5.ebuild:
+  Stable on amd64 wrt bug #192579
 
   07 Sep 2007; Stuart Longland <redhatter@gentoo.org> libdca-0.0.5.ebuild:
   Tested and working on MIPS.  Keyworded ~mips.
