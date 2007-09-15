@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r4.ebuild,v 1.1 2007/09/14 21:32:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r4.ebuild,v 1.2 2007/09/15 00:49:12 mr_bones_ Exp $
 
 # *** Please remember to update qt3.eclass when revbumping this ***
 
@@ -123,7 +123,7 @@ src_unpack() {
 
 	# Bug #192472
 	epatch ${FILESDIR}/${P}-unicode-off-by-one.patch
-	
+
 	# ulibc patch (bug #100246)
 	epatch ${FILESDIR}/qt-ulibc.patch
 
