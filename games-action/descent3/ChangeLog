@@ -1,6 +1,10 @@
 # ChangeLog for games-action/descent3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.24 2007/09/13 00:44:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.25 2007/09/15 00:35:22 wolf31o2 Exp $
+
+  15 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  descent3-1.4.0b-r1.ebuild:
+  Make sure we RDEPEND on sys-libs/lib-compat-loki for all arches.
 
   13 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   descent3-1.4.0b-r1.ebuild:

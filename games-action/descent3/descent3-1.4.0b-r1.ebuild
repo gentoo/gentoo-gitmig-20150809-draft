@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.12 2007/09/13 00:44:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.13 2007/09/15 00:35:22 wolf31o2 Exp $
 
 inherit eutils multilib games
 
@@ -18,6 +18,7 @@ RESTRICT="strip"
 DEPEND=""
 RDEPEND="sys-libs/glibc
 	virtual/opengl
+	sys-libs/lib-compat-loki
 	x86? (
 		x11-libs/libX11
 		x11-libs/libXext
