@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfburn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfburn/ChangeLog,v 1.4 2007/08/24 17:59:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfburn/ChangeLog,v 1.5 2007/09/15 07:00:01 drac Exp $
+
+  15 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  xfburn-0.3.0_pre20070824.ebuild:
+  Changed SRC_URI to gentoo mirrors.
 
 *xfburn-0.3.0_pre20070824 (24 Aug 2007)
 

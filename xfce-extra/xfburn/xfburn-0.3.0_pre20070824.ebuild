@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfburn/xfburn-0.3.0_pre20070824.ebuild,v 1.1 2007/08/24 17:59:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfburn/xfburn-0.3.0_pre20070824.ebuild,v 1.2 2007/09/15 07:00:01 drac Exp $
 
 inherit xfce44
 
@@ -8,7 +8,7 @@ xfce44
 
 DESCRIPTION="GTK+ based CD and DVD burning application"
 HOMEPAGE="http://www.xfce.org/projects/xfburn"
-SRC_URI="http://dev.gentooexperimental.org/~drac/distfiles/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~x86"
 IUSE="debug minimal"
