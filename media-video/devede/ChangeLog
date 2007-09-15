@@ -1,6 +1,9 @@
 # ChangeLog for media-video/devede
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.7 2007/09/15 16:15:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.8 2007/09/15 16:34:17 drac Exp $
+
+  15 Sep 2007; Samuli Suominen <drac@gentoo.org> devede-3.1b.ebuild:
+  GPL-3.
 
 *devede-3.1b (15 Sep 2007)
 
