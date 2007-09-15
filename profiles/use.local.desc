@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3025 2007/09/14 09:25:40 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3026 2007/09/15 12:26:35 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -2033,7 +2033,7 @@ www-apps/bugzilla:extras - optional Perl modules
 www-apps/bugzilla:modperl - Enable modperl support
 www-apps/egroupware:ical - Add ical support
 www-apps/egroupware:jpgraph - Add jpgraph support
-www-apps/gallery:dcraw - Add dcraw support
+www-apps/gallery:raw - Add support for raw image formats
 www-apps/gallery:netpbm - Add NetPBM support
 www-apps/gallery:unzip - Add unzip support for the archive upload module
 www-apps/gallery:zip - Add zip support for the zip download module
@@ -2190,5 +2190,5 @@ xfce-base/thunar:plugins - Enable trash panel plugin.
 xfce-base/xfce4-extras:battery - Meta pulls in xfce4-battery dependency.
 xfce-base/xfce4-extras:cpufreq - Meta pulls in xfce4-cpu-freq dependency.
 xfce-extra/thunar-thumbnailers:grace - Enable .agr thumbnailers, grace support.
-xfce-extra/thunar-thumbnailers:raw - Enable .raw thumbnailers, dcraw and libopenraw support.
+xfce-extra/thunar-thumbnailers:raw - Add support for raw image formats
 xfce-extra/xfce4-sensors:hddtemp - Enable monitoring of disk temperatures (app-admin/hddtemp)
