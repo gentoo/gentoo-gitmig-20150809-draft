@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/scientificpython
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.13 2007/02/22 00:51:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.14 2007/09/15 10:48:01 bicatali Exp $
+
+  15 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/scientificpython-mpi.patch, metadata.xml,
+  scientificpython-2.6.ebuild:
+  Add a src_test, fix mpi (bug #192443, thanks JTRiley
+  <justin.t.riley@gmail.com>), adde longdescription, updated numeric
+  dependency, and cleanup.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
