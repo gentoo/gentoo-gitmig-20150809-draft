@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0.ebuild,v 1.3 2007/09/14 08:35:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0.ebuild,v 1.4 2007/09/15 19:30:36 bicatali Exp $
 
 inherit eutils elisp-common autotools
 
@@ -100,7 +100,7 @@ src_compile() {
 	eautoreconf
 
 	# remove rmaxima if neither cmucl nor sbcl
-	if !use sbcl && ! use cmucl && [[ -z ${ENABLE_SBCL} ]]; then
+	if ! use sbcl && ! use cmucl && [[ -z ${ENABLE_SBCL} ]]; then
 		sed -i \
 			-e '/^@WIN32_FALSE@bin_SCRIPTS/s/rmaxima//' \
 			src/Makefile.in || die "sed for rmaxima failed"
