@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcllib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.21 2007/06/11 23:52:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.22 2007/09/15 07:50:13 uberlord Exp $
+
+  15 Sep 2007; Roy Marples <uberlord@gentoo.org> tcllib-1.9.ebuild:
+  Keyworded ~x86-fbsd, #192575
 
 *tcllib-1.9 (11 Jun 2007)
 
