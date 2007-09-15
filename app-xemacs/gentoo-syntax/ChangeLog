@@ -1,0 +1,10 @@
+# ChangeLog for app-xemacs/gentoo-syntax
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gentoo-syntax/ChangeLog,v 1.1 2007/09/15 07:24:58 graaff Exp $
+
+*gentoo-syntax-1.7 (15 Sep 2007)
+
+  15 Sep 2007; Hans de Graaff <graaff@gentoo.org> +gentoo-syntax-1.7.ebuild:
+  Initial public version of gentoo-syntax, a package to help edit
+  gentoo-specific files such as ebuilds with XEmacs.
+
