@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-volman
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.27 2007/08/30 03:25:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.28 2007/09/15 06:57:56 drac Exp $
+
+  15 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  thunar-volman-0.1.3_pre20070523.ebuild:
+  Changed SRC_URI to gentoo mirrors.
 
   30 Aug 2007; Jeroen Roovers <jer@gentoo.org>
   thunar-volman-0.1.3_pre20070523.ebuild:
