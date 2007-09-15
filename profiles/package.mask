@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7710 2007/09/15 02:54:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7711 2007/09/15 10:40:01 hollow Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# <hollow@gentoo.org> (15 Sep 2007)
+# Masked for removal. Bug #20899
+mail-mta/qmail-mysql
 
 # Daniel Black <dragonheart@gentoo.org> (14 Sep 2007)
 # Added for testing libssh2
@@ -1201,11 +1205,6 @@ games-fps/unreal-tournament-goty
 games-fps/unreal-tournament-strikeforce
 games-fps/unreal-tournament-bonuspacks
 games-fps/aaut
-
-# <robbat2@gentoo.org> (29 Nov 2003)
-# Need external testing
-# Update - 2006/02/25 - This is a possible removal.
->=mail-mta/qmail-mysql-1.03-r13
 
 # <lu_zero@gentoo.org> (16 Mar 2003)
 # to be tested, seems unstable
