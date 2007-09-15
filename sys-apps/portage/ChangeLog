@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.439 2007/09/15 04:26:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.440 2007/09/15 05:41:00 beandog Exp $
+
+  15 Sep 2007; Steve Dibb <beandog@gentoo.org> portage-2.1.3.9.ebuild:
+  amd64 stable, bug 192572
 
   15 Sep 2007; Jeroen Roovers <jer@gentoo.org> portage-2.1.3.9.ebuild:
   Stable for SPARC (bug #192572).
