@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/mergelog-4.5-r1.ebuild,v 1.1 2007/09/08 20:19:42 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/mergelog-4.5-r1.ebuild,v 1.2 2007/09/15 09:37:08 hollow Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="A utility to merge apache logs in chronological order"
 SRC_URI="mirror://sourceforge/mergelog/${P}.tar.gz"
@@ -20,6 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-splitlog.patch
+	eautoreconf
 }
 
 src_compile() {
