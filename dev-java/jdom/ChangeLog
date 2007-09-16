@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.55 2007/07/22 09:22:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.56 2007/09/16 08:27:50 ali_bush Exp $
+
+*jdom-1.0-r3 (16 Sep 2007)
+*jdom-1.0_beta10-r5 (16 Sep 2007)
+*jdom-1.0_beta9-r4 (16 Sep 2007)
+
+  16 Sep 2007; <alistair@gentoo.org> +jdom-1.0_beta9-r4.ebuild,
+  +jdom-1.0_beta10-r5.ebuild, +jdom-1.0-r3.ebuild:
+  Splitting jdom's jaxen class into package jdom-jaxen to resolve circular
+  dependencies
 
   22 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
   jdom-1.0_beta9-r2.ebuild, jdom-1.0_beta10-r4.ebuild:
