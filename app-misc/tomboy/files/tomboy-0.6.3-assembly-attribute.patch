@@ -1,0 +1,15 @@
+--- Tomboy/Defines.cs.in	2007-09-16 23:36:49.000000000 +0200
++++ Tomboy/Defines.cs.in	2007-09-16 23:36:56.000000000 +0200
+@@ -1,6 +1,7 @@
+ using System;
+ using System.Reflection;
+ 
++[assembly: AssemblyInformationalVersion ("@version@")]
+ namespace Tomboy
+ {
+ 	public class Defines
+@@ -14,4 +15,3 @@
+ 	}
+ }
+ 
+-[assembly: AssemblyInformationalVersion ("@version@")]
