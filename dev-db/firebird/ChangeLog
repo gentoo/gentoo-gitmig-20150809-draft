@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.71 2007/09/15 14:46:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.72 2007/09/16 14:17:21 angelos Exp $
+
+  16 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  firebird-2.0.3.12981.0.ebuild:
+  Stable on amd64 wrt security bug #190833
 
   15 Sep 2007; Markus Meier <maekke@gentoo.org>
   firebird-2.0.3.12981.0.ebuild:
