@@ -1,0 +1,11 @@
+--- elogv.py	2007-06-06 19:20:01.000000000 +0200
++++ /tmp/elogv.py	2007-09-16 12:28:48.000000000 +0200
+@@ -262,6 +262,8 @@
+         # Get the list of files
+         try:
+             self.file_list = os.listdir(elogdir)
++            fileformat=re.compile('.*:.*:.*')
++            self.file_list=[ i for i in self.file_list if fileformat.search(i)!=None ]
+         except OSError:
+             raise CannotOpenElogdir()
+         
