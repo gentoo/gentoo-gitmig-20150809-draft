@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.1.ebuild,v 1.9 2007/07/12 01:05:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.1.ebuild,v 1.10 2007/09/16 22:15:39 eva Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="accessibility gnome"
-# gnomedb
+# libgda
 
 RDEPEND=">=dev-libs/libxml2-2.4.1
 	>=x11-libs/gtk+-2.8
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/libxml2-2.4.1
 		>=gnome-base/libgnomecanvas-2
 		>=gnome-base/libbonoboui-2
 		accessibility? ( gnome-extra/libgail-gnome ) )"
-#	gnomedb? (
+#	libgda? (
 #		=gnome-extra/libgnomedb-1*
 #		=gnome-extra/libgda-1* )"
 
@@ -35,10 +35,5 @@ USE_DESTDIR="1"
 
 pkg_setup() {
 	G2CONF="$(use_enable gnome)"
-	#	$(use_enable gnomedb gnome-db)"
-}
-
-src_unpack() {
-	unpack ${A}
-	gnome2_omf_fix
+	#	$(use_enable libgda gnome-db)"
 }
