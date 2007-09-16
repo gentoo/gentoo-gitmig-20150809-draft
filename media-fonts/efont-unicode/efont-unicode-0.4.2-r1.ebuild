@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/efont-unicode-0.4.2-r1.ebuild,v 1.11 2007/01/10 01:16:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/efont-unicode-0.4.2-r1.ebuild,v 1.12 2007/09/16 03:28:25 dirtyepic Exp $
 
 inherit font font-ebdftopcf
 
@@ -19,7 +19,6 @@ KEYWORDS="alpha amd64 arm ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
 S="${WORKDIR}/${MY_P}"
 FONT_S=${S}
-FONT_SUFFIX="pcf.gz"
 DOCS="README* COPYRIGHT ChangeLog INSTALL"
 
 # Only installs fonts
