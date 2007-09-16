@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r4.ebuild,v 1.8 2007/01/04 14:18:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r4.ebuild,v 1.9 2007/09/16 15:03:09 philantrop Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit versionator kde-functions eutils multilib autotools
+inherit versionator kde-functions eutils multilib autotools flag-o-matic
 
 CVS_VERSION="${PV/*_pre/}"
 
@@ -40,16 +40,16 @@ RDEPEND=">=gnome-base/libbonobo-2.2
 				bluetooth? (	>=net-wireless/bluez-libs-2.7
 								>=net-wireless/bluez-utils-2.7 ) )
 		pda? ( >=net-misc/curl-7.10.5
-				app-pda/pilot-link )
-		kdepim? ( || ( kde-base/kaddressbook kde-base/kdepim )
-				  arts? ( kde-base/arts ) )
-		ldap? ( >=net-nds/openldap-2.0.27
+				~app-pda/pilot-link-0.11.8 )
+		kdepim? ( || ( kde-base/kdepim kde-base/kaddressbook )
+				arts? ( kde-base/arts ) )
+		ldap? ( >=net-nds/openldap-2.3.35-r1
 				>=dev-libs/cyrus-sasl-2.1.4 )
 		gnokii? ( app-mobilephone/gnokii dev-libs/libvformat )
 		nokia6600? ( >=dev-libs/libwbxml-0.9.0 )"
 
 DEPEND="${RDEPEND}
-	sys-devel/gettext"
+		sys-devel/gettext"
 
 S="${WORKDIR}/${PN}"
 
@@ -89,11 +89,14 @@ src_unpack() {
 }
 
 run_compile() {
-	econf CPPFLAGS="${myInc} ${CPPFLAGS}" ${myConf} || die "Failed during econf!"
-	make || die "Failed during make!"
+	append-flags "${myInc}"
+	econf ${myConf} || die "Failed during econf!"
+	emake || die "Failed during make!"
 }
 
 src_compile() {
+	use ldap && append-flags "-DLDAP_DEPRECATED"
+
 	[[ -z "${PLUGINS}" ]] && make_plugin_list
 
 	einfo "Building Multisync with these plugins:"
@@ -127,4 +130,11 @@ src_install() {
 		cd "${S}/plugins/${plugin_dir}"
 		make install DESTDIR="${D}" libdir="\$(prefix)/$(get_libdir)/${PN}" || die "${plugin_dir} make install failed!"
 	done
+}
+
+pkg_postinst() {
+	echo
+	elog "${P} is unmaintained by upstream and deprecated. Use it at your own risk."
+	elog "Try using its successor app-pda/multisync-gui."
+	echo
 }

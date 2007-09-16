@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/multisync
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.38 2007/01/04 14:18:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.39 2007/09/16 15:03:09 philantrop Exp $
+
+  16 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> metadata.xml,
+  multisync-0.83_pre20050414-r4.ebuild:
+  Removed johnm from metadata.xml. cf. bug 186467.
+  Added a post-install message about multisync-gui.
+  Changed dependency on pilot-link to 0.11.8. cf. bug 190218.
+  Added a compatibility fix for recent OpenLDAP versions. Fixes bug 175604.
 
   04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org>
   multisync-0.83_pre20050414-r4.ebuild:
