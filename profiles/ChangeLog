@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.643 2007/09/16 01:39:19 jsin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.644 2007/09/16 15:50:31 ikelos Exp $
+
+  16 Sep 2007; Mike Auty <ikelos@gentoo.org> package.mask:
+  Unmask vmware workstation/player now that vmware-modules-1.0.0.16-r1 is
+  checked in.
 
   16 Sep 2007; Jason Smathers (jsin) <jsin@gentoo.org> use.local.desc:
   Added xft local use flag for OpenMotif to enable XFT fonts.
