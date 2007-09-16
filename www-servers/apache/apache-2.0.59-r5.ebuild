@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.0.59-r5.ebuild,v 1.8 2007/09/09 16:13:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.0.59-r5.ebuild,v 1.9 2007/09/16 11:07:34 hollow Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib
 
@@ -324,7 +324,7 @@ src_install () {
 
 pkg_postinst() {
 	# Automatically generate test ceritificates if ssl USE flag is being set
-	if useq ssl -a !-e ${ROOT}/etc/apache2/ssl/server.crt; then
+	if use ssl && [[ ! -e ${ROOT}/etc/apache2/ssl/server.crt ]]; then
 		cd ${ROOT}/etc/apache2/ssl
 		einfo
 		einfo "Generating self-signed test certificate in /etc/apache2/ssl..."
