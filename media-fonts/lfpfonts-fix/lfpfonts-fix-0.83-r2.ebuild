@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/lfpfonts-fix-0.83-r2.ebuild,v 1.6 2007/09/04 02:49:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/lfpfonts-fix-0.83-r2.ebuild,v 1.7 2007/09/16 02:59:54 dirtyepic Exp $
 
 inherit font eutils font-ebdftopcf
 
@@ -15,7 +15,6 @@ IUSE=""
 
 S="${WORKDIR}/${PN}-src"
 
-FONT_SUFFIX="pcf.gz"
 FONT_S="${S}/src"
 
 DOCS="${S}/doc/*"
@@ -35,5 +34,5 @@ src_compile() {
 		cat < ${a} | ( rm ${a}; sed '/^FONT /s/\(.*-\)C*-/\1C-/' > ${a} )
 	done
 
-	ebdftopcf *.bdf
+	font-ebdftopcf_src_compile
 }
