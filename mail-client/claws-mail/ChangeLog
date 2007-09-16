@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.45 2007/09/16 16:27:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.46 2007/09/16 20:11:56 ticho Exp $
+
+*claws-mail-3.0.0-r1 (16 Sep 2007)
+
+  16 Sep 2007; Andrej Kacian <ticho@gentoo.org> +claws-mail-3.0.0-r1.ebuild:
+  Add session USE flag to make libSM and libICE dependency optional. Bug
+  #192570 by Sascha Geschwandtner <s.geschwandtner at gmx.de>.
 
   16 Sep 2007; Christoph Mende <angelos@gentoo.org> claws-mail-3.0.0.ebuild:
   Stable on amd64 wrt security bug #190104
