@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.30 2007/09/16 06:21:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.31 2007/09/16 07:07:52 dirtyepic Exp $
 
 # Author: foser <foser@gentoo.org>
 
@@ -108,8 +108,15 @@ font_pkg_setup() {
 }
 
 font_pkg_postinst() {
-	find /usr/share/fonts/ -type f \! -perm 0644 -print0 \
-		| xargs -0 chmod 0644 2&>/dev/null
+	# unreadable font files = fontconfig segfaults
+	badperms="$( find /usr/share/fonts/ -type f \! -perm 0644 -print )"
+	if [[ -n ${badperms} ]]; then
+		echo
+		for fontfile in ${badperms}; do
+			ewarn $( chmod -v 0644 ${fontfile} )
+		done
+		echo
+	fi
 
 	if has_version '>=media-libs/fontconfig-2.4'; then
 		if [ ${ROOT} == "/" ]; then
@@ -121,8 +128,15 @@ font_pkg_postinst() {
 }
 
 font_pkg_postrm() {
-	find /usr/share/fonts/ -type f \! -perm 0644 -print0 \
-		| xargs -0 chmod 0644 2&>/dev/null
+	# unreadable font files = fontconfig segfaults
+	badperms="$( find /usr/share/fonts/ -type f \! -perm 0644 -print )"
+	if [[ -n ${badperms} ]]; then
+		echo
+		for fontfile in ${badperms}; do
+			ewarn $( chmod -v 0644 ${fontfile} )
+		done
+		echo
+	fi
 
 	if has_version '>=media-libs/fontconfig-2.4'; then
 		if [ ${ROOT} == "/" ]; then
