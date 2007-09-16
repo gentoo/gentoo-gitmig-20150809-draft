@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/claws-mail-vcalendar-1.96.ebuild,v 1.5 2007/09/16 16:32:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/claws-mail-vcalendar-1.96.ebuild,v 1.6 2007/09/16 16:36:12 angelos Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.claws-mail.org"
 SRC_URI="http://www.claws-mail.org/downloads/plugins/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc64 ~sparc x86"
+KEYWORDS="~amd64 ppc64 ~sparc x86"
 IUSE=""
 DEPEND=">=mail-client/claws-mail-2.10.0
 		>=net-misc/curl-7.9.7"
