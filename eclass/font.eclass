@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.28 2007/09/16 02:18:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.29 2007/09/16 02:20:05 dirtyepic Exp $
 
 # Author: foser <foser@gentoo.org>
 
@@ -85,7 +85,7 @@ font_src_install() {
 	for suffix in ${FONT_SUFFIX}; do
 		doins *.${suffix}
 		# ensure fonts are world readable to prevent fontconfig segfaults
-		chmod -v 0644 ${D}${FONTDIR}/*.${suffix}
+		chmod 0644 ${D}${FONTDIR}/*.${suffix}
 	done
 
 	rm -f fonts.{dir,scale} encodings.dir
