@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Numbers_Words
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Numbers_Words/ChangeLog,v 1.19 2007/08/20 22:29:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Numbers_Words/ChangeLog,v 1.20 2007/09/16 06:24:54 jer Exp $
+
+  16 Sep 2007; Jeroen Roovers <jer@gentoo.org>
+  PEAR-Numbers_Words-0.15.0.ebuild:
+  Stable for HPPA (bug #192247).
 
   15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
   +PEAR-Numbers_Words-0.15.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_SMTP
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.29 2007/08/20 22:15:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.30 2007/09/16 06:20:27 jer Exp $
+
+  16 Sep 2007; Jeroen Roovers <jer@gentoo.org> PEAR-Net_SMTP-1.2.10.ebuild:
+  Stable for HPPA (bug #192247).
 
 *PEAR-Net_SMTP-1.2.10 (20 Aug 2007)
 

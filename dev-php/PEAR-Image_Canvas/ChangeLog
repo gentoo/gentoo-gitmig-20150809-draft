@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Image_Canvas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Canvas/ChangeLog,v 1.16 2007/08/20 21:49:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Canvas/ChangeLog,v 1.17 2007/09/16 06:12:12 jer Exp $
+
+  16 Sep 2007; Jeroen Roovers <jer@gentoo.org>
+  PEAR-Image_Canvas-0.3.1.ebuild:
+  Stable for HPPA (bug #192247).
 
   15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
   +PEAR-Image_Canvas-0.3.1.ebuild:

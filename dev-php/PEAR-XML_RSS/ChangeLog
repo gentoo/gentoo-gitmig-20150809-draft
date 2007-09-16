@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-XML_RSS
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RSS/ChangeLog,v 1.29 2007/08/20 23:03:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RSS/ChangeLog,v 1.30 2007/09/16 06:40:02 jer Exp $
+
+  16 Sep 2007; Jeroen Roovers <jer@gentoo.org> PEAR-XML_RSS-0.9.10.ebuild:
+  Stable for HPPA (bug #192247).
 
   15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
   +PEAR-XML_RSS-0.9.10.ebuild:

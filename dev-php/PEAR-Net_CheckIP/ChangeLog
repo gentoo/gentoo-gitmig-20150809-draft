@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_CheckIP
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_CheckIP/ChangeLog,v 1.19 2007/08/20 21:51:53 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_CheckIP/ChangeLog,v 1.20 2007/09/16 06:15:34 jer Exp $
+
+  16 Sep 2007; Jeroen Roovers <jer@gentoo.org>
+  PEAR-Net_CheckIP-1.2.1.ebuild:
+  Stable for HPPA (bug #192247).
 
   15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
   +PEAR-Net_CheckIP-1.2.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/PEAR-SOAP-0.11.0.ebuild,v 1.1 2007/08/20 22:43:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/PEAR-SOAP-0.11.0.ebuild,v 1.2 2007/09/16 06:29:44 jer Exp $
 
 inherit php-pear-r1
 
@@ -8,7 +8,7 @@ DESCRIPTION="SOAP Client/Server for PHP 4"
 
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="minimal"
 
 RDEPEND=">=dev-php/PEAR-HTTP_Request-1.2.4-r1

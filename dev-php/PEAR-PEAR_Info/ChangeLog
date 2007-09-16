@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-PEAR_Info
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.28 2007/08/20 22:36:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.29 2007/09/16 06:26:54 jer Exp $
+
+  16 Sep 2007; Jeroen Roovers <jer@gentoo.org> PEAR-PEAR_Info-1.7.0.ebuild:
+  Stable for HPPA (bug #192247).
 
   15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
   +PEAR-PEAR_Info-1.7.0.ebuild:

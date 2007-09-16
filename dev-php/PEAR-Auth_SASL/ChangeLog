@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Auth_SASL
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth_SASL/ChangeLog,v 1.25 2006/07/02 12:04:36 sebastian Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth_SASL/ChangeLog,v 1.26 2007/09/16 05:41:35 jer Exp $
+
+  16 Sep 2007; Jeroen Roovers <jer@gentoo.org> PEAR-Auth_SASL-1.0.2.ebuild:
+  Stable for HPPA (bug #192247).
 
 *PEAR-Auth_SASL-1.0.2 (02 Jul 2006)
 
