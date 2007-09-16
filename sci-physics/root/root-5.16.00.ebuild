@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.1 2007/08/24 22:09:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.2 2007/09/16 11:49:42 bicatali Exp $
 
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 fortran
 
@@ -61,6 +61,12 @@ src_unpack() {
 	cd "${S}"
 	# patch to properly set link flags with fortran compilers
 	epatch "${FILESDIR}"/${P}-fortran.patch
+	if [[ ${ARCH} == sparc ]]; then
+		cd "${S}/xrootd/src"
+		tar xzf xrootd-20060928-1600.src.tgz
+		epatch "${FILESDIR}"/sparc-${P}.patch
+		tar czf xrootd-20060928-1600.src.tgz xrootd
+	fi
 }
 
 src_compile() {
