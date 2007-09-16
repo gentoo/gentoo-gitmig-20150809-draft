@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/erc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.27 2007/04/10 20:57:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.28 2007/09/16 19:51:07 ulm Exp $
+
+*erc-5.2-r1 (16 Sep 2007)
+
+  16 Sep 2007; Ulrich Mueller <ulm@gentoo.org> +files/51erc-gentoo.el,
+  -erc-5.1.ebuild, -erc-5.1.1.ebuild, +erc-5.2-r1.ebuild:
+  Generate autoload file for package initialisation. Remove old versions.
 
 *erc-5.2 (10 Apr 2007)
 
