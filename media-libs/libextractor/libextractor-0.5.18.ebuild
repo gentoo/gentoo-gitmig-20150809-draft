@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.18.ebuild,v 1.2 2007/09/16 19:40:02 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.18.ebuild,v 1.3 2007/09/16 19:54:21 coldwind Exp $
 
 inherit libtool
 
@@ -25,7 +25,9 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 src_compile() {
 	elibtoolize
+	#bug #188169 -> --disable-xpdf
 	econf --enable-glib --enable-exiv2 \
+		--disable-xpdf \
 		$(use_enable nls) || die "econf failed"
 	emake || die "emake failed"
 }
