@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.70 2007/09/10 09:57:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.71 2007/09/16 15:08:03 angelos Exp $
+
+  16 Sep 2007; Christoph Mende <angelos@gentoo.org> bochs-2.3.ebuild:
+  Stable on amd64 wrt security bug #188148
 
   10 Sep 2007; Raúl Porcel <armin76@gentoo.org> bochs-2.3.ebuild:
   alpha stable wrt security #188148
