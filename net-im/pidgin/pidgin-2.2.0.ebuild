@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.2.0.ebuild,v 1.1 2007/09/16 14:00:59 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.2.0.ebuild,v 1.2 2007/09/16 18:51:46 tester Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -58,7 +58,7 @@ DEPEND="$RDEPEND
 S="${WORKDIR}/${MY_PV}"
 
 # Enable Default protocols
-DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn"
+DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn,myspace"
 
 # List of plugins yet to be ported (will be removed at some point)
 #   net-im/gaim-bnet
