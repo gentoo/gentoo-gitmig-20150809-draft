@@ -1,0 +1,10 @@
+# ChangeLog for virtual/checkpassword
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/checkpassword/ChangeLog,v 1.1 2007/09/16 12:48:33 hollow Exp $
+
+*checkpassword-0 (16 Sep 2007)
+
+  16 Sep 2007; Benedikt Boehm <hollow@gentoo.org> +metadata.xml,
+  +checkpassword-0.ebuild:
+  New virtual for checkpassword compatible applications, #97267
+
