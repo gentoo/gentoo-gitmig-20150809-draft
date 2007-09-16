@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.90 2007/09/16 02:23:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.91 2007/09/16 07:29:08 jer Exp $
+
+  16 Sep 2007; Jeroen Roovers <jer@gentoo.org> tk-8.4.15-r1.ebuild:
+  Stable for HPPA (bug #192539).
 
 *tk-8.5_alpha6-r1 (16 Sep 2007)
 *tk-8.4.15-r1 (16 Sep 2007)
