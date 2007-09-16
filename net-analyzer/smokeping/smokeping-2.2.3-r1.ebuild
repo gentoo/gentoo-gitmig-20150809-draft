@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.2.3.ebuild,v 1.2 2007/09/14 22:25:17 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.2.3-r1.ebuild,v 1.1 2007/09/16 22:24:28 hansmi Exp $
 
 inherit perl-module eutils
 
@@ -70,6 +70,10 @@ src_install() {
 	dosed 's:sepp/bin/speedy:bin/perl:' /var/www/localhost/perl/${PN}.pl
 	dosed 's:/home/oetiker/data/projects/AADJ-smokeping/dist/etc/config:/etc/smokeping:' \
 		/var/www/localhost/perl/${PN}.pl
+
+	# Install AJAX scripts
+	insinto /var/www/localhost/perl
+	doins -r htdocs/cropper
 
 	# Create the binary
 	newbin bin/${PN}.dist ${PN}
