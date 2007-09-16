@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/jisx0213-fonts-20040425-r2.ebuild,v 1.9 2007/06/13 16:53:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/jisx0213-fonts-20040425-r2.ebuild,v 1.10 2007/09/16 03:45:57 dirtyepic Exp $
 
 inherit font font-ebdftopcf
 
@@ -31,15 +31,16 @@ S="${WORKDIR}"
 FONT_S="${S}"
 FONT_PN="${PN/-fonts/}"
 FONTDIR="/usr/share/fonts/${FONT_PN}"
-FONT_SUFFIX="pcf.gz"
 
 # Only installs fonts
 RESTRICT="strip binchecks"
 
 pkg_postinst(){
-	elog "You need you add following line into 'Section \"Files\"' in"
-	elog "XF86Config and reboot X Window System, to use these fonts."
-	elog ""
-	elog "\t FontPath \"${FONTDIR}\""
-	elog ""
+	if use X; then
+		elog "You need you add following line into 'Section \"Files\"' in"
+		elog "XF86Config and reboot X Window System, to use these fonts."
+		elog ""
+		elog "\t FontPath \"${FONTDIR}\""
+		elog ""
+	fi
 }
