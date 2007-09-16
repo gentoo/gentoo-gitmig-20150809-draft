@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.2.1.ebuild,v 1.1 2007/08/15 11:51:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.2.1.ebuild,v 1.2 2007/09/16 19:57:35 opfer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.zeroc.com/download/Ice/3.2/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="ncurses test debug"
 
 RDEPEND=">=dev-libs/expat-2.0
