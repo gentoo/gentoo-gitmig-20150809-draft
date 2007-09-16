@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/jdom-jaxen-1.0.ebuild,v 1.1 2007/09/16 08:23:39 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/jdom-jaxen-1.0.ebuild,v 1.2 2007/09/16 13:33:24 mr_bones_ Exp $
 
 JAVA_PKG_IUSE=""
 
@@ -52,4 +52,3 @@ src_install() {
 	#use doc && java-pkg_dojavadoc build/javadoc
 	#use source && java-pkg_dosrc src
 }
-
