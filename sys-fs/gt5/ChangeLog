@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/gt5
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/ChangeLog,v 1.3 2007/09/02 10:15:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/ChangeLog,v 1.4 2007/09/16 22:36:52 angelos Exp $
+
+*gt5-1.4.0-r1 (16 Sep 2007)
+
+  16 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  +files/gt5-1.4.0-bash-shabang.patch, -gt5-1.4.0.ebuild,
+  +gt5-1.4.0-r1.ebuild:
+  Changed interpreter to bash
 
 *gt5-1.4.0 (02 Sep 2007)
 
