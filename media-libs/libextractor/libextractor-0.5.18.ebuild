@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.18.ebuild,v 1.1 2007/03/23 16:57:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.18.ebuild,v 1.2 2007/09/16 19:40:02 coldwind Exp $
 
 inherit libtool
 
 IUSE="gtk nls vorbis zlib"
 DESCRIPTION="A simple library for keyword extraction"
-HOMEPAGE="http://www.gnunet.org/libextractor"
+HOMEPAGE="http://www.gnunet.org/libextractor/"
 SRC_URI="http://gnunet.org/${PN}/download/${P}.tar.gz"
 SLOT="0"
 LICENSE="LGPL-2.1"
