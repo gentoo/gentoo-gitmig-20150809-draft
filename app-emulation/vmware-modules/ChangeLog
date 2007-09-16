@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.22 2007/07/28 17:37:39 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.23 2007/09/16 15:25:31 ikelos Exp $
+
+*vmware-modules-1.0.0.16-r1 (16 Sep 2007)
+
+  16 Sep 2007; Mike Auty <ikelos@gentoo.org>
+  -files/1.0.0.15-gcc4-ignore-pedantic-errors.patch,
+  +vmware-modules-1.0.0.16-r1.ebuild:
+  Adding in vmware-modules-1.0.0.16-r1, now that vmware-any-any-update can
+  handle workstation 6. Also cleaned out an old patch for 1.0.0.15.
 
   28 Jul 2007; Mike Auty <ikelos@gentoo.org>
   +files/1.0.0.16-kernel-2.6.22.patch, vmware-modules-1.0.0.16.ebuild:
