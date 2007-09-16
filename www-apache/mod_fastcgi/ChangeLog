@@ -1,0 +1,11 @@
+# ChangeLog for www-apache/mod_fastcgi
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.1 2007/09/16 12:20:18 hollow Exp $
+
+*mod_fastcgi-2.4.4_pre20070916 (16 Sep 2007)
+
+  16 Sep 2007; Benedikt Böhm <hollow@gentoo.org>
+  +files/20_mod_fastcgi.conf, +metadata.xml,
+  +mod_fastcgi-2.4.4_pre20070916.ebuild:
+  readd mod_fastcgi; #133563
+
