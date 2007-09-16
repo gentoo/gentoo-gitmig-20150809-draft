@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0.ebuild,v 1.8 2007/09/06 01:17:33 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-4.10.0.ebuild,v 1.9 2007/09/16 10:03:27 vapier Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -87,7 +87,7 @@ pkg_setup(){
 		die "mapserver has tiff USE flag enabled"
 	fi
 
-	if use java && !use threads; then
+	if use java && ! use threads; then
 		ewarn "The MapServer Java support needs threads."
 		elog "Please enable thread support for mapserver."
 		die "mapserver has threads USE flag disabled"
