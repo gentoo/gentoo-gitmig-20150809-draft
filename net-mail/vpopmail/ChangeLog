@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.82 2007/07/29 23:00:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.83 2007/09/16 08:16:28 hollow Exp $
+
+*vpopmail-5.4.20 (16 Sep 2007)
+
+  16 Sep 2007; Benedikt Böhm <hollow@gentoo.org> vpopmail-5.4.19.ebuild,
+  +vpopmail-5.4.20.ebuild:
+  version bump; #191131
 
 *vpopmail-5.4.19 (29 Jul 2007)
 
