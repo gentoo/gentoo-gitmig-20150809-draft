@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.9.0_alpha14.ebuild,v 1.2 2007/08/27 16:57:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.9.0_alpha14.ebuild,v 1.3 2007/09/16 21:43:33 coldwind Exp $
 
 inherit eutils distutils
 
@@ -16,11 +16,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="cdaudio ffmpeg nls"
 
 RDEPEND=">=dev-lang/python-2.4
+	|| ( >=dev-lang/python-2.5 >=dev-python/ctypes-0.9 )
 	>=dev-python/PyQt4-4.1
 	>=x11-libs/qt-4.2
 	>=media-libs/mutagen-1.9
-	cdaudio? ( >=media-libs/libdiscid-0.1.1
-		|| ( >=dev-lang/python-2.5 >=dev-python/ctypes-0.9 ) )
+	cdaudio? ( >=media-libs/libdiscid-0.1.1 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9
 		>=media-libs/libofa-0.9.2 )"
 
@@ -33,10 +33,6 @@ pkg_setup() {
 	if ! use ffmpeg; then
 		ewarn "The 'ffmpeg' USE flag is disabled. Acoustic fingerprinting and"
 		ewarn "recognition will not be available!"
-	fi
-	if ! use cdaudio; then
-		ewarn "The 'cdaudio' USE flag is disabled. CD index lookup and"
-		ewarn "identification will be disabled."
 	fi
 }
 
@@ -69,4 +65,10 @@ pkg_postinst() {
 	echo
 	elog "You should set the environment variable BROWSER to something like"
 	elog "\"firefox '%s' &\" to let python know which browser to use."
+	echo
+	if ! use cdaudio; then
+		ewarn "The 'cdaudio' USE flag is disabled. CD index lookup and"
+		ewarn "identification won't be available unless you install"
+		ewarn "media-libs/libdiscid"
+	fi
 }
