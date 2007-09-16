@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/vc-fonts-20020207-r2.ebuild,v 1.4 2007/09/14 16:54:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/vc-fonts-20020207-r2.ebuild,v 1.5 2007/09/16 03:32:49 dirtyepic Exp $
 
-inherit font-ebdftopcf font
+inherit font font-ebdftopcf
 
 DESCRIPTION="Vico bitmap Fonts"
 SRC_URI="http://vico.kleinplanet.de/files/${P}.tar.bz2
@@ -15,10 +15,10 @@ SLOT=0
 IUSE=""
 
 S="${WORKDIR}/vc"
-FONT_SUFFIX="pcf.gz"
 FONT_S="${S}"
 FONT_PN="vc"
 FONTDIR="/usr/share/fonts/${FONT_PN}"
+FONT_SUFFIX="bdf pcf.gz"
 
 #Only installs fonts
 RESTRICT="strip binchecks"
