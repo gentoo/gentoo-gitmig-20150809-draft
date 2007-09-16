@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/baekmuk-fonts
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.39 2007/07/24 01:00:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.40 2007/09/16 03:21:42 dirtyepic Exp $
+
+  16 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> baekmuk-fonts-2.2-r2.ebuild:
+  Install bdf's if USE="-X".
 
   24 Jul 2007; Ryan Hill <dirtyepic@gentoo.org>
   -baekmuk-fonts-2.2-r1.ebuild:
