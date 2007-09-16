@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.2.2.ebuild,v 1.1 2007/09/12 07:00:31 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.2.2.ebuild,v 1.2 2007/09/16 05:38:02 wrobel Exp $
 
 inherit webapp eutils depend.apache
 
@@ -109,7 +109,7 @@ pkg_postinst() {
 	ewarn "Don't run webapp-config with -d otrs. Instead, try"
 	ewarn "webapp-config -I -h <host> -d ot ${PN} ${PVR}"
 	ewarn
-	if !use apache2; then
+	if ! use apache2; then
 		ewarn "You did not activate the USE-flag apache2 which means you"
 		ewarn "will need to create the otrs user yourself. Make this user"
 		ewarn "a member of your webserver group."
