@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-mailsync/pilot-mailsync-0.9.1.ebuild,v 1.3 2007/09/16 19:22:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-mailsync/pilot-mailsync-0.9.2.ebuild,v 1.1 2007/09/16 19:22:31 philantrop Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="An application to transfer outgoing mail from and deliver incoming mail to a Palm OS device."
-HOMEPAGE="http://wissrech.iam.uni-bonn.de/people/garcke/pms/"
-SRC_URI="http://wissrech.iam.uni-bonn.de/people/garcke/pms/${P}.tar.gz"
+HOMEPAGE="http://www.garcke.de/PMS/"
+SRC_URI="http://www.garcke.de/PMS/${P}.tgz"
 
 LICENSE="MPL-1.0"
 SLOT="0"
@@ -15,7 +15,7 @@ IUSE="ssl gnome"
 
 DEPEND="ssl? ( dev-libs/openssl )
 	gnome? ( >=app-pda/gnome-pilot-2 )
-	~app-pda/pilot-link-0.11.8"
+	>=app-pda/pilot-link-0.11.8"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -28,15 +28,17 @@ src_unpack() {
 	fi
 	cd "${S}"
 	# Fixes bug 151351.
-	epatch "${FILESDIR}/${P}-glibc.patch"
+	epatch "${FILESDIR}/pilot-mailsync-0.9.1-glibc.patch"
 }
 
 src_compile() {
 	# bug 45755
-	#append-flags -fPIC
+	# Yes, this is ugly. Will either get corrected when Gnome even compiles
+	# or removed with Gnome support. (Philantrop)
+	append-flags -fPIC
 
 	cd "${S}"
-	econf $(use_enable ssl)
+	econf $(use_enable ssl) $(use_enable gnome gpilot)
 	if use gnome; then
 		cd "${S}-gpilot"
 		econf $(use_enable ssl) --enable-gpilot
@@ -48,7 +50,6 @@ src_compile() {
 		cd "${S}-gpilot"
 		emake || die "gpilot plugin make failed"
 	fi
-
 }
 
 src_install() {
