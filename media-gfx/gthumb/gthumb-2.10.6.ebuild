@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.6.ebuild,v 1.2 2007/08/30 20:15:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.6.ebuild,v 1.3 2007/09/16 21:34:45 eva Exp $
 
 inherit eutils gnome2
 
@@ -8,12 +8,12 @@ DESCRIPTION="Image viewer and browser for Gnome"
 HOMEPAGE="http://gthumb.sourceforge.net/"
 LICENSE="GPL-2"
 
-IUSE="exif gphoto2 jpeg tiff"
+IUSE="exif gphoto2 iptc raw tiff"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 
 # FIXME
-# missing: libopenraw-0.0.2, libiptcdata-0.2.1
+# missing: libiptcdata-0.2.1
 # what is gtkunique ???
 
 RDEPEND=">=dev-libs/glib-2.6
@@ -26,11 +26,13 @@ RDEPEND=">=dev-libs/glib-2.6
 	>=gnome-base/libglade-2.4
 	exif? ( >=media-libs/libexif-0.6.13 )
 	gphoto2? ( >=media-libs/libgphoto2-2.1.3 )
+	iptc? ( >=media-libs/libiptcdata-0.2.1 )
 	>=gnome-base/libbonobo-2.6
 	>=gnome-base/libbonoboui-2.6
 	>=gnome-base/gconf-2.6
 	media-libs/jpeg
-	tiff? ( media-libs/tiff )"
+	tiff? ( media-libs/tiff )
+	raw? ( media-libs/libopenraw )"
 
 DEPEND="${RDEPEND}
 	  x11-proto/inputproto
@@ -44,5 +46,7 @@ DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
 pkg_setup() {
 	G2CONF="$(use_enable exif) \
 		$(use_enable gphoto2) \
+		$(use_enable raw libopenraw) \
+		$(use_enable iptc iptcdata) \
 		$(use_enable tiff)"
 }
