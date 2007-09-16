@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.18.2.1.ebuild,v 1.9 2007/08/28 19:46:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.18.2.1.ebuild,v 1.10 2007/09/16 00:50:36 eva Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
@@ -64,6 +64,10 @@ src_unpack() {
 
 	# Implement --enable-guile switch
 	epatch ${FILESDIR}/${PN}-2.17.92-guile-switch.patch
+
+	# Fix tests
+	echo "glchess/src/lib/defaults.py" >> ${S}/po/POTFILES.skip
+	echo "gnome-sudoku/src/lib/defaults.py" >> ${S}/po/POTFILES.skip
 
 	# Remove intltoolize after upstream uses >=0.35.5 to make tarballs
 	intltoolize --force || die

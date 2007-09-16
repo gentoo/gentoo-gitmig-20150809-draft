@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.209 2007/08/28 19:46:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.210 2007/09/16 00:50:36 eva Exp $
+
+  16 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-games-2.18.2.1.ebuild:
+  fix tests per bug #192644
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org> gnome-games-2.18.2.1.ebuild:
   Stable for HPPA (bug #185823).
