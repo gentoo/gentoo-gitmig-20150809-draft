@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-var/lfpfonts-var-0.84.ebuild,v 1.10 2007/09/04 02:39:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-var/lfpfonts-var-0.84.ebuild,v 1.11 2007/09/16 03:04:39 dirtyepic Exp $
 
 inherit font font-ebdftopcf
 
@@ -15,7 +15,6 @@ IUSE=""
 
 S="${WORKDIR}/${PN}-src"
 
-FONT_SUFFIX="pcf.gz"
 FONT_S="${S}/src"
 
 DOCS="${S}/doc/*"
