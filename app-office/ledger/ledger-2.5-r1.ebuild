@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.5-r1.ebuild,v 1.3 2007/02/14 12:46:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.5-r1.ebuild,v 1.4 2007/09/16 10:48:11 opfer Exp $
 
 inherit eutils elisp-common
 
@@ -53,3 +53,12 @@ src_install() {
 		dobin ledger-report
 	fi
 }
+
+pkg_postinst() {
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
+}
+
