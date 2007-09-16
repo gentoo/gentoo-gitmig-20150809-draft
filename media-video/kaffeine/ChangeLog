@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.76 2007/08/30 17:00:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.77 2007/09/16 00:14:34 jurek Exp $
+
+  16 Sep 2007; Jurek Bartuszek <jurek@gentoo.org> kaffeine-0.8.5.ebuild:
+  x86 stable (bug #186896)
 
   30 Aug 2007; Samuli Suominen <drac@gentoo.org> kaffeine-0.8.3.ebuild:
   Remove USE gstreamer as 0.8 is going away.
