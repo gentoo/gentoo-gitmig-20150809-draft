@@ -1,0 +1,14 @@
+# ChangeLog for dev-java/jdom-jaxen
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/ChangeLog,v 1.1 2007/09/16 08:23:39 ali_bush Exp $
+
+*jdom-jaxen-1.0 (16 Sep 2007)
+*jdom-jaxen-1.0_beta10 (16 Sep 2007)
+*jdom-jaxen-1.0_beta9-r2 (16 Sep 2007)
+
+  16 Sep 2007; <alistair@gentoo.org> +metadata.xml,
+  +jdom-jaxen-1.0_beta9-r2.ebuild, +jdom-jaxen-1.0_beta10.ebuild,
+  +jdom-jaxen-1.0.ebuild:
+  Splitting jdom's jaxen class into separate package to avoid circular
+  dependencies.
+
