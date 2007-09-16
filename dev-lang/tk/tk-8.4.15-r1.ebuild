@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.14-r1.ebuild,v 1.1 2007/07/12 18:06:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.15-r1.ebuild,v 1.1 2007/09/16 02:23:57 matsuu Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -45,7 +45,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-8.4.11-multilib.patch
 
 	# Bug 125971
-	epatch "${FILESDIR}"/${PN}-8.3.5-tclm4-soname.patch
+	epatch "${FILESDIR}"/${P}-tclm4-soname.patch
+
+	# Bug 192539
+	epatch "${FILESDIR}"/${PN}-CVE-2007-4851.patch
 
 	local d
 	for d in */configure ; do
