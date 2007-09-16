@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.359 2007/08/30 16:10:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.360 2007/09/16 22:18:18 eva Exp $
 
 # Keep them sorted
 
@@ -177,7 +177,7 @@ leim - Adds input methods support to Emacs
 lesstif - Use lesstif over openmotif in cases where a program supports both
 libcaca - Add support for colored ASCII-art graphics
 libedit - Use the libedit library (replacement for readline)
-libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric
+libgda - Adds GNOME Data Access support
 libnotify - Enable notification support
 libsamplerate - Build with support for converting sample rates using libsamplerate
 libwww - Adds libwww support (General purpose WEB API)
