@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-oodict
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.22 2007/09/08 06:43:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.23 2007/09/16 12:08:40 fmccor Exp $
+
+  16 Sep 2007; Ferris McCormick <fmccor@gentoo.org>
+  eselect-oodict-20061117.ebuild:
+  Sparc stable.  Pure administration:  This version is identical to previous.
 
   08 Sep 2007; Joseph Jezak <josejx@gentoo.org>
   eselect-oodict-20061117.ebuild:
