@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/jfbterm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.45 2007/09/09 16:46:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.46 2007/09/16 04:17:55 josejx Exp $
+
+  16 Sep 2007; Joseph Jezak <josejx@gentoo.org> jfbterm-0.4.7-r4.ebuild:
+  Marked ppc/ppc64 stable for bug #191993 - Marked early because current
+  stable doesn't compile.
 
   09 Sep 2007; Markus Rothe <corsair@gentoo.org> jfbterm-0.4.7-r4.ebuild:
   Added ~ppc64; bug #185360
