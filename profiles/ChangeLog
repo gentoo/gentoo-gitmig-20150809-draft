@@ -1,6 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.646 2007/09/17 20:35:10 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.647 2007/09/17 22:26:53 eva Exp $
+
+  17 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  default-linux/amd64/2007.0/package.use.mask,
+  default-linux/amd64/package.use.mask, default-linux/ia64/package.use.mask,
+  default-linux/ppc/package.use.mask, +default-linux/ppc64/package.use.mask,
+  hardened/amd64/package.use.mask, hardened/ia64/package.use.mask,
+  hardened/ppc/package.use.mask, +hardened/ppc64/package.use.mask:
+  fix QA for iptc USE flag in gthumb
 
   17 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> package.mask:
   Removed app-pda/pilot-link-0.12.2 from package.mask.

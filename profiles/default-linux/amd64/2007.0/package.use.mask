@@ -98,3 +98,8 @@ media-libs/mlt mmx
 # Mask x86-32 asm only flags
 # bug #178033
 media-video/cinelerra-cvs mmx 3dnow
+
+# 18 September 2007: Gilles Dartiguelongue <eva@gentoo.org>
+# Mask iptc flag until libiptcdata is keyworded
+media-gfx/gthumb iptc
+

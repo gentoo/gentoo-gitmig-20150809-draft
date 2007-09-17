@@ -1,0 +1,4 @@
+
+# 18 September 2007: Gilles Dartiguelongue <eva@gentoo.org>
+# Mask iptc flag until libiptcdata is keyworded
+media-gfx/gthumb iptc

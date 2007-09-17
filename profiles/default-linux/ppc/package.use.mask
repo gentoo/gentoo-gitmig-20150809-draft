@@ -9,3 +9,8 @@
 
 # app-misc/lcd4linux
 app-misc/lcd4linux lcd_devices_hd44780
+
+# 18 September 2007: Gilles Dartiguelongue <eva@gentoo.org>
+# Mask iptc flag until libiptcdata is keyworded
+media-gfx/gthumb iptc
+

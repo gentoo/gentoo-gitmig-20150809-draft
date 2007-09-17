@@ -5,3 +5,8 @@
 
 #requires virtual/jdk-1.6
 ~dev-util/checkstyle-4.3 test
+
+# 18 September 2007: Gilles Dartiguelongue <eva@gentoo.org>
+# Mask iptc flag until libiptcdata is keyworded
+media-gfx/gthumb iptc
+
