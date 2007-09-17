@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.112 2007/09/09 09:13:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.113 2007/09/17 20:53:26 philantrop Exp $
+
+  17 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  no-nptl/2.4/package.mask:
+  Add =dev-libs/libmal-0.44 as it requires app-pda/pilot-link-0.12.2.
 
   09 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>; use.mask:
   Unmask amd, vermilion, and xgi VIDEO_CARDS till they get keyworded for all
