@@ -1,55 +1,53 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.8-r1.ebuild,v 1.3 2007/01/24 03:30:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.9.ebuild,v 1.1 2007/09/17 05:38:36 philantrop Exp $
 
 inherit eutils multilib
 
 DESCRIPTION="Desktop Organizer Software for the Palm Pilot"
 HOMEPAGE="http://jpilot.org/"
-SRC_URI="mirror://gentoo/distfiles/${P}.tar.gz"
+SRC_URI="http://jpilot.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
-IUSE="nls gtk"
+IUSE="nls"
 
-RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
-	>=app-pda/pilot-link-0.11.5"
-DEPEND="${RDEPEND}
-	gtk? ( dev-util/pkgconfig )
-	nls? ( sys-devel/gettext )"
+DEPEND=">=app-pda/pilot-link-0.11.8
+		>=x11-libs/gtk+-2.6.10-r1
+		nls? ( sys-devel/gettext )
+		>=dev-perl/XML-Parser-2.34"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} || die
+	cd "${S}"
+
+	# Fixes bug 93471.
+	epatch "${FILESDIR}/${P}-keyring-cats.patch"
 
 	# There are four icons available.  Use the third.
-	sed -i 's/jpilot.xpm/jpilot-icon3.xpm/' jpilot.desktop || die
-
-	# these two patches are from upstream
-	epatch ${FILESDIR}/${P}-memory.patch
-	epatch ${FILESDIR}/${P}-glob.patch
-	epatch ${FILESDIR}/${P}-glibc-free.patch
+	sed -i -e 's/jpilot.xpm/jpilot-icon3.xpm/' jpilot.desktop || die "sed'ing the desktop file failed"
 }
 
 src_compile() {
-	econf $(use_enable gtk gtk2) $(use_enable nls) || die "configure failed"
+	econf $(use_enable nls) || die "configure failed"
 	emake -j1 || die "make failed"
 }
 
 src_install() {
-	make install DESTDIR=${D} \
-		libdir=/usr/$(get_libdir) \
+	make install DESTDIR="${D}" \
+		libdir=/usr/$(get_libdir)/jpilot/plugins \
 		docdir=/usr/share/doc/${PF} \
 		icondir=/usr/share/pixmaps \
 		desktopdir=/usr/share/applications || die "install failed"
 
-	dodoc README TODO UPGRADING ABOUT-NLS BUGS ChangeLog
+	dodoc ABOUT-NLS AUTHORS BUGS ChangeLog INSTALL NEWS README TODO || die "installing docs failed"
 	doman docs/*.1
 
 	dodir /usr/share/${PN}
 	insinto /usr/share/${PN}
-	doins ${S}/jpilotrc.*
+	doins "${S}"/jpilotrc.*
 }
 
 pkg_postinst() {

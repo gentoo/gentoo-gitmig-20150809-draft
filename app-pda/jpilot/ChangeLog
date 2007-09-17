@@ -1,6 +1,18 @@
 # ChangeLog for app-pda/jpilot
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.31 2007/01/24 03:30:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.32 2007/09/17 05:38:36 philantrop Exp $
+
+*jpilot-0.99.9 (17 Sep 2007)
+
+  17 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  -files/jpilot-0.99.8-glibc-free.patch, -files/jpilot-0.99.8-glob.patch,
+  -files/jpilot-0.99.8-memory.patch,
+  +files/jpilot-0.99.9-keyring-cats.patch, -jpilot-0.99.8_pre9.ebuild,
+  -jpilot-0.99.8.ebuild, -jpilot-0.99.8-r1.ebuild, +jpilot-0.99.9.ebuild:
+  Version bump to 0.99.9 with several fixes. Removed obsolete versions. Fixes
+  bugs 93471, 128076, 148440 and 160349. Thanks to (in order of appearance)
+  Craig Lawson, Mark Wagner, Serhij S. Stasyuk and Thomas Jost for their
+  contributions!
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> jpilot-0.99.7-r1.ebuild,
   jpilot-0.99.8_pre9.ebuild, jpilot-0.99.8.ebuild, jpilot-0.99.8-r1.ebuild:
