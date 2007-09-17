@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sound</herd>
-	<maintainer>
-		<email>johnm@gentoo.org</email>
-		<name>John Mylchreest</name>
-	</maintainer>
 	<longdescription lang="en">
 		Monopod is a very simplistic Podcast client with planned iPod support
 		written in GTK#. It's to the point, without the bloat.
