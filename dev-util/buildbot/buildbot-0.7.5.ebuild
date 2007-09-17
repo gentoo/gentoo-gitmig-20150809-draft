@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.5.ebuild,v 1.11 2007/04/07 00:39:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.5.ebuild,v 1.12 2007/09/17 10:30:13 jokey Exp $
 
 inherit distutils eutils
 
 DESCRIPTION="A Python system to automate the compile/test cycle to validate code changes (similar to Tinderbox, but simpler)"
-HOMEPAGE="http://buildbot.sourceforge.net/"
+HOMEPAGE="http://buildbot.net/"
 SRC_URI="mirror://sourceforge/buildbot/${P}.tar.gz"
 
 LICENSE="GPL-2"
