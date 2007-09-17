@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/malsync
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/malsync/ChangeLog,v 1.6 2007/05/13 18:31:38 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/malsync/ChangeLog,v 1.7 2007/09/17 18:45:23 philantrop Exp $
+
+  17 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> malsync-2.2.0.ebuild:
+  Changed pilot-link dependency to 0.11.8 as it doesn't compile with newer
+  versions.
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
