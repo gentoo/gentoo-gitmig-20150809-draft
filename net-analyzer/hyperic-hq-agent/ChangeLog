@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hyperic-hq-agent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/ChangeLog,v 1.15 2007/05/01 17:48:59 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/ChangeLog,v 1.16 2007/09/17 21:13:47 phreak Exp $
+
+  17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing mattm from metadata.xml (see #66633 for reference).
 
   01 May 2007; Marius Mauch <genone@gentoo.org>
   hyperic-hq-agent-2.5.15.ebuild, hyperic-hq-agent-2.6.22.ebuild,
