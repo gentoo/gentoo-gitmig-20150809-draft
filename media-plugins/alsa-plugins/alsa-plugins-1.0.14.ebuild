@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.14.ebuild,v 1.6 2007/09/10 14:14:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.14.ebuild,v 1.7 2007/09/17 16:30:52 phreak Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -70,7 +70,7 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	cd "${S}/doc"
-	dodoc upmix.txt vdownmix.txt README-pcm-oss
+	dodoc upmix.txt vdownmix.txt README-pcm-oss speexrate.txt
 	use jack && dodoc README-jack
 	use libsamplerate && dodoc samplerate.txt
 	use pulseaudio && dodoc README-pulse
