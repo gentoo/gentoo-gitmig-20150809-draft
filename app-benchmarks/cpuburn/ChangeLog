@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/cpuburn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/cpuburn/ChangeLog,v 1.13 2007/07/02 13:41:07 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/cpuburn/ChangeLog,v 1.14 2007/09/17 21:01:30 phreak Exp $
+
+  17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing johnm from metadata.xml (see #186467 for reference).
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> cpuburn-1.4.ebuild:
   (QA) RESTRICT clean up.
