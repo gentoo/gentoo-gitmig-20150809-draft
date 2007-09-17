@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.644 2007/09/16 15:50:31 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.645 2007/09/17 13:15:03 alonbl Exp $
+
+  17 Sep 2007; Alon Bar-Lev <alonbl@gentoo.org> use.local.desc:
+  Added sys-power/suspend:fbsplash
 
   16 Sep 2007; Mike Auty <ikelos@gentoo.org> package.mask:
   Unmask vmware workstation/player now that vmware-modules-1.0.0.16-r1 is
