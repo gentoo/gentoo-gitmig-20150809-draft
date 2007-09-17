@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.6.ebuild,v 1.14 2007/07/12 02:25:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.9.ebuild,v 1.1 2007/09/17 20:52:13 eva Exp $
 
 inherit eutils gnome2
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="static"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE=""
 
 RDEPEND=">=dev-libs/glib-1.3.7"
 DEPEND="${RDEPEND}
@@ -20,11 +20,7 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS BUGS ChangeLog HACKING MAINTAINERS NEWS README"
 
-pkg_setup() {
-	G2CONF="$(use_enable static)"
-}
-
 src_unpack() {
-	unpack ${A}
+	gnome2_src_unpack
 	epunt_cxx
 }
