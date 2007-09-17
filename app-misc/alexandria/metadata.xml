@@ -3,8 +3,4 @@
 <pkgmetadata>
 	<herd>ruby</herd>
 	<herd>gnome</herd>
-	<maintainer>
-		<email>citizen428@gentoo.org</email>
-		<name>Michael Kohl</name>
-	</maintainer>
 </pkgmetadata>
