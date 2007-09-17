@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/meme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.1 2007/04/24 20:44:01 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.2 2007/09/17 02:41:56 je_fro Exp $
+
+  17 Sep 2007; <jeff@gentoo.org> +files/meme-3.5.4-patch1.patch,
+  +files/meme-3.5.4-patch2.patch, meme-3.5.4.ebuild:
+  Remove parallel install for amd64 boxes, and add upstream patches.
 
 *meme-3.5.4 (24 Apr 2007)
 
