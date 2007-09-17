@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_alpha1581.ebuild,v 1.2 2007/09/16 13:34:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_rc1581.ebuild,v 1.1 2007/09/17 00:41:30 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -20,8 +20,6 @@ O_LNG=""
 O_SUFF="1581"
 O_VER="9.50-20070914"
 
-# opera-9.50-20070903.1-static-qt.ppc-1567.tar.bz2
-
 O_URI="http://snapshot.opera.com/unix/snapshot-1581/"
 SRC_URI="
 	x86? ( qt-static? (
@@ -31,29 +29,24 @@ SRC_URI="
 	ppc? ( ${O_URI}ppc-linux/${PN}-${O_VER}.6-shared-qt.ppc${O_LNG}-${O_SUFF}.tar.bz2 )
 	x86-fbsd? ( ${O_URI}/intel-freebsd/${PN}-${O_VER}.5-static-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 )"
 
-#	x86-fbsd? ( !qt-static? ( ${O_URI}intel-freebsd/${PN}-${O_VER}.4-shared-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 ) )
-#	amd64? ( qt-static? ( ${O_URI}x86_64-linux/${PN}-${O_VER}.2-static-qt.i386${O_LNG}-${O_SUFF}.tar.bz2 ) )
-#	sparc? ( ${O_URI}sparc-linux/${PN}-${O_VER}.1-static-qt.sparc${O_LNG}-${O_SUFF}.tar.bz2 )
-
 DEPEND=">=sys-apps/sed-4"
 
-RDEPEND="x11-libs/libXrandr
-	x11-libs/libXp
-	x11-libs/libXmu
-	x11-libs/libXi
-	x11-libs/libXft
-	x11-libs/libXext
-	x11-libs/libXcursor
-	x11-libs/libX11
-	x11-libs/libSM
-	x11-libs/libICE
-	>=media-libs/fontconfig-2.1.94-r1
-	!amd64? ( media-libs/libexif
-			  spell? ( app-text/aspell )
-			  x86? ( !qt-static? ( =x11-libs/qt-3* ) )
-			  media-libs/jpeg )
-	x86-fbsd? ( =virtual/libstdc++-3*
-			    !qt-static? ( =x11-libs/qt-3* ) )"
+RDEPEND=">=media-libs/fontconfig-2.1.94-r1
+		media-libs/jpeg
+		media-libs/libexif
+		x11-libs/libXrandr
+		x11-libs/libXp
+		x11-libs/libXmu
+		x11-libs/libXi
+		x11-libs/libXft
+		x11-libs/libXext
+		x11-libs/libXcursor
+		x11-libs/libX11
+		x11-libs/libSM
+		x11-libs/libICE
+		=virtual/libstdc++-3*
+		!qt-static? ( =x11-libs/qt-3* )
+		spell? ( app-text/aspell )"
 
 S=${WORKDIR}/${A/.tar.bz2/}
 
