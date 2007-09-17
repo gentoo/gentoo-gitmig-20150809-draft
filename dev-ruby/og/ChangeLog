@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/og
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/og/ChangeLog,v 1.14 2007/05/19 08:53:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/og/ChangeLog,v 1.15 2007/09/17 20:33:31 phreak Exp $
+
+  17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing citizen428 from metadata.xml (see #56803 for reference).
 
   19 May 2007; Markus Rothe <corsair@gentoo.org> og-0.40.0.ebuild:
   Added ~ppc64; bug #176308
