@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/xmpppy-0.4.0.ebuild,v 1.1 2007/01/06 20:17:19 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/xmpppy-0.4.0.ebuild,v 1.2 2007/09/17 20:47:58 sbriesen Exp $
 
 inherit eutils distutils
 
@@ -27,5 +27,5 @@ PYTHON_MODNAME="xmpp"
 
 src_install(){
 	distutils_src_install
-	use doc && dohtml -r doc/.
+	use doc && dohtml -A py -r doc/.
 }
