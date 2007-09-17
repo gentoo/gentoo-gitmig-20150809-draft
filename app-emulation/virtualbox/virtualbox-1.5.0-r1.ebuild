@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.5.0.ebuild,v 1.1 2007/09/04 23:38:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-1.5.0-r1.ebuild,v 1.1 2007/09/17 09:41:37 jokey Exp $
 
 inherit eutils flag-o-matic qt3 toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.virtualbox.org/download/${PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="additions alsa hal nowrapper sdk vboxbfe"
+IUSE="additions alsa nowrapper sdk vboxbfe"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
@@ -23,7 +23,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 	media-libs/libsdl
 	x11-libs/libXcursor
 	$(qt_min_version 3.3.5)
-	hal? ( sys-apps/hal )"
+	sys-apps/hal"
 DEPEND="${RDEPEND}
 	sys-devel/bin86
 	sys-devel/dev86
@@ -58,13 +58,7 @@ src_unpack() {
 src_compile() {
 	cd "${S}"
 
-	local myconf
-	if ! use hal; then
-		myconf="${myconf} --without-hal"
-	fi
-
-	./configure \
-	${myconf} || die "configure failed"
+	./configure || die "configure failed"
 	source ./env.sh
 
 	# Force kBuild to respect C[XX]FLAGS and MAKEOPTS (bug #178529)

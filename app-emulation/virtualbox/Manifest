@@ -9,14 +9,14 @@ AUX virtualbox-1.4.0-remove-splitted-stuff.patch 1806 RMD160 e4891ee26822094f0e6
 MD5 8b003998e63fa80af707af5a85876cd4 files/virtualbox-1.4.0-remove-splitted-stuff.patch 1806
 RMD160 e4891ee26822094f0e6bb316a6831676a00075fd files/virtualbox-1.4.0-remove-splitted-stuff.patch 1806
 SHA256 32ba7e25584b5a07c6c13612dfa759692ebbec36ede1553372367c275cfe0e2c files/virtualbox-1.4.0-remove-splitted-stuff.patch 1806
-AUX virtualbox-1.5.0-remove-alsa.patch 635 RMD160 148da5988caa4be6d006f71b3d39a241af5422ae SHA1 1549166cbba5588d03f8741ac37ee7fe80acd804 SHA256 bbffd133ad44dfd2550ad7d4cbc18a1b8a4323e4b04c527b7911031e0c1f1181
-MD5 ed069da82a253b6289562015e7745a6f files/virtualbox-1.5.0-remove-alsa.patch 635
-RMD160 148da5988caa4be6d006f71b3d39a241af5422ae files/virtualbox-1.5.0-remove-alsa.patch 635
-SHA256 bbffd133ad44dfd2550ad7d4cbc18a1b8a4323e4b04c527b7911031e0c1f1181 files/virtualbox-1.5.0-remove-alsa.patch 635
-AUX virtualbox-1.5.0-remove-splitted-stuff.patch 1386 RMD160 ca539d12e9ce70de8f1ae6ae44ecbd2146a257c6 SHA1 37a461b1784682134ff88e6e28af5d15a66e9c3a SHA256 647e9cf45f35255a9fb14ae1b38cb0207b5368315fc2b645e3bb8188025ffa22
-MD5 86fd227ce71ee7718983dfaf7a07ca83 files/virtualbox-1.5.0-remove-splitted-stuff.patch 1386
-RMD160 ca539d12e9ce70de8f1ae6ae44ecbd2146a257c6 files/virtualbox-1.5.0-remove-splitted-stuff.patch 1386
-SHA256 647e9cf45f35255a9fb14ae1b38cb0207b5368315fc2b645e3bb8188025ffa22 files/virtualbox-1.5.0-remove-splitted-stuff.patch 1386
+AUX virtualbox-1.5.0-remove-alsa.patch 642 RMD160 0af4848fd8fc104b9b8e457a8d97283cb0e39146 SHA1 876fec215a0741e7a2c398af7c213b33928a8e80 SHA256 6fbc6b8fa4831276fc44fd5ede402065a6ac8ed2843b7f90952aaacb4dd382ba
+MD5 44ce79129928c6401a4a0b5b797b09ec files/virtualbox-1.5.0-remove-alsa.patch 642
+RMD160 0af4848fd8fc104b9b8e457a8d97283cb0e39146 files/virtualbox-1.5.0-remove-alsa.patch 642
+SHA256 6fbc6b8fa4831276fc44fd5ede402065a6ac8ed2843b7f90952aaacb4dd382ba files/virtualbox-1.5.0-remove-alsa.patch 642
+AUX virtualbox-1.5.0-remove-splitted-stuff.patch 1812 RMD160 205230424f464df05d61824667d4bbc0e72730e8 SHA1 ee211af2895f24f5df22efbb5124ecc78f01e069 SHA256 751bbd7ed8b1bea27d4a1b7dcf5e6b22c911189eb208da429ef5aab4a9dfea65
+MD5 e02fbcb773a62d709655a45645c71ca7 files/virtualbox-1.5.0-remove-splitted-stuff.patch 1812
+RMD160 205230424f464df05d61824667d4bbc0e72730e8 files/virtualbox-1.5.0-remove-splitted-stuff.patch 1812
+SHA256 751bbd7ed8b1bea27d4a1b7dcf5e6b22c911189eb208da429ef5aab4a9dfea65 files/virtualbox-1.5.0-remove-splitted-stuff.patch 1812
 AUX virtualbox-wrapper 1606 RMD160 21a75925d364c61c1040b3d217b3e05dfbbfc175 SHA1 d0e885ead0dd5626a70ace3e9185940d27715743 SHA256 28a6305a7162c1864fee241568c1dd25e758c129069790512a0b1d7767656168
 MD5 424b5ca7e892bbb82a7c3e38661d1a43 files/virtualbox-wrapper 1606
 RMD160 21a75925d364c61c1040b3d217b3e05dfbbfc175 files/virtualbox-wrapper 1606
@@ -31,18 +31,18 @@ EBUILD virtualbox-1.4.0.ebuild 4698 RMD160 ab07bd3db2a09d2843ba9eb6d6d1033cfd694
 MD5 67e4b78cf1dc6d12450135d221d2175e virtualbox-1.4.0.ebuild 4698
 RMD160 ab07bd3db2a09d2843ba9eb6d6d1033cfd694c7e virtualbox-1.4.0.ebuild 4698
 SHA256 22b18101719e0074f53945e93aaef29624129ca2629a50b98e8eb18229112596 virtualbox-1.4.0.ebuild 4698
-EBUILD virtualbox-1.5.0.ebuild 4682 RMD160 94ba898dfd70ecb3f9c7ec3b52e413bfdfc933ba SHA1 d30ebbbcd4f3140f5947df1cda03d57ab09508f1 SHA256 de4b728fc57f4d88feca70bcca26416721822dc4813926d3ddc9ffc9fbfcc718
-MD5 32b20bf4326267ca090d680f89aa1f81 virtualbox-1.5.0.ebuild 4682
-RMD160 94ba898dfd70ecb3f9c7ec3b52e413bfdfc933ba virtualbox-1.5.0.ebuild 4682
-SHA256 de4b728fc57f4d88feca70bcca26416721822dc4813926d3ddc9ffc9fbfcc718 virtualbox-1.5.0.ebuild 4682
-EBUILD virtualbox-9999.ebuild 4965 RMD160 8e02dd70156de7eccd9e6b31aa995aa67eae4f10 SHA1 209949ce3ff8f5f5c421474c392c77b857131f80 SHA256 72237a88cc919898e25b69cf349db80fcd01ad6fc4cd5a7fa036ce4da3a4fc75
-MD5 fd424d500ce3ed46e476cec47a2584e6 virtualbox-9999.ebuild 4965
-RMD160 8e02dd70156de7eccd9e6b31aa995aa67eae4f10 virtualbox-9999.ebuild 4965
-SHA256 72237a88cc919898e25b69cf349db80fcd01ad6fc4cd5a7fa036ce4da3a4fc75 virtualbox-9999.ebuild 4965
-MISC ChangeLog 4805 RMD160 1eceec5633e933558aded229e70f70983426a0eb SHA1 c1c4fa0035cc4406bd240802f5452a9e62ea8a4c SHA256 5b58940f3a7680ca806e7effea7b55797f74a887d146e99b6e43af7e402c8876
-MD5 86bb9ae9124cc1bf88748af8eead4a46 ChangeLog 4805
-RMD160 1eceec5633e933558aded229e70f70983426a0eb ChangeLog 4805
-SHA256 5b58940f3a7680ca806e7effea7b55797f74a887d146e99b6e43af7e402c8876 ChangeLog 4805
+EBUILD virtualbox-1.5.0-r1.ebuild 4585 RMD160 bd6934844e3cee0c66ad07cb176ce678151cbdd5 SHA1 444388edb6f99ed4e07b3e69c71b3353ce51eea5 SHA256 4d0e82f591fb777e5a57a9ffd3b3fb544121df863fd298038fc70c325946d73a
+MD5 513a32c61d0522d3f6592605161eede5 virtualbox-1.5.0-r1.ebuild 4585
+RMD160 bd6934844e3cee0c66ad07cb176ce678151cbdd5 virtualbox-1.5.0-r1.ebuild 4585
+SHA256 4d0e82f591fb777e5a57a9ffd3b3fb544121df863fd298038fc70c325946d73a virtualbox-1.5.0-r1.ebuild 4585
+EBUILD virtualbox-9999.ebuild 4764 RMD160 ea09579b0008cc2dd8cfde1256964d5736bf662b SHA1 1988be8a019d94226ad25c7450150e23d996fd4b SHA256 33d6b5960ffdc7f3663d409774c91edae2a2f190993c5d55187899db7db91d0c
+MD5 a0534c2265c2bb908ad5e6993a65c923 virtualbox-9999.ebuild 4764
+RMD160 ea09579b0008cc2dd8cfde1256964d5736bf662b virtualbox-9999.ebuild 4764
+SHA256 33d6b5960ffdc7f3663d409774c91edae2a2f190993c5d55187899db7db91d0c virtualbox-9999.ebuild 4764
+MISC ChangeLog 5146 RMD160 a52f0fcc875158ceef466e9f5466b8b89515a2c1 SHA1 04c4c39f26aadb4daf3153ee58b005ccde23776d SHA256 9e365fcb479288bbbaa467f6dbaa0ac8cc41b73c5797b8dd43e5a03e059727f8
+MD5 5336528f824a727f2c3cc9e5d041a449 ChangeLog 5146
+RMD160 a52f0fcc875158ceef466e9f5466b8b89515a2c1 ChangeLog 5146
+SHA256 9e365fcb479288bbbaa467f6dbaa0ac8cc41b73c5797b8dd43e5a03e059727f8 ChangeLog 5146
 MISC metadata.xml 344 RMD160 12935d5b21be85bc4222fd06371c93dcbf6f534e SHA1 68b99919921f246738cce4350b77d895e7c78106 SHA256 fff5aeb6f453d2e137765ca5016e81344cb0cd0cecd51d81bbb889cb1d7a5ba9
 MD5 688de6c9943189afc4fa3ab510813dbd metadata.xml 344
 RMD160 12935d5b21be85bc4222fd06371c93dcbf6f534e metadata.xml 344
@@ -50,16 +50,16 @@ SHA256 fff5aeb6f453d2e137765ca5016e81344cb0cd0cecd51d81bbb889cb1d7a5ba9 metadata
 MD5 abada17e02e45282c1f4fced97dc823d files/digest-virtualbox-1.4.0 271
 RMD160 383a3a9c011455d54046d16617eaa8ab7a1bdc2d files/digest-virtualbox-1.4.0 271
 SHA256 fc987148b43443ef9f30399f4f13cc97db7434ec714d76c282239a91a04068c7 files/digest-virtualbox-1.4.0 271
-MD5 20969e65aa4252f84dd45cbc1bdabe6d files/digest-virtualbox-1.5.0 271
-RMD160 5ca9d4359bcba4d7e97175000491b107b1bbb5af files/digest-virtualbox-1.5.0 271
-SHA256 20f92542e325e58d778b9abc72954754bccf929d819e2f8eb671c30d33224a54 files/digest-virtualbox-1.5.0 271
+MD5 20969e65aa4252f84dd45cbc1bdabe6d files/digest-virtualbox-1.5.0-r1 271
+RMD160 5ca9d4359bcba4d7e97175000491b107b1bbb5af files/digest-virtualbox-1.5.0-r1 271
+SHA256 20f92542e325e58d778b9abc72954754bccf929d819e2f8eb671c30d33224a54 files/digest-virtualbox-1.5.0-r1 271
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-virtualbox-9999 0
 RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-virtualbox-9999 0
 SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-virtualbox-9999 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.6 (GNU/Linux)
+Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFG3fClz974XjDVpbkRAg86AKC70baPbwyHvjNL68DJ4VC1DFP7PwCfQZL3
-+uD3VFx/nrH4vFfxHiDbPi8=
-=YyIl
+iD8DBQFG7kvgz974XjDVpbkRAnUxAKCIzxbFW4cYceP7X1KY0w9TcIScMwCcCyKc
+Ca8Wl2hn+ZhLrGRAOGzTBOc=
+=IpD7
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.18 2007/09/04 23:56:09 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.19 2007/09/17 09:41:37 jokey Exp $
 
 inherit eutils flag-o-matic linux-mod qt3 subversion toolchain-funcs
 
@@ -11,7 +11,7 @@ ESVN_REPO_URI="http://virtualbox.org/svn/vbox/trunk"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="hal nowrapper sdk vboxbfe vditool"
+IUSE="nowrapper sdk vboxbfe vditool"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/libIDL
@@ -21,7 +21,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 	media-libs/libsdl
 	x11-libs/libXcursor
 	$(qt_min_version 3.3.5)
-	hal? ( sys-apps/hal )"
+	sys-apps/hal"
 DEPEND="${RDEPEND}
 	sys-devel/bin86
 	sys-devel/dev86
@@ -51,13 +51,7 @@ pkg_setup() {
 src_compile() {
 	cd "${S}"
 
-	local myconf
-	if ! use hal; then
-		myconf="${myconf} --without-hal"
-	fi
-
-	./configure \
-	${myconf} || die "configure failed"
+	./configure || die "configure failed"
 	source ./env.sh
 
 	# Force kBuild to respect C[XX]FLAGS and MAKEOPTS (bug #178529)
@@ -79,6 +73,9 @@ src_install() {
 	cd "${S}"/out/linux.${ARCH}/release/bin
 
 	insinto /opt/VirtualBox
+
+	make_wrapper vboxtunctl "./VBoxTunctl" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
+
 	if use sdk; then
 		doins -r sdk
 		make_wrapper xpidl "sdk/bin/xpidl" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
@@ -97,10 +94,11 @@ src_install() {
 		fi
 	fi
 
-	rm -rf sdk src tst* testcase additions VBoxBFE vditool vboxdrv.ko xpidl SUPInstall SUPUninstall
+	rm -rf sdk src tst* testcase additions VBoxBFE vditool vboxdrv.ko xpidl SUPInstall \
+	SUPUninstall VBox.sh VBox.png
 
 	doins -r *
-	for each in VBox{Manage,SDL,SVC,XPCOMIPCD} VirtualBox ; do
+	for each in VBox{Manage,SDL,SVC,XPCOMIPCD,Tunctl} VirtualBox ; do
 		fowners root:vboxusers /opt/VirtualBox/${each}
 		fperms 0750 /opt/VirtualBox/${each}
 	done
@@ -135,13 +133,6 @@ src_install() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	if use amd64; then
-		elog ""
-		elog "To avoid the nmi_watchdog bug and load the vboxdrv module"
-		elog "you may need to update your bootloader configuration and pass the option:"
-		elog "nmi_watchdog=0"
-	fi
-	elog ""
 	if use nowrapper; then
 		elog "In order to launch VirtualBox you need to start the"
 		elog "VirtualBox XPCom Server first, with:"
