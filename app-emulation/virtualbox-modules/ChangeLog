@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.6 2007/09/04 23:37:12 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.7 2007/09/17 09:50:16 jokey Exp $
+
+  17 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  virtualbox-modules-1.5.0.ebuild:
+  nmi_watchdog=0 no more needed for amd64, remove message in pkg_postinst,
+  from x-drum
 
 *virtualbox-modules-1.5.0 (04 Sep 2007)
 

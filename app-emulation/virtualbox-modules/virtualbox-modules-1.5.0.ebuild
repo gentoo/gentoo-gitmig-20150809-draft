@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-1.5.0.ebuild,v 1.2 2007/09/04 23:42:01 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-1.5.0.ebuild,v 1.3 2007/09/17 09:50:16 jokey Exp $
 
 inherit eutils linux-mod
 
@@ -14,9 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="!<app-emulation/virtualbox-bin-1.3.6
-	!<app-emulation/virtualbox-1.3.6
-	!=app-emulation/virtualbox-9999"
+RDEPEND="!=app-emulation/virtualbox-9999"
 
 S=${WORKDIR}/vboxdrv
 
@@ -43,10 +41,4 @@ pkg_preinst() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	if use amd64; then
-		elog ""
-		elog "To avoid the nmi_watchdog bug and load the vboxdrv module"
-		elog "you may need to update your bootloader configuration and pass the option:"
-		elog "nmi_watchdog=0"
-	fi
 }
