@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/static-dev
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/static-dev/ChangeLog,v 1.7 2006/07/13 01:21:52 agriffis Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/static-dev/ChangeLog,v 1.8 2007/09/17 21:04:48 phreak Exp $
+
+  17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing johnm from metadata.xml (see #186467 for reference).
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> static-dev-0.1.ebuild:
   Mark 0.1 stable on ia64. #107875
