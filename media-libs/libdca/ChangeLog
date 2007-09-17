@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdca
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.14 2007/09/17 12:27:35 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.15 2007/09/17 21:13:56 jokey Exp $
+
+  17 Sep 2007; Markus Ullmann <jokey@gentoo.org> libdca-0.0.5.ebuild:
+  Stable on sparc wrt bug #192579
 
   17 Sep 2007; Lars Weiler <pylon@gentoo.org> libdca-0.0.5.ebuild:
   Stable on ppc; bug #192579.
