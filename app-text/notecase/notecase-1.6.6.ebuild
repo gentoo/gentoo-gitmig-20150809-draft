@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.6.5.ebuild,v 1.1 2007/08/31 11:34:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.6.6.ebuild,v 1.1 2007/09/17 14:13:13 armin76 Exp $
 
 inherit eutils
 
