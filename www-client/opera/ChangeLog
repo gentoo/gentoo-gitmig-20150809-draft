@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.137 2007/09/17 00:41:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.138 2007/09/17 00:44:56 jer Exp $
+
+  17 Sep 2007; Jeroen Roovers <jer@gentoo.org> +opera-9.50_alpha1581.ebuild:
+  Readd the alpha build with the unchanged RDEPEND for old times´ sake.
 
 *opera-9.50_rc1581 (17 Sep 2007)
 
