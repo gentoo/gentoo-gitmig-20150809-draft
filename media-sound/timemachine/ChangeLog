@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/timemachine
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/ChangeLog,v 1.13 2007/07/02 15:21:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/ChangeLog,v 1.14 2007/09/17 20:53:37 phreak Exp $
+
+  17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing fvdpol from metadata.xml (see #51321 for reference).
 
   02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Hand to newly-born proaudio herd.
