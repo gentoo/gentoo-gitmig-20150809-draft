@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/libiptcdata-1.0.2.ebuild,v 1.1 2007/09/16 21:18:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/libiptcdata-1.0.2.ebuild,v 1.2 2007/09/17 15:14:12 mr_bones_ Exp $
 
 inherit eutils
 
@@ -34,4 +34,3 @@ src_install () {
 	emake DESTDIR=${D} install || die
 	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING INSTALL NEWS README TODO
 }
-
