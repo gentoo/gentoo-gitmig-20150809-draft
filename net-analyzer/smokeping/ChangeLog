@@ -1,8 +1,14 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.16 2007/09/16 22:24:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.17 2007/09/17 11:44:22 hansmi Exp $
 
-*smokeping-2.2.3-r1 (17 Sep 2007)
+*smokeping-2.2.4 (17 Sep 2007)
+
+  17 Sep 2007; Michael Hanselmann <hansmi@gentoo.org>
+  +smokeping-2.2.4.ebuild:
+  Version bump.
+
+*smokeping-2.2.3-r1 (16 Sep 2007)
 
   16 Sep 2007; Michael Hanselmann <hansmi@gentoo.org>
   -smokeping-2.2.3.ebuild, +smokeping-2.2.3-r1.ebuild:
