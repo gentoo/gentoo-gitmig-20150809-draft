@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/meme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.4 2007/09/17 14:11:13 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.5 2007/09/17 14:37:28 je_fro Exp $
+
+  17 Sep 2007; <jeff@gentoo.org> Manifest:
+  Used cvs manually to add patches without mangling.
 
 *meme-3.5.4-r1 (17 Sep 2007)
 
