@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qgit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.28 2007/09/17 11:14:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.29 2007/09/17 11:20:34 jokey Exp $
+
+  17 Sep 2007; Markus Ullmann <jokey@gentoo.org> metadata.xml:
+  Update metadata and add me as maintainer
 
 *qgit-1.5.7 (17 Sep 2007)
 
