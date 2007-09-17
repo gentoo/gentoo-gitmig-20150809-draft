@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/multisync-gui
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync-gui/ChangeLog,v 1.4 2007/03/28 20:17:35 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync-gui/ChangeLog,v 1.5 2007/09/17 02:05:34 josejx Exp $
+
+  17 Sep 2007; Joseph Jezak <josejx@gentoo.org> multisync-gui-0.91.0.ebuild:
+  Added ~ppc for bug #192662.
 
 *multisync-gui-0.91.0 (28 Mar 2007)
 
