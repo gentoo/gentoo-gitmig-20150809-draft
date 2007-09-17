@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.0.ebuild,v 1.1 2007/09/04 23:44:01 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.0-r1.ebuild,v 1.1 2007/09/17 09:48:47 jokey Exp $
 
 inherit eutils qt3 pax-utils
 
@@ -81,7 +81,10 @@ src_install() {
 	dosed -e "s/X-MandrivaLinux-System;//" /usr/share/applications/virtualbox.desktop
 
 	insinto /opt/VirtualBox
+
 	doins UserManual.pdf
+
+	make_wrapper vboxtunctl "./VBoxTunctl" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
 
 	if use additions; then
 		doins -r additions
@@ -100,7 +103,7 @@ src_install() {
 	vboxnet.sh LICENSE
 
 	doins -r *
-	for each in VBox{Manage,SDL,SVC,XPCOMIPCD,VRDP} VirtualBox ; do
+	for each in VBox{Manage,SDL,SVC,XPCOMIPCD,VRDP,Tunctl} VirtualBox ; do
 		fowners root:vboxusers /opt/VirtualBox/${each}
 		fperms 0750 /opt/VirtualBox/${each}
 		pax-mark -m "${D}"/opt/VirtualBox/${each}
