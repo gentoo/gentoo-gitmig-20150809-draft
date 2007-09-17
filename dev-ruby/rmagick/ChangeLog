@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.73 2007/08/04 06:54:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.74 2007/09/17 05:31:23 graaff Exp $
+
+*rmagick-1.15.10 (17 Sep 2007)
+
+  17 Sep 2007; Hans de Graaff <graaff@gentoo.org> +rmagick-1.15.10.ebuild:
+  Version bump, fixes compatibility issue with ImageMagick-6.3.5-9
 
 *rmagick-1.15.8 (04 Aug 2007)
 
