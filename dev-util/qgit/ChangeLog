@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qgit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.29 2007/09/17 11:20:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.30 2007/09/17 15:32:25 armin76 Exp $
+
+  17 Sep 2007; Raúl Porcel <armin76@gentoo.org> qgit-1.5.7.ebuild:
+  x86 stable wrt security #190697
 
   17 Sep 2007; Markus Ullmann <jokey@gentoo.org> metadata.xml:
   Update metadata and add me as maintainer
