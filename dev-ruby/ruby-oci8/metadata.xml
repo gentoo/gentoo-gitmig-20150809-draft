@@ -3,8 +3,9 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>mattm@gentoo.org</email>
-		<name>Matthew Marlowe</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
-	<longdescription>Oracle Interface for Ruby, compatible with oracle 8,9i,10g.</longdescription>
+	<longdescription>
+		Oracle Interface for Ruby, compatible with oracle 8,9i,10g.
+	</longdescription>
 </pkgmetadata>
