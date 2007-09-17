@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.124 2007/08/31 03:24:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.125 2007/09/17 09:38:00 jokey Exp $
+
+# Markus Ullmann <jokey@gentoo.org> (17 Sep 2007)
+# we now depend on HAL
+>=app-emulation/virtualbox-1.5.0
 
 # Wulf C. Krueger <philantrop@gentoo.org> (25 Aug 2007)
 # requires bluez-libs-3*
