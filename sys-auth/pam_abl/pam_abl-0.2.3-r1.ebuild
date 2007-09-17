@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/pam_abl-0.2.3-r1.ebuild,v 1.1 2007/07/12 11:23:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/pam_abl-0.2.3-r1.ebuild,v 1.2 2007/09/17 10:42:10 jokey Exp $
 
 inherit flag-o-matic pam toolchain-funcs
 
@@ -48,10 +48,8 @@ src_compile() {
 
 src_install() {
 	dopammod pam_abl.so
-	insinto /etc/security
-	doins conf/pam_abl.conf
+	dopamsecurity . conf/pam_abl.conf
 	dobin tools/pam_abl
-	dodir /var/lib/abl
 	keepdir /var/lib/abl
 	dohtml doc/*.html doc/*.css
 }

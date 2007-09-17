@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_abl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/ChangeLog,v 1.3 2007/07/12 11:23:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/ChangeLog,v 1.4 2007/09/17 10:42:10 jokey Exp $
+
+  17 Sep 2007; Markus Ullmann <jokey@gentoo.org> pam_abl-0.2.3-r1.ebuild:
+  use pam.eclass instead of manual hacks, thanks to jakub for notify wrt bug
+  #192032
 
 *pam_abl-0.2.3-r1 (12 Jul 2007)
 
