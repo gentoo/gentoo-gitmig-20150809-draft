@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.241 2007/09/10 14:20:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.242 2007/09/17 17:25:59 phreak Exp $
+
+*alsa-lib-1.0.15_rc2 (17 Sep 2007)
+
+  17 Sep 2007; Christian Heim <phreak@gentoo.org>
+  +alsa-lib-1.0.15_rc2.ebuild:
+  New release candidate for alsa-lib.
 
   10 Sep 2007; Jeroen Roovers <jer@gentoo.org> alsa-lib-1.0.14a-r1.ebuild:
   Stable for HPPA (bug #189155).
