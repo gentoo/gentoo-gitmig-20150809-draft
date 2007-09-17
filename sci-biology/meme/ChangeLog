@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/meme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.2 2007/09/17 02:41:56 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.3 2007/09/17 06:00:16 je_fro Exp $
+
+  17 Sep 2007; <jeff@gentoo.org> -meme-3.5.4-r1.ebuild:
+  Whoa...this version worked in my overlay. Pulling until I figure out what
+  went wrong.
 
   17 Sep 2007; <jeff@gentoo.org> +files/meme-3.5.4-patch1.patch,
   +files/meme-3.5.4-patch2.patch, meme-3.5.4.ebuild:
