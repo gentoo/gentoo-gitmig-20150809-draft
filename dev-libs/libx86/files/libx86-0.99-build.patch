@@ -1,0 +1,16 @@
+--- Makefile.org	2007-09-14 01:04:56.000000000 +0300
++++ Makefile	2007-09-14 01:06:07.000000000 +0300
+@@ -1,5 +1,5 @@
+ OBJECTS = x86-common.o
+-CFLAGS = -O2 -Wall -DDEBUG -g
++CFLAGS ?= -O2 -Wall -DDEBUG -g
+ 
+ ifeq ($(BACKEND), x86emu)
+ 	OBJECTS += thunk.o x86emu/decode.o x86emu/debug.o x86emu/fpu.o \
+@@ -33,5 +33,5 @@ clean: objclean
+ install: libx86.so.1
+ 	install -D libx86.so.1 $(DESTDIR)/usr/lib/libx86.so.1
+ 	install -D libx86.a $(DESTDIR)/usr/lib/libx86.a
+-	ln -sf /usr/lib/libx86.so.1 $(DESTDIR)/usr/lib/libx86.so
++	ln -sf libx86.so.1 $(DESTDIR)/usr/lib/libx86.so
+ 	install -D lrmi.h $(DESTDIR)/usr/include/libx86.h
