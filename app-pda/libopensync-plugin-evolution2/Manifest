@@ -7,14 +7,14 @@ EBUILD libopensync-plugin-evolution2-0.21.ebuild 724 RMD160 7229aa359bbfb7a0d2d3
 MD5 b1dd820b309af7798c02663259eb4fc8 libopensync-plugin-evolution2-0.21.ebuild 724
 RMD160 7229aa359bbfb7a0d2d3e3561df3e7cedeb55a49 libopensync-plugin-evolution2-0.21.ebuild 724
 SHA256 aae4c093a61c06b22aabf08c59b0a4c581147ebec0f2564a1c80db9147c0f39f libopensync-plugin-evolution2-0.21.ebuild 724
-EBUILD libopensync-plugin-evolution2-0.22.ebuild 724 RMD160 d19a576917afaac3e54d2a69fdda450cdb0b3da1 SHA1 c31d18c98707d521293641f36a06e8d0677b6d1a SHA256 6f614c15ef5e6fc578e48f6cc061f220ba6e8a3290105f16d183562d4e91d71d
-MD5 af55e20c909be0ee912ea3d3a0bf968a libopensync-plugin-evolution2-0.22.ebuild 724
-RMD160 d19a576917afaac3e54d2a69fdda450cdb0b3da1 libopensync-plugin-evolution2-0.22.ebuild 724
-SHA256 6f614c15ef5e6fc578e48f6cc061f220ba6e8a3290105f16d183562d4e91d71d libopensync-plugin-evolution2-0.22.ebuild 724
-MISC ChangeLog 1110 RMD160 58f58105d07c9cdd467d6517cb3b736f64e8e36a SHA1 661f5ddad7197b4adbd288fbcf59b8fbe39a5136 SHA256 90ca9d3abaa6c8f8c635669f109f0cf5d2cb5a853eda1152254abd8f51bda1bd
-MD5 a6013b84ede2cbe6281859e30f869784 ChangeLog 1110
-RMD160 58f58105d07c9cdd467d6517cb3b736f64e8e36a ChangeLog 1110
-SHA256 90ca9d3abaa6c8f8c635669f109f0cf5d2cb5a853eda1152254abd8f51bda1bd ChangeLog 1110
+EBUILD libopensync-plugin-evolution2-0.22.ebuild 730 RMD160 8e4b3d2bdec9e8dbbaf0b044d69173f2f143df50 SHA1 544f8cfa6367f758f41be5b07a9cf823bce0eeef SHA256 8a27982ae940cd56380f1234a99f54bcf8d3711770276f6a80e909678d985502
+MD5 d60b42d0307b945af2ac71afbb9dff41 libopensync-plugin-evolution2-0.22.ebuild 730
+RMD160 8e4b3d2bdec9e8dbbaf0b044d69173f2f143df50 libopensync-plugin-evolution2-0.22.ebuild 730
+SHA256 8a27982ae940cd56380f1234a99f54bcf8d3711770276f6a80e909678d985502 libopensync-plugin-evolution2-0.22.ebuild 730
+MISC ChangeLog 1235 RMD160 13b53e151b0fd03762e941059c189727554bf4f1 SHA1 0887b660691f6a18d1be6c4d46dc1f473ed8f840 SHA256 7c2af8f41075ab60156ac7d7909d2a82c8de1b7472b414768a60d796b6c64108
+MD5 50de6105a082e6f44999285592f46d2a ChangeLog 1235
+RMD160 13b53e151b0fd03762e941059c189727554bf4f1 ChangeLog 1235
+SHA256 7c2af8f41075ab60156ac7d7909d2a82c8de1b7472b414768a60d796b6c64108 ChangeLog 1235
 MISC metadata.xml 304 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 SHA1 b96c72c417192c099990a616b12a1d2f55a06064 SHA256 7fa8df0f64197f3f6c018ed0d6c4cc4da014fbcc9af2da9b633f71657470236a
 MD5 45ae331a9c100ecabad1b4cd916f3d37 metadata.xml 304
 RMD160 1da32fded95735800bc96b0ff4c0a3af4691a724 metadata.xml 304
@@ -26,9 +26,9 @@ MD5 76a1a0cb6e5d008e8b5eac1f58e3575d files/digest-libopensync-plugin-evolution2-
 RMD160 0fb6f5cf4de3f639b68ac1f1581b0f9c781cd4e1 files/digest-libopensync-plugin-evolution2-0.22 307
 SHA256 e607af5b51c27c0c50d6a311b7558cc3cbf167e4fb862d53d976e2e85f7c8808 files/digest-libopensync-plugin-evolution2-0.22 307
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
+Version: GnuPG v2.0.6 (GNU/Linux)
 
-iD8DBQFGCsz9ppoStNGKGywRAjT+AJ4uYF1M7ZD3IVILBvzMxR6Lke4tAACfUTTf
-Z9Cn++i8c3zTVcKTP7oHU7c=
-=/ssf
+iD8DBQFG7eDgcsIHjyDViGQRAsAJAKC9edY4NZ+8KmkUu+1N5r+ePNhe5gCdG9Jt
+joBfvaprDYdr/R6aUFqWsME=
+=yd/g
 -----END PGP SIGNATURE-----
