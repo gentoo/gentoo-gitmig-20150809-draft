@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.15_rc1.ebuild,v 1.1 2007/09/17 16:57:06 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.15_rc1.ebuild,v 1.2 2007/09/17 17:06:31 phreak Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -42,8 +42,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-1.0.11_rc2-nls.patch"
 	epatch "${FILESDIR}/${PN}-1.0.11_rc5-alsaconf-redirect.patch"
-	epatch "${FILESDIR}/${P}-seq.patch"
-	epatch "${FILESDIR}/${P}-remove-debug-printing.patch"
+	epatch "${FILESDIR}/${PN}-1.0.15_rc1-seq.patch"
 
 	AT_M4DIR="m4" eautoreconf
 }
