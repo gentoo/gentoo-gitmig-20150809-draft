@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.213 2007/09/10 14:10:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.214 2007/09/17 16:46:49 phreak Exp $
+
+*alsa-utils-1.0.14-r1 (17 Sep 2007)
+
+  17 Sep 2007; Christian Heim <phreak@gentoo.org>
+  +files/alsa-utils-1.0.14-remove-debug-printing.patch,
+  +alsa-utils-1.0.14-r1.ebuild:
+  Add a patch from upstream, removing a debug print
+  (http://hg-mirror.alsa-project.org/alsa-utils/rev/b230fef1ea76 - #184716
+  thanks to Mario Bachmann <grafgrimm77 at gmx.de>).
 
   10 Sep 2007; Jeroen Roovers <jer@gentoo.org> alsa-utils-1.0.14.ebuild:
   Stable for HPPA (bug #189155).
