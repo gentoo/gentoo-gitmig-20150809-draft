@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.181 2007/09/17 20:28:37 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.182 2007/09/17 20:57:14 phreak Exp $
+
+  17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing johnm from metadata.xml (see #186467 for reference).
 
 *hardened-sources-2.6.22-r4 (17 Sep 2007)
 

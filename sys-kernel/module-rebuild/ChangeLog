@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/module-rebuild
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.12 2007/07/15 11:55:22 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.13 2007/09/17 20:59:35 phreak Exp $
+
+  17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing johnm from metadata.xml (see #186467 for reference).
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Should belong to the kernel-misc herd, since x86-kernel has been deprecated
