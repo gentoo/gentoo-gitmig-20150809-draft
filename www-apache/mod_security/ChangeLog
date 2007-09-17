@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.4 2007/09/16 19:10:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.5 2007/09/17 20:41:14 wolf31o2 Exp $
+
+  17 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  mod_security-2.1.2.ebuild:
+  Stable on amd64 wrt bug #191973.
 
   16 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   mod_security-2.1.2.ebuild:
