@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.5.ebuild,v 1.4 2007/09/17 12:37:16 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.5.ebuild,v 1.5 2007/09/17 21:12:21 jokey Exp $
 
 inherit eutils kde flag-o-matic autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/kaffeine/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="dvb gstreamer xinerama vorbis encode kdehiddenvisibility xcb"
 
 RDEPEND=">=media-libs/xine-lib-1
