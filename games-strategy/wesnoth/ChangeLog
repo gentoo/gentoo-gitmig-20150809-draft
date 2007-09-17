@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.99 2007/09/17 00:09:22 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.100 2007/09/17 02:01:45 josejx Exp $
+
+  17 Sep 2007; Joseph Jezak <josejx@gentoo.org> wesnoth-1.2.6.ebuild:
+  Marked ppc/ppc64 stable for bug #190846.
 
   17 Sep 2007; Ferris McCormick <fmccor@gentoo.org> wesnoth-1.2.6.ebuild:
   Sparc stable --- Bug #190846 --- it's been working fine.
