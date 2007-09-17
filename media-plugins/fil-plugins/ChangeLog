@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/fil-plugins
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/ChangeLog,v 1.6 2007/02/22 02:13:54 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/ChangeLog,v 1.7 2007/09/17 20:39:47 phreak Exp $
+
+  17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing fvdpol from metadata.xml (see #51321 for reference).
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
