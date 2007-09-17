@@ -1,0 +1,25 @@
+diff -ur jokosher-0.9.orig/setup.py jokosher-0.9/setup.py
+--- jokosher-0.9.orig/setup.py	2007-03-07 04:22:42.000000000 +0200
++++ jokosher-0.9/setup.py	2007-09-17 19:03:00.000000000 +0300
+@@ -92,21 +92,6 @@
+ 	for fileNum in range(0, len(installedOmfFiles)):
+ 		call(["scrollkeeper-preinstall", HELPURI[fileNum],
+ 			installedOmfFiles[fileNum], installedOmfFiles[fileNum]])
+-		
+-	#Update the scrollkeeper catalog
+-	if os.geteuid() == 0:
+-		print "Updating the scrollkeeper index..."
+-		call(["scrollkeeper-update", "-o", installroot + omfdir])
+-
+-# Update the mime types
+-if os.geteuid() == 0 and dist != None:
+-	print "Updating the mime-types...."
+-	
+-	#update the mimetypes database
+-	call(["update-mime-database", "/usr/share/mime/"])
+-	
+-	#update the .desktop file database
+-	call(["update-desktop-database"])
+ 
+ print "\nInstallation finished! You can now run Jokosher by typing 'jokosher' or through your applications menu icon."
+ 	
