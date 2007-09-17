@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-1.1.4.ebuild,v 1.3 2007/08/11 15:04:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-1.1.4.ebuild,v 1.4 2007/09/17 13:03:53 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib
 
@@ -49,7 +49,7 @@ src_install() {
 	install_mozilla_launcher_stub seamonkey-bin ${MOZILLA_FIVE_HOME}
 
 	# Install icon and .desktop for menu entry
-	doicon ${FILESDIR}/icon/${PN}-icon.png
+	doicon ${FILESDIR}/icon/${PN}.png
 	domenu ${FILESDIR}/icon/${PN}.desktop
 }
 
