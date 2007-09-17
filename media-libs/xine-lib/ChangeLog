@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.481 2007/09/17 12:32:52 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.482 2007/09/17 21:09:20 jokey Exp $
+
+  17 Sep 2007; Markus Ullmann <jokey@gentoo.org> xine-lib-1.1.8.ebuild:
+  Stable on sparc wrt bug #192577
 
   17 Sep 2007; Lars Weiler <pylon@gentoo.org> xine-lib-1.1.8.ebuild:
   Stable on ppc; bug #192577.
