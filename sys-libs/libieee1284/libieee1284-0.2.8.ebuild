@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.8.ebuild,v 1.8 2007/06/27 07:27:29 opfer Exp $
-
-WANT_AUTOMAKE=1.7
-WANT_AUTOCONF=2.58
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.8.ebuild,v 1.9 2007/09/18 13:30:16 vapier Exp $
 
 inherit autotools eutils
 
@@ -17,12 +14,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
-		doc? ( app-text/docbook-sgml-utils
+	doc? (
+		app-text/docbook-sgml-utils
 		>=app-text/docbook-sgml-dtd-4.1
 		app-text/docbook-dsssl-stylesheets
-		dev-perl/XML-RegExp )"
+		dev-perl/XML-RegExp
+	)"
 
 src_unpack() {
 	unpack ${A}
