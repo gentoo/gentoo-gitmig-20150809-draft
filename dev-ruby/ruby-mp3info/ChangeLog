@@ -1,6 +1,22 @@
 # ChangeLog for dev-ruby/ruby-mp3info
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mp3info/ChangeLog,v 1.7 2007/02/22 01:16:08 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mp3info/ChangeLog,v 1.8 2007/09/18 18:26:48 graaff Exp $
+
+*ruby-mp3info-0.5.1 (18 Sep 2007)
+
+  18 Sep 2007; Hans de Graaff <graaff@gentoo.org>
+  +ruby-mp3info-0.5.1.ebuild:
+  Version bump:
+  * ADDED: Mp3Info#reload method to reload the file from the disk
+  * FIXED: bug [#2604] Not able to delete tag1
+  * FIXED: bug #3401 'id3v2.rb dies when trying to read a certain mp3'
+  * FIXED: bug #2957 'Error message "Can't define singleton"'
+  * FIXED: bug #3068 'require_gem ("ruby-mp3info") doesn't works'
+  * FIXED: bug #11967 "Leading 'h' from 'http://' gets chopped on URL fields"
+  * PATCHED: with patch #3157 'Fix for 64 bit Ruby'
+  
+  The last patch also fixes Gentoo bug #185711, thanks to James Le Cuirot for
+  reporting and tracking the issue.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
