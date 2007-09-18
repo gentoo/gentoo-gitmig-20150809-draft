@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/josm-1.5_p320.ebuild,v 1.2 2007/09/08 22:42:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/josm-1.5_p320.ebuild,v 1.3 2007/09/18 12:12:06 hanno Exp $
 
 inherit eutils
 
 MY_P=${PN}-snapshot-${PV/1.5_p/}
 DESCRIPTION="Java-based editor for the OpenStreetMap project"
-HOMEPAGE="http://josm.eigenheimstrasse.de/"
-SRC_URI="http://josm.eigenheimstrasse.de/download/${MY_P}.jar
+HOMEPAGE="http://josm.openstreetmap.de/"
+SRC_URI="http://josm.openstreetmap.de/download/${MY_P}.jar
 	linguas_de? ( mirror://gentoo/lang-de-20061020.jar )
 	linguas_en_GB? ( mirror://gentoo/lang-en_GB-20061020.jar )
 	linguas_fr? ( mirror://gentoo/lang-fr-20061020.jar )
