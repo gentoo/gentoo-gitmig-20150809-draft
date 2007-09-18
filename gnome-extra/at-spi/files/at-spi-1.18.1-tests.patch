@@ -1,0 +1,92 @@
+diff -NurdpB at-spi-1.18.1/atk-bridge/bridge.c at-spi-1.18.1-patched/atk-bridge/bridge.c
+--- at-spi-1.18.1/atk-bridge/bridge.c	2007-04-09 02:34:37.000000000 -0500
++++ at-spi-1.18.1-patched/atk-bridge/bridge.c	2007-09-18 05:08:39.000000000 -0500
+@@ -430,10 +430,23 @@ spi_atk_bridge_get_registry (void)
+ 	  
+ 	  if (ev._major != CORBA_NO_EXCEPTION)
+ 	  {
++		  gchar *err_desc = NULL;
++		  const CORBA_char *id = CORBA_exception_id (&ev);
++
++		  if (strcmp(id, "IDL:Bonobo/GeneralError:1.0") == 0)
++		  {
++			  Bonobo_GeneralError* ge = CORBA_exception_value (&ev);
++			  err_desc = g_strdup_printf ("bonobo activation problem: %s",
++				  ge->description);
++		  }
++
+ 		  g_error ("Accessibility app error: exception during "
+-			   "registry activation from id: %s\n",
+-			   CORBA_exception_id (&ev));
++			   "registry activation from id: %s\n"
++			   "Error description: %s\n", id, err_desc == NULL ? "-" : err_desc);
++
+ 		  CORBA_exception_free (&ev);
++		  if (err_desc != NULL)
++			  g_free (err_desc);
+ 	  }
+ 	  
+ 	  if (registry_died && registry) {
+diff -NurdpB at-spi-1.18.1/test/Makefile.am at-spi-1.18.1-patched/test/Makefile.am
+--- at-spi-1.18.1/test/Makefile.am	2007-04-09 01:37:04.000000000 -0500
++++ at-spi-1.18.1-patched/test/Makefile.am	2007-09-18 04:45:04.000000000 -0500
+@@ -39,9 +39,8 @@ INCLUDES = -I$(top_srcdir)           \
+ 
+ LDADD = ../libspi/libspi.la ../cspi/libcspi.la ../login-helper/libloginhelper.la $(TESTS_LIBS) $(X_LIBS) $(XINPUT_LIBS)
+ 
+-TESTS = test-simple
++TESTS = run-tests
+ 
+ TESTS_ENVIRONMENT =					\
+-	LD_LIBRARY_PATH=$(top_builddir)/libspi/.libs/:$(top_builddir)/cspi/.libs/	\
+-	PATH=$(top_builddir)/registryd/.libs
++	REGISTRYD=$(top_builddir)/registryd/at-spi-registryd /bin/sh
+ 
+diff -NurdpB at-spi-1.18.1/test/run-tests at-spi-1.18.1-patched/test/run-tests
+--- at-spi-1.18.1/test/run-tests	1969-12-31 19:00:00.000000000 -0500
++++ at-spi-1.18.1-patched/test/run-tests	2007-09-18 05:56:32.000000000 -0500
+@@ -0,0 +1,18 @@
++#! /bin/sh
++
++../libtool --mode=execute $REGISTRYD &
++regd_pid=$!
++
++while true; do
++	sleep 1
++	q=`bonobo-activation-run-query "has(repo_ids, 'IDL:Accessibility/Registry:1.0') && _active"`
++	echo $q | fgrep -q 'number of results: 0' || break
++done
++
++./test-simple
++exit_code=$?
++
++kill $regd_pid
++wait $regd_pid
++
++exit $exit_code
+diff -NurdpB at-spi-1.18.1/test/test-simple.c at-spi-1.18.1-patched/test/test-simple.c
+--- at-spi-1.18.1/test/test-simple.c	2007-04-09 01:37:04.000000000 -0500
++++ at-spi-1.18.1-patched/test/test-simple.c	2007-09-18 05:08:39.000000000 -0500
+@@ -714,7 +714,7 @@ test_keylisteners (void)
+ 	key_listener = SPI_createAccessibleKeystrokeListener (
+ 		key_listener_cb, &stroke);
+ 
+-	test_keyset = SPI_createAccessibleKeySet (1, "=", NULL, NULL);
++	test_keyset = SPI_createAccessibleKeySet (1, "t", NULL, NULL);
+ 
+ 	g_assert (SPI_registerAccessibleKeystrokeListener (
+ 		key_listener,
+@@ -725,11 +725,11 @@ test_keylisteners (void)
+ 
+ 	for (i = 0; i < 3; i++) {
+ 		memset (&stroke, 0, sizeof (AccessibleKeystroke));
+-		g_assert (SPI_generateKeyboardEvent ('=', NULL, SPI_KEY_SYM));
++		g_assert (SPI_generateKeyboardEvent ('t', NULL, SPI_KEY_SYM));
+ 		while (!(key_press_received))
+ 			g_main_context_iteration (NULL, TRUE);
+ 		fprintf (stderr, "p [%s]", stroke.keystring);
+-	        g_assert (!strcmp (stroke.keystring, "="));
++	        g_assert (!strcmp (stroke.keystring, "t"));
+ 		while (!(key_release_received))
+ 			g_main_context_iteration (NULL, TRUE);
+ 		fprintf (stderr, "r [%s]", stroke.keystring);

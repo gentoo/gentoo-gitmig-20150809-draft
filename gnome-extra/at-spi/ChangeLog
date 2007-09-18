@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.152 2007/08/28 18:37:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.153 2007/09/18 11:27:24 leonardop Exp $
+
+  18 Sep 2007; Leonardo Boshell <leonardop@gentoo.org>
+  +files/at-spi-1.18.1-tests.patch, at-spi-1.18.1-r1.ebuild:
+  Added patch to fix tests again, this time launching at-spi-regisitryd
+  manually instead of waiting for bonobo to do it (bug #188036).
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org> at-spi-1.18.1-r1.ebuild:
   Stable for HPPA (bug #185823).
