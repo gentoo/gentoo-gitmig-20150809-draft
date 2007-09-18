@@ -1,6 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.648 2007/09/18 12:45:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.649 2007/09/18 23:56:41 robbat2 Exp $
+
+  18 Sep 2007; Robin H. Johnson <robbat2@gentoo.org>
+  default-linux/alpha/use.mask, default-linux/arm/use.mask,
+  default-linux/hppa/use.mask, default-linux/m68k/use.mask,
+  default-linux/ppc/ppc64/use.mask, default-linux/ppc64/use.mask,
+  default-linux/s390/use.mask, default-linux/sh/use.mask,
+  hardened/ppc64/use.mask:
+  Mask USE=audit on alpha, arm, hppa, ppc64, s390, sh until they have
+  keyworded it per bug 184563.
 
   18 Sep 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Unmask app-emacs/slime-2.0_p20070816 CVS snapshot.

@@ -131,3 +131,8 @@ alsa_cards_interwave-stb
 
 # mask qt4 (does not work) - bug #178779
 qt4
+
+# USE=audit masked prior to testing on alpha, arm, hppa, ppc64, s390, sh.
+# Bug #184563, 18 Sep 2007 
+# Robin H. Johnson <robbat2@gentoo.org>
+audit
