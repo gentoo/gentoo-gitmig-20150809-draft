@@ -1,18 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/jdom-jaxen-1.0_beta9-r2.ebuild,v 1.3 2007/09/18 06:13:22 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/jdom-jaxen-1.0-r1.ebuild,v 1.1 2007/09/18 06:13:22 ali_bush Exp $
 
 JAVA_PKG_IUSE=""
 
 inherit base java-pkg-2
 
 MY_PN="jdom"
-MY_PV="b9"
-MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Jaxen binding for jdom."
 HOMEPAGE="www.jdom.org"
-SRC_URI="http://www.jdom.org/dist/source/archive/${MY_P}.tar.gz"
+SRC_URI="http://www.jdom.org/dist/source/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="JDOM"
 SLOT="${PV}"
@@ -20,17 +18,17 @@ KEYWORDS="~amd64"
 
 IUSE=""
 
-COMMON_DEP="~dev-java/jdom-1.0_beta9
+COMMON_DEP="~dev-java/jdom-${SLOT}
 			=dev-java/jaxen-1.1*
 			dev-java/saxpath"
 
 RDEPEND=">=virtual/jre-1.4
-	${COMMON_DEP}"
+		${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
-	app-arch/unzip
-	${COMMON_DEP}"
+		app-arch/unzip
+		${COMMON_DEP}"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_compile() {
 	cd "${S}/src/java/org/jdom/xpath/"
@@ -41,7 +39,7 @@ src_compile() {
 
 	mkdir -p "${S}/build/org/jdom/xpath" || die "Unable to create dir."
 	ejavac -d "${S}/build/" \
-		-classpath $(java-config -p jdom-1.0_beta9,jaxen-1.1,saxpath) \
+		-classpath $(java-config -p jdom-${SLOT},jaxen-1.1,saxpath) \
 		src/java/org/jdom/xpath/JaxenXPath.java
 
 	jar cf jdom-jaxen.jar -C build org || die "Failed to create jar."
@@ -49,6 +47,4 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar "${PN}.jar"
-	#use doc && java-pkg_dojavadoc build/javadoc
-	#use source && java-pkg_dosrc src
 }
