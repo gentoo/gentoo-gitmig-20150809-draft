@@ -1,0 +1,147 @@
+diff -Naur freenx-0.7.0.orig/node.conf freenx-0.7.0/node.conf
+--- freenx-0.7.0.orig/node.conf	2007-09-17 15:53:24.000000000 +0200
++++ freenx-0.7.0/node.conf	2007-09-17 15:53:08.000000000 +0200
+@@ -378,6 +378,9 @@
+ # When you installed a 2.0.0 NX Backend, set this to 1.
+ #ENABLE_2_0_0_BACKEND="0"
+ 
++# When you installed a 3.0.0 NX Backend, set this to 1.
++#ENABLE_3_0_0_BACKEND="0"
++
+ # When set to 1 this will automatically resume started sessions
+ #ENABLE_AUTORECONNECT="0"
+ 
+diff -Naur freenx-0.7.0.orig/nxloadconfig freenx-0.7.0/nxloadconfig
+--- freenx-0.7.0.orig/nxloadconfig	2007-09-17 15:53:24.000000000 +0200
++++ freenx-0.7.0/nxloadconfig	2007-09-17 15:53:07.000000000 +0200
+@@ -184,6 +184,7 @@
+ # Misc directives
+ 
+ ENABLE_2_0_0_BACKEND=""
++ENABLE_3_0_0_BACKEND=""
+ ENABLE_AUTORECONNECT="0"
+ ENABLE_AUTORECONNECT_BEFORE_140="1"
+ EXPORT_USERIP="0"
+@@ -275,13 +276,19 @@
+ [ -z "$AGENT_LIBRARY_PATH" ] && AGENT_LIBRARY_PATH=$PATH_LIB
+ [ -z "$PROXY_LIBRARY_PATH" ] && PROXY_LIBRARY_PATH=$PATH_LIB
+ [ -z "$APPLICATION_LIBRARY_PATH" ] && APPLICATION_LIBRARY_PATH=$PATH_LIB
+-[ -z "$APPLICATION_LIBRARY_PRELOAD" ] && APPLICATION_LIBRARY_PRELOAD="$APPLICATION_LIBRARY_PATH/libX11.so:$APPLICATION_LIBRARY_PATH/libXext.so:$APPLICATION_LIBRARY_PATH/libXcomp.so:$APPLICATION_LIBRARY_PATH/libXcompext.so:$APPLICATION_LIBRARY_PATH/libXrender.so"
++[ -z "$APPLICATION_LIBRARY_PRELOAD" ] && APPLICATION_LIBRARY_PRELOAD="$APPLICATION_LIBRARY_PATH/libX11.so:$APPLICATION_LIBRARY_PATH/libXext.so:$APPLICATION_LIBRARY_PATH/libXcomp.so:$APPLICATION_LIBRARY_PATH/libXcompext.so:$APPLICATION_LIBRARY_PATH/libXcompshad.so:$APPLICATION_LIBRARY_PATH/libXrender.so"
+ if [ -z "$ENABLE_2_0_0_BACKEND" ]
+ then
+ 	ENABLE_2_0_0_BACKEND="1"
+ 	[ -z "$(strings $REAL_PATH_BIN/nxagent | egrep 'NXAGENT - Version 2.[01].0')" ] && ENABLE_2_0_0_BACKEND="0"
+ fi 
+ 
++if [ -z "$ENABLE_3_0_0_BACKEND" ]
++then
++	ENABLE_3_0_0_BACKEND="1"
++	[ -z "$(strings $REAL_PATH_BIN/nxagent | egrep 'NXAGENT - Version 3.[01].0')" ] && ENABLE_3_0_0_BACKEND="0"
++fi
++
+ [ -z "$KDE_PRINTRC" -a -n "$KDEHOME" ] && KDE_PRINTRC="$KDEHOME/share/config/kdeprintrc"
+ [ -z "$KDE_PRINTRC" -o ! -r "$KDE_PRINTRC" ] && KDE_PRINTRC="$HOME/.kde/share/config/kdeprintrc"
+ 
+@@ -303,11 +310,11 @@
+ 	[ ! -f "$REAL_PATH_BIN/nxagent" ] && \
+ 		ERROR="yes" && echo "Error: Could not find nxagent in $PATH_BIN. Please install some OSS components."
+ 		
+-	[ ! -f "$PATH_BIN/nxdesktop" ] && \
+-		WARNING="yes" && echo "Warning: Could not find nxdesktop in $PATH_BIN. RDP sessions won't work."
++	[ ! -f "$PATH_BIN/rdesktop" ] && \
++		WARNING="yes" && echo "Warning: Could not find rdesktop in $PATH_BIN. RDP sessions won't work."
+ 		
+-	[ ! -f "$PATH_BIN/nxviewer" ] && \
+-		WARNING="yes" && echo "Warning: Could not find nxviewer in $PATH_BIN. VNC sessions won't work."
++	[ ! -f "$PATH_BIN/vncviewer" ] && \
++		WARNING="yes" && echo "Warning: Could not find vncviewer in $PATH_BIN. VNC sessions won't work."
+ 
+ 	# Check for paths
+ 		
+@@ -535,8 +542,8 @@
+ 	[ -z $(echo "$ENABLE_ROOTLESS_MODE" | egrep "^[0|1]$") ] && \
+ 		ERROR="yes" && echo "Error: Invalid value \"ENABLE_ROOTLESS_MODE=$ENABLE_ROOTLESS_MODE\""
+ 
+-	[ -z "$(strings $REAL_PATH_BIN/nxagent | egrep 'NXAGENT - Version 1.5.0|NXAGENT - Version 2.[01].0')" ] && \
+-		ERROR="yes" && echo "Error: Could not find 1.5.0 or 2.[01].0 version string in nxagent. NX 1.5.0 or 2.[01].0 backend is needed for this version of FreeNX."
++	[ -z "$(strings $REAL_PATH_BIN/nxagent | egrep 'NXAGENT - Version 1.5.0|NXAGENT - Version 2.[01].0|NXAGENT - Version 3.0.0')" ] && \
++		ERROR="yes" && echo "Error: Could not find 1.5.0, 2.[01].0 or 3.0.0 version string in nxagent. NX 1.5.0 to 3.0.0 backend is needed for this version of FreeNX."
+ 		
+ 	[ -z $(echo "$ENABLE_USESSION" | egrep "^[0|1]$") ] && \
+ 		ERROR="yes" && echo "Error: Invalid value \"ENABLE_USESSION=$ENABLE_USESSION\""
+diff -Naur freenx-0.7.0.orig/nxnode freenx-0.7.0/nxnode
+--- freenx-0.7.0.orig/nxnode	2007-09-17 15:53:24.000000000 +0200
++++ freenx-0.7.0/nxnode	2007-09-17 15:55:03.000000000 +0200
+@@ -414,7 +414,7 @@
+ 	# backingstore
+ 	
+ 	B=""
+-	if [ -n "$backingstore" -a "$ENABLE_2_0_0_BACKEND" != "1" ]
++	if [ -n "$backingstore" -a "$ENABLE_2_0_0_BACKEND" != "1" -a "$ENABLE_3_0_0_BACKEND" != "1" ]
+ 	then
+ 		[ "$backingstore" != 1 ] && B="-bs $backingstore"
+ 		[ "$backingstore" = 1 ] && B="+bs"
+@@ -424,6 +424,7 @@
+ 	
+ 	G=""
+ 	[ -n "$geometry" ] && G="-geometry $geometry"
++	[ -n "$geometry" -a "$type" = "windows" ] && G="-g $geometry"
+ 
+ 	# type of session
+ 	
+@@ -435,7 +436,7 @@
+ 	vncfullscreen=""
+ 	[ "$geometry" = "fullscreen" -a "$type" = "vnc" ] && vncfullscreen="-fullscreen" && G=""
+ 	
+-	[ "$geometry" = "fullscreen" -a "$type" = "windows" ] && G="-geometry `echo $screeninfo | cut -d"x" -f1,2`"
++	[ "$geometry" = "fullscreen" -a "$type" = "windows" ] && G="-g`echo $screeninfo | cut -d"x" -f1,2`"
+ 
+ 	#
+ 	# Start the wanted nxagent
+@@ -443,7 +444,7 @@
+ 
+ 	if [ "$type" = "windows" ]
+ 	then
+-		# nxdesktop session (Windows RDP)
++		# rdesktop session (Windows RDP)
+ 
+ 		[ "$SET_LD_LIBRARY_PATH" = "1" ] && export LD_LIBRARY_PATH="$AGENT_LIBRARY_PATH:$LD_LIBRARY_PATH"
+ 		# Setup optional parameters
+@@ -457,21 +458,21 @@
+ 
+ 		# Start the agent
+ 		
+-		echo "$agent_password" | $PATH_BIN/nxdesktop -name "NX - $user@$SERVER_NAME:$display - $session (GPL Edition)" -option "$USER_FAKE_HOME/.nx/C-$sess_id/options" $K $G $U $P $D $agent_server $AGENT_EXTRA_OPTIONS_RDP 2>&3 &
++		echo "$agent_password" | $PATH_BIN/rdesktop $G $U $P $D $agent_server $AGENT_EXTRA_OPTIONS_RDP 2>&3 &
+ 
+ 	elif [ "$type" = "vnc" ]
+ 	then
+-		# nxviewer session (VNC RFP)
++		# vncviewer session (VNC RFP)
+ 		
+ 		[ "$SET_LD_LIBRARY_PATH" = "1" ] && export LD_LIBRARY_PATH="$AGENT_LIBRARY_PATH:$LD_LIBRARY_PATH"
+ 		# Setup password
+ 		
+ 		mkdir -p "$USER_FAKE_HOME/.nx/C-$sess_id/scripts/"
+-		echo "$agent_password" | $PATH_BIN/nxpasswd "$USER_FAKE_HOME/.nx/C-$sess_id/scripts/.passwd" doit
++		echo "$agent_password" | $PATH_BIN/vncpasswd -f > "$USER_FAKE_HOME/.nx/C-$sess_id/scripts/.passwd"
+ 		
+ 		# Start the agent
+ 		
+-		$PATH_BIN/nxviewer -encodings tight hextile copyrect raw -passwd $USER_FAKE_HOME/.nx/C-$sess_id/scripts/.passwd -name "NX - $user@$SERVER_NAME:$display - $session (GPL Edition)" -option "$USER_FAKE_HOME/.nx/C-$sess_id/options" $vncfullscreen $G $K $agent_server $AGENT_EXTRA_OPTIONS_RFB 2>&3 &
++		$PATH_BIN/vncviewer -encodings "tight hextile copyrect raw" -passwd $USER_FAKE_HOME/.nx/C-$sess_id/scripts/.passwd $vncfullscreen $G $agent_server $AGENT_EXTRA_OPTIONS_RFB 2>&3 &
+ 
+ 	elif [ "$R" = "-R" -a "$rootless" != "1" ]
+ 	then
+@@ -942,8 +943,8 @@
+ 
+ node_start_monitor()
+ {
+-	[ "$ENABLE_2_0_0_BACKEND" = "1" ] && node_start_monitor_2_0_0 "$@"
+-	[ "$ENABLE_2_0_0_BACKEND" = "1" ] || node_start_monitor_1_5_0 "$@"
++	[ "$ENABLE_2_0_0_BACKEND" = "1" || "$ENABLE_3_0_0_BACKEND" = "1" ] && node_start_monitor_2_0_0 "$@"
++	[ "$ENABLE_2_0_0_BACKEND" = "1" || "$ENABLE_3_0_0_BACKEND" = "1" ] || node_start_monitor_1_5_0 "$@"
+ }
+ 
+ #
