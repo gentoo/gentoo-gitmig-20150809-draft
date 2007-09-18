@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-ssl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.9 2007/08/24 20:47:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.10 2007/09/18 09:43:14 angelos Exp $
+
+  18 Sep 2007; Christoph Mende <angelos@gentoo.org> ocaml-ssl-0.4.2.ebuild:
+  Stable on amd64
 
   24 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   ocaml-ssl-0.4.2.ebuild:
