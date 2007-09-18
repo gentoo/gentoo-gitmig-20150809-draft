@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93-r1.ebuild,v 1.7 2007/08/21 05:13:44 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93-r1.ebuild,v 1.8 2007/09/18 22:18:32 betelgeuse Exp $
 
 # TODO: if 'doc' use flag is used then should build also extra docs ('docs' ant target), currently it cannot
 #       be built as it needs forrest which we do not have
@@ -42,6 +42,16 @@ DEPEND=">=virtual/jdk-1.4
 #		=dev-java/junit-3.8*
 #		dev-java/xmlunit
 #	)"
+
+pkg_setup() {
+	if ! built_with_use dev-java/xmlgraphics-commons jpeg; then
+		msg="${CATEGORY}/${P} needs dev-java/xmlgraphics-commons built with"
+		msg="${msg} the jpeg use flag"
+		eerror ${msg}
+		die "Recompile dev-java/xmlgraphics-commons with the jpeg use flag"
+	fi
+	java-pkg-2_pkg_setup
+}
 
 src_unpack() {
 	unpack "${A}"

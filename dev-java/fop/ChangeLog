@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.53 2007/08/29 13:54:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.54 2007/09/18 22:18:32 betelgeuse Exp $
+
+  18 Sep 2007; Petteri Räty <betelgeuse@gentoo.org> fop-0.93-r1.ebuild:
+  Add a built_with_use check for dev-java/xmlgraphics-commons and the jpeg use
+  flag. Fixes bug #192980.
 
   29 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> fop-0.20.5-r7.ebuild:
   Remove dependency on ant-tasks as split ant is stable.
