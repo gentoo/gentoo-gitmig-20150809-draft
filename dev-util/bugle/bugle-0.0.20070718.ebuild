@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/bugle-0.0.20070718.ebuild,v 1.1 2007/09/17 10:38:46 jokey Exp $
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/bugle-0.0.20070718.ebuild,v 1.2 2007/09/18 08:22:40 jokey Exp $
 
 inherit autotools toolchain-funcs
 
@@ -20,7 +17,6 @@ DEPEND="ffmpeg? ( media-video/ffmpeg )
 	gtk? ( >=x11-libs/gtk+-2.4.0 >=x11-libs/gtkglext-1.0.0 )
 	readline? ( sys-libs/readline )
 	sys-libs/ncurses"
-
 RDEPEND="${DEPEND}"
 
 src_compile() {
@@ -34,7 +30,7 @@ src_compile() {
 		$(use_with gtk) \
 		$(use_with gtk gtkglext) \
 		|| die "econf failed"
-	emake DESTDIR="${D}" || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {

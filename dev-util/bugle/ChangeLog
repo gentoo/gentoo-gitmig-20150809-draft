@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bugle
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/ChangeLog,v 1.3 2007/09/17 10:38:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/ChangeLog,v 1.4 2007/09/18 08:22:40 jokey Exp $
+
+  18 Sep 2007; Markus Ullmann <jokey@gentoo.org> bugle-0.0.20070718.ebuild:
+  QA improvement
 
 *bugle-0.0.20070718 (17 Sep 2007)
 
