@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrobin/jrobin-1.5.4.ebuild,v 1.1 2007/09/16 20:25:02 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrobin/jrobin-1.5.4.ebuild,v 1.2 2007/09/18 06:36:31 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -26,8 +26,7 @@ src_unpack() {
 	cd "${S}"
 
 	einfo "Removing bundled jars and classes"
-	find "${S}" -name "*.class" -print -delete
-	find "${S}" -name "*.jar" -print -delete
+	find "${S}" '(' -name '*.class' -o -name '*.jar' ')' -print -delete
 }
 
 EANT_BUILD_XML="ant/build.xml"
