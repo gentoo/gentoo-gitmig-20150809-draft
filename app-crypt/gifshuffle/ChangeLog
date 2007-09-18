@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/gifshuffle
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gifshuffle/ChangeLog,v 1.1 2007/09/18 15:18:23 drizzt Exp $
+
+*gifshuffle-2.0 (18 Sep 2007)
+
+  18 Sep 2007; Timothy Redaelli <drizzt@gentoo.org> +metadata.xml,
+  +gifshuffle-2.0.ebuild:
+  New ebuild
+
