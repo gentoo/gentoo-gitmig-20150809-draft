@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.647 2007/09/17 22:26:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.648 2007/09/18 12:45:48 ulm Exp $
+
+  18 Sep 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Unmask app-emacs/slime-2.0_p20070816 CVS snapshot.
 
   17 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
   default-linux/amd64/2007.0/package.use.mask,
