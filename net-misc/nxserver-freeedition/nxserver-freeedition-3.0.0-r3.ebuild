@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.0.0-r3.ebuild,v 1.1 2007/09/18 21:01:47 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.0.0-r3.ebuild,v 1.2 2007/09/18 21:52:53 voyageur Exp $
 
 inherit eutils
 
@@ -33,8 +33,8 @@ pkg_preinst()
 src_unpack()
 {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/nxserver-3.0.0-r3-setup.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/nxserver-3.0.0-r3-setup.patch
 }
 
 src_install()
@@ -43,11 +43,9 @@ src_install()
 	# with libraries installed for FreeNX
 
 	into /usr/NX
-	for x in nxserver ; do
-		dobin bin/$x
-	done
+	dobin bin/nxserver
 
-	dodir /usr/NX/etc
+	dodir /usr/NX/etc/keys
 	insinto /usr/NX/etc
 	doins etc/administrators.db.sample
 	doins etc/guests.db.sample
@@ -58,15 +56,12 @@ src_install()
 
 	newins etc/server-debian.cfg.sample server-gentoo.cfg.sample
 
-	cp -R etc/keys ${D}/usr/NX/etc || die
+	insinto /usr/NX
+	doins -r home lib scripts
+	cp -R share "${D}"/usr/NX || die "Unable to install share folder"
+	cp -R var "${D}"/usr/NX || die "Unable to install var folder"
 
-	cp -R home ${D}/usr/NX || die
-	cp -R lib ${D}/usr/NX || die
-	cp -R scripts ${D}/usr/NX || die
-	cp -R share ${D}/usr/NX || die
-	cp -R var ${D}/usr/NX || die
-
-	newinitd ${FILESDIR}/nxserver-2.1.0-init nxserver
+	newinitd "${FILESDIR}"/nxserver-2.1.0-init nxserver
 }
 
 pkg_postinst ()
@@ -77,10 +72,10 @@ pkg_postinst ()
 	# only run install when no configuration file is found
 	if [ -f /usr/NX/etc/server.cfg ]; then
 		einfo "Running NoMachine's update script"
-		${ROOT}/usr/NX/scripts/setup/nxserver --update
+		"${ROOT}"/usr/NX/scripts/setup/nxserver --update
 	else
 		einfo "Running NoMachine's setup script"
-		${ROOT}/usr/NX/scripts/setup/nxserver --install
+		"${ROOT}"/usr/NX/scripts/setup/nxserver --install
 	fi
 
 	elog "Remember to add nxserver to your default runlevel"
