@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/siege
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.40 2007/09/12 02:27:45 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.41 2007/09/18 14:59:21 jer Exp $
+
+  18 Sep 2007; Jeroen Roovers <jer@gentoo.org> siege-2.66.ebuild:
+  Marked ~hppa too.
 
 *siege-2.66 (12 Sep 2007)
 
