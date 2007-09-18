@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2007.07.27.ebuild,v 1.1 2007/09/16 12:28:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2007.07.27.ebuild,v 1.2 2007/09/18 03:46:35 dragonheart Exp $
 
 inherit fixheadtails toolchain-funcs
 
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake -C testing
+	emake -C testing || die
 }
 
 # NOTE Testing mechanism is currently broken:

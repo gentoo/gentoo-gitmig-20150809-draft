@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2006.06.03.ebuild,v 1.9 2007/07/12 02:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2006.06.03.ebuild,v 1.10 2007/09/18 03:46:35 dragonheart Exp $
 
 inherit toolchain-funcs
 
@@ -21,7 +21,7 @@ S=${WORKDIR}/${MY_P}
 src_compile() {
 	sed -i -e "s/gcc.*-O2/$(tc-getCC) ${CFLAGS}/g" testing/Makefile
 	sed -i -e 's/-1/-n 1/g' testing/*.sh
-	emake -C testing
+	emake -C testing || die
 }
 
 # NOTE Testing mechanism is currently broken:
