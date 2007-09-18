@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/libiptcdata-1.0.2.ebuild,v 1.2 2007/09/17 15:14:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/libiptcdata-1.0.2.ebuild,v 1.3 2007/09/18 06:23:16 eva Exp $
 
 inherit eutils
 
@@ -22,15 +22,13 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 src_compile () {
-	local myconf="$(use_enable nls) \
+	econf "$(use_enable nls) \
 		$(use_enable python) \
-		$(use_enable doc gtk-doc)"
-
-	econf ${myconf} || die
+		$(use_enable doc gtk-doc)" || die
 	emake || die
 }
 
 src_install () {
-	emake DESTDIR=${D} install || die
-	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING INSTALL NEWS README TODO
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }
