@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.18.0-r1.ebuild,v 1.1 2007/08/22 02:57:52 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.18.0-r1.ebuild,v 1.2 2007/09/18 18:51:56 dang Exp $
 
 inherit gnome2 eutils autotools
 
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable ese vumeter)
+	G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable esd vumeter)
 	--disable-esdtest"
 }
 
