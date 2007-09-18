@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libx86
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.1 2007/09/17 13:03:55 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.2 2007/09/18 19:46:46 alonbl Exp $
+
+  18 Sep 2007; Alon Bar-Lev <alonbl@gentoo.org> libx86-0.99.ebuild:
+  Add die thanks to vapier
 
 *libx86-0.99 (17 Sep 2007)
 

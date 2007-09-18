@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/libx86-0.99.ebuild,v 1.1 2007/09/17 13:03:55 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/libx86-0.99.ebuild,v 1.2 2007/09/18 19:46:46 alonbl Exp $
 
 inherit eutils
 
@@ -27,9 +27,9 @@ src_compile() {
 	if use amd64; then
 		ARGS="BACKEND=x86emu"
 	fi
-	emake ${ARGS}
+	emake ${ARGS} || die
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
+	emake install DESTDIR="${D}" || die
 }
