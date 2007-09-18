@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.810.ebuild,v 1.1 2007/08/10 14:49:55 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.810.ebuild,v 1.2 2007/09/18 08:41:27 jurek Exp $
 
 inherit multilib toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.ntfs-3g.org/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="suid"
 
 RDEPEND=">=sys-fs/fuse-2.6.3"
