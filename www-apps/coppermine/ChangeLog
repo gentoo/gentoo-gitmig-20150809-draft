@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/coppermine
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.18 2007/07/29 17:25:37 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.19 2007/09/18 04:20:51 wrobel Exp $
+
+*coppermine-1.4.13 (18 Sep 2007)
+
+  18 Sep 2007; <wrobel@gentoo.org> +coppermine-1.4.13.ebuild:
+  Added coppermine 1.4.13 to the tree (sec issue #192869).
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> coppermine-1.4.9.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to
