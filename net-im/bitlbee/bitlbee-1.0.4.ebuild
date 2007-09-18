@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.4.ebuild,v 1.1 2007/09/05 21:35:23 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.4.ebuild,v 1.2 2007/09/18 20:39:50 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -91,8 +91,8 @@ src_compile() {
 	use ssl && use !gnutls && use !nss && \
 		myconf="${myconf} --ssl=openssl"
 
-	if ( ( use jabber && ( use gnutls || use ssl || use nss ) ) \
-		|| use msn ) &&  use !gnutls && use !ssl && use !nss; then
+	if ( use jabber || use msn ) \
+		&&  use !ssl && use !gnutls && use !nss; then
 		myconf="${myconf} --ssl=bogus"
 	fi
 
