@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.104 2007/09/01 13:11:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.105 2007/09/18 15:46:19 dang Exp $
+
+  18 Sep 2007; Daniel Gryniewicz <dang@gentoo.org> rhythmbox-0.10.1.ebuild:
+  Warn if ipod is given withou hal; bug #191700
 
   01 Sep 2007; nixnut <nixnut@gentoo.org> rhythmbox-0.10.1.ebuild:
   Stable on ppc wrt bug 185186

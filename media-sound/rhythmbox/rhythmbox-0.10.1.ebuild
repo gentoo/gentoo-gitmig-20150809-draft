@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.10.1.ebuild,v 1.7 2007/09/01 13:11:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.10.1.ebuild,v 1.8 2007/09/18 15:46:19 dang Exp $
 
 inherit gnome2 eutils
 
@@ -59,6 +59,10 @@ pkg_setup() {
 		ewarn "to be installed. Please remerge with either"
 		ewarn "USE=avahi or USE=howl"
 		fi
+	fi
+	if ! use hal && use ipod; then
+		ewarn "ipod support requires hal support.  Please"
+		ewarn "re-emerge with USE=hal to enable ipod support"
 	fi
 	if use howl || use avahi ; then
 		G2CONF="${G2CONF} $(use_enable daap)"
