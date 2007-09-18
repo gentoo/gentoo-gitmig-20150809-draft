@@ -1,18 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.61.ebuild,v 1.6 2007/05/01 00:15:44 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.67.ebuild,v 1.1 2007/09/18 14:37:36 drac Exp $
 
 inherit eutils
 
 DESCRIPTION="Real Time mp3 player"
-HOMEPAGE="http://www.mpg123.de/"
+HOMEPAGE="http://www.mpg123.de"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-LICENSE="LGPL-2.1"
+LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="mmx 3dnow alsa oss sdl esd nas jack portaudio"
+IUSE="3dnow 3dnowext alsa altivec esd jack mmx nas oss sdl sse portaudio"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	sdl? ( !alsa? ( !oss? ( media-libs/libsdl ) ) )
@@ -20,7 +19,6 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	nas? ( !alsa? ( !oss? ( !sdl? ( !esd? ( media-libs/nas ) ) ) ) )
 	jack? ( !alsa? ( !oss? ( !sdl? ( !esd? ( !nas? ( media-sound/jack-audio-connection-kit ) ) ) ) ) )
 	portaudio? ( !alsa? ( !oss? ( !sdl? ( !esd? ( !nas? ( !jack? ( media-libs/portaudio ) ) ) ) ) ) )"
-
 DEPEND="${RDEPEND}"
 
 PROVIDE="virtual/mpg123"
@@ -40,14 +38,18 @@ src_compile() {
 	elif use jack; then
 		audiodev="jack"
 	elif use portaudio; then
-		audiodev="portaudio"
-	elif use ppc-macos; then
-		audiodev="macosx";
+		audiodev="portaudio";
 	else audiodev="dummy"
 	fi
 
-	if use 3dnow; then
+	if use altivec; then
+		myconf="--with-cpu=altivec"
+	elif use 3dnowext; then
+		myconf="--with-cpu=3dnowext"
+	elif use 3dnow; then
 		myconf="--with-cpu=3dnow"
+	elif use sse; then
+		myconf="--with-cpu=sse"
 	elif use mmx; then
 		myconf="--with-cpu=mmx"
 	fi
@@ -59,14 +61,14 @@ src_compile() {
 	elog "and recompile ${PN}."
 	epause 5
 
-	econf \
-		--with-optimization=0 \
-		--with-audio=$audiodev \
-		${myconf} || die "econf failed"
+	econf --with-optimization=0 \
+		--with-audio=${audiodev} \
+		${myconf} || die "econf failed."
 
-	emake || die "emake failed"
+	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed."
+	dodoc AUTHORS ChangeLog NEWS README
 }
