@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.61 2007/08/26 19:31:01 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.62 2007/09/18 23:50:03 cardoe Exp $
+
+*nvidia-drivers-100.14.19 (18 Sep 2007)
+
+  18 Sep 2007; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-100.14.19.ebuild:
+  new drivers from nVidia. no FreeBSD support.
 
   26 Aug 2007; Anant Narayanan <anant@gentoo.org> Manifest:
   Fix Manifest
