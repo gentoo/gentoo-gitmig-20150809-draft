@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/jpilot-backup
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.9 2007/08/29 16:50:35 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.10 2007/09/18 19:49:56 philantrop Exp $
+
+*jpilot-backup-0.53 (18 Sep 2007)
+
+  18 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +jpilot-backup-0.53.ebuild:
+  Version bump to 0.53 for compatibility with app-pda/pilot-link-0.12.2 as per
+  bug 148462.
 
   29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing agriffis from metadata due to his retirement (see #182294 for
