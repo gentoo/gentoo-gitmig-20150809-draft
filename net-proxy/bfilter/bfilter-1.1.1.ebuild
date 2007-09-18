@@ -1,8 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.1.1.ebuild,v 1.1 2007/09/17 22:38:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.1.1.ebuild,v 1.2 2007/09/18 09:46:48 mrness Exp $
 
 WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="none"
 
 inherit eutils autotools
 
