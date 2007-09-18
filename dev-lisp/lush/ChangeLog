@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/lush
 # Copyright 2000-2007 Gentoo Foundation and Matthew Kennedy <mkennedy@gentoo.org>; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/ChangeLog,v 1.10 2007/07/22 08:02:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/ChangeLog,v 1.11 2007/09/18 17:28:55 hkbst Exp $
+
+*lush-1.2.1 (18 Sep 2007)
+
+  18 Sep 2007; Marijn Schouten <hkBst@gentoo.org> +files/aclocal.m4.patch,
+  +lush-1.2.1.ebuild:
+  bump, fixes bug 171349, add amd64, fixes bug 192831
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> lush-1.0.ebuild,
   lush-1.1.ebuild:
