@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/clientform-0.2.7.ebuild,v 1.2 2007/09/16 11:39:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/clientform-0.2.7.ebuild,v 1.3 2007/09/18 09:41:51 angelos Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://wwwsearch.sourceforge.net/ClientForm/"
 SRC_URI="http://wwwsearch.sourceforge.net/ClientForm/src/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc x86"
+KEYWORDS="amd64 ~ia64 ~ppc x86"
 IUSE="examples"
 
 S="${WORKDIR}/${MY_P}"
