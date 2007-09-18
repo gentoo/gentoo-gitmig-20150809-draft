@@ -1,9 +1,12 @@
 # ChangeLog for media-sound/gsm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/ChangeLog,v 1.17 2007/09/16 18:31:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/ChangeLog,v 1.18 2007/09/18 13:00:08 drac Exp $
+
+  18 Sep 2007; Samuli Suominen <drac@gentoo.org> gsm-1.0.12.ebuild:
+  Install include to /usr/include/gsm instead of /usr/include wrt #192481.
 
   16 Sep 2007; Samuli Suominen <drac@gentoo.org> gsm-1.0.12.ebuild:
-  Fix libraries installation on multilib for bug 192716.
+  Fix library installation on multilib systems wrt #192716.
 
 *gsm-1.0.12 (19 Aug 2007)
 

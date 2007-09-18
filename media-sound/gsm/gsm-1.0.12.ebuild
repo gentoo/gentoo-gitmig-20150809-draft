@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.12.ebuild,v 1.2 2007/09/16 18:31:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.12.ebuild,v 1.3 2007/09/18 13:00:08 drac Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -32,11 +32,11 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin /usr/$(get_libdir) /usr/include /usr/share/man/man{1,3}
+	dodir /usr/bin /usr/$(get_libdir) /usr/include/gsm /usr/share/man/man{1,3}
 
 	emake -j1 INSTALL_ROOT="${D}"/usr \
 		GSM_INSTALL_LIB="${D}"/usr/$(get_libdir) \
-		GSM_INSTALL_INC="${D}"/usr/include \
+		GSM_INSTALL_INC="${D}"/usr/include/gsm \
 		GSM_INSTALL_MAN="${D}"/usr/share/man/man3 \
 		TOAST_INSTALL_MAN="${D}"/usr/share/man/man1 \
 		install || die "emake install failed."
