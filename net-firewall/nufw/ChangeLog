@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/nufw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.15 2007/08/24 20:45:36 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.16 2007/09/18 21:34:17 cedk Exp $
+
+  18 Sep 2007; Cédric Krier <cedk@gentoo.org> nufw-2.0.19.ebuild,
+  nufw-2.0.20.ebuild, nufw-2.2.4.ebuild:
+  Remove pic useflag for bug #192884
 
   24 Aug 2007; Cédric Krier <cedk@gentoo.org>
   -files/nufw-2.2.0-nuauth_command.patch, -nufw-2.2.0.ebuild:
