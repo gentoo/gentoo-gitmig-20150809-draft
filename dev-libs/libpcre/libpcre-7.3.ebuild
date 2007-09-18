@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.3.ebuild,v 1.2 2007/09/18 09:57:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.3.ebuild,v 1.3 2007/09/18 13:41:20 vapier Exp $
 
 inherit libtool eutils
 
@@ -18,12 +18,11 @@ IUSE="doc unicode"
 DEPEND="dev-util/pkgconfig"
 RDEPEND=""
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/pcre-7.1-pic.patch"
 	elibtoolize
 }
 
@@ -39,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc doc/*.txt AUTHORS
 	use doc && dohtml doc/html/*
