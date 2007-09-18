@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.3-r2.ebuild,v 1.8 2007/06/28 18:23:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.3-r2.ebuild,v 1.9 2007/09/18 18:53:39 mrness Exp $
 
-WANT_AUTOCONF=2.59
+WANT_AUTOCONF=latest
 WANT_AUTOMAKE=none
 
 inherit eutils fixheadtails autotools qt3
