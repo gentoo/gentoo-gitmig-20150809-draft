@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/jpilot-syncmal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/ChangeLog,v 1.5 2007/08/29 16:51:22 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/ChangeLog,v 1.6 2007/09/18 05:18:43 philantrop Exp $
+
+*jpilot-syncmal-0.80 (18 Sep 2007)
+
+  18 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  jpilot-syncmal-0.72.1.ebuild, +jpilot-syncmal-0.80.ebuild:
+  Version bump to 0.80. Adjusted dependency on pilot-link for 0.72.1 to fix
+  bug 186019.
 
   29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing agriffis from metadata due to his retirement (see #182294 for
