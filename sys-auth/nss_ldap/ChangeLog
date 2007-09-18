@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.40 2007/02/08 07:14:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.41 2007/09/18 23:18:35 robbat2 Exp $
+
+*nss_ldap-257 (18 Sep 2007)
+
+  18 Sep 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/nss_ldap-257-nss_max_group_depth.patch, +nss_ldap-257.ebuild:
+  Version bump per bug #173383. Fixes SIGPIPE issue from bugs #166519,
+  #162355. Includes bug #155492: nss_max_group_depth patch.
 
   08 Feb 2007; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Note ldap-bugs mail alias.
