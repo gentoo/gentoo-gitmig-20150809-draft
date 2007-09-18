@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.2.4-r1.ebuild,v 1.4 2006/11/03 03:01:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.2.4-r1.ebuild,v 1.5 2007/09/18 04:38:06 mr_bones_ Exp $
 
 inherit eutils
 
@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~sparc x86"
 IUSE="doc"
 
 DEPEND="virtual/opengl
+	virtual/glu
 	>=media-libs/allegro-4.0.0"
 
 S=${WORKDIR}/${MY_PN}
