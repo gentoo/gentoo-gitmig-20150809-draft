@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.17 2007/09/17 11:44:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.18 2007/09/18 21:17:13 hansmi Exp $
+
+  18 Sep 2007; Michael Hanselmann <hansmi@gentoo.org> files/smokeping.init:
+  Set LC_ALL before starting smokeping. This allows 2.2.x to start when
+  LC_NUMERIC is set.
 
 *smokeping-2.2.4 (17 Sep 2007)
 

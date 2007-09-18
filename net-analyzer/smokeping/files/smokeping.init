@@ -25,6 +25,7 @@ start() {
 	checkconfig || return 1
 
 	ebegin "Starting smokeping"
+	LC_ALL=C \
 	start-stop-daemon --start --name smokeping \
 		--exec /usr/bin/smokeping \
 		--chuid smokeping:smokeping
