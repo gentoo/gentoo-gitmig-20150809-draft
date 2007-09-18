@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.182 2007/09/06 16:03:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.183 2007/09/18 14:00:23 jer Exp $
+
+  18 Sep 2007; Jeroen Roovers <jer@gentoo.org> totem-2.18.3.ebuild:
+  Stable for HPPA too.
 
   06 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org> totem-2.18.2.ebuild,
   totem-2.18.3.ebuild:
