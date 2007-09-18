@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/jpilot-Mail
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-Mail/ChangeLog,v 1.1 2007/09/18 17:11:15 philantrop Exp $
+
+*jpilot-Mail-0.1.7 (18 Sep 2007)
+
+  18 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/jpilot-Mail-0.1.7.patch, +metadata.xml, +jpilot-Mail-0.1.7.ebuild:
+  Initial ebuild based upon bug 86017. Thanks to Serhij S. Stasyuk.
+
