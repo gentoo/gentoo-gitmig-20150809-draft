@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.56 2007/09/16 08:27:50 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.57 2007/09/18 06:14:56 ali_bush Exp $
+
+*jdom-1.0-r4 (18 Sep 2007)
+*jdom-1.0_beta10-r6 (18 Sep 2007)
+
+  18 Sep 2007; <alistair@gentoo.org> +jdom-1.0_beta10-r6.ebuild,
+  +jdom-1.0-r4.ebuild:
+  Rev bumping jdom to fix SRC_URI error.
 
 *jdom-1.0-r3 (16 Sep 2007)
 *jdom-1.0_beta10-r5 (16 Sep 2007)
