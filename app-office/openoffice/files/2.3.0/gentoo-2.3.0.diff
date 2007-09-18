@@ -1,0 +1,94 @@
+--- bin/package-ooo 
++++ bin/package-ooo 
+@@ -57,6 +57,7 @@
+ #!/bin/sh
+ export OOO_EXTRA_ARG='$2'
++unset PYTHONPATH
+ $OOINSTBASE/program/ooqstart $3 "\$@"
+ EOT
+     chmod 755 $1
+ }
+--- patches/src680/apply 
++++ patches/src680/apply 
+@@ -80,8 +80,8 @@
+ Frugalware: LinuxCommon, GnomeVFS, GlobalDesktopFiles, NonArkCommon, NoRpath, NovellOnly, NovellOnlyUnix, NotDebian, FrugalwareOnly, CalcSolver, OOXML
+ QiLinux: LinuxCommon, GlobalDesktopFiles
+ #Gentoo
+-GentooBase : LinuxCommon, GentooOnly, NotDebian, Lockdown, CalcSolver, CairoFonts, BerkeleyDB43, STLport5
+-GentooUnstable: GentooBase, GentooExperimental, OOXML, OOXSTLport5
++GentooBase : LinuxCommon, GentooOnly, NotDebian, Lockdown, CalcSolver, CairoFonts, BerkeleyDB43, STLport5, OOXML, OOXSTLport5
++GentooUnstable: GentooBase, GentooExperimental
+ Gentoo : GentooBase
+ Gentoo64: GentooBase
+ # rPath Linux
+@@ -719,6 +719,10 @@
+ 
+ # fixes linking dependency in the reportdesign module
+ buildfix-reportdesign-util-dep.diff, i#81550, pmladek
++
++# don't define -DCURL_NO_OLDIES, breaks with curl 7.17.0
++# Debian #442338, Debian #442368
++ucb-no-CURL_NO_OLDIES.diff
+ 
+ [ NovellOnlyWin32 ]
+ SectionOwner => tml
+@@ -1055,18 +1055,8 @@
+ [ GentooExperimental ]
+ SectionOwner => hmth
+ 
+-# deliver - sshhhh....
+-silent_deliver-i79798.diff, i#79798
+ # Gnu JRE paths.
+ gentooexperimental-gnujre.diff
+-# unused java code
+-disable-parser-jaxp.diff
+-# default inc/lib
+-config_office-XINC-XLIB-defaults.diff, i#65976
+-# gdi/font.cxx: stl list error
+-vcl_font-NO_LIST.diff
+-# linux-headers-2.6.22 issue?!
+-linux-headers.diff
+ 
+ [ GentooOnly ]
+ SectionOwner => aprosky
+@@ -1081,6 +1071,17 @@
+ system-db-check.diff, i#65979, hmth
+ # User ~/.ooo-2.0 as user dir
+ scp2-user-config-ooo-2.0.diff, pmladek
++# deliver - sshhhh....
++silent_deliver-i79798.diff, i#79798
++# unused java code
++disable-parser-jaxp.diff
++# default inc/lib
++config_office-XINC-XLIB-defaults.diff, i#65976
++# gdi/font.cxx: stl list error
++vcl_font-NO_LIST.diff
++# linux-headers-2.6.22 issue?!
++linux-headers.diff
++
+ 
+ [ DebianBaseOnly ]
+ SectionOwner => rengelha
+
+--- distro-configs/Gentoo.conf.in 
++++ distro-configs/Gentoo.conf.in 
+@@ -3,7 +3,6 @@
+ --enable-libsn
+ --enable-xsltproc
+ --with-dynamic-xinerama
+---with-stlport=/usr
+ --with-system-boost
+ --with-system-curl
+ --with-system-db
+--- configure.in 
++++ configure.in 
+@@ -1024,7 +1024,7 @@
+ UPSTREAM_NAME=
+ UPSTREAM_SOURCE=
+ UPSTREAM_URI=
+-if test "$with_tag" = "OOG680_m3" ; then # more milestones to come...
++if test "$with_tag" = "OOG680_m5" ; then # more milestones to come...
+    UPSTREAM_NAME="OOo_2.3.0_src"
+    if test "z$with_mirror" != "z" ; then
+       UPSTREAM_SOURCE="MIRROR"
+
