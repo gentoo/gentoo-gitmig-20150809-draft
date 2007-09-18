@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.114 2007/09/18 05:12:38 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.115 2007/09/18 19:45:41 philantrop Exp $
+
+  18 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  no-nptl/2.4/package.mask:
+  Added =app-pda/jpilot-backup-0.53 as it requires app-pda/pilot-link-0.12.2.
 
   18 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
   no-nptl/2.4/package.mask:

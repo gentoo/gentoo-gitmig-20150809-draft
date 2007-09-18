@@ -1,13 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.127 2007/09/18 05:12:37 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.128 2007/09/18 19:45:40 philantrop Exp $
 
 # Wulf C. Krueger <philantrop@gentoo.org> (18 Sep 2007)
-# requires app-pda/pilot-link-0.12.2 which you'll find below.
+# require app-pda/pilot-link-0.12.2 which you'll find below.
+=app-pda/jpilot-backup-0.53
 =app-pda/jpilot-syncmal-0.80
-
-# Wulf C. Krueger <philantrop@gentoo.org> (17 Sep 2007)
-# requires app-pda/pilot-link-0.12.2 which you'll find below.
 =dev-libs/libmal-0.44
 
 # Markus Ullmann <jokey@gentoo.org> (17 Sep 2007)
