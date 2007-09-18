@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8-r1.ebuild,v 1.18 2007/01/11 18:19:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8-r1.ebuild,v 1.19 2007/09/18 21:04:18 philantrop Exp $
 
 inherit perl-module eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc ~x86"
 IUSE="perl java tk python png readline"
 
-DEPEND="virtual/libc
-	sys-libs/ncurses
+DEPEND="sys-libs/ncurses
 	perl? ( dev-lang/perl )
 	java? ( virtual/jre )
 	tk? ( dev-lang/tcl dev-tcltk/itcl dev-lang/tk )
@@ -26,22 +25,25 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-java_fPIC_fix.patch
+	epatch "${FILESDIR}/${P}-java_fPIC_fix.patch"
 
 	if use java; then
 		if use ppc; then
-			epatch ${FILESDIR}/${P}-java_install_ppc.patch
+			epatch "${FILESDIR}/${P}-java_install_ppc.patch"
 		elif use amd64; then
-			epatch ${FILESDIR}/${P}-java_install_amd64.patch
+			epatch "${FILESDIR}/${P}-java_install_amd64.patch"
 		else
-			epatch ${FILESDIR}/${P}-java_install_all.patch
+			epatch "${FILESDIR}/${P}-java_install_all.patch"
 		fi
 	fi
 
 	epatch "${FILESDIR}"/${P}-m4.patch
 
+	# fixes bug 162209
+	epatch "${FILESDIR}/${P}-missing-include.patch"
+
 	# bug #62873
-	cd ${S}/libpisock; epatch ${FILESDIR}/${P}-netsync.patch
+	cd "${S}/libpisock"; epatch "${FILESDIR}/${P}-netsync.patch"
 }
 
 src_compile() {
@@ -74,14 +76,14 @@ src_compile() {
 	make || die
 
 	if use perl ; then
-		cd ${S}/bindings/Perl
+		cd "${S}/bindings/Perl"
 		perl-module_src_prep
 		perl-module_src_compile
 	fi
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc ChangeLog README doc/README* doc/TODO NEWS AUTHORS
 
