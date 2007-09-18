@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.66 2007/09/11 21:05:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.67 2007/09/18 18:22:04 aballier Exp $
+
+  18 Sep 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/sox-14.0.0-noexternalgsm.patch, sox-14.0.0.ebuild:
+  disable support for external gsm lib for now until it installs correct libs
+  (pic), bug #192736
 
 *sox-14.0.0 (11 Sep 2007)
 

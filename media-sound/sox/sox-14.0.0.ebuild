@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.0.0.ebuild,v 1.1 2007/09/11 21:05:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.0.0.ebuild,v 1.2 2007/09/18 18:22:04 aballier Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -26,6 +26,16 @@ DEPEND="alsa? ( media-libs/alsa-lib )
 # Fails to compile here ...
 # amrnb? ( media-libs/amrnb )
 # amrwb? ( media-libs/amrwb )
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Disable external gsm lib support until it installs properly the lib
+	# Bug #192736
+	epatch "${FILESDIR}/${P}-noexternalgsm.patch"
+	AT_M4DIR="${S}/m4" eautoreconf
+}
 
 src_compile () {
 	# Fixes wav segfaults. See Bug #35745.

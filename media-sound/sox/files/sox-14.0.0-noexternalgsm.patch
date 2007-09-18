@@ -1,0 +1,15 @@
+Index: sox-14.0.0/configure.ac
+===================================================================
+--- sox-14.0.0.orig/configure.ac
++++ sox-14.0.0/configure.ac
+@@ -186,8 +186,8 @@ fi
+ AM_CONDITIONAL(HAVE_SUN_AUDIO, test x$enable_sun_audio = xyes)
+ 
+ dnl Check for libgsm
+-AC_CHECK_HEADERS(gsm/gsm.h, found_libgsm=yes,
+-    [AC_CHECK_HEADERS(gsm.h, found_libgsm=yes)])
++AC_CHECK_HEADERS(gsm/gsm.h, found_libgsm=blah,
++    [AC_CHECK_HEADERS(gsm.h, found_libgsm=blah)])
+ if test "$found_libgsm" = yes; then
+     AC_CHECK_LIB(gsm, gsm_create, GSM_LIBS="$GSM_LIBS -lgsm")
+     AC_DEFINE(EXTERNAL_GSM, 1, [Define if you are using an external GSM library])
