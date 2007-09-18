@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.3.ebuild,v 1.1 2007/09/17 19:36:33 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.3.ebuild,v 1.2 2007/09/18 09:57:11 angelos Exp $
 
 inherit libtool eutils
 
@@ -23,6 +23,7 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/pcre-7.1-pic.patch"
 	elibtoolize
 }
 
