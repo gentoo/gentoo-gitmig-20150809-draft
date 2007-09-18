@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.0.ebuild,v 1.1 2007/09/18 07:27:55 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.0.ebuild,v 1.2 2007/09/18 11:23:58 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -9,7 +9,7 @@ inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 
 
 IUSE="binfilter cairo cups dbus debug eds firefox gnome gstreamer gtk kde ldap mono sound odk pam seamonkey webdav xulrunner"
 
-MY_PV="2.3.0.1.2"
+MY_PV="2.3.0.1.90"
 PATCHLEVEL="OOG680"
 SRC="OOo_${PV}_src"
 S="${WORKDIR}/ooo"
@@ -19,7 +19,7 @@ DESCRIPTION="OpenOffice.org, a full office productivity suite."
 
 SRC_URI="mirror://openoffice/stable/${PV}/${SRC}_core.tar.bz2
 	binfilter? ( mirror://openoffice/stable/${PV}/${SRC}_binfilter.tar.bz2 )
-	http://go-oo.org/packages/OOG680/ooo-build-${MY_PV}.tar.gz
+	mirror://gentoo/ooo-build-${MY_PV}.tar.gz
 	odk? ( mirror://openoffice/stable/${PV}/${SRC}_sdk.tar.bz2
 		java? ( http://tools.openoffice.org/unowinreg_prebuild/680/unowinreg.dll ) )
 	http://go-oo.org/packages/SRC680/extras-2.tar.bz2
@@ -199,8 +199,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 	epatch ${FILESDIR}/${PV}/ooo-env_log.diff
-
-	cp -f ${FILESDIR}/${PV}/ucb-no-CURL_NO_OLDIES.diff ${S}/patches/src680 || die
 
 	if use ppc ; then
 		cp -f ${FILESDIR}/${PV}/disable-regcomp-java.diff ${S}/patches/src680 || die
