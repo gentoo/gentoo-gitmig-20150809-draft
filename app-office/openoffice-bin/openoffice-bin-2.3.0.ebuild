@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.3.0.ebuild,v 1.1 2007/09/17 11:57:59 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.3.0.ebuild,v 1.2 2007/09/18 05:53:50 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -110,6 +110,7 @@ src_install () {
 
 	# Install wrapper script
 	newbin ${FILESDIR}/wrapper.in ooffice
+	sed -i -e s/LIBDIR/$(get_libdir)/g ${D}/usr/bin/ooffice || die
 
 	# Component symlinks
 	for app in base calc draw impress math writer; do
@@ -140,7 +141,7 @@ pkg_postinst() {
 
 	eselect oodict update --libdir $(get_libdir)
 
-	[[ -x /sbin/chpax ]] && [[ -e /usr/lib/openoffice/program/soffice.bin ]] && chpax -zm /usr/lib/openoffice/program/soffice.bin
+	[[ -x /sbin/chpax ]] && [[ -e /usr/$(get_libdir)/openoffice/program/soffice.bin ]] && chpax -zm /usr/$(get_libdir)/openoffice/program/soffice.bin
 
 	elog " To start OpenOffice.org, run:"
 	elog

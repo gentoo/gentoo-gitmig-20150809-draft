@@ -1,4 +1,4 @@
 #!/bin/sh
 export OOO_EXTRA_ARG=''
 unset PYTHONPATH
-/usr/lib/openoffice/program/soffice  "$@"
+/usr/LIBDIR/openoffice/program/soffice  "$@"
