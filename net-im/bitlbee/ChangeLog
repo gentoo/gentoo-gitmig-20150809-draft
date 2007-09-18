@@ -1,6 +1,13 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.85 2007/09/18 21:16:12 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.86 2007/09/18 21:28:29 cedk Exp $
+
+  18 Sep 2007; Cédric Krier <cedk@gentoo.org>
+  -files/bitlbee-0.80-xinetd.patch, -files/bitlbee-0.82-segv.diff,
+  -files/bitlbee-0.84-passport.diff, -bitlbee-0.92.ebuild,
+  -bitlbee-0.92-r1.ebuild, -bitlbee-0.92-r2.ebuild, -bitlbee-0.92-r3.ebuild,
+  -bitlbee-0.99.ebuild, -bitlbee-1.0.ebuild:
+  Remove old
 
 *bitlbee-1.1 (18 Sep 2007)
 
