@@ -1,8 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.21 2007/08/07 09:53:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.22 2007/09/19 09:24:33 calchan Exp $
 
-WANT_AUTOCONF=1.9
 WANT_AUTOMAKE=1.4
 inherit eutils autotools
 

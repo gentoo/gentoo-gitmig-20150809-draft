@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libstroke
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/ChangeLog,v 1.23 2007/08/07 09:53:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/ChangeLog,v 1.24 2007/09/19 09:24:33 calchan Exp $
+
+  19 Sep 2007; Denis Dupeyron <calchan@gentoo.org> metadata.xml,
+  libstroke-0.5.1.ebuild:
+  Removed incorrect WANT_AUTOCONF statement, see bug #192942.
 
   07 Aug 2007; Roy Marples <uberlord@gentoo.org> libstroke-0.5.1.ebuild:
   Keyworded ~x86-fbsd, #141142 thanks to Robert Annessi
