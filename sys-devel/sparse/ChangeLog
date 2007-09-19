@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/sparse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.11 2007/09/18 03:35:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.12 2007/09/19 19:35:07 maekke Exp $
+
+  19 Sep 2007; Markus Meier <maekke@gentoo.org> sparse-0.3-r1.ebuild:
+  x86 stable, bug #192849
 
   18 Sep 2007; Jeroen Roovers <jer@gentoo.org> sparse-0.3-r1.ebuild:
   Stable for HPPA (bug #192849).
