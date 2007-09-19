@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.16 2007/09/02 16:05:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.17 2007/09/19 11:12:08 armin76 Exp $
+
+*qbittorrent-1.0.0_beta7 (19 Sep 2007)
+
+  19 Sep 2007; Raúl Porcel <armin76@gentoo.org>
+  -qbittorrent-1.0.0_beta6.ebuild, +qbittorrent-1.0.0_beta7.ebuild:
+  Version bump
 
 *qbittorrent-1.0.0_beta6 (02 Sep 2007)
 
