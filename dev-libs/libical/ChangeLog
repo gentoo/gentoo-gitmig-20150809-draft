@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libical
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.36 2007/09/12 22:55:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.37 2007/09/19 21:25:33 pylon Exp $
+
+  19 Sep 2007; Lars Weiler <pylon@gentoo.org> libical-0.26.7.ebuild:
+  Stable on ppc; bug #191035.
 
   12 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> libical-0.26.7.ebuild:
   Stable on amd64 wrt bug #191035.
