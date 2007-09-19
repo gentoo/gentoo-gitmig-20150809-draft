@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.113 2007/09/19 10:09:33 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.114 2007/09/19 10:40:52 stefaan Exp $
+
+  19 Sep 2007; Stefaan De Roeck <stefaan@gentoo.org>
+  +files/openafs-ppc64.patch, openafs-1.4.4_p20070724-r1.ebuild:
+  Fix for ppc64 (bug #191216)
 
 *openafs-1.4.4_p20070724-r1 (19 Sep 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.4_p20070724-r1.ebuild,v 1.1 2007/09/19 10:09:33 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.4_p20070724-r1.ebuild,v 1.2 2007/09/19 10:40:52 stefaan Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs versionator
 
@@ -39,6 +39,8 @@ src_unpack() {
 	sed -i 's/^[ \t]*XCFLAGS.*//' src/cf/osconf.m4
 
 	epatch ${DISTDIR}/${MY_P}-cvs${MY_PV_DATE}.patch.bz2
+
+	epatch ${FILESDIR}/openafs-ppc64.patch
 
 	./regen.sh || die "Failed: regenerating configure script"
 }
