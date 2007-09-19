@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.4.ebuild,v 1.8 2007/08/28 19:27:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.4.ebuild,v 1.9 2007/09/19 15:42:49 dang Exp $
 
 inherit eutils pam gnome2
 
@@ -19,12 +19,13 @@ SRC_URI="${SRC_URI}
 		 mirror://gentoo/${GDM_EXTRA}.tar.bz2
 		 branding? ( mirror://gentoo/gentoo-gdm-theme-r3.tar.bz2 )"
 
+# glib dep is because of bug #193061
 RDEPEND="pam?	(
 					virtual/pam
 					sys-auth/consolekit
 				)
 	!pam? ( elibc_glibc? ( sys-apps/shadow ) )
-	>=dev-libs/glib-2.8
+	>=dev-libs/glib-2.12
 	>=x11-libs/gtk+-2.6
 	>=x11-libs/pango-1.3
 	>=gnome-base/libglade-2
