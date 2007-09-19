@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.3.6.ebuild,v 1.7 2007/01/31 21:06:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.3.6.ebuild,v 1.8 2007/09/19 03:33:55 dirtyepic Exp $
 
 WX_GTK_VER="2.6"
 
@@ -15,7 +15,7 @@ LICENSE="MIT"
 KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="spell"
 
-DEPEND=">x11-libs/wxGTK-2.6
+DEPEND="=x11-libs/wxGTK-2.6*
 	>=sys-libs/db-3
 	spell? ( >=app-text/gtkspell-2.0.0 )"
 
