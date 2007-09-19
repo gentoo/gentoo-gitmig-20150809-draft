@@ -140,8 +140,8 @@ diff -Naur freenx-0.7.0.orig/nxnode freenx-0.7.0/nxnode
  {
 -	[ "$ENABLE_2_0_0_BACKEND" = "1" ] && node_start_monitor_2_0_0 "$@"
 -	[ "$ENABLE_2_0_0_BACKEND" = "1" ] || node_start_monitor_1_5_0 "$@"
-+	[ "$ENABLE_2_0_0_BACKEND" = "1" || "$ENABLE_3_0_0_BACKEND" = "1" ] && node_start_monitor_2_0_0 "$@"
-+	[ "$ENABLE_2_0_0_BACKEND" = "1" || "$ENABLE_3_0_0_BACKEND" = "1" ] || node_start_monitor_1_5_0 "$@"
++	[ "$ENABLE_2_0_0_BACKEND" = "1" -o "$ENABLE_3_0_0_BACKEND" = "1" ] && node_start_monitor_2_0_0 "$@"
++	[ "$ENABLE_2_0_0_BACKEND" = "1" -o "$ENABLE_3_0_0_BACKEND" = "1" ] || node_start_monitor_1_5_0 "$@"
  }
  
  #
