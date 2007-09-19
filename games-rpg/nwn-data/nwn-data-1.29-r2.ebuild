@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r2.ebuild,v 1.2 2007/09/05 12:25:18 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r2.ebuild,v 1.3 2007/09/19 12:49:33 calchan Exp $
 
 inherit eutils games
 
@@ -492,6 +492,7 @@ if [[ ! -a nwn.ini ]]; then \
 fi \
 if [[ -r ./nwmovies.so ]]; then \
 	export LD_PRELOAD=./nwmovies.so:$LD_PRELOAD \
+	export SDL_AUDIODRIVER=alsa \
 fi \
 if [[ -r ./nwmouse.so ]]; then \
 	export XCURSOR_PATH="$(pwd)" \
