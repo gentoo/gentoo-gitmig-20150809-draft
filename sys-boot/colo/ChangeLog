@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/colo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.19 2007/07/02 15:30:39 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.20 2007/09/19 04:14:12 redhatter Exp $
+
+  19 Sep 2007; Stuart Longland <redhatter@gentoo.org> -colo-1.19.ebuild,
+  -colo-1.21.ebuild:
+  Clean up old versions of CoLo.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> colo-1.19.ebuild,
   colo-1.21.ebuild, colo-1.22.ebuild:
