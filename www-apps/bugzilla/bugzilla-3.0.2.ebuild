@@ -1,12 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.0.1.ebuild,v 1.1 2007/09/03 07:20:54 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.0.2.ebuild,v 1.1 2007/09/19 14:55:47 wrobel Exp $
 
 inherit webapp depend.apache versionator eutils
 
+GZ_PV="3.0.1"
+
 DESCRIPTION="Bugzilla is the Bug-Tracking System from the Mozilla project"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz
-	linguas_de? ( http://ganderbay.net/dl/germzilla-${PV}-1.utf-8.tar.gz  )"
+	linguas_de? ( http://ganderbay.net/dl/germzilla-${GZ_PV}-1.utf-8.tar.gz  )"
 HOMEPAGE="http://www.bugzilla.org"
 
 LICENSE="MPL-1.1 NPL-1.1"
