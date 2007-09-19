@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.19.92.ebuild,v 1.1 2007/09/04 21:56:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.20.0.ebuild,v 1.1 2007/09/19 17:35:11 dang Exp $
 
-WANT_AUTOMAKE="1.9"
+WANT_AUTOMAKE="1.10"
 inherit eutils gnome2 autotools
 
 DESCRIPTION="Simple document viewer for GNOME"

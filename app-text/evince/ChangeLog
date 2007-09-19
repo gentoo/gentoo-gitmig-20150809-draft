@@ -1,6 +1,19 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.117 2007/09/04 21:56:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.118 2007/09/19 17:35:11 dang Exp $
+
+*evince-2.20.0 (19 Sep 2007)
+
+  19 Sep 2007; Daniel Gryniewicz <dang@gentoo.org> -evince-2.19.92.ebuild,
+  +evince-2.20.0.ebuild:
+  Bump to 2.20.0
+  
+  * Forms support broken by forgotten ifdef fix (Carlos Garcia Campos)
+  
+  * Issue with making a copy and xfer to different file system (Carlos Garcia
+  Campos)
+  
+  * Desktop file fixes (Götz Waschk)
 
 *evince-2.19.92 (04 Sep 2007)
 
