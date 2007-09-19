@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.14.ebuild,v 1.1 2007/08/30 19:06:27 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.14.ebuild,v 1.2 2007/09/19 20:14:58 alonbl Exp $
+
+inherit eutils
 
 DESCRIPTION="library for accessing smart card terminals"
 HOMEPAGE="http://www.opensc-project.org/openct/"

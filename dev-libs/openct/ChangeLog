@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.46 2007/08/30 19:06:27 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.47 2007/09/19 20:14:58 alonbl Exp $
+
+  19 Sep 2007; Alon Bar-Lev <alonbl@gentoo.org> openct-0.6.14.ebuild:
+  Add eutils, bug#192958, thanks to Robert Kerr
 
 *openct-0.6.14 (30 Aug 2007)
 
