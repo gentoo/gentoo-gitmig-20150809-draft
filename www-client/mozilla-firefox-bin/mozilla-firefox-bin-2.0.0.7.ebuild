@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.7.ebuild,v 1.1 2007/09/19 09:10:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.7.ebuild,v 1.2 2007/09/19 17:35:15 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -11,6 +11,8 @@ DESCRIPTION="Firefox Web Browser"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/linux-i686/en-US/firefox-${PV}.tar.gz"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip"
+QA_EXECSTACK="opt/firefox/extensions/talkback@mozilla.org/components/libqfaservices.so"
+QA_TEXTRELS="opt/firefox/extensions/talkback@mozilla.org/components/libqfaservices.so"
 
 KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
