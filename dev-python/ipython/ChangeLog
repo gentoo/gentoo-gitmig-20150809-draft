@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.40 2007/07/26 18:17:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.41 2007/09/19 23:42:25 hawking Exp $
+
+  19 Sep 2007; Ali Polatel <hawking@gentoo.org> ipython-0.6.15.ebuild:
+  updated SRC_URI; bug 192906
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org> ipython-0.8.1.ebuild:
   Added ~ppc64; bug #186188
