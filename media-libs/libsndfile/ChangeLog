@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.73 2007/09/19 16:16:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.74 2007/09/19 19:21:13 maekke Exp $
+
+  19 Sep 2007; Markus Meier <maekke@gentoo.org> libsndfile-1.0.17-r1.ebuild:
+  x86 stable, security bug #192834
 
   19 Sep 2007; Jeroen Roovers <jer@gentoo.org> libsndfile-1.0.17-r1.ebuild:
   Stable for HPPA (bug #192834).
