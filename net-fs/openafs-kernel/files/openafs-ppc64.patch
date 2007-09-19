@@ -1,0 +1,29 @@
+--- src/afs/afs_call.c.old	2007-09-09 14:38:44.000000000 +0400
++++ src/afs/afs_call.c	2007-09-09 14:50:18.460222354 +0400
+@@ -1340,7 +1340,11 @@ copyin_iparam(caddr_t cmarg, struct ipar
+     if (current->thread.flags & THREAD_IA32)
+ 
+ #elif defined(AFS_PPC64_LINUX26_ENV)
+-    if (current->thread_info->flags & _TIF_32BIT) 
++#if defined(STRUCT_TASK_STRUCT_HAS_THREAD_INFO)
++    if (current->thread_info->flags & _TIF_32BIT)
++#else
++    if (current_thread_info()->flags & _TIF_32BIT)
++#endif
+ #elif defined(AFS_PPC64_LINUX20_ENV)
+     if (current->thread.flags & PPC_FLAG_32BIT) 
+ 
+--- src/afs/afs_pioctl.c.bak	2007-09-18 01:12:03.000000000 -0400
++++ src/afs/afs_pioctl.c	2007-09-18 01:12:40.000000000 -0400
+@@ -284,7 +284,11 @@
+     if (current->thread.flags & THREAD_IA32)
+ 
+ #elif defined(AFS_PPC64_LINUX26_ENV)
++#if defined(STRUCT_TASK_STRUCT_HAS_THREAD_INFO)
+     if (current->thread_info->flags & _TIF_32BIT)
++#else
++    if (current_thread_info()->flags & _TIF_32BIT)
++#endif
+ #elif defined(AFS_PPC64_LINUX20_ENV)
+     if (current->thread.flags & PPC_FLAG_32BIT)
+ 
