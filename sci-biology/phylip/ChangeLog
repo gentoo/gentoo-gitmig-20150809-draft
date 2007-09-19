@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/phylip
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.26 2007/08/30 21:00:59 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.27 2007/09/19 18:32:04 ribosome Exp $
+
+*phylip-3.67 (19 Sep 2007)
+
+  19 Sep 2007; Olivier Fisette <ribosome@gentoo.org> files/README.Gentoo,
+  +phylip-3.67.ebuild:
+  New upstream version. (Thanks to Arfrever Frehtes Taifersar Arahesis
+  <arfrever.fta@gmail.com> for reporting. See bug #191869)
 
   30 Aug 2007; Olivier Fisette <ribosome@gentoo.org> phylip-3.66.ebuild:
   Added to ~amd64.
