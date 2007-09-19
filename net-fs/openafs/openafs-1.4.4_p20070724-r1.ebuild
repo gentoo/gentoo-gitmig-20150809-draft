@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.4_p20070724-r1.ebuild,v 1.2 2007/09/19 10:40:52 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.4_p20070724-r1.ebuild,v 1.3 2007/09/19 14:50:44 stefaan Exp $
 
-inherit flag-o-matic eutils linux-mod toolchain-funcs versionator
+inherit flag-o-matic eutils linux-mod toolchain-funcs versionator pam
 
 PATCHVER=0.13
 MY_PV_DATE=${PV#*_p}
@@ -70,8 +70,8 @@ src_install() {
 
 	# pam_afs and pam_afs.krb have been installed in irregular locations, fix
 	if use pam; then
-		dodir /$(get_libdir)/security
-		mv ${D}/usr/$(get_libdir)/pam_afs* ${D}/$(get_libdir)/security
+		dopammod "${D}"/usr/$(get_libdir)/pam_afs*
+		rm -f "${D}"/usr/$(get_libdir)/pam_afs*
 	fi
 
 	# compile_et collides with com_err.  Remove it from this package.
