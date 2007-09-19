@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.11-r1.ebuild,v 1.5 2007/09/17 13:00:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.11-r1.ebuild,v 1.6 2007/09/19 18:05:02 pylon Exp $
 
 #WANT_AUTOMAKE=1.6
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/libdnet/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 hppa ia64 ppc ~ppc64 sparc x86"
 IUSE="python"
 
 src_unpack() {
