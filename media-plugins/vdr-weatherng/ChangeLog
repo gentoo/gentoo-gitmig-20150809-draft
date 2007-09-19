@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-weatherng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.18 2007/09/19 10:36:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.19 2007/09/19 16:02:31 hd_brummy Exp $
+
+  19 Sep 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -files/vdr-weatherng-0.0.5.diff,
+  -files/vdr-weatherng-0.0.8_pre2-gentoo.diff,
+  -files/commands.weatherng.conf, -files/confd, -files/rc-addon.sh,
+  -vdr-weatherng-0.0.5.ebuild, -vdr-weatherng-0.0.8_pre2.ebuild,
+  vdr-weatherng-0.0.8_pre3.ebuild:
+  clean up; fixed Homepage, stabel on x86
 
   19 Sep 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/vdr-weatherng-0.0.8_pre3-i18n-fix.diff,

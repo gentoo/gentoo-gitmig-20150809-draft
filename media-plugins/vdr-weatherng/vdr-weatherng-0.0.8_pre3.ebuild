@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3.ebuild,v 1.7 2007/09/19 10:36:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3.ebuild,v 1.8 2007/09/19 16:02:31 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -8,12 +8,12 @@ MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="VDR plugin: show weather for specified place"
-HOMEPAGE="http://beejay.vdr-developer.org/"
+HOMEPAGE="http://www.vdr.glaserei-franz.de/vdrplugins.htm"
 SRC_URI="mirror://vdrfiles/${PN}/${MY_P}.tgz"
 
 LICENSE="GPL-2 stardock-images"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="dxr3"
 
 DEPEND="media-libs/imlib2
