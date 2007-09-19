@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/farsight-0.1.18.ebuild,v 1.1 2007/04/30 22:08:59 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/farsight-0.1.25.ebuild,v 1.1 2007/09/19 08:06:57 tester Exp $
 
 DESCRIPTION="FarSight is an audio/video conferencing framework specifically designed for Instant Messengers."
 HOMEPAGE="http://farsight.freedesktop.org/"
@@ -9,18 +9,17 @@ SRC_URI="http://farsight.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="jingle doc"
+IUSE="jingle doc test"
 # msn yahoo
 SLOT="0"
 
 RDEPEND="=media-libs/gstreamer-0.10*
-	>=media-plugins/gst-plugins-farsight-0.12.0
+	>=media-plugins/gst-plugins-farsight-0.12.5
 	>=dev-libs/glib-2.6
 	dev-libs/libxml2
 	doc? ( >=dev-util/gtk-doc-1.5 )
-	jingle? ( >=net-libs/libjingle-0.3.11 )"
-	# Next version has unit tests
-	#test? ( >=dev-libs/check-0.9.4 ) "
+	jingle? ( >=net-libs/libjingle-0.3.11 )
+	test? ( >=dev-libs/check-0.9.4 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
