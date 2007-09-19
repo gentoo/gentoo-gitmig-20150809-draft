@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.0.ebuild,v 1.2 2007/09/18 11:23:58 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.0.ebuild,v 1.3 2007/09/19 20:31:45 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -116,6 +116,7 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.33.1
 	dev-libs/libxslt
 	>=dev-libs/libxml2-2.0
+	dev-util/gperf
 	>=net-misc/curl-7.9.8
 	sys-libs/zlib
 	sys-apps/coreutils

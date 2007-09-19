@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.338 2007/09/18 11:23:58 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.339 2007/09/19 20:31:45 suka Exp $
+
+  19 Sep 2007; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.3.0.ebuild:
+  Add missing dependency on dev-util/gperf, see bug #193079
 
   18 Sep 2007; Andreas Proschofsky <suka@gentoo.org>
   files/2.3.0/gentoo-2.3.0.diff, openoffice-2.3.0.ebuild:
