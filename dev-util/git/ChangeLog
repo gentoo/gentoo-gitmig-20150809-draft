@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.218 2007/09/19 20:55:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.219 2007/09/19 22:51:52 pylon Exp $
+
+  19 Sep 2007; Lars Weiler <pylon@gentoo.org> git-1.5.2.5.ebuild:
+  Stable on ppc; bug #193113.
 
   19 Sep 2007; Markus Meier <maekke@gentoo.org> git-1.5.2.5.ebuild:
   x86 stable, bug #193113
