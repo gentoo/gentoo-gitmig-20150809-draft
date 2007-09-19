@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.1.ebuild,v 1.8 2007/09/14 16:45:36 nixnut Exp $
-
-WANT_AUTOMAKE=latest
-WANT_AUTOCONF=latest
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.1.ebuild,v 1.9 2007/09/19 22:32:54 omp Exp $
 
 inherit elisp-common eutils autotools
 
