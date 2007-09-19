@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.37 2007/09/18 09:59:40 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.38 2007/09/19 11:50:32 calchan Exp $
+
+  19 Sep 2007; Denis Dupeyron <calchan@gentoo.org> geda-1.1.1.ebuild:
+  Fixed guile dependency.
 
 *geda-1.2.0 (18 Sep 2007)
 
