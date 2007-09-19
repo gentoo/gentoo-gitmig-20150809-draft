@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgis
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.28 2007/04/11 14:41:31 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.29 2007/09/19 15:57:45 calchan Exp $
+
+  19 Sep 2007; Denis Dupeyron <calchan@gentoo.org> postgis-1.2.0.ebuild:
+  Fixed typo, see bug #193013.
 
   11 Apr 2007; Luca Longinotti <chtekk@gentoo.org> postgis-1.2.0.ebuild:
   Fix bug #167271.

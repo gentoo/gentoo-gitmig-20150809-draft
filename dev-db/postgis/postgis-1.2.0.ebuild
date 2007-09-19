@@ -1,8 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.2.0.ebuild,v 1.4 2007/04/11 14:41:31 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.2.0.ebuild,v 1.5 2007/09/19 15:57:45 calchan Exp $
 
-WANT_AUTOCONF="lastest"
 inherit autotools eutils versionator
 
 KEYWORDS="~amd64 ~ppc ~x86"
