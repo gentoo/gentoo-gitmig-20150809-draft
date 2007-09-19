@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.4.5.ebuild,v 1.1 2007/08/31 13:53:48 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.4.5.ebuild,v 1.2 2007/09/19 16:09:35 chutzpah Exp $
 
 # NOTE: this ebuild is a regular ebuild without mailer-config support!
 # Comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
@@ -161,6 +161,9 @@ src_unpack() {
 
 	sed -i -e "/^#define ALIAS_DB_MAP/s|hash:/etc/aliases|hash:/etc/mail/aliases|" \
 		src/util/sys_defs.h || die "sed failed"
+
+	# change default paths to better comply with portage standard paths
+	sed -i -e "s:/usr/local/:/usr/:g" conf/master.cf || die "sed failed"
 }
 
 src_compile() {
