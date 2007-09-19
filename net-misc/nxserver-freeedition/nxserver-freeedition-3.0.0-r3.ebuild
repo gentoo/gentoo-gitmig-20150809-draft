@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.0.0-r3.ebuild,v 1.2 2007/09/18 21:52:53 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.0.0-r3.ebuild,v 1.3 2007/09/19 14:51:03 voyageur Exp $
 
 inherit eutils
 
@@ -56,8 +56,9 @@ src_install()
 
 	newins etc/server-debian.cfg.sample server-gentoo.cfg.sample
 
-	insinto /usr/NX
-	doins -r home lib scripts
+	cp -R home ${D}/usr/NX || die "Unable to install home folder"
+	cp -R lib ${D}/usr/NX || die "Unable to install lib folder"
+	cp -R scripts ${D}/usr/NX || die "Unable to install scripts folder"
 	cp -R share "${D}"/usr/NX || die "Unable to install share folder"
 	cp -R var "${D}"/usr/NX || die "Unable to install var folder"
 
@@ -72,10 +73,10 @@ pkg_postinst ()
 	# only run install when no configuration file is found
 	if [ -f /usr/NX/etc/server.cfg ]; then
 		einfo "Running NoMachine's update script"
-		"${ROOT}"/usr/NX/scripts/setup/nxserver --update
+		"${ROOT}"/usr/NX/scripts/setup/nxserver --update || die "Update script failed"
 	else
 		einfo "Running NoMachine's setup script"
-		"${ROOT}"/usr/NX/scripts/setup/nxserver --install
+		"${ROOT}"/usr/NX/scripts/setup/nxserver --install || die "Installation script failed"
 	fi
 
 	elog "Remember to add nxserver to your default runlevel"
