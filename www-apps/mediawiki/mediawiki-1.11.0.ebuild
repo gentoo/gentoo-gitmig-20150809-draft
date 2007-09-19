@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.0.ebuild,v 1.1 2007/09/17 14:49:24 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.11.0.ebuild,v 1.2 2007/09/19 14:49:56 wrobel Exp $
 
 inherit webapp depend.php versionator
 
@@ -82,6 +82,7 @@ src_install() {
 		"includes"
 		"includes/api"
 		"includes/cbt"
+		"includes/filerepo"
 		"includes/media"
 		"includes/normal"
 		"includes/templates"
