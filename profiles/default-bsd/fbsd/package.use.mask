@@ -1,3 +1,7 @@
+# Donnie Berkholz <dberkholz@gentoo.org> (18 Sep 2007)
+# No nvidia drivers work on fbsd with xorg-server 1.4 yet
+=x11-base/xorg-server-1.4* video_cards_nvidia
+
 # Doug Goldstein <cardoe@gentoo.org> (10 Sep 2007)
 # Joe Marcus Clarke is working on FreeBSD consolekit support
 # Currently there are kernel bugs and such. Requires latest

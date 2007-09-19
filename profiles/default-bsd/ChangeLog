@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.8 2007/08/08 19:27:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.9 2007/09/19 03:12:26 dberkholz Exp $
+
+  19 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  fbsd/package.use.mask:
+  No nvidia drivers work on fbsd with xorg-server 1.4 yet.
 
   08 Aug 2007; Tiziano Müller <dev-zero@gentoo.org> fbsd/6.2/make.defaults:
   Removed libg++ USE-flag (bug #148416)
