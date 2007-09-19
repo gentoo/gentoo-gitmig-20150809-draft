@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.121 2007/09/19 07:32:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.122 2007/09/19 15:30:57 lu_zero Exp $
+
+  19 Sep 2007; Luca Barbato <lu_zero@gentoo.org> blender-2.44-r1.ebuild:
+  Update internal ffmpeg lib
 
 *blender-2.44-r1 (19 Sep 2007)
 
