@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3.ebuild,v 1.6 2007/07/10 23:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3.ebuild,v 1.7 2007/09/19 10:36:17 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -23,6 +23,8 @@ S="${WORKDIR}/weatherng-${MY_PV}"
 
 VDR_CONFD_FILE="${FILESDIR}/confd-0.0.8"
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-0.0.8.sh"
+
+PATCHES="${FILESDIR}/${P}-i18n-fix.diff"
 
 pkg_setup() {
 	vdr-plugin_pkg_setup
