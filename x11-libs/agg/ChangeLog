@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/agg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.6 2007/05/15 14:23:17 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.7 2007/09/20 12:43:36 genstef Exp $
+
+  20 Sep 2007; Stefan Schweizer <genstef@gentoo.org> agg-2.5.ebuild:
+  Remove incorrect WANT_AUTOCONF setting, bug 192923
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
