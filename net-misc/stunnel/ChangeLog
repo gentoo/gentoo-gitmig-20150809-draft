@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.71 2007/09/20 12:42:24 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.72 2007/09/20 20:50:43 joker Exp $
+
+  20 Sep 2007; Christian Birchinger <joker@gentoo.org> stunnel-4.20.ebuild:
+  Added sparc stable keyword
 
   20 Sep 2007; Robert Buchholz <rbu@gentoo.org> stunnel-3.26.ebuild,
   stunnel-4.20.ebuild:
