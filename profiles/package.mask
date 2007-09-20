@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7723 2007/09/20 14:05:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7724 2007/09/20 15:48:20 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Christian Faulhammer <opfer@gentoo.org> (20 Sep 2007)
+# Is dead upstream
+# Junkbuster has been replaced by Privoxy, so no need
+# for that mode
+app-emacs/junkbust
 
 # Samuli Suominen <drac@gentoo.org> ((20 Sep 2007)
 # These packages don't meet needed quality standards,
