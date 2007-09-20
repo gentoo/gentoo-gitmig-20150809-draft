@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.31 2007/09/19 15:34:09 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.32 2007/09/20 12:48:26 opfer Exp $
+
+  20 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  nxserver-freenx-0.7.0-r1.ebuild:
+  stable x86, security bug 192712
 
   19 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
   files/nxserver-freenx-0.7.0-nx3support.patch:
