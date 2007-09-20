@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.16 2007/07/22 07:20:11 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.17 2007/09/20 21:44:50 markusle Exp $
+
+  20 Sep 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/vmd-1.8.6-python-2.5.patch, vmd-1.8.6.ebuild:
+  Added patch to fix python-2.5 compile issues on amd64 (fixes bug
+  #192902). Thanks much to milan hodoscek <milan@cmm.ki.si> for his
+  patch.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; vmd-1.8.5.ebuild,
   vmd-1.8.6.ebuild:

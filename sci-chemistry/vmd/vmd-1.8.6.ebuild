@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.6.ebuild,v 1.4 2007/07/22 07:20:11 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.6.ebuild,v 1.5 2007/09/20 21:44:50 markusle Exp $
 
 inherit eutils toolchain-funcs python
 
@@ -41,6 +41,7 @@ src_unpack() {
 
 	# apply LINUX-arch patches to vmd configure
 	epatch "${FILESDIR}"/${P}-config-gentoo.patch
+	epatch "${FILESDIR}"/${P}-python-2.5.patch
 
 	# prepare the plugins
 
