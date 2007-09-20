@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.650 2007/09/20 08:39:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.651 2007/09/20 17:22:30 ikelos Exp $
+
+  20 Sep 2007; Mike Auty <ikelos@gentoo.org> package.mask:
+  Masking vmware packages according to bug 193196.
 
   20 Sep 2007; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   Last rites for bk_client. MySQL herd has no further need for this package.
