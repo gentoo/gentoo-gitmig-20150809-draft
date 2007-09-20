@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.48 2007/09/19 20:43:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.49 2007/09/20 14:32:59 armin76 Exp $
+
+  20 Sep 2007; Raúl Porcel <armin76@gentoo.org> ktoblzcheck-1.11.ebuild,
+  ktoblzcheck-1.12.ebuild, ktoblzcheck-1.13.ebuild, ktoblzcheck-1.14.ebuild:
+  Drop alpha/ia64 keyword, no hardware to test
 
   19 Sep 2007; Lars Weiler <pylon@gentoo.org> ktoblzcheck-1.14.ebuild:
   Stable on ppc; bug #192840.
