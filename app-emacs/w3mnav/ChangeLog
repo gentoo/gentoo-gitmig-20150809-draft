@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/w3mnav
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3mnav/ChangeLog,v 1.10 2007/02/06 13:56:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3mnav/ChangeLog,v 1.11 2007/09/20 23:06:43 ulm Exp $
+
+*w3mnav-0.5-r2 (20 Sep 2007)
+
+  20 Sep 2007; Ulrich Mueller <ulm@gentoo.org> +files/75w3mnav-gentoo.el,
+  -files/90w3mnav-gentoo.el, -w3mnav-0.5-r1.ebuild, +w3mnav-0.5-r2.ebuild:
+  Use autoload mechanism, bug #174469. Move sitefile from 90 to 75.
+  Simplify byte-compilation in src_compile.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
