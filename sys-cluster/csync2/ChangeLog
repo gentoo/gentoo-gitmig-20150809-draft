@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/csync2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.21 2007/04/26 06:29:43 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.22 2007/09/20 08:49:25 xmerlin Exp $
+
+*csync2-1.34 (20 Sep 2007)
+
+  20 Sep 2007; Christian Zoffoli <xmerlin@gentoo.org> +csync2-1.34.ebuild:
+  Version Bump
 
   26 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update for cluster herd split to hp-cluster and ha-cluster.
