@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.119 2007/09/20 19:10:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.120 2007/09/20 19:46:10 drac Exp $
+
+  20 Sep 2007; Samuli Suominen <drac@gentoo.org> flac-1.2.1.ebuild:
+  Use elibtoolize for fbsd.
 
   20 Sep 2007; <solar@gentoo.org> flac-1.2.1.ebuild:
   - fix improper use of hardened flag when pic should be used

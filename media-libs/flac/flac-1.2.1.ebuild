@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1.ebuild,v 1.2 2007/09/20 19:10:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1.ebuild,v 1.3 2007/09/20 19:46:10 drac Exp $
 
-inherit autotools eutils
+inherit autotools eutils libtool
 
 DESCRIPTION="free lossless audio encoder and decoder"
 HOMEPAGE="http://flac.sourceforge.net"
@@ -29,6 +29,7 @@ src_unpack() {
 	# strip upstream forced optimizations
 	epatch "${FILESDIR}"/${P}-cflags.patch
 	AT_M4DIR="m4" eautoreconf
+	elibtoolize
 }
 
 src_compile() {
