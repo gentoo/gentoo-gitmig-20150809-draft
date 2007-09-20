@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsmtp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsmtp/ChangeLog,v 1.5 2007/03/19 01:06:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsmtp/ChangeLog,v 1.6 2007/09/20 18:13:41 armin76 Exp $
+
+  20 Sep 2007; Raúl Porcel <armin76@gentoo.org> libsmtp-0.8.ebuild:
+  Fix DEPEND, bug #191144
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
