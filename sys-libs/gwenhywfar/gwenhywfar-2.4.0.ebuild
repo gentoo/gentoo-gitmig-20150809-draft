@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-2.4.0.ebuild,v 1.7 2007/05/21 20:46:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-2.4.0.ebuild,v 1.8 2007/09/20 14:33:55 armin76 Exp $
 
 DESCRIPTION="A multi-platform helper library for other libraries"
 HOMEPAGE="http://gwenhywfar.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 
 IUSE="debug ssl doc ncurses"
 

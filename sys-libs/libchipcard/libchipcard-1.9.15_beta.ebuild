@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-1.9.15_beta.ebuild,v 1.8 2007/08/01 10:20:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-1.9.15_beta.ebuild,v 1.9 2007/09/20 14:31:51 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.libchipcard.de"
 SRC_URI="mirror://sourceforge/libchipcard/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 
 IUSE="debug ssl usb"
 
