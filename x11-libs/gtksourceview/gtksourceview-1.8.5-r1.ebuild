@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-1.8.5-r1.ebuild,v 1.1 2007/09/19 19:01:09 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-1.8.5-r1.ebuild,v 1.2 2007/09/20 18:56:35 dang Exp $
 
 inherit gnome2
 
@@ -15,7 +15,9 @@ IUSE="doc"
 RDEPEND=">=x11-libs/gtk+-2.8
 	>=dev-libs/libxml2-2.5
 	>=gnome-base/libgnomeprint-2.8
-	>=dev-libs/glib-2"
+	>=dev-libs/glib-2
+	!<dev-util/portatosourceview-2.16.1-r1"
+
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
