@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.0.ebuild,v 1.6 2007/09/20 07:29:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.0.ebuild,v 1.7 2007/09/20 08:17:05 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -68,13 +68,13 @@ COMMON_DEPEND="!app-office/openoffice-bin
 		=dev-java/xml-commons-external-1.3* )
 	mono? ( >=dev-lang/mono-1.2.3.1 )
 	firefox? ( >=www-client/mozilla-firefox-1.5-r9
-		>=dev-libs/nspr-4.6.2
+		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 )
 	!firefox? ( seamonkey? ( www-client/seamonkey
-		>=dev-libs/nspr-4.6.2
+		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 ) )
 	!firefox? ( !seamonkey? ( xulrunner? ( net-libs/xulrunner
-		>=dev-libs/nspr-4.6.2
+		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 ) ) )
 	sound? ( >=media-libs/portaudio-18.1-r5
 			>=media-libs/libsndfile-1.0.9 )
@@ -203,6 +203,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 	epatch ${FILESDIR}/${PV}/ooo-env_log.diff
+	epatch ${FILESDIR}/${PV}/system-check-db-4.6.patch
 
 	if use ppc ; then
 		cp -f ${FILESDIR}/${PV}/disable-regcomp-java.diff ${S}/patches/src680 || die
