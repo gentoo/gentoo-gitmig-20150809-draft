@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/viewvc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.13 2007/09/17 21:53:31 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.14 2007/09/20 18:43:21 angelos Exp $
+
+  20 Sep 2007; Christoph Mende <angelos@gentoo.org> viewvc-1.0.4.ebuild:
+  Stable on amd64 wrt bug #183151
 
   17 Sep 2007; Lars Weiler <pylon@gentoo.org> viewvc-1.0.4.ebuild:
   Stable on ppc; bug #183151.
