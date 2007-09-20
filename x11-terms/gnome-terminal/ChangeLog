@@ -1,6 +1,17 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.147 2007/08/28 16:50:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.148 2007/09/20 19:53:47 dang Exp $
+
+*gnome-terminal-2.18.2 (20 Sep 2007)
+
+  20 Sep 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +gnome-terminal-2.18.2.ebuild:
+  Bump to 2.18.2
+  	* Replace LPGL header with GPL header.  Note that LPGL allows
+  	  conversion to GPL, so this change is legal anyway.
+  	* Use Tango terminal color scheme by default.
+  	* fixed the wrong mention of Nautilus on the license notice.
+  	* gnome-doc-utils migration.
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org> gnome-terminal-2.18.1.ebuild:
   Stable for HPPA (bug #185823).
