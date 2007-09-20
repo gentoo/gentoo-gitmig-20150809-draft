@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.101 2007/09/20 17:21:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.102 2007/09/20 18:42:07 angelos Exp $
+
+  20 Sep 2007; Christoph Mende <angelos@gentoo.org> wesnoth-1.2.6.ebuild:
+  Stable on amd64 wrt bug #190846
 
   20 Sep 2007; Michael Sterrett <mr_bones_@gentoo.org> wesnoth-1.2.6.ebuild:
   libsdl X use check seems to be fixed now (bug #193169)
