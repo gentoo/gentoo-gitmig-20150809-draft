@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bopm/bopm-3.1.2.ebuild,v 1.6 2007/04/22 11:42:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bopm/bopm-3.1.3.ebuild,v 1.1 2007/09/20 19:01:38 armin76 Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.blitzed.org/bopm/"
 SRC_URI="http://static.blitzed.org/www.blitzed.org/${PN}/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc"
+KEYWORDS="~alpha ~ppc ~x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
@@ -45,7 +45,7 @@ src_install () {
 	newinitd ${FILESDIR}/bopm.init.d bopm
 	newconfd ${FILESDIR}/bopm.conf.d bopm
 
-	dodoc CREDITS ChangeLog INSTALL LICENSE README TODO
+	dodoc ChangeLog INSTALL README TODO
 }
 
 pkg_postinst() {
