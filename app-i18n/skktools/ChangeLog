@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/skktools
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/ChangeLog,v 1.7 2006/11/07 06:04:16 usata Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/ChangeLog,v 1.8 2007/09/20 00:04:04 matsuu Exp $
+
+*skktools-1.2-r1 (20 Sep 2007)
+
+  20 Sep 2007; MATSUU Takuto <matsuu@gentoo.org>
+  +files/skktools-1.2-CVE-2007-3916.patch, skktools-1.2.ebuild,
+  +skktools-1.2-r1.ebuild:
+  Fixed bug #193121. The patch is from debian.
 
 *skktools-1.2 (07 Nov 2006)
 
