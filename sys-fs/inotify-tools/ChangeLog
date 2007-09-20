@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/inotify-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.15 2007/09/20 23:23:10 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.16 2007/09/20 23:38:22 wschlich Exp $
+
+  20 Sep 2007; Wolfram Schlich <wschlich@gentoo.org>
+  -inotify-tools-3.5.ebuild, -inotify-tools-3.6.ebuild,
+  -inotify-tools-3.7.ebuild, -inotify-tools-3.8.ebuild,
+  -inotify-tools-3.9.ebuild, -inotify-tools-3.10.ebuild:
+  removed old versions
 
 *inotify-tools-3.11 (20 Sep 2007)
 
