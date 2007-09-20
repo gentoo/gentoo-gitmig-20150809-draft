@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.30 2007/08/27 19:59:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.31 2007/09/20 20:09:47 wolf31o2 Exp $
+
+  20 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> pyparted-1.8.9.ebuild:
+  Removed rpm dependency, fixed second DEPEND line, removed line using debug
+  USE which wasn't in IUSE, and added ~arch KEYWORDS for the dropped arches
+  for testing. Closing bug #192786.
 
   27 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org> pyparted-1.8.9.ebuild:
   Changed python dependency from =2.4 to >=2.4 since this works fine with
