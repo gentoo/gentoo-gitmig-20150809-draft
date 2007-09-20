@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/run-mailcap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.44 2007/09/01 12:22:51 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.45 2007/09/20 18:56:33 jokey Exp $
+
+  20 Sep 2007; Markus Ullmann <jokey@gentoo.org> run-mailcap-3.34_p1.ebuild:
+  Stable on x86 and sparc
 
   01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing twp from metadata due to his retirement (see #190561 for reference).
