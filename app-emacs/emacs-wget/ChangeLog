@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-wget
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.15 2007/09/20 01:32:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.16 2007/09/20 13:20:23 armin76 Exp $
+
+  20 Sep 2007; Raúl Porcel <armin76@gentoo.org> emacs-wget-0.5.0.ebuild:
+  alpha stable wrt #192616
 
   20 Sep 2007; Brent Baude <ranger@gentoo.org> emacs-wget-0.5.0.ebuild:
   Marking emacs-wget-0.5.0 ppc64 stable for bug 192616
