@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.220 2007/09/20 01:16:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.221 2007/09/20 02:23:54 jer Exp $
+
+  20 Sep 2007; Jeroen Roovers <jer@gentoo.org> git-1.5.2.5.ebuild:
+  Stable for SPARC (bug #193113).
 
   20 Sep 2007; Brent Baude <ranger@gentoo.org> git-1.5.2.5.ebuild:
   Marking git-1.5.2.5 ppc64 for bug 193113
