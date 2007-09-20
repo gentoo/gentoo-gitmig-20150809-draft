@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/elogv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.23 2007/09/17 15:26:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.24 2007/09/20 16:08:55 opfer Exp $
+
+  20 Sep 2007; Christian Faulhammer <opfer@gentoo.org> elogv-0.6.1.ebuild:
+  adding a die for executable installation, pointed out by vapier
 
   17 Sep 2007; Christian Faulhammer <opfer@gentoo.org> elogv-0.6.1.ebuild:
   don't use Makefile (again), as it will break BSDs

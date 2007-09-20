@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/elogviewer-0.5.2.ebuild,v 1.1 2007/09/20 12:10:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/elogviewer-0.5.2.ebuild,v 1.2 2007/09/20 16:06:28 opfer Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=sys-apps/portage-2.1
 	>=dev-python/pygtk-2.0"
 
 src_install() {
-	dobin "${WORKDIR}"/elogviewer
+	dobin "${WORKDIR}"/elogviewer || die "dobin failed"
 	dodoc "${WORKDIR}"/CHANGELOG
 	doman "${WORKDIR}"/elogviewer.1
 	make_desktop_entry elogviewer Elogviewer "" "System" ||

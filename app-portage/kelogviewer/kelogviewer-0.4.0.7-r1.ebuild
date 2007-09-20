@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/kelogviewer-0.4.0.7-r1.ebuild,v 1.3 2007/09/11 18:55:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kelogviewer/kelogviewer-0.4.0.7-r1.ebuild,v 1.4 2007/09/20 16:11:49 opfer Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=sys-apps/portage-2.1
 	>=dev-python/pykde-3.16.0"
 
 src_install() {
-	dobin "${WORKDIR}"/kelogviewer
+	dobin "${WORKDIR}"/kelogviewer || die "dobin failed"
 	make_desktop_entry kelogviewer Kelogviewer "" "System" ||
 		die "Couldn't make desktop entry"
 }

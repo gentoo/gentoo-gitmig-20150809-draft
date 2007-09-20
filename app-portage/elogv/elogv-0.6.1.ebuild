@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.6.1.ebuild,v 1.2 2007/09/17 15:26:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.6.1.ebuild,v 1.3 2007/09/20 16:08:55 opfer Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_compile() {
 }
 
 src_install() {
-	newbin elogv.py elogv
+	newbin elogv.py elogv || die "newbin failed"
 	doman elogv.1
 	dodoc README AUTHORS ChangeLog ChangeLog.old
 	# This will be used as soon as the Makefile is ready for BSD
