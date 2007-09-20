@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-freeedition
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.15 2007/09/19 14:51:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.16 2007/09/20 12:39:59 opfer Exp $
+
+  20 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  nxserver-freeedition-3.0.0-r3.ebuild:
+  stable x86, security bug 192712
 
   19 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
   nxserver-freeedition-3.0.0-r3.ebuild:
