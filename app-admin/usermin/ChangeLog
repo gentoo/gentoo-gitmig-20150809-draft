@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.127 2007/07/15 08:16:14 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.128 2007/09/20 17:20:22 armin76 Exp $
+
+*usermin-1.290 (20 Sep 2007)
+
+  20 Sep 2007; Raúl Porcel <armin76@gentoo.org> -usermin-1.270.ebuild,
+  -usermin-1.280.ebuild, +usermin-1.290.ebuild:
+  Version bump, bug #188224
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning app-admin/usermin to m-needed, as beu is being retired (#66608).
