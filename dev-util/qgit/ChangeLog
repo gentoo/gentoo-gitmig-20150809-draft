@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qgit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.32 2007/09/19 12:06:56 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.33 2007/09/20 21:00:06 ranger Exp $
+
+  20 Sep 2007; Brent Baude <ranger@gentoo.org> qgit-1.5.7.ebuild:
+  keywording qgit-1.5.7 ppc64 for bug# 190697
 
   19 Sep 2007; Christoph Mende <angelos@gentoo.org> qgit-1.5.7.ebuild:
   Stable on amd64 wrt security bug #190697
