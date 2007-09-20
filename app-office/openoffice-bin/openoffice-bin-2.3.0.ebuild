@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.3.0.ebuild,v 1.4 2007/09/18 21:22:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.3.0.ebuild,v 1.5 2007/09/20 13:25:59 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -50,10 +50,10 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/ooo"
 RESTRICT="strip"
 
-QA_EXECSTACK="usr/lib/openoffice/program/*"
-QA_TEXTRELS="usr/lib/openoffice/program/libvclplug_gen680li.so.1.1 \
-	usr/lib/openoffice/program/python-core-2.3.4/lib/lib-dynload/_curses_panel.so \
-	usr/lib/openoffice/program/python-core-2.3.4/lib/lib-dynload/_curses.so"
+QA_EXECSTACK="usr/$(get_libdir)/openoffice/program/*"
+QA_TEXTRELS="usr/$(get_libdir)/openoffice/program/libvclplug_gen680li.so.1.1 \
+	usr/$(get_libdir)/openoffice/program/python-core-2.3.4/lib/lib-dynload/_curses_panel.so \
+	usr/$(get_libdir)/openoffice/program/python-core-2.3.4/lib/lib-dynload/_curses.so"
 
 src_unpack() {
 
