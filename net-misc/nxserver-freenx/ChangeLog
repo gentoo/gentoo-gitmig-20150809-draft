@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.32 2007/09/20 12:48:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.33 2007/09/20 23:16:10 voyageur Exp $
+
+  20 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/nxserver-freenx-0.6.0-rdesktop.patch,
+  -files/nxserver-freenx-0.6.0-rootless-mode.patch,
+  -nxserver-freenx-0.6.0.ebuild, -nxserver-freenx-0.7.0.ebuild:
+  Remove vulnerable NX 2.1 versions, security bug #192712
 
   20 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   nxserver-freenx-0.7.0-r1.ebuild:

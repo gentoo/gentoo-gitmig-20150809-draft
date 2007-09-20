@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.16 2007/09/20 14:51:02 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.17 2007/09/20 23:18:38 voyageur Exp $
+
+  20 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/nxnode-2.1.0-init, -files/nxnode-2.1.0-setup.patch,
+  -nxnode-2.1.0.ebuild, -nxnode-3.0.0-r2.ebuild:
+  Remove vulnerable NX 2.1 versions, security bug #192712
 
   20 Sep 2007; Robert Buchholz <rbu@gentoo.org> nxnode-3.0.0-r3.ebuild:
   amd64 stable (bug #180040)

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxserver-freeedition
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.17 2007/09/20 14:53:19 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.18 2007/09/20 23:19:27 voyageur Exp $
+
+  20 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/nxserver-2.1.0-setup.patch, -files/nxserver-3.0.0-setup.patch,
+  -nxserver-freeedition-2.1.0.ebuild, -nxserver-freeedition-3.0.0-r2.ebuild:
+  Remove vulnerable NX 2.1 versions, security bug #192712
 
   20 Sep 2007; Robert Buchholz <rbu@gentoo.org>
   nxserver-freeedition-3.0.0-r3.ebuild:
