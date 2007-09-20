@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9639.ebuild,v 1.5 2007/07/30 07:51:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9639.ebuild,v 1.6 2007/09/20 19:55:12 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -228,11 +228,12 @@ src_install() {
 		fi
 
 		# Add the aliases
-		[ -f "${FILESDIR}/nvidia-2" ] || die "nvidia-2 missing in FILESDIR"
-		sed -e 's:\${PACKAGE}:'${PF}':g' \
-			-e 's:VIDEOGID:'${VIDEOGROUP}':' "${FILESDIR}"/nvidia-2 > "${WORKDIR}"/nvidia
+		[ -f "${FILESDIR}/nvidia" ] || die "nvidia missing in FILESDIR"
+		sed -e 's:PACKAGE:'${PF}':g' \
+			-e 's:VIDEOGID:'${VIDEOGROUP}':' "${FILESDIR}"/nvidia > \
+			"${WORKDIR}"/nvidia
 		insinto /etc/modules.d
-		newins "${WORKDIR}"/nvidia nvidia || die
+		doins "${WORKDIR}"/nvidia || die
 	else
 		insinto /boot/modules
 		doins "${WORKDIR}/${X86_FBSD_NV_PACKAGE}/src/nvidia.kld" || die

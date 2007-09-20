@@ -1,6 +1,18 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.62 2007/09/18 23:50:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.63 2007/09/20 19:55:12 wolf31o2 Exp $
+
+  20 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> -files/nvidia-2,
+  -files/NVIDIA_kernel-2.6.19.patch, files/nvidia,
+  nvidia-drivers-1.0.7185.ebuild, -nvidia-drivers-1.0.8776-r1.ebuild,
+  -nvidia-drivers-1.0.9631-r1.ebuild, nvidia-drivers-1.0.9639.ebuild,
+  -nvidia-drivers-1.0.9746-r1.ebuild, -nvidia-drivers-1.0.9755-r1.ebuild,
+  nvidia-drivers-100.14.09.ebuild, nvidia-drivers-100.14.11.ebuild,
+  nvidia-drivers-100.14.19.ebuild:
+  Removing older ebuilds where newer ebuilds in the same class have the same
+  KEYWORDS or better, moving nvidia-2 to nvidia, since nothing uses the old
+  file anymore, simplified sed by changing ${PACKAGE} to PACKAGE, and changed
+  a newins to doins, since we were not renaming anything.
 
 *nvidia-drivers-100.14.19 (18 Sep 2007)
 
