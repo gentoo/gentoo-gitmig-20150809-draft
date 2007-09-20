@@ -3,6 +3,7 @@ MD5 338a913c66b3ea69961298aec7d622d8 files/icon-naming-utils-0.8.2-pkgconfig.pat
 RMD160 e64b08f8ef2db011e0c0fbcc1bdea18472c65a1f files/icon-naming-utils-0.8.2-pkgconfig.patch 471
 SHA256 8084e51e6efdd4bc5954e98609f86d2401ca3feda1d68b8804a660a84f0b10e4 files/icon-naming-utils-0.8.2-pkgconfig.patch 471
 DIST icon-naming-utils-0.8.2.tar.gz 66393 RMD160 8fc999afcc5d50d47282272ef858403bc3e36251 SHA1 b69e6fd89d7ccdc4dfe335a78e7bd8fd34cde019 SHA256 87fe398d5f4853400afb6afbb41835db3cde954845369e406d739d66b3058056
+DIST icon-naming-utils-0.8.6.tar.gz 69522 RMD160 5ac589913b88f05dbffc62637e738eb86eee802f SHA1 b5cbe5e8d468132da8d3a038c43086cdefd24756 SHA256 85a5d8f7d189df307e51375f5575aaecb8574003c5756620b28a469f133f1102
 EBUILD icon-naming-utils-0.8.2-r1.ebuild 951 RMD160 ff194733b14c8d1d90ec10bc3162cbfe59123379 SHA1 ea8b42c2f5dd35e0a1d996b5cd670b4886debbf7 SHA256 bcac6c38ba177728c35eca8dc3cdaac4c447dae16aaea85ace8c2d2086378a49
 MD5 9b2c26f7ded14d1d74247d4d154cc57d icon-naming-utils-0.8.2-r1.ebuild 951
 RMD160 ff194733b14c8d1d90ec10bc3162cbfe59123379 icon-naming-utils-0.8.2-r1.ebuild 951
@@ -11,10 +12,14 @@ EBUILD icon-naming-utils-0.8.2.ebuild 809 RMD160 6d250c5495eaf907bcbdb9d72020517
 MD5 1cff353c2004e41ebf41188826c781c8 icon-naming-utils-0.8.2.ebuild 809
 RMD160 6d250c5495eaf907bcbdb9d7202051797cd44799 icon-naming-utils-0.8.2.ebuild 809
 SHA256 e1ff47650bf8f98d3b601cafdc55d42a7f909b95b476c1b40a06fb4b10f15635 icon-naming-utils-0.8.2.ebuild 809
-MISC ChangeLog 7053 RMD160 1b8070d3ee07ae18f1568871c337296a521bcaf4 SHA1 ff0ff48c2d9577edea666758ab25b115b6f277fd SHA256 e3d113f5d0174a89a493aa1448cd07ac4c3c2b6e35863b4bca9081d84632c7d7
-MD5 c9673c8c43848cca88a9ff418448b2a6 ChangeLog 7053
-RMD160 1b8070d3ee07ae18f1568871c337296a521bcaf4 ChangeLog 7053
-SHA256 e3d113f5d0174a89a493aa1448cd07ac4c3c2b6e35863b4bca9081d84632c7d7 ChangeLog 7053
+EBUILD icon-naming-utils-0.8.6.ebuild 816 RMD160 5f94cfe1f6f4a820b20888c940cb3369b4dbf89d SHA1 1b65457ef1ade36318677db3a31554c39743382f SHA256 79ea1208dccfff0276d84b803dde0c5f4bb764ac2d6e2d368c26dbdfdac1ea44
+MD5 b136862108b29e1ef90039c3b95803c4 icon-naming-utils-0.8.6.ebuild 816
+RMD160 5f94cfe1f6f4a820b20888c940cb3369b4dbf89d icon-naming-utils-0.8.6.ebuild 816
+SHA256 79ea1208dccfff0276d84b803dde0c5f4bb764ac2d6e2d368c26dbdfdac1ea44 icon-naming-utils-0.8.6.ebuild 816
+MISC ChangeLog 7195 RMD160 de11d532e4e5a85e0d5266615ac5ed2b6cc24e08 SHA1 d024f0174944b232916c4e69b90069960eb142d8 SHA256 b4de9e12dde0d520977644d03aeb9b0472cea3351c0a4ec62efda05c1dd62a9b
+MD5 da52c635f2859ffa428b67225a566e06 ChangeLog 7195
+RMD160 de11d532e4e5a85e0d5266615ac5ed2b6cc24e08 ChangeLog 7195
+SHA256 b4de9e12dde0d520977644d03aeb9b0472cea3351c0a4ec62efda05c1dd62a9b ChangeLog 7195
 MISC metadata.xml 292 RMD160 d7b7e392ab66db5f5de20f64ef160ec568ff9116 SHA1 8fb6e709bf9f5a849628c85985961648b93e1db6 SHA256 cc7269e67766389989322d16941a59b398b90e46c0a302b18a547e6549563754
 MD5 635e35abfc7eb9b1e9ff08c8e3cb58cc metadata.xml 292
 RMD160 d7b7e392ab66db5f5de20f64ef160ec568ff9116 metadata.xml 292
@@ -25,3 +30,6 @@ SHA256 fc7de4daf2b93eba5713f1f36cda49e4342f5335b499e7ec88bc69a61399b5eb files/di
 MD5 acdf894fc346c9810c111e27870754cf files/digest-icon-naming-utils-0.8.2-r1 268
 RMD160 60d0c21bd1ab8755fe16815fc5fa8a1d6d23c3e9 files/digest-icon-naming-utils-0.8.2-r1 268
 SHA256 fc7de4daf2b93eba5713f1f36cda49e4342f5335b499e7ec88bc69a61399b5eb files/digest-icon-naming-utils-0.8.2-r1 268
+MD5 69d4762dd4c852d44d8109c9c80d0556 files/digest-icon-naming-utils-0.8.6 268
+RMD160 1361bc341fa565a10f97ad64d999eba7f12a8e1f files/digest-icon-naming-utils-0.8.6 268
+SHA256 8369842b561904a6b2533f31817c4fea5ed2ed10a5c8c479ff3a4b8b1e5a3be2 files/digest-icon-naming-utils-0.8.6 268
