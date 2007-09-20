@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.47 2007/09/08 19:50:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.48 2007/09/20 19:51:04 ulm Exp $
+
+  20 Sep 2007; Ulrich Mueller <ulm@gentoo.org> +files/71slime-gentoo.el,
+  slime-2.0_p20070816.ebuild:
+  Use autoload mechanism, bug #174469.
 
 *slime-2.0_p20070816 (08 Sep 2007)
 

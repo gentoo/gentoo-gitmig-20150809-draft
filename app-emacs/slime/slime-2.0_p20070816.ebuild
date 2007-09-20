@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20070816.ebuild,v 1.1 2007/09/08 19:50:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20070816.ebuild,v 1.2 2007/09/20 19:51:04 ulm Exp $
 
 inherit common-lisp elisp
 
@@ -18,7 +18,7 @@ DEPEND="virtual/commonlisp
 
 CLPACKAGE=swank
 SWANK_VERSION="2007-08-16"
-SITEFILE=70${PN}-gentoo.el
+SITEFILE=71${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
