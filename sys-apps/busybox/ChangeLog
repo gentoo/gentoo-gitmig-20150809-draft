@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.157 2007/09/01 10:35:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.158 2007/09/20 07:39:32 vapier Exp $
+
+  20 Sep 2007; Mike Frysinger <vapier@gentoo.org> busybox-1.7.0.ebuild:
+  Pull in pam when USE=pam #192895 by Marek Bartosiewicz.
 
   01 Sep 2007; Christoph Mende <angelos@gentoo.org> busybox-1.6.1.ebuild:
   Stable on amd64
