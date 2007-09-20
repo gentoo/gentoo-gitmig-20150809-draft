@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.40 2007/05/09 22:01:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.41 2007/09/20 14:15:56 dang Exp $
+
+  20 Sep 2007; Daniel Gryniewicz <dang@gentoo.org> gparted-0.3.3.ebuild:
+  fs utils are runtime-deps only; bug #178873
 
   09 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> gparted-0.3.3.ebuild:
   Keyworded ~sparc

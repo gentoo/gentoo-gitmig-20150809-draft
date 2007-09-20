@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.3.3.ebuild,v 1.5 2007/05/09 22:01:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.3.3.ebuild,v 1.6 2007/09/20 14:15:56 dang Exp $
 
 inherit gnome2
 
@@ -14,8 +14,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="fat hfs jfs ntfs reiserfs reiser4 xfs"
 
-RDEPEND=">=sys-apps/parted-1.7.1
-		>=dev-cpp/gtkmm-2.8.0
+common_depends=">=sys-apps/parted-1.7.1
+		>=dev-cpp/gtkmm-2.8.0"
+
+RDEPEND="${common_depends}
 		fat? ( sys-fs/dosfstools )
 		ntfs? ( sys-fs/ntfsprogs )
 		hfs? ( sys-fs/hfsutils )
@@ -24,6 +26,7 @@ RDEPEND=">=sys-apps/parted-1.7.1
 		reiser4? ( sys-fs/reiser4progs )
 		xfs? ( sys-fs/xfsprogs sys-fs/xfsdump )"
 
-DEPEND="${RDEPEND}
+DEPEND="${common_depends}
 		>=dev-util/pkgconfig-0.12
 		>=dev-util/intltool-0.29"
+
