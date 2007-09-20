@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.339 2007/09/19 20:31:45 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.340 2007/09/20 06:44:20 suka Exp $
+
+  20 Sep 2007; Andreas Proschofsky <suka@gentoo.org>
+  +files/2.3.0/stlport-ppc-buildfix.diff,
+  +files/2.3.0/stlport-ppc-buildfix-apply.diff, openoffice-2.3.0.ebuild:
+  Trying to fix internal STLport build on ppc, see bug #193056
 
   19 Sep 2007; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.3.0.ebuild:

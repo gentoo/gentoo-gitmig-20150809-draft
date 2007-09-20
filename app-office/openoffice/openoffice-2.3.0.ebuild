@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.0.ebuild,v 1.3 2007/09/19 20:31:45 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.0.ebuild,v 1.4 2007/09/20 06:44:20 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -205,6 +205,9 @@ src_unpack() {
 		cp -f ${FILESDIR}/${PV}/disable-regcomp-java.diff ${S}/patches/src680 || die
 		cp -f ${FILESDIR}/${PV}/disable-regcomp-python.diff ${S}/patches/src680 || die
 		epatch ${FILESDIR}/${PV}/regcompapply.diff
+		#Fix for internal STLport
+		cp -f ${FILESDIR}/${PV}/stlport-ppc-buildfix.diff ${S}/patches/src680 || die
+		epatch ${FILESDIR}/${PV}/stlport-ppc-buildfix-apply.diff
 	fi
 
 	#Use flag checks
