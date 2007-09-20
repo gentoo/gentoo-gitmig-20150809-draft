@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grub-splashes/grub-splashes-0.1.ebuild,v 1.2 2007/09/20 15:35:49 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grub-splashes/grub-splashes-0.1.ebuild,v 1.3 2007/09/20 20:58:46 welp Exp $
 
 DESCRIPTION="Collection of grub splashes"
-HOMEPAGE="http://www.gentoo.org/proj/en/desktop/artwork/index.xml"
+HOMEPAGE="http://dev.gentoo.org/~welp/grub-splashes.xml"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
