@@ -1,0 +1,20 @@
+--- patches/src680/system-db-check.diff.orig	2007-09-08 16:25:25.000000000 +0200
++++ patches/src680/system-db-check.diff	2007-09-08 16:26:25.000000000 +0200
+@@ -12,7 +12,7 @@
+ -             [ AC_MSG_ERROR(no. install the db4 libraries) ], []+             )
+ -        ], []
+ -    )
+-+    for dbver in -4.5 4.5 -4.4 4.4 -4.3 4.3 -4.2 4.2 -4.1 4.1 -4 4 ''; do
+++    for dbver in -4.6 4.6 -4.5 4.5 -4.4 4.4 -4.3 4.3 -4.2 4.2 -4.1 4.1 -4 4 ''; do
+ +       AC_CHECK_HEADER(db$dbver/db.h, [ DB_INCLUDES="/usr/include/db$dbver"; break ])
+ +    done
+ +    if test "$DB_INCLUDES" = ""; then
+@@ -31,7 +31,7 @@
+ -    AC_HAVE_LIBRARY(db, [],
+ -      [AC_MSG_ERROR([db not installed or functional])], [])
+ +    save_LIBS="$LIBS"
+-+    for dbver in -4.5 4.5 -4.4 4.4 -4.3 4.3 -4.2 4.2 -4.1 4.1 -4 4 ''; do
+++    for dbver in -4.6 4.6 -4.5 4.5 -4.4 4.4 -4.3 4.3 -4.2 4.2 -4.1 4.1 -4 4 ''; do
+ +       AC_CHECK_LIB(db$dbver, db_create, [ DB_LIB="db$dbver"; DB_CPPLIB="db_cxx$dbver"; LIBS="-ldb$dbver $LIBS"; break ])
+ +    done
+ +    AC_CHECK_FUNC(db_create, [], [ AC_MSG_ERROR([db not installed or functional]) ])
