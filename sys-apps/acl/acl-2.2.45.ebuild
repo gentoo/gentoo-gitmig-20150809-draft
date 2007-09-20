@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.45.ebuild,v 1.1 2007/09/20 06:16:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.45.ebuild,v 1.2 2007/09/20 06:27:04 vapier Exp $
 
 inherit eutils autotools toolchain-funcs
 
@@ -41,6 +41,7 @@ src_unpack() {
 }
 
 src_compile() {
+	unset PLATFORM #184564
 	export OPTIMIZER=${CFLAGS}
 	export DEBUG=-DNDEBUG
 
