@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/attr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.83 2007/09/20 07:06:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.84 2007/09/20 14:26:59 pylon Exp $
+
+  20 Sep 2007; Lars Weiler <pylon@gentoo.org> attr-2.4.38.ebuild:
+  Stable on ppc; bug #193143.
 
 *attr-2.4.39 (20 Sep 2007)
 
