@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.34.ebuild,v 1.1 2007/09/20 08:49:25 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.34.ebuild,v 1.2 2007/09/20 20:59:18 xmerlin Exp $
 
 DESCRIPTION="Cluster synchronization tool."
 SRC_URI="http://oss.linbit.com/csync2/${P}.tar.gz"
@@ -24,14 +24,14 @@ src_compile() {
 	econf \
 		--localstatedir=/var \
 		--sysconfdir=/etc/csync2 \
-		|| die
+		|| die "configure problem"
 
-	emake || die
+	emake || die "compile problem"
 }
 
-src_install() {
 
-	make DESTDIR=${D} \
+src_install() {
+	emake DESTDIR="${D}" \
 		localstatedir=/var \
 		sysconfdir=/etc/csync2 \
 		install || die "install problem"
@@ -44,6 +44,7 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO csync2_locheck.sh
 }
+
 
 pkg_postinst() {
 	echo
@@ -61,31 +62,32 @@ pkg_postinst() {
 	echo
 }
 
+
 pkg_config() {
-	einfo "Updating /etc/services"
-	{ grep -v ^${PN} /etc/services;
+	einfo "Updating ${ROOT}/etc/services"
+	{ grep -v ^${PN} "${ROOT}"/etc/services;
 	echo "csync2  30865/tcp"
-	} > /etc/services.new
-	mv -f /etc/services.new /etc/services
+	} > "${ROOT}"/etc/services.new
+	mv -f "${ROOT}"/etc/services.new "${ROOT}"/etc/services
 
-	if [ ! -f /etc/${PN}/csync2_ssl_key.pem ]; then
-		einfo "Creating default certificate in /etc/${PN}"
+	if [ ! -f "${ROOT}"/etc/${PN}/csync2_ssl_key.pem ]; then
+		einfo "Creating default certificate in ${ROOT}/etc/${PN}"
 
-		openssl genrsa -out /etc/${PN}/csync2_ssl_key.pem 1024 &> /dev/null
+		openssl genrsa -out "${ROOT}"/etc/${PN}/csync2_ssl_key.pem 1024 &> /dev/null
 
 		yes '' | \
 		openssl req -new \
-			-key /etc/${PN}/csync2_ssl_key.pem \
-			-out /etc/${PN}/csync2_ssl_cert.csr \
-			&> /dev/null
+			-key "${ROOT}"/etc/${PN}/csync2_ssl_key.pem \
+			-out "${ROOT}"/etc/${PN}/csync2_ssl_cert.csr \
+			&> "${ROOT}"/dev/null
 
 		openssl x509 -req -days 600 \
-			-in /etc/${PN}/csync2_ssl_cert.csr \
-			-signkey /etc/${PN}/csync2_ssl_key.pem \
-			-out /etc/${PN}/csync2_ssl_cert.pem \
-			&> /dev/null
+			-in "${ROOT}"/etc/${PN}/csync2_ssl_cert.csr \
+			-signkey "${ROOT}"/etc/${PN}/csync2_ssl_key.pem \
+			-out "${ROOT}"/etc/${PN}/csync2_ssl_cert.pem \
+			&> "${ROOT}"/dev/null
 
-		rm /etc/${PN}/csync2_ssl_cert.csr
-		chmod 400 /etc/${PN}/csync2_ssl_key.pem /etc/${PN}/csync2_ssl_cert.pem
+		rm "${ROOT}"/etc/${PN}/csync2_ssl_cert.csr
+		chmod 400 "${ROOT}"/etc/${PN}/csync2_ssl_key.pem "${ROOT}"/etc/${PN}/csync2_ssl_cert.pem
 	fi
 }
