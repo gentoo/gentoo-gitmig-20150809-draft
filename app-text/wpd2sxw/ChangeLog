@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wpd2sxw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2sxw/ChangeLog,v 1.15 2007/07/02 14:26:44 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2sxw/ChangeLog,v 1.16 2007/09/20 07:39:27 suka Exp $
+
+  20 Sep 2007; Andreas Proschofsky <suka@gentoo.org>
+  -wpd2sxw-0.6.0-r1.ebuild:
+  Remove old (and broken) release
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   wpd2sxw-0.6.0-r1.ebuild:
