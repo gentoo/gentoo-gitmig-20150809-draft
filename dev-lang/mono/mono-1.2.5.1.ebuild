@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.5-r1.ebuild,v 1.1 2007/09/11 13:49:23 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.5.1.ebuild,v 1.1 2007/09/20 23:18:31 jurek Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -51,8 +51,6 @@ src_unpack() {
 		${S}/{scripts,}/*.pc.in                                               \
 	|| die "sed failed"
 
-	epatch ${FILESDIR}/${P}-make-check.patch || die "patch failed"
-	epatch ${FILESDIR}/${P}-remoting.patch || die "patch failed"
 	epatch ${FILESDIR}/${PN}-1.2.4-pic.patch || die "patch failed"
 
 	# Remove dummy ltconfig and let libtool handle it
