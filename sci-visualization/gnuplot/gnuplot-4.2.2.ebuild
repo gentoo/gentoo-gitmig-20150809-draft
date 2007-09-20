@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.2.ebuild,v 1.4 2007/09/15 09:02:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.2.ebuild,v 1.5 2007/09/20 07:28:57 opfer Exp $
 
 inherit eutils elisp-common multilib wxwidgets
 
@@ -12,11 +12,11 @@ SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
 
 LICENSE="gnuplot"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc emacs gd ggi tetex pdf plotutils readline svga wxwindows X xemacs"
 
 RDEPEND="
-	xemacs? ( virtual/xemacs )
+	xemacs? ( virtual/xemacs app-xemacs/texinfo )
 	emacs? ( virtual/emacs !app-emacs/gnuplot-mode )
 	pdf? ( media-libs/pdflib )
 	ggi? ( media-libs/libggi )
@@ -99,7 +99,10 @@ src_compile() {
 	# example plots.
 	addwrite /dev/svga:/dev/mouse:/dev/tts/0
 
-	econf ${myconf} || die "econf failed"
+	TEMACS=no
+	use xemacs && TEMACS=xemacs
+	use emacs && TEMACS=emacs
+	EMACS=${TEMACS} econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
 
 	if use doc ; then
