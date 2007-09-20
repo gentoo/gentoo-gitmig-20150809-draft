@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0.ebuild,v 1.4 2007/09/15 19:30:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0.ebuild,v 1.5 2007/09/20 11:13:42 bicatali Exp $
 
-inherit eutils elisp-common autotools
+inherit eutils elisp-common
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
 HOMEPAGE="http://maxima.sourceforge.net/"
@@ -33,6 +33,8 @@ LANGS="es pt pt_BR"
 for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
 done
+
+RESTRICT="clisp? ( strip )"
 
 pkg_setup() {
 	# Don't install in the main tree, as this may cause file collisions
@@ -68,20 +70,28 @@ pkg_setup() {
 		fi
 	fi
 
-	if ! built_with_use -a sci-visualization/gnuplot gd; then
+	if ! built_with_use sci-visualization/gnuplot gd; then
 		elog "To benefit full plotting capability of maxima,"
 		elog "enable the gd USE flag enabled for sci-visualization/gnuplot"
 		elog "Then re-emerge maxima"
 		epause 5
 	fi
 
-	# enable gcl if no other lisp selected
-	if use sbcl || (! use cmucl && ! use clisp && ! use gcl ); then
-		ENABLE_SBCL="--enable-sbcl"
+	# lisp priorities
+	MAXIMA_LISP="sbcl"
+	if use clisp && use gcl && ! use sbcl; then
+		MAXIMA_LISP=clisp
+	elif use clisp && use cmucl && ! use sbcl; then
+		MAXIMA_LISP=clisp
+	elif use cmucl && use gcl && ! use sbcl; then
+		MAXIMA_LISP=cmucl
+	elif use gcl && ! use sbcl; then
+		MAXIMA_LISP=gcl
 	fi
+	einfo "Selected lisp: ${MAXIMA_LISP}"
 
-	if use gcl; then
-		einfo "Using gcl: it might break, recompile with another lisp, or use default (sbcl)."
+	if [[ ${MAXIMA_LISP} == gcl ]]; then
+		ewarn "Using gcl: if it breaks, recompile with another lisp or use default (sbcl)."
 		if ! built_with_use dev-lisp/gcl ansi; then
 			eerror "GCL must be installed with ANSI."
 			eerror "Try USE=\"ansi\" emerge gcl"
@@ -94,20 +104,17 @@ src_unpack() {
 	unpack ${A}
 	# use xdg-open to view ps, pdf
 	epatch "${FILESDIR}"/${P}-xdg-utils.patch
+	# remove rmaxima if neither cmucl nor sbcl
+	if [[ ${MAXIMA_LISP} != cmucl ]] || [[ ${MAXIMA_LISP} != sbcl ]]; then
+		sed -i \
+			-e '/^@WIN32_FALSE@bin_SCRIPTS/s/rmaxima//' \
+			"${S}"/src/Makefile.in \
+			|| die "sed for rmaxima failed"
+	fi
 }
 
 src_compile() {
-	eautoreconf
-
-	# remove rmaxima if neither cmucl nor sbcl
-	if ! use sbcl && ! use cmucl && [[ -z ${ENABLE_SBCL} ]]; then
-		sed -i \
-			-e '/^@WIN32_FALSE@bin_SCRIPTS/s/rmaxima//' \
-			src/Makefile.in || die "sed for rmaxima failed"
-	fi
-
-	local myconf=${ENABLE_SBCL}
-
+	local myconf="--enable-${MAXIMA_LISP}"
 	# remove xmaxima if no tk
 	if use tk; then
 		myconf="${myconf} --with-wish=wish"
@@ -128,12 +135,7 @@ src_compile() {
 		done
 	fi
 
-	econf \
-		$(use_enable cmucl) \
-		$(use_enable clisp) \
-		$(use_enable gcl) \
-		${myconf} \
-		|| die "econf failed"
+	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 
@@ -160,9 +162,12 @@ src_install() {
 }
 
 pkg_preinst() {
-	# all lisps do not bunzip2 info files on the fly
-	for infofile in $(ls ${D}/usr/share/info/*.bz2); do
+	# some lisps do not read compress info files (bug #176411)
+	for infofile in "${D}"/usr/share/info/*.bz2 ; do
 		bunzip2 "${infofile}"
+	done
+	for infofile in "${D}"/usr/share/info/*.gz ; do
+		gunzip "${infofile}"
 	done
 }
 
