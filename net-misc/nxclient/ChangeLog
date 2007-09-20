@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.54 2007/09/20 12:28:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.55 2007/09/20 14:36:25 voyageur Exp $
+
+  20 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  nxclient-3.0.0-r3.ebuild:
+  Force openssl-0.9.8e DEPEND
 
   20 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   nxclient-3.0.0-r3.ebuild:
