@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.121 2007/09/08 16:23:00 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.122 2007/09/20 20:14:35 pylon Exp $
+
+  20 Sep 2007; Lars Weiler <pylon@gentoo.org> parted-1.8.8.ebuild:
+  Stable on ppc; bug #171787.
 
   08 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> parted-1.8.8.ebuild:
   inherit eutils for epatch
