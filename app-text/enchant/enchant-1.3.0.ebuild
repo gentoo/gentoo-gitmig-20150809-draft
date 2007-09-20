@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.3.0.ebuild,v 1.1 2007/09/19 15:34:07 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.3.0.ebuild,v 1.2 2007/09/20 09:48:45 uberlord Exp $
+
+inherit libtool
 
 DESCRIPTION="Spellchecker wrapping library"
 HOMEPAGE="http://www.abisource.com/enchant/"
@@ -21,6 +23,14 @@ RDEPEND=">=dev-libs/glib-2
 # libtool is needed for the install-sh to work
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# FreeBSD requires this for sane versionsing and install fixes
+	elibtoolize
+}
 
 src_install() {
 	emake -j1 DESTDIR="${D}" install || die

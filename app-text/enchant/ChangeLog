@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.71 2007/09/19 15:34:07 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.72 2007/09/20 09:48:45 uberlord Exp $
+
+  20 Sep 2007; Roy Marples <uberlord@gentoo.org> enchant-1.3.0.ebuild:
+  Add elibtoolize back for FreeBSD users as we NEED it.
 
 *enchant-1.3.0 (19 Sep 2007)
 
