@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/stride-20011129.ebuild,v 1.5 2007/05/22 01:15:19 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/stride-20011129.ebuild,v 1.6 2007/09/20 14:35:18 coldwind Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,7 +25,7 @@ src_unpack() {
 	epatch "${DISTDIR}/${PN}-20060723-update.patch.bz2"
 
 	# fix makefile
-	sed -e "/^CC/s/gcc -g/$(tc-getCC) ${CFLAGS}/" -i Makefile || \
+	sed -e "/^CC/s:gcc -g:$(tc-getCC) ${CFLAGS}:" -i Makefile || \
 		die "Failed to fix Makefile"
 }
 
