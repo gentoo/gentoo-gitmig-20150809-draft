@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.72 2007/06/13 23:37:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.73 2007/09/20 06:16:33 vapier Exp $
+
+*acl-2.2.45 (20 Sep 2007)
+
+  20 Sep 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/acl-2.2.42-nfs-glue.patch, +files/acl-2.2.45-libtool.patch,
+  +acl-2.2.45.ebuild:
+  Version bump #192647 and apply libtool fixup #158068. Also update NFS patch
+  #162664 #192844.
 
   13 Jun 2007; Mike Frysinger <vapier@gentoo.org>
   +files/acl-2.2.44-LDFLAGS.patch, acl-2.2.44.ebuild:
