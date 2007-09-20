@@ -39,13 +39,13 @@ Index: udev-git/etc/udev/gentoo/65-permissions.rules
 +ENV{ID_CDROM}=="?*", GROUP="cdrom", MODE="660"
 +KERNEL=="pktcdvd|pktcdvd[0-9]*", GROUP="cdrom", MODE="660"
 +# assign cdrom-permission also to associated generic device (for cd-burning ...)
-+SUBSYSTEM=="scsi", KERNEL=="sg[0-9]*", ATTRS{type}=="[45]", GROUP="cdrom", MODE="660"
++SUBSYSTEMS=="scsi", KERNEL=="sg[0-9]*", ATTRS{type}=="[45]", GROUP="cdrom", MODE="660"
 +
 +
 +# tape devices
 +KERNEL=="st[0-9]*|nst[0-9]*|ht[0-9]*|nht[0-9]*|pt[0-9]*|npt[0-9]*", \
 +	GROUP="tape", MODE="660"
-+SUBSYSTEM=="scsi", KERNEL=="sg[0-9]*", ATTRS{type}=="[18]", GROUP="tape", MODE="660"
++SUBSYSTEMS=="scsi", KERNEL=="sg[0-9]*", ATTRS{type}=="[18]", GROUP="tape", MODE="660"
 +
 +
 Index: udev-git/etc/udev/gentoo/40-video.rules
