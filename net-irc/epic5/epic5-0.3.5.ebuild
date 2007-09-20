@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.3.4.ebuild,v 1.1 2007/06/12 14:47:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.3.5.ebuild,v 1.1 2007/09/20 19:15:54 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
