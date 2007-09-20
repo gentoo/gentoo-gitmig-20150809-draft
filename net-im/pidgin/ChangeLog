@@ -1,6 +1,13 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.30 2007/09/16 18:51:46 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.31 2007/09/20 20:11:42 drizzt Exp $
+
+*pidgin-2.2.0-r1 (20 Sep 2007)
+
+  20 Sep 2007; Timothy Redaelli <drizzt@gentoo.org>
+  +files/pidgin-2.2.0-proxy.patch, +pidgin-2.2.0-r1.ebuild:
+  Applied upstream patch wrt bug #193034.
+  Thanks to deadhead for reporting.
 
   16 Sep 2007; Olivier Crête <tester@gentoo.org> pidgin-2.2.0.ebuild:
   Add MyspaceIM, fixes bug #192713
