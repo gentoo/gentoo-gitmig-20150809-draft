@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.0.0.ebuild,v 1.3 2007/09/20 12:24:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.0.0.ebuild,v 1.4 2007/09/20 23:13:27 voyageur Exp $
 
 inherit autotools eutils multilib
 
@@ -24,6 +24,7 @@ KEYWORDS="~amd64 x86"
 IUSE="rdesktop vnc"
 
 RDEPEND="x11-libs/libXau
+	x11-libs/libXcomposite
 	x11-libs/libXdamage
 	x11-libs/libXdmcp
 	x11-libs/libXpm
