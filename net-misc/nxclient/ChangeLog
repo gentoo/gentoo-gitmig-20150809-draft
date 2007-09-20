@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.55 2007/09/20 14:36:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.56 2007/09/20 14:49:32 rbu Exp $
+
+  20 Sep 2007; Robert Buchholz <rbu@gentoo.org> nxclient-3.0.0-r3.ebuild:
+  amd64 stable (bug #180040)
 
   20 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org>
   nxclient-3.0.0-r3.ebuild:
