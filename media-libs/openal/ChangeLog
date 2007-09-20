@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.82 2007/09/05 17:04:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.83 2007/09/20 22:50:53 wolf31o2 Exp $
+
+  20 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/0.0.8/004_all_gcc42.patch, -files/0.0.8/004_all_ggc42.patch,
+  +files/0.0.8/005_all_alsa_default_freq.patch:
+  Added a patch to switch to 48000 from 44100 sampling frequency and renaming
+  the GCC patch to actually be gcc instead of ggc. Closing bug #193147.
 
   05 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   openal-0.0.8-r2.ebuild:
