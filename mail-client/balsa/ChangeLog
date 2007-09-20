@@ -1,6 +1,22 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.50 2007/05/30 16:18:48 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.51 2007/09/20 15:57:55 dang Exp $
+
+*balsa-2.3.20 (20 Sep 2007)
+
+  20 Sep 2007; Daniel Gryniewicz <dang@gentoo.org> +balsa-2.3.20.ebuild:
+  Bump to 2.3.20
+  - fix buffer overflow (#474366).
+  - avoid sending messages twice under certain conditions.
+  - more build fixes.
+  - reflow improvements.
+  - Build problems against steaming-hot GNOME fixed.
+  - Make BINARY and ESEARCH IMAP extensions usage more robust.
+  - check validity of server APOP challenge.
+  - add ability to store VCARD signatures.
+  - use ESEARCH IMAP extension if available.
+  - message wrapping fixes.
+  - and an usual bunch of bugfixes.
 
 *balsa-2.3.16 (30 May 2007)
 
