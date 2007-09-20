@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.18.ebuild,v 1.1 2007/09/05 17:19:02 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.18.ebuild,v 1.2 2007/09/20 01:18:51 hawking Exp $
 
 inherit distutils portability eutils multilib
 
@@ -23,6 +23,12 @@ DEPEND="${RDEPEND}
 
 PYTHON_MODNAME="M2Crypto"
 
+src_unpack() {
+	distutils_src_unpack
+
+	epatch "${FILESDIR}/${P}-ssize_t.patch"
+}
+
 src_install() {
 	DOCS="CHANGES INSTALL"
 	distutils_src_install
@@ -42,5 +48,5 @@ src_install() {
 }
 
 src_test() {
-	python setup.py test || die "test failed"
+	"${python}" setup.py test || die "test failed"
 }
