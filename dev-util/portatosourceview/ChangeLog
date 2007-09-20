@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/portatosourceview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/portatosourceview/ChangeLog,v 1.1 2007/09/09 21:06:42 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/portatosourceview/ChangeLog,v 1.2 2007/09/20 19:14:44 jokey Exp $
+
+*portatosourceview-2.16.1-r1 (20 Sep 2007)
+
+  20 Sep 2007; Markus Ullmann <jokey@gentoo.org>
+  +portatosourceview-2.16.1-r1.ebuild:
+  source file has been merged into gtksourceview
 
 *portatosourceview-2.16.1 (09 Sep 2007)
 
