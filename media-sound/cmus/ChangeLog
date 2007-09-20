@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cmus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.13 2007/08/01 06:10:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.14 2007/09/20 16:36:57 opfer Exp $
+
+  20 Sep 2007; Christian Faulhammer <opfer@gentoo.org> cmus-2.2.0.ebuild:
+  stable x86, bug 193205
 
   01 Aug 2007; Christian Faulhammer <opfer@gentoo.org> cmus-2.2.0.ebuild:
   put the correct entries in RDEPEND and not DEPEND
