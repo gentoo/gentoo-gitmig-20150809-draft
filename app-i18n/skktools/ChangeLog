@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/skktools
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/ChangeLog,v 1.9 2007/09/20 18:20:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/ChangeLog,v 1.10 2007/09/20 18:57:04 opfer Exp $
+
+  20 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  skktools-1.2-r1.ebuild:
+  stable x86, security bug 193121
 
   20 Sep 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   skktools-1.2-r1.ebuild:
