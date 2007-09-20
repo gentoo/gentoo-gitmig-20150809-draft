@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.15 2007/08/06 08:37:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.16 2007/09/20 19:41:13 hansmi Exp $
+
+*inspircd-1.1.12 (20 Sep 2007)
+
+  20 Sep 2007; Michael Hanselmann <hansmi@gentoo.org>
+  -inspircd-1.1.8-r1.ebuild, -inspircd-1.1.9.ebuild,
+  +inspircd-1.1.12.ebuild:
+  Version bump from bug 193000. Drop old versions.
 
 *inspircd-1.1.11 (06 Aug 2007)
 
