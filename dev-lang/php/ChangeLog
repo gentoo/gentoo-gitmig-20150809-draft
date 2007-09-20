@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.196 2007/09/19 20:06:04 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.197 2007/09/20 04:56:31 jer Exp $
+
+  20 Sep 2007; Jeroen Roovers <jer@gentoo.org>
+  php-5.2.4_p20070914-r2.ebuild:
+  Stable for HPPA (bug #191034).
 
 *php-5.2.4_p20070914-r2 (19 Sep 2007)
 
