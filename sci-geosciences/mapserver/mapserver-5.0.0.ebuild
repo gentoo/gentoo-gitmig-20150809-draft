@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0.ebuild,v 1.1 2007/09/21 08:21:49 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0.ebuild,v 1.2 2007/09/21 21:57:30 mr_bones_ Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -103,7 +103,6 @@ src_unpack() {
 	if (use tcl); then
 		epatch "${FILESDIR}"/${PN}_tcl.patch
 	fi
-
 
 	if (use php); then
 		if [ ${np} -eq 2 ]; then
