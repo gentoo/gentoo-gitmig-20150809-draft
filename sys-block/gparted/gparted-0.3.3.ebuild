@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.3.3.ebuild,v 1.6 2007/09/20 14:15:56 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.3.3.ebuild,v 1.7 2007/09/21 07:17:26 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -29,4 +29,3 @@ RDEPEND="${common_depends}
 DEPEND="${common_depends}
 		>=dev-util/pkgconfig-0.12
 		>=dev-util/intltool-0.29"
-
