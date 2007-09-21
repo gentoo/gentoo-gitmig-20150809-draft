@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.0.12.ebuild,v 1.1 2007/09/08 21:06:53 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.0.12.ebuild,v 1.2 2007/09/21 21:24:15 hollow Exp $
 
 inherit apache-module autotools
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.rexursive.com/pub/mod-spin/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="apache2 mysql postgres"
+IUSE="mysql postgres"
 
 APACHE2_MOD_FILE="${S}/spin/.libs/${PN}.so"
 APACHE2_MOD_CONF="80_${PN}"
