@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.29 2007/08/03 16:43:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.30 2007/09/21 16:28:21 opfer Exp $
+
+  21 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  jruby-0.7.0-r1.ebuild:
+  revert stable keywords, see bug 187619
 
   03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
   -files/jruby-0.9.1-build.xml.patch,
