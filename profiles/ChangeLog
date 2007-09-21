@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.652 2007/09/21 03:04:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.653 2007/09/21 16:47:55 remi Exp $
+
+  21 Sep 2007; Rémi Cardona <remi@gentoo.org> package.mask:
+  mask for gtk+-2.12 and relevant deps
 
   21 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
   Added sys-auth/{pam_,}bioapi to package.mask since sys-auth/tfm-fingerprint
