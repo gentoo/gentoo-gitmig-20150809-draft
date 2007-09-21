@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.170 2007/08/28 16:49:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.171 2007/09/21 19:14:59 leio Exp $
+
+*vte-0.16.9 (21 Sep 2007)
+
+  21 Sep 2007; Mart Raudsepp <leio@gentoo.org> +vte-0.16.9.ebuild:
+  Version bump with bug fixes
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org> vte-0.16.6-r1.ebuild:
   Stable for HPPA (bug #185823).
