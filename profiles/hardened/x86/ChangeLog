@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.8 2007/08/23 00:19:38 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.9 2007/09/21 02:46:46 wolf31o2 Exp $
+
+  21 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> 2.6/package.mask,
+  package.mask:
+  Adding >=sys-libs/glibc-2.6 on hardened/x86 and unmasking it on
+  hardened/x86/2.6 to shut repoman up.
 
   23 Aug 2007; Mart Raudsepp <leio@gentoo.org> package.mask:
   Relaxing vte mask to 0.16, so that there is an unmasked vte for the profile
