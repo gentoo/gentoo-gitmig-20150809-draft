@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.63 2007/08/26 22:00:49 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.64 2007/09/21 19:38:20 philantrop Exp $
+
+*kdebluetooth-1.0_beta8 (21 Sep 2007)
+
+  21 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  -files/kdebluetooth-1.0_beta3-as-needed.patch,
+  -kdebluetooth-1.0_beta2.ebuild, -kdebluetooth-1.0_beta2-r1.ebuild,
+  -kdebluetooth-1.0_beta3.ebuild, +kdebluetooth-1.0_beta8.ebuild:
+  Version bump to Beta 8. Removed obsolete versions.
 
 *kdebluetooth-1.0_beta6 (26 Aug 2007)
 
