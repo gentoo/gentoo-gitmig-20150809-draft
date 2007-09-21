@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ess
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.20 2007/09/21 12:05:20 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.21 2007/09/21 16:05:09 opfer Exp $
+
+  21 Sep 2007; Christian Faulhammer <opfer@gentoo.org> ess-5.2.3.ebuild,
+  ess-5.2.8.ebuild, ess-5.3.3.ebuild, ess-5.3.5.ebuild:
+  stable x86, bug 193311; drop ppc-macos
 
   21 Sep 2007; Ferris McCormick <fmccor@gentoo.org> ess-5.3.5.ebuild:
   Sparc stable --- Bug #193311 --- tested a bit with R.
