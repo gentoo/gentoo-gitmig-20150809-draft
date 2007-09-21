@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-menus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.81 2007/09/21 15:31:53 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.82 2007/09/21 19:41:37 wolf31o2 Exp $
+
+  21 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  gnome-menus-2.18.3-r1.ebuild:
+  Stable on x86 wrt bug #193339.
 
 *gnome-menus-2.18.3-r1 (21 Sep 2007)
 
