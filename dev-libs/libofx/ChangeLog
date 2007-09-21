@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.34 2007/09/19 20:57:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.35 2007/09/21 13:21:17 opfer Exp $
+
+  21 Sep 2007; Christian Faulhammer <opfer@gentoo.org> libofx-0.8.3.ebuild:
+  stable x86, bug 192840
 
   19 Sep 2007; Lars Weiler <pylon@gentoo.org> libofx-0.8.3.ebuild:
   Stable on ppc; bug #192840.
