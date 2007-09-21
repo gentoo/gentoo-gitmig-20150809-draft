@@ -1,6 +1,12 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.103 2007/06/07 18:36:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.104 2007/09/21 19:34:22 angelos Exp $
+
+*xfwm4-4.4.1-r1 (21 Sep 2007)
+
+  21 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  +files/xfwm4-gtk212.patch, +xfwm4-4.4.1-r1.ebuild:
+  Fixed freeze with gtk+-2.12
 
   07 Jun 2007; Samuli Suominen <drac@gentoo.org> xfwm4-4.4.1.ebuild:
   Stable on arm.
