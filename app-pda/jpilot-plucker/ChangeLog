@@ -1,6 +1,14 @@
 # ChangeLog for app-pda/jpilot-plucker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/ChangeLog,v 1.7 2007/08/29 16:53:17 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/ChangeLog,v 1.8 2007/09/21 21:36:34 philantrop Exp $
+
+*jpilot-plucker-0.01-r1 (21 Sep 2007)
+
+  21 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/jpilot-plucker-0.01-pilot-0.12-compat.patch, metadata.xml,
+  +jpilot-plucker-0.01-r1.ebuild:
+  Added a patch for pilot-link-0.12.x compatibility as contributed by Mark
+  Wagner on bug 193260. Thanks, Mark!
 
   29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing agriffis from metadata due to his retirement (see #182294 for
