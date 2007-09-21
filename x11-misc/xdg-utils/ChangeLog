@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.33 2007/08/20 18:02:46 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.34 2007/09/21 19:39:39 wolf31o2 Exp $
+
+  21 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  xdg-utils-1.0.2.ebuild:
+  Stable on x86 wrt bug #193339.
 
   20 Aug 2007; Samuli Suominen <drac@gentoo.org> xdg-utils-1.0.2.ebuild:
   Remove xmlto dep for bug 189620.
