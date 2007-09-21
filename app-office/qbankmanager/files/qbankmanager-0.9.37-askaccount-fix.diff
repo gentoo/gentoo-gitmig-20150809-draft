@@ -1,9 +1,0 @@
---- qbankmanager-0.9.37/src/kbanking/libs/dialogs/askaccount.ui.orig	2006-03-22 17:00:59.898420250 +0100
-+++ qbankmanager-0.9.37/src/kbanking/libs/dialogs/askaccount.ui	2006-03-22 17:01:14.699345250 +0100
-@@ -320,6 +320,5 @@
- </tabstops>
- <layoutdefaults spacing="6" margin="11"/>
- <includehints>
--    <includehint>accountlistview.h</includehint>
- </includehints>
- </UI>
