@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.29 2007/08/30 03:10:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.30 2007/09/21 13:08:54 opfer Exp $
+
+  21 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  sleuthkit-2.09.ebuild:
+  stable x86, security bug 181977
 
   30 Aug 2007; Jeroen Roovers <jer@gentoo.org> sleuthkit-2.09.ebuild:
   Stable for HPPA (bug #181977).
