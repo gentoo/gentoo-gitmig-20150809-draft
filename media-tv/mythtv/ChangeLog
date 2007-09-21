@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.187 2007/09/20 05:25:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.188 2007/09/21 16:45:25 cardoe Exp $
+
+*mythtv-0.20.2_p14498 (21 Sep 2007)
+
+  21 Sep 2007; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-0.20.2_p14472.ebuild, +mythtv-0.20.2_p14498.ebuild:
+  upstream rev bump to fix new/report issues. fix USE=dvd depends not to
+  require libdts
 
 *mythtv-0.21_pre14480-r1 (20 Sep 2007)
 *mythtv-0.20.2_p14472-r1 (20 Sep 2007)
