@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmclockmon
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.25 2007/07/22 05:17:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.26 2007/09/21 18:03:55 mr_bones_ Exp $
+
+  21 Sep 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  wmclockmon-0.8.0-r1.ebuild:
+  take out invalid WANT_AUTO* stuff (bug #193027)
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmclockmon-0.8.0-r1.ebuild:
