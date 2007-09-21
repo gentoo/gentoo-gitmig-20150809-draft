@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.18.3.ebuild,v 1.1 2007/09/08 20:05:56 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.18.3.ebuild,v 1.2 2007/09/21 18:22:15 leio Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -132,7 +132,7 @@ RDEPEND="
 	>=app-admin/pessulus-2.16.2
 	ldap? (
 		>=app-admin/sabayon-2.18.1
-		>=net-im/ekiga-2.0.9
+		>=net-im/ekiga-2.0.7
 		)
 
 	>=gnome-extra/gnome-screensaver-2.18.2
