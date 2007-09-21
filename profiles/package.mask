@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7727 2007/09/21 01:10:24 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7728 2007/09/21 03:04:53 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -102,6 +102,8 @@ gnustep-apps/viewpdf
 # Mike Frysinger <vapier@gentoo.org> (08 Sep 2007)
 # Use sys-auth/thinkfinger instead
 sys-auth/tfm-fingerprint
+sys-auth/pam_bioapi
+sys-auth/bioapi
 
 # Matthias Schwarzott <zzam@gentoo.org> (06 Sept 2007)
 # Masked for testing new rules.
