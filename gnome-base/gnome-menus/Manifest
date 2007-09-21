@@ -5,6 +5,10 @@ AUX gnome-menus-2.10.2-legacy_dirs.patch 669 RMD160 970a32433d6311cddd4f1339c300
 MD5 1a51e652f467b181dcbb71a42db7b5bf files/gnome-menus-2.10.2-legacy_dirs.patch 669
 RMD160 970a32433d6311cddd4f1339c3001e23076eb3d6 files/gnome-menus-2.10.2-legacy_dirs.patch 669
 SHA256 791869ce91b9403f9479ac3f1bbdc616cd09b3c529c25c4e48be599f4b7c1d05 files/gnome-menus-2.10.2-legacy_dirs.patch 669
+AUX gnome-menus-2.18.3-ignore_kde_standalone.patch 1208 RMD160 302201bbc2a9b4d6a673904d11ce60390268b4b5 SHA1 58880f2807bc6a11a724a15c4f626f7385e650be SHA256 6b13ae1708b5d4753f38e57e161e58bd31d0b7a9de8b78145052388b150eedb8
+MD5 2326f2fef0e16660a4302ece53b8841d files/gnome-menus-2.18.3-ignore_kde_standalone.patch 1208
+RMD160 302201bbc2a9b4d6a673904d11ce60390268b4b5 files/gnome-menus-2.18.3-ignore_kde_standalone.patch 1208
+SHA256 6b13ae1708b5d4753f38e57e161e58bd31d0b7a9de8b78145052388b150eedb8 files/gnome-menus-2.18.3-ignore_kde_standalone.patch 1208
 AUX gnome-menus-2.18.3-other_category_fix.patch 869 RMD160 e10c8adc4275028335ef52023dd85a139666a350 SHA1 13c6234154de00c1fd50af2d2d55d9c9b2563027 SHA256 b225a08af45290eedcc3ad0fa63766fdc667a1016addedba74bf3dcd7c2628ee
 MD5 7d4db492ca58720e937f9e93f390f856 files/gnome-menus-2.18.3-other_category_fix.patch 869
 RMD160 e10c8adc4275028335ef52023dd85a139666a350 files/gnome-menus-2.18.3-other_category_fix.patch 869
@@ -20,14 +24,18 @@ EBUILD gnome-menus-2.18.2.ebuild 1096 RMD160 ffeb7d76d370d64bf2a936e506cad3290d3
 MD5 baa5fe291c405c72c7c43adb920671e9 gnome-menus-2.18.2.ebuild 1096
 RMD160 ffeb7d76d370d64bf2a936e506cad3290d3f422d gnome-menus-2.18.2.ebuild 1096
 SHA256 218e04d69c45b30cf1394cb4f213ebd356dd9ff57b2cd9e437047ef7e708fd30 gnome-menus-2.18.2.ebuild 1096
+EBUILD gnome-menus-2.18.3-r1.ebuild 1425 RMD160 8dc31c8854392195f5c38e85117b157f54ac515b SHA1 89f7792b95e05d21f8eaf0ca5ad9af7d35fac42a SHA256 8ed5c76b9a5d13d3da976812a3047d8591c8a60e114ba727f5c3cfee17dd0ac4
+MD5 ccd9fc781814adf9d0a6573ad02dbaa9 gnome-menus-2.18.3-r1.ebuild 1425
+RMD160 8dc31c8854392195f5c38e85117b157f54ac515b gnome-menus-2.18.3-r1.ebuild 1425
+SHA256 8ed5c76b9a5d13d3da976812a3047d8591c8a60e114ba727f5c3cfee17dd0ac4 gnome-menus-2.18.3-r1.ebuild 1425
 EBUILD gnome-menus-2.18.3.ebuild 1367 RMD160 3ba72a4084dcade5bc4da474571b152bd5561616 SHA1 5ea1f90b33716f9656552e10fa8495b083e7e919 SHA256 ed99e594a82d44aae8e4dab4fe207b30da241973f7b3735fc2b475ed7410974a
 MD5 59c1daa7a17ebde0706edbe685d4d1a6 gnome-menus-2.18.3.ebuild 1367
 RMD160 3ba72a4084dcade5bc4da474571b152bd5561616 gnome-menus-2.18.3.ebuild 1367
 SHA256 ed99e594a82d44aae8e4dab4fe207b30da241973f7b3735fc2b475ed7410974a gnome-menus-2.18.3.ebuild 1367
-MISC ChangeLog 10229 RMD160 7a86ae35e3c28cc2c491b1238dbbaafa502d3e29 SHA1 07434a3a0ef613df418680e7030b76ddf9cfa48b SHA256 80ad05f883ab0462402d368d0bb0fe6a290182092dffa1381090429ebf3005f3
-MD5 155224748e32230788ac6ecf2a81b4dc ChangeLog 10229
-RMD160 7a86ae35e3c28cc2c491b1238dbbaafa502d3e29 ChangeLog 10229
-SHA256 80ad05f883ab0462402d368d0bb0fe6a290182092dffa1381090429ebf3005f3 ChangeLog 10229
+MISC ChangeLog 10485 RMD160 cde1eb406ab36042703f5425b863ee94609e6465 SHA1 64eb0a3a66863c3dd5354710d70b2b01a10cd382 SHA256 b5fb64646ca76a93aa4d5e6c790637834911b575158caaafec6fb910d540b332
+MD5 6fc91a79927229e155f8a606aab32d7c ChangeLog 10485
+RMD160 cde1eb406ab36042703f5425b863ee94609e6465 ChangeLog 10485
+SHA256 b5fb64646ca76a93aa4d5e6c790637834911b575158caaafec6fb910d540b332 ChangeLog 10485
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -41,10 +49,13 @@ SHA256 d7ab702abe6bd199885b476f3f7bce0f91ec15e2509ce21a343a03fd625ab205 files/di
 MD5 f5fb3f1d99a5a2f4002b88ae116be8f9 files/digest-gnome-menus-2.18.3 259
 RMD160 b0a68574c100f6ba48a329c6ac4b7afb92a72248 files/digest-gnome-menus-2.18.3 259
 SHA256 845aeade8de52060cf2a99f8d2887286a10e4744676fb0fe0c094249c4c8bb10 files/digest-gnome-menus-2.18.3 259
+MD5 f5fb3f1d99a5a2f4002b88ae116be8f9 files/digest-gnome-menus-2.18.3-r1 259
+RMD160 b0a68574c100f6ba48a329c6ac4b7afb92a72248 files/digest-gnome-menus-2.18.3-r1 259
+SHA256 845aeade8de52060cf2a99f8d2887286a10e4744676fb0fe0c094249c4c8bb10 files/digest-gnome-menus-2.18.3-r1 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.6 (GNU/Linux)
+Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFG1RyokeYb6olFHJcRAgX5AJ9DiECyoLC1LUGdSo9kBtCgv0yj+QCgtawu
-NIyuyXs/q26srfDdtR1Yfk0=
-=KDQh
+iD8DBQFG8+PakeYb6olFHJcRAvTtAKCVp0dvDUTZQ6pajVmb0VoyRo3IYgCg3uJb
+5axiU6/FkNXzXYb/WALHqe8=
+=vrGN
 -----END PGP SIGNATURE-----
