@@ -34,6 +34,10 @@ AUX gtk+-2.12.0-icon-cache-speedup.patch 969 RMD160 822ebb9e3b59eab5cda16ca3ff9c
 MD5 1edb4111800bb328c4b04a98d20a2adc files/gtk+-2.12.0-icon-cache-speedup.patch 969
 RMD160 822ebb9e3b59eab5cda16ca3ff9cfffa04df3671 files/gtk+-2.12.0-icon-cache-speedup.patch 969
 SHA256 cb117bf1bbfc1e9509c614ba3c2d4a193f7b486fad9d7922208134749793e5ec files/gtk+-2.12.0-icon-cache-speedup.patch 969
+AUX gtk+-2.12.0-libtracker_so.patch 585 RMD160 c8d857b5bb7398f34f9f84fd59ed3b1247964375 SHA1 a1da145b30e2346fa3536a16c132be53450c8699 SHA256 5c922a06bbacc20df5e8ea9c22656236a0d780e55cb955a261fb604628b4b56f
+MD5 e61c470b1296b6f7e3deb79673d0ab2f files/gtk+-2.12.0-libtracker_so.patch 585
+RMD160 c8d857b5bb7398f34f9f84fd59ed3b1247964375 files/gtk+-2.12.0-libtracker_so.patch 585
+SHA256 5c922a06bbacc20df5e8ea9c22656236a0d780e55cb955a261fb604628b4b56f files/gtk+-2.12.0-libtracker_so.patch 585
 AUX gtk+-2.2.1-disable_icons_smooth_alpha.patch 1383 RMD160 f2557ee984df766bce0b5e5ea8c41962a2ccff13 SHA1 5be2ba7cdac1bf48fdca5dc49d2adf96480452f0 SHA256 f4b916c7d26ba60b5d5af63ff694a5203f0dcd31b7310fb375c324fc1df72e05
 MD5 d94ff41d82a8f0c56dd68a2fa71ef2fc files/gtk+-2.2.1-disable_icons_smooth_alpha.patch 1383
 RMD160 f2557ee984df766bce0b5e5ea8c41962a2ccff13 files/gtk+-2.2.1-disable_icons_smooth_alpha.patch 1383
@@ -81,10 +85,10 @@ EBUILD gtk+-2.10.14.ebuild 4149 RMD160 429f3d7ba893f47ff513a4c1d646c473c4bfb554 
 MD5 f54569ad545cfb8800db1f6f8fd1b0c9 gtk+-2.10.14.ebuild 4149
 RMD160 429f3d7ba893f47ff513a4c1d646c473c4bfb554 gtk+-2.10.14.ebuild 4149
 SHA256 ee46a48aa4d1be7574ef84f94127812361f0b2353abf4dd8aeb8d817f997ad84 gtk+-2.10.14.ebuild 4149
-EBUILD gtk+-2.12.0.ebuild 4111 RMD160 a32d0411445f30735ce19533bd9d311128467db2 SHA1 03a54e724c5176cd12092d01a791d23ad890ef79 SHA256 5ff638363457c6b6e05b80dab1d3df7034bce74496fa93a18e2d955cde0f271a
-MD5 5427c5b8685c3f48e3808ada2477d92c gtk+-2.12.0.ebuild 4111
-RMD160 a32d0411445f30735ce19533bd9d311128467db2 gtk+-2.12.0.ebuild 4111
-SHA256 5ff638363457c6b6e05b80dab1d3df7034bce74496fa93a18e2d955cde0f271a gtk+-2.12.0.ebuild 4111
+EBUILD gtk+-2.12.0.ebuild 4219 RMD160 9d307251dca1e6e68a346fddacaeb2f09e85cbe6 SHA1 d3d805bbd868f4081c6d35e73c2f4fa2f3e26e08 SHA256 d14ebcb006f3c71942d2c90ed859c547489cd1b1da1381a9df01ddf546e38e21
+MD5 665c7760bfeac3fa2ad93c047ea5aec8 gtk+-2.12.0.ebuild 4219
+RMD160 9d307251dca1e6e68a346fddacaeb2f09e85cbe6 gtk+-2.12.0.ebuild 4219
+SHA256 d14ebcb006f3c71942d2c90ed859c547489cd1b1da1381a9df01ddf546e38e21 gtk+-2.12.0.ebuild 4219
 EBUILD gtk+-2.6.10-r1.ebuild 3370 RMD160 e680dd3f5686877d2ca70a5206c7bbbc09544a7f SHA1 6159c523651f475cad047d02351c5bb6179e1aeb SHA256 a7dad34c747da64c4303a8d76e034a67bfafefb2cd15035c54e73b42382766b2
 MD5 61d993dde25b05cac0042ec233000311 gtk+-2.6.10-r1.ebuild 3370
 RMD160 e680dd3f5686877d2ca70a5206c7bbbc09544a7f gtk+-2.6.10-r1.ebuild 3370

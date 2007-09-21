@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.12.0.ebuild,v 1.1 2007/09/21 18:58:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.12.0.ebuild,v 1.2 2007/09/21 21:53:39 remi Exp $
 
 inherit gnome.org flag-o-matic eutils autotools virtualx
 
@@ -70,6 +70,9 @@ src_unpack() {
 
 	# http://bugzilla.gnome.org/show_bug.cgi?id=476342
 	epatch "${FILESDIR}"/${P}-icon-cache-speedup.patch
+
+	# http://bugzilla.gnome.org/show_bug.cgi?id=478173
+	epatch "${FILESDIR}/${PN}-2.12.0-libtracker_so.patch"
 
 	# -O3 and company cause random crashes in applications. Bug #133469
 	replace-flags -O3 -O2
