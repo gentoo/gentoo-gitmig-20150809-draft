@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/blas-goto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.10 2007/09/20 14:40:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.11 2007/09/21 06:39:37 dberkholz Exp $
+
+  21 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  blas-goto-1.19.ebuild:
+  Quote LDFLAGS, so multiple flags doesn't kill the build by passing flags
+  beyond the first directly to make.
 
 *blas-goto-1.19 (20 Sep 2007)
 

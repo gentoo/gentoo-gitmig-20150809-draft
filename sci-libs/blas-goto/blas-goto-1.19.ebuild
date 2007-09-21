@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.19.ebuild,v 1.1 2007/09/20 14:40:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.19.ebuild,v 1.2 2007/09/21 06:39:37 dberkholz Exp $
 
 inherit eutils fortran flag-o-matic toolchain-funcs
 
@@ -108,7 +108,7 @@ src_unpack() {
 src_compile() {
 
 	# Make static library
-	emake LDFLAGS=$(raw-ldflags) || die "emake failed"
+	emake LDFLAGS="$(raw-ldflags)" || die "emake failed"
 
 	# Make shared library
 	cd exports
