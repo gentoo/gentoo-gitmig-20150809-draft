@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/package.mask,v 1.45 2007/09/21 03:08:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/package.mask,v 1.46 2007/09/21 03:11:22 wolf31o2 Exp $
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (20 Sep 2007)
 # mask because it requires nptl and 2.6
@@ -65,6 +65,9 @@ sys-apps/keyutils
 sys-auth/pam_usb
 sys-auth/pam_keyring
 dev-embedded/ponyprog
+app-editors/screem
+app-editors/peacock
+app-editors/mlview
 
 # Requires 2.6 kernel headers
 sys-apps/inputd
