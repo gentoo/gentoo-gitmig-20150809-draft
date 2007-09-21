@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.360 2007/09/16 22:18:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.361 2007/09/21 20:38:39 hollow Exp $
 
 # Keep them sorted
 
@@ -21,7 +21,6 @@ aim - Enable AIM IM protocol support
 alsa - Adds support for media-libs/alsa-lib (Advanced Linux Sound Architecture)
 altivec - Adds support for optimizations for G4 and G5/ppc970 processors
 ao - Use libao audio output library for sound playback
-apache - Chooses Apache1 support when a package optionally supports Apache1
 apache2 - Chooses Apache2 support when a package supports both Apache1 and Apache2
 apm - Adds APM (Advanced Power Management) support
 arts - Adds support for aRts: the KDE sound daemon
