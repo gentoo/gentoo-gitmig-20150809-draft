@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.23 2007/07/02 15:35:40 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.24 2007/09/21 02:49:13 solar Exp $
+
+*uclibc-0.9.28.3-r1 (21 Sep 2007)
+
+  21 Sep 2007; <solar@gentoo.org> +uclibc-0.9.28.3-r1.ebuild:
+  backport posix_memalign() function
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   uclibc-0.9.27-r1.ebuild, uclibc-0.9.28.ebuild, uclibc-0.9.28-r1.ebuild,
