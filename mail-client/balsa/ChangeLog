@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.53 2007/09/21 08:21:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.54 2007/09/21 16:24:56 armin76 Exp $
+
+  21 Sep 2007; Raúl Porcel <armin76@gentoo.org> balsa-2.3.20.ebuild:
+  alpha stable wrt security #193179
 
   21 Sep 2007; Christian Faulhammer <opfer@gentoo.org> balsa-2.3.20.ebuild:
   stable x86, security bug 193179
