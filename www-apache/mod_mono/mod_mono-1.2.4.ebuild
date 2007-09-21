@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-1.2.4.ebuild,v 1.3 2007/06/29 18:17:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-1.2.4.ebuild,v 1.4 2007/09/21 20:55:57 hollow Exp $
 
 inherit apache-module eutils
 
@@ -15,10 +15,6 @@ IUSE="aspnet2 debug"
 
 DEPEND=">=dev-dotnet/xsp-${PV}"
 RDEPEND="${DEPEND}"
-
-APACHE1_MOD_FILE="${S}/src/.libs/${PN}.so"
-APACHE1_MOD_CONF="${PV}/70_${PN}"
-APACHE1_MOD_DEFINE="MONO"
 
 APACHE2_MOD_FILE="${S}/src/.libs/${PN}.so"
 APACHE2_MOD_CONF="${PV}/70_${PN}"

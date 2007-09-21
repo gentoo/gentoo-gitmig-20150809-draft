@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.39 2007/09/12 00:51:53 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.40 2007/09/21 20:55:57 hollow Exp $
+
+  21 Sep 2007; Benedikt Böhm <hollow@gentoo.org> mod_mono-1.2.1.ebuild,
+  mod_mono-1.2.4.ebuild, mod_mono-1.2.5.ebuild:
+  remove apache-1 cruft
 
   12 Sep 2007; Jurek Bartuszek <jurek@gentoo.org>
   +files/1.2.5/70_mod_mono.conf:

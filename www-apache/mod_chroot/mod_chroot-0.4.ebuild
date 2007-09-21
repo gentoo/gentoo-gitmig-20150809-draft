@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_chroot/mod_chroot-0.4.ebuild,v 1.4 2007/01/15 16:04:23 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_chroot/mod_chroot-0.4.ebuild,v 1.5 2007/09/21 20:57:33 hollow Exp $
 
 inherit apache-module
 
@@ -15,10 +15,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-
-APXS1_S="${S}/src/apache13"
-APACHE1_MOD_CONF="15_${PN}"
-APACHE1_MOD_DEFINE="CHROOT"
 
 APXS2_S="${S}/src/apache20"
 APACHE2_MOD_CONF="15_${PN}"
