@@ -1,6 +1,10 @@
 # ChangeLog for app-office/qbankmanager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/ChangeLog,v 1.27 2007/09/19 21:05:41 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/ChangeLog,v 1.28 2007/09/21 13:32:11 opfer Exp $
+
+  21 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  qbankmanager-0.9.39.ebuild:
+  stable x86, bug 192840
 
   19 Sep 2007; Lars Weiler <pylon@gentoo.org> qbankmanager-0.9.39.ebuild:
   Stable on ppc; bug #192840.
