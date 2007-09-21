@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/glaxium-0.5.ebuild,v 1.16 2007/02/03 08:37:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/glaxium-0.5.ebuild,v 1.17 2007/09/21 13:48:27 nyhm Exp $
 
 inherit autotools eutils games
 
@@ -25,9 +25,7 @@ S=${WORKDIR}/${PN}_${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	if has_version x11-drivers/nvidia-legacy-drivers || \
-		has_version x11-drivers/nvidia-drivers
-	then
+	if has_version x11-drivers/nvidia-drivers ; then
 		epatch "${FILESDIR}"/${P}-glx.patch
 	fi
 	epatch \
