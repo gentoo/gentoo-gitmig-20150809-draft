@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.72 2007/09/16 14:17:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.73 2007/09/21 02:15:03 wltjr Exp $
+
+*firebird-2.0.3.12981.0-r1 (21 Sep 2007)
+
+  21 Sep 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/firebird-2.0.1.12855.0-external-libs.patch,
+  -files/firebird-2.0.1.12855.0-make-deps.patch,
+  +files/firebird-2.0.3.12981.0-paths.patch, +files/firebird.conf.d.2,
+  +files/firebird.init.d.2, +files/firebird.xinetd.2, metadata.xml,
+  -firebird-2.0.1.12855.0-r4.ebuild, -firebird-2.0.1.12855.0-r5.ebuild,
+  +firebird-2.0.3.12981.0-r1.ebuild:
+  Major changes, Firebird is no longer installed in opt :). Added paths patch.
+  Took over as sole maintainer since I am doing all the work anyway ;)
 
   16 Sep 2007; Christoph Mende <angelos@gentoo.org>
   firebird-2.0.3.12981.0.ebuild:

@@ -1,0 +1,230 @@
+diff -Naur Firebird-2.0.3.12981-0_orig/src/jrd/db_alias.cpp Firebird-2.0.3.12981-0/src/jrd/db_alias.cpp
+--- Firebird-2.0.3.12981-0_orig/src/jrd/db_alias.cpp	2007-09-19 21:00:33.000000000 -0400
++++ Firebird-2.0.3.12981-0/src/jrd/db_alias.cpp	2007-09-20 19:26:44.000000000 -0400
+@@ -29,7 +29,7 @@
+ 
+ typedef Firebird::PathName string;
+ 
+-const char* ALIAS_FILE = "aliases.conf";
++const char* ALIAS_FILE = "../../../etc/firebird/aliases.conf";
+ 
+ bool ResolveDatabaseAlias(const string& alias, string& database)
+ {
+diff -Naur Firebird-2.0.3.12981-0_orig/src/jrd/file_params.h Firebird-2.0.3.12981-0/src/jrd/file_params.h
+--- Firebird-2.0.3.12981-0_orig/src/jrd/file_params.h	2007-09-19 21:00:33.000000000 -0400
++++ Firebird-2.0.3.12981-0/src/jrd/file_params.h	2007-09-20 18:48:00.000000000 -0400
+@@ -38,17 +38,17 @@
+ const int EVENT_SEMAPHORES	= 1;
+ 
+ #ifdef NOHOSTNAME
+-static const char* EVENT_FILE	= "isc_event1";
+-static const char* LOCK_FILE	= "isc_lock1.gbl";
+-static const char* LOCK_HEADER	= "isc_config";
+-static const char* INIT_FILE	= "isc_init1";
+-static const char* GUARD_FILE	= "isc_guard1";
++static const char* EVENT_FILE	= "../../../var/run/firebird/isc_event1";
++static const char* LOCK_FILE	= "../../../var/run/firebird/isc_lock1.gbl";
++static const char* LOCK_HEADER	= "../../../var/run/firebird/isc_config";
++static const char* INIT_FILE	= "../../../var/run/firebird/isc_init1";
++static const char* GUARD_FILE	= "../../../var/run/firebird/isc_guard1";
+ #elif defined(SMALL_FILE_NAMES)
+-static const char* EVENT_FILE	= "isce1.%s";
+-static const char* LOCK_FILE	= "iscl1.%s";
+-static const char* LOCK_HEADER	= "isc_config";
+-static const char* INIT_FILE	= "isci1.%s";
+-static const char* GUARD_FILE	= "iscg1.%s";
++static const char* EVENT_FILE	= "../../../var/run/firebird/isce1.%s";
++static const char* LOCK_FILE	= "../../../var/run/firebird/iscl1.%s";
++static const char* LOCK_HEADER	= "../../../var/run/firebird/isc_config";
++static const char* INIT_FILE	= "../../../var/run/firebird/isci1.%s";
++static const char* GUARD_FILE	= "../../../var/run/firebird/iscg1.%s";
+ #elif defined(VMS)
+ static const char* EVENT_FILE	= "[000000]isc_event1.%s";
+ static const char* LOCK_FILE	= "[000000]isc_lock1.%s";
+@@ -62,11 +62,11 @@
+ static const char* INIT_FILE	= "%s.int";
+ static const char* GUARD_FILE	= "%s.grd";
+ #else
+-static const char* EVENT_FILE	= "isc_event1.%s";
+-static const char* LOCK_FILE	= "isc_lock1.%s";
+-static const char* LOCK_HEADER	= "isc_config";
+-static const char* INIT_FILE	= "isc_init1.%s";
+-static const char* GUARD_FILE	= "isc_guard1.%s";
++static const char* EVENT_FILE	= "../../../var/run/firebird/isc_event1.%s";
++static const char* LOCK_FILE	= "../../../var/run/firebird/isc_lock1.%s";
++static const char* LOCK_HEADER	= "../../../var/run/firebird/isc_config";
++static const char* INIT_FILE	= "../../../var/run/firebird/isc_init1.%s";
++static const char* GUARD_FILE	= "../../../var/run/firebird/isc_guard1.%s";
+ #endif
+ 
+ #ifdef sun
+@@ -97,7 +97,7 @@
+ static const char* MSG_FILE		= "firebird.msg";
+ static const char MSG_FILE_LANG[]= "intl/%.10s.msg";
+ const int LOCALE_MAX	= 10;
+-static const char* LOGFILE		= "firebird.log";
++static const char* LOGFILE		= "../../../var/log/firebird/firebird.log";
+ #define TEMP_PATTERN	"_XXXXXX"
+ #elif defined(WIN_NT)
+ static const char* WORKFILE		= "c:\\temp\\";
+@@ -139,7 +139,7 @@
+ static const char* MSG_FILE		= "firebird.msg";
+ static const char MSG_FILE_LANG[]= "intl/%.10s.msg";
+ const int LOCALE_MAX	= 10;
+-static const char* LOGFILE		= "firebird.log";
++static const char* LOGFILE		= "../../../var/log/firebird/firebird.log";
+ #define TEMP_PATTERN	"_XXXXXX"
+ #endif
+ 
+diff -Naur Firebird-2.0.3.12981-0_orig/src/jrd/jrd_pwd.h Firebird-2.0.3.12981-0/src/jrd/jrd_pwd.h
+--- Firebird-2.0.3.12981-0_orig/src/jrd/jrd_pwd.h	2007-09-19 21:00:33.000000000 -0400
++++ Firebird-2.0.3.12981-0/src/jrd/jrd_pwd.h	2007-09-20 18:48:18.000000000 -0400
+@@ -58,7 +58,7 @@
+ #ifdef VMS
+ 					"[sysmgr]security2.fdb";
+ #else
+-					"security2.fdb";
++					"../../../etc/firebird/security2.fdb";
+ #endif
+ 
+ 		gds__prefix(path_buffer, USER_INFO_NAME);
+diff -Naur Firebird-2.0.3.12981-0_orig/src/jrd/os/config_root.h Firebird-2.0.3.12981-0/src/jrd/os/config_root.h
+--- Firebird-2.0.3.12981-0_orig/src/jrd/os/config_root.h	2007-09-19 21:00:33.000000000 -0400
++++ Firebird-2.0.3.12981-0/src/jrd/os/config_root.h	2007-09-20 18:48:36.000000000 -0400
+@@ -32,7 +32,7 @@
+ #include "../jrd/os/path_utils.h"
+ #include "../common/utils_proto.h"
+ 
+-static const char* CONFIG_FILE	= "firebird.conf";
++static const char* CONFIG_FILE	= "../../../etc/firebird/firebird.conf";
+ 
+ /**
+ 	Since the original (isc.cpp) code wasn't able to provide powerful and
+diff -Naur Firebird-2.0.3.12981-0_orig/src/jrd/svc.cpp Firebird-2.0.3.12981-0/src/jrd/svc.cpp
+--- Firebird-2.0.3.12981-0_orig/src/jrd/svc.cpp	2007-09-19 21:00:33.000000000 -0400
++++ Firebird-2.0.3.12981-0/src/jrd/svc.cpp	2007-09-20 19:34:33.000000000 -0400
+@@ -366,38 +366,38 @@
+ static serv_entry services[] =
+ {
+ 
+-	{ isc_action_max, "print_cache", "-svc", "bin/fb_cache_print", NULL, 0 },
+-	{ isc_action_max, "print_locks", "-svc", "bin/fb_lock_print", NULL, 0 },
+-	{ isc_action_max, "start_cache", "-svc", "bin/fb_cache_manager", NULL, 0 },
+-	{ isc_action_max, "analyze_database", "-svc", "bin/gstat", NULL, 0 },
+-	{ isc_action_max, "backup", "-svc -b", "bin/gbak",	MAIN_GBAK, 0 },
+-	{ isc_action_max, "create", "-svc -c", "bin/gbak",	MAIN_GBAK, 0 },
+-	{ isc_action_max, "restore", "-svc -r", "bin/gbak",	MAIN_GBAK, 0 },
+-	{ isc_action_max, "gdef", "-svc", "bin/gdef", NULL, 0 },
+-	{ isc_action_max, "gsec", "-svc", "bin/gsec", NULL, 0 },
+-	{ isc_action_max, "disable_journal", "-svc -disable", "bin/gjrn", NULL, 0 },
+-	{ isc_action_max, "dump_journal", "-svc -online_dump", "bin/gjrn", NULL, 0 },
+-	{ isc_action_max, "enable_journal", "-svc -enable", "bin/gjrn", NULL, 0 },
+-	{ isc_action_max, "monitor_journal", "-svc -console", "bin/gjrn", NULL, 0 },
++	{ isc_action_max, "print_cache", "-svc", "../../../usr/bin/fb_cache_print", NULL, 0 },
++	{ isc_action_max, "print_locks", "-svc", "../../../usr/bin/fb_lock_print", NULL, 0 },
++	{ isc_action_max, "start_cache", "-svc", "../../../usr/bin/fb_cache_manager", NULL, 0 },
++	{ isc_action_max, "analyze_database", "-svc", "../../../usr/bin/gstat", NULL, 0 },
++	{ isc_action_max, "backup", "-svc -b", "../../../usr/bin/gbak",	MAIN_GBAK, 0 },
++	{ isc_action_max, "create", "-svc -c", "../../../usr/bin/gbak",	MAIN_GBAK, 0 },
++	{ isc_action_max, "restore", "-svc -r", "../../../usr/bin/gbak",	MAIN_GBAK, 0 },
++	{ isc_action_max, "gdef", "-svc", "../../../usr/bin/gdef", NULL, 0 },
++	{ isc_action_max, "gsec", "-svc", "../../../usr/bin/gsec", NULL, 0 },
++	{ isc_action_max, "disable_journal", "-svc -disable", "../../../usr/bin/gjrn", NULL, 0 },
++	{ isc_action_max, "dump_journal", "-svc -online_dump", "../../../usr/bin/gjrn", NULL, 0 },
++	{ isc_action_max, "enable_journal", "-svc -enable", "../../../usr/bin/gjrn", NULL, 0 },
++	{ isc_action_max, "monitor_journal", "-svc -console", "../../../usr/bin/gjrn", NULL, 0 },
+ 	{ isc_action_max, "query_server", NULL, NULL, NULL, 0 },
+-	{ isc_action_max, "start_journal", "-svc -server", "bin/gjrn", NULL, 0 },
+-	{ isc_action_max, "stop_cache", "-svc -shut -cache", "bin/gfix", NULL, 0 },
+-	{ isc_action_max, "stop_journal", "-svc -console", "bin/gjrn", NULL, 0 },
++	{ isc_action_max, "start_journal", "-svc -server", "../../../usr/bin/gjrn", NULL, 0 },
++	{ isc_action_max, "stop_cache", "-svc -shut -cache", "../../../usr/bin/gfix", NULL, 0 },
++	{ isc_action_max, "stop_journal", "-svc -console", "../../../usr/bin/gjrn", NULL, 0 },
+ 	{ isc_action_max, "anonymous", NULL, NULL, NULL, 0 },
+ 
+ /* NEW VERSION 2 calls, the name field MUST be different from those names above
+  */
+ 	{ isc_action_max, "service_mgr", NULL, NULL, NULL, 0 },
+-	{ isc_action_svc_backup, "Backup Database", NULL, "bin/gbak",	MAIN_GBAK, 0 },
+-	{ isc_action_svc_restore, "Restore Database", NULL, "bin/gbak",	MAIN_GBAK, 0 },
+-	{ isc_action_svc_repair, "Repair Database", NULL, "bin/gfix",	MAIN_GFIX, 0 },
+-	{ isc_action_svc_add_user, "Add User", NULL, "bin/gsec",	MAIN_GSEC, 0 },
+-	{ isc_action_svc_delete_user, "Delete User", NULL, "bin/gsec",	MAIN_GSEC, 0 },
+-	{ isc_action_svc_modify_user, "Modify User", NULL, "bin/gsec",	MAIN_GSEC, 0 },
+-	{ isc_action_svc_display_user, "Display User", NULL, "bin/gsec",	MAIN_GSEC, 0 },
+-	{ isc_action_svc_properties, "Database Properties", NULL, "bin/gfix",	MAIN_GFIX, 0 },
+-	{ isc_action_svc_lock_stats, "Lock Stats", NULL, "bin/fb_lock_print",	TEST_THREAD, 0 },
+-	{ isc_action_svc_db_stats, "Database Stats", NULL, "bin/gstat",	MAIN_GSTAT, 0 },
++	{ isc_action_svc_backup, "Backup Database", NULL, "../../../usr/bin/gbak",	MAIN_GBAK, 0 },
++	{ isc_action_svc_restore, "Restore Database", NULL, "../../../usr/bin/gbak",	MAIN_GBAK, 0 },
++	{ isc_action_svc_repair, "Repair Database", NULL, "../../../usr/bin/gfix",	MAIN_GFIX, 0 },
++	{ isc_action_svc_add_user, "Add User", NULL, "../../../usr/bin/gsec",	MAIN_GSEC, 0 },
++	{ isc_action_svc_delete_user, "Delete User", NULL, "../../../usr/bin/gsec",	MAIN_GSEC, 0 },
++	{ isc_action_svc_modify_user, "Modify User", NULL, "../../../usr/bin/gsec",	MAIN_GSEC, 0 },
++	{ isc_action_svc_display_user, "Display User", NULL, "../../../usr/bin/gsec",	MAIN_GSEC, 0 },
++	{ isc_action_svc_properties, "Database Properties", NULL, "../../../usr/bin/gfix",	MAIN_GFIX, 0 },
++	{ isc_action_svc_lock_stats, "Lock Stats", NULL, "../../../usr/bin/fb_lock_print",	TEST_THREAD, 0 },
++	{ isc_action_svc_db_stats, "Database Stats", NULL, "../../../usr/bin/gstat",	MAIN_GSTAT, 0 },
+ 	{ isc_action_svc_get_fb_log, "Get Log File", NULL, NULL,	SVC_read_fb_log, 0 },
+ /* actions with no names are undocumented */
+ 	{ isc_action_svc_set_config, NULL, NULL, NULL,	TEST_THREAD, 0 },
+diff -Naur Firebird-2.0.3.12981-0_orig/src/utilities/fbcpl/fbdialog.cpp Firebird-2.0.3.12981-0/src/utilities/fbcpl/fbdialog.cpp
+--- Firebird-2.0.3.12981-0_orig/src/utilities/fbcpl/fbdialog.cpp	2007-09-19 21:00:33.000000000 -0400
++++ Firebird-2.0.3.12981-0/src/utilities/fbcpl/fbdialog.cpp	2007-09-20 18:49:23.000000000 -0400
+@@ -1335,7 +1335,7 @@
+ bool CFBDialog::UpdateFirebirdConf(CString option, CString value)
+ {
+ 	CStdioFile FbConfFile, FbConfFileNew;
+-	CString FirebirdConfFilename = m_Root_Path + "firebird.conf";
++	CString FirebirdConfFilename = "../../../etc/firebird/firebird.conf";
+ 	CString FirebirdConfNewname = FirebirdConfFilename + ".new";
+ 	CString FirebirdConfOldname = FirebirdConfFilename + ".old";
+ 	CString FirebirdConfLine = "";
+diff -Naur Firebird-2.0.3.12981-0_orig/src/utilities/gsec/security.epp Firebird-2.0.3.12981-0/src/utilities/gsec/security.epp
+--- Firebird-2.0.3.12981-0_orig/src/utilities/gsec/security.epp	2007-09-19 21:00:34.000000000 -0400
++++ Firebird-2.0.3.12981-0/src/utilities/gsec/security.epp	2007-09-20 18:49:55.000000000 -0400
+@@ -41,7 +41,7 @@
+ #endif
+ #include "../common/utils_proto.h"
+ 
+-DATABASE DB = STATIC FILENAME "security2.fdb";
++DATABASE DB = STATIC FILENAME "../../../etc/firebird/security2.fdb";
+ 
+ static const char* SYSDBA_USER_NAME	= "SYSDBA";
+ 
+diff -Naur Firebird-2.0.3.12981-0_orig/src/utilities/guard/guard.cpp Firebird-2.0.3.12981-0/src/utilities/guard/guard.cpp
+--- Firebird-2.0.3.12981-0_orig/src/utilities/guard/guard.cpp	2007-09-19 21:00:34.000000000 -0400
++++ Firebird-2.0.3.12981-0/src/utilities/guard/guard.cpp	2007-09-20 19:33:31.000000000 -0400
+@@ -51,7 +51,7 @@
+ const USHORT IGNORE		= 3;
+ const USHORT NORMAL_EXIT= 0;
+ 
+-const char* SUPER_SERVER_BINARY	= "bin/fbserver";
++const char* SUPER_SERVER_BINARY	= "../../../usr/bin/fbserver";
+ 
+ const char* INTERBASE_USER		= "interbase";
+ const char* FIREBIRD_USER		= "firebird";
+diff -Naur Firebird-2.0.3.12981-0_orig/src/utilities/ibmgr/ibmgr.h Firebird-2.0.3.12981-0/src/utilities/ibmgr/ibmgr.h
+--- Firebird-2.0.3.12981-0_orig/src/utilities/ibmgr/ibmgr.h	2007-09-19 21:00:34.000000000 -0400
++++ Firebird-2.0.3.12981-0/src/utilities/ibmgr/ibmgr.h	2007-09-20 19:33:06.000000000 -0400
+@@ -31,7 +31,7 @@
+ static const char* FIREBIRD_USER_NAME	= "firebird";
+ static const char* INTERBASE_USER_NAME	= "interbase";
+ static const char* INTERBASE_USER_SHORT= "interbas";
+-static const char* SERVER_GUARDIAN	= "bin/fbguard";
++static const char* SERVER_GUARDIAN	= "../../../usr/bin/fbguard";
+ 
+ const USHORT MSG_FAC	= 18;
+ const int MSG_LEN		= 128;
+diff -Naur Firebird-2.0.3.12981-0_orig/src/utilities/ibmgr/srvrmgr.cpp Firebird-2.0.3.12981-0/src/utilities/ibmgr/srvrmgr.cpp
+--- Firebird-2.0.3.12981-0_orig/src/utilities/ibmgr/srvrmgr.cpp	2007-09-19 21:00:34.000000000 -0400
++++ Firebird-2.0.3.12981-0/src/utilities/ibmgr/srvrmgr.cpp	2007-09-19 21:29:15.000000000 -0400
+@@ -271,7 +271,7 @@
+ 		rs = "can not quit now, use shut -ign";
+ 		break;
+ 	case MSG_STARTERR:
+-		rs = "check $FIREBIRD/firebird.log file for errors";
++		rs = "check /var/log/firebird/firebird.log file for errors";
+ 		break;
+ 	case MSG_STARTFAIL:
+ 		rs = "can not start server";
