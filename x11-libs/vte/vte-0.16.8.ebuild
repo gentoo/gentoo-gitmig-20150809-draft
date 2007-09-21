@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.16.8.ebuild,v 1.4 2007/09/03 02:41:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.16.8.ebuild,v 1.5 2007/09/21 19:45:27 wolf31o2 Exp $
 
 inherit eutils gnome2 autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 # pcre is broken in this release
 IUSE="debug doc python opengl"
 
