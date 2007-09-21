@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r3.ebuild,v 1.15 2007/07/22 05:52:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r3.ebuild,v 1.16 2007/09/21 14:32:58 dsd Exp $
 
 inherit eutils flag-o-matic libtool
 
 DESCRIPTION="rxvt -- nice small x11 terminal"
-HOMEPAGE="http://www.rxvt.org/
+HOMEPAGE="http://rxvt.sourceforge.net/
 	http://www.giga.it.okayama-u.ac.jp/~ishihara/opensource/"
 SRC_URI="mirror://sourceforge/rxvt/${P}.tar.gz
 	http://www.giga.it.okayama-u.ac.jp/~ishihara/opensource/${P}-xim-fix.patch.gz"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.55 2007/07/22 05:54:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.56 2007/09/21 14:32:58 dsd Exp $
+
+  21 Sep 2007; Daniel Drake <dsd@gentoo.org> rxvt-2.7.10-r3.ebuild:
+  Fix homepage at request of upstream (bug #119998)
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Drop virtual/x11 references.
