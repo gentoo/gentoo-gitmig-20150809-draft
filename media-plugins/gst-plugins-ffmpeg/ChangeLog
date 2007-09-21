@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.78 2007/09/10 16:44:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.79 2007/09/21 19:22:03 wolf31o2 Exp $
+
+  21 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  gst-plugins-ffmpeg-0.10.2.ebuild:
+  Stable on amd64 wrt bug #190900.
 
   10 Sep 2007; nixnut <nixnut@gentoo.org> gst-plugins-ffmpeg-0.10.2.ebuild:
   Stable on ppc wrt bug 190900
