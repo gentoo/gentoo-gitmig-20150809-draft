@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.4_p20070914-r2.ebuild,v 1.5 2007/09/20 20:39:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.4_p20070914-r2.ebuild,v 1.6 2007/09/21 07:17:05 mr_bones_ Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -34,7 +34,6 @@ inherit versionator php5_2-sapi apache-module
 SRC_URI="http://gentoo.longitekk.com/${P}.tar.bz2 http://gentoo.longitekk.com/php-patchset-${MY_PHP_PV}-r${PHP_PATCHSET_REV}.tar.bz2"
 
 [[ -n "${SUHOSIN_PATCH}" ]] && SRC_URI="${SRC_URI} suhosin? ( http://gentoo.longitekk.com/${SUHOSIN_PATCH} )"
-
 
 DESCRIPTION="The PHP language runtime engine: CLI, CGI and Apache2 SAPIs."
 
