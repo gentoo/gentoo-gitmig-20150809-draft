@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r4.ebuild,v 1.3 2007/09/21 14:15:06 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r4.ebuild,v 1.4 2007/09/21 14:47:42 voyageur Exp $
 
 inherit autotools eutils gnustep-base flag-o-matic
 
@@ -20,13 +20,13 @@ DEPEND="x11-libs/libXv
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.6.1-r2 )
-	gnustep? ( gnustep-base/gnustep-make )"
+	gnustep? ( >=gnustep-base/gnustep-make-2.0 )"
 RDEPEND="${DEPEND}
 	nls? ( >=sys-devel/gettext-0.10.39 )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
 src_unpack() {
 	is-flag -fstack-protector && filter-flags -fstack-protector \
