@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.14.1.ebuild,v 1.1 2007/09/21 17:05:01 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.14.1.ebuild,v 1.2 2007/09/21 17:29:39 remi Exp $
 
 inherit gnome.org libtool eutils flag-o-matic
 
@@ -13,14 +13,14 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~spa
 IUSE="debug doc hardened"
 
 RDEPEND="virtual/libc
-		 virtual/libiconv"
+	virtual/libiconv"
 DEPEND="${RDEPEND}
-		>=dev-util/pkgconfig-0.14
-		>=sys-devel/gettext-0.11
-		doc? (
-			>=dev-util/gtk-doc-1.4
-			~app-text/docbook-xml-dtd-4.1.2
-		)"
+	>=dev-util/pkgconfig-0.14
+	>=sys-devel/gettext-0.11
+	doc? (
+		>=dev-util/gtk-doc-1.4
+		~app-text/docbook-xml-dtd-4.1.2
+	)"
 
 src_unpack() {
 	unpack ${A}
