@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.200 2007/09/15 14:47:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.201 2007/09/21 19:50:23 wolf31o2 Exp $
+
+  21 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  gedit-2.18.2-r1.ebuild:
+  Stable on x86 wrt bug #193339.
 
   15 Sep 2007; Roy Marples <uberlord@gentoo.org>
   files/gedit-2.18.1-fbsd.patch:
