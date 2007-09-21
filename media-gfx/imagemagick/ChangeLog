@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.239 2007/09/21 23:23:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.240 2007/09/21 23:38:32 fmccor Exp $
+
+  21 Sep 2007; Ferris McCormick <fmccor@gentoo.org>
+  imagemagick-6.3.5.9.ebuild:
+  Sparc stable --- security Bug #186030 --- builds and appears to work.
 
   21 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   imagemagick-6.3.5.9.ebuild:
