@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3032 2007/09/19 14:55:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3033 2007/09/21 08:14:16 djay Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1784,6 +1784,7 @@ sci-geosciences/grass:gdal - Enables gdal support (Grass 6 only)
 sci-geosciences/grass:glw - Enables libGLw support (requires mesa)
 sci-geosciences/grass:gmath - Enables gmath wrapper for BLAS/Lapack
 sci-geosciences/grass:largefile - Enables LFS support for huge files
+sci-geosciences/mapserver:agg - Enables agg library support
 sci-geosciences/mapserver:flash - Adds support for creating SWF files using Ming
 sci-geosciences/mapserver:gdal - Enables gdal library support
 sci-geosciences/mapserver:geos - Enables geos library support
