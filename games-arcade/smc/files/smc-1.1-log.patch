@@ -1,0 +1,13 @@
+Index: src/video/video.cpp
+===================================================================
+--- src/video/video.cpp	(revision 815)
++++ src/video/video.cpp	(working copy)
+@@ -134,7 +134,7 @@
+ 	try
+ 	{
+ 		pGuiRenderer = new OpenGLRenderer( 0, GAME_RES_W, GAME_RES_H );
+-		pGuiSystem = new System( pGuiRenderer );
++		pGuiSystem = new System( pGuiRenderer, NULL, NULL, NULL, "", user_data_dir + "/cegui.log" );
+ 	}
+ 	// catch CEGUI Exceptions
+ 	catch( Exception &ex )
