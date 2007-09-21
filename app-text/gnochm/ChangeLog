@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnochm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/ChangeLog,v 1.5 2007/09/21 00:21:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/ChangeLog,v 1.6 2007/09/21 18:42:22 opfer Exp $
+
+  21 Sep 2007; Christian Faulhammer <opfer@gentoo.org> gnochm-0.9.10.ebuild:
+  stable x86, bug 193269
 
 *gnochm-0.9.11 (21 Sep 2007)
 
