@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.283 2007/09/21 01:40:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.284 2007/09/21 17:05:01 remi Exp $
+
+*glib-2.14.1 (21 Sep 2007)
+
+  21 Sep 2007; Rémi Cardona <remi@gentoo.org> +glib-2.14.1.ebuild:
+  add glib-2.14.1 from the gnome-experimental overlay
 
   21 Sep 2007; Brent Baude <ranger@gentoo.org> glib-2.12.13.ebuild:
   Marking glib-2.12.13 ppc64 for bug#190019
