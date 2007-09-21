@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-0.5.ebuild,v 1.3 2007/09/20 20:43:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-0.5.ebuild,v 1.4 2007/09/21 16:16:35 opfer Exp $
 
 inherit kde eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://home.planet.nl/~lamer024/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="alsa arts oss"
 
 DEPEND="alsa? ( media-libs/alsa-lib )"

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/k3guitune
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/ChangeLog,v 1.13 2007/09/20 20:43:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/ChangeLog,v 1.14 2007/09/21 16:16:35 opfer Exp $
+
+  21 Sep 2007; Christian Faulhammer <opfer@gentoo.org> k3guitune-0.5.ebuild:
+  stable x86, bug 192940
 
   20 Sep 2007; Christoph Mende <angelos@gentoo.org> k3guitune-0.5.ebuild:
   Stable on amd64 wrt bug #192940
