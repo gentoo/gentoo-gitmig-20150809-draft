@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.18.3.ebuild,v 1.2 2007/07/17 11:08:43 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.18.3.ebuild,v 1.3 2007/09/21 23:38:39 leio Exp $
 
 inherit virtualx eutils gnome2
 
@@ -10,8 +10,8 @@ HOMEPAGE="http://www.gnome.org/projects/nautilus/"
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="beagle gnome tracker"
-# cups flac gstreamer mad ogg vorbis
+IUSE="beagle gnome"
+# tracker cups flac gstreamer mad ogg vorbis
 
 RDEPEND=">=media-libs/libart_lgpl-2.3.10
 	>=gnome-base/libbonobo-2.1
@@ -31,11 +31,11 @@ RDEPEND=">=media-libs/libart_lgpl-2.3.10
 	>=media-libs/libexif-0.5.12
 	>=gnome-base/gconf-2
 	beagle? ( >=app-misc/beagle-0.0.12 )
-	x86? ( tracker? ( >=app-misc/tracker-0.0.1 ) )
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-proto/xproto
 	virtual/eject"
+#	x86? ( tracker? ( >=app-misc/tracker-0.0.1 ) )
 #	!gstreamer? ( vorbis? ( media-sound/vorbis-tools ) )
 #	gstreamer? (
 #		>=media-libs/gstreamer-0.8
@@ -56,7 +56,7 @@ PDEPEND="gnome? ( >=x11-themes/gnome-icon-theme-1.1.91 )"
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README THANKS TODO"
 
 pkg_setup() {
-	G2CONF="--disable-update-mimedb $(use_enable beagle) $(use_enable tracker)"
+	G2CONF="--disable-update-mimedb $(use_enable beagle) --disable-tracker"
 }
 
 src_test() {
