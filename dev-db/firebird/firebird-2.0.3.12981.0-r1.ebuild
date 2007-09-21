@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r1.ebuild,v 1.1 2007/09/21 02:15:03 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r1.ebuild,v 1.2 2007/09/21 07:16:34 mr_bones_ Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -58,7 +58,6 @@ src_unpack() {
 
 	find "${S}" -name \*.sh -print0 | xargs -0 chmod +x
 	rm -rf "${S}"/extern/{editline,icu}
-
 
 	eautoreconf
 }
