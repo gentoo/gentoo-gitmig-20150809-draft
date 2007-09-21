@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.3.7.ebuild,v 1.2 2007/07/11 05:23:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.3.7.ebuild,v 1.3 2007/09/21 21:44:11 killerfox Exp $
 
 inherit ruby
 
@@ -11,7 +11,7 @@ SRC_URI="http://reductivelabs.com/downloads/${PN}/${P}.tgz"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 USE_RUBY="ruby18"
 
