@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX backport-util-concurrent-3.0-notest.patch 491 RMD160 1267f72b754cfe122c64f64809b146dfb3ce38c5 SHA1 c86c7adcf562dbc8b17b1126f187bd016c1f4d0c SHA256 112918b1488255337fc42c1f5b8d71faefdc10c62a3061452f6d1b427cf0778f
 MD5 e3c5d696951350605cb1ec428ababdcb files/backport-util-concurrent-3.0-notest.patch 491
 RMD160 1267f72b754cfe122c64f64809b146dfb3ce38c5 files/backport-util-concurrent-3.0-notest.patch 491
@@ -13,14 +16,14 @@ EBUILD backport-util-concurrent-1.1.01-r1.ebuild 1270 RMD160 8341df948fa152a60de
 MD5 9914ed5284236c643d829dfab375c698 backport-util-concurrent-1.1.01-r1.ebuild 1270
 RMD160 8341df948fa152a60de1d03390753ae3ceadcee0 backport-util-concurrent-1.1.01-r1.ebuild 1270
 SHA256 d8445bc5429390a1945a6d2870071867d9be50f328cad70db4c4d8e8c0a1a298 backport-util-concurrent-1.1.01-r1.ebuild 1270
-EBUILD backport-util-concurrent-3.0.ebuild 1702 RMD160 badb580d4deae9d68780cc501a225cea887cd62c SHA1 bca05f67ea1fdf7140731e28bc387cd05bcc95b6 SHA256 f4c9adb5c5dc0a825bd0406ef6d85323d85fb82e117f54299e9c3fbea2185b31
-MD5 d68dd18a04abc5fcbc9a0328be6ace08 backport-util-concurrent-3.0.ebuild 1702
-RMD160 badb580d4deae9d68780cc501a225cea887cd62c backport-util-concurrent-3.0.ebuild 1702
-SHA256 f4c9adb5c5dc0a825bd0406ef6d85323d85fb82e117f54299e9c3fbea2185b31 backport-util-concurrent-3.0.ebuild 1702
-MISC ChangeLog 3094 RMD160 941530e4babcd92308393c282afd9eb0e64cdc1c SHA1 1f63b3fa5a1f2af1c427b6d2defce46286f8b72d SHA256 572b9bf7fb2a1bbcdfe265d259b95748b04a4d21a3a32c852894b63c6afb033b
-MD5 7dfa26b6c9cd93e3b866443f049b7060 ChangeLog 3094
-RMD160 941530e4babcd92308393c282afd9eb0e64cdc1c ChangeLog 3094
-SHA256 572b9bf7fb2a1bbcdfe265d259b95748b04a4d21a3a32c852894b63c6afb033b ChangeLog 3094
+EBUILD backport-util-concurrent-3.0.ebuild 1701 RMD160 8bb031b7f65b198ee38311a73a18119de5feff4e SHA1 0757579976e19291b291d4ffb31345aa7bc8fa09 SHA256 79b06ace518a57e58e5a14e6e272e8d95a10e1cc1fbec453f3bf0b32aa0298c8
+MD5 2f6c54b2858eab71b93c405011b9ecee backport-util-concurrent-3.0.ebuild 1701
+RMD160 8bb031b7f65b198ee38311a73a18119de5feff4e backport-util-concurrent-3.0.ebuild 1701
+SHA256 79b06ace518a57e58e5a14e6e272e8d95a10e1cc1fbec453f3bf0b32aa0298c8 backport-util-concurrent-3.0.ebuild 1701
+MISC ChangeLog 3214 RMD160 e07286587af12b7ab952a7678614412c205377bc SHA1 fb5dcdaa6f8effeca48deecb440d3e52f13bc3ea SHA256 810e8eedf1001996e662b6d878964d173712fc088b012b799a4b8d32c1aabc10
+MD5 fe7ee3726bb1784c0ea28ff4cd52161c ChangeLog 3214
+RMD160 e07286587af12b7ab952a7678614412c205377bc ChangeLog 3214
+SHA256 810e8eedf1001996e662b6d878964d173712fc088b012b799a4b8d32c1aabc10 ChangeLog 3214
 MISC metadata.xml 327 RMD160 6cb78e59be1161bb0838d270ad70b89f1701d067 SHA1 91f86e04405e680145c06ee44ea712f374e85c0f SHA256 5211f0eb4ff59809e2878506ad92010fc57863cf802f27da6d00fcaf718cd8bf
 MD5 cb3b5676f00d204411b5f2b88c4d0bf1 metadata.xml 327
 RMD160 6cb78e59be1161bb0838d270ad70b89f1701d067 metadata.xml 327
@@ -31,3 +34,10 @@ SHA256 25e9eb9c62ab6c4724c0b0671b003b59bf8c3c3338fa645ec48cdfd92aa8c56b files/di
 MD5 2133a743067216789627e58f4571232b files/digest-backport-util-concurrent-3.0 599
 RMD160 6cdf18f8c0610a72c3c55982ae992c8e51f4fe62 files/digest-backport-util-concurrent-3.0 599
 SHA256 cdf4c72dce18386ca0ead3bfe0c4debc2b618d0c40ee08884d4c7f66359018fb files/digest-backport-util-concurrent-3.0 599
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7 (GNU/Linux)
+
+iD8DBQFG9AHjNQqtfCuFneMRAp1NAJ4gqBWw3DH0MfTZWO/uKYxMj0pr7ACeJtYm
+WoeFna3WLfIoNYhj8FPIQ9E=
+=+EYL
+-----END PGP SIGNATURE-----
