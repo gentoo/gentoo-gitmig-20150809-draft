@@ -1,6 +1,10 @@
 # ChangeLog for net-www/vdradmin-am
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.22 2007/09/21 10:47:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.23 2007/09/21 11:16:55 zzam Exp $
+
+  21 Sep 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdradmin-am-3.6.0.ebuild:
+  Updated to fixed tarball.
 
 *vdradmin-am-3.6.0 (21 Sep 2007)
 

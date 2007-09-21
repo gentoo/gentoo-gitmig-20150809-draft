@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.6.0.ebuild,v 1.1 2007/09/21 10:47:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.6.0.ebuild,v 1.2 2007/09/21 11:16:55 zzam Exp $
 
 inherit eutils
 
@@ -47,10 +47,6 @@ src_unpack() {
 	sed -i vdradmind.pl \
 		-e "/COMPILE_DIR/s-/tmp-${TMP_DIR}-" \
 		-e "s-/var/run/vdradmind.pid-/var/tmp/vdradmin/vdradmind.pid-"
-
-	# fix wrong encoding in .po
-	sed -i po/it.po \
-		-e 's/8859-1s/8859-1/'
 }
 
 src_compile() {
