@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.14.1.ebuild,v 1.2 2007/09/21 17:29:39 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.14.1.ebuild,v 1.3 2007/09/21 20:23:19 leio Exp $
 
 inherit gnome.org libtool eutils flag-o-matic
 
@@ -39,6 +39,11 @@ src_unpack() {
 			epatch "${FILESDIR}/glib-2.10.3-ia64-atomic-ops.patch"
 		fi
 	fi
+
+	# Fix gmodule issues on fbsd; bug #184301
+	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
+
+	[[ ${CHOST} == *-freebsd* ]] && elibtoolize
 }
 
 src_compile() {
