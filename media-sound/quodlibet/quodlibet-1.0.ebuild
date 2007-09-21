@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-1.0.ebuild,v 1.2 2007/07/02 19:44:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-1.0.ebuild,v 1.3 2007/09/21 04:46:43 aballier Exp $
 
 inherit eutils python
 
@@ -15,7 +15,8 @@ IUSE="aac alsa dbus esd ffmpeg flac gnome hal ipod mad mmkeys musepack oss trayi
 
 DEPEND=">=virtual/python-2.4.3-r1
 	trayicon? ( >=dev-python/pygtk-2.8 )
-	mmkeys? ( >=dev-python/pygtk-2.8 )"
+	mmkeys? ( >=dev-python/pygtk-2.8 )
+	dev-util/intltool"
 
 RDEPEND="${DEPEND}
 	>=dev-python/pygtk-2.8

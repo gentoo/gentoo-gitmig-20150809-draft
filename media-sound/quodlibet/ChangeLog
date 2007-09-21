@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.53 2007/07/02 19:44:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.54 2007/09/21 04:46:43 aballier Exp $
+
+  21 Sep 2007; Alexis Ballier <aballier@gentoo.org> quodlibet-1.0.ebuild:
+  add intltool dep for bug #193220
 
   02 Jul 2007; Raúl Porcel <armin76@gentoo.org> quodlibet-1.0.ebuild:
   Readd ~alpha wrt #177140
