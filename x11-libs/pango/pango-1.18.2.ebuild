@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.18.2.ebuild,v 1.1 2007/09/21 17:17:31 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.18.2.ebuild,v 1.2 2007/09/21 17:59:26 remi Exp $
 
 inherit eutils gnome2 multilib
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.pango.org/"
 LICENSE="LGPL-2 FTL"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="doc debug"
+IUSE="doc"
 
 RDEPEND="x11-libs/libXrender
 	x11-libs/libX11
@@ -47,7 +47,8 @@ src_unpack() {
 }
 
 pkg_setup() {
-	G2CONF="`use_enable debug`"
+	# Passing --disable-debug is not recommended for production use
+	use debug && G2CONF="${G2CONF} --enable-debug=yes"
 	gnome2_pkg_setup
 }
 
