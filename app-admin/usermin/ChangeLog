@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.128 2007/09/20 17:20:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.129 2007/09/21 18:53:05 armin76 Exp $
+
+*usermin-1.300 (21 Sep 2007)
+
+  21 Sep 2007; Raúl Porcel <armin76@gentoo.org> -usermin-1.290.ebuild,
+  +usermin-1.300.ebuild:
+  Version bump
 
 *usermin-1.290 (20 Sep 2007)
 

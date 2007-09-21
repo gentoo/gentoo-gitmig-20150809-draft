@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.290.ebuild,v 1.1 2007/09/20 17:20:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.300.ebuild,v 1.1 2007/09/21 18:53:05 armin76 Exp $
 
 IUSE="ssl"
 
