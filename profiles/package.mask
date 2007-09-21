@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7726 2007/09/20 17:58:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7727 2007/09/21 01:10:24 hanno Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Hanno Boeck <hanno@gentoo.org> (21 Sep 2007)
+# experimental new ebuild, changes a lot and breaks configuration
+=net-mail/mailman-2.1.9-r2
 
 # Mike Auty <ikelos@gentoo.org> (20 Sep 2007)
 # Vmware security masking (bug 193196)
