@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.164 2007/09/08 18:28:30 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.165 2007/09/21 14:49:42 wltjr Exp $
+
+  21 Sep 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  tomcat-5.5.25.ebuild:
+  Removed the from if clause :( no clue how that was added.
 
 *tomcat-5.5.25 (08 Sep 2007)
 

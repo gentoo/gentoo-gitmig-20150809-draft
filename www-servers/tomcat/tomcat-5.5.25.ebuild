@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.25.ebuild,v 1.2 2007/09/09 03:00:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.25.ebuild,v 1.3 2007/09/21 14:49:42 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -209,7 +209,7 @@ src_install() {
 	done
 
 	# replace a packed struts.jar
-	if the use admin; then
+	if use admin; then
 		cd server/webapps/admin/WEB-INF/lib
 		rm -f struts.jar
 		java-pkg_jar-from struts-1.2 struts.jar
