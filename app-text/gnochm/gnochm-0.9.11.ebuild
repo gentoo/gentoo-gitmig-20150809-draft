@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/gnochm-0.9.9.ebuild,v 1.3 2007/03/18 13:12:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/gnochm-0.9.11.ebuild,v 1.1 2007/09/21 00:21:40 dirtyepic Exp $
 
 inherit gnome2
 
