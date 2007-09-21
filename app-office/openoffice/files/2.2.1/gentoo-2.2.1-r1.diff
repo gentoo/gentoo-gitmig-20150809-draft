@@ -1,0 +1,36 @@
+--- bin/package-ooo 
++++ bin/package-ooo 
+@@ -57,6 +57,7 @@
+ #!/bin/sh
+ export OOO_EXTRA_ARG='$2'
++unset PYTHONPATH
+ $OOINSTBASE/program/ooqstart $3 "\$@"
+ EOT
+     chmod 755 $1
+ }
+--- patches/src680/apply 
++++ patches/src680/apply 
+@@ -904,6 +904,13 @@
+ 
+ # JavaUNOHelperServices.class must be built before juh.jar is created
+ javaunohelper-deps.diff, i#77465, pmladek
++
++# don't define -DCURL_NO_OLDIES, breaks with curl 7.17.0
++# Debian #442338, Debian #442368
++ucb-no-CURL_NO_OLDIES.diff
++
++# security fix
++itiff.diff
+ 
+ [ MandrivaOnly ]
+ SectionOwner => gghibo
+@@ -1185,6 +1185,8 @@
+ system-db-check.diff, i#65979, hmth
+ # User ~/.ooo-2.0 as user dir
+ scp2-user-config-ooo-2.0.diff, pmladek
++# Fix visbility issue with gcc-4.2
++swregion-gcc42.diff, i#78417, aprosky
+ 
+ [ DebianBaseOnly ]
+ SectionOwner => rengelha
+
