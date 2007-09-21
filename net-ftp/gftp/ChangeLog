@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.57 2007/01/14 20:05:42 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.58 2007/09/21 20:08:54 dang Exp $
+
+*gftp-2.0.18-r6 (21 Sep 2007)
+
+  21 Sep 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gftp-2.0.18-188252.patch, +gftp-2.0.18-r6.ebuild:
+  Bump to 2.0.18-r6
+  	Fix for issues in bug #188252
 
 *gftp-2.0.18-r5 (14 Jan 2007)
 
