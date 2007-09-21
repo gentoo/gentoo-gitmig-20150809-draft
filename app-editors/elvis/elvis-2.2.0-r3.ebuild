@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.2.0-r3.ebuild,v 1.1 2007/09/21 21:24:31 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.2.0-r3.ebuild,v 1.2 2007/09/21 22:45:43 hawking Exp $
 
 inherit eutils versionator
 
@@ -30,7 +30,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	#epatch "${FILESDIR}/ft2.3-symbol-collision-fix.patch"
+	epatch "${FILESDIR}/ft2.3-symbol-collision-fix.patch"
 }
 
 src_compile() {
