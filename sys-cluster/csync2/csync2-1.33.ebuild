@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.33.ebuild,v 1.3 2007/09/20 20:59:18 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.33.ebuild,v 1.4 2007/09/21 07:17:48 mr_bones_ Exp $
 
 DESCRIPTION="Cluster synchronization tool."
 SRC_URI="http://oss.linbit.com/csync2/${P}.tar.gz"
@@ -29,7 +29,6 @@ src_compile() {
 	emake || die "compile problem"
 }
 
-
 src_install() {
 	emake DESTDIR="${D}" \
 		localstatedir=/var \
@@ -44,7 +43,6 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO csync2_locheck.sh
 }
-
 
 pkg_postinst() {
 	echo
@@ -61,7 +59,6 @@ pkg_postinst() {
 	einfo "Please move you old config to the right location"
 	echo
 }
-
 
 pkg_config() {
 	einfo "Updating ${ROOT}/etc/services"
