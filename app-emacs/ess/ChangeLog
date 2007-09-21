@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ess
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.19 2007/08/16 13:44:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.20 2007/09/21 12:05:20 fmccor Exp $
+
+  21 Sep 2007; Ferris McCormick <fmccor@gentoo.org> ess-5.3.5.ebuild:
+  Sparc stable --- Bug #193311 --- tested a bit with R.
 
 *ess-5.3.5 (16 Aug 2007)
 
