@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.78 2007/09/12 14:32:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.79 2007/09/21 09:40:17 armin76 Exp $
+
+  21 Sep 2007; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask some USE-flags we don't have hardware to test
 
   12 Sep 2007; Raúl Porcel <armin76@gentoo.org> virtuals:
   Set virtual/blas on virtuals, bug #189738
