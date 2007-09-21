@@ -40,4 +40,4 @@ move games-sports/sturmbahnfahrer games-sports/stormbaancoureur
 slotmove =dev-ruby/capistrano-1.4* 0 1
 slotmove =dev-ruby/capistrano-1.9* 0 2
 move net-im/micq net-im/climm
-
+move games-arcade/smclone games-arcade/smc
