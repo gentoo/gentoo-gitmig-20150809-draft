@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-DB_Table
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/ChangeLog,v 1.28 2007/09/16 05:51:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/ChangeLog,v 1.29 2007/09/21 12:21:13 opfer Exp $
+
+  21 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  PEAR-DB_Table-1.5.0.ebuild:
+  x86 stable, bug 192247
 
   16 Sep 2007; Jeroen Roovers <jer@gentoo.org> PEAR-DB_Table-1.5.0.ebuild:
   Stable for HPPA (bug #192247).
