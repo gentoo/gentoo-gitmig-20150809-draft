@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.270 2007/09/11 19:24:01 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.271 2007/09/21 16:49:17 dang Exp $
+
+  21 Sep 2007; Daniel Gryniewicz <dang@gentoo.org> python-2.4.4-r5.ebuild:
+  Marked stable on amd64 for bug #188029
 
   10 Sep 2007; Joel Martin <kanaka@gentoo.org>
   +files/python-2.4.4-test-cross.patch, python-2.4.4-r4.ebuild,
