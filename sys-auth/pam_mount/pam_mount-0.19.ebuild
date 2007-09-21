@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-0.19.ebuild,v 1.3 2007/08/14 15:49:42 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-0.19.ebuild,v 1.4 2007/09/21 22:43:34 hanno Exp $
 
-inherit eutils multilib
+inherit eutils multilib pam
 
 DESCRIPTION="A PAM module that can mount volumes for a user session"
 HOMEPAGE="http://pam-mount.sourceforge.net"
@@ -16,7 +16,8 @@ IUSE="crypt"
 DEPEND=">=sys-libs/pam-0.72
 	dev-libs/openssl
 	>=dev-libs/glib-2.0.0
-	sys-libs/libhx"
+	sys-libs/libhx
+	dev-libs/libxml2"
 RDEPEND="$DEPEND
 	crypt? ( || ( >=sys-fs/cryptsetup-1.0.5 sys-fs/cryptsetup-luks ) )
 	sys-process/lsof"
@@ -28,8 +29,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	insinto /etc/security
-	doins ${S}/config/pam_mount.conf.xml || die
+	dopamsecurity . config/pam_mount.conf.xml || die "dopamsecurity failed"
 
 	dodoc README TODO AUTHORS FAQ || die
 }
