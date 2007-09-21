@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation.
+# Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.27 2007/06/22 18:53:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.28 2007/09/21 03:15:50 wolf31o2 Exp $
 
 -3dnow
 -3dnowext
@@ -37,8 +37,8 @@ gulm
 # lvm2 cluster
 -clvm
 
-# 2006/06/22 Chris Gianelloni <wolf31o2@gentoo.org>
-# # Masking for bug #136866
+# Chris Gianelloni <wolf31o2@gentoo.org> (22 Jun 2006)
+# Masking for bug #136866
 pmount
 
 # Christian Faulhammer <opfer@gentoo.org> (23 Nov 2006)
@@ -74,3 +74,5 @@ ibm
 # dev-lang/tcc won't build
 -tcc
 
+# mask evo since gnome won't work on 2.4 anymore
+evo

@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.13 2007/09/21 03:11:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.14 2007/09/21 03:15:50 wolf31o2 Exp $
+
+  21 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> use.mask:
+  Added evo to use.mask since it pulls in evolution and we don't have any
+  versions of evolution available for 2.4 systems.
 
   21 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
   Adding app-editors/{mlview,peacock,screem} since they all require parts of
