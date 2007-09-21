@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.22-r2.ebuild,v 1.1 2007/09/15 21:48:54 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.22-r2.ebuild,v 1.2 2007/09/21 14:10:36 opfer Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -22,7 +22,7 @@ UNIPATCH_LIST="${DISTDIR}/${SUSPEND2_SRC}.patch.bz2"
 UNIPATCH_STRICTORDER="yes"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${SUSPEND2_URI}"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 RDEPEND="${RDEPEND}
 		>=sys-apps/suspend2-userui-0.7.1
