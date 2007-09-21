@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.272 2007/09/21 18:30:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.273 2007/09/21 18:47:07 armin76 Exp $
+
+  21 Sep 2007; Raúl Porcel <armin76@gentoo.org> python-2.4.4-r5.ebuild:
+  alpha/ia64 stable wrt #188029
 
   21 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   python-2.4.4-r5.ebuild:
