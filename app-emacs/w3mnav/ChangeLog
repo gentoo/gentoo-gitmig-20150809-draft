@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/w3mnav
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3mnav/ChangeLog,v 1.11 2007/09/20 23:06:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3mnav/ChangeLog,v 1.12 2007/09/21 09:15:45 ulm Exp $
+
+*w3mnav-0.5-r3 (21 Sep 2007)
+
+  21 Sep 2007; Ulrich Mueller <ulm@gentoo.org> files/75w3mnav-gentoo.el,
+  -w3mnav-0.5-r2.ebuild, +w3mnav-0.5-r3.ebuild:
+  Move binding of keys to w3m-mode-hook. Fixes bug #193287, thanks to Ivan
+  Toshkov <ivan@toshkov.org> for the report and solution.
 
 *w3mnav-0.5-r2 (20 Sep 2007)
 
