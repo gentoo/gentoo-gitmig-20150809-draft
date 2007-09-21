@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.49 2007/09/20 14:32:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.50 2007/09/21 13:24:45 opfer Exp $
+
+  21 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  ktoblzcheck-1.14.ebuild:
+  stable x86, bug 192840
 
   20 Sep 2007; Raúl Porcel <armin76@gentoo.org> ktoblzcheck-1.11.ebuild,
   ktoblzcheck-1.12.ebuild, ktoblzcheck-1.13.ebuild, ktoblzcheck-1.14.ebuild:
