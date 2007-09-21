@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/png
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/ChangeLog,v 1.1 2007/09/21 23:03:01 agorf Exp $
+
+*png-1.1.0 (21 Sep 2007)
+
+  21 Sep 2007; Aggelos Orfanakos <agorf@gentoo.org> +png-1.1.0.ebuild:
+  Initial import.
+
