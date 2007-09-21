@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.6 2007/09/01 16:58:36 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.7 2007/09/21 08:21:49 djay Exp $
+
+*mapserver-5.0.0 (22 Nov 2007)
+
+  22 Nov 2007; <djay@gentoo.org> +files/mapserver-5.0.0_php.patch,
+  +mapserver-5.0.0.ebuild:
+  Version Bump to 5.0.0 : thx to fordfrog for his work
 
 *mapserver-4.10.3 (01 Sep 2007)
 
