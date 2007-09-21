@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/dfbsee-0.7.4-r1.ebuild,v 1.1 2005/12/17 13:53:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/dfbsee-0.7.4-r1.ebuild,v 1.2 2007/09/21 16:12:54 opfer Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.directfb.org/dfbsee.xml"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 -sparc ~x86"
+KEYWORDS="~amd64 -sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/DirectFB-0.9.24"
