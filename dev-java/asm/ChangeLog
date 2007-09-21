@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.41 2007/08/19 19:54:32 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.42 2007/09/21 17:43:17 opfer Exp $
+
+  21 Sep 2007; Christian Faulhammer <opfer@gentoo.org> asm-3.0.ebuild:
+  stable x86, bug 187624
 
   19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org> asm-3.0.ebuild:
   amd64 stable, bug #187681.
