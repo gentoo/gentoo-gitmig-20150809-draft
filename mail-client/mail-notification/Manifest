@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX mail-notification-2.0-buildfix.diff 281 RMD160 49db75ab313415284ad4658c7b34cc42eb63deaf SHA1 fca300c74790ecfc8adb9cdcda2b77457e2eae6c SHA256 e48536498bdb7daf1e375de2bab7675941ff7cd044868d7e561f5b4f5c4810ca
 MD5 9b632ffa3d886c3829752ea656adf8f1 files/mail-notification-2.0-buildfix.diff 281
 RMD160 49db75ab313415284ad4658c7b34cc42eb63deaf files/mail-notification-2.0-buildfix.diff 281
@@ -29,18 +26,18 @@ EBUILD mail-notification-3.0.ebuild 2451 RMD160 d3def20c2b10d8ee1b8962d1cbb47160
 MD5 e0ad3718ff9f6853a3ec4832e5fb4705 mail-notification-3.0.ebuild 2451
 RMD160 d3def20c2b10d8ee1b8962d1cbb47160414bf0ea mail-notification-3.0.ebuild 2451
 SHA256 97d3bedb628493f9731723ccab15e2336f6beb3c831c69ab1a604df3818deaac mail-notification-3.0.ebuild 2451
-EBUILD mail-notification-4.0.ebuild 2298 RMD160 bdd06f97c069fdf97d52cc31ee380b80a260291f SHA1 20738c9e12bb0b310ccec8db765b7a4a8ce90618 SHA256 4d3629ca388498d1020b4244d6662cce17d580a3589118595feee1b75f2239b0
-MD5 30013bd03e9543f68794014c85b40338 mail-notification-4.0.ebuild 2298
-RMD160 bdd06f97c069fdf97d52cc31ee380b80a260291f mail-notification-4.0.ebuild 2298
-SHA256 4d3629ca388498d1020b4244d6662cce17d580a3589118595feee1b75f2239b0 mail-notification-4.0.ebuild 2298
+EBUILD mail-notification-4.0.ebuild 2300 RMD160 150f50edf81b20d25091641f16af03aa79a70991 SHA1 3fcc358a72519f2049441cb3b088bc7aad9de6fa SHA256 ef6b9b57070ff9bde1bcf882f7db45950b68628caaf3c13e3b774ed3d4a1bd28
+MD5 d078b8a6629059d7e093ec160e4bcb65 mail-notification-4.0.ebuild 2300
+RMD160 150f50edf81b20d25091641f16af03aa79a70991 mail-notification-4.0.ebuild 2300
+SHA256 ef6b9b57070ff9bde1bcf882f7db45950b68628caaf3c13e3b774ed3d4a1bd28 mail-notification-4.0.ebuild 2300
 EBUILD mail-notification-4.1.ebuild 2323 RMD160 1b995e21d44b372afe4cb62ec21890635eb61fb2 SHA1 d123a1c046925362c5a9f4caa21399827036d817 SHA256 4a818168a33020388f6bd1aa4ffc729ff70f4bbffdd37168b88131aaefd05d12
 MD5 c43f37a4c30e067d943623d0a73a3346 mail-notification-4.1.ebuild 2323
 RMD160 1b995e21d44b372afe4cb62ec21890635eb61fb2 mail-notification-4.1.ebuild 2323
 SHA256 4a818168a33020388f6bd1aa4ffc729ff70f4bbffdd37168b88131aaefd05d12 mail-notification-4.1.ebuild 2323
-MISC ChangeLog 8268 RMD160 447c00c38292da8af3f6e29fe1da64b5ba2156a3 SHA1 c1943b0ad8655ca847022eae188807a3fd9f36bc SHA256 f23a587aec470df752b016aa7b1819dac82542c66462f5b8bb8a65084873b53f
-MD5 72e3b67e75e936abfe8af64653081204 ChangeLog 8268
-RMD160 447c00c38292da8af3f6e29fe1da64b5ba2156a3 ChangeLog 8268
-SHA256 f23a587aec470df752b016aa7b1819dac82542c66462f5b8bb8a65084873b53f ChangeLog 8268
+MISC ChangeLog 8372 RMD160 53a7151348beed6c26e329d8f542ed2236badd8a SHA1 e3a158369092dfff9f95268bfa4d1d5c3b74955f SHA256 0a11cbec92e3c83ae911379a6bc19f85abcddf05cbf7dda3ba0a515f8bd4f88f
+MD5 0c9f002872a2feeda5aad1af945f641a ChangeLog 8372
+RMD160 53a7151348beed6c26e329d8f542ed2236badd8a ChangeLog 8372
+SHA256 0a11cbec92e3c83ae911379a6bc19f85abcddf05cbf7dda3ba0a515f8bd4f88f ChangeLog 8372
 MISC metadata.xml 249 RMD160 04d89c188271eaa50c1cc0d6da917ab82ebf2575 SHA1 f2e6db3ef2b8f01a573bdcadecd66ef0e559a8da SHA256 3fda5e8d8d26f5c30c584a3bcbd2cbbfddacb94ed6522d71d8047bf7503ac78c
 MD5 19ab74103e1e821c48fc9e46d9adce4d metadata.xml 249
 RMD160 04d89c188271eaa50c1cc0d6da917ab82ebf2575 metadata.xml 249
@@ -57,10 +54,3 @@ SHA256 1c59c77e88dd6bbef302586859f7ab5f4462da96f4981ff6ba2fa834717a972a files/di
 MD5 23ad45905a1e2ecbd406c733fd7b7cb0 files/digest-mail-notification-4.1 268
 RMD160 fdfff97abf539b820e772b6c0c494d3db966b02e files/digest-mail-notification-4.1 268
 SHA256 74682bc3195b5afed994f05ee30f393a1315155ed76a843c936ee4ab54ac19dd files/digest-mail-notification-4.1 268
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFG9Tcd0BM77Tkv120RAl8lAKCxBZni6qNoGE6rPH1nEwDG4jo+vgCeNIoB
-PADs3ff8BpCj3CRi7TehoJI=
-=QzWa
------END PGP SIGNATURE-----
