@@ -1,10 +1,10 @@
 # ChangeLog for net-dns/pdns-recursor
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/ChangeLog,v 1.14 2007/09/22 19:34:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/ChangeLog,v 1.15 2007/09/22 19:35:40 swegener Exp $
 
   22 Sep 2007; Sven Wegener <swegener@gentoo.org>
   +files/pdns-recursor-3.1.4-gcc42.patch, pdns-recursor-3.1.4.ebuild:
-  Fix compilation with gcc-4.2, bug #185602.
+  Fix compilation with gcc-4.2, bug #188050.
 
   08 Jun 2007; Sven Wegener <swegener@gentoo.org>
   +files/pdns-recursor-3.1.4-chdir.patch,
