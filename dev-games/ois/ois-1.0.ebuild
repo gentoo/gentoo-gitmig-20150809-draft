@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ois-1.0.ebuild,v 1.1 2007/08/24 13:07:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ois-1.0.ebuild,v 1.2 2007/09/22 15:47:20 angelos Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/wgois/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="x11-libs/libXaw
