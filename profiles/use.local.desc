@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3033 2007/09/21 08:14:16 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3034 2007/09/22 12:16:50 opfer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -593,7 +593,6 @@ dev-scheme/guile:elisp - enable Emacs Lisp support
 dev-scheme/guile:networking - include networking interfaces
 dev-scheme/guile:regex - include regular expression interfaces
 dev-tex/latex-beamer:lyx - Install with LyX layouts
-dev-tex/preview-latex:xemacs - Adds support for XEmacs
 dev-util/anjuta:devhelp - Enable devhelp integration
 dev-util/anjuta:glade - Build glade plugin for anjuta
 dev-util/anjuta:inherit-graph - Build inheritance graphing plugin for anjuta
@@ -1838,7 +1837,7 @@ sci-misc/nco:ncap2 - Build next generation netcdf arithmetic processor (needs de
 sci-misc/nco:udunits - Add udunits files support
 sci-misc/ncview:udunits - Add udunits files support
 sci-physics/root:cern - Add cernlib i/o functionality to root
-sci-visualization/gnuplot:xemacs - Add lisp files for emacs
+sci-visualization/gnuplot:xemacs - Add support for XEmacs
 sci-visualization/hippodraw:fits - Add FITS support to hippodraw, via cfitsio
 sci-visualization/hippodraw:numarray - Add numarray python array support
 sci-visualization/hippodraw:root - Add root i/o, and minuit support

@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.653 2007/09/21 16:47:55 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.654 2007/09/22 12:16:50 opfer Exp $
+
+  22 Sep 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
+  remove spurious xemacs USE flag for dev-tex/preview latex (not in the tree
+  anymore); adjust description of xemacs USE flag for
+  sci-visualization/gnuplot
 
   21 Sep 2007; Rémi Cardona <remi@gentoo.org> package.mask:
   mask for gtk+-2.12 and relevant deps
