@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.39 2007/07/12 11:46:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.40 2007/09/22 13:30:19 opfer Exp $
+
+  22 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  openswan-2.4.9.ebuild:
+  stable x86, bug 192964
 
 *openswan-2.4.9 (12 Jul 2007)
 
