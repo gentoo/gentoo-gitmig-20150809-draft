@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcli
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcli/ChangeLog,v 1.1 2006/10/30 12:46:43 aross Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcli/ChangeLog,v 1.2 2007/09/22 00:14:13 aross Exp $
+
+*libcli-1.9.0 (22 Sep 2007)
+
+  22 Sep 2007; Andrew Ross <aross@gentoo.org> +libcli-1.9.0.ebuild:
+  Version bump to 1.9.0
 
 *libcli-1.8.6 (30 Oct 2006)
 
