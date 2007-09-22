@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-keyring-manager
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/ChangeLog,v 1.47 2007/08/28 19:44:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/ChangeLog,v 1.48 2007/09/22 08:01:56 tgall Exp $
+
+  22 Sep 2007; Tom Gall <tgall@gentoo.org>
+  gnome-keyring-manager-2.18.0.ebuild:
+  stable on ppc64
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org>
   gnome-keyring-manager-2.18.0.ebuild:

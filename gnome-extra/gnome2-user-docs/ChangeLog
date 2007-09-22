@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome2-user-docs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/ChangeLog,v 1.87 2007/08/28 18:19:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/ChangeLog,v 1.88 2007/09/22 07:59:59 tgall Exp $
+
+  22 Sep 2007; Tom Gall <tgall@gentoo.org>
+  gnome2-user-docs-2.18.2.ebuild:
+  stable on ppc64
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org>
   gnome2-user-docs-2.18.2.ebuild:
