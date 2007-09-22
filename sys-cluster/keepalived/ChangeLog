@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.45 2007/09/22 13:40:40 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.46 2007/09/22 19:12:34 nixnut Exp $
+
+  22 Sep 2007; nixnut <nixnut@gentoo.org> keepalived-1.1.13-r1.ebuild:
+  Stable on ppc wrt bug 181763
 
   22 Sep 2007; Ferris McCormick <fmccor@gentoo.org>
   keepalived-1.1.13-r1.ebuild:
