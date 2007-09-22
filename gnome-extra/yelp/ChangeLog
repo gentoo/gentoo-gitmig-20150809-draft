@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/yelp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.161 2007/08/28 16:43:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.162 2007/09/22 10:27:36 tgall Exp $
+
+  22 Sep 2007; Tom Gall <tgall@gentoo.org> yelp-2.18.1.ebuild:
+  stable on ppc64
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org> yelp-2.18.1.ebuild:
   Stable for HPPA (bug #185823).
