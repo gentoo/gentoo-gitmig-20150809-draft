@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/tramp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.41 2007/09/21 11:38:55 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.42 2007/09/22 13:04:28 nixnut Exp $
+
+  22 Sep 2007; nixnut <nixnut@gentoo.org> tramp-2.0.56.ebuild,
+  tramp-2.1.10.ebuild:
+  Stable on ppc wrt bug 193291
 
   21 Sep 2007; Christian Faulhammer <opfer@gentoo.org> tramp-2.0.56.ebuild:
   stable x86, bug 193291
