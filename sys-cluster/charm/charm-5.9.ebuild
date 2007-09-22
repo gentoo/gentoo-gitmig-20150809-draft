@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.8 2007/06/26 02:50:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.9 2007/09/22 13:09:01 markusle Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -35,6 +35,8 @@ pkg_nofetch() {
 
 src_unpack() {
 	unpack ${A}
+
+	epatch "${FILESDIR}"/${P}-gcc-4.2.patch
 
 	# add -fPIC to generate PIC code for charm so's
 	epatch "${FILESDIR}"/${PN}-fpic-gentoo.patch
