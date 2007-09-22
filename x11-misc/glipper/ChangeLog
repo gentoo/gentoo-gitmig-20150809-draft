@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/glipper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/ChangeLog,v 1.8 2007/09/11 19:27:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/ChangeLog,v 1.9 2007/09/22 18:41:36 swegener Exp $
+
+  22 Sep 2007; Sven Wegener <swegener@gentoo.org> -glipper-0.95.1.ebuild,
+  -glipper-0.95.1-r1.ebuild:
+  Cleanup.
 
   11 Sep 2007; Sven Wegener <swegener@gentoo.org> glipper-1.0.ebuild:
   Add missing dependencies, move dependencies to both DEPEND and RDEPEND, bug
