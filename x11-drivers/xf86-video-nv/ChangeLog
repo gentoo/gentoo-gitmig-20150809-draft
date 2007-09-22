@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-nv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.57 2007/09/09 15:45:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.58 2007/09/22 04:06:28 dberkholz Exp $
+
+*xf86-video-nv-2.1.5 (22 Sep 2007)
+
+  22 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-video-nv-2.1.5.ebuild:
+  Bump. Changes: fix for unreleased xorg-server by adding pci-rework support;
+  add support for some new hardware; fix for LVDS on some laptops with G80
+  hardware.
 
   09 Sep 2007; Raúl Porcel <armin76@gentoo.org> xf86-video-nv-2.1.2.ebuild:
   alpha/ia64 stable wrt #191615
