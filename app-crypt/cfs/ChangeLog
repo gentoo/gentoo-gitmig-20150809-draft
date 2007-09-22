@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/cfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/ChangeLog,v 1.9 2007/04/22 15:13:57 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/ChangeLog,v 1.10 2007/09/22 13:07:58 opfer Exp $
+
+  22 Sep 2007; Christian Faulhammer <opfer@gentoo.org> cfs-1.4.1.17.ebuild:
+  stable x86, bug 193394; adjusted HOMEPAGE
 
   22 Apr 2007; Christian Heim <phreak@gentoo.org> cfs-1.4.1.14.ebuild,
   cfs-1.4.1.17.ebuild:
