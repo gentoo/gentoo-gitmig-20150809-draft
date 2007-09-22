@@ -1,5 +1,8 @@
 # This file requires >=portage-2.1.1
 
+# cyrus-sasl doesn't work w/ USE=berkdb (#192753)
+dev-libs/cyrus-sasl gdbm
+
 # bug #147908 - unmask these on x86 profiles
 dev-java/sun-jdk -nsplugin
 dev-java/sun-jre-bin -nsplugin
