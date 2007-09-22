@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.33 2007/09/20 18:40:53 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.34 2007/09/22 12:37:17 nixnut Exp $
+
+  22 Sep 2007; nixnut <nixnut@gentoo.org> cedet-1.0_pre4-r2.ebuild:
+  Stable on ppc wrt bug 190796
 
   20 Sep 2007; Christoph Mende <angelos@gentoo.org>
   cedet-1.0_pre4-r2.ebuild:
