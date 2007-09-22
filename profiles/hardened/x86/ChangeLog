@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.15 2007/09/22 19:53:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.16 2007/09/22 19:58:26 wolf31o2 Exp $
+
+  22 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
+  Masking app-editors/{ghex,conglomerate} and app-pda/gnome-pilot since they
+  require GNOME, which is masked.
 
   22 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.use.mask:
   Masking the audit USE flag on sys-libs/pam since sys-process/audit is masked

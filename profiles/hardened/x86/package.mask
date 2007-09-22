@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/package.mask,v 1.46 2007/09/21 03:11:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/package.mask,v 1.47 2007/09/22 19:58:26 wolf31o2 Exp $
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (20 Sep 2007)
 # mask because it requires nptl and 2.6
@@ -68,6 +68,9 @@ dev-embedded/ponyprog
 app-editors/screem
 app-editors/peacock
 app-editors/mlview
+app-editors/ghex
+app-editors/conglomerate
+app-pda/gnome-pilot
 
 # Requires 2.6 kernel headers
 sys-apps/inputd
