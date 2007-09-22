@@ -1,6 +1,10 @@
 # ChangeLog for MIPS profile directory
 # Copyright 2007-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.8 2007/09/12 23:16:26 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.9 2007/09/22 15:19:55 wolf31o2 Exp $
+
+  22 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.use.mask:
+  Added package.use.mask for kerberos on dev-util/cvs since the dependency
+  cannot be fulfilled currently.
 
   12 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> package.use.mask:
   package.use.mask'ed kerberos for kde-base/kdelibs as the dependency can't be
