@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-1.0_pre20070124.ebuild,v 1.5 2007/04/04 17:21:18 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-1.0_pre20070124.ebuild,v 1.6 2007/09/22 21:59:21 jurek Exp $
 
 #
 # WARNING:
@@ -26,7 +26,8 @@ RDEPEND="=x11-libs/wxGTK-${WX_GTK_VER}*"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.5
 	>=sys-devel/automake-1.7
-	>=sys-devel/libtool-1.4"
+	>=sys-devel/libtool-1.4
+	app-arch/zip"
 
 pkg_setup() {
 	if use unicode; then
