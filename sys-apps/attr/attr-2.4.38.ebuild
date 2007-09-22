@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.38.ebuild,v 1.3 2007/09/20 14:26:59 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.38.ebuild,v 1.4 2007/09/22 13:47:24 opfer Exp $
 
 inherit eutils autotools toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${MY_P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )
