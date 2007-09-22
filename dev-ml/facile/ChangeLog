@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/facile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.2 2007/09/12 14:21:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.3 2007/09/22 15:27:27 nixnut Exp $
+
+  22 Sep 2007; nixnut <nixnut@gentoo.org> facile-1.1.ebuild:
+  Added ~ppc wrt bug 192065
 
   12 Sep 2007; Raúl Porcel <armin76@gentoo.org> facile-1.1.ebuild:
   Add ~alpha/~ia64 wrt #192065
