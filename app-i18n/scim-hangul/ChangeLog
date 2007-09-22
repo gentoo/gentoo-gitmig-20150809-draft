@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-hangul
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/ChangeLog,v 1.21 2007/09/01 13:45:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/ChangeLog,v 1.22 2007/09/22 16:37:48 philantrop Exp $
+
+  22 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  scim-hangul-0.3.1.ebuild:
+  Marked stable on amd64 as per bug 188190.
 
   01 Sep 2007; nixnut <nixnut@gentoo.org> scim-hangul-0.3.1.ebuild:
   Added ~ppc wrt bug 188190
