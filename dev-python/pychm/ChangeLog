@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pychm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychm/ChangeLog,v 1.9 2007/09/22 06:07:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychm/ChangeLog,v 1.10 2007/09/22 11:59:05 nixnut Exp $
+
+  22 Sep 2007; nixnut <nixnut@gentoo.org> pychm-0.8.4.ebuild:
+  Stable on ppc wrt bug 193269
 
   22 Sep 2007; Christoph Mende <angelos@gentoo.org> pychm-0.8.4.ebuild:
   Stable on amd64 wrt bug #193269
