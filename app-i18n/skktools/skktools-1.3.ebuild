@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/skktools-1.1.ebuild,v 1.7 2005/04/23 12:25:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/skktools-1.3.ebuild,v 1.1 2007/09/22 23:32:04 matsuu Exp $
 
 inherit elisp-common eutils
 
@@ -10,22 +10,30 @@ SRC_URI="http://openlab.ring.gr.jp/skk/tools/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
-IUSE="ruby emacs"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="emacs gdbm"
 
-DEPEND="virtual/libc
+DEPEND="emacs? ( virtual/emacs )
+	gdbm? ( sys-libs/gdbm )
+	!gdbm? ( sys-libs/db )
 	>=dev-libs/glib-2"
+
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
+}
+
+src_compile() {
+	econf $(use_with gdbm) || die
+	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
-	use ruby && dobin saihenkan.rb
+	dobin saihenkan.rb
 	use emacs && elisp-site-file-install skk-xml.el
 
 	insinto /usr/share/skk
