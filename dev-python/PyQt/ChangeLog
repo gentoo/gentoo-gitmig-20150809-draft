@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.92 2007/08/11 21:09:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.93 2007/09/22 17:03:12 nerdboy Exp $
+
+  22 Sep 2007; Steve Arnold <nerdboy@gentoo.org> PyQt-3.17.3.ebuild:
+  Stable on amd64 (really fixes bug 188303 and a host of others).
+  Marking this stable on other arch's needs to be done in parallel with
+  dev-python/sip-4.7 (or similar breakage will occur).
 
 *PyQt-3.17.3 (11 Aug 2007)
 
