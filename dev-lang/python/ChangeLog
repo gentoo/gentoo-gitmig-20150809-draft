@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.274 2007/09/22 08:49:10 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.275 2007/09/22 11:31:39 nixnut Exp $
+
+  22 Sep 2007; nixnut <nixnut@gentoo.org> python-2.4.4-r5.ebuild:
+  Stable on ppc wrt bug 188029
 
   22 Sep 2007; Tom Gall <tgall@gentoo.org> python-2.4.4-r5.ebuild:
   stable on ppc64
