@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnochm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/ChangeLog,v 1.7 2007/09/22 06:08:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/ChangeLog,v 1.8 2007/09/22 12:00:04 nixnut Exp $
+
+  22 Sep 2007; nixnut <nixnut@gentoo.org> gnochm-0.9.10.ebuild:
+  Stable on ppc wrt bug 193269
 
   22 Sep 2007; Christoph Mende <angelos@gentoo.org> gnochm-0.9.10.ebuild:
   Stable on amd64 wrt bug #193269
