@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/mod_proxy_html-3.0.0.ebuild,v 1.1 2007/09/08 17:53:50 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/mod_proxy_html-3.0.0.ebuild,v 1.2 2007/09/22 13:22:12 opfer Exp $
 
 inherit apache-module
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 DESCRIPTION="An Apache2 module to rewrite links in html pages behind a reverse proxy."
 HOMEPAGE="http://apache.webthing.com/mod_proxy_html/"
