@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.70 2007/09/20 14:28:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.71 2007/09/22 13:55:17 opfer Exp $
+
+  22 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  xfsprogs-2.9.3.ebuild:
+  stable x86, bug 193143
 
   20 Sep 2007; Lars Weiler <pylon@gentoo.org> xfsprogs-2.9.3.ebuild:
   Stable on ppc; bug #193143.
