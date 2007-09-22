@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmldiff
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.2 2007/06/28 19:45:45 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.3 2007/09/22 16:37:51 angelos Exp $
+
+  22 Sep 2007; Christoph Mende <angelos@gentoo.org> xmldiff-0.6.8.ebuild:
+  Added ~amd64 wrt bug #193129
 
   28 Jun 2007; Santiago M. Mola <coldwind@gentoo.org>
   -files/xmldiff-0.6.8-python2.5.patch:
