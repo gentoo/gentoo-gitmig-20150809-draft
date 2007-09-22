@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.31 2007/09/22 12:45:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.32 2007/09/22 15:48:21 angelos Exp $
+
+  22 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  qemacs-0.3.2_pre20070226.ebuild:
+  Stable on amd64 wrt bug #193289
 
   22 Sep 2007; nixnut <nixnut@gentoo.org> qemacs-0.3.2_pre20070226.ebuild:
   Stable on ppc wrt bug 193289
