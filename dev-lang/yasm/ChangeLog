@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.17 2007/09/22 00:41:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.18 2007/09/22 12:35:51 opfer Exp $
+
+  22 Sep 2007; Christian Faulhammer <opfer@gentoo.org> yasm-0.6.1.ebuild:
+  stable x86, bug 193375
 
 *yasm-0.6.2 (22 Sep 2007)
 
