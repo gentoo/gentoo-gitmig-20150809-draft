@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.431 2007/09/22 02:36:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.432 2007/09/22 14:07:43 dsd Exp $
+
+*gentoo-sources-2.6.22-r7 (22 Sep 2007)
+
+  22 Sep 2007; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.22-r7.ebuild:
+  Update to Linux 2.6.22.7 for x86_64 security fix (bug #193386). Fix ivtv
+  configuration dependencies. Fix atl1 oops with over 4GB RAM. Add usb-storage
+  quirk for Nikon D40. Fix PCI-related boot problem on Sun Fire V100.
 
   22 Sep 2007; Joseph Jezak <josejx@gentoo.org>
   gentoo-sources-2.6.22-r5.ebuild:
