@@ -1,8 +1,12 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.12 2007/09/22 15:36:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.13 2007/09/22 15:40:11 wolf31o2 Exp $
 
 # Chris Gianelloni <cgianelloni@gentoo.org> (22 Sep 2007)
 # dependency can't be fulfilled at the moment
 net-im/gaim krb4
+kde-base/kdelibs kerberos
+dev-util/cvs kerberos
+net-mail/fetchmail kerberos
+dev-util/cyrus-sasl kerberos
 
 # Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
 # app-admin/gkrellm may pull in hddtemp, which is not yet available here

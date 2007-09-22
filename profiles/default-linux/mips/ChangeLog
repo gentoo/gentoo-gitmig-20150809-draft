@@ -1,6 +1,11 @@
 # ChangeLog for MIPS profile directory
 # Copyright 2007-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.12 2007/09/22 15:36:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.13 2007/09/22 15:40:11 wolf31o2 Exp $
+
+  22 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.use.mask:
+  Reverting my last commit since I see app-crypt/heimdal provides virtual/krb5
+  on mips. Only things requiring mit-krb5 need masking, so I guess we have to
+  mask it on each package individually. Yuck.
 
   22 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.use.mask,
   use.mask:
