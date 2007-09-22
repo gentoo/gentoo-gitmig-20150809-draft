@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/qalculate-currency
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-currency/ChangeLog,v 1.9 2007/01/06 22:13:33 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-currency/ChangeLog,v 1.10 2007/09/22 22:09:25 angelos Exp $
+
+  22 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  qalculate-currency-0.9.4-r1.ebuild:
+  Added ~amd64 wrt bug #193457
 
   06 Jan 2007; Danny van Dyk <kugelfang@gentoo.org>
   -qalculate-currency-0.9.0.ebuild, -qalculate-currency-0.9.0-r1.ebuild:

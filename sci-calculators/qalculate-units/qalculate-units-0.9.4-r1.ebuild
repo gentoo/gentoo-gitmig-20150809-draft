@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-units/qalculate-units-0.9.4-r1.ebuild,v 1.1 2007/01/04 14:58:19 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-units/qalculate-units-0.9.4-r1.ebuild,v 1.2 2007/09/22 22:08:52 angelos Exp $
 
 DESCRIPTION="A GTK+ unit conversion tool"
 LICENSE="GPL-2"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/qalculate/${P}.tar.gz"
 
 SLOT="0"
 IUSE="nls"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=">=sci-libs/libqalculate-0.9.4
 	>=x11-libs/gtk+-2.4
