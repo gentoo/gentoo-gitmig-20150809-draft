@@ -1,0 +1,12 @@
+--- trunk/src/trackerd/tracker-apps.c	2007/08/19 00:31:33	786
++++ trunk/src/trackerd/tracker-apps.c	2007/09/06 01:53:27	811
+@@ -18,7 +18,8 @@
+  * Boston, MA  02110-1301, USA.
+  */
+ 
+-#include<string.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+ #include "tracker-apps.h"
+ #include "tracker-db.h"
