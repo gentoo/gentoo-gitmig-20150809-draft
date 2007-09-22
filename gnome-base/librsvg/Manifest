@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX librsvg-2.15.90-die-gtk-doc-die.patch 581 RMD160 94e7da4d6260daebd5e7b298911d1888f234ce91 SHA1 fe31e163db3afbe028b6499a20301c5278ab3966 SHA256 b85d7c1b58905258c75fd86a360a0ba2eebd5d530793d359e4be7913fffb2201
 MD5 83cc3db2d44688434536e2470020a2af files/librsvg-2.15.90-die-gtk-doc-die.patch 581
 RMD160 94e7da4d6260daebd5e7b298911d1888f234ce91 files/librsvg-2.15.90-die-gtk-doc-die.patch 581
@@ -11,10 +14,6 @@ MD5 c07b0821c3b3ee8dcf255aec46b3cb11 files/librsvg-2.16.1-uninit.patch 765
 RMD160 abfb6af1fd08aab3fafacd19c1c216a3420f7115 files/librsvg-2.16.1-uninit.patch 765
 SHA256 b2fea4b59407fff1ccf1474412acf2296d43cf9b83a35abba6acb65a8ad45a0b files/librsvg-2.16.1-uninit.patch 765
 DIST librsvg-2.16.1.tar.bz2 423624 RMD160 27d293693d050a8a326311b4b0b5366baf400573 SHA1 3e7d9020341dee0b0bc9b4d7b70f38e77d92e0e2 SHA256 2989d6a969b6f80d354f8120a5dd625d2c0b4e9e04bf178e9e7b34ae28e2ac69
-EBUILD librsvg-2.16.1-r1.ebuild 1971 RMD160 e007e61d244977219454ea1191ae2aa694918c07 SHA1 1a897832e04c4b779b61d87d62cb81b5913e9354 SHA256 b2ba66cabe77b6680cce722990250747437baa547098b9094fd287f714f88c3a
-MD5 788a0569860bdd72fb8001868a7cc5ce librsvg-2.16.1-r1.ebuild 1971
-RMD160 e007e61d244977219454ea1191ae2aa694918c07 librsvg-2.16.1-r1.ebuild 1971
-SHA256 b2ba66cabe77b6680cce722990250747437baa547098b9094fd287f714f88c3a librsvg-2.16.1-r1.ebuild 1971
 EBUILD librsvg-2.16.1-r2.ebuild 2045 RMD160 df44de55a24fb28ecde7f79736678c8fd9a1867c SHA1 3842a703b747e8d4f7154f8d4bdcf76e9eb2f513 SHA256 ef4c8522403a1e046af596c12a5fe2d60b17f3a06f2a9a426402875cd287f75e
 MD5 3cf1bd79b27ad87a639c960a5748155e librsvg-2.16.1-r2.ebuild 2045
 RMD160 df44de55a24fb28ecde7f79736678c8fd9a1867c librsvg-2.16.1-r2.ebuild 2045
@@ -34,9 +33,13 @@ SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata
 MD5 ab99525f3daaac5586f216d17dfa3dde files/digest-librsvg-2.16.1 247
 RMD160 ce4d7ae96c7ec8cd9d22a11d2f9ce377e27baf88 files/digest-librsvg-2.16.1 247
 SHA256 f6489e69f2820d8401eec1ae48aeac109aeaccde26dfb0681895322fe151f787 files/digest-librsvg-2.16.1 247
-MD5 ab99525f3daaac5586f216d17dfa3dde files/digest-librsvg-2.16.1-r1 247
-RMD160 ce4d7ae96c7ec8cd9d22a11d2f9ce377e27baf88 files/digest-librsvg-2.16.1-r1 247
-SHA256 f6489e69f2820d8401eec1ae48aeac109aeaccde26dfb0681895322fe151f787 files/digest-librsvg-2.16.1-r1 247
 MD5 ab99525f3daaac5586f216d17dfa3dde files/digest-librsvg-2.16.1-r2 247
 RMD160 ce4d7ae96c7ec8cd9d22a11d2f9ce377e27baf88 files/digest-librsvg-2.16.1-r2 247
 SHA256 f6489e69f2820d8401eec1ae48aeac109aeaccde26dfb0681895322fe151f787 files/digest-librsvg-2.16.1-r2 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFG9OUGkeYb6olFHJcRAlkoAJ9g8c9WR/bI4lpbDgvBb/GkQP5RWgCfY56F
+VOk+CoCnPna90umOrTuEAb4=
+=8EpF
+-----END PGP SIGNATURE-----
