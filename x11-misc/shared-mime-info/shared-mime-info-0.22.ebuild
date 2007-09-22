@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.22.ebuild,v 1.5 2007/09/22 05:34:22 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.22.ebuild,v 1.6 2007/09/22 13:50:00 drac Exp $
 
-inherit autotools eutils fdo-mime
+inherit fdo-mime
 
 DESCRIPTION="The Shared MIME-info Database specification"
 HOMEPAGE="http://www.freedesktop.org/software/shared-mime-info"
@@ -19,13 +19,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-0.21-pkgconfig.patch
-	eautomake
-}
 
 src_compile() {
 	econf --disable-update-mimedb
