@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.182 2007/09/17 20:57:14 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.183 2007/09/22 07:17:02 phreak Exp $
+
+*hardened-sources-2.6.22-r5 (22 Sep 2007)
+
+  22 Sep 2007; Christian Heim <phreak@gentoo.org>
+  +hardened-sources-2.6.22-r5.ebuild:
+  Revision bump, pulling in genpatches-2.6.22-8 for CVE-2007-4573.
 
   17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing johnm from metadata.xml (see #186467 for reference).
