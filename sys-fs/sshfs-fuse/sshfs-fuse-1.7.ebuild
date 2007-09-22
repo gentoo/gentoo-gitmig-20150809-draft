@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/sshfs-fuse-1.7.ebuild,v 1.4 2007/05/03 02:38:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/sshfs-fuse-1.7.ebuild,v 1.5 2007/09/22 13:11:36 opfer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://fuse.sourceforge.net/sshfs.html"
 LICENSE="GPL-2"
 DEPEND=">=sys-fs/fuse-2.6.0_pre3
 	>=dev-libs/glib-2.4.2"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
 
