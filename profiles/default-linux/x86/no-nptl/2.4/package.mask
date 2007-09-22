@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.128 2007/09/18 19:45:40 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.129 2007/09/22 18:40:50 swegener Exp $
 
 # Wulf C. Krueger <philantrop@gentoo.org> (18 Sep 2007)
 # require app-pda/pilot-link-0.12.2 which you'll find below.
@@ -453,3 +453,7 @@ x11-drivers/xf86-input-evdev
 # Chris Gianelloni <wolf31o2@gentoo.org>
 # We also don't allow virtual/pcmcia greater than 2.4.*
 >=virtual/pcmcia-2.5
+
+# Sven Wegener <swegener@gentoo.org>
+# Needs >=dev-python/gnome-python-desktop-2.10
+x11-misc/glipper
