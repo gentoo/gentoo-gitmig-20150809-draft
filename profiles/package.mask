@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7730 2007/09/21 23:21:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7731 2007/09/22 13:21:39 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# Ulrich Mueller <ulm@gentoo.org> (22 Sep 2007)
+# Does not work with Emacs 22. Last upstream release as separate
+# packages in 2002 and 2003, respectively; eieio and semantic are now
+# included with app-emacs/cedet which should be used as replacement.
+# Masked for removal in 30 days. Bug #190768.
+app-emacs/eieio
+app-emacs/semantic
 
 # Rémi Cardona <remi@gentoo.org> (21 Sep 2007)
 # gtk+-2.12 and relevant deps
