@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.69 2007/09/08 17:37:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.70 2007/09/22 04:59:14 jer Exp $
+
+  22 Sep 2007; Jeroen Roovers <jer@gentoo.org>
+  +files/sysstat-8.0.0-make.patch, sysstat-8.0.0.ebuild:
+  Fix parallel make / NFS issue (bug #193208, thanks to DrChandra and Mark
+  Wagner.
 
   08 Sep 2007; Jeroen Roovers <jer@gentoo.org>
   -files/sysstat-7.1.4-strip.patch, sysstat-8.0.0.ebuild:

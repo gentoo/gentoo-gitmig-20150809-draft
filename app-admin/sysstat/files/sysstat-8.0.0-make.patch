@@ -1,0 +1,11 @@
+--- Makefile.in.	2007-08-25 14:28:06.000000000 +0200
++++ Makefile.in	2007-09-22 06:48:59.000000000 +0200
+@@ -132,6 +132,8 @@
+ ioconf.o: ioconf.c ioconf.h common.h sysconfig.h
+ 
+ libsyscom.a: libsyscom.a(common.o ioconf.o)
++	ar rv libsyscom.a common.o
++	ar rv libsyscom.a ioconf.o
+ 
+ libsyssa.a: libsyssa.a(sa_common.o)
+ 
