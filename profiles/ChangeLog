@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.655 2007/09/22 13:57:30 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.656 2007/09/22 16:13:30 wolf31o2 Exp $
+
+  22 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
+  Masking =net-misc/icaclient-10.6 until we can resolve bug #189884.
 
   22 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
   default-linux/ppc/ppc64/2007.0/32bit-userland/package.mask,
