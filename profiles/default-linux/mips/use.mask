@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.97 2007/08/25 07:56:52 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.98 2007/09/22 15:36:39 wolf31o2 Exp $
 
 # Stuart Longland <redhatter@gentoo.org>
 # Seems unmasking "avahi" without versions stable breaks stuff like gnome-vfs.
@@ -317,3 +317,7 @@ battery
 # kumba (02 Jun 2007)
 # pulseaudio hasn't been tested on mips; maybe someday
 pulseaudio
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (22 Sep 2007)
+# We don't have anything that can satisfy this virtual
+kerberos
