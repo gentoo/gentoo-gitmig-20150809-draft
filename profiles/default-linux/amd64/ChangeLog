@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.114 2007/09/15 19:05:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.115 2007/09/22 13:49:00 philantrop Exp $
+
+  22 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  2006.1/no-multilib/package.mask, 2007.0/no-multilib/package.mask:
+  Masked app-text/bibus as it requires virtual/ooo which needs multilib.
 
   15 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask,
