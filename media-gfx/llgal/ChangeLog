@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/llgal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/ChangeLog,v 1.22 2007/07/08 16:20:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/ChangeLog,v 1.23 2007/09/22 13:16:28 opfer Exp $
+
+  22 Sep 2007; Christian Faulhammer <opfer@gentoo.org> llgal-0.13.13.ebuild:
+  stable x86, bug 193397
 
 *llgal-0.13.13 (08 Jul 2007)
 

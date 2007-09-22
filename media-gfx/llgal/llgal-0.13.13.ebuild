@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.13.13.ebuild,v 1.1 2007/07/08 16:20:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/llgal-0.13.13.ebuild,v 1.2 2007/09/22 13:16:28 opfer Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.gna.org/llgal/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="exif"
 
 LINS="en fr"
