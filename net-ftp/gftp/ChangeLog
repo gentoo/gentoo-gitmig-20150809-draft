@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.61 2007/09/22 15:25:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.62 2007/09/22 17:31:28 philantrop Exp $
+
+  22 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  gftp-2.0.18-r6.ebuild:
+  Marked stable on amd64 as per bug 188252.
 
   22 Sep 2007; Markus Rothe <corsair@gentoo.org> gftp-2.0.18-r6.ebuild:
   Stable on ppc64; bug #188252
