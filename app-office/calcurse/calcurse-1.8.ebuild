@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/calcurse-1.8.ebuild,v 1.1 2007/05/29 18:37:24 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/calcurse-1.8.ebuild,v 1.2 2007/09/22 20:25:10 philantrop Exp $
 
 DESCRIPTION="a text-based personal organizer"
 HOMEPAGE="http://culot.org/calcurse/index.html"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="linguas_en linguas_fr linguas_de linguas_es"
 
 DEPEND="sys-libs/ncurses"
