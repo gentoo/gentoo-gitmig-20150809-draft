@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.12.0.ebuild,v 1.2 2007/09/21 21:53:39 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.12.0.ebuild,v 1.3 2007/09/22 23:51:35 leio Exp $
 
 inherit gnome.org flag-o-matic eutils autotools virtualx
 
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 	x11-proto/damageproto
 	xinerama? ( x11-proto/xineramaproto )
 	doc? (
-			>=dev-util/gtk-doc-1.4
+			>=dev-util/gtk-doc-1.6
 			~app-text/docbook-xml-dtd-4.1.2
 		 )"
 
