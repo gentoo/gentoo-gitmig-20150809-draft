@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fastthread
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.15 2007/09/22 13:28:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.16 2007/09/22 13:31:22 nixnut Exp $
+
+  22 Sep 2007; nixnut <nixnut@gentoo.org> fastthread-1.0.ebuild:
+  Stable on ppc wrt bug 193039
 
   22 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   fastthread-1.0.ebuild:
