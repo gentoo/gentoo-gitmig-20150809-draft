@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/t1lib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.54 2007/07/22 09:01:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.55 2007/09/22 19:14:05 dirtyepic Exp $
+
+*t1lib-5.1.1 (22 Sep 2007)
+*t1lib-5.0.2-r1 (22 Sep 2007)
+
+  22 Sep 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/t1lib-5.0.2-SA26241_buffer_overflow.patch, +t1lib-5.0.2-r1.ebuild,
+  +t1lib-5.1.1.ebuild:
+  Revision bump for Secunia SA26241, bug #193437.  Version bump for bug #130362.
 
   22 Jul 2007; Samuli Suominen <drac@gentoo.org> t1lib-5.0.2.ebuild:
   Remove virtual/x11 references.
