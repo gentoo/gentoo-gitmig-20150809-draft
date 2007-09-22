@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.2.ebuild,v 1.3 2007/09/15 12:38:36 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.2.ebuild,v 1.4 2007/09/22 12:44:21 markusle Exp $
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit elisp-common eutils flag-o-matic multilib toolchain-funcs
 
-DESCRIPTION="pari (or pari-gp) : a software package for computer-aided number theory"
+DESCRIPTION="A software package for computer-aided number theory"
 HOMEPAGE="http://pari.math.u-bordeaux.fr/"
 SRC_URI="http://pari.math.u-bordeaux.fr/pub/pari/unix/${P}.tar.gz"
 
@@ -15,7 +15,9 @@ IUSE="doc emacs X"
 
 DEPEND="doc? ( virtual/tetex )
 		sys-libs/readline
-		X? ( x11-libs/libX11 )"
+		X? ( x11-libs/libX11 )
+		emacs? ( virtual/emacs )"
+SITEFILE=50${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
@@ -66,6 +68,11 @@ src_compile() {
 		cd "${S}"
 		emake docpdf || die "Failed to generate docs"
 	fi
+
+	if use emacs; then
+		cd "${S}/emacs"
+		elisp-comp *.el || die "elisp-comp failed"
+	fi
 }
 
 src_test() {
@@ -76,23 +83,31 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR=${D} LIBDIR=${D}/usr/$(get_libdir) install || \
+	emake DESTDIR="${D}" LIBDIR="${D}/usr/$(get_libdir)" install || \
 		die "Install failed"
 
 	if use emacs; then
-		insinto /usr/share/emacs/site-lisp
-		doins emacs/pari.el
+		elisp-install ${PN} emacs/*.el emacs/*.elc || die "elisp-install failed"
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 
 	dodoc AUTHORS Announce.2.1 CHANGES README TODO NEW
 	if use doc; then
-		make DESTDIR=${D} LIBDIR=${D}/usr/$(get_libdir) install-doc \
+		emake DESTDIR="${D}" LIBDIR="${D}/usr/$(get_libdir)" install-doc \
 			|| die "Failed to install docs"
 		insinto /usr/share/doc/${PF}
 		doins doc/*.pdf || die "Failed to install pdf docs"
 	fi
 
 	#remove superfluous doc directory
-	rm -fr ${D}/usr/share/${P}/doc || \
+	rm -fr "${D}/usr/share/${P}/doc" || \
 		die "Failed to clean up doc directory"
+}
+
+pkg_postinst() {
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
