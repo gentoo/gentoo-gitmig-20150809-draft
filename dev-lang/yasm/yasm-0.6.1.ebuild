@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-0.6.1.ebuild,v 1.2 2007/09/22 12:35:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-0.6.1.ebuild,v 1.3 2007/09/22 15:51:49 angelos Exp $
 
 DESCRIPTION="assembler that supports amd64"
 HOMEPAGE="http://www.tortall.net/projects/yasm/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.tortall.net/projects/yasm/releases/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 IUSE="nls"
 
 RDEPEND="nls? ( virtual/libintl )"
