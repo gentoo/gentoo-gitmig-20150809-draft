@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.22 2007/08/08 19:27:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.23 2007/09/22 13:57:29 philantrop Exp $
+
+  22 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  ppc64/2007.0/32bit-userland/package.mask:
+  Masked app-text/bibus as it requires virtual/ooo.
 
   08 Aug 2007; Tiziano Müller <dev-zero@gentoo.org>
   dev/ppc64/2007.0/32bit-userland/make.defaults,

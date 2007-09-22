@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.654 2007/09/22 12:16:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.655 2007/09/22 13:57:30 philantrop Exp $
+
+  22 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  default-linux/ppc/ppc64/2007.0/32bit-userland/package.mask,
+  hardened/ppc/package.mask:
+  Masked app-text/bibus as it requires virtual/ooo.
 
   22 Sep 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
   remove spurious xemacs USE flag for dev-tex/preview latex (not in the tree
