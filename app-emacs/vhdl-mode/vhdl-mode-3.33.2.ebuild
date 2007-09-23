@@ -1,10 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/vhdl-mode-3.33.2.ebuild,v 1.6 2007/07/13 07:25:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/vhdl-mode-3.33.2.ebuild,v 1.7 2007/09/23 15:59:14 ulm Exp $
 
 inherit elisp
-
-IUSE=""
 
 DESCRIPTION="VHDL-mode for Emacs"
 HOMEPAGE="http://opensource.ethz.ch/emacs/vhdl-mode.html"
@@ -12,7 +10,8 @@ SRC_URI="http://opensource.ethz.ch/emacs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc ~ppc-macos x86"
+KEYWORDS="ppc x86"
+IUSE=""
 
 DEPEND="virtual/emacs"
 
