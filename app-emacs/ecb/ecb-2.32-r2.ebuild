@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.32-r2.ebuild,v 1.2 2007/07/15 13:26:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.32-r2.ebuild,v 1.3 2007/09/23 13:02:24 ulm Exp $
 
 inherit elisp
 
@@ -13,11 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="java"
 
-DEPEND="
-	|| ( app-emacs/cedet
-		( >=app-emacs/speedbar-0.14_beta4
-		>=app-emacs/semantic-1.4
-		>=app-emacs/eieio-0.17 ) )
+DEPEND="app-emacs/cedet
 	java? ( app-emacs/jde )"
 RDEPEND="${DEPEND}"
 
@@ -38,23 +34,15 @@ src_compile() {
 		loadpath="${SITELISP}/elib ${SITELISP}/jde/lisp"
 	fi
 
-	if has_version app-emacs/cedet; then
-		einfo "Building with CEDET"
-		emake CEDET=${SITELISP}/cedet LOADPATH="${loadpath}" \
-			|| die "emake failed"
-	else
-		einfo "Building with SEMANTIC, EIEIO and SPEEDBAR"
-		emake SEMANTIC=${SITELISP}/semantic EIEIO=${SITELISP}/eieio \
-			SPEEDBAR=${SITELISP}/speedbar CEDET="" LOADPATH="${loadpath}" \
-			|| die "emake failed"
-	fi
+	emake CEDET="${SITELISP}/cedet" LOADPATH="${loadpath}" \
+		|| die "emake failed"
 }
 
 src_install() {
 	elisp-install ${PN} *.{el,elc}
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
-	insinto ${SITELISP}/${PN}
+	insinto "${SITELISP}/${PN}"
 	doins -r ecb-images
 
 	dodoc NEWS README RELEASE_NOTES || die "dodoc failed"
