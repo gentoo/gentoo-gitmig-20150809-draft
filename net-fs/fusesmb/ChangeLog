@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/fusesmb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/ChangeLog,v 1.6 2007/05/06 10:17:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/ChangeLog,v 1.7 2007/09/23 16:27:54 ticho Exp $
+
+*fusesmb-0.8.7 (23 Sep 2007)
+
+  23 Sep 2007; Andrej Kacian <ticho@gentoo.org> +fusesmb-0.8.7.ebuild:
+  Version bump. Bug #191762, by Algardas Pelakauskas <algardas at yahoo.com>.
 
   06 May 2007; Marius Mauch <genone@gentoo.org> fusesmb-0.8.5.ebuild:
   Replacing einfo with elog
