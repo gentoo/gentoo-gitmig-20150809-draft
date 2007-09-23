@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta5-r3.ebuild,v 1.1 2007/07/02 06:29:34 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta5-r3.ebuild,v 1.2 2007/09/23 12:38:25 ulm Exp $
 
 NEED_EMACS=22
 
@@ -25,29 +25,30 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${P/_beta/b}"
 
-SITEFILE=51chess-gentoo.el
+SITEFILE=51${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}/${PV}-byte-compiling-files-gentoo.patch" || die "epatch failed"
+	epatch "${FILESDIR}/${PV}-byte-compiling-files-gentoo.patch" \
+		|| die "epatch failed"
 	cd "${S}" && rm -f *.elc
 }
 
 src_compile() {
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
 	elisp-install ${PN} *.el *.elc
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
-	einfo "Installing sound files..."
+	einfo "Installing sound files ..."
 	insinto /usr/share/sounds/${PN}
 	doins "${WORKDIR}"/sounds/*
-	einfo "Installing graphic files..."
+	einfo "Installing graphic files ..."
 	insinto /usr/share/pixmaps/
 	doins -r "${WORKDIR}"/pieces/*
-	einfo "Installing documentation"
+	einfo "Installing documentation ..."
 	doinfo chess.info
 	dohtml *.html
 	dodoc ChangeLog EPD.txt PGN.txt PLAN README TODO
