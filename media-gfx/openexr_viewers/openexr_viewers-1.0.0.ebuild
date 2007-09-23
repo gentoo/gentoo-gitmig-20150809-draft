@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/openexr_viewers-1.0.0.ebuild,v 1.4 2007/09/23 14:22:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/openexr_viewers-1.0.0.ebuild,v 1.5 2007/09/23 16:33:56 armin76 Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://openexr.com/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~x86"
 IUSE_VIDEO_CARDS="video_cards_nvidia"
 IUSE="doc opengl ${IUSE_VIDEO_CARDS}"
 
