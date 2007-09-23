@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.16 2007/03/15 22:11:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.17 2007/09/23 16:02:14 josejx Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.olofson.net/kobodl/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~ppc64 x86"
+KEYWORDS="alpha amd64 ppc ppc64 x86"
 IUSE="opengl"
 
 DEPEND="media-libs/libsdl
