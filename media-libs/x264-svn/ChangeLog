@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/x264-svn
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.48 2007/09/07 08:53:40 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.49 2007/09/23 18:10:45 aballier Exp $
+
+*x264-svn-20070923 (23 Sep 2007)
+
+  23 Sep 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/x264-svn-20070923-nostrip.patch,
+  +files/x264-svn-20070923-onlylib.patch, +x264-svn-20070923.ebuild:
+  version bump now that yasm issues on x86 have been fixed, bug #180666, block
+  older version of yasm because of this
 
   07 Sep 2007; Stuart Longland <redhatter@gentoo.org>
   x264-svn-20070325.ebuild:
