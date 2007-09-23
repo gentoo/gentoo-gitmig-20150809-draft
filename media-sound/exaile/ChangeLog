@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.26 2007/09/15 12:55:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.27 2007/09/23 09:51:12 drac Exp $
+
+*exaile-0.2.11_beta (23 Sep 2007)
+
+  23 Sep 2007; Samuli Suominen <drac@gentoo.org> +exaile-0.2.11_beta.ebuild:
+  Version bump.
 
   15 Sep 2007; Samuli Suominen <drac@gentoo.org> exaile-0.2.10-r1.ebuild:
   Add support for sqlite support in Python 2.5.
