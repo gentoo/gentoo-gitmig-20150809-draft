@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.9.2.ebuild,v 1.6 2007/07/29 18:24:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.9.2.ebuild,v 1.7 2007/09/23 15:58:48 josejx Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/sweep/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE="alsa ladspa vorbis mp3 libsamplerate speex"
 
 DEPEND=">=media-libs/libsndfile-1.0

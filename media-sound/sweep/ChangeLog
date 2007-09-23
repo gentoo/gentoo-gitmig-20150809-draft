@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sweep
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.31 2007/07/29 18:24:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.32 2007/09/23 15:58:48 josejx Exp $
+
+  23 Sep 2007; Joseph Jezak <josejx@gentoo.org> sweep-0.9.2.ebuild:
+  Marked ~ppc64.
 
   29 Jul 2007; Tobias Scherbaum <dertobi123@gentoo.org> sweep-0.9.2.ebuild:
   ppc stable, bug #186506
