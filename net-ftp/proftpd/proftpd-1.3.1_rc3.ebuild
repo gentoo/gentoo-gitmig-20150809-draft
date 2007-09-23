@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc3.ebuild,v 1.1 2007/08/26 12:39:36 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc3.ebuild,v 1.2 2007/09/23 10:11:53 stefaan Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -71,6 +71,8 @@ src_unpack() {
 		cp -f mod_vroot/mod_vroot.c contrib/
 		cp -f mod_vroot/mod_vroot.html doc/
 	fi
+
+	epatch ${FILESDIR}/${P}-mod_mysql.patch
 }
 
 src_compile() {

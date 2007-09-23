@@ -1,0 +1,16 @@
+Index: contrib/mod_sql_mysql.c
+===================================================================
+RCS file: /cvsroot/proftp/proftpd/contrib/mod_sql_mysql.c,v
+retrieving revision 1.44
+diff -u -r1.44 mod_sql_mysql.c
+--- contrib/mod_sql_mysql.c	9 May 2007 17:15:18 -0000	1.44
++++ contrib/mod_sql_mysql.c	6 Jul 2007 16:48:24 -0000
+@@ -595,7 +595,7 @@
+   }
+ 
+   if (!conn_pool) {
+-    pr_log_pri(PR_LOG_WARNING, "warning: the mod_sql_mysql module has not been
++    pr_log_pri(PR_LOG_WARNING, "warning: the mod_sql_mysql module has not been "
+       "properly intialized.  Please make sure your --with-modules configure "
+       "option lists mod_sql *before* mod_sql_mysql, and recompile.");
+ 
