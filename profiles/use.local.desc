@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3034 2007/09/22 12:16:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3035 2007/09/23 06:08:38 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1440,9 +1440,6 @@ net-ftp/pure-ftpd:noiplog - Disables logging of IP addresses
 net-ftp/pure-ftpd:paranoidmsg - Display paranoid messages instead of normal ones
 net-ftp/pure-ftpd:vchroot - Enable support for virtual chroot (possible security risk)
 net-ftp/vsftpd:logrotate - Use logrotate for rotating logs
-net-im/bitlbee:aimextras - Enables extra AIM patches not supported by upstream
-net-im/bitlbee:flood - Enable flood protection support
-net-im/bitlbee:gtalk - Enable Google Talk support
 net-im/bitlbee:msnextras - Enables extra MSN patches not supported by upstream
 net-im/bitlbee:nss - Use NSS for SSL support in MSN and Jabber.
 net-im/bitlbee:openssl - Use OpenSSL for SSL support in MSN and Jabber.
