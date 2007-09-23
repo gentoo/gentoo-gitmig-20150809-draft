@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openexr_ctl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.2 2007/09/14 05:00:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.3 2007/09/23 14:19:16 nixnut Exp $
+
+  23 Sep 2007; nixnut <nixnut@gentoo.org> openexr_ctl-1.0.0.ebuild:
+  Added ~ppc wrt bug 189798
 
   14 Sep 2007; Jeroen Roovers <jer@gentoo.org> openexr_ctl-1.0.0.ebuild:
   Marked ~hppa (bug #189798).
