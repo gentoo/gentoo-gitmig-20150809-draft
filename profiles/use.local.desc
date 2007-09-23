@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3037 2007/09/23 08:09:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3038 2007/09/23 08:11:01 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -142,7 +142,6 @@ app-emulation/vice:resid - Enable support for ReSID
 app-emulation/virtualbox-bin:additions - Install Guest System Tools ISO
 app-emulation/virtualbox-bin:nowrapper - Disable the VirtualBox XPCom Server autostart wrapper
 app-emulation/virtualbox-bin:sdk - Enable building of SDK
-app-emulation/virtualbox-bin:vditool - Install the Virtual Disk Image Manager vditool
 app-emulation/virtualbox:additions - Install Guest System Tools ISO
 app-emulation/virtualbox:alsa - Enable support for ALSA instead of OSS
 app-emulation/virtualbox:nowrapper - Disable the VirtualBox XPCom Server autostart wrapper
