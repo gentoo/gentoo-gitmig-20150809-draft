@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-1.0.2.ebuild,v 1.6 2007/04/14 20:01:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-1.0.2.ebuild,v 1.7 2007/09/23 16:50:47 philantrop Exp $
 
 inherit eutils toolchain-funcs
 
@@ -60,7 +60,7 @@ SRC_URI="http://www.openwall.com/popa3d/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 
 DEPEND=">=sys-apps/sed-4
 	pam? ( >=sys-libs/pam-0.72

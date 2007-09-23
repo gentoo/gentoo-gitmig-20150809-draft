@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/popa3d
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.32 2007/04/14 20:01:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.33 2007/09/23 16:50:47 philantrop Exp $
+
+  23 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> popa3d-1.0.2.ebuild:
+  Keyworded ~amd64 as per bug 190075.
 
   14 Apr 2007; Torsten Veller <tove@gentoo.org> popa3d-1.0.2.ebuild:
   Use newinitd.
