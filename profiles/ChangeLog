@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.657 2007/09/23 00:52:29 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.658 2007/09/23 11:38:43 calchan Exp $
+
+  23 Sep 2007; Denis Dupeyron <calchan@gentoo.org> package.mask:
+  Masked net-print/hpijs for removal on 24 Oct 2007 as per bug #176962.
 
   23 Sep 2007; Mart Raudsepp <leio@gentoo.org> package.mask:
   Unmasking gtk+-2.12 and co
