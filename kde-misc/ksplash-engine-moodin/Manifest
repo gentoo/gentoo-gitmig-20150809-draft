@@ -1,26 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+AUX ksplash-engine-moodin-0.4.2-multihead.patch 463 RMD160 aa7c14edcf451b8f6935d053ffb0e40e0b524517 SHA1 34b0313ce0c209b6159b8e56b9e2251989b9fa4f SHA256 f96d04454ef9bc16a28734bdd5c8d17ded30281d7d1bc1f305399d0dd398074b
+MD5 6b61f465e380f4372a73a2ec0676a302 files/ksplash-engine-moodin-0.4.2-multihead.patch 463
+RMD160 aa7c14edcf451b8f6935d053ffb0e40e0b524517 files/ksplash-engine-moodin-0.4.2-multihead.patch 463
+SHA256 f96d04454ef9bc16a28734bdd5c8d17ded30281d7d1bc1f305399d0dd398074b files/ksplash-engine-moodin-0.4.2-multihead.patch 463
 DIST ksplash-engine-moodin_0.4.2.tar.gz 2165747 RMD160 8ea0d9d1d8f93843b6578bb58f1b5d88d7a28850 SHA1 357b5f64257be45b02d588e13b9993e184885727 SHA256 4373d45a10ef7d9b285525b3dee0ac8e28831a37c6fef6a59c8ba13a3042a578
+EBUILD ksplash-engine-moodin-0.4.2-r1.ebuild 827 RMD160 0d88691353266135bfda960cfceb42edb5b94213 SHA1 eb9d156b91d6029a02d1ce5e45681e409d144daf SHA256 dd5037d1642b6a6128fb1c860452ab174e776c99ebf2b06383c1fd0f50b93784
+MD5 727b89569cbd22f13071890ffd945447 ksplash-engine-moodin-0.4.2-r1.ebuild 827
+RMD160 0d88691353266135bfda960cfceb42edb5b94213 ksplash-engine-moodin-0.4.2-r1.ebuild 827
+SHA256 dd5037d1642b6a6128fb1c860452ab174e776c99ebf2b06383c1fd0f50b93784 ksplash-engine-moodin-0.4.2-r1.ebuild 827
 EBUILD ksplash-engine-moodin-0.4.2.ebuild 752 RMD160 07f8fe1394f4afb1b2cfa668f6df693f22ba11e9 SHA1 6da1229acd9e430cf14898afaf92db6577b56d53 SHA256 95efb13c57ec9db018cd02e69d874b537ca29cab43586864fe2fad62fde8c8ba
 MD5 eb4e64db8a66cd27ad0ada21b3fd486d ksplash-engine-moodin-0.4.2.ebuild 752
 RMD160 07f8fe1394f4afb1b2cfa668f6df693f22ba11e9 ksplash-engine-moodin-0.4.2.ebuild 752
 SHA256 95efb13c57ec9db018cd02e69d874b537ca29cab43586864fe2fad62fde8c8ba ksplash-engine-moodin-0.4.2.ebuild 752
-MISC ChangeLog 949 RMD160 05355c5d2ce18f4957b145a5a1c8f572c1a4f239 SHA1 488db07244a0eeb4fbc91c0bf46beb39e3b0493c SHA256 5616572fcd2086c06b86d7fabeb646a74a01b8f1f434dc5b19d76d5cf65986b3
-MD5 cba3c70aefc8052b3102817668931796 ChangeLog 949
-RMD160 05355c5d2ce18f4957b145a5a1c8f572c1a4f239 ChangeLog 949
-SHA256 5616572fcd2086c06b86d7fabeb646a74a01b8f1f434dc5b19d76d5cf65986b3 ChangeLog 949
-MISC metadata.xml 225 RMD160 2bb986679bf47b4006039f0a026ec556ec38efd9 SHA1 7e9e154690c39bdeb682afb5cac6ce96f0d54386 SHA256 3b39c13f8f8d0164e9fcf71904fd2833f4381a5fa3ae973591faa217d2eb7c01
-MD5 52cf2b87b492bbc0278aff07e2c3ef2f metadata.xml 225
-RMD160 2bb986679bf47b4006039f0a026ec556ec38efd9 metadata.xml 225
-SHA256 3b39c13f8f8d0164e9fcf71904fd2833f4381a5fa3ae973591faa217d2eb7c01 metadata.xml 225
+MISC ChangeLog 1275 RMD160 40e87fb2939fe9431c9a5177f96a733f1bdf05ef SHA1 068f3d822ccc8ca5d11a9cbf0a0a1e7be7e050be SHA256 c719c8950fd12c6976b408ec4cadfc0fc3d8254a2182307c3b423e23bff59703
+MD5 5779ce4541d706359e222c5cc1b15f7d ChangeLog 1275
+RMD160 40e87fb2939fe9431c9a5177f96a733f1bdf05ef ChangeLog 1275
+SHA256 c719c8950fd12c6976b408ec4cadfc0fc3d8254a2182307c3b423e23bff59703 ChangeLog 1275
+MISC metadata.xml 220 RMD160 da1381676cfa28a7099609dbf5e751bfefb1ba98 SHA1 ad018aa81431a257e8d412c25ebd31e4b9da2c3b SHA256 de9af03c3c72de59ff528cd796db5e31eced408a1a7b3959b28c676b3dc04166
+MD5 cc0b04ffbebfb156ad0f06a53d4638f3 metadata.xml 220
+RMD160 da1381676cfa28a7099609dbf5e751bfefb1ba98 metadata.xml 220
+SHA256 de9af03c3c72de59ff528cd796db5e31eced408a1a7b3959b28c676b3dc04166 metadata.xml 220
 MD5 e98ea9bb64f9b4f54e39343a6ba70cfe files/digest-ksplash-engine-moodin-0.4.2 286
 RMD160 012eef62294ac2ea0a6607014051b36e1bb9d974 files/digest-ksplash-engine-moodin-0.4.2 286
 SHA256 cb45922d63a178507fa6f812db7c7b217a18fa95b48cd9210f2d7853b2af7a06 files/digest-ksplash-engine-moodin-0.4.2 286
+MD5 e98ea9bb64f9b4f54e39343a6ba70cfe files/digest-ksplash-engine-moodin-0.4.2-r1 286
+RMD160 012eef62294ac2ea0a6607014051b36e1bb9d974 files/digest-ksplash-engine-moodin-0.4.2-r1 286
+SHA256 cb45922d63a178507fa6f812db7c7b217a18fa95b48cd9210f2d7853b2af7a06 files/digest-ksplash-engine-moodin-0.4.2-r1 286
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.1 (GNU/Linux)
+Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFF0JDgz974XjDVpbkRAv1uAKCFIgTqSvIA6q4ifvyphcTwUxkFEgCgmNq9
-tCY+A763GcDlf46KVx/VEJQ=
-=z4GZ
+iD8DBQFG9tTbCkvF58q80IkRAum3AJ4w/BIHHHhlpDN8JQxu4YWqDhzeRgCcCclz
+PEpDCgi17xJR62ea98/+dbU=
+=h97n
 -----END PGP SIGNATURE-----

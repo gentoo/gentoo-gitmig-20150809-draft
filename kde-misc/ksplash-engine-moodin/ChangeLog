@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/ksplash-engine-moodin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplash-engine-moodin/ChangeLog,v 1.6 2007/02/12 16:08:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplash-engine-moodin/ChangeLog,v 1.7 2007/09/23 21:04:14 philantrop Exp $
+
+*ksplash-engine-moodin-0.4.2-r1 (23 Sep 2007)
+
+  23 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/ksplash-engine-moodin-0.4.2-multihead.patch,
+  +ksplash-engine-moodin-0.4.2-r1.ebuild:
+  Added a patch contributed by Glenn McCarthy on bug 191796 to fix a
+  multi-head issue with transparency. Thanks, Glenn!
 
   12 Feb 2007; Markus Ullmann <jokey@gentoo.org>
   ksplash-engine-moodin-0.4.2.ebuild:
