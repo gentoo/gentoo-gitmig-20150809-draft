@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.91 2007/09/23 03:45:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.92 2007/09/23 10:10:30 angelos Exp $
+
+  23 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  timidity++-2.13.2-r5.ebuild:
+  Stable on amd64 wrt bug #191283
 
   23 Sep 2007; Joseph Jezak <josejx@gentoo.org> timidity++-2.13.2-r5.ebuild:
   Marked ppc64 stable for bug #191283.
