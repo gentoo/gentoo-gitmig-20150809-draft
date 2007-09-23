@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.5.56455.ebuild,v 1.1 2007/09/21 00:50:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.5.56455.ebuild,v 1.2 2007/09/23 12:28:11 opfer Exp $
 
 inherit vmware eutils
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://vmware/software/wkst/${MY_P}.tar.gz
 
 LICENSE="vmware"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
