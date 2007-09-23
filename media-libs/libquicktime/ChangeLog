@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.89 2007/07/22 08:51:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.90 2007/09/23 11:27:34 drac Exp $
+
+  23 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  +files/libquicktime-1.0.0-gtk212.patch, libquicktime-1.0.0.ebuild:
+  Stop using -DGTK_DISABLE_DEPRECATED in configure.ac because it breaks with
+  GTK+-2.12 wrt #193446, thanks to Ed Catmur.
 
   22 Jul 2007; Samuli Suominen <drac@gentoo.org>
   libquicktime-0.9.7-r1.ebuild:

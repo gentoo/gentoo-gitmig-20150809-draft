@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.0.0.ebuild,v 1.3 2007/07/12 03:10:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.0.0.ebuild,v 1.4 2007/09/23 11:27:34 drac Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -53,10 +53,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-cflags.patch"
+	epatch "${FILESDIR}"/${P}-cflags.patch
+	epatch "${FILESDIR}"/${P}-gtk212.patch
 	AT_M4DIR="m4" eautoreconf
 }
 
