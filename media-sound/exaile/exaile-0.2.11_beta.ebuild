@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.11_beta.ebuild,v 1.1 2007/09/23 09:51:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.11_beta.ebuild,v 1.2 2007/09/23 16:07:20 drac Exp $
 
 inherit eutils fdo-mime multilib python
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.exaile.org/files/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="aac alsa cdparanoia flac gnome ipod libnotify libsexy mad musepack ogg
+IUSE="aac alsa cdparanoia equalizer flac gnome ipod libnotify libsexy mad musepack ogg
 	oss vorbis"
 
 RDEPEND=">=dev-python/pygtk-2.8.6
@@ -30,6 +30,7 @@ RDEPEND=">=dev-python/pygtk-2.8.6
 		>=media-plugins/gst-plugins-gnomevfs-${GVER} )
 	>=media-libs/gstreamer-${GVER}
 	>=media-libs/gst-plugins-good-${GVER}
+	equalizer? ( >=media-libs/gst-plugins-bad-0.10.5 )
 	>=dev-python/gst-python-${GVER}
 	musepack? ( >=media-plugins/gst-plugins-musepack-${GVER} )
 	vorbis? ( >=media-plugins/gst-plugins-vorbis-${GVER} )
