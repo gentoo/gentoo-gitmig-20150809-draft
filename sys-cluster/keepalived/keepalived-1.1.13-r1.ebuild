@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.13-r1.ebuild,v 1.5 2007/09/22 19:12:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.13-r1.ebuild,v 1.6 2007/09/23 00:39:51 robbat2 Exp $
 
 inherit flag-o-matic autotools
 
@@ -25,17 +25,17 @@ src_unpack() {
 	# This patch allows us to avoid needing kernel sources for the configure phase
 	EPATCH_OPTS="-p1 -d${S}" epatch \
 		${FILESDIR}/${PN}-1.1.13-do-not-need-kernel-sources.patch
-	cd ${S}
+	cd "${S}"
 	eautoreconf
 
 	# Prepare a suitable copy of the IPVS headers
 	# So that we don't need kernel sources at all!
-	mkdir -p ${S}/include/net || die "Failed to prepare ipvs header directory"
-	cp -f ${FILESDIR}/${PN}-1.1.13-linux-2.6.21-ip_vs.h \
-		${S}/include/net/ip_vs.h || die "Failed to add ipvs header"
+	mkdir -p "${S}"/include/net || die "Failed to prepare ipvs header directory"
+	cp -f "${FILESDIR}"/${PN}-1.1.13-linux-2.6.21-ip_vs.h \
+		"${S}"/include/net/ip_vs.h || die "Failed to add ipvs header"
 
 	# Ensure that keepalived can find the header that we are injecting
-	append-flags -I${S}/include
+	append-flags -I"${S}"/include
 }
 
 src_compile() {
@@ -63,7 +63,7 @@ src_install() {
 	# Not parallel safe
 	emake -j1 install DESTDIR="${D}" || die "emake install failed"
 
-	newinitd ${FILESDIR}/init-keepalived keepalived
+	newinitd "${FILESDIR}"/init-keepalived keepalived
 
 	dodoc doc/keepalived.conf.SYNOPSIS
 	dodoc README CONTRIBUTORS INSTALL VERSION ChangeLog AUTHOR TODO
@@ -74,7 +74,7 @@ src_install() {
 	newdoc INSTALL INSTALL+HOWTO
 
 	# Security risk to bundle SSL certs
-	rm -f ${D}/etc/keepalived/samples/*.pem
+	rm -f "${D}"/etc/keepalived/samples/*.pem
 }
 
 pkg_postinst() {
