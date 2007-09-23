@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.35 2007/09/22 18:28:04 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.36 2007/09/23 11:46:13 bicatali Exp $
+
+  23 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org> maxima-5.13.0.ebuild:
+  fixed logic for lisp priorities. Now dependencies pull only the compiling
+  lisp when 2 use flags are selected.
 
   22 Sep 2007; Steve Arnold <nerdboy@gentoo.org> maxima-5.13.0.ebuild:
   updated desktop entry to match freedesktop spec (again)

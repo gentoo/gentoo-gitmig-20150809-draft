@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0.ebuild,v 1.6 2007/09/22 18:28:04 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0.ebuild,v 1.7 2007/09/23 11:46:13 bicatali Exp $
 
 inherit eutils elisp-common
 
@@ -19,10 +19,10 @@ RDEPEND=">=sci-visualization/gnuplot-4.0
 	tetex? ( virtual/tetex )
 	emacs? ( virtual/emacs
 		 tetex? ( || ( app-emacs/auctex app-xemacs/auctex ) ) )
-	clisp? ( dev-lisp/clisp )
-	gcl?   ( dev-lisp/gcl )
+	clisp? ( !sbcl? ( dev-lisp/clisp ) )
+	gcl?   ( !sbcl? ( !clisp? ( !cmucl? ( dev-lisp/gcl ) ) ) )
 	sbcl?  ( dev-lisp/sbcl app-misc/rlwrap )
-	cmucl? ( >=dev-lisp/cmucl-19a app-misc/rlwrap )
+	cmucl? ( !sbcl? ( !clisp? ( >=dev-lisp/cmucl-19a app-misc/rlwrap ) ) )
 	!clisp? ( !gcl? ( !cmucl? ( dev-lisp/sbcl app-misc/rlwrap ) ) )
 	tk? ( dev-lang/tk )"
 
@@ -79,13 +79,11 @@ pkg_setup() {
 
 	# lisp priorities
 	MAXIMA_LISP="sbcl"
-	if use clisp && use gcl && ! use sbcl; then
+	if use clisp && ! use sbcl; then
 		MAXIMA_LISP=clisp
-	elif use clisp && use cmucl && ! use sbcl; then
-		MAXIMA_LISP=clisp
-	elif use cmucl && use gcl && ! use sbcl; then
+	elif use cmucl && ! use clisp && ! use sbcl; then
 		MAXIMA_LISP=cmucl
-	elif use gcl && ! use sbcl; then
+	elif use gcl && ! use cmucl && ! use clisp && ! use sbcl; then
 		MAXIMA_LISP=gcl
 	fi
 	einfo "Selected lisp: ${MAXIMA_LISP}"
