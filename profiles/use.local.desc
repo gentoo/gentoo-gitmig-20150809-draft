@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3035 2007/09/23 06:08:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3036 2007/09/23 08:08:01 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -550,8 +550,6 @@ dev-php5/php-gtk:sourceview - Enable GtkSourceView support
 dev-php5/php-gtk:libsexy - Enable libsexy support
 dev-php5/php-gtk:scintilla - Enable Scintilla support
 dev-php5/php-gtk:nolibglade - Disable support for libglade
-dev-php5/znf:pear-db - Include support for PEAR-DB
-dev-php5/znf:smarty - Include support for Smarty
 dev-python/cgkit:3ds - enable support for importing 3D Studio models
 dev-python/cgkit:ogre - enable support for Ogre rendering
 dev-python/docutils:glep - Install support for GLEPs
