@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3039 2007/09/23 08:15:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3040 2007/09/23 16:02:40 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1032,9 +1032,8 @@ media-sound/cmus:zsh-completion - enable zsh completion support
 media-sound/darkice:twolame - Build with twolame support
 media-sound/dir2ogg:wma - Add support for wma files through mplayer
 media-sound/easytag:wavpack - Add support for wavpack
+media-sound/exaile:equalizer - Enable equalizer support
 media-sound/exaile:libsexy - Enable libsexy support
-media-sound/exaile:serpentine - Add cd-burning support using serpentine 
-media-sound/exaile:streamripper - Add streamripper support for stream recording
 media-sound/ezstream:taglib - Enable tagging support with taglib
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
 media-sound/gnusound:cpudetection - Enables runtime cpu detection
