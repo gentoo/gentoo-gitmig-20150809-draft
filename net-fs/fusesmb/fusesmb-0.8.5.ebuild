@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/fusesmb-0.8.5.ebuild,v 1.2 2007/05/06 10:17:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/fusesmb-0.8.5.ebuild,v 1.3 2007/09/23 22:45:57 ticho Exp $
 
 inherit eutils
 
@@ -23,12 +23,12 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i "s:\(FUSE_USE_VERSION.\)23:\122:" config* || die "sed failed"
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
+	make install DESTDIR="${D}" || die "make install failed"
 	dodoc AUTHORS ChangeLog README fusesmb.conf.ex
 }
 
