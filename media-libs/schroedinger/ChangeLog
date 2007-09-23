@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/schroedinger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.6 2007/05/10 19:56:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.7 2007/09/23 13:50:29 drac Exp $
+
+*schroedinger-0.6.1 (23 Sep 2007)
+
+  23 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  +files/schroedinger-0.6.1-asneeded.patch, +schroedinger-0.6.1.ebuild:
+  Version bump, fixing also compatibility problems with liboil wrt #193450.
+  Also include a patch to build with ldflag asneeded.
 
   10 May 2007; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   Fix metadata
