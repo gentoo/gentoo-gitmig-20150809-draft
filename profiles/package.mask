@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7732 2007/09/22 16:13:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7733 2007/09/23 00:52:29 leio Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -32,13 +32,6 @@
 # Masked for removal in 30 days. Bug #190768.
 app-emacs/eieio
 app-emacs/semantic
-
-# Rémi Cardona <remi@gentoo.org> (21 Sep 2007)
-# gtk+-2.12 and relevant deps
-=dev-libs/glib-2.14.1
-=x11-libs/pango-1.18.2
-=dev-libs/atk-1.20.0
-=x11-libs/gtk+-2.12.0
 
 # Hanno Boeck <hanno@gentoo.org> (21 Sep 2007)
 # experimental new ebuild, changes a lot and breaks configuration
