@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/yafc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.32 2007/06/19 13:28:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.33 2007/09/23 15:32:56 fmccor Exp $
+
+  23 Sep 2007; Ferris McCormick <fmccor@gentoo.org>
+  +files/yafc-1.1.1-heimdal_gssapi_fix.patch, yafc-1.1.1-r1.ebuild:
+  Apply patch for heimdal fix, Bug #113052 --- thanks to jmbsvicetto (Jorge M.
+  B. S. Vicetto).
 
   19 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> yafc-1.1.1-r1.ebuild:
   Stable on sparc wrt #173646

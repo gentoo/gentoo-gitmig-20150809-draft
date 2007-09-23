@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/yafc-1.1.1-r1.ebuild,v 1.5 2007/06/19 13:28:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/yafc-1.1.1-r1.ebuild,v 1.6 2007/09/23 15:32:56 fmccor Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Console ftp client with a lot of nifty features"
 HOMEPAGE="http://yafc.sourceforge.net/"
@@ -23,6 +23,10 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gcc4.patch"
+	epatch ${FILESDIR}/${P}-heimdal_gssapi_fix.patch
+
+	AT_M4DIR="cf"
+	eautoreconf
 }
 
 src_compile() {
