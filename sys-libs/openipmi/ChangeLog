@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/openipmi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/ChangeLog,v 1.7 2007/09/23 03:46:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/ChangeLog,v 1.8 2007/09/23 06:03:20 robbat2 Exp $
+
+  23 Sep 2007; Robin H. Johnson <robbat2@gentoo.org> openipmi-2.0.11.ebuild:
+  Builds on my G5.
 
 *openipmi-2.0.11 (23 Sep 2007)
 *openipmi-1.4.28 (23 Sep 2007)
