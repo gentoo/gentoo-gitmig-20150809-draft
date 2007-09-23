@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0_pre7.ebuild,v 1.1 2007/09/09 05:34:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0_pre7.ebuild,v 1.2 2007/09/23 09:23:40 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -146,7 +146,7 @@ src_install() {
 	doman helpers/basic_auth/LDAP/*.8
 	dodoc helpers/basic_auth/SASL/squid_sasl_auth*
 
-	newpamd "${FILESDIR}/squid.pam.1" squid
+	newpamd "${FILESDIR}/squid.pam" squid
 	newconfd "${FILESDIR}/squid.confd" squid
 	if use logrotate; then
 		newinitd "${FILESDIR}/squid.initd-logrotate" squid
