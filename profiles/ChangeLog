@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.660 2007/09/23 16:20:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.661 2007/09/23 16:43:57 remi Exp $
+
+  23 Sep 2007; Rémi Cardona <remi@gentoo.org> package.mask:
+  Removing the gtkmm-2.12 mask
 
   23 Sep 2007; Jeroen Roovers <jer@gentoo.org> use.local.desc:
   Improve mozsha1 description (bug #193134 comment #7).
