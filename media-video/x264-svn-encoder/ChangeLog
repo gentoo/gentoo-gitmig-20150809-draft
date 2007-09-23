@@ -1,6 +1,15 @@
 # ChangeLog for media-video/x264-svn-encoder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/ChangeLog,v 1.7 2007/03/25 19:40:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/ChangeLog,v 1.8 2007/09/23 18:11:50 aballier Exp $
+
+*x264-svn-encoder-20070923 (23 Sep 2007)
+
+  23 Sep 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/x264-svn-encoder-20070923-nolib.patch,
+  +files/x264-svn-encoder-20070923-nostrip.patch,
+  +x264-svn-encoder-20070923.ebuild:
+  version bump now that yasm issues on x86 have been fixed, bug #180666, block
+  older version of yasm because of this
 
 *x264-svn-encoder-20070325 (25 Mar 2007)
 
