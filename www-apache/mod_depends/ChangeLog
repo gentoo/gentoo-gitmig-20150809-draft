@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_depends
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_depends/ChangeLog,v 1.3 2007/08/20 23:13:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_depends/ChangeLog,v 1.4 2007/09/23 16:00:47 nixnut Exp $
+
+  23 Sep 2007; nixnut <nixnut@gentoo.org>
+  mod_depends-0.7.0_p200702041.ebuild:
+  Added ~ppc wrt bug 189650
 
 *mod_depends-0.7.0_p200702041 (20 Aug 2007)
 

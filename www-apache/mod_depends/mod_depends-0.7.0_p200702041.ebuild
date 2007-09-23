@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_depends/mod_depends-0.7.0_p200702041.ebuild,v 1.1 2007/08/20 23:13:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_depends/mod_depends-0.7.0_p200702041.ebuild,v 1.2 2007/09/23 16:00:47 nixnut Exp $
 
 inherit eutils apache-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.outoforder.cc/projects/apache/mod_depends/"
 
 SLOT="0"
 LICENSE="Apache-2.0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 APACHE2_MOD_CONF="0.7/09_${PN}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/mod_transform-0.7.0_pre20070204.ebuild,v 1.1 2007/08/20 23:23:06 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/mod_transform-0.7.0_pre20070204.ebuild,v 1.2 2007/09/23 16:02:31 nixnut Exp $
 
 inherit apache-module
 
@@ -11,7 +11,7 @@ SRC_URI="http://upstream.rm-rf.in/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=dev-libs/libxslt-1.1.5
 		>=dev-libs/libxml2-2.6.11
