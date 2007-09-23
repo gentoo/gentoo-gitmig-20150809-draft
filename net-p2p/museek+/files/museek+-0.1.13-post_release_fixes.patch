@@ -51,13 +51,6 @@ Index: museeq/CMakeLists.txt
  
  set(ICONS
    museeq.png
-@@ -369,4 +374,4 @@
-   MESSAGE(" * without a Trayicon.. [TRAYICON=1]")
- else (NOT TRAYICON)
-   MESSAGE(" * with a Trayicon.. [TRAYICON=0]")
--endif (NOT TRAYICON)
-\ Sin fin-de-línea al final del archivo
-+endif (NOT TRAYICON)
 Index: museeq/mainwin.cpp
 ===================================================================
 --- museeq/mainwin.cpp	(revisión: 735)

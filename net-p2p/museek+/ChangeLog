@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/museek+
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.6 2007/09/22 19:26:08 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.7 2007/09/23 12:20:22 coldwind Exp $
+
+*museek+-0.1.13-r1 (23 Sep 2007)
+
+  23 Sep 2007; Santiago M. Mola <coldwind@gentoo.org>
+  +files/museek+-0.1.13-optional-deps.patch,
+  files/museek+-0.1.13-post_release_fixes.patch, -museek+-0.1.13.ebuild,
+  +museek+-0.1.13-r1.ebuild:
+  Make optional deps configurable.
 
 *museek+-0.1.13 (22 Sep 2007)
 
