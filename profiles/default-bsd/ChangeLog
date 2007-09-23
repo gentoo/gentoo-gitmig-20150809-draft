@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.9 2007/09/19 03:12:26 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.10 2007/09/23 17:42:41 lavajoe Exp $
+
+  23 Sep 2007; Joe Peterson <lavajoe@gentoo.org> virtuals:
+  Remove virtual/cblas per bug #189738
 
   19 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   fbsd/package.use.mask:
