@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r1.ebuild,v 1.17 2007/06/24 22:07:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r1.ebuild,v 1.18 2007/09/23 14:18:20 drac Exp $
 
 inherit autotools eutils gnome.org
 
@@ -17,7 +17,9 @@ RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )
 	>=media-libs/giflib-4.1.0
 	>=media-libs/libpng-1.2.1
 	>=media-libs/jpeg-6b
-	x11-libs/libX11"
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libXext"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
