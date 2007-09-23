@@ -1,0 +1,12 @@
+diff -ur gnusound-0.7.4.orig/configure.ac gnusound-0.7.4/configure.ac
+--- gnusound-0.7.4.orig/configure.ac	2005-07-06 12:56:47.000000000 +0300
++++ gnusound-0.7.4/configure.ac	2007-09-23 14:34:48.000000000 +0300
+@@ -242,7 +242,7 @@
+ if test "x$use_gnome2" = "xyes"; then
+   PKG_CHECK_MODULES(GNOME2,libgnomeui-2.0 >= 2.0.0 libglade-2.0 gthread-2.0,
+         AC_DEFINE(HAVE_GNOME2,,[use GNOME2])
+-        CFLAGS="$CFLAGS -DGNOME_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -rdynamic $GNOME2_CFLAGS"
++        CFLAGS="$CFLAGS -rdynamic $GNOME2_CFLAGS"
+         LIBS="$LIBS -rdynamic $GNOME2_LIBS",
+         use_gnome2=no)
+ fi

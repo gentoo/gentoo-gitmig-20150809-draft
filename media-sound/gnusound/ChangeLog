@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gnusound
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.17 2007/06/12 20:37:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.18 2007/09/23 11:40:17 drac Exp $
+
+  23 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  +files/gnusound-0.7.4-gtk212.patch, gnusound-0.7.4.ebuild:
+  Stop using -DGNOME_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED in
+  configure.ac because it breaks with GTK+-2.12 wrt #192408.
 
   12 Jun 2007; Alexis Ballier <aballier@gentoo.org> gnusound-0.7.4.ebuild:
   Ship gtk.m4 to avoid autoconf failures on systems without gtk 1 installed

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.6 2007/06/12 20:37:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.7 2007/09/23 11:40:17 drac Exp $
 
 WANT_ATUOMAKE=1.8
 WANT_AUTOCONF=2.5
@@ -49,6 +49,7 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	cp "${WORKDIR}"/m4/* config/
+	epatch "${FILESDIR}"/${P}-gtk212.patch
 	AT_M4DIR="config" eautoreconf
 }
 
