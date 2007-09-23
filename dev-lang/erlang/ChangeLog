@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.76 2007/08/26 07:43:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.77 2007/09/23 07:34:43 opfer Exp $
+
+  23 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/erlang-11.2.5-hipe.patch, erlang-11.2.5-r2.ebuild:
+  add patch provided by Paul Bonser <misterpib@gmail.com> in bug193452 to
+  prevent a doubled statement in hipe installation
 
   26 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   erlang-11.2.5-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.5-r2.ebuild,v 1.5 2007/08/26 07:43:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-11.2.5-r2.ebuild,v 1.6 2007/09/23 07:34:43 opfer Exp $
 
 inherit elisp-common eutils flag-o-matic multilib versionator
 
@@ -42,17 +42,23 @@ SITEFILE=50erlang-gentoo.el
 
 src_unpack() {
 	## fix compilation on hardened systems, see bug #154338
-	filter-flags "-fstack-protector"
-	filter-flags "-fstack-protector-all"
+#	filter-flags "-fstack-protector"
+#	filter-flags "-fstack-protector-all"
 
 	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-build.patch #184419
+
 	# needed for amd64
 	epatch "${FILESDIR}/${PN}-10.2.6-export-TARGET.patch"
+
 	# needed for FreeBSD
 	epatch "${FILESDIR}/${PN}-11.2.5-gethostbyname.patch"
+
+	# needed for building with hipe and recent coreutils
+	use hipe && epatch "${FILESDIR}"/${P}-hipe.patch
+
 	use odbc || sed -i 's: odbc : :' lib/Makefile
 
 	# make sure we only link ssl dynamically
