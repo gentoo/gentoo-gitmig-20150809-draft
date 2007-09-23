@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/t1lib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.56 2007/09/22 23:21:19 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.57 2007/09/23 04:25:43 jer Exp $
+
+  23 Sep 2007; Jeroen Roovers <jer@gentoo.org> ChangeLog:
+  Stable for HPPA (bug #193437).
+
+  23 Sep 2007; Jeroen Roovers <jer@gentoo.org> ChangeLog:
+  t1lib-5.0.2-r1.ebuild
 
   22 Sep 2007; Jurek Bartuszek <jurek@gentoo.org> t1lib-5.0.2-r1.ebuild:
   x86 stable (bug #193437)
