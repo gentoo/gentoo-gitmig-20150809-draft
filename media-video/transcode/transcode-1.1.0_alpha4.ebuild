@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.0_alpha4.ebuild,v 1.1 2007/08/25 14:35:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.0_alpha4.ebuild,v 1.2 2007/09/24 18:19:53 opfer Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.10"
@@ -104,13 +104,13 @@ src_compile() {
 		$(use_with X x) \
 		--with-mod-path=/usr/$(get_libdir)/transcode \
 		--with-libpostproc-libs=/usr/$(get_libdir)"
-		econf ${myconf} || die
+		econf ${myconf} || die "econf failed"
 
-	emake all || die
+	emake all || die "emake all failed"
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die "make install failed"
 	rm -fr "${D}/usr/share/doc/transcode"
 
 	dodoc AUTHORS ChangeLog README TODO STYLE
