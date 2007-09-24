@@ -1,21 +1,24 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0.ebuild,v 1.7 2007/06/24 09:11:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0.ebuild,v 1.8 2007/09/24 20:40:54 mrness Exp $
 
 inherit webapp eutils autotools
 
 DESCRIPTION="Web based administration and user controls for dspam"
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 SRC_URI="http://dspam.nuclearelephant.com/sources/dspam-${PV}.tar.gz
-	mirror://gentoo/dspam-${PV}-patches-20070624.tar.gz"
+	mirror://gentoo/dspam-${PV}-patches-20070909.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
-DEPEND=">=mail-filter/dspam-${PV}"
+# These are really run-time dependencies, but we need to make sure they are installed
+# before pkg_setup runs the built_with_use tests
+DEPEND=">=mail-filter/dspam-${PV}
+	dev-perl/GD"
+
 RDEPEND="${DEPEND}
-	>=dev-perl/GD-2.0
 	dev-perl/GD-Graph3d
 	dev-perl/GDGraph
 	dev-perl/GDTextUtil"
@@ -27,11 +30,20 @@ CONFDIR="/etc/mail/dspam"
 S="${WORKDIR}/dspam-${PV}"
 
 pkg_setup() {
-	if built_with_use mail-filter/dspam user-homedirs; then
-		eerror "The DSPAM web interface requires that dspam be installed without user-homedirs USE flag."
+	local use_errors=0
+	if built_with_use "mail-filter/dspam" user-homedirs; then
+		echo
+		eerror "The DSPAM web interface requires that mail-filter/dspam be installed without user-homedirs USE flag."
 		eerror "Please disable this flag and re-emerge dspam."
-		die "Incompatible mail-filter/dspam installation"
+		use_errors=$[${use_errors} + 1]
 	fi
+	if ! built_with_use "dev-perl/GD" png; then
+		echo
+		eerror "The DSPAM web interface requires that dev-perl/GD be installed with png USE flag."
+		eerror "Please enable this flag and re-emerge GD."
+		use_errors=$[${use_errors} + 1]
+	fi
+	[ ${use_errors} -gt 0 ] && die "Dependency installed with incompatible USE flags"
 
 	webapp_pkg_setup
 }
