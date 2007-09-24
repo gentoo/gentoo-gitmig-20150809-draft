@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p110.ebuild,v 1.1 2007/09/24 09:38:32 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p110.ebuild,v 1.2 2007/09/24 11:56:11 rbrown Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -9,16 +9,18 @@ ONIGURUMA="onigd2_5_9"
 
 inherit flag-o-matic alternatives eutils multilib autotools versionator
 
-MY_P="${P/_p/-p}"
+MY_P="${PN}-$(replace_version_separator 3 '-')"
 S=${WORKDIR}/${MY_P}
+
+SLOT=$(get_version_component_range 1-2)
+MY_SUFFIX=$(delete_version_separator 1 ${SLOT})
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
-SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/1.8/${MY_P}.tar.gz
+SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/${SLOT}/${MY_P}.tar.gz
 	cjk? ( http://www.geocities.jp/kosako3/oniguruma/archive/${ONIGURUMA}.tar.gz )"
 
 LICENSE="Ruby"
-SLOT="1.8"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="cjk debug doc examples ipv6 rubytests socks5 threads tk"
 
@@ -28,7 +30,7 @@ RDEPEND=">=sys-libs/gdbm-1.8.0
 	socks5? ( >=net-proxy/dante-1.1.13 )
 	tk? ( dev-lang/tk )
 	>=dev-ruby/ruby-config-0.3.1
-	!=dev-lang/ruby-cvs-1.8*
+	!=dev-lang/ruby-cvs-${SLOT}*
 	!dev-ruby/rdoc
 	!dev-ruby/rexml"
 DEPEND="${RDEPEND}"
@@ -40,9 +42,8 @@ src_unpack() {
 	if use cjk ; then
 		einfo "Applying ${ONIGURUMA}"
 		pushd ${WORKDIR}/oniguruma
-		econf --with-rubydir=${S} || die "econf failed"
-		MY_PV=$(get_version_component_range 1-2)
-		make ${MY_PV/./}
+		econf --with-rubydir="${S}" || die "econf failed"
+		make $MY_SUFFIX
 		popd
 	fi
 
@@ -77,7 +78,7 @@ src_compile() {
 		append-flags "-DGC_MALLOC_LIMIT=${RUBY_GC_MALLOC_LIMIT}"
 	fi
 
-	econf --program-suffix=${SLOT/./} --enable-shared \
+	econf --program-suffix=$MY_SUFFIX --enable-shared \
 		$(use_enable socks5 socks) \
 		$(use_enable doc install-doc) \
 		$(use_enable threads pthread) \
@@ -109,9 +110,9 @@ src_test() {
 }
 
 src_install() {
-	LD_LIBRARY_PATH=${D}/usr/$(get_libdir)
+	LD_LIBRARY_PATH="${D}/usr/$(get_libdir)"
 	RUBYLIB="${S}:${D}/usr/$(get_libdir)/ruby/${SLOT}"
-	for d in $(find ${S}/ext -type d) ; do
+	for d in $(find "${S}/ext" -type d) ; do
 		RUBYLIB="${RUBYLIB}:$d"
 	done
 	export LD_LIBRARY_PATH RUBYLIB
@@ -128,17 +129,17 @@ src_install() {
 
 	if use examples; then
 		dodir /usr/share/doc/${PF}
-		cp -pPR sample ${D}/usr/share/doc/${PF}
+		cp -pPR sample "${D}/usr/share/doc/${PF}"
 	fi
 
-	dosym libruby${SLOT/./}$(get_libname ${PV%_*}) /usr/$(get_libdir)/libruby$(get_libname ${PV%.*})
-	dosym libruby${SLOT/./}$(get_libname ${PV%_*}) /usr/$(get_libdir)/libruby$(get_libname ${PV%_*})
+	dosym libruby$MY_SUFFIX$(get_libname ${PV%_*}) /usr/$(get_libdir)/libruby$(get_libname ${PV%.*})
+	dosym libruby$MY_SUFFIX$(get_libname ${PV%_*}) /usr/$(get_libdir)/libruby$(get_libname ${PV%_*})
 
 	dodoc ChangeLog NEWS README* ToDo
 
 	if use rubytests; then
 		dodir /usr/share/${PN}-${SLOT}
-		cp -pPR test ${D}/usr/share/${PN}-${SLOT}
+		cp -pPR test "${D}/usr/share/${PN}-${SLOT}"
 	fi
 }
 
@@ -153,8 +154,8 @@ pkg_postinst() {
 	ewarn "you should re-emerge ruby again."
 	ewarn "See bug #159922 for details"
 	ewarn
-	if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
-		${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
+	if [[ ! -n $(readlink "${ROOT}"usr/bin/ruby) ]] ; then
+		"${ROOT}usr/sbin/ruby-config" ruby$MY_SUFFIX
 	fi
 	elog
 	elog "You can change the default ruby interpreter by ${ROOT}usr/sbin/ruby-config"
@@ -162,7 +163,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
-		${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
+	if [[ ! -n $(readlink "${ROOT}"usr/bin/ruby) ]] ; then
+		"${ROOT}usr/sbin/ruby-config" ruby$MY_SUFFIX
 	fi
 }
