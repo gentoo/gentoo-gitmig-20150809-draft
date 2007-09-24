@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a.ebuild,v 1.1 2007/09/24 09:58:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a.ebuild,v 1.2 2007/09/24 10:28:28 opfer Exp $
 
 inherit autotools elisp-common eutils fixheadtails
 
@@ -97,7 +97,7 @@ src_install() {
 	doins README* cloud.jpg dad.* embed*.mgp gradation*.mgp \
 		mgp-old*.jpg mgp.mng mgp3.xbm mgprc-sample \
 		multilingual.mgp sample*.mgp sendmail6*.mgp \
-		tutorial*.mgp v6*.mgp v6header.* || die
+		tutorial*.mgp v6*.mgp v6header.* || die "example installation failed"
 }
 
 pkg_postinst() {
