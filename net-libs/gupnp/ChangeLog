@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gupnp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.2 2007/09/13 14:52:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.3 2007/09/24 16:41:52 drac Exp $
+
+*gupnp-0.6 (24 Sep 2007)
+
+  24 Sep 2007; Samuli Suominen <drac@gentoo.org> +gupnp-0.6.ebuild:
+  Version bump.
 
   13 Sep 2007; Samuli Suominen <drac@gentoo.org> gupnp-0.4.ebuild:
   Upstream changed tarball download directory.
