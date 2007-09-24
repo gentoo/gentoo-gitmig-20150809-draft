@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Cache-Memcached
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.46 2007/09/24 14:07:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.47 2007/09/24 14:15:43 drac Exp $
+
+  24 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  Cache-Memcached-1.24.ebuild:
+  Edit old rdep which didn't install string-crc32 on ia64 arch but ia64 has
+  string-crc32 now stable.
 
 *Cache-Memcached-1.24 (24 Sep 2007)
 
