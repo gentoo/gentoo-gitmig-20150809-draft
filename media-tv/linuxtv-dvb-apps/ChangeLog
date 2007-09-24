@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/linuxtv-dvb-apps
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.33 2007/08/11 19:18:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.34 2007/09/24 20:04:55 cardoe Exp $
+
+*linuxtv-dvb-apps-1.1.1.20070924 (24 Sep 2007)
+
+  24 Sep 2007; Doug Goldstein <cardoe@gentoo.org>
+  +linuxtv-dvb-apps-1.1.1.20070924.ebuild:
+  latest upstream snapshot. Includes many scan file updates. Drops duplicate
+  installs of scan files in /usr/share/dvb.
 
   11 Aug 2007; Markus Rothe <corsair@gentoo.org>
   linuxtv-dvb-apps-1.1.1.20070114.ebuild:
