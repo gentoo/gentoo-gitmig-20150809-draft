@@ -1,0 +1,11 @@
+# ChangeLog for media-video/gnome-mplayer
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.1 2007/09/24 17:37:19 drac Exp $
+
+*gnome-mplayer-0.5.0 (24 Sep 2007)
+
+  24 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  +gnome-mplayer-0.5.0.ebuild:
+  Initial commit wrt #185876, thanks to Frittella Laurento. MPlayer frontend
+  for GNOME.
+
