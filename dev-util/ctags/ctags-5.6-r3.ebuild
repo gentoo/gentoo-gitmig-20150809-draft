@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.6-r3.ebuild,v 1.2 2007/07/12 01:05:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.6-r3.ebuild,v 1.3 2007/09/24 19:40:05 hawking Exp $
 
 inherit eutils
 
 DESCRIPTION="Exuberant Ctags creates tags files for code browsing in editors"
 HOMEPAGE="http://ctags.sourceforge.net"
 SRC_URI="mirror://sourceforge/ctags/${P}.tar.gz
-	mirror://sourceforge/gnuada/ctags-ada-mode-4.3.3.tar.bz2"
+	ada? ( mirror://sourceforge/gnuada/ctags-ada-mode-4.3.3.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
