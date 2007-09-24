@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.52 2007/09/21 01:15:43 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.53 2007/09/24 05:25:04 dberkholz Exp $
+
+*xf86-video-ati-6.7.194 (24 Sep 2007)
+
+  24 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-video-ati-6.7.194.ebuild:
+  Adds support for Mac Mini 'MacModel' option; fixes Xv crash bug; lots of
+  fixes for LVDS panels (generally laptops); external TMDS (generally dual
+  DVI) should work again.
 
 *xf86-video-ati-6.7.193 (21 Sep 2007)
 
