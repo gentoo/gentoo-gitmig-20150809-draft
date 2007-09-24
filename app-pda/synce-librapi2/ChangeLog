@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-librapi2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.22 2007/02/21 23:00:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.23 2007/09/24 08:38:11 opfer Exp $
+
+  24 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  synce-librapi2-0.9.1.ebuild:
+  stable x86, bug 193261
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
