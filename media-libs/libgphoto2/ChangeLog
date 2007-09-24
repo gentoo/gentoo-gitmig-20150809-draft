@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.105 2007/08/30 12:44:30 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.106 2007/09/24 22:46:35 eva Exp $
+
+*libgphoto2-2.4.0 (24 Sep 2007)
+
+  24 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/libgphoto2-2.4.0-as-needed.patch,
+  +files/libgphoto2-2.4.0-rpm.patch, +libgphoto2-2.4.0.ebuild:
+  bump to 2.4.0
 
   30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing liquidx from metadata due to his retirement (see #171155 for
