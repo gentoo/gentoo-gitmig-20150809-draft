@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc4-r1.ebuild,v 1.2 2007/09/04 23:12:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc4-r1.ebuild,v 1.3 2007/09/24 13:50:52 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -252,6 +252,16 @@ pkg_postinst() {
 		ewarn "The domainname init script has been removed in this version."
 		ewarn "Consult ${ROOT}etc/conf.d/net.example for details about how"
 		ewarn "to apply dns/nis information to the loopback interface."
+	fi
+
+	# whine about users that lack passwords #193541
+	if [[ -e ${ROOT}/etc/shadow ]] ; then
+		local bad_users=$(sed -n '/^[^:]*::/s|^\([^:]*\)::.*|\1|p' "${ROOT}"/etc/shadow)
+		if [[ -n ${bad_users} ]] ; then
+			echo
+			ewarn "The following users lack passwords!"
+			ewarn ${bad_users}
+		fi
 	fi
 }
 
