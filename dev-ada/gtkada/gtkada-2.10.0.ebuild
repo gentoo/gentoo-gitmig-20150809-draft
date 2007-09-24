@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.10.0.ebuild,v 1.3 2007/09/10 13:38:04 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.10.0.ebuild,v 1.4 2007/09/24 22:17:04 george Exp $
 
 inherit eutils gnat versionator
 
@@ -31,9 +31,9 @@ S="${WORKDIR}/${Name}-${PV}"
 QA_EXECSTACK="${AdalibLibTop:1}/*/gtkada/libgtkada-${MajorPV}.so.0"
 
 src_unpack() {
-	gnat_src_unpack
+	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	sed -i -e "s:-aI\$prefix/include/gtkada:-aI${AdalibSpecsDir}/gtkada:" \
 		src/tools/gtkada-config.in
 
@@ -61,11 +61,11 @@ lib_compile() {
 lib_install() {
 	# make install misses all the .so and .a files and otherwise creates more
 	# problems than it's worth. Will do everything manually
-	mkdir -p ${DL}
-	mv src/lib-obj/* src/*/obj/* src/tools/gtkada-config ${DL}
-	rm ${DL}/*.o
-	chmod 0444 ${DL}/*.ali
-	chmod 0755 ${DL}/gtkada-config
+	mkdir -p "${DL}"
+	mv src/lib-obj/* src/*/obj/* src/tools/gtkada-config "${DL}"
+	rm "${DL}"/*.o
+	chmod 0444 "${DL}"/*.ali
+	chmod 0755 "${DL}"/gtkada-config
 }
 
 src_install() {
@@ -78,16 +78,16 @@ src_install() {
 	gnat_src_install
 
 	#specs
-	cd ${S}/src
+	cd "${S}"/src
 	dodir "${AdalibSpecsDir}/${PN}"
 	insinto "${AdalibSpecsDir}/${PN}"
 	doins *.ad? glade/*.ad? gnome/*.ad? opengl/*.{ad?,c,h}
 
 	#docs
-	cd ${S}
+	cd "${S}"
 	dodoc ANNOUNCE AUTHORS COPYING README
 	cp -dPr examples/ testgtk/ "${D}/usr/share/doc/${PF}"
-	cd ${S}/docs
+	cd "${S}"/docs
 	doinfo gtkada_ug/gtkada_ug.info
 	ps2pdf gtkada_ug/gtkada_ug.ps
 	ps2pdf gtkada_rm/gtkada_rm.ps
@@ -96,7 +96,7 @@ src_install() {
 	cp -dPr gtkada_rm/gtkada_rm/ "${D}/usr/share/doc/${PF}/html"
 
 	# utility stuff
-	cd ${S}
+	cd "${S}"
 	dodir "${AdalibDataDir}/${PN}"
 	insinto "${AdalibDataDir}/${PN}"
 	doins -r xml/gtkada.xml projects/

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.4.0-r2.ebuild,v 1.4 2007/04/08 00:59:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.4.0-r2.ebuild,v 1.5 2007/09/24 22:17:04 george Exp $
 
 inherit eutils gnat
 
@@ -25,9 +25,9 @@ S="${WORKDIR}/${Name}-${PV}"
 CommonInst="${WORKDIR}/common-install"
 
 src_unpack() {
-	gnat_src_unpack
+	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	sed -i -e "s|-I\$prefix/include|-I${AdalibSpecsDir}|" \
 		src/gtkada-config.in
 

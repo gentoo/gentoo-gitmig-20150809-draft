@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.8.0.ebuild,v 1.7 2007/09/10 13:38:04 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.8.0.ebuild,v 1.8 2007/09/24 22:17:04 george Exp $
 
 inherit eutils gnat versionator
 
@@ -30,9 +30,9 @@ S="${WORKDIR}/${Name}-${PV}"
 QA_EXECSTACK="${AdalibLibTop:1}/*/gtkada/libgtkada-${MajorPV}.so.0"
 
 src_unpack() {
-	gnat_src_unpack
+	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	sed -i -e "s:-aI\$prefix/include/gtkada:-aI${AdalibSpecsDir}/gtkada:" \
 		src/gtkada-config.in
 
