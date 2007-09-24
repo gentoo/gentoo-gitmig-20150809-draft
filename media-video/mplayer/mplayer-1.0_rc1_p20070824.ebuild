@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1_p20070824.ebuild,v 1.7 2007/09/24 11:36:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1_p20070824.ebuild,v 1.8 2007/09/24 14:24:12 drac Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -328,8 +328,8 @@ src_compile() {
 	use fbcon && use video_cards_s3virge && myconf="${myconf} --enable-s3fb"
 	use libcaca || myconf="${myconf} --disable-caca"
 	use opengl || myconf="${myconf} --disable-gl"
-	use video_cards_mga || myconf="${myconf} --disable-mga"
-	( use X && use video_cards_mga ) || myconf="${myconf} --disable-xmga"
+	use video_cards_mga && myconf="${myconf} --enable-mga"
+	( use X && use video_cards_mga ) && myconf="${myconf} --enable-xmga"
 	use video_cards_vesa || myconf="${myconf} --disable-vesa"
 	use vidix || myconf="${myconf} --disable-vidix-internal \
 		--disable-vidix-external"
