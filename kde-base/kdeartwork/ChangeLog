@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.195 2007/08/15 04:54:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.196 2007/09/24 04:05:21 redhatter Exp $
+
+  24 Sep 2007; Stuart Longland <redhatter@gentoo.org>
+  kdeartwork-3.5.7.ebuild:
+  Tested and working on MIPS.  Keyworded ~mips.
 
   15 Aug 2007; Jeroen Roovers <jer@gentoo.org> kdeartwork-3.5.7.ebuild:
   Stable for HPPA (bug #176297).
