@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p110.ebuild,v 1.2 2007/09/24 11:56:11 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p110.ebuild,v 1.3 2007/09/24 12:49:03 rbrown Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -43,7 +43,7 @@ src_unpack() {
 		einfo "Applying ${ONIGURUMA}"
 		pushd ${WORKDIR}/oniguruma
 		econf --with-rubydir="${S}" || die "econf failed"
-		make $MY_SUFFIX
+		emake $MY_SUFFIX
 		popd
 	fi
 
@@ -117,7 +117,7 @@ src_install() {
 	done
 	export LD_LIBRARY_PATH RUBYLIB
 
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	MINIRUBY=$(echo -e 'include Makefile\ngetminiruby:\n\t@echo $(MINIRUBY)'|make -f - getminiruby)
 	keepdir $(${MINIRUBY} -rrbconfig -e "print Config::CONFIG['sitelibdir']")
@@ -144,11 +144,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn
-	ewarn "Warning: Vim won't work if you've just updated ruby from"
-	ewarn "1.6.x to 1.8.x due to the library version change."
-	ewarn "In that case, you will need to remerge vim."
-	ewarn
 
 	ewarn "If you upgrade to >=sys-apps/coreutils-6.7-r1,"
 	ewarn "you should re-emerge ruby again."
