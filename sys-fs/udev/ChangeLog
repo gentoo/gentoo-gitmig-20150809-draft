@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.351 2007/09/20 20:28:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.352 2007/09/24 19:59:37 zzam Exp $
+
+*udev-115-r6 (24 Sep 2007)
+
+  24 Sep 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-start-115-r6.sh, +files/udev-115-update-gentoo-rules-2.diff,
+  +files/udev.conf.115-r6, +udev-115-r6.ebuild:
+  Simplified rules a bit. Let user configure max inode nr of /dev, solving bug
+  #193586.
 
 *udev-115-r5 (20 Sep 2007)
 
