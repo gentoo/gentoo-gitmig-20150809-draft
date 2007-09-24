@@ -1,3 +1,4 @@
+
 ;; site-lisp configuration for vhdl-mode
 
 (autoload 'vhdl-mode "vhdl-mode" "VHDL Mode" t)
