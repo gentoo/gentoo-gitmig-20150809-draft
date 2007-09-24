@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.2.1.ebuild,v 1.1 2007/09/23 11:48:45 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.2.1.ebuild,v 1.2 2007/09/24 19:43:46 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -57,16 +57,16 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	[ ! -d ${S}/libs ] && mkdir ${S}/libs
-	[ ! -d ${S}/objs ] && mkdir ${S}/objs
-	mv ${WORKDIR}/{libpng-${V_PNG},jpeg-${V_JPEG},zlib-${V_ZLIB},freetype-${V_FT}} ${S}/libs
+	[ ! -d "${S}/libs" ] && mkdir "${S}/libs"
+	[ ! -d "${S}/objs" ] && mkdir "${S}/objs"
+	mv "${WORKDIR}"/{libpng-${V_PNG},jpeg-${V_JPEG},zlib-${V_ZLIB},freetype-${V_FT}} "${S}/libs"
 	# We need to delete the Makefile and let it be rebuilt when splashutils
 	# is being configured. Either that, or we end up with a segfaulting kernel
 	# helper.
-	rm ${S}/libs/zlib-${V_ZLIB}/Makefile
+	rm "${S}/libs/zlib-${V_ZLIB}/Makefile"
 
-	cd ${S}
-	ln -sf ${S} ${WORKDIR}/core
+	cd "${S}"
+	ln -sf "${S}" "${WORKDIR}/core"
 
 	# Check whether the kernel tree has been patched with fbcondecor.
 	if [[ ! -e /usr/$(get_libdir)/klibc/include/linux/console_splash.h && \
@@ -88,14 +88,14 @@ src_unpack() {
 		ewarn "splashutils, you're on your own, as this configuration is not supported."
 	else
 		# This should make splashutils compile on systems with hardened GCC.
-		sed -e 's@K_CFLAGS =@K_CFLAGS = -fno-stack-protector@' -i ${S}/Makefile
+		sed -e 's@K_CFLAGS =@K_CFLAGS = -fno-stack-protector@' -i "${S}/Makefile"
 	fi
 
 	if ! use truetype ; then
-		sed -i -e 's/fbtruetype kbd/kbd/' ${SM}/Makefile
+		sed -i -e 's/fbtruetype kbd/kbd/' "${SM}/Makefile"
 	fi
 
-	sed -i -e "s#/lib/splash#/$(get_libdir)/splash#" ${S}/scripts/{splash_manager,splash_geninitramfs}
+	sed -i -e "s#/lib/splash#/$(get_libdir)/splash#" "${S}"/scripts/{splash_manager,splash_geninitramfs}
 }
 
 src_compile() {
@@ -107,10 +107,10 @@ src_compile() {
 		myconf="--with-fbcondecor"
 	fi
 
-	cd ${SM}
+	cd "${SM}"
 	emake LIB=$(get_libdir) STRIP=true || die "failed to build miscsplashutils"
 
-	cd ${S}
+	cd "${S}"
 	./configure \
 		--with-libdir="/$(get_libdir)" \
 		$(use_with png) \
@@ -124,7 +124,7 @@ src_compile() {
 	emake -j1 || die "failed to build splashutils"
 
 	if has_version ">=sys-apps/baselayout-1.13.99"; then
-		cd ${SG}
+		cd "${SG}"
 		emake LIB=$(get_libdir) || die "failed to build the splash plugin"
 	fi
 }
@@ -132,39 +132,39 @@ src_compile() {
 src_install() {
 	local LIB=$(get_libdir)
 
-	cd ${SM}
-	make DESTDIR=${D} LIB=${LIB} install || die
+	cd "${SM}"
+	make DESTDIR="${D}" LIB=${LIB} install || die
 
 	export ZLIBSRC LPNGSRC JPEGSRC FT2SRC
-	cd ${S}
-	make DESTDIR=${D} LIB=${LIB} install || die
+	cd "${S}"
+	make DESTDIR="${D}" LIB=${LIB} install || die
 
-	mv ${D}/usr/${LIB}/libfbsplash.so* ${D}/${LIB}/
+	mv "${D}"/usr/${LIB}/libfbsplash.so* "${D}"/${LIB}/
 	gen_usr_ldscript libfbsplash.so
 
 	echo 'CONFIG_PROTECT_MASK="/etc/splash"' > 99splash
 	doenvd 99splash
 
-	newinitd ${SG}/init-fbcondecor fbcondecor
-	newconfd ${SG}/splash.conf splash
-	newconfd ${SG}/fbcondecor.conf fbcondecor
+	newinitd "${SG}"/init-fbcondecor fbcondecor
+	newconfd "${SG}"/splash.conf splash
+	newconfd "${SG}"/fbcondecor.conf fbcondecor
 
 	insinto /usr/share/${PN}
-	doins ${SG}/initrd.splash
+	doins "${SG}"/initrd.splash
 
 	insinto /etc/splash
-	doins ${SM}/fbtruetype/luxisri.ttf
+	doins "${SM}"/fbtruetype/luxisri.ttf
 
 	dodoc docs/* README AUTHORS
 
 	if has_version ">=sys-apps/baselayout-1.13.99"; then
-		cd ${SG}
-		make DESTDIR=${D} LIB=${LIB} install || die "failed to install the splash plugin"
+		cd "${SG}"
+		make DESTDIR="${D}" LIB=${LIB} install || die "failed to install the splash plugin"
 	else
-		cp ${SG}/splash-functions-bl1.sh ${D}/sbin/splash-functions.sh
+		cp "${SG}"/splash-functions-bl1.sh "${D}"/sbin/splash-functions.sh
 	fi
 
-	sed -i -e "s#/lib/splash#/${LIB}/splash#" ${D}/sbin/splash-functions.sh
+	sed -i -e "s#/lib/splash#/${LIB}/splash#" "${D}"/sbin/splash-functions.sh
 	keepdir /${LIB}/splash/{tmp,cache,bin}
 	dosym /${LIB}/splash/bin/fbres /sbin/fbres
 }
