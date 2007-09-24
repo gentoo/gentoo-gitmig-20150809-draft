@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/wxglade
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.34 2007/05/20 18:34:45 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.35 2007/09/24 01:35:38 dirtyepic Exp $
+
+*wxglade-0.6 (24 Sep 2007)
+
+  24 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> +wxglade-0.6.ebuild:
+  Version bump.
 
   20 May 2007; <leio@gentoo.org> -wxglade-0.4.ebuild:
   Remove old
