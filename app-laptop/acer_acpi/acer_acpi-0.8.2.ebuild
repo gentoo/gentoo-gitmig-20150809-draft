@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.8.2.ebuild,v 1.1 2007/09/22 21:54:00 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.8.2.ebuild,v 1.2 2007/09/24 18:22:34 jurek Exp $
 
 inherit linux-mod
 
@@ -15,6 +15,8 @@ IUSE=""
 
 MODULE_NAMES="acer_acpi(extra:)"
 BUILD_TARGETS="all"
+
+CONFIG_CHECK="LEDS_CLASS"
 
 pkg_setup() {
 	linux-mod_pkg_setup
