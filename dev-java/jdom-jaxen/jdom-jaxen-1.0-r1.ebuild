@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/jdom-jaxen-1.0-r1.ebuild,v 1.1 2007/09/18 06:13:22 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/jdom-jaxen-1.0-r1.ebuild,v 1.2 2007/09/24 11:06:09 opfer Exp $
 
 JAVA_PKG_IUSE=""
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.jdom.org/dist/source/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="JDOM"
 SLOT="${PV}"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 

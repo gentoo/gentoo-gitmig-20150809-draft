@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdom-jaxen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/ChangeLog,v 1.4 2007/09/24 11:06:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/ChangeLog,v 1.5 2007/09/24 11:07:35 opfer Exp $
+
+  24 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  jdom-jaxen-1.0_beta9-r2.ebuild:
+  keywording ~x86, bug #188275
 
   24 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   jdom-jaxen-1.0-r1.ebuild:
