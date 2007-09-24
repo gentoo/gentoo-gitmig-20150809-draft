@@ -1,12 +1,13 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.78 2007/09/24 17:26:38 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.79 2007/09/24 17:28:22 jurek Exp $
 
 *libgdiplus-1.2.5-r1 (24 Sep 2007)
 
   24 Sep 2007; Jurek Bartuszek <jurek@gentoo.org>
   +files/libgdiplus-1.2.5-imglibs.patch, +libgdiplus-1.2.5-r1.ebuild:
-  Fix linking against image libraries (bug #192068)
+  Fix linking against image libraries (bug #192068). Patch provided by
+  Piotr Miedzik <miedzik_piotr@o2.pl>
 
 *libgdiplus-1.2.5 (10 Sep 2007)
 
