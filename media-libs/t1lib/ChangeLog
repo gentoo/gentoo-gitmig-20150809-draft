@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/t1lib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.58 2007/09/23 13:07:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.59 2007/09/24 19:07:22 corsair Exp $
+
+  24 Sep 2007; Markus Rothe <corsair@gentoo.org> t1lib-5.0.2-r1.ebuild:
+  Stable on ppc64; bug #193437
 
   23 Sep 2007; Raúl Porcel <armin76@gentoo.org> t1lib-5.0.2-r1.ebuild:
   alpha/ia64 stable wrt security #193143
