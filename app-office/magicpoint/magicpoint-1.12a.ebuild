@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a.ebuild,v 1.2 2007/09/24 10:28:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a.ebuild,v 1.3 2007/09/24 20:14:21 opfer Exp $
 
 inherit autotools elisp-common eutils fixheadtails
 
@@ -60,10 +60,10 @@ src_compile() {
 		--x-includes=/usr/X11R6/include || die "econf failed"
 
 	xmkmf || die "xmkmf failed"
-	# no parallel make possible!
-	make -j1 Makefiles || die "emake failed"
-	make clean || die "emake clean failed"
-	make BINDIR=/usr/bin LIBDIR=/etc/X11 || die "emake failed"
+	# emake fails miserably at all that
+	make Makefiles || die "make failed"
+	make clean || die "make clean failed"
+	make BINDIR=/usr/bin LIBDIR=/etc/X11 || die "make failed"
 	use emacs && cp contrib/*.el "${S}" && \
 		elisp-compile *.el || die "elisp-compile failed"
 }
@@ -73,14 +73,14 @@ src_install() {
 		DESTDIR="${D}" \
 		BINDIR=/usr/bin \
 		LIBDIR=/etc/X11 \
-		install || die "make install"
+		install || die "make install failed"
 
 	make \
 		DESTDIR="${D}" \
 		DOCHTMLDIR=/usr/share/doc/${PF} \
 		MANPATH=/usr/share/man \
 		MANSUFFIX=1 \
-		install.man || die "emake install.man failed"
+		install.man || die "make install.man failed"
 
 	exeinto /usr/bin
 	doexe contrib/{mgp2html.pl,mgp2latex.pl}
