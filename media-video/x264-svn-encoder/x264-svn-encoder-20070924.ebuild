@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/x264-svn-encoder-20070923.ebuild,v 1.2 2007/09/24 06:08:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/x264-svn-encoder-20070924.ebuild,v 1.1 2007/09/24 17:44:56 aballier Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -36,8 +36,8 @@ S=${WORKDIR}/${PN/-encoder/}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-nostrip.patch"
-	epatch "${FILESDIR}/${P}-nolib.patch"
+	epatch "${FILESDIR}/${PN}-nostrip.patch"
+	epatch "${FILESDIR}/${PN}-nolib.patch"
 }
 
 src_compile() {
