@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.181 2007/09/24 12:53:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.182 2007/09/24 22:51:18 ranger Exp $
+
+  24 Sep 2007; Brent Baude <ranger@gentoo.org> emacs-22.1-r1.ebuild:
+  Marking emacs-22.1-r1 ppc64 stable for bug#193501
 
   24 Sep 2007; Jeroen Roovers <jer@gentoo.org> emacs-22.1-r1.ebuild:
   Marked ~hppa (bug #180642).
