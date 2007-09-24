@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r4.ebuild,v 1.1 2007/07/17 10:51:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r4.ebuild,v 1.2 2007/09/24 06:44:12 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}/${P}-freenode.patch
 	epatch "${FILESDIR}"/${PV}/${P}-gcc34.patch
 	epatch "${FILESDIR}"/${PV}/${P}-gcc41.patch
+	epatch "${FILESDIR}"/${PV}/${P}-inline.patch
 	epatch "${FILESDIR}"/${PV}/${P}-headers.patch
 	epatch "${FILESDIR}"/${PV}/${P}-build.patch
 	epatch "${FILESDIR}"/fPIC.patch
