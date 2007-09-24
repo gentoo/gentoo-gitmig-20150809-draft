@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/x264-svn-encoder-20070923.ebuild,v 1.1 2007/09/23 18:11:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-svn-encoder/x264-svn-encoder-20070923.ebuild,v 1.2 2007/09/24 06:08:44 aballier Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -41,13 +41,15 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf=""
+	use debug && myconf="${myconf} --enable-debug"
 	./configure --prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
 		--enable-pic --enable-shared \
 		"--extra-cflags=${CFLAGS}" \
 		"--extra-ldflags=${LDFLAGS}" \
 		"--extra-asflags=${ASFLAGS}" \
-		$(use_enable debug) \
+		${myconf} \
 		$(use_enable threads pthread) \
 		$(use_enable mp4 mp4-output) \
 		$(use_enable gtk) \
