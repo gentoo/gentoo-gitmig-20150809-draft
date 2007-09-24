@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.4_rc6.ebuild,v 1.2 2007/08/16 16:35:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.4_rc6.ebuild,v 1.3 2007/09/24 18:13:39 opfer Exp $
 
 WANT_AUTOMAKE=1.8
 
@@ -64,6 +64,8 @@ src_compile() {
 	filter-flags -maltivec -mabi=altivec -momit-leaf-frame-pointer
 	#145849
 	use amd64 && filter-flags -fweb
+	# bug 189910
+	use x86 && filter-flags -fforce-addr
 
 	if use ppc || use ppc64 ; then
 		append-flags -U__ALTIVEC__
@@ -105,13 +107,13 @@ src_compile() {
 		--with-libpostproc-builddir="/usr/$(get_libdir)" \
 		--disable-avifile \
 		--disable-xio"
-		econf ${myconf} || die
+		econf ${myconf} || die "econf failed"
 
-	emake all || die
+	emake all || die "emake all failed"
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die "make install failed"
 
 	#do not install the filters that make dvdrip hang unless we ask for them
 	if ! use extrafilters ; then
