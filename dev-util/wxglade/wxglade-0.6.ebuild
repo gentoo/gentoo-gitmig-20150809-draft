@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.6.ebuild,v 1.1 2007/09/24 01:35:38 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.6.ebuild,v 1.2 2007/09/24 04:14:07 dirtyepic Exp $
 
 inherit python multilib eutils
 
@@ -18,15 +18,15 @@ DEPEND=">=dev-lang/python-2.3
 
 src_install() {
 	python_version
-	dodir /usr/lib/python${PYVER}/site-packages/${PN}
+	dodir /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
 	dodoc CHANGES.txt README.txt TODO.txt credits.txt
-	cp credits.txt "${D}"/usr/lib/python${PYVER}/site-packages/${PN}/
+	cp credits.txt "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/
 	dohtml -r docs/*
 	rm -rf docs *txt
-	cp -R * "${D}"/usr/lib/python${PYVER}/site-packages/${PN}/
-	dosym /usr/share/doc/${PF}/html /usr/lib/python${PYVER}/site-packages/${PN}/docs
+	cp -R * "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/
+	dosym /usr/share/doc/${PF}/html /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/docs
 	echo "#!/bin/bash" > wxglade
-	echo "exec python /usr/lib/python${PYVER}/site-packages/${PN}/wxglade.py \$*" >> wxglade
+	echo "exec python /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/wxglade.py \$*" >> wxglade
 	exeinto /usr/bin
 	doexe wxglade
 	insinto /usr/share/pixmaps
