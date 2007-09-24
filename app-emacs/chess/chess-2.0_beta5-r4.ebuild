@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta5-r4.ebuild,v 1.1 2007/09/24 10:30:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta5-r4.ebuild,v 1.2 2007/09/24 12:57:33 ulm Exp $
 
 NEED_EMACS=22
 
@@ -28,8 +28,7 @@ DOCS="ChangeLog EPD.txt PGN.txt PLAN README TODO"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-byte-compiling-files-gentoo.patch" \
-		|| die "epatch failed"
+	epatch "${FILESDIR}/${PV}-byte-compiling-files-gentoo.patch"
 	rm -f *.elc
 }
 
