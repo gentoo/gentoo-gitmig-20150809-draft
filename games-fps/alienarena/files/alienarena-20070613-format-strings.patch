@@ -1,0 +1,58 @@
+# fix-CVE-2007-4754-CVE-2007-4755.dpatch by Nico Golde <nion@debian.org>
+
+--- source/game/acesrc/acebot_cmds.c
++++ source/game/acesrc/acebot_cmds.c
+@@ -142,7 +142,7 @@
+ 	va_end (argptr);
+ 
+ 	if (dedicated->value)
+-		gi.cprintf(NULL, PRINT_MEDIUM, bigbuffer);
++		gi.cprintf(NULL, PRINT_MEDIUM, "%s", bigbuffer);
+ 
+ 	for (i=0 ; i<maxclients->value ; i++)
+ 	{
+@@ -150,7 +150,7 @@
+ 		if (!cl_ent->inuse || cl_ent->is_bot)
+ 			continue;
+ 
+-		gi.cprintf(cl_ent,  PRINT_MEDIUM, bigbuffer);
++		gi.cprintf(cl_ent,  PRINT_MEDIUM, "%s", bigbuffer);
+ 	}
+ 
+ }
+@@ -171,7 +171,7 @@
+ 	len = vsprintf (bigbuffer,fmt,argptr);
+ 	va_end (argptr);
+ 
+-	gi.cprintf(ent, printlevel, bigbuffer);
++	gi.cprintf(ent, printlevel, "%s", bigbuffer);
+ 	
+ }
+ 
+@@ -191,7 +191,7 @@
+ 	len = vsprintf (bigbuffer,fmt,argptr);
+ 	va_end (argptr);
+ 	
+-	gi.centerprintf(ent, bigbuffer);
++	gi.centerprintf(ent,"%s", bigbuffer);
+ 	
+ }
+ 
+@@ -211,7 +211,7 @@
+ 	va_end (argptr);
+ 
+ 	if (dedicated->value)
+-		gi.cprintf(NULL, printlevel, bigbuffer);
++		gi.cprintf(NULL, printlevel, "%s", bigbuffer);
+ 
+ 	for (i=0 ; i<maxclients->value ; i++)
+ 	{
+@@ -219,7 +219,7 @@
+ 		if (!cl_ent->inuse || cl_ent->is_bot)
+ 			continue;
+ 
+-		gi.cprintf(cl_ent, printlevel, bigbuffer);
++		gi.cprintf(cl_ent, printlevel, "%s", bigbuffer);
+ 	}
+ }
+ 

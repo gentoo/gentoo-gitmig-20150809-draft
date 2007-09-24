@@ -1,0 +1,13 @@
+# fix-CVE-2007-4754-CVE-2007-4755.dpatch by Nico Golde <nion@debian.org>
+
+--- source/server/sv_main.c
++++ source/server/sv_main.c
+@@ -152,7 +152,7 @@
+ 			nametxt[k]=0;
+ 			s = NET_AdrToString ( cl->netchan.remote_address);
+ 			Com_sprintf (player, sizeof(player), "%i %i \"%s\" \"%s\"\n", 
+-				cl->edict->client->ps.stats[STAT_FRAGS], cl->ping, nametxt, s);
++				cl->edict->client->ps.stats[STAT_FRAGS], cl->ping, nametxt, "suppressed");
+ 			playerLength = strlen(player);
+ 			if (statusLength + playerLength >= sizeof(status) )
+ 				break;		// can't hold any more

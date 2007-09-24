@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20070613.ebuild,v 1.2 2007/07/28 09:13:00 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20070613-r1.ebuild,v 1.1 2007/09/24 21:27:48 nyhm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs games
 
@@ -32,7 +32,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${MY_PN}
 	rm -f */*.so
-	epatch "${FILESDIR}"/${P}-paths.patch
+	epatch \
+		"${FILESDIR}"/${P}-paths.patch \
+		"${FILESDIR}"/${P}-format-strings.patch \
+		"${FILESDIR}"/${P}-dos.patch
 	sed -i \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \
 		-e "s:GENTOO_LIBDIR:$(games_get_libdir)/${PN}:" \

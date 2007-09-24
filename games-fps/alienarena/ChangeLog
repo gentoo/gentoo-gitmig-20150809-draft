@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/alienarena
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.5 2007/07/28 09:13:00 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.6 2007/09/24 21:27:48 nyhm Exp $
+
+*alienarena-20070613-r1 (24 Sep 2007)
+
+  24 Sep 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/alienarena-20070613-dos.patch,
+  +files/alienarena-20070613-format-strings.patch,
+  -alienarena-20070613.ebuild, +alienarena-20070613-r1.ebuild:
+  Security fixes from Debian, bug #191484
 
   28 Jul 2007; Tristan Heaven <nyhm@gentoo.org> alienarena-20070613.ebuild:
   Fix dependencies for USE=sdl
