@@ -1,10 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.14.ebuild,v 1.2 2007/09/24 20:27:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.16.ebuild,v 1.1 2007/09/24 20:27:42 opfer Exp $
 
 inherit eutils elisp-common
-
-IUSE="emacs"
 
 DESCRIPTION="language for scientific graphics programming"
 HOMEPAGE="http://gri.sourceforge.net/"
@@ -13,6 +11,7 @@ SRC_URI="mirror://sourceforge/gri/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="emacs"
 RESTRICT="test"
 
 DEPEND=">=sci-libs/netcdf-3.5.0
@@ -27,7 +26,8 @@ src_compile() {
 	econf || die "econf failed."
 	emake || die "emake failed."
 	if use emacs; then
-		pushd src; elisp-comp *.el; popd
+		cd src
+		elisp-comp *.el || die "elisp-comp failed"
 	fi
 }
 
@@ -43,10 +43,9 @@ src_install() {
 	rmdir "${D}/usr/share/gri/doc/"
 
 	if use emacs; then
-		pushd src
-		elisp-install gri *.{el,elc}
+		cd src
+		elisp-install gri *.{el,elc} || die "elisp-install failed"
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
-		popd
 	fi
 }
 
