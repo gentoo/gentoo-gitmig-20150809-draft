@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/qalculate-gtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.21 2007/07/19 02:03:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.22 2007/09/24 14:47:30 markusle Exp $
+
+  24 Sep 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/qalculate-gtk-0.9.6-remove-link.patch, qalculate-gtk-0.9.6.ebuild:
+  Removed link to qalculate from build (see bug #193453).
 
   19 Jul 2007; Joseph Jezak <josejx@gentoo.org> qalculate-gtk-0.9.6.ebuild:
   Marked ~ppc for bug #184772.

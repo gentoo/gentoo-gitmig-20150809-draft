@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.9.6.ebuild,v 1.2 2007/07/19 02:03:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.9.6.ebuild,v 1.3 2007/09/24 14:47:30 markusle Exp $
 
 inherit eutils gnome2
 
@@ -33,6 +33,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/gtk-crash-fix.patch
 	epatch "${FILESDIR}"/${P}-check-fix.patch
+	epatch "${FILESDIR}"/${P}-remove-link.patch
 }
 
 src_compile() {

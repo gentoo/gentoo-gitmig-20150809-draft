@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/qalculate-kde-0.9.4.ebuild,v 1.3 2007/07/15 06:05:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/qalculate-kde-0.9.4.ebuild,v 1.4 2007/09/24 14:48:58 markusle Exp $
 
 myconf="--disable-clntest"
 

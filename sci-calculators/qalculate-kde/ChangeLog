@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/qalculate-kde
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/ChangeLog,v 1.17 2007/07/09 15:48:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/ChangeLog,v 1.18 2007/09/24 14:48:58 markusle Exp $
+
+  24 Sep 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/qalculate-kde-0.9.6-remove-link.patch, qalculate-kde-0.9.6.ebuild:
+  Removed link to qalculate from build (see bug #193453)
 
 *qalculate-kde-0.9.6 (09 Jul 2007)
 
