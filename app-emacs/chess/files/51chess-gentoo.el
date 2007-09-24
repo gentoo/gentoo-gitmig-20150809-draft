@@ -5,6 +5,9 @@
 
 (autoload 'chess "chess"
   "Start a game of chess, playing against ENGINE (a module name)." t)
+(defalias 'chess-session 'chess)
+(autoload 'chess-create-display "chess"
+  "Create a display, letting the user's customization decide the style.")
 (autoload 'chess-link "chess-link"
   "Play out a game between two engines, and watch the progress." t)
 (autoload 'chess-pgn-read "chess-pgn"
@@ -14,6 +17,8 @@
 (defalias 'pgn-mode 'chess-pgn-mode)
 (autoload 'chess-puzzle "chess-puzzle"
   "Pick a random puzzle from FILE, and solve it against the default engine." t)
+(autoload 'chess-fischer-random-position "chess-random"
+  "Generate a Fischer Random style position.")
 (autoload 'chess-tutorial "chess-tutorial"
   "A simple chess training display." t)
 (autoload 'chess-ics "chess-ics"
