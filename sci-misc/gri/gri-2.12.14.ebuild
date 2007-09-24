@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.14.ebuild,v 1.2 2007/09/24 20:27:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.14.ebuild,v 1.3 2007/09/24 20:34:45 opfer Exp $
 
 inherit eutils elisp-common
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gri/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 RESTRICT="test"
 
 DEPEND=">=sci-libs/netcdf-3.5.0
