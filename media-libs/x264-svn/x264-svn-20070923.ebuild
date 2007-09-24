@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20070923.ebuild,v 1.1 2007/09/23 18:10:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20070923.ebuild,v 1.2 2007/09/24 06:04:38 aballier Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -37,14 +37,16 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf=""
+	use debug && myconf="${myconf} --enable-debug"
 	./configure --prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
 		--enable-pic --enable-shared \
 		"--extra-cflags=${CFLAGS}" \
 		"--extra-ldflags=${LDFLAGS}" \
 		"--extra-asflags=${ASFLAGS}" \
-		$(use_enable debug) \
 		$(use_enable threads pthread) \
+		${myconf} \
 		--disable-mp4-output \
 		|| die "configure failed"
 	emake CC="$(tc-getCC)" || die "make failed"
