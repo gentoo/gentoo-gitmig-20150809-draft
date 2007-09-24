@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.4 2007/09/09 06:14:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.5 2007/09/24 14:14:12 armin76 Exp $
+
+  24 Sep 2007; Raúl Porcel <armin76@gentoo.org> openjpeg-1.2.ebuild:
+  Add ~alpha wrt #189692
 
   09 Sep 2007; Joseph Jezak <josejx@gentoo.org> openjpeg-1.1.1.ebuild,
   openjpeg-1.2.ebuild:
