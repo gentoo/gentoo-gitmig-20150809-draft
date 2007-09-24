@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta6.ebuild,v 1.1 2007/09/24 10:30:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta6.ebuild,v 1.2 2007/09/24 11:07:43 opfer Exp $
 
 inherit elisp eutils
 
@@ -26,8 +26,7 @@ DOCS="ChangeLog EPD.txt PGN.txt PLAN README TODO"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-chess-pos-move-gentoo.patch" \
-		|| die "epatch failed"
+	epatch "${FILESDIR}/${PV}-chess-pos-move-gentoo.patch"
 }
 
 # this is needed; elisp.eclass redefines src_compile() from portage default
