@@ -1,6 +1,13 @@
 # ChangeLog for app-office/magicpoint
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.24 2007/07/22 09:58:40 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.25 2007/09/24 09:58:29 opfer Exp $
+
+*magicpoint-1.12a (24 Sep 2007)
+
+  24 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/50magicpoint-gentoo.el, +magicpoint-1.12a.ebuild:
+  version bump, a lot of bugfixes; on Gentoo side we have better Emacs
+  support; in total fixing bugs 150312, 83313 and 186754
 
   22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> magicpoint-1.11b.ebuild:
   Drop virtual/x11 dependency.
