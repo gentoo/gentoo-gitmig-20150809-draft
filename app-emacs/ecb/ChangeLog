@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ecb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.31 2007/09/23 14:34:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.32 2007/09/24 06:32:59 opfer Exp $
+
+  24 Sep 2007; Christian Faulhammer <opfer@gentoo.org> ecb-2.32-r2.ebuild:
+  stable x86, bug 193515
 
   23 Sep 2007; nixnut <nixnut@gentoo.org> ecb-2.32-r2.ebuild:
   Stable on ppc wrt bug 193515
