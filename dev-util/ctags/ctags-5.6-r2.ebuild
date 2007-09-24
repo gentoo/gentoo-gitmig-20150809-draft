@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.6-r2.ebuild,v 1.2 2007/09/24 19:40:05 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.6-r2.ebuild,v 1.3 2007/09/24 20:16:05 hawking Exp $
 
 inherit eutils
 
@@ -44,8 +44,8 @@ src_install() {
 
 	# namepace collision with X/Emacs-provided /usr/bin/ctags -- we
 	# rename ctags to exuberant-ctags (Mandrake does this also).
-	mv ${D}/usr/bin/{ctags,exuberant-ctags}
-	mv ${D}/usr/share/man/man1/{ctags,exuberant-ctags}.1
+	mv "${D}"/usr/bin/{ctags,exuberant-ctags}
+	mv "${D}"/usr/share/man/man1/{ctags,exuberant-ctags}.1
 
 	dodoc FAQ NEWS README
 	dohtml EXTENDING.html ctags.html
