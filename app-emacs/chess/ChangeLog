@@ -1,6 +1,17 @@
 # ChangeLog for app-emacs/chess
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.14 2007/09/23 12:38:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.15 2007/09/24 10:30:11 ulm Exp $
+
+*chess-2.0_beta6 (24 Sep 2007)
+*chess-2.0_beta5-r4 (24 Sep 2007)
+
+  24 Sep 2007; Ulrich Mueller <ulm@gentoo.org>
+  +files/2.0_beta6-chess-pos-move-gentoo.patch, -chess-2.0_beta5-r3.ebuild,
+  +chess-2.0_beta5-r4.ebuild, +chess-2.0_beta6.ebuild:
+  Version bump. 2.0_beta6 compiles and runs with both Emacs 21 and 22 now.
+  Fix assert problem in chess-pos-move that occured for the start position.
+  Remove festival USE flag since it changes nothing for the installed package.
+  Install pixmap files in correct location.
 
   23 Sep 2007; Ulrich Mueller <ulm@gentoo.org> -chess-2.0_beta5-r1.ebuild,
   chess-2.0_beta5-r3.ebuild:
