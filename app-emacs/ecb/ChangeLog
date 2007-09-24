@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ecb
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.33 2007/09/24 11:56:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.34 2007/09/24 12:03:55 opfer Exp $
+
+  24 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  -files/70ecb-gentoo.el, -ecb-2.32-r1.ebuild:
+  clean up
 
   24 Sep 2007; Christoph Mende <angelos@gentoo.org> ecb-2.32-r2.ebuild:
   Stable on amd64 wrt bug #193515
