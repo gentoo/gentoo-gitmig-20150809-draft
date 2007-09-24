@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amrnb/amrnb-6.1.0.4.ebuild,v 1.1 2007/08/08 14:55:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amrnb/amrnb-6.1.0.4.ebuild,v 1.2 2007/09/24 20:31:05 armin76 Exp $
 
 SPEC_VER="26104-610"
 
@@ -11,7 +11,7 @@ SRC_URI="http://ftp.penguin.cz/pub/users/utx/amr/${P}.tar.bz2
 RESTRICT="mirror"
 LICENSE="LGPL-2 as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND="app-arch/unzip"
 
