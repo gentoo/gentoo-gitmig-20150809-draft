@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.0.ebuild,v 1.1 2007/09/24 22:46:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.0.ebuild,v 1.2 2007/09/25 06:39:10 eva Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -118,7 +118,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 
 	# fixup autoconf bug TODO
-	if ! use doc && [ -d ${D}/usr/share/doc/${PF}/apidocs.html ]; then
+	if ! use doc && [ -d "${D}/usr/share/doc/${PF}/apidocs.html" ]; then
 		rm -fr "${D}/usr/share/doc/${PF}/apidocs.html"
 	fi
 	# end fixup
