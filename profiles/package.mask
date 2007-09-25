@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7739 2007/09/25 05:26:22 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7740 2007/09/25 13:39:38 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -458,13 +458,6 @@ dev-java/sablevm
 # dev-java/glassfish-persistence. After 30 days moved to java-experimental
 # because some ebuilds there are using this.
 dev-java/odmg
-
-# Stefan Schweizer <genstef@gentoo.org> (31 May 2007)
-# ABI changes, so breaks some packages
->=app-text/poppler-0.5.9
->=app-text/poppler-bindings-0.5.9
->=app-text/evince-0.9
->=app-text/evince-2.19
 
 # Roy Marples <uberlord@gentoo.org> (31 May 2007)
 # Masked, pending removal. Remove in 30 days
