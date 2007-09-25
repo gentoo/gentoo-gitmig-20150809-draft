@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.154 2007/09/22 09:34:27 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.155 2007/09/25 18:49:20 dang Exp $
+
+  25 Sep 2007; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
+  New series for Gnome 2.20
 
   22 Sep 2007; Tom Gall <tgall@gentoo.org>
   at-spi-1.18.1-r1.ebuild:
