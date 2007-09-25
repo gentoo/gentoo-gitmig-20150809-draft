@@ -1,0 +1,12 @@
+diff -Nru squidGuard-1.2.1.orig/src/sg.y.in squidGuard-1.2.1/src/sg.y.in
+--- squidGuard-1.2.1.orig/src/sg.y.in	2007-02-02 15:37:07.000000000 +0200
++++ squidGuard-1.2.1/src/sg.y.in	2007-09-25 14:22:14.000000000 +0300
+@@ -2347,7 +2347,7 @@
+ 	}
+       }
+       if(aclpass->dest->regExp != NULL && access){
+-	if((result = sgRegExpMatch(aclpass->dest->regExp,req->url)) != 0){
++	if((result = sgRegExpMatch(aclpass->dest->regExp,req->strippedurl)) != 0){
+ 	  if(aclpass->access){
+ 	    access++;
+ 	    break;
