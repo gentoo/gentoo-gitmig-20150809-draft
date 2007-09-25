@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.3.20.ebuild,v 1.5 2007/09/22 18:27:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.3.20.ebuild,v 1.6 2007/09/25 17:49:02 armin76 Exp $
 
 inherit gnome2 eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://balsa.gnome.org/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 # Doesn't currently build with -gnome
 IUSE="crypt doc gtkhtml gtkspell kerberos ldap libnotify pcre sqlite ssl xface"
 
