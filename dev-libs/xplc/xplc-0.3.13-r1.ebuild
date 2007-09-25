@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/xplc-0.3.13-r1.ebuild,v 1.8 2006/10/20 00:32:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/xplc-0.3.13-r1.ebuild,v 1.9 2007/09/25 21:03:33 mrness Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-util/pkgconfig"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -35,7 +36,7 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dosym /usr/lib/pkgconfig/${P}.pc /usr/lib/pkgconfig/${PN}.pc
 	dodoc LICENSE README NEWS CREDITS
 }
