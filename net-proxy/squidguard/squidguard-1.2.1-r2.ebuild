@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.2.1-r2.ebuild,v 1.2 2007/09/25 11:52:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.2.1-r2.ebuild,v 1.3 2007/09/25 11:54:57 mrness Exp $
 
 inherit eutils autotools
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/squidGuard-${PV}"
 
 src_unpack() {
-	unpack ${A} || die "unpack problem"
+	unpack ${A}
 
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
