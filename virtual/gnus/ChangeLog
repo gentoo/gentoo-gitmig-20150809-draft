@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gnus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/ChangeLog,v 1.6 2007/09/24 14:48:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/ChangeLog,v 1.7 2007/09/25 00:17:57 ranger Exp $
+
+  24 Sep 2007; Brent Baude <ranger@gentoo.org> gnus-5.10.ebuild:
+  Marking gnus-5.10 ppc64 stable for dep in bug#193501
 
   24 Sep 2007; Ulrich Mueller <ulm@gentoo.org> gnus-5.10.ebuild:
   Add ~hppa and ~ia64 keywords, following emacs-22 keywording.
