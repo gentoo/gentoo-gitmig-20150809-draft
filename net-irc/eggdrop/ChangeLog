@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.73 2007/09/17 17:19:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.74 2007/09/25 16:21:56 armin76 Exp $
+
+  25 Sep 2007; Raúl Porcel <armin76@gentoo.org> eggdrop-1.6.18-r3.ebuild:
+  sparc stable wrt security #179354
 
   17 Sep 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   eggdrop-1.6.18-r3.ebuild:
