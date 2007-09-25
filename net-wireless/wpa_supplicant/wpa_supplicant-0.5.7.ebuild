@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.7.ebuild,v 1.8 2007/07/01 11:06:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.7.ebuild,v 1.9 2007/09/25 12:11:43 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -159,9 +159,12 @@ src_compile() {
 }
 
 src_install() {
-	into /
 	dosbin wpa_supplicant
 	dobin wpa_cli wpa_passphrase
+
+	# baselayout-1 compat
+	dosym /usr/sbin/wpa_supplicant /sbin/wpa_supplicant
+	dosym /usr/bin/wpa_cli /bin/wpa_cli
 
 	exeinto /etc/wpa_supplicant/
 	newexe "${FILESDIR}"/wpa_cli.sh wpa_cli.sh

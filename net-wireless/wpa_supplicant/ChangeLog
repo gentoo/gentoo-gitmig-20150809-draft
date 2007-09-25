@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.99 2007/09/11 14:24:51 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.100 2007/09/25 12:11:43 uberlord Exp $
+
+  25 Sep 2007; Roy Marples <uberlord@gentoo.org>
+  wpa_supplicant-0.5.7.ebuild, wpa_supplicant-0.5.8.ebuild,
+  wpa_supplicant-0.6.0.ebuild:
+  wpa_supplicant requires libs from /usr so it's moving back. Symlinks are in
+  place so that baselayout still works.
 
   11 Sep 2007; Roy Marples <uberlord@gentoo.org>
   wpa_supplicant-0.5.8.ebuild, wpa_supplicant-0.6.0.ebuild:
