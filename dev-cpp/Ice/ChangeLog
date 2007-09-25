@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/Ice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.12 2007/09/25 13:29:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.13 2007/09/25 19:41:02 angelos Exp $
+
+  25 Sep 2007; Christoph Mende <angelos@gentoo.org> Ice-3.2.1.ebuild:
+  Stable on amd64 wrt bug #192139
 
   25 Sep 2007; Caleb Tennis <caleb@gentoo.org> Ice-3.2.1.ebuild:
   Fix quoting
