@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.16.ebuild,v 1.1 2007/09/24 20:27:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.16.ebuild,v 1.2 2007/09/25 06:20:45 opfer Exp $
 
 inherit eutils elisp-common
 
@@ -33,7 +33,7 @@ src_compile() {
 
 src_install() {
 	# Replace PREFIX now and correct paths in the startup message.
-	sed -e s,PREFIX/share/doc/gri/,/usr/share/doc/${P}/, -i "${S}/src/startup.msg"
+	sed -e s,PREFIX/share/gri/doc/,/usr/share/doc/${P}/, -i "${S}/src/startup.msg"
 
 	einstall || die "einstall failed."
 
