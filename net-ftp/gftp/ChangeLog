@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.62 2007/09/22 17:31:28 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.63 2007/09/25 14:54:56 armin76 Exp $
+
+  25 Sep 2007; Raúl Porcel <armin76@gentoo.org> gftp-2.0.18-r6.ebuild:
+  sparc stable wrt security #188252
 
   22 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
   gftp-2.0.18-r6.ebuild:
