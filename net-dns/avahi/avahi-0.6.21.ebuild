@@ -1,6 +1,6 @@
 # Copyright 2000-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.21.ebuild,v 1.5 2007/09/09 20:37:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.21.ebuild,v 1.6 2007/09/25 19:14:53 swegener Exp $
 
 inherit eutils mono python qt3 qt4
 
@@ -100,6 +100,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-dbus-compat.patch
 	epatch "${FILESDIR}"/${P}-browse-help.patch
 	epatch "${FILESDIR}"/${P}-service_name_chosen.patch
+	epatch "${FILESDIR}"/${P}-no-browse-domains-segfault.patch
 	epatch "${FILESDIR}"/avahi-start-after-netmount.patch
 
 	use ipv6 && sed -i -e s/use-ipv6=no/use-ipv6=yes/ avahi-daemon/avahi-daemon.conf

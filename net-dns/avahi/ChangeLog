@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.126 2007/09/09 20:37:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.127 2007/09/25 19:14:53 swegener Exp $
+
+  25 Sep 2007; Sven Wegener <swegener@gentoo.org>
+  +files/avahi-0.6.21-no-browse-domains-segfault.patch, avahi-0.6.21.ebuild:
+  Include a patch from upstream that fixes a segfault.
 
   09 Sep 2007; Sven Wegener <swegener@gentoo.org>
   +files/avahi-0.6.21-service_name_chosen.patch,

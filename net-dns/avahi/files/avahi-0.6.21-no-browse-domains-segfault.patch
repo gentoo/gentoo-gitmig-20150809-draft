@@ -1,0 +1,18 @@
+Don't segfault when no browse domains are configured in resolv.conf. Original patch from zml. Closes #162
+
+Index: avahi-daemon/main.c
+===================================================================
+--- avahi-daemon/main.c	(revision 1524)
++++ avahi-daemon/main.c	(revision 1525)
+@@ -317,6 +317,11 @@
+     int n;
+     char **p;
+ 
++    if (!resolv_conf_search_domains) {
++        avahi_server_set_browse_domains(avahi_server, NULL);
++        return;
++    }
++
+     l = avahi_string_list_copy(config.server_config.browse_domains);
+     
+     for (p = resolv_conf_search_domains, n = 0; *p && n < BROWSE_DOMAINS_MAX; p++, n++) {
