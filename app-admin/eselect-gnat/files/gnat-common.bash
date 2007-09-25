@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/files/gnat-common.bash,v 1.1 2007/09/19 20:24:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/files/gnat-common.bash,v 1.2 2007/09/25 21:06:55 george Exp $
 
 #
 # Original Author: George Shapovalov <george@gentoo.org>
@@ -27,8 +27,6 @@ MARKER="55gnat-"
 # ------------------------------------
 # Helpers
 #
-# may be moved to a seperate eclass, if enough accumulated in this one and in
-# gnatbuild.eclass..
 
 # get_all_profile_components splits gnat profile and returns pace separated list of its components:
 # x86_64-pc-linux-gnu-gnat-gcc-4.1  -> x86_64-pc-linux-gnu gcc 4.1
