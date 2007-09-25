@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/irda-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.22 2007/04/12 21:23:09 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.23 2007/09/25 15:34:21 hanno Exp $
+
+*irda-utils-0.9.18 (25 Sep 2007)
+
+  25 Sep 2007; Hanno Boeck <hanno@gentoo.org>
+  +files/irda-utils-0.9.18-io.h.diff,
+  +files/irda-utils-0.9.18-makefile.diff, +irda-utils-0.9.18.ebuild:
+  Version bump and some minor patches to make it build.
 
   12 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   irda-utils-0.9.16-r1.ebuild, irda-utils-0.9.17_pre5.ebuild:
