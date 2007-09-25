@@ -68,10 +68,10 @@ dm_crypt_execute_volumes() {
 							umount -n ${mntrem} 2>/dev/null >/dev/null
 							rmdir ${mntrem} 2>/dev/null >/dev/null
 							einfo "Cannot find ${key} on removable media."
-							echo -n -e " ${green}*${off}  Abort?(${red}yes${off}/${green}no${off})" >/dev/console	
+							echo -n -e " ${green}*${off}  Abort? (${red}yes${off}/${green}No${off}) " >/dev/console
 							read ans </dev/console
 							echo	>/dev/console
-							[ "$ans" != "yes" ] && { i=0; c=0; } || return 
+							[ "$ans" != "yes" ] && { i=0; c=0; } || return
 						else
 							key="${mntrem}${key}"
 							break
@@ -84,7 +84,7 @@ dm_crypt_execute_volumes() {
 						if [ "$i" -eq 9 ]; then
 							rmdir ${mntrem} 2>/dev/null >/dev/null
 							einfo "Removable device for ${target} not present."
-							echo -n -e " ${green}*${off}  Abort?(${red}yes${off}/${green}no${off})" >/dev/console
+							echo -n -e " ${green}*${off}  Abort? (${red}yes${off}/${green}No${off}) " >/dev/console
 							read ans </dev/console
 							echo  >/dev/console
 							[ "$ans" != "yes" ] && { i=0; c=0; } || return
