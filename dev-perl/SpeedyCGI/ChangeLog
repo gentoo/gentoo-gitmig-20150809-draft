@@ -1,6 +1,6 @@
-# ChangeLog for dev-libs/libconfig
+# ChangeLog for dev-perl/SpeedyCGI
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.1 2007/09/15 22:06:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.2 2007/09/25 22:24:13 swegener Exp $
 
 *SpeedyCGI-2.22 (15 Sep 2007)
 
