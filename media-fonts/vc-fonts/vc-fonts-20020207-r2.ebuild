@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/vc-fonts-20020207-r2.ebuild,v 1.5 2007/09/16 03:32:49 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/vc-fonts-20020207-r2.ebuild,v 1.6 2007/09/25 14:42:19 armin76 Exp $
 
 inherit font font-ebdftopcf
 
@@ -9,7 +9,7 @@ SRC_URI="http://vico.kleinplanet.de/files/${P}.tar.bz2
 		mirror://gentoo/bleed3.bdf.gz"
 HOMEPAGE="http://vico.kleinplanet.de/"
 
-KEYWORDS="alpha amd64 ~arm ia64 ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ia64 ppc ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 SLOT=0
 IUSE=""
