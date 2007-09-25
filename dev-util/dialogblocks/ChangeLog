@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/dialogblocks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/ChangeLog,v 1.9 2007/08/17 19:29:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/ChangeLog,v 1.10 2007/09/25 21:39:56 mrness Exp $
+
+*dialogblocks-4.15 (25 Sep 2007)
+
+  25 Sep 2007; Alin Năstac <mrness@gentoo.org> -dialogblocks-4.10.ebuild,
+  +dialogblocks-4.15.ebuild:
+  Version bump.
 
 *dialogblocks-4.14 (17 Aug 2007)
 

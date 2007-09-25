@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-4.10.ebuild,v 1.1 2007/06/19 17:34:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-4.15.ebuild,v 1.1 2007/09/25 21:39:56 mrness Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ LICENSE="as-is"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2
+DEPEND=">=x11-libs/gtk+-2" # make sure gtk+ is installed before built_with_use test
+RDEPEND="${DEPEND}
 	>=media-libs/libpng-1.2
 	media-libs/jpeg
 	>=media-libs/tiff-3
@@ -21,13 +22,14 @@ RDEPEND=">=x11-libs/gtk+-2
 
 S="${WORKDIR}"
 
+RESTRICT="strip" # the dialogblocks program is already stripped
+
 pkg_setup() {
 	if use x86 && ! built_with_use ">=x11-libs/gtk+-2" xinerama ; then
 		echo
 		eerror "In order to emerge this package, you need to re-emerge"
 		eerror "x11-libs/gtk+ with xinerama USE flag enabled."
-		echo
-		die "please re-emerge gtk+ witk USE=xinerama"
+		die "gtk+ must have xinerama USE flag enabled"
 	fi
 }
 
