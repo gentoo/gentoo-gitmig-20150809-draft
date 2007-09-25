@@ -1,6 +1,6 @@
 # Copyright 2000-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.21.ebuild,v 1.6 2007/09/25 19:14:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.21.ebuild,v 1.7 2007/09/25 19:17:06 swegener Exp $
 
 inherit eutils mono python qt3 qt4
 
@@ -96,7 +96,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-0.6.1-no-ipv6.patch
+	epatch "${FILESDIR}"/${P}-no-ipv6.patch
 	epatch "${FILESDIR}"/${P}-dbus-compat.patch
 	epatch "${FILESDIR}"/${P}-browse-help.patch
 	epatch "${FILESDIR}"/${P}-service_name_chosen.patch

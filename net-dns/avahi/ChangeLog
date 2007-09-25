@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.127 2007/09/25 19:14:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.128 2007/09/25 19:17:06 swegener Exp $
+
+  25 Sep 2007; Sven Wegener <swegener@gentoo.org>
+  +files/avahi-0.6.21-no-ipv6.patch, avahi-0.6.21.ebuild:
+  Adjust ipv6 patch for 0.6.21, bug #193646.
 
   25 Sep 2007; Sven Wegener <swegener@gentoo.org>
   +files/avahi-0.6.21-no-browse-domains-segfault.patch, avahi-0.6.21.ebuild:
