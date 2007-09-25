@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a.ebuild,v 1.3 2007/09/24 20:14:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a.ebuild,v 1.4 2007/09/25 01:36:14 mr_bones_ Exp $
 
 inherit autotools elisp-common eutils fixheadtails
 
@@ -23,7 +23,7 @@ MY_DEPEND="x11-libs/libICE
 	truetype? ( virtual/xft )
 	emacs? ( virtual/emacs )
 	m17n-lib? ( dev-libs/m17n-lib )
-	g? ( media-libs/libmng )"
+	mng? ( media-libs/libmng )"
 DEPEND="${MY_DEPEND}
 	sys-devel/autoconf
 	x11-proto/xextproto
