@@ -1,13 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0.ebuild,v 1.8 2007/09/24 20:40:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0.ebuild,v 1.9 2007/09/25 04:41:52 mrness Exp $
 
 inherit webapp eutils autotools
+
+PATCHES_RELEASE_DATE="20070909"
 
 DESCRIPTION="Web based administration and user controls for dspam"
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 SRC_URI="http://dspam.nuclearelephant.com/sources/dspam-${PV}.tar.gz
-	mirror://gentoo/dspam-${PV}-patches-20070909.tar.gz"
+	mirror://gentoo/dspam-${PV}-patches-${PATCHES_RELEASE_DATE}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc sparc x86"
@@ -30,20 +32,20 @@ CONFDIR="/etc/mail/dspam"
 S="${WORKDIR}/dspam-${PV}"
 
 pkg_setup() {
-	local use_errors=0
+	local use_tests_failed=false
 	if built_with_use "mail-filter/dspam" user-homedirs; then
 		echo
 		eerror "The DSPAM web interface requires that mail-filter/dspam be installed without user-homedirs USE flag."
 		eerror "Please disable this flag and re-emerge dspam."
-		use_errors=$[${use_errors} + 1]
+		use_tests_failed=true
 	fi
 	if ! built_with_use "dev-perl/GD" png; then
 		echo
 		eerror "The DSPAM web interface requires that dev-perl/GD be installed with png USE flag."
 		eerror "Please enable this flag and re-emerge GD."
-		use_errors=$[${use_errors} + 1]
+		use_tests_failed=true
 	fi
-	[ ${use_errors} -gt 0 ] && die "Dependency installed with incompatible USE flags"
+	${use_tests_failed} && die "Dependency installed with incompatible USE flags"
 
 	webapp_pkg_setup
 }
