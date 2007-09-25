@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/IcePy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/ChangeLog,v 1.8 2007/09/25 12:50:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/ChangeLog,v 1.9 2007/09/25 12:51:52 caleb Exp $
+
+  25 Sep 2007; Caleb Tennis <caleb@gentoo.org> -IcePy-3.2.0.ebuild:
+  remove old version
 
   25 Sep 2007; Caleb Tennis <caleb@gentoo.org> IcePy-3.2.1.ebuild:
   sed magic for amd64 multilib strict, and clean up MAKE_RULES a little bit,
