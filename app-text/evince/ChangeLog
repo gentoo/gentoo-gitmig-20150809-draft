@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.119 2007/09/23 05:46:08 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.120 2007/09/25 13:38:34 dang Exp $
+
+  25 Sep 2007; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
+  Remove dev version; prep for unmask
 
   23 Sep 2007; Tom Gall <tgall@gentoo.org>
   evince-0.8.3.ebuild:
