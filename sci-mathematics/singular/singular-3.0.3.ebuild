@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.3.ebuild,v 1.2 2007/08/08 13:50:04 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.3.ebuild,v 1.3 2007/09/25 12:26:50 markusle Exp $
 
-inherit eutils flag-o-matic autotools multilib
+inherit eutils elisp-common flag-o-matic autotools multilib
 
 PV_MAJOR=${PV%.*}
 MY_PV=${PV//./-}
@@ -21,11 +21,11 @@ IUSE="doc emacs boost"
 
 DEPEND=">=dev-lang/perl-5.6
 		>=dev-libs/gmp-4.1-r1
-		emacs? ( || ( virtual/xemacs
-					virtual/emacs ) )
+		emacs? ( virtual/emacs )
 		boost? ( dev-libs/boost )"
 
 S="${WORKDIR}"/${MY_PN}-${MY_PV}
+SITEFILE=60${PN}-gentoo.el
 
 src_unpack () {
 	unpack ${A}
@@ -54,6 +54,11 @@ src_compile() {
 	econf $(use_enable emacs) \
 		${myconf} || die "econf failed"
 	emake -j1 || die "make failed"
+
+	if use emacs; then
+		cd "${WORKDIR}"/${MY_PN}/${MY_PV}/emacs/
+		elisp-compile *.el || die "elisp-compile failed"
+	fi
 }
 
 src_install () {
@@ -75,10 +80,6 @@ src_install () {
 	rm ${MY_PN} || die "failed to remove ${MY_PN}"
 	dobin ${MY_PN}* gen_test change_cost solve_IP \
 		toric_ideal LLL || die "failed to install binaries"
-
-	if use emacs; then
-		dobin E${MY_PN} || die "failed to install ESingular"
-	fi
 
 	# install libraries
 	insinto /usr/$(get_libdir)/${PN}
@@ -102,15 +103,31 @@ src_install () {
 		die "failed to install info files"
 	fi
 
-	# install emacs specific stuff
+	# install emacs specific stuff here, as we did a directory change
+	# some lines above!
 	if use emacs; then
-		insinto /usr/share/${PN}/emacs
-		doins emacs/* && doins emacs/.emacs* || \
-		die "failed to set up emacs files"
+		elisp-install ${PN} emacs/*.el emacs/*.elc emacs/.emacs* || \
+		die "elisp-install failed"
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 }
 
 pkg_postinst() {
 	einfo "The authors ask you to register as a SINGULAR user."
 	einfo "Please check the license file for details."
+
+	if use emacs; then
+		echo
+		ewarn "Please note that the ESingular emacs wrapper has been"
+		ewarn "removed in favor of full fledged singular support within"
+		ewarn "Gentoo's emacs infrastructure; i.e. just fire up emacs"
+		ewarn "and you should be good to go! See bug #193411 for more info."
+		echo
+	fi
+
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }

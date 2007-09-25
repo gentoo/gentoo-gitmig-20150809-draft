@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.18 2007/08/08 13:50:04 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.19 2007/09/25 12:26:50 markusle Exp $
+
+  24 Sep 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/60singular-gentoo.el, singular-3.0.3.ebuild:
+  Added proper emacs support (see bug #193411). Thanks much to
+  Christian Faulhammer <opfer@gentoo.org> for his patches.
 
   08 Aug 2007; Markus Dittrich <markusle@gentoo.org> singular-3.0.3.ebuild:
   Disabled building of MP for now since configure fails on amd64
