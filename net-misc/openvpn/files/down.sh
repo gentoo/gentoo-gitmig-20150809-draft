@@ -5,17 +5,19 @@
 
 # If we have a service specific script, run this now
 if [ -x /etc/openvpn/"${SVCNAME}"-down.sh ] ; then
-	/etc/openvpn/"${SVCNAME}"-down.sh
+	/etc/openvpn/"${SVCNAME}"-down.sh "$@"
 fi
 
 # Restore resolv.conf to how it was
-if [ -x /sbin/resolvconf ] ; then
-	/sbin/resolvconf -d "${dev}"
-elif [ -e /etc/resolv.conf-"${dev}".sv ] ; then
-	# Important that we copy instead of move incase resolv.conf is
-	# a symlink and not an actual file
-	cp /etc/resolv.conf-"${dev}".sv /etc/resolv.conf
-	rm -f /etc/resolv.conf-"${dev}".sv
+if [ "${PEER_DNS}" != "no" ]; then
+	if [ -x /sbin/resolvconf ] ; then
+		/sbin/resolvconf -d "${dev}"
+	elif [ -e /etc/resolv.conf-"${dev}".sv ] ; then
+		# Important that we copy instead of move incase resolv.conf is
+		# a symlink and not an actual file
+		cp /etc/resolv.conf-"${dev}".sv /etc/resolv.conf
+		rm -f /etc/resolv.conf-"${dev}".sv
+	fi
 fi
 
 # Re-enter the init script to start any dependant services

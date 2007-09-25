@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.116 2007/09/15 07:30:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.117 2007/09/25 12:47:00 uberlord Exp $
+
+  25 Sep 2007; Roy Marples <uberlord@gentoo.org> files/openvpn-2.1.conf,
+  files/openvpn-2.1.init, files/down.sh, files/up.sh:
+  PEER_DNS now allows OpenVPN to create /etc/resolv.conf or not, #193668
+
+  25 Sep 2007; Roy Marples <uberlord@gentoo.org> files/down.sh, files/up.sh:
+  Pass parameters to service specific scripts, #193724 thanks to Sergiy Borodych
 
   15 Sep 2007; Roy Marples <uberlord@gentoo.org>
   -files/openvpn-2.0.4-darwin.patch, openvpn-2.0.6.ebuild,

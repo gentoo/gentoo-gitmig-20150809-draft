@@ -104,6 +104,9 @@ start() {
 		grep -q "^[ \t]*group[ \t].*" "${VPNCONF}" || args="${args} --group openvpn"
 	fi
 
+	# Ensure that our scripts get the PEER_DNS variable
+	export PEER_DNS
+
 	[ "${reenter}" = "yes" ] && mark_service_inactive "${SVCNAME}"
 	start-stop-daemon --start --exec /usr/sbin/openvpn --pidfile "${VPNPID}" \
 		-- --config "${VPNCONF}" --writepid "${VPNPID}" --daemon ${args}
