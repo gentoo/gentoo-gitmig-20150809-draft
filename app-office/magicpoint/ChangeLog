@@ -1,6 +1,11 @@
 # ChangeLog for app-office/magicpoint
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.27 2007/09/24 20:14:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.28 2007/09/25 06:13:52 opfer Exp $
+
+  25 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  magicpoint-1.12a.ebuild:
+  exchanging make with emake -j1, as this is equivalent. Thanks to vapier for
+  talking it through; adjusting die messages
 
   24 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   magicpoint-1.12a.ebuild:
