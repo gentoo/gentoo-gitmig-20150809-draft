@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.29 2007/07/22 09:01:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.30 2007/09/25 20:47:22 grobian Exp $
 
 inherit eutils flag-o-matic libtool toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://sunsite.unc.edu/pub/Linux/libs/graphics/${P}.tar.gz"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="5"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="X doc"
 
 RDEPEND="X? ( x11-libs/libXaw )"
@@ -22,7 +22,6 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	use ppc-macos && darwintoolize
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.diff
 	epatch "${FILESDIR}"/${P}-asneeded.patch
