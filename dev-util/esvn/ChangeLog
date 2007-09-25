@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/esvn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/ChangeLog,v 1.16 2007/08/17 19:21:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/ChangeLog,v 1.17 2007/09/25 21:06:57 mrness Exp $
+
+  25 Sep 2007; Alin Năstac <mrness@gentoo.org> esvn-0.6.12.ebuild:
+  Die if emake install has failed.
 
 *esvn-0.6.12 (17 Aug 2007)
 

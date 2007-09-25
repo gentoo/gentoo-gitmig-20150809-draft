@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.12.ebuild,v 1.1 2007/08/17 19:21:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.12.ebuild,v 1.2 2007/09/25 21:06:57 mrness Exp $
 
 inherit kde-functions
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND="
-	dev-util/subversion"
+DEPEND=""
+RDEPEND="dev-util/subversion"
 
 need-qt 3
 
@@ -31,8 +31,8 @@ src_unpack() {
 }
 
 src_install() {
-	make -f esvn.mak INSTALL_ROOT="${D}" install
-	dobin esvn esvn-diff-wrapper
+	emake -f esvn.mak INSTALL_ROOT="${D}" install || die "emake install failed"
+	dobin esvn esvn-diff-wrapper || die "failed to install bin files"
 
 	dodoc AUTHORS ChangeLog README
 	dohtml -r html-docs/*
