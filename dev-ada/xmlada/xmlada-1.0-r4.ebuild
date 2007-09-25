@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-1.0-r4.ebuild,v 1.6 2007/07/15 04:21:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-1.0-r4.ebuild,v 1.7 2007/09/25 13:06:19 george Exp $
 
 inherit gnat versionator
 
@@ -22,7 +22,7 @@ RDEPEND=""
 
 src_unpack()
 {
-	gnat_src_unpack
+	unpack ${A}
 
 	cd ${S}
 	#making .dvi docs is problemmatic. Skip that for now

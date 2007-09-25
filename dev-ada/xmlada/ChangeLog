@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/xmlada
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/ChangeLog,v 1.24 2007/01/25 23:57:42 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/ChangeLog,v 1.25 2007/09/25 13:06:19 george Exp $
+
+  25 Sep 2007; George Shapovalov <george@gentoo.org> xmlada-1.0-r4.ebuild:
+  adjusted ebuild to follow eclass reorg, gnat_src_unpack was factored out
 
   26 Jan 2007; Marius Mauch <genone@gentoo.org> xmlada-0.7.1-r2.ebuild,
   xmlada-1.0.ebuild:
