@@ -1,0 +1,7 @@
+# ChangeLog for app-emulation/qemulator
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemulator/ChangeLog,v 1.1 2007/09/25 21:24:58 swegener Exp $
+
+  25 Sep 2007; Sven Wegener <swegener@gentoo.org> ChangeLog:
+  Add missing ChangeLog.
+
