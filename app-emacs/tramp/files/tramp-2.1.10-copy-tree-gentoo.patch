@@ -1,0 +1,50 @@
+--- tramp-2.1.10-orig/lisp/tramp.el	2007-07-22 18:25:32.000000000 +0200
++++ tramp-2.1.10/lisp/tramp.el	2007-09-25 09:13:47.000000000 +0200
+@@ -195,6 +195,29 @@
+   (unless (fboundp 'set-buffer-multibyte)
+     (defalias 'set-buffer-multibyte 'ignore)))
+ 
++;; `copy-tree' is not defined in plain Emacs 21
++(eval-and-compile
++  (if (fboundp 'copy-tree)
++      (fset 'tramp-copy-tree 'copy-tree)
++    ;; Taken from subr.el of Emacs 22.1.
++    (defun tramp-copy-tree (tree &optional vecp)
++      "Make a copy of TREE."
++      (if (consp tree)
++	  (let (result)
++	    (while (consp tree)
++	      (let ((newcar (car tree)))
++		(if (or (consp (car tree)) (and vecp (vectorp (car tree))))
++		    (setq newcar (tramp-copy-tree (car tree) vecp)))
++		(push newcar result))
++	      (setq tree (cdr tree)))
++	    (nconc (nreverse result) tree))
++	(if (and vecp (vectorp tree))
++	    (let ((i (length (setq tree (copy-sequence tree)))))
++	      (while (>= (setq i (1- i)) 0)
++		(aset tree i (tramp-copy-tree (aref tree i) vecp)))
++	      tree)
++	  tree)))))
++
+ ;;; User Customizable Internal Variables:
+ 
+ (defgroup tramp nil
+@@ -2687,7 +2710,7 @@
+   (when (file-directory-p directory)
+     (setq directory (expand-file-name directory))
+     (let* ((temp
+-	    (copy-tree
++	    (tramp-copy-tree
+ 	     (with-parsed-tramp-file-name directory nil
+ 	       (with-file-property
+ 		   v localname
+@@ -5083,7 +5106,7 @@
+ 
+   (with-current-buffer (tramp-get-connection-buffer vec)
+     (set (make-local-variable 'tramp-remote-path)
+-	 (copy-tree tramp-remote-path))
++	 (tramp-copy-tree tramp-remote-path))
+     (let* ((elt (memq 'tramp-default-remote-path tramp-remote-path))
+ 	   (tramp-default-remote-path
+ 	    (with-connection-property vec "default-remote-path"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.1.10.ebuild,v 1.4 2007/09/23 16:47:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.1.10-r1.ebuild,v 1.1 2007/09/25 14:32:09 ulm Exp $
 
 inherit elisp eutils
 
@@ -18,6 +18,7 @@ SITEFILE=51${PN}-gentoo.el
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}/${P}-fix-texinfo.patch"
+	epatch "${FILESDIR}/${P}-copy-tree-gentoo.patch"
 }
 
 src_compile() {
