@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r4.ebuild,v 1.1 2007/09/04 13:20:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r4.ebuild,v 1.2 2007/09/25 18:06:35 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -45,6 +45,7 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	server?	(
+		x11-proto/bigreqsproto
 		x11-proto/compositeproto
 		x11-proto/damageproto
 		x11-proto/fixesproto
@@ -55,6 +56,7 @@ DEPEND="${RDEPEND}
 		x11-proto/scrnsaverproto
 		x11-proto/trapproto
 		x11-proto/videoproto
+		x11-proto/xcmiscproto
 		x11-proto/xineramaproto
 		x11-proto/xf86bigfontproto
 		x11-proto/xf86dgaproto
