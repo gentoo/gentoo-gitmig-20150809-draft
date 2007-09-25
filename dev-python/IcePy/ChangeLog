@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/IcePy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/ChangeLog,v 1.9 2007/09/25 12:51:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/ChangeLog,v 1.10 2007/09/25 19:41:37 angelos Exp $
+
+  25 Sep 2007; Christoph Mende <angelos@gentoo.org> IcePy-3.2.1.ebuild:
+  Stable on amd64 wrt bug #192139
 
   25 Sep 2007; Caleb Tennis <caleb@gentoo.org> -IcePy-3.2.0.ebuild:
   remove old version
