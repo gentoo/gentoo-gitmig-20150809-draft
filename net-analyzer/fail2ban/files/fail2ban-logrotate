@@ -1,0 +1,9 @@
+/var/log/fail2ban.log {
+    daily
+    rotate 7
+    missingok
+    compress
+    postrotate
+      /usr/local/bin/fail2ban-client reload 1>/dev/null || true
+    endscript
+}

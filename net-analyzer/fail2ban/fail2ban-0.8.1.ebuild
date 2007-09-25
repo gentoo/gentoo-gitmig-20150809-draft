@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.1.ebuild,v 1.1 2007/08/31 15:06:17 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.1.ebuild,v 1.2 2007/09/25 13:17:16 falco Exp $
 
 inherit distutils
 
@@ -24,6 +24,11 @@ src_install() {
 	newinitd files/gentoo-initd fail2ban
 	dodoc CHANGELOG README TODO || die "dodoc failed"
 	doman man/*.1 || die "doman failed"
+
+	# Use INSTALL_MASK  if you do not want to touch /etc/logrotate.d.
+	# See http://thread.gmane.org/gmane.linux.gentoo.devel/35675
+	insinto /etc/logrotate.d
+	newins ${FILESDIR}/${PN}-logrotate ${PN} || die
 }
 
 pkg_postinst() {
