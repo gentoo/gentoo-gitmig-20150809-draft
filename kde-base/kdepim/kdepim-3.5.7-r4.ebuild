@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.7-r4.ebuild,v 1.1 2007/09/22 12:47:47 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.7-r4.ebuild,v 1.2 2007/09/25 05:21:59 philantrop Exp $
 
 inherit kde-dist
 
@@ -22,7 +22,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	|| ( >=app-crypt/gnupg-2.0.1-r1 <app-crypt/gnupg-1.9 )
 	x11-libs/libXScrnSaver
 	app-pda/libopensync
-	pda? ( >=app-pda/pilot-link-0.12.0 dev-libs/libmal )"
+	pda? ( >=app-pda/pilot-link-0.12.0 >=dev-libs/libmal-0.44 )"
 
 RDEPEND="${DEPEND}
 		app-crypt/pinentry"
