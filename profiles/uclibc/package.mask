@@ -2,8 +2,8 @@ sys-libs/glibc
 # breaks gcc and such
 dev-libs/libiconv
 
-# uclibc has broken stat() which causes tar to freak out
->=app-arch/tar-1.15.91
+# uclibc had a broken stat() which caused tar to freak out
+#>=app-arch/tar-1.15.91
 
 # requires funcs we dont yet provide
 >=sys-fs/xfsprogs-2.8.10

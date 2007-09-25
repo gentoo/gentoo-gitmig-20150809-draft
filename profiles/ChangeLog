@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.662 2007/09/25 05:26:22 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.663 2007/09/25 06:23:12 solar Exp $
+
+  25 Sep 2007; <solar@gentoo.org> uclibc/package.mask:
+  - remove tar masking in uclibc profile
 
   25 Sep 2007; <jeff@gentoo.org> package.mask:
   Adding x11-drivers/xf86-video-radeonhd to p.mask, as it's still experimental.
