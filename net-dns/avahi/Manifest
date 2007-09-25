@@ -37,14 +37,14 @@ AUX avahi-0.6.20-ui-sharp-gtk.patch 427 RMD160 d2459f3b30740bb6a97f47bfc1f709a14
 MD5 02bb9381563447d6382b6a140e2ec463 files/avahi-0.6.20-ui-sharp-gtk.patch 427
 RMD160 d2459f3b30740bb6a97f47bfc1f709a1439e36d6 files/avahi-0.6.20-ui-sharp-gtk.patch 427
 SHA256 cd3601df622a8445d50779fb73bb3deab3880fd66cd765d932155f51ac99491b files/avahi-0.6.20-ui-sharp-gtk.patch 427
-AUX avahi-0.6.21-browse-help.patch 603 RMD160 4614f1a8b037a1874d5b6dbf34f3de13c70a4c28 SHA1 94966c907c31a3d51c7b624d6ee3b41e508a3568 SHA256 7fb679fbe87cf81ad7fb6013cc9be786395d3a0fceea83bc34efb63b88851b43
-MD5 c186cd432b1fc94f229a5cee3870a0d2 files/avahi-0.6.21-browse-help.patch 603
-RMD160 4614f1a8b037a1874d5b6dbf34f3de13c70a4c28 files/avahi-0.6.21-browse-help.patch 603
-SHA256 7fb679fbe87cf81ad7fb6013cc9be786395d3a0fceea83bc34efb63b88851b43 files/avahi-0.6.21-browse-help.patch 603
-AUX avahi-0.6.21-dbus-compat.patch 762 RMD160 d11f99a0e8dff26bfc1a16399401f68d161c634d SHA1 f6142eb8a1caf39b6cffcd797dd3ca9ce7f24180 SHA256 7d9525d8b6d9b2e357be10ef0d6c291e9895a24ea4249f27cee9a619971a5068
-MD5 c5d1fc486c87375b6f4428259fad8372 files/avahi-0.6.21-dbus-compat.patch 762
-RMD160 d11f99a0e8dff26bfc1a16399401f68d161c634d files/avahi-0.6.21-dbus-compat.patch 762
-SHA256 7d9525d8b6d9b2e357be10ef0d6c291e9895a24ea4249f27cee9a619971a5068 files/avahi-0.6.21-dbus-compat.patch 762
+AUX avahi-0.6.21-browse-help.patch 628 RMD160 c81d420ea3a41dcf8f98f55e15b891ed15b72d16 SHA1 cc5de8301febaf1cd38c47079b996c97d8f0cae1 SHA256 bda1cf309b500347c0a35304184cdec1d993582858d352613984098400e502af
+MD5 e99620ac126f50caf95f38facc561772 files/avahi-0.6.21-browse-help.patch 628
+RMD160 c81d420ea3a41dcf8f98f55e15b891ed15b72d16 files/avahi-0.6.21-browse-help.patch 628
+SHA256 bda1cf309b500347c0a35304184cdec1d993582858d352613984098400e502af files/avahi-0.6.21-browse-help.patch 628
+AUX avahi-0.6.21-dbus-compat.patch 814 RMD160 c4701d197c1158a3955b221d2fa20ab8e784ab1f SHA1 5e3af0e8f6c63df6faea2fb26fab9502f1b4548f SHA256 8d75c4045a5fe5f51d1164918cbb1bd17369efffd67c2c4ddae87509595ae058
+MD5 c3a9f9597bbb7fe8ddef95b7020f90fa files/avahi-0.6.21-dbus-compat.patch 814
+RMD160 c4701d197c1158a3955b221d2fa20ab8e784ab1f files/avahi-0.6.21-dbus-compat.patch 814
+SHA256 8d75c4045a5fe5f51d1164918cbb1bd17369efffd67c2c4ddae87509595ae058 files/avahi-0.6.21-dbus-compat.patch 814
 AUX avahi-0.6.21-no-browse-domains-segfault.patch 627 RMD160 fd1d23a23a992d0a6754795135c750033a2cadee SHA1 f1b74c53f60dac90bd3b7ef3b3681f1bb719ed78 SHA256 6a54f155d8e51ddf790bd10ab365cf7ef301fceb5d030491365cb317831e1fcb
 MD5 28f2adbe855a7b41ae25b083060eaf55 files/avahi-0.6.21-no-browse-domains-segfault.patch 627
 RMD160 fd1d23a23a992d0a6754795135c750033a2cadee files/avahi-0.6.21-no-browse-domains-segfault.patch 627
@@ -53,10 +53,10 @@ AUX avahi-0.6.21-no-ipv6.patch 603 RMD160 ca38329bfe8f8f2e287ca50e520cb22b7850ba
 MD5 04f6f2be81459e8ab27b06cb554ebd1f files/avahi-0.6.21-no-ipv6.patch 603
 RMD160 ca38329bfe8f8f2e287ca50e520cb22b7850ba03 files/avahi-0.6.21-no-ipv6.patch 603
 SHA256 812c8e8ed89c1b52b591f19011131f9bf8ca166cc5b77fd84ac829120231bd68 files/avahi-0.6.21-no-ipv6.patch 603
-AUX avahi-0.6.21-service_name_chosen.patch 709 RMD160 bad502a0fa0ee86277b8d822622d79df2f232adf SHA1 79c00d322cfdbc81ceefb39b6e09ccaee50c3d24 SHA256 2399844bac43a7a020da7e075457b0b76fcaaef035e6d6282ae98167ff5c797c
-MD5 a3314891844a6af2bc92a25b04c53580 files/avahi-0.6.21-service_name_chosen.patch 709
-RMD160 bad502a0fa0ee86277b8d822622d79df2f232adf files/avahi-0.6.21-service_name_chosen.patch 709
-SHA256 2399844bac43a7a020da7e075457b0b76fcaaef035e6d6282ae98167ff5c797c files/avahi-0.6.21-service_name_chosen.patch 709
+AUX avahi-0.6.21-service_name_chosen.patch 862 RMD160 aac77d26037346e25a021f262d05a6083553266d SHA1 403817d36ba34bd77558cd46807f9b8a7d88374d SHA256 4d71cd2534a3cda8990e4b5a8e859daab026112089f419924e8f1b5ce4c24091
+MD5 9910cd069e996cec53226e11054a2987 files/avahi-0.6.21-service_name_chosen.patch 862
+RMD160 aac77d26037346e25a021f262d05a6083553266d files/avahi-0.6.21-service_name_chosen.patch 862
+SHA256 4d71cd2534a3cda8990e4b5a8e859daab026112089f419924e8f1b5ce4c24091 files/avahi-0.6.21-service_name_chosen.patch 862
 AUX avahi-start-after-netmount.patch 998 RMD160 865a837ad85f6569405ab8d69bd08aebafbb9342 SHA1 a5b084504f70ceaf99bcfd75ddad846bda294166 SHA256 03ec271640c86405297cdd2292bcb3745fac517ed050e777a3dfc4188f06b5fb
 MD5 3d9147891d07cf4418d27fff7edab1b7 files/avahi-start-after-netmount.patch 998
 RMD160 865a837ad85f6569405ab8d69bd08aebafbb9342 files/avahi-start-after-netmount.patch 998
@@ -96,7 +96,7 @@ SHA256 959d8a48b6cc82ee56ba4c373c11569935ae21adb9ee13d0fe6bcbfb18669d35 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFG+V63I1lqEGTUzyQRAiyZAKC9Mj63A960/IkQUR0/l+WpdjdCqACfU++L
-Ec79SY6YiULrs4wtnY15hJk=
-=c+yl
+iD8DBQFG+V8tI1lqEGTUzyQRAkI4AKDM8z+23iQf0lT3AikH1Ranz2LX0wCg1GDy
+ByB7HWSxZHGKX1L3q4JpQ30=
+=Hy9o
 -----END PGP SIGNATURE-----

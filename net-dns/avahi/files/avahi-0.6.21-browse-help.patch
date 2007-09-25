@@ -1,3 +1,5 @@
+fix avahi-browse --help
+
 Index: trunk/avahi-utils/avahi-browse.c
 ===================================================================
 --- trunk/avahi-utils/avahi-browse.c	(revision 1518)

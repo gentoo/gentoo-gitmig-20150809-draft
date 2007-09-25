@@ -1,3 +1,5 @@
+Fix a segfault when registering services with libdns_sd before the avahi daemon finished starting up; Closes rhbz 251700; Original patch from Tim Waugh
+
 Index: trunk/avahi-compat-libdns_sd/compat.c
 ===================================================================
 --- trunk/avahi-compat-libdns_sd/compat.c	(revision 1535)

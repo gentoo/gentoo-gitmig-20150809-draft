@@ -1,3 +1,5 @@
+use dbus_watch_get_unix_fd() only in dbus >= 1.1.1
+
 Index: trunk/avahi-common/dbus-watch-glue.c
 ===================================================================
 --- trunk/avahi-common/dbus-watch-glue.c	(revision 1517)
