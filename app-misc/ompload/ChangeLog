@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/ompload
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ompload/ChangeLog,v 1.1 2007/09/25 04:08:29 omp Exp $
+
+*ompload-214 (25 Sep 2007)
+
+  25 Sep 2007; David Shakaryan <omp@gentoo.org> +metadata.xml,
+  +ompload-214.ebuild:
+  Initial ebuild.
+
