@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.2.1.ebuild,v 1.2 2007/09/16 19:57:35 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.2.1.ebuild,v 1.3 2007/09/25 13:29:02 caleb Exp $
 
 inherit eutils
 
@@ -36,30 +36,32 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-Makefile.patch
 
+	MAKE_RULES="${S}/config/Make.rules"
+
 	if use amd64; then
-		sed -i -e "s:^#LP64:LP64:g" ${S}/config/Make.rules \
+		sed -i -e "s:^#LP64:LP64:g" "${MAKE_RULES}" \
 		|| die "Failed to set lib64 directory"
 	fi
 
 	if ! use ncurses; then
 		sed -i -e "s#^USE_READLINE.*#USE_READLINE      ?= yes#g" \
-		${S}/config/Make.rules || die "Failed to set no readline"
+		"${MAKE_RULES}" || die "Failed to set no readline"
 	fi
 
 	if ! use debug; then
 		sed -i -e "s:#OPTIMIZE:OPTIMIZE:" \
-		${S}/config/Make.rules || die "Failed to remove debug"
+		"${MAKE_RULES}" || die "Failed to remove debug"
 	fi
 
 	sed -i -e \
 	"s:.*CXXFLAGS[^\+]*\=\s:CXXFLAGS = ${CXXFLAGS} :g" \
-	${S}/config/Make.rules.Linux || die "CXXFLAGS patching failed!"
+	"${MAKE_RULES}.Linux" || die "CXXFLAGS patching failed!"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Install Failed!"
+	emake DESTDIR="${D}" install || die "Install Failed!"
 }
 
 src_test() {
-	make test || die "Test failed"
+	emake test || die "Test failed"
 }
