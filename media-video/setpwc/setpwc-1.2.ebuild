@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/setpwc/setpwc-1.2.ebuild,v 1.1 2007/02/12 08:58:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/setpwc/setpwc-1.2.ebuild,v 1.2 2007/09/25 11:32:31 opfer Exp $
 
 DESCRIPTION="Control various aspects of Philips (and compatible) webcams"
 HOMEPAGE="http://www.vanheusden.com/setpwc/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.vanheusden.com/setpwc/${P}.tgz"
 LICENSE="GPL-1 GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE=""
 
