@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.12.0.ebuild,v 1.10 2007/07/14 14:21:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.12.0.ebuild,v 1.11 2007/09/25 13:56:20 caleb Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
@@ -48,11 +48,11 @@ src_compile() {
 
 	if use qt3 ; then
 		cd src/qttestrunner
-		qmake qttestrunnerlib.pro || die "qmake failed"
+		eqmake3 qttestrunnerlib.pro || die "qmake failed"
 		emake || die "emake failed"
 		if use examples ; then
 			cd "${S}/examples/qt"
-			qmake qt_example.pro || die "qmake failed"
+			eqmake3 qt_example.pro || die "qmake failed"
 			emake || die "emake failed"
 		fi
 	fi
