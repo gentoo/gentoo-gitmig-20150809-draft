@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.12.0-r1.ebuild,v 1.1 2007/09/24 20:21:41 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.12.0-r1.ebuild,v 1.2 2007/09/25 08:15:50 leio Exp $
 
 inherit gnome.org flag-o-matic eutils autotools virtualx
 
@@ -49,7 +49,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if ! built_with_use x11-libs/cairo X; then
-		einfo "Please re-emerge x11-libs/cairo with the X USE flag set"
+		eerror "Please re-emerge x11-libs/cairo with the X USE flag set"
 		die "cairo needs the X flag set"
 	fi
 }
@@ -62,7 +62,7 @@ set_gtk2_confdir() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
@@ -126,17 +126,17 @@ src_install() {
 	keepdir ${GTK2_CONFDIR}
 
 	# see bug #133241
-	echo 'gtk-fallback-icon-theme = "gnome"' > ${D}/${GTK2_CONFDIR}/gtkrc
+	echo 'gtk-fallback-icon-theme = "gnome"' > "${D}/${GTK2_CONFDIR}/gtkrc"
 
 	# Enable xft in environment as suggested by <utx@gentoo.org>
 	dodir /etc/env.d
-	echo "GDK_USE_XFT=1" > ${D}/etc/env.d/50gtk2
+	echo "GDK_USE_XFT=1" > "${D}/etc/env.d/50gtk2"
 
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
 
 	# This has to be removed, because it's multilib specific; generated in
 	# postinst
-	rm ${D}/etc/gtk-2.0/gtk.immodules
+	rm "${D}/etc/gtk-2.0/gtk.immodules"
 }
 
 pkg_postinst() {
