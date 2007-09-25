@@ -1,18 +1,18 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a.ebuild,v 1.5 2007/09/25 06:13:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a-r1.ebuild,v 1.1 2007/09/25 11:50:19 opfer Exp $
 
 inherit autotools elisp-common eutils fixheadtails
 
-DESCRIPTION="an X11 based presentation tool"
+DESCRIPTION="An X11 based presentation tool"
 SRC_URI="ftp://sh.wide.ad.jp/WIDE/free-ware/mgp/${P}.tar.gz
 	ftp://ftp.mew.org/pub/MagicPoint/${P}.tar.gz"
 HOMEPAGE="http://member.wide.ad.jp/wg/mgp/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~sparc ~ppc ~amd64"
-IUSE="cjk nls m17n-lib emacs truetype gif imlib"
+KEYWORDS="~amd64 ~alpha ~ppc ~sparc ~x86"
+IUSE="cjk doc emacs examples gif imlib m17n-lib nls truetype"
 
 MY_DEPEND="x11-libs/libICE
 	x11-libs/libSM
@@ -64,8 +64,10 @@ src_compile() {
 	emake -j1 Makefiles || die "emake Makefiles failed"
 	emake -j1 clean || die "emake clean failed"
 	emake -j1 BINDIR=/usr/bin LIBDIR=/etc/X11 || die "emake failed"
-	use emacs && cp contrib/*.el "${S}" && \
-		elisp-compile *.el || die "elisp-compile failed"
+	if use emacs; then
+	   cd contrib/
+	   elisp-compile *.el || die "elisp-compile failed"
+	fi
 }
 
 src_install() {
@@ -82,22 +84,24 @@ src_install() {
 		MANSUFFIX=1 \
 		install.man || die "emake install.man failed"
 
-	exeinto /usr/bin
-	doexe contrib/{mgp2html.pl,mgp2latex.pl}
+	dobin contrib/{mgp2html.pl,mgp2latex.pl}
 
 	if use emacs ; then
 		elisp-install ${PN} *.el *.elc || die "elisp-install failed"
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 
-	dodoc COPYRIGHT* FAQ README* RELNOTES SYNTAX TODO* USAGE*
+	use doc && dodoc FAQ README* RELNOTES SYNTAX TODO* USAGE*
 
-	insinto /usr/share/${PF}/sample
-	cd sample
-	doins README* cloud.jpg dad.* embed*.mgp gradation*.mgp \
-		mgp-old*.jpg mgp.mng mgp3.xbm mgprc-sample \
-		multilingual.mgp sample*.mgp sendmail6*.mgp \
-		tutorial*.mgp v6*.mgp v6header.* || die "example installation failed"
+	if use examples; then
+		cd sample
+		insinto /usr/share/${PF}/sample
+		doins README* cloud.jpg dad.* embed*.mgp gradation*.mgp \
+			mgp-old*.jpg mgp.mng mgp3.xbm mgprc-sample \
+			multilingual.mgp sample*.mgp sendmail6*.mgp \
+			tutorial*.mgp v6*.mgp v6header.* || \
+			die "example installation failed"
+	fi
 }
 
 pkg_postinst() {
