@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/elfsh
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/ChangeLog,v 1.7 2007/06/24 17:48:30 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/ChangeLog,v 1.8 2007/09/25 02:38:42 solar Exp $
+
+  25 Sep 2007; <solar@gentoo.org> metadata.xml:
+  - update metadata.xml
 
   24 Jun 2007; Piotr Jaroszyński <peper@gentoo.org> elfsh-0.65_rc1.ebuild:
   (QA) Don't use KEYWORDS="-*". bug #160519.
