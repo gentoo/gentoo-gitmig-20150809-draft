@@ -1,6 +1,29 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.123 2007/09/20 13:45:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.124 2007/09/25 21:17:44 dang Exp $
+
+*liferea-1.4.3b (25 Sep 2007)
+
+  25 Sep 2007; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.4.2b.ebuild,
+  +liferea-1.4.3b.ebuild:
+  Bump to 1.4.3b
+  	* Fixes a grave bug that caused continuous feed
+  	  downloads when the default update interval is
+  	  set to 0, which is to mean disabled.
+  	* Fixes assertions in db_item_check() and
+  	  db_query_to_sql() for search folders that
+  	  do not have rules. (reported by pochu)
+  	* Fixes SF #1798880: problem when using Ctrl-u 
+  	  inside a search folder matching unread items.
+  	* Fixes Debian #430782: better handling of RSS 2.0
+  	  LiveJournal feeds which use lj: prefix for some
+  	  HTML elements. (reported by Daniel Jacobowitz)
+  	* Fixes SF #1799476: crash when following links.
+  	  (reported by jphendrix)
+  	* Fixes a data loss problem that causes flagged
+  	  items to be dropped out of cache. Normally 
+  	  flagged items are never to be dropped.
+  	  (reported by Keith Curtis)
 
 *liferea-1.4.2b (20 Sep 2007)
 
