@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_DNS
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.26 2007/09/21 12:47:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.27 2007/09/25 00:41:09 pylon Exp $
+
+  25 Sep 2007; Lars Weiler <pylon@gentoo.org> PEAR-Net_DNS-1.0.0.ebuild:
+  stable ppc, bug #192247
 
   21 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   PEAR-Net_DNS-1.0.0.ebuild:

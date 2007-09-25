@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Template_IT
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_IT/ChangeLog,v 1.31 2007/09/21 12:32:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_IT/ChangeLog,v 1.32 2007/09/25 00:29:29 pylon Exp $
+
+  25 Sep 2007; Lars Weiler <pylon@gentoo.org>
+  PEAR-HTML_Template_IT-1.2.1.ebuild:
+  stable ppc, bug #192247
 
   21 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   PEAR-HTML_Template_IT-1.2.1.ebuild:
