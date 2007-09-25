@@ -16,6 +16,7 @@ mount_dev_directory() {
 	if [ -n "${mntcmd}" ] ; then
 		try mount -n ${mntcmd}
 	else
+		# many video drivers require exec access in /dev #92921
 		mntopts="exec,nosuid,mode=0755,size=${tmpfs_size}"
 		[ -n "${tmpfs_inodes}" ] && mntopts="${mntopts},nr_inodes=${tmpfs_inodes}"
 		if grep -Eq "[[:space:]]+tmpfs$" /proc/filesystems ; then
@@ -23,7 +24,6 @@ mount_dev_directory() {
 		else
 			mntcmd="ramfs"
 		fi
-		# many video drivers require exec access in /dev #92921
 		try mount -n -t "${mntcmd}" -o "${mntopts}" udev /dev
 	fi
 	eend $?
