@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/IceRuby-3.2.1-r1.ebuild,v 1.2 2007/09/25 12:58:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/IceRuby-3.2.1-r1.ebuild,v 1.3 2007/09/25 18:53:44 caleb Exp $
 
 inherit eutils
 
 DESCRIPTION="ICE middleware C++ bindings"
 HOMEPAGE="http://www.zeroc.com/index.html"
-SRC_URI="http://www.zeroc.com/download/Ice/3.2/${P}.tar.gz"
+SRC_URI="http://www.zeroc.com/download/Ice/3.2/${P}.tar.gz
+	test? ( http://www.zeroc.com/download/Ice/3.2/${P/Ruby/}.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,7 +21,7 @@ DEPEND="${RDEPEND}
 	test? ( >=dev-lang/python-2.4 )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack "${P}.tar.gz"
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-Makefile.patch"
@@ -56,5 +57,26 @@ src_install() {
 }
 
 src_test() {
-	emake test || die "Test failed"
+	ICEFILE="${P/Ruby/}.tar.gz"
+	ICEWORKDIR="${WORKDIR}/${P/Ruby/}"
+
+	# Unpack Ice
+	cd "${WORKDIR}"
+	unpack "${ICEFILE}"
+
+	# Patch Ice so we only build the necessary parts
+	cd "${ICEWORKDIR}"
+	epatch ${FILESDIR}/testing-Makefile.patch
+
+	# Build Ice core libraries
+	cd "${ICEWORKDIR}/src"
+	emake || die "Ice test build failed"
+
+	# Build the testing binaries
+	cd "${ICEWORKDIR}/test"
+	emake || die "Ice test build died"
+
+	# Run IceRuby's actual tests
+	cd "${S}"
+	ICE_HOME=${ICEWORKDIR} emake test || die "Ruby test failed"
 }

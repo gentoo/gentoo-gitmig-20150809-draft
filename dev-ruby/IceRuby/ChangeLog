@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/IceRuby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/ChangeLog,v 1.10 2007/09/25 12:58:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/ChangeLog,v 1.11 2007/09/25 18:53:44 caleb Exp $
+
+  25 Sep 2007; Caleb Tennis <caleb@gentoo.org>
+  +files/testing-Makefile.patch, IceRuby-3.2.1-r1.ebuild:
+  Fix src_test to work properly
 
   25 Sep 2007; Caleb Tennis <caleb@gentoo.org> IceRuby-3.2.1-r1.ebuild:
   Fix up quoting a bit
