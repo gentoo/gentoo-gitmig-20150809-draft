@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.0.ebuild,v 1.17 2007/03/12 16:08:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.3.ebuild,v 1.1 2007/09/25 20:22:27 dev-zero Exp $
 
 inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DESCRIPTION="C++ STL library"
 HOMEPAGE="http://stlport.sourceforge.net/"
@@ -20,9 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# It should be save to apply this on non-ppc systems as well
-	epatch "${FILESDIR}/${P}-ppc.patch"
-	epatch "${FILESDIR}/${P}-wrong_russian_currency_name.patch"
+	epatch "${FILESDIR}/${PN}-5.1.2-fix_bashism.patch"
 
 	sed -i \
 		-e 's/\(OPT += \)-O2/\1/' \
@@ -35,8 +33,16 @@ src_unpack() {
 }
 
 src_compile() {
-	cat <<- EOF >> stlport/stl/config/user_config.h
+	# We have to add this to host.h to make sure
+	# that dependencies of STLport use the same settings
+	cat <<- EOF >> stlport/stl/config/host.h
 	#define _STLP_NATIVE_INCLUDE_PATH ../g++-v$(gcc-major-version)
+	/* use pthreads for threading */
+	#define _PTHREADS
+	/* enable largefile support */
+	#define _FILE_OFFSET_BITS 64
+	#define _LARGEFILE_SOURCE
+	#define _LARGEFILE64_SOURCE
 	EOF
 
 	sed -i \
@@ -44,6 +50,7 @@ src_compile() {
 		-e "s|\(CXX :=\) c++|\1 $(tc-getCXX)|" \
 		-e "s|^\(CFLAGS = \)|\1 ${CFLAGS} |" \
 		-e "s|^\(CCFLAGS = \)|\1 ${CFLAGS} |" \
+		-e "s|^\(CPPFLAGS = \)|\1 ${CPPFLAGS} |" \
 		build/Makefiles/gmake/gcc.mak || die "sed failed"
 
 	local myconf
@@ -55,8 +62,6 @@ src_compile() {
 	fi
 
 	cd "${S}/build/lib"
-
-	append-lfs-flags
 
 	# It's not an autoconf script
 	./configure \
@@ -78,6 +83,7 @@ src_compile() {
 		-C build/lib \
 		-f gcc.mak \
 		depend ${targets} || die "Compile failed"
+
 }
 
 src_install() {
