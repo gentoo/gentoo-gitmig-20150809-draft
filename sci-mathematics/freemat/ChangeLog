@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/freemat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.4 2007/08/26 13:01:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.5 2007/09/25 19:27:56 bicatali Exp $
+
+*freemat-3.5 (25 Sep 2007)
+
+  25 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org> +freemat-3.5.ebuild:
+  Version bump.
 
   26 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org> freemat-3.4.ebuild:
   portaudio flag properly added
