@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.22 2007/09/11 17:32:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.23 2007/09/25 21:54:57 bicatali Exp $
+
+*scipy-0.6.0 (25 Sep 2007)
+
+  25 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/scipy-0.6.0-cdf.patch, +files/scipy-0.6.0-randomkit.patch,
+  +files/enabled_packages-0.6.0.txt, +scipy-0.6.0.ebuild:
+  Version bump. Added dev-python/imaging in RDEPEND. Re-organize
+  sandbox modules building.
 
   11 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
   +files/scipy-0.5.2-cdf.patch, -files/scipy-0.5.2-getpath.patch,
