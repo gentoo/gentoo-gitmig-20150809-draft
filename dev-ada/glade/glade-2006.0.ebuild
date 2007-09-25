@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/glade/glade-2006.0.ebuild,v 1.2 2007/02/27 14:30:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/glade/glade-2006.0.ebuild,v 1.3 2007/09/25 13:11:41 george Exp $
 
 inherit gnat
 
@@ -20,9 +20,9 @@ DEPEND="virtual/gnat"
 DN="${WORKDIR}/LocalD"
 
 src_unpack() {
-	gnat_src_unpack
+	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	# configure performs some stupid check and in a wrong way, we will surely
 	# have a modern enough gnat
 	sed -i -e "s:-le \"\$am_gnatls_date\":-le \"20040909\":" configure
@@ -38,14 +38,13 @@ lib_compile()
 # NOTE: we are using $1 - the passed gnat profile name
 lib_install()
 {
-	# ATTN!
-	# get_gnat_value relies on having a value specific for gnat in the first
-	# position of a requested env var. Above works for PATH because gnat.eclass
-	# prepends values from the freshly activated gnat profile!
-	#
-	# Also, we install directly to ${D} here, as this is really a part of gnat
-	make prefix=${DN} \
-		bindir=${DN}/$(get_gnat_value PATH) \
+	# This package expands the libs and sources rovided by compiler. Therefore
+	# we install in yet another local location, to bypass gnat's automation.
+	# The compiler specific stuf is then moved to ${D} directly.  Not ideal, as
+	# this hook is called from within src_compile, but alternatives are more
+	# complex. The next version should probably be done mirroring the asis-xxx.
+	make prefix="${DN}" \
+		bindir="${DN}"/$(get_gnat_value PATH) \
 		install || die "make install failed"
 	#
 	# Makefile does not seem to accept much more than bindir, so the rest we
@@ -69,10 +68,10 @@ src_install ()
 	gnat_src_install
 
 	# clean empty dirs
-	rm -rf ${D}/usr/share/gnat/ ${D}/usr/lib/ada/
+	rm -rf "${D}"/usr/share/gnat/ "${D}"/usr/lib/ada/
 
 	# move prepared stuff over
-	cp -rp "${DN}"/* ${D}
+	cp -rp "${DN}"/* "${D}"
 	dodoc COPYING README NEWS
 	insinto /usr/share/doc/${PF}
 	doins -r  Examples/

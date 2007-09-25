@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/glade
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/glade/ChangeLog,v 1.1 2007/02/05 10:35:15 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/glade/ChangeLog,v 1.2 2007/09/25 13:11:41 george Exp $
+
+  25 Sep 2007; George Shapovalov <george@gentoo.org> glade-2006.0.ebuild:
+  adjusted ebuild to follow eclass reorg, gnat_src_unpack was factored out
 
 *glade-2006.0 (05 Feb 2007)
 
