@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.352 2007/09/24 19:59:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.353 2007/09/25 08:50:47 zzam Exp $
+
+  25 Sep 2007; Matthias Schwarzott <zzam@gentoo.org> udev-115-r6.ebuild:
+  Cleanup of ebuild style.
 
 *udev-115-r6 (24 Sep 2007)
 

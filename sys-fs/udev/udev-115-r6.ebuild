@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115-r6.ebuild,v 1.1 2007/09/24 19:59:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115-r6.ebuild,v 1.2 2007/09/25 08:50:47 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -52,11 +52,13 @@ pkg_setup() {
 	local KV_MICRO=$(get_version_component_range 3 ${KV})
 
 	local ok=0
-	if [[ "${KV_MAJOR}" == 2 ]] && [[ "${KV_MINOR}" == 6 ]] && [[ "${KV_MICRO}" -ge 15 ]]; then
+	if [[ ${KV_MAJOR} == 2 && ${KV_MINOR} == 6 && ${KV_MICRO} -ge 15 ]]
+	then
 		ok=1
 	fi
 
-	if [[ "$ok" = "0" ]]; then
+	if [[ ${ok} == 0 ]]
+	then
 		ewarn
 		ewarn "${P} does not support Linux kernel before version 2.6.15!"
 		ewarn "If you want to use udev you need to update"
@@ -95,9 +97,9 @@ src_unpack() {
 
 	# Make sure there is no sudden changes to upstream rules file
 	# (more for my own needs than anything else ...)
-	MD5=`md5sum < "${S}/etc/udev/rules.d/50-udev-default.rules"`
+	MD5=$(md5sum < "${S}/etc/udev/rules.d/50-udev-default.rules")
 	MD5=${MD5/  -/}
-	if [ "${MD5}" != "644e3c77eb866dee4ff8dda2e95cd187" ]
+	if [[ ${MD5} != 644e3c77eb866dee4ff8dda2e95cd187 ]]
 	then
 		echo
 		eerror "50-udev-default.rules has been updated, please validate!"
@@ -127,7 +129,7 @@ src_compile() {
 		libudevdir=${udev_helper_dir} \
 		CROSS_COMPILE=${mycross} \
 		OPTFLAGS="" \
-		${myconf} || die
+		${myconf} || die "compiling udev failed"
 }
 
 src_install() {
@@ -137,7 +139,7 @@ src_install() {
 		libudevdir=${udev_helper_dir} \
 		EXTRAS="${extras}" \
 		${myconf} \
-		install || die
+		install || die "make install failed"
 
 	# make install does not install this
 	dosbin udevstart	|| die "Required binary not installed properly"
@@ -179,7 +181,8 @@ src_install() {
 	doins packages/40-alsa.rules
 
 	# Adding arch specific rules
-	if [[ -f "packages/40-${ARCH}.rules" ]]; then
+	if [[ -f packages/40-${ARCH}.rules ]]
+	then
 		doins "packages/40-${ARCH}.rules"
 	fi
 	cd "${S}"
@@ -193,8 +196,8 @@ src_install() {
 	newinitd "${FILESDIR}"/udev-postmount-initd-111-r2 udev-postmount
 
 	insinto /etc/modprobe.d
-	newins ${FILESDIR}/blacklist-110 blacklist
-	doins ${FILESDIR}/pnp-aliases
+	newins "${FILESDIR}"/blacklist-110 blacklist
+	doins "${FILESDIR}"/pnp-aliases
 
 	# convert /lib/udev to real used dir
 	sed_helper_dir \
@@ -214,38 +217,39 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [[ -d "${ROOT}"/lib/udev-state ]] ; then
+	if [[ -d ${ROOT}/lib/udev-state ]]
+	then
 		mv -f "${ROOT}"/lib/udev-state/* "${D}"/lib/udev/state/
 		rm -r "${ROOT}"/lib/udev-state
 	fi
 
-	if [ -f "${ROOT}/etc/udev/udev.config" -a \
-	     ! -f "${ROOT}/etc/udev/udev.rules" ]
+	if [[ -f ${ROOT}/etc/udev/udev.config &&
+	     ! -f ${ROOT}/etc/udev/udev.rules ]]
 	then
 		mv -f "${ROOT}"/etc/udev/udev.config "${ROOT}"/etc/udev/udev.rules
 	fi
 
 	# delete the old udev.hotplug symlink if it is present
-	if [ -h "${ROOT}/etc/hotplug.d/default/udev.hotplug" ]
+	if [[ -h ${ROOT}/etc/hotplug.d/default/udev.hotplug ]]
 	then
 		rm -f "${ROOT}"/etc/hotplug.d/default/udev.hotplug
 	fi
 
 	# delete the old wait_for_sysfs.hotplug symlink if it is present
-	if [ -h "${ROOT}/etc/hotplug.d/default/05-wait_for_sysfs.hotplug" ]
+	if [[ -h ${ROOT}/etc/hotplug.d/default/05-wait_for_sysfs.hotplug ]]
 	then
 		rm -f "${ROOT}"/etc/hotplug.d/default/05-wait_for_sysfs.hotplug
 	fi
 
 	# delete the old wait_for_sysfs.hotplug symlink if it is present
-	if [ -h "${ROOT}/etc/hotplug.d/default/10-udev.hotplug" ]
+	if [[ -h ${ROOT}/etc/hotplug.d/default/10-udev.hotplug ]]
 	then
 		rm -f "${ROOT}"/etc/hotplug.d/default/10-udev.hotplug
 	fi
 
 	# is there a stale coldplug initscript? (CONFIG_PROTECT leaves it behind)
 	coldplug_stale=""
-	if [ -f "${ROOT}/etc/init.d/coldplug" ]
+	if [[ -f ${ROOT}/etc/init.d/coldplug ]]
 	then
 		coldplug_stale="1"
 	fi
@@ -255,7 +259,8 @@ pkg_postinst() {
 	# people want reminders, I'll give them reminders.  Odds are they will
 	# just ignore them anyway...
 
-	if [[ ${coldplug_stale} == "1" ]] ; then
+	if [[ ${coldplug_stale} == 1 ]]
+	then
 		ewarn "A stale coldplug init script found. You should run:"
 		ewarn
 		ewarn "      rc-update del coldplug"
@@ -265,36 +270,39 @@ pkg_postinst() {
 	fi
 
 	# delete 40-scsi-hotplug.rules - all integrated in 50-udev.rules
-	if has_version "=sys-fs/udev-103-r3"; then
-		if [[ -e "${ROOT}/etc/udev/rules.d/40-scsi-hotplug.rules" ]]
-		then
-			ewarn "Deleting stray 40-scsi-hotplug.rules"
-			ewarn "installed by sys-fs/udev-103-r3"
-			rm -f "${ROOT}"/etc/udev/rules.d/40-scsi-hotplug.rules
-		fi
+	if has_version "=sys-fs/udev-103-r3" &&
+		[[ -e ${ROOT}/etc/udev/rules.d/40-scsi-hotplug.rules ]]
+	then
+		ewarn "Deleting stray 40-scsi-hotplug.rules"
+		ewarn "installed by sys-fs/udev-103-r3"
+		rm -f "${ROOT}"/etc/udev/rules.d/40-scsi-hotplug.rules
 	fi
 
 	# Removing some device-nodes we thought we need some time ago
-	if [[ -d "${ROOT}"/lib/udev/devices ]]; then
+	if [[ -d ${ROOT}/lib/udev/devices ]]
+	then
 		rm -f "${ROOT}"/lib/udev/devices/{null,zero,console,urandom}
 	fi
 
 	# Removing some old file
-	if has_version "<sys-fs/udev-104-r5"; then
+	if has_version "<sys-fs/udev-104-r5"
+	then
 		rm -f "${ROOT}"/etc/dev.d/net/hotplug.dev
 		rmdir --ignore-fail-on-non-empty "${ROOT}"/etc/dev.d/net 2>/dev/null
 	fi
 
-	if has_version "<sys-fs/udev-106-r5"; then
-		if [[ -e "${ROOT}"/etc/udev/rules.d/95-net.rules ]]; then
-			rm -f "${ROOT}"/etc/udev/rules.d/95-net.rules
-		fi
+	if has_version "<sys-fs/udev-106-r5" &&
+		[[ -e ${ROOT}/etc/udev/rules.d/95-net.rules ]]
+	then
+		rm -f "${ROOT}"/etc/udev/rules.d/95-net.rules
 	fi
 
 	# Try to remove /etc/dev.d as that is obsolete
-	if [[ -d "${ROOT}"/etc/dev.d ]]; then
+	if [[ -d ${ROOT}/etc/dev.d ]]
+	then
 		rmdir --ignore-fail-on-non-empty "${ROOT}"/etc/dev.d/default "${ROOT}"/etc/dev.d 2>/dev/null
-		if [[ -d "${ROOT}"/etc/dev.d ]]; then
+		if [[ -d ${ROOT}/etc/dev.d ]]
+		then
 			ewarn "You still have the directory /etc/dev.d on your system."
 			ewarn "This is no longer used by udev and can be removed."
 		fi
@@ -303,18 +311,21 @@ pkg_postinst() {
 	# 64-device-mapper.rules now gets installed by sys-fs/device-mapper
 	# remove it if user don't has sys-fs/device-mapper installed
 	if has_version "<sys-fs/udev-113" &&
-		[[ -f "${ROOT}"/etc/udev/rules.d/64-device-mapper.rules ]] &&
+		[[ -f ${ROOT}/etc/udev/rules.d/64-device-mapper.rules ]] &&
 		! has_version sys-fs/device-mapper
 	then
 			rm -f "${ROOT}"/etc/udev/rules.d/64-device-mapper.rules
 			einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
-	if [[ "${ROOT}" == "/" ]] ; then
+	if [[ ${ROOT} == / ]]
+	then
 		# check if root of init-process is identical to ours
-		if [ -r /proc/1/root -a /proc/1/root/ -ef /proc/self/root/ ]; then
+		if [[ -r /proc/1/root && /proc/1/root/ -ef /proc/self/root/ ]]
+		then
 			einfo "restarting udevd now."
-			if [[ -n $(pidof udevd) ]] ; then
+			if [[ -n $(pidof udevd) ]]
+			then
 				killall -15 udevd &>/dev/null
 				sleep 1
 				killall -9 udevd &>/dev/null
