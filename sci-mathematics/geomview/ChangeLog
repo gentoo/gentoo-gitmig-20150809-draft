@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/geomview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.7 2007/07/09 01:33:37 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.8 2007/09/25 13:39:19 markusle Exp $
+
+*geomview-1.9.4 (25 Sep 2007)
+
+  25 Sep 2007; Markus Dittrich <markusle@gentoo.org> +geomview-1.9.4.ebuild:
+  Version bump (see bug #193722).
 
   09 Jul 2007; Steve Arnold <nerdboy@gentoo.org> geomview-1.9.2.ebuild:
   removed extra postinst
