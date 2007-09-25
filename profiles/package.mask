@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7738 2007/09/23 16:43:57 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7739 2007/09/25 05:26:22 je_fro Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jeff Gardner <je_fro@gentoo.org> (25 Sep 2007)
+# Adding masked as it's for testing.
+x11-drivers/xf86-video-radeonhd
 
 # Denis Dupeyron <calchan@gentoo.org> (23 Sep 2007)
 # Masked for removal in 30 days as per bug #176962.
