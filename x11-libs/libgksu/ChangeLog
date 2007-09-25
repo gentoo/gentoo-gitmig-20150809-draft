@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.44 2007/09/22 07:29:53 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.45 2007/09/25 03:02:09 jer Exp $
+
+  25 Sep 2007; Jeroen Roovers <jer@gentoo.org> libgksu-2.0.5.ebuild:
+  Stable for HPPA (bug #193339).
 
   22 Sep 2007; Tom Gall <tgall@gentoo.org> libgksu-2.0.5.ebuild:
   Stable on ppc64
