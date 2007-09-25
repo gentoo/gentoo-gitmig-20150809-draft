@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.26 2007/09/12 02:40:51 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.27 2007/09/25 14:21:25 dang Exp $
+
+  25 Sep 2007; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
+  New series for Gnome 2.20
 
   11 Sept 2007; Tom Gall <tgall@gentoo.org> sabayon-2.18.1.ebuild:
   Stable for ppc64 (bug #185823).
