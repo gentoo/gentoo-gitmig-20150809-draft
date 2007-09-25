@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.88 2007/09/19 14:49:56 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.89 2007/09/25 15:50:10 armin76 Exp $
+
+  25 Sep 2007; Raúl Porcel <armin76@gentoo.org> mediawiki-1.8.5.ebuild:
+  sparc stable wrt security #192197
 
   19 Sep 2007; <wrobel@gentoo.org> mediawiki-1.11.0.ebuild:
   Fixed missing includes/filerepo in mediawiki-1.11.0. Fixes #192861.
