@@ -79,12 +79,6 @@ _activate_profile() {
 		rm -f /usr/include/${file}
 		ln -s /usr/include/${new}/${file} /usr/include/${file}
 	done
-	# binaries
-	for file in `ls /usr/@@LIBDIR@@/${new} | grep -v lib`; do
-		files="${files} /usr/bin/${file}"
-		rm -f /usr/bin/${file}
-		ln -s /usr/@@LIBDIR@@/${new}/${file} /usr/bin/${file}
-	done
 	# man pages
 	for file in `find /usr/share/man -regex ".*-${new}\..x?.gz"`; do
 		files="${files} ${file/-${new}/}"
