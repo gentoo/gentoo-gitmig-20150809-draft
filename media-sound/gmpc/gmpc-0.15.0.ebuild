@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.15.0.ebuild,v 1.2 2007/07/11 19:30:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.15.0.ebuild,v 1.3 2007/09/26 18:51:09 lack Exp $
 
 IUSE="gnome session"
 
@@ -19,7 +19,8 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	session? ( x11-libs/libSM )
 	dev-perl/XML-Parser
 	>=media-libs/libmpd-0.14.0
-	net-misc/curl"
+	net-misc/curl
+	x11-themes/hicolor-icon-theme"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

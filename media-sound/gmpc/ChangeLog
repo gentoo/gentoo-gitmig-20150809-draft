@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.34 2007/09/01 10:30:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.35 2007/09/26 18:51:09 lack Exp $
+
+  26 Sep 2007; Jim Ramsay <lack@gentoo.org> gmpc-0.14.0.ebuild,
+  gmpc-0.15.0.ebuild, gmpc-0.15.1.ebuild:
+  Adding RDEPEND on x11-themes/hicolor-icon-theme, required for all hte pretty
+  icons if gnome isn't installed
 
   01 Sep 2007; Christoph Mende <angelos@gentoo.org> gmpc-0.15.1.ebuild:
   Stable on amd64
