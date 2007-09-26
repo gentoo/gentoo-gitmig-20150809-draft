@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.30 2007/09/21 13:08:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.31 2007/09/26 19:29:02 armin76 Exp $
+
+  26 Sep 2007; Raúl Porcel <armin76@gentoo.org> sleuthkit-2.09.ebuild:
+  sparc stable wrt security #181977
 
   21 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   sleuthkit-2.09.ebuild:
