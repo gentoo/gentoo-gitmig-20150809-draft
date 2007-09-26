@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7746 2007/09/26 06:16:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7747 2007/09/26 13:29:30 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Ulrich Mueller <ulm@gentoo.org> (26 Sep 2007)
+# Last upstream release as separate package was in 2002.
+# Speedbar is included with Emacs 22; users of Emacs 21
+# may use app-emacs/cedet as replacement.
+# Masked for removal in 30 days. Bug #190768.
+app-emacs/speedbar
 
 # Daniel Gryniewicz <dang@gentoo.org> (25 Sep 2007)
 # The Great GNOME 2.20 mask
