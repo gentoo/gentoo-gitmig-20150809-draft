@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-1.1.ebuild,v 1.1 2007/09/26 08:49:03 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-1.1.ebuild,v 1.2 2007/09/26 08:51:43 dberkholz Exp $
 
 inherit eutils multilib
 
@@ -48,7 +48,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
-	echo "CONFIG_PROTECT=\"/usr/share/X11/xkb\"" > "${T}"/10xkeyboard-config
-	doenvd "${T}"/10xkeyboard-config
+	emake DESTDIR="${D}" install || die "install failed"
 }
