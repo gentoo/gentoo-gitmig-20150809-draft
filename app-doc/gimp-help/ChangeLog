@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.38 2007/09/13 05:50:17 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.39 2007/09/26 03:01:24 hanno Exp $
+
+*gimp-help-0.13 (26 Sep 2007)
+
+  26 Sep 2007; Hanno Boeck <hanno@gentoo.org> +gimp-help-0.13.ebuild:
+  Version bump.
 
   13 Sep 2007; Leonardo Boshell <leonardop@gentoo.org>
   -files/gimp-help-2.0.11-image-honour-ALL_LINGUAS.patch,
