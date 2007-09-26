@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-0.27.ebuild,v 1.1 2007/09/26 14:35:51 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-0.27.ebuild,v 1.2 2007/09/26 14:45:32 hanno Exp $
 
 inherit eutils multilib pam
 
@@ -30,5 +30,5 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dopamsecurity . config/pam_mount.conf.xml || die "dopamsecurity failed"
 
-	dodoc doc/*.txt || die
+	dodoc doc/*.txt || die "dodoc failed"
 }
