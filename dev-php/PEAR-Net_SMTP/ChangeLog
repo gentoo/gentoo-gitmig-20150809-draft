@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_SMTP
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.32 2007/09/25 00:50:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.33 2007/09/26 18:08:07 ranger Exp $
+
+  26 Sep 2007; Brent Baude <ranger@gentoo.org> PEAR-Net_SMTP-1.2.10.ebuild:
+  Marking PEAR-Net_SMTP-1.2.10 ppc64 stable for bug 192247
 
   25 Sep 2007; Lars Weiler <pylon@gentoo.org> PEAR-Net_SMTP-1.2.10.ebuild:
   stable ppc, bug #192247
