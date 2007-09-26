@@ -1,6 +1,6 @@
 # Copyright 2006-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/libfakekey-0.1.ebuild,v 1.3 2007/07/22 03:14:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/libfakekey-0.1.ebuild,v 1.4 2007/09/26 04:06:37 jer Exp $
 
 DESCRIPTION="Helper library for the x11-misc/matchbox-keyboard package."
 HOMEPAGE="http://projects.o-hand.com/matchbox/"
@@ -8,7 +8,7 @@ SRC_URI="http://projects.o-hand.com/matchbox/sources/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86 ~arm"
+KEYWORDS="~arm ~hppa ~x86"
 IUSE="debug doc"
 
 RDEPEND="x11-libs/libXtst"
