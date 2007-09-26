@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96.ebuild,v 1.1 2007/03/22 16:24:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96.ebuild,v 1.2 2007/09/26 13:05:28 markusle Exp $
 
 inherit eutils autotools fortran
 
@@ -28,6 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-autotools.patch
+	epatch "${FILESDIR}"/${P}-gcc-4.2.patch
 
 	# fix examples library paths
 	sed -i \

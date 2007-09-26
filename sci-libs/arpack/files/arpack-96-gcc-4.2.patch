@@ -1,0 +1,11 @@
+diff -Naur ARPACK-old/UTIL/second.f ARPACK/UTIL/second.f
+--- ARPACK-old/UTIL/second.f	1995-10-02 14:56:44.000000000 -0400
++++ ARPACK/UTIL/second.f	2007-09-26 08:43:28.000000000 -0400
+@@ -21,7 +21,6 @@
+ *     ..
+ *     .. External Functions ..
+       REAL               ETIME
+-      EXTERNAL           ETIME
+ *     ..
+ *     .. Executable Statements ..
+ *
