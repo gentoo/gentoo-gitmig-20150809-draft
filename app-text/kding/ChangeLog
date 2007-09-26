@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kding
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kding/ChangeLog,v 1.1 2007/09/26 20:36:10 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kding/ChangeLog,v 1.2 2007/09/26 22:52:35 tgurr Exp $
+
+  26 Sep 2007; Timo Gurr <tgurr@gentoo.org> Manifest:
+  Fixed Manifest.
 
 *kding-0.4.1 (26 Sep 2007)
 
