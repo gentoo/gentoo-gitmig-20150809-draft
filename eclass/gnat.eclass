@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.27 2007/09/26 20:09:03 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.28 2007/09/26 20:41:33 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -123,6 +123,34 @@ get_gnat_value() {
 	local entries=(${!1//:/ })
 	echo ${entries[0]}
 }
+
+
+# Returns a name of active gnat profile. Peroroms some validity checks. No input
+# parameters, analyzes the system setup directly.
+get_active_profile() {
+	# get common code and settings
+	. ${GnatCommon} || die "failed to source gnat-common lib"
+
+	local profiles=( $(get_env_list) ) 
+
+	if [[ ${profiles[@]} == "${MARKER}*" ]]; then 
+		exit 
+		# returning empty string
+	fi
+
+	if (( 1 == ${#profiles[@]} )); then
+		local active=${profiles[0]#${MARKER}}
+	else
+		die "${ENVDIR} contains multiple gnat profiles, please cleanup!"
+	fi
+
+	if [[ -f ${SPECSDIR}/${active} ]]; then
+		echo ${active}
+	else
+		die "The profile active in ${ENVDIR} does not correspond to any installed gnat!"
+	fi
+}
+
 
 
 # ------------------------------------
