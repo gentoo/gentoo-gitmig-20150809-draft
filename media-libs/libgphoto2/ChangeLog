@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.107 2007/09/25 06:39:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.108 2007/09/26 13:24:20 zzam Exp $
+
+*libgphoto2-2.4.0-r1 (26 Sep 2007)
+
+  26 Sep 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/libgphoto2-2.4.0-udev-rules-fix4.diff, +libgphoto2-2.4.0-r1.ebuild:
+  Fix udev rules for kernel 2.6.22 and greater, now also got this patch into
+  upstream - will appear in next version.
 
   25 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
   libgphoto2-2.4.0.ebuild:
