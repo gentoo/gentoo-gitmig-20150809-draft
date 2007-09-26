@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Text_Wiki
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.43 2007/09/25 01:06:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.44 2007/09/26 18:06:25 ranger Exp $
+
+  26 Sep 2007; Brent Baude <ranger@gentoo.org> PEAR-Text_Wiki-1.2.0.ebuild:
+  Marking PEAR-Text_Wiki-1.2.0 ppc64 stable for bug 192247
 
   25 Sep 2007; Lars Weiler <pylon@gentoo.org> PEAR-Text_Wiki-1.2.0.ebuild:
   stable ppc, bug #192247
