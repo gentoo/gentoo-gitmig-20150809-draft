@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/PEAR-Net_DNS-1.0.0.ebuild,v 1.4 2007/09/25 00:41:09 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/PEAR-Net_DNS-1.0.0.ebuild,v 1.5 2007/09/26 17:59:09 ranger Exp $
 
 inherit php-pear-r1 depend.php
 
 DESCRIPTION="Resolver library used to communicate with a DNS server."
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 pkg_setup() {
