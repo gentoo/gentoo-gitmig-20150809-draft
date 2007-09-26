@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.114 2007/09/26 12:31:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.115 2007/09/26 15:25:15 jer Exp $
+
+  26 Sep 2007; Jeroen Roovers <jer@gentoo.org> wvstreams-4.4.ebuild:
+  Stable for HPPA (bug #193803).
 
   26 Sep 2007; Christoph Mende <angelos@gentoo.org> wvstreams-4.4.ebuild:
   Stable on amd64 wrt bug #193803
