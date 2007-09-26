@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-System_Command
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-System_Command/ChangeLog,v 1.47 2007/09/25 01:03:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-System_Command/ChangeLog,v 1.48 2007/09/26 18:05:34 ranger Exp $
+
+  26 Sep 2007; Brent Baude <ranger@gentoo.org>
+  PEAR-System_Command-1.0.6.ebuild:
+  Marking PEAR-System_Command-1.0.6 ppc64 stable for bug 192247
 
   25 Sep 2007; Lars Weiler <pylon@gentoo.org>
   PEAR-System_Command-1.0.6.ebuild:
