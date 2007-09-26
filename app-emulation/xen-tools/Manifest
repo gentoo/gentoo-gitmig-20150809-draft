@@ -13,6 +13,10 @@ AUX xen-tools-3.0.4_p1-network-bridge-broadcast.patch 841 RMD160 21fd0a5e50109cb
 MD5 2812525317e8827f626962738e4643d4 files/xen-tools-3.0.4_p1-network-bridge-broadcast.patch 841
 RMD160 21fd0a5e50109cb9665717e17522afded6c26c26 files/xen-tools-3.0.4_p1-network-bridge-broadcast.patch 841
 SHA256 75c0739f55cc63f1d17d16465ec681c943155ae57b5c9d67ed7c6be6254d3223 files/xen-tools-3.0.4_p1-network-bridge-broadcast.patch 841
+AUX xen-tools-3.0.4_p1-pygrub-security-fix.patch 3233 RMD160 d183220d043623b347d7bef4273aa2946984e2c7 SHA1 9df5b272e431fe12f32222840e89abcea9b2926d SHA256 e012e9c45a9652af096c1e7708cea0e90100ecfa2a122d9c5bf0fcc107796ae4
+MD5 7a02264a989ed64b0e578073eb299353 files/xen-tools-3.0.4_p1-pygrub-security-fix.patch 3233
+RMD160 d183220d043623b347d7bef4273aa2946984e2c7 files/xen-tools-3.0.4_p1-pygrub-security-fix.patch 3233
+SHA256 e012e9c45a9652af096c1e7708cea0e90100ecfa2a122d9c5bf0fcc107796ae4 files/xen-tools-3.0.4_p1-pygrub-security-fix.patch 3233
 AUX xen-tools-3.0.4_p1-remove-monitor-mode-from-vnc.patch 592 RMD160 a7b29d6563c2124d218658d56083c2847a9a287a SHA1 a92ed78cfc1dd04f7342a58e725f5279af84a14d SHA256 de0a6bcc6461f49c7ee32b843fcf4deee157c980db5b164aeb7b8859e3614389
 MD5 8cefd2566392cb8a27190b54dfaa0620 files/xen-tools-3.0.4_p1-remove-monitor-mode-from-vnc.patch 592
 RMD160 a7b29d6563c2124d218658d56083c2847a9a287a files/xen-tools-3.0.4_p1-remove-monitor-mode-from-vnc.patch 592
@@ -21,6 +25,10 @@ AUX xen-tools-3.0.4_p1-vnclisten.patch 519 RMD160 96a88fcd593bbc4461d87fb50b3eca
 MD5 423ad930eef2e40ee30b6f648f0340f2 files/xen-tools-3.0.4_p1-vnclisten.patch 519
 RMD160 96a88fcd593bbc4461d87fb50b3ecaf06bab8729 files/xen-tools-3.0.4_p1-vnclisten.patch 519
 SHA256 4f368dada2c7c5538ac6c2a2e23693828dea18a4b27e54c3d4a65e5603812dcb files/xen-tools-3.0.4_p1-vnclisten.patch 519
+AUX xen-tools-3.1.0-pygrub-security-fix.patch 5185 RMD160 1b10023a38a14eefea3e523341917d2d4b11dec7 SHA1 7f8d2ae638fea478b4841668c32839525958651b SHA256 514e6157f620168f12ed8710d5ab42a896ae2bd2700cd1160a3a42b8f866fdc1
+MD5 a14e31f8a3c3d26c22f063c4f7fd1df9 files/xen-tools-3.1.0-pygrub-security-fix.patch 5185
+RMD160 1b10023a38a14eefea3e523341917d2d4b11dec7 files/xen-tools-3.1.0-pygrub-security-fix.patch 5185
+SHA256 514e6157f620168f12ed8710d5ab42a896ae2bd2700cd1160a3a42b8f866fdc1 files/xen-tools-3.1.0-pygrub-security-fix.patch 5185
 AUX xen-tools-3.1.0-python-site-packages.patch 1205 RMD160 319e95a53b9860358849fef1eea6454a088f3b33 SHA1 8b850508f6caf189d04d5f2938599b5f2efacce4 SHA256 ff26da54fad7ac66b17774963220f265950d28ad167808bf41f9084425eb07d6
 MD5 e95f0b1dfd034e510237b90e9601c095 files/xen-tools-3.1.0-python-site-packages.patch 1205
 RMD160 319e95a53b9860358849fef1eea6454a088f3b33 files/xen-tools-3.1.0-python-site-packages.patch 1205
@@ -47,32 +55,32 @@ RMD160 797b4db93fc54d217d7db98d2c408b03f993c47c files/xendomains.initd 2278
 SHA256 b0dd6c8e588ce76026488243dbe8d6adf9af7d8276fb268fcb439ba1ce59f756 files/xendomains.initd 2278
 DIST xen-3.0.4_1-src.tgz 6473636 RMD160 f869eec35f6afe0bc9824ce2eb4a600f789d423b SHA1 7ca5af70996215229e143c7563e69b3719284a95 SHA256 6b3842393e69a9c8fcdbc2789d05830aba6f1d108a6f97f1448de4a86f92a5cb
 DIST xen-3.1.0-src.tgz 6831094 RMD160 2fd65a3b81e522d0ed2d62fd11e5977167f1ceb3 SHA1 fa4b54c36626f2cce9b15dc99cafda0b42c54777 SHA256 b5d7cea6deeee1439e8883fed4b3f1a8e4f675b4af8148178721f99bd76676b7
-EBUILD xen-tools-3.0.4_p1.ebuild 6197 RMD160 5bdd7a14cbb1732e5bf8887fab797e8872ac7aab SHA1 269e88162710351a590507511ce14d2500f66daf SHA256 fd14d680ef472366e068d07593b4b2429650c75fc02c9469ca288b4730041948
-MD5 957e3af364c6c2fc6aa57a5d089dab95 xen-tools-3.0.4_p1.ebuild 6197
-RMD160 5bdd7a14cbb1732e5bf8887fab797e8872ac7aab xen-tools-3.0.4_p1.ebuild 6197
-SHA256 fd14d680ef472366e068d07593b4b2429650c75fc02c9469ca288b4730041948 xen-tools-3.0.4_p1.ebuild 6197
-EBUILD xen-tools-3.1.0.ebuild 6551 RMD160 161d83725946b4a9bd2637d86ebc156b1847425d SHA1 c34fa277d81db5ed0f685a80e199d1411c48b780 SHA256 302fb9293ebfa49309052446a00f4dcf0bc75e895f10ab3d369a131488625844
-MD5 60bd0979d4045ad2ee26bd17bfd37c89 xen-tools-3.1.0.ebuild 6551
-RMD160 161d83725946b4a9bd2637d86ebc156b1847425d xen-tools-3.1.0.ebuild 6551
-SHA256 302fb9293ebfa49309052446a00f4dcf0bc75e895f10ab3d369a131488625844 xen-tools-3.1.0.ebuild 6551
-MISC ChangeLog 8586 RMD160 55289c6f9fb99c81f2749cdabf634d09cc88a99d SHA1 db84725ba3a5a2261a51d2ccc3e108d9cedc1f84 SHA256 b3344ca309caa0d829006dae299789cd135b7f4df47e4d8f5034fc7793156893
-MD5 caaa8ad47b5c9af6c44afd12b03b1382 ChangeLog 8586
-RMD160 55289c6f9fb99c81f2749cdabf634d09cc88a99d ChangeLog 8586
-SHA256 b3344ca309caa0d829006dae299789cd135b7f4df47e4d8f5034fc7793156893 ChangeLog 8586
+EBUILD xen-tools-3.0.4_p1-r1.ebuild 6335 RMD160 604727bab5b20e6b81c65113251f53dc7ba8449c SHA1 620348fdeb27c1dea6ccd8f99adacf98e20c3309 SHA256 685d5ddcdb7ddced972ea89386d039464eeda4574c8ce5bb8303cb2ddf38c2f3
+MD5 f0ce63096d22fbd5f8cc7e01adea1ed2 xen-tools-3.0.4_p1-r1.ebuild 6335
+RMD160 604727bab5b20e6b81c65113251f53dc7ba8449c xen-tools-3.0.4_p1-r1.ebuild 6335
+SHA256 685d5ddcdb7ddced972ea89386d039464eeda4574c8ce5bb8303cb2ddf38c2f3 xen-tools-3.0.4_p1-r1.ebuild 6335
+EBUILD xen-tools-3.1.0-r1.ebuild 6696 RMD160 1678332d0fd82b9996c2e94455618bd1704cde92 SHA1 aea85369b2b7bf78ad3c076b250fcb130246b5bd SHA256 ebcd6080b8d0fdfb1affd1beadb6c0e74b8d55b69d98627d71541a538f86878e
+MD5 91e62395f1998c8fd10a778b431b6695 xen-tools-3.1.0-r1.ebuild 6696
+RMD160 1678332d0fd82b9996c2e94455618bd1704cde92 xen-tools-3.1.0-r1.ebuild 6696
+SHA256 ebcd6080b8d0fdfb1affd1beadb6c0e74b8d55b69d98627d71541a538f86878e xen-tools-3.1.0-r1.ebuild 6696
+MISC ChangeLog 9038 RMD160 15ac2a1fe777c778142e2bb6422694a5eb589b6c SHA1 8b0341604219eb71f63e4c61d24f58ff3f3e9001 SHA256 5c3f7f228bba4e962e80defcb25475daa6280def442f973bf1beb142acee4ceb
+MD5 bb793aac3822d2526c7490f127c4112f ChangeLog 9038
+RMD160 15ac2a1fe777c778142e2bb6422694a5eb589b6c ChangeLog 9038
+SHA256 5c3f7f228bba4e962e80defcb25475daa6280def442f973bf1beb142acee4ceb ChangeLog 9038
 MISC metadata.xml 156 RMD160 bb062b1ba5554779dcfd0e73baf533ce9fbcdf68 SHA1 e6da014f2004758c7a806592ef9450489eebf593 SHA256 4a030777459245372bda9f7925f3a5ed3ef2b29b77e1a2971f3400ac2059b1e2
 MD5 559b4095659a2a2a489784de8a6ef95e metadata.xml 156
 RMD160 bb062b1ba5554779dcfd0e73baf533ce9fbcdf68 metadata.xml 156
 SHA256 4a030777459245372bda9f7925f3a5ed3ef2b29b77e1a2971f3400ac2059b1e2 metadata.xml 156
-MD5 de126addfd4101f35f8880ab0817ab03 files/digest-xen-tools-3.0.4_p1 241
-RMD160 b65ff6928079bc0ee81b68ab27f3f4c9e1d36856 files/digest-xen-tools-3.0.4_p1 241
-SHA256 66cfb008cc25de8a507359e492d6896908bc619901d901ae018fb135d2d91345 files/digest-xen-tools-3.0.4_p1 241
-MD5 b2e86effae6681cbbecdbf864b193b4a files/digest-xen-tools-3.1.0 235
-RMD160 2366b7298f0125f11d41aca0c6088c20863dbed1 files/digest-xen-tools-3.1.0 235
-SHA256 12c130912c624791e6855ebeb932368fc8889371876db396055b02ac9a3b9892 files/digest-xen-tools-3.1.0 235
+MD5 de126addfd4101f35f8880ab0817ab03 files/digest-xen-tools-3.0.4_p1-r1 241
+RMD160 b65ff6928079bc0ee81b68ab27f3f4c9e1d36856 files/digest-xen-tools-3.0.4_p1-r1 241
+SHA256 66cfb008cc25de8a507359e492d6896908bc619901d901ae018fb135d2d91345 files/digest-xen-tools-3.0.4_p1-r1 241
+MD5 b2e86effae6681cbbecdbf864b193b4a files/digest-xen-tools-3.1.0-r1 235
+RMD160 2366b7298f0125f11d41aca0c6088c20863dbed1 files/digest-xen-tools-3.1.0-r1 235
+SHA256 12c130912c624791e6855ebeb932368fc8889371876db396055b02ac9a3b9892 files/digest-xen-tools-3.1.0-r1 235
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.7 (GNU/Linux)
 
-iD8DBQFG3GMxiP+LossGzjARAgsVAKCzH+2qaqvYXPFjshs4SSK2zss7qQCgpGLp
-CPCp4Audlk2ipvEsjMGs59c=
-=jd/q
+iD8DBQFG+uCfiP+LossGzjARAmr2AJwMPXlQK9EtEtamJ9/7KEPNSUGECwCcCz4s
+RM7aweNYp4D5VecrlrRWSmc=
+=X56e
 -----END PGP SIGNATURE-----

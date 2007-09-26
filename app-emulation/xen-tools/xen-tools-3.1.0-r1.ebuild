@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.0.ebuild,v 1.5 2007/09/03 19:40:30 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.0-r1.ebuild,v 1.1 2007/09/26 22:43:49 marineam Exp $
 
 inherit flag-o-matic distutils eutils multilib
 
@@ -120,6 +120,10 @@ src_unpack() {
 
 	# Fix building small dumb utility called 'xen-detect' on hardened
 	epatch "${FILESDIR}/${PN}-3.1.0-xen-detect-nopie-fix.patch"
+
+	# Security fix, CVE-2007-4993
+	# https://bugs.gentoo.org/show_bug.cgi?id=193808
+	epatch "${FILESDIR}/${PN}-3.1.0-pygrub-security-fix.patch"
 }
 
 src_compile() {

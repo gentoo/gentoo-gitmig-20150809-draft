@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.4_p1.ebuild,v 1.6 2007/09/03 19:40:30 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.4_p1-r1.ebuild,v 1.1 2007/09/26 22:43:49 marineam Exp $
 
 inherit flag-o-matic distutils eutils multilib
 
@@ -119,6 +119,10 @@ src_unpack() {
 
 	# Disable QEMU monitor mode in VNC, bug #170917
 	epatch "${FILESDIR}/${P}"-remove-monitor-mode-from-vnc.patch
+
+	# Security fix, CVE-2007-4993
+	# https://bugs.gentoo.org/show_bug.cgi?id=193808
+	epatch "${FILESDIR}/${P}-pygrub-security-fix.patch"
 }
 
 src_compile() {
