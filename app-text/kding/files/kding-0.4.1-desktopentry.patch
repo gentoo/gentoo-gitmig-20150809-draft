@@ -1,0 +1,17 @@
+diff -Naur kding-0.4.1/src/kding.desktop kding-0.4.1.new/src/kding.desktop
+--- kding-0.4.1/src/kding.desktop       2007-09-09 17:30:04.000000000 +0200
++++ kding-0.4.1.new/src/kding.desktop   2007-09-25 09:53:00.217229625 +0200
+@@ -1,5 +1,6 @@
+ [Desktop Entry]
+-Encoding=UTF-8
++Version=1.0
++Type=Application
+ Name=KDing
+ GenericName=German-English Translator
+ GenericName[de]=Deutsch-Englisch Übersetzer
+@@ -7,4 +8,4 @@
+ Comment[de]=Übersetzungsprogramm
+ Exec=kding
+ Icon=kding
+-Type=Application
++Categories=Qt;KDE;Office;TextTools;Dictionary;

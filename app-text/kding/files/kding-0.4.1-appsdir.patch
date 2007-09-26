@@ -1,0 +1,49 @@
+diff -Naur kding-0.4.1/acinclude.m4 kding-0.4.1.new/acinclude.m4
+--- kding-0.4.1/acinclude.m4	2007-08-15 00:10:53.000000000 +0200
++++ kding-0.4.1.new/acinclude.m4	2007-08-16 16:01:53.931649708 +0200
+@@ -431,7 +431,7 @@
+     kde_htmldir='\${datadir}/doc/HTML'
+   fi
+   if test -z "$kde_appsdir"; then
+-    kde_appsdir='\${datadir}/applnk'
++    kde_appsdir='\${datadir}/applications'
+   fi
+   if test -z "$kde_icondir"; then
+     kde_icondir='\${datadir}/icons'
+diff -Naur kding-0.4.1/admin/acinclude.m4.in kding-0.4.1.new/admin/acinclude.m4.in
+--- kding-0.4.1/admin/acinclude.m4.in	2007-08-15 00:10:53.000000000 +0200
++++ kding-0.4.1.new/admin/acinclude.m4.in	2007-08-16 16:02:25.633813343 +0200
+@@ -431,7 +431,7 @@
+     kde_htmldir='\${datadir}/doc/HTML'
+   fi
+   if test -z "$kde_appsdir"; then
+-    kde_appsdir='\${datadir}/applnk'
++    kde_appsdir='\${datadir}/applications'
+   fi
+   if test -z "$kde_icondir"; then
+     kde_icondir='\${datadir}/icons'
+diff -Naur kding-0.4.1/src/Makefile.am kding-0.4.1.new/src/Makefile.am
+--- kding-0.4.1/src/Makefile.am	2007-08-15 00:10:53.000000000 +0200
++++ kding-0.4.1.new/src/Makefile.am	2007-08-16 16:03:15.762165949 +0200
+@@ -30,7 +30,7 @@
+ kde_kcfg_DATA = kding.kcfg
+ 
+ # this is where the desktop file will go 
+-shelldesktopdir   = $(kde_appsdir)/Utilities
++shelldesktopdir   = $(kde_appsdir)/kde
+ shelldesktop_DATA = kding.desktop
+ 
+ # this is where the shell's XML-GUI resource file goes
+diff -Naur kding-0.4.1/src/Makefile.in kding-0.4.1.new/src/Makefile.in
+--- kding-0.4.1/src/Makefile.in	2007-08-15 00:17:13.000000000 +0200
++++ kding-0.4.1.new/src/Makefile.in	2007-08-16 16:03:48.074236540 +0200
+@@ -378,7 +378,7 @@
+ kde_kcfg_DATA = kding.kcfg
+ 
+ # this is where the desktop file will go 
+-shelldesktopdir = $(kde_appsdir)/Utilities
++shelldesktopdir = $(kde_appsdir)/kde
+ shelldesktop_DATA = kding.desktop
+ 
+ # this is where the shell's XML-GUI resource file goes
+

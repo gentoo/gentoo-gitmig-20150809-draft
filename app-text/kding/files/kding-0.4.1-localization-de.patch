@@ -1,0 +1,65 @@
+diff -Naur kding-0.4.1/po/de.po kding-0.4.1.new/po/de.po
+--- kding-0.4.1/po/de.po	2007-09-09 17:31:16.000000000 +0200
++++ kding-0.4.1.new/po/de.po	2007-09-25 09:59:33.538226041 +0200
+@@ -41,7 +41,7 @@
+ 
+ #: kdingsystray.cpp:47
+ msgid "Translates the current content of the clipboard or selection"
+-msgstr "Übersetzt den aktuellen Inhalt der Zwischenablage oder der Auswahl"
++msgstr "Übersetzt den aktuellen Inhalt der Zwischenablage oder der Auswahl."
+ 
+ #: kdingsystray.cpp:49
+ msgid "Open translation dialog"
+@@ -49,7 +49,7 @@
+ 
+ #: kdingsystray.cpp:50
+ msgid "Opens a dialog where you can enter the word to be translated"
+-msgstr "Öffnet einen Dialog, in dem man das zu übersetzende Wort eingeben kann"
++msgstr "Öffnet einen Dialog, in dem man das zu übersetzende Wort eingeben kann."
+ 
+ #: kdingsystray.cpp:58
+ msgid "&Translate"
+@@ -65,7 +65,7 @@
+ 
+ #: main.cpp:31
+ msgid "Translate the given phrase"
+-msgstr "Übersetzt den angegebenen Ausdruck"
++msgstr "Übersetzt den angegebenen Ausdruck."
+ 
+ #: main.cpp:38
+ msgid "KDE port of Ding, the DIctionary Nice Grep"
+@@ -86,7 +86,7 @@
+ #: rc.cpp:6 rc.cpp:12
+ #, no-c-format
+ msgid "Enter the word or phrase you want to translate"
+-msgstr "Geben sie das Wort oder den Ausdruck ein, den Sie übersetzen möchten"
++msgstr "Geben Sie das Wort oder den Ausdruck ein, den Sie übersetzen möchten."
+ 
+ #. i18n: file ./translatedialogbase.ui line 102
+ #: rc.cpp:9
+@@ -124,11 +124,11 @@
+ 
+ #: translatedialog.cpp:101
+ msgid "Searching for '%1'"
+-msgstr "Suche nach '%1'"
++msgstr "Suche nach '%1'."
+ 
+ #: translatedialog.cpp:108
+ msgid "Another search is currently running"
+-msgstr "Es läuft bereits eine Suche"
++msgstr "Es läuft bereits eine Suche."
+ 
+ #: translatedialog.cpp:162
+ #, c-format
+@@ -136,8 +136,8 @@
+ "_n: Found 1 match for '%1'\n"
+ "Found %n matches for '%1'"
+ msgstr ""
+-"Einen passenden Eintrag gefunden für '%1'\n"
+-"%n passende Einträge gefunden für '%1'"
++"Einen passenden Eintrag gefunden für '%1'.\n"
++"%n passende Einträge gefunden für '%1'."
+ 
+ #: translatedialog.cpp:203
+ msgid ""
+
