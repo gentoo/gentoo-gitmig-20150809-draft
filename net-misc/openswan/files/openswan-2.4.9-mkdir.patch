@@ -1,0 +1,14 @@
+diff -Nru openswan-2.4.9.orig/programs/_realsetup/_realsetup.in openswan-2.4.9/programs/_realsetup/_realsetup.in
+--- openswan-2.4.9.orig/programs/_realsetup/_realsetup.in	2007-06-19 18:18:52.000000000 +0300
++++ openswan-2.4.9/programs/_realsetup/_realsetup.in	2007-09-26 10:27:37.000000000 +0300
+@@ -193,8 +193,8 @@
+ 
+ 	# preliminaries
+ 	perform rm -f $lock
+-	mkdir -p rundir > /dev/null 2>/dev/null
+-	mkdir -p subsysdir > /dev/null 2>/dev/null
++	mkdir -p $rundir > /dev/null 2>/dev/null
++	mkdir -p $subsysdir > /dev/null 2>/dev/null
+ 
+ 	# the meaning of $$ at a different runtime is questionable!
+ 	perform echo '$$' ">" $lock

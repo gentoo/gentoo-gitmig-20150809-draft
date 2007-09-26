@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.9.ebuild,v 1.3 2007/09/23 07:32:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.9-r1.ebuild,v 1.1 2007/09/26 08:14:22 mrness Exp $
 
 inherit eutils linux-info
 
@@ -51,6 +51,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-mkdir.patch
 }
 
 get_make_options() {
@@ -73,26 +74,42 @@ get_make_options() {
 }
 
 src_compile() {
-	make \
+	emake \
 		DESTDIR="${D}" \
 		USERCOMPILE="${CFLAGS}" \
 		$(get_make_options) \
-		${MYMAKE} || die "make failed"
+		${MYMAKE} || die "emake failed"
 }
 
 src_install() {
-	make \
+	emake \
 		DESTDIR="${D}" \
 		USERCOMPILE="${CFLAGS}" \
 		$(get_make_options) \
-		install || die "make install failed"
+		install || die "emake install failed"
 
 	dosym /etc/ipsec/ipsec.d /etc/ipsec.d
 
-	doinitd "${FILESDIR}"/ipsec
+	doinitd "${FILESDIR}"/ipsec || die "failed to install init script"
 
-	fperms -R a-X /etc/ipsec /usr/share
-	keepdir /var/run/pluto
+	dodir /var/run/pluto || die "failed to create /var/run/pluto"
+}
+
+pkg_preinst() {
+	# Try to fix previous openswan-2.4.9 blooper (#193824)
+	if [[ "${ROOT}" == / ]] && has_version "=net-misc/openswan-2.4.9" ; then
+		elog "Trying to remove empty {rundir,subsysdir} erroneously created by openswan-2.4.9"
+		local base dir
+		for base in / /root/ /etc/ ; do
+			for dir in rundir subsysdir ; do
+				if [[ -d "${base}${dir}" ]]; then
+					rmdir "${base}${dir}" \
+						&& elog "Empty directory ${base}${dir} has been removed" \
+						|| ewarn "Failed to remove ${base}${dir} (perhaps some other package owns it?)"
+				fi
+			done
+		done
+	fi
 }
 
 pkg_postinst() {
