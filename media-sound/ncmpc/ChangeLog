@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.25 2007/05/01 00:18:45 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.26 2007/09/26 15:59:03 jer Exp $
+
+  26 Sep 2007; Jeroen Roovers <jer@gentoo.org> ncmpc-0.11.1-r2.ebuild:
+  Stable for HPPA (Unicode support, bug #193881).
 
   01 May 2007; Marius Mauch <genone@gentoo.org> ncmpc-0.11.1-r1.ebuild,
   ncmpc-0.11.1-r2.ebuild:
