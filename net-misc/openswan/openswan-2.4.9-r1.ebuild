@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.9-r1.ebuild,v 1.1 2007/09/26 08:14:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.9-r1.ebuild,v 1.2 2007/09/26 09:05:02 mrness Exp $
 
 inherit eutils linux-info
 
@@ -31,7 +31,7 @@ pkg_setup() {
 		MYMAKE="programs"
 
 	elif kernel_is 2 4; then
-		if ! [ -d /usr/src/linux/net/ipsec ]; then
+		if ! [[ -d "${KERNEL_DIR}/net/ipsec" ]]; then
 			eerror "You need to have an IPsec enabled 2.4.x kernel."
 			eerror "Ensure you have one running and make a symlink to it in /usr/src/linux"
 			die
@@ -55,37 +55,35 @@ src_unpack() {
 }
 
 get_make_options() {
-	local MY_MAKE_OPTIONS="FINALCONFDIR=/etc/ipsec \
+	echo KERNELSRC=\"${KERNEL_DIR}\" \
+		FINALCONFDIR=/etc/ipsec \
 		INC_RCDEFAULT=/etc/init.d \
 		INC_USRLOCAL=/usr \
 		INC_MANDIR=share/man \
 		FINALEXAMPLECONFDIR=/usr/share/doc/${P} \
-		FINALDOCDIR=/usr/share/doc/${P}"
+		FINALDOCDIR=/usr/share/doc/${P} \
+		DESTDIR=\"${D}\" \
+		USERCOMPILE=\"${CFLAGS}\"
 	if use smartcard ; then
-		MY_MAKE_OPTIONS="${MY_MAKE_OPTIONS} USE_SMARTCARD=true"
+		echo USE_SMARTCARD=true
 	fi
 	if use extra-algorithms ; then
-		MY_MAKE_OPTIONS="${MY_MAKE_OPTIONS} USE_EXTRACRYPTO=true"
+		echo USE_EXTRACRYPTO=true
 	fi
 	if use weak-algorithms ; then
-		MY_MAKE_OPTIONS="${MY_MAKE_OPTIONS} USE_WEAKSTUFF=true"
+		echo USE_WEAKSTUFF=true
 	fi
-	echo ${MY_MAKE_OPTIONS}
 }
 
 src_compile() {
-	emake \
-		DESTDIR="${D}" \
-		USERCOMPILE="${CFLAGS}" \
-		$(get_make_options) \
+	eval set -- $(get_make_options)
+	emake "$@" \
 		${MYMAKE} || die "emake failed"
 }
 
 src_install() {
-	emake \
-		DESTDIR="${D}" \
-		USERCOMPILE="${CFLAGS}" \
-		$(get_make_options) \
+	eval set -- $(get_make_options)
+	emake "$@" \
 		install || die "emake install failed"
 
 	dosym /etc/ipsec/ipsec.d /etc/ipsec.d
