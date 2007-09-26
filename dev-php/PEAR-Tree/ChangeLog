@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Tree
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Tree/ChangeLog,v 1.27 2007/09/25 01:09:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Tree/ChangeLog,v 1.28 2007/09/26 18:11:58 ranger Exp $
+
+  26 Sep 2007; Brent Baude <ranger@gentoo.org> PEAR-Tree-0.3.2.ebuild:
+  Marking PEAR-Tree-0.3.2 ppc64 stable for bug 192247
 
   25 Sep 2007; Lars Weiler <pylon@gentoo.org> PEAR-Tree-0.3.2.ebuild:
   stable ppc, bug #192247
