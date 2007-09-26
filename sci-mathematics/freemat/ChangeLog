@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/freemat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.5 2007/09/25 19:27:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.6 2007/09/26 10:10:34 bicatali Exp $
+
+  26 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org> -freemat-3.2.ebuild,
+  freemat-3.4.ebuild, freemat-3.5.ebuild:
+  Added $ROOT when initializing freemat directory. Removed older version
 
 *freemat-3.5 (25 Sep 2007)
 
