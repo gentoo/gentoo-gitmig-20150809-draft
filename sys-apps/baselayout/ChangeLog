@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.437 2007/09/24 13:50:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.438 2007/09/26 00:57:37 vapier Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-1.12.10-r5 (26 Sep 2007)
+
+  26 Sep 2007; Mike Frysinger <vapier@gentoo.org>
+  +baselayout-1.12.10-r5.ebuild:
+  Add workaround for net.eth0 going AFK during upgrade to baselayout-2.
 
   24 Sep 2007; Mike Frysinger <vapier@gentoo.org>
   baselayout-2.0.0_rc4-r1.ebuild:
