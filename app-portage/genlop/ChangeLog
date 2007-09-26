@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.61 2007/09/26 14:21:41 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.62 2007/09/26 16:31:16 lavajoe Exp $
+
+  26 Sep 2007; Joe Peterson <lavajoe@gentoo.org> genlop-0.30.8.ebuild:
+  Add die message if installing (via dobin) the genlop program fails
 
   26 Sep 2007; Paul Varner <fuzzyray@gentoo.org> files/digest-genlop-0.30.8,
   Manifest:

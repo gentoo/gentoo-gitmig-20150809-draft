@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/genlop-0.30.8.ebuild,v 1.1 2007/09/25 23:29:03 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/genlop-0.30.8.ebuild,v 1.2 2007/09/26 16:31:16 lavajoe Exp $
 
 inherit bash-completion
 
@@ -18,7 +18,7 @@ DEPEND=">=dev-lang/perl-5.8.0-r12
 	 dev-perl/libwww-perl"
 
 src_install() {
-	dobin genlop || die
+	dobin genlop || die "failed to install genlop (via dobin)"
 	dodoc README Changelog
 	doman genlop.1
 	dobashcompletion genlop.bash-completion genlop
