@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.26 2007/09/25 21:01:02 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.27 2007/09/26 20:09:03 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -48,7 +48,7 @@ DEPEND=">=app-admin/eselect-gnat-1.1"
 PREFIX=/usr
 AdalibSpecsDir=${PREFIX}/include/ada
 AdalibDataDir=${PREFIX}/share/ada
-AdalibLibTop=${PREFIX}/lib/ada
+AdalibLibTop=${PREFIX}/$(get_libdir)/ada
 
 # build-time locations
 # SL is a "localized" S, - location where sources are copied for
