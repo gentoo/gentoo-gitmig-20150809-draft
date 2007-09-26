@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-I18Nv2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-I18Nv2/ChangeLog,v 1.10 2007/09/24 23:31:01 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-I18Nv2/ChangeLog,v 1.11 2007/09/26 17:58:18 ranger Exp $
+
+  26 Sep 2007; Brent Baude <ranger@gentoo.org> PEAR-I18Nv2-0.11.4.ebuild:
+  Marking PEAR-I18Nv2-0.11.4 ppc64 stable for bug 192247
 
   24 Sep 2007; Lars Weiler <pylon@gentoo.org> PEAR-I18Nv2-0.11.4.ebuild:
   stable ppc, bug #192247
