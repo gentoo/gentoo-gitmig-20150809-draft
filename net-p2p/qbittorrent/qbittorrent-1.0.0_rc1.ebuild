@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.0.0_rc1.ebuild,v 1.1 2007/09/25 20:28:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.0.0_rc1.ebuild,v 1.2 2007/09/26 13:29:45 armin76 Exp $
 
-inherit eutils qt4
+inherit eutils qt4 multilib
 
 MY_P="${P/_/}"
 
@@ -36,7 +36,7 @@ src_compile() {
 	# econf fails, since this uses qconf
 	./configure --prefix=/usr --qtdir=/usr \
 		--with-libtorrent-inc=/usr/include \
-		--with-libtorrent-lib=/usr/lib \
+		--with-libtorrent-lib=/usr/$(get_libdir) \
 		|| die "configure failed"
 	emake || die "emake failed"
 }
