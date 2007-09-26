@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.5.ebuild,v 1.5 2007/09/25 03:02:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.5.ebuild,v 1.6 2007/09/26 06:16:57 kumba Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.debian.org/~kov/gksu/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 mips ~ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="nls doc"
 
 DEPEND="doc? ( >=dev-util/gtk-doc-1.2-r1 )
