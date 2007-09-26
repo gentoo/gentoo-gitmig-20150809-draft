@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/cronbase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.21 2007/09/26 21:59:53 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.22 2007/09/26 23:25:53 fmccor Exp $
+
+  26 Sep 2007; Ferris McCormick <fmccor@gentoo.org>
+  cronbase-0.3.2-r1.ebuild:
+  Sparc stable --- security Bug #182998 --- it looks like bug says it should.
 
   26 Sep 2007; Raphael Marichez <falco@gentoo.org> cronbase-0.3.2-r1.ebuild:
   Unconditionally change directories permissions (working around bug 141619)
