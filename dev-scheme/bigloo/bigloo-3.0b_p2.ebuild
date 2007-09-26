@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0b_p2.ebuild,v 1.1 2007/09/24 12:35:11 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0b_p2.ebuild,v 1.2 2007/09/26 14:55:49 hkbst Exp $
 
 inherit elisp-common multilib
 
@@ -45,17 +45,6 @@ src_compile() {
 
 	# parallel build is broken
 	emake -j1 || die "emake failed"
-}
-
-# "make test" does something weird so default src_test() in /usr/lib/portage/bin/ebuild.sh fails the following test
-# elif emake -j1 test -n &> /dev/null; then
-# so copy straight from default src_test() all the stuff which depends on that test passing
-src_test() {
-	vecho ">>> Test phase [test]: ${CATEGORY}/${PF}"
-	if ! emake -j1 test; then
-		hasq test $FEATURES && die "Make test failed. See above for details."
-		hasq test $FEATURES || eerror "Make test failed. See above for details."
-	fi
 }
 
 src_install () {
