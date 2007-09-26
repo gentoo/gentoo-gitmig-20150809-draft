@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1.ebuild,v 1.2 2007/09/26 19:25:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1.ebuild,v 1.3 2007/09/26 23:51:05 matsuu Exp $
 WANT_AUTOCONF='latest'
 WANT_AUTOMAKE='latest'
 inherit eutils autotools
@@ -12,10 +12,10 @@ SRC_URI="mirror://sourceforge/aide/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="acl audit curl mhash nls postgres selinux static xattr zlib"
+IUSE="acl curl mhash nls postgres selinux static xattr zlib"
+#IUSE="acl audit curl mhash nls postgres selinux static xattr zlib"
 
 DEPEND="acl? ( sys-apps/acl )
-	audit? ( sys-process/audit )
 	curl? ( net-misc/curl )
 	mhash? ( >=app-crypt/mhash-0.9.2 )
 	!mhash? ( dev-libs/libgcrypt )
@@ -24,6 +24,7 @@ DEPEND="acl? ( sys-apps/acl )
 	selinux? ( sys-libs/libselinux )
 	xattr? ( sys-apps/attr )
 	zlib? ( sys-libs/zlib )"
+#	audit? ( sys-process/audit )
 
 RDEPEND="!static? ( ${DEPEND} )
 	virtual/mailx"
@@ -67,7 +68,7 @@ src_compile() {
 	use selinux && myconf="${myconf} --with-selinux"
 	use acl && myconf="${myconf} --with-posix-acl"
 	use xattr && myconf="${myconf} --with-xattr"
-	use audit && myconf="${myconf} --with-audit"
+#	use audit && myconf="${myconf} --with-audit"
 
 	# curl doesn't work with static
 	use curl && ! use static && myconf="${myconf} --with-curl"
@@ -78,7 +79,8 @@ src_compile() {
 		|| myconf="${myconf} --with-gcrypt --without-mhash"
 
 	econf ${myconf} || die
-	emake || die
+	# parallel make borked
+	emake -j1 || die
 }
 
 src_install() {
