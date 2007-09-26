@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-cblas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.17 2007/07/22 15:33:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.18 2007/09/26 14:23:25 armin76 Exp $
+
+  26 Sep 2007; Raúl Porcel <armin76@gentoo.org> eselect-cblas-0.1.ebuild:
+  alpha stable wrt #189732
 
   22 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   eselect-cblas-0.1.ebuild:
