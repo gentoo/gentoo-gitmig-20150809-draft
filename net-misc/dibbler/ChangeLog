@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dibbler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.4 2007/04/28 22:44:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.5 2007/09/26 12:56:55 gmsoft Exp $
+
+*dibbler-0.6.1 (26 Sep 2007)
+
+  26 Sep 2007; Guy Martin <gmsoft@gentoo.org> +dibbler-0.6.1.ebuild:
+  Version bump. Fix #166013.
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> dibbler-0.4.1.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)
