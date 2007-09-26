@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Date
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.45 2007/09/25 00:17:43 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.46 2007/09/26 17:55:44 ranger Exp $
+
+  26 Sep 2007; Brent Baude <ranger@gentoo.org> PEAR-Date-1.4.7.ebuild:
+  Marking PEAR-Date-1.4.7 ppc64 stable for bug 192247
 
   25 Sep 2007; Lars Weiler <pylon@gentoo.org> PEAR-Date-1.4.7.ebuild:
   stable ppc, bug #192247
