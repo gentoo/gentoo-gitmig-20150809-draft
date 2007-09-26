@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.60 2007/09/25 23:29:03 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.61 2007/09/26 14:21:41 fuzzyray Exp $
+
+  26 Sep 2007; Paul Varner <fuzzyray@gentoo.org> files/digest-genlop-0.30.8,
+  Manifest:
+  Fix bad manifest
 
 *genlop-0.30.8 (25 Sep 2007)
 
