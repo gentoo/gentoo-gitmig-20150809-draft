@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.97.ebuild,v 1.7 2007/06/12 13:10:31 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.97.ebuild,v 1.8 2007/09/26 04:54:46 mrness Exp $
 
 inherit toolchain-funcs eutils
 
@@ -13,6 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
+DEPEND=""
 RDEPEND=">=sys-apps/ucspi-unix-0.34
 	virtual/qmail
 	>=net-mail/qmail-autoresponder-0.95"
@@ -29,7 +30,7 @@ src_unpack() {
 }
 
 src_install() {
-	make "DESTDIR=${D}" install || die "make install failed"
+	emake "DESTDIR=${D}" install || die "emake install failed"
 
 	dodoc AUTHORS README TODO NEWS
 	dohtml doc/*.html daemon/*.html authenticate/*.html commands/*.html
@@ -37,15 +38,15 @@ src_install() {
 	dohtml cgi/*.html
 
 	exeinto /var/lib/supervise/vmailmgrd
-	newexe "${S}/scripts/vmailmgrd.run" run
+	newexe "${S}/scripts/vmailmgrd.run" run || die "failed to install vmailmgrd/run script"
 
 	exeinto /var/lib/supervise/vmailmgrd/log
-	newexe "${S}/scripts/vmailmgrd-log.run" run
+	newexe "${S}/scripts/vmailmgrd-log.run" run || die "failed to install vmailmgrd/log/run script"
 
 	exeinto /etc/vmailmgr
-	newexe "${S}/scripts/autoresponder.sh" vdeliver-postdeliver
+	newexe "${S}/scripts/autoresponder.sh" vdeliver-postdeliver || die "failed to install vdeliver-postdeliver"
 
-	doexe "${FILESDIR}/checkvpw-loginfail"
+	doexe "${FILESDIR}/checkvpw-loginfail" || die "failed to install checkvpw-loginfail"
 
 	insinto /etc/vmailmgr
 	doins "${FILESDIR}/socket-file"

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vmailmgr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.28 2007/06/12 13:10:31 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.29 2007/09/26 04:54:46 mrness Exp $
+
+  26 Sep 2007; Alin Năstac <mrness@gentoo.org> vmailmgr-0.97.ebuild:
+  Sanitize ebuild code.
 
   12 Jun 2007; Marius Mauch <genone@gentoo.org> vmailmgr-0.97.ebuild:
   Replacing einfo with elog
