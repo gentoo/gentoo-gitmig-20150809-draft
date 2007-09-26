@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc4-r1.ebuild,v 1.3 2007/09/24 13:50:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc4-r1.ebuild,v 1.4 2007/09/26 06:41:49 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -17,14 +17,14 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbs
 IUSE="bootstrap build pam static unicode kernel_linux kernel_FreeBSD"
 
 RDEPEND="virtual/init
-		!build? (
-			!bootstrap? (
-				kernel_linux? ( >=sys-apps/coreutils-5.2.1 )
-				kernel_FreeBSD? ( sys-process/fuser-bsd )
-			)
+	!build? (
+		!bootstrap? (
+			kernel_linux? ( >=sys-apps/coreutils-5.2.1 )
+			kernel_FreeBSD? ( sys-process/fuser-bsd )
 		)
-		pam? ( virtual/pam )
-		!<net-misc/dhcpcd-2.0.0"
+	)
+	pam? ( virtual/pam )
+	!<net-misc/dhcpcd-2.0.0"
 DEPEND="virtual/os-headers"
 PDEPEND="virtual/init
 	!build? ( !bootstrap? (
@@ -37,7 +37,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}"-ssd.patch
+	epatch "${FILESDIR}"/${P}-ssd.patch
 
 	# Setup unicode defaults for silly unicode users
 	if use unicode ; then
@@ -46,18 +46,15 @@ src_unpack() {
 }
 
 make_opts() {
-	local libdir="lib"
-	[[ ${SYMLINK_LIB} == "yes" ]] && libdir=$(get_abi_LIBDIR "${DEFAULT_ABI}")
-	local opts="${opts} LIB=${libdir}"
+	[[ ${SYMLINK_LIB} == "yes" ]] \
+		&& echo LIB=$(get_abi_LIBDIR "${DEFAULT_ABI}") \
+		|| echo LIB="lib"
 
-	if use kernel_linux ; then
-		opts="${opts} OS=Linux"
-	else
-		opts="${opts} OS=BSD"
-	fi
-	use pam && opts="${opts} HAVE_PAM=1"
+	use kernel_linux \
+		&& echo OS="Linux" \
+		|| echo OS="BSD"
 
-	echo "${opts}"
+	use pam && echo HAVE_PAM=1
 }
 
 src_compile() {
@@ -67,7 +64,7 @@ src_compile() {
 
 # Support function for remapping old wireless dns vars
 remap_dns_vars() {
-	if [[ -f "${ROOT}/etc/conf.d/$1" ]]; then
+	if [[ -f ${ROOT}/etc/conf.d/$1 ]]; then
 		sed -e 's/\<domain_/dns_domain_/g' \
 			-e 's/\<mac_domain_/mac_dns_domain_/g' \
 			-e 's/\<nameservers_/dns_servers_/g' \
@@ -107,7 +104,7 @@ pkg_preinst() {
 			ln -s "${lib}" "${ROOT}usr/local/lib"
 		fi
 
-		make -C "${T}" $(make_opts) DESTDIR="${ROOT}" layout || die "failed to layout filesystem"
+		emake -C "${T}" $(make_opts) DESTDIR="${ROOT}" layout || die "failed to layout filesystem"
 	fi
 
 	# Change some vars introduced in baselayout-1.11.0 before we go stable
@@ -156,7 +153,7 @@ pkg_postinst() {
 	# Make our runlevels if they don't exist
 	if [[ ! -e ${ROOT}etc/runlevels ]] ; then
 		einfo "Making default runlevels"
-		make -C "${T}" $(make_opts) DESTDIR="${ROOT}" runlevels_install >/dev/null
+		emake -s -C "${T}" $(make_opts) DESTDIR="${ROOT}" runlevels_install
 	fi
 
 	# We installed some files to /usr/share/baselayout instead of /etc to stop
@@ -165,9 +162,9 @@ pkg_postinst() {
 	# (3) accidentally packaging up personal files with quickpkg
 	# If they don't exist then we install them
 	for x in master.passwd passwd shadow group fstab ; do
-		[[ -e "${ROOT}etc/${x}" ]] && continue
-		[[ -e "${ROOT}usr/share/baselayout/${x}" ]] || continue
-		cp -p "${ROOT}usr/share/baselayout/${x}" ${ROOT}etc
+		[[ -e ${ROOT}etc/${x} ]] && continue
+		[[ -e ${ROOT}usr/share/baselayout/${x} ]] || continue
+		cp -p "${ROOT}usr/share/baselayout/${x}" "${ROOT}"etc
 	done
 
 	# We need to copy svcdir if upgrading
@@ -205,8 +202,8 @@ pkg_postinst() {
 
 	local lo="net.lo0"
 	use kernel_linux && lo="net.lo"
-	for f in ${ROOT}etc/init.d/net.*; do
-		[[ -L ${f} || ${f} == "${ROOT}etc/init.d/${lo}" ]] && continue
+	for f in "${ROOT}"etc/init.d/net.*; do
+		[[ -L ${f} || ${f} == */${lo} ]] && continue
 		echo
 		einfo "WARNING: You have older net.* files in ${ROOT}etc/init.d/"
 		einfo "They need to be converted to symlinks to ${lo}.	If you haven't"
@@ -242,10 +239,10 @@ pkg_postinst() {
 	fi
 
 	# Remove old stuff that may cause problems.
-	if [[ -e "${ROOT}"/etc/env.d/01hostname ]] ; then
+	if [[ -e ${ROOT}/etc/env.d/01hostname ]] ; then
 		rm -f "${ROOT}"/etc/env.d/01hostname
 	fi
-	if [[ -e "${ROOT}"/etc/init.d/domainname ]] ; then
+	if [[ -e ${ROOT}/etc/init.d/domainname ]] ; then
 		rm -f "${ROOT}"/etc/{conf.d,init.d}/domainname \
 			"${ROOT}"/etc/runlevels/*/domainname
 		echo
