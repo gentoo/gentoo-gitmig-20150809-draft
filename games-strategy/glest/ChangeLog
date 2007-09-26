@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/glest
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.15 2007/06/27 18:04:35 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.16 2007/09/26 21:55:30 tupone Exp $
+
+*glest-2.0.1 (26 Sep 2007)
+
+  26 Sep 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/glest-2.0.1-home.patch, +glest-2.0.1.ebuild:
+  Version bump to 2.0.1 Bug #191636 by Greg Fitzgerald
 
   27 Jun 2007; Tristan Heaven <nyhm@gentoo.org> glest-2.0.0-r1.ebuild:
   Don't rely on LINGUAS being set
