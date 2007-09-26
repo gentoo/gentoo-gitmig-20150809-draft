@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.666 2007/09/26 13:29:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.667 2007/09/26 17:12:58 matsuu Exp $
+
+  26 Sep 2007; MATSUU Takuto <matsuu@gentoo.org> use.local.desc:
+  Added audit and xattr USE flag for app-forensics/aide.
 
   26 Sep 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Mask app-emacs/speedbar for removal.
