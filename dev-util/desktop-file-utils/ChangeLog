@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.63 2007/09/25 04:05:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.64 2007/09/26 04:41:36 kumba Exp $
+
+  26 Sep 2007; Joshua Kinard <kumba@gentoo.org>
+  desktop-file-utils-0.14.ebuild:
+  Stable on mips, per #193339.
 
   25 Sep 2007; Jeroen Roovers <jer@gentoo.org>
   desktop-file-utils-0.14.ebuild:
