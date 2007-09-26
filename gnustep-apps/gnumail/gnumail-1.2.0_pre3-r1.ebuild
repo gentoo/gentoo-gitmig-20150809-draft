@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre3-r1.ebuild,v 1.1 2007/09/26 11:52:46 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre3-r1.ebuild,v 1.2 2007/09/26 15:12:40 voyageur Exp $
 
 inherit gnustep-2
 
@@ -64,22 +64,22 @@ src_install() {
 	gnustep-base_src_install
 
 	cd Bundles/Clock
-	egnustep_install || die
+	egnustep_install
 	cd "${S}"
 
 	if use xface ; then
 		cd Bundles/Face
-		egnustep_install || die
+		egnustep_install
 		cd "${S}"
 	fi
 	if use crypt ; then
 		cd Bundles/PGP
-		egnustep_install || die
+		egnustep_install
 		cd "${S}"
 	fi
 	if use emoticon ; then
 		cd Bundles/Emoticon
-		egnustep_install || die
+		egnustep_install
 		cd "${S}"
 	fi
 
