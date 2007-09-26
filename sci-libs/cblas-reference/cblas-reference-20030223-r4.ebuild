@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.4 2007/09/13 19:03:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.5 2007/09/26 14:27:28 armin76 Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.netlib.org/blas/blast-forum/${MyPN}.tgz"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 
 DEPEND="virtual/blas
 	dev-util/pkgconfig
