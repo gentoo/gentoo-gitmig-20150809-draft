@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r3.ebuild,v 1.7 2007/09/25 19:14:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.6-r3.ebuild,v 1.8 2007/09/26 05:51:54 mrness Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 	sys-apps/iproute2"
 
 src_unpack() {
-	unpack ${A} || die "failed to unpack sources"
+	unpack ${A}
 
 	cd "${S}" || die "source dir not found"
 	# Fix security quagga bug 355
@@ -96,7 +96,7 @@ src_install() {
 		exampledir="${D}/etc/quagga/samples" \
 		libdir="${D}/usr/$(get_libdir)/quagga" || die "make install failed"
 
-	keepdir /var/run/quagga || die
+	dodir /var/run/quagga || die "failed to install /var/run/quagga"
 
 	local i MY_SERVICES_LIST="zebra ripd ospfd bgpd"
 	use ipv6 && MY_SERVICES_LIST="${MY_SERVICES_LIST} ripngd ospf6d"
@@ -107,10 +107,10 @@ src_install() {
 
 	if use pam; then
 		insinto /etc/pam.d
-		newins "${FILESDIR}/quagga.pam" quagga
+		newins "${FILESDIR}/quagga.pam" quagga || die "failed to install pam.d file"
 	fi
 
-	newenvd "${FILESDIR}/quagga.env" 99quagga
+	newenvd "${FILESDIR}/quagga.env" 99quagga || die "failed to install env file"
 }
 
 pkg_preinst() {
