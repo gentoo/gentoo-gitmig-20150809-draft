@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.4.ebuild,v 1.3 2007/09/18 18:53:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.4.ebuild,v 1.4 2007/09/26 12:31:30 angelos Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=none
@@ -13,7 +13,7 @@ SRC_URI="http://wvstreams.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="qt3 qdbm pam slp doc debug"
 
 RESTRICT="test"
