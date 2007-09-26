@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_URL
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL/ChangeLog,v 1.27 2007/09/25 00:51:10 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL/ChangeLog,v 1.28 2007/09/26 17:57:27 ranger Exp $
+
+  26 Sep 2007; Brent Baude <ranger@gentoo.org> PEAR-Net_URL-1.0.15.ebuild:
+  Marking PEAR-Net_URL-1.0.15 ppc64 stable for bug 192247
 
   25 Sep 2007; Lars Weiler <pylon@gentoo.org> PEAR-Net_URL-1.0.15.ebuild:
   stable ppc, bug #192247
