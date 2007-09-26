@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/matchbox-applet-startup-monitor
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-startup-monitor/ChangeLog,v 1.4 2006/08/07 17:12:07 yvasilev Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-startup-monitor/ChangeLog,v 1.5 2007/09/26 04:03:01 jer Exp $
+
+  26 Sep 2007; Jeroen Roovers <jer@gentoo.org>
+  matchbox-applet-startup-monitor-0.1.ebuild:
+  Marked ~hppa too.
 
   07 Aug 2006; <yvasilev@gentoo.org>
   matchbox-applet-startup-monitor-0.1.ebuild:
