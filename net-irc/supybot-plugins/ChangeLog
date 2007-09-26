@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/supybot-plugins
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot-plugins/ChangeLog,v 1.1 2007/09/26 20:01:31 lack Exp $
+
+*supybot-plugins-20060723 (26 Sep 2007)
+
+  26 Sep 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +supybot-plugins-20060723.ebuild:
+  Adding new ebuild. This is the officially released set of extra plugins for
+  Supybot.
+
