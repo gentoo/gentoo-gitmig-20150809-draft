@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-DB_DataObject
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.30 2007/09/25 00:14:51 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.31 2007/09/26 18:13:16 ranger Exp $
+
+  26 Sep 2007; Brent Baude <ranger@gentoo.org>
+  PEAR-DB_DataObject-1.8.7.ebuild:
+  Marking PEAR-DB_DataObject-1.8.7 ppc64 stable for bug 192247
 
   25 Sep 2007; Lars Weiler <pylon@gentoo.org>
   PEAR-DB_DataObject-1.8.7.ebuild:
