@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.664 2007/09/26 05:27:30 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.665 2007/09/26 06:16:40 ulm Exp $
+
+  26 Sep 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Remove app-emacs/slime-cvs from package.mask since the package was removed.
 
   26 Sep 2007; Jeff Gardner <je_fro@gentoo.org> package.mask:
   Removed xf86-video-radeonhd from p.mask as it's not going in the tree just
