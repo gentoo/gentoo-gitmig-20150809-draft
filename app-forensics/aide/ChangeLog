@@ -1,6 +1,17 @@
 # ChangeLog for app-forensics/aide
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.23 2007/09/04 18:16:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.24 2007/09/26 17:14:17 matsuu Exp $
+
+*aide-0.13.1 (26 Sep 2007)
+
+  26 Sep 2007; MATSUU Takuto <matsuu@gentoo.org>
+  +files/aide-0.13.1-gentoo.patch, metadata.xml, +aide-0.13.1.ebuild:
+  Version bumped, bug #126694, #191597.
+  Added static USE flag, bug #92250.
+  Added mail-client/mailx to DEPEND, bug #153952.
+  Fixed dependency, bug #163687.
+  Clean up ebuild.
+  Added myself to metadata.xml as maintainer.
 
   04 Sep 2007; Raúl Porcel <armin76@gentoo.org>
   aide-0.10_p20040917-r1.ebuild:
