@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-pl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.8 2007/07/16 22:57:28 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.9 2007/09/26 19:37:44 spock Exp $
+
+  26 Sep 2007; Michał Januszewski <spock@gentoo.org>
+  -man-pages-pl-20040401.ebuild:
+  Remove an old ebuild (bug #193619).
 
 *man-pages-pl-20070628 (16 Jul 2007)
 
