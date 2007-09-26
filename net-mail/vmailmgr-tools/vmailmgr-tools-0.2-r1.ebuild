@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr-tools/vmailmgr-tools-0.2-r1.ebuild,v 1.3 2007/01/14 22:41:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr-tools/vmailmgr-tools-0.2-r1.ebuild,v 1.4 2007/09/26 04:57:07 mrness Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
+DEPEND=""
 RDEPEND="net-mail/vmailmgr"
 
 src_unpack() {
@@ -27,7 +28,7 @@ src_compile() {
 	echo "${D}/usr/bin" > conf-bin
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
-	make || die "make failed"
+	emake || die "emake failed"
 }
 
 src_install() {
