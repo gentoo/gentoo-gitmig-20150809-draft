@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.5-r2.ebuild,v 1.1 2007/08/02 08:56:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.5-r2.ebuild,v 1.2 2007/09/26 05:34:42 vapier Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A set of tools that use the proc filesystem"
 HOMEPAGE="http://psmisc.sourceforge.net/"
@@ -25,6 +25,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-22.2-gcc2.patch
 	epatch "${FILESDIR}"/${P}-user-header.patch
 	epatch "${FILESDIR}"/${P}-sockets.patch
+	# this package doesnt actually need C++
+	sed -i '/AC_PROG_CXX/d' configure.ac || die
+	eautoreconf
 }
 
 src_compile() {
