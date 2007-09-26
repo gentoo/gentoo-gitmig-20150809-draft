@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/table/table-1.5.54-r2.ebuild,v 1.1 2007/08/27 19:14:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/table/table-1.5.54-r2.ebuild,v 1.2 2007/09/26 06:05:54 ulm Exp $
 
 inherit elisp versionator
 
@@ -21,8 +21,7 @@ src_compile() {
 }
 
 src_install() {
-	elisp-install ${PN} *.el *.elc
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+	elisp_src_install
 	# prevent inclusion of package dir by subdirs.el
 	touch "${D}${SITELISP}/${PN}/.nosearch"
 }
