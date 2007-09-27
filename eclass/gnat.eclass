@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.28 2007/09/26 20:41:33 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.29 2007/09/27 12:56:41 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -134,7 +134,7 @@ get_active_profile() {
 	local profiles=( $(get_env_list) ) 
 
 	if [[ ${profiles[@]} == "${MARKER}*" ]]; then 
-		exit 
+		return 
 		# returning empty string
 	fi
 
