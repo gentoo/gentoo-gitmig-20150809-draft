@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cinit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cinit/ChangeLog,v 1.8 2007/09/01 19:19:45 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cinit/ChangeLog,v 1.9 2007/09/27 14:20:23 angelos Exp $
+
+  27 Sep 2007; Christoph Mende <angelos@gentoo.org> cinit-0.2.1.ebuild:
+  Removed contrib+tools that didn't get installed anyways
 
 *cinit-0.2.1 (01 Sep 2007)
 
