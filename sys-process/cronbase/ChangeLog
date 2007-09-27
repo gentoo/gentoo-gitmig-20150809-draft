@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/cronbase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.24 2007/09/27 01:43:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.25 2007/09/27 07:54:49 opfer Exp $
+
+  27 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  cronbase-0.3.2-r1.ebuild:
+  stable x86, security bug #182998
 
   27 Sep 2007; Jeroen Roovers <jer@gentoo.org> cronbase-0.3.2-r1.ebuild:
   Stable for HPPA (bug #182998).
