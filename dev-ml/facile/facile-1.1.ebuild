@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/facile-1.1.ebuild,v 1.3 2007/09/22 15:27:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/facile-1.1.ebuild,v 1.4 2007/09/27 13:51:35 armin76 Exp $
 
 DESCRIPTION="FaCiLe is a constraint programming library on integer and integer set finite domains written in OCaml."
 HOMEPAGE="http://www.recherche.enac.fr/log/facile/"
@@ -10,7 +10,7 @@ RESTRICT="mirror"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ocaml-3.09.3-r1"
