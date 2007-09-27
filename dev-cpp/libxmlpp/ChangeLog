@@ -1,6 +1,14 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.57 2007/08/28 20:15:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.58 2007/09/27 22:02:57 leio Exp $
+
+  27 Sep 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/libxmlpp-2.8.0-fix-errant-semicolon.diff,
+  -files/libxmlpp-2.8.0-use-correct-callback.diff,
+  -files/libxmlpp-2.10.0-use-correct-callback.diff, -libxmlpp-0.27.0.ebuild,
+  -libxmlpp-1.0.2.ebuild, -libxmlpp-2.8.0-r2.ebuild,
+  -libxmlpp-2.10.0-r1.ebuild:
+  Remove redundant versions
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org> libxmlpp-2.13.1.ebuild:
   Stable for HPPA (bug #188838).
