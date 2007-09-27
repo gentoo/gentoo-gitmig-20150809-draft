@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.5.10.ebuild,v 1.1 2007/09/27 06:56:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.3.5.10.ebuild,v 1.2 2007/09/27 18:20:38 graaff Exp $
 
 inherit eutils multilib perl-app
 
@@ -98,14 +98,14 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "Installation of files into image failed"
 	dosed "s:-I/usr/include ::" /usr/bin/Magick{,++}-config
 
 	# dont need these files with runtime plugins
 	rm -f "${D}"/usr/$(get_libdir)/*/*/*.{la,a}
 
 	! use doc && rm -r "${D}"/usr/share/doc/${PF}/html
-	dodoc NEWS ChangeLog AUTHORS README.txt QuickStart.txt Install-unix.txt
+	dodoc NEWS ChangeLog AUTHORS README.txt
 
 	# Fix perllocal.pod file collision
 	use perl && fixlocalpod
