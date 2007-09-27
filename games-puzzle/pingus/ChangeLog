@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/pingus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.12 2007/09/25 12:50:27 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.13 2007/09/27 15:26:49 josejx Exp $
+
+  27 Sep 2007; Joseph Jezak <josejx@gentoo.org> pingus-0.7.1.ebuild:
+  Marked ~ppc for bug #193820.
 
 *pingus-0.7.1 (25 Sep 2007)
 
