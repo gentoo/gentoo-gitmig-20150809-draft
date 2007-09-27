@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3043 2007/09/27 14:43:36 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3044 2007/09/27 19:06:07 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -740,6 +740,7 @@ gnome-extra/nautilus-sendto:thunderbird - Enable support for thunderbird
 gnome-extra/sensors-applet:hddtemp - Enable support the hddtemp daemon
 gnome-extra/sensors-applet:nvidia - Enable support for nvidia sensors
 gnome-extra/yelp:beagle - Enable beagle support
+gnome-extra/zim:trayicon - Enable support for trayicon
 gnustep-apps/cynthiune:modplug - Build with modplug support
 gnustep-apps/cynthiune:timidity - Build with Timidity++ (MIDI sequencer) support
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages.
@@ -1077,7 +1078,7 @@ media-sound/picard:cdaudio - Enable support for CD Index Lookups.
 media-sound/podcatcher:bittorrent - Enable support for bittorrent downloads
 media-sound/prokyon3:taglib - Enable tagging support with taglib
 media-sound/quodlibet:mmkeys - Enable support for special keys on multimedia keyboards
-media-sound/quodlibet:trayicon - Enable support for tray icon plugins
+media-sound/quodlibet:trayicon - Enable support for trayicon
 media-sound/radiomixer:hwmixer - Use hardware mixer instead of internal mixer routines
 media-sound/radiomixer:songdb - Enable usage of SongDB backend
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), usefull for slower computers
@@ -1465,7 +1466,7 @@ net-im/gaim:qq - Enable QQ protocol support.
 net-im/gaim:silc - Enable SILC protocol support
 net-im/gajim:idle - Enable idle module
 net-im/gajim:srv - SRV capabilities
-net-im/gajim:trayicon - Enable the trayicon module
+net-im/gajim:trayicon - Enable support for trayicon
 net-im/gajim:xhtml - Enable XHTML support
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/gossip:galago - Enable desktop presence with galago
@@ -1683,7 +1684,7 @@ net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
 net-p2p/mldonkey:guionly - enable client build only
 net-p2p/mldonkey:magic - enable use of libmagic
 net-p2p/museek+:qsa - Enable QSA scripting for museeq
-net-p2p/museek+:trayicon - Enable support for tray icon
+net-p2p/museek+:trayicon - Enable support for trayicon
 net-p2p/transmission:daemon - Enable data collection daemon
 net-print/hplip:fax - Enable fax support
 net-print/hplip:parport - Enable parallel port support
