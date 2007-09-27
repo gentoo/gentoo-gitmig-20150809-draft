@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.0-r1.ebuild,v 1.3 2007/09/26 18:41:51 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.0-r1.ebuild,v 1.4 2007/09/27 11:19:19 eva Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -28,10 +28,10 @@ RESTRICT="test"
 # If you want to only compile for specific camera(s), set CAMERAS
 # environment to a space-separated list (no commas) of drivers that
 # you want to build.
-IUSE_CAMERAS="adc65 agfa_cl20 aox barbie canon casio casio_qv clicksmart310
+IUSE_CAMERAS="adc65 agfa_cl20 aox barbie canon casio_qv clicksmart310
 digigr8 digita dimera3500 directory enigma13 fuji gsmart300 hp215 iclick
 jamcam jd11 kodak_dc120 kodak_dc210 kodak_dc240 kodak_dc3200 kodak_ez200
-konica konika_qm150 largan lg_gsm mars dimagev mustek panasonic_coolshot
+konica konica_qm150 largan lg_gsm mars dimagev mustek panasonic_coolshot
 panasonic_l859 panasonic_dc1000 panasonic_dc1580 pccam300 pccam600
 polaroid_pdc320 polaroid_pdc640 polaroid_pdc700 ptp2 ricoh ricoh_g3 samsung
 sierra sipix_blink sipix_blink2 sipix_web2 smal sonix sony_dscf1 sony_dscf55

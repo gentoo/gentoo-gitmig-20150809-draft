@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.110 2007/09/26 18:41:51 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.111 2007/09/27 11:19:19 eva Exp $
+
+  27 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgphoto2-2.4.0.ebuild, libgphoto2-2.4.0-r1.ebuild:
+  fix typos in IUSE_CAMERAS per bug #193850
 
   26 Sep 2007; Matthias Schwarzott <zzam@gentoo.org>
   libgphoto2-2.4.0-r1.ebuild:
