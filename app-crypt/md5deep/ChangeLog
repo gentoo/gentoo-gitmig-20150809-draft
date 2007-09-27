@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/md5deep
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.28 2007/08/30 12:24:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.29 2007/09/27 16:54:48 fmccor Exp $
+
+  27 Sep 2007; Ferris McCormick <fmccor@gentoo.org> md5deep-1.13.ebuild:
+  Sparc stable --- Bug #194000 --- md5deep agrees with md5, and so on.
 
   30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing liquidx from metadata due to his retirement (see #171155 for
