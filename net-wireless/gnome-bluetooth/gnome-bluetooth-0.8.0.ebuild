@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.8.0.ebuild,v 1.1 2006/11/04 08:49:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.8.0.ebuild,v 1.2 2007/09/27 22:45:41 philantrop Exp $
 
 inherit distutils gnome2 eutils multilib autotools
 
@@ -41,6 +41,8 @@ USE_DESTDIR=1
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-G_DEPRECATED.patch"
 	sed -i -e 's:${libdir:/${platlibdir:' acinclude.m4
 	eautoreconf
 }
