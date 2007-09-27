@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/PEAR-Benchmark-1.2.7-r1.ebuild,v 1.1 2007/09/27 21:29:57 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/PEAR-Benchmark-1.2.7-r1.ebuild,v 1.2 2007/09/27 23:42:25 ranger Exp $
 
 inherit php-pear-r1 depend.php eutils
 
 DESCRIPTION="Framework to benchmark PHP scripts or function calls."
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 src_unpack() {
