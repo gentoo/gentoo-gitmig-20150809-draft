@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.669 2007/09/27 18:46:15 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.670 2007/09/27 21:05:13 kevquinn Exp $
+
+  27 Sep 2007; Kevin F. Quinn <kevquinn@gentoo.org> package.mask:
+  Masked acroread-8.1.1 for testing
 
   27 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> package.mask:
   Temporaryly p.masked =dev-util/cmake-2.4.7-r2 for further testing and until

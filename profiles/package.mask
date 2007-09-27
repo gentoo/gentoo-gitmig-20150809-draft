@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7752 2007/09/27 19:10:29 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7753 2007/09/27 21:05:13 kevquinn Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Kevin F. Quinn <kevquinn@gentoo.org> (27 Sep 2007)
+# Masked for testing
+=app-text/acroread-8.1.1
 
 # Wulf C. Krueger <philantrop@gentoo.org> (27 Sep 2007)
 # Temporary mask for further testing and until xmlrpc-c has been keyworded
