@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/cronbase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.26 2007/09/27 11:07:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.27 2007/09/27 16:33:43 ranger Exp $
+
+  27 Sep 2007; Brent Baude <ranger@gentoo.org> cronbase-0.3.2-r1.ebuild:
+  Marking cronbase-0.3.2-r1 ppc64 for bug#182998
 
   27 Sep 2007; Raúl Porcel <armin76@gentoo.org> cronbase-0.3.2-r1.ebuild:
   alpha/ia64 stable wrt security #182998
