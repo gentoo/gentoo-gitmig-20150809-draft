@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kformula
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.79 2007/07/26 17:28:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.80 2007/09/27 20:05:54 tgurr Exp $
+
+  27 Sep 2007; Timo Gurr <tgurr@gentoo.org> kformula-1.6.2.ebuild:
+  Added missing dependency, thanks to Eike Hein (bug 192739).
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org> kformula-1.6.2.ebuild:
   Stable on ppc64; bug #178697
