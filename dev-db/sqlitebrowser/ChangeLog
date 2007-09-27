@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/sqlitebrowser
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/ChangeLog,v 1.3 2007/05/09 19:19:34 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/ChangeLog,v 1.4 2007/09/27 19:20:34 drizzt Exp $
+
+  27 Sep 2007; Timothy Redaelli <drizzt@gentoo.org>
+  sqlitebrowser-1.3.ebuild:
+  Change UIC files version from 3.2 to 3.3 if you have qt-3.3.
+  Thanks to Billy DeVincentis for reporting wrt bug #193949.
 
   09 May 2007; Timothy Redaelli <drizzt@gentoo.org>
   sqlitebrowser-1.3.ebuild:

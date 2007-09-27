@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-1.3.ebuild,v 1.3 2007/05/09 19:19:34 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-1.3.ebuild,v 1.4 2007/09/27 19:20:34 drizzt Exp $
 
 inherit eutils qt3
 
@@ -24,11 +24,15 @@ src_unpack() {
 	rm -r sqlite_source
 
 	sed -i 's/\r/\n/g' *.{cpp,h}
+
+	# I hate qt designer!
+	has_version "=x11-libs/qt-3.3*" && sed -i '1s/UI version="3.2"/UI version="3.3"/'
+
 	epatch "${FILESDIR}"/${P}-externalsqlite.patch
 }
 
 src_compile() {
-	qmake ${PN}.pro || die "qmake failed"
+	eqmake3
 	emake || die "emake failed"
 }
 
