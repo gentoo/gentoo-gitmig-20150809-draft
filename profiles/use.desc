@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.361 2007/09/21 20:38:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.362 2007/09/27 15:03:31 beandog Exp $
 
 # Keep them sorted
 
@@ -66,7 +66,7 @@ dbus - Enable dbus support for anything that needs it (gpsd, gnomemeeting, etc)
 dbx - Adds database abstraction layer
 debug - Enable extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see http://www.gentoo.org/proj/en/qa/backtraces.xml .
 dedicated - Adds support for dedicated game servers (some packages do not provide clients and servers at the same time)
-dga - Adds DGA Support (Xfree86) (DGA=Direct Graphic Access)
+dga - Adds DGA (Direct Graphic Access) support for X
 directfb - Adds support for DirectFB layer (library for FB devices)
 doc - Adds extra documentation (API, Javadoc, etc)
 dri - Enable direct rendering: used for accelerated 3D and some 2D, like DMA
