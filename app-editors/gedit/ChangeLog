@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.205 2007/09/25 04:11:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.206 2007/09/27 11:57:55 armin76 Exp $
+
+  27 Sep 2007; Raúl Porcel <armin76@gentoo.org> gedit-2.18.2-r1.ebuild:
+  alpha/ia64 stable wrt #193339
 
   25 Sep 2007; Jeroen Roovers <jer@gentoo.org> gedit-2.18.2-r1.ebuild:
   Stable for HPPA (bug #193339).
