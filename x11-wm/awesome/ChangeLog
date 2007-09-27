@@ -1,0 +1,10 @@
+# ChangeLog for x11-wm/awesome
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.1 2007/09/27 21:39:28 matsuu Exp $
+
+*awesome-1.2 (27 Sep 2007)
+
+  27 Sep 2007; MATSUU Takuto <matsuu@gentoo.org> +files/awesome.desktop,
+  +files/awesome-session, +metadata.xml, +awesome-1.2.ebuild:
+  Initial import.
+

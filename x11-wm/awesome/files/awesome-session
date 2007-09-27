@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#while true
+#do
+#	echo `date` `uptime | sed 's/.*,//'`
+#	sleep 1
+#done | awesome
+
+exec /usr/bin/awesome
