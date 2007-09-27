@@ -1,0 +1,676 @@
+diff -Nru gnotime-2.2.2.orig/ghtml/C/basic-invoice.ghtml gnotime-2.2.2/ghtml/C/basic-invoice.ghtml
+--- gnotime-2.2.2.orig/ghtml/C/basic-invoice.ghtml	2004-04-25 06:19:17.000000000 +0300
++++ gnotime-2.2.2/ghtml/C/basic-invoice.ghtml	2007-02-12 20:55:56.000000000 +0200
+@@ -57,7 +57,7 @@
+         ''"<td>"  gtt-task-time-str   ''"</td>\n"
+         ''"<td>"  gtt-task-value-str  ''"</td>\n"
+         ''"<td>"  gtt-task-billable-value-str  ''"</td>\n"
+-        ''</tr>
++        ''"</tr>"
+     )
+ )
+ 
+@@ -92,7 +92,7 @@
+         ''"<td>"  gtt-task-time-str   ''"</td>\n"
+         ''"<td>"  gtt-task-value-str  ''"</td>\n"
+         ''"<td>"  gtt-task-billable-value-str  ''"</td>\n"
+-        ''</tr>
++        ''"</tr>"
+     )
+ )
+ 
+@@ -127,7 +127,7 @@
+         ''"<td>"  gtt-task-time-str   ''"</td>\n"
+         ''"<td>"  gtt-task-value-str  ''"</td>\n"
+         ''"<td>"  gtt-task-billable-value-str  ''"</td>\n"
+-        ''</tr>
++        ''"</tr>"
+     )
+ )
+ 
+diff -Nru gnotime-2.2.2.orig/ghtml/C/invoice.ghtml gnotime-2.2.2/ghtml/C/invoice.ghtml
+--- gnotime-2.2.2.orig/ghtml/C/invoice.ghtml	2004-04-25 06:19:17.000000000 +0300
++++ gnotime-2.2.2/ghtml/C/invoice.ghtml	2007-02-12 20:55:31.000000000 +0200
+@@ -72,7 +72,7 @@
+          ''"<td>"               gtt-task-time-str   ''"</td>\n"
+          ''"<td align=right>"   gtt-task-value-str  ''"</td>\n"
+          ''"<td align=right>"   gtt-task-billable-value-str  ''"</td>\n"
+-         ''</tr>
++         ''"</tr>"
+       )
+     )
+     (gtt-show '" </table> </center>\n")
+@@ -114,7 +114,7 @@
+          ''"<td>"               gtt-task-time-str   ''"</td>\n"
+          ''"<td align=right>"   gtt-task-value-str  ''"</td>\n"
+          ''"<td align=right>"   gtt-task-billable-value-str  ''"</td>\n"
+-         ''</tr>
++         ''"</tr>"
+       )
+     )
+     (gtt-show '" </table> </center>\n")
+@@ -156,7 +156,7 @@
+          ''"<td>"               gtt-task-time-str   ''"</td>\n"
+          ''"<td align=right>"   gtt-task-value-str  ''"</td>\n"
+          ''"<td align=right>"   gtt-task-billable-value-str  ''"</td>\n"
+-         ''</tr>
++         ''"</tr>"
+       )
+     )
+     (gtt-show '" </table> </center>\n")
+diff -Nru gnotime-2.2.2.orig/ghtml/C/primer.ghtml gnotime-2.2.2/ghtml/C/primer.ghtml
+--- gnotime-2.2.2.orig/ghtml/C/primer.ghtml	2004-05-18 22:59:24.000000000 +0300
++++ gnotime-2.2.2/ghtml/C/primer.ghtml	2007-02-12 20:55:38.000000000 +0200
+@@ -279,7 +279,7 @@
+         ''"<td>"  gtt-task-time-str   ''"</td>\n"
+         ''"<td>"  gtt-task-value-str  ''"</td>\n"
+         ''"<td>"  gtt-task-billable-value-str  ''"</td>\n"
+-        ''</tr>
++        ''"</tr>"
+     )
+ )
+ 
+diff -Nru gnotime-2.2.2.orig/src/ghtml.c gnotime-2.2.2/src/ghtml.c
+--- gnotime-2.2.2.orig/src/ghtml.c	2005-09-02 03:33:15.000000000 +0300
++++ gnotime-2.2.2/src/ghtml.c	2007-02-12 20:51:06.000000000 +0200
+@@ -65,7 +65,7 @@
+ static SCM
+ do_ret_did_query (GttGhtml *ghtml)
+ {
+-	return SCM_BOOL (ghtml->did_query);
++	return scm_from_bool (ghtml->did_query);
+ }
+ 
+ static SCM
+@@ -84,7 +84,7 @@
+ 	SCM rc, node;
+ 	rc = SCM_EOL;
+ 
+-	while (FALSE == SCM_NULLP(node_list))
++	while (!scm_is_null (node_list))
+ 	{
+ 		node = SCM_CAR (node_list);
+ 		rc = scm_cons (node, rc);
+@@ -114,11 +114,11 @@
+              SCM (*ivl_func)(GttGhtml *, GttInterval *))
+ {
+ 	/* Either a 'symbol or a "quoted string" */
+-	if (SCM_SYMBOLP(node) || SCM_STRINGP (node))
++	if (scm_is_symbol(node) || scm_is_string (node))
+ 	{
+ 		SCM rc = SCM_EOL;
+-		char *str = SCM_STRING_CHARS (node);
+-		int len = SCM_STRING_LENGTH (node);
++		char *str = scm_to_locale_string (node);
++		int len = strlen (str);
+ 		if ((0<len) && str_func) rc = str_func (ghtml, str);
+ 		return rc;
+ 	}
+@@ -130,20 +130,23 @@
+ 		switch (cur_type)
+ 		{
+ 			case GTT_PRJ: {
+-				GttProject *prj = (GttProject *) scm_num2ulong (node,
+-				             SCM_ARG1, "GnoTime::do-apply-based-on-type==project");
++//				GttProject *prj = (GttProject *) scm_num2ulong (node,
++//				             SCM_ARG1, "GnoTime::do-apply-based-on-type==project");
++				GttProject *prj = (GttProject *) scm_to_ulong (node);
+ 				if (prj_func) rc = prj_func (ghtml, prj);
+ 				break;
+ 			}
+ 			case GTT_TASK: {
+-				GttTask *tsk = (GttTask *) scm_num2ulong (node,
+-				             SCM_ARG1, "GnoTime::do-apply-based-on-type==task");
++//				GttTask *tsk = (GttTask *) scm_num2ulong (node,
++//				             SCM_ARG1, "GnoTime::do-apply-based-on-type==task");
++				GttTask *tsk = (GttTask *) scm_to_ulong (node);
+ 				if (tsk_func) rc = tsk_func (ghtml, tsk);
+ 				break;
+ 			}
+ 			case GTT_IVL: {
+-				GttInterval *ivl = (GttInterval *) scm_num2ulong (node,
+-				             SCM_ARG1, "GnoTime::do-apply-based-on-type==interval");
++//				GttInterval *ivl = (GttInterval *) scm_num2ulong (node,
++//				             SCM_ARG1, "GnoTime::do-apply-based-on-type==interval");
++				GttInterval *ivl = (GttInterval *) scm_to_ulong (node);
+ 				if (ivl_func) rc = ivl_func (ghtml, ivl);
+ 				break;
+ 			}
+@@ -155,7 +158,7 @@
+ 	}
+ 
+ 	/* If its a list, then process the list */
+-	if (SCM_CONSP(node))
++	if (scm_is_pair(node))
+ 	{
+ 		SCM rc = SCM_EOL;
+ 		SCM node_list = node;
+@@ -164,14 +167,14 @@
+ 		 * type.  If so, then strip off the label, and pass back
+ 		 * car to ourselves, and passing the corrected type.
+ 		 */
+-		if (FALSE == SCM_NULLP(node))
++		if (!scm_is_null (node))
+ 		{
+ 			SCM type;
+ 			type = SCM_CDR (node);
+-			if (SCM_SYMBOLP(type) || SCM_STRINGP (type))
++			if (scm_is_symbol(type) || scm_is_string (type))
+ 			{
+ 				cur_type = GTT_NONE;
+-				char *buff = SCM_STRING_CHARS (type);
++				char *buff = scm_to_locale_string (type);
+ 
+ 				if ((!strncmp (buff, "gtt-project-ptr",15)) ||
+ 				    (!strncmp (buff, "gtt-project-list",16)))
+@@ -199,7 +202,7 @@
+ 		/* Otherwise, we have just a list. Walk that list,
+ 		 * apply recursively to it.
+ 		 */
+-		while (FALSE == SCM_NULLP(node_list))
++		while (!scm_is_null (node_list))
+ 		{
+ 			SCM evl;
+ 			node = SCM_CAR (node_list);
+@@ -207,7 +210,7 @@
+ 			evl = do_apply_based_on_type (ghtml, node, cur_type,
+ 				               str_func, prj_func, tsk_func, ivl_func);
+ 
+-			if (FALSE == SCM_NULLP (evl))
++			if (!scm_is_null (evl))
+ 			{
+ 				rc = scm_cons (evl, rc);
+ 			}
+@@ -222,7 +225,7 @@
+ 	}
+ 
+ 	/* If its a null list, do nothing */
+-	if (SCM_NULLP (node))
++	if (scm_is_null (node))
+ 	{
+ 		return node;
+ 	}
+@@ -280,7 +283,9 @@
+ 	if (!val) return SCM_EOL;
+ 	str = kvp_value_get_string (val);
+ 	if (!str) return SCM_EOL;
+-	return scm_mem2string (str, strlen (str));
++//	return scm_mem2string (str, strlen (str));
++//	return scm_from_locale_stringn (str, strlen (str));
++	return scm_from_locale_string (str);
+ }
+ 
+ static SCM
+@@ -310,7 +315,8 @@
+ 		double x;
+ 		long  ix;
+ 
+-		x = scm_num2dbl (node, "GnoTime::do_show_scm");
++//		x = scm_to_double (node, "GnoTime::do_show_scm");
++		x = scm_to_double (node);
+ 		ix = (long) x;
+ 
+ 		/* If the number is representable in 32 bits,
+@@ -330,14 +336,14 @@
+ 	}
+ 	else
+ 	/* either a 'symbol or a "quoted string" */
+-	if (SCM_SYMBOLP(node) || SCM_STRINGP (node))
++	if (scm_is_symbol(node) || scm_is_string (node))
+ 	{
+-		str = SCM_STRING_CHARS (node);
+-		len = SCM_STRING_LENGTH (node);
++		str = scm_to_locale_string (node);
++		len = strlen (str);
+ 		if (0<len) (ghtml->write_stream) (ghtml, str, len, ghtml->user_data);
+ 	}
+ 	else
+-	if (SCM_CONSP(node))
++	if (scm_is_pair(node))
+ 	{
+ 		SCM node_list = node;
+ 		do
+@@ -346,19 +352,19 @@
+ 			do_show_scm (ghtml, node);
+ 			node_list = SCM_CDR (node_list);
+ 		}
+-		while (SCM_CONSP(node_list));
++		while (scm_is_pair(node_list));
+ 		do_show_scm (ghtml, node_list);
+ 	}
+ 	else
+-	if (SCM_BOOLP(node))
++	if (scm_is_bool(node))
+ 	{
+ 		const char *str;
+-		if (SCM_FALSEP(node)) str = _("False");
++		if (scm_is_false (node)) str = _("False");
+ 		else str = _("True");
+ 		(ghtml->write_stream) (ghtml, str, strlen(str), ghtml->user_data);
+ 	}
+ 	else
+-	if (SCM_NULLP(node))
++	if (scm_is_null (node))
+ 	{
+ 		/* No op; maybe this should be a warning? */
+ 	}
+@@ -394,10 +400,13 @@
+ do_ret_project (GttGhtml *ghtml, GttProject *prj)
+ {
+ 	SCM node,rc;
+-	rc = scm_ulong2num ((unsigned long) prj);
++//	rc = scm_ulong2num ((unsigned long) prj);
++	rc = scm_from_ulong ((unsigned long) prj);
+ 
+ 	/* Label the pointer with a type identifier */
+-	node = scm_mem2string ("gtt-project-ptr", 15);
++//	node = scm_mem2string ("gtt-project-ptr", 15);
++//	node = scm_from_locale_stringn ("gtt-project-ptr", 15);
++	node = scm_from_locale_string ("gtt-project-ptr");
+ 	rc = scm_cons (rc, node);
+ 
+ 	return rc;
+@@ -474,14 +483,14 @@
+ do_include_file_scm (GttGhtml *ghtml, SCM node)
+ {
+ 	/* either a 'symbol or a "quoted string" */
+-	if (SCM_SYMBOLP(node) || SCM_STRINGP (node))
++	if (scm_is_symbol(node) || scm_is_string (node))
+ 	{
+-		const char * filepath = SCM_STRING_CHARS (node);
++		const char * filepath = scm_to_locale_string (node);
+ 		filepath = gtt_ghtml_resolve_path(filepath, ghtml->ref_path);
+ 		gtt_ghtml_display (ghtml, filepath, NULL);
+ 	}
+ 	else
+-	if (SCM_CONSP(node))
++	if (scm_is_pair(node))
+ 	{
+ 		SCM node_list = node;
+ 		do
+@@ -490,11 +499,11 @@
+ 			do_include_file_scm (ghtml, node);
+ 			node_list = SCM_CDR (node_list);
+ 		}
+-		while (SCM_CONSP(node_list));
++		while (scm_is_pair(node_list));
+ 		do_include_file_scm (ghtml, node_list);
+ 	}
+ 	else
+-	if (SCM_NULLP(node))
++	if (scm_is_null (node))
+ 	{
+ 		/* No op; maybe this should be a warning? */
+ 	}
+@@ -537,13 +546,16 @@
+ 		/* Walk backwards, creating a scheme list */
+ 		for (n= gplist; n; n=n->prev)
+ 		{
+-			node = scm_ulong2num ((unsigned long) n->data);
++//			node = scm_ulong2num ((unsigned long) n->data);
++			node = scm_from_ulong ((unsigned long) n->data);
+ 			rc = scm_cons (node, rc);
+ 		}
+ 	}
+ 
+ 	/* Prepend type label */
+-	node = scm_mem2string (type, strlen (type));
++//	node = scm_mem2string (type, strlen (type));
++//	node = scm_from_locale_stringn (type, strlen (type));
++	node = scm_from_locale_string (type);
+ 	rc = scm_cons (rc, node);
+ 
+ 	return rc;
+@@ -584,7 +596,8 @@
+ 			rc = scm_cons (node, rc);
+ 		}
+ #endif
+-		node = scm_ulong2num ((unsigned long) prj);
++//		node = scm_ulong2num ((unsigned long) prj);
++		node = scm_from_ulong ((unsigned long) prj);
+ 		rc = scm_cons (node, rc);
+ 	}
+ 	return rc;
+@@ -670,9 +683,10 @@
+ 	for (n= task_list; n; n=n->prev)
+ 	{
+ 		GttTask *tsk = n->data;
+-      SCM node;
++		SCM node;
+ 
+-		node = scm_ulong2num ((unsigned long) tsk);
++//		node = scm_ulong2num ((unsigned long) tsk);
++		node = scm_from_ulong ((unsigned long) tsk);
+ 		rc = scm_cons (node, rc);
+ 	}
+ 	return rc;
+@@ -715,7 +729,8 @@
+ 		GttInterval *ivl = n->data;
+ 		SCM node;
+ 
+-		node = scm_ulong2num ((unsigned long) ivl);
++//		node = scm_ulong2num ((unsigned long) ivl);
++		node = scm_from_ulong ((unsigned long) ivl);
+ 		rc = scm_cons (node, rc);
+ 	}
+ 	return rc;
+@@ -778,18 +793,24 @@
+ 		/* XXX should use time_t, and srfi-19 to print, and have a type label */
+ 		/* Print time spent on project this day */
+ 		qof_print_hours_elapsed_buff (buff, 100, secs, TRUE);
+-		node = scm_mem2string (buff, strlen (buff));
++//		node = scm_mem2string (buff, strlen (buff));
++//		node = scm_from_locale_stringn (buff, strlen (buff));
++		node = scm_from_locale_string (buff);
+ 		rpt = scm_cons (node, rpt);
+ 
+ 		/* XXX report date should be time_t in the middle of the interval */
+ 		/* Print date */
+ 		rptdate = mktime (&tday);
+ 		qof_print_date_buff (buff, 100, rptdate);
+-		node = scm_mem2string (buff, strlen (buff));
++//		node = scm_mem2string (buff, strlen (buff));
++//		node = scm_from_locale_stringn (buff, strlen (buff));
++		node = scm_from_locale_string (buff);
+ 		rpt = scm_cons (node, rpt);
+ 
+ 		/* Put a data type in the cdr slot */
+-		node = scm_mem2string ("gtt-daily", 9);
++//		node = scm_mem2string ("gtt-daily", 9);
++//		node = scm_from_locale_stringn ("gtt-daily", 9);
++		node = scm_from_locale_string ("gtt-daily");
+ 		rpt = scm_cons (rpt, node);
+ 
+ 		rc = scm_cons (rpt, rc);
+@@ -832,7 +853,7 @@
+ {                                                                   \
+ 	const char * str = GTT_GETTER (prj);                             \
+ 	if (NULL == str) return SCM_EOL;                                 \
+-	return scm_mem2string (str, strlen (str));                       \
++	return scm_from_locale_string (str);                       \
+ }                                                                   \
+ RET_PROJECT_SIMPLE(RET_FUNC,GTT_GETTER##_scm)
+ 
+@@ -842,17 +863,17 @@
+ GTT_GETTER##_scm (GttGhtml *ghtml, GttProject *prj)                 \
+ {                                                                   \
+ 	long i = GTT_GETTER (prj);                                       \
+-	return scm_long2num (i);                                         \
++	return scm_from_long (i);                                         \
+ }                                                                   \
+ RET_PROJECT_SIMPLE(RET_FUNC,GTT_GETTER##_scm)
+ 
+-                                                                    \
++                                                                    
+ #define RET_PROJECT_ULONG(RET_FUNC,GTT_GETTER)                      \
+ static SCM                                                          \
+ GTT_GETTER##_scm (GttGhtml *ghtml, GttProject *prj)                 \
+ {                                                                   \
+ 	unsigned long i = GTT_GETTER (prj);                              \
+-	return scm_ulong2num (i);                                        \
++	return scm_from_ulong (i);                                        \
+ }                                                                   \
+ RET_PROJECT_SIMPLE(RET_FUNC,GTT_GETTER##_scm)
+ 
+@@ -885,12 +906,15 @@
+ 		g_string_append_printf (str, "<a href=\"gtt:proj:0x%lx\">", (long) prj);
+ 		g_string_append (str, gtt_project_get_title (prj));
+ 		g_string_append (str, "</a>");
+-		return scm_mem2string (str->str, str->len);
++//		return scm_mem2string (str->str, str->len);
++		return scm_from_locale_stringn (str->str, str->len);
+ 	}
+ 	else
+ 	{
+ 		const char * str = gtt_project_get_title (prj);
+-		return scm_mem2string (str, strlen (str));
++//		return scm_mem2string (str, strlen (str));
++//		return scm_from_locale_stringn (str, strlen (str));
++		return scm_from_locale_string (str);
+ 	}
+ }
+ 
+@@ -969,7 +993,7 @@
+ GTT_GETTER##_scm (GttGhtml *ghtml, GttTask *tsk)                    \
+ {                                                                   \
+ 	const char * str = GTT_GETTER (tsk);                             \
+-	return scm_mem2string (str, strlen (str));                       \
++	return scm_from_locale_stringn (str, strlen (str));		 \
+ }                                                                   \
+                                                                     \
+ static SCM                                                          \
+@@ -997,12 +1021,15 @@
+ 		g_string_append_printf (str, "<a href=\"gtt:task:0x%lx\">", (long)tsk);
+ 		g_string_append (str, gtt_task_get_memo (tsk));
+ 		g_string_append (str, "</a>");
+-		return scm_mem2string (str->str, str->len);
++//		return scm_mem2string (str->str, str->len);
++		return scm_from_locale_stringn (str->str, str->len);
+ 	}
+ 	else
+ 	{
+ 		const char * str = gtt_task_get_memo (tsk);
+-		return scm_mem2string (str, strlen (str));
++//		return scm_mem2string (str, strlen (str));
++//		return scm_from_locale_stringn (str, strlen (str));
++		return scm_from_locale_string (str);
+ 	}
+ }
+ 
+@@ -1081,7 +1108,9 @@
+ 
+ 	task_secs = gtt_task_get_secs_ever(tsk);
+ 	qof_print_hours_elapsed_buff (buff, 100, task_secs, TRUE);
+-	return scm_mem2string (buff, strlen (buff));
++//	return scm_mem2string (buff, strlen (buff));
++//	return scm_from_locale_stringn (buff, strlen (buff));
++	return scm_from_locale_string (buff);
+ }
+ 
+ static SCM
+@@ -1091,7 +1120,8 @@
+ 
+ 	time_t task_date = gtt_task_get_secs_earliest(tsk);
+ 	size_t len = qof_print_date_time_buff (buff, 100, task_date);
+-	return scm_mem2string (buff, len);
++//	return scm_mem2string (buff, len);
++	return scm_from_locale_stringn (buff, len);
+ }
+ 
+ static SCM
+@@ -1101,7 +1131,8 @@
+ 
+ 	time_t task_date = gtt_task_get_secs_latest(tsk);
+ 	size_t len = qof_print_date_time_buff (buff, 100, task_date);
+-	return scm_mem2string (buff, len);
++//	return scm_mem2string (buff, len);
++	return scm_from_locale_stringn (buff, len);
+ }
+ 
+ static SCM
+@@ -1127,7 +1158,9 @@
+ 	/* hack alert should use i18n currency/monetary printing */
+ 	snprintf (buff, 100, "$%.2f", value+0.0049);
+ 
+-	return scm_mem2string (buff, strlen (buff));
++//	return scm_mem2string (buff, strlen (buff));
++//	return scm_from_locale_stringn (buff, strlen (buff));
++	return scm_from_locale_string (buff);
+ }
+ 
+ RET_TASK_STR (ret_task_billstatus,      task_get_billstatus)
+@@ -1154,7 +1187,7 @@
+ GTT_GETTER##_scm (GttGhtml *ghtml, GttInterval *ivl)                \
+ {                                                                   \
+ 	const char * str = GTT_GETTER (ivl);                             \
+-	return scm_mem2string (str, strlen (str));                       \
++	return scm_from_locale_stringn (str, strlen (str));		 \
+ }                                                                   \
+ RET_IVL_SIMPLE(RET_FUNC,GTT_GETTER)
+ 
+@@ -1164,7 +1197,7 @@
+ GTT_GETTER##_scm (GttGhtml *ghtml, GttInterval *ivl)                \
+ {                                                                   \
+ 	unsigned long i = GTT_GETTER (ivl);                              \
+-	return scm_ulong2num (i);                                        \
++	return scm_from_ulong (i);                                       \
+ }                                                                   \
+ RET_IVL_SIMPLE(RET_FUNC,GTT_GETTER)
+ 
+@@ -1181,7 +1214,9 @@
+ 	elapsed = gtt_interval_get_stop (ivl);
+ 	elapsed -= gtt_interval_get_start (ivl);
+ 	qof_print_hours_elapsed_buff (buff, 100, elapsed, TRUE);
+-	return scm_mem2string (buff, strlen (buff));
++//	return scm_mem2string (buff, strlen (buff));
++//	return scm_from_locale_stringn (buff, strlen (buff));
++	return scm_from_locale_string (buff);
+ }
+ 
+ RET_IVL_SIMPLE (ret_ivl_elapsed_str, get_ivl_elapsed_str);
+@@ -1213,7 +1248,8 @@
+ 		g_string_append (str, "</a>");
+ 	}
+ 
+-	return scm_mem2string (str->str, str->len);
++//	return scm_mem2string (str->str, str->len);
++	return scm_from_locale_stringn (str->str, str->len);
+ }
+ 
+ static SCM
+@@ -1233,7 +1269,7 @@
+ 	{
+ 		prt_date = qof_is_same_day(start, prev_stop);
+ 	}
+-	return SCM_BOOL (prt_date);
++	return scm_from_bool (prt_date);
+ }
+ RET_IVL_SIMPLE (ret_ivl_same_day_start, get_ivl_same_day_start);
+ 
+@@ -1253,7 +1289,7 @@
+ 	{
+ 		prt_date = qof_is_same_day(prev_start, stop);
+ 	}
+-	return SCM_BOOL (prt_date);
++	return scm_from_bool (prt_date);
+ }
+ RET_IVL_SIMPLE (ret_ivl_same_day_stop, get_ivl_same_day_stop);
+ 
+@@ -1295,7 +1331,9 @@
+ 	char buff[100];
+ 
+ 	qof_print_hours_elapsed_buff (buff, 100, gtt_interval_get_fuzz (ivl), TRUE);
+-	return scm_mem2string (buff, strlen (buff));
++//	return scm_mem2string (buff, strlen (buff));
++//	return scm_from_locale_stringn (buff, strlen (buff));
++	return scm_from_locale_string (buff);
+ }
+ RET_IVL_SIMPLE (ret_ivl_fuzz_str, get_ivl_fuzz_str);
+ 
+@@ -1305,16 +1343,17 @@
+ my_catch_handler (void *data, SCM tag, SCM throw_args)
+ {
+ 	printf ("Error: GnoTime caught error during scheme parse\n");
+-	if (SCM_SYMBOLP(tag))
++	if (scm_is_symbol(tag))
+ 	{
+-		char * str  = SCM_SYMBOL_CHARS (tag);
++		char * str  = scm_to_locale_string (tag);
+ 		printf ("\tScheme error was: %s\n", str);
+ 	}
+ 	scm_backtrace();
+ 
+-	SCM fmt = scm_makfrom0str ("~S");
+-	SCM s_str = scm_simple_format (SCM_BOOL_F, fmt, SCM_LIST1(throw_args));
+-	printf ("\tthrow_args=%s\n", SCM_STRING_CHARS (s_str));
++//	SCM fmt = scm_makfrom0str ("~S");
++	SCM fmt = scm_from_locale_string ("~S");
++	SCM s_str = scm_simple_format (SCM_BOOL_F, fmt, scm_list_1(throw_args));
++	printf ("\tthrow_args=%s\n", scm_to_locale_string (s_str));
+ 
+ 	return SCM_EOL;
+ }
+@@ -1486,7 +1525,10 @@
+ 			/* dispatch and handle */
+ 			scmstart +=5;
+ 			// scm_c_eval_string (scmstart);
+-			gh_eval_str_with_catch (scmstart, my_catch_handler);
++			//gh_eval_str_with_catch (scmstart, my_catch_handler);
++			scm_internal_stack_catch (SCM_BOOL_T, (scm_t_catch_body) scm_c_eval_string,
++				scmstart, (scm_t_catch_handler) my_catch_handler, scmstart);
++
+ 			start = end;
+ 			continue;
+ 		}
+diff -Nru gnotime-2.2.2.orig/src/ghtml-deprecated.c gnotime-2.2.2/src/ghtml-deprecated.c
+--- gnotime-2.2.2.orig/src/ghtml-deprecated.c	2004-08-27 02:57:00.000000000 +0300
++++ gnotime-2.2.2/src/ghtml-deprecated.c	2007-02-12 20:51:06.000000000 +0200
+@@ -719,24 +719,25 @@
+ decode_scm_col_list (GttGhtml *ghtml, SCM col_list)
+ {
+ 	SCM col_name;
+-	int len;
++//	int len;
+ 	char * tok = NULL;
+ 
+ 	/* reset the parser */
+ 	ghtml->ninvl_cols = 0;
+ 	ghtml->ntask_cols = 0;
+ 		
+-	while (FALSE == SCM_NULLP(col_list))
++	while (!scm_is_null (col_list))
+ 	{
+ 		col_name = SCM_CAR (col_list);
+ 
+ 		/* either a 'symbol or a "quoted string" */
+-		if (!SCM_SYMBOLP(col_name) && !SCM_STRINGP (col_name))
++		if (!scm_is_symbol(col_name) && !scm_is_string (col_name))
+ 		{
+ 			col_list = SCM_CDR (col_list);
+ 			continue;
+ 		}
+-		tok = gh_scm2newstr (col_name, &len);
++//		tok = gh_scm2newstr (col_name, &len);
++		tok = scm_to_locale_string (col_name);
+ 		decode_column (ghtml, tok);
+ 
+ 		free (tok);
+@@ -759,7 +760,7 @@
+ {
+ 	GttGhtml *ghtml = ghtml_guile_global_hack;
+ 	SCM rc;
+-	SCM_ASSERT ( SCM_CONSP (col_list), col_list, SCM_ARG1, "gtt-show-table");
++	SCM_ASSERT ( scm_is_pair (col_list), col_list, SCM_ARG1, "gtt-show-table");
+ 	rc = decode_scm_col_list (ghtml, col_list);
+ 	do_show_table (ghtml, ghtml->prj, FALSE);
+ 	return rc;
+@@ -770,7 +771,7 @@
+ {
+ 	GttGhtml *ghtml = ghtml_guile_global_hack;
+ 	SCM rc;
+-	SCM_ASSERT ( SCM_CONSP (col_list), col_list, SCM_ARG1, "gtt-show-invoice");
++	SCM_ASSERT ( scm_is_pair (col_list), col_list, SCM_ARG1, "gtt-show-invoice");
+ 	rc = decode_scm_col_list (ghtml, col_list);
+ 	do_show_table (ghtml, ghtml->prj, TRUE);
+ 	return rc;
+@@ -782,7 +783,7 @@
+ 	GttGhtml *ghtml = ghtml_guile_global_hack;
+ 	
+ 	SCM rc;
+-	SCM_ASSERT ( SCM_CONSP (col_list), col_list, SCM_ARG1, "gtt-show-export");
++	SCM_ASSERT ( scm_is_pair (col_list), col_list, SCM_ARG1, "gtt-show-export");
+ 	rc = decode_scm_col_list (ghtml, col_list);
+ 	
+ 	ghtml->show_html = FALSE;
+diff -Nru gnotime-2.2.2.orig/src/lib/libqofsql/Makefile.am gnotime-2.2.2/src/lib/libqofsql/Makefile.am
+--- gnotime-2.2.2.orig/lib/libqofsql/Makefile.am	2005-09-12 20:04:00.000000000 +0300
++++ gnotime-2.2.2/lib/libqofsql/Makefile.am	2007-02-12 20:51:06.000000000 +0200
+@@ -59,7 +59,7 @@
+ 
+ sql_parse_test_SOURCES=sql_parse_test.c
+ # sql_parse_test_LDFLAGS = $(LIBGDA_LIBS)
+-sql_parse_test_DEPENDENCIES =
++sql_parse_test_DEPENDENCIES = ./libqofsql.la 
+ sql_parse_test_LDADD = ./libqofsql.la @GLIB_LIBS@
+ 
+ tests: sql_parse_test

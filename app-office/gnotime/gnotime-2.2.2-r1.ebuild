@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.2.2.ebuild,v 1.4 2007/09/27 17:43:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.2.2-r1.ebuild,v 1.1 2007/09/27 17:43:45 opfer Exp $
 
-inherit gnome2
+inherit gnome2 autotools
 
 DESCRIPTION="A utility for tracking the amount of time spent on activities, and calculating data, such as pay rates, from those times"
 HOMEPAGE="http://gttr.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gttr/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnome-2.0
@@ -38,9 +38,9 @@ G2CONF="${G2CONF} --disable-schemas-install --without-system-qof"
 # Fix for bug #109047, don't parallel build with libqofsql
 MAKEOPTS="${MAKEOPTS} -j1"
 
-pkg_setup() {
-	if has_version ">=dev-scheme/guile-1.8" && ! built_with_use dev-scheme/guile deprecated;then
-		   eerror "rebuild dev-scheme/guile with USE=deprecated"
-		   die
-		fi
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-guile-1_8.patch"
+	eautoreconf
 }

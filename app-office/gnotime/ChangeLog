@@ -1,6 +1,16 @@
 # ChangeLog for app-office/gnotime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.22 2007/08/14 13:28:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.23 2007/09/27 17:43:45 opfer Exp $
+
+*gnotime-2.2.2-r1 (27 Sep 2007)
+
+  27 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/gnotime-2.2.2-guile-1_8.patch, gnotime-2.2.2.ebuild,
+  +gnotime-2.2.2-r1.ebuild:
+  revision bump with patch for Guile 1.8, provided by Serhij S. Stasyuk
+  <stas@onlineua.net> in bug 171141; -r0 changed to test for USE=deprecated in
+  Guile 1.8 and stable for x86; removed some unneeded documentation files
+  (COPYING, INSTALL) and adjusted DESCRIPTION
 
   14 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> gnotime-2.2.2.ebuild:
   Stable on sparc
