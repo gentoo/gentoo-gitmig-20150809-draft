@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r3.ebuild,v 1.1 2007/06/30 17:19:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r3.ebuild,v 1.2 2007/09/27 21:31:09 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -56,11 +56,11 @@ pkg_setup() {
 		echo
 	fi
 
-	if ! built_with_use media-libs/gd png truetype ; then
+	if ! built_with_use media-libs/gd png truetype jpeg ; then
 		echo
 		eerror "Please recompile media-libs/gd with"
-		eerror "USE=\"png truetype\""
-		die "media-libs/gd need png and truetype support"
+		eerror "USE=\"png truetype jpeg\""
+		die "media-libs/gd need png jpeg and truetype support"
 	fi
 
 	vdr-plugin_pkg_setup

@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.24 2007/06/30 17:19:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.25 2007/09/27 21:31:09 hd_brummy Exp $
+
+  27 Sep 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-burn-0.1.0_pre21-r2.ebuild, vdr-burn-0.1.0_pre21-r3.ebuild:
+  fixed build_with_use jpeg depend on media-libs/gd, reported by
+  magicteddy@vdrportal.de; cleanup
 
 *vdr-burn-0.1.0_pre21-r3 (30 Jun 2007)
 
