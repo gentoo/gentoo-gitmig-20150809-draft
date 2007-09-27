@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/ufo-ai
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.15 2007/09/08 21:40:58 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.16 2007/09/27 23:58:39 nyhm Exp $
+
+*ufo-ai-2.1.1-r1 (27 Sep 2007)
+
+  27 Sep 2007; Tristan Heaven <nyhm@gentoo.org> +ufo-ai-2.1.1-r1.ebuild:
+  savegame bugfix, bug #193201
 
   08 Sep 2007; Tristan Heaven <nyhm@gentoo.org> ufo-ai-2.1.1.ebuild:
   HOMEPAGE update, bug #191694
