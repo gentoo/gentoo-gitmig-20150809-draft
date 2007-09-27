@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7750 2007/09/27 18:29:46 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7751 2007/09/27 18:46:15 philantrop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Wulf C. Krueger <philantrop@gentoo.org> (27 Sep 2007)
+# Temporary mask for further testing and until xmlrpc-c has been keyworded
+# properly.
+=dev-util/cmake-2.4.7-r2
 
 # Paul Varner <fuzzyray@gentoo.org> (27 Sep 2007)
 # revdep-rebuild is broken in this release

@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.668 2007/09/27 05:09:57 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.669 2007/09/27 18:46:15 philantrop Exp $
+
+  27 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> package.mask:
+  Temporaryly p.masked =dev-util/cmake-2.4.7-r2 for further testing and until
+  xmlrpc-c has been keyworded properly.
 
   27 Sep 2007; Paul Varner <fuzzyray@gentoo.org> package.mask:
   Mask gentoolkit-0.2.4_rc1 due to broken revdep-rebuild
