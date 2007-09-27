@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.189 2007/09/21 16:56:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.190 2007/09/27 14:24:42 cardoe Exp $
+
+  27 Sep 2007; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-0.21_pre14513.ebuild:
+  fix libdca/libdts depends
 
 *mythtv-0.21_pre14513 (21 Sep 2007)
 
