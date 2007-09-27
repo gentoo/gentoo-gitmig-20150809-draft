@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1-r1.ebuild,v 1.10 2007/07/23 02:55:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1-r1.ebuild,v 1.11 2007/09/27 14:02:05 vapier Exp $
 
 inherit eutils libtool toolchain-funcs autotools pam
 
@@ -105,10 +105,12 @@ src_install() {
 	# Output arch-specific cruft
 	case $(tc-arch) in
 		ppc*)  echo "hvc0" >> "${D}"/etc/securetty
-			   echo "hvsi0" >> "${D}"/etc/securetty
-			   echo "ttyPSC0" >> "${D}"/etc/securetty;;
+		       echo "hvsi0" >> "${D}"/etc/securetty
+		       echo "ttyPSC0" >> "${D}"/etc/securetty;;
 		hppa)  echo "ttyB0" >> "${D}"/etc/securetty;;
 		arm)   echo "ttyFB0" >> "${D}"/etc/securetty;;
+		sh)    echo "ttySC0" >> "${D}"/etc/securetty
+		       echo "ttySC1" >> "${D}"/etc/securetty;;
 	esac
 
 	# needed for 'adduser -D'
