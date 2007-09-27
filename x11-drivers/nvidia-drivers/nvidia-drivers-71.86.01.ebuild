@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.19.ebuild,v 1.3 2007/09/27 21:53:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-71.86.01.ebuild,v 1.1 2007/09/27 21:53:35 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -11,11 +11,12 @@ X86_FBSD_NV_PACKAGE="NVIDIA-FreeBSD-x86-${PV}"
 DESCRIPTION="NVIDIA X11 driver and GLX libraries"
 HOMEPAGE="http://www.nvidia.com/"
 SRC_URI="x86? ( http://us.download.nvidia.com/XFree86/Linux-x86/${PV}/${X86_NV_PACKAGE}-pkg0.run )
-	 amd64? ( http://us.download.nvidia.com/XFree86/Linux-x86_64/${PV}/${AMD64_NV_PACKAGE}-pkg2.run )"
+	 amd64? ( http://us.download.nvidia.com/XFree86/Linux-x86_64/${PV}/${AMD64_NV_PACKAGE}-pkg2.run )
+	 x86-fbsd? ( http://us.download.nvidia.com/freebsd/${PV}/${X86_FBSD_NV_PACKAGE}.tar.gz )"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
 IUSE="gtk multilib"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
@@ -180,8 +181,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/NVIDIA_glx-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
 	epatch "${FILESDIR}"/NVIDIA_glx-glheader.patch
-	# allow on board sensors to work with lm_sensors
-	epatch "${FILESDIR}"/NVIDIA_i2c-hwmon.patch
 
 	if ! use x86-fbsd; then
 		# Quiet down warnings the user does not need to see
@@ -261,8 +260,7 @@ src_install() {
 
 	if ! use x86-fbsd; then
 		# Docs
-		newdoc usr/share/doc/README.txt README
-		dodoc usr/share/doc/Copyrights usr/share/doc/NVIDIA_Changelog
+		dodoc usr/share/doc/NVIDIA_Changelog
 		dodoc usr/share/doc/XF86Config.sample
 		dohtml usr/share/doc/html/*
 
@@ -272,9 +270,6 @@ src_install() {
 		dodoc doc/{README,XF86Config.sample,Copyrights}
 		dohtml doc/html/*
 	fi
-
-	# Taking nvidia-xconfig from nvidia-drivers to help config xorg.conf
-	dobin usr/bin/nvidia-xconfig || die
 }
 
 # Install nvidia library:
@@ -337,8 +332,6 @@ src_install-libs() {
 	# The GLX libraries
 	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libGL.so ${sover}
 	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libGLcore.so ${sover}
-
-	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libnvidia-cfg.so ${sover}
 
 	dodir ${NO_TLS_ROOT}
 	donvidia ${NO_TLS_ROOT} ${usrpkglibdir}/libnvidia-tls.so ${sover}

@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.63 2007/09/20 19:55:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.64 2007/09/27 21:53:35 cardoe Exp $
+
+*nvidia-drivers-96.43.01 (27 Sep 2007)
+*nvidia-drivers-71.86.01 (27 Sep 2007)
+
+  27 Sep 2007; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-71.86.01.ebuild, +nvidia-drivers-96.43.01.ebuild,
+  nvidia-drivers-100.14.19.ebuild:
+  bump both nvidia legacy drivers to their latest revisions. Remove hack since
+  it's no longer needed.
 
   20 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org> -files/nvidia-2,
   -files/NVIDIA_kernel-2.6.19.patch, files/nvidia,
