@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/motif-config
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/ChangeLog,v 1.26 2007/09/26 18:17:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/ChangeLog,v 1.27 2007/09/27 01:41:12 jer Exp $
+
+  27 Sep 2007; Jeroen Roovers <jer@gentoo.org> files/motif-config-0.9,
+  files/motif-config-0.10:
+  Determine which executables should go into /usr/bin.
 
 *motif-config-0.10-r1 (26 Sep 2007)
 *motif-config-0.9-r1 (26 Sep 2007)

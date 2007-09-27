@@ -84,6 +84,11 @@ _activate_profile() {
 		ln -s /usr/include/${new}/${file} /usr/include/${file}
 		retval=$((retval | $? ))
 	done
+	# executables
+	for file in mwm uil xmbind; do
+		rm -f /usr/bin/${file}
+		ln -s /usr/@@LIBDIR@@/${new}/${file} /usr/bin/${file}
+	done
 	# man pages
 	for file in `find /usr/share/man -regex ".*-${new}\..x?.gz"`; do
 		files="${files} ${file/-${new}/}"
