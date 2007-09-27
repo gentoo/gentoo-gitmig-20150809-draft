@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.3.ebuild,v 1.2 2007/08/23 16:46:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.3.ebuild,v 1.3 2007/09/27 18:36:44 wltjr Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnome/sources/${PN}/$(get_version_component_range 1-2)/${P}.ta
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="4.0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.12.13
