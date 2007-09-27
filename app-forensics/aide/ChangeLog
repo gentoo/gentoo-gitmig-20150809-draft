@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/aide
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.27 2007/09/26 23:51:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.28 2007/09/27 11:27:09 fmccor Exp $
+
+  27 Sep 2007; Ferris McCormick <fmccor@gentoo.org> aide-0.13.1.ebuild:
+  Sparc stable --- security Bug #191597 --- builds, passes its tests, and
+  appears to work.
 
   26 Sep 2007; MATSUU Takuto <matsuu@gentoo.org>
   -files/aide-0.9-gentoo.diff, -files/aide-0.10_p20040917-fix-psql.diff,
