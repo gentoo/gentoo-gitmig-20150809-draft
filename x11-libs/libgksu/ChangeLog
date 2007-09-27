@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.46 2007/09/26 06:16:57 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.47 2007/09/27 11:40:47 armin76 Exp $
+
+  27 Sep 2007; Raúl Porcel <armin76@gentoo.org> libgksu-2.0.5.ebuild:
+  alpha/ia64 stable wrt #193339
 
   26 Sep 2007; Joshua Kinard <kumba@gentoo.org> libgksu-2.0.5.ebuild:
   Bumping straight to stable to catch up on some small gnome keywords on mips,
