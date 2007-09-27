@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.77 2007/08/28 14:49:09 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.78 2007/09/27 12:25:52 armin76 Exp $
+
+  27 Sep 2007; Raúl Porcel <armin76@gentoo.org> virtuals:
+  Add virtual/blas to virtuals, bug #189738
 
   28 Aug 2007; Ferris McCormick <fmccor@gentoo.org> use.mask:
   Enable USE=cern for testing at developer request: <bicatali@gentoo.org>, Bug
