@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7748 2007/09/26 14:46:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7749 2007/09/27 05:09:58 fuzzyray Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Paul Varner <fuzzyray@gentoo.org> (27 Sep 2007)
+# revdep-rebuild is broken in this release
+=app-portage/gentoolkit-0.2.4_rc1
 
 # Ulrich Mueller <ulm@gentoo.org> (26 Sep 2007)
 # Last upstream release as separate package was in 2002.
