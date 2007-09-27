@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.6.ebuild,v 1.3 2007/01/03 01:10:48 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.6.ebuild,v 1.4 2007/09/27 13:14:33 angelos Exp $
 
 inherit linux-mod eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/qce-ga/${P}.tar.gz"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 CONFIG_CHECK="USB VIDEO_DEV VIDEO_V4L1_COMPAT"
 MODULE_NAMES="quickcam(usb:)"
