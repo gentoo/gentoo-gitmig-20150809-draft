@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/portmap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.42 2007/09/14 07:03:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.43 2007/09/27 01:49:06 kumba Exp $
+
+  27 Sep 2007; Joshua Kinard <kumba@gentoo.org> portmap-6.0.ebuild:
+  Stable on mips, per #190182.
 
   14 Sep 2007; Christian Faulhammer <opfer@gentoo.org> portmap-6.0.ebuild:
   stable x86, bug 190182
