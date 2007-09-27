@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.12.ebuild,v 1.2 2007/01/28 17:39:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.20.ebuild,v 1.1 2007/09/27 17:23:00 philantrop Exp $
 
-inherit kde
+inherit kde multilib
 
 DESCRIPTION="A Tor controller for the KDE desktop"
 HOMEPAGE="http://tork.sourceforge.net/"
@@ -14,17 +14,23 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-libs/openssl
-	>=dev-libs/geoip-1.4.0"
+	>=dev-libs/geoip-1.4.0
+	|| ( kde-base/libkonq kde-base/kdebase )"
 
-RDEPEND="net-misc/tor
+RDEPEND="${DEPEND}
+	>=net-misc/tor-0.1.2.14
 	>=net-proxy/privoxy-3.0.3-r5
-	net-proxy/tsocks
-	${DEPEND}"
+	>=net-proxy/tsocks-1.8_beta5-r2"
 
 need-kde 3.5
 
+PATCHES="${FILESDIR}/${P}-ext_tsocks.patch"
+
 src_compile() {
-	local myconf="--with-external-geoip --with-external-tsocks"
+	# Fix desktop file
+	sed -i -e "s:^\(Categories=.*\):\1;:" "${S}/src/tork.desktop"
+
+	local myconf="--with-external-geoip --with-conf=/etc/socks/tsocks.conf"
 	kde_src_compile
 }
 

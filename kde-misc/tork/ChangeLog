@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/tork
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.17 2007/06/06 17:26:06 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.18 2007/09/27 17:23:00 philantrop Exp $
+
+*tork-0.20 (27 Sep 2007)
+
+  27 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/tork-0.20-ext_tsocks.patch, -tork-0.12.ebuild, -tork-0.13.ebuild,
+  +tork-0.20.ebuild:
+  Version bump to 0.20. Removed obsolete versions.
 
   06 Jun 2007; Wulf C. Krueger <philantrop@gentoo.org> tork-0.17.ebuild:
   Allow either libkonq OR kdebase to satisfy tork's dependencies, fixes bug
