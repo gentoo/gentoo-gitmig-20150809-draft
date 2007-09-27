@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/xfoil
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/ChangeLog,v 1.6 2007/07/22 06:51:22 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/ChangeLog,v 1.7 2007/09/27 08:12:16 bicatali Exp $
+
+  27 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  -xfoil-6.94-r1.ebuild, xfoil-6.96.ebuild:
+  removed old version and cleaned up more recent one
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; xfoil-6.94-r1.ebuild,
   xfoil-6.96.ebuild:
