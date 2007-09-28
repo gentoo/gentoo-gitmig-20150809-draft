@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.672 2007/09/28 19:19:05 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.673 2007/09/28 22:55:01 alonbl Exp $
+
+  28 Sep 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
+  Remove app-text/hspell
 
   28 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> package.mask:
   Removed app-cdr/kover from package.mask as it was just removed from the tree.
