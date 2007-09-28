@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.2.4.ebuild,v 1.1 2007/09/28 12:15:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.2.4.ebuild,v 1.2 2007/09/28 15:42:11 mr_bones_ Exp $
 
 inherit eutils qt4
 
@@ -25,7 +25,7 @@ S="${WORKDIR}/${PN}"
 
 src_compile() {
 	local myconf
-	
+
 	use debug && myconf="${myconf} -debug"
 	use !openssl && myconf="${myconf} -nomake crypto"
 	use !fastcgi && myconf="${myconf} -nomake web"
