@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.30 2007/08/25 08:47:07 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.31 2007/09/28 07:34:09 mr_bones_ Exp $
 
 # Mart Raudsepp <leio@gentoo.org> (25 Aug 2007)
 # need directly or indirectly gnome-python-desktop or nautilus-cd-burner,
@@ -186,6 +186,8 @@ x11-drivers/xf86-input-evdev
 >=gnome-base/gnome-light-2.16.0
 >=app-crypt/seahorse-1.0
 >=app-accessibility/orca-1
+>=x11-libs/gtk+-2.12.0
+>=dev-python/pygtk-2.12.0
 
 # Chris Gianelloni <wolf31o2@gentoo.org>
 # Since this is a 2.4-only profile, we cannot have any 2.6-based headers/kernels
