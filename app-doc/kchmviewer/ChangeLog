@@ -1,6 +1,16 @@
 # ChangeLog for app-doc/kchmviewer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.28 2007/07/23 14:19:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.29 2007/09/28 17:10:51 pva Exp $
+
+*kchmviewer-4.0_beta1 (28 Sep 2007)
+
+  28 Sep 2007; <pva@gentoo.org> -files/kchmviewer-2.5-gcc41.patch,
+  -files/kchmviewer-2.6-build-Qt.diff,
+  -files/kchmviewer-3.0-fix-as-needed.diff,
+  -files/kchmviewer-3.0-qt-only-path-fix.diff, -kchmviewer-2.5.ebuild,
+  -kchmviewer-2.6.ebuild, -kchmviewer-2.7.ebuild, -kchmviewer-3.0.ebuild,
+  +kchmviewer-4.0_beta1.ebuild:
+  Version bump. Seems that new version is qt-4 only release. Remove old ebuilds.
 
   23 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   kchmviewer-3.1_p2.ebuild:
