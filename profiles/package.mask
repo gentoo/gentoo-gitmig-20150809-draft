@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7755 2007/09/28 16:04:31 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7756 2007/09/28 17:02:35 pva Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Peter Volkov <pva@gentoo.org> (28 Sep 2007)
+# masked for testing
+>=app-doc/kchmviewer-4.0_beta1
 
 # Zac Medico <zmedico@gentoo.org> (28 Sep 2007)
 # Bug #194081 - EBUSY exception from rmdir during unmerge
