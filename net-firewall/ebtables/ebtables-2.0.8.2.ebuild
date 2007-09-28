@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.8.1-r1.ebuild,v 1.1 2007/09/02 10:02:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.8.2.ebuild,v 1.1 2007/09/28 19:22:13 pva Exp $
 
 inherit versionator eutils toolchain-funcs multilib
 
@@ -15,25 +15,20 @@ IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 
-S="${WORKDIR}/${MY_P}"
-
-DEPEND="virtual/libc"
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Kill two rabits: TEXTREL and compilation on amd64. bug #159371.
-	epatch "${FILESDIR}"/${P}-fix-textrel.patch
+	# Enchance ebtables-save to take table names as parameters bug #189315
+	epatch "${FILESDIR}"/${PN}-2.0.8.1-ebt-save.diff
 
-	# Fix scripts to be built during make, thus paths inside are correct.
-	epatch "${FILESDIR}"/${P}-scripts-build.patch
-
-	sed -i -e "s,MANDIR:=/usr/local/man,MANDIR:=/usr/share/man," \
-		-e "s,BINDIR:=/usr/local/sbin,BINDIR:=/sbin," \
-		-e "s,INITDIR:=/etc/rc.d/init.d,INITDIR:=/usr/share/doc/${PF}," \
-		-e "s,SYSCONFIGDIR:=/etc/sysconfig,SYSCONFIGDIR:=/usr/share/doc/${PF}," \
-		-e "s,LIBDIR:=/usr/lib,LIBDIR:=/$(get_libdir)/\$(PROGNAME)," Makefile
+	sed -i -e "s,^MANDIR:=.*,MANDIR:=/usr/share/man," \
+		-e "s,^BINDIR:=.*,BINDIR:=/sbin," \
+		-e "s,^INITDIR:=.*,INITDIR:=/usr/share/doc/${PF}," \
+		-e "s,^SYSCONFIGDIR:=.*,SYSCONFIGDIR:=/usr/share/doc/${PF}," \
+		-e "s,^LIBDIR:=.*,LIBDIR:=/$(get_libdir)/\$(PROGNAME)," Makefile
 }
 
 src_compile() {
@@ -43,9 +38,10 @@ src_compile() {
 src_install() {
 	dodoc ChangeLog THANKS
 	make DESTDIR="${D}" install || die
+	keepdir /var/lib/ebtables/
 
-	insinto /usr/share/doc/${PF}/init-scripts
-	doins "${FILESDIR}"/{ebtables.confd,ebtables.initd,README.gentoo.init}
+	newinitd "${FILESDIR}"/ebtables.initd ebtables
+	newconfd "${FILESDIR}"/ebtables.confd ebtables
 }
 
 pkg_postinst() {
