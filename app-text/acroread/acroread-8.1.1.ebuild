@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-8.1.1.ebuild,v 1.2 2007/09/28 07:19:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-8.1.1.ebuild,v 1.3 2007/09/28 18:05:43 kevquinn Exp $
 
 inherit eutils nsplugins
 
@@ -33,15 +33,17 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="strip mirror"
 
-# Firefox is needed for libgtkembedmoz.so which is used to render files with
-# HTML.
+# Needs libgtkembedmoz.so, which can come from xulrunner or mozilla-firefox.
+# In the case of mozilla-firefox, need to create /etc/gre.d/gre.conf with
+# GRE_PATH set to the /usr/lib/mozilla-firefox
+# TODO: sort out libgtkembedmoz.so for amd64.
 RDEPEND="x86? ( >=x11-libs/gtk+-2.0
 			cups? ( net-print/cups )
-			ldap? ( net-nds/openldap ) )
+			ldap? ( net-nds/openldap )
+			|| ( net-libs/xulrunner
+				www-client/mozilla-firefox ) )
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-2.4.2
-			>=app-emulation/emul-linux-x86-gtklibs-2.0 )
-	|| ( www-client/mozilla-firefox
-		www-client/mozilla-firefox-bin )"
+			>=app-emulation/emul-linux-x86-gtklibs-2.0 )"
 QA_TEXTRELS="opt/Acrobat8/Reader/intellinux/plug_ins/PPKLite.api
 	opt/Adobe/Adobe/Reader8/Browser/intellinux/nppdf.so
 	opt/netscape/plugins/nppdf.so"
@@ -208,6 +210,20 @@ src_install() {
 
 pkg_postinst () {
 	local ll lc
+	grep -q GRE_PATH= /etc/gre.d/* 2> /dev/null
+	if [[ $? != "0" ]]; then
+		for lib in /usr/lib/mozilla-firefox; do
+			if [[ -f ${lib}/libgtkembedmoz.so ]]; then
+				mkdir -p /etc/gre.d
+				cat > /etc/gre.d/gre.conf <<-EOF
+					GRE_PATH=${lib}
+				EOF
+				einfo "Acrobat Reader depends on libgtkembedmoz.so, which I've found"
+				einfo "on your system in ${lib}, and configured in /etc/gre.d/gre.conf"
+				break # don't search any more libraries
+			fi
+		done
+	fi
 	use ldap ||
 		elog "The Acrobat(TM) Security Plugin can be enabled with USE=ldap"
 	use nsplugin ||
@@ -223,11 +239,14 @@ pkg_postinst () {
 		elog "version is installed).  Users may need to remove their preferences in"
 		elog "~/.adobe to switch languages."
 	fi
-	ewarn "Acrobat Reader depends dynamically on libgtkembedmoz.so, which comes"
-	ewarn "with Mozilla Firefox.  The first time you start acroread, it will"
-	ewarn "complain about this, telling you to add the path to it to your"
-	ewarn "preferences.  Clear the error dialog, close the Beyond Acrobat"
-	ewarn "Reader dialog, go to Edit -> Preferences -> Internet, and set"
-	ewarn "the libgtkembedmoz directory to /usr/lib/mozilla-firefox, then"
-	ewarn "close and restart acroread."
+	grep -q GRE_PATH= /etc/gre.d/* 2> /dev/null
+	if [[ $? != "0" ]]; then
+		ewarn "Acrobat Reader depends dynamically on libgtkembedmoz.so, which should"
+		ewarn "come with Mozilla Firefox or XULRunner, however it couldn't be found."
+		ewarn "The first time you start acroread, it will complain about this, telling"
+		ewarn "you to add the path to it to your preferences.  Clear the error dialog,"
+		ewarn "close the Beyond Acrobat Reader dialog, go to Edit -> Preferences -> Internet"
+		ewarn "and set the libgtkembedmoz directory to the place where it exists,"
+		ewarn "then close and restart acroread."
+	fi
 }
