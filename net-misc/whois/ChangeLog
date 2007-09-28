@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.94 2007/09/28 16:48:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.95 2007/09/28 17:16:40 nixnut Exp $
+
+  28 Sep 2007; nixnut <nixnut@gentoo.org> whois-4.7.22.ebuild:
+  Stable on ppc wrt bug 194009
 
   28 Sep 2007; Jeroen Roovers <jer@gentoo.org> whois-4.7.22.ebuild:
   Stable for HPPA (bug #194009).
