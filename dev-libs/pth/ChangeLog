@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pth
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.55 2007/09/27 01:48:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.56 2007/09/28 06:45:09 kumba Exp $
+
+  28 Sep 2007; Joshua Kinard <kumba@gentoo.org> pth-2.0.7.ebuild:
+  Stable on mips, per #193894.
 
   27 Sep 2007; Jeroen Roovers <jer@gentoo.org> pth-2.0.7.ebuild:
   Stable for HPPA (bug #193894).
