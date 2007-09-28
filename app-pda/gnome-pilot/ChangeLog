@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.35 2007/09/20 19:17:05 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.36 2007/09/28 17:35:52 philantrop Exp $
+
+  28 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  gnome-pilot-2.0.15.ebuild:
+  Marked stable on amd64 as per bug 182699.
 
   20 Sep 2007; Lars Weiler <pylon@gentoo.org> gnome-pilot-2.0.15.ebuild:
   Stable on ppc; bug #182699.
