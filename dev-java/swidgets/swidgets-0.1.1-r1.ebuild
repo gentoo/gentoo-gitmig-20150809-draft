@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.1-r1.ebuild,v 1.6 2007/08/21 19:24:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.1-r1.ebuild,v 1.7 2007/09/28 22:46:09 philantrop Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -12,7 +12,7 @@ SRC_URI="http://swidgets.tigris.org/files/documents/1472/18566/${P}-src.zip"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.3
