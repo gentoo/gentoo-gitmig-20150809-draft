@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1_p20070927.ebuild,v 1.1 2007/09/27 15:35:24 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1_p20070927-r1.ebuild,v 1.1 2007/09/28 15:39:05 beandog Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -228,7 +228,7 @@ src_compile() {
 	# upstream's suggestion.  We don't.
 	if ! use dvd; then
 		myconf="${myconf} --disable-dvdnav --disable-dvdread"
-		use a52 || myconf="${myconf} --disable-a52"
+		use a52 || myconf="${myconf} --disable-liba52"
 	fi
 
 	if use encode; then
