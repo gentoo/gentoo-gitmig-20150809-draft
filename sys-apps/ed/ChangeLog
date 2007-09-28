@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.57 2007/09/28 11:55:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.58 2007/09/28 12:49:29 fmccor Exp $
+
+  28 Sep 2007; Ferris McCormick <fmccor@gentoo.org> ed-0.8.ebuild:
+  Sparc stable --- Bug #194011 --- tests run successfully.
 
   28 Sep 2007; Christoph Mende <angelos@gentoo.org> ed-0.8.ebuild:
   Stable on amd64 wrt bug #194011
