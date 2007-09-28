@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r2.ebuild,v 1.1 2007/09/27 00:55:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9-r2.ebuild,v 1.2 2007/09/28 07:20:36 mr_bones_ Exp $
 
 inherit eutils python
 
@@ -94,7 +94,6 @@ src_install () {
 	chmod 2755 ${D}/${INSTALLDIR}/cgi-bin/* ${D}/${INSTALLDIR}/mail/mailman
 
 }
-
 
 pkg_postinst() {
 	python_mod_optimize ${INSTALLDIR}/bin/ ${INSTALLDIR}/Mailman
