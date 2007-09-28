@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/taxidraw/taxidraw-0.3.2.ebuild,v 1.1 2007/02/14 08:54:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/taxidraw/taxidraw-0.3.2.ebuild,v 1.2 2007/09/28 23:55:33 dirtyepic Exp $
 
 inherit eutils wxwidgets games
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/wxGTK-2.6
+DEPEND="=x11-libs/wxGTK-2.6*
 	net-misc/curl"
 
 S=${WORKDIR}/${MY_P}
