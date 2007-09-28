@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p12.ebuild,v 1.3 2007/09/28 13:40:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p12.ebuild,v 1.4 2007/09/28 19:24:20 swegener Exp $
 
 GCONF_DEBUG="no"
 
@@ -23,15 +23,21 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=dev-libs/libsigc++-2.0
 	>=dev-libs/libpcre-4.4
 	>=dev-libs/libxml2-2.6.2
-	=dev-cpp/glibmm-2.14*
-	=dev-cpp/gtkmm-2.12*
+	|| (
+		=dev-cpp/glibmm-2.14*
+		=dev-cpp/glibmm-2.12*
+	)
+	|| (
+		=dev-cpp/gtkmm-2.12*
+		=dev-cpp/gtkmm-2.10*
+	)
 	>=virtual/mysql-5.0
 	workbench? (
 		=dev-lang/lua-5.0*
 		virtual/opengl
 	)
 	query-browser? (
-		=gnome-extra/gtkhtml-3.12*
+		=gnome-extra/gtkhtml-3.14*
 	)"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.15
@@ -88,7 +94,7 @@ src_compile() {
 	then
 		cd "${S}"/mysql-query-browser
 		use nls || sed -i -e "/^SUBDIRS=/ s/\\bpo\\b//" Makefile.{am,in}
-		gnome2_src_compile --with-gtkhtml=libgtkhtml-3.8
+		gnome2_src_compile --with-gtkhtml=libgtkhtml-3.14
 	fi
 
 	if use workbench
