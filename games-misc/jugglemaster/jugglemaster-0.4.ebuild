@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.4 2006/11/19 21:01:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.5 2007/09/28 23:44:03 dirtyepic Exp $
 
 inherit eutils toolchain-funcs wxwidgets games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE="ffmpeg"
 
-DEPEND=">=x11-libs/wxGTK-2.6
+DEPEND="=x11-libs/wxGTK-2.6*
 	ffmpeg? ( media-video/ffmpeg )"
 
 pkg_setup() {
