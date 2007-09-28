@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.91 2007/09/28 00:03:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.92 2007/09/28 00:57:56 kumba Exp $
+
+  28 Sep 2007; Joshua Kinard <kumba@gentoo.org> whois-4.7.22.ebuild:
+  Stable on mips, per #194009.
 
   27 Sep 2007; Brent Baude <ranger@gentoo.org> whois-4.7.22.ebuild:
   marking whois-4.7.22 ppc64 for bug#194009
