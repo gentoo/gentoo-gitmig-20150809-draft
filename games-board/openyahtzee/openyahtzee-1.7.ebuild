@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/openyahtzee-1.7.ebuild,v 1.2 2007/05/22 03:09:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/openyahtzee-1.7.ebuild,v 1.3 2007/09/28 23:42:04 dirtyepic Exp $
 
 inherit eutils wxwidgets games
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/wxGTK-2.6
+DEPEND="=x11-libs/wxGTK-2.6*
 	=dev-db/sqlite-3*"
 
 S=${WORKDIR}/${MY_PN}
