@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.105 2007/09/28 13:12:02 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.106 2007/09/28 16:37:02 armin76 Exp $
+
+  28 Sep 2007; Raúl Porcel <armin76@gentoo.org> readline-5.2_p7.ebuild:
+  alpha/ia64/x86 stable wrt #194013
 
   28 Sep 2007; Ferris McCormick <fmccor@gentoo.org> readline-5.2_p7.ebuild:
   Sparc stable --- Bug #194013
