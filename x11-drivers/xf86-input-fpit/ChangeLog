@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-fpit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-fpit/ChangeLog,v 1.36 2007/09/10 03:22:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-fpit/ChangeLog,v 1.37 2007/09/28 04:50:47 kumba Exp $
+
+  28 Sep 2007; Joshua Kinard <kumba@gentoo.org>
+  xf86-input-fpit-1.1.0-r1.ebuild:
+  Stable on mips, per #191615.
 
   10 Sep 2007; Jeroen Roovers <jer@gentoo.org>
   xf86-input-fpit-1.1.0-r1.ebuild:
