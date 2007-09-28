@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.158 2007/09/27 16:30:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.159 2007/09/28 00:21:24 kumba Exp $
+
+  28 Sep 2007; Joshua Kinard <kumba@gentoo.org> dhcpcd-3.1.5.ebuild:
+  Stable on mips, per #188284.
 
   27 Sep 2007; Brent Baude <ranger@gentoo.org> dhcpcd-3.1.5.ebuild:
   Marking dhcpcd-3.1.5 ppc64 for bug#188284
