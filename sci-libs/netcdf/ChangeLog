@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.37 2007/08/05 12:07:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.38 2007/09/28 11:25:09 bicatali Exp $
+
+  28 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  files/netcdf-3.6.2-parallel-make.patch, netcdf-3.6.2.ebuild:
+  Fixes parallell make with -j2 (real this time), uses FFLAGS for fortran 90
+  and do not remove .la files.
 
   05 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
   +files/netcdf-3.6.2-parallel-make.patch, -files/gcc3-gentoo.patch,

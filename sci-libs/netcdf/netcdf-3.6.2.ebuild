@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.2.ebuild,v 1.4 2007/08/05 12:07:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.2.ebuild,v 1.5 2007/09/28 11:25:09 bicatali Exp $
 
 inherit fortran eutils toolchain-funcs flag-o-matic autotools
 
@@ -19,8 +19,8 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if use fortran ; then
-	    FORTRAN="gfortran ifc g77 pgf77 pgf90"
-	    fortran_pkg_setup
+		FORTRAN="gfortran ifc g77 pgf77 pgf90"
+		fortran_pkg_setup
 	fi
 }
 
@@ -35,7 +35,6 @@ src_compile() {
 	use debug || append-cppflags -DNDEBUG
 	local myconf
 	if use fortran; then
-		# cfortran CPPFLAGS are now automatically set by the configure script
 		case "${FORTRANC}" in
 			g77)
 				myconf="${myconf} --enable-f77 --disable-f90"
@@ -59,6 +58,8 @@ src_compile() {
 				export F90FLAGS="-i4  ${F90FLAGS}"
 				;;
 		esac
+		# fortran 90 uses FCFLAGS
+		export FCFLAGS="${FFLAGS:--O2}"
 	else
 		myconf="${myconf} --disable-f77 --disable-f90"
 	fi
@@ -73,7 +74,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	find "${D}usr/$(get_libdir)" -name \*.la -exec rm -f {} \;
 
 	dodoc README RELEASE_NOTES VERSION || die "dodoc failed"
 	# keep only pdf,txt and html docs, info were already installed
