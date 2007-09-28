@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-opengl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-opengl/ChangeLog,v 1.1 2007/08/30 11:19:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-opengl/ChangeLog,v 1.2 2007/09/28 23:11:59 philantrop Exp $
+
+  28 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  gst-plugins-opengl-0.10.5.ebuild:
+  Keyworded ~amd64 as per bug 191153.
 
 *gst-plugins-opengl-0.10.5 (30 Aug 2007)
 
