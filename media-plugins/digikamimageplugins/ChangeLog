@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/digikamimageplugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/ChangeLog,v 1.46 2007/08/24 19:20:32 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/ChangeLog,v 1.47 2007/09/28 15:03:24 philantrop Exp $
+
+  28 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  -digikamimageplugins-0.8.2.ebuild, digikamimageplugins-0.9.1.ebuild:
+  Marked stable on amd64. Removed obsolete version.
 
   24 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> metadata.xml,
   -digikamimageplugins-0.9.0.ebuild, digikamimageplugins-0.9.1.ebuild:
