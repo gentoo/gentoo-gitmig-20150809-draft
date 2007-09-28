@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-8.1.1.ebuild,v 1.1 2007/09/27 21:13:17 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-8.1.1.ebuild,v 1.2 2007/09/28 07:19:50 mr_bones_ Exp $
 
 inherit eutils nsplugins
 
@@ -127,7 +127,7 @@ src_unpack() {
 		# 'de', 'en_GB' matches 'en' etc).
 		#
 		# This is a bit premature at the moment on 8.1.1, for two reasons:
-		# 1) The only language issued so far by Adobe is English, and the 
+		# 1) The only language issued so far by Adobe is English, and the
 		#    provided launcher doesn't bring out its strings separately
 		#    (indicating internationalisation hasn't yet begin for 8.1.1)
 		# 2) HelpViewer is new - I don't know if Adobe are likely to
