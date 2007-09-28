@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openexr
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.57 2007/09/23 16:21:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.58 2007/09/28 16:28:32 philantrop Exp $
+
+  28 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  openexr-1.4.0a.ebuild:
+  Marked stable on amd64 as per bug 181063.
 
   23 Sep 2007; Raúl Porcel <armin76@gentoo.org> openexr-1.6.0.ebuild:
   Add ~alpha/~ia64 wrt #189798
