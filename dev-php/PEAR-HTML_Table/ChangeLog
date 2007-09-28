@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Table
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table/ChangeLog,v 1.25 2007/09/26 18:09:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table/ChangeLog,v 1.26 2007/09/28 23:05:09 angelos Exp $
+
+  28 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  PEAR-HTML_Table-1.8.1.ebuild:
+  Stable on amd64 wrt bug #192247
 
   26 Sep 2007; Brent Baude <ranger@gentoo.org> PEAR-HTML_Table-1.8.1.ebuild:
   Marking PEAR-HTML_Table-1.8.1 ppc64 stable for bug 192247

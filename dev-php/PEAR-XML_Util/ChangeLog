@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-XML_Util
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/ChangeLog,v 1.29 2007/09/26 17:57:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/ChangeLog,v 1.30 2007/09/28 23:37:13 angelos Exp $
+
+  28 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  PEAR-XML_Util-1.1.4.ebuild:
+  Stable on amd64 wrt bug #192247
 
   26 Sep 2007; Brent Baude <ranger@gentoo.org> PEAR-XML_Util-1.1.4.ebuild:
   Marking PEAR-XML_Util-1.1.4 ppc64 stable for bug 192247
