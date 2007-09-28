@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/seq24
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.28 2007/09/24 18:02:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.29 2007/09/28 18:40:15 philantrop Exp $
+
+  28 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> seq24-0.8.7.ebuild:
+  Marked stable on amd64 as per bug 184421.
 
   24 Sep 2007; Christian Faulhammer <opfer@gentoo.org> seq24-0.8.7.ebuild:
   stable x86, bug 184421
