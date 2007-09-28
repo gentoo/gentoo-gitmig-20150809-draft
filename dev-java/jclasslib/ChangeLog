@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jclasslib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/ChangeLog,v 1.9 2007/08/21 19:18:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/ChangeLog,v 1.10 2007/09/28 22:11:54 philantrop Exp $
+
+  28 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  jclasslib-3.0-r1.ebuild:
+  Marked stable on amd64 as per bug 189325.
 
   21 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   jclasslib-3.0-r1.ebuild:
