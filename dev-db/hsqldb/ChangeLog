@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/hsqldb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.27 2007/07/16 19:08:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.28 2007/09/28 20:09:41 philantrop Exp $
+
+  28 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  hsqldb-1.7.3.1-r3.ebuild:
+  Marked stable on amd64 as per bug 185117.
 
   16 Jul 2007; Markus Rothe <corsair@gentoo.org> hsqldb-1.7.3.1-r3.ebuild:
   Stable on ppc64; bug #185117
