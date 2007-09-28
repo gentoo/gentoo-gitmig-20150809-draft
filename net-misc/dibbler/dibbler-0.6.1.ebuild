@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.6.1.ebuild,v 1.1 2007/09/26 12:56:55 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.6.1.ebuild,v 1.2 2007/09/28 07:20:59 mr_bones_ Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ IUSE="doc"
 DEPEND=""
 
 DIBBLER_DOCDIR=${S}/doc
-
 
 src_compile() {
 	emake -j1 || die "Compilation failed"
