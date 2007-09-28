@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.82.ebuild,v 1.1 2007/09/22 21:21:20 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.82.ebuild,v 1.2 2007/09/28 12:09:21 lu_zero Exp $
 
 inherit eutils
 
 DESCRIPTION="Simple BitTorrent client"
 HOMEPAGE="http://transmission.m0k.org/"
-SRC_URI="http://download.m0k.org/transmission/files/${PN}-${PV}.tar.gz"
+SRC_URI="http://download.m0k.org/transmission/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -22,6 +22,8 @@ RDEPEND="sys-devel/gettext
 DEPEND="${RDEPEND}
 		sys-devel/gettext
 		>=dev-util/pkgconfig-0.19"
+
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
