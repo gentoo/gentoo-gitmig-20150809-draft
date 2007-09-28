@@ -1,6 +1,6 @@
 # ChangeLog for app-forensics/aide
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.29 2007/09/27 11:44:43 armin76 Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.30 2007/09/28 16:35:09 matsuu Exp $
 
   27 Sep 2007; Raúl Porcel <armin76@gentoo.org> aide-0.13.1.ebuild:
   x86 stable wrt security #191597
@@ -17,3 +17,186 @@
   Added -j1.
   Removed old versions.
 
+  26 Sep 2007; Raúl Porcel <armin76@gentoo.org> aide-0.13.1.ebuild:
+  alpha stable wrt security #191597
+
+  26 Sep 2007; Raúl Porcel <armin76@gentoo.org>
+  aide-0.10_p20040917-r1.ebuild:
+  sparc stable wrt #151271
+
+*aide-0.13.1 (26 Sep 2007)
+
+  26 Sep 2007; MATSUU Takuto <matsuu@gentoo.org>
+  +files/aide-0.13.1-gentoo.patch, metadata.xml, +aide-0.13.1.ebuild:
+  Version bumped, bug #126694, #191597.
+  Added static USE flag, bug #92250.
+  Added mail-client/mailx to DEPEND, bug #153952.
+  Fixed dependency, bug #163687.
+  Clean up ebuild.
+  Added myself to metadata.xml as maintainer.
+
+  04 Sep 2007; Raúl Porcel <armin76@gentoo.org>
+  aide-0.10_p20040917-r1.ebuild:
+  alpha/x86 stable wrt #151271
+
+  04 Sep 2007; Christoph Mende <angelos@gentoo.org>
+  aide-0.10_p20040917-r1.ebuild:
+  Stable on amd64 wrt bug #151271
+
+  31 Aug 2007; Matti Bickel <mabi@gentoo.org> aide-0.10_p20040917-r1.ebuild:
+  ppc stable (bug #151271)
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> aide-0.10_p20040917.ebuild,
+  aide-0.10_p20040917-r1.ebuild:
+  Replacing einfo with elog
+
+  16 Nov 2006; Markus Ullmann <jokey@gentoo.org>
+  aide-0.10_p20040917-r1.ebuild:
+  Fix autotools, bug #151271
+
+  16 Dec 2005; Diego Pettenò <flameeyes@gentoo.org>
+  aide-0.10_p20040917-r1.ebuild:
+  Replace root:root in root:0. Bug #103563.
+
+  02 Oct 2005; Benjamin Smee <strerror@gentoo.org>
+  +files/aide-0.10_p20040917-r1-fix-psql.diff:
+  Added file for postgres fix re BUG 107927
+
+*aide-0.10_p20040917-r1 (30 Sep 2005)
+
+  30 Sep 2005; Benjamin Smee <strerror@gentoo.org> +files/aide.conf,
+  +files/aide.cron, +files/aideinit, +aide-0.10_p20040917-r1.ebuild:
+  Added helper script and changed default config
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> aide-0.10_p20040917.ebuild:
+  stable on amd64
+
+  27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  aide-0.10_p20040917.ebuild:
+  Stable on ppc.
+
+  06 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
+  aide-0.10_p20040917.ebuild:
+  Stable on alpha.
+
+  31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  aide-0.10_p20040917.ebuild:
+  Stable on sparc
+
+  31 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> aide-0.10_p20040917.ebuild:
+  Marked stable on x86.
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  18 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
+
+  18 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> aide-0.10_p20040917.ebuild:
+  Fixed hasq/useq invocation
+
+*aide-0.10_p20040917 (18 Sep 2004)
+
+  18 Sep 2004; Aaron Walker <ka0ttic@gentoo.org>
+  +files/aide-0.10_p20040917-fix-psql.diff, +aide-0.10_p20040917.ebuild:
+  Version bump; fixes bugs 23764, 37007, and 62194. Thanks to Joshua
+  Schmidlkofer for the postgresql patch.
+
+  17 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> aide-0.10.ebuild,
+  aide-0.9.ebuild:
+  Fixed deps (bug #44445)
+
+  12 Sep 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml:
+  metadata.xml update
+
+*aide-0.10 (12 Sep 2004)
+
+  12 Sep 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +files/aide-0.10-gentoo.diff, +files/aide-0.9-gentoo.diff,
+  +aide-0.10.ebuild, +aide-0.9.ebuild:
+  Moved from app-admin/aide to app-forensics/aide.
+
+  11 Sep 2004; Jon Hood <squinky86@gentoo.org> files/aide-0.10-gentoo.diff,
+  -aide-0.8.ebuild:
+  Fix mhash segfault irt #62194, thanks Gianluca <g.insolvibile@cpr.it>.
+
+  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> aide-0.10.ebuild:
+  Stable on alpha.
+
+  06 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  aide-0.10.ebuild:
+  x86 stable
+
+  13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> aide-0.10.ebuild:
+  marked ~amd64
+
+  30 Mar 2004; Chuck Short <zul@gentoo.org> files/aide-0.10-gentoo.diff:
+  Added missing patch.
+
+  29 Mar 2004; Chuck Short <zul@gentoo.org> aide-0.8.ebuild, aide-0.9.ebuild:
+  Header updates.
+
+*aide-0.10 (29 Mar 2004)
+
+  29 Mar 2004; Chuck Short <zul@gentoo.org> aide-0.10.ebuild:
+  Version bump, closes #46031.
+
+  14 Dec 2003; Martin Holzer <mholzer@gentoo.org> aide-0.9.ebuild:
+  more configure options with IUSE. closes #35700
+
+  16 Oct 2003; Aron Griffis <agriffis@gentoo.org> aide-0.9.ebuild:
+  Stable on alpha
+
+  12 Aug 2003; Martin Holzer <mholzer@gentoo.org> aide-0.9.ebuild:
+  Updated Homepage.
+
+  13 May 2003; Tavis Ormandy <taviso@gentoo.org> aide-0.9.ebuild:
+  marking ~alpha.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*aide-0.9 (21 Oct 2002)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> aide-0.9.ebuild :
+  Moved to stable
+
+  15 Jan 2003; Jason Wever <weeve@gentoo.org> aide-0.9.ebuild :
+  Changed ~sparc keyword to sparc as it fixes bug #12828
+
+  29 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> aide-0.9.ebuild :
+  Added patch to fix compilation. Found by Janos Milus <j.milus@chello.hu> in #9750.
+
+  21 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump. Found by Joshua Brindle <jbrindle@snu.edu> in #5372.
+  Also contains updates from Paul Belt <gaarde@yahoo.com> in #5372.
+
+*aide-0.8 (15 Mar 2002)
+
+  15 Jan 2003; Jason Wever <weeve@gentoo.org> aide-0.8 :
+
+  Changed sparc keyword to -sparc as aide --init is broken on sparc.
+
+  13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> aide-0.8 :
+
+  Added ppc keyword
+
+  15 Mar 2002; Seemant Kulleen <seemant@gentoo.org> aide-0.8 :
+
+  Upgraded the package.
+
+*aide-0.7-r1 (15 Mar 2002)
+
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> aide-0.7-r1 :
+
+  Fixed the conf file going into a weird directory.  It now gets placed into
+  /etc/aide/aide.conf.
+
+*aide-0.7 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
