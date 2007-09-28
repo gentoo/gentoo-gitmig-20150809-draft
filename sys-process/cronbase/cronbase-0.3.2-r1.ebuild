@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/cronbase-0.3.2-r1.ebuild,v 1.8 2007/09/27 16:33:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/cronbase-0.3.2-r1.ebuild,v 1.9 2007/09/28 07:21:19 mr_bones_ Exp $
 
 inherit eutils
 
@@ -43,4 +43,3 @@ pkg_postinst() {
 	chmod 0750 "${ROOT}"/var/spool/{cron,cron/lastrun} || die "chmod failed"
 	chown root:cron "${ROOT}/var/spool/cron" || die "chown failed"
 }
-
