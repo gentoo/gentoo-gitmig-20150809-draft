@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.3.ebuild,v 1.3 2007/05/25 16:50:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.3.ebuild,v 1.4 2007/09/28 23:58:25 dirtyepic Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 RESTRICT="test"
 
-DEPEND=">=x11-libs/wxGTK-2.6
+DEPEND="=x11-libs/wxGTK-2.6*
 	>=app-arch/zip-2.3
 	dev-libs/expat
 	>=media-libs/libsndfile-1.0.0
