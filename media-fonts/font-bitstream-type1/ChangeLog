@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bitstream-type1
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-type1/ChangeLog,v 1.27 2007/09/08 20:44:05 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-type1/ChangeLog,v 1.28 2007/09/28 03:59:48 kumba Exp $
+
+  28 Sep 2007; Joshua Kinard <kumba@gentoo.org>
+  font-bitstream-type1-1.0.0.ebuild:
+  Stable on mips, per #191615.
 
   08 Sep 2007; Joseph Jezak <josejx@gentoo.org>
   font-bitstream-type1-1.0.0.ebuild:
