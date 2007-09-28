@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.18.ebuild,v 1.2 2007/06/13 22:44:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.18.ebuild,v 1.3 2007/09/28 23:49:52 dirtyepic Exp $
 
 inherit autotools eutils wxwidgets games
 
@@ -21,7 +21,7 @@ RDEPEND="virtual/glu
 	media-libs/sdl-net
 	media-libs/sdl-mixer
 	virtual/libintl
-	editor? ( >=x11-libs/wxGTK-2.6 )"
+	editor? ( =x11-libs/wxGTK-2.6* )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
