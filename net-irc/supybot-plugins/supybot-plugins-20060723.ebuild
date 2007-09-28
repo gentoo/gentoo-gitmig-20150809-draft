@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot-plugins/supybot-plugins-20060723.ebuild,v 1.1 2007/09/26 20:01:30 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot-plugins/supybot-plugins-20060723.ebuild,v 1.2 2007/09/28 07:19:20 mr_bones_ Exp $
 
 inherit python
 
@@ -9,7 +9,7 @@ MY_P="${MY_PNAME}-${PV}"
 
 DESCRIPTION="Official set of extra plugins for Supybot"
 HOMEPAGE="http://supybot.com"
-SRC_URI="mirrors://sourceforge/supybot/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/supybot/${MY_P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
