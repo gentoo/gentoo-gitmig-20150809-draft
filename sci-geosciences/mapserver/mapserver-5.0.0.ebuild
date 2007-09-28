@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0.ebuild,v 1.2 2007/09/21 21:57:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0.ebuild,v 1.3 2007/09/28 07:35:00 mr_bones_ Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 
 #I must check for mygis use flag availability
 #"mono"
-IUSE="agg xml pdf proj geos tiff gdal xpm postgis flash php python perl ruby tcl threads java doc"
+IUSE="agg xml pdf proj geos tiff gdal xpm postgis flash php python perl ruby tcl threads unicode java doc"
 
 # compilation fails with jdk > 1.4 on some native part probably
 DEPEND="media-libs/libpng
