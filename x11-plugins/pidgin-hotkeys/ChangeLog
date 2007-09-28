@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-hotkeys
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/ChangeLog,v 1.6 2007/08/28 16:23:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/ChangeLog,v 1.7 2007/09/28 18:28:08 nixnut Exp $
+
+  28 Sep 2007; nixnut <nixnut@gentoo.org> pidgin-hotkeys-0.2.3.ebuild:
+  Stable on ppc wrt bug 189781
 
   28 Aug 2007; nixnut <nixnut@gentoo.org> pidgin-hotkeys-0.2.3.ebuild:
   Added ~ppc wrt bug 189781
