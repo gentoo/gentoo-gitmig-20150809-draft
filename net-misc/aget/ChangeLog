@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aget
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/ChangeLog,v 1.9 2007/02/22 02:00:44 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/ChangeLog,v 1.10 2007/09/28 18:49:07 angelos Exp $
+
+  28 Sep 2007; Christoph Mende <angelos@gentoo.org> aget-0.4.ebuild:
+  Added ~amd64 wrt bug #193702
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
