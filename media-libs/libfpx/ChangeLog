@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libfpx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/ChangeLog,v 1.16 2007/05/20 22:59:51 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/ChangeLog,v 1.17 2007/09/28 13:40:11 uberlord Exp $
+
+  28 Sep 2007; Roy Marples <uberlord@gentoo.org> libfpx-1.2.0.13.ebuild:
+  Keyworded ~x86-fbsd, #194029.
 
 *libfpx-1.2.0.13 (21 May 2007)
 
