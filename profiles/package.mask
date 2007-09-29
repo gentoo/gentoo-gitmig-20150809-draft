@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7759 2007/09/28 23:47:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7760 2007/09/29 08:48:46 george Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -601,11 +601,6 @@ net-wireless/mcs7780
 >=sys-power/kpowersave-0.7.0
 # 175933 cannot suspend because of missing org.freedesktop.PolicyKit
 >=sys-power/powersave-0.15.0
-
-# George Shapovalov (7 May 2007)
-# masked old style ( non split and problematic) gnat compiler
-# gnat-gcc or gnat-gpl are in for ages and should be used instead
-dev-lang/gnat
 
 # Stefan Schweizer <genstef@gentoo.org> (7 may 2007)
 # mask new alsa release. Until it is fully added and tested
