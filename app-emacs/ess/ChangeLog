@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ess
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.24 2007/09/29 12:29:17 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.25 2007/09/29 13:05:20 ulm Exp $
+
+  29 Sep 2007; Ulrich Mueller <ulm@gentoo.org> -ess-5.2.2-r1.ebuild,
+  -ess-5.2.3.ebuild, -ess-5.2.8.ebuild:
+  Remove old.
 
   29 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> ess-5.3.5.ebuild:
   Marked stable on amd64 as per bug 193311.
