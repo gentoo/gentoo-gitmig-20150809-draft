@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard/xfce4-fsguard-0.3.0.ebuild,v 1.12 2007/03/17 21:33:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard/xfce4-fsguard-0.3.0.ebuild,v 1.13 2007/09/29 08:00:06 drac Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -17,7 +17,7 @@ DEPEND=">=xfce-extra/xfce4-dev-tools-${XFCE_MASTER_VERSION}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/${P}-asneeded.patch
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 	AT_M4DIR=/usr/share/xfce4/dev-tools/m4macros eautoreconf
 }
 
