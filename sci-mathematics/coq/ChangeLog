@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.15 2007/08/30 13:31:44 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.16 2007/09/29 15:40:34 markusle Exp $
+
+*coq-8.1_p1 (29 Sep 2007)
+
+  29 Sep 2007; Markus Dittrich <markusle@gentoo.org>
+  +coq-8.1_p1.ebuild:
+  Version bump (see bug #192522).
 
   30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing mattam from metadata due to his retirement (see #30021 for reference).
@@ -8,7 +14,7 @@
   31 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Reassigning to sci from math-proof (see #138059 for reference).
 
-  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> coq-8.0-r1.ebuild,
+  02 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org> coq-8.0-r1.ebuild,
   coq-8.0_p3.ebuild:
   (QA) RESTRICT clean up.
 
