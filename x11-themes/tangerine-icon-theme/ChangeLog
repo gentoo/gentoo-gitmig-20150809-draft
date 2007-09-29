@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/tangerine-icon-theme
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/ChangeLog,v 1.10 2007/08/22 16:15:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/ChangeLog,v 1.11 2007/09/29 16:03:45 drac Exp $
+
+*tangerine-icon-theme-0.26 (29 Sep 2007)
+
+  29 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  +tangerine-icon-theme-0.26.ebuild:
+  Version bump with Gentoo branding fixed wrt #193212, thanks to Pacho Ramos
+  for reporting.
 
 *tangerine-icon-theme-0.22 (22 Aug 2007)
 
