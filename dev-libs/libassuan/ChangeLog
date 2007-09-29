@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libassuan
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.42 2007/09/29 05:26:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.43 2007/09/29 09:58:31 pylon Exp $
+
+  29 Sep 2007; Lars Weiler <pylon@gentoo.org> libassuan-1.0.2-r1.ebuild:
+  stable ppc, bug #194113
 
   29 Sep 2007; Jeroen Roovers <jer@gentoo.org> libassuan-1.0.2-r1.ebuild:
   Stable for HPPA (bug #194113).
