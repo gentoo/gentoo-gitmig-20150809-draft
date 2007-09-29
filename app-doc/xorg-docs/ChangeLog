@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/xorg-docs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.46 2007/09/28 03:55:51 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.47 2007/09/29 10:07:27 armin76 Exp $
+
+  29 Sep 2007; Raúl Porcel <armin76@gentoo.org> xorg-docs-1.4-r1.ebuild:
+  sparc stable wrt #191615
 
   28 Sep 2007; Joshua Kinard <kumba@gentoo.org> xorg-docs-1.4-r1.ebuild:
   Marked unstable on mips, per #191615.
