@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.9.ebuild,v 1.3 2007/07/11 23:49:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.10.ebuild,v 1.1 2007/09/29 09:10:59 dertobi123 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -53,7 +53,7 @@ src_unpack() {
 			${FILESDIR}/nagios-plugins-1.4-noradius.patch
 	fi
 
-	epatch ${FILESDIR}/${PN}-1.4-contrib.patch
+	epatch ${FILESDIR}/${PN}-1.4.10-contrib.patch
 
 	AT_M4DIR="m4 gl/m4" eautoreconf
 }
@@ -85,12 +85,12 @@ src_compile() {
 }
 
 src_install() {
-	mv ${S}/contrib/check_compaq_insight.pl ${S}/contrib/check_compaq_insight.pl.msg
-	chmod +x ${S}/contrib/*.pl
+	mv "${S}"/contrib/check_compaq_insight.pl "${S}"/contrib/check_compaq_insight.pl.msg
+	chmod +x "${S}"/contrib/*.pl
 
-	sed -i -e '1s;#!.*;#!/usr/bin/perl -w;' ${S}/contrib/*.pl || die "sed failed"
+	sed -i -e '1s;#!.*;#!/usr/bin/perl -w;' "${S}"/contrib/*.pl || die "sed failed"
 	sed -i -e '30s/use lib utils.pm;/use utils;/' \
-		${S}/plugins-scripts/check_file_age.pl || die "sed failed"
+		"${S}"/plugins-scripts/check_file_age.pl || die "sed failed"
 
 	dodoc ABOUT-NLS ACKNOWLEDGEMENTS AUTHORS BUGS CHANGES CODING COPYING \
 		Changelog FAQ INSTALL LEGAL NEWS README REQUIREMENTS SUPPORT
@@ -100,18 +100,18 @@ src_install() {
 	if use mysql || use postgres; then
 		dodir /usr/nagios/libexec
 		exeinto /usr/nagios/libexec
-		doexe ${S}/contrib/check_nagios_db.pl
+		doexe "${S}"/contrib/check_nagios_db.pl
 	fi
 
 	dodir /usr/nagios/libexec/
-	mv ${S}/contrib ${D}/usr/nagios/libexec/contrib
+	mv "${S}"/contrib "${D}"/usr/nagios/libexec/contrib
 
-	chown root:nagios ${D}/usr/nagios || die "Failed Chown of ${D}usr/nagios"
-	chown -R root:nagios ${D}/usr/nagios/libexec || die "Failed Chown of ${D}usr/nagios/libexec"
+	chown root:nagios "${D}"/usr/nagios || die "Failed Chown of ${D}usr/nagios"
+	chown -R root:nagios "${D}"/usr/nagios/libexec || die "Failed Chown of ${D}usr/nagios/libexec"
 
-	chmod -R o-rwx ${D}/usr/nagios/libexec || "Failed Chmod of ${D}usr/nagios/libexec"
+	chmod -R o-rwx "${D}"/usr/nagios/libexec || die "Failed Chmod of ${D}usr/nagios/libexec"
 
-	chmod 04710 ${D}/usr/nagios/libexec/check_icmp || "Failed Chmod of ${D}usr/nagios/libexec/check_icmp"
+	chmod 04710 "${D}"/usr/nagios/libexec/check_icmp || die "Failed Chmod of ${D}usr/nagios/libexec/check_icmp"
 }
 
 pkg_postinst() {
