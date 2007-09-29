@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.10.ebuild,v 1.1 2007/09/29 09:10:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.10.ebuild,v 1.2 2007/09/29 09:31:07 dertobi123 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -48,12 +48,13 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	if ! use radius; then
-		EPATCH_OPTS="-p0 -d ${S}" epatch \
-			${FILESDIR}/nagios-plugins-1.4-noradius.patch
+		EPATCH_OPTS="-p1 -d ${S}" epatch \
+		"${FILESDIR}"/nagios-plugins-1.4.10-noradius.patch
 	fi
 
-	epatch ${FILESDIR}/${PN}-1.4.10-contrib.patch
+	epatch "${FILESDIR}"/${PN}-1.4.10-contrib.patch
 
 	AT_M4DIR="m4 gl/m4" eautoreconf
 }
