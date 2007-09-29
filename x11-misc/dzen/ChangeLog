@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dzen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/ChangeLog,v 1.3 2007/09/16 21:56:18 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/ChangeLog,v 1.4 2007/09/29 11:58:06 philantrop Exp $
+
+  29 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> dzen-0.8.5.ebuild:
+  Keyworded ~amd64 as per bug 192738.
 
 *dzen-0.8.5 (16 Sep 2007)
 
