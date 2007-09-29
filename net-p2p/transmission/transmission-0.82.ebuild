@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.82.ebuild,v 1.2 2007/09/28 12:09:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.82.ebuild,v 1.3 2007/09/29 00:14:55 dirtyepic Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="sys-devel/gettext
 		 >=dev-libs/glib-2.6
 		 daemon? ( dev-libs/libevent )
 		 gtk? ( >=x11-libs/gtk+-2.6 )
-		 wxwindows? ( >=x11-libs/wxGTK-2.6 )"
+		 wxwindows? ( =x11-libs/wxGTK-2.6* )"
 DEPEND="${RDEPEND}
 		sys-devel/gettext
 		>=dev-util/pkgconfig-0.19"
@@ -27,7 +27,7 @@ S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix man page install location
 	sed -i -e 's|/man/man1|/share/man/man1|' mk/common.mk
