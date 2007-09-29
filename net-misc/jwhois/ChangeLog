@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/jwhois
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.28 2007/01/08 04:55:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.29 2007/09/29 13:49:25 vapier Exp $
+
+*jwhois-4.0 (29 Sep 2007)
+
+  29 Sep 2007; Mike Frysinger <vapier@gentoo.org> +jwhois-4.0.ebuild:
+  Version bump #194054 by MATSUU Takuto.
 
 *jwhois-3.2.3-r1 (08 Jan 2007)
 
