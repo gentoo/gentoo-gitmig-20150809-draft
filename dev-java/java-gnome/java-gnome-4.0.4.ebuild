@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.4.ebuild,v 1.1 2007/09/27 20:13:32 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.4.ebuild,v 1.2 2007/09/29 16:43:39 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -30,12 +30,13 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_compile() {
+	# Handwritten in perl so not using econf
 	./configure --prefix=/usr || die
 
-	make || die "Compilation of java-gnome failed"
+	emake || die "Compilation of java-gnome failed"
 
 	if use doc; then
-		make doc || die "Making documentation failed"
+		emake doc || die "Making documentation failed"
 	fi
 }
 

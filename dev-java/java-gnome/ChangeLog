@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.40 2007/09/27 20:13:32 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.41 2007/09/29 16:43:39 betelgeuse Exp $
+
+  29 Sep 2007; Petteri Räty <betelgeuse@gentoo.org>
+  java-gnome-4.0.4.ebuild:
+  Use emake and add comments on why econf is not used.
 
 *java-gnome-4.0.4 (27 Sep 2007)
 
