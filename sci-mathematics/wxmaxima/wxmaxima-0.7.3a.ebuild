@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.3a.ebuild,v 1.1 2007/09/13 14:14:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.3a.ebuild,v 1.2 2007/09/29 00:16:14 dirtyepic Exp $
 
 inherit eutils autotools wxwidgets fdo-mime
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="unicode"
 DEPEND=">=dev-libs/libxml2-2.5.0
-	>=x11-libs/wxGTK-2.6"
+	=x11-libs/wxGTK-2.6*"
 RDEPEND=">=sci-mathematics/maxima-5.13.0"
 
 S=${WORKDIR}/${MYP}
