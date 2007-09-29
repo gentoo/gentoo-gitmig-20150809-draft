@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-magictouch
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-magictouch/ChangeLog,v 1.25 2007/09/08 21:46:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-magictouch/ChangeLog,v 1.26 2007/09/29 10:17:33 armin76 Exp $
+
+  29 Sep 2007; Raúl Porcel <armin76@gentoo.org>
+  xf86-input-magictouch-1.0.0.5.ebuild:
+  sparc stable wrt #191615
 
   08 Sep 2007; Joseph Jezak <josejx@gentoo.org>
   xf86-input-magictouch-1.0.0.5.ebuild:
