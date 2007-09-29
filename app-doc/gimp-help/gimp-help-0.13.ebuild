@@ -1,9 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.13.ebuild,v 1.1 2007/09/26 03:01:24 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-0.13.ebuild,v 1.2 2007/09/29 11:32:39 ulm Exp $
+
+inherit eutils
 
 MY_P=${P/gimp-help/gimp-help-2}
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="GNU Image Manipulation Program help files"
 HOMEPAGE="http://docs.gimp.org/"
@@ -19,6 +21,11 @@ DEPEND="=app-text/docbook-xml-dtd-4.3*
 		dev-libs/libxslt
 		webinstall? ( media-gfx/imagemagick )"
 RDEPEND="!<media-gfx/gimp-2.2.12"
+
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}/${P}-image-files.patch"
+}
 
 src_compile() {
 	local ALL_LINGUAS=""
@@ -50,5 +57,5 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	dodoc AUTHORS ChangeLog HACKING NEWS README TERMINOLOGY TODO
+	dodoc AUTHORS ChangeLog HACKING NEWS README TERMINOLOGY
 }

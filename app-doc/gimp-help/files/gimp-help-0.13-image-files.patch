@@ -1,0 +1,12 @@
+--- gimp-help-2-0.13-orig/Makefile.in	2007-07-25 11:23:30.000000000 +0200
++++ gimp-help-2-0.13/Makefile.in	2007-09-29 09:49:06.000000000 +0200
+@@ -627,7 +627,8 @@
+ 	@for dir in $(IMAGE_DIRS); do \
+ 		$(mkdir_p) "$(DESTDIR)$(helpdir)/$$dir" || exit; \
+ 	done
+-	@for file in $(IMAGE_FILES); do \
++	@cd $(top_srcdir) && \
++	find images $(image_find_predicates) | while read file; do \
+ 		case "$$file" in \
+ 		  *.gif) echo -n G ;; \
+ 		  *.jpg) echo -n J ;; \

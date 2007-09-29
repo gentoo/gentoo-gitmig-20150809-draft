@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.39 2007/09/26 03:01:24 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.40 2007/09/29 11:32:39 ulm Exp $
+
+  29 Sep 2007; Ulrich Mueller <ulm@gentoo.org>
+  +files/gimp-help-0.13-image-files.patch, gimp-help-0.13.ebuild:
+  Fix "argument list too long" error in image files installation, bug #193844.
+  Remove "TODO" from dodoc since it no longer exists.
 
 *gimp-help-0.13 (26 Sep 2007)
 
