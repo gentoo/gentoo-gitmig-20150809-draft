@@ -1,5 +1,5 @@
 --- f90/Makefile.am.orig	2007-03-01 19:46:10.000000000 +0000
-+++ f90/Makefile.am	2007-09-28 12:11:09.488085153 +0100
++++ f90/Makefile.am	2007-09-29 09:09:39.626908874 +0100
 @@ -37,7 +37,7 @@
  libnetcdff90_la_DEPENDENCIES += netcdf4_func.f90 netcdf4_externals.f90	\
  netcdf4_visibility.f90 netcdf4_constants.f90 netcdf4.f90
@@ -18,7 +18,7 @@
  
  endif # USE_NETCDF4
  
-@@ -62,12 +62,14 @@
+@@ -62,12 +62,16 @@
  # uppercase. Just to be special.
  if UPPER_CASE_MOD
  nodist_include_HEADERS = TYPESIZES.mod NETCDF.mod
@@ -27,6 +27,7 @@
 +TYPESIZES.mod: typeSizes.o typeSizes.lo
 +NETCDF.mod: $(NETCDF_).o $(NETCDF_).lo
 +$(NETCDF_).o : TYPESIZES.mod
++$(NETCDF_).lo : TYPESIZES.mod
  else
  nodist_include_HEADERS = typesizes.mod netcdf.mod 
 -typesizes.mod: typeSizes.o
@@ -34,6 +35,7 @@
 +typesizes.mod: typeSizes.o typeSizes.lo
 +netcdf.mod: $(NETCDF_).o $(NETCDF_).lo
 +$(NETCDF_).o : typesizes.mod
++$(NETCDF_).lo : typesizes.mod
  endif
  
  # This is what we are building: a convenience library of F90 functions.
