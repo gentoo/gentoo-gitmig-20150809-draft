@@ -17,7 +17,7 @@
 		拡張パッケージが含まれます。
 	</longdescription>
 	<longdescription lang="nl">
-		De app-emac categorie bevat extensies voor Emacs.
+		De app-emacs categorie bevat extensies voor Emacs.
 	</longdescription>
 	<longdescription lang="vi">
 		Nhóm app-emacs chứa các gói mở rộng cho trình soạn
@@ -34,4 +34,3 @@
 		Kategoria app-emacs zawiera pakiety związane z edytorem tekstu Emacs.
 	</longdescription>
 </catmetadata>
-
