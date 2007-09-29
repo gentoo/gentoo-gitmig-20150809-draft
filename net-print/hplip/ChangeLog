@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.75 2007/09/20 08:25:31 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.76 2007/09/29 20:31:08 calchan Exp $
+
+*hplip-2.7.7-r3 (29 Sep 2007)
+
+  29 Sep 2007; Denis Dupeyron <calchan@gentoo.org> -hplip-2.7.7-r2.ebuild,
+  +hplip-2.7.7-r3.ebuild:
+  Fixed bug #194052, thanks to Dmitri Pogosian. Removed fix for bug #161926
+  which isn't necessary anymore.
 
   20 Sep 2007; Denis Dupeyron <calchan@gentoo.org> -hplip-2.7.6.ebuild,
   -hplip-2.7.7.ebuild:

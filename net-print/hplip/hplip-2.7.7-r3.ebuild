@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.7-r2.ebuild,v 1.1 2007/08/22 13:35:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.7-r3.ebuild,v 1.1 2007/09/29 20:31:08 calchan Exp $
 
 inherit eutils linux-info
 
@@ -53,7 +53,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	sed -i -e "s:toolbox:toolbox.py:" hplip.desktop.in || die "Patching hplip.desktop.in failed"
 	sed -i -e "s:\$(doc_DATA)::" Makefile.in || die "Patching Makefile.in failed"
 	sed -i -e "s/'skipstone']/'skipstone', 'epiphany']/" \
 		-e "s/'skipstone': ''}/'skipstone': '', 'epiphany': '--new-window'}/" \
@@ -61,9 +60,6 @@ src_unpack() {
 
 	# bug 98428
 	sed -i -e "s:/usr/bin/env python:/usr/bin/python:g" hpssd.py || die "Patching hpssd.py failed"
-
-	# bug 161926, until fixed by upstream probably in 2.7.7
-	sed -i -e "s:if (!localOnly):if (1):" scan/sane/hpaio.c  || die "Patching scan/sane/hpaio.c failed"
 
 	# Force recognition of Gentoo distro by hp-check
 	sed -i \
