@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.95 2007/09/28 17:16:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.96 2007/09/29 13:37:42 vapier Exp $
+
+*whois-4.7.23 (29 Sep 2007)
+
+  29 Sep 2007; Mike Frysinger <vapier@gentoo.org> +whois-4.7.23.ebuild:
+  Version bump.
 
   28 Sep 2007; nixnut <nixnut@gentoo.org> whois-4.7.22.ebuild:
   Stable on ppc wrt bug 194009
