@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/timidity-shompatches
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/ChangeLog,v 1.23 2007/02/25 22:57:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/ChangeLog,v 1.24 2007/09/29 09:04:43 drac Exp $
+
+  29 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  timidity-shompatches-19960409-r4.ebuild:
+  Keyworded and marked stable on arm wrt #156160 and #191283 so they won't
+  block FLAC 1.1.4 anymore.
 
   25 Feb 2007; Joseph Jezak <josejx@gentoo.org>
   timidity-shompatches-19960409-r4.ebuild:

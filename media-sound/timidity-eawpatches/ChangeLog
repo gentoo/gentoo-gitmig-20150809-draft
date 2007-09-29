@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/timidity-eawpatches
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/ChangeLog,v 1.38 2007/08/19 10:19:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/ChangeLog,v 1.39 2007/09/29 09:06:03 drac Exp $
+
+  29 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  timidity-eawpatches-12-r5.ebuild:
+  Keyworded and marked stable on arm wrt #156160 and #191283 so they won't
+  block FLAC 1.1.4 anymore.
 
   19 Aug 2007; Samuli Suominen <drac@gentoo.org>
   timidity-eawpatches-12-r4.ebuild:

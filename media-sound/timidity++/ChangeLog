@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.92 2007/09/23 10:10:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.93 2007/09/29 09:07:31 drac Exp $
+
+  29 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  timidity++-2.13.2-r5.ebuild:
+  Keyworded and marked stable on arm wrt #156160 and #191283 so they won't
+  block FLAC 1.1.4 anymore.
 
   23 Sep 2007; Christoph Mende <angelos@gentoo.org>
   timidity++-2.13.2-r5.ebuild:
