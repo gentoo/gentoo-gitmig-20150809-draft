@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.78 2007/08/05 00:15:09 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.79 2007/09/29 15:12:18 wrobel Exp $
+
+*egroupware-1.4.002 (29 Sep 2007)
+
+  29 Sep 2007; <wrobel@gentoo.org> +egroupware-1.4.002.ebuild:
+  Added egroupware-1.4.002 to the tree in response to sec issue #193960.
 
   05 Aug 2007; Renat Lumpau <rl03@gentoo.org> egroupware-1.4.001.ebuild:
   Call webapp_pkg_postinst, bug #183228
