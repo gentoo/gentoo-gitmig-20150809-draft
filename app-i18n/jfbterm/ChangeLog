@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/jfbterm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.49 2007/09/29 10:56:29 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.50 2007/09/29 15:56:08 matsuu Exp $
+
+  29 Sep 2007; MATSUU Takuto <matsuu@gentoo.org> -jfbterm-0.4.7-r2.ebuild,
+  -jfbterm-0.4.7-r3.ebuild:
+  Removed old versions.
 
   29 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
   jfbterm-0.4.7-r4.ebuild:
