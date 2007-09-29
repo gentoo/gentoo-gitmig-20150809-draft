@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.39.ebuild,v 1.1 2007/09/21 19:34:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.39.ebuild,v 1.2 2007/09/29 20:40:09 keri Exp $
 
 inherit eutils flag-o-matic java-pkg-opt-2
 
-PATCHSET_VER="0"
+PATCHSET_VER="1"
 
 DESCRIPTION="free, small, and standard compliant Prolog compiler"
 HOMEPAGE="http://www.swi-prolog.org/"
@@ -45,6 +45,7 @@ src_unpack() {
 	epatch "${WORKDIR}"/${PV}/1000-cflags.patch
 	epatch "${WORKDIR}"/${PV}/1001-multilib.patch
 	epatch "${WORKDIR}"/${PV}/2100-thread-sandbox.patch
+	epatch "${WORKDIR}"/${PV}/2101-clear-seg-stack.patch
 	epatch "${WORKDIR}"/${PV}/2105-pl-profile-va-debug.patch
 	epatch "${WORKDIR}"/${PV}/2800-mandir.patch
 	epatch "${WORKDIR}"/${PV}/2900-thread-library.patch
