@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/pears/pears-1.7.ebuild,v 1.4 2007/02/14 18:45:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/pears/pears-1.7.ebuild,v 1.5 2007/09/29 00:47:56 dirtyepic Exp $
 
 inherit python
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~ppc"
 
 IUSE=""
 DEPEND=">=dev-lang/python-2.2
-	>=dev-python/wxpython-2.6"
+	=dev-python/wxpython-2.6*"
 
 src_install() {
 	python_version
