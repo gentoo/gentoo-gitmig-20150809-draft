@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.3.ebuild,v 1.1 2007/07/11 19:19:01 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.3.ebuild,v 1.2 2007/09/29 00:03:39 dirtyepic Exp $
 
 inherit qt4 eutils autotools
 
@@ -16,7 +16,7 @@ IUSE="X v4l crypt xinerama threads fbcon"
 
 DEPEND="dev-libs/lzo
 	sys-apps/tcp-wrappers
-	x11-libs/wxGTK
+	=x11-libs/wxGTK-2.6*
 	media-libs/jpeg
 	sys-libs/zlib
 	dev-libs/openssl

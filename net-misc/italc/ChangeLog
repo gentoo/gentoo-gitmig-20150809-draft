@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/italc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.4 2007/07/11 19:19:01 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.5 2007/09/29 00:03:39 dirtyepic Exp $
+
+  29 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> italc-1.0.2.ebuild,
+  italc-1.0.3.ebuild:
+  Lock wxGTK to 2.6.
 
 *italc-1.0.3 (11 Jul 2007)
 
