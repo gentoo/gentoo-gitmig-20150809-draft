@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.97 2007/09/28 17:31:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.98 2007/09/29 23:22:07 vapier Exp $
 
   28 Sep 2007; nixnut <nixnut@gentoo.org> iproute2-2.6.22.20070710.ebuild:
   Stable on ppc wrt bug 193818
@@ -20,6 +20,10 @@
   27 Sep 2007; Jeroen Roovers <jer@gentoo.org>
   iproute2-2.6.22.20070710.ebuild:
   Stable for HPPA (bug #193818).
+
+  29 Sep 2007; Mike Frysinger <vapier@gentoo.org>
+  iproute2-2.6.22.20070710.ebuild:
+  Add user patch support so we dont need to maintain ESFQ cruft anymore.
 
   30 Aug 2007; Jeroen Roovers <jer@gentoo.org>
   iproute2-2.6.20.20070313.ebuild:

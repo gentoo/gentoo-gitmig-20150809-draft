@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.22.20070710.ebuild,v 1.6 2007/09/28 17:31:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.22.20070710.ebuild,v 1.7 2007/09/29 23:22:07 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://developer.osdl.org/dev/iproute2/download/${PN}-${MY_PV}-${SNAP}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~m68k mips ppc ~ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 m68k mips ppc ~ppc64 s390 sh sparc x86"
 IUSE="atm berkdb minimal"
 
 RDEPEND="!minimal? ( berkdb? ( sys-libs/db ) )
@@ -38,6 +38,20 @@ src_unpack() {
 	sed -i "s:-O2:${CFLAGS}:" Makefile || die "sed Makefile failed"
 
 	epatch "${FILESDIR}"/${PN}-2.6.16.20060323-build.patch #137574
+
+	local check base=${PORTAGE_CONFIGROOT}/etc/portage/patches
+	for check in {${CATEGORY}/${PF},${CATEGORY}/${P},${CATEGORY}/${PN}}; do
+		EPATCH_SOURCE=${base}/${CTARGET}/${check}
+		[[ -r ${EPATCH_SOURCE} ]] || EPATCH_SOURCE=${base}/${CHOST}/${check}
+		[[ -r ${EPATCH_SOURCE} ]] || EPATCH_SOURCE=${base}/${check}
+		if [[ -d ${EPATCH_SOURCE} ]] ; then
+			EPATCH_SUFFIX="patch"
+			EPATCH_FORCE="yes" \
+			EPATCH_MULTI_MSG="Applying user patches from ${EPATCH_SOURCE} ..." \
+			epatch
+			break
+		fi
+	done
 
 	# don't build arpd if USE=-berkdb #81660
 	use berkdb || sed -i '/^TARGETS=/s: arpd : :' misc/Makefile
