@@ -1,6 +1,16 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.56 2007/09/25 17:49:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.57 2007/09/30 20:48:26 eva Exp $
+
+  30 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/balsa-2.2.6-deprecation.fix.patch,
+  -files/balsa-2.3.4-icon-cache.patch,
+  -files/balsa-gtk+-2.4-deprecation-fix.patch,
+  -files/balsa-sqlite3-fix.patch, -files/balsa-ssl.patch,
+  -balsa-2.0.15-r2.ebuild, -balsa-2.2.6-r3.ebuild, -balsa-2.2.6-r4.ebuild,
+  -balsa-2.3.4-r1.ebuild, -balsa-2.3.8.ebuild, balsa-2.3.13.ebuild,
+  balsa-2.3.16.ebuild, balsa-2.3.20.ebuild:
+  pruning old versions and removing useless eclass from inherit
 
   25 Sep 2007; Raúl Porcel <armin76@gentoo.org> balsa-2.3.20.ebuild:
   sparc stable wrt security #193179
