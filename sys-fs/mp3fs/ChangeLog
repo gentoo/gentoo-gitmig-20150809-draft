@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mp3fs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/ChangeLog,v 1.4 2007/09/14 01:02:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/ChangeLog,v 1.5 2007/09/30 15:30:13 swegener Exp $
+
+  30 Sep 2007; Sven Wegener <swegener@gentoo.org> mp3fs-0.11.ebuild:
+  Add ~x86 keyword.
 
 *mp3fs-0.11 (14 Sep 2007)
 

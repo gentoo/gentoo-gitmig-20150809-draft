@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/mp3fs-0.11.ebuild,v 1.1 2007/09/14 01:02:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/mp3fs-0.11.ebuild,v 1.2 2007/09/30 15:30:13 swegener Exp $
 
 DESCRIPTION="MP3FS is a read-only FUSE filesystem which transcodes FLAC audio files to MP3 on the fly when opened and read."
 HOMEPAGE="http://mp3fs.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND="sys-fs/fuse
 		media-libs/libid3tag
