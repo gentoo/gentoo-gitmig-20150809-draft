@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/exiftool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.24 2007/09/30 06:32:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.25 2007/09/30 06:41:42 graaff Exp $
+
+*exiftool-6.98 (30 Sep 2007)
+
+  30 Sep 2007; Hans de Graaff <graaff@gentoo.org> +exiftool-6.98.ebuild:
+  Version bump, add quoting and use emake.
 
   30 Sep 2007; Hans de Graaff <graaff@gentoo.org> -exiftool-6.81.ebuild:
   Remove old stable version
