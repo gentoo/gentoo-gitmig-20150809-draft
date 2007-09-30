@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-0.2.21.ebuild,v 1.2 2007/09/30 18:47:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-0.2.21.ebuild,v 1.3 2007/09/30 21:40:39 ticho Exp $
 
 DESCRIPTION="The GNU SASL library"
 HOMEPAGE="http://www.gnu.org/software/gsasl/"
@@ -31,6 +31,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "installation failed"
+	emake DESTDIR="${D}" install || die "installation failed"
 	dodoc ABOUT-NLS AUTHORS ChangeLog NEWS README README-alpha THANKS
 }
