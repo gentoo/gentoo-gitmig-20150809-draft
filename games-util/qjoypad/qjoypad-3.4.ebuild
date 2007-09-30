@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.ebuild,v 1.8 2006/10/09 17:18:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.ebuild,v 1.9 2007/09/30 21:43:29 mr_bones_ Exp $
 
 inherit qt3 eutils
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 src_compile() {
 	cd src
-	./config --prefix=/usr || die "config failed"
+	eqmake3 qjoypad.pro PREFIX=/usr
 	emake || die "emake failed"
 }
 
