@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-magnatune
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/ChangeLog,v 1.7 2007/08/07 15:57:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/ChangeLog,v 1.8 2007/09/30 15:01:55 ticho Exp $
+
+  30 Sep 2007; Andrej Kacian <ticho@gentoo.org>
+  gmpc-magnatune-0.14.0.ebuild, gmpc-magnatune-0.15.0.ebuild:
+  Updated HOMEPAGE, bug #187880 by Anton Romanov <theli at ukr.net>.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   gmpc-magnatune-0.15.0.ebuild:
