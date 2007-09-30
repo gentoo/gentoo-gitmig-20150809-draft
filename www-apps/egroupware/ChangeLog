@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.80 2007/09/29 17:23:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.81 2007/09/30 15:14:40 maekke Exp $
+
+  30 Sep 2007; Markus Meier <maekke@gentoo.org> egroupware-1.4.002.ebuild:
+  x86 stable, security bug #193960
 
   29 Sep 2007; Jeroen Roovers <jer@gentoo.org> egroupware-1.4.002.ebuild:
   Stable for HPPA (bug #193960).
