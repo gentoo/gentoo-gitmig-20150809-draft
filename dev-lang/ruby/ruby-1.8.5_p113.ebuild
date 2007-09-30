@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p113.ebuild,v 1.1 2007/09/30 08:44:50 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p113.ebuild,v 1.2 2007/09/30 08:55:53 rbrown Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -22,7 +22,7 @@ SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/${SLOT}/${MY_P}.tar.gz
 
 LICENSE="Ruby"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="cjk debug doc elibc_glibc examples ipv6 rubytests socks5 threads tk"
+IUSE="cjk debug doc examples ipv6 rubytests socks5 threads tk"
 
 RDEPEND=">=sys-libs/gdbm-1.8.0
 	>=sys-libs/readline-4.1
@@ -77,22 +77,12 @@ src_compile() {
 		append-flags "-DGC_MALLOC_LIMIT=${RUBY_GC_MALLOC_LIMIT}"
 	fi
 
-	# Bug #168939
-	# We need to always enable ipv6, use --with-lookup-order-hack=INET
-	# when we don't want ipv6 with glibc
-	if use elibc_glibc; then
-		myconf="--enable-ipv6"
-		if ! use ipv6; then
-			myconf="${myconf} --with-lookup-order-hack=INET"
-		fi
-	else
-		myconf=$(use_enable ipv6)
-	fi
 
 	econf --program-suffix=$MY_SUFFIX --enable-shared \
 		$(use_enable socks5 socks) \
 		$(use_enable doc install-doc) \
 		$(use_enable threads pthread) \
+		$(use_enable ipv6) \
 		$(use_enable debug) \
 		$(use_with tk) \
 		${myconf} \
