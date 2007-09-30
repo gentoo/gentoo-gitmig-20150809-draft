@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8e-r3.ebuild,v 1.3 2007/09/30 12:08:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8e-r3.ebuild,v 1.4 2007/09/30 12:17:40 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -27,7 +27,6 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-0.9.8-ppc64.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7e-gentoo.patch
-	epatch "${FILESDIR}"/${PN}-0.9.8-hppa-fix-detection.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7-alpha-default-gcc.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8b-parallel-build.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8-make-engines-dir.patch
