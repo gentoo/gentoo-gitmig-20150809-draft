@@ -1,6 +1,14 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.31 2007/09/20 20:11:42 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.32 2007/09/30 16:10:10 tester Exp $
+
+*pidgin-2.2.1 (30 Sep 2007)
+
+  30 Sep 2007; Olivier Crête <tester@gentoo.org>
+  -files/pidgin-2.2.0-proxy.patch, -pidgin-2.1.1.ebuild,
+  -pidgin-2.2.0.ebuild, -pidgin-2.2.0-r1.ebuild, +pidgin-2.2.1.ebuild:
+  Add new version to fix security bug #194278 (CVE CVE-2007-4996), remove old
+  potentially vulnerable versions
 
 *pidgin-2.2.0-r1 (20 Sep 2007)
 

@@ -1,10 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.1.1.ebuild,v 1.3 2007/08/27 11:31:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.2.1.ebuild,v 1.1 2007/09/30 16:10:10 tester Exp $
 
-WANT_AUTOMAKE=1.9
-
-inherit flag-o-matic eutils toolchain-funcs multilib autotools perl-app gnome2
+inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2
 
 MY_PV=${P/_beta/beta}
 
@@ -58,7 +56,7 @@ DEPEND="$RDEPEND
 S="${WORKDIR}/${MY_PV}"
 
 # Enable Default protocols
-DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn"
+DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,zephyr,simple,msn,myspace"
 
 # List of plugins yet to be ported (will be removed at some point)
 #   net-im/gaim-bnet
@@ -100,9 +98,6 @@ print_pidgin_warning() {
 	ewarn "on the lookout for include problems with preferences being lost"
 	ewarn "or forgotten, buddy icons not working as you expect, plugins or"
 	ewarn "other external files not properly being found."
-	ewarn
-	ewarn "If you are merging ${MY_P} from an earlier version of gaim,"
-	ewarn "you may need to re-merge any plugins like gaim-encryption."
 	ewarn
 	ewarn "If you experience problems with pidgin, file them as bugs with"
 	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org.  DO NOT report them"
