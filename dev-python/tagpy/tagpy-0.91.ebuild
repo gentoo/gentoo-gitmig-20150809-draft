@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.91.ebuild,v 1.3 2007/09/26 12:13:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.91.ebuild,v 1.4 2007/09/30 14:12:57 maekke Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://news.tiker.net/news.tiker.net/download/software/tagpy/${P}.tar.g
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc64 x86"
 IUSE=""
 
 DEPEND="virtual/python
