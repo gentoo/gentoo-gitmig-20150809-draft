@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.15.ebuild,v 1.8 2007/08/04 12:39:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.15.ebuild,v 1.9 2007/09/30 03:43:51 vapier Exp $
 
 inherit flag-o-matic autotools
 
@@ -23,6 +23,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/strace-dont-use-REG_SYSCALL-for-sh.patch
 	epatch "${FILESDIR}"/${PN}-4.5.12-superh-update.patch
+	epatch "${FILESDIR}"/${PN}-4.5.15-sh-SYS_ipc_subcall.patch
 	epatch "${FILESDIR}"/strace-fix-arm-bad-syscall.patch
 	epatch "${FILESDIR}"/${PN}-4.5.15-mips-sprintsigmask.patch
 	epatch "${FILESDIR}"/${PN}-4.5.12-libaio.patch #103427

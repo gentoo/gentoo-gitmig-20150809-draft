@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.101 2007/08/04 12:39:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.102 2007/09/30 03:43:51 vapier Exp $
+
+  30 Sep 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/strace-4.5.15-sh-SYS_ipc_subcall.patch, strace-4.5.15.ebuild,
+  strace-4.5.15-r1.ebuild, strace-4.5.16.ebuild:
+  Fix building on SuperH due to new ipc syscall check.
 
   04 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   strace-4.5.15.ebuild:
