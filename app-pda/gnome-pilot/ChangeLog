@@ -1,6 +1,20 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.36 2007/09/28 17:35:52 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.37 2007/09/30 19:38:11 eva Exp $
+
+  30 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gnome-pilot-2.0.1-pisock.patch,
+  -files/gnome-pilot-2.0.10-clie.patch,
+  -files/gnome-pilot-2.0.10-gcc34.patch,
+  -files/gnome-pilot-2.0.10-invalid-linguas.patch,
+  -files/gnome-pilot-2.0.10-memofile.patch,
+  -files/gnome-pilot-2.0.10-missing_proc.patch,
+  -files/gnome-pilot-2.0.10-treo600.patch,
+  -files/gnome-pilot-2.0.12-zire31.patch,
+  -files/gnome-pilot-2.0.13-as-needed.patch, -gnome-pilot-2.0.10-r1.ebuild,
+  -gnome-pilot-2.0.10-r2.ebuild, -gnome-pilot-2.0.12.ebuild,
+  -gnome-pilot-2.0.13.ebuild, -gnome-pilot-2.0.13-r1.ebuild:
+  pruning old versions
 
   28 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
   gnome-pilot-2.0.15.ebuild:
