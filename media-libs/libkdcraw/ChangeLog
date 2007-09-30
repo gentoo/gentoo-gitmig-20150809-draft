@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkdcraw
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/ChangeLog,v 1.8 2007/09/27 05:30:05 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/ChangeLog,v 1.9 2007/09/30 13:10:15 pylon Exp $
+
+  30 Sep 2007; Lars Weiler <pylon@gentoo.org> libkdcraw-0.1.1.ebuild:
+  stable ppc, bug #193928
 
   27 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
   libkdcraw-0.1.1.ebuild:
