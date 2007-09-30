@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/at76c503a
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.17 2007/08/29 18:48:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.18 2007/09/30 20:53:54 genstef Exp $
+
+*at76c503a-0.16 (30 Sep 2007)
+
+  30 Sep 2007; Stefan Schweizer <genstef@gentoo.org> +at76c503a-0.16.ebuild:
+  version bump thanks to Matt Turner <mattst88@gmail.com> and manny15
+  <windowsucks2000@netscape.net> in bug 188035
 
 *at76c503a-9999.ebuild (29 Aug 2007)
 *at76c503a-0.14_beta1.ebuild (29 Aug 2007)
