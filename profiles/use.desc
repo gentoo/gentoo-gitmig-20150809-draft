@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.363 2007/09/27 15:30:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.364 2007/09/30 07:51:19 remi Exp $
 
 # Keep them sorted
 
@@ -348,6 +348,7 @@ win32codecs - use win32codecs package for dll avi decoding support (wmv and what
 wmf - Adds support for the wmf vector image format
 wxwindows - Adds support for wxWidgets/wxGTK GUI toolkit
 x264 - Enable h264 encoding using x264
+xattr - Adds support for extended attributes (filesystem-stored metadata)
 xcomposite - Enable support for the Xorg composite extension
 xface - Adds xface support used to allow a small image of xface format to be included in an email via the header 'X-Face'.
 xine - Add support for the XINE movie libraries

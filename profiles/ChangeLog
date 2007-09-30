@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.673 2007/09/28 22:55:01 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.674 2007/09/30 07:51:19 remi Exp $
+
+  30 Sep 2007; Rémi Cardona <remi@gentoo.org> use.desc, use.local.desc:
+  move the xattr useflag from local to global
 
   28 Sep 2007; Alon Bar-Lev <alonbl@gentoo.org> package.mask:
   Remove app-text/hspell

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3047 2007/09/28 16:54:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3048 2007/09/30 07:51:19 remi Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -34,7 +34,6 @@ app-admin/webalizer:xtended - Include the 404 extension
 app-admin/webmin:webmin-minimal - Install the minimal webmin distribution
 app-antivirus/clamav:logrotate - Install logrotate script for clamav logs
 app-arch/dump:ermt - encrypted rmt support
-app-arch/libarchive:xattr - if you want extended attributes enabled
 app-arch/pdv:nomotif - Disable motif frontend.
 app-backup/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
 app-backup/bacula:bacula-clientonly - Disable DB support, and just build a client
@@ -50,7 +49,6 @@ app-backup/dar:dar32 - Enables --enable-mode=32 option, which replace infinint b
 app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinint by 64 bits integers.
 app-backup/kdar:dar32 - Support libdar32.so to use.
 app-backup/kdar:dar64 - Support libdar64.so to use.
-app-backup/rdiff-backup:xattr - if you want extended attributes enabled
 app-benchmarks/bootchart:acct - Enable process accounting
 app-benchmarks/jmeter:beanshell - Enable BeanShell scripting support
 app-cdr/brasero:beagle - Enable Beagle support for searches.
@@ -154,7 +152,6 @@ app-emulation/xen-tools:screen - Enable support for running domain U consoles in
 app-emulation/xen-tools:ioemu - Enable support for emulated io devices including video via VNC for domainUs
 app-emulation/xen:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS (not supported)
 app-emulation/xen:pae - Enable support for PAE kernels (usually x86-32 with >4GB memory)
-app-forensics/aide:xattr - if you want extended attributes enabled
 app-forensics/samhain:login-watch - Compile in the module to watch for login/logout events
 app-forensics/samhain:mounts-check - Compile in the module to check for correct mount options
 app-forensics/samhain:netclient - Compile a client, rather than a standalone version
@@ -1844,7 +1841,6 @@ sec-policy/selinux-desktop:avahi - Add avahi SELinux policy.
 sys-apps/acl:nfs - add support for NFS acls
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
-sys-apps/coreutils:xattr - if you want extended attributes enabled
 sys-apps/hal:dell - Adds support for Dell laptop smbios via libsmbios
 sys-apps/hal:disk-partition - Add support for partition editing via libparted
 sys-apps/hal:dmi - Adds support for DMI (Desktop Management Interface)
@@ -2097,7 +2093,6 @@ www-servers/fnord:auth - Enable HTTP authentication support
 www-servers/lighttpd:memcache - Enable memcache support for mod_cml and mod_trigger_b4_dl
 www-servers/lighttpd:rrdtool - Enable rrdtool support via mod_rrdtool
 www-servers/lighttpd:webdav - Enables webdev properties
-www-servers/lighttpd:xattr - if you want extended attributes enabled
 www-servers/nginx:flv - Enables special processing module for flv files
 www-servers/nginx:status - Enables stub_status module
 www-servers/nginx:webdav - Enables webdav support
