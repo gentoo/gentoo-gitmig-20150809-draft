@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7761 2007/09/29 11:34:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7762 2007/09/30 12:05:38 hoffie Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Christian Hoffmann <hoffie@gentoo.org> (30 Sep 2007)
+# 5.1 is unsupported by upstream and vulnerable to several security issues
+# Masked for removal in 30 days
+=dev-lang/php-5.1*
 
 # Peter Volkov <pva@gentoo.org> (28 Sep 2007)
 # masked for testing
