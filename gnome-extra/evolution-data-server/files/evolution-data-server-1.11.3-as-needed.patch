@@ -1,0 +1,35 @@
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN evolution-data-server-1.11.3.orig/Makefile.am evolution-data-server-1.11.3/Makefile.am
+--- evolution-data-server-1.11.3.orig/Makefile.am	2007-06-04 01:41:14.000000000 -0400
++++ evolution-data-server-1.11.3/Makefile.am	2007-06-07 11:03:46.000000000 -0400
+@@ -9,8 +9,8 @@ if ENABLE_CALENDAR
+ CALENDAR_DIR = calendar
+ endif
+ 
+-SUBDIRS = $(LIBDB) win32 libedataserver servers camel addressbook $(CALENDAR_DIR) libedataserverui src docs art po
+-DIST_SUBDIRS= win32 libedataserver servers camel addressbook calendar libedataserverui src docs art po
++SUBDIRS = $(LIBDB) win32 libedataserver camel addressbook $(CALENDAR_DIR) libedataserverui servers server.deps src docs art po
++DIST_SUBDIRS= win32 libedataserver camel addressbook calendar libedataserverui servers server.deps src docs art po
+ 
+ changelogs =			\
+ 	ChangeLog
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN evolution-data-server-1.11.3.orig/servers/exchange/storage/Makefile.am evolution-data-server-1.11.3/servers/exchange/storage/Makefile.am
+--- evolution-data-server-1.11.3.orig/servers/exchange/storage/Makefile.am	2007-06-01 03:06:39.000000000 -0400
++++ evolution-data-server-1.11.3/servers/exchange/storage/Makefile.am	2007-06-07 11:02:23.000000000 -0400
+@@ -63,14 +63,15 @@ libexchange_storage_1_2_la_LIBADD =				\
+ 	$(top_builddir)/servers/exchange/lib/libexchange.la	\
+ 	$(top_builddir)/servers/exchange/xntlm/libxntlm.la	\
+ 	$(top_builddir)/libedataserver/libedataserver-1.2.la	\
++	$(top_builddir)/libedataserverui/libedataserverui-1.2.la\
+ 	$(E_DATA_SERVER_LIBS)					\
+ 	$(E_DATA_SERVER_UI_LIBS)				\
+ 	$(LDAP_LIBS)						\
+ 	$(SOUP_LIBS)						\
+-	$(SOCKET_LIBS)
++	$(SOCKET_LIBS)						\
++	$(KRB5_LDFLAGS)
+ 
+ libexchange_storage_1_2_la_LDFLAGS =				\
+-	$(KRB5_LDFLAGS)						\
+ 	$(NO_UNDEFINED)						\
+ 	-version-info $(LIBEXCHANGE_STORAGE_CURRENT):$(LIBEXCHANGE_STORAGE_REVISION):$(LIBEXCHANGE_STORAGE_AGE)
+ 
