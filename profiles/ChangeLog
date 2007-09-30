@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.676 2007/09/30 12:05:38 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.677 2007/09/30 13:15:24 swegener Exp $
+
+  30 Sep 2007; Sven Wegener <swegener@gentoo.org> package.mask:
+  Mask dev-db/mysql-administrator and dev-db/mysql-query-browser, they have
+  been replaced by dev-db/mysql-gui-tools.
 
   30 Sep 2007; Christian Hoffmann <hoffie@gentoo.org> package.mask:
   Masking =dev-lang/php-5.1* for removal in 30 days (unfixed security issues +
