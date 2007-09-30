@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbconf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbconf/ChangeLog,v 1.18 2007/02/21 23:30:35 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbconf/ChangeLog,v 1.19 2007/09/30 15:15:28 ticho Exp $
+
+  30 Sep 2007; Andrej Kacian <ticho@gentoo.org> bbconf-1.10.ebuild:
+  Use econf to make sure all the right options are passed. Among other things,
+  it fixes bug #170350.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbconf/bbconf-1.10.ebuild,v 1.9 2006/12/07 02:23:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbconf/bbconf-1.10.ebuild,v 1.10 2007/09/30 15:15:28 ticho Exp $
 
 DESCRIPTION="All-in-one blackbox configuration tool."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -14,7 +14,8 @@ IUSE=""
 DEPEND="=x11-libs/qt-3*"
 
 src_compile () {
-	./configure --prefix=/usr --host=${CHOST} --with-qt-dir=/usr/qt/3 || die
+#	./configure --prefix=/usr --host=${CHOST} --with-qt-dir=/usr/qt/3 || die
+	econf --with-qt-dir=/usr/qt/3 || die
 	emake || die
 }
 
