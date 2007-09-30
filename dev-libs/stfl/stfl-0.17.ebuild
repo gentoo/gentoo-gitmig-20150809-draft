@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.17.ebuild,v 1.1 2007/09/04 22:42:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.17.ebuild,v 1.2 2007/09/30 14:56:19 ticho Exp $
 
-inherit perl-module toolchain-funcs
+inherit perl-module toolchain-funcs eutils
 
 DESCRIPTION="A library which implements a curses-based widget set for text terminals"
 HOMEPAGE="http://www.clifford.at/stfl/"
@@ -42,6 +42,13 @@ src_unpack() {
 }
 
 src_compile() {
+	if ! built_with_use sys-libs/ncurses unicode ; then
+		eerror "For this package to compile you must"
+		eerror "enable unicode use flag for ncurses."
+		eerror "Please re-emerge ncurses with unicode"
+		eerror "use flag."
+		die
+	fi
 	emake -j1 CC="$(tc-getCC)" || die "make failed"
 }
 
