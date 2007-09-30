@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.32 2007/09/30 16:10:10 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.33 2007/09/30 19:23:53 fmccor Exp $
+
+  30 Sep 2007; Ferris McCormick <fmccor@gentoo.org> pidgin-2.2.1.ebuild:
+  Sparc stable --- security Bug #194278 --- nice; seems good.
 
 *pidgin-2.2.1 (30 Sep 2007)
 
