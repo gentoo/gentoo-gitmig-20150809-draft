@@ -2,7 +2,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/files/xfs.start,v 1.2 2005/08/16 20:13:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/files/xfs.start,v 1.3 2007/09/30 08:21:18 dberkholz Exp $
 
 #NB: Config is in /etc/conf.d/xfs
 
@@ -306,11 +306,13 @@ start() {
 	
 	ebegin "Starting X Font Server"
 	if [ "`grep -e "^xfs:" /etc/passwd`" ] ; then
-		# Fix possible security problem, turned to hard failure in 6.8.0
-		# See discussion at http://freedesktop.org/bugzilla/show_bug.cgi?id=306
-		rm -rf /tmp/.font-unix
-		mkdir /tmp/.font-unix
-		chmod 1777 /tmp/.font-unix
+		# Fix possible race condition, bug #185660
+		while ! [ -d /tmp/.font-unix ]; do
+			# Fix possible security problem, turned to hard failure in 6.8.0
+			# See discussion at http://freedesktop.org/bugzilla/show_bug.cgi?id=306
+			rm -rf /tmp/.font-unix
+			mkdir -m 1777 /tmp/.font-unix
+		done
 
 		start-stop-daemon --start --quiet --exec /usr/bin/xfs \
 			-- -daemon -config /etc/X11/fs/config \
