@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.76 2007/09/30 13:47:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.77 2007/09/30 14:55:53 fmccor Exp $
+
+  30 Sep 2007; Ferris McCormick <fmccor@gentoo.org> rmagick-1.15.10.ebuild:
+  Sparc stable --- Bug #194246 --- thanks, Tiago.
 
   30 Sep 2007; Jeroen Roovers <jer@gentoo.org> rmagick-1.15.10.ebuild:
   Stable for HPPA (bug #194246).
