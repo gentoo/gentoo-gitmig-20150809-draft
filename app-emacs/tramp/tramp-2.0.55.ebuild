@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.0.55.ebuild,v 1.1 2007/08/17 22:15:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.0.55.ebuild,v 1.2 2007/09/30 23:58:30 ulm Exp $
 
 inherit elisp
 
@@ -23,11 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/share/info
-	dodir /usr/share/emacs/etc
-	dodir /usr/share/emacs/site-lisp/tramp
-
-	einstall lispdir="${D}/usr/share/emacs/site-lisp/tramp" || die
+	einstall lispdir="${D}${SITELISP}/tramp" || die
 
 	mv "${D}/usr/share/info/tramp" "${D}/usr/share/info/tramp-info"
 

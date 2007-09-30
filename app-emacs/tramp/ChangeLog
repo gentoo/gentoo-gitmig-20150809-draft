@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/tramp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.47 2007/09/26 13:13:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.48 2007/09/30 23:58:30 ulm Exp $
+
+  30 Sep 2007; Ulrich Mueller <ulm@gentoo.org> tramp-2.0.55.ebuild,
+  tramp-2.0.56.ebuild, tramp-2.1.10-r1.ebuild:
+  Remove unnecessary dodir commands. Use ${SITELISP} variable.
 
   26 Sep 2007; Ulrich Mueller <ulm@gentoo.org> -files/50tramp-gentoo.el,
   -tramp-2.0.45.ebuild, -tramp-2.0.53.ebuild, -tramp-2.1.8.ebuild,
