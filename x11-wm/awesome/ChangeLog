@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.2 2007/09/29 16:02:51 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.3 2007/09/30 14:42:03 matsuu Exp $
+
+  30 Sep 2007; MATSUU Takuto <matsuu@gentoo.org> awesome-1.2.ebuild:
+  Replaced from '/$(tc-getCC)/' to ':$(tc-getCC):'.
 
   29 Sep 2007; MATSUU Takuto <matsuu@gentoo.org> awesome-1.2.ebuild:
   Added ~amd64.

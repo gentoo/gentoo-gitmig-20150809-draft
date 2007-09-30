@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-1.2.ebuild,v 1.2 2007/09/29 16:02:51 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-1.2.ebuild,v 1.3 2007/09/30 14:42:03 matsuu Exp $
 
 inherit toolchain-funcs
 
@@ -28,9 +28,9 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i \
-		-e "/^CFLAGS/s/=.*-O3/= ${CFLAGS}/" \
-		-e "/^LDFLAGS/s/-ggdb3/${LDFLAGS}/" \
-		-e "/^CC/s/cc/$(tc-getCC)/" \
+		-e "/^CFLAGS/s:=.*-O3:= ${CFLAGS}:" \
+		-e "/^LDFLAGS/s:-ggdb3:${LDFLAGS}:" \
+		-e "/^CC/s:cc:$(tc-getCC):" \
 		-e "s:/usr/lib:/usr/$(get_libdir):" \
 		-e "s:/usr/local:/usr:" \
 		config.mk || die "sed failed"
