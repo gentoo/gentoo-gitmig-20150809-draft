@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.86 2007/09/12 08:31:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.87 2007/09/30 12:40:27 zzam Exp $
+
+*vdr-1.4.7-r5 (30 Sep 2007)
+
+  30 Sep 2007; Matthias Schwarzott <zzam@gentoo.org> +vdr-1.4.7-r5.ebuild:
+  Updated extensions-patch, this fixes some bugs with hlcutter. Added more
+  quoting to ebuild.
 
 *vdr-1.4.7-r4 (12 Sep 2007)
 
