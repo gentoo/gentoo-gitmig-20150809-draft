@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre3-r1.ebuild,v 1.2 2007/09/26 15:12:40 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre3-r1.ebuild,v 1.3 2007/09/30 07:37:03 voyageur Exp $
 
 inherit gnustep-2
 
 MY_PN=${PN/gnum/GNUM}
 
-S=${WORKDIR}/${MY_PN}
+S="${WORKDIR}"/${MY_PN}
 
 DESCRIPTION="A fully featured mail application for GNUstep"
 HOMEPAGE="http://www.collaboration-world.com/gnumail/"
