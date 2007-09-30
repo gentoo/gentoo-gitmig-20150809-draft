@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.2.ebuild,v 1.5 2007/09/30 13:30:56 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.2.ebuild,v 1.6 2007/09/30 15:51:42 maekke Exp $
 
 inherit elisp-common eutils flag-o-matic multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://pari.math.u-bordeaux.fr/pub/pari/unix/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc sparc x86"
 IUSE="doc emacs X"
 
 DEPEND="doc? ( virtual/tetex )
