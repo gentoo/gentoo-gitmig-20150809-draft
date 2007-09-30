@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/libntlm
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.1 2007/09/30 13:59:01 ticho Exp $
+
+*libntlm-0.4.0 (30 Sep 2007)
+
+  30 Sep 2007; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +libntlm-0.4.0.ebuild:
+  Initial import. Ebuild by hardcoiler <hardcoiler at gmail.com>.
+
