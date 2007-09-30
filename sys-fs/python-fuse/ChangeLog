@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/python-fuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/python-fuse/ChangeLog,v 1.1 2007/07/02 04:17:58 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/python-fuse/ChangeLog,v 1.2 2007/09/30 15:28:02 swegener Exp $
+
+  30 Sep 2007; Sven Wegener <swegener@gentoo.org> python-fuse-2.5.ebuild:
+  Add ~amd64 keyword.
 
 *python-fuse-2.5 (02 Jul 2007)
 

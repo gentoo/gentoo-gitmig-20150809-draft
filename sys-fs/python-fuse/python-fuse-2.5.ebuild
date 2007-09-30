@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/python-fuse/python-fuse-2.5.ebuild,v 1.1 2007/07/02 04:17:58 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/python-fuse/python-fuse-2.5.ebuild,v 1.2 2007/09/30 15:28:02 swegener Exp $
 
 inherit distutils
 
 MY_P="${PN}_${PV}"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 DESCRIPTION="Python FUSE bindings"
 HOMEPAGE="http://fuse.sourceforge.net/wiki/index.php/FusePython"
 SRC_URI="http://ftp.debian.org/debian/pool/main/p/${PN}/${MY_P}.orig.tar.gz"
