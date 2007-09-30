@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/xfs-1.0.4-r1.ebuild,v 1.1 2007/09/30 08:21:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/xfs-1.0.4-r1.ebuild,v 1.2 2007/09/30 12:33:49 maekke Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -9,7 +9,7 @@ inherit x-modular
 
 DESCRIPTION="X font server"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="ipv6"
 
 RDEPEND="x11-apps/ttmkfdir
