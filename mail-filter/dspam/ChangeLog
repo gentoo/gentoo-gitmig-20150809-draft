@@ -1,13 +1,13 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.97 2007/09/30 11:30:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.98 2007/09/30 11:38:40 mrness Exp $
 
 *dspam-3.8.0-r7 (30 Sep 2007)
 
   30 Sep 2007; Alin Năstac <mrness@gentoo.org> +files/dspam.cron-r1,
   +files/pgsql_createdb.py, +files/pgsql_purge.py, +dspam-3.8.0-r7.ebuild:
   Major dspam.cron and pkg_config redesign (#193081). Drop sqlite-2 support.
-  Install prefs.h needed by dovecot-dspam.
+  Install pref.h needed by dovecot-dspam.
 
 *dspam-3.8.0-r6 (10 Sep 2007)
 

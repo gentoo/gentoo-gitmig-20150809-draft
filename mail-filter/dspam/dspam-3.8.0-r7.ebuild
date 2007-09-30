@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r7.ebuild,v 1.1 2007/09/30 11:30:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r7.ebuild,v 1.2 2007/09/30 11:38:40 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -347,7 +347,12 @@ edit_dspam_params() {
 	for PARAMETER in $@ ; do
 		OLD_VALUE=$(awk "BEGIN { IGNORECASE=1; } \$1==\"${PARAMETER}\" { print \$2; exit; }" "${ROOT}${DSPAM_CONFDIR}/dspam.conf")
 		[[ $? == 0 ]] || return 1
-		read -r -p "${PARAMETER} (default ${OLD_VALUE:-none}): " VALUE
+		if [[ "${PARAMETER}" == *"Pass" ]]; then
+			read -r -p "${PARAMETER} (default ${OLD_VALUE:-none}; enter random for generating a new random password): " VALUE
+			[[ "${VALUE}" == "random" ]] && VALUE="${RANDOM}${RANDOM}${RANDOM}${RANDOM}"
+		else
+			read -r -p "${PARAMETER} (default ${OLD_VALUE:-none}): " VALUE
+		fi
 
 		if [[ -z "${VALUE}" ]] ; then
 			VALUE=${OLD_VALUE}
