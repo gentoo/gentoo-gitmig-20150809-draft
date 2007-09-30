@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/ristretto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ChangeLog,v 1.4 2007/09/30 12:15:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ChangeLog,v 1.5 2007/09/30 12:32:27 angelos Exp $
+
+*ristretto-0.0.7 (30 Sep 2007)
+
+  30 Sep 2007; Christoph Mende <angelos@gentoo.org> -ristretto-0.0.6.ebuild,
+  +ristretto-0.0.7.ebuild:
+  Version bump, previous version had problems
 
 *ristretto-0.0.6 (30 Sep 2007)
 
