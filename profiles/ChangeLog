@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.677 2007/09/30 13:15:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.678 2007/09/30 19:08:46 genstef Exp $
+
+  30 Sep 2007; Stefan Schweizer <genstef@gentoo.org> package.mask:
+  modify kpowersave mask to not cover the new version
 
   30 Sep 2007; Sven Wegener <swegener@gentoo.org> package.mask:
   Mask dev-db/mysql-administrator and dev-db/mysql-query-browser, they have

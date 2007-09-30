@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7764 2007/09/30 14:40:17 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7765 2007/09/30 19:08:46 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -565,7 +565,7 @@ net-wireless/mcs7780
 # Stefan Schweizer <genstef@gentoo.org> (9 may 2007)
 # waiting for better upstream versions
 # 170997 doesn't open the configuration dialog
->=sys-power/kpowersave-0.7.0
+=sys-power/kpowersave-0.7.2
 # 175933 cannot suspend because of missing org.freedesktop.PolicyKit
 >=sys-power/powersave-0.15.0
 
