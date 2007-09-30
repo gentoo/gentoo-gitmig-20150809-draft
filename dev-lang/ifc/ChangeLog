@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.26 2007/07/02 14:44:01 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.27 2007/09/30 10:34:44 bicatali Exp $
+
+*ifc-10.0.026 (30 Sep 2007)
+
+  30 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  +ifc-10.0.026.ebuild:
+  Version bump. Refactored the ebuild. Install debugger with USE flag and
+  extra deps. No more slotted until we have some utility to switch between
+  versions.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> ifc-9.1.040.ebuild:
   (QA) RESTRICT clean up.
