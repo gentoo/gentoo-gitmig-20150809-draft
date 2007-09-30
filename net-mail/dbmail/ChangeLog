@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dbmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.7 2007/09/10 18:14:20 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.8 2007/09/30 08:21:11 lordvan Exp $
+
+*dbmail-2.2.7_rc2 (30 Sep 2007)
+*dbmail-2.2.7_rc1 (30 Sep 2007)
+
+  30 Sep 2007; Thomas Raschbacher <lordvan@gentoo.org>
+  +dbmail-2.2.7_rc1.ebuild, +dbmail-2.2.7_rc2.ebuild:
+  added 2.2.7 rc1 and rc2 ebuilds
 
 *dbmail-2.2.6_rc2 (10 Sep 2007)
 
