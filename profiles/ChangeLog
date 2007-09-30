@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.674 2007/09/30 07:51:19 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.675 2007/09/30 10:28:47 bicatali Exp $
+
+  30 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
+  added debugger use flags for dev-lang/ifc and dev-lang/icc
 
   30 Sep 2007; Rémi Cardona <remi@gentoo.org> use.desc, use.local.desc:
   move the xattr useflag from local to global
