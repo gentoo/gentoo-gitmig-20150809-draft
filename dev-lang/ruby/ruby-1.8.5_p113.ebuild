@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p113.ebuild,v 1.2 2007/09/30 08:55:53 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5_p113.ebuild,v 1.3 2007/09/30 21:44:52 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -76,7 +76,6 @@ src_compile() {
 	if [ -n "${RUBY_GC_MALLOC_LIMIT}" ] ; then
 		append-flags "-DGC_MALLOC_LIMIT=${RUBY_GC_MALLOC_LIMIT}"
 	fi
-
 
 	econf --program-suffix=$MY_SUFFIX --enable-shared \
 		$(use_enable socks5 socks) \
