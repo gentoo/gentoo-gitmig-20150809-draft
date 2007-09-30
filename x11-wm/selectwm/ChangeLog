@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/selectwm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/ChangeLog,v 1.19 2007/02/21 22:42:11 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/ChangeLog,v 1.20 2007/09/30 20:09:52 coldwind Exp $
+
+  30 Sep 2007; Santiago M. Mola <coldwind@gentoo.org>
+  +files/selectwm-0.4.1-enable-deprecated-gtk.patch, selectwm-0.4.1.ebuild:
+  Enable deprecated GTK+ functions and a bit of clean up.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
