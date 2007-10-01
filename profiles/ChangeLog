@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.679 2007/10/01 15:04:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.680 2007/10/01 18:39:17 opfer Exp $
+
+  01 Oct 2007; Christian Faulhammer <opfer@gentoo.org> package.mask:
+  mask dev-util/ladebug
 
   01 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org> desc/cameras.desc:
   fix cameras.desc to include new IUSE_CAMERAS from libgphoto-2.4.0
