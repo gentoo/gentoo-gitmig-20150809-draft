@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r5.ebuild,v 1.1 2007/09/30 12:40:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r5.ebuild,v 1.2 2007/10/01 12:28:38 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -54,18 +54,16 @@ pkg_setup() {
 }
 
 add_cap() {
-	while [ "$1" ]; do
-		CAPS="${CAPS}\n$1=1"
-		shift
+	local arg
+	for arg; do
+		CAPS="${CAPS}\n${arg}=1"
 	done
 }
 
 enable_patch() {
-	local patch
-	while [ "$1" ]; do
-		patch="$1"
-		echo "$patch = 1" >> Make.config
-		shift
+	local arg
+	for arg; do
+		echo "${arg} = 1" >> Make.config
 	done
 }
 
