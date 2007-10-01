@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-mouse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.54 2007/10/01 08:30:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.55 2007/10/01 17:56:11 dberkholz Exp $
+
+  01 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.2.2-zaphod-xinerama-fix.diff:
+  Sorry, forgot to commit the actual patch.
 
 *xf86-input-mouse-1.2.2-r1 (01 Oct 2007)
 
