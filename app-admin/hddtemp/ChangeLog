@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.60 2007/09/09 17:22:20 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.61 2007/10/01 22:20:39 spock Exp $
+
+  01 Oct 2007; Michał Januszewski <spock@gentoo.org> files/hddgentoo.db:
+  HDD DB update -- 3 new drives from Doug Goldstein <cardoe@gentoo.org>.
 
   09 Sep 2007; Michał Januszewski <spock@gentoo.org> files/hddgentoo.db:
   HDD DB update (#191834).
