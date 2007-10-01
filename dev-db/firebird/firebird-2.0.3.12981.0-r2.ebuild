@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r2.ebuild,v 1.1 2007/10/01 05:39:33 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r2.ebuild,v 1.2 2007/10/01 15:08:58 wltjr Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -65,8 +65,7 @@ src_compile() {
 	filter-flags -fprefetch-loop-arrays
 	filter-mfpmath sse
 
-	econf \
-		--prefix=/usr/share/firebird --with-editline \
+	econf --prefix=/usr/share/firebird --with-editline \
 		$(use_enable !xinetd superserver) \
 		$(use_enable debug) \
 		${myconf} || die "econf failed"
@@ -75,11 +74,6 @@ src_compile() {
 
 src_install() {
 	cd "${S}/gen/firebird"
-
-	if use examples; then
-		docinto examples
-		dodoc examples/*
-	fi
 
 # Seems to be ignored?
 #	insinto /usr/share/firebird/bin
@@ -136,7 +130,7 @@ src_install() {
 
 	if use xinetd ; then
 		insinto /etc/xinetd.d
-		newins "${S}/gen/install/misc/${PN}.xinetd.2" "${PN}" || die "newins xinetd file failed"
+		newins "${S}/gen/install/misc/${PN}.xinetd.2" ${PN} || die "newins xinetd file failed"
 	else
 		newinitd "${FILESDIR}/${PN}.init.d.2" ${PN}
 		newconfd "${FILESDIR}/firebird.conf.d.2" ${PN}
@@ -146,12 +140,17 @@ src_install() {
 
 	# Install docs
 	use doc && dodoc "${WORKDIR}"/manuals/*
+
+	if use examples; then
+		docinto examples
+		dodoc examples/*
+	fi
 }
 
 pkg_postinst() {
 	# Hack to fix ownership/perms
-	chown -fR firebird:firebird ${ROOT}/etc/firebird ${ROOT}/usr/share/firebird
-	chmod 750 ${ROOT}/etc/firebird
+	chown -fR firebird:firebird "${ROOT}/etc/firebird" "${ROOT}/usr/share/firebird"
+	chmod 750 "${ROOT}/etc/firebird"
 
 	elog
 	elog "Firebird is no longer installed in /opt. Binaries are in"
@@ -159,78 +158,55 @@ pkg_postinst() {
 	elog "are in /var/log/firebird, and lock files in /var/run/firebird"
 	elog "Please report any problems or issues to bugs.gentoo.org."
 	elog
-
-#	elog
-#	elog "1. If haven't done so already, please run:"
-#	elog
-#	elog "	  \"emerge --config =${PF}\""
-#	elog
-#	elog "	  to create lockfiles, set permissions and more"
-#	elog
-#	elog "2. Firebird now runs with it's own user. Please remember to"
-#	elog "	  set permissions to firebird:firebird on databases you "
-#	elog "	  already have (if any)."
-#	elog
-#
-#	if ! use xinetd
-#	then
-#		elog "3. You've built the stand alone deamon version,"
-#		elog "	  SuperServer. If you were using pre 1.5.0 ebuilds"
-#		elog "	  you're probably have one installed via xinetd. please"
-#		elog "	  remember to disable it (usually in /etc/xinetd.d/firebird),"
-#		elog "	  since the current one has it's own init script under"
-#		elog "	  /etc/init.d"
-#	fi
 }
 
 pkg_config() {
 	# if found /etc/security.gdb from previous install, backup, and restore as
 	# /etc/security2.fdb
-	if [ -f /etc/firebird/security.gdb ]
-	then
+	if [ -f "${ROOT}/etc/firebird/security.gdb" ] ; then
 		# if we have scurity2.fdb already, back it 1st
-		if [ -f /etc/firebird/security2.fdb ] ; then
-			cp /etc/firebird/security2.fdb /etc/firebird/security2.fdb.old
+		if [ -f "${ROOT}/etc/firebird/security2.fdb" ] ; then
+			cp "${ROOT}/etc/firebird/security2.fdb" "${ROOT}/etc/firebird/security2.fdb.old"
 		fi
-		gbak -B /etc/firebird/security.gdb /etc/firebird/security.gbk
-		gbak -R /etc/firebird/security.gbk /etc/firebird/security2.fdb
-		mv /etc/firebird/security.gdb /etc/firebird/security.gdb.old
-		rm /etc/firebird/security.gbk
+		gbak -B "${ROOT}/etc/firebird/security.gdb" "${ROOT}/etc/firebird/security.gbk"
+		gbak -R "${ROOT}/etc/firebird/security.gbk" "${ROOT}/etc/firebird/security2.fdb"
+		mv "${ROOT}/etc/firebird/security.gdb" "${ROOT}/etc/firebird/security.gdb.old"
+		rm "${ROOT}/etc/firebird/security.gbk"
 
 		# make sure they are readable only to firebird
-		chown firebird:firebird /etc/firebird/{security.*,security2.*}
-		chmod 660 /etc/firebird/{security.*,security2.*}
+		chown firebird:firebird "${ROOT}/etc/firebird/{security.*,security2.*}"
+		chmod 660 "${ROOT}/etc/firebird/{security.*,security2.*}"
 
 		einfo
 		einfo "Converted old security.gdb to security2.fdb, security.gdb has been "
 		einfo "renamed to security.gdb.old. if you had previous security2.fdb, "
-		einfo "it's backed to security2.fdb.old (all under /etc/firebird)."
+		einfo "it's backed to security2.fdb.old (all under ${ROOT}/etc/firebird)."
 		einfo
 	fi
 
 	# we need to enable local access to the server
-	if [ ! -f /etc/hosts.equiv ] ; then
-		touch /etc/hosts.equiv
-		chown root:0 /etc/hosts.equiv
-		chmod u=rw,go=r /etc/hosts.equiv
+	if [ ! -f "${ROOT}/etc/hosts.equiv" ] ; then
+		touch "${ROOT}/etc/hosts.equiv"
+		chown root:0 "${ROOT}/etc/hosts.equiv"
+		chmod u=rw,go=r "${ROOT}/etc/hosts.equiv"
 	fi
 
 	# add 'localhost.localdomain' to the hosts.equiv file...
-	if grep -q 'localhost.localdomain$' /etc/hosts.equiv 2>/dev/null; then
-		echo "localhost.localdomain" >> /etc/hosts.equiv
-		einfo "Added localhost.localdomain to /etc/hosts.equiv"
+	if [ grep -q 'localhost.localdomain$' "${ROOT}/etc/hosts.equiv" 2>/dev/null ] ; then
+		echo "localhost.localdomain" >> "${ROOT}/etc/hosts.equiv"
+		einfo "Added localhost.localdomain to ${ROOT}/etc/hosts.equiv"
 	fi
 
 	# add 'localhost' to the hosts.equiv file...
-	if grep -q 'localhost$' /etc/hosts.equiv 2>/dev/null; then
-		echo "localhost" >> /etc/hosts.equiv
-		einfo "Added localhost to /etc/hosts.equiv"
+	if [ grep -q 'localhost$' "${ROOT}/etc/hosts.equiv" 2>/dev/null ] ; then
+		echo "localhost" >> "${ROOT}/etc/hosts.equiv"
+		einfo "Added localhost to ${ROOT}/etc/hosts.equiv"
 	fi
 
 	HS_NAME=`hostname`
-	if grep -q ${HS_NAME} /etc/hosts.equiv 2>/dev/null; then
-		echo "${HS_NAME}" >> /etc/hosts.equiv
-		einfo "Added ${HS_NAME} to /etc/hosts.equiv"
+	if [ grep -q ${HS_NAME} "${ROOT}/etc/hosts.equiv" 2>/dev/null ] ; then
+		echo "${HS_NAME}" >> "${ROOT}/etc/hosts.equiv"
+		einfo "Added ${HS_NAME} to ${ROOT}/etc/hosts.equiv"
 	fi
 
 	einfo "If you're using UDFs, please remember to move them"
