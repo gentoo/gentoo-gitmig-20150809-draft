@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.10.ebuild,v 1.1 2007/09/28 16:24:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.10.ebuild,v 1.2 2007/10/01 13:23:31 drac Exp $
 
 inherit fdo-mime gnome2-utils versionator
 
@@ -50,6 +50,9 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	econf --with-tr1 --enable-ld-workaround \
+		--with-boost-regex=boost_regex-mt \
+		--with-boost-filesystem=boost_filesystem-mt \
+		--with-boost-iostreams=boost_iostreams-mt \
 		$(use_enable modplug) \
 		$(use_enable hal) \
 		$(use_enable sid) \
