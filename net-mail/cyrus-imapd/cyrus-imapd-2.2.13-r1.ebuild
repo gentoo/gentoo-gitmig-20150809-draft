@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.13-r1.ebuild,v 1.8 2007/10/01 17:25:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.13-r1.ebuild,v 1.9 2007/10/01 18:55:51 philantrop Exp $
 
 inherit autotools eutils ssl-cert fixheadtails pam flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
 IUSE="afs drac idled kerberos pam snmp ssl tcpd unsupported_8bit"
 
 PROVIDE="virtual/imapd"
@@ -98,7 +98,7 @@ net-snmp_check() {
 			die "see above error message."
 		fi
 
-		# an atemptto solve bug #67411. Is there a better solution?
+		# an attempt to solve bug #67411. Is there a better solution?
 		# check for net-snmp-config exit and executable.
 		if [ -x "$(type -p net-snmp-config)" ]; then
 			einfo "$(type -p net-snmp-config) is found and executable."
