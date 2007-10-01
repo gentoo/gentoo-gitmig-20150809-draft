@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070711-r1.ebuild,v 1.1 2007/07/31 20:25:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.4.0.20070711-r1.ebuild,v 1.2 2007/10/01 16:25:37 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -88,6 +88,16 @@ pkg_setup() {
 			eerror "Please update to at least media-libs/libtheora-1.0_alpha4."
 			die "Please update to at least media-libs/libtheora-1.0_alpha4."
 	fi
+}
+
+src_unpack() {
+	vdr-plugin_src_unpack unpack
+	cd "${S}"
+
+	if has_version ">=media-video/vdr-1.5.9"; then
+		epatch "${FILESDIR}"/${PN}-${SNAP_V}-vdr-1.5.9.diff
+	fi
+	vdr-plugin_src_unpack all_but_unpack
 }
 
 src_compile() {
