@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hppa-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.82 2007/07/13 21:19:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.83 2007/10/01 13:48:02 jer Exp $
+
+  01 Oct 2007; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Linux 2.6 is released!
 
 *hppa-sources-2.6.22 (13 Jul 2007)
 
