@@ -1,0 +1,70 @@
+This patch is based on upstream Subversion commit 28, modified to use
+GTK_CHECK_VERSION to avoid patching configure.in.
+
+--- superswitcher/src/popup.c
++++ superswitcher/src/popup.c
+@@ -682,8 +682,12 @@
+   gtk_button_set_relief (GTK_BUTTON (button), GTK_RELIEF_NONE);
+   image = gtk_image_new_from_stock (stock_id, GTK_ICON_SIZE_MENU);
+   gtk_container_add (GTK_CONTAINER (button), image);
++#if GTK_CHECK_VERSION(2, 11, 0)
++  gtk_widget_set_tooltip_text (GTK_WIDGET (button), tooltip);
++#else
+   gtk_tooltips_set_tip (GTK_TOOLTIPS (popup->screen->tooltips),
+     button, tooltip, "");
++#endif
+   g_signal_connect (G_OBJECT (button), "clicked", callback, popup);
+ 
+   return button;
+--- superswitcher/src/screen.c
++++ superswitcher/src/screen.c
+@@ -906,7 +906,9 @@
+   screen->label_max_width_chars = 256;
+   update_window_label_width (screen);
+ 
++#if !GTK_CHECK_VERSION(2, 11, 0) 
+   screen->tooltips = gtk_tooltips_new ();
++#endif
+ 
+   screen->pointer_needs_recentering_on_focus_change = FALSE;
+ #ifdef HAVE_GCONF
+--- superswitcher/src/screen.h
++++ superswitcher/src/screen.h
+@@ -47,7 +47,9 @@
+ 
+   int   label_max_width_chars;
+ 
++#if !GTK_CHECK_VERSION(2, 11, 0) 
+   GtkTooltips *   tooltips;
++#endif
+ 
+   gboolean   pointer_needs_recentering_on_focus_change;
+ };
+--- superswitcher/src/window.c
++++ superswitcher/src/window.c
+@@ -215,8 +215,12 @@
+   window = (SSWindow *) data;
+   gtk_label_set_text (GTK_LABEL (window->label),
+     wnck_window_get_name (window->wnck_window));
++#if GTK_CHECK_VERSION(2, 11, 0) 
++  gtk_widget_set_tooltip_text (window->widget, wnck_window_get_name (wnck_window));
++#else
+   gtk_tooltips_set_tip (GTK_TOOLTIPS (window->workspace->screen->tooltips),
+     window->widget, wnck_window_get_name (wnck_window), "");
++#endif
+   gtk_widget_queue_draw (gtk_widget_get_toplevel (window->widget));
+ }
+ 
+@@ -301,8 +305,12 @@
+ 
+   eventbox = gtk_event_box_new ();
+   gtk_event_box_set_visible_window (GTK_EVENT_BOX (eventbox), FALSE);
++#if GTK_CHECK_VERSION(2, 11, 0) 
++  gtk_widget_set_tooltip_text (eventbox, wnck_window_get_name (wnck_window));
++#else
+   gtk_tooltips_set_tip (GTK_TOOLTIPS (workspace->screen->tooltips),
+     eventbox, wnck_window_get_name (wnck_window), "");
++#endif
+ 
+   hbox = gtk_hbox_new (FALSE, 3);
+   gtk_container_add (GTK_CONTAINER (eventbox), hbox);
