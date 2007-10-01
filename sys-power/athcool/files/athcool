@@ -1,15 +1,15 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/sys-power/athcool/files/athcool,v 1.1 2005/03/14 22:56:32 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/athcool/files/athcool,v 1.2 2007/10/01 10:57:44 uberlord Exp $
 
 start() {
-	ebegin "Starting Athcool"
-	/usr/sbin/athcool on &>/dev/null || return 1
+	ebegin "Starting ${SVCNAME}"
+	athcool on >/dev/null 2>&1
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping Athcool"
-	/usr/sbin/athcool off &>/dev/null || return 1
+	ebegin "Stopping ${SVCNAME}"
+	athcool off >/dev/null 2>&1
 	eend $?
 }
 
