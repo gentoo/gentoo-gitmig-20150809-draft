@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/shutterbug-1.6.19.ebuild,v 1.2 2007/07/13 05:09:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/shutterbug-1.6.29.ebuild,v 1.1 2007/10/01 01:33:22 mabi Exp $
 
 inherit fox
 
@@ -8,7 +8,7 @@ DESCRIPTION="Screenshot utility based on the FOX Toolkit"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~alpha ~hppa ~ppc ~ppc64 ~sparc"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="jpeg png tiff"
 
 DEPEND="~x11-libs/fox-${PV}
