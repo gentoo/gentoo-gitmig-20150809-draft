@@ -1,6 +1,6 @@
-# Copyright 2005-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/static-dev/static-dev-0.1.ebuild,v 1.8 2006/08/24 02:30:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/static-dev/static-dev-0.1.ebuild,v 1.9 2007/10/01 01:48:45 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -17,8 +17,8 @@ DEPEND=""
 RDEPEND="virtual/baselayout"
 PROVIDE="virtual/dev-manager"
 
-pkg_setup() {
-	if [[ -d ${ROOT}/dev/.udev/ || ! -c ${ROOT}/dev/.devfs ]] ; then
+pkg_preinst() {
+	if [[ -d ${ROOT}/dev/.udev || -c ${ROOT}/dev/.devfs ]] ; then
 		echo ""
 		eerror "We have detected that you currently use udev or devfs"
 		eerror "and this ebuild cannot install to the same mount-point."
