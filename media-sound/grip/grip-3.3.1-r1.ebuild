@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.1-r1.ebuild,v 1.1 2007/07/29 15:16:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.1-r1.ebuild,v 1.2 2007/10/01 13:54:03 lavajoe Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs libtool
 
 DESCRIPTION="GTK+ based Audio CD Player/Ripper."
 HOMEPAGE="http://www.nostatic.org/grip"
@@ -30,6 +30,9 @@ src_unpack() {
 	cd "${S}"
 	# Fix for incompatible implicit declaration of built-in function ‘strlen’.
 	epatch "${FILESDIR}"/${P}-implicit-declaration.patch
+
+	# Required for FreeBSD (do not remove)
+	elibtoolize
 }
 
 src_compile() {
