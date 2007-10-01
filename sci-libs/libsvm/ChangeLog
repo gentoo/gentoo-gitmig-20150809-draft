@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/libsvm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.3 2007/05/12 00:44:00 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.4 2007/10/01 22:14:22 opfer Exp $
+
+*libsvm-2.84 (01 Oct 2007)
+
+  01 Oct 2007; Christian Faulhammer <opfer@gentoo.org> -libsvm-2.81.ebuild,
+  -libsvm-2.81-r1.ebuild, +libsvm-2.84.ebuild:
+  version bump (bug 176396): added tools USE flag to make proper inclusion of
+  gnuplot dependency (bug 127128); reorder contents of KEYWORDS, inherit and
+  IUSE alphabetically; make proper installation of test_applet.html file
+  (wrong path, depending on python/java USE flag); clean up of old versions
 
 *libsvm-2.81-r1 (12 May 2007)
 
