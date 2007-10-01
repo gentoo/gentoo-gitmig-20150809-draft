@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.2.1.ebuild,v 1.2 2007/09/30 19:23:53 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.2.1.ebuild,v 1.3 2007/10/01 12:37:32 armin76 Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="bonjour dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc tcl tk spell qq gadu"
 IUSE="${IUSE} gtk sasl ncurses groupwise prediction zephyr" # mono"
 
