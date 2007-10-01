@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/man-pages-it
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/ChangeLog,v 1.9 2007/04/08 14:13:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/ChangeLog,v 1.10 2007/10/01 14:13:53 armin76 Exp $
+
+*man-pages-it-2.65 (01 Oct 2007)
+
+  01 Oct 2007; Raúl Porcel <armin76@gentoo.org> +man-pages-it-2.65.ebuild:
+  Version bump, bug 193678, thanks to Davide Cendron <scen at gentoo dot org>
 
   08 Apr 2007; Raúl Porcel <armin76@gentoo.org> -man-pages-it-2.34.ebuild,
   man-pages-it-2.43.ebuild:
