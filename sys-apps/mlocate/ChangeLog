@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.6 2007/09/02 12:45:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.7 2007/10/01 17:12:29 opfer Exp $
+
+  01 Oct 2007; Christian Faulhammer <opfer@gentoo.org> mlocate-0.18.ebuild:
+  stable x86, bug 194413
 
   02 Sep 2007; nixnut <nixnut@gentoo.org> ChangeLog:
   Added ~ppc wrt bug 190245
