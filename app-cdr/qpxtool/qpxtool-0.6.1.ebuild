@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.6.1.ebuild,v 1.1 2007/08/24 07:41:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.6.1.ebuild,v 1.2 2007/10/01 02:01:09 vapier Exp $
 
 inherit kde-functions qt3 multilib
 
@@ -19,9 +19,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i \
-		'/^PREFIX/s:/usr/local:/usr:' \
-		"/^LIBDIR/s:/lib:/$(get_libdir):" \
-		Makefile
+		-e '/^PREFIX/s:/usr/local:/usr:' \
+		-e "/^LIBDIR/s:/lib:/$(get_libdir):" \
+		Makefile || die
 }
 
 src_install() {
