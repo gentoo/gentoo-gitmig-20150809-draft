@@ -1,9 +1,7 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/gemhun-20040529.ebuild,v 1.4 2006/10/26 22:50:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/gemhun-20040529.ebuild,v 1.5 2007/10/01 00:43:11 mr_bones_ Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
 inherit eutils autotools games
 
 DESCRIPTION="A puzzle game about grouping gems of a chosen amount together"
