@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/cutecom-0.14.1.ebuild,v 1.3 2007/06/26 17:23:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/cutecom-0.14.1.ebuild,v 1.4 2007/10/01 11:52:11 mrness Exp $
 
 inherit eutils qt3
 
@@ -18,9 +18,10 @@ RDEPEND="${DEPEND}
 	net-dialup/lrzsz"
 
 src_compile() {
-	addwrite "${QTDIR}/etc/settings"
-	econf && emake || die "compile failed"
+	eqmake3 || die "eqmake3 failed"
+	emake || die "emake failed"
 
+	# clean qt lock file
 	local f
 	for f in "${QTDIR}"/etc/settings/.qt_plugins*.lock; do
 		rm -f "${f}"
@@ -28,7 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin "cutecom"
+	dobin cutecom || die "failed to install cutecom bin"
 	dodoc README Changelog README
 
 	make_desktop_entry cutecom "CuteCom" openterm
