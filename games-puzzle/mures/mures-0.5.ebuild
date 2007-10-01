@@ -1,9 +1,7 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mures/mures-0.5.ebuild,v 1.5 2006/10/17 19:07:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mures/mures-0.5.ebuild,v 1.6 2007/10/01 03:55:36 mr_bones_ Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
 inherit autotools eutils games
 
 DESCRIPTION="A clone of Sega's Chu Chu Rocket"
@@ -74,11 +72,6 @@ src_unpack() {
 	sed -i \
 		-e "s:load_maps.lua:${dir}/load_maps.lua:" \
 		map.c || die "sed map.c failed"
-}
-
-src_compile() {
-	egamesconf || die
-	emake || die "emake failed"
 }
 
 src_install() {
