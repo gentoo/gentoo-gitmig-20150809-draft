@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libconfig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.7 2007/09/29 08:39:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.8 2007/10/01 05:57:38 kumba Exp $
+
+  01 Oct 2007; Joshua Kinard <kumba@gentoo.org> libconfig-1.1.3.ebuild:
+  Marked unstable on mips, per #194176.
 
   29 Sep 2007; Mike Frysinger <vapier@gentoo.org> libconfig-1.1.3.ebuild:
   Add amd64/ppc64/sparc love for new ntfsprogs.
