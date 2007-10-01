@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.72 2007/09/30 13:41:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.73 2007/10/01 11:24:34 fmccor Exp $
+
+  01 Oct 2007; Ferris McCormick <fmccor@gentoo.org>
+  nagios-plugins-1.4.10.ebuild:
+  Sparc stable --- Bug #194178 --- thanks dertobi123 for how to test.
 
   30 Sep 2007; Markus Meier <maekke@gentoo.org>
   nagios-plugins-1.4.10.ebuild:
