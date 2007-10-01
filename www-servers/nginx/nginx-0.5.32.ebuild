@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.5.31.ebuild,v 1.1 2007/08/20 17:36:31 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.5.32.ebuild,v 1.1 2007/10/01 10:41:42 voxus Exp $
 
 inherit eutils ssl-cert
 
@@ -11,7 +11,7 @@ SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug fastcgi flv imap pcre perl ssl status webdav zlib"
+IUSE="debug fastcgi flv imap pcre perl ssl status sub webdav zlib"
 
 DEPEND="dev-lang/perl
 	pcre? ( >=dev-libs/libpcre-4.2 )
@@ -52,6 +52,7 @@ src_compile() {
 	use perl	&& myconf="${myconf} --with-http_perl_module"
 	use status	&& myconf="${myconf} --with-http_stub_status_module"
 	use webdav	&& myconf="${myconf} --with-http_dav_module"
+	use sub		&& myconf="${myconf} --with-http_sub_module"
 
 	./configure \
 		--prefix=/usr \
@@ -72,29 +73,29 @@ src_install() {
 	keepdir /var/log/${PN} /var/tmp/${PN}/{client,proxy,fastcgi}
 
 	dosbin objs/nginx
-	cp ${FILESDIR}/nginx-r1 ${T}/nginx
-	doinitd ${T}/nginx
+	cp "${FILESDIR}"/nginx-r1 "${T}"/nginx
+	doinitd "${T}"/nginx
 
-	cp ${FILESDIR}/nginx.conf-r4 conf/nginx.conf
+	cp "${FILESDIR}"/nginx.conf-r4 conf/nginx.conf
 
-	use ssl && {
-		if [ ! -f /etc/ssl/${PN}/${PN}.key ]; then
-			dodir /etc/ssl/${PN}
-			insinto /etc/ssl/${PN}
-			docert ${PN}
-		fi
-
-		sed -e 's:# ::' -i conf/nginx.conf
-	}
-
-	dodir /etc/${PN}
-	insinto /etc/${PN}
+	dodir "${ROOT}"/etc/${PN}
+	insinto "${ROOT}"/etc/${PN}
 	doins conf/*
 
 	dodoc CHANGES{,.ru} LICENSE README
 
 	use perl && {
-		cd ${S}/objs/src/http/modules/perl/
-		make DESTDIR=${D} install || die "failed to install perl stuff"
+		cd "${S}"/objs/src/http/modules/perl/
+		einstall DESTDIR="${D}"|| die "failed to install perl stuff"
+	}
+}
+
+pkg_postinst() {
+	use ssl && {
+		if [ ! -f "${ROOT}"etc/ssl/${PN}/${PN}.key ]; then
+			insinto "${ROOT}"etc/ssl/${PN}
+			insopts -m0644 -o nginx -g nginx
+			docert nginx
+		fi
 	}
 }

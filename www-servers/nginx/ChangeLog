@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.161 2007/09/25 07:16:42 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.162 2007/10/01 10:41:42 voxus Exp $
+
+*nginx-0.5.32 (01 Oct 2007)
+
+  01 Oct 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  -nginx-0.5.31.ebuild, +nginx-0.5.32.ebuild:
+  Version bump. sub useflag added. Certificate generation moved to
+  pkg_postinst().
 
 *nginx-0.6.13 (25 Sep 2007)
 
