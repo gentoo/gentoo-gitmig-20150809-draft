@@ -1,6 +1,9 @@
 # ChangeLog for media-video/jubler
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.2 2007/08/04 18:51:09 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.3 2007/10/01 20:17:22 swegener Exp $
+
+  01 Oct 2007; Sven Wegener <swegener@gentoo.org> jubler-3.3.0.ebuild:
+  Use full atoms for built_with_use.
 
   04 Aug 2007; Miroslav Šulc <fordfrog@gentoo.org>
   files/jubler-3.3.0.patch, jubler-3.3.0.ebuild:

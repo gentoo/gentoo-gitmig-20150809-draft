@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.3.0.ebuild,v 1.2 2007/08/04 18:51:09 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.3.0.ebuild,v 1.3 2007/10/01 20:17:22 swegener Exp $
 
 inherit eutils java-pkg-2 java-utils-2 java-ant-2 toolchain-funcs flag-o-matic
 
@@ -31,7 +31,7 @@ DEPEND=">=virtual/jdk-1.5
 S=${WORKDIR}/${MY_PN}-${PV}
 
 pkg_setup() {
-	if use spell && ! built_with_use zemberek linguas_tr; then
+	if use spell && ! built_with_use dev-java/zemberek linguas_tr; then
 		die "Zemberek should be built with Turkish language support"
 	fi
 	java-pkg-2_pkg_setup
