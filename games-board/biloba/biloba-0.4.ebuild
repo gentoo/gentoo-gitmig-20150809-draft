@@ -1,9 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/biloba-0.4.ebuild,v 1.2 2007/01/05 19:10:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/biloba-0.4.ebuild,v 1.3 2007/10/01 00:17:50 mr_bones_ Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
 inherit autotools eutils games
 
 DESCRIPTION="a board game, up to 4 players, with AI and network."
