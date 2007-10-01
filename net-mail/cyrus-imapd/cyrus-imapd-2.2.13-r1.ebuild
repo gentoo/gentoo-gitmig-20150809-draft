@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.13-r1.ebuild,v 1.7 2007/10/01 12:23:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.13-r1.ebuild,v 1.8 2007/10/01 17:25:30 dertobi123 Exp $
 
-inherit autotools eutils ssl-cert fixheadtails pam
+inherit autotools eutils ssl-cert fixheadtails pam flag-o-matic
 
 DESCRIPTION="The Cyrus IMAP Server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -200,6 +200,11 @@ src_unpack() {
 }
 
 src_compile() {
+	# as-needed fix wrt net-snmp-5.4, bug #187138
+	if use snmp ; then
+		append-ldflags -Wl,--no-as-needed
+	fi
+
 	local myconf
 	myconf="${myconf} $(use_with afs)"
 	myconf="${myconf} $(use_with drac)"
