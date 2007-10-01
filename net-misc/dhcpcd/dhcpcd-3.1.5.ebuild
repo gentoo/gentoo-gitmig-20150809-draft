@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.1.5.ebuild,v 1.8 2007/09/29 09:20:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.1.5.ebuild,v 1.9 2007/10/01 09:36:07 uberlord Exp $
 
 inherit toolchain-funcs
 
@@ -26,7 +26,12 @@ src_unpack() {
 
 	# Disable DUID support if we have volatile storage.
 	# LiveCD's *should* enable this USE flag
-	use vram && echo "#undef ENABLE_DUID" >> config.h
+	if use vram; then
+		einfo "Disabling DUID support in dhcpcd"
+		echo "#undef ENABLE_DUID" >> config.h
+	else	
+		einfo "DUID support enabled"
+	fi
 }
 
 src_compile() {
@@ -36,4 +41,20 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc ChangeLog
+}
+
+pkg_postinst() {
+	use vram && return 0
+
+	ewarn "You have installed dhcpcd with DUID support."
+	einfo "This means that we will generate a DUID in /var/lib/dhcpcd/dhcpcd.duid"
+	einfo "This is generated from a MAC address of the card and a timestamp."
+	einfo "It will be used in every subsequent DHCP transaction, along with a IAID"
+	einfo "in the ClientID option. This is required by RFC 4361."
+	echo
+	ewarn "Some DHCP server implementations require a MAC address only in the"
+	ewarn "ClientID field. These DHCP servers should be updated to be RFC"
+	ewarn "conformant. If you cannot do this, you can revert to the old"
+	ewarn "behaviour by using the -I '' option OR building dhcpcd with the"
+	ewarn "vram USE flag enabled."
 }
