@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.3.ebuild,v 1.1 2007/10/01 12:11:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.3.ebuild,v 1.2 2007/10/01 23:56:44 pylon Exp $
 
 inherit eutils games
 
@@ -45,11 +45,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${MY_P}-source.tar.bz2
 	if use scenarios ; then
-		cd ${S}/scenario/
+		cd "${S}"/scenario/
 		unpack ${SCENARIOS_048}
 		unpack ${SCENARIOS_050}
 	fi
-	cd ${S}
+	cd "${S}"
 	# Don't pre-strip binaries (bug #137822)
 	sed -i -e '/+= -s$/s/-s//' Makefile || die "sed failed"
 	# Don't install into prefixed DATA_DIR
@@ -61,11 +61,7 @@ src_unpack() {
 src_compile() {
 	local myopts=""
 	use debug && myopts="${myopts} --debug"
-	use static && myopts="${myopts} --with-static"
 	use dedicated && myopts="${myopts} --dedicated --without-sdl"
-	use iconv && myopts="${myopts} --with-iconv"
-	use png && myopts="${myopts} --with-png"
-	use zlib && myopts="${myopts} --with-zlib"
 	if ! use dedicated; then
 		myopts="${myopts} --with-sdl --with-freetype --with-fontconfig"
 		if ! use timidity; then
@@ -76,6 +72,10 @@ src_compile() {
 	# configure is a hand-written sh-script, so econf will not work
 	./configure --os=UNIX \
 		--with-network \
+		$(use_with static) \
+		$(use_with iconv) \
+		$(use_with png) \
+		$(use_with zlib) \
 		${myopts} \
 		|| die "configure failed"
 
@@ -83,11 +83,11 @@ src_compile() {
 		MANUAL_CONFIG=1 \
 		INSTALL=1 \
 		USE_HOMEDIR=1 \
-		DEST_DIR=${D} \
+		DEST_DIR="${D}" \
 		PERSONAL_DIR=.openttd \
-		PREFIX=${GAMES_PREFIX} \
-		DATA_DIR=${GAMES_DATADIR}/${PN} \
-		CUSTOM_LANG_DIR=${GAMES_DATADIR}/${PN}/lang \
+		PREFIX="${GAMES_PREFIX}" \
+		DATA_DIR="${GAMES_DATADIR}"/${PN} \
+		CUSTOM_LANG_DIR="${GAMES_DATADIR}"/${PN}/lang \
 		|| die "emake failed"
 }
 
