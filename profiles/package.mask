@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7765 2007/09/30 19:08:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7766 2007/10/01 00:22:11 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -685,7 +685,6 @@ media-video/gspca
 media-libs/hermes
 games-sports/trophy
 games-action/clanbomber
-=games-puzzle/pingus-0.6*
 
 # Raúl Porcel <armin76@gentoo.org> (15 Mar 2007)
 # Mask snapshots
