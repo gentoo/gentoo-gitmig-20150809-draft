@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8e-r3.ebuild,v 1.7 2007/10/01 01:59:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8e-r3.ebuild,v 1.8 2007/10/01 05:40:08 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -146,16 +146,19 @@ src_install() {
 	for m in $(find . -type f | xargs grep -L '#include') ; do
 		d=${m%/*} ; d=${d#./} ; m=${m##*/}
 		[[ ${m} == openssl.1* ]] && continue
+		[[ -n $(find -L ${d} -type l) ]] && die "erp, broken links already!"
 		mv ${d}/{,ssl-}${m}
 		ln -s ssl-${m} ${d}/openssl-${m}
-		# locate any symlinks that point to this man page
-		for s in $(find ${d} -lname ${m}) ; do
+		# locate any symlinks that point to this man page ... we assume
+		# that any broken links are due to the above renaming
+		for s in $(find -L ${d} -type l) ; do
 			s=${s##*/}
 			rm -f ${d}/${s}
 			ln -s ssl-${m} ${d}/ssl-${s}
 			ln -s ssl-${s} ${d}/openssl-${s}
 		done
 	done
+	[[ -n $(find -L ${d} -type l) ]] && die "broken manpage links found :("
 
 	diropts -m0700
 	keepdir /etc/ssl/private

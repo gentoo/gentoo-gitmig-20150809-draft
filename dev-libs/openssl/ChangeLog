@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.228 2007/10/01 01:59:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.229 2007/10/01 05:40:08 vapier Exp $
+
+  01 Oct 2007; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8e-r3.ebuild:
+  Tweak how we do the manpage renaming so that it is POSIX friendly #194335 by
+  Joe Peterson.
 
   01 Oct 2007; Joshua Kinard <kumba@gentoo.org> openssl-0.9.8e-r3.ebuild:
   Stable on mips, per #194039.
