@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/adie-1.6.19.ebuild,v 1.1 2006/12/20 19:41:31 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/adie-1.6.29.ebuild,v 1.1 2007/10/01 01:25:05 mabi Exp $
 
 inherit fox
 
