@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.1.5.ebuild,v 1.9 2007/10/01 09:36:07 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.1.5.ebuild,v 1.10 2007/10/01 09:38:50 uberlord Exp $
 
 inherit toolchain-funcs
 
@@ -29,7 +29,7 @@ src_unpack() {
 	if use vram; then
 		einfo "Disabling DUID support in dhcpcd"
 		echo "#undef ENABLE_DUID" >> config.h
-	else	
+	else
 		einfo "DUID support enabled"
 	fi
 }
