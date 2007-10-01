@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.367 2007/09/27 15:39:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.368 2007/10/01 17:55:46 phreak Exp $
+
+  01 Oct 2007; Christian Heim <phreak@gentoo.org>
+  files/digest-vanilla-sources-2.6.19.7,
+  files/digest-vanilla-sources-2.6.20.6,
+  files/digest-vanilla-sources-2.6.20.7,
+  files/digest-vanilla-sources-2.6.20.18,
+  files/digest-vanilla-sources-2.6.20.19,
+  files/digest-vanilla-sources-2.6.20.20, Manifest:
+  Fixing #194280, Manifest / digests were off.
 
 *vanilla-sources-2.6.22.9 (27 Sep 2007)
 *vanilla-sources-2.4.35.3 (27 Sep 2007)
