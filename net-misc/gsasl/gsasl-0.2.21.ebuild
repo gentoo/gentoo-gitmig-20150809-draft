@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-0.2.21.ebuild,v 1.3 2007/09/30 21:42:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-0.2.21.ebuild,v 1.4 2007/10/01 03:13:45 ticho Exp $
 
 DESCRIPTION="The GNU SASL client, server, and library"
 HOMEPAGE="http://www.gnu.org/software/gsasl/"
@@ -10,7 +10,7 @@ SLOT="0"
 # TODO: check http://www.gnu.org/software/gsasl/#dependencies for more
 # 	optional external libraries.
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc-macos ~sparc ~x86"
-IUSE="doc gnutls kerberos nls static"
+IUSE="doc gnutls idn kerberos nls static"
 PROVIDE="virtual/gsasl"
 DEPEND="virtual/libc
 	nls? ( >=sys-devel/gettext-0.16.1 )
