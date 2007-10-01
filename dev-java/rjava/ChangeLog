@@ -1,0 +1,12 @@
+# ChangeLog for dev-java/rjava
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rjava/ChangeLog,v 1.1 2007/10/01 04:42:43 nerdboy Exp $
+
+*rjava-0.5.1 (01 Oct 2007)
+
+  01 Oct 2007; Steve Arnold <nerdboy@gentoo.org> +metadata.xml,
+  +rjava-0.5.1.ebuild:
+  Initial import of rjava, the Java-R interface.  Note that building an R
+  package in portage is a little weird, but works.  Recommend all external
+  R packages (if any) be installed under site-library.
+

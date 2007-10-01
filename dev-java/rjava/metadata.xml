@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>sci</herd>
+<longdescription lang="en">
+rJava is a simple R-to-Java interface. It is comparable to the .C/.Call C 
+interface. rJava provides a low-level bridge between R and Java (via JNI). 
+In a sense the inverse of rJava is JRI (Java/R Interface) which provides 
+the opposite direction - calling R from Java. JRI is now shipped as a part 
+of the rJava package, although it still can be used as a separate entity 
+(especially for development).
+</longdescription>
+</pkgmetadata>
