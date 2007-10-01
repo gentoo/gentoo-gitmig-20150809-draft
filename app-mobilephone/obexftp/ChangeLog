@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.31 2007/09/06 06:23:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.32 2007/10/01 18:09:51 mrness Exp $
+
+*obexftp-0.22_rc9 (01 Oct 2007)
+
+  01 Oct 2007; Alin Năstac <mrness@gentoo.org> +obexftp-0.22_rc9.ebuild:
+  Fix examples installation, broken by previous update.
 
   06 Sep 2007; Alin Năstac <mrness@gentoo.org> obexftp-0.22_rc7.ebuild:
   Fix compile error when USE="ruby -bluetooth" (#174507).
