@@ -1,9 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-1.0.ebuild,v 1.6 2007/01/05 18:49:19 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-1.0.ebuild,v 1.7 2007/10/01 00:27:54 mr_bones_ Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
 inherit autotools eutils games
 
 DESCRIPTION="A simple console game, where you drive a car across the moon's surface"
