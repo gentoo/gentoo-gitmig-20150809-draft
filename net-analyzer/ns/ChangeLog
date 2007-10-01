@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ns
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.26 2007/10/01 10:45:45 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.27 2007/10/01 10:59:40 anant Exp $
+
+  01 Oct 2007; Anant Narayanan <anant@gentoo.org> ns-2.31.ebuild:
+  Fix QA quoting issues.
 
 *ns-2.31 (01 Oct 2007)
 

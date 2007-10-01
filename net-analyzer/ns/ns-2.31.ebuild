@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.31.ebuild,v 1.1 2007/10/01 10:45:45 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.31.ebuild,v 1.2 2007/10/01 10:59:40 anant Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -28,9 +28,9 @@ DEPEND="${RDEPEND}
 				dev-tex/latex2html )"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
-	sed '/$(CC)/s!-g!$(CFLAGS)!g' ${S}/indep-utils/model-gen/Makefile
+	unpack "${A}"
+	cd "${S}"
+	sed '/$(CC)/s!-g!$(CFLAGS)!g' "${S}/indep-utils/model-gen/Makefile"
 }
 
 src_compile() {
@@ -64,18 +64,18 @@ src_compile() {
 		--enable-release || die "./configure failed"
 	emake CCOPT="${CFLAGS}" || die
 
-	cd ${S}/indep-utils/dosdbell
+	cd "${S}/indep-utils/dosdbell"
 	emake DFLAGS="${CFLAGS}" || die
-	cd ${S}/indep-utils/dosreduce
+	cd "${S}/indep-utils/dosreduce"
 	${CC} ${CFLAGS} dosreduce.c -o dosreduce
-	cd ${S}/indep-utils/propagation
+	cd "${S}/indep-utils/propagation"
 	${CXX} ${CXXFLAGS} threshold.cc -o threshold
-	cd ${S}/indep-utils/model-gen
+	cd "${S}/indep-utils/model-gen"
 	emake CFLAGS="${CFLAGS}" || die
 
 	if useq doc; then
 		einfo "Generating extra docs"
-		cd ${S}/doc
+		cd "${S}/doc"
 		yes '' | emake all
 	fi
 }
@@ -108,11 +108,11 @@ src_install() {
 	dobin http_connect http_active
 
 	if use doc; then
-		cd ${S}/doc
+		cd "${S}/doc"
 		docinto doc
 		dodoc everything.dvi everything.ps.gz everything.html everything.pdf
 		docinto model-gen
-		cd ${S}/indep-utils/model-gen
+		cd "${S}/indep-utils/model-gen"
 		dodoc *
 	fi
 }
@@ -125,5 +125,5 @@ src_test() {
 	einfo "At the time of assembling this ebuild, these test suites failed:"
 	einfo "srm smac-multihop hier-routing algo-routing mcast vc"
 	einfo "session mixmode webcache mcache plm wireless-tdma"
-	./validate 2>&1 | tee ${S}/validate.run
+	./validate 2>&1 | tee "${S}/validate.run"
 }
