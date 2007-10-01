@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.680 2007/10/01 18:39:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.681 2007/10/01 21:50:26 opfer Exp $
+
+  01 Oct 2007; Christian Faulhammer <opfer@gentoo.org> use.local.desc:
+  add tools USE flag for sci-libs/libsvm
 
   01 Oct 2007; Christian Faulhammer <opfer@gentoo.org> package.mask:
   mask dev-util/ladebug
