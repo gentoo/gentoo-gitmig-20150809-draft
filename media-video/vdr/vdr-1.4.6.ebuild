@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.6.ebuild,v 1.6 2007/09/11 19:06:48 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.6.ebuild,v 1.7 2007/10/01 13:05:25 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -12,7 +12,7 @@ PATCHSET_V=1
 PATCHSET_NAME=gentoo-${PN}-patchset-${PV}-${PATCHSET_V}
 
 MY_P="${P%_p*}"
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Video Disk Recorder - turns a pc into a powerful set top box for DVB"
 HOMEPAGE="http://www.cadsoft.de/vdr/"
@@ -39,9 +39,9 @@ PDEPEND="setup-plugin? ( >=media-plugins/vdr-setup-0.3.1-r1 )"
 # Relevant Pathes for vdr on gentoo
 DVB_DIR=/usr/include
 VDR_INCLUDE_DIR=/usr/include/vdr
-PLUGIN_LIB_DIR=/usr/$(get_libdir)/vdr/plugins
+PLUGIN_LIB_DIR="/usr/$(get_libdir)/vdr/plugins"
 CONF_DIR=/etc/vdr
-CAP_FILE=${S}/capabilities.sh
+CAP_FILE="${S}/capabilities.sh"
 CAPS="# Capabilities of the vdr-executable for use by startscript etc."
 
 pkg_setup() {
@@ -49,9 +49,9 @@ pkg_setup() {
 }
 
 add_cap() {
-	while [ "$1" ]; do
-		CAPS="${CAPS}\n$1=1"
-		shift
+	local ARG
+	for ARG; do
+		CAPS="${CAPS}\n${ARG}=1"
 	done
 }
 
@@ -61,11 +61,15 @@ src_unpack() {
 		ewarn "Using local developer patchset."
 		PATCHSET_DIR="${VDR_LOCAL_PATCHSET}"
 	else
-		unpack ${PATCHSET_NAME}.tar.bz2
-		PATCHSET_DIR=${WORKDIR}/${PATCHSET_NAME}
+		unpack "${PATCHSET_NAME}".tar.bz2
+		PATCHSET_DIR="${WORKDIR}/${PATCHSET_NAME}"
+
+		# Fix logic bigpatch+noepg, Bug #193550
+		sed -i "${PATCHSET_DIR}"/apply_patchset.sh \
+			-e 's/use noepg/use noepg \&\& use !bigpatch/'
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	ebegin "Changing pathes for gentoo"
 	sed -e 's-$(DVBDIR)/include-$(DVBDIR)-' -i Makefile
@@ -86,7 +90,7 @@ src_unpack() {
 	EOT
 	eend 0
 
-	source ${PATCHSET_DIR}/apply_patchset.sh
+	source "${PATCHSET_DIR}"/apply_patchset.sh
 	apply_vdr_patchset "${PATCHSET_DIR}"
 
 	if use !vanilla; then
@@ -118,7 +122,7 @@ src_unpack() {
 	fi
 
 	if [[ -n "${VDRSOURCE_DIR}" ]]; then
-		cp -r ${S} ${T}/source-tree
+		cp -r "${S}" "${T}"/source-tree
 	fi
 
 	if ! use vanilla; then
@@ -127,7 +131,7 @@ src_unpack() {
 			CAP_SHUTDOWN_SVDRP \
 			CAP_CHUID
 
-		echo -e ${CAPS} > ${CAP_FILE}
+		echo -e ${CAPS} > "${CAP_FILE}"
 	fi
 }
 
@@ -136,17 +140,17 @@ src_install() {
 	doexe vdr
 	doexe svdrpsend.pl
 
-	insinto ${VDR_INCLUDE_DIR}
+	insinto "${VDR_INCLUDE_DIR}"
 	doins *.h
 	doins Make.config
 
-	insinto ${VDR_INCLUDE_DIR}/libsi
+	insinto "${VDR_INCLUDE_DIR}"/libsi
 	doins libsi/*.h
 
-	keepdir ${CONF_DIR}/plugins
-	keepdir ${CONF_DIR}/themes
+	keepdir "${CONF_DIR}"/plugins
+	keepdir "${CONF_DIR}"/themes
 
-	insinto ${CONF_DIR}
+	insinto "${CONF_DIR}"
 	doins *.conf channels.conf.*
 
 	keepdir "${PLUGIN_LIB_DIR}"
@@ -158,20 +162,20 @@ src_install() {
 	dodoc TODO-enAIO-rm CONTRIBUTORS
 
 	insinto /usr/share/vdr
-	doins ${CAP_FILE}
+	doins "${CAP_FILE}"
 
 	if [[ -n "${VDRSOURCE_DIR}" ]]; then
 		elog "Installing sources"
-		insinto ${VDRSOURCE_DIR}/${P}
-		doins -r ${T}/source-tree/*
-		keepdir ${VDRSOURCE_DIR}/${P}/PLUGINS/lib
+		insinto "${VDRSOURCE_DIR}/${P}"
+		doins -r "${T}"/source-tree/*
+		keepdir "${VDRSOURCE_DIR}/${P}"/PLUGINS/lib
 	fi
 
 	if use setup-plugin; then
 		insinto /usr/share/vdr/setup
-		doins ${S}/menu.c
+		doins "${S}"/menu.c
 	fi
-	chown -R vdr:vdr ${D}/${CONF_DIR}
+	chown -R vdr:vdr "${D}/${CONF_DIR}"
 }
 
 pkg_postinst() {
@@ -202,7 +206,7 @@ pkg_postinst() {
 	local keysfound=0
 	local key
 	local warn_keys="JumpFwd JumpRew JumpFwdSlow JumpRewSlow"
-	local remote_file=${ROOT}/etc/vdr/remote.conf
+	local remote_file="${ROOT}"/etc/vdr/remote.conf
 
 	if [[ -e ${remote_file} ]]; then
 		for key in ${warn_keys}; do
