@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00.ebuild,v 1.9 2007/07/15 07:06:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00.ebuild,v 1.10 2007/10/01 21:18:18 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -69,7 +69,6 @@ src_install () {
 	fi
 	dodoc AUTHORS BUGS COPYING HOWTO INSTALL NEWS README YEAR2000 TODO ChangeLog
 	# A small bit of sample config
-	dodir /etc/nullmailer
 	insinto /etc/nullmailer
 	newins ${FILESDIR}/remotes.sample remotes
 	# daemontools stuff
@@ -121,7 +120,7 @@ pkg_postinst() {
 	use mailwrapper && dosym /usr/sbin/sendmail /usr/bin/mailq
 
 	elog "To create an initial setup, please do:"
-	elog "emerge --config =${PF}"
+	elog "emerge --config =${CATEGORY}/${PF}"
 	msg_svscan
 	msg_mailerconf
 }
