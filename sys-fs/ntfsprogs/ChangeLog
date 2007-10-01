@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.48 2007/10/01 06:01:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.49 2007/10/01 14:52:15 fmccor Exp $
+
+  01 Oct 2007; Ferris McCormick <fmccor@gentoo.org>
+  ntfsprogs-1.13.1-r1.ebuild:
+  Sparc stable --- Bug #194171
 
   01 Oct 2007; Joshua Kinard <kumba@gentoo.org> ntfsprogs-2.0.0.ebuild:
   Marked unstable on mips, per #194176.
