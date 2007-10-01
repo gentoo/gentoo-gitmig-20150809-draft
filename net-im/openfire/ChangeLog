@@ -1,6 +1,14 @@
 # ChangeLog for net-im/openfire
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.10 2007/07/17 10:39:58 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.11 2007/10/01 18:40:07 humpback Exp $
+
+*openfire-3.3.3 (01 Oct 2007)
+
+  01 Oct 2007; Gustavo Felisberto <humpback@gentoo.org>
+  -files/buildxml-3.3.0.patch, -files/buildxml-3.3.1.patch,
+  +files/buildxml-3.3.3.patch, -openfire-3.3.0.ebuild,
+  -openfire-3.3.1.ebuild, +openfire-3.3.3.ebuild:
+  Removed older versions and bumped 3.3.2 to 3.3.3 as noted on bug #193590.
 
 *openfire-3.3.2 (17 Jul 2007)
 
