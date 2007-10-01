@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4-r2.ebuild,v 1.1 2007/10/01 10:31:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4-r2.ebuild,v 1.2 2007/10/01 10:33:27 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -412,8 +412,8 @@ pkg_postinst() {
 pkg_postrm() {
 	# Get rid of module dir to ensure opengl-update works properly
 	if ! has_version x11-base/xorg-server; then
-		if [ -e ${ROOT}/usr/$(get_libdir)/xorg/modules ]; then
-			rm -rf ${ROOT}/usr/$(get_libdir)/xorg/modules
+		if [[ -e ${ROOT}/usr/$(get_libdir)/xorg/modules ]]; then
+			rm -rf "${ROOT}"/usr/$(get_libdir)/xorg/modules
 		fi
 	fi
 }
@@ -442,7 +442,7 @@ kdrive_setup() {
 
 		# Check whether it's a valid kdrive server before we waste time
 		# on the rest of this
-		if ! grep -q -o "\b${real_card}\b" ${S}/hw/kdrive/Makefile.am; then
+		if ! grep -q -o "\b${real_card}\b" "${S}"/hw/kdrive/Makefile.am; then
 			continue
 		fi
 
@@ -480,7 +480,7 @@ kdrive_setup() {
 			ebegin "  ${real_card}"
 			sed -i \
 				-e "s:\b${real_card}\b::g" \
-				${S}/hw/kdrive/Makefile.am \
+				"${S}"/hw/kdrive/Makefile.am \
 				|| die "sed of ${real_card} failed"
 			eend
 		fi
@@ -492,7 +492,7 @@ kdrive_setup() {
 	if ! use video_cards_siliconmotion && ! use video_cards_via; then
 		sed -i \
 			-e "s:^\(VESA_SUBDIRS.*\)\\\:\1:g" \
-			${S}/hw/kdrive/Makefile.am
+			"${S}"/hw/kdrive/Makefile.am
 	fi
 }
 
@@ -501,9 +501,9 @@ dynamic_libgl_install() {
 	ebegin "Moving GL files for dynamic switching"
 		dodir /usr/$(get_libdir)/opengl/${OPENGL_DIR}/extensions
 		local x=""
-		for x in ${D}/usr/$(get_libdir)/xorg/modules/extensions/libglx*; do
+		for x in "${D}"/usr/$(get_libdir)/xorg/modules/extensions/libglx*; do
 			if [ -f ${x} -o -L ${x} ]; then
-				mv -f ${x} ${D}/usr/$(get_libdir)/opengl/${OPENGL_DIR}/extensions
+				mv -f ${x} "${D}"/usr/$(get_libdir)/opengl/${OPENGL_DIR}/extensions
 			fi
 		done
 	eend 0
@@ -513,10 +513,10 @@ server_based_install() {
 	use xprint && xprint_src_install
 
 	if ! use xorg; then
-		rm ${D}/usr/share/man/man1/Xserver.1x \
-			${D}/usr/$(get_libdir)/xserver/SecurityPolicy \
-			${D}/usr/$(get_libdir)/pkgconfig/xorg-server.pc \
-			${D}/usr/share/man/man1/Xserver.1x
+		rm "${D}"/usr/share/man/man1/Xserver.1x \
+			"${D}"/usr/$(get_libdir)/xserver/SecurityPolicy \
+			"${D}"/usr/$(get_libdir)/pkgconfig/xorg-server.pc \
+			"${D}"/usr/share/man/man1/Xserver.1x
 	fi
 }
 
@@ -532,21 +532,21 @@ switch_opengl_implem() {
 xprint_src_install() {
 	# RH-style init script, we provide a wrapper
 	exeinto /usr/$(get_libdir)/misc
-	doexe ${S}/hw/xprint/etc/init.d/xprint
+	doexe "${S}"/hw/xprint/etc/init.d/xprint
 	# Install the wrapper
-	newinitd ${FILESDIR}/xprint.init xprint
+	newinitd "${FILESDIR}"/xprint.init xprint
 	# Install profile scripts
 	insinto /etc/profile.d
-	doins ${S}/hw/xprint/etc/profile.d/xprint*
+	doins "${S}"/hw/xprint/etc/profile.d/xprint*
 	exeinto /etc/X11/xinit/xinitrc.d
-	doexe ${S}/hw/xprint/etc/Xsession.d/92xprint-xpserverlist
+	doexe "${S}"/hw/xprint/etc/Xsession.d/92xprint-xpserverlist
 	# Patch profile scripts
 	sed -e "s:/etc/init.*get_xpserverlist:/usr/$(get_libdir)/misc/xprint \
-		get_xpserverlist:g" -i ${D}/etc/profile.d/xprint* \
-		${D}/etc/X11/xinit/xinitrc.d/92xprint-xpserverlist
+		get_xpserverlist:g" -i "${D}"/etc/profile.d/xprint* \
+		"${D}"/etc/X11/xinit/xinitrc.d/92xprint-xpserverlist
 	# Move profile scripts, we can't touch /etc/profile.d/ in Gentoo
-	dodoc ${D}/etc/profile.d/xprint*
-	rm -f ${D}/etc/profile.d/xprint*
+	dodoc "${D}"/etc/profile.d/xprint*
+	rm -f "${D}"/etc/profile.d/xprint*
 }
 
 ensure_a_server_is_building() {

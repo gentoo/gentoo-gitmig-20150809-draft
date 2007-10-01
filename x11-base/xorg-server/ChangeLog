@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.281 2007/10/01 10:31:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.282 2007/10/01 10:33:27 dberkholz Exp $
+
+  01 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.4-r2.ebuild:
+  Fix variable quoting caught by my repoman patch.
 
 *xorg-server-1.4-r2 (01 Oct 2007)
 
