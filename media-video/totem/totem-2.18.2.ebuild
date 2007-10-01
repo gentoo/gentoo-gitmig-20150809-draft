@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.2.ebuild,v 1.14 2007/09/06 16:03:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.2.ebuild,v 1.15 2007/10/01 20:46:08 eva Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -102,7 +102,7 @@ pkg_setup() {
 	fi
 
 	# use global mozilla plugin dir
-	G2CONF="${G2CONF} MOZILLA_PLUGINDIR=/usr/$(get_libdir)/nsbrowser"
+	G2CONF="${G2CONF} MOZILLA_PLUGINDIR=/usr/$(get_libdir)/nsbrowser/plugins"
 
 	G2CONF="${G2CONF} --disable-vanity --enable-gstreamer --with-dbus"
 

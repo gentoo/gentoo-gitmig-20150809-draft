@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.3.ebuild,v 1.5 2007/10/01 20:46:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.20.0.ebuild,v 1.1 2007/10/01 20:46:08 eva Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -9,26 +9,26 @@ HOMEPAGE="http://gnome.org/projects/totem/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 
 # No 0.10.0 release for gst-plugins-pitdfdll yet
 # IUSE="win32codecs"
 
-IUSE="a52 debug dvd ffmpeg flac gnome hal lirc mad mpeg nsplugin nvtv ogg seamonkey theora vorbis xulrunner xv"
+IUSE="a52 bluetooth debug dvd ffmpeg flac galago gnome hal lirc mad mpeg nsplugin nvtv ogg python seamonkey theora vorbis xulrunner xv"
 
-RDEPEND=">=dev-libs/glib-2.12
-	 >=x11-libs/gtk+-2.10
+RDEPEND=">=dev-libs/glib-2.13.4
+	 >=x11-libs/gtk+-2.11.6
 	 >=gnome-base/gconf-2.0
 	 >=gnome-base/libglade-2.0
-	 >=gnome-base/gnome-vfs-2.10
-	 >=x11-themes/gnome-icon-theme-2.10
+	 >=gnome-base/gnome-vfs-2.16
+	 >=x11-themes/gnome-icon-theme-2.16
 	 >=x11-libs/startup-notification-0.8
 	   app-text/iso-codes
 	   dev-libs/libxml2
 	 >=dev-libs/dbus-glib-0.71
-	 >=media-libs/gstreamer-0.10.6
+	 >=media-libs/gstreamer-0.10.12
 	 >=media-libs/gst-plugins-good-0.10
-	 >=media-libs/gst-plugins-base-0.10.7
+	 >=media-libs/gst-plugins-base-0.10.12
 	 >=media-plugins/gst-plugins-pango-0.10
 	 >=media-plugins/gst-plugins-gconf-0.10
 	 >=media-plugins/gst-plugins-gnomevfs-0.10
@@ -38,36 +38,41 @@ RDEPEND=">=dev-libs/glib-2.12
 	 >=x11-libs/libXrandr-1.1.1
 	 >=x11-libs/libXxf86vm-1.0.1
 
+	 bluetooth? ( net-wireless/bluez-libs )
+	 galago? ( >=dev-libs/libgalago-0.5.2 )
 	 gnome? (
-				>=gnome-base/libgnome-2.4
+				>=gnome-base/libgnome-2.14
 				>=gnome-base/libgnomeui-2.4
 				>=gnome-base/gnome-desktop-2.2
 				>=gnome-base/nautilus-2.10
+	 			>=gnome-base/control-center-2.18
 			)
 	 hal? ( =sys-apps/hal-0.5* )
 	 lirc? ( app-misc/lirc )
 	 nsplugin?	(
-				xulrunner? ( net-libs/xulrunner )
-				!xulrunner?	(
-								seamonkey? ( www-client/seamonkey )
-								!seamonkey? ( www-client/mozilla-firefox )
-							)
-				>=x11-misc/shared-mime-info-0.17
-				>=x11-libs/startup-notification-0.8
+	 			|| (
+					xulrunner? ( net-libs/xulrunner )
+					seamonkey? ( www-client/seamonkey )
+					www-client/mozilla-firefox
 				)
+				>=x11-misc/shared-mime-info-0.22
+				>=x11-libs/startup-notification-0.8
+			)
+	 python? ( >=dev-python/pygtk-2.8 )
 	 nvtv? ( >=media-tv/nvtv-0.4.5 )
 
 	 a52? ( >=media-plugins/gst-plugins-a52dec-0.10 )
-	 dvd? (
-				>=media-libs/gst-plugins-ugly-0.10
-				>=media-plugins/gst-plugins-a52dec-0.10
-				>=media-plugins/gst-plugins-dvdread-0.10
-				>=media-plugins/gst-plugins-mpeg2dec-0.10
-			)
+	 !sparc? ( dvd? (
+						>=media-libs/gst-plugins-ugly-0.10
+						>=media-plugins/gst-plugins-a52dec-0.10
+						>=media-plugins/gst-plugins-dvdread-0.10
+						>=media-plugins/gst-plugins-mpeg2dec-0.10
+					)
+			 )
 	 !sparc? ( ffmpeg? ( >=media-plugins/gst-plugins-ffmpeg-0.10 ) )
 	 flac? ( >=media-plugins/gst-plugins-flac-0.10 )
 	 mad? ( >=media-plugins/gst-plugins-mad-0.10 )
-	 mpeg? ( >=media-plugins/gst-plugins-mpeg2dec-0.10 )
+	 !sparc? ( mpeg? ( >=media-plugins/gst-plugins-mpeg2dec-0.10 ) )
 	 ogg? ( >=media-plugins/gst-plugins-ogg-0.10 )
 	 theora? (
 				>=media-plugins/gst-plugins-ogg-0.10
@@ -87,7 +92,6 @@ DEPEND="${RDEPEND}
 	  x11-proto/inputproto
 	  app-text/scrollkeeper
 	  gnome-base/gnome-common
-	  app-text/gnome-doc-utils
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.20"
 
@@ -104,12 +108,12 @@ pkg_setup() {
 	# use global mozilla plugin dir
 	G2CONF="${G2CONF} MOZILLA_PLUGINDIR=/usr/$(get_libdir)/nsbrowser/plugins"
 
-	G2CONF="${G2CONF} --disable-vanity --enable-gstreamer --with-dbus"
+	G2CONF="${G2CONF} --disable-vala --disable-vanity --enable-gstreamer --with-dbus"
 
 	if use gnome ; then
 	    G2CONF="${G2CONF} --disable-gtk --enable-nautilus"
 	else
-	    G2CONF="${G2CONF} --enable-gtk"
+	    G2CONF="${G2CONF} --enable-gtk --disable-nautilus"
 	fi
 
 	if use nsplugin ; then
@@ -125,34 +129,41 @@ pkg_setup() {
 	    G2CONF="${G2CONF} --disable-browser-plugins"
 	fi
 
-	G2CONF="${G2CONF} \
-		$(use_enable debug) \
-		$(use_with hal) \
-		$(use_enable lirc) \
-		$(use_enable nvtv)"
+	# Plugin Configuration
+	G2CONF="${G2CONF} PLUGINDIR=/usr/$(get_libdir)/totem/plugins"
+	local plugins="screensaver,ontop,gromit,skipto"
+	use bluetooth && plugins="${plugins},bemused"
+	use galago && plugins="${plugins},galago"
+	use gnome && plugins="${plugins},media-player-keys,properties"
+	use lirc && plugins="${plugins},lirc"
+
+	G2CONF="${G2CONF} --with-plugins=${plugins}"
+
+	G2CONF="${G2CONF}		\
+		$(use_enable debug)	\
+		$(use_with hal)		\
+		$(use_enable lirc)	\
+		$(use_enable nvtv)	\
+		$(use_enable python)"
 }
 
 src_unpack() {
 	gnome2_src_unpack
 
 	# Remove the intltoolize call when tarballs are made with >=intltool-0.35.5
-	intltoolize --force || die
+	intltoolize --force || die "intltoolize failed"
 
 	if use nsplugin ; then
-		epatch ${FILESDIR}/${PN}-2.18.1-browser-plugins.patch
+		epatch "${FILESDIR}"/${PN}-2.18.1-browser-plugins.patch
 		eautoreconf
 	fi
 
-	# Remove this when POTFILES.in will be fixed
-	echo "data/totem-handlers.schemas.in" >> ${S}/po/POTFILES.skip
-	echo "data/totem-video-thumbnail.schemas.in" >> ${S}/po/POTFILES.skip
-	echo "data/totem.desktop.in" >> ${S}/po/POTFILES.skip
-	echo "data/totem.desktop.in.in" >> ${S}/po/POTFILES.skip
-	echo "data/vanity.desktop.in" >> ${S}/po/POTFILES.skip
-}
+	sed -i -e 's:mozilla/plugins:nsbrowser/plugins:' browser-plugin/Makefile* || die "sed failed"
 
-src_install() {
-	gnome2_src_install plugindir=/usr/$(get_libdir)/nsbrowser/plugins
+	sed -i -e 's:.totem-plugin.desktop.in:.totem-plugin.in:' \
+		src/plugins/{galago,lirc,media-player-keys,ontop,screensaver}/Makefile* \
+	|| die "sed failed"
+
 }
 
 src_compile() {
