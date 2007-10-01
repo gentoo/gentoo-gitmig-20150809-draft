@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.230 2007/10/01 06:12:26 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.231 2007/10/01 10:48:26 armin76 Exp $
+
+  01 Oct 2007; Raúl Porcel <armin76@gentoo.org> openssl-0.9.8e-r3.ebuild:
+  alpha/ia64/sparc stable wrt security #194039
 
   01 Oct 2007; Joe Peterson <lavajoe@gentoo.org> openssl-0.9.8e-r3.ebuild:
   Add ~x86-fbsd keyword
