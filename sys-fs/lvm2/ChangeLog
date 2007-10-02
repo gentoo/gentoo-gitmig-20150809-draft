@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.106 2007/07/29 22:42:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.107 2007/10/02 09:56:42 robbat2 Exp $
+
+*lvm2-2.02.28 (02 Oct 2007)
+
+  02 Oct 2007; Robin H. Johnson <robbat2@gentoo.org> +lvm2-2.02.28.ebuild:
+  Version bump of LVM, bug #193297. Support for dmeventd per bug #192174.
+  Major cleanups of the ebuild, USE=nosnapshots/nomirrors are no longer
+  supported due to interactions with dmeventd.
 
   29 Jul 2007; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Update metadata.
