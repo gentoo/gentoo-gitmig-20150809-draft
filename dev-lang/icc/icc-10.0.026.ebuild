@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.0.026.ebuild,v 1.1 2007/10/02 11:36:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.0.026.ebuild,v 1.2 2007/10/02 17:05:26 bicatali Exp $
 
 inherit rpm
 
 PID=786
 PB=cc
-PEXEC=icc
+PEXEC="icc icpc"
 DESCRIPTION="Intel C/C++ optimized compiler for Linux"
 HOMEPAGE="http://www.intel.com/software/products/compilers/clin/"
 
@@ -26,6 +26,7 @@ SLOT="0"
 RESTRICT="test strip mirror"
 IUSE=""
 DEPEND=""
+RDEPEND="amd64? ( app-emulation/emul-linux-x86-compat )"
 
 src_unpack() {
 	unpack ${A}
@@ -47,7 +48,7 @@ src_unpack() {
 	einfo "Fixing paths and tagging"
 	cd "${S}"/${INSTALL_DIR}/bin
 	sed -e "s|<INSTALLDIR>|${INSTALL_DIR}|g" \
-		-i ${PEXEC} ${PEXEC}*sh \
+		-i ${PEXEC} *sh \
 		|| die "sed fixing path failed"
 
 	cd "${S}"/${INSTALL_DIR}/doc
