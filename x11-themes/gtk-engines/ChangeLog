@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.108 2007/09/22 05:11:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.109 2007/10/02 01:20:42 leio Exp $
+
+*gtk-engines-2.12.1 (02 Oct 2007)
+
+  02 Oct 2007; Mart Raudsepp <leio@gentoo.org> +gtk-engines-2.12.1.ebuild:
+  New series for Gnome 2.20 and gtk+-2.12
 
   22 Sep 2007; Tom Gall <tgall@gentoo.org> gtk-engines-2.10.2.ebuild:
   stable on ppc64
