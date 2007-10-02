@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.50.5.ebuild,v 1.1 2007/08/12 04:14:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.50.5.ebuild,v 1.2 2007/10/02 09:37:10 opfer Exp $
 
 inherit versionator games
 
@@ -14,12 +14,14 @@ SRC_URI="http://www.rainemu.com/html/archive/raines-${MY_PV}.tar.bz2
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="static kde"
 
 RDEPEND="media-libs/allegro
 	media-libs/libsdl
-	sys-libs/zlib"
+	sys-libs/zlib
+	media-libs/sdl-image
+	media-libs/sdl-ttf"
 DEPEND="${RDEPEND}
 	dev-lang/nasm
 	app-arch/unzip"

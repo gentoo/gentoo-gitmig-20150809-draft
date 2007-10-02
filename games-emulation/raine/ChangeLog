@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/raine
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.16 2007/08/12 04:14:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.17 2007/10/02 09:37:10 opfer Exp $
+
+  02 Oct 2007; Christian Faulhammer <opfer@gentoo.org> raine-0.50.5.ebuild:
+  stable x86, bug 192909; adding media-libs/sdl-image and media-libs/sdl-ttf
+  as DEPEND
 
 *raine-0.50.5 (12 Aug 2007)
 
