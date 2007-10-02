@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r14.ebuild,v 1.2 2007/10/01 14:00:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r14.ebuild,v 1.3 2007/10/02 05:56:00 jer Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/png-mng/${P}-jumbo-patches-${JUMBOV}.tar.gz ftp://
 
 LICENSE="xv"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="jpeg tiff png"
 
 DEPEND="x11-libs/libXt
