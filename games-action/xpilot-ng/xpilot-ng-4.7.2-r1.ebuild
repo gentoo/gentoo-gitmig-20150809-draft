@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2-r1.ebuild,v 1.4 2007/02/14 00:39:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2-r1.ebuild,v 1.5 2007/10/02 03:53:18 dirtyepic Exp $
 
 inherit python eutils multilib games
 
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libSM
 	dev-libs/expat
 	openal? ( media-libs/openal )
-	>=dev-python/wxpython-2.6
+	=dev-python/wxpython-2.6*
 	sdl? (
 		virtual/opengl
 		media-libs/libsdl
