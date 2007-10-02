@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.107 2007/10/02 05:29:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.108 2007/10/02 06:46:00 vapier Exp $
+
+*cracklib-2.8.12 (02 Oct 2007)
+
+  02 Oct 2007; Mike Frysinger <vapier@gentoo.org> +cracklib-2.8.12.ebuild:
+  Version bump.
 
   02 Oct 2007; Jeroen Roovers <jer@gentoo.org> cracklib-2.8.10.ebuild:
   Stable for HPPA (bug #194466).
