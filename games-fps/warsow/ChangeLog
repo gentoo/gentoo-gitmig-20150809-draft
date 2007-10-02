@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.9 2007/09/06 12:53:44 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.10 2007/10/02 12:58:24 nyhm Exp $
+
+*warsow-0.3.2-r1 (02 Oct 2007)
+
+  02 Oct 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/warsow-0.3.2-mapdl.patch, +warsow-0.3.2-r1.ebuild:
+  Patch from Torben Hohn to fix map downloading, bug #193963
 
   06 Sep 2007; Tristan Heaven <nyhm@gentoo.org>
   +files/warsow-0.3.2-build.patch:
