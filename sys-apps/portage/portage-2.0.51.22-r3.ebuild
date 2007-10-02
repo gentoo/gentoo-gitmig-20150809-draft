@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r3.ebuild,v 1.10 2007/03/10 14:31:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r3.ebuild,v 1.11 2007/10/02 04:43:53 zmedico Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -27,7 +27,7 @@ python_has_lchown() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	patch -p1 < ${FILESDIR}/2.0.51.22-fixes.patch
+	patch -p1 < "${FILESDIR}"/2.0.51.22-fixes.patch
 }
 
 src_compile() {
@@ -65,12 +65,14 @@ src_install() {
 
 	if ! python_has_lchown; then
 		cd "${S}"/src/python-missingos
-		./setup.py install --root ${D} || die "Failed to install missingos module"
+		./setup.py install --root "${D}" || \
+			die "Failed to install missingos module"
 	fi
 
 	if use x86-fbsd; then
 		cd "${S}"/src/bsd-flags
-		./setup.py install --root ${D} || die "Failed to install bsd-chflags module"
+		./setup.py install --root "${D}" || \
+			die "Failed to install bsd-chflags module"
 	fi
 
 	dodir /usr/lib/portage/bin
@@ -106,32 +108,32 @@ src_install() {
 	dosym ../lib/portage/bin/regenworld /usr/sbin/regenworld
 	dosym ../lib/portage/bin/emerge-webrsync /usr/sbin/emerge-webrsync
 
-	doenvd ${FILESDIR}/05portage.envd
+	doenvd "${FILESDIR}"/05portage.envd
 }
 
 pkg_preinst() {
 	if has livecvsportage ${FEATURES} && [ "${ROOT}" = "/" ]; then
-		rm -rf ${D}/usr/lib/portage/pym/*
-		mv ${D}/usr/lib/portage/bin/tbz2tool ${T}
-		rm -rf ${D}/usr/lib/portage/bin/*
-		mv ${T}/tbz2tool ${D}/usr/lib/portage/bin/
+		rm -rf "${D}"usr/lib/portage/pym/*
+		mv "${D}"usr/lib/portage/bin/tbz2tool "${T}"
+		rm -rf "${D}"usr/lib/portage/bin/*
+		mv "${T}"/tbz2tool "${D}"usr/lib/portage/bin/
 	else
-		rm /usr/lib/portage/pym/*.pyc >& /dev/null
-		rm /usr/lib/portage/pym/*.pyo >& /dev/null
+		rm "${ROOT}"usr/lib/portage/pym/*.pyc >& /dev/null
+		rm "${ROOT}"usr/lib/portage/pym/*.pyo >& /dev/null
 	fi
 }
 
 pkg_postinst() {
 	local x
 
-	[ -f "${ROOT}etc/make.conf" ] || touch ${ROOT}etc/make.conf
+	[ -f "${ROOT}"etc/make.conf ] || touch "${ROOT}"etc/make.conf
 
 	install -o root -g portage -m 0755 -d "${ROOT}/etc/portage"
 
 	if [ ! -f "${ROOT}/var/lib/portage/world" ] &&
-	   [ -f ${ROOT}/var/cache/edb/world ] &&
-	   [ ! -h ${ROOT}/var/cache/edb/world ]; then
-		mv ${ROOT}/var/cache/edb/world ${ROOT}/var/lib/portage/world
+	   [ -f "${ROOT}"/var/cache/edb/world ] &&
+	   [ ! -h "${ROOT}"/var/cache/edb/world ]; then
+		mv "${ROOT}"/var/cache/edb/world "${ROOT}"/var/lib/portage/world
 		ln -s ../../lib/portage/world /var/cache/edb/world
 	fi
 
@@ -155,7 +157,7 @@ pkg_postinst() {
 	elog "        /etc/portage/profile/virtuals and will not be modified by portage."
 	echo
 
-	for X in ${ROOT}etc/._cfg????_make.globals; do
+	for X in "${ROOT}"etc/._cfg????_make.globals; do
 		# Overwrite the globals file automatically.
 		[ -e "${X}" ] && mv -f "${X}" "${ROOT}etc/make.globals"
 	done
