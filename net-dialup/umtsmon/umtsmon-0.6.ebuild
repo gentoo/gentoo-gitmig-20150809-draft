@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/umtsmon-0.6.ebuild,v 1.1 2007/06/05 07:40:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/umtsmon-0.6.ebuild,v 1.2 2007/10/02 16:13:28 mrness Exp $
 
 inherit qt3
 
@@ -18,6 +18,13 @@ RDEPEND="${DEPEND}
 	net-dialup/ppp
 	sys-apps/pcmciautils"
 
+src_compile() {
+	eqmake3 || die "eqmake3 failed"
+	emake || die "emake failed"
+}
+
 src_install() {
 	dobin umtsmon
+
+	dodoc README TODO
 }
