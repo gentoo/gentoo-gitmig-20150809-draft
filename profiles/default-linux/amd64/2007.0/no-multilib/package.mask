@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2007.0/no-multilib/package.mask,v 1.23 2007/09/30 10:26:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2007.0/no-multilib/package.mask,v 1.24 2007/10/02 11:29:04 bicatali Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -54,6 +54,7 @@ app-text/bibus
 dev-lang/dmd-bin
 dev-lang/anubis
 dev-lang/icc
+dev-lang/idb
 dev-lang/ifc
 dev-perl/Archive-Rar
 dev-util/dialogblocks
