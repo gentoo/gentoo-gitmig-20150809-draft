@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.28 2007/10/02 11:33:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.29 2007/10/02 17:14:33 bicatali Exp $
+
+  02 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  ifc-10.0.026-r1.ebuild:
+  added emul-linux-x86-compat as run dependency for amd64.
 
 *ifc-10.0.026-r1 (02 Oct 2007)
 

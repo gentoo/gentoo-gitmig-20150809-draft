@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.0.026-r1.ebuild,v 1.1 2007/10/02 11:33:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.0.026-r1.ebuild,v 1.2 2007/10/02 17:14:33 bicatali Exp $
 
 inherit rpm
 
@@ -26,6 +26,7 @@ SLOT="0"
 RESTRICT="test strip mirror"
 IUSE=""
 DEPEND=""
+RDEPEND="amd64? ( app-emulation/emul-linux-x86-compat )"
 
 src_unpack() {
 	unpack ${A}
@@ -47,7 +48,7 @@ src_unpack() {
 	einfo "Fixing paths and tagging"
 	cd "${S}"/${INSTALL_DIR}/bin
 	sed -e "s|<INSTALLDIR>|${INSTALL_DIR}|g" \
-		-i ${PEXEC} ${PEXEC}*sh \
+		-i ${PEXEC} *sh \
 		|| die "sed fixing path failed"
 
 	cd "${S}"/${INSTALL_DIR}/doc
