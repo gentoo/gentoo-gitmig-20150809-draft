@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.6.1.ebuild,v 1.1 2007/10/02 01:48:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.6.1.ebuild,v 1.2 2007/10/02 06:38:30 robbat2 Exp $
 
 inherit autotools multilib toolchain-funcs python
 
@@ -30,8 +30,8 @@ src_unpack() {
 	#EPATCH_OPTS="-p1 -d${S}" epatch "${FILESDIR}"/${PN}-1.5.4-swig-gcc-attribute.patch
 
 	# Do not build GUI tools
-	sed -i -e '/AC_CONFIG_SUBDIRS.*system-config-audit/d' ${S}/configure.ac
-	sed -i -e 's,system-config-audit,,g' -e '/^SUBDIRS/s,\\$,,g' ${S}/Makefile.am
+	sed -i -e '/AC_CONFIG_SUBDIRS.*system-config-audit/d' "${S}"/configure.ac
+	sed -i -e 's,system-config-audit,,g' -e '/^SUBDIRS/s,\\$,,g' "${S}"/Makefile.am
 	rm -rf "${S}"/system-config-audit
 
 	# Regenerate autotooling
