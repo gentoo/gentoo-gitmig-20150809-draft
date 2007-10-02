@@ -7,13 +7,12 @@
 <name>Danny van Dyk</name>
 </maintainer>
 <longdescription lang="en">
-The Intel® Fortran Compiler is a full features FORTRAN 77/95 and
-substantial FORTRAN 2003 compiler for Intel based architectures.
-It is here offered as a non-commercial (please see web site to see
-terms of qualifications). 
-The compiler supports multi-threading, and processor support that includes automatic
-processor dispatch, vectorization, auto-parallelization, OpenMP, data
-prefetching, loop unrolling. The package come with a debugger and
-large documentation.
+The Intel® Fortran Compiler is a full featured FORTRAN 77/95 and
+substantial FORTRAN 2003 compiler for Intel based architectures. The
+compiler supports multi-threading with automatic processor dispatch,
+vectorization, auto-parallelization, OpenMP, data prefetching, loop
+unrolling. The package comes with extensive documentation.
+The product can be installed as a non-commercial as well. License,
+terms of qualifications can be found on the web site.
 </longdescription>
 </pkgmetadata>

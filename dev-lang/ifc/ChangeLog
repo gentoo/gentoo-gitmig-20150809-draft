@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.27 2007/09/30 10:34:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.28 2007/10/02 11:33:05 bicatali Exp $
+
+*ifc-10.0.026-r1 (02 Oct 2007)
+
+  02 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  -ifc-10.0.026.ebuild, +ifc-10.0.026-r1.ebuild:
+  Split debugger into dev-lang/idb, remove IA32ROOT env, added more log comments.
 
 *ifc-10.0.026 (30 Sep 2007)
 
