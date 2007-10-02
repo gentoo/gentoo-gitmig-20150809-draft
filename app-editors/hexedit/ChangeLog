@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/hexedit
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.36 2007/10/02 05:26:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.37 2007/10/02 09:53:26 opfer Exp $
+
+  02 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  hexedit-1.2.12.ebuild:
+  stable x86, bug 194418
 
   02 Oct 2007; Jeroen Roovers <jer@gentoo.org> hexedit-1.2.12.ebuild:
   Stable for HPPA (bug #194418).
