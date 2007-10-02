@@ -1,6 +1,12 @@
 # ChangeLog for games-kids/tuxmathscrabble
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/ChangeLog,v 1.12 2007/10/02 03:51:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/ChangeLog,v 1.13 2007/10/02 05:36:53 mr_bones_ Exp $
+
+*tuxmathscrabble-4.3 (02 Oct 2007)
+
+  02 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +tuxmathscrabble-4.3.ebuild:
+  version bump
 
   02 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> tuxmathscrabble-4.2.ebuild:
   Lock wxpython to 2.6.
