@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18.ebuild,v 1.11 2007/07/02 20:35:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18.ebuild,v 1.12 2007/10/02 03:38:04 dirtyepic Exp $
 
 inherit distutils eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="gtk"
 
-RDEPEND="gtk? ( >=dev-python/wxpython-2.4 )
+RDEPEND="gtk? ( =dev-python/wxpython-2.6* )
 	>=dev-lang/python-2.1
 	!virtual/bittorrent"
 DEPEND="${RDEPEND}
@@ -29,12 +29,12 @@ PIXMAPLOC="/usr/share/pixmaps/bittornado"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# fixes wrong icons path
 	sed -i "s:os.path.abspath(os.path.dirname(os.path.realpath(sys.argv\[0\]))):\"${PIXMAPLOC}/\":" btdownloadgui.py
 	# fixes a bug with < wxpython-2.5 which is not yet available in portage
-	epatch ${FILESDIR}/${PN}-wxpython-pre2.5-fix.patch
+	epatch "${FILESDIR}"/${PN}-wxpython-pre2.5-fix.patch
 }
 
 src_install() {
@@ -46,12 +46,12 @@ src_install() {
 		doins icons/*.ico icons/*.gif
 	else
 		# get rid of any reference to the not-installed gui version
-		rm ${D}/usr/bin/*gui.py
+		rm "${D}"/usr/bin/*gui.py
 	fi
 
-	newicon ${FILESDIR}/favicon.ico ${PN}.ico
-	domenu ${FILESDIR}/bittornado.desktop
+	newicon "${FILESDIR}"/favicon.ico ${PN}.ico
+	domenu "${FILESDIR}"/bittornado.desktop
 
-	newconfd ${FILESDIR}/bttrack.conf bttrack
-	newinitd ${FILESDIR}/bttrack.rc bttrack
+	newconfd "${FILESDIR}"/bttrack.conf bttrack
+	newinitd "${FILESDIR}"/bttrack.rc bttrack
 }
