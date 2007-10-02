@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.28 2007/10/01 17:17:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.29 2007/10/02 05:20:22 jer Exp $
+
+  02 Oct 2007; Jeroen Roovers <jer@gentoo.org> xmlrpc-c-1.06.09.ebuild:
+  Marked ~hppa (bug #194031).
 
   01 Oct 2007; Roy Marples <uberlord@gentoo.org> xmlrpc-c-1.06.03.ebuild,
   xmlrpc-c-1.06.09.ebuild:
