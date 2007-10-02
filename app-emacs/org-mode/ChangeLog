@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.7 2007/10/02 09:05:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.8 2007/10/02 09:12:38 opfer Exp $
+
+  02 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  org-mode-5.10b.ebuild:
+  change LICENSE to GPL-3
 
 *org-mode-5.10b (02 Oct 2007)
 
