@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.82 2007/08/26 14:06:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.83 2007/10/02 08:12:27 robbat2 Exp $
+
+*device-mapper-1.02.22-r1 (02 Oct 2007)
+
+  02 Oct 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/1.02.22-dmeventd.initd, +device-mapper-1.02.22-r1.ebuild:
+  Bug #192174, include dmevent support in device-mapper.
 
 *device-mapper-1.02.22 (26 Aug 2007)
 
