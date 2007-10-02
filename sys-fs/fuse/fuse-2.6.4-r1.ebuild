@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.4-r1.ebuild,v 1.9 2007/06/17 11:52:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.4-r1.ebuild,v 1.10 2007/10/02 18:17:47 genstef Exp $
 
 inherit linux-mod eutils libtool
 
@@ -21,6 +21,10 @@ pkg_setup() {
 		FUSE_FS_ERROR="We have detected FUSE already built into the kernel.
 			We will continue, but we wont build the module this time."
 
+		if kernel_is ge 2 6 23; then
+			CONFIG_CHECK="FUSE_FS"
+			FUSE_FS_ERROR="You need to build the FUSE module from the kernel source, because your kernel is too new"
+		fi
 		linux-mod_pkg_setup
 		kernel_is 2 4 && die "kernel 2.4 is not supported by this ebuild. Get an
 			older version from viewcvs"
