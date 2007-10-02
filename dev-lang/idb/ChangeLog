@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/idb
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/ChangeLog,v 1.1 2007/10/02 11:51:54 bicatali Exp $
+
+*idb-10.0.026 (02 Oct 2007)
+
+  02 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +idb-10.0.026.ebuild:
+  Intial import, split from dev-lang/icc or dev-lang/ifc
+
