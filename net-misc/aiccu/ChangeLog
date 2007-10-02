@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.15 2007/04/28 16:49:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.16 2007/10/02 18:21:38 angelos Exp $
+
+  02 Oct 2007; Christoph Mende <angelos@gentoo.org> aiccu-2007.01.15.ebuild:
+  Stable on amd64
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> aiccu-2006.07.25.ebuild,
   aiccu-2007.01.07.ebuild, aiccu-2007.01.15.ebuild:
