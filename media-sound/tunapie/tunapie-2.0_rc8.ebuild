@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tunapie/tunapie-2.0_rc8.ebuild,v 1.1 2007/08/18 23:54:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tunapie/tunapie-2.0_rc8.ebuild,v 1.2 2007/10/02 03:45:12 dirtyepic Exp $
 
 inherit eutils
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="offensive"
 
-RDEPEND=">=dev-python/wxpython-2.6"
-DEPEND="sys-apps/sed"
+RDEPEND="=dev-python/wxpython-2.6*"
 
 S="${WORKDIR}"/${MY_P}
 
