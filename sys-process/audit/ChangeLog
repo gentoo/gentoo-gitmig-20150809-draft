@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.24 2007/07/15 07:03:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.25 2007/10/02 01:48:33 robbat2 Exp $
+
+*audit-1.6.1 (02 Oct 2007)
+
+  02 Oct 2007; Robin H. Johnson <robbat2@gentoo.org> +audit-1.6.1.ebuild:
+  Bug #190804, version bump.
 
   15 Jul 2007; Robin H. Johnson <robbat2@gentoo.org>
   +files/audit-1.5.4-swig-gcc-attribute.patch, audit-1.5.4.ebuild:
