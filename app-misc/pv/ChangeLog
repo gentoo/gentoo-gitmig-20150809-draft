@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pv
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pv/ChangeLog,v 1.32 2007/10/01 18:45:53 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pv/ChangeLog,v 1.33 2007/10/02 09:51:25 opfer Exp $
+
+  02 Oct 2007; Christian Faulhammer <opfer@gentoo.org> pv-1.1.0.ebuild:
+  stable x86, bug 194417
 
   01 Oct 2007; Ferris McCormick <fmccor@gentoo.org> pv-1.1.0.ebuild:
   Sparc stable --- Bug #194417 --- thanks, Tiago.
