@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.0-r1.ebuild,v 1.1 2007/09/26 22:43:49 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.1.0-r1.ebuild,v 1.2 2007/10/02 00:44:19 marineam Exp $
 
-inherit flag-o-matic distutils eutils multilib
+inherit flag-o-matic eutils multilib
 
 DESCRIPTION="Xend daemon and tools"
 HOMEPAGE="http://www.xensource.com/xen/xen/"
@@ -54,11 +54,6 @@ pkg_setup() {
 		eerror "an amd64 multilib profile is required. Remove the hvm use flag"
 		eerror "to build xen-tools on your current profile."
 		die "USE=hvm is unsupported on this system."
-	fi
-
-	if [[ "$(scanelf -s __guard -q `which python`)" ]] ; then
-		ewarn "xend may not work when python is built with stack smashing protection (ssp)."
-		ewarn "If 'xm create' fails with '<ProtocolError for /RPC2: -1 >', see bug #141866"
 	fi
 
 	if [[ -z ${XEN_TARGET_ARCH} ]] ; then
@@ -131,7 +126,9 @@ src_compile() {
 	use debug && myopt="${myopt} debug=y"
 
 	use custom-cflags || unset CFLAGS
-	#gcc-specs-ssp && append-flags -fno-stack-protector -fno-stack-protector-all
+	if test-flag-CC -fno-strict-overflow; then
+		append-flags -fno-strict-overflow
+	fi
 
 	if use hvm; then
 		myconf="${myconf} --disable-system --disable-user"
@@ -186,10 +183,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Please visit the Xen and Gentoo wiki:"
-	elog "http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
+	elog "Official Xen Guide and the unoffical wiki page:"
+	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
+	elog " http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
 
-	if [[ "$(scanelf -s __guard -q `which python`)" ]] ; then
+	if [[ "$(scanelf -s __guard -q $(type -P python))" ]] ; then
 		echo
 		ewarn "xend may not work when python is built with stack smashing protection (ssp)."
 		ewarn "If 'xm create' fails with '<ProtocolError for /RPC2: -1 >', see bug #141866"
@@ -200,6 +198,12 @@ pkg_postinst() {
 		echo
 		ewarn "NB: Your dev-lang/python is built without USE=ncurses."
 		ewarn "Please rebuild python with USE=ncurses to make use of xenmon.py."
+	fi
+
+	if built_with_use sys-apps/iproute2 minimal; then
+		echo
+		ewarn "Your sys-apps/iproute2 is built with USE=minimal. Networking"
+		ewarn "will not work until you rebuild iproute2 without USE=minimal."
 	fi
 
 	if ! use hvm; then
