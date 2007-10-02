@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0.ebuild,v 1.2 2007/10/01 06:01:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0.ebuild,v 1.3 2007/10/02 22:15:39 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="crypt debug fuse gnome"
 
 RDEPEND="dev-libs/libconfig
-	fuse? ( >=sys-fs/fuse-2.3.0 )
+	fuse? ( >=sys-fs/fuse-2.7.0 )
 	crypt? ( >=dev-libs/libgcrypt-1.2.0 >=net-libs/gnutls-1.2.8 )
 	gnome? (
 		>=dev-libs/glib-2.0
