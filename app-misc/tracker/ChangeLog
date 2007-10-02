@@ -1,6 +1,17 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.22 2007/09/22 20:44:33 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.23 2007/10/02 02:38:24 compnerd Exp $
+
+*tracker-0.6.3 (02 Oct 2007)
+
+  02 Oct 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/tracker-0.5.3-convert-pdf-thumbnailer.patch,
+  -files/tracker-0.5.4-deskbar-encoding.patch,
+  -files/tracker-0.5.4-deskbar-handler.patch,
+  +files/tracker-0.6.3-fix-unac-option.patch, -tracker-0.5.4-r1.ebuild,
+  -tracker-0.6.0.ebuild, -tracker-0.6.1.ebuild, -tracker-0.6.2.ebuild,
+  +tracker-0.6.3.ebuild:
+  Version bump from upstream, prune old versions
 
 *tracker-0.6.2-r1 (22 Sep 2007)
 
