@@ -13,6 +13,10 @@ AUX 1.1.5-fix_compatibility.patch 375 RMD160 08f7341b38d6764b6e5f312300dde3c0e4d
 MD5 25dfc5bb044a047e33be92388931a5d6 files/1.1.5-fix_compatibility.patch 375
 RMD160 08f7341b38d6764b6e5f312300dde3c0e4d767aa files/1.1.5-fix_compatibility.patch 375
 SHA256 7d7639b70c70bc3bf6967ad00fea612506be108cfd2b54e4822650e782513ea9 files/1.1.5-fix_compatibility.patch 375
+AUX 1.1.5-zaphod-mouse-fix.patch 291 RMD160 cf81f9646159027496aaed7e57c458b9e0da0f7c SHA1 423c33355186d0b751636d7da793ff6c9f9f912a SHA256 e598000f5fd69704f7f2cab7df1b38fac6981fe4ee6db4cc5bd98f6a741b9c3f
+MD5 7327accb709e8d89afff0ea5c304846c files/1.1.5-zaphod-mouse-fix.patch 291
+RMD160 cf81f9646159027496aaed7e57c458b9e0da0f7c files/1.1.5-zaphod-mouse-fix.patch 291
+SHA256 e598000f5fd69704f7f2cab7df1b38fac6981fe4ee6db4cc5bd98f6a741b9c3f files/1.1.5-zaphod-mouse-fix.patch 291
 AUX xf86-input-evdev-1.1.2-mips-syscalls.patch 946 RMD160 480ea767224b51fd4f46ad18fba31795e7ca5254 SHA1 80c8ed7ea2f444b4b9e66cae5b412db047a8f947 SHA256 fccdbabf096039a39646c78e2963cd36318a599c49462b368e2c35a2864c2f91
 MD5 7f4336bef00fa21f8ef211798b4f4344 files/xf86-input-evdev-1.1.2-mips-syscalls.patch 946
 RMD160 480ea767224b51fd4f46ad18fba31795e7ca5254 files/xf86-input-evdev-1.1.2-mips-syscalls.patch 946
@@ -33,10 +37,14 @@ EBUILD xf86-input-evdev-1.1.5-r1.ebuild 686 RMD160 f5f297596c9eb437013d3e3a59250
 MD5 6bad21de57d57d4887985382c1267905 xf86-input-evdev-1.1.5-r1.ebuild 686
 RMD160 f5f297596c9eb437013d3e3a5925072fafeedd33 xf86-input-evdev-1.1.5-r1.ebuild 686
 SHA256 95a56edad2c70fd16b109957c139aa92ae264b6ffe1774c7b502700d6d8351b0 xf86-input-evdev-1.1.5-r1.ebuild 686
-MISC ChangeLog 8974 RMD160 9632a7689c7b2cab05c5976334151030c8995f83 SHA1 f993afb80f9164cc4cc507185157429f990767d2 SHA256 b493ad14fa57a9e6ed8d8121f7e904b694f90dd4aa2f8711cdf4dbbf3df0b69b
-MD5 6ce80c2dc239a47bcccbdc4a3991851f ChangeLog 8974
-RMD160 9632a7689c7b2cab05c5976334151030c8995f83 ChangeLog 8974
-SHA256 b493ad14fa57a9e6ed8d8121f7e904b694f90dd4aa2f8711cdf4dbbf3df0b69b ChangeLog 8974
+EBUILD xf86-input-evdev-1.1.5-r2.ebuild 738 RMD160 9cc29044e8d8fa2ec15ce9ae58f78554bb3bd3ed SHA1 f303461021e4614f7ac47183285df19112786bd0 SHA256 d8b2e5a7c4cb03e2e6c604c10f54d7274100930df7c9fbaf07725dd25de4fdb8
+MD5 a4f6a514a5079a1536adba7dad9058f3 xf86-input-evdev-1.1.5-r2.ebuild 738
+RMD160 9cc29044e8d8fa2ec15ce9ae58f78554bb3bd3ed xf86-input-evdev-1.1.5-r2.ebuild 738
+SHA256 d8b2e5a7c4cb03e2e6c604c10f54d7274100930df7c9fbaf07725dd25de4fdb8 xf86-input-evdev-1.1.5-r2.ebuild 738
+MISC ChangeLog 9277 RMD160 83846af4b8272947a4535ceb61c615cf6105f987 SHA1 90796a7f75fbfca609ff6c55161eeb7f91a5d1cb SHA256 b1dbb1ed0fde0792b9ac042fb3c4c09fe9cd32b856c33d97d3e3b032c37c902e
+MD5 f358f9241fe731869577d4c258fa7c14 ChangeLog 9277
+RMD160 83846af4b8272947a4535ceb61c615cf6105f987 ChangeLog 9277
+SHA256 b1dbb1ed0fde0792b9ac042fb3c4c09fe9cd32b856c33d97d3e3b032c37c902e ChangeLog 9277
 MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f604e3d079d39189b40aaaa1ddb06182ad91 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
@@ -50,10 +58,13 @@ SHA256 8913c6dcd341be78d8bf2540d486ed7591cd4df09cecda1db74f54256138d0d0 files/di
 MD5 e53a8a1400f9658f4e1efb939d464dcf files/digest-xf86-input-evdev-1.1.5-r1 527
 RMD160 5b95112b354bce63c175a1e668d9c60a17f0db1f files/digest-xf86-input-evdev-1.1.5-r1 527
 SHA256 893ef0d18e3b233b117873e460eceaf308b9c89d21ab055a25dde434ee6f61b6 files/digest-xf86-input-evdev-1.1.5-r1 527
+MD5 e53a8a1400f9658f4e1efb939d464dcf files/digest-xf86-input-evdev-1.1.5-r2 527
+RMD160 5b95112b354bce63c175a1e668d9c60a17f0db1f files/digest-xf86-input-evdev-1.1.5-r2 527
+SHA256 893ef0d18e3b233b117873e460eceaf308b9c89d21ab055a25dde434ee6f61b6 files/digest-xf86-input-evdev-1.1.5-r2 527
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.4 (GNU/Linux)
+Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFGfvXHp/wUKkr7RBoRAiYjAJ9rv58qM8cfPCNV8iMw5rRvomekKwCfXoNc
-RDQhHkykt2d8H3/JobWV6Zc=
-=qVFn
+iD8DBQFHArsfoeSe8B0zEfwRAq0OAJ9GPn9taqd15FGEWm+vTTP0Idwu7ACeOATa
+d9N930oCjMNHHXc4nw4mlr0=
+=+GuQ
 -----END PGP SIGNATURE-----
