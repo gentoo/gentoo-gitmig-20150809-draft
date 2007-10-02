@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.170 2007/09/22 07:48:21 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.171 2007/10/02 01:47:29 leio Exp $
+
+*gnome-themes-2.20.0 (02 Oct 2007)
+
+  02 Oct 2007; Mart Raudsepp <leio@gentoo.org> +gnome-themes-2.20.0.ebuild:
+  New series for Gnome 2.20
 
   22 Sep 2007; Tom Gall <tgall@gentoo.org> gnome-themes-2.18.1.ebuild:
   stable on ppc64
