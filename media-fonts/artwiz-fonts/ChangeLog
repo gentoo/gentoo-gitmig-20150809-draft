@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/artwiz-fonts
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/ChangeLog,v 1.28 2007/07/22 07:28:29 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/ChangeLog,v 1.29 2007/10/02 01:39:56 dirtyepic Exp $
+
+  02 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> -artwiz-fonts-2.4-r1.ebuild,
+  artwiz-fonts-2.4-r3.ebuild:
+  Drop all keywords but mips until they keyword artwiz-aleczapka-en. Bug
+  #186431. Please use artwiz-aleczapka-en instead of this package.
 
   22 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> -artwiz-fonts-2.4.ebuild,
   -artwiz-fonts-2.4-r2.ebuild:
