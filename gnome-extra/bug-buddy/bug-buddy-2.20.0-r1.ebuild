@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.20.0.ebuild,v 1.1 2007/09/26 22:08:57 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.20.0-r1.ebuild,v 1.1 2007/10/02 15:39:39 dang Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="A graphical bug reporting tool"
 HOMEPAGE="http://www.gnome.org/"
@@ -40,4 +40,10 @@ USE_DESTDIR="1"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	epatch "${FILESDIR}"/${P}-fix-breakpad.patch
 }
