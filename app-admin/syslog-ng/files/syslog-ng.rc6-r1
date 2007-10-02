@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6-r1,v 1.5 2007/05/05 22:54:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6-r1,v 1.6 2007/10/02 23:01:00 mr_bones_ Exp $
 
 opts="checkconfig reload"
 
@@ -12,6 +12,8 @@ depend() {
 			need net ;;
 	esac
 
+	# kludge for baselayout-1 compatibility
+	[ -z "${svclib}" ] && config /etc/syslog-ng/syslog-ng.conf
 	need clock hostname localmount
 	provide logger
 }

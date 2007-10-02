@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.163 2007/08/02 04:52:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.164 2007/10/02 23:00:59 mr_bones_ Exp $
+
+  02 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  files/syslog-ng.rc6-r1:
+  add a kludgy workaround for baselayout-1 and baselayout-2 support (bug
+  #188725)
 
   02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
   files/syslog-ng.conf.gentoo:
