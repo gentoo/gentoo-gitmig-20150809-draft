@@ -7,5 +7,17 @@
 <name>Karl Trygve Kalleberg</name>
 <description>Also, bug Kugelfang.</description>
 </maintainer>
+<maintainer>
+<email>bicatali@gentoo.org</email>
+</maintainer>
+<longdescription lang="en">
+The Intel® C++ Compiler is a full featured C/C++ compiler for Intel
+based architectures. The compiler supports multi-threading, automatic
+processor dispatch, vectorization, auto-parallelization, OpenMP, data
+prefetching, loop unrolling. The package comes with extensive
+documentation. 
+The product can be installed as a non-commercial as
+well. License, terms of qualifications can be found on the web site.
+</longdescription>
 </pkgmetadata>
 
