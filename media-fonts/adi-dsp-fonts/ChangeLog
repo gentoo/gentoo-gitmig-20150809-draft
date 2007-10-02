@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/adi-dsp-fonts
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/adi-dsp-fonts/ChangeLog,v 1.9 2007/06/21 11:15:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/adi-dsp-fonts/ChangeLog,v 1.10 2007/10/02 00:58:51 dirtyepic Exp $
+
+  02 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> metadata.xml,
+  adi-dsp-fonts-1.ebuild:
+  Fix quoting/whitespace, add unzip DEPEND.
 
   21 Jun 2007; Raúl Porcel <armin76@gentoo.org> adi-dsp-fonts-1.ebuild:
   alpha/ia64 stable wrt #182481
