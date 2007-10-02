@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arabeyes-fonts/arabeyes-fonts-1.1.ebuild,v 1.12 2007/06/29 07:04:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arabeyes-fonts/arabeyes-fonts-1.1.ebuild,v 1.13 2007/10/02 01:09:56 dirtyepic Exp $
 
 inherit font
 
 MY_PN="ae_fonts1"
-S=${WORKDIR}/${MY_PN}-${PV}
+S="${WORKDIR}"/${MY_PN}-${PV}
 
 DESCRIPTION="Arabeyes Arabic TrueType fonts"
 HOMEPAGE="http://www.arabeyes.org/project.php?proj=Khotot"
@@ -21,8 +21,9 @@ FONT_SUFFIX="ttf"
 DOCS="license.txt"
 
 src_install() {
+	local d
 	for d in AAHS AGA FS Kasr MCS Shmookh; do
-		FONT_S=${S}/$d
+		FONT_S="${S}"/$d
 		font_src_install
 	done
 }
