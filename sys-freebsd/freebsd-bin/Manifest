@@ -6,10 +6,10 @@ AUX freebsd-bin-6.2-mkdir-posix.patch 3119 RMD160 cba1d464c174bf6f99b15f3c78b7b1
 MD5 fb3911b41fbc161929b2f8d1f4856e1e files/freebsd-bin-6.2-mkdir-posix.patch 3119
 RMD160 cba1d464c174bf6f99b15f3c78b7b16e7214d9d0 files/freebsd-bin-6.2-mkdir-posix.patch 3119
 SHA256 21bab8cdf05e7eedd934ae598707788af7cd0c6dad6913062a37298a91afc133 files/freebsd-bin-6.2-mkdir-posix.patch 3119
-AUX freebsd-bin-6.2-sh-cclass.patch 2258 RMD160 6bb89cb7c4a98bfcf8326d900bcc92b1ca3b81be SHA1 f2efbba870d1c9eac346c4ac482d635e2ddd7c87 SHA256 44d187e145c2fcf516cfa09f3a264d451b7e81f70ef82dc5e9fe27b79a6b5e73
-MD5 88820743815b812e6ec2e1b446a6b4e2 files/freebsd-bin-6.2-sh-cclass.patch 2258
-RMD160 6bb89cb7c4a98bfcf8326d900bcc92b1ca3b81be files/freebsd-bin-6.2-sh-cclass.patch 2258
-SHA256 44d187e145c2fcf516cfa09f3a264d451b7e81f70ef82dc5e9fe27b79a6b5e73 files/freebsd-bin-6.2-sh-cclass.patch 2258
+AUX freebsd-bin-6.2-sh-cclass.patch 2308 RMD160 b278c90295437d819034101e6eaf01a5f72e9fea SHA1 f1f13d73e207ab5e89fc58831d12d40f2dd3e19f SHA256 d2fdf3966f9791b11cb5e247489d4fb65176d2da0a8b77e40b3f2837d59f2084
+MD5 2c16c67f7ec8333e745c3f3413dd3f7a files/freebsd-bin-6.2-sh-cclass.patch 2308
+RMD160 b278c90295437d819034101e6eaf01a5f72e9fea files/freebsd-bin-6.2-sh-cclass.patch 2308
+SHA256 d2fdf3966f9791b11cb5e247489d4fb65176d2da0a8b77e40b3f2837d59f2084 files/freebsd-bin-6.2-sh-cclass.patch 2308
 AUX freebsd-bin-6.2-sh-libedit.patch 454 RMD160 88bf9aed92938fe767a49b152e68f5b1b0aeddf2 SHA1 d9b5a8bfc31afaf23ee36aecd18619dba645edf4 SHA256 94de63ac40a4c8fa8589bb4ba84bd04f48d88d06a9572eeb39755f586463afd2
 MD5 fe0f10070bc6c01f61f7b3c0d3b63c1e files/freebsd-bin-6.2-sh-libedit.patch 454
 RMD160 88bf9aed92938fe767a49b152e68f5b1b0aeddf2 files/freebsd-bin-6.2-sh-libedit.patch 454

@@ -1,5 +1,6 @@
 Allow sh to use POSIX character classes, as specified in
 sections 2.13.1 and 9.3.5
+http://www.freebsd.org/cgi/query-pr.cgi?pr=116826
 
 diff -u a/sh/expand.c b/sh/expand.c
 --- a/sh/expand.c	2005-11-06 20:39:47 +0000
