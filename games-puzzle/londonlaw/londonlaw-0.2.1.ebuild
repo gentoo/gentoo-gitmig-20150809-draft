@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/londonlaw-0.2.1.ebuild,v 1.2 2007/03/12 17:10:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/londonlaw-0.2.1.ebuild,v 1.3 2007/10/02 03:47:11 dirtyepic Exp $
 
 inherit eutils python games
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3
-	>=dev-python/wxpython-2.4
+	=dev-python/wxpython-2.6*
 	dev-python/twisted"
 
 src_unpack() {
