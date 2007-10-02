@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/freebsd-bin-6.2.ebuild,v 1.2 2007/05/18 16:47:49 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/freebsd-bin-6.2.ebuild,v 1.3 2007/10/02 13:33:19 uberlord Exp $
 
 inherit bsdmk freebsd
 
@@ -27,7 +27,8 @@ S=${WORKDIR}/bin
 
 PATCHES="${FILESDIR}/${PN}-6.0-flex-2.5.31.patch
 		${FILESDIR}/${PN}-6.2-mkdir-posix.patch
-		${FILESDIR}/${PN}-6.2-sh-libedit.patch"
+		${FILESDIR}/${PN}-6.2-sh-libedit.patch
+		${FILESDIR}/${PN}-6.2-sh-cclass.patch"
 
 pkg_setup() {
 	use nls || mymakeopts="${mymakeopts} NO_NLS= "

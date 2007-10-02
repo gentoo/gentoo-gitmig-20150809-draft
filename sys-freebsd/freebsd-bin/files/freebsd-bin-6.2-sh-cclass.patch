@@ -1,0 +1,96 @@
+Allow sh to use POSIX character classes, as specified in
+sections 2.13.1 and 9.3.5
+
+diff -u a/sh/expand.c b/sh/expand.c
+--- a/sh/expand.c	2005-11-06 20:39:47 +0000
++++ b/sh/expand.c	2007-10-02 13:46:28 +0100
+@@ -1320,6 +1320,42 @@
+ }
+ 
+ 
++STATIC int ccmatch(char *p, int chr, char **r)
++{
++	static const struct class {
++		char name[10];
++		int (*fn)(int);
++	} classes[] = {
++		{ .name = ":alnum:]", .fn = isalnum },
++		{ .name = ":cntrl:]", .fn = iscntrl },
++		{ .name = ":lower:]", .fn = islower },
++		{ .name = ":space:]", .fn = isspace },
++		{ .name = ":alpha:]", .fn = isalpha },
++		{ .name = ":digit:]", .fn = isdigit },
++		{ .name = ":print:]", .fn = isprint },
++		{ .name = ":upper:]", .fn = isupper },
++		{ .name = ":blank:]", .fn = isblank },
++		{ .name = ":graph:]", .fn = isgraph },
++		{ .name = ":punct:]", .fn = ispunct },
++		{ .name = ":xdigit:]", .fn = isxdigit },
++	};
++	const struct class *class, *end;
++	char *q;
++
++	end = classes + sizeof(classes) / sizeof(classes[0]);
++	for (class = classes; class < end; class++) {
++		q = prefix(class->name, p);
++		if (!q)
++			continue;
++		*r = q;
++		return class->fn(chr);
++	}
++
++	*r = 0;
++	return 0;
++}
++
++
+ STATIC int
+ pmatch(char *pattern, char *string, int squoted)
+ {
+@@ -1405,6 +1441,15 @@
+ 					continue;
+ 				if (c == CTLESC)
+ 					c = *p++;
++				else if (c == '[') {
++					char *r;
++
++					found |= ccmatch(p, chr, &r);
++					if (r) {
++						p = r;
++						continue;
++					}
++				}
+ 				if (*p == '-' && p[1] != ']') {
+ 					p++;
+ 					while (*p == CTLQUOTEMARK)
+diff -u a/sh/mystring.c b/sh/mystring.c
+--- a/sh/mystring.c	2004-04-06 21:06:51 +0100
++++ b/sh/mystring.c	2007-10-02 13:45:31 +0100
+@@ -88,14 +88,14 @@
+  * prefix -- see if pfx is a prefix of string.
+  */
+ 
+-int
++char *
+ prefix(const char *pfx, const char *string)
+ {
+ 	while (*pfx) {
+ 		if (*pfx++ != *string++)
+ 			return 0;
+ 	}
+-	return 1;
++	return (char *)string;
+ }
+ 
+ 
+diff -u a/sh/mystring.h b/sh/mystring.h
+--- a/sh/mystring.h	2004-04-06 21:06:51 +0100
++++ b/sh/mystring.h	2007-10-02 13:45:35 +0100
+@@ -36,7 +36,7 @@
+ #include <string.h>
+ 
+ void scopyn(const char *, char *, int);
+-int prefix(const char *, const char *);
++char *prefix(const char *, const char *);
+ int number(const char *);
+ int is_number(const char *);

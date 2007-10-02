@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/ChangeLog,v 1.28 2007/05/18 16:47:49 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/ChangeLog,v 1.29 2007/10/02 13:33:19 uberlord Exp $
+
+  02 Oct 2007; Roy Marples <uberlord@gentoo.org>
+  +files/freebsd-bin-6.2-sh-cclass.patch, freebsd-bin-6.2.ebuild:
+  support POSIX character class RE match for sh
 
   18 May 2007; Roy Marples <uberlord@gentoo.org>
   +files/freebsd-bin-6.2-sh-libedit.patch, freebsd-bin-6.2.ebuild:
