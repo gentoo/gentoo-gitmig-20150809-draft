@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.364 2007/09/30 07:51:19 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.365 2007/10/02 04:47:17 mrness Exp $
 
 # Keep them sorted
 
@@ -317,6 +317,7 @@ svga - Adds support for SVGAlib (graphics library)
 sybase - Adds support for the Sybase SQL Database Server
 sybase-ct - Adds support for Sybase-CT
 symlink - Force kernel ebuilds to automatically update the /usr/src/linux symlink.
+syslog - Enables support for syslog
 sysvipc - Support for System V-compatible inter-process communication
 szip - Use the szip compression library
 tcl - Adds support the Tcl language

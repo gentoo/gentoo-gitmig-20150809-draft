@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3053 2007/10/02 01:24:10 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3054 2007/10/02 04:47:17 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -494,7 +494,6 @@ dev-libs/log4cxx:smtp - offer SMTP support via libsmtp
 dev-libs/nss:utils - Install utilities included with the library
 dev-libs/opencryptoki:tpmtok - offer support for TPM token
 dev-libs/openobex:irda - enable IrDA support
-dev-libs/openobex:syslog - enable syslog support
 dev-libs/opensc:openct - build using dev-libs/openct compatibility
 dev-libs/opensc:pcsc-lite - build with pcsc-lite
 dev-libs/pwlib:v4l2 - Enable video4linux2 support
@@ -871,7 +870,6 @@ mail-mta/exim:lmtp - Adds support for lmtp
 mail-mta/exim:mbx - Adds support for UW's mbx format
 mail-mta/exim:spf - Adds support for Sender Policy Framework
 mail-mta/exim:srs - Adds support for Sender Rewriting Scheme
-mail-mta/exim:syslog - defines syslog as the default log path if none is specified in the conf file.
 mail-mta/netqmail:gencertdaily - Generate SSL certificates daily instead of hourly
 mail-mta/netqmail:highvolume - Prepare netqmail for high volume servers
 mail-mta/netqmail:noauthcram - If you do NOT want AUTHCRAM to be available
@@ -1408,7 +1406,6 @@ net-firewall/nufw:nfconntrack - Use netfilter_conntrack
 net-firewall/nufw:nfqueue - Use NFQUEUE instead of QUEUE
 net-firewall/nufw:pam_nuauth - Add support for pam nufw from PAM
 net-firewall/nufw:plaintext - Add support for authentication with plaintext file
-net-firewall/nufw:syslog - Add support user activity logging in syslog
 net-fs/netatalk:xfs - Enable support for XFS Quota
 net-fs/nfs-utils:nonfsv4 - Disable support for NFSv4
 net-fs/samba:ads - Enable Active Directory support
@@ -1417,7 +1414,6 @@ net-fs/samba:automount - Enables automount support
 net-fs/samba:oav - Enables support for anti-virus from the openantivirus.org project
 net-fs/samba:quotas - Enables support for user quotas
 net-fs/samba:swat - Enables support for swat configuration gui
-net-fs/samba:syslog - Enables support for syslog
 net-fs/samba:winbind - Enables support for the winbind auth daemon
 net-fs/shfs:amd - Enable automounter support
 net-ftp/ftpcube:sftp - Enable sftp connection support
@@ -1614,7 +1610,6 @@ net-misc/openswan:extra-algorithms - Include additional algorithms such as Blowf
 net-misc/openswan:weak-algorithms - Include weak algorithms such as DH1 and 1DES
 net-misc/openvpn:iproute2 - Enabled iproute2 support instead of net-tools
 net-misc/openvpn:passwordsave - Enables openvpn to save passwords
-net-misc/partysip:syslog - Enable syslog support
 net-misc/quagga:bgpas4 - Enable support for 32-bit AS numbers
 net-misc/quagga:bgpclassless - Enable classless prefixes for BGP
 net-misc/quagga:fix-connected-rt - Remove interface connected routes from kernel table on link loss so that no packets get routed to downed interface

@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.682 2007/10/02 01:24:10 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.683 2007/10/02 04:47:17 mrness Exp $
+
+  02 Oct 2007; Alin Năstac <mrness@gentoo.org> use.desc, use.local.desc:
+  Added global syslog use-flag.
 
   02 Oct 2007; Lars Weiler <pylon@gentoo.org> use.local.desc:
   Added local cisco use-flag for net-misc/strongswan.
