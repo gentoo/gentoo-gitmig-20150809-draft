@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r7.ebuild,v 1.2 2007/09/30 11:38:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r7.ebuild,v 1.3 2007/10/02 05:19:47 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -16,7 +16,7 @@ SRC_URI="http://dspam.nuclearelephant.com/sources/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="clamav daemon debug ldap mysql postgres sqlite \
+IUSE="clamav daemon debug ldap mysql postgres sqlite syslog \
 	large-domain virtual-users user-homedirs"
 
 COMMON_DEPEND="clamav?		( >=app-antivirus/clamav-0.90.2 )
@@ -51,11 +51,6 @@ create_dspam_usergroup() {
 }
 
 pkg_setup() {
-	if use virtual-users && use user-homedirs ; then
-		eerror "If the users are virtual, then they probably should not have home directories."
-		die "Incompatible USE flag selection"
-	fi
-
 	# Delete these lines some time after -r6 removal
 	if has_version "<=mail-filter/dspam-3.8.0-r6" &&
 		built_with_use "<=mail-filter/dspam-3.8.0-r6" sqlite &&
@@ -83,23 +78,20 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--enable-long-usernames --enable-syslog"
+	local myconf=""
 
-	use large-domain && myconf="${myconf} --enable-large-scale" || \
-			    myconf="${myconf} --enable-domain-scale"
-
-	use user-homedirs && myconf="${myconf} --enable-homedir"
-
-	use debug && myconf="${myconf} --enable-debug --enable-bnr-debug"
-
-	if use virtual-users ; then
-		if use mysql || use postgres ; then
-			myconf="${myconf} --enable-virtual-users"
+	if use mysql || use postgres; then
+		myconf="${myconf} $(use_enable virtual-users) --enable-preferences-extension"
+		if use virtual-users; then
+			myconf="${myconf} --disable-homedir"
+			use user-homedirs && ewarn "user-homedirs support has been disabled (not compatible with --enable-virtual-users)"
+		else
+			myconf="${myconf} $(use_enable user-homedirs homedir)"
 		fi
-	fi
-
-	if use mysql || use postgres ; then
-		myconf="${myconf} --enable-preferences-extension"
+	else
+		myconf="${myconf} --disable-virtual-users --disable-preferences-extension \
+			 $(use_enable user-homedirs homedir)"
+		use virtual-users && ewarn "virtual-users support has been disabled (available only for mysql and postgres storage drivers)"
 	fi
 
 	local STORAGE="hash_drv"
@@ -118,16 +110,23 @@ src_compile() {
 		myconf="${myconf} --with-pgsql-libraries=/usr/$(get_libdir)/postgresql"
 	fi
 
-	econf ${myconf} --with-storage-driver=${STORAGE} \
+	econf --with-storage-driver=${STORAGE} \
 			--with-dspam-home="${DSPAM_HOMEDIR}" \
 			--sysconfdir="${DSPAM_CONFDIR}" \
 			$(use_enable daemon) \
 			$(use_enable ldap) \
 			$(use_enable clamav) \
+			$(use_enable large-domain large-scale) \
+			$(use_enable !large-domain domain-scale) \
+			$(use_enable syslog) \
+			$(use_enable debug) \
+			$(use_enable debug bnr-debug) \
+			--enable-long-usernames \
 			--with-dspam-group=dspam \
 			--with-dspam-home-group=dspam \
 			--with-dspam-mode=${DSPAM_MODE} \
-			--with-logdir="${DSPAM_LOGDIR}" || die "econf failed"
+			--with-logdir="${DSPAM_LOGDIR}" \
+			${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 
@@ -149,8 +148,8 @@ src_install () {
 	diropts -m0755 -o dspam -g dspam
 	dodir /var/run/dspam
 
-	# create logdir (used only when build with debug useflag)
-	if use debug ; then
+	# create logdir (used only when syslog support has been disabled or build with --enable-debug)
+	if ! use syslog || use debug ; then
 		diropts -m0770 -o dspam -g dspam
 		dodir "${DSPAM_LOGDIR}"
 		diropts -m0755
