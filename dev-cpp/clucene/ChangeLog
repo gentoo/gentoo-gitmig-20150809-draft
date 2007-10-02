@@ -1,6 +1,15 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.8 2007/03/19 17:28:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.9 2007/10/02 21:04:55 philantrop Exp $
+
+*clucene-0.9.20 (02 Oct 2007)
+
+  02 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> metadata.xml,
+  -clucene-0.9.15.ebuild, -clucene-0.9.16a.ebuild, -clucene-0.9.17.ebuild,
+  +clucene-0.9.20.ebuild:
+  Version bump to 0.9.20. Fixes bug 179670. 
+  Removed obsolete versions. 
+  Added myself to metadata.xml as the maintainer.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove squinky86 from metadata.xml due to retirement.
