@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-4.2.ebuild,v 1.2 2007/07/25 17:38:42 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-4.2.ebuild,v 1.3 2007/10/02 03:51:36 dirtyepic Exp $
 
 inherit eutils python multilib games
 
@@ -17,9 +17,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="dev-python/pygame
-	dev-python/wxpython"
+	=dev-python/wxpython-2.6*"
 
-S=${WORKDIR}/${MY_PN}
+S="${WORKDIR}/${MY_PN}"
 
 src_unpack() {
 	unpack ${A}
