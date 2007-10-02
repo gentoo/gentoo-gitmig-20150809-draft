@@ -20,6 +20,14 @@ dm_crypt_execute_dmcrypt() {
 		# let user set options, otherwise leave empty
 		: ${options:=' '}
 	elif [ -n "$swap" ]; then
+		local foo
+		einfo "Checking swap is not LUKS"
+		cryptsetup isLuks ${source} 2>/dev/null >/dev/console </dev/console
+		foo="$?"
+		if [ "${foo}" -eq 0 ]; then
+		ewarn "The swap you have defined is a LUKS partition. Aborting crypt-swap setup."
+		return
+		fi
 		target=${swap}
 		# swap contents do not need to be preserved between boots, luks not required.
 		# suspend2 users should have initramfs's init handling their swap partition either way.
@@ -50,6 +58,7 @@ dm_crypt_execute_dmcrypt() {
 		einfo "dm-crypt mapping ${target} is already configured"
 		return
 	fi
+	splash svc_input_begin ${SVCNAME} >/dev/null 2>&1
 	# Handle keys
 	if [ -n "$key" ]; then
 		# Notes: sed not used to avoid case where /usr partition is encrypted.
@@ -72,10 +81,10 @@ dm_crypt_execute_dmcrypt() {
 							umount -n ${mntrem} 2>/dev/null >/dev/null
 							rmdir ${mntrem} 2>/dev/null >/dev/null
 							einfo "Cannot find ${key} on removable media."
-							echo -n -e " ${green}*${off}  Abort?(${red}yes${off}/${green}no${off})" >/dev/console	
-							read ans </dev/console
+							echo -n -e " ${green}*${off}  Abort?(${red}yes${off}/${green}no${off})" >/dev/console
+							read ${read_timeout} ans </dev/console
 							echo	>/dev/console
-							[ "$ans" != "yes" ] && { i=0; c=0; } || return 
+							[ "$ans" = "no" ] && { i=0; c=0; } || return
 						else
 							key="${mntrem}${key}"
 							break
@@ -89,9 +98,9 @@ dm_crypt_execute_dmcrypt() {
 							rmdir ${mntrem} 2>/dev/null >/dev/null
 							einfo "Removable device for ${target} not present."
 							echo -n -e " ${green}*${off}  Abort?(${red}yes${off}/${green}no${off})" >/dev/console
-							read ans </dev/console
+							read ${read_timeout} ans </dev/console
 							echo  >/dev/console
-							[ "$ans" != "yes" ] && { i=0; c=0; } || return
+							[ "$ans" = "no" ] && { i=0; c=0; } || return
 						fi
 					fi
 				done
@@ -112,7 +121,6 @@ dm_crypt_execute_dmcrypt() {
 	else
 		mode=none
 	fi
-	splash svc_input_begin ${SVCNAME} >/dev/null 2>&1
 	ebegin "dm-crypt map ${target}"
 	einfo "cryptsetup will be called with : ${options} ${arg1} ${arg2} ${arg3}"
 	if [ "$mode" == "gpg" ]; then
@@ -195,8 +203,43 @@ dm_crypt_execute_localmount() {
 	fi
 }
 
+# Determine string lengths
+strlen() {
+	if [ -z "$1" ]
+		then
+			echo "usage: strlen <variable_name>"
+			die
+		fi
+	eval echo "\${#${1}}"
+}
+
+# Lookup optional bootparams
+parse_opt() {
+	case "$1" in
+		*\=*)
+			local key_name="`echo "$1" | cut -f1 -d=`"
+			local key_len=`strlen key_name`
+			local value_start=$((key_len+2))
+			echo "$1" | cut -c ${value_start}-
+		;;
+	esac
+}
+
 local cryptfs_status=0
 local gpg_options key loop_file target targetline options pre_mount post_mount source swap remdev
+
+CMDLINE="`cat /proc/cmdline`"
+for x in ${CMDLINE}
+do
+	case "${x}" in
+		key_timeout\=*)
+			KEY_TIMEOUT=`parse_opt "${x}"`
+			if [ ${KEY_TIMEOUT} -gt 0 ]; then
+				read_timeout="-t ${KEY_TIMEOUT}"
+			fi
+		;;
+	esac
+done
 
 if [[ -f /etc/conf.d/dmcrypt ]] && [[ -x /sbin/cryptsetup ]] ; then
 	ebegin "Setting up dm-crypt mappings"

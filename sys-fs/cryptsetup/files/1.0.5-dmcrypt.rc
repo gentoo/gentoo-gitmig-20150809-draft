@@ -1,10 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/1.0.5-dmcrypt.rc,v 1.1 2007/08/14 16:05:16 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/1.0.5-dmcrypt.rc,v 1.2 2007/10/02 15:47:27 strerror Exp $
 
 depend() {
 	before checkfs
+	if [ -e /lib/librc.so ]; then
+	need device-mapper
+	fi
 }
 
 start() {
