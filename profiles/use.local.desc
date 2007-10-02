@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3054 2007/10/02 04:47:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3055 2007/10/02 11:31:59 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -420,7 +420,6 @@ dev-lang/gforth:force-reg - Enable a possibly unstable GCC flag for possibly lar
 dev-lang/ghc:binary - Install the binary version directly, rather than using it to build the source version.
 dev-lang/ghc:ghcbootstrap - Internal: Bootstrap GHC from an existing GHC installation.
 dev-lang/icon:iplsrc - install the icon programming library source
-dev-lang/ifc:debugger - Install the graphical Intel debugger as well 
 dev-lang/ocaml:latex - Add ocamldoc support for latex
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
 dev-lang/perl:perlsuid - Enable Perl SUID install. Has some risks associated.
