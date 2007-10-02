@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.235 2007/09/22 09:17:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.236 2007/10/02 14:40:11 dang Exp $
+
+*gdm-2.18.4-r1 (02 Oct 2007)
+
+  02 Oct 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gdm-2.20.0-gksu.patch, +gdm-2.18.4-r1.ebuild:
+  Bump to 2.18.4-r1
+  	Add gksu to desktop file; bug #191531
 
   22 Sep 2007; Tom Gall <tgall@gentoo.org> gdm-2.18.4.ebuild:
   stable on ppc64
