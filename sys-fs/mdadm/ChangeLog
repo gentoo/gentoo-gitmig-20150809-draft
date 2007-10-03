@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.81 2007/10/02 22:02:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.82 2007/10/03 11:58:45 robbat2 Exp $
+
+*mdadm-2.6.3-r2 (03 Oct 2007)
+
+  03 Oct 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/64-md-raid.rules-2.6.3-r2, +files/raid-start.sh-2.6.3-r2,
+  +files/raid-stop.sh-2.6.3-r2, +mdadm-2.6.3-r2.ebuild:
+  Add udev rules per bug #182960. Add support for partitioned md devices per
+  #123380. Rip out the old raidtools support since raidtools is long gone.
+  Also make the addon scripts be /bin/sh compatible now.
 
 *mdadm-2.6.3-r1 (02 Oct 2007)
 

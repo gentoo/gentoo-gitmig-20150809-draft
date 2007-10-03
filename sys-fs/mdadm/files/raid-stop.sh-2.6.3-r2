@@ -1,0 +1,19 @@
+# /lib/rcscripts/addons/raid-stop.sh:  Stop raid volumes at shutdown
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/files/raid-stop.sh-2.6.3-r2,v 1.1 2007/10/03 11:58:45 robbat2 Exp $
+
+[ -f /proc/mdstat ] || exit 0
+
+# Stop software raid with mdadm (new school)
+mdadm_conf="/etc/mdadm/mdadm.conf"
+[ -e /etc/mdadm.conf ] && mdadm_conf="/etc/mdadm.conf"
+if [ -x /sbin/mdadm -a -f "${mdadm_conf}" ] ; then
+	ebegin "Shutting down RAID devices (mdadm)"
+	output=$(mdadm -Ss 2>&1)
+	ret=$?
+	[ ${ret} -ne 0 ] && echo "${output}"
+	eend ${ret}
+fi
+
+# vim:ts=4
