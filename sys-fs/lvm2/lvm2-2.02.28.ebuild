@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.28.ebuild,v 1.1 2007/10/02 09:56:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.28.ebuild,v 1.2 2007/10/03 18:22:52 mr_bones_ Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_compile() {
 	# fixes http://bugs.gentoo.org/show_bug.cgi?id=84463
 	local myconf
 	local buildmode
-	
+
 	# fsadm is broken, don't include it (2.02.28)
 	myconf="${myconf} --enable-dmeventd --enable-cmdlib"
 
