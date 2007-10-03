@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.74 2007/04/16 19:20:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.75 2007/10/03 12:53:10 phreak Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
 #			   required to install external modules against a kernel source
 #			   tree.
 #
-# Maintainer: John Mylchreest <johnm@gentoo.org>, Stefan Schweizer <genstef@gentoo.org>
-# Copyright 2004 Gentoo Linux
+# Author(s): John Mylchreest <johnm@gentoo.org>,
+#            Stefan Schweizer <genstef@gentoo.org>
+# Maintainer: kernel-misc@gentoo.org
 #
 # Please direct your bugs to the current eclass maintainer :)
 
