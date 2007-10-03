@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.62 2007/10/02 15:41:05 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.63 2007/10/03 04:57:20 jer Exp $
+
+  03 Oct 2007; Jeroen Roovers <jer@gentoo.org> libglademm-2.6.4.ebuild:
+  Stable for HPPA (bug #194277).
 
   02 Oct 2007; Lars Weiler <pylon@gentoo.org> libglademm-2.6.4.ebuild:
   stable ppc, bug #194277
