@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.489 2007/09/25 13:32:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.490 2007/10/03 14:58:26 caleb Exp $
+
+*qt-4.3.2 (03 Oct 2007)
+
+  03 Oct 2007; Caleb Tennis <caleb@gentoo.org> +qt-4.3.2.ebuild:
+  Version bump
 
   25 Sep 2007; Caleb Tennis <caleb@gentoo.org> qt-4.3.1-r1.ebuild:
   This guy is required whether we have a wacom tablet or not
