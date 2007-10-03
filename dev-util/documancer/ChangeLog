@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/documancer
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/ChangeLog,v 1.10 2006/10/25 17:33:52 leio Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/ChangeLog,v 1.11 2007/10/03 04:29:38 dirtyepic Exp $
+
+  03 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> documancer-0.2.6.ebuild:
+  Lock wxpython dependency.  Fix quoting and use emake.
 
   25 Oct 2006; Mart Raudsepp <leio@gentoo.org> -files/documancer.backend,
   -documancer-0.1.7.ebuild:

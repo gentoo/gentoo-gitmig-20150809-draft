@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.2.6.ebuild,v 1.4 2006/05/02 22:25:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.2.6.ebuild,v 1.5 2007/10/03 04:29:38 dirtyepic Exp $
 
 inherit eutils
 
@@ -18,9 +18,8 @@ IUSE=""
 
 RDEPEND=">=x11-libs/wxmozilla-0.5.6
 	>=virtual/python-2.3
-	>=dev-python/wxpython-2.6.3
-	virtual/jre
-	dev-lang/perl"
+	=dev-python/wxpython-2.6*
+	virtual/jre"
 
 pkg_setup () {
 	# Note: can't use "python_mod_exists wxPython.mozilla" here because
@@ -34,7 +33,7 @@ pkg_setup () {
 }
 
 src_install () {
-	make install DESTDIR=${D} || die
+	emake DESTDIR="${D}" install || die
 
 	dodoc AUTHORS FAQ NEWS README TODO
 }
