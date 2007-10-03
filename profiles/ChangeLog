@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.686 2007/10/03 08:43:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.687 2007/10/03 22:13:22 philantrop Exp $
+
+  03 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> use.local.desc:
+  Added media-video/kmplayer:npp.
 
   03 Oct 2007; Rémi Cardona <remi@gentoo.org> package.mask:
   tiny modification of mask for gnome-keyring for Gnome 2.20

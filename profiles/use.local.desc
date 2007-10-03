@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3056 2007/10/03 00:54:17 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3057 2007/10/03 22:13:22 philantrop Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1165,6 +1165,7 @@ media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telep
 media-video/kaffeine:xcb - Support the X C-language Binding, a replacement for Xlib
 media-video/kino:gpac - Enable GPAC support when exporting to 3GPP format
 media-video/kmplayer:cairo - Support cairo vector graphics library with cross-device output support
+media-video/kmplayer:npp - Compile the npp backend that plays xembed style browser plugins.
 media-video/linux-uvc:isight - Apply patch to work _only_ with the Apple iSight
 media-video/lives:libvisual - Enable libvisual support
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
