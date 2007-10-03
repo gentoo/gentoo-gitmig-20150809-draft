@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/mysql-proxy-0.6.0.ebuild,v 1.1 2007/10/03 15:36:22 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/mysql-proxy-0.6.0.ebuild,v 1.2 2007/10/03 19:50:17 swegener Exp $
 
 inherit eutils
 
@@ -27,14 +27,11 @@ src_compile() {
 src_install() {
 	dosbin src/mysql-proxy
 	if useq lua; then
-		dodir /usr/share/${PN}
 		insinto /usr/share/${PN}
 		doins lib/*.lua
-		dodir /usr/share/${PN}/proxy
 		insinto /usr/share/${PN}/proxy
 		doins lib/proxy/*.lua
 		if useq examples; then
-			dodir /usr/share/${PN}/examples
 			insinto /usr/share/${PN}/examples
 			doins examples/*.lua
 		fi
