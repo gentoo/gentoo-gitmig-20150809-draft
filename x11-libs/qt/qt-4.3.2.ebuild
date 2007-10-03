@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.2.ebuild,v 1.1 2007/10/03 14:58:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.2.ebuild,v 1.2 2007/10/03 18:00:36 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -116,10 +116,10 @@ qt_mkspecs_dir() {
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/qt-4.2.3-hppa-ldcw-fix.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/qt-4.2.3-hppa-ldcw-fix.patch
 
-	cd ${S}/mkspecs/$(qt_mkspecs_dir)
+	cd "${S}"/mkspecs/$(qt_mkspecs_dir)
 	# set c/xxflags and ldflags
 
 	# Don't let the user go too overboard with flags.  If you really want to, uncomment
@@ -141,7 +141,7 @@ src_unpack() {
 
 	# The trolls moved the definitions of the above stuff for g++, so we need to edit those files
 	# separately as well.
-	cd ${S}/mkspecs/common
+	cd "${S}"/mkspecs/common
 
 	sed -i -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CPPFLAGS} ${CFLAGS} ${ASFLAGS}:" \
 		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CPPFLAGS} ${CXXFLAGS} ${ASFLAGS}:" \
@@ -154,12 +154,12 @@ src_unpack() {
 	# Replace X11R6/ directories, so /usr/X11R6/lib -> /usr/lib
 	sed -i -e "s:X11R6/::" linux.conf
 
-	cd ${S}/qmake
+	cd "${S}"/qmake
 
 	sed -i -e "s:CXXFLAGS.*=:CXXFLAGS=${CPPFLAGS} ${CXXFLAGS} ${ASFLAGS} :" \
 	-e "s:LFLAGS.*=:LFLAGS=${LDFLAGS} :" Makefile.unix
 
-	cd ${S}
+	cd "${S}"
 
 }
 
@@ -228,33 +228,33 @@ src_install() {
 	export PATH="${S}/bin:${PATH}"
 	export LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
 
-	make INSTALL_ROOT=${D} install_subtargets || die
-	make INSTALL_ROOT=${D} install_qmake || die
-	make INSTALL_ROOT=${D} install_mkspecs || die
+	make INSTALL_ROOT="${D}" install_subtargets || die
+	make INSTALL_ROOT="${D}" install_qmake || die
+	make INSTALL_ROOT="${D}" install_mkspecs || die
 
 	if use doc; then
-		make INSTALL_ROOT=${D} install_htmldocs || die
+		make INSTALL_ROOT="${D}" install_htmldocs || die
 	fi
 
 	# Install the translations.	 This may get use flagged later somehow
-	make INSTALL_ROOT=${D} install_translations || die
+	make INSTALL_ROOT="${D}" install_translations || die
 
 	keepdir "${QTSYSCONFDIR}"
 
-	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.la
-	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.prl
-	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/pkgconfig/*.pc
+	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" "${D}"/${QTLIBDIR}/*.la
+	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" "${D}"/${QTLIBDIR}/*.prl
+	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" "${D}"/${QTLIBDIR}/pkgconfig/*.pc
 
 	# pkgconfig files refer to WORKDIR/bin as the moc and uic locations.  Fix:
-	sed -i -e "s:${S}/bin:${QTBINDIR}:g" ${D}/${QTLIBDIR}/pkgconfig/*.pc
+	sed -i -e "s:${S}/bin:${QTBINDIR}:g" "${D}"/${QTLIBDIR}/pkgconfig/*.pc
 
 	# Move .pc files into the pkgconfig directory
 	dodir ${QTPCDIR}
-	mv ${D}/${QTLIBDIR}/pkgconfig/*.pc ${D}/${QTPCDIR}
+	mv "${D}"/${QTLIBDIR}/pkgconfig/*.pc "${D}"/${QTPCDIR}
 
 	# Install .desktop files, from bug #174033
 	insinto /usr/share/applications
-	doins ${FILESDIR}/qt4/*.desktop
+	doins "${FILESDIR}"/qt4/*.desktop
 
 	# List all the multilib libdirs
 	local libdirs
