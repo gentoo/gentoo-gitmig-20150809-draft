@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.3c.ebuild,v 1.4 2007/07/08 19:09:47 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.3c.ebuild,v 1.5 2007/10/03 04:24:46 dirtyepic Exp $
 
 inherit distutils eutils
 
@@ -17,21 +17,21 @@ S=${WORKDIR}/${MY_P}
 DEPEND=">=virtual/python-2.3
 	app-arch/unzip"
 
-RDEPEND=">=dev-python/wxpython-2.6.1.0
+RDEPEND="=dev-python/wxpython-2.6*
 	>=dev-util/wxglade-0.3.2
 	>=dev-python/pychecker-0.8.13
 	${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	chmod -R go-w ${S}/*
+	cd "${S}"
+	chmod -R go-w "${S}"/*
 }
 
 src_install() {
 	distutils_src_install
 	distutils_python_version
-	SITEPATH="/usr/lib/python${PYVER}/site-packages"
+	SITEPATH="${ROOT}usr/lib/python${PYVER}/site-packages"
 
 	dobin spe
 	rm -rf "${D}${SITEPATH}/_spe/plugins/wxGlade"
