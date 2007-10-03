@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14-r1.ebuild,v 1.1 2007/10/03 13:50:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.14-r1.ebuild,v 1.2 2007/10/03 18:02:37 phreak Exp $
 
 inherit autotools linux-mod flag-o-matic eutils multilib
 
@@ -114,6 +114,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-seq_file.patch
 	rm "${S}"/acore/memalloc.patch
+	touch "${S}"/acore/memalloc.patch
 
 	convert_to_m "${S}/Makefile"
 	sed -i -e 's:\(.*depmod\):#\1:' "${S}/Makefile"

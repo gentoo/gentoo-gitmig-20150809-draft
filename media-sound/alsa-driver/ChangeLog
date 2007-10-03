@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.276 2007/10/03 13:50:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.277 2007/10/03 18:02:37 phreak Exp $
+
+  03 Oct 2007; Christian Heim <phreak@gentoo.org>
+  files/alsa-driver-1.0.14-seq_file.patch, alsa-driver-1.0.14-r1.ebuild:
+  Fix compilation of alsa-driver-1.0.14-r1, somehow I missed some parts when
+  creating the custom memalloc.patch (#194617 thanks to Doug).
 
 *alsa-driver-1.0.14-r1 (03 Oct 2007)
 
