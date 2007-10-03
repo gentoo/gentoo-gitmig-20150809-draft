@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.13.ebuild,v 1.4 2007/09/14 09:13:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.9.13.ebuild,v 1.5 2007/10/03 05:01:05 dirtyepic Exp $
 
 inherit distutils multilib
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="crypt usb evo"
 
-DEPEND=">=dev-python/wxpython-2.6.3.2
+DEPEND="=dev-python/wxpython-2.6*
 	>=dev-python/apsw-3.3.10.1
 	>=dev-python/python-dsv-1.4.0
 	>=dev-python/pyserial-2.0
