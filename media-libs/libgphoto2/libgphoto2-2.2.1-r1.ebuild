@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.23 2007/07/02 15:08:23 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.24 2007/10/03 22:39:28 eva Exp $
 
 inherit libtool eutils autotools
 
@@ -23,6 +23,8 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc
 		=app-text/docbook-sgml-dtd-4.2*
 	)"
+
+RESTRICT="test"
 
 # By default, drivers for all supported cameras will be compiled.
 # If you want to only compile for specific camera(s), set CAMERAS
