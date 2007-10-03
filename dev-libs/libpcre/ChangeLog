@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.103 2007/10/03 04:28:46 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.104 2007/10/03 04:40:00 tsunam Exp $
+
+  03 Oct 2007; Joshua Jackson <tsunam@gentoo.org> libpcre-7.3.ebuild:
+  Marking stable for amd64 as well
 
   03 Oct 2007; Joshua Jackson <tsunam@gentoo.org> ChangeLog:
   Marking stable on x86
