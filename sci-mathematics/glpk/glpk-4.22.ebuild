@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.10.ebuild,v 1.1 2006/07/22 04:43:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.22.ebuild,v 1.1 2007/10/03 12:56:14 bicatali Exp $
 
 DESCRIPTION="GNU Linear Programming Kit"
 LICENSE="GPL-2"
@@ -16,30 +16,26 @@ DEPEND=">=sys-devel/gcc-3.2
 		doc? ( virtual/ghostscript )"
 RDEPEND="virtual/libc"
 
-src_compile() {
-	LIBS="${LIBS} -lm" econf --enable-shared || die
-	emake || die "emake failed"
-}
-
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# INSTALL include some usage docs
 	dodoc AUTHORS ChangeLog INSTALL NEWS README || \
 		die "failed to install docs"
 
-	# 250Kb
+	# 385Kb
 	insinto /usr/share/doc/${PF}/examples
-	doins examples/*.mod && doins examples/*.tsp || \
+	doins examples/*.{c,mod,lp,mps,dat} || \
 		die "failed to install examples"
 
 	# manual/ is 2.5Mb in size
 	if use doc; then
 		cd "${S}"/doc
-		for i in *.ps; do
-			ps2pdf14 "${i}" || die "failed to convert ps to pdf"
-		done
+		dvipdf refman.dvi
+		dvipdf lang.dvi
 		insinto /usr/share/doc/${PF}/manual
-		doins * || die "failed to install manual files"
+		doins *.pdf || die "failed to install manual files"
+		docinto manual
+		dodoc *.txt || die "failed to install manual txt"
 	fi
 }
