@@ -1,0 +1,11 @@
+# /etc/conf.d/mysql-proxy: config file for /etc/init.d/mysql-proxy
+
+# location auf pidfile
+PIDFILE="/var/run/mysql-proxy.pid"
+
+# general options for mysql-proxy
+#OPTS="--proxy-lua-script=/usr/share/doc/mysql-proxy-0.6.0/tutorial-basic.lua"
+OPTS=""
+
+# if you want mysql-proxy to depend on mysql, enable this:
+#RC_NEED="mysql"

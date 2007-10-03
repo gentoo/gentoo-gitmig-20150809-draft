@@ -1,0 +1,11 @@
+# ChangeLog for dev-db/mysql-proxy
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/ChangeLog,v 1.1 2007/10/03 15:36:22 wschlich Exp $
+
+*mysql-proxy-0.6.0 (03 Oct 2007)
+
+  03 Oct 2007; Wolfram Schlich <wschlich@gentoo.org>
+  +files/0.6.0/mysql-proxy.confd, +files/0.6.0/mysql-proxy.initd,
+  +metadata.xml, +mysql-proxy-0.6.0.ebuild:
+  initial import
+
