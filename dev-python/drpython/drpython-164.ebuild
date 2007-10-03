@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-164.ebuild,v 1.2 2007/03/04 10:13:32 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-164.ebuild,v 1.3 2007/10/03 04:48:15 dirtyepic Exp $
 
 inherit distutils eutils multilib
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=dev-python/wxpython-2.6"
+RDEPEND="=dev-python/wxpython-2.6*"
 DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/${PN}
@@ -22,12 +22,12 @@ src_install() {
 
 	local destdir="/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/"
 	dodir  ${destdir}/bitmaps/{16,24}
-	cp -R bitmaps ${D}/${destdir} || die "Failed to cp bitmaps"
+	cp -R bitmaps "${D}"/${destdir} || die "Failed to cp bitmaps"
 
 	distutils_src_install
 
 	#Windows-only setup script:
-	rm ${D}/usr/bin/postinst.py
+	rm "${D}"/usr/bin/postinst.py
 
 	make_wrapper drpython "python ${destdir}drpython.py"
 }
