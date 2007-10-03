@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.217 2007/10/03 14:41:30 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.218 2007/10/03 14:43:50 phreak Exp $
 
 *alsa-utils-1.0.14-r2 (03 Oct 2007)
 
@@ -8,7 +8,8 @@
   +files/alsa-utils-1.0.14-alsaconf-modules-update.patch,
   +alsa-utils-1.0.14-r2.ebuild:
   Revision bump, removing the wrong call to modules-update, module-init-tools
-  has been stable for a looong while.
+  has been stable for a looong while (#193303 thanks to Jack Kelly 
+  <weldingmaskman at hotmail.com>).
 
   17 Sep 2007; Christian Heim <phreak@gentoo.org>
   +files/alsa-utils-1.0.15_rc1-seq.patch, alsa-utils-1.0.15_rc1.ebuild:
