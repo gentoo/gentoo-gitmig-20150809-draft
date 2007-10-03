@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.10 2007/03/15 19:52:40 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.11 2007/10/03 10:59:04 uberlord Exp $
 
 inherit eutils multilib versionator
 
@@ -13,8 +13,8 @@ SRC_URI="mirror://apache/xml/xerces-c/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
-IUSE="doc"
+KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
+IUSE="doc elibc_FreeBSD"
 
 DEPEND="doc? ( app-doc/doxygen )"
 
@@ -37,7 +37,9 @@ src_unpack() {
 src_compile() {
 	export XERCESCROOT="${S}"
 	cd src/xercesc
-	./runConfigure -plinux -P/usr ${EXTRA_ECONF}
+	local target=linux
+	use elibc_FreeBSD && target=freebsd
+	./runConfigure -p"${target}" -P/usr ${EXTRA_ECONF}
 	emake -j1 || die "emake failed"
 }
 

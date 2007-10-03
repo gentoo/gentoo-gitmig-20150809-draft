@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.48 2007/03/15 19:52:40 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.49 2007/10/03 10:59:04 uberlord Exp $
+
+  03 Oct 2007; Roy Marples <uberlord@gentoo.org> xerces-c-2.7.0-r1.ebuild:
+  Keyworded ~x86-fbsd, #194578 thanks to Andreas Nilsson.
 
   15 Mar 2007; Tiziano Müller <dev-zero@gentoo.org>
   -files/xerces-c-2.6.0-multilib.patch, xerces-c-2.7.0-r1.ebuild:
