@@ -1,0 +1,16 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/postgresql-libs/ChangeLog,v 1.1 2007/10/03 05:10:19 dev-zero Exp $
+
+*postgresql-libs-8.2 (03 Oct 2007)
+*postgresql-libs-8.1 (03 Oct 2007)
+*postgresql-libs-8.0 (03 Oct 2007)
+*postgresql-libs-7.4 (03 Oct 2007)
+*postgresql-libs-7.3 (03 Oct 2007)
+
+  03 Oct 2007; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
+  +postgresql-libs-7.3.ebuild, +postgresql-libs-7.4.ebuild,
+  +postgresql-libs-8.0.ebuild, +postgresql-libs-8.1.ebuild,
+  +postgresql-libs-8.2.ebuild:
+  Initial copy from overlay (thanks to Michael Krelin)
+
