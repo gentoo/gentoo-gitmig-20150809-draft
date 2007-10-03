@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.41.ebuild,v 1.1 2007/10/02 06:06:42 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.41.ebuild,v 1.2 2007/10/03 06:52:19 keri Exp $
 
 inherit eutils flag-o-matic java-pkg-opt-2
 
-PATCHSET_VER="0"
+PATCHSET_VER="1"
 
 DESCRIPTION="free, small, and standard compliant Prolog compiler"
 HOMEPAGE="http://www.swi-prolog.org/"
@@ -44,6 +44,7 @@ src_unpack() {
 
 	epatch "${WORKDIR}"/${PV}/1000-cflags.patch
 	epatch "${WORKDIR}"/${PV}/1001-multilib.patch
+	epatch "${WORKDIR}"/${PV}/1002-parallel-make.patch
 	epatch "${WORKDIR}"/${PV}/2100-thread-sandbox.patch
 	epatch "${WORKDIR}"/${PV}/2101-clear-seg-stack.patch
 	epatch "${WORKDIR}"/${PV}/2105-pl-profile-va-debug.patch
@@ -124,13 +125,13 @@ src_compile() {
 }
 
 src_install() {
-	make -C src DESTDIR="${D}" install || die "install src failed"
+	emake -C src DESTDIR="${D}" install || die "install src failed"
 
 	if ! use minimal ; then
-		make -C packages DESTDIR="${D}" install || die "install packages failed"
+		emake -C packages DESTDIR="${D}" install || die "install packages failed"
 		if use doc ; then
-			make -C packages DESTDIR="${D}" html-install || die "html-install failed"
-			make -C packages/cppproxy DESTDIR="${D}" install-examples || die "install-examples failed"
+			emake -C packages DESTDIR="${D}" html-install || die "html-install failed"
+			emake -C packages/cppproxy DESTDIR="${D}" install-examples || die "install-examples failed"
 		fi
 	fi
 
@@ -139,10 +140,10 @@ src_install() {
 
 src_test() {
 	cd "${S}/src"
-	make check || die "make check failed. See above for details."
+	emake check || die "make check failed. See above for details."
 
 	if ! use minimal ; then
 		cd "${S}/packages"
-		make check || die "make check failed. See above for details."
+		emake check || die "make check failed. See above for details."
 	fi
 }
