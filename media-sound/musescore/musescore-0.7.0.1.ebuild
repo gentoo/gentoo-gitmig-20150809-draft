@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-0.6.0.ebuild,v 1.1 2007/07/30 15:02:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-0.7.0.1.ebuild,v 1.1 2007/10/03 17:44:56 drac Exp $
 
 inherit eutils font toolchain-funcs
 
@@ -24,15 +24,17 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( virtual/tetex app-doc/doxygen )"
 
-S="${WORKDIR}"/${MY_P}
+S="${WORKDIR}"/${MY_P/.1}
 BUILDDIR="${S}"/build
 FONT_SUFFIX="otf"
 FONT_S="${S}"/mscore/mscore/fonts
 
 pkg_setup() {
+	local failure="re-emerge x11-libs/qt with qt3support."
+
 	if ! built_with_use ">=x11-libs/qt-4.3" qt3support; then
-		eerror "x11-libs/qt is built without qt3support."
-		die "re-emerge x11-libs/qt with USE qt3support."
+		eerror "${failure}"
+		die "${failure}"
 	fi
 }
 
@@ -60,7 +62,8 @@ src_install() {
 	font_src_install
 
 	cd "${S}"/mscore
-	dodoc ChangeLog NEWS README TODO doc/{MANUAL,README*}
+	dodoc ChangeLog NEWS README doc/README.translate
 
-	make_desktop_entry mscore "MuseScore"
+	doicon mscore/data/mscore.png
+	make_desktop_entry mscore MuseScore mscore
 }

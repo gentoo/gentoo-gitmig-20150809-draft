@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/musescore
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/ChangeLog,v 1.12 2007/07/31 14:05:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/ChangeLog,v 1.13 2007/10/03 17:44:56 drac Exp $
+
+*musescore-0.7.0.1 (03 Oct 2007)
+
+  03 Oct 2007; Samuli Suominen <drac@gentoo.org> +musescore-0.7.0.1.ebuild:
+  Version bump wrt #194509, thanks to Rudi Lippert for reporting.
 
 *musescore-0.6.1 (31 Jul 2007)
 
