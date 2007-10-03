@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.104 2007/10/02 17:27:51 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.105 2007/10/03 22:14:47 philantrop Exp $
+
+  03 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kmplayer-0.10.0-prtypes.patch, kmplayer-0.10.0.ebuild:
+  Fixed a compile failure if nspr is installed. Fixes bug 194548. Thanks to
+  Arfrever Frehtes Taifersar Arahesis for providing a patch!
 
 *kmplayer-0.10.0 (02 Oct 2007)
 

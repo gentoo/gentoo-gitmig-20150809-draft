@@ -1,0 +1,33 @@
+--- src/moz-sdk/jni_md.h
++++ src/moz-sdk/jni_md.h
+@@ -57,7 +57,7 @@
+ #ifndef JNI_MD_H
+ #define JNI_MD_H
+ 
+-#include "prtypes.h" /* needed for _declspec */
++#include <nspr/prtypes.h> /* needed for _declspec */
+ 
+ /*******************************************************************************
+  * WHAT'S UP WITH THIS FILE?
+--- src/moz-sdk/jri_md.h
++++ src/moz-sdk/jri_md.h
+@@ -43,7 +43,7 @@
+ #define JRI_MD_H
+ 
+ #include <assert.h>
+-#include "prtypes.h" /* Needed for HAS_LONG_LONG ifdefs */
++#include <nspr/prtypes.h> /* Needed for HAS_LONG_LONG ifdefs */
+ 
+ #ifdef __cplusplus
+ extern "C" {
+--- src/moz-sdk/npapi.h
++++ src/moz-sdk/npapi.h
+@@ -48,7 +48,7 @@
+ #pragma pack(1)
+ #endif
+ 
+-#include "prtypes.h"
++#include <nspr/prtypes.h>
+ /* Copied from xp_core.h */
+ /* removed #ifdef for hpux defined in /usr/include/model.h */
+ #ifndef XP_MAC

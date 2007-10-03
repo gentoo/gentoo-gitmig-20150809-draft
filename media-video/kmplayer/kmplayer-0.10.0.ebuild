@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0.ebuild,v 1.1 2007/10/02 17:27:51 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0.ebuild,v 1.2 2007/10/03 22:14:47 philantrop Exp $
 
 inherit kde eutils
 
@@ -14,13 +14,17 @@ SRC_URI="http://kmplayer.kde.org/pkgs/${MY_P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="mplayer xine cairo gstreamer"
+IUSE="mplayer xine cairo gstreamer npp"
 
 DEPEND="x11-libs/libXv
 		>=dev-libs/expat-2.0.1
 		xine? ( >=media-libs/xine-lib-1.1.1 )
 		cairo? ( x11-libs/cairo )
-		gstreamer? ( >=media-libs/gstreamer-0.10.11 )"
+		gstreamer? ( >=media-libs/gstreamer-0.10.11
+					npp? ( >=sys-apps/dbus-1.0.2-r2
+							>=dev-libs/dbus-glib-0.73
+							>=dev-libs/dbus-qt3-old-0.70 ) )
+		npp? ( >=dev-libs/nspr-4.6.7 )"
 RDEPEND="${DEPEND}
 		mplayer? ( || ( media-video/mplayer media-video/mplayer-bin ) )"
 
@@ -33,6 +37,8 @@ for X in ${LANGS} ; do
 done
 
 need-kde 3.5
+
+PATCHES="${FILESDIR}/${P}-prtypes.patch"
 
 pkg_setup() {
 	if ! use mplayer && ! use xine && ! use cairo && ! use gstreamer ; then
@@ -71,12 +77,17 @@ src_unpack() {
 }
 
 src_compile(){
-	local myconf="$(use_with gstreamer)
+	local myconf="--enable-expat
+				$(use_with gstreamer)
 				$(use_with xine)
 				$(use_with cairo)
-				--disable-koffice-plugin
-				--disable-npplayer
-				--enable-expat"
+				--disable-koffice-plugin"
+
+	if use npp ; then
+		myconf="${myconf} --enable-nspr --enable-npplayer"
+	else
+		myconf="${myconf} --disable-nspr --disable-npplayer"
+	fi
 	kde_src_compile
 }
 
