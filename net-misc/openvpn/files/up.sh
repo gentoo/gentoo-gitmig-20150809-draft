@@ -66,7 +66,7 @@ fi
 
 # If we have a service specific script, run this now
 if [ -x /etc/openvpn/"${SVCNAME}"-up.sh ] ; then
-	/etc/openvpn/"${SVCNAME}"-up.sh
+	/etc/openvpn/"${SVCNAME}"-up.sh "$@"
 fi
 
 # Re-enter the init script to start any dependant services
