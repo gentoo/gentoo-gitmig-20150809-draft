@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7770 2007/10/03 08:43:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7771 2007/10/03 13:49:25 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -80,7 +80,7 @@ app-emacs/speedbar
 =gnome-base/libgnome-2.20.0
 =gnome-base/libgnomecanvas-2.20.0
 =gnome-base/libgnomeui-2.20.0
-=gnome-extra/bug-buddy-2.20.0
+>=gnome-extra/bug-buddy-2.20.0
 =app-accessibility/dasher-4.6.0
 =gnome-extra/deskbar-applet-2.20.0
 =gnome-base/eel-2.20.0
