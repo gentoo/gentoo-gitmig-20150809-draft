@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/host
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/host/ChangeLog,v 1.4 2007/08/28 17:01:58 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/host/ChangeLog,v 1.5 2007/10/03 22:53:08 fmccor Exp $
+
+  03 Oct 2007; Ferris McCormick <fmccor@gentoo.org> host-20070128.ebuild:
+  Add ~sparc keyword --- Bug #194653 --- builds and host-woods works.
 
 *host-20070128 (28 Aug 2007)
 
