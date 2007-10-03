@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3055 2007/10/02 11:31:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3056 2007/10/03 00:54:17 compnerd Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -71,6 +71,7 @@ app-crypt/gnupg:openct - build using dev-libs/openct compatibility
 app-crypt/gnupg:pcsc-lite - build with pcsc-lite
 app-crypt/gringotts:suid - Install the binary suid, acknowledging the usual risks
 app-crypt/ophcrack:ophsmall - Makes use of smaller cracking tables
+app-crypt/seahorse:applet - Enable panel applet
 app-crypt/seahorse:gedit - Enable the gedit plugin
 app-crypt/seahorse:keyring - Enable support for gnome-keyring
 app-crypt/seahorse:nautilus - Add support for nautilus file manager
