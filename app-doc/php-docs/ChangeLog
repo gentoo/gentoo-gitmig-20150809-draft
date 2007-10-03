@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/php-docs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.29 2007/09/10 12:37:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.30 2007/10/03 06:31:43 tgall Exp $
+
+  03 Oct 2007; Tom Gall <tgall@gentoo.org> php-docs-20070202-r1.ebuild:
+  stable on ppc64
 
   10 Sep 2007; Jeroen Roovers <jer@gentoo.org> php-docs-20070202-r1.ebuild:
   Stable for HPPA too.
