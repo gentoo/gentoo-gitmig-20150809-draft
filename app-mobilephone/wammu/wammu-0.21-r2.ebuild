@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.21-r2.ebuild,v 1.1 2007/09/09 06:44:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.21-r2.ebuild,v 1.2 2007/10/03 04:56:58 dirtyepic Exp $
 
 inherit distutils eutils versionator
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bluetooth"
 
-RDEPEND=">=dev-python/wxpython-2.6.3.3
+RDEPEND="=dev-python/wxpython-2.6*
 	>=dev-python/python-gammu-0.22
 	bluetooth? (
 		|| (
@@ -33,7 +33,7 @@ src_unpack() {
 
 	# Select the suitable wxpython versions
 	local wxpy_pkg wxpy_slot MY_WXPYTHON_SLOTS
-	for wxpy_pkg in $(portageq match ${ROOT} '>=dev-python/wxpython-2.6.3.3'); do
+	for wxpy_pkg in $(portageq match "${ROOT}" '=dev-python/wxpython-2.6*'); do
 		if built_with_use --hidden --missing false =${wxpy_pkg} unicode ; then
 			wxpy_slot=$(get_version_component_range 1-2 ${wxpy_pkg#*/*-})
 			if [ -z "${MY_WXPYTHON_SLOTS}" ]; then

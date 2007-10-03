@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/wammu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.24 2007/09/09 06:44:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.25 2007/10/03 04:56:58 dirtyepic Exp $
+
+  03 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> wammu-0.20.ebuild,
+  wammu-0.21.ebuild, wammu-0.21-r2.ebuild:
+  Lock wxpython dependency.  Fix quoting.
 
 *wammu-0.21-r2 (09 Sep 2007)
 
