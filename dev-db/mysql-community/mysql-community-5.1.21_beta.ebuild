@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.21_beta.ebuild,v 1.1 2007/10/02 10:02:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.21_beta.ebuild,v 1.2 2007/10/03 18:22:06 mr_bones_ Exp $
 
 MY_EXTRAS_VER="20070916"
 #SERVER_URI="mirror://gentoo/MySQL-${PV%.*}/mysql-${PV//_/-}.tar.gz"
@@ -24,10 +24,10 @@ src_test() {
 
 		# mysqladmin start before dir creation
 		mkdir ${S}/mysql-test/var{,/log}
-		
+
 		# Ensure that parallel runs don't die
 		export MTR_BUILD_THREAD="$((${RANDOM} % 100))"
-		
+
 		# sandbox make ndbd zombie
 		#X#hasq "sandbox" ${FEATURES} && testopts="${testopts} --skip-ndb"
 
