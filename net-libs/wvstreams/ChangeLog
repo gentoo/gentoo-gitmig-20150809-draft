@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.117 2007/09/30 20:28:27 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.118 2007/10/03 13:48:14 armin76 Exp $
+
+  03 Oct 2007; Raúl Porcel <armin76@gentoo.org> wvstreams-4.4.ebuild:
+  alpha/sparc stable wrt #193803
 
   30 Sep 2007; Lars Weiler <pylon@gentoo.org> wvstreams-4.4.ebuild:
   stable ppc, bug #193803
