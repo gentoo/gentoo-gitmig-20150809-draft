@@ -1,6 +1,6 @@
-# ChangeLog for gentoo-x86/virtual
+# ChangeLog for virtual/postgresql-libs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/postgresql-libs/ChangeLog,v 1.1 2007/10/03 05:10:19 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/postgresql-libs/ChangeLog,v 1.2 2007/10/03 20:05:25 swegener Exp $
 
 *postgresql-libs-8.2 (03 Oct 2007)
 *postgresql-libs-8.1 (03 Oct 2007)
