@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/ddskk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.19 2007/07/03 06:57:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.20 2007/10/03 00:41:01 matsuu Exp $
+
+*ddskk-13.1 (03 Oct 2007)
+
+  03 Oct 2007; <matsuu@gentoo.org> files/50ddskk-gentoo.el,
+  ddskk-12.2.0-r1.ebuild, ddskk-12.2.1_pre20040822.ebuild,
+  ddskk-12.2.1_pre20050522.ebuild, +ddskk-13.1.ebuild:
+  Version bumped, bug #194554.
+  Dropped ~ppc-macos because app-emacs/apel has no ppc-macos KEYWORD.
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   ddskk-12.2.1_pre20050522.ebuild:

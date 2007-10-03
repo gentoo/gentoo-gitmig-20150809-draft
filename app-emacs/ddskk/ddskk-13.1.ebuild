@@ -1,34 +1,29 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-12.2.1_pre20050522.ebuild,v 1.4 2007/10/03 00:41:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-13.1.ebuild,v 1.1 2007/10/03 00:41:01 matsuu Exp $
 
 inherit elisp
 
 IUSE=""
 
-MY_P="${PN}-${PV/*_pre/}"
-
 DESCRIPTION="One Japanese input methods on Emacs"
-SRC_URI="http://openlab.ring.gr.jp/skk/maintrunk/${MY_P}.tar.gz
-	mirror://gentoo/${MY_P}.tar.gz"
+SRC_URI="http://openlab.ring.gr.jp/skk/maintrunk/${P}.tar.gz"
 HOMEPAGE="http://openlab.ring.gr.jp/skk/"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
 
-DEPEND=">=app-emacs/apel-10.6"
+DEPEND=">=app-emacs/apel-10.7"
 RDEPEND="${RDEPEND}
-	|| ( virtual/skkserv app-i18n/skk-jisyo )"
+	|| ( app-i18n/skk-jisyo virtual/skkserv )"
 
 SITEFILE=50ddskk-gentoo.el
-
-S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 
 	unpack ${A}
-	find . -type f | xargs sed -i -e 's%/usr/local%/usr%g'
+	find . -type f | xargs sed -i -e 's%/usr/local%/usr%g' || die
 }
 
 src_compile() {
@@ -38,12 +33,12 @@ src_compile() {
 	#cd nicola
 	#make < /dev/null || die
 	cd "${S}/tut-code"
-	elisp-compile *.el
+	elisp-compile *.el || die "elisp-compile failed"
 }
 
 src_install () {
 
-	elisp-install ${PN} *.el* nicola/*.el* tut-code/*.el*
+	elisp-install ${PN} *.el* nicola/*.el* tut-code/*.el* || die "elisp-install failed"
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die "elisp-site-file-install failed"
 
 	insinto /usr/share/skk
