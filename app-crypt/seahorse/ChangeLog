@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.76 2007/08/02 04:58:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.77 2007/10/03 00:57:02 compnerd Exp $
+
+*seahorse-2.20.0 (03 Oct 2007)
+
+  03 Oct 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +seahorse-2.20.0.ebuild:
+  Version bump for GNOME 2.20
 
   02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org> seahorse-1.0.ebuild,
   seahorse-1.0.1.ebuild:
