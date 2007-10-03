@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ncdu
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.6 2007/10/03 10:46:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.7 2007/10/03 11:22:40 fmccor Exp $
+
+  03 Oct 2007; Ferris McCormick <fmccor@gentoo.org> ncdu-1.1.ebuild:
+  Sparc stable --- Bug #193510 --- works fine.
 
   03 Oct 2007; Christoph Mende <angelos@gentoo.org> ncdu-1.1.ebuild:
   Stable on amd64 wrt bug #193510
