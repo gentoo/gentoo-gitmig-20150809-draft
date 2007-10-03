@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gimmix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/ChangeLog,v 1.3 2007/08/12 23:14:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/ChangeLog,v 1.4 2007/10/03 11:57:20 angelos Exp $
+
+*gimmix-0.4.2 (03 Oct 2007)
+
+  03 Oct 2007; Christoph Mende <angelos@gentoo.org> +gimmix-0.4.2.ebuild:
+  Version bump
 
   12 Aug 2007; Christoph Mende <angelos@gentoo.org> gimmix-0.4.1.ebuild:
   Stable on amd64
