@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/dbench
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.23 2007/09/17 02:54:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.24 2007/10/03 06:11:20 tgall Exp $
+
+  03 Oct 2007; Tom Gall <tgall@gentoo.org> dbench-3.04.ebuild:
+  stable on ppc64
 
   17 Sep 2007; Jeroen Roovers <jer@gentoo.org> dbench-3.04.ebuild:
   Stable for HPPA too.
