@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/winpdb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.7 2007/04/04 19:11:38 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.8 2007/10/03 04:36:33 dirtyepic Exp $
+
+  03 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> winpdb-1.1.2.ebuild:
+  Lock wxpython dependency, move to RDEPEND.
 
 *winpdb-1.1.2 (04 Apr 2007)
 
