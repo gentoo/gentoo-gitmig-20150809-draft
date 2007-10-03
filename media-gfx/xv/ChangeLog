@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.86 2007/10/02 13:22:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.87 2007/10/03 12:14:11 angelos Exp $
+
+  03 Oct 2007; Christoph Mende <angelos@gentoo.org> xv-3.10a-r14.ebuild:
+  Stable on amd64 wrt bug #194381
 
   02 Oct 2007; Lars Weiler <pylon@gentoo.org> xv-3.10a-r14.ebuild:
   stable ppc, bug #194381
