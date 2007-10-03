@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.0.2.ebuild,v 1.1 2007/10/02 16:37:03 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.0.2.ebuild,v 1.2 2007/10/03 13:49:23 ticho Exp $
 
 IUSE="bogofilter clamav crypt dillo doc gnome imap ipv6 kde ldap pda session spell ssl startup-notification xface"
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Claws-Mail is an email client (and news reader) based on GTK+"
 HOMEPAGE="http://www.claws-mail.org"
@@ -83,7 +83,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	# Makefile install claws-mail.png in /usr/share/icons/hicolor/48x48/apps
 	# => also install it in /usr/share/pixmaps for other desktop envs
@@ -105,8 +105,8 @@ src_install() {
 	doins ${PN}.desktop
 
 	einfo "Installing extra tools"
-	cd ${S}/tools
-	exeinto /usr/lib/${PN}/tools
+	cd "${S}"/tools
+	exeinto /usr/$(get_libdir)/${PN}/tools
 	doexe *.pl *.py *.rc *.conf *.sh || die
 	doexe tb2claws-mail update-po uudec uuooffice || die
 
@@ -115,7 +115,7 @@ src_install() {
 		local kdeprefix="$(kde-config --prefix)"
 		local servicescript="${PN}-kdeservicemenu.pl"
 		local desktopfile="${PN}-attach-files.desktop"
-		cd ${S}/tools/kdeservicemenu
+		cd "${S}"/tools/kdeservicemenu
 		sed -i -e "s:SCRIPT_PATH:${kdeprefix}/bin/${servicescript}:g" \
 			template_${desktopfile}
 		dodir /usr/share/apps/konqueror/servicemenus
@@ -129,7 +129,7 @@ src_install() {
 	fi
 
 	# kill useless plugin files
-	rm -f ${D}/usr/lib*/${PN}/plugins/*.{la,a}
+	rm -f "${D}"/usr/lib*/${PN}/plugins/*.{la,a}
 }
 
 pkg_postinst() {
@@ -178,5 +178,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	gtk-update-icon-cache -f -t /usr/share/icons/hicolor
+	gtk-update-icon-cache -f -t ${ROOT}/usr/share/icons/hicolor
 }
