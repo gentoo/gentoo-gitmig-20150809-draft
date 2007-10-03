@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.5.1.ebuild,v 1.4 2007/03/12 13:38:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.5.1.ebuild,v 1.5 2007/10/03 05:09:03 dirtyepic Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="Artistic"
 IUSE="sftp"
 
-DEPEND=">=dev-python/wxpython-2.6.3.3
+DEPEND="=dev-python/wxpython-2.6*
 	sftp? ( dev-python/paramiko )"
 
 S="${WORKDIR}/${MY_P}"
