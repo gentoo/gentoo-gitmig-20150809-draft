@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.290 2007/09/25 05:21:59 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.291 2007/10/04 20:36:46 philantrop Exp $
+
+*kdepim-3.5.7-r5 (04 Oct 2007)
+
+  04 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/libkcal-3.5.7-recurring_194371.patch, +kdepim-3.5.7-r5.ebuild:
+  Added an upstream patch for libkcal to fix problems with recurring events.
+  Fixes bug 194371.
 
   25 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
   kdepim-3.5.7-r4.ebuild:
