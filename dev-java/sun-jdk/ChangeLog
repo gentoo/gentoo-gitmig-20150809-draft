@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.213 2007/09/27 16:57:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.214 2007/10/04 14:25:37 betelgeuse Exp $
+
+*sun-jdk-1.4.2.16 (04 Oct 2007)
+
+  04 Oct 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +sun-jdk-1.4.2.16.ebuild:
+  Version bump for security bug #194711.
 
 *sun-jdk-1.6.0.03 (27 Sep 2007)
 *sun-jdk-1.5.0.13 (27 Sep 2007)
