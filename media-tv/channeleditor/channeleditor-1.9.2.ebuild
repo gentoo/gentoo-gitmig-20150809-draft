@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/channeleditor-1.9.2.ebuild,v 1.1 2007/10/04 16:40:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/channeleditor-1.9.2.ebuild,v 1.2 2007/10/04 17:49:44 zzam Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -47,5 +47,5 @@ src_install() {
 	java-pkg_dolauncher ${PN} --main $(mainclass)
 
 	make_desktop_entry channeleditor Channeleditor "" "Utility" || \
-		die "Couldn't make ttcut desktop entry"
+		die "Couldn't make desktop entry"
 }
