@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-13.1.ebuild,v 1.1 2007/10/03 00:41:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-13.1.ebuild,v 1.2 2007/10/04 23:15:41 matsuu Exp $
 
 inherit elisp
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
 
 DEPEND=">=app-emacs/apel-10.7"
-RDEPEND="${RDEPEND}
+RDEPEND="${DEPEND}
 	|| ( app-i18n/skk-jisyo virtual/skkserv )"
 
 SITEFILE=50ddskk-gentoo.el

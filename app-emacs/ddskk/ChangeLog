@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ddskk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.21 2007/10/03 07:00:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.22 2007/10/04 23:15:41 matsuu Exp $
+
+  04 Oct 2007; <matsuu@gentoo.org> -ddskk-12.2.1_pre20040822.ebuild,
+  -ddskk-12.2.1_pre20050522.ebuild, ddskk-13.1.ebuild:
+  Fixed dependency.
+  Removed old versions.
 
   03 Oct 2007; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add Emacs team to metadata.xml, bug #194554.
