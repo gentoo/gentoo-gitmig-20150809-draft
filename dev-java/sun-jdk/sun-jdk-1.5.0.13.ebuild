@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.13.ebuild,v 1.1 2007/09/27 16:57:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.13.ebuild,v 1.2 2007/10/04 18:32:37 opfer Exp $
 
 inherit versionator java-vm-2 eutils pax-utils
 
@@ -15,7 +15,7 @@ SRC_URI="x86? ( http://download.java.net/dlj/binaries/${X86_AT} )
 		amd64? ( http://download.java.net/dlj/binaries/${AMD64_AT} )"
 SLOT="1.5"
 LICENSE="dlj-1.1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 RESTRICT="strip"
 IUSE="X alsa doc examples jce nsplugin"
 
