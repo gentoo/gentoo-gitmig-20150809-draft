@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.2-r1.ebuild,v 1.1 2007/09/29 07:11:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.2-r2.ebuild,v 1.1 2007/10/04 07:13:34 pva Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -26,7 +26,7 @@ src_compile() {
 	# symlinks that are preventing shared libraries from
 	# functioning.
 	use static && append-flags -static
-	emake || die
+	emake CC=$(tc-getCC) || die
 }
 
 src_install() {
