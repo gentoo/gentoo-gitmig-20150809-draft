@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7772 2007/10/03 13:52:22 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7773 2007/10/04 15:14:33 hoffie Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,25 @@
 ##
 ##   End example
 ##
+
+# Christian Hoffmann <hoffie@gentoo.org> (04 Oct 2007)
+# Outdated (no releases since May 2006), buggy and possibly vulnerable to
+# security problems
+# Masked for removal in 30 days
+# replacement: USE="pdo" emerge =dev-lang/php-5*
+dev-php5/pecl-pdo
+# replacement: USE="pdo sybase mssql" emerge =dev-lang/php-5*
+dev-php5/pecl-pdo-dblib
+# replacement: USE="pdo mysql" emerge =dev-lang/php-5*
+dev-php5/pecl-pdo-mysql
+# replacement: USE="pdo oci8" emerge =dev-lang/php-5*
+dev-php5/pecl-pdo-oci
+# replacement: USE="pdo odbc" emerge =dev-lang/php-5*
+dev-php5/pecl-pdo-odbc
+# replacement: USE="pdo pgsql" emerge =dev-lang/php-5*
+dev-php5/pecl-pdo-pgsql
+# replacement: USE="pdo sqlite" emerge =dev-lang/php-5*
+dev-php5/pecl-pdo-sqlite
 
 # Joe Sapp <nixphoeni@gentoo.org> (02 Oct 2007)
 # Doesn't compile, upstream is dead, and depends
