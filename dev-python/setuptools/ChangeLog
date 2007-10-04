@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.27 2007/10/04 07:26:04 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.28 2007/10/04 10:04:26 kutsuya Exp $
 
 *setuptools-0.6_rc7 (04 Oct 2007)
 
@@ -11,9 +11,9 @@
   Marking setuptools-0.6_rc6 ppc64 for dep in bug 189096
 
   19 Sep 2007; Ali Polatel <hawking@gentoo.org> setuptools-0.6_rc6.ebuild:
-  remove tests that access the network; bug 191117 thanks to MichaÅ Kiedrowicz
+  remove tests that access the network; bug 191117 thanks to Michał Kiedrowicz
 
-  24 Aug 2007; RaÃºl Porcel <armin76@gentoo.org> setuptools-0.6_rc6.ebuild:
+  24 Aug 2007; Raúl Porcel <armin76@gentoo.org> setuptools-0.6_rc6.ebuild:
   alpha/ia64/x86 stable
 
   14 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
@@ -86,7 +86,7 @@
   setuptools-0.6_alpha10.ebuild:
   Mark 0.6_alpha10 ~ia64
 
-  19 Feb 2006; Bryan Ãstergaard <kloeri@gentoo.org
+  19 Feb 2006; Bryan Østergaard <kloeri@gentoo.org>
   setuptools-0.6_alpha10.ebuild:
   Add ~alpha keyword, bug 121880.
 
