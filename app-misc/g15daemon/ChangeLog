@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.15 2007/05/01 10:31:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.16 2007/10/04 08:43:58 rbu Exp $
+
+*g15daemon-1.9.0-r1 (04 Oct 2007)
+*g15daemon-1.2.7-r1 (04 Oct 2007)
+
+  04 Oct 2007; Robert Buchholz <rbu@gentoo.org>
+  +files/g15daemon-1.2.7-r1.initd, +g15daemon-1.2.7-r1.ebuild,
+  -g15daemon-1.9.0.ebuild, +g15daemon-1.9.0-r1.ebuild:
+  New POSIX init script by Peter Alfredsen and Roy Marples (bug #194365).
 
   01 May 2007; Markus Rothe <corsair@gentoo.org> g15daemon-1.2.7.ebuild:
   Stable on ppc64; bug #175120
