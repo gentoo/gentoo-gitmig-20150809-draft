@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.107 2007/10/02 09:56:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.108 2007/10/04 16:06:21 cardoe Exp $
+
+*lvm2-2.02.28-r1 (04 Oct 2007)
+
+  04 Oct 2007; Doug Goldstein <cardoe@gentoo.org> files/lvm2-start.sh,
+  +files/lvm.rc-2.02.28-r1, files/lvm2-stop.sh, +lvm2-2.02.28-r1.ebuild:
+  change baselayout-2 init script to call start_addon rather then hardcoding
+  the path
 
 *lvm2-2.02.28 (02 Oct 2007)
 

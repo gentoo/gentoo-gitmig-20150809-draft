@@ -1,5 +1,5 @@
-# /lib/rcscripts/addons/lvm2-start.sh
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/files/lvm2-start.sh,v 1.6 2007/05/31 14:34:11 cardoe Exp $
+# /lib/rcscripts/addons/lvm-start.sh
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/files/lvm2-start.sh,v 1.7 2007/10/04 16:06:22 cardoe Exp $
 
 dm_in_proc() {
 	local retval=0
