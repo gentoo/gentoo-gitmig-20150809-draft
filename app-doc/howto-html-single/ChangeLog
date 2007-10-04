@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/howto-html-single
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.24 2007/10/03 06:23:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.25 2007/10/04 13:20:11 fmccor Exp $
+
+  04 Oct 2007; Ferris McCormick <fmccor@gentoo.org>
+  howto-html-single-20070811.ebuild:
+  Sparc stable (bookkeeping; documentation only).
 
   03 Oct 2007; Tom Gall <tgall@gentoo.org>
   howto-html-single-20070811.ebuild:
