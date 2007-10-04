@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.03.ebuild,v 1.3 2007/06/30 18:11:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.04.ebuild,v 1.1 2007/10/04 23:45:23 alonbl Exp $
 
 DESCRIPTION="PKCS#11 helper library"
 HOMEPAGE="http://www.opensc-project.org/pkcs11-helper"

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/pkcs11-helper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.11 2007/06/30 18:11:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.12 2007/10/04 23:45:23 alonbl Exp $
+
+*pkcs11-helper-1.04 (04 Oct 2007)
+
+  04 Oct 2007; Alon Bar-Lev <alonbl@gentoo.org> -pkcs11-helper-1.03.ebuild,
+  +pkcs11-helper-1.04.ebuild:
+  Version bump
 
   30 Jun 2007; Raúl Porcel <armin76@gentoo.org> pkcs11-helper-1.03.ebuild:
   Add ~alpha wrt #160285
