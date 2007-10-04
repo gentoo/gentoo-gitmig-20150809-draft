@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.37 2007/10/04 14:24:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.38 2007/10/04 14:40:29 tester Exp $
+
+  04 Oct 2007; Olivier Crête <tester@gentoo.org> -pidgin-2.1.0.ebuild:
+  Remove vulnerable version to bug #194278
 
   04 Oct 2007; Steve Dibb <beandog@gentoo.org> pidgin-2.2.1.ebuild:
   amd64 stable, security bug 194278
