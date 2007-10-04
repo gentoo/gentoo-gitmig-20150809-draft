@@ -1,15 +1,17 @@
 # ChangeLog for media-libs/libexif-gtk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.27 2007/04/06 19:37:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.28 2007/10/04 14:54:09 drac Exp $
+
+*libexif-gtk-0.3.5-r2 (04 Oct 2007)
+
+  04 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  +files/libexif-gtk-0.3.5-gtk212.patch, +libexif-gtk-0.3.5-r2.ebuild:
+  Fix building with GTK+-2.12 wrt #194680.
 
   06 Apr 2007; Samuli Suominen <drac@gentoo.org> -libexif-gtk-0.3.5.ebuild,
   libexif-gtk-0.3.5-r1.ebuild:
   Stable on Alpha after discussing it with wolf31o2. Remove old completely
   broken version. Bug 167729.
-
-  06 Apr 2007; Samuli Suominen <drac@gentoo.org> libexif-gtk-0.3.5.ebuild:
-  Remove KEYWORDS except alpha from this completely broken ebuild so nobody
-  installs it be accident.
 
   06 Apr 2007; Peter Weller <welp@gentoo.org> libexif-gtk-0.3.5-r1.ebuild:
   Stable on amd64 wrt bug 167729
