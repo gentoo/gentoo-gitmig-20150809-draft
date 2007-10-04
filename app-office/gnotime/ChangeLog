@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnotime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.24 2007/10/01 19:54:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.25 2007/10/04 19:53:32 eva Exp $
+
+  04 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org> gnotime-2.2.2.ebuild:
+  fix inherit wrt to bug #194616
 
   01 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   -gnotime-2.1.6.ebuild, -gnotime-2.1.7.ebuild, -gnotime-2.2.1.ebuild:
