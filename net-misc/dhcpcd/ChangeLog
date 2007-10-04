@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.163 2007/10/01 09:36:07 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.164 2007/10/04 11:57:04 uberlord Exp $
+
+*dhcpcd-3.1.6 (04 Oct 2007)
+
+  04 Oct 2007; Roy Marples <uberlord@gentoo.org> +dhcpcd-3.1.6.ebuild:
+  Bumpage.
 
   01 Oct 2007; Roy Marples <uberlord@gentoo.org> dhcpcd-3.1.5.ebuild:
   Add a warning about DUID behaviour vs buggy servers.
