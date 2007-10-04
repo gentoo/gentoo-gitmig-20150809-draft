@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libvisual
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.27 2007/02/07 14:46:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.28 2007/10/04 14:18:13 drac Exp $
+
+*libvisual-0.4.0-r1 (04 Oct 2007)
+
+  04 Oct 2007; Samuli Suominen <drac@gentoo.org> +libvisual-0.4.0-r1.ebuild:
+  Add USE flags nls, threads and debug wrt #194566 and matching deps for them.
+  Use emake instead of make in src_install.
 
   07 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> libvisual-0.2.0.ebuild:
   Remove static useflag, thanks to Jakub Moc in bug #165766.
