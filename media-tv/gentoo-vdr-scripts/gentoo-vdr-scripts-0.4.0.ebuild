@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.4.0.ebuild,v 1.3 2007/09/23 14:11:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.4.0.ebuild,v 1.4 2007/10/04 12:28:10 zzam Exp $
 
 inherit eutils
 
@@ -52,17 +52,17 @@ src_install() {
 pkg_preinst() {
 	einfo "Smart updating /etc/conf.d/vdr.plugins"
 	local PLUGINS_NEW=0
-	if [[ -f ${ROOT}/etc/conf.d/vdr.plugins ]]; then
-		PLUGINS_NEW=$(grep -v '^#' ${ROOT}/etc/conf.d/vdr.plugins |grep -v '^$'|wc -l)
+	if [[ -f "${ROOT}"/etc/conf.d/vdr.plugins ]]; then
+		PLUGINS_NEW=$(grep -v '^#' "${ROOT}"/etc/conf.d/vdr.plugins |grep -v '^$'|wc -l)
 	fi
 	if [[ ${PLUGINS_NEW} > 0 ]]; then
 		einfo "Using existing /etc/conf.d/vdr.plugins"
-		cp ${ROOT}/etc/conf.d/vdr.plugins ${D}/etc/conf.d/vdr.plugins
+		cp "${ROOT}"/etc/conf.d/vdr.plugins "${D}"/etc/conf.d/vdr.plugins
 	else
 		einfo "Using PLUGINS from /etc/conf.d/vdr"
 		local PLUGIN
-		for PLUGIN in $(source ${ROOT}/etc/conf.d/vdr;echo $PLUGINS); do
-			echo ${PLUGIN} >> ${D}/etc/conf.d/vdr.plugins
+		for PLUGIN in $(source "${ROOT}"/etc/conf.d/vdr;echo $PLUGINS); do
+			echo ${PLUGIN} >> "${D}"/etc/conf.d/vdr.plugins
 		done
 	fi
 }
@@ -82,7 +82,7 @@ pkg_postinst() {
 	else
 		elog
 		elog "To make shutdown work add this line to /etc/sudoers"
-		elog "\t$VDRSUDOENTRY"
+		elog "\t${VDRSUDOENTRY}"
 		elog
 		elog "or execute this command:"
 		elog "\temerge --config gentoo-vdr-scripts"
@@ -115,13 +115,13 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	if grep -q /usr/share/vdr/bin/vdrshutdown-really.sh ${ROOT}/etc/sudoers; then
+	if grep -q /usr/share/vdr/bin/vdrshutdown-really.sh "${ROOT}"/etc/sudoers; then
 		einfo "sudoers-entry for vdr already in place."
 	else
 		einfo "Adding this line to /etc/sudoers:"
 		einfo "+  ${VDRSUDOENTRY}"
 
-		cd ${T}
+		cd "${T}"
 		cat >sudoedit-vdr.sh <<-SUDOEDITOR
 			#!/bin/bash
 			echo Commenting out old entry
@@ -132,7 +132,7 @@ pkg_config() {
 		SUDOEDITOR
 		chmod a+x sudoedit-vdr.sh
 
-		VISUAL=${T}/sudoedit-vdr.sh visudo -f ${ROOT}/etc/sudoers || die "visudo failed"
+		VISUAL="${T}"/sudoedit-vdr.sh visudo -f "${ROOT}"/etc/sudoers || die "visudo failed"
 
 		einfo "Edited /etc/sudoers"
 	fi
