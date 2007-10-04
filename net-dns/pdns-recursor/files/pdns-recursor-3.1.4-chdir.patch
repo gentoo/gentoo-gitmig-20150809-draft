@@ -1,6 +1,5 @@
-diff -Nur pdns-recursor-3.1.4.orig/pdns_recursor.cc pdns-recursor-3.1.4/pdns_recursor.cc
---- pdns-recursor-3.1.4.orig/pdns_recursor.cc	2006-11-12 16:56:13.000000000 +0000
-+++ pdns-recursor-3.1.4/pdns_recursor.cc	2007-06-08 22:05:35.551419115 +0000
+--- pdns-recursor/pdns_recursor.cc
++++ pdns-recursor/pdns_recursor.cc
 @@ -1565,6 +1565,10 @@
      }
    }
