@@ -1,0 +1,10 @@
+# ChangeLog for games-action/extreme-tuxracer
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.1 2007/10/04 22:21:36 tupone Exp $
+
+*extreme-tuxracer-0.35 (04 Oct 2007)
+
+  04 Oct 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/extreme-tuxracer.svg, +metadata.xml, +extreme-tuxracer-0.35.ebuild:
+  New package. Bug #193576 by Matija Suklje (hook)
+
