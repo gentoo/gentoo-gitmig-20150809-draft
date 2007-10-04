@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mozart
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.8 2007/09/29 05:49:54 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.9 2007/10/04 06:22:39 keri Exp $
+
+  04 Oct 2007; keri <keri@gentoo.org> +files/50mozart-gentoo.el,
+  mozart-1.3.2.ebuild:
+  Add proper support for emacs. Reported and fixed by Ulrich Mueller in bug
+  #194604
 
   29 Sep 2007; keri <keri@gentoo.org> +files/mozart-1.3.2-ri-fpe.patch,
   mozart-1.3.2.ebuild:

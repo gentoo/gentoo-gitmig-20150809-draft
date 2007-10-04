@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.3.2.ebuild,v 1.6 2007/09/29 05:49:54 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.3.2.ebuild,v 1.7 2007/10/04 06:22:39 keri Exp $
 
-inherit eutils
+inherit elisp-common eutils
 
 MY_P="mozart-${PV}.20060615"
 
@@ -21,11 +21,14 @@ DEPEND="dev-lang/perl
 	sys-devel/bison
 	sys-devel/flex
 	sys-libs/zlib
+	emacs? ( virtual/emacs )
 	gdbm? ( sys-libs/gdbm  )
 	tcl? ( tk? (
 			dev-lang/tk
 			dev-lang/tcl ) )"
 RDEPEND="${DEPEND}"
+
+SITEFILE=50${PN}-gentoo.el
 
 S="${WORKDIR}"/${MY_P}
 
@@ -46,12 +49,6 @@ src_compile() {
 	local myconf="\
 			--without-global-oz \
 			--enable-opt=none"
-
-	if use emacs ; then
-		myconf="${myconf} --enable-compile-elisp"
-	else
-		myconf="${myconf} --disable-compile-elisp"
-	fi
 
 	if use tcl && use tk ; then
 		myconf="${myconf} --enable-wish"
@@ -77,22 +74,37 @@ src_compile() {
 		--disable-doc \
 		$(use_enable doc contrib-doc) \
 		$(use_enable gdbm contrib-gdbm) \
+		$(use_enable emacs compile-elisp) \
 		$(use_enable static link-static) \
 		$(use_enable threads threaded) \
 		|| die "econf failed"
 
-	emake bootstrap || die "emake bootstrap failed"
+	emake -j1 bootstrap || die "emake bootstrap failed"
 }
 
 src_install() {
 	emake -j1 \
 		PREFIX="${D}"/usr/lib/mozart \
 		BINDIR="${D}"/usr/bin \
+		ELISPDIR="${D}${SITELISP}/${PN}" \
 		install || die "emake install failed"
+
+	if use emacs; then
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
+			|| die "elisp-site-file-install failed"
+	fi
 
 	if use doc ; then
 		dohtml -r "${WORKDIR}"/mozart/doc/*
 	fi
 
 	dodoc README
+}
+
+pkg_postinst() {
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
