@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/libkcal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/ChangeLog,v 1.85 2007/08/11 16:56:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/ChangeLog,v 1.86 2007/10/04 19:15:39 philantrop Exp $
+
+*libkcal-3.5.7-r2 (04 Oct 2007)
+
+  04 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/libkcal-3.5.7-recurring_194371.patch, +libkcal-3.5.7-r2.ebuild:
+  Added an upstream patch to fix problems with recurring events. Fixes bug
+  194371.
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org> libkcal-3.5.7-r1.ebuild:
   x86 stable wrt #185823
