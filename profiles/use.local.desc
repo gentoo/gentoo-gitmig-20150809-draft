@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3060 2007/10/04 00:52:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3061 2007/10/04 05:24:44 compnerd Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -719,6 +719,8 @@ games-strategy/x2:german - Enable German as default language
 games-strategy/x2:langpacks - Install additional language packs
 games-strategy/x2:modkit - Install the modkit
 gnome-base/gdm:branding - Enable a custom gentoo branded artwork
+gnome-base/gdm:dmx - Enable Distributed Multihead X (DMX) support
+gnome-base/gdm:remote - Enable secure remote support
 gnome-base/gnome-session:branding - Enable a custom gentoo branded splashscreen
 gnome-base/nautilus:beagle - Enable support for beagle searching
 gnome-base/nautilus:tracker - Enable support for tracker searching
