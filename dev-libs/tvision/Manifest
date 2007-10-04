@@ -1,11 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX tvision-2.1.0_pre1-gcc41.patch 1158 RMD160 fccfc47e6eda64dcc5437d8c4c5100ad179fe0f3 SHA1 c9ae33bf012197765519b1374739b2cc9f65b180 SHA256 bd90ca3e6e0dbfa656c605f31e274d3aec03f08feb8c96428b2665c3698f9ff9
 MD5 e1de3b725e60b065cd198a47ebb0b477 files/tvision-2.1.0_pre1-gcc41.patch 1158
 RMD160 fccfc47e6eda64dcc5437d8c4c5100ad179fe0f3 files/tvision-2.1.0_pre1-gcc41.patch 1158
 SHA256 bd90ca3e6e0dbfa656c605f31e274d3aec03f08feb8c96428b2665c3698f9ff9 files/tvision-2.1.0_pre1-gcc41.patch 1158
-AUX tvision-2.1.0_pre2-asneeded.patch 1889 RMD160 5947a6bd6673e485fde454a89e59a5ce650466b2 SHA1 d98b6322f961494c092e93efa082df650d8eb9a4 SHA256 85e8822faa9ca14ecb05cacc0a9adc3ae8a9b7fc015858cc4b95e82e898f8383
-MD5 eece4a4d68cf7552c57182e2282a51b5 files/tvision-2.1.0_pre2-asneeded.patch 1889
-RMD160 5947a6bd6673e485fde454a89e59a5ce650466b2 files/tvision-2.1.0_pre2-asneeded.patch 1889
-SHA256 85e8822faa9ca14ecb05cacc0a9adc3ae8a9b7fc015858cc4b95e82e898f8383 files/tvision-2.1.0_pre2-asneeded.patch 1889
+AUX tvision-2.1.0_pre2-asneeded.patch 1908 RMD160 68717afca8d429e28affa47bdaea56eec6e1a6da SHA1 68dd11db66f31c608fd9a9e279a6a0633c58430f SHA256 122c7418b699850c96264def2f1d06970fa741a9b5b95e5fb3a6279debf9f275
+MD5 c5c64ed8afa0cf92baeb2ca95efda73c files/tvision-2.1.0_pre2-asneeded.patch 1908
+RMD160 68717afca8d429e28affa47bdaea56eec6e1a6da files/tvision-2.1.0_pre2-asneeded.patch 1908
+SHA256 122c7418b699850c96264def2f1d06970fa741a9b5b95e5fb3a6279debf9f275 files/tvision-2.1.0_pre2-asneeded.patch 1908
 AUX tvision-2.1.0_pre2-gcc41.patch 265 RMD160 019f11f30b1c05d1db25047bf57f260755562873 SHA1 20d7858ef1f78c8664db763410f1be76a728bf41 SHA256 793a9468a9dfaa6f5361c840fd251dc8b3b021af3a8d30b3c2468dc63c3d99f8
 MD5 fe70dc530bc3f0a8057dd8d33833627f files/tvision-2.1.0_pre2-gcc41.patch 265
 RMD160 019f11f30b1c05d1db25047bf57f260755562873 files/tvision-2.1.0_pre2-gcc41.patch 265
@@ -28,10 +31,10 @@ EBUILD tvision-2.1.0_pre2-r1.ebuild 971 RMD160 82e8719148589bb44eb48ee80ac37b30b
 MD5 5d5e01fa3170084df0f11b7795d6caed tvision-2.1.0_pre2-r1.ebuild 971
 RMD160 82e8719148589bb44eb48ee80ac37b30b27beb5a tvision-2.1.0_pre2-r1.ebuild 971
 SHA256 dd6b7ffc49fa126d038e741893af54b376148a559b7dc1626d0f2a943fee6e50 tvision-2.1.0_pre2-r1.ebuild 971
-MISC ChangeLog 2888 RMD160 c5948a23826cbb17cfc98acaaa0f4a020c9acfda SHA1 bb41e7fafe9124ffdf8475903799bdba524b06a1 SHA256 8c58df1066c1a2da7d6156d333c5572202a802428bc477fea87c776cd7224288
-MD5 4bc4422e8eb0189c81da7c4469e4380e ChangeLog 2888
-RMD160 c5948a23826cbb17cfc98acaaa0f4a020c9acfda ChangeLog 2888
-SHA256 8c58df1066c1a2da7d6156d333c5572202a802428bc477fea87c776cd7224288 ChangeLog 2888
+MISC ChangeLog 3031 RMD160 49503395b5ea74a4a32bcf46bfa4305f081ee33f SHA1 71a918fa17a5d9f74ce8f3dfea3dab042309a0f7 SHA256 d1ea1bddd19bd85f392f320205fd3ca8bf38587272389fdc2f7abbd1fac5ca80
+MD5 00bcb75f5da880b187d04345df9dc5d3 ChangeLog 3031
+RMD160 49503395b5ea74a4a32bcf46bfa4305f081ee33f ChangeLog 3031
+SHA256 d1ea1bddd19bd85f392f320205fd3ca8bf38587272389fdc2f7abbd1fac5ca80 ChangeLog 3031
 MISC metadata.xml 250 RMD160 61af8ec7e1bf9941d107eff4cc6a639874a6f198 SHA1 7ea68a3bd071637e4a49b61b2f7e35f3277545ef SHA256 aec181c304bce77cce8f1dc110e0203bc06b7c524ab40b1aac19a6f72aefdfde
 MD5 dfc9a804c31ad3a19c0b553773d55382 metadata.xml 250
 RMD160 61af8ec7e1bf9941d107eff4cc6a639874a6f198 metadata.xml 250
@@ -42,3 +45,10 @@ SHA256 c9ec689ee768636b09a7160148febd999045b7fdf5226875986d56eed1cec52d files/di
 MD5 4b209e67c0a3b92ad03f7e30e1f4ef96 files/digest-tvision-2.1.0_pre2-r1 256
 RMD160 46a1a23635f5ef4a7ace6c473c37452b879f38f8 files/digest-tvision-2.1.0_pre2-r1 256
 SHA256 bae56e31c4c02abcd8fb1dfadb0906bc839fe2d3007f5959cbed32cf62e5ecfd files/digest-tvision-2.1.0_pre2-r1 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHBVIVwnQyISwouHwRAq53AKCTB5dMSpImcbZNQijgKJgpgeeT8QCfStk+
+2Z+PWP3riI6Lm6/Al++pXbo=
+=Xduk
+-----END PGP SIGNATURE-----
