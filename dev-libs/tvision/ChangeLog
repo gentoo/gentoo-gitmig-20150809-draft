@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/tvision
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.19 2007/05/14 20:18:59 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.20 2007/10/04 20:49:42 truedfx Exp $
+
+  04 Oct 2007; Harald van Dĳk <truedfx@gentoo.org>
+  files/tvision-2.1.0_pre2-asneeded.patch:
+  Fix librhtv.a getting pulled into librhtv.so
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
