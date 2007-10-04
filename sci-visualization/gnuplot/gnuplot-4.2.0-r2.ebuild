@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.0-r2.ebuild,v 1.7 2007/09/23 17:08:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.0-r2.ebuild,v 1.8 2007/10/04 00:03:32 opfer Exp $
 
 inherit eutils elisp-common multilib wxwidgets
 
@@ -55,7 +55,7 @@ src_compile() {
 	# See bug #156427.
 	if use tetex ; then
 		sed -i \
-			-e 's/TEXMFLOCAL/TEXTMFSITE/g' share/Makefile.in || die "sed failed"
+			-e 's/TEXMFLOCAL/TEXMFSITE/g' share/Makefile.in || die "sed failed"
 	else
 		sed -i \
 			-e '/^SUBDIRS/ s/LaTeX//' share/Makefile.in || die "sed failed"
@@ -96,21 +96,21 @@ src_compile() {
 
 	if use doc ; then
 		cd docs
-		make pdf || die "pdf doc creation failed"
+		emake pdf || die "pdf doc creation failed"
 		cd ../tutorial
-		make pdf || die "pdf tutorial failed"
+		emake pdf || die "pdf tutorial failed"
 	fi
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	if use emacs; then
 		cd lisp
 		einfo "Configuring gnuplot-mode for GNU Emacs..."
-		EMACS="emacs" econf --with-lispdir="/usr/share/emacs/site-lisp/${PN}" || die "econf Emacs files faild"
-		make DESTDIR="${D}" install || die "make install Emacs files failed"
-		make clean
+		EMACS="emacs" econf --with-lispdir="${SITELISP}/${PN}" || die "econf Emacs files faild"
+		emake DESTDIR="${D}" install || die "make install Emacs files failed"
+		emake clean
 		cd ..
 
 		# Gentoo emacs site-lisp configuration
@@ -124,7 +124,7 @@ src_install () {
 		cd lisp
 		einfo "Configuring gnuplot-mode for XEmacs..."
 		EMACS="xemacs" econf --with-lispdir="/usr/$(get_libdir)/xemacs/site-packages/${PN}" || die
-		make DESTDIR="${D}" install || {
+		emake DESTDIR="${D}" install || {
 			ewarn "Compiling/installing gnuplot-mode for xemacs has failed."
 			ewarn "I need xemacs-base to be installed before I can compile"
 			ewarn "the gnuplot-mode lisp files for xemacs successfully."
@@ -150,6 +150,11 @@ src_install () {
 		# Documentation for making PostScript files
 		insinto /usr/share/doc/${PF}/psdoc
 		doins docs/psdoc/{*.doc,*.tex,*.ps,*.gpi,README}
+	fi
+
+	if ! use X; then
+		# see bug 194527
+		rm -rf "${D}/usr/$(get_libdir)/X11"
 	fi
 }
 
