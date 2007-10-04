@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/files/device-mapper.rc-r1,v 1.1 2007/10/04 14:15:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/files/device-mapper.rc-1.02.22-r2,v 1.1 2007/10/04 14:30:24 cardoe Exp $
 
 depend() {
 	if [ -e /lib/librc.so ]; then
