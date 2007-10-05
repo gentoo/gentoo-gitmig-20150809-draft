@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.33.ebuild,v 1.4 2007/09/21 07:17:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.33.ebuild,v 1.5 2007/10/05 20:49:01 xmerlin Exp $
 
 DESCRIPTION="Cluster synchronization tool."
 SRC_URI="http://oss.linbit.com/csync2/${P}.tar.gz"
@@ -36,7 +36,7 @@ src_install() {
 		install || die "install problem"
 
 	insinto /etc/xinetd.d
-	newins ${FILESDIR}/${PN}.xinetd ${PN} || die
+	newins "${FILESDIR}"/${PN}.xinetd ${PN} || die
 
 	dodir /var/lib/csync2/ || die
 	keepdir /var/lib/csync2/
