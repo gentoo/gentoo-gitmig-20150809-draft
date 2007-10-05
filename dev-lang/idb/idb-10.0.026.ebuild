@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.0.026.ebuild,v 1.1 2007/10/02 11:51:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.0.026.ebuild,v 1.2 2007/10/05 06:20:14 mr_bones_ Exp $
 
 inherit rpm elisp-common
 
@@ -26,7 +26,7 @@ LICENSE="Intel-SDP"
 SLOT="0"
 
 RESTRICT="test strip mirror"
-IUSE="emacs"
+IUSE="emacs icc ifc"
 
 DEPEND=""
 RDEPEND="virtual/libstdc++
