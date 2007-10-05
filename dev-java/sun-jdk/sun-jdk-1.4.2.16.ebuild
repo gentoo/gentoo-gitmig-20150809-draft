@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.16.ebuild,v 1.2 2007/10/04 18:29:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.16.ebuild,v 1.3 2007/10/05 10:42:44 betelgeuse Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit pax-utils java-vm-2 eutils
@@ -64,23 +64,23 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	if [ ! -r ${DISTDIR}/${At} ]; then
+	if [ ! -r "${DISTDIR}/${At}" ]; then
 		die "cannot read ${At}.bin. Please check the permission and try again."
 	fi
 	if use jce; then
-		if [ ! -r ${DISTDIR}/${jce_policy} ]; then
+		if [ ! -r "${DISTDIR}/${jce_policy}" ]; then
 			die "cannot read ${jce_policy}. Please check the permission and try again."
 		fi
 	fi
 	#Search for the ELF Header
 	testExp=$(echo -e '\0177\0105\0114\0106\0001\0001\0001')
 	startAt=`grep -aonm 1 ${testExp}  ${DISTDIR}/${At} | cut -d: -f1`
-	tail -n +${startAt} ${DISTDIR}/${At} > install.sfx
+	tail -n +${startAt} "${DISTDIR}/${At}" > install.sfx
 	chmod +x install.sfx
 	./install.sfx || die
 	rm install.sfx
 
-	if [ -f ${S}/lib/unpack ]; then
+	if [[ -f ${S}/lib/unpack ]]; then
 		UNPACK_CMD=${S}/lib/unpack
 		chmod +x $UNPACK_CMD
 		sed -i 's#/tmp/unpack.log#/dev/null\x00\x00\x00\x00\x00\x00#g' $UNPACK_CMD
@@ -111,7 +111,7 @@ src_install() {
 	dodoc COPYRIGHT README LICENSE THIRDPARTYLICENSEREADME.txt || die
 	dohtml README.html || die
 	if use examples; then
-		cp -pPR demo ${D}/opt/${P}/ || die
+		cp -pPR demo "${D}/opt/${P}/" || die
 	fi
 
 	cp -pPR src.zip "${D}/opt/${P}/" || die
@@ -120,12 +120,14 @@ src_install() {
 		# Using unlimited jce while still retaining the strong jce
 		# May have repercussions when you find you cannot symlink libraries
 		# in classpaths.
-		cd ${D}/opt/${P}/jre/lib/security
-		unzip ${DISTDIR}/${jce_policy}
+		cd "${D}/opt/${P}/jre/lib/security"
+		unzip "${DISTDIR}/${jce_policy}"
 		mv jce unlimited-jce
 		dodir /opt/${P}/jre/lib/security/strong-jce
-		mv ${D}/opt/${P}/jre/lib/security/US_export_policy.jar ${D}/opt/${P}/jre/lib/security/strong-jce
-		mv ${D}/opt/${P}/jre/lib/security/local_policy.jar ${D}/opt/${P}/jre/lib/security/strong-jce
+		mv "${D}/opt/${P}/jre/lib/security/US_export_policy.jar" \
+			"${D}/opt/${P}/jre/lib/security/strong-jce" || die
+		mv "${D}/opt/${P}/jre/lib/security/local_policy.jar" \
+			"${D}/opt/${P}/jre/lib/security/strong-jce" || die
 		dosym /opt/${P}/jre/lib/security/unlimited-jce/US_export_policy.jar /opt/${P}/jre/lib/security/
 		dosym /opt/${P}/jre/lib/security/unlimited-jce/local_policy.jar /opt/${P}/jre/lib/security/
 	fi
@@ -146,18 +148,18 @@ src_install() {
 	# create dir for system preferences
 	dodir /opt/${P}/.systemPrefs
 	# Create files used as storage for system preferences.
-	touch ${D}/opt/${P}/.systemPrefs/.system.lock
-	chmod 644 ${D}/opt/${P}/.systemPrefs/.system.lock
-	touch ${D}/opt/${P}/.systemPrefs/.systemRootModFile
-	chmod 644 ${D}/opt/${P}/.systemPrefs/.systemRootModFile
+	touch "${D}/opt/${P}/.systemPrefs/.system.lock"
+	chmod 644 "${D}/opt/${P}/.systemPrefs/.system.lock"
+	touch "${D}/opt/${P}/.systemPrefs/.systemRootModFile"
+	chmod 644 "${D}/opt/${P}/.systemPrefs/.systemRootModFile"
 
 	# install control panel for Gnome/KDE
 	sed -e "s/INSTALL_DIR\/JRE_NAME_VERSION/\/opt\/${P}\/jre/" \
 		-e "s/\(Name=Java\)/\1 Control Panel ${SLOT}/" \
-		${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
-		${T}/sun_java-${SLOT}.desktop
+		"${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop" > \
+		"${T}/sun_java-${SLOT}.desktop"
 
-	domenu ${T}/sun_java-${SLOT}.desktop
+	domenu "${T}/sun_java-${SLOT}.desktop"
 
 	set_java_env
 }
