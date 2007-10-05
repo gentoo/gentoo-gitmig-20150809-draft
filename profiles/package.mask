@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7775 2007/10/05 17:01:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7776 2007/10/05 20:19:39 bicatali Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -12,7 +12,7 @@
 # <bangert@gentoo.org> (28 Jun 2002)
 # psypete says these are broken and i am using the
 # opporturnity to test the masking style :)
-# <bangert@gentoo.org> (28 Jun 2002)
+
 # psypete says these are not really broken - its just
 # the v4l stuff that does not work
 #=media-video/mplayer-0.90_pre5
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Sébastien Fabbro <bicatali@gentoo.org> (05 Oct 2007)
+# Masked. Still buggy with gsl-1.10 and fail many tests.
+# Bug #194358. Downgrade to pygsl-0.9.0 for a more stable version.
+=dev-python/pygsl-0.9.1
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (05 Oct 2007)
 # This is masked for removal in 30 days due to security bug #194609 and no
