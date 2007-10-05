@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-XML_RSS
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RSS/ChangeLog,v 1.34 2007/09/28 23:36:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RSS/ChangeLog,v 1.35 2007/10/05 19:45:40 armin76 Exp $
+
+  05 Oct 2007; Raúl Porcel <armin76@gentoo.org> PEAR-XML_RSS-0.9.10.ebuild:
+  alpha/sparc stable wrt #192247
 
   28 Sep 2007; Christoph Mende <angelos@gentoo.org>
   PEAR-XML_RSS-0.9.10.ebuild:

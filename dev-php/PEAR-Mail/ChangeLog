@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Mail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail/ChangeLog,v 1.35 2007/09/28 23:12:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail/ChangeLog,v 1.36 2007/10/05 19:46:31 armin76 Exp $
+
+  05 Oct 2007; Raúl Porcel <armin76@gentoo.org> PEAR-Mail-1.1.14.ebuild:
+  alpha/sparc stable wrt #192247
 
   28 Sep 2007; Christoph Mende <angelos@gentoo.org> PEAR-Mail-1.1.14.ebuild:
   Stable on amd64 wrt bug #192247

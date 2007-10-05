@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/PEAR-DB_Table-1.5.0.ebuild,v 1.6 2007/09/28 23:49:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/PEAR-DB_Table-1.5.0.ebuild,v 1.7 2007/10/05 20:02:55 armin76 Exp $
 
 inherit php-pear-r1
 
 DESCRIPTION="Builds on PEAR DB to abstract datatypes and automate table creation, data validation"
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 sparc x86"
 IUSE="minimal"
 DEPEND=">=dev-php/PEAR-PEAR-1.5.0"
 RDEPEND="!minimal? ( >=dev-php/PEAR-MDB2-2.4.1
