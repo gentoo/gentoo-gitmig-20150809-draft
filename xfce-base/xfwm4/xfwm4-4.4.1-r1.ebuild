@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.4.1-r1.ebuild,v 1.3 2007/10/04 18:55:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.4.1-r1.ebuild,v 1.4 2007/10/05 14:05:21 armin76 Exp $
 
 inherit xfce44 eutils
 
@@ -9,7 +9,7 @@ xfce44
 
 DESCRIPTION="Window manager"
 HOMEPAGE="http://www.xfce.org/projects/xfwm4"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="debug startup-notification xcomposite"
 
