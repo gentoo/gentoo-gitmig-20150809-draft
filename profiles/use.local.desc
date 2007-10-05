@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3062 2007/10/05 04:56:29 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3063 2007/10/05 20:30:48 ulm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -192,6 +192,7 @@ app-misc/digitemp:ds9097u - Build support for the ds9097u sensor
 app-misc/g15composer:amarok - Enable display of titles played in Amarok
 app-misc/gpsdrive:garmin - Adds specific support for Garmin GPS receivers
 app-misc/graphlcd-base:g15 - Add support for g15daemon driver ( e.g Logitech G15 Keybord )
+app-misc/gtypist:xemacs - Add support for XEmacs
 app-misc/lcd-stuff:mpd - Add support for display of mpd controlled music
 app-misc/lcd-stuff:rss - Add support for display of RSS feeds
 app-misc/lcd4linux:mpd - Add support for display of mpd controlled music
