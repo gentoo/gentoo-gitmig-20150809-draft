@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.104 2007/10/02 18:17:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.105 2007/10/05 17:22:28 fmccor Exp $
+
+  05 Oct 2007; Ferris McCormick <fmccor@gentoo.org> fuse-2.7.0.ebuild:
+  Sparc stable --- Bug #193329 --- thanks to ezod.
 
   02 Oct 2007; Stefan Schweizer <genstef@gentoo.org> -fuse-2.6.3.ebuild,
   fuse-2.6.4-r1.ebuild, fuse-2.7.0.ebuild:
