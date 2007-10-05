@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.202 2007/09/04 00:12:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.203 2007/10/05 23:26:56 vapier Exp $
+
+*util-linux-2.13-r2 (05 Oct 2007)
+
+  05 Oct 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.13-script-SIGWINCH.patch,
+  +files/util-linux-2.13-setuid-checks.patch, files/crypto-loop.initd,
+  +util-linux-2.13-r2.ebuild:
+  Add fix from upstream for `script` breakage with SIGWINCH #191452 by
+  Eric Augustus.  Add security fix from upstream.  Fix from Petr Pisar
+  for swap on cryptoloop #182031.  Add by in loop-aes support via USE=crypt
+  #193088 by Hank Leininger and Alon Bar-Lev.
+
+*util-linux-2.12r-r8 (05 Oct 2007)
+
+  05 Oct 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.13-setuid-checks.patch, +util-linux-2.12r-r8.ebuild:
+  Add security fix from upstream.
 
   04 Sep 2007; Mike Frysinger <vapier@gentoo.org>
   +files/util-linux-2.13-ioprio-syscalls.patch, util-linux-2.13-r1.ebuild:
