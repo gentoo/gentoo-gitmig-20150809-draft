@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.4.ebuild,v 1.7 2007/09/02 07:22:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.4.ebuild,v 1.8 2007/10/05 07:38:20 tgall Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/itext/${DISTFILE}
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="cjk"
 
 COMMON_DEPEND=">=dev-java/bcmail-1.36
