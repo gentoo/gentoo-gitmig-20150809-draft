@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.80 2007/03/05 22:05:49 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.81 2007/10/05 13:26:46 fmccor Exp $
+
+  05 Oct 2007; Ferris McCormick <fmccor@gentoo.org> rpm-4.4.7-r3.ebuild:
+  Adding ~sparc for testing (because masked as well for testing ---
+  FEATURES=test fails some tests).
 
   05 Mar 2007; Sandro Bonazzola <sanchan@gentoo.org> ChangeLog:
   Removing myself from metadata.xml as I'm stepping back.
