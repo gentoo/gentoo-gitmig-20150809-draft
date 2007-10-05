@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/filelight
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.22 2007/10/05 12:19:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.23 2007/10/05 13:39:24 opfer Exp $
+
+  05 Oct 2007; Christian Faulhammer <opfer@gentoo.org> filelight-1.0.ebuild:
+  stable x86, bug 194745
 
   05 Oct 2007; Jeroen Roovers <jer@gentoo.org> filelight-1.0.ebuild:
   Stable for HPPA (bug #194745).
