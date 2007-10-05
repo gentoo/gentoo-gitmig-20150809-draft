@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/multimux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/ChangeLog,v 1.12 2007/10/05 18:40:18 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/ChangeLog,v 1.13 2007/10/05 18:56:18 sbriesen Exp $
+
+  05 Oct 2007; Stefan Briesenick <sbriesen@gentoo.org>
+  multimux-0.2.5.2.ebuild:
+  changed append-lfs-flags to append-flags, since append-lfs-flags doesn't
+  work as expected (adds to CXXFLAGS instead of CFLAGS).
 
 *multimux-0.2.5.2 (05 Oct 2007)
 

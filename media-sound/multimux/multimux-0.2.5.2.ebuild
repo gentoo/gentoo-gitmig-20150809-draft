@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/multimux-0.2.5.2.ebuild,v 1.1 2007/10/05 18:40:18 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/multimux-0.2.5.2.ebuild,v 1.2 2007/10/05 18:56:18 sbriesen Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -21,7 +21,7 @@ src_unpack() {
 }
 
 src_compile() {
-	append-lfs-flags
+	append-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE	-D_LARGEFILE64_SOURCE
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
