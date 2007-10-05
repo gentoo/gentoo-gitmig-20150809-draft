@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/drbd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.73 2007/09/20 08:35:22 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.74 2007/10/05 14:02:51 xmerlin Exp $
+
+*drbd-8.0.6-r1 (05 Oct 2007)
+*drbd-0.7.24-r1 (05 Oct 2007)
+
+  05 Oct 2007; Christian Zoffoli <xmerlin@gentoo.org>
+  +drbd-0.7.24-r1.ebuild, -drbd-8.0.5.ebuild, -drbd-8.0.6.ebuild,
+  +drbd-8.0.6-r1.ebuild:
+  DRDB package splitted in drbd + drbd-kernel, conversion to linux-mod.
+  drbd-0.7.24 is scheduled to be removed.
 
 *drbd-8.0.6 (10 Sep 2007)
 

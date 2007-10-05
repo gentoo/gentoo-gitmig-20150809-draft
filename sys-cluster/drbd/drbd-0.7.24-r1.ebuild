@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.6.ebuild,v 1.1 2007/09/20 08:35:22 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.24-r1.ebuild,v 1.1 2007/10/05 14:02:51 xmerlin Exp $
 
-inherit eutils versionator linux-mod linux-info
+inherit eutils versionator
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 MY_PV="${PV/_/}"
 MY_MAJ_PV="$(get_version_component_range 1-2 ${PV})"
@@ -15,63 +15,40 @@ HOMEPAGE="http://www.drbd.org"
 
 IUSE=""
 
-DEPEND="virtual/linux-sources"
+DEPEND=""
 RDEPEND=""
+PDEPEND="~sys-cluster/drbd-kernel-${PV}"
+
 SLOT="0"
-CONFIG_CHECK="CONNECTOR"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-pkg_setup() {
-	linux-mod_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	epatch ${FILESDIR}/${PN}-8.0.0-scripts.adjust_drbd_config_h.sh.patch || die
-}
-
 src_compile() {
-	set_arch_to_kernel
-
-	linux_chkconfig_present
-
-	if kernel_is 2 6; then
-		emake -j1 KDIR=${KERNEL_DIR} O=${KBUILD_OUTPUT} || die "compile problem"
-	else
-		cp -R /usr/src/linux-${KV} ${WORKDIR}
-		emake -j1 KDIR=/${WORKDIR}/linux-${KV} O=${KBUILD_OUTPUT} || die "compile problem"
-	fi
+	emake -j1 tools || die "compile problem"
 }
 
 src_install() {
-	emake PREFIX=${D} install || die "install problem"
+	emake PREFIX=${D} install-tools || die "install problem"
 
 	# gentoo-ish init-script
-	newinitd ${FILESDIR}/${PN}-8.0.rc ${PN} || die
+	newinitd ${FILESDIR}/${PN}-0.7.rc ${PN} || die
 
 	# needed by drbd startup script
 	#keepdir /var/lib/drbd
 
 	# docs
-	dodoc README ChangeLog COPYING ROADMAP INSTALL
-	#dodoc documentation/NFS-Server-README.txt
+	dodoc README ChangeLog COPYING
+	dodoc documentation/NFS-Server-README.txt
 
 	# we put drbd.conf into docs
 	# it doesnt make sense to install a default conf in /etc
 	# put it to the docs
 	rm -f ${D}/etc/drbd.conf
 	dodoc scripts/drbd.conf || die
-	#dodoc upgrade*.txt || die
+	dodoc upgrade_0.6.x_to_0.7.0.txt upgrade_0.7.0_to_0.7.1.txt || die
 }
 
 pkg_postinst() {
-	linux-mod_pkg_postinst
-
-	einfo ""
-	einfo "Please remember to re-emerge drbd when you upgrade your kernel!"
 	einfo ""
 	einfo "Please copy and gunzip the configuration file"
 	einfo "from /usr/share/doc/${PF}/drbd.conf.gz to /etc"
