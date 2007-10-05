@@ -1,0 +1,12 @@
+diff -urN pvfs-2.6.0.orig/maint/config/rt.m4 pvfs-2.6.0/maint/config/rt.m4
+--- pvfs-2.6.0.orig/maint/config/rt.m4	2006-12-10 23:16:47.000000000 -0800
++++ pvfs-2.6.0/maint/config/rt.m4	2006-12-10 23:36:17.000000000 -0800
+@@ -12,7 +12,7 @@
+ 	[lio_listio(LIO_NOWAIT, NULL, 0, NULL);],
+ 	[AC_MSG_RESULT(no)],
+ 	[
+-		LDFLAGS="$LDFLAGS -lrt"
++		LIBS="$LIBS -lrt"
+ 		AC_TRY_LINK(
+ 			[#include <stdlib.h>
+ 			 #include <unistd.h>

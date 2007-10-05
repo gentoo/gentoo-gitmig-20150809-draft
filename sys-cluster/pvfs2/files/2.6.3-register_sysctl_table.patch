@@ -1,0 +1,11 @@
+--- src/kernel/linux-2.6/pvfs2-proc.c.old	2007-04-30 10:02:55.000000000 +0200
++++ src/kernel/linux-2.6/pvfs2-proc.c	2007-04-30 10:01:50.000000000 +0200
+@@ -337,7 +337,7 @@
+ #ifdef CONFIG_SYSCTL
+     if (!fs_table_header)
+     {
+-        fs_table_header = register_sysctl_table(fs_table, 0);
++        fs_table_header = register_sysctl_table(fs_table);
+     }
+ #endif
+ 

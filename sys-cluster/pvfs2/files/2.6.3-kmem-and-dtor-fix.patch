@@ -1,0 +1,265 @@
+diff -u -r pvfs-2.6.3/src/kernel/linux-2.6/pvfs2-cache.c pvfs-2.6.3-new/src/kernel/linux-2.6/pvfs2-cache.c
+--- pvfs-2.6.3/src/kernel/linux-2.6/pvfs2-cache.c	2007-10-02 14:54:45.000000000 +0200
++++ pvfs-2.6.3-new/src/kernel/linux-2.6/pvfs2-cache.c	2007-10-02 14:49:10.000000000 +0200
+@@ -203,14 +203,7 @@
+     pvfs2_kmem_cache_t * cachep,
+     unsigned long flags)
+ {
+-    if (flags & SLAB_CTOR_CONSTRUCTOR)
+-    {
+-        memset(req, 0, sizeof(MAX_ALIGNED_DEV_REQ_DOWNSIZE));
+-    }
+-    else
+-    {
+-        gossip_err("WARNING!! devreq_ctor called without ctor flag\n");
+-    }
++    memset(req, 0, sizeof(MAX_ALIGNED_DEV_REQ_DOWNSIZE));
+ }
+ 
+ int dev_req_cache_initialize(void)
+@@ -269,45 +262,24 @@
+ {
+     pvfs2_inode_t *pvfs2_inode = (pvfs2_inode_t *)new_pvfs2_inode;
+ 
+-    if (flags & SLAB_CTOR_CONSTRUCTOR)
+-    {
+-        memset(pvfs2_inode, 0, sizeof(pvfs2_inode_t));
+-        ClearInitFlag(pvfs2_inode);
++    memset(pvfs2_inode, 0, sizeof(pvfs2_inode_t));
++    ClearInitFlag(pvfs2_inode);
+ 
+-        pvfs2_inode_initialize(pvfs2_inode);
++    pvfs2_inode_initialize(pvfs2_inode);
+ 
+ #ifndef PVFS2_LINUX_KERNEL_2_4
+-        /*
+-           inode_init_once is from 2.6.x's inode.c; it's normally run
+-           when an inode is allocated by the system's inode slab
+-           allocator.  we call it here since we're overloading the
+-           system's inode allocation with this routine, thus we have
+-           to init vfs inodes manually
+-        */
+-        inode_init_once(&pvfs2_inode->vfs_inode);
+-        pvfs2_inode->vfs_inode.i_version = 1;
++    /*
++       inode_init_once is from 2.6.x's inode.c; it's normally run
++       when an inode is allocated by the system's inode slab
++       allocator.  we call it here since we're overloading the
++       system's inode allocation with this routine, thus we have
++       to init vfs inodes manually
++    */
++    inode_init_once(&pvfs2_inode->vfs_inode);
++    pvfs2_inode->vfs_inode.i_version = 1;
+ #endif
+-        /* Initialize the reader/writer semaphore */
+-        init_rwsem(&pvfs2_inode->xattr_sem);
+-    }
+-    else
+-    {
+-        gossip_err("WARNING!! inode_ctor called without ctor flag\n");
+-    }
+-}
+-
+-static void pvfs2_inode_cache_dtor(
+-    void *old_pvfs2_inode,
+-    pvfs2_kmem_cache_t * cachep,
+-    unsigned long flags)
+-{
+-    pvfs2_inode_t *pvfs2_inode = (pvfs2_inode_t *)old_pvfs2_inode;
+-
+-    if (pvfs2_inode && pvfs2_inode->link_target)
+-    {
+-        kfree(pvfs2_inode->link_target);
+-        pvfs2_inode->link_target = NULL;
+-    }
++    /* Initialize the reader/writer semaphore */
++    init_rwsem(&pvfs2_inode->xattr_sem);
+ }
+ 
+ static inline void add_to_pinode_list(pvfs2_inode_t *pvfs2_inode)
+@@ -330,8 +302,7 @@
+ {
+     pvfs2_inode_cache = kmem_cache_create(
+         "pvfs2_inode_cache", sizeof(pvfs2_inode_t), 0,
+-        PVFS2_CACHE_CREATE_FLAGS, pvfs2_inode_cache_ctor,
+-        pvfs2_inode_cache_dtor);
++        PVFS2_CACHE_CREATE_FLAGS, pvfs2_inode_cache_ctor, NULL);
+ 
+     if (!pvfs2_inode_cache)
+     {
+@@ -403,14 +374,7 @@
+     pvfs2_kmem_cache_t * cachep,
+     unsigned long flags)
+ {
+-    if (flags & SLAB_CTOR_CONSTRUCTOR)
+-    {
+-        memset(req, 0, sizeof(pvfs2_kiocb));
+-    }
+-    else
+-    {
+-        gossip_err("WARNING!! kiocb_ctor called without ctor flag\n");
+-    }
++    memset(req, 0, sizeof(pvfs2_kiocb));
+ }
+ 
+ 
+diff -u -r pvfs-2.6.3/src/kernel/linux-2.6/pvfs2-kernel.h pvfs-2.6.3-new/src/kernel/linux-2.6/pvfs2-kernel.h
+--- pvfs-2.6.3/src/kernel/linux-2.6/pvfs2-kernel.h	2007-10-02 14:54:45.000000000 +0200
++++ pvfs-2.6.3-new/src/kernel/linux-2.6/pvfs2-kernel.h	2007-10-02 14:49:10.000000000 +0200
+@@ -47,6 +47,7 @@
+ #include <linux/statfs.h>
+ #include <linux/buffer_head.h>
+ #include <linux/backing-dev.h>
++#include <linux/device.h>
+ #include <linux/mpage.h>
+ #include <linux/namei.h>
+ #include <linux/errno.h>
+@@ -363,7 +364,7 @@
+ typedef struct
+ {
+     PVFS_object_ref refn;
+-    char *link_target;
++    char link_target[PVFS_NAME_MAX];
+     /*
+      * Reading/Writing Extended attributes need to acquire the appropriate
+      * reader/writer semaphore on the pvfs2_inode_t structure.
+@@ -571,6 +572,15 @@
+ 
+ #endif
+ 
++typedef struct pvfs2_stats {
++    unsigned long cache_hits;
++    unsigned long cache_misses;
++    unsigned long reads;
++    unsigned long writes;
++} pvfs2_stats;
++
++extern pvfs2_stats g_pvfs2_stats;
++
+ /*
+   NOTE: See Documentation/filesystems/porting for information
+   on implementing FOO_I and properly accessing fs private data
+@@ -821,8 +831,8 @@
+  * defined in devpvfs2-req.c
+  ****************************/
+ 
+-int     pvfs2_ioctl32_init(void);
+-void    pvfs2_ioctl32_cleanup(void);
++int     pvfs2_dev_init(void);
++void    pvfs2_dev_cleanup(void);
+ int     is_daemon_in_service(void);
+ int     fs_mount_pending(PVFS_fs_id fsid);
+ 
+@@ -1250,6 +1260,18 @@
+ }
+ #endif
+ 
++#ifndef HAVE_KZALLOC
++static void *kzalloc(size_t size, gfp_t mask)
++{
++    void *ptr;
++    ptr = kmalloc(size, mask);
++    if (ptr) {
++        memset(ptr, 0, size);
++    }
++    return ptr;
++}
++#endif
++
+ #endif /* PVFS2_LINUX_KERNEL_2_4 */
+ 
+ static inline unsigned int diff(struct timeval *end, struct timeval *begin)
+@@ -1268,11 +1290,10 @@
+ 	void * ptr;
+ 
+ 	ptr = kmalloc(size, flags);
+-	if(!ptr)
++	if (ptr)
+ 	{
+-		return ptr;
++            memset(ptr, 0, size);
+ 	}
+-	memset(ptr, 0, size);
+ 	return ptr;
+ }
+ #endif
+diff -u -r pvfs-2.6.3/src/kernel/linux-2.6/pvfs2-utils.c pvfs-2.6.3-new/src/kernel/linux-2.6/pvfs2-utils.c
+--- pvfs-2.6.3/src/kernel/linux-2.6/pvfs2-utils.c	2007-10-02 14:54:45.000000000 +0200
++++ pvfs-2.6.3-new/src/kernel/linux-2.6/pvfs2-utils.c	2007-10-02 15:04:12.000000000 +0200
+@@ -101,18 +101,24 @@
+ static void pvfs2_set_inode_flags(struct inode *inode, 
+         PVFS_sys_attr *attrs)
+ {
+-    if (attrs->flags & PVFS_IMMUTABLE_FL)
++    if (attrs->flags & PVFS_IMMUTABLE_FL) {
+         inode->i_flags |= S_IMMUTABLE;
+-    else 
++    }
++    else {
+         inode->i_flags &= ~S_IMMUTABLE;
+-    if (attrs->flags & PVFS_APPEND_FL)
++    }
++    if (attrs->flags & PVFS_APPEND_FL) {
+         inode->i_flags |= S_APPEND;
+-    else
++    }
++    else {
+         inode->i_flags &= ~S_APPEND;
+-    if (attrs->flags & PVFS_NOATIME_FL)
++    }
++    if (attrs->flags & PVFS_NOATIME_FL) {
+         inode->i_flags |= S_NOATIME;
+-    else
++    }
++    else {
+         inode->i_flags &= ~S_NOATIME;
++    }
+     return;
+ }
+ 
+@@ -288,17 +294,7 @@
+                 /* copy link target to inode private data */
+                 if (pvfs2_inode && symname)
+                 {
+-                    if (pvfs2_inode->link_target)
+-                    {
+-                        kfree(pvfs2_inode->link_target);
+-                        pvfs2_inode->link_target = NULL;
+-                    }
+-                    pvfs2_inode->link_target = kmalloc(
+-                        (strlen(symname) + 1), PVFS2_GFP_FLAGS);
+-                    if (pvfs2_inode->link_target)
+-                    {
+-                        strcpy(pvfs2_inode->link_target, symname);
+-                    }
++                    strncpy(pvfs2_inode->link_target, symname, PVFS_NAME_MAX);
+                     gossip_debug(GOSSIP_UTILS_DEBUG, "Copied attr link target %s\n",
+                                 pvfs2_inode->link_target);
+                 }
+@@ -1791,7 +1787,8 @@
+ {
+     void *buf;
+ 
+-    buf = kmalloc(sizeof(pvfs2_opaque_handle_t), PVFS2_BUFMAP_GFP_FLAGS);
++    buf = kmalloc(sizeof(pvfs2_opaque_handle_t), 
++                  PVFS2_BUFMAP_GFP_FLAGS);
+     return buf;
+ }
+ 
+@@ -1956,7 +1953,7 @@
+         pvfs2_inode->refn.handle = PVFS_HANDLE_NULL;
+         pvfs2_inode->refn.fs_id = PVFS_FS_ID_NULL;
+         pvfs2_inode->last_failed_block_index_read = 0;
+-        pvfs2_inode->link_target = NULL;
++        memset(pvfs2_inode->link_target, 0, sizeof(pvfs2_inode->link_target));
+         pvfs2_inode->error_code = 0;
+         SetInitFlag(pvfs2_inode);
+     }
+@@ -1964,7 +1961,6 @@
+ 
+ /*
+   this is called from super:pvfs2_destroy_inode.
+-  pvfs2_inode_cache_dtor frees the link_target if any
+ */
+ void pvfs2_inode_finalize(pvfs2_inode_t *pvfs2_inode)
+ {

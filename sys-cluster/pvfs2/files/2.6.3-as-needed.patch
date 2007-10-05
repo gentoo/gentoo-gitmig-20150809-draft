@@ -1,0 +1,20 @@
+--- maint/config/openssl.m4~	2007-04-16 04:17:53.000000000 +0200
++++ maint/config/openssl.m4	2007-04-16 04:17:53.000000000 +0200
+@@ -12,7 +12,7 @@
+             LDFLAGS="$LDFLAGS -L${opensslpath}/lib64 -L${opensslpath}/lib"
+             SERVER_LDFLAGS="$SERVER_LDFLAGS -L${opensslpath}/lib64 -L${opensslpath}/lib"
+         fi
+-        LIBS="$LIBS -lcrypt -lssl"
++        LIBS="$LIBS -lcrypt -lcrypto -lssl"
+     
+         AC_COMPILE_IFELSE(
+     	    [#include "openssl/bio.h"],
+@@ -36,7 +36,7 @@
+ [
+     AC_MSG_CHECKING([for openssl library])
+     TMPLIBS=${LIBS}
+-    LIBS="$LIBS -lcrypt -lssl"
++    LIBS="$LIBS -lcrypt -lcrypto -lssl"
+ 
+     AC_COMPILE_IFELSE(
+       [#include "openssl/bio.h"],
