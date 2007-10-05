@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pysyck
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysyck/ChangeLog,v 1.1 2007/10/05 22:53:59 sbriesen Exp $
+
+*pysyck-0.61.2 (05 Oct 2007)
+
+  05 Oct 2007; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +pysyck-0.61.2.ebuild:
+  initial commit.
+
