@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.23 2007/09/25 21:54:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.24 2007/10/05 14:01:38 markusle Exp $
+
+*scipy-0.6.0-r1 (05 Oct 2007)
+
+  05 Oct 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/scipy-0.6.0-fftw-fix.patch, +scipy-0.6.0-r1.ebuild:
+  New revision with patch to fix fftw problem (see bug #194708). 
+  Thanks much to David Heavens <david.heavens@gmail.com> for his patch.
 
 *scipy-0.6.0 (25 Sep 2007)
 
