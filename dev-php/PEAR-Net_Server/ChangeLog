@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_Server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/ChangeLog,v 1.24 2007/09/28 23:20:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/ChangeLog,v 1.25 2007/10/05 19:05:25 armin76 Exp $
+
+  05 Oct 2007; Raúl Porcel <armin76@gentoo.org>
+  PEAR-Net_Server-1.0.2.ebuild:
+  alpha/sparc stable wrt #192247
 
   28 Sep 2007; Christoph Mende <angelos@gentoo.org>
   PEAR-Net_Server-1.0.2.ebuild:
