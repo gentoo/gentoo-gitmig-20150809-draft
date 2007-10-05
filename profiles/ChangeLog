@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.692 2007/10/05 04:56:29 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.693 2007/10/05 17:01:23 wolf31o2 Exp $
+
+  05 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org> package.mask:
+  Masked America's Army due to security bug #194609.
 
   05 Oct 2007; Saleem Abdulrasool <compnerd@gentoo.org> use.local.desc:
   Add galago useflag for totem
