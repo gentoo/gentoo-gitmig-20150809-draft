@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygsl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/ChangeLog,v 1.1 2007/08/16 12:52:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/ChangeLog,v 1.2 2007/10/05 20:12:08 bicatali Exp $
+
+*pygsl-0.9.0 (05 Oct 2007)
+
+  05 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> +pygsl-0.9.0.ebuild,
+  pygsl-0.9.1.ebuild:
+  added pygsl-0.9.0 which works with gsl-1.10, fixed deps on pygsl-0.9.1 which
+  does not work with gsl-1.10
 
 *pygsl-0.9.1 (16 Aug 2007)
 
