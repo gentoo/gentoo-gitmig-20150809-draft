@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.4-r1.ebuild,v 1.8 2007/07/13 05:52:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.4-r1.ebuild,v 1.9 2007/10/05 15:06:03 wltjr Exp $
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
@@ -66,6 +66,7 @@ src_compile() {
 	# was because of ANT_OPTS not exported. Bug #145338
 	use x86 && export ANT_OPTS="-Xmx128m"
 	use amd64 && export ANT_OPTS="-Xmx256m"
+	use ppc && export ANT_OPTS="-Xmx192m"
 
 	eant ${ant_extra_opts} jar
 }
