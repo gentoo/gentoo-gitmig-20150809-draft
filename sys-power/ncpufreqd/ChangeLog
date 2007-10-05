@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/ncpufreqd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/ncpufreqd/ChangeLog,v 1.14 2007/10/05 12:53:06 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/ncpufreqd/ChangeLog,v 1.15 2007/10/05 14:55:56 opfer Exp $
+
+  05 Oct 2007; Christian Faulhammer <opfer@gentoo.org> ncpufreqd-2.3.ebuild:
+  stable x86, bug 194798
 
   05 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org> ncpufreqd-2.0.ebuild,
   ncpufreqd-2.1.ebuild, ncpufreqd-2.3.ebuild:
