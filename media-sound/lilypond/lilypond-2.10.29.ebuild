@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.10.29.ebuild,v 1.2 2007/10/02 12:55:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.10.29.ebuild,v 1.3 2007/10/05 10:14:31 armin76 Exp $
 
 inherit eutils versionator toolchain-funcs elisp-common
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://lilypond.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~sparc x86"
+KEYWORDS="alpha ~amd64 ~sparc x86"
 
 #LANGS="cs da de es fi fr it ja nl ru rw sv tr zh_TW"
 IUSE="debug emacs profile"
