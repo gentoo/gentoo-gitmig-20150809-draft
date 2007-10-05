@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.8.ebuild,v 1.2 2007/01/05 07:11:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.8.ebuild,v 1.3 2007/10/05 13:02:49 opfer Exp $
 
 inherit eutils ssl-cert
 
@@ -20,10 +20,7 @@ RDEPEND=">=sys-libs/db-3.2
 	ldap? ( >=net-nds/openldap-2.0 )
 	ssl? ( >=net-misc/stunnel-4 )"
 
-DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.58
-	sys-devel/automake
-	sys-devel/libtool"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-v${PV}"
 
@@ -41,7 +38,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		$(use_with ldap) \
+		$(use_with ldap ldap ldap) \
 		$(use_enable kerberos gssapi) \
 		--without-krb \
 		--with-auth=unix || \
