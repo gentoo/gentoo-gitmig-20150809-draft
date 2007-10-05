@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/mit-scheme-20070623.ebuild,v 1.1 2007/07/09 13:53:53 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/mit-scheme-20070623.ebuild,v 1.2 2007/10/05 16:07:24 opfer Exp $
 
 MY_SUF="ix86-gnu-linux"
 DESCRIPTION="GNU/MIT-Scheme Binary package"
@@ -11,6 +11,7 @@ SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
 IUSE="doc"
 S="${WORKDIR}"
+PROVIDE="virtual/editor"
 
 RDEPEND="x11-libs/libXau
 		 x11-libs/libSM

@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/mit-scheme
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/ChangeLog,v 1.6 2007/07/22 07:38:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/ChangeLog,v 1.7 2007/10/05 16:07:24 opfer Exp $
+
+  05 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  mit-scheme-7.7.1.ebuild, mit-scheme-20070205.ebuild,
+  mit-scheme-20070623.ebuild:
+  provide virtual/editor, see bug 193697; add some quotes
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> mit-scheme-7.7.1.ebuild:
   Drop virtual/x11 references.
