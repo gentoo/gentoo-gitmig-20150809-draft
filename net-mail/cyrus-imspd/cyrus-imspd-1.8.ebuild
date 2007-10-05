@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.8.ebuild,v 1.3 2007/10/05 13:02:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.8.ebuild,v 1.4 2007/10/05 13:12:07 opfer Exp $
 
 inherit eutils ssl-cert
 
@@ -13,14 +13,12 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="kerberos ldap ssl"
 
-RDEPEND=">=sys-libs/db-3.2
+DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/cyrus-sasl-2.1.3
 	>=dev-libs/cyrus-imap-dev-2.1.14
 	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-2.0 )
 	ssl? ( >=net-misc/stunnel-4 )"
-
-DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-v${PV}"
 
@@ -41,8 +39,7 @@ src_compile() {
 		$(use_with ldap ldap ldap) \
 		$(use_enable kerberos gssapi) \
 		--without-krb \
-		--with-auth=unix || \
-			die "econf failed"
+		--with-auth=unix
 
 	# Fix some malloc definitions
 	sed -i -e \
@@ -62,12 +59,15 @@ src_install() {
 	if use ssl ; then
 		insinto /etc/stunnel
 		newins "${FILESDIR}/stunnel.conf" imspd.conf
+	fi
+	dodoc README imsp/options.sample notes/*
+}
 
+pkg_postinst() {
+	if use ssl ; then
 		dosed "s:#IMSPD_USE_SSL:IMSPD_USE_SSL:" /etc/conf.d/imspd
 		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Cyrus IMSP Server}"
 		insinto /etc/ssl/imspd
 		docert server
 	fi
-
-	dodoc README imsp/options.sample notes/*
 }
