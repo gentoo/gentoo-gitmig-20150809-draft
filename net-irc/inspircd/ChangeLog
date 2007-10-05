@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.17 2007/10/03 21:22:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.18 2007/10/05 20:29:07 hansmi Exp $
+
+*inspircd-1.1.13-r1 (05 Oct 2007)
+
+  05 Oct 2007; Michael Hanselmann <hansmi@gentoo.org>
+  +inspircd-1.1.13-r1.ebuild:
+  Replace --bin-dir with --binary-dir, bug 194654.
 
 *inspircd-1.1.13 (03 Oct 2007)
 
