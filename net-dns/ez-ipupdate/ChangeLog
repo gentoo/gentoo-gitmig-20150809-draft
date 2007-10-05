@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/ez-ipupdate
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.19 2007/02/22 02:02:38 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.20 2007/10/05 11:34:46 fmccor Exp $
+
+  05 Oct 2007; Ferris McCormick <fmccor@gentoo.org>
+  ez-ipupdate-3.0.11_beta8-r4.ebuild:
+  Sparc stable --- Bug #103480 (init script forces run as ez-ipupd).
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
