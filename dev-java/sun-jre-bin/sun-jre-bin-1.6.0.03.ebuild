@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.03.ebuild,v 1.2 2007/10/04 18:44:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.03.ebuild,v 1.3 2007/10/05 10:35:53 betelgeuse Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
@@ -57,7 +57,7 @@ src_unpack() {
 	sh ${DISTDIR}/${A} --accept-license --unpack || die "Failed to unpack"
 
 	cd ..
-	bash ${FILESDIR}/construct-1.6.sh  bundled-jdk sun-jdk-${PV} ${P} || die "construct.sh failed"
+	bash "${FILESDIR}/construct-1.6.sh"  bundled-jdk sun-jdk-${PV} ${P} || die "construct.sh failed"
 }
 
 src_install() {
@@ -95,9 +95,9 @@ src_install() {
 		sed -e "s/\(Name=Java\)/\1 Control Panel for Sun JRE ${SLOT}/" \
 			-e "s#Exec=.*#Exec=/opt/${P}/bin/ControlPanel#" \
 			-e "s#Icon=.*#Icon=/opt/${P}/plugin/desktop/sun_java.png#" \
-			${D}/opt/${P}/plugin/desktop/sun_java.desktop > \
-			${T}/sun_jre-${SLOT}.desktop || die
-		domenu ${T}/sun_jre-${SLOT}.desktop || die
+			"${D}/opt/${P}/plugin/desktop/sun_java.desktop" > \
+			"${T}/sun_jre-${SLOT}.desktop" || die
+		domenu "${T}/sun_jre-${SLOT}.desktop" || die
 	fi
 
 	# bug #56444

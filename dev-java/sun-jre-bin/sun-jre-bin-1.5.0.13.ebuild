@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.13.ebuild,v 1.2 2007/10/04 18:39:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.13.ebuild,v 1.3 2007/10/05 10:35:53 betelgeuse Exp $
 
 inherit pax-utils eutils java-vm-2
 
@@ -50,7 +50,7 @@ src_unpack() {
 	sh "${DISTDIR}/${A}" --accept-license --unpack || die "Failed to unpack"
 
 	cd ..
-	bash ${FILESDIR}/construct.sh  bundled-jdk sun-jdk-${PV} ${P} || die "construct.sh failed"
+	bash "${FILESDIR}/construct.sh"  bundled-jdk sun-jdk-${PV} ${P} || die "construct.sh failed"
 }
 
 src_install() {

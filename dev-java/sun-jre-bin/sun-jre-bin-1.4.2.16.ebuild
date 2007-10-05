@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.16.ebuild,v 1.2 2007/10/04 18:36:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.16.ebuild,v 1.3 2007/10/05 10:35:53 betelgeuse Exp $
 
 inherit eutils pax-utils java-vm-2
 
@@ -102,17 +102,17 @@ src_install() {
 	# create dir for system preferences
 	dodir /opt/${P}/.systemPrefs
 	# Create files used as storage for system preferences.
-	touch ${D}/opt/${P}/.systemPrefs/.system.lock
-	chmod 644 ${D}/opt/${P}/.systemPrefs/.system.lock
-	touch ${D}/opt/${P}/.systemPrefs/.systemRootModFile
-	chmod 644 ${D}/opt/${P}/.systemPrefs/.systemRootModFile
+	touch "${D}/opt/${P}/.systemPrefs/.system.lock"
+	chmod 644 "${D}/opt/${P}/.systemPrefs/.system.lock"
+	touch "${D}/opt/${P}/.systemPrefs/.systemRootModFile"
+	chmod 644 "${D}/opt/${P}/.systemPrefs/.systemRootModFile"
 
 	# install control panel for Gnome/KDE
 	sed -e "s/INSTALL_DIR\/JRE_NAME_VERSION/\/opt\/${P}/" \
 		-e "s/\(Name=Java\)/\1 Control Panel/" \
-		${D}/opt/${P}/plugin/desktop/sun_java.desktop > \
-		${T}/sun_java-jre.desktop
-	domenu ${T}/sun_java-jre.desktop
+		"${D}/opt/${P}/plugin/desktop/sun_java.desktop" > \
+		"${T}/sun_java-jre.desktop"
+	domenu "${T}/sun_java-jre.desktop"
 
 	set_java_env
 }
