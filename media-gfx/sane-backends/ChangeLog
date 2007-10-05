@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.125 2007/09/05 11:29:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.126 2007/10/05 07:32:03 zzam Exp $
+
+*sane-backends-1.0.18-r5 (05 Oct 2007)
+
+  05 Oct 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-rule-4.patch, +sane-backends-1.0.18-r5.ebuild:
+  Fixed file mode for libusb device nodes (664 as default rules do). Let the
+  udev rules ignore printer devices, Bug #193266. Renamed rules file to
+  70-libsane.rules.
 
   05 Sep 2007; Raúl Porcel <armin76@gentoo.org>
   sane-backends-1.0.18-r4.ebuild:
