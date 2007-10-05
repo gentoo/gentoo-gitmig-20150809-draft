@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.98 2007/10/05 15:07:07 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.99 2007/10/05 17:08:34 fmccor Exp $
+
+  05 Oct 2007; Ferris McCormick <fmccor@gentoo.org> fox-1.6.27.ebuild:
+  Sparc stable --- Bug #194813 --- good for four months now.
 
   05 Oct 2007; Matti Bickel <mabi@gentoo.org> fox-1.6.29.ebuild:
   ppc stable (bug #194813)
