@@ -1,0 +1,22 @@
+diff -Naur ziproxy-2.3.0.orig/src/log.c ziproxy-2.3.0/src/log.c
+--- ziproxy-2.3.0.orig/src/log.c	2006-05-17 05:25:18.000000000 +0200
++++ ziproxy-2.3.0/src/log.c	2007-10-06 00:04:06.000000000 +0200
+@@ -15,6 +15,7 @@
+ #include <stdarg.h>
+ #include <time.h>
+ #include <sys/time.h>
++#include <string.h>
+ #include "cfgfile.h"
+ #include "http.h"
+ 
+diff -Naur ziproxy-2.3.0.orig/src/tools/ziproxylogtool.c ziproxy-2.3.0/src/tools/ziproxylogtool.c
+--- ziproxy-2.3.0.orig/src/tools/ziproxylogtool.c	2007-05-09 03:34:34.000000000 +0200
++++ ziproxy-2.3.0/src/tools/ziproxylogtool.c	2007-10-06 00:03:30.000000000 +0200
+@@ -9,6 +9,7 @@
+ #include <string.h>
+ #include <getopt.h>
+ #include <stdarg.h>
++#include <stdlib.h>
+ 
+ #define LINE_BUFFER 4096
+ #define HOSTNAME_BUFFER 256
