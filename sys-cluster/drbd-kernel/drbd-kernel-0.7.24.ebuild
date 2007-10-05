@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-0.7.24.ebuild,v 1.1 2007/10/05 14:01:19 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-0.7.24.ebuild,v 1.2 2007/10/05 20:37:07 xmerlin Exp $
 
 inherit eutils versionator linux-mod
 
@@ -24,10 +24,6 @@ SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-#	if ! kernel_is 2 6; then
-#		die "Unsupported kernel, drbd-8.0.x needs kernel 2.6.x ."
-#	fi
-
 	MODULE_NAMES="drbd(block:${S}/drbd)"
 	BUILD_TARGETS="default"
 	CONFIG_CHECK="CONNECTOR"
@@ -38,10 +34,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${MY_PN}-0.7.22-nodevfs.patch || die
-	epatch ${FILESDIR}/${MY_PN}-0.7.22-scripts.adjust_drbd_config_h.sh.patch || die
+	epatch "${FILESDIR}"/${MY_PN}-0.7.22-nodevfs.patch || die
+	epatch "${FILESDIR}"/${MY_PN}-0.7.22-scripts.adjust_drbd_config_h.sh.patch || die
 }
 
 pkg_postinst() {

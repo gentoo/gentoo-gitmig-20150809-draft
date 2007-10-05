@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.24.ebuild,v 1.4 2007/08/16 16:36:24 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.24.ebuild,v 1.5 2007/10/05 20:34:56 xmerlin Exp $
 
 inherit eutils versionator linux-mod linux-info
 
@@ -24,10 +24,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${PN}-0.7.22-nodevfs.patch || die
-	epatch ${FILESDIR}/${PN}-0.7.22-scripts.adjust_drbd_config_h.sh.patch || die
+	epatch "${FILESDIR}"/${PN}-0.7.22-nodevfs.patch || die
+	epatch "${FILESDIR}"/${PN}-0.7.22-scripts.adjust_drbd_config_h.sh.patch || die
 }
 
 src_compile() {
@@ -40,18 +40,18 @@ src_compile() {
 	einfo ""
 
 	if kernel_is 2 6; then
-		emake -j1 KDIR=${KERNEL_DIR} O=${KBUILD_OUTPUT} || die "compile problem"
+		emake -j1 KDIR="${KERNEL_DIR}" O="${KBUILD_OUTPUT}" || die "compile problem"
 	else
-		cp -R /usr/src/linux-${KV} ${WORKDIR}
-		emake -j1 KDIR=/${WORKDIR}/linux-${KV} O=${KBUILD_OUTPUT} || die "compile problem"
+		cp -R /usr/src/linux-${KV} "${WORKDIR}"
+		emake -j1 KDIR="${WORKDIR}"/linux-${KV} O="${KBUILD_OUTPUT}" || die "compile problem"
 	fi
 }
 
 src_install() {
-	emake PREFIX=${D} install || die "install problem"
+	emake PREFIX="${D}" install || die "install problem"
 
 	# gentoo-ish init-script
-	newinitd ${FILESDIR}/${PN}-0.7.rc ${PN} || die
+	newinitd "${FILESDIR}"/${PN}-0.7.rc ${PN} || die
 
 	# needed by drbd startup script
 	#keepdir /var/lib/drbd
@@ -63,7 +63,7 @@ src_install() {
 	# we put drbd.conf into docs
 	# it doesnt make sense to install a default conf in /etc
 	# put it to the docs
-	rm -f ${D}/etc/drbd.conf
+	rm -f "${D}"/etc/drbd.conf
 	dodoc scripts/drbd.conf || die
 	dodoc upgrade_0.6.x_to_0.7.0.txt upgrade_0.7.0_to_0.7.1.txt || die
 }

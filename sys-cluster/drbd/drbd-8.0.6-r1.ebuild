@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.6-r1.ebuild,v 1.1 2007/10/05 14:02:51 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0.6-r1.ebuild,v 1.2 2007/10/05 20:34:56 xmerlin Exp $
 
 inherit eutils versionator
 
@@ -28,10 +28,10 @@ src_compile() {
 }
 
 src_install() {
-	emake PREFIX=${D} install-tools || die "install problem"
+	emake PREFIX="${D}" install-tools || die "install problem"
 
 	# gentoo-ish init-script
-	newinitd ${FILESDIR}/${PN}-8.0.rc ${PN} || die
+	newinitd "${FILESDIR}"/${PN}-8.0.rc ${PN} || die
 
 	# docs
 	dodoc README ChangeLog COPYING ROADMAP INSTALL
@@ -39,7 +39,7 @@ src_install() {
 	# we put drbd.conf into docs
 	# it doesnt make sense to install a default conf in /etc
 	# put it to the docs
-	rm -f ${D}/etc/drbd.conf
+	rm -f "${D}"/etc/drbd.conf
 	dodoc scripts/drbd.conf || die
 }
 
