@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.59 2007/09/28 18:20:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.60 2007/10/05 03:11:03 vapier Exp $
+
+*fontforge-20071002 (05 Oct 2007)
+
+  05 Oct 2007; Mike Frysinger <vapier@gentoo.org>
+  +fontforge-20071002.ebuild:
+  Version bump.
 
   28 Sep 2007; nixnut <nixnut@gentoo.org> fontforge-20070831.ebuild:
   Stable on ppc wrt bug 182394
