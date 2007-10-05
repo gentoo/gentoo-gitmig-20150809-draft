@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgnomemm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.63 2007/08/28 20:15:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.64 2007/10/05 05:19:04 tgall Exp $
+
+  04 Oct 2007; Tom Gall <tgall@gentoo.org> libgnomemm-2.18.0.ebuild:
+  stable on ppc64
 
   28 Aug 2007; Jeroen Roovers <jer@gentoo.org> libgnomemm-2.18.0.ebuild:
   Stable for HPPA (bug #188838).
