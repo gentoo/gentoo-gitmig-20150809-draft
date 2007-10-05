@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.97 2007/09/30 17:33:29 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.98 2007/10/05 15:07:07 mabi Exp $
+
+  05 Oct 2007; Matti Bickel <mabi@gentoo.org> fox-1.6.29.ebuild:
+  ppc stable (bug #194813)
 
 *fox-1.6.29 (30 Sep 2007)
 
