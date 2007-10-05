@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.0.3.ebuild,v 1.1 2007/10/04 17:19:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.0.3.ebuild,v 1.2 2007/10/05 17:50:39 caleb Exp $
 
 NEED_PYTHON=2.4
 
@@ -9,6 +9,8 @@ inherit python eutils
 MY_PN=${PN}4
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
+
+IUSE="linguas_de linguas_fr linguas_ru"
 
 DESCRIPTION="eric4 is a full featured Python IDE that is written in PyQt4 using the QScintilla editor widget"
 HOMEPAGE="http://www.die-offenbachs.de/detlev/eric4.html"
@@ -31,7 +33,7 @@ python_version
 
 src_install() {
 	# Change qt dir to be located in ${D}
-	mkdir -p ${D}/usr/share/qt4/
+	dodir /usr/share/qt4/
 	sed -i \
 		-e "s:pyqtconfig._pkg_config\[\"qt_data_dir\"\]:\"${D}/usr/share/qt4/\":" \
 		install.py
