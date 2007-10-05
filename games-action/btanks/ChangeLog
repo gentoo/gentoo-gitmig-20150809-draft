@@ -1,6 +1,12 @@
 # ChangeLog for games-action/btanks
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.3 2007/08/28 20:22:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.4 2007/10/05 23:21:23 tupone Exp $
+
+*btanks-0.6.5069 (05 Oct 2007)
+
+  05 Oct 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/btanks-0.6.5069-scons-blows.patch, +btanks-0.6.5069.ebuild:
+  Version bump to 0.6.5069
 
   28 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
   btanks-0.5.4740-r1.ebuild:
