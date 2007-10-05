@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.55 2007/10/05 07:00:09 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.56 2007/10/05 07:42:39 leio Exp $
+
+  05 Oct 2007; Mart Raudsepp <leio@gentoo.org> -libgnomeuimm-2.12.0.ebuild:
+  Remove old for bug #159997
 
   05 Oct 2007; Tom Gall <tgall@gentoo.org> libgnomeuimm-2.18.0.ebuild:
   stable on ppc64
