@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgnomemm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.64 2007/10/05 05:19:04 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.65 2007/10/05 07:38:32 leio Exp $
+
+  05 Oct 2007; Mart Raudsepp <leio@gentoo.org> -libgnomemm-2.12.2.ebuild:
+  Remove old for bug #159996
 
   04 Oct 2007; Tom Gall <tgall@gentoo.org> libgnomemm-2.18.0.ebuild:
   stable on ppc64
