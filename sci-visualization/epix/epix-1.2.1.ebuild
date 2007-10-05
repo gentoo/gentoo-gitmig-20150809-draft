@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.1.15.ebuild,v 1.3 2007/09/11 13:33:20 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.1.ebuild,v 1.1 2007/10/05 02:00:36 markusle Exp $
 
-inherit elisp-common flag-o-matic toolchain-funcs
+inherit elisp-common flag-o-matic toolchain-funcs bash-completion
 
 DESCRIPTION="2- and 3-D plotter for creating images (to be used in LaTeX)"
 HOMEPAGE="http://mathcs.holycross.edu/~ahwang/current/ePiX.html"
@@ -21,9 +21,15 @@ SITEFILE=50${PN}-gentoo.el
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-doc-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-1.1.17-doc-gentoo.patch
 	sed -e 's:doc/${PACKAGE_TARNAME}:doc/${PACKAGE_TARNAME}-${PACKAGE_VERSION}:' \
 	-i configure || die "sed on configure failed"
+}
+
+src_compile() {
+	cd "${S}"
+	econf --disable-epix-el || die "configure failed"
+	emake || die "compile failed"
 }
 
 src_install() {
@@ -35,6 +41,8 @@ src_install() {
 		elisp-install ${PN} *.elc *.el || die "elisp-install failed!"
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
+	dobashcompletion bash_completions \
+		|| die "install of bash completions failed"
 }
 
 pkg_postinst() {
