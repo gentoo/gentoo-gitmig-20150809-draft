@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Cache-Memcached
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.47 2007/09/24 14:15:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.48 2007/10/06 05:43:59 tgall Exp $
+
+  06 Oct 2007; Tom Gall <tgall@gentoo.org> 
+  Cache-Memcached-1.23.ebuild:
+  stable on ppc64
 
   24 Sep 2007; Samuli Suominen <drac@gentoo.org>
   Cache-Memcached-1.24.ebuild:
