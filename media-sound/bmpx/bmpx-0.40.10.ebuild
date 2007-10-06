@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.10.ebuild,v 1.3 2007/10/06 12:24:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.10.ebuild,v 1.4 2007/10/06 13:52:35 dertobi123 Exp $
 
 inherit autotools eutils fdo-mime gnome2-utils versionator
 
@@ -12,7 +12,7 @@ SRC_URI="http://files.beep-media-player.org/releases/${MY_PR}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug doc hal modplug networkmanager sid startup-notification"
 
 RDEPEND=">=net-libs/libsoup-2.2.100

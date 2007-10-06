@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.69 2007/10/06 12:24:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.70 2007/10/06 13:52:35 dertobi123 Exp $
+
+  06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org> bmpx-0.40.10.ebuild:
+  Added ~ppc, bug #187529
 
   06 Oct 2007; Samuli Suominen <drac@gentoo.org>
   +files/bmpx-0.40.10-boost-m4.patch, bmpx-0.40.10.ebuild:
