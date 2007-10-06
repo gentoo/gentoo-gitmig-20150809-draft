@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.55.ebuild,v 1.1 2007/09/23 20:25:03 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.55.ebuild,v 1.2 2007/10/06 16:14:34 radek Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -40,7 +40,7 @@ src_unpack() {
 	use static && sed -i -e '/^LOCAL_LIBS=/s/LOCAL_LIBS=/&-static /' makefile.machine
 
 	# experimental patch for proper lzma_alone compilation (radek@20070923)
-	epatch ${FILESDIR}/p7zip-4.55-open_lzma_alone.patch
+	epatch "${FILESDIR}/p7zip-4.55-open_lzma_alone.patch"
 }
 
 src_compile() {
@@ -55,7 +55,7 @@ src_install() {
 	make_wrapper 7za "/usr/lib/${PN}/7za"
 	make_wrapper 7z "/usr/lib/${PN}/7z"
 
-	dobin ${FILESDIR}/p7zip
+	dobin "${FILESDIR}/p7zip"
 
 	dobin CPP/7zip/Compress/LZMA_Alone/lzma
 

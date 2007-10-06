@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.74 2007/09/25 18:27:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.75 2007/10/06 16:14:34 radek Exp $
+
+  06 Oct 2007; Radoslaw Stachowiak <radek@gentoo.org> p7zip-4.55.ebuild:
+  added quotes for FILESDIR
 
   25 Sep 2007; Raúl Porcel <armin76@gentoo.org> p7zip-4.51.ebuild:
   sparc stable
