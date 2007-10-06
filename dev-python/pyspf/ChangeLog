@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pyspf
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.1 2007/10/06 11:26:44 dragonheart Exp $
+
+*pyspf-2.0.3 (06 Oct 2007)
+
+  06 Oct 2007; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +pyspf-2.0.3.ebuild:
+  initial version as per bug #185839 thanks to Frittella Laurento
+
