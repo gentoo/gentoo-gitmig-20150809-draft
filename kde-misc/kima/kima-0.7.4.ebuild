@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kima/kima-0.7.4.ebuild,v 1.1 2007/08/23 17:07:08 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kima/kima-0.7.4.ebuild,v 1.2 2007/10/06 12:53:24 philantrop Exp $
 
 inherit kde
 
@@ -8,7 +8,7 @@ DESCRIPTION="Hardware monitoring applet for Kicker"
 HOMEPAGE="http://kima.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -32,6 +32,6 @@ src_unpack() {
 	for X in ${LANGS} ; do
 		use linguas_${X} && MAKE_LANGS="${MAKE_LANGS} ${X}.po"
 	done
-	rm -f ${S}/configure
+	rm -f "${S}/configure"
 	sed -i -e "s:POFILES =.*:POFILES = ${MAKE_LANGS}:" Makefile.am
 }
