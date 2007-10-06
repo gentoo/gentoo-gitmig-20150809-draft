@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-writer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-writer/ChangeLog,v 1.2 2007/07/19 13:33:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-writer/ChangeLog,v 1.3 2007/10/06 20:19:55 dertobi123 Exp $
+
+  06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  xml-writer-0.2.ebuild:
+  Added ~ppc, bug #184234
 
   19 Jul 2007; Christoph Mende <angelos@gentoo.org> xml-writer-0.2.ebuild:
   Added ~amd64 wrt bug #184234

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/stax
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/stax/ChangeLog,v 1.2 2007/07/19 13:34:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/stax/ChangeLog,v 1.3 2007/10/06 20:20:53 dertobi123 Exp $
+
+  06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org> stax-1.2.0.ebuild:
+  Added ~ppc, bug #184234
 
   19 Jul 2007; Christoph Mende <angelos@gentoo.org> stax-1.2.0.ebuild:
   Added ~amd64 wrt bug #184234
