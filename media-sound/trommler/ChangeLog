@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/trommler
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.18 2007/09/08 06:05:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.19 2007/10/06 13:12:01 armin76 Exp $
+
+  06 Oct 2007; Raúl Porcel <armin76@gentoo.org> trommler-3.7.ebuild:
+  alpha stable wrt #189143, thanks to Tobias Klausmann for testing
 
   08 Sep 2007; Joseph Jezak <josejx@gentoo.org> +files/trommler-be.patch,
   trommler-3.7.ebuild:
