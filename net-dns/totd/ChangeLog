@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/totd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/ChangeLog,v 1.6 2007/05/06 09:24:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/ChangeLog,v 1.7 2007/10/06 15:23:21 coldwind Exp $
+
+  06 Oct 2007; Santiago M. Mola <coldwind@gentoo.org>
+  +files/totd-1.5.1-no_werror.patch, totd-1.5.1.ebuild:
+  Remove -Werror (#183768) thanks to Karsten Baumgarten
+  <karsten.baumgarten@gmx.net>
 
   06 May 2007; Marius Mauch <genone@gentoo.org> totd-1.3.ebuild,
   totd-1.5.ebuild, totd-1.5.1.ebuild:
