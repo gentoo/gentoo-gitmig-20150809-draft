@@ -1,10 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.5.ebuild,v 1.6 2007/01/05 16:08:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.5.ebuild,v 1.7 2007/10/06 20:24:29 ulm Exp $
 
 inherit elisp
-
-IUSE=""
 
 DESCRIPTION="Navi2ch is navigator for 2ch which works under many Emacsen"
 HOMEPAGE="http://navi2ch.sourceforge.net/"
@@ -12,9 +10,10 @@ SRC_URI="mirror://sourceforge/navi2ch/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE=""
 
-SITEFILE=50navi2ch-gentoo.el
+SITEFILE=50${PN}-gentoo.el
 
 src_compile() {
 	econf || die
@@ -23,9 +22,9 @@ src_compile() {
 
 src_install() {
 	emake < /dev/null \
-		DESTDIR=${D} lispdir=${SITELISP}/navi2ch install || die
+		DESTDIR="${D}" lispdir=${SITELISP}/navi2ch install || die
 	elisp-install navi2ch contrib/*.el || die
-	elisp-site-file-install ${FILESDIR}/${SITEFILE} || die
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 }
 
 pkg_postinst() {

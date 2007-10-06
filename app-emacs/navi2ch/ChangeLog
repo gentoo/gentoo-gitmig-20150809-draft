@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/navi2ch
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.26 2007/02/23 12:08:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.27 2007/10/06 20:24:29 ulm Exp $
+
+  06 Oct 2007; Ulrich Mueller <ulm@gentoo.org> navi2ch-1.7.4.ebuild,
+  navi2ch-1.7.5.ebuild:
+  Minor QA: quote some variables. Remove redundant virtual/emacs dependency.
+  Drop ppc-macos keyword.
 
   23 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
   -navi2ch-1.7.3.ebuild:
