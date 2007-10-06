@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.8.0.ebuild,v 1.1 2007/10/06 13:05:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.8.0.ebuild,v 1.2 2007/10/06 13:07:20 vapier Exp $
 
 inherit eutils multilib
 
@@ -50,4 +50,5 @@ src_install() {
 	doexe capture/*.so || die
 	exeinto /usr/$(get_libdir)/SDLcam/sources
 	doexe sources/*.so || die
+	dodoc CHANGELOG README TODO Documentation/config_file.txt Documentation/gui.txt
 }
