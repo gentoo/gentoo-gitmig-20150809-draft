@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.73 2007/10/06 04:11:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.74 2007/10/06 08:38:14 tgall Exp $
+
+  06 Oct 2007; Tom Gall <tgall@gentoo.org> sysstat-8.0.0.ebuild:
+  stable on ppc64, bug #194877
 
   06 Oct 2007; Jeroen Roovers <jer@gentoo.org> sysstat-8.0.0.ebuild:
   Stable for HPPA (bug #194877).
