@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.1.ebuild,v 1.4 2007/08/31 10:34:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.1.ebuild,v 1.5 2007/10/06 20:43:03 grobian Exp $
 
 inherit distutils flag-o-matic multilib toolchain-funcs versionator check-reqs
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.boost.org/"
 SRC_URI="mirror://sourceforge/boost/${MY_P}.tar.bz2"
 LICENSE="freedist Boost-1.0"
 SLOT="0"
-IUSE="debug doc icu pyste tools"
+IUSE="debug doc icu pyste tools userland_Darwin"
 
 DEPEND="icu? ( >=dev-libs/icu-3.2 )
 		sys-libs/zlib
@@ -52,7 +52,7 @@ src_unpack() {
 	rm boost-build.jam
 
 	# This enables building the boost.random library with /dev/urandom support
-	if [[ ${CHOST} == *-linux-* ]] ; then
+	if ! use userland_Darwin ; then
 		mkdir -p libs/random/build
 		cp "${FILESDIR}/random-Jamfile" libs/random/build/Jamfile.v2
 	fi
@@ -88,7 +88,7 @@ generate_userconfig() {
 	distutils_python_version
 
 	local compiler compilerVersion compilerExecutable
-	if [[ ${CHOST} == *-darwin* ]] ; then
+	if use userland_Darwin ; then
 		compiler=darwin
 		compilerExecutable=c++
 		append-ldflags -ldl
