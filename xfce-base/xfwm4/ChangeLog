@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.108 2007/10/06 04:05:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.109 2007/10/06 12:17:43 pylon Exp $
+
+  06 Oct 2007; Lars Weiler <pylon@gentoo.org> xfwm4-4.4.1-r1.ebuild:
+  stable ppc, bug #194721
 
   06 Oct 2007; Jeroen Roovers <jer@gentoo.org> xfwm4-4.4.1-r1.ebuild:
   Stable for HPPA (bug #194721).
