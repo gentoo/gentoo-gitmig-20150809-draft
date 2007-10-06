@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.20.ebuild,v 1.1 2007/10/06 00:40:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.20.ebuild,v 1.2 2007/10/06 00:41:02 betelgeuse Exp $
 
 inherit autotools eutils
 
@@ -17,7 +17,7 @@ IUSE="alsa cups debug examples gstreamer hal old-daemons test-programs usb"
 DEPEND="
 	>=net-wireless/bluez-libs-${PV}
 	alsa? ( media-libs/alsa-lib )
-	gstreamer? ( 
+	gstreamer? (
 		>=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10 )
 	hal? ( sys-apps/hal )
