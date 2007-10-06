@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/nxml-mode-20041004.ebuild,v 1.10 2007/07/02 07:32:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/nxml-mode-20041004.ebuild,v 1.11 2007/10/06 19:54:04 ulm Exp $
 
 inherit elisp eutils
 
@@ -19,7 +19,7 @@ SITEFILE=80nxml-mode-gentoo.el
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${PN}-info-gentoo.patch"
 	epatch "${DISTDIR}/${PN}-20040910-xmlschema.patch.gz"
 }
