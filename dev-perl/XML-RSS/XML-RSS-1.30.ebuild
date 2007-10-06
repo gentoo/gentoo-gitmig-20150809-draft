@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/XML-RSS-1.30.ebuild,v 1.5 2007/08/09 15:26:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/XML-RSS-1.30.ebuild,v 1.6 2007/10/06 08:57:15 tgall Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://perl-rss.sourceforge.net/"
 SLOT="0"
 LICENSE="Artistic"
 #KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-KEYWORDS="alpha ~amd64 ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 SRC_TEST="do"
 
