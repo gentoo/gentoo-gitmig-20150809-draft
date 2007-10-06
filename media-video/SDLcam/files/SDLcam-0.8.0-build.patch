@@ -1,0 +1,70 @@
+--- Makefile.in.orig
++++ Makefile.in
+@@ -1,16 +1,18 @@
+ CC = @CC@
+-CPP = @CXX@
+-LD = $(CPP)
+-LDFLAGS = `sdl-config --libs` `xml2-config --libs` -lSDL_image -lSDL_ttf -lm -lxml2 -rdynamic -ljpeg -ldl
++CXX = @CXX@
++LD = $(CXX)
++LDFLAGS = @LDFLAGS@
++LDLIBS = $(shell sdl-config --libs) $(shell xml2-config --libs) -lSDL_image -lSDL_ttf -lm -lxml2 -rdynamic -ljpeg -ldl
+ PROG = SDLcam
+ 
+ prefix=@prefix@
+ datadir=@datadir@
+ 
+-FEATURES = -DMMX -DTIMER
++CPPFLAGS = @CPPFLAGS@ -DMMX -DTIMER -DPROG_VERSION=\"0.7.3\" -DDATADIR="$(datadir)/SDLcam"
+ 
+-MMXFLAGS =     -Wshadow -Wall -Wstrict-prototypes `sdl-config --cflags` `xml2-config --cflags` -DPROG_VERSION=\"0.7.3\" $(FEATURES)
+-CFLAGS = $(MMXFLAGS) -g -DDATADIR="$(datadir)/SDLcam"
++MMXFLAGS =     -Wshadow -Wall $(shell sdl-config --cflags) $(shell xml2-config --cflags)
++CFLAGS = @CFLAGS@ $(MMXFLAGS) -Wstrict-prototypes
++CXXFLAGS = @CXXFLAGS@ $(MMXFLAGS)
+ 
+ 
+ OBJS = main.o init.o SDL_v4l.o SDL_v4l_filters.o webcam.o interface.o configuration.o config_file.o SDL_v4l_filters_thomas.o dump_thomas.o capture.o ftp-upload.o logo.o parser.o misc.o xml_theme.o dyn_misc.o
+@@ -34,32 +36,32 @@
+ 	./install
+ 
+ %.o: %.cpp
+-	$(CC) $(CFLAGS) -c $<
++	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $<
+ 
+ %.o: %.c
+-	$(CPP) $(CFLAGS) -c $<
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c $<
+ 
+ sources/%.so: sources/%.cpp
+-	$(CPP) $(FEATURES) -g -fPIC -shared -o $@ $?
++	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(LDFLAGS) -fPIC -shared -o $@ $?
+ 
+ sources/jpeg.so: sources/jpeg.cpp
+-	$(CPP) $(FEATURES) -g -fPIC -shared -o $@ $? -ljpeg
++	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(LDFLAGS) -fPIC -shared -o $@ $? -ljpeg
+ 
+ filter/%.so: filter/%.c
+-	$(CC) $(FEATURES) -g -fPIC -shared -o $@ $?
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -fPIC -shared -o $@ $?
+ 
+ capture/mpeg.so: capture/mpeg.c
+-	- $(CC) $(FEATURES) -g -fPIC -shared -o $@ $? -lfame
++	- $(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -fPIC -shared -o $@ $? -lfame
+ 
+ capture/divx.so: capture/divx.c
+-	- $(CC) $(FEATURES) -g -fPIC -shared -o $@ $? -ldivxencore
++	- $(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -fPIC -shared -o $@ $? -ldivxencore
+ 
+ capture/divx2.so: capture/divx2.cpp
+-	- $(CPP) $(FEATURES) -g -fPIC -shared -o $@ $?
++	- $(CXX) $(CPPFLAGS) $(CXXFLAGS) $(LDFLAGS) -fPIC -shared -o $@ $?
+ 
+ SDLcam: $(OBJS)
+-	$(LD) $(LDFLAGS) $(OBJS) -o $(PROG) 
++	$(LD) $(LDFLAGS) $(OBJS) -o $(PROG) $(LDLIBS)
+ #	$(LD) $(LDFLAGS) $(OBJS) -o $(PROG) -laviplay
+ 
+ SDL_v4l_filters_thomas.o: SDL_v4l_filters_thomas.c
+-	$(CC) $(MMXFLAGS) -c SDL_v4l_filters_thomas.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c SDL_v4l_filters_thomas.c

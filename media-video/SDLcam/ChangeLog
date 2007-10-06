@@ -1,6 +1,12 @@
 # ChangeLog for media-video/SDLcam
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/ChangeLog,v 1.8 2006/10/22 05:36:10 vapier Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/ChangeLog,v 1.9 2007/10/06 13:05:41 vapier Exp $
+
+*SDLcam-0.8.0 (06 Oct 2007)
+
+  06 Oct 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/SDLcam-0.8.0-build.patch, +SDLcam-0.8.0.ebuild:
+  Version bump #188475 by Leong Seh Hui.
 
   22 Oct 2006; Mike Frysinger <vapier@gentoo.org>
   files/SDLcam-0.7.3-build.patch, +files/SDLcam-0.7.3-jpeg.patch,
