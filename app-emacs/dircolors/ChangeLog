@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/dircolors
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dircolors/ChangeLog,v 1.12 2007/03/07 09:35:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dircolors/ChangeLog,v 1.13 2007/10/06 08:36:50 ulm Exp $
+
+*dircolors-1.0-r2 (06 Oct 2007)
+
+  06 Oct 2007; Ulrich Mueller <ulm@gentoo.org> +files/51dircolors-gentoo.el,
+  +dircolors-1.0-r2.ebuild:
+  Use autoload mechanism in site-init file. HOMEPAGE updated.
 
   07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50dircolors-gentoo.el:
