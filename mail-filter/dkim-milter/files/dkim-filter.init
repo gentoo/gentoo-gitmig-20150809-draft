@@ -1,0 +1,100 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/files/dkim-filter.init,v 1.1 2007/10/06 13:40:11 dragonheart Exp $
+
+depend() {
+	# need net
+	use dns logger net
+}
+warn_msg() {
+	echo
+	ewarn "$1 parameter is not set!"
+	ewarn "dkim-filter starts with"
+	ewarn "$1=${!1}"
+	ewarn "please set it in /etc/conf.d/dkim-filter"
+	echo
+}
+
+die_msg() {
+	echo
+	eerror "please set paramter $1 in"
+	eerror "/etc/conf.d/dkim-filter then start again"
+	echo
+}
+
+check_cfg() {
+
+	if [[ ! -f /etc/conf.d/dkim-filter ]] ; then
+		eerror "/etc/conf.d/dkim-filter is missing"
+		return 1
+	fi
+
+	if [[ -z "${DKIM_FILTER_OPTS}" ]] ; then
+		die_msg DKIM_FILTER_OPTS
+		return 1
+	fi
+
+	if [[ -z "${SELECTOR}" ]] ; then
+		die_msg SELECTOR
+		return 1
+	fi
+
+	if [[ -z "${KEYPATH}" ]] ; then
+		die_msg KEYPATH
+		return 1
+	fi
+
+	if [[ ! -f "${KEYPATH}" ]] ; then
+		echo
+		eerror "run gentxt.sh to generate a private key first"
+		eerror "then set KEYPATH in /etc/conf.d/dkim-filter to"
+		eerror "the location of your private key"
+		echo
+		return 1
+	fi
+
+	if [[ -z "${SOCKETSPEC}" ]] ; then
+		SOCKETSPEC="inet:8026@localhost"
+		warn_msg SOCKETSPEC
+	fi
+
+	if [[ -z "${DOMAIN}" ]] ; then
+		DOMAIN=$(domainname)
+		warn_msg DOMAIN
+	fi
+
+	if [[ -z "${CANON}" ]] ; then
+		CANON="relaxed/simple"
+		warn_msg CANON
+	fi
+
+	if [[ -z "${USER}" ]] ; then
+		USER="milter"
+		warn_msg USER
+	fi
+
+	if [[ -z "${SIGNALG}" ]] ; then
+		SIGNALG="rsa-sha1"
+		warn_msg SIGNALG
+	fi
+
+	if [[ -z "${PIDFILE}" ]] ; then
+		PIDFILE="/var/run/dkim-filter/dkim-filter.pid"
+		warn_msg PIDFILE
+	fi
+}
+
+start() {
+	check_cfg || return 1
+	ebegin "Starting DKIM Filter"
+	start-stop-daemon --start --quiet --background \
+		--exec /usr/bin/dkim-filter -- ${DKIM_FILTER_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping DKIM Filter"
+	start-stop-daemon --stop --quiet --name dkim-filter
+	eend $?
+}
