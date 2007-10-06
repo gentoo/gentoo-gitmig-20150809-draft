@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.41 2007/09/29 16:43:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.42 2007/10/06 20:59:46 dertobi123 Exp $
+
+  06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  java-gnome-4.0.4.ebuild:
+  Added ~ppc, bug #189388
 
   29 Sep 2007; Petteri Räty <betelgeuse@gentoo.org>
   java-gnome-4.0.4.ebuild:
