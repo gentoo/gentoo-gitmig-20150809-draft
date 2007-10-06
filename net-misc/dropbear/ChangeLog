@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.54 2007/08/12 15:41:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.55 2007/10/06 12:28:22 vapier Exp $
+
+  06 Oct 2007; Mike Frysinger <vapier@gentoo.org> dropbear-0.50.ebuild:
+  Add support for USE=bsdpty to control openpty support #192220 by Max and
+  general ebuild cleanup.
 
 *dropbear-0.50 (12 Aug 2007)
 

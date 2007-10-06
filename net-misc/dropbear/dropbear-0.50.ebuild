@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.50.ebuild,v 1.1 2007/08/12 15:41:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.50.ebuild,v 1.2 2007/10/06 12:28:22 vapier Exp $
 
 inherit eutils savedconfig
 
@@ -12,7 +12,7 @@ SRC_URI="http://matt.ucc.asn.au/dropbear/releases/${P}.tar.gz
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="minimal multicall pam static zlib"
+IUSE="bsdpty minimal multicall pam static syslog zlib"
 
 RDEPEND="zlib? ( sys-libs/zlib )
 	pam? ( sys-libs/pam )"
@@ -43,10 +43,12 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	# --disable-syslog? wouldn't need logger in init.d
-	use minimal && myconf="--disable-lastlog"
-	econf ${myconf} $(use_enable zlib) $(use_enable pam) || die
+	econf \
+		$(use_enable zlib) \
+		$(use_enable pam) \
+		$(use_enable !bsdpty openpty) \
+		$(use_enable syslog) \
+		|| die
 	set_options
 	emake ${makeopts} PROGRAMS="${progs}" || die "make ${makeopts} failed"
 }
@@ -55,8 +57,8 @@ src_install() {
 	set_options
 	emake install DESTDIR="${D}" ${makeopts} PROGRAMS="${progs}" || die "make install failed"
 	doman *.8
-	newinitd "${FILESDIR}"/dropbear.init.d dropbear
-	newconfd "${FILESDIR}"/dropbear.conf.d dropbear
+	newinitd "${FILESDIR}"/dropbear.init.d dropbear || die
+	newconfd "${FILESDIR}"/dropbear.conf.d dropbear || die
 	dodoc CHANGES README TODO SMALL MULTI
 
 	# The multi install target does not install the links
@@ -64,7 +66,7 @@ src_install() {
 		cd "${D}"/usr/bin
 		local x
 		for x in ${progs} ; do
-			ln -s dropbearmulti ${x}
+			ln -s dropbearmulti ${x} || die "ln -s dropbearmulti to ${x} failed"
 		done
 		rm -f dropbear
 		dodir /usr/sbin
@@ -73,5 +75,5 @@ src_install() {
 	fi
 	save_config options.h
 
-	mv "${D}"/usr/bin/{,db}scp
+	mv "${D}"/usr/bin/{,db}scp || die
 }
