@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.2.2.ebuild,v 1.2 2007/07/15 23:13:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.2.2.ebuild,v 1.3 2007/10/06 01:42:46 sbriesen Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -51,7 +51,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodir /usr/sbin
 	mv -f "${D}usr/bin/ziproxy" "${D}usr/sbin/ziproxy"

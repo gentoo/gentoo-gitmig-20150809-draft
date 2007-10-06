@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/ziproxy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.11 2007/10/05 23:08:23 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.12 2007/10/06 01:42:46 sbriesen Exp $
+
+  06 Oct 2007; Stefan Briesenick <sbriesen@gentoo.org> ziproxy-2.2.2.ebuild,
+  ziproxy-2.3.0.ebuild:
+  make install -> emake install
 
 *ziproxy-2.3.0 (05 Oct 2007)
 
