@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/prom-wl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/prom-wl/ChangeLog,v 1.4 2007/02/06 13:41:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/prom-wl/ChangeLog,v 1.5 2007/10/06 10:07:22 ulm Exp $
+
+*prom-wl-2.7.0-r1 (06 Oct 2007)
+
+  06 Oct 2007; Ulrich Mueller <ulm@gentoo.org> +files/50prom-wl-gentoo.el,
+  -files/70prom-wl-gentoo.el, -prom-wl-2.7.0.ebuild,
+  +prom-wl-2.7.0-r1.ebuild:
+  Use autoload mechanism. Install documentation. Drop ~ppc-macos keyword.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
