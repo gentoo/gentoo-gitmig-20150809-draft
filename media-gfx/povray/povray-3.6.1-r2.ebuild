@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r2.ebuild,v 1.14 2007/07/22 09:50:57 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r2.ebuild,v 1.15 2007/10/06 21:08:36 dirtyepic Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -34,9 +34,11 @@ src_compile() {
 	local myconf
 
 	# closes bug 71255
-	if  get-flag march == k6-2 ; then
+	if [[ $(get-flag march) == k6-2 ]]; then
 		filter-flags -fomit-frame-pointer
 	fi
+
+	myconf="${myconf} --disable-optimiz"
 
 	use X && myconf="${myconf} --with-x" \
 		|| myconf="${myconf} --without-x"\
@@ -47,12 +49,12 @@ src_compile() {
 
 	# Copy the user configuration into /etc/skel
 	cp Makefile Makefile.orig
-	sed -e "s:^povconfuser = .*:povconfuser = ${D}etc/skel/.povray/3.6/:" Makefile.orig >Makefile
+	sed -e "s:^povconfuser = .*:povconfuser = "${D}"etc/skel/.povray/3.6/:" Makefile.orig >Makefile
 
 	einfo Building povray
 	emake || die "build failed"
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 }
