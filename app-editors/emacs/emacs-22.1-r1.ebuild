@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r1.ebuild,v 1.11 2007/09/26 12:54:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.1-r1.ebuild,v 1.12 2007/10/06 16:23:39 ulm Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
@@ -193,27 +193,27 @@ emacs-infodir-rebuild() {
 
 	local infodir=/usr/share/info/emacs-${SLOT} f
 	einfo "Regenerating Info directory index in ${infodir} ..."
-	rm -f ${ROOT}${infodir}/dir{,.*}
-	for f in ${ROOT}${infodir}/*.info*; do
+	rm -f "${ROOT}"${infodir}/dir{,.*}
+	for f in "${ROOT}"${infodir}/*.info*; do
 		[[ ${f##*/} == *[0-9].info* ]] \
-			|| install-info --info-dir=${ROOT}${infodir} ${f} &>/dev/null
+			|| install-info --info-dir="${ROOT}"${infodir} ${f} &>/dev/null
 	done
 	echo
 }
 
 pkg_postinst() {
-	test -f ${ROOT}/usr/share/emacs/site-lisp/subdirs.el ||
-		cp ${ROOT}/usr/share/emacs{/${FULL_VERSION},}/site-lisp/subdirs.el
+	test -f "${ROOT}"/usr/share/emacs/site-lisp/subdirs.el ||
+		cp "${ROOT}"/usr/share/emacs{/${FULL_VERSION},}/site-lisp/subdirs.el
 
 	local f
-	for f in ${ROOT}/var/lib/games/emacs/{snake,tetris}-scores; do
+	for f in "${ROOT}"/var/lib/games/emacs/{snake,tetris}-scores; do
 		test -e ${f} || touch ${f}
 	done
 
 	elisp-site-regen
 	emacs-infodir-rebuild
 
-	if [[ "$(readlink ${ROOT}/usr/bin/emacs)" == emacs.emacs-${SLOT}* ]]; then
+	if [[ $(readlink "${ROOT}"/usr/bin/emacs) == emacs.emacs-${SLOT}* ]]; then
 		# transition from pre-eselect revision
 		eselect emacs set emacs-${SLOT}
 	else
