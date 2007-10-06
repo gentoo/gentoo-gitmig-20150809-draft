@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/migemo-0.40-r1.ebuild,v 1.18 2007/02/03 23:35:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/migemo-0.40-r1.ebuild,v 1.19 2007/10/06 17:50:09 ulm Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://0xcc.net/migemo/stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 ppc-macos sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="app-emacs/apel
@@ -19,9 +19,11 @@ DEPEND="app-emacs/apel
 	dev-ruby/ruby-bsearch
 	app-dicts/migemo-dict"
 
+SITEFILE=50${PN}-gentoo.el
+
 src_unpack() {
 	unpack ${A}
-	cp /usr/share/migemo/migemo-dict ${S}
+	cp /usr/share/migemo/migemo-dict "${S}"
 }
 
 src_compile() {
@@ -31,10 +33,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
-	rm ${D}/usr/share/migemo/migemo-dict
+	rm "${D}"/usr/share/migemo/migemo-dict
 
-	elisp-site-file-install ${FILESDIR}/50migemo-gentoo.el
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 	dodoc AUTHORS ChangeLog INSTALL README
 }
