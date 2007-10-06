@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.38 2007/07/27 17:52:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.39 2007/10/06 16:13:04 armin76 Exp $
+
+  06 Oct 2007; Raúl Porcel <armin76@gentoo.org> xfe-1.00.ebuild:
+  sparc/x86 stable wrt #194892
 
 *xfe-1.00 (27 Jul 2007)
 
