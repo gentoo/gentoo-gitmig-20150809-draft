@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.118.ebuild,v 1.1 2007/10/06 11:32:48 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.4.0.118.ebuild,v 1.2 2007/10/06 22:48:54 humpback Exp $
 
 inherit eutils qt4 pax-utils
 
@@ -9,10 +9,11 @@ HOMEPAGE="http://www.skype.com/"
 
 SFILENAME=${PN}_static-${PV}.tar.bz2
 DFILENAME=${P}.tar.bz2
+LIBSIGC_FILENAME="libsigc++20-2.0.17-1-from-fc5.rf.i386.tar.gz"
 SRC_URI="!qt-static? ( http://download.skype.com/linux/${DFILENAME} )
 	qt-static? ( http://download.skype.com/linux/${SFILENAME}
 				http://felisberto.net/~humpback/${PN}-lang-${PV}.tar.bz2 )
-	amd64? ( http://felisberto.net/~humpback/libsigc++20-2.0.17-1-from-fc5.rf.i386.tar.gz )"
+	amd64? ( http://felisberto.net/~humpback/${LIBSIGC_FILENAME} )"
 
 LICENSE="skype-eula"
 SLOT="0"
@@ -57,6 +58,7 @@ pkg_setup() {
 }
 
 src_unpack() {
+	use amd64 && unpack ${LIBSIGC_FILENAME}
 	if use qt-static ; then
 		unpack $SFILENAME
 		cd $S
