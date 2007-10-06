@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pstack
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pstack/ChangeLog,v 1.7 2007/07/15 08:27:08 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pstack/ChangeLog,v 1.8 2007/10/06 16:18:42 coldwind Exp $
+
+  06 Oct 2007; Santiago M. Mola <coldwind@gentoo.org> pstack-1.1.ebuild:
+  Homepage is dead, use man page (#185450). Thanks to Erik Musick.
+  Nuke redundant src_compile.
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning dev-util/pstack to m-needed, as beu is being retired (#66608).
