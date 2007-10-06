@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/u-vm-color
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/ChangeLog,v 1.18 2007/08/24 20:15:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/ChangeLog,v 1.19 2007/10/06 17:38:43 ulm Exp $
+
+  06 Oct 2007; Ulrich Mueller <ulm@gentoo.org> u-vm-color-1.7.ebuild:
+  Minor QA: quote some variables. Remove redundant dependency on virtual/emacs.
 
   24 Aug 2007; Ulrich Mueller <ulm@gentoo.org> -u-vm-color-2.8.ebuild:
   Remove old version.
