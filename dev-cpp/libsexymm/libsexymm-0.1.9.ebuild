@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libsexymm/libsexymm-0.1.9.ebuild,v 1.2 2007/04/28 22:24:12 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libsexymm/libsexymm-0.1.9.ebuild,v 1.3 2007/10/06 13:51:28 dertobi123 Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://releases.chipx86.com/libsexy/libsexymm/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-cpp/glibmm-2.4

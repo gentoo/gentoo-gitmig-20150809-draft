@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libsexymm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libsexymm/ChangeLog,v 1.7 2007/04/28 22:24:12 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libsexymm/ChangeLog,v 1.8 2007/10/06 13:51:28 dertobi123 Exp $
+
+  06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  libsexymm-0.1.9.ebuild:
+  Added ~ppc, bug #187529
 
   28 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   libsexymm-0.1.9.ebuild:
