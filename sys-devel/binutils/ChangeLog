@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.310 2007/10/06 17:59:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.311 2007/10/06 22:47:57 vapier Exp $
+
+  06 Oct 2007; Mike Frysinger <vapier@gentoo.org> binutils-2.18-r1.ebuild:
+  Prevent makeinfo from being run #193364.
 
 *binutils-2.18-r1 (06 Oct 2007)
 
