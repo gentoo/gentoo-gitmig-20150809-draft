@@ -1,0 +1,51 @@
+diff -ur bmpx-0.40.10/m4/boost_filesystem.m4 bmpx-trunk/m4/boost_filesystem.m4
+--- bmpx-0.40.10/m4/boost_filesystem.m4	2007-09-27 18:01:46.000000000 +0300
++++ bmpx-trunk/m4/boost_filesystem.m4	2007-10-06 15:04:41.000000000 +0300
+@@ -78,11 +78,11 @@
+             BOOSTLIBDIR=`echo $BOOST_LDFLAGS | sed -e 's/@<:@^\/@:>@*//'`
+             if test "x$ax_boost_user_filesystem_lib" = "x"; then
+                 ax_lib=""
+-                for libextension in `ls $BOOSTLIBDIR/libboost_filesystem*.{so,a}* | sed 's,.*/,,' | sed -e 's;^libboost_filesystem\(.*\)\.so.*$;\1;' -e 's;^libboost_filesystem\(.*\)\.a*$;\1;'` ; do
++                for libextension in `ls $BOOSTLIBDIR/libboost_filesystem*.so* | sed 's,.*/,,' | sed -e 's;^libboost_filesystem;;' -e 's;\(.*\)\.so.*$;\1;'` ; do
+                      ax_lib=${BN_BOOSTFILESYSTEM_LIB}${libextension}
+ 				    AC_CHECK_LIB($ax_lib, exit,
+                                  [BOOST_FILESYSTEM_LIB="-l$ax_lib"; AC_SUBST(BOOST_FILESYSTEM_LIB) link_filesystem="yes"; break],
+-                                 [link_filesystem="no"])
++                                 [ax_lib=""; link_filesystem="no"])
+   				done
+                 # Some systems doesn t add extension to the libraries filename
+                 if test "x$ax_lib" = "x"; then
+diff -ur bmpx-0.40.10/m4/boost_iostreams.m4 bmpx-trunk/m4/boost_iostreams.m4
+--- bmpx-0.40.10/m4/boost_iostreams.m4	2007-09-27 18:01:46.000000000 +0300
++++ bmpx-trunk/m4/boost_iostreams.m4	2007-10-06 15:04:41.000000000 +0300
+@@ -81,11 +81,11 @@
+             BOOSTLIBDIR=`echo $BOOST_LDFLAGS | sed -e 's/@<:@^\/@:>@*//'`
+             if test "x$ax_boost_user_iostreams_lib" = "x"; then
+                 ax_lib=""
+-                for libextension in `ls $BOOSTLIBDIR/libboost_iostreams*.{so,a}* | sed 's,.*/,,' | sed -e 's;^libboost_iostreams\(.*\)\.so.*$;\1;' -e 's;^libboost_iostreams\(.*\)\.a*$;\1;'` ; do
++                for libextension in `ls $BOOSTLIBDIR/libboost_iostreams*.so* | sed 's,.*/,,' | sed -e 's;^libboost_iostreams;;' -e 's;\(.*\)\.so.*$;\1;'` ; do
+                      ax_lib=${BN_BOOST_IOSTREAMS_LIB}${libextension}
+ 				    AC_CHECK_LIB($ax_lib, exit,
+                                  [BOOST_IOSTREAMS_LIB="-l$ax_lib"; AC_SUBST(BOOST_IOSTREAMS_LIB) link_iostreams="yes"; break],
+-                                 [link_iostreams="no"])
++                                 [ax_lib=""; link_iostreams="no"])
+   				done
+                 # Some systems doesn t add extension to the libraries filename
+                 if test "x$ax_lib" = "x"; then
+diff -ur bmpx-0.40.10/m4/boost_regex.m4 bmpx-trunk/m4/boost_regex.m4
+--- bmpx-0.40.10/m4/boost_regex.m4	2007-09-27 18:01:46.000000000 +0300
++++ bmpx-trunk/m4/boost_regex.m4	2007-10-06 15:04:41.000000000 +0300
+@@ -77,11 +77,11 @@
+             BOOSTLIBDIR=`echo $BOOST_LDFLAGS | sed -e 's/@<:@^\/@:>@*//'`
+             if test "x$ax_boost_user_regex_lib" = "x"; then
+                 ax_lib=""
+-                for libextension in `ls $BOOSTLIBDIR/libboost_regex*.{so,a}* | sed 's,.*/,,' | sed -e 's;^libboost_regex\(.*\)\.so.*$;\1;' -e 's;^libboost_regex\(.*\)\.a*$;\1;'` ; do
++                for libextension in `ls $BOOSTLIBDIR/libboost_regex*.so* | sed 's,.*/,,' | sed -e 's;^libboost_regex;;' -e 's;\(.*\)\.so.*$;\1;'`; do
+                      ax_lib=${BN_BOOST_REGEX}${libextension}
+ 				    AC_CHECK_LIB($ax_lib, exit,
+                                  [BOOST_REGEX_LIB="-l$ax_lib"; AC_SUBST(BOOST_REGEX_LIB) link_regex="yes"; break],
+-                                 [link_regex="no"])
++                                 [ax_lib=""; link_regex="no"])
+   				done
+                 # Some systems doesn t add extension to the libraries filename
+                 if test "x$ax_lib" = "x"; then

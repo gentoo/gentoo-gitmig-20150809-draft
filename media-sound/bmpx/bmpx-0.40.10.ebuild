@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.10.ebuild,v 1.2 2007/10/01 13:23:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.40.10.ebuild,v 1.3 2007/10/06 12:24:41 drac Exp $
 
-inherit fdo-mime gnome2-utils versionator
+inherit autotools eutils fdo-mime gnome2-utils versionator
 
 MY_PR="$(get_version_component_range 1-2 ${PV})"
 
@@ -48,11 +48,15 @@ DEPEND="${RDEPEND}
 	>=x11-proto/xproto-7.0.10
 	doc? ( app-text/docbook-xsl-stylesheets	dev-libs/libxslt )"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-boost-m4.patch
+	AT_M4DIR="m4" eautoreconf
+}
+
 src_compile() {
 	econf --with-tr1 --enable-ld-workaround \
-		--with-boost-regex=boost_regex-mt \
-		--with-boost-filesystem=boost_filesystem-mt \
-		--with-boost-iostreams=boost_iostreams-mt \
 		$(use_enable modplug) \
 		$(use_enable hal) \
 		$(use_enable sid) \

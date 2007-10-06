@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.68 2007/10/01 13:23:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.69 2007/10/06 12:24:41 drac Exp $
+
+  06 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  +files/bmpx-0.40.10-boost-m4.patch, bmpx-0.40.10.ebuild:
+  Update boost m4 files from upstream svn.
 
   01 Oct 2007; Samuli Suominen <drac@gentoo.org> bmpx-0.40.10.ebuild:
   Link against boost_*-mt instead of boost_*-mt-s which was causing text
