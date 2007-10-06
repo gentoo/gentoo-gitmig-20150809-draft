@@ -1,0 +1,10 @@
+# ChangeLog for media-video/super_demux
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/super_demux/ChangeLog,v 1.1 2007/10/06 15:04:03 sbriesen Exp $
+
+*super_demux-0.3 (06 Oct 2007)
+
+  06 Oct 2007; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/super_demux-0.3.diff, +metadata.xml, +super_demux-0.3.ebuild:
+  initial commit.
+
