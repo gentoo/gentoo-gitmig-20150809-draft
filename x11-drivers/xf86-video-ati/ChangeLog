@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.53 2007/09/24 05:25:04 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.54 2007/10/06 00:54:17 dberkholz Exp $
+
+*xf86-video-ati-6.7.195 (06 Oct 2007)
+
+  06 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-video-ati-6.7.195.ebuild:
+  Bump. Fix single-CRTC cards; LVDS/RMX working OK again; Add pci-rework
+  support for atimisc and radeon drivers, although the ebuild doesn't do
+  anything special with this yet.
 
 *xf86-video-ati-6.7.194 (24 Sep 2007)
 
