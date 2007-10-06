@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/libhx-1.10.0.ebuild,v 1.1 2007/07/13 01:55:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/libhx-1.10.0.ebuild,v 1.2 2007/10/06 19:07:56 dertobi123 Exp $
 
 inherit autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jengelh.hopto.org/f/libHX/"
 SRC_URI="http://jengelh.hopto.org/f/libHX/libHX-${PV}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND="virtual/libc"
 S="${WORKDIR}/libHX-${PV}"
