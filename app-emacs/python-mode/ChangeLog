@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.26 2007/07/26 18:28:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.27 2007/10/06 20:31:20 ulm Exp $
+
+  06 Oct 2007; Ulrich Mueller <ulm@gentoo.org> python-mode-1.0.ebuild:
+  Minor QA: quote some variables. Drop ppc-macos keyword.
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org> python-mode-1.0.ebuild:
   Added ~ppc64; bug #186188
