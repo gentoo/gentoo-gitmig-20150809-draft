@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.14.0-r1.ebuild,v 1.8 2007/05/03 20:19:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.14.0-r1.ebuild,v 1.9 2007/10/06 19:43:19 ulm Exp $
 
 inherit elisp eutils
 
@@ -26,8 +26,8 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
-	cd ${S}
-	epatch ${DISTDIR}/${MY_P}-20050405.diff
+	cd "${S}"
+	epatch "${DISTDIR}/${MY_P}-20050405.diff"
 }
 
 src_compile() {
@@ -38,11 +38,11 @@ src_compile() {
 
 src_install() {
 	make \
-		LISPDIR=${D}/usr/share/emacs/site-lisp \
-		PIXMAPDIR=${D}/usr/share/wl/icons \
+		LISPDIR="${D}"/usr/share/emacs/site-lisp \
+		PIXMAPDIR="${D}"/usr/share/wl/icons \
 		install || die
 
-	elisp-site-file-install ${FILESDIR}/70wl-gentoo.el || die
+	elisp-site-file-install "${FILESDIR}/70wl-gentoo.el" || die
 
 	dodir /usr/share/wl/samples
 
