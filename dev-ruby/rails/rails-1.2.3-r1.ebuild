@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-1.2.3-r1.ebuild,v 1.4 2007/10/06 14:11:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-1.2.3-r1.ebuild,v 1.5 2007/10/06 22:32:30 opfer Exp $
 
 inherit ruby gems
 
@@ -11,7 +11,7 @@ SRC_URI="http://gems.rubyonrails.org/gems/${P}.gem"
 
 LICENSE="MIT"
 SLOT="1.2"
-KEYWORDS="~amd64 ~ia64 ppc sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ppc sparc x86 ~x86-fbsd"
 
 IUSE="mysql sqlite sqlite3 postgres fastcgi"
 DEPEND=">=dev-lang/ruby-1.8.5
