@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ses/ses-031130.ebuild,v 1.3 2007/07/13 07:25:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ses/ses-031130.ebuild,v 1.4 2007/10/06 20:03:30 ulm Exp $
 
 inherit elisp
 
 DESCRIPTION="Simple Emacs Spreadsheet."
 HOMEPAGE="http://home.comcast.net/~jyavner/ses/"
 SRC_URI="http://home.comcast.net/~jyavner/ses/ses21-${PV}.tgz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
@@ -18,7 +19,7 @@ DOCS="ses-readme.txt ses-example.ses"
 
 src_unpack() {
 	unpack ${A}
-	rm ${S}/*.elc
+	rm "${S}"/*.elc
 }
 
 src_compile() {
