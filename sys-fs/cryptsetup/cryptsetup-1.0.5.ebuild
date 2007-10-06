@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.5.ebuild,v 1.2 2007/09/14 21:33:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.5.ebuild,v 1.3 2007/10/06 13:56:28 vapier Exp $
 
 inherit linux-info eutils flag-o-matic multilib
 
@@ -18,7 +18,7 @@ DEPEND=">=sys-fs/device-mapper-1.00.07-r1
 	>=dev-libs/libgpg-error-1.0-r1
 	>=dev-libs/popt-1.7
 	selinux? ( sys-libs/libselinux )
-	!sys-fs/cryptsetup"
+	!sys-fs/cryptsetup-luks"
 
 dm-crypt_check() {
 	local CONFIG_CHECK="~DM_CRYPT"
