@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/monopod
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/monopod/ChangeLog,v 1.5 2007/09/17 21:07:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/monopod/ChangeLog,v 1.6 2007/10/06 07:56:02 drac Exp $
+
+*monopod-0.6 (06 Oct 2007)
+
+  06 Oct 2007; Samuli Suominen <drac@gentoo.org> +monopod-0.6.ebuild:
+  Version bump for bugs 130883, 157721 and 165015.
 
   17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing johnm from metadata.xml (see #186467 for reference).
