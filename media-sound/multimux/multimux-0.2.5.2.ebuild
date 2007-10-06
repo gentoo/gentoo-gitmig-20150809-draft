@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/multimux-0.2.5.2.ebuild,v 1.2 2007/10/05 18:56:18 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/multimux-0.2.5.2.ebuild,v 1.3 2007/10/06 13:43:53 sbriesen Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -27,5 +27,5 @@ src_compile() {
 
 src_install() {
 	dobin multimux
-	dodoc CHANGES LICENSE README
+	dodoc CHANGES README
 }
