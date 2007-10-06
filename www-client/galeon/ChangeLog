@@ -1,6 +1,9 @@
 # ChangeLog for www-client/galeon
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.35 2007/08/17 15:46:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.36 2007/10/06 16:44:42 armin76 Exp $
+
+  06 Oct 2007; Raúl Porcel <armin76@gentoo.org> galeon-2.0.3.ebuild:
+  ia64/sparc stable wrt #194895
 
   17 Aug 2007; Hanno Boeck <hanno@gentoo.org> galeon-2.0.3.ebuild:
   Add xulrunner support.
