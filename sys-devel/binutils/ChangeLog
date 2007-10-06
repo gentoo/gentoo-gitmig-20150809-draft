@@ -1,6 +1,18 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.309 2007/10/06 14:31:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.310 2007/10/06 17:59:23 vapier Exp $
+
+*binutils-2.18-r1 (06 Oct 2007)
+
+  06 Oct 2007; Mike Frysinger <vapier@gentoo.org> +binutils-2.18-r1.ebuild:
+  Fix from upstream for GNU RELRO stripping, disable false positive tests,
+  and add fix from upstream for multitarget on x86_64.
+
+*binutils-2.17-r2 (06 Oct 2007)
+
+  06 Oct 2007; Mike Frysinger <vapier@gentoo.org> +binutils-2.17-r2.ebuild:
+  Add backwards compat support for GNU_HASH for a few anal targets, disable
+  false positive tests, and add fix from upstream for multitarget on x86_64.
 
 *binutils-2.18.50.0.2 (06 Oct 2007)
 
