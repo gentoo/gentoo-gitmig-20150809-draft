@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.53 2007/07/29 04:36:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.54 2007/10/06 13:44:38 vapier Exp $
+
+*crossdev-0.9.18-r4 (06 Oct 2007)
+
+  06 Oct 2007; Mike Frysinger <vapier@gentoo.org> files/crossdev,
+  +crossdev-0.9.18-r4.ebuild:
+  Fix from Andrew Gaffney to tee output from emerge when using just --pretend
+  #188812.
 
 *crossdev-0.9.18-r3 (29 Jul 2007)
 
