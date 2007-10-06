@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CPAN-Mini
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.19 2007/07/07 14:36:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.20 2007/10/06 19:53:14 armin76 Exp $
+
+  06 Oct 2007; Raúl Porcel <armin76@gentoo.org> CPAN-Mini-0.562.ebuild:
+  ia64/sparc/x86 stable
 
 *CPAN-Mini-0.562 (07 Jul 2007)
 
