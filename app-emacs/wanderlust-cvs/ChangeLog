@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/wanderlust-cvs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust-cvs/ChangeLog,v 1.9 2007/05/03 20:11:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust-cvs/ChangeLog,v 1.10 2007/10/06 19:49:53 ulm Exp $
+
+  06 Oct 2007; Ulrich Mueller <ulm@gentoo.org> wanderlust-cvs-2.15.ebuild:
+  Minor QA: quote some variables.
 
   03 May 2007; Ulrich Mueller <ulm@gentoo.org> wanderlust-cvs-2.15.ebuild:
   Dependency on virtual/semi changed to app-emacs/semi.
