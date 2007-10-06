@@ -1,6 +1,14 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.78 2007/08/19 16:53:39 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.79 2007/10/06 11:32:48 humpback Exp $
+
+*skype-1.4.0.118 (06 Oct 2007)
+
+  06 Oct 2007; Gustavo Felisberto <humpback@gentoo.org>
+  +skype-1.4.0.118.ebuild:
+  Added 1.4.0.118. The delay was because there is a problem with the upstream
+  static version that does not include compiled translations. This was fixed
+  by an extra download that i did with the translations.
 
 *skype-1.4.0.99 (19 Aug 2007)
 
