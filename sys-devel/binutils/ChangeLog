@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.311 2007/10/06 22:47:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.312 2007/10/06 23:17:08 vapier Exp $
+
+  06 Oct 2007; Mike Frysinger <vapier@gentoo.org> binutils-2.17-r2.ebuild,
+  binutils-2.18-r1.ebuild:
+  Fix incorrect CFLAGS being used for build utils #192959 by Woodward Crim
+  Hoffman.
 
   06 Oct 2007; Mike Frysinger <vapier@gentoo.org> binutils-2.18-r1.ebuild:
   Prevent makeinfo from being run #193364.
