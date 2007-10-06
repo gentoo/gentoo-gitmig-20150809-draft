@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/rlocate
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/ChangeLog,v 1.24 2007/06/02 19:01:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/ChangeLog,v 1.25 2007/10/06 13:37:56 vapier Exp $
+
+*rlocate-0.5.6 (06 Oct 2007)
+
+  06 Oct 2007; Mike Frysinger <vapier@gentoo.org> +files/rlocated.confd,
+  files/rlocated.rc, +rlocate-0.5.6.ebuild:
+  Version bump #191073 by Juan Aguado.
 
   02 Jun 2007; Matthias Schwarzott <zzam@gentoo.org> +files/updatedb.conf,
   rlocate-0.5.5.ebuild:

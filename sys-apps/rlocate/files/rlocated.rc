@@ -1,17 +1,17 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/files/rlocated.rc,v 1.2 2006/04/18 22:37:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/files/rlocated.rc,v 1.3 2007/10/06 13:37:56 vapier Exp $
 
 start() {
-	if [[ ! -e /proc/rlocate ]] ; then
+	if [ ! -e /proc/rlocate ] ; then
 		ebegin "Loading rlocate kernel module"
 		modprobe rlocate
 		eend $? || return 1
 	fi
 
 	ebegin "Starting rlocated"
-	rlocated
+	rlocated ${RLOCATED_OPTIONS}
 	eend $?
 }
 
