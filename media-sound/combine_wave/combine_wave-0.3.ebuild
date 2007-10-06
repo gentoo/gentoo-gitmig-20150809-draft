@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/combine_wave/combine_wave-0.3.ebuild,v 1.1 2007/10/05 19:18:56 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/combine_wave/combine_wave-0.3.ebuild,v 1.2 2007/10/06 06:15:18 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -27,5 +27,5 @@ src_compile() {
 
 src_install() {
 	dobin combine_wave
-	dodoc CHANGES README combine_wave.man 
+	dodoc CHANGES README combine_wave.man
 }
