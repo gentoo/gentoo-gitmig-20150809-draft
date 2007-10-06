@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/File-Remove-0.36.ebuild,v 1.4 2007/08/09 15:03:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/File-Remove-0.36.ebuild,v 1.5 2007/10/06 06:01:31 tgall Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~adamk/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ppc ~ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"
