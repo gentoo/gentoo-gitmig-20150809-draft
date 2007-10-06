@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.77 2007/10/06 14:11:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.78 2007/10/06 15:09:22 graaff Exp $
+
+  06 Oct 2007; Hans de Graaff <graaff@gentoo.org>
+  -files/rails-1.0.0-rdoc-rake-0.7.patch, -rails-1.1.6-r1.ebuild,
+  -rails-1.2.0.ebuild, -rails-1.2.1.ebuild, -rails-1.2.2.ebuild:
+  Remove versions that are old or won't become stable
 
   06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   rails-1.2.3-r1.ebuild:
