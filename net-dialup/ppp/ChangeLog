@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.197 2007/10/06 12:32:20 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.198 2007/10/06 22:42:40 opfer Exp $
+
+  06 Oct 2007; Christian Faulhammer <opfer@gentoo.org> ppp-2.4.4-r13.ebuild:
+  stable x86, bug 194820
 
   06 Oct 2007; Lars Weiler <pylon@gentoo.org> ppp-2.4.4-r13.ebuild:
   stable ppc, bug #194820
