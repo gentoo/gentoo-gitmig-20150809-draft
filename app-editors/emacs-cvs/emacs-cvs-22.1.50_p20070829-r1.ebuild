@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50_p20070829.ebuild,v 1.2 2007/09/18 22:36:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50_p20070829-r1.ebuild,v 1.1 2007/10/06 17:37:13 ulm Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
@@ -70,6 +70,7 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}/${PN}-freebsd-sparc.patch"
+	epatch "${FILESDIR}/${PN}-make-tramp-temp-file.patch"
 	# ALSA is detected and used even if not requested by the USE=alsa flag.
 	# So remove the automagic check
 	use alsa || epatch "${FILESDIR}/${PN}-disable_alsa_detection-r1.patch"
@@ -188,20 +189,20 @@ emacs-infodir-rebuild() {
 
 	local infodir=/usr/share/info/${EMACS_SUFFIX} f
 	einfo "Regenerating Info directory index in ${infodir} ..."
-	rm -f ${ROOT}${infodir}/dir{,.*}
-	for f in ${ROOT}${infodir}/*.info*; do
+	rm -f "${ROOT}"${infodir}/dir{,.*}
+	for f in "${ROOT}"${infodir}/*.info*; do
 		[[ ${f##*/} == *[0-9].info* ]] \
-			|| install-info --info-dir=${ROOT}${infodir} ${f} &>/dev/null
+			|| install-info --info-dir="${ROOT}"${infodir} ${f} &>/dev/null
 	done
 	echo
 }
 
 pkg_postinst() {
-	test -f ${ROOT}/usr/share/emacs/site-lisp/subdirs.el ||
-		cp ${ROOT}/usr/share/emacs{/${FULL_VERSION},}/site-lisp/subdirs.el
+	test -f "${ROOT}"/usr/share/emacs/site-lisp/subdirs.el ||
+		cp "${ROOT}"/usr/share/emacs{/${FULL_VERSION},}/site-lisp/subdirs.el
 
 	local f
-	for f in ${ROOT}/var/lib/games/emacs/{snake,tetris}-scores; do
+	for f in "${ROOT}"/var/lib/games/emacs/{snake,tetris}-scores; do
 		test -e ${f} || touch ${f}
 	done
 
