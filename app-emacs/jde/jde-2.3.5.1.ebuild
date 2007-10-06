@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.3.5.1.ebuild,v 1.5 2006/08/13 08:36:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.3.5.1.ebuild,v 1.6 2007/10/06 19:28:20 ulm Exp $
 
 inherit elisp eutils
 
@@ -10,20 +10,19 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc-macos x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="virtual/emacs
-	>=virtual/jdk-1.3
+DEPEND=">=virtual/jdk-1.3
 	app-emacs/elib
 	>=app-emacs/cedet-1.0_beta3"
 
-SITEFILE=70jde-gentoo.el
+SITEFILE=70${PN}-gentoo.el
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 
 src_compile() {
-	cd ${S}/lisp
+	cd "${S}"/lisp
 	cat >jde-compile-script-init <<EOF
 (load "${SITELISP}/cedet/common/cedet")
 (add-to-list 'load-path "$PWD")
@@ -33,14 +32,15 @@ EOF
 
 src_install() {
 	dodir ${SITELISP}/${PN}
-	cp -r java ${D}/${SITELISP}/${PN}/
+	cp -r java "${D}"/${SITELISP}/${PN}/
 	dodir /usr/share/doc/${P}
-	cp -r doc/* ${D}/usr/share/doc/${P}/
-	cd ${S}/lisp
+	cp -r doc/* "${D}"/usr/share/doc/${P}/
+	cd "${S}"/lisp
 	elisp-install ${PN}/lisp *.el *.elc *.bnf
-	cp ${FILESDIR}/${PV}-${SITEFILE} ${S}/${SITEFILE}; elisp-site-file-install ${S}/${SITEFILE}
+	cp "${FILESDIR}"/${PV}-${SITEFILE} "${S}"/${SITEFILE}
+	elisp-site-file-install "${S}"/${SITEFILE}
 	dodoc ChangeLog ReleaseNotes.txt
-	find ${D} -type f -print0 |xargs -0 chmod 644
+	find "${D}" -type f -print0 |xargs -0 chmod 644
 	exeinto /usr/bin
 	doexe jtags*
 }
