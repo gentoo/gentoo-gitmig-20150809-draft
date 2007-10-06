@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.4.1.ebuild,v 1.2 2007/07/22 08:47:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.6.0.ebuild,v 1.1 2007/10/06 14:21:27 markusle Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="blas jpeg nls png readline tk X lapack"
+IUSE="blas jpeg nls png readline tk X lapack gd"
 
 RDEPEND=">=dev-lang/perl-5.6.1-r3
 	readline? ( >=sys-libs/readline-4.1-r3 )
@@ -19,6 +19,7 @@ RDEPEND=">=dev-lang/perl-5.6.1-r3
 	png? ( >=media-libs/libpng-1.2.1 )
 	blas? ( virtual/blas )
 	lapack? ( virtual/lapack )
+	gd? ( >=media-libs/gd-2 )
 	tk? ( dev-lang/tk
 		dev-lang/tcl )
 	X? ( x11-libs/libX11 )"
@@ -51,8 +52,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e "s:-fpic:-fPIC:g" ${S}/configure
-	epatch "${FILESDIR}"/${P}-as-needed-gentoo.patch
+	sed -e "s:\$(rhome):/usr/$(get_libdir)/R:g" \
+		-i "${S}"/src/unix/Makefile.in ||
+		die "Failed to fix Rscript makefile"
 }
 
 src_compile() {
@@ -75,7 +77,8 @@ src_compile() {
 		$(use_with readline) \
 		$(use_with X x) \
 		${myconf} || die "econf failed"
-	emake || die "emake failed"
+	# R-2.5.0 started to have issues with parallel make
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
@@ -83,6 +86,7 @@ src_install() {
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
+		libdir=${D}/usr/$(get_libdir) \
 		rhome=${D}/usr/$(get_libdir)/R \
 		install || die "Installation Failed"
 
@@ -100,6 +104,10 @@ src_install() {
 		-e "/^R_DOC_DIR=.*/s::R_DOC_DIR=/usr/$(get_libdir)/R/doc:" \
 		-i ${D}/usr/$(get_libdir)/R/bin/R \
 		|| die "sed failed."
+
+	# fix paths in libR.pc pkgconfig file
+	sed -e "s:${D}::" -i ${D}/usr/$(get_libdir)/pkgconfig/libR.pc \
+		|| die "Failed to fix libR.pc file"
 
 	# R installs two identical wrappers under /usr/bin and /usr/lib/R/bin/
 	# the 2nd one is corrected by above sed, the first is replaced by a symlink
