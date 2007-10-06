@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-0.94b.ebuild,v 1.1 2006/10/31 11:32:29 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-0.94b.ebuild,v 1.2 2007/10/06 20:56:57 ulm Exp $
 
 inherit eutils elisp
 
@@ -14,13 +14,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/emacs
-	virtual/tetex
+DEPEND="virtual/tetex
 	virtual/ghostscript
 	|| ( >=dev-tex/breqn-0.94 app-text/texlive )
 	>=sci-mathematics/maxima-5.10.0"
 
-S=${WORKDIR}/${MY_P}
+SITEFILE=50${PN}-gentoo.el
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	elisp-site-file-install ${FILESDIR}/50imaxima-gentoo.el
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	dodoc ChangeLog NEWS README
 	docinto imath-example
 	dodoc imath-example/*.txt

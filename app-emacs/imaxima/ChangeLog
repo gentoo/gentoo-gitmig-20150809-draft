@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/imaxima
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.11 2007/07/31 22:39:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.12 2007/10/06 20:56:57 ulm Exp $
+
+  06 Oct 2007; Ulrich Mueller <ulm@gentoo.org> imaxima-0.94b.ebuild,
+  imaxima-0.97.ebuild, imaxima-0.97a.ebuild:
+  Remove redundant virtual/emacs dependency. Add some quotes.
 
 *imaxima-0.97a (31 Jul 2007)
 
