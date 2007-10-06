@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.65.4.ebuild,v 1.4 2007/01/19 14:06:31 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.65.4.ebuild,v 1.5 2007/10/06 19:08:34 ulm Exp $
 
 inherit eutils
 
@@ -23,12 +23,12 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-S=${WORKDIR}/${MY_P/_/}
+S="${WORKDIR}/${MY_P/_/}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${WORKDIR}/${MY_DIFFP}
+	cd "${S}"
+	epatch "${WORKDIR}/${MY_DIFFP}"
 
 	sed -i \
 		-e "s:^OPTFLAGS =.*:OPTFLAGS = ${CFLAGS}:" \
@@ -45,10 +45,13 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	if use X ; then
-		make DESTDIR=${D} XJOVEHOME=${D}/usr MANDIR=${D}/usr/share/man/man1 installxjove || die
+		make DESTDIR="${D}" \
+			XJOVEHOME="${D}"/usr \
+			MANDIR="${D}"/usr/share/man/man1 \
+			installxjove || die
 	fi
 
 	keepdir /var/lib/jove/preserve

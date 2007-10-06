@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.70.3.ebuild,v 1.1 2007/06/15 10:32:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.70.3.ebuild,v 1.2 2007/10/06 19:08:34 ulm Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,12 +23,12 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-S=${WORKDIR}/${MY_P/_/}
+S="${WORKDIR}/${MY_P/_/}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${WORKDIR}/${MY_DIFFP}
+	cd "${S}"
+	epatch "${WORKDIR}/${MY_DIFFP}"
 
 	sed -i \
 		-e "s:-ltermcap:-lncurses:" \
@@ -51,12 +51,12 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	if use X ; then
-		make DESTDIR=${D} \
-			XJOVEHOME=${D}/usr \
-			MANDIR=${D}/usr/share/man/man1 \
+		make DESTDIR="${D}" \
+			XJOVEHOME="${D}"/usr \
+			MANDIR="${D}"/usr/share/man/man1 \
 			installxjove || die
 	fi
 
