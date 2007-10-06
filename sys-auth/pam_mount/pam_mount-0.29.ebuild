@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-0.29.ebuild,v 1.1 2007/09/28 14:39:03 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-0.29.ebuild,v 1.2 2007/10/06 19:07:02 dertobi123 Exp $
 
 inherit eutils multilib pam
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pam-mount/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="crypt"
 DEPEND=">=sys-libs/pam-0.72
