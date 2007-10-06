@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.0.ebuild,v 1.7 2007/10/05 18:39:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.0.ebuild,v 1.8 2007/10/06 18:57:45 dertobi123 Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.methylblue.com/filelight/packages/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 hppa ~ppc sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 hppa ppc sparc x86 ~x86-fbsd"
 RDEPEND="x11-apps/xdpyinfo"
 IUSE=""
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/filelight
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.24 2007/10/05 18:39:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.25 2007/10/06 18:57:45 dertobi123 Exp $
+
+  06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  filelight-1.0.ebuild:
+  ppc stable, bug #194745
 
   05 Oct 2007; Raúl Porcel <armin76@gentoo.org> filelight-1.0.ebuild:
   sparc stable wrt #194745
