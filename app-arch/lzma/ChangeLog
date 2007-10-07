@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzma
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.4 2006/08/27 16:35:04 radek Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.5 2007/10/07 17:29:03 vapier Exp $
+
+  07 Oct 2007; Mike Frysinger <vapier@gentoo.org> lzma-4.43.ebuild:
+  Cleanup ebuild.
 
 *lzma-4.43 (27 Aug 2006)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/lzma-4.43.ebuild,v 1.2 2007/07/15 05:44:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/lzma-4.43.ebuild,v 1.3 2007/10/07 17:29:03 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -10,27 +10,21 @@ SRC_URI="mirror://sourceforge/sevenzip/${PN}443.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~mips ~ppc-macos ~x86 ~amd64"
+KEYWORDS="~amd64 ~mips ~ppc-macos ~x86"
 IUSE="doc"
 
-src_unpack() {
-	mkdir ${S}
-	cd ${S}
-	unpack ${A}
-}
+S=${WORKDIR}
 
 src_compile() {
 	cd C/7zip/Compress/LZMA_Alone
 	emake -f makefile.gcc \
 		CXX="$(tc-getCXX) ${CXXFLAGS}" \
 		CXX_C="$(tc-getCC) ${CFLAGS}" \
-	|| die "Make failed"
+		|| die "Make failed"
 }
 
 src_install() {
-	dobin C/7zip/Compress/LZMA_Alone/lzma
-	if use doc; then
-		dodoc *.txt
-		dohtml *.html
-	fi
+	dobin C/7zip/Compress/LZMA_Alone/lzma || die
+	dodoc history.txt
+	use doc && dodoc 7zC.txt 7zFormat.txt lzma.txt Methods.txt
 }
