@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/ez-ipupdate
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.22 2007/10/06 19:30:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.23 2007/10/07 16:38:52 sbriesen Exp $
+
+  07 Oct 2007; Stefan Briesenick <sbriesen@gentoo.org>
+  files/ez-ipupdate.initd, ez-ipupdate-3.0.11_beta8-r4.ebuild:
+  made init-script compatible with shells other than bash (bug #194919),
+  changed einfo to elog in pkg_postinst, some other minor cleanups.
 
   06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   ez-ipupdate-3.0.11_beta8-r4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8-r4.ebuild,v 1.4 2007/10/06 19:30:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8-r4.ebuild,v 1.5 2007/10/07 16:38:52 sbriesen Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	newinitd "${FILESDIR}/ez-ipupdate.initd" ez-ipupdate
 	keepdir /etc/ez-ipupdate /var/cache/ez-ipupdate
 
@@ -62,40 +62,39 @@ pkg_postinst() {
 	chmod 750 /etc/ez-ipupdate /var/cache/ez-ipupdate
 	chown ez-ipupd:ez-ipupd /etc/ez-ipupdate /var/cache/ez-ipupdate
 
-	einfo
-	einfo "Please create one or more config files in"
-	einfo "/etc/ez-ipupdate/. A bunch of samples can"
-	einfo "be found in the doc directory."
-	einfo
-	einfo "All config files must have a '.conf' extension."
-	einfo
-	einfo "Please do not use the 'run-as-user', 'run-as-euser',"
-	einfo "'cache-file' and 'pidfile' options, since these are"
-	einfo "handled internally by the init-script!"
-	einfo
-	einfo "If you want to use ez-ipupdate in daemon mode,"
-	einfo "please add 'daemon' to the config file(s) and"
-	einfo "add the ez-ipupdate init-script to the default"
-	einfo "runlevel."
-	einfo
-	einfo "Without the 'daemon' option, you can run the"
-	einfo "init-script with the 'update' parameter inside"
-	einfo "your PPP ip-up script."
-	einfo
+	elog
+	elog "Please create one or more config files in"
+	elog "/etc/ez-ipupdate/. A bunch of samples can"
+	elog "be found in the doc directory."
+	elog
+	elog "All config files must have a '.conf' extension."
+	elog
+	elog "Please do not use the 'run-as-user', 'run-as-euser',"
+	elog "'cache-file' and 'pidfile' options, since these are"
+	elog "handled internally by the init-script!"
+	elog
+	elog "If you want to use ez-ipupdate in daemon mode,"
+	elog "please add 'daemon' to the config file(s) and"
+	elog "add the ez-ipupdate init-script to the default"
+	elog "runlevel."
+	elog
+	elog "Without the 'daemon' option, you can run the"
+	elog "init-script with the 'update' parameter inside"
+	elog "your PPP ip-up script."
+	elog
 
 	if [ -f /etc/ez-ipupdate.conf ]; then
-		ewarn "!!! IMPORTANT UPDATE NOTICE !!!"
-		ewarn
-		ewarn "The ez-ipupdate init-script can now handle more"
-		ewarn "than one config file. New config file location is"
-		ewarn "/etc/ez-ipupdate/*.conf"
-		ewarn
+		elog "!!! IMPORTANT UPDATE NOTICE !!!"
+		elog
+		elog "The ez-ipupdate init-script can now handle more"
+		elog "than one config file. New config file location is"
+		elog "/etc/ez-ipupdate/*.conf"
+		elog
 		if [ ! -f /etc/ez-ipupdate/default.conf ]; then
 			mv -f /etc/ez-ipupdate.conf /etc/ez-ipupdate/default.conf
-			einfo "Your old configuration has been moved to"
-			einfo "/etc/ez-ipupdate/default.conf"
-			einfo
+			elog "Your old configuration has been moved to"
+			elog "/etc/ez-ipupdate/default.conf"
+			elog
 		fi
-		ebeep
 	fi
 }
