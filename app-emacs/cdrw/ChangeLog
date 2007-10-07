@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/cdrw
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cdrw/ChangeLog,v 1.9 2007/10/07 18:37:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cdrw/ChangeLog,v 1.10 2007/10/07 20:40:34 opfer Exp $
+
+*cdrw-1.2-r1 (07 Oct 2007)
+
+  07 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  files/50cdrw-gentoo.el, -cdrw-1.2.ebuild, +cdrw-1.2-r1.ebuild:
+  remove keybindings from sitefile, do revision bump -> straight to x86
+  stable; clean up
 
   07 Oct 2007; Christian Faulhammer <opfer@gentoo.org> cdrw-1.2.ebuild:
   Minor QA: Quote variables; remove redundant DEPEND on virtual/emacs
