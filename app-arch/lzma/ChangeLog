@@ -1,9 +1,9 @@
 # ChangeLog for app-arch/lzma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.6 2007/10/07 18:10:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.7 2007/10/07 18:11:16 vapier Exp $
 
   07 Oct 2007; Mike Frysinger <vapier@gentoo.org> lzma-4.43.ebuild:
-  Bloack lzma-utils.
+  Block lzma-utils.
 
   07 Oct 2007; Mike Frysinger <vapier@gentoo.org> lzma-4.43.ebuild:
   Cleanup ebuild.
