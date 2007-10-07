@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/cm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/ChangeLog,v 1.23 2007/04/18 17:44:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/ChangeLog,v 1.24 2007/10/07 15:38:33 hkbst Exp $
+
+  07 Oct 2007; Marijn Schouten <hkBst@gentoo.org> +files/50cm-gentoo.el,
+  -cm-2.4.2.ebuild, +cm-2.10.0-r1.ebuild:
+  remove old 2.4.2 stuff
+
+*cm-2.10.0-r1 (07 Oct 2007)
+
+  07 Oct 2007; Marijn Schouten <hkBst@gentoo.org> +files/50cm-gentoo.el,
+  +cm-2.10.0-r1.ebuild:
+  fix emacs support, bug 194985, thanks to ulm and add quoting where necessary
 
   18 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> cm-2.10.0.ebuild:
   Stable on sparc wrt #75754
