@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/ace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.50 2007/07/22 08:33:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.51 2007/10/07 19:52:58 dragonheart Exp $
+
+*ace-5.6.1 (07 Oct 2007)
+
+  07 Oct 2007; Daniel Black <dragonheart@gentoo.org> +ace-5.6.1.ebuild:
+  version bump
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> ace-5.5-r1.ebuild,
   ace-5.5.8.ebuild, ace-5.5.9.ebuild:
