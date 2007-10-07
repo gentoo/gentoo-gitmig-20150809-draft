@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-5.0.6.ebuild,v 1.6 2007/10/05 07:56:29 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-5.0.6.ebuild,v 1.7 2007/10/07 14:18:39 angelos Exp $
 
 JAVA_PKG_IUSE="source"
 WANT_ANT_TASKS="ant-contrib"
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.mysql.com/products/connector/j/"
 SRC_URI="mirror://mysql/Downloads/Connector-J/${MY_P}.tar.gz"
 LICENSE="GPL-2-with-MySQL-FLOSS-exception"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="c3p0 log4j"
 COMMON_DEP="
 	log4j? ( dev-java/log4j )
