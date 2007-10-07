@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.3.ebuild,v 1.1 2007/10/02 02:38:24 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.3.ebuild,v 1.2 2007/10/07 01:45:50 compnerd Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.12.0
 		 >=media-libs/libpng-1.2
 		 >=dev-libs/libxml2-2.6
 		   sys-libs/zlib
-		 applet? ( gnome-extra/deskbar-applet )
+		 applet? ( >=gnome-extra/deskbar-applet-2.16 )
 		 gnome? (
 					>=x11-libs/gtk+-2.8
 					>=gnome-base/libglade-2.5
@@ -119,7 +119,7 @@ src_compile() {
 	econf ${myconf} \
 		  --enable-preferences --disable-xmp --disable-unac \
 		  --enable-libxml2 --enable-external-qdbm \
-		  $(use_enable applet deskbar-applet) \
+		  $(use_enable applet deskbar-applet auto) \
 		  $(use_enable debug debug-code) \
 		  $(use_enable gnome gui) \
 		  $(use_enable gsf) \

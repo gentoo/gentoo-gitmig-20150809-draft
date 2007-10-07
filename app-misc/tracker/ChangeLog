@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.23 2007/10/02 02:38:24 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.24 2007/10/07 01:45:50 compnerd Exp $
+
+  07 Oct 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  tracker-0.6.3.ebuild:
+  Fix deskbar applet support (bug #194899)
 
 *tracker-0.6.3 (02 Oct 2007)
 
