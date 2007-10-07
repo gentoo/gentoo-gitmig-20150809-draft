@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.09.ebuild,v 1.10 2007/10/01 14:00:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-100.14.09.ebuild,v 1.11 2007/10/07 15:38:58 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -415,11 +415,11 @@ pkg_preinst() {
 	# Clean the dynamic libGL stuff's home to ensure
 	# we dont have stale libs floating around
 	if [[ -d ${ROOT}/usr/lib/opengl/nvidia ]] ; then
-		rm -rf ${ROOT}/usr/lib/opengl/nvidia/*
+		rm -rf "${ROOT}"/usr/lib/opengl/nvidia/*
 	fi
 	# Make sure we nuke the old nvidia-glx's env.d file
 	if [[ -e ${ROOT}/etc/env.d/09nvidia ]] ; then
-		rm -f ${ROOT}/etc/env.d/09nvidia
+		rm -f "${ROOT}"/etc/env.d/09nvidia
 	fi
 }
 
