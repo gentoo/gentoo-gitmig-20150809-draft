@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>dev-tools</herd>
 <maintainer>
-  <email>karltk@gentoo.org</email>
-  <description>Temporary maintainer, looking for replacements</description>
+  <email>nerdboy@gentoo.org</email>
+  <description>Primary maintainer</description>
 </maintainer>
 
 <longdescription>

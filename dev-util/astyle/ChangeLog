@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/astyle
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.16 2007/02/09 03:00:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.17 2007/10/07 01:31:42 nerdboy Exp $
+
+*astyle-1.21 (07 Oct 2007)
+
+  07 Oct 2007; Steve Arnold <nerdboy@gentoo.org>
+  +files/astyle-1.21-strip.patch, metadata.xml, +astyle-1.21.ebuild:
+  overdue version bump and maintainer update
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
