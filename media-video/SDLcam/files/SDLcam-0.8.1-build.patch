@@ -1,0 +1,24 @@
+pull in png deps
+
+http://bugs.gentoo.org/194958
+
+--- Makefile.in
++++ Makefile.in
+@@ -2,7 +2,7 @@
+ CXX = @CXX@
+ LD = $(CXX)
+ LDFLAGS = @LDFLAGS@
+-LDLIBS = $(shell sdl-config --libs) $(shell xml2-config --libs) -lSDL_image -lSDL_ttf -lm -lxml2 -rdynamic -ljpeg -ldl
++LDLIBS = $(shell sdl-config --libs) $(shell xml2-config --libs) -lSDL_image -lSDL_ttf -lm -lxml2 -ljpeg -ldl $(shell libpng-config --libs)
+ PROG = SDLcam
+ 
+ prefix=@prefix@
+@@ -10,7 +10,7 @@
+ 
+ CPPFLAGS = @CPPFLAGS@ -DMMX -DTIMER -DPROG_VERSION=\"0.8.1\" -DDATADIR="$(datadir)/SDLcam"
+ 
+-MMXFLAGS =     -Wshadow -Wall $(shell sdl-config --cflags) $(shell xml2-config --cflags)
++MMXFLAGS =     -Wshadow -Wall $(shell sdl-config --cflags) $(shell xml2-config --cflags) $(shell libpng-config --cflags)
+ CFLAGS = @CFLAGS@ $(MMXFLAGS) -Wstrict-prototypes
+ CXXFLAGS = @CXXFLAGS@ $(MMXFLAGS)
+ 
