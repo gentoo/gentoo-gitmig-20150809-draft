@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-1.020.ebuild,v 1.1 2007/07/26 17:38:29 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-1.022.ebuild,v 1.1 2007/10/07 21:47:38 anant Exp $
 
 inherit eutils
 
