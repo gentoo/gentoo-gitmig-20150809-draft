@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.2 2007/08/06 09:50:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.3 2007/10/07 03:18:51 vapier Exp $
 
 # We need to be able to set alternative headers for
 # compiling for non-native platform
@@ -71,8 +71,11 @@ setup_flags() {
 	case $(tc-arch) in
 		x86)
 			# -march needed for #185404
-			local t=${CTARGET_OPT:-${CTARGET}}
-			export CFLAGS="-march=${t%%-*} ${CFLAGS}"
+			if ! echo "" | $(tc-getCC) -E -dD - | grep -qs __i686__ ; then
+				filter-flags '-march=*'
+				local t=${CTARGET_OPT:-${CTARGET}}
+				export CFLAGS="-march=${t%%-*} ${CFLAGS}"
+			fi
 		;;
 		amd64)
 			# Punt this when amd64's 2004.3 is removed
