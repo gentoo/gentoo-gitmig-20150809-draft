@@ -1,0 +1,12 @@
+# ChangeLog for media-plugins/vdr-remotetimers
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remotetimers/ChangeLog,v 1.1 2007/10/07 12:21:07 zzam Exp $
+
+*vdr-remotetimers-0.0.1 (07 Oct 2007)
+
+  07 Oct 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-remotetimers-0.0.1-svdrpservice.diff,
+  +files/vdr-remotetimers-0.0.1-vdr-1.5.3.diff, +metadata.xml,
+  +vdr-remotetimers-0.0.1.ebuild:
+  Initial import of ebuild written by me.
+
