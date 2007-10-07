@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.5.ebuild,v 1.1 2007/10/07 15:15:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.5.ebuild,v 1.2 2007/10/07 15:36:16 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,13 +11,13 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-source-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="nls"
+IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2
 	|| ( media-sound/mpg123 media-sound/mpg321 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	nls? ( sys-devel/gettext )"
+	sys-devel/gettext"
 
 S="${WORKDIR}"/${PN}
 
@@ -32,8 +32,6 @@ src_unpack() {
 	sed -e "s:CFLAGS = :CFLAGS = ${CFLAGS} :" \
 		-e 's:/usr/local/share/locale:$(DESTDIR)/usr/share/locale:' \
 		-i makefile
-
-	use nls || sed -i -e 's:-D NLS="1"::' makefile
 }
 
 src_compile() {
@@ -45,10 +43,9 @@ src_compile() {
 src_install() {
 	dobin ${PN} extra/mp_util/{mputil,mputil_smart}
 
-	if use nls; then
-		dodir /usr/share/locale/{de,es,fr,ja,nl}/LC_MESSAGES
-		DESTDIR="${D}" emake install-po
-	fi
+	dodir /usr/share/locale/{de,es,fr,ja,nl}/LC_MESSAGES
+
+	DESTDIR="${D}" emake install-po
 
 	newicon logo.xpm ${PN}.xpm
 	make_desktop_entry ${PN} ${PN} ${PN} "AudioVideo;Audio;GTK;"

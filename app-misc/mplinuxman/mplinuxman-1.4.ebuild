@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.4.ebuild,v 1.10 2006/10/14 09:07:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.4.ebuild,v 1.11 2007/10/07 15:36:16 drac Exp $
 
 DESCRIPTION="A gtk2 frontend and drivers for mpman f50/55/60 mp3 players"
 HOMEPAGE="http://mplinuxman.sourceforge.net/"
@@ -16,10 +16,11 @@ RDEPEND=">=x11-libs/gtk+-2.2.4-r1
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}"/${PN}
 
 src_unpack() {
-	unpack ${A} && cd ${S} || die "unpack failed"
+	unpack ${A}
+	cd "${S}"
 	sed -i -e "s,^CFLAGS = ,CFLAGS = ${CFLAGS} ," makefile
 	sed -i -e "s,export LOCALE_DIR=/usr/local/share/locale,export LOCALE_DIR=${D}/usr/share/locale," makefile
 	if ! use nls ; then
