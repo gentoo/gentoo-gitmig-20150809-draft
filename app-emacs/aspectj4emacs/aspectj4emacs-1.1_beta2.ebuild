@@ -1,10 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/aspectj4emacs-1.1_beta2.ebuild,v 1.9 2007/01/27 22:11:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/aspectj4emacs-1.1_beta2.ebuild,v 1.10 2007/10/07 18:23:00 opfer Exp $
 
 inherit elisp eutils
-
-IUSE=""
 
 MY_P="AspectJForEmacs-${PV/_beta/b}"
 
@@ -15,21 +13,23 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
+IUSE=""
+
 RDEPEND="app-emacs/jde
 	=dev-java/aspectj-1*"
 DEPEND="${RDEPEND}
-	app-arch/unzip
-	>=sys-apps/sed-4"
+	app-arch/unzip"
+
 
 S="${WORKDIR}/${MY_P}"
 
-SITEFILE=80aspectj4emacs-gentoo.el
+SITEFILE=80${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PF}-compile-log-gentoo.patch
-	epatch ${FILESDIR}/${PF}-browse-url-new-window-gentoo.patch
-	cd ${S}
+	epatch "${FILESDIR}/${PF}-compile-log-gentoo.patch"
+	epatch "${FILESDIR}/${PF}-browse-url-new-window-gentoo.patch"
+	cd "${S}"
 	cp */*.el .
 	sed -i "s,@build.version.short@,${PV},g" *.el
 }
@@ -42,7 +42,7 @@ src_install() {
 	elisp_src_install
 	for subdir in ajdee aspectj-mode; do
 		insinto /usr/share/doc/${PF}/${subdir}
-		doins `find ${subdir} -type f ! -name \*.el`
+		doins $(find ${subdir} -type f ! -name \*.el)
 		dosym /usr/share/doc/${PF}/html/${subdir}.html \
 			/usr/share/emacs/site-lisp/${PN}/${subdir}.html
 	done
