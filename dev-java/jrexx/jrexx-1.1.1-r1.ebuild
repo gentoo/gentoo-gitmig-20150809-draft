@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrexx/jrexx-1.1.1-r1.ebuild,v 1.5 2007/09/02 20:23:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrexx/jrexx-1.1.1-r1.ebuild,v 1.6 2007/10/07 19:35:28 wltjr Exp $
 
 inherit java-pkg-2
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 HOMEPAGE="http://www.karneim.com/jrexx/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
 		app-arch/unzip
