@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.31 2007/10/07 02:32:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.32 2007/10/07 06:31:28 dirtyepic Exp $
+
+  07 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> autogen-5.9.2.ebuild:
+  inherit eutils for built_with_use
 
 *autogen-5.9.2 (07 Oct 2007)
 

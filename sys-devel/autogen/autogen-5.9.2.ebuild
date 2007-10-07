@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.9.2.ebuild,v 1.1 2007/10/07 02:32:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.9.2.ebuild,v 1.2 2007/10/07 06:31:28 dirtyepic Exp $
+
+inherit eutils
 
 DESCRIPTION="Program and text file generation"
 HOMEPAGE="http://www.gnu.org/software/autogen/"
