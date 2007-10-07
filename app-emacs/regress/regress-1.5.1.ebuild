@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/regress/regress-1.5.1.ebuild,v 1.2 2005/09/09 16:05:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/regress/regress-1.5.1.ebuild,v 1.3 2007/10/07 18:40:05 ulm Exp $
 
 inherit elisp eutils
 
@@ -17,5 +17,5 @@ SITEFILE=50regress-gentoo.el
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-regress.el-gentoo.patch
+	epatch "${FILESDIR}/${PV}-regress.el-gentoo.patch"
 }
