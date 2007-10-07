@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/mmm-mode-0.4.8-r1.ebuild,v 1.2 2007/07/04 23:10:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/mmm-mode-0.4.8-r1.ebuild,v 1.3 2007/10/07 22:41:57 ulm Exp $
 
 inherit elisp
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-SITEFILE=50mmm-mode-gentoo.el
+SITEFILE=50${PN}-gentoo.el
 
 src_compile() {
 	econf --host=${CHOST} \
@@ -26,8 +26,9 @@ src_compile() {
 }
 
 src_install() {
-	elisp-install ${PN} *.el *.elc
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+	elisp-install ${PN} *.el *.elc || die "elisp-install failed"
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
+		|| die "elisp-site-file-install failed"
 	doinfo *.info*
-	dodoc AUTHORS ChangeLog FAQ INSTALL NEWS README README.Mason TODO
+	dodoc AUTHORS ChangeLog FAQ NEWS README README.Mason TODO
 }
