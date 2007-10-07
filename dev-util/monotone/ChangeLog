@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.45 2007/07/02 10:12:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.46 2007/10/07 12:34:02 opfer Exp $
+
+*monotone-0.36 (07 Oct 2007)
+
+  07 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/monotone-0.36.initd, +monotone-0.36.ebuild:
+  version bump, fixes bug 193805; correct init file so bug 193935 gets fixed:
+  solution proposed by Dennis Schridde <lindevel@gmx.net>
 
 *monotone-0.35 (21 Jun 2007)
 
