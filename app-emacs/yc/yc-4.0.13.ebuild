@@ -1,22 +1,21 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-4.0.13.ebuild,v 1.4 2007/01/28 04:40:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-4.0.13.ebuild,v 1.5 2007/10/07 16:42:45 ulm Exp $
 
 inherit elisp
-
-IUSE=""
 
 DESCRIPTION="YC - Yet another Canna client on Emacsen."
 HOMEPAGE="http://www.ceres.dti.ne.jp/~knak/yc.html"
 SRC_URI="http://www.ceres.dti.ne.jp/~knak/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ppc x86"
+IUSE=""
 
-DEPEND="virtual/emacs
-	>=app-i18n/canna-3.6"
+DEPEND=">=app-i18n/canna-3.6"
 
-SITEFILE="50yc-gentoo.el"
+SITEFILE=50${PN}-gentoo.el
 
 src_compile() {
 	emake || die
@@ -24,10 +23,10 @@ src_compile() {
 
 src_install() {
 	elisp-install ${PN} *.el *.elc || die
-	elisp-site-file-install ${FILESDIR}/${SITEFILE} || die
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 	dobin icanna || die
-	newdoc ${FILESDIR}/sample.dot.emacs-4 sample.dot.emacs || die
-	dodoc ${FILESDIR}/sample.hosts.canna || die
+	newdoc "${FILESDIR}"/sample.dot.emacs-4 sample.dot.emacs || die
+	dodoc "${FILESDIR}"/sample.hosts.canna || die
 }
 
 pkg_postinst() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/yc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/ChangeLog,v 1.27 2007/01/28 04:40:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/ChangeLog,v 1.28 2007/10/07 16:42:45 ulm Exp $
+
+  07 Oct 2007; Ulrich Mueller <ulm@gentoo.org> yc-4.0.13.ebuild:
+  Remove redundant virtual/emacs dependency. Quote FILESDIR variable.
 
   28 Jan 2007; Marius Mauch <genone@gentoo.org> yc-4.0.13.ebuild:
   Replacing einfo with elog
