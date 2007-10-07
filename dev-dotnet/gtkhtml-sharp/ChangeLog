@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gtkhtml-sharp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.58 2007/04/24 16:09:13 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.59 2007/10/07 22:11:18 eva Exp $
+
+  07 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  gtkhtml-sharp-1.0.10.ebuild, gtkhtml-sharp-2.8.2.ebuild,
+  gtkhtml-sharp-2.16.0.ebuild:
+  stripping gtkhtml-3.0 dependency wrt to bug #193496
 
   24 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   gtkhtml-sharp-2.16.0.ebuild:
