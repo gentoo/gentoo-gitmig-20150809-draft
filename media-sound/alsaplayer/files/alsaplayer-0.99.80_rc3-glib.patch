@@ -1,0 +1,11 @@
+diff -ur alsaplayer-0.99.80-rc3.orig/configure.ac alsaplayer-0.99.80-rc3/configure.ac
+--- alsaplayer-0.99.80-rc3.orig/configure.ac	2007-09-05 22:55:29.000000000 +0300
++++ alsaplayer-0.99.80-rc3/configure.ac	2007-10-07 07:58:08.000000000 +0300
+@@ -62,7 +62,6 @@
+ AM_PROG_LIBTOOL
+ AM_PROG_CC_C_O
+ AC_PROG_MAKE_SET
+-AM_PATH_GLIB(1.2.6, have_glib=yes, have_glib=no)
+ AM_PATH_LIBMIKMOD(3.1.7, have_mikmod=yes, have_mikmod=no)
+ AM_PATH_OGG(have_ogg=yes, have_ogg=no)
+ AM_PATH_VORBIS(have_vorbis=yes, have_vorbis=no)

@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.62 2007/07/14 18:39:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.63 2007/10/07 05:12:25 drac Exp $
+
+*alsaplayer-0.99.80_rc3 (07 Oct 2007)
+
+  07 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  +files/alsaplayer-0.99.80_rc3-flags.patch,
+  +files/alsaplayer-0.99.80_rc3-glib.patch, +alsaplayer-0.99.80_rc3.ebuild:
+  Version bump with patch removing deprecated GLIB 1.2 check.
 
   14 Jul 2007; Samuli Suominen <drac@gentoo.org>
   +files/alsaplayer-0.99.80_rc1-amd64-flac-1.1.3.patch,
