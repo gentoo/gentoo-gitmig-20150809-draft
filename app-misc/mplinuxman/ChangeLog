@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/mplinuxman
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/ChangeLog,v 1.10 2007/02/21 22:36:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/ChangeLog,v 1.11 2007/10/07 15:15:42 drac Exp $
+
+*mplinuxman-1.5 (07 Oct 2007)
+
+  07 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  +files/mplinuxman-1.5-stringh.patch, +mplinuxman-1.5.ebuild:
+  Version bump for bug 190723, thanks to Arfrever Frehtes Taifersar Arahesis
+  for reporting.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
