@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/stalonetray
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/stalonetray/ChangeLog,v 1.2 2007/06/11 04:45:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stalonetray/ChangeLog,v 1.3 2007/10/07 09:36:17 lucass Exp $
+
+*stalonetray-0.7.3 (07 Oct 2007)
+
+  07 Oct 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -stalonetray-0.6.5.ebuild, +stalonetray-0.7.3.ebuild:
+  Version bump, bug #194758. Removed old version.
 
   11 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
   stalonetray-0.6.5.ebuild:

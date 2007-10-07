@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/stalonetray/stalonetray-0.6.5.ebuild,v 1.2 2007/06/11 04:45:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stalonetray/stalonetray-0.7.3.ebuild,v 1.1 2007/10/07 09:36:17 lucass Exp $
 
 DESCRIPTION="System tray utility including support for KDE system tray icons"
 HOMEPAGE="http://stalonetray.sourceforge.net/"
