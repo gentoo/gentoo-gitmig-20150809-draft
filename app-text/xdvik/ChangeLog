@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xdvik
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.39 2007/07/22 10:24:39 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.40 2007/10/07 08:57:51 opfer Exp $
+
+  07 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  xdvik-22.84.10.ebuild:
+  quote a lot of variables, plus add a pkg_postinst message how to activate
+  Emacs support, fixes bug 184259
 
   22 Jul 2007; Denis Dupeyron <calchan@gentoo.org> xdvik-22.40y-r2.ebuild,
   xdvik-22.84.5.ebuild:
