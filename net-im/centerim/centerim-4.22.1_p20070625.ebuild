@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.1_p20070625.ebuild,v 1.1 2007/09/08 20:31:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.1_p20070625.ebuild,v 1.2 2007/10/07 15:25:05 swegener Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ PROTOCOL_IUSE="aim gadu icq irc jabber lj msn rss yahoo"
 IUSE="${PROTOCOL_IUSE} bidi nls ssl crypt"
 
 DESCRIPTION="CenterIM is a fork of CenterICQ - a ncurses ICQ/Yahoo!/AIM/IRC/MSN/Jabber/GaduGadu/RSS/LiveJournal Client"
-SRC_URI="ftp://ftp.centerim.org/${PN}-${PV/*_p/}.tar.gz"
+SRC_URI="http://www.centerim.org/download/${PN}-${PV/*_p/}.tar.gz"
 HOMEPAGE="http://www.centerim.org/"
 SLOT="0"
 LICENSE="GPL-2"
