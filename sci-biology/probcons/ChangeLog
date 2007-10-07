@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/probcons
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/ChangeLog,v 1.6 2007/10/06 11:20:01 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/ChangeLog,v 1.7 2007/10/07 02:39:03 dberkholz Exp $
+
+  07 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>; probcons-1.12.ebuild:
+  Add needed quotes; don't specify the default for DESTTREE; add die messages.
 
 *probcons-1.12 (06 Oct 2007)
 
