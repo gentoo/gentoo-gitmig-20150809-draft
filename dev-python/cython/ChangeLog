@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.1 2007/10/06 09:22:57 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.2 2007/10/07 21:40:12 dev-zero Exp $
+
+  07 Oct 2007; Tiziano Müller <dev-zero@gentoo.org> cython-0.9.6.6.ebuild:
+  Added ~amd64 keyword
 
 *cython-0.9.6.6 (06 Oct 2007)
 

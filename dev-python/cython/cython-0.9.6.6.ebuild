@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.9.6.6.ebuild,v 1.1 2007/10/06 09:22:57 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.9.6.6.ebuild,v 1.2 2007/10/07 21:40:12 dev-zero Exp $
 
 NEED_PYTHON=2.2
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cython.org/${P}.tgz"
 
 LICENSE="PSF-2.4"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
 S="${WORKDIR}/Cython-${PV}"
