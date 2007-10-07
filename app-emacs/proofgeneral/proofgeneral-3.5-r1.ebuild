@@ -1,8 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.5-r1.ebuild,v 1.3 2007/07/03 07:30:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.5-r1.ebuild,v 1.4 2007/10/07 07:27:18 ulm Exp $
 
-SIMPLE_ELISP='nil'
 inherit elisp eutils
 
 MY_PN="ProofGeneral"
@@ -18,7 +17,7 @@ IUSE=""
 
 S="${WORKDIR}/${MY_PN}"
 
-SITEFILE=50proofgeneral-gentoo.el
+SITEFILE=50${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
@@ -31,7 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	emake install EMACS=emacs PREFIX=${D}/usr
+	emake install EMACS=emacs PREFIX="${D}"/usr
 
 	dohtml doc/*.html doc/*.jpg
 	doinfo doc/*.info*

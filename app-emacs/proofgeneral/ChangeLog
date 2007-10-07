@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/proofgeneral
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.13 2007/07/03 07:30:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.14 2007/10/07 07:27:18 ulm Exp $
+
+  07 Oct 2007; Ulrich Mueller <ulm@gentoo.org> proofgeneral-3.5.ebuild,
+  proofgeneral-3.5-r1.ebuild:
+  Remove redundant SIMPLE_ELISP and DEPEND=virtual/emacs. Quote some variables.
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   proofgeneral-3.5-r1.ebuild:
