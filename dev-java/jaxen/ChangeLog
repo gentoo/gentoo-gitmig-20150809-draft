@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.49 2007/09/28 21:45:22 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.50 2007/10/07 18:38:08 betelgeuse Exp $
+
+  07 Oct 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -files/jaxen-1.1_beta11-fix-jdk14-tests.patch, -files/MANIFEST.MF,
+  -files/build.xml.patch, -jaxen-1.1_beta11.ebuild:
+  Remove old beta version.
 
   28 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> jaxen-1.1.1.ebuild:
   Marked stable on amd64 as per bug 187614.
