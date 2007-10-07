@@ -5,4 +5,4 @@ dev-libs/cyrus-sasl java
 net-dns/avahi -python
 
 # nvidia-driver uses acpid
-x11-drivers/nvidia-driver -acpi
+x11-drivers/nvidia-drivers -acpi
