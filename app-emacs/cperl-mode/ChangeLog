@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/cperl-mode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cperl-mode/ChangeLog,v 1.5 2007/10/07 20:43:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cperl-mode/ChangeLog,v 1.6 2007/10/07 20:47:10 opfer Exp $
+
+*cperl-mode-5.23 (07 Oct 2007)
+
+  07 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  -cperl-mode-5.22.ebuild, +cperl-mode-5.23.ebuild:
+  version bump plus clean up
 
   07 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   cperl-mode-5.22.ebuild:
