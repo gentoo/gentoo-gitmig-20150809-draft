@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.0.ebuild,v 1.1 2007/10/03 21:37:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.0.ebuild,v 1.2 2007/10/07 13:13:57 eva Exp $
 
 DESCRIPTION="free, redistributable digital camera software application"
 HOMEPAGE="http://www.gphoto.org/"
@@ -15,7 +15,7 @@ IUSE="nls exif readline ncurses aalib"
 # aalib -> needs libjpeg
 RDEPEND=">=dev-libs/libusb-0.1.8
 	dev-libs/popt
-	>=media-libs/libgphoto2-2.3.1
+	>=media-libs/libgphoto2-2.4.0
 	ncurses? ( dev-libs/cdk )
 	aalib? ( media-libs/aalib
 		media-libs/jpeg )
