@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.19 2007/09/17 09:41:37 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.20 2007/10/07 21:58:17 jokey Exp $
 
 inherit eutils flag-o-matic linux-mod qt3 subversion toolchain-funcs
 
@@ -14,6 +14,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="nowrapper sdk vboxbfe vditool"
 
 RDEPEND="!app-emulation/virtualbox-bin
+	!app-emulation/virtualbox-additions
+	!app-emulation/virtualbox-modules
 	dev-libs/libIDL
 	>=dev-libs/libxslt-1.1.19
 	dev-libs/xalan-c

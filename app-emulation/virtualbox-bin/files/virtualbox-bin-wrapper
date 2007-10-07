@@ -13,12 +13,12 @@ if [ "$1" = shutdown ]; then
     exit 0
 fi
 
-[ "$VBOX_USER_HOME" = "" ] && VBOX_USER_HOME="$HOME/.VirtualBox"
+[ -z "$VBOX_USER_HOME" ] && VBOX_USER_HOME="$HOME/.VirtualBox"
 
 mkdir -p "$VBOX_USER_HOME"
 LOG="$VBOX_USER_HOME/VBoxSVC.log"
 
-if [[ -e /proc/modules && ! -e /dev/vboxdrv ]] ; then
+if [ -e /proc/modules -a ! -e /dev/vboxdrv ] ; then
 	echo "Error: vboxdrv kernel module is not loaded..."
 	echo "Please load the module before starting VirtualBox."
 	exit 1
@@ -36,7 +36,7 @@ fi
 
 export LD_LIBRARY_PATH="$INSTALL_DIR"
 
-if [ "$SERVER_PID" = "" ]; then
+if [ -z "$SERVER_PID" ]; then
 	rm -rf /tmp/.vbox-$USER-ipc
 	[ -f "$LOG.1" ] && mv "$LOG.1" "$LOG.2"
 	[ -f "$LOG.0" ] && mv "$LOG.0" "$LOG.1"
@@ -44,7 +44,7 @@ if [ "$SERVER_PID" = "" ]; then
 	/opt/VirtualBox/VBoxSVC --daemonize >"$LOG" 2>&1
 fi
 
-APP=$( which $0 )
+APP=$( command -v "$0" )
 APP=${APP##/*/}
 case "$APP" in
 	virtualbox)

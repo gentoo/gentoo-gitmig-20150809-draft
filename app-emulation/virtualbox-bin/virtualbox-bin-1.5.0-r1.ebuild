@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.0-r1.ebuild,v 1.1 2007/09/17 09:48:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.0-r1.ebuild,v 1.2 2007/10/07 22:01:12 jokey Exp $
 
 inherit eutils qt3 pax-utils
 
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="additions nowrapper sdk"
 
 RDEPEND="!app-emulation/virtualbox
+	!app-emulation/virtualbox-additions
 	~app-emulation/virtualbox-modules-${PV}
 	virtual/xft
 	x11-libs/libXi
