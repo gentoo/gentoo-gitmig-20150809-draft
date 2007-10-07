@@ -1,6 +1,10 @@
 # ChangeLog for media-video/camorama
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.13 2007/02/04 18:49:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.14 2007/10/07 05:33:46 drac Exp $
+
+  07 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  +files/camorama-0.18-nls.patch, camorama-0.18.ebuild:
+  Apply patch from Debian fixing nls related build error.
 
   04 Feb 2007; Andrej Kacian <ticho@gentoo.org> camorama-0.18.ebuild:
   Stable on x86, bug #165238.

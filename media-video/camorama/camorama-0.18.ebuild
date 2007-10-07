@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/camorama-0.18.ebuild,v 1.5 2007/02/04 18:49:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/camorama-0.18.ebuild,v 1.6 2007/10/07 05:33:46 drac Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="A GNOME 2 Webcam application featuring various image filters."
 HOMEPAGE="http://camorama.fixedgear.org/"
@@ -25,3 +25,9 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 SCROLLKEEPER_UPDATE="0"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-nls.patch
+}
