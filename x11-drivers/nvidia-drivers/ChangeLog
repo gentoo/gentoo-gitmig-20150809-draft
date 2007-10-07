@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.65 2007/10/01 14:00:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.66 2007/10/07 15:24:41 cardoe Exp $
+
+  07 Oct 2007; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-71.86.01.ebuild, nvidia-drivers-96.43.01.ebuild,
+  nvidia-drivers-100.14.19.ebuild:
+  nvidia-driver uses ACPI if it's installed. Add USE based dep on it.
 
   01 Oct 2007; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-100.14.09.ebuild, nvidia-drivers-100.14.11.ebuild:
