@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.12 2007/07/13 07:25:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.13 2007/10/07 07:17:32 ulm Exp $
 
 inherit elisp eutils
 
@@ -17,13 +17,11 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 ppc ppc64 sparc x86"
 IUSE="canna"
 
-DEPEND="virtual/emacs
-	app-arch/gzip
+DEPEND="app-arch/gzip
 	>=sys-apps/sed-4"
-RDEPEND="virtual/emacs
-	canna? ( app-i18n/canna )"
+RDEPEND="canna? ( app-i18n/canna )"
 
-SITEFILE=50tamago-gentoo.el
+SITEFILE=50${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -40,12 +38,12 @@ src_compile() {
 
 src_install() {
 	dodir ${SITELISP}/${PN}
-	emake prefix=${D}/usr \
-		infodir=${D}/usr/share/info \
-		elispdir=${D}/${SITELISP}/${PN} \
-		etcdir=${D}/usr/share/${PN}  install || die
+	emake prefix="${D}"/usr \
+		infodir="${D}"/usr/share/info \
+		elispdir="${D}"/${SITELISP}/${PN} \
+		etcdir="${D}"/usr/share/${PN}  install || die
 
-	cp ${FILESDIR}/${SITEFILE} ${SITEFILE}
+	cp "${FILESDIR}/${SITEFILE}" ${SITEFILE}
 	if use canna ; then
 		cat >>${SITEFILE}<<-EOF
 		(set-language-info "Japanese" 'input-method "japanese-egg-canna")
@@ -61,9 +59,9 @@ src_install() {
 pkg_postinst() {
 	elisp-site-regen
 
-	if ! grep -q inet ${ROOT}/etc/conf.d/canna && use canna ; then
+	if ! grep -q inet "${ROOT}"/etc/conf.d/canna && use canna ; then
 		sed -i -e '/CANNASERVER_OPTS/s/"\(.*\)"/"\1 -inet"/' \
-			${ROOT}/etc/conf.d/canna
+			"${ROOT}"/etc/conf.d/canna
 
 		ewarn
 		ewarn "Enabled inet domain socket for tamago."
