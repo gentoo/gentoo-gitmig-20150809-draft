@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.30 2007/07/06 14:52:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.31 2007/10/07 02:32:05 vapier Exp $
+
+*autogen-5.9.2 (07 Oct 2007)
+
+  07 Oct 2007; Mike Frysinger <vapier@gentoo.org> +autogen-5.9.2.ebuild:
+  Version bump #186933 by Elias Pipping.
 
   06 Jul 2007; Raúl Porcel <armin76@gentoo.org> autogen-5.8.8.ebuild:
   alpha stable
