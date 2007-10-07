@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.70 2007/10/06 20:13:25 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.71 2007/10/07 15:54:46 dirtyepic Exp $
+
+  07 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> xosd-2.2.14-r1.ebuild:
+  Remove gtk+ dependency for bug #194964 by Dan Andresan.
 
   06 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> xosd-2.2.14-r1.ebuild:
   Fix dependencies for bug #153579, quoting and clean-up. Maintainer-needed
