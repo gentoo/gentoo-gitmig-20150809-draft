@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/binclock
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/binclock/ChangeLog,v 1.11 2007/04/20 21:59:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/binclock/ChangeLog,v 1.12 2007/10/07 18:29:43 opfer Exp $
+
+  07 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  binclock-1.7-r1.ebuild:
+  stable x86, bug 195016
 
 *binclock-1.7-r1 (20 Apr 2007)
 
