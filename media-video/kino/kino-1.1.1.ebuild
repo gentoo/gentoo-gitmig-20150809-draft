@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.1.1.ebuild,v 1.1 2007/08/30 08:08:57 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.1.1.ebuild,v 1.2 2007/10/07 18:59:38 calchan Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -36,24 +36,39 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix to link with --as-needed
-	sed -i -e 's:LIBS="-lXext:LIBS="-lXext -lX11:' configure || die "sed failed!"
+	sed -i -e 's:LIBS="-lXext:LIBS="-lXext -lX11:' configure || die "sed failed"
+
 	# Deactivating automagic alsa configuration, bug #134725
 	if ! use alsa ; then
-		sed -i -e "s:HAVE_ALSA 1:HAVE_ALSA 0:" configure || die "sed failed!"
+		sed -i -e "s:HAVE_ALSA 1:HAVE_ALSA 0:" configure || die "sed failed"
 	fi
+
 	# Fix bug #169590
 	sed -i \
 		-e '/\$(LIBQUICKTIME_LIBS) \\/d' \
 		-e '/^[[:space:]]*\$(SRC_LIBS)/ a\
 	\$(LIBQUICKTIME_LIBS) \\' \
-		src/Makefile.in
+		src/Makefile.in || die "sed failed"
+
 	# Fix bug #172687
 	sed -i \
 		-e 's/^install-exec-local:/install-exec-local: install-binPROGRAMS/' \
-		src/Makefile.in
+		src/Makefile.in || die "sed failed"
+
+	# Fix test failure discovered in bug #193947
+	sed -i -e '$a\
+\
+ffmpeg/libavcodec/ps2/idct_mmi.c\
+ffmpeg/libavcodec/sparc/dsputil_vis.c\
+ffmpeg/libavcodec/sparc/vis.h\
+ffmpeg/libavutil/bswap.h\
+ffmpeg/libswscale/yuv2rgb_template.c\
+src/export.h\
+src/message.cc\
+src/page_bttv.cc' po/POTFILES.in || die "sed failed"
 }
 
 src_compile() {
@@ -68,7 +83,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "Installation failed"
+	emake DESTDIR="${D}" install || die "Installation failed"
 	dodoc AUTHORS BUGS ChangeLog NEWS README* TODO
 	# Fix bug #177378
 	fowners root:root -R /usr/share/kino/help
