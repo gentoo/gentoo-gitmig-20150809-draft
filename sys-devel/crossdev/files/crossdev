@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.98 2007/10/06 13:44:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.99 2007/10/07 02:00:27 vapier Exp $
 
 cd /
 umask 0022 #159111
@@ -146,7 +146,6 @@ parse_target() {
 	case ${CTARGET} in
 		avr*) KPKG="[none]"; STAGE_DEFAULT=${STAGE_LIBC};
 		      LCAT="dev-embedded"; LPKG="avr-libc";
-		      GVER="3.4.6"; BVER="2.16.1-r3";
 		      GUSE=${GUSE_DISABLE};;
 
 		mingw*|*-mingw*)
