@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/boson
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.29 2007/03/13 01:32:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.30 2007/10/07 20:21:12 opfer Exp $
+
+  07 Oct 2007; Christian Faulhammer <opfer@gentoo.org> boson-0.13.ebuild:
+  stable x86, bug 195007
 
   13 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> boson-0.13.ebuild:
   Change which to type -P for QA.
