@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/scourge
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.28 2007/10/05 17:56:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.29 2007/10/07 21:27:26 mr_bones_ Exp $
+
+  07 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org> scourge-0.19.ebuild:
+  add sdl-ttf to the deps for bug #195011
 
 *scourge-0.19 (05 Oct 2007)
 
