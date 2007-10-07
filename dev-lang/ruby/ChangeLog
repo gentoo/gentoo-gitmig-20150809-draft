@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.301 2007/10/07 14:49:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.302 2007/10/07 16:22:19 dertobi123 Exp $
+
+  07 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  ruby-1.8.6_p110-r1.ebuild:
+  ppc stable, bug #194236
 
   07 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   ruby-1.8.6_p110-r1.ebuild:
