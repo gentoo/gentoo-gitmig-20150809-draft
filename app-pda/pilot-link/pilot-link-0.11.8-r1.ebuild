@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8-r1.ebuild,v 1.19 2007/09/18 21:04:18 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8-r1.ebuild,v 1.20 2007/10/07 17:15:16 philantrop Exp $
 
 inherit perl-module eutils
 
@@ -88,7 +88,7 @@ src_install() {
 	dodoc ChangeLog README doc/README* doc/TODO NEWS AUTHORS
 
 	if use perl ; then
-		cd ${S}/bindings/Perl
+		cd "${S}/bindings/Perl"
 		perl-module_src_install
 	fi
 }

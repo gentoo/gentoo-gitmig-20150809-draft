@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8.ebuild,v 1.16 2006/11/28 17:34:39 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8.ebuild,v 1.17 2007/10/07 17:15:16 philantrop Exp $
 
 inherit perl-module eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="perl java tk python png readline"
 
-DEPEND="virtual/libc
-	sys-libs/ncurses
+DEPEND="sys-libs/ncurses
 	perl? ( dev-lang/perl )
 	java? ( virtual/jre )
 	tk? ( dev-lang/tcl dev-tcltk/itcl dev-lang/tk )
@@ -24,7 +23,7 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-java_install_all.patch
+	epatch "${FILESDIR}/${P}-java_install_all.patch"
 }
 
 src_compile() {
@@ -57,19 +56,19 @@ src_compile() {
 	make || die
 
 	if use perl ; then
-		cd ${S}/bindings/Perl
+		cd "${S}/bindings/Perl"
 		perl-module_src_prep
 		perl-module_src_compile
 	fi
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc ChangeLog README doc/README* doc/TODO NEWS AUTHORS
 
 	if use perl ; then
-		cd ${S}/bindings/Perl
+		cd "${S}/bindings/Perl"
 		perl-module_src_install
 	fi
 }

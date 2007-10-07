@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.2.ebuild,v 1.1 2007/08/25 19:17:04 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.2.ebuild,v 1.2 2007/10/07 17:15:16 philantrop Exp $
 
 inherit perl-module java-pkg-opt-2 eutils autotools
 
@@ -43,6 +43,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-readline.patch"
 	epatch "${FILESDIR}/${P}-threads.patch"
 
+	# Upstream's check for Werror was wrong. Fxies bug 194921.
+	epatch "${FILESDIR}/${P}-werror_194921.patch"
+
 	# Some Java fixes.
 	if use java ; then
 		epatch "${FILESDIR}/${P}-java-compile.patch"
@@ -59,6 +62,7 @@ src_compile() {
 		--enable-conduits \
 		--with-tcl=no \
 		--without-included-popt \
+		--disable-compile-werror \
 		$(use_enable threads) \
 		$(use_enable usb libusb) \
 		$(use_enable debug) \
