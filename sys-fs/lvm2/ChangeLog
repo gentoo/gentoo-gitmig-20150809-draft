@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.108 2007/10/04 16:06:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.109 2007/10/08 21:11:15 robbat2 Exp $
+
+*lvm2-2.02.28-r2 (08 Oct 2007)
+
+  08 Oct 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/lvm.confd-2.02.28-r2, +files/lvm.rc-2.02.28-r2,
+  +files/lvm2-start.sh-2.02.28-r2, +lvm2-2.02.28-r2.ebuild:
+  LVM should come up after modules and mdraid. If you want to have a MD device
+  on top of LVM go and edit conf.d/lvm. Also ensure that all PVs are found
+  before starting the vgscan.
 
 *lvm2-2.02.28-r1 (04 Oct 2007)
 
