@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.0_rc2.ebuild,v 1.1 2007/10/08 13:16:42 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.0_rc2.ebuild,v 1.2 2007/10/08 14:56:00 mr_bones_ Exp $
 
 inherit fortran flag-o-matic
 
@@ -52,7 +52,6 @@ src_compile() {
 	then
 		myconf="${myconf} --with-fft=-lfftw3"
 	fi
-
 
 	if use minimal; then
 		myconf="${myconf} --disable-comm --disable-fixed --disable-optim --disable-protocol --disable-signal --disable-srccode"
