@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0-r1.ebuild,v 1.1 2007/10/06 14:02:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.13.0-r1.ebuild,v 1.2 2007/10/08 11:20:01 bicatali Exp $
 
 inherit eutils elisp-common
 
@@ -147,7 +147,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "einstall failed"
+	einstall emacsdir="${D}${SITELISP}/${PV}" || die "einstall failed"
 
 	use tk && make_desktop_entry xmaxima xmaxima \
 		/usr/share/${PN}/${PV}/xmaxima/maxima-new.png \
