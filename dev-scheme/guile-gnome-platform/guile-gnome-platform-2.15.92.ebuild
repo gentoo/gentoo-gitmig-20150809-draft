@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.15.92.ebuild,v 1.1 2007/06/06 23:17:29 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.15.92.ebuild,v 1.2 2007/10/08 15:48:15 calchan Exp $
 
 inherit eutils autotools multilib
 
@@ -38,7 +38,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die "configure failed"
+	econf --disable-Werror || die "configure failed"
 	emake \
 		guilegnomedir=/usr/share/guile/site \
 		guilegnomelibdir=/usr/$(get_libdir) \
