@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX vdr-remoteosd-0.0.1-include.patch 422 RMD160 106ff00845a73ccb16a03e89c786dd282dd9c6af SHA1 b18855a1486db150a1c7fb4a5a24a5c5de8af78b SHA256 337189cce7aac145c1a4c8e919e8593923c06957a128b89958867801b7d27f90
 MD5 7895ca3c20b23f4414fcc99aeed15f5a files/vdr-remoteosd-0.0.1-include.patch 422
 RMD160 106ff00845a73ccb16a03e89c786dd282dd9c6af files/vdr-remoteosd-0.0.1-include.patch 422
@@ -15,10 +12,10 @@ EBUILD vdr-remoteosd-0.0.1.ebuild 559 RMD160 171f487a8a5a3d38eebacf8516826d642fc
 MD5 1fc381bc8677875b5fd21def9f68c148 vdr-remoteosd-0.0.1.ebuild 559
 RMD160 171f487a8a5a3d38eebacf8516826d642fc28521 vdr-remoteosd-0.0.1.ebuild 559
 SHA256 250dd318ffabaccf674c1e019e65f9e45ca10249f96ace7893456bb42496cf5e vdr-remoteosd-0.0.1.ebuild 559
-EBUILD vdr-remoteosd-0.0.2.ebuild 742 RMD160 bc6d9f1cdd2c524b584250ee57b5c29bb038ad81 SHA1 34f7d853e119c2caa464cb5059a209996fe16dc2 SHA256 396c7fd7532ff93b975d75b4e48894a09fd40600fa125dffe879c0ff367efc1a
-MD5 c7f86ff1e532eddee0705983519fa071 vdr-remoteosd-0.0.2.ebuild 742
-RMD160 bc6d9f1cdd2c524b584250ee57b5c29bb038ad81 vdr-remoteosd-0.0.2.ebuild 742
-SHA256 396c7fd7532ff93b975d75b4e48894a09fd40600fa125dffe879c0ff367efc1a vdr-remoteosd-0.0.2.ebuild 742
+EBUILD vdr-remoteosd-0.0.2.ebuild 746 RMD160 a2571d6de3ad4118c41e3aadd6380ea501a54958 SHA1 e1beead49953b085a1b22eb43ce5386292f9d54c SHA256 844782e055165be2e1c285533daccf67da268e744012416387cc45f7bcca94d0
+MD5 50c3ae870e4dbe9c5e8189a83659d01f vdr-remoteosd-0.0.2.ebuild 746
+RMD160 a2571d6de3ad4118c41e3aadd6380ea501a54958 vdr-remoteosd-0.0.2.ebuild 746
+SHA256 844782e055165be2e1c285533daccf67da268e744012416387cc45f7bcca94d0 vdr-remoteosd-0.0.2.ebuild 746
 MISC ChangeLog 683 RMD160 cb8de29f1276bc1a5a271dc0091dad082bcf7304 SHA1 ff7775141d4c9ba79972aa5ed8a08a2bf02a1e90 SHA256 28bccf9923c57d1db7d2360893bac3ba5a5104dae5a8baa43f18878fe7d8e176
 MD5 e524136bc2bd4c811a2492d379607d6b ChangeLog 683
 RMD160 cb8de29f1276bc1a5a271dc0091dad082bcf7304 ChangeLog 683
@@ -33,10 +30,3 @@ SHA256 587ba190a951bc6831db68963340798546a5c8df9823b04b5e6b8c765d2f98b2 files/di
 MD5 430a89cda34fae2610dbbaa219de90ba files/digest-vdr-remoteosd-0.0.2 247
 RMD160 eda94a3666cf98afed1edacafc453f9b87a9fb38 files/digest-vdr-remoteosd-0.0.2 247
 SHA256 4da51763d1e82e2fef779914f216d651ef67617795bce8744a439ee5c22bb878 files/digest-vdr-remoteosd-0.0.2 247
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHCMFAt2vP6XvVdOcRAkv5AJ4iTLoEHSzlmcAgx+LErkoP0XVVxgCfXNTi
-nKfpGlnZiIaNJpv1ZL/tDGg=
-=zeiw
------END PGP SIGNATURE-----
