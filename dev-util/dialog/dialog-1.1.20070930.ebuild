@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20070930.ebuild,v 1.1 2007/10/06 15:58:57 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20070930.ebuild,v 1.2 2007/10/08 17:59:52 truedfx Exp $
 
 inherit eutils
 
@@ -13,10 +13,12 @@ SRC_URI="ftp://invisible-island.net/${PN}/${PN}-${MY_PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="examples unicode"
+IUSE="examples nls unicode"
 
-DEPEND=">=app-shells/bash-2.04-r3
+RDEPEND=">=app-shells/bash-2.04-r3
 	>=sys-libs/ncurses-5.2-r5"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
 	if use unicode && ! built_with_use sys-libs/ncurses unicode; then
@@ -30,7 +32,8 @@ pkg_setup() {
 
 src_compile() {
 	use unicode && ncursesw="w"
-	econf "--with-ncurses${ncursesw}" || die "configure failed"
+	econf $(use_enable nls) \
+		"--with-ncurses${ncursesw}" || die "configure failed"
 	emake || die "build failed"
 }
 
