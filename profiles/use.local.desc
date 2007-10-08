@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3069 2007/10/08 12:59:01 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3070 2007/10/08 15:19:42 zzam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1253,6 +1253,7 @@ media-video/vdr:livebuffer - does timeshifting/background recording all the time
 media-video/vdr:lnbshare - Enables support for two or more dvb cards sharing the same cable to the lnb
 media-video/vdr:lnbsharing - Enables support for two or more dvb cards sharing the cable to the lnb
 media-video/vdr:mainmenuhooks - Allows to replace main menu entries by some special plugins (like epgsearch, extrecmenu, ...)
+media-video/vdr:menuorg - Enables support for the menuorg-plugin
 media-video/vdr:noepg - Adds code to selectively disable epg-reception for specific channels
 media-video/vdr:osdmaxitems - Support for text2skin
 media-video/vdr:pinplugin - Support for pin plugin
