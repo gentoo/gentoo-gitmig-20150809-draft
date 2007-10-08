@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.6.1.ebuild,v 1.2 2007/10/01 02:01:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.6.1.ebuild,v 1.3 2007/10/08 20:22:39 coldwind Exp $
 
-inherit kde-functions qt3 multilib
+inherit kde-functions qt3 multilib eutils
 
 DESCRIPTION="cd/dvd quality checker for a variety of drives"
 HOMEPAGE="http://qpxtool.sourceforge.net/"
@@ -26,5 +26,7 @@ src_unpack() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
+	newicon qpxtool-gui/img/q.xpm ${PN}.xpm
+	make_desktop_entry ${PN} Qpxtool ${PN}.xpm "Utility;Qt;DiscBurning"
 	dodoc AUTHORS ChangeLog README TODO
 }
