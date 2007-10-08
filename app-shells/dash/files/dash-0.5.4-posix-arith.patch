@@ -205,7 +205,7 @@ diff -ur a/src/arith_yylex.c b/src/arith_yylex.c
 +			if (*++buf == 'x')
 +				yylval.l_value = strtoll(buf+1, (char **)&arith_buf, 16);
 +			else
-+				yylval.l_value = strtoll(buf+1, (char **)&arith_buf, 8);
++				yylval.l_value = strtoll(buf, (char **)&arith_buf, 8);
 +			if (isalnum(*arith_buf) || *arith_buf == '_')
 +				sh_error("arith: value does not fit base: \"%s\"", arith_buf);
 +			return ARITH_NUM;
