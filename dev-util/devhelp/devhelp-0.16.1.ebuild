@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.16.1.ebuild,v 1.1 2007/10/08 20:23:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.16.1.ebuild,v 1.2 2007/10/08 22:24:27 eva Exp $
 
 inherit toolchain-funcs gnome2
 
@@ -17,7 +17,6 @@ RDEPEND=">=gnome-base/gconf-2.6
 	>=dev-libs/glib-2.8
 	>=gnome-base/libglade-2.4
 	>=x11-libs/libwnck-2.10
-	sparc? ( >=www-client/mozilla-firefox-1.0.2-r1 )
 	||	(
 			xulrunner? ( net-libs/xulrunner )
 			>=www-client/mozilla-firefox-1.0.2-r1
