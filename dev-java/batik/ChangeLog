@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.49 2007/05/08 14:23:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.50 2007/10/08 16:43:25 opfer Exp $
+
+  08 Oct 2007; Christian Faulhammer <opfer@gentoo.org> batik-1.6-r3.ebuild:
+  stable x86, bug 195048
 
   08 May 2007; Raúl Porcel <armin76@gentoo.org> batik-1.6-r3.ebuild:
   Add ~ia64 wrt #177466
