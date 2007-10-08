@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r4.ebuild,v 1.2 2007/09/13 06:05:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r4.ebuild,v 1.3 2007/10/08 14:14:33 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -142,7 +142,7 @@ EOT
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	ebegin "Changing pathes for gentoo"
 
@@ -208,9 +208,9 @@ src_unpack() {
 			# (or have them already hard enabled)
 			local IGNORE_PATCHES="channelscan pluginapi pluginmissing"
 
-			extensions_all_defines > ${T}/new.IUSE
-			echo $IUSE_EXTENSIONS $IGNORE_PATCHES|tr ' ' '\n' |sort > ${T}/old.IUSE
-			local DIFFS=$(diff -u ${T}/old.IUSE ${T}/new.IUSE|grep '^[+-][^+-]')
+			extensions_all_defines > "${T}"/new.IUSE
+			echo $IUSE_EXTENSIONS $IGNORE_PATCHES|tr ' ' '\n' |sort > "${T}"/old.IUSE
+			local DIFFS=$(diff -u "${T}"/old.IUSE "${T}"/new.IUSE|grep '^[+-][^+-]')
 			if [[ -z ${DIFFS} ]]; then
 				einfo "IUSE_EXTENSIONS is up to date."
 			else
@@ -266,7 +266,7 @@ src_unpack() {
 	fi
 
 	if [[ -n "${VDRSOURCE_DIR}" ]]; then
-		cp -r ${S} ${T}/source-tree
+		cp -r "${S}" "${T}"/source-tree
 	fi
 
 	if ! use vanilla; then
@@ -274,7 +274,7 @@ src_unpack() {
 			CAP_VFAT_RUNTIME_PARAM \
 			CAP_CHUID
 
-		echo -e ${CAPS} > ${CAP_FILE}
+		echo -e ${CAPS} > "${CAP_FILE}"
 	fi
 }
 
@@ -292,20 +292,20 @@ src_install() {
 	newdoc ${EXT_DIR}/README README.extensions-patch
 
 	insinto /usr/share/vdr
-	doins ${CAP_FILE}
+	doins "${CAP_FILE}"
 
 	if [[ -n "${VDRSOURCE_DIR}" ]]; then
 		einfo "Installing sources"
-		insinto ${VDRSOURCE_DIR}/${P}
-		doins -r ${T}/source-tree/*
-		keepdir ${VDRSOURCE_DIR}/${P}/PLUGINS/lib
+		insinto "${VDRSOURCE_DIR}"/${P}
+		doins -r "${T}"/source-tree/*
+		keepdir "${VDRSOURCE_DIR}"/${P}/PLUGINS/lib
 	fi
 
 	if use setup; then
 		insinto /usr/share/vdr/setup
-		doins ${S}/menu.c
+		doins "${S}"/menu.c
 	fi
-	chown -R vdr:vdr ${D}/${CONF_DIR}
+	chown -R vdr:vdr "${D}"/${CONF_DIR}
 }
 
 pkg_postinst() {

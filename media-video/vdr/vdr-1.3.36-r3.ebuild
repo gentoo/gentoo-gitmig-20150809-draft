@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r3.ebuild,v 1.10 2007/07/30 11:00:46 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.36-r3.ebuild,v 1.11 2007/10/08 14:14:33 zzam Exp $
 
 inherit eutils
 
@@ -113,7 +113,7 @@ src_unpack() {
 		PATCHSET_DIR=${WORKDIR}/${PATCHSET_NAME}
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	ebegin "Changing pathes for gentoo"
 	sed -e 's-$(DVBDIR)/include-$(DVBDIR)-' -i Makefile
@@ -146,14 +146,14 @@ src_unpack() {
 	fi
 
 	if [[ -n "${VDRSOURCE_DIR}" ]]; then
-		cp -r ${S} ${T}/source-tree
+		cp -r "${S}" "${T}"/source-tree
 	fi
 
 	add_cap CAP_IRCTRL_RUNTIME_PARAM \
 		CAP_VFAT_RUNTIME_PARAM \
 		CAP_SHUTDOWN_SVDRP
 
-	echo -e ${CAPS} > ${CAP_FILE}
+	echo -e ${CAPS} > "${CAP_FILE}"
 }
 
 src_install() {
@@ -173,7 +173,7 @@ src_install() {
 	insinto ${CONF_DIR}
 	doins *.conf channels.conf.*
 
-	chown -R vdr:vdr ${D}/${CONF_DIR}
+	chown -R vdr:vdr "${D}"/${CONF_DIR}
 	keepdir "${PLUGIN_LIB_DIR}"
 
 	doman vdr.1 vdr.5
@@ -183,18 +183,18 @@ src_install() {
 	dodoc TODO-enAIO-rm CONTRIBUTORS
 
 	insinto ${RC_DIR}
-	doins ${CAP_FILE}
+	doins "${CAP_FILE}"
 
 	if [[ -n "${VDRSOURCE_DIR}" ]]; then
 		elog "Installing sources"
-		insinto ${VDRSOURCE_DIR}/${P}
-		doins -r ${T}/source-tree/*
-		keepdir ${VDRSOURCE_DIR}/${P}/PLUGINS/lib
+		insinto "${VDRSOURCE_DIR}"/${P}
+		doins -r "${T}"/source-tree/*
+		keepdir "${VDRSOURCE_DIR}"/${P}/PLUGINS/lib
 	fi
 
 	if use setup-plugin; then
 		insinto /usr/share/vdr/setup
-		doins ${S}/menu.c
+		doins "${S}"/menu.c
 	fi
 }
 

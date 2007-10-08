@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.1-r2.ebuild,v 1.9 2007/07/30 11:00:46 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.1-r2.ebuild,v 1.10 2007/10/08 14:14:33 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -132,7 +132,7 @@ src_unpack() {
 		fi
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	ebegin "Changing pathes for gentoo"
 	sed -e 's-$(DVBDIR)/include-$(DVBDIR)-' -i Makefile
@@ -174,7 +174,7 @@ src_unpack() {
 	fi
 
 	if [[ -n "${VDRSOURCE_DIR}" ]]; then
-		cp -r ${S} ${T}/source-tree
+		cp -r "${S}" "${T}"/source-tree
 	fi
 
 	if ! use vanilla; then
@@ -183,7 +183,7 @@ src_unpack() {
 			CAP_SHUTDOWN_SVDRP \
 			CAP_CHUID
 
-		echo -e ${CAPS} > ${CAP_FILE}
+		echo -e ${CAPS} > "${CAP_FILE}"
 	fi
 }
 
@@ -214,23 +214,23 @@ src_install() {
 	dodoc TODO-enAIO-rm CONTRIBUTORS
 
 	insinto /usr/share/vdr
-	doins ${CAP_FILE}
+	doins "${CAP_FILE}"
 
 	if [[ -n "${VDRSOURCE_DIR}" ]]; then
 		elog "Installing sources"
-		insinto ${VDRSOURCE_DIR}/${P}
-		doins -r ${T}/source-tree/*
-		keepdir ${VDRSOURCE_DIR}/${P}/PLUGINS/lib
+		insinto "${VDRSOURCE_DIR}"/${P}
+		doins -r "${T}"/source-tree/*
+		keepdir "${VDRSOURCE_DIR}"/${P}/PLUGINS/lib
 	fi
 
 	if use setup-plugin; then
 		insinto /usr/share/vdr/setup
-		doins ${S}/menu.c
+		doins "${S}"/menu.c
 
 		insinto /etc/vdr/plugins/setup
-		newins ${FILESDIR}/vdr-setup-menu-0.2.3.xml vdr-menu.xml
+		newins "${FILESDIR}"/vdr-setup-menu-0.2.3.xml vdr-menu.xml
 	fi
-	chown -R vdr:vdr ${D}/${CONF_DIR}
+	chown -R vdr:vdr "${D}"/${CONF_DIR}
 }
 
 pkg_postinst() {
