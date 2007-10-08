@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/emacs-jabber-0.7-r1.ebuild,v 1.4 2007/07/02 14:20:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/emacs-jabber-0.7-r1.ebuild,v 1.5 2007/10/08 15:07:05 opfer Exp $
 
 inherit elisp
 
@@ -19,7 +19,7 @@ IUSE="sasl"
 # includes gnus-5.9
 
 DEPEND=">=virtual/gnus-5.10
-	sasl? ( app-emacs/flim )"
+	sasl? ( virtual/flim )"
 RDEPEND="${DEPEND}"
 
 SITEFILE=70${PN}-gentoo.el

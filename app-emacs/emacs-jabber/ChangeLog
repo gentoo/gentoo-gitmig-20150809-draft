@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-jabber
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.13 2007/08/22 22:13:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.14 2007/10/08 15:07:05 opfer Exp $
+
+  08 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  emacs-jabber-0.7-r1.ebuild:
+  change DEPEND to virtual/flim not app-emacs/flim
 
   22 Aug 2007; Ulrich Mueller <ulm@gentoo.org> emacs-jabber-0.7.1.ebuild:
   Partly undo change of 20 Jun 2007 to fix build with USE=-sasl, bug #187520.
