@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.45.ebuild,v 1.4 2007/06/26 01:32:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.45.ebuild,v 1.5 2007/10/08 16:49:19 grobian Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src_all.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="static doc"
 
 S=${WORKDIR}/${PN}_${PV}
@@ -28,9 +28,6 @@ src_unpack() {
 	if use amd64; then
 		ewarn "Using suboptimal -fPIC upstream makefile due to amd64 being detected. See #126722"
 		cp -f makefile.linux_amd64 makefile.machine
-	elif use ppc-macos; then
-		# Mac OS X needs this special makefile, because it has a non-GNU linker
-		cp -f makefile.macosx makefile.machine
 	elif use x86-fbsd; then
 		# FreeBSD needs this special makefile, because it hasn't -ldl
 		sed -e 's/-lc_r/-pthread/' makefile.freebsd > makefile.machine
