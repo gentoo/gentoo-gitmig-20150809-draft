@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.3.ebuild,v 1.9 2007/10/08 14:14:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.3.ebuild,v 1.10 2007/10/08 14:21:10 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -32,7 +32,7 @@ RDEPEND="${DEPEND}
 	!vanilla? ( >=media-tv/gentoo-vdr-scripts-0.3.5 )"
 
 # pull in vdr-setup to get the xml files, else menu will not work
-PDEPEND="setup-plugin? ( media-plugins/vdr-setup )"
+PDEPEND="setup-plugin? ( >=media-plugins/vdr-setup-0.3.1-r1 )"
 
 # Relevant Pathes for vdr on gentoo
 DVB_DIR=/usr/include
@@ -226,9 +226,6 @@ src_install() {
 	if use setup-plugin; then
 		insinto /usr/share/vdr/setup
 		doins "${S}"/menu.c
-
-		insinto /etc/vdr/plugins/setup
-		newins "${FILESDIR}"/vdr-setup-menu-0.2.3.xml vdr-menu.xml
 	fi
 	chown -R vdr:vdr "${D}"/${CONF_DIR}
 }
