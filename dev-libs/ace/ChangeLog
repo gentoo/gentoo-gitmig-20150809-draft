@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.51 2007/10/07 19:52:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.52 2007/10/08 09:06:40 dragonheart Exp $
+
+  08 Oct 2007; Daniel Black <dragonheart@gentoo.org> ace-5.5-r1.ebuild,
+  -ace-5.5.8.ebuild, ace-5.6.1.ebuild:
+  fix memory exhaustion on compile - bug #192768. Fix bad defines bug #192676
+  thanks Alin N?stac. added get_libdir and warning thanks Donnie. removed
+  ace-5.5.8 because it was old.
 
 *ace-5.6.1 (07 Oct 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5-r1.ebuild,v 1.9 2007/07/22 08:33:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5-r1.ebuild,v 1.10 2007/10/08 09:06:40 dragonheart Exp $
 
 inherit eutils
 
@@ -28,7 +28,10 @@ src_compile() {
 	export ACE_ROOT="${S}"
 	mkdir build
 	cd build
-	ECONF_SOURCE="${S}"
+
+	export ace_cv_new_throws_bad_alloc_exception="yes"
+
+	ECONF_SOURCE=${S}
 	econf --enable-lib-all $(use_with X) $(use_enable ipv6) $(use_with tao) || \
 		die "econf died"
 	# --with-qos needs ACE_HAS_RAPI
@@ -36,14 +39,15 @@ src_compile() {
 }
 
 src_test() {
-	cd ${S}/build
-	make ACE_ROOT=${S} check || die "self test failed"
+	cd "${S}"/build
+	make ACE_ROOT="${S}" check || die "self test failed"
 	#einfo "src_test currently stalls after Process_Mutex_Test"
 }
 
 src_install() {
 	cd build
 	make ACE_ROOT="${S}" DESTDIR="${D}" install || die "failed to install"
+	sed -i -e "^#define PACKAGE_.*//g" /usr/include/ace/config.h
 	# punt gperf stuff
 	rm -rf "${D}"/usr/bin/gperf "${D}"/usr/share
 }
@@ -54,8 +58,12 @@ pkg_postinst() {
 
 	local CC_MACHINE=`gcc -dumpmachine`
 	local CC_VERSION=`gcc -dumpversion`
-	if [ -d "/usr/lib/gcc-lib/${CC_MACHINE}/${CC_VERSION}/include/ace" ]; then
-		mv "/usr/lib/gcc-lib/${CC_MACHINE}/${CC_VERSION}/include/ace" \
-			"/usr/lib/gcc-lib/${CC_MACHINE}/${CC_VERSION}/include/ace.old"
+	if [ -d "/usr/$(get_libdir)/gcc-lib/${CC_MACHINE}/${CC_VERSION}/include/ace" ]; then
+	ewarn "moving /usr/$(get_libdir)/gcc-lib/${CC_MACHINE}/$(gcc-fullversion)/include/ace to"
+	ewarn "ace.old"
+	ewarn "This is required, as anything trying to compile against ACE will"
+	ewarn "have problems with conflicting OS.h files if this is not done."
+		mv "/usr/$(get_libdir)/gcc-lib/${CC_MACHINE}/${CC_VERSION}/include/ace" \
+			"/usr/$(get_libdir)/gcc-lib/${CC_MACHINE}/${CC_VERSION}/include/ace.old"
 	fi
 }
