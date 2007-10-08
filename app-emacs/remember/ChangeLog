@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/remember
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/ChangeLog,v 1.10 2007/06/26 07:09:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/ChangeLog,v 1.11 2007/10/08 22:03:19 opfer Exp $
+
+  08 Oct 2007; Christian Faulhammer <opfer@gentoo.org> -remember-1.9.ebuild:
+  clean up
 
   26 Jun 2007; Ulrich Mueller <ulm@gentoo.org> remember-1.9-r1.ebuild:
   Handle USE flags in src_compile.
