@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.8.ebuild,v 1.8 2007/09/24 11:33:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.8.ebuild,v 1.9 2007/10/08 17:20:23 corsair Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://xine.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="aalib libcaca arts esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc
