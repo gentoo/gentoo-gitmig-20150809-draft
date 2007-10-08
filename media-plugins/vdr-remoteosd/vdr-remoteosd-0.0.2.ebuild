@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remoteosd/vdr-remoteosd-0.0.2.ebuild,v 1.1 2007/10/07 11:21:30 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remoteosd/vdr-remoteosd-0.0.2.ebuild,v 1.2 2007/10/08 03:53:23 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -27,4 +27,3 @@ src_unpack() {
 
 	vdr-plugin_src_unpack all_but_unpack
 }
-
