@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.100 2007/10/06 05:55:42 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.101 2007/10/08 14:06:02 vapier Exp $
 
   06 Oct 2007; Tom Gall <tgall@gentoo.org>
   iproute2-2.6.22.20070710.ebuild:
@@ -31,7 +31,7 @@
 
   29 Sep 2007; Mike Frysinger <vapier@gentoo.org>
   iproute2-2.6.22.20070710.ebuild:
-  Add user patch support so we dont need to maintain ESFQ cruft anymore.
+  Add user patch support so we dont need to maintain ESFQ cruft anymore #194204.
 
   30 Aug 2007; Jeroen Roovers <jer@gentoo.org>
   iproute2-2.6.20.20070313.ebuild:
