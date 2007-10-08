@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.86 2007/10/04 14:30:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.87 2007/10/08 21:18:36 cardoe Exp $
+
+*device-mapper-1.02.22-r3 (08 Oct 2007)
+
+  08 Oct 2007; Doug Goldstein <cardoe@gentoo.org>
+  -files/device-mapper.rc-1.02.22-r2, +files/device-mapper.conf-1.02.22-r3,
+  +files/device-mapper.rc-1.02.22-r3, -device-mapper-1.02.22-r2.ebuild,
+  +device-mapper-1.02.22-r3.ebuild:
+  device-mapper should start after modules and LVM by default. If you need to
+  change this, edit conf.d/device-mapper. before checkroot -> before checkfs
 
 *device-mapper-1.02.22-r2 (04 Oct 2007)
 

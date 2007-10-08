@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.22-r2.ebuild,v 1.2 2007/10/04 14:30:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.22-r3.ebuild,v 1.1 2007/10/08 21:18:36 cardoe Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -42,7 +42,8 @@ src_install() {
 	insinto /lib/rcscripts/addons
 	doins "${FILESDIR}"/dm-start.sh
 
-	newinitd "${FILESDIR}"/device-mapper.rc-1.02.22-r2 device-mapper || die
+	newinitd "${FILESDIR}"/device-mapper.rc-1.02.22-r3 device-mapper || die
+	newconfd "${FILESDIR}"/device-mapper.conf-1.02.22-r3 device-mapper || die
 
 	newinitd "${FILESDIR}"/1.02.22-dmeventd.initd dmeventd || die
 	dolib.a dmeventd/libdevmapper-event.a || die
