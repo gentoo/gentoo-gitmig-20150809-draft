@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/vdrplugin-rebuild
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/vdrplugin-rebuild/ChangeLog,v 1.13 2007/03/13 09:58:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/vdrplugin-rebuild/ChangeLog,v 1.14 2007/10/08 14:56:45 zzam Exp $
+
+  08 Oct 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdrplugin-rebuild-0.2.ebuild:
+  Block >=media-tv/gentoo-vdr-scripts-0.4.2 as that will absorb
+  vdrplugin-rebuild. Fixed quoting.
 
   13 Mar 2007; Matthias Schwarzott <zzam@gentoo.org>
   files/vdrplugin-rebuild-0.2:
