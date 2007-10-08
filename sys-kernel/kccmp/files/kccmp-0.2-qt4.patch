@@ -1,0 +1,10 @@
+--- a/kccmp.pro	2007-10-07 17:00:02.000000000 -0400
++++ b/kccmp.pro	2007-10-07 17:00:12.000000000 -0400
+@@ -4,6 +4,6 @@
+ CONFIG += warn_on debug
+ OBJECTS_DIR = obj
+ # Uncomment the following for Qt 4 support
+-#DEFINES += KCCMP_QT_4
++DEFINES += KCCMP_QT_4
+ LIBS += -lboost_regex
+ #MOC_DIR =
