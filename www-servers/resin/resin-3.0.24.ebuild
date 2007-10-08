@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.24.ebuild,v 1.3 2007/09/19 19:05:00 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.24.ebuild,v 1.4 2007/10/08 12:51:15 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -54,22 +54,22 @@ src_compile() {
 
 	append-flags -fPIC -DPIC
 
-	chmod 755 ${S}/configure
+	chmod 755 "${S}/configure"
 	econf --prefix=${RESIN_HOME} || die "econf failed"
 
 	einfo "Building libraries..."
 	# Broken with -jn where n > 1
 	emake -j1 || die "emake failed"
 
-	mkdir ${S}/lib
-	cd ${S}/lib
+	mkdir "${S}/lib"
+	cd "${S}/lib"
 	java-pkg_jar-from sun-jaf
 	java-pkg_jar-from sun-javamail
 	java-pkg_jar-from iso-relax
 	java-pkg_jar-from aopalliance-1
 	java-pkg_jar-from resin-servlet-api-2.4
 	ln -s $(java-config --jdk-home)/lib/tools.jar
-	cd ${S}
+	cd "${S}"
 
 	einfo "Building jars..."
 	eant || die "ant failed"
@@ -83,10 +83,10 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodir /etc/
-	mv ${D}/${RESIN_HOME}/conf ${D}/etc/resin
+	mv "${D}/${RESIN_HOME}/conf" "${D}/etc/resin"
 	dosym /etc/resin ${RESIN_HOME}/conf
 
 	keepdir /var/log/resin
@@ -98,43 +98,43 @@ src_install() {
 
 	dodoc README
 
-	newinitd ${FILESDIR}/${PV}/resin.init resin
-	newconfd ${FILESDIR}/${PV}/resin.conf resin
+	newinitd "${FILESDIR}/${PV}/resin.init" resin
+	newconfd "${FILESDIR}/${PV}/resin.conf" resin
 
-	rm -f ${S}/lib/tools.jar
-	java-pkg_dojar ${S}/lib/*.jar
-	rm -fr ${D}/${RESIN_HOME}/lib
+	rm -f "${S}/lib/tools.jar"
+	java-pkg_dojar "${S}"/lib/*.jar
+	rm -fr "${D}/${RESIN_HOME}/lib"
 	dosym /usr/share/resin/lib ${RESIN_HOME}/lib
 
 	dodir /var/lib/resin/webapps
-	mv ${D}/${RESIN_HOME}/webapps/* ${D}/var/lib/resin/webapps
-	rm -rf ${D}/${RESIN_HOME}/webapps
+	mv "${D}"/${RESIN_HOME}/webapps/* "${D}/var/lib/resin/webapps"
+	rm -rf "${D}/${RESIN_HOME}/webapps"
 	dosym /var/lib/resin/webapps ${RESIN_HOME}/webapps
 
 	dosym /etc/resin/resin.conf /etc/resin/resin.xml
 
 	use source && {
 		einfo "Zipping source..."
-		java-pkg_dosrc ${S}/modules/*/src/* 2> /dev/null
+		java-pkg_dosrc "${S}"/modules/*/src/* 2> /dev/null
 	}
 
 	einfo "Removing unneeded files..."
-	rm -f ${D}/${RESIN_HOME}/bin/*.in
-	rm -f ${D}/etc/resin/*.orig
+	rm -f "${D}"/${RESIN_HOME}/bin/*.in
+	rm -f "${D}"/etc/resin/*.orig
 
 	einfo "Fixing permissions..."
-	chown -R resin:resin ${D}${RESIN_HOME}
-	chown -R resin:resin ${D}/etc/resin
-	chown -R resin:resin ${D}/var/log/resin
-	chown -R resin:resin ${D}/var/lib/resin
-	chown -R resin:resin ${D}/var/run/resin
+	chown -R resin:resin "${D}${RESIN_HOME}"
+	chown -R resin:resin "${D}/etc/resin"
+	chown -R resin:resin "${D}/var/log/resin"
+	chown -R resin:resin "${D}/var/lib/resin"
+	chown -R resin:resin "${D}/var/run/resin"
 
-	chmod 755 ${D}${RESIN_HOME}/bin/*
-	chmod 644 ${D}/etc/conf.d/resin
-	chmod 755 ${D}/etc/init.d/resin
-	chmod 750 ${D}/var/lib/resin
-	chmod 750 ${D}/var/run/resin
-	chmod 750 ${D}/etc/resin
+	chmod 755 "${D}${RESIN_HOME}"/bin/*
+	chmod 644 "${D}/etc/conf.d/resin"
+	chmod 755 "${D}/etc/init.d/resin"
+	chmod 750 "${D}/var/lib/resin"
+	chmod 750 "${D}/var/run/resin"
+	chmod 750 "${D}/etc/resin"
 
 }
 

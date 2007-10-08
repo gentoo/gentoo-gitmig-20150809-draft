@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-2.1.17.ebuild,v 1.6 2007/04/21 20:49:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-2.1.17.ebuild,v 1.7 2007/10/08 12:51:15 nelchael Exp $
 
 inherit java-pkg eutils
 
@@ -17,20 +17,20 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}/${PN}.diff
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}/${PN}.diff"
 }
 
 pkg_preinst() {
 	enewgroup resin
 	enewuser resin -1 /bin/bash /opt/resin resin
-	chown -R resin:resin ${D}/opt/resin
-	chown -R resin:resin ${D}/var/log/${PN}
+	chown -R resin:resin "${D}/opt/resin"
+	chown -R resin:resin "${D}/var/log/${PN}"
 }
 src_compile() {	:; }
 
 src_install() {
-	cd ${S}
+	cd "${S}"
 	RESIN_HOME="/opt/resin"
 	diropts -m0755
 
@@ -57,7 +57,7 @@ src_install() {
 		contrib \
 		webapps \
 		xsl \
-	${D}${RESIN_HOME} || die
+	"${D}${RESIN_HOME}" || die
 	dosym /usr/share/${PN}/lib ${RESIN_HOME}/lib
 }
 

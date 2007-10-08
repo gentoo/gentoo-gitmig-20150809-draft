@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.54 2007/10/08 12:39:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.55 2007/10/08 12:51:15 nelchael Exp $
+
+  08 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org> resin-2.1.17.ebuild,
+  resin-3.0.24.ebuild, resin-3.1.2.ebuild:
+  Fix variable quoting.
 
   08 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org> resin-3.1.2.ebuild:
   Raise maximum memory to 384m, see bug #194860.
