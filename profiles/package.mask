@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7779 2007/10/06 14:36:45 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7780 2007/10/08 12:53:35 anant Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -772,7 +772,9 @@ net-misc/xsupplicant
 # Stefan Cornelius <dercorny@gentoo.org> (3 Mar 2007)
 # Masking wordpress due to a long list of security bugs
 # e.g. check bug #168529
-www-apps/wordpress
+# Anant Narayanan <anant@gentoo.org> (8 Oct 2007)
+# Let's give wordpress another chance with version 2.3
+<www-apps/wordpress-2.3
 
 # Stefan Cornelius <dercorny@gentoo.org> (2 Mar 2007)
 # Masked because it's affected by 7 GLSAs or so, nobody should use it
