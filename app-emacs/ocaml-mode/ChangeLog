@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.12 2007/07/03 06:30:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.13 2007/10/08 13:21:31 opfer Exp $
+
+*ocaml-mode-3.10.0 (08 Oct 2007)
+
+  08 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  +ocaml-mode-3.10.0.ebuild:
+  version bump
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   ocaml-mode-3.09.3-r1.ebuild:
