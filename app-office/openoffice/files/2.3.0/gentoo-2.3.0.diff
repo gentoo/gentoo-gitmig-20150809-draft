@@ -18,15 +18,4 @@
  --with-system-boost
  --with-system-curl
  --with-system-db
---- patches/src680/apply 
-+++ patches/src680/apply 
-@@ -145,7 +145,7 @@
- # crashes with undo/redo
- 
- #realize a new feature named as Show Data Form in OpenOffice
--sc-dataform.diff, Amelia Wang
-+#sc-dataform.diff, Amelia Wang
- 
- #First work on field enhancements...
- sw-field-patch.diff, flr, n#248354
 
