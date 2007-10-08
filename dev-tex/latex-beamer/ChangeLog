@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.33 2007/07/22 12:58:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.34 2007/10/08 20:59:18 pylon Exp $
+
+  08 Oct 2007; Lars Weiler <pylon@gentoo.org> latex-beamer-3.07.ebuild:
+  Fixed lyx-installation; bug #193381.  Make installation $ROOT-safe.
 
   22 Jul 2007; Lars Weiler <pylon@gentoo.org> latex-beamer-3.07.ebuild:
   Dependency and license change.

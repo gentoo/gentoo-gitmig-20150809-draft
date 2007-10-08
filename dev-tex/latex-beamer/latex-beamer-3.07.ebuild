@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.07.ebuild,v 1.6 2007/07/22 12:58:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.07.ebuild,v 1.7 2007/10/08 20:59:18 pylon Exp $
 
 inherit latex-package
 
@@ -19,27 +19,26 @@ DEPEND="lyx? ( app-office/lyx )
 RDEPEND=">=dev-tex/pgf-1.10"
 
 src_install() {
-	insinto /usr/share/texmf-site/tex/latex/beamer
-	doins -r base extensions themes || die
+	insinto "${ROOT}"/usr/share/texmf-site/tex/latex/beamer
+	doins -r base extensions themes || die "could not install themes"
 
-	insinto /usr/share/texmf-site/tex/latex/beamer/emulation
-	doins emulation/*.sty || die
+	insinto "${ROOT}"/usr/share/texmf-site/tex/latex/beamer/emulation
+	doins emulation/*.sty || die "could not install styles"
 
 	if use lyx ; then
-		insinto /usr/share/lyx/layouts
-		doins lyx/layouts/beamer.layout || die
-		insinto /usr/share/lyx/examples
-		doins lyx/examples/* || die
-		doins solutions/*/*.lyx || die
+		insinto "${ROOT}"/usr/share/lyx/examples
+		doins examples/lyx-based-presentation/* || \
+			die "could not install lyx-examples"
 	fi
 
 	dodoc AUTHORS ChangeLog README TODO doc/licenses/LICENSE
 	if use doc ; then
-		insinto /usr/share/doc/${PF}
-		doins doc/* || die
+		insinto "${ROOT}"/usr/share/doc/${PF}
+		doins doc/* || die "could not install doc"
 
-		insinto /usr/share/doc/${PF}
-		doins -r examples emulation/examples solutions || die
+		insinto "${ROOT}"/usr/share/doc/${PF}
+		doins -r examples emulation/examples solutions || \
+			die "could not install doc"
 
 		prepalldocs
 	fi
