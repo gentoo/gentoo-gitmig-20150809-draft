@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.5.3-r1.ebuild,v 1.8 2007/09/22 16:33:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.5.3-r1.ebuild,v 1.9 2007/10/08 01:32:38 vapier Exp $
 
 inherit eutils flag-o-matic versionator autotools
 
@@ -18,7 +18,7 @@ PATCHDIR="${WORKDIR}/patch"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="krb4 tcl ipv6 doc"
 
 RDEPEND="!virtual/krb5
