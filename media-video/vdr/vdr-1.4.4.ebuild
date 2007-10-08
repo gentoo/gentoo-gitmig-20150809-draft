@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.4.ebuild,v 1.10 2007/10/08 14:21:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.4.ebuild,v 1.11 2007/10/08 15:00:18 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -31,7 +31,7 @@ DEPEND="media-libs/jpeg
 
 RDEPEND="${DEPEND}
 	dev-lang/perl
-	media-tv/vdrplugin-rebuild
+	|| ( >=media-tv/gentoo-vdr-scripts-0.4.2 media-tv/vdrplugin-rebuild )
 	>=media-tv/gentoo-vdr-scripts-0.3.5"
 
 # pull in vdr-setup to get the xml files, else menu will not work
