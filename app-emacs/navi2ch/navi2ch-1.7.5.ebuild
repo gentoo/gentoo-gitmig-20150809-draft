@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.5.ebuild,v 1.7 2007/10/06 20:24:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.5.ebuild,v 1.8 2007/10/08 15:27:57 opfer Exp $
 
 inherit elisp
 
-DESCRIPTION="Navi2ch is navigator for 2ch which works under many Emacsen"
+DESCRIPTION="A navigator for 2ch"
 HOMEPAGE="http://navi2ch.sourceforge.net/"
 SRC_URI="mirror://sourceforge/navi2ch/${P}.tar.gz"
 
@@ -30,7 +30,7 @@ src_install() {
 pkg_postinst() {
 	elisp-site-regen
 	elog
-	elog "Please add to your .emacs"
+	elog "Please add to your ~/.emacs"
 	elog "If you use mona-font,"
 	elog "\t(setq navi2ch-mona-enable t)"
 	elog "If you use izonmoji-mode,"
