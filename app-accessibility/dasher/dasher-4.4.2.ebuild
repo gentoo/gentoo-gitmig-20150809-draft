@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.4.2.ebuild,v 1.7 2007/09/27 11:53:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.4.2.ebuild,v 1.8 2007/10/08 02:52:20 leonardop Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.8"
@@ -37,7 +37,9 @@ RDEPEND=">=dev-libs/glib-2.6
 		dev-libs/atk )
 	cairo? ( >=x11-libs/gtk+-2.8 )
 
-	x11-libs/libX11"
+	x11-libs/libX11
+	x11-libs/libXtst
+	x11-libs/libXt"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
@@ -47,8 +49,7 @@ DEPEND="${RDEPEND}
 		app-text/scrollkeeper )
 
 	x11-proto/xextproto
-	x11-proto/xproto
-	x11-libs/libXt"
+	x11-proto/xproto"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
 
@@ -67,8 +68,11 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-4.3.4-as-needed.patch"
 
-	# Patch to fix compilation when USE=-gnome is used (bug #165154)
+	# Patches to fix compilation when USE=-gnome is used
+	# (bug #165154 and bug #189307)
 	epatch "${FILESDIR}/${PN}-4.4.0-gnome_help.patch"
+	epatch "${FILESDIR}/${P}-gnome.patch"
 
-	eautoreconf
+	cp aclocal.m4 old-macros.m4
+	AT_M4DIR="." eautoreconf
 }

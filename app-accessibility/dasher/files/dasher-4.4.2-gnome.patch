@@ -1,0 +1,28 @@
+diff -NurdpB dasher-4.4.2/Src/Gtk2/dasher_editor.cpp dasher-4.4.2-patched/Src/Gtk2/dasher_editor.cpp
+--- dasher-4.4.2/Src/Gtk2/dasher_editor.cpp	2007-03-12 09:13:13.000000000 -0500
++++ dasher-4.4.2-patched/Src/Gtk2/dasher_editor.cpp	2007-10-07 20:55:14.000000000 -0500
+@@ -3,9 +3,9 @@
+ #include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+ /* TODO: r4epair gnome libs flags (or get rid of entirely) */
+-//#ifdef GNOME_LIBS 
++#ifdef GNOME_LIBS 
+ #include <libgnomevfs/gnome-vfs.h> 
+-//#endif
++#endif
+ 
+ #include "dasher_action_keyboard.h"
+ #ifdef WITH_MAEMO
+diff -NurdpB dasher-4.4.2/Src/Gtk2/dasher_main.cpp dasher-4.4.2-patched/Src/Gtk2/dasher_main.cpp
+--- dasher-4.4.2/Src/Gtk2/dasher_main.cpp	2007-05-08 09:02:03.000000000 -0500
++++ dasher-4.4.2-patched/Src/Gtk2/dasher_main.cpp	2007-10-07 20:56:44.000000000 -0500
+@@ -8,7 +8,9 @@
+ #ifdef WITH_MAEMOFULLSCREEN
+ #include <hildon-widgets/hildon-program.h>
+ #endif
++#ifdef GNOME_LIBS
+ #include <libgnome/libgnome.h>
++#endif
+ 
+ #include "GtkDasherControl.h"
+ #include "KeyboardHelper.h"

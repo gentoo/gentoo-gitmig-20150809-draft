@@ -19,11 +19,3 @@ diff --exclude-from=/home/dang/bin/scripts/diffrc -up -ruN dasher-4.4.0.orig/con
  AM_CONDITIONAL(WITH_GPE, test x$WITHGPE = xtrue)
  AM_CONDITIONAL(WITH_MAEMO, test x$WITHMAEMO = xtrue)
  AM_CONDITIONAL(WITH_MAEMOFULLSCREEN, test x$WITHMAEMOFULLSCREEN = xtrue)
-@@ -401,6 +402,7 @@ if [[ x"$WITHGNOME" = xtrue ]]; then
- GNOME_DOC_INIT
- else
- AM_CONDITIONAL(ENABLE_SK, false)
-+AM_CONDITIONAL(HAVE_GNOME_DOC_UTILS, false)
- fi
- 
- AC_CONFIG_FILES([Makefile

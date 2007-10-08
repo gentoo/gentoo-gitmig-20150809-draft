@@ -1,6 +1,16 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.108 2007/09/27 11:53:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.109 2007/10/08 02:52:20 leonardop Exp $
+
+  08 Oct 2007; Leonardo Boshell <leonardop@gentoo.org>
+  +files/dasher-4.4.2-gnome.patch, dasher-4.4.2.ebuild:
+  Added x11-libs/libXtst dependency (bug #193433). Added patch to fix
+  compilation with USE=-gnome again (bug #189307).
+
+  08 Oct 2007; Leonardo Boshell <leonardop@gentoo.org>
+  files/dasher-4.4.0-gnome_help.patch, dasher-4.4.2.ebuild:
+  Remove unnecessary macro from patch. Use bundled aclocal.m4 when
+  eautoreconf is run (bug #181514).
 
   27 Sep 2007; Raúl Porcel <armin76@gentoo.org> dasher-4.4.2.ebuild:
   alpha/ia64 stable wrt #193339
