@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.78-r1.ebuild,v 1.1 2007/07/13 03:04:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.78-r1.ebuild,v 1.2 2007/10/08 18:59:27 vapier Exp $
 
 inherit eutils flag-o-matic fixheadtails toolchain-funcs
 
@@ -29,8 +29,8 @@ src_unpack() {
 	cd "${S}"
 	ht_fix_file Configure Customize
 	touch .neverInv
-	epatch "${FILESDIR}/${P}"-answer-config.patch
-	epatch "${FILESDIR}/${P}"-freebsd.patch
+	epatch "${FILESDIR}"/${P}-answer-config.patch
+	epatch "${FILESDIR}"/${P}-freebsd.patch
 }
 
 src_compile() {
@@ -47,7 +47,7 @@ src_compile() {
 		-e "/^RANLIB=/s:ranlib:$(tc-getRANLIB):" \
 		Makefile lib/Makefile
 
-	emake all || die "emake failed"
+	emake DEBUG="" all || die "emake failed"
 }
 
 src_install() {
