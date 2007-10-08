@@ -1,6 +1,17 @@
 # ChangeLog for sci-libs/acml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.21 2007/07/02 15:25:55 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.22 2007/10/08 20:47:04 bicatali Exp $
+
+*acml-4.0.0 (08 Oct 2007)
+*acml-3.6.1-r1 (08 Oct 2007)
+*acml-3.6.0-r1 (08 Oct 2007)
+
+  08 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> +files/blas.pc.in,
+  +files/lapack.pc.in, +acml-3.6.0-r1.ebuild, +acml-3.6.1-r1.ebuild,
+  +acml-4.0.0.ebuild:
+  Version bump. Fixed openmp profiles for acml-3.6.0-r1 and acml-3.6.1-r1.
+  Added a bunch of tests, now supports new virtual style. Remove any cblas
+  reference since API is not compatible.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> acml-3.0.0.ebuild,
   acml-3.1.0-r1.ebuild, acml-3.6.0.ebuild, acml-3.6.1.ebuild:
