@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.35 2007/09/28 16:42:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.36 2007/10/08 18:14:41 corsair Exp $
+
+  08 Oct 2007; Markus Rothe <corsair@gentoo.org>
+  blas-reference-20070226.ebuild:
+  Stable on ppc64; bug #189725
 
   28 Sep 2007; nixnut <nixnut@gentoo.org> blas-reference-20070226.ebuild:
   Stable on ppc wrt bug 189725
