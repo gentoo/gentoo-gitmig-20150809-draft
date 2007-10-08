@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.5.ebuild,v 1.6 2007/10/08 17:23:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.5.ebuild,v 1.7 2007/10/08 18:11:47 drac Exp $
 
 inherit eutils kde flag-o-matic autotools
 
@@ -40,9 +40,9 @@ pkg_setup() {
 
 src_unpack() {
 	kde_src_unpack
-	cd ${S}
+	cd "${S}"
 	# allow $(with_xcb)
-	epatch ${FILESDIR}/kaffeine-with-xcb.patch
+	epatch "${FILESDIR}"/kaffeine-with-xcb.patch
 	eautoconf
 }
 
@@ -65,5 +65,5 @@ src_install() {
 	kde_src_install
 
 	# Remove this, as kdelibs 3.5.4 provides it
-	rm -f "${D}/usr/share/mimelnk/application/x-mplayer2.desktop"
+	rm -f "${D}"/usr/share/mimelnk/application/x-mplayer2.desktop
 }
