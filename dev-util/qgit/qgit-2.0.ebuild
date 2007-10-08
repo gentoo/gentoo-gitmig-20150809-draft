@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-2.0.ebuild,v 1.1 2007/10/08 17:48:12 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-2.0.ebuild,v 1.2 2007/10/08 17:58:09 jokey Exp $
 
 inherit qt4
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://digilander.libero.it/mcostalba/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
@@ -28,6 +28,10 @@ src_compile() {
 }
 
 src_install() {
-	dobin bin/qgit
+	dobin bin/qgit4
 	dodoc README
+}
+
+pkg_postinst() {
+	elog "This is installed as qgit4 now so you can still use 1.5 series (Qt3-based)"
 }
