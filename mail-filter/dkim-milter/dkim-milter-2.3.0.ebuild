@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.3.0.ebuild,v 1.1 2007/10/08 08:43:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.3.0.ebuild,v 1.2 2007/10/08 14:55:39 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -36,7 +36,6 @@ src_compile() {
 	emake  CC="$(tc-getCC)" || die "emake failed"
 }
 
-
 src_test() {
 	./Build check || die
 }
@@ -70,4 +69,3 @@ src_install() {
 	einfo "the necessary keys to use with dkim-filter if you have"
 	einfo "not done so already."
 }
-
