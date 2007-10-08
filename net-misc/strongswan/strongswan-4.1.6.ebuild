@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.1.6.ebuild,v 1.1 2007/10/02 01:29:55 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.1.6.ebuild,v 1.2 2007/10/08 17:50:51 pylon Exp $
 
 inherit eutils linux-info
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 LICENSE="GPL-2 RSA-MD2 RSA-MD5 RSA-PKCS11 DES"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="cisco curl dbus debug ldap nat smartcard static xml"
+IUSE="cisco curl debug ldap nat smartcard static xml"
 
 COMMON_DEPEND="!net-misc/openswan
 	dev-libs/gmp"
@@ -21,7 +21,6 @@ DEPEND="${COMMON_DEPEND}
 	virtual/linux-sources
 	sys-kernel/linux-headers
 	curl? ( net-misc/curl )
-	dbus? ( sys-apps/dbus net-misc/networkmanager )
 	ldap? ( net-nds/openldap )
 	smartcard? ( dev-libs/opensc )
 	xml? ( dev-libs/libxml2 )"
@@ -41,7 +40,7 @@ pkg_setup() {
 		die "Install an IPsec enabled 2.6 kernel."
 	fi
 
-	# install strongswan non-root by default
+	# change to an unprivileged user by default
 	enewgroup ${UGID}
 	enewuser ${UGID} -1 -1 -1 ${UGID}
 }
@@ -49,7 +48,7 @@ pkg_setup() {
 src_compile() {
 	local myconf=""
 
-	# change to an unauthorised user by default
+	# change to an unprivileged user by default
 	myconf="${myconf} --with-uid=$(id -u ${UGID}) --with-gid=$(id -g ${UGID})"
 	# strongswan enables both by default; switch to the user's wish
 	if use static; then
@@ -61,7 +60,6 @@ src_compile() {
 	econf \
 		$(use_enable curl http) \
 		$(use_enable ldap) \
-		$(use_enable dbus) \
 		$(use_enable xml) \
 		$(use_enable smartcard) \
 		$(use_enable cisco cisco-quirks) \
