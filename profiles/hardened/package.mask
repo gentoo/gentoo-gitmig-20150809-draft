@@ -1,6 +1,9 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.35 2007/08/26 01:41:41 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.36 2007/10/08 20:37:13 bicatali Exp $
+
+# >=acml-3.6 depends on gcc-4*
+>=sci-libs/acml-3.6
 
 # Fails on hardened, bug 187120
 =dev-lang/php-5.2.3-r3
