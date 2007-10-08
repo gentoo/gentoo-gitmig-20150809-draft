@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.87 2007/10/08 21:18:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.88 2007/10/08 22:14:26 robbat2 Exp $
+
+  08 Oct 2007; Robin H. Johnson <robbat2@gentoo.org>
+  files/device-mapper.rc-1.02.22-r3:
+  Missed 'after modules' dependency in the baselayout init script.
 
 *device-mapper-1.02.22-r3 (08 Oct 2007)
 
