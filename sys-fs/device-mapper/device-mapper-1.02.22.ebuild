@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.22.ebuild,v 1.1 2007/08/26 14:06:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.22.ebuild,v 1.2 2007/10/08 22:16:40 robbat2 Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -21,7 +21,7 @@ S=${WORKDIR}/${PN}.${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/device-mapper-1.02.22-export-format.diff
+	epatch "${FILESDIR}"/device-mapper-1.02.22-export-format.diff
 }
 
 src_compile() {

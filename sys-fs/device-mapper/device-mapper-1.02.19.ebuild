@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.19.ebuild,v 1.10 2007/07/02 19:41:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.19.ebuild,v 1.11 2007/10/08 22:16:40 robbat2 Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -36,7 +36,7 @@ src_install() {
 	insinto /lib/rcscripts/addons
 	doins "${FILESDIR}"/dm-start.sh
 
-	newinitd ${FILESDIR}/device-mapper.rc device-mapper || die
+	newinitd "${FILESDIR}"/device-mapper.rc device-mapper || die
 
 	dodoc INSTALL INTRO README VERSION WHATS_NEW
 }
