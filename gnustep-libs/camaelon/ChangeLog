@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-libs/camaelon
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/ChangeLog,v 1.8 2006/12/05 20:03:29 grobian Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/ChangeLog,v 1.9 2007/10/08 19:58:46 voyageur Exp $
+
+*camaelon-0.2 (08 Oct 2007)
+
+  08 Oct 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/config-camaelon.sh, -camaelon-0.1-r1.ebuild, +camaelon-0.2.ebuild,
+  -camaelon-2.0_pre20060324.ebuild:
+  Version bump from the GNUstep overlay, removing old versions
 
   05 Dec 2006; Fabian Groffen <grobian@gentoo.org> files/config-camaelon.sh:
   Set Nesedah theme as default in the config script to avoid bugs like #154159
