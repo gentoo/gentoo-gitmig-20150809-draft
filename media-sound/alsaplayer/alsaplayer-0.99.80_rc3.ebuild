@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80_rc3.ebuild,v 1.2 2007/10/07 05:17:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80_rc3.ebuild,v 1.3 2007/10/08 13:27:41 drac Exp $
 
 inherit eutils autotools versionator
 
@@ -15,9 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
 IUSE="alsa audiofile doc esd flac gtk jack mikmod nas ogg opengl oss vorbis xosd"
 
-RDEPEND="alsa? ( media-libs/alsa-lib )
-	media-libs/libsndfile
+RDEPEND="media-libs/libsndfile
 	media-libs/libmad
+	gtk? ( >=x11-libs/gtk+-2.8 )
+	alsa? ( media-libs/alsa-lib )
 	audiofile? ( media-libs/audiofile )
 	esd? ( media-sound/esound )
 	flac? ( media-libs/flac )
@@ -29,10 +30,8 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	vorbis? ( media-libs/libvorbis )
 	xosd? ( x11-libs/xosd )"
 DEPEND="${RDEPEND}
-	>=dev-libs/glib-2.10.1
 	dev-util/pkgconfig
 	sys-devel/gettext
-	gtk? ( >=x11-libs/gtk+-2.8 )
 	doc? ( app-doc/doxygen )"
 
 S="${WORKDIR}"/${PN}-${MY_PV}
