@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.695 2007/10/05 20:30:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.696 2007/10/08 06:17:06 dirtyepic Exp $
+
+  08 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> use.local.desc:
+  Add local flite flag for app-misc/roadnav.
 
   05 Oct 2007; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
   Add local xemacs flag for app-misc/gtypist.
