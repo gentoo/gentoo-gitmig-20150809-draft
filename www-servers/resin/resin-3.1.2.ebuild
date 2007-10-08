@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.2.ebuild,v 1.1 2007/08/17 08:08:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.2.ebuild,v 1.2 2007/10/08 12:39:49 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -39,6 +39,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}/${P}-gentoo.patch"
 
 	java-ant_bsfix_one "${S}/build.xml"
+
+	sed -i -e 's/256m/384m/' "${S}/build.xml"
 
 }
 
