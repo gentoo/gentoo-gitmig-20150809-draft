@@ -1,9 +1,6 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.85 2007/10/08 17:27:38 corsair Exp $
-
-  08 Oct 2007; Markus Rothe <corsair@gentoo.org> kino-1.1.1.ebuild:
-  Stable on ppc64; bug #193947
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.86 2007/10/08 17:30:23 corsair Exp $
 
   07 Oct 2007; Markus Meier <maekke@gentoo.org> kino-1.1.1.ebuild:
   x86 stable, bug #193947
