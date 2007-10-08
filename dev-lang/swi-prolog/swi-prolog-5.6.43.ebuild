@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.43.ebuild,v 1.1 2007/10/06 23:57:33 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.43.ebuild,v 1.2 2007/10/08 07:20:46 keri Exp $
 
 inherit eutils flag-o-matic java-pkg-opt-2
 
-PATCHSET_VER="0"
+PATCHSET_VER="1"
 
 DESCRIPTION="free, small, and standard compliant Prolog compiler"
 HOMEPAGE="http://www.swi-prolog.org/"
@@ -42,26 +42,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${WORKDIR}"/${PV}/1000-cflags.patch
-	epatch "${WORKDIR}"/${PV}/1001-multilib.patch
-	epatch "${WORKDIR}"/${PV}/1002-parallel-make.patch
-	epatch "${WORKDIR}"/${PV}/2100-thread-sandbox.patch
-	epatch "${WORKDIR}"/${PV}/2105-pl-profile-va-debug.patch
-	epatch "${WORKDIR}"/${PV}/2800-mandir.patch
-	epatch "${WORKDIR}"/${PV}/2900-thread-library.patch
-	epatch "${WORKDIR}"/${PV}/3029-clib-test.patch
-	epatch "${WORKDIR}"/${PV}/3059-ssl-test.patch
-	epatch "${WORKDIR}"/${PV}/3069-semweb-test.patch
-	epatch "${WORKDIR}"/${PV}/3150-jpl-env.patch
-	epatch "${WORKDIR}"/${PV}/3151-jpl-ppc-arch.patch
-	epatch "${WORKDIR}"/${PV}/3152-jpl-junit.patch
-	epatch "${WORKDIR}"/${PV}/3159-jpl-test.patch
-	epatch "${WORKDIR}"/${PV}/3160-xpce-parallel-build.patch
-	epatch "${WORKDIR}"/${PV}/3139-sgml-test.patch
-	epatch "${WORKDIR}"/${PV}/3149-sgml-RDF-test.patch
-	epatch "${WORKDIR}"/${PV}/3169-xpce-test.patch
-	epatch "${WORKDIR}"/${PV}/3199-ltx2htm.patch
-	epatch "${WORKDIR}"/${PV}/3229-zlib-test.patch
+	EPATCH_FORCE=yes
+	EPATCH_SUFFIX=patch
+	epatch "${WORKDIR}"/${PV}
 }
 
 src_compile() {
