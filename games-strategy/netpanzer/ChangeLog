@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/netpanzer
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.24 2007/03/07 17:30:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.25 2007/10/08 02:03:19 mr_bones_ Exp $
+
+*netpanzer-0.8.2 (08 Oct 2007)
+
+  08 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +netpanzer-0.8.2.ebuild:
+  version bump
 
   07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> files/netpanzer.rc,
   files/netpanzer-ded:
