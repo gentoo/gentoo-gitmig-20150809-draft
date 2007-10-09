@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/blas-goto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.11 2007/09/21 06:39:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.12 2007/10/09 22:08:56 bicatali Exp $
+
+  09 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> -files/eselect-goto,
+  -blas-goto-1.14.ebuild, -blas-goto-1.16.ebuild, blas-goto-1.19.ebuild:
+  Removed older versions, get ready for new style virtuals, workaround for
+  eselect bug #189942.
 
   21 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   blas-goto-1.19.ebuild:

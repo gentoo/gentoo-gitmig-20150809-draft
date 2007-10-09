@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.19.ebuild,v 1.2 2007/09/21 06:39:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.19.ebuild,v 1.3 2007/10/09 22:08:56 bicatali Exp $
 
 inherit eutils fortran flag-o-matic toolchain-funcs
 
@@ -25,9 +25,6 @@ DEPEND="app-admin/eselect-blas
 
 S="${WORKDIR}/${MY_PN}"
 FORTRAN="g77 gfortran ifc"
-
-# remove when we have new virtuals in main tree.
-PROVIDE="virtual/blas"
 
 src_unpack() {
 	unpack ${A}
@@ -150,11 +147,22 @@ src_install() {
 		blas.pc || die "sed blas.pc failed"
 	insinto /usr/$(get_libdir)/blas/goto
 	doins blas.pc
-	eselect blas add $(get_libdir) "${FILESDIR}"/eselect.blas.goto goto
+	ESELECT_PROF=goto
+	eselect blas add $(get_libdir) "${FILESDIR}"/eselect.blas.goto ${ESELECT_PROF}
 }
 
 pkg_postinst() {
-	[[ -z "$(eselect blas show)" ]] && eselect blas set goto
-	elog "To use BLAS GOTO implementation, you have to issue (as root):"
-	elog "\teselect blas set goto\n"
+	local p=blas
+	local current_lib=$(eselect ${p} show | cut -d' ' -f2)
+	if [[ ${current_lib} == ${ESELECT_PROF} || -z ${current_lib} ]]; then
+		# work around eselect bug #189942
+		local configfile="${ROOT}"/etc/env.d/${p}/lib/config
+		[[ -e ${configfile} ]] && rm -f ${configfile}
+		eselect ${p} set ${ESELECT_PROF}
+		elog "${p} has been eselected to ${ESELECT_PROF}"
+	else
+		elog "Current eselected ${p} is ${current_lib}"
+		elog "To use ${p} ${ESELECT_PROF} implementation, you have to issue (as root):"
+		elog "\t eselect ${p} set ${ESELECT_PROF}"
+	fi
 }
