@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.699 2007/10/09 07:20:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.700 2007/10/09 20:14:29 mrness Exp $
+
+  09 Oct 2007; Alin Năstac <mrness@gentoo.org> use.local.desc:
+  Add local approx-regex for mail-filter/dkim-milter.
 
   09 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
   Mask net-im/jabberd2
