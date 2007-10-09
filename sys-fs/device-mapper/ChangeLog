@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.91 2007/10/09 02:28:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.92 2007/10/09 14:19:55 cardoe Exp $
+
+*device-mapper-1.02.22-r4 (09 Oct 2007)
+
+  09 Oct 2007; Doug Goldstein <cardoe@gentoo.org>
+  +files/device-mapper-1.02.22-export-format-r1.diff,
+  +device-mapper-1.02.22-r4.ebuild:
+  export format patch needed to include ctype.h
 
   09 Oct 2007; Robin H. Johnson <robbat2@gentoo.org>
   files/device-mapper.rc-1.02.22-r3:
