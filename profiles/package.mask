@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7785 2007/10/09 12:33:58 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7786 2007/10/09 20:05:28 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Ulrich Mueller <ulm@gentoo.org> (09 Oct 2007)
+# Broken. Last upstream release as separate package in 2003;
+# newer version is included with Emacs 22.
+# Masked for removal in 30 days, bug #195232.
+app-emacs/ses
 
 # Krzysiek Pawlik <nelchael@gentoo.org> (08 Oct 2007)
 # Masked untill the split from net-im/jabberd is complete.
