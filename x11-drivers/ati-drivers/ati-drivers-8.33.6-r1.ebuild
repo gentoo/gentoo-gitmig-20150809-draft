@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.33.6-r1.ebuild,v 1.5 2007/07/22 02:31:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.33.6-r1.ebuild,v 1.6 2007/10/09 08:11:29 dberkholz Exp $
 
 IUSE="acpi doc opengl"
 
@@ -115,12 +115,12 @@ src_unpack() {
 	local OLDBIN="/usr/X11R6/bin"
 
 	ebegin "Unpacking Ati drivers"
-	sh ${DISTDIR}/${A} --extract ${WORKDIR} &> /dev/null
+	sh "${DISTDIR}"/${A} --extract "${WORKDIR}" &> /dev/null
 	eend $? || die "unpack failed"
 
 	rm -rf ${ARCH_DIR}/usr/X11R6/bin/{fgl_glxgears,fireglcontrolpanel}
 
-	epatch ${FILESDIR}/${PN}-2.6.20.patch
+	epatch "${FILESDIR}"/${PN}-2.6.20.patch
 
 	if use acpi
 	then
@@ -131,8 +131,8 @@ src_unpack() {
 		"${WORKDIR}/common/etc/ati/authatieventsd.sh" \
 			|| die "sed failed."
 
-		cd ${WORKDIR}
-		epatch ${FILESDIR}/ati-powermode.sh.patch
+		cd "${WORKDIR}"
+		epatch "${FILESDIR}"/ati-powermode.sh.patch
 	fi
 }
 
@@ -163,7 +163,7 @@ pkg_preinst() {
 	# we don't have stale libs floating around ...
 	if [ -d "${ROOT}/usr/lib/opengl/ati" ]
 	then
-		rm -rf ${ROOT}/usr/lib/opengl/ati/*
+		rm -rf "${ROOT}"/usr/lib/opengl/ati/*
 	fi
 }
 
@@ -171,7 +171,7 @@ src_install() {
 	local ATI_LIBGL_PATH=""
 	linux-mod_src_install
 
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 
 	local native_dir
 	use x86 && native_dir="lib"
@@ -200,44 +200,44 @@ src_install() {
 		doexe ${ARCH_DIR}/usr/sbin/*
 		insinto /opt/ati/man/man8
 		doins common/usr/share/man/man8/*
-		newinitd ${FILESDIR}/atieventsd.rc6 atieventsd
+		newinitd "${FILESDIR}"/atieventsd.rc6 atieventsd
 		dodir /etc/conf.d
-		echo 'ATIEVENTSDOPTS=""' > ${D}/etc/conf.d/atieventsd
+		echo 'ATIEVENTSDOPTS=""' > "${D}"/etc/conf.d/atieventsd
 	fi
 	#ati custom stuff
 	insinto /usr
-	doins -r ${WORKDIR}/common/usr/include
+	doins -r "${WORKDIR}"/common/usr/include
 
 	#documentation
 	if use doc; then
 		dodir /usr/share/doc/fglrx
 		cp -pPR common/usr/share/doc/fglrx/* \
-			${D}/usr/share/doc/fglrx
+			"${D}"/usr/share/doc/fglrx
 	fi
 
 	#env.d entry
-	cp ${FILESDIR}/09ati ${T}/
+	cp "${FILESDIR}"/09ati "${T}"/
 
 	if use acpi
 	then
 		local ATIETC="${WORKDIR}/common/usr/share/doc/fglrx/examples/etc/acpi"
 		exeinto /etc/acpi
-		doexe ${ATIETC}/ati-powermode.sh
+		doexe "${ATIETC}"/ati-powermode.sh
 		insinto /etc/acpi/events
-		doins ${ATIETC}/events/a-ac-aticonfig
-		doins ${ATIETC}/events/a-lid-aticonfig
+		doins "${ATIETC}"/events/a-ac-aticonfig
+		doins "${ATIETC}"/events/a-lid-aticonfig
 	fi
 
 	#Work around hardcoded path in 32bit libGL.so on amd64, bug 101539
 	if has_multilib_profile && [ $(get_abi_LIBDIR x86) = "lib32" ] ; then
 		ATI_LIBGL_PATH="/usr/lib/dri:/usr/$(get_libdir)/dri:/usr/lib32/${xlibdir}/modules/dri/:/usr/$(get_libdir)/${xlibdir}/modules/dri"
 	fi
-		cat >>${T}/09ati <<EOF
+		cat >>"${T}"/09ati <<EOF
 
 LIBGL_DRIVERS_PATH="\$LIBGL_DRIVERS_PATH:$ATI_LIBGL_PATH"
 EOF
 
-	doenvd ${T}/09ati
+	doenvd "${T}"/09ati
 }
 
 src_install-libs() {
@@ -270,7 +270,7 @@ src_install-libs() {
 	if use opengl ; then
 	sed -e "s:libdir=.*:libdir=${ATI_ROOT}/lib:" \
 		/usr/$(get_libdir)/opengl/${X11_IMPLEM}/lib/libGL.la \
-		> $D/${ATI_ROOT}/lib/libGL.la
+		> "$D"/${ATI_ROOT}/lib/libGL.la
 	dosym ../${X11_IMPLEM}/include ${ATI_ROOT}/include
 	fi
 	# X and DRI driver
@@ -305,10 +305,10 @@ src_install-libs() {
 		has_version "x11-base/xorg-server"
 	then
 		cp -pPR ${ARCH_DIR}/usr/X11R6/${pkglibdir}/lib{fglrx_*,aticonfig} \
-			${D}/usr/$(get_libdir)
+			"${D}"/usr/$(get_libdir)
 	else
 		cp -pPR ${ARCH_DIR}/usr/X11R6/${pkglibdir}/lib{fglrx_*,aticonfig.a} \
-			${D}/usr/$(get_libdir)
+			"${D}"/usr/$(get_libdir)
 	fi
 
 	#Not the best place
@@ -317,12 +317,12 @@ src_install-libs() {
 
 	# misc ati configuration files for /etc
 	dodir /etc/ati
-	cp -pP ${COMMON_DIR}/etc/ati/fglrxprofiles.csv ${D}/etc/ati/
-	cp -pP ${COMMON_DIR}/etc/ati/fglrxrc ${D}/etc/ati/
-	cp -pP ${COMMON_DIR}/etc/ati/logo* ${D}/etc/ati/
+	cp -pP ${COMMON_DIR}/etc/ati/fglrxprofiles.csv "${D}"/etc/ati/
+	cp -pP ${COMMON_DIR}/etc/ati/fglrxrc "${D}"/etc/ati/
+	cp -pP ${COMMON_DIR}/etc/ati/logo* "${D}"/etc/ati/
 	if use acpi
 	then
-		cp -pP ${COMMON_DIR}/etc/ati/authatieventsd.sh ${D}/etc/ati/
+		cp -pP ${COMMON_DIR}/etc/ati/authatieventsd.sh "${D}"/etc/ati/
 	fi
 }
 

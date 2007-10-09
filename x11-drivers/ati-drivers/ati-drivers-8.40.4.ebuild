@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.40.4.ebuild,v 1.2 2007/08/14 18:10:08 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.40.4.ebuild,v 1.3 2007/10/09 08:11:29 dberkholz Exp $
 
 IUSE="acpi multilib"
 
@@ -166,10 +166,10 @@ src_unpack() {
 	cd ..
 
 	# Misc. patches.
-	epatch ${FILESDIR}/${PV}/${P}-warnings.patch
+	epatch "${FILESDIR}"/${PV}/${P}-warnings.patch
 
 	if kernel_is ge 2 6 23; then
-		epatch ${FILESDIR}/${PV}/${PN}-2.6.23.patch
+		epatch "${FILESDIR}"/${PV}/${PN}-2.6.23.patch
 	fi
 }
 
