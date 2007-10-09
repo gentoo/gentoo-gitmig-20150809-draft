@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jcs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/ChangeLog,v 1.11 2007/05/06 09:33:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/ChangeLog,v 1.12 2007/10/09 20:26:03 nelchael Exp $
+
+*jcs-1.3 (09 Oct 2007)
+
+  09 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org> +files/build-1.3.xml,
+  +jcs-1.3.ebuild:
+  Version bump, see bug #195073.
 
   06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org> jcs-1.2.7.9.ebuild:
   ppc stable, bug #176079
