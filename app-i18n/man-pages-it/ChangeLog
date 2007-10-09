@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-it
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/ChangeLog,v 1.10 2007/10/01 14:13:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/ChangeLog,v 1.11 2007/10/09 14:38:26 armin76 Exp $
+
+  09 Oct 2007; Raúl Porcel <armin76@gentoo.org> -man-pages-it-2.43.ebuild,
+  man-pages-it-2.65.ebuild:
+  all stable, remove old
 
 *man-pages-it-2.65 (01 Oct 2007)
 
