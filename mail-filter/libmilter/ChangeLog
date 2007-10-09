@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/libmilter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.2 2007/10/06 12:32:44 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.3 2007/10/09 18:18:54 mrness Exp $
+
+*libmilter-8.14.1 (09 Oct 2007)
+
+  09 Oct 2007; Alin Năstac <mrness@gentoo.org> +files/gentoo.config.m4,
+  +libmilter-8.14.1.ebuild:
+  Version bump. Build with user selected CFLAGS. Correct installation on amd64.
+  Install HTML documentation.
 
   06 Oct 2007; Daniel Black <dragonheart@gentoo.org>
   libmilter-8.13.7.ebuild:
