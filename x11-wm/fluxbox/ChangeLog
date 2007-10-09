@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.233 2007/09/25 16:20:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.234 2007/10/09 14:45:29 lack Exp $
+
+*fluxbox-1.0.0 (09 Oct 2007)
+
+  09 Oct 2007; Jim Ramsay <lack@gentoo.org>
+  +files/1.0.0/gentoo_style_location.patch, +fluxbox-1.0.0.ebuild:
+  New version: 1.0.0 is released! (bug 195197)
 
   25 Sep 2007; Raúl Porcel <armin76@gentoo.org>
   fluxbox-1.0_rc3_p4983.ebuild:
