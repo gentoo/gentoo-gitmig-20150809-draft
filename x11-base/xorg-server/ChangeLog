@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.286 2007/10/02 20:05:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.287 2007/10/09 07:22:49 dberkholz Exp $
+
+  09 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.2.0-r3.ebuild, xorg-server-1.3.0.0.ebuild,
+  xorg-server-1.3.0.0-r1.ebuild, xorg-server-1.4-r1.ebuild:
+  Fix quoting issues caught by latest repoman.
 
   02 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   xorg-server-1.3.0.0-r1.ebuild:
