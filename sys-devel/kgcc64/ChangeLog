@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/kgcc64
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.11 2007/07/20 19:15:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.12 2007/10/09 05:48:44 jer Exp $
+
+  09 Oct 2007; Jeroen Roovers <jer@gentoo.org> kgcc64-4.1.2.ebuild:
+  Stable for HPPA (bug #194953).
 
   20 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org> kgcc64-4.1.2.ebuild:
   Stable on sparc
