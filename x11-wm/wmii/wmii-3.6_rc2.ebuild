@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.6_rc2.ebuild,v 1.1 2007/02/09 02:29:06 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.6_rc2.ebuild,v 1.2 2007/10/09 02:03:52 omp Exp $
 
 inherit toolchain-funcs
 
@@ -18,6 +18,8 @@ IUSE=""
 DEPEND="sys-libs/libixp
 	x11-libs/libX11"
 RDEPEND="${DEPEND}
+	x11-apps/xmessage
+	x11-apps/xsetroot
 	x11-misc/dmenu"
 
 S=${WORKDIR}/${MY_P}
