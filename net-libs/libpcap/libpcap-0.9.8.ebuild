@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.9.4.ebuild,v 1.13 2006/11/04 18:58:18 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.9.8.ebuild,v 1.1 2007/10/09 17:57:15 jokey Exp $
 
-inherit eutils multilib toolchain-funcs
+inherit autotools eutils multilib toolchain-funcs
 
 DESCRIPTION="A system-independent library for user-level network packet capture"
 HOMEPAGE="http://www.tcpdump.org/"
@@ -11,17 +11,19 @@ SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="ipv6"
 
 DEPEND="!virtual/libpcap"
-
 PROVIDE="virtual/libpcap"
 
 src_unpack() {
-	unpack ${A}; cd "${S}"
+	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.9.3-whitespace.diff
 	epatch "${FILESDIR}"/${PN}-0.8.1-fPIC.patch
+	epatch "${FILESDIR}"/${PN}-cross-linux.patch
+	eautoreconf
 }
 
 src_compile() {
@@ -34,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "make install failed"
+	emake DESTDIR=${D} install || die "emake install failed"
 
 	# We need this to build pppd on G/FBSD systems
 	if [[ "${USERLAND}" == "BSD" ]]; then
@@ -43,9 +45,11 @@ src_install() {
 	fi
 
 	insopts -m 755
-	insinto /usr/$(get_libdir) ; doins libpcap.so.${PV:0:3}
+	insinto /usr/$(get_libdir)
+	doins libpcap.so.${PV:0:3}
 	dosym libpcap.so.${PV:0:3} /usr/$(get_libdir)/libpcap.so.0
 	dosym libpcap.so.${PV:0:3} /usr/$(get_libdir)/libpcap.so
 
-	dodoc CREDITS CHANGES FILES README* VERSION
+	# We are not installing README.{Win32,aix,hpux,tru64} (bug 183057)
+	dodoc CREDITS CHANGES FILES VERSION TODO README{,.dag,.linux,.macosx,.septel}
 }
