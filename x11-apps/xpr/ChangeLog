@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xpr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xpr/ChangeLog,v 1.12 2007/04/07 06:20:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xpr/ChangeLog,v 1.13 2007/10/09 09:00:37 dberkholz Exp $
+
+  09 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>; -xpr-1.0.1.ebuild:
+  Drop old ebuilds.
 
   07 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> xpr-1.0.2.ebuild:
   Add ~ppc keyword.

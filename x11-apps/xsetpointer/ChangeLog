@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xsetpointer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetpointer/ChangeLog,v 1.28 2007/08/07 13:34:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetpointer/ChangeLog,v 1.29 2007/10/09 08:59:40 dberkholz Exp $
+
+  09 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  -xsetpointer-1.0.0.ebuild:
+  Drop old ebuilds.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   xsetpointer-1.0.1.ebuild:

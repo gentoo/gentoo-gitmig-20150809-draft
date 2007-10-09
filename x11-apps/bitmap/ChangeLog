@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/bitmap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/bitmap/ChangeLog,v 1.14 2007/01/25 03:48:13 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/bitmap/ChangeLog,v 1.15 2007/10/09 08:56:58 dberkholz Exp $
+
+  09 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>; -bitmap-1.0.1.ebuild,
+  -bitmap-1.0.2.ebuild:
+  Drop old ebuilds.
 
 *bitmap-1.0.3 (25 Jan 2007)
 

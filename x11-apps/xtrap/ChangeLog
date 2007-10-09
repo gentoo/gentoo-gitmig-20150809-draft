@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xtrap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xtrap/ChangeLog,v 1.14 2007/02/22 00:26:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xtrap/ChangeLog,v 1.15 2007/10/09 08:58:35 dberkholz Exp $
+
+  09 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>; -xtrap-1.0.1.ebuild:
+  Drop old ebuilds.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

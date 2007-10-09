@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.46 2007/10/09 02:05:32 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.47 2007/10/09 08:47:35 dberkholz Exp $
+
+  09 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>; -xfs-1.0.2.ebuild:
+  Drop old ebuilds.
 
   09 Oct 2007; Steve Dibb <beandog@gentoo.org> xfs-1.0.5.ebuild:
   amd64 stable, security bug 194606
