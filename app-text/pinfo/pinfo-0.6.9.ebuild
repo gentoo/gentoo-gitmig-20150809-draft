@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.9.ebuild,v 1.13 2006/10/15 09:21:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.9.ebuild,v 1.14 2007/10/09 08:27:07 jer Exp $
 
 inherit eutils autotools
 
@@ -22,10 +22,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-FTPVIEWER.patch
-	epatch ${FILESDIR}/${P}-as-needed.patch
+	epatch "${FILESDIR}"/${P}-FTPVIEWER.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 	AT_M4DIR="${S}/macros" eautoreconf
 }
 
@@ -38,5 +38,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} sysconfdir=/etc install || die
+	make DESTDIR="${D}" sysconfdir=/etc install || die
 }
