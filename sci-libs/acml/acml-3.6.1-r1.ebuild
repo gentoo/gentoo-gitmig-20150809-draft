@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.1 2007/10/08 20:47:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.2 2007/10/09 22:06:21 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -9,10 +9,9 @@ HOMEPAGE="http://developer.amd.com/acml.jsp"
 
 MY_PV=${PV//\./\-}
 S=${WORKDIR}
-SRC_URI="x86?     ( acml-${MY_PV}-gfortran-32bit.tgz )
-		 amd64? ( ( acml-${MY_PV}-gfortran-64bit.tgz )
-		   int64? ( acml-${MY_PV}-gfortran-64bit-int64.tgz ) )"
-
+SRC_URI="x86? ( acml-${MY_PV}-gfortran-32bit.tgz )
+	   amd64? ( acml-${MY_PV}-gfortran-64bit.tgz
+	   int64? ( acml-${MY_PV}-gfortran-64bit-int64.tgz ) )"
 
 RESTRICT="strip fetch"
 IUSE="openmp int64 doc examples"
@@ -40,8 +39,8 @@ pkg_nofetch() {
 pkg_setup() {
 	elog "From version 3.5.0 on, ACML no longer supports"
 	elog "hardware without SSE/SSE2 instructions. "
-	elog "For older 32-bit hardware that does not support SSE/SSE2,"
-	elog "you must continue to use an older version (ACML 3.1.0 and ealier)."
+	elog "For older 32-bit without SSE/SSE2, use other blas/lapack libraries,"
+	elog "or file a bug if you wish to have earlier ACML versions supported."
 	FORTRAN="gfortran"
 	fortran_pkg_setup
 	if [[ ${FORTRANC} == gfortran ]]; then
@@ -153,14 +152,15 @@ EOF
 
 pkg_postinst() {
 	for p in blas lapack; do
-		local current_p=$(eselect ${p} show | cut -d' ' -f2)
-		# uncomment when eselect bug #189942 is fixed, together with DEPEND
-		#if [[ -z ${current_p} || ${current_p} == ${ESELECT_PROF} ]]; then
-		if [[ -z ${current_p} ]]; then
+		local current_lib=$(eselect ${p} show | cut -d' ' -f2)
+		if [[ ${current_lib} == ${ESELECT_PROF} || -z ${current_lib} ]]; then
+		# work around eselect bug #189942
+			local configfile="${ROOT}"/etc/env.d/${p}/lib/config
+			[[ -e ${configfile} ]] && rm -f ${configfile}
 			eselect ${p} set ${ESELECT_PROF}
 			elog "${p} has been eselected to ${ESELECT_PROF}"
 		else
-			elog "Current eselected ${p} is ${current_p}"
+			elog "Current eselected ${p} is ${current_lib}"
 			elog "To use ${p} ${ESELECT_PROF} implementation, you have to issue (as root):"
 			elog "\t eselect ${p} set ${ESELECT_PROF}"
 		fi

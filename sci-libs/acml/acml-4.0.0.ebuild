@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.0.0.ebuild,v 1.1 2007/10/08 20:47:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.0.0.ebuild,v 1.2 2007/10/09 22:06:21 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -9,8 +9,8 @@ MY_PV=${PV//\./\-}
 DESCRIPTION="AMD Core Math Library (ACML) for x86_64 CPUs"
 HOMEPAGE="http://developer.amd.com/acml.jsp"
 SRC_URI="ifc? ( acml-${MY_PV}-ifort-64bit.tgz )
-	!ifc? (  int64? ( acml-${MY_PV}-gfortran-64bit-int64.tgz )
-			!int64? ( acml-${MY_PV}-gfortran-64bit.tgz ) )"
+	!ifc? ( int64? ( acml-${MY_PV}-gfortran-64bit-int64.tgz )
+		   !int64? ( acml-${MY_PV}-gfortran-64bit.tgz ) )"
 
 IUSE="openmp ifc int64 doc examples"
 KEYWORDS="~amd64"
@@ -153,14 +153,15 @@ EOF
 
 pkg_postinst() {
 	for p in blas lapack; do
-		local current_p=$(eselect ${p} show | cut -d' ' -f2)
-		# uncomment when eselect bug #189942 is fixed, together with DEPEND
-		#if [[ -z ${current_p} || ${current_p} == ${ESELECT_PROF} ]]; then
-		if [[ -z ${current_p} ]]; then
+		local current_lib=$(eselect ${p} show | cut -d' ' -f2)
+		if [[ ${current_lib} == ${ESELECT_PROF} || -z ${current_lib} ]]; then
+		# work around eselect bug #189942
+			local configfile="${ROOT}"/etc/env.d/${p}/lib/config
+			[[ -e ${configfile} ]] && rm -f ${configfile}
 			eselect ${p} set ${ESELECT_PROF}
 			elog "${p} has been eselected to ${ESELECT_PROF}"
 		else
-			elog "Current eselected ${p} is ${current_p}"
+			elog "Current eselected ${p} is ${current_lib}"
 			elog "To use ${p} ${ESELECT_PROF} implementation, you have to issue (as root):"
 			elog "\t eselect ${p} set ${ESELECT_PROF}"
 		fi

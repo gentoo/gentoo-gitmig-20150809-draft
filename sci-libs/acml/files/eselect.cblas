@@ -1,3 +1,0 @@
-libacml.so /usr/@LIBDIR@/libcblas.so
-libacml.so /usr/@LIBDIR@/libcblas.so.0
-libacml.a /usr/@LIBDIR@/libcblas.a
