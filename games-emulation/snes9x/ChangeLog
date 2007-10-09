@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/snes9x
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.28 2007/09/21 15:54:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.29 2007/10/09 14:40:41 angelos Exp $
+
+  09 Oct 2007; Christoph Mende <angelos@gentoo.org> snes9x-1.43-r2.ebuild:
+  Stable on amd64 wrt bug #193120
 
   21 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   snes9x-1.43-r2.ebuild:
