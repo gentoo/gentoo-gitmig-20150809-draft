@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.17 2007/08/12 05:12:36 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.18 2007/10/09 08:23:57 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -91,12 +91,12 @@ src_unpack() {
 	HOSTCONF="${S}/configs/${CONFIG}"
 
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/6.4-dont-install-gles-headers.patch
-	epatch ${FILESDIR}/change-default-dri-driver-dir-X7.1.patch
-	epatch ${FILESDIR}/6.4-multilib-fix.patch
-	epatch ${FILESDIR}/6.5-re-order-context-destruction.patch
+	epatch "${FILESDIR}"/6.4-dont-install-gles-headers.patch
+	epatch "${FILESDIR}"/change-default-dri-driver-dir-X7.1.patch
+	epatch "${FILESDIR}"/6.4-multilib-fix.patch
+	epatch "${FILESDIR}"/6.5-re-order-context-destruction.patch
 
 	# Don't compile debug code with USE=-debug - bug #125004
 	if ! use debug; then
@@ -105,11 +105,11 @@ src_unpack() {
 	fi
 
 	# Set default dri drivers directory
-	echo "DEFINES += -DDEFAULT_DRIVER_DIR='\"/usr/$(get_libdir)/dri\"'" >> ${HOSTCONF}
+	echo "DEFINES += -DDEFAULT_DRIVER_DIR='\"/usr/$(get_libdir)/dri\"'" >> "${HOSTCONF}"
 
 	# Do we want thread-local storage (TLS)?
 	if use nptl; then
-		echo "ARCH_FLAGS += -DGLX_USE_TLS" >> ${HOSTCONF}
+		echo "ARCH_FLAGS += -DGLX_USE_TLS" >> "${HOSTCONF}"
 	fi
 
 	# Configurable DRI drivers
@@ -179,51 +179,51 @@ src_unpack() {
 	fi
 
 	# Set drivers to everything on which we ran add_drivers()
-	echo "DRI_DIRS = ${DRI_DRIVERS}" >> ${HOSTCONF}
+	echo "DRI_DIRS = ${DRI_DRIVERS}" >> "${HOSTCONF}"
 
 	if use hardened; then
 		einfo "Deactivating assembly code for hardened build"
-		echo "ASM_FLAGS =" >> ${HOSTCONF}
-		echo "ASM_SOURCES =" >> ${HOSTCONF}
-		echo "ASM_API =" >> ${HOSTCONF}
+		echo "ASM_FLAGS =" >> "${HOSTCONF}"
+		echo "ASM_SOURCES =" >> "${HOSTCONF}"
+		echo "ASM_API =" >> "${HOSTCONF}"
 	fi
 
 	if use sparc; then
 		einfo "Sparc assembly code is not working; deactivating"
-		echo "ASM_FLAGS =" >> ${HOSTCONF}
-		echo "ASM_SOURCES =" >> ${HOSTCONF}
+		echo "ASM_FLAGS =" >> "${HOSTCONF}"
+		echo "ASM_SOURCES =" >> "${HOSTCONF}"
 	fi
 
 	# Kill this; we don't want /usr/X11R6/lib ever to be searched in this
 	# build.
-	echo "EXTRA_LIB_PATH =" >> ${HOSTCONF}
+	echo "EXTRA_LIB_PATH =" >> "${HOSTCONF}"
 
-	echo "OPT_FLAGS = ${CFLAGS}" >> ${HOSTCONF}
-	echo "CC = $(tc-getCC)" >> ${HOSTCONF}
-	echo "CXX = $(tc-getCXX)" >> ${HOSTCONF}
+	echo "OPT_FLAGS = ${CFLAGS}" >> "${HOSTCONF}"
+	echo "CC = $(tc-getCC)" >> "${HOSTCONF}"
+	echo "CXX = $(tc-getCXX)" >> "${HOSTCONF}"
 	# bug #110840 - Build with PIC, since it hasn't been shown to slow it down
-	echo "PIC_FLAGS = -fPIC" >> ${HOSTCONF}
+	echo "PIC_FLAGS = -fPIC" >> "${HOSTCONF}"
 
 	# Removed glut, since we have separate freeglut/glut ebuilds
 	# Remove EGL, since Brian Paul says it's not ready for a release
-	echo "SRC_DIRS = glx/x11 mesa glu glw" >> ${HOSTCONF}
+	echo "SRC_DIRS = glx/x11 mesa glu glw" >> "${HOSTCONF}"
 
 	# Get rid of glut includes
-	rm -f ${S}/include/GL/glut*h
+	rm -f "${S}"/include/GL/glut*h
 
 	# r200 breaks without this, since it's the only EGL-enabled driver so far
-	echo "USING_EGL = 0" >> ${HOSTCONF}
+	echo "USING_EGL = 0" >> "${HOSTCONF}"
 
 	# Don't build EGL demos. EGL isn't ready for release, plus they produce a
 	# circular dependency with glut.
-	echo "PROGRAM_DIRS =" >> ${HOSTCONF}
+	echo "PROGRAM_DIRS =" >> "${HOSTCONF}"
 
 	# Documented in configs/default
 	if use motif; then
 		# Add -lXm
-		echo "GLW_LIB_DEPS += -lXm" >> ${HOSTCONF}
+		echo "GLW_LIB_DEPS += -lXm" >> "${HOSTCONF}"
 		# Add GLwMDrawA.c
-		echo "GLW_SOURCES += GLwMDrawA.c" >> ${HOSTCONF}
+		echo "GLW_SOURCES += GLwMDrawA.c" >> "${HOSTCONF}"
 	fi
 }
 
@@ -250,11 +250,11 @@ src_install() {
 	eend $?
 
 	if ! use motif; then
-		rm ${D}/usr/include/GL/GLwMDrawA.h
+		rm "${D}"/usr/include/GL/GLwMDrawA.h
 	fi
 
 	# Don't install private headers
-	rm ${D}/usr/include/GL/GLw*P.h
+	rm "${D}"/usr/include/GL/GLw*P.h
 
 	fix_opengl_symlinks
 	dynamic_libgl_install
@@ -262,17 +262,17 @@ src_install() {
 	# Install libtool archives
 	insinto /usr/$(get_libdir)
 	# (#67729) Needs to be lib, not $(get_libdir)
-	doins ${FILESDIR}/lib/libGLU.la
-	sed -e "s:\${libdir}:$(get_libdir):g" ${FILESDIR}/lib/libGL.la \
-		> ${D}/usr/$(get_libdir)/opengl/xorg-x11/lib/libGL.la
+	doins "${FILESDIR}"/lib/libGLU.la
+	sed -e "s:\${libdir}:$(get_libdir):g" "${FILESDIR}"/lib/libGL.la \
+		> "${D}"/usr/$(get_libdir)/opengl/xorg-x11/lib/libGL.la
 
 	# On *BSD libcs dlopen() and similar functions are present directly in
 	# libc.so and does not require linking to libdl. portability eclass takes
 	# care of finding the needed library (if needed) witht the dlopen_lib
 	# function.
 	sed -i -e 's:-ldl:'$(dlopen_lib)':g' \
-		${D}/usr/$(get_libdir)/libGLU.la \
-		${D}/usr/$(get_libdir)/opengl/xorg-x11/lib/libGL.la
+		"${D}"/usr/$(get_libdir)/libGLU.la \
+		"${D}"/usr/$(get_libdir)/opengl/xorg-x11/lib/libGL.la
 
 	# Create the two-number versioned libs (.so.#.#), since only .so.# and
 	# .so.#.#.# were made
@@ -293,7 +293,7 @@ pkg_postinst() {
 fix_opengl_symlinks() {
 	# Remove invalid symlinks
 	local LINK
-	for LINK in $(find ${D}/usr/$(get_libdir) \
+	for LINK in $(find "${D}"/usr/$(get_libdir) \
 		-name libGL\.* -type l); do
 		rm -f ${LINK}
 	done
@@ -314,18 +314,18 @@ dynamic_libgl_install() {
 	ebegin "Moving libGL and friends for dynamic switching"
 		dodir /usr/$(get_libdir)/opengl/${OPENGL_DIR}/{lib,extensions,include}
 		local x=""
-		for x in ${D}/usr/$(get_libdir)/libGL.so* \
-			${D}/usr/$(get_libdir)/libGL.la \
-			${D}/usr/$(get_libdir)/libGL.a; do
-			if [ -f ${x} -o -L ${x} ]; then
+		for x in "${D}"/usr/$(get_libdir)/libGL.so* \
+			"${D}"/usr/$(get_libdir)/libGL.la \
+			"${D}"/usr/$(get_libdir)/libGL.a; do
+			if [[ -f ${x} || -L ${x} ]]; then
 				# libGL.a cause problems with tuxracer, etc
-				mv -f ${x} ${D}/usr/$(get_libdir)/opengl/${OPENGL_DIR}/lib
+				mv -f "${x}" "${D}"/usr/$(get_libdir)/opengl/${OPENGL_DIR}/lib
 			fi
 		done
 		# glext.h added for #54984
-		for x in ${D}/usr/include/GL/{gl.h,glx.h,glext.h,glxext.h}; do
-			if [ -f ${x} -o -L ${x} ]; then
-				mv -f ${x} ${D}/usr/$(get_libdir)/opengl/${OPENGL_DIR}/include
+		for x in "${D}"/usr/include/GL/{gl.h,glx.h,glext.h,glxext.h}; do
+			if [[ -f ${x} || -L ${x} ]]; then
+				mv -f "${x}" "${D}"/usr/$(get_libdir)/opengl/${OPENGL_DIR}/include
 			fi
 		done
 	eend 0

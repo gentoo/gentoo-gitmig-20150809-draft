@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.1.ebuild,v 1.1 2007/08/11 08:47:04 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.1.ebuild,v 1.2 2007/10/09 08:23:57 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability versionator
 
@@ -124,21 +124,21 @@ src_unpack() {
 	fi
 
 	# Set up libdir
-	echo "LIB_DIR = $(get_libdir)" >> ${HOSTCONF}
+	echo "LIB_DIR = $(get_libdir)" >> "${HOSTCONF}"
 
 	# Set default dri drivers directory
-	echo 'DRI_DRIVER_SEARCH_DIR = /usr/$(LIB_DIR)/dri' >> ${HOSTCONF}
+	echo 'DRI_DRIVER_SEARCH_DIR = /usr/$(LIB_DIR)/dri' >> "${HOSTCONF}"
 
 	# Do we want thread-local storage (TLS)?
 	if use nptl; then
-		echo "ARCH_FLAGS += -DGLX_USE_TLS" >> ${HOSTCONF}
+		echo "ARCH_FLAGS += -DGLX_USE_TLS" >> "${HOSTCONF}"
 	fi
 
-	echo "X11_INCLUDES = `pkg-config --cflags-only-I x11`" >> ${HOSTCONF}
+	echo "X11_INCLUDES = `pkg-config --cflags-only-I x11`" >> "${HOSTCONF}"
 	if use xcb; then
-		echo "DEFINES += -DUSE_XCB" >> ${HOSTCONF}
-		echo "X11_INCLUDES += `pkg-config --cflags-only-I xcb` `pkg-config --cflags-only-I x11-xcb` `pkg-config --cflags-only-I xcb-glx`" >> ${HOSTCONF}
-		echo "GL_LIB_DEPS += `pkg-config --libs xcb` `pkg-config --libs x11-xcb` `pkg-config --libs xcb-glx`" >> ${HOSTCONF}
+		echo "DEFINES += -DUSE_XCB" >> "${HOSTCONF}"
+		echo "X11_INCLUDES += `pkg-config --cflags-only-I xcb` `pkg-config --cflags-only-I x11-xcb` `pkg-config --cflags-only-I xcb-glx`" >> "${HOSTCONF}"
+		echo "GL_LIB_DEPS += `pkg-config --libs xcb` `pkg-config --libs x11-xcb` `pkg-config --libs xcb-glx`" >> "${HOSTCONF}"
 	fi
 
 	# Configurable DRI drivers
@@ -156,34 +156,34 @@ src_unpack() {
 	driver_enable video_cards_via unichrome
 
 	# Set drivers to everything on which we ran driver_enable()
-	echo "DRI_DIRS = ${DRI_DRIVERS}" >> ${HOSTCONF}
+	echo "DRI_DIRS = ${DRI_DRIVERS}" >> "${HOSTCONF}"
 
 	if use hardened; then
 		einfo "Deactivating assembly code for hardened build"
-		echo "ASM_FLAGS =" >> ${HOSTCONF}
-		echo "ASM_SOURCES =" >> ${HOSTCONF}
-		echo "ASM_API =" >> ${HOSTCONF}
+		echo "ASM_FLAGS =" >> "${HOSTCONF}"
+		echo "ASM_SOURCES =" >> "${HOSTCONF}"
+		echo "ASM_API =" >> "${HOSTCONF}"
 	fi
 
 	if use sparc; then
 		einfo "Sparc assembly code is not working; deactivating"
-		echo "ASM_FLAGS =" >> ${HOSTCONF}
-		echo "ASM_SOURCES =" >> ${HOSTCONF}
+		echo "ASM_FLAGS =" >> "${HOSTCONF}"
+		echo "ASM_SOURCES =" >> "${HOSTCONF}"
 	fi
 
 	# Replace hardcoded /usr/X11R6 with this
-	echo "EXTRA_LIB_PATH = `pkg-config --libs-only-L x11`" >> ${HOSTCONF}
+	echo "EXTRA_LIB_PATH = `pkg-config --libs-only-L x11`" >> "${HOSTCONF}"
 
-	echo 'CFLAGS = $(OPT_FLAGS) $(PIC_FLAGS) $(ARCH_FLAGS) $(DEFINES) $(ASM_FLAGS)' >> ${HOSTCONF}
-	echo "OPT_FLAGS = ${CFLAGS}" >> ${HOSTCONF}
-	echo "CC = $(tc-getCC)" >> ${HOSTCONF}
-	echo "CXX = $(tc-getCXX)" >> ${HOSTCONF}
+	echo 'CFLAGS = $(OPT_FLAGS) $(PIC_FLAGS) $(ARCH_FLAGS) $(DEFINES) $(ASM_FLAGS)' >> "${HOSTCONF}"
+	echo "OPT_FLAGS = ${CFLAGS}" >> "${HOSTCONF}"
+	echo "CC = $(tc-getCC)" >> "${HOSTCONF}"
+	echo "CXX = $(tc-getCXX)" >> "${HOSTCONF}"
 	# bug #110840 - Build with PIC, since it hasn't been shown to slow it down
-	echo "PIC_FLAGS = -fPIC" >> ${HOSTCONF}
+	echo "PIC_FLAGS = -fPIC" >> "${HOSTCONF}"
 
 	# Removed glut, since we have separate freeglut/glut ebuilds
 	# Remove EGL, since Brian Paul says it's not ready for a release
-	echo "SRC_DIRS = glx/x11 mesa glu glw" >> ${HOSTCONF}
+	echo "SRC_DIRS = glx/x11 mesa glu glw" >> "${HOSTCONF}"
 
 	# Get rid of glut includes
 	rm -f "${S}"/include/GL/glut*h
@@ -191,15 +191,15 @@ src_unpack() {
 	# Documented in configs/default
 	if use motif; then
 		# Add -lXm
-		echo "GLW_LIB_DEPS += -lXm" >> ${HOSTCONF}
+		echo "GLW_LIB_DEPS += -lXm" >> "${HOSTCONF}"
 		# Add GLwMDrawA.c
-		echo "GLW_SOURCES += GLwMDrawA.c" >> ${HOSTCONF}
+		echo "GLW_SOURCES += GLwMDrawA.c" >> "${HOSTCONF}"
 	fi
 
 	# Shut up pointless warnings
-#	echo "MKDEP = gcc -M" >> ${HOSTCONF}
-#	echo "MKDEP_OPTIONS = -MF depend" >> ${HOSTCONF}
-	echo "MKDEP_OPTIONS = -fdepend -I$(gcc-config -L)/include" >> ${HOSTCONF}
+#	echo "MKDEP = gcc -M" >> "${HOSTCONF}"
+#	echo "MKDEP_OPTIONS = -MF depend" >> "${HOSTCONF}"
+	echo "MKDEP_OPTIONS = -fdepend -I$(gcc-config -L)/include" >> "${HOSTCONF}"
 }
 
 src_compile() {
@@ -227,8 +227,8 @@ src_install() {
 	# Install libtool archives
 	insinto /usr/$(get_libdir)
 	# (#67729) Needs to be lib, not $(get_libdir)
-	doins ${FILESDIR}/lib/libGLU.la
-	sed -e "s:\${libdir}:$(get_libdir):g" ${FILESDIR}/lib/libGL.la \
+	doins "${FILESDIR}"/lib/libGLU.la
+	sed -e "s:\${libdir}:$(get_libdir):g" "${FILESDIR}"/lib/libGL.la \
 		> "${D}"/usr/$(get_libdir)/opengl/xorg-x11/lib/libGL.la
 
 	# On *BSD libcs dlopen() and similar functions are present directly in
