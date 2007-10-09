@@ -1,14 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.2-r1.ebuild,v 1.17 2007/08/08 03:07:17 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.2-r1.ebuild,v 1.18 2007/10/09 23:56:02 nixphoeni Exp $
 
-WANT_AUTOMAKE=latest
-WANT_AUTOCONF=latest
+# We want the latest autoconf and automake (the default)
 inherit gnome2 eutils autotools multilib
 
 MY_PN="gDesklets"
 MY_P="${MY_PN}-${PV/_/}"
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="GNOME Desktop Applets: Core library for desktop applets"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2 \
@@ -45,7 +44,7 @@ src_install() {
 	# Install the gdesklets-control-getid script
 	insinto /usr/$(get_libdir)/gdesklets
 	insopts -m0555
-	doins ${FILESDIR}/gdesklets-control-getid
+	doins "${FILESDIR}/gdesklets-control-getid"
 
 	# Create a global directory for Displays
 	dodir /usr/$(get_libdir)/gdesklets/Displays
@@ -53,12 +52,15 @@ src_install() {
 	# Install the Developer's Book
 	use doc && \
 		elog "Installing the Developer's Book into" && \
-		elog "/usr/share/doc/${PF}/html" && \
-		dohtml -r ${WORKDIR}/gdesklets-develbook/*
+		elog "${ROOT}usr/share/doc/${PF}/html" && \
+		dohtml -r "${WORKDIR}/gdesklets-develbook/*"
 
-	# Remove conflicts with x11-misc/shared-mime-info and auto-generated MIME info
-	rm -rf ${D}/usr/share/mime/aliases ${D}/usr/share/mime/magic ${D}/usr/share/mime/globs \
-		${D}/usr/share/mime/subclasses ${D}/usr/share/mime/XMLnamespaces ${D}/usr/share/mime/mime.cache
+	# Remove conflicts with x11-misc/shared-mime-info and auto-generated
+	# MIME info
+	rm -rf "${D}/usr/share/mime/aliases" "${D}/usr/share/mime/magic" \
+		"${D}/usr/share/mime/globs" "${D}/usr/share/mime/subclasses" \
+		"${D}/usr/share/mime/XMLnamespaces" \
+		"${D}/usr/share/mime/mime.cache"
 
 }
 
@@ -69,18 +71,18 @@ pkg_postinst() {
 	echo
 	elog "gDesklets Displays are required before the library"
 	elog "will be usable. The displays are found in -"
-	elog "           x11-plugins/desklet-*"
+	elog "           x11-plugins/desklet-* ,"
 	elog "at http://www.gdesklets.de, or at http://gdesklets.zencomputer.ca"
 	elog
 	elog "Next you'll need to start gdesklets using"
-	elog "           /usr/bin/gdesklets start"
+	elog "           ${ROOT}usr/bin/gdesklets start"
 	elog "If you're using GNOME this can be done conveniently"
 	elog "through Applications->Accessories->gDesklets"
 	elog
 	elog "If you're updating from a version less than 0.35_rc1,"
 	elog "you can migrate your desklet configurations by"
 	elog "running"
-	elog "           /usr/lib/gdesklets/gdesklets-migration-tool"
+	elog "           ${ROOT}usr/$(get_libdir)/gdesklets/gdesklets-migration-tool"
 	elog "after the first time you run gdesklets"
 	echo
 
