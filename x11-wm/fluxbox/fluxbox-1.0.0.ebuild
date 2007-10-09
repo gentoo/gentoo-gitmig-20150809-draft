@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0.0.ebuild,v 1.1 2007/10/09 14:45:29 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0.0.ebuild,v 1.2 2007/10/09 21:19:56 lack Exp $
 
 inherit eutils
 
@@ -37,13 +37,11 @@ LICENSE="MIT"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 pkg_setup() {
-	if use imlib ; then
-		if ! built_with_use media-libs/imlib2 X ; then
+	if use imlib && ! built_with_use media-libs/imlib2 X ; then
 			eerror "To build fluxbox with imlib in USE, you need an X enabled"
 			eerror "media-libs/imlib2 . Either recompile imlib2 with the X"
 			eerror "USE flag turned on or disable the imlib USE flag for fluxbox."
 			die "USE=imlib requires imlib2 with USE=X"
-		fi
 	fi
 }
 
@@ -68,8 +66,6 @@ src_unpack() {
 }
 
 src_compile() {
-	export PKG_CONFIG_PATH=/usr/X11R6/lib/pkgconfig:/usr/lib/pkgconfig
-
 	econf \
 		$(use_enable nls) \
 		$(use_enable xinerama) \
@@ -96,7 +92,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/share/fluxbox
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	dodoc README* AUTHORS TODO* ChangeLog NEWS
 
 	dodir /usr/share/xsessions
