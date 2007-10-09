@@ -104,7 +104,7 @@ if (! defined $pdffile)
 # Check the options string for options to modify the bahaviour of the pdftops utility:
 #
 @optarr = split (/\s+/, $options);
-$cmdopt = "-cfg " . $ENV{CUPS_SERVERROOT} . "/pdftops.conf";	# This cannot be changed
+$cmdopt = "";
 # The following are the (parameterless) command line options that may be used to change the 
 # defaults defiend by pdftops.conf
 $simple = 'level1|level1sep|level2|level2sep|level3|level3sep|opi|nocrop|expand|noshrink|nocenter';

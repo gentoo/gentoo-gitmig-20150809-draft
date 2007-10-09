@@ -1,6 +1,15 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.247 2007/08/07 11:59:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.248 2007/10/09 18:46:50 genstef Exp $
+
+*cups-1.2.12-r1 (09 Oct 2007)
+
+  09 Oct 2007; Stefan Schweizer <genstef@gentoo.org>
+  -files/cups-1.2.1-ssldir.patch, -files/cups-1.2.5.patch, files/pdftops.pl,
+  -cups-1.2.9.ebuild, -cups-1.2.11.ebuild, -cups-1.2.12.ebuild,
+  +cups-1.2.12-r1.ebuild:
+  Fix pdftops with poppler-0.6 thanks to Christian Aistleitner <tmgisi@gmx.at>
+  in bug 195278
 
   07 Aug 2007; Raúl Porcel <armin76@gentoo.org> cups-1.2.10-r1.ebuild:
   ia64 stable wrt #180906
