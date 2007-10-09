@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-quicklauncher
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher/ChangeLog,v 1.18 2007/10/09 15:19:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher/ChangeLog,v 1.19 2007/10/09 17:39:46 drac Exp $
+
+  09 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-quicklauncher-1.9.4.ebuild:
+  Restrict tests as they are not supported by goodies upstream.
 
   09 Oct 2007; Jeroen Roovers <jer@gentoo.org>
   xfce4-quicklauncher-1.9.4.ebuild:
