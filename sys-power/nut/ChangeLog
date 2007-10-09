@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.48 2007/10/09 00:48:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.49 2007/10/09 00:54:54 robbat2 Exp $
+
+  09 Oct 2007; Robin H. Johnson <robbat2@gentoo.org>
+  -files/upsstats-upsset-link-2.0.4.patch, -files/upsdrv.rc6,
+  -files/upsstats-upsset-link.patch:
+  Remove old patches.
 
 *nut-2.2.0 (09 Oct 2007)
 
