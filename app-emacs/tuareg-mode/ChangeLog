@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/tuareg-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.21 2007/10/09 06:52:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.22 2007/10/09 12:13:03 ulm Exp $
 
 *tuareg-mode-1.45.5 (09 Oct 2007)
 
@@ -8,8 +8,8 @@
   +tuareg-mode-1.45.5.ebuild, -tuareg-mode-1.46.0.ebuild,
   -tuareg-mode-1.46.2.ebuild:
   Downgrade to 1.45.5 since versions 1.46.* have been withdrawn by upstream.
-  Remove XEmacs specific sym-lock.el so that byte-compilation works.
-  Fix installation error in stable revision.
+  New function src_unpack: remove XEmacs specific sym-lock.el so that
+  byte-compilation works. Fix installation error in stable revision.
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   tuareg-mode-1.46.2.ebuild:

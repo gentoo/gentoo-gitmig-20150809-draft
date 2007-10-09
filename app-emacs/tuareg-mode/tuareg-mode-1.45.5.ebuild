@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/tuareg-mode-1.45.5.ebuild,v 1.1 2007/10/09 06:52:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/tuareg-mode-1.45.5.ebuild,v 1.2 2007/10/09 12:13:03 ulm Exp $
 
 inherit elisp
 
@@ -16,7 +16,11 @@ IUSE=""
 SITEFILE=50${PN}-gentoo.el
 DOCS="HISTORY LISEZMOI README"
 
+src_unpack() {
+	unpack ${A}
+	rm "${S}"/sym-lock.*		# works only with XEmacs
+}
+
 src_compile() {
-	rm sym-lock.*				# works only with XEmacs
 	elisp-comp *.el || die "elisp-comp failed"
 }
