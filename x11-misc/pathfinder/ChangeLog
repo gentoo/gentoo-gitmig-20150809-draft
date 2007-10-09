@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pathfinder
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/ChangeLog,v 1.10 2007/06/06 10:06:37 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/ChangeLog,v 1.11 2007/10/09 05:40:27 jer Exp $
+
+  09 Oct 2007; Jeroen Roovers <jer@gentoo.org> pathfinder-1.6.27.ebuild:
+  Stable for HPPA (bug #194813).
 
 *pathfinder-1.6.27 (06 Jun 2007)
 
