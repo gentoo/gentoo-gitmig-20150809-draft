@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.158 2007/10/09 08:23:57 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.159 2007/10/09 08:27:03 dberkholz Exp $
+
+  09 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/6.4-multilib-fix.patch, -files/6.5.1-freebsd-dri.patch,
+  -files/6.5.1-xcb-dont-unlock-twice.patch,
+  -files/6.5-re-order-context-destruction.patch,
+  -files/6.5.1-mach64-dri-private-dma-2.patch,
+  -files/6.4-dont-install-gles-headers.patch,
+  -files/6.5.1-i965-bufmgr.patch, -files/6.5.1-use-new-xcb-naming.patch,
+  -files/change-default-dri-driver-dir-X7.1.patch, -mesa-6.5-r3.ebuild,
+  -mesa-6.5.1-r1.ebuild, -mesa-6.5.1-r4.ebuild:
+  Clean out old versions.
 
   09 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>; mesa-6.5-r3.ebuild,
   mesa-6.5.1-r1.ebuild, mesa-6.5.1-r4.ebuild, mesa-6.5.2.ebuild,
