@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.11.1-r2.ebuild,v 1.7 2007/10/06 15:35:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.11.1-r2.ebuild,v 1.8 2007/10/09 14:44:58 angelos Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 IUSE="clock-screen mouse search-screen key-screen raw-mode nls debug"
 
 SLOT="0"
-KEYWORDS="~amd64 hppa ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ppc ~ppc64 sparc x86 ~x86-fbsd"
 
 RDEPEND="sys-libs/ncurses
 	dev-libs/popt
