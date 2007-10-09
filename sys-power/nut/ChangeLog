@@ -1,6 +1,14 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.47 2007/10/09 00:45:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.48 2007/10/09 00:48:43 robbat2 Exp $
+
+*nut-2.2.0 (09 Oct 2007)
+
+  09 Oct 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/lighttpd_nut.conf-2.2.0, +nut-2.2.0.ebuild:
+  Bug #184595, version bump to new major version. Read the UPGRADING file
+  provided by upstream, there is a strong chance you need to change your
+  config files.
 
   09 Oct 2007; Robin H. Johnson <robbat2@gentoo.org> -nut-2.0.0.ebuild,
   -nut-2.0.0-r1.ebuild, -nut-2.0.1_pre4.ebuild, -nut-2.0.3.ebuild,
