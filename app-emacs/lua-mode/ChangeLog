@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/lua-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.13 2007/10/08 15:25:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.14 2007/10/09 06:50:08 opfer Exp $
+
+  09 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  lua-mode-1.26-r1.ebuild, lua-mode-20061208.ebuild,
+  lua-mode-20070708.ebuild:
+  remove src_install as eclass functions are enough
 
   08 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   lua-mode-20061208.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/lua-mode-20070708.ebuild,v 1.1 2007/10/08 15:22:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/lua-mode-20070708.ebuild,v 1.2 2007/10/09 06:50:08 opfer Exp $
 
 inherit elisp
 
@@ -15,8 +15,3 @@ IUSE=""
 SITEFILE="70${PN}-gentoo.el"
 
 S="${WORKDIR}"
-
-src_compile() {
-	/usr/bin/emacs -batch --no-site-file --no-init-file \
-		--load "${S}/lua-mode.el" -f batch-byte-compile lua-mode.el
-}
