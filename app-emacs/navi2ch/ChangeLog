@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/navi2ch
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.30 2007/10/09 15:33:05 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.31 2007/10/09 17:42:52 armin76 Exp $
+
+  09 Oct 2007; Raúl Porcel <armin76@gentoo.org> navi2ch-1.7.5.ebuild:
+  alpha/sparc stable wrt #195112
 
   09 Oct 2007; Lars Weiler <pylon@gentoo.org> navi2ch-1.7.5.ebuild:
   stable ppc, bug #195112
