@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/logjam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.39 2007/10/09 15:23:17 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.40 2007/10/09 18:35:08 armin76 Exp $
+
+  09 Oct 2007; Raúl Porcel <armin76@gentoo.org> logjam-4.5.2.ebuild:
+  sparc stable wrt #195060
 
   09 Oct 2007; Lars Weiler <pylon@gentoo.org> logjam-4.5.2.ebuild:
   stable ppc, bug #195060
