@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.105 2007/10/05 17:22:28 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.106 2007/10/09 22:20:15 genstef Exp $
+
+  09 Oct 2007; Stefan Schweizer <genstef@gentoo.org> fuse-2.6.4-r1.ebuild,
+  fuse-2.7.0.ebuild:
+  Make 2.6.23 support actually work for Sven <skoehler@upb.de> in bug 195300
 
   05 Oct 2007; Ferris McCormick <fmccor@gentoo.org> fuse-2.7.0.ebuild:
   Sparc stable --- Bug #193329 --- thanks to ezod.
