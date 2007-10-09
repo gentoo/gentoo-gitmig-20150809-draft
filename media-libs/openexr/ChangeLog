@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openexr
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.59 2007/10/08 11:22:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.60 2007/10/09 16:53:58 corsair Exp $
+
+  09 Oct 2007; Markus Rothe <corsair@gentoo.org> openexr-1.6.0.ebuild:
+  Added ~ppc64; bug #189798
 
   08 Oct 2007; Markus Rothe <corsair@gentoo.org> openexr-1.4.0a.ebuild:
   Stable on ppc64; bug #181063
