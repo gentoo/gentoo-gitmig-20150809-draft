@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXfontcache
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfontcache/ChangeLog,v 1.36 2007/08/07 13:11:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfontcache/ChangeLog,v 1.37 2007/10/09 09:34:41 dberkholz Exp $
+
+  09 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/fix_shadow_manpages.patch, -libXfontcache-1.0.2.ebuild,
+  -libXfontcache-1.0.3.ebuild:
+  Drop old ebuilds.
 
   07 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   libXfontcache-1.0.4.ebuild:
