@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.5-r2.ebuild,v 1.9 2007/07/15 07:08:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.5-r2.ebuild,v 1.10 2007/10/09 00:45:34 robbat2 Exp $
 
 inherit eutils fixheadtails
 
@@ -133,14 +133,14 @@ src_install() {
 
 	newdoc lib/README README.lib
 
-	dodoc ${FILESDIR}/lighttpd_nut.conf
+	dodoc "${FILESDIR}"/lighttpd_nut.conf
 
 	docinto cables
 	dodoc docs/cables/*
 
-	newinitd "${FILESDIR}/upsd.rc6" upsd
-	newinitd "${FILESDIR}/upsdrv.rc6-r1" upsdrv
-	newinitd "${FILESDIR}/upsmon.rc6" upsmon
+	newinitd "${FILESDIR}"/upsd.rc6 upsd
+	newinitd "${FILESDIR}"/upsdrv.rc6-r1 upsdrv
+	newinitd "${FILESDIR}"/upsmon.rc6 upsmon
 
 	# This sets up permissions for nut to access a UPS
 	insinto /etc/udev/rules.d/
@@ -168,14 +168,14 @@ src_install() {
 pkg_postinst() {
 	# this is to ensure that everybody that installed old versions still has
 	# correct permissions
-	chown nut:nut ${ROOT}/var/lib/nut 2>/dev/null
-	chmod 0700 ${ROOT}/var/lib/nut 2>/dev/null
+	chown nut:nut "${ROOT}"/var/lib/nut 2>/dev/null
+	chmod 0700 "${ROOT}"/var/lib/nut 2>/dev/null
 
-	eval chown root:nut ${ROOT}${NUT_PRIVATE_FILES} 2>/dev/null
-	eval chmod 0640 ${ROOT}${NUT_PRIVATE_FILES} 2>/dev/null
+	eval chown root:nut "${ROOT}"${NUT_PRIVATE_FILES} 2>/dev/null
+	eval chmod 0640 "${ROOT}"${NUT_PRIVATE_FILES} 2>/dev/null
 
-	eval chown root:root ${ROOT}${NUT_PUBLIC_FILES} 2>/dev/null
-	eval chmod 0644 ${ROOT}${NUT_PUBLIC_FILES} 2>/dev/null
+	eval chown root:root "${ROOT}"${NUT_PUBLIC_FILES} 2>/dev/null
+	eval chmod 0644 "${ROOT}"${NUT_PUBLIC_FILES} 2>/dev/null
 
 	warningmsg elog
 }
