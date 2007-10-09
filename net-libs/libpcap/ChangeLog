@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.88 2007/10/09 17:57:15 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.89 2007/10/09 18:00:25 jokey Exp $
+
+  09 Oct 2007; Markus Ullmann <jokey@gentoo.org> libpcap-0.9.7.ebuild,
+  libpcap-0.9.8.ebuild:
+  Quote me
 
 *libpcap-0.9.8 (09 Oct 2007)
 
