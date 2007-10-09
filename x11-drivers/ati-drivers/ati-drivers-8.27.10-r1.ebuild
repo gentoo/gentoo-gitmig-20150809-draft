@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.27.10-r1.ebuild,v 1.10 2007/10/09 08:11:29 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.27.10-r1.ebuild,v 1.11 2007/10/09 08:13:46 dberkholz Exp $
 
 IUSE="acpi doc opengl"
 
@@ -25,8 +25,6 @@ RDEPEND="x11-base/xorg-server
 
 DEPEND=">=virtual/linux-sources-2.4
 	${RDEPEND}"
-
-PROVIDE="virtual/opengl"
 
 ATIBIN="${D}/opt/ati/bin"
 RESTRICT="strip"
