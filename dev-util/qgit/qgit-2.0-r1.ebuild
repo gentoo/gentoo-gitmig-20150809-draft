@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-2.0.ebuild,v 1.2 2007/10/08 17:58:09 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-2.0-r1.ebuild,v 1.1 2007/10/09 09:46:34 jokey Exp $
 
 inherit qt4
 
@@ -28,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin bin/qgit4
+	newbin bin/qgit qgit4
 	dodoc README
 }
 
