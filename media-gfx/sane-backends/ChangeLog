@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.126 2007/10/05 07:32:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.127 2007/10/09 08:57:18 corsair Exp $
+
+  09 Oct 2007; Markus Rothe <corsair@gentoo.org>
+  sane-backends-1.0.18-r4.ebuild:
+  Stable on ppc64; bug #188573
 
 *sane-backends-1.0.18-r5 (05 Oct 2007)
 
