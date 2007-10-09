@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.4.ebuild,v 1.1 2007/10/08 22:53:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.4.ebuild,v 1.2 2007/10/09 12:09:18 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -10,7 +10,8 @@ MY_P="${P/_pre/-pre}"
 DESCRIPTION="Kernel module tools for the 2.6 kernel"
 HOMEPAGE="http://kerneltools.org/"
 SRC_URI="mirror://kernel/linux/kernel/people/jcm/module-init-tools/${MY_P}.tar.bz2
-	old-linux? ( mirror://kernel/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2 )"
+	old-linux? ( mirror://kernel/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2 )
+	mirror://gentoo/${P}-manpages.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -64,14 +65,14 @@ src_unpack() {
 		configure || die
 
 	# make sure we don't try to regen the manpages
-	touch *.5
+	touch *.5 *.8
 }
 
 src_compile() {
 	# Configure script uses BUILDCFLAGS for cross-compiles but this
 	# defaults to CFLAGS which can be bad mojo
 	export BUILDCFLAGS=-pipe
-	export BUILDCC="$(tc-getBUILD_CC)"
+	export BUILDCC=$(tc-getBUILD_CC)
 
 	if use old-linux ; then
 		einfo "Building modutils ..."
