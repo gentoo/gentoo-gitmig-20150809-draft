@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.51 2007/10/03 05:00:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.52 2007/10/09 15:02:44 angelos Exp $
+
+  09 Oct 2007; Christoph Mende <angelos@gentoo.org> pari-2.3.2.ebuild:
+  Stable on amd64 wrt bug #194265
 
   03 Oct 2007; Jeroen Roovers <jer@gentoo.org> pari-2.3.2-r1.ebuild:
   Stable for HPPA (bug #194265).
