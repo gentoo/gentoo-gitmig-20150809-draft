@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pspresent
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.22 2007/07/22 10:24:50 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.23 2007/10/09 07:36:05 opfer Exp $
+
+  09 Oct 2007; Christian Faulhammer <opfer@gentoo.org> pspresent-1.3.ebuild:
+  stable x86, bug 195176
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> pspresent-1.2.ebuild,
   pspresent-1.2-r1.ebuild, pspresent-1.3.ebuild:

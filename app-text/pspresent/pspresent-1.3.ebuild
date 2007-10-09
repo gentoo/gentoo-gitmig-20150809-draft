@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.3.ebuild,v 1.2 2007/07/22 10:24:50 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.3.ebuild,v 1.3 2007/10/09 07:36:05 opfer Exp $
 
 IUSE="xinerama"
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 src_compile()
 {
