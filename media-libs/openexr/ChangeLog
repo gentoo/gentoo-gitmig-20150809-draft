@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openexr
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.60 2007/10/09 16:53:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.61 2007/10/09 17:48:59 armin76 Exp $
+
+  09 Oct 2007; Raúl Porcel <armin76@gentoo.org> openexr-1.4.0a.ebuild,
+  openexr-1.6.0.ebuild:
+  sparc stable wrt #181063 and re-add ~sparc wrt #189798
 
   09 Oct 2007; Markus Rothe <corsair@gentoo.org> openexr-1.6.0.ebuild:
   Added ~ppc64; bug #189798
