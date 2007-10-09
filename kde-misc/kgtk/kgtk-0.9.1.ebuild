@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.9.1.ebuild,v 1.1 2007/10/03 22:11:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.9.1.ebuild,v 1.2 2007/10/09 16:52:00 genstef Exp $
 
 inherit kde
 
@@ -28,8 +28,8 @@ src_compile() {
 
 pkg_postinst() {
 	elog "To see the kde-file-selector in a gtk-application, just do:"
-	echo "cd /usr/local/bin"
-	echo "ln -s /usr/bin/kgtk-wrapper application(eg. firefox)"
+	elog "cd /usr/local/bin"
+	elog "ln -s /usr/bin/kgtk-wrapper application(eg. firefox)"
 	elog "Make sure that /usr/local/bin is before /usr/bin in your \$PATH"
 	elog
 	elog "You need to restart kde and be sure to change your symlinks to non-.sh"
