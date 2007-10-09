@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc5-r1.ebuild,v 1.7 2007/07/15 23:07:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc5-r1.ebuild,v 1.8 2007/10/09 07:27:50 dberkholz Exp $
 
 inherit eutils
 
@@ -33,24 +33,24 @@ DEPEND=">=sys-libs/ncurses-5.1
 src_unpack () {
 	unpack ${A}
 
-	cd ${X}
-	cp xc-directfb.diff ${S}
-	cp -pPR programs/Xserver/hw/directfb ${S}/programs/Xserver/hw
-	cp ${X}/config/cf/* ${S}/config/cf
-	cp ${FILESDIR}/host.def ${S}/config/cf/
+	cd "${X}"
+	cp xc-directfb.diff "${S}"
+	cp -pPR programs/Xserver/hw/directfb "${S}"/programs/Xserver/hw
+	cp "${X}"/config/cf/* "${S}"/config/cf
+	cp "${FILESDIR}"/host.def "${S}"/config/cf/
 
-	cd ${S}
+	cd "${S}"
 	epatch ./xc-directfb.diff
 
-	cd ${S}/programs/Xserver/hw/directfb
-	cp directfbScreen.c rootlessDirectFB.c ${T}
+	cd "${S}"/programs/Xserver/hw/directfb
+	cp directfbScreen.c rootlessDirectFB.c "${T}"
 
 	# update changes in the newer DirectFB versions
 	sed "s:DSPF_RGB15:DSPF_ARGB1555:g" \
-		${T}/directfbScreen.c > directfbScreen.c
+		"${T}"/directfbScreen.c > directfbScreen.c
 
 	sed "s:DSPF_RGB15:DSPF_ARGB1555:g" \
-		${T}/rootlessDirectFB.c > rootlessDirectFB.c
+		"${T}"/rootlessDirectFB.c > rootlessDirectFB.c
 
 }
 
@@ -62,26 +62,26 @@ src_install() {
 #	make install DESTDIR=${D}
 
 	exeinto /usr/X11R6/bin
-	doexe ${S}/programs/Xserver/XDirectFB
-	doexe ${FILESDIR}/startxdfb
+	doexe "${S}"/programs/Xserver/XDirectFB
+	doexe "${FILESDIR}"/startxdfb
 
-	mv ${S}/programs/Xserver/hw/directfb/XDirectFB._man ./XDirectFB.1x
+	mv "${S}"/programs/Xserver/hw/directfb/XDirectFB._man ./XDirectFB.1x
 	insinto /usr/X11R6/man/man1
-	doins ${S}/XDirectFB.1x
+	doins "${S}"/XDirectFB.1x
 	dodir /etc/skel
 	dodir /etc/X11/xinit
-	cp ${FILESDIR}/dotdfbserverrc ${D}/etc/skel/.dfbserverrc
-	cp ${FILESDIR}/dfbserverrc ${D}/etc/X11/xinit
+	cp "${FILESDIR}"/dotdfbserverrc "${D}"/etc/skel/.dfbserverrc
+	cp "${FILESDIR}"/dfbserverrc "${D}"/etc/X11/xinit
 
-	dohtml ${S}/programs/Xserver/hw/directfb/XDirectFB.1x.html
+	dohtml "${S}"/programs/Xserver/hw/directfb/XDirectFB.1x.html
 
-	cd ${X}
+	cd "${X}"
 	dodoc AUTHORS ChangeLog README TODO
 }
 
 pkg_postinst() {
-	chmod 4711 /usr/X11R6/bin/XDirectFB
-	chmod 755 /usr/X11R6/bin/startxdfb
+	chmod 4711 "${ROOT}"/usr/X11R6/bin/XDirectFB
+	chmod 755 "${ROOT}"/usr/X11R6/bin/startxdfb
 
 	einfo "To start XDirectFB use the startxdfb utility."
 }
