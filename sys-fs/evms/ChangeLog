@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.73 2007/10/08 22:01:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.74 2007/10/09 03:18:17 cardoe Exp $
+
+*evms-2.5.5-r9 (09 Oct 2007)
+
+  09 Oct 2007; Doug Goldstein <cardoe@gentoo.org> -files/evms.conf-2.5.5-r8,
+  -files/evms.initd-2.5.5-r8, +files/evms.conf-2.5.5-r9,
+  +files/evms.initd-2.5.5-r9, -evms-2.5.5-r8.ebuild, +evms-2.5.5-r9.ebuild:
+  Bad day for me to edit stuff. Actually make the changes as described in the
+  previous ChangeLog entry
 
 *evms-2.5.5-r8 (08 Oct 2007)
 

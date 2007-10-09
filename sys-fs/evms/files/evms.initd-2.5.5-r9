@@ -1,13 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/files/evms.initd-2.5.5-r8,v 1.1 2007/10/08 22:01:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/files/evms.initd-2.5.5-r9,v 1.1 2007/10/09 03:18:18 cardoe Exp $
 
 depend() {
 	if [ -e /lib/librc.so ]; then
 		# on baselayout-1 this causes
 		# a dependency loop with checkroot (before *)
 		before checkfs
+		after modules
 	fi
 }
 

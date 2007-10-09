@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r8.ebuild,v 1.1 2007/10/08 22:01:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r9.ebuild,v 1.1 2007/10/09 03:18:17 cardoe Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -107,7 +107,7 @@ src_install() {
 
 	# move static libraries to /usr/lib
 	dodir /usr/$(get_libdir)
-	mv -f ${D}/$(get_libdir)/*.a "${D}/usr/$(get_libdir)"
+	mv -f "${D}"/$(get_libdir)/*.a "${D}/usr/$(get_libdir)"
 
 	# Create linker scripts for dynamic libs in /lib, else gcc
 	# links to the static ones in /usr/lib first.  Bug #4411.
@@ -121,13 +121,14 @@ src_install() {
 	# the gtk+ frontend should live in /usr/sbin
 	if use gtk ; then
 		dodir /usr/sbin
-		mv -f ${D}/sbin/evmsgui ${D}/usr/sbin
+		mv -f "${D}"/sbin/evmsgui "${D}"/usr/sbin
 	fi
 
 	# Needed for bug #51252
 	dosym libevms-2.5.so.0.0 /$(get_libdir)/libevms-2.5.so.0
 
-	newinitd "${FILESDIR}/evms.initd"
+	newinitd "${FILESDIR}"/evms.initd-2.5.5-r9 evms || die
+	newconfd "${FILESDIR}"/evms.conf-2.5.5-r9 evms || die
 }
 
 src_test() {
