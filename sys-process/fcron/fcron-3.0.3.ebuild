@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.3.ebuild,v 1.2 2007/10/09 16:34:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.3.ebuild,v 1.3 2007/10/09 17:24:09 jer Exp $
 
 inherit cron pam eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://fcron.free.fr/"
 SRC_URI="http://fcron.free.fr/archives/${MY_P}.src.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 hppa ~ppc ~sparc x86 ~x86-fbsd"
 IUSE="debug doc pam selinux"
 
 DEPEND="doc? ( >=app-text/docbook-dsssl-stylesheets-1.77 )
@@ -40,7 +40,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# respect LDFLAGS
 	sed -i "s:\(@LIBS@\):\$(LDFLAGS) \1:" Makefile.in || die "sed failed"
@@ -113,10 +113,10 @@ src_install() {
 	# install /etc/crontab and /etc/fcrontab
 	insopts -m0640 -o ${rootuser:-root} -g ${rootgroup:-root}
 	insinto /etc
-	doins ${FILESDIR}/crontab ${FILESDIR}/fcrontab
+	doins "${FILESDIR}"/crontab "${FILESDIR}"/fcrontab
 
 	# install init script
-	newinitd ${FILESDIR}/fcron.init fcron
+	newinitd "${FILESDIR}"/fcron.init fcron
 
 	# install the very handy check_system_crontabs script
 	dosbin script/check_system_crontabs
@@ -124,7 +124,7 @@ src_install() {
 	# doc stuff
 	dodoc MANIFEST VERSION
 	newdoc files/fcron.conf fcron.conf.sample
-	dodoc ${FILESDIR}/crontab
+	dodoc "${FILESDIR}"/crontab
 	dodoc doc/en/txt/{readme,thanks,faq,todo,relnotes,changes}.txt
 	rm -f doc/en/man/*.3 # ugly hack for bitstring.3 manpage
 	doman doc/en/man/*.[0-9]
