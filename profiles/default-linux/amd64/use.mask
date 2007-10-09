@@ -1,8 +1,12 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.64 2007/09/12 02:15:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.65 2007/10/09 14:14:36 beandog Exp $
 
 # SECTION: Unmask
+
+# 2007/10/09 - Steve Dibb <beandog@gentoo.org>
+# Unmask support for SSSE3 (pni) for media-video/mplayer
+-ssse3
 
 # 2007/08/19 - Christoph Mende <angelos@gentoo.org>
 # Unmask support for dev-db/oracle-instantclient-basic
