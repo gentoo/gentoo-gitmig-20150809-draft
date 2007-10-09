@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.45 2007/10/09 15:31:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.46 2007/10/09 15:38:45 jer Exp $
+
+  09 Oct 2007; Jeroen Roovers <jer@gentoo.org> ethtool-6.ebuild:
+  Stable for HPPA (bug #195209).
 
   09 Oct 2007; Christoph Mende <angelos@gentoo.org> ethtool-6.ebuild:
   Stable on amd64 wrt bug #195209
