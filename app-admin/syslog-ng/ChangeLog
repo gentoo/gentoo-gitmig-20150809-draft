@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.164 2007/10/02 23:00:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.165 2007/10/09 05:59:26 jer Exp $
+
+  09 Oct 2007; Jeroen Roovers <jer@gentoo.org> syslog-ng-2.0.5.ebuild:
+  Stable for HPPA (bug #159494).
 
   02 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
   files/syslog-ng.rc6-r1:
