@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.3.ebuild,v 1.2 2007/10/07 01:45:50 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.3.ebuild,v 1.3 2007/10/09 09:02:47 eva Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -96,6 +96,9 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${PN}-0.6.3-fix-unac-option.patch
+
+	# Fix POTFILES.in for tests
+	echo "python/deskbar-handler/tracker-handler-static.py" >> ${S}/po/POTFILES.in
 	eautoreconf
 }
 
