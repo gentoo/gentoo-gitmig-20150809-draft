@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.12 2007/03/14 18:18:53 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.13 2007/10/09 07:36:00 dberkholz Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -70,26 +70,26 @@ src_unpack() {
 	unpack linux-drm-${PV}-kernelsource.tar.bz2
 	unpack ${P}-gentoo-${PATCHVER}.tar.bz2
 
-	cd ${S}
+	cd "${S}"
 
 	patch_prepare
 
 	# Apply patches
-	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
+	EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"
 
 	# Substitute new directory under /lib/modules/${KV_FULL}
-	cd ${SRC_BUILD}
+	cd "${SRC_BUILD}"
 	sed -ie "s:/kernel/drivers/char/drm:/${PN}:g" Makefile
 
-	cp ${S}/tests/*.c ${SRC_BUILD}
+	cp "${S}"/tests/*.c "${SRC_BUILD}"
 
-	cd ${S}
+	cd "${S}"
 	eautoreconf -v --install
 }
 
 src_compile() {
 	einfo "Building DRM in ${SRC_BUILD}..."
-	cd ${SRC_BUILD}
+	cd "${SRC_BUILD}"
 
 	# This now uses an M= build system. Makefile does most of the work.
 	unset ARCH
@@ -101,7 +101,7 @@ src_compile() {
 	# Building the programs. These are useful for developers and getting info from DRI and DRM.
 	#
 	# libdrm objects are needed for drmstat.
-	cd ${S}
+	cd "${S}"
 	econf || die "libdrm configure failed."
 	emake || die "libdrm build failed."
 
@@ -110,7 +110,7 @@ src_compile() {
 		echo "Please disable in-kernel DRM support to use this package."
 	fi
 
-	cd ${SRC_BUILD}
+	cd "${SRC_BUILD}"
 	# LINUXDIR is needed to allow Makefiles to find kernel release.
 	make LINUXDIR="${KERNEL_DIR}" dristat || die "Building dristat failed."
 	make LINUXDIR="${KERNEL_DIR}" drmstat || die "Building drmstat failed."
@@ -118,7 +118,7 @@ src_compile() {
 
 src_install() {
 	einfo "Installing DRM..."
-	cd ${SRC_BUILD}
+	cd "${SRC_BUILD}"
 
 	unset ARCH
 	kernel_is 2 6 && DRM_KMOD="drm.${KV_OBJ}"
@@ -140,8 +140,8 @@ src_install() {
 
 	# Yoinked from the sys-apps/touchpad ebuild. Thanks to whoever made this.
 	keepdir /etc/modules.d
-	sed 's:%PN%:'${PN}':g' ${FILESDIR}/modules.d-${PN} > ${D}/etc/modules.d/${PN}
-	sed -i 's:%KV%:'${KV_FULL}':g' ${D}/etc/modules.d/${PN}
+	sed 's:%PN%:'${PN}':g' "${FILESDIR}"/modules.d-${PN} > "${D}"/etc/modules.d/${PN}
+	sed -i 's:%KV%:'${KV_FULL}':g' "${D}"/etc/modules.d/${PN}
 }
 
 pkg_postinst() {
@@ -209,8 +209,8 @@ patch_prepare() {
 	#     All trees (0**), Standard only (1**), Others (none right now)
 	#     2.4 vs. 2.6 kernels
 
-	kernel_is 2 4 && mv -f ${PATCHDIR}/*kernel-2.6* ${EXCLUDED}
-	kernel_is 2 6 && mv -f ${PATCHDIR}/*kernel-2.4* ${EXCLUDED}
+	kernel_is 2 4 && mv -f "${PATCHDIR}"/*kernel-2.6* "${EXCLUDED}"
+	kernel_is 2 6 && mv -f "${PATCHDIR}"/*kernel-2.4* "${EXCLUDED}"
 
 	# There is only one tree being maintained now. No numeric exclusions need
 	# to be done based on DRM tree.

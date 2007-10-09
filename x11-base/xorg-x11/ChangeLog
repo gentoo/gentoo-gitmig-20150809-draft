@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.593 2007/09/10 09:37:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.594 2007/10/09 07:43:49 dberkholz Exp $
+
+  09 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>; xorg-x11-7.2.ebuild,
+  xorg-x11-7.3.ebuild:
+  Fix quoting issues caught by latest repoman.
 
   10 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>; xorg-x11-7.3.ebuild:
   Add dep on mkfontdir-1.0.3.

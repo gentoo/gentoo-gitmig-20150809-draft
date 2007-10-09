@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.21 2007/07/22 02:23:43 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.22 2007/10/09 07:40:47 dberkholz Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -78,7 +78,7 @@ src_unpack() {
 
 		# See linux.cf for MMX, 3DNOW and SSE autodetection. (spyderous)
 
-		cd ${S}
+		cd "${S}"
 		touch config/cf/host.def
 		echo "#define XVendorString \"Gentoo Linux (KDrive ${PV}, revision ${PR})\"
 #define KDriveXServer YES
@@ -104,7 +104,7 @@ src_unpack() {
 			echo "#define ProjectRoot /usr/X11R6" >> config/cf/host.def
 			# If the libs exist locally we do not need to build against
 			# kdrives personal libraries, dont patch to do this.
-			mv ${PATCH_DIR}/0020* ${PATCH_DIR}/excluded
+			mv "${PATCH_DIR}"/0020* "${PATCH_DIR}"/excluded
 		else
 			echo "#define BuildScreenSaverExt YES" >> config/cf/host.def
 			echo "#define BuildScreenSaverLibrary YES" >> config/cf/host.def
@@ -195,8 +195,8 @@ src_unpack() {
 	eend 0
 
 	# Bulk patching from all over
-	cd ${WORKDIR}
-	EPATCH_SUFFIX="patch" epatch ${PATCH_DIR}
+	cd "${WORKDIR}"
+	EPATCH_SUFFIX="patch" epatch "${PATCH_DIR}"
 
 	# We need to modify xmakefile after it has been created
 	if [ ! "`best_version x11-base/xorg-server`" ] ; then
@@ -206,25 +206,25 @@ src_unpack() {
 			MY_LIBROOT="${S}/lib"
 			MY_HERE="./"
 
-			mkdir -p ${MY_PROJROOT}
-			cd ${MY_INCROOT}
+			mkdir -p "${MY_PROJROOT}"
+			cd "${MY_INCROOT}"
 			for i in `ls ${MY_HERE}` ; do
-				ln -sf ${MY_INCROOT}/${i} ${MY_PROJROOT}
+				ln -sf "${MY_INCROOT}"/${i} "${MY_PROJROOT}"
 			done
 
-			cd ${MY_LIBROOT}
+			cd "${MY_LIBROOT}"
 			for i in `ls ${MY_HERE}` ; do
-				ln -sf ${MY_LIBROOT}/${i} ${MY_PROJROOT}
+				ln -sf "${MY_LIBROOT}"/${i} "${MY_PROJROOT}"
 			done
 
-			cd ${MY_PROJROOT} && rm -f Imakefile Makefile
-			ln -sf ${MY_PROJROOT}/extensions ${MY_PROJROOT}/X11/extensions
-			ln -sf ${S}/lib ${S}/usr/X11R6/lib
+			cd "${MY_PROJROOT}" && rm -f Imakefile Makefile
+			ln -sf "${MY_PROJROOT}"/extensions "${MY_PROJROOT}"/X11/extensions
+			ln -sf "${S}"/lib "${S}"/usr/X11R6/lib
 	    eend 0
 	fi
 
 	# Fixing bugs #68531 and #65758 -- this will disable toshiba dpms support
-	sed '/#ifndef TOSHIBA_SMM/,/#endif/d' -i ${S}/programs/Xserver/hw/kdrive/vesa/vesa.c
+	sed '/#ifndef TOSHIBA_SMM/,/#endif/d' -i "${S}"/programs/Xserver/hw/kdrive/vesa/vesa.c
 }
 
 src_compile() {
@@ -243,20 +243,20 @@ src_compile() {
 	# for a whole pile of nothing. As such we are just going to copy
 	# across the three needed man pages.
 	einfo "Making and installing man pages..."
-	mkdir -p ${MANDIR}
+	mkdir -p "${MANDIR}"
 	MY_MAN_BASE="${S}/programs/Xserver/hw/kdrive"
 
 	if ! use fbdev ; then
 		# We need to regenerate some makefiles for fbdev
 		echo "#define XfbdevServer YES" >> config/cf/host.def
-		cd ${S}/programs && make Makefiles > /dev/null || die "Xfbdev Makefile regeneration error..."
+		cd "${S}"/programs && make Makefiles > /dev/null || die "Xfbdev Makefile regeneration error..."
 	fi
 
 	# We have a complete set of makefiles so lets just build what we need
-	cd ${MY_MAN_BASE}
-	emake DESTDIR=${MANDIR} install.man || die "Kdrive man page install..."
-	emake DESTDIR=${MANDIR} -C vesa install.man || die "Xvesa man page install..."
-	emake DESTDIR=${MANDIR} -C fbdev install.man || die "Xfbdev man page install..."
+	cd "${MY_MAN_BASE}"
+	emake DESTDIR="${MANDIR}" install.man || die "Kdrive man page install..."
+	emake DESTDIR="${MANDIR}" -C vesa install.man || die "Xvesa man page install..."
+	emake DESTDIR="${MANDIR}" -C fbdev install.man || die "Xfbdev man page install..."
 
 }
 
@@ -286,13 +286,13 @@ src_install() {
 	done
 
 	# Install our startx script
-	doexe ${PATCH_DIR}/startxkd
+	doexe "${PATCH_DIR}"/startxkd
 
 	# Install man pages
 	if [ "`best_version x11-base/xorg-server`" ] ; then
-		doman ${MANDIR}/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
+		doman "${MANDIR}"/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
 	else
-		doman ${MANDIR}/${S}/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
+		doman "${MANDIR}"/"${S}"/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
 	fi
 }
 
