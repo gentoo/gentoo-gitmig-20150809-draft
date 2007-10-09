@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paxctl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.23 2007/04/16 23:10:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.24 2007/10/09 17:37:25 solar Exp $
+
+  09 Oct 2007; <solar@gentoo.org> paxctl-0.5.ebuild:
+  - stable on amd64,arm,ia64,ppc64 and x86
 
 *paxctl-0.5 (16 Apr 2007)
 
