@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.51 2007/10/09 11:20:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.52 2007/10/09 13:22:08 markusle Exp $
+
+  09 Oct 2007; Markus Dittrich <markusle@gentoo.org> itpp-4.0.0_rc2.ebuild:
+  Fixed weird quoting issue that seems to trip up itpp's configure
+  (see bug #195189).
 
   09 Oct 2007; Raúl Porcel <armin76@gentoo.org> itpp-3.10.12.ebuild:
   sparc stable wrt #190183

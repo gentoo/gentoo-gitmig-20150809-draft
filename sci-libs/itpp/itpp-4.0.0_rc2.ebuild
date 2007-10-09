@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.0_rc2.ebuild,v 1.2 2007/10/08 14:56:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.0_rc2.ebuild,v 1.3 2007/10/09 13:22:08 markusle Exp $
 
 inherit fortran flag-o-matic
 
@@ -53,14 +53,14 @@ src_compile() {
 		myconf="${myconf} --with-fft=-lfftw3"
 	fi
 
+
 	if use minimal; then
 		myconf="${myconf} --disable-comm --disable-fixed --disable-optim --disable-protocol --disable-signal --disable-srccode"
 	fi
 
 	econf $(use_enable doc html-doc) \
 		$(use_enable debug) \
-		$(use_with lapack) \
-		"${myconf}" \
+		${myconf} \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
