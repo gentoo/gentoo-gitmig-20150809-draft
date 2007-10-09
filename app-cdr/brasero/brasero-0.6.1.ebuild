@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.6.1.ebuild,v 1.2 2007/10/07 18:41:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.6.1.ebuild,v 1.3 2007/10/09 15:06:47 pylon Exp $
 
 inherit gnome2 gnome.org
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/brasero"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="beagle dvd gdl libburn libnotify totem nls"
 
 RDEPEND=">=x11-libs/gtk+-2.10
