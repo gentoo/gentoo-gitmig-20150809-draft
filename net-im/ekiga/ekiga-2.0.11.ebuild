@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.11.ebuild,v 1.1 2007/10/08 14:39:32 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.11.ebuild,v 1.2 2007/10/09 21:21:46 genstef Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -56,6 +56,9 @@ src_unpack() {
 	cd "${S}"
 	# Fix configure to install schemafile into the proper directory
 	epatch "${FILESDIR}"/${PN}-1.99.0-configure.patch
+
+	# fix -gnome compile, bug 133021
+	epatch "${FILESDIR}"/not-gnome.patch
 }
 
 src_compile() {
