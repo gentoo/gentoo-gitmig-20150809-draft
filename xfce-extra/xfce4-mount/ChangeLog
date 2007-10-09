@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-mount
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/ChangeLog,v 1.35 2007/10/09 14:24:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/ChangeLog,v 1.36 2007/10/09 15:19:18 jer Exp $
+
+  09 Oct 2007; Jeroen Roovers <jer@gentoo.org> xfce4-mount-0.5.4.ebuild:
+  Stable for HPPA (bug #195250).
 
   09 Oct 2007; Christoph Mende <angelos@gentoo.org>
   xfce4-mount-0.5.4.ebuild:
