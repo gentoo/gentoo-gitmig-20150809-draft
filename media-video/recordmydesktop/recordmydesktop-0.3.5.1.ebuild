@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/recordmydesktop-0.3.5.1.ebuild,v 1.1 2007/07/26 15:35:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/recordmydesktop-0.3.5.1.ebuild,v 1.2 2007/10/09 18:38:59 aballier Exp $
 
 inherit eutils
 
 DESCRIPTION="A desktop session recorder producing Ogg video/audio files"
-HOMEPAGE="http://recordmydesktop.sourceforge.net/"
+HOMEPAGE="http://recordmydesktop.iovar.org/"
 SRC_URI="mirror://sourceforge/recordmydesktop/${P}.tar.gz"
 
 LICENSE="GPL-2"
