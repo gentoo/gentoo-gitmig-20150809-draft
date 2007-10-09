@@ -1,0 +1,27 @@
+diff -Nru dkim-milter-2.3.0.orig/devtools/Site/site.config.m4 dkim-milter-2.3.0/devtools/Site/site.config.m4
+--- dkim-milter-2.3.0.orig/devtools/Site/site.config.m4	2007-10-09 18:48:08.000000000 +0300
++++ dkim-milter-2.3.0/devtools/Site/site.config.m4	2007-10-09 18:48:36.000000000 +0300
+@@ -11,13 +11,13 @@
+ dnl If you are encountering coredumps and want to be able to analyze them
+ dnl using something like "gdb", enable this next line by deleting the "dnl"
+ dnl at the front of it.
+-dnl define(`confOPTIMIZE', `-g')
++define(`confOPTIMIZE', `@@CFLAGS@@')
+ 
+ dnl libar -- asynchronous resolver library
+ dnl
+ dnl If you want to use the asynchronous resolver library, enable this
+ dnl next line by deleting the "dnl" at the front of it.
+-dnl define(`bld_USE_ARLIB', `true')
++define(`bld_USE_ARLIB', `true')
+ dnl 
+ dnl libar normally uses res_init() or res_ninit() to load the contents
+ dnl of resolv.conf for its use.  If neither of these work on your system
+@@ -82,7 +82,7 @@
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_REQUIRED_HEADERS ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECT_CANONICALIZATION ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECT_SIGN_HEADERS ')
+-dnl APPENDDEF(`confENVDEF', `-D_FFR_STATS ')
++APPENDDEF(`confENVDEF', `-D_FFR_STATS ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_VBR ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_ZTAGS ')
