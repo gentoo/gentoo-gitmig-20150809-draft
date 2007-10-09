@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/flamerobin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.8 2007/05/16 16:15:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.9 2007/10/09 20:00:46 wltjr Exp $
+
+*flamerobin-0.8.0 (09 Oct 2007)
+
+  09 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +flamerobin-0.8.0.ebuild:
+  Bumped to latest release. Ideally wants wxGTK 2.8.6, but it's not in tree.
+  Still fully compatible with 2.6
 
   16 May 2007; Ryan Hill <dirtyepic@gentoo.org> flamerobin-0.7.5-r1.ebuild,
   flamerobin-0.7.6.ebuild:

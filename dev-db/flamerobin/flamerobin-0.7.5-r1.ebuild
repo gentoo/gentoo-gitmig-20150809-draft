@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/flamerobin-0.7.5-r1.ebuild,v 1.3 2007/05/16 16:15:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/flamerobin-0.7.5-r1.ebuild,v 1.4 2007/10/09 20:00:46 wltjr Exp $
 
 inherit eutils wxwidgets
 
@@ -37,8 +37,8 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "Could not install FlameRobin"
 
-	doicon ${S}/res/fricon.xpm
-	domenu ${FILESDIR}/FlameRobin.desktop
+	doicon "${S}"/res/fricon.xpm
+	domenu "${FILESDIR}"/FlameRobin.desktop
 
 	dodoc devdocs/* docs/* docs-src/*
 }
