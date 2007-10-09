@@ -1,6 +1,12 @@
 # ChangeLog for media-video/recordmydesktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.12 2007/07/26 15:35:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.13 2007/10/09 18:32:07 aballier Exp $
+
+*recordmydesktop-0.3.6 (09 Oct 2007)
+
+  09 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  +recordmydesktop-0.3.6.ebuild:
+  version bump, fix homepage, bug #195273
 
 *recordmydesktop-0.3.5.1 (26 Jul 2007)
 
