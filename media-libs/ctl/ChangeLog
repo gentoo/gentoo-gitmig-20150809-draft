@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ctl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ctl/ChangeLog,v 1.4 2007/09/23 16:30:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ctl/ChangeLog,v 1.5 2007/10/09 16:55:31 armin76 Exp $
+
+  09 Oct 2007; Raúl Porcel <armin76@gentoo.org> ctl-1.4.0.ebuild:
+  Add ~sparc wrt #189798
 
   23 Sep 2007; Raúl Porcel <armin76@gentoo.org> ctl-1.4.0.ebuild:
   Add ~alpha/~ia64 wrt #189798

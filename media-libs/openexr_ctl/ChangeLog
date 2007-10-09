@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openexr_ctl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.4 2007/09/23 16:31:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.5 2007/10/09 16:56:08 armin76 Exp $
+
+  09 Oct 2007; Raúl Porcel <armin76@gentoo.org> openexr_ctl-1.0.0.ebuild:
+  Add ~sparc wrt #189798
 
   23 Sep 2007; Raúl Porcel <armin76@gentoo.org> openexr_ctl-1.0.0.ebuild:
   Add ~alpha/~ia64 wrt #189798
