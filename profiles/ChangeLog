@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.698 2007/10/08 20:18:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.699 2007/10/09 07:20:10 nelchael Exp $
+
+  09 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
+  Mask net-im/jabberd2
 
   08 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   add fast-user-switch-applet to package.mask
