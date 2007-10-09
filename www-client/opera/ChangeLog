@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.141 2007/09/28 17:09:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.142 2007/10/09 08:15:06 jer Exp $
+
+  09 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.23.ebuild,
+  opera-9.50_alpha1567.ebuild, opera-9.50_alpha1581.ebuild,
+  opera-9.50_rc1581.ebuild, opera-9.50_rc1589.ebuild,
+  opera-9.50_rc1600.ebuild:
+  Fix quoting issues caught by latest repoman.
 
 *opera-9.50_rc1600 (28 Sep 2007)
 

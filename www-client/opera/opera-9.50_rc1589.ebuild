@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_rc1589.ebuild,v 1.1 2007/09/22 16:13:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_rc1589.ebuild,v 1.2 2007/10/09 08:15:06 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -56,7 +56,7 @@ S=${WORKDIR}/${A/.tar.bz2/}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-9.00-install.patch"
 	epatch "${FILESDIR}/${PN}-9.50-pluginpath.patch"
@@ -95,7 +95,7 @@ src_install() {
 	einfo "Completing the installation where install.sh abandoned us ..."
 
 	# java workaround
-	sed -i -e 's:LD_PRELOAD="${OPERA_JAVA_DIR}/libawt.so":LD_PRELOAD="$LD_PRELOAD"\:"${OPERA_JAVA_DIR}/libawt.so":' ${D}/opt/opera/bin/opera
+	sed -i -e 's:LD_PRELOAD="${OPERA_JAVA_DIR}/libawt.so":LD_PRELOAD="$LD_PRELOAD"\:"${OPERA_JAVA_DIR}/libawt.so":' "${D}"/opt/opera/bin/opera
 
 	dosed /opt/opera/bin/opera
 	dosed /opt/opera/share/opera/java/opera.policy
@@ -110,14 +110,14 @@ src_install() {
 
 	# Install the menu entry
 	insinto /usr/share/applications
-	doins ${FILESDIR}/opera.desktop
+	doins "${FILESDIR}"/opera.desktop
 
 	# Install a symlink /usr/bin/opera
 	dodir /usr/bin
 	dosym /opt/opera/bin/opera /usr/bin/opera
 
 	# fix plugin path
-	echo "Plugin Path=/opt/opera/lib/opera/plugins" >> ${D}/etc/opera6rc
+	echo "Plugin Path=/opt/opera/lib/opera/plugins" >> "${D}"/etc/opera6rc
 
 	# enable spellcheck
 	if use spell; then
@@ -126,11 +126,11 @@ src_install() {
 		else
 			use sparc && DIR=$O_VER.2 || DIR=$O_VER.5
 		fi
-		echo "Spell Check Engine=/opt/opera/lib/opera/${DIR}/spellcheck.so" >> ${D}/opt/opera/share/opera/ini/spellcheck.ini
+		echo "Spell Check Engine=/opt/opera/lib/opera/${DIR}/spellcheck.so" >> "${D}"/opt/opera/share/opera/ini/spellcheck.ini
 	fi
 
 	dodir /etc/revdep-rebuild
-	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > ${D}/etc/revdep-rebuild/90opera
+	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > "${D}"/etc/revdep-rebuild/90opera
 
 	# Change libz.so.3 to libz.so.1 for gentoo/freebsd
 	if use x86-fbsd; then
@@ -152,7 +152,7 @@ src_install() {
 
 	# Add the Opera man dir to MANPATH:
 	insinto /etc/env.d
-	echo 'MANPATH="/opt/opera/share/man"' >> ${D}/etc/env.d/90opera
+	echo 'MANPATH="/opt/opera/share/man"' >> "${D}"/etc/env.d/90opera
 }
 
 pkg_postinst() {

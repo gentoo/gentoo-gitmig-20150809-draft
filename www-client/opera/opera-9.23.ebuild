@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.23.ebuild,v 1.7 2007/09/07 04:11:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.23.ebuild,v 1.8 2007/10/09 08:15:06 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -16,21 +16,21 @@ KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 IUSE="qt-static spell gnome elibc_FreeBSD"
 RESTRICT="strip mirror"
 
-OPERALNG="en"
-OPERASUFF="660"
-OPERAVER="9.23-20070809"
-OPERAFTP="923/final/${OPERALNG}"
+O_LNG="en"
+O_SUFF="660"
+O_VER="9.23-20070809"
+O_FTP="923/final/${O_LNG}"
 
-OPERA_URI="mirror://opera/"
+O_URI="mirror://opera/"
 SRC_URI="
-	x86? ( qt-static? ( ${OPERA_URI}linux/${OPERAFTP}/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-${OPERALNG}.tar.bz2 ) )
-	x86? ( !qt-static? ( ${OPERA_URI}linux/${OPERAFTP}/i386/shared/${PN}-${OPERAVER}.6-shared-qt.i386-${OPERALNG}.tar.bz2 ) )
-	amd64? ( qt-static? ( ${OPERA_URI}linux/${OPERAFTP}/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-${OPERALNG}.tar.bz2 ) )
-	amd64? ( !qt-static? ( ${OPERA_URI}linux/${OPERAFTP}/i386/shared/${PN}-${OPERAVER}.6-shared-qt.i386-${OPERALNG}.tar.bz2 ) )
-	sparc? ( ${OPERA_URI}linux/${OPERAFTP}/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-${OPERALNG}.tar.bz2 )
-	ppc? ( ${OPERA_URI}linux/${OPERAFTP}/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-${OPERALNG}.tar.bz2 )
-	x86-fbsd? ( !qt-static? ( ${OPERA_URI}unix/freebsd/${OPERAFTP}/shared/${PN}-${OPERAVER}.4-shared-qt.i386.freebsd-${OPERALNG}.tar.bz2 ) )
-	x86-fbsd? ( qt-static? ( ${OPERA_URI}unix/freebsd/${OPERAFTP}/static/${PN}-${OPERAVER}.1-static-qt.i386.freebsd-${OPERALNG}.tar.bz2 ) )"
+	x86? ( qt-static? ( ${O_URI}linux/${O_FTP}/i386/static/${PN}-${O_VER}.1-static-qt.i386-${O_LNG}.tar.bz2 ) )
+	x86? ( !qt-static? ( ${O_URI}linux/${O_FTP}/i386/shared/${PN}-${O_VER}.6-shared-qt.i386-${O_LNG}.tar.bz2 ) )
+	amd64? ( qt-static? ( ${O_URI}linux/${O_FTP}/i386/static/${PN}-${O_VER}.1-static-qt.i386-${O_LNG}.tar.bz2 ) )
+	amd64? ( !qt-static? ( ${O_URI}linux/${O_FTP}/i386/shared/${PN}-${O_VER}.6-shared-qt.i386-${O_LNG}.tar.bz2 ) )
+	sparc? ( ${O_URI}linux/${O_FTP}/sparc/static/${PN}-${O_VER}.1-static-qt.sparc-${O_LNG}.tar.bz2 )
+	ppc? ( ${O_URI}linux/${O_FTP}/ppc/static/${PN}-${O_VER}.1-static-qt.ppc-${O_LNG}.tar.bz2 )
+	x86-fbsd? ( !qt-static? ( ${O_URI}unix/freebsd/${O_FTP}/shared/${PN}-${O_VER}.4-shared-qt.i386.freebsd-${O_LNG}.tar.bz2 ) )
+	x86-fbsd? ( qt-static? ( ${O_URI}unix/freebsd/${O_FTP}/static/${PN}-${O_VER}.1-static-qt.i386.freebsd-${O_LNG}.tar.bz2 ) )"
 
 DEPEND=">=sys-apps/sed-4"
 
@@ -54,11 +54,11 @@ RDEPEND="x11-libs/libXrandr
 	x86-fbsd? ( =virtual/libstdc++-3*
 	            !qt-static? ( =x11-libs/qt-3* ) )"
 
-S=${WORKDIR}/${A/.tar.bz2/}-${OPERASUFF}
+S=${WORKDIR}/${A/.tar.bz2/}-${O_SUFF}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-9.00-install.patch"
 
@@ -99,7 +99,7 @@ src_install() {
 	fi
 
 	# java workaround
-	sed -i -e 's:LD_PRELOAD="${OPERA_JAVA_DIR}/libawt.so":LD_PRELOAD="$LD_PRELOAD"\:"${OPERA_JAVA_DIR}/libawt.so":' ${D}/opt/opera/bin/opera
+	sed -i -e 's:LD_PRELOAD="${OPERA_JAVA_DIR}/libawt.so":LD_PRELOAD="$LD_PRELOAD"\:"${OPERA_JAVA_DIR}/libawt.so":' "${D}"/opt/opera/bin/opera
 
 	dosed /opt/opera/bin/opera
 	dosed /opt/opera/share/opera/java/opera.policy
@@ -114,27 +114,27 @@ src_install() {
 
 	# Install the menu entry
 	insinto /usr/share/applications
-	doins ${FILESDIR}/opera.desktop
+	doins "${FILESDIR}"/opera.desktop
 
 	# Install a symlink /usr/bin/opera
 	dodir /usr/bin
 	dosym /opt/opera/bin/opera /usr/bin/opera
 
 	# fix plugin path
-	echo "Plugin Path=/opt/opera/lib/opera/plugins" >> ${D}/etc/opera6rc
+	echo "Plugin Path=/opt/opera/lib/opera/plugins" >> "${D}"/etc/opera6rc
 
 	# enable spellcheck
 	if use spell; then
 		if use qt-static; then
-			DIR=$OPERAVER.1
+			DIR=$O_VER.1
 		else
-			use sparc && DIR=$OPERAVER.2 || DIR=$OPERAVER.5
+			use sparc && DIR=$O_VER.2 || DIR=$O_VER.5
 		fi
-		echo "Spell Check Engine=/opt/opera/lib/opera/${DIR}/spellcheck.so" >> ${D}/opt/opera/share/opera/ini/spellcheck.ini
+		echo "Spell Check Engine=/opt/opera/lib/opera/${DIR}/spellcheck.so" >> "${D}"/opt/opera/share/opera/ini/spellcheck.ini
 	fi
 
 	dodir /etc/revdep-rebuild
-	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > ${D}/etc/revdep-rebuild/90opera
+	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > "${D}"/etc/revdep-rebuild/90opera
 
 	# Change libz.so.3 to libz.so.1 for gentoo/freebsd
 	if use elibc_FreeBSD; then
@@ -156,7 +156,7 @@ src_install() {
 
 	# Add the Opera man dir to MANPATH:
 	insinto /etc/env.d
-	echo 'MANPATH="/opt/opera/share/man"' >> ${D}/etc/env.d/90opera
+	echo 'MANPATH="/opt/opera/share/man"' >> "${D}"/etc/env.d/90opera
 }
 
 pkg_postinst() {
