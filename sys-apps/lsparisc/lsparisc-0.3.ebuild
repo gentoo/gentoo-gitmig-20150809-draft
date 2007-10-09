@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsparisc/lsparisc-0.3.ebuild,v 1.2 2007/02/15 23:21:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsparisc/lsparisc-0.3.ebuild,v 1.3 2007/10/09 08:28:35 jer Exp $
 
 DESCRIPTION="Like lspci but for PARISC devices"
 HOMEPAGE="http://packages.debian.org/unstable/utils/lsparisc"
@@ -16,7 +16,7 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -e 's|"0.2"|"0.3"|g' -i lsparisc.c
 }
