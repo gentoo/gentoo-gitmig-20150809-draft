@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-3.0.0.ebuild,v 1.1 2007/05/11 02:24:01 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-3.0.0.ebuild,v 1.2 2007/10/10 15:42:14 remi Exp $
 
 inherit gnome2
 
@@ -23,7 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	>=gnome-extra/libgda-3
 	>=gnome-base/libgnomecanvas-2
 	>=gnome-base/libglade-2
-	>=x11-libs/gtksourceview-1"
+	=x11-libs/gtksourceview-1*"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.2.2.ebuild,v 1.14 2007/06/24 09:12:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.2.2.ebuild,v 1.15 2007/10/10 15:42:14 remi Exp $
 
 inherit eutils gnome2
 
@@ -19,7 +19,7 @@ RDEPEND="=gnome-extra/libgda-1*
 	>=gnome-base/libbonobo-2.0
 	>=gnome-base/libbonoboui-2.0
 	>=gnome-base/gconf-2
-	>=x11-libs/gtksourceview-1"
+	=x11-libs/gtksourceview-1*"
 # So far evolution-data-server support consists in a 'configure' check
 #	eds? ( =gnome-extra/evolution-data-server-1.0* )"
 
@@ -30,9 +30,3 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog NEWS"
-
-# --disable-gnome breaks compilation, hence 'gnome' USE flag is not a good idea
-src_unpack() {
-	unpack ${A}
-	gnome2_omf_fix ${S}/doc/Makefile.in
-}
