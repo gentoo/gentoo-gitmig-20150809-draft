@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.3.ebuild,v 1.1 2007/09/30 19:00:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.3.ebuild,v 1.2 2007/10/10 19:08:45 genstef Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -70,7 +70,7 @@ src_compile() {
 }
 
 src_install () {
-	emake install DESTDIR="${D}" || die "make install failed"
+	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
 	exeinto /usr/share/gutenprint
 	doexe test/{unprint,pcl-unprint,bjc-unprint,parse-escp2,escp2-weavetest,run-testdither,run-weavetest,testdither}
