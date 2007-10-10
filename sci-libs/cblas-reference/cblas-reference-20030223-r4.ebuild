@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.7 2007/10/08 18:30:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.8 2007/10/10 12:31:42 bicatali Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -41,12 +41,23 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc README || die "failed to install docs"
 	insinto /usr/share/doc/${PF}
-	doins cblas_example*c
-	eselect cblas add $(get_libdir) "${FILESDIR}"/eselect.cblas.reference reference
+	doins cblas_example*c || die "install examples failed"
+	ESELECT_PROF=reference
+	eselect cblas add $(get_libdir) "${FILESDIR}"/eselect.cblas.reference ${ESELECT_PROF}
 }
 
 pkg_postinst() {
-	[[ -z "$(eselect cblas show)" ]] && eselect cblas set reference
-	elog "To use CBLAS reference implementation, you have to issue (as root):"
-	elog "\t eselect cblas set reference"
+	local p=cblas
+	local current_lib=$(eselect ${p} show | cut -d' ' -f2)
+	if [[ ${current_lib} == ${ESELECT_PROF} || -z ${current_lib} ]]; then
+		# work around eselect bug #189942
+		local configfile="${ROOT}"/etc/env.d/${p}/lib/config
+		[[ -e ${configfile} ]] && rm -f ${configfile}
+		eselect ${p} set ${ESELECT_PROF}
+		elog "${p} has been eselected to ${ESELECT_PROF}"
+	else
+		elog "Current eselected ${p} is ${current_lib}"
+		elog "To use ${p} ${ESELECT_PROF} implementation, you have to issue (as root):"
+		elog "\t eselect ${p} set ${ESELECT_PROF}"
+	fi
 }

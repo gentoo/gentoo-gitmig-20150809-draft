@@ -1,3 +1,0 @@
-blas/reference/libcblas.so /usr/@LIBDIR@/libcblas.so
-blas/reference/libcblas.so.0 /usr/@LIBDIR@/libcblas.so.0
-blas/reference/libcblas.a /usr/@LIBDIR@/libcblas.a

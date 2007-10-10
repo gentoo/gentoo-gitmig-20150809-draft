@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226.ebuild,v 1.11 2007/10/08 18:14:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226.ebuild,v 1.12 2007/10/10 12:30:50 bicatali Exp $
 
 inherit eutils autotools fortran multilib flag-o-matic
 
@@ -22,14 +22,12 @@ DEPEND="app-admin/eselect-blas
 RDEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
-PROVIDE="virtual/blas"
-
 S="${WORKDIR}/${LAPACKPN}-${LAPACKPV}"
 
 pkg_setup() {
 	FORTRAN="g77 gfortran ifc"
 	fortran_pkg_setup
-	if  [[ ${FORTRANC:0:2} == "if" ]]; then
+	if  [[ ${FORTRANC} == if* ]]; then
 		ewarn "Using Intel Fortran at your own risk"
 		LDFLAGS="$(raw-ldflags)"
 	fi
@@ -51,11 +49,22 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	eselect blas add $(get_libdir) "${FILESDIR}"/eselect.blas.reference reference
+	ESELECT_PROF=reference
+	eselect blas add $(get_libdir) "${FILESDIR}"/eselect.blas.reference ${ESELECT_PROF}
 }
 
 pkg_postinst() {
-	[[ -z "$(eselect blas show)" ]] && eselect blas set reference
-	elog "To use BLAS reference implementation, you have to issue (as root):"
-	elog "\t eselect blas set reference"
+	local p=blas
+	local current_lib=$(eselect ${p} show | cut -d' ' -f2)
+	if [[ ${current_lib} == ${ESELECT_PROF} || -z ${current_lib} ]]; then
+		# work around eselect bug #189942
+		local configfile="${ROOT}"/etc/env.d/${p}/lib/config
+		[[ -e ${configfile} ]] && rm -f ${configfile}
+		eselect ${p} set ${ESELECT_PROF}
+		elog "${p} has been eselected to ${ESELECT_PROF}"
+	else
+		elog "Current eselected ${p} is ${current_lib}"
+		elog "To use ${p} ${ESELECT_PROF} implementation, you have to issue (as root):"
+		elog "\t eselect ${p} set ${ESELECT_PROF}"
+	fi
 }
