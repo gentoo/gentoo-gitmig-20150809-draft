@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.3 2007/10/10 10:17:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.4 2007/10/10 11:07:06 opfer Exp $
 
 DESCRIPTION="Virtual for editor"
 HOMEPAGE="http://www.gentoo.org/"
@@ -31,7 +31,6 @@ RDEPEND="|| ( app-editors/nano
 	app-editors/ne
 	app-editors/ng
 	app-editors/nvi
-	app-editors/pico
 	app-editors/qemacs
 	app-editors/teco
 	app-editors/uemacs-pk
