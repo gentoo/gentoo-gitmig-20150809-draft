@@ -1,0 +1,11 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/ChangeLog,v 1.1 2007/10/10 06:03:22 opfer Exp $
+
+*editor-0 (10 Oct 2007)
+
+  10 Oct 2007; Christian Faulhammer <opfer@gentoo.org> +metadata.xml,
+  +editor-0.ebuild:
+  initial commit to remove all the PROVIDE=virtual/editor statements in
+  various ebuilds
+
