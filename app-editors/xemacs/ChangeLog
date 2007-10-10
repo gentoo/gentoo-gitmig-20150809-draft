@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.98 2007/08/31 13:51:04 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.99 2007/10/10 07:27:26 ulm Exp $
+
+  10 Oct 2007; Ulrich Mueller <ulm@gentoo.org> xemacs-21.4.20-r1.ebuild,
+  xemacs-21.4.20-r2.ebuild, xemacs-21.4.20-r3.ebuild,
+  xemacs-21.4.20-r4.ebuild, xemacs-21.4.20-r5.ebuild:
+  Don't PROVIDE=virtual/editor as it is a new-style virtual now.
 
   31 Aug 2007; Christoph Mende <angelos@gentoo.org>
   xemacs-21.4.20-r4.ebuild:

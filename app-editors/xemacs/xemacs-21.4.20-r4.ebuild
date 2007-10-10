@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.20-r4.ebuild,v 1.7 2007/08/31 13:51:04 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.20-r4.ebuild,v 1.8 2007/10/10 07:27:26 ulm Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -51,14 +51,14 @@ DEPEND="virtual/libc
 PDEPEND="app-xemacs/xemacs-base
 	mule? ( app-xemacs/mule-base )"
 
-PROVIDE="virtual/xemacs virtual/editor"
+PROVIDE="virtual/xemacs"
 
 src_unpack() {
 	unpack ${P}.tar.gz
 	use neXt && unpack NeXT_XEmacs.tar.gz
 
 	cd "${S}"
-	epatch ${FILESDIR}/xemacs-21.4.19-texi.patch
+	epatch "${FILESDIR}"/xemacs-21.4.19-texi.patch
 
 	# see bug 58350, 102540 and 143580
 	epatch "${FILESDIR}"/xemacs-21.4.19-db.patch

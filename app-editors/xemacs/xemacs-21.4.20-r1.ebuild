@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.20-r1.ebuild,v 1.9 2007/07/13 05:34:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.20-r1.ebuild,v 1.10 2007/10/10 07:27:26 ulm Exp $
 
 export WANT_AUTOCONF="2.1"
 inherit autotools eutils
@@ -46,14 +46,14 @@ DEPEND="virtual/libc
 PDEPEND="app-xemacs/xemacs-base
 	mule? ( app-xemacs/mule-base )"
 
-PROVIDE="virtual/xemacs virtual/editor"
+PROVIDE="virtual/xemacs"
 
 src_unpack() {
 	unpack ${P}.tar.gz
 	use neXt && unpack NeXT_XEmacs.tar.gz
 
 	cd "${S}"
-	epatch ${FILESDIR}/xemacs-21.4.19-texi.patch
+	epatch "${FILESDIR}"/xemacs-21.4.19-texi.patch
 
 	# see bug 58350, 102540 and 143580
 	epatch "${FILESDIR}"/xemacs-21.4.19-db.patch
