@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.1 2007/10/09 22:23:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.2 2007/10/10 09:07:08 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -145,9 +145,12 @@ RDEPEND="
 #	Dep not up to date enough
 
 
+# libgcrypt is mandatory at buildtime, and that's not only a matter of missing
+# m4s. Bug #195322
 DEPEND="${RDEPEND}
 	X? ( xinerama? ( x11-proto/xineramaproto ) )
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	>=dev-libs/libgcrypt-1.2.0"
 
 S="${WORKDIR}/${MY_P}"
 
