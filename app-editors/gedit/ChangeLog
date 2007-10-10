@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.206 2007/09/27 11:57:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.207 2007/10/10 21:32:52 remi Exp $
+
+*gedit-2.20.0 (10 Oct 2007)
+
+  10 Oct 2007; Rémi Cardona <remi@gentoo.org> gedit-2.16.2-r1.ebuild,
+  gedit-2.18.2.ebuild, +gedit-2.20.0.ebuild:
+  add new version for Gnome 2.20 and update gtksourceview deps (see bug #195366)
 
   27 Sep 2007; Raúl Porcel <armin76@gentoo.org> gedit-2.18.2-r1.ebuild:
   alpha/ia64 stable wrt #193339

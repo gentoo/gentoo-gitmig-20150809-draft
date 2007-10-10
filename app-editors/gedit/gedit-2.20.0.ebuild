@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.18.2.ebuild,v 1.3 2007/10/10 21:32:52 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.20.0.ebuild,v 1.1 2007/10/10 21:32:52 remi Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils autotools
 
 DESCRIPTION="A text editor for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -10,13 +10,13 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="doc python spell"
+IUSE="xattr doc python spell"
 
 RDEPEND=">=gnome-base/gconf-2
-	sys-apps/attr
-	>=dev-libs/glib-2.12
-	>=x11-libs/gtk+-2.10
-	=x11-libs/gtksourceview-1.8*
+	xattr? ( sys-apps/attr )
+	>=dev-libs/glib-2.13.5
+	>=x11-libs/gtk+-2.11.6
+	=x11-libs/gtksourceview-2*
 	>=gnome-base/libgnomeui-2.16
 	>=gnome-base/libglade-2.5.1
 	>=gnome-base/libgnomeprintui-2.12.1
@@ -26,9 +26,9 @@ RDEPEND=">=gnome-base/gconf-2
 		app-text/iso-codes
 	)
 	python? (
-		>=dev-python/pygtk-2.9.7
 		>=dev-python/pygobject-2.11.5
-		>=dev-python/gnome-python-desktop-2.15.90
+		>=dev-python/pygtk-2.9.7
+		>=dev-python/pygtksourceview-2
 	)"
 
 DEPEND="${RDEPEND}
@@ -46,7 +46,7 @@ if [[ "${ARCH}" == "PPC" ]] ; then
 fi
 
 pkg_setup() {
-	G2CONF="$(use_enable python) $(use_enable spell)"
+	G2CONF="$(use_enable python) $(use_enable spell) $(use_enable xattr attr)"
 }
 
 src_unpack() {
@@ -54,10 +54,18 @@ src_unpack() {
 
 	# Remove symbols that are not meant to be part of the docs, and
 	# break compilation if USE="doc -python" (bug #158638).
-	if use !python && use doc; then
+	if use ! python && use doc; then
 		epatch "${FILESDIR}"/${PN}-2.16.2-no_python_module_docs.patch
 	fi
 
+	echo "gedit/gtksourceprintjob.c" >> po/POTFILES.in
+
 	# chown on fbsd doesn't have --reference.  Bug #183691
 	epatch "${FILESDIR}"/${PN}-2.18.1-fbsd.patch
+
+	# Make libattr optional; bug #191989
+	epatch "${FILESDIR}"/${PN}-2.19.91-libattr.patch
+
+	AT_M4DIR="./m4" eautoreconf
 }
+
