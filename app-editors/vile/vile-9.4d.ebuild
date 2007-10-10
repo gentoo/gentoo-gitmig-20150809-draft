@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.4d.ebuild,v 1.11 2007/02/09 21:26:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.4d.ebuild,v 1.12 2007/10/10 07:26:10 opfer Exp $
 
 inherit eutils
 
@@ -22,7 +22,6 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	perl? ( dev-lang/perl )"
 DEPEND="${RDEPEND}
 	sys-devel/flex"
-PROVIDE="virtual/editor"
 
 src_unpack() {
 	unpack vile-9.4.tgz

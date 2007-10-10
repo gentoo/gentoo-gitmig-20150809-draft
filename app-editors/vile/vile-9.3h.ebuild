@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.3h.ebuild,v 1.12 2005/01/01 13:35:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.3h.ebuild,v 1.13 2007/10/10 07:26:10 opfer Exp $
 
 S=${WORKDIR}/vile-9.3
 DESCRIPTION="VI Like Emacs -- yet another full-featured vi clone"
@@ -24,7 +24,6 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	perl? ( dev-lang/perl )"
 DEPEND="${RDEPEND}
 	sys-devel/flex"
-PROVIDE="virtual/editor"
 
 src_unpack() {
 	unpack vile-9.3.tgz

@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.34 2007/09/23 07:00:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.35 2007/10/10 07:20:01 opfer Exp $
+
+  10 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  qemacs-0.3.2_pre20070226.ebuild:
+  remove PROVIDE=virtual/editor as we have now a new-style virtual
 
   23 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   -files/qemacs-0.3.1-libpng-1_2.patch,
