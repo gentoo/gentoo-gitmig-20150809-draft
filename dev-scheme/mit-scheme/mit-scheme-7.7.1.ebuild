@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/mit-scheme-7.7.1.ebuild,v 1.4 2007/10/05 16:07:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/mit-scheme-7.7.1.ebuild,v 1.5 2007/10/10 07:30:05 ulm Exp $
 
 MY_P="scheme-${PV}"
 MY_SUF="-ix86-gnu-linux"
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
-PROVIDE="virtual/editor"
 
 RDEPEND="x11-libs/libXau
 	x11-libs/libSM

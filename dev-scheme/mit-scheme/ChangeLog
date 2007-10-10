@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/mit-scheme
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/ChangeLog,v 1.7 2007/10/05 16:07:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mit-scheme/ChangeLog,v 1.8 2007/10/10 07:30:05 ulm Exp $
+
+  10 Oct 2007; Ulrich Mueller <ulm@gentoo.org> mit-scheme-7.7.1.ebuild,
+  mit-scheme-20070205.ebuild, mit-scheme-20070623.ebuild:
+  Don't PROVIDE=virtual/editor as it is a new-style virtual now.
 
   05 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   mit-scheme-7.7.1.ebuild, mit-scheme-20070205.ebuild,
