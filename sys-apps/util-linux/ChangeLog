@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.203 2007/10/05 23:26:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.204 2007/10/10 23:05:15 opfer Exp $
+
+  10 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  util-linux-2.12r-r8.ebuild:
+  stable x86, security bug 195390
 
 *util-linux-2.13-r2 (05 Oct 2007)
 
