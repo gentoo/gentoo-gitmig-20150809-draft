@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/raw-thumbnailer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/ChangeLog,v 1.11 2007/10/10 17:18:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/ChangeLog,v 1.12 2007/10/10 23:20:14 pylon Exp $
+
+  10 Oct 2007; Lars Weiler <pylon@gentoo.org> raw-thumbnailer-0.1.ebuild:
+  stable ppc, bug #195250
 
   10 Oct 2007; Raúl Porcel <armin76@gentoo.org> raw-thumbnailer-0.1.ebuild:
   alpha/ia64/sparc stable wrt #195250
