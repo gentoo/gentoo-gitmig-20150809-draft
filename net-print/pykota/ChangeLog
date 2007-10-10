@@ -1,6 +1,12 @@
 # ChangeLog for net-print/pykota
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.21 2007/05/13 09:28:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.22 2007/10/10 18:26:12 genstef Exp $
+
+*pykota-1.25_p2437-r1 (10 Oct 2007)
+
+  10 Oct 2007; Stefan Schweizer <genstef@gentoo.org>
+  -pykota-1.25_p2437.ebuild, +pykota-1.25_p2437-r1.ebuild:
+  Fix cups backend path thanks to scwang <scwang@ios.ac.cn> in bug 191560
 
   13 May 2007; Stefan Schweizer <genstef@gentoo.org>
   -pykota-1.24_p2174.ebuild, pykota-1.25_p2437.ebuild:

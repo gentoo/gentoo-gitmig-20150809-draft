@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437.ebuild,v 1.4 2007/07/13 07:15:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437-r1.ebuild,v 1.1 2007/10/10 18:26:12 genstef Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -38,8 +38,8 @@ src_install() {
 	python_version
 	distutils_src_install
 	#cups backend ----------------------------------------------
-	mkdir -p "${D}"/usr/lib/cups/backend
-	dosym /usr/share/pykota/cupspykota /usr/lib/cups/backend/cupspykota
+	mkdir -p "${D}"$(cups-config --serverbin)/backend
+	dosym /usr/share/pykota/cupspykota $(cups-config --serverbin)/backend/cupspykota
 	#extra docs: inits -----------------------------------------
 	init_dir=/usr/share/doc/${P}/initscripts
 	insinto ${init_dir}
