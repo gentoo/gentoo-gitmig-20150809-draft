@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtest86
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.29 2007/03/17 00:33:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.30 2007/10/10 05:41:10 opfer Exp $
+
+  10 Oct 2007; Christian Faulhammer <opfer@gentoo.org> memtest86-3.3.ebuild:
+  stable x86, bug 195224
 
 *memtest86-3.3 (17 Mar 2007)
 
