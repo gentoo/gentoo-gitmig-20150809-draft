@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.6 2007/10/08 19:46:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.7 2007/10/10 12:48:19 bicatali Exp $
 
 inherit eutils autotools flag-o-matic fortran multilib
 
@@ -16,10 +16,10 @@ IUSE="doc"
 KEYWORDS="~amd64 hppa ia64 ppc64 sparc x86"
 
 DEPEND="virtual/blas
+	dev-util/pkgconfig
 	app-admin/eselect-lapack"
 
-RDEPEND="${RDEPEND}
-	dev-util/pkgconfig
+RDEPEND="${DEPEND}
 	doc? ( app-doc/lapack-docs )"
 
 PROVIDE="virtual/lapack"
@@ -29,9 +29,9 @@ S="${WORKDIR}/${MyPN}-lite-${PV}"
 pkg_setup() {
 	FORTRAN="g77 gfortran ifc"
 	fortran_pkg_setup
-	if  [[ ${FORTRANC:0:2} == "if" ]]; then
+	if  [[ ${FORTRANC} == if* ]]; then
 		ewarn "Using Intel Fortran at your own risk"
-		LDFLAGS="$(raw-ldflags)"
+		export LDFLAGS="$(raw-ldflags)"
 		export NOOPT_FFLAGS=-O
 	fi
 }
@@ -62,8 +62,9 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README
-	eselect lapack add $(get_libdir) "${FILESDIR}"/eselect.lapack.reference reference
+	dodoc README || die "dodoc failed"
+	ESELECT_PROF=reference
+	eselect lapack add $(get_libdir) "${FILESDIR}"/eselect.lapack.reference ${ESELECT_PROF}
 }
 
 src_test() {
@@ -74,7 +75,17 @@ src_test() {
 }
 
 pkg_postinst() {
-	[[ -z "$(eselect lapack show)" ]] && eselect lapack set reference
-	elog "To use LAPACK reference implementation, you have to issue (as root):"
-	elog "\t eselect lapack set reference"
+	local p=lapack
+	local current_lib=$(eselect ${p} show | cut -d' ' -f2)
+	if [[ ${current_lib} == ${ESELECT_PROF} || -z ${current_lib} ]]; then
+		# work around eselect bug #189942
+		local configfile="${ROOT}"/etc/env.d/${p}/lib/config
+		[[ -e ${configfile} ]] && rm -f ${configfile}
+		eselect ${p} set ${ESELECT_PROF}
+		elog "${p} has been eselected to ${ESELECT_PROF}"
+	else
+		elog "Current eselected ${p} is ${current_lib}"
+		elog "To use ${p} ${ESELECT_PROF} implementation, you have to issue (as root):"
+		elog "\t eselect ${p} set ${ESELECT_PROF}"
+	fi
 }

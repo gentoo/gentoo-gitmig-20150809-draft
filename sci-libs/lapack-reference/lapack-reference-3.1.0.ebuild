@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.0.ebuild,v 1.7 2007/07/14 00:15:25 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.0.ebuild,v 1.8 2007/10/10 12:48:19 bicatali Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -47,15 +47,15 @@ src_install() {
 	# Library will be installed in RPATH:
 	RPATH="${TOP_PATH}"/reference
 
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 
 	# Fix for switching
 	dodir ${RPATH}
-	mv ${D}/usr/$(get_libdir)/liblapack* ${D}/${RPATH}
+	mv "${D}"/usr/$(get_libdir)/liblapack* "${D}"/${RPATH}
 
 	dodoc "${S}"/README
 
-	eselect lapack add $(get_libdir) ${FILESDIR}/eselect-reference reference
+	eselect lapack add $(get_libdir) "${FILESDIR}"/eselect-reference reference
 }
 
 src_test() {
