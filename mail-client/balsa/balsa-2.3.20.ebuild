@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.3.20.ebuild,v 1.7 2007/09/30 20:48:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.3.20.ebuild,v 1.8 2007/10/10 15:22:32 remi Exp $
 
 inherit gnome2
 
@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 		>=app-text/scrollkeeper-0.1.4
 		doc? ( dev-util/gtk-doc )"
 
-DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README TODO docs/*"
+DOCS="AUTHORS ChangeLog HACKING NEWS README TODO docs/*"
 USE_DESTDIR="1"
 
 pkg_setup() {
@@ -95,8 +95,4 @@ src_unpack() {
 	echo "libinit_balsa/assistant_page_finish.c" >> po/POTFILES.in
 	echo "libinit_balsa/assistant_page_user.c" >> po/POTFILES.in
 	echo "libinit_balsa/assistant_page_welcome.c" >> po/POTFILES.in
-}
-
-src_install() {
-	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
 }
