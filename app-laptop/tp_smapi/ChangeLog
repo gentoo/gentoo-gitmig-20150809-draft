@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/tp_smapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.20 2007/04/26 02:41:26 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.21 2007/10/10 17:30:30 cla Exp $
+
+  10 Oct 2007; Dawid Węgliński <cla@gentoo.org> tp_smapi-0.31.ebuild:
+  Stable on x86 for bug 195379
 
   26 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   tp_smapi-0.31.ebuild:

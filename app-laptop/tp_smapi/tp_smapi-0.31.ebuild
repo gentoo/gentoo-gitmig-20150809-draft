@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.31.ebuild,v 1.2 2007/04/26 02:41:26 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.31.ebuild,v 1.3 2007/10/10 17:30:30 cla Exp $
 
 inherit linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tpctl/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 IUSE="hdaps"
 
