@@ -42,3 +42,4 @@ slotmove =dev-ruby/capistrano-1.9* 0 2
 move net-im/micq net-im/climm
 move games-arcade/smclone games-arcade/smc
 slotmove =x11-libs/gtksourceview-1* 0 1
+slotmove =media-video/vlc-0.9.0_alpha20071009 1 0
