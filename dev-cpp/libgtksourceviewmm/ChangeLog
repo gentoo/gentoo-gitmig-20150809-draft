@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libgtksourceviewmm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgtksourceviewmm/ChangeLog,v 1.7 2007/07/10 19:17:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgtksourceviewmm/ChangeLog,v 1.8 2007/10/10 16:05:21 remi Exp $
+
+  10 Oct 2007; Rémi Cardona <remi@gentoo.org>
+  -libgtksourceviewmm-0.2.0.ebuild, -libgtksourceviewmm-0.3.0.ebuild,
+  -libgtksourceviewmm-0.3.0-r1.ebuild, libgtksourceviewmm-0.3.1.ebuild:
+  update gtksourceview deps (see bug #195366), prune old versions
 
   10 Jul 2007; Jeroen Roovers <jer@gentoo.org>
   libgtksourceviewmm-0.3.1.ebuild:
