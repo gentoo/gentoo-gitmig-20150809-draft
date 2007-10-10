@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.5.ebuild,v 1.1 2007/06/05 08:39:03 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.5.ebuild,v 1.2 2007/10/10 12:29:07 lordvan Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ DEPEND="ssl? ( dev-libs/openssl )
 	mysql? ( >=virtual/mysql-4.1 )
 	sqlite3? ( >=dev-db/sqlite-3.0 )
 	sieve? ( >=mail-filter/libsieve-2.2.1 )
+	ldap? ( >=net-nds/openldap-2.3.33 )
 	app-text/asciidoc
 	app-text/xmlto
 	sys-libs/zlib
