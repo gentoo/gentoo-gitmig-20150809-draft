@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.138 2007/10/09 20:57:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.139 2007/10/10 08:05:02 opfer Exp $
+
+  10 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  pwlib-1.10.10-r1.ebuild:
+  stable x86, security bug 193095
 
 *pwlib-1.10.10-r1 (09 Oct 2007)
 
