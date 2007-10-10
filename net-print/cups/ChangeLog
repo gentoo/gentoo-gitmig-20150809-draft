@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.248 2007/10/09 18:46:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.249 2007/10/10 21:07:17 tgurr Exp $
+
+*cups-1.3.3 (10 Oct 2007)
+
+  10 Oct 2007; Timo Gurr <tgurr@gentoo.org> +files/cups-1.3.0-bindnow.patch,
+  +files/cups-1.3.0-configure.patch, +cups-1.3.3.ebuild:
+  Add cups-1.3.3.ebuild, fixes bug #188993 and also has a patch applied for
+  bug #192294.
 
 *cups-1.2.12-r1 (09 Oct 2007)
 
