@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.4 2007/10/10 11:08:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.5 2007/10/10 16:45:34 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -40,13 +40,13 @@ LICENSE="GPL-2"
 SLOT="1"
 
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="a52 3dfx debug altivec httpd vlm gnutls live v4l v4l2 cdda ogg matroska
-dvb dvd vcd vcdx dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
-oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc stream
-mp3 xv bidi sdl sdl-image png xml samba daap mod speex shout rtsp
-win32codecs skins hal avahi xinerama cddb directfb upnp nsplugin seamonkey
-optimisememory libnotify jack musepack x264 dc1394 lua gnome pvr taglib
-musicbrainz dbus libgcrypt id3tag cdio ffmpeg twolame xulrunner"
+IUSE="3dfx a52 aalib alsa altivec arts avahi bidi cdda cddb cdio daap dbus dc1394
+	debug directfb dts dvb dvd esd fbcon ffmpeg flac ggi gnome gnutls hal httpd
+	id3tag jack libcaca libgcrypt libnotify lirc live lua matroska mod mp3 mpeg
+	musepack musicbrainz ncurses nsplugin ogg opengl optimisememory oss png pvr
+	rtsp samba sdl sdl-image seamonkey shout skins speex stream svg svga taglib
+	theora truetype twolame upnp v4l v4l2 vcd vcdx vlm vorbis win32codecs wxwindows
+	X x264 xinerama xml xosd xulrunner xv"
 
 RDEPEND="
 		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r1 )
