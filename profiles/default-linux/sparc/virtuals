@@ -1,8 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/virtuals,v 1.25 2007/09/27 12:25:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/virtuals,v 1.26 2007/10/10 12:35:32 bicatali Exp $
 
-virtual/blas				sci-libs/blas-reference
 virtual/bootloader			sys-boot/silo
 virtual/cdrtools			app-cdr/cdrkit
 virtual/ooo				app-office/openoffice

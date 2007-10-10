@@ -1,9 +1,8 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/virtuals,v 1.19 2007/09/12 14:32:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/virtuals,v 1.20 2007/10/10 12:34:45 bicatali Exp $
 
 virtual/alsa				sys-kernel/vanilla-sources
 virtual/bootloader			sys-boot/aboot
-virtual/blas				sci-libs/blas-reference
 virtual/cdrtools			app-cdr/cdrtools
 virtual/linux-sources			sys-kernel/vanilla-sources
