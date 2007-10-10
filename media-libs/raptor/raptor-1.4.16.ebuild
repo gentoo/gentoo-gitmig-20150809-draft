@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.16.ebuild,v 1.1 2007/10/10 13:54:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.16.ebuild,v 1.2 2007/10/10 13:57:38 drac Exp $
 
 inherit eutils
 
@@ -46,7 +46,7 @@ src_compile() {
 
 	econf $(use_enable unicode nfc-check) \
 		${myraptorconf}
-	
+
 	emake || die "emake failed."
 }
 
