@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.25 2007/10/09 15:06:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.26 2007/10/10 19:27:34 corsair Exp $
+
+  10 Oct 2007; Markus Rothe <corsair@gentoo.org> brasero-0.6.1.ebuild:
+  Added ~ppc64; bug #189993
 
   09 Oct 2007; Lars Weiler <pylon@gentoo.org> brasero-0.6.1.ebuild:
   stable ppc, bug #189991
