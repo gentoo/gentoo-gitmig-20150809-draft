@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r3.ebuild,v 1.11 2006/12/06 21:19:59 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r3.ebuild,v 1.12 2007/10/10 07:14:58 opfer Exp $
 
 inherit eutils
 
@@ -17,7 +17,6 @@ DEPEND="=sys-libs/db-4*"
 RDEPEND="${DEPEND}
 	!app-editors/vim
 	!app-editors/gvim"
-PROVIDE="virtual/editor"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ng-1.5_beta1.ebuild,v 1.10 2007/01/24 02:46:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ng-1.5_beta1.ebuild,v 1.11 2007/10/10 07:12:42 opfer Exp $
 
 inherit eutils
 
@@ -20,7 +20,6 @@ RDEPEND="virtual/libc
 	canna? ( app-i18n/canna )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4.0"
-PROVIDE="virtual/editor"
 
 S="${WORKDIR}/${MY_P}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r7.ebuild,v 1.2 2007/05/01 16:44:54 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r7.ebuild,v 1.3 2007/10/10 07:14:58 opfer Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ IUSE="perl unicode"
 DEPEND="=sys-libs/db-4*"
 RDEPEND="${DEPEND}
 	app-admin/eselect-vi"
-PROVIDE="virtual/editor"
 
 src_unpack() {
 	unpack ${A}

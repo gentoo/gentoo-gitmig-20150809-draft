@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.54 2007/05/13 18:20:02 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.55 2007/10/10 07:14:58 opfer Exp $
+
+  10 Oct 2007; Christian Faulhammer <opfer@gentoo.org> nvi-1.81.5-r3.ebuild,
+  nvi-1.81.5-r6.ebuild, nvi-1.81.5-r7.ebuild:
+  remove PROVIDE=virtual/editor as we have now a new-style virtual
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add herd

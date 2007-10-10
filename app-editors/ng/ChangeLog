@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ng
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ChangeLog,v 1.8 2007/01/24 02:46:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ChangeLog,v 1.9 2007/10/10 07:12:42 opfer Exp $
+
+  10 Oct 2007; Christian Faulhammer <opfer@gentoo.org> ng-1.5_beta1.ebuild:
+  remove PROVIDE=virtual/editor as we have now a new-style virtual
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> ng-1.5_beta1.ebuild:
   Replacing einfo with elog
