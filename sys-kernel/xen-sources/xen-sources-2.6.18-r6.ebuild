@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.18-r5.ebuild,v 1.1 2007/09/14 19:29:12 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.18-r6.ebuild,v 1.1 2007/10/10 23:37:10 marineam Exp $
 
 ETYPE="sources"
 UNIPATCH_STRICTORDER="1"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.xensource.com/xen/xen/"
 
 KEYWORDS="~x86 ~amd64"
 
-XENPATCHES_VER="4"
+XENPATCHES_VER="5"
 XENPATCHES="xen-patches-${PV}-${XENPATCHES_VER}.tar.bz2"
 XENPATCHES_URI="mirror://gentoo/${XENPATCHES}"
 
