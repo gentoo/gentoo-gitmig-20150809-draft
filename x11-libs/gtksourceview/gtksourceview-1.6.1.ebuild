@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-1.6.1.ebuild,v 1.11 2006/10/20 17:22:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-1.6.1.ebuild,v 1.12 2007/10/10 15:01:21 remi Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ DESCRIPTION="A text widget implementing syntax highlighting and other features"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="1.0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE="doc"
 
