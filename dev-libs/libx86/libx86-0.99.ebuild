@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/libx86-0.99.ebuild,v 1.2 2007/09/18 19:46:46 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/libx86-0.99.ebuild,v 1.3 2007/10/10 19:10:30 alonbl Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="A hardware-independent library for executing real-mode x86 code"
 HOMEPAGE="http://www.codon.org.uk/~mjg59/libx86"
@@ -31,5 +31,5 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake install LIBDIR="/usr/$(get_libdir)" DESTDIR="${D}" || die
 }
