@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.139 2007/10/10 08:05:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.140 2007/10/10 16:54:19 jer Exp $
+
+  10 Oct 2007; Jeroen Roovers <jer@gentoo.org> pwlib-1.10.10-r1.ebuild:
+  Stable for HPPA (bug #193095).
 
   10 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   pwlib-1.10.10-r1.ebuild:
