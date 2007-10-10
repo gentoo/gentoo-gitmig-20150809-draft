@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0-r2.ebuild,v 1.8 2007/07/22 15:36:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0-r2.ebuild,v 1.9 2007/10/10 10:02:14 markusle Exp $
 
 inherit eutils toolchain-funcs
 
@@ -39,14 +39,14 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/unbuffered.patch
-	epatch ${DISTDIR}/atlas3.6.0-shared-libs.1.patch.bz2
-	epatch ${FILESDIR}/${PV}-ppc-configure.patch
+	epatch "${FILESDIR}"/unbuffered.patch
+	epatch "${DISTDIR}"/atlas3.6.0-shared-libs.1.patch.bz2
+	epatch "${FILESDIR}"/${PV}-ppc-configure.patch
 	sed -i -e "s:ASM:ASM VOLATILE:" include/contrib/camm_dpa.h || die "sed failed to fix clobbering"
-	cp ${FILESDIR}/war ${S}
-	chmod a+x ${S}/war
+	cp "${FILESDIR}"/war "${S}"
+	chmod a+x "${S}"/war
 }
 
 atlas_fail() {
@@ -124,33 +124,33 @@ src_compile() {
 
 src_install () {
 	dodir ${RPATH}/atlas
-	cd ${S}/gentoo/libs
-	cp -P libatlas* ${D}/${DESTTREE}/lib
-	cp -P *blas* ${D}/${RPATH}/atlas #the rest really
+	cd "${S}"/gentoo/libs
+	cp -P libatlas* "${D}/${DESTTREE}"/lib
+	cp -P *blas* "${D}/${RPATH}"/atlas #the rest really
 
-	eselect blas add $(get_libdir) ${FILESDIR}/eselect.blas atlas
-	eselect cblas add $(get_libdir) ${FILESDIR}/eselect.cblas atlas
+	eselect blas add $(get_libdir) "${FILESDIR}"/eselect.blas atlas
+	eselect cblas add $(get_libdir) "${FILESDIR}"/eselect.cblas atlas
 
-	if [ -d ${S}/gentoo/threaded-libs ]
+	if [ -d "${S}"/gentoo/threaded-libs ]
 	then
 		dodir ${RPATH}/threaded-atlas
-		cd ${S}/gentoo/threaded-libs
-		cp -P * ${D}/${RPATH}/threaded-atlas
-		eselect blas add $(get_libdir) ${FILESDIR}/eselect.blas-threaded threaded-atlas
-		eselect cblas add $(get_libdir) ${FILESDIR}/eselect.cblas-threaded threaded-atlas
+		cd "${S}"/gentoo/threaded-libs
+		cp -P * "${D}/${RPATH}"/threaded-atlas
+		eselect blas add $(get_libdir) "${FILESDIR}"/eselect.blas-threaded threaded-atlas
+		eselect cblas add $(get_libdir) "${FILESDIR}"/eselect.cblas-threaded threaded-atlas
 	fi
 
 	insinto ${DESTTREE}/include/atlas
-	doins ${S}/include/cblas.h ${S}/include/atlas_misc.h
-	doins ${S}/include/atlas_enum.h
+	doins "${S}"/include/cblas.h "${S}"/include/atlas_misc.h
+	doins "${S}"/include/atlas_enum.h
 
 	# These headers contain the architecture-specific optimizations determined
 	# by ATLAS. The atlas-lapack build is much shorter if they are available,
 	# so save them:
-	doins ${S}/include/${ATLAS_ARCH}/*.h
+	doins "${S}"/include/${ATLAS_ARCH}/*.h
 
 	#some docs
-	cd ${S}
+	cd "${S}"
 	dodoc README doc/{AtlasCredits.txt,ChangeLog}
 	use doc && dodoc doc/*.ps
 }
@@ -172,7 +172,7 @@ pkg_postinst() {
 	elog
 	elog "Fortran users link using -lblas"
 	elog
-	elog "C users compile against the header ${ROOT}usr/include/atlas/cblas.h and"
+	elog "C users compile against the header "${ROOT}"usr/include/atlas/cblas.h and"
 	elog "link using -lcblas"
 	elog
 	elog "If using threaded ATLAS, you may also need to link with -lpthread."

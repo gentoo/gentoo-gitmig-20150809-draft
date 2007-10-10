@@ -1,41 +1,58 @@
-diff -Naur lapack-lite-3.1.1/INSTALL/Makefile.am lapack-lite-3.1.1.new/INSTALL/Makefile.am
---- lapack-lite-3.1.1/INSTALL/Makefile.am	1969-12-31 19:00:00.000000000 -0500
-+++ lapack-lite-3.1.1.new/INSTALL/Makefile.am	2007-03-08 23:57:43.000000000 -0500
-@@ -0,0 +1,23 @@
-+if DO_TEST
-+noinst_PROGRAMS = \
-+	testlsame \
-+	testslamch \
-+	testdlamch \
-+	testsecond \
-+	testdsecnd \
-+	testieee
-+endif
+--- configure.ac 	1970-01-01 01:00:00.000000000 +0100
++++ configure.ac	2007-08-14 10:28:36.000000000 +0100
+@@ -0,0 +1,26 @@
++AC_PREREQ(2.61)
++AC_INIT(lapack, 3.1.1, lapack@cs.utk.edu)
++AM_INIT_AUTOMAKE([foreign])
 +
-+testlsame_SOURCES = lsame.f lsametst.f
-+testslamch_SOURCES = slamch.f lsame.f slamchtst.f
-+testdlamch_SOURCES = dlamch.f lsame.f dlamchtst.f
-+testsecond_SOURCES = second_INT_CPU_TIME.f secondtst.f
-+testdsecnd_SOURCES = dsecnd_INT_CPU_TIME.f dsecndtst.f
-+testieee_SOURCES = tstiee.f
++AC_LANG(Fortran 77)
++AC_PROG_F77
++AC_PROG_LIBTOOL
 +
-+EXTRA_DIST = \
-+	lawn81.pdf \
-+	lawn81.ps \
-+	lawn81.tex \
-+	org2.ps \
-+	psfig.tex
-diff -Naur lapack-lite-3.1.1/Makefile.am lapack-lite-3.1.1.new/Makefile.am
---- lapack-lite-3.1.1/Makefile.am	1969-12-31 19:00:00.000000000 -0500
-+++ lapack-lite-3.1.1.new/Makefile.am	2007-03-08 23:57:43.000000000 -0500
-@@ -0,0 +1,3 @@
++AC_F77_FUNC(sgemm)
++
++PKG_PROG_PKG_CONFIG
++if test -n "$PKG_CONFIG"; then
++   PKG_CHECK_MODULES([BLAS], [blas])
++else
++   AC_CHECK_LIB(blas, $sgemm)
++   BLAS_LIBS=-lblas
++   AC_SUBST(BLAS_LIBS)
++fi
++
++AC_ARG_VAR(NOOPT_FFLAGS, Fortran 77 compiler flags to use for unoptimized files)
++
++AC_CONFIG_FILES([Makefile
++                 SRC/Makefile
++                 INSTALL/Makefile
++  		 lapack.pc])
++AC_OUTPUT
+--- Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ Makefile.am	2007-08-14 11:39:34.000000000 +0100
+@@ -0,0 +1,6 @@
 +SUBDIRS = INSTALL SRC
 +
-+EXTRA_DIST = README
-diff -Naur lapack-lite-3.1.1/SRC/Makefile.am lapack-lite-3.1.1.new/SRC/Makefile.am
---- lapack-lite-3.1.1/SRC/Makefile.am	1969-12-31 19:00:00.000000000 -0500
-+++ lapack-lite-3.1.1.new/SRC/Makefile.am	2007-03-08 23:58:18.000000000 -0500
-@@ -0,0 +1,306 @@
++pkgconfigdir = $(libdir)
++pkgconfig_DATA = lapack.pc
++
++EXTRA_DIST = README lapack.pc
+--- lapack.pc.in 	1970-01-01 01:00:00.000000000 +0100
++++ lapack.pc.in	2007-08-17 11:39:19.000000000 +0100
+@@ -0,0 +1,11 @@
++prefix=@prefix@
++exec_prefix=@exec_prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name: @PACKAGE_NAME@
++Description: Linear Algebra PACKage FORTRAN 77 reference implementation
++Version: @PACKAGE_VERSION@
++Requires: blas
++URL: http://www.netlib.org/lapack/
++Libs: -llapack
+--- SRC/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ SRC/Makefile.am	2007-08-02 15:15:59.000000000 +0100
+@@ -0,0 +1,292 @@
 +lib_LTLIBRARIES = \
 +	liblapack.la
 +
@@ -45,7 +62,6 @@ diff -Naur lapack-lite-3.1.1/SRC/Makefile.am lapack-lite-3.1.1.new/SRC/Makefile.
 +ALLAUX_SOURCES = ilaenv.f ieeeck.f lsamen.f xerbla.f iparmq.f \
 +	../INSTALL/ilaver.f ../INSTALL/lsame.f
 +
-+if SINGLE
 +SINGLE_NOOPT_SOURCES = \
 +	slaruv.f ../INSTALL/slamch.f
 +
@@ -65,9 +81,7 @@ diff -Naur lapack-lite-3.1.1/SRC/Makefile.am lapack-lite-3.1.1.new/SRC/Makefile.
 +	slasr.f  slasrt.f slassq.f slasv2.f spttrf.f sstebz.f sstedc.f \
 +	ssteqr.f ssterf.f slaisnan.f sisnan.f \
 +	../INSTALL/second_INT_CPU_TIME.f
-+endif
 +
-+if DOUBLE
 +DOUBLE_NOOPT_SOURCES = \
 +	dlaruv.f ../INSTALL/dlamch.f
 +
@@ -87,9 +101,7 @@ diff -Naur lapack-lite-3.1.1/SRC/Makefile.am lapack-lite-3.1.1.new/SRC/Makefile.
 +	dlasr.f  dlasrt.f dlassq.f dlasv2.f dpttrf.f dstebz.f dstedc.f \
 +	dsteqr.f dsterf.f dlaisnan.f disnan.f \
 +	../INSTALL/dsecnd_INT_CPU_TIME.f
-+endif
 +
-+if S
 +S_SOURCES = \
 +	sgbbrd.f sgbcon.f sgbequ.f sgbrfs.f sgbsv.f  \
 +	sgbsvx.f sgbtf2.f sgbtrf.f sgbtrs.f sgebak.f sgebal.f sgebd2.f \
@@ -138,9 +150,7 @@ diff -Naur lapack-lite-3.1.1/SRC/Makefile.am lapack-lite-3.1.1.new/SRC/Makefile.
 +	stptrs.f \
 +	strcon.f strevc.f strexc.f strrfs.f strsen.f strsna.f strsyl.f \
 +	strti2.f strtri.f strtrs.f stzrqf.f stzrzf.f sstemr.f
-+endif
 +
-+if C
 +C_SOURCES = \
 +	cbdsqr.f cgbbrd.f cgbcon.f cgbequ.f cgbrfs.f cgbsv.f  cgbsvx.f \
 +	cgbtf2.f cgbtrf.f cgbtrs.f cgebak.f cgebal.f cgebd2.f cgebrd.f \
@@ -194,9 +204,7 @@ diff -Naur lapack-lite-3.1.1/SRC/Makefile.am lapack-lite-3.1.1.new/SRC/Makefile.
 +	cungrq.f cungtr.f cunm2l.f cunm2r.f cunmbr.f cunmhr.f cunml2.f \
 +	cunmlq.f cunmql.f cunmqr.f cunmr2.f cunmr3.f cunmrq.f cunmrz.f \
 +	cunmtr.f cupgtr.f cupmtr.f icmax1.f scsum1.f cstemr.f
-+endif
 +
-+if D
 +D_SOURCES = \
 +	dgbbrd.f dgbcon.f dgbequ.f dgbrfs.f dgbsv.f  \
 +	dgbsvx.f dgbtf2.f dgbtrf.f dgbtrs.f dgebak.f dgebal.f dgebd2.f \
@@ -247,9 +255,7 @@ diff -Naur lapack-lite-3.1.1/SRC/Makefile.am lapack-lite-3.1.1.new/SRC/Makefile.
 +	dtrcon.f dtrevc.f dtrexc.f dtrrfs.f dtrsen.f dtrsna.f dtrsyl.f \
 +	dtrti2.f dtrtri.f dtrtrs.f dtzrqf.f dtzrzf.f dstemr.f \
 +	dsgesv.f dlag2s.f slag2d.f
-+endif
 +
-+if Z
 +Z_SOURCES = \
 +	zbdsqr.f zgbbrd.f zgbcon.f zgbequ.f zgbrfs.f zgbsv.f  zgbsvx.f \
 +	zgbtf2.f zgbtrf.f zgbtrs.f zgebak.f zgebal.f zgebd2.f zgebrd.f \
@@ -308,7 +314,6 @@ diff -Naur lapack-lite-3.1.1/SRC/Makefile.am lapack-lite-3.1.1.new/SRC/Makefile.
 +	zunmtr.f zupgtr.f \
 +	zupmtr.f izmax1.f dzsum1.f zstemr.f \
 +	zcgesv.f zlag2c.f clag2z.f
-+endif
 +
 +liblapack_noopt_la_FFLAGS = \
 +	$(NOOPT_FFLAGS)
@@ -317,9 +322,7 @@ diff -Naur lapack-lite-3.1.1/SRC/Makefile.am lapack-lite-3.1.1.new/SRC/Makefile.
 +	$(SINGLE_NOOPT_SOURCES) \
 +	$(DOUBLE_NOOPT_SOURCES)
 +
-+liblapack_la_LIBADD = liblapack-noopt.la
-+
-+liblapack_la_LDFLAGS = -lblas
++liblapack_la_LIBADD = liblapack-noopt.la @BLAS_LIBS@
 +
 +liblapack_la_SOURCES = \
 +	$(ALLAUX_SOURCES) \
@@ -342,76 +345,29 @@ diff -Naur lapack-lite-3.1.1/SRC/Makefile.am lapack-lite-3.1.1.new/SRC/Makefile.
 +	$(LIBTOOL) --tag=F77 --mode=compile $(F77) $(liblapack_noopt_la_FFLAGS) -c -o liblapack_noopt_la-slamch.lo `test -f '../INSTALL/slamch.f' || echo '$(srcdir)/'`../INSTALL/slamch.f
 +liblapack_noopt_la-dlamch.lo: ../INSTALL/dlamch.f
 +	$(LIBTOOL) --tag=F77 --mode=compile $(F77) $(liblapack_noopt_la_FFLAGS) -c -o liblapack_noopt_la-dlamch.lo `test -f '../INSTALL/dlamch.f' || echo '$(srcdir)/'`../INSTALL/dlamch.f
-diff -Naur lapack-lite-3.1.1/configure.ac lapack-lite-3.1.1.new/configure.ac
---- lapack-lite-3.1.1/configure.ac	1969-12-31 19:00:00.000000000 -0500
-+++ lapack-lite-3.1.1.new/configure.ac	2007-03-08 23:57:43.000000000 -0500
-@@ -0,0 +1,69 @@
-+#                                               -*- Autoconf -*-
-+# Process this file with autoconf to produce a configure script.
+--- INSTALL/Makefile.am 	1970-01-01 01:00:00.000000000 +0100
++++ INSTALL/Makefile.am	2007-08-02 11:43:17.000000000 +0100
+@@ -0,0 +1,23 @@
++check_PROGRAMS = \
++	testlsame \
++	testslamch \
++	testdlamch \
++	testsecond \
++	testdsecnd \
++	testieee
 +
-+AC_PREREQ(2.59)
-+AC_INIT(lapack, 3.0+, lapack@cs.utk.edu)
-+AM_INIT_AUTOMAKE([foreign])
++TESTS = $(check_PROGRAMS)
 +
-+# Checks for programs.
-+AC_PROG_INSTALL
-+AC_PROG_F77
-+AC_PROG_LIBTOOL
++testlsame_SOURCES = lsame.f lsametst.f
++testslamch_SOURCES = slamch.f lsame.f slamchtst.f
++testdlamch_SOURCES = dlamch.f lsame.f dlamchtst.f
++testsecond_SOURCES = second_INT_CPU_TIME.f secondtst.f
++testdsecnd_SOURCES = dsecnd_INT_CPU_TIME.f dsecndtst.f
++testieee_SOURCES = tstiee.f
 +
-+AC_ARG_ENABLE(single-real,        AS_HELP_STRING([--disable-single-real],
-+             [Enable single real precision (default: enabled)]),
-+             [S=$enableval], [S=yes SINGLE=yes])
-+
-+AC_ARG_ENABLE(double-real,        AS_HELP_STRING([--disable-double-real],
-+             [Enable double real precision (default: enabled)]),
-+             [D=$enableval], [D=yes DOUBLE=yes])
-+
-+AC_ARG_ENABLE(single-complex,        AS_HELP_STRING([--disable-single-complex],
-+             [Enable single complex precision (default: enabled)]),
-+             [C=$enableval], [C=yes SINGLE=yes])
-+
-+AC_ARG_ENABLE(double-complex,        AS_HELP_STRING([--disable-double-complex],
-+             [Enable double complex precision (default: enabled)]),
-+             [Z=$enableval], [Z=yes DOUBLE=yes])
-+
-+AC_ARG_ENABLE(tests,        AS_HELP_STRING([--enable-tests],
-+             [Build test programs (default: disabled)]),
-+             [DO_TEST=$enableval], [DO_TEST=no])
-+
-+AC_ARG_VAR(NOOPT_FFLAGS, Fortran 77 compiler flags to use for unoptimized files)
-+
-+if test "x$S" = "xno" \
-+	&& test "x$D" = "xno" \
-+	&& test "x$C" = "xno" \
-+	&& test "x$Z" = "xno"; then
-+	AC_MSG_ERROR([You must enable at least one precision!])
-+fi
-+
-+if test "x$DO_TEST" = "xyes"; then
-+	TESTING=testing
-+fi
-+
-+AM_CONDITIONAL([SINGLE], [test "x$SINGLE" = "xyes"])
-+AM_CONDITIONAL([DOUBLE], [test "x$DOUBLE" = "xyes"])
-+AM_CONDITIONAL([S], [test "x$S" = "xyes"])
-+AM_CONDITIONAL([D], [test "x$D" = "xyes"])
-+AM_CONDITIONAL([C], [test "x$C" = "xyes"])
-+AM_CONDITIONAL([Z], [test "x$Z" = "xyes"])
-+AM_CONDITIONAL([DO_TEST], [test "x$DO_TEST" = "xyes"])
-+AC_SUBST(TESTING)
-+
-+AC_CONFIG_FILES([
-+                 INSTALL/Makefile
-+                 Makefile
-+                 SRC/Makefile])
-+#                 BLAS/SRC/Makefile
-+#                 TESTING/EIG/Makefile
-+#                 TESTING/LIN/Makefile
-+#                 TESTING/MATGEN/Makefile
-+#                 TESTING/Makefile
-+#                 TIMING/EIG/EIGSRC/Makefile
-+#                 TIMING/EIG/Makefile
-+#                 TIMING/LIN/LINSRC/Makefile
-+#                 TIMING/LIN/Makefile
-+#                 TIMING/Makefile])
-+AC_OUTPUT
++EXTRA_DIST = \
++	lawn81.pdf \
++	lawn81.ps \
++	lawn81.tex \
++	org2.ps \
++	psfig.tex

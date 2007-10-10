@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11.ebuild,v 1.19 2007/07/13 06:57:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11.ebuild,v 1.20 2007/10/10 10:02:14 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -27,7 +27,7 @@ FORTRAN="g77 gfortran"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}"/unbuffered.patch
 	epatch "${FILESDIR}"/${PV}-allow-any-gcc-version.patch
@@ -40,15 +40,15 @@ src_unpack() {
 
 	sed -i \
 		-e "s:\(\t./xconfig\):\1 -m $(tc-getCC) -c $(tc-getCC) -f ${FORTRANC}:g" \
-		${S}/Makefile \
+		"${S}"/Makefile \
 		|| die "Failed to fix compilers"
 
 	if [[ $(gcc-major-version) -ge 4 ]]; then
 		einfo "Updating Makefiles for gcc-4"
 		sed -i \
 			-e "s:g2c:gfortran:g" \
-			${S}/Make.top \
-			${S}/makes/Make.lib \
+			"${S}"/Make.top \
+			"${S}"/makes/Make.lib \
 			|| die "Failed to update for gcc-4"
 	fi
 

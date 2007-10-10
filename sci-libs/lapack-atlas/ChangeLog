@@ -1,6 +1,18 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.46 2007/07/24 16:20:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.47 2007/10/10 10:04:59 markusle Exp $
+
+*lapack-atlas-3.7.39 (09 Oct 2007)
+
+  09 Oct 2007; Markus Dittrich <markusle@gentoo.org>
+  lapack-atlas-3.6.0.ebuild, -lapack-atlas-3.6.0-r1.ebuild,
+  -lapack-atlas-3.6.0-r2.ebuild, lapack-atlas-3.7.11.ebuild,
+  lapack-atlas-3.7.11-r1.ebuild, -lapack-atlas-3.7.31.ebuild,
+  -lapack-atlas-3.7.32.ebuild, lapack-atlas-3.7.34.ebuild,
+  +files/lapack.pc.in, +files/eselect.lapack.atlas,
+  +lapack-atlas-3.7.39.ebuild:
+  Version bump and removed old ebuilds. Also fixed missing
+  quoting in all ebuilds.
 
 *lapack-atlas-3.7.34 (24 Jul 2007)
 

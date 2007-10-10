@@ -1,6 +1,20 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.65 2007/07/24 16:17:58 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.66 2007/10/10 10:02:14 markusle Exp $
+
+*blas-atlas-3.7.39 (09 Oct 2007)
+
+  09 Oct 2007; Markus Dittrich <markusle@gentoo.org>
+  -blas-atlas-3.7.31.ebuild, -blas-atlas-3.7.32.ebuild,
+  -blas-atlas-3.6.0.ebuild, +blas-atlas-3.7.39.ebuild,
+  +files/blas.pc.in, +files/cblas.pc.in,
+  +files/eselect.blas.atlas, +files/eselect.blas.threaded-atlas,
+  +files/eselect.cblas.atlas, +files/eselect.cblas.threaded-atlas,
+  +files/atlas-3.7.39-decl-fix.patch,
+  blas-atlas-3.6.0-r1.ebuild, blas-atlas-3.6.0-r2.ebuild,
+  blas-atlas-3.7.11.ebuild, blas-atlas-3.7.11-r1.ebuild:
+  Version bump and removed old ebuilds. Also fixed missing
+  quoting in all ebuilds.
 
 *blas-atlas-3.7.34 (24 Jul 2007)
 

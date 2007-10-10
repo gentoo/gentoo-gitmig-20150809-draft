@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11.ebuild,v 1.13 2007/01/23 13:57:22 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11.ebuild,v 1.14 2007/10/10 10:04:59 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -75,15 +75,15 @@ src_unpack() {
 	einfo "Making ${PN} respect compiler settings"
 	sed -i \
 		-e "s:\(\t./xconfig\):\1 -m $(tc-getCC) -c $(tc-getCC) -f ${FORTRANC}:g" \
-		${S}/Makefile \
+		"${S}"/Makefile \
 		|| die "Failed to fix compilers"
 
 	if [[ $(gcc-major-version) -ge 4 ]]; then
 		einfo "Updating Makefiles for gcc-4"
 		sed -i \
 			-e "s:g2c:gfortran:g" \
-			${S}/Make.top \
-			${S}/makes/Make.lib \
+			"${S}"/Make.top \
+			"${S}"/makes/Make.lib \
 			|| die "Failed to update for gcc-4"
 	fi
 
@@ -93,7 +93,7 @@ src_unpack() {
 	else
 		libs="-lpthread -lg2c"
 	fi
-	sed -e "s/SHRD_LNK/${libs}/g" -i ${S}/Make.top || \
+	sed -e "s/SHRD_LNK/${libs}/g" -i "${S}"/Make.top || \
 	die "Failed to add addtional libs to shared object build"
 }
 

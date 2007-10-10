@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.34.ebuild,v 1.2 2007/07/27 03:29:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.34.ebuild,v 1.3 2007/10/10 10:04:59 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran versionator
 
@@ -43,8 +43,6 @@ src_unpack() {
 
 	epatch "${DISTDIR}"/${MY_PN}-${PV}-shared-libs.patch.bz2
 	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
-	epatch "${FILESDIR}"/${L_PN}-reference-${L_PV}-autotool.patch
-	epatch "${FILESDIR}"/${L_PN}-reference-${L_PV}-test-fix.patch
 
 	cd "${S}"
 	mkdir ${BLD_DIR}  || die "failed to generate build directory"
@@ -83,6 +81,8 @@ src_unpack() {
 		|| die "configure failed"
 
 	cd "${S_LAPACK}"
+	epatch "${FILESDIR}"/${L_PN}-reference-${L_PV}-autotool.patch
+	epatch "${FILESDIR}"/${L_PN}-reference-${L_PV}-test-fix.patch
 	eautoreconf
 
 	# set up the testing routines
@@ -140,7 +140,7 @@ src_install () {
 		"${D}/${RPATH}" \
 		|| die "Failed to install lapack-atlas library"
 
-	eselect lapack add $(get_libdir) ${FILESDIR}/eselect.lapack atlas
+	eselect lapack add $(get_libdir) "${FILESDIR}"/eselect.lapack atlas
 
 	insinto /usr/include/atlas
 	cd "${S}"/include

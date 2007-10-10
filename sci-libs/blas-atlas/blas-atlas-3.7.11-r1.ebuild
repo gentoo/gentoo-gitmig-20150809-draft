@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11-r1.ebuild,v 1.14 2007/07/22 15:36:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11-r1.ebuild,v 1.15 2007/10/10 10:02:14 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -28,7 +28,7 @@ FORTRAN="g77 gfortran"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}"/unbuffered.patch
 	epatch "${FILESDIR}"/${PV}-allow-any-gcc-version.patch
@@ -38,15 +38,15 @@ src_unpack() {
 
 	sed -i \
 		-e "s:\(\t./xconfig\):\1 -m $(tc-getCC) -c $(tc-getCC) -f ${FORTRANC}:g" \
-		${S}/Makefile \
+		"${S}"/Makefile \
 		|| die "Failed to fix compilers"
 
 	if [[ $(gcc-major-version) -ge 4 ]]; then
 		einfo "Updating Makefiles for gcc-4"
 		sed -i \
 			-e "s:g2c:gfortran:g" \
-			${S}/Make.top \
-			${S}/makes/Make.lib \
+			"${S}"/Make.top \
+			"${S}"/makes/Make.lib \
 			|| die "Failed to update for gcc-4"
 	fi
 
@@ -145,8 +145,8 @@ src_install () {
 	cp -P *blas* "${D}/${RPATH}"/atlas || \
 		die "Failed to install blas/cblas"
 
-	eselect blas add $(get_libdir) ${FILESDIR}/eselect.blas atlas
-	eselect cblas add $(get_libdir) ${FILESDIR}/eselect.cblas atlas
+	eselect blas add $(get_libdir) "${FILESDIR}"/eselect.blas atlas
+	eselect cblas add $(get_libdir) "${FILESDIR}"/eselect.cblas atlas
 
 	if [ -d "${S}"/gentoo/threaded-libs ]
 	then
@@ -155,8 +155,8 @@ src_install () {
 		cp -P * "${D}/${RPATH}"/threaded-atlas || \
 			die "Failed to install threaded atlas"
 
-		eselect blas add $(get_libdir) ${FILESDIR}/eselect.blas-threaded threaded-atlas
-		eselect cblas add $(get_libdir) ${FILESDIR}/eselect.cblas-threaded threaded-atlas
+		eselect blas add $(get_libdir) "${FILESDIR}"/eselect.blas-threaded threaded-atlas
+		eselect cblas add $(get_libdir) "${FILESDIR}"/eselect.cblas-threaded threaded-atlas
 	fi
 
 	insinto "${DESTTREE}"/include/atlas
@@ -191,7 +191,7 @@ pkg_postinst() {
 	elog
 	elog "Fortran users link using -lblas"
 	elog
-	elog "C users compile against the header ${ROOT}usr/include/atlas/cblas.h and"
+	elog "C users compile against the header "${ROOT}"usr/include/atlas/cblas.h and"
 	elog "link using -lcblas"
 	elog
 	elog "If using threaded ATLAS, you may also need to link with -lpthread."

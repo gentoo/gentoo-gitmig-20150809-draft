@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.34.ebuild,v 1.1 2007/07/24 16:17:58 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.34.ebuild,v 1.2 2007/10/10 10:02:14 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -46,8 +46,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack "${A}"
+	cd "${S}"
 
 	epatch "${DISTDIR}"/${MY_PN}-${PV}-shared-libs.patch.bz2
 	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
@@ -121,8 +121,8 @@ src_install () {
 	cp -P *blas* "${D}/${RPATH}"/atlas || \
 		die "Failed to install blas/cblas"
 
-	eselect blas add $(get_libdir) ${FILESDIR}/eselect.blas atlas
-	eselect cblas add $(get_libdir) ${FILESDIR}/eselect.cblas atlas
+	eselect blas add $(get_libdir) "${FILESDIR}"/eselect.blas atlas
+	eselect cblas add $(get_libdir) "${FILESDIR}"/eselect.cblas atlas
 
 	if [ -d ${BLD_DIR}/gentoo/threaded-libs ]
 	then
@@ -131,8 +131,8 @@ src_install () {
 		cp -P * "${D}/${RPATH}"/threaded-atlas || \
 			die "Failed to install threaded atlas"
 
-		eselect blas add $(get_libdir) ${FILESDIR}/eselect.blas-threaded threaded-atlas
-		eselect cblas add $(get_libdir) ${FILESDIR}/eselect.cblas-threaded threaded-atlas
+		eselect blas add $(get_libdir) "${FILESDIR}"/eselect.blas-threaded threaded-atlas
+		eselect cblas add $(get_libdir) "${FILESDIR}"/eselect.cblas-threaded threaded-atlas
 	fi
 
 	insinto "${DESTTREE}"/include/atlas
@@ -169,7 +169,7 @@ pkg_postinst() {
 	elog
 	elog "Fortran users link using -lblas"
 	elog
-	elog "C users compile against the header ${ROOT}usr/include/atlas/cblas.h and"
+	elog "C users compile against the header "${ROOT}"usr/include/atlas/cblas.h and"
 	elog "link using -lcblas"
 	elog
 	elog "If using threaded ATLAS, you may also need to link with -lpthread."

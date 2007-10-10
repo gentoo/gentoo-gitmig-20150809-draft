@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.12 2007/03/13 00:27:07 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.13 2007/10/10 10:04:59 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -72,13 +72,13 @@ src_unpack() {
 	use ifc && ifc_info
 	unpack ${A}
 
-	cd ${WORKDIR}
-	epatch ${FILESDIR}/unbuffered.patch
-	epatch ${DISTDIR}/atlas3.6.0-shared-libs.patch.bz2
-	epatch ${DISTDIR}/lapack-20020531-20021004.patch.bz2
-	epatch ${DISTDIR}/lapack-gentoo.patch
-	cp ${FILESDIR}/war ${S}
-	chmod a+x ${S}/war
+	cd "${WORKDIR}"
+	epatch "${FILESDIR}"/unbuffered.patch
+	epatch "${DISTDIR}"/atlas3.6.0-shared-libs.patch.bz2
+	epatch "${DISTDIR}"/lapack-20020531-20021004.patch.bz2
+	epatch "${DISTDIR}"/lapack-gentoo.patch
+	cp "${FILESDIR}"/war "${S}"
+	chmod a+x "${S}"/war
 }
 
 atlas_fail() {
@@ -91,7 +91,7 @@ atlas_fail() {
 }
 
 src_compile() {
-	cd ${S}
+	cd "${S}"
 	if [ -n "${interactive}" ]
 	then
 		echo "${interactive}"
@@ -106,13 +106,13 @@ src_compile() {
 
 	CC="libtool --mode=compile --tag=CC $(tc-getCC) -I/usr/include/atlas"
 
-	cd ${S}/src/lapack/${ATLAS_ARCH}
+	cd "${S}"/src/lapack/${ATLAS_ARCH}
 	make lib CC="${CC}" || die
 
-	cd ${S}/interfaces/lapack/C/src/${ATLAS_ARCH}
+	cd "${S}"/interfaces/lapack/C/src/${ATLAS_ARCH}
 	make lib CC="${CC}" || die
 
-	cd ${S}/interfaces/lapack/F77/src/${ATLAS_ARCH}
+	cd "${S}"/interfaces/lapack/F77/src/${ATLAS_ARCH}
 
 	make lib CC="${CC}" F77="libtool --mode=compile --tag=F77 g77" || die
 
@@ -136,9 +136,9 @@ src_compile() {
 		NOOPT="${NOOPT}" || die
 
 	cd ${S_LAPACK}/SRC
-	cp -sf ${S}/gentoo/liblapack.a/*.o .
-	cp -sf ${S}/gentoo/liblapack.a/*.lo .
-	cp -sf ${S}/gentoo/liblapack.a/.libs/*.o .libs/
+	cp -sf "${S}"/gentoo/liblapack.a/*.o .
+	cp -sf "${S}"/gentoo/liblapack.a/*.lo .
+	cp -sf "${S}"/gentoo/liblapack.a/.libs/*.o .libs/
 
 	if use ifc
 	then
@@ -170,19 +170,19 @@ src_install () {
 		insinto ${RPATH}
 		doins liblapack.a
 	else
-		libtool --mode=install install -s liblapack.la ${D}/${RPATH}
+		libtool --mode=install install -s liblapack.la "${D}"/${RPATH}
 	fi
 
 	insinto ${TOP_PATH}
-	doins ${FILESDIR}/f77-ATLAS
+	doins "${FILESDIR}"/f77-ATLAS
 
 	insinto /usr/include/atlas
-	cd ${S}/include
+	cd "${S}"/include
 	doins clapack.h || die "failed to install clapack.h"
 
-	cd ${S}
+	cd "${S}"
 	dodoc README
-	cd ${S}/doc
+	cd "${S}"/doc
 	dodoc AtlasCredits.txt ChangeLog
 	if use doc;
 	then
