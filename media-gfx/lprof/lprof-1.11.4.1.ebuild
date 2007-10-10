@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/lprof-1.11.4.1.ebuild,v 1.1 2006/08/12 19:57:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/lprof-1.11.4.1.ebuild,v 1.2 2007/10/10 18:44:52 genstef Exp $
+
+inherit eutils
 
 DESCRIPTION="Little CMS ICC profile construction set"
 HOMEPAGE="http://lprof.sourceforge.net/"
@@ -16,11 +18,17 @@ RDEPEND="=x11-libs/qt-3*
 DEPEND="${RDEPEND}
 	dev-lang/python"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/lcms-1.17.patch
+}
+
 src_compile() {
 	./scons.py ${MAKEOPTS} PREFIX=/usr || die "scons failed"
 }
 
 src_install() {
 	dodoc README KNOWN_BUGS
-	./scons.py PREFIX=${D}/usr install || die "scons install failed"
+	./scons.py PREFIX="${D}"/usr install || die "scons install failed"
 }
