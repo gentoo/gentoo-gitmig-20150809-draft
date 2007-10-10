@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/emact-2.50.0.ebuild,v 1.2 2007/07/01 15:15:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/emact-2.50.0.ebuild,v 1.3 2007/10/10 06:33:44 opfer Exp $
 
 DESCRIPTION="EmACT, a fork of Conroy's MicroEmacs"
 HOMEPAGE="http://www.eligis.com/"
@@ -19,7 +19,6 @@ DEPEND="sys-libs/ncurses
 	)"
 
 RDEPEND="${DEPEND}"
-PROVIDE="virtual/editor"
 
 src_compile() {
 	econf $(use_with X x) || die "econf failed"
