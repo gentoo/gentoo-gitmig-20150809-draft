@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-pdflib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdflib/ChangeLog,v 1.8 2007/03/18 00:25:28 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdflib/ChangeLog,v 1.9 2007/10/10 20:48:58 anant Exp $
+
+*pecl-pdflib-2.1.4 (11 Oct 2007)
+
+  11 Oct 2007; Anant Narayanan <anant@gentoo.org> +pecl-pdflib-2.1.4.ebuild:
+  bump to 2.1.4 (from overlay)
 
 *pecl-pdflib-2.1.3 (18 Mar 2007)
 
