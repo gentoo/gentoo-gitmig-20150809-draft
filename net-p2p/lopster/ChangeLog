@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/lopster
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.28 2007/05/15 13:11:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.29 2007/10/10 18:55:45 armin76 Exp $
+
+  10 Oct 2007; Raúl Porcel <armin76@gentoo.org> lopster-1.2.2-r3.ebuild:
+  Fix autoconf handling, bug #195396
 
   15 May 2007; Raúl Porcel <armin76@gentoo.org> -lopster-1.2.2.ebuild,
   lopster-1.2.2-r3.ebuild:

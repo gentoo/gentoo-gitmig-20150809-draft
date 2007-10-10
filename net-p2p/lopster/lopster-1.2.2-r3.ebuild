@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.2.2-r3.ebuild,v 1.5 2007/05/15 13:11:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.2.2-r3.ebuild,v 1.6 2007/10/10 18:55:45 armin76 Exp $
 
-inherit eutils
+inherit eutils autotools
 
 IUSE="nls vorbis zlib flac"
 
@@ -20,16 +20,14 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	zlib? ( sys-libs/zlib )
 	flac? ( media-libs/flac )
 	vorbis? ( >=media-libs/libvorbis-1.0 )"
-DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.59
-	>=sys-devel/automake-1.9"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${DISTDIR}/${P}-bugfixes-4.patch.bz2
-	export WANT_AUTOCONF=2.5
-	./autogen.sh
+	cd "${S}"
+	epatch "${DISTDIR}"/${P}-bugfixes-4.patch.bz2
+
+	eautoreconf
 }
 
 src_compile() {
