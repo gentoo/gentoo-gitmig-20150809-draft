@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.1.ebuild,v 1.15 2007/07/22 09:52:58 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.1.ebuild,v 1.16 2007/10/10 07:33:11 opfer Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,8 +16,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="7zip X gpm ncurses nls pam samba slang unicode"
-
-PROVIDE="virtual/editor"
 
 RDEPEND="kernel_linux? ( >=sys-fs/e2fsprogs-1.19 )
 	ncurses? ( >=sys-libs/ncurses-5.2-r5 )
@@ -73,21 +71,21 @@ src_compile() {
 	myconf="${myconf} `use_with gpm gpm-mouse`"
 
 	use nls \
-	    && myconf="${myconf} --with-included-gettext" \
-	    || myconf="${myconf} --disable-nls"
+		&& myconf="${myconf} --with-included-gettext" \
+		|| myconf="${myconf} --disable-nls"
 
 	myconf="${myconf} `use_with X x`"
 
 	use samba \
-	    && myconf="${myconf} --with-samba --with-configdir=/etc/samba --with-codepagedir=/var/lib/samba/codepages --with-privatedir=/etc/samba/private" \
-	    || myconf="${myconf} --without-samba"
+		&& myconf="${myconf} --with-samba --with-configdir=/etc/samba --with-codepagedir=/var/lib/samba/codepages --with-privatedir=/etc/samba/private" \
+		|| myconf="${myconf} --without-samba"
 
 	econf \
-	    --with-vfs \
-	    --with-ext2undel \
-	    --with-edit \
+		--with-vfs \
+		--with-ext2undel \
+		--with-edit \
 		--enable-charset \
-	    ${myconf} || die
+		${myconf} || die
 
 	emake || die
 }
