@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.16.ebuild,v 1.2 2007/10/10 13:57:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.16.ebuild,v 1.3 2007/10/10 14:14:48 drac Exp $
 
 inherit eutils
 
@@ -31,21 +31,21 @@ src_compile() {
 	local myconf=""
 
 	if use xml; then
-		myconf="${myraptorconf} --with-xml-parser=libxml"
+		myconf="${myconf} --with-xml-parser=libxml"
 	else
-		myconf="${myraptorconf} --with-xml-parser=expat"
+		myconf="${myconf} --with-xml-parser=expat"
 	fi
 
 	if use curl; then
-		myconf="${myraptorconf} --with-www=curl"
+		myconf="${myconf} --with-www=curl"
 	elif use xml; then
-		myconf="${myraptorconf} --with-www=xml"
+		myconf="${myconf} --with-www=xml"
 	else
-		myconf="${myraptorconf} --with-www=none"
+		myconf="${myconf} --with-www=none"
 	fi
 
 	econf $(use_enable unicode nfc-check) \
-		${myraptorconf}
+		${myconf}
 
 	emake || die "emake failed."
 }
