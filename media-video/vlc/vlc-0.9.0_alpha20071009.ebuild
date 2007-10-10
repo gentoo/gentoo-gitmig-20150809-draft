@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.5 2007/10/10 16:45:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.6 2007/10/10 17:09:54 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -49,62 +49,81 @@ IUSE="3dfx a52 aalib alsa altivec arts avahi bidi cdda cddb cdio daap dbus dc139
 	X x264 xinerama xml xosd xulrunner xv"
 
 RDEPEND="
-		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r1 )
+		sys-libs/zlib
+		media-libs/libdvbpsi
+		3dfx? ( media-libs/glide-v3 )
+		a52? ( >=media-libs/a52dec-0.7.4-r3 )
+		aalib? ( media-libs/aalib )
+		alsa? ( media-libs/alsa-lib )
+		arts? ( kde-base/arts )
+		avahi? ( >=net-dns/avahi-0.6 )
+		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		cdda? ( >=dev-libs/libcdio-0.72
 			cddb? ( >=media-libs/libcddb-1.2.0 ) )
-		live? ( >=media-plugins/live-2007.02.20 )
+		cdio? ( >=dev-libs/libcdio-0.78.2
+			>=media-video/vcdimager-0.7.22 )
+		daap? ( >=media-libs/libopendaap-0.3.0 )
+		dbus? ( >=sys-apps/dbus-1.0.2 )
+		dc1394? ( sys-libs/libraw1394
+			<media-libs/libdc1394-1.9.99 )
+		directfb? ( dev-libs/DirectFB )
+		dts? ( media-libs/libdca )
+		dvb? ( sys-kernel/linux-headers )
 		dvd? (	media-libs/libdvdread
 				media-libs/libdvdcss
 				>=media-libs/libdvdnav-0.1.9
 				media-libs/libdvdplay )
 		esd? ( media-sound/esound )
-		ogg? ( media-libs/libogg )
+		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r1 )
+		flac? ( media-libs/libogg
+			>=media-libs/flac-1.1.2 )
+		ggi? ( media-libs/libggi )
+		gnome? ( gnome-base/gnome-vfs )
+		gnutls? ( >=net-libs/gnutls-1.3.3 )
+		hal? ( sys-apps/hal )
+		id3tag? ( media-libs/libid3tag
+			sys-libs/zlib )
+		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
+		libcaca? ( media-libs/libcaca )
+		libgcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
+		libnotify? ( x11-libs/libnotify )
+		lirc? ( app-misc/lirc )
+		live? ( >=media-plugins/live-2007.02.20 )
+		lua? ( >=dev-lang/lua-5.1 )
 		matroska? (
 			>=dev-libs/libebml-0.7.6
 			>=media-libs/libmatroska-0.8.0 )
+		mod? ( media-libs/libmodplug )
 		mp3? ( media-libs/libmad )
-		a52? ( >=media-libs/a52dec-0.7.4-r3 )
-		dts? ( media-libs/libdca )
-		flac? ( media-libs/libogg
-			>=media-libs/flac-1.1.2 )
 		mpeg? ( >=media-libs/libmpeg2-0.3.2 )
-		vorbis? ( media-libs/libvorbis )
+		musepack? ( media-libs/libmpcdec )
+		musicbrainz? ( media-libs/musicbrainz )
+		ncurses? ( sys-libs/ncurses )
+		nsplugin? (
+			xulrunner? ( net-libs/xulrunner )
+			!xulrunner? ( seamonkey? ( www-client/seamonkey ) )
+			!xulrunner? ( !seamonkey? ( www-client/mozilla-firefox ) )
+		)
+		ogg? ( media-libs/libogg )
+		png? ( media-libs/libpng )
+		samba? ( net-fs/samba )
+		sdl? ( >=media-libs/libsdl-1.2.8
+			sdl-image? ( media-libs/sdl-image ) )
+		shout? ( media-libs/libshout )
+		speex? ( media-libs/speex )
+		svg? ( >=gnome-base/librsvg-2.9.0 )
+		svga? ( media-libs/svgalib )
+		taglib? ( media-libs/taglib )
 		theora? ( media-libs/libtheora )
 		truetype? ( media-libs/freetype
 			media-fonts/ttf-bitstream-vera )
-		svga? ( media-libs/svgalib )
-		ggi? ( media-libs/libggi )
-		aalib? ( media-libs/aalib )
-		libcaca? ( media-libs/libcaca )
-		arts? ( kde-base/arts )
-		alsa? ( media-libs/alsa-lib )
-		wxwindows? ( >=x11-libs/wxGTK-2.6.2-r1 )
-		ncurses? ( sys-libs/ncurses )
-		xosd? ( x11-libs/xosd )
-		lirc? ( app-misc/lirc )
-		3dfx? ( media-libs/glide-v3 )
-		bidi? ( >=dev-libs/fribidi-0.10.4 )
-		gnutls? ( >=net-libs/gnutls-1.3.3 )
-		sys-libs/zlib
-		png? ( media-libs/libpng )
-		media-libs/libdvbpsi
-		sdl? ( >=media-libs/libsdl-1.2.8
-			sdl-image? ( media-libs/sdl-image ) )
-		xml? ( dev-libs/libxml2 )
-		samba? ( net-fs/samba )
-		cdio? ( >=dev-libs/libcdio-0.78.2
-			>=media-video/vcdimager-0.7.22 )
-		daap? ( >=media-libs/libopendaap-0.3.0 )
+		twolame? ( media-sound/twolame )
+		upnp? ( net-libs/libupnp )
 		v4l? ( sys-kernel/linux-headers )
 		v4l2? ( sys-kernel/linux-headers )
-		dvb? ( sys-kernel/linux-headers )
-		mod? ( media-libs/libmodplug )
-		speex? ( media-libs/speex )
-		svg? ( >=gnome-base/librsvg-2.9.0 )
-		shout? ( media-libs/libshout )
+		vorbis? ( media-libs/libvorbis )
 		win32codecs? ( media-libs/win32codecs )
-		hal? ( sys-apps/hal )
-		avahi? ( >=net-dns/avahi-0.6 )
+		wxwindows? ( >=x11-libs/wxGTK-2.6.2-r1 )
 		X? (
 			x11-libs/libX11
 			x11-libs/libXext
@@ -112,28 +131,10 @@ RDEPEND="
 			xinerama? ( x11-libs/libXinerama )
 			opengl? ( virtual/opengl )
 		)
-		directfb? ( dev-libs/DirectFB )
-		upnp? ( net-libs/libupnp )
-		nsplugin? (
-			xulrunner? ( net-libs/xulrunner )
-			!xulrunner? ( seamonkey? ( www-client/seamonkey ) )
-			!xulrunner? ( !seamonkey? ( www-client/mozilla-firefox ) )
-		)
-		libnotify? ( x11-libs/libnotify )
-		musepack? ( media-libs/libmpcdec )
 		x264? ( >=media-libs/x264-svn-20061014 )
-		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
-		lua? ( >=dev-lang/lua-5.1 )
-		gnome? ( gnome-base/gnome-vfs )
-		taglib? ( media-libs/taglib )
-		musicbrainz? ( media-libs/musicbrainz )
-		dc1394? ( sys-libs/libraw1394
-			<media-libs/libdc1394-1.9.99 )
-		dbus? ( >=sys-apps/dbus-1.0.2 )
-		libgcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
-		id3tag? ( media-libs/libid3tag
-			sys-libs/zlib )
-		twolame? ( media-sound/twolame )"
+		xml? ( dev-libs/libxml2 )
+		xosd? ( x11-libs/xosd )
+		"
 
 # Disabled features and reasons : 
 # xvmc? ( x11-libs/libXvMC )
