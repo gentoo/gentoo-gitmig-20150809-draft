@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.63 2007/10/07 05:12:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.64 2007/10/10 17:06:54 drac Exp $
+
+*alsaplayer-0.99.80_rc4 (10 Oct 2007)
+
+  10 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  +alsaplayer-0.99.80_rc4.ebuild:
+  Version bump for bug 187367.
 
 *alsaplayer-0.99.80_rc3 (07 Oct 2007)
 
