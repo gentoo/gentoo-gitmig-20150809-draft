@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.6 2007/10/10 17:09:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.7 2007/10/10 17:42:50 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -212,102 +212,98 @@ src_compile () {
 	fi
 
 	econf \
+		$(use_enable 3dfx glide) \
+		$(use_enable a52) \
+		$(use_enable aalib aa) \
+		$(use_enable alsa) \
 		$(use_enable altivec) \
-		$(use_enable stream sout) \
-		$(use_enable httpd) \
-		$(use_enable gnutls) \
-		$(use_enable v4l) \
-		$(use_enable v4l2) \
+		$(use_enable arts) \
+		$(use_enable avahi bonjour) \
+		$(use_enable bidi fribidi) \
 		$(use_enable cdda) $(use_enable cdda cddax)\
 		$(use_enable cddb libcddb) \
-		$(use_enable vcd) \
-		$(use_enable vcdx vcdx) \
-		$(use_enable dvb) \
-		$(use_enable pvr) \
-		$(use_enable ogg) \
-		$(use_enable matroska mkv) \
-		$(use_enable flac) \
-		$(use_enable vorbis) \
-		$(use_enable theora) \
-		$(use_enable X x11) \
-		$(use_enable X screen) \
-		$(use_enable xv xvideo) \
+		$(use_enable cdio libcdio) \
+		$(use_enable daap) \
+		$(use_enable dbus) $(use_enable dbus dbus-control) \
+		--disable-dirac \
 		$(use_enable directfb) \
-		--disable-xvmc \
-		$(use_enable xinerama) \
-		$(use_enable opengl glx) $(use_enable opengl) $(use_enable opengl galaktos) \
-		$(use_enable bidi fribidi) \
-		$(use_enable dvd dvdread) $(use_enable dvd dvdplay) $(use_enable dvd dvdnav) \
-		$(use_enable fbcon fb) \
-		$(use_enable svga svgalib) \
-		$(use_enable 3dfx glide) \
-		$(use_enable aalib aa) \
-		$(use_enable libcaca caca) \
-		$(use_enable oss) \
-		$(use_enable esd) \
-		$(use_enable arts) \
-		$(use_enable alsa) \
-		$(use_enable ncurses) \
-		$(use_enable xosd) \
-		$(use_enable lirc) \
-		$(use_enable mp3 mad) \
-		$(use_enable a52) \
+		$(use_enable dc1394) \
 		$(use_enable dts dca) \
-		$(use_enable mpeg libmpeg2) \
+		--disable-dv \
+		$(use_enable dvb) \
+		$(use_enable dvd dvdread) $(use_enable dvd dvdplay) $(use_enable dvd dvdnav) \
+		$(use_enable esd) \
+		--disable-faad \
+		$(use_enable fbcon fb) \
+		$(use_enable ffmpeg) \
+		$(use_enable flac) \
 		$(use_enable ggi) \
-		$(use_enable 3dfx glide) \
+		$(use_enable gnome gnomevfs) \
+		$(use_enable gnutls) \
+		$(use_enable hal) \
+		$(use_enable httpd) \
+		$(use_enable id3tag) \
+		$(use_enable jack) \
+		$(use_enable libcaca caca) \
+		$(use_enable libgcrypt) \
+		$(use_enable libnotify notify) \
+		--disable-libtar \
+		$(use_enable lirc) \
+		$(use_enable live live555) \
+		$(use_enable lua) \
+		$(use_enable matroska mkv) \
+		$(use_enable mod) \
+		$(use_enable mp3 mad) \
+		$(use_enable mpeg libmpeg2) \
+		$(use_enable musepack mpc) \
+		$(use_enable musicbrainz) \
+		$(use_enable ncurses) \
+		$(use_enable nsplugin mozilla) XPIDL="${XPIDL}" MOZILLA_CONFIG="${MOZILLA_CONFIG}" \
+		$(use_enable ogg) \
+		$(use_enable opengl glx) $(use_enable opengl) $(use_enable opengl galaktos) \
+		$(use_enable optimisememory optimize-memory) \
+		$(use_enable oss) \
+		$(use_enable png) \
+		--disable-portaudio \
+		$(use_enable pvr) \
+		--disable-qt4 \
+		$(use_enable rtsp) $(use_enable rtsp realrtsp) \
+		$(use_enable samba smb) \
 		$(use_enable sdl) \
 		$(use_enable sdl-image) \
-		$(use_enable png) \
-		$(use_enable xml libxml2) \
-		$(use_enable samba smb) \
-		$(use_enable daap) \
-		$(use_enable mod) \
-		$(use_enable speex) \
 		$(use_enable shout) \
-		$(use_enable rtsp) $(use_enable rtsp realrtsp) \
-		$(use_enable win32codecs loader) \
 		$(use_enable skins skins2) \
-		$(use_enable hal) \
-		$(use_enable avahi bonjour) \
-		$(use_enable upnp) \
-		$(use_enable optimisememory optimize-memory) \
-		$(use_enable libnotify notify) \
-		$(use_enable jack) \
-		$(use_enable musepack mpc) \
-		$(use_enable x264) \
-		$(use_enable dc1394) \
-		--disable-qt4 \
-		$(use_enable lua) \
-		$(use_enable gnome gnomevfs) \
+		$(use_enable speex) \
+		$(use_enable stream sout) \
+		$(use_enable svga svgalib) \
 		$(use_enable taglib) \
-		$(use_enable musicbrainz) \
-		--disable-dirac \
-		$(use_enable dbus) $(use_enable dbus dbus-control) \
-		$(use_enable libgcrypt) \
-		--disable-zvbi \
-		$(use_enable id3tag) \
-		$(use_enable live live555) \
-		$(use_enable cdio libcdio) \
+		$(use_enable theora) \
 		$(use_enable truetype freetype) \
-		$(use_enable wxwindows wxwidgets) \
-		$(use_enable ffmpeg) \
 		$(use_enable twolame) \
-		--disable-faad \
-		--disable-dv \
+		$(use_enable upnp) \
+		$(use_enable v4l) \
+		$(use_enable v4l2) \
+		$(use_enable vcd) \
+		$(use_enable vcdx vcdx) \
+		$(use_enable vorbis) \
+		$(use_enable win32codecs loader) \
+		$(use_enable wxwindows wxwidgets) WX_CONFIG="${WX_CONFIG}" \
+		$(use_enable X x11) $(use_enable X screen) \
+		$(use_enable x264) \
+		$(use_enable xinerama) \
+		$(use_enable xml libxml2) \
+		$(use_enable xosd) \
+		$(use_enable xv xvideo) \
+		--disable-xvmc \
+		--disable-zvbi \
 		--disable-libvc1 \
 		--disable-snapshot \
 		--disable-growl \
 		--disable-pth \
-		--disable-portaudio \
-		--disable-libtar \
 		--disable-optimizations \
 		--enable-utf8 \
 		--enable-libtool \
 		--enable-fast-install \
-		$(use_enable nsplugin mozilla) \
-		XPIDL="${XPIDL}" MOZILLA_CONFIG="${MOZILLA_CONFIG}" \
-		WX_CONFIG="${WX_CONFIG}" \
 		${myconf} || die "configuration failed"
 
 	if [[ $(gcc-major-version) == 2 ]]; then
