@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.38 2007/08/30 13:28:35 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.39 2007/10/10 06:53:13 opfer Exp $
+
+  10 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  jed-0.99.16-r2.ebuild, jed-0.99.18.ebuild:
+  remove PROVIDE=virtual/editor as we have now a new-style virtual
 
   30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing liquidx from metadata due to his retirement (see #171155 for

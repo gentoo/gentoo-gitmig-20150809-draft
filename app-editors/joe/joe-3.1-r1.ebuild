@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.1-r1.ebuild,v 1.6 2007/02/28 21:55:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.1-r1.ebuild,v 1.7 2007/10/10 06:57:56 opfer Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,6 @@ KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
-PROVIDE="virtual/editor"
 
 src_unpack() {
 	unpack ${A}

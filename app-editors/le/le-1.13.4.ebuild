@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/le/le-1.13.4.ebuild,v 1.1 2006/12/01 18:52:09 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/le/le-1.13.4.ebuild,v 1.2 2007/10/10 07:00:22 opfer Exp $
 
 DESCRIPTION="Terminal text editor"
 HOMEPAGE="http://www.gnu.org/directory/text/editors/le-editor.html"
@@ -13,8 +13,6 @@ IUSE=""
 
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r5"
-
-PROVIDE="virtual/editor"
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
