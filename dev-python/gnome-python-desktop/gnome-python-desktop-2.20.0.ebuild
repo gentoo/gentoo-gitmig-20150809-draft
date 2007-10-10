@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.18.0.ebuild,v 1.13 2007/10/10 21:43:31 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.20.0.ebuild,v 1.1 2007/10/10 21:43:31 remi Exp $
 
 inherit gnome2 python virtualx
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pygtk.org/"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="virtual/python
@@ -21,17 +21,17 @@ RDEPEND="virtual/python
 	>=gnome-base/libgnomeprint-2.2.0
 	>=gnome-base/libgnomeprintui-2.2.0
 	=x11-libs/gtksourceview-1*
-	>=x11-libs/libwnck-2.15.5
+	>=x11-libs/libwnck-2.19.3
 	>=gnome-base/libgtop-2.13.0
 	>=gnome-extra/nautilus-cd-burner-2.15.3
 	>=gnome-extra/gnome-media-2.10.0
 	>=gnome-base/gconf-2.10.0
-	>=x11-wm/metacity-2.17.8
+	>=x11-wm/metacity-2.19.8
 	dev-python/pycairo
 	>=gnome-base/librsvg-2.13.93
 	>=gnome-base/gnome-keyring-0.5.0
 	>=gnome-base/gnome-desktop-2.10.0
-	media-video/totem
+	>=media-video/totem-1.4.0
 	!<dev-python/gnome-python-extras-2.13"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.7"

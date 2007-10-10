@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.16.0.ebuild,v 1.13 2007/04/27 18:55:22 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.16.0.ebuild,v 1.14 2007/10/10 21:43:31 remi Exp $
 
 inherit distutils gnome2 python virtualx
 
@@ -20,7 +20,7 @@ RDEPEND="virtual/python
 	>=gnome-base/gnome-panel-2.13.4
 	>=gnome-base/libgnomeprint-2.2.0
 	>=gnome-base/libgnomeprintui-2.2.0
-	>=x11-libs/gtksourceview-1.1.90
+	=x11-libs/gtksourceview-1*
 	>=x11-libs/libwnck-2.15.5
 	>=gnome-base/libgtop-2.13.0
 	>=gnome-extra/nautilus-cd-burner-2.15.3
@@ -53,7 +53,7 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize ${ROOT}/usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0
+	python_mod_optimize "${ROOT}/usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0"
 }
 
 pkg_postrm() {
