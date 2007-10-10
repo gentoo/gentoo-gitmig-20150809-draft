@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7786 2007/10/09 20:05:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7787 2007/10/10 02:56:09 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -407,10 +407,6 @@ www-apps/xoops
 # Breaks games-rpg/tmw-0.0.23
 # https://bugs.gentoo.org/show_bug.cgi?id=188753
 >=dev-games/guichan-0.7
-
-# Steve Dibb <beandog@gentoo.org> (11 Aug 2007)
-# Old, unmaintained, pending removal
-www-client/planet
 
 # Carsten Lohrke <carlo@gentoo.org> (11 Aug 2007)
 # Masked since KDE 3.5.7 doesn't come with KSync anymore.
