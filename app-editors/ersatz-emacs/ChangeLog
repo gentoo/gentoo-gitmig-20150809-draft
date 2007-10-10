@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/ersatz-emacs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ChangeLog,v 1.1 2007/06/15 08:53:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ChangeLog,v 1.2 2007/10/10 06:38:56 opfer Exp $
+
+  10 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  ersatz-emacs-20060515.ebuild:
+  remove PROVIDE=virtual/editor as we have now a new-style virtual
 
 *ersatz-emacs-20060515 (15 Jun 2007)
 
