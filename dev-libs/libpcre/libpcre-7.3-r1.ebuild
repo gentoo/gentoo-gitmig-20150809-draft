@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.3-r1.ebuild,v 1.1 2007/10/10 05:55:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.3-r1.ebuild,v 1.2 2007/10/10 07:07:42 solar Exp $
 
 inherit libtool eutils
 
@@ -30,7 +30,7 @@ src_compile() {
 	if use unicode; then
 		myconf="--enable-utf8 --enable-unicode-properties"
 	fi
-	myconf="${myconf} --with-match-limit-recursion=2000"
+	myconf="${myconf} --with-match-limit-recursion=8192"
 	# Enable building of static libs too - grep and others
 	# depend on them being built: bug 164099
 	econf ${myconf} --enable-static || die "econf failed"
