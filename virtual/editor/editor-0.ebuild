@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.1 2007/10/10 06:03:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.2 2007/10/10 10:14:04 ulm Exp $
 
 DESCRIPTION="Virtual for editor"
 HOMEPAGE="http://www.gentoo.org/"
@@ -25,6 +25,7 @@ RDEPEND="|| ( app-editors/nano
 	app-editors/jasspa-microemacs
 	app-editors/jed
 	app-editors/joe
+	app-editors/jove
 	app-editors/le
 	app-editors/mg
 	app-editors/ne
@@ -39,6 +40,6 @@ RDEPEND="|| ( app-editors/nano
 	app-editors/zile
 	app-editors/xemacs
 	app-misc/mc
+	dev-lisp/cmucl
 	dev-scheme/mit-scheme
 	sys-apps/ed )"
-
