@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7791 2007/10/10 20:41:50 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7792 2007/10/10 22:04:28 marineam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Michael Marineau <marineam@gentoo.org> (10 Oct 2007)
+# The ck patchest is gone, will be removed shortly.
+sys-kernel/ck-sources
 
 # Timo Gurr <tgurr@gentoo.org> (10 Oct 2007)
 # Masked for testing, see bug 188993.
