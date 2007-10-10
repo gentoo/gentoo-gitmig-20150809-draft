@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.4.27.ebuild,v 1.3 2007/10/10 00:35:22 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.5.8.ebuild,v 1.1 2007/10/10 00:35:22 nerdboy Exp $
 
-inherit eutils versionator multilib toolchain-funcs
-# flag-o-matic
+inherit eutils toolchain-funcs versionator
 
 MY_P="${PN}_$(replace_all_version_separators '_')"
 S="${WORKDIR}/${MY_P}"
@@ -15,8 +14,8 @@ SRC_URI="mirror://sourceforge/duma/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE=""
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="examples"
 
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
@@ -40,21 +39,19 @@ pkg_setup() {
 src_unpack(){
 	unpack "${A}"
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-types.patch"
-	epatch "${FILESDIR}/${P}-make.patch"
+	epatch "${FILESDIR}/${P}-soname.patch"
 }
 
 src_compile(){
-	# filter parallel make, because it generate header and that header needed
-	# for next part of compile
 	use amd64 && export DUMA_ALIGNMENT=16
-	# append-flags doesn't work here (stupid static makefile)
+	# append-flags doesn't work here (stupid static makefile) and neither
+	# does distcc :(
 	make CFLAGS="${DUMA_OPTIONS} ${CFLAGS}" CC=$(tc-getCC) \
 	    || die "emake failed"
 }
 
 src_test() {
-	einfo "Control-C now if you want to disable tests..."
+	ewarn "Control-C now if you want to disable tests..."
 	epause 5
 
 	cd "${S}"
@@ -62,14 +59,27 @@ src_test() {
 	make CFLAGS="${DUMA_OPTIONS} ${CFLAGS}" \
 	    CC=$(tc-getCC) check || die "make check failed"
 
-	einfo "Check output above to verify all tests have passed..."
+	ewarn "Check output above to verify all tests have passed..."
 }
 
 src_install(){
-	make prefix="${D}usr" LIB_INSTALL_DIR="${D}usr/$(get_libdir)" install \
-	    || die "make install failed"
+	# make install fails nicely here on the first file...
+	newbin duma.sh duma
+	dolib.so libduma.so.0.0
+	dosym libduma.so.0.0 /usr/$(get_libdir)/libduma.so.0
+	dosym libduma.so.0.0 /usr/$(get_libdir)/libduma.so
+	dolib.a libduma.a
+
 	insinto /usr/include
-	doins duma.h duma_config.h duma_hlp.h dumapp.h noduma.h paging.h print.h \
-	    sem_inc.h || die " failed install headers"
-	dodoc CHANGELOG README
+	doins duma.h dumapp.h sem_inc.h paging.h print.h duma_hlp.h noduma.h \
+	    || die "failed to install headers"
+
+	dodoc CHANGELOG README.txt TODO
+	doman duma.3
+
+	if use examples; then
+	    insinto /usr/share/doc/${P}/examples
+	    doins example[1-6].cpp
+	    doins example_makes/ex6/Makefile
+	fi
 }

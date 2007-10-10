@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/duma
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/ChangeLog,v 1.2 2007/04/03 06:09:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/ChangeLog,v 1.3 2007/10/10 00:35:22 nerdboy Exp $
+
+*duma-2.5.8 (10 Oct 2007)
+
+  10 Oct 2007; Steve Arnold <nerdboy@gentoo.org>
+  +files/duma-2.5.8-soname.patch, duma-2.4.27.ebuild, +duma-2.5.8.ebuild:
+  Version bump and stable bump (special case, since there was only one
+  unstable version to begin with).  Closes bug 195203.
 
 *duma-2.4.27 (03 Apr 2007)
 
