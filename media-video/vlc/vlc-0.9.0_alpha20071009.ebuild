@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.8 2007/10/10 18:11:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.9 2007/10/10 21:41:32 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -37,7 +37,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
-SLOT="1"
+SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="3dfx a52 aalib alsa altivec arts avahi bidi cdda cddb cdio daap dbus dc1394
@@ -156,21 +156,18 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-# Block older versions, we can't upgrade cleanly until bug #157746 gets
-# resolved...
-RDEPEND="${RDEPEND}
-	!<media-video/vlc-0.8.8"
-DEPEND="${DEPEND}
-	!<media-video/vlc-0.8.8"
-
-
-
 # Dispalys a warning if the first use flag is set but not the second
 vlc_use_needs() {
 	use $1 && use !$2 && ewarn "USE=$1 requires $2, $1 will be disabled."
 }
 
 pkg_setup() {
+	if has_version '<media-video/vlc-0.8.8'; then
+		eerror "Upgrading from <0.9 vlc series will give you a broken player"
+		eerror "Please unmerge it first"
+		eerror "And have a look at https://bugs.gentoo.org/show_bug.cgi?id=157746"
+		die "Please unmerge older vlc versions"
+	fi
 	if use wxwindows || use skins; then
 		WX_GTK_VER="2.6"
 		need-wxwidgets unicode || die "You need to install wxGTK with unicode support."

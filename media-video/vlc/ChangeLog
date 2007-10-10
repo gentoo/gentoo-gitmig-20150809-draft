@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.266 2007/10/10 18:11:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.267 2007/10/10 21:41:32 aballier Exp $
+
+  10 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  vlc-0.9.0_alpha20071009.ebuild:
+  get back to only one slot, add a check for older versions instead, bug #195424
 
   10 Oct 2007; Alexis Ballier <aballier@gentoo.org>
   vlc-0.9.0_alpha20071009.ebuild:
