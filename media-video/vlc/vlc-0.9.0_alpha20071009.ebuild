@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.2 2007/10/10 09:07:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.3 2007/10/10 09:45:32 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -198,11 +198,11 @@ src_compile () {
 
 	if use nsplugin; then
 		if use seamonkey; then
-			XPIDL=/usr/lib/seamonkey
-			MOZILLA_CONFIG=/usr/lib/seamonkey/seamonkey-config
+			XPIDL=/usr/$(get_libdir)/seamonkey
+			MOZILLA_CONFIG=/usr/$(get_libdir)/seamonkey/seamonkey-config
 		else
-			XPIDL=/usr/lib/mozilla-firefox
-			MOZILLA_CONFIG=/usr/lib/mozilla-firefox/firefox-config
+			XPIDL=/usr/$(get_libdir)/mozilla-firefox
+			MOZILLA_CONFIG=/usr/$(get_libdir)/mozilla-firefox/firefox-config
 		fi
 	fi
 

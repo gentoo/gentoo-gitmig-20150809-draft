@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.260 2007/10/10 09:07:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.261 2007/10/10 09:45:32 aballier Exp $
+
+  10 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  vlc-0.9.0_alpha20071009.ebuild:
+  use get_libdir for locating nsplugin configuration, thanks to Donnie
+  Berkholz for pointing that
 
   10 Oct 2007; Alexis Ballier <aballier@gentoo.org>
   vlc-0.9.0_alpha20071009.ebuild:
