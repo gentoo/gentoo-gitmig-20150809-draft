@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.8.ebuild,v 1.10 2007/06/26 19:05:32 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.8.ebuild,v 1.11 2007/10/10 19:31:52 genstef Exp $
 
 inherit eutils
 
@@ -54,4 +54,7 @@ src_install() {
 
 	insinto /etc/gsview
 	doins src/printer.ini
+
+	make_desktop_entry gsview Gsview "" "Office" || 
+		die "Couldn't make gsview desktop entry"
 }

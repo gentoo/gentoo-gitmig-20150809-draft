@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gsview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.28 2007/06/26 19:07:26 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.29 2007/10/10 19:31:52 genstef Exp $
+
+  10 Oct 2007; Stefan Schweizer <genstef@gentoo.org> gsview-4.8.ebuild:
+  Add desktop entry for bug 188582 thanks to Daniel Pielmeier
+  <daniel.pielmeier@googlemail.com>
 
   26 Jun 2007; Lars Weiler <pylon@gentoo.org> -gsview-4.6.ebuild:
   Removing old files as requested in bug #182403.
