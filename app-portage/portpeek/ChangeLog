@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/portpeek
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.1 2007/10/10 14:43:09 mpagano Exp $
+
+*portpeek-1.5.7 (10 Oct 2007)
+
+  10 Oct 2007; Mike Pagano <mpagano@gentoo.org> +metadata.xml,
+  +portpeek-1.5.7.ebuild:
+  Initial ebuild for new package.
+
