@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.9.ebuild,v 1.1 2007/09/30 14:14:13 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.9.ebuild,v 1.2 2007/10/10 18:19:47 genstef Exp $
 
 inherit linux-info
 
@@ -18,16 +18,19 @@ DEPEND="!net-print/hpijs
 	virtual/ghostscript
 	>=media-libs/jpeg-6b
 	net-print/foomatic-filters
-	!minimal? ( dev-libs/openssl
+	!minimal? ( 
 		>=net-print/cups-1.2
 		dev-libs/libusb
-		snmp? ( net-analyzer/net-snmp ) )"
+		scanner? ( X? ( >=media-gfx/xsane-0.89 )
+			!X? ( >=media-gfx/sane-frontends-1.0.9 ) )
+		snmp? ( 
+			net-analyzer/net-snmp
+			dev-libs/openssl
+		) )"
 
 RDEPEND="${DEPEND}
 	!minimal? ( !<sys-fs/udev-114
 		fax? ( dev-python/reportlab )
-		scanner? ( X? ( >=media-gfx/xsane-0.89 )
-			!X? ( >=media-gfx/sane-frontends-1.0.9 ) )
 		X? ( >=dev-python/PyQt-3.14 ) )"
 
 CONFIG_CHECK="PARPORT"

@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.77 2007/09/30 14:14:13 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.78 2007/10/10 18:19:47 genstef Exp $
+
+  10 Oct 2007; Stefan Schweizer <genstef@gentoo.org> hplip-2.7.9.ebuild:
+  Improve DEPEND-accuracy for jakub in bug 193671
 
 *hplip-2.7.9 (30 Sep 2007)
 
