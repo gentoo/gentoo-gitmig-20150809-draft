@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/fax4cups-1.28.ebuild,v 1.1 2007/03/14 16:31:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/fax4cups-1.28.ebuild,v 1.2 2007/10/10 18:16:02 genstef Exp $
 
 DESCRIPTION="efax/hylafax backend for CUPS"
 
@@ -10,18 +10,18 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-DEPEND="net-print/cups
+DEPEND="net-print/cups"
+RDEPEND="${DEPEND}
 	|| ( net-misc/hylafax net-misc/efax net-dialup/mgetty )
 	app-admin/sudo"
 
 S=${WORKDIR}/fax4CUPS-${PV}
 
 src_install() {
-
 	doman fax4CUPS.1
 
 	# Backends
-	exeinto /usr/lib/cups/backend
+	exeinto $(cups-config --serverbin)/backend
 	doexe efax hylafax
 
 	# PPD's
@@ -30,6 +30,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please execute '/etc/init.d/cups restart'"
-	einfo "to get this *.ppd files working properly"
+	elog "Please execute '/etc/init.d/cups restart'"
+	elog "to get these *.ppd files working properly"
 }
