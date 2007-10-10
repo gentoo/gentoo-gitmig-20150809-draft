@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/uemacs-pk-4.0.18.ebuild,v 1.1 2007/06/15 08:59:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/uemacs-pk-4.0.18.ebuild,v 1.2 2007/10/10 07:21:43 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,6 @@ IUSE=""
 
 DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}"
-PROVIDE="virtual/editor"
 
 S="${WORKDIR}/em-${PV}"
 

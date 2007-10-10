@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.2.41.ebuild,v 1.6 2007/09/22 11:45:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.2.41.ebuild,v 1.7 2007/10/10 07:17:42 ulm Exp $
 
 DESCRIPTION="Zile is a small Emacs clone"
 HOMEPAGE="http://zile.sourceforge.net/"
@@ -13,7 +13,6 @@ IUSE=""
 
 DEPEND="sys-libs/ncurses
 	>=sys-apps/texinfo-4.3"
-PROVIDE="virtual/editor"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

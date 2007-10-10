@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/uemacs-pk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.1 2007/06/15 08:59:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.2 2007/10/10 07:21:43 ulm Exp $
+
+  10 Oct 2007; Ulrich Mueller <ulm@gentoo.org> uemacs-pk-4.0.18.ebuild:
+  Don't PROVIDE=virtual/editor as it is a new-style virtual now.
 
 *uemacs-pk-4.0.18 (15 Jun 2007)
 
