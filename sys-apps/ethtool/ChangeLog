@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.48 2007/10/10 11:41:13 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.49 2007/10/10 20:56:22 pylon Exp $
+
+  10 Oct 2007; Lars Weiler <pylon@gentoo.org> ethtool-6.ebuild:
+  stable ppc, bug #195209
 
   10 Oct 2007; Christian Birchinger <joker@gentoo.org> ethtool-6.ebuild:
   Added sparc stable keyword
