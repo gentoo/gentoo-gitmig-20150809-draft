@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.2-r1.ebuild,v 1.1 2007/09/22 20:44:33 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.2-r1.ebuild,v 1.2 2007/10/10 03:10:03 compnerd Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -92,9 +92,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${PN}-0.6.2-implicit-pointer-conversion.patch
+	epatch "${FILESDIR}/${PN}-0.6.2-implicit-pointer-conversion.patch"
 }
 
 src_compile() {

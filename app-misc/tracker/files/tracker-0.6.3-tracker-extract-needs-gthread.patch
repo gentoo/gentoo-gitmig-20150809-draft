@@ -1,0 +1,12 @@
+Index: Makefile.am
+===================================================================
+--- src/tracker-extract/Makefile.am	(revision 899)
++++ src/tracker-extract/Makefile.am	(revision 944)
+@@ -41,6 +41,7 @@
+ 	$(video_sources)
+ 
+ tracker_extract_LDADD = $(GLIB2_LIBS)		\
++	$(GTHREAD_LIBS)				\
+ 	$(POPPLER_GLIB_LIBS)			\
+ 	$(LIBPNG_LIBS)				\
+ 	$(LIBEXIF_LIBS)				\
