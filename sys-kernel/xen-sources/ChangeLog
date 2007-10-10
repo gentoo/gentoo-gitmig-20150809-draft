@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.48 2007/09/26 21:18:03 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.49 2007/10/10 22:07:43 marineam Exp $
+
+*xen-sources-2.6.20-r5 (10 Oct 2007)
+
+  10 Oct 2007; Michael Marineau <marineam@gentoo.org>
+  -xen-sources-2.6.20-r3.ebuild, -xen-sources-2.6.20-r4.ebuild,
+  +xen-sources-2.6.20-r5.ebuild:
+  Disable CONFIG_HIGHPTE and fix CVE-2007-4573.
 
 *xen-sources-2.6.20-r4 (26 Sep 2007)
 
