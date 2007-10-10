@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.3 2007/10/10 09:45:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.4 2007/10/10 11:08:21 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -46,7 +46,7 @@ oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc stream
 mp3 xv bidi sdl sdl-image png xml samba daap mod speex shout rtsp
 win32codecs skins hal avahi xinerama cddb directfb upnp nsplugin seamonkey
 optimisememory libnotify jack musepack x264 dc1394 lua gnome pvr taglib
-musicbrainz dbus libgcrypt id3tag cdio ffmpeg twolame"
+musicbrainz dbus libgcrypt id3tag cdio ffmpeg twolame xulrunner"
 
 RDEPEND="
 		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r1 )
@@ -115,8 +115,9 @@ RDEPEND="
 		directfb? ( dev-libs/DirectFB )
 		upnp? ( net-libs/libupnp )
 		nsplugin? (
-			!seamonkey? ( www-client/mozilla-firefox )
-			seamonkey? ( www-client/seamonkey )
+			xulrunner? ( net-libs/xulrunner )
+			!xulrunner? ( seamonkey? ( www-client/seamonkey ) )
+			!xulrunner? ( !seamonkey? ( www-client/mozilla-firefox ) )
 		)
 		libnotify? ( x11-libs/libnotify )
 		musepack? ( media-libs/libmpcdec )
@@ -197,7 +198,10 @@ src_compile () {
 		myconf="${myconf} --disable-vlm"
 
 	if use nsplugin; then
-		if use seamonkey; then
+		if use xulrunner; then
+			XPIDL=/usr/$(get_libdir)/xulrunner
+			MOZILLA_CONFIG=/usr/bin/xulrunner-config
+		elif use seamonkey; then
 			XPIDL=/usr/$(get_libdir)/seamonkey
 			MOZILLA_CONFIG=/usr/$(get_libdir)/seamonkey/seamonkey-config
 		else
