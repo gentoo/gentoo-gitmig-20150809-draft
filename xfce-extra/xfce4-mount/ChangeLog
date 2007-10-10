@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-mount
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/ChangeLog,v 1.39 2007/10/10 17:21:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/ChangeLog,v 1.40 2007/10/10 23:16:17 pylon Exp $
+
+  10 Oct 2007; Lars Weiler <pylon@gentoo.org> xfce4-mount-0.5.4.ebuild:
+  stable ppc, bug #195250
 
   10 Oct 2007; Raúl Porcel <armin76@gentoo.org> xfce4-mount-0.5.4.ebuild:
   alpha/ia64/sparc stable wrt #195250

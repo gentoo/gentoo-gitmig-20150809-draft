@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/xfce4-mount-0.5.4.ebuild,v 1.6 2007/10/10 17:21:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/xfce4-mount-0.5.4.ebuild,v 1.7 2007/10/10 23:16:17 pylon Exp $
 
 inherit xfce44
 
 xfce44
 
 DESCRIPTION="Mount plug-in for panel"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 sparc x86"
 
 RESTRICT="test"
 
