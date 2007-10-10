@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3a.ebuild,v 1.1 2007/06/07 16:50:20 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3a.ebuild,v 1.2 2007/10/10 21:27:00 alonbl Exp $
 
 #
 # NOTES:
@@ -39,6 +39,12 @@ pkg_setup() {
 	BUILD_TARGETS="truecrypt"
 	MODULE_NAMES="truecrypt(block:${S}/Linux/Kernel)"
 
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-2.6.23.patch"
 }
 
 src_compile() {
