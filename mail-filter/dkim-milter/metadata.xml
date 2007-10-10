@@ -5,7 +5,11 @@
 <maintainer>
   <email>dragonheart@gentoo.org</email>
     <name>Daniel Black</name>
-    <description>If you have a change you want to make - go for it</description>
 </maintainer>
-<longdescription></longdescription>
+<maintainer>
+  <email>mrmess@gentoo.org</email>
+    <name>Alin NÄstac</name>
+</maintainer>
+<longdescription>A program implementing the Milter API that signs and verifies
+using the DKIM standard</longdescription>
 </pkgmetadata>

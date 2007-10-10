@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.3.0-r2.ebuild,v 1.1 2007/10/10 16:01:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.3.0-r2.ebuild,v 1.2 2007/10/10 19:36:19 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
@@ -28,6 +28,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}" || die "source dir not found"
+
+	epatch "${FILESDIR}/${P}-test-headers.patch"
 
 	cp site.config.m4.dist devtools/Site/site.config.m4 || \
 		die "failed to generate site.config.m4"
@@ -70,6 +72,9 @@ src_install() {
 
 	# man build is broken; do man page installation by hand
 	doman */*.{3,5,8}
+
+	# some people like docs
+	dodoc RELEASE_NOTES *.txt
 }
 
 pkg_postinst() {

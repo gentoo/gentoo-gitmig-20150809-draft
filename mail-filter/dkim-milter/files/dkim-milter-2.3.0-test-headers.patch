@@ -1,0 +1,10 @@
+--- ./dkim-filter/test.c.orig	2007-10-11 05:18:54.000000000 +1000
++++ ./dkim-filter/test.c	2007-10-11 05:20:30.000000000 +1000
+@@ -16,6 +16,7 @@
+ #include <errno.h>
+ #include <stdio.h>
+ #include <sysexits.h>
++#include <stdlib.h>
+ #include <assert.h>
+ 
+ /* libsm includes */
