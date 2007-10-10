@@ -1,6 +1,18 @@
 # ChangeLog for sci-libs/mkl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.15 2007/07/02 15:26:36 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.16 2007/10/10 12:41:47 bicatali Exp $
+
+*mkl-9.1.023 (10 Oct 2007)
+
+  10 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> -files/blas.list,
+  +files/blas.pc.in, -files/cblas.list, +files/cblas.pc.in,
+  -files/eselect.blas, -files/eselect.cblas, -files/eselect.lapack,
+  -files/lapack.list, +files/lapack.pc.in, metadata.xml, -mkl-5.2.ebuild,
+  -mkl-8.1.014.ebuild, -mkl-9.0.018.ebuild, +mkl-9.1.023.ebuild:
+  Version bump. Compatible with new style virtuals, pkg-config. Major ebuild
+  redesign again, as for all mkl major version. Remove all old versions, not
+  compatible with new style virtual. The stable mkl-5.2 was buggy, and no
+  one around to maintain it.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> mkl-5.2.ebuild,
   mkl-8.1.014.ebuild, mkl-9.0.018.ebuild:

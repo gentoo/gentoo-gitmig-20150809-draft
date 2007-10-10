@@ -3,10 +3,11 @@
 <pkgmetadata>
 <herd>sci</herd>
 <longdescription lang="en">
-The Intel Math Kernel Library is a mathematical library mostly
+The Intel(R) Math Kernel Library is a mathematical library mostly
 optimized for Intel processors (also works on AMDs). It contains BLAS
 and LAPACK implementations, Fast Fourier Transforms, a vector math
 library, and random number generators. It also has multiprocessor
-capacities.
+capacities. The package is installed as binary and has a restrictive
+license. Please see license terms and home page for proper use.
 </longdescription>
 </pkgmetadata>

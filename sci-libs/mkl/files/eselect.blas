@@ -1,3 +1,0 @@
-blas/mkl/libblas.so /usr/@LIBDIR@/libblas.so
-blas/mkl/libblas.so.0 /usr/@LIBDIR@/libblas.so.0
-blas/mkl/libblas.a /usr/@LIBDIR@/libblas.a
