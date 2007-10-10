@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r4.ebuild,v 1.4 2007/08/25 20:55:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r4.ebuild,v 1.5 2007/10/10 06:22:17 opfer Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -19,7 +19,6 @@ RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-0.3
 	X? ( x11-libs/libX11 )"
 DEPEND="${RDEPEND}"
-PROVIDE="virtual/editor"
 
 MY_BASEDIR="/usr/share/emacs/${PV}"
 MY_LOCKDIR="/var/lib/emacs/lock"

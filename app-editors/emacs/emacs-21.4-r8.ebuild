@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r8.ebuild,v 1.6 2007/08/25 20:55:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r8.ebuild,v 1.7 2007/10/10 06:22:17 opfer Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -42,8 +42,6 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
 	X? ( x11-misc/xbitmaps )"
-
-PROVIDE="virtual/editor"
 
 DFILE=emacs-${SLOT}.desktop
 
