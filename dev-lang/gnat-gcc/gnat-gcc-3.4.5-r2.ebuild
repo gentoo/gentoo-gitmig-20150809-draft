@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-3.4.5-r2.ebuild,v 1.3 2007/05/28 19:21:12 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-3.4.5-r2.ebuild,v 1.4 2007/10/10 18:28:19 george Exp $
 
 inherit gnatbuild
 
@@ -23,7 +23,7 @@ src_unpack() {
 	gnatbuild_src_unpack
 
 	#fixup some hardwired flags
-	cd ${S}/gcc/ada
+	cd "${S}"/gcc/ada
 	sed -i -e "s:CFLAGS = -O2:CFLAGS = ${CFLAGS}:"	\
 		Makefile.adalib || die "patching Makefile.adalib failed"
 }

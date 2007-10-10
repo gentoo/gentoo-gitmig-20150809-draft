@@ -1,12 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.1.1.ebuild,v 1.8 2007/10/10 18:28:19 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.2.1.ebuild,v 1.1 2007/10/10 18:28:19 george Exp $
 
 inherit gnatbuild
 
 DESCRIPTION="GNAT Ada Compiler - gcc version"
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GMGPL"
+
+# overriding the BOOT_SLOT, as 4.1 should do fine, no need for bootstrap duplication
+BOOT_SLOT="4.1"
 
 # SLOT is set in gnatbuild.eclass, depends only on PV (basically SLOT=GCCBRANCH)
 # so the URI's are static.
@@ -28,7 +31,11 @@ src_unpack() {
 	cd "${S}"/gcc/ada
 
 	# universal gcc -> gnatgcc substitution occasionally produces lines too long
-	# and then build halts on the style check or even produces wrong code..
+	# and then build halts on the style check.
+	#
+	# The sed in makegpr.adb is actually not for the line length but rather to
+	# "undo" the fixing, Last3 is matching just that - the last three characters
+	# of the compiler name.
 	sed -i -e 's:(Last3 = "gnatgcc"):(Last3 = "gcc"):' makegpr.adb &&
 	sed -i -e 's:and Nam is "gnatgcc":and Nam is "gcc":' osint.ads ||
 		die	"reversing [gnat]gcc substitution in comments failed"
