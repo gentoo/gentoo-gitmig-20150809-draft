@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.703 2007/10/10 15:50:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.704 2007/10/10 17:08:14 opfer Exp $
+
+  10 Oct 2007; Christian Faulhammer <opfer@gentoo.org> package.mask:
+  mask app-editors/pico; just useless ebuild, see bug 3464
 
   10 Oct 2007; Alin Năstac <mrness@gentoo.org> use.local.desc:
   Rename mail-filter/dkim-milter local flag from approx-regex to diffheaders.
