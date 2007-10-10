@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.7 2007/10/10 17:42:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.8 2007/10/10 18:11:26 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -136,7 +136,7 @@ RDEPEND="
 		xosd? ( x11-libs/xosd )
 		"
 
-# Disabled features and reasons : 
+# Disabled features and reasons:
 # xvmc? ( x11-libs/libXvMC )
 #	Will probably compile only on x86
 # dirac? ( media-video/dirac )
@@ -275,6 +275,7 @@ src_compile () {
 		$(use_enable skins skins2) \
 		$(use_enable speex) \
 		$(use_enable stream sout) \
+		$(use_enable svg) \
 		$(use_enable svga svgalib) \
 		$(use_enable taglib) \
 		$(use_enable theora) \
