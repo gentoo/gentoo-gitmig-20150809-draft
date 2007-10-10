@@ -1,0 +1,25 @@
+diff -Nru dkim-milter-2.3.0.orig/devtools/Site/site.config.m4 dkim-milter-2.3.0/devtools/Site/site.config.m4
+--- dkim-milter-2.3.0.orig/devtools/Site/site.config.m4	2007-10-10 18:10:18.000000000 +0300
++++ dkim-milter-2.3.0/devtools/Site/site.config.m4	2007-10-10 18:18:35.000000000 +0300
+@@ -66,9 +66,10 @@
+ dnl to have the "tre" library and its header files installed.  If necessary,
+ dnl enable these lines by deleting "dnl" from the front of them and edit
+ dnl paths as needed.
+-dnl APPENDDEF(`confINCDIRS', `-I/usr/local/include ')
++APPENDDEF(`confENVDEF',`-DTRE_APPROX ')
++APPENDDEF(`confINCDIRS', `-I/usr/include/tre ')
+ dnl APPENDDEF(`confLIBDIRS', `-L/usr/local/lib ')
+-dnl APPENDDEF(`confLIBS', `-ltre ')
++APPENDDEF(`confLIBS', `-ltre ')
+ 
+ dnl Code For Future Release (FFRs):
+ dnl
+@@ -80,7 +81,7 @@
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_ANTICIPATE_SENDMAIL_MUNGE ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_CAPTURE_UNKNOWN_ERRORS ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_DNS_UPGRADE ')
+-dnl APPENDDEF(`confENVDEF', `-D_FFR_DIFFHEADERS ')
++APPENDDEF(`confENVDEF', `-D_FFR_DIFFHEADERS ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_QUERY_CACHE ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_REQUIRED_HEADERS ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECT_CANONICALIZATION ')

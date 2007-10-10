@@ -1,101 +1,47 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/files/dkim-filter.init,v 1.2 2007/10/08 08:43:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/files/dkim-filter.init,v 1.3 2007/10/10 16:01:44 mrness Exp $
+
+CONFFILE=/etc/mail/dkim-filter/${SVCNAME}.conf
+PIDFILE=/var/run/dkim-filter/${SVCNAME}.pid
 
 depend() {
-	# need net
 	use dns logger net
-}
-
-warn_msg() {
-	echo
-	ewarn "$1 parameter is not set!"
-	ewarn "dkim-filter starts with"
-	ewarn "$1=${!1}"
-	ewarn "please set it in /etc/conf.d/dkim-filter"
-	echo
-}
-
-die_msg() {
-	echo
-	eerror "please set paramter $1 in"
-	eerror "/etc/conf.d/dkim-filter then start again"
-	echo
 }
 
 check_cfg() {
 
-	if [[ ! -f /etc/conf.d/dkim-filter ]] ; then
-		eerror "/etc/conf.d/dkim-filter is missing"
+	if [ ! -f "${CONFFILE}" ] ; then
+		eerror "Configuration file ${CONFFILE} is missing"
 		return 1
 	fi
 
-	if [[ -z "${DKIM_FILTER_OPTS}" ]] ; then
-		die_msg DKIM_FILTER_OPTS
+	if egrep -q '^[[:space:]]*Background[[:space:]]+no' "${CONFFILE}" ; then
+		eerror "${SVCNAME} service cannot run with Background key set to yes!"
 		return 1
 	fi
 
-	if [[ -z "${SELECTOR}" ]] ; then
-		die_msg SELECTOR
+	if egrep -q '^[[:space:]]*PidFile[[:space:]]' "${CONFFILE}"; then
+		eerror "Please remove PidFile key from your configuration file!"
+		eerror "${SVCNAME} is automatically configured to use ${PIDFILE} as pid file."
 		return 1
-	fi
-
-	if [[ -z "${KEYPATH}" ]] ; then
-		die_msg KEYPATH
-		return 1
-	fi
-
-	if [[ ! -f "${KEYPATH}" ]] ; then
-		echo
-		eerror "run dkim-gentxt.sh to generate a private key first"
-		eerror "then set KEYPATH in /etc/conf.d/dkim-filter to"
-		eerror "the location of your private key"
-		echo
-		return 1
-	fi
-
-	if [[ -z "${SOCKETSPEC}" ]] ; then
-		SOCKETSPEC="inet:8026@localhost"
-		warn_msg SOCKETSPEC
-	fi
-
-	if [[ -z "${DOMAIN}" ]] ; then
-		DOMAIN=$(domainname)
-		warn_msg DOMAIN
-	fi
-
-	if [[ -z "${CANON}" ]] ; then
-		CANON="relaxed/simple"
-		warn_msg CANON
-	fi
-
-	if [[ -z "${USER}" ]] ; then
-		USER="milter"
-		warn_msg USER
-	fi
-
-	if [[ -z "${SIGNALG}" ]] ; then
-		SIGNALG="rsa-sha1"
-		warn_msg SIGNALG
-	fi
-
-	if [[ -z "${PIDFILE}" ]] ; then
-		PIDFILE="/var/run/dkim-filter/dkim-filter.pid"
-		warn_msg PIDFILE
 	fi
 }
 
 start() {
 	check_cfg || return 1
-	ebegin "Starting DKIM Filter"
-	start-stop-daemon --start --quiet --background \
-		--exec /usr/bin/dkim-filter -- ${DKIM_FILTER_OPTS}
+	local SOCKFILE=$(sed -nr -e 's/^[[:space:]]*Socket[[:space:]]+((local)|(unix))://p' "${CONFFILE}")
+
+	ebegin "Starting DKIM filter"
+	start-stop-daemon --start --pidfile "${PIDFILE}" \
+		--exec /usr/bin/dkim-filter -- -x "${CONFFILE}" -P "${PIDFILE}" && \
+		[ -z "${SOCKFILE}" ] || chmod a+rwx "${SOCKFILE}"
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping DKIM Filter"
-	start-stop-daemon --stop --quiet --pidfile "${PIDFILE}"
+	ebegin "Stopping DKIM filter"
+	start-stop-daemon --stop --pidfile "${PIDFILE}"
 	eend $?
 }
