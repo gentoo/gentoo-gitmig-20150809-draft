@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/mafft-5.861-r1.ebuild,v 1.2 2007/10/10 10:23:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/mafft-6.240.ebuild,v 1.1 2007/10/10 10:23:40 markusle Exp $
 
 inherit toolchain-funcs multilib
 
