@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7787 2007/10/10 02:56:09 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7788 2007/10/10 15:59:59 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Doug Goldstein <cardoe@gentoo.org> (10 Oct 2007)
+# the Asterisk is coming! the Asterisk is coming!
+>=net-misc/zaptel-1.4.0
+>=net-misc/asterisk-1.4.0
 
 # Ulrich Mueller <ulm@gentoo.org> (09 Oct 2007)
 # Broken. Last upstream release as separate package in 2003;
