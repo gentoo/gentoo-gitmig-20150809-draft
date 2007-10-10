@@ -1,0 +1,7 @@
+# ChangeLog for Gentoo base-profile
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.1 2007/10/10 08:03:02 opfer Exp $
+
+  10 Oct 2007; Christian Faulhammer <opfer@gentoo.org> virtuals:
+  remove virtual/editor, we have a new-style virtual now
+
