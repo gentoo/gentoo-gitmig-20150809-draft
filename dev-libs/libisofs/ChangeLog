@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.7 2007/08/24 03:00:31 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.8 2007/10/10 19:24:43 corsair Exp $
+
+  10 Oct 2007; Markus Rothe <corsair@gentoo.org> libisofs-0.2.8.ebuild:
+  Added ~ppc64; bug #189993
 
 *libisofs-0.2.8 (24 Aug 2007)
 
