@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6c.ebuild,v 1.9 2007/09/14 11:56:56 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6c.ebuild,v 1.10 2007/10/10 07:40:36 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -36,7 +36,7 @@ dvb dvd vcd dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc stream
 mp3 xv bidi sdl sdl-image png xml samba daap corba mod speex shout rtsp
 win32codecs skins hal avahi xinerama cddb directfb upnp nsplugin seamonkey
-optimisememory libnotify jack musepack x264 dc1394"
+optimisememory libnotify jack musepack x264 dc1394 gnome"
 
 RDEPEND="
 		>=media-video/ffmpeg-0.4.9_p20050226-r1
@@ -48,6 +48,7 @@ RDEPEND="
 				>=media-libs/libdvdnav-0.1.9
 				media-libs/libdvdplay )
 		esd? ( media-sound/esound )
+		gnome? ( gnome-base/gnome-vfs )
 		ogg? ( media-libs/libogg )
 		matroska? (
 			>=dev-libs/libebml-0.7.6
@@ -231,6 +232,7 @@ src_compile () {
 		$(use_enable arts) \
 		$(use_enable alsa) \
 		$(use_enable ncurses) \
+		$(use_enable gnome gnomevfs) \
 		$(use_enable xosd) \
 		$(use_enable lirc) \
 		$(use_enable mp3 mad) \
