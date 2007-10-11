@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.157 2007/10/11 05:25:51 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.158 2007/10/11 05:49:13 kingtaco Exp $
+
+  11 Oct 2007; Mike Doty <kingtaco@gentoo.org> libpng-1.2.21-r3.ebuild:
+  amd64 stable bug 195387
 
   11 Oct 2007; Tom Gall <tgall@gentoo.org> libpng-1.2.21-r3.ebuild:
   stable on ppc64, bug #195387
