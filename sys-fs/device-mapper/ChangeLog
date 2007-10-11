@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.92 2007/10/09 14:19:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.93 2007/10/11 12:06:10 zzam Exp $
+
+*device-mapper-1.02.22-r5 (11 Oct 2007)
+
+  11 Oct 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/64-device-mapper.rules-1.02.22-r5,
+  +device-mapper-1.02.22-r5.ebuild:
+  Swap NAME/SYMLINK. Now /dev/mapper/NAME is the device-node, and /dev/dm-* is
+  a symlink on it. This should fix Bug #190819 for now.
 
 *device-mapper-1.02.22-r4 (09 Oct 2007)
 

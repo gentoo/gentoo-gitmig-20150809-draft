@@ -13,6 +13,10 @@ AUX 64-device-mapper.rules-1.02.22 999 RMD160 e29014e213c2d41ae360419c038d5644cd
 MD5 307bdee766d6398e55306f4b2de1bbbf files/64-device-mapper.rules-1.02.22 999
 RMD160 e29014e213c2d41ae360419c038d5644cd931021 files/64-device-mapper.rules-1.02.22 999
 SHA256 84544cac9d4de6cfc44cec816836f194f5f69fbb74cbdd07073f96dae427c0ed files/64-device-mapper.rules-1.02.22 999
+AUX 64-device-mapper.rules-1.02.22-r5 1010 RMD160 3dbb70b60b0c86a77fb9d0e8a0a9cd16a7dd03cc SHA1 fec62b9d4357fe4160e3d017c103767b6c9bf232 SHA256 7c92c2ff3c8dee6588ac51f8367a7b4bcb31d42f2d306ed08ce01be809b9ffcd
+MD5 5912671c225f9d623061fa17e333284a files/64-device-mapper.rules-1.02.22-r5 1010
+RMD160 3dbb70b60b0c86a77fb9d0e8a0a9cd16a7dd03cc files/64-device-mapper.rules-1.02.22-r5 1010
+SHA256 7c92c2ff3c8dee6588ac51f8367a7b4bcb31d42f2d306ed08ce01be809b9ffcd files/64-device-mapper.rules-1.02.22-r5 1010
 AUX device-mapper-1.02.22-export-format-r1.diff 11073 RMD160 ac3adb7316dc4f6bb7e9ea3bcf54f8b8b878570d SHA1 208c3f92a9a257e62fb6f7b8600b22b486d473bb SHA256 8b071762684b9c72dafe7bbd0e9a508999d3d0bc34ced088baa7a206d859f331
 MD5 3c2c685b2ae1784429b1761969e6a474 files/device-mapper-1.02.22-export-format-r1.diff 11073
 RMD160 ac3adb7316dc4f6bb7e9ea3bcf54f8b8b878570d files/device-mapper-1.02.22-export-format-r1.diff 11073
@@ -63,14 +67,18 @@ EBUILD device-mapper-1.02.22-r4.ebuild 2117 RMD160 5f50d27861e038034db772ff7450a
 MD5 81c28bbdc590ab8cecb8891dbaa4bc70 device-mapper-1.02.22-r4.ebuild 2117
 RMD160 5f50d27861e038034db772ff7450a10ba5ef5ec1 device-mapper-1.02.22-r4.ebuild 2117
 SHA256 b5abf6b8adce7a9a05a7114dd7d65aa69479d065c1d8cdec2e885f8f48ada901 device-mapper-1.02.22-r4.ebuild 2117
+EBUILD device-mapper-1.02.22-r5.ebuild 2118 RMD160 e8ffe8bcfb6eecfa93d5a373b0f0df9c309f8506 SHA1 5e7744da8ca3a92372e630fefee126a63e3947fe SHA256 6c6e540fc536041b3b10869d66aa9d95b4136fec193eef95021aa4dfef0c8bc2
+MD5 c4e79cb1dbd754e8c2596cd6cec3e167 device-mapper-1.02.22-r5.ebuild 2118
+RMD160 e8ffe8bcfb6eecfa93d5a373b0f0df9c309f8506 device-mapper-1.02.22-r5.ebuild 2118
+SHA256 6c6e540fc536041b3b10869d66aa9d95b4136fec193eef95021aa4dfef0c8bc2 device-mapper-1.02.22-r5.ebuild 2118
 EBUILD device-mapper-1.02.22.ebuild 1853 RMD160 a9d4a38a94e59535f65c4925e6296380c9037e77 SHA1 7ebfcbc91a491faefc310d234e49fd1559615c60 SHA256 3b047a69a1c0d04b88531f379505fbbf22ed5b4d23aee57f70245e118a26c715
 MD5 2d562379212678019c5d74bfe1085775 device-mapper-1.02.22.ebuild 1853
 RMD160 a9d4a38a94e59535f65c4925e6296380c9037e77 device-mapper-1.02.22.ebuild 1853
 SHA256 3b047a69a1c0d04b88531f379505fbbf22ed5b4d23aee57f70245e118a26c715 device-mapper-1.02.22.ebuild 1853
-MISC ChangeLog 16928 RMD160 0191db2b675f472652c3921979a1dbc4293e025f SHA1 483da5bf767902b2ab2a1e3b5a3a0ecdb4dcd05c SHA256 5af0afbcd86e6a8a28ec14afb2d65a94dadd62bfccf92f4c296e7eac4835738f
-MD5 875d0f57de3c81ec2ab240ad46ff0b02 ChangeLog 16928
-RMD160 0191db2b675f472652c3921979a1dbc4293e025f ChangeLog 16928
-SHA256 5af0afbcd86e6a8a28ec14afb2d65a94dadd62bfccf92f4c296e7eac4835738f ChangeLog 16928
+MISC ChangeLog 17236 RMD160 ae31ed80df65a61f10bdfbc84baa2b3d47e8b314 SHA1 fdb2012932f22f15e6ec6c92ce4199a4c7d589a4 SHA256 404a678fe26b901196f3472cf6416ff2fbc0e2f659075a3dcdffb1ab3388befb
+MD5 2718b46f0072b225b2cdbb5d2a88cb3c ChangeLog 17236
+RMD160 ae31ed80df65a61f10bdfbc84baa2b3d47e8b314 ChangeLog 17236
+SHA256 404a678fe26b901196f3472cf6416ff2fbc0e2f659075a3dcdffb1ab3388befb ChangeLog 17236
 MISC metadata.xml 300 RMD160 ede7eb0cde3ab4e83a90578f08e068486a2a59cd SHA1 2f199ce422f4fad87bcbdcb681d8197620bae236 SHA256 4f6e65a7f6e72548a3d0c35a34f7a119dc7f5c13dfc0820939bc8d1b72b75a4d
 MD5 80dc99dec1aed7022edd3fe784b02759 metadata.xml 300
 RMD160 ede7eb0cde3ab4e83a90578f08e068486a2a59cd metadata.xml 300
@@ -93,10 +101,13 @@ SHA256 207b1f7f3f2ca78603fe601fc4341f8ecffed55fb15d0389038a56be628dcd3f files/di
 MD5 62e7d71d52d2cb211d70a2551fefab8b files/digest-device-mapper-1.02.22-r4 256
 RMD160 496d0beb23a751b928d81fb40be062cc1db7ec3f files/digest-device-mapper-1.02.22-r4 256
 SHA256 207b1f7f3f2ca78603fe601fc4341f8ecffed55fb15d0389038a56be628dcd3f files/digest-device-mapper-1.02.22-r4 256
+MD5 62e7d71d52d2cb211d70a2551fefab8b files/digest-device-mapper-1.02.22-r5 256
+RMD160 496d0beb23a751b928d81fb40be062cc1db7ec3f files/digest-device-mapper-1.02.22-r5 256
+SHA256 207b1f7f3f2ca78603fe601fc4341f8ecffed55fb15d0389038a56be628dcd3f files/digest-device-mapper-1.02.22-r5 256
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFHC456oeSe8B0zEfwRAgvuAJ0c+HSr/EC9DAjkX0/FdwxQCm3GZgCfRT6t
-bHfMtXyQEdhIqwHvkarCG9A=
-=qMqo
+iD8DBQFHDhG4t2vP6XvVdOcRAn1UAJ9IzA1bLL0+xg/y2HiybhZqB8AsxACfZP07
+mh4khRoyPmnnEzM1EmFP4Gw=
+=T3fI
 -----END PGP SIGNATURE-----
