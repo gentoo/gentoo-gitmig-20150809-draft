@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7795 2007/10/11 16:26:19 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7796 2007/10/11 17:28:52 jer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -40,7 +40,8 @@ sys-kernel/ck-sources
 
 # Stefan Schweizer <genstef@gentoo.org> (10 Oct 2007)
 # removal because of starting problems in Bug 189775, gtk+-1.2 usage
-# last release was in 2001, possible replacement: media-gfx/opcion
+# last release was in 2001, possible replacements: media-gfx/opcion
+# and media-gfx/fontforge
 app-misc/gfontview
 
 # Christian Faulhammer <opfer@gentoo.org> (10 Oct 2007)
