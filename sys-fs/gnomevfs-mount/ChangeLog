@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/gnomevfs-mount
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gnomevfs-mount/ChangeLog,v 1.4 2007/05/12 02:17:05 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gnomevfs-mount/ChangeLog,v 1.5 2007/10/11 12:20:33 swegener Exp $
+
+  11 Oct 2007; Sven Wegener <swegener@gentoo.org>
+  files/gnomevfs-mount-as-needed.patch, gnomevfs-mount-0.2.0.ebuild:
+  Add ~amd64 keyword. Update --as-needed patch. Quote variables.
 
   12 May 2007; Daniel Drake <dsd@gentoo.org> metadata.xml:
   Move from kernel to kernel-misc herd
