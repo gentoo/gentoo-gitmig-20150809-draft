@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.18.2.ebuild,v 1.10 2007/09/22 09:19:31 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.18.2.ebuild,v 1.11 2007/10/11 21:58:02 eva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -36,6 +36,6 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
-	epatch ${FILESDIR}/${PN}-2.15.90-libnotify-support.patch
+	epatch "${FILESDIR}"/${PN}-2.15.90-libnotify-support.patch
 	eautoreconf
 }
