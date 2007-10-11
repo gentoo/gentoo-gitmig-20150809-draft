@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.208 2007/10/11 17:55:45 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.209 2007/10/11 18:07:39 remi Exp $
+
+  11 Oct 2007; Rémi Cardona <remi@gentoo.org> gedit-2.20.0.ebuild:
+  onliner to fix QA warning (turns out the code was broken anyway)
 
   11 Oct 2007; Rémi Cardona <remi@gentoo.org>
   +files/gedit-2.19.91-libattr.patch, gedit-2.20.0.ebuild:

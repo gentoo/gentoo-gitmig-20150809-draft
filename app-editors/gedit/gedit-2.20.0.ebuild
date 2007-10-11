@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.20.0.ebuild,v 1.2 2007/10/11 17:55:45 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.20.0.ebuild,v 1.3 2007/10/11 18:07:39 remi Exp $
 
 inherit gnome2 eutils autotools
 
@@ -54,7 +54,7 @@ src_unpack() {
 
 	# Remove symbols that are not meant to be part of the docs, and
 	# break compilation if USE="doc -python" (bug #158638).
-	if use ! python && use doc; then
+	if use !python && use doc; then
 		epatch "${FILESDIR}"/${PN}-2.16.2-no_python_module_docs.patch
 	fi
 
