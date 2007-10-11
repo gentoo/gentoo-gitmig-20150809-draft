@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.69 2007/10/11 03:17:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.70 2007/10/11 10:40:23 corsair Exp $
+
+  11 Oct 2007; Markus Rothe <corsair@gentoo.org> gv-3.6.3.ebuild:
+  Stable on ppc64; bug #187109
 
   11 Oct 2007; Jeroen Roovers <jer@gentoo.org> gv-3.6.3.ebuild:
   Stable for HPPA (bug #187109).
