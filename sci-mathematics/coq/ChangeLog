@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.16 2007/09/29 15:40:34 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.17 2007/10/11 10:04:22 aballier Exp $
+
+  11 Oct 2007; Alexis Ballier <aballier@gentoo.org> coq-8.1_p1.ebuild:
+  fix configure call when ide and norealanalysis useflags are set, bug #195483
 
 *coq-8.1_p1 (29 Sep 2007)
 

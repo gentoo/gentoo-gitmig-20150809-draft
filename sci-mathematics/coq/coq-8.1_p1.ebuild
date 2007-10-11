@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p1.ebuild,v 1.1 2007/09/29 15:40:34 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p1.ebuild,v 1.2 2007/10/11 10:04:22 aballier Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_compile() {
 		--coqdocdir /usr/lib/coq/coqdoc"
 
 	use debug && myconf="--debug $myconf"
-	use norealanalysis && myconf="$myconf --reals"
+	use norealanalysis && myconf="$myconf --reals no"
 	use norealanalysis || myconf="$myconf --reals all"
 
 	if use ide; then
