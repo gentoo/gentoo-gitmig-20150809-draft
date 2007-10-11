@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ekg
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.38 2007/09/03 03:54:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.39 2007/10/11 19:26:05 pylon Exp $
+
+  11 Oct 2007; Lars Weiler <pylon@gentoo.org> ekg-1.7.ebuild:
+  stable ppc, bug #189735
 
   03 Sep 2007; Jeroen Roovers <jer@gentoo.org> ekg-1.7.ebuild:
   Stable for HPPA (bug #189735).
