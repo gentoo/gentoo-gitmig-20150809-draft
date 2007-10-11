@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3079 2007/10/11 14:28:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3080 2007/10/11 16:59:10 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1008,12 +1008,12 @@ media-sound/abcde:replaygain - Support for Replay Gain metadata, for relative vo
 media-sound/alsa-driver:midi - Build the sequencer (midi) modules
 media-sound/alsa-tools:midi - Build the sequencer (midi) utilities
 media-sound/alsa-utils:midi - Build the sequencer (midi) utilities
+media-sound/amarok:amazon - Enable support for downloading covers from amazon.com
 media-sound/amarok:daap - Enable support for DAAP Music Sharing
 media-sound/amarok:ifp - Enable support for iRiver devices access through libifp
 media-sound/amarok:mp4 - Enable write support for tags in MP4 files (M4A). The resulting Amarok copy is not redistributable.
 media-sound/amarok:mtp - Enable support for libMTP (Plays4Sure) devices access through libmtp
 media-sound/amarok:njb - Enable support for NJB (Creative) devices access through libnjb
-media-sound/amarok:noamazon - Disable support for downloading covers from amazon.com
 media-sound/amarok:real - Build with real/helix player support
 media-sound/amarok:visualization - Support visualization plugins through media-libs/libvisual
 media-sound/audacious:chardet - Try to handle non-UTF8 chinese/japanese/korean ID3 tags
