@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7793 2007/10/11 07:33:46 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7794 2007/10/11 12:00:16 zzam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Matthias Schwarzott <zzam@gentoo.org> (11 Oct 2007)
+# Masked for testing
+=sys-fs/device-mapper-1.02.22-r5
 
 # Ali Polatel <hawking@gentoo.org> (11 Oct 2007)
 # Newer pyrex versions have problems with setuptools.
