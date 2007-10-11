@@ -8,7 +8,7 @@
 </maintainer>
 <maintainer>
   <email>mrmess@gentoo.org</email>
-    <name>Alin NÄstac</name>
+    <name>Alin Năstac</name>
 </maintainer>
 <longdescription>A program implementing the Milter API that signs and verifies
 using the DKIM standard</longdescription>
