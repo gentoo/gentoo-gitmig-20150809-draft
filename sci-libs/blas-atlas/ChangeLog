@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.66 2007/10/10 10:02:14 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.67 2007/10/11 17:03:20 bicatali Exp $
+
+  11 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  blas-atlas-3.6.0-r1.ebuild, blas-atlas-3.6.0-r2.ebuild,
+  blas-atlas-3.7.11.ebuild, blas-atlas-3.7.11-r1.ebuild,
+  blas-atlas-3.7.34.ebuild, blas-atlas-3.7.39.ebuild:
+  fixed lib->get_libdir for eselect bug workaround. Removed PROVIDE for older
+  buggy versions and added a warning to bump for latest.
 
 *blas-atlas-3.7.39 (09 Oct 2007)
 

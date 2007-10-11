@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.34.ebuild,v 1.2 2007/10/10 10:02:14 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.34.ebuild,v 1.3 2007/10/11 17:03:20 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -19,7 +19,6 @@ RDEPEND="app-admin/eselect-blas
 	app-admin/eselect-cblas"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.5"
-PROVIDE="virtual/blas"
 
 S="${WORKDIR}/ATLAS"
 BLD_DIR="${S}/gentoo-build"
@@ -27,6 +26,11 @@ RPATH="${DESTTREE}/$(get_libdir)/blas"
 FORTRAN="g77 gfortran"
 
 pkg_setup() {
+	ewarn "You probably want to go for testing ${PN}, this version"
+	ewarn "is particurlaly buggy, does not provide virtuals, and will go away soon."
+	ewarn "Try ${PN}  >= 3.7.39 for a working blas/cblas"
+	epause 5
+
 	fortran_pkg_setup
 	echo
 	ewarn "Please make sure to disable CPU throttling completely"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.39.ebuild,v 1.1 2007/10/10 10:02:14 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.39.ebuild,v 1.2 2007/10/11 17:03:20 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran multilib
 
@@ -201,20 +201,12 @@ src_install () {
 pkg_postinst() {
 	for p in blas cblas; do
 		local current_p=$(eselect ${p} show | cut -d' ' -f2)
-		# uncomment when eselect bug #189942 is fixed, together with DEPEND
-		#if [[ -z ${current_p} || ${current_p} == ${ESELECT_PROF} ]]; then
 		# this snippet works around the eselect bug #189942 and makes
-		# sure that users upgrading from a previous blas-atlas 
+		# sure that users upgrading from a previous blas-atlas
 		# version pick up the new pkg-config files
-		if [[ ${current_p} == atlas || ${current_p} == threaded-atlas ]]; then
-			local configfile="${ROOT}"/etc/env.d/${p}/lib/config
-			if [[ -e ${configfile} ]]; then
-				rm -f ${configfile}
-				eselect ${p} set ${ESELECT_PROF}
-			fi
-		fi
-
-		if [[ -z ${current_p} ]]; then
+		if [[ ${current_p} == ${ESELECT_PROF} || -z ${current_p} ]]; then
+			local configfile="${ROOT}"/etc/env.d/${p}/$(get_libdir)/config
+			[[ -e ${configfile} ]] && rm -f ${configfile}
 			eselect ${p} set ${ESELECT_PROF}
 			elog "${p} has been eselected to ${ESELECT_PROF}"
 		else
