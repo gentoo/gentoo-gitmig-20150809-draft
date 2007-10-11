@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.3.8.ebuild,v 1.6 2007/07/08 00:20:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.3.8.ebuild,v 1.7 2007/10/11 19:44:58 remi Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="debug spell"
 
 RDEPEND="spell? ( app-text/aspell )
 	>=x11-libs/gtk+-2
-	>=x11-libs/gtksourceview-0.2
+	=x11-libs/gtksourceview-1*
 	>=x11-libs/pango-1"
 
 DEPEND="${RDEPEND}
