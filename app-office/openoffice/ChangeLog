@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.349 2007/10/11 07:21:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.350 2007/10/11 07:34:20 suka Exp $
+
+  11 Oct 2007; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.3.0.ebuild:
+  Disable Mono-support for ppc, it's broken
 
   11 Oct 2007; Andreas Proschofsky <suka@gentoo.org>
   files/2.3.0/regcompapply.diff:
