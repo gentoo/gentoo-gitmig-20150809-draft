@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.74 2007/10/09 03:18:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.75 2007/10/11 11:15:10 corsair Exp $
+
+  11 Oct 2007; Markus Rothe <corsair@gentoo.org> evms-2.5.5-r7.ebuild:
+  Stable on ppc64; bug #190828
 
 *evms-2.5.5-r9 (09 Oct 2007)
 
