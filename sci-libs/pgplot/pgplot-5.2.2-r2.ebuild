@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r2.ebuild,v 1.2 2007/04/23 16:04:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r2.ebuild,v 1.3 2007/10/11 17:50:41 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE="doc motif tk"
 RDEPEND="x11-libs/libX11
+	x11-libs/libXt
 	media-libs/libpng
 	motif? ( virtual/motif )
 	tk? ( dev-lang/tk )"
@@ -21,10 +22,10 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}"
 
-FORTRAN="g77 gfortran"
+FORTRAN="g77 gfortran ifc"
 
 src_unpack() {
-	fortran_src_unpack ${A}
+	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-drivers.patch
@@ -32,14 +33,13 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-compile-setup.patch
 	epatch "${FILESDIR}"/${PN}-pgdisp.patch
 
-	# gfortran does not compile gif, pp and wd drivers
-	# (might change with gfortran 4.2 or 4.3)
-	if [[ "${FORTRANC}" == "gfortran" ]]; then
+	# gfortran does not compile gif, pp and wd drivers (last check: gfortran-4.2)
+	if [[ "${FORTRANC}" == gfortran ]]; then
 		ewarn
 		ewarn "Warning!"
-		elog "gfortran selected: does not yet compile all drivers"
-		elog "disabling gif, wd, and ppd drivers"
-		elog "if you want more drivers, use g77"
+		ewarn "gfortran selected: does not yet compile all drivers"
+		ewarn "disabling gif, wd, and ppd drivers"
+		ewarn "if you want more drivers, use g77 or ifort"
 		ewarn
 		sed -i \
 			-e 's/GIDRIV/! GIDRIV/g' \
@@ -49,7 +49,7 @@ src_unpack() {
 	fi
 
 	# fix pointers for 64 bits
-	if use amd64 -o use ia64; then
+	if use amd64 || use ia64; then
 		sed -i \
 			-e 's/INTEGER PIXMAP/INTEGER*8 PIXMAP/g' \
 			drivers/{gi,pp,wd}driv.f || die "sed 64bits failed"
@@ -65,6 +65,13 @@ src_unpack() {
 		-e 's:SHARED_LIB=.*:SHARED_LIB="libpgplot.so.5":g' \
 		-e "s:SHARED_LD=.*:SHARED_LD=\"$(tc-getCC) -Wl,-soname,libpgplot.so.5 -shared -o \$SHARED_LIB\":g" \
 		local.conf || die "sed flags failed"
+
+	if [[ "${FORTRANC}" = if* ]]; then
+		sed -i \
+			-e 's/-Wall//g' \
+			-e 's/TK_LIBS="/TK_LIBS="-nofor-main /' \
+			local.conf || die "sed drivers failed"
+	fi
 
 	sed -i \
 		-e "s:/usr/local/pgplot:/usr/$(get_libdir)/pgplot:g" \
@@ -84,24 +91,24 @@ src_compile() {
 	emake -j1 || die "emake failed"
 
 	# Build C portion
-	make cpg || die "make cpg failed"
+	emake -j1 cpg || die "make cpg failed"
 
 	if use doc; then
-		make pgplot.html || die "make pgplot.html failed"
-		make pgplot-routines.tex  || die "make pgplot-routines failed"
+		emake pgplot.html || die "make pgplot.html failed"
+		emake pgplot-routines.tex  || die "make pgplot-routines failed"
 		pdflatex pgplot-routines.tex
 		pdflatex pgplot-routines.tex
 	fi
 
 	# this just cleans out unneeded files
-	make clean
+	emake clean
 }
 
 src_test() {
 	einfo "Testing various demo programs"
 	# i can go to 16
 	for i in 1 2 3; do
-		make pgdemo${i}
+		emake pgdemo${i}
 		# j can also be LATEX CPS...
 		for j in NULL PNG PS CPS LATEX; do
 			local testexe=./test_${j}_${i}
@@ -125,25 +132,25 @@ src_install() {
 
 	# C binding
 	insinto /usr/include
-	doins cpgplot.h || die "doins failed"
+	doins cpgplot.h || die "doins C binding failed"
 	dolib.a libcpgplot.a || die "dolib.a failed"
 	# shared lib: todo eventually in a patch
 	# dolib.so libcpgplot.so
 	# dosym libcpgplot.so.5 /usr/$(get_libdir)/libcpgplot.so
 
 	if use motif; then
-		doins XmPgplot.h
-		dolib.a libXmPgplot.a
+		doins XmPgplot.h || die "doins motif failed"
+		dolib.a libXmPgplot.a "dolib.a motif failed"
 	fi
 
 	if use tk; then
-		doins tkpgplot.h
-		dolib.a libtkpgplot.a
+		doins tkpgplot.h || die "doins tk failed"
+		dolib.a libtkpgplot.a || die "dolib.a tk failed"
 	fi
 
 	# minimal doc
-	dodoc aaaread.me pgplot.doc
-	newdoc pgdispd/aaaread.me pgdisp.txt
+	dodoc aaaread.me pgplot.doc || die "dodoc minimal doc failed"
+	newdoc pgdispd/aaaread.me pgdispd.txt || die "install pgdispd doc failed"
 
 	if use doc; then
 		dodoc cpg/cpgplot.doc applications/curvefit/curvefit.doc
