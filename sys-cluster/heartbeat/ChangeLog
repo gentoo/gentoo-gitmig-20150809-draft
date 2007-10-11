@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.67 2007/08/31 13:31:07 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.68 2007/10/11 11:27:08 corsair Exp $
+
+  11 Oct 2007; Markus Rothe <corsair@gentoo.org> heartbeat-1.2.5-r1.ebuild,
+  heartbeat-2.0.8.ebuild:
+  Added ~ppc64; bug #190828
 
   31 Aug 2007; Ferris McCormick <fmccor@gentoo.org>
   heartbeat-1.2.5-r1.ebuild, heartbeat-2.0.8.ebuild:
