@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gentoo-artwork
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.21 2007/03/05 19:24:05 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.22 2007/10/11 21:10:28 cla Exp $
+
+  11 Oct 2007; Dawid Węgliński <cla@gentoo.org> metadata.xml:
+  Assuming maintainer role of package
 
   05 Mar 2007; Peter Weller <welp@gentoo.org> gentoo-artwork-0.4.2.ebuild:
   Keyworded on x86-fbsd
