@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.229 2007/08/30 19:48:34 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.230 2007/10/11 16:53:02 drac Exp $
+
+  11 Oct 2007; Samuli Suominen <drac@gentoo.org> amarok-1.4.5-r1.ebuild,
+  amarok-1.4.6.ebuild, amarok-1.4.6-r1.ebuild, amarok-1.4.7.ebuild,
+  amarok-1.4.9999-r1.ebuild:
+  Replace noamazon USE flag with amazon and add it to base/package.use for bug
+  134493.
 
 *amarok-1.4.7 (30 Aug 2007)
 

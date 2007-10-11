@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9999-r1.ebuild,v 1.1 2007/06/14 14:01:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.9999-r1.ebuild,v 1.2 2007/10/11 16:53:02 drac Exp $
 
 inherit kde subversion
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS=""
-IUSE="aac kde mysql noamazon opengl postgres
+IUSE="aac kde mysql amazon opengl postgres
 visualization ipod ifp real njb mtp musicbrainz daap
 python"
 # kde: enables compilation of the konqueror sidebar plugin
@@ -83,7 +83,7 @@ src_compile() {
 	local myconf="$(use_enable mysql) $(use_enable postgres postgresql)
 				  $(use_with opengl) --without-xmms
 				  $(use_with visualization libvisual)
-				  $(use_enable !noamazon amazon)
+				  $(use_enable amazon)
 				  $(use_with ipod libgpod)
 				  $(use_with aac mp4v2)
 				  $(use_with ifp)
