@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.39 2007/10/11 09:42:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.40 2007/10/11 18:40:06 armin76 Exp $
+
+  11 Oct 2007; Raúl Porcel <armin76@gentoo.org> opal-2.2.11.ebuild:
+  alpha/ia64/sparc stable wrt security #193095
 
   11 Oct 2007; Markus Rothe <corsair@gentoo.org> opal-2.2.11.ebuild:
   Stable on ppc64; bug #193095
