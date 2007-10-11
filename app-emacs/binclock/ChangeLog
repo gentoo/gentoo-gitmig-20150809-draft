@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/binclock
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/binclock/ChangeLog,v 1.12 2007/10/07 18:29:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/binclock/ChangeLog,v 1.13 2007/10/11 13:07:28 pylon Exp $
+
+  11 Oct 2007; Lars Weiler <pylon@gentoo.org> binclock-1.7-r1.ebuild:
+  stable ppc, bug #195016
 
   07 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   binclock-1.7-r1.ebuild:
