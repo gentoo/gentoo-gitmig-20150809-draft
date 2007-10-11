@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-goto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.12 2007/10/09 22:08:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.13 2007/10/11 17:38:06 bicatali Exp $
+
+  11 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  blas-goto-1.19.ebuild:
+  fixed lib->get_libdir for eselect bug workaround
 
   09 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> -files/eselect-goto,
   -blas-goto-1.14.ebuild, -blas-goto-1.16.ebuild, blas-goto-1.19.ebuild:
