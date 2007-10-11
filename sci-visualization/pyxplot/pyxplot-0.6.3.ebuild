@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.6.3.ebuild,v 1.1 2007/03/02 15:30:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.6.3.ebuild,v 1.2 2007/10/11 15:21:51 bicatali Exp $
 
 inherit eutils python
 
@@ -27,11 +27,13 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	sed -i \
 		-e "s:^\(USRDIR=\).*:\1/usr:g" \
 		-e 's:^\(MANDIR=\).*:\1${USRDIR}/share/man/man1:g' \
 		-e "s:^\(DOCDIR=\).*:\1\${USRDIR}/share/doc/${PF}:g" \
-		"${S}"/Makefile.skel
+		"${S}"/Makefile.skel || die "sed Makefile.skel failed"
+
 	epatch "${FILESDIR}"/${PV}-dont-build-pyx.patch
 	# Depends on dont-build-pyx.patch
 	epatch "${FILESDIR}"/${PV}-respect-destdir.patch
@@ -65,13 +67,13 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README AUTHORS ChangeLog
+	dodoc README AUTHORS ChangeLog || die "dodoc failed"
 }
 
 pkg_postinst() {
-	python_mod_optimize ${ROOT}usr/share/pyxplot
+	python_mod_optimize "${ROOT}"/usr/share/${PN}
 }
 
 pkg_postrm() {
-	python_mod_cleanup ${ROOT}usr/share/pyxplot
+	python_mod_cleanup "${ROOT}"/usr/share/${PN}
 }

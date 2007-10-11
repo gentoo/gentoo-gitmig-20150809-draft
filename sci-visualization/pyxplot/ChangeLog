@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/pyxplot
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.5 2007/03/14 11:02:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.6 2007/10/11 15:21:51 bicatali Exp $
+
+*pyxplot-0.6.3.1 (11 Oct 2007)
+
+  11 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/0.5.8-respect-destdir.patch, +files/0.6.3.1-dont-build-pyx.patch,
+  -files/0.5.8-dont-build-pyx.patch, +files/0.6.3.1-respect-destdir.patch,
+  -pyxplot-0.5.8.ebuild, pyxplot-0.6.3.ebuild, +pyxplot-0.6.3.1.ebuild:
+  Version bump + quotes cleaning.
 
 *pyxplot-0.6.3 (02 Mar 2007)
 
