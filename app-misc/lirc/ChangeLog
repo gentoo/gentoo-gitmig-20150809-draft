@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.151 2007/09/01 08:12:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.152 2007/10/11 19:35:42 zzam Exp $
+
+*lirc-0.8.2-r2 (11 Oct 2007)
+
+  11 Oct 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/lirc-0.8.2-kernel-2.6.23.patch, +lirc-0.8.2-r2.ebuild:
+  Fixed device-node to work with udev-115-r2+. Compiling fixed for Kernel
+  2.6.23+, Bug 195432.
 
   01 Sep 2007; Joseph Jezak <josejx@gentoo.org> lirc-0.8.2-r1.ebuild:
   Marked ppc stable for bug #187822.
