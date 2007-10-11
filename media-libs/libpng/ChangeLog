@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.159 2007/10/11 12:41:09 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.160 2007/10/11 17:41:08 jer Exp $
+
+  11 Oct 2007; Jeroen Roovers <jer@gentoo.org>
+  files/digest-libpng-1.2.18-r1, files/digest-libpng-1.2.20,
+  files/digest-libpng-1.2.21-r2, files/digest-libpng-1.2.21-r3, Manifest:
+  Fix libpng-manual.txt digest.
 
   11 Oct 2007; Lars Weiler <pylon@gentoo.org> libpng-1.2.21-r3.ebuild:
   stable ppc, bug #195387
