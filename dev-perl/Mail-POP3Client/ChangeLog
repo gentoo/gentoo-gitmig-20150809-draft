@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-POP3Client
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/ChangeLog,v 1.27 2007/01/19 14:00:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/ChangeLog,v 1.28 2007/10/11 11:26:17 corsair Exp $
+
+  11 Oct 2007; Markus Rothe <corsair@gentoo.org>
+  Mail-POP3Client-2.17.ebuild:
+  Added ~ppc64; bug #190828
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -Mail-POP3Client-2.15.ebuild, -Mail-POP3Client-2.16.ebuild,
