@@ -8,3 +8,7 @@ app-editors/emacs-cvs xpm
 # Nearly everything linking against dev-scheme/guile-1.8 needs USE=deprecated
 # for a sucessful build (see #163921)
 =dev-scheme/guile-1.8* deprecated
+
+# 2007/10/11 - Samuli Suominen <drac@gentoo.org>
+# Replaced noamazon USE flag with amazon for bug 134493, comment #1.
+media-sound/amarok amazon
