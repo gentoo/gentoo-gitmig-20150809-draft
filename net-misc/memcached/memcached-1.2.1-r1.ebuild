@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.1-r1.ebuild,v 1.6 2007/08/13 21:46:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.1-r1.ebuild,v 1.7 2007/10/11 17:16:42 jer Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.danga.com/memcached/dist/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ppc ~ppc64 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ~ppc64 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="static perl doc"
 
 DEPEND=">=dev-libs/libevent-0.6
@@ -28,16 +28,16 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${S}/memcached
-	dodoc ${S}/{AUTHORS,COPYING,ChangeLog,INSTALL,NEWS,README}
+	dobin "${S}"/memcached
+	dodoc "${S}"/{AUTHORS,COPYING,ChangeLog,INSTALL,NEWS,README}
 
 	newconfd "${FILESDIR}/1.1.13/conf" memcached
 	newinitd "${FILESDIR}/1.1.13/init" memcached
 
-	doman ${S}/doc/memcached.1
+	doman "${S}"/doc/memcached.1
 
 	if use doc; then
-	  dodoc ${S}/doc/{memory_management.txt,protocol.txt}
+	  dodoc "${S}"/doc/{memory_management.txt,protocol.txt}
 	fi
 }
 
