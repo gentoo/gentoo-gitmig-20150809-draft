@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.0.ebuild,v 1.5 2007/07/13 05:34:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.0.ebuild,v 1.6 2007/10/11 20:44:57 remi Exp $
 
 inherit gnome2 autotools
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.5.6
 	=gnome-extra/gtkhtml-2*
 	>=gnome-base/libgnomeprint-2.2
 	>=gnome-base/libgnomeprintui-2.2
-	>=x11-libs/gtksourceview-1.1.90
+	=x11-libs/gtksourceview-1*
 	>=dev-libs/libcroco-0.6.0
 	>=gnome-base/gnome-menus-2.9.2
 	dbus? ( >=sys-apps/dbus-0.22 )
