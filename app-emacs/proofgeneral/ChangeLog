@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/proofgeneral
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.16 2007/10/11 13:31:14 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.17 2007/10/11 15:25:40 ulm Exp $
+
+  11 Oct 2007; Ulrich Mueller <ulm@gentoo.org> -proofgeneral-3.5.ebuild:
+  Remove old.
 
   11 Oct 2007; Lars Weiler <pylon@gentoo.org> proofgeneral-3.5-r1.ebuild:
   stable ppc, bug #195156
