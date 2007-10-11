@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.2-r1.ebuild,v 1.1 2007/07/22 03:06:31 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.2-r1.ebuild,v 1.2 2007/10/11 22:21:57 eva Exp $
 
 inherit gnome2 eutils
 
@@ -73,14 +73,14 @@ src_install() {
 	gnome2_src_install
 
 	# Install the conversion script in the documentation
-	dodoc ${S}/data/migrate-xscreensaver-config.sh
-	dodoc ${S}/data/xscreensaver-config.xsl
+	dodoc "${S}"/data/migrate-xscreensaver-config.sh
+	dodoc "${S}"/data/xscreensaver-config.xsl
 
 	# Conversion information
 	sed -e "s:\${PF}:${PF}:" \
-		< ${FILESDIR}/xss-conversion.txt > ${S}/xss-conversion.txt
+		< "${FILESDIR}"/xss-conversion.txt > "${S}"/xss-conversion.txt
 
-	dodoc ${S}/xss-conversion.txt
+	dodoc "${S}"/xss-conversion.txt
 
 	# Non PAM users will need this suid to read the password hashes.
 	# OpenPAM users will probably need this too when
@@ -100,5 +100,5 @@ pkg_postinst() {
 	ewarn "echo \"x11-misc/xscreensaver -gnome\" >> /etc/portage/package.use"
 	echo
 	elog "Information for converting screensavers is located in "
-	elog "/usr/share/doc/${PF}/xss-conversion.txt.gz"
+	elog "/usr/share/doc/${PF}/xss-conversion.txt.${PORTAGE_COMPRESS}"
 }

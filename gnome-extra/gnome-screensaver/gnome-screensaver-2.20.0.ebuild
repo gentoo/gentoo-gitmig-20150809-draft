@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.20.0.ebuild,v 1.1 2007/10/02 06:36:13 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.20.0.ebuild,v 1.2 2007/10/11 22:21:57 eva Exp $
 
 inherit gnome2
 
@@ -20,22 +20,19 @@ RDEPEND=">=gnome-base/gconf-2.6.1
 	>=gnome-base/gnome-menus-2.12
 	>=dev-libs/glib-2.8
 	>=gnome-base/libgnomekbd-0.1
-	||	(
-			>=dev-libs/dbus-glib-0.71
-			~sys-apps/dbus-0.62
-		)
-	x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/libXrandr
-	x11-libs/libXScrnSaver
+	>=dev-libs/dbus-glib-0.71
 	libnotify? ( x11-libs/libnotify )
 	opengl?	( virtual/opengl )
-	pam? ( virtual/pam )
-	!pam? ( kernel_linux? ( sys-apps/shadow ) )
 	xinerama?	(
 					x11-libs/libXinerama
 					x11-proto/xineramaproto
-				)"
+				)
+	pam? ( virtual/pam )
+	!pam? ( kernel_linux? ( sys-apps/shadow ) )
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXrandr
+	x11-libs/libXScrnSaver"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.9
@@ -71,14 +68,14 @@ src_install() {
 	gnome2_src_install
 
 	# Install the conversion script in the documentation
-	dodoc "${S}/data/migrate-xscreensaver-config.sh"
-	dodoc "${S}/data/xscreensaver-config.xsl"
+	dodoc "${S}"/data/migrate-xscreensaver-config.sh
+	dodoc "${S}"/data/xscreensaver-config.xsl
 
 	# Conversion information
 	sed -e "s:\${PF}:${PF}:" \
-		< "${FILESDIR}/xss-conversion.txt" > "${S}/xss-conversion.txt"
+		< "${FILESDIR}"/xss-conversion.txt > "${S}"/xss-conversion.txt
 
-	dodoc "${S}/xss-conversion.txt"
+	dodoc "${S}"/xss-conversion.txt
 
 	# Non PAM users will need this suid to read the password hashes.
 	# OpenPAM users will probably need this too when
