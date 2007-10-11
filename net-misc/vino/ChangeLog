@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.91 2007/09/23 05:47:54 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.92 2007/10/11 23:08:51 eva Exp $
+
+*vino-2.20.0 (11 Oct 2007)
+
+  11 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/vino-2.10.0-fbsd.patch, -files/vino-2.11-zlib_fix.patch,
+  -files/vino-2.13.5-as-needed.patch, -vino-2.13.5.ebuild,
+  +vino-2.20.0.ebuild:
+  prune 2.13.5 related files and bump to 2.20.0
 
   23 Sep 2007; Tom Gall <tgall@gentoo.org> vino-2.18.1.ebuild:
   stable on ppc64

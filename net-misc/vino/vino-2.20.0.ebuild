@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.13.5.ebuild,v 1.19 2007/07/22 08:08:57 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.20.0.ebuild,v 1.1 2007/10/11 23:08:51 eva Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
@@ -11,16 +11,20 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
-IUSE="avahi crypt gnutls jpeg zlib"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="avahi crypt gnutls jpeg keyring libnotify zlib"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND=">=dev-libs/glib-2.12
+	>=x11-libs/gtk+-2.10
 	>=gnome-base/gconf-2
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnomeui-2.5.2
+	dev-libs/dbus-glib
 	>=gnome-base/orbit-2
 	>=gnome-base/libbonobo-2
 	x11-libs/libXtst
+	libnotify? ( >=x11-libs/libnotify-0.4.4 )
+	keyring? ( gnome-base/gnome-keyring )
 	avahi? ( >=net-dns/avahi-0.6 )
 	crypt? ( >=dev-libs/libgcrypt-1.1.90 )
 	gnutls? ( >=net-libs/gnutls-1 )
@@ -28,7 +32,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
-	>=dev-util/intltool-0.28"
+	>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
 
@@ -39,25 +43,6 @@ pkg_setup() {
 	fi
 	G2CONF="$(use_with jpeg) $(use_enable gnutls) $(use_enable crypt gcrypt) \
 			$(use_with zlib) $(use_with zlib libz) $(use_enable avahi) \
+			$(use_enable libnotify) $(use_enable keyring gnome-keyring) \
 			--enable-session-support"
-}
-
-src_unpack() {
-	gnome2_src_unpack
-
-	# Fix compilation if --without-libz is passed
-	epatch "${FILESDIR}"/${PN}-2.11-zlib_fix.patch
-
-	# Fix compilation for Gentoo/FreeBSD
-	epatch "${FILESDIR}"/${PN}-2.10.0-fbsd.patch
-
-	# fix as-needed #132558
-	epatch "${FILESDIR}"/${P}-as-needed.patch
-
-	cp aclocal.m4 old_macros.m4
-	# rename some things so they get regenerated and we don't get a mismatch
-	sed -i -e 's:AM_AUTOMAKE_VERSION:AM_AUTOMAKE_VERSION2:' old_macros.m4
-	sed -i -e 's:AM_INIT_AUTOMAKE:AM_INIT_AUTOMAKE2:' old_macros.m4
-	sed -i -e 's:AM_SET_CURRENT_AUTOMAKE_VERSION:AM_SET_CURRENT_AUTOMAKE_VERSION2:' old_macros.m4
-	AT_M4DIR="." eautoreconf
 }
