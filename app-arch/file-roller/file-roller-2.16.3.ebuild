@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.16.3.ebuild,v 1.8 2007/06/02 02:48:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.16.3.ebuild,v 1.9 2007/10/11 22:12:26 eva Exp $
 
 inherit eutils gnome2
 
@@ -44,13 +44,13 @@ src_unpack() {
 
 	# Use absolute path to GNU tar since star doesn't have the same
 	# options.  On Gentoo, star is /usr/bin/tar, GNU tar is /bin/tar
-	epatch ${FILESDIR}/${PN}-2.10.3-use_bin_tar.patch
+	epatch "${FILESDIR}"/${PN}-2.10.3-use_bin_tar.patch
 
 	# use a local rpm2cpio script to avoid the dep
-	epatch ${FILESDIR}/${PN}-2.10-use_fr_rpm2cpio.patch
+	epatch "${FILESDIR}"/${PN}-2.10-use_fr_rpm2cpio.patch
 }
 
 src_install() {
 	gnome2_src_install
-	dobin ${FILESDIR}/rpm2cpio-file-roller
+	dobin "${FILESDIR}"/rpm2cpio-file-roller
 }

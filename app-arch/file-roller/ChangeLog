@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.214 2007/09/23 04:59:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.215 2007/10/11 22:12:26 eva Exp $
+
+*file-roller-2.20.0 (11 Oct 2007)
+
+  11 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  file-roller-2.16.3.ebuild, file-roller-2.18.4.ebuild,
+  +file-roller-2.20.0.ebuild:
+  fix quoting and bump to 2.20.0
 
   23 Sep 2007; Tom Gall <tgall@gentoo.org> file-roller-2.18.4.ebuild:
   stable on ppc64
