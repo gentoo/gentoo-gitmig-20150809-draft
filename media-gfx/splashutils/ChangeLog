@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.114 2007/10/11 08:03:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.115 2007/10/11 16:01:51 uberlord Exp $
+
+  11 Oct 2007; Roy Marples <uberlord@gentoo.org>
+  +files/splashutils-1.5.2.1-baselayout-rc5.patch,
+  splashutils-1.5.2.1.ebuild:
+  Patch splashtutils to work on baselayout-2.0.0_rc5
 
   11 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   splashutils-1.5.2.1.ebuild:

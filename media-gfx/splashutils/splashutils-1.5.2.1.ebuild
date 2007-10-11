@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.2.1.ebuild,v 1.3 2007/10/11 08:03:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.2.1.ebuild,v 1.4 2007/10/11 16:01:51 uberlord Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -96,6 +96,11 @@ src_unpack() {
 	fi
 
 	sed -i -e "s#/lib/splash#/$(get_libdir)/splash#" "${S}"/scripts/{splash_manager,splash_geninitramfs}
+
+	if has_version ">=sys-apps/baselayout-2.0.0_rc5"; then
+		cd "${SG}"
+		epatch "${FILESDIR}/${P}-baselayout-rc5.patch"
+	fi
 }
 
 src_compile() {
