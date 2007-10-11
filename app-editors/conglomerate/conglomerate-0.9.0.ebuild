@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/conglomerate-0.9.0.ebuild,v 1.5 2005/11/11 23:07:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/conglomerate-0.9.0.ebuild,v 1.6 2007/10/11 19:01:43 remi Exp $
 
 inherit gnome2
 
@@ -22,7 +22,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	>=gnome-base/libbonoboui-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2
-	>=x11-libs/gtksourceview-0.6
+	=x11-libs/gtksourceview-1*
 	spell? ( >=app-text/enchant-0.1 )
 	"
 

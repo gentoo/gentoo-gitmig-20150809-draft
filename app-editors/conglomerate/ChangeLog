@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/conglomerate
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.17 2007/02/17 00:08:32 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.18 2007/10/11 19:01:43 remi Exp $
+
+  11 Oct 2007; Rémi Cardona <remi@gentoo.org> conglomerate-0.7.11.ebuild,
+  conglomerate-0.7.12.ebuild, conglomerate-0.9.0.ebuild,
+  conglomerate-0.9.1.ebuild:
+  update gtksourceview deps (see bug #195366)
 
   17 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> metadata.xml:
   Removed allanonjl from metadata.xml
