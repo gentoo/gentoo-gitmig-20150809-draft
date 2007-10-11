@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/poi
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.39 2007/09/05 03:04:34 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.40 2007/10/11 10:42:26 corsair Exp $
+
+  11 Oct 2007; Markus Rothe <corsair@gentoo.org> poi-3.0.1-r1.ebuild:
+  Stable on ppc64; bug #190303
 
   05 Sep 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   poi-3.0.1-r1.ebuild:
