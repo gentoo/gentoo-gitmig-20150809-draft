@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.84 2007/10/11 07:20:11 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.85 2007/10/11 08:58:28 wrobel Exp $
+
+  11 Oct 2007; <wrobel@gentoo.org> -egroupware-1.4.001.ebuild:
+  Removed insecure package from the tree (sec issue #193960).
 
   11 Oct 2007; Mike Doty <kingtaco@gentoo.org> egroupware-1.4.002.ebuild:
   amd64 stable, bug 193960
