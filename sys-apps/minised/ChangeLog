@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/minised
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/minised/ChangeLog,v 1.3 2007/02/09 08:31:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/minised/ChangeLog,v 1.4 2007/10/11 05:34:46 vapier Exp $
+
+*minised-1.11 (11 Oct 2007)
+
+  11 Oct 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/minised-1.11-build.patch, +files/minised-1.11-headers.patch,
+  +minised-1.11.ebuild:
+  Version bump #195229.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
