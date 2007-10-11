@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7792 2007/10/10 22:04:28 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7793 2007/10/11 07:33:46 hawking Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Ali Polatel <hawking@gentoo.org> (11 Oct 2007)
+# Newer pyrex versions have problems with setuptools.
+# See bug 195354 and bug 195466.
+>=dev-python/pyrex-0.9.6
 
 # Michael Marineau <marineam@gentoo.org> (10 Oct 2007)
 # The ck patchest is gone, will be removed shortly.
