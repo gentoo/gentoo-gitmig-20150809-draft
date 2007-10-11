@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.3-r1.ebuild,v 1.5 2007/10/11 16:29:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.3-r1.ebuild,v 1.6 2007/10/11 17:28:46 pylon Exp $
 
 inherit libtool eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/${MY_P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="3"
-KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ~m68k ppc ~ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="doc unicode"
 
 DEPEND="dev-util/pkgconfig"
