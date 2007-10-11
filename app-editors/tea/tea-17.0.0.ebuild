@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-17.0.0.ebuild,v 1.2 2007/07/08 17:48:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-17.0.0.ebuild,v 1.3 2007/10/11 21:06:25 remi Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ia64 ~x86 ~x86-fbsd"
 IUSE="enchant gnome hacking ipv6 sounds spell"
 
 RDEPEND="x11-libs/gtk+
-	gnome? ( x11-libs/gtksourceview
+	gnome? ( =x11-libs/gtksourceview-1*
 		gnome-base/gnome-vfs )"
 DEPEND="${RDEPEND}
 	x11-libs/libX11

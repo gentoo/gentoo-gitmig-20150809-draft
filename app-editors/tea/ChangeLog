@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.21 2007/09/05 16:16:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.22 2007/10/11 21:06:25 remi Exp $
+
+  11 Oct 2007; Rémi Cardona <remi@gentoo.org> tea-16.1.1.ebuild,
+  tea-16.1.1-r1.ebuild, tea-17.0.0.ebuild, tea-17.0.2.ebuild:
+  update gtksourceview deps (see bug #195366)
 
   05 Sep 2007; Raúl Porcel <armin76@gentoo.org> tea-17.0.2.ebuild:
   x86 stable
