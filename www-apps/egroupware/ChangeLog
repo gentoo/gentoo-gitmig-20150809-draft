@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.83 2007/10/01 13:22:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.84 2007/10/11 07:20:11 kingtaco Exp $
+
+  11 Oct 2007; Mike Doty <kingtaco@gentoo.org> egroupware-1.4.002.ebuild:
+  amd64 stable, bug 193960
 
   01 Oct 2007; Raúl Porcel <armin76@gentoo.org> egroupware-1.4.002.ebuild:
   alpha stable wrt security #193960
