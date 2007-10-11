@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.ebuild,v 1.2 2007/06/13 18:10:34 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.ebuild,v 1.3 2007/10/11 08:01:25 opfer Exp $
 
 inherit eutils linux-info multilib toolchain-funcs
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/libs/klibc/${P}.tar.bz2
 	ftp://ftp.kernel.org/pub/linux/libs/klibc/Testing/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
-KEYWORDS="~amd64 -mips ~ppc ~x86"
+KEYWORDS="~amd64 -mips ~ppc x86"
 IUSE="debug n32"
 
 DEPEND="dev-lang/perl
