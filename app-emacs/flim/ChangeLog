@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/flim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/ChangeLog,v 1.26 2007/10/11 13:14:13 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/ChangeLog,v 1.27 2007/10/11 15:19:33 ulm Exp $
+
+  11 Oct 2007; Ulrich Mueller <ulm@gentoo.org> -flim-1.14.6.ebuild,
+  -flim-1.14.7.ebuild:
+  Remove old.
 
   11 Oct 2007; Lars Weiler <pylon@gentoo.org> flim-1.14.8.ebuild:
   stable ppc, bug #195107
