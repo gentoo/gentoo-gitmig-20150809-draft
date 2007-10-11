@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/umtsmon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/ChangeLog,v 1.4 2007/10/02 16:13:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/ChangeLog,v 1.5 2007/10/11 10:42:46 mrness Exp $
+
+*umtsmon-0.7 (11 Oct 2007)
+
+  11 Oct 2007; Alin Năstac <mrness@gentoo.org> +umtsmon-0.7.ebuild:
+  Version bump (#195459).
 
   02 Oct 2007; Alin Năstac <mrness@gentoo.org> umtsmon-0.6.ebuild:
   Use eqmake3 for generating the makefile (#194373). Install README and TODO
