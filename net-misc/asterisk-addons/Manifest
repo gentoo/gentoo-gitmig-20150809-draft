@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX asterisk-addons-1.2.0-gentoo-base.diff 1852 RMD160 cf757a2a7e566f814ad288cfb8006381bcc1d1af SHA1 5a0c5537afddab7f4dd5b53ce44d227fbf813c68 SHA256 79fb6cfc9dc6c7f53a6c9ea263b5126d39478890289ca4279a0756c03b69ab25
 MD5 d9614f6289a7b8edda8045241187e138 files/asterisk-addons-1.2.0-gentoo-base.diff 1852
 RMD160 cf757a2a7e566f814ad288cfb8006381bcc1d1af files/asterisk-addons-1.2.0-gentoo-base.diff 1852
@@ -36,18 +33,18 @@ EBUILD asterisk-addons-1.2.4.ebuild 4359 RMD160 bab61ed5678a36e4b91338da82a97bfb
 MD5 cf78ce66165cde6f9ad6c5eb3a4dcbef asterisk-addons-1.2.4.ebuild 4359
 RMD160 bab61ed5678a36e4b91338da82a97bfba87f5640 asterisk-addons-1.2.4.ebuild 4359
 SHA256 b186f32491f8f97d7fb557b677177e50c07a3ff1c64380eb9de72866fe42ac27 asterisk-addons-1.2.4.ebuild 4359
-EBUILD asterisk-addons-1.2.5-r1.ebuild 4416 RMD160 805f1e5f95e98ebfbc1d73e3a9aa3db90ca4ff63 SHA1 2baef56ff9f7f73f8786f74d56be121577cef39c SHA256 2fb297144125fbc492f22b2125333dd952eb8779696c98bfd3508d63d73facc5
-MD5 05576ee678d1a6cf686b98e5e9cd6d62 asterisk-addons-1.2.5-r1.ebuild 4416
-RMD160 805f1e5f95e98ebfbc1d73e3a9aa3db90ca4ff63 asterisk-addons-1.2.5-r1.ebuild 4416
-SHA256 2fb297144125fbc492f22b2125333dd952eb8779696c98bfd3508d63d73facc5 asterisk-addons-1.2.5-r1.ebuild 4416
+EBUILD asterisk-addons-1.2.5-r1.ebuild 4423 RMD160 f4a23a4e08568624a197610b0ebb5ea1cb6fe674 SHA1 92fb40f4ec171bff665ac43144afa22c4f956d47 SHA256 cf920d6f95484055c14ea2cdd24147d76cb07165a5d7a5848d4b9cef184d5c3b
+MD5 a29cd29fa7d918110dd45d3fb9f01d89 asterisk-addons-1.2.5-r1.ebuild 4423
+RMD160 f4a23a4e08568624a197610b0ebb5ea1cb6fe674 asterisk-addons-1.2.5-r1.ebuild 4423
+SHA256 cf920d6f95484055c14ea2cdd24147d76cb07165a5d7a5848d4b9cef184d5c3b asterisk-addons-1.2.5-r1.ebuild 4423
 EBUILD asterisk-addons-1.2.5.ebuild 4361 RMD160 ef44ca1ec94166bbfecdf61bcad9ad11ae7ccf1b SHA1 a3713bb052afb4754fd9674dab98ff8fbf197a84 SHA256 7647f11a3511105f1af418efe7f17df96b46b63e1ce2dab65c2e6ee57ec9a9f1
 MD5 db312fe2f4e84f81b01f856d4977887a asterisk-addons-1.2.5.ebuild 4361
 RMD160 ef44ca1ec94166bbfecdf61bcad9ad11ae7ccf1b asterisk-addons-1.2.5.ebuild 4361
 SHA256 7647f11a3511105f1af418efe7f17df96b46b63e1ce2dab65c2e6ee57ec9a9f1 asterisk-addons-1.2.5.ebuild 4361
-MISC ChangeLog 2768 RMD160 f7d07e21cff715b22d1b8f55cd000bc6b6c40192 SHA1 826bdc3b966ac5bc91674d83da5939448f08431a SHA256 2dbd67a4f07991a92ee44986989709db13ddfd267ff7523e9940ad9a57a0edd1
-MD5 0c8ab795e5b780828e0bb8f3a4c5b40c ChangeLog 2768
-RMD160 f7d07e21cff715b22d1b8f55cd000bc6b6c40192 ChangeLog 2768
-SHA256 2dbd67a4f07991a92ee44986989709db13ddfd267ff7523e9940ad9a57a0edd1 ChangeLog 2768
+MISC ChangeLog 2884 RMD160 d6fa0255184d0b170694889963bc18988d3ddc37 SHA1 38e833bf0c23322cda82cff6c959ccb656a75f68 SHA256 a2785463c2edc899ed81dcc90dc6e4b5491f3c603f1d6cd3936974a39e7d8a8c
+MD5 869c6bc35fd32f9816d1d81329e44735 ChangeLog 2884
+RMD160 d6fa0255184d0b170694889963bc18988d3ddc37 ChangeLog 2884
+SHA256 a2785463c2edc899ed81dcc90dc6e4b5491f3c603f1d6cd3936974a39e7d8a8c ChangeLog 2884
 MISC metadata.xml 248 RMD160 a989fff0cebc82a58a75fb3a2eec8da0712ad57e SHA1 10bea6cd152e9f0ecb627eaacc19980a9d5f5dc4 SHA256 d0e3ab77a8a7b859511b8d5fda83dc018351e6367724b097dcc13c4aa0a3ee6b
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
 RMD160 a989fff0cebc82a58a75fb3a2eec8da0712ad57e metadata.xml 248
@@ -61,10 +58,3 @@ SHA256 1de401169e2b01e625750da3f6ccd7614fd5ae3205bd3b0946977da51cff40cb files/di
 MD5 a1c2b7069cecd74d5541bc89c1378f4a files/digest-asterisk-addons-1.2.5-r1 506
 RMD160 094d6f93972c76edf847c09efd5fa628141b44b4 files/digest-asterisk-addons-1.2.5-r1 506
 SHA256 1de401169e2b01e625750da3f6ccd7614fd5ae3205bd3b0946977da51cff40cb files/digest-asterisk-addons-1.2.5-r1 506
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.3 (GNU/Linux)
-
-iD8DBQFF+BRP8zY1VwezZiERAg+iAJ9iqcxtnmVZvRFcTkwefOvLFKjxpACgoyzn
-pKxLe+FgtD7Sw3XqpM6K4Fs=
-=lJ9t
------END PGP SIGNATURE-----

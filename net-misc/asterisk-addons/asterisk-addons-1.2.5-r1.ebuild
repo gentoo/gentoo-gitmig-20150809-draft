@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.2.5-r1.ebuild,v 1.1 2007/03/14 15:25:31 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.2.5-r1.ebuild,v 1.2 2007/10/11 20:35:28 sbriesen Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -21,7 +21,7 @@ S=${WORKDIR}/${MY_P}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 DEPEND=">=net-misc/asterisk-1.2.0
 	mysql? ( virtual/mysql )"
