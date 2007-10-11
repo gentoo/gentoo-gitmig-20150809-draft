@@ -1,6 +1,16 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.131 2007/09/27 12:00:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.132 2007/10/11 22:54:16 eva Exp $
+
+  11 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  epiphany-2.16.3.ebuild, epiphany-2.18.2.ebuild, epiphany-2.18.3.ebuild:
+  fix quoting
+
+*epiphany-2.20.0 (11 Oct 2007)
+
+  11 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  +epiphany-2.20.0.ebuild:
+  bump to 2.20.0
 
   27 Sep 2007; Raúl Porcel <armin76@gentoo.org> epiphany-2.18.3.ebuild:
   alpha/ia64 stable wrt #193339

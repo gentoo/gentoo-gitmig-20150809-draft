@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.18.2.ebuild,v 1.9 2007/08/28 19:30:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.18.2.ebuild,v 1.10 2007/10/11 22:54:16 eva Exp $
 
 WANT_AUTOMAKE=1.9
 inherit eutils gnome2 multilib autotools
@@ -65,8 +65,8 @@ src_unpack() {
 	intltoolize --force || die
 
 	# Fix tests
-	echo "data/bme.desktop.in" >> ${S}/po/POTFILES.skip
-	echo "data/epiphany.desktop.in" >> ${S}/po/POTFILES.skip
+	echo "data/bme.desktop.in" >> "${S}"/po/POTFILES.skip
+	echo "data/epiphany.desktop.in" >> "${S}"/po/POTFILES.skip
 }
 
 src_compile() {
