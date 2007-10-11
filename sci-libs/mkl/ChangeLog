@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mkl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.16 2007/10/10 12:41:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.17 2007/10/11 16:48:28 bicatali Exp $
+
+  11 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> mkl-9.1.023.ebuild:
+  fixed lib->get_libdir for eselect bug workaround
 
 *mkl-9.1.023 (10 Oct 2007)
 

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cblas-reference
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.26 2007/10/10 12:31:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.27 2007/10/11 16:51:32 bicatali Exp $
+
+  11 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  cblas-reference-20030223-r4.ebuild:
+  fixed lib->get_libdir for eselect bug workaround
 
   10 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> -files/c-reference,
   -files/cblas-gentoo.patch, -files/eselect-reference,

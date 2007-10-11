@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.1 2007/10/10 12:41:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.2 2007/10/11 16:48:28 bicatali Exp $
 
 inherit eutils versionator toolchain-funcs fortran
 
@@ -293,7 +293,7 @@ pkg_postinst() {
 		local current_lib=$(eselect ${p} show | cut -d' ' -f2)
 		if [[ ${current_lib} == ${ESELECT_PROF} || -z ${current_lib} ]]; then
 			# work around eselect bug #189942
-			local configfile="${ROOT}"/etc/env.d/${p}/lib/config
+			local configfile="${ROOT}"/etc/env.d/${p}/$(get_libdir)/config
 			[[ -e ${configfile} ]] && rm -f ${configfile}
 			eselect ${p} set ${ESELECT_PROF}
 			elog "${p} has been eselected to ${ESELECT_PROF}"

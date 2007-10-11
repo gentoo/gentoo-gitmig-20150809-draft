@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.8 2007/10/10 12:31:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.9 2007/10/11 16:51:32 bicatali Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -51,7 +51,7 @@ pkg_postinst() {
 	local current_lib=$(eselect ${p} show | cut -d' ' -f2)
 	if [[ ${current_lib} == ${ESELECT_PROF} || -z ${current_lib} ]]; then
 		# work around eselect bug #189942
-		local configfile="${ROOT}"/etc/env.d/${p}/lib/config
+		local configfile="${ROOT}"/etc/env.d/${p}/$(get_libdir)/config
 		[[ -e ${configfile} ]] && rm -f ${configfile}
 		eselect ${p} set ${ESELECT_PROF}
 		elog "${p} has been eselected to ${ESELECT_PROF}"
