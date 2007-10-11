@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.0.ebuild,v 1.3 2007/07/14 08:37:07 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.0.ebuild,v 1.4 2007/10/11 13:20:56 hkbst Exp $
 
 inherit virtualx
 
@@ -17,12 +17,19 @@ DEPEND="dev-scheme/guile
 	=gnome-base/libglade-2*
 	>=x11-libs/gtkglarea-1.90"
 
+pkg_setup() {
+	if has_version =dev-scheme/guile-1.8*; then
+		local flags="deprecated"
+		built_with_use dev-scheme/guile ${flags} || die "guile must be built with \"${flags}\" use flag"
+	fi
+}
+
 src_test() {
 	Xemake check || die "tests failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install
+	make DESTDIR="${D}" install
 	dodoc README AUTHORS ChangeLog NEWS TODO
 	insinto /usr/share/doc/${PF}/examples
 	doins -r examples/
