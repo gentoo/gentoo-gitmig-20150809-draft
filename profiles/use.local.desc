@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3077 2007/10/10 20:47:04 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3078 2007/10/11 00:43:50 cla Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1517,6 +1517,7 @@ net-im/twinkle:zrtp - Enables use of secure rtp using the zrtp extension of GNU 
 net-irc/atheme:largenet - Enable support/tweaks for large networks
 net-irc/charybdis:smallnet - Enables support for smaller IRC networks
 net-irc/eiwic:rss - Enables support for RSS feeds
+net-irc/ezbounce:boost - Compile against boost libraries
 net-irc/inspircd:openssl - Build OpenSSL module
 net-irc/ircd-hybrid:contrib - Build contrib modules (eg. cloaking)
 net-irc/ngircd:ident - Enables support for libident

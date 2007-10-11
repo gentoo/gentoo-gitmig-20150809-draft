@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.708 2007/10/10 22:04:27 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.709 2007/10/11 00:43:50 cla Exp $
+
+  11 Oct 2007; Dawid Węgliński <cla@gentoo.org> use.local.desc:
+  Added boost flag for net-irc/ezbounce
 
   10 Oct 2007; Michael Marineau <marineam@gentoo.org> package.mask:
   Mask ck-sources
