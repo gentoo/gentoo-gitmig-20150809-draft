@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0_rc3_p4983.ebuild,v 1.9 2007/09/25 16:20:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0_rc3_p4983.ebuild,v 1.10 2007/10/11 18:19:43 lack Exp $
 
 inherit eutils autotools versionator
 
@@ -29,9 +29,9 @@ RDEPEND="x11-libs/libXpm
 	virtual/xft
 	truetype? ( media-libs/freetype )
 	imlib? ( >=media-libs/imlib2-1.2.0 )
-	!<x11-themes/fluxbox-styles-fluxmod-20040809-r1"
-DEPEND="!<=x11-misc/fluxconf-0.9.9
-	>=sys-devel/autoconf-2.52
+	!<x11-themes/fluxbox-styles-fluxmod-20040809-r1
+	!<=x11-misc/fluxconf-0.9.9"
+DEPEND=">=sys-devel/autoconf-2.52
 	nls? ( sys-devel/gettext )
 	x11-proto/xextproto
 	xinerama? ( x11-proto/xineramaproto )
