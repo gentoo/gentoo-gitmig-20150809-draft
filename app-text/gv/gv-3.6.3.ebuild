@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.3.ebuild,v 1.2 2007/07/22 10:21:01 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.3.ebuild,v 1.3 2007/10/11 03:17:44 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/gv/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libICE
@@ -44,5 +44,5 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	doicon src/gv_icon.xbm
 	make_desktop_entry gv "GhostView" /usr/share/pixmaps/gv_icon.xbm "Application;Graphics;Viewer;"
-	dodoc AUTHORS ChangeLog INSTALL README TODO
+	dodoc AUTHORS ChangeLog INSTALL README
 }
