@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ekiga
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ChangeLog,v 1.46 2007/10/10 16:56:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ChangeLog,v 1.47 2007/10/11 07:05:47 kingtaco Exp $
+
+  11 Oct 2007; Mike Doty <kingtaco@gentoo.org> ekiga-2.0.11.ebuild:
+  amd64 stable bug 193095
 
   10 Oct 2007; Jeroen Roovers <jer@gentoo.org> ekiga-2.0.11.ebuild:
   Stable for HPPA (bug #193095).
