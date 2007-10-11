@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/Cache-Memcached-1.23.ebuild,v 1.6 2007/10/06 05:43:59 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/Cache-Memcached-1.23.ebuild,v 1.7 2007/10/11 17:15:57 jer Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_TEST="do"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ppc ppc64 sh sparc ~sparc-fbsd x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc ~sparc-fbsd x86"
 IUSE=""
 
 DEPEND="!ia64? ( dev-perl/string-crc32 )
