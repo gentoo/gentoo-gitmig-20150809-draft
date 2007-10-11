@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ruby-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.27 2007/10/09 17:32:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.28 2007/10/11 13:44:42 pylon Exp $
+
+  11 Oct 2007; Lars Weiler <pylon@gentoo.org> ruby-mode-1.8.4.ebuild:
+  stable ppc, bug #195160
 
   09 Oct 2007; Raúl Porcel <armin76@gentoo.org> ruby-mode-1.8.4.ebuild:
   alpha stable wrt #195160
