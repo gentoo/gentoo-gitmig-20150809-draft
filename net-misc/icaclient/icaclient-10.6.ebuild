@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6.ebuild,v 1.1 2007/09/04 18:41:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6.ebuild,v 1.2 2007/10/11 16:22:39 opfer Exp $
 
 inherit eutils multilib rpm
 
@@ -12,7 +12,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
-RESTRICT="fetch strip"
+RESTRICT="fetch strip userpriv"
 
 QA_TEXTRELS="opt/ICAClient/VDSCARD.DLL
 	opt/ICAClient/TW1.DLL
@@ -22,7 +22,8 @@ QA_TEXTRELS="opt/ICAClient/VDSCARD.DLL
 	opt/ICAClient/VDCM.DLL
 	opt/ICAClient/libctxssl.so
 	opt/ICAClient/PDCRYPT2.DLL
-	opt/ICAClient/npica.so"
+	opt/ICAClient/npica.so
+	opt/ICAClient/VDSPMIKE.DLL"
 
 RDEPEND="virtual/libc
 	x86? (

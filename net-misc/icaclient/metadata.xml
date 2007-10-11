@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>wolf31o2@gentoo.org</email>
-  <name>Chris Gianelloni</name>
+  <email>opfer@gentoo.org</email>
+  <name>Christian Faulhammer</name>
 </maintainer>
 <longdescription>
 	ICAClient is a Linux client to a Citrix Metaframe Server.
