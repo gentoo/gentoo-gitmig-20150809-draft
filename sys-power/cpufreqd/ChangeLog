@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.50 2007/05/17 08:54:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.51 2007/10/11 05:57:00 tgall Exp $
+
+  11 Oct 2007; Tom Gall <tgall@gentoo.org> cpufreqd-2.2.1.ebuild:
+  added ~ppc64 bug #195191
 
   17 May 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning sys-power/cpufreqd directly to mobile at gentoo.org.
