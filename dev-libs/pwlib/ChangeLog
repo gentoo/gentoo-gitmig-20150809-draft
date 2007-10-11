@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.142 2007/10/11 09:40:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.143 2007/10/11 18:37:33 armin76 Exp $
+
+  11 Oct 2007; Raúl Porcel <armin76@gentoo.org> pwlib-1.10.10-r1.ebuild:
+  alpha/ia64/sparc stable wrt security #193095
 
   11 Oct 2007; Markus Rothe <corsair@gentoo.org> pwlib-1.10.10-r1.ebuild:
   Stable on ppc64; bug #193095
