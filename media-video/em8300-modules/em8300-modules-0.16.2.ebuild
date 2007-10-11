@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.16.2.ebuild,v 1.2 2007/07/10 13:40:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.16.2.ebuild,v 1.3 2007/10/11 19:54:18 zzam Exp $
 
 inherit eutils linux-mod
 
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}/.."
 	epatch "${FILESDIR}/${P}-pci-module-init.patch"
+	epatch "${FILESDIR}/${P}-kernel-2.6.23.patch"
 }
 
 src_compile() {
