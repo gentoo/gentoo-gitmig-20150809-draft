@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7794 2007/10/11 12:00:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7795 2007/10/11 16:26:19 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -243,10 +243,6 @@ app-emacs/speedbar
 # Denis Dupeyron <calchan@gentoo.org> (23 Sep 2007)
 # Masked for removal in 30 days as per bug #176962.
 net-print/hpijs
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (22 Sep 2007)
-# Masking this temporarily until I can figure out bug #189884.  Patches welcome.
-=net-misc/iceclient-10.6
 
 # Ulrich Mueller <ulm@gentoo.org> (22 Sep 2007)
 # Does not work with Emacs 22. Last upstream release as separate
