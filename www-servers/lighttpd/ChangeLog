@@ -1,6 +1,32 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.148 2007/09/13 15:14:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.149 2007/10/12 14:09:36 bangert Exp $
+
+  12 Oct 2007; Thilo Bangert <bangert@gentoo.org>
+  -files/1.4.13/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  -files/1.4.15/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  -files/1.4.15-r1/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  -files/lighttpd.initd-1.4.13-r1, -files/lighttpd.initd-1.4.13-r2,
+  -files/1.4.13/01_all_lighttpd-1.4.13-99cpu-fix.diff,
+  -files/1.4.11/01_all_r1046.mod_compress.c-fixes.diff,
+  -files/1.4.13/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  -files/1.4.15/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  -files/1.4.15-r1/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  -files/1.4.13/02_all_lighttpd-1.4.13-fcgi-auth-type.diff,
+  -files/1.4.11/02_all_r1057_fix_If-Modified-Since-ETag.diff,
+  -files/1.4.15-r1/07_all_lighttpd-1.4.15-duplicated_headers_with_folding_cr
+  ash.diff, -files/1.4.11/03_all_r1095_fix_stalling_SSL_POST_requests.diff,
+  -files/1.4.15-r1/08_all_lighttpd-1.4.15-mod_acces_bypass.diff,
+  -files/1.4.11/21_all_mod_scgi_segfault.diff,
+  -files/1.4.15-r1/09_all_lighttpd-1.4.15-mod_fastcgi_local_dos.diff,
+  -files/1.4.11/22_all_bug606_fix_SSI_echo.diff,
+  -files/1.4.15-r1/10_all_lighttpd-1.4.15-mod_scgi_crash.diff,
+  -files/1.4.11/23_all_mod_ssi_gcc-4.1.1_compile_fix.diff,
+  -lighttpd-1.4.11.ebuild, -lighttpd-1.4.13.ebuild,
+  -lighttpd-1.4.13-r1.ebuild, -lighttpd-1.4.13-r2.ebuild,
+  -lighttpd-1.4.13-r3.ebuild, -lighttpd-1.4.15.ebuild,
+  -lighttpd-1.4.15-r1.ebuild:
+  security cleanup - bug #191912 and others
 
   13 Sep 2007; Jeroen Roovers <jer@gentoo.org> lighttpd-1.4.18.ebuild:
   Stable for SPARC (bug #191912).
