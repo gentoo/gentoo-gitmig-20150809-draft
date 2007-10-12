@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 1.4.16/03_all_lighttpd-1.4.11-errorlog-pipe.diff 5267 RMD160 c23c816fcddbc99758a0426fc11f70677dbc06e9 SHA1 22e0d05d49cecb652d1250ac66de13fdf228cce4 SHA256 b37042549247ca2d83581aa3bcd1a5356c37015000711cecafda05aa6d6a15c4
 MD5 34d6720749f96327d311661a02886a65 files/1.4.16/03_all_lighttpd-1.4.11-errorlog-pipe.diff 5267
 RMD160 c23c816fcddbc99758a0426fc11f70677dbc06e9 files/1.4.16/03_all_lighttpd-1.4.11-errorlog-pipe.diff 5267
@@ -34,10 +37,10 @@ AUX conf/mod_fastcgi.conf-1.4.13-r2 687 RMD160 f165f27a08f35c4792bd332be3a04370b
 MD5 f3363e39832f1b6678468b482d121afb files/conf/mod_fastcgi.conf-1.4.13-r2 687
 RMD160 f165f27a08f35c4792bd332be3a04370b69152e3 files/conf/mod_fastcgi.conf-1.4.13-r2 687
 SHA256 d1adc1358b5d9e85353caa2e706bfa231d145dd59c075cdcb3f818b3cb5d722e files/conf/mod_fastcgi.conf-1.4.13-r2 687
-AUX lighttpd-1.3.10.initd 666 RMD160 b665f80ae5b58bd0c8d42793d28bc40443923605 SHA1 490cc2486fd68d78c81b0d0abf6ef79f9ee06270 SHA256 f4a3170795681ec8101d8048df1e5d23b690b6ca1a1e702722fa1f6c58c59731
-MD5 7fdb430fc7240e6e6a9078e4e57f6322 files/lighttpd-1.3.10.initd 666
-RMD160 b665f80ae5b58bd0c8d42793d28bc40443923605 files/lighttpd-1.3.10.initd 666
-SHA256 f4a3170795681ec8101d8048df1e5d23b690b6ca1a1e702722fa1f6c58c59731 files/lighttpd-1.3.10.initd 666
+AUX lighttpd-1.3.10.initd 664 RMD160 cacd5e5cb80de790712ea0721d247fe2c0b1abcc SHA1 067be44a37828155bf80da043ed7487bc9e2bfe5 SHA256 c6799e8ec20a7295d44dba969db99864cbb53ab72aaf83cdd3128cb9d2c602ce
+MD5 e91cc6e27dbd4b9a12f163ee500fc68b files/lighttpd-1.3.10.initd 664
+RMD160 cacd5e5cb80de790712ea0721d247fe2c0b1abcc files/lighttpd-1.3.10.initd 664
+SHA256 c6799e8ec20a7295d44dba969db99864cbb53ab72aaf83cdd3128cb9d2c602ce files/lighttpd-1.3.10.initd 664
 AUX lighttpd-1.3.11-gentoo.diff 1784 RMD160 562fa1c98657afebbdededa9071aabbbc7ce973e SHA1 5540a55a5ff0c4414e7067bd1f62d45d082bfa1f SHA256 e383430afcd4bc2b055a395664e78428320d2b2d8069f0e5f65c1bef1034417f
 MD5 8648177a5f9a79cd4ba0eaaa4e769fdc files/lighttpd-1.3.11-gentoo.diff 1784
 RMD160 562fa1c98657afebbdededa9071aabbbc7ce973e files/lighttpd-1.3.11-gentoo.diff 1784
@@ -58,14 +61,14 @@ AUX lighttpd.confd 315 RMD160 c2d9c166a1209b853b400b5d21627f5d3f2d5216 SHA1 a095
 MD5 0dede109282bfe685bdec6b35f0e4b6b files/lighttpd.confd 315
 RMD160 c2d9c166a1209b853b400b5d21627f5d3f2d5216 files/lighttpd.confd 315
 SHA256 94f69a173dc26610a43532474230537b9bc31ec846fb9f94cb72765f125edf87 files/lighttpd.confd 315
-AUX lighttpd.initd 1164 RMD160 5db761cd95781c457035a0b03459c22554b54dab SHA1 ee426c105cd5e228a7428b197bfa8ca47a8256fe SHA256 823ed1ae9b0dde0939285761b8af547116c51b597c1488dbd3f45a934e291213
-MD5 063fe5cdf400eebf73c263188f76f03e files/lighttpd.initd 1164
-RMD160 5db761cd95781c457035a0b03459c22554b54dab files/lighttpd.initd 1164
-SHA256 823ed1ae9b0dde0939285761b8af547116c51b597c1488dbd3f45a934e291213 files/lighttpd.initd 1164
-AUX lighttpd.initd-1.4.13-r3 1444 RMD160 547b4f38f00dac4ea695767f68a35a6220f5cdea SHA1 7aa79dc2fd4b98203d60da7be17078c1be1cb5bd SHA256 edfd7fbdbef984f4f4d998d42fc3ee104f90b06cf42321b945b67624f269bad1
-MD5 e61848afd0aa10efd184143fd31a142c files/lighttpd.initd-1.4.13-r3 1444
-RMD160 547b4f38f00dac4ea695767f68a35a6220f5cdea files/lighttpd.initd-1.4.13-r3 1444
-SHA256 edfd7fbdbef984f4f4d998d42fc3ee104f90b06cf42321b945b67624f269bad1 files/lighttpd.initd-1.4.13-r3 1444
+AUX lighttpd.initd 1162 RMD160 9a1afa2777428a27857e9e587c1e94457b95c6eb SHA1 e1208f1906cf089e8bac00d0271b4691e9922f60 SHA256 8bbe703055f65742158ceeed7725a914d2fa4059e720b9983fa5e647626111aa
+MD5 8ff031d9ffcbbcdc040a6f212a611cc9 files/lighttpd.initd 1162
+RMD160 9a1afa2777428a27857e9e587c1e94457b95c6eb files/lighttpd.initd 1162
+SHA256 8bbe703055f65742158ceeed7725a914d2fa4059e720b9983fa5e647626111aa files/lighttpd.initd 1162
+AUX lighttpd.initd-1.4.13-r3 1442 RMD160 17ce31a67f06f22b351ba6abfd868925eb5ad85f SHA1 58678d19bb60fd4e52a55381d9277ca472cbe805 SHA256 a4865824084d952050a1edc93bdffcbca33532d69268e13e96bb86c1a9a4bae6
+MD5 6910842e8ba496e8aa984ab30a46eb72 files/lighttpd.initd-1.4.13-r3 1442
+RMD160 17ce31a67f06f22b351ba6abfd868925eb5ad85f files/lighttpd.initd-1.4.13-r3 1442
+SHA256 a4865824084d952050a1edc93bdffcbca33532d69268e13e96bb86c1a9a4bae6 files/lighttpd.initd-1.4.13-r3 1442
 AUX lighttpd.logrotate 487 RMD160 2edb8b4abf75031af0a3b4182efb5b589dfa0d3c SHA1 24e1b048d7be5520ca5ef8ce31b55df13cc8d72b SHA256 503ee1cd454e2c0f9a212ef60dc8321893eda06ccf721ecbe94d189a09e0bc6c
 MD5 ad091c9157134890499f26d170352c9f files/lighttpd.logrotate 487
 RMD160 2edb8b4abf75031af0a3b4182efb5b589dfa0d3c files/lighttpd.logrotate 487
@@ -110,3 +113,10 @@ SHA256 856932c18c71a7324290166a6e16bfb28d337ab9aa1c4ba5c990087c2dc7a3ff files/di
 MD5 5a83e2ede2ef46ec8480a2a7e13e5cd2 files/digest-lighttpd-1.4.18 250
 RMD160 77cf7429b639aaf1b1b7fa14bf7ff29a3c69a062 files/digest-lighttpd-1.4.18 250
 SHA256 f3d4f1fcb4d07b2aecf7d9c3c5e7e4d58eaa8f0f9e227b32c27f774828e06578 files/digest-lighttpd-1.4.18 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHD98fI1lqEGTUzyQRAh/lAKCLZLgwCx6HHkFr5m3QT1badvKXZQCePPfQ
+XKXLX9ff4qbgz4wrAhV7J5I=
+=Sp9k
+-----END PGP SIGNATURE-----
