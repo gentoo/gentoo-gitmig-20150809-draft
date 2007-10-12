@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.7.5.2013-r1.ebuild,v 1.2 2007/06/28 01:28:08 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.7.5.2013-r1.ebuild,v 1.3 2007/10/12 08:44:43 remi Exp $
 
 inherit mono fdo-mime eutils
 
@@ -17,7 +17,7 @@ IUSE="doc examples"
 DEPEND=">=dev-lang/mono-1.1.4
 		dev-dotnet/nant
 		x11-misc/shared-mime-info
-		>=x11-libs/gtksourceview-1.0.1"
+		=x11-libs/gtksourceview-1*"
 
 src_unpack() {
 	if has_version "dev-lang/boo"; then
