@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-2.0.2.ebuild,v 1.6 2007/07/12 02:52:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-2.0.2.ebuild,v 1.7 2007/10/12 09:25:20 remi Exp $
 
 inherit gnome2
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.4
 	>=gnome-base/libbonobo-2
 	>=gnome-base/libglade-2
 	>=dev-libs/libxml2-2
-	>=x11-libs/gtksourceview-1
+	=x11-libs/gtksourceview-1*
 	>=net-misc/curl-7.12.0
 	spell? ( >=app-text/gtkspell-2.0 )
 	rhythmbox? ( media-sound/rhythmbox )"
