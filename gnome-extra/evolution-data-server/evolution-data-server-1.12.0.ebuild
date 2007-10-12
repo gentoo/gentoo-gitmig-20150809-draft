@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.0.ebuild,v 1.2 2007/09/30 21:45:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.0.ebuild,v 1.3 2007/10/12 14:28:30 eva Exp $
 
 inherit db-use eutils flag-o-matic gnome2 autotools
 
@@ -40,8 +40,6 @@ DEPEND="${RDEPEND}
 
 DOCS="ChangeLog MAINTAINERS NEWS TODO"
 
-RESTRICT="confcache"
-
 pkg_setup() {
 	G2CONF="$(use_with ldap openldap)       \
 		$(use_with kerberos krb5 /usr)      \
@@ -68,7 +66,7 @@ src_unpack() {
 	gnome2_src_unpack
 
 	# Fix what ?
-	epatch ${FILESDIR}/${PN}-1.2.0-gentoo_etc_services.patch
+	epatch "${FILESDIR}"/${PN}-1.2.0-gentoo_etc_services.patch
 
 	# Fix broken libdb build
 	epatch "${FILESDIR}"/${PN}-1.11.3-no-libdb.patch
@@ -121,7 +119,7 @@ src_compile() {
 	# Use NSS/NSPR only if 'ssl' is enabled.
 	if use ssl ; then
 		sed -i -e "s|mozilla-nss|nss|
-		s|mozilla-nspr|nspr|" ${S}/configure
+		s|mozilla-nspr|nspr|" "${S}"/configure
 		G2CONF="${G2CONF} --enable-nss=yes"
 	else
 		G2CONF="${G2CONF} --without-nspr-libs --without-nspr-includes \

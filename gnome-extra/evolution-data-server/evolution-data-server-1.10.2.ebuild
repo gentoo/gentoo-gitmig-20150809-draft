@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.10.2.ebuild,v 1.11 2007/08/28 18:10:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.10.2.ebuild,v 1.12 2007/10/12 14:28:30 eva Exp $
 
 inherit db-use eutils flag-o-matic gnome2 autotools
 
@@ -67,7 +67,7 @@ src_unpack() {
 	gnome2_src_unpack
 
 	# Fix what ?
-	epatch ${FILESDIR}/${PN}-1.2.0-gentoo_etc_services.patch
+	epatch "${FILESDIR}"/${PN}-1.2.0-gentoo_etc_services.patch
 
 	# Fix broken libdb build
 	epatch "${FILESDIR}"/${PN}-1.7.3-libdb.patch
@@ -120,7 +120,7 @@ src_compile() {
 	# Use NSS/NSPR only if 'ssl' is enabled.
 	if use ssl ; then
 		sed -i -e "s|mozilla-nss|nss|
-		s|mozilla-nspr|nspr|" ${S}/configure
+		s|mozilla-nspr|nspr|" "${S}"/configure
 		G2CONF="${G2CONF} --enable-nss=yes"
 	else
 		G2CONF="${G2CONF} --without-nspr-libs --without-nspr-includes \
