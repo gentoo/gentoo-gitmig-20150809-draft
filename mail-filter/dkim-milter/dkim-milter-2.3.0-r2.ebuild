@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.3.0-r2.ebuild,v 1.3 2007/10/11 13:29:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.3.0-r2.ebuild,v 1.4 2007/10/12 14:06:36 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/dkim-milter/${P}.tar.gz"
 LICENSE="Sendmail-Open-Source"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="diffheaders"
+IUSE="ipv6 diffheaders"
 
 RDEPEND="dev-libs/openssl
 	>=sys-libs/db-3.2
@@ -34,7 +34,10 @@ src_unpack() {
 	cp site.config.m4.dist devtools/Site/site.config.m4 || \
 		die "failed to generate site.config.m4"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
-	sed -i -e "s:@@CFLAGS@@:${CFLAGS}:" \
+
+	local ENVDEF=""
+	use ipv6 && ENVDEF="${ENVDEF} -DNETINET6"
+	sed -i -e "s:@@CFLAGS@@:${CFLAGS}:" -e "s:@@ENVDEF@@:${ENVDEF}:" \
 		devtools/Site/site.config.m4
 
 	use diffheaders && epatch "${FILESDIR}/${P}-diffheaders.patch"

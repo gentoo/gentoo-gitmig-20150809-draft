@@ -1,10 +1,11 @@
 diff -Nru dkim-milter-2.3.0.orig/devtools/Site/site.config.m4 dkim-milter-2.3.0/devtools/Site/site.config.m4
---- dkim-milter-2.3.0.orig/devtools/Site/site.config.m4	2007-10-10 06:35:16.000000000 +0300
-+++ dkim-milter-2.3.0/devtools/Site/site.config.m4	2007-10-10 06:38:32.000000000 +0300
-@@ -6,18 +6,21 @@
+--- dkim-milter-2.3.0.orig/devtools/Site/site.config.m4	2007-10-12 17:01:00.000000000 +0300
++++ dkim-milter-2.3.0/devtools/Site/site.config.m4	2007-10-12 17:01:35.000000000 +0300
+@@ -6,18 +6,22 @@
  dnl values described in devtools/README by setting your preferred values
  dnl in this file.
  
++define(`confENVDEF', `@@ENVDEF@@')
 +dnl man build is broken
 +define(`confNO_MAN_BUILD',`')
 +
@@ -25,7 +26,7 @@ diff -Nru dkim-milter-2.3.0.orig/devtools/Site/site.config.m4 dkim-milter-2.3.0/
  dnl 
  dnl libar normally uses res_init() or res_ninit() to load the contents
  dnl of resolv.conf for its use.  If neither of these work on your system
-@@ -82,7 +85,7 @@
+@@ -82,7 +86,7 @@
  dnl APPENDDEF(`confENVDEF', `-D_FFR_REQUIRED_HEADERS ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECT_CANONICALIZATION ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECT_SIGN_HEADERS ')
@@ -36,8 +37,8 @@ diff -Nru dkim-milter-2.3.0.orig/devtools/Site/site.config.m4 dkim-milter-2.3.0/
  
 diff -Nru dkim-milter-2.3.0.orig/dkim-filter/dkim-filter.conf.sample dkim-milter-2.3.0/dkim-filter/dkim-filter.conf.sample
 --- dkim-milter-2.3.0.orig/dkim-filter/dkim-filter.conf.sample	2007-09-21 01:06:01.000000000 +0300
-+++ dkim-milter-2.3.0/dkim-filter/dkim-filter.conf.sample	2007-10-10 14:28:16.000000000 +0300
-@@ -20,13 +18,6 @@
++++ dkim-milter-2.3.0/dkim-filter/dkim-filter.conf.sample	2007-10-12 17:01:24.000000000 +0300
+@@ -20,13 +20,6 @@
  
  # AutoRestart		No
  
@@ -51,7 +52,7 @@ diff -Nru dkim-milter-2.3.0.orig/dkim-filter/dkim-filter.conf.sample dkim-milter
  ##  BodyLengths { yes | no }
  ##  	default "no"
  ##
-@@ -74,7 +65,7 @@
+@@ -74,7 +67,7 @@
  ##  Specify for which domain(s) signing should be done.  No default; must
  ##  be specified for signing.
  
@@ -60,7 +61,7 @@ diff -Nru dkim-milter-2.3.0.orig/dkim-filter/dkim-filter.conf.sample dkim-milter
  
  ##  ExternalIgnoreList filename
  ##
-@@ -89,7 +80,7 @@
+@@ -89,7 +82,7 @@
  ##  Specifies the path to the private key to use when signing.  Ignored if
  ##  Keylist is set.  No default; must be specified for signing.
  
@@ -69,7 +70,7 @@ diff -Nru dkim-milter-2.3.0.orig/dkim-filter/dkim-filter.conf.sample dkim-milter
  
  ##  KeyList filename
  ##
-@@ -106,7 +97,7 @@
+@@ -106,7 +99,7 @@
  ##  as the beginning of a comment.  See dkim-filter.conf(5) for more
  ##  information.
  
@@ -78,7 +79,7 @@ diff -Nru dkim-milter-2.3.0.orig/dkim-filter/dkim-filter.conf.sample dkim-milter
  
  ##  InternalHosts filename
  ##
-@@ -114,7 +105,7 @@
+@@ -114,7 +107,7 @@
  ##  hosts from which mail should be signed rather than verified.
  ##  Automatically contains 127.0.0.1.  See man page for file format.
  
@@ -87,7 +88,7 @@ diff -Nru dkim-milter-2.3.0.orig/dkim-filter/dkim-filter.conf.sample dkim-milter
  
  ##  MacroList macro[=value][,...]
  ##
-@@ -177,22 +168,6 @@
+@@ -177,22 +170,6 @@
  
  # PeerList		filename
  
@@ -110,7 +111,7 @@ diff -Nru dkim-milter-2.3.0.orig/dkim-filter/dkim-filter.conf.sample dkim-milter
  ##  Quarantine { yes | no }
  ##  	default "no"
  ##
-@@ -267,7 +242,7 @@
+@@ -267,7 +244,7 @@
  ##  inet:port			to listen on all interfaces
  ##  local:/path/to/socket	to listen on a UNIX domain socket
  
@@ -119,7 +120,7 @@ diff -Nru dkim-milter-2.3.0.orig/dkim-filter/dkim-filter.conf.sample dkim-milter
  
  ##  SubDomains { yes | no }
  ##  	default "no"
-@@ -296,7 +271,7 @@
+@@ -296,7 +273,7 @@
  ##  Change to user "userid" before starting normal operation?  May include
  ##  a group ID as well, separated from the userid by a colon.
  
@@ -128,7 +129,7 @@ diff -Nru dkim-milter-2.3.0.orig/dkim-filter/dkim-filter.conf.sample dkim-milter
  
  ##  UseSSPDeny { yes | no }
  ##  	default "no"
-@@ -314,3 +289,10 @@
+@@ -314,3 +291,10 @@
  ##  messages it has processed.
  
  # X-Header		No
