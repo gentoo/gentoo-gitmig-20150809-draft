@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.358 2007/10/11 02:07:09 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.359 2007/10/12 18:29:12 fmccor Exp $
+
+  12 Oct 2007; Ferris McCormick <fmccor@gentoo.org> udev-115-r1.ebuild:
+  sparc stable --- Bug #195289 --- thanks Jorge.
 
   11 Oct 2007; Lars Weiler <pylon@gentoo.org> udev-115-r1.ebuild:
   stable ppc, bug #195289
