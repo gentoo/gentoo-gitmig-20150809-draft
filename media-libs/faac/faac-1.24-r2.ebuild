@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24-r2.ebuild,v 1.6 2007/02/28 16:09:18 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24-r2.ebuild,v 1.7 2007/10/12 22:31:57 aballier Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -26,7 +26,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-faad.patch"
 	epatch "${FILESDIR}/${P}-tracknumber.patch"
