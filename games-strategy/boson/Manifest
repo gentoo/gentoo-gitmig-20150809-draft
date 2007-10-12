@@ -1,15 +1,3 @@
-AUX boson-0.11-gcc41.patch 240 RMD160 db18c4c5d38f0b7e3bd8c9ca31f1c1b6df85079d SHA1 454533f1bcb1a3aed1478ee8612928a6b7e5d32f SHA256 f56dfd2d8d552da25abb4f4e015f8ec4bacff213fac836dfd2c93b3a235d30d5
-MD5 aea34d1ddf68da8bb7cbc3d4974062a4 files/boson-0.11-gcc41.patch 240
-RMD160 db18c4c5d38f0b7e3bd8c9ca31f1c1b6df85079d files/boson-0.11-gcc41.patch 240
-SHA256 f56dfd2d8d552da25abb4f4e015f8ec4bacff213fac836dfd2c93b3a235d30d5 files/boson-0.11-gcc41.patch 240
-AUX boson-0.11-install.patch 366 RMD160 92dacdf1231b27543ec604ed13a6e74ce6b98b78 SHA1 0dcac35c4cce552ced9ed7de96bae6d2d0e562a2 SHA256 c35dddbbe1bd7f3214eb4551a5a9eb347fa215b56fb0eafc1e9fcf1322d3d5f8
-MD5 1cf14b28f3ae56002b15c0b43e522e05 files/boson-0.11-install.patch 366
-RMD160 92dacdf1231b27543ec604ed13a6e74ce6b98b78 files/boson-0.11-install.patch 366
-SHA256 c35dddbbe1bd7f3214eb4551a5a9eb347fa215b56fb0eafc1e9fcf1322d3d5f8 files/boson-0.11-install.patch 366
-AUX boson-0.11-openal.patch 416 RMD160 cdd92f0717d54cf241ea29f719513a34eb9ab594 SHA1 3c65bdbad6319b6b61afcf6dd7cbea7e61cc7a12 SHA256 884147149cc629343f2b590c7452b3750e980b71c6b147f38e34c788cecdcfc0
-MD5 38bcc44aae92550840dce3e1cbb0645e files/boson-0.11-openal.patch 416
-RMD160 cdd92f0717d54cf241ea29f719513a34eb9ab594 files/boson-0.11-openal.patch 416
-SHA256 884147149cc629343f2b590c7452b3750e980b71c6b147f38e34c788cecdcfc0 files/boson-0.11-openal.patch 416
 AUX boson-0.13-cmake.patch 385 RMD160 3ecdd573bf66d13001593bc3d16afe0e05ac61ea SHA1 34267b3573fd274e7fe9a621405228d8e3096378 SHA256 79da18bfe72053691ae83bc24f92bc07dbe383446c18ce68c289af08d3d4e792
 MD5 bc2fd9af88159a81fb92364615e899d3 files/boson-0.13-cmake.patch 385
 RMD160 3ecdd573bf66d13001593bc3d16afe0e05ac61ea files/boson-0.13-cmake.patch 385
@@ -18,12 +6,7 @@ AUX boson-0.13-linux-headers.patch 441 RMD160 ec2f2f002fade87cb0a3ceb7dde73bf55e
 MD5 f0de54d169ceb71d2df4f0d4ebf998e5 files/boson-0.13-linux-headers.patch 441
 RMD160 ec2f2f002fade87cb0a3ceb7dde73bf55e934e2f files/boson-0.13-linux-headers.patch 441
 SHA256 2c22b638d4ab577d02109c1fd8b3b96e2ebb0b2595bf6cad7518e4979866f0f0 files/boson-0.13-linux-headers.patch 441
-DIST boson-all-0.11.tar.bz2 34512377 RMD160 4b5e857287778bf62187083d2ba3c545844dda0f SHA1 bf0977ed82febb227cba1a36d7887463fe99194c SHA256 e8c0ac944bb1fd3cb74b1a66f47e73c3ca26ccb91a5f055256aa6d9e9d9d88ae
 DIST boson-all-0.13.tar.bz2 37044878 RMD160 ea5cb6faa7cb057292535743e78e6b214926626d SHA1 d6cf208722553fb9feec4fe4e853a51534953fda SHA256 d58fc2b4be93abb29300bcf68e26e383be0734269ecc16a425cca9e55809b8d1
-EBUILD boson-0.11-r1.ebuild 881 RMD160 7cc4c66fc7adb929359aa156e9f4074291e4cad6 SHA1 840f85ecec2e81a3e782b8a09f819fd98e2509f7 SHA256 2b5aad2d7bcf8dee0d601f15d00e18247bf033ae8a88b086ddd424cca997b6eb
-MD5 ce51c8bd62766507156fe72d4fd28b0d boson-0.11-r1.ebuild 881
-RMD160 7cc4c66fc7adb929359aa156e9f4074291e4cad6 boson-0.11-r1.ebuild 881
-SHA256 2b5aad2d7bcf8dee0d601f15d00e18247bf033ae8a88b086ddd424cca997b6eb boson-0.11-r1.ebuild 881
 EBUILD boson-0.13.ebuild 1375 RMD160 1ea371498394b9cdbce5dafc8e7a682bd09d66c8 SHA1 bc5b34ef690730f2f406c181e10956ace00e6ea3 SHA256 1e6441c5bfd2d288fd8252b35d9b1011570ef47da04593ea31c04cc38a1191b1
 MD5 13ff68027d3f84c582379b00bb5400c6 boson-0.13.ebuild 1375
 RMD160 1ea371498394b9cdbce5dafc8e7a682bd09d66c8 boson-0.13.ebuild 1375
@@ -36,9 +19,6 @@ MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be525
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 f31d9d51d335af48a2f4ce3edda298d3 files/digest-boson-0.11-r1 253
-RMD160 e00312b7087bce3ba6745408f6b176e02d93b207 files/digest-boson-0.11-r1 253
-SHA256 089520f5dd36557172d7fb7def832dafccc0f8841b70f9f0029904492f54a359 files/digest-boson-0.11-r1 253
 MD5 984e24bd31a06d3e3e5949a991bd2b3e files/digest-boson-0.13 253
 RMD160 367b8d00f7ad7aae00e9c1646e0703a2b76066e2 files/digest-boson-0.13 253
 SHA256 34badc4b3e11421e417c0d1c1f53d888ec3781571e6cd4d7fca4991a9b8d9134 files/digest-boson-0.13 253
