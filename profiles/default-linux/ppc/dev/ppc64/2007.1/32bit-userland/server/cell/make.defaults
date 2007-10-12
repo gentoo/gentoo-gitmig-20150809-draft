@@ -1,0 +1,9 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc64/2007.1/32bit-userland/server/cell/make.defaults,v 1.1 2007/10/12 07:26:03 tgall Exp $
+
+CFLAGS="-O2 -pipe -mtune=970 -mcpu=970 -mabi=altivec"
+CXXFLAGS=${CFLAGS}
+
+STAGE1_USE="altivec gcc64 nptl nptlonly unicode"
+USE="${STAGE1_USE} ${USE}"
