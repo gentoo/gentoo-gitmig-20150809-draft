@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snortsam
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.27 2007/10/09 17:56:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.28 2007/10/12 00:48:30 pylon Exp $
+
+  12 Oct 2007; Lars Weiler <pylon@gentoo.org> snortsam-2.50-r1.ebuild:
+  stable ppc, bug #191519
 
   09 Oct 2007; Raúl Porcel <armin76@gentoo.org> snortsam-2.50-r1.ebuild:
   Re-add ~sparc wrt #191519
