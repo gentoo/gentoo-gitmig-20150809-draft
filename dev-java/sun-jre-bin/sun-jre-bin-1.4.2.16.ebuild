@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.16.ebuild,v 1.3 2007/10/05 10:35:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.16.ebuild,v 1.4 2007/10/12 00:14:43 wltjr Exp $
 
 inherit eutils pax-utils java-vm-2
 
@@ -57,8 +57,8 @@ src_unpack() {
 	./install.sfx || die
 	rm install.sfx
 
-	if [ -f ${S}/lib/unpack ]; then
-		UNPACK_CMD=${S}/lib/unpack
+	if [ -f "${S}"/lib/unpack ]; then
+		UNPACK_CMD="${S}"/lib/unpack
 		chmod +x $UNPACK_CMD
 		sed -i 's#/tmp/unpack.log#/dev/null\x00\x00\x00\x00\x00\x00#g' $UNPACK_CMD
 		local PACKED_JARS="lib/rt.jar lib/jsse.jar lib/charsets.jar \
@@ -67,7 +67,7 @@ src_unpack() {
 			PACK_FILE=${S}/`dirname $i`/`basename $i .jar`.pack
 			if [ -f ${PACK_FILE} ]; then
 				echo "	unpacking: $i"
-				$UNPACK_CMD ${PACK_FILE} ${S}/$i
+				$UNPACK_CMD ${PACK_FILE} "${S}"/$i
 				rm -f ${PACK_FILE}
 			fi
 		done

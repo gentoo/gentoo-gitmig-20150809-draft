@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.03.ebuild,v 1.3 2007/10/05 10:35:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.03.ebuild,v 1.4 2007/10/12 00:14:43 wltjr Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
@@ -22,7 +22,7 @@ SRC_URI="x86? ( ${URL_BASE}/${X86_AT} )
 		amd64? ( ${URL_BASE}/${AMD64_AT} )"
 SLOT="1.6"
 LICENSE="dlj-1.1"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 RESTRICT="strip"
 IUSE="X alsa nsplugin"
 
@@ -65,7 +65,7 @@ src_install() {
 
 	# Set PaX markings on all JDK/JRE executables to allow code-generation on
 	# the heap by the JIT compiler.
-	pax-mark m $(list-paxables ${S}/bin/*)
+	pax-mark m $(list-paxables "${S}"/bin/*)
 
 	# only X86 has the plugin and javaws
 	use x86 && dirs="${dirs} javaws plugin"
