@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc5.ebuild,v 1.1 2007/10/11 15:56:40 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc5.ebuild,v 1.2 2007/10/12 06:46:05 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -163,7 +163,7 @@ pkg_postinst() {
 	for x in master.passwd passwd shadow group fstab ; do
 		[ -e "${ROOT}etc/${x}" ] && continue
 		[ -e "${ROOT}usr/share/baselayout/${x}" ] || continue
-		cp -p "${ROOT}usr/share/baselayout/${x}" ${ROOT}etc
+		cp -p "${ROOT}usr/share/baselayout/${x}" "${ROOT}"etc
 	done
 
 	# We need to copy svcdir if upgrading
