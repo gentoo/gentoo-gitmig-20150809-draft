@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.2.ebuild,v 1.8 2007/07/11 19:58:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.2.ebuild,v 1.9 2007/10/12 02:37:36 wltjr Exp $
 
 inherit eutils java-pkg-2
 
@@ -51,5 +51,5 @@ src_install() {
 	use doc && java-pkg_dohtml -r dist/doc/api
 
 	insinto /usr/share/java-config-2/compiler
-	newins ${FILESDIR}/compiler-settings-${SLOT} ecj-${SLOT}
+	newins "${FILESDIR}"/compiler-settings-${SLOT} ecj-${SLOT}
 }

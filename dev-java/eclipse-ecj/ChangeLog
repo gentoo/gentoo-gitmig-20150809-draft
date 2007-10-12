@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.22 2007/10/12 02:32:26 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.23 2007/10/12 02:37:36 wltjr Exp $
+
+  12 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  eclipse-ecj-3.1-r13.ebuild, eclipse-ecj-3.2.ebuild,
+  eclipse-ecj-3.2.2.ebuild, eclipse-ecj-3.3.0.ebuild,
+  eclipse-ecj-3.3.0-r1.ebuild:
+  QA fixed copyright, added quotes.
 
   12 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   eclipse-ecj-3.3.0-r1.ebuild:

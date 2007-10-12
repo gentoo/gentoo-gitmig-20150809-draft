@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.3.0.ebuild,v 1.1 2007/07/27 13:01:38 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.3.0.ebuild,v 1.2 2007/10/12 02:37:36 wltjr Exp $
 
 inherit eutils java-utils-2
 
@@ -23,7 +23,7 @@ DEPEND=">=virtual/jdk-1.4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# own package
 	rm -f org/eclipse/jdt/core/JDTCompilerAdapter.java
@@ -34,7 +34,7 @@ src_unpack() {
 		org/eclipse/jdt/internal/compiler/apt/
 
 	# gcj feature
-	epatch ${FILESDIR}/${P}-gcj.patch
+	epatch "${FILESDIR}"/${P}-gcj.patch
 }
 
 src_compile() {
@@ -45,7 +45,7 @@ src_compile() {
 
 	einfo "bootstrapping ${MY_PN} with javac"
 
-	cd ${S}/bootstrap
+	cd "${S}"/bootstrap
 	${javac} $(find org/ -name '*.java') || die "${MY_PN} bootstrap failed!"
 
 	find org/ -name '*.class' -o -name '*.properties' -o -name '*.rsc' | \
@@ -53,7 +53,7 @@ src_compile() {
 
 	einfo "build ${MY_PN} with bootstrapped ${MY_PN}"
 
-	cd ${S}
+	cd "${S}"
 	${java} -classpath bootstrap/${MY_PN}.jar \
 		org.eclipse.jdt.internal.compiler.batch.Main -encoding ISO-8859-1 org \
 		|| die "${MY_PN} build failed!"
@@ -65,7 +65,7 @@ src_install() {
 	java-pkg_dojar ${MY_PN}.jar
 
 	exeinto /usr/bin
-	doexe ${FILESDIR}/${MY_PN}-${SLOT}
+	doexe "${FILESDIR}"/${MY_PN}-${SLOT}
 }
 
 pkg_postinst() {
