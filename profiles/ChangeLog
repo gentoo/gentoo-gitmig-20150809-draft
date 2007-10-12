@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.713 2007/10/12 07:51:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.714 2007/10/12 08:34:54 opfer Exp $
+
+  12 Oct 2007; Christian Faulhammer <opfer@gentoo.org> use.desc:
+  change description of apache2 USE flag...there is no Apache 1.x in the tree
+  anymore
 
   12 Oct 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Mask =emacs-cvs-23.0.0*, CVS snapshots of unicode-2 branch.
