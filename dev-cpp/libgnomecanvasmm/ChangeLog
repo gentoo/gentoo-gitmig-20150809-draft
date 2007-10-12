@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.58 2007/10/06 05:36:03 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.59 2007/10/12 08:25:32 leio Exp $
+
+  12 Oct 2007; Mart Raudsepp <leio@gentoo.org>
+  -files/2.0.1-gcc3.4-after-cvs.patch, -files/2.0.1-gcc3.4-to-cvs.patch,
+  -libgnomecanvasmm-2.0.1.ebuild, -libgnomecanvasmm-2.12.0.ebuild:
+  Remove old versions and SLOT for bug 159995
 
   06 Oct 2007; Tom Gall <tgall@gentoo.org> libgnomecanvasmm-2.16.0.ebuild:
   stable on ppc64 bug #188838
