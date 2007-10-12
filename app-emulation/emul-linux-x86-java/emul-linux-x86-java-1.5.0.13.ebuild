@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.5.0.13.ebuild,v 1.1 2007/10/04 13:20:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.5.0.13.ebuild,v 1.2 2007/10/12 00:22:07 wltjr Exp $
 
 inherit pax-utils eutils java-vm-2
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.java.net/dlj/binaries/${At}"
 
 SLOT="1.5"
 LICENSE="dlj-1.1"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 RESTRICT="strip"
 IUSE="X alsa nsplugin"
 
@@ -38,15 +38,15 @@ src_unpack() {
 	sh ${DISTDIR}/${At} --accept-license --unpack || die "Failed to unpack"
 
 	cd ..
-	bash ${FILESDIR}/construct.sh  bundled-jdk sun-jdk-${PV} ${P} || die "construct.sh failed"
+	bash "${FILESDIR}"/construct.sh  bundled-jdk sun-jdk-${PV} ${P} || die "construct.sh failed"
 
-	${S}/bin/java -client -Xshare:dump
+	"${S}"/bin/java -client -Xshare:dump
 }
 
 src_install() {
 	# Set PaX markings on all JDK/JRE executables to allow code-generation on
 	# the heap by the JIT compiler.
-	pax-mark m $(list-paxables ${S}/bin/*)
+	pax-mark m $(list-paxables "${S}"/bin/*)
 
 	dodir /opt/${P}
 	cp -pPR bin lib man javaws plugin "${D}/opt/${P}/" || die "failed to copy"

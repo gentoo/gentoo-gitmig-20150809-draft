@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.03.ebuild,v 1.1 2007/10/04 13:20:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.03.ebuild,v 1.2 2007/10/12 00:22:07 wltjr Exp $
 
 inherit versionator pax-utils java-vm-2 eutils
 
@@ -16,7 +16,7 @@ SRC_URI="http://dlc.sun.com/dlj/binaries/${At}"
 
 SLOT="1.6"
 LICENSE="dlj-1.1"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 RESTRICT="strip"
 IUSE="X alsa nsplugin"
 
@@ -42,9 +42,9 @@ src_unpack() {
 	sh ${DISTDIR}/${At} --accept-license --unpack || die "Failed to unpack"
 
 	cd ..
-	bash ${FILESDIR}/construct-${SLOT}.sh  bundled-jdk sun-jdk-${PV} ${P} || die "construct-${SLOT}.sh failed"
+	bash "${FILESDIR}"/construct-${SLOT}.sh  bundled-jdk sun-jdk-${PV} ${P} || die "construct-${SLOT}.sh failed"
 
-	${S}/bin/java -client -Xshare:dump
+	"${S}"/bin/java -client -Xshare:dump
 }
 
 src_install() {

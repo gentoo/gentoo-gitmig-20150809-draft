@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r2.ebuild,v 1.6 2007/08/17 10:18:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.03-r2.ebuild,v 1.7 2007/10/12 00:22:07 wltjr Exp $
 
 inherit multilib java-vm-2 versionator
 
@@ -95,7 +95,7 @@ src_install() {
 
 	dodir /opt/java32
 
-	cp -pPR ${S}/{bin,lib,man,plugin,javaws} ${JAVAHOME} || die "failed to copy"
+	cp -pPR "${S}"/{bin,lib,man,plugin,javaws} ${JAVAHOME} || die "failed to copy"
 
 	dodoc COPYRIGHT README
 	dohtml README.html
@@ -105,7 +105,7 @@ src_install() {
 		install_mozilla_plugin /opt/java32/plugin/i386/mozilla/libjavaplugin_oji.so
 	fi
 
-	sed -i "s/standard symbols l/symbol/g" ${D}/opt/java32/lib/font.properties
+	sed -i "s/standard symbols l/symbol/g" "${D}"/opt/java32/lib/font.properties
 
 	find ${JAVAHOME} -type f -name "*.so" -exec chmod +x \{\} \;
 
@@ -115,7 +115,7 @@ src_install() {
 	# to use the native 64bit jre and cause 2 minute startup...
 	dodir /usr/$(get_libdir)/openoffice/share/config
 	insinto /usr/$(get_libdir)/openoffice/share/config
-	doins ${FILESDIR}/javasettings_Linux_x86.xml
+	doins "${FILESDIR}"/javasettings_Linux_x86.xml
 
 	set_java_env
 }
