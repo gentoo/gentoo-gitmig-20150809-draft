@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7800 2007/10/12 12:49:23 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7801 2007/10/12 23:19:22 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -22,8 +22,9 @@
 ##
 
 # Ulrich Mueller <ulm@gentoo.org> (12 Oct 2007)
-# CVS snapshot of Emacs unicode-2 branch
-=app-editors/emacs-cvs-23.0.0*
+# Live CVS and snapshot of Emacs unicode-2 branch
+~app-editors/emacs-cvs-23.0.0_p20070920
+~app-editors/emacs-cvs-23.0.60
 >=virtual/emacs-23
 
 # Matthias Schwarzott <zzam@gentoo.org> (11 Oct 2007)
