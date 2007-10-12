@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX control-center-2.11-gentoo_xcursor.patch 527 RMD160 bf455b0cf0c98c303c0885d5bcc7a72005b63108 SHA1 dc3e5afcb696034069d2ddc4d87c2905532e914c SHA256 682ed264c5ac0ed848b5cf3e856ee4440201be94f81b3dad4066233aaec48d9a
 MD5 6d346011e61ca1c016c3c391881f9a4a files/control-center-2.11-gentoo_xcursor.patch 527
 RMD160 bf455b0cf0c98c303c0885d5bcc7a72005b63108 files/control-center-2.11-gentoo_xcursor.patch 527
@@ -29,10 +32,10 @@ EBUILD control-center-2.18.1.ebuild 2767 RMD160 284279608e856c2462fdf8dfd2ef0510
 MD5 02b6f6d2df2c8c1d97cd984f81777ebd control-center-2.18.1.ebuild 2767
 RMD160 284279608e856c2462fdf8dfd2ef051086abd470 control-center-2.18.1.ebuild 2767
 SHA256 195575f6d7645fddd72762dfbb5f4d47a9276a98bc8628c4f9dc97e136a1f5be control-center-2.18.1.ebuild 2767
-EBUILD control-center-2.20.0.1.ebuild 2966 RMD160 91727974eb27e2d3eaf35d940cfacaa126d9fd2a SHA1 a2a49b7482120dfd8579b3bac8bd86519560df51 SHA256 cbe61c26fd1bd93b5f5646d314fcd756e65a9f3f11b77f8f0c7b70a398bd2483
-MD5 fd183e3433512f48c7621cc51d5cbe9b control-center-2.20.0.1.ebuild 2966
-RMD160 91727974eb27e2d3eaf35d940cfacaa126d9fd2a control-center-2.20.0.1.ebuild 2966
-SHA256 cbe61c26fd1bd93b5f5646d314fcd756e65a9f3f11b77f8f0c7b70a398bd2483 control-center-2.20.0.1.ebuild 2966
+EBUILD control-center-2.20.0.1.ebuild 2518 RMD160 33e0e687fcce0d1d0d0cbac439d533660587cb4e SHA1 6521a3b5395a0d14a4089f6d05eb05776ee4cab8 SHA256 c4f3f1523fad7f38ed2f5db38201b2dd5c6cc742e0b6353b23c897887ec28452
+MD5 9a71b3c54bedd213e214a9c23e2b92d5 control-center-2.20.0.1.ebuild 2518
+RMD160 33e0e687fcce0d1d0d0cbac439d533660587cb4e control-center-2.20.0.1.ebuild 2518
+SHA256 c4f3f1523fad7f38ed2f5db38201b2dd5c6cc742e0b6353b23c897887ec28452 control-center-2.20.0.1.ebuild 2518
 MISC ChangeLog 33679 RMD160 865d7d3b761f76af1bb91ff6cbb9a3292ec94cff SHA1 a5b116155660ff975f68bd6b7cab384b39435c7d SHA256 859a5af117463ac5c528269e423b6f231a7ccdcc986ee9c64d08a27a9870b5c0
 MD5 a4d7aec718e90b0036a4d4b751ad4f01 ChangeLog 33679
 RMD160 865d7d3b761f76af1bb91ff6cbb9a3292ec94cff ChangeLog 33679
@@ -50,3 +53,10 @@ SHA256 cf2bc498f431016785a9c2b0d2dca076c48dc66ac884bcfd4a8593f0be501df7 files/di
 MD5 4ab18a4fb98db3fad52b86b7caa7de6a files/digest-control-center-2.20.0.1 295
 RMD160 b5ba300c3c3bb849e9016868630ddf182f244628 files/digest-control-center-2.20.0.1 295
 SHA256 f7e318517a102ac566cb63a9ce5104b016c90187557955bb72c366a62ae38991 files/digest-control-center-2.20.0.1 295
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHD0NlkeYb6olFHJcRAqbSAJ0V72Lm6wjAMSE4i4JrTLiQzg50SQCePKvj
+8iFOjNhTpKZUbzW8+F/x6vk=
+=ls30
+-----END PGP SIGNATURE-----
