@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.28-r2.ebuild,v 1.1 2007/10/08 21:11:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.28-r2.ebuild,v 1.2 2007/10/12 01:38:01 robbat2 Exp $
 
 inherit eutils
 
@@ -53,10 +53,10 @@ src_compile() {
 		buildmode="internal"
 	fi
 
-	# dmeventd requires snapshots and mirrors to be built in some form
+	# dmeventd requires mirrors to be internal, and snapshot available
 	# so we cannot disable them
+	myconf="${myconf} --with-mirrors=internal"
 	myconf="${myconf} --with-snapshots=${buildmode}"
-	myconf="${myconf} --with-mirrors=${buildmode}"
 
 	if use nolvm1 ; then
 		myconf="${myconf} --with-lvm1=none"
