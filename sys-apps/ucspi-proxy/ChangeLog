@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ucspi-proxy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.7 2007/02/26 21:18:23 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.8 2007/10/12 13:26:48 bangert Exp $
+
+*ucspi-proxy-0.97 (12 Oct 2007)
+
+  12 Oct 2007; Thilo Bangert <bangert@gentoo.org> +ucspi-proxy-0.97.ebuild:
+  version bump - bug 195240 - thanks Raúl
 
   26 Feb 2007; Thilo Bangert <bangert@gentoo.org> ucspi-proxy-0.96.ebuild:
   fix ROOT misuse
