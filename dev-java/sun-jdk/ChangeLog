@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.218 2007/10/05 10:42:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.219 2007/10/12 00:34:38 wltjr Exp $
+
+  12 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  sun-jdk-1.4.2.16.ebuild, sun-jdk-1.5.0.13.ebuild, sun-jdk-1.6.0.03.ebuild:
+  amd64 stable, bug #194711. Added quotes, still missing from older soon to be
+  removed versions.
 
   05 Oct 2007; Petteri Räty <betelgeuse@gentoo.org>
   sun-jdk-1.4.2.16.ebuild:

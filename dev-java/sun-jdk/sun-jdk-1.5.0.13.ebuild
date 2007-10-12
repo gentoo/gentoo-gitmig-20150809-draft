@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.13.ebuild,v 1.2 2007/10/04 18:32:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.13.ebuild,v 1.3 2007/10/12 00:34:38 wltjr Exp $
 
 inherit versionator java-vm-2 eutils pax-utils
 
@@ -15,7 +15,7 @@ SRC_URI="x86? ( http://download.java.net/dlj/binaries/${X86_AT} )
 		amd64? ( http://download.java.net/dlj/binaries/${AMD64_AT} )"
 SLOT="1.5"
 LICENSE="dlj-1.1"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 RESTRICT="strip"
 IUSE="X alsa doc examples jce nsplugin"
 
@@ -55,7 +55,7 @@ src_install() {
 
 	# Set PaX markings on all JDK/JRE executables to allow code-generation on
 	# the heap by the JIT compiler.
-	pax-mark m $(list-paxables ${S}{,/jre}/bin/*)
+	pax-mark m $(list-paxables "${S}"{,/jre}/bin/*)
 
 	dodir /opt/${P}
 
@@ -109,11 +109,11 @@ src_install() {
 	if [[ -f ${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop ]]; then
 		sed -e "s/INSTALL_DIR\/JRE_NAME_VERSION/\/opt\/${P}\/jre/" \
 			-e "s/\(Name=Java\)/\1 Control Panel ${SLOT}/" \
-			${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
-			${T}/sun_java-${SLOT}.desktop \
+			"${D}"/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
+			"${T}"/sun_java-${SLOT}.desktop \
 			|| die "Failed to sed .desktop file"
 
-		domenu ${T}/sun_java-${SLOT}.desktop
+		domenu "${T}"/sun_java-${SLOT}.desktop
 	fi
 
 	# bug #56444
