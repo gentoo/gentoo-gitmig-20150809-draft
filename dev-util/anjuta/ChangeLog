@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.72 2007/08/14 03:15:04 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.73 2007/10/12 08:58:37 remi Exp $
+
+  12 Oct 2007; Rémi Cardona <remi@gentoo.org> anjuta-2.1.0_beta1.ebuild,
+  anjuta-2.1.1_beta1.ebuild, anjuta-2.2.0.ebuild, anjuta-2.2.0-r1.ebuild:
+  update gtksourceview deps (see bug #195366)
 
 *anjuta-2.2.0-r1 (14 Aug 2007)
 

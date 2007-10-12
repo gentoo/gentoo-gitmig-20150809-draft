@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.2.0.ebuild,v 1.1 2007/07/12 05:19:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.2.0.ebuild,v 1.2 2007/10/12 08:58:37 remi Exp $
 
 inherit eutils gnome2 eutils autotools
 
@@ -40,7 +40,7 @@ RDEPEND=">=dev-libs/glib-2.8.0
 	 sourceview? (
 					>=x11-libs/gtk+-2.10.0
 					>=gnome-base/libgnome-2.14.0
-					>=x11-libs/gtksourceview-1.4.0
+					=x11-libs/gtksourceview-1*
 				 )
 	 subversion? (
 					>=dev-util/subversion-1.1.4
