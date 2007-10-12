@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.553 2007/10/10 19:52:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.554 2007/10/12 20:47:07 pylon Exp $
+
+  12 Oct 2007; Lars Weiler <pylon@gentoo.org> glibc-2.6.1.ebuild:
+  stable ppc, bug #195427
 
   10 Oct 2007; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
   Add default -march for x86 on amd64 builds based on CHOST #185404.
