@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.2.ebuild,v 1.11 2007/08/28 18:18:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.2.ebuild,v 1.12 2007/10/12 14:40:18 eva Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -164,7 +164,7 @@ src_unpack() {
 	use bogofilter && epatch "${FILESDIR}"/${PN}-2.9.2-bf-junk.patch.gz
 
 	# certificate filtering for clueless users (and even for those who know)
-	epatch ${FILESDIR}/${PN}-2.8.2.1-certificate-manager-filtering.patch
+	epatch "${FILESDIR}"/${PN}-2.8.2.1-certificate-manager-filtering.patch
 
 	# Fix timezone offsets on fbsd.  bug #183708
 	epatch "${FILESDIR}"/${P}-fbsd.patch
@@ -176,7 +176,7 @@ src_compile() {
 	# Use NSS/NSPR only if 'ssl' is enabled.
 	if use ssl ; then
 		sed -i -e "s|mozilla-nss|nss|
-			s|mozilla-nspr|nspr|" ${S}/configure
+			s|mozilla-nspr|nspr|" "${S}"/configure
 		G2CONF="${G2CONF} --enable-nss=yes"
 	else
 		G2CONF="${G2CONF} --without-nspr-libs --without-nspr-includes \

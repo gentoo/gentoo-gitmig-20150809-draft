@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.3-r2.ebuild,v 1.9 2007/07/08 05:00:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.3-r2.ebuild,v 1.10 2007/10/12 14:40:18 eva Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -187,7 +187,7 @@ src_compile() {
 	# Use NSS/NSPR only if 'ssl' is enabled.
 	if use ssl ; then
 		sed -i -e "s|mozilla-nss|nss|
-			s|mozilla-nspr|nspr|" ${S}/configure
+			s|mozilla-nspr|nspr|" "${S}"/configure
 		G2CONF="${G2CONF} --enable-nss=yes"
 	else
 		G2CONF="${G2CONF} --without-nspr-libs --without-nspr-includes \
