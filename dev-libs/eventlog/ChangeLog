@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eventlog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.13 2007/10/09 05:59:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.14 2007/10/12 05:07:28 tgall Exp $
+
+  11 Oct 2007; Tom Gall <tgall@gentoo.org> eventlog-0.2.5.ebuild:
+  stable on ppc64
 
   09 Oct 2007; Jeroen Roovers <jer@gentoo.org> eventlog-0.2.5.ebuild:
   Stable for HPPA (bug #159494).
