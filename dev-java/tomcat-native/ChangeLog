@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-native
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.9 2007/10/12 03:02:39 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.10 2007/10/12 05:32:02 cla Exp $
+
+  12 Oct 2007; Dawid Węgliński <cla@gentoo.org>
+  tomcat-native-1.1.10.ebuild:
+  Stable on x86 (bug #195576)
 
   12 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   tomcat-native-1.1.8.ebuild, tomcat-native-1.1.10.ebuild:
