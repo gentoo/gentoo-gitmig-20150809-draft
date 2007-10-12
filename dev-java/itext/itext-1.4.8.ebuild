@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-1.4.8.ebuild,v 1.7 2007/02/04 15:32:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-1.4.8.ebuild,v 1.8 2007/10/12 21:43:48 wltjr Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -19,15 +19,15 @@ DEPEND=">=virtual/jdk-1.4
 	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_unpack() {
-	mkdir ${WORKDIR}/src && cd ${WORKDIR}/src
+	mkdir "${WORKDIR}"/src && cd "${WORKDIR}"/src
 	unpack ${PN}-src-${PV}.tar.gz
 }
 
 src_compile() {
-	cd ${WORKDIR}/src
+	cd "${WORKDIR}"/src
 	eant jar $(use_doc)
 }
 

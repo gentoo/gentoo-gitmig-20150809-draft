@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.5.ebuild,v 1.1 2007/09/09 19:48:29 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.5.ebuild,v 1.2 2007/10/12 21:43:48 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/itext/${DISTFILE}
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="cjk"
 
 BCV="1.37"
@@ -39,7 +39,7 @@ src_unpack() {
 		cp "${DISTDIR}/${ASIANJAR}" "${DISTDIR}/${ASIANCMAPSJAR}" "${S}" || die "Could not copy asian fonts"
 	fi
 
-	epatch ${FILESDIR}/2.0.2-site_xml.patch
+	epatch "${FILESDIR}"/2.0.2-site_xml.patch
 	java-ant_bsfix_files ant/*.xml || die "failed to rewrite build xml files"
 
 	mkdir -p "${WORKDIR}/lib" || die "Failed to create ${WORKDIR}/lib"
