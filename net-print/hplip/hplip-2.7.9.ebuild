@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.9.ebuild,v 1.2 2007/10/10 18:19:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.9.ebuild,v 1.3 2007/10/12 16:29:34 mr_bones_ Exp $
 
 inherit linux-info
 
@@ -18,12 +18,12 @@ DEPEND="!net-print/hpijs
 	virtual/ghostscript
 	>=media-libs/jpeg-6b
 	net-print/foomatic-filters
-	!minimal? ( 
+	!minimal? (
 		>=net-print/cups-1.2
 		dev-libs/libusb
 		scanner? ( X? ( >=media-gfx/xsane-0.89 )
 			!X? ( >=media-gfx/sane-frontends-1.0.9 ) )
-		snmp? ( 
+		snmp? (
 			net-analyzer/net-snmp
 			dev-libs/openssl
 		) )"
