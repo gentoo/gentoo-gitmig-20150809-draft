@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.3.0.ebuild,v 1.5 2007/08/18 23:06:42 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.3.0.ebuild,v 1.6 2007/10/12 11:02:48 remi Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND=">=dev-cpp/glibmm-2.6
 	>=dev-libs/libsigc++-2.0
 	>=net-libs/obby-0.3.0
 	>=dev-cpp/libxmlpp-2.6
-	>=x11-libs/gtksourceview-1.2.0
+	=x11-libs/gtksourceview-1*
 	dev-libs/gmp"
 
 RDEPEND=""
