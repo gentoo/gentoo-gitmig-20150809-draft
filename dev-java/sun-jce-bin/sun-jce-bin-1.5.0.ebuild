@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.5.0.ebuild,v 1.5 2007/06/14 13:47:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.5.0.ebuild,v 1.6 2007/10/12 00:32:21 wltjr Exp $
 
 jcefile="jce_policy-1_5_0.zip"
 
@@ -36,7 +36,7 @@ src_install() {
 
 	dodir /opt/${P}/jre/lib/security
 
-	cd ${D}/opt/${P}/jre/lib/security
+	cd "${D}"/opt/${P}/jre/lib/security
 	unzip ${DISTDIR}/${jcefile} || die "failed to unzip jce"
 	mv jce unlimited-jce
 	dodir /opt/${P}/jre/lib/security/strong-jce
