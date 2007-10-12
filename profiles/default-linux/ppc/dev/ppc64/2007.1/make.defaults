@@ -1,0 +1,9 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc64/2007.1/make.defaults,v 1.1 2007/10/12 06:50:15 tgall Exp $
+
+# Since we don't ever build stages against this profile, STAGE1_USE isn't seti
+# in here, but instead is set in the sub-profiles. We do set USE, though, for
+# the minimal USE that is shared between both 32-bit and 64-bit userlands.
+# Stages 2 and 3 are built against the USE here, so be careful what you add.
+USE="acl cups gdbm gpm nptl nptlonly unicode"
