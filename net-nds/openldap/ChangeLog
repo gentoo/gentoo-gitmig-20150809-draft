@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.284 2007/10/11 20:37:42 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.285 2007/10/12 15:32:58 corsair Exp $
+
+  12 Oct 2007; Markus Rothe <corsair@gentoo.org> openldap-2.3.38.ebuild:
+  Stable on ppc64; bug #195180
 
   11 Oct 2007; Lars Weiler <pylon@gentoo.org> openldap-2.3.38.ebuild:
   stable ppc, bug #195180
