@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.60.0.ebuild,v 1.3 2007/02/21 20:23:01 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.60.0.ebuild,v 1.4 2007/10/12 09:30:19 remi Exp $
 
 inherit eutils fdo-mime
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-libs/libxml2-2.6.20
 	>=gnome-base/libgnomeprint-2.12
 	>=gnome-base/libgnomeprintui-2.12
 	>=x11-libs/cairo-1.0.0
-	>=x11-libs/gtksourceview-1.2
+	=x11-libs/gtksourceview-1*
 	>=dev-util/scons-0.96.1"
 
 src_unpack() {
