@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/boson
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.30 2007/10/07 20:21:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.31 2007/10/12 09:53:37 pylon Exp $
+
+  12 Oct 2007; Lars Weiler <pylon@gentoo.org> boson-0.13.ebuild:
+  stable ppc, bug #195007
 
   07 Oct 2007; Christian Faulhammer <opfer@gentoo.org> boson-0.13.ebuild:
   stable x86, bug 195007
