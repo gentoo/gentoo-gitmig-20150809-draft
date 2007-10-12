@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-0.2.14.ebuild,v 1.1 2007/10/12 22:04:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-0.2.14.ebuild,v 1.2 2007/10/12 22:30:04 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,6 +25,13 @@ pkg_setup() {
 
 src_unpack() {
 	unpack "${A}"
+
+	cd "${S}" || die "source dir not found"
+
+	# Postfix queue ID patch. See MILTER_README.html#workarounds
+	epatch "${FILESDIR}/${P}-postfix-queueID.patch"
+
+	epatch "${FILESDIR}/${P}-auth.patch"
 
 	sed -e "s:@@CFLAGS@@:${CFLAGS}:" \
 		"${FILESDIR}/gentoo.config.m4" > "${S}/devtools/Site/site.config.m4" \

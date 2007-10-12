@@ -1,15 +1,16 @@
 # ChangeLog for mail-filter/sid-milter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.4 2007/10/12 22:04:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.5 2007/10/12 22:30:04 mrness Exp $
 
 *sid-milter-0.2.14 (12 Oct 2007)
 
   12 Oct 2007; Alin Năstac <mrness@gentoo.org>
-  -files/sid-milter-0.2.13-queueID.patch,
+  -files/sid-milter-0.2.13-queueID.patch, +files/sid-milter-0.2.14-auth.patch,
   +files/sid-milter-0.2.14-postfix-queueID.patch, +files/gentoo.config.m4,
   -files/site.config.m4, -sid-milter-0.2.13.ebuild,
   +sid-milter-0.2.14.ebuild:
   Version bump, thanks to Jan Oravec <jan dot oravec at 6com dot sk> (#178501).
+  Fix authorized connections rejection (#175898).
 
   19 Jul 2006; Tuấn Văn <langthang@gentoo.org>
   files/sid-milter-0.2.13-queueID.patch:
