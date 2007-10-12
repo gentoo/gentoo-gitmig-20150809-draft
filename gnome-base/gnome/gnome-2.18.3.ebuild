@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.18.3.ebuild,v 1.8 2007/09/27 12:01:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.18.3.ebuild,v 1.9 2007/10/12 09:22:58 remi Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -74,7 +74,7 @@ RDEPEND="
 
 	>=gnome-extra/gconf-editor-2.18.0
 	>=gnome-base/gdm-2.18.2
-	>=x11-libs/gtksourceview-1.8.5
+	=x11-libs/gtksourceview-1.8*
 	>=app-editors/gedit-2.18.1
 
 	>=app-text/evince-0.8.3
