@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.9 2007/10/10 21:41:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.10 2007/10/12 16:29:11 mr_bones_ Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -145,7 +145,6 @@ RDEPEND="
 #	Main addition of 0.9.0, will enable it when it'll be released
 # zvbi? ( >=media-libs/zvbi-0.2.25 )
 #	Dep not up to date enough
-
 
 # libgcrypt is mandatory at buildtime, and that's not only a matter of missing
 # m4s. Bug #195322
