@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.14.ebuild,v 1.5 2007/08/31 21:42:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.14.ebuild,v 1.6 2007/10/12 02:47:16 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -89,8 +89,8 @@ src_install() {
 	local CATALINA_BASE=/var/lib/${TOMCAT_NAME}/
 
 	# init.d, conf.d
-	newinitd ${FILESDIR}/${SLOT}/tomcat.init ${TOMCAT_NAME}
-	newconfd ${FILESDIR}/${SLOT}/tomcat.conf ${TOMCAT_NAME}
+	newinitd "${FILESDIR}"/${SLOT}/tomcat.init ${TOMCAT_NAME}
+	newconfd "${FILESDIR}"/${SLOT}/tomcat.conf ${TOMCAT_NAME}
 
 	# create dir structure
 	dodir /usr/share/${TOMCAT_NAME}
@@ -110,8 +110,8 @@ src_install() {
 
 	cd "${S}"
 	# fix context's so webapps will be deployed
-	sed -i -e 's:Context a:Context docBase="${catalina.home}/webapps/host-manager"  a:' ${S}/webapps/host-manager/META-INF/context.xml
-	sed -i -e 's:Context a:Context docBase="${catalina.home}/webapps/manager"  a:' ${S}/webapps/manager/META-INF/context.xml
+	sed -i -e 's:Context a:Context docBase="${catalina.home}/webapps/host-manager"  a:' "${S}"/webapps/host-manager/META-INF/context.xml
+	sed -i -e 's:Context a:Context docBase="${catalina.home}/webapps/manager"  a:' "${S}"/webapps/manager/META-INF/context.xml
 
 	# replace the default pw with a random one, see #92281
 	local randpw=$(echo ${RANDOM}|md5sum|cut -c 1-15)
@@ -119,15 +119,15 @@ src_install() {
 
 	# copy over the directories
 	chown -R tomcat:tomcat webapps/* conf/*
-	cp -pR conf/* ${D}/etc/${TOMCAT_NAME} || die "failed to copy conf"
-	cp -pPR output/build/bin ${D}/usr/share/${TOMCAT_NAME} \
+	cp -pR conf/* "${D}"/etc/${TOMCAT_NAME} || die "failed to copy conf"
+	cp -pPR output/build/bin "${D}"/usr/share/${TOMCAT_NAME} \
 		|| die "failed to copy"
 
 	# replace catalina.policy with gentoo specific one bug #176701
-#	cp ${FILESDIR}/${SLOT}/catalina.policy ${D}/etc/${TOMCAT_NAME} \
+#	cp ${FILESDIR}/${SLOT}/catalina.policy "${D}"/etc/${TOMCAT_NAME} \
 #		|| die "failed to replace catalina.policy"
 
-	cp ${T}/tomcat6-deps/jdt/jasper-jdt.jar ${D}/usr/share/${TOMCAT_NAME}/lib \
+	cp "${T}"/tomcat6-deps/jdt/jasper-jdt.jar "${D}"/usr/share/${TOMCAT_NAME}/lib \
 		|| die "failed to copy"
 
 	cd "${D}/usr/share/${TOMCAT_NAME}/lib"
@@ -137,22 +137,22 @@ src_install() {
 
 	# Copy over webapps, some controlled by use flags
 	cp -p RELEASE-NOTES webapps/ROOT/RELEASE-NOTES.txt
-	cp -pr webapps/ROOT ${D}${CATALINA_BASE}/webapps
+	cp -pr webapps/ROOT "${D}"${CATALINA_BASE}/webapps
 
 	diropts -m755 -o tomcat -g tomcat
 	dodir ${TOMCAT_HOME}/webapps
-	cp -pr webapps/host-manager ${D}${TOMCAT_HOME}/webapps
-	cp -pr webapps/manager ${D}${TOMCAT_HOME}/webapps
+	cp -pr webapps/host-manager "${D}"${TOMCAT_HOME}/webapps
+	cp -pr webapps/manager "${D}"${TOMCAT_HOME}/webapps
 
 	if use doc; then
-		cp -pr output/build/webapps/docs ${D}${CATALINA_BASE}/webapps
+		cp -pr output/build/webapps/docs "${D}"${CATALINA_BASE}/webapps
 	fi
 	if use examples; then
 		cd output/build/webapps/examples/WEB-INF/lib
 		java-pkg_jar-from jakarta-jstl jstl.jar
 		java-pkg_jar-from jakarta-jstl standard.jar
 		cd "${S}"
-		cp -pPr output/build/webapps/examples ${D}${CATALINA_BASE}/webapps
+		cp -pPr output/build/webapps/examples "${D}"${CATALINA_BASE}/webapps
 	fi
 
 	# symlink the directories to make CATALINA_BASE possible
@@ -165,7 +165,7 @@ src_install() {
 	dosym ${TOMCAT_HOME}/webapps/host-manager/META-INF/context.xml /etc/${TOMCAT_NAME}/Catalina/localhost/host-manager.xml
 	dosym ${TOMCAT_HOME}/webapps/manager/META-INF/context.xml /etc/${TOMCAT_NAME}/Catalina/localhost/manager.xml
 
-	dodoc  ${S}/{RELEASE-NOTES,RUNNING.txt}
+	dodoc  "${S}"/{RELEASE-NOTES,RUNNING.txt}
 	fperms 640 /etc/${TOMCAT_NAME}/tomcat-users.xml
 }
 
