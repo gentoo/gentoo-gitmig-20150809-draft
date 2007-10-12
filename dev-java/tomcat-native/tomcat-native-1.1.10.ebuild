@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/tomcat-native-1.1.10.ebuild,v 1.2 2007/07/10 22:52:41 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/tomcat-native-1.1.10.ebuild,v 1.3 2007/10/12 03:02:39 wltjr Exp $
 
 inherit eutils java-pkg-2
 
@@ -22,14 +22,14 @@ DEPEND=">=virtual/jdk-1.5
 S=${WORKDIR}/${P}-src
 
 src_compile(){
-	cd ${S}/jni/native
+	cd "${S}"/jni/native
 	econf --with-apr=/usr/bin/apr-1-config  \
 		--with-ssl=/usr || die "Could not configure native sources"
 	emake || die "Could not build libtcnative-1.so"
 }
 
 src_install() {
-	cd ${S}/jni/native
+	cd "${S}"/jni/native
 	make DESTDIR="${D}" install || die "Could not install libtcnative-1.so"
 }
 
