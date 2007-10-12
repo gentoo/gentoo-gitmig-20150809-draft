@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-8.14.1-r1.ebuild,v 1.1 2007/10/11 14:30:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-8.14.1-r1.ebuild,v 1.2 2007/10/12 14:43:26 mrness Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="The Sendmail Filter API (Milter)"
 HOMEPAGE="http://www.sendmail.org/"
@@ -32,7 +32,7 @@ src_unpack() {
 
 src_compile() {
 	pushd libmilter
-	emake -j1 || die "libmilter compilation failed"
+	emake -j1 CC="$(tc-getCC)" || die "libmilter compilation failed"
 	popd
 }
 
