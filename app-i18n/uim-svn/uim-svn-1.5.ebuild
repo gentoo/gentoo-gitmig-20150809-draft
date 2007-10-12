@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-1.5.ebuild,v 1.4 2007/09/03 14:31:52 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-1.5.ebuild,v 1.5 2007/10/12 10:57:45 hattya Exp $
 
 inherit elisp-common flag-o-matic kde-functions multilib subversion
 
@@ -93,6 +93,7 @@ src_compile() {
 
 	econf \
 		$(use_enable emacs) \
+		$(use_with emacs lispdir "${SITELISP}") \
 		$(use_enable fep) \
 		$(use_enable nls) \
 		$(use_with X x) \
@@ -132,25 +133,18 @@ src_install() {
 	done
 
 	if use emacs; then
-		local im
-
-		if has_version app-i18n/anthy || has_version app-i18n/anthy-ss; then
-			im="anthy"
-
-		elif has_version app-i18n/prime; then
-			im="prime"
-
-		else
-			im="skk"
-
-		fi
-
-		elisp-site-file-install "${FILESDIR}"/50uim-gentoo.el
-		dosed "s:@IM@:${im}:" ${SITELISP}/50uim-gentoo.el
+		cd "${D}/${SITELISP}"/uim-el
+		elisp-comp *.el || die
+		cd -
+		elisp-site-file-install "${FILESDIR}"/50${PN}-gentoo.el uim-el
 	fi
 
-	# remove sigscheme headers
-	rm -rf ${D}/usr/include/sigscheme
+	# remove empty directories
+	rm -rf "${D}"/usr/include/sigscheme
+	rm -rf "${D}"/usr/include/libgcroots
+
+	# remove unnecessary header
+	rm -f "${D}"/usr/include/gcroots.h
 
 }
 
@@ -160,7 +154,17 @@ pkg_postinst() {
 
 	has_multilib_profile && chost=${CHOST}
 	use gtk && gtk-query-immodules-2.0 > "${ROOT}"/etc/gtk-2.0/${chost}/gtk.immodules
-	use emacs && elisp-site-regen
+
+	if use emacs; then
+		elisp-site-regen
+
+		echo
+		elog "uim is autoloaded with Emacs with a minimal set of"
+		elog "features: There is no keybinding defined to call it directly,"
+		elog "so please create one yourself and choose an input method."
+		elog "Integration with LEIM is not done with this ebuild, please have a look"
+		elog "at the documentation how to achieve this."
+	fi
 
 }
 
