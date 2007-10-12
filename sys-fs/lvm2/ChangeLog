@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.110 2007/10/12 01:38:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.111 2007/10/12 01:56:43 robbat2 Exp $
+
+  12 Oct 2007; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.01.09.ebuild,
+  lvm2-2.01.09-r1.ebuild, lvm2-2.01.13.ebuild, lvm2-2.02.02-r1.ebuild,
+  lvm2-2.02.04-r1.ebuild, lvm2-2.02.05.ebuild, lvm2-2.02.06.ebuild,
+  lvm2-2.02.09.ebuild, lvm2-2.02.10.ebuild, lvm2-2.02.17.ebuild,
+  lvm2-2.02.25.ebuild, lvm2-2.02.27.ebuild, lvm2-2.02.28.ebuild,
+  lvm2-2.02.28-r1.ebuild, lvm2-2.02.28-r2.ebuild:
+  Fix quoting.
 
   12 Oct 2007; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.28-r2.ebuild:
   Bug #195560, compile-fix for USE=nolvmstatic users.

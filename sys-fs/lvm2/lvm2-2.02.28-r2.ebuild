@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.28-r2.ebuild,v 1.2 2007/10/12 01:38:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.28-r2.ebuild,v 1.3 2007/10/12 01:56:43 robbat2 Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ S="${WORKDIR}/${PN/lvm/LVM}.${PV}"
 src_unpack() {
 	unpack ${A}
 	#cd "${S}" || die
-	#epatch ${FILESDIR}/lvm2-2.02.04-vgid.patch
+	#epatch "${FILESDIR}"/lvm2-2.02.04-vgid.patch
 }
 
 src_compile() {
@@ -90,12 +90,12 @@ src_install() {
 
 	dodoc README VERSION WHATS_NEW doc/*.{conf,c,txt}
 	insinto /lib/rcscripts/addons
-	newins ${FILESDIR}/lvm2-start.sh-2.02.28-r2 lvm-start.sh || die
-	newins ${FILESDIR}/lvm2-stop.sh lvm-stop.sh || die
-	newinitd ${FILESDIR}/lvm.rc-2.02.28-r2 lvm || die
-	newconfd ${FILESDIR}/lvm.confd-2.02.28-r2 lvm || die
+	newins "${FILESDIR}"/lvm2-start.sh-2.02.28-r2 lvm-start.sh || die
+	newins "${FILESDIR}"/lvm2-stop.sh lvm-stop.sh || die
+	newinitd "${FILESDIR}"/lvm.rc-2.02.28-r2 lvm || die
+	newconfd "${FILESDIR}"/lvm.confd-2.02.28-r2 lvm || die
 	if use clvm; then
-		newinitd ${FILESDIR}/clvmd.rc clvmd || die
+		newinitd "${FILESDIR}"/clvmd.rc clvmd || die
 	fi
 
 	ewarn "use flag nocman is deprecated and replaced"
