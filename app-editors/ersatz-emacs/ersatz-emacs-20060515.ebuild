@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ersatz-emacs-20060515.ebuild,v 1.3 2007/10/10 06:38:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ersatz-emacs-20060515.ebuild,v 1.4 2007/10/12 21:28:00 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,8 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!app-editors/easyedit"
 
 S="${WORKDIR}"
 
