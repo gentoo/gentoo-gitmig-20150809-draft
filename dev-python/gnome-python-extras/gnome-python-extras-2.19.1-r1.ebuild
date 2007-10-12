@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.19.1-r1.ebuild,v 1.1 2007/10/12 13:25:34 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.19.1-r1.ebuild,v 1.2 2007/10/12 17:16:44 remi Exp $
 
-inherit eutils gnome2 python virtualx
+inherit eutils gnome2 python virtualx autotools
 
 DESCRIPTION="GNOME 2 Bindings for Python"
 HOMEPAGE="http://www.pygtk.org"

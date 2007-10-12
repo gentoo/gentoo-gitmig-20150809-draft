@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.62 2007/10/12 13:25:34 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.63 2007/10/12 17:16:44 remi Exp $
+
+  12 Oct 2007; Rémi Cardona <remi@gentoo.org>
+  gnome-python-extras-2.19.1-r1.ebuild:
+  for some reason, I took out inherit autotools ... fixed
 
 *gnome-python-extras-2.19.1-r1 (12 Oct 2007)
 
