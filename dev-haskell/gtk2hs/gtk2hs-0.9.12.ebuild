@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.12.ebuild,v 1.1 2007/07/27 21:18:24 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.12.ebuild,v 1.2 2007/10/12 08:41:45 remi Exp $
 
 inherit base eutils ghc-package multilib toolchain-funcs versionator
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/ghc-6.2
 		>=x11-libs/gtk+-2
 		glade? ( >=gnome-base/libglade-2 )
 		gnome? ( >=gnome-base/libglade-2
-				 >=x11-libs/gtksourceview-0.6
+				 =x11-libs/gtksourceview-1*
 				 >=gnome-base/gconf-2
 				 >=gnome-base/librsvg-2.16 )
 		opengl? ( x11-libs/gtkglext )
