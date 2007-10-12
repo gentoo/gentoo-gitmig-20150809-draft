@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.10-r1.ebuild,v 1.7 2007/10/12 16:00:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.10-r1.ebuild,v 1.8 2007/10/12 16:28:42 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib autotools toolchain-funcs
 
@@ -48,7 +48,7 @@ src_unpack() {
 
 	# this patch fixes bugs: #145424 and #140358
 	epatch "${FILESDIR}"/${PN}-1.10.2-asm.patch
-	
+
 	# security - we obviousl need to patch..
 	epatch "${FILESDIR}"/pwlib-1.10.1-vsprintf.patch
 
