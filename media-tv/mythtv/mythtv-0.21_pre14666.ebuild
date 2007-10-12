@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14480-r1.ebuild,v 1.1 2007/09/20 05:25:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_pre14666.ebuild,v 1.1 2007/10/12 18:55:18 cardoe Exp $
 
 inherit flag-o-matic multilib eutils qt3 mythtv subversion toolchain-funcs
 
@@ -30,10 +30,10 @@ RDEPEND=">=media-libs/freetype-2.0
 	virtual/mysql
 	virtual/opengl
 	virtual/glu
+	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )
 	alsa? ( >=media-libs/alsa-lib-0.9 )
-	dts? ( media-libs/libdts )
-	dvd? ( 	media-libs/libdvdnav
-		media-libs/libdts )
+	dts? ( || ( media-libs/libdca media-libs/libdts ) )
+	dvd? ( 	media-libs/libdvdnav )
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
 	directv? ( virtual/perl-Time-HiRes )
 	ivtv? ( media-tv/ivtv )
@@ -45,7 +45,6 @@ RDEPEND=">=media-libs/freetype-2.0
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
 			>=sys-libs/libavc1394-0.5.0
 			>=media-libs/libiec61883-1.0.0 )
-	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )
 	autostart? ( net-dialup/mingetty
 				x11-wm/evilwm
 				x11-apps/xset )"
