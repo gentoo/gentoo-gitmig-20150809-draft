@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/dboxfe
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dboxfe/ChangeLog,v 1.7 2007/02/07 13:47:54 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dboxfe/ChangeLog,v 1.8 2007/10/12 00:03:39 mr_bones_ Exp $
+
+*dboxfe-0.1.3 (12 Oct 2007)
+
+  12 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org> +dboxfe-0.1.3.ebuild:
+  version bump (bug #195275)
 
   07 Feb 2007; Tristan Heaven <nyhm@gentoo.org> dboxfe-0.0.5.ebuild:
   Use mirror://berlios
