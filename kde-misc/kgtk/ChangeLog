@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/kgtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.9 2007/10/09 16:52:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.10 2007/10/13 11:36:31 genstef Exp $
+
+*kgtk-0.9.1-r1 (13 Oct 2007)
+
+  13 Oct 2007; Stefan Schweizer <genstef@gentoo.org> -kgtk-0.9.1.ebuild,
+  +kgtk-0.9.1-r1.ebuild:
+  Add USE=qt4 thanks to Roberto Castagnola <roberto.castagnola@gmail.com> in
+  bug 194887
 
   09 Oct 2007; Stefan Schweizer <genstef@gentoo.org>
   -files/kgtk-no-local.diff, -kgtk-0.7.ebuild, -kgtk-0.8.ebuild,
