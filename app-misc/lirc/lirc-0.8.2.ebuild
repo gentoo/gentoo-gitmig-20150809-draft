@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2.ebuild,v 1.3 2007/10/13 09:20:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2.ebuild,v 1.4 2007/10/13 22:46:29 mr_bones_ Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -120,7 +120,6 @@ pkg_setup() {
 	# set default configure options
 	MY_OPTS=""
 	LIRC_DRIVER_DEVICE="/dev/lirc/0"
-
 
 	if use lirc_devices_all; then
 		# compile in drivers for a lot of devices
