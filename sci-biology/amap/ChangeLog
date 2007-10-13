@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/amap
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/amap/ChangeLog,v 1.1 2006/12/11 06:59:29 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amap/ChangeLog,v 1.2 2007/10/13 13:13:58 markusle Exp $
+
+*amap-2.1 (13 Oct 2007)
+
+  13 Oct 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/2.1-fix-cxxflags.patch, +amap-2.1.ebuild:
+  Version bump (fixes bug #191861).
 
 *amap-2.0 (11 Dec 2006)
 
