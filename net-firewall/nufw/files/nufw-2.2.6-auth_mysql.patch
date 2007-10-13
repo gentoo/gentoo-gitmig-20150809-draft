@@ -1,0 +1,18 @@
+diff -ru nufw-2.2.6~/src/nuauth/modules/auth_mysql/Makefile.am nufw-2.2.6/src/nuauth/modules/auth_mysql/Makefile.am
+--- nufw-2.2.6~/src/nuauth/modules/auth_mysql/Makefile.am	2007-10-13 19:45:36.000000000 +0200
++++ nufw-2.2.6/src/nuauth/modules/auth_mysql/Makefile.am	2007-10-13 19:46:01.000000000 +0200
+@@ -1,6 +1,6 @@
+ # auth_mysql plugin
+ 
+-# if USE_MYSQL_AUTH
++if USE_MYSQL_AUTH
+ 
+ AM_CPPFLAGS = -DCONFIG_DIR=\"$(sysconfdir)\" -DMODULE_DIR=\"$(libdir)\"
+ 
+@@ -22,5 +22,5 @@
+ libauth_mysql.la: $(libauth_mysql_la_OBJECTS) $(libauth_mysql_la_DEPENDENCIES) 
+ 	$(LINK) -rpath $(plugindir) $(am_libauth_mysql_la_rpath) $(libauth_mysql_la_LDFLAGS) $(libauth_mysql_la_OBJECTS) $(MYSQL_LIBS) $(libauth_mysql_la_LIBADD)
+ 
+-# endif
++endif
+ 
