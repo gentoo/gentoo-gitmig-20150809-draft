@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.8.ebuild,v 1.1 2007/07/14 09:31:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.8.ebuild,v 1.2 2007/10/13 11:39:03 genstef Exp $
 
 DESCRIPTION="dynamic deltup client"
 HOMEPAGE="http://linux01.gwdg.de/~nlissne/"
@@ -14,6 +14,7 @@ RDEPEND="app-portage/deltup
 	dev-util/bdelta"
 
 src_install () {
+	sed -i -e "s:/bin/sh:/bin/bash:" ${WORKDIR}/getdelta.sh
 	dobin ${WORKDIR}/getdelta.sh
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/getdelta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.15 2007/07/14 09:31:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.16 2007/10/13 11:39:03 genstef Exp $
+
+  13 Oct 2007; Stefan Schweizer <genstef@gentoo.org> -getdelta-0.7.6.ebuild,
+  -getdelta-0.7.7.ebuild, getdelta-0.7.8.ebuild:
+  Fix wrong /bin/sh usage thanks to Martin Väth
+  <vaeth@mathematik.uni-wuerzburg.de> in bug 192423
 
 *getdelta-0.7.8 (14 Jul 2007)
 
