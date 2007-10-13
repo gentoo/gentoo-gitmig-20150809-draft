@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/prokyon3
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/ChangeLog,v 1.26 2007/10/07 14:20:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/ChangeLog,v 1.27 2007/10/13 09:29:05 corsair Exp $
+
+  13 Oct 2007; Markus Rothe <corsair@gentoo.org> prokyon3-0.9.6.ebuild:
+  Added ~ppc64
 
   07 Oct 2007; Christoph Mende <angelos@gentoo.org> prokyon3-0.9.6.ebuild:
   Stable on amd64 wrt bug #191277
