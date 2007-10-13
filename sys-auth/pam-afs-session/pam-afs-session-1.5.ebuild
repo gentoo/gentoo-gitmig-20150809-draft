@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-afs-session/pam-afs-session-1.1.ebuild,v 1.3 2007/07/15 02:34:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-afs-session/pam-afs-session-1.5.ebuild,v 1.1 2007/10/13 14:35:48 stefaan Exp $
 
 inherit pam
 
