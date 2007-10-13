@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.24.ebuild,v 1.4 2007/10/08 12:51:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.24.ebuild,v 1.5 2007/10/13 10:18:03 corsair Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="~amd64 ppc ~ppc64 x86"
+KEYWORDS="~amd64 ppc ppc64 x86"
 
 COMMON_DEP="~dev-java/resin-servlet-api-${PV}
 	dev-java/aopalliance
