@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.718 2007/10/13 08:38:38 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.719 2007/10/13 16:19:09 wolf31o2 Exp $
+
+  13 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org> use.desc:
+  Change description on the lame USE flag to make it a little bit more
+  descriptive in its function.
 
   13 Oct 2007; Rémi Cardona <remi@gentoo.org> package.mask:
   add gnome-games-extra-data to Gnome 2.20 p.mask
