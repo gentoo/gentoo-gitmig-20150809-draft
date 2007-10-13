@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>sound</herd>
 	<maintainer>
-		<email>dirtyepic@gentoo.org</email>
-		<name>Ryan Hill</name>
-	</maintainer>
-	<maintainer>
 		<email>redhatter@gentoo.org</email>
 		<name>Stuart Longland</name>
 	</maintainer>
