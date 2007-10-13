@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.18.1.ebuild,v 1.12 2007/10/13 13:24:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.20.0.ebuild,v 1.1 2007/10/13 13:24:27 eva Exp $
 
 inherit gnome2 eutils autotools python
 
@@ -9,12 +9,12 @@ HOMEPAGE="http://raphael.slinckx.net/deskbar/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="eds spell"
 
 RDEPEND=">=dev-lang/python-2.4
-		 >=x11-libs/gtk+-2.6
-		 >=dev-python/pygtk-2.6
+		 >=x11-libs/gtk+-2.10
+		 >=dev-python/pygtk-2.10
 		 >=dev-python/gnome-python-2.10
 		 >=gnome-base/gnome-desktop-2.10
 		 >=dev-python/dbus-python-0.71
@@ -32,14 +32,17 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable eds evolution) --exec-prefix=/usr"
+	G2CONF="${G2CONF} $(use_enable eds evolution) --exec-prefix=/usr --disable-scrollkeeper"
 }
 
 src_unpack() {
 	gnome2_src_unpack
 
 	# Fix installing libs into pythondir
-	epatch "${FILESDIR}"/${PN}-2.15.3-multilib.patch
+	epatch "${FILESDIR}"/${PN}-2.19.5-multilib.patch
+
+	# Fix tests
+	echo "deskbar/ui/preferences/ModuleListView.py" >> po/POTFILES.in
 
 	AT_M4DIR="m4" eautoreconf
 }
