@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.218 2007/10/13 04:43:18 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.219 2007/10/13 13:57:02 nixnut Exp $
+
+  13 Oct 2007; nixnut <nixnut@gentoo.org> xterm-229.ebuild:
+  Stable on ppc wrt bug 194017
 
   12 Oct 2007; Tom Gall <tgall@gentoo.org> xterm-229.ebuild:
   stable on ppc64, bug #194017
