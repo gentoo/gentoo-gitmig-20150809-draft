@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/cmdparse
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/ChangeLog,v 1.9 2007/09/17 20:18:28 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/ChangeLog,v 1.10 2007/10/13 07:56:41 tgall Exp $
+
+  13 Oct 2007; Tom Gall <tgall@gentoo.org> cmdparse-2.0.2.ebuild:
+  stable on ppc64
 
   17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing citizen428 from metadata.xml (see #56803 for reference).
