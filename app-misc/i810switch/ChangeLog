@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/i810switch
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/ChangeLog,v 1.16 2007/09/01 12:21:37 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/ChangeLog,v 1.17 2007/10/13 18:39:18 cedk Exp $
+
+*i810switch-0.6.5-r2 (13 Oct 2007)
+
+  13 Oct 2007; Cédric Krier <cedk@gentoo.org>
+  +files/i810switch-macbook-support.patch, metadata.xml,
+  +i810switch-0.6.5-r2.ebuild:
+  Add support for i945, bug #184144
 
   01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing twp from metadata due to his retirement (see #190561 for reference).
