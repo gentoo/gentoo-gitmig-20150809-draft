@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.120 2007/10/09 18:04:12 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.121 2007/10/13 06:07:44 tgall Exp $
+
+  13 Oct 2007; Tom Gall <tgall@gentoo.org> tcpdump-3.9.7-r1.ebuild:
+  stable on ppc64, bug #193787
 
 *tcpdump-3.9.8 (09 Oct 2007)
 
