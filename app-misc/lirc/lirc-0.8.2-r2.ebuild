@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2-r2.ebuild,v 1.1 2007/10/11 19:35:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2-r2.ebuild,v 1.2 2007/10/13 01:02:38 mr_bones_ Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -238,7 +238,7 @@ src_unpack() {
 
 	# Bug 187822
 	epatch "${FILESDIR}/lirc-0.8.2-kernel-2.6.22.patch"
-	
+
 	# Bug 195432
 	epatch "${FILESDIR}/lirc-0.8.2-kernel-2.6.23.patch"
 
