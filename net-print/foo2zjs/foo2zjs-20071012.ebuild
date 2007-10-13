@@ -1,0 +1,103 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20071012.ebuild,v 1.1 2007/10/13 11:17:17 genstef Exp $
+
+inherit eutils
+
+DESCRIPTION="Support for printing to ZjStream-based printers"
+HOMEPAGE="http://foo2zjs.rkkda.com/"
+
+# etracted by http://gentooexperimental.org/~genstef/dist/foo2zjs-helper.sh
+DEVICES=( "hp2600n" "hp1600" "km2530" "km2490" "km2480" "xp6115" "km2430"
+"km2300" "km2200" "kmcpwl" "sa300" "sa2160" "sa3160" "xp6110" "hp1020" "hp1018"
+"hp1005" "hp1000" )
+URIS=(
+	"http://foo2hp.rkkda.com/hpclj2600n.tar.gz http://foo2zjs.rkkda.com/km2430.tar.gz"
+	"http://foo2hp.rkkda.com/hpclj2600n.tar.gz http://foo2zjs.rkkda.com/km2430.tar.gz"
+	"http://foo2lava.rkkda.com/km2530.tar.gz"
+	"http://foo2lava.rkkda.com/km2530.tar.gz"
+	"http://foo2lava.rkkda.com/km2530.tar.gz"
+	"http://foo2lava.rkkda.com/km2530.tar.gz"
+	"http://foo2zjs.rkkda.com/km2430.tar.gz"
+	"ftp://ftp.minolta-qms.com/pub/crc/out_going/win/m23dlicc.exe http://foo2zjs.rkkda.com/km2430.tar.gz"
+	"ftp://ftp.minolta-qms.com/pub/crc/out_going/win2000/m22dlicc.exe"
+	"ftp://ftp.minolta-qms.com/pub/crc/out_going/windows/cpplxp.exe"
+	"http://foo2qpdl.rkkda.com/samclp300.tar.gz"
+	"http://foo2qpdl.rkkda.com/samclp300.tar.gz"
+	"http://foo2qpdl.rkkda.com/samclp300.tar.gz"
+	"http://foo2qpdl.rkkda.com/samclp300.tar.gz"
+	"http://foo2zjs.rkkda.com/sihp1020.tar.gz"
+	"http://foo2zjs.rkkda.com/sihp1018.tar.gz"
+	"http://foo2zjs.rkkda.com/sihp1005.tar.gz"
+	"http://foo2zjs.rkkda.com/sihp1000.tar.gz"
+)
+
+
+SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.gz"
+IUSE="cups foomaticdb usb"
+for ((DEV=0; DEV < ${#DEVICES[*]}; DEV++)); do
+	SRC_URI="${SRC_URI} foo2zjs_devices_${DEVICES[DEV]}? ( ${URIS[DEV]} )"
+	IUSE="${IUSE} foo2zjs_devices_${DEVICES[DEV]}"
+	ALL_BEGIN="${ALL_BEGIN} !foo2zjs_devices_${DEVICES[DEV]}? ("
+	ALL_MIDDLE="${ALL_MIDDLE} ${URIS[DEV]}"
+	ALL_END="${ALL_END} )"
+done
+SRC_URI="${SRC_URI}${ALL_BEGIN}${ALL_MIDDLE}${ALL_END}"
+RESTRICT="mirror"
+LICENSE="GPL-2"
+SLOT="0"
+DEPEND="app-arch/unzip"
+RDEPEND="cups? ( net-print/cups )
+	foomaticdb? ( net-print/foomatic-db-engine )
+	net-print/foomatic-filters
+	sys-fs/udev"
+KEYWORDS="~x86 ~amd64 ~ppc"
+S=${WORKDIR}/${PN}
+
+src_unpack() {
+	unpack ${P}.tar.gz
+
+	# link getweb files in ${S} to get unpacked
+	for i in ${A}
+	do
+		ln -s ${DISTDIR}/${i} ${S}
+	done
+
+	cd ${S}
+	epatch ${FILESDIR}/foo2zjs-Makefile-20070424.diff
+	epatch ${FILESDIR}/foo2zjs-udevfwld-20070424.diff
+}
+
+src_compile() {
+	emake getweb || die "Failed building getweb script"
+
+	# remove wget as we got the firmware with portage
+	sed -i -e "s/.*wget .*//" \
+		-e 's/.*rm $.*//' \
+		-e "s/error \"Couldn't dow.*//" getweb
+
+	# unpack files
+	GOT=0;
+	for ((DEV=0; DEV < ${#DEVICES[*]}; DEV++)); do
+		if use foo2zjs_devices_${DEVICES[DEV]}; then
+			./getweb ${DEVICES[DEV]:2}
+			GOT=1
+		fi
+	done
+	if [ ${GOT} == 0 ]; then ./getweb all; fi
+
+	emake || die "emake failed"
+}
+
+src_install() {
+	use foomaticdb && dodir /usr/share/foomatic/db/source
+
+	use cups && dodir /usr/share/cups/model
+
+	emake DESTDIR=${D} install install-udev \
+		|| die "emake install failed"
+}
+
+pkg_postinst() {
+	udevcontrol reload_rules
+}
