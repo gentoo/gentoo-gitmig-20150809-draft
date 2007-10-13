@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyx
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.18 2006/09/24 02:03:36 dberkholz Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.19 2007/10/13 12:09:49 genstef Exp $
+
+*pyx-0.10 (13 Oct 2007)
+
+  12 Oct 2007; Dirkjan Ochtman (djc) <mail@manuzhai.nl> +files/pyx-0.10.patch,
+  +pyx-0.10.ebuild:
+  New ebuild for bug 195603.
 
 *pyx-0.9 (24 Sep 2006)
 
