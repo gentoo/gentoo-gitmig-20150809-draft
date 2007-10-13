@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20071012.ebuild,v 1.1 2007/10/13 11:17:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20071012.ebuild,v 1.2 2007/10/13 22:48:17 mr_bones_ Exp $
 
 inherit eutils
 
@@ -31,7 +31,6 @@ URIS=(
 	"http://foo2zjs.rkkda.com/sihp1005.tar.gz"
 	"http://foo2zjs.rkkda.com/sihp1000.tar.gz"
 )
-
 
 SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.gz"
 IUSE="cups foomaticdb usb"
