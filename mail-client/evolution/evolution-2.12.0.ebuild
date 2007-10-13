@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.0.ebuild,v 1.1 2007/10/12 14:40:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.0.ebuild,v 1.2 2007/10/13 01:04:36 mr_bones_ Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -64,7 +64,6 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
 ELTCONF="--reverse-deps"
-
 
 pkg_setup() {
 	G2CONF="--without-kde-applnk-path        \
