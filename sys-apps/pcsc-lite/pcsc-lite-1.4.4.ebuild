@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.4.4.ebuild,v 1.1 2007/08/14 19:09:21 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.4.4.ebuild,v 1.2 2007/10/13 16:04:37 alonbl Exp $
 
 inherit multilib
 
@@ -36,11 +36,11 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 
-	dodoc AUTHORS DRIVERS HELP INSTALL README SECURITY
+	dodoc AUTHORS DRIVERS HELP README SECURITY ChangeLog
 	prepalldocs
 
-	newinitd "${FILESDIR}"/pcscd-init pcscd
-	newconfd "${FILESDIR}"/pcscd-confd pcscd
+	newinitd "${FILESDIR}/pcscd-init" pcscd
+	newconfd "${FILESDIR}/pcscd-confd" pcscd
 }
 
 pkg_postinst() {
