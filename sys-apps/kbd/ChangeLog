@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.64 2007/10/13 13:14:55 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.65 2007/10/13 14:01:53 nixnut Exp $
+
+  13 Oct 2007; nixnut <nixnut@gentoo.org> kbd-1.13-r1.ebuild:
+  Stable on ppc wrt bug 195687
 
   13 Oct 2007; Dawid Węgliński <cla@gentoo.org> kbd-1.13-r1.ebuild:
   Stable on x86 (bug #195687)
