@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/vdr-skinsoppalusikka-1.0.4.ebuild,v 1.2 2007/06/18 09:13:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/vdr-skinsoppalusikka-1.0.4.ebuild,v 1.3 2007/10/13 10:19:53 zzam Exp $
 
 inherit vdr-plugin
 
@@ -25,10 +25,10 @@ src_install() {
 	vdr-plugin_src_install
 
 	insinto /usr/share/vdr/skinsoppalusikka/logos-dxr3
-	doins ${S}/logos-dxr3/*.xpm
+	doins "${S}"/logos-dxr3/*.xpm
 
 	insinto /etc/vdr/themes
-	doins ${S}/themes/*
+	doins "${S}"/themes/*.theme
 
-	chown vdr:vdr -R ${D}/etc/vdr
+	chown vdr:vdr -R "${D}"/etc/vdr
 }
