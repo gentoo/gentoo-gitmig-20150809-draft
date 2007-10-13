@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.20.0.1.ebuild,v 1.1 2007/10/13 08:33:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.20.0.1.ebuild,v 1.2 2007/10/13 22:47:13 mr_bones_ Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
@@ -41,7 +41,6 @@ DEPEND="${RDEPEND}
 
 # Others are installed below; multiples in this package.
 DOCS="HACKING MAINTAINERS"
-
 
 pkg_setup() {
 	# create the games user / group
