@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/diction-1.11.ebuild,v 1.1 2007/10/13 01:26:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/diction-1.11.ebuild,v 1.2 2007/10/13 22:46:50 mr_bones_ Exp $
 
 inherit eutils versionator
 
@@ -32,4 +32,3 @@ src_install() {
 	make DESTDIR="${D}" install
 	dodoc NEWS README
 }
-
