@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/facile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.4 2007/09/27 13:51:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.5 2007/10/13 10:26:45 corsair Exp $
+
+  13 Oct 2007; Markus Rothe <corsair@gentoo.org> facile-1.1.ebuild:
+  Added ~ppc64; bug #192065
 
   27 Sep 2007; Raúl Porcel <armin76@gentoo.org> facile-1.1.ebuild:
   Add ~sparc wrt #192065
