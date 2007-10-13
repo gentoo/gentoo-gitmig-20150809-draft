@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/jcharts-0.7.5.ebuild,v 1.1 2007/01/13 19:49:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/jcharts-0.7.5.ebuild,v 1.2 2007/10/13 12:01:49 ali_bush Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="doc examples source"
 
