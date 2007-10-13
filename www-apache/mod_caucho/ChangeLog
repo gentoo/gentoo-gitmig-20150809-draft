@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_caucho
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.22 2007/09/19 19:21:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.23 2007/10/13 10:25:34 corsair Exp $
+
+  13 Oct 2007; Markus Rothe <corsair@gentoo.org> mod_caucho-3.0.24.ebuild:
+  Added ~ppc64; bug #191741
 
   19 Sep 2007; Lars Weiler <pylon@gentoo.org> mod_caucho-3.0.24.ebuild:
   Stable on ppc; bug #191741.
