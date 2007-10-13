@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.9.1-r1.ebuild,v 1.1 2007/10/13 11:36:31 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.9.1-r1.ebuild,v 1.2 2007/10/13 22:47:34 mr_bones_ Exp $
 
 ARTS_REQUIRED="never"
 inherit kde
@@ -48,7 +48,7 @@ src_install() {
 	fi
 
 	dodoc ../{AUTHORS,ChangeLog,TODO,README}
-}	
+}
 
 pkg_postinst() {
 	elog "To see the kde-file-selector in a gtk-application, just do:"
