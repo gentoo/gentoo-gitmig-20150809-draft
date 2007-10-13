@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/museek+
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.7 2007/09/23 12:20:22 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.8 2007/10/13 11:53:45 coldwind Exp $
+
+  13 Oct 2007; Santiago M. Mola <coldwind@gentoo.org>
+  museek+-0.1.13-r1.ebuild:
+  Depend on >=dev-util/cmake-2.4.6 (#195414).
 
 *museek+-0.1.13-r1 (23 Sep 2007)
 

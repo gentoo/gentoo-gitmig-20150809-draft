@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.13-r1.ebuild,v 1.1 2007/09/23 12:20:22 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.13-r1.ebuild,v 1.2 2007/10/13 11:53:45 coldwind Exp $
 
 inherit qt3 eutils distutils multilib
 
@@ -21,7 +21,8 @@ RDEPEND=">=dev-cpp/libxmlpp-1.0.2
 		media-libs/libogg )
 	fam? ( virtual/fam )"
 DEPEND="${RDEPEND}
-		dev-lang/swig"
+		dev-lang/swig
+		>=dev-util/cmake-2.4.6"
 
 pkg_setup() {
 	if use ncurses && ! built_with_use dev-lang/python ncurses ; then
