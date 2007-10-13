@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5.ebuild,v 1.6 2007/09/20 12:43:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5.ebuild,v 1.7 2007/10/13 19:55:35 genstef Exp $
 
 inherit eutils autotools
 
@@ -12,12 +12,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="sdl truetype X"
 
-DEPEND="sdl? ( >=media-libs/libsdl-1.2.0 )
+RDEPEND="sdl? ( >=media-libs/libsdl-1.2.0 )
 	X? ( x11-libs/libX11 )
 	truetype? ( >=media-libs/freetype-2 )"
+	# sdl.m4 missing in the tarball
+DEPEND="media-libs/libsdl
+	${RDEPEND}"
 
 src_compile() {
-	eautoreconf || die "eautoreconf failed"
+	eautoreconf
 	# examples are not (yet) installed, so do not compile them
 	econf \
 		--enable-ctrl \
