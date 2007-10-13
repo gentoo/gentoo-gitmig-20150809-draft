@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20070422.ebuild,v 1.2 2007/09/29 00:07:25 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.0_pre20070422.ebuild,v 1.3 2007/10/13 16:16:45 dirtyepic Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -23,25 +23,12 @@ DEPEND="=x11-libs/wxGTK-2.6*
 			unicode? ( >=media-libs/gd-2.0.26 ) )"
 
 pkg_setup() {
-		export WX_GTK_VER="2.6"
-
 		if ! use gtk && ! use remote && ! use amuled; then
 				eerror ""
 				eerror "You have to specify at least one of gtk, remote or amuled"
 				eerror "USE flag to build amule."
 				eerror ""
 				die "Invalid USE flag set"
-		fi
-
-		if use gtk; then
-				einfo "wxGTK with gtk2 and unicode support will be used"
-				need-wxwidgets unicode
-		elif use unicode; then
-				einfo "wxGTK with unicode and without X support will be used"
-				need-wxwidgets base-unicode
-		else
-				einfo "wxGTK without X support will be used"
-				need-wxwidgets base
 		fi
 
 		if use stats && ! use gtk; then
@@ -63,7 +50,20 @@ pkg_preinst() {
 }
 
 src_compile() {
-		local myconf=""
+		local myconf
+
+		WX_GTK_VER="2.6"
+
+		if use gtk; then
+				einfo "wxGTK with gtk2 and unicode support will be used"
+				need-wxwidgets unicode
+		elif use unicode; then
+				einfo "wxGTK with unicode and without X support will be used"
+				need-wxwidgets base-unicode
+		else
+				einfo "wxGTK without X support will be used"
+				need-wxwidgets base
+		fi
 
 		if use gtk ; then
 				use stats && myconf="${myconf}
@@ -99,15 +99,15 @@ src_compile() {
 }
 
 src_install() {
-		make DESTDIR=${D} install || die
+		emake DESTDIR="${D}" install || die
 
 		if use amuled; then
-				newconfd ${FILESDIR}/amuled.confd amuled
-				newinitd ${FILESDIR}/amuled.initd amuled
+				newconfd "${FILESDIR}"/amuled.confd amuled
+				newinitd "${FILESDIR}"/amuled.initd amuled
 		fi
 
 		if use remote; then
-				newconfd ${FILESDIR}/amuleweb.confd amuleweb
-				newinitd ${FILESDIR}/amuleweb.initd amuleweb
+				newconfd "${FILESDIR}"/amuleweb.confd amuleweb
+				newinitd "${FILESDIR}"/amuleweb.initd amuleweb
 		fi
 }
