@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.359 2007/10/12 18:29:12 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.360 2007/10/13 14:17:15 angelos Exp $
+
+  13 Oct 2007; Christoph Mende <angelos@gentoo.org> udev-115-r1.ebuild:
+  Stable on amd64 wrt bug #195289
 
   12 Oct 2007; Ferris McCormick <fmccor@gentoo.org> udev-115-r1.ebuild:
   sparc stable --- Bug #195289 --- thanks Jorge.
