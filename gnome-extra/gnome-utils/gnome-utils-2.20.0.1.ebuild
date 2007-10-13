@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.20.0.1.ebuild,v 1.1 2007/10/12 11:33:06 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.20.0.1.ebuild,v 1.2 2007/10/13 01:03:45 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -41,4 +41,3 @@ pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable hal)
 	$(use_enable hal gfloppy)"
 }
-
