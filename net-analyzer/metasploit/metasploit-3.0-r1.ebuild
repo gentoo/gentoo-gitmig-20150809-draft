@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.0.ebuild,v 1.1 2007/09/09 11:56:20 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.0-r1.ebuild,v 1.1 2007/10/13 18:14:55 cedk Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ IUSE="gtk sqlite sqlite3 postgres httpd"
 
 RDEPEND="dev-lang/ruby
 	gtk? ( dev-ruby/ruby-libglade2 )
-	httpd? ( =dev-ruby/rails-1.2.2* )
+	httpd? ( =dev-ruby/rails-1.2* )
 	sqlite? ( dev-ruby/sqlite-ruby
 		dev-ruby/activerecord )
 	sqlite3? ( dev-ruby/sqlite3-ruby
@@ -37,6 +37,10 @@ pkg_nofetch() {
 
 src_compile() {
 	epatch "${FILESDIR}"/${P}.patch
+
+	sed -i \
+		-e "s/RAILS_GEM_VERSION = '1.2.2'/RAILS_GEM_VERSION = '1.2'/" \
+		data/msfweb/config/environment.rb || die "sed failed"
 }
 
 src_install() {
