@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3080 2007/10/11 16:59:10 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3081 2007/10/13 00:11:49 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -949,14 +949,12 @@ media-libs/glide-v3:voodoo5 - Support 3DFX Voodoo4 and Voodoo5 video cards
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libifp:module - Build kernel module for non-root usage
 media-libs/libkarma:mono - Build with mono support
-media-libs/libquicktime:lame - Support LAME mp3 encoding
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
 media-libs/libsdl:noflagstrip - Allow users to use any CFLAGS they like completely (at their own risk)
 media-libs/libsdl:nojoystick - Allow users to disable joystick support completely (at their own risk)
 media-libs/libsdl:novideo - Allow users to disable video support completely (at their own risk)
 media-libs/libvorbis:aotuv - Allow users to enable aoTuV encoder enhancements
 media-libs/mesa:xcb - Support the X C-language Binding, a replacement for Xlib
-media-libs/mlt:lame - Support LAME mp3 encoding
 media-libs/netpbm:rle - Build converters for the RLE format (utah raster toolkit)
 media-libs/panda3d:fmod - Enables support for using mod files for audio support
 media-libs/panda3d:nspr - Enables support for the Netscape Portable Runtime, used in network interface functionality (ie. multiplayer online game networking).
@@ -1003,7 +1001,6 @@ media-plugins/vdr-softdevice:mmxext - enables mmx2 support
 media-plugins/vdr-text2skin:direct_blit - not buffer picture, faster, but only for modified skins
 media-plugins/vdr-weatherng:dxr3 - enables lower osd color deep for dxr3 cards
 media-sound/abcde:id3 - Support ID3, ID3v2 tagging of audio files
-media-sound/abcde:lame - Support LAME mp3 encoding
 media-sound/abcde:replaygain - Support for Replay Gain metadata, for relative volume adjustment
 media-sound/alsa-driver:midi - Build the sequencer (midi) modules
 media-sound/alsa-tools:midi - Build the sequencer (midi) utilities
@@ -1041,7 +1038,6 @@ media-sound/exaile:libsexy - Enable libsexy support
 media-sound/ezstream:taglib - Enable tagging support with taglib
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
 media-sound/gnusound:cpudetection - Enables runtime cpu detection
-media-sound/gnusound:lame - Enable lame support
 media-sound/herrie:http - Enable http streaming
 media-sound/herrie:modplug - Build with modplug support
 media-sound/herrie:xspf - Enable support for reading and saving XSPF playlists
@@ -1179,7 +1175,6 @@ media-video/mkvtoolnix:lzo - Enables support for lzo compression
 media-video/mmsv2:dxr3 - Support for DXR3 mpeg acceleration cards
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
 media-video/mpeg4ip:id3 - Support ID3 in the player
-media-video/mpeg4ip:lame - Support LAME mp3 encoding in the server/mp4live
 media-video/mpeg4ip:mp4live - Build the live streaming/encoding software
 media-video/mpeg4ip:mpeg2 - Support mpeg2 in the player
 media-video/mpeg4ip:player - Build the player
@@ -1195,7 +1190,6 @@ media-video/mplayer:dvdnav - DVD menu navigation support (not supported)
 media-video/mplayer:enca - Enables support for charset discovery and conversion
 media-video/mplayer:ivtv - Enable IVTV TV-Out video output
 media-video/mplayer:live - Enables live.com streaming media support
-media-video/mplayer:lame - MP3 audio encoding using LAME library
 media-video/mplayer:lzo - Enables support for lzo compression
 media-video/mplayer:md5sum - Enables md5sum video output
 media-video/mplayer:mmxext - Enables mmx2 support
