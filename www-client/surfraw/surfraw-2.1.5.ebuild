@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.1.5.ebuild,v 1.5 2006/12/22 16:18:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.1.5.ebuild,v 1.6 2007/10/13 01:17:37 seemant Exp $
 
 inherit bash-completion eutils
 
@@ -17,6 +17,8 @@ src_unpack() {
 	unpack ${A}; cd ${S}
 
 	epatch ${FILESDIR}/${PN}-2.1.5-gentoo_pkg_tools.patch
+	# Man page symlinks shouldn't link to compressed files
+	sed -i 's,\.gz,,g' links.IN
 }
 
 src_compile() {
