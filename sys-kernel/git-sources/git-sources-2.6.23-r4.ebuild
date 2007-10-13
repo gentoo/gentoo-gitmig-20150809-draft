@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.23_rc8-r2.ebuild,v 1.1 2007/09/27 13:28:11 phreak Exp $
+# $Headers: $
 
 UNIPATCH_STRICTORDER="yes"
 K_NOUSENAME="yes"
