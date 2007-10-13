@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.48 2007/10/10 13:54:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.49 2007/10/13 13:17:23 aballier Exp $
+
+  13 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/raptor-1.4.16-lm.patch, raptor-1.4.16.ebuild:
+  Always link to libmath which is needed, bug #195649
 
 *raptor-1.4.16 (10 Oct 2007)
 
