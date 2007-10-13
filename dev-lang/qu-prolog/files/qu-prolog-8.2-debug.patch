@@ -1,0 +1,44 @@
+diff -ur qp8.2.orig/src/io.cc qp8.2/src/io.cc
+--- qp8.2.orig/src/io.cc	2007-10-08 16:13:27.000000000 +1300
++++ qp8.2/src/io.cc	2007-10-14 08:11:19.000000000 +1300
+@@ -914,8 +914,7 @@
+     }
+ 
+ #ifdef DEBUG_IO
+-  cerr.form("%s result = %ld FD_ISSET(%ld, ...) = %ld\n",
+-	    __FUNCTION__, result, fd, FD_ISSET(fd, &fds));
++  cerr << __FUNCTION__ << " result = " << result << "FD_ISSET(" << fd << ", ...) = " << FD_ISSET(fd, &fds) << endl;
+ #endif
+ #ifdef WIN32
+   if (result == 0 || result == 128)
+diff -ur qp8.2.orig/src/thread_escapes.cc qp8.2/src/thread_escapes.cc
+--- qp8.2.orig/src/thread_escapes.cc	2007-10-08 16:13:28.000000000 +1300
++++ qp8.2/src/thread_escapes.cc	2007-10-14 08:11:19.000000000 +1300
+@@ -212,8 +212,7 @@
+   thread_table->IncLive();
+ 
+ #ifdef DEBUG_MT
+-  printf("%s Thread %ld, %ld now live\n",
+-	    __FUNCTION__, thread->TInfo().ID(), thread_table->Live());
++  cout << __FUNCTION__ << " Thread " << thread->TInfo().ID() << ", " << thread_table->Live() << " now live" << endl;
+   //      heap.DisplayTerm(cerr, *atoms, argG);
+ #endif
+   
+@@ -541,7 +540,7 @@
+   Condition(ThreadCondition::EXITED);
+ 
+ #ifdef DEBUG_MT
+-  cerr.form("%s %ld\n", __FUNCTION__, TInfo().ID());
++  cerr << __FUNCTION__ << " " << TInfo().ID() << endl;
+ #endif
+ 
+   if (TInfo().SymbolSet())
+@@ -948,7 +947,7 @@
+   thread->Condition(ThreadCondition::EXITED);
+ 
+ #ifdef DEBUG_MT
+-  cerr.form("%s %ld\n", __FUNCTION__, thread->TInfo().ID());
++  cerr << __FUNCTION__ << " " << thread->TInfo().ID();
+ #endif
+ 
+   if (thread->TInfo().SymbolSet())
