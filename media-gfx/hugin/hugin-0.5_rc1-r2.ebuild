@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.5_rc1-r2.ebuild,v 1.2 2007/04/30 21:58:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.5_rc1-r2.ebuild,v 1.3 2007/10/13 00:06:49 dirtyepic Exp $
 
 inherit wxwidgets
 
@@ -15,7 +15,7 @@ IUSE="unicode debug"
 
 DEPEND=">=media-libs/libpano12-2.7.0.8
 		>=dev-libs/boost-1.30.0
-		>=x11-libs/wxGTK-2.6.0
+		=x11-libs/wxGTK-2.6*
 		sys-libs/zlib
 		media-libs/libpng
 		media-libs/jpeg
