@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.4.5_pre1.ebuild,v 1.1 2007/10/13 14:19:33 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.4.5_pre1.ebuild,v 1.2 2007/10/13 14:45:37 stefaan Exp $
 
 inherit eutils linux-mod versionator toolchain-funcs
 
@@ -37,6 +37,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/openafs-ppc64.patch
 	epatch "${FILESDIR}"/openafs-sparc.patch
+	epatch "${FILESDIR}"/openafs-vserver.patch
 
 	kernel_is ge 2 6 23 && epatch "${FILESDIR}"/openafs-linux-2.6.23.patch
 
