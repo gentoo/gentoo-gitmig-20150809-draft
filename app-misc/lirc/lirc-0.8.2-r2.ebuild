@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2-r2.ebuild,v 1.3 2007/10/13 09:20:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2-r2.ebuild,v 1.4 2007/10/13 09:30:06 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -256,7 +256,7 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	newinitd "${FILESDIR}"/lircd lircd
 	newinitd "${FILESDIR}"/lircmd lircmd
