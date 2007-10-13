@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.8.1.ebuild,v 1.1 2007/10/12 12:35:33 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.8.1.ebuild,v 1.2 2007/10/13 08:06:44 wrobel Exp $
 
 inherit webapp depend.php
 
@@ -48,7 +48,7 @@ src_install() {
 
 	# The bulk goes into htdocs
 	# but don't copy INSTALL and README
-	cp -pPR [[:lower:]]* ${D}/${MY_HTDOCSDIR}
+	cp -pPR [[:lower:]]* "${D}"/"${MY_HTDOCSDIR}"
 
 	# Recursively set server ownership to allow server to write
 	# This is the rough equivalent of the setup.sh script
@@ -56,26 +56,14 @@ src_install() {
 	# Note: Cannot use xargs or find -exec here because
 	# these don't work with shell functions.
 	#
-	webapp_serverowned ${MY_HTDOCSDIR}
+	webapp_serverowned "${MY_HTDOCSDIR}"
 	for DIR in ${DIRS}; do
 		find ${DIR} | while read DIRENTRY; do
-			webapp_serverowned ${MY_HTDOCSDIR}/${DIRENTRY}
+			webapp_serverowned "${MY_HTDOCSDIR}"/${DIRENTRY}
 		done
 	done
-	webapp_serverowned  ${MY_HTDOCSDIR}/tiki-install.php
+	webapp_serverowned  "${MY_HTDOCSDIR}"/tiki-install.php
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 	webapp_src_install
-}
-
-pkg_config() {
-	elog "Type in your MySQL root password to create an empty tiki database:"
-	mysqladmin -u root -p create tikiwiki
-}
-
-pkg_postinst() {
-	elog "To setup a MySQL database, run:"
-	elog "\"emerge --config =${PF}\""
-	elog "If you are using PostgreSQL, consult your documentation"
-	webapp_pkg_postinst
 }
