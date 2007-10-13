@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ipkg-utils-1.7.ebuild,v 1.8 2007/01/23 15:40:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ipkg-utils-1.7-r1.ebuild,v 1.1 2007/10/13 01:11:50 seemant Exp $
 
 inherit distutils eutils toolchain-funcs
 
@@ -21,7 +21,9 @@ RDEPEND="dev-lang/python
 DEPEND="${RDEPEND}"
 
 src_unpack() {
-	unpack ${A}; cd ${S}
+	unpack "${A}"; cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-tar_call_fixes.patch
 
 	sed '/python setup.py build/d' -i Makefile
 
@@ -38,5 +40,5 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
-	use minimal && rm ${D}/usr/bin/ipkg-upload
+	use minimal && rm "${D}"/usr/bin/ipkg-upload
 }
