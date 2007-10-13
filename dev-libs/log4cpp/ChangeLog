@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/log4cpp
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.13 2006/10/18 19:45:22 dev-zero Exp $
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.14 2007/10/13 08:04:38 dev-zero Exp $
+
+*log4cpp-1.0 (13 Oct 2007)
+
+  13 Oct 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/1.0-doc_install_path.patch, +log4cpp-1.0.ebuild:
+  Version bump.
 
   18 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
   Version bump. More corrections to correctly install docs with new version.
