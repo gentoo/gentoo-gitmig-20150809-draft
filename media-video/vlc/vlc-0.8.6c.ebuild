@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6c.ebuild,v 1.10 2007/10/10 07:40:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6c.ebuild,v 1.11 2007/10/13 00:12:21 dirtyepic Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -69,8 +69,8 @@ RDEPEND="
 		libcaca? ( media-libs/libcaca )
 		arts? ( kde-base/arts )
 		alsa? ( media-libs/alsa-lib )
-		wxwindows? ( >=x11-libs/wxGTK-2.6.2-r1 )
-		skins? ( >=x11-libs/wxGTK-2.6.2-r1
+		wxwindows? ( =x11-libs/wxGTK-2.6* )
+		skins? ( =x11-libs/wxGTK-2.6*
 			media-libs/freetype
 			media-fonts/ttf-bitstream-vera )
 		ncurses? ( sys-libs/ncurses )

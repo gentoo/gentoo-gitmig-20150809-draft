@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.10 2007/10/12 16:29:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.11 2007/10/13 00:12:21 dirtyepic Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -123,7 +123,7 @@ RDEPEND="
 		v4l2? ( sys-kernel/linux-headers )
 		vorbis? ( media-libs/libvorbis )
 		win32codecs? ( media-libs/win32codecs )
-		wxwindows? ( >=x11-libs/wxGTK-2.6.2-r1 )
+		wxwindows? ( =x11-libs/wxGTK-2.6* )
 		X? (
 			x11-libs/libX11
 			x11-libs/libXext

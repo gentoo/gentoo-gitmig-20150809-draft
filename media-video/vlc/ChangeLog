@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.267 2007/10/10 21:41:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.268 2007/10/13 00:12:21 dirtyepic Exp $
+
+  13 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> vlc-0.8.6c.ebuild,
+  vlc-0.9.0_alpha20071009.ebuild:
+  Lock wxGTK to 2.6.
 
   10 Oct 2007; Alexis Ballier <aballier@gentoo.org>
   vlc-0.9.0_alpha20071009.ebuild:
