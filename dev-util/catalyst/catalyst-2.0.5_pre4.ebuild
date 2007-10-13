@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.5_pre4.ebuild,v 1.1 2007/10/12 00:09:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.5_pre4.ebuild,v 1.2 2007/10/13 01:03:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -8,7 +8,6 @@ DESCRIPTION="Gentoo Linux official release metatool"
 HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://dev.gentoo.org/~wolf31o2/${P}.tar.bz2"
-
 
 LICENSE="GPL-2"
 SLOT="0"
