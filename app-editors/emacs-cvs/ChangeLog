@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.163 2007/10/12 23:31:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.164 2007/10/13 21:22:15 ulm Exp $
+
+  13 Oct 2007; Ulrich Mueller <ulm@gentoo.org>
+  +files/emacs-cvs-no-x-compile.patch, emacs-cvs-23.0.0_p20070920.ebuild:
+  Fix compilation failure with USE=-X.
 
 *emacs-cvs-23.0.60 (12 Oct 2007)
 
