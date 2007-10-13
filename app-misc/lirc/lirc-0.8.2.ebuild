@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2.ebuild,v 1.2 2007/07/12 03:35:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2.ebuild,v 1.3 2007/10/13 09:20:15 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -90,6 +90,7 @@ for dev in ${IUSE_LIRC_DEVICES}; do
 done
 
 add_device() {
+	: ${lirc_device_count:=0}
 	((lirc_device_count++))
 
 	if [[ ${lirc_device_count} -eq 2 ]]; then
@@ -118,17 +119,15 @@ pkg_setup() {
 
 	# set default configure options
 	MY_OPTS=""
-	lirc_driver_count=0
-
 	LIRC_DRIVER_DEVICE="/dev/lirc/0"
 
-	local dev
 
 	if use lirc_devices_all; then
 		# compile in drivers for a lot of devices
 		add_device all "a lot of devices"
 	else
 		# compile in only requested drivers
+		local dev
 		for dev in ${IUSE_LIRC_DEVICES_DIRECT}; do
 			if use lirc_devices_${dev}; then
 				add_device ${dev}
@@ -233,8 +232,8 @@ src_unpack() {
 	edos2unix contrib/lirc.rules
 
 	# Apply patches needed for some special device-types
-	use lirc_devices_imon_pad2keys && epatch ${FILESDIR}/${PN}-0.8.1-imon-pad2keys.patch
-	use lirc_devices_remote_wonder_plus && epatch ${FILESDIR}/lirc-remotewonderplus.patch
+	use lirc_devices_imon_pad2keys && epatch "${FILESDIR}"/${PN}-0.8.1-imon-pad2keys.patch
+	use lirc_devices_remote_wonder_plus && epatch "${FILESDIR}"/lirc-remotewonderplus.patch
 
 	# remove parallel driver on SMP systems
 	if linux_chkconfig_present SMP ; then
@@ -254,18 +253,18 @@ src_unpack() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	newinitd ${FILESDIR}/lircd lircd
-	newinitd ${FILESDIR}/lircmd lircmd
-	newconfd ${FILESDIR}/lircd.conf lircd
+	newinitd "${FILESDIR}"/lircd lircd
+	newinitd "${FILESDIR}"/lircmd lircmd
+	newconfd "${FILESDIR}"/lircd.conf lircd
 
 	insinto /etc/modules.d/
-	newins ${FILESDIR}/modulesd.lirc lirc
+	newins "${FILESDIR}"/modulesd.lirc lirc
 
-	newinitd ${FILESDIR}/irexec-initd irexec
-	newconfd ${FILESDIR}/irexec-confd irexec
+	newinitd "${FILESDIR}"/irexec-initd irexec
+	newconfd "${FILESDIR}"/irexec-confd irexec
 
 	insinto /etc/udev/rules.d/;
-	newins ${S}/contrib/lirc.rules 10-lirc.rules
+	newins "${S}"/contrib/lirc.rules 10-lirc.rules
 
 	if use doc ; then
 		dohtml doc/html/*.html

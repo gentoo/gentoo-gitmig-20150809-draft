@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r8.ebuild,v 1.14 2007/07/22 09:54:11 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r8.ebuild,v 1.15 2007/10/13 09:20:15 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -14,7 +14,7 @@ IUSE="debug doc X hardware-carrier transmitter"
 KEYWORDS="amd64 ppc ppc64 x86"
 SRC_URI="mirror://sourceforge/lirc/${P/_pre/pre}.tar.bz2"
 
-S=${WORKDIR}/${P/_pre/pre}
+S="${WORKDIR}/${P/_pre/pre}"
 
 IUSE_LIRC_DEVICES_DIRECT="
 	all userspace act200l act220l
@@ -80,7 +80,8 @@ for dev in ${IUSE_LIRC_DEVICES}; do
 done
 
 add_device() {
-	: $(( lirc_device_count++ ))
+	: ${lirc_device_count:=0}
+	((lirc_device_count++))
 
 	if [[ ${lirc_device_count} -eq 2 ]]; then
 		ewarn
@@ -94,10 +95,8 @@ add_device() {
 	fi
 
 	local dev="${1}"
-	local desc="device ${dev}"
-	if [[ -n "${2}" ]]; then
-		desc="${2}"
-	fi
+	local desc="${2}"
+	[[ -z ${desc} ]] && desc="device ${dev}"
 
 	elog "Compiling support for ${desc}"
 	MY_OPTS="${MY_OPTS} --with-driver=${dev}"
@@ -108,17 +107,14 @@ pkg_setup() {
 
 	# set default configure options
 	MY_OPTS=""
-	lirc_driver_count=0
-
 	LIRC_DRIVER_DEVICE="/dev/lirc/0"
-
-	local dev
 
 	if use lirc_devices_all; then
 		# compile in drivers for a lot of devices
 		add_device all "a lot of devices"
 	else
 		# compile in only requested drivers
+		local dev
 		for dev in ${IUSE_LIRC_DEVICES_DIRECT}; do
 			if use lirc_devices_${dev}; then
 				add_device ${dev}
@@ -219,34 +215,34 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Apply kernel compatibility patches
-	epatch ${FILESDIR}/${P}-kernel-2.6.16.diff
-	epatch ${FILESDIR}/${P}-kernel-2.6.17.diff
-	epatch ${FILESDIR}/${P}-kernel-2.6.18.diff
-	epatch ${FILESDIR}/${P}-kernel-2.6.19.diff
+	epatch "${FILESDIR}"/${P}-kernel-2.6.16.diff
+	epatch "${FILESDIR}"/${P}-kernel-2.6.17.diff
+	epatch "${FILESDIR}"/${P}-kernel-2.6.18.diff
+	epatch "${FILESDIR}"/${P}-kernel-2.6.19.diff
 
 	# Fix an overflow when opening too many client-connections
-	epatch ${FILESDIR}/${P}-too-many-connections-overflow.diff
+	epatch "${FILESDIR}"/${P}-too-many-connections-overflow.diff
 
 	# Fix a sandbox violation while checking which cc to use for Kernel 2.6.19
 	# and newer
-	epatch ${FILESDIR}/${P}-sandbox-fix.diff
+	epatch "${FILESDIR}"/${P}-sandbox-fix.diff
 
 	# Work with udev-094 and greater
-	epatch ${FILESDIR}/${PN}-udev-094.diff
+	epatch "${FILESDIR}"/${PN}-udev-094.diff
 
 	# Bugfix for i2c-driver in combination with newer ivtv and Kernel 2.6.17
-	epatch ${FILESDIR}/${P}-i2c-kernel-2.6.17.diff
+	epatch "${FILESDIR}"/${P}-i2c-kernel-2.6.17.diff
 
 	# Wrong config-filename for LIRC_DEVICES=pixelview_bt878
-	epatch ${FILESDIR}/${P}-conf-pixelview_bt878.diff
+	epatch "${FILESDIR}"/${P}-conf-pixelview_bt878.diff
 
 	# Apply patches needed for some special device-types
-	[[ ${NEED_XBOX_PATCH:-0} == 1 ]] && epatch ${FILESDIR}/lirc-0.8.0pre4-xbox-remote.diff
-	use lirc_devices_imon_pad2keys && epatch ${FILESDIR}/${P}-imon-pad2keys.patch
-	use lirc_devices_remote_wonder_plus && epatch ${FILESDIR}/lirc-remotewonderplus.patch
+	[[ ${NEED_XBOX_PATCH:-0} == 1 ]] && epatch "${FILESDIR}"/lirc-0.8.0pre4-xbox-remote.diff
+	use lirc_devices_imon_pad2keys && epatch "${FILESDIR}"/${P}-imon-pad2keys.patch
+	use lirc_devices_remote_wonder_plus && epatch "${FILESDIR}"/lirc-remotewonderplus.patch
 
 	# remove parallel driver on SMP systems
 	if linux_chkconfig_present SMP ; then
@@ -264,20 +260,20 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
-	newinitd ${FILESDIR}/lircd lircd
-	newinitd ${FILESDIR}/lircmd lircmd
-	newconfd ${FILESDIR}/lircd.conf lircd
+	newinitd "${FILESDIR}"/lircd lircd
+	newinitd "${FILESDIR}"/lircmd lircmd
+	newconfd "${FILESDIR}"/lircd.conf lircd
 
 	insinto /etc/modules.d/
-	newins ${FILESDIR}/modulesd.lirc lirc
+	newins "${FILESDIR}"/modulesd.lirc lirc
 
-	newinitd ${FILESDIR}/irexec-initd irexec
-	newconfd ${FILESDIR}/irexec-confd irexec
+	newinitd "${FILESDIR}"/irexec-initd irexec
+	newconfd "${FILESDIR}"/irexec-confd irexec
 
 	insinto /etc/udev/rules.d/;
-	newins ${S}/contrib/lirc.rules 10-lirc.rules
+	newins "${S}"/contrib/lirc.rules 10-lirc.rules
 
 	if use doc ; then
 		dohtml doc/html/*.html
