@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.31 2007/10/07 21:51:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.32 2007/10/14 23:45:26 mr_bones_ Exp $
+
+  14 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  crystalspace-1.2.ebuild:
+  fix env file for bug #195829
 
 *crystalspace-1.2 (07 Oct 2007)
 

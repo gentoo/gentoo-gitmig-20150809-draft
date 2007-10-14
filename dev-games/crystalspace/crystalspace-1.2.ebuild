@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.2.ebuild,v 1.1 2007/10/07 21:51:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.2.ebuild,v 1.2 2007/10/14 23:45:26 mr_bones_ Exp $
 
 inherit flag-o-matic java-pkg-opt-2 multilib wxwidgets
 
@@ -113,8 +113,8 @@ src_install() {
 	fi
 	dodoc README docs/history* docs/todo_*
 
-	echo "CRYSTAL_PLUGIN=/usr/$(get_libdir)/crystalspace" > 90crystalspace
-	echo "CRYSTAL_CONFIG=/etc/crystalspace" >> 90crystalspace
+	echo "CRYSTAL_PLUGIN=/usr/$(get_libdir)/${P}" > 90crystalspace
+	echo "CRYSTAL_CONFIG=/etc/${P}" >> 90crystalspace
 	doenvd 90crystalspace
 }
 
