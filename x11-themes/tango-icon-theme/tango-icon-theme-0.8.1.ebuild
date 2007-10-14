@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.1.ebuild,v 1.5 2007/10/10 23:41:52 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.1.ebuild,v 1.6 2007/10/14 11:45:28 armin76 Exp $
 
 inherit eutils gnome2-utils
 
@@ -10,7 +10,7 @@ SRC_URI="http://tango-project.org/releases/${P}.tar.gz"
 
 LICENSE="CCPL-Attribution-ShareAlike-2.5"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="png"
 
 RESTRICT="binchecks strip"
