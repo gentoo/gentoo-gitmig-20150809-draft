@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5-r2.ebuild,v 1.1 2007/07/08 22:36:21 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5-r2.ebuild,v 1.2 2007/10/14 21:08:56 vapier Exp $
 
 inherit eutils autotools games
 
@@ -21,14 +21,16 @@ RDEPEND="3dfx? ( media-libs/glide-v3 )
 	X? (
 		x11-libs/libX11
 		x11-libs/libXext
-		x11-libs/libXxf86vm )
+		x11-libs/libXxf86vm
+	)
 	ncurses? ( sys-libs/ncurses )
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
 	zlib? ( sys-libs/zlib )
 	xv? (
 		x11-libs/libX11
 		x11-libs/libXext
-		x11-libs/libXxf86vm )
+		x11-libs/libXxf86vm
+	)
 	dga? ( x11-libs/libXxf86dga )
 	alsa? ( media-libs/alsa-lib )"
 DEPEND="${RDEPEND}
@@ -39,10 +41,12 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}"-ipv6.patch \
-		"${FILESDIR}/${P}"-gcc41.patch \
-		"${FILESDIR}/${P}"-keys.patch \
-		"${FILESDIR}/${P}"-amd64.patch
+	epatch \
+		"${FILESDIR}"/${P}-no-page-size.patch \
+		"${FILESDIR}"/${PV}-ipv6.patch \
+		"${FILESDIR}"/${P}-gcc41.patch \
+		"${FILESDIR}"/${P}-keys.patch \
+		"${FILESDIR}"/${P}-amd64.patch
 }
 
 src_compile() {

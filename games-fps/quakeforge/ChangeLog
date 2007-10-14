@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quakeforge
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.17 2007/07/08 22:36:21 tupone Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.18 2007/10/14 21:08:56 vapier Exp $
+
+  14 Oct 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/quakeforge-0.5.5-no-page-size.patch, quakeforge-0.5.5-r2.ebuild:
+  Fix building with sanitized kernel headers #187083 by Colin Macdonald.
 
 *quakeforge-0.5.5-r2 (08 Jul 2007)
 
