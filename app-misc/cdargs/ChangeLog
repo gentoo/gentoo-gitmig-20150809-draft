@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/cdargs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.14 2007/02/21 22:23:03 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.15 2007/10/14 23:29:57 opfer Exp $
+
+*cdargs-1.35-r1 (14 Oct 2007)
+
+  14 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/50cdargs-gentoo.el, +cdargs-1.35-r1.ebuild:
+  revision bump for fixed Emacs support, see bug 193427
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
