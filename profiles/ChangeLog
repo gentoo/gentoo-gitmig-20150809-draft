@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.725 2007/10/14 07:53:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.726 2007/10/14 08:33:30 ulm Exp $
+
+  14 Oct 2007; Ulrich Mueller <ulm@gentoo.org> use.local.desc:
+  Change app-editors/emacs local use flag "nosendmail" to "sendmail".
 
   14 Oct 2007; Stefan Schweizer <genstef@gentoo.org> package.mask:
   mask openslp 1.3
