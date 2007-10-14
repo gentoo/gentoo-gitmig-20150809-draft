@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025-r1.ebuild,v 1.14 2007/10/14 20:58:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025-r1.ebuild,v 1.15 2007/10/14 21:43:06 aballier Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="gif png"
 
 DEPEND="virtual/ghostscript
-	virtual/tetex
+	virtual/latex-base
 	media-libs/netpbm
 	dev-lang/perl
 	gif? ( media-libs/giflib )
