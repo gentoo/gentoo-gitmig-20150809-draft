@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.8.8.ebuild,v 1.10 2007/10/06 05:25:48 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.8.8.ebuild,v 1.11 2007/10/14 17:52:06 wolf31o2 Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ IUSE="nls readline debug selinux device-mapper"
 DEPEND=">=sys-fs/e2fsprogs-1.27
 	>=sys-libs/ncurses-5.2
 	nls? ( >=sys-devel/gettext-0.12.1-r2 )
-	readline? ( >=sys-libs/readline-4.1-r4 )
+	readline? ( >=sys-libs/readline-5.2 )
 	selinux? ( sys-libs/libselinux )
 	device-mapper? ( sys-fs/device-mapper )"
 
