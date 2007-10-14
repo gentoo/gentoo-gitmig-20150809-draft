@@ -4,7 +4,7 @@
 
 set $*
 
-group=${1/%%/*}
+group=${1%%/*}
 action=${1#*/}
 device=$2
 id=$3

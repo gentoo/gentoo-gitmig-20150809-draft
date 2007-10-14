@@ -1,6 +1,16 @@
 # ChangeLog for sys-power/acpid
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.30 2007/07/17 19:53:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.31 2007/10/14 12:04:32 genstef Exp $
+
+*acpid-1.0.6-r1 (14 Oct 2007)
+
+  14 Oct 2007; Stefan Schweizer <genstef@gentoo.org>
+  -files/acpid-1.0.4-default.sh, -files/acpid-1.0.4-gcc4.patch,
+  -files/acpid-1.0.4-logrotate, files/acpid-1.0.6-default.sh,
+  files/acpid-1.0.6-init.d, -files/acpid.conf.d, -acpid-1.0.4-r2.ebuild,
+  -acpid-1.0.6.ebuild, +acpid-1.0.6-r1.ebuild:
+  Fix improper expansion in default.sh, bug 186141, and start init script
+  before hal, bug 194636, also remove old ebuilds
 
   17 Jul 2007; Mike Frysinger <vapier@gentoo.org>
   +files/acpid-1.0.6-default.sh, -files/acpid-1.0.6-examples.diff,

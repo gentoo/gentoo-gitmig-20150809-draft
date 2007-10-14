@@ -1,9 +1,0 @@
-/var/log/acpid {
-    missingok
-    rotate 5
-    size 100k
-    weekly
-    postrotate
-        /etc/init.d/acpid reload > /dev/null
-    endscript
-}
