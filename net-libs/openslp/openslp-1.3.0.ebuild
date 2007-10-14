@@ -1,9 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.2.1.ebuild,v 1.18 2007/07/13 13:20:28 uberlord Exp $
-
-WANT_AUTOMAKE="1.8"
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.3.0.ebuild,v 1.1 2007/10/14 07:55:57 genstef Exp $
 
 inherit libtool eutils autotools
 
@@ -13,31 +10,28 @@ SRC_URI="mirror://sourceforge/openslp/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 RESTRICT="test"
 
-DEPEND=""
+DEPEND="dev-libs/openssl"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-fbsd.patch
-	eautomake
+	epatch "${FILESDIR}"/openslp-compile_fix.patch
+	epatch "${FILESDIR}"/openslp-no_install_doc.patch
+	epatch "${FILESDIR}"/openslp-opt.patch
 
+	eautoreconf
 	elibtoolize
 }
 
-src_compile() {
-	econf || die
-	emake -j1 || die "make failed"
-}
-
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS FAQ ChangeLog NEWS README* THANKS
-	rm -rf "${D}"/usr/doc
-	dohtml -r .
+	dohtml -r doc/*
 	newinitd "${FILESDIR}"/slpd-init slpd
 }

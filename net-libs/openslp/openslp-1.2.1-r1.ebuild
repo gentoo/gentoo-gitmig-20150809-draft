@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.2.1-r1.ebuild,v 1.1 2007/07/13 13:20:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.2.1-r1.ebuild,v 1.2 2007/10/14 07:55:57 genstef Exp $
 
 WANT_AUTOMAKE="1.8"
 WANT_AUTOCONF="latest"
@@ -17,7 +17,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbs
 IUSE=""
 RESTRICT="test"
 
-DEPEND=""
+DEPEND="dev-libs/openssl"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
