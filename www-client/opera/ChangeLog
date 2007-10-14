@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.142 2007/10/09 08:15:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.143 2007/10/14 20:24:08 jer Exp $
+
+*opera-9.50_rc1629 (14 Oct 2007)
+
+  14 Oct 2007; Jeroen Roovers <jer@gentoo.org> +opera-9.50_rc1629.ebuild:
+  Weekly version bump
+  <http://my.opera.com/desktopteam/blog/2007/10/12/neat-thumbnails-instant-sea
+  rching-and-more>.
 
   09 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.23.ebuild,
   opera-9.50_alpha1567.ebuild, opera-9.50_alpha1581.ebuild,
