@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/archfs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/archfs/ChangeLog,v 1.1 2007/08/19 21:54:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/archfs/ChangeLog,v 1.2 2007/10/14 09:39:26 jokey Exp $
+
+  14 Oct 2007; Markus Ullmann <jokey@gentoo.org> archfs-0.5.1.ebuild:
+  Add rdiff-backup to RDEPEND
 
 *archfs-0.5.1 (19 Aug 2007)
 
