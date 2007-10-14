@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r4.ebuild,v 1.19 2007/10/10 06:22:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r4.ebuild,v 1.20 2007/10/14 08:34:43 ulm Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/emacs/${P}a.tar.gz
 LICENSE="GPL-2 BSD"
 SLOT="21"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="X Xaw3d leim lesstif motif nls nosendmail"
+IUSE="X Xaw3d leim lesstif motif nls sendmail"
 
 RDEPEND="sys-libs/ncurses
 	X? ( x11-libs/libXext
@@ -37,7 +37,7 @@ RDEPEND="sys-libs/ncurses
 		)
 	)
 	nls? ( sys-devel/gettext )
-	!nosendmail? ( virtual/mta )"
+	sendmail? ( virtual/mta )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
@@ -164,7 +164,7 @@ update-alternatives() {
 pkg_postinst() {
 	update-alternatives
 	elisp-site-regen
-	if use nosendmail ; then
+	if ! use sendmail ; then
 	ewarn
 	ewarn "You disabled sendmail support for Emacs. If you will install any MTA"
 	ewarn "you need to recompile Emacs after that. See bug #11104."
