@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.3.ebuild,v 1.2 2007/10/10 19:08:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.1.3.ebuild,v 1.3 2007/10/14 07:27:12 genstef Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -82,5 +82,14 @@ src_install () {
 	if ! use gtk && ! use gimp; then
 		rm -f "${D}"/usr/$(get_libdir)/pkgconfig/gutenprintui2.pc
 		rm -rf "${D}"/usr/include/gutenprintui2
+	fi
+}
+
+pkg_postinst() {
+	if [ "${ROOT}" == "/" ] && [ -x /usr/sbin/cups-genppdupdate.5.1 ]; then
+		elog "Updating installed printer ppd files"
+		elog $(/usr/sbin/cups-genppdupdate.5.1)
+	else
+		elog "You need to update installed ppds manually using cups-genppdupdate.5.1"
 	fi
 }

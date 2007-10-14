@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.88 2007/10/10 19:08:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.89 2007/10/14 07:27:12 genstef Exp $
+
+  14 Oct 2007; Stefan Schweizer <genstef@gentoo.org>
+  gimp-print-5.1.3.ebuild:
+  Update installed printer queues automatically thanks to Bruce
+  <halfcat@exemail.com.au> and Jon Severinsson <jon@severinsson.net> in bug
+  180957
 
   10 Oct 2007; Stefan Schweizer <genstef@gentoo.org>
   -files/gimp-print-5.1.0-nonls.patch, -gimp-print-5.1.0.ebuild,
