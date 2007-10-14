@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.2.0.ebuild,v 1.5 2007/09/22 15:49:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.2.0.ebuild,v 1.6 2007/10/14 11:34:11 opfer Exp $
 
 inherit eutils multilib
 
 DESCRIPTION="A ncurses based music player with plugin support for many formats"
-HOMEPAGE="http://onion.dynserv.net/~timo/cmus.html"
-SRC_URI="http://onion.dynserv.net/~timo/files/${P}.tar.bz2"
+HOMEPAGE="http://cmus.sourceforge.net/"
+SRC_URI="http://mirror.greaterscope.net/cmus/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
