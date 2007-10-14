@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.17.1_pre20071013.ebuild,v 1.1 2007/10/14 06:40:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.17.1_pre20071013.ebuild,v 1.2 2007/10/14 08:09:18 dragonheart Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -14,7 +14,7 @@ SRC_URI="http://cool.haxx.se/curl-daily/${MY_P}.tar.bz2"
 
 LICENSE="MIT X11"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="ssl ipv6 ldap ares gnutls nss idn kerberos test"
 #IUSE="ssl ipv6 ldap ares gnutls libssh2 nss idn kerberos test"
 
