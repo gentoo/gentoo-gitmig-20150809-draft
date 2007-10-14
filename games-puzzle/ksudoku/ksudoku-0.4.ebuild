@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.8 2007/09/07 18:58:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.9 2007/10/14 22:24:34 mr_bones_ Exp $
 
 inherit flag-o-matic multilib kde
 
@@ -21,12 +21,13 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	sed -i -e 's:LINK_FLAGS "${APR_EXTRA_LIBFLAGS} ${APU_EXTRA_LIBFLAGS} ${LINK_NO_UNDEFINED} ${_BASE_LDADD}"):LINK_FLAGS "${_BASE_LDADD} ${APR_EXTRA_LIBFLAGS} ${APU_EXTRA_LIBFLAGS} ${LINK_NO_UNDEFINED}"):' \
-		src/CMakeLists.txt
+	sed -i \
+		-e 's:LINK_FLAGS "${APR_EXTRA_LIBFLAGS} ${APU_EXTRA_LIBFLAGS} ${LINK_NO_UNDEFINED} ${_BASE_LDADD}"):LINK_FLAGS "${_BASE_LDADD} ${APR_EXTRA_LIBFLAGS} ${APU_EXTRA_LIBFLAGS} ${LINK_NO_UNDEFINED}"):' \
+		src/CMakeLists.txt \
+		|| die "sed failed"
 }
 
 src_compile() {
-	elog "Filter as-needed"
 	filter-ldflags "--as-needed" "-Wl,--as-needed"
 
 	cmake \
