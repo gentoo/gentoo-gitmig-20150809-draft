@@ -1,6 +1,10 @@
 # ChangeLog for app-text/lcdf-typetools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.4 2007/10/14 15:34:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.5 2007/10/14 17:41:03 aballier Exp $
+
+  14 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  lcdf-typetools-2.66.ebuild:
+  virtual/tetex -> virtual/latex-base
 
   14 Oct 2007; Markus Rothe <corsair@gentoo.org> lcdf-typetools-2.66.ebuild:
   Added ~ppc64; bug #194363
