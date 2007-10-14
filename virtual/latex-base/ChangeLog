@@ -1,0 +1,10 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/latex-base/ChangeLog,v 1.1 2007/10/14 17:31:59 aballier Exp $
+
+*latex-base-1.0 (14 Oct 2007)
+
+  14 Oct 2007; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +latex-base-1.0.ebuild:
+  initial import of latex-base virtual, see gentoo-dev ml
+
