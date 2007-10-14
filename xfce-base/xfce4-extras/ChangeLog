@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.74 2007/09/01 16:56:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.75 2007/10/14 16:13:54 corsair Exp $
+
+  14 Oct 2007; Markus Rothe <corsair@gentoo.org>
+  xfce4-extras-4.4.1-r1.ebuild:
+  Stable on ppc64; bug #195250
 
   01 Sep 2007; nixnut <nixnut@gentoo.org> xfce4-extras-4.4.1-r1.ebuild:
   Stable on ppc wrt bug 190072
