@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.19.1-r1.ebuild,v 1.2 2007/10/12 17:16:44 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.19.1-r1.ebuild,v 1.3 2007/10/14 00:22:27 eva Exp $
 
 inherit eutils gnome2 python virtualx autotools
 
@@ -44,8 +44,6 @@ src_unpack() {
 
 	# change mozilla to seamonkey
 	sed -i -e 's:1.2b):1.0.0):;s:mozilla):seamonkey):' configure.ac
-
-	epatch "${FILESDIR}/${P}-use_python_config.patch"
 
 	eautoreconf
 }
