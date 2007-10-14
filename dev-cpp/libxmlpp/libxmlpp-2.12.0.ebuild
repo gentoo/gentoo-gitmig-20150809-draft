@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.12.0.ebuild,v 1.7 2006/07/16 19:34:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.12.0.ebuild,v 1.8 2007/10/14 23:16:31 eva Exp $
 
 inherit gnome2 eutils
 
@@ -28,7 +28,7 @@ DOCS="AUTHORS ChangeLog NEWS README*"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# don't waste time building the examples
 	sed -i 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' Makefile.in || \
@@ -40,6 +40,6 @@ src_install() {
 	dosed -i 's|^\(Cflags.*-I.* \)-I.*$|\1|' \
 		/usr/$(get_libdir)/pkgconfig/${MY_PN}-${SLOT}.pc
 
-	rm -fr ${D}/usr/share/doc/libxml++*
+	rm -fr "${D}"/usr/share/doc/libxml++*
 	use doc && dohtml docs/reference/${PV%.*}/html/*
 }
