@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ristretto-0.0.5.ebuild,v 1.2 2007/09/15 12:17:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ristretto-0.0.8.ebuild,v 1.1 2007/10/14 11:13:07 angelos Exp $
 
 inherit xfce44
 
@@ -16,10 +16,11 @@ IUSE="debug"
 
 RDEPEND=">=x11-libs/gtk+-2.10
 	>=dev-libs/glib-2.12
+	media-libs/libexif
 	>=xfce-base/libxfce4util-${XFCE_MASTER_VERSION}
 	>=xfce-base/thunar-${THUNAR_MASTER_VERSION}"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
 
-DOCS="AUTHORS ChangeLog README"
+DOCS="AUTHORS ChangeLog NEWS README TODO"
