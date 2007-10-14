@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20070821.ebuild,v 1.1 2007/09/20 15:39:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20070821.ebuild,v 1.2 2007/10/14 20:44:43 je_fro Exp $
 
 inherit multilib
 
@@ -30,6 +30,9 @@ src_unpack() {
 		-e 's/CFLAGS.*=/CXXFLAGS +=/' \
 		-e 's/CFLAGS/CXXFLAGS/g' \
 		-e '/ldconfig/d' \
+		-e "s/mkdir -p lib/mkdir -p $(get_libdir)/g" \
+		-e "s/\`.\/lib-arch.sh\`/$(get_libdir)/g" \
+		-e "s/lib\//$(get_libdir)\//g" \
 		"${S}"/Makefile.LINUX \
 		|| die "sed Makefile failed"
 }
