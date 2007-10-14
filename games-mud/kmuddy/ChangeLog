@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/kmuddy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.16 2007/07/21 19:26:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.17 2007/10/14 22:07:04 mr_bones_ Exp $
+
+  14 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/kmuddy-0.8-nocrash.patch, kmuddy-0.8.ebuild:
+  add patch from Tanktalus@gmail.com to fix random crash (bug #190363)
 
   21 Jul 2007; Tristan Heaven <nyhm@gentoo.org> kmuddy-0.8.ebuild:
   HOMEPAGE update, bug #185457

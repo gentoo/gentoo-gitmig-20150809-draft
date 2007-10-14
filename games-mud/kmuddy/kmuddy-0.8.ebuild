@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-0.8.ebuild,v 1.3 2007/07/21 19:26:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-0.8.ebuild,v 1.4 2007/10/14 22:07:04 mr_bones_ Exp $
 
-inherit kde-functions
+inherit eutils kde-functions
 
 DESCRIPTION="MUD client for KDE"
 HOMEPAGE="http://www.kmuddy.com/"
@@ -17,6 +17,12 @@ DEPEND="arts? ( kde-base/arts )
 	sdl? ( media-libs/sdl-mixer )"
 
 need-kde 3
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-nocrash.patch"
+}
 
 src_compile() {
 	econf \
