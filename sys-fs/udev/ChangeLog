@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.360 2007/10/13 14:17:15 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.361 2007/10/14 10:16:14 armin76 Exp $
+
+  14 Oct 2007; Raúl Porcel <armin76@gentoo.org> udev-115-r1.ebuild:
+  alpha/ia64 stable wrt #195289
 
   13 Oct 2007; Christoph Mende <angelos@gentoo.org> udev-115-r1.ebuild:
   Stable on amd64 wrt bug #195289
