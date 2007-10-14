@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1.ebuild,v 1.4 2007/10/11 18:17:28 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1.ebuild,v 1.5 2007/10/14 07:42:32 opfer Exp $
 
 inherit linux-info
 
@@ -31,6 +31,8 @@ pkg_setup()	 {
 }
 
 src_compile() {
+	# is reported upstream
+	sed -e "s:/usr/local:/usr:" -i vpnc-script
 	# only allowed if not distributed in binary form!
 	if use hybrid-auth && ! use bindist; then
 		hybridauthopts="OPENSSL_GPL_VIOLATION=-DOPENSSL_GPL_VIOLATION OPENSSLLIBS=-lcrypto"
