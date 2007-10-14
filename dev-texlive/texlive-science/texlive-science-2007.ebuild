@@ -1,0 +1,14 @@
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-science/texlive-science-2007.ebuild,v 1.1 2007/10/14 08:38:42 aballier Exp $
+
+TEXLIVE_MODULES_DEPS="dev-texlive/texlive-latex
+!dev-tex/SIunits"
+TEXLIVE_MODULE_CONTENTS="SIstyle SIunits alg algorithm2e algorithmicx algorithms biocon bitfield bpchem bytefield chemarrow chemcompounds chemcono clrscode complexity computational-complexity digiconfigs dyntree formula functan galois gastex hepparticles hepthesis hepunits karnaugh mhchem mhs miller newalg objectz pseudocode scientificpaper sciposter struktex t-angles textopo unitsdef youngtab collection-science
+"
+inherit texlive-module
+DESCRIPTION="TeXLive Typesetting for natural and computer sciences"
+
+LICENSE="GPL-2 LPPL-1.3c"
+SLOT="0"
+KEYWORDS=""
