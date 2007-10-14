@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4-r2.ebuild,v 1.3 2007/10/01 14:32:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4-r2.ebuild,v 1.4 2007/10/14 11:12:41 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -405,6 +405,9 @@ pkg_postinst() {
 	ewarn "You must rebuild all drivers if upgrading from xorg-server 1.3"
 	ewarn "or earlier, because the ABI changed. If you cannot start X because"
 	ewarn "of module version mismatch errors, this is your problem."
+
+	print_installed x11-drivers/
+
 	ebeep 5
 	epause 10
 }
@@ -527,6 +530,27 @@ switch_opengl_implem() {
 		echo
 #		eselect opengl set --use-old ${OPENGL_DIR}
 		eselect opengl set ${OLD_IMPLEM}
+}
+
+print_installed() {
+	local command line token=$1
+
+	if $(type -P qlist >/dev/null 2>&1); then
+		command="qlist -I -v -C ${token}"
+	elif $(type -P equery >/dev/null 2>&1); then
+		command="equery -q -C list ${token} | grep -o '${token}[[:alnum:].-]*'"
+	elif $(type -P epm >/dev/null 2>&1); then
+		command="epm -qaG | grep ${token}"
+	else
+		local dir
+		command="true"
+		for dir in "${PORTDIR}"/${token}*; do
+			command="${command} ; best_version ${dir#${PORTDIR}/}"
+		done
+	fi
+	while read line; do
+		ewarn "${line}"
+	done < <(eval ${command})
 }
 
 xprint_src_install() {
