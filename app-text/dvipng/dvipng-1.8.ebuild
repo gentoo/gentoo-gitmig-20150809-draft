@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.8.ebuild,v 1.10 2007/05/15 03:40:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.8.ebuild,v 1.11 2007/10/14 18:27:05 aballier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 
 RDEPEND="media-libs/gd
 	media-libs/libpng
-	virtual/tetex
+	virtual/latex-base
 	sys-libs/zlib
 	truetype? ( >=media-libs/freetype-2.1.5 )"
 DEPEND="${RDEPEND}
@@ -33,7 +33,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Install failed"
+	make DESTDIR="${D}" install || die "Install failed"
 
 	dodoc ChangeLog README RELEASE || die "dodoc failed"
 }
