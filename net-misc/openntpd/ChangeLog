@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.36 2007/10/06 15:30:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.37 2007/10/14 15:37:43 corsair Exp $
+
+  14 Oct 2007; Markus Rothe <corsair@gentoo.org> openntpd-3.9_p1-r1.ebuild:
+  Stable on ppc64; bug #194623
 
   06 Oct 2007; Raúl Porcel <armin76@gentoo.org> openntpd-3.9_p1-r1.ebuild:
   alpha/ia64 stable wrt #194623
