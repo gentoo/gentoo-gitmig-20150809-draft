@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r3.ebuild,v 1.8 2007/01/06 14:16:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r3.ebuild,v 1.9 2007/10/14 00:17:56 eva Exp $
 
 inherit eutils
 
@@ -19,11 +19,11 @@ src_compile() {
 	use debug \
 		&& myconf="--enable-debug=yes" \
 		|| myconf="--enable-debug=no"
-	econf ${myconf} || die
+	econf ${myconf} || die "econf failed"
 
-	epatch ${FILESDIR}/sandbox.patch || die
+	epatch "${FILESDIR}"/sandbox.patch
 
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
