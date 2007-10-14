@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/singularity
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/ChangeLog,v 1.4 2007/10/02 06:46:57 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/ChangeLog,v 1.5 2007/10/14 07:26:57 mr_bones_ Exp $
+
+  14 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/singularity-0.26a-musicdir.patch, singularity-0.26a.ebuild:
+  make music optional at upstream request (bug #195447)
 
 *singularity-0.26a (02 Oct 2007)
 
