@@ -1,0 +1,10 @@
+# ChangeLog for net-p2p/btg
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/ChangeLog,v 1.1 2007/10/14 23:37:13 angelos Exp $
+
+*btg-0.9.6 (14 Oct 2007)
+
+  14 Oct 2007; Christoph Mende <angelos@gentoo.org> +files/btgd-confd,
+  +files/btgd-init, +btg-0.9.6.ebuild:
+  Initial import
+
