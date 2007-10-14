@@ -1,0 +1,16 @@
+diff -ur rpy-1.0-RC3/setup.py rpy-1.0-RC3.patched/setup.py
+--- rpy-1.0-RC3/setup.py	2007-02-20 00:30:04.000000000 +0100
++++ rpy-1.0-RC3.patched/setup.py	2007-09-07 14:22:04.000000000 +0200
+@@ -142,10 +142,11 @@
+         import numpy
+         DEFINE.append(('WITH_NUMERIC', '3'))
+         DEFINE.append(('PY_ARRAY_TYPES_PREFIX', 'PyArray_'))
+-        include_dirs.append(numpy.get_numpy_include())
++        include_dirs.append(numpy.get_include())
+     except ImportError:
+         # fall back to Numeric
+         try:
++            import Numeric
+             DEFINE.append(('WITH_NUMERIC', '1'))
+         except ImportError:
+             UNDEF.append('WITH_NUMERIC')
