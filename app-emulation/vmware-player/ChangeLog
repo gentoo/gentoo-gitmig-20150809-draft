@@ -1,6 +1,19 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.40 2007/09/23 12:30:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.41 2007/10/14 09:14:30 ikelos Exp $
+
+*vmware-player-2.0.1.55017 (14 Oct 2007)
+
+  14 Oct 2007; Mike Auty <ikelos@gentoo.org>
+  +files/2.0.1.55017/000_all_initd-location.patch,
+  +files/2.0.1.55017/001_all_fix-permissions.patch,
+  +files/2.0.1.55017/002_all_pagebreak-detection-fix.patch,
+  +files/2.0.1.55017/004_all_do-not-build-modules.patch,
+  +files/2.0.1.55017/007_all_use-modprobe-over-insmod.patch,
+  +files/2.0.1.55017/009_all_init.d-modules-warning.patch,
+  +files/2.0.1.55017/011_all_legit-modules-only.patch,
+  +vmware-player-2.0.1.55017.ebuild:
+  Version bump to vmware-player-2.0.1, fixes some security bugs.
 
   23 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   vmware-player-1.0.5.56455.ebuild:
