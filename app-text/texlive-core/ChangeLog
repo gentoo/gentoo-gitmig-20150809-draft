@@ -1,0 +1,16 @@
+# ChangeLog for app-text/texlive-core
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.1 2007/10/14 07:56:33 aballier Exp $
+
+*texlive-core-2007 (14 Oct 2007)
+
+  14 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/2007/tetex-3.0-CVE-2007-0650.patch,
+  +files/2007/tetex-3.0_p1-xpdf-CVE-2007-3387.patch,
+  +files/2007/texlive-core-2007-gentoo-texmf-site.patch,
+  +files/2007/texlive-core-2007-icu-xetex-execstacks.patch,
+  +files/2007/texlive-core-2007-libteckit-asneeded.patch,
+  +files/2007/texlive-core-2007-mpware.patch, +files/texmf-update,
+  +metadata.xml, +texlive-core-2007.ebuild:
+  Initial import
+
