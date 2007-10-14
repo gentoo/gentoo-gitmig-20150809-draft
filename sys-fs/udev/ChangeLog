@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.361 2007/10/14 10:16:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.362 2007/10/14 17:15:09 zzam Exp $
+
+*udev-116 (14 Oct 2007)
+
+  14 Oct 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-116-path-to-logger.diff, +udev-116.ebuild:
+  Version bumped. This version already contains our huge rules patch. Fix Bug
+  195317 by removing hardcoded path to logger.
 
   14 Oct 2007; Raúl Porcel <armin76@gentoo.org> udev-115-r1.ebuild:
   alpha/ia64 stable wrt #195289
