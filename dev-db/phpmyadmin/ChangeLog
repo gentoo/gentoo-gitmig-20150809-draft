@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.263 2007/06/02 05:16:15 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.264 2007/10/14 06:30:19 wrobel Exp $
+
+*phpmyadmin-2.11.1 (14 Oct 2007)
+
+  14 Oct 2007; <wrobel@gentoo.org>
+  +files/phpmyadmin-2.11.1-issue_195707.patch, +phpmyadmin-2.11.1.ebuild:
+  Added patched 2.11.1 to the tree. See sec issue #195707.
 
   02 Jun 2007; Renat Lumpau <rl03@gentoo.org>
   -files/mysql-setup.sql.in-2.5.6, -files/config.default.php-2.9.2.patch,
