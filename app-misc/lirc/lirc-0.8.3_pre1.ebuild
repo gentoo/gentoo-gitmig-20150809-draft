@@ -1,16 +1,18 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre1.ebuild,v 1.1 2007/10/13 18:14:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre1.ebuild,v 1.2 2007/10/14 10:16:47 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
 DESCRIPTION="decode and send infra-red signals of many commonly used remote controls"
 HOMEPAGE="http://www.lirc.org/"
 
+MY_P=${PN}-${PV/_/}
+
 if [[ "${PV/_pre/}" = "${PV}" ]]; then
-	SRC_URI="mirror://sourceforge/lirc/${P/_/}.tar.bz2"
+	SRC_URI="mirror://sourceforge/lirc/${MY_P}.tar.bz2"
 else
-	SRC_URI="http://lirc.sourceforge.net/software/snapshots/${P/_/}.tar.bz2"
+	SRC_URI="http://lirc.sourceforge.net/software/snapshots/${MY_P}.tar.bz2"
 fi
 
 LICENSE="GPL-2"
@@ -18,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug doc X hardware-carrier transmitter"
 
-S="${WORKDIR}/${P/_pre/pre}"
+S="${WORKDIR}/${MY_P}"
 
 RDEPEND="
 	X? (
@@ -232,7 +234,7 @@ src_unpack() {
 
 	# Apply patches needed for some special device-types
 	use lirc_devices_imon_pad2keys && epatch "${FILESDIR}"/${PN}-0.8.1-imon-pad2keys.patch
-	use lirc_devices_remote_wonder_plus && epatch "${FILESDIR}"/lirc-remotewonderplus.patch
+	use lirc_devices_remote_wonder_plus && epatch "${FILESDIR}"/lirc-0.8.3_pre1-remotewonderplus.patch
 
 	# remove parallel driver on SMP systems
 	if linux_chkconfig_present SMP ; then
@@ -240,10 +242,10 @@ src_unpack() {
 	fi
 
 	# respect CFLAGS
-	sed -i -e 's:CFLAGS="-O2:CFLAGS=""\n#CFLAGS="-O2:' configure.in
+	sed -i -e 's:CFLAGS="-O2:CFLAGS=""\n#CFLAGS="-O2:' configure.ac
 
 	# setting default device-node
-	sed -i -e '/#define LIRC_DRIVER_DEVICE/d' acconfig.h
+	sed -i -e '/#define LIRC_DRIVER_DEVICE/d' configure.ac acconfig.h
 	echo "#define LIRC_DRIVER_DEVICE \"${LIRC_DRIVER_DEVICE}\"" >> acconfig.h
 
 	eautoreconf
