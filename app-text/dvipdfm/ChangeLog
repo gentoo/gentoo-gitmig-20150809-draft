@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipdfm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.15 2007/10/14 18:44:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.16 2007/10/14 18:46:52 aballier Exp $
+
+  14 Oct 2007; Alexis Ballier <aballier@gentoo.org> dvipdfm-0.13.2c.ebuild:
+  quote variables, fix header date, thanks repoman
 
 *dvipdfm-0.13.2d (14 Oct 2007)
 
