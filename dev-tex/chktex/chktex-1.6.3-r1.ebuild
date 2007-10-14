@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/chktex-1.6.3-r1.ebuild,v 1.1 2006/11/16 16:46:24 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/chktex-1.6.3-r1.ebuild,v 1.2 2007/10/14 20:40:42 aballier Exp $
 
 DESCRIPTION="Checks latex source for common mistakes"
 HOMEPAGE="http://baruch.ev-en.org/proj/chktex/"
@@ -20,12 +20,12 @@ src_compile() {
 	econf `use_enable debug debug-info` || die
 	emake || die
 	if use doc ; then
-		make html
+		emake html || die "emake html failed"
 	fi
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	emake install DESTDIR="${D}" || die
 	dodoc ChkTeX.readme NEWS
 	if use doc ; then
 		dohtml HTML/ChkTeX/*

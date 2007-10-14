@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/chktex
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.17 2007/10/14 20:33:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.18 2007/10/14 20:40:42 aballier Exp $
+
+  14 Oct 2007; Alexis Ballier <aballier@gentoo.org> chktex-1.6.3-r1.ebuild:
+  make -> emake, quote D, add die when building doc
 
   14 Oct 2007; Alexis Ballier <aballier@gentoo.org> -chktex-1.5-r2.ebuild,
   -chktex-1.5-r3.ebuild, -chktex-1.6.3.ebuild:
