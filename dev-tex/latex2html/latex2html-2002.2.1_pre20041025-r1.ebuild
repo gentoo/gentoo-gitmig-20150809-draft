@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025-r1.ebuild,v 1.13 2007/04/11 03:30:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025-r1.ebuild,v 1.14 2007/10/14 20:58:02 aballier Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ DEPEND="virtual/ghostscript
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${PN}-convert-length.patch" || die
 	epatch "${FILESDIR}/${PN}-perl_name.patch" || die
 	epatch "${FILESDIR}/${PN}-extract-major-version.patch" || die
@@ -84,7 +84,7 @@ src_install() {
 
 	# clean the perl scripts up to remove references to the sandbox
 	einfo "fixing sandbox references"
-	einfo ${T}
+	einfo "${T}"
 	dosed "s:${T}:/tmp:g" /usr/lib/latex2html/pstoimg.pl
 	dosed "s:${S}::g" /usr/lib/latex2html/latex2html.pl
 	dosed "s:${T}:/tmp:g" /usr/lib/latex2html/cfgcache.pm
