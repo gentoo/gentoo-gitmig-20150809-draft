@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.727 2007/10/14 11:51:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.728 2007/10/14 17:48:30 dirtyepic Exp $
+
+  14 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> use.local.desc:
+  Drop local USE flags for muttng, which was removed in July.
 
   14 Oct 2007; Alexis Ballier <aballier@gentoo.org> package.mask:
   update xcolor mask, 2.11 supports texmf-site
