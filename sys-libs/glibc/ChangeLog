@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.554 2007/10/12 20:47:07 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.555 2007/10/14 09:44:13 opfer Exp $
+
+  14 Oct 2007; Christian Faulhammer <opfer@gentoo.org> glibc-2.6.1.ebuild:
+  stable x86, bug 195427
 
   12 Oct 2007; Lars Weiler <pylon@gentoo.org> glibc-2.6.1.ebuild:
   stable ppc, bug #195427
