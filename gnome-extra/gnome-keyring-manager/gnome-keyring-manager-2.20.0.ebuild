@@ -1,15 +1,15 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/gnome-keyring-manager-2.16.0-r1.ebuild,v 1.11 2007/10/14 13:29:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/gnome-keyring-manager-2.20.0.ebuild,v 1.1 2007/10/14 13:29:54 eva Exp $
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="A keyring management program for the GNOME Desktop"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="static"
 
 RDEPEND=">=x11-libs/gtk+-2.6
@@ -28,10 +28,4 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
 
 pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable static) --disable-scrollkeeper"
-}
-
-src_unpack() {
-	gnome2_src_unpack
-
-	epatch "${FILESDIR}"/${PN}-2.16.0-select-segfault.patch
 }
