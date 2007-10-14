@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.91 2007/10/13 23:37:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.92 2007/10/14 11:01:47 aballier Exp $
+
+  14 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  libquicktime-1.0.1.ebuild:
+  drop xorg 6 checks for built with use, dont try to be clever with
+  /usr/include/quicktime by removing the files, just die
 
 *libquicktime-1.0.1 (13 Oct 2007)
 

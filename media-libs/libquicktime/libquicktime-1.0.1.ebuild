@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.0.1.ebuild,v 1.1 2007/10/13 23:37:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.0.1.ebuild,v 1.2 2007/10/14 11:01:47 aballier Exp $
 
 inherit libtool eutils
 
@@ -42,12 +42,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 PROVIDE="virtual/quicktime"
-
-pkg_setup() {
-	if has_version '=x11-base/xorg-x11-6*' && ! built_with_use x11-base/xorg-x11 xv; then
-		die "You need xv support to compile ${PN}."
-	fi
-}
 
 src_compile() {
 	local MY_OPTS=""
@@ -93,14 +87,8 @@ pkg_preinst() {
 		elog "going to create a /usr/include/quicktime symlink, but for some"
 		elog "reason that is a directory on your system."
 
-		if $(has_version =media-libs/libquicktime-0.9.4); then
-			elog "It seems this directory belongs to libquicktime-0.9.4."
-			elog "We'll delete that directory now."
-			rm -rvf /usr/include/quicktime
-		else
-			elog "Please check that is empty, and remove it, or submit a bug"
-			elog "telling us which package owns the directory."
-			die "/usr/include/quicktime is a directory."
-		fi
+		elog "Please check that is empty, and remove it, or submit a bug"
+		elog "telling us which package owns the directory."
+		die "/usr/include/quicktime is a directory."
 	fi
 }
