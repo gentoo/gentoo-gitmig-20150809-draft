@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-screenshooter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/ChangeLog,v 1.16 2007/09/01 16:47:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/ChangeLog,v 1.17 2007/10/14 16:20:14 corsair Exp $
+
+  14 Oct 2007; Markus Rothe <corsair@gentoo.org>
+  xfce4-screenshooter-1.0.0-r1.ebuild:
+  Stable on ppc64; bug #195250
 
   01 Sep 2007; nixnut <nixnut@gentoo.org>
   xfce4-screenshooter-1.0.0-r1.ebuild:

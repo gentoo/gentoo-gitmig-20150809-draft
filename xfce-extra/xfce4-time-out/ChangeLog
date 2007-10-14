@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-time-out
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-time-out/ChangeLog,v 1.21 2007/09/01 16:48:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-time-out/ChangeLog,v 1.22 2007/10/14 16:20:58 corsair Exp $
+
+  14 Oct 2007; Markus Rothe <corsair@gentoo.org>
+  xfce4-time-out-0.1.1.ebuild:
+  Stable on ppc64; bug #195250
 
   01 Sep 2007; nixnut <nixnut@gentoo.org> xfce4-time-out-0.1.1.ebuild:
   Stable on ppc wrt bug 190072
