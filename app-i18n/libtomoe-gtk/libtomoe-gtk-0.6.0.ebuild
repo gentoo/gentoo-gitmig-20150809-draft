@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/libtomoe-gtk-0.6.0.ebuild,v 1.3 2007/10/14 03:04:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/libtomoe-gtk-0.6.0.ebuild,v 1.4 2007/10/14 07:20:09 matsuu Exp $
 
 MY_P="tomoe-gtk-${PV}"
 DESCRIPTION="Tomoe GTK+ interface widget library"
@@ -13,7 +13,8 @@ KEYWORDS="~amd64 x86"
 IUSE="doc"
 
 DEPEND=">=app-i18n/tomoe-0.6.0
-	>=dev-python/pygtk-2
+	dev-python/pygtk
+	dev-python/pygobject
 	>=gnome-extra/gucharmap-1.4.0
 	doc? ( dev-util/gtk-doc )"
 
