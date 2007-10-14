@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/parsetree-2.0.2.ebuild,v 1.1 2007/10/07 18:07:37 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/parsetree-2.0.2.ebuild,v 1.2 2007/10/14 05:41:57 tgall Exp $
 
 inherit ruby gems
 
@@ -12,7 +12,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${MY_P}.gem"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 USE_RUBY="ruby18"
