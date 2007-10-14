@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.17.0_pre20070828.ebuild,v 1.2 2007/08/29 07:11:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.17.1_pre20071013.ebuild,v 1.1 2007/10/14 06:40:18 dragonheart Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -16,6 +16,7 @@ LICENSE="MIT X11"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ssl ipv6 ldap ares gnutls nss idn kerberos test"
+#IUSE="ssl ipv6 ldap ares gnutls libssh2 nss idn kerberos test"
 
 RDEPEND="gnutls? ( net-libs/gnutls )
 	nss? ( !gnutls? ( dev-libs/nss ) )
@@ -25,6 +26,7 @@ RDEPEND="gnutls? ( net-libs/gnutls )
 	ares? ( >=net-dns/c-ares-1.4.0 )
 	kerberos? ( virtual/krb5 )
 	app-misc/ca-certificates"
+#	libssh2? ( >=net-libs/libssh2-0.16 )"
 
 # net-libs/libssh2 (masked) --with-libssh2
 # fbopenssl (not in gentoo) --with-spnego
@@ -67,6 +69,7 @@ src_compile() {
 		--without-krb4
 		--without-libssh2
 		--without-spnego"
+#		$(use_with libssh2)
 
 	if use ipv6 && use ares; then
 		elog "c-ares support disabled because it is incompatible with ipv6."
