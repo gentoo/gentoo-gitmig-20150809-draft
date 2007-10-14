@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.16.ebuild,v 1.9 2007/08/11 15:37:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.16.ebuild,v 1.10 2007/10/14 08:49:04 kolmodin Exp $
 
 CABAL_FEATURES="bin"
 inherit haskell-cabal autotools
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 
 DEPEND=">=virtual/ghc-6.4
-	>=dev-haskell/cabal-1.1.6.1
+	|| ( =dev-haskell/cabal-1.1.6.1 =dev-haskell/cabal-1.1.6.2 )
 	doc? (  ~app-text/docbook-xml-dtd-4.2
 		app-text/docbook-xsl-stylesheets )"
 RDEPEND=""
