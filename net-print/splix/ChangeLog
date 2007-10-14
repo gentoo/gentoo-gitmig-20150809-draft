@@ -1,6 +1,9 @@
 # ChangeLog for net-print/splix
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.7 2007/10/14 15:31:24 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.8 2007/10/14 18:31:30 wschlich Exp $
+
+  14 Oct 2007; Wolfram Schlich <wschlich@gentoo.org> splix-1.0.1_p1.ebuild:
+  add missing cupsddk dep
 
 *splix-1.0.1_p1 (14 Oct 2007)
 
