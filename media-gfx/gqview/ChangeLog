@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gqview
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.83 2007/10/10 20:32:37 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.84 2007/10/14 15:49:10 corsair Exp $
+
+  14 Oct 2007; Markus Rothe <corsair@gentoo.org> gqview-2.0.4.ebuild:
+  Stable on ppc64; bug #194935
 
   10 Oct 2007; Lars Weiler <pylon@gentoo.org> gqview-2.0.4.ebuild:
   stable ppc, bug #194935
