@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.1.ebuild,v 1.16 2007/10/15 14:01:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.1.ebuild,v 1.17 2007/10/15 16:25:03 cardoe Exp $
 
 inherit eutils autotools multilib
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.7
 		>=dev-libs/dbus-glib-0.61
 		>=x11-libs/libX11-1.0.0
 		pam? ( virtual/pam )
-		elibc_glibc? ( !~sys-libs/glibc-2.4* )"
+		elibc_glibc? ( !=sys-libs/glibc-2.4* )"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
