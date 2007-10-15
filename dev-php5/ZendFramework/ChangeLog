@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ZendFramework
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.20 2007/10/06 15:41:24 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.21 2007/10/15 18:10:53 gurligebis Exp $
+
+  15 Oct 2007; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  ZendFramework-1.0.2.ebuild:
+  Cosmetic changes, since upstream has started using sane naming of tar files.
 
 *ZendFramework-1.0.2 (06 Oct 2007)
 

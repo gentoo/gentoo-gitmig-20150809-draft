@@ -1,28 +1,25 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.0.2.ebuild,v 1.1 2007/10/06 15:41:24 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.0.2.ebuild,v 1.2 2007/10/15 18:10:53 gurligebis Exp $
 
 PHP_LIB_NAME="Zend"
 
 inherit php-lib-r1
 
 KEYWORDS="~amd64 ~x86"
-MY_PV="1.0.2"
 
 DESCRIPTION="Zend Framework is a high quality and open source framework for developing Web Applications and Web Services with PHP 5."
 HOMEPAGE="http://framework.zend.com/"
-SRC_URI="http://framework.zend.com/releases/${PN}-${MY_PV}/${PN}-${MY_PV}.tar.gz
+SRC_URI="http://framework.zend.com/releases/${P}/${P}.tar.gz
 		doc? (
-			http://framework.zend.com/releases/${PN}-${MY_PV}/${PN}-${MY_PV}-apidoc.tar.gz
-			http://framework.zend.com/releases/${PN}-${MY_PV}/${PN}-${MY_PV}-manual-en.tar.gz )"
+			http://framework.zend.com/releases/${P}/${P}-apidoc.tar.gz
+			http://framework.zend.com/releases/${P}/${P}-manual-en.tar.gz )"
 LICENSE="ZendFramework-1.1"
 SLOT="0"
 IUSE="doc examples"
 
-DEPEND=">=virtual/php-5.1.4"
-RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${PN}-${MY_PV}"
+DEPEND=""
+RDEPEND=""
 
 need_php_by_category
 
