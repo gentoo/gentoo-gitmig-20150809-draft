@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3-r2.ebuild,v 1.5 2007/02/06 08:34:49 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3-r2.ebuild,v 1.6 2007/10/15 09:04:26 opfer Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -24,14 +24,14 @@ SLOT="0"
 KEYWORDS="x86"
 
 IUSE=""
-DEPEND=">=app-text/texi2html-1.70
-	>=sys-apps/texinfo-4.8"
+DEPEND=">=app-text/texi2html-1.70"
+
 RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${P}
+	cd "${P}"
 	ln -s ../${BIN_V} binutils
 	ln -s ../${GDB_V} gdb
 	ln -s ../${GCC_V_ARM} gcc
@@ -39,13 +39,13 @@ src_unpack() {
 	cd ..
 
 	echo ">>> Patching sources..."
-	echo -n " "; epatch ${P}/${BIN_V}.palmos.diff || die
-	echo -n " "; epatch ${P}/${GCC_V_ARM}.palmos.diff || die
-	echo -n " "; epatch ${P}/${GCC_V_M68K}.palmos.diff || die
-	echo -n " "; epatch ${P}/${GDB_V}.palmos.diff || die
-	echo -n " "; EPATCH_OPTS="-l" epatch ${P}/../MsectGdb2.3-1.diff || die
-	echo -n " "; epatch ${FILESDIR}/${P}-compilefix.patch || die
-	echo -n " "; epatch ${FILESDIR}/${P}-gcc4.patch || die
+	echo -n " "; epatch "${P}/${BIN_V}.palmos.diff"
+	echo -n " "; epatch "${P}/${GCC_V_ARM}.palmos.diff"
+	echo -n " "; epatch "${P}/${GCC_V_M68K}.palmos.diff"
+	echo -n " "; epatch "${P}/${GDB_V}.palmos.diff"
+	echo -n " "; EPATCH_OPTS="-l" epatch "${P}/../MsectGdb2.3-1.diff"
+	echo -n " "; epatch "${FILESDIR}/${P}-compilefix.patch"
+	echo -n " "; epatch "${FILESDIR}/${P}-gcc4.patch"
 
 		# This last patch disables dummy headers being copied.
 			# a) They're not needed
@@ -61,7 +61,9 @@ src_unpack() {
 
 src_config() {
 	echo ">>> Rebuilding configuration scripts"
-	cd binutils; WANT_AUTOCONF=2.1 autoconf || die "Failed to reconfigure binutils"; cd ..
+	cd binutils
+	WANT_AUTOCONF=2.1 autoconf || die "Failed to reconfigure binutils"
+	cd ..
 
 	cd ..
 	mkdir build
@@ -88,9 +90,11 @@ src_config() {
 		targets=',arm-palmos'
 	fi
 
+	# econf not possible as this seems to rely on from where it has been started
+	# will not debug further as this is a maintainer-needed ebuild
 	../${P}/configure --enable-targets=m68k-palmos"${targets}" \
 	--enable-languages=c,c++ \
-	--with-headers=${WORKDIR}/build/empty --enable-html-docs \
+	--with-headers="${WORKDIR}/build/empty" --enable-html-docs \
 	--with-palmdev-prefix=/opt/palmdev --prefix=/usr || die
 
 	# These have to be real; otherwise the compiler is hard-coded
@@ -105,7 +109,7 @@ src_config() {
 
 src_compile() {
 	src_config
-	make || die
+	emake -j1 || die
 }
 
 src_install() {
@@ -128,10 +132,8 @@ pkg_postinst() {
 	elog "For a complete Palm Development Environment you will also need..."
 	elog
 	elog "[ ] PilRC; the Palm resource compiler; emerge pilrc"
-	elog "[ ] POSE; The Palm OS Emulator; emerge pose"
+	elog "[ ] POSE; The Palm OS Emulator"
 	elog  "   ->> A ROM for POSE; available from Palm"
-	elog "[ ] An SDK; available from the Palm Website"
-	elog  "   ->> Decompress this to /opt/palmdev and then run"
-	elog  "       'palmdev-prep /opt/palmdev'"
+	elog "[ ] An SDK; emerge dev-lang/palmos-sdk"
 	elog
 }
