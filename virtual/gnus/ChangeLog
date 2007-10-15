@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gnus
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/ChangeLog,v 1.7 2007/09/25 00:17:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/ChangeLog,v 1.8 2007/10/15 17:33:28 ulm Exp $
+
+  15 Oct 2007; Ulrich Mueller <ulm@gentoo.org> gnus-5.10.ebuild:
+  Remove gnus-cvs from RDEPEND since it is package-moved to ngnus.
 
   24 Sep 2007; Brent Baude <ranger@gentoo.org> gnus-5.10.ebuild:
   Marking gnus-5.10 ppc64 stable for dep in bug#193501

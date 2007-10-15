@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/gnus-5.10.ebuild,v 1.4 2007/09/25 00:17:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/gnus-5.10.ebuild,v 1.5 2007/10/15 17:33:28 ulm Exp $
 
 inherit versionator
 
@@ -15,7 +15,6 @@ IUSE=""
 
 RDEPEND="|| (
 		>=app-emacs/gnus-5.10.8
-		>=app-emacs/gnus-cvs-5.11
 		>=app-emacs/ngnus-0.6
 		>=virtual/emacs-22
 	)"
