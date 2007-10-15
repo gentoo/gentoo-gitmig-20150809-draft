@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/gnus-5.10.ebuild,v 1.5 2007/10/15 17:33:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/gnus-5.10.ebuild,v 1.6 2007/10/15 18:21:53 ulm Exp $
 
 inherit versionator
 
@@ -33,7 +33,7 @@ pkg_setup () {
 		einfo "No Gnus version ${gvn} detected."
 	else
 		eerror "virtual/${P} requires at least Gnus version ${PV}."
-		eerror "You should either install package app-emacs/{gnus,gnus-cvs},"
+		eerror "You should either install package app-emacs/{gnus,ngnus},"
 		eerror "or use \"eselect emacs\" to select an Emacs version >= 22."
 		die "Gnus version ${gvn} is too low."
 	fi
