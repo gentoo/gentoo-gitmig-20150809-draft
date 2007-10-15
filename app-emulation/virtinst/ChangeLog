@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtinst
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.1 2007/06/10 06:07:02 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.2 2007/10/15 11:16:31 dberkholz Exp $
+
+*virtinst-0.300.1 (15 Oct 2007)
+
+  15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/virtinst-0.300.1-nfs-check.patch,
+  +files/virtinst-0.300.1-remove-usb-tablet.patch, +virtinst-0.300.1.ebuild:
+  Adds some new features like remote access and OpenVZ (although the latter
+  may only be at the libvirt level so far).
 
 *virtinst-0.103.0 (10 Jun 2007)
 

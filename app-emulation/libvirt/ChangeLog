@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.7 2007/08/29 16:45:17 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.8 2007/10/15 11:16:02 dberkholz Exp $
+
+*libvirt-0.3.3 (15 Oct 2007)
+
+  15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +libvirt-0.3.3.ebuild:
+  Adds some new features like remote access and OpenVZ (although the latter
+  may only be at the libvirt level so far).
 
   29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing agriffis from metadata due to his retirement (see #182294 for

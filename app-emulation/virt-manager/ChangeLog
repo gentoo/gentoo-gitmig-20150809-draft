@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.3 2007/06/13 17:50:45 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.4 2007/10/15 11:17:14 dberkholz Exp $
+
+*virt-manager-0.5.1 (15 Oct 2007)
+
+  15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +virt-manager-0.5.1.ebuild:
+  Adds some new features like remote access and OpenVZ (although the latter
+  may only be at the libvirt level so far).
 
   13 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Add xen herd, at rbu's request.
