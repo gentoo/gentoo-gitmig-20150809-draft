@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.36 2007/08/26 21:27:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.37 2007/10/15 14:18:26 bicatali Exp $
+
+  15 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> numpy-1.0.3.1.ebuild:
+  Use the new virtual/cblas.
 
   26 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org> -numpy-0.9.8.ebuild:
   Removed old version

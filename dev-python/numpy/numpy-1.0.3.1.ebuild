@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.3.1.ebuild,v 1.2 2007/08/24 19:22:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0.3.1.ebuild,v 1.3 2007/10/15 14:18:26 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -14,11 +14,9 @@ SRC_URI="mirror://sourceforge/numpy/${MY_P}.tar.gz"
 HOMEPAGE="http://numeric.scipy.org/"
 
 RDEPEND="!dev-python/f2py
-	lapack? ( || ( >=sci-libs/blas-atlas-3.7.11-r1
-				   >=sci-libs/cblas-reference-20030223-r3 )
-				  virtual/lapack )"
+	lapack? ( virtual/cblas virtual/lapack )"
 DEPEND="${RDEPEND}
-	lapack? ( app-admin/eselect-cblas )"
+	lapack? ( dev-util/pkgconfig )"
 
 IUSE="lapack"
 SLOT="0"
@@ -35,37 +33,13 @@ pkg_setup() {
 	[[ -n "${LDFLAGS_sav}" ]] && einfo "Ignoring LDFLAGS=${LDFLAGS_sav}"
 }
 
-numpy_lapack_setup() {
-	local mycblas
-	for d in $(eselect cblas show); do mycblas=${d}; done
-	if [[ -z "${mycblas/reference/}" ]] && [[ -z "${mycblas/atlas/}" ]]; then
-		ewarn "You need to set cblas to atlas or reference. Do:"
-		ewarn "   eselect cblas set <impl>"
-		ewarn "where <impl> is atlas, threaded-atlas or reference"
-		die "numpy_lapack_setup failed"
-	fi
-
-	# Remove default values
-	echo "[blas_opt]"  > site.cfg
-	case "${mycblas}" in
-		reference)
-			echo "include_dirs = /usr/include/cblas" >> site.cfg
-			echo "libraries = blas, cblas" >> site.cfg
-			unset BLAS
-			;;
-		atlas|threaded-atlas)
-			echo "include_dirs = /usr/include/atlas" >> site.cfg
-			echo "libraries = blas, cblas, atlas" >> site.cfg
-			unset ATLAS
-			;;
-		*)
-			eerror "Invalid cblas implementation: ${cblas}"
-			die "numpy_lapack_setup failed"
-			;;
-	esac
-	echo "[lapack_opt]"  >> site.cfg
-	echo "libraries = lapack" >> site.cfg
-	unset LAPACK
+# ex usage: pkgconf_cfg --libs-only-l cblas: ['cblas','atlas']
+pkgconf_cfg() {
+	local cfg="["
+	for i in $(pkg-config "$1" "$2"); do
+		cfg="${cfg}'${i:2}'"
+	done
+	echo "${cfg//\'\'/','}]"
 }
 
 src_unpack() {
@@ -87,7 +61,19 @@ src_unpack() {
 	export ATLAS=None
 	export PTATLAS=None
 	export MKL=None
-	use lapack && numpy_lapack_setup
+
+	if use lapack; then
+		unset BLAS LAPACK
+		cat > setup.cfg << EOF
+[blas_opt]
+libraries = $(pkgconf_cfg --libs-only-l cblas)
+library_dirs = $(pkgconf_cfg --libs-only-L cblas)
+
+[lapack_opt]
+libraries = $(pkgconf_cfg --libs-only-l lapack)
+library_dirs = $(pkgconf_cfg --libs-only-L lapack)
+EOF
+	fi
 }
 
 src_test() {
@@ -102,7 +88,7 @@ src_test() {
 	grep -q '^OK$' test.log || die "test failed"
 	popd
 
-_	rm -rf test
+	rm -rf test
 }
 
 src_install() {
