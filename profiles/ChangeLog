@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.732 2007/10/15 10:20:36 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.733 2007/10/15 16:53:09 ulm Exp $
+
+  15 Oct 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Mask app-emacs/ngnus live cvs ebuild.
 
   15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>; thirdpartymirrors:
   Add a fedora-dev mirror class, for development RPMs. They're only on ~10% of

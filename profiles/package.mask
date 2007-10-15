@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7810 2007/10/15 08:17:16 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7811 2007/10/15 16:53:09 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Ulrich Mueller <ulm@gentoo.org> (15 Oct 2007)
+# Live CVS ebuild
+~app-emacs/ngnus-9999
 
 # Krzysiek Pawlik <nelchael@gentoo.org> (15 Oct 2007)
 # Copying does't work, use xclip instead, see bug #191553
