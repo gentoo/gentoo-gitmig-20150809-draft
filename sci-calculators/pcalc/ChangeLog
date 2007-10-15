@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/pcalc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.8 2007/10/10 20:41:00 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.9 2007/10/15 06:20:35 tgall Exp $
+
+  15 Oct 2007; Tom Gall <tgall@gentoo.org> pcalc-1.1.ebuild:
+  stable on ppc64, bug #194959
 
   10 Oct 2007; Lars Weiler <pylon@gentoo.org> pcalc-1.1.ebuild:
   stable ppc, bug #194959
