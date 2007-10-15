@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.2 2007/10/15 01:15:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.3 2007/10/15 21:30:07 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -46,6 +46,7 @@ DEPEND="${MODULAR_X_DEPEND}
 	!app-text/xetex
 	!dev-tex/xmltex
 	!dev-tex/vntex
+	!dev-tex/tex4ht
 	sys-apps/ed
 	sys-libs/zlib
 	>=media-libs/libpng-1.2.1

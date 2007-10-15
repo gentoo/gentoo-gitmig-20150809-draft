@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.1 2007/10/14 07:56:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.2 2007/10/15 21:30:07 aballier Exp $
+
+  15 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  texlive-core-2007.ebuild:
+  block tex4ht, texlive provides it
 
 *texlive-core-2007 (14 Oct 2007)
 
