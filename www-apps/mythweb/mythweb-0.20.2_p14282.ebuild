@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.20.2_p14282.ebuild,v 1.3 2007/08/28 23:14:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.20.2_p14282.ebuild,v 1.4 2007/10/15 15:29:17 cardoe Exp $
 
 ESVN_PROJECT="mythplugins"
 
@@ -8,7 +8,7 @@ inherit mythtv webapp depend.php subversion
 
 DESCRIPTION="PHP scripts intended to manage MythTV from a web browser."
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 
 RDEPEND="dev-perl/DBI
 		dev-perl/DBD-mysql"
