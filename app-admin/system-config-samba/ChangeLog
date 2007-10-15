@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-config-samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-samba/ChangeLog,v 1.5 2007/04/25 02:16:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-samba/ChangeLog,v 1.6 2007/10/15 09:27:06 dberkholz Exp $
+
+  15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  system-config-samba-1.2.35.ebuild:
+  (#185524) Update homepage.
 
   25 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   system-config-samba-1.2.35.ebuild:

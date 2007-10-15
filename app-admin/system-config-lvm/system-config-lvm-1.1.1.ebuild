@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-lvm/system-config-lvm-1.1.1.ebuild,v 1.1 2007/07/14 23:53:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-lvm/system-config-lvm-1.1.1.ebuild,v 1.2 2007/10/15 09:25:41 dberkholz Exp $
 
 inherit python eutils rpm
 
@@ -11,7 +11,7 @@ FCVER="7"
 RPMREV="1.0"
 
 DESCRIPTION="A utility for graphically configuring Logical Volumes"
-HOMEPAGE="http://fedora.redhat.com/projects/config-tools/"
+HOMEPAGE="http://fedoraproject.org/wiki/SystemConfig/lvm"
 SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${RPMREV}.fc${FCVER}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"

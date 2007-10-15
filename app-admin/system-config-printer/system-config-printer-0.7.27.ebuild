@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer/system-config-printer-0.7.27.ebuild,v 1.4 2007/04/07 13:14:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer/system-config-printer-0.7.27.ebuild,v 1.5 2007/10/15 09:26:39 dberkholz Exp $
 
 inherit python rpm
 
@@ -9,7 +9,7 @@ inherit python rpm
 RPMREV="1"
 
 DESCRIPTION="A printer administration tool"
-HOMEPAGE="http://fedora.redhat.com/projects/config-tools/"
+HOMEPAGE="http://fedoraproject.org/wiki/SystemConfig/printer"
 SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${RPMREV}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"

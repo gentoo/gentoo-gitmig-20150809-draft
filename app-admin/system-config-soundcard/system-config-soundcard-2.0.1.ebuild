@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-soundcard/system-config-soundcard-2.0.1.ebuild,v 1.3 2006/09/06 06:19:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-soundcard/system-config-soundcard-2.0.1.ebuild,v 1.4 2007/10/15 09:27:45 dberkholz Exp $
 
 inherit python eutils rpm
 
@@ -9,7 +9,7 @@ inherit python eutils rpm
 RPMREV="2"
 
 DESCRIPTION="A graphical interface for detecting and configuring soundcards"
-HOMEPAGE="http://fedora.redhat.com/projects/config-tools/"
+HOMEPAGE="http://fedoraproject.org/wiki/SystemConfig/soundcard"
 SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${RPMREV}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"

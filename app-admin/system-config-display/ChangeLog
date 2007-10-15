@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-config-display
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-display/ChangeLog,v 1.6 2007/07/15 16:09:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-display/ChangeLog,v 1.7 2007/10/15 09:21:33 dberkholz Exp $
+
+  15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  system-config-display-1.0.45.ebuild, system-config-display-1.0.51.ebuild:
+  (#185524) Update homepage.
 
   15 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   system-config-display-1.0.51.ebuild:

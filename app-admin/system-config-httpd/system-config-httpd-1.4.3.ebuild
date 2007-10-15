@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-httpd/system-config-httpd-1.4.3.ebuild,v 1.2 2007/07/29 16:41:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-httpd/system-config-httpd-1.4.3.ebuild,v 1.3 2007/10/15 09:22:20 dberkholz Exp $
 
 inherit python eutils rpm
 
@@ -11,7 +11,7 @@ FCVER="7"
 RPMREV="1"
 
 DESCRIPTION="Apache configuration tool"
-HOMEPAGE="http://fedora.redhat.com/projects/config-tools/"
+HOMEPAGE="http://fedoraproject.org/wiki/SystemConfig/httpd"
 SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${RPMREV}.fc${FCVER}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"

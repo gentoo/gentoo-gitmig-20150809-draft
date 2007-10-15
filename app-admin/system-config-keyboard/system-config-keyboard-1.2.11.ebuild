@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-keyboard/system-config-keyboard-1.2.11.ebuild,v 1.1 2007/07/15 03:53:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-keyboard/system-config-keyboard-1.2.11.ebuild,v 1.2 2007/10/15 09:23:06 dberkholz Exp $
 
 inherit python rpm
 
@@ -11,7 +11,7 @@ FCVER="7"
 RPMREV="1"
 
 DESCRIPTION="A graphical interface for modifying the keyboard"
-HOMEPAGE="http://fedora.redhat.com/projects/config-tools/"
+HOMEPAGE="http://fedoraproject.org/wiki/SystemConfig/keyboard"
 SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${RPMREV}.fc${FCVER}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"

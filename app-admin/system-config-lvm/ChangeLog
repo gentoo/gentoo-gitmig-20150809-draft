@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-config-lvm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-lvm/ChangeLog,v 1.4 2007/07/14 23:53:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-lvm/ChangeLog,v 1.5 2007/10/15 09:25:41 dberkholz Exp $
+
+  15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  system-config-lvm-1.0.18.ebuild, system-config-lvm-1.1.1.ebuild:
+  (#185524) Update homepage.
 
 *system-config-lvm-1.1.1 (14 Jul 2007)
 

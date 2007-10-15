@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-samba/system-config-samba-1.2.35.ebuild,v 1.4 2007/04/25 02:16:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-samba/system-config-samba-1.2.35.ebuild,v 1.5 2007/10/15 09:27:06 dberkholz Exp $
 
 inherit python eutils rpm
 
@@ -9,7 +9,7 @@ inherit python eutils rpm
 RPMREV="1.1"
 
 DESCRIPTION="Samba server configuration tool"
-HOMEPAGE="http://fedora.redhat.com/projects/config-tools/"
+HOMEPAGE="http://fedoraproject.org/wiki/SystemConfig/samba"
 SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${RPMREV}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
