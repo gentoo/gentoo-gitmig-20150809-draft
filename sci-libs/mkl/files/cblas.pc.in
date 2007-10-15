@@ -1,7 +1,7 @@
 prefix=/usr
 exec_prefix=${prefix}
 libdir=/usr/@LIBDIR@
-includedir=/usr/include
+includedir=@INCDIR@
 
 Name: cblas
 Description: MKL implementations of the C Basic Linear Algebra Subroutines

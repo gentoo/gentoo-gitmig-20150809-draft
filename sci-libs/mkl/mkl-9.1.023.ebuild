@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.2 2007/10/11 16:48:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.3 2007/10/15 16:07:05 bicatali Exp $
 
 inherit eutils versionator toolchain-funcs fortran
 
@@ -218,6 +218,7 @@ EOF
 			echo "${MKL_DIR}/include/mkl_cblas.h /usr/include/cblas.h" >> eselect.${x}.${prof}
 		eselect ${x} add $(get_libdir) eselect.${x}.${prof} ${prof}
 		sed -e "s:@LIBDIR@:$(get_libdir):" \
+			-e "s:@INCDIR@:${MKL_DIR}/include:" \
 			-e "s:@PV@:${PV}:" \
 			-e "s:@EXTLIBS@:${extlibs}:g" \
 			"${FILESDIR}"/${x}.pc.in > ${x}.pc || die "sed ${x}.pc failed"
