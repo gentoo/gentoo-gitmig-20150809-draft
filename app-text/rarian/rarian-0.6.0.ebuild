@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/rarian-0.6.0.ebuild,v 1.1 2007/10/12 12:12:12 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/rarian-0.6.0.ebuild,v 1.2 2007/10/15 12:38:49 leio Exp $
 
 inherit gnome2
 
@@ -15,6 +15,8 @@ IUSE=""
 RDEPEND="dev-libs/libxslt"
 DEPEND="${RDEPEND}
 	!<app-text/scrollkeeper-9999"
+
+DOCS="ChangeLog NEWS README"
 
 GCONF=""
 
