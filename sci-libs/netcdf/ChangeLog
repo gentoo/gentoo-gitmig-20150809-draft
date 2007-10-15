@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.39 2007/09/29 08:12:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.40 2007/10/15 14:48:39 corsair Exp $
+
+  15 Oct 2007; Markus Rothe <corsair@gentoo.org> netcdf-3.6.1-r1.ebuild:
+  Stable on ppc64
 
   29 Sep 2007; Sébastien Fabbro <bicatali@gentoo.org>
   files/netcdf-3.6.2-parallel-make.patch:
