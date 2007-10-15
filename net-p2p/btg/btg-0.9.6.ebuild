@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-0.9.6.ebuild,v 1.3 2007/10/15 01:23:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-0.9.6.ebuild,v 1.4 2007/10/15 11:11:30 angelos Exp $
 
 inherit eutils
 
@@ -32,11 +32,11 @@ S="${WORKDIR}/${PN}-${PV/_rc*}"
 
 pkg_setup() {
 	if ! built_with_use --missing true "dev-libs/boost" threads && \
-		! built_with_use --missing true "dev-libs/boost" threads-only ; then
-			einfo
-			elog "Compile dev-libs/boost with USE=threads or USE=threads-only"
+		! built_with_use --missing true "dev-libs/boost" threadsonly ; then
+			echo
+			elog "Compile dev-libs/boost with USE=threads or USE=threadsonly"
 			elog "if you want threading support for btg"
-			einfo
+			echo
 	fi
 }
 
@@ -44,7 +44,7 @@ src_compile() {
 	local myconf=""
 
 	if built_with_use --missing true "dev-libs/boost" threads || \
-		built_with_use --missing true "dev-libs/boost" threads-only ; then
+		built_with_use --missing true "dev-libs/boost" threadsonly ; then
 			myconf="--with-boost-iostreams=boost_iostreams-mt \
 				--with-boost-filesystem=boost_filesystem-mt \
 				--with-boost-thread=boost_thread-mt \
@@ -82,8 +82,8 @@ pkg_postinst() {
 	enewgroup p2p
 	enewuser p2p -1 -1 /home/p2p p2p
 
-	einfo
+	echo
 	elog "BTG needs a daemon.ini and client.ini, to create them run btg-config"
 	elog "and put them in the user running btg (/home/p2p by default)"
-	einfo
+	echo
 }
