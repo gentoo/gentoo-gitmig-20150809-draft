@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.2.3.ebuild,v 1.1 2007/06/10 05:56:29 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.2.3.ebuild,v 1.2 2007/10/15 11:18:11 dberkholz Exp $
 
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
@@ -36,6 +36,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
-	mv ${D}/usr/share/doc/{${PN}-python*,${P}/python}
+	emake DESTDIR="${D}" install || die
+	mv "${D}"/usr/share/doc/{${PN}-python*,${P}/python}
 }
