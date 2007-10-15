@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/usermode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/ChangeLog,v 1.4 2007/10/15 09:39:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/ChangeLog,v 1.5 2007/10/15 10:38:44 dberkholz Exp $
+
+*usermode-1.93 (15 Oct 2007)
+
+  15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +usermode-1.93.ebuild:
+  (#189846) Updates so the files are on mirrors. Also switch to using
+  fedora-dev thirdpartymirrors setting to better find RPMs.
 
   15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>; usermode-1.86.ebuild,
   usermode-1.87.ebuild, usermode-1.92.ebuild:
