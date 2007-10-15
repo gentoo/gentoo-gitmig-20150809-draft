@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.2-r3.ebuild,v 1.9 2007/05/12 13:59:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.2-r3.ebuild,v 1.10 2007/10/15 14:09:17 corsair Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,7 +12,7 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
 SLOT="2.2"
-KEYWORDS="amd64 ~ia64 ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc"
 S="${WORKDIR}/jakarta-servletapi-src"
 
