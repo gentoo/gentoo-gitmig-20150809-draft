@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.50 2007/10/10 23:37:10 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.51 2007/10/15 21:38:00 marineam Exp $
+
+*xen-sources-2.6.18-r7 (15 Oct 2007)
+
+  15 Oct 2007; Michael Marineau <marineam@gentoo.org>
+  +xen-sources-2.6.18-r7.ebuild:
+  Bump to xen-patches 6, based on Xen 3.1.1
 
 *xen-sources-2.6.18-r6 (10 Oct 2007)
 
