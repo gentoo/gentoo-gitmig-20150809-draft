@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.2.3.ebuild,v 1.1 2007/10/15 21:34:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.2.3.ebuild,v 1.2 2007/10/15 22:37:23 opfer Exp $
 
-inherit gnome2 autotools
+inherit eutils gnome2 autotools
 
 DESCRIPTION="A utility for tracking the amount of time spent on activities, and calculating data, such as pay rates, from those times"
 HOMEPAGE="http://gttr.sourceforge.net/"
@@ -42,8 +42,8 @@ G2CONF="${G2CONF} --disable-schemas-install"
 
 pkg_setup() {
 	# upstream knows about the fix and has promised to incorporate it
-	if has_version ">=dev-scheme/guile-1.8" && ! built_with_use dev-scheme/guile deprecated;then
+	if ! built_with_use --missing true dev-scheme/guile deprecated;then
 		   eerror "rebuild dev-scheme/guile with USE=deprecated"
 		   die
-		fi
+	fi
 }
