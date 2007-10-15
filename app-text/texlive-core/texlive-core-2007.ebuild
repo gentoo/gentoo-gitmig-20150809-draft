@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.1 2007/10/14 07:56:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.2 2007/10/15 01:15:49 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -127,12 +127,10 @@ src_compile() {
 		$(use_with X x) \
 		${my_conf} || die "econf failed"
 
-
 	cd "${S}/libs/icu-xetex"
 	emake -j1 texmf=${TEXMF_PATH:-/usr/share/texmf} || die "emake of icu-xetex failed"
 	cd "${S}"
 	emake texmf=${TEXMF_PATH:-/usr/share/texmf} || die "emake failed"
-
 
 	# Mimic updmap --syncwithtrees to enable only fonts installed
 	# Code copied from updmap script
@@ -205,7 +203,6 @@ src_install() {
 	# populate /etc/texmf
 	keepdir /etc/texmf/web2c
 
-
 	# take care of updmap.cfg, fmtutil.cnf and texmf.cnf
 	dodir /etc/texmf/{updmap.d,fmtutil.d,texmf.d}
 
@@ -215,11 +212,9 @@ src_install() {
 
 	mv "${D}${TEXMF_PATH}/web2c/updmap.cfg"	"${D}/etc/texmf/updmap.d/00updmap.cfg" || die "moving updmap.cfg failed"
 
-
 	texlive-common_handle_config_files
 
 	keepdir /usr/share/texmf-site
-
 
 	dosym /etc/texmf/web2c/fmtutil.cnf ${TEXMF_PATH}/web2c/fmtutil.cnf
 	dosym /etc/texmf/web2c/texmf.cnf ${TEXMF_PATH}/web2c/texmf.cnf
