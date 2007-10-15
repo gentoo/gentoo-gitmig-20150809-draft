@@ -1,13 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.3.ebuild,v 1.2 2007/10/15 07:59:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.3.ebuild,v 1.3 2007/10/15 17:40:00 mr_bones_ Exp $
 
 inherit perl-app
 
 DESCRIPTION="A note taking perl program"
 HOMEPAGE="http://www.daemon.de/NOTE"
 SRC_URI="http://www.daemon.de/files/mirror/ftp.daemon.de/scip/Apps/note/${P}.tar.gz"
-
 
 LICENSE="GPL-2"
 SLOT="0"
