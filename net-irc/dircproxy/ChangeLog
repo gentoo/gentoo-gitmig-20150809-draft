@@ -1,6 +1,17 @@
 # ChangeLog for net-irc/dircproxy
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.18 2007/02/17 15:25:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.19 2007/10/15 13:25:14 armin76 Exp $
+
+*dircproxy-1.2.0_beta2-r1 (15 Oct 2007)
+*dircproxy-1.1.0-r2 (15 Oct 2007)
+*dircproxy-1.0.5-r1 (15 Oct 2007)
+
+  15 Oct 2007; Raúl Porcel <armin76@gentoo.org>
+  +files/1.0.5-CVE-2007-5226.patch, +files/1.2.0-CVE-2007-5226.patch,
+  +dircproxy-1.0.5-r1.ebuild, -dircproxy-1.1.0-r1.ebuild,
+  +dircproxy-1.1.0-r2.ebuild, -dircproxy-1.2.0_beta2.ebuild,
+  +dircproxy-1.2.0_beta2-r1.ebuild:
+  Add security patches for CVE-2007-5226, bug #194923
 
 *dircproxy-1.2.0_beta2 (17 Feb 2007)
 
