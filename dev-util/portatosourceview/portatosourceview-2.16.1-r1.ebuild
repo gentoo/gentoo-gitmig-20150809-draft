@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/portatosourceview/portatosourceview-2.16.1-r1.ebuild,v 1.4 2007/10/15 07:32:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/portatosourceview/portatosourceview-2.16.1-r1.ebuild,v 1.5 2007/10/15 07:33:17 jokey Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
@@ -34,7 +34,7 @@ src_install()
 pkg_postinst()
 {
 	python_version
-	python_mod_optimize ${ROOT}/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	python_mod_optimize "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
 }
 
 pkg_postrm()
