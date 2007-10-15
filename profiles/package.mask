@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7808 2007/10/14 11:51:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7809 2007/10/15 06:39:54 robbat2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -38,10 +38,6 @@ java-virtuals/javamail
 ~app-editors/emacs-cvs-23.0.0_p20070920
 ~app-editors/emacs-cvs-23.0.60
 >=virtual/emacs-23
-
-# Matthias Schwarzott <zzam@gentoo.org> (11 Oct 2007)
-# Masked for testing
-=sys-fs/device-mapper-1.02.22-r5
 
 # Ali Polatel <hawking@gentoo.org> (11 Oct 2007)
 # Newer pyrex versions have problems with setuptools.
