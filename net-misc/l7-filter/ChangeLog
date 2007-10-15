@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/l7-filter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.51 2007/08/13 21:45:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.52 2007/10/15 14:45:11 corsair Exp $
+
+  15 Oct 2007; Markus Rothe <corsair@gentoo.org> l7-filter-2.13.ebuild:
+  Stable on ppc64
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   l7-filter-2.12.ebuild:
