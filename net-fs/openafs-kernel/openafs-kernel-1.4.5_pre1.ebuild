@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.4.5_pre1.ebuild,v 1.2 2007/10/13 14:45:37 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.4.5_pre1.ebuild,v 1.3 2007/10/15 07:53:25 stefaan Exp $
 
 inherit eutils linux-mod versionator toolchain-funcs
 
@@ -21,8 +21,9 @@ IUSE=""
 
 PATCHDIR=${WORKDIR}/gentoo/patches/$(get_version_component_range 1-2)
 
-CONFIG_CHECK="!DEBUG_RODATA"
-DEBUG_RODATA_ERROR="OpenAFS is incompatible with linux' CONFIG_DEBUG_RODATA option"
+CONFIG_CHECK="!DEBUG_RODATA ~!AFS_FS"
+ERROR_DEBUG_RODATA="OpenAFS is incompatible with linux' CONFIG_DEBUG_RODATA option"
+ERROR_AFS_FS="OpenAFS conflicts with the in-kernel AFS-support.  Make sure not to load both at the same time!"
 
 pkg_setup() {
 	linux-mod_pkg_setup
