@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/pyxf86config-0.3.33.ebuild,v 1.1 2007/07/15 02:49:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/pyxf86config-0.3.33.ebuild,v 1.2 2007/10/15 09:44:59 dberkholz Exp $
 
 inherit python rpm
 
@@ -11,7 +11,7 @@ FCVER="7"
 RPMREV="1"
 
 DESCRIPTION="Python wrappers for libxf86config"
-HOMEPAGE="http://fedora.redhat.com/projects/config-tools/"
+HOMEPAGE="http://fedoraproject.org/wiki/SystemConfig/"
 SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${RPMREV}.fc${FCVER}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
