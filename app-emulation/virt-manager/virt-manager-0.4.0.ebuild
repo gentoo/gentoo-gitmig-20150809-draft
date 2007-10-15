@@ -1,6 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.4.0.ebuild,v 1.2 2007/06/12 06:45:26 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.4.0.ebuild,v 1.3 2007/10/15 11:19:17 dberkholz Exp $
+
+# Stop gnome2.eclass from doing stuff on USE=debug
+GCONF_DEBUG="no"
 
 inherit eutils gnome2
 
@@ -24,9 +27,6 @@ RDEPEND=">=dev-python/pygtk-1.99.11
 	sys-apps/usermode
 	dev-python/rhpl"
 DEPEND="${RDEPEND}"
-
-# Stop gnome2.eclass from doing stuff on USE=debug
-GCONF_DEBUG="no"
 
 pkg_setup() {
 	if ! built_with_use --missing false sys-apps/dbus python; then
