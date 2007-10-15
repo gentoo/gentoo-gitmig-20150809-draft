@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.50 2007/10/07 08:37:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.51 2007/10/15 06:07:29 tgall Exp $
+
+  15 Oct 2007; Tom Gall <tgall@gentoo.org> libmikmod-3.1.11-r4.ebuild:
+  stable on ppc64
 
 *libmikmod-3.1.11-r5 (07 Oct 2007)
 
