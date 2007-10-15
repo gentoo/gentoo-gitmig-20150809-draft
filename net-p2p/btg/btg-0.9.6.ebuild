@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-0.9.6.ebuild,v 1.1 2007/10/14 23:37:13 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-0.9.6.ebuild,v 1.2 2007/10/15 00:06:14 angelos Exp $
 
 inherit eutils
 
@@ -57,7 +57,7 @@ src_compile() {
 		$(use_enable gtk gui) \
 		$(use_enable ncurses cli) \
 		$(use_enable upnp) \
-		$(use_enable event-callback)
+		$(use_enable event-callback) \
 		$(use_enable session session-saving) \
 		$(use_enable test unittest) \
 		$(use_enable webinterface www) \
