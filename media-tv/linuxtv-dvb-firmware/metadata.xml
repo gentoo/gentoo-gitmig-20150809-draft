@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>media-tv</herd>
-<maintainer>
-<email>vdr@gentoo.org</email>
-<name>Gentoo VDR Project</name>
-</maintainer>
 </pkgmetadata>
 
