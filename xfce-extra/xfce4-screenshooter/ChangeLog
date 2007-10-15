@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-screenshooter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/ChangeLog,v 1.17 2007/10/14 16:20:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/ChangeLog,v 1.18 2007/10/15 16:26:42 drac Exp $
+
+  15 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-screenshooter-1.0.0-r1.ebuild:
+  arm stable.
 
   14 Oct 2007; Markus Rothe <corsair@gentoo.org>
   xfce4-screenshooter-1.0.0-r1.ebuild:
