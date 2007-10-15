@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libuser/libuser-0.54.6.ebuild,v 1.3 2006/09/22 05:36:22 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libuser/libuser-0.54.6.ebuild,v 1.4 2007/10/15 09:38:07 dberkholz Exp $
 
 inherit eutils rpm
 
@@ -9,7 +9,7 @@ inherit eutils rpm
 RPMREV="2.1"
 
 DESCRIPTION="A user and group account administration library"
-HOMEPAGE="http://fedora.redhat.com/projects/config-tools/"
+HOMEPAGE="http://fedoraproject.org/wiki/SystemConfig/"
 SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${RPMREV}.src.rpm"
 LICENSE="LGPL-2.1"
 SLOT="0"
