@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/rhpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/ChangeLog,v 1.3 2007/10/15 09:45:34 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/ChangeLog,v 1.4 2007/10/15 10:24:17 dberkholz Exp $
+
+*rhpl-0.210 (15 Oct 2007)
+
+  15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>; +rhpl-0.210.ebuild:
+  (#186802) Updates so the files are on mirrors. Also switch to using
+  fedora-dev thirdpartymirrors setting to better find RPMs.
 
   15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>; rhpl-0.188.ebuild,
   rhpl-0.208.ebuild:
