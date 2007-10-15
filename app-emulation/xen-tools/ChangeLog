@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.30 2007/10/02 00:44:19 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.31 2007/10/15 18:34:34 marineam Exp $
+
+*xen-tools-3.1.1 (15 Oct 2007)
+
+  15 Oct 2007; Michael Marineau <marineam@gentoo.org>
+  +xen-tools-3.1.1.ebuild:
+  Version bump.
 
   02 Oct 2007; Michael Marineau <marineam@gentoo.org>
   xen-tools-3.1.0-r1.ebuild:
