@@ -1,20 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/openclipart-0.18-r1.ebuild,v 1.3 2007/07/02 15:01:03 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/openclipart-0.18-r1.ebuild,v 1.4 2007/10/15 07:33:09 nelchael Exp $
 
 DESCRIPTION="Open Clip Art Library (openclipart.org)"
 HOMEPAGE="http://www.openclipart.org/"
 
 # Ugly stuff warning:
 SRC_URI="svg? ( !wmf? ( !png? ( !pdf? ( !doc? (
-			http://openclipart.org/downloads/${PV}/${P}-svgonly.tar.bz2
+			http://download.openclipart.org/downloads/${PV}/${P}-svgonly.tar.bz2
 		) ) ) )
-		png? ( http://www.openclipart.org/downloads/${PV}/${P}-full.tar.bz2 )
-		pdf? ( http://www.openclipart.org/downloads/${PV}/${P}-full.tar.bz2 )
-		wmf? ( http://www.openclipart.org/downloads/${PV}/${P}-full.tar.bz2 )
-		doc? ( http://www.openclipart.org/downloads/${PV}/${P}-full.tar.bz2 )
+		png? ( http://download.openclipart.org/downloads/${PV}/${P}-full.tar.bz2 )
+		pdf? ( http://download.openclipart.org/downloads/${PV}/${P}-full.tar.bz2 )
+		wmf? ( http://download.openclipart.org/downloads/${PV}/${P}-full.tar.bz2 )
+		doc? ( http://download.openclipart.org/downloads/${PV}/${P}-full.tar.bz2 )
 	)
-	!svg? ( http://www.openclipart.org/downloads/${PV}/${P}-full.tar.bz2 )"
+	!svg? ( http://download.openclipart.org/downloads/${PV}/${P}-full.tar.bz2 )"
 
 LICENSE="public-domain" # creative commons
 SLOT="0"
