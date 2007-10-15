@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.362 2007/10/14 17:15:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.363 2007/10/15 06:11:38 tgall Exp $
+
+  15 Oct 2007; Tom Gall <tgall@gentoo.org> udev-115-r1.ebuild:
+  stable on ppc64, bug #195289
 
 *udev-116 (14 Oct 2007)
 
