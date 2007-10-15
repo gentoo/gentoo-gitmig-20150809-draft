@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.160 2007/09/28 06:57:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.161 2007/10/15 14:50:40 corsair Exp $
+
+  15 Oct 2007; Markus Rothe <corsair@gentoo.org> busybox-1.6.1.ebuild:
+  Stable on ppc64
 
   28 Sep 2007; Joshua Kinard <kumba@gentoo.org> busybox-1.6.1.ebuild:
   Stable on mips.
