@@ -1,6 +1,11 @@
 # ChangeLog for dev-texlive/texlive-context
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.1 2007/10/14 08:25:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.2 2007/10/15 12:39:08 aballier Exp $
+
+  15 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  texlive-context-2007.ebuild:
+  add dep on texlive-metapost, it needs it to build its format, thanks to
+  Florian Wagner <florian@wagner-flo.net>, bug #195938
 
 *texlive-context-2007 (14 Oct 2007)
 
