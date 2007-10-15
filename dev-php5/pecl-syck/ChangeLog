@@ -1,0 +1,25 @@
+# ChangeLog for dev-php5/pecl-syck
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-syck/ChangeLog,v 1.1 2007/10/15 18:50:14 anant Exp $
+
+*pecl-syck-0.9.1 (14 Oct 2007)
+
+  14 Oct 2007; Anant Narayanan <anant@gentoo.org> +metadata.xml,
+  +pecl-syck-0.9.1.ebuild:
+  Replace dev-php5/syck-php-bindings with dev-php5/pecl-syck
+
+  18 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
+  syck-php-bindings-0.55.ebuild:
+  Cleanup.
+
+  30 Nov 2006; Michael Cummings <mcummings@gentoo.org>
+  syck-php-bindings-0.55.ebuild:
+  Marking amd64 stable, related to bug 152048
+
+  29 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  syck-php-bindings-0.55.ebuild:
+  stable x86, bug #152048
+
+  04 Oct 2006; Yuval Yaari <yuval@gentoo.org> ChangeLog:
+  Adding syck-php-bindings to the tree, for bug #145085
+
