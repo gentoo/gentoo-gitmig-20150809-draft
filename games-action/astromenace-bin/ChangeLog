@@ -1,6 +1,12 @@
 # ChangeLog for games-action/astromenace-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/astromenace-bin/ChangeLog,v 1.4 2007/07/09 04:08:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/astromenace-bin/ChangeLog,v 1.5 2007/10/15 16:45:51 mr_bones_ Exp $
+
+*astromenace-bin-1.2-r1 (15 Oct 2007)
+
+  15 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +astromenace-bin-1.2-r1.ebuild:
+  upstream changed the tarball; added icon install
 
 *astromenace-bin-1.2 (09 Jul 2007)
 
