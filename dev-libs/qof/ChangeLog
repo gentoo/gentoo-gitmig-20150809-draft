@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qof
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.1 2007/10/15 21:28:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.2 2007/10/15 22:29:12 opfer Exp $
+
+  15 Oct 2007; Christian Faulhammer <opfer@gentoo.org> qof-0.7.2.ebuild:
+  src_compile removed, it has been the default definition anyway
 
 *qof-0.7.2 (15 Oct 2007)
 

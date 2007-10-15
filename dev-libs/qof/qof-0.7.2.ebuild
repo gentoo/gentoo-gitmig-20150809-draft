@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.2.ebuild,v 1.1 2007/10/15 21:28:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.2.ebuild,v 1.2 2007/10/15 22:29:12 opfer Exp $
 
 DESCRIPTION="A Query Object Framework"
 HOMEPAGE="http://qof.sourceforge.net/"
@@ -14,11 +14,6 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=""
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-}
 
 src_install() {
 	emake DESTDIR="${D}" install || die
