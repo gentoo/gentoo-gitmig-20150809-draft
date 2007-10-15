@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.2_p14472-r1.ebuild,v 1.1 2007/09/20 05:25:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.2_p14680.ebuild,v 1.1 2007/10/15 15:06:30 cardoe Exp $
 
 inherit mythtv flag-o-matic multilib eutils qt3 subversion toolchain-funcs
 
@@ -30,10 +30,10 @@ RDEPEND=">=media-libs/freetype-2.0
 	virtual/mysql
 	virtual/opengl
 	virtual/glu
+	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	dts? ( || ( media-libs/libdca media-libs/libdts ) )
-	dvd? ( 	media-libs/libdvdnav
-		media-libs/libdts )
+	dvd? ( 	media-libs/libdvdnav )
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
 	directv? ( virtual/perl-Time-HiRes )
 	ivtv? ( media-tv/ivtv )
@@ -45,7 +45,6 @@ RDEPEND=">=media-libs/freetype-2.0
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
 			>=sys-libs/libavc1394-0.5.0
 			>=media-libs/libiec61883-1.0.0 )
-	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )
 	autostart? ( net-dialup/mingetty
 				x11-wm/evilwm
 				x11-apps/xset )"
@@ -229,7 +228,7 @@ src_compile() {
 #			die	"failed to compile firewire_tester"
 	fi
 
-	cd ${S}/contrib/channel_changers
+	cd "${S}"/contrib/channel_changers
 	$(tc-getCC) ${CFLAGS} ${CPPFLAGS} -o ../../red_eye red_eye.c ${LDFLAGS} || \
 		die "failed to compile red_eye"
 }
@@ -246,10 +245,10 @@ src_install() {
 		doins database/*
 
 		exeinto /usr/share/mythtv
-		doexe "${FILESDIR}/mythfilldatabase.cron"
+		doexe "${FILESDIR}"/mythfilldatabase.cron
 
-		newinitd ${FILESDIR}/mythbackend-0.18.2.rc mythbackend
-		newconfd ${FILESDIR}/mythbackend-0.18.2.conf mythbackend
+		newinitd "${FILESDIR}"/mythbackend-0.18.2.rc mythbackend
+		newconfd "${FILESDIR}"/mythbackend-0.18.2.conf mythbackend
 	fi
 
 	dodoc keys.txt docs/*.{txt,pdf}
@@ -274,7 +273,7 @@ src_install() {
 
 		if use autostart; then
 			dodir /etc/env.d/
-			echo 'CONFIG_PROTECT="/home/mythtv/"' > ${D}/etc/env.d/95mythtv
+			echo 'CONFIG_PROTECT="/home/mythtv/"' > "${D}"/etc/env.d/95mythtv
 
 			insinto /home/mythtv
 			newins "${FILESDIR}"/bash_profile .bash_profile
