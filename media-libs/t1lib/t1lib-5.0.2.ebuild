@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.30 2007/09/25 20:47:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.31 2007/10/15 12:55:21 aballier Exp $
 
 inherit eutils flag-o-matic libtool toolchain-funcs
 
@@ -15,7 +15,7 @@ IUSE="X doc"
 
 RDEPEND="X? ( x11-libs/libXaw )"
 DEPEND="${RDEPEND}
-	doc? ( virtual/tetex )
+	doc? ( virtual/latex-base )
 	X? ( x11-libs/libXfont
 		x11-proto/xproto
 		x11-proto/fontsproto )"
