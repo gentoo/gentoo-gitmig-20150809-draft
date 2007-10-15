@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.4.56528.ebuild,v 1.1 2007/09/20 17:13:13 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.4.56528.ebuild,v 1.2 2007/10/15 21:03:53 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -86,7 +86,7 @@ src_install() {
 	# Fix the amd64 emulation pam stuff
 	use amd64 && dosed "s:pam_:/lib32/security/pam_:" ${config_dir}/pam.d/vmware-authd
 	  # Remove libpam on amd64 because it's linked against the wrong paths
-	use adm64 && rm ${D}/opt/vmware/server/lib/lib/libpam.so.0/libpam.so
+	use amd64 && rm ${D}/opt/vmware/server/lib/lib/libpam.so.0/libpam.so
 
 	echo "${VMWARE_GROUP}" > ${D}${config_dir}/vmwaregroup
 

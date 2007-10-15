@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.28 2007/09/20 17:13:13 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.29 2007/10/15 21:03:53 wolf31o2 Exp $
+
+  15 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-server-1.0.3.44356.ebuild, vmware-server-1.0.4.56528.ebuild:
+  Typo fix in amd64 check. Thanks to Daniel Robbins <drobbins@funtoo.org> for
+  pointing it out.
 
 *vmware-server-1.0.4.56528 (20 Sep 2007)
 
