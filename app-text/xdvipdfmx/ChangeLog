@@ -1,6 +1,13 @@
 # ChangeLog for app-text/xdvipdfmx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.17 2007/05/20 08:41:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.18 2007/10/15 18:20:14 aballier Exp $
+
+*xdvipdfmx-0.4 (15 Oct 2007)
+
+  15 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/xdvipdfmx-0.4-ft2-internals.patch, +xdvipdfmx-0.4.ebuild:
+  version bump, plus backport a patch from upstream to avoid segfaults with
+  recents freetype-2, bug #185358
 
   20 May 2007; Christian Faulhammer <opfer@gentoo.org> xdvipdfmx-0.3.ebuild:
   stable amd64, bug 176895
