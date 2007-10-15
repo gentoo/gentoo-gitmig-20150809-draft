@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/latex-base/latex-base-1.0.ebuild,v 1.2 2007/10/14 20:45:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/latex-base/latex-base-1.0.ebuild,v 1.3 2007/10/15 01:16:10 mr_bones_ Exp $
 
 DESCRIPTION="Virtual for basic latex binaries"
 HOMEPAGE="http://www.ctan.org"
@@ -18,4 +18,3 @@ RDEPEND="|| (
 	app-text/ptex
 	app-text/cstetex
 )"
-
