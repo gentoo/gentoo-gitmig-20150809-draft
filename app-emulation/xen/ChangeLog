@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.48 2007/08/27 17:19:12 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.49 2007/10/15 18:33:40 marineam Exp $
+
+*xen-3.1.1 (15 Oct 2007)
+
+  15 Oct 2007; Michael Marineau <marineam@gentoo.org> +xen-3.1.1.ebuild:
+  Version bump.
 
   27 Aug 2007; Michael Marineau <marineam@gentoo.org> xen-3.0.4_p1.ebuild,
   xen-3.1.0.ebuild:
