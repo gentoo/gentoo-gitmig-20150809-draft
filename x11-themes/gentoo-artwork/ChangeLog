@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gentoo-artwork
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.22 2007/10/11 21:10:28 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.23 2007/10/15 19:04:31 cla Exp $
+
+  15 Oct 2007; Dawid Węgliński <cla@gentoo.org>
+  gentoo-artwork-0.4.2.ebuild:
+  Quotes
 
   11 Oct 2007; Dawid Węgliński <cla@gentoo.org> metadata.xml:
   Assuming maintainer role of package
