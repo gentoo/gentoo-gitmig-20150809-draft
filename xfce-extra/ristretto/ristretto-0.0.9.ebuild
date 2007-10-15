@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ristretto-0.0.7.ebuild,v 1.2 2007/10/04 14:13:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ristretto-0.0.9.ebuild,v 1.1 2007/10/15 22:40:09 angelos Exp $
 
 inherit xfce44
 
@@ -23,4 +23,4 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
 
-DOCS="AUTHORS ChangeLog README"
+DOCS="AUTHORS ChangeLog NEWS README TODO"
