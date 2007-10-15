@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/usermode-1.92.ebuild,v 1.1 2007/07/15 16:31:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/usermode-1.92.ebuild,v 1.2 2007/10/15 09:39:54 dberkholz Exp $
 
 inherit flag-o-matic rpm autotools
 
@@ -9,7 +9,7 @@ inherit flag-o-matic rpm autotools
 RPMREV="1"
 
 DESCRIPTION="Tools for certain user account management tasks"
-HOMEPAGE="http://fedora.redhat.com/projects/config-tools/"
+HOMEPAGE="http://fedoraproject.org/wiki/SystemConfig/"
 SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${RPMREV}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
