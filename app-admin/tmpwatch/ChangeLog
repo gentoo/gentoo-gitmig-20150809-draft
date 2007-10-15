@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.53 2007/03/19 02:00:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.54 2007/10/15 07:22:50 opfer Exp $
+
+*tmpwatch-2.9.11.1 (15 Oct 2007)
+
+  15 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  +tmpwatch-2.9.11.1.ebuild:
+  version bump (bug 189475)
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
