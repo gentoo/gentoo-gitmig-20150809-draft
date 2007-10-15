@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/authconfig
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/authconfig/ChangeLog,v 1.4 2006/09/07 04:51:45 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/authconfig/ChangeLog,v 1.5 2007/10/15 09:36:28 dberkholz Exp $
+
+  15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  authconfig-5.3.5.ebuild:
+  (#185524) Update homepage.
 
   07 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   authconfig-5.3.5.ebuild:
