@@ -60,13 +60,13 @@
 +		else
 +			GRADE=$BEST_GRADE_FOR_COMPILER
 +			find library compiler browser mdbcomp analysis \
-+				profiler deep_profiler \
++				profiler deep_profiler slice \
 +				-name \*.c -o -name \*.c_date | \
 +				xargs rm > /dev/null 2>&1
 +			find -name \*.o -o -name \*.pic_o -o \
 +				-name \*.a -o -name \*.so | \
 +				xargs rm > /dev/null 2>&1
-++			rm -f compiler/mercury_compile profiler/mercury_profile
++			rm -f compiler/mercury_compile profiler/mercury_profile
 +		fi
  	else
 -		GRADE=$BEST_GRADE_FOR_COMPILER
@@ -80,7 +80,7 @@
 +		if test "$BOOTSTRAP_STAGE" = "1"; then
 +			GRADE=$BEST_GRADE_FOR_COMPILER
 +			find library compiler browser mdbcomp analysis \
-+				profiler deep_profiler \
++				profiler deep_profiler slice \
 +				-name \*.c -o -name \*.c_date | \
 +				xargs rm > /dev/null 2>&1
 +		else
