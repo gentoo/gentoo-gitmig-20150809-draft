@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.730 2007/10/15 08:17:16 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.731 2007/10/15 10:10:48 dberkholz Exp $
+
+  15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>; thirdpartymirrors:
+  Update fedora mirrors based on http://mirrors.fedoraproject.org/publiclist
 
   15 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
   Mask x11-misc/xcut.
