@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyspf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.1 2007/10/06 11:26:44 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.2 2007/10/15 21:43:44 dragonheart Exp $
+
+  15 Oct 2007; Daniel Black <dragonheart@gentoo.org> pyspf-2.0.3.ebuild:
+  fix license + remove python dependency thanks to dev-zero
 
 *pyspf-2.0.3 (06 Oct 2007)
 
