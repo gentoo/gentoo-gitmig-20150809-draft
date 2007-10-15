@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.46 2007/10/14 23:12:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.47 2007/10/15 13:07:10 fmccor Exp $
+
+  15 Oct 2007; Ferris McCormick <fmccor@gentoo.org> qwt-5.0.2-r1.ebuild:
+  Add ~sparc as needed for Bug #195682 when USE=qt4 --- it installs at least.
 
   14 Oct 2007; Jeroen Roovers <jer@gentoo.org> qwt-5.0.2-r1.ebuild:
   Marked ~hppa (bug #195682).
