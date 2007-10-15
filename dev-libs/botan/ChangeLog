@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.25 2007/08/13 20:19:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.26 2007/10/15 21:23:47 alonbl Exp $
+
+  15 Oct 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/botan-1.4.4-gcc34.patch, -files/botan-1.4.9-gcc-4.patch,
+  -files/botan-1.5.11-asm.patch, -botan-1.4.4.ebuild, -botan-1.4.9.ebuild,
+  -botan-1.4.11.ebuild, -botan-1.4.12.ebuild, -botan-1.5.5.ebuild,
+  -botan-1.5.11.ebuild, +botan-1.6.1-r1.ebuild:
+  Cleanup
+
+*botan-1.6.1-r1 (15 Oct 2007)
+
+  15 Oct 2007; Alon Bar-Lev <alonbl@gentoo.org> +botan-1.6.1-r1.ebuild:
+  Fix lib location, bug#195982, thanks to Jean Krohn
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org> botan-1.6.1.ebuild:
   ppc. stable

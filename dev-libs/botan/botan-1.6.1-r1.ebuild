@@ -1,29 +1,37 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.5.5.ebuild,v 1.4 2007/03/03 22:32:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.6.1-r1.ebuild,v 1.1 2007/10/15 21:23:47 alonbl Exp $
 
-# Comments/fixes to lloyd@randombit.net (author)
+inherit eutils multilib
 
+MY_PN="Botan"
+MY_P="${MY_PN}-${PV}"
 DESCRIPTION="A C++ crypto library"
 HOMEPAGE="http://botan.randombit.net/"
-SRC_URI="http://botan.randombit.net/files/Botan-${PV}.tgz"
+SRC_URI="http://botan.randombit.net/files/${MY_P}.tgz"
 
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
 LICENSE="BSD"
 IUSE="bzip2 gmp ssl zlib"
 
-S="${WORKDIR}/Botan-${PV}"
+S="${WORKDIR}/${MY_P}"
 
-RDEPEND="bzip2? ( >=app-arch/bzip2-1.0.1 )
-	zlib? ( >=sys-libs/zlib-1.1.4 )
-	gmp? ( >=dev-libs/gmp-4.1.2 )
-	ssl? ( >=dev-libs/openssl-0.9.7d )"
+RDEPEND="bzip2? ( >=app-arch/bzip2-1.0.3 )
+	zlib? ( >=sys-libs/zlib-1.2.3 )
+	gmp? ( >=dev-libs/gmp-4.2.1 )
+	ssl? ( >=dev-libs/openssl-0.9.8c )"
 
-# configure.pl requires DirHandle, Getopt::Long, File::Spec, and File::Copy;
+# configure.pl requires Getopt::Long, File::Spec, and File::Copy;
 # all seem included in dev-lang/perl ATM.
 DEPEND="${RDEPEND}
 	dev-lang/perl"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-asm.patch"
+}
 
 src_compile() {
 	# Modules that should work under any semi-recent Unix
@@ -37,33 +45,37 @@ src_compile() {
 	# This is also supported on i586+ - hope this is correct.
 	# documention says sparc though not enables because of
 	# http://bugs.gentoo.org/show_bug.cgi?id=71760#c11
-	if [ ${ARCH} = 'alpha' -o ${ARCH} = 'amd64' ] || \
-			[ ${ARCH} = 'x86' -a ${CHOST:0:4} != "i386" -a ${CHOST:0:4} != "i486" ]; then
-			modules="$modules,tm_hard"
+
+	if [ "${ARCH}" = "alpha" -o "${ARCH}" = "amd64" ] || \
+			[ "${ARCH}" = "x86" -a "${CHOST:0:4}" != "i386" -a "${CHOST:0:4}" != "i486" ]; then
+		modules="$modules,tm_hard"
 	fi
 
 	# If we have assembly code for this machine, use it
-	if [ "${ARCH}" = 'x86' ]; then
-		modules="$modules,mp_ia32"
-	elif [ "${ARCH}" = 'amd64' ]; then
-		modules="$modules,mp_amd64"
-	elif [ "${ARCH}" = 'alpha' -o "${ARCH}" = 'ia64' -o "${ARCH}" = 'ppc64'
-			-o "${PROFILE_ARCH}" = 'mips64'  ]; then
-			modules="$modules,mp_asm64"
+	if [ "${ARCH}" = "x86" ]; then
+		modules="$modules,mp_ia32,alg_ia32"
+	elif [ "${ARCH}" = "amd64" ]; then
+		modules="$modules,mp_amd64,alg_amd64"
+	elif [ "${ARCH}" = "alpha" -o "${ARCH}" = "ia64" -o \
+		"${ARCH}" = "ppc64" -o "${PROFILE_ARCH}" = "mips64"  ]; then
+		modules="$modules,mp_asm64"
 	fi
 
 	# Enable v9 instructions for sparc64
 	if [ "${PROFILE_ARCH}" = "sparc64" ]; then
-			CHOSTARCH='sparc32-v9'
+		CHOSTARCH="sparc32-v9"
 	else
-			CHOSTARCH=$(echo ${CHOST} | cut -d - -f 1)
+		CHOSTARCH="$(echo ${CHOST} | cut -d - -f 1)"
 	fi
 
 	cd "${S}"
 	elog "Enabling modules: " ${modules}
 
 	# FIXME: We might actually be on *BSD or OS X...
-	./configure.pl --noauto gcc-linux-${CHOSTARCH} --modules=$modules ||
+	./configure.pl \
+		--noauto gcc-linux-${CHOSTARCH} \
+		--libdir=/$(get_libdir) \
+		--modules=$modules ||
 			die "configure.pl failed"
 	emake "LIB_OPT=${CXXFLAGS}" "MACH_OPT=" || die "emake failed"
 }
