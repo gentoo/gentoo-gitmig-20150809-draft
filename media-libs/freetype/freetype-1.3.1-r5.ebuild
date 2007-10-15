@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r5.ebuild,v 1.13 2007/09/28 03:15:23 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r5.ebuild,v 1.14 2007/10/15 11:04:04 aballier Exp $
 
 # r3 change by me (danarmak): there's a contrib dir inside the freetype1
 # sources with important utils: ttf2bdf, ttf2pfb, ttf2pk, ttfbanner.
@@ -28,7 +28,7 @@ SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls tetex"
 
-DEPEND="tetex? ( virtual/tetex )"
+DEPEND="tetex? ( virtual/latex-base )"
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
