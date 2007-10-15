@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r5.ebuild,v 1.1 2007/09/01 22:24:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r5.ebuild,v 1.2 2007/10/15 14:19:12 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -15,10 +15,10 @@ SRC_URI="mirror://sourceforge/numpy/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~arm ~mips ~s390"
+KEYWORDS="~arm ~mips ~sh ~s390"
 IUSE="doc"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -48,8 +48,8 @@ src_install() {
 	distutils_src_install
 
 	# install various README from packages
-	newdoc Packages/MA/README README.MA
-	newdoc Packages/RNG/README README.RNG
+	newdoc Packages/MA/README README.MA || die
+	newdoc Packages/RNG/README README.RNG || die
 
 	# install tutorial and docs
 	if use doc; then
