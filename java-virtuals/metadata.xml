@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<catmetadata>
+	<longdescription lang="en">
+		The java-virtuals category contains packages which satisfy virtual dependencies.
+		These virtuals install a file which is used by the java-config
+		system to provide information like classpath and minimum required vm values.
+	</longdescription>
+</catmetadata>
+
