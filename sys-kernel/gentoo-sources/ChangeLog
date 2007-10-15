@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.437 2007/10/14 10:35:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.438 2007/10/15 13:21:20 dsd Exp $
+
+*gentoo-sources-2.6.22-r9 (15 Oct 2007)
+
+  15 Oct 2007; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.22-r9.ebuild:
+  Update to Linux 2.6.22.10. Fix custom keymap compilation. Fix hostap netdev
+  type registration.
 
   14 Oct 2007; Raúl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.22-r8.ebuild:
