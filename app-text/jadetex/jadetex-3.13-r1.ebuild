@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r1.ebuild,v 1.8 2007/01/28 05:52:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r1.ebuild,v 1.9 2007/10/15 20:17:42 aballier Exp $
 
 inherit latex-package
 
@@ -14,11 +14,11 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-
 IUSE=""
 RESTRICT="test"
 
-# virtual/tetex comes from latex-package
-DEPEND=">=app-text/openjade-1.3.1"
+DEPEND=">=app-text/openjade-1.3.1
+	|| ( dev-texlive/texlive-fontsrecommended virtual/tetex )"
 
 has_tetex_3() {
-	if has_version '>=app-text/tetex-2.96' || has_version '>=app-text/ptex-3.1.4.20041026' || has_version '>=app-text/texlive-2005' ; then
+	if has_version '>=app-text/tetex-2.96' || has_version '>=app-text/ptex-3.1.4.20041026' || has_version '>=app-text/texlive-2005' || has_version '>=app-text/texlive-core-2007'; then
 		true
 	else
 		false
