@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.11.ebuild,v 1.2 2007/10/08 13:32:07 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.11.ebuild,v 1.3 2007/10/15 09:13:25 uberlord Exp $
 
 inherit flag-o-matic
 
@@ -41,4 +41,6 @@ src_install() {
 	dodoc AUTHORS ChangeLog INTRODUCTION NEWS README TODO
 	newdoc info/README README.info
 	newdoc makeinfo/README README.makeinfo
+
+	rm -f "${D}"/usr/lib/charset.alias #195148
 }

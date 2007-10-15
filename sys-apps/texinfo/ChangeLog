@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.85 2007/10/08 01:10:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.86 2007/10/15 09:13:25 uberlord Exp $
+
+  15 Oct 2007; Roy Marples <uberlord@gentoo.org> texinfo-4.11.ebuild:
+  Don't install charset.alias, #195148.
 
 *texinfo-4.11 (08 Oct 2007)
 
