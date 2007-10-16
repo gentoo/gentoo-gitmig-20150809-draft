@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.146 2007/10/16 13:58:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.147 2007/10/16 15:22:29 jer Exp $
+
+  16 Oct 2007; Jeroen Roovers <jer@gentoo.org> gkrellm-2.3.0.ebuild:
+  Stable for HPPA (bug #195522).
 
   16 Oct 2007; Markus Rothe <corsair@gentoo.org> gkrellm-2.3.0.ebuild:
   Stable on ppc64; bug #195522
