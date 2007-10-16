@@ -1,13 +1,16 @@
 # ChangeLog for app-emacs/tdtd
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/ChangeLog,v 1.12 2007/10/16 06:16:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/ChangeLog,v 1.13 2007/10/16 06:57:14 ulm Exp $
+
+  16 Oct 2007; Ulrich Mueller <ulm@gentoo.org> tdtd-0.7.1-r1.ebuild:
+  amd64 stable, bug #195512.
 
   16 Oct 2007; Ulrich Mueller <ulm@gentoo.org> files/50tdtd-gentoo.el,
   tdtd-0.7.1-r1.ebuild:
   Add load-path. Update HOMEPAGE and SRC_URI variables. Add empty RDEPEND.
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org> tdtd-0.7.1-r1.ebuild:
-  echangelog removed src_install(); added die comment
+  removed src_install(); added die comment
 
   20 Feb 2007; Christian Faulhammer <opfer@gentoo.org> -tdtd-0.7.1.ebuild:
   clean up
