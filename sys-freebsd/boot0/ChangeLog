@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/boot0
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.20 2007/01/15 21:33:57 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.21 2007/10/16 08:47:02 uberlord Exp $
+
+  16 Oct 2007; Roy Marples <uberlord@gentoo.org>
+  -files/freebsd-sources-6.2-sparc64.patch, boot0-6.2.ebuild:
+  gcc-4 now defines __sparc64__ for us
 
 *boot0-6.2 (15 Jan 2007)
 
