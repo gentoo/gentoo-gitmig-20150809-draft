@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/gt5
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/ChangeLog,v 1.4 2007/09/16 22:36:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/ChangeLog,v 1.5 2007/10/16 11:16:19 angelos Exp $
+
+  16 Oct 2007; Christoph Mende <angelos@gentoo.org> gt5-1.4.0-r1.ebuild:
+  Stable on amd64
 
 *gt5-1.4.0-r1 (16 Sep 2007)
 
