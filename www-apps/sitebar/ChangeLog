@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/sitebar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.16 2007/07/29 17:38:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.17 2007/10/16 08:10:10 wrobel Exp $
+
+*sitebar-3.3.9 (16 Oct 2007)
+
+  16 Oct 2007; <wrobel@gentoo.org> +sitebar-3.3.9.ebuild:
+  -m Added sitebar-3.3.9 in response to #195810
 
   29 Jul 2007; Christian Heim <phreak@gentoo.org> sitebar-3.3.8-r1.ebuild:
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to
