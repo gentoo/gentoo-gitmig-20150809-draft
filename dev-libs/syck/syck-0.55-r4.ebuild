@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/syck-0.55-r4.ebuild,v 1.4 2007/10/16 00:57:41 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/syck-0.55-r4.ebuild,v 1.5 2007/10/16 06:29:48 anant Exp $
 
 inherit flag-o-matic distutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 DEPEND="python? ( dev-lang/python !dev-python/pysyck )"
 RDEPEND="${DEPEND}"
-PDEPEND="php? ( || ( ~dev-php5/syck-php-bindings-${PV}
+PDEPEND="php? ( || ( dev-php5/pecl-syck
 		    ~dev-php4/syck-php-bindings-${PV} )
 		    !=dev-libs/syck-0.55-r1 )"
 
