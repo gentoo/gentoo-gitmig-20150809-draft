@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.48 2007/10/11 17:04:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.49 2007/10/16 22:23:42 markusle Exp $
+
+*lapack-atlas-3.8.0 (14 Oct 2007)
+
+  14 Oct 2007; Markus Dittrich <markusle@gentoo.org>
+  -lapack-atlas-3.7.34.ebuild, +lapack-atlas-3.8.0.ebuild:
+  Version bump and removed old version.
 
   11 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org>
   lapack-atlas-3.7.39.ebuild:
