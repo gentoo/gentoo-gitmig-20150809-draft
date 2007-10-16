@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.7.ebuild,v 1.10 2007/08/25 22:39:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.7.ebuild,v 1.11 2007/10/16 17:19:36 armin76 Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="utils"
 
-DEPEND="app-arch/zip
-	>=dev-libs/nspr-${NSPR_VER}"
+DEPEND=">=dev-libs/nspr-${NSPR_VER}"
 
 src_unpack() {
 	unpack ${A}
