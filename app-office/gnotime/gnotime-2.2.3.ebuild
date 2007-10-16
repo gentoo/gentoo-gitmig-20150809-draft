@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.2.3.ebuild,v 1.2 2007/10/15 22:37:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.2.3.ebuild,v 1.3 2007/10/16 14:23:26 corsair Exp $
 
 inherit eutils gnome2 autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gttr/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnome-2.0
