@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.43.ebuild,v 1.4 2007/10/16 05:25:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.43.ebuild,v 1.5 2007/10/16 05:28:45 keri Exp $
 
 inherit eutils flag-o-matic java-pkg-opt-2
 
@@ -50,7 +50,7 @@ src_unpack() {
 src_compile() {
 	einfo "Building SWI-Prolog compiler"
 
-	use hardened && append-flags -fno-unit-at-a-atime
+	use hardened && append-flags -fno-unit-at-a-time
 	use debug && append-flags -DO_DEBUG
 
 	local threadconf
