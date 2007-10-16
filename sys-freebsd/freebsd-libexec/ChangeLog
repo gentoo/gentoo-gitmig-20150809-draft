@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-libexec
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.26 2007/09/12 00:15:46 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.27 2007/10/16 08:54:50 uberlord Exp $
+
+  16 Oct 2007; Roy Marples <uberlord@gentoo.org>
+  -files/freebsd-libexec-6.2-sparc64.patch, freebsd-libexec-6.2-r2.ebuild:
+  gcc-4 now defines __sparc64__ for us
 
 *freebsd-libexec-6.2-r2 (12 Sep 2007)
 

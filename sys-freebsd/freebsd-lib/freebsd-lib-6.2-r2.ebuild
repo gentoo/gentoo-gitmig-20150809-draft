@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2-r2.ebuild,v 1.2 2007/09/14 07:50:40 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2-r2.ebuild,v 1.3 2007/10/16 08:52:16 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -84,8 +84,7 @@ PATCHES="${FILESDIR}/${PN}-bsdxml.patch
 	${FILESDIR}/${PN}-6.2-bluetooth.patch
 	${FILESDIR}/${PN}-6.2-gcc41.patch
 	${FILESDIR}/${PN}-6.2-dl_iterate_phdr.patch
-	${FILESDIR}/${PN}-6.2-as-needed.patch
-	${FILESDIR}/${PN}-6.2-sparc64.patch"
+	${FILESDIR}/${PN}-6.2-as-needed.patch"
 
 # Here we disable and remove source which we don't need or want
 # In order:
@@ -130,7 +129,9 @@ src_unpack() {
 	# from catalyst, then don't do anything else
 	if use build; then
 		cd "${WORKDIR}"
-		epatch "${FILESDIR}/freebsd-sources-6.2-sparc64.patch"
+		# We may need this patch again if it uses the linker instructions
+		# remove this when tested
+		# epatch "${FILESDIR}/freebsd-sources-6.2-sparc64.patch"
 		return 0
 	fi
 

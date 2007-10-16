@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-6.2-r2.ebuild,v 1.1 2007/09/12 00:15:46 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-6.2-r2.ebuild,v 1.2 2007/10/16 08:54:50 uberlord Exp $
 
 inherit bsdmk freebsd pam
 
@@ -29,8 +29,7 @@ S="${WORKDIR}/libexec"
 PATCHES="${FILESDIR}/${PN}-setXid.patch
 	${FILESDIR}/${PN}-nossp.patch
 	${FILESDIR}/${PN}-6.1-libfallback.patch
-	${FILESDIR}/${PN}-6.2-dl_iterate_phdr.patch
-	${FILESDIR}/${PN}-6.2-sparc64.patch"
+	${FILESDIR}/${PN}-6.2-dl_iterate_phdr.patch"
 
 # Remove sendmail, tcp_wrapper and other useless stuff
 REMOVE_SUBDIRS="smrsh mail.local tcpd telnetd rshd rlogind lukemftpd ftpd"
