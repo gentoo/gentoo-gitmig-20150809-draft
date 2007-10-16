@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/libgmail-0.1.6.1.ebuild,v 1.2 2007/09/02 20:08:24 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/libgmail-0.1.7.ebuild,v 1.1 2007/10/16 18:16:51 armin76 Exp $
 
 inherit distutils
 
