@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.23-r6.ebuild,v 1.6 2007/08/10 06:54:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.25-r1.ebuild,v 1.1 2007/10/16 21:19:48 wltjr Exp $
 
 WANT_ANT_TASKS="ant-trax"
 
@@ -12,12 +12,12 @@ MY_P="apache-${P}-src"
 SLOT="5.5"
 SRC_URI="mirror://apache/${PN}/${PN}-5/v${PV}/src/${MY_P}.tar.gz"
 HOMEPAGE="http://tomcat.apache.org/"
-KEYWORDS="amd64 -ppc -ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 -ppc -ppc64 ~x86 ~x86-fbsd"
 LICENSE="Apache-2.0"
 
 IUSE="admin java5 doc examples source test"
 
-RDEPEND="=dev-java/eclipse-ecj-3.2*
+RDEPEND="=dev-java/eclipse-ecj-3.3*
 	=dev-java/commons-beanutils-1.7*
 	>=dev-java/commons-collections-3.1
 	>=dev-java/commons-daemon-1.0.1
@@ -66,28 +66,16 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	local PATCHES="
-		main_build_xml.patch
-		tomcat_build_xml.patch
-		catalina_build_xml.patch
-		jasper_build_xml.patch
-	"
-	for patch in ${PATCHES}; do
-		epatch "${FILESDIR}/${SLOT}/${patch}"
-	done
-	if use examples; then
-		epatch "${FILESDIR}/${SLOT}/jsr152_examples_build_xml.patch"
-		epatch "${FILESDIR}/${SLOT}/jsr154_examples_build_xml.patch"
-	fi
+	epatch "${FILESDIR}/${SLOT}/webdav.patch"
+	epatch "${FILESDIR}/${SLOT}/main_tomcat_catalina_jasper_build_xml.patch"
 
-	rm -v "${S}"/connectors/jk/jkstatus/build/classes/org/apache/jk/status/*.class || die
-	rm -v "${S}"/connectors/jk/jkstatus/dist/*.jar || die
+	use examples && epatch "${FILESDIR}/${SLOT}/jsr152_jsr154_examples_build_xml.patch"
 
 	# avoid packed jars :-)
-	mkdir -p ${S}/build/build/common
-	cd ${S}/build/build
+	mkdir -p "${S}"/build/build/common
+	cd "${S}"/build/build
 
 	mkdir ./bin && cd ./bin
 	java-pkg_jar-from commons-logging commons-logging-api.jar
@@ -95,12 +83,12 @@ src_unpack() {
 	if ! use java5; then
 		java-pkg_jar-from mx4j-core-3.0 mx4j.jar jmx.jar
 		java-pkg_jar-from mx4j-core-3.0 mx4j-rjmx.jar jmx-remote.jar
-		mkdir ${S}/build/build/common/endorsed && cd ${S}/build/build/common/endorsed
+		mkdir "${S}"/build/build/common/endorsed && cd "${S}"/build/build/common/endorsed
 		java-pkg_jar-from xml-commons-external-1.3 xml-apis.jar
 		java-pkg_jar-from xerces-2 xercesImpl.jar
 	fi
 
-	mkdir ${S}/build/build/common/lib && cd ${S}/build/build/common/lib
+	mkdir "${S}"/build/build/common/lib && cd "${S}"/build/build/common/lib
 	java-pkg_jar-from ant-core
 	java-pkg_jar-from commons-collections
 	java-pkg_jar-from commons-dbcp
@@ -108,7 +96,7 @@ src_unpack() {
 	java-pkg_jar-from commons-pool
 	java-pkg_jar-from tomcat-servlet-api-2.4
 
-	mkdir -p ${S}/build/build/server/lib && cd ${S}/build/build/server/lib
+	mkdir -p "${S}"/build/build/server/lib && cd "${S}"/build/build/server/lib
 	java-pkg_jar-from commons-beanutils-1.7 commons-beanutils.jar
 	java-pkg_jar-from commons-digester
 	java-pkg_jar-from commons-modeler
@@ -133,7 +121,7 @@ src_compile(){
 	antflags="${antflags} -Dcommons-logging-api.jar=$(java-pkg_getjar commons-logging commons-logging-api.jar)"
 	antflags="${antflags} -Dcommons-pool.jar=$(java-pkg_getjars commons-pool)"
 	antflags="${antflags} -Dcommons-modeler.jar=$(java-pkg_getjars commons-modeler)"
-	antflags="${antflags} -Djdt.jar=$(java-pkg_getjar eclipse-ecj-3.2 ecj.jar)"
+	antflags="${antflags} -Djdt.jar=$(java-pkg_getjar eclipse-ecj-3.3 ecj.jar)"
 	antflags="${antflags} -Djsp-api.jar=$(java-pkg_getjar tomcat-servlet-api-2.4 jsp-api.jar)"
 	antflags="${antflags} -Djunit.jar=$(java-pkg_getjars junit)"
 	antflags="${antflags} -Dlog4j.jar=$(java-pkg_getjars log4j)"
@@ -164,11 +152,11 @@ src_compile(){
 }
 
 src_install() {
-	cd ${S}/build/build
+	cd "${S}"/build/build
 
 	# init.d, conf.d
-	newinitd ${FILESDIR}/${SLOT}/tomcat.init.2 ${TOMCAT_NAME}
-	newconfd ${FILESDIR}/${SLOT}/tomcat.conf.2 ${TOMCAT_NAME}
+	newinitd "${FILESDIR}"/${SLOT}/tomcat.init.2 ${TOMCAT_NAME}
+	newconfd "${FILESDIR}"/${SLOT}/tomcat.conf.2 ${TOMCAT_NAME}
 
 	# create dir structure
 	diropts -m755 -o tomcat -g tomcat
@@ -195,10 +183,10 @@ src_install() {
 	# copy the manager and admin context's to the right position
 	mkdir -p conf/Catalina/localhost
 	if use admin; then
-		cp ${S}/container/webapps/admin/admin.xml \
+		cp "${S}"/container/webapps/admin/admin.xml \
 			conf/Catalina/localhost
 	fi
-	cp ${S}/container/webapps/manager/manager.xml \
+	cp "${S}"/container/webapps/manager/manager.xml \
 		conf/Catalina/localhost
 
 	# make the jars available via java-pkg_getjar and jar-from, etc
@@ -242,24 +230,24 @@ src_install() {
 
 	# copy over the directories
 	chown -R tomcat:tomcat webapps/* conf/*
-	cp -pR conf/* ${D}/etc/${TOMCAT_NAME} || die "failed to copy conf"
-	cp -HR bin common server ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
+	cp -pR conf/* "${D}"/etc/${TOMCAT_NAME} || die "failed to copy conf"
+	cp -HR bin common server "${D}"/usr/share/${TOMCAT_NAME} || die "failed to copy"
 
 	# replace catalina.policy with gentoo specific one bug #176701
-	cp ${FILESDIR}/${SLOT}/catalina.policy ${D}/etc/${TOMCAT_NAME} || die "failed to replace catalina.policy"
+	cp "${FILESDIR}"/${SLOT}/catalina.policy "${D}"/etc/${TOMCAT_NAME} || die "failed to replace catalina.policy"
 
 	keepdir               ${WEBAPPS_DIR}
-	set_webapps_perms     ${D}/${WEBAPPS_DIR}
+	set_webapps_perms     "${D}"/${WEBAPPS_DIR}
 
 	# Copy over webapps, some controlled by use flags
 	cp -p ../RELEASE-NOTES webapps/ROOT/RELEASE-NOTES.txt
-	cp -pr webapps/ROOT ${D}${CATALINA_BASE}/webapps
+	cp -pr webapps/ROOT "${D}"${CATALINA_BASE}/webapps
 	if use doc; then
-		cp -pr webapps/tomcat-docs ${D}${CATALINA_BASE}/webapps
+		cp -pr webapps/tomcat-docs "${D}"${CATALINA_BASE}/webapps
 	fi
 	if use examples; then
 		cp -pr webapps/{jsp-examples,servlets-examples,webdav} \
-			${D}${CATALINA_BASE}/webapps
+			"${D}"${CATALINA_BASE}/webapps
 	fi
 
 	# symlink the directories to make CATALINA_BASE possible
@@ -268,7 +256,7 @@ src_install() {
 	dosym /var/tmp/${TOMCAT_NAME} ${CATALINA_BASE}/temp
 	dosym /var/run/${TOMCAT_NAME} ${CATALINA_BASE}/work
 
-	dodoc  ${S}/build/{RELEASE-NOTES,RUNNING.txt}
+	dodoc  "${S}"/build/{RELEASE-NOTES,RUNNING.txt}
 	fperms 640 /etc/${TOMCAT_NAME}/tomcat-users.xml
 }
 
