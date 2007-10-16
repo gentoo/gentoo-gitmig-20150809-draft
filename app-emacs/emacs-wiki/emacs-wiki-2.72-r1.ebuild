@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/emacs-wiki-2.72.ebuild,v 1.3 2007/07/04 22:49:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/emacs-wiki-2.72-r1.ebuild,v 1.1 2007/10/16 19:00:41 ulm Exp $
 
 inherit elisp
 
@@ -8,6 +8,7 @@ DESCRIPTION="Maintain a local Wiki using Emacs-friendly markup"
 HOMEPAGE="http://www.mwolson.org/projects/EmacsWiki.html
 	http://www.emacswiki.org/cgi-bin/wiki.pl?EmacsWikiMode"
 SRC_URI="http://www.mwolson.org/static/dist/emacs-wiki/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
@@ -17,10 +18,11 @@ RESTRICT="test"
 
 DEPEND="app-emacs/htmlize
 	app-emacs/table
-	app-emacs/httpd
-	sys-apps/texinfo"
+	app-emacs/httpd"
 
-SITEFILE=50emacs-wiki-gentoo.el
+RDEPEND="${DEPEND}"
+
+SITEFILE=50${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
@@ -35,10 +37,11 @@ src_compile() {
 }
 
 src_install() {
-	elisp-install ${PN} *.{el,elc}
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+	elisp-install ${PN} *.{el,elc} || die "elisp-install failed"
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
+		|| die "elisp-site-file-install failed"
 	doinfo *.info*
-	dodoc ChangeLog*
+	dodoc README ChangeLog*
 	docinto examples
 	dodoc examples/default.css
 }
