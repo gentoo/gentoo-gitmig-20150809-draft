@@ -6,4 +6,5 @@
 		<email>jer@gentoo.org</email>
 		<name>Jeroen Roovers</name>
 	</maintainer>
+	<longdescription>The highly customisable Opera web, mail, chat, download and web development suite.</longdescription>
 </pkgmetadata>
