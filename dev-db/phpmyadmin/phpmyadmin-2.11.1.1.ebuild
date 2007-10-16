@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.11.1.ebuild,v 1.3 2007/10/14 17:56:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.11.1.1.ebuild,v 1.1 2007/10/16 07:58:58 wrobel Exp $
 
 inherit eutils webapp depend.php
 
@@ -42,9 +42,6 @@ src_unpack() {
 	cd "${S}"
 	# Remove .cvs* files and CVS directories
 	find "${S}" -name .cvs\* -or \( -type d -name CVS -prune \) | xargs rm -rf
-
-	# patch security issue #195707
-	epatch "${FILESDIR}"/${P}-issue_195707.patch || die "Patching failed!"
 }
 
 src_install() {
