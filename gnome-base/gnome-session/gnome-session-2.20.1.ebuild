@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.20.0.ebuild,v 1.1 2007/10/04 16:54:21 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.20.1.ebuild,v 1.1 2007/10/16 22:18:19 remi Exp $
 
 inherit eutils gnome2
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="branding esd ipv6 tcpd"
 
 RDEPEND=">=dev-libs/glib-2.13
-		 >=x11-libs/gtk+-2.3.1
+		 >=x11-libs/gtk+-2.11.1
 		 x11-libs/libXau
 		 x11-apps/xdpyinfo
 		 >=gnome-base/libgnomeui-2.2
@@ -23,10 +23,7 @@ RDEPEND=">=dev-libs/glib-2.13
 		 >=x11-libs/libnotify-0.2.1
 		 >=gnome-base/gconf-2
 		 >=gnome-base/gnome-keyring-0.5.1
-		 || (
-				>=dev-libs/dbus-glib-0.71
-				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.35 )
-			)
+		 >=dev-libs/dbus-glib-0.71
 		 esd? ( >=media-sound/esound-0.2.26 )
 		 tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 DEPEND="${RDEPEND}
