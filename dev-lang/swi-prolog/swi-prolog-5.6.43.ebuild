@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.43.ebuild,v 1.3 2007/10/09 06:25:14 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.43.ebuild,v 1.4 2007/10/16 05:25:26 keri Exp $
 
 inherit eutils flag-o-matic java-pkg-opt-2
 
@@ -14,7 +14,7 @@ SRC_URI="http://gollem.science.uva.nl/cgi-bin/nph-download/SWI-Prolog/pl-${PV}.t
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="berkdb debug doc gmp java minimal odbc readline ssl static tetex threads zlib X"
+IUSE="berkdb debug doc gmp hardened java minimal odbc readline ssl static tetex threads zlib X"
 
 DEPEND="!dev-lang/swi-prolog-lite
 	sys-libs/ncurses
@@ -50,6 +50,7 @@ src_unpack() {
 src_compile() {
 	einfo "Building SWI-Prolog compiler"
 
+	use hardened && append-flags -fno-unit-at-a-atime
 	use debug && append-flags -DO_DEBUG
 
 	local threadconf

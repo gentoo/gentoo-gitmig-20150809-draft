@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.119 2007/10/09 06:25:14 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.120 2007/10/16 05:25:26 keri Exp $
+
+  16 Oct 2007; keri <keri@gentoo.org> swi-prolog-5.6.43.ebuild:
+  Do not use unit-at-a-time on hardened installs as it segfaults on top-level
+  variables in Prolog terms. Closes bug #194979.
 
   09 Oct 2007; keri <keri@gentoo.org> swi-prolog-5.6.43.ebuild:
   Fix install deps in xpce package. Closes #195161.
