@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.93 2007/10/06 19:13:24 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.94 2007/10/16 05:28:05 peper Exp $
+
+*ndiswrapper-1.49_rc4 (16 Oct 2007)
+
+  16 Oct 2007; Piotr Jaroszyński <peper@gentoo.org>
+  -ndiswrapper-1.44.ebuild, -ndiswrapper-1.45.ebuild,
+  -ndiswrapper-1.46.ebuild, +ndiswrapper-1.49_rc4.ebuild:
+  Add 1.49_rc4. Remove old versions.
 
 *ndiswrapper-1.49_rc3 (06 Oct 2007)
 

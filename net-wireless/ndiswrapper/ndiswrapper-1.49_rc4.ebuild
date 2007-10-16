@@ -1,12 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.46.ebuild,v 1.2 2007/06/25 10:34:19 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.49_rc4.ebuild,v 1.1 2007/10/16 05:28:05 peper Exp $
 
 inherit linux-mod
 
+MY_P=${PN}-${PV/_/}
+
 DESCRIPTION="Wrapper for using Windows drivers for some wireless cards"
 HOMEPAGE="http://ndiswrapper.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
@@ -17,6 +19,8 @@ RDEPEND="${DEPEND}
 	net-wireless/wireless-tools"
 
 CONFIG_CHECK="WIRELESS_EXT"
+
+S=${WORKDIR}/${MY_P}
 
 MODULE_NAMES="ndiswrapper(misc:${S}/driver)"
 BUILD_TARGETS="all"
@@ -37,7 +41,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}/${P}-ksrc.patch"
 	convert_to_m "${S}/driver/Makefile"
 }
 
