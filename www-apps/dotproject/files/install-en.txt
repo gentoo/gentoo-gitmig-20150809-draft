@@ -1,0 +1,7 @@
+Installation instructions are at
+http://docs.dotproject.net/tiki-index.php?page=Installation+Instructions
+
+Installing/Upgrading, the quick way: point your browser to the install directory
+	http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/install
+
+Note the default username/passwd: admin / passwd
