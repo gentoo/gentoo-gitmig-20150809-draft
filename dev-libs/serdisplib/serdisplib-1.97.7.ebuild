@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/serdisplib-1.97.5.ebuild,v 1.6 2007/10/16 18:45:00 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/serdisplib-1.97.7.ebuild,v 1.1 2007/10/16 18:45:00 rbu Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="usb"
 
 DEPEND="media-libs/gd
@@ -36,5 +36,5 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	dodoc AUTHORS HISTORY README
+	dodoc AUTHORS HISTORY README BUGS PINOUTS
 }

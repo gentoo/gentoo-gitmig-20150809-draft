@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/serdisplib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/ChangeLog,v 1.9 2007/08/29 18:30:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/ChangeLog,v 1.10 2007/10/16 18:45:00 rbu Exp $
+
+*serdisplib-1.97.7 (16 Oct 2007)
+
+  16 Oct 2007; Robert Buchholz <rbu@gentoo.org> serdisplib-1.97.5.ebuild,
+  serdisplib-1.97.6.ebuild, +serdisplib-1.97.7.ebuild:
+  Version bump, introducing new devices and some bugfixes.
+  Also fixed a quoting issue.
 
   29 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   serdisplib-1.97.6.ebuild:
