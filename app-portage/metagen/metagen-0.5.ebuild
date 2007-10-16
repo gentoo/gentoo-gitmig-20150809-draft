@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.5.ebuild,v 1.5 2007/07/15 05:25:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.5.ebuild,v 1.6 2007/10/16 04:48:04 jer Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/abeni/${P}.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 hppa ppc x86"
 
 IUSE=""
 DEPEND=">=dev-python/jaxml-3.01
@@ -20,8 +20,8 @@ src_install() {
 	python_version
 	dodir /usr/lib/python${PYVER}/site-packages/metagen
 	dodir /usr/bin
-	cp *py test_cli ${D}/usr/lib/python${PYVER}/site-packages/metagen/
-	dosym ${D}/usr/lib/python${PYVER}/site-packages/metagen/metagen.py \
+	cp *py test_cli "${D}"/usr/lib/python${PYVER}/site-packages/metagen/
+	dosym "${D}"/usr/lib/python${PYVER}/site-packages/metagen/metagen.py \
 			/usr/bin/metagen
 	doman metagen.1.gz
 	dodoc docs/*
