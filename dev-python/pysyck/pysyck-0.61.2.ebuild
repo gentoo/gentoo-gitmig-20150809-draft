@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysyck/pysyck-0.61.2.ebuild,v 1.1 2007/10/05 22:53:59 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysyck/pysyck-0.61.2.ebuild,v 1.2 2007/10/16 01:03:53 sbriesen Exp $
 
 inherit distutils
 
@@ -15,8 +15,14 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPENDS=">=dev-libs/syck-0.55"
+DEPEND=">=dev-libs/syck-0.55"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
 PYTHON_MODNAME="syck"
+
+src_test() {
+	PYTHONPATH=./lib/ "${python}" tests/test_syck.py
+	einfo "Some tests may have failed due to pending bugs in dev-libs/syck"
+}
