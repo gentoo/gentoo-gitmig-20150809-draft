@@ -1,6 +1,8 @@
 
 ;;; tdtd site-lisp configuration
 
+(add-to-list 'load-path "@SITELISP@")
+
 (autoload 'dtd-mode "tdtd" "Major mode to edit DTD files." t)
 (autoload 'dtd-etags "tdtd"
   "Execute etags on FILESPEC and match on DTD-specific regular expressions."
