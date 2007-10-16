@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/dotproject-2.1.ebuild,v 1.1 2007/10/16 19:19:32 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/dotproject-2.1.ebuild,v 1.2 2007/10/16 19:31:17 wrobel Exp $
 
 inherit webapp depend.php
 
@@ -13,6 +13,8 @@ S=${WORKDIR}/${PN}
 LICENSE="GPL-2"
 
 need_php
+
+RDEPEND="app-text/poppler"
 
 src_install () {
 	webapp_src_preinst
