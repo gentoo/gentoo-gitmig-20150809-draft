@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/navi2ch
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.33 2007/10/12 06:22:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.34 2007/10/16 06:25:18 opfer Exp $
+
+  16 Oct 2007; Christian Faulhammer <opfer@gentoo.org> navi2ch-1.7.5.ebuild:
+  stable amd64, bug 195112
 
   12 Oct 2007; Ulrich Mueller <ulm@gentoo.org> -navi2ch-1.7.4.ebuild:
   Remove old.
