@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.8.ebuild,v 1.9 2007/09/06 07:30:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.8.ebuild,v 1.10 2007/10/16 15:22:50 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -32,9 +32,18 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-flags.patch
 	eautoreconf
 
-	sed -i -e "s/..\/..\/drawstuff\/textures/\/usr\/share\/${PF}\/examples/" ode/test/*.c*
-	sed -i -e "s/fn.path_to_textures = 0/fn.path_to_textures = \"\/usr\/share\/${PF}\/examples\"/" drawstuff/dstest/dstest.cpp
-	sed -i -e "s/inline_[\t]*void[\t*]ResetCountDown/void ResetCountDown/" OPCODE/OPC_TreeCollider.h
+	sed -i \
+		-e "s/..\/..\/drawstuff\/textures/\/usr\/share\/${PF}\/examples/" \
+		ode/test/*.c* \
+		|| die "sed failed"
+	sed -i \
+		-e "s/fn.path_to_textures = 0/fn.path_to_textures = \"\/usr\/share\/${PF}\/examples\"/" \
+		drawstuff/dstest/dstest.cpp \
+		|| die "sed failed"
+	sed -i \
+		-e "s/inline_[\t]*void[\t*]ResetCountDown/void ResetCountDown/" \
+		OPCODE/OPC_TreeCollider.h \
+		|| die "sed failed"
 }
 
 src_compile() {
@@ -44,8 +53,7 @@ src_compile() {
 		$(use_enable !nogyroscopic gyroscopic) \
 		--enable-release \
 		|| die
-
-	emake || die "ODE compile failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -56,7 +64,6 @@ src_install() {
 
 	if use examples; then
 		# install examples
-		dodir /usr/share/${PF}/examples
 		exeinto /usr/share/${PF}/examples
 		cd ode/test
 		doexe test_basket test_boxstack test_buggy test_chain1 test_chain2 \
@@ -67,9 +74,9 @@ src_install() {
 		cd ../..
 		doexe drawstuff/dstest/dstest
 		insinto /usr/share/${PF}/examples
-		doins ode/test/*.{c,cpp,h}
-		doins drawstuff/textures/*.ppm
-		doins drawstuff/dstest/dstest.cpp
-		doins drawstuff/src/{drawstuff.cpp,internal.h,x11.cpp}
+		doins ode/test/*.{c,cpp,h} \
+			drawstuff/textures/*.ppm \
+			drawstuff/dstest/dstest.cpp \
+			drawstuff/src/{drawstuff.cpp,internal.h,x11.cpp}
 	fi
 }
