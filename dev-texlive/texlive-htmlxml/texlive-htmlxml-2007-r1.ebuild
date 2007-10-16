@@ -1,12 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/texlive-htmlxml-2007.ebuild,v 1.1 2007/10/14 09:04:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/texlive-htmlxml-2007-r1.ebuild,v 1.1 2007/10/16 07:14:26 aballier Exp $
 
 TEXLIVE_MODULES_DEPS="dev-texlive/texlive-basic
 dev-texlive/texlive-fontsrecommended
 dev-texlive/texlive-latex
+>=app-text/jadetex-3.13-r2
 "
-TEXLIVE_MODULE_CONTENTS="bin-jadetex bin-tex4htk bin-xmltex jadetex passivetex tex4ht xmlplay xmltex collection-htmlxml
+TEXLIVE_MODULE_CONTENTS="bin-tex4htk bin-xmltex passivetex tex4ht xmlplay xmltex collection-htmlxml
 "
 inherit texlive-module
 DESCRIPTION="TeXLive HTML/SGML/XML support"

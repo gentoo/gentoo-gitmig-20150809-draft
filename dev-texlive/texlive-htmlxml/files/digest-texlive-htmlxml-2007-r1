@@ -1,6 +1,3 @@
-MD5 cc65c2939d79c5bceba0cdd2206fe43f texlive-module-bin-jadetex-2007.zip 1574
-RMD160 ee80e02251209d69d1cfdb1afdb5f76d9c07e366 texlive-module-bin-jadetex-2007.zip 1574
-SHA256 8808e4bcb406b1cdb0f88829e541633ea37677c7fa64bb609e0bb347d8013192 texlive-module-bin-jadetex-2007.zip 1574
 MD5 a7bec2063dcb9b27bc56e7c3e1fde095 texlive-module-bin-tex4htk-2007.zip 2867
 RMD160 a739c9abdbad9c50f78592456ccd310673b5c3bb texlive-module-bin-tex4htk-2007.zip 2867
 SHA256 3f14c6960166d3eae55cd9d28561852866e8fc5089e2e75fd7fd8dd0cfcdcb97 texlive-module-bin-tex4htk-2007.zip 2867
@@ -10,9 +7,6 @@ SHA256 56d8a2d0b3f4a033bb90a65d33ae651bca2063a5072bceabb3aa4d794e22a39e texlive-
 MD5 d34c906292ed53b3520d81d73bc0faed texlive-module-collection-htmlxml-2007.zip 1056
 RMD160 ef64e8a20d673319548c6c96c82ccdbcc6d789df texlive-module-collection-htmlxml-2007.zip 1056
 SHA256 389ebe7bd5c2d989e56f85400d2893e4818ad41b2004d91b2ca19cc87dfe70d7 texlive-module-collection-htmlxml-2007.zip 1056
-MD5 aff42f6708f9a7627ca3fee021e2934f texlive-module-jadetex-2007.zip 179237
-RMD160 74f01ccc38581a85fb22c6fdcbff53a56976c85b texlive-module-jadetex-2007.zip 179237
-SHA256 93a0c4e0e91b33f569f8fb8d9fcd6149c4f3499a1d8650eecbf5c0405d2ab0b8 texlive-module-jadetex-2007.zip 179237
 MD5 93c2247578d47504004b6f9c44b92e7e texlive-module-passivetex-2007.zip 142407
 RMD160 a70523a6f48314b2129c680f737f53e43aa4dd24 texlive-module-passivetex-2007.zip 142407
 SHA256 8c21397f3ad16dd5fee16fd9d11d2e92195b90724aa3d3ff920bd59203567243 texlive-module-passivetex-2007.zip 142407
