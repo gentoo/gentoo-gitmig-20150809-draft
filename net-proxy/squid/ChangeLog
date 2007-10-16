@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.157 2007/10/15 17:39:04 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.158 2007/10/16 10:19:20 corsair Exp $
+
+  16 Oct 2007; Markus Rothe <corsair@gentoo.org> squid-2.6.16.ebuild:
+  Stable on ppc64; bug #195932
 
   15 Oct 2007; Dawid Węgliński <cla@gentoo.org> squid-2.6.16.ebuild:
   Stable on x86 (bug #195932)
