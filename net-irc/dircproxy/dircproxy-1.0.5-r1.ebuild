@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/dircproxy-1.0.5-r1.ebuild,v 1.2 2007/10/15 20:41:38 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/dircproxy-1.0.5-r1.ebuild,v 1.3 2007/10/16 09:35:34 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dircproxy.securiweb.net/pub/1.0/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc x86"
+KEYWORDS="alpha ~amd64 ~ppc x86"
 IUSE=""
 
 src_unpack() {
