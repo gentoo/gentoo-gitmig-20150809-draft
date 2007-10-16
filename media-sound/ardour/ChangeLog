@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.64 2007/08/21 10:57:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.65 2007/10/16 16:17:49 eldad Exp $
+
+*ardour-2.1 (16 Oct 2007)
+
+  16 Oct 2007; <eldad@gentoo.org> +ardour-2.1.ebuild:
+  Version bump. Disabled SYSLIBS due to segfaulting. Bug #194437.
 
 *ardour-2.0.5 (21 Aug 2007)
 
