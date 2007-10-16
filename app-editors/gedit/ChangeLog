@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.209 2007/10/11 18:07:39 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.210 2007/10/16 19:50:02 remi Exp $
+
+*gedit-2.20.2 (16 Oct 2007)
+
+  16 Oct 2007; Rémi Cardona <remi@gentoo.org>
+  -files/gedit-2.19.91-libattr.patch, -gedit-2.20.0.ebuild,
+  +gedit-2.20.2.ebuild:
+  Bump to version 2.20.2 (bugfix and translations), the libattr patch is now
+  included
 
   11 Oct 2007; Rémi Cardona <remi@gentoo.org> gedit-2.20.0.ebuild:
   onliner to fix QA warning (turns out the code was broken anyway)

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.20.0.ebuild,v 1.4 2007/10/12 16:27:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.20.2.ebuild,v 1.1 2007/10/16 19:50:02 remi Exp $
 
 inherit gnome2 eutils autotools
 
@@ -38,7 +38,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=app-text/gnome-doc-utils-0.3.2"
 
-DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README THANKS TODO"
+DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
 
 if [[ "${ARCH}" == "PPC" ]] ; then
 	# HACK HACK HACK: someone fix this garbage
@@ -62,9 +62,6 @@ src_unpack() {
 
 	# chown on fbsd doesn't have --reference.  Bug #183691
 	epatch "${FILESDIR}"/${PN}-2.18.1-fbsd.patch
-
-	# Make libattr optional; bug #191989
-	epatch "${FILESDIR}"/${PN}-2.19.91-libattr.patch
 
 	AT_M4DIR="./m4" eautoreconf
 }
