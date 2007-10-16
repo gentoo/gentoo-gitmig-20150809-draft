@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.1.0-r1.ebuild,v 1.8 2007/10/16 10:17:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.1.0-r2.ebuild,v 1.1 2007/10/16 10:17:16 chainsaw Exp $
 
 inherit toolchain-funcs eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://dev.gentoo.org/~chainsaw/xsys/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="audacious buttons"
 
 DEPEND="|| (
@@ -33,6 +33,7 @@ src_unpack() {
 		sed -i -e "s:# FOR AUDACIOUS # ::g" Makefile
 	fi
 	epatch "${FILESDIR}"/${PV}-alpha-L2-cache.patch
+	epatch "${FILESDIR}"/${PV}-fix-meminfo-swapoff.patch
 }
 
 src_compile() {
