@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.3.6.ebuild,v 1.1 2007/10/14 13:50:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.3.7.ebuild,v 1.1 2007/10/17 19:50:39 eva Exp $
 
 inherit virtualx gnome2
 
@@ -30,7 +30,8 @@ RDEPEND=">=dev-libs/glib-2.11
 	x11-libs/libXi
 	x11-libs/libX11
 	x11-libs/libSM
-	x11-libs/libICE"
+	x11-libs/libICE
+	x11-libs/libXevie"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
@@ -49,7 +50,7 @@ DOCS="AUTHORS ChangeLog NEWS README"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable usb libusb-input)"
+	G2CONF="${G2CONF} $(use_enable usb libusb-input) --enable-xevie"
 }
 
 src_test() {
