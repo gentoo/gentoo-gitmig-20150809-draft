@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.152 2007/10/12 14:28:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.153 2007/10/17 13:50:21 dang Exp $
+
+*evolution-data-server-1.12.1 (17 Oct 2007)
+
+  17 Oct 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +evolution-data-server-1.12.1.ebuild:
+  Bump to 1.12.1
+  	- e-d-s now exits with gnome-session (Milan Crha)
+  	- Composer stops completing addresses if you come back to the To: line
+  	  (Srinivasa Ragavan)
 
   12 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
   evolution-data-server-1.10.2.ebuild,
