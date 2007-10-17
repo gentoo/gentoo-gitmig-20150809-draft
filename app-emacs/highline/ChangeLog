@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/highline
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.16 2007/06/01 16:48:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.17 2007/10/17 15:49:43 ulm Exp $
+
+*highline-4.2.1 (17 Oct 2007)
+
+  17 Oct 2007; Ulrich Mueller <ulm@gentoo.org> +highline-4.2.1.ebuild:
+  Version bump. Distfile is now a simple elisp file.
 
   01 Jun 2007; nixnut <nixnut@gentoo.org> highline-4.2-r1.ebuild:
   Stable on ppc wrt bug 178723
