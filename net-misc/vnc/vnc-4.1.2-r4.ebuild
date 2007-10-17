@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r4.ebuild,v 1.2 2007/09/25 18:06:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r4.ebuild,v 1.3 2007/10/17 16:52:46 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 inherit eutils toolchain-funcs multilib autotools
 
 XSERVER_VERSION="1.3.0.0"
-PATCH="${P}-r4-patches-0.1"
+PATCH="${P}-r4-patches-0.2"
 
 MY_P="vnc-4_1_2-unixsrc"
 DESCRIPTION="Remote desktop viewer display system"
@@ -19,7 +19,7 @@ SRC_URI="http://ltsp.mirrors.tds.net/pub/ltsp/tarballs/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="server"
 
 RDEPEND="sys-libs/zlib
