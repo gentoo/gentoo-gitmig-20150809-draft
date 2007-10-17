@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.42.ebuild,v 1.2 2007/10/17 12:38:01 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.42.ebuild,v 1.3 2007/10/17 14:09:32 hkbst Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -54,7 +54,6 @@ src_compile() {
 
 	# configure chokes on --infodir option
 	./configure --prefix=/usr --libdir=/usr/$(get_libdir) \
-		--hyperspec="http://www.lisp.org/HyperSpec/FrontMatter/" \
 		${myconf} ${BUILDDIR} || die "./configure failed"
 	cd ${BUILDDIR}
 	./makemake ${myconf} >Makefile
