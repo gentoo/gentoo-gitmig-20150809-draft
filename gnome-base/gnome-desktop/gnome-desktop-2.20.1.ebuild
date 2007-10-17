@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.18.3.ebuild,v 1.8 2007/10/17 20:26:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.20.1.ebuild,v 1.1 2007/10/17 20:26:26 eva Exp $
 
 inherit gnome2
 
@@ -9,12 +9,13 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/libxml2-2.4.20
-	>=x11-libs/gtk+-2.8
-	>=dev-libs/glib-2.8
+	>=x11-libs/gtk+-2.11.3
+	>=dev-libs/glib-2.13.0
+	>=gnome-base/gconf-2
 	>=gnome-base/libgnomecanvas-2
 	>=gnome-base/libgnomeui-2.6
 	>=gnome-base/gnome-vfs-2
