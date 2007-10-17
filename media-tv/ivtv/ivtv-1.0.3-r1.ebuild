@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.3.ebuild,v 1.2 2007/10/17 13:31:34 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.3-r1.ebuild,v 1.1 2007/10/17 21:56:56 beandog Exp $
 
 inherit eutils linux-mod
 
@@ -24,7 +24,7 @@ pkg_setup() {
 		!VIDEO_HELPER_CHIPS_AUTO VIDEO_IVTV"
 
 	if use fbcon; then
-		MODULE_NAMES="${MODULE_NAMES} ivtv-fb(extra:${S}/driver)"
+		MODULE_NAMES="${MODULE_NAMES} ivtvfb(extra:${S}/driver)"
 		CONFIG_CHECK="${CONFIG_CHECK} FB FB_TRIDENT FRAMEBUFFER_CONSOLE FONTS"
 	fi
 
@@ -44,7 +44,7 @@ pkg_setup() {
 		ewarn ""
 		ewarn "From the README regarding framebuffer support:"
 		ewarn ""
-		ewarn "ivtv-fb now requires that you enable the following kernel config"
+		ewarn "ivtvfb now requires that you enable the following kernel config"
 		ewarn "options: Go to 'Device drivers -> Graphics support'. Enable"
 		ewarn "'Support for frame buffer devices'. Enable 'Trident support'"
 		ewarn "(the Trident module itself is not required)."
@@ -125,8 +125,8 @@ pkg_postinst() {
 	ewarn "If any of these conditions match your setup, you may want to look at the"
 	ewarn "README in /usr/share/doc/${PF}/"
 	ewarn ""
-	ewarn " - Using MythTV, a PVR-350 and the ivtv-fb module"
-	ewarn " - Using the ivtv X driver and the ivtv-fb module"
+	ewarn " - Using MythTV, a PVR-350 and the ivtvfb module"
+	ewarn " - Using the ivtv X driver and the ivtvfb module"
 	ewarn " - You want to manually build ivtv against v4l-dvb"
 	ewarn ""
 	ewarn "Also, the ivtv package comes with lots of documentation regarding setup,"
