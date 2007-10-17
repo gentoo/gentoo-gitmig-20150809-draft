@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.8.1.ebuild,v 1.1 2007/06/26 11:01:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.8.2.ebuild,v 1.1 2007/10/17 13:27:04 drac Exp $
 
 inherit python eutils
 
@@ -27,11 +27,12 @@ DEPEND="${RDEPEND}
 	>=app-text/docbook-xsl-stylesheets-1.60"
 
 src_compile() {
-	# Try to figure out where is this damn stylesheet
+	# Try to figure out where is this damn stylesheet.
 	local xslloc=$( xmlcatalog /etc/xml/catalog	http://docbook.sourceforge.net/release/xsl/current/html/chunk.xsl | sed 's@file://@@' )
 
 	econf --enable-docbook-stylesheet=${xslloc} \
-		$(use_enable oss oss-sound)
+		$(use_enable oss oss-sound) \
+		--disable-pygtk-test
 
 	emake || die "emake failed."
 }

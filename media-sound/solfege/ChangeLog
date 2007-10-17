@@ -1,11 +1,15 @@
 # ChangeLog for media-sound/solfege
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.22 2007/06/26 11:01:14 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.23 2007/10/17 13:27:04 drac Exp $
+
+*solfege-3.8.2 (17 Oct 2007)
+
+  17 Oct 2007; Samuli Suominen <drac@gentoo.org> +solfege-3.8.2.ebuild:
+  Version bump for bug 196135, thanks to Tim Harder for reporting.
 
 *solfege-3.8.1 (26 Jun 2007)
 
-  26 Jun 2007; Samuli Suominen <drac@gentoo.org> -solfege-3.8.0.ebuild,
-  +solfege-3.8.1.ebuild:
+  26 Jun 2007; Samuli Suominen <drac@gentoo.org> +solfege-3.8.1.ebuild:
   Version bump for bug 183189, thanks to Tim Harder for reporting.
 
 *solfege-3.8.0 (12 Jun 2007)
@@ -17,10 +21,7 @@
   x86 stable wrt bug 147432
 
   25 Mar 2007; Samuli Suominen <drac@gentoo.org> solfege-3.6.0.ebuild:
-  Remove TODO from dodoc.
-
-  25 Mar 2007; Samuli Suominen <drac@gentoo.org> solfege-3.6.0.ebuild:
-  Remove redudant || die from end of econf, some emptylines.
+  Remove redudant || die from end of econf, emptylines, TODO from dodoc.
 
   05 Feb 2007; Alexis Ballier <aballier@gentoo.org> solfege-3.6.0.ebuild:
   Update docbook-xsl-stylesheets deps, thanks to Bruno Roggeri for the patch,
