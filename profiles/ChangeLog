@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.738 2007/10/17 21:18:41 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.739 2007/10/17 23:21:23 remi Exp $
+
+  17 Oct 2007; Rémi Cardona <remi@gentoo.org> package.mask:
+  remove Gnome 2.20 from package.mask (except dasher)
 
   17 Oct 2007; Timo Gurr <tgurr@gentoo.org> package.mask:
   Mask ghostscript-gpl-8.60 for testing, first release with ghostscript-esp
