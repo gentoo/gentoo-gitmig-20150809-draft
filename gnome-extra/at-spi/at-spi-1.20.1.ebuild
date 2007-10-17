@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.20.0.ebuild,v 1.1 2007/09/25 18:49:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.20.1.ebuild,v 1.1 2007/10/17 00:10:47 leio Exp $
 
 WANT_AUTOMAKE="1.9"
 
