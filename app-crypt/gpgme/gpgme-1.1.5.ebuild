@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.5.ebuild,v 1.2 2007/07/10 03:37:33 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.5.ebuild,v 1.3 2007/10/17 14:55:36 uberlord Exp $
+
+inherit libtool
 
 DESCRIPTION="GnuPG Made Easy is a library for making GnuPG easier to use"
 HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpgme/index.html"
@@ -17,6 +19,14 @@ DEPEND=">=dev-libs/libgpg-error-1.4
 
 RDEPEND="${DEPEND}
 	dev-libs/libgcrypt"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# We need to call elibtoolize so that we get sane .so versioning on fbsd.
+	elibtoolize
+}
 
 src_compile() {
 	econf \
