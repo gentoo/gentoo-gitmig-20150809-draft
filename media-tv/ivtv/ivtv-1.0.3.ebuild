@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.3.ebuild,v 1.1 2007/10/16 19:32:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.3.ebuild,v 1.2 2007/10/17 13:31:34 beandog Exp $
 
 inherit eutils linux-mod
 
@@ -87,7 +87,7 @@ src_install() {
 	dobin perl/*.pl
 
 	cd "${S}"
-	dodoc README* doc/* utils/README.X11 ChangeLog* utils/perl/README.ptune
+	dodoc README* doc/* ChangeLog* utils/perl/README.ptune
 
 	cd "${S}/driver"
 	linux-mod_src_install || die "failed to install modules"
