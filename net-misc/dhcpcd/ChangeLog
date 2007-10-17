@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.166 2007/10/11 09:48:53 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.167 2007/10/17 09:45:54 uberlord Exp $
+
+  17 Oct 2007; Roy Marples <uberlord@gentoo.org> dhcpcd-3.1.6-r1.ebuild:
+  Add zeroconf use flag and document behaviour, #196088
 
 *dhcpcd-3.1.6-r1 (11 Oct 2007)
 *dhcpcd-3.1.5-r1 (11 Oct 2007)
