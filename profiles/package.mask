@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7815 2007/10/17 14:49:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7816 2007/10/17 18:26:12 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,11 +20,6 @@
 ##
 ##   End example
 ##
-
-# Samuli Suominen <drac@gentoo.org> (17 Oct 2007)
-# Slotted with current fmod, but it needs to be tested and
-# possibly modified for ebuilds using it. See bug 121506.
->=media-libs/fmod-4
 
 # Eldad Zack <eldadz@gentoo.org> (16 Oct 2007)
 # ardour-2.1 using syslibs, see bug #194437
