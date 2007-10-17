@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.16.1.ebuild,v 1.13 2007/06/17 15:25:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.16.1.ebuild,v 1.14 2007/10/17 20:25:59 eva Exp $
 
 inherit eutils gnome2 python multilib
 
@@ -32,7 +32,7 @@ src_unpack() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_mod_optimize ${ROOT}usr/$(get_libdir)/python*/site-packages
+	python_mod_optimize "${ROOT}"usr/$(get_libdir)/python*/site-packages
 }
 
 pkg_postrm() {
