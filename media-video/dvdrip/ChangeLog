@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.102 2007/09/04 04:16:39 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.103 2007/10/17 13:59:20 beandog Exp $
+
+*dvdrip-0.98.8-r1 (17 Oct 2007)
+
+  17 Oct 2007; Steve Dibb <beandog@gentoo.org> +dvdrip-0.98.8-r1.ebuild:
+  Add fping ewarn, bug 173924
 
 *dvdrip-0.98.8 (02 Sep 2007)
 *dvdrip-0.98.7 (02 Sep 2007)
