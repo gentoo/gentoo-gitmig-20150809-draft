@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.6.3.ebuild,v 1.6 2007/10/17 22:55:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.8.1.ebuild,v 1.1 2007/10/17 22:55:14 eva Exp $
 
 inherit gnome2 mono eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.beatniksoftware.com/tomboy/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc eds galago"
 
 RDEPEND=">=dev-lang/mono-1.1
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 		  dev-libs/libxml2
 		  sys-devel/gettext
 		  dev-util/pkgconfig
-		>=dev-util/intltool-0.25"
+		>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 
@@ -48,11 +48,4 @@ pkg_setup() {
 	fi
 
 	G2CONF="${G2CONF} $(use_enable galago) $(use_enable eds evolution)"
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${P}-assembly-attribute.patch || die "epatch failed"
 }
