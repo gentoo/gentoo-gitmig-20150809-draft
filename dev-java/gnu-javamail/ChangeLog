@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gnu-javamail
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.21 2007/03/28 18:15:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.22 2007/10/17 06:07:00 ali_bush Exp $
+
+  17 Oct 2007; <alistair@gentoo.org>
+  +gnu-javamail-1.0-r2.ebuild:
+  Rev bump gnu-javamail to update it's main jar from gnumail.jar to mail.jar.
+  Done this to provide consistent main jar file for the javamail java-virtual.
 
   28 Mar 2007; Petteri Räty <betelgeuse@gentoo.org>
   gnu-javamail-1.0-r1.ebuild:
