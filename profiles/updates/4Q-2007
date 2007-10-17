@@ -4,3 +4,4 @@ move app-emacs/gnus-cvs app-emacs/ngnus
 move app-emacs/simple-wiki app-emacs/http-emacs
 move dev-php5/syck-php-bindings dev-php5/pecl-syck
 move net-www/dotproject www-apps/dotproject
+slotmove =x11-libs/gtksourceview-1* 1 1.0
