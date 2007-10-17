@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/stoned-bin-1.1.6.ebuild,v 1.4 2006/03/31 21:53:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/stoned-bin-1.1.6.ebuild,v 1.5 2007/10/17 17:51:51 drac Exp $
 
 inherit games
 
@@ -17,7 +17,7 @@ RESTRICT="strip"
 RDEPEND="virtual/opengl
 	virtual/glut
 	media-libs/sdl-net
-	media-libs/fmod
+	=media-libs/fmod-3*
 	sys-libs/zlib
 	media-libs/libpng"
 
