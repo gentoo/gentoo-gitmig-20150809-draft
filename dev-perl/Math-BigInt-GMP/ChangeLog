@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Math-BigInt-GMP
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-BigInt-GMP/ChangeLog,v 1.1 2007/10/17 08:14:14 robbat2 Exp $
+
+*Math-BigInt-GMP-1.24 (17 Oct 2007)
+
+  17 Oct 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +Math-BigInt-GMP-1.24.ebuild:
+  Initial commit. Dep for Mail-SpamAssassin-Plugin-GoogleSafeBrowsing. Ebuild
+  by Robin H. Johnnson <robbat2@gentoo.org>
+

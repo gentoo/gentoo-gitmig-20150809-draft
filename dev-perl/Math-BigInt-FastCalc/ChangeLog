@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Math-BigInt-FastCalc
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-BigInt-FastCalc/ChangeLog,v 1.1 2007/10/17 08:13:31 robbat2 Exp $
+
+*Math-BigInt-FastCalc-0.15 (17 Oct 2007)
+
+  17 Oct 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +Math-BigInt-FastCalc-0.15.ebuild:
+  Initial commit. Dep for Mail-SpamAssassin-Plugin-GoogleSafeBrowsing. Ebuild
+  by Robin H. Johnnson <robbat2@gentoo.org>
+
