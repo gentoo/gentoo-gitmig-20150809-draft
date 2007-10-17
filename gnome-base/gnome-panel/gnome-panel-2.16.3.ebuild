@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.16.3.ebuild,v 1.11 2007/08/25 14:24:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.16.3.ebuild,v 1.12 2007/10/17 20:31:24 eva Exp $
 
 inherit gnome2
 
@@ -47,7 +47,7 @@ src_unpack() {
 
 	# FIXME : uh yeah, this is nice
 	# We should patch in a switch here and send it upstream
-	sed -i 's:--load:-v:' ${S}/gnome-panel/Makefile.in || die "sed failed"
+	sed -i 's:--load:-v:' "${S}"/gnome-panel/Makefile.in || die "sed failed"
 }
 
 pkg_postinst() {
@@ -55,7 +55,7 @@ pkg_postinst() {
 	if [ -e "$entries" ]; then
 		einfo "setting panel gconf defaults..."
 		GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
-		${ROOT}/usr/bin/gconftool-2 --direct --config-source \
+		"${ROOT}"/usr/bin/gconftool-2 --direct --config-source \
 			${GCONF_CONFIG_SOURCE} --load=${entries}
 	fi
 
