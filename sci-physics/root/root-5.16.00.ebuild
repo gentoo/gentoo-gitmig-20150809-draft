@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.2 2007/09/16 11:49:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.3 2007/10/17 15:31:54 bicatali Exp $
 
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 fortran
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="afs cern doc fftw kerberos ldap mysql odbc opengl postgres
-	  python ruby qt3 ssl truetype xml"
+	python ruby qt3 ssl truetype xml"
 
 DEPEND="sys-apps/shadow
 	>=sci-libs/gsl-1.8
@@ -37,7 +37,7 @@ DEPEND="sys-apps/shadow
 	odbc? ( dev-db/unixODBC )
 	truetype? ( x11-libs/libXft )"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	elog
@@ -48,8 +48,6 @@ pkg_setup() {
 	elog "Example, for PYTHIA, you would do: "
 	elog "EXTRA_CONF=\"--enable-pythia --with-pythia-libdir=/usr/$(get_libdir)\" emerge root"
 	elog
-	elog "You can also build root with icc, simply by letting CC=icc"
-
 	if use cern; then
 		FORTRAN="gfortran g77 ifc"
 		fortran_pkg_setup
@@ -158,18 +156,18 @@ src_compile() {
 		|| die "emake failed"
 
 	# is this only for windows? not quite sure.
-	make cintdlls || die "make cintdlls failed"
+	emake cintdlls || die "emake cintdlls failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	echo "LDPATH=\"/usr/$(get_libdir)/root\"" > 99root
-	doenvd 99root
+	echo "LDPATH=/usr/$(get_libdir)/root" > 99root
+	doenvd 99root || die "doenvd failed"
 
 	if use doc; then
 		einfo "Installing user's guide and ref manual"
 		insinto /usr/share/doc/${PF}
-		doins "${DISTDIR}"/Users_Guide_${DOC_PV}.pdf
-		dohtml -r ${WORKDIR}/htmldoc
+		doins "${DISTDIR}"/Users_Guide_${DOC_PV}.pdf || die "pdf install failed"
+		dohtml -r "${WORKDIR}"/htmldoc || die "html install failed"
 	fi
 }
