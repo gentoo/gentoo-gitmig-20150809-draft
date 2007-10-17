@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.20.0.ebuild,v 1.1 2007/09/19 17:35:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.20.0.ebuild,v 1.2 2007/10/17 22:19:51 eva Exp $
 
 WANT_AUTOMAKE="1.10"
 inherit eutils gnome2 autotools
@@ -65,14 +65,14 @@ pkg_setup() {
 }
 
 src_unpack(){
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# Fix .desktop file so menu item shows up
-	epatch ${FILESDIR}/${PN}-0.7.1-display-menu.patch
+	epatch "${FILESDIR}"/${PN}-0.7.1-display-menu.patch
 
 	# Make dbus actually switchable
-	epatch ${FILESDIR}/${PN}-0.6.1-dbus-switch.patch
+	epatch "${FILESDIR}"/${PN}-0.6.1-dbus-switch.patch
 
 	cp aclocal.m4 old_macros.m4
 	AT_M4DIR="." eautoreconf
