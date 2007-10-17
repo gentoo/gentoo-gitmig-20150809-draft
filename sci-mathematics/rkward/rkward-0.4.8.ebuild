@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.4.7.ebuild,v 1.3 2007/04/27 10:01:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.4.8.ebuild,v 1.1 2007/10/17 15:47:07 markusle Exp $
 
 ARTS_REQUIRED="never"
 
@@ -21,6 +21,8 @@ RDEPEND="${DEPEND} dev-lang/php"
 need-kde 3
 
 src_install() {
+	# rbackend needed directory (R-2.5.0 broken)
+	dodir /usr/$(get_libdir)/R/library
 	kde_src_install
 	# already provided by R
 	rm -f "${D}"/usr/$(get_libdir)/R/library/R.css
