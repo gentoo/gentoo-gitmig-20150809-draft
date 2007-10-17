@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.8.2-r1.ebuild,v 1.1 2007/01/03 13:42:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.8.2-r1.ebuild,v 1.2 2007/10/17 22:11:45 eva Exp $
 
 inherit gnome2 eutils autotools flag-o-matic
 
@@ -47,7 +47,7 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
-	epatch ${FILESDIR}/${PN}-0.8.2-gpg2.0.patch
+	epatch "${FILESDIR}"/${PN}-0.8.2-gpg2.0.patch
 }
 
 src_compile() {
@@ -59,6 +59,5 @@ src_install() {
 	gnome2_src_install
 
 	# remove conflicts with x11-misc/shared-mime-info
-	rm -rf ${D}/usr/share/mime/application ${D}/usr/share/mime/magic \
-		   ${D}/usr/share/mime/globs ${D}/usr/share/mime/XMLnamespaces
+	rm -rf "${D}"/usr/share/mime/{application,magic,globs,XMLnamespaces}
 }
