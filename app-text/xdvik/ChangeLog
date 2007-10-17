@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvik
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.40 2007/10/07 08:57:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.41 2007/10/17 07:43:31 aballier Exp $
+
+  17 Oct 2007; Alexis Ballier <aballier@gentoo.org> xdvik-22.84.10.ebuild:
+  adapt deps for texlive, bug #195895
 
   07 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   xdvik-22.84.10.ebuild:

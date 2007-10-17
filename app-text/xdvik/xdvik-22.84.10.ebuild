@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.14 2007/10/07 08:57:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.15 2007/10/17 07:43:31 aballier Exp $
 
 WANT_AUTOCONF=2.1
 
@@ -25,11 +25,11 @@ RDEPEND=">=media-libs/t1lib-5.0.2
 	motif? ( virtual/motif )
 	!motif? ( neXt? ( x11-libs/neXtaw )
 		!neXt? ( Xaw3d? ( x11-libs/Xaw3d ) ) )
-	cjk? ( app-text/ptex
+	cjk? ( || ( app-text/ptex app-text/texlive-core )
 		>=media-libs/freetype-2
 		>=media-fonts/kochi-substitute-20030809-r3 )
-	!cjk? ( virtual/tetex )
-	!app-text/texlive"
+	!cjk? ( virtual/latex-base )
+	!<app-text/texlive-2007"
 DEPEND="${RDEPEND}"
 
 # pkg_setup() {
