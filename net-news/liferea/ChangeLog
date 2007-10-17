@@ -1,6 +1,47 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.124 2007/09/25 21:17:44 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.125 2007/10/17 23:44:14 dang Exp $
+
+*liferea-1.4.5b (17 Oct 2007)
+
+  17 Oct 2007; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.4.3b.ebuild,
+  +liferea-1.4.5b.ebuild:
+  Bump to 1.4.5b
+  	* Fixing wrong deallocation that prevents Liferea
+  	  from working with sqlite 3.5.x (SF #1811055).
+  	* Parses Atom links with rel="related" and
+  	  rel="via" now and displays the links in the
+  	  item header. This makes so called "link blogs"
+  	  readable with Liferea (SF #1784970).
+  	* Fixes incorrect SQL join for search folders
+  	  with multiple rules one of which is a node title
+  	  match (SF #1803859)
+  	* Fixes DnD command line warnings (SF #1799006)
+  	* Fixes DnD target check to avoid dropping nodes
+  	  into read-only source sub trees.
+  	* Fixes crash when using "Select File" from the 
+  	  advanced subscribtion dialog (SF #1810825)
+  	* Workaround for loosing data on forced termination.
+  	  Liferea now reconnects sqlite every 500 write 
+  	  attempts (SF #1791068, SF #1784045).
+  	* Fixes instant updating of the item count of
+  	  search folders matching flagged items.
+  	* Adapted WebKit support to changed function
+  	  names in WebKit SVN. 
+  	* Removing deprecated "Encoding" entry from
+  	  .desktop file (Luis Rodrigo Gallardo Cruz)
+  	* Fixed warnings/errors with "gecko" as program
+  	  name. Now the correct name "liferea" is used.
+  	* Fixes assertion when cancelling feed updates
+  	  using the update monitor dialog. (reported
+  	  by caccolangrifata and Aleksei Miheev)
+  	* Fixes Debian #443751: Tries to run scripts
+  	  to retrieve favicons (reported by Daniel
+  	  Jacobowitz)
+  	* Fixes SF #1803072: Search folders broken
+  	* Fixes vertical/horizontal pane position saving
+  	  when exiting Liferea while the mainwindow is
+  	  not visible. (Keith Curtis)
 
 *liferea-1.4.3b (25 Sep 2007)
 
