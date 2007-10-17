@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/erc-5.2-r1.ebuild,v 1.1 2007/09/16 19:51:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/erc-5.2-r1.ebuild,v 1.2 2007/10/17 06:17:53 opfer Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/erc/${P}.tar.gz"
 
 LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86 ~amd64"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 SITEFILE=51${PN}-gentoo.el
