@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/addresses
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/ChangeLog,v 1.10 2007/09/10 18:47:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/ChangeLog,v 1.11 2007/10/17 18:15:16 opfer Exp $
+
+  17 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  addresses-0.4.7.ebuild:
+  stable x86, bug 195990
 
 *addresses-0.4.7 (10 Sep 2007)
 

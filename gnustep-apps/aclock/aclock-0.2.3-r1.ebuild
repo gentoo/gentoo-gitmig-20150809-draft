@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/aclock/aclock-0.2.3-r1.ebuild,v 1.1 2007/09/10 18:41:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/aclock/aclock-0.2.3-r1.ebuild,v 1.2 2007/10/17 18:14:06 opfer Exp $
 
 inherit gnustep-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.linuks.mine.nu/aclock/"
 SRC_URI="http://www.linuks.mine.nu/aclock/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 gnustep_config_script() {
 	echo "echo ' * using smooth seconds'"
