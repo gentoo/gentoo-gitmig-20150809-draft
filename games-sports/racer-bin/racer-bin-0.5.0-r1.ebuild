@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/racer-bin-0.5.0-r1.ebuild,v 1.7 2006/10/06 13:00:25 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/racer-bin-0.5.0-r1.ebuild,v 1.8 2007/10/17 18:02:28 drac Exp $
 
 inherit games
 
@@ -16,7 +16,7 @@ RESTRICT="strip"
 IUSE=""
 QA_TEXTRELS=${GAMES_PREFIX_OPT:1}/${PN}/data/plugins/motion/move.so
 
-DEPEND="media-libs/fmod"
+DEPEND="=media-libs/fmod-3*"
 RDEPEND="${DEPEND}
 	virtual/opengl
 	virtual/glu
