@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.42.ebuild,v 1.1 2007/10/17 12:29:14 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.42.ebuild,v 1.2 2007/10/17 12:38:01 hkbst Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -61,7 +61,7 @@ src_compile() {
 	emake config.lisp
 	sed -i 's,"vi","nano",g' config.lisp
 	# parallel build fails
-	emake -j1|| die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
