@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.0.ebuild,v 1.1 2007/10/16 22:19:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.0.ebuild,v 1.2 2007/10/17 14:09:03 markusle Exp $
 
 inherit fortran flag-o-matic
 
@@ -31,18 +31,15 @@ src_compile() {
 	# versions
 	append-flags -DNDEBUG
 
-	local lapack_conf
-	if use lapack; then
-		lapack_conf="--with-lapack=$(pkg-config lapack --libs)"
-	else
-		lapack_conf="--without-lapack"
-	fi
-
-	local blas_conf
+	local blas_conf="--without-blas"
+	local lapack_conf="--without-lapack"
 	if use blas; then
-		blas_conf="--with-blas=$(pkg-config blas --libs)"
-	else
-		blas_conf="--without-blas"
+		if use lapack; then
+			blas_conf="--with-blas=$(pkg-config lapack --libs)"
+			lapack_conf="--with-lapack"
+		else
+			blas_conf="--with-blas=$(pkg-config blas --libs)"
+		fi
 	fi
 
 	local fftw_conf;

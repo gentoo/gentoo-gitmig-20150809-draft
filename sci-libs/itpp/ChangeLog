@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.54 2007/10/16 22:19:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.55 2007/10/17 14:09:03 markusle Exp $
+
+  17 Oct 2007; Markus Dittrich <markusle@gentoo.org> itpp-4.0.0.ebuild:
+  Streamlined the blas/lapack configuration.
 
 *itpp-4.0.0 (16 Oct 2007)
 
