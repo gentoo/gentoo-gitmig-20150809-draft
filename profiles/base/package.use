@@ -12,3 +12,7 @@ app-editors/emacs-cvs xpm
 # 2007/10/11 - Samuli Suominen <drac@gentoo.org>
 # Replaced noamazon USE flag with amazon for bug 134493, comment #1.
 media-sound/amarok amazon
+
+# 2007/10/17 - Roy Marples <uberlord@gentoo.org>
+# zeroconf is a good idea, and we should support it by default.
+net-misc/dhcpcd zeroconf
