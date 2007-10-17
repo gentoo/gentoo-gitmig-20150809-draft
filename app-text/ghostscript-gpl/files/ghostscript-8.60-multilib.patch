@@ -1,0 +1,25 @@
+--- ghostscript-8.60-r8112/ijs/ijs-config.in.multilib	2002-01-31 19:09:46.000000000 +0000
++++ ghostscript-8.60-r8112/ijs/ijs-config.in	2007-07-10 17:46:44.000000000 +0100
+@@ -43,8 +43,7 @@
+       echo $includes
+       ;;
+     --libs)
+-      libdirs=-L@libdir@
+-      echo $libdirs -lijs
++      echo -lijs
+       ;;
+     *)
+       echo "${usage}" 1>&2
+--- ghostscript-8.60-r8112/ijs/Makefile.am.multilib	2007-07-10 18:00:36.000000000 +0100
++++ ghostscript-8.60-r8112/ijs/Makefile.am	2007-07-10 18:00:39.000000000 +0100
+@@ -34,7 +34,7 @@
+ 
+ pkgincludedir=$(includedir)/ijs
+ m4datadir = $(datadir)/aclocal
+-pkgconfigdatadir = $(prefix)/lib/pkgconfig
++pkgconfigdatadir = $(libdir)/pkgconfig
+ 
+ lib_LTLIBRARIES = libijs.la
+ 
+
+

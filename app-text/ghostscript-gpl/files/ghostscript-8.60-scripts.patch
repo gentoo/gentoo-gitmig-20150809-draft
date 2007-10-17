@@ -1,0 +1,29 @@
+--- ghostscript-8.60-r8112/lib/pv.sh.scripts	2007-07-05 11:41:52.000000000 +0100
++++ ghostscript-8.60-r8112/lib/pv.sh	2007-07-10 16:08:47.000000000 +0100
+@@ -31,7 +31,7 @@
+ GS_EXECUTABLE=gs
+ 
+ TEMPDIR=.
+-PAGE=$1
++PAGE="$1"
+ shift
+ FILE="$1"
+ shift
+@@ -44,7 +44,7 @@
+ 	tmpfile="$TEMPDIR/$FILE.$$.pv"
+ fi
+ trap "rm -rf $tmpfile" 0 1 2 15
+-#dvips -D$RESOLUTION -p $PAGE -n 1 "$FILE" "$@" -o $tmpfile
+-dvips -p $PAGE -n 1 "$FILE" "$@" -o $tmpfile
++#dvips -R -D$RESOLUTION -p $PAGE -n 1 "$FILE" "$@" -o $tmpfile
++dvips -R -p $PAGE -n 1 "$FILE" "$@" -o $tmpfile
+ $GS_EXECUTABLE $tmpfile
+ exit 0
+--- ghostscript-8.60-r8112/lib/dvipdf.scripts	2007-07-10 16:08:57.000000000 +0100
++++ ghostscript-8.60-r8112/lib/dvipdf	2007-07-10 16:09:17.000000000 +0100
+@@ -44,4 +44,4 @@
+ 
+ # We have to include the options twice because -I only takes effect if it
+ # appears before other options.
+-exec dvips $DVIPSOPTIONS -q -f "$infile" | $GS_EXECUTABLE $OPTIONS -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile="$outfile" $OPTIONS -c .setpdfwrite -
++exec dvips -R $DVIPSOPTIONS -q -f "$infile" | $GS_EXECUTABLE $OPTIONS -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile="$outfile" $OPTIONS -c .setpdfwrite -

@@ -1,6 +1,18 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.14 2007/08/15 12:30:22 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.15 2007/10/17 22:00:44 tgurr Exp $
+
+*ghostscript-gpl-8.60 (17 Oct 2007)
+
+  17 Oct 2007; Timo Gurr <tgurr@gentoo.org>
+  +files/ghostscript-8.60-fPIC.patch,
+  +files/ghostscript-8.60-ijs-krgb.patch,
+  +files/ghostscript-8.60-multilib.patch,
+  +files/ghostscript-8.60-noopt.patch,
+  +files/ghostscript-8.60-scripts.patch, +files/djvu-gs-gpl-8.60.patch,
+  +ghostscript-gpl-8.60.ebuild:
+  Add ghostscript-gpl-8.60, first release with ghostscript-esp merged. Fixes
+  bug #187502.
 
   15 Aug 2007; Ferris McCormick <fmccor@gentoo.org> ChangeLog:
   That's Bug #187280 we need the ~sparc keyword for, of course.  This cures it.

@@ -1,0 +1,49 @@
+diff -ur ghostscript-8.60-gpl.orig/gsdjvu ghostscript-8.60-gpl/gsdjvu
+--- ghostscript-8.54-gpl.orig/gsdjvu	2006-12-14 19:14:43.000000000 +0100
++++ ghostscript-8.54-gpl/gsdjvu	2006-12-14 19:23:16.000000000 +0100
+@@ -56,4 +56,4 @@
+ # Step 2 -- execute ghostscript
+ 
+ gsdir="$progdir"
+-GS_LIB="$gsdir/lib:$gsdir/fonts:$gsdir" exec "$gsdir/bin/gs" "$@"
++GS_LIB="$gsdir/lib:$gsdir/fonts:$gsdir" exec "/usr/bin/gs" "$@"
+diff -ur ghostscript-8.60-gpl.orig/src/gdevdjvu.c ghostscript-8.60-gpl/src/gdevdjvu.c
+--- ghostscript-8.60-gpl.orig/src/gdevdjvu.c	2007-05-14 06:01:45.000000000 +0200
++++ ghostscript-8.60-gpl/src/gdevdjvu.c	2007-08-03 10:18:25.353066136 +0200
+@@ -155,8 +155,8 @@
+ private void 
+ lbassertfail(const char *file, int line)
+ {
+-    fprintf(STDERR,"Internal error at %s:%d\n", file, line);
+-    fclose(STDERR);
++    //fprintf(STDERR,"Internal error at %s:%d\n", file, line);
++    //fclose(STDERR);
+     abort();
+ }
+ 
+@@ -4940,12 +4942,6 @@
+                            0, cdev->width-1, 0, cdev->height-1, comment);
+         if (code < 0) return code;
+     }
+-    /* Print message */
+-    if (! cdev->quiet) {
+-        fprintf(STDOUT, "Page %dx%d (%s )\n", 
+-                cdev->width, cdev->height, comment);
+-        fflush(STDOUT);
+-    }
+     /* Terminate */
+     runmap_free(fgmap);
+ #ifdef DEBUG
+@@ -5342,12 +5338,6 @@
+         if (code < 0) 
+             return code; 
+     }
+-    /* Print message */
+-    if (! cdev->quiet) {
+-        fprintf(STDOUT,"Page %dx%d (%s )\n",
+-                cdev->width, cdev->height, comment);
+-        fflush(STDOUT);
+-    }
+     /* Terminate */
+     runmap_free(fgmap);
+ #ifdef DEBUG
