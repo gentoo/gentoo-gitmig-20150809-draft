@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.1.6-r1.ebuild,v 1.2 2007/10/17 09:45:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.1.6-r1.ebuild,v 1.3 2007/10/17 15:52:13 uberlord Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A DHCP client"
 HOMEPAGE="http://dhcpcd.berlios.de"
@@ -21,6 +21,8 @@ PROVIDE="virtual/dhcpc"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${P}"-zeroconf.patch
 
 	# Redefine the location of ntp.drift
 	{
