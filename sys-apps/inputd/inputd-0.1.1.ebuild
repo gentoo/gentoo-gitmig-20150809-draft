@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/inputd-0.1.0.ebuild,v 1.1 2007/10/17 06:06:16 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/inputd-0.1.1.ebuild,v 1.1 2007/10/17 21:09:35 hansmi Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~ppc ~x86 ~ppc64"
 IUSE=""
 
-DEPEND=">=dev-libs/glib-2.8
+DEPEND=">=dev-libs/glib-2.10
 	>=sys-kernel/linux-headers-2.6.16"
 RDEPEND="sys-fs/udev"
 
@@ -22,13 +22,14 @@ src_install() {
 	emake DESTDIR=${D} install || die 'installation failed.'
 
 	newinitd ${FILESDIR}/inputd.init inputd
-	dodoc README doc/FAQ NEWS
+	dodoc README NEWS doc/FAQ
 
 	insinto /etc
 	doins doc/inputd.conf
 }
 
 pkg_postinst() {
-	ewarn "As the configuration syntax has slighlty changed please "
-	ewarn "check if every statement has a semicolon at its end"
+	ewarn "The configuration syntax has slightly changed between "
+	ewarn "inputd 0.0.x and 0.1.x. Please make sure every statement "
+	ewarn "ends with a semicolon (;)."
 }
