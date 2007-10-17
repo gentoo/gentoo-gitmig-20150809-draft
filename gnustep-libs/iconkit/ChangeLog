@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/iconkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/iconkit/ChangeLog,v 1.1 2007/09/10 14:20:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/iconkit/ChangeLog,v 1.2 2007/10/17 17:59:30 opfer Exp $
+
+  17 Oct 2007; Christian Faulhammer <opfer@gentoo.org> iconkit-0.2.ebuild:
+  stable x86, bug 195990
 
 *iconkit-0.2 (10 Sep 2007)
 

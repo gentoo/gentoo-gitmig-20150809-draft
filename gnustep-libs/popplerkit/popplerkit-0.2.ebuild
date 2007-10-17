@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/popplerkit-0.2.ebuild,v 1.3 2007/09/11 09:44:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/popplerkit-0.2.ebuild,v 1.4 2007/10/17 18:01:42 opfer Exp $
 
 inherit gnustep-2
 
@@ -10,7 +10,7 @@ DESCRIPTION="PopplerKit is a GNUstep/Cocoa framework for accessing and rendering
 HOMEPAGE="http://www.etoile-project.org"
 SRC_URI="http://download.gna.org/etoile/etoile-${PV}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
 
 DEPEND=">=app-text/poppler-0.4
