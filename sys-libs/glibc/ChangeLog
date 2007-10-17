@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.557 2007/10/16 14:26:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.558 2007/10/17 16:48:59 armin76 Exp $
+
+  17 Oct 2007; Raúl Porcel <armin76@gentoo.org> glibc-2.6.1.ebuild:
+  alpha/ia64/sparc stable wrt #195427
 
   16 Oct 2007; Christoph Mende <angelos@gentoo.org> glibc-2.6.1.ebuild:
   Stable on amd64 wrt bug #195427
