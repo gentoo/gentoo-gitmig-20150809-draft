@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/mkl
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.18 2007/10/15 16:07:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.19 2007/10/17 15:06:32 bicatali Exp $
+
+  17 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> files/blas.pc.in,
+  files/cblas.pc.in, files/lapack.pc.in, mkl-9.1.023.ebuild:
+  Cleaned-up linking and fixed tests thanks to Adam Piątyszek
+  <ediap@et.put.poznan.pl>. Set consistency among eselect profiles.
 
   15 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> files/cblas.pc.in,
   mkl-9.1.023.ebuild:

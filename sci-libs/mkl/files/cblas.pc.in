@@ -7,5 +7,6 @@ Name: cblas
 Description: MKL implementations of the C Basic Linear Algebra Subroutines
 Version: @PV@
 URL: http://developer.intel.com/software/products/mkl/
-Libs: -L${libdir} -lcblas @EXTLIBS@
+Libs: @GFORTRANLIBS@ -L${libdir} -lcblas
+Libs.private: @EXTLIBS@
 Cflags: -I${includedir}

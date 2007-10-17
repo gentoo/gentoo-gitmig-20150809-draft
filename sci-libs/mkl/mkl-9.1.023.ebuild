@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.3 2007/10/15 16:07:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.4 2007/10/17 15:06:32 bicatali Exp $
 
 inherit eutils versionator toolchain-funcs fortran
 
@@ -162,7 +162,7 @@ src_compile() {
 			einfo "Compiling fftw static lib wrappers for ${p}"
 			for x in "${S}"/interfaces/fft*; do
 				cd "${x}"
-				emake \
+				emake -j1 \
 					F=${MKL_CC} \
 					MKL_SUBVERS=${p} \
 					lib${MKL_ARCH} \
@@ -175,8 +175,8 @@ src_compile() {
 src_test() {
 	local usegnu
 	[[ ${FORTRANC} = g* ]] && usegnu=gnu
-	# restrict tests for blas and lapack for now.
-	# testing fftw requires checking many C and fortran compilers
+	# restrict tests for blas and cblas for now.
+	# for t in blas cblas fft*; do
 	for t in blas lapack; do
 		cd "${S}"/tests/${t}
 		for p in ${MKL_PROF}; do
@@ -202,7 +202,7 @@ mkl_install_lib() {
 	[[ "${1}" == "serial" ]] && extlibs=""
 
 	[[ "${FORTRANC}" == "gfortran" ]] && \
-		extlibs="${extlibs} -L${libdir} -lmkl_gfortran"
+		gfortranlibs="-L${libdir} -lmkl_gfortran"
 
 	cp -pPR "${S}"/${proflib} "${D}"${MKL_DIR}
 
@@ -221,6 +221,7 @@ EOF
 			-e "s:@INCDIR@:${MKL_DIR}/include:" \
 			-e "s:@PV@:${PV}:" \
 			-e "s:@EXTLIBS@:${extlibs}:g" \
+			-e "s:@GFORTRANLIBS@:${gfortranlibs}:g" \
 			"${FILESDIR}"/${x}.pc.in > ${x}.pc || die "sed ${x}.pc failed"
 		insinto ${libdir}
 		doins ${x}.pc
@@ -235,6 +236,7 @@ EOF
 	sed -e "s:@LIBDIR@:$(get_libdir):" \
 		-e "s:@PV@:${PV}:" \
 		-e "s:@EXTLIBS@:${extlibs}:g" \
+		-e "s:@GFORTRANLIBS@:${gfortranlibs}:g" \
 		"${FILESDIR}"/lapack.pc.in > lapack.pc || die "sed lapack.pc failed"
 	insinto ${libdir}
 	doins lapack.pc
@@ -290,14 +292,22 @@ pkg_postinst() {
 		ext=serial
 	fi
 	ESELECT_PROF="${PN}-${FORTRANC}-${ext}"
+	# if blas profile is mkl, set lapack and cblas profiles as mkl
+	local blas_lib=$(eselect blas show | cut -d' ' -f2)
 	for p in blas cblas lapack; do
 		local current_lib=$(eselect ${p} show | cut -d' ' -f2)
-		if [[ ${current_lib} == ${ESELECT_PROF} || -z ${current_lib} ]]; then
+		if [[ -z ${current_lib} || \
+			${current_lib} == ${ESELECT_PROF} || \
+			${blas_lib} == ${ESELECT_PROF} ]]; then
 			# work around eselect bug #189942
 			local configfile="${ROOT}"/etc/env.d/${p}/$(get_libdir)/config
 			[[ -e ${configfile} ]] && rm -f ${configfile}
 			eselect ${p} set ${ESELECT_PROF}
 			elog "${p} has been eselected to ${ESELECT_PROF}"
+			if [[ ${current_lib} != ${blas_lib} ]]; then
+				eselect blas set ${ESELECT_PROF}
+				elog "${p} has been eselected to ${ESELECT_PROF} for consistency"
+			fi
 		else
 			elog "Current eselected ${p} is ${current_lib}"
 			elog "To use ${p} ${ESELECT_PROF} implementation, you have to issue (as root):"
