@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/fmod
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.22 2007/02/11 02:41:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.23 2007/10/17 14:52:59 drac Exp $
+
+*fmod-4.08.05 (17 Oct 2007)
+
+  17 Oct 2007; Samuli Suominen <drac@gentoo.org> +fmod-4.08.05.ebuild:
+  Version bump to new slot for bug 121506.
 
 *fmod-3.75 (11 Feb 2007)
 
