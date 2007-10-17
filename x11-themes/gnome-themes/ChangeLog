@@ -1,6 +1,16 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.171 2007/10/02 01:47:29 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.172 2007/10/17 19:57:51 eva Exp $
+
+  17 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-themes-2.16.3.ebuild:
+  fix minor QA warning
+
+*gnome-themes-2.20.1 (17 Oct 2007)
+
+  17 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-themes-2.20.1.ebuild:
+  bump to 2.20.1
 
 *gnome-themes-2.20.0 (02 Oct 2007)
 
