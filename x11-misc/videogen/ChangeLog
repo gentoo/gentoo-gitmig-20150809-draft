@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/videogen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/ChangeLog,v 1.12 2007/09/08 21:08:05 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/ChangeLog,v 1.13 2007/10/17 06:48:14 corsair Exp $
+
+  17 Oct 2007; Markus Rothe <corsair@gentoo.org> videogen-0.32.ebuild:
+  Stable on ppc64
 
   08 Sep 2007; Joseph Jezak <josejx@gentoo.org> videogen-0.32.ebuild:
   Marked ppc stable for bug #191615.  Marked ~ppc64 too.
