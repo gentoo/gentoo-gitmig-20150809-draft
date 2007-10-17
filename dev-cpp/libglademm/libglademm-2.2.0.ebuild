@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.2.0.ebuild,v 1.12 2006/10/21 10:55:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.2.0.ebuild,v 1.13 2007/10/17 23:31:57 eva Exp $
 
 inherit gnome2 eutils
 
@@ -23,7 +23,7 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 DOCS="AUTHORS COPYING ChangeLog NEWS README TODO INSTALL"
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/gcc34.patch
-	epatch ${FILESDIR}/${P}-configure.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/gcc34.patch
+	epatch "${FILESDIR}"/${P}-configure.patch
 }
