@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3089 2007/10/17 02:35:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3090 2007/10/17 02:40:44 nerdboy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1926,7 +1926,7 @@ sys-cluster/mpich2:mpe-sdk - Include additional SDK support, jar files
 sys-cluster/mpich2:romio - Enable romio, a high-performance portable MPI-IO implementation
 sys-cluster/ocfs:aio - Add aio support
 sys-cluster/openmpi:pbs - Add support for the Portable Batch System (PBS)
-sys-cluster/pvfs2/pvfs2:server - Enable compilation of server code
+sys-cluster/pvfs2:server - Enable compilation of server code
 sys-cluster/torque:server - Enable compilation of server
 sys-cluster/vzctl:logrotate - Enable logrotate file installation
 sys-devel/binutils-hppa64:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
