@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dark-oberon/dark-oberon-1.0.2_rc1.ebuild,v 1.1 2007/01/16 16:21:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dark-oberon/dark-oberon-1.0.2_rc1.ebuild,v 1.2 2007/10/17 18:11:05 drac Exp $
 
 inherit eutils games
 
@@ -19,7 +19,7 @@ IUSE="fmod"
 DEPEND="virtual/opengl
 	virtual/glu
 	media-libs/glfw
-	fmod? ( media-libs/fmod )"
+	fmod? ( =media-libs/fmod-3* )"
 
 S="${WORKDIR}/${MY_P}"
 
