@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.734 2007/10/15 17:39:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.735 2007/10/17 07:56:53 aballier Exp $
+
+  17 Oct 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
+  add texlive local use flags
 
   15 Oct 2007; Ulrich Mueller <ulm@gentoo.org> updates/3Q-2007,
   +updates/4Q-2007:
