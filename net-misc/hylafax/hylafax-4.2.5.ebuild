@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.5.ebuild,v 1.9 2007/04/28 22:30:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.5.ebuild,v 1.10 2007/10/17 21:19:36 nerdboy Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
 
@@ -33,15 +33,21 @@ export CONFIG_PROTECT="${CONFIG_PROTECT} /var/spool/fax/etc"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-tiff_version.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-tiff_version.patch"
 }
 
 src_compile() {
-	if use faxonly; then
-		if use mgetty; then
-			eerror "You cannot set both faxonly and mgetty, please remove one." && die "invalid use flags"
+	if use mgetty; then
+		if use faxonly; then
+			eerror "You cannot set both faxonly and mgetty, \
+			    please remove one." && die "invalid use flags"
 		fi
+#		# proposed hylafax change for bug #195467
+#		if ! built_with_use net-dialup/mgetty nofax; then
+#			eerror "You need to rebuild the mgetty package with \
+#			    USE=nofax." && die "rebuild mgetty first"
+#		fi
 	fi
 
 	# Hylafax doesn't play nice with gcc-3.4 and SSP (bug #74457)
@@ -59,7 +65,7 @@ src_compile() {
 		--with-DIR_MAN=/usr/share/man
 		--with-DIR_SPOOL=/var/spool/fax
 		--with-DIR_HTML=/usr/share/doc/${P}/html
-		--with-DIR_CGI=${WORKDIR}
+		--with-DIR_CGI="${WORKDIR}"
 		--with-HTML=yes
 		--with-PATH_DPSRIP=/var/spool/fax/bin/ps2fax
 		--with-PATH_IMPRIP=\"\"
@@ -70,6 +76,7 @@ src_compile() {
 
 	if use mgetty; then
 		my_conf="${my_conf} \
+			--with-PATH_GETTY=/sbin/mgetty \
 			--with-PATH_EGETTY=/sbin/mgetty \
 			--with-PATH_VGETTY=/usr/sbin/vgetty"
 	else
@@ -118,10 +125,10 @@ src_install() {
 	keepdir /var/spool/fax/{status,sendq,log,info,doneq,docq,dev}
 
 	einfo "Adding env.d entry for Hylafax"
-	newenvd ${FILESDIR}/99hylafax-4.2 99hylafax
+	newenvd "${FILESDIR}/99hylafax-4.2" 99hylafax
 
 	einfo "Adding init.d entry for Hylafax"
-	newinitd ${FILESDIR}/hylafax-4.2 hylafax
+	newinitd "${FILESDIR}/hylafax-4.2" hylafax
 
 	pamd_mimic_system hylafax auth account session
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.1.ebuild,v 1.6 2007/08/24 03:42:26 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.1.ebuild,v 1.7 2007/10/17 21:19:36 nerdboy Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
 
@@ -51,7 +51,7 @@ src_compile() {
 	[ $(gcc-major-version) -eq 3 ] && [ $(gcc-minor-version) -ge 4 ] \
 		&& filter-flags -fstack-protector -fstack-protector-all
 
-	epatch ${FILESDIR}/gentoo-gcc-version.patch || die "epatch failed"
+	epatch "${FILESDIR}/gentoo-gcc-version.patch" || die "epatch failed"
 
 	local my_conf="
 		--with-DIR_BIN=/usr/bin
@@ -63,7 +63,7 @@ src_compile() {
 		--with-DIR_MAN=/usr/share/man
 		--with-DIR_SPOOL=/var/spool/fax
 		--with-DIR_HTML=/usr/share/doc/${P}/html
-		--with-DIR_CGI=${WORKDIR}
+		--with-DIR_CGI="${WORKDIR}"
 		--with-PATH_DPSRIP=/var/spool/fax/bin/ps2fax
 		--with-PATH_IMPRIP=\"\"
 		--with-SYSVINIT=no
@@ -80,6 +80,7 @@ src_compile() {
 
 	if use mgetty; then
 		my_conf="${my_conf} \
+			--with-PATH_GETTY=/sbin/mgetty \
 			--with-PATH_EGETTY=/sbin/mgetty \
 			--with-PATH_VGETTY=/usr/sbin/vgetty"
 	else
@@ -134,10 +135,10 @@ src_install() {
 	    /var/spool/fax/bin/{faxrcvd,pollrcvd} || die "dosed failed"
 
 	einfo "Adding env.d entry for Hylafax"
-	newenvd ${FILESDIR}/99hylafax-4.2 99hylafax
+	newenvd "${FILESDIR}/99hylafax-4.2" 99hylafax
 
 	einfo "Adding init.d entry for Hylafax"
-	newinitd ${FILESDIR}/hylafax-4.2 hylafax
+	newinitd "${FILESDIR}/hylafax-4.2" hylafax
 
 	use pam && pamd_mimic_system hylafax auth account session
 
