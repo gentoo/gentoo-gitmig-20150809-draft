@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.08.05.ebuild,v 1.1 2007/10/17 14:52:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.08.05.ebuild,v 1.2 2007/10/17 18:24:20 drac Exp $
 
 inherit multilib versionator
 
@@ -37,7 +37,11 @@ src_compile() {
 src_install() {
 	dolib {.,fmoddesignerapi}/api/lib/*
 
-	dosym libfmodevent.so /usr/$(get_libdir)/libfmodevent.so.${PV}
+	if use amd64; then
+		dosym libfmodevent64.so /usr/$(get_libdir)/libfmodevent64.so.${PV}
+	else
+		dosym libfmodevent.so /usr/$(get_libdir)/libfmodevent.so.${PV}
+	fi
 
 	insinto /usr/include/fmodex
 	doins {.,fmoddesignerapi}/api/inc/*
