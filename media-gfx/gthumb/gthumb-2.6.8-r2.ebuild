@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.6.8-r2.ebuild,v 1.5 2006/10/21 18:35:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.6.8-r2.ebuild,v 1.6 2007/10/17 23:09:08 eva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -46,13 +46,13 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# fix for bug #112129, backported from CVS upstream
-	epatch ${FILESDIR}/gthumb-2.6.8-Makefile.patch
+	epatch "${FILESDIR}"/gthumb-2.6.8-Makefile.patch
 
 	# Add configure options (Bug #103365), patch merged upstream
-	epatch ${FILESDIR}/gthumb-2.6.8-options.patch
+	epatch "${FILESDIR}"/gthumb-2.6.8-options.patch
 
 	gnome2_omf_fix doc/*/Makefile.in
 
