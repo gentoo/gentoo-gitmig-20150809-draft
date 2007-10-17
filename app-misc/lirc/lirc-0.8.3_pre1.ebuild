@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre1.ebuild,v 1.2 2007/10/14 10:16:47 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre1.ebuild,v 1.3 2007/10/17 20:48:26 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -146,6 +146,8 @@ pkg_setup() {
 
 		if use lirc_devices_imon_pad2keys; then
 			add_device imon_pad "device imon_pad (with converting pad input to keyspresses)"
+			ewarn "You need to set the option pad2keys_active=1"
+			ewarn "when loading the module lirc_imon"
 		fi
 
 		if use lirc_devices_xboxusb; then
@@ -233,7 +235,7 @@ src_unpack() {
 	edos2unix contrib/lirc.rules
 
 	# Apply patches needed for some special device-types
-	use lirc_devices_imon_pad2keys && epatch "${FILESDIR}"/${PN}-0.8.1-imon-pad2keys.patch
+	epatch "${FILESDIR}"/${P}-imon-pad2keys.patch
 	use lirc_devices_remote_wonder_plus && epatch "${FILESDIR}"/lirc-0.8.3_pre1-remotewonderplus.patch
 
 	# remove parallel driver on SMP systems
