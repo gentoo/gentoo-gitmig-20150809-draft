@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.6.3.ebuild,v 1.1 2007/10/05 14:03:12 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.6.3.ebuild,v 1.2 2007/10/17 02:40:58 nerdboy Exp $
 
 inherit linux-mod autotools toolchain-funcs
 
@@ -16,7 +16,7 @@ DEPEND="${RDEPEND}
 		virtual/linux-sources"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 S="${WORKDIR}/${MY_P}"
 
 #Without this, the make kmod_install in src_install() would fail.

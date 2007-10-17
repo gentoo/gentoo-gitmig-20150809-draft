@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-1.5.1.ebuild,v 1.2 2007/07/14 22:18:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-1.5.1.ebuild,v 1.3 2007/10/17 02:40:58 nerdboy Exp $
 
 inherit linux-mod
 
@@ -47,7 +47,7 @@ src_install() {
 	# this is LARGE (~5mb)
 	if use doc; then
 		docdir="/usr/share/doc/${PF}/"
-		cp -pPR ${S}/doc ${D}${docdir}
-		rm -rf ${D}${docdir}/man
+		cp -pPR "${S}/doc" "${D}${docdir}"
+		rm -rf "${D}${docdir}/man"
 	fi
 }
