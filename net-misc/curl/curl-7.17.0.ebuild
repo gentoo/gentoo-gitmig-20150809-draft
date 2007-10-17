@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.17.0.ebuild,v 1.3 2007/10/01 15:09:51 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.17.0.ebuild,v 1.4 2007/10/17 20:32:13 dragonheart Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -18,14 +18,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="ssl ipv6 ldap ares gnutls nss idn kerberos test"
 
-RDEPEND="gnutls? ( net-libs/gnutls )
-	nss? ( !gnutls? ( dev-libs/nss ) )
-	ssl? ( !gnutls? ( !nss? ( dev-libs/openssl ) ) )
+RDEPEND="gnutls? ( net-libs/gnutls app-misc/ca-certificates )
+	nss? ( !gnutls? ( dev-libs/nss app-misc/ca-certificates ) )
+	ssl? ( !gnutls? ( !nss? ( dev-libs/openssl app-misc/ca-certificates ) ) )
 	ldap? ( net-nds/openldap )
 	idn? ( net-dns/libidn )
 	ares? ( >=net-dns/c-ares-1.4.0 )
-	kerberos? ( virtual/krb5 )
-	app-misc/ca-certificates"
+	kerberos? ( virtual/krb5 )"
 #	libssh2? ( >=net-libs/libssh2-0.16 )"
 
 # net-libs/libssh2 (masked) --with-libssh2
