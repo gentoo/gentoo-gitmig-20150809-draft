@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.4a-r1.ebuild,v 1.6 2007/07/13 07:15:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.4a-r1.ebuild,v 1.7 2007/10/18 20:30:00 calchan Exp $
 
 inherit eutils
 
@@ -47,8 +47,8 @@ RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	# avoid collisions with cups-1.2 compat symlinks
-	if [ -e ${ROOT}/usr/lib/cups/backend/hp ] && [ -e ${ROOT}/usr/libexec/cups/backend/hp ]; then
-		rm -f ${ROOT}/usr/libexec/cups/backend/hp{,fax};
+	if [ -e "${ROOT}"/usr/lib/cups/backend/hp ] && [ -e "${ROOT}"/usr/libexec/cups/backend/hp ]; then
+		rm -f "${ROOT}"/usr/libexec/cups/backend/hp{,fax};
 	fi
 }
 
@@ -107,7 +107,7 @@ src_install() {
 		rm -f "${D}"/usr/lib/menu/hplip
 	fi
 
-	rm -rf ${D}/$(cups-config --serverbin)/filter ${D}/usr/bin/foomatic-rip
+	rm -rf "${D}"/$(cups-config --serverbin)/filter "${D}"/usr/bin/foomatic-rip
 
 	if use foomaticdb ; then
 		cd ../foomatic-db-hpijs-${DB_V}
@@ -115,14 +115,14 @@ src_install() {
 	fi
 
 	# Fix a symlink collision, see bug #172341
-	rm -f ${D}/usr/share/cups/model/foomatic-ppds
+	rm -f "${D}"/usr/share/cups/model/foomatic-ppds
 }
 
 pkg_preinst() {
 	if use scanner; then
 		insinto /etc/sane.d
 		[ -e /etc/sane.d/dll.conf ] && cp /etc/sane.d/dll.conf .
-		[ -e ${ROOT}/etc/sane.d/dll.conf ] && cp ${ROOT}/etc/sane.d/dll.conf .
+		[ -e "${ROOT}"/etc/sane.d/dll.conf ] && cp "${ROOT}"/etc/sane.d/dll.conf .
 		grep -q hpaio dll.conf || echo hpaio >> dll.conf
 		doins dll.conf
 	fi

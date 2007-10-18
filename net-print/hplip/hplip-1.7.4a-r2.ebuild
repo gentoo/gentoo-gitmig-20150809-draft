@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.6.10.ebuild,v 1.10 2007/07/13 07:15:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.4a-r2.ebuild,v 1.1 2007/10/18 20:30:00 calchan Exp $
 
 inherit eutils
 
@@ -15,33 +15,40 @@ SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
-IUSE="cups foomaticdb snmp X qt3 ppds scanner"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+IUSE="cups fax foomaticdb parport ppds qt3 scanner snmp X"
 
-DEPEND=">=dev-lang/python-2.2.0
-	snmp? ( >=net-analyzer/net-snmp-5.0.9 )
-	!net-print/hpijs
+DEPEND="!net-print/hpijs
 	!net-print/hpoj
+	dev-libs/openssl
 	virtual/ghostscript
+	>=media-libs/jpeg-6b
+	net-print/cups
+	dev-libs/libusb
+	>=dev-lang/python-2.2
+	net-print/foomatic-filters
+	fax? ( >=dev-lang/python-2.3
+		dev-python/reportlab )
+	foomaticdb? ( net-print/foomatic-db-engine )
+	snmp? ( net-analyzer/net-snmp )
+	qt3? ( >=dev-python/PyQt-3.11 =x11-libs/qt-3* )
 	scanner? (
 		>=media-gfx/sane-backends-1.0.9
-		|| (
-			X? ( >=media-gfx/xsane-0.89 )
+		X? ( || (
+			>=media-gfx/xsane-0.89
 			>=media-gfx/sane-frontends-1.0.9
-		)
-	)
-	qt3? ( >=dev-python/PyQt-3.11 =x11-libs/qt-3* )
-	>=dev-libs/libusb-0.1.10a
-	sys-apps/hotplug-base
-	net-print/cups
-	foomaticdb? ( net-print/foomatic-db-engine )
-	>=net-print/foomatic-filters-3.0.2"
+			) )
+		!X? ( || (
+			>=media-gfx/sane-frontends-1.0.9
+			>=media-gfx/xsane-0.89
+			) )
+	)"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	# avoid collisions with cups-1.2 compat symlinks
-	if [ -e ${ROOT}/usr/lib/cups/backend/hp ] && [ -e ${ROOT}/usr/libexec/cups/backend/hp ]; then
-		rm -f ${ROOT}/usr/libexec/cups/backend/hp{,fax};
+	if [ -e "${ROOT}"/usr/lib/cups/backend/hp ] && [ -e "${ROOT}"/usr/libexec/cups/backend/hp ]; then
+		rm -f "${ROOT}"/usr/libexec/cups/backend/hp{,fax};
 	fi
 }
 
@@ -49,15 +56,22 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	# Fix bug #195565
+	epatch "${FILESDIR}"/${P}-subprocess_replacement.patch
+
 	# bug 98428
 	sed -i -e "s:/usr/bin/env python:/usr/bin/python:g" \
 		hpssd.py
 }
 src_compile() {
 	econf \
-		$(use_enable snmp network-build) \
 		$(use_enable cups cups-install) \
+		$(use_enable fax fax-build) \
+		$(use_enable parport pp-build) \
 		$(use_enable ppds foomatic-install) \
+		$(use_enable qt3 gui-build) \
+		$(use_enable scanner scan-build) \
+		$(use_enable snmp network-build) \
 		|| die "econf failed"
 	emake || die "emake failed"
 
@@ -82,42 +96,43 @@ src_install() {
 
 	if use scanner; then
 		dodir /usr/$(get_libdir)/sane
-		dosym /usr/$(get_libdir)/libsane-hpaio.la /usr/$(get_libdir)/sane/libsane-hpaio.la
-		dosym /usr/$(get_libdir)/libsane-hpaio.so /usr/$(get_libdir)/sane/libsane-hpaio.so
-		dosym /usr/$(get_libdir)/libsane-hpaio.so.1 /usr/$(get_libdir)/sane/libsane-hpaio.so.1
-		dosym /usr/$(get_libdir)/libsane-hpaio.so.1.0.0 /usr/$(get_libdir)/sane/libsane-hpaio.so.1.0.0
+		for i in libsane-hpaio.{la,so{,.1{,.0.0}}}; do
+			dosym /usr/$(get_libdir)/${i} /usr/$(get_libdir)/sane/${i}; done
 	else
-		rm -f "${D}"/usr/$(get_libdir)/libsane-hpaio.la
-		rm -f "${D}"/usr/$(get_libdir)/libsane-hpaio.so
-		rm -f "${D}"/usr/$(get_libdir)/libsane-hpaio.so.1
-		rm -f "${D}"/usr/$(get_libdir)/libsane-hpaio.so.1.0.0
+		rm -f "${D}"/usr/$(get_libdir)/libsane-hpaio.{la,so{,.1{,.0.0}}}
 		rm -f "${D}"/etc/sane.d/dll.conf
 	fi
 
 	# bug 106035
 	if ! use qt3 ; then
-		rm -f "${D}"/usr/bin/hp-print
-		rm -f "${D}"/usr/bin/hp-toolbox
-		rm -f "${D}"/usr/share/hplip/print
-		rm -f "${D}"/usr/share/hplip/toolbox
+		rm -f "${D}"/usr/{bin/hp-,share/hplip/}{print,toolbox}
 		rm -f "${D}"/usr/share/applications/hplip.desktop
 		rm -f "${D}"/usr/lib/menu/hplip
 	fi
 
-	rm -rf ${D}/$(cups-config --serverbin)/filter ${D}/usr/bin/foomatic-rip
+	rm -rf "${D}"/$(cups-config --serverbin)/filter "${D}"/usr/bin/foomatic-rip
 
 	if use foomaticdb ; then
 		cd ../foomatic-db-hpijs-${DB_V}
 		emake DESTDIR="${D}" install || die "emake install failed"
 	fi
+
+	# Fix a symlink collision, see bug #172341
+	rm -f "${D}"/usr/share/cups/model/foomatic-ppds
 }
 
 pkg_preinst() {
 	if use scanner; then
 		insinto /etc/sane.d
 		[ -e /etc/sane.d/dll.conf ] && cp /etc/sane.d/dll.conf .
-		[ -e ${ROOT}/etc/sane.d/dll.conf ] && cp ${ROOT}/etc/sane.d/dll.conf .
+		[ -e "${ROOT}"/etc/sane.d/dll.conf ] && cp "${ROOT}"/etc/sane.d/dll.conf .
 		grep -q hpaio dll.conf || echo hpaio >> dll.conf
 		doins dll.conf
+	fi
+}
+
+pkg_postinst() {
+	if ! use qt3 ; then
+		elog "You need to enable the qt3 useflag to use the GUI"
 	fi
 }

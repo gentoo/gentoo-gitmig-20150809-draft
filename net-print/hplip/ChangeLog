@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.79 2007/10/18 13:08:21 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.80 2007/10/18 20:30:00 calchan Exp $
+
+*hplip-1.7.4a-r2 (18 Oct 2007)
+
+  18 Oct 2007; Denis Dupeyron <calchan@gentoo.org>
+  +files/hplip-1.7.4a-subprocess_replacement.patch, -hplip-1.6.10.ebuild,
+  +hplip-1.7.4a-r2.ebuild:
+  Fixed bug #195565 for old 1.x branch. Fixed quoting.
 
 *hplip-2.7.9-r1 (18 Oct 2007)
 
