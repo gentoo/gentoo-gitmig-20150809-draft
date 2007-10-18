@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/kpowersave
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/ChangeLog,v 1.17 2007/09/30 19:17:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/ChangeLog,v 1.18 2007/10/18 16:14:09 genstef Exp $
+
+  18 Oct 2007; Stefan Schweizer <genstef@gentoo.org>
+  kpowersave-0.7.3.ebuild:
+  add kdelibs depend thanks flameeyes in bug 196266
 
 *kpowersave-0.7.3 (30 Sep 2007)
 
