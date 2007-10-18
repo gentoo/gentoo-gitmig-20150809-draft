@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/obby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.19 2007/10/17 00:02:58 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.20 2007/10/18 17:16:42 angelos Exp $
+
+  18 Oct 2007; Christoph Mende <angelos@gentoo.org> obby-0.4.4.ebuild:
+  Stable on amd64 wrt bug #196034
 
   16 Oct 2007; Dawid Węgliński <cla@gentoo.org> obby-0.4.4.ebuild:
   Stable on x86 (bug #196034)
