@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.149 2007/10/18 02:39:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.150 2007/10/18 11:48:45 fmccor Exp $
+
+  18 Oct 2007; Ferris McCormick <fmccor@gentoo.org> opera-9.24.ebuild:
+  Sparc stable --- Security Bug #196164 --- no problems for me.
 
   18 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_rc1589.ebuild,
   opera-9.50_rc1600.ebuild, opera-9.50_rc1629.ebuild,
