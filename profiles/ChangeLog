@@ -1,6 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.742 2007/10/18 22:39:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.743 2007/10/18 23:09:10 eva Exp $
+
+  18 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  default-bsd/fbsd/6.2/x86/package.use.mask,
+  default-linux/alpha/no-nptl/2.4/package.use.mask,
+  default-linux/arm/package.use.mask, default-linux/mips/package.use.mask,
+  default-linux/ppc/ppc64/package.use.mask,
+  +default-linux/sh/package.use.mask,
+  default-linux/x86/no-nptl/2.4/package.use.mask:
+  fix package.use.mask so that repoman stop complaining on gnome-base/gdm
 
   18 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
   default-linux/ppc64/package.use.mask:
