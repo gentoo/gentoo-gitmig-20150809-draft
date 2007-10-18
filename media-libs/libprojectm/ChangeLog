@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libprojectm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.11 2007/06/15 22:34:49 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.12 2007/10/18 18:50:58 armin76 Exp $
+
+  18 Oct 2007; Raúl Porcel <armin76@gentoo.org> libprojectm-0.99-r1.ebuild:
+  alpha stable
 
   15 Jun 2007; Joshua Kinard <kumba@gentoo.org> libprojectm-0.99-r1.ebuild:
   Stable on mips.
