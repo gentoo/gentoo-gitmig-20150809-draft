@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.49 2007/10/14 15:50:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.50 2007/10/18 14:36:48 fmccor Exp $
+
+  18 Oct 2007; Ferris McCormick <fmccor@gentoo.org> mysql-ruby-2.7.4.ebuild:
+  Sparc stable --- Bug #195009 --- working for me for over a month.
 
   14 Oct 2007; Markus Rothe <corsair@gentoo.org> mysql-ruby-2.7.4.ebuild:
   Stable on ppc64; bug #195009
