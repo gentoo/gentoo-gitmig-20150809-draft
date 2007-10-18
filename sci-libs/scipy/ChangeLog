@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.24 2007/10/05 14:01:38 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.25 2007/10/18 14:17:10 markusle Exp $
+
+*scipy-0.6.0-r2 (18 Oct 2007)
+
+  18 Oct 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/scipy-0.6.0-clapack-symbol-fix.patch, 
+  +scipy-0.6.0-r2.ebuild:
+  Added new revision to fix undefined lapack symbols (see bug #195619).
 
 *scipy-0.6.0-r1 (05 Oct 2007)
 
