@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/cfortran
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.2 2007/08/28 12:49:10 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.3 2007/10/18 18:28:05 fmccor Exp $
+
+  18 Oct 2007; Ferris McCormick <fmccor@gentoo.org> cfortran-4.4.ebuild:
+  Sparc stable --- Required for Bug #196304
 
   28 Aug 2007; Ferris McCormick <fmccor@gentoo.org> cfortran-4.4.ebuild:
   Add ~sparc keyword (headers only, test works, and needed for general testing).
