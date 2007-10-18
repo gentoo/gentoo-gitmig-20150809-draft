@@ -1,0 +1,17 @@
+diff -Nru xfce4-fsguard-plugin-0.3.99.1.orig/panel-plugin/fsguard.c xfce4-fsguard-plugin-0.3.99.1/panel-plugin/fsguard.c
+--- xfce4-fsguard-plugin-0.3.99.1.orig/panel-plugin/fsguard.c	2007-10-18 15:10:26.195004507 +0200
++++ xfce4-fsguard-plugin-0.3.99.1/panel-plugin/fsguard.c	2007-10-18 15:10:50.622231865 +0200
+@@ -427,11 +427,12 @@
+     GtkOrientation orientation = xfce_panel_plugin_get_orientation (plugin);
+     if (orientation == GTK_ORIENTATION_HORIZONTAL) {
+         gtk_widget_set_size_request (GTK_WIDGET(fsguard->progress_bar), BORDER, -1);
++	gtk_widget_set_size_request (GTK_WIDGET(plugin), -1, size);
+     } else {
+         gtk_widget_set_size_request (GTK_WIDGET(fsguard->progress_bar), -1, BORDER);
++	gtk_widget_set_size_request (GTK_WIDGET(plugin), size, -1);
+     }
+ 
+-    gtk_widget_set_size_request (GTK_WIDGET(plugin), -1, -1);
+     fsguard_refresh_icon (fsguard);
+ 
+     return TRUE;
