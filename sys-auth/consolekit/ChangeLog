@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.23 2007/10/15 14:01:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.24 2007/10/18 15:43:51 uberlord Exp $
+
+  18 Oct 2007; Roy Marples <uberlord@gentoo.org> consolekit-0.2.3.ebuild:
+  Keyworded ~x86-fbsd
 
   15 Oct 2007; Doug Goldstein <cardoe@gentoo.org> consolekit-0.2.1.ebuild,
   consolekit-0.2.3.ebuild:
