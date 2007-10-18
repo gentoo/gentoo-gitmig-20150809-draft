@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.65 2007/09/03 17:28:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.66 2007/10/18 10:57:31 caleb Exp $
+
+*libevent-1.3e (18 Oct 2007)
+
+  18 Oct 2007; Caleb Tennis <caleb@gentoo.org> +libevent-1.3e.ebuild:
+  version bump
 
 *libevent-1.3d (03 Sep 2007)
 
