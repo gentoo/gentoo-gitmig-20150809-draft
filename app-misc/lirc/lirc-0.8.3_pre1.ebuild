@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre1.ebuild,v 1.3 2007/10/17 20:48:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3_pre1.ebuild,v 1.4 2007/10/18 15:04:55 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -225,6 +225,9 @@ pkg_setup() {
 	elog  "Setting default lirc-device to ${LIRC_DRIVER_DEVICE}"
 
 	filter-flags -Wl,-O1
+
+	# force non-parallel make, Bug 196134
+	MAKEOPTS="${MAKEOPTS} -j1"
 }
 
 src_unpack() {

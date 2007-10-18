@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.157 2007/10/17 20:48:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.158 2007/10/18 15:04:55 zzam Exp $
+
+  18 Oct 2007; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.3_pre1.ebuild:
+  Force non-parallel make. Bug #196134.
 
   17 Oct 2007; Matthias Schwarzott <zzam@gentoo.org>
   +files/lirc-0.8.3_pre1-imon-pad2keys.patch, lirc-0.8.3_pre1.ebuild:
