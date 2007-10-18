@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.0.1.ebuild,v 1.1 2007/10/17 12:06:50 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.0.1.ebuild,v 1.2 2007/10/18 11:56:37 remi Exp $
 
 inherit gnome2 eutils autotools
 
@@ -14,7 +14,8 @@ IUSE="doc"
 
 RDEPEND=">=x11-libs/gtk+-2.8
 	>=dev-libs/libxml2-2.5
-	>=dev-libs/glib-2"
+	>=dev-libs/glib-2
+	>=dev-libs/libpcre-7.4"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
@@ -25,5 +26,5 @@ DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README TODO"
 
 pkg_setup() {
 	# Removes the gnome-vfs dep
-	G2CONF="${G2CONF} --disable-build-tests"
+	G2CONF="${G2CONF} --disable-build-tests --with-system-pcre"
 }

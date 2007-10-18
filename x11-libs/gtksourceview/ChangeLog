@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.103 2007/10/17 12:06:50 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.104 2007/10/18 11:56:37 remi Exp $
+
+  18 Oct 2007; Rémi Cardona <remi@gentoo.org> gtksourceview-2.0.1.ebuild:
+  force system libpcre usage
 
 *gtksourceview-2.0.1 (17 Oct 2007)
 
