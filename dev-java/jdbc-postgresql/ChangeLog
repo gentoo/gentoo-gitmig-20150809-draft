@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.14 2007/08/15 06:45:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.15 2007/10/18 18:13:30 nelchael Exp $
+
+  18 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  jdbc-postgresql-8.2_p505.ebuild:
+  Stable on ppc.
 
   15 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   jdbc-postgresql-8.2_p505.ebuild:
