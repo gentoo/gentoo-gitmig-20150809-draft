@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.242 2007/09/17 17:25:59 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.243 2007/10/18 17:06:12 phreak Exp $
+
+*alsa-lib-1.0.15 (18 Oct 2007)
+
+  18 Oct 2007; Christian Heim <phreak@gentoo.org> +alsa-lib-1.0.15.ebuild:
+  Version bump, finally at 1.0.15. Adding a check on whether ALSA_PCM_PLUGINS
+  are set or unset.
 
 *alsa-lib-1.0.15_rc2 (17 Sep 2007)
 
