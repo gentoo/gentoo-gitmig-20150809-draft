@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xjavac
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.26 2007/07/30 00:47:31 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.27 2007/10/18 12:17:49 nelchael Exp $
+
+  18 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  xjavac-20041208-r5.ebuild:
+  Stable on ppc, bug #179927.
 
   29 Jul 2007; Tom Gall <tgall@gentoo.org> xjavac-20041208-r5.ebuild:
   stable on ppc64
