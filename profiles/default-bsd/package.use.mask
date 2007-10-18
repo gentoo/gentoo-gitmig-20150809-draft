@@ -18,6 +18,7 @@ sys-apps/baselayout pam
 sys-apps/coreutils acl
 sys-apps/hal dell disk-partition
 sys-apps/help2man nls
+sys-auth/consolekit pam
 
 # NetworkManager is Linux-only, Zephyr requires kerberos
 net-im/pidgin networkmanager zephyr
