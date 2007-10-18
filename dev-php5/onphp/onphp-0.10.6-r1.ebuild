@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/onphp-0.10.6.ebuild,v 1.1 2007/10/14 18:05:51 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/onphp-0.10.6-r1.ebuild,v 1.1 2007/10/18 10:09:13 voxus Exp $
 
 inherit php-lib-r1
 
@@ -22,11 +22,9 @@ need_php_by_category
 src_install() {
 	has_php
 
-	if use doc ; then
-		for doc in `find doc -maxdepth 1 -type f -print` ; do
-			dodoc ${doc}
-		done
+	dodoc `find doc -maxdepth 1 -type f -print`
 
+	if use doc ; then
 		dohtml -r "${WORKDIR}/${PN}-api-${PV}/"*
 	fi
 
