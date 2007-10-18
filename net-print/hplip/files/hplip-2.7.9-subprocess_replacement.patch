@@ -1,0 +1,99 @@
+diff -urNad hplip-2.7.7.dfsg.1~/hpssd.py hplip-2.7.7.dfsg.1/hpssd.py
+--- hplip-2.7.7.dfsg.1~/hpssd.py	2007-10-04 12:45:29.000000000 -0700
++++ hplip-2.7.7.dfsg.1/hpssd.py	2007-10-04 12:46:39.000000000 -0700
+@@ -53,7 +53,7 @@
+ 
+ # Std Lib
+ import sys, socket, os, os.path, signal, getopt, time, select
+-import popen2, threading, tempfile
++import subprocess, threading, tempfile
+ 
+ from errno import EALREADY, EINPROGRESS, EWOULDBLOCK, ECONNRESET, \
+      ENOTCONN, ESHUTDOWN, EINTR, EISCONN
+@@ -560,21 +560,23 @@
+ 
+         if sendmail:
+             sendmail = os.path.join(sendmail, 'sendmail')
+-            sendmail += ' -t -r %s' % self.from_address
++            cmd = [sendmail,'-t','-r',self.from_address]
+ 
+-            log.debug(sendmail)
+-            std_out, std_in, std_err = popen2.popen3(sendmail) 
+-            log.debug(repr(self.message))
+-            std_in.write(self.message)
+-            std_in.close()
++            log.debug(repr(cmd))
++            err = None
++            try:
++                sp = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
++                std_out, std_err = sp.communicate(self.message)
++                log.debug(repr(self.message))
++                if std_err != '':
++                    err = std_err
+ 
+-            r, w, e = select.select([std_err], [], [], 2.0)
++            except OSError, e:
++                err = str(e)
+ 
+-            if r:
+-                err = std_err.read()
+-                if err:
+-                    log.error(repr(err))
+-                    self.result = ERROR_TEST_EMAIL_FAILED
++            if err:
++                log.error(repr(err))
++                self.result = ERROR_TEST_EMAIL_FAILED
+ 
+         else:
+             log.error("Mail send failed. sendmail not found.")
+diff -urNad hplip-2.7.7.dfsg.1~/scan.py hplip-2.7.7.dfsg.1/scan.py
+--- hplip-2.7.7.dfsg.1~/scan.py	2007-10-04 12:45:14.000000000 -0700
++++ hplip-2.7.7.dfsg.1/scan.py	2007-10-04 12:46:48.000000000 -0700
+@@ -782,7 +782,7 @@
+     from scan import sane
+     import scanext
+     import cStringIO
+-    import popen2
++    import subprocess
+ 
+     try:
+         import Image
+@@ -1139,26 +1139,21 @@
+ 
+             if sendmail:
+                 sendmail = os.path.join(sendmail, 'sendmail')
+-                sendmail += ' -t -r %s' % email_from
+-
+-                log.debug(sendmail)
+-                std_out, std_in, std_err = popen2.popen3(sendmail) 
+-                std_in.write(msg.as_string())
+-                std_in.close()
+-
+-                while True:
+-                    update_spinner()
+-                    r, w, e = select.select([std_err], [], [], 1.0)
+-
+-                    if r:
+-                        break
++                cmd = [sendmail,'-t','-r',email_from]
+ 
++                log.debug(repr(cmd))
++                err = None
++                try:
++                    sp = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
++                    std_out, std_err = sp.communicate(msg.as_string())
++                    if std_err != '':
++                        err = std_err
++                except OSError, e:
++                    err = str(e)
+                 cleanup_spinner()
+ 
+-                if r:
+-                    err = std_err.read()
+-                    if err:
+-                        log.error(repr(err))
++                if err:
++                    log.error(repr(err))
+ 
+             else:
+                 log.error("Mail send failed. 'sendmail' not found.")

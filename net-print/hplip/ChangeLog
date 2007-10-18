@@ -1,6 +1,14 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.78 2007/10/10 18:19:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.79 2007/10/18 13:08:21 calchan Exp $
+
+*hplip-2.7.9-r1 (18 Oct 2007)
+
+  18 Oct 2007; Denis Dupeyron <calchan@gentoo.org>
+  -files/hplip-2.7.7-udev-kernel.2.6.22.diff,
+  +files/hplip-2.7.9-subprocess_replacement.patch, -hplip-2.7.7-r3.ebuild,
+  -hplip-2.7.9.ebuild, +hplip-2.7.9-r1.ebuild:
+  Fixed bug #195565 for new 2.x branch. Fixed quoting.
 
   10 Oct 2007; Stefan Schweizer <genstef@gentoo.org> hplip-2.7.9.ebuild:
   Improve DEPEND-accuracy for jakub in bug 193671

@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.9.ebuild,v 1.3 2007/10/12 16:29:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.7.9-r1.ebuild,v 1.1 2007/10/18 13:08:21 calchan Exp $
 
-inherit linux-info
+inherit eutils linux-info
 
 DESCRIPTION="HP Linux Imaging and Printing System. Includes net-print/hpijs, scanner drivers and service tools."
 HOMEPAGE="http://hplip.sourceforge.net/"
@@ -48,14 +48,17 @@ pkg_setup() {
 	fi
 
 	# avoid collisions with cups-1.2 compat symlinks
-	if [ -e ${ROOT}/usr/lib/cups/backend/hp ] && [ -e ${ROOT}/usr/libexec/cups/backend/hp ]; then
-		rm -f ${ROOT}/usr/libexec/cups/backend/hp{,fax};
+	if [ -e "${ROOT}"/usr/lib/cups/backend/hp ] && [ -e "${ROOT}"/usr/libexec/cups/backend/hp ]; then
+		rm -f "${ROOT}"/usr/libexec/cups/backend/hp{,fax};
 	fi
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Fix bug #195565
+	epatch "${FILESDIR}"/${P}-subprocess_replacement.patch
 
 	sed -i -e "s:\$(doc_DATA)::" Makefile.in || die "Patching Makefile.in failed"
 	sed -i -e "s/'skipstone']/'skipstone', 'epiphany']/" \
@@ -105,7 +108,7 @@ pkg_preinst() {
 	if ! use minimal && use scanner ; then
 		insinto /etc/sane.d
 		[ -e /etc/sane.d/dll.conf ] && cp /etc/sane.d/dll.conf .
-		[ -e ${ROOT}/etc/sane.d/dll.conf ] && cp ${ROOT}/etc/sane.d/dll.conf .
+		[ -e "${ROOT}"/etc/sane.d/dll.conf ] && cp "${ROOT}"/etc/sane.d/dll.conf .
 		grep -q hpaio dll.conf || echo hpaio >> dll.conf
 		doins dll.conf
 	fi
