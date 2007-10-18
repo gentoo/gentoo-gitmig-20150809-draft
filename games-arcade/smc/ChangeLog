@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/smc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.1 2007/09/21 15:26:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.2 2007/10/18 17:14:25 nyhm Exp $
+
+*smc-1.2 (18 Oct 2007)
+
+  18 Oct 2007; Tristan Heaven <nyhm@gentoo.org> +smc-1.2.ebuild:
+  Version bump
 
 *smc-1.1 (21 Sep 2007)
 *smc-1.0 (21 Sep 2007)
