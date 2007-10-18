@@ -1,6 +1,10 @@
 # ChangeLog for app-text/rarian
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.3 2007/10/18 13:47:21 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.4 2007/10/18 14:32:41 uberlord Exp $
+
+  18 Oct 2007; Roy Marples <uberlord@gentoo.org>
+  +files/rarian-0.6.0-posix-getopt.patch, rarian-0.6.0.ebuild:
+  Only GNU getopt (userland call) supports long options
 
   18 Oct 2007; Roy Marples <uberlord@gentoo.org> rarian-0.6.0.ebuild:
   Keyworded ~x86-fbsd

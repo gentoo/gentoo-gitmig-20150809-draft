@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/rarian-0.6.0.ebuild,v 1.3 2007/10/18 13:47:21 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/rarian-0.6.0.ebuild,v 1.4 2007/10/18 14:32:41 uberlord Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="A documentation metadata library"
 HOMEPAGE="www.freedesktop.org"
@@ -25,5 +25,10 @@ src_unpack() {
 	# calling gnome2_omf_fix
 	unpack ${A}
 	cd "${S}"
+
+	# Only GNU getopt supports long options
+	# Scrollkeeper didn't support them, so we'll punt them for now
+	epatch "${FILESDIR}/${P}"-posix-getopt.patch
+
 	elibtoolize ${ELTCONF}
 }
