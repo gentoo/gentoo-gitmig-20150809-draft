@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_rc1636.ebuild,v 1.1 2007/10/18 17:25:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_rc1636.ebuild,v 1.2 2007/10/18 17:28:04 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -23,7 +23,7 @@ O_VER="9.50-20071018"
 O_URI="http://snapshot.opera.com/unix/snapshot-${O_SUFF}/"
 SRC_URI="
 	amd64? ( ${O_URI}x86_64-linux/${PN}-${O_VER}.2-shared-qt.x86_64${O_LNG}-${O_SUFF}.tar.bz2 )
-	ppc? ( ${O_URI}ppc-linux/${PN}-${O_VER}.6-shared-qt.ppc${O_LNG}-${O_SUFF}.tar.bz2 ) 
+	ppc? ( ${O_URI}ppc-linux/${PN}-${O_VER}.6-shared-qt.ppc${O_LNG}-${O_SUFF}.tar.bz2 )
 	x86? (
 		qt-static? ( ${O_URI}intel-linux/${PN}-${O_VER}.9-static-qt.i386${O_LNG}-${O_SUFF}.tar.bz2 )
 		!qt-static? ( ${O_URI}intel-linux/${PN}-${O_VER}.6-shared-qt.i386${O_LNG}-${O_SUFF}.tar.bz2 ) )
