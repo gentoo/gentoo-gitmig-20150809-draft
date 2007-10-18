@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.151 2007/10/18 15:57:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.152 2007/10/18 16:57:57 dertobi123 Exp $
+
+  18 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org> opera-9.24.ebuild:
+  ppc stable, bug #196164
 
   18 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_rc1589.ebuild,
   opera-9.50_rc1600.ebuild, opera-9.50_rc1629.ebuild,
