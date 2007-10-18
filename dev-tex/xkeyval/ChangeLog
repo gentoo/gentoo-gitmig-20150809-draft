@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/xkeyval
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/ChangeLog,v 1.9 2007/07/22 13:04:53 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xkeyval/ChangeLog,v 1.10 2007/10/18 08:07:07 opfer Exp $
+
+  18 Oct 2007; Christian Faulhammer <opfer@gentoo.org> xkeyval-2.5f.ebuild:
+  stable x86, bug 194900
 
 *xkeyval-2.5f (22 Jul 2007)
 
