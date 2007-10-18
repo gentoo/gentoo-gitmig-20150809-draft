@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2-r1.ebuild,v 1.6 2007/10/13 09:20:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.2-r1.ebuild,v 1.7 2007/10/18 16:05:52 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -242,6 +242,12 @@ src_unpack() {
 		sed -i -e "s:lirc_parallel\.o::" drivers/lirc_parallel/Makefile.am
 	fi
 
+	# Bug #187418
+	if kernel_is ge 2 6 22 ; then
+		ewarn "Disabling lirc_gpio driver as it does no longer work Kernel 2.6.22+"
+		sed -i -e "s:lirc_gpio\.o::" drivers/lirc_gpio/Makefile.am
+	fi
+
 	# respect CFLAGS
 	sed -i -e 's:CFLAGS="-O2:CFLAGS=""\n#CFLAGS="-O2:' configure.in
 
@@ -286,4 +292,13 @@ pkg_postinst() {
 	elog "The lirc Linux Infrared Remote Control Package has been"
 	elog "merged, please read the documentation at http://www.lirc.org"
 	echo
+
+	if kernel_is ge 2 6 22 ; then
+		# Bug #187418
+		ewarn
+		ewarn "The lirc_gpio driver will not work with Kernels 2.6.22+"
+		ewarn "You need to switch over to /dev/input/event? if you need gpio"
+		ewarn "This device can than then be used via lirc's dev/input driver."
+		ewarn
+	fi
 }
