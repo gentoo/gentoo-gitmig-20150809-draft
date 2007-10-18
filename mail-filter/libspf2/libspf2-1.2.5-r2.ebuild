@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/libspf2-1.2.5-r2.ebuild,v 1.1 2006/09/27 11:55:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/libspf2-1.2.5-r2.ebuild,v 1.2 2007/10/18 18:11:41 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.libspf2.org/spf/libspf2-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc"
