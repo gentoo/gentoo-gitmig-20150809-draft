@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-glib2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.43 2007/05/21 11:04:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.44 2007/10/18 19:26:09 graaff Exp $
+
+*ruby-glib2-0.16.0-r1 (18 Oct 2007)
+
+  18 Oct 2007; Hans de Graaff <graaff@gentoo.org>
+  +files/ruby-glib2-0.16.0-glib-2.14.patch, +ruby-glib2-0.16.0-r1.ebuild:
+  Fix problem with new glib-2.14 API, bug 194303.
 
   21 May 2007; Raúl Porcel <armin76@gentoo.org> ruby-glib2-0.16.0.ebuild:
   alpha stable wrt #169094
