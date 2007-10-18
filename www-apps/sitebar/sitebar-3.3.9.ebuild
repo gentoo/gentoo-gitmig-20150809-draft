@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.9.ebuild,v 1.1 2007/10/16 08:10:10 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.9.ebuild,v 1.2 2007/10/18 17:03:31 dertobi123 Exp $
 
 inherit webapp eutils
 
 DESCRIPTION="The Bookmark Server for Personal and Team Use"
 HOMEPAGE="http://sitebar.sourceforge.net/"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 
 IUSE=""
 MY_PN=${PN/sitebar/SiteBar}
