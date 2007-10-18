@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.106 2007/10/14 15:58:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.107 2007/10/18 14:46:23 fmccor Exp $
+
+  18 Oct 2007; Ferris McCormick <fmccor@gentoo.org> wesnoth-1.2.7.ebuild:
+  Sparc stable --- Security Bug #195520 --- Looks good.
 
   14 Oct 2007; Markus Rothe <corsair@gentoo.org> wesnoth-1.2.7.ebuild:
   Stable on ppc64; bug #195520
