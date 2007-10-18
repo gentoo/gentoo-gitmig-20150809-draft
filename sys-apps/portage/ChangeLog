@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.450 2007/10/15 20:22:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.451 2007/10/18 16:23:39 zmedico Exp $
+
+  18 Oct 2007; Zac Medico <zmedico@gentoo.org> -portage-2.1.3.11.ebuild,
+  -portage-2.1.3.13.ebuild, portage-2.1.3.14.ebuild:
+  Bug #196278 - Bump bash dependency to 3.2_p17 to fix etc-update
+  compatibility issue. Remove old versions.
 
 *portage-2.1.3.14 (15 Oct 2007)
 
