@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.105 2007/10/15 15:11:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.106 2007/10/18 13:34:25 angelos Exp $
+
+  18 Oct 2007; Christoph Mende <angelos@gentoo.org> fox-1.6.27.ebuild:
+  Stable on amd64 wrt bug #194813
 
   15 Oct 2007; Markus Rothe <corsair@gentoo.org> fox-1.6.29.ebuild:
   Stable on ppc64
