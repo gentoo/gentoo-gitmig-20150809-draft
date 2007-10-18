@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/kvdr-0.64-r1.ebuild,v 1.5 2007/10/18 16:24:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/kvdr-0.64-r2.ebuild,v 1.1 2007/10/18 16:24:29 zzam Exp $
 
 inherit kde eutils
 
@@ -28,4 +28,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}/kvdr-0.64-pointer-casting.patch"
+	epatch "${FILESDIR}/kvdr-0.64-unsigned-int-casting.patch"
+	epatch "${FILESDIR}/kvdr-0.64-remove-ansi-cflag.patch"
+	epatch "${FILESDIR}/kvdr-0.64-desktop-file.patch"
 }
