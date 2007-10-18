@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.740 2007/10/18 04:05:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.741 2007/10/18 11:34:28 eva Exp $
+
+  18 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org> use.local.desc:
+  add networkmanager for evolution
 
   18 Oct 2007; Jeroen Roovers <jer@gentoo.org> use.local.desc:
   Spelling correction for disableslit.
