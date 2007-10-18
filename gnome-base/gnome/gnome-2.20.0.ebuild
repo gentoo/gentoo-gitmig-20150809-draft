@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.20.0.ebuild,v 1.1 2007/10/18 09:46:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.20.0.ebuild,v 1.2 2007/10/18 14:05:29 dang Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -12,7 +12,7 @@ SLOT="2.0"
 # double check none of the deps are still masked !
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
-IUSE="accessibility cdr cups dvdr ldap mono"
+IUSE="accessibility cdr cups dvdr esd ldap mono"
 
 S=${WORKDIR}
 
@@ -26,7 +26,7 @@ RDEPEND="
 	>=dev-libs/libxslt-1.1.22
 
 	>=media-libs/audiofile-0.2.6-r1
-	>=media-sound/esound-0.2.38
+	esd? ( >=media-sound/esound-0.2.38 )
 	>=x11-libs/libxklavier-3.2
 	>=media-libs/libart_lgpl-2.3.19
 
