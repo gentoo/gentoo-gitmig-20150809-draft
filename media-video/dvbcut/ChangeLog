@@ -1,6 +1,13 @@
 # ChangeLog for media-video/dvbcut
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.7 2007/06/03 10:08:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.8 2007/10/18 14:37:02 zzam Exp $
+
+*dvbcut-0.5.4-r1 (18 Oct 2007)
+
+  18 Oct 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/dvbcut-0.5.4-ffmpeg-compat3.patch, +dvbcut-0.5.4-r1.ebuild:
+  Fix compilation against newest ffmpeg, Bug #188184. Added desktop menu
+  entry, Bug #188579.
 
   03 Jun 2007; Alexis Ballier <aballier@gentoo.org>
   -files/dvbcut-0.5.3-ac3-buffer.patch,
