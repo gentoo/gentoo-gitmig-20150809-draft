@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.4-r1.ebuild,v 1.1 2007/10/02 14:40:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.18.4-r1.ebuild,v 1.2 2007/10/18 23:10:28 eva Exp $
 
 inherit eutils pam gnome2
 
@@ -90,13 +90,13 @@ src_unpack() {
 	gnome2_src_unpack
 
 	# remove unneeded linker directive for selinux (#41022)
-	epatch ${FILESDIR}/${PN}-2.13.0.1-selinux-remove-attr.patch
+	epatch "${FILESDIR}"/${PN}-2.13.0.1-selinux-remove-attr.patch
 
 	# Fix missing intllib
-	epatch ${FILESDIR}/${PN}-2.18.0-gdm-dmx-intllibs.patch
+	epatch "${FILESDIR}"/${PN}-2.18.0-gdm-dmx-intllibs.patch
 
 	# Add gksu to gdmsetup menu entry
-	epatch ${FILESDIR}/${PN}-2.20.0-gksu.patch
+	epatch "${FILESDIR}"/${PN}-2.20.0-gksu.patch
 }
 
 src_install() {
@@ -105,7 +105,7 @@ src_install() {
 	local gentoodir="${WORKDIR}/${GDM_EXTRA}"
 
 	# gdm-binary should be gdm to work with our init (#5598)
-	rm -f ${D}/usr/sbin/gdm
+	rm -f "${D}"/usr/sbin/gdm
 	dosym /usr/sbin/gdm-binary /usr/sbin/gdm
 
 	# our x11's scripts point to /usr/bin/gdm
@@ -115,23 +115,23 @@ src_install() {
 	keepdir /var/log/gdm
 	keepdir /var/gdm
 
-	chown root:gdm ${D}/var/gdm
-	chmod 1770 ${D}/var/gdm
+	chown root:gdm "${D}"/var/gdm
+	chmod 1770 "${D}"/var/gdm
 
 	# use our own session script
-	rm -f ${D}/etc/X11/gdm/Xsession
+	rm -f "${D}"/etc/X11/gdm/Xsession
 	exeinto /etc/X11/gdm
-	doexe ${gentoodir}/Xsession
+	doexe "${gentoodir}"/Xsession
 
 	# add a custom xsession .desktop by default (#44537)
 	exeinto /etc/X11/dm/Sessions
-	doexe ${gentoodir}/custom.desktop
+	doexe "${gentoodir}"/custom.desktop
 
 	# We replace the pam stuff by our own
-	rm -rf ${D}/etc/pam.d
+	rm -rf "${D}"/etc/pam.d
 
-	dopamd ${gentoodir}/pam.d/*
-	dopamsecurity console.apps ${gentoodir}/security/console.apps/gdmsetup
+	dopamd "${gentoodir}"/pam.d/*
+	dopamsecurity console.apps "${gentoodir}"/security/console.apps/gdmsetup
 
 	# use graphical greeter local
 	dosed "s:#Greeter=/usr/libexec/gdmlogin:Greeter=/usr/libexec/gdmgreeter:" \
@@ -146,7 +146,7 @@ src_install() {
 
 	# Move Gentoo theme in
 	if use branding ; then
-		mv ${WORKDIR}/gentoo-*  ${D}/usr/share/gdm/themes
+		mv "${WORKDIR}"/gentoo-*  "${D}"/usr/share/gdm/themes
 	fi
 }
 
