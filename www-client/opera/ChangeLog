@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.148 2007/10/17 18:31:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.149 2007/10/18 02:39:39 jer Exp $
+
+  18 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_rc1589.ebuild,
+  opera-9.50_rc1600.ebuild, opera-9.50_rc1629.ebuild,
+  opera-9.50_rc1633.ebuild:
+  Move virtual/libstdc++-3 dependency back to being x86-fbsd only.
 
   17 Oct 2007; Christian Faulhammer <opfer@gentoo.org> opera-9.24.ebuild:
   stable x86, security bug 196164

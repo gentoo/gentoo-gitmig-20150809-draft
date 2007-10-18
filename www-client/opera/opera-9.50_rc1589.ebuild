@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_rc1589.ebuild,v 1.2 2007/10/09 08:15:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_rc1589.ebuild,v 1.3 2007/10/18 02:39:39 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -48,7 +48,7 @@ RDEPEND=">=media-libs/fontconfig-2.1.94-r1
 		x11-libs/libX11
 		x11-libs/libSM
 		x11-libs/libICE
-		=virtual/libstdc++-3*
+		x86-fbsd? ( =virtual/libstdc++-3* )
 		!qt-static? ( =x11-libs/qt-3* )
 		spell? ( app-text/aspell )"
 
