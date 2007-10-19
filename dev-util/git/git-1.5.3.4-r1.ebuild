@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.3.4-r1.ebuild,v 1.1 2007/10/19 09:33:38 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.5.3.4-r1.ebuild,v 1.2 2007/10/19 16:06:45 ferdy Exp $
 
-inherit toolchain-funcs eutils elisp-common perl-module bash-completion vim-plugin
+inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
 MY_PV="${PV/_rc/.rc}"
 MY_P="${PN}-${MY_PV}"
@@ -18,7 +18,7 @@ SRC_URI="mirror://kernel/software/scm/git/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="curl doc emacs gtk iconv mozsha1 perl ppcsha1 tk vim webdav"
+IUSE="curl doc emacs gtk iconv mozsha1 perl ppcsha1 tk webdav"
 
 DEPEND="
 	!app-misc/git
@@ -118,10 +118,6 @@ src_install() {
 		touch "${D}"/"${SITELISP}"/${PN}/.nosearch
 	fi
 
-	if use vim ; then
-		S="${S}"/contrib/vim vim-plugin_src_install
-	fi
-
 	if use gtk ; then
 		dobin "${S}"/contrib/gitview/gitview
 		use doc && dodoc "${S}"/contrib/gitview/gitview.txt
@@ -129,7 +125,7 @@ src_install() {
 
 	dodir /usr/share/${PN}/contrib
 	cp -rf \
-		"${S}"/contrib/{stats,workdir,hg-to-git,fast-import,hooks} \
+		"${S}"/contrib/{vim,stats,workdir,hg-to-git,fast-import,hooks} \
 		"${D}"/usr/share/${PN}/contrib
 
 	insinto /etc/xinetd.d
