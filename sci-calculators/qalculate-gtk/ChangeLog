@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/qalculate-gtk
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.23 2007/10/18 18:31:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.24 2007/10/19 20:17:24 nixnut Exp $
+
+  19 Oct 2007; nixnut <nixnut@gentoo.org> qalculate-gtk-0.9.6.ebuild:
+  Stable on ppc wrt bug 193455
 
   18 Oct 2007; Markus Meier <maekke@gentoo.org> qalculate-gtk-0.9.6.ebuild:
   x86 stable, bug #193455
