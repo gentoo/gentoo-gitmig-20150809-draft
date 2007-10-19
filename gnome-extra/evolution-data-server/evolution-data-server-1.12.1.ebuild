@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.1.ebuild,v 1.1 2007/10/17 13:50:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.1.ebuild,v 1.2 2007/10/19 10:57:10 uberlord Exp $
 
 inherit db-use eutils flag-o-matic gnome2 autotools
 
@@ -76,6 +76,9 @@ src_unpack() {
 
 	# Rewind in camel-disco-diary to fix a crash
 	epatch "${FILESDIR}"/${PN}-1.8.0-camel-rewind.patch
+
+	# Don't assume that endian.h and byteswap.h exist on all non sun os's
+	epatch "${FILESDIR}"/${PN}-1.12.1-icaltz-util.patch
 
 #-------------Upstream GNOME look here -----------------#
 
