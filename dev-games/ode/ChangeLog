@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.44 2007/09/06 07:30:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.45 2007/10/19 17:07:18 mr_bones_ Exp $
+
+*ode-0.9 (19 Oct 2007)
+
+  19 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/ode-0.9-flags.patch, +ode-0.9.ebuild:
+  version bump
 
   06 Sep 2007; Christian Faulhammer <opfer@gentoo.org> ode-0.8.ebuild:
   stable x86, bug 187093
