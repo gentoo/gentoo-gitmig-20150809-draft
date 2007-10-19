@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.213 2007/10/17 20:37:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.214 2007/10/19 08:46:11 uberlord Exp $
+
+  19 Oct 2007; Roy Marples <uberlord@gentoo.org> gnome-games-2.20.1.ebuild:
+  Keyworded ~x86-fbsd
 
   17 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-games-2.16.3.ebuild, gnome-games-2.18.2.1.ebuild:
