@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.8.0.ebuild,v 1.1 2007/10/16 22:23:42 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.8.0.ebuild,v 1.2 2007/10/19 09:26:14 bicatali Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran autotools versionator
 
@@ -34,6 +34,8 @@ RDEPEND="${DEPEND}
 #	doc? ( app-doc/lapack-docs )"
 
 FORTRAN="g77 gfortran ifc"
+
+PROVIDE="virtual/lapack"
 
 S="${WORKDIR}/ATLAS"
 S_LAPACK="${WORKDIR}/${L_PN}-lite-${L_PV}"
