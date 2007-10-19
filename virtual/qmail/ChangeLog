@@ -1,6 +1,9 @@
 # ChangeLog for virtual/qmail
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/ChangeLog,v 1.6 2007/05/01 21:32:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/ChangeLog,v 1.7 2007/10/19 22:28:26 hollow Exp $
+
+  19 Oct 2007; Benedikt Böhm <hollow@gentoo.org> qmail-1.03.ebuild:
+  remove qmail-mysql, #20899
 
   01 May 2007; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03.ebuild:
   mail-mta/qmail was removed.
