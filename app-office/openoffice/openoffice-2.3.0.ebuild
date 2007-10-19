@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.0.ebuild,v 1.12 2007/10/11 07:34:20 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.3.0.ebuild,v 1.13 2007/10/19 09:52:08 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -9,7 +9,7 @@ inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 
 
 IUSE="binfilter cairo cups dbus debug eds firefox gnome gstreamer gtk kde ldap mono sound odk pam seamonkey webdav xulrunner"
 
-MY_PV="2.3.0.4"
+MY_PV="2.3.0.5"
 PATCHLEVEL="OOG680"
 SRC="OOo_${PV}_src"
 S="${WORKDIR}/ooo"
@@ -94,7 +94,6 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	dev-libs/expat
 	>=dev-libs/icu-3.6
 	>=sys-libs/db-4.3
-	>=dev-libs/glib-2.12
 	>=app-text/libwpd-0.8.8
 	>=media-libs/libsvg-0.1.4
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
@@ -293,7 +292,8 @@ src_compile() {
 	filter-flags "-fforce-addr"
 	replace-flags "-O?" "-O2"
 
-	use ppc && append-flags "-D_STLP_STRICT_ANSI"
+	# Build problems with STLport and regcomp without these
+	use ppc && append-flags "-D_STLP_STRICT_ANSI -fno-schedule-insns"
 
 	# Now for our optimization flags ...
 	export ARCH_FLAGS="${CXXFLAGS}"
@@ -310,6 +310,7 @@ src_compile() {
 	./configure ${MYCONF} \
 		--with-distro="Gentoo" \
 		--with-arch="${ARCH}" \
+		--host="${CHOST}" \
 		--with-srcdir="${DISTDIR}" \
 		--with-lang="${LINGUAS_OOO}" \
 		--with-num-cpus="${JOBS}" \

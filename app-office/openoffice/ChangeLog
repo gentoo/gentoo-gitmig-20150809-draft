@@ -1,6 +1,15 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.350 2007/10/11 07:34:20 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.351 2007/10/19 09:52:08 suka Exp $
+
+  19 Oct 2007; Andreas Proschofsky <suka@gentoo.org>
+  files/2.3.0/gentoo-2.3.0.diff, openoffice-2.3.0.ebuild:
+  Silent bump to ooo-build-2.3.0.5, some good fixes. This also drops the glib
+  dependency for the quickstarter for more info see here:
+  
+  http://svn.gnome.org/viewvc/ooo-build/trunk/NEWS?revision=10529&view=markup
+  
+  Also add some CFLAG-magic to help the ppc-build
 
   11 Oct 2007; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.3.0.ebuild:
