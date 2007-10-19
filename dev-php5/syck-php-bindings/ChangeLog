@@ -1,0 +1,25 @@
+# ChangeLog for dev-php5/syck-php-bindings
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/syck-php-bindings/ChangeLog,v 1.7 2007/10/19 15:11:55 anant Exp $
+
+*syck-php-bindings-0.55 (19 Oct 2007)
+
+  19 Oct 2007; Anant Narayanan <anant@gentoo.org>
+  +syck-php-bindings-0.55.ebuild:
+  Re-add stable ebuild.
+
+  18 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
+  syck-php-bindings-0.55.ebuild:
+  Cleanup.
+
+  30 Nov 2006; Michael Cummings <mcummings@gentoo.org>
+  syck-php-bindings-0.55.ebuild:
+  Marking amd64 stable, related to bug 152048
+
+  29 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  syck-php-bindings-0.55.ebuild:
+  stable x86, bug #152048
+
+  04 Oct 2006; Yuval Yaari <yuval@gentoo.org> ChangeLog:
+  Adding syck-php-bindings to the tree, for bug #145085
+
