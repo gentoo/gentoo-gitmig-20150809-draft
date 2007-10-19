@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/v4l-dvb-hg
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/ChangeLog,v 1.16 2007/10/16 21:03:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/ChangeLog,v 1.17 2007/10/19 07:49:52 zzam Exp $
+
+  19 Oct 2007; Matthias Schwarzott <zzam@gentoo.org>
+  v4l-dvb-hg-0.1-r2.ebuild:
+  Removed useless depends that already are done by eclasses, Bug 192805.
 
   16 Oct 2007; Matthias Schwarzott <zzam@gentoo.org>
   v4l-dvb-hg-0.1-r2.ebuild:

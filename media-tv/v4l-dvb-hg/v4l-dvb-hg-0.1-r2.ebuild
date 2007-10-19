@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.12 2007/10/16 21:03:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.13 2007/10/19 07:49:52 zzam Exp $
 
 : ${EHG_REPO_URI:=${V4l_DVB_HG_REPO_URI:-http://linuxtv.org/hg/v4l-dvb}}
 
@@ -15,10 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND="virtual/linux-sources"
-RDEPEND="dev-util/mercurial"
-
-S=${WORKDIR}/${EHG_REPO_URI##*/}/v4l
+S="${WORKDIR}/${EHG_REPO_URI##*/}/v4l"
 
 pkg_setup()
 {
@@ -45,7 +42,7 @@ src_unpack() {
 	# download and copy files
 	mercurial_src_unpack
 
-	cd ${S}
+	cd "${S}"
 	#epatch ${FILESDIR}/${PN}-fix-makefile-recursion.diff
 
 	# apply local patches
@@ -56,12 +53,12 @@ src_unpack() {
 		do
 			if test -f "${LOCALPATCH}";
 			then
-				if grep -q linux/drivers ${LOCALPATCH}; then
-					cd ${S}/..
+				if grep -q linux/drivers "${LOCALPATCH}"; then
+					cd "${S}"/..
 				else
-					cd ${S}
+					cd "${S}"
 				fi
-				epatch ${LOCALPATCH}
+				epatch "${LOCALPATCH}"
 			fi
 		done
 	else
@@ -75,9 +72,9 @@ src_unpack() {
 	echo
 
 	elog "Removing autoload-entry from stradis-driver."
-	sed -i ${S}/../linux/drivers/media/video/stradis.c -e '/MODULE_DEVICE_TABLE/d'
+	sed -i "${S}"/../linux/drivers/media/video/stradis.c -e '/MODULE_DEVICE_TABLE/d'
 
-	cd ${S}
+	cd "${S}"
 	sed	-e '/-install::/s:rminstall::' \
 		-i Makefile
 
@@ -97,7 +94,7 @@ src_install() {
 		KDIRA="${DEST}" \
 	|| die "make install failed"
 
-	cd ${S}/..
+	cd "${S}"/..
 	dodoc linux/Documentation/dvb/*.txt
 	dosbin linux/Documentation/dvb/get_dvb_firmware
 }
