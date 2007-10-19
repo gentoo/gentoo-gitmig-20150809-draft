@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.3 2007/10/15 21:30:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.4 2007/10/19 19:52:25 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -63,7 +63,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${PV}/${P}-gentoo-texmf-site.patch"
 	epatch "${FILESDIR}/${PV}/${P}-mpware.patch"
 	epatch "${FILESDIR}/${PV}/${P}-libteckit-asneeded.patch"
 
@@ -207,9 +206,17 @@ src_install() {
 	# take care of updmap.cfg, fmtutil.cnf and texmf.cnf
 	dodir /etc/texmf/{updmap.d,fmtutil.d,texmf.d}
 
+	# Remove fmtutil.cnf, it will be regenerated from /etc/texmf/fmtutil.d files
+	# by texmf-update
 	rm -f "${D}${TEXMF_PATH}/web2c/fmtutil.cnf"
 
-	mv "${D}${TEXMF_PATH}/web2c/texmf.cnf" "${D}/etc/texmf/texmf.d/00texmf.cnf" || die "moving texmf.cnf failed"
+	# Remove default texmf.cnf to ship our own, greatly based on texlive dvd's
+	# texmf.cnf
+	# It will also be generated from /etc/texmf/texmf.d files by texmf-update
+	rm -f "${D}${TEXMF_PATH}/web2c/texmf.cnf"
+
+	insinto /etc/texmf/texmf.d
+	doins "${FILESDIR}/${PV}/texmf.d/"{00header,05searchpaths,10standardpaths,15options,20sizes}.cnf
 
 	mv "${D}${TEXMF_PATH}/web2c/updmap.cfg"	"${D}/etc/texmf/updmap.d/00updmap.cfg" || die "moving updmap.cfg failed"
 

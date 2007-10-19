@@ -1,6 +1,14 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.2 2007/10/15 21:30:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.3 2007/10/19 19:52:25 aballier Exp $
+
+  19 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/2007/texmf.d/00header.cnf, +files/2007/texmf.d/10standardpaths.cnf,
+  -files/2007/texlive-core-2007-gentoo-texmf-site.patch,
+  +files/2007/texmf.d/05searchpaths.cnf, +files/2007/texmf.d/15options.cnf,
+  +files/2007/texmf.d/20sizes.cnf, texlive-core-2007.ebuild:
+  Ship our own texmf.cnf defaults, greatly based on texlive's dvd one, this
+  should fix bug #196167
 
   15 Oct 2007; Alexis Ballier <aballier@gentoo.org>
   texlive-core-2007.ebuild:
