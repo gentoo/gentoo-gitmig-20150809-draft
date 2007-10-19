@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.75 2007/10/01 15:08:58 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.76 2007/10/19 18:09:27 wltjr Exp $
+
+*firebird-2.1.0.16780_beta2 (19 Oct 2007)
+
+  19 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/firebird-2.1.0.16780_beta2-deps-libs-paths.patch,
+  -firebird-1.5.4-r3.ebuild, +firebird-2.1.0.16780_beta2.ebuild:
+  Bumped to latest beta, remade and unified patches to patch. Removed old
+  version.
 
   01 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -firebird-2.0.3.12981.0-r1.ebuild, firebird-2.0.3.12981.0-r2.ebuild:
