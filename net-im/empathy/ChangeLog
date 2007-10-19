@@ -1,6 +1,12 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.8 2007/10/01 13:49:19 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.9 2007/10/19 17:03:07 coldwind Exp $
+
+*empathy-0.14-r1 (19 Oct 2007)
+
+  19 Oct 2007; Santiago M. Mola <coldwind@gentoo.org>
+  +empathy-0.14-r1.ebuild:
+  Remove doc use flag.
 
 *empathy-0.14 (01 Oct 2007)
 
