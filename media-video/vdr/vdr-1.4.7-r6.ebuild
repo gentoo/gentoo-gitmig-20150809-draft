@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r6.ebuild,v 1.1 2007/10/08 19:01:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r6.ebuild,v 1.2 2007/10/19 11:17:16 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -278,8 +278,7 @@ src_install() {
 	keepdir "${PLUGIN_LIBDIR}"
 
 	dohtml *.html
-	dodoc MANUAL INSTALL README* HISTORY*
-	dodoc TODO-enAIO-rm CONTRIBUTORS
+	dodoc MANUAL INSTALL README* HISTORY* CONTRIBUTORS
 
 	cd "${EXT_DIR}"/doc
 	local f
@@ -307,7 +306,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "It is a good idea to run vdrplugin-rebuild now"
+	elog "It is a good idea to run vdrplugin-rebuild now."
 	if has_version "<media-video/vdr-1.3.36-r3"; then
 		ewarn "Upgrade Info:"
 		ewarn
