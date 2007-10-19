@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/wcstools-3.7.1.ebuild,v 1.1 2007/10/18 12:05:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/wcstools-3.7.1.ebuild,v 1.2 2007/10/19 10:18:28 bicatali Exp $
 
 inherit eutils autotools
 
@@ -36,7 +36,7 @@ src_test() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	doman Man/man1/* || die "doman failed"
-	dodoc Readme Programs NEWS libned/NED_CLIENT || die "dodoc failed"
+	dodoc Readme Programs NEWS libned/NED_client || die "dodoc failed"
 	newdoc libwcs/Readme Readme.libwcs || die "newdoc failed"
 	newdoc libwcs/NEWS NEWS.libwcs || die "newdoc failed"
 }
