@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7820 2007/10/19 11:30:57 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7821 2007/10/19 19:36:04 hoffie Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,46 @@
 ##
 ##   End example
 ##
+
+# Christian Hoffmann <hoffie@gentoo.org> (19 Oct 2007)
+# masked for security reasons, bug 189172, removal scheduled for beginning of
+# 2008
+=dev-lang/php-4*
+dev-php4/creole
+dev-php4/pecl-yaz
+dev-php4/pecl-crack
+dev-php4/jargon
+dev-php4/pecl-mailparse
+dev-php4/jpgraph
+dev-php4/pecl-radius
+dev-php4/pecl-json
+dev-php4/pecl-fileinfo
+dev-php4/syck-php-bindings
+dev-php4/eaccelerator
+dev-php4/pecl-memcache
+dev-php4/phpdbg
+dev-php4/ZendOptimizer
+dev-php4/php-java-bridge
+dev-php4/pecl-translit
+dev-php4/pecl-apc
+dev-php4/ffmpeg-php
+dev-php4/adodb-ext
+dev-php4/pecl-tidy
+dev-php4/pecl-imagick
+dev-php4/xdebug
+dev-php4/pecl-id3
+dev-php4/suhosin
+dev-php4/pecl-ps
+dev-php4/xcache
+dev-php4/pecl-zip
+dev-php4/phpunit
+dev-php4/pecl-pdflib
+dev-php4/pecl-sqlite
+dev-php4/pecl-http
+# only >=1.0 seems to be php-5 compatible
+<net-nds/phpldapadmin-1.0
+# incompatible with php-5 as well, bug 194894
+<=www-apps/knowledgetree-3.4.3
 
 # Rémi Cardona <remi@gentoo.org> (18 Oct 2007)
 # Dasher still fails to build
