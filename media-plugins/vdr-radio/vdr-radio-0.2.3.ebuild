@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/vdr-radio-0.2.3.ebuild,v 1.1 2007/09/19 16:36:55 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/vdr-radio-0.2.3.ebuild,v 1.2 2007/10/19 12:09:38 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -20,7 +20,7 @@ VDR_RCADDON_FILE="${FILESDIR}/rc-addon.sh-0.2.0"
 src_install() {
 	vdr-plugin_src_install
 
-	cd ${S}/config
+	cd "${S}"/config
 
 	insinto /usr/share/vdr/radio
 	doins mpegstill/rtext*
@@ -31,5 +31,5 @@ src_install() {
 	doexe scripts/radioinfo*
 
 	keepdir "/var/cache/vdr-radio"
-	chown -R vdr:vdr ${D}/var/cache/vdr-radio
+	chown -R vdr:vdr "${D}"/var/cache/vdr-radio
 }

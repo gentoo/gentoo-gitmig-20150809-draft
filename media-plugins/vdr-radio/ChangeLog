@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-radio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/ChangeLog,v 1.18 2007/10/09 17:38:38 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/ChangeLog,v 1.19 2007/10/19 12:09:38 zzam Exp $
+
+  19 Oct 2007; Matthias Schwarzott <zzam@gentoo.org> vdr-radio-0.1.4.ebuild,
+  vdr-radio-0.2.0.ebuild, vdr-radio-0.2.1.ebuild, vdr-radio-0.2.2.ebuild,
+  vdr-radio-0.2.3.ebuild, vdr-radio-0.2.4.ebuild:
+  Setting permissions with diropts instead of manual chown.
 
 *vdr-radio-0.2.4 (09 Oct 2007)
 
