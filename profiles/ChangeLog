@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.743 2007/10/18 23:09:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.744 2007/10/19 14:05:26 philantrop Exp $
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> use.local.desc:
+  Added kde-base/kdeedu:solver.
 
   18 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
   default-bsd/fbsd/6.2/x86/package.use.mask,

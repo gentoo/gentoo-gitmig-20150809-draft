@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3094 2007/10/18 11:34:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3095 2007/10/19 14:05:26 philantrop Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -775,6 +775,7 @@ kde-base/kdebase:branding - Gentoo specific web shortcuts.
 kde-base/kdebase:logitech-mouse - Build the Control Center module to configure logitech mice
 kde-base/kdebase:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kdeedu:kig-scripting - Support Python scripting in kig.
+kde-base/kdeedu:solver - Enable the equation solver.
 kde-base/kdegraphics-meta:povray - Install KPovModeler, which needs POV-Ray.
 kde-base/kdegraphics:povray - Install KPovModeler, which needs POV-Ray.
 kde-base/kdelibs:branding - Gentoo branded KHTML user agent.
