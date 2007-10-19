@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/galago-daemon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/galago-daemon/ChangeLog,v 1.15 2007/08/02 06:35:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/galago-daemon/ChangeLog,v 1.16 2007/10/19 20:32:16 jer Exp $
+
+  19 Oct 2007; Jeroen Roovers <jer@gentoo.org> galago-daemon-0.5.1.ebuild:
+  Marked ~hppa (for media-video/totem, thanks to mr_bones).
 
   02 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
   galago-daemon-0.5.0.ebuild, galago-daemon-0.5.1.ebuild:
