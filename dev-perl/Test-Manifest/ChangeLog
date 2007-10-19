@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Manifest
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.34 2007/07/14 11:54:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.35 2007/10/19 20:44:48 ian Exp $
+
+  19 Oct 2007; Christian Hartmann <ian@gentoo.org>
+  +Test-Manifest-1.21.ebuild, +files/digest-Test-Manifest-1.21, Manifest:
+  Version bump
 
   13 Jul 2007; Raúl Porcel <armin76@gentoo.org> Test-Manifest-1.17.ebuild:
   alpha/ia64/x86 stable
