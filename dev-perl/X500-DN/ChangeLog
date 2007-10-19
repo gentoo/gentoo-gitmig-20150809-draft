@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/X500-DN
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.12 2007/01/19 17:17:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.13 2007/10/19 21:09:26 ian Exp $
+
+*X500-DN-0.29 (19 Oct 2007)
+
+  19 Oct 2007; Christian Hartmann <ian@gentoo.org> +X500-DN-0.29.ebuild:
+  Version bump
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org> X500-DN-0.28.ebuild:
   Ebuild maintenance
