@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.1.ebuild,v 1.1 2007/10/17 23:20:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.1.ebuild,v 1.2 2007/10/19 11:10:39 uberlord Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -109,6 +109,9 @@ src_unpack() {
 
 	# Mail-remote doesn't build
 	epatch "${FILESDIR}"/${P}-mail-remote-broken.patch
+
+	# Fix timezone offsets on fbsd.  bug #183708
+	epatch "${FILESDIR}"/${PN}-2.10.2-fbsd.patch
 }
 
 src_compile() {
