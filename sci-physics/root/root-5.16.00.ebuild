@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.5 2007/10/18 18:36:36 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.6 2007/10/19 10:51:56 bicatali Exp $
 
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 fortran
 
@@ -49,6 +49,7 @@ pkg_setup() {
 	elog "Example, for PYTHIA, you would do: "
 	elog "EXTRA_CONF=\"--enable-pythia --with-pythia-libdir=/usr/$(get_libdir)\" emerge root"
 	elog
+	epause 10
 	if use cern; then
 		FORTRAN="gfortran g77 ifc"
 		fortran_pkg_setup
