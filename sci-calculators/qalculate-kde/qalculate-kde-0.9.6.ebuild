@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/qalculate-kde-0.9.6.ebuild,v 1.4 2007/10/18 18:34:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/qalculate-kde-0.9.6.ebuild,v 1.5 2007/10/19 20:22:15 nixnut Exp $
 
 myconf="--disable-clntest"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/qalculate/${P}.tar.gz"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 
 DEPEND="~sci-libs/libqalculate-0.9.6
 	kde-base/kdelibs"
