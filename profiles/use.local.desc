@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3095 2007/10/19 14:05:26 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3096 2007/10/19 15:51:20 philantrop Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -769,6 +769,7 @@ gnustep-base/gnustep-make:non-flattened - do not flatten launch and library path
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard.
 kde-base/juk:akode - Support for the aKode audio-decoding frame-work.
 kde-base/kaddressbook:gnokii - Address synchronization with mobile phones via Gnokii.
+kde-base/kalzium:solver - Enable the equation solver.
 kde-base/kbugbuster:kcal - Support for kcal (calendar) format.
 kde-base/kcontrol:logitech-mouse - Build the Control Center module to configure logitech mice.
 kde-base/kdebase:branding - Gentoo specific web shortcuts.
