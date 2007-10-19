@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.160 2007/10/17 13:15:27 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.161 2007/10/19 18:57:50 nixnut Exp $
+
+  19 Oct 2007; nixnut <nixnut@gentoo.org> squid-2.6.16.ebuild:
+  Stable on ppc wrt bug 195932
 
   17 Oct 2007; Christian Birchinger <joker@gentoo.org> squid-2.6.16.ebuild:
   Added sparc stable keyword
