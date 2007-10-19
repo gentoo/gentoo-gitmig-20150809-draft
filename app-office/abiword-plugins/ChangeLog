@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.35 2007/09/08 11:30:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.36 2007/10/19 14:24:15 je_fro Exp $
+
+  19 Oct 2007; <jeff@gentoo.org> abiword-plugins-2.4.6.ebuild:
+  Changed goffice dependency as per bug #191555. Big Thanks(tm) to rbridge.
 
   08 Sep 2007; Gilles Dartiguelongue <eva@gentoo.org>
   +files/abiword-plugins-2.4.6-poppler-0.6-api.patch,

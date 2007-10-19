@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.11 2007/09/08 11:30:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.12 2007/10/19 14:24:15 je_fro Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND="=app-office/abiword-${PV}*
 	>=gnome-base/libglade-2
 	>=gnome-extra/libgsf-1.12.1
 	bzip2? ( app-arch/bzip2 )
-	gnome? ( >=x11-libs/goffice-0.1 )
+	gnome? ( =x11-libs/goffice-0.2* )
 	grammar? ( >=dev-libs/link-grammar-4.2.2 )
 	jpeg?  ( >=media-libs/jpeg-6b-r2 )
 	libgda? (
@@ -45,8 +45,8 @@ S="${WORKDIR}/abiword-${PV}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/poppler_abi_change.patch
+	cd "${S}"
+	epatch "${FILESDIR}/poppler_abi_change.patch"
 
 	# Fix use of poppler API
 	if has_version '>=app-text/poppler-0.6'; then
@@ -56,7 +56,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf="--enable-all \
-		--with-abiword=${WORKDIR}/abiword-${PV}/abi \
+		--with-abiword="${WORKDIR}/abiword-${PV}/abi" \
 		$(use_enable debug) \
 		$(use_with bzip2 bz2abw) \
 		$(use_with gnome abigochart) \
