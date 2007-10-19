@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.80 2007/10/18 20:30:00 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.81 2007/10/19 21:02:31 opfer Exp $
+
+  19 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  hplip-1.7.4a-r2.ebuild:
+  stable x86, security bug 195565
 
 *hplip-1.7.4a-r2 (18 Oct 2007)
 
