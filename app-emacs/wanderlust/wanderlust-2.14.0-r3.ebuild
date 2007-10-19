@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.14.0-r3.ebuild,v 1.9 2007/10/16 06:31:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.14.0-r3.ebuild,v 1.10 2007/10/19 21:13:56 ulm Exp $
 
 inherit elisp eutils
 
@@ -49,10 +49,8 @@ src_install() {
 		install || die "emake install failed"
 
 	elisp-install wl utils/bbdb-wl.{el,elc}
-	elisp-site-file-install "${FILESDIR}/70wl-gentoo.el" \
+	elisp-site-file-install "${FILESDIR}/70wl-gentoo.el" wl \
 		|| die "elisp-site-file-install failed"
-
-	dodir /usr/share/wl/samples
 
 	insinto /usr/share/wl/samples/ja
 	doins samples/ja/*
