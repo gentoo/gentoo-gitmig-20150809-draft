@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libelf
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.22 2007/07/02 10:15:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.23 2007/10/19 13:22:38 uberlord Exp $
+
+  19 Oct 2007; Roy Marples <uberlord@gentoo.org> libelf-0.8.9.ebuild:
+  Keyword ~x86-fbsd.
 
   29 Jun 2007; Joel Martin <kanaka@gentoo.org>
   files/libelf-0.8.9-parallelmakefix.patch:
