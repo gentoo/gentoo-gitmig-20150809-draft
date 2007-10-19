@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.14.0-r3.ebuild,v 1.12 2007/10/19 21:39:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.14.0-r3.ebuild,v 1.13 2007/10/19 22:31:08 ulm Exp $
 
 inherit elisp eutils
 
@@ -37,10 +37,6 @@ src_compile() {
 	use ssl && echo "(setq wl-install-utils t)" >> WL-CFG
 	emake || die "emake failed"
 	emake info || die "emake info failed"
-	if use bbdb; then
-		cd utils
-		EMACS="emacs -L ../../elmo -L ../../wl" elisp-comp bbdb-wl.el
-	fi
 }
 
 src_install() {
@@ -48,10 +44,6 @@ src_install() {
 		LISPDIR="${D}${SITELISP}" \
 		PIXMAPDIR="${D}/usr/share/wl/icons" \
 		install || die "emake install failed"
-
-	if use bbdb; then
-		elisp-install wl utils/bbdb-wl.{el,elc} || die "elisp-install failed"
-	fi
 
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" wl \
 		|| die "elisp-site-file-install failed"
