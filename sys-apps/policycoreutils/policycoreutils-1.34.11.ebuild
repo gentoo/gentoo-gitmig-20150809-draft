@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.34.11.ebuild,v 1.1 2007/10/18 19:47:49 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.34.11.ebuild,v 1.2 2007/10/19 14:57:32 pebenito Exp $
 
 IUSE="nls"
 
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 S2=${WORKDIR}/policycoreutils-extra
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	[ ! -z "${BUGFIX_PATCH}" ] && epatch "${BUGFIX_PATCH}"
