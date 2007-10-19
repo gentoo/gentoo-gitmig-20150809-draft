@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.15 2007/10/17 22:00:44 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.16 2007/10/19 19:11:25 tgurr Exp $
+
+  19 Oct 2007; Timo Gurr <tgurr@gentoo.org>
+  +files/ghostscript-8.60-include.patch, ghostscript-gpl-8.60.ebuild:
+  Ebuild cleanup, added missing dependency and fix bug #196289.
 
 *ghostscript-gpl-8.60 (17 Oct 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.60.ebuild,v 1.1 2007/10/17 22:00:44 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.60.ebuild,v 1.2 2007/10/19 19:11:25 tgurr Exp $
 
 inherit autotools elisp-common eutils versionator flag-o-matic
 
@@ -20,8 +20,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="bindist cjk cups djvu gtk jpeg2k X"
 
-COMMON_DEPEND="virtual/libc
-	>=media-libs/jpeg-6b
+COMMON_DEPEND=">=media-libs/jpeg-6b
+	>=media-libs/libpng-1.2.5
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7
 	X? ( x11-libs/libXt x11-libs/libXext )
@@ -66,6 +66,7 @@ src_unpack() {
 
 	# additional Gentoo patches
 	epatch "${FILESDIR}/ghostscript-afpl-8.54-rinkj.patch"
+	epatch "${FILESDIR}/ghostscript-8.60-include.patch"
 
 	if use bindist && use djvu ; then
 		ewarn "You have bindist in your USE, djvu support will NOT be compiled!"
@@ -83,8 +84,6 @@ src_unpack() {
 			cat gsdjvu-${GSDJVU_PV}/gsdjvu.mak >> "${S}/src/contrib.mak"
 	fi
 
-	sed -i -e "s:#if 1:#if 0:" "${S}/contrib/gdevhl12.c" || die "sed failed"
-
 	if ! use gtk ; then
 		sed -i "s:\$(GSSOX)::" src/*.mak || die "gsx sed failed"
 		sed -i "s:.*\$(GSSOX_XENAME)$::" src/*.mak || die "gsxso sed failed"
@@ -97,6 +96,9 @@ src_unpack() {
 		-e "s:docdir=.*:docdir=/usr/share/doc/${PF}/html:" \
 		-e "s:GS_DOCDIR=.*:GS_DOCDIR=/usr/share/doc/${PF}/html:" \
 		src/Makefile.in src/*.mak || die "sed failed"
+
+	cd "${S}"
+	eautoreconf
 }
 
 src_compile() {
@@ -126,6 +128,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" soinstall || die "emake soinstall failed"
 
 	if ! use bindist && use djvu ; then
 		dobin gsdjvu || die "dobin gsdjvu install failed"

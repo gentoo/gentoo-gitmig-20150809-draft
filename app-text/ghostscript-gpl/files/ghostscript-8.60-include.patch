@@ -1,0 +1,106 @@
+--- /trunk/gs/src/Makefile.in	2007/09/27 20:20:46	8254
++++ trunk/gs/src/Makefile.in	2007/09/27 20:26:51	8255
+@@ -1,4 +1,4 @@
+-#  Copyright (C) 2001-2006 Artifex Software, Inc.
++#  Copyright (C) 2001-2007 Artifex Software, Inc.
+ #  All Rights Reserved.
+ #
+ #  This software is provided AS-IS with no warranty, either express or
+@@ -55,6 +55,7 @@
+ exec_prefix = @exec_prefix@
+ bindir = @bindir@
+ scriptdir = $(bindir)
++includedir = @includedir@
+ libdir = @libdir@
+ mandir = @mandir@
+ man1ext = 1
+@@ -67,6 +68,7 @@
+ gsdir = @datadir@/ghostscript
+ gsdatadir = $(gsdir)/$(GS_DOT_VERSION)
+ gssharedir = @libdir@/ghostscript/$(GS_DOT_VERSION)
++gsincludedir = @includedir@/ghostscript/
+ 
+ docdir=$(gsdatadir)/doc
+ exdir=$(gsdatadir)/examples
+--- /trunk/gs/src/macosx.mak	2007/09/27 20:20:46	8254
++++ trunk/gs/src/macosx.mak	2007/09/27 20:26:51	8255
+@@ -1,4 +1,4 @@
+-#  Copyright (C) 2001-2006 Artifex Software, Inc.
++#  Copyright (C) 2001-2007 Artifex Software, Inc.
+ #  All Rights Reserved.
+ #
+ #  This software is provided AS-IS with no warranty, either express or
+@@ -58,11 +58,14 @@
+ exec_prefix = $(prefix)
+ bindir = $(exec_prefix)/bin
+ scriptdir = $(bindir)
++includedir = $(prefix)/include
+ libdir = $(exec_prefix)/lib
+ mandir = $(prefix)/man
+ man1ext = 1
+ datadir = $(prefix)/Resources
+ gsdatadir = $(prefix)/Versions/$(GS_DOT_VERSION)/Resources
++gssharedir = $(libdir)/ghostscript/$(GS_DOT_VERSION)
++gsincludedir = $(includedir)/ghostscript/
+ 
+ docdir=$(gsdatadir)/doc
+ exdir=$(gsdatadir)/examples
+--- /trunk/gs/src/unix-dll.mak	2007/09/27 20:20:46	8254
++++ trunk/gs/src/unix-dll.mak	2007/09/27 20:26:51	8255
+@@ -1,4 +1,4 @@
+-#  Copyright (C) 2001-2006 Artifex Software, Inc.
++#  Copyright (C) 2001-2007 Artifex Software, Inc.
+ #  All Rights Reserved.
+ #
+ #  This software is provided AS-IS with no warranty, either express or
+@@ -60,7 +60,7 @@
+ #LDFLAGS_SO=-dynamiclib -install-name $(GS_SONAME_MAJOR_MINOR)
+ 
+ GS_SO=$(BINDIR)/$(GS_SONAME)
+-GS_SO_MAJOR=$(BINDIR)/$(GS_SONAME_MAJOR)
++GS_SO_MAJOR=$(BINDIR)/$(GS_SONAME_MAJOR) 
+ GS_SO_MAJOR_MINOR=$(BINDIR)/$(GS_SONAME_MAJOR_MINOR)
+ 
+ # Shared object is built by redefining GS_XE in a recursive make.
+@@ -114,6 +114,7 @@
+ 	-mkdir -p $(DESTDIR)$(gsdatadir)
+ 	-mkdir -p $(DESTDIR)$(bindir)
+ 	-mkdir -p $(DESTDIR)$(libdir)
++	-mkdir -p $(DESTDIR)$(gsincludedir)
+ 	$(INSTALL_PROGRAM) $(GSSOC) $(DESTDIR)$(bindir)/$(GSSOC_XENAME)
+ 	$(INSTALL_PROGRAM) $(GSSOX) $(DESTDIR)$(bindir)/$(GSSOX_XENAME)
+ 	$(INSTALL_PROGRAM) $(BINDIR)/$(SOBINRELDIR)/$(GS_SONAME_MAJOR_MINOR) $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR_MINOR)
+@@ -121,6 +122,8 @@
+ 	ln -s $(GS_SONAME_MAJOR_MINOR) $(DESTDIR)$(libdir)/$(GS_SONAME)
+ 	$(RM_) $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR)
+ 	ln -s $(GS_SONAME_MAJOR_MINOR) $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR)
++	$(INSTALL_PROGRAM) $(PSSRC)iapi.h $(DESTDIR)$(gsincludedir)/iapi.h
++	$(INSTALL_PROGRAM) $(PSSRC)ierrors.h $(DESTDIR)$(gsincludedir)/ierrors.h
+ 
+ soinstall: install-so install-scripts install-data
+ 
+--- /trunk/gs/src/unix-gcc.mak	2007/09/27 20:20:46	8254
++++ trunk/gs/src/unix-gcc.mak	2007/09/27 20:26:51	8255
+@@ -1,4 +1,4 @@
+-#  Copyright (C) 2001-2006 Artifex Software, Inc.
++#  Copyright (C) 2001-2007 Artifex Software, Inc.
+ #  All Rights Reserved.
+ #
+ #  This software is provided AS-IS with no warranty, either express or
+@@ -56,12 +56,15 @@
+ exec_prefix = $(prefix)
+ bindir = $(exec_prefix)/bin
+ scriptdir = $(bindir)
++includedir = $(prefix)/include
+ libdir = $(exec_prefix)/lib
+ mandir = $(prefix)/man
+ man1ext = 1
+ datadir = $(prefix)/share
+ gsdir = $(datadir)/ghostscript
+ gsdatadir = $(gsdir)/$(GS_DOT_VERSION)
++gssharedir = $(libdir)/ghostscript/$(GS_DOT_VERSION)
++gsincludedir = $(includedir)/ghostscript/
+ 
+ docdir=$(gsdatadir)/doc
+ exdir=$(gsdatadir)/examples
+
