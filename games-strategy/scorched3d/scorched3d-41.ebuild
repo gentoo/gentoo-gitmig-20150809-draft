@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-41.ebuild,v 1.1 2007/10/19 23:44:20 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-41.ebuild,v 1.2 2007/10/20 02:33:45 nyhm Exp $
 
 inherit eutils wxwidgets games
 
@@ -42,6 +42,9 @@ pkg_setup() {
 src_compile() {
 	egamesconf \
 		--disable-dependency-tracking \
+		--with-fftw=/usr \
+		--with-ogg=/usr \
+		--with-vorbis=/usr \
 		--datadir="${GAMES_DATADIR}/${PN}" \
 		--with-docdir="/usr/share/doc/${PF}" \
 		--with-wx-config="${WX_CONFIG}" \
