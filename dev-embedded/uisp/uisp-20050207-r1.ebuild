@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/uisp-20050207-r1.ebuild,v 1.2 2005/09/13 15:15:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/uisp-20050207-r1.ebuild,v 1.3 2007/10/20 20:58:26 calchan Exp $
 
 inherit eutils
 
@@ -19,8 +19,9 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src
-	epatch ${FILESDIR}/mega-48-88-168.patch
+	cd "${S}"/src
+	epatch "${FILESDIR}"/mega-48-88-168.patch
+	sed -i -e 's: -Werror::' Makefile.in
 }
 
 src_compile() {
@@ -29,7 +30,9 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	dodoc doc/*
+	mv "${D}"/usr/share/doc/${P}/{AUTHORS,ChangeLog,CHANGES,TODO}* "${D}"/usr/share/doc/${PF}
+	rm -rf "${D}"/usr/share/doc/${P}
 	prepalldocs
 }

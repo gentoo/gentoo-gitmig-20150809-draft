@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/uisp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/ChangeLog,v 1.14 2007/09/19 15:46:47 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/ChangeLog,v 1.15 2007/10/20 20:58:26 calchan Exp $
+
+  20 Oct 2007; Denis Dupeyron <calchan@gentoo.org> -files/uisp-gcc34.patch,
+  -uisp-20040311.ebuild, uisp-20050207-r1.ebuild:
+  Fixed bug #196483. Fixed compilation failing on warnings due to -Werror in
+  CXXFLAGS. Removed old ebuild.
 
   19 Sep 2007; Denis Dupeyron <calchan@gentoo.org> -uisp-20050103.ebuild:
   Removed useless uisp-20050103 which fixes bug #193017.
