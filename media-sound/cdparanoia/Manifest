@@ -2,10 +2,10 @@ AUX 3.9.8-gcc34.patch 772 RMD160 c13aac76c54ac969e45a87b26f56fc62a4a72d07 SHA1 8
 MD5 8dfcb53296c1e66ba13fb02d81eef39b files/3.9.8-gcc34.patch 772
 RMD160 c13aac76c54ac969e45a87b26f56fc62a4a72d07 files/3.9.8-gcc34.patch 772
 SHA256 ffe735303a300d358ba99fc85f6d28c4bc7bc7ce90bf42b9838803fcc99cf150 files/3.9.8-gcc34.patch 772
-AUX cdparanoia-3.10_pre0-Makefile.in.patch 2399 RMD160 a38e8f60eb69c1f03b6691f455fc598bd8e97aa4 SHA1 16c1eb57619d253229dc95f25724b68817d8c1f9 SHA256 c08b6f426237e01ea581ce1e7b5f3981f89103975cf8f13769734050b980d689
-MD5 721ad6a7d30997d7e5868a395459cbf0 files/cdparanoia-3.10_pre0-Makefile.in.patch 2399
-RMD160 a38e8f60eb69c1f03b6691f455fc598bd8e97aa4 files/cdparanoia-3.10_pre0-Makefile.in.patch 2399
-SHA256 c08b6f426237e01ea581ce1e7b5f3981f89103975cf8f13769734050b980d689 files/cdparanoia-3.10_pre0-Makefile.in.patch 2399
+AUX cdparanoia-3.10_pre0-Makefile.in.patch 2953 RMD160 c9a869fce12029a7d370e291ee22f68a302c05db SHA1 9bce808fd217766a8ae530c9e01c993072e1732b SHA256 6f0a4e0d6dd3e221d262661ae8bc5070e67f4d243eb28019bf819d8027ffbe00
+MD5 338bcdb0fe1a472fd5f6af68cd35c5c5 files/cdparanoia-3.10_pre0-Makefile.in.patch 2953
+RMD160 c9a869fce12029a7d370e291ee22f68a302c05db files/cdparanoia-3.10_pre0-Makefile.in.patch 2953
+SHA256 6f0a4e0d6dd3e221d262661ae8bc5070e67f4d243eb28019bf819d8027ffbe00 files/cdparanoia-3.10_pre0-Makefile.in.patch 2953
 AUX cdparanoia-3.10_pre0-include-cdda_interface_h.patch 556 RMD160 42832206bf52a3629559d8090f57b3e74d64a421 SHA1 677c0c96de896277a2cf2ce811889e67c195af12 SHA256 c3dabd747091f2d3f2335f523b44a1ef5ab4b9c908fbd76b9d9feb5f40dd95f8
 MD5 69ecfbab5fbeb81f710db7528e194ebf files/cdparanoia-3.10_pre0-include-cdda_interface_h.patch 556
 RMD160 42832206bf52a3629559d8090f57b3e74d64a421 files/cdparanoia-3.10_pre0-include-cdda_interface_h.patch 556
