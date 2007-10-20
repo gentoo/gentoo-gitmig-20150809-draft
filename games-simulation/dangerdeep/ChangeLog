@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/dangerdeep
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/ChangeLog,v 1.5 2007/06/12 21:47:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/ChangeLog,v 1.6 2007/10/20 01:49:25 mr_bones_ Exp $
+
+  20 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  dangerdeep-0.3.0.ebuild:
+  needs fftw-3
 
 *dangerdeep-0.3.0 (12 Jun 2007)
 

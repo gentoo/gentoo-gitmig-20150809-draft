@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.3.0.ebuild,v 1.1 2007/06/12 21:47:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.3.0.ebuild,v 1.2 2007/10/20 01:49:25 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -16,7 +16,7 @@ IUSE="sse debug"
 
 RDEPEND="virtual/opengl
 	virtual/glu
-	sci-libs/fftw
+	=sci-libs/fftw-3*
 	media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/sdl-image
