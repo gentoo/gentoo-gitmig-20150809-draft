@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/pypolicyd-spf-0.5.ebuild,v 1.1 2007/10/06 12:02:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/pypolicyd-spf-0.5.1.ebuild,v 1.1 2007/10/20 04:08:50 dragonheart Exp $
 
 inherit distutils eutils
 
@@ -18,6 +18,6 @@ DEPEND=">=dev-python/pyspf-2.0.3"
 src_unpack() {
 	unpack "${A}"
 	cd "${S}"
-	epatch "${FILESDIR}/"${P}-etcpath.patch
+	epatch "${FILESDIR}/"${PN}-0.5-etcpath.patch
 
 }
