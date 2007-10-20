@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nikto
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.21 2007/07/16 14:56:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.22 2007/10/20 17:26:58 ian Exp $
+
+  20 Oct 2007; Christian Hartmann <ian@gentoo.org> nikto-1.36.ebuild:
+  Fixed bug #193916
 
   16 Jul 2007; Michael Cummings <mcummings@gentoo.org> nikto-1.36.ebuild:
   sparc stable
