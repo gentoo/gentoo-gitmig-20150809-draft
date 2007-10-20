@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.55 2007/02/12 15:34:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.56 2007/10/20 16:39:59 drac Exp $
+
+*cdparanoia-3.10_pre0 (20 Oct 2007)
+
+  20 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  +files/cdparanoia-3.10_pre0-asneeded.patch,
+  +files/cdparanoia-3.10_pre0-include-cdda_interface_h.patch,
+  +files/cdparanoia-3.10_pre0-use-destdir.patch,
+  +cdparanoia-3.10_pre0.ebuild:
+  Version bump wrt #153823.
 
   12 Feb 2007; Bryan Østergaard <kloeri@gentoo.org>
   cdparanoia-3.9.8-r5.ebuild:
