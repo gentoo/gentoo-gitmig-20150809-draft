@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdictrayapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/ChangeLog,v 1.13 2007/09/28 22:54:08 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/ChangeLog,v 1.14 2007/10/20 11:37:24 ali_bush Exp $
+
+*jdictrayapi-0.9.1-r3 (20 Oct 2007)
+
+  20 Oct 2007; <alistair@gentoo.org> +files/fix-ctray-libarch.patch,
+  +jdictrayapi-0.9.1-r3.ebuild:
+  Revbump to add patch where jdictrayapi does not work on amd64, even tho it
+  has been marked stable.
 
   28 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
   jdictrayapi-0.9.1-r2.ebuild:
