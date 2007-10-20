@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.125 2007/10/19 23:19:37 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.126 2007/10/20 23:34:11 philantrop Exp $
+
+  20 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> kopete-3.5.8.ebuild:
+  Restricted the tests which are broken by upstream and won't be fixed.
 
 *kopete-3.5.8 (19 Oct 2007)
 
