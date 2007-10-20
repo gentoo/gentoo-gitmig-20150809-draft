@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.3.ebuild,v 1.2 2007/10/01 23:56:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.3.ebuild,v 1.3 2007/10/20 18:59:16 pylon Exp $
 
 inherit eutils games
 
@@ -110,7 +110,7 @@ src_install() {
 	doins scripts/*.example || die "doins failed (scripts)"
 
 	for i in {16,32,48,64,128}; do
-		insinto "${ROOT}"/usr/share/icons/hicolor/${i}x${i}/apps
+		insinto /usr/share/icons/hicolor/${i}x${i}/apps
 		newins media/openttd.${i}.png openttd.png
 	done
 
