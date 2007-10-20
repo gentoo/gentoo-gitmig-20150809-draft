@@ -1,0 +1,9 @@
+# ChangeLog for gentoo-portage/virtual
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-basic/ChangeLog,v 1.1 2007/10/20 14:46:52 wrobel Exp $
+
+*httpd-basic-0 (20 Oct 2007)
+
+  20 Oct 2007; <wrobel@gentoo.org> +metadata.xml, +httpd-basic-0.ebuild:
+  Finally adding virtual/httpd-basic to close #11007.
+
