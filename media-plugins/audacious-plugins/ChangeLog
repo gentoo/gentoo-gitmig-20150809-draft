@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.60 2007/07/26 17:11:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.61 2007/10/20 14:43:23 armin76 Exp $
+
+  20 Oct 2007; Raúl Porcel <armin76@gentoo.org>
+  audacious-plugins-1.3.5.ebuild:
+  alpha stable, thanks to Tobias Klausmann for testing
 
   26 Jul 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   audacious-plugins-1.3.3.ebuild, audacious-plugins-1.3.4.ebuild,
