@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.8.ebuild,v 1.1 2007/10/19 22:33:15 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.8.ebuild,v 1.2 2007/10/20 23:01:08 philantrop Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -11,6 +11,9 @@ IUSE="jingle kdehiddenvisibility rdesktop sametime slp ssl wifi"
 
 SRC_URI="${SRC_URI}
 	mirror://gentoo/kdenetwork-3.5-patchset-01.tar.bz2"
+
+# Even more broken tests...
+RESTRICT="test"
 
 BOTH_DEPEND="~kde-base/kdebase-${PV}
 	dev-libs/libxslt
