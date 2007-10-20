@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.80 2007/10/15 06:05:08 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.81 2007/10/20 03:28:17 keri Exp $
+
+  20 Oct 2007; keri <keri@gentoo.org>
+  +files/mercury-0.13.1-tests-declarative-throw.patch,
+  mercury-0.13.1-r1.ebuild:
+  Fix missing trace path on declarative debugging tests.
 
   15 Oct 2007; keri <keri@gentoo.org> files/mercury-0.13.1-bootstrap.patch:
   Regenerate slice C files when bootstrap stage1 grade is different from

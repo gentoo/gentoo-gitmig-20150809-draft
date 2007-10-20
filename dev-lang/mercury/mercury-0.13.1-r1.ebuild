@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r1.ebuild,v 1.9 2007/03/02 23:43:00 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r1.ebuild,v 1.10 2007/10/20 03:28:17 keri Exp $
 
 inherit eutils
 
@@ -34,6 +34,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-parallel-install_grades.patch
 	epatch "${FILESDIR}"/${P}-deep_profiler.patch
 	epatch "${FILESDIR}"/${P}-docs.patch
+	epatch "${FILESDIR}"/${P}-tests-declarative-throw.patch
 	epatch "${FILESDIR}"/${P}-tests-dir_test.patch
 	epatch "${FILESDIR}"/${P}-tests-ho_and_type_spec_bug.patch
 	epatch "${FILESDIR}"/${P}-tests-mdbrc.patch
@@ -103,6 +104,7 @@ src_test() {
 	sed -i -e "s:@WORKSPACE@:${TWS}:" WS_FLAGS.ws
 
 	PATH="${TWS}"/scripts:"${TWS}"/util:"${PATH}" \
+	TERM="" \
 	WORKSPACE="${TWS}" \
 	MERCURY_COMPILER="${TWS}"/compiler/mercury_compile \
 	MMAKE_DIR="${TWS}"/scripts \
