@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libspf2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.21 2007/10/19 12:33:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.22 2007/10/20 23:27:15 jurek Exp $
+
+  20 Oct 2007; Jurek Bartuszek <jurek@gentoo.org> libspf2-1.2.5-r2.ebuild:
+  x86 stable (bug #196200)
 
   19 Oct 2007; Jeroen Roovers <jer@gentoo.org> libspf2-1.2.5-r2.ebuild:
   Stable for HPPA (bug #196200). Fixed quoting issues repoman complained about.
