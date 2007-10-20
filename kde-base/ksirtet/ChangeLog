@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksirtet
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirtet/ChangeLog,v 1.71 2007/10/19 23:31:39 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirtet/ChangeLog,v 1.72 2007/10/20 01:10:28 philantrop Exp $
+
+  20 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  files/digest-ksirtet-3.5.6, Manifest:
+  Fixed broken manifest.
 
 *ksirtet-3.5.8 (19 Oct 2007)
 
