@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.5 2007/10/20 12:53:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.6 2007/10/20 16:49:35 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -192,6 +192,7 @@ src_install() {
 	dodoc ChangeLog NEWS PROJECTS README
 
 	use doc || rm -rf "${D}/usr/share/texmf/doc"
+	use doc || rm -rf "${D}/usr/share/texmf-dist/doc"
 
 	dodir /var/cache/fonts
 
