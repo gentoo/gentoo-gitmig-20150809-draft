@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.18 2007/10/20 15:37:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.19 2007/10/20 15:51:44 aballier Exp $
+
+  20 Oct 2007; Alexis Ballier <aballier@gentoo.org> -files/ocaml-3.07.patch,
+  -files/coq-8.0-byteflags.patch, -files/coq-8.0-ocaml-3.08.1.patch,
+  -coq-8.0-r1.ebuild:
+  remove old versions
 
 *coq-8.1_p2 (20 Oct 2007)
 
