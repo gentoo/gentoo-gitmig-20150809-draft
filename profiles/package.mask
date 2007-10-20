@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7825 2007/10/20 17:06:55 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7826 2007/10/20 18:11:50 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Markus Ullmann <jokey@gentoo.org> (20 Oct 2007)
+# dependency unneeded now, merged upstream
+dev-util/portatosourceview
 
 # Samuli Suominen <drac@gentoo.org> (20 Oct 2007)
 # Needs to be tested on 64bit and fbsd.
