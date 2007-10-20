@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xyssl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xyssl/ChangeLog,v 1.2 2007/10/20 19:01:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xyssl/ChangeLog,v 1.3 2007/10/20 23:36:05 pylon Exp $
+
+  20 Oct 2007; Lars Weiler <pylon@gentoo.org> xyssl-0.8.ebuild:
+  Keyworded ~ppc.
 
 *xyssl-0.8 (20 Oct 2007)
 

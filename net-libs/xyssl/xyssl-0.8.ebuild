@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xyssl/xyssl-0.8.ebuild,v 1.1 2007/10/20 19:01:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xyssl/xyssl-0.8.ebuild,v 1.2 2007/10/20 23:36:05 pylon Exp $
 
 DESCRIPTION="Cryptographic library for embedded systems"
 HOMEPAGE="http://xyssl.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://xyssl.org/code/download/${P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE="examples sse2"
 
 DEPEND="virtual/libc"
