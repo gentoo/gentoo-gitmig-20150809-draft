@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/scilab
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.38 2007/05/30 12:52:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.39 2007/10/20 09:58:24 markusle Exp $
+
+  20 Oct 2007; Markus Dittrich <markusle@gentoo.org> scilab-4.0.ebuild,
+  scilab-4.1.ebuild, scilab-4.1.1.ebuild:
+  Added missing virtual/cblas to DEPEND (fixes bug #196433).
 
   30 May 2007; Markus Dittrich <markusle@gentoo.org> scilab-4.1.1.ebuild:
   configure with tcl/tk by default to avoid strange crashes using
