@@ -64,9 +64,6 @@ fi
 echo "Generating format files ..."
 fmtutil-sys --all &>/dev/null
 
-echo "Generating tex symlinks from formats to engines..."
-texlinks -s
-
 echo "Generating font maps..."
 updmap-sys &>/dev/null
 
