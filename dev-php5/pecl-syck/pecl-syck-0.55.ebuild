@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-syck/pecl-syck-0.55.ebuild,v 1.2 2007/10/19 21:59:18 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-syck/pecl-syck-0.55.ebuild,v 1.3 2007/10/20 05:27:46 mr_bones_ Exp $
 
 PHP_EXT_NAME="syck"
 PHP_EXT_INI="yes"
@@ -26,5 +26,3 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}/ext/php"
 
 need_php_by_category
-
-
