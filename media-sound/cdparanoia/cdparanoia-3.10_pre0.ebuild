@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10_pre0.ebuild,v 1.3 2007/10/20 17:36:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10_pre0.ebuild,v 1.4 2007/10/20 18:01:39 drac Exp $
 
 WANT_AUTOCONF=2.1
 
-inherit autotools eutils libtool toolchain-funcs versionator
+inherit autotools eutils flag-o-matic libtool toolchain-funcs versionator
 
 MY_P=${PN}-III-$(get_version_component_range 2)$(get_version_component_range 3)
 
@@ -37,6 +37,7 @@ src_unpack() {
 
 src_compile() {
 	tc-export CC AR RANLIB
+	append-flags -I"${S}/interface"
 	econf
 	emake OPT="${CFLAGS}" || die "emake failed."
 }
