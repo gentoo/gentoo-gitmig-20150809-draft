@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.67 2007/10/19 23:32:28 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.68 2007/10/20 12:15:14 philantrop Exp $
+
+  20 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  ksmserver-3.5.8.ebuild:
+  Excluded problematic patches. Fixes bug 196507.
 
 *ksmserver-3.5.8 (19 Oct 2007)
 
