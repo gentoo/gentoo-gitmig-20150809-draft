@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/noatun
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.78 2007/08/11 16:43:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.79 2007/10/19 23:55:42 philantrop Exp $
+
+*noatun-3.5.8 (19 Oct 2007)
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> +noatun-3.5.8.ebuild:
+  Bump to KDE 3.5.8.
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org> noatun-3.5.7.ebuild:
   x86 stable wrt #185823

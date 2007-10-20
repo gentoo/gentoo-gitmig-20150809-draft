@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.75 2007/08/11 16:16:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.76 2007/10/19 23:35:13 philantrop Exp $
+
+*kstars-3.5.8 (19 Oct 2007)
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> +kstars-3.5.8.ebuild:
+  Bump to KDE 3.5.8.
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kstars-3.5.7.ebuild:
   x86 stable wrt #185823

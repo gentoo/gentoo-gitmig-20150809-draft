@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dcopc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopc/ChangeLog,v 1.19 2007/05/24 11:06:52 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopc/ChangeLog,v 1.20 2007/10/19 21:50:20 philantrop Exp $
+
+*dcopc-3.5.8 (19 Oct 2007)
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> +dcopc-3.5.8.ebuild:
+  Bump to KDE 3.5.8.
 
   24 May 2007; Carsten Lohrke <carlo@gentoo.org> dcopc-3.5.0.ebuild:
   Adjust MAXKDEVER.

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/mpeglib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/ChangeLog,v 1.52 2007/08/19 15:06:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/ChangeLog,v 1.53 2007/10/19 23:54:57 philantrop Exp $
+
+*mpeglib-3.5.8 (19 Oct 2007)
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +mpeglib-3.5.8.ebuild:
+  Bump to KDE 3.5.8.
 
   19 Aug 2007; nixnut <nixnut@gentoo.org> mpeglib-3.5.6.ebuild:
   Stable on ppc wrt bug 176297

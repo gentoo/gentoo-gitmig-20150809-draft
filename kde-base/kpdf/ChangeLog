@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.138 2007/08/23 15:14:39 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.139 2007/10/19 23:22:31 philantrop Exp $
+
+*kpdf-3.5.8 (19 Oct 2007)
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> +kpdf-3.5.8.ebuild:
+  Bump to KDE 3.5.8.
 
 *kpdf-3.5.7-r2 (23 Aug 2007)
 

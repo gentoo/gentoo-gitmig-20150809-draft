@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdetoys-meta
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.71 2007/08/17 07:29:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.72 2007/10/19 22:45:28 philantrop Exp $
+
+*kdetoys-meta-3.5.8 (19 Oct 2007)
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdetoys-meta-3.5.8.ebuild:
+  Bump to KDE 3.5.8.
 
   17 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   kdetoys-meta-3.5.5.ebuild, kdetoys-meta-3.5.6.ebuild,

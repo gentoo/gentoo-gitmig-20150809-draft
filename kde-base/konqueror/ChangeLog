@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.94 2007/09/26 10:37:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.95 2007/10/19 23:16:09 philantrop Exp $
+
+*konqueror-3.5.8 (19 Oct 2007)
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +konqueror-3.5.8.ebuild:
+  Bump to KDE 3.5.8.
 
   26 Sep 2007; Raúl Porcel <armin76@gentoo.org> konqueror-3.5.7-r3.ebuild:
   sparc stable wrt security #185603

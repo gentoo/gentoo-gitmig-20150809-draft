@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.291 2007/10/04 20:36:46 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.292 2007/10/19 22:37:59 philantrop Exp $
+
+*kdepim-3.5.8 (19 Oct 2007)
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> +kdepim-3.5.8.ebuild:
+  Bump to KDE 3.5.8.
 
 *kdepim-3.5.7-r5 (04 Oct 2007)
 

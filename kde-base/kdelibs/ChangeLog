@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.490 2007/09/26 10:31:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.491 2007/10/19 22:27:24 philantrop Exp $
+
+*kdelibs-3.5.8 (19 Oct 2007)
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdelibs-3.5.8.ebuild:
+  Bump to KDE 3.5.8.
 
   26 Sep 2007; Raúl Porcel <armin76@gentoo.org> kdelibs-3.5.7-r3.ebuild:
   sparc stable wrt security #185603

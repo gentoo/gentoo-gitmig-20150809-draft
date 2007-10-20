@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeartwork-kworldclock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kworldclock/ChangeLog,v 1.70 2007/08/16 23:29:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kworldclock/ChangeLog,v 1.71 2007/10/19 22:16:16 philantrop Exp $
+
+*kdeartwork-kworldclock-3.5.8 (19 Oct 2007)
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +kdeartwork-kworldclock-3.5.8.ebuild:
+  Bump to KDE 3.5.8.
 
   16 Aug 2007; Zac Medico <zmedico@gentoo.org>
   kdeartwork-kworldclock-3.5.5.ebuild, kdeartwork-kworldclock-3.5.6.ebuild,

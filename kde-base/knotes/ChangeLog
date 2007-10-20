@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.73 2007/08/11 15:28:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.74 2007/10/19 23:12:59 philantrop Exp $
+
+*knotes-3.5.8 (19 Oct 2007)
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> +knotes-3.5.8.ebuild:
+  Bump to KDE 3.5.8.
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org> knotes-3.5.7.ebuild:
   x86 stable wrt #185823

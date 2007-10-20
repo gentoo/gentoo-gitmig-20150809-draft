@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kghostview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/ChangeLog,v 1.76 2007/08/11 16:31:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/ChangeLog,v 1.77 2007/10/19 22:55:45 philantrop Exp $
+
+*kghostview-3.5.8 (19 Oct 2007)
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +kghostview-3.5.8.ebuild:
+  Bump to KDE 3.5.8.
 
   11 Aug 2007; Raúl Porcel <armin76@gentoo.org> kghostview-3.5.7.ebuild:
   x86 stable wrt #185823

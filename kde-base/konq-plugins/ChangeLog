@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/konq-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.76 2007/09/02 01:41:02 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.77 2007/10/19 23:15:31 philantrop Exp $
+
+*konq-plugins-3.5.8 (19 Oct 2007)
+
+  19 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +konq-plugins-3.5.8.ebuild:
+  Bump to KDE 3.5.8.
 
   02 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +files/konq-plugins-parallel-make.patch, konq-plugins-3.5.6-r1.ebuild,
