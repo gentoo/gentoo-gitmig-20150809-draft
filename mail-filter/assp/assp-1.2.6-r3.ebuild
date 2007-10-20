@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.2.6-r3.ebuild,v 1.3 2007/04/06 18:02:57 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.2.6-r3.ebuild,v 1.4 2007/10/20 21:27:39 wltjr Exp $
 
 inherit eutils
 
@@ -57,7 +57,7 @@ src_unpack() {
 	sed -i -e 's:if(PopB4SMTPMerak):if($PopB4SMTPMerak):' assp.pl
 
 	# patch is against unix-format, so patch after dos2unix
-	epatch ${FILESDIR}/assp-${PV}.patch
+	epatch "${FILESDIR}"/assp-${PV}.patch
 
 	# remove windows stuff
 	rm "${S}/addservice.pl"

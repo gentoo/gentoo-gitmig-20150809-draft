@@ -1,6 +1,15 @@
 # ChangeLog for mail-filter/assp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.20 2007/09/06 15:45:15 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.21 2007/10/20 21:27:39 wltjr Exp $
+
+*assp-1.3.3.8 (20 Oct 2007)
+
+  20 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org> +files/base.patch,
+  assp-1.2.6-r3.ebuild, -assp-1.3.3.1-r3.ebuild, -assp-1.3.3.1-r4.ebuild,
+  +assp-1.3.3.8.ebuild:
+  Bumped to latest release. Dropped external big patch, using sed instead :).
+  Removed past borked version. Quoted var in older remaining version. Thanks
+  for ovaon2 for TONS of help dialing things in.
 
 *assp-1.3.3.1-r4 (06 Sep 2007)
 
