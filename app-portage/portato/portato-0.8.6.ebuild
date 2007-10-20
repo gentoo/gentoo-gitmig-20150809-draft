@@ -1,16 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.8.5.ebuild,v 1.1 2007/09/09 21:10:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.8.6.ebuild,v 1.1 2007/10/20 17:03:43 jokey Exp $
 
-inherit eutils distutils
+NEED_PYTHON="2.5"
+inherit python eutils distutils
 
 DESCRIPTION="A GUI for Portage written in Python."
-HOMEPAGE="http://portato.sourceforge.net/"
-SRC_URI="mirror://sourceforge/portato/${P}.tar.gz"
+HOMEPAGE="http://portato.origo.ethz.ch/"
+SRC_URI="http://download.origo.ethz.ch/portato/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="kde libnotify nls userpriv"
 
 RDEPEND=">=sys-apps/portage-2.1.2
@@ -18,7 +19,7 @@ RDEPEND=">=sys-apps/portage-2.1.2
 		>=dev-python/pygtk-2.10.4
 		>=x11-libs/vte-0.12.2
 		>=gnome-base/libglade-2.5.1
-		>=dev-util/portatosourceview-2.16.1
+		>=dev-python/pygtksourceview-2.0.0
 
 		!userpriv? (
 			kde? ( || ( >=kde-base/kdesu-3.5.5 >=kde-base/kdebase-3.5.5	) )
@@ -27,46 +28,21 @@ RDEPEND=">=sys-apps/portage-2.1.2
 		libnotify? ( >=dev-python/notify-python-0.1.1 )
 		nls? ( virtual/libintl )"
 
-DEPEND="${RDEPEND}
-		nls? ( sys-devel/gettext )"
+# only needs gettext as build dependency
+# python should be set as DEPEND in the python-eclass
+DEPEND="nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}/${PN}"
-CONFIG_DIR="/etc/${PN}/"
-DATA_DIR="/usr/share/${PN}/"
-LOCALE_DIR="/usr/share/locale/"
+CONFIG_DIR="etc/${PN}/"
+DATA_DIR="usr/share/${PN}/"
+LOCALE_DIR="usr/share/locale/"
 PLUGIN_DIR="${DATA_DIR}/plugins"
 ICON_DIR="${DATA_DIR}/icons"
 
 apply_sed ()
 {
-	cd "${S}"/${PN}
+	cd "${S}/${PN}"
 
-	# currently only gtk is supported
-	local std="gtk"
-	local frontends="[\"$std\"]"
-
-	local su="\"gksu -D 'Portato'\""
-	use kde && su="\"kdesu -t --nonewdcop -i %s -c\" % APP_ICON"
-
-	sed -i  -e "s;^\(VERSION\s*=\s*\).*;\1\"${PV}\";" \
-			-e "s;^\(CONFIG_DIR\s*=\s*\).*;\1\"${CONFIG_DIR}\";" \
-			-e "s;^\(DATA_DIR\s*=\s*\).*;\1\"${DATA_DIR}\";" \
-			-e "s;^\(ICON_DIR\s*=\s*\).*;\1\"${ICON_DIR}\";" \
-			-e "s;^\(PLUGIN_DIR\s*=\s*\).*;\1\"${PLUGIN_DIR}\";" \
-			-e "s;^\(XSD_DIR\s*=\s*\).*;\1\"${DATA_DIR}\";" \
-			-e "s;^\(LOCALE_DIR\s*=\s*\).*;\1\"${LOCALE_DIR}\";" \
-			-e "s;^\(FRONTENDS\s*=\s*\).*;\1$frontends;" \
-			-e "s;^\(STD_FRONTEND\s*=\s*\).*;\1\"$std\";" \
-			-e "s;^\(SU_COMMAND\s*=\s*\).*;\1$su;" \
-			constants.py
-
-	cd ..
-
-	# don't do this as "use userpriv && ..." as it makes the whole function
-	# fail, if userpriv is not set
-	if use userpriv; then
-		sed -i -e "s/Exec=.*/Exec=portato --no-listener/" portato.desktop
-	fi
 }
 
 pkg_setup ()
@@ -81,9 +57,33 @@ pkg_setup ()
 
 src_compile ()
 {
-	apply_sed || die "Applying sed-commands failed."
+	cd "${S}"
 
-	cd ${S}
+	# currently only gtk is supported
+	local std="gtk"
+	local frontends="[\"$std\"]"
+
+	local su="\"gksu -D 'Portato'\""
+	use kde && su="\"kdesu -t --nonewdcop -i %s -c\" % APP_ICON"
+
+	sed -i 	-e "s;^\(VERSION\s*=\s*\).*;\1\"${PV}\";" \
+			-e "s;^\(CONFIG_DIR\s*=\s*\).*;\1\"${CONFIG_DIR}\";" \
+			-e "s;^\(DATA_DIR\s*=\s*\).*;\1\"${DATA_DIR}\";" \
+			-e "s;^\(TEMPLATE_DIR\s*=\s*\).*;\1DATA_DIR;" \
+			-e "s;^\(ICON_DIR\s*=\s*\).*;\1\"${ICON_DIR}\";" \
+			-e "s;^\(LOCALE_DIR\s*=\s*\).*;\1\"${LOCALE_DIR}\";" \
+			-e "s;^\(FRONTENDS\s*=\s*\).*;\1${frontends};" \
+			-e "s;^\(STD_FRONTEND\s*=\s*\).*;\1\"${std}\";" \
+			-e "s;^\(SU_COMMAND\s*=\s*\).*;\1${su};" \
+			-e "s;^\(USE_CATAPULT\s*=\s*\).*;\1False;" \
+			constants.py
+
+	# don't do this as "use userpriv && ..." as it makes the whole function
+	# fail, if userpriv is not set
+	if use userpriv; then
+		sed -i -e "s/Exec=.*/Exec=portato --no-listener/" portato.desktop
+	fi
+
 	use nls && ./pocompile.sh -emerge
 
 	distutils_src_compile
@@ -105,12 +105,10 @@ src_install ()
 	insinto ${PLUGIN_DIR}
 	keepdir ${PLUGIN_DIR}
 
-	use libnotify && doins "plugins/notify.xml"
+	use libnotify && doins plugins/notify.xml
 
-	# icon
+	# desktop
 	doicon icons/portato-icon.png
-
-	# menus
 	domenu portato.desktop
 
 	# nls
