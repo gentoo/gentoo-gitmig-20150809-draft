@@ -1,0 +1,11 @@
+# ChangeLog for x11-themes/gtk-engines-nimbus
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/ChangeLog,v 1.1 2007/10/20 17:09:15 flameeyes Exp $
+
+*gtk-engines-nimbus-0.0.9 (20 Oct 2007)
+
+  20 Oct 2007; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +gtk-engines-nimbus-0.0.9.ebuild:
+  Initial import of gtk-engines-nimbus, used by Solaris Express. Ebuild partly
+  based on work by Mariusz in bug #186741.
+
