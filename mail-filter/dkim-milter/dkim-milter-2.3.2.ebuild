@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.3.0-r2.ebuild,v 1.4 2007/10/12 14:06:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.3.2.ebuild,v 1.1 2007/10/20 02:30:56 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,18 +29,18 @@ src_unpack() {
 
 	cd "${S}" || die "source dir not found"
 
-	epatch "${FILESDIR}/${P}-test-headers.patch"
-
 	cp site.config.m4.dist devtools/Site/site.config.m4 || \
 		die "failed to generate site.config.m4"
-	epatch "${FILESDIR}/${P}-gentoo.patch"
+	#epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${PN}-2.3.0-gentoo.patch"
 
 	local ENVDEF=""
 	use ipv6 && ENVDEF="${ENVDEF} -DNETINET6"
 	sed -i -e "s:@@CFLAGS@@:${CFLAGS}:" -e "s:@@ENVDEF@@:${ENVDEF}:" \
 		devtools/Site/site.config.m4
 
-	use diffheaders && epatch "${FILESDIR}/${P}-diffheaders.patch"
+	#use diffheaders && epatch "${FILESDIR}/${P}-diffheaders.patch"
+	use diffheaders && epatch "${FILESDIR}/${PN}-2.3.1-diffheaders.patch"
 }
 
 src_compile() {
