@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rarian
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.5 2007/10/19 19:45:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.6 2007/10/20 01:19:21 uberlord Exp $
+
+  20 Oct 2007; Roy Marples <uberlord@gentoo.org> rarian-0.6.0.ebuild:
+  Keyworded ~sparc-fbsd.
 
   19 Oct 2007; Jeroen Roovers <jer@gentoo.org> rarian-0.6.0.ebuild:
   Marked ~hppa (bug #196360).
