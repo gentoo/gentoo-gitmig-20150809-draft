@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7821 2007/10/19 19:36:04 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7822 2007/10/20 06:46:56 ali_bush Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -90,6 +90,8 @@ x11-misc/xcut
 # Masked to enable me to add everything to the tree.
 java-virtuals/javamail
 =dev-java/gnu-javamail-1.0-r2
+=dev-java/mx4j-tools-3.0.1-r1
+=dev-java/mx4j-3.0.1-r3
 
 # Andrej Kacian <ticho@gentoo.org> (13 Oct 2007)
 # RC is not for general public

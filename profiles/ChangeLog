@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.746 2007/10/19 19:36:04 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.747 2007/10/20 06:46:56 ali_bush Exp $
+
+  20 Oct 2007; <alistair@gentoo.org> package.mask:
+  Add revbump of mx4j and mx4j-tools to my list of packages masked for
+  java-virtuals support.
 
   19 Oct 2007; Christian Hoffmann <hoffie@gentoo.org> package.mask:
   as announced, p.mask =dev-lang/php-4* and dev-php4/* (bug 189172), current
@@ -47,6 +51,10 @@
 
   17 Oct 2007; Alexis Ballier <aballier@gentoo.org> use.local.desc:
   add texlive local use flags
+
+  17 Oct 2007; <alistair@gentoo.org> package.mask:
+  Adding =dev-java/gnu-javamail-1.0-r2 to package.mask as it will break its
+  rdeps before I bump them to use java-virtuals.
 
   15 Oct 2007; Ulrich Mueller <ulm@gentoo.org> updates/3Q-2007,
   +updates/4Q-2007:
