@@ -1,6 +1,9 @@
 # ChangeLog for gentoo-portage/virtual
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-cgi/ChangeLog,v 1.1 2007/10/20 14:43:57 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-cgi/ChangeLog,v 1.2 2007/10/20 14:44:41 wrobel Exp $
+
+  20 Oct 2007; <wrobel@gentoo.org> Manifest:
+  Update digest to finalize import.
 
   20 Oct 2007; <wrobel@gentoo.org> +metadata.xml, +httpd-cgi-0.ebuild:
   Update digest to finalize import.
