@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.747 2007/10/20 06:46:56 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.748 2007/10/20 07:42:22 ulm Exp $
+
+  20 Oct 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Mask new CVS snapshot of app-emacs/wanderlust.
 
   20 Oct 2007; <alistair@gentoo.org> package.mask:
   Add revbump of mx4j and mx4j-tools to my list of packages masked for
