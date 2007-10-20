@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7823 2007/10/20 07:42:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7824 2007/10/20 16:42:32 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Samuli Suominen <drac@gentoo.org> (20 Oct 2007)
+# Needs to be tested on 64bit and fbsd.
+# Bumped wrt #153823
+=media-sound/cdparanoia-3.10_pre0
 
 # Ulrich Mueller <ulm@gentoo.org> (20 Oct 2007)
 # CVS snapshot, needs testing
