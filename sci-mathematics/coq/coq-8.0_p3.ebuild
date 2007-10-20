@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.0_p3.ebuild,v 1.6 2007/07/02 15:26:46 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.0_p3.ebuild,v 1.7 2007/10/20 15:55:05 aballier Exp $
 
 inherit eutils
 
@@ -29,11 +29,11 @@ S="${WORKDIR}/${MY_P}"
 src_unpack()
 {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if has_version ">=dev-lang/ocaml-3.09";
 	then
-		epatch ${WORKDIR}/${P}-ocaml-3.09.patch
+		epatch "${WORKDIR}/${P}-ocaml-3.09.patch"
 	fi
 }
 
@@ -69,11 +69,11 @@ src_compile() {
 }
 
 src_install() {
-	make COQINSTALLPREFIX=${D} install || die
+	make COQINSTALLPREFIX="${D}" install || die
 	dodoc README CREDITS CHANGES LICENSE
 
 	if use translator; then
-		cd ${WORKDIR}/${MY_P}-translator
+		cd "${WORKDIR}/${MY_P}-translator"
 		mv translate-v8 coq-translate-v8
 		dobin coq-translate-v8
 		if use doc; then
@@ -83,6 +83,6 @@ src_install() {
 
 	if use ide; then
 		insinto /usr/share/applnk/Edutainment/Mathematics
-		doins ${FILESDIR}/coqide.desktop
+		doins "${FILESDIR}/coqide.desktop"
 	fi
 }

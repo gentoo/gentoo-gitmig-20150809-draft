@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p1.ebuild,v 1.2 2007/10/11 10:04:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p1.ebuild,v 1.3 2007/10/20 15:55:05 aballier Exp $
 
 inherit eutils
 
@@ -55,11 +55,11 @@ src_compile() {
 }
 
 src_install() {
-	make COQINSTALLPREFIX=${D} install || die
+	make COQINSTALLPREFIX="${D}" install || die
 	dodoc README CREDITS CHANGES LICENSE
 
 	if use ide; then
 		insinto /usr/share/applnk/Edutainment/Mathematics
-		doins ${FILESDIR}/coqide.desktop
+		doins "${FILESDIR}/coqide.desktop"
 	fi
 }
