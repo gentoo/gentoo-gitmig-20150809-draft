@@ -1,6 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST kdeaccessibility-3.5.5.tar.bz2 8610846 RMD160 6fd9d284eb2c001270f317c92a1d68086af28868 SHA1 328833053b8ec11185de0a097f990a839eba9567 SHA256 c7f7ac0b1b2fb19e1ca22209e14bb12108094d5b12574ce2cf9683a497233030
 DIST kdeaccessibility-3.5.6.tar.bz2 8614965 RMD160 3fdd4b0ab576757378799c2a166d7bce8ccb2d25 SHA1 d39335fb302cb4180500590ad70041a61250559d SHA256 8e78da851bbe1d11f660c16e670cf1f33a6928d3561009f529bec45875352acf
 DIST kdeaccessibility-3.5.7.tar.bz2 8714998 RMD160 f82df9991a88aef9fbdac27134e65b9f4e1f1e0b SHA1 71133c0a03c5c631ee9a2a62369ecf7bbf72f16f SHA256 c1228274eecaa79f46d95abc787055b6bff7cbf9a51f753f679c7a4cae595c68
+DIST kdeaccessibility-3.5.8.tar.bz2 8749116 RMD160 206bf15f794217f968aea06a4653a6d0f168137c SHA1 a1e3902750da78174137bd23a219d9baeddc2406 SHA256 1b888b1c9c5196a7ef2aac3fcd18e5e013fb5576ed5d7f98a829f9a0ac9b65ac
 EBUILD kdeaccessibility-iconthemes-3.5.5.ebuild 498 RMD160 bfdc9229d8b5e7494f8e689d80c4c208e65ccfe2 SHA1 91a4502e909ccaa9a1d1a4eaa070edbf7614fa4c SHA256 0a9a2de7754146ffe10cfbdd7bb552ad7d16547173d1a4211c276f887463a692
 MD5 f7277a987e314d369924af4f3a823ef2 kdeaccessibility-iconthemes-3.5.5.ebuild 498
 RMD160 bfdc9229d8b5e7494f8e689d80c4c208e65ccfe2 kdeaccessibility-iconthemes-3.5.5.ebuild 498
@@ -13,10 +17,14 @@ EBUILD kdeaccessibility-iconthemes-3.5.7.ebuild 499 RMD160 ee45d99120cbd291c09dc
 MD5 dc232cc83f8e0e59323cc33f227914fd kdeaccessibility-iconthemes-3.5.7.ebuild 499
 RMD160 ee45d99120cbd291c09dc3c44959c362b8432885 kdeaccessibility-iconthemes-3.5.7.ebuild 499
 SHA256 f55f1e283418c7bdd571e17769d945de64e9ac3821b2b6320b5d1efbbcc1e7ce kdeaccessibility-iconthemes-3.5.7.ebuild 499
-MISC ChangeLog 9610 RMD160 9dbb09bae2ffe280d8ce44c49e33eedbfbdb1bdc SHA1 8e938b34f84c677f0bfe3394588bb07357ce75b1 SHA256 72d46c0c860c27fe8bf24e53fa26112a874c24fda0778ca786c5f0b6638c740e
-MD5 a069cd5ea92c46021151b5ee7fb92c99 ChangeLog 9610
-RMD160 9dbb09bae2ffe280d8ce44c49e33eedbfbdb1bdc ChangeLog 9610
-SHA256 72d46c0c860c27fe8bf24e53fa26112a874c24fda0778ca786c5f0b6638c740e ChangeLog 9610
+EBUILD kdeaccessibility-iconthemes-3.5.8.ebuild 509 RMD160 a69830ac68b52a92a775c3122ae67e95b706eb99 SHA1 abc729ac5605f38279cf9dcbb43dfcad70a2d9cc SHA256 9efe7f5ba40051ae6abbbc31b83ee111cdd9aa10453ba33b16ddfd7584df9630
+MD5 1d5df8e7fd506c8a69eb283cf09ad0ac kdeaccessibility-iconthemes-3.5.8.ebuild 509
+RMD160 a69830ac68b52a92a775c3122ae67e95b706eb99 kdeaccessibility-iconthemes-3.5.8.ebuild 509
+SHA256 9efe7f5ba40051ae6abbbc31b83ee111cdd9aa10453ba33b16ddfd7584df9630 kdeaccessibility-iconthemes-3.5.8.ebuild 509
+MISC ChangeLog 9785 RMD160 55274f35651ceba89ad117d11eb436d89503a2cb SHA1 b078dc0d4fc6f85cb2d38ec42be4712368400e85 SHA256 34d1c7734f2cea10504c5a6cf4d7d7fb20e05949b204744eb5b54a3ac7f6a088
+MD5 c19187f77410ad4b5710cfc4aec349ff ChangeLog 9785
+RMD160 55274f35651ceba89ad117d11eb436d89503a2cb ChangeLog 9785
+SHA256 34d1c7734f2cea10504c5a6cf4d7d7fb20e05949b204744eb5b54a3ac7f6a088 ChangeLog 9785
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -30,3 +38,13 @@ SHA256 e31a4203cc32859f9ea813a534546929a2c6fe5902ec1fb92f58442e7390bcbb files/di
 MD5 fd3dee0ee45ab8cafc473274739599dd files/digest-kdeaccessibility-iconthemes-3.5.7 274
 RMD160 1d12fead4995318a90dc8fd4e1fdb197fe030df3 files/digest-kdeaccessibility-iconthemes-3.5.7 274
 SHA256 3cc727c6aa0a4129acf242623f9ef2e5a4935ec10c6c8db7aa4127c5be28a50c files/digest-kdeaccessibility-iconthemes-3.5.7 274
+MD5 11ac01fb436861c2b2a35aea59e4cd55 files/digest-kdeaccessibility-iconthemes-3.5.8 274
+RMD160 aebaeed962190e425c1b2dd860e5a105a67fe8ba files/digest-kdeaccessibility-iconthemes-3.5.8 274
+SHA256 2598ebd725fbbfc7dfc7a7c1675f9ebc2ea45e5713dd7cd44d98f383275a6c96 files/digest-kdeaccessibility-iconthemes-3.5.8 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHGSt2CkvF58q80IkRAoM1AKCHia+ZrcehP86jKZ3+bTQLgNSNBgCfXDsO
+T02nPl/Ru2UREpxaFWeh8jI=
+=3Oya
+-----END PGP SIGNATURE-----
