@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.8.ebuild,v 1.1 2007/10/19 23:16:09 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.8.ebuild,v 1.2 2007/10/20 16:43:10 philantrop Exp $
 
 KMNAME=kdebase
 # Note: we need >=kdelibs-3.3.2-r1, but we don't want 3.3.3!
@@ -32,7 +32,7 @@ pkg_preinst() {
 
 	# We need to symlink here, as kfmclient freaks out completely,
 	# if it does not find konqueror.desktop in the legacy path.
-	dodir ${PREFIX}/share/applications/kde
+	dodir "${PREFIX}"/share/applications/kde
 	dosym ../../applnk/konqueror.desktop ${PREFIX}/share/applications/kde/konqueror.desktop
 }
 
@@ -40,9 +40,9 @@ src_install() {
 	kde_src_install
 
 	if use branding ; then
-		dodir ${PREFIX}/share/services/searchproviders
-		insinto ${PREFIX}/share/services/searchproviders
-		doins "${WORKDIR}/patches/*.desktop"
+		dodir "${PREFIX}"/share/services/searchproviders
+		insinto "${PREFIX}"/share/services/searchproviders
+		doins "${WORKDIR}"/patches/*.desktop
 	fi
 }
 
