@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.8.ebuild,v 1.1 2007/10/19 23:06:29 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.8.ebuild,v 1.2 2007/10/20 15:23:34 philantrop Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -64,5 +64,5 @@ src_install() {
 	kde-meta_src_install
 	# Install KMail icons with libkdepim to work around bug #136810.
 	#find ${D}/${KDEDIR}/share/icons/hicolor/ -name "kmail\.png" -exec rm '{}' \;
-	rm "${D}/${KDEDIR}/share/icons/hicolor/{16x16,22x22,32x32,48x48,64x64,128x128}/apps/kmail.png" || die "deleting kmail.png failed"
+	rm "${D}/${KDEDIR}"/share/icons/hicolor/{16x16,22x22,32x32,48x48,64x64,128x128}/apps/kmail.png || die "deleting kmail.png failed"
 }
