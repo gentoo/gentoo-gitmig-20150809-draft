@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.3.1.ebuild,v 1.1 2007/10/02 12:27:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.3.1.ebuild,v 1.2 2007/10/20 12:22:43 corsair Exp $
 
 inherit distutils qt4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.riverbankcomputing.co.uk/pyqt/"
 SRC_URI="http://www.riverbankcomputing.com/Downloads/PyQt4/GPL/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug doc examples"
 
 RDEPEND="=x11-libs/qt-4*
