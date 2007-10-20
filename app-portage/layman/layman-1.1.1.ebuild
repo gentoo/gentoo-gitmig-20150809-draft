@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.1.1.ebuild,v 1.7 2007/10/19 20:27:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.1.1.ebuild,v 1.8 2007/10/20 13:07:53 wrobel Exp $
 
 inherit eutils distutils
 
@@ -11,10 +11,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE=""
+IUSE="test"
 S="${WORKDIR}/${PF}"
 
-DEPEND=""
+DEPEND="test? ( dev-util/subversion )"
 RDEPEND=""
 
 pkg_setup() {

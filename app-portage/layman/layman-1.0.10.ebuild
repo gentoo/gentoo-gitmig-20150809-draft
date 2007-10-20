@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.0.10.ebuild,v 1.7 2007/05/24 21:29:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.0.10.ebuild,v 1.8 2007/10/20 13:07:53 wrobel Exp $
 
 inherit eutils distutils
 
@@ -28,7 +28,7 @@ src_install() {
 	distutils_src_install
 
 	dodir /etc/layman
-	cp etc/* ${D}/etc/layman/
+	cp etc/* "${D}"/etc/layman/
 
 	doman doc/layman.8
 	dohtml doc/layman.8.html
@@ -36,7 +36,7 @@ src_install() {
 }
 
 src_test() {
-	cd ${S}
+	cd "${S}"
 	einfo "Running layman doctests..."
 	echo
 	if ! PYTHONPATH="." ${python} layman/tests/dtest.py; then
