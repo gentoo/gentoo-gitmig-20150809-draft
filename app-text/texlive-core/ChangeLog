@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.3 2007/10/19 19:52:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.4 2007/10/20 12:53:06 aballier Exp $
+
+  20 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  texlive-core-2007.ebuild:
+  make use of the new etexlinks helper function, bug #196246
 
   19 Oct 2007; Alexis Ballier <aballier@gentoo.org>
   +files/2007/texmf.d/00header.cnf, +files/2007/texmf.d/10standardpaths.cnf,

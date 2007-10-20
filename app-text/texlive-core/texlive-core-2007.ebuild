@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.4 2007/10/19 19:52:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.5 2007/10/20 12:53:06 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -219,6 +219,13 @@ src_install() {
 	doins "${FILESDIR}/${PV}/texmf.d/"{00header,05searchpaths,10standardpaths,15options,20sizes}.cnf
 
 	mv "${D}${TEXMF_PATH}/web2c/updmap.cfg"	"${D}/etc/texmf/updmap.d/00updmap.cfg" || die "moving updmap.cfg failed"
+
+	# Create symlinks from format to engines
+	# This will avoid having to call texlinks in texmf-update
+	cd "${S}"
+	for i in texmf/fmtutil/format*.cnf; do
+		[ -f "${i}" ] && etexlinks "${i}"
+	done
 
 	texlive-common_handle_config_files
 
