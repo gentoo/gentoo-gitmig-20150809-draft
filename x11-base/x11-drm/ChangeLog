@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.54 2007/10/09 07:36:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.55 2007/10/20 04:41:32 battousai Exp $
+
+*x11-drm-20071019 (20 Oct 2007)
+
+  20 Oct 2007; Bryan Stine <battousai@gentoo.org> +x11-drm-20071019.ebuild:
+  Bump to new snapshot. No more i830 module upstream.
 
   09 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   x11-drm-20051223.ebuild, x11-drm-20060608.ebuild,
