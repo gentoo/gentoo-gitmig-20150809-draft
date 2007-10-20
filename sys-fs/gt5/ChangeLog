@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/gt5
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/ChangeLog,v 1.6 2007/10/16 13:13:04 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/ChangeLog,v 1.7 2007/10/20 11:40:42 angelos Exp $
+
+  20 Oct 2007; Christoph Mende <angelos@gentoo.org> -gt5-1.3d.ebuild:
+  Cleanup
 
   16 Oct 2007; Markus Ullmann <jokey@gentoo.org> gt5-1.4.0-r1.ebuild:
   testing sparc and x86
