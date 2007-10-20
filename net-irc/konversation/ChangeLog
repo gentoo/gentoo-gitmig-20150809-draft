@@ -1,6 +1,16 @@
 # ChangeLog for net-irc/konversation
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.61 2007/09/14 15:42:12 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.62 2007/10/20 19:34:15 philantrop Exp $
+
+*konversation-1.0.1-r4 (20 Oct 2007)
+
+  20 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/konversation-1.0.1-serverlist-compiz-workaround.patch,
+  -konversation-1.0.1.ebuild, -konversation-1.0.1-r1.ebuild,
+  -konversation-1.0.1-r2.ebuild, +konversation-1.0.1-r4.ebuild:
+  Added an upstream patch that fixes a problem where there's a broken and
+  unclosable server list window hanging around when Konversation is used in
+  compiz/beryl. Thanks, Eike, for providing it! Removed obsolete versions.
 
   14 Sep 2007; Markus Ullmann <jokey@gentoo.org>
   konversation-1.0.1-r3.ebuild:

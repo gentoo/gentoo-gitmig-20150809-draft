@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.0.1-r2.ebuild,v 1.1 2007/08/16 16:20:19 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.0.1-r4.ebuild,v 1.1 2007/10/20 19:34:15 philantrop Exp $
 
 LANGS="bg ca da de el en_GB es et fi fr hu it ja ka ko nl pt ru sr sr@Latn sv tr zh_TW
 	ar cs gl he lt pa pt_BR ta"
@@ -22,7 +22,9 @@ IUSE=""
 need-kde 3
 
 PATCHES="${FILESDIR}/${P}-crash.patch
-		${FILESDIR}/${P}-konsolepanel.patch"
+		${FILESDIR}/${P}-konsolepanel.patch
+		${FILESDIR}/${P}-media-script-vulnerability.patch
+		${FILESDIR}/${P}-serverlist-compiz-workaround.patch"
 
 pkg_postinst() {
 	kde_pkg_postinst
