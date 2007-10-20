@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.9.1-r3.ebuild,v 1.1 2007/10/20 11:37:24 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.9.1-r3.ebuild,v 1.2 2007/10/20 22:51:59 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -19,7 +19,8 @@ IUSE="examples"
 
 DEPEND=">=virtual/jdk-1.4
 		app-arch/unzip"
-RDEPEND=">=virtual/jre-1.4"
+RDEPEND=">=virtual/jre-1.4
+		!=virtual/jre-1.6*"
 
 S="${WORKDIR}/${MY_P}-src/${MY_PN}"
 
