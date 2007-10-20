@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.368 2007/10/13 16:19:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.369 2007/10/20 14:26:00 drac Exp $
 
 # Keep them sorted
 
@@ -70,7 +70,7 @@ dga - Adds DGA (Direct Graphic Access) support for X
 directfb - Adds support for DirectFB layer (library for FB devices)
 doc - Adds extra documentation (API, Javadoc, etc)
 dri - Enable direct rendering: used for accelerated 3D and some 2D, like DMA
-dts - Enables libdts (DTS Coherent Acoustics decoder) support
+dts - Enables DTS Coherent Acoustics decoder support
 dv - Enables support for a codec used by many camcorders
 dvb - Adds support for DVB (Digital Video Broadcasting)
 dvd - Adds support for DVDs
