@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10_pre0.ebuild,v 1.1 2007/10/20 16:39:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10_pre0.ebuild,v 1.2 2007/10/20 16:55:25 drac Exp $
 
 WANT_AUTOCONF=2.1
 
-inherit autotools eutils libtool toolchain-funcs versionator
+inherit autotools eutils flag-o-matic libtool toolchain-funcs versionator
 
 MY_P=${PN}-III-$(get_version_component_range 2)$(get_version_component_range 3)
 
 DESCRIPTION="an advanced CDDA reader with error correction"
 HOMEPAGE="http://www.xiph.org/paranoia"
-SRC_URI="http://www.xiph.org/paranoia/download/${MY_P}.src.tgz"
+SRC_URI="http://downloads.xiph.org/releases/cdparanoia/${MY_P}.src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
