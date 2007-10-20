@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.15.ebuild,v 1.1 2007/10/18 17:14:55 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.15.ebuild,v 1.2 2007/10/20 15:39:25 phreak Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -16,13 +16,14 @@ SRC_URI="mirror://alsaproject/plugins/${MY_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="jack ffmpeg libsamplerate pulseaudio debug"
+IUSE="debug ffmpeg jack libsamplerate pulseaudio speex"
 
 RDEPEND=">=media-libs/alsa-lib-${PV}
-	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
 	ffmpeg? ( media-video/ffmpeg )
+	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
 	libsamplerate? ( media-libs/libsamplerate )
 	pulseaudio? ( media-sound/pulseaudio )
+	speex? ( media-libs/speex )
 	!media-plugins/alsa-jack"
 
 DEPEND="${RDEPEND}
@@ -44,7 +45,6 @@ src_unpack() {
 		"${S}/pulse/Makefile.am"
 
 	eautoreconf
-
 	elibtoolize
 }
 
@@ -56,10 +56,11 @@ src_compile() {
 	# someone ask for it explicitely, to be on the safe
 	# side.
 	econf \
+		$(use_enable ffmpeg avcodec) \
 		$(use_enable jack) \
 		$(use_enable libsamplerate samplerate) \
-		$(use_enable ffmpeg avcodec) \
 		$(use_enable pulseaudio) \
+		$(use_with speex speex lib) \
 		--disable-dbus \
 		--disable-dependency-tracking \
 		|| die "econf failed"
