@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.8.ebuild,v 1.1 2007/10/19 22:18:41 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.8.ebuild,v 1.2 2007/10/20 12:40:42 philantrop Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="${SRC_URI}
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="branding cups dbus java ldap ieee1394 hal lm_sensors logitech-mouse openexr opengl
+IUSE="branding cups java ldap ieee1394 hal lm_sensors logitech-mouse openexr opengl
 pam samba xcomposite xscreensaver xinerama kdehiddenvisibility"
 
 # hal: enables hal backend for 'media:' ioslave
@@ -37,9 +37,7 @@ DEPEND=">=media-libs/freetype-2
 	x11-libs/libXtst
 	x11-libs/libXext
 	xscreensaver? ( x11-libs/libXScrnSaver )
-	xinerama? ( x11-libs/libXinerama )
-	dbus? ( sys-apps/dbus )
-	hal? ( sys-apps/hal )"
+	xinerama? ( x11-libs/libXinerama )"
 
 RDEPEND="${DEPEND}
 	sys-apps/usbutils
@@ -66,6 +64,9 @@ DEPEND="${DEPEND}
 	x11-apps/xhost"
 
 need-kde 3.5.8
+
+EPATCH_EXCLUDE="ksmserver-3.5.8-ksmserver_suspend.diff
+				ksmserver-3.5.8-suspend_configure.diff"
 
 pkg_setup() {
 	kde_pkg_setup
@@ -113,9 +114,7 @@ src_compile() {
 					$(use_with samba)
 					$(use_with xcomposite composite)
 					$(use_with xinerama)
-					$(use_with xscreensaver)
-					$(use_enable hal)
-					$(use_enable dbus)"
+					$(use_with xscreensaver)"
 
 	if ! use pam && use elibc_glibc; then
 		myconf="${myconf} --with-shadow"
@@ -219,13 +218,6 @@ pkg_postinst() {
 		elog "'WARNING: Outdated database found' when starting konqueror in a console, run"
 		elog "kbuildsycoca as the user you're running KDE under."
 		elog "This is NOT a bug."
-		echo
-	fi
-	if use dbus && use hal ; then
-		echo
-		elog "If you don't see any icons next to the suspend/hibernate buttons,"
-		elog "make sure you use an iconset that provides the files"
-		elog "\"suspend.png\" and \"hibernate.png\"."
 		echo
 	fi
 }
