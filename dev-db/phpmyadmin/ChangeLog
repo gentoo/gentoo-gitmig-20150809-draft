@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.274 2007/10/18 17:59:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.275 2007/10/20 22:15:46 jurek Exp $
+
+  20 Oct 2007; Jurek Bartuszek <jurek@gentoo.org>
+  phpmyadmin-2.11.1.2.ebuild:
+  x86 stable (bug #196237)
 
   18 Oct 2007; Markus Rothe <corsair@gentoo.org> phpmyadmin-2.11.1.2.ebuild:
   Stable on ppc64; bug #196237
