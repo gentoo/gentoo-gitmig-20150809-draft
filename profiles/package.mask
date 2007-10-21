@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7829 2007/10/21 06:57:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7830 2007/10/21 07:04:45 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -281,16 +281,6 @@ app-emacs/semantic
 # Junkbuster has been replaced by Privoxy, so no need
 # for that mode
 app-emacs/junkbust
-
-# Samuli Suominen <drac@gentoo.org> ((20 Sep 2007)
-# These packages don't meet needed quality standards,
-# and maintaining ebuilds based on current building
-# system and release timing is not possible.
-# For pd, use pd-overlay found in layman global list.
-# For supercollider, use upstream subversion.
-# Removed from tree in 30 days.
-media-sound/pd
-media-sound/supercollider
 
 # Robin H. Johnson <robbat2@gentoo.org> (20 Sep 2007)
 # last rites
