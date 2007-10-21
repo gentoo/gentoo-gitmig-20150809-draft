@@ -1,6 +1,9 @@
 # ChangeLog for media-video/qc-usb-messenger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/ChangeLog,v 1.5 2007/10/21 12:48:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/ChangeLog,v 1.6 2007/10/21 18:14:10 coldwind Exp $
+
+  21 Oct 2007; Santiago M. Mola <coldwind@gentoo.org> metadata.xml:
+  Taking maintainership.
 
 *qc-usb-messenger-1.7 (21 Oct 2007)
 
