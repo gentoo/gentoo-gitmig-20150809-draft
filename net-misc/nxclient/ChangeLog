@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.57 2007/09/20 23:16:52 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.58 2007/10/21 21:26:22 voyageur Exp $
+
+*nxclient-3.0.0-r4 (21 Oct 2007)
+
+  21 Oct 2007; Bernard Cafarelli <voyageur@gentoo.org>
+  +nxclient-3.0.0-r4.ebuild:
+  Version bump, closes bug #195663
 
   20 Sep 2007; Bernard Cafarelli <voyageur@gentoo.org> -files/nxwrapper,
   -nxclient-2.1.0-r1.ebuild:
