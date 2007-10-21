@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/lapack-reference
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.37 2007/10/11 16:57:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.38 2007/10/21 16:42:51 nixnut Exp $
+
+  21 Oct 2007; nixnut <nixnut@gentoo.org> lapack-reference-3.1.1-r1.ebuild:
+  Added ~ppc
 
   11 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org>
   lapack-reference-3.1.1-r1.ebuild:
