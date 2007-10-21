@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.21_pre14633.ebuild,v 1.1 2007/10/15 16:02:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.21_pre14633-r1.ebuild,v 1.1 2007/10/21 18:09:15 beandog Exp $
 
 ESVN_PROJECT="mythplugins"
 
@@ -37,8 +37,8 @@ src_install() {
 	dodir "${MY_HTDOCSDIR}"/data
 
 	cp -R [[:lower:]]* "${D}${MY_HTDOCSDIR}"
-	cp mythweb.conf.apache "${MY_SERVERCONFIGDIR}"/
-	cp mythweb.conf.lighttpd "${MY_SERVERCONFIGDIR}"/
+	webapp_configfile ${MY_HTDOCSDIR}/mythweb.conf.apache
+	webapp_configfile ${MY_HTDOCSDIR}/mythweb.conf.lighttpd
 
 	webapp_serverowned "${MY_HTDOCSDIR}"/data
 

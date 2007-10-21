@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.50 2007/10/15 16:02:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.51 2007/10/21 18:09:15 beandog Exp $
+
+*mythweb-0.21_pre14633-r1 (21 Oct 2007)
+
+  21 Oct 2007; Steve Dibb <beandog@gentoo.org>
+  -mythweb-0.21_pre14633.ebuild, +mythweb-0.21_pre14633-r1.ebuild:
+  Fix sandbox violation, bug 196583
 
 *mythweb-0.21_pre14633 (15 Oct 2007)
 
