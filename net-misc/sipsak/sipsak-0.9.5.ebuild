@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sipsak/sipsak-0.9.5.ebuild,v 1.1 2005/11/25 11:11:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sipsak/sipsak-0.9.5.ebuild,v 1.2 2007/10/21 15:16:41 maekke Exp $
 
 IUSE="gnutls"
 
@@ -25,6 +25,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
