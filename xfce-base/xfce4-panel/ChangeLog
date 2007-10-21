@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.104 2007/06/07 18:26:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.105 2007/10/21 09:28:19 drac Exp $
+
+*xfce4-panel-4.4.1-r1 (21 Oct 2007)
+
+  21 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  +files/xfce4-panel-4.4.1-gtk212.patch, +xfce4-panel-4.4.1-r1.ebuild:
+  Fix panel crashing with GTK+-2.12 when removing one. Thanks to Debian
+  maintainer Corsac for letting us know.
 
   07 Jun 2007; Samuli Suominen <drac@gentoo.org> xfce4-panel-4.4.1.ebuild:
   Stable on arm.
