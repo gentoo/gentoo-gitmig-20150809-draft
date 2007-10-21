@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.363 2007/10/15 06:11:38 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.364 2007/10/21 20:35:32 zzam Exp $
+
+*udev-116-r1 (21 Oct 2007)
+
+  21 Oct 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-116-gentoo-rules-update.diff, +udev-116-r1.ebuild:
+  udev-rules update. Fixes bugs #195607 #195728 #195839.
 
   15 Oct 2007; Tom Gall <tgall@gentoo.org> udev-115-r1.ebuild:
   stable on ppc64, bug #195289
