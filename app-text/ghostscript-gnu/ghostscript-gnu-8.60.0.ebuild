@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.60.0.ebuild,v 1.1 2007/10/21 18:26:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.60.0.ebuild,v 1.2 2007/10/21 23:34:31 mr_bones_ Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -42,7 +42,6 @@ DEPEND="${DEP}
 	gtk? ( dev-util/pkgconfig )"
 
 S=${WORKDIR}/${MY_P}
-
 
 src_unpack() {
 	unpack ${A/adobe-cmaps-200406.tar.gz acro5-cmaps-2001.tar.gz}
