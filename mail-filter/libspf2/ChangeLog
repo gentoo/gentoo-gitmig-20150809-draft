@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libspf2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.22 2007/10/20 23:27:15 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.23 2007/10/21 16:04:42 nixnut Exp $
+
+  21 Oct 2007; nixnut <nixnut@gentoo.org> libspf2-1.2.5-r2.ebuild:
+  Stable on ppc wrt bug 196200
 
   20 Oct 2007; Jurek Bartuszek <jurek@gentoo.org> libspf2-1.2.5-r2.ebuild:
   x86 stable (bug #196200)
