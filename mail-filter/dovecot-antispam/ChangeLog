@@ -1,0 +1,10 @@
+# ChangeLog for mail-filter/dovecot-antispam
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/ChangeLog,v 1.1 2007/10/21 08:38:41 hollow Exp $
+
+*dovecot-antispam-20071019 (21 Oct 2007)
+
+  21 Oct 2007; Benedikt Böhm <hollow@gentoo.org> +metadata.xml,
+  +dovecot-antispam-20071019.ebuild:
+  initial ebuild
+
