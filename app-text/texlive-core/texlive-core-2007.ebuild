@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.7 2007/10/21 10:25:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.8 2007/10/21 10:52:38 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -237,9 +237,8 @@ src_install() {
 	# The links has to be relative, since the targets
 	# is not present at this stage and MacOS doesn't
 	# like non-existing targets
-	cd "${D}/usr/bin/"
-	ln -snf tex virtex
-	ln -snf pdftex pdfvirtex
+	dosym tex /usr/bin/virtex
+	dosym pdftex /usr/bin/pdfvirtex
 }
 
 pkg_postinst() {
