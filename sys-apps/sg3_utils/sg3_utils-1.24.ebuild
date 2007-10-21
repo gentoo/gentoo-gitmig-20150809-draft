@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.24.ebuild,v 1.5 2007/08/24 03:20:51 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.24.ebuild,v 1.6 2007/10/21 12:09:28 robbat2 Exp $
 
 inherit eutils
 
-DESCRIPTION="apps for querying the sg SCSI interface (contains rescan_scsi_bus.sh)"
+DESCRIPTION="apps for querying the sg SCSI interface"
 HOMEPAGE="http://www.torque.net/sg/"
 SRC_URI="http://www.torque.net/sg/p/${P}.tgz"
 
