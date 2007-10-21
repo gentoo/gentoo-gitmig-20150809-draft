@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>video</herd>
 <maintainer>
-  <email>drac@gentoo.org</email>
-  <name>Samuli Suominen</name>
+<email>media-video@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
