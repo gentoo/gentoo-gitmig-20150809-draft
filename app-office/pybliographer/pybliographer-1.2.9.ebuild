@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/pybliographer-1.2.9.ebuild,v 1.2 2007/10/21 14:56:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/pybliographer-1.2.9.ebuild,v 1.3 2007/10/21 20:43:17 maekke Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pybliographer/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 
 IUSE=""
 
@@ -27,11 +27,11 @@ DEPEND="virtual/python
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.2.4-gentoo.diff
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-1.2.4-gentoo.diff"
 }
 
 src_install() {
 	# fix for access violation due to eclass change
-	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
+	gnome2_src_install scrollkeeper_localstate_dir="${D}/var/lib/scrollkeeper/"
 }

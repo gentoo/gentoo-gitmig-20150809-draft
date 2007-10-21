@@ -1,6 +1,9 @@
 # ChangeLog for app-office/pybliographer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.14 2007/10/21 14:56:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.15 2007/10/21 20:43:17 maekke Exp $
+
+  21 Oct 2007; Markus Meier <maekke@gentoo.org> pybliographer-1.2.9.ebuild:
+  x86 stable, bug #175169 and quotes
 
   21 Oct 2007; nixnut <nixnut@gentoo.org> pybliographer-1.2.9.ebuild:
   Stable on ppc wrt bug 175169
