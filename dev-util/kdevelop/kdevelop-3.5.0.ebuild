@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.5.0.ebuild,v 1.1 2007/10/19 22:21:49 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.5.0.ebuild,v 1.2 2007/10/21 10:46:53 carlo Exp $
 
 inherit kde eutils db-use
 
@@ -32,7 +32,7 @@ src_unpack() {
 
 	# Update the admin dir used in KDE template projects.
 	# See also kde bug 104386.
-	for i in "${S}/admin/*"; do
+	for i in "${S}"/admin/* ; do
 		cp "${i}" "${S}/parts/appwizard/common/admin/"
 	done
 
