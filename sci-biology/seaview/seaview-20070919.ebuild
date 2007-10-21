@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20041220.ebuild,v 1.5 2007/10/21 04:34:16 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20070919.ebuild,v 1.1 2007/10/21 04:34:16 je_fro Exp $
 
 inherit toolchain-funcs multilib
 
@@ -10,18 +10,16 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="public-domain"
 
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="x11-libs/fltk
+	=media-libs/pdflib-6.0*
 	sci-biology/clustalw"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	sed -i \
-		-e "s%\"seaview.help\", %\"/usr/share/${PN}/seaview.help\", %" seaview.cxx || die
 
 	# Respect CXXFLAGS. Package uses CFLAGS as CXXFLAGS.
 	# Fix invocation of C++ compiler.
@@ -29,6 +27,8 @@ src_unpack() {
 	sed -i \
 		-e '/^FLTK/d' \
 		-e '/^X11/d' \
+		-e 's:#HELP_NOT:HELP_NOT:' \
+		-e "s:bge\/mgouy\/seaview:usr/share/${PN}:" \
 		-e "s:^CXX.*:CXX = $(tc-getCXX):" \
 		-e 's:-I$(FLTK):-I/usr/include/fltk-1.1:' \
 		-e 's:-I$(X11)/include:-I/usr/include/X11R6:' \

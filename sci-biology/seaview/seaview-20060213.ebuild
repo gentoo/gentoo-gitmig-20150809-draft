@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20060213.ebuild,v 1.2 2007/03/25 02:58:30 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20060213.ebuild,v 1.3 2007/10/21 04:34:16 je_fro Exp $
 
 inherit toolchain-funcs multilib
 
@@ -19,7 +19,7 @@ DEPEND="x11-libs/fltk
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i \
 		-e "s%\"seaview.help\", %\"/usr/share/${PN}/seaview.help\", %" seaview.cxx || die
@@ -41,6 +41,6 @@ src_unpack() {
 
 src_install() {
 	dobin seaview seaview_align.sh
-	insinto /usr/share/${PN}
+	insinto "/usr/share/${PN}"
 	doins protein.mase seaview.help
 }
