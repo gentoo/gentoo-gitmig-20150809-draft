@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r11.ebuild,v 1.12 2007/03/02 12:47:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r11.ebuild,v 1.13 2007/10/21 15:27:14 chainsaw Exp $
 
 inherit eutils toolchain-funcs
 
@@ -34,21 +34,21 @@ PATCHDIR="${WORKDIR}/patches"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
 	EPATCH_SUFFIX="patch"
 	epatch ${PATCHDIR}
 
 	# Bug #70592; terminal line settings should only be set once; not everytime a new song starts
-	epatch ${FILESDIR}/${PV}-set-terminal-line-settings-once.patch
+	epatch "${FILESDIR}/${PV}-set-terminal-line-settings-once.patch"
 
 	# Bug #87539; user CFLAGS are not respected on amd64
-	epatch ${FILESDIR}/${PN}-respectusercflags.patch
+	epatch "${FILESDIR}/${PN}-respectusercflags.patch"
 
 	if use ppc-macos;
 	then
 		einfo "Patching for OSX build"
-		epatch ${FILESDIR}/${PN}-osx.diff
+		epatch "${FILESDIR}/${PN}-osx.diff"
 	fi
 
 	sed -i "s:${PV}-mh4:${PVR}:" version.h
@@ -139,7 +139,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr
-	cp -R gentoo-bin ${D}/usr/bin
+	cp -R gentoo-bin "${D}/usr/bin"
 	doman mpg123.1
 	dodoc BENCHMARKING BUGS CHANGES JUKEBOX README* TODO
 }
