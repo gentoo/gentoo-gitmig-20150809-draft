@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/dovecot-antispam-20071019.ebuild,v 1.1 2007/10/21 08:38:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/dovecot-antispam-20071019.ebuild,v 1.2 2007/10/21 16:31:07 hollow Exp $
 
 inherit eutils autotools flag-o-matic multilib
 
@@ -45,7 +45,7 @@ src_compile() {
 	use mailtrain && echo BACKEND=mailtrain >> .config
 	use crm114 && echo BACKEND=crm114-exec >> .config
 
-	use debug && DEBUG=stderr >> .config
+	use debug && echo DEBUG=stderr >> .config
 
 	emake || die "make failed"
 }
@@ -54,7 +54,7 @@ src_install () {
 	source "${ROOT}"/usr/lib/dovecot/dovecot-config || \
 	die "cannot find dovecot-config"
 
-	dodir "${moduledir}"/modules/imap/
+	dodir "${moduledir}"/imap/
 	make DESTDIR="${D}" install || die "make install failed"
 
 	newman antispam.7 dovecot-antispam.7
