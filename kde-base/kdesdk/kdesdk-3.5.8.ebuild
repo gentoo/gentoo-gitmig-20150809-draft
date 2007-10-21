@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.8.ebuild,v 1.1 2007/10/19 22:41:30 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.8.ebuild,v 1.2 2007/10/21 10:53:16 carlo Exp $
 
 inherit db-use kde-dist
 
@@ -66,7 +66,7 @@ src_compile() {
 
 src_install() {
 	kde_src_install
-	for f in "${KDEDIR}/share/apps/kapptemplate/admin/{bcheck,conf.change,config,detect-autoconf}.pl" ; do
+	for f in ${KDEDIR}/share/apps/kapptemplate/admin/{bcheck,conf.change,config,detect-autoconf}.pl ; do
 		fperms 755 ${f}
 	done
 }
