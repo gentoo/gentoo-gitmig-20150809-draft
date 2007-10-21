@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.141 2007/10/21 00:15:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.142 2007/10/21 00:18:32 mr_bones_ Exp $
 
 # Michael Sterrett <mr_bones_@gentoo.org (14 Oct 2007)
 # Needs sys-fs/udev
@@ -364,6 +364,7 @@ dev-db/mysql-gui-tools
 >=app-accessibility/orca-1
 >=dev-dotnet/evolution-sharp-0.12.0
 >=gnome-base/libgnomecanvas-2.20.0
+>=gnome-base/libgnomeui-2.20.1.1
 
 # Hanno Boeck <hanno@gentoo.org>
 # Needs gnome 2.16
