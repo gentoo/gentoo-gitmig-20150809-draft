@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_usb
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.10 2007/07/11 15:59:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.11 2007/10/21 21:44:24 betelgeuse Exp $
+
+*pam_usb-0.4.2 (21 Oct 2007)
+
+  21 Oct 2007; Petteri Räty <betelgeuse@gentoo.org> +pam_usb-0.4.2.ebuild:
+  Version bump.
 
   11 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Add myself to metadata.xml as the maintainer.
