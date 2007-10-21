@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20070919.ebuild,v 1.1 2007/10/21 04:34:16 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20070919.ebuild,v 1.2 2007/10/21 08:20:25 je_fro Exp $
 
 inherit toolchain-funcs multilib
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND="x11-libs/fltk
 	=media-libs/pdflib-6.0*
+	sci-biology/muscle
 	sci-biology/clustalw"
 
 src_unpack() {
