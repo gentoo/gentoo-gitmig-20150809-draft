@@ -5,7 +5,7 @@
  }
  
 -static const struct file_operations snd_fops =
-+struct file_operations snd_fops =
++const struct file_operations snd_fops =
  {
  	.owner =	THIS_MODULE,
  	.open =		snd_open
