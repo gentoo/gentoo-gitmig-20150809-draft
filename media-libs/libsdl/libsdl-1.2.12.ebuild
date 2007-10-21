@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.12.ebuild,v 1.1 2007/07/23 20:02:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.12.ebuild,v 1.2 2007/10/21 00:34:02 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -74,6 +74,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.2.11-libcaca-new-api.patch #40224
 	epatch "${FILESDIR}"/${PN}-1.2.11-sdl-config.patch
 	epatch "${FILESDIR}"/${PN}-1.2.11-xinerama-head-0.patch #145917
+	epatch "${FILESDIR}"/${P}-c90-comments.patch #193404
 
 	./autogen.sh || die "autogen failed"
 	elibtoolize
