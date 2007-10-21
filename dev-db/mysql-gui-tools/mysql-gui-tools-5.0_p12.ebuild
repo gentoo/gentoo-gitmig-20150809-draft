@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p12.ebuild,v 1.4 2007/09/28 19:24:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p12.ebuild,v 1.5 2007/10/21 10:51:30 swegener Exp $
 
 GCONF_DEBUG="no"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://mysql/Downloads/MySQLGUITools/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls administrator query-browser workbench"
 
 RDEPEND=">=x11-libs/gtk+-2.6
@@ -37,7 +37,10 @@ RDEPEND=">=x11-libs/gtk+-2.6
 		virtual/opengl
 	)
 	query-browser? (
-		=gnome-extra/gtkhtml-3.14*
+		|| (
+			=gnome-extra/gtkhtml-3.16*
+			=gnome-extra/gtkhtml-3.14*
+		)
 	)"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.15
