@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/dbutils
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbutils/ChangeLog,v 1.1 2007/10/21 07:29:22 robbat2 Exp $
+
+*dbutils-0.9.4 (21 Oct 2007)
+
+  21 Oct 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +dbutils-0.9.4.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
