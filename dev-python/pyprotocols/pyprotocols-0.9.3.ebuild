@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/pyprotocols-0.9.3.ebuild,v 1.3 2007/01/19 00:16:54 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/pyprotocols-0.9.3.ebuild,v 1.4 2007/10/21 20:09:57 maekke Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ LICENSE="ZPL"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc x86"
 S="${WORKDIR}/${MY_P}"
 
 src_test() {
