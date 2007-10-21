@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wxdfast
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wxdfast/ChangeLog,v 1.1 2007/10/19 04:53:14 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wxdfast/ChangeLog,v 1.2 2007/10/21 02:04:59 dirtyepic Exp $
+
+  21 Oct 2007; Ryan Hill <dirtyepic@gentoo.org>
+  +files/wxdfast-0.6.0-wxrc-configure.patch, wxdfast-0.6.0.ebuild:
+  Patch configure to get location of wxrc from wx-config.
 
 *wxdfast-0.6.0 (19 Oct 2007)
 

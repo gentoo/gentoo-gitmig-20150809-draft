@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wxdfast/wxdfast-0.6.0.ebuild,v 1.1 2007/10/19 04:53:14 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wxdfast/wxdfast-0.6.0.ebuild,v 1.2 2007/10/21 02:04:59 dirtyepic Exp $
 
 WX_GTK_VER="2.6"
 
-inherit wxwidgets
+inherit autotools eutils wxwidgets
 
 DESCRIPTION="A multi-treaded cross-platform download manager"
 HOMEPAGE="http://dfast.sourceforge.net"
@@ -25,11 +25,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# temporary kludge until all wxGTK versions in tree install wxrc
-	if [[ ! -e /usr/bin/wxrc ]]; then
-		sed -i -e "/wxrc --version/ s:wxrc:wxrc-${WX_GTK_VER}:" configure
-		sed -i -e "/^WXRC/ s:wxrc:wxrc-${WX_GTK_VER}:" Makefile.gcc
-	fi
+	epatch "${FILESDIR}"/${P}-wxrc-configure.patch
+	eautoreconf
 }
 
 src_install() {
