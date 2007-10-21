@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7828 2007/10/20 20:41:48 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7829 2007/10/21 06:57:19 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -388,23 +388,6 @@ net-dialup/l2tpd
 # Michael Marineau <marineam@gentoo.org> (24 Aug 2007)
 # Not maintained for security issues, will be removed soonish.
 =sys-kernel/xen-sources-2.6.16*
-
-# Samuli Suominen <drac@gentoo.org> (23 Aug 2007)
-# Deprecated GTK+-1.2 applications.
-# app-misc/dfm broken wrt bug 186100.
-# app-misc/emelfm replaced by app-misc/emelfm2,
-# bug 186351. Masked for treecleaners, removed in
-# 60 days.
-app-misc/dfm
-app-misc/emelfm
-
-# Samuli Suominen <drac@gentoo.org> (23 Aug 2007)
-# Obsolete ebuild for XFree86 and X.org 6.x.
-# Broken wrt bugs 130176 and 149872.
-# Gatos code has been relicensed and merged into
-# upstream xf86-video-ati RandR 1.2 branch.
-# Masked for treecleaners, removed in 60 days.
-media-video/ati-gatos
 
 # Brent J. Baude <ranger@gentoo.org> (21 Aug 2007)
 # Masking out librtas-2.0.0 in favor of new version with smaller version number
