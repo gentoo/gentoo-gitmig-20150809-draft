@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.6 2007/10/20 16:49:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007.ebuild,v 1.7 2007/10/21 10:25:21 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -195,9 +195,6 @@ src_install() {
 	use doc || rm -rf "${D}/usr/share/texmf-dist/doc"
 
 	dodir /var/cache/fonts
-
-	# root group name doesn't exist on Mac OS X
-	chown -R 0:0 "${D}/usr/share/texmf"
 
 	dodir /etc/env.d
 	echo 'CONFIG_PROTECT_MASK="/etc/texmf/web2c"' > "${D}/etc/env.d/98texlive"
