@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/dircproxy
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.22 2007/10/18 17:18:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.23 2007/10/21 15:00:27 beandog Exp $
+
+  21 Oct 2007; Steve Dibb <beandog@gentoo.org> dircproxy-1.0.5-r1.ebuild:
+  amd64 stable, bug 194923
 
   18 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   dircproxy-1.0.5-r1.ebuild:
