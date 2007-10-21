@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20070816.ebuild,v 1.2 2007/09/20 19:51:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20070816-r1.ebuild,v 1.1 2007/10/21 22:13:21 ulm Exp $
 
-inherit common-lisp elisp
+inherit common-lisp elisp eutils
 
 DESCRIPTION="SLIME, the Superior Lisp Interaction Mode (Extended)"
 HOMEPAGE="http://common-lisp.net/project/slime/"
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
-DEPEND="virtual/commonlisp
-	doc? ( virtual/tetex sys-apps/texinfo )"
+RDEPEND="virtual/commonlisp"
+DEPEND="${RDEPEND}
+	doc? ( virtual/tetex )"
 
 CLPACKAGE=swank
 SWANK_VERSION="2007-08-16"
@@ -29,24 +30,27 @@ src_unpack() {
 }
 
 src_compile() {
-	elisp-comp *.el || die "Cannot compile Elisp files"
-	use doc && make -C doc all slime.pdf
+	elisp-comp *.el || die "elisp-comp failed"
+	emake -C doc slime.info || die "emake slime.info failed"
+	if use doc; then
+		emake -C doc all || die "emake doc failed"
+	fi
 }
 
 src_install() {
-	elisp-install ${PN} *.el{,c} ChangeLog "${FILESDIR}"/swank-loader.lisp \
+	elisp-install ${PN} *.el{,c} "${FILESDIR}"/swank-loader.lisp \
 		|| die "Cannot install SLIME core"
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
+		|| die "elisp-site-file-install failed"
 	insinto "${CLSOURCEROOT}"/swank
 	doins *.lisp "${FILESDIR}"/swank.asd
 	dodir "${CLSYSTEMROOT}"
 	dosym "${CLSOURCEROOT}"/swank/swank.asd "${CLSYSTEMROOT}"
 	dosym "${SITELISP}"/${PN}/swank-version.el "${CLSOURCEROOT}"/swank
 
-	# install docs
 	dodoc README* ChangeLog HACKING NEWS PROBLEMS || die "dodoc failed"
+	doinfo doc/slime.info
 	if use doc; then
 		dodoc doc/slime.{ps,pdf} || die "dodoc failed"
-		doinfo doc/slime.info
 	fi
 }

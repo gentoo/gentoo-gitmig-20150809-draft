@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.48 2007/09/20 19:51:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.49 2007/10/21 22:13:21 ulm Exp $
+
+*slime-2.0_p20070816-r1 (21 Oct 2007)
+
+  21 Oct 2007; Ulrich Mueller <ulm@gentoo.org> -slime-2.0_p20070816.ebuild,
+  +slime-2.0_p20070816-r1.ebuild:
+  Install Info file also for USE=-doc; don't install ChangeLog twice.
+  sys-apps/texinfo removed from DEPEND. Explicitly inherit eutils.
 
   20 Sep 2007; Ulrich Mueller <ulm@gentoo.org> +files/71slime-gentoo.el,
   slime-2.0_p20070816.ebuild:
