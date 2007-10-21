@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.99.2.ebuild,v 1.2 2007/09/01 01:57:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-0.99.2.ebuild,v 1.3 2007/10/21 20:03:29 aballier Exp $
 
 inherit eutils findlib multilib
 
@@ -54,11 +54,13 @@ use_enable_default() {
 
 src_compile() {
 	./configure \
+		--prefix /usr \
 		--temproot "${D}" \
 		--bindir /usr/bin \
 		--docdir /usr/share/doc \
 		--mandir /usr/share/man/man1 \
 		--libdir /usr/$(get_libdir) \
+		--examplesdir /usr/$(get_libdir) \
 		$(use_enable debug) \
 		$(use_enable ocamlduce) \
 		$(use_enable_default sqlite dbm) \
