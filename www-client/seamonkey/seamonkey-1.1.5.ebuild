@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.5.ebuild,v 1.2 2007/10/21 14:17:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.5.ebuild,v 1.3 2007/10/21 20:51:39 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
 
-PATCH="${P}-patches-0.1"
+PATCH="${P}-patches-0.2"
 EMVER="0.95.3"
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
@@ -154,7 +154,7 @@ src_compile() {
 	sed -i -e \
 		's|-DARON_WAS_HERE|-DGENTOO_NSPLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsplugins\\\" -DGENTOO_NSBROWSER_PLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsbrowser/plugins\\\"|' \
 		${S}/config/autoconf.mk \
-		${S}/xpfe/global/buildconfig.html
+		${S}/toolkit/global/buildconfig.html
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
 	# requirements while compiling
