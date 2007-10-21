@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia-kioslaves
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.77 2007/10/19 22:30:57 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.78 2007/10/21 16:52:39 lavajoe Exp $
+
+  21 Oct 2007; Joe Peterson <lavajoe@gentoo.org>
+  +files/kdemultimedia-kioslaves-3.5.8-freebsd.patch,
+  kdemultimedia-kioslaves-3.5.8.ebuild:
+  Patch to compile on FreeBSD
 
 *kdemultimedia-kioslaves-3.5.8 (19 Oct 2007)
 
