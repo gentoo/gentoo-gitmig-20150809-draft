@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/seaview
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.13 2007/10/21 08:26:57 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.14 2007/10/21 16:41:08 je_fro Exp $
+
+  21 Oct 2007; <jeff@gentoo.org> seaview-20041220.ebuild,
+  seaview-20060213.ebuild, seaview-20070919.ebuild:
+  remove excessive quotes
 
   21 Oct 2007; Jeff Gardner <je_fro@gentoo.org> seaview-20070919.ebuild:
   seaview 20070919 appears to work with the latest pdflib
