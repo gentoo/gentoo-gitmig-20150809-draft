@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.58 2007/10/21 15:08:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.59 2007/10/21 17:51:03 drac Exp $
+
+  21 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  cdparanoia-3.10_pre0.ebuild:
+  Temporarily drop ~x86-fbsd keyword with permission until patches have been
+  backported.
 
   21 Oct 2007; Alexis Ballier <aballier@gentoo.org>
   files/cdparanoia-3.10_pre0-Makefile.in.patch:
