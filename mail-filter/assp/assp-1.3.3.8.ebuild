@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.3.3.8.ebuild,v 1.1 2007/10/20 21:27:39 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.3.3.8.ebuild,v 1.2 2007/10/21 06:00:49 mr_bones_ Exp $
 
 inherit eutils
 
@@ -89,7 +89,6 @@ src_unpack() {
 #		-e 's|split('\'' '\'', $this|split('\''$base/'\'', $this|' \
 #		-e 's|split('\'' '\'',lc|split('\''$base/'\'',lc|' \
 #		-e 's|split('\'' '\'',$pat)|split('\''$base/'\'',$pat)|' \
-
 
 	# sed move2num.pl
 	sed -i -e 's|assp.cfg|/etc/assp/assp.cfg|' move2num.pl || die
