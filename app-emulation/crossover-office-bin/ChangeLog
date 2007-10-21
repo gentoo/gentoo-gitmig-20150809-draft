@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/crossover-office-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/ChangeLog,v 1.14 2007/07/02 13:48:55 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/ChangeLog,v 1.15 2007/10/21 18:42:08 philantrop Exp $
+
+*crossover-office-bin-6.2.0 (21 Oct 2007)
+*crossover-office-bin-6.1.0 (21 Oct 2007)
+
+  21 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +crossover-office-bin-6.1.0.ebuild, +crossover-office-bin-6.2.0.ebuild:
+  Added ebuilds for CrossOver 6.1.0 and 6.2.0 as kindly permitted by vapier.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   crossover-office-bin-6.0.0.ebuild, crossover-office-bin-6.0.1.ebuild:
