@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.282 2007/10/18 17:43:12 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.283 2007/10/21 15:18:25 phreak Exp $
+
+  21 Oct 2007; Christian Heim <phreak@gentoo.org>
+  +files/alsa-driver-1.0.15-linux-2.4.patch, -alsa-driver-1.0.15_rc2.ebuild,
+  alsa-driver-1.0.15.ebuild:
+  Adding a patch for Linux 2.4.*, to make alsa-driver useable (wasn't before
+  due to alsa-driver having an unresolved symbol to 'snd_fops'). Thanks to
+  rajiv for pointing me into the right directio.
 
 *alsa-driver-1.0.15 (18 Oct 2007)
 
