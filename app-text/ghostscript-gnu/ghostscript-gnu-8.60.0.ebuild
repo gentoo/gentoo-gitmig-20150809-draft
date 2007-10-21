@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.60.ebuild,v 1.1 2007/10/21 18:12:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.60.0.ebuild,v 1.1 2007/10/21 18:26:36 genstef Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -52,10 +52,10 @@ src_unpack() {
 		cd "${S}"/Resource
 		unpack adobe-cmaps-200406.tar.gz
 		unpack acro5-cmaps-2001.tar.gz
-		cd ${WORKDIR}
+		cd "${WORKDIR}"
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	# search path fix
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/${PVM}/$(get_libdir):" \
@@ -76,7 +76,7 @@ src_compile() {
 		--disable-compile-inits \
 		--enable-dynamic \
 		|| die "econf failed"
-	
+
 	emake -j1 so all || die "emake failed"
 
 	cd ijs
@@ -90,6 +90,6 @@ src_install() {
 	rm -fr "${D}"/usr/share/doc/${PF}/html/{README,PUBLIC}
 	dodoc doc/README
 
-	cd ${S}/ijs
+	cd "${S}"/ijs
 	emake DESTDIR="${D}" install || die "emake ijs install failed"
 }
