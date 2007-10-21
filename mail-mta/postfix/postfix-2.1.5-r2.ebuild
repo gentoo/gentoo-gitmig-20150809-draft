@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.5-r2.ebuild,v 1.17 2007/07/15 07:06:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.5-r2.ebuild,v 1.18 2007/10/21 11:15:08 solar Exp $
 
 inherit eutils ssl-cert toolchain-funcs
 
@@ -106,7 +106,8 @@ src_unpack() {
 
 src_compile() {
 	# added -Wl,-z,now wrt 62674.
-	local mycc="-DHAS_PCRE" mylibs="-Wl,-z,now -L/usr/lib -lpcre -ldl -lcrypt -lpthread"
+	# make sure LDFLAGS get passed down to the executables.
+	local mycc="-DHAS_PCRE" mylibs="-Wl,-z,now ${LDFLAGS} -lpcre -ldl -lcrypt -lpthread"
 
 	if use pam ; then
 		mylibs="${mylibs} -lpam"
