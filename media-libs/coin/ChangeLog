@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/coin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.21 2007/07/22 09:41:34 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.22 2007/10/21 13:18:03 carlo Exp $
+
+*coin-2.4.6 (21 Oct 2007)
+
+  21 Oct 2007; Carsten Lohrke <carlo@gentoo.org> +coin-2.4.6.ebuild:
+  Version bump.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; coin-2.4.5.ebuild:
   Drop virtual/x11 references.
