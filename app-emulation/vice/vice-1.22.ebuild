@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.22.ebuild,v 1.1 2007/10/15 20:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.22.ebuild,v 1.2 2007/10/21 23:23:55 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -24,6 +24,7 @@ RDEPEND="media-libs/giflib
 	x11-libs/libXv
 	x11-libs/libXxf86dga
 	x11-libs/libXxf86vm
+	x11-libs/libXrandr
 	x11-apps/xset
 	Xaw3d? ( x11-libs/Xaw3d )
 	!Xaw3d? ( x11-libs/libXaw )
