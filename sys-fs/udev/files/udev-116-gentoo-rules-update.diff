@@ -29,7 +29,7 @@ Index: udev-git/etc/udev/gentoo/40-gentoo.rules
 +
 +# old devfs path, removing this could break systems
 +# Bug 195839
-+KERNEL=="md[0-9]*",	NAME="md/%n", SYMLINK+="%k"
-+KERNEL=="loop[0-9]*",	NAME="loop/%n", SYMLINK+="%k"
-+KERNEL=="ram[0-9]*",	NAME="rd/%n", SYMLINK+="%k"
++KERNEL=="md[0-9]*",	SYMLINK+="md/%n"
++KERNEL=="loop[0-9]*",	SYMLINK+="loop/%n"
++KERNEL=="ram[0-9]*",	SYMLINK+="rd/%n"
 +
