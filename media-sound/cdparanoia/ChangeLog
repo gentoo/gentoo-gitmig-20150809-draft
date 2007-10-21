@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.57 2007/10/20 17:36:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.58 2007/10/21 15:08:20 aballier Exp $
+
+  21 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  files/cdparanoia-3.10_pre0-Makefile.in.patch:
+  compile objects twice, once pic for shared libs, once nonpic for static one
 
 *cdparanoia-3.10_pre0 (20 Oct 2007)
 
