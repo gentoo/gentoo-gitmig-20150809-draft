@@ -1,0 +1,10 @@
+# ChangeLog for www-apache/mod_rpaf
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_rpaf/ChangeLog,v 1.1 2007/10/21 12:24:24 hollow Exp $
+
+*mod_rpaf-0.5 (21 Oct 2007)
+
+  21 Oct 2007; Benedikt Böhm <hollow@gentoo.org> +files/10_mod_rpaf.conf,
+  +metadata.xml, +mod_rpaf-0.5.ebuild:
+  initial ebuild, #196272
+
