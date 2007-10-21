@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/muscle
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/ChangeLog,v 1.4 2006/10/01 17:38:34 dberkholz Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/ChangeLog,v 1.5 2007/10/21 04:49:12 je_fro Exp $
+
+  21 Oct 2007; <jeff@gentoo.org> muscle-3.6.ebuild:
+  Adding ~amd64 and ~ppc for seaview
 
   01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Remove myself as maintainer so it goes to all of the sci-biology team.
