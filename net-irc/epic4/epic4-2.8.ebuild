@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.8.ebuild,v 1.2 2007/10/22 14:52:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.8.ebuild,v 1.3 2007/10/22 17:33:43 jer Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc sparc x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ~ppc sparc x86"
 IUSE="ipv6 perl ssl"
 
 DEPEND=">=sys-libs/ncurses-5.2
@@ -31,12 +31,12 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/epic-defaultserver.patch
+	epatch "${FILESDIR}"/epic-defaultserver.patch
 
-	rm -f ${WORKDIR}/help/Makefile
-	find ${WORKDIR}/help -type d -name CVS -print0 | xargs -0 rm -r
+	rm -f "${WORKDIR}"/help/Makefile
+	find "${WORKDIR}"/help -type d -name CVS -print0 | xargs -0 rm -r
 }
 
 src_compile() {
@@ -58,25 +58,25 @@ src_install () {
 
 	dodoc BUG_FORM COPYRIGHT README KNOWNBUGS VOTES
 
-	cd ${S}/doc
+	cd "${S}"/doc
 	docinto doc
 	dodoc \
 		*.txt colors EPIC* IRCII_VERSIONS local_vars missing new-load \
 		nicknames outputhelp SILLINESS TS4
 
 	insinto /usr/share/epic/help
-	doins -r ${WORKDIR}/help/* || die "doins failed"
+	doins -r "${WORKDIR}"/help/* || die "doins failed"
 }
 
 pkg_postinst() {
-	if [ ! -f ${ROOT}/usr/share/epic/script/local ]
+	if [ ! -f "${ROOT}"/usr/share/epic/script/local ]
 	then
 		elog "/usr/share/epic/script/local does not exist, I will now"
 		elog "create it. If you do not like the look/feel of this file, or"
 		elog "if you'd prefer to use your own script, simply remove this"
 		elog "file.  If you want to prevent this file from being installed"
 		elog "in the future, simply create an empty file with this name."
-		cp ${WORKDIR}/epic4-local ${ROOT}/usr/share/epic/script/local
+		cp "${WORKDIR}"/epic4-local "${ROOT}"/usr/share/epic/script/local
 		elog
 		elog "This provided local startup script adds a number of nifty"
 		elog "features to Epic including tab completion, a comprehensive set"
@@ -90,5 +90,5 @@ pkg_postinst() {
 	fi
 
 	# Fix for bug 59075
-	chmod 755 ${ROOT}/usr/share/epic/help
+	chmod 755 "${ROOT}"/usr/share/epic/help
 }
