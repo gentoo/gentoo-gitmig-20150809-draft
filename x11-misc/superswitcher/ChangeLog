@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/superswitcher
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/ChangeLog,v 1.2 2007/10/01 19:39:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/ChangeLog,v 1.3 2007/10/22 16:14:56 swegener Exp $
+
+*superswitcher-0.6 (22 Oct 2007)
+
+  22 Oct 2007; Sven Wegener <swegener@gentoo.org>
+  -files/superswitcher-0.5-gtk-2.11.0.patch, -superswitcher-0.5.ebuild,
+  +superswitcher-0.6.ebuild:
+  Version bump.
 
   01 Oct 2007; Sven Wegener <swegener@gentoo.org>
   +files/superswitcher-0.5-gtk-2.11.0.patch, superswitcher-0.5.ebuild:
