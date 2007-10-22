@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rarian
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.6 2007/10/20 01:19:21 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.7 2007/10/22 11:20:33 armin76 Exp $
+
+  22 Oct 2007; Raúl Porcel <armin76@gentoo.org> rarian-0.6.0.ebuild:
+  Add ~alpha wrt #196360
 
   20 Oct 2007; Roy Marples <uberlord@gentoo.org> rarian-0.6.0.ebuild:
   Keyworded ~sparc-fbsd.
