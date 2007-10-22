@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r4.ebuild,v 1.1 2007/05/18 01:53:28 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r4.ebuild,v 1.2 2007/10/22 10:13:21 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -10,7 +10,7 @@ MY_PN=ws-${PN}
 MY_P=${MY_PN}-${PV}
 DESCRIPTION="JaxMe 2 is an open source implementation of JAXB, the specification for Java/XML binding."
 HOMEPAGE="http://ws.apache.org/jaxme/index.html"
-SRC_URI="http://mirrors.combose.com/apache/ws/jaxme/source/${MY_P}-src.tar.gz"
+SRC_URI="mirror://apache/ws/${PN}/source/${MY_P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -43,12 +43,12 @@ src_unpack() {
 
 	cd "${S}"
 	# Fix the build.xml so we can build jars and javadoc easily
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 	# Use gnu-crypto instead of com.sun.* stuff
-	epatch ${FILESDIR}/${P}-base64.diff
+	epatch "${FILESDIR}/${P}-base64.diff"
 
 	java-pkg_filter-compiler jikes
-	cd ${S}/prerequisites
+	cd "${S}/prerequisites"
 	rm *.jar
 	java-pkg_jarfrom junit
 	java-pkg_jarfrom log4j log4j.jar log4j-1.2.8.jar
@@ -63,7 +63,7 @@ src_unpack() {
 
 	# Special case: jaxme uses build<foo>.xml files, so rewriting them by hand
 	# is better:
-	cd ${S}
+	cd "${S}"
 	for i in build*.xml src/webapp/build.xml src/test/jaxb/build.xml; do
 		java-ant_bsfix_one "${i}"
 	done
