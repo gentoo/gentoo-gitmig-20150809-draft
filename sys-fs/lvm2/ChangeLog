@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.111 2007/10/12 01:56:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.112 2007/10/22 15:21:55 armin76 Exp $
+
+  22 Oct 2007; Raúl Porcel <armin76@gentoo.org> lvm2-2.02.28-r2.ebuild:
+  Re-add ~ia64 wrt #195175
 
   12 Oct 2007; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.01.09.ebuild,
   lvm2-2.01.09-r1.ebuild, lvm2-2.01.13.ebuild, lvm2-2.02.02-r1.ebuild,
