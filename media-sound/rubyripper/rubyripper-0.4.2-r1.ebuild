@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.4.2-r1.ebuild,v 1.2 2007/10/21 15:21:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.4.2-r1.ebuild,v 1.3 2007/10/22 21:23:35 maekke Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="flac mp3 vorbis"
 
 RDEPEND="dev-ruby/ruby-gtk2
