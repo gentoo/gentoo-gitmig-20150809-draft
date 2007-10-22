@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/italc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.5 2007/09/29 00:03:39 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.6 2007/10/22 21:32:22 jokey Exp $
+
+  22 Oct 2007; Markus Ullmann <jokey@gentoo.org> italc-1.0.3.ebuild:
+  Remove bogus wx dependency as mentioned in bug #195720
 
   29 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> italc-1.0.2.ebuild,
   italc-1.0.3.ebuild:
