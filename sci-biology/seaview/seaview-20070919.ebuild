@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20070919.ebuild,v 1.4 2007/10/21 16:41:08 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20070919.ebuild,v 1.5 2007/10/22 23:23:42 je_fro Exp $
 
 inherit toolchain-funcs multilib
 
@@ -43,4 +43,10 @@ src_install() {
 	dobin seaview seaview_align.sh
 	insinto /usr/share/${PN}
 	doins protein.mase seaview.help
+
+	insinto /usr/share/pixmaps/
+	doins "${S}/${PN}.xpm"
+
+	insinto /usr/share/applications/
+	doins "${FILESDIR}/${PN}.desktop"
 }
