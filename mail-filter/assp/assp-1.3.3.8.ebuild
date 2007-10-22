@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.3.3.8.ebuild,v 1.2 2007/10/21 06:00:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.3.3.8.ebuild,v 1.3 2007/10/22 03:57:07 wltjr Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ RDEPEND="dev-lang/perl
 	dev-perl/File-ReadBackwards
 	dev-perl/Compress-Zlib
 	dev-perl/Email-Valid
+	dev-perl/libwww-perl
 	virtual/perl-Digest-MD5
 	virtual/perl-Time-HiRes
 	spf? ( dev-perl/Mail-SPF-Query )
