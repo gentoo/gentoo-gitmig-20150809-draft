@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.57 2007/10/21 20:19:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.58 2007/10/22 14:17:44 armin76 Exp $
+
+  22 Oct 2007; Raúl Porcel <armin76@gentoo.org> xulrunner-1.8.1.8.ebuild:
+  alpha/ia64/sparc stable wrt security #196480
 
   21 Oct 2007; Raúl Porcel <armin76@gentoo.org> xulrunner-1.8.1.8.ebuild:
   Bump patchset to fix bug #196444, bug #188636, and fix bug #186750 thanks to
