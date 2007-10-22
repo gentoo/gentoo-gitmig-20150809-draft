@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.5.ebuild,v 1.3 2007/10/21 20:51:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.5.ebuild,v 1.4 2007/10/22 09:39:04 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -154,7 +154,7 @@ src_compile() {
 	sed -i -e \
 		's|-DARON_WAS_HERE|-DGENTOO_NSPLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsplugins\\\" -DGENTOO_NSBROWSER_PLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsbrowser/plugins\\\"|' \
 		${S}/config/autoconf.mk \
-		${S}/toolkit/global/buildconfig.html
+		${S}/xpfe/global/buildconfig.html
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
 	# requirements while compiling
