@@ -1,6 +1,16 @@
 # ChangeLog for dev-php5/znf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/znf/ChangeLog,v 1.7 2007/09/06 16:10:28 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/znf/ChangeLog,v 1.8 2007/10/22 22:52:25 jokey Exp $
+
+*znf-0.7.9-r1 (22 Oct 2007)
+
+  22 Oct 2007; Markus Ullmann <jokey@gentoo.org> +znf-0.7.9-r1.ebuild:
+  Revision bump from php overlay
+
+  29 Sep 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +znf-0.7.9-r1.ebuild:
+  Remove channel-discover/channel-update stuff and depend on proper PEAR-PEAR
+  version instead. Do not refer to pdo-external stuff.
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -znf-0.7.6.ebuild:
   Cleanup
