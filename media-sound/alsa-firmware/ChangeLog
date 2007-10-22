@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsa-firmware
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.74 2007/10/18 18:27:40 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.75 2007/10/22 20:27:14 armin76 Exp $
+
+  22 Oct 2007; Raúl Porcel <armin76@gentoo.org>
+  alsa-firmware-1.0.12.ebuild, alsa-firmware-1.0.13.ebuild,
+  alsa-firmware-1.0.14_rc1.ebuild, alsa-firmware-1.0.14_rc2.ebuild,
+  alsa-firmware-1.0.14_rc2-r1.ebuild, alsa-firmware-1.0.14_rc3.ebuild,
+  alsa-firmware-1.0.14_rc3-r1.ebuild, alsa-firmware-1.0.14.ebuild,
+  alsa-firmware-1.0.15_rc1.ebuild, alsa-firmware-1.0.15.ebuild:
+  Dropping ia64 keyword, no hardware to test
 
 *alsa-firmware-1.0.15 (18 Oct 2007)
 
