@@ -1,6 +1,19 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.95 2007/09/06 15:50:15 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.96 2007/10/22 22:33:47 jokey Exp $
+
+*PEAR-PEAR-1.6.2 (22 Oct 2007)
+
+  22 Oct 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/1.6.2-accept-encoding-bug_12116.patch, +PEAR-PEAR-1.6.2.ebuild:
+  Version bump from php overlay
+
+  29 Sep 2007; Jakub Moc <jakub@gentoo.org>
+  +files/1.6.2-accept-encoding-bug_12116.patch, +files/pear.conf,
+  +metadata.xml, +PEAR-PEAR-1.6.2.ebuild:
+  Version bump - bugfix release, also add patch for PEAR bug #12116. Remove
+  obsolete blockers, fix RDEPEND. Add some pear channels. Lots of ebuild
+  sanitizations.
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -PEAR-PEAR-1.4.11.ebuild,
   -PEAR-PEAR-1.5.1.ebuild:
