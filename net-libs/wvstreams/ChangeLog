@@ -1,6 +1,18 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.118 2007/10/03 13:48:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.119 2007/10/22 22:46:04 mrness Exp $
+
+  22 Oct 2007; Alin Năstac <mrness@gentoo.org>
+  -files/wvstreams-4.3-64bit.patch, -files/wvstreams-4.3-MOC-fix.patch,
+  -files/wvstreams-4.3-as-needed.patch,
+  -files/wvstreams-4.3-external-xplc.patch,
+  -files/wvstreams-4.3-linux-serial.patch,
+  -files/wvstreams-4.3-sane-cflags.patch,
+  -files/wvstreams-4.3-sigaction.patch,
+  -files/wvstreams-4.3-type-punned.patch,
+  -files/wvstreams-4.3-uniconfd-ini.patch,
+  -files/wvstreams-4.3-wireless-user.patch, -wvstreams-4.3-r2.ebuild:
+  Remove obsolete version.
 
   03 Oct 2007; Raúl Porcel <armin76@gentoo.org> wvstreams-4.4.ebuild:
   alpha/sparc stable wrt #193803
