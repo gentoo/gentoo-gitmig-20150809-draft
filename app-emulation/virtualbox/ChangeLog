@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.26 2007/10/07 21:58:17 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.27 2007/10/22 22:19:38 jokey Exp $
+
+*virtualbox-1.5.2 (22 Oct 2007)
+
+  22 Oct 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/virtualbox-1.5.0-remove-alsa.patch,
+  -files/virtualbox-1.5.0-remove-splitted-stuff.patch,
+  +files/virtualbox-1.5.2-remove-alsa.patch,
+  +files/virtualbox-1.5.2-remove-splitted-stuff.patch,
+  +files/virtualbox-config, +files/virtualbox-interfaces,
+  files/virtualbox-wrapper, -virtualbox-1.5.0-r1.ebuild,
+  +virtualbox-1.5.2.ebuild, virtualbox-9999.ebuild:
+  Version bump wrt bug #196424 thanks to Alessio for the ebuilds
 
   07 Oct 2007; Markus Ullmann <jokey@gentoo.org> virtualbox-9999.ebuild:
   add blockers for virtualbox-additions bug #194183, thanks to Alessio

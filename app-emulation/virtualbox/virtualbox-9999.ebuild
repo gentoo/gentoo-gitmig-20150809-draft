@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.20 2007/10/07 21:58:17 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.21 2007/10/22 22:19:38 jokey Exp $
 
 inherit eutils flag-o-matic linux-mod qt3 subversion toolchain-funcs
 
@@ -11,7 +11,7 @@ ESVN_REPO_URI="http://virtualbox.org/svn/vbox/trunk"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nowrapper sdk vboxbfe vditool"
+IUSE="sdk"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	!app-emulation/virtualbox-additions
@@ -29,6 +29,9 @@ DEPEND="${RDEPEND}
 	sys-devel/dev86
 	sys-power/iasl
 	>=media-libs/alsa-lib-1.0.13"
+RDEPEND="${RDEPEND}
+	sys-apps/usermode-utilities
+	net-misc/bridge-utils"
 
 BUILD_TARGETS="all"
 MODULE_NAMES="vboxdrv(misc:${S}/out/linux.${ARCH}/release/bin/src:${S}/out/linux.${ARCH}/release/bin/src)"
@@ -73,31 +76,16 @@ src_install() {
 	linux-mod_src_install
 
 	cd "${S}"/out/linux.${ARCH}/release/bin
-
 	insinto /opt/VirtualBox
-
-	make_wrapper vboxtunctl "./VBoxTunctl" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
 
 	if use sdk; then
 		doins -r sdk
-		make_wrapper xpidl "sdk/bin/xpidl" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
 		fowners root:vboxusers /opt/VirtualBox/sdk/bin/xpidl
 		fperms 0750 /opt/VirtualBox/sdk/bin/xpidl
 	fi
-	if use vboxbfe; then
-		doins VBoxBFE
-		fowners root:vboxusers /opt/VirtualBox/VBoxBFE
-		fperms 0750 /opt/VirtualBox/VBoxBFE
-
-		if use nowrapper ; then
-			make_wrapper vboxbfe "./VBoxBFE" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-		else
-			dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxbfe
-		fi
-	fi
 
 	rm -rf sdk src tst* testcase additions VBoxBFE vditool vboxdrv.ko xpidl SUPInstall \
-	SUPUninstall VBox.sh VBox.png
+	SUPUninstall VBox.png
 
 	doins -r *
 	for each in VBox{Manage,SDL,SVC,XPCOMIPCD,Tunctl} VirtualBox ; do
@@ -105,25 +93,29 @@ src_install() {
 		fperms 0750 /opt/VirtualBox/${each}
 	done
 
-	if use nowrapper ; then
-		make_wrapper vboxsvc "./VBoxSVC" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-		make_wrapper virtualbox "./VirtualBox" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-		make_wrapper vboxmanage "./VBoxManage" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-		make_wrapper vboxsdl "./VBoxSDL" "/opt/VirtualBox" "/opt/VirtualBox" "/usr/bin"
-	else
-		exeinto /opt/VirtualBox
-		newexe "${FILESDIR}/${PN}-wrapper" "wrapper.sh"
-		fowners root:vboxusers /opt/VirtualBox/wrapper.sh
-		fperms 0750 /opt/VirtualBox/wrapper.sh
+	exeinto /opt/VirtualBox
+	newexe "${FILESDIR}/${PN}-wrapper" "VBox.sh" || die
+	fowners root:vboxusers /opt/VirtualBox/VBox.sh
+	fperms 0750 /opt/VirtualBox/VBox.sh
+	newexe "${S}"/src/VBox/Installer/linux/VBoxAddIF.sh "VBoxAddIF.sh" || die
+	fowners root:vboxusers /opt/VirtualBox/VBoxAddIF.sh
+	fperms 0750 /opt/VirtualBox/VBoxAddIF.sh
 
-		dosym /opt/VirtualBox/wrapper.sh /usr/bin/virtualbox
-		dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxmanage
-		dosym /opt/VirtualBox/wrapper.sh /usr/bin/vboxsdl
-	fi
+	dosym /opt/VirtualBox/VBox.sh /usr/bin/VirtualBox
+	dosym /opt/VirtualBox/VBox.sh /usr/bin/VBoxManage
+	dosym /opt/VirtualBox/VBox.sh /usr/bin/VBoxSDL
+	dosym /opt/VirtualBox/VBoxTunctl /usr/bin/VBoxTunctl
+	dosym /opt/VirtualBox/VBoxAddIF.sh /usr/bin/VBoxAddIF
+	dosym /opt/VirtualBox/VBoxAddIF.sh /usr/bin/VBoxDeleteIF
 
 	# udev rule for vboxdrv
 	dodir /etc/udev/rules.d
 	echo 'KERNEL=="vboxdrv", GROUP="vboxusers" MODE=660' >> "${D}/etc/udev/rules.d/60-virtualbox.rules"
+
+	# create virtualbox configurations files
+	insinto /etc/vbox
+	newins "${FILESDIR}/${PN}-config" vbox.cfg
+	newins "${FILESDIR}/${PN}-interfaces" interfaces
 
 	# desktop entry
 	insinto /usr/share/pixmaps
@@ -135,14 +127,7 @@ src_install() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	if use nowrapper; then
-		elog "In order to launch VirtualBox you need to start the"
-		elog "VirtualBox XPCom Server first, with:"
-		elog "vboxsvc --daemonize && virtualbox"
-	else
-		elog "To launch VirtualBox just type: \"virtualbox\""
-	fi
-	elog ""
+	elog "To launch VirtualBox just type: \"VirtualBox\""
 	elog "You must be in the vboxusers group to use VirtualBox."
 	elog ""
 	elog "The last user manual is available for download at:"
