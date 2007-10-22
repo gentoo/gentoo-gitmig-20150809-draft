@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/gloox
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.1 2007/10/22 21:43:59 jokey Exp $
+
+*gloox-0.8.4 (22 Oct 2007)
+
+  22 Oct 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +gloox-0.8.4.ebuild:
+  Initial import for dep of climm
+
