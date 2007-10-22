@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.37 2007/10/22 04:28:46 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.38 2007/10/22 04:40:37 mr_bones_ Exp $
+
+  22 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/dosbox-0.70-alsa.patch, -dosbox-0.58.ebuild, -dosbox-0.65.ebuild,
+  -dosbox-0.70.ebuild:
+  clean out older ebuilds
 
   22 Oct 2007; Mike Doty <kingtaco@gentoo.org> dosbox-0.72.ebuild:
   amd64 stable, bug 194563
