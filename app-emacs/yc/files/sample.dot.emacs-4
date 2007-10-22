@@ -2,7 +2,7 @@
 
 ;;;; Configuration for yc
 (setq yc-server-host "unix")
-;If you use inet socket service, enable the follwing line.
+;If you use inet socket service, enable the following line.
 ;(setq yc-server-host "localhost")
 (setq yc-use-color t)
 (if (eq window-system 'x)
