@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.9 2007/10/14 22:24:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksudoku/ksudoku-0.4.ebuild,v 1.10 2007/10/22 22:04:03 jokey Exp $
 
 inherit flag-o-matic multilib kde
 
@@ -16,6 +16,13 @@ IUSE=""
 DEPEND=">=dev-util/cmake-2.4.6"
 
 need-kde 3.3
+
+pkg_setup() {
+	if ! built_with_use x11-libs/qt opengl ; then
+		eerror "This needs qt3 built with opengl support to work sanely"
+		die "This needs qt3 built with opengl"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
