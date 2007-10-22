@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.14.ebuild,v 1.1 2007/10/22 18:24:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.14.ebuild,v 1.2 2007/10/22 19:25:54 dertobi123 Exp $
 
 inherit eutils webapp
 
@@ -41,10 +41,6 @@ src_unpack() {
 		-e "s|\(my \$rrd = '\).*'|\1/var/lib/mailgraph/mailgraph.rrd'|" \
 		-e "s|\(my \$rrd_virus = '\).*'|\1/var/lib/mailgraph/mailgraph_virus.rrd'|" \
 		mailgraph.cgi || die "sed mailgraph.cgi failed"
-}
-
-pkg_preinst() {
-	user_group_setup
 }
 
 src_install() {
@@ -96,7 +92,7 @@ src_install() {
 pkg_postinst() {
 	# Fix ownerships - previous versions installed these with
 	# root as owner
-	if [[ has_version <=net-mail/mailgraph-1.12 ]] ; then
+	if has_version '<=net-mail/mailgraph-1.12' ; then
 		if [[ -d /var/lib/mailgraph ]] ; then
 			chown mgraph:mgraph /var/lib/mailgraph
 		fi
