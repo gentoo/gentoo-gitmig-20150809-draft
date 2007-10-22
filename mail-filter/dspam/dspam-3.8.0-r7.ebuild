@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r7.ebuild,v 1.3 2007/10/02 05:19:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r7.ebuild,v 1.4 2007/10/22 22:39:13 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -15,14 +15,14 @@ SRC_URI="http://dspam.nuclearelephant.com/sources/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
 IUSE="clamav daemon debug ldap mysql postgres sqlite syslog \
 	large-domain virtual-users user-homedirs"
 
 COMMON_DEPEND="clamav?		( >=app-antivirus/clamav-0.90.2 )
 	ldap?		( >=net-nds/openldap-2.2 )
 	mysql?		( virtual/mysql )
-	sqlite?	( =dev-db/sqlite-3* )"
+	sqlite?		( =dev-db/sqlite-3* )"
 DEPEND="${COMMON_DEPEND}
 	postgres?	( >=dev-db/libpq-8 )"
 RDEPEND="${COMMON_DEPEND}
