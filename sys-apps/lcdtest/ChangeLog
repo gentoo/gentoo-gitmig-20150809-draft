@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lcdtest
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/ChangeLog,v 1.6 2007/08/01 15:36:57 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/ChangeLog,v 1.7 2007/10/22 15:19:19 chainsaw Exp $
+
+  22 Oct 2007; Tony Vroon <chainsaw@gentoo.org> lcdtest-1.08.ebuild:
+  Mark stable on X86 as per bug #195218.
 
 *lcdtest-1.08 (01 Aug 2007)
 
