@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.49 2007/10/21 22:13:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.50 2007/10/22 07:53:19 ulm Exp $
+
+  22 Oct 2007; Ulrich Mueller <ulm@gentoo.org> files/swank.asd:
+  Sync swank.asd from Gentoo Lisp overlay.
 
 *slime-2.0_p20070816-r1 (21 Oct 2007)
 

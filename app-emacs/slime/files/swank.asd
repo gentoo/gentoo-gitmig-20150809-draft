@@ -5,7 +5,8 @@
         #:asdf))
 
 (defpackage #:swank-loader
-  (:use #:common-lisp))
+  (:use #:common-lisp)
+  (:export #:*source-directory*))
 
 (in-package #:swank-system)
 
@@ -60,10 +61,10 @@
 #+ecl (define-swank-system
 	  "swank-ecl" "swank-gray")
 
-(defparameter swank-loader::*source-directory*
-  (asdf:component-pathname (asdf:find-system :swank)))
-
 (in-package #:swank-loader)
+
+(defparameter *source-directory*
+  (asdf:component-pathname (asdf:find-system :swank)))
 
 (defun load-user-init-file ()
   "Load the user init file, return NIL if it does not exist."
