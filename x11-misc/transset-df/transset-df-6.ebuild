@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset-df/transset-df-6.ebuild,v 1.1 2007/09/22 07:00:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset-df/transset-df-6.ebuild,v 1.2 2007/10/22 13:25:41 angelos Exp $
 
 DESCRIPTION="a patched version of xorg's transset"
 HOMEPAGE="http://forchheimer.se/transset-df/"
@@ -8,7 +8,7 @@ SRC_URI="http://forchheimer.se/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 DEPEND="x11-libs/libX11
