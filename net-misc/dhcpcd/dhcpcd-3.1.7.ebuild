@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.1.7.ebuild,v 1.1 2007/10/21 19:29:02 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-3.1.7.ebuild,v 1.2 2007/10/22 08:26:14 uberlord Exp $
 
 inherit toolchain-funcs
 
@@ -66,20 +66,20 @@ src_install() {
 pkg_postinst() {
 	if use zeroconf; then
 		ewarn "You have installed dhcpcd with zeroconf support."
-		einfo "This means that it will always obtain an IP address even if no"
-		einfo "DHCP server can be contacted, which will break any existing"
-		einfo "failover support you may have configured in your net configuration."
-		einfo "This behaviour can be controlled with the -L flag."
-		einfo "See the dhcpcd man page for more details."
+		elog "This means that it will always obtain an IP address even if no"
+		elog "DHCP server can be contacted, which will break any existing"
+		elog "failover support you may have configured in your net configuration."
+		elog "This behaviour can be controlled with the -L flag."
+		elog "See the dhcpcd man page for more details."
 	fi
 
 	if ! use vram; then
 		use zeroconf && echo
 		ewarn "You have installed dhcpcd with DUID support."
-		einfo "This means that we will generate a DUID in /var/lib/dhcpcd/dhcpcd.duid"
-		einfo "This is generated from a MAC address of the card and a timestamp."
-		einfo "It will be used in every subsequent DHCP transaction, along with a IAID"
-		einfo "in the ClientID option. This is required by RFC 4361."
+		elog "This means that we will generate a DUID in /var/lib/dhcpcd/dhcpcd.duid"
+		elog "This is generated from a MAC address of the card and a timestamp."
+		elog "It will be used in every subsequent DHCP transaction, along with a IAID"
+		elog "in the ClientID option. This is required by RFC 4361."
 		echo
 		ewarn "Some DHCP server implementations require a MAC address only in the"
 		ewarn "ClientID field. These DHCP servers should be updated to be RFC"
