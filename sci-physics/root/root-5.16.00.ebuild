@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.6 2007/10/19 10:51:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.16.00.ebuild,v 1.7 2007/10/22 17:16:16 bicatali Exp $
 
 inherit versionator flag-o-matic eutils toolchain-funcs qt3 fortran
 
@@ -169,7 +169,7 @@ src_install() {
 	if use doc; then
 		einfo "Installing user's guide and ref manual"
 		insinto /usr/share/doc/${PF}
-		doins "${DISTDIR}"/Users_Guide_${DOC_PV}.pdf || die "pdf install failed"
-		dohtml -r "${WORKDIR}"/htmldoc || die "html install failed"
+		doins "${DISTDIR}"/Users_Guide_${DOC_PV}.pdf \
+			|| die "pdf install failed"
 	fi
 }
