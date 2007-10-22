@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mailbox/vdr-mailbox-0.4.0.ebuild,v 1.2 2007/10/21 20:13:59 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mailbox/vdr-mailbox-0.4.0.ebuild,v 1.3 2007/10/22 12:30:58 zzam Exp $
 
 inherit vdr-plugin
 
@@ -19,7 +19,7 @@ DEPEND=">=media-video/vdr-1.3.8
 
 src_unpack() {
 	vdr-plugin_src_unpack
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${P}_vdr-1.5.3.diff"
 
