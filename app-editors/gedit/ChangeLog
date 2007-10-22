@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.211 2007/10/21 23:14:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.212 2007/10/22 14:16:37 eva Exp $
+
+  22 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org> -gedit-2.18.2.ebuild:
+  remove 2.18.2, superseeded by 2.18.2-r1
 
 *gedit-2.20.3 (21 Oct 2007)
 
