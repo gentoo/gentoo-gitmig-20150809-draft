@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6c.ebuild,v 1.11 2007/10/13 00:12:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6c.ebuild,v 1.12 2007/10/22 19:16:29 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -11,7 +11,7 @@ MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 
-PATCHLEVEL="41"
+PATCHLEVEL="44"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 
@@ -149,11 +149,6 @@ src_unpack() {
 	has_version '>=dev-libs/libcdio-0.78' || \
 		export EPATCH_EXCLUDE="230_all_libcdio-0.78.2.patch"
 
-	# Drop patches that have been merged
-	EPATCH_EXCLUDE="${EPATCH_EXCLUDE} 260_all_format-string-sa23592.patch
-	270_all_libtar-automagic.patch 280_all_sdl-image-automagic.patch
-	300_all_fullscreen_amd64.patch 240_all_flac-1.1.3.patch"
-
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	AT_M4DIR="m4" eautoreconf
 }
@@ -165,13 +160,6 @@ src_compile () {
 	use vlm && \
 		myconf="${myconf} --enable-vlm --enable-sout" || \
 		myconf="${myconf} --disable-vlm"
-
-	if use directfb; then
-		myconf="${myconf} --enable-directfb --with-directfb=/usr"
-		append-flags "-I /usr/include/directfb"
-	else
-		myconf="${myconf} --disable-directfb"
-	fi
 
 	if use nsplugin; then
 		if use seamonkey; then
@@ -263,6 +251,7 @@ src_compile () {
 		$(use_enable musepack mpc) \
 		$(use_enable x264) \
 		$(use_enable dc1394) \
+		$(use_enable directfb) \
 		--enable-ffmpeg \
 		--disable-faad \
 		--disable-dv \
