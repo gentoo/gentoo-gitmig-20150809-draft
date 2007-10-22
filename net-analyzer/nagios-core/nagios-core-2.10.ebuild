@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.9-r1.ebuild,v 1.4 2007/08/01 21:00:26 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.10.ebuild,v 1.1 2007/10/22 18:29:08 dertobi123 Exp $
 
 inherit eutils apache-module toolchain-funcs
 
@@ -114,7 +114,7 @@ src_install() {
 	dodoc "${D}"/etc/nagios/*
 	rm "${D}"/etc/nagios/*
 
-	newdoc ${WORKDIR}/nagios-2.0b.cfg-sample nagios.cfg-sample
+	newdoc "${WORKDIR}"/nagios-2.0b.cfg-sample nagios.cfg-sample
 
 	#contribs are not configured by the configure script, we'll configure them overselves...
 	find "${S}"/contrib/ -type f | xargs sed -e 's:/usr/local/nagios/var/rw:/var/nagios/rw:;
