@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r6.ebuild,v 1.7 2007/10/22 18:43:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r6.ebuild,v 1.8 2007/10/22 19:28:00 maekke Exp $
 
 NEED_PYTHON=2.3
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc lapack"
 
 S="${WORKDIR}/${MY_P}"
