@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/sendEmail-1.55.ebuild,v 1.3 2007/09/26 04:47:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/sendEmail-1.55.ebuild,v 1.4 2007/10/22 22:57:58 mrness Exp $
 
 DESCRIPTION="Command line based, SMTP email agent"
 HOMEPAGE="http://caspian.dotconf.net/menu/Software/SendEmail/"
@@ -18,7 +18,6 @@ RDEPEND="dev-lang/perl
 S="${WORKDIR}/${PN}-v${PV}"
 
 src_install() {
-	dodir /usr/bin
-	exeinto /usr/bin ; doexe sendEmail || die "failed to install sendEmail script"
+	dobin sendEmail || die "failed to install sendEmail script"
 	dodoc CHANGELOG  README  TODO
 }
