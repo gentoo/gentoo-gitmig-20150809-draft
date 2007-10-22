@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/dspam-web
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.38 2007/09/24 20:40:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.39 2007/10/22 22:51:20 mrness Exp $
+
+  22 Oct 2007; Alin Năstac <mrness@gentoo.org> dspam-web-3.8.0.ebuild:
+  Use the latest patches tarball.
 
   24 Sep 2007; Alin Năstac <mrness@gentoo.org> dspam-web-3.8.0.ebuild:
   Die in pkg_setup if dev-perl/GD has been installed without png USE flag

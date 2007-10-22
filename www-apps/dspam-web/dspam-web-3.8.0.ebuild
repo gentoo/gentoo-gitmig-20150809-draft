@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0.ebuild,v 1.9 2007/09/25 04:41:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0.ebuild,v 1.10 2007/10/22 22:51:20 mrness Exp $
 
 inherit webapp eutils autotools
 
-PATCHES_RELEASE_DATE="20070909"
+PATCHES_RELEASE_DATE="20070930"
 
 DESCRIPTION="Web based administration and user controls for dspam"
 HOMEPAGE="http://dspam.nuclearelephant.com/"
