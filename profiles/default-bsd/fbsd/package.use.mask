@@ -64,3 +64,8 @@ gnome-base/gnome ldap
 
 # spell causes epiphany to segfault, so disable for the time being
 www-client/epiphany spell
+
+# Gilles Dartiguelongue <eva@gentoo.org> (22 Oct 2007)
+# GNU attr isn't supported
+=app-editors/gedit-2.18* acl
+=app-editors/gedit-2.20* xattr

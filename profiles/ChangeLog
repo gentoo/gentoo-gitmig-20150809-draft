@@ -1,9 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.752 2007/10/22 14:18:21 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.753 2007/10/22 14:19:47 eva Exp $
 
   22 Oct 2007; Alon Bar-Lev <alonbl@gentoo.org> use.local.desc:
   Added dev-libs/pkcs11-helper:nss
+
+  22 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  default-bsd/fbsd/package.use.mask:
+  use.masking xattr for gedit
 
   21 Oct 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Add >=app-emacs/ocaml-mode-3.10.0 to ocaml masks, to avoid unnecessary
