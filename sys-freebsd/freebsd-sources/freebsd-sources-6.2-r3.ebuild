@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.2-r3.ebuild,v 1.1 2007/09/12 00:04:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.2-r3.ebuild,v 1.2 2007/10/22 14:27:04 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -42,6 +42,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-6.1-ntfs.patch"
 	epatch "${FILESDIR}/${PN}-6.2-debug-O2.patch"
 	epatch "${FILESDIR}/${PN}-6.2-dl_iterate_phdr.patch"
+	epatch "${FILESDIR}/${PN}-6.2-posix-monotonic-clock.patch"
 
 	# Errata patches
 	epatch "${FILESDIR}/${P}-EN-07:02.net.patch"
