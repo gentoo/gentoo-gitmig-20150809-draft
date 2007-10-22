@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.29.ebuild,v 1.2 2007/07/28 06:46:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.31.ebuild,v 1.1 2007/10/22 22:34:09 mrness Exp $
 
 mingw32_variants=$(eval echo {,i{6,5,4,3}86-}mingw32)
 
@@ -58,7 +58,10 @@ get_additional_options() {
 		SKIPUTILS=\"NSIS Menu\" \
 		SKIPMISC=\"\"
 	use config-log && echo NSIS_CONFIG_LOG=yes
+	# remove the following line when nsis bug 1753070 will be fixed
+	use amd64 && echo APPEND_CCFLAGS=-m32 APPEND_LINKFLAGS=-m32
 }
+
 do_scons() {
 	local cmd=$1
 	eval set -- $(get_additional_options)
