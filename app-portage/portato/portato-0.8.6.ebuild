@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.8.6.ebuild,v 1.1 2007/10/20 17:03:43 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.8.6.ebuild,v 1.2 2007/10/22 15:06:58 jokey Exp $
 
 NEED_PYTHON="2.5"
 inherit python eutils distutils
@@ -20,6 +20,7 @@ RDEPEND=">=sys-apps/portage-2.1.2
 		>=x11-libs/vte-0.12.2
 		>=gnome-base/libglade-2.5.1
 		>=dev-python/pygtksourceview-2.0.0
+		!dev-util/portatosourceview
 
 		!userpriv? (
 			kde? ( || ( >=kde-base/kdesu-3.5.5 >=kde-base/kdebase-3.5.5	) )
@@ -38,12 +39,6 @@ DATA_DIR="usr/share/${PN}/"
 LOCALE_DIR="usr/share/locale/"
 PLUGIN_DIR="${DATA_DIR}/plugins"
 ICON_DIR="${DATA_DIR}/icons"
-
-apply_sed ()
-{
-	cd "${S}/${PN}"
-
-}
 
 pkg_setup ()
 {
@@ -67,23 +62,18 @@ src_compile ()
 	use kde && su="\"kdesu -t --nonewdcop -i %s -c\" % APP_ICON"
 
 	sed -i 	-e "s;^\(VERSION\s*=\s*\).*;\1\"${PV}\";" \
-			-e "s;^\(CONFIG_DIR\s*=\s*\).*;\1\"${CONFIG_DIR}\";" \
-			-e "s;^\(DATA_DIR\s*=\s*\).*;\1\"${DATA_DIR}\";" \
+			-e "s;^\(CONFIG_DIR\s*=\s*\).*;\1\"${ROOT}${CONFIG_DIR}\";" \
+			-e "s;^\(DATA_DIR\s*=\s*\).*;\1\"${ROOT}${DATA_DIR}\";" \
 			-e "s;^\(TEMPLATE_DIR\s*=\s*\).*;\1DATA_DIR;" \
-			-e "s;^\(ICON_DIR\s*=\s*\).*;\1\"${ICON_DIR}\";" \
-			-e "s;^\(LOCALE_DIR\s*=\s*\).*;\1\"${LOCALE_DIR}\";" \
+			-e "s;^\(ICON_DIR\s*=\s*\).*;\1\"${ROOT}${ICON_DIR}\";" \
+			-e "s;^\(LOCALE_DIR\s*=\s*\).*;\1\"${ROOT}${LOCALE_DIR}\";" \
 			-e "s;^\(FRONTENDS\s*=\s*\).*;\1${frontends};" \
 			-e "s;^\(STD_FRONTEND\s*=\s*\).*;\1\"${std}\";" \
 			-e "s;^\(SU_COMMAND\s*=\s*\).*;\1${su};" \
 			-e "s;^\(USE_CATAPULT\s*=\s*\).*;\1False;" \
-			constants.py
+			"${PN}"/constants.py
 
-	# don't do this as "use userpriv && ..." as it makes the whole function
-	# fail, if userpriv is not set
-	if use userpriv; then
-		sed -i -e "s/Exec=.*/Exec=portato --no-listener/" portato.desktop
-	fi
-
+	use userpriv &&	sed -i -e "s/Exec=.*/Exec=portato --no-listener/" portato.desktop
 	use nls && ./pocompile.sh -emerge
 
 	distutils_src_compile

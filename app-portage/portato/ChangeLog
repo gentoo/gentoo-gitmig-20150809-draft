@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portato
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.2 2007/10/20 17:03:43 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.3 2007/10/22 15:06:58 jokey Exp $
+
+  22 Oct 2007; Markus Ullmann <jokey@gentoo.org> portato-0.8.6.ebuild:
+  Some fixes from sunrise/portage-review
 
 *portato-0.8.6 (20 Oct 2007)
 
