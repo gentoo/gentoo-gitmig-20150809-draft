@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7833 2007/10/22 11:34:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7834 2007/10/22 21:27:11 mabi Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -292,10 +292,6 @@ mail-mta/qmail-mysql
 # Daniel Black <dragonheart@gentoo.org> (14 Sep 2007)
 # Added for testing libssh2
 =net-misc/curl-7.17.0-r1
-
-# Matti Bickel <mabi@gentoo.org> (12 Sep 2007)
-# Broken (bug #167468), use x11-wm/ion3 instead
-x11-wm/ion2
 
 # Bernard Cafarelli <voyageur@gentoo.org> (11 Sep 2007)
 # Mask PDFkit and the applications that use/need it
