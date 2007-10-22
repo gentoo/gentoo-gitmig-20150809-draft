@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.6.1.ebuild,v 1.1 2007/10/22 21:39:04 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.6.1.ebuild,v 1.2 2007/10/22 21:51:36 jokey Exp $
 
 DESCRIPTION="ICQ text-mode client with many features"
 HOMEPAGE="http://www.climm.org/"
@@ -24,6 +24,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog FAQ INSTALL NEWS README TODO
 }
