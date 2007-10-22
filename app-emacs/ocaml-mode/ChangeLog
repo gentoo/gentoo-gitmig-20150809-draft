@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.15 2007/10/11 12:55:09 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.16 2007/10/22 11:41:16 fmccor Exp $
+
+  22 Oct 2007; Ferris McCormick <fmccor@gentoo.org>
+  ocaml-mode-3.09.3-r1.ebuild, ocaml-mode-3.10.0.ebuild:
+  Add ~sparc keyword --- Bug #43128
 
   11 Oct 2007; Lars Weiler <pylon@gentoo.org> ocaml-mode-3.09.3-r1.ebuild:
   stable ppc, bug #195095
