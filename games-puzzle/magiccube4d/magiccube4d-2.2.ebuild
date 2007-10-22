@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/magiccube4d/magiccube4d-2.2.ebuild,v 1.9 2006/12/06 17:10:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/magiccube4d/magiccube4d-2.2.ebuild,v 1.10 2007/10/22 20:30:05 angelos Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.superliminal.com/cube/mc4d-src-${MY_PV}.tgz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="x11-libs/libXaw"
@@ -22,7 +22,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-EventHandler.patch \
-		"${FILESDIR}/${P}"-gcc41.patch
+		"${FILESDIR}/${P}"-gcc41.patch \
+		"${FILESDIR}/${P}"-64bit-ptr.patch
 	sed -i -e "s:-Werror::" \
 		configure
 }
