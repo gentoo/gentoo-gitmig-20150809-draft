@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.4-r1.ebuild,v 1.7 2007/08/06 05:51:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.4-r2.ebuild,v 1.1 2007/10/22 15:08:01 armin76 Exp $
 
 inherit eutils versionator gnome2
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.xchat.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="perl dbus tcl python ssl mmx ipv6 libnotify nls spell xchatnogtk xchatdccserver"
 
 RDEPEND=">=dev-libs/glib-2.6.0
@@ -43,6 +43,7 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}"/xc284-scrollbmkdir.diff
+	epatch "${FILESDIR}"/xc284-improvescrollback.diff
 }
 
 src_compile() {
