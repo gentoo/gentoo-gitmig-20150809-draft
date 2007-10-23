@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.103 2007/10/17 13:59:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.104 2007/10/23 05:09:27 cla Exp $
+
+  23 Oct 2007; Dawid Węgliński <cla@gentoo.org> dvdrip-0.98.8.ebuild:
+  Stable on x86 (bug #196651)
 
 *dvdrip-0.98.8-r1 (17 Oct 2007)
 
