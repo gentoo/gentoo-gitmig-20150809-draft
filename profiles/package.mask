@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7837 2007/10/23 22:35:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7838 2007/10/23 23:22:35 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -88,11 +88,6 @@ dev-php4/pecl-http
 # Rémi Cardona <remi@gentoo.org> (18 Oct 2007)
 # Dasher still fails to build
 >=app-accessibility/dasher-4.6.0
-
-# Timo Gurr <tgurr@gentoo.org> (17 Oct 2007)
-# First release with ghostscript-esp merged.
-# Masked for testing, see bug 187502.
->=app-text/ghostscript-gpl-8.60
 
 # Eldad Zack <eldadz@gentoo.org> (16 Oct 2007)
 # ardour-2.1 using syslibs, see bug #194437
