@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/superswitcher
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/ChangeLog,v 1.4 2007/10/22 16:56:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/ChangeLog,v 1.5 2007/10/23 16:54:22 swegener Exp $
+
+  23 Oct 2007; Sven Wegener <swegener@gentoo.org>
+  files/superswitcher-0.6-wnck-workspace.patch:
+  Update patch to fix another segmentation fault.
 
   22 Oct 2007; Sven Wegener <swegener@gentoo.org>
   +files/superswitcher-0.6-wnck-workspace.patch, superswitcher-0.6.ebuild:
