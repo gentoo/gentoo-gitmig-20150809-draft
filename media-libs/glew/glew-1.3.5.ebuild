@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.3.5.ebuild,v 1.6 2007/08/13 20:59:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.3.5.ebuild,v 1.7 2007/10/23 21:12:59 lavajoe Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -12,7 +12,7 @@ LICENSE="BSD GLX SGI-B GPL-2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 RDEPEND="virtual/opengl
 	virtual/glu"
@@ -22,7 +22,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Portage will strip binaries if needed
 	# If we strip here, static library will have no symbols
