@@ -5,4 +5,7 @@
 (add-to-list 'auto-mode-alist '("\\.ml[iylp]?\\'" . caml-mode))
 (autoload 'caml-mode "caml" "Major mode for editing Caml code." t)
 (autoload 'run-caml "inf-caml" "Run an inferior Caml process." t)
-;;(require 'caml-font)
+(autoload 'inferior-caml-mode-font-hook "caml-font")
+
+(eval-after-load "caml" '(require 'caml-font))
+(add-hook 'inferior-caml-mode-hooks 'inferior-caml-mode-font-hook)
