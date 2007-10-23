@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qt-recordmydesktop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/ChangeLog,v 1.4 2007/10/09 18:44:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/ChangeLog,v 1.5 2007/10/23 14:56:55 aballier Exp $
+
+  23 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  -qt-recordmydesktop-0.2.ebuild:
+  remove old version
 
   09 Oct 2007; Alexis Ballier <aballier@gentoo.org>
   qt-recordmydesktop-0.2.ebuild:
