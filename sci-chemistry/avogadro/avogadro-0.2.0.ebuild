@@ -1,23 +1,23 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.1.0.ebuild,v 1.3 2007/10/23 17:52:53 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.2.0.ebuild,v 1.1 2007/10/23 17:52:53 cryos Exp $
 
 inherit toolchain-funcs multilib
 
 DESCRIPTION="Advanced molecular editor that uses Qt4 and OpenGL"
 HOMEPAGE="http://avogadro.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-util/cmake-2.4.3
+DEPEND=">=dev-util/cmake-2.4.6
 	>=dev-cpp/eigen-1.0.5
 	${RDEPEND}"
-RDEPEND=">=x11-libs/qt-4.2.3
-	>=sci-chemistry/openbabel-2.1.0"
+RDEPEND=">=x11-libs/qt-4.3.0
+	>=sci-chemistry/openbabel-2.1.1"
 
 src_compile() {
 	cmake -DCMAKE_INSTALL_PREFIX=/usr \
