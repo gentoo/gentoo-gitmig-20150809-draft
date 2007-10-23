@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.16.ebuild,v 1.7 2007/10/03 05:59:57 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.16.ebuild,v 1.8 2007/10/23 23:58:43 wltjr Exp $
 
 JAVA_PKG_OPT_USE="freetts"
 
@@ -60,15 +60,15 @@ src_unpack() {
 	sed -i \
 		-e 's:\(GNOME_SPEECH_JAR_DIR=\).*:\1"/usr/share/java-access-bridge/lib/":' \
 		-e 's:\(FREETTS_DRIVER_JAR_DIR=\).*:\1"/usr/share/java-access-bridge/lib/":' \
-		${S}/configure
+		"${S}"/configure
 }
 
 src_install() {
 	gnome2_src_install
 
 	if use freetts; then
-		java-pkg_dojar ${D}/usr/share/jar/*.jar
-		rm -rf ${D}/usr/share/jar
+		java-pkg_dojar "${D}"/usr/share/jar/*.jar
+		rm -rf "${D}"/usr/share/jar
 	fi
 }
 
