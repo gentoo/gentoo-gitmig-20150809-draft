@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/gfax-0.7.6.ebuild,v 1.3 2007/07/12 02:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/gfax-0.7.6.ebuild,v 1.4 2007/10/23 09:21:36 genstef Exp $
 
 inherit gnome2 mono eutils autotools
 
@@ -26,20 +26,19 @@ RDEPEND=">=dev-lang/mono-0.93
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.25"
 
-S=${WORKDIR}/${MY_P/_/-}
-
 G2CONF="${G2CONF} --enable-dbus=no"
 DOCS="AUTHORS ChangeLog FAQ NEWS README TODO"
 USE_DESTDIR="1"
 
 src_unpack() {
 	unpack ${A}
+	epatch ${MY_P}-2.diff
 	cd ${S}
-	patch -p1 < ${WORKDIR}/${MY_P}-2.diff
-	for i in debian/patches/*.dpatch; do
-		patch -p1 < $i
-	done
-	eautomake
+	while read line; do
+		epatch debian/patches/"$line".dpatch
+	done < debian/patches/00list
+	intltoolize --force
+	eautoreconf
 }
 
 src_compile() {
