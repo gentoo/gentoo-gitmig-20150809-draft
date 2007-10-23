@@ -1,0 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST compiz-fusion-plugins-unsupported-0.6.0.tar.bz2 411166 RMD160 4bbf99388c69fb24f31554414e226ec2d40ecabb SHA1 ee3b367c1718f2172a13bb71837bd4787c87e296 SHA256 14c0a4abed43af90ab29494bced8d8fc9cf2ac883f832a8761f9107b4e7362f8
+EBUILD compiz-fusion-plugins-unsupported-0.6.0.ebuild 707 RMD160 15cf71039b8a64c5423c58523b9880c0d9fe7d4b SHA1 a00dd75fa41aa00844c32e461164b2738e55520c SHA256 cd7a70ce3bd1cc892bca08a06346c97108121073fc95bac1fe56782acb43cbf1
+MD5 f2e5cfef19e1f671fd7110f9d2082d85 compiz-fusion-plugins-unsupported-0.6.0.ebuild 707
+RMD160 15cf71039b8a64c5423c58523b9880c0d9fe7d4b compiz-fusion-plugins-unsupported-0.6.0.ebuild 707
+SHA256 cd7a70ce3bd1cc892bca08a06346c97108121073fc95bac1fe56782acb43cbf1 compiz-fusion-plugins-unsupported-0.6.0.ebuild 707
+MISC ChangeLog 497 RMD160 82ceaaf58daf4861bab6302baf8f7519ce2398c5 SHA1 fc832f2e175dd791e378ebac76fbdfd49fc6ff4e SHA256 2ed25f738f57e4f7f1317007611acbb9e8e9165b1babbf489e29c8a8546ed321
+MD5 438000ec97e2212ffc6b958e3f818dc3 ChangeLog 497
+RMD160 82ceaaf58daf4861bab6302baf8f7519ce2398c5 ChangeLog 497
+SHA256 2ed25f738f57e4f7f1317007611acbb9e8e9165b1babbf489e29c8a8546ed321 ChangeLog 497
+MISC metadata.xml 217 RMD160 3b01d5dab901ee93217f72b711954d3cccbb1717 SHA1 e304788b60dd2cf214d360a21d267e8635474d98 SHA256 2f5dfc1eb79d2d9ee02663da6e1449f499c3a37b7f4cc2391e18d7789a314669
+MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
+RMD160 3b01d5dab901ee93217f72b711954d3cccbb1717 metadata.xml 217
+SHA256 2f5dfc1eb79d2d9ee02663da6e1449f499c3a37b7f4cc2391e18d7789a314669 metadata.xml 217
+MD5 bee04c2b9f218e0e461b3d7233fe73c4 files/digest-compiz-fusion-plugins-unsupported-0.6.0 322
+RMD160 78a091108f2f09200aacdd0524d05684087e39f7 files/digest-compiz-fusion-plugins-unsupported-0.6.0 322
+SHA256 c8fec0f70e60fa7d57833d0fdc7bd29ff98434cfd78bf322269767e7a6f19bca files/digest-compiz-fusion-plugins-unsupported-0.6.0 322
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHHnicr2QksT29OyARAt7XAJ97mEaFFWDHi8Moillmrri/4RJ0lACfeY+a
+7Out9dzOtB577MSV9ebTYqk=
+=gBfB
+-----END PGP SIGNATURE-----
