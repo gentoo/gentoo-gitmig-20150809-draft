@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/jacksum
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.25 2007/10/23 20:34:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.26 2007/10/23 20:35:41 betelgeuse Exp $
+
+  23 Oct 2007; Petteri Räty <betelgeuse@gentoo.org> jacksum-1.7.0.ebuild:
+  Quote S
 
   23 Oct 2007; Petteri Räty <betelgeuse@gentoo.org> -jacksum-1.5.1.ebuild,
   -jacksum-1.6.0-r1.ebuild:
