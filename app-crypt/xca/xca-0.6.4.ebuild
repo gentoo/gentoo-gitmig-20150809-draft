@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.6.4.ebuild,v 1.1 2007/09/22 18:20:49 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.6.4.ebuild,v 1.2 2007/10/23 15:49:30 alonbl Exp $
 
 inherit eutils
 
@@ -28,6 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-build.patch"
+	epatch "${FILESDIR}/${P}-openssl.patch"
 }
 
 src_compile() {
