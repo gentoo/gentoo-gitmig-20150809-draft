@@ -5,3 +5,5 @@ move app-emacs/simple-wiki app-emacs/http-emacs
 move dev-php5/syck-php-bindings dev-php5/pecl-syck
 move net-www/dotproject www-apps/dotproject
 slotmove =x11-libs/gtksourceview-1* 1 1.0
+move x11-apps/compiz-settings x11-apps/ccsm
+move x11-plugins/compiz-extra x11-plugins/compiz-fusion-plugins-main
