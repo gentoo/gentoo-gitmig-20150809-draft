@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc5.ebuild,v 1.3 2007/10/22 20:45:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0_rc5.ebuild,v 1.4 2007/10/23 10:08:17 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -171,7 +171,7 @@ pkg_postinst() {
 		(
 		. "${ROOT}etc/conf.d/rc"
 		svcdir="${svcdir:-/var/lib/init.d}"
-		einfo "Moving state from ${ROOT}${svcdir} to ${ROOT}lib/rcscripts/init.d"
+		einfo "Moving state from ${ROOT}${svcdir} to ${ROOT}lib/rc/init.d"
 		cp -RPp "${ROOT}${svcdir}"/* "${ROOT}"lib/rc/init.d
 		rm -rf "${ROOT}"lib/rc/init.d/daemons \
 			"${ROOT}"lib/rc/init.d/console
@@ -279,12 +279,13 @@ pkg_postrm() {
 		(
 		. "${ROOT}etc/conf.d/rc"
 		svcdir="${svcdir:-/var/lib/init.d}"
-		einfo "Moving state from ${ROOT}lib/rcscripts/init.d to ${ROOT}${svcdir}"
+		einfo "Moving state from ${ROOT}lib/rc/init.d to ${ROOT}${svcdir}"
 		mkdir -p "${ROOT}${svcdir}"
-		cp -RPp "${ROOT}lib/rcscripts/init.d"/* "${ROOT}${svcdir}"
+		cp -RPp "${ROOT}lib/rc/init.d"/* "${ROOT}${svcdir}"
 		rm -rf "${ROOT}${svcdir}"/daemons
-		umount "${ROOT}lib/rcscripts/init.d" 2>/dev/null
-		rm -rf "${ROOT}lib/rcscripts/init.d"
+		umount "${ROOT}lib/rc/init.d" 2>/dev/null
+		rm -rf "${ROOT}lib/rc/init.d" "${ROOT}lib/rc/console"
+		rmdir "${ROOT}lib/rc" 2>/dev/null
 		)
 	elif has_version "<sys-apps/${PN}-2.0.0_rc5" ; then
 		einfo "Moving state from ${ROOT}lib/rc/init.d to ${ROOT}lib/rcscripts/init.d"
@@ -292,7 +293,7 @@ pkg_postrm() {
 		cp -RPp "${ROOT}"lib/rc/init.d/* "${ROOT}"lib/rcscripts/init.d
 		umount "${ROOT}"lib/rc/init.d 2>/dev/null
 		rm -rf "${ROOT}"lib/rc/init.d
-		[ -d "${ROPT}"/lib/rc/console ] && \
+		[ -d "${ROOT}"/lib/rc/console ] && \
 			mv "${ROOT}"lib/rc/console "${ROOT}"lib/rcscripts
 		rmdir "${ROOT}"lib/rc 2>/dev/null
 	fi
