@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/3proxy-0.5.3h.ebuild,v 1.3 2007/04/14 15:17:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/3proxy-0.5.3j.ebuild,v 1.1 2007/10/23 13:42:10 mrness Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.security.nnov.ru/soft/3proxy/${PV}/${P}.tgz"
 
 LICENSE="3proxy"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
@@ -25,7 +25,6 @@ src_unpack() {
 		-e "/^LDFLAGS/s:-O2:${LDFLAGS}:" \
 		Makefile.unix || die "sed Makefile"
 	sed -i 's:/usr/local::' src/stringtable.c || die "sed stringtable"
-	find . -type f -print0 | xargs -0 chmod a-x
 }
 
 src_compile() {
@@ -39,19 +38,22 @@ src_compile() {
 src_install() {
 	local x
 
-	cd "${S}"/src
+	pushd src
 	dobin 3proxy || die "dobin 3proxy failed"
-	for x in proxy socks pop3p tcppm udppm mycrypt dighosts ; do
+	for x in proxy socks ftppr pop3p tcppm udppm mycrypt dighosts ; do
 		newbin ${x} ${PN}-${x} || die "newbin ${x} failed"
 		[[ -f ${S}/man/${x}.8 ]] \
 			&& newman "${S}"/man/${x}.8 ${PN}-${x}.8
 	done
+	popd
 
-	dodoc $(find "${S}"/cfg -type f)
 	doman "${S}"/man/3proxy*.[38]
 
 	cd "${S}"
 	dodoc Changelog Readme Release.notes
-	dodoc $(find "${S}"/doc -name '*.txt')
-	dohtml $(find "${S}"/doc -name '*.html')
+	dohtml -r doc/html/*
+	docinto cfg
+	dodoc cfg/*.{txt,sample}
+	docinto cfg/sql
+	dodoc cfg/sql/*.{cfg,sql}
 }
