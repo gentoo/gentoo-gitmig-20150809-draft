@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/erc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.30 2007/10/19 18:44:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.31 2007/10/23 09:40:53 armin76 Exp $
+
+  23 Oct 2007; Raúl Porcel <armin76@gentoo.org> erc-5.2-r1.ebuild:
+  sparc stable wrt #196020
 
   19 Oct 2007; nixnut <nixnut@gentoo.org> erc-5.2-r1.ebuild:
   Stable on ppc wrt bug 196020
