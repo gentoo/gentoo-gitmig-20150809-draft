@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.16 2007/10/19 19:11:25 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.17 2007/10/23 21:19:18 tgurr Exp $
+
+  23 Oct 2007; Timo Gurr <tgurr@gentoo.org>
+  files/ghostscript-8.60-include.patch, ghostscript-gpl-8.60.ebuild:
+  Add missing fontconfig dependency and fix bug #196289 with a corrected
+  upstream patch, thanks Sebastian for reporting.
 
   19 Oct 2007; Timo Gurr <tgurr@gentoo.org>
   +files/ghostscript-8.60-include.patch, ghostscript-gpl-8.60.ebuild:

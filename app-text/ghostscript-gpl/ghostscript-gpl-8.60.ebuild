@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.60.ebuild,v 1.2 2007/10/19 19:11:25 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.60.ebuild,v 1.3 2007/10/23 21:19:18 tgurr Exp $
 
 inherit autotools elisp-common eutils versionator flag-o-matic
 
@@ -20,15 +20,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="bindist cjk cups djvu gtk jpeg2k X"
 
-COMMON_DEPEND=">=media-libs/jpeg-6b
+COMMON_DEPEND="media-libs/fontconfig
+	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.5
-	>=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7
-	X? ( x11-libs/libXt x11-libs/libXext )
+	>=sys-libs/zlib-1.1.4
 	!bindist? ( djvu? ( app-text/djvu ) )
-	gtk? ( >=x11-libs/gtk+-2.0 )
 	cups? ( >=net-print/cups-1.1.20 )
+	gtk? ( >=x11-libs/gtk+-2.0 )
 	jpeg2k? ( media-libs/jasper )
+	X? ( x11-libs/libXt x11-libs/libXext )
 	!app-text/ghostscript-esp
 	!app-text/ghostscript-gnu"
 
@@ -103,13 +104,14 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		$(use_with X x) \
-		$(use_with jpeg2k jasper) \
 		$(use_enable cups) \
 		$(use_enable gtk) \
+		$(use_with jpeg2k jasper) \
+		$(use_with X x) \
 		--enable-dynamic \
-		--with-ijs \
+		--enable-fontconfig \
 		--with-drivers=ALL,rinkj \
+		--with-ijs \
 		--with-jbig2dec \
 	|| die "econf failed"
 
@@ -127,8 +129,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	emake DESTDIR="${D}" soinstall || die "emake soinstall failed"
+	emake DESTDIR="${D}" install-so install || die "emake install failed"
 
 	if ! use bindist && use djvu ; then
 		dobin gsdjvu || die "dobin gsdjvu install failed"
