@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/thumbs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/thumbs/ChangeLog,v 1.15 2007/10/18 08:13:34 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/thumbs/ChangeLog,v 1.16 2007/10/23 09:46:16 armin76 Exp $
+
+  23 Oct 2007; Raúl Porcel <armin76@gentoo.org> thumbs-2.0.ebuild:
+  sparc stable wrt
 
   18 Oct 2007; Christian Faulhammer <opfer@gentoo.org> thumbs-2.0.ebuild:
   add ~amd64, stabilise for x86, bug 196255
