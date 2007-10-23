@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7.ebuild,v 1.1 2007/10/22 17:10:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7.ebuild,v 1.2 2007/10/23 23:53:10 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -83,6 +83,7 @@ DEPEND=">=sys-devel/gcc-3.4.4
 	>=app-misc/pax-utils-0.1.10
 	virtual/os-headers
 	nls? ( sys-devel/gettext )
+	>=sys-apps/sandbox-1.2.18.1-r2
 	>=sys-apps/portage-2.1.2
 	selinux? ( sys-libs/libselinux )"
 RDEPEND="nls? ( sys-devel/gettext )
@@ -149,8 +150,6 @@ src_test()    { eblit-run src_test    ; }
 src_install() { eblit-run src_install ; }
 
 pkg_setup() {
-	die "Review 196720 before upgrading mmmkay"
-
 	# prevent native builds from downgrading ... maybe update to allow people
 	# to change between diff -r versions ? (2.3.6-r4 -> 2.3.6-r2)
 	if [[ ${ROOT} != "/" ]] && ! tc-is-cross-compiler ; then
