@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.67 2007/09/02 21:56:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.68 2007/10/23 18:37:04 aballier Exp $
+
+  23 Oct 2007; Alexis Ballier <aballier@gentoo.org> -id3lib-3.8.3-r5.ebuild:
+  remove version affected by GLSA-200709-08
 
   02 Sep 2007; Joshua Kinard <kumba@gentoo.org> id3lib-3.8.3-r6.ebuild:
   Stable on mips, per #189610.
