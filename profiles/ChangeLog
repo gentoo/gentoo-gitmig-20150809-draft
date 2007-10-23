@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.754 2007/10/22 22:02:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.755 2007/10/23 07:15:34 ulm Exp $
+
+  23 Oct 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Packages app-emacs/eieio and app-emacs/semantic have been removed.
+  Mask app-emacs/wanderlust-cvs for removal.
 
   22 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
   default-linux/alpha/no-nptl/2.4/package.mask,

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7834 2007/10/22 21:27:11 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7835 2007/10/23 07:15:34 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Ulrich Mueller <ulm@gentoo.org> (23 Oct 2007)
+# Live CVS ebuild, masked for removal in 30 days.
+# Use CVS snapshot in app-emacs/wanderlust as replacement.
+app-emacs/wanderlust-cvs
 
 # Markus Ullmann <jokey@gentoo.org> (20 Oct 2007)
 # dependency unneeded now, merged upstream
@@ -246,14 +251,6 @@ app-emacs/speedbar
 # Denis Dupeyron <calchan@gentoo.org> (23 Sep 2007)
 # Masked for removal in 30 days as per bug #176962.
 net-print/hpijs
-
-# Ulrich Mueller <ulm@gentoo.org> (22 Sep 2007)
-# Does not work with Emacs 22. Last upstream release as separate
-# packages in 2002 and 2003, respectively; eieio and semantic are now
-# included with app-emacs/cedet which should be used as replacement.
-# Masked for removal in 30 days. Bug #190768.
-app-emacs/eieio
-app-emacs/semantic
 
 # Hanno Boeck <hanno@gentoo.org> (21 Sep 2007)
 # experimental new ebuild, changes a lot and breaks configuration
