@@ -1,0 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST compizconfig-backend-kconfig-0.6.0.tar.bz2 412600 RMD160 37691253ddf9fb5c3763b4a70ca881d66b5d7153 SHA1 d45c21297d0edfe25d41ffa1999ad5b7085b23d5 SHA256 cfbab0505420ff678eafc5f04edc927077e04bbc73dc8cc788651d6d2e8c178a
+EBUILD compizconfig-backend-kconfig-0.6.0.ebuild 559 RMD160 21116bd3aed0c02cabc2efddca34be7a0fef78c0 SHA1 c6f9163bd79073b473ecbc87066d075ab5dbafe9 SHA256 50237cfb0d1012118b692ba5182c8f82fc6a5e357c7148b6c968a397dc639360
+MD5 ecf1393031bfc176bafeff923f0da222 compizconfig-backend-kconfig-0.6.0.ebuild 559
+RMD160 21116bd3aed0c02cabc2efddca34be7a0fef78c0 compizconfig-backend-kconfig-0.6.0.ebuild 559
+SHA256 50237cfb0d1012118b692ba5182c8f82fc6a5e357c7148b6c968a397dc639360 compizconfig-backend-kconfig-0.6.0.ebuild 559
+MISC ChangeLog 471 RMD160 1a65e342951c5d4e5ad160a9a0317cc82acf5895 SHA1 3b75ff52b9448d2808f3c34bbfcd4a03b89c6936 SHA256 171c8e4be116dbef8de200c288460b5a2a7f768a65d95281e5d852f7b7a67d31
+MD5 a26e49c65cf3fd39112afe363303188a ChangeLog 471
+RMD160 1a65e342951c5d4e5ad160a9a0317cc82acf5895 ChangeLog 471
+SHA256 171c8e4be116dbef8de200c288460b5a2a7f768a65d95281e5d852f7b7a67d31 ChangeLog 471
+MISC metadata.xml 217 RMD160 3b01d5dab901ee93217f72b711954d3cccbb1717 SHA1 e304788b60dd2cf214d360a21d267e8635474d98 SHA256 2f5dfc1eb79d2d9ee02663da6e1449f499c3a37b7f4cc2391e18d7789a314669
+MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
+RMD160 3b01d5dab901ee93217f72b711954d3cccbb1717 metadata.xml 217
+SHA256 2f5dfc1eb79d2d9ee02663da6e1449f499c3a37b7f4cc2391e18d7789a314669 metadata.xml 217
+MD5 4650dd73a51ff4a19fc12b39a58af00d files/digest-compizconfig-backend-kconfig-0.6.0 307
+RMD160 d72b5ec1eb2aaa803882fa69edce9e4f729e4954 files/digest-compizconfig-backend-kconfig-0.6.0 307
+SHA256 2dfbbe05fb4c4a26f14667643d42f74169b233411d7177755cec1b5c1767bbe9 files/digest-compizconfig-backend-kconfig-0.6.0 307
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.7 (GNU/Linux)
+
+iD8DBQFHHnx/r2QksT29OyARAjzYAJ9sElhus5Bkt0oXqjPi86+0WqGDOwCgiUs5
+6Z9eS7ed40AiIz+yHcuSLxw=
+=Blj2
+-----END PGP SIGNATURE-----
