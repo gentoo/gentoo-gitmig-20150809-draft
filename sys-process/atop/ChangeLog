@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/atop
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.20 2007/09/10 01:53:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.21 2007/10/23 02:18:00 jer Exp $
+
+  23 Oct 2007; Jeroen Roovers <jer@gentoo.org> atop-1.21.ebuild:
+  Stable for HPPA.
 
   10 Sep 2007; Mike Frysinger <vapier@gentoo.org> atop-1.21.ebuild:
   Fix broken cron.d file #191926 by Jeroen Roovers.
