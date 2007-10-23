@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.170 2007/10/20 07:44:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.171 2007/10/23 06:40:21 corsair Exp $
+
+  23 Oct 2007; Markus Rothe <corsair@gentoo.org> pam-0.99.8.1-r1.ebuild:
+  Stable on ppc64; bug #196409
 
   20 Oct 2007; Jeroen Roovers <jer@gentoo.org> pam-0.99.8.1-r1.ebuild:
   Stable for HPPA (bug #196409).
