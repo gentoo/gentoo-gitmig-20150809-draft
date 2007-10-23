@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.4a-r2.ebuild,v 1.4 2007/10/21 20:28:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.7.4a-r2.ebuild,v 1.5 2007/10/23 08:15:36 calchan Exp $
 
 inherit eutils
 
@@ -126,8 +126,8 @@ pkg_preinst() {
 		insinto /etc/sane.d
 		[ -e /etc/sane.d/dll.conf ] && cp /etc/sane.d/dll.conf .
 		[ -e "${ROOT}"/etc/sane.d/dll.conf ] && cp "${ROOT}"/etc/sane.d/dll.conf .
-		grep -q hpaio dll.conf || echo hpaio >> dll.conf
-		doins dll.conf
+		grep -q hpaio dll.conf || echo hpaio >> "${T}"/dll.conf
+		doins "${T}"/dll.conf
 	fi
 }
 
