@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libprojectm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.14 2007/10/23 21:14:04 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.15 2007/10/23 23:58:39 jer Exp $
+
+  23 Oct 2007; Jeroen Roovers <jer@gentoo.org> libprojectm-0.99-r1.ebuild:
+  Stable for HPPA too (audacious-plugins).
 
   23 Oct 2007; Joe Peterson <lavajoe@gentoo.org>
   +files/libprojectm-1.01-freebsd.patch, libprojectm-1.01.ebuild:
