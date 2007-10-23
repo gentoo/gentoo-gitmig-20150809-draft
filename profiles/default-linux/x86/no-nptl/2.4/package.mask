@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.144 2007/10/22 22:02:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.145 2007/10/23 22:31:16 hanno Exp $
 
 # Michael Sterrett <mr_bones_@gentoo.org (21 Oct 2007)
 # Needs masked gtk+
@@ -376,6 +376,15 @@ dev-db/mysql-gui-tools
 x11-wm/compiz
 x11-apps/compiz-settings
 x11-plugins/compiz-extra
+x11-plugins/compiz-fusion-plugins-main
+x11-libs/libcompizconfig
+x11-plugins/compiz-fusion-plugins-unsupported
+x11-plugins/compiz-fusion-plugins-extra
+x11-libs/compizconfig-backend-kconfig
+x11-libs/compizconfig-backend-gconf
+dev-python/compizconfig-python
+x11-apps/ccsm
+x11-wm/compiz-fusion
 
 # Andrej Kacian <ticho@gentoo.org>
 # Depends on >=2.6.11 headers
