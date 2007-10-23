@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.7 2007/10/18 23:09:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.8 2007/10/23 21:11:57 eva Exp $
 
 # Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
 # app-admin/gkrellm may pull in hddtemp, which is not yet available here
@@ -11,3 +11,7 @@ xfce-extra/thunar-thumbnailers ffmpeg
 # Gilles Dartiguelongue <eva@gentoo.org> (19 Oct 2007)
 # gdm depends on zenity which is not keyworded
 >=gnome-base/gdm-2.20 remote
+
+# Gilles Dartiguelongue <eva@gentoo.org> (23 Oct 2007)
+# gdm depends on zenity which is not keyworded
+>=media-video/totem-2.20 galago

@@ -1,3 +1,7 @@
 # Gilles Dartiguelongue <eva@gentoo.org> (19 Oct 2007)
 # gdm depends on zenity which is not keyworded
 >=gnome-base/gdm-2.20 remote
+
+# Gilles Dartiguelongue <eva@gentoo.org> (23 Oct 2007)
+# gdm depends on zenity which is not keyworded
+>=media-video/totem-2.20 galago
