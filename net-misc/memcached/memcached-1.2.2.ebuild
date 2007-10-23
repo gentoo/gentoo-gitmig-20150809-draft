@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.2.ebuild,v 1.1 2007/09/24 13:53:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.2.2.ebuild,v 1.2 2007/10/23 10:57:34 flameeyes Exp $
 
 inherit eutils
 
@@ -16,6 +16,13 @@ IUSE="nptl"
 RDEPEND=">=dev-libs/libevent-0.6
 	dev-perl/Cache-Memcached"
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-fbsd.patch"
+}
 
 src_compile() {
 	econf $(use_enable nptl threads)
