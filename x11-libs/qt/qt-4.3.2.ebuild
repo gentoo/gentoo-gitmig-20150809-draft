@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.2.ebuild,v 1.2 2007/10/03 18:00:36 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.3.2.ebuild,v 1.3 2007/10/23 12:41:15 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -228,16 +228,16 @@ src_install() {
 	export PATH="${S}/bin:${PATH}"
 	export LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
 
-	make INSTALL_ROOT="${D}" install_subtargets || die
-	make INSTALL_ROOT="${D}" install_qmake || die
-	make INSTALL_ROOT="${D}" install_mkspecs || die
+	emake INSTALL_ROOT="${D}" install_subtargets || die
+	emake INSTALL_ROOT="${D}" install_qmake || die
+	emake INSTALL_ROOT="${D}" install_mkspecs || die
 
 	if use doc; then
-		make INSTALL_ROOT="${D}" install_htmldocs || die
+		emake INSTALL_ROOT="${D}" install_htmldocs || die
 	fi
 
 	# Install the translations.	 This may get use flagged later somehow
-	make INSTALL_ROOT="${D}" install_translations || die
+	emake INSTALL_ROOT="${D}" install_translations || die
 
 	keepdir "${QTSYSCONFDIR}"
 
