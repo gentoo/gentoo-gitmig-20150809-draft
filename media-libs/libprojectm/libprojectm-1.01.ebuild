@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-1.01.ebuild,v 1.2 2007/10/23 20:23:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-1.01.ebuild,v 1.3 2007/10/23 21:14:04 lavajoe Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 MY_P=${P/m/M}
 
@@ -17,6 +17,7 @@ IUSE=""
 
 RDEPEND="media-libs/ftgl
 	media-libs/freetype
+	media-libs/glew
 	virtual/opengl
 	media-libs/glew
 	sys-libs/zlib"
@@ -25,6 +26,13 @@ DEPEND="${RDEPEND}
 	dev-util/cmake"
 
 S="${WORKDIR}"/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-freebsd.patch"
+}
 
 src_compile() {
 	cmake \

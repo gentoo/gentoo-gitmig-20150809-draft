@@ -1,0 +1,15 @@
+diff -Nur libprojectM-1.01.old/MoodBar.cpp libprojectM-1.01/MoodBar.cpp
+--- libprojectM-1.01.old/MoodBar.cpp	2007-10-10 08:47:14 -0600
++++ libprojectM-1.01/MoodBar.cpp	2007-10-23 14:42:32 -0600
+@@ -19,7 +19,11 @@
+ 
+ #include <cmath>
+ extern "C" {
++#ifdef __FreeBSD__
++#include <stdlib.h>
++#else
+ #include <malloc.h>
++#endif
+ }
+ #include <iostream>
+ #include <cassert>
