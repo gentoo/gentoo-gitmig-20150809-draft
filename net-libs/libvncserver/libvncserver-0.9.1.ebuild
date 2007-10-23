@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.1.ebuild,v 1.11 2007/10/02 05:59:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.1.ebuild,v 1.12 2007/10/23 16:02:32 armin76 Exp $
 
 inherit eutils libtool
 
@@ -11,7 +11,7 @@ SRC_URI="http://libvncserver.sourceforge.net/LibVNCServer-${PV/_}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ppc sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ppc sh sparc x86 ~x86-fbsd"
 IUSE="nobackchannel no24bpp zlib jpeg"
 
 DEPEND="zlib? ( sys-libs/zlib )
