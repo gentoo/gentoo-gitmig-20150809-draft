@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/jdictionary
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/ChangeLog,v 1.15 2007/10/23 20:41:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/ChangeLog,v 1.16 2007/10/23 20:43:25 betelgeuse Exp $
+
+  23 Oct 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jdictionary-1.8-r2.ebuild:
+  Fix quoting.
 
   23 Oct 2007; Petteri Räty <betelgeuse@gentoo.org>
   -jdictionary-1.8.ebuild:
