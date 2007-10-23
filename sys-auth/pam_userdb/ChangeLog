@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_userdb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/ChangeLog,v 1.14 2007/10/22 16:26:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/ChangeLog,v 1.15 2007/10/23 06:42:39 corsair Exp $
+
+  23 Oct 2007; Markus Rothe <corsair@gentoo.org> pam_userdb-0.99.8.1.ebuild:
+  Stable on ppc64; bug #196409
 
   22 Oct 2007; Jeroen Roovers <jer@gentoo.org> pam_userdb-0.99.8.1.ebuild:
   Stable for HPPA (bug #196409).

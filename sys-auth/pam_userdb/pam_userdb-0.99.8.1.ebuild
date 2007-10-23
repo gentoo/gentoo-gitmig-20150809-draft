@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.8.1.ebuild,v 1.2 2007/10/22 16:26:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.8.1.ebuild,v 1.3 2007/10/23 06:42:39 corsair Exp $
 
 inherit libtool multilib eutils pam toolchain-funcs flag-o-matic
 
@@ -19,7 +19,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/${MY_P}.tar.bz2
 
 LICENSE="PAM"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~ppc ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls elibc_FreeBSD"
 
 RDEPEND="nls? ( virtual/libintl )
