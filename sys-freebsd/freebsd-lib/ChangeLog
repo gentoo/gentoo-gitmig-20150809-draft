@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.56 2007/10/16 08:52:16 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.57 2007/10/23 12:02:10 uberlord Exp $
+
+*freebsd-lib-6.2-r3 (23 Oct 2007)
+
+  23 Oct 2007; Roy Marples <uberlord@gentoo.org>
+  +files/freebsd-lib-6.2-libthr.patch, +freebsd-lib-6.2-r3.ebuild:
+  Only install libthr as the treading library, #192711 thanks to Joe Peterson.
+  De-bashify the ebuild.
 
   16 Oct 2007; Roy Marples <uberlord@gentoo.org>
   -files/freebsd-lib-6.2-sparc64.patch,

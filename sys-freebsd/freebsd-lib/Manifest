@@ -38,6 +38,10 @@ AUX freebsd-lib-6.2-gcc41.patch 890 RMD160 231bf22bade53a71364c18a00cecaf702cd88
 MD5 db42cf2a84a14be272f8afed9b156d0a files/freebsd-lib-6.2-gcc41.patch 890
 RMD160 231bf22bade53a71364c18a00cecaf702cd8803d files/freebsd-lib-6.2-gcc41.patch 890
 SHA256 a5aba66f97f445f7d6c6dbfd2ec15506a922b0a38e1ae9ac951767cdf3777651 files/freebsd-lib-6.2-gcc41.patch 890
+AUX freebsd-lib-6.2-libthr.patch 421 RMD160 8f85cbea02252425c624f0d3d7720dca53e1cbe4 SHA1 dd0d8a2ba63c6951380a5f277ba3b2add5ee5433 SHA256 ba4a3e4bce8a1add38275451eb4ab80df8e415f78fc8eb235ec94f60b28da558
+MD5 f0601cb935eda1aece26dd8ddb9791f8 files/freebsd-lib-6.2-libthr.patch 421
+RMD160 8f85cbea02252425c624f0d3d7720dca53e1cbe4 files/freebsd-lib-6.2-libthr.patch 421
+SHA256 ba4a3e4bce8a1add38275451eb4ab80df8e415f78fc8eb235ec94f60b28da558 files/freebsd-lib-6.2-libthr.patch 421
 AUX freebsd-lib-bsdxml.patch 339 RMD160 27b501cda2ac76230a72dfc3ee6593cb50f8d4b0 SHA1 3b456d272de5d0c56bc650fe60f38524857f8b31 SHA256 c1ac47d6c7176475f0f4b86bb17288a980b44a799fb6f4e7b1920f69e0447dc9
 MD5 0fa8fbe7549748636959ef4bc4ea9660 files/freebsd-lib-bsdxml.patch 339
 RMD160 27b501cda2ac76230a72dfc3ee6593cb50f8d4b0 files/freebsd-lib-bsdxml.patch 339
@@ -58,10 +62,14 @@ EBUILD freebsd-lib-6.2-r2.ebuild 8616 RMD160 de6bb6b7ef38810680cef1519fa40b8e294
 MD5 319b49c3f494ecd4e85efdae3b23a959 freebsd-lib-6.2-r2.ebuild 8616
 RMD160 de6bb6b7ef38810680cef1519fa40b8e2945509e freebsd-lib-6.2-r2.ebuild 8616
 SHA256 0daec66251c195bfe5eeb4ab959335900790e026cb185691b555df37644135b1 freebsd-lib-6.2-r2.ebuild 8616
-MISC ChangeLog 14872 RMD160 4edf76e38146c8548b365a230b1c4a6389e16ac4 SHA1 aaf64c9e91f3c2b43eacf074a0e11a9c3795e290 SHA256 fab3e7f39b7ac541b934aac2c245eee854f7f05cbfb47b8819d0fc32bf2d0ced
-MD5 34284744467806d5d1a6d0ebc03448b4 ChangeLog 14872
-RMD160 4edf76e38146c8548b365a230b1c4a6389e16ac4 ChangeLog 14872
-SHA256 fab3e7f39b7ac541b934aac2c245eee854f7f05cbfb47b8819d0fc32bf2d0ced ChangeLog 14872
+EBUILD freebsd-lib-6.2-r3.ebuild 9086 RMD160 da5c09eac5a042098cfbca78a89593d6c8b8d368 SHA1 a655706482caa59780a4072c5870230f67d24f6f SHA256 eed310c23b7f88532217b4f727e3094353ec9d21f036a68f4e719408bb5bd0d1
+MD5 6d1cf0c20e5f34e91e84a7750d8d8a70 freebsd-lib-6.2-r3.ebuild 9086
+RMD160 da5c09eac5a042098cfbca78a89593d6c8b8d368 freebsd-lib-6.2-r3.ebuild 9086
+SHA256 eed310c23b7f88532217b4f727e3094353ec9d21f036a68f4e719408bb5bd0d1 freebsd-lib-6.2-r3.ebuild 9086
+MISC ChangeLog 15128 RMD160 1255fd799f12cc3b756074ee300e01da2f23ce94 SHA1 fc4bd957d9ae3f233c56e23787f93abaa0afaace SHA256 7ac19ff51d8b253b63cf45b689912ffc7d63873d32f54e243f577deae40d9878
+MD5 bf56e76e9e94265ccc96e4446da40c25 ChangeLog 15128
+RMD160 1255fd799f12cc3b756074ee300e01da2f23ce94 ChangeLog 15128
+SHA256 7ac19ff51d8b253b63cf45b689912ffc7d63873d32f54e243f577deae40d9878 ChangeLog 15128
 MISC metadata.xml 156 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 SHA1 d9d9d4f2b5afc58339ea3e562fca490156935f1f SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
@@ -69,3 +77,6 @@ SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata
 MD5 cfbe490047e77331e6fd3aa1acef40ae files/digest-freebsd-lib-6.2-r2 2072
 RMD160 2b0cd4020a9cb5b7c25aba4badc9b0d0622d3ef3 files/digest-freebsd-lib-6.2-r2 2072
 SHA256 49a9a54f56f7cde19e38914f3425617cb36cce9a59cf7dfe81f36c61b7ade919 files/digest-freebsd-lib-6.2-r2 2072
+MD5 cfbe490047e77331e6fd3aa1acef40ae files/digest-freebsd-lib-6.2-r3 2072
+RMD160 2b0cd4020a9cb5b7c25aba4badc9b0d0622d3ef3 files/digest-freebsd-lib-6.2-r3 2072
+SHA256 49a9a54f56f7cde19e38914f3425617cb36cce9a59cf7dfe81f36c61b7ade919 files/digest-freebsd-lib-6.2-r3 2072

@@ -1,0 +1,12 @@
+diff -ur lib.orig/libthr/Makefile lib/libthr/Makefile
+--- lib.orig/libthr/Makefile	2007-09-25 10:27:07 +0100
++++ lib/libthr/Makefile	2007-09-25 10:35:20 +0100
+@@ -7,6 +7,8 @@
+ # To included legacy CSRG sccsid strings, add -DLIBC_SCCS and -DSYSLIBC_SCCS
+ # (for system call stubs) to CFLAGS below.  -DSYSLIBC_SCCS affects just the
+ # system call stubs.
++
++SHLIBDIR= /lib
+ LIB=thr
+ SHLIB_MAJOR= 2
+ CFLAGS+=-DPTHREAD_KERNEL
