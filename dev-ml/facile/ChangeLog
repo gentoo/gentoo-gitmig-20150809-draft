@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/facile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.6 2007/10/23 12:21:18 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.7 2007/10/23 21:17:52 jer Exp $
+
+  23 Oct 2007; Jeroen Roovers <jer@gentoo.org> facile-1.1.ebuild:
+  Marked ~hppa (bug #196551). Added src_test (because it works).
 
   23 Oct 2007; Roy Marples <uberlord@gentoo.org>
   +files/facile-1.1-make.patch, facile-1.1.ebuild:

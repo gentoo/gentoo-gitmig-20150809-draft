@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/facile-1.1.ebuild,v 1.6 2007/10/23 12:21:18 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/facile-1.1.ebuild,v 1.7 2007/10/23 21:17:52 jer Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ RESTRICT="mirror"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ocaml-3.09.3-r1"
@@ -28,8 +28,12 @@ src_unpack() {
 
 src_compile(){
 	# This is a custom configure script and it does not support standard options
-	./configure --faciledir ${D}$(ocamlc -where)/facile/
+	./configure --faciledir "${D}"$(ocamlc -where)/facile/
 	emake || die "Compilation failed"
+}
+
+src_test() {
+	emake check || die "emake check failed"
 }
 
 src_install(){
