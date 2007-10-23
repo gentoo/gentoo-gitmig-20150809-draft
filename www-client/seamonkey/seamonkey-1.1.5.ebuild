@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.5.ebuild,v 1.7 2007/10/23 17:32:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.5.ebuild,v 1.8 2007/10/23 18:26:42 jer Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -15,7 +15,7 @@ SRC_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/${P}.s
 	mirror://gentoo/${PATCH}.tar.bz2
 	crypt? ( !moznomail? ( http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz ) )"
 
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ppc ppc64 x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="java ldap mozdevelop moznocompose moznoirc moznomail moznoroaming postgres crypt xforms"
@@ -55,15 +55,15 @@ src_unpack() {
 
 	# Unpack the enigmail plugin
 	if use crypt && ! use moznomail; then
-		cd ${S}/mailnews/extensions || die
+		cd "${S}"/mailnews/extensions || die
 		unpack enigmail-${EMVER}.tar.gz
-		cd ${S}/mailnews/extensions/enigmail || die "cd failed"
+		cd "${S}"/mailnews/extensions/enigmail || die "cd failed"
 		makemake2
 	fi
 
 	# Fix scripts that call for /usr/local/bin/perl #51916
 	ebegin "Patching smime to call perl from /usr/bin"
-	sed -i -e '1s,usr/local/bin,usr/bin,' ${S}/security/nss/cmd/smimetools/smime
+	sed -i -e '1s,usr/local/bin,usr/bin,' "${S}"/security/nss/cmd/smimetools/smime
 	eend $? || die "sed failed"
 
 	cd "${S}"
@@ -153,8 +153,8 @@ src_compile() {
 	# to econf, but the quotes cause configure to fail.
 	sed -i -e \
 		's|-DARON_WAS_HERE|-DGENTOO_NSPLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsplugins\\\" -DGENTOO_NSBROWSER_PLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsbrowser/plugins\\\"|' \
-		${S}/config/autoconf.mk \
-		${S}/xpfe/global/buildconfig.html
+		"${S}"/config/autoconf.mk \
+		"${S}"/xpfe/global/buildconfig.html
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
 	# requirements while compiling
@@ -169,7 +169,7 @@ src_compile() {
 	####################################
 
 	if use crypt && ! use moznomail; then
-		emake -C  ${S}/mailnews/extensions/enigmail || die "make enigmail failed"
+		emake -C "${S}"/mailnews/extensions/enigmail || die "make enigmail failed"
 	fi
 }
 
@@ -184,20 +184,20 @@ src_install() {
 	# See update_chrome() in mozilla-launcher
 	keepdir ${MOZILLA_FIVE_HOME}/chrome.d
 	keepdir ${MOZILLA_FIVE_HOME}/extensions.d
-	cp ${D}${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt \
-		${D}${MOZILLA_FIVE_HOME}/chrome.d/0_base-chrome.txt
+	cp "${D}"${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt \
+		"${D}"${MOZILLA_FIVE_HOME}/chrome.d/0_base-chrome.txt
 
 	# Create /usr/bin/seamonkey
 	install_mozilla_launcher_stub seamonkey ${MOZILLA_FIVE_HOME}
 
 	# Install icon and .desktop for menu entry
-	doicon ${FILESDIR}/icon/${PN}.png
-	domenu ${FILESDIR}/icon/${PN}.desktop
+	doicon "${FILESDIR}"/icon/${PN}.png
+	domenu "${FILESDIR}"/icon/${PN}.desktop
 
 	# Fix icons to look the same everywhere
 	insinto ${MOZILLA_FIVE_HOME}/icons
-	doins ${S}/widget/src/gtk/mozicon16.xpm
-	doins ${S}/widget/src/gtk/mozicon50.xpm
+	doins "${S}"/widget/src/gtk/mozicon16.xpm
+	doins "${S}"/widget/src/gtk/mozicon50.xpm
 
 	####################################
 	#
@@ -211,7 +211,7 @@ src_install() {
 
 	# Fix mozilla-config and install it
 	exeinto ${MOZILLA_FIVE_HOME}
-	doexe ${S}/build/unix/${PN}-config
+	doexe "${S}"/build/unix/${PN}-config
 
 	# Install pkgconfig files
 	insinto /usr/"$(get_libdir)"/pkgconfig
@@ -219,21 +219,21 @@ src_install() {
 
 	# Install env.d snippet, which isn't necessary for running mozilla, but
 	# might be necessary for programs linked against firefox
-	doenvd ${FILESDIR}/10${PN}
+	doenvd "${FILESDIR}"/10${PN}
 	dosed "s|/usr/lib|/usr/$(get_libdir)|" /etc/env.d/10${PN}
 
 	# Install rebuild script since mozilla-bin doesn't support registration yet
 	exeinto ${MOZILLA_FIVE_HOME}
-	doexe ${FILESDIR}/${PN}-rebuild-databases.pl
+	doexe "${FILESDIR}"/${PN}-rebuild-databases.pl
 	dosed -e 's|/lib/|/'"$(get_libdir)"'/|g' \
 		${MOZILLA_FIVE_HOME}/${PN}-rebuild-databases.pl
 
 	# Install docs
-	dodoc ${S}/{LEGAL,LICENSE}
+	dodoc "${S}"/{LEGAL,LICENSE}
 
 	# Update Google search plugin to use UTF8 charset ...
 	insinto ${MOZILLA_FIVE_HOME}/searchplugins
-	doins ${FILESDIR}/google.src
+	doins "${FILESDIR}"/google.src
 }
 
 pkg_preinst() {
@@ -241,7 +241,7 @@ pkg_preinst() {
 
 	# Remove entire installed instance to solve various problems,
 	# for example see bug 27719
-	rm -rf ${ROOT}${MOZILLA_FIVE_HOME}
+	rm -rf "${ROOT}"${MOZILLA_FIVE_HOME}
 }
 
 pkg_postinst() {
