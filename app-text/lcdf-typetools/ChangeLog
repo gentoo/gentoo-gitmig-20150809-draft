@@ -1,6 +1,10 @@
 # ChangeLog for app-text/lcdf-typetools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.5 2007/10/14 17:41:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.6 2007/10/23 18:26:41 fmccor Exp $
+
+  23 Oct 2007; Ferris McCormick <fmccor@gentoo.org>
+  lcdf-typetools-2.66.ebuild:
+  Add ~sparc --- Help with Bug #195815
 
   14 Oct 2007; Alexis Ballier <aballier@gentoo.org>
   lcdf-typetools-2.66.ebuild:
