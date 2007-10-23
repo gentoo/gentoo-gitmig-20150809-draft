@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.20.0.ebuild,v 1.2 2007/10/23 21:19:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.20.1.ebuild,v 1.1 2007/10/23 21:19:09 eva Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="a52 bluetooth debug dvd ffmpeg flac galago gnome hal lirc mad mpeg nsplugin nvtv ogg python seamonkey theora vorbis xulrunner xv"
 
 RDEPEND=">=dev-libs/glib-2.13.4
-	 >=x11-libs/gtk+-2.11.6
+	 >=x11-libs/gtk+-2.12.1
 	 >=gnome-base/gconf-2.0
 	 >=gnome-base/libglade-2.0
 	 >=gnome-base/gnome-vfs-2.16
@@ -150,9 +150,6 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
-
-	# Remove the intltoolize call when tarballs are made with >=intltool-0.35.5
-	intltoolize --force || die "intltoolize failed"
 
 	if use nsplugin ; then
 		epatch "${FILESDIR}"/${PN}-2.18.1-browser-plugins.patch

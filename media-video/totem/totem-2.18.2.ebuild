@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.2.ebuild,v 1.16 2007/10/04 21:03:24 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.18.2.ebuild,v 1.17 2007/10/23 21:19:09 eva Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -139,16 +139,16 @@ src_unpack() {
 	intltoolize --force || die
 
 	if use nsplugin ; then
-		epatch ${FILESDIR}/${PN}-2.18.1-browser-plugins.patch
+		epatch "${FILESDIR}"/${PN}-2.18.1-browser-plugins.patch
 		eautoreconf
 	fi
 
 	# Remove this when POTFILES.in will be fixed
-	echo "data/totem-handlers.schemas.in" >> ${S}/po/POTFILES.skip
-	echo "data/totem-video-thumbnail.schemas.in" >> ${S}/po/POTFILES.skip
-	echo "data/totem.desktop.in" >> ${S}/po/POTFILES.skip
-	echo "data/totem.desktop.in.in" >> ${S}/po/POTFILES.skip
-	echo "data/vanity.desktop.in" >> ${S}/po/POTFILES.skip
+	echo "data/totem-handlers.schemas.in" >> "${S}"/po/POTFILES.skip
+	echo "data/totem-video-thumbnail.schemas.in" >> "${S}"/po/POTFILES.skip
+	echo "data/totem.desktop.in" >> "${S}"/po/POTFILES.skip
+	echo "data/totem.desktop.in.in" >> "${S}"/po/POTFILES.skip
+	echo "data/vanity.desktop.in" >> "${S}"/po/POTFILES.skip
 }
 
 src_install() {

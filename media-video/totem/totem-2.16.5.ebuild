@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.5.ebuild,v 1.11 2007/08/25 14:19:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.5.ebuild,v 1.12 2007/10/23 21:19:09 eva Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -123,18 +123,18 @@ src_unpack() {
 	# Fix hardcoded plugindir
 	sed -i -e \
 		's|mozilla|nsbrowser|' \
-		${S}/browser-plugin/Makefile.in \
-		${S}/browser-plugin/idl/Makefile.in
+		"${S}"/browser-plugin/Makefile.in \
+		"${S}"/browser-plugin/idl/Makefile.in
 
 	# fixes for ff compiles.
 	if use nsplugin && ( use firefox || use sparc ); then
-		epatch ${FILESDIR}/${PN}-1.5.91-mozilla-firefox-include-fix.patch
+		epatch "${FILESDIR}"/${PN}-1.5.91-mozilla-firefox-include-fix.patch
 
 		# Patch borrowed from ubuntu (link xpcom)
-		epatch ${FILESDIR}/01_build_mozilla_plugin_with_firefox_xpcom.patch
+		epatch "${FILESDIR}"/01_build_mozilla_plugin_with_firefox_xpcom.patch
 	elif use nsplugin ; then
 		# Patch borrowed from ubuntu (link xpcom)
-		epatch ${FILESDIR}/01_build_mozilla_plugin_with_seamonkey_xpcom.patch
+		epatch "${FILESDIR}"/01_build_mozilla_plugin_with_seamonkey_xpcom.patch
 	fi
 }
 
