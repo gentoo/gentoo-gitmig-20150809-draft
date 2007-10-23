@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/jacksum
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.24 2007/02/21 20:23:50 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.25 2007/10/23 20:34:00 betelgeuse Exp $
+
+  23 Oct 2007; Petteri Räty <betelgeuse@gentoo.org> -jacksum-1.5.1.ebuild,
+  -jacksum-1.6.0-r1.ebuild:
+  Remove old ebuilds.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
