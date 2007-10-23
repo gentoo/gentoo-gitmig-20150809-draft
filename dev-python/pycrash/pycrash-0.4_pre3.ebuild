@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/pycrash-0.4_pre3.ebuild,v 1.9 2007/10/21 16:25:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/pycrash-0.4_pre3.ebuild,v 1.10 2007/10/23 17:58:40 welp Exp $
 
 NEED_PYTHON=2.3
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86 ~x86-fbsd"
 DOCS="NEWS TODO THANKS"
 
 S="${WORKDIR}/${MY_P}"

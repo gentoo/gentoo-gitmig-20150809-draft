@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycrash
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/ChangeLog,v 1.14 2007/10/21 16:25:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/ChangeLog,v 1.15 2007/10/23 17:58:40 welp Exp $
+
+  23 Oct 2007; Peter Weller <welp@gentoo.org> pycrash-0.4_pre2.ebuild,
+  pycrash-0.4_pre3.ebuild:
+  Stable on amd64 wrt bug 148325
 
   21 Oct 2007; Markus Meier <maekke@gentoo.org> pycrash-0.4_pre3.ebuild:
   adding quotes and x86 stable, bug #148325
