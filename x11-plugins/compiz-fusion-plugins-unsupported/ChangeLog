@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/compiz-fusion-plugins-unsupported
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-unsupported/ChangeLog,v 1.1 2007/10/23 22:40:03 hanno Exp $
+
+*compiz-fusion-plugins-unsupported-0.6.0 (23 Oct 2007)
+
+  23 Oct 2007; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
+  +compiz-fusion-plugins-unsupported-0.6.0.ebuild:
+  Initial compiz-fusion commit, ebuild based on xeffects overlay.
+
