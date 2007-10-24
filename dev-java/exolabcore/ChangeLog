@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/exolabcore
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/ChangeLog,v 1.12 2007/10/18 13:27:56 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/ChangeLog,v 1.13 2007/10/24 04:28:25 wltjr Exp $
+
+  24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -exolabcore-0.3.7_p20050205.ebuild:
+  Removed java gen 1 ebuild
 
   18 Oct 2007; Christoph Mende <angelos@gentoo.org>
   exolabcore-0.3.7_p20050205-r1.ebuild:
