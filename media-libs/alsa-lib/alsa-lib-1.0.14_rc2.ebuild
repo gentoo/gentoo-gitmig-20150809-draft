@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.14_rc2.ebuild,v 1.8 2007/08/25 14:15:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.14_rc2.ebuild,v 1.9 2007/10/24 21:39:30 beandog Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -19,8 +19,8 @@ SLOT="0"
 KEYWORDS="~alpha amd64 arm ~hppa ~ia64 mips ppc ppc64 sh ~sparc x86"
 IUSE="doc debug"
 
-RDEPEND=">=media-sound/alsa-headers-${PV}"
-DEPEND="${RDEPEND}
+RDEPEND=""
+DEPEND=">=media-sound/alsa-headers-${PV}
 	doc? ( >=app-doc/doxygen-1.2.6 )"
 
 src_unpack() {

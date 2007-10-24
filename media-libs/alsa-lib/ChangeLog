@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.245 2007/10/22 20:35:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.246 2007/10/24 21:39:30 beandog Exp $
+
+  24 Oct 2007; Steve Dibb <beandog@gentoo.org> alsa-lib-1.0.13.ebuild,
+  alsa-lib-1.0.14_rc1.ebuild, alsa-lib-1.0.14_rc2.ebuild,
+  alsa-lib-1.0.14_rc3.ebuild, alsa-lib-1.0.14a-r1.ebuild,
+  alsa-lib-1.0.15.ebuild:
+  Move alsa-headers to DEPEND
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org> alsa-lib-1.0.14a-r1.ebuild:
   alpha/ia64 stable wrt #189155

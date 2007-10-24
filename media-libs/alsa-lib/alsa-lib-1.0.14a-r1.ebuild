@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.14a-r1.ebuild,v 1.8 2007/10/22 20:35:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.14a-r1.ebuild,v 1.9 2007/10/24 21:39:30 beandog Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -19,8 +19,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86"
 IUSE="doc debug alisp midi"
 
-RDEPEND=">=media-sound/alsa-headers-${PV/14a/14}"
-DEPEND="${RDEPEND}
+RDEPEND=""
+DEPEND=">=media-sound/alsa-headers-${PV/14a/14}
 	doc? ( >=app-doc/doxygen-1.2.6 )"
 
 IUSE_PCM_PLUGIN="adpcm alaw copy dshare dsnoop extplug file hooks ladspa lfloat linear meter mulaw multi null rate route share shm"
