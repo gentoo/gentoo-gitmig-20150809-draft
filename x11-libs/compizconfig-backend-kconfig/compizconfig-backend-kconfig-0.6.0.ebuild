@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.6.0.ebuild,v 1.1 2007/10/23 22:56:37 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.6.0.ebuild,v 1.2 2007/10/24 10:33:23 hanno Exp $
 
 inherit kde
 
@@ -15,5 +15,3 @@ IUSE=""
 
 DEPEND=">=x11-wm/compiz-0.6.0
 	>=x11-libs/libcompizconfig-0.6.0"
-
-S="${WORKDIR}/${P}"

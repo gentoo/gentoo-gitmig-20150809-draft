@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/compizconfig-backend-kconfig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/ChangeLog,v 1.1 2007/10/23 22:56:37 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/ChangeLog,v 1.2 2007/10/24 10:33:23 hanno Exp $
+
+  24 Oct 2007; Hanno Boeck <hanno@gentoo.org>
+  compizconfig-backend-kconfig-0.6.0.ebuild:
+  QA fixes.
 
 *compizconfig-backend-kconfig-0.6.0 (23 Oct 2007)
 
