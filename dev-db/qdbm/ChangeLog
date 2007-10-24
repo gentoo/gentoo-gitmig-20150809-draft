@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.115 2007/10/24 07:12:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.116 2007/10/24 07:17:24 nelchael Exp $
+
+  24 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org> qdbm-1.8.75-r1.ebuild:
+  Stable on ppc, bug #196872.
 
   24 Oct 2007; Jeroen Roovers <jer@gentoo.org> qdbm-1.8.75-r1.ebuild:
   Stable for SPARC (bug #196872).
