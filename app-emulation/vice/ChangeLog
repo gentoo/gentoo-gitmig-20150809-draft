@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.53 2007/10/21 23:23:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.54 2007/10/24 18:38:44 maekke Exp $
+
+  24 Oct 2007; Markus Meier <maekke@gentoo.org> vice-1.22.ebuild:
+  x86 stable, bug #196608
 
   21 Oct 2007; Michael Sterrett <mr_bones_@gentoo.org> vice-1.22.ebuild:
   dep on x11-libs/libXrandr as well (bug #196564)
