@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libprojectm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.16 2007/10/24 00:43:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.17 2007/10/24 15:38:28 lavajoe Exp $
+
+  24 Oct 2007; Joe Peterson <lavajoe@gentoo.org>
+  -files/libprojectm-1.01-freebsd.patch,
+  +files/libprojectm-1.01-malloc.patch, libprojectm-1.01.ebuild:
+  Make malloc.h -> stdlib.h patch unconditional
 
   24 Oct 2007; Jeroen Roovers <jer@gentoo.org> libprojectm-1.01.ebuild:
   Marked ~hppa (bug #196836).
