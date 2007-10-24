@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.67 2007/10/17 23:31:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.68 2007/10/24 14:14:48 dang Exp $
+
+  24 Oct 2007; Daniel Gryniewicz <dang@gentoo.org> libglademm-2.6.4.ebuild,
+  libglademm-2.6.5.ebuild:
+  Bump dep for libglade; bug #195045
 
   17 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
   libglademm-2.2.0.ebuild, libglademm-2.6.3.ebuild, libglademm-2.6.4.ebuild:
