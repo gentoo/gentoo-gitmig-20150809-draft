@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.6.0.ebuild,v 1.7 2007/10/09 17:48:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.6.0.ebuild,v 1.8 2007/10/24 12:01:24 uberlord Exp $
+
+inherit libtool
 
 DESCRIPTION="ILM's OpenEXR high dynamic-range image file format libraries"
 HOMEPAGE="http://openexr.com/"
@@ -8,7 +10,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/openexr/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc examples"
 
 RDEPEND="media-libs/ilmbase"
@@ -21,6 +23,9 @@ src_unpack() {
 
 	# Replace the temporary directory used for tests.
 	sed -i -e 's:"/var/tmp/":"'${T}'":' "IlmImfTest/tmpDir.h"
+
+	# Sane versioning on FreeBSD - please don't remove elibtoolize
+	elibtoolize
 }
 
 src_compile() {
