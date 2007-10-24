@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/sun-jai-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/ChangeLog,v 1.14 2007/05/24 14:39:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/ChangeLog,v 1.15 2007/10/24 23:23:20 betelgeuse Exp $
+
+*sun-jai-bin-1.1.3-r1 (24 Oct 2007)
+
+  24 Oct 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +sun-jai-bin-1.1.3-r1.ebuild:
+  Add support for amd64 native binaries so this ebuild is only keyworded for
+  amd64 as it's useless bump for others. Fixes bug #195883.
 
   24 May 2007; Diego Pettenò <flameeyes@gentoo.org>
   sun-jai-bin-1.1.3.ebuild:
