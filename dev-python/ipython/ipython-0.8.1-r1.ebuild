@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.8.1.ebuild,v 1.2 2007/07/26 18:17:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.8.1-r1.ebuild,v 1.1 2007/10/24 17:20:06 hawking Exp $
 
 NEED_PYTHON=2.3
 
@@ -64,9 +64,11 @@ src_install() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
 	use emacs && elisp-site-regen
 }
 
 pkg_postrm() {
+	distutils_pkg_postrm
 	use emacs && elisp-site-regen
 }

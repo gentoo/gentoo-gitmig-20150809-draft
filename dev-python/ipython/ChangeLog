@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/ipython
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.41 2007/09/19 23:42:25 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.42 2007/10/24 17:20:06 hawking Exp $
+
+*ipython-0.8.1-r1 (24 Oct 2007)
+
+  24 Oct 2007; Ali Polatel <hawking@gentoo.org> files/62ipython-gentoo.el,
+  -ipython-0.8.1.ebuild, +ipython-0.8.1-r1.ebuild:
+  revbump. fixed site-init file (bug 196859), run
+  distutils_pkg_postinst/postrm. drop old
 
   19 Sep 2007; Ali Polatel <hawking@gentoo.org> ipython-0.6.15.ebuild:
   updated SRC_URI; bug 192906
