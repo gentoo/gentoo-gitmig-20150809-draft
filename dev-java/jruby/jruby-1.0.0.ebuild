@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.0.0.ebuild,v 1.2 2007/07/11 19:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.0.0.ebuild,v 1.3 2007/10/24 05:29:46 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit eutils java-pkg-2 java-ant-2
@@ -64,15 +64,15 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# prevents /root/.jruby being created at build time with
 	# FEATURES="-userpriv"
 	# see http://bugs.gentoo.org/show_bug.cgi?id=170058
-	epatch ${FILESDIR}/${PN}-0.9.8-sandbox.patch
+	epatch "${FILESDIR}"/${PN}-0.9.8-sandbox.patch
 	# search only lib, kills jdk1.4+ property which we set manually
 	java-ant_ignore-system-classes
 
-	cd ${S}/lib
+	cd "${S}"/lib
 	rm -v *.jar || die
 
 	java-pkg_jar-from --build-only ant-core ant.jar
@@ -87,7 +87,7 @@ src_unpack() {
 	if use bsf; then
 		java-pkg_jar-from --build-only bsf-2.3
 	else
-		cd ${S}
+		cd "${S}"
 		# testcases depending on bsf
 		rm test/org/jruby/test/TestAdoptedThreading.java || die
 		rm test/org/jruby/javasupport/test/TestBSF.java || die
@@ -99,7 +99,7 @@ src_unpack() {
 }
 
 src_compile() {
-	eant jar $(use_doc create-apidocs) -Djruby.home=${T}/.jruby -Djdk1.4+=true
+	eant jar $(use_doc create-apidocs) -Djruby.home="${T}"/.jruby -Djdk1.4+=true
 }
 
 src_test() {
@@ -121,18 +121,18 @@ src_install() {
 	java-pkg_dolauncher ${PN} \
 		--main 'org.jruby.Main' \
 		--java_args '-Djruby.base=/usr/share/jruby -Djruby.home=/usr/share/jruby -Djruby.lib=/usr/share/jruby/lib -Djruby.script=jruby -Djruby.shell=/bin/sh'
-	dobin ${S}/bin/jirb
+	dobin "${S}"/bin/jirb
 
 	dodir "/usr/share/${PN}/lib"
 	insinto "/usr/share/${PN}/lib"
 	doins -r "${S}/lib/ruby"
 
 	# Share gems with regular ruby
-	rm -r ${D}/usr/share/${PN}/lib/ruby/gems || die
+	rm -r "${D}"/usr/share/${PN}/lib/ruby/gems || die
 	dosym /usr/lib/ruby/gems /usr/share/${PN}/lib/ruby/gems || die
 
 	# Share site_ruby with regular ruby
-	rm -r ${D}/usr/share/${PN}/lib/ruby/site_ruby || die
+	rm -r "${D}"/usr/share/${PN}/lib/ruby/site_ruby || die
 	dosym /usr/lib/ruby/site_ruby /usr/share/${PN}/lib/ruby/site_ruby || die
 }
 
