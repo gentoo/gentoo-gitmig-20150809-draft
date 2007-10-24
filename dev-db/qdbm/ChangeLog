@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.113 2007/10/05 07:25:10 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.114 2007/10/24 04:11:53 wltjr Exp $
+
+  24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -qdbm-1.8.70-r1.ebuild, qdbm-1.8.74.ebuild, qdbm-1.8.75-r1.ebuild:
+  amd64 stable, removed java gen 1 ebuild
 
   05 Oct 2007; Tom Gall <tgall@gentoo.org> qdbm-1.8.75-r1.ebuild:
   stable on ppc64
