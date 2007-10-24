@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.6.0.ebuild,v 1.2 2007/10/24 10:33:23 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.6.0.ebuild,v 1.3 2007/10/24 17:58:53 lu_zero Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://releases.compiz-fusion.org/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND=">=x11-wm/compiz-0.6.0
