@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-main/compiz-fusion-plugins-main-0.6.0.ebuild,v 1.3 2007/10/24 10:38:32 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-main/compiz-fusion-plugins-main-0.6.0.ebuild,v 1.4 2007/10/24 16:01:22 hanno Exp $
 
 DESCRIPTION="Compiz Fusion main plugins"
 HOMEPAGE="http://compiz-fusion.org"
@@ -9,7 +9,7 @@ SRC_URI="http://releases.compiz-fusion.org/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="jpeg"
 RESTRICT="test"
 
 DEPEND=">=x11-wm/compiz-0.6.0
