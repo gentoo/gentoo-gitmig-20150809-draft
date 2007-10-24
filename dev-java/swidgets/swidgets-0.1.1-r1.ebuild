@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.1-r1.ebuild,v 1.7 2007/09/28 22:46:09 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.1-r1.ebuild,v 1.8 2007/10/24 06:21:01 wltjr Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -29,16 +29,16 @@ src_unpack() {
 	find . -name 'CVS' | xargs rmdir
 
 	# Create the directory structor
-	mkdir ${S}
+	mkdir "${S}"
 
 	# Move the broken out source file
-	mv src ${S}
-	mv LabelledLayout.java ${S}/src/org/tigris/swidgets/
+	mv src "${S}"
+	mv LabelledLayout.java "${S}"/src/org/tigris/swidgets/
 
 	# Copy the build.xml
-	cp ${FILESDIR}/build.xml ${S} || die "Unable to copy the build file!"
+	cp "${FILESDIR}"/build.xml "${S}" || die "Unable to copy the build file!"
 
-	cat > ${S}/build.properties <<- EOF
+	cat > "${S}"/build.properties <<- EOF
 		src=src
 		dest=dest
 		build=build
@@ -49,5 +49,5 @@ src_unpack() {
 
 src_install() {
 	java-pkg_newjar dest/swidgets-${PV}.jar ${PN}.jar
-	use source && java-pkg_dosrc ${S}/src/org/
+	use source && java-pkg_dosrc "${S}"/src/org/
 }
