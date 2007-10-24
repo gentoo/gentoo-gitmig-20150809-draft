@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.37 2007/09/25 13:17:16 falco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.38 2007/10/24 12:08:44 uberlord Exp $
+
+  24 Oct 2007; Roy Marples <uberlord@gentoo.org> fail2ban-0.8.1.ebuild:
+  Keyworded ~x86-fbsd, #191510.
 
   25 Sep 2007; Raphael Marichez <falco@gentoo.org>
   +files/fail2ban-logrotate, fail2ban-0.8.1.ebuild:
