@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql-gui-tools
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/ChangeLog,v 1.19 2007/10/21 10:51:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/ChangeLog,v 1.20 2007/10/24 18:48:43 swegener Exp $
+
+*mysql-gui-tools-5.0_p12-r1 (24 Oct 2007)
+
+  24 Oct 2007; Sven Wegener <swegener@gentoo.org>
+  +files/mysql-gui-tools-5.0_p12-workbench-lua.patch,
+  -mysql-gui-tools-5.0_p12.ebuild, +mysql-gui-tools-5.0_p12-r1.ebuild:
+  Revision bump to fix bug #190355.
 
   21 Oct 2007; Sven Wegener <swegener@gentoo.org>
   mysql-gui-tools-5.0_p12.ebuild:

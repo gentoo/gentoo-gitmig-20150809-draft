@@ -1,0 +1,37 @@
+The lua parser has problems with . as a decimal point when the locale uses , as
+the decimal point.
+
+http://bugs.mysql.com/bug.php?id=19380
+
+Index: mysql-workbench/source/lua/Workbench.lua
+===================================================================
+--- mysql-workbench/source/lua/Workbench.lua	(revision 459)
++++ mysql-workbench/source/lua/Workbench.lua	(working copy)
+@@ -1683,10 +1683,10 @@
+   local x= grtV.toLua(args[1])
+   local y= grtV.toLua(args[2])
+   local curView= grtV.getGlobal("/workbench/model/currentView")
+-  local lowestX= 9999999999.0
+-  local lowestY= 9999999999.0
+-  local highestX= 0.0
+-  local highestY= 0.0
++  local lowestX= 9999999999
++  local lowestY= 9999999999
++  local highestX= 0
++  local highestY= 0
+ 
+   local i, c
+ 
+Index: mysql-workbench/source/lua/WorkbenchImport.lua
+===================================================================
+--- mysql-workbench/source/lua/WorkbenchImport.lua	(revision 459)
++++ mysql-workbench/source/lua/WorkbenchImport.lua	(working copy)
+@@ -55,7 +55,7 @@
+ function importDbd4(args)
+   local filename= grtV.toLua(args[1])
+   local p
+-  local xF= 1.5
++  local xF= 1 + 1 / 2
+   local yF= 2
+   
+   local callbacks= {
