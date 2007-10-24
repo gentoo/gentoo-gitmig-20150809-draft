@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portagemaster
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/ChangeLog,v 1.23 2007/10/24 09:40:46 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/ChangeLog,v 1.24 2007/10/24 17:47:32 maekke Exp $
+
+  24 Oct 2007; Markus Meier <maekke@gentoo.org>
+  portagemaster-0.2.1-r1.ebuild:
+  x86 stable, bug #196843
 
   24 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   portagemaster-0.2.1-r1.ebuild:
