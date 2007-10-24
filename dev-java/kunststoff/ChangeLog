@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/kunststoff
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kunststoff/ChangeLog,v 1.11 2007/10/24 05:34:46 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kunststoff/ChangeLog,v 1.12 2007/10/24 05:37:14 wltjr Exp $
+
+  24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  kunststoff-2.0.2-r1.ebuild:
+  Failed, quoted vars
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -kunststoff-2.0.2.ebuild:

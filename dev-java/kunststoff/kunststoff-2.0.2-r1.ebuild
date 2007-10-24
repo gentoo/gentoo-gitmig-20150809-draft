@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kunststoff/kunststoff-2.0.2-r1.ebuild,v 1.5 2007/09/05 03:07:25 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kunststoff/kunststoff-2.0.2-r1.ebuild,v 1.6 2007/10/24 05:37:14 wltjr Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -20,10 +20,10 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	rm -f *.jar
-	cp ${FILESDIR}/build.xml .
+	cp "${FILESDIR}"/build.xml .
 }
 
 EANT_DOC_TARGET="docs"
