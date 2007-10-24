@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/sablecc-3.1-r1.ebuild,v 1.4 2007/09/15 10:11:39 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/sablecc-3.1-r1.ebuild,v 1.5 2007/10/24 06:02:23 wltjr Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -26,7 +26,7 @@ JAVA_PKG_FILTER_COMPILER="jikes"
 src_install() {
 	java-pkg_dojar lib/*
 
-	dobin ${FILESDIR}/${PN}
+	dobin "${FILESDIR}"/${PN}
 
 	dodoc AUTHORS THANKS || die
 	dohtml README.html || die
