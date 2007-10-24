@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.250 2007/10/22 20:09:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.251 2007/10/24 07:24:17 jer Exp $
+
+  24 Oct 2007; Jeroen Roovers <jer@gentoo.org> cups-1.2.12-r1.ebuild:
+  Stable for HPPA (bug #195278). Fixed quoting issues.
 
   22 Oct 2007; Markus Meier <maekke@gentoo.org> cups-1.2.12-r1.ebuild:
   x86 stable, bug #195278
