@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcmdline
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcmdline/ChangeLog,v 1.7 2007/10/24 04:57:01 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcmdline/ChangeLog,v 1.8 2007/10/24 23:53:07 betelgeuse Exp $
+
+  24 Oct 2007; Petteri Räty <betelgeuse@gentoo.org> -jcmdline-1.0.2.ebuild:
+  Remove generation 1 ebuild.
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   jcmdline-1.0.2-r1.ebuild:
