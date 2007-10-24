@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0.ebuild,v 1.3 2007/09/28 07:35:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0.ebuild,v 1.4 2007/10/24 06:58:02 wltjr Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -240,7 +240,7 @@ src_test(){
 		emake test || die "Test failed"
 		# We need to fix the tests to make them pass
 		sed -i -e "s:setTransparency:setOpacity:g" \
-			${S}/mapscript/java/tests/threadtest/MapThread.java \
+			"${S}"/mapscript/java/tests/threadtest/MapThread.java \
 			|| die "fixing of tests failed"
 		emake threadtests || die "Threadtests failed"
 	fi
@@ -269,14 +269,14 @@ src_install() {
 				uses_php$i
 				EXT_DIR="$(${PHPCONFIG} --extension-dir)"
 				dodir ${EXT_DIR}
-				cp *.so ${D}/${EXT_DIR} || \
+				cp *.so "${D}"/${EXT_DIR} || \
 					die "Unable to setup php5 mapscript support"
 			done
 		else
 			cd_script php3 ${step}
 			EXT_DIR="$(${PHPCONFIG} --extension-dir)"
 			dodir ${EXT_DIR}
-			cp *.so ${D}/${EXT_DIR} || \
+			cp *.so "${D}"/${EXT_DIR} || \
 				die "Unable to setup php4 mapscript support"
 		fi
 		mapscript_install_examples php
