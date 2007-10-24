@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/jacksum
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.27 2007/10/24 08:23:14 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.28 2007/10/24 16:03:48 opfer Exp $
+
+  24 Oct 2007; Christian Faulhammer <opfer@gentoo.org> jacksum-1.7.0.ebuild:
+  stable x86, bug 196839
 
   24 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org> jacksum-1.7.0.ebuild:
   Stable on ppc, bug #196839.
