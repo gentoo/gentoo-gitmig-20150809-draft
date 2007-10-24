@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.2.2-r1.ebuild,v 1.1 2007/09/27 17:43:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.2.2-r1.ebuild,v 1.2 2007/10/24 11:14:38 opfer Exp $
 
 inherit gnome2 autotools
 
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
+RESTRICT="test"
 
 RDEPEND=">=gnome-base/libgnome-2.0
 	>=gnome-base/libgnomeui-2.0.3
