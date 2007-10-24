@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.32 2007/02/13 19:29:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.33 2007/10/24 18:12:17 beandog Exp $
+
+*syslinux-3.52 (24 Oct 2007)
+*syslinux-3.51 (24 Oct 2007)
+
+  24 Oct 2007; Steve Dibb <beandog@gentoo.org> +syslinux-3.51.ebuild,
+  +syslinux-3.52.ebuild:
+  Version bump
 
   13 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> syslinux-3.31.ebuild:
   Stable on amd64 wrt bug #166144.
