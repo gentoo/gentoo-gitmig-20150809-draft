@@ -1,6 +1,10 @@
 # ChangeLog for app-text/hyperestraier
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.43 2007/08/13 20:10:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.44 2007/10/24 07:25:33 nelchael Exp $
+
+  24 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  hyperestraier-1.4.10-r1.ebuild:
+  Stable on ppc, bug #196867.
 
   13 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   hyperestraier-1.4.9.ebuild:
