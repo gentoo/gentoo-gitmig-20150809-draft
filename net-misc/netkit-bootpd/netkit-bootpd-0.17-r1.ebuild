@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/netkit-bootpd-0.17-r1.ebuild,v 1.23 2007/01/26 08:43:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/netkit-bootpd-0.17-r1.ebuild,v 1.24 2007/10/24 16:53:00 jer Exp $
 
 MY_PN=${PN/pd/paramd}
 S=${WORKDIR}/${MY_PN}-${PV}
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/n/netkit-bootparamd/${MY_PN}_${PV}.orig.tar.g
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 sparc ppc mips"
+KEYWORDS="~hppa mips ppc sparc x86"
 IUSE=""
 
 src_compile() {
