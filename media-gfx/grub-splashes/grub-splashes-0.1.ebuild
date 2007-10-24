@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grub-splashes/grub-splashes-0.1.ebuild,v 1.3 2007/09/20 20:58:46 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grub-splashes/grub-splashes-0.1.ebuild,v 1.4 2007/10/24 21:09:59 welp Exp $
 
 DESCRIPTION="Collection of grub splashes"
 HOMEPAGE="http://dev.gentoo.org/~welp/grub-splashes.xml"
@@ -29,7 +29,7 @@ pkg_postinst() {
 	elog "Please note that this ebuild makes the assumption that you're"
 	elog "using /boot/grub/ for your grub configuration."
 	elog ""
-	elog "To your new grub splashes edit your /boot/grub/grub.conf"
+	elog "To use your new grub splashes edit your /boot/grub/grub.conf"
 	elog "You can see available splash screens by running"
 	elog "\`ls /boot/grub/ | grep xpm\`"
 }
