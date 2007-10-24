@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/flute/flute-1.3-r1.ebuild,v 1.5 2007/08/21 16:48:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/flute/flute-1.3-r1.ebuild,v 1.6 2007/10/24 04:34:35 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -33,14 +33,14 @@ src_unpack() {
 
 	mkdir src
 	mv org src
-	echo "classpath=$(java-pkg_getjars sac)" > ${S}/build.properties
+	echo "classpath=$(java-pkg_getjars sac)" > "${S}"/build.properties
 }
 
 EANT_DOC_TARGET=""
 
 src_install() {
-	java-pkg_dojar ${S}/dist/flute.jar
+	java-pkg_dojar "${S}"/dist/flute.jar
 
 	use doc && java-pkg_dojavadoc doc
-	use source && java-pkg_dosrc ${S}/src/*
+	use source && java-pkg_dosrc "${S}"/src/*
 }
