@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/caucho-services
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/caucho-services/ChangeLog,v 1.7 2006/11/28 03:58:10 nichoj Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/caucho-services/ChangeLog,v 1.8 2007/10/24 04:18:39 wltjr Exp $
+
+  24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org> Manifest:
+  Removed java gen 1 ebuild
 
   28 Nov 2006; Joshua Nichols <nichoj@gentoo.org>
   -caucho-services-3.0.8.ebuild:
