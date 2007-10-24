@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jade
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/ChangeLog,v 1.20 2007/08/21 19:14:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/ChangeLog,v 1.21 2007/10/24 06:53:08 nelchael Exp $
+
+  24 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org> jade-3.3-r1.ebuild:
+  Stable on ppc, bug #196876.
 
   21 Aug 2007; Christian Faulhammer <opfer@gentoo.org> jade-3.3-r1.ebuild:
   stable x86, bug 189322
