@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-main/compiz-fusion-plugins-main-0.6.0.ebuild,v 1.2 2007/10/23 23:02:49 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-main/compiz-fusion-plugins-main-0.6.0.ebuild,v 1.3 2007/10/24 10:38:32 hanno Exp $
 
 DESCRIPTION="Compiz Fusion main plugins"
 HOMEPAGE="http://compiz-fusion.org"
@@ -18,10 +18,8 @@ DEPEND=">=x11-wm/compiz-0.6.0
 	>=x11-libs/compiz-bcop-0.6.0
 	>=sys-devel/gettext-0.15"
 
-S="${WORKDIR}/${P}"
-
 src_compile() {
-	econf `use_enable jpeg` || die "econf failed"
+	econf $(use_enable jpeg) || die "econf failed"
 	emake || die "make failed"
 }
 
