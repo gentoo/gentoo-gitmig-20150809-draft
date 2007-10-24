@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/rxtx-2.1.7.2-r1.ebuild,v 1.1 2006/10/31 18:57:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/rxtx-2.1.7.2-r1.ebuild,v 1.2 2007/10/24 19:14:11 maekke Exp $
 
 inherit flag-o-matic toolchain-funcs versionator autotools java-pkg-2
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.qbang.org/pub/rxtx/${MY_P}.zip"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc source lfd"
 
 RDEPEND=">=virtual/jre-1.4"
