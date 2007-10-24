@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7839 2007/10/24 04:05:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7840 2007/10/24 09:07:48 tove Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -439,10 +439,6 @@ dev-lang/ezm3
 # Wulf C. Krueger <philantrop@gentoo.org> (21 Jul 2007)
 # Broken by upstream. cf. bug 173972.
 =media-video/konverter-0.93
-
-# Torsten Veller <tove@gentoo.org> (21 Jul 2007)
-# Masked for testing
->=app-office/gnucash-2.2.0
 
 # Jim Ramsay <lack@gentoo.org> (19 Jul 2007)
 # netscape-flash-9.0.48.0-r1 addresses Gentoo bug #185141 by using the versioned

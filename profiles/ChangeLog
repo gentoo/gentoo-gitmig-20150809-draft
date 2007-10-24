@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.760 2007/10/24 04:05:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.761 2007/10/24 09:07:48 tove Exp $
+
+  24 Oct 2007; Torsten Veller <tove@gentoo.org> package.mask:
+  Unmask app-office/gnucash
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org> package.mask:
   Masking xpg, last release Sep 2005
