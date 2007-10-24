@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.9.0.ebuild,v 1.1 2007/10/23 22:40:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.9.0.ebuild,v 1.2 2007/10/24 15:07:20 eva Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -41,6 +41,9 @@ src_unpack() {
 
 	# Fix multilib
 	sed -e "s:\/lib\/:\/$(get_libdir)\/:" -i src/Makefile.am
+
+	# Fix tests (needed with eautoreconf)
+	intltoolize --force
 	eautoreconf
 }
 
