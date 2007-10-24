@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jitac
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.21 2007/10/24 08:28:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.22 2007/10/24 15:48:38 maekke Exp $
+
+  24 Oct 2007; Markus Meier <maekke@gentoo.org> jitac-0.2.0-r2.ebuild:
+  x86 stable, bug #196842
 
   24 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org> jitac-0.2.0-r2.ebuild:
   Stable on ppc, bug #196842.
