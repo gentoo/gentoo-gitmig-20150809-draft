@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jump
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/ChangeLog,v 1.14 2007/09/21 17:01:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/ChangeLog,v 1.15 2007/10/24 05:32:58 wltjr Exp $
+
+  24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -jump-0.4.1-r1.ebuild, -jump-0.4.1-r2.ebuild:
+  Removed java gen 1 ebuilds.
 
   21 Sep 2007; Christian Faulhammer <opfer@gentoo.org> jump-0.5.ebuild:
   stable x86, bug 190429
