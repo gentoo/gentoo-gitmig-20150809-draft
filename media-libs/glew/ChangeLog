@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glew
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.27 2007/10/23 21:12:59 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.28 2007/10/24 00:16:05 jer Exp $
+
+  24 Oct 2007; Jeroen Roovers <jer@gentoo.org> glew-1.3.5.ebuild:
+  Marked ~hppa (bug #196836).
 
   23 Oct 2007; Joe Peterson <lavajoe@gentoo.org> glew-1.3.5.ebuild:
   Add ~x86-fbsd keyword
