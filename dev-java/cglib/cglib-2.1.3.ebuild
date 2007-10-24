@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.1.3.ebuild,v 1.11 2007/08/16 00:09:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.1.3.ebuild,v 1.12 2007/10/24 23:26:11 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 WANT_SPLIT_ANT="true"
@@ -51,4 +51,5 @@ src_install() {
 
 	dodoc NOTICE README || die
 	use doc && java-pkg_dojavadoc docs/
+	use source && java-pkg_dosrc src/proxy/net
 }
