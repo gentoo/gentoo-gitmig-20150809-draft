@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.4.2-r1.ebuild,v 1.4 2007/08/25 18:04:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.4.2-r1.ebuild,v 1.5 2007/10/24 16:33:57 armin76 Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ DIR="thelove@canonical.com---dists--bazaar--1.4"
 DEPEND="sys-apps/coreutils
 	sys-apps/diffutils
 	sys-devel/patch
+	sys-devel/gettext
 	sys-apps/findutils
 	sys-apps/gawk
 	app-arch/tar
