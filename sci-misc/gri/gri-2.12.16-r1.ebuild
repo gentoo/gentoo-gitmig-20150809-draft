@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.16-r1.ebuild,v 1.1 2007/09/25 07:08:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.16-r1.ebuild,v 1.2 2007/10/24 14:37:29 opfer Exp $
 
 inherit eutils elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gri/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc emacs examples"
 RESTRICT="test"
 
