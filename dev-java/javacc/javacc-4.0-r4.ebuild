@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-4.0-r4.ebuild,v 1.5 2007/08/10 18:24:38 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-4.0-r4.ebuild,v 1.6 2007/10/24 04:48:36 wltjr Exp $
 
 IUSE="doc examples source test"
 
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-javadoc.patch
+	epatch "${FILESDIR}"/${P}-javadoc.patch
 	rm -v lib/junit*/*.jar || die
 }
 
@@ -52,18 +52,18 @@ src_install() {
 	fi
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples
-		cp -R examples/* ${D}/usr/share/doc/${PF}/examples
+		cp -R examples/* "${D}"/usr/share/doc/${PF}/examples
 	fi
 	use source && java-pkg_dosrc src/*
 
-	echo "JAVACC_HOME=/usr/share/javacc/" > ${T}/22javacc
-	doenvd ${T}/22javacc
+	echo "JAVACC_HOME=/usr/share/javacc/" > "${T}"/22javacc
+	doenvd "${T}"/22javacc
 
-	echo "export VERSION=4.0" > ${T}/pre
+	echo "export VERSION=4.0" > "${T}"/pre
 
 	local launcher
 	for launcher in javacc jjdoc jjtree
 	do
-		java-pkg_dolauncher ${launcher} -pre ${T}/pre --main ${launcher}
+		java-pkg_dolauncher ${launcher} -pre "${T}"/pre --main ${launcher}
 	done
 }
