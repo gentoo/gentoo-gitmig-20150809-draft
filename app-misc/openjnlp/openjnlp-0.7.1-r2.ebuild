@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1-r2.ebuild,v 1.7 2007/09/02 16:35:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1-r2.ebuild,v 1.8 2007/10/24 02:30:53 wltjr Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -38,12 +38,12 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/targets
+	cd "${S}"/targets
 	eant -Dgentoo.classpath=jars/MRJToolkitStubs.zip build
 }
 
 src_install() {
-	cd ${S}/build/apps/unix/OpenJNLP-${PV}/
+	cd "${S}"/build/apps/unix/OpenJNLP-${PV}/
 
 	java-pkg_dojar lib/*.jar
 	java-pkg_dolauncher ${PN} --main org.nanode.app.OpenJNLP
