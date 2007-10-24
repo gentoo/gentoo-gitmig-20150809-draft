@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xsdlib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.21 2007/05/09 14:59:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.22 2007/10/24 06:36:30 wltjr Exp $
+
+  24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -xsdlib-20050627.ebuild:
+  Removed java gen 1 ebuild
 
   09 May 2007; Raúl Porcel <armin76@gentoo.org> xsdlib-20050627-r1.ebuild:
   Add ~ia64 wrt #160813
