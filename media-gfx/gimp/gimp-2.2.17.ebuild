@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.17.ebuild,v 1.9 2007/08/17 16:29:53 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.17.ebuild,v 1.10 2007/10/24 10:24:31 hanno Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime alternatives multilib python
 
@@ -55,7 +55,7 @@ src_unpack() {
 	cd "${S}"
 
 	# fixes bug #76050, allows for themable icons
-	sed -i -e s,@gimpdatadir@/images/@GIMP_DESKTOP_ICON@,@GIMP_DESKTOP_ICON@, ${S}/data/misc/gimp.desktop.in.in
+	sed -i -e s,@gimpdatadir@/images/@GIMP_DESKTOP_ICON@,@GIMP_DESKTOP_ICON@, "${S}/data/misc/gimp.desktop.in.in"
 
 	# Fix linking to older version of gimp if installed - this should
 	# void liquidx's hack, so it is removed.
@@ -151,7 +151,7 @@ pkg_postinst() {
 
 	# fix for bug #76050
 	ln -s $(gimptool-2.0 --gimpdatadir)/images/wilber-icon.png \
-		${ROOT}/usr/share/pixmaps/
+		"${ROOT}/usr/share/pixmaps/"
 
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
@@ -164,8 +164,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	[[ ! -f ${ROOT}/usr/bin/gimp-2.2 ]] && \
-		rm -f ${ROOT}/usr/share/pixmaps/wilber-icon.png
+	[[ ! -f "${ROOT}/usr/bin/gimp-2.2" ]] && \
+		rm -f "${ROOT}/usr/share/pixmaps/wilber-icon.png"
 
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
