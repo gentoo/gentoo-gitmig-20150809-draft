@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.8.0-r1.ebuild,v 1.1 2007/05/19 21:24:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.8.0-r1.ebuild,v 1.2 2007/10/24 02:00:30 wltjr Exp $
 
 inherit eutils java-pkg-2
 
@@ -80,7 +80,7 @@ src_install() {
 		AUDIO="off"
 	fi
 
-	cd ${S}/CDWserver/config
+	cd "${S}"/CDWserver/config
 	cat config.default \
 		| sed s*#portNo=12411*portNo=${PORT}*g \
 		| sed s*#MP3decoding=on*MP3decoding=${MP3}*g \
@@ -92,10 +92,10 @@ src_install() {
 		doins ${name}
 	done
 
-	cd ${S}/CDWserver/http
+	cd "${S}"/CDWserver/http
 	for dirname in `find -type d`
 	do
-		cd ${S}/CDWserver/http/${dirname}
+		cd "${S}"/CDWserver/http/${dirname}
 		dodir /var/CDWserver/http/${dirname}
 		insinto /var/CDWserver/http/${dirname}
 		for name in `find -name '[!M]*' -type f`
@@ -104,7 +104,7 @@ src_install() {
 		done
 	done
 
-	cd ${S}/CDWserver/test
+	cd "${S}"/CDWserver/test
 	make || die "make -C CDWserver/test failed"
 	for name in `find -type f -perm -111`
 	do
@@ -113,17 +113,17 @@ src_install() {
 
 	insinto /var/CDWserver/http/rcdrecord
 
-	cd ${S}/rcdrecord
+	cd "${S}"/rcdrecord
 	for name in `find -name '*.html'`
 	do
 		doins ${name}
 	done
 
-	cd ${S}/webCDcreator
+	cd "${S}"/webCDcreator
 	cp start.html index.html
 	for dirname in `find -type d`
 	do
-		cd ${S}/webCDcreator/${dirname}
+		cd "${S}"/webCDcreator/${dirname}
 		dodir /var/CDWserver/http/webCDcreator/${dirname}
 		insinto /var/CDWserver/http/webCDcreator/${dirname}
 		for name in `find -type f`
@@ -135,18 +135,18 @@ src_install() {
 		done
 	done
 
-	cd ${S}/tools
+	cd "${S}"/tools
 	make || die "make -C tools failed"
-	mv CDWconfig.sh.tmp ${S}/CDWserver/CDWconfig.sh
+	mv CDWconfig.sh.tmp "${S}"/CDWserver/CDWconfig.sh
 
-	cd ${S}
+	cd "${S}"
 
-	dosbin ${S}/CDWserver/CDWconfig.sh
-	dosbin ${S}/CDWserver/CDWserver
-	dobin ${S}/CDWserver/CDWrootGate
-	dobin ${S}/CDWserver/CDWverify
-	dobin ${S}/CDWserver/setScheduler
-	dobin ${S}/rcdrecord/rcdrecord
+	dosbin "${S}"/CDWserver/CDWconfig.sh
+	dosbin "${S}"/CDWserver/CDWserver
+	dobin "${S}"/CDWserver/CDWrootGate
+	dobin "${S}"/CDWserver/CDWverify
+	dobin "${S}"/CDWserver/setScheduler
+	dobin "${S}"/rcdrecord/rcdrecord
 
 	dosym /usr/sbin/CDWserver /usr/sbin/CDWpasswd
 	dosym /usr/sbin/CDWserver /usr/sbin/CDWuseradd
