@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/pidgin-smileys
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/pidgin-smileys/ChangeLog,v 1.1 2007/10/24 13:46:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/pidgin-smileys/ChangeLog,v 1.2 2007/10/24 16:13:04 beandog Exp $
+
+*pidgin-smileys-20071023-r1 (24 Oct 2007)
+
+  24 Oct 2007; Steve Dibb <beandog@gentoo.org>
+  -pidgin-smileys-20071023.ebuild, +pidgin-smileys-20071023-r1.ebuild:
+  Bump for broken theme
 
 *pidgin-smileys-20071023 (24 Oct 2007)
 
