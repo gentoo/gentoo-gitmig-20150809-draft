@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.276 2007/10/21 15:27:07 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.277 2007/10/24 08:20:57 yoswink Exp $
+
+  24 Oct 2007; Jose Luis Rivero <yoswink@gentoo.org>
+  phpmyadmin-2.11.1.2.ebuild:
+  Stable on sparc wrt security bug #196237. Thanks to jmbsvicetto for testing
 
   21 Oct 2007; Steve Dibb <beandog@gentoo.org> phpmyadmin-2.11.1.2.ebuild:
   amd64 stable
