@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.33 2007/08/20 11:40:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.34 2007/10/24 07:07:55 wltjr Exp $
 
 inherit eutils
 
@@ -20,17 +20,17 @@ S=${WORKDIR}/db.${PV}
 
 src_unpack() {
 	unpack db.${PV}.tar.gz
-	cd ${S}
+	cd "${S}"
 	epatch ${DISTDIR}/db.${PV}.patch
 }
 
 src_compile() {
-	cd ${S}/PORT/linux
+	cd "${S}"/PORT/linux
 	make ${MAKEOPTS} OORG="${CFLAGS} -fomit-frame-pointer" prefix=/usr || die
 }
 
 src_install () {
-	cd ${S}/PORT/linux
+	cd "${S}"/PORT/linux
 
 	newlib.a libdb.a libdb1.a || die "newlib.a failed"
 	newlib.so libdb.so.2 libdb1.so.2 || die "newlib.so failed"
@@ -49,7 +49,7 @@ src_install () {
 	dosym db1/ndbm.h /usr/include/ndbm.h
 	newbin db_dump185 db1_dump185
 
-	cd ${S}
+	cd "${S}"
 	dodoc changelog README
 	docinto ps
 	dodoc docs/*.ps

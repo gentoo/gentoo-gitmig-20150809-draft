@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.5.20_p2.ebuild,v 1.20 2007/08/27 17:16:58 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.5.20_p2.ebuild,v 1.21 2007/10/24 07:07:55 wltjr Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2
 
@@ -95,7 +95,7 @@ src_compile() {
 		append-ldflags -Wl,--default-symver
 	fi
 
-	cd ${S} && ECONF_SOURCE="${S}"/../dist econf \
+	cd "${S}" && ECONF_SOURCE="${S}"/../dist econf \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
