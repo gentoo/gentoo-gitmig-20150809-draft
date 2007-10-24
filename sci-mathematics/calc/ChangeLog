@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/calc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/ChangeLog,v 1.12 2007/08/02 14:04:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/ChangeLog,v 1.13 2007/10/24 12:50:28 markusle Exp $
+
+*calc-2.12.2.2 (24 Oct 2007)
+
+  24 Oct 2007; Markus Dittrich <markusle@gentoo.org> calc-2.12.1.5.ebuild,
+  +files/calc-2.12.2.2-libdir-fix.patch, +calc-2.12.2.2.ebuild:
+  Fixed incorrect RDEPEND (see bug 196654) and bumped to most recent
+  version.
 
   02 Aug 2007; Raúl Porcel <armin76@gentoo.org> calc-2.12.1.5.ebuild:
   alpha stable
