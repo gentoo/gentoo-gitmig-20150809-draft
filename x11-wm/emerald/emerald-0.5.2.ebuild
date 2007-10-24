@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.5.2.ebuild,v 1.1 2007/10/23 23:15:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.5.2.ebuild,v 1.2 2007/10/24 10:45:00 hanno Exp $
 
 inherit gnome2
 
@@ -16,7 +16,5 @@ RESTRICT="test"
 
 DEPEND=">=x11-libs/gtk+-2.8.0
 	>=x11-libs/libwnck-2.14.2"
-
-S="${WORKDIR}/${P}"
 
 DOCS="TODO README AUTHORS"
