@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/oscache-2.0.2-r1.ebuild,v 1.2 2007/01/11 12:59:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/oscache-2.0.2-r1.ebuild,v 1.3 2007/10/24 05:53:32 wltjr Exp $
 
 inherit java-pkg-2
 
@@ -36,29 +36,29 @@ src_compile() {
 	mkdir ${build_dir}
 
 	echo "Building core..."
-	cd ${S}/src/core/java
+	cd "${S}"/src/core/java
 	ejavac ${classpath} -nowarn -d ${build_dir} $(find . -name "*.java") || die
 
 	echo "Building cluster support plugin..."
-	cd ${S}/src/plugins/clustersupport/java
+	cd "${S}"/src/plugins/clustersupport/java
 	find . -name "*.java" -exec sed -i -e "s/org.javagroups/org.jgroups/g" {} \;
 	ejavac ${classpath} -nowarn -d ${build_dir} $(find . -name "*.java") || die
 
 	echo "Building disk persistence plugin..."
-	cd ${S}/src/plugins/diskpersistence/java
+	cd "${S}"/src/plugins/diskpersistence/java
 	ejavac ${classpath} -nowarn -d ${build_dir} `find . -name "*.java"` || die "compile failed"
 
 	if use doc ; then
 		echo "Building documentation..."
-		mkdir ${S}/javadoc
+		mkdir "${S}"/javadoc
 		cd ${build_dir}
 		local sourcepath="${S}/src/core/java:${S}/src/plugins/diskpersistence/java:${S}/src/plugins/clustersupport/java"
-		javadoc ${classpath} -sourcepath ${sourcepath} -d ${S}/javadoc \
+		javadoc ${classpath} -sourcepath ${sourcepath} -d "${S}"/javadoc \
 			$(find com/opensymphony/oscache -type d | tr '/' '.') \
 			|| die "failed to create javadoc"
 	fi
 
-	cd ${S}
+	cd "${S}"
 	jar cf ${PN}.jar -C build . || die "jar failed"
 }
 
