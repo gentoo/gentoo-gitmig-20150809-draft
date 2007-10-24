@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/struts-legacy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/ChangeLog,v 1.15 2007/04/29 00:01:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/ChangeLog,v 1.16 2007/10/24 06:12:57 wltjr Exp $
+
+  24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -struts-legacy-1.0-r1.ebuild:
+  Removed java gen 1 ebuild
 
 *struts-legacy-1.0-r2 (29 Apr 2007)
 
