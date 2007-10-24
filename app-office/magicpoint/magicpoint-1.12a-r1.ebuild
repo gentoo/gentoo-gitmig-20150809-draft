@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a-r1.ebuild,v 1.2 2007/09/28 07:20:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a-r1.ebuild,v 1.3 2007/10/24 14:53:09 opfer Exp $
 
 inherit autotools elisp-common eutils fixheadtails
 
@@ -56,8 +56,8 @@ src_compile() {
 		$(use_with m17n-lib) \
 		--disable-vflib \
 		--disable-freetype \
-		--x-libraries=/usr/X11R6/lib \
-		--x-includes=/usr/X11R6/include || die "econf failed"
+		--x-libraries=/usr/lib/X11 \
+		--x-includes=/usr/include/X11 || die "econf failed"
 
 	xmkmf || die "xmkmf failed"
 	# no parallel build possibly, anywhere
@@ -87,8 +87,10 @@ src_install() {
 	dobin contrib/{mgp2html.pl,mgp2latex.pl}
 
 	if use emacs ; then
+		cd contrib/
 		elisp-install ${PN} *.el *.elc || die "elisp-install failed"
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+		cd -
 	fi
 
 	use doc && dodoc FAQ README* RELNOTES SYNTAX TODO* USAGE*
