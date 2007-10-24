@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/gnu-crypto-2.0.1-r2.ebuild,v 1.10 2007/05/26 13:04:28 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/gnu-crypto-2.0.1-r2.ebuild,v 1.11 2007/10/24 04:38:11 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -38,7 +38,7 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	rm ${D}/usr/share/*.jar
+	rm "${D}"/usr/share/*.jar
 
 	java-pkg_dojar source/gnu-crypto.jar
 	java-pkg_dojar jce/javax-crypto.jar
