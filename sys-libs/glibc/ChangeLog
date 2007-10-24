@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.560 2007/10/23 23:53:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.561 2007/10/24 06:11:24 vapier Exp $
+
+  24 Oct 2007; Mike Frysinger <vapier@gentoo.org> glibc-2.7.ebuild:
+  Fix building on hppa #196868 and add patch for gcc-4.2 + noinlining #196245.
 
   23 Oct 2007; Mike Frysinger <vapier@gentoo.org> glibc-2.7.ebuild:
   Force >=sys-apps/sandbox-1.2.18.1-r2 so it recognizes the new cloexec flags
