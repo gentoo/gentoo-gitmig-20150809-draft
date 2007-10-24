@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r3.ebuild,v 1.11 2007/09/28 20:09:41 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r3.ebuild,v 1.12 2007/10/24 03:23:03 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -38,10 +38,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/lib
+	cd "${S}"/lib
 		rm *.jar
 		java-pkg_jar-from servletapi-2.3
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s:/etc/sysconfig:/etc/conf.d:" \
 		-e "s:/usr/local/etc/hsqldb.cfg:/etc/conf.d/hsqldb:" \
@@ -57,8 +57,8 @@ src_unpack() {
 		-e "s/^HSQLDB_OWNER=.*$/HSQLDB_OWNER=hsqldb/g" \
 		-e 's/^#AUTH_FILE=.*$/AUTH_FILE=${SERVER_HOME}\/sqltool.rc/g' \
 		src/org/hsqldb/sample/sample-hsqldb.cfg > conf/hsqldb
-	cp ${FILESDIR}/server.properties-r1 conf/server.properties
-	cp ${FILESDIR}/sqltool.rc-r1 conf/sqltool.rc
+	cp "${FILESDIR}"/server.properties-r1 conf/server.properties
+	cp "${FILESDIR}"/sqltool.rc-r1 conf/sqltool.rc
 }
 
 src_compile() {
@@ -75,7 +75,7 @@ src_install() {
 	fi
 	use source && java-pkg_dosrc src/*
 
-	doinitd ${FILESDIR}/hsqldb
+	doinitd "${FILESDIR}"/hsqldb
 	doconfd conf/hsqldb
 	insinto /etc/hsqldb
 	# Change the ownership of server.properties and sqltool.rc
@@ -91,8 +91,8 @@ src_install() {
 	doexe bin/hsqldb
 	dosym /etc/hsqldb/server.properties /var/lib/hsqldb/server.properties
 	dosym /etc/hsqldb/sqltool.rc /var/lib/hsqldb/sqltool.rc
-	chown -R hsqldb:hsqldb ${D}/var/lib/hsqldb
-	chmod o-rwx ${D}/var/lib/hsqldb
+	chown -R hsqldb:hsqldb "${D}"/var/lib/hsqldb
+	chmod o-rwx "${D}"/var/lib/hsqldb
 }
 
 pkg_postinst() {
