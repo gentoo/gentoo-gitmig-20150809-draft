@@ -1,0 +1,10 @@
+# ChangeLog for app-doc/gnucash-docs
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/ChangeLog,v 1.1 2007/10/24 08:52:53 tove Exp $
+
+*gnucash-docs-2.2.0 (24 Oct 2007)
+
+  24 Oct 2007; Torsten Veller <tove@gentoo.org> +metadata.xml,
+  +gnucash-docs-2.2.0.ebuild:
+  Initial commit. Split out of app-office/gnucash.
+
