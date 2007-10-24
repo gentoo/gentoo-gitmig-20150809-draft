@@ -1,8 +1,9 @@
 # ChangeLog for dev-java/jldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/ChangeLog,v 1.15 2007/10/24 05:14:58 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/ChangeLog,v 1.16 2007/10/24 05:17:08 wltjr Exp $
 
-  24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org> Manifest:
+  24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -jldap-20040730.ebuild:
   Removed java gen 1 ebuild.
 
   16 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
