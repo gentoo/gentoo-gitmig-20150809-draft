@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.20.ebuild,v 1.1 2007/10/23 22:40:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.20.ebuild,v 1.2 2007/10/24 14:53:49 eva Exp $
 
-inherit gnome2
-#eutils autotools
+inherit gnome2 autotools
 
 DESCRIPTION="a program created to allow you to control aspects of your mobile phone from your GNOME 2 desktop"
 HOMEPAGE="http://live.gnome.org/PhoneManager"
@@ -33,10 +32,12 @@ DEPEND="${RDEPEND}
 
 DOCS="README NEWS AUTHORS ChangeLog"
 
-#src_unpack() {
-#	gnome2_src_unpack
-#
-#	epatch "${FILESDIR}/${P}-pixmaps.patch"
-#	epatch "${FILESDIR}/${P}-as-needed.patch"
-#	eautoreconf
-#}
+src_unpack() {
+	gnome2_src_unpack
+
+	# Fix tests
+	echo "gnome-phone-manager.schemas.in" >> po/POTFILES.in
+	echo "phonemgr.glade" >> po/POTFILES.in
+
+	eautoreconf
+}
