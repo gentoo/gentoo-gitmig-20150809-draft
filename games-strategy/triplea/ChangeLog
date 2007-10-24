@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/triplea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.36 2007/10/24 06:44:29 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.37 2007/10/24 06:46:03 wltjr Exp $
+
+  24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/triplea-0.6.0.1-gentoo.patch:
+  Removed left over patch file
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -triplea-0.6.0.1.ebuild:
