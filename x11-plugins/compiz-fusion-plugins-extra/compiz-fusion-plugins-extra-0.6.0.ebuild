@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-extra/compiz-fusion-plugins-extra-0.6.0.ebuild,v 1.2 2007/10/23 23:04:02 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-extra/compiz-fusion-plugins-extra-0.6.0.ebuild,v 1.3 2007/10/24 10:39:26 hanno Exp $
 
 DESCRIPTION="Compiz Fusion extra plugins"
 HOMEPAGE="http://compiz-fusion.org"
@@ -13,13 +13,6 @@ IUSE=""
 RESTRICT="test"
 
 DEPEND="x11-plugins/compiz-fusion-plugins-main"
-
-S="${WORKDIR}/${P}"
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "make failed"
-}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
