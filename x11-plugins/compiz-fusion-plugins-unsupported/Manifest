@@ -2,10 +2,10 @@
 Hash: SHA1
 
 DIST compiz-fusion-plugins-unsupported-0.6.0.tar.bz2 411166 RMD160 4bbf99388c69fb24f31554414e226ec2d40ecabb SHA1 ee3b367c1718f2172a13bb71837bd4787c87e296 SHA256 14c0a4abed43af90ab29494bced8d8fc9cf2ac883f832a8761f9107b4e7362f8
-EBUILD compiz-fusion-plugins-unsupported-0.6.0.ebuild 548 RMD160 e81319770b2c1bc1b3e173abfc217fb6e8bf12ff SHA1 3fd81e1e4c2e5db0635f07f0b85b5c78f6716c60 SHA256 801b2217c5945bf73fb69d052016b5d381477d35aa0e9c61489e5f755ce2b156
-MD5 dda8af03b6b398f2a3160d9e96829d80 compiz-fusion-plugins-unsupported-0.6.0.ebuild 548
-RMD160 e81319770b2c1bc1b3e173abfc217fb6e8bf12ff compiz-fusion-plugins-unsupported-0.6.0.ebuild 548
-SHA256 801b2217c5945bf73fb69d052016b5d381477d35aa0e9c61489e5f755ce2b156 compiz-fusion-plugins-unsupported-0.6.0.ebuild 548
+EBUILD compiz-fusion-plugins-unsupported-0.6.0.ebuild 626 RMD160 9005f9caf2fc62d834c9fceff993636b1b7175f5 SHA1 bc014315a26056d4831116bed80b75592e4a33bc SHA256 58940780abd44047abcd07a55a0771e2d518371d3aa7d2da632dff4f4279f6e5
+MD5 fb0f96c41c31a8017eb59ac84f7b58e6 compiz-fusion-plugins-unsupported-0.6.0.ebuild 626
+RMD160 9005f9caf2fc62d834c9fceff993636b1b7175f5 compiz-fusion-plugins-unsupported-0.6.0.ebuild 626
+SHA256 58940780abd44047abcd07a55a0771e2d518371d3aa7d2da632dff4f4279f6e5 compiz-fusion-plugins-unsupported-0.6.0.ebuild 626
 MISC ChangeLog 736 RMD160 c14c874a42e2ce4fbbaa68d6d9eb4d042b9c863f SHA1 3716f51b84231916024103cae4906361ad2a914a SHA256 785f5c9b120501c8398f0cc83c69bacde4f63353b72bb6aa232da09ae0436a83
 MD5 2c2c81c21eaa19d7b819de2db330964f ChangeLog 736
 RMD160 c14c874a42e2ce4fbbaa68d6d9eb4d042b9c863f ChangeLog 736
@@ -20,7 +20,7 @@ SHA256 c8fec0f70e60fa7d57833d0fdc7bd29ff98434cfd78bf322269767e7a6f19bca files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.7 (GNU/Linux)
 
-iD8DBQFHHyGdr2QksT29OyARAk8EAJ97mTCZ3g5TooyskpEN5By9q6/3zwCdH3C4
-8yxxx4uDmLCtpGEScs4CiAk=
-=JmFq
+iD8DBQFHH5For2QksT29OyARAkkGAJ9mx/D7vecJ9PCPcvgZQSHM7WFjDgCeNxK2
+pchznaR6R7j6vChTuYu7QVU=
+=IbyS
 -----END PGP SIGNATURE-----
