@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/xpg
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xpg/ChangeLog,v 1.6 2006/07/17 14:51:17 nichoj Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xpg/ChangeLog,v 1.7 2007/10/24 03:51:30 wltjr Exp $
+
+  24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org> -xpg-0.1.ebuild,
+  xpg-0.1-r1.ebuild:
+  Removed java gen 1 ebuild, quoted vars. Soon to be last rited and masked.
 
 *xpg-0.1-r1 (17 Jul 2006)
 
