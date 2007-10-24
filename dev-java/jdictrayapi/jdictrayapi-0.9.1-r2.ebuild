@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.9.1-r2.ebuild,v 1.4 2007/09/28 22:54:08 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.9.1-r2.ebuild,v 1.5 2007/10/24 05:04:38 wltjr Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -39,13 +39,13 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}/dist/linux
+	cd "${S}"/dist/linux
 	java-pkg_dojar jdic.jar
 	java-pkg_doso libtray.so
-	use doc && java-pkg_dojavadoc ${S}/../docs
-	use source && java-pkg_dosrc ${S}/src/share/classes/* ${S}/src/unix/classes/*
+	use doc && java-pkg_dojavadoc "${S}"/../docs
+	use source && java-pkg_dosrc "${S}"/src/share/classes/* "${S}"/src/unix/classes/*
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples
-		cp -r ${S}/demo/Tray/* ${D}/usr/share/doc/${PF}/examples/
+		cp -r "${S}"/demo/Tray/* "${D}"/usr/share/doc/${PF}/examples/
 	fi
 }
