@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-systemload
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.44 2007/06/03 17:47:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.45 2007/10/24 01:38:49 angelos Exp $
+
+  24 Oct 2007; Christoph Mende <angelos@gentoo.org>
+  xfce4-systemload-0.4.2.ebuild:
+  Fix test suite and unrestrict it
 
   03 Jun 2007; Samuli Suominen <drac@gentoo.org>
   xfce4-systemload-0.4.2.ebuild:
