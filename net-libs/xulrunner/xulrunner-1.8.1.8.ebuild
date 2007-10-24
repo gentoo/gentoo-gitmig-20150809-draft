@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.8.ebuild,v 1.10 2007/10/23 20:17:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.8.ebuild,v 1.11 2007/10/24 05:32:56 jer Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}-source.tar.bz2
 
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=sys-libs/zlib-1.1.4
@@ -106,8 +106,8 @@ src_compile() {
 	# to econf, but the quotes cause configure to fail.
 	sed -i -e \
 		's|-DARON_WAS_HERE|-DGENTOO_NSPLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsplugins\\\" -DGENTOO_NSBROWSER_PLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsbrowser/plugins\\\"|' \
-		${S}/config/autoconf.mk \
-		${S}/toolkit/content/buildconfig.html
+		"${S}"/config/autoconf.mk \
+		"${S}"/toolkit/content/buildconfig.html
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
 	# requirements while compiling
@@ -123,26 +123,26 @@ src_install() {
 
 	# Add Gentoo package version to preferences - copied from debian rules
 	echo // Gentoo package version \
-		> ${D}/usr/$(get_libdir)/xulrunner/defaults/pref/vendor.js
+		> "${D}"/usr/$(get_libdir)/xulrunner/defaults/pref/vendor.js
 	echo "pref(\"general.useragent.product\",\"Gecko\");" \
-		>> ${D}/usr/$(get_libdir)/xulrunner/defaults/pref/vendor.js
+		>> "${D}"/usr/$(get_libdir)/xulrunner/defaults/pref/vendor.js
 	echo "pref(\"general.useragent.productSub\",\"${X_DATE}\");" \
-		>> ${D}/usr/$(get_libdir)/xulrunner/defaults/pref/vendor.js
+		>> "${D}"/usr/$(get_libdir)/xulrunner/defaults/pref/vendor.js
 	echo "pref(\"general.useragent.productComment\",\"Gentoo\");" \
-		>> ${D}/usr/$(get_libdir)/xulrunner/defaults/pref/vendor.js
+		>> "${D}"/usr/$(get_libdir)/xulrunner/defaults/pref/vendor.js
 
 	if use java ; then
-	    java-pkg_dojar ${D}${MOZILLA_FIVE_HOME}/javaxpcom.jar
-	    rm -f ${D}${MOZILLA_FIVE_HOME}/javaxpcom.jar
+	    java-pkg_dojar "${D}"${MOZILLA_FIVE_HOME}/javaxpcom.jar
+	    rm -f "${D}"${MOZILLA_FIVE_HOME}/javaxpcom.jar
 	fi
 
 	# xulrunner registration, the gentoo way
 	insinto /etc/gre.d
-	newins ${FILESDIR}/${PN}.conf ${PV}.conf
+	newins "${FILESDIR}"/${PN}.conf ${PV}.conf
 	sed -i -e \
 		"s|version|${PV}|
 			s|instpath|${MOZILLA_FIVE_HOME}|" \
-		${D}/etc/gre.d/${PV}.conf
+		"${D}"/etc/gre.d/${PV}.conf
 }
 
 pkg_postinst() {
