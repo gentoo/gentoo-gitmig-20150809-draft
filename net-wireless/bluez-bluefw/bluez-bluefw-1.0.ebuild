@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/bluez-bluefw-1.0.ebuild,v 1.8 2006/08/12 13:30:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/bluez-bluefw-1.0.ebuild,v 1.9 2007/10/24 09:53:18 betelgeuse Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="sys-apps/hotplug-base
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}; epatch ${FILESDIR}/${PN}-0.9-kernel2.6.patch
+	cd "${S}"; epatch "${FILESDIR}/${PN}-0.9-kernel2.6.patch"
 }
 
 src_compile() {
@@ -27,6 +27,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc README AUTHORS ChangeLog
 }
