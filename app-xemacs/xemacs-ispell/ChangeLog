@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/xemacs-ispell
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-ispell/ChangeLog,v 1.13 2007/10/15 06:20:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-ispell/ChangeLog,v 1.14 2007/10/25 15:21:49 graaff Exp $
+
+  25 Oct 2007; Hans de Graaff <graaff@gentoo.org>
+  -xemacs-ispell-1.24.ebuild:
+  Remove old version
 
   15 Oct 2007; Jeroen Roovers <jer@gentoo.org> xemacs-ispell-1.32.ebuild:
   Stable for HPPA (bug #189672).

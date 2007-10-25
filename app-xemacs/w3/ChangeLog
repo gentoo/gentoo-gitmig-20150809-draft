@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/w3
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/w3/ChangeLog,v 1.13 2007/06/03 19:33:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/w3/ChangeLog,v 1.14 2007/10/25 15:15:07 graaff Exp $
+
+  25 Oct 2007; Hans de Graaff <graaff@gentoo.org> -w3-1.28.ebuild:
+  Remove old version
 
   03 Jun 2007; Hans de Graaff <graaff@gentoo.org> -w3-1.32.ebuild:
   Remove intermediate version
