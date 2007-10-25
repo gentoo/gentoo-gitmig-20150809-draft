@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0.ebuild,v 1.3 2007/09/09 01:08:22 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0.ebuild,v 1.4 2007/10/25 04:05:26 dirtyepic Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -125,13 +125,15 @@ src_install() {
 	install_wx unicode
 	install_wx unicode-debug
 
+	dodoc "${S}"/docs/changes.txt
+	dodoc "${S}"/docs/gtk/readme.txt
+
 	if use doc; then
-		mkdir -p "${D}"usr/share/doc/${PF}/
-		cp -R "${S}"/docs/* "${D}"usr/share/doc/${PF}/
+		dohtml -r "${HTML_S}"/docs/html/*
 	fi
 
 	# I don't know what this is, but it's causing a collision.
-	rm ${D}usr/share/locale/it/LC_MESSAGES/wxmsw.mo
+	rm "${D}"/usr/share/locale/it/LC_MESSAGES/wxmsw.mo
 
 	# This is temporary until we have the wx-config wrapper
 	dosym /usr/bin/wx-config-2.6 /usr/bin/wx-config
