@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r2.ebuild,v 1.4 2007/10/25 14:14:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r2.ebuild,v 1.5 2007/10/25 15:32:09 corsair Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -25,7 +25,7 @@ for i in ${TEXLIVE_CORE_INCLUDED_TEXMF}; do
 	SRC_URI="${SRC_URI} mirror://gentoo/texlive-module-${i}-${PV}.zip"
 done
 
-KEYWORDS="~alpha ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~ia64 ~ppc64 ~sparc ~x86"
 IUSE="X doc"
 
 MODULAR_X_DEPEND="X? (
