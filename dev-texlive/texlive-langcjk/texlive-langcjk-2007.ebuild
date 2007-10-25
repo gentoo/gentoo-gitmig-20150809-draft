@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/texlive-langcjk-2007.ebuild,v 1.2 2007/10/25 07:38:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/texlive-langcjk-2007.ebuild,v 1.3 2007/10/25 12:46:15 fmccor Exp $
 
 TEXLIVE_MODULES_DEPS="dev-texlive/texlive-basic
 dev-texlive/texlive-documentation-chinese
@@ -12,4 +12,4 @@ DESCRIPTION="TeXLive Chinese, Japanese, Korean"
 
 LICENSE="GPL-2 LPPL-1.3c"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
