@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.761 2007/10/24 09:07:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.762 2007/10/25 17:47:10 jer Exp $
+
+  25 Oct 2007; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Removing Opera 9.50 mask because beta 1 is out there.
 
   24 Oct 2007; Torsten Veller <tove@gentoo.org> package.mask:
   Unmask app-office/gnucash
