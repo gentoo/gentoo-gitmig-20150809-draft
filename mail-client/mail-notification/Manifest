@@ -1,22 +1,6 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX mail-notification-2.0-buildfix.diff 281 RMD160 49db75ab313415284ad4658c7b34cc42eb63deaf SHA1 fca300c74790ecfc8adb9cdcda2b77457e2eae6c SHA256 e48536498bdb7daf1e375de2bab7675941ff7cd044868d7e561f5b4f5c4810ca
-MD5 9b632ffa3d886c3829752ea656adf8f1 files/mail-notification-2.0-buildfix.diff 281
-RMD160 49db75ab313415284ad4658c7b34cc42eb63deaf files/mail-notification-2.0-buildfix.diff 281
-SHA256 e48536498bdb7daf1e375de2bab7675941ff7cd044868d7e561f5b4f5c4810ca files/mail-notification-2.0-buildfix.diff 281
-AUX mail-notification-2.0-evolution-2.4.diff 3130 RMD160 5068ae2d6c916213d24b9a15e049abbc0e47fe2b SHA1 c455914683c410c81e4e3351c41c038a89e717e2 SHA256 ac2d9447bd5d2d9d6c583fe23e0f5e6f41cbc38f8af62f200e8f2029100f7d0d
-MD5 7dd1180fe96bd0bf9a9ccad1ffe2fe7a files/mail-notification-2.0-evolution-2.4.diff 3130
-RMD160 5068ae2d6c916213d24b9a15e049abbc0e47fe2b files/mail-notification-2.0-evolution-2.4.diff 3130
-SHA256 ac2d9447bd5d2d9d6c583fe23e0f5e6f41cbc38f8af62f200e8f2029100f7d0d files/mail-notification-2.0-evolution-2.4.diff 3130
-AUX mail-notification-2.0-evolution-2.6.diff 3130 RMD160 c1b97f3fdc17551c19e2a7540bc521dba88c19bd SHA1 d8b2bf6febc42e676ae8a653fea046feccd9ec6d SHA256 4fd78df7788a4d99fd01d17ad8e7b43e2ad335c9e32678620835d48b31f8efad
-MD5 fad49951071e2100ec4b93169e8d44cd files/mail-notification-2.0-evolution-2.6.diff 3130
-RMD160 c1b97f3fdc17551c19e2a7540bc521dba88c19bd files/mail-notification-2.0-evolution-2.6.diff 3130
-SHA256 4fd78df7788a4d99fd01d17ad8e7b43e2ad335c9e32678620835d48b31f8efad files/mail-notification-2.0-evolution-2.6.diff 3130
-AUX mail-notification-2.0-gmail-properties-fix.diff 508 RMD160 bf15014f598fb7315cb1c5f14729a640e93f8c7f SHA1 21d7395b0f3b803f32a22c9d87d6159c67ddebe8 SHA256 e33432eb0ee1ef63eaceb4ea2391b04cc2f9c473d562fe9a92e3d8921c508ca9
-MD5 7e2243b625802214a46bce8d633b94dc files/mail-notification-2.0-gmail-properties-fix.diff 508
-RMD160 bf15014f598fb7315cb1c5f14729a640e93f8c7f files/mail-notification-2.0-gmail-properties-fix.diff 508
-SHA256 e33432eb0ee1ef63eaceb4ea2391b04cc2f9c473d562fe9a92e3d8921c508ca9 files/mail-notification-2.0-gmail-properties-fix.diff 508
 AUX mail-notification-4.1-evo-2.12-api-change.patch 622 RMD160 36d58e59ce8a88e2dd8da3e84c4bb0ef18062555 SHA1 95ba0a1e3b1c80af1ff1c3f69d6a62f0b5305176 SHA256 23aae8ca76d7654acdb8f2feadc4ac6b93c2ceda1263c6ee81cb8876a84836d8
 MD5 8da5d1a0ccee677932cdf87dd7693abe files/mail-notification-4.1-evo-2.12-api-change.patch 622
 RMD160 36d58e59ce8a88e2dd8da3e84c4bb0ef18062555 files/mail-notification-4.1-evo-2.12-api-change.patch 622
@@ -39,10 +23,10 @@ EBUILD mail-notification-4.1.ebuild 2323 RMD160 1b995e21d44b372afe4cb62ec2189063
 MD5 c43f37a4c30e067d943623d0a73a3346 mail-notification-4.1.ebuild 2323
 RMD160 1b995e21d44b372afe4cb62ec21890635eb61fb2 mail-notification-4.1.ebuild 2323
 SHA256 4a818168a33020388f6bd1aa4ffc729ff70f4bbffdd37168b88131aaefd05d12 mail-notification-4.1.ebuild 2323
-MISC ChangeLog 9301 RMD160 c653426d5dcebd8b4d317f0e16eb73e39280f43c SHA1 73b7dc9523d1fe31a3eadca9c487ea14851a4732 SHA256 c73f4b0cc3559767e6184b056f4bd0820a0f7e47bee129bef360f21860627ccb
-MD5 a4a158e13626ca22bebe57fe623c4c95 ChangeLog 9301
-RMD160 c653426d5dcebd8b4d317f0e16eb73e39280f43c ChangeLog 9301
-SHA256 c73f4b0cc3559767e6184b056f4bd0820a0f7e47bee129bef360f21860627ccb ChangeLog 9301
+MISC ChangeLog 9582 RMD160 544cf43e49888fe638ea9fbbfaf6210a9d0f4ad7 SHA1 d3da401a5b8eeb959998d3e4b1ae4bee4bced03f SHA256 b2afb6c94f0ad4dce0ca35a0cf20378a1d133c8af692140d8bd3605f823dd353
+MD5 22a106ef6fdc57a8b2aee40bfa9ab652 ChangeLog 9582
+RMD160 544cf43e49888fe638ea9fbbfaf6210a9d0f4ad7 ChangeLog 9582
+SHA256 b2afb6c94f0ad4dce0ca35a0cf20378a1d133c8af692140d8bd3605f823dd353 ChangeLog 9582
 MISC metadata.xml 249 RMD160 04d89c188271eaa50c1cc0d6da917ab82ebf2575 SHA1 f2e6db3ef2b8f01a573bdcadecd66ef0e559a8da SHA256 3fda5e8d8d26f5c30c584a3bcbd2cbbfddacb94ed6522d71d8047bf7503ac78c
 MD5 19ab74103e1e821c48fc9e46d9adce4d metadata.xml 249
 RMD160 04d89c188271eaa50c1cc0d6da917ab82ebf2575 metadata.xml 249
@@ -59,7 +43,7 @@ SHA256 74682bc3195b5afed994f05ee30f393a1315155ed76a843c936ee4ab54ac19dd files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.7 (GNU/Linux)
 
-iD8DBQFHIGGK0BM77Tkv120RAgRNAJ9qI4rgC8IJKj23jmQle1V6thallwCdEG7u
-WzS6ugPJFClxn+v/3ck3GxE=
-=BEI5
+iD8DBQFHIGby0BM77Tkv120RAg0iAKCiZQ4ttrJkLuiF+9XGOf4tkxIIRQCg4JrP
+kcPCIbbnpfZGg5Jxif83qfg=
+=HArv
 -----END PGP SIGNATURE-----
