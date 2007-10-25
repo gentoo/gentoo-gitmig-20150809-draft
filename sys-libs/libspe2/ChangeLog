@@ -1,0 +1,10 @@
+# ChangeLog for sys-libs/libspe2
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libspe2/ChangeLog,v 1.1 2007/10/25 20:28:57 lu_zero Exp $
+
+*libspe2-2.2.80_p95 (25 Oct 2007)
+
+  25 Oct 2007; Luca Barbato <lu_zero@gentoo.org> +files/spe.rc6,
+  +libspe2-2.2.80_p95.ebuild:
+  First commit
+
