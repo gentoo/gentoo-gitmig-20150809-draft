@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.38 2007/07/04 21:32:22 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.39 2007/10/25 10:58:52 uberlord Exp $
 
 # Beagle needs these patches #176668, 176670.
 beagle
@@ -48,4 +48,5 @@ sms
 mtp
 milter
 qdbm
+xemacs
 xosd
