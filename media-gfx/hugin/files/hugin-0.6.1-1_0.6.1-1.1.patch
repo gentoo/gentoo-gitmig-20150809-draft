@@ -1,0 +1,36 @@
+--- hugin-0.6.1.orig/src/hugin/AutoCtrlPointCreator.cpp
++++ hugin-0.6.1/src/hugin/AutoCtrlPointCreator.cpp
+@@ -224,8 +224,7 @@
+ 		wxSetWorkingDirectory(apDir);
+ 	}
+ #endif
+-
+-    wxString ptofile(wxT("autopano_result_tempfile.pto"));
++    wxString ptofile = wxFileName::CreateTempFileName(wxT("ap_res"));
+     autopanoArgs.Replace(wxT("%o"), ptofile);
+     wxString tmp;
+     tmp.Printf(wxT("%d"), nFeatures);
+@@ -415,7 +414,7 @@
+         imgNr++;
+     }
+ 
+-    wxString ptofile(wxT("autopano_result_tempfile"));
++    wxString ptofile = wxFileName::CreateTempFileName(wxT("ap_res"));
+     autopanoArgs.Replace(wxT("%o"), ptofile);
+     wxString tmp;
+     tmp.Printf(wxT("%d"), nFeatures);
+only in patch2:
+unchanged:
+--- hugin-0.6.1.orig/src/Panorama/PTOptimise.cpp
++++ hugin-0.6.1/src/Panorama/PTOptimise.cpp
+@@ -36,8 +36,8 @@
+ #include <boost/property_map.hpp>
+ #include <boost/graph/graph_utility.hpp>
+ 
+-#define DEBUG_WRITE_OPTIM_OUTPUT
+-#define DEBUG_WRITE_OPTIM_OUTPUT_FILE "hugin_debug_optim_results.txt"
++//#define DEBUG_WRITE_OPTIM_OUTPUT
++//#define DEBUG_WRITE_OPTIM_OUTPUT_FILE "hugin_debug_optim_results.txt"
+ 
+ using namespace std;
+ using namespace PT;
