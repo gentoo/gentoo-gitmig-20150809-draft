@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.17.ebuild,v 1.5 2007/08/18 07:48:30 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.19.ebuild,v 1.1 2007/10/25 20:43:18 mrness Exp $
 
-inherit eutils flag-o-matic linux-info
+inherit eutils linux-info
 
 DESCRIPTION="user space driver and tools for use with mobile phones"
 HOMEPAGE="http://www.gnokii.org/"
@@ -46,8 +46,8 @@ src_unpack() {
 		fi
 
 		sed -i \
-			-e "s/^DB_OBJS.*=.*file[.]lo/DB_OBJS = ${MY_SMSD_DB_OBJS}/" \
-			-e "s/^DB_LIBS.*=.*libfile[.]la/DB_LIBS = ${MY_SMSD_DB_LIBS}/" \
+			-e "s/^\(DB_OBJS[\t ]*=\).*$/\1 ${MY_SMSD_DB_OBJS}/" \
+			-e "s/^\(DB_LIBS[\t ]*=\).*$/\1 ${MY_SMSD_DB_LIBS}/" \
 			-e 's/\(^.*LIBTOOL.*--mode=finish.*$\)/#\1/' \
 			smsd/Makefile
 
@@ -58,15 +58,11 @@ src_unpack() {
 		elif use mysql ; then
 			MY_DEFAULT_DB_MODULE="mysql"
 		fi
-		[[ ${MY_DEFAULT_DB_MODULE} == "file" ]] || \
-				sed -i -e "s/\"file\"/\"${MY_DEFAULT_DB_MODULE}\"/" smsd/smsd.c
+		sed -i -e "s/\(smsdConfig[.]dbMod[\t ]*=.*\"\).*\(\"\)/\1${MY_DEFAULT_DB_MODULE}\2/" smsd/smsd.c
 	fi
 }
 
 src_compile() {
-	append-flags -fno-strict-aliasing
-	append-ldflags $(bindnow-flags) #avoid QA notices
-
 	config_xdebug="--disable-xdebug"
 	use X && use debug && config_xdebug="--enable-xdebug"
 
@@ -131,8 +127,4 @@ pkg_postinst() {
 	elog "Make sure the user that runs gnokii has read/write access to the device"
 	elog "which your phone is connected to."
 	elog "The simple way of doing that is to add your user to the uucp group."
-	echo
-	ewarn "We've received at least one report of gnokii with USB connection"
-	ewarn "breaking the phone, which needed to be serviced afterwards."
-	ewarn "Be careful if you decide to try that..."
 }
