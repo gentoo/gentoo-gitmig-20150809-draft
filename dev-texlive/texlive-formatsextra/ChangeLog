@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-formatsextra
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-formatsextra/ChangeLog,v 1.1 2007/10/14 08:31:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-formatsextra/ChangeLog,v 1.2 2007/10/25 06:47:53 opfer Exp $
+
+  25 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  texlive-formatsextra-2007.ebuild:
+  keyworded ~x86, bug 195815
 
 *texlive-formatsextra-2007 (14 Oct 2007)
 
