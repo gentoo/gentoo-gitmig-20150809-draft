@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.83 2007/10/25 17:23:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.84 2007/10/25 18:17:11 cla Exp $
+
+  25 Oct 2007; Dawid Węgliński <cla@gentoo.org>
+  sandbox-1.2.18.1-r2.ebuild:
+  Stable on x86 (bug #182361)
 
   25 Oct 2007; Daniel Gryniewicz <dang@gentoo.org>
   sandbox-1.2.18.1-r2.ebuild:
