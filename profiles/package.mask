@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7842 2007/10/25 17:47:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7843 2007/10/25 19:35:30 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -309,10 +309,6 @@ gnustep-libs/imagekits
 gnustep-libs/pdfkit
 gnustep-apps/viewpdf
 
-# Alin Năstac <mrness@gentoo.org> (09 Sep 2007)
-# Development version.
-=net-proxy/squid-3.0_pre*
-
 # Benedikt Boehm <hollow@gentoo.org> (08 Sep 2007)
 # breaks apr and openldap
 =sys-libs/db-4.6*
@@ -360,12 +356,6 @@ games-fps/doomsday-resources
 # Robert Buchholz <rbu@gentoo.org> (29 Aug 2007)
 # PPTP Plugin doesn't work on amd64
 net-misc/networkmanager-pptp
-
-# Alin Năstac <mrness@gentoo.org> (25 Aug 2007)
-# Has been inactive for several years; scheduled for removal in 60 days.
-# Please use net-dialup/xl2tpd (fork actively maintained by Xelerance)
-# or use net-dialup/rp-l2tp.
-net-dialup/l2tpd
 
 # Zac Medico <zmedico@gentoo.org> (25 Aug 2007)
 # Bug #190128 - bash-3.2_p25 triggers 'hasq: command not found' errors
@@ -441,11 +431,6 @@ dev-lang/ezm3
 # RPM distributed by Adobe instead of their unversioned tar.gz.
 # However, we must still mask the original ebuild, and any previous versions.
 <=net-www/netscape-flash-9.0.48.0
-
-# Alin Năstac <mrness@gentoo.org> (19 Jul 2007)
-# Dead upstream, forked in net-dialup/xl2tpd.
-# Pending removal 19 Sep 2007
-net-dialup/l2tpd
 
 # Raúl Porcel <armin76@gentoo.org> (18 Jul 2007)
 # Mask rc
