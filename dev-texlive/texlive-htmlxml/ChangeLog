@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-htmlxml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/ChangeLog,v 1.4 2007/10/25 12:45:58 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/ChangeLog,v 1.5 2007/10/25 12:54:57 fmccor Exp $
+
+  25 Oct 2007; Ferris McCormick <fmccor@gentoo.org>
+  texlive-htmlxml-2007-r1.ebuild:
+  Add ~sparc for real --- Bug #195815
 
   25 Oct 2007; Ferris McCormick <fmccor@gentoo.org> ChangeLog:
   Add ~sparc keyword --- Bug #195815
