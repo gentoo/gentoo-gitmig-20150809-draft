@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/sic-0.9.ebuild,v 1.1 2007/04/20 11:46:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/sic-0.9.ebuild,v 1.2 2007/10/25 17:24:37 armin76 Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="An extremly simple IRC client"
-HOMEPAGE="http://irc.suckless.org/view.sh/simple+irc+client"
+HOMEPAGE="http://www.suckless.org/wiki/tools/irc/simple_irc_client"
 SRC_URI="http://suckless.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
