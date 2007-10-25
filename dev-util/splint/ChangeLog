@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/splint
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/ChangeLog,v 1.13 2007/05/15 09:10:31 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/ChangeLog,v 1.14 2007/10/25 16:02:18 masterdriverz Exp $
+
+*splint-3.1.2 (25 Oct 2007)
+
+  25 Oct 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  +splint-3.1.2.ebuild:
+  Bump to version 3.1.2; Bug 185269. Thanks to Alon Bar-Lev and Mark Glines.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
