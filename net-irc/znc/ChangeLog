@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.4 2007/10/23 22:09:54 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.5 2007/10/25 13:01:52 armin76 Exp $
+
+  25 Oct 2007; Raúl Porcel <armin76@gentoo.org> -znc-0.047.ebuild:
+  old
 
   23 Oct 2007; Dawid Węgliński <cla@gentoo.org> znc-0.050.ebuild:
   Stable on x86 (bug #196760)
