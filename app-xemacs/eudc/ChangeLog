@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/eudc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eudc/ChangeLog,v 1.10 2007/06/03 18:25:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eudc/ChangeLog,v 1.11 2007/10/25 11:46:39 graaff Exp $
+
+  25 Oct 2007; Hans de Graaff <graaff@gentoo.org> -eudc-1.37.ebuild:
+  Remove old version
 
   03 Jun 2007; Hans de Graaff <graaff@gentoo.org> eudc-1.39.ebuild:
   Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
