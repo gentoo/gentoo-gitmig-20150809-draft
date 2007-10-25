@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.4.ebuild,v 1.1 2007/08/05 15:02:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.6.1.ebuild,v 1.1 2007/10/25 17:49:09 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,14 +17,8 @@ RDEPEND=">=x11-libs/gtk+-2.8"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-Makefile.patch
-}
-
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed."
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake pqiv failed."
 }
 
 src_install() {
