@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0_rc1.ebuild,v 1.1 2007/10/15 10:48:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0_rc1.ebuild,v 1.2 2007/10/25 20:06:41 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -22,7 +22,7 @@ SRC_URI="http://www.squid-cache.org/Versions/v${S_PMV}/${S_PV}/${S_PP}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="pam ldap samba sasl nis radius ssl snmp selinux logrotate \
+IUSE="pam ldap samba sasl nis radius ssl snmp selinux icap-client logrotate \
 	pf-transparent ipf-transparent \
 	elibc_uclibc kernel_linux"
 
@@ -118,6 +118,7 @@ src_compile() {
 		--with-large-files \
 		$(use_enable snmp) \
 		$(use_enable ssl) \
+		$(use_enable icap-client) \
 		${myconf} || die "econf failed"
 
 	sed -i -e "s:^#define SQUID_MAXFD.*:#define SQUID_MAXFD 8192:" \
