@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.48 2007/08/22 06:39:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.49 2007/10/25 08:25:37 opfer Exp $
+
+  25 Oct 2007; Christian Faulhammer <opfer@gentoo.org> mutagen-1.12.ebuild:
+  stable x86, bug 196635
 
   22 Aug 2007; Alexis Ballier <aballier@gentoo.org> -mutagen-1.5.1.ebuild,
   -mutagen-1.7.1.ebuild, -mutagen-1.9.ebuild, -mutagen-1.10.1.ebuild:
