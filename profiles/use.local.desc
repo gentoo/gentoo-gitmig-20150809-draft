@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3103 2007/10/25 19:31:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3104 2007/10/25 19:52:14 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1724,6 +1724,7 @@ net-print/omni:epson - include the epson drivers
 net-print/pkpgcounter:psyco - psyco python accelerator
 net-proxy/dansguardian:kaspersky - Adds support for Kaspersky AntiVirus software
 net-proxy/dansguardian:ntlm - Enable support for the NTLM auth plugin
+net-proxy/squid:icap-client - Adds ICAP client support
 net-proxy/squid:ipf-transparent - Adds transparent proxy support for systems using IP-Filter (only for *bsd)
 net-proxy/squid:logrotate - Use logrotate for rotating logs
 net-proxy/squid:pf-transparent - Adds transparent proxy support for systems using PF (only for *bsd)
