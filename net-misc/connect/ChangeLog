@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/connect
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/ChangeLog,v 1.5 2007/09/23 18:22:43 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/ChangeLog,v 1.6 2007/10/25 08:18:22 wschlich Exp $
+
+*connect-100 (25 Oct 2007)
+
+  25 Oct 2007; Wolfram Schlich <wschlich@gentoo.org> +connect-100.ebuild:
+  version bump (now uses svn revisions as version number) and homepage update
 
   23 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> connect-1.96.ebuild:
   Keyworded ~amd64 as per bug 191477.
