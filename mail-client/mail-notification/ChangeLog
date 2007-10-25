@@ -1,6 +1,19 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.47 2007/10/03 19:03:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.48 2007/10/25 09:27:32 graaff Exp $
+
+*mail-notification-4.1-r1 (25 Oct 2007)
+
+  25 Oct 2007; Hans de Graaff <graaff@gentoo.org>
+  +files/mail-notification-4.1-evo-2.12-api-change.patch,
+  +files/mail-notification-4.1-find-evo-2.12.patch,
+  -mail-notification-3.0.ebuild, +mail-notification-4.1-r1.ebuild:
+  Fix compatibility with evolution 2.12 with some patches found in upstream's
+  bug tracker. Fixes #194597.
+
+  25 Oct 2007; Hans de Graaff <graaff@gentoo.org>
+  -mail-notification-3.0.ebuild:
+  Remove old version
 
   03 Oct 2007; Hans de Graaff <graaff@gentoo.org>
   -mail-notification-1.0.ebuild:
