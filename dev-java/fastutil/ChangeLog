@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/fastutil
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.33 2007/10/24 09:33:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.34 2007/10/25 07:29:59 opfer Exp $
+
+  25 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  fastutil-4.3.1-r1.ebuild:
+  stable x86, bug 196845
 
   24 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   fastutil-4.3.1-r1.ebuild:
