@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/cldoc
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cldoc/ChangeLog,v 1.1 2007/10/25 18:50:01 ulm Exp $
+
+*cldoc-1.16 (25 Oct 2007)
+
+  25 Oct 2007; Ulrich Mueller <ulm@gentoo.org> +files/50cldoc-gentoo.el,
+  +metadata.xml, +cldoc-1.16.ebuild:
+  New package, suggested by Stelian Ionescu. Ebuild contributed by me.
+
