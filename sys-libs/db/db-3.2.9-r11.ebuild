@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r11.ebuild,v 1.13 2007/10/24 07:07:55 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r11.ebuild,v 1.14 2007/10/25 07:03:32 tove Exp $
 
 inherit gnuconfig libtool eutils db java-pkg-opt-2
 
@@ -48,7 +48,7 @@ src_unpack() {
 	mv "${S}"/dist/Makefile.in "${S}"/dist/Makefile.in.orig
 	sed -e 's:DB185INC=:DB185INC= -I/usr/include/db1:' \
 		-e 's:DB185LIB=:DB185LIB= -ldb1:' \
-		"${S}/dist/Makefile.in.orig > "${S}"/dist/Makefile.in || die "Failed to sed"
+		"${S}"/dist/Makefile.in.orig > "${S}"/dist/Makefile.in || die "Failed to sed"
 
 	# Fix invalid .la files
 	cd "${WORKDIR}"/${P}/dist
