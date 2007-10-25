@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ezbounce-1.99.9.ebuild,v 1.1 2007/10/10 23:38:34 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ezbounce-1.99.9.ebuild,v 1.2 2007/10/25 13:11:46 armin76 Exp $
 
 inherit eutils
 
 DESCRIPTION="ezbounce is a small IRC bouncer"
-HOMEPAGE="http://druglord.freelsd.org/ezbounce/"
+HOMEPAGE="http://www.linuxftw.com/ezbounce/"
 SRC_URI="http://www.linuxftw.com/${PN}/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
