@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/sam2p-0.45.ebuild,v 1.7 2007/10/23 17:55:17 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/sam2p-0.45.ebuild,v 1.8 2007/10/25 16:52:19 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.inf.bme.hu/~pts/sam2p/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~ppc64 ~sparc x86"
 IUSE="gif"
 DEPEND="dev-lang/perl"
 RDEPEND="virtual/libc"

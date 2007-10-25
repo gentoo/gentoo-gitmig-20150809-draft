@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sam2p
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.19 2007/10/23 17:55:17 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.20 2007/10/25 16:52:19 armin76 Exp $
+
+  25 Oct 2007; Raúl Porcel <armin76@gentoo.org> sam2p-0.45.ebuild:
+  Add ~alpha/~ia64 wrt #195815
 
   23 Oct 2007; Ferris McCormick <fmccor@gentoo.org> sam2p-0.45.ebuild:
   Add ~sparc for testing (seems to be needed in Bug #195815).
