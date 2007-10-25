@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/texlive-latexextra-2007.ebuild,v 1.2 2007/10/15 13:18:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/texlive-latexextra-2007.ebuild,v 1.3 2007/10/25 07:15:19 opfer Exp $
 
 TEXLIVE_MODULES_DEPS="dev-texlive/texlive-latex
 dev-texlive/texlive-fontsrecommended
@@ -13,4 +13,4 @@ DESCRIPTION="TeXLive LaTeX supplementary packages"
 
 LICENSE="GPL-2 LPPL-1.3c Artistic"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86"

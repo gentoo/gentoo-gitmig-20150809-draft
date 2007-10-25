@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langafrican
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langafrican/ChangeLog,v 1.1 2007/10/14 09:08:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langafrican/ChangeLog,v 1.2 2007/10/25 07:36:49 opfer Exp $
+
+  25 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  texlive-langafrican-2007.ebuild:
+  keyworded ~x86, bug 195815
 
 *texlive-langafrican-2007 (14 Oct 2007)
 

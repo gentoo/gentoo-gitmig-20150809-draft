@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-science/texlive-science-2007.ebuild,v 1.1 2007/10/14 08:38:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-science/texlive-science-2007.ebuild,v 1.2 2007/10/25 07:49:09 opfer Exp $
 
 TEXLIVE_MODULES_DEPS="dev-texlive/texlive-latex
 !dev-tex/SIunits"
@@ -11,4 +11,4 @@ DESCRIPTION="TeXLive Typesetting for natural and computer sciences"
 
 LICENSE="GPL-2 LPPL-1.3c"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86"

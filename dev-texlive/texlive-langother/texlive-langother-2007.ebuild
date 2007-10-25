@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langother/texlive-langother-2007.ebuild,v 1.1 2007/10/14 09:55:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langother/texlive-langother-2007.ebuild,v 1.2 2007/10/25 07:44:17 opfer Exp $
 
 TEXLIVE_MODULES_DEPS="dev-texlive/texlive-basic
 "
@@ -11,4 +11,4 @@ DESCRIPTION="TeXLive Other hyphenation files"
 
 LICENSE="GPL-2 LPPL-1.3c"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86"

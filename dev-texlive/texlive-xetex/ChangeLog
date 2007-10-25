@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-xetex
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-xetex/ChangeLog,v 1.1 2007/10/14 08:35:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-xetex/ChangeLog,v 1.2 2007/10/25 08:19:09 opfer Exp $
+
+  25 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  texlive-xetex-2007.ebuild:
+  keyworded ~x86, bug 195815
 
 *texlive-xetex-2007 (14 Oct 2007)
 
