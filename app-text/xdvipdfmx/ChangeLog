@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvipdfmx
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.18 2007/10/15 18:20:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.19 2007/10/25 17:15:56 armin76 Exp $
+
+  25 Oct 2007; Raúl Porcel <armin76@gentoo.org> xdvipdfmx-0.4.ebuild:
+  Add ~alpha/~ia64 wrt #195815
 
 *xdvipdfmx-0.4 (15 Oct 2007)
 
