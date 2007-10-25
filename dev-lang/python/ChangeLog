@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.284 2007/10/25 14:09:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.285 2007/10/25 17:16:07 dang Exp $
+
+  25 Oct 2007; Daniel Gryniewicz <dang@gentoo.org> python-2.3.6-r3.ebuild,
+  python-2.4.4-r6.ebuild:
+  Marked stable on amd64 for bug #192876
 
   25 Oct 2007; Markus Rothe <corsair@gentoo.org> python-2.3.6-r3.ebuild,
   python-2.4.4-r6.ebuild:
