@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.148 2007/09/09 01:08:22 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.149 2007/10/25 04:05:26 dirtyepic Exp $
+
+  25 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.6.4.0.ebuild:
+  Fix docs installation.
 
   09 Sep 2007; Ryan Hill <dirtyepic@gentoo.org>
   files/wxGTK-2.6.4-collision.patch, wxGTK-2.6.4.0.ebuild:
