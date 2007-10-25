@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/ecryptfs-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.7 2007/07/02 15:33:12 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.8 2007/10/25 16:17:22 masterdriverz Exp $
+
+*ecryptfs-utils-18 (25 Oct 2007)
+
+  25 Oct 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  +ecryptfs-utils-18.ebuild:
+  Bump to ecryptfs-utils-18, bug 185725. Thanks to Michael Dehler.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   ecryptfs-utils-7.ebuild:
