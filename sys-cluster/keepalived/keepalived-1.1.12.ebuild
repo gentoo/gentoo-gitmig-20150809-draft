@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.12.ebuild,v 1.9 2007/06/26 02:50:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.12.ebuild,v 1.10 2007/10/25 09:42:50 xmerlin Exp $
 
 inherit flag-o-matic
 
@@ -36,7 +36,7 @@ src_compile() {
 src_install() {
 	einstall || die
 
-	newinitd ${FILESDIR}/init-keepalived keepalived
+	newinitd "${FILESDIR}"/init-keepalived keepalived
 
 	dodoc doc/keepalived.conf.SYNOPSIS
 	doman doc/man/man*/*

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.15.ebuild,v 1.2 2007/09/23 00:39:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.15.ebuild,v 1.3 2007/10/25 09:42:50 xmerlin Exp $
 
 inherit flag-o-matic autotools
 
@@ -24,7 +24,7 @@ src_unpack() {
 
 	# This patch allows us to avoid needing kernel sources for the configure phase
 	EPATCH_OPTS="-p1 -d${S}" epatch \
-		${FILESDIR}/${PN}-1.1.13-do-not-need-kernel-sources.patch
+		"${FILESDIR}"/${PN}-1.1.13-do-not-need-kernel-sources.patch
 	cd "${S}"
 	eautoreconf
 
