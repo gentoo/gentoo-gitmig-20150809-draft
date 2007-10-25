@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/edit-utils
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/ChangeLog,v 1.14 2007/06/03 18:12:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/ChangeLog,v 1.15 2007/10/25 11:23:58 graaff Exp $
+
+  25 Oct 2007; Hans de Graaff <graaff@gentoo.org> -edit-utils-1.98.ebuild:
+  Remove old version
 
   03 Jun 2007; Hans de Graaff <graaff@gentoo.org> edit-utils-2.36.ebuild:
   Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
