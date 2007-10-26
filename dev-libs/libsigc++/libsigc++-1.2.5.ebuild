@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.24 2007/03/01 17:22:31 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.25 2007/10/26 13:29:25 dang Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -43,8 +43,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "To allow parallel installation of sig++-1.0 and sig++-1.2,"
+	ewarn "To allow parallel installation of sigc++-1.0 and sigc++-1.2,"
 	ewarn "the header files are now installed in a version specific"
-	ewarn "subdirectory.  Be sure to unmerge any libsig++ versions"
+	ewarn "subdirectory.  Be sure to unmerge any libsigc++ versions"
 	ewarn "< 1.0.4 that you may have previously installed."
 }
