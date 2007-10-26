@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pymetar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.9 2007/02/21 16:24:48 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.10 2007/10/26 20:46:28 drac Exp $
+
+*pymetar-0.13 (26 Oct 2007)
+
+  26 Oct 2007; Samuli Suominen <drac@gentoo.org> +pymetar-0.13.ebuild:
+  Trivial version bump wrt #196270.
 
   21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
   files/digest-pymetar-0.8, files/digest-pymetar-0.10,
