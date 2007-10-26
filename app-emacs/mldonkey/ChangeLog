@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/mldonkey
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.13 2007/10/08 14:35:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.14 2007/10/26 13:42:19 ulm Exp $
+
+  26 Oct 2007; Ulrich Mueller <ulm@gentoo.org> mldonkey-0.0.4b.ebuild:
+  amd64 stable, bug 195512
+
+  26 Oct 2007; Ulrich Mueller <ulm@gentoo.org> mldonkey-0.0.4b.ebuild:
+  Depend on net-p2p/mldonkey at runtime. Update DESCRIPTION and HOMEPAGE.
 
   08 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   mldonkey-0.0.4a.ebuild, mldonkey-0.0.4b.ebuild:

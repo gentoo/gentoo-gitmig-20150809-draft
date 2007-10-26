@@ -1,17 +1,9 @@
 
-;;; site-lisp configuration for mldonkey-el
+;;; mldonkey site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
 
 (require 'mldonkey)
-
-;;; The following configuration is based on the configuration
-;;; distributed with mldonkey-el (from sample-config.el)
-
-(when (featurep 'highline)
-  (require 'highline))
-
-;; (add-hook 'mldonkey-mode-hook 'highline-local-mode)
 
 (setq mldonkey-host "localhost")
 (setq mldonkey-port 4000) ; use the port of the telnet interface here
