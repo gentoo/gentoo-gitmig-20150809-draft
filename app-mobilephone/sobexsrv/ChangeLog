@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/sobexsrv
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.11 2007/02/16 21:50:06 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.12 2007/10/26 15:58:37 joker Exp $
+
+*sobexsrv-1.0.1 (26 Oct 2007)
+
+  26 Oct 2007; Christian Birchinger <joker@gentoo.org>
+  +sobexsrv-1.0.1.ebuild:
+  Version bump and 64bit fixes.
 
   16 Feb 2007; Christian Birchinger <joker@gentoo.org>
   sobexsrv-1.0.0_pre4.ebuild:
