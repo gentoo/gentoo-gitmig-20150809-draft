@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ezm3/ezm3-1.2.ebuild,v 1.5 2007/02/09 07:34:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ezm3/ezm3-1.2.ebuild,v 1.6 2007/10/26 22:46:18 robbat2 Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="-* x86 ppc"
 IUSE="X opengl"
 
 DEPEND="virtual/libc
-	dev-util/yacc
+	|| ( dev-util/yacc sys-devel/bison )
 	>=sys-apps/sed-4
 	!virtual/m3"
 RDEPEND="virtual/libc"
