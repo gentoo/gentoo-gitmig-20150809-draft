@@ -4,6 +4,6 @@
 	<herd>scheme</herd>
 	<herd>php</herd>
 	<longdescription lang="en">
-oadsend PHP Compiler is a free, open source native compiler for the PHP language. It compiles PHP source code to stand alone, native binaries which do not require an interpreter. Roadsend Compiler can build online web applications with Fast/CGI, offline web applications with an embedded web server (MicroServer), desktop GUI applications with PHP-GTK, and console applications. It is available on Linux, Windows, and FreeBSD.  
+Roadsend PHP Compiler is a free, open source native compiler for the PHP language. It compiles PHP source code to stand alone, native binaries which do not require an interpreter. Roadsend Compiler can build online web applications with Fast/CGI, offline web applications with an embedded web server (MicroServer), desktop GUI applications with PHP-GTK, and console applications. It is available on Linux, Windows, and FreeBSD.  
 	</longdescription>
 </pkgmetadata>
