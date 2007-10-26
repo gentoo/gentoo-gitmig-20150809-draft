@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta1.ebuild,v 1.5 2007/10/26 16:38:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta1.ebuild,v 1.6 2007/10/26 16:57:17 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -55,7 +55,12 @@ RDEPEND="x11-libs/libXrandr
 
 O_S="${A/opera-9.50b/opera-9.50}"
 O_S="${O_S/-${O_LNG}/}"
-S="${WORKDIR}/${O_S/.tar.bz2/}-${O_SUFF}"
+
+if use amd64; then
+	S="${WORKDIR}/${O_S/.tar.bz2/}"
+else
+	S="${WORKDIR}/${O_S/.tar.bz2/}-${O_SUFF}"
+fi
 
 src_unpack() {
 	unpack ${A}

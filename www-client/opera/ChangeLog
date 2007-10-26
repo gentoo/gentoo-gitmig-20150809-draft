@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.163 2007/10/26 16:38:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.164 2007/10/26 16:57:17 jer Exp $
+
+  26 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_beta1.ebuild:
+  Fixing ${S} for amd64 now.
 
   26 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_beta1.ebuild:
   Fix SRC_URI (bug #197095).
