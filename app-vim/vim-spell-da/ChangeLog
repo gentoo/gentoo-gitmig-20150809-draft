@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vim-spell-da
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-da/ChangeLog,v 1.8 2007/10/22 15:23:49 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-da/ChangeLog,v 1.9 2007/10/26 16:50:26 nixnut Exp $
+
+  26 Oct 2007; nixnut <nixnut@gentoo.org> vim-spell-da-20060116.ebuild:
+  Stable on ppc wrt bug 180064
 
   22 Oct 2007; Dawid Węgliński <cla@gentoo.org>
   vim-spell-da-20060116.ebuild:
