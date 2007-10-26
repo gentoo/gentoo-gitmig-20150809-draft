@@ -1,0 +1,10 @@
+# ChangeLog for app-accessibility/pidgin-festival
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/ChangeLog,v 1.1 2007/10/26 03:28:29 tester Exp $
+
+*pidgin-festival-2.2 (26 Oct 2007)
+
+  26 Oct 2007; Olivier Crête <tester@gentoo.org> +metadata.xml,
+  +pidgin-festival-2.2.ebuild:
+  Add new package, which is the continuatio of net-im/festival-gaim
+
