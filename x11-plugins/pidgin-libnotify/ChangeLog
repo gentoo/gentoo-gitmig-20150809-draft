@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/pidgin-libnotify
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/ChangeLog,v 1.6 2007/08/28 16:24:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/ChangeLog,v 1.7 2007/10/26 01:46:23 tester Exp $
+
+*pidgin-libnotify-0.13-r1 (26 Oct 2007)
+
+  26 Oct 2007; Olivier Crête <tester@gentoo.org>
+  +files/pidgin-libnotify-showbutton.patch,
+  +pidgin-libnotify-0.13-r1.ebuild:
+  Add patch to fix the show button in the bubble, bug #188325
 
   28 Aug 2007; nixnut <nixnut@gentoo.org> pidgin-libnotify-0.13.ebuild:
   Stable on ppc wrt bug 189781
