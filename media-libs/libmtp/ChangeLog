@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.28 2007/09/03 19:41:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.29 2007/10/26 11:34:15 chainsaw Exp $
+
+*libmtp-0.2.3 (26 Oct 2007)
+
+  26 Oct 2007; Tony Vroon <chainsaw@gentoo.org> libmtp-0.2.1.ebuild,
+  +libmtp-0.2.3.ebuild:
+  Bumped to 0.2.3 as requested by Cristian "majeru" Magherusan on IRC. Marked
+  0.2.1 stable on X86, tested on a ThinkPad X41 using a Zen Sleek.
 
 *libmtp-0.2.1 (03 Sep 2007)
 
