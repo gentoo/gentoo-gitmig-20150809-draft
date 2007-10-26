@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/cblas-reference
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.28 2007/10/22 19:01:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.29 2007/10/26 13:35:37 markusle Exp $
 
   22 Oct 2007; Jeroen Roovers <jer@gentoo.org>
   cblas-reference-20030223-r4.ebuild:
@@ -133,6 +133,6 @@
   25 Mar 2006; Markus Dittrich <markusle@gentoo.org> 
   +files/c-reference, +files/cblas-gentoo.patch, +metadata.xml,
   +cblas-reference-20030223.ebuild:
-  Initial import (fixes bug #122958). Many thanks to Adam Piatyszek
+  Initial import (fixes bug #122958). Many thanks to Adam Piątyszek
   <ediap@et.put.poznan.pl> for his ebuild and patches.
 
