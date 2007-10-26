@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.1.ebuild,v 1.11 2007/08/13 21:04:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.1.ebuild,v 1.12 2007/10/26 00:49:21 beandog Exp $
 
 inherit eutils libtool
 
@@ -14,16 +14,17 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="sdl X"
 
-DEPEND="sdl? ( media-libs/libsdl )
+RDEPEND="sdl? ( media-libs/libsdl )
 	X? (
 		x11-libs/libXv
 		x11-libs/libICE
 		x11-libs/libSM
 		x11-libs/libXt
-		x11-proto/xextproto
 	)"
+DEPEND="${RDEPEND}
+	X? ( x11-proto/xextproto )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}

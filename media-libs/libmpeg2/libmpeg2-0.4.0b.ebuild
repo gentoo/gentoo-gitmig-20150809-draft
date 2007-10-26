@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.35 2006/11/26 13:37:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.36 2007/10/26 00:49:21 beandog Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -16,16 +16,17 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="sdl X"
 
-DEPEND="sdl? ( media-libs/libsdl )
+RDEPEND="sdl? ( media-libs/libsdl )
 	X? (
 		x11-libs/libXv
 		x11-libs/libICE
 		x11-libs/libSM
 		x11-libs/libXt
-		x11-proto/xextproto
 	)"
+DEPEND="${RDEPEND}
+	X? ( x11-proto/xextproto )"
 
-S=${WORKDIR}/${MY_P/b/}
+S="${WORKDIR}"/${MY_P/b/}
 
 src_unpack() {
 	unpack ${A}
