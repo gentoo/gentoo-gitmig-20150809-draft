@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.64 2007/10/26 15:28:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.65 2007/10/26 15:33:43 flameeyes Exp $
+
+  26 Oct 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -pulseaudio-0.9.5-r4.ebuild, -pulseaudio-0.9.6.ebuild:
+  Remove old versions.
 
 *pulseaudio-0.9.6-r2 (26 Oct 2007)
 
