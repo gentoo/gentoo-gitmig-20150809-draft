@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.120 2007/10/15 14:47:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.121 2007/10/26 17:12:11 nixnut Exp $
+
+  26 Oct 2007; nixnut <nixnut@gentoo.org> wireless-tools-29.ebuild:
+  Stable on ppc wrt bug 197119
 
   15 Oct 2007; Markus Rothe <corsair@gentoo.org>
   wireless-tools-29_pre22.ebuild:
