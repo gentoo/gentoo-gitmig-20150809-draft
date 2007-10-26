@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/riece
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/riece/ChangeLog,v 1.4 2007/10/26 18:14:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/riece/ChangeLog,v 1.5 2007/10/26 22:54:06 opfer Exp $
+
+  26 Oct 2007; Christian Faulhammer <opfer@gentoo.org> riece-1.23.ebuild:
+  stable x86, bug 197046
 
   26 Oct 2007; nixnut <nixnut@gentoo.org> riece-1.23.ebuild:
   Stable on ppc wrt bug 197046

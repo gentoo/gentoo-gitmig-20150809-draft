@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/calendar
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.17 2007/10/26 18:01:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.18 2007/10/26 22:49:23 opfer Exp $
+
+  26 Oct 2007; Christian Faulhammer <opfer@gentoo.org> calendar-1.32.ebuild:
+  stable x86, bug 197046
 
   26 Oct 2007; nixnut <nixnut@gentoo.org> calendar-1.32.ebuild:
   Stable on ppc wrt bug 197046

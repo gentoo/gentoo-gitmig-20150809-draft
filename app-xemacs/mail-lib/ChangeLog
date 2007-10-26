@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/mail-lib
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/ChangeLog,v 1.16 2007/10/26 18:11:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/ChangeLog,v 1.17 2007/10/26 22:52:58 opfer Exp $
+
+  26 Oct 2007; Christian Faulhammer <opfer@gentoo.org> mail-lib-1.79.ebuild:
+  stable x86, bug 197046
 
   26 Oct 2007; nixnut <nixnut@gentoo.org> mail-lib-1.79.ebuild:
   Stable on ppc wrt bug 197046
