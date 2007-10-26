@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.63 2007/09/10 19:11:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.64 2007/10/26 15:28:43 flameeyes Exp $
+
+*pulseaudio-0.9.6-r2 (26 Oct 2007)
+
+  26 Oct 2007; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pulseaudio.init.d-3, +pulseaudio-0.9.6-r2.ebuild:
+  Add a new revision with an experimental init script with dynamic
+  dependencies. With this script, disabling HAL or Avahi support on the
+  configuration file will not require them to be started even if PulseAudio
+  was built with their support enabled. Similarly ALSA is no more a
+  requirement if no ALSA sink or source is defined and no autodetect modules
+  are loaded.
 
   10 Sep 2007; Joseph Jezak <josejx@gentoo.org> pulseaudio-0.9.6-r1.ebuild:
   Marked ~ppc/~ppc64 for bug #181234.
