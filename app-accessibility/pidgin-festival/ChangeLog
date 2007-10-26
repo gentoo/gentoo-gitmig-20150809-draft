@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/pidgin-festival
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/ChangeLog,v 1.2 2007/10/26 09:48:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/ChangeLog,v 1.3 2007/10/26 12:53:42 fmccor Exp $
+
+  26 Oct 2007; Ferris McCormick <fmccor@gentoo.org>
+  pidgin-festival-2.2.ebuild:
+  Add ~sparc keyword, Bug #197103, because it does build so it can be tested at
+  least.  Unfortunately, it can't be tested by me.
 
   26 Oct 2007; Markus Meier <maekke@gentoo.org> pidgin-festival-2.2.ebuild:
   add ~x86, bug #197103
