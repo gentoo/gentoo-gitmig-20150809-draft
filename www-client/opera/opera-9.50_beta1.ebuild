@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta1.ebuild,v 1.2 2007/10/25 23:32:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta1.ebuild,v 1.3 2007/10/26 08:51:25 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -19,17 +19,17 @@ RESTRICT="strip mirror"
 O_LNG="en"
 O_SUFF="1643"
 O_VER="9.50b-20071024"
-O_FTP="950b/final/${O_LNG}"
+O_FTP="/950b/final/${O_LNG}/"
 
 O_URI="mirror://opera/"
-SRC_URI="
-	x86? ( qt-static? ( ${O_URI}linux/${O_FTP}/i386/static/${PN}-${O_VER}.1-static-qt.i386-${O_LNG}.tar.bz2 ) )
-	x86? ( !qt-static? ( ${O_URI}linux/${O_FTP}/i386/shared/${PN}-${O_VER}.6-shared-qt.i386-${O_LNG}.tar.bz2 ) )
-	amd64? ( qt-static? ( ${O_URI}linux/${O_FTP}/x86_64/static/${PN}-${O_VER}.1-static-qt.i386-${O_LNG}.tar.bz2 ) )
-	amd64? ( !qt-static? ( ${O_URI}linux/${O_FTP}/x86_64/shared/${PN}-${O_VER}.6-shared-qt.i386-${O_LNG}.tar.bz2 ) )
-	ppc? ( ${O_URI}linux/${O_FTP}/ppc/static/${PN}-${O_VER}.1-static-qt.ppc-${O_LNG}.tar.bz2 )
-	x86-fbsd? ( !qt-static? ( ${O_URI}unix/freebsd/${O_FTP}/shared/${PN}-${O_VER}.4-shared-qt.i386.freebsd-${O_LNG}.tar.bz2 ) )
-	x86-fbsd? ( qt-static? ( ${O_URI}unix/freebsd/${O_FTP}/static/${PN}-${O_VER}.1-static-qt.i386.freebsd-${O_LNG}.tar.bz2 ) )"
+
+SRC_URI="amd64? ( ${O_URI}linux${O_FTP}x86_64/${PN}-${O_VER/b/}.2-shared-qt.x86_64-${O_SUFF}.tar.bz2 )
+	x86? ( qt-static? ( ${O_URI}linux${O_FTP}i386/static/${PN}-${O_VER}.9-static-qt.i386-${O_LNG}.tar.bz2 )
+		   !qt-static? ( ${O_URI}linux${O_FTP}i386/shared/${PN}-${O_VER}.6-shared-qt.i386-${O_LNG}.tar.bz2 ) )
+	ppc? ( qtstatic? ( ${O_URI}linux${O_FTP}ppc/static/${PN}-${O_VER}.1-static-qt.ppc-${O_LNG}.tar.bz2 )
+		   !qt-static? ( ${O_URI}linux${O_FTP}ppc/shared/gcc-2.95/${PN}-${O_VER}.3-shared-qt.ppc-${O_LNG}.tar.bz2 ) )
+	x86-fbsd? (	qt-static? ( ${O_URI}unix/freebsd${O_FTP}static/${PN}-${O_VER}.1-static-qt.i386.freebsd-${O_LNG}.tar.bz2 ) )
+				!qt-static? ( ${O_URI}unix/freebsd${O_FTP}shared/${PN}-${O_VER}.4-shared-qt.i386.freebsd-${O_LNG}.tar.bz2 )"
 
 DEPEND=">=sys-apps/sed-4"
 

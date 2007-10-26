@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.160 2007/10/25 23:32:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.161 2007/10/26 08:51:25 jer Exp $
+
+  26 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_beta1.ebuild:
+  Fix SRC_URI magic (thanks to tomaw).
 
   25 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_beta1.ebuild:
   Readd x86-fbsd keyword.
