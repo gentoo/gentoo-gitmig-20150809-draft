@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7845 2007/10/26 15:23:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7846 2007/10/26 20:08:04 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Samuli Siuominen <drac@gentoo.org> (26 Oct 2007)
+# Still needs some love, masked for testing.
+=media-video/mmsv2-1.0.8.5
 
 # Diego Pettenò <flameeyes@gentoo.org> (26 Oct 2007)
 # Still-experimental support for dynamic service dependencies
