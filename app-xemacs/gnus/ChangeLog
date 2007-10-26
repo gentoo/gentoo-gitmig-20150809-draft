@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/gnus
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.19 2007/10/25 12:09:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.20 2007/10/26 18:04:25 nixnut Exp $
+
+  26 Oct 2007; nixnut <nixnut@gentoo.org> gnus-1.91.ebuild:
+  Stable on ppc wrt bug 197046
 
   25 Oct 2007; Hans de Graaff <graaff@gentoo.org> -gnus-1.65.ebuild,
   -gnus-1.71.ebuild:

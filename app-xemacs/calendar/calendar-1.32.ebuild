@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/calendar-1.32.ebuild,v 1.1 2007/05/05 06:56:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/calendar-1.32.ebuild,v 1.2 2007/10/26 18:01:07 nixnut Exp $
 
 SLOT="0"
 IUSE=""
@@ -9,6 +9,6 @@ PKG_CAT="standard"
 
 RDEPEND="app-xemacs/xemacs-base
 "
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ppc ~ppc64 ~sparc ~x86"
 
 inherit xemacs-packages
