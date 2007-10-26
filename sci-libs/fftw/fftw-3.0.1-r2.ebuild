@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1-r2.ebuild,v 1.16 2007/06/07 17:32:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1-r2.ebuild,v 1.17 2007/10/26 13:40:02 markusle Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="latest"
@@ -34,7 +34,7 @@ src_unpack() {
 	eautoreconf
 
 	cd "${WORKDIR}"
-	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
+	use amd64 && epatch "${FILESDIR}/${P}"-amd64.patch
 	mv ${P} ${P}-single
 	cp -pPR ${P}-single ${P}-double
 }
@@ -105,10 +105,10 @@ src_install () {
 	#both builds are installed in the same place
 	#libs have distinuguished names; include files, docs etc. identical.
 	cd "${S}-single"
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	cd "${S}-double"
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# Install documentation.
 	cd "${S}-single"
