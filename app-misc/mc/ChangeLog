@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.130 2007/10/26 14:59:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.131 2007/10/26 17:04:28 nixnut Exp $
+
+  26 Oct 2007; nixnut <nixnut@gentoo.org> mc-4.6.1-r4.ebuild:
+  Stable on ppc wrt bug 197144
 
   26 Oct 2007; Raúl Porcel <armin76@gentoo.org> mc-4.6.1-r4.ebuild:
   alpha/ia64/sparc/x86 stable
