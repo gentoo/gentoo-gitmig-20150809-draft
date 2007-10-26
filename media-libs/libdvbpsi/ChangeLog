@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.31 2007/06/12 12:36:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.32 2007/10/26 19:57:22 zzam Exp $
+
+*libdvbpsi-0.1.6 (26 Oct 2007)
+
+  26 Oct 2007; Matthias Schwarzott <zzam@gentoo.org> libdvbpsi-0.1.1.ebuild,
+  libdvbpsi-0.1.2.ebuild, libdvbpsi-0.1.3.ebuild, libdvbpsi-0.1.4.ebuild,
+  libdvbpsi-0.1.4-r1.ebuild, libdvbpsi-0.1.5.ebuild,
+  +libdvbpsi-0.1.6.ebuild:
+  Added new version. This is a bugfix version. Changed doc generation to
+  emake. Fixed quoting.
 
   12 Jun 2007; Matthias Schwarzott <zzam@gentoo.org> libdvbpsi-0.1.5.ebuild:
   Added check for needed automagic dependency of graphviz to libpng, thanks

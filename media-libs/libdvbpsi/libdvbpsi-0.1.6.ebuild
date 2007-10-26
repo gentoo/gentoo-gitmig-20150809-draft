@@ -1,10 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.5.ebuild,v 1.14 2007/10/26 19:57:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.6.ebuild,v 1.1 2007/10/26 19:57:22 zzam Exp $
 
 IUSE="doc"
 
-MY_P=${PN}4-${PV}
+SO_VERSION=5
+MY_P=${PN}${SO_VERSION}-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="library for MPEG TS/DVB PSI tables decoding and generation"
 HOMEPAGE="http://www.videolan.org/libdvbpsi"
@@ -13,7 +14,7 @@ SRC_URI="http://download.videolan.org/pub/${PN}/${PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # doxygen missing: ~ia64
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 DEPEND="doc? (
 		>=app-doc/doxygen-1.2.16
@@ -45,7 +46,7 @@ src_compile() {
 
 	if use doc; then
 		ewarn "Attempting to build documentation"
-		make doc || die "Could not build documentation."
+		emake doc || die "Could not build documentation."
 	else
 		ewarn "Documentation was not built"
 	fi

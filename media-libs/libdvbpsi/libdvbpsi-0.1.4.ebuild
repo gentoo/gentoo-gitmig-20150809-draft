@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.4.ebuild,v 1.6 2006/11/03 14:02:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.4.ebuild,v 1.7 2007/10/26 19:57:22 zzam Exp $
 
 IUSE=""
 
@@ -30,8 +30,8 @@ src_compile() {
 src_install () {
 	einstall || die "einstall failed"
 
-	dohtml ${S}/doc/doxygen/html/*
+	dohtml "${S}"/doc/doxygen/html/*
 
-	cd ${S}
+	cd "${S}"
 	dodoc AUTHORS INSTALL README NEWS
 }
