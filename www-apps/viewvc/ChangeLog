@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/viewvc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.14 2007/09/20 18:43:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.15 2007/10/26 16:13:20 wrobel Exp $
+
+  26 Oct 2007; wrobel@gentoo.org viewvc-1.0.4.ebuild:
+  Fixed message on installing the ebuild (see #179612).
 
   20 Sep 2007; Christoph Mende <angelos@gentoo.org> viewvc-1.0.4.ebuild:
   Stable on amd64 wrt bug #183151
