@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/calc
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/ChangeLog,v 1.13 2007/10/24 12:50:28 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/ChangeLog,v 1.14 2007/10/26 12:59:34 markusle Exp $
+
+  26 Oct 2007; Markus Dittrich <markusle@gentoo.org> calc-2.12.2.2.ebuild:
+  Fixed multilib issues on amd64 (see bug #197019).
 
 *calc-2.12.2.2 (24 Oct 2007)
 

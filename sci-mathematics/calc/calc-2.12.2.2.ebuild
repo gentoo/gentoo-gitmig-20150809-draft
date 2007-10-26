@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/calc-2.12.2.2.ebuild,v 1.1 2007/10/24 12:50:28 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/calc-2.12.2.2.ebuild,v 1.2 2007/10/26 12:59:34 markusle Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="An arbitrary precision C-like arithmetic system"
 HOMEPAGE="http://www.isthe.com/chongo/tech/comp/calc/"
@@ -24,6 +24,9 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-libdir-fix.patch
+
+	sed -e "s:LIBDIR= /usr/lib:LIBDIR= /usr/$(get_libdir):" \
+		-i Makefile || die "Failed to fix multilib in makefile"
 }
 
 src_compile() {
