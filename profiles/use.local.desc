@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3105 2007/10/25 20:58:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3106 2007/10/26 20:29:44 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1187,7 +1187,8 @@ media-video/linux-uvc:isight - Apply patch to work _only_ with the Apple iSight
 media-video/lives:libvisual - Enable libvisual support
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
 media-video/mkvtoolnix:lzo - Enables support for lzo compression
-media-video/mmsv2:dxr3 - Support for DXR3 mpeg acceleration cards
+media-video/mmsv2:dxr3 - Enable support for RealMagic Hollywood+/Creative DXR3 cards
+media-video/mmsv2:radio - Enable support for Internet Radio and BTTV Hardware Tuners
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
 media-video/mpeg4ip:id3 - Support ID3 in the player
 media-video/mpeg4ip:mp4live - Build the live streaming/encoding software
