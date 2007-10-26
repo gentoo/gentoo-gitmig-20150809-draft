@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.49 2007/10/24 00:50:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.50 2007/10/26 20:30:28 ulm Exp $
+
+*monotone-0.36-r1 (26 Oct 2007)
+
+  26 Oct 2007; Ulrich Mueller <ulm@gentoo.org> +files/50monotone-gentoo.el,
+  +monotone-0.36-r1.ebuild:
+  Improve Emacs support: Use elisp-comp function for proper byte-compilation;
+  replace "require" in site-init file by autoload mechanism. Add die commands
+  to elisp-install and elisp-site-file-install.
 
   24 Oct 2007; Steve Dibb <beandog@gentoo.org> monotone-0.35.ebuild:
   amd64 stable, bug 187158
