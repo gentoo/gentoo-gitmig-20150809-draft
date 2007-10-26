@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.15 2007/10/17 07:43:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.16 2007/10/26 17:35:38 ulm Exp $
 
 WANT_AUTOCONF=2.1
 
@@ -102,7 +102,7 @@ src_install() {
 
 	local TEXMF_PATH=$(kpsewhich --expand-var='$TEXMFMAIN')
 
-	cd ${S}/texk/xdvik
+	cd "${S}/texk/xdvik"
 	einstall texmf="${D}${TEXMF_PATH}" || die "install failed"
 
 	mv "${D}${TEXMF_PATH}/xdvi/XDvi" "${D}etc/X11/app-defaults"
@@ -125,7 +125,7 @@ src_install() {
 pkg_postinst() {
 	if use emacs; then
 		elog "Add"
-		elog "	(add-to-list 'load-path (\"/usr/share/emacs/site-lisp/tex-utils\"))"
+		elog "	(add-to-list 'load-path \"/usr/share/emacs/site-lisp/tex-utils\")"
 		elog "	(require 'xdvi-search)"
 		elog "to your ~/.emacs file"
 	fi

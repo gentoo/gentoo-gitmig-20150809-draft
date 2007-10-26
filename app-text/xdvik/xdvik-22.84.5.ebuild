@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.5.ebuild,v 1.5 2007/07/22 10:24:39 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.5.ebuild,v 1.6 2007/10/26 17:35:38 ulm Exp $
 
 inherit eutils flag-o-matic elisp-common
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/xdvi/${P}.tar.gz
 HOMEPAGE="http://sourceforge.net/projects/xdvi/
 	http://xdvi.sourceforge.jp/"
 
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~ppc64 ~ppc-macos"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~ppc64"
 SLOT="0"
 LICENSE="GPL-2"
 
