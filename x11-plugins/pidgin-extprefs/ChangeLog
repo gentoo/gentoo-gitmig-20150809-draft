@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-extprefs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-extprefs/ChangeLog,v 1.6 2007/08/28 14:47:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-extprefs/ChangeLog,v 1.7 2007/10/26 02:14:04 seemant Exp $
+
+  26 Oct 2007; Seemant Kulleen <seemant@gentoo.org>
+  pidgin-extprefs-0.7.ebuild:
+  Changed the description to talk about Pidgin rather than Gaim
 
   28 Aug 2007; nixnut <nixnut@gentoo.org> pidgin-extprefs-0.7.ebuild:
   Stable on ppc wrt bug 190200
