@@ -1,6 +1,10 @@
 # ChangeLog for app-office/magicpoint
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.32 2007/10/24 15:47:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.33 2007/10/26 20:04:52 angelos Exp $
+
+  26 Oct 2007; Christoph Mende <angelos@gentoo.org>
+  magicpoint-1.12a-r1.ebuild:
+  Stable on amd64 wrt bug #196885
 
   24 Oct 2007; Raúl Porcel <armin76@gentoo.org> magicpoint-1.12a-r1.ebuild:
   alpha/sparc stable wrt #196885
