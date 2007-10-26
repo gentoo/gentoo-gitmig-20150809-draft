@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/lcd4linux
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.29 2007/08/29 18:30:55 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.30 2007/10/26 09:40:44 rbu Exp $
+
+*lcd4linux-0.10.1_rc2-r2 (26 Oct 2007)
+
+  26 Oct 2007; Robert Buchholz <rbu@gentoo.org>
+  -files/lcd4linux-0.9.11-modular-x.patch,
+  +files/lcd4linux-0.10.1_rc2-nordtsc.patch, -lcd4linux-0.9.11.ebuild,
+  +lcd4linux-0.10.1_rc2-r2.ebuild:
+  Fix compilation with current Linux-Headers (bug #197057)
+  Clean up old version.
 
   29 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   lcd4linux-0.10.1_rc2-r1.ebuild:
