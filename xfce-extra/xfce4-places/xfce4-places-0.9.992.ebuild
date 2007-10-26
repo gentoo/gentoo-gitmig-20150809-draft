@@ -1,19 +1,26 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/xfce4-places-0.9.992.ebuild,v 1.1 2007/09/16 07:59:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/xfce4-places-0.9.992.ebuild,v 1.2 2007/10/26 13:44:05 angelos Exp $
 
-inherit xfce44
+inherit autotools xfce44
 
 xfce44
 
 DESCRIPTION="Places menu plug-in for panel, like GNOME's"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug"
-RESTRICT="test"
 
 RDEPEND=">=xfce-base/thunar-${THUNAR_MASTER_VERSION}"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	sed -i -e "/^AC_INIT/s/places_version()/places_version/" configure.ac
+	eautoconf
+}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
