@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.62 2007/10/24 00:32:21 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.63 2007/10/26 17:22:49 nixnut Exp $
+
+  26 Oct 2007; nixnut <nixnut@gentoo.org> trac-0.10.4.ebuild:
+  Stable on ppc wrt bug 196505
 
   24 Oct 2007; Steve Dibb <beandog@gentoo.org> trac-0.10.4.ebuild:
   amd64 stable, bug 196505
