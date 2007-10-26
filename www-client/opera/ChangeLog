@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.161 2007/10/26 08:51:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.162 2007/10/26 16:26:21 jer Exp $
+
+  26 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_beta1.ebuild:
+  Readded notes about failed checksums.
+
+  26 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_beta1.ebuild:
+  Readded notes about failed checksums.
 
   26 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_beta1.ebuild:
   Fix SRC_URI magic (thanks to tomaw).

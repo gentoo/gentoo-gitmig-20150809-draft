@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta1.ebuild,v 1.3 2007/10/26 08:51:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta1.ebuild,v 1.4 2007/10/26 16:26:21 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -98,6 +98,10 @@ src_install() {
 	else
 		./install.sh --prefix="${D}"/opt/opera || die
 	fi
+
+	einfo "It is safe to ignore warnings about failed checksums"
+	einfo "and about files that would be ignored ..."
+	einfo "Completing the installation where install.sh abandoned us ..."
 
 	# java workaround
 	sed -i -e 's:LD_PRELOAD="${OPERA_JAVA_DIR}/libawt.so":LD_PRELOAD="$LD_PRELOAD"\:"${OPERA_JAVA_DIR}/libawt.so":' "${D}"/opt/opera/bin/opera
