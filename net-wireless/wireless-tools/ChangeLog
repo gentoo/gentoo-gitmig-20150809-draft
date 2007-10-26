@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.121 2007/10/26 17:12:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.122 2007/10/26 19:25:03 dang Exp $
+
+  26 Oct 2007; Daniel Gryniewicz <dang@gentoo.org> wireless-tools-29.ebuild:
+  Marked stable on amd64 for bug #197119
 
   26 Oct 2007; nixnut <nixnut@gentoo.org> wireless-tools-29.ebuild:
   Stable on ppc wrt bug 197119
