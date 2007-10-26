@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/tramp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/ChangeLog,v 1.12 2007/10/25 15:00:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/ChangeLog,v 1.13 2007/10/26 18:16:35 nixnut Exp $
+
+  26 Oct 2007; nixnut <nixnut@gentoo.org> tramp-1.37.ebuild:
+  Stable on ppc wrt bug 197046
 
   25 Oct 2007; Hans de Graaff <graaff@gentoo.org> -tramp-1.11.ebuild:
   Remove old version
