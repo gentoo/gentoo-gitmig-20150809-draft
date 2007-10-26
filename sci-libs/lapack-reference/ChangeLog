@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/lapack-reference
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.38 2007/10/21 16:42:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.39 2007/10/26 13:46:01 markusle Exp $
 
   21 Oct 2007; nixnut <nixnut@gentoo.org> lapack-reference-3.1.1-r1.ebuild:
   Added ~ppc
@@ -105,7 +105,7 @@
   +files/lapack-reference-3.1.0-autotool.patch,
   +lapack-reference-3.1.0.ebuild:
   Version bump. Ebuild now allows library checks via lapack's 
-  test-routines. Thanks much to Adam Piatyszek 
+  test-routines. Thanks much to Adam Piątyszek 
   <ediap@et.put.poznan.pl> for his ebuild and patches 
   (this fixes bug #157410).
 
