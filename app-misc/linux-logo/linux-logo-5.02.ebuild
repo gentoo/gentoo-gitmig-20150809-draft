@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-5.02.ebuild,v 1.1 2007/08/30 06:54:57 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-5.02.ebuild,v 1.2 2007/10/26 01:49:08 jer Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.deater.net/weave/vmwprod/linux_logo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 hppa ~mips ~ppc ~sparc ~x86"
 IUSE="nls"
 
 RDEPEND="nls? ( virtual/libintl )"
@@ -30,11 +30,11 @@ src_unpack() {
 	echo "./logos/classic-no_periods_or_chars.logo" >> logo_config
 	echo "./logos/classic.logo" >> logo_config
 	cp "${FILESDIR}"/gentoo{,2}.logo "${S}"/logos/
-	echo "NAME gentoo" >> ${S}/logos/gentoo.logo
+	echo "NAME gentoo" >> "${S}"/logos/gentoo.logo
 }
 
 src_compile() {
-	./configure --prefix=${D}/usr || die
+	./configure --prefix="${D}"/usr || die
 	sed -i -e "s/CFLAGS=.*/CFLAGS=${CFLAGS}/" {,libsysinfo-*/}Makefile.default
 	emake || die
 }
@@ -44,8 +44,8 @@ src_install() {
 
 	dodoc BUGS README README.CUSTOM_LOGOS TODO USAGE LINUX_LOGO.FAQ
 
-	cp "${FILESDIR}"/${PN}.conf ${WORKDIR}
-	sed -i -e 's/-L 4 -f -u/-f -u/' ${WORKDIR}/${PN}.conf
+	cp "${FILESDIR}"/${PN}.conf "${WORKDIR}"
+	sed -i -e 's/-L 4 -f -u/-f -u/' "${WORKDIR}"/${PN}.conf
 
 	newinitd "${FILESDIR}"/${PN}.initscript ${PN}
 	newconfd "${WORKDIR}"/${PN}.conf ${PN}
