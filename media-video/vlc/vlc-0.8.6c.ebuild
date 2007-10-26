@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6c.ebuild,v 1.12 2007/10/22 19:16:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.6c.ebuild,v 1.13 2007/10/26 17:10:50 beandog Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -91,8 +91,6 @@ RDEPEND="
 		daap? ( >=media-libs/libopendaap-0.3.0 )
 		corba? ( >=gnome-base/orbit-2.8.0
 			>=dev-libs/glib-2.3.2 )
-		v4l? ( sys-kernel/linux-headers )
-		dvb? ( sys-kernel/linux-headers )
 		mod? ( media-libs/libmodplug )
 		speex? ( media-libs/speex )
 		svg? ( >=gnome-base/librsvg-2.5.0 )
@@ -121,6 +119,8 @@ RDEPEND="
 			<media-libs/libdc1394-1.9.99 )"
 
 DEPEND="${RDEPEND}
+	v4l? ( sys-kernel/linux-headers )
+	dvb? ( sys-kernel/linux-headers )
 	X? ( xinerama? ( x11-proto/xineramaproto ) )
 	dev-util/pkgconfig"
 

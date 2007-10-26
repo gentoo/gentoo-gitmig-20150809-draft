@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.11 2007/10/13 00:12:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.12 2007/10/26 17:10:50 beandog Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -68,7 +68,6 @@ RDEPEND="
 			<media-libs/libdc1394-1.9.99 )
 		directfb? ( dev-libs/DirectFB )
 		dts? ( media-libs/libdca )
-		dvb? ( sys-kernel/linux-headers )
 		dvd? (	media-libs/libdvdread
 				media-libs/libdvdcss
 				>=media-libs/libdvdnav-0.1.9
@@ -119,8 +118,6 @@ RDEPEND="
 			media-fonts/ttf-bitstream-vera )
 		twolame? ( media-sound/twolame )
 		upnp? ( net-libs/libupnp )
-		v4l? ( sys-kernel/linux-headers )
-		v4l2? ( sys-kernel/linux-headers )
 		vorbis? ( media-libs/libvorbis )
 		win32codecs? ( media-libs/win32codecs )
 		wxwindows? ( =x11-libs/wxGTK-2.6* )
@@ -149,6 +146,9 @@ RDEPEND="
 # libgcrypt is mandatory at buildtime, and that's not only a matter of missing
 # m4s. Bug #195322
 DEPEND="${RDEPEND}
+	dvb? ( sys-kernel/linux-headers )
+	v4l? ( sys-kernel/linux-headers )
+	v4l2? ( sys-kernel/linux-headers )
 	X? ( xinerama? ( x11-proto/xineramaproto ) )
 	dev-util/pkgconfig
 	>=dev-libs/libgcrypt-1.2.0"
