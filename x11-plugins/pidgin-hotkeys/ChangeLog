@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-hotkeys
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/ChangeLog,v 1.7 2007/09/28 18:28:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/ChangeLog,v 1.8 2007/10/26 11:45:00 seemant Exp $
+
+  26 Oct 2007; Seemant Kulleen <seemant@gentoo.org>
+  pidgin-hotkeys-0.2.3.ebuild:
+  change description to say pidgin instead of gaim
 
   28 Sep 2007; nixnut <nixnut@gentoo.org> pidgin-hotkeys-0.2.3.ebuild:
   Stable on ppc wrt bug 189781
@@ -18,6 +22,10 @@
 
   23 Aug 2007; Jeroen Roovers <jer@gentoo.org> pidgin-hotkeys-0.2.3.ebuild:
   Stable for HPPA (bug #189781).
+
+  26 Oct 2007; Seemant Kulleen <seemant@gentoo.org>
+  pidgin-hotkeys-0.2.3.ebuild:
+  change description to say pidgin instead of gaim
 
 *pidgin-hotkeys-0.2.3 (26 May 2007)
 
