@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/xfce4-places-0.9.992.ebuild,v 1.2 2007/10/26 13:44:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places/xfce4-places-1.0.0.ebuild,v 1.1 2007/10/26 15:31:23 angelos Exp $
 
-inherit autotools xfce44
+inherit xfce44
 
 xfce44
 
@@ -13,14 +13,6 @@ IUSE="debug"
 RDEPEND=">=xfce-base/thunar-${THUNAR_MASTER_VERSION}"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	sed -i -e "/^AC_INIT/s/places_version()/places_version/" configure.ac
-	eautoconf
-}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
