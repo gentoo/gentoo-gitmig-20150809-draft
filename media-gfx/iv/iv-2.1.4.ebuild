@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-2.1.4.ebuild,v 1.1 2007/04/01 23:01:34 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-2.1.4.ebuild,v 1.2 2007/10/26 10:14:21 ulm Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ DEPEND="=x11-libs/gtk+-1.2*
 	gif? ( >=media-libs/giflib-4.1.0-r3 )
 	imlib? ( >=media-libs/imlib-1.9.13 )
 	jpeg? ( >=media-libs/jpeg-6b )
-	png? ( >=media-libs/libpng-1.2 )"
+	png? ( >=media-libs/libpng-1.2 )
+	xpm? ( x11-libs/libXpm )"
 
 src_compile() {
 	./configure Linux --prefix=/usr \
