@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7846 2007/10/26 20:08:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7847 2007/10/27 08:42:51 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Ulrich Mueller <ulm@gentoo.org> (27 Oct 2007)
+# Emacs snapshots and live CVS of Emacs unicode-2 branch
+~app-editors/emacs-cvs-22.1.50_p20070829
+~app-editors/emacs-cvs-23.0.0_p20070920
+~app-editors/emacs-cvs-23.0.60
+>=virtual/emacs-23
 
 # Samuli Siuominen <drac@gentoo.org> (26 Oct 2007)
 # Still needs some love, masked for testing.
@@ -136,12 +143,6 @@ java-virtuals/javamail
 # Andrej Kacian <ticho@gentoo.org> (13 Oct 2007)
 # RC is not for general public
 =app-antivirus/clamav-0.92_rc2
-
-# Ulrich Mueller <ulm@gentoo.org> (12 Oct 2007)
-# Live CVS and snapshot of Emacs unicode-2 branch
-~app-editors/emacs-cvs-23.0.0_p20070920
-~app-editors/emacs-cvs-23.0.60
->=virtual/emacs-23
 
 # Ali Polatel <hawking@gentoo.org> (11 Oct 2007)
 # Newer pyrex versions have problems with setuptools.
