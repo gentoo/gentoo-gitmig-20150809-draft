@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/matlab
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.11 2007/03/08 07:23:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.12 2007/10/27 10:44:23 opfer Exp $
+
+  27 Oct 2007; Christian Faulhammer <opfer@gentoo.org> matlab-2.2.3.ebuild:
+  updated HOMEPAGE, set SITEFILE to a more generic value, removed unnecessary
+  dependency on virtual/emacs (provided by elisp.eclass already)
 
   08 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
   files/50matlab-gentoo.el:
