@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/modplugplay
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/modplugplay/ChangeLog,v 1.6 2007/10/24 16:44:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/modplugplay/ChangeLog,v 1.7 2007/10/27 13:44:49 drac Exp $
+
+  27 Oct 2007; Samuli Suominen <drac@gentoo.org> modplugplay-1.0.ebuild:
+  Restrict test suite for bug 196941 because it's trying to play sounds using
+  /dev/dsp.
 
   24 Oct 2007; Jeroen Roovers <jer@gentoo.org> modplugplay-1.0.ebuild:
   Marked ~hppa (media-libs/libmodplug, bug #196819).
