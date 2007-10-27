@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perlbal/Perlbal-1.58.ebuild,v 1.2 2007/05/13 08:33:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perlbal/Perlbal-1.58.ebuild,v 1.3 2007/10/27 02:38:51 robbat2 Exp $
 
 inherit perl-module
 
@@ -26,15 +26,15 @@ PATCHES="${FILESDIR}/${PN}-1.58-Use-saner-name-in-process-listing.patch"
 
 src_install() {
 	perl-module_src_install || die "perl-module_src_install failed"
-	cd ${S}
+	cd "${S}"
 	dodoc doc/*.txt
 	docinto hacking
 	dodoc doc/hacking/*.txt
 	docinto conf
 	dodoc conf/*.{dat,conf}
 	keepdir /etc/perlbal
-	newinitd ${FILESDIR}/perlbal_init.d_1.58 perlbal
-	newconfd ${FILESDIR}/perlbal_conf.d_1.58 perlbal
+	newinitd "${FILESDIR}"/perlbal_init.d_1.58 perlbal
+	newconfd "${FILESDIR}"/perlbal_conf.d_1.58 perlbal
 }
 
 pkg_postinst() {
