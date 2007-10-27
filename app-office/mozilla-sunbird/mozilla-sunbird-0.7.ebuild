@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.7.ebuild,v 1.1 2007/10/26 18:31:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.7.ebuild,v 1.2 2007/10/27 21:51:38 mr_bones_ Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -182,7 +182,6 @@ src_install() {
 	cp -RL "${S}/dist/bin/"* "${D}${MOZILLA_FIVE_HOME}" || die "Copy of files failed"
 	touch "${D}${MOZILLA_FIVE_HOME}"/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/chrome.manifest
 	touch "${D}${MOZILLA_FIVE_HOME}"/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome.manifest
-
 
 	linguas
 	for X in ${linguas}; do
