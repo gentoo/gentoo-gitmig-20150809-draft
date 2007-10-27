@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.20.0.ebuild,v 1.5 2007/10/23 19:25:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.20.0.ebuild,v 1.6 2007/10/27 06:36:25 leio Exp $
 
 inherit gnome2
 
@@ -30,7 +30,8 @@ RDEPEND=">=gnome-base/gconf-2
 	xulrunner? ( net-libs/xulrunner )
 	sys-libs/zlib
 	app-arch/bzip2
-	>=app-text/rarian-0.5"
+	>=app-text/rarian-0.5
+	>=app-text/scrollkeeper-9999"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
