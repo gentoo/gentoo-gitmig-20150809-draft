@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.765 2007/10/26 15:23:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.766 2007/10/27 19:53:58 alonbl Exp $
+
+  27 Oct 2007; Alon Bar-Lev <alonbl@gentoo.org> use.local.desc:
+  Added sys-apps/tuxonice-userui:fbsplash
 
   26 Oct 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
   Add an experimental revision of pulseaudio depending on baselayout 2.
