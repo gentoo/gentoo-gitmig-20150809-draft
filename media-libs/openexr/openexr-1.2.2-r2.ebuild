@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r2.ebuild,v 1.16 2007/08/26 21:46:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r2.ebuild,v 1.17 2007/10/27 20:05:26 aballier Exp $
 
 WANT_AUTOMAKE=1.7
 
@@ -24,8 +24,8 @@ DEPEND="dev-util/pkgconfig
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e "s:OpenEXR-@OPENEXR_VERSION@:\$\(P\):" ${S}/IlmImfExamples/Makefile.in
-	sed -i -e "s:NVSDK_CXXFLAGS=\"\":NVSDK_CXXFLAGS=\"-DUNIX\":" ${S}/acinclude.m4
+	sed -i -e "s:OpenEXR-@OPENEXR_VERSION@:\$\(P\):" "${S}/IlmImfExamples/Makefile.in"
+	sed -i -e "s:NVSDK_CXXFLAGS=\"\":NVSDK_CXXFLAGS=\"-DUNIX\":" "${S}/acinclude.m4"
 
 	epatch "${FILESDIR}/openexr-1.2.2-gcc4.patch"
 	epatch "${FILESDIR}/${P}-asneeded.patch"
@@ -49,7 +49,7 @@ src_install () {
 	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS Changelog README* ChangeLog LICENSE NEWS
 	if use examples && [ "${P}" != "${PF}" ] ; then
-		mv ${D}/usr/share/doc/${P}/examples ${D}/usr/share/doc/${PF}/examples
+		mv "${D}/usr/share/doc/${P}/examples" "${D}/usr/share/doc/${PF}/examples"
 	fi
-	use doc && dohtml -r ${S}/doc/*
+	use doc && dohtml -r "${S}"/doc/*
 }
