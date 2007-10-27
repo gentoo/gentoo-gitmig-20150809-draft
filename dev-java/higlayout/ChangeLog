@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/higlayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/higlayout/ChangeLog,v 1.4 2007/02/03 11:28:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/higlayout/ChangeLog,v 1.5 2007/10/27 14:01:14 angelos Exp $
+
+  27 Oct 2007; Christoph Mende <angelos@gentoo.org> higlayout-1.0-r1.ebuild:
+  Stable on amd64 wrt bug #190643
 
   03 Feb 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   higlayout-1.0-r1.ebuild:
