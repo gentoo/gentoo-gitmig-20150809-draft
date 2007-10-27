@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-1.0.8.5.ebuild,v 1.1 2007/10/26 20:24:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-1.0.8.5.ebuild,v 1.2 2007/10/27 09:43:43 drac Exp $
 
 inherit eutils toolchain-funcs
 
@@ -78,10 +78,11 @@ src_compile() {
 
 	./configure ${myconf} || die "configure failed."
 
-	emake CXX="$(tc-getCXX)" C="$(tc-getCC)" || die "emake failed."
+	emake CXX="$(tc-getCXX)" C="$(tc-getCC)" CC="$(tc-getCC)" \
+		EXTRA_FLAGS="${CFLAGS}" OPTIMIZATION="" || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake INSTALLSTRIP="" DESTDIR="${D}" install || die "emake install failed."
 	dodoc doc/{CHANGELOG,README}
 }
