@@ -1,19 +1,20 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.2.16.ebuild,v 1.2 2007/01/09 22:11:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.3.13.ebuild,v 1.1 2007/10/27 10:42:31 mrness Exp $
 
 inherit linux-info
 
 DESCRIPTION="A TCP/HTTP reverse proxy for high availability environments"
 HOMEPAGE="http://haproxy.1wt.eu"
-SRC_URI="http://haproxy.1wt.eu/download/1.2/src/${P}.tar.gz"
+SRC_URI="http://haproxy.1wt.eu/download/${PV%.*}/src/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="pcre"
 
 DEPEND="pcre? ( >=dev-libs/libpcre-6.3 )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	local ARGS="TARGET=linux${KV_MAJOR}${KV_MINOR}"
@@ -26,9 +27,12 @@ src_install() {
 	doexe haproxy
 	newinitd "${FILESDIR}/haproxy.initd" haproxy
 
-	dodoc CHANGELOG ROADMAP TODO doc/*
+	# Don't install useless files
+	rm examples/build.cfg doc/*gpl.txt
+
+	dodoc CHANGELOG ROADMAP TODO doc/*.txt
 	docinto examples
-	dodoc examples/examples.cfg examples/haproxy.cfg
+	dodoc examples/*.cfg
 }
 
 pkg_postinst() {
