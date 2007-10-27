@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.185 2007/10/22 20:08:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.186 2007/10/27 10:15:21 armin76 Exp $
+
+  27 Oct 2007; Raúl Porcel <armin76@gentoo.org> mldonkey-2.9.1.ebuild:
+  ia64/x86 stable
 
 *mldonkey-2.9.2 (22 Oct 2007)
 
