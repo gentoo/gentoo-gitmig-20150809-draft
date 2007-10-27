@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a-r1.ebuild,v 1.6 2007/10/26 20:04:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a-r1.ebuild,v 1.7 2007/10/27 10:27:03 opfer Exp $
 
 inherit autotools elisp-common eutils fixheadtails
 
@@ -40,6 +40,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-1.11b-gentoo.diff"
+	epatch "${FILESDIR}/${P}-implicit-declaration.patch"
 
 	# bug #85720
 	sed -i -e "s/ungif/gif/g" configure.in || die "sed failed"
