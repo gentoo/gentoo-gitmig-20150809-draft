@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/openexr
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.64 2007/10/27 19:54:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.65 2007/10/27 20:00:33 aballier Exp $
+
+  27 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  -files/openexr-1.0.7-gentoo.patch, -openexr-1.0.7.ebuild,
+  -openexr-1.2.2.ebuild:
+  remove old versions
 
   27 Oct 2007; Alexis Ballier <aballier@gentoo.org> openexr-1.6.0.ebuild,
   openexr-1.6.1.ebuild:
