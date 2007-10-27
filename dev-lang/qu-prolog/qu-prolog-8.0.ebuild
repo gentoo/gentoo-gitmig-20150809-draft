@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.0.ebuild,v 1.1 2007/07/21 08:23:15 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.0.ebuild,v 1.2 2007/10/27 05:43:04 keri Exp $
 
 inherit eutils
 
@@ -14,10 +14,9 @@ SRC_URI="http://www.itee.uq.edu.au/~pjr/HomePages/QPFiles/qp8.0.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~ppc ~sparc ~x86"
-IUSE="debug doc examples qt3 qt4 threads"
+IUSE="debug doc examples qt4 threads"
 
-DEPEND="qt3? ( =x11-libs/qt-3* )
-	qt4? ( >=x11-libs/qt-4.1.0 )"
+DEPEND="qt4? ( >=x11-libs/qt-4.1.0 )"
 
 S="${WORKDIR}"/${MY_P}
 
@@ -41,10 +40,6 @@ src_compile() {
 		cd "${S}"/src/xqp/qt4
 		qmake || die "qmake xqp failed"
 		emake || die "emake xqp failed"
-	elif use qt3; then
-		cd "${S}"/src/xqp
-		"${QTDIR}"/bin/qmake || die "qmake xqp failed"
-		emake || die "emake xqp failed"
 	fi
 }
 
@@ -55,8 +50,6 @@ src_install() {
 
 	if use qt4; then
 		doexe src/xqp/qt4/xqp
-	elif use qt3; then
-		doexe src/xqp/xqp
 	fi
 
 	insinto /usr/lib/${PN}/bin

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.33 2007/10/13 19:53:40 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.34 2007/10/27 05:43:04 keri Exp $
+
+  27 Oct 2007; keri <keri@gentoo.org> qu-prolog-8.0.ebuild,
+  qu-prolog-8.1.ebuild, qu-prolog-8.2.ebuild:
+  Remove references to redundant qt3 USE variable. xqp sources in
+  qu-prolog-8.x are based on qt4.
 
 *qu-prolog-8.2 (13 Oct 2007)
 
