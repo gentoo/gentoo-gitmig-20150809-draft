@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdynamite/jdynamite-1.2.ebuild,v 1.4 2007/04/28 20:03:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdynamite/jdynamite-1.2.ebuild,v 1.5 2007/10/27 12:54:20 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -47,6 +47,6 @@ src_install() {
 		java-pkg_dohtml -r doc/*
 	fi
 
-	use source && java-pkg_dosrc ${S}/src/cb
+	use source && java-pkg_dosrc "${S}/src/cb"
 
 }
