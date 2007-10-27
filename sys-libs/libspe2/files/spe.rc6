@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libspe2/files/spe.rc6,v 1.1 2007/10/25 20:28:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libspe2/files/spe.rc6,v 1.2 2007/10/27 11:56:31 lu_zero Exp $
 
 depend() {
     # you need the elfspe bin
@@ -18,7 +18,7 @@ start() {
     else
         if test -f /proc/sys/fs/binfmt_misc/register
         then
-            echo ':spe:M::\x7fELF\x01\x02\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x17::/usr/bin/elfspe2:' >/proc/sys/fs/binfmt_misc/register 
+            echo ':spe:M::\x7fELF\x01\x02\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x17::/usr/bin/elfspe:' >/proc/sys/fs/binfmt_misc/register 
             eend $?
         else
             eerror "binfmt not available"
