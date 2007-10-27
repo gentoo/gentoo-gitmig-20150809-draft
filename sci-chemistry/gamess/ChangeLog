@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.22 2007/08/19 01:01:30 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.23 2007/10/27 17:00:41 markusle Exp $
+
+*gamess-20070324.3 (27 Oct 2007)
+
+  27 Oct 2007; Markus Dittrich <markusle@gentoo.org>
+  +files/gamess-20070324.3.gentoo.patch, +gamess-20070324.3.ebuild:
+  Version bump and keyworded gamess for amd64. 
+  An external blas library is now mandatory.
 
   19 Aug 2007; Markus Dittrich <markusle@gentoo.org>
   gamess-20070324.1.ebuild:
