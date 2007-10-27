@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.20 2007/04/21 20:52:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.21 2007/10/27 13:02:23 nelchael Exp $
+
+  27 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org> rng-tools-2.ebuild:
+  Fix variable quoting.
 
   21 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org> rng-tools-2.ebuild:
   Use newinitd, newconfd and doenvd, see bug #174266.
