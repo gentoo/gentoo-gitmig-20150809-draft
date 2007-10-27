@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/calc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/calc/ChangeLog,v 1.4 2007/10/27 08:23:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/calc/ChangeLog,v 1.5 2007/10/27 10:52:37 opfer Exp $
+
+  27 Oct 2007; Christian Faulhammer <opfer@gentoo.org> calc-2.02f.ebuild:
+  stable x86, bug 197184
 
   27 Oct 2007; Ulrich Mueller <ulm@gentoo.org> calc-2.02f.ebuild:
   amd64 stable, bug 197184
