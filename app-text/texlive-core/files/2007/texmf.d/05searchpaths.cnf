@@ -28,6 +28,10 @@ TEXMFLOCAL = /usr/local/share/texmf
 %   TEXMFSYSVAR = $TEXMFMAIN
 % For using a separate tree:
 %   TEXMFSYSVAR = $SELFAUTOPARENT/texmf-var
+% On Gentoo you should not modify this value, the different
+% ebuilds will install their format files there.
+% If you do modify it, you'll have to face the consequences of having format
+% files out of control of the package manager.
 TEXMFSYSVAR = /var/lib/texmf
 
 % TEXMFSYSCONFIG, where texconfig-sys stores configuration data.
