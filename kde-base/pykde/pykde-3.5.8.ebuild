@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/pykde-3.5.8.ebuild,v 1.1 2007/10/19 23:57:03 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/pykde-3.5.8.ebuild,v 1.2 2007/10/27 14:11:11 philantrop Exp $
 
 KMNAME=kdebindings
 KMMODULE=python
@@ -25,7 +25,6 @@ DEPEND="~dev-python/sip-4.2.1
 src_unpack() {
 	kde-meta_src_unpack
 	cd "${S}/python/pykde"
-	epatch "${FILESDIR}/configure.py.diff"
 }
 
 src_compile() {
@@ -34,8 +33,7 @@ src_compile() {
 
 	local myconf="-d /usr/$(get_libdir)/python${PYVER}/site-packages \
 			-v /usr/share/sip \
-			-k $(kde-config --prefix) \
-			-t ${S}/python/pykde"
+			-k $(kde-config --prefix)"
 
 	use debug && myconf="${myconf} -u"
 	myconf="${myconf} -i"
