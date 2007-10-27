@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pymetar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.10 2007/10/26 20:46:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.11 2007/10/27 09:18:23 dev-zero Exp $
+
+  27 Oct 2007; Tiziano Müller <dev-zero@gentoo.org> -pymetar-0.10.ebuild,
+  -pymetar-0.12.ebuild, pymetar-0.13.ebuild:
+  Dropped old versions. Cleanup.
 
 *pymetar-0.13 (26 Oct 2007)
 
