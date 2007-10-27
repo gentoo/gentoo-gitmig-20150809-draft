@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.7 2007/10/10 08:45:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.8 2007/10/27 21:21:48 bangert Exp $
 
 CRON_SYSTEM_CRONTAB="yes"
 
@@ -30,7 +30,7 @@ src_compile() {
 	echo "${D}/usr/bin" > conf-bin
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
-	make || die "make failed"
+	make || die "make failed" #no emake b/c jobserver
 }
 
 src_install() {
@@ -59,7 +59,7 @@ src_install() {
 	dodir /etc/bcron
 
 	insinto /etc
-	doins  ${FILESDIR}/crontab
+	doins  "${FILESDIR}"/crontab
 
 	insinto /var/lib/supervise/bcron
 	doins bcron-sched.run
@@ -75,27 +75,27 @@ src_install() {
 }
 
 pkg_config() {
-	cd /var/lib/supervise/bcron
+	cd "${ROOT}"var/lib/supervise/bcron
 	[ -e run ] && cp run bcron-sched.run.`date +%Y%m%d%H%M%S`
 	cp bcron-sched.run run
 	chmod u+x run
 
-	cd /var/lib/supervise/bcron/log
+	cd "${ROOT}"/var/lib/supervise/bcron/log
 	[ -e run ] && cp run bcron-sched-log.run.`date +%Y%m%d%H%M%S`
 	cp bcron-sched-log.run run
 	chmod u+x run
 
-	cd /var/lib/supervise/bcron-spool
+	cd "${ROOT}"/var/lib/supervise/bcron-spool
 	[ -e run ] && cp run bcron-spool.run.`date +%Y%m%d%H%M%S`
 	cp bcron-spool.run run
 	chmod u+x run
 
-	cd /var/lib/supervise/bcron-update
+	cd "${ROOT}"/var/lib/supervise/bcron-update
 	[ -e run ] && cp run bcron-update.run.`date +%Y%m%d%H%M%S`
 	cp bcron-update.run run
 	chmod u+x run
 
-	[ ! -e /var/spool/cron/trigger ] && mkfifo /var/spool/cron/trigger
+	[ ! -e "${ROOT}"/var/spool/cron/trigger ] && mkfifo "${ROOT}"var/spool/cron/trigger
 	chown cron:cron /var/spool/cron/trigger
 	chmod go-rwx /var/spool/cron/trigger
 }
@@ -109,5 +109,5 @@ pkg_postinst() {
 	elog "		/var/lib/supervise/bcron-spool (crontab receiver) and"
 	elog "		/var/lib/supervise/bcron-update (system crontab updater)"
 
-#	cron_pkg_postinst
+	cron_pkg_postinst
 }
