@@ -1,0 +1,11 @@
+# ChangeLog for media-gfx/xzgv
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.31 2007/10/27 17:14:53 drac Exp $
+
+*xzgv-0.9 (27 Oct 2007)
+
+  27 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  +files/xzgv-0.9-asneeded-and-cflags.patch, +xzgv-0.9.ebuild:
+  Second initial commit for bug 196597. Has been rewritten using GTK+-2.0 by
+  new maintainer so threating it as new ebuild wrt keywords.
+
