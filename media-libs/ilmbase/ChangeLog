@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/ilmbase
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.7 2007/10/24 11:57:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.8 2007/10/27 18:17:49 aballier Exp $
+
+*ilmbase-1.0.1 (27 Oct 2007)
+
+  27 Oct 2007; Alexis Ballier <aballier@gentoo.org> +ilmbase-1.0.1.ebuild:
+  version bump, bug #197219
 
   24 Oct 2007; Roy Marples <uberlord@gentoo.org> ilmbase-1.0.0.ebuild:
   Keyworded ~x86-fbsd, #142921
