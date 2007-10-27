@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.457 2007/10/27 16:11:24 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.458 2007/10/27 16:45:31 jer Exp $
+
+  27 Oct 2007; Jeroen Roovers <jer@gentoo.org> portage-2.1.3.16.ebuild:
+  Stable for HPPA (bug #197165).
 
   27 Oct 2007; Ferris McCormick <fmccor@gentoo.org> portage-2.1.3.16.ebuild:
   Sparc stable --- Bug #197165
