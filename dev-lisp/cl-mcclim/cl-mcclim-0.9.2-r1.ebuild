@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.2-r1.ebuild,v 1.4 2007/08/15 23:47:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.2-r1.ebuild,v 1.5 2007/10/27 10:18:05 ulm Exp $
 
 inherit common-lisp elisp-common eutils
 
@@ -28,9 +28,9 @@ S=${WORKDIR}/${P#cl-}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-mcclim.asd-cmucl.patch || die
-	find ${S} -type f -name \*.cvsignore -exec rm -f '{}' \;
-	find ${S} -type d -name CVS -exec rm -rf '{}' \;
+	epatch "${FILESDIR}/${PV}-mcclim.asd-cmucl.patch" || die
+	find "${S}" -type f -name \*.cvsignore -exec rm -f '{}' \;
+	find "${S}" -type d -name CVS -exec rm -rf '{}' \;
 }
 
 src_compile() {
