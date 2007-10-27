@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.37 2007/10/14 15:37:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.38 2007/10/27 20:30:35 bangert Exp $
+
+  27 Oct 2007; Thilo Bangert <bangert@gentoo.org>
+  -files/3.6.1_p1-ntpd.8.patch, -files/3.6.1_p1-pollerr.patch,
+  -openntpd-3.6.1_p1-r1.ebuild:
+  cleanup - remove ancient version
 
   14 Oct 2007; Markus Rothe <corsair@gentoo.org> openntpd-3.9_p1-r1.ebuild:
   Stable on ppc64; bug #194623
