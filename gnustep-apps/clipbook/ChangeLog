@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/clipbook
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/clipbook/ChangeLog,v 1.13 2007/10/17 18:17:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/clipbook/ChangeLog,v 1.14 2007/10/27 16:32:19 nixnut Exp $
+
+  27 Oct 2007; nixnut <nixnut@gentoo.org> clipbook-0.6.0.8.3-r1.ebuild:
+  Stable on ppc wrt bug 195990
 
   17 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   clipbook-0.6.0.8.3-r1.ebuild:
