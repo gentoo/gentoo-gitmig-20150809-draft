@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gnulib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/ChangeLog,v 1.1 2007/05/08 16:14:50 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/ChangeLog,v 1.2 2007/10/27 17:25:13 drizzt Exp $
+
+*gnulib-9999-r1 (27 Oct 2007)
+
+  27 Oct 2007; Timothy Redaelli <drizzt@gentoo.org> +gnulib-9999-r1.ebuild:
+  Now gnulib uses git, make a symlink instead of wrapper since is not necessary.
 
 *gnulib-9999 (08 May 2007)
 
