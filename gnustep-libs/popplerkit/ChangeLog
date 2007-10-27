@@ -1,9 +1,9 @@
 # ChangeLog for gnustep-libs/popplerkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.9 2007/10/27 16:02:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.10 2007/10/27 16:23:45 nixnut Exp $
 
   27 Oct 2007; nixnut <nixnut@gentoo.org> popplerkit-0.2.ebuild:
-  Stable on ppc wrt bug 195278
+  Stable on ppc wrt bug 195990
 
   17 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   popplerkit-0.2.ebuild:
