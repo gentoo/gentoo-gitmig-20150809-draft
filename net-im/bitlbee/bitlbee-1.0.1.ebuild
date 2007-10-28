@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.1.ebuild,v 1.13 2007/04/28 20:49:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.0.1.ebuild,v 1.14 2007/10/28 13:16:33 phreak Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,6 +19,9 @@ DEPEND=">=dev-libs/glib-2.0
 		   openssl? ( dev-libs/openssl ) )
 	jabber? ( gnutls? ( net-libs/gnutls )
 			  openssl? ( dev-libs/openssl ) )"
+
+RDEPEND="${DEPEND}
+	virtual/logger"
 
 no_flags_die() {
 	eerror ""
