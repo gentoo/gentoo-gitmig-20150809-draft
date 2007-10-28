@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.11.ebuild,v 1.2 2007/10/26 19:08:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.11-r1.ebuild,v 1.1 2007/10/28 11:08:47 hkbst Exp $
 
 inherit common-lisp-common-3 eutils flag-o-matic
 
@@ -26,6 +26,7 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 
 # SRC_URI is part of the metadata cache; it's evaluated contents must be independent of the system that creates the metadata cache.
 # ILLEGAL: mips? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-$([[$(tc-endian) = big]] && echo mips || echo mipsel)-linux-binary.tar.bz2 )
+
 
 LICENSE="MIT"
 SLOT="0"
@@ -168,8 +169,8 @@ EOF
 	fi
 
 	# necessary for running newly-saved images
-	echo "SBCL_HOME=/usr/$(get_libdir)/sbcl" >> "${T}/50sbcl"
-	echo "SBCL_SOURCE_ROOT=/usr/$(get_libdir)/${PN}/src" > "${T}/50sbcl"
+	echo "SBCL_HOME=/usr/$(get_libdir)/sbcl" > "${T}/50sbcl"
+	echo "SBCL_SOURCE_ROOT=/usr/$(get_libdir)/${PN}/src" >> "${T}/50sbcl"
 	doenvd "${T}/50sbcl"
 
 	impl-save-timestamp-hack sbcl
