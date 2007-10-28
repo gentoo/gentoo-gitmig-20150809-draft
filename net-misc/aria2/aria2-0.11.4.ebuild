@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.11.3.ebuild,v 1.1 2007/09/12 21:09:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.11.4.ebuild,v 1.1 2007/10/28 18:44:36 dev-zero Exp $
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
