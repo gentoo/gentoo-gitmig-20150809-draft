@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/rarpd-1.1-r3.ebuild,v 1.1 2007/05/05 05:49:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/rarpd-1.1-r3.ebuild,v 1.2 2007/10/28 21:25:34 vapier Exp $
 
 inherit eutils
 
@@ -15,6 +15,8 @@ IUSE=""
 
 DEPEND=">=net-libs/libnet-1.1
 	net-libs/libpcap"
+RDEPEND="${DEPEND}
+	!net-misc/iputils"
 
 src_unpack() {
 	unpack ${A}
