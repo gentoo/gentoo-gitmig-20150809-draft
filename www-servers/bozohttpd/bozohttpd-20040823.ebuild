@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/bozohttpd-20040823.ebuild,v 1.4 2007/04/24 13:44:05 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/bozohttpd-20040823.ebuild,v 1.5 2007/10/28 14:09:40 phreak Exp $
 
 inherit eutils
 
@@ -12,6 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 DEPEND=">=dev-libs/openssl-0.9.7d-r1"
+RDEPEND="${DEPEND}
+	virtual/logger"
 
 src_unpack()
 {
