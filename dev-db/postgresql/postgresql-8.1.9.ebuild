@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.1.9.ebuild,v 1.1 2007/05/03 09:38:31 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.1.9.ebuild,v 1.2 2007/10/28 12:56:33 phreak Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs versionator
 
@@ -27,7 +27,8 @@ RDEPEND="~dev-db/libpq-${PV}
 		ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 		tcl? ( >=dev-lang/tcl-8 )
 		xml? ( dev-libs/libxml2 dev-libs/libxslt )
-		zlib? ( >=sys-libs/zlib-1.1.3 )"
+		zlib? ( >=sys-libs/zlib-1.1.3 )
+		virtual/logger"
 DEPEND="${RDEPEND}
 		sys-devel/autoconf
 		>=sys-devel/bison-1.875
