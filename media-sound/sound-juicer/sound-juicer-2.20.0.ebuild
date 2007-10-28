@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.20.0.ebuild,v 1.2 2007/10/13 22:47:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.20.0.ebuild,v 1.3 2007/10/28 18:14:08 eva Exp $
 
 inherit gnome2
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://www.burtonini.com/blog/computers/sound-juicer/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="flac ogg"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="flac ogg test"
 
 RDEPEND=">=dev-libs/glib-2
 	>=gnome-extra/nautilus-cd-burner-2.15.3
@@ -35,7 +35,8 @@ DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	>=dev-util/intltool-0.35
 	>=app-text/scrollkeeper-0.3.5
-	>=dev-util/pkgconfig-0.9"
+	>=dev-util/pkgconfig-0.9
+	test? ( ~app-text/docbook-xml-dtd-4.3 )"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
