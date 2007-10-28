@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.106 2007/10/13 09:24:50 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.107 2007/10/28 20:52:07 compnerd Exp $
+
+  28 Oct 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/rhythmbox-0.9.7-daap_fix.patch,
+  -files/rhythmbox-0.9.7-daapsharing-fix.patch,
+  -files/rhythmbox-0.9.7-excessive-notification.patch,
+  -files/rhythmbox-0.9.8-as-needed.patch,
+  -files/rhythmbox-0.9.8-multijob-fix.patch, -rhythmbox-0.9.7-r3.ebuild,
+  -rhythmbox-0.9.8.ebuild, -rhythmbox-0.10.0.ebuild:
+  Remove unused versions
 
 *rhythmbox-0.11.2 (13 Oct 2007)
 
