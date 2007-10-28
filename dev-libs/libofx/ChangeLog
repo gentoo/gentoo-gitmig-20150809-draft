@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.35 2007/09/21 13:21:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.36 2007/10/28 02:29:13 fmccor Exp $
+
+  28 Oct 2007; Ferris McCormick <fmccor@gentoo.org> libofx-0.8.3.ebuild:
+  Sparc stable, bookkeeping for other packages.
 
   21 Sep 2007; Christian Faulhammer <opfer@gentoo.org> libofx-0.8.3.ebuild:
   stable x86, bug 192840
