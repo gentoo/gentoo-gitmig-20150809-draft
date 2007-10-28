@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.8 2007/10/23 21:11:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.9 2007/10/28 23:16:43 eva Exp $
 
 # Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
 # app-admin/gkrellm may pull in hddtemp, which is not yet available here
@@ -15,3 +15,7 @@ xfce-extra/thunar-thumbnailers ffmpeg
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Oct 2007)
 # gdm depends on zenity which is not keyworded
 >=media-video/totem-2.20 galago
+
+# Gilles Dartiguelongue <eva@gentoo.org> (29 Oct 2007)
+# app-vim/gtk-syntax not keyworded yet
+x11-libs/gtk+ vim-syntax
