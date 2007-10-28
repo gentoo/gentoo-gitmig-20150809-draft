@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/at
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.9 2007/04/07 16:47:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.10 2007/10/28 14:01:47 phreak Exp $
+
+  28 Oct 2007; Christian Heim <phreak@gentoo.org> at-3.1.8-r11.ebuild,
+  at-3.1.8-r12.ebuild:
+  Include virtual/logger in RDEPEND, as the initscript already specifies 'need
+  logger'.
 
   07 Apr 2007; Christian Faulhammer <opfer@gentoo.org> at-3.1.8-r11.ebuild,
   at-3.1.8-r12.ebuild:
