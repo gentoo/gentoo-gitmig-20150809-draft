@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r2.ebuild,v 1.7 2007/10/28 17:45:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r2.ebuild,v 1.8 2007/10/28 18:26:50 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -24,6 +24,10 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 for i in ${TEXLIVE_CORE_INCLUDED_TEXMF}; do
 	SRC_URI="${SRC_URI} mirror://gentoo/texlive-module-${i}-${PV}.zip"
 done
+
+# Ship an updated config.ps, see bug #195815 comment 51
+# Or alternatively: http://tug.org/texlive/bugs.html
+SRC_URI="${SRC_URI} mirror://gentoo/${P}-updated-config.ps.bz2"
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86"
 IUSE="X doc"
@@ -87,6 +91,10 @@ src_unpack() {
 
 	cd libs/teckit
 	eautoreconf
+
+# Ship an updated config.ps, see bug #195815 comment 51
+# Or alternatively: http://tug.org/texlive/bugs.html
+	cp -f "${WORKDIR}/${P}-updated-config.ps" "${S}/texmf/dvips/config/config.ps"
 }
 
 src_compile() {
