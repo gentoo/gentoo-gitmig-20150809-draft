@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.6.0.ebuild,v 1.2 2007/10/28 18:59:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.6.1.ebuild,v 1.1 2007/10/28 18:59:39 eva Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.8"
@@ -54,6 +54,10 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
 
 pkg_setup() {
+	# we might want to support japanese and chinese input at some point
+	# --enable-japanese
+	# --enable-chinese
+
 	G2CONF="--disable-scrollkeeper \
 		$(use_enable accessibility a11y)   \
 		$(use_enable accessibility speech) \

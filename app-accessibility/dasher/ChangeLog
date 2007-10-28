@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.110 2007/10/14 23:17:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.111 2007/10/28 18:59:39 eva Exp $
+
+*dasher-4.6.1 (28 Oct 2007)
+
+  28 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/dasher-4.5.2-gcc4-speech-fix.patch, dasher-4.6.0.ebuild,
+  +dasher-4.6.1.ebuild:
+  fix compilation with USE="accessibility" and bump to 4.6.1
 
 *dasher-4.6.0 (14 Oct 2007)
 
