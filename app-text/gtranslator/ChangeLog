@@ -1,6 +1,14 @@
 # ChangeLog for app-text/gtranslator
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.25 2007/02/02 12:20:14 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.26 2007/10/28 14:47:35 eva Exp $
+
+*gtranslator-1.1.6-r1 (28 Oct 2007)
+
+  28 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gtranslator-1.1.6-defines.patch,
+  +files/gtranslator-1.1.6-scrollkeeper.patch, +gtranslator-1.1.6-r1.ebuild:
+  fix defines (even so probably not the best solution) per bug #165187
+  fix scrollkeeper detection to also work with rarian
 
   02 Feb 2007; Mart Raudsepp <leio@gentoo.org> -gtranslator-1.1.5.ebuild:
   Remove old
