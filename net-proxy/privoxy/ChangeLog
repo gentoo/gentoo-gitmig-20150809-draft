@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.24 2007/08/04 14:53:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.25 2007/10/28 13:30:03 corsair Exp $
+
+  28 Oct 2007; Markus Rothe <corsair@gentoo.org> privoxy-3.0.6.ebuild:
+  Stable on ppc64; bug #174109
 
   04 Aug 2007; Markus Rothe <corsair@gentoo.org> privoxy-3.0.6.ebuild:
   Added ~ppc64
