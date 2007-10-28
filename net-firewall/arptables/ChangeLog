@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/arptables
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.8 2007/08/29 11:25:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.9 2007/10/28 11:27:03 pva Exp $
+
+*arptables-0.0.3.3-r1 (28 Oct 2007)
+
+  28 Oct 2007; <pva@gentoo.org> arptables-0.0.3.3.ebuild,
+  +arptables-0.0.3.3-r1.ebuild:
+  Fix path to arptables in arptables-{save,restore}. Thank Tyler Montbriand
+  <tsm AT accesscomm.ca> for report and fix.
 
 *arptables-0.0.3.3 (29 Aug 2007)
 

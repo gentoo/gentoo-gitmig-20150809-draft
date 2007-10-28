@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/arptables-0.0.3.3.ebuild,v 1.2 2007/10/28 11:27:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/arptables-0.0.3.3-r1.ebuild,v 1.1 2007/10/28 11:27:03 pva Exp $
 
-inherit versionator toolchain-funcs
+inherit versionator eutils
 
 MY_P=${PN}-v$(replace_version_separator 3 - )
 
@@ -15,10 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	emake CC="$(tc-getCC)" COPT_FLAGS="${CFLAGS}" || die
+	emake CC="$(tc-getCC)" COPT_FLAGS="${CFLAGS}" || die "make failed"
+	sed -ie 's:__EXEC_PATH__:/sbin:g' arptables-save arptables-restore \
+		|| die "sed failed"
 }
 
 src_install() {
