@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/tailor
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tailor/ChangeLog,v 1.6 2007/09/17 22:42:42 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tailor/ChangeLog,v 1.7 2007/10/28 21:04:23 hawking Exp $
+
+*tailor-0.9.29-r1 (28 Oct 2007)
+
+  28 Oct 2007; Ali Polatel <hawking@gentoo.org>
+  +files/tailor-0.9.29-compare_trees.patch, -tailor-0.9.28.ebuild,
+  -tailor-0.9.29.ebuild, +tailor-0.9.29-r1.ebuild:
+  revbump. added patch to fix breakage with >=bzr-0.9 (bug 196547). drop old
 
 *tailor-0.9.29 (17 Sep 2007)
 
