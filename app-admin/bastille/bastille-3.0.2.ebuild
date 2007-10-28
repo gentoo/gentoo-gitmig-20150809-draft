@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-3.0.2.ebuild,v 1.4 2007/04/28 17:02:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-3.0.2.ebuild,v 1.5 2007/10/28 12:46:02 phreak Exp $
 
 inherit eutils
 
@@ -22,7 +22,8 @@ RDEPEND="net-firewall/iptables
 	app-admin/logrotate
 	dev-perl/Curses
 	net-firewall/psad
-	X? ( dev-perl/perl-tk )"
+	X? ( dev-perl/perl-tk )
+	virtual/logger"
 
 src_unpack() {
 	unpack ${A}

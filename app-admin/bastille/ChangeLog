@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/bastille
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.20 2007/04/28 17:02:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.21 2007/10/28 12:46:02 phreak Exp $
+
+  28 Oct 2007; Christian Heim <phreak@gentoo.org> bastille-2.1.1-r1.ebuild,
+  bastille-2.1.1-r2.ebuild, bastille-2.1.1-r3.ebuild, bastille-3.0.2.ebuild:
+  Include virtual/logger in RDEPEND, as the initscript already specifies 'need
+  logger'.
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> bastille-3.0.2.ebuild:
   Fix *initd, *confd and *envd calls (#17388, #174266)
