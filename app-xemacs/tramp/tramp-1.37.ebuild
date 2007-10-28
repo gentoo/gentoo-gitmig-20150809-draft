@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/tramp-1.37.ebuild,v 1.4 2007/10/26 22:55:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/tramp-1.37.ebuild,v 1.5 2007/10/28 13:52:37 corsair Exp $
 
 SLOT="0"
 IUSE=""
@@ -16,6 +16,6 @@ app-xemacs/gnus
 app-xemacs/ediff
 app-xemacs/sh-script
 "
-KEYWORDS="~alpha ~amd64 ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ppc ppc64 ~sparc x86"
 
 inherit xemacs-packages
