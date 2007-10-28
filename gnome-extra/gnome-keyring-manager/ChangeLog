@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-keyring-manager
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/ChangeLog,v 1.49 2007/10/14 13:29:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/ChangeLog,v 1.50 2007/10/28 11:36:50 eva Exp $
+
+  28 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-keyring-manager-2.18.0.ebuild, gnome-keyring-manager-2.20.0.ebuild:
+  fix dependency on docbook-xml-dtd with FEATURES="test" and remove static
+  useflag
 
 *gnome-keyring-manager-2.20.0 (14 Oct 2007)
 
