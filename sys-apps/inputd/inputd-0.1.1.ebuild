@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/inputd-0.1.1.ebuild,v 1.1 2007/10/17 21:09:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/inputd-0.1.1.ebuild,v 1.2 2007/10/28 13:58:07 phreak Exp $
 
 inherit eutils
 
@@ -16,7 +16,8 @@ IUSE=""
 
 DEPEND=">=dev-libs/glib-2.10
 	>=sys-kernel/linux-headers-2.6.16"
-RDEPEND="sys-fs/udev"
+RDEPEND="sys-fs/udev
+	virtual/logger"
 
 src_install() {
 	emake DESTDIR=${D} install || die 'installation failed.'

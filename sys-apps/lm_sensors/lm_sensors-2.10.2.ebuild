@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.2.ebuild,v 1.4 2007/06/05 18:43:08 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.2.ebuild,v 1.5 2007/10/28 13:56:39 phreak Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -23,7 +23,8 @@ DEPEND="${COMMON}
 		amd64? ( || ( >=virtual/linux-sources-2.5 >=sys-kernel/vserver-sources-2.0 ) )
 		x86? ( || ( >=virtual/linux-sources-2.5 >=sys-kernel/vserver-sources-2.0 sys-apps/lm_sensors-modules ) )"
 RDEPEND="${COMMON}
-		dev-lang/perl"
+		dev-lang/perl
+		virtual/logger"
 
 pkg_setup() {
 	linux-info_pkg_setup

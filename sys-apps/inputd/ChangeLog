@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/inputd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/ChangeLog,v 1.19 2007/10/17 21:09:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/ChangeLog,v 1.20 2007/10/28 13:58:07 phreak Exp $
+
+  28 Oct 2007; Christian Heim <phreak@gentoo.org> inputd-0.0.8.ebuild,
+  inputd-0.1.1.ebuild:
+  Include virtual/logger in RDEPEND, as the initscript already specifies 'need
+  logger'.
 
 *inputd-0.1.1 (17 Oct 2007)
 
