@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.3.3.ebuild,v 1.5 2007/05/02 00:20:19 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/eagle-usb-2.3.3.ebuild,v 1.6 2007/10/28 13:28:59 phreak Exp $
 
 inherit linux-mod eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="net-dialup/ppp
-	!net-dialup/ueagle-atm"
+	!net-dialup/ueagle-atm
+	virtual/logger"
 
 MODULE_NAMES="${PN}(net:${S}/driver)"
 CONFIG_CHECK="!IPV6 USB"

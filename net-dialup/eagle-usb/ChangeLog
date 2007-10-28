@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/eagle-usb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/ChangeLog,v 1.11 2007/05/02 00:20:19 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/eagle-usb/ChangeLog,v 1.12 2007/10/28 13:28:59 phreak Exp $
+
+  28 Oct 2007; Christian Heim <phreak@gentoo.org> eagle-usb-2.3.3.ebuild:
+  Include virtual/logger in RDEPEND, as the initscript already specifies 'need
+  logger'.
 
   02 May 2007; Marius Mauch <genone@gentoo.org> eagle-usb-2.3.3.ebuild:
   Replacing einfo with ewarn/eerror
