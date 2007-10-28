@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.21-r1.ebuild,v 1.8 2007/05/02 08:19:04 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.21-r1.ebuild,v 1.9 2007/10/28 13:48:27 phreak Exp $
 
 inherit webapp flag-o-matic
 
@@ -22,6 +22,9 @@ IUSE="pam mysql crypt"
 DEPEND=">=sys-libs/glibc-2.2.0
 	pam? ( >=sys-libs/pam-0.75 )
 	mysql? ( >=virtual/mysql-4.0 )"
+
+RDEPEND="${DEPEND}
+	virtual/logger"
 
 S="${WORKDIR}/${PN}-${PV%.*}"
 

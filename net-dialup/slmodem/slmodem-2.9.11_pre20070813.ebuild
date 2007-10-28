@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20070813.ebuild,v 1.1 2007/10/23 13:19:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20070813.ebuild,v 1.2 2007/10/28 13:51:04 phreak Exp $
 
 inherit eutils linux-mod multilib
 
@@ -18,6 +18,9 @@ IUSE="alsa usb"
 
 DEPEND="alsa? ( media-libs/alsa-lib )
 	amd64? ( app-emulation/emul-linux-x86-soundlibs )"
+
+RDEPEND="${DEPEND}
+	virtual/logger"
 
 QA_EXECSTACK="usr/sbin/slmodem_test usr/sbin/slmodemd"
 
