@@ -1,0 +1,11 @@
+--- configure.ac.orig	2007-10-28 12:08:45.000000000 -0700
++++ configure.ac	2007-10-28 12:09:00.000000000 -0700
+@@ -508,7 +508,7 @@
+ 	enable-libtrackergtk="no (disabled)"
+ fi
+ 
+-AM_CONDITIONAL(ENABLE_LIBTRACKERGTK, test "$enable-libtrackergtk" != "no")
++AM_CONDITIONAL(ENABLE_LIBTRACKERGTK, test "$enable_libtrackergtk" = "yes")
+ 
+ 
+ 

@@ -6,6 +6,10 @@ AUX tracker-0.6.3-fix-unac-option.patch 446 RMD160 d4f27e9b3b132c96f1261d9015c02
 MD5 f881348aefadf9930b9359ed42e284c9 files/tracker-0.6.3-fix-unac-option.patch 446
 RMD160 d4f27e9b3b132c96f1261d9015c0245664dd3a78 files/tracker-0.6.3-fix-unac-option.patch 446
 SHA256 f65f56aeca387b31d3f7ca10cbfcb5d28ce87c099a3e7b8602059d051b39e697 files/tracker-0.6.3-fix-unac-option.patch 446
+AUX tracker-0.6.3-really-disable-libtrackergtk.patch 334 RMD160 5859dec173a3bd9598397121e1317f88e4a12ed8 SHA1 6ab5e1f32b56733ab5a0c2be752f1dcd2068a1b0 SHA256 bc0d9687f91938121a11f5eeb895e837b688be2623cc64cbd763e451929fe27e
+MD5 0187faeffecefaa05f768b6ed3d5134f files/tracker-0.6.3-really-disable-libtrackergtk.patch 334
+RMD160 5859dec173a3bd9598397121e1317f88e4a12ed8 files/tracker-0.6.3-really-disable-libtrackergtk.patch 334
+SHA256 bc0d9687f91938121a11f5eeb895e837b688be2623cc64cbd763e451929fe27e files/tracker-0.6.3-really-disable-libtrackergtk.patch 334
 AUX tracker-0.6.3-tracker-extract-needs-gthread.patch 365 RMD160 5d7d778d8cb8c08119fb63e92277bccc48d98ab6 SHA1 16ce8a9f4ff4688d325dfe748e47c1aeb0bcfced SHA256 97c7f3b61f47c9a7e599ab326eb084a0f44315c81df0d52326da4808dce20167
 MD5 7fdd77e17b87b76ed6b9c4feee9ea983 files/tracker-0.6.3-tracker-extract-needs-gthread.patch 365
 RMD160 5d7d778d8cb8c08119fb63e92277bccc48d98ab6 files/tracker-0.6.3-tracker-extract-needs-gthread.patch 365
@@ -16,14 +20,14 @@ EBUILD tracker-0.6.2-r1.ebuild 3871 RMD160 03d5c939870dfa27af294565250d62d1d71de
 MD5 1d82913a8ad06972bdc7373cbd09da6c tracker-0.6.2-r1.ebuild 3871
 RMD160 03d5c939870dfa27af294565250d62d1d71dece3 tracker-0.6.2-r1.ebuild 3871
 SHA256 16aaee0bec8acdb3fea969faa80e66e1c0512bcfe0f2f71e3e13f36257db7a31 tracker-0.6.2-r1.ebuild 3871
-EBUILD tracker-0.6.3.ebuild 4132 RMD160 1e6525035b47f4582354edcf87ef00b75df1d7aa SHA1 1a3227012219fc85c77b5e455ad6e4dc158a2042 SHA256 316f3345154a0793e4da49fc27e6b593e4a73b9f15e91e191d16d6636b716644
-MD5 7db42b35c400b541404e4f7cd87dda78 tracker-0.6.3.ebuild 4132
-RMD160 1e6525035b47f4582354edcf87ef00b75df1d7aa tracker-0.6.3.ebuild 4132
-SHA256 316f3345154a0793e4da49fc27e6b593e4a73b9f15e91e191d16d6636b716644 tracker-0.6.3.ebuild 4132
-MISC ChangeLog 5355 RMD160 1228ef44cb18a7ac0ab7aca8078f03a29e34f200 SHA1 71db0d221f5a1ab46714e3ac70e5f7702d5e97c4 SHA256 30ff043056bb2af18bfdcdf2eb191013cf6e4d27cac18f646a1ec6d7a631f8e3
-MD5 985ae2b0d8f6f0cbe2a2eded753bd2de ChangeLog 5355
-RMD160 1228ef44cb18a7ac0ab7aca8078f03a29e34f200 ChangeLog 5355
-SHA256 30ff043056bb2af18bfdcdf2eb191013cf6e4d27cac18f646a1ec6d7a631f8e3 ChangeLog 5355
+EBUILD tracker-0.6.3.ebuild 4251 RMD160 1ae3c599bab35bf77fb9737cf8cd81e4f3878c5e SHA1 c51a5aea47fefdedc544b08ff1b733a3c6ffff45 SHA256 b405e07999db49c0c0a5f6b4bf25091afb5643057d25cb41f6309355973b4636
+MD5 69c3b48e0868c27025e9cee764bed0f0 tracker-0.6.3.ebuild 4251
+RMD160 1ae3c599bab35bf77fb9737cf8cd81e4f3878c5e tracker-0.6.3.ebuild 4251
+SHA256 b405e07999db49c0c0a5f6b4bf25091afb5643057d25cb41f6309355973b4636 tracker-0.6.3.ebuild 4251
+MISC ChangeLog 5546 RMD160 f0c8a2738f8e24cd179eb3fe5db193248e5dd470 SHA1 4cd9f566a409c3b10a5aa1cf44314398ca023360 SHA256 063a94ac2179a6caa9a4b8baee807104903a3018183c7494859b4898de8b53a6
+MD5 75fbf59dd24eb6a53264c867788ec114 ChangeLog 5546
+RMD160 f0c8a2738f8e24cd179eb3fe5db193248e5dd470 ChangeLog 5546
+SHA256 063a94ac2179a6caa9a4b8baee807104903a3018183c7494859b4898de8b53a6 ChangeLog 5546
 MISC metadata.xml 311 RMD160 868d0eab62db916aa47b7f440a3f4efecc6163b1 SHA1 0e56da7be32af7c553c07179c574cd7837298702 SHA256 774cc71e08a317563fb2700d5aac76af10e3e31ae7c1c58325730bfa0fbb110a
 MD5 def57195a8a8fbc9ff84bded4f4c6772 metadata.xml 311
 RMD160 868d0eab62db916aa47b7f440a3f4efecc6163b1 metadata.xml 311

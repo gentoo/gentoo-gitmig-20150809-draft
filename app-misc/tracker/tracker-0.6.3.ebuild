@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.3.ebuild,v 1.4 2007/10/10 03:10:03 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.3.ebuild,v 1.5 2007/10/28 19:14:12 compnerd Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -98,6 +98,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-0.6.3-fix-unac-option.patch"
 
 	epatch "${FILESDIR}/${PN}-0.6.3-tracker-extract-needs-gthread.patch"
+
+	# Fix libtrackergtk enable option (bug #196420)
+	epatch "${FILESDIR}/${PN}-0.6.3-really-disable-libtrackergtk.patch"
 
 	# Fix POTFILES.in for tests
 	echo "python/deskbar-handler/tracker-handler-static.py" >> "${S}/po/POTFILES.in"
