@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.67-r1.ebuild,v 1.8 2007/10/15 14:31:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.67-r1.ebuild,v 1.9 2007/10/28 13:02:25 phreak Exp $
 
 inherit eutils
 
@@ -43,7 +43,8 @@ DEPEND=">=sys-apps/sed-4.0.5
 RDEPEND="${DEPEND}
 	mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	!mailwrapper? ( !virtual/mta )
-	>=net-mail/mailbase-0.00-r5"
+	>=net-mail/mailbase-0.00-r5
+	virtual/logger"
 
 src_unpack() {
 	unpack ${A}
