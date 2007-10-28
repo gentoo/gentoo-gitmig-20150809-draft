@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta1.ebuild,v 1.6 2007/10/26 16:57:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta1.ebuild,v 1.7 2007/10/28 17:05:11 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -33,7 +33,10 @@ SRC_URI="amd64? ( ${O_URI}linux${O_FTP}x86_64/${PN}-${O_VER/b/}.2-shared-qt.x86_
 
 DEPEND=">=sys-apps/sed-4"
 
-RDEPEND="x11-libs/libXrandr
+RDEPEND="media-libs/libexif
+	media-libs/jpeg 
+	>=media-libs/fontconfig-2.1.94-r1
+	x11-libs/libXrandr
 	x11-libs/libXp
 	x11-libs/libXmu
 	x11-libs/libXi
@@ -43,15 +46,12 @@ RDEPEND="x11-libs/libXrandr
 	x11-libs/libX11
 	x11-libs/libSM
 	x11-libs/libICE
-	>=media-libs/fontconfig-2.1.94-r1
-	amd64? ( qt-static? ( app-emulation/emul-linux-x86-xlibs )
+	!qt-static? ( =x11-libs/qt-3* )
+	amd64? ( =x11-libs/qt-3*
+			 qt-static? ( app-emulation/emul-linux-x86-xlibs )
 			 !qt-static? ( app-emulation/emul-linux-x86-qtlibs ) )
-	!amd64? ( media-libs/libexif
-			  spell? ( app-text/aspell )
-			  x86? ( !qt-static? ( =x11-libs/qt-3* ) )
-			  media-libs/jpeg )
-	x86-fbsd? ( =virtual/libstdc++-3*
-				!qt-static? ( =x11-libs/qt-3* ) )"
+	spell? ( app-text/aspell )
+	x86-fbsd? ( =virtual/libstdc++-3* )"
 
 O_S="${A/opera-9.50b/opera-9.50}"
 O_S="${O_S/-${O_LNG}/}"
