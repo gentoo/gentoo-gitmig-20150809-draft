@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.31-r2.ebuild,v 1.7 2007/03/01 07:02:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.31-r2.ebuild,v 1.8 2007/10/28 13:52:51 phreak Exp $
 
 inherit eutils
 
@@ -24,7 +24,8 @@ RDEPEND="${RDEPEND}
 	net-firewall/iptables
 	virtual/cron
 	dev-lang/perl
-	gd? ( dev-perl/GD )"
+	gd? ( dev-perl/GD )
+	virtual/logger"
 
 pkg_setup() {
 	if use sqlite && use postgres ; then
