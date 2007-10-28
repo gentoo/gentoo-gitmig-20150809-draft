@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.13-r1.ebuild,v 1.7 2007/07/12 02:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.13-r1.ebuild,v 1.8 2007/10/28 13:25:43 phreak Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -56,7 +56,8 @@ RDEPEND="dev-libs/newt
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	sys-devel/bison
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+	virtual/logger"
 
 #asterisk uses special mpg123 functions and does not work with mpeg321, bug #42703
 PDEPEND="|| ( media-sound/mpg123 net-misc/asterisk-addons )"

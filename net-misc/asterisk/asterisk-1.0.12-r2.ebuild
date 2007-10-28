@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.12-r2.ebuild,v 1.4 2007/07/12 02:52:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.12-r2.ebuild,v 1.5 2007/10/28 13:25:43 phreak Exp $
 
 inherit eutils perl-app
 
@@ -43,6 +43,9 @@ DEPEND="dev-libs/newt
 	vmdbpostgres? ( dev-db/postgresql )
 	resperl? ( dev-lang/perl
 		   <net-misc/zaptel-1.2 )"
+
+RDEPEND="${DEPEND}
+	virtual/logger"
 
 pkg_setup() {
 	local n
