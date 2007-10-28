@@ -1,53 +1,38 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.32 2007/10/28 06:53:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2-r1.ebuild,v 1.1 2007/10/28 06:53:56 drac Exp $
+
+PATCH_LEVEL=14.1
 
 inherit eutils
-
-PATCH_LEVEL="14"
-RESTRICT="mirror"
 
 DESCRIPTION="a GTK+ application launcher with nice features such as a history"
 HOMEPAGE="http://packages.qa.debian.org/g/grun.html"
 SRC_URI="mirror://debian/pool/main/g/grun/${PN}_${PV}.orig.tar.gz
-		mirror://debian/pool/main/g/grun/${PN}_${PV}-${PATCH_LEVEL}.diff.gz"
+	mirror://debian/pool/main/g/grun/${PN}_${PV}-${PATCH_LEVEL}.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="nls"
 
-RDEPEND=">=dev-libs/glib-2
-	>=x11-libs/gtk+-2"
+RDEPEND=">=x11-libs/gtk+-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	nls? ( sys-devel/gettext )
-	sys-devel/gnuconfig
-	sys-devel/automake"
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${WORKDIR}/${PN}_${PV}-${PATCH_LEVEL}.diff
+	cd "${S}"
+	epatch "${WORKDIR}"/${PN}_${PV}-${PATCH_LEVEL}.diff
 }
 
 src_compile() {
-	local myconf
+	[[ -z ${TERM} ]] && TERM=xterm
 
-	use nls && myconf="--enable-nls" || myconf="--disable-nls"
+	econf $(use_enable nls) --disable-gtktest --enable-testfile \
+		--enable-associations --with-default-xterm=${TERM}
 
-	if [ -z ${TERM} ] ; then
-		TERM=xterm
-	fi
-
-	ebegin "Running automake"
-		automake --add-missing &>/dev/null
-	eend $?
-
-	econf \
-		--enable-testfile \
-		--with-default-xterm=${TERM} \
-		--enable-associations \
-		${myconf}
 	emake || die "emake failed."
 }
 
@@ -73,5 +58,5 @@ pkg_postinst() {
 	elog "To change the default terminal application grun uses, adjust the"
 	elog "TERM environment variable accordingly and remerge grun, e.g."
 	elog
-	elog "export TERM=Eterm && emerge grun"
+	elog "TERM=Eterm emerge grun"
 }
