@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00-r2.ebuild,v 1.4 2007/10/01 21:18:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00-r2.ebuild,v 1.5 2007/10/28 14:05:21 phreak Exp $
 
 inherit eutils flag-o-matic mailer
 
@@ -20,7 +20,8 @@ DEPEND="virtual/libc
 RDEPEND="virtual/libc
 		>=sys-process/supervise-scripts-3.2
 		>=sys-process/daemontools-0.76-r1
-		sys-apps/shadow"
+		sys-apps/shadow
+		virtual/logger"
 PROVIDE="virtual/mta"
 
 NULLMAILER_GROUP_NAME=nullmail

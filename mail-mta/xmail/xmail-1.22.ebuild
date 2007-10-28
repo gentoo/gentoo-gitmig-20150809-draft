@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.22.ebuild,v 1.5 2007/07/15 07:06:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.22.ebuild,v 1.6 2007/10/28 14:03:22 phreak Exp $
 
 inherit eutils linux-info
 
@@ -15,7 +15,8 @@ IUSE=""
 
 DEPEND="virtual/libc
 	>=sys-apps/sed-4"
-RDEPEND="net-firewall/iptables"
+RDEPEND="net-firewall/iptables
+	virtual/logger"
 PROVIDE="virtual/mta"
 
 pkg_setup() {
