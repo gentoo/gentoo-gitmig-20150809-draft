@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta1.ebuild,v 1.7 2007/10/28 17:05:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta1.ebuild,v 1.8 2007/10/28 17:40:53 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -47,9 +47,7 @@ RDEPEND="media-libs/libexif
 	x11-libs/libSM
 	x11-libs/libICE
 	!qt-static? ( =x11-libs/qt-3* )
-	amd64? ( =x11-libs/qt-3*
-			 qt-static? ( app-emulation/emul-linux-x86-xlibs )
-			 !qt-static? ( app-emulation/emul-linux-x86-qtlibs ) )
+	amd64? ( =x11-libs/qt-3* )
 	spell? ( app-text/aspell )
 	x86-fbsd? ( =virtual/libstdc++-3* )"
 
