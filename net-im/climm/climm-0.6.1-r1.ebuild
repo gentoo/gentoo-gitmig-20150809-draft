@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.6.1-r1.ebuild,v 1.1 2007/10/22 21:51:36 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.6.1-r1.ebuild,v 1.2 2007/10/28 11:25:40 jokey Exp $
 
 DESCRIPTION="ICQ text-mode client with many features"
 HOMEPAGE="http://www.climm.org/"
@@ -13,7 +13,16 @@ IUSE="gloox otr tcl ssl"
 
 DEPEND="gloox? ( net-libs/gloox )
 	ssl? ( >=net-libs/gnutls-0.8.10 dev-libs/openssl )
-	tcl? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl )
+	otr? ( >=net-libs/libotr-3.0.0 )"
+
+pkg_setup() {
+	if use gloox && ! use ssl ; then
+		eerror "You need to set the ssl flag when you want to use the gloox"
+		eerror "Jabber library"
+		die "Set ssl or unset gloox for ${PN}"
+	fi
+}
 
 src_compile() {
 	econf \
