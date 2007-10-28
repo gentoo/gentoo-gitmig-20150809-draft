@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/stringparser_bbcode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/stringparser_bbcode/ChangeLog,v 1.1 2007/10/28 11:36:20 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/stringparser_bbcode/ChangeLog,v 1.2 2007/10/28 11:38:36 jokey Exp $
+
+  28 Oct 2007; Markus Ullmann <jokey@gentoo.org>
+  stringparser_bbcode-0.3.1.ebuild:
+  Whitespace fix
 
 *stringparser_bbcode-0.3.1 (28 Oct 2007)
 

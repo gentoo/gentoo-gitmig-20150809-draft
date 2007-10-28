@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/stringparser_bbcode/stringparser_bbcode-0.3.1.ebuild,v 1.1 2007/10/28 11:36:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/stringparser_bbcode/stringparser_bbcode-0.3.1.ebuild,v 1.2 2007/10/28 11:38:36 jokey Exp $
 
 inherit php-lib-r1
 
@@ -19,7 +19,6 @@ pkg_setup() {
 
 src_install() {
 	php-lib-r1_src_install ./src `find ./src -name '*.php' -print | sed -e "s|./src||g"`
-                               
 	dodoc-php AUTHORS ChangeLog THANKS
 	use doc && dohtml -r doc/*
 }
