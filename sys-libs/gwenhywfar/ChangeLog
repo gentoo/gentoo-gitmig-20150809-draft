@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.48 2007/09/21 13:11:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.49 2007/10/28 02:38:09 fmccor Exp $
+
+  28 Oct 2007; Ferris McCormick <fmccor@gentoo.org> gwenhywfar-2.6.1.ebuild:
+  Sparc stable, all tests pass. (Bookkeeping)
 
   21 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   gwenhywfar-2.6.1.ebuild:
