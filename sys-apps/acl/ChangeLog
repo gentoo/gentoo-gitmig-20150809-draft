@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.82 2007/10/06 07:37:11 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.83 2007/10/28 01:16:02 ticho Exp $
+
+  28 Oct 2007; Andrej Kacian <ticho@gentoo.org> acl-2.2.45.ebuild:
+  Stable on x86, bug #197204.
 
   06 Oct 2007; Tom Gall <tgall@gentoo.org> acl-2.2.44.ebuild:
   stable on ppc64 bug #193143
