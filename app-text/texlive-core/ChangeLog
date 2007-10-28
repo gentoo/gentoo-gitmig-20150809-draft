@@ -1,6 +1,12 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.17 2007/10/27 17:21:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.18 2007/10/28 17:45:55 aballier Exp $
+
+  28 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  files/2007/texmf.d/20sizes.cnf, +files/2007/texmf.d/25misc.cnf,
+  texlive-core-2007-r2.ebuild:
+  add more values to the config files, this should fix a few issues with stack
+  size exceeded
 
   27 Oct 2007; Alexis Ballier <aballier@gentoo.org>
   files/2007/texmf.d/05searchpaths.cnf:

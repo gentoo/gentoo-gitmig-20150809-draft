@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r2.ebuild,v 1.6 2007/10/26 19:06:25 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r2.ebuild,v 1.7 2007/10/28 17:45:55 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -217,7 +217,7 @@ src_install() {
 	rm -f "${D}${TEXMF_PATH}/web2c/texmf.cnf"
 
 	insinto /etc/texmf/texmf.d
-	doins "${FILESDIR}/${PV}/texmf.d/"{00header,05searchpaths,10standardpaths,15options,20sizes}.cnf
+	doins "${FILESDIR}/${PV}/texmf.d/"{00header,05searchpaths,10standardpaths,15options,20sizes,25misc}.cnf
 
 	mv "${D}${TEXMF_PATH}/web2c/updmap.cfg"	"${D}/etc/texmf/updmap.d/00updmap.cfg" || die "moving updmap.cfg failed"
 
