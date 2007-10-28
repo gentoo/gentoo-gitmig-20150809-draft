@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipkungfu/ipkungfu-0.6.0.ebuild,v 1.3 2007/07/13 07:21:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipkungfu/ipkungfu-0.6.0.ebuild,v 1.4 2007/10/28 13:11:53 phreak Exp $
 
 inherit eutils
 
@@ -15,6 +15,8 @@ IUSE=""
 
 DEPEND="virtual/libc
 	net-firewall/iptables"
+RDEPEND="${DEPEND}
+	virtual/logger"
 
 src_compile() {
 	econf || die "Could not run econf"
