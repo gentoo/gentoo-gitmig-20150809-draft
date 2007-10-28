@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ctypes
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ChangeLog,v 1.26 2007/07/03 11:05:48 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ChangeLog,v 1.27 2007/10/28 02:19:40 fmccor Exp $
+
+  28 Oct 2007; Ferris McCormick <fmccor@gentoo.org> ctypes-1.0.1-r1.ebuild:
+  Sparc stable, all tests good.  Bookkeeping for other packages.
 
   03 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> -files/ctypes-gcc4,
   -ctypes-0.9.9.6.ebuild, -ctypes-1.0.0.ebuild, -ctypes-1.0.1.ebuild:
