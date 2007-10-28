@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/phpunit-3.1.8.ebuild,v 1.1 2007/10/22 22:35:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/phpunit-3.1.9.ebuild,v 1.1 2007/10/28 12:04:19 jokey Exp $
 
 inherit php-pear-lib-r1
 

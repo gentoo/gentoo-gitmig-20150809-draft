@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/symfony-1.0.7.ebuild,v 1.1 2007/10/08 11:49:37 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/symfony-1.0.8.ebuild,v 1.1 2007/10/28 12:08:29 jokey Exp $
 
 inherit php-pear-lib-r1 depend.php
 
@@ -19,8 +19,6 @@ RDEPEND=""
 need_php_by_category
 
 pkg_setup() {
-	has_php
-
 	# Symfony needs some features in PHP5 in order to work
 	require_php_with_use cli ctype reflection spl simplexml xml pcre session
 }

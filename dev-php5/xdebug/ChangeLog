@@ -1,6 +1,14 @@
 # ChangeLog for dev-php5/xdebug
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/ChangeLog,v 1.16 2007/09/11 19:35:46 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/ChangeLog,v 1.17 2007/10/28 12:11:14 jokey Exp $
+
+*xdebug-2.0.1 (28 Oct 2007)
+
+  28 Oct 2007; Markus Ullmann <jokey@gentoo.org> +xdebug-2.0.1.ebuild:
+  Version bump from php project overlay
+
+  27 Oct 2007; Jakub Moc <jakub@gentoo.org> +xdebug-2.0.1.ebuild:
+  Version bump
 
   11 Sep 2007; Christian Hoffmann <hoffie@gentoo.org> xdebug-2.0.0.ebuild:
   adjusting xdebug.profiler_output_name and xdebug.trace_output_name to fit
