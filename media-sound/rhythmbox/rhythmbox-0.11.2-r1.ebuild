@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.2.ebuild,v 1.1 2007/10/13 09:24:50 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.2-r1.ebuild,v 1.1 2007/10/28 21:15:49 compnerd Exp $
 
 inherit gnome2 eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
-IUSE="doc vorbis flac mad ipod avahi hal howl daap dbus libnotify lirc musicbrainz tagwriting python keyring"
+IUSE="doc vorbis flac mad ipod hal daap dbus libnotify lirc musicbrainz tagwriting python keyring"
 #I want tagwriting to be on by default in the future. It is just a local flag
 #now because it is still considered experimental by upstream and doesn't work
 #well with all formats due to gstreamer limitation.
@@ -33,8 +33,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	lirc? ( app-misc/lirc )
 	hal? ( ipod? ( >=media-libs/libgpod-0.4 )
 			>=sys-apps/hal-0.5 )
-	avahi? ( >=net-dns/avahi-0.6 )
-	!avahi? ( howl? ( >=net-misc/howl-0.9.8 ) )
+	daap? ( >=net-dns/avahi-0.6 )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	>=media-libs/gst-plugins-base-0.10.11
 	>=media-plugins/gst-plugins-gnomevfs-0.10
@@ -54,27 +53,15 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 
-	if ! use avahi && ! use howl; then
-		if use daap ; then
-		ewarn "Daap support requires either howl or avahi"
-		ewarn "to be installed. Please remerge with either"
-		ewarn "USE=avahi or USE=howl"
-		fi
-	fi
 	if ! use hal && use ipod; then
 		ewarn "ipod support requires hal support.  Please"
 		ewarn "re-emerge with USE=hal to enable ipod support"
 	fi
-	if use howl || use avahi ; then
-		G2CONF="${G2CONF} $(use_enable daap)"
-	fi
 
-	if use howl ; then
-		G2CONF="${G2CONF} --with-mdns=howl"
-	fi
-
-	if use avahi ; then
-		G2CONF="${G2CONF} --with-mdns=avahi"
+	if use daap ; then
+		G2CONF="${G2CONF} --enable-daap --with-mdns=avahi"
+	else
+		G2CONF="${G2CONF} --disable-daap"
 	fi
 
 	G2CONF="${G2CONF} \
