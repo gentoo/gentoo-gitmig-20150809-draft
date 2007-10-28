@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qjackctl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.45 2007/10/23 06:31:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.46 2007/10/28 15:21:41 nixnut Exp $
+
+  28 Oct 2007; nixnut <nixnut@gentoo.org> qjackctl-0.3.1a.ebuild:
+  Stable on ppc wrt bug 196458
 
   23 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   qjackctl-0.3.1a.ebuild:
