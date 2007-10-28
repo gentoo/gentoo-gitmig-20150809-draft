@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.5 2007/04/28 22:26:22 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.6 2007/10/28 20:06:49 compnerd Exp $
+
+*libview-0.6.1 (28 Oct 2007)
+
+  28 Oct 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +libview-0.6.1.ebuild:
+  Version bump from upstream (bug #170683)
 
   28 Apr 2007; Saleem Abdulrasool <compnerd@gentoo.org>
   -libview-0.5.6.ebuild:
