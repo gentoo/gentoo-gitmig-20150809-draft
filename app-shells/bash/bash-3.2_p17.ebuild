@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p17.ebuild,v 1.8 2007/08/07 03:55:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.2_p17.ebuild,v 1.9 2007/10/28 19:23:00 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -56,6 +56,7 @@ src_unpack() {
 
 	if ! use vanilla ; then
 		epatch "${FILESDIR}"/${PN}-3.1-gentoo.patch
+		epatch "${FILESDIR}"/${PN}-3.2-parallel-build.patch #189671
 
 		# Fix process substitution on BSD.
 		epatch "${FILESDIR}"/${PN}-3.2-process-subst.patch
