@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/gshield
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/ChangeLog,v 1.7 2007/02/20 01:03:36 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/ChangeLog,v 1.8 2007/10/28 14:06:53 phreak Exp $
+
+  28 Oct 2007; Christian Heim <phreak@gentoo.org> gshield-2.8-r2.ebuild:
+  Include virtual/logger in RDEPEND, as the initscript already specifies 'need
+  logger'.
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

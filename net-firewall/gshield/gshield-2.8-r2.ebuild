@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/gshield-2.8-r2.ebuild,v 1.7 2006/04/03 01:20:23 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/gshield-2.8-r2.ebuild,v 1.8 2007/10/28 14:06:53 phreak Exp $
 
 # re-capitalize gShield
 S=${WORKDIR}/gShield-${PV}
@@ -15,7 +15,8 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="net-firewall/iptables
-	net-dns/bind-tools"
+	net-dns/bind-tools
+	virtual/logger"
 
 src_install() {
 	# config files
