@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.20.ebuild,v 1.2 2007/10/24 14:53:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.20.ebuild,v 1.3 2007/10/28 11:16:42 eva Exp $
 
 inherit gnome2 autotools
 
@@ -22,7 +22,7 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	>=app-mobilephone/gnokii-0.6.18
 	>=gnome-base/libglade-2
 	>=gnome-extra/evolution-data-server-1.2.3
-	>=net-wireless/gnome-bluetooth-0.8.0
+	>net-wireless/gnome-bluetooth-0.8
 	>=dev-libs/dbus-glib-0.71
 	>=x11-themes/gnome-icon-theme-2.19.1"
 
