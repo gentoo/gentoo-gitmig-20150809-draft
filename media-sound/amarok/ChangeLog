@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.230 2007/10/11 16:53:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.231 2007/10/29 15:12:00 cla Exp $
+
+  29 Oct 2007; Dawid Węgliński <cla@gentoo.org> amarok-1.4.7.ebuild:
+  Stable on x86 (bug #192678)
 
   11 Oct 2007; Samuli Suominen <drac@gentoo.org> amarok-1.4.5-r1.ebuild,
   amarok-1.4.6.ebuild, amarok-1.4.6-r1.ebuild, amarok-1.4.7.ebuild,
