@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tcpsound
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tcpsound/ChangeLog,v 1.2 2007/04/15 20:29:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tcpsound/ChangeLog,v 1.3 2007/10/29 15:35:57 jokey Exp $
+
+  29 Oct 2007; Markus Ullmann <jokey@gentoo.org> metadata.xml:
+  Developed to end, reassigning to herd
 
   15 Apr 2007; Andrej Kacian <ticho@gentoo.org> tcpsound-0.3.1.ebuild:
   Stable on x86, bug #174628.
