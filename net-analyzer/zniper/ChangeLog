@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/zniper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zniper/ChangeLog,v 1.1 2007/04/07 18:23:53 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zniper/ChangeLog,v 1.2 2007/10/29 15:11:43 jokey Exp $
+
+  29 Oct 2007; Markus Ullmann <jokey@gentoo.org> metadata.xml:
+  developed to end, reassigning to herd
 
 *zniper-1.0 (07 Apr 2007)
 
