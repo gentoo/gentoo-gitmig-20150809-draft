@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/gnus
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.22 2007/10/28 13:47:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.23 2007/10/29 10:23:53 armin76 Exp $
+
+  29 Oct 2007; Raúl Porcel <armin76@gentoo.org> gnus-1.91.ebuild:
+  alpha/sparc stable wrt #197046
 
   28 Oct 2007; Markus Rothe <corsair@gentoo.org> gnus-1.91.ebuild:
   Stable on ppc64; bug #197046

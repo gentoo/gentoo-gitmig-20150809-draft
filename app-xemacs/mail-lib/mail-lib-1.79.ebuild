@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/mail-lib-1.79.ebuild,v 1.5 2007/10/28 13:49:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/mail-lib-1.79.ebuild,v 1.6 2007/10/29 10:24:34 armin76 Exp $
 
 SLOT="0"
 IUSE=""
@@ -13,6 +13,6 @@ app-xemacs/fsf-compat
 app-xemacs/sh-script
 app-xemacs/ecrypto
 "
-KEYWORDS="~alpha ~amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 ppc ppc64 sparc x86"
 
 inherit xemacs-packages
