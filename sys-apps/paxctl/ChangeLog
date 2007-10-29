@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paxctl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.24 2007/10/09 17:37:25 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.25 2007/10/29 15:42:01 armin76 Exp $
+
+  29 Oct 2007; Raúl Porcel <armin76@gentoo.org> paxctl-0.5.ebuild:
+  Add ~alpha, sparc stable wrt #195234
 
   09 Oct 2007; <solar@gentoo.org> paxctl-0.5.ebuild:
   - stable on amd64,arm,ia64,ppc64 and x86
