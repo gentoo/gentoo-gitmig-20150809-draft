@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.5.ebuild,v 1.11 2007/07/22 08:19:13 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.4.8.ebuild,v 1.1 2007/10/29 09:52:54 dragonheart Exp $
 
 inherit eutils
 # used for epause
@@ -11,8 +11,8 @@ SRC_URI="mirror://sourceforge/conky/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
-IUSE="truetype X ipv6 audacious bmpx hddtemp mpd vim-syntax"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="audacious bmpx hddtemp ipv6 mpd rss truetype vim-syntax wifi X"
 
 DEPEND_COMMON="
 	virtual/libc
@@ -30,10 +30,13 @@ DEPEND_COMMON="
 				>=sys-apps/dbus-0.35
 			)
 	)
+	rss? ( dev-libs/libxml2
+			net-misc/curl
+			)
+	wifi? ( net-wireless/wireless-tools )
 	!ipv6? ( >=dev-libs/glib-2.0 )"
 RDEPEND="${DEPEND_COMMON}
 	hddtemp? ( app-admin/hddtemp )
-	mpd? ( media-sound/mpd )
 	vim-syntax? ( || ( app-editors/vim
 	app-editors/gvim ) )"
 
@@ -48,9 +51,8 @@ DEPEND="
 src_compile() {
 	local mymake
 	if useq ipv6 ; then
-		ewarn
-		ewarn "You have the ipv6 USE flag enabled.  Please note that using"
-		ewarn "the ipv6 USE flag with Conky disables the port monitor."
+		elog "You have the ipv6 USE flag enabled.  Please note that using"
+		elog "the ipv6 USE flag with Conky disables the port monitor."
 		epause
 	else
 		mymake="MPD_NO_IPV6=noipv6"
@@ -70,6 +72,8 @@ src_compile() {
 		$(use_enable bmpx) \
 		$(use_enable hddtemp ) \
 		$(use_enable mpd) \
+		$(use_enable rss) \
+		$(use_enable wifi wlan) \
 		$(use_enable !ipv6 portmon) || die "econf failed"
 	emake ${mymake} || die "compile failed"
 }
@@ -91,12 +95,12 @@ src_install() {
 pkg_postinst() {
 	elog 'Default configuration file is "~/.conkyrc"'
 	elog "You can find a sample configuration file in"
-	elog "/usr/share/doc/${PF}/conkyrc.sample.gz"
+	elog "/usr/share/doc/${PF}/conkyrc.sample.bz2"
 	elog
 	elog "For more info on Conky's new features,"
 	elog "please look at the README and ChangeLog:"
-	elog "/usr/share/doc/${PF}/README.gz"
-	elog "/usr/share/doc/${PF}/ChangeLog.gz"
+	elog "/usr/share/doc/${PF}/README.bz2"
+	elog "/usr/share/doc/${PF}/ChangeLog.bz2"
 	elog "There are also pretty html docs available"
 	elog "on Conky's site or in /usr/share/doc/${PF}"
 	elog
