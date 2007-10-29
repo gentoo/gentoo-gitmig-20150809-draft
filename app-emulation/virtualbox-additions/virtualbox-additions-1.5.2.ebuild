@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/virtualbox-additions-1.5.2.ebuild,v 1.1 2007/10/22 22:12:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/virtualbox-additions-1.5.2.ebuild,v 1.2 2007/10/29 06:25:47 cla Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://virtualbox.org/download/${PV}/${MY_P}.iso"
 
 LICENSE="PUEL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="!app-emulation/virtualbox-bin
