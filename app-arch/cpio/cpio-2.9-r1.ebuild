@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.9-r1.ebuild,v 1.1 2007/10/28 21:40:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.9-r1.ebuild,v 1.2 2007/10/29 00:15:45 compnerd Exp $
+
+inherit eutils
 
 DESCRIPTION="A file archival tool which can also read and write tar files"
 HOMEPAGE="http://www.gnu.org/software/cpio/cpio.html"
