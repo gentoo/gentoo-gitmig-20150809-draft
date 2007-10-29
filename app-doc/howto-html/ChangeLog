@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/howto-html
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.29 2007/10/24 02:17:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.30 2007/10/29 17:02:36 armin76 Exp $
+
+  29 Oct 2007; Raúl Porcel <armin76@gentoo.org>
+  -howto-html-20050504.ebuild, -howto-html-20070202.ebuild,
+  howto-html-20070811.ebuild:
+  Stable on all, remove old
 
   24 Oct 2007; Jeroen Roovers <jer@gentoo.org> howto-html-20070811.ebuild:
   Stable for HPPA too.

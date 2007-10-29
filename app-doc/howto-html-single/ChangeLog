@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/howto-html-single
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.26 2007/10/24 02:20:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.27 2007/10/29 17:04:24 armin76 Exp $
+
+  29 Oct 2007; Raúl Porcel <armin76@gentoo.org>
+  -howto-html-single-20050504.ebuild, -howto-html-single-20061216.ebuild,
+  howto-html-single-20070811.ebuild:
+  Stable on all, remove old
 
   24 Oct 2007; Jeroen Roovers <jer@gentoo.org>
   howto-html-single-20070811.ebuild:
