@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20071007.ebuild,v 1.1 2007/10/08 11:13:19 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20071007-r1.ebuild,v 1.1 2007/10/29 14:34:02 beandog Exp $
 
 inherit multilib
 
@@ -31,7 +31,7 @@ pkg_setup() {
 }
 
 src_install() {
-	cd ${S}
+	cd "${S}"
 
 	# see #83221
 	insopts -m0644
@@ -48,7 +48,7 @@ src_install() {
 		doins *.so
 
 		# fix bug #80321
-		ln -s "${D}/usr/$(get_libdir)/real/*" "${D}/usr/$(get_libdir)/win32/"
+		ln -s "${D}"/usr/$(get_libdir)/real/* "${D}"/usr/$(get_libdir)/win32/
 	fi
 
 	insinto /usr/$(get_libdir)/win32

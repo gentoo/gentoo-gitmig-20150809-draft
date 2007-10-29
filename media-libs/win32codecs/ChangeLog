@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.44 2007/10/08 11:13:19 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.45 2007/10/29 14:34:02 beandog Exp $
+
+*win32codecs-20071007-r1 (29 Oct 2007)
+
+  29 Oct 2007; Steve Dibb <beandog@gentoo.org> -win32codecs-20071007.ebuild,
+  +win32codecs-20071007-r1.ebuild:
+  Fix install of reallibs, bug 197319
 
 *win32codecs-20071007 (08 Oct 2007)
 
