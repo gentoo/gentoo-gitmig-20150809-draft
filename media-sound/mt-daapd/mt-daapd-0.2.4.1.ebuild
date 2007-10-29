@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.4.1.ebuild,v 1.1 2007/10/28 22:13:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.4.1.ebuild,v 1.2 2007/10/29 15:43:58 drac Exp $
 
 inherit autotools eutils
 
@@ -13,11 +13,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~sh ~sparc ~x86"
 IUSE="avahi vorbis"
 
-DEPEND="media-libs/libid3tag
+RDEPEND="media-libs/libid3tag
 	sys-libs/gdbm
 	avahi? ( net-dns/avahi )
 	!avahi? ( net-misc/mDNSResponder )
 	vorbis? ( media-libs/libvorbis )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
