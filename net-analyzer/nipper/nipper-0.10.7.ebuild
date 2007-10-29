@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/nipper-0.10.7.ebuild,v 1.1 2007/10/18 21:45:44 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/nipper-0.10.7.ebuild,v 1.2 2007/10/29 23:57:01 ikelos Exp $
 
 inherit toolchain-funcs eutils
 
@@ -23,5 +23,5 @@ src_compile() {
 
 src_install() {
 	dobin ${PN}
-	dodoc Readme INSTALL LICENSE TODO Changelog docs/*
+	dodoc Readme INSTALL TODO Changelog docs/*
 }
