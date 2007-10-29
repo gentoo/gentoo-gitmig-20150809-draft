@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/kccmp-0.2.ebuild,v 1.2 2007/10/08 14:04:11 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/kccmp-0.2.ebuild,v 1.3 2007/10/29 00:10:38 mpagano Exp $
 
 inherit eutils qt3 qt4
 
@@ -12,9 +12,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-IUSE="qt3 qt4"
-DEPEND="qt3? (  $(qt_min_version 3.3.8-r4) )
-	qt4? ( $(qt4_min_version 4.3.1-r1) >=dev-libs/boost-1.33.1-r1 )"
+IUSE="qt4"
+DEPEND="qt4? ( $(qt4_min_version 4.3.1-r1) >=dev-libs/boost-1.33.1-r1 )
+	!qt4? (  $(qt_min_version 3.3.8-r4) )"
 
 src_unpack() {
 	unpack "${A}"
