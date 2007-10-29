@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.54 2007/10/24 18:38:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.55 2007/10/29 19:45:23 fmccor Exp $
+
+  29 Oct 2007; Ferris McCormick <fmccor@gentoo.org> vice-1.22.ebuild:
+  Sparc stable --- Bug #196608 --- developer request.
 
   24 Oct 2007; Markus Meier <maekke@gentoo.org> vice-1.22.ebuild:
   x86 stable, bug #196608
