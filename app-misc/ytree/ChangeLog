@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ytree
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ChangeLog,v 1.4 2007/08/30 06:56:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ChangeLog,v 1.5 2007/10/29 14:15:42 jokey Exp $
+
+  29 Oct 2007; Markus Ullmann <jokey@gentoo.org> -ytree-1.86.ebuild,
+  ytree-1.90.ebuild:
+  Stable on x86 and drop old
 
 *ytree-1.90 (30 Aug 2007)
 
