@@ -4,17 +4,8 @@
 	<herd>kernel</herd>
 	<herd>hardened</herd>
 	<maintainer>
-		<email>solar@gentoo.org</email>
-		<name>Ned Ludd</name>
-		<description>Maintainer 2.4</description>
-	</maintainer>
-	<maintainer>
 		<email>phreak@gentoo.org</email>
 		<name>Christian Heim</name>
-	</maintainer>
-	<maintainer>
-		<email>pappy@gentoo.org</email>
-		<name>Alexander Gabert</name>
 	</maintainer>
 	<longdescription>
 		hardened-sources is based upon genpatches-base, and adds the grsecurity
