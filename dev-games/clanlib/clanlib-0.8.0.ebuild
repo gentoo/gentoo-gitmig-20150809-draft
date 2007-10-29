@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.0.ebuild,v 1.3 2007/07/10 03:23:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.0.ebuild,v 1.4 2007/10/29 22:07:43 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -36,7 +36,9 @@ S=${WORKDIR}/ClanLib-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc42.patch
+	epatch \
+		"${FILESDIR}"/${P}-gcc42.patch \
+		"${FILESDIR}"/${P}-ndebug.patch
 }
 
 src_compile() {
