@@ -1,6 +1,11 @@
 # ChangeLog for media-video/camorama
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.14 2007/10/07 05:33:46 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.15 2007/10/29 16:37:54 drac Exp $
+
+*camorama-0.19 (29 Oct 2007)
+
+  29 Oct 2007; Samuli Suominen <drac@gentoo.org> +camorama-0.19.ebuild:
+  Version bump for bug 197365, thanks to Serkan Kaba for reporting.
 
   07 Oct 2007; Samuli Suominen <drac@gentoo.org>
   +files/camorama-0.18-nls.patch, camorama-0.18.ebuild:
