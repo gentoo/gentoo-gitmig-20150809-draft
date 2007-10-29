@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.80 2007/10/28 19:16:54 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.81 2007/10/29 10:04:19 armin76 Exp $
+
+  29 Oct 2007; Raúl Porcel <armin76@gentoo.org> xfsprogs-2.9.4.ebuild:
+  ia64 stable wrt #197204
 
   28 Oct 2007; Ferris McCormick <fmccor@gentoo.org> xfsprogs-2.9.4.ebuild:
   Sparc stable --- Bug #197204 (although we don't much use xfs).
