@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tcpsound/tcpsound-0.3.1.ebuild,v 1.2 2007/04/15 20:29:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tcpsound/tcpsound-0.3.1.ebuild,v 1.3 2007/10/29 15:36:44 jokey Exp $
 
 inherit eutils
 
@@ -19,10 +19,10 @@ DEPEND="net-analyzer/tcpdump
 
 src_compile() {
 	sed -i -e "s;/usr/share/sounds:/usr/local/share/sounds;/usr/share/tcpsound;g"\
-		${S}/src/tcpsound.c ${S}/elaborate.conf
+		"${S}"/src/tcpsound.c "${S}"/elaborate.conf
 
 	sed -i -e "s;/share/sounds;/share/tcpsound;g"\
-		${S}/Makefile
+		"${S}"/Makefile
 	emake || die "emake failed"
 }
 
