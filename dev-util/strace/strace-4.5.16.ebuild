@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.16.ebuild,v 1.2 2007/09/30 03:43:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.16.ebuild,v 1.3 2007/10/29 19:11:28 cla Exp $
 
 inherit flag-o-matic autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="static aio"
 
 DEPEND="aio? ( dev-libs/libaio )"
