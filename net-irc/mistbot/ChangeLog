@@ -1,0 +1,10 @@
+# ChangeLog for net-irc/mistbot
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/mistbot/ChangeLog,v 1.1 2007/10/29 22:45:09 cla Exp $
+
+*mistbot-0.9 (29 Oct 2007)
+
+  29 Oct 2007; Dawid Węgliński <cla@gentoo.org> +metadata.xml,
+  +mistbot-0.9.ebuild:
+  Initial import. Submitted by Alexander Graf <sohalt@gmail.com> in bug #197211
+
