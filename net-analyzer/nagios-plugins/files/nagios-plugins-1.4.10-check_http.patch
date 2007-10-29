@@ -1,0 +1,11 @@
+--- plugins/check_http.c.old	2007-07-21 18:29:01.000000000 +0200
++++ plugins/check_http.c	2007-10-14 22:05:26.000000000 +0200
+@@ -1092,7 +1092,7 @@ redir (char *pos, char *status_line)
+     die (STATE_UNKNOWN, _("HTTP UNKNOWN - Could not allocate url\n"));
+ 
+   while (pos) {
+-    sscanf (pos, "%[Ll]%*[Oo]%*[Cc]%*[Aa]%*[Tt]%*[Ii]%*[Oo]%*[Nn]:%n", xx, &i);
++    sscanf (pos, "%1[Ll]%*[Oo]%*[Cc]%*[Aa]%*[Tt]%*[Ii]%*[Oo]%*[Nn]:%n", xx, &i);
+     if (i == 0) {
+       pos += (size_t) strcspn (pos, "\r\n");
+       pos += (size_t) strspn (pos, "\r\n");
