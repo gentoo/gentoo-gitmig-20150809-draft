@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/pam_abl-0.2.3-r1.ebuild,v 1.2 2007/09/17 10:42:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/pam_abl-0.2.3-r1.ebuild,v 1.3 2007/10/29 20:05:20 jokey Exp $
 
 inherit flag-o-matic pam toolchain-funcs
 
@@ -19,6 +19,9 @@ DEPEND=">=sys-libs/pam-0.78-r2
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
+
+# restrict tests as they're broken badly
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
