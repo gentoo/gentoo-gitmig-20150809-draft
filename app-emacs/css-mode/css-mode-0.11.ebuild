@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/css-mode/css-mode-0.11.ebuild,v 1.8 2005/04/21 18:31:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/css-mode/css-mode-0.11.ebuild,v 1.9 2007/10/29 14:13:51 flameeyes Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.garshol.priv.no/download/software/css-mode/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ppc64 amd64"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 
 DEPEND=">=sys-apps/sed-4"
 RDEPEND=""

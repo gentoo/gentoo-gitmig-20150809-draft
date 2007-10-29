@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.22 2007/10/29 13:32:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.23 2007/10/29 14:09:32 flameeyes Exp $
+
+  29 Oct 2007; Diego Pettenò <flameeyes@gentoo.org>
+  ocaml-mode-3.09.3-r1.ebuild, ocaml-mode-3.10.0.ebuild:
+  Add ~x86-fbsd keyword.
 
   29 Oct 2007; Ulrich Mueller <ulm@gentoo.org> files/50ocaml-mode-gentoo.el:
   Autoload camldebug in site-init file, fixes bug #197405.

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/css-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/css-mode/ChangeLog,v 1.9 2007/02/06 13:24:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/css-mode/ChangeLog,v 1.10 2007/10/29 14:13:51 flameeyes Exp $
+
+  29 Oct 2007; Diego Pettenò <flameeyes@gentoo.org> css-mode-0.11.ebuild:
+  Add ~x86-fbsd keyword.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
