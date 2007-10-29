@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4-r2.ebuild,v 1.4 2007/10/14 11:12:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4-r2.ebuild,v 1.5 2007/10/29 06:49:48 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -149,6 +149,7 @@ RDEPEND="hal? ( sys-apps/hal )
 	# Xxf86misc and Xxf86vm are xorgcfg-dependent
 	# liblbxutil is lbx- dependent
 DEPEND="${RDEPEND}
+	!net-dialup/dtrace
 	>=x11-proto/randrproto-1.2.1
 	>=x11-proto/renderproto-0.9.3
 	>=x11-proto/fixesproto-4
