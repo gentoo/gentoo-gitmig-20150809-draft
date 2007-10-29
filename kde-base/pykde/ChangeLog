@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.33 2007/10/27 14:11:11 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.34 2007/10/29 07:38:59 philantrop Exp $
+
+  29 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/pykde-3.5.8-python-2.5-compat.diff, pykde-3.5.8.ebuild:
+  Added a patch for Python 2.5 compatibility and some other fixes.
 
   27 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> pykde-3.5.8.ebuild:
   Removed the obsolete patch. Makes bug 196900 a duplicate of bug 164027.
