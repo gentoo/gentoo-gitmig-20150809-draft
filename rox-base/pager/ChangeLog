@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/pager
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.14 2007/06/10 19:21:58 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.15 2007/10/30 17:27:10 fmccor Exp $
+
+  30 Oct 2007; Ferris McCormick <fmccor@gentoo.org> pager-1.1-r1.ebuild:
+  Add ~sparc (bookkeeping) --- rox-pager works.
 
   10 Jun 2007; Jim Ramsay <lack@gentoo.org> pager-1.0.1-r1.ebuild,
   pager-1.1-r1.ebuild:
