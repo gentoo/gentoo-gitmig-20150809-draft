@@ -1,0 +1,10 @@
+--- /var/tmp/portage/app-emacs/tramp-2.1.11/work/tramp-2.1.11/lisp/tramp.el	2007-10-10 06:28:46.000000000 +0200
++++ /tmp/tramp.el	2007-10-30 18:50:14.000000000 +0100
+@@ -6112,6 +6112,7 @@
+       (when (and p (processp p))
+ 	(delete-process p))
+       (setenv "TERM" tramp-terminal-type)
++      (setenv "LC_ALL" "C")
+       (setenv "PROMPT_COMMAND")
+       (setenv "PS1" "$ ")
+       (let* ((target-alist (tramp-compute-multi-hops vec))

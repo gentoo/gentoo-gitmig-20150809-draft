@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/tramp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.55 2007/10/11 07:36:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.56 2007/10/30 18:13:14 opfer Exp $
+
+*tramp-2.1.11-r1 (30 Oct 2007)
+
+  30 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  +files/tramp-2.1.11-environment_fix.patch, +tramp-2.1.11-r1.ebuild:
+  fix environment for program calls so no strings are translated
 
   11 Oct 2007; Ulrich Mueller <ulm@gentoo.org> -tramp-2.1.10-r1.ebuild:
   Remove vulnerable revision wrt bug #194713.
