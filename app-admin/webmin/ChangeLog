@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.156 2007/10/28 12:43:28 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.157 2007/10/30 10:36:06 uberlord Exp $
+
+*webmin-1.370-r1 (30 Oct 2007)
+
+  30 Oct 2007; Roy Marples <uberlord@gentoo.org> files/init.d.webmin,
+  +webmin-1.370-r1.ebuild:
+  Fix init script for baselayout-1 and 2, #194143
 
   28 Oct 2007; Christian Heim <phreak@gentoo.org> webmin-1.350.ebuild,
   webmin-1.370.ebuild:
