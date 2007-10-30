@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paxctl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.25 2007/10/29 15:42:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.26 2007/10/30 16:48:51 nixnut Exp $
+
+  30 Oct 2007; nixnut <nixnut@gentoo.org> paxctl-0.5.ebuild:
+  Stable on ppc wrt bug 195234
 
   29 Oct 2007; Raúl Porcel <armin76@gentoo.org> paxctl-0.5.ebuild:
   Add ~alpha, sparc stable wrt #195234
