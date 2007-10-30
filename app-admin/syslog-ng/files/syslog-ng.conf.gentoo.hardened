@@ -1,16 +1,32 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.gentoo.hardened,v 1.4 2006/07/12 23:59:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.gentoo.hardened,v 1.5 2007/10/30 17:16:15 solar Exp $
 
 #
 # Syslog-ng configuration file, compatible with default hardened installations.
 #
 
-options { chain_hostnames(off); sync(0); };
+options {
+	chain_hostnames(off);
+	sync(0);
+	stats(43200);
+};
+
+#options {
+#	chain_hostnames(off);
+#	sync(0);
+#	stats(43200);
+#	long_hostnames(off);        
+#	use_dns(no);
+#	create_dirs(yes);
+#};
 
 source src { unix-stream("/dev/log"); internal(); };
 source kernsrc { file("/proc/kmsg"); };
+
 #source net { udp(); };
+#log { source(net); destination(net_logs); };
+#destination net_logs { file("/var/log/HOSTS/$HOST/$YEAR$MONTH$DAY.log"); };
 
 destination authlog { file("/var/log/auth.log"); };
 destination syslog { file("/var/log/syslog"); };
@@ -97,6 +113,5 @@ log { source(src); filter(f_messages); destination(messages); };
 log { source(src); filter(f_emergency); destination(console); };
 #log { source(src); filter(f_ppp); destination(ppp); };
 log { source(src); destination(console_all); };
-
 
 
