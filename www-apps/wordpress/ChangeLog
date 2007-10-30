@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.86 2007/10/08 12:55:42 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.87 2007/10/30 12:19:59 wrobel Exp $
+
+*wordpress-2.3.1 (30 Oct 2007)
+
+  30 Oct 2007; wrobel@gentoo.org -files/dummy-templates.php,
+  +files/postinstall-en.txt, +files/postupgrade-en.txt,
+  +wordpress-2.3.1.ebuild:
+  Add wordpress-2.3.1 (#197356).
 
 *wordpress-2.3 (08 Oct 2007)
 

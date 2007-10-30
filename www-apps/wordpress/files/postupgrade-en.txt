@@ -1,0 +1,13 @@
+------------------------------------------------------------------------
+UPGRADE
+
+                                                            
+If you are upgrading from a previous version BACK UP your database.
+
+Once you are done with that, browse to
+
+http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/wp-admin/upgrade.php 
+
+and follow the instructions on the screen.
+
+------------------------------------------------------------------------
