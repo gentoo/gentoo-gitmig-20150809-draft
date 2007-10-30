@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20050701_p1825.ebuild,v 1.4 2007/03/13 08:00:20 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20050701_p1825.ebuild,v 1.5 2007/10/30 17:57:36 aballier Exp $
 
 inherit latex-package toolchain-funcs
 
@@ -28,7 +28,7 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}/texmf/tex4ht/base/unix
+	cd "${S}/texmf/tex4ht/base/unix"
 	sed -i -e \
 	's#~/tex4ht.dir#/usr/share#' tex4ht.env || die
 	sed -i -e \
@@ -38,7 +38,7 @@ src_unpack() {
 
 src_compile() {
 
-	cd ${S}/src/
+	cd "${S}/src/"
 	einfo "Compiling postprocessor sources..."
 	for f in tex4ht t4ht htcmd ; do
 		$(tc-getCC) -o $f $f.c \
@@ -52,23 +52,23 @@ src_compile() {
 src_install () {
 
 	# install the binaries
-	dobin ${S}/src/tex4ht ${S}/src/t4ht ${S}/src/htcmd
-	dobin ${S}/bin/unix/*
+	dobin "${S}/src/tex4ht" "${S}/src/t4ht" "${S}/src/htcmd"
+	dobin "${S}"/bin/unix/*
 
 	# install the .4ht scripts
 	insinto /usr/share/texmf/tex/generic/tex4ht
-	doins ${S}/texmf/tex/generic/tex4ht/*
+	doins "${S}"/texmf/tex/generic/tex4ht/*
 
 	# install the special htf fonts
 	dodir /usr/share/texmf/tex4ht
-	cp -pPR ${S}/texmf/tex4ht/ht-fonts ${D}/usr/share/texmf/tex4ht
+	cp -pPR "${S}/texmf/tex4ht/ht-fonts" "${D}/usr/share/texmf/tex4ht"
 
 	# install the env file
 	insinto /usr/share/texmf/tex4ht/base
-	newins ${S}/texmf/tex4ht/base/unix/tex4ht.env tex4ht.env
+	newins "${S}/texmf/tex4ht/base/unix/tex4ht.env" tex4ht.env
 
 	if has_tetex_3 ; then
 		insinto /etc/texmf/texmf.d
-		doins ${FILESDIR}/50tex4ht.cnf || die
+		doins "${FILESDIR}/50tex4ht.cnf" || die
 	fi
 }
