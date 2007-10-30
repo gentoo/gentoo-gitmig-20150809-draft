@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/pykde-3.5.8.ebuild,v 1.3 2007/10/29 07:38:59 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/pykde-3.5.8.ebuild,v 1.4 2007/10/30 06:02:14 philantrop Exp $
 
 KMNAME=kdebindings
 KMMODULE=python
@@ -17,8 +17,8 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug doc examples"
 
-DEPEND=">=dev-python/sip-4.6
-		>=dev-python/PyQt-3.17.2
+DEPEND="~dev-python/sip-4.6
+		~dev-python/PyQt-3.17.2
 		kde-base/kdelibs
 		|| ( kde-base/kdebase kde-base/konsole )
 		!dev-python/pykde"
