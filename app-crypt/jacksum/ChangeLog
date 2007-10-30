@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/jacksum
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.29 2007/10/27 14:29:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.30 2007/10/30 21:07:42 betelgeuse Exp $
+
+  30 Oct 2007; Petteri Räty <betelgeuse@gentoo.org> -jacksum-1.6.0.ebuild:
+  Delete generation 1 ebuild.
 
   27 Oct 2007; Christoph Mende <angelos@gentoo.org> jacksum-1.7.0.ebuild:
   Stable on amd64 wrt bug #196839
