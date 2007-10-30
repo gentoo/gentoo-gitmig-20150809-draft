@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/mistbot/mistbot-0.9.ebuild,v 1.2 2007/10/30 21:02:32 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/mistbot/mistbot-0.9.ebuild,v 1.3 2007/10/30 21:14:40 cla Exp $
 
 inherit eutils toolchain-funcs
 
@@ -31,7 +31,7 @@ src_compile() {
 	fi
 
 	if ! use nls; then
-		sed -e '/^NLS\ =\nls$/d' -i build.conf || die "sed failed"
+		sed -e '/^NLS\ =\ nls$/d' -i build.conf || die "sed failed"
 	fi
 
 	if ! use debug; then
