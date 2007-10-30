@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kooldock
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.23 2007/07/27 19:14:29 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.24 2007/10/30 21:47:24 philantrop Exp $
+
+*kooldock-0.4.7 (30 Oct 2007)
+
+  30 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> +kooldock-0.4.7.ebuild:
+  Version bump to 0.4.7 as per bug 197469.
 
   27 Jul 2007; Carsten Lohrke <carlo@gentoo.org>
   -files/kooldock-0.3-configure.patch,
