@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/kccmp-0.2.ebuild,v 1.4 2007/10/30 00:54:51 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/kccmp-0.2.ebuild,v 1.5 2007/10/30 03:51:06 mr_bones_ Exp $
 
 inherit qt3 qt4
 
@@ -25,7 +25,7 @@ src_unpack() {
 		sed -i 's/#DEFINES += KCCMP_QT_4/DEFINES += KCCMP_QT_4/' kccmp.pro \
 			|| die "Could not uncomment define for qt support"
 	else
-		#do not link to boost libs when not using qt4 
+		#do not link to boost libs when not using qt4
 		sed -i 's/LIBS/#LIBS/' kccmp.pro \
 		|| die "Could not remove linking to boost library"
 	fi
