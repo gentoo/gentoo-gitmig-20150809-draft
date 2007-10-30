@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-5.01.ebuild,v 1.2 2007/10/20 19:31:12 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-5.02.ebuild,v 1.1 2007/10/30 21:51:12 aballier Exp $
 
 inherit multilib eutils
 
@@ -30,5 +30,5 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	use doc && dohtml -r doc/*
 
-	dodoc CHANGES DEVEL ICHANGES README UPGRADING
+	dodoc CHANGES DEVEL ICHANGES README UPGRADING MODE
 }
