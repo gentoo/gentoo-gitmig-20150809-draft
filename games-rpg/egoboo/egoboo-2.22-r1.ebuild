@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22-r1.ebuild,v 1.2 2007/10/30 06:33:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22-r1.ebuild,v 1.3 2007/10/30 06:33:57 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs games
 
@@ -29,13 +29,13 @@ src_unpack() {
 	# amd64 patch must be applied after ${PV}-endian.patch
 	# this addresses bug #104271
 	epatch \
-		${FILESDIR}/${PV}-endian.patch \
-		${FILESDIR}/${PV}-amd64.patch
+		"${FILESDIR}"/${PV}-endian.patch \
+		"${FILESDIR}"/${PV}-amd64.patch
 }
 
 src_compile() {
 	cd code
-	make clean || die "make clean failed"
+	emake clean || die "make clean failed"
 	emake FLAGS="-D_LINUX ${CFLAGS}" CC="$(tc-getCC)" egoboo || die "emake failed"
 }
 
