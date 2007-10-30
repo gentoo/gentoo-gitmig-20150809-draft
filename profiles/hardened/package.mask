@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.36 2007/10/08 20:37:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.37 2007/10/30 20:05:44 phreak Exp $
 
 # >=acml-3.6 depends on gcc-4*
 >=sci-libs/acml-3.6
@@ -11,13 +11,7 @@
 # The following packages need =gcc-4*
 =net-im/skype-1.4.0*
 
-# Mask off gcc-4 for all hardened arches until SSP is sorted out (i.e.
-# backport for gcc-4.0 and 4.0/4.1 rigged for SSP support in the C
-# library).  After that, may still need to be masked on x86 as some
-# PIC assembler that worked pre-4 fails post-4, e.g. bug #104966).
-# If you want to play with it, unmask in /etc/portage/package.unmask
-# but be prepared to rebuild anything you build with gcc-4, later.
-# 2006-01-11 kevquinn
+# gcc-4* still isn't ready.
 =sys-devel/gcc-4*
 
 # Mask off glibc-2.4 until the approach for SSP compatibilty is
