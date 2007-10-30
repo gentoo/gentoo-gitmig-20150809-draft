@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/kccmp-0.2.ebuild,v 1.3 2007/10/29 00:10:38 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/kccmp-0.2.ebuild,v 1.4 2007/10/30 00:54:51 mpagano Exp $
 
-inherit eutils qt3 qt4
+inherit qt3 qt4
 
 DESCRIPTION="A simple tool for comparing two linux kernel .config files"
 HOMEPAGE="http://stoopidsimple.com/kccmp/"
@@ -19,12 +19,21 @@ DEPEND="qt4? ( $(qt4_min_version 4.3.1-r1) >=dev-libs/boost-1.33.1-r1 )
 src_unpack() {
 	unpack "${A}"
 	cd "${S}"
-	use qt4 && epatch "${FILESDIR}"/${P}-qt4.patch
+
+	if use qt4 ; then
+		#uncomment define for qt4 support
+		sed -i 's/#DEFINES += KCCMP_QT_4/DEFINES += KCCMP_QT_4/' kccmp.pro \
+			|| die "Could not uncomment define for qt support"
+	else
+		#do not link to boost libs when not using qt4 
+		sed -i 's/LIBS/#LIBS/' kccmp.pro \
+		|| die "Could not remove linking to boost library"
+	fi
 }
 
 src_compile() {
 	# Generates top-level Makefile
-	if use qt4; then
+	if use qt4 ; then
 		eqmake4
 	else
 		eqmake3
