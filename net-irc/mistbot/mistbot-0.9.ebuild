@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/mistbot/mistbot-0.9.ebuild,v 1.3 2007/10/30 21:14:40 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/mistbot/mistbot-0.9.ebuild,v 1.4 2007/10/30 21:34:14 jokey Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://znc.in/~psychon/mistbot/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE="doc xml nls debug ssl"
 
 RDEPEND="virtual/libc
@@ -54,13 +54,11 @@ src_compile() {
 
 	if use doc; then
 		ebegin "generate documentation"
-		#make doc || die "make doc failed"
 		emake doc || die "make doc failed"
 	fi
 }
 
 src_install() {
-	#make install DESTDIR="${D}" || die "make install failed"
 	emake DESTDIR="${D}" install
 	dodoc AUTHORS mistbot.conf
 
