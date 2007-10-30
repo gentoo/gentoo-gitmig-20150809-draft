@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/inputd-0.1.1.ebuild,v 1.2 2007/10/28 13:58:07 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/inputd-0.1.1.ebuild,v 1.3 2007/10/30 07:27:18 killerfox Exp $
 
 inherit eutils
 
@@ -33,4 +33,8 @@ pkg_postinst() {
 	ewarn "The configuration syntax has slightly changed between "
 	ewarn "inputd 0.0.x and 0.1.x. Please make sure every statement "
 	ewarn "ends with a semicolon (;)."
+	ewarn
+	ewarn "If you encounter problem after an upgrade to >=udev-116-r1 "
+	ewarn "please note that the path from /dev/misc/uinput might be changed to "
+	ewarn "/dev/input/uinput"
 }

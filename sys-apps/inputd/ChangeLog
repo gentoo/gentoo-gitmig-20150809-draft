@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/inputd
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/ChangeLog,v 1.20 2007/10/28 13:58:07 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/ChangeLog,v 1.21 2007/10/30 07:27:18 killerfox Exp $
+
+  30 Oct 2007; René Nussbaumer <killerfox@gentoo.org> inputd-0.1.1.ebuild:
+  Adding note about changed paths by an upgrade of udev. Thanks to Nathan Smith.
 
   28 Oct 2007; Christian Heim <phreak@gentoo.org> inputd-0.0.8.ebuild,
   inputd-0.1.1.ebuild:
