@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/xu4-0.9.ebuild,v 1.6 2007/04/09 20:54:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/xu4-0.9.ebuild,v 1.7 2007/10/30 06:59:17 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -42,7 +42,7 @@ src_unpack() {
 	mkdir u4-dos
 	cd u4-dos
 	unzip -q ../ultima4.zip || die "unzip failed"
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${PV}-savegame.patch"
 	sed -i \
 		-e "s:/usr/local/lib/u4:$(games_get_libdir)/u4:" src/u4file.c \
