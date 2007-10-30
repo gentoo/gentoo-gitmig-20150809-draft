@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.66 2007/10/29 11:47:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.67 2007/10/30 03:36:55 jer Exp $
+
+  30 Oct 2007; Jeroen Roovers <jer@gentoo.org> wxpython-2.6.4.0.ebuild:
+  Stable for HPPA (bug #197186).
 
   29 Oct 2007; Raúl Porcel <armin76@gentoo.org> wxpython-2.6.4.0.ebuild:
   alpha/ia64/sparc stable wrt #197358
