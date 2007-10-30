@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.66 2007/05/12 18:21:23 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.67 2007/10/30 01:18:19 betelgeuse Exp $
+
+*ant-tasks-1.6.5-r4 (30 Oct 2007)
+
+  30 Oct 2007; Petteri Räty <betelgeuse@gentoo.org>
+  +ant-tasks-1.6.5-r4.ebuild:
+  Add missing dependency on xml-commons-external and switch to from source
+  sun-jaf.
 
   12 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   ant-tasks-1.7.0-r2.ebuild:
@@ -158,6 +165,8 @@
   22 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   ant-tasks-1.6.5-r2.ebuild:
   Replace arch with uname -m for Gentoo/FreeBSD compatibility. See bug #141422.
+
+*ant-tasks-1.6.5-r2 (26 Jun 2006)
 
   26 Jun 2006; Joshua Nichols <nichoj@gentoo.org>
   +ant-tasks-1.6.5-r2.ebuild:
