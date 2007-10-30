@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.9-r1.ebuild,v 1.1 2007/06/12 20:00:51 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.9-r1.ebuild,v 1.2 2007/10/30 15:47:30 fmccor Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.kerofin.demon.co.uk/rox/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0.1
@@ -47,7 +47,7 @@ src_install() {
 	find . -name '.cvs*' | xargs rm -f >/dev/null 2>&1
 	dodoc ${baselibdir}/${APPNAME}
 	dodir ${baselibdir}/${APPNAME}
-	cp -r . ${D}${baselibdir}/${APPNAME}
+	cp -r . "${D}${baselibdir}/${APPNAME}"
 	(
 		cd Help
 		dodoc Authors Changes ToDo COPYING README Versions

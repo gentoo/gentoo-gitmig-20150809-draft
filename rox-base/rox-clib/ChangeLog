@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-clib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.18 2007/06/12 20:00:51 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.19 2007/10/30 15:47:30 fmccor Exp $
+
+  30 Oct 2007; Ferris McCormick <fmccor@gentoo.org>
+  rox-clib-2.1.9-r1.ebuild:
+  Add ~sparc (bookkeeping, fix quoting); builds and installs as expected.
 
 *rox-clib-2.1.9-r1 (12 Jun 2007)
 
