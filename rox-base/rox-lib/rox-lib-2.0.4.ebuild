@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.4.ebuild,v 1.1 2007/06/12 20:12:30 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.4.ebuild,v 1.2 2007/10/30 16:37:53 fmccor Exp $
 
 NEED_PYTHON="2.3"
 inherit python eutils multilib
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/rox/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=rox-base/rox-2.2.0
@@ -23,8 +23,8 @@ S=${WORKDIR}/${MY_PN}-${PV}
 src_install() {
 	local baselibdir="/usr/$(get_libdir)"
 	dodir ${baselibdir}
-	cp -r ROX-Lib2/ ${D}${baselibdir}
-	python_mod_optimize ${D}${baselibdir}/ROX-Lib2/ >/dev/null 2>&1
+	cp -r ROX-Lib2/ "${D}${baselibdir}"
+	python_mod_optimize "${D}${baselibdir}/ROX-Lib2/" >/dev/null 2>&1
 	dodir /usr/share/doc/
 	dosym ${baselibdir}/ROX-Lib2/Help /usr/share/doc/${P}
 }

@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox-lib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.15 2007/06/12 20:12:30 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.16 2007/10/30 16:37:53 fmccor Exp $
+
+  30 Oct 2007; Ferris McCormick <fmccor@gentoo.org> rox-lib-2.0.4.ebuild:
+  Add ~sparc (bookkeeping, fix quotes).  AppRun appears to work as it should.
 
 *rox-lib-2.0.4 (12 Jun 2007)
 
