@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.187 2007/10/23 21:19:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.188 2007/10/30 06:20:01 compnerd Exp $
+
+  30 Oct 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/totem-2.20.1-browser-plugins.patch, totem-2.20.1.ebuild:
+  Fix runtime errors with nsplugins by linking against xpcom
 
   23 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org> totem-2.16.5.ebuild,
   totem-2.18.2.ebuild, totem-2.18.3.ebuild:

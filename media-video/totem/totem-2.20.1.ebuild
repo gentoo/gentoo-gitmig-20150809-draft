@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.20.1.ebuild,v 1.1 2007/10/23 21:19:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.20.1.ebuild,v 1.2 2007/10/30 06:20:01 compnerd Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -152,7 +152,7 @@ src_unpack() {
 	gnome2_src_unpack
 
 	if use nsplugin ; then
-		epatch "${FILESDIR}"/${PN}-2.18.1-browser-plugins.patch
+		epatch "${FILESDIR}"/${PN}-2.20.1-browser-plugins.patch
 		eautoreconf
 	fi
 
