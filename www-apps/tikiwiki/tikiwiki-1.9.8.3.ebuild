@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.8.3.ebuild,v 1.1 2007/10/28 15:46:17 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.8.3.ebuild,v 1.2 2007/10/30 19:20:40 dertobi123 Exp $
 
 inherit webapp depend.php
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 IUSE="mysql postgres graphviz"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc ~x86"
 
 RDEPEND="virtual/httpd-cgi
 	graphviz? ( media-gfx/graphviz )
