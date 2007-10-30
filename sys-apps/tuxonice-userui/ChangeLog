@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/suspend2-userui
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.1 2007/10/27 19:55:15 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.2 2007/10/30 13:57:37 alonbl Exp $
+
+  30 Oct 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  files/digest-tuxonice-userui-0.7.2, Manifest:
+  Fix parallel make issue, bug#197507
 
 *tuxonice-userui-0.7.2 (27 Oct 2007)
 
