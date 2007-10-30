@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3108 2007/10/29 14:52:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3109 2007/10/30 03:53:06 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1480,13 +1480,6 @@ net-im/ejabberd:statsdx - Collect (much) more detailed statistics
 net-im/ejabberd:web - Web support in ejabberd
 net-im/ekg2:gsm - Enable gsm plugin
 net-im/ekg2:nogg - Disable Gadu-Gadu plugin
-net-im/gaim:bonjour - Enable bonjour support
-net-im/gaim:console - Enable gaim-text
-net-im/gaim:custom-cflags - Disables stripping of "unsafe C[XX]FLAGS"
-net-im/gaim:gadu - Enable Gadu Gadu protocol support.
-net-im/gaim:groupwise - Enable Novell Groupwise protocol support.
-net-im/gaim:meanwhile - Enable meanwhile support for Sametime protocol.
-net-im/gaim:qq - Enable QQ protocol support.
 net-im/gaim:silc - Enable SILC protocol support
 net-im/gajim:idle - Enable idle module
 net-im/gajim:srv - SRV capabilities
