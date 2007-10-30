@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/inputd-0.1.1.ebuild,v 1.3 2007/10/30 07:27:18 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/inputd-0.1.1.ebuild,v 1.4 2007/10/30 07:29:46 killerfox Exp $
 
 inherit eutils
 
@@ -20,9 +20,9 @@ RDEPEND="sys-fs/udev
 	virtual/logger"
 
 src_install() {
-	emake DESTDIR=${D} install || die 'installation failed.'
+	emake DESTDIR="${D}" install || die 'installation failed.'
 
-	newinitd ${FILESDIR}/inputd.init inputd
+	newinitd "${FILESDIR}/inputd.init" inputd
 	dodoc README NEWS doc/FAQ
 
 	insinto /etc
