@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r13.ebuild,v 1.1 2007/10/28 20:27:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r13.ebuild,v 1.2 2007/10/30 09:53:49 opfer Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/emacs/${P}a.tar.gz
 
 LICENSE="GPL-2 FDL-1.1 BSD"
 SLOT="21"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="X Xaw3d leim lesstif motif nls sendmail"
 
 RDEPEND="sys-libs/ncurses
