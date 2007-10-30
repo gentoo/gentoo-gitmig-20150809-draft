@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.41 2007/10/30 14:14:34 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.42 2007/10/30 17:57:38 nixnut Exp $
+
+  30 Oct 2007; nixnut <nixnut@gentoo.org> rox-2.6.1.ebuild:
+  Stable on ppc wrt bug 197509
 
   30 Oct 2007; Ferris McCormick <fmccor@gentoo.org> rox-2.6.1.ebuild:
   Sparc stable --- Bug #197509 --- seems fine.
