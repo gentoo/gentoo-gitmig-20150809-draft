@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/marble/marble-0.4.ebuild,v 1.1 2007/10/29 03:02:51 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/marble/marble-0.4.ebuild,v 1.2 2007/10/30 13:52:46 cryos Exp $
 
 inherit toolchain-funcs multilib
 
@@ -21,7 +21,7 @@ S=${WORKDIR}/${PN}
 
 src_compile() {
 	# Determine the lib suffix
-	if [[ $(get_libdir)=='lib64' ]]; then
+	if [[ $(get_libdir) == 'lib64' ]]; then
 		local libsuffix='64'
 	else
 		local libsuffix=''

@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/marble
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/marble/ChangeLog,v 1.4 2007/10/29 03:02:51 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/marble/ChangeLog,v 1.5 2007/10/30 13:52:46 cryos Exp $
+
+  30 Oct 2007; Marcus D. Hanwell <cryos@gentoo.org> marble-0.4.ebuild:
+  Fix conditional error - always evaluated to true. Bug 197501.
 
 *marble-0.4 (29 Oct 2007)
 
