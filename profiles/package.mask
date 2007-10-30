@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7853 2007/10/29 23:27:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7854 2007/10/30 17:12:36 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -234,12 +234,6 @@ dev-php5/pecl-pdo-sqlite
 # on old packages not in portage any more
 # See bug #186440
 x11-wm/kahakai
-
-# Christian Faulhammer <opfer@gentoo.org> (01 Oct 2007)
-# ebuild is borked (see bug 192649)
-# upstream dead
-# removal on 30 Oct 2007
-dev-util/ladebug
 
 # Sven Wegener <swegener@gentoo.org> (30 Sep 2007)
 # Replaced by dev-db/mysql-gui-tools

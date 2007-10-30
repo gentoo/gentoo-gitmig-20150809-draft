@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.770 2007/10/29 23:27:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.771 2007/10/30 17:12:36 opfer Exp $
+
+  30 Oct 2007; Christian Faulhammer <opfer@gentoo.org> package.mask:
+  remove entry for dev-util/ladebug...it is gone from the tree
 
   29 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
   default-linux/x86/no-nptl/2.4/package.mask, package.mask:
