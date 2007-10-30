@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.7.0-r2.ebuild,v 1.6 2007/05/12 18:21:23 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.7.0-r2.ebuild,v 1.7 2007/10/30 01:20:18 betelgeuse Exp $
 
 inherit java-pkg-2 eutils
 
@@ -97,8 +97,8 @@ src_install() {
 
 	# point ANT_HOME to the one with all symlinked jars
 	# ant-core startup script will ignore this one anyway
-	echo "ANT_HOME=\"/usr/share/ant\"" > ${T}/21ant-tasks
-	doenvd ${T}/21ant-tasks || die "failed to install env.d file"
+	echo "ANT_HOME=\"/usr/share/ant\"" > "${T}/21ant-tasks"
+	doenvd "${T}/21ant-tasks" || die "failed to install env.d file"
 }
 
 pkg_postinst() {
