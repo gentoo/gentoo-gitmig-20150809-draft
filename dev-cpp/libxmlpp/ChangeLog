@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.60 2007/10/14 23:16:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.61 2007/10/30 11:22:11 remi Exp $
+
+*libxmlpp-2.20.0-r1 (30 Oct 2007)
+
+  30 Oct 2007; Rémi Cardona <remi@gentoo.org> -libxmlpp-2.20.0.ebuild,
+  +libxmlpp-2.20.0-r1.ebuild:
+  remove sed command on .pc file, upstream file is correct (fixes Gentoo bug
+  #197302 and Gnome bug #491191)
 
 *libxmlpp-2.20.0 (14 Oct 2007)
 

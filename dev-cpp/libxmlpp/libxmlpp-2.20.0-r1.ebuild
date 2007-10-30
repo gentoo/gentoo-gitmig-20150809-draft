@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.20.0.ebuild,v 1.1 2007/10/14 23:16:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.20.0-r1.ebuild,v 1.1 2007/10/30 11:22:11 remi Exp $
 
 inherit gnome2 eutils
 
@@ -36,8 +36,6 @@ src_unpack() {
 
 src_install() {
 	gnome2_src_install
-	dosed -i 's|^\(Cflags.*-I.* \)-I.*$|\1|' \
-		/usr/$(get_libdir)/pkgconfig/${MY_PN}-${SLOT}.pc
 
 	rm -fr "${D}"/usr/share/doc/libxml++*
 	use doc && dohtml docs/reference/${PV%.*}/html/*
