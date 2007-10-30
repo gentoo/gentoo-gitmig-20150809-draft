@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta1.ebuild,v 1.9 2007/10/29 18:16:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta1.ebuild,v 1.10 2007/10/30 03:12:23 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -26,7 +26,7 @@ O_URI="mirror://opera/"
 SRC_URI="amd64? ( ${O_URI}linux${O_FTP}x86_64/${PN}-${O_VER/b/}.2-shared-qt.x86_64-${O_SUFF}.tar.bz2 )
 	x86? ( qt-static? ( ${O_URI}linux${O_FTP}i386/static/${PN}-${O_VER}.9-static-qt.i386-${O_LNG}.tar.bz2 )
 		   !qt-static? ( ${O_URI}linux${O_FTP}i386/shared/${PN}-${O_VER}.6-shared-qt.i386-${O_LNG}.tar.bz2 ) )
-	ppc? ( qtstatic? ( ${O_URI}linux${O_FTP}ppc/static/${PN}-${O_VER}.1-static-qt.ppc-${O_LNG}.tar.bz2 )
+	ppc? ( qt-static? ( ${O_URI}linux${O_FTP}ppc/static/${PN}-${O_VER}.1-static-qt.ppc-${O_LNG}.tar.bz2 )
 		   !qt-static? ( ${O_URI}linux${O_FTP}ppc/shared/gcc-2.95/${PN}-${O_VER}.3-shared-qt.ppc-${O_LNG}.tar.bz2 ) )
 	x86-fbsd? (	qt-static? ( ${O_URI}unix/freebsd${O_FTP}static/${PN}-${O_VER}.1-static-qt.i386.freebsd-${O_LNG}.tar.bz2 )
 				!qt-static? ( ${O_URI}unix/freebsd${O_FTP}shared/${PN}-${O_VER}.4-shared-qt.i386.freebsd-${O_LNG}.tar.bz2 ) )"

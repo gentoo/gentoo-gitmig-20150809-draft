@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.166 2007/10/28 17:40:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.167 2007/10/30 03:12:23 jer Exp $
+
+  30 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_beta1.ebuild:
+  Fix spelling error critical for ppc users (thanks to mr_bones).
 
   28 Oct 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_beta1.ebuild:
   Removing emulation libraries for amd64 as Opera 9.50 is native x86_64.
