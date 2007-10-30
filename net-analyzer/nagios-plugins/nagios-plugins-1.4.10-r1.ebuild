@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.10-r1.ebuild,v 1.1 2007/10/29 19:51:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.10-r1.ebuild,v 1.2 2007/10/30 02:50:53 mr_bones_ Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -58,7 +58,7 @@ src_unpack() {
 
 	## CVE-2007-5623
 	epatch "${FILESDIR}"/CVE-2007-5623.patch
-	
+
 	epatch "${FILESDIR}"/${P}-check_http.patch
 
 	AT_M4DIR="m4 gl/m4" eautoreconf
