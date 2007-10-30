@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.771 2007/10/30 17:12:36 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.772 2007/10/30 21:13:28 flameeyes Exp $
+
+  30 Oct 2007; Diego Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask also the new PulseAudio version (the revision using the new init script).
 
   30 Oct 2007; Christian Faulhammer <opfer@gentoo.org> package.mask:
   remove entry for dev-util/ladebug...it is gone from the tree
