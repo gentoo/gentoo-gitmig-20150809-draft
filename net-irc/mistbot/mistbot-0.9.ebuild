@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/mistbot/mistbot-0.9.ebuild,v 1.1 2007/10/29 22:45:09 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/mistbot/mistbot-0.9.ebuild,v 1.2 2007/10/30 21:02:32 cla Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,7 +20,8 @@ RDEPEND="virtual/libc
 	xml? ( dev-libs/libxml2 )"
 
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen
+		app-text/xmlto )"
 
 src_compile() {
 	ebegin "Change build.conf to fit needs"
@@ -30,15 +31,15 @@ src_compile() {
 	fi
 
 	if ! use nls; then
-		sed -e '/^NLS = nls$/d' -i build.conf || die "sed failed"
+		sed -e '/^NLS\ =\nls$/d' -i build.conf || die "sed failed"
 	fi
 
 	if ! use debug; then
-		sed -e '/^DEBUG = debug$/d' -i build.conf || die "sed failed"
+		sed -e '/^DEBUG\ =\ debug$/d' -i build.conf || die "sed failed"
 	fi
 
 	if ! use ssl; then
-		sed -e '/^SSL = ssl$/d' -i build.conf || die "sed failed"
+		sed -e '/^SSL\ =\ ssl$/d' -i build.conf || die "sed failed"
 	fi
 
 	sed -e 's/^#ONCE\ =\ yes$/ONCE\ =\ yes/' -i build.conf || die "sed failed"
@@ -53,12 +54,14 @@ src_compile() {
 
 	if use doc; then
 		ebegin "generate documentation"
-		make doc || die "make doc failed"
+		#make doc || die "make doc failed"
+		emake doc || die "make doc failed"
 	fi
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
+	#make install DESTDIR="${D}" || die "make install failed"
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS mistbot.conf
 
 	if use doc; then
