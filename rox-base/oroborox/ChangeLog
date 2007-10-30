@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/oroborox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.12 2007/07/22 07:39:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.13 2007/10/30 17:44:23 fmccor Exp $
+
+  30 Oct 2007; Ferris McCormick <fmccor@gentoo.org> oroborox-0.9.8.ebuild:
+  Add ~sparc, fix quoting (bookkeeping); it starts up, at least.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   oroborox-0.9.7.9.ebuild, oroborox-0.9.8.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.8.ebuild,v 1.4 2007/07/22 07:39:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.8.ebuild,v 1.5 2007/10/30 17:44:23 fmccor Exp $
 
 ROX_LIB_VER=1.9.14
 inherit rox
@@ -13,7 +13,7 @@ SRC_URI="http://roxos.sunsite.dk/dev-contrib/guido/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 # startup-notification support is disabled by default, probably because it
 # doesn't work.
 # Also, there is no way to explicitly disable xinerama - It is always detected
@@ -61,7 +61,7 @@ unset CHOICESPATH
 # to change perms for all AppRun statements
 # in subdirectories
 pkg_preinst() {
-	cd ${D}/usr/lib/rox/${APPNAME}
+	cd "${D}/usr/lib/rox/${APPNAME}"
 	if [ -d "=build" ]; then
 		rm -rf "=build"
 	fi
