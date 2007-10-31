@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/afbinit
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.21 2007/04/28 21:53:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.22 2007/10/31 16:52:29 fmccor Exp $
+
+*afbinit-1.0.1-r6 (31 Oct 2007)
+
+  31 Oct 2007; Ferris McCormick <fmccor@gentoo.org>
+  +files/rc.afb-1.0.1-r6.patch, +afbinit-1.0.1-r6.ebuild:
+  Version bump for change in dmesg format to report FFB devices.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> afbinit-1.0.1-r4.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)
