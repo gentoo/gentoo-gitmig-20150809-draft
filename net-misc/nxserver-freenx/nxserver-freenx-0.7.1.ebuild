@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.0-r1.ebuild,v 1.3 2007/10/31 19:49:54 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.1.ebuild,v 1.1 2007/10/31 19:49:54 voyageur Exp $
 
 inherit multilib eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://freenx.berlios.de/"
 SRC_URI="http://download.berlios.de/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 RESTRICT="strip"
 IUSE="arts cups esd nxclient"
 DEPEND="virtual/ssh
@@ -48,13 +48,10 @@ src_unpack() {
 
 	mv node.conf.sample node.conf || die
 
-	epatch "${FILESDIR}"/${PN}-0.6.0-nxloadconfig.patch
-	epatch "${FILESDIR}"/${P}-kdecups.patch
-	epatch "${FILESDIR}"/${P}-xfsfonts.patch
-	epatch "${FILESDIR}"/${P}-nx3support.patch
-
-	# Fix DISPLAY for XCB-enabled systems
-	sed -i "s/unix:/:/g" nxnode || die
+	epatch "${FILESDIR}"/${P}-nxloadconfig.patch
+	epatch "${FILESDIR}"/${P}-cups.patch
+	epatch "${FILESDIR}"/${P}-nxdialog.patch
+	epatch "${FILESDIR}"/${P}-nscd.patch
 
 	sed -i "/PATH_LIB=/s/lib/$(get_libdir)/g" nxloadconfig || die
 	sed -i "/REAL_PATH_BIN=/s/lib/$(get_libdir)/g" nxloadconfig || die
@@ -92,8 +89,12 @@ src_install() {
 	dobin nxloadconfig
 	dobin nxsetup
 	dobin nxcups-gethost
+	dobin nxdialog
+	dobin nxdesktop_helper
+	dobin nxviewer_helper
+
+	# This should be renamed to remove the blocker on net-misc/nxclient
 	use nxclient || dobin nxprint
-	use nxclient || dobin nxclient
 
 	dodir ${NX_ETC_DIR}
 	for x in passwords passwords.orig ; do
