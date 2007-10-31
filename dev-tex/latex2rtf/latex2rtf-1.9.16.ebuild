@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.16.ebuild,v 1.1 2005/12/20 19:28:52 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.16.ebuild,v 1.2 2007/10/31 12:28:56 aballier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,9 +19,9 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-Makefile-gentoo.diff
-	epatch ${FILESDIR}/${P}-direntry.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-Makefile-gentoo.diff"
+	epatch "${FILESDIR}/${P}-direntry.patch"
 }
 
 src_compile() {
@@ -29,7 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	make PREFIX=${D}/usr CC=$(tc-getCC) install || die
+	make PREFIX="${D}/usr" CC=$(tc-getCC) install || die
 	dodoc README doc/latex2rtf.txt
 	# if doc is not used, only the text version is intalled.
 	if use doc; then

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex2rtf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.16 2007/10/31 12:26:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.17 2007/10/31 12:28:56 aballier Exp $
+
+  31 Oct 2007; Alexis Ballier <aballier@gentoo.org> latex2rtf-1.9.16.ebuild:
+  variable quoting
 
   31 Oct 2007; Alexis Ballier <aballier@gentoo.org>
   -files/latex2rtf-1.9.15-definitions.c.diff,
