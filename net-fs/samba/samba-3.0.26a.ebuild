@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.26a.ebuild,v 1.2 2007/10/31 20:32:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.26a.ebuild,v 1.3 2007/10/31 20:35:40 dev-zero Exp $
 
 inherit eutils pam python multilib versionator confutils
 
@@ -231,7 +231,7 @@ src_install() {
 
 	# docs
 	dodoc "${FILESDIR}/README.gentoo"
-	dodoc "${S}"/{COPYING,Manifest,README,Roadmap,WHATSNEW.txt}
+	dodoc "${S}"/{README,Roadmap,WHATSNEW.txt}
 	dodoc "${CONFDIR}/nsswitch.conf-wins"
 	use winbind && dodoc "${CONFDIR}/nsswitch.conf-winbind"
 
@@ -259,11 +259,11 @@ src_install() {
 
 pkg_preinst() {
 	local PRIVATE_SRC=/etc/samba/private
-	if [[ ! -r ${ROOT}/${PRIVATE_DST}/secrets.tdb \
-		&& -r ${ROOT}/${PRIVATE_SRC}/secrets.tdb ]] ; then
+	if [[ ! -r "${ROOT}/${PRIVATE_DST}/secrets.tdb" \
+		&& -r "${ROOT}/${PRIVATE_SRC}/secrets.tdb" ]] ; then
 		ebegin "Copying ${ROOT}/${PRIVATE_SRC}/* to ${ROOT}/${PRIVATE_DST}/"
-			mkdir -p "${D}"/${PRIVATE_DST}
-			cp -pPRf "${ROOT}"/${PRIVATE_SRC}/* "${D}"/${PRIVATE_DST}/
+			mkdir -p "${D}/${PRIVATE_DST}"
+			cp -pPRf "${ROOT}/${PRIVATE_SRC}"/* "${D}/${PRIVATE_DST}/"
 		eend $?
 	fi
 
