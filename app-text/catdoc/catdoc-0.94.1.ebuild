@@ -1,9 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/catdoc-0.94.1.ebuild,v 1.5 2007/10/21 20:18:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/catdoc-0.94.1.ebuild,v 1.6 2007/10/31 22:08:17 aballier Exp $
 
 DESCRIPTION="A convertor for Microsoft Word, Excel and RTF Files to text"
-HOMEPAGE="http://www.45.free.net/~vitus/software/catdoc/"
+HOMEPAGE="http://www.wagner.pp.ru/~vitus/software/catdoc/"
 SRC_URI="ftp://ftp.45.free.net/pub/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
