@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.6.ebuild,v 1.1 2007/04/06 01:10:06 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.6.ebuild,v 1.2 2007/10/31 13:22:01 dcoutts Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="-amd64 ~ppc -sparc ~x86"
 IUSE="readline"
 
-DEPEND=">=virtual/ghc-6.4.2
+DEPEND=">=dev-lang/ghc-6.4.2
 	readline? ( sys-libs/readline )"
 RDEPEND="dev-libs/gmp
 	readline? ( sys-libs/readline )"
