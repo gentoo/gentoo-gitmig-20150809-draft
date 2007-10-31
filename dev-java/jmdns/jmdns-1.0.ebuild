@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/jmdns-1.0.ebuild,v 1.1 2006/10/21 20:37:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/jmdns-1.0.ebuild,v 1.2 2007/10/31 07:48:26 opfer Exp $
 
 inherit java-pkg-2
 
@@ -12,7 +12,7 @@ DEPEND=">=virtual/jdk-1.3.1"
 RDEPEND=">=virtual/jre-1.3.1"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 src_unpack() {
 	unpack ${A}
