@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.26a.ebuild,v 1.1 2007/09/15 05:27:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.26a.ebuild,v 1.2 2007/10/31 20:32:20 dev-zero Exp $
 
 inherit eutils pam python multilib versionator confutils
 
@@ -302,9 +302,4 @@ pkg_postrm() {
 		python_version
 		python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/samba
 	fi
-
-	# If stale docs, and one isn't re-emerging the latest version, removes
-	# (this is actually a portage bug, though)
-	[[ -n ${PF} && ! -f ${ROOT}/usr/$(get_libdir)/${PN}/en.msg ]] && \
-		rm -rf "${ROOT}"/usr/share/doc/${PF}
 }
