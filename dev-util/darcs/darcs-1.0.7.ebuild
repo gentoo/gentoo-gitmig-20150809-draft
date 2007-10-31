@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.7.ebuild,v 1.5 2007/04/30 10:32:18 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.7.ebuild,v 1.6 2007/10/31 13:17:50 dcoutts Exp $
 
 inherit base autotools eutils
 
@@ -19,7 +19,7 @@ DEPEND=">=net-misc/curl-7.10.2
 	dev-haskell/html
 	dev-haskell/mtl
 	dev-haskell/quickcheck
-	>=virtual/ghc-6.2.2
+	>=dev-lang/ghc-6.2.2
 	doc?  ( virtual/tetex
 			>=dev-tex/latex2html-2002.2.1_pre20041025-r1 )"
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bnfc
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.6 2006/10/17 20:46:42 dcoutts Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.7 2007/10/31 13:19:47 dcoutts Exp $
+
+  31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> bnfc-2.1.2.ebuild,
+  bnfc-2.2.ebuild:
+  Drop virtual/ghc in favour of dev-lang/ghc
 
   17 Oct 2006; Duncan Coutts <dcoutts@gentoo.org> bnfc-2.2.ebuild:
   Need to inherit eutils eclass.
