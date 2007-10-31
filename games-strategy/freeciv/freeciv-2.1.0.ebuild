@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.1.0.ebuild,v 1.1 2007/10/31 16:57:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.1.0.ebuild,v 1.2 2007/10/31 23:04:47 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -28,10 +28,16 @@ RDEPEND="readline? ( sys-libs/readline )
 		nls? ( virtual/libintl )
 		gtk? ( >=x11-libs/gtk+-2 )
 		!gtk? (
-			Xaw3d? ( x11-libs/Xaw3d )
-			!Xaw3d? ( x11-libs/libXaw )
-			x11-libs/libXmu
-			x11-libs/libXpm
+			sdl? (
+				media-libs/libsdl
+				media-libs/sdl-image
+			)
+			!sdl? (
+				Xaw3d? ( x11-libs/Xaw3d )
+				!Xaw3d? ( x11-libs/libXaw )
+				x11-libs/libXmu
+				x11-libs/libXpm
+			)
 		)
 		alsa? (
 			media-libs/alsa-lib
@@ -56,6 +62,8 @@ pkg_setup() {
 			elog "The Freeciv Client will be built with the GTK+-2 toolkit"
 		elif use Xaw3d ; then
 			elog "The Freeciv Client will be built with the Xaw3d toolkit"
+		elif use sdl ; then
+			elog "The Freeciv Client will be built with the SDL toolkit"
 		else
 			elog "The Freeciv Client will be built with the Xaw toolkit"
 		fi
@@ -112,6 +120,7 @@ src_compile() {
 		myclient="no"
 	else
 		myclient="xaw"
+		use sdl && myclient="sdl"
 		use Xaw3d && myclient="xaw3d"
 		if use gtk ; then
 			myclient="gtk-2.0"
@@ -141,7 +150,7 @@ src_install() {
 
 	if ! use dedicated ; then
 		# Install the app-defaults if Xaw/Xaw3d toolkit
-		if ! use gtk ; then
+		if ! use gtk && ! use sdl ; then
 			insinto /etc/X11/app-defaults
 			doins data/Freeciv || die "doins failed"
 		fi
