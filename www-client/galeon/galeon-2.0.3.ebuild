@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.3.ebuild,v 1.6 2007/10/09 15:22:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.3.ebuild,v 1.7 2007/10/31 12:40:15 hanno Exp $
 
 inherit gnome2 eutils
 
@@ -37,9 +37,9 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog FAQ README README.ExtraPrefs THANKS TODO NEWS"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/galeon-2.0.1-imagebehaviour.diff
+	unpack "${A}"
+	cd "${S}"
+	epatch "${FILESDIR}/galeon-2.0.1-imagebehaviour.diff"
 }
 
 src_compile() {
