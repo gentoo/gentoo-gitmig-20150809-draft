@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-session
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.25 2007/10/30 17:16:55 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.26 2007/10/31 07:27:36 opfer Exp $
+
+  31 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  rox-session-0.30.ebuild:
+  stable x86, bug 197516
 
   30 Oct 2007; Ferris McCormick <fmccor@gentoo.org> rox-session-0.30.ebuild:
   Add ~sparc (bookkeeping, fix quote); works well enough for testing.
