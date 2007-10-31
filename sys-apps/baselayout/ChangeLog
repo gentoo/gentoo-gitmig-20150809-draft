@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.440 2007/10/22 20:45:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.441 2007/10/31 23:26:25 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-2.0.0_rc6 (31 Oct 2007)
+
+  31 Oct 2007; Roy Marples <uberlord@gentoo.org>
+  +baselayout-2.0.0_rc6.ebuild:
+  rc6 fixed a few things and introduces a logger daemon and a new posix array
+  structure as discussed on -dev.
 
   22 Oct 2007; Roy Marples <uberlord@gentoo.org>
   baselayout-2.0.0_rc5.ebuild:
