@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/compizconfig-backend-kconfig
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/ChangeLog,v 1.3 2007/10/24 17:58:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/ChangeLog,v 1.4 2007/10/31 00:37:26 hanno Exp $
+
+  31 Oct 2007; Hanno Boeck <hanno@gentoo.org>
+  compizconfig-backend-kconfig-0.6.0.ebuild:
+  Added proper kde-deps, thanks to jmbsvicetto.
 
   24 Oct 2007; Luca Barbato <lu_zero@gentoo.org>
   compizconfig-backend-kconfig-0.6.0.ebuild:
