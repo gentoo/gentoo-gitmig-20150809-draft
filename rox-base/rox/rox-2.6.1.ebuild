@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.6.1.ebuild,v 1.4 2007/10/31 07:19:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.6.1.ebuild,v 1.5 2007/10/31 07:22:19 opfer Exp $
 
 inherit eutils multilib
 
@@ -34,7 +34,7 @@ MIMECONFDIR="/etc/xdg/rox.sourceforge.net"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}"/${P}-nostrip.patch
 }
 
@@ -67,11 +67,11 @@ src_install() {
 	doman rox.1
 
 	dodir ${APPDIR}
-	cp -r ${APPNAME}/ ${D}/${APPDIR}
+	cp -r ${APPNAME}/ "${D}/${APPDIR}"
 
 	# add documentation to be proper
 	( cd ${APPNAME}/Help
-	dodoc Changes COPYING README README-es TODO
+	dodoc Changes README README-es TODO
 	)
 
 	# install shell script
@@ -98,8 +98,8 @@ EOF
 exec "${APPDIR}/${APPNAME}/AppRun" -U "\$@"
 EOF
 
-	chmod 0755 ${D}/usr/bin/${WRAPPERNAME}
-	chmod 0755 ${D}/usr/bin/${WRAPPERNAME}uri
+	chmod 0755 "${D}/usr/bin/${WRAPPERNAME}"
+	chmod 0755 "${D}/usr/bin/${WRAPPERNAME}uri"
 
 	# install rox.xml
 	insinto ${MIMEDIR}/packages

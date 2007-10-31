@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.43 2007/10/31 07:19:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.44 2007/10/31 07:22:19 opfer Exp $
+
+  31 Oct 2007; Christian Faulhammer <opfer@gentoo.org> rox-2.6.1.ebuild:
+  quote some variables and prevent installation of useless file COPYING
 
   31 Oct 2007; Christian Faulhammer <opfer@gentoo.org> rox-2.6.1.ebuild:
   stable x86, bug 197509
