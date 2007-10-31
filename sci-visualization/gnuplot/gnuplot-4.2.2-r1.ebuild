@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.2-r1.ebuild,v 1.1 2007/10/30 21:15:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.2-r1.ebuild,v 1.2 2007/10/31 07:00:37 opfer Exp $
 
 inherit eutils elisp-common multilib wxwidgets
 
@@ -21,8 +21,8 @@ RDEPEND="
 	pdf? ( media-libs/pdflib )
 	ggi? ( media-libs/libggi )
 	gd? ( >=media-libs/gd-2 )
-	doc? ( virtual/tetex )
-	tetex? ( virtual/tetex )
+	doc? ( virtual/latex-base )
+	tetex? ( virtual/latex-base )
 	X? ( x11-libs/libXaw )
 	svga? ( media-libs/svgalib )
 	readline? ( >=sys-libs/readline-4.2 )
