@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.82 2007/10/30 18:40:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.83 2007/10/31 01:26:49 jer Exp $
+
+  31 Oct 2007; Jeroen Roovers <jer@gentoo.org> xfsprogs-2.9.4.ebuild:
+  Stable for HPPA (bug #197204).
 
   30 Oct 2007; nixnut <nixnut@gentoo.org> xfsprogs-2.9.4.ebuild:
   Stable on ppc wrt bug 197204
