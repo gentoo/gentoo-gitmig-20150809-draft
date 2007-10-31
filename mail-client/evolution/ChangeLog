@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.205 2007/10/19 11:10:39 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.206 2007/10/31 21:41:32 eva Exp $
+
+  31 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  evolution-2.12.0.ebuild, evolution-2.12.1.ebuild:
+  fix tests (again)
 
   19 Oct 2007; Roy Marples <uberlord@gentoo.org> evolution-2.12.1.ebuild:
   Restore the freebsd patch for timezones

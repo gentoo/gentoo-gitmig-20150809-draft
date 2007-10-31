@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.0.ebuild,v 1.2 2007/10/13 01:04:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.0.ebuild,v 1.3 2007/10/31 21:41:32 eva Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -97,6 +97,26 @@ pkg_setup() {
 	else
 		G2CONF="${G2CONF} $(use_with krb4 krb4 /usr)"
 	fi
+
+	# Fix tests (again)
+	echo "evolution-addressbook.xml" >> po/POTFILES.in
+	echo "evolution-calendar.xml" >> po/POTFILES.in
+	echo "evolution-composer-entries.xml" >> po/POTFILES.in
+	echo "evolution-editor.xml" >> po/POTFILES.in
+	echo "evolution-event-editor.xml" >> po/POTFILES.in
+	echo "evolution-mail-global.xml" >> po/POTFILES.in
+	echo "evolution-mail-list.xml" >> po/POTFILES.in
+	echo "evolution-mail-message.xml" >> po/POTFILES.in
+	echo "evolution-mail-messagedisplay.xml" >> po/POTFILES.in
+	echo "evolution-memo-editor.xml" >> po/POTFILES.in
+	echo "evolution-memos.xml" >> po/POTFILES.in
+	echo "evolution-message-composer.xml" >> po/POTFILES.in
+	echo "evolution-signature-editor.xml" >> po/POTFILES.in
+	echo "evolution-subscribe.xml" >> po/POTFILES.in
+	echo "evolution-task-editor.xml" >> po/POTFILES.in
+	echo "evolution-tasks.xml" >> po/POTFILES.in
+	echo "evolution.xml" >> po/POTFILES.in
+
 
 	# dang - I've changed this to do --enable-plugins=experimental.  This will autodetect
 	# new-mail-notify and exchange, but that cannot be helped for the moment.
