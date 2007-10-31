@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.5.ebuild,v 1.7 2007/10/24 00:12:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.5.ebuild,v 1.8 2007/10/31 17:06:26 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Audacious Player - Your music, your way, no exceptions"
 HOMEPAGE="http://audacious-media-player.org/"
-SRC_URI="http://static.audacious-media-player.org/release/${P}.tgz"
+SRC_URI="http://distfiles.atheme.org/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="aac adplug alsa arts chardet esd flac jack lirc mad modplug musepack nls opengl oss sid sndfile timidity tta vorbis wavpack wma pulseaudio"
+IUSE="aac adplug alsa arts chardet esd flac jack lirc mad modplug musepack nls oss sid sndfile timidity tta vorbis wavpack wma pulseaudio"
 
 RDEPEND="app-arch/unzip
 	dev-libs/libxml2
@@ -32,7 +32,6 @@ RDEPEND="app-arch/unzip
 	lirc? ( app-misc/lirc )
 	mad? ( media-libs/libmad )
 	musepack? ( media-libs/libmpcdec )
-	opengl? ( =media-libs/libprojectm-0.99* )
 	sid? ( media-libs/libsidplay )
 	sndfile? ( media-libs/libsndfile )
 	timidity? ( media-sound/timidity++ )
@@ -90,7 +89,6 @@ src_compile() {
 		$(use_enable chardet) \
 		$(use_enable wavpack) \
 		$(use_enable tta) \
-		$(use_enable opengl projectm) \
 		$(use_enable adplug) \
 		|| die
 

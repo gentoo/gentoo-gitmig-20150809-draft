@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.2.5.ebuild,v 1.7 2007/03/28 09:28:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.2.5.ebuild,v 1.8 2007/10/31 17:06:26 chainsaw Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="Audacious Player - Your music, your way, no exceptions"
 HOMEPAGE="http://audacious-media-player.org/"
-SRC_URI="http://audacious-media-player.org/release/${P}.tgz"
+SRC_URI="http://distfiles.atheme.org/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
