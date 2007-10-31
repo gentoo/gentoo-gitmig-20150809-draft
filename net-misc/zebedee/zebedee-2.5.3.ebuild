@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/zebedee-2.5.3.ebuild,v 1.6 2007/03/24 10:43:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/zebedee-2.5.3.ebuild,v 1.7 2007/10/31 03:28:14 vapier Exp $
 
 DESCRIPTION="A simple, free, secure TCP and UDP tunnel program"
 HOMEPAGE="http://www.winton.org.uk/zebedee/"
@@ -40,7 +40,7 @@ src_install() {
 	dodoc *.txt
 	dohtml *.html
 
-	newinitd "${FILESDIR}"/zebedee
+	doinitd "${FILESDIR}"/zebedee
 }
 
 pkg_postinst() {
