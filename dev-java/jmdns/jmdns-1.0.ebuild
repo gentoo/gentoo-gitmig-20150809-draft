@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/jmdns-1.0.ebuild,v 1.2 2007/10/31 07:48:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/jmdns-1.0.ebuild,v 1.3 2007/10/31 07:51:43 opfer Exp $
 
 inherit java-pkg-2
 
@@ -22,12 +22,12 @@ src_unpack() {
 
 src_compile() {
 	echo "Compiling JmDNS..."
-	ejavac ${S}/src/javax/jmdns/* || die
+	ejavac "${S}"/src/javax/jmdns/* || die
 	echo "Compiling tools..."
-	ejavac -classpath ${S}/src ${S}/src/com/strangeberry/jmdns/tools/* || die
+	ejavac -classpath "${S}/src" "${S}"/src/com/strangeberry/jmdns/tools/* || die
 	echo "Making jars..."
 	echo "Main-class: com.strangeberry.jmdns.tools.Main" > jmdns-tools-manifest
-	jar cmf jmdns-tools-manifest jmdns.jar -C ${S}/src com -C ${S}/src javax || die
+	jar cmf jmdns-tools-manifest jmdns.jar -C "${S}/src" com -C "${S}/src" javax || die
 }
 
 src_install() {
