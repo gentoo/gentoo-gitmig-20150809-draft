@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-1.0.2-r1.ebuild,v 1.1 2007/09/23 12:12:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-1.0.2-r1.ebuild,v 1.2 2007/10/31 13:28:20 dcoutts Exp $
 
 inherit autotools elisp-common
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc emacs"
 
-DEPEND="virtual/ghc
+DEPEND="dev-lang/ghc
 		emacs? ( virtual/emacs )
 		doc? ( dev-haskell/haddock )"
 RDEPEND=""
