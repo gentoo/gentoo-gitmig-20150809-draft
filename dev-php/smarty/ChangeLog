@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.71 2007/10/30 18:51:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.72 2007/10/31 07:29:13 jer Exp $
+
+  31 Oct 2007; Jeroen Roovers <jer@gentoo.org> smarty-2.6.18.ebuild:
+  Stable for HPPA (bug #197314).
 
   30 Oct 2007; nixnut <nixnut@gentoo.org> smarty-2.6.18.ebuild:
   Stable on ppc wrt bug 197314
