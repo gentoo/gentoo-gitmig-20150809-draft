@@ -1,30 +1,0 @@
-diff -ru latex2rtf-1.9.15-vanilla/doc/latex2rtf.info latex2rtf-1.9.15/doc/latex2rtf.info
---- latex2rtf-1.9.15-vanilla/doc/latex2rtf.info	2003-10-29 21:38:25.000000000 -0800
-+++ latex2rtf-1.9.15/doc/latex2rtf.info	2004-04-19 15:33:00.985457480 -0700
-@@ -1,6 +1,11 @@
- This is latex2rtf.info, produced by makeinfo version 4.2 from
- latex2rtf.texi.
- 
-+INFO-DIR-SECTION TeX
-+START-INFO-DIR-ENTRY
-+* LaTeX2RTF: (latex2rtf).            Convert a LaTeX file to RTF
-+END-INFO-DIR-ENTRY
-+
-        This file documents LaTeX2RTF , a converter that
- translates LaTeX  to RTF.  Copyright 1998-2002 Georg Lehner, 
- updates Copyright 1999-2003 by Wilfried Hennings and Scott Prahl, 
-diff -ru latex2rtf-1.9.15-vanilla/doc/latex2rtf.texi latex2rtf-1.9.15/doc/latex2rtf.texi
---- latex2rtf-1.9.15-vanilla/doc/latex2rtf.texi	2003-10-29 21:36:23.000000000 -0800
-+++ latex2rtf-1.9.15/doc/latex2rtf.texi	2004-04-19 15:33:13.635534376 -0700
-@@ -35,6 +35,11 @@
- @end iftex
- @end macro
- 
-+@dircategory TeX
-+@direntry
-+* LaTeX2RTF: (latex2rtf).            Convert a LaTeX file to RTF
-+@end direntry
-+
- @ifinfo
- This file documents @ltor{}, a converter that translates @latex{} to RTF.
- 
