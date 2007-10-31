@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7858 2007/10/31 17:56:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7859 2007/10/31 19:53:00 eva Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -128,10 +128,6 @@ dev-php4/pecl-http
 <net-nds/phpldapadmin-1.0
 # incompatible with php-5 as well, bug 194894
 <=www-apps/knowledgetree-3.4.3
-
-# Rémi Cardona <remi@gentoo.org> (18 Oct 2007)
-# Dasher still fails to build
->=app-accessibility/dasher-4.6.0
 
 # Eldad Zack <eldadz@gentoo.org> (16 Oct 2007)
 # ardour-2.1 using syslibs, see bug #194437
