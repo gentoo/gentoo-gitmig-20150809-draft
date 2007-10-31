@@ -1,0 +1,74 @@
+Index: latex2rtf-1.9.18/Makefile
+===================================================================
+--- latex2rtf-1.9.18.orig/Makefile
++++ latex2rtf-1.9.18/Makefile
+@@ -1,11 +1,11 @@
+ # $Id: latex2rtf-1.9.18-Makefile-gentoo.diff,v 1.1 2007/10/31 12:22:37 aballier Exp $
+ 
+-CC=gcc
+ MKDIR=mkdir -p
+ TAR=gnutar
+ RM=rm
+ 
+-CFLAGS:=-DUNIX
++# Gentoo: Modified to use makefile.conf CFLAGS
++CFLAGS:=$(CFLAGS) -DUNIX
+ #CFLAGS:=-DMSDOS         #Windows/DOS
+ #CFLAGS:=-DMAC_CLASSIC   #MacOS 8/9
+ #CFLAGS:=-DOS2           #OS/2
+@@ -23,17 +23,17 @@ LINK_FLAGS = -lm
+ #CFLAGS:=$(CFLAGS) -Zwin32  
+ 
+ #Base directory - adapt as needed
+-PREFIX=$(PREFIX_DRIVE)/usr/local
++PREFIX=/usr
+ 
+ #Name of executable binary --- beware of 8.3 restriction under DOS
+ BINARY_NAME=latex2rtf$(EXE_SUFFIX)
+ 
+ # Location of binary, man, info, and support files - adapt as needed
+ BIN_INSTALL=$(PREFIX)/bin
+-MAN_INSTALL=$(PREFIX)/man/man1
+-INFO_INSTALL=$(PREFIX)/info
+-SUPPORT_INSTALL=$(PREFIX)/share/latex2rtf
+-CFG_INSTALL=$(PREFIX)/share/latex2rtf/cfg
++MAN_INSTALL=$(PREFIX)/share/man/man1
++INFO_INSTALL=$(PREFIX)/share/info
++SUPPORT_INSTALL=$(PREFIX)/share/doc/latex2rtf
++CFG_INSTALL=$(PREFIX)/share/latex2rtf/
+ 
+ # Nothing to change below this line
+ 
+@@ -137,7 +137,7 @@ OBJS=fonts.o direct.o encodings.o comman
+ all : checkdir uptodate latex2rtf
+ 
+ latex2rtf: $(OBJS) $(HDRS)
+-	$(CC) $(CFLAGS) $(LINK_FLAGS) $(OBJS)	$(LIBS) -o $(BINARY_NAME)
++	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS)	$(LIBS) -o $(BINARY_NAME) $(LINK_FLAGS)
+ 
+ cfg.o: Makefile cfg.c
+ 	$(CC) $(CFLAGS) -DCFGDIR=\"$(CFG_INSTALL)\" -c cfg.c -o cfg.o
+@@ -206,23 +206,6 @@ install: latex2rtf doc/latex2rtf.1 $(CFG
+ 	cp doc/latex2rtf.1    $(MAN_INSTALL)
+ 	cp doc/latex2png.1    $(MAN_INSTALL)
+ 	cp $(CFGS)            $(CFG_INSTALL)
+-	cp doc/latex2rtf.html $(SUPPORT_INSTALL)
+-	cp doc/latex2rtf.pdf  $(SUPPORT_INSTALL)
+-	cp doc/latex2rtf.txt  $(SUPPORT_INSTALL)
+-	@echo "******************************************************************"
+-	@echo "*** latex2rtf successfully installed as \"$(BINARY_NAME)\""
+-	@echo "*** in directory \"$(BIN_INSTALL)\""
+-	@echo "***"
+-	@echo "*** \"make install-info\" will install TeXInfo files "
+-	@echo "***"
+-	@echo "*** latex2rtf was compiled to search for its configuration files in"
+-	@echo "***           \"$(CFG_INSTALL)\" "
+-	@echo "***"
+-	@echo "*** If the configuration files are moved then either"
+-	@echo "***   1) set the environment variable RTFPATH to this new location, or"
+-	@echo "***   2) use the command line option -P /path/to/cfg, or"
+-	@echo "***   3) edit the Makefile and recompile"
+-	@echo "******************************************************************"
+ 
+ install-info: doc/latex2rtf.info
+ 	$(MKDIR) $(INFO_INSTALL)

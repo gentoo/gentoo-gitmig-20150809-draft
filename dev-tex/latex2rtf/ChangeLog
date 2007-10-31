@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/latex2rtf
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.14 2007/03/13 00:27:58 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.15 2007/10/31 12:22:37 aballier Exp $
+
+*latex2rtf-1.9.18 (31 Oct 2007)
+
+  31 Oct 2007; Alexis Ballier <aballier@gentoo.org>
+  +files/latex2rtf-1.9.18-Makefile-gentoo.diff, +latex2rtf-1.9.18.ebuild:
+  version bump, bug #196999
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
