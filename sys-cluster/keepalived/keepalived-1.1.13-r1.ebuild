@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.13-r1.ebuild,v 1.10 2007/10/25 09:42:50 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.13-r1.ebuild,v 1.11 2007/10/31 04:59:07 jer Exp $
 
 inherit flag-o-matic autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.keepalived.org/software/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ia64 ppc ppc64 ~s390 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 ~s390 sparc x86"
 IUSE="debug profile"
 
 RDEPEND="dev-libs/popt
