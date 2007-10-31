@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/compiz-fusion-plugins-main
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-main/ChangeLog,v 1.6 2007/10/25 14:00:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-main/ChangeLog,v 1.7 2007/10/31 00:26:38 hanno Exp $
+
+  31 Oct 2007; Hanno Boeck <hanno@gentoo.org>
+  compiz-fusion-plugins-main-0.6.0.ebuild:
+  Needs latest libxml2.
 
   25 Oct 2007; Olivier Crête <tester@gentoo.org>
   compiz-fusion-plugins-main-0.6.0.ebuild:
