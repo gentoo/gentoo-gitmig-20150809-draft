@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.11 2007/10/13 14:21:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.4.ebuild,v 1.12 2007/10/31 13:11:43 dcoutts Exp $
 
 inherit flag-o-matic wxwidgets ghc-package multilib
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
-RDEPEND="<virtual/ghc-6.6
-	!>=virtual/ghc-6.6
+RDEPEND="<dev-lang/ghc-6.6
+	!>=dev-lang/ghc-6.6
 	=x11-libs/wxGTK-2.6*"
 
 DEPEND="${RDEPEND}

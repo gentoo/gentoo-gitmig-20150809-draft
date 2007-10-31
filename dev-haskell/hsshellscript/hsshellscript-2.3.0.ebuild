@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/hsshellscript-2.3.0.ebuild,v 1.3 2007/07/13 06:03:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/hsshellscript-2.3.0.ebuild,v 1.4 2007/10/31 13:05:52 dcoutts Exp $
 
 inherit base eutils ghc-package
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=virtual/ghc-6.2
-	!>=virtual/ghc-6.4"
+DEPEND=">=dev-lang/ghc-6.2
+	!>=dev-lang/ghc-6.4"
 RDEPEND=""
 
 src_unpack() {

@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/haxml
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.24 2007/08/11 15:48:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.25 2007/10/31 12:59:40 dcoutts Exp $
+
+  31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> haxml-1.12.ebuild,
+  haxml-1.13-r1.ebuild, haxml-1.13.2.ebuild:
+  Drop virtual/ghc in favour of dev-lang/ghc
 
   11 Aug 2007; Steve Dibb <beandog@gentoo.org> haxml-1.13.2.ebuild:
   amd64 stable, bug 186849

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.15.ebuild,v 1.15 2006/10/11 18:31:57 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.15.ebuild,v 1.16 2007/10/31 12:57:48 dcoutts Exp $
 
 inherit base eutils ghc-package
 
@@ -13,7 +13,7 @@ KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 #java use flag disabled, bug #107019
 
-DEPEND=">=virtual/ghc-5.04
+DEPEND=">=dev-lang/ghc-5.04
 	doc? (  ~app-text/docbook-xml-dtd-4.2
 		app-text/docbook-xsl-stylesheets )"
 #		java? ( >=dev-java/fop-0.20.5 ) )"

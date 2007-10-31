@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/hdoc-0.8.3.ebuild,v 1.10 2006/10/05 03:23:53 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/hdoc-0.8.3.ebuild,v 1.11 2007/10/31 13:02:03 dcoutts Exp $
 
 DESCRIPTION="A documentation generator for Haskell"
 HOMEPAGE="http://www.fmi.uni-passau.de/~groessli/hdoc/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="virtual/ghc"
+DEPEND="dev-lang/ghc"
 RDEPEND=""
 
 src_compile() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.7.ebuild,v 1.15 2007/07/13 06:03:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.7.ebuild,v 1.16 2007/10/31 12:57:11 dcoutts Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -19,8 +19,8 @@ SLOT="0"
 KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86"
 LICENSE="as-is"
 
-DEPEND="virtual/ghc
-		!>=virtual/ghc-6.6
+DEPEND="dev-lang/ghc
+		!>=dev-lang/ghc-6.6
 	doc? (  ~app-text/docbook-xml-dtd-4.2
 		app-text/docbook-xsl-stylesheets
 		>=dev-libs/libxslt-1.1.2
@@ -29,7 +29,7 @@ DEPEND="virtual/ghc
 RDEPEND=""
 
 pkg_setup() {
-	if ! has_version virtual/ghc; then
+	if ! has_version dev-lang/ghc; then
 		eerror "Due to a bug in the portage dependency resolution, emerge"
 		eerror "sometimes tries to merge haddock before a version of ghc"
 		eerror "is available on the system. This is usually triggered when"

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.10-r1.ebuild,v 1.5 2007/10/12 08:41:45 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.10-r1.ebuild,v 1.6 2007/10/31 12:56:42 dcoutts Exp $
 
 inherit base eutils ghc-package multilib autotools
 
@@ -15,8 +15,8 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="doc glade gnome firefox"
 
-RDEPEND="<virtual/ghc-6.6
-		!>=virtual/ghc-6.6
+RDEPEND="<dev-lang/ghc-6.6
+		!>=dev-lang/ghc-6.6
 		amd64? ( || ( >=dev-lang/ghc-6.4.1 >=dev-lang/ghc-bin-6.4.1 ) )
 		>=x11-libs/gtk+-2
 		glade? ( >=gnome-base/libglade-2 )

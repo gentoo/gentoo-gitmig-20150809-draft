@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-0.9.10-r1.ebuild,v 1.6 2007/04/30 07:34:42 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-0.9.10-r1.ebuild,v 1.7 2007/10/31 13:02:57 dcoutts Exp $
 
 inherit ghc-package
 
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="-amd64 ~ppc ~sparc ~x86" # currently broken on amd64
 IUSE="doc"
 
-DEPEND="<virtual/ghc-6.6
-	!>=virtual/ghc-6.6
+DEPEND="<dev-lang/ghc-6.6
+	!>=dev-lang/ghc-6.6
 	>=dev-haskell/haskell-src-exts-0.2
 	dev-haskell/cabal"
 

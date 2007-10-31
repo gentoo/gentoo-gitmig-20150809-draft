@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hdoc
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/ChangeLog,v 1.15 2006/10/05 03:23:53 cparrott Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/ChangeLog,v 1.16 2007/10/31 13:02:03 dcoutts Exp $
+
+  31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> hdoc-0.8.3.ebuild:
+  Drop virtual/ghc in favour of dev-lang/ghc
 
   05 Oct 2006; Chris Parrott <cparrott@gentoo.org> hdoc-0.8.3.ebuild:
   marked stable for amd64 (bug 144678)

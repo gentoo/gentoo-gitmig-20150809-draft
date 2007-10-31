@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.1-r1.ebuild,v 1.16 2007/07/13 06:03:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.1-r1.ebuild,v 1.17 2007/10/31 12:53:01 dcoutts Exp $
 #
 # USE variable summary:
 #   doc	   - Build extra documenation from DocBook sources,
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86"
 LICENSE="as-is"
 
-DEPEND=">=virtual/ghc-6.2
+DEPEND=">=dev-lang/ghc-6.2
 	doc? (	~app-text/docbook-xml-dtd-4.2
 		app-text/docbook-xsl-stylesheets
 		>=dev-libs/libxslt-1.1.2 )"

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/uulib-0.9.2.ebuild,v 1.9 2006/11/12 15:23:34 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/uulib-0.9.2.ebuild,v 1.10 2007/10/31 13:10:46 dcoutts Exp $
 
 CABAL_FEATURES="haddock lib"
 inherit base haskell-cabal
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND=">=virtual/ghc-6.2.2"
+DEPEND=">=dev-lang/ghc-6.2.2"
 
 src_unpack() {
 	base_src_unpack

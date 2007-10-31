@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/hxt-6.0.ebuild,v 1.1 2006/07/06 18:05:29 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/hxt-6.0.ebuild,v 1.2 2007/10/31 13:07:44 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit base haskell-cabal
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=virtual/ghc-6.4
+DEPEND=">=dev-lang/ghc-6.4
 		dev-haskell/http"
 
 S=${WORKDIR}/${MY_P}

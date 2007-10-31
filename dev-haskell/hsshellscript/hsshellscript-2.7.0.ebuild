@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/hsshellscript-2.7.0.ebuild,v 1.1 2006/11/03 20:52:41 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/hsshellscript-2.7.0.ebuild,v 1.2 2007/10/31 13:05:52 dcoutts Exp $
 
 inherit base eutils multilib ghc-package
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~ppc ~x86 ~amd64"
 IUSE="doc"
 
-DEPEND=">=virtual/ghc-6.4
+DEPEND=">=dev-lang/ghc-6.4
 	>=dev-libs/glib-2.0
 	doc? ( >=dev-haskell/haddock-0.6 )"
 RDEPEND=""

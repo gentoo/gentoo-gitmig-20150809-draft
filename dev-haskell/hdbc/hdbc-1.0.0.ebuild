@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/hdbc-1.0.0.ebuild,v 1.1 2006/07/02 19:08:39 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/hdbc-1.0.0.ebuild,v 1.2 2007/10/31 13:00:06 dcoutts Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="odbc postgres sqlite"
 
-DEPEND=">=virtual/ghc-6.4.1"
+DEPEND=">=dev-lang/ghc-6.4.1"
 
 PDEPEND="odbc? ( =dev-haskell/hdbc-odbc-${PV}* )
 		 postgres? ( =dev-haskell/hdbc-postgresql-${PV}* )

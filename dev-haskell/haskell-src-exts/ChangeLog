@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/haskell-src-exts
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/ChangeLog,v 1.9 2006/10/17 20:42:54 dcoutts Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/ChangeLog,v 1.10 2007/10/31 12:59:13 dcoutts Exp $
+
+  31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org>
+  haskell-src-exts-0.2.ebuild:
+  Drop virtual/ghc in favour of dev-lang/ghc
 
   17 Oct 2006; Duncan Coutts <dcoutts@gentoo.org>
   haskell-src-exts-0.2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.5.6.ebuild,v 1.4 2006/10/17 20:56:21 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.5.6.ebuild,v 1.5 2007/10/31 13:11:16 dcoutts Exp $
 
 inherit base eutils ghc-package check-reqs autotools
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~sparc"
 IUSE="doc postgres"
 
-RDEPEND=">=virtual/ghc-6.4.1
+RDEPEND=">=dev-lang/ghc-6.4.1
 		postgres? ( >=dev-db/libpq-7.4.3 )"
 
 DEPEND="${RDEPEND}

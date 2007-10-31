@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hsql-postgresql
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/ChangeLog,v 1.6 2007/02/21 23:19:52 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/ChangeLog,v 1.7 2007/10/31 13:04:59 dcoutts Exp $
+
+  31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org>
+  hsql-postgresql-1.7.ebuild:
+  Drop virtual/ghc in favour of dev-lang/ghc
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

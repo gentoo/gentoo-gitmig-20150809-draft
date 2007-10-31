@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/drift
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/ChangeLog,v 1.18 2007/08/11 15:29:15 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/ChangeLog,v 1.19 2007/10/31 12:55:21 dcoutts Exp $
+
+  31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> drift-2.1.2.ebuild,
+  drift-2.2.0.ebuild:
+  Drop virtual/ghc in favour of dev-lang/ghc
 
   11 Aug 2007; Steve Dibb <beandog@gentoo.org> drift-2.2.0.ebuild:
   amd64 stable, bug 186849

@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.31 2007/10/14 08:49:04 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.32 2007/10/31 12:57:48 dcoutts Exp $
+
+  31 Oct 2007; Duncan Coutts <dcoutts@gentoo.org> happy-1.15.ebuild,
+  happy-1.16.ebuild:
+  Drop virtual/ghc in favour of dev-lang/ghc
 
   14 Oct 2007; Lennart Kolmodin <kolmodin@gentoo.org> happy-1.16.ebuild:
   Specify exactly which cabal versions that are supported, as happy-1.16
