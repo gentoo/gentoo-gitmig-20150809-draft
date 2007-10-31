@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.60 2007/09/06 17:23:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.61 2007/10/31 13:48:55 fmccor Exp $
+
+  31 Oct 2007; Ferris McCormick <fmccor@gentoo.org> iptraf-3.0.0-r4.ebuild:
+  Sparc stable, fix quoting --- Bug #197609 --- Neat!
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -iptraf-3.0.0.ebuild:
   Cleanup
