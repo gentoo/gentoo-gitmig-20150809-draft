@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/gnome-thumbnailer
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/gnome-thumbnailer/ChangeLog,v 1.3 2007/06/22 22:01:09 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/gnome-thumbnailer/ChangeLog,v 1.4 2007/10/31 07:30:34 opfer Exp $
+
+  31 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  gnome-thumbnailer-0.3.ebuild:
+  stable x86, bug 197516
 
   22 Jun 2007; Jim Ramsay <lack@gentoo.org> gnome-thumbnailer-0.3.ebuild:
   Adding ~amd64 keyword
