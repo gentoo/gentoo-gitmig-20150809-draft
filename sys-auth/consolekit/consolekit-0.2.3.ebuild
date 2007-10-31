@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.3.ebuild,v 1.4 2007/10/18 15:43:51 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.3.ebuild,v 1.5 2007/10/31 21:32:27 uberlord Exp $
 
 inherit eutils autotools multilib pam
 
@@ -27,6 +27,14 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_PN}-${MY_PV}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Work around an apparent FreeBSD kernel bug
+	use x86-fbsd && epatch "${FILESDIR}/${P}"-freebsd.patch
+}
 
 src_compile() {
 	econf $(use_enable debug) \

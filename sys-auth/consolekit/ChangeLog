@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.24 2007/10/18 15:43:51 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.25 2007/10/31 21:32:27 uberlord Exp $
+
+  31 Oct 2007; Roy Marples <uberlord@gentoo.org>
+  +files/consolekit-0.2.3-freebsd.patch, consolekit-0.2.3.ebuild:
+  Add a workaround for a FreeBSD kernel bug so consolekit stops when in use.
 
   18 Oct 2007; Roy Marples <uberlord@gentoo.org> consolekit-0.2.3.ebuild:
   Keyworded ~x86-fbsd
