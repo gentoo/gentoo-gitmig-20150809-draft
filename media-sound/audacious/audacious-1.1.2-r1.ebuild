@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.2-r1.ebuild,v 1.5 2006/10/21 18:43:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.2-r1.ebuild,v 1.6 2007/10/31 17:06:22 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -52,9 +52,9 @@ mp3_warning() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/1.1.2-fix-playlist-transparency.patch
-	epatch ${FILESDIR}/1.1.2-robust-resume.patch
+	cd "${S}"
+	epatch "${FILESDIR}/1.1.2-fix-playlist-transparency.patch"
+	epatch "${FILESDIR}/1.1.2-robust-resume.patch"
 }
 
 src_compile() {
