@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.6.2.ebuild,v 1.2 2007/10/24 16:15:13 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.6.2.ebuild,v 1.3 2007/10/31 00:18:53 hanno Exp $
 
 inherit gnome2
 
@@ -24,7 +24,7 @@ DEPEND=">=media-libs/mesa-6.5.1-r1
 	x11-libs/pango
 	x11-libs/startup-notification
 	gnome-base/gconf
-	>=x11-libs/libwnck-2.20.1
+	>=x11-libs/libwnck-2.18.3
 	dev-libs/libxslt
 	gnome? ( >=gnome-base/control-center-2.16.1 )
 	svg? ( gnome-base/librsvg )
