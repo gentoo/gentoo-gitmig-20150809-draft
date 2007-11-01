@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.8.1-r1.ebuild,v 1.7 2007/10/28 19:55:25 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.8.1-r1.ebuild,v 1.8 2007/11/01 13:49:25 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -40,8 +40,8 @@ check_old_modules() {
 	if sed -e 's:#.*::' /etc/pam.d/* | fgrep -q pam_stack.so; then
 		eerror ""
 		eerror "Your current setup is using the pam_stack module."
-		eerror "This module is deprecated and no more supported, and since version"
-		eerror "0.99 is no more installed, nor provided by any other package."
+		eerror "This module is deprecated and no longer supported, and since version"
+		eerror "0.99 is no longer installed, nor provided by any other package."
 		eerror "The package will be built (to allow binary package builds), but will"
 		eerror "not be installed."
 		eerror "Please replace pam_stack usage with proper include directive usage,"
