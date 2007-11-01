@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netselect
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.30 2007/09/29 06:50:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.31 2007/11/01 12:44:47 armin76 Exp $
+
+  01 Nov 2007; Raúl Porcel <armin76@gentoo.org> netselect-0.3-r2.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #197745
 
 *netselect-0.3-r2 (29 Sep 2007)
 
