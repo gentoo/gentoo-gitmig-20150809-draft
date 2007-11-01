@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xcalib
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalib/ChangeLog,v 1.7 2007/10/18 21:47:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalib/ChangeLog,v 1.8 2007/11/01 10:58:19 hansmi Exp $
+
+*xcalib-0.8 (01 Nov 2007)
+
+  01 Nov 2007; Michael Hanselmann <hansmi@gentoo.org> +xcalib-0.8.ebuild:
+  Version bump, bug 196655.
 
   18 Oct 2007; Michael Hanselmann <hansmi@gentoo.org> -xcalib-0.6.ebuild:
   Remove old ebuild.
