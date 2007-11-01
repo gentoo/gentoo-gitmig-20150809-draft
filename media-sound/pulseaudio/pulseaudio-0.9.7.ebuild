@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.7.ebuild,v 1.1 2007/10/31 15:20:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.7.ebuild,v 1.2 2007/11/01 14:14:56 flameeyes Exp $
 
 inherit eutils libtool # autotools
 
@@ -80,7 +80,7 @@ src_compile() {
 		$(use_enable avahi) \
 		$(use_enable hal) \
 		$(use_enable dbus) \
-		$(use_enable gconf gnome) \
+		$(use_enable gnome gconf) \
 		$(use_enable libsamplerate samplerate) \
 		$(use_with caps) \
 		$(use_with X x) \
