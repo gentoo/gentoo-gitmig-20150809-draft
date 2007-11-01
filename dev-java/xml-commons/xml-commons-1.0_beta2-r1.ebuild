@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2-r1.ebuild,v 1.4 2007/05/26 08:54:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2-r1.ebuild,v 1.5 2007/11/01 15:15:21 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://apache/xml/commons/${MY_P}.tar.gz"
 # See ${S}/java/external for the license files
 LICENSE="Apache-1.1 public-domain W3C-document W3C"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4"
