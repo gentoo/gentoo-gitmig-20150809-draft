@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/yaps
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.15 2007/05/16 07:10:43 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.16 2007/11/01 11:19:24 maekke Exp $
+
+  01 Nov 2007; Markus Meier <maekke@gentoo.org> yaps-0.96-r2.ebuild:
+  x86 stable, bug #197087
 
 *yaps-0.96-r2 (16 May 2007)
 
