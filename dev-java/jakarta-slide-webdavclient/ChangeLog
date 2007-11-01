@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jakarta-slide-webdavclient
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-slide-webdavclient/ChangeLog,v 1.6 2007/07/22 10:10:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-slide-webdavclient/ChangeLog,v 1.7 2007/11/01 00:37:39 betelgeuse Exp $
+
+  01 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -jakarta-slide-webdavclient-2.1-r1.ebuild:
+  Delete old revision.
 
   22 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
   jakarta-slide-webdavclient-2.1-r2.ebuild:
