@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.107 2007/10/30 19:11:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.108 2007/11/01 06:54:32 vapier Exp $
+
+*strace-4.5.16-r1 (01 Nov 2007)
+
+  01 Nov 2007; Mike Frysinger <vapier@gentoo.org>
+  +files/strace-4.5.16-mips-syscallent.patch,
+  +files/strace-4.5.16-sh-updates.patch, +strace-4.5.16-r1.ebuild:
+  Updates for mips/sh.
 
   30 Oct 2007; Markus Rothe <corsair@gentoo.org> strace-4.5.16.ebuild:
   Stable on ppc64; bug #197398
