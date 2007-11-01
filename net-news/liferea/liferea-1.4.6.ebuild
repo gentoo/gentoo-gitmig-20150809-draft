@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.5b.ebuild,v 1.1 2007/10/17 23:44:14 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.6.ebuild,v 1.1 2007/11/01 03:07:26 dang Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=latest
@@ -81,6 +81,6 @@ pkg_setup() {
 
 src_install() {
 	gnome2_src_install
-	rm -f ${D}/usr/bin/${PN}
-	mv ${D}/usr/bin/${PN}-bin ${D}/usr/bin/${PN}
+	rm -f "${D}/usr/bin/${PN}"
+	mv "${D}/usr/bin/${PN}-bin" "${D}/usr/bin/${PN}"
 }

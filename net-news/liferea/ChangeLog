@@ -1,6 +1,30 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.125 2007/10/17 23:44:14 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.126 2007/11/01 03:07:26 dang Exp $
+
+*liferea-1.2.23-r1 (01 Nov 2007)
+
+  01 Nov 2007; Daniel Gryniewicz <dang@gentoo.org>
+  +files/liferea-1.2.23-backup-perms.patch, +liferea-1.2.23-r1.ebuild:
+  Bump with patch to fix backup perms; bug #197701
+
+*liferea-1.4.6 (01 Nov 2007)
+
+  01 Nov 2007; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.4.5b.ebuild,
+  +liferea-1.4.6.ebuild:
+  Bump to 1.4.6
+  	* Fixes visible markup in "no title" item titles.
+  	* Fixes unread count in tray icon not updated properly (reported by
+  	  cpapp)
+  	* Fixes segfaults when clicking on empty folder (reported by Luis
+  	  Rodrigo Gallardo Cruz)
+  	* Fixes issue that feedlist.opml backup file has permissions 0644
+  	  instead if 0600.
+  	* Updated Japanese translation (Takeshi AIHANA)
+  	* Fixes segfault on mark-all-read (reported by snmartin)
+  	* Build fix for NetworkManager 0.7.x (Jeremy Katz)
+  	* Fixes looses user-defined feed titles on updates (reported by
+  	* several users)
 
 *liferea-1.4.5b (17 Oct 2007)
 
