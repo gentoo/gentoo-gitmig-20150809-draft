@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.0.ebuild,v 1.3 2007/10/31 21:41:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.0.ebuild,v 1.4 2007/11/01 19:17:23 mr_bones_ Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -116,7 +116,6 @@ pkg_setup() {
 	echo "evolution-task-editor.xml" >> po/POTFILES.in
 	echo "evolution-tasks.xml" >> po/POTFILES.in
 	echo "evolution.xml" >> po/POTFILES.in
-
 
 	# dang - I've changed this to do --enable-plugins=experimental.  This will autodetect
 	# new-mail-notify and exchange, but that cannot be helped for the moment.
