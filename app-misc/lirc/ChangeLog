@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.159 2007/10/18 16:05:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.160 2007/11/01 15:20:09 opfer Exp $
+
+  01 Nov 2007; Christian Faulhammer <opfer@gentoo.org> lirc-0.8.2-r2.ebuild:
+  stable x86, bug 197768
 
   18 Oct 2007; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.2-r1.ebuild,
   lirc-0.8.2-r2.ebuild, lirc-0.8.3_pre1.ebuild:
