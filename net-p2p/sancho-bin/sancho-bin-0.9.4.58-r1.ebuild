@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58-r1.ebuild,v 1.1 2007/10/31 19:46:39 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58-r1.ebuild,v 1.2 2007/11/01 05:29:59 mr_bones_ Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RESTRICT="strip"
 KEYWORDS="~x86"
 SLOT="0"
 LICENSE="CPL-1.0 LGPL-2.1"
-IUSE=""
+IUSE="java"
 
 DEPEND="x11-libs/libXxf86vm
 	x11-libs/libXext
