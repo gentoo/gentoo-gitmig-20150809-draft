@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.13 2007/10/30 17:57:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.14 2007/11/01 19:09:21 armin76 Exp $
+
+  01 Nov 2007; Raúl Porcel <armin76@gentoo.org>
+  tex4ht-20071024_p0140.ebuild:
+  Add ~alpha/~ia64 wrt #197543
 
   30 Oct 2007; Alexis Ballier <aballier@gentoo.org>
   tex4ht-20050406_p1623-r1.ebuild, tex4ht-20050701_p1825.ebuild:
