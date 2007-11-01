@@ -1,6 +1,6 @@
 # Copyright 2004-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-subtitles/vdr-subtitles-0.5.0.ebuild,v 1.2 2007/08/25 20:44:04 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-subtitles/vdr-subtitles-0.5.0.ebuild,v 1.3 2007/11/01 21:10:07 drac Exp $
 
 inherit vdr-plugin eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://virtanen.org/vdr/subtitles/"
 SRC_URI="http://virtanen.org/vdr/subtitles/files/${P}.tgz
 		http://www.saunalahti.fi/~rahrenbe/vdr/patches/${P}-purkkapaikka.diff.gz
 		mirror://vdrfiles/${PN}/${P}.tgz"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
