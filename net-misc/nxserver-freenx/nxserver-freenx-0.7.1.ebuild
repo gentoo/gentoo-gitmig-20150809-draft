@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.1.ebuild,v 1.1 2007/10/31 19:49:54 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.1.ebuild,v 1.2 2007/11/01 23:49:24 voyageur Exp $
 
 inherit multilib eutils
 
@@ -114,8 +114,17 @@ src_install() {
 }
 
 pkg_postinst () {
-	usermod -s /usr/bin/nxserver nx || die "Unable to set login shell of nx user!!"
-	usermod -d ${NX_HOME_DIR} nx || die "Unable to set home directory of nx user!!"
+	# Other NX servers ebuilds may have already created the nx account
+	# However they use different login shell/home directory paths
+	if [[ ${ROOT} == "/" ]]; then
+		usermod -s /usr/bin/nxserver nx || die "Unable to set login shell of nx user!!"
+		usermod -d ${NX_HOME_DIR} nx || die "Unable to set home directory of nx user!!"
+	else
+		elog "If you had another NX server installed before, please make sure"
+		elog "the nx user account is correctly set to:"
+		elog " * login shell: /usr/bin/nxserver"
+		elog " * home directory: ${NX_HOME_DIR}"
+	fi
 
 	elog "To complete the installation, run:"
 	elog " nxsetup --install --setup-nomachine-key --clean --purge"
