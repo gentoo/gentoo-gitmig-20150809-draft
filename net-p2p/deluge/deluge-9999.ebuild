@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.5 2007/10/09 18:13:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.6 2007/11/01 12:53:14 armin76 Exp $
 
 inherit eutils distutils subversion flag-o-matic
 
@@ -31,12 +31,8 @@ pkg_setup() {
 		eerror "dev-libs/boost has to be built with threads USE-flag."
 		die "Missing threads USE-flag for dev-libs/boost"
 	fi
-}
 
-src_compile() {
 	filter-ldflags -Wl,--as-needed
-
-	distutils_src_compile
 }
 
 pkg_postinst() {
