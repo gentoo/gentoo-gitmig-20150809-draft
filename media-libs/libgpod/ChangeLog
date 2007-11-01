@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.37 2007/06/28 17:18:12 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.38 2007/11/01 03:11:59 beandog Exp $
+
+  01 Nov 2007; Steve Dibb <beandog@gentoo.org> libgpod-0.5.2.ebuild:
+  amd64 stable, bug 197716
 
   28 Jun 2007; <tester@gentoo.org> libgpod-0.5.2.ebuild:
   Force gdk-pixbuf on if python bindings are built
