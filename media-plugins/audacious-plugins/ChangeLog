@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.63 2007/10/31 17:06:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.64 2007/11/01 23:50:50 chainsaw Exp $
+
+*audacious-plugins-1.4.0_rc1 (01 Nov 2007)
+
+  01 Nov 2007; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-plugins-1.4.0_rc1.ebuild:
+  Add release candidate 1.
 
 *audacious-plugins-1.4.0_beta4 (31 Oct 2007)
 
