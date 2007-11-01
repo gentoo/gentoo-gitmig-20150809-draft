@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.14.2.ebuild,v 1.11 2007/09/03 02:41:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.14.2.ebuild,v 1.12 2007/11/01 22:55:36 eva Exp $
 
-inherit eutils gnome2 autotools
+inherit eutils gnome2 autotools python
 
 DESCRIPTION="Xft powered terminal widget"
 HOMEPAGE="http://www.gnome.org/"
@@ -48,6 +48,21 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-0.13.2-no-lazy-bindings.patch"
 	epatch "${FILESDIR}/${PN}-0.14.1-fbsd.patch"
 
-	cd ${S}/gnome-pty-helper
+	cd "${S}/gnome-pty-helper"
 	eautomake
 }
+
+pkg_postinst() {
+	if use python; then
+		python_version
+		python_mod_optimize "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0"
+	fi
+}
+
+pkg_postrm() {
+	if use python; then
+		python_version
+		python_mod_cleanup "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0"
+	fi
+}
+
