@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-m17n
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.30 2007/10/03 08:00:10 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.31 2007/11/01 12:57:09 armin76 Exp $
+
+  01 Nov 2007; Raúl Porcel <armin76@gentoo.org> scim-m17n-0.2.2.ebuild:
+  alpha stable wrt #189292
 
   03 Oct 2007; Tom Gall <tgall@gentoo.org>
   scim-m17n-0.2.2.ebuild:
