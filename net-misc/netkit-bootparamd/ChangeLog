@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/netkit-bootparamd
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootparamd/ChangeLog,v 1.1 2007/11/01 21:28:58 jokey Exp $
+
+*netkit-bootparamd-0.17-r2 (01 Nov 2007)
+*netkit-bootparamd-0.17-r1 (01 Nov 2007)
+
+  01 Nov 2007; Markus Ullmann <jokey@gentoo.org>
+  +files/0.17-jumpstart.patch, +metadata.xml,
+  +netkit-bootparamd-0.17-r1.ebuild, +netkit-bootparamd-0.17-r2.ebuild:
+  Split bootpd and bootparamd
+
