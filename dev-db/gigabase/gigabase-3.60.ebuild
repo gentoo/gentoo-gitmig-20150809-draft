@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.58.ebuild,v 1.1 2007/05/05 15:30:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.60.ebuild,v 1.1 2007/11/01 12:31:56 pva Exp $
 
 inherit eutils libtool multilib
 
@@ -13,7 +13,15 @@ KEYWORDS="~amd64 ~s390 ~x86"
 IUSE="doc"
 DEPEND=""
 
-S="${WORKDIR}"/gigabase
+S=${WORKDIR}/gigabase
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	sed -ie 's: confdefs.h::g' Makefile.in
+	epatch "${FILESDIR}"/${P}-confdefs.h-and-warnings.patch
+}
 
 src_compile() {
 	mf="${S}/Makefile"
