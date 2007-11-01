@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-0.9.5.ebuild,v 1.2 2007/09/21 18:43:17 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-0.9.5.ebuild,v 1.3 2007/11/01 11:43:17 maekke Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gpodder.berlios.de/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="ipod"
 RESTRICT="test"
 
