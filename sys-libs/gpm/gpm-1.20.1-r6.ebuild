@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r6.ebuild,v 1.1 2007/07/07 19:48:14 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r6.ebuild,v 1.2 2007/11/01 19:09:21 phreak Exp $
 
 # emacs support disabled due to Bug 99533
 
@@ -29,6 +29,7 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 	epatch "${FILESDIR}"/gpm-configure-LANG.patch
 	epatch "${FILESDIR}"/gpm-daemon.patch
+	epatch "${FILESDIR}"/gpm-OPEN_MAX.patch
 }
 
 src_compile() {
