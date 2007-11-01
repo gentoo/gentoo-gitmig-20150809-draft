@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/joda-time
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.27 2007/10/30 00:31:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.28 2007/11/01 23:51:59 wltjr Exp $
+
+  01 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  joda-time-1.4-r1.ebuild:
+  amd64 stable, bug #187616.
 
 *joda-time-1.5 (30 Oct 2007)
 
