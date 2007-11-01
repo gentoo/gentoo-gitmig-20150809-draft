@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/caucho-services
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/caucho-services/ChangeLog,v 1.8 2007/10/24 04:18:39 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/caucho-services/ChangeLog,v 1.9 2007/11/01 20:18:59 betelgeuse Exp $
+
+  01 Nov 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -caucho-services-2.1.12.ebuild, -caucho-services-2.1.12-r1.ebuild:
+  Move SLOT 2.1 ebuilds to java-overlay as nothing in the main tree needs them
+  any more.
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org> Manifest:
   Removed java gen 1 ebuild
