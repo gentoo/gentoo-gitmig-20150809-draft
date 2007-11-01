@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/unfoo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.23 2007/11/01 14:18:16 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.24 2007/11/01 15:42:59 fmccor Exp $
+
+  01 Nov 2007; Ferris McCormick <fmccor@gentoo.org> unfoo-1.0.6.ebuild:
+  Sparc stable --- Bug #197743 --- everything looks fine.
 
   01 Nov 2007; Dawid Węgliński <cla@gentoo.org> unfoo-1.0.6.ebuild:
   Stable on x86 (bug #197743)
