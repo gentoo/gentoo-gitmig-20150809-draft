@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xdoclet
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.29 2007/10/24 06:31:25 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.30 2007/11/01 23:46:20 wltjr Exp $
+
+  01 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  xdoclet-1.2.3.ebuild:
+  amd64 stable, bug #187603.
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -xdoclet-1.2.2.ebuild, xdoclet-1.2.3.ebuild:
