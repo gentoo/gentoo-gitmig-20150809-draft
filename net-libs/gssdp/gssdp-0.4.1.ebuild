@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.4.1.ebuild,v 1.1 2007/09/24 16:35:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.4.1.ebuild,v 1.2 2007/11/01 16:31:47 drac Exp $
 
 DESCRIPTION="A GObject-based API for handling resource discovery and announcement over SSDP."
 HOMEPAGE="http://gupnp.org"
@@ -8,7 +8,7 @@ SRC_URI="http://gupnp.org/sources/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc X"
 
 RDEPEND=">=dev-libs/glib-2.9.1
