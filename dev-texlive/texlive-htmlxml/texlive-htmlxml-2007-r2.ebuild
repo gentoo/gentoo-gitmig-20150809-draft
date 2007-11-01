@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/texlive-htmlxml-2007-r2.ebuild,v 1.1 2007/10/30 18:06:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/texlive-htmlxml-2007-r2.ebuild,v 1.2 2007/11/01 19:10:43 armin76 Exp $
 
 TEXLIVE_MODULES_DEPS="dev-texlive/texlive-basic
 dev-texlive/texlive-fontsrecommended
@@ -15,4 +15,4 @@ DESCRIPTION="TeXLive HTML/SGML/XML support"
 
 LICENSE="GPL-2 LPPL-1.3c"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
