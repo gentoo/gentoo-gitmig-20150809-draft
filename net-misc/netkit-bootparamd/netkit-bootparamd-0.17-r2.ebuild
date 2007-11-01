@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootparamd/netkit-bootparamd-0.17-r2.ebuild,v 1.1 2007/11/01 21:28:58 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootparamd/netkit-bootparamd-0.17-r2.ebuild,v 1.2 2007/11/01 21:56:29 jokey Exp $
 
 inherit eutils
 
@@ -12,6 +12,9 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~hppa ~mips ~ppc ~sparc ~x86"
 IUSE=""
+
+DEPEND="!<=net-misc/netkit-bootpd-0.17-r2"
+RDEPEND=${DEPEND}
 
 src_unpack() {
 	unpack ${A}
