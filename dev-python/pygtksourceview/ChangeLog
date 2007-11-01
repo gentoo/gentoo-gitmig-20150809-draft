@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygtksourceview
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.1 2007/10/10 21:22:53 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.2 2007/11/01 17:22:15 hawking Exp $
+
+*pygtksourceview-2.0.0-r1 (01 Nov 2007)
+
+  01 Nov 2007; Ali Polatel <hawking@gentoo.org>
+  pygtksourceview-2.0.0.ebuild, +pygtksourceview-2.0.0-r1.ebuild:
+  revbump. added doc USE flag and dependencies needed (bug 196726). dropped
+  mips keyword.
 
 *pygtksourceview-2.0.0 (10 Oct 2007)
 
