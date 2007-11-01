@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.59 2007/08/21 19:50:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.60 2007/11/01 03:34:42 beandog Exp $
+
+  01 Nov 2007; Steve Dibb <beandog@gentoo.org> gtkpod-0.99.10.ebuild:
+  amd64 stable, bug 197716
 
   21 Aug 2007; Joseph Jezak <josejx@gentoo.org> gtkpod-0.99.10.ebuild:
   Marked ~ppc64.
