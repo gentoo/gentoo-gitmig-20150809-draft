@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/linkage
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/ChangeLog,v 1.5 2007/10/25 13:00:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/ChangeLog,v 1.6 2007/11/01 17:33:24 drac Exp $
+
+  01 Nov 2007; Samuli Suominen <drac@gentoo.org> linkage-0.1.4.ebuild:
+  Keyword ~amd64 wrt #186477.
 
   25 Oct 2007; Raúl Porcel <armin76@gentoo.org> -linkage-0.1.2.ebuild:
   old

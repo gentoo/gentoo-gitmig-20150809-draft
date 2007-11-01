@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/linkage-0.1.4.ebuild,v 1.1 2007/08/23 16:00:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linkage/linkage-0.1.4.ebuild,v 1.2 2007/11/01 17:33:24 drac Exp $
 
 SCROLLKEEPER_UPDATE="no"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="curl gnome upnp xfce"
 
 RDEPEND=">=net-libs/rb_libtorrent-0.12
