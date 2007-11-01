@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-7.00.ebuild,v 1.10 2006/08/21 04:29:01 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-7.00.ebuild,v 1.11 2007/11/01 16:46:28 calchan Exp $
 
 inherit eutils qt3
 
@@ -34,5 +34,5 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	dodoc ChangeLog COPYING README
+	dodoc ChangeLog README
 }
