@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/mplayer-skins
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.23 2007/02/21 22:52:41 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.24 2007/11/02 03:12:58 beandog Exp $
+
+*mplayer-skins-0.2-r6 (02 Nov 2007)
+
+  02 Nov 2007; Steve Dibb <beandog@gentoo.org> +mplayer-skins-0.2-r6.ebuild:
+  Version bump, bug 181728
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
