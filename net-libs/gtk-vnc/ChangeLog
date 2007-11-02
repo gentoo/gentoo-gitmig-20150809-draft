@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.1 2007/10/15 11:14:12 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.2 2007/11/02 13:06:12 angelos Exp $
+
+  02 Nov 2007; Christoph Mende <angelos@gentoo.org> gtk-vnc-0.2.0.ebuild:
+  Added ~amd64
 
 *gtk-vnc-0.2.0 (15 Oct 2007)
 
