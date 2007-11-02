@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a-r1.ebuild,v 1.7 2007/10/27 10:27:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.12a-r1.ebuild,v 1.8 2007/11/02 22:52:50 pylon Exp $
 
 inherit autotools elisp-common eutils fixheadtails
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://member.wide.ad.jp/wg/mgp/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="cjk doc emacs examples gif imlib m17n-lib mng nls truetype"
 
 MY_DEPEND="x11-libs/libICE
