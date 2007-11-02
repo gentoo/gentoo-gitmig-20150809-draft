@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jta
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.17 2007/10/28 13:41:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.18 2007/11/02 00:00:39 wltjr Exp $
+
+  02 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  jta-1.0.1-r1.ebuild:
+  amd64 stable, bug #196837.
 
   28 Oct 2007; Markus Rothe <corsair@gentoo.org> jta-1.0.1-r1.ebuild:
   Stable on ppc64; bug #196837
