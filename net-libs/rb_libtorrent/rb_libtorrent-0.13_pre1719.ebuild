@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13_pre1683.ebuild,v 1.1 2007/10/22 14:12:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13_pre1719.ebuild,v 1.1 2007/11/02 15:32:28 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
