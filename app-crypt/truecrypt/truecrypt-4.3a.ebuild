@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3a.ebuild,v 1.4 2007/11/02 03:45:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3a.ebuild,v 1.5 2007/11/02 06:50:13 alonbl Exp $
 
 #
 # NOTES:
@@ -38,7 +38,6 @@ pkg_setup() {
 	BUILD_PARAMS="KERNEL_SRC=${KERNEL_DIR} NO_WARNINGS=1"
 	BUILD_TARGETS="truecrypt"
 	MODULE_NAMES="truecrypt(block:${S}/Linux/Kernel)"
-
 }
 
 src_unpack() {
@@ -57,12 +56,6 @@ src_compile() {
 
 src_test() {
 	"${S}/Linux/Cli/truecrypt" --test
-}
-
-pkg_preinst() {
-	# unload truecrypt modules if already loaded
-	/sbin/rmmod truecrypt >&- 2>&-
-	grep -q "^truecrypt" /proc/modules && die "Please dismount all mounted TrueCrypt volumes"
 }
 
 src_install() {
