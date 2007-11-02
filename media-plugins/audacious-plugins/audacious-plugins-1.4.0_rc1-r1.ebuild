@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.4.0_beta4.ebuild,v 1.1 2007/10/31 17:06:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.4.0_rc1-r1.ebuild,v 1.1 2007/11/02 11:16:46 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,8 @@ RDEPEND="app-arch/unzip
 	dev-libs/libxml2
 	>=gnome-base/libglade-2.3.1
 	media-libs/libsamplerate
-	>=media-sound/audacious-1.4.0_beta4
+	>=media-libs/libcddb-1.2.1
+	>=media-sound/audacious-1.4.0_rc1
 	>=net-misc/neon-0.26.3
 	>=x11-libs/gtk+-2.6
 	adplug? ( >=dev-cpp/libbinio-1.4 )
@@ -31,7 +32,7 @@ RDEPEND="app-arch/unzip
 	jack? ( >=media-libs/bio2jack-0.4
 		media-sound/jack-audio-connection-kit )
 	lirc? ( app-misc/lirc )
-	mad? ( media-libs/libmad )
+	mp3? ( media-libs/libmad )
 	mtp? ( >=media-libs/libmtp-0.2.3 )
 	musepack? ( media-libs/libmpcdec media-libs/taglib )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.3 )
