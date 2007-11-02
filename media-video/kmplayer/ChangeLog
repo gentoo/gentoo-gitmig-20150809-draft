@@ -1,6 +1,13 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.105 2007/10/03 22:14:47 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.106 2007/11/02 19:43:56 philantrop Exp $
+
+*kmplayer-0.10.0a (02 Nov 2007)
+
+  02 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +kmplayer-0.10.0a.ebuild:
+  Version bump to to 0.10.0a as per bug 197731. In contrast to what the
+  changelog says, nspr is still needed.
 
   03 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +files/kmplayer-0.10.0-prtypes.patch, kmplayer-0.10.0.ebuild:
