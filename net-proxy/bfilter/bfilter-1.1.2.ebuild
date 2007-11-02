@@ -1,8 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.0.9.ebuild,v 1.4 2007/07/04 17:53:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.1.2.ebuild,v 1.1 2007/11/02 16:56:49 mrness Exp $
 
-inherit eutils
+WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="none"
+
+inherit eutils autotools
 
 DESCRIPTION="An ad-filtering web proxy featuring an effective heuristic ad-detection algorithm"
 HOMEPAGE="http://bfilter.sourceforge.net/"
@@ -10,31 +13,47 @@ SRC_URI="mirror://sourceforge/bfilter/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 sparc x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="X debug"
 
 RDEPEND="sys-libs/zlib
 	>=dev-libs/ace-5.4.6
 	=dev-libs/libsigc++-2.0*
-	X? ( >=dev-cpp/gtkmm-2.4 )"
+	X? ( >=dev-cpp/gtkmm-2.4 )
+	dev-libs/boost"
 DEPEND="${RDEPEND}
 	dev-util/scons
 	dev-util/pkgconfig"
 
+pkg_setup() {
+	if ! built_with_use --missing true dev-libs/boost threads ; then
+		eerror "${PN} needs dev-libs/boost with threads support."
+		die "Re-compile dev-libs/boost with USE=threads."
+	fi
+}
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-external-boost.patch
+	epatch "${FILESDIR}"/${P}-date-test.patch
+	eautomake
+}
+
 src_compile() {
 	econf \
 		$(use_enable debug) \
-		$(use_with X gui) || die "econf failed"
+		$(use_with X gui) \
+		--without-builtin-boost || die "econf failed"
 	emake -j1 || die "emake failed"
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	doman "${FILESDIR}/bfilter.8"
-
 	dodoc AUTHORS ChangeLog
-	dohtml doc/*.png doc/*.jpg doc/*.html
+	dohtml doc/*
 
 	newinitd "${FILESDIR}/bfilter.init" bfilter
 	newconfd "${FILESDIR}/bfilter.conf" bfilter

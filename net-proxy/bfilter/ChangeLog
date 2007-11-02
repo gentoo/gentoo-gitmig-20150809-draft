@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/bfilter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.20 2007/10/09 14:38:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.21 2007/11/02 16:56:49 mrness Exp $
+
+*bfilter-1.1.2 (02 Nov 2007)
+
+  02 Nov 2007; Alin Năstac <mrness@gentoo.org>
+  +files/bfilter-1.1.2-date-test.patch,
+  +files/bfilter-1.1.2-external-boost.patch, -bfilter-1.0.9.ebuild,
+  +bfilter-1.1.2.ebuild:
+  Version bump.
 
   09 Oct 2007; Christoph Mende <angelos@gentoo.org> bfilter-1.1.ebuild:
   Stable on amd64 wrt bug #192768
