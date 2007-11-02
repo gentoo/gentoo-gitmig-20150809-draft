@@ -1,6 +1,17 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.21 2007/11/01 13:13:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.22 2007/11/02 20:39:17 tgurr Exp $
+
+*ghostscript-gpl-8.60-r1 (02 Nov 2007)
+*ghostscript-gpl-8.57-r1 (02 Nov 2007)
+*ghostscript-gpl-8.54-r1 (02 Nov 2007)
+
+  02 Nov 2007; Timo Gurr <tgurr@gentoo.org>
+  +files/ghostscript-CVE-2007-2721.patch, +ghostscript-gpl-8.54-r1.ebuild,
+  -ghostscript-gpl-8.57.ebuild, +ghostscript-gpl-8.57-r1.ebuild,
+  +ghostscript-gpl-8.60-r1.ebuild:
+  Revbump adding the patch to fix CVE-2007-2721 in all available versions, see
+  bug #196860. Also fix bug #197818, thanks Sven for reporting.
 
   01 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   ghostscript-gpl-8.60.ebuild:
