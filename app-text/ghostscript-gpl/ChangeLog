@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.22 2007/11/02 20:39:17 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.23 2007/11/02 23:45:42 pylon Exp $
+
+  02 Nov 2007; Lars Weiler <pylon@gentoo.org> ghostscript-gpl-8.60.ebuild:
+  stable ppc, bug #197346
 
 *ghostscript-gpl-8.60-r1 (02 Nov 2007)
 *ghostscript-gpl-8.57-r1 (02 Nov 2007)
