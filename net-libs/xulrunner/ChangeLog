@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.64 2007/10/24 05:32:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.65 2007/11/02 15:58:17 armin76 Exp $
+
+*xulrunner-1.8.1.9 (02 Nov 2007)
+
+  02 Nov 2007; Raúl Porcel <armin76@gentoo.org> +xulrunner-1.8.1.9.ebuild:
+  Version bump
 
   24 Oct 2007; Jeroen Roovers <jer@gentoo.org> xulrunner-1.8.1.8.ebuild:
   Stable for HPPA (bug #196480). Fixed quoting issues.
