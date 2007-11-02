@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/qdox-20050104.ebuild,v 1.6 2007/10/24 18:45:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/qdox-20050104.ebuild,v 1.7 2007/11/02 03:22:07 wltjr Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="Apache-1.1"
 SLOT="1.6" # it's the 1.6 codebase
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/qdox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.15 2007/10/24 18:45:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.16 2007/11/02 03:22:07 wltjr Exp $
+
+  02 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org> qdox-1.6.3.ebuild,
+  qdox-20050104.ebuild:
+  amd64 stable, bug #196849.
 
   24 Oct 2007; Markus Meier <maekke@gentoo.org> qdox-1.6.3.ebuild,
   qdox-20050104.ebuild:
