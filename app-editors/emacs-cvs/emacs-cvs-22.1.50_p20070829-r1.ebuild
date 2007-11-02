@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50_p20070829-r1.ebuild,v 1.6 2007/10/24 09:30:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50_p20070829-r1.ebuild,v 1.7 2007/11/02 09:43:51 ulm Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
@@ -172,7 +172,7 @@ src_install () {
 		doins src/*.[ch]
 		sed 's/^X//' >00${PN}-${SLOT}-gentoo.el <<-EOF
 
-		;;; emacs-${SLOT} site-lisp configuration
+		;;; ${PN}-${SLOT} site-lisp configuration
 
 		(if (string-match "\\\\\`${FULL_VERSION//./\\\\.}\\\\>" emacs-version)
 		X    (setq find-function-C-source-directory
