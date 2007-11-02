@@ -1,6 +1,9 @@
 # ChangeLog for app-text/talkfilters
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/ChangeLog,v 1.24 2007/11/02 03:36:07 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/ChangeLog,v 1.25 2007/11/02 21:18:55 pylon Exp $
+
+  02 Nov 2007; Lars Weiler <pylon@gentoo.org> talkfilters-2.3.7.ebuild:
+  stable ppc, bug #197741
 
   02 Nov 2007; Steve Dibb <beandog@gentoo.org> talkfilters-2.3.7.ebuild:
   amd64 stable, bug 197741
