@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.306 2007/10/31 20:35:40 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.307 2007/11/02 22:09:42 dev-zero Exp $
+
+*samba-3.0.26a-r1 (02 Nov 2007)
+
+  02 Nov 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +files/3.0.26a-invalid-free-fix.patch, -samba-3.0.26a.ebuild,
+  +samba-3.0.26a-r1.ebuild:
+  Added patch for bug #196015 (thanks to Evgeniy Dushistov)
 
   31 Oct 2007; Tiziano Müller <dev-zero@gentoo.org> samba-3.0.26a.ebuild:
   Removed some useless files from the dodoc-call, quoted some more vars.

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.26a.ebuild,v 1.3 2007/10/31 20:35:40 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.26a-r1.ebuild,v 1.1 2007/11/02 22:09:42 dev-zero Exp $
 
 inherit eutils pam python multilib versionator confutils
 
@@ -49,6 +49,8 @@ src_unpack() {
 	# This patch adds "-Wl,-z,now" to smb{mnt,umount}
 	# Please read ... for further informations
 	epatch "${FILESDIR}/${PV}-lazyldflags.patch"
+	# Bug #196015 (upstream: #5021)
+	epatch "${FILESDIR}/${PV}-invalid-free-fix.patch"
 
 	# Ok, agreed, this is ugly. But it avoids a patch we
 	# need for every samba version and we don't need autotools
