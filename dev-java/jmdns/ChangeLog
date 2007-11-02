@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmdns
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/ChangeLog,v 1.10 2007/10/31 07:51:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/ChangeLog,v 1.11 2007/11/02 03:35:33 wltjr Exp $
+
+  02 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org> jmdns-1.0.ebuild:
+  amd64 stable, bug #197480.
 
   31 Oct 2007; Christian Faulhammer <opfer@gentoo.org> jmdns-1.0.ebuild:
   quote variables
