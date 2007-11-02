@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.12 2007/10/26 17:10:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.0_alpha20071009.ebuild,v 1.13 2007/11/02 14:39:49 drac Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -42,7 +42,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="3dfx a52 aalib alsa altivec arts avahi bidi cdda cddb cdio daap dbus dc1394
 	debug directfb dts dvb dvd esd fbcon ffmpeg flac ggi gnome gnutls hal httpd
-	id3tag jack libcaca libgcrypt libnotify lirc live lua matroska mod mp3 mpeg
+	id3tag jack libcaca libgcrypt libnotify lirc live lua matroska modplug mp3 mpeg
 	musepack musicbrainz ncurses nsplugin ogg opengl optimisememory oss png pvr
 	rtsp samba sdl sdl-image seamonkey shout skins speex stream svg svga taglib
 	theora truetype twolame upnp v4l v4l2 vcd vcdx vlm vorbis win32codecs wxwindows
@@ -92,7 +92,7 @@ RDEPEND="
 		matroska? (
 			>=dev-libs/libebml-0.7.6
 			>=media-libs/libmatroska-0.8.0 )
-		mod? ( media-libs/libmodplug )
+		modplug? ( media-libs/libmodplug )
 		mp3? ( media-libs/libmad )
 		mpeg? ( >=media-libs/libmpeg2-0.3.2 )
 		musepack? ( media-libs/libmpcdec )
@@ -248,7 +248,7 @@ src_compile () {
 		$(use_enable live live555) \
 		$(use_enable lua) \
 		$(use_enable matroska mkv) \
-		$(use_enable mod) \
+		$(use_enable modplug mod) \
 		$(use_enable mp3 mad) \
 		$(use_enable mpeg libmpeg2) \
 		$(use_enable musepack mpc) \

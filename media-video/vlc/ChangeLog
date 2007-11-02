@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.271 2007/10/26 17:10:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.272 2007/11/02 14:39:49 drac Exp $
+
+  02 Nov 2007; Samuli Suominen <drac@gentoo.org> vlc-0.8.6c.ebuild,
+  vlc-0.9.0_alpha20071009.ebuild, vlc-0.9.0_alpha20071022.ebuild:
+  Change local USE flag mod to global USE flag modplug.
 
   26 Oct 2007; Steve Dibb <beandog@gentoo.org> vlc-0.8.6c.ebuild,
   vlc-0.9.0_alpha20071009.ebuild, vlc-0.9.0_alpha20071022.ebuild:
