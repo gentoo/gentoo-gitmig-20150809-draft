@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.73 2007/11/01 15:00:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.74 2007/11/02 03:55:10 beandog Exp $
+
+  02 Nov 2007; Steve Dibb <beandog@gentoo.org> smarty-2.6.18.ebuild:
+  amd64 stable, bug 197314
 
   01 Nov 2007; Raúl Porcel <armin76@gentoo.org> smarty-2.6.18.ebuild:
   alpha/sparc stable wrt #197314
