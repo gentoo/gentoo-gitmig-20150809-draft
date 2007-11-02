@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.108 2007/11/01 06:54:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.109 2007/11/02 03:53:28 beandog Exp $
+
+  02 Nov 2007; Steve Dibb <beandog@gentoo.org> strace-4.5.16.ebuild:
+  amd64 stable, bug 197398
 
 *strace-4.5.16-r1 (01 Nov 2007)
 
