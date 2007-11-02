@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-4.13.ebuild,v 1.4 2007/08/17 09:54:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-4.13.ebuild,v 1.5 2007/11/02 09:12:23 bicatali Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="Data visualization application for astronomical FITS images"
 HOMEPAGE="http://hea-www.harvard.edu/RD/ds9"
@@ -43,7 +43,11 @@ src_compile() {
 	# This is a long and fragile compilation
 	# which recompiles tcl/tk, tkimg, blt, funtools,
 	# and a lot of other packages
-	emake -j1 OPTS="${CXXFLAGS}" || die "emake failed"
+	emake -j1 \
+		CC="$(tc-getCC)" \
+		CXX="$(tc-getCXX)" \
+		OPTS="${CXXFLAGS}" \
+		|| die "emake failed"
 }
 
 src_install () {
