@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/mybashburn
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mybashburn/ChangeLog,v 1.1 2007/11/02 04:56:22 beandog Exp $
+
+*mybashburn-1.0.2 (02 Nov 2007)
+
+  02 Nov 2007; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +mybashburn-1.0.2.ebuild:
+  Initial commit, bug 182419
+
