@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.54 2007/04/07 09:02:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.55 2007/11/02 01:16:08 vapier Exp $
+
+*prelink-20071009 (02 Nov 2007)
+
+  02 Nov 2007; Mike Frysinger <vapier@gentoo.org> +prelink-20071009.ebuild:
+  Version bump.
 
   07 Apr 2007; Mike Frysinger <vapier@gentoo.org> prelink-20061201.ebuild:
   Add -Wl,--disable-new-dtags to testsuite linking #100147.
