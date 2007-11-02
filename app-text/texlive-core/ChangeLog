@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.22 2007/10/30 17:59:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.23 2007/11/02 10:02:06 aballier Exp $
+
+  02 Nov 2007; Alexis Ballier <aballier@gentoo.org>
+  files/2007/texmf.d/10standardpaths.cnf:
+  fix TEXMFDOCDIR, make it use SELFAUTO variables
 
 *texlive-core-2007-r4 (30 Oct 2007)
 
