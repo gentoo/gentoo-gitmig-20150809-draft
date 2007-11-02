@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0.5-r2.ebuild,v 1.5 2007/05/25 15:34:11 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0.5-r2.ebuild,v 1.6 2007/11/02 10:40:55 betelgeuse Exp $
+
+WANT_ANT_TASKS="ant-antlr ant-swing ant-junit"
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -44,7 +46,6 @@ COMMON_DEPEND="
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 DEPEND=">=virtual/jdk-1.4
-		dev-java/ant
 		${COMMON_DEPEND}"
 # TODO fix for Java 1.6... has problems due to JDBC4
 JAVA_PKG_NV_DEPEND="=virtual/jdk-1.4* =virtual/jdk-1.5*"
@@ -84,9 +85,8 @@ src_unpack() {
 #	fi
 
 }
-src_compile() {
-	eant jar -Ddist.dir=dist $(use_doc)
-}
+
+EANT_EXTRA_ARGS="-Ddist.dir=dist"
 
 src_install() {
 	java-pkg_dojar dist/hibernate3.jar
