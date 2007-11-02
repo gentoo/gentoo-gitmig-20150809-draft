@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.14.2.ebuild,v 1.12 2007/11/01 22:55:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.14.2.ebuild,v 1.13 2007/11/02 04:25:20 mr_bones_ Exp $
 
 inherit eutils gnome2 autotools python
 
@@ -65,4 +65,3 @@ pkg_postrm() {
 		python_mod_cleanup "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0"
 	fi
 }
-
