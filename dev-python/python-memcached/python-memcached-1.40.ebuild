@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/python-memcached-1.40.ebuild,v 1.1 2007/10/24 06:54:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/python-memcached-1.40.ebuild,v 1.2 2007/11/02 20:34:01 robbat2 Exp $
 
 inherit distutils
 
@@ -15,4 +15,5 @@ KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.4"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+		dev-python/setuptools"
