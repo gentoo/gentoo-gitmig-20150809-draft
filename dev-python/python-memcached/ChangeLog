@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-memcached
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/ChangeLog,v 1.2 2007/11/02 20:34:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/ChangeLog,v 1.3 2007/11/02 21:05:50 dev-zero Exp $
+
+  02 Nov 2007; Tiziano Müller <dev-zero@gentoo.org>
+  python-memcached-1.40.ebuild:
+  Replaced dev-lang/python dependency with NEED_PYTHON var
 
   02 Nov 2007; Robin H. Johnson <robbat2@gentoo.org>
   python-memcached-1.40.ebuild:
