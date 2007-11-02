@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pp
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/ChangeLog,v 1.4 2007/05/27 09:15:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/ChangeLog,v 1.5 2007/11/02 22:36:39 drac Exp $
+
+  02 Nov 2007; Samuli Suominen <drac@gentoo.org> pp-1.4.3.ebuild:
+  Keyword ~amd64 wrt #194847.
 
 *pp-1.4.3 (27 May 2007)
 
