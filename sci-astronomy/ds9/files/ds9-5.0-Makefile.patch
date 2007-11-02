@@ -1,0 +1,67 @@
+--- Makefile.orig	2007-11-02 09:31:55.857541252 +0000
++++ Makefile	2007-11-02 09:41:55.131691940 +0000
+@@ -394,39 +394,39 @@
+ tclsh	: FORCE
+ 	@echo "Installing Tcl shared..."
+ 	cd $(TCLDIRDIR); CC='$(CC)' CFLAGS='$(OPTS) $(TCLOPTS)' LDFLAGS='$(LIBS)' ./configure $(TCLFLAGS) --enable-shared
+-	cd $(TCLDIRDIR); $(MAKE) install
++	cd $(TCLDIRDIR); $(MAKE) install-binaries install-libraries
+ 
+ tcl	: FORCE
+ 	@echo "Installing Tcl noshared..."
+ 	cd $(TCLDIRDIR); CC='$(CC)' CFLAGS='$(OPTS) $(TCLOPTS)' LDFLAGS='$(LIBS)' ./configure $(TCLFLAGS) --disable-shared
+-	cd $(TCLDIRDIR); $(MAKE) install
++	cd $(TCLDIRDIR); $(MAKE) install-binaries install-libraries
+ 
+ tksh	: FORCE
+ 	@echo "Installing Tk shared..."
+ 	cd $(TKDIRDIR); CC='$(CC)' CFLAGS='$(OPTS) $(TCLOPTS)' LDFLAGS='$(LIBS)' ./configure $(TCLFLAGS) --enable-shared
+-	cd $(TKDIRDIR); $(MAKE) install
++	cd $(TKDIRDIR); $(MAKE) install-binaries install-libraries
+ 	$(RM) -r lib/$(TKVER)/demos
+ 
+ tk	: FORCE
+ 	@echo "Installing Tk noshared..."
+ 	cd $(TKDIRDIR); CC='$(CC)' CFLAGS='$(OPTS) $(TCLOPTS)' LDFLAGS='$(LIBS)' ./configure $(TCLFLAGS) --disable-shared
+-	cd $(TKDIRDIR); $(MAKE) install
++	cd $(TKDIRDIR); $(MAKE) install-binaries install-libraries
+ 	$(RM) -r lib/$(TKVER)/demos
+ 
+ tktablesh : FORCE
+ 	@echo "Installing TkTable..."
+ 	cd $(TKTABLEDIR); CC='$(CC)' CFLAGS='$(OPTS)' LDFLAGS='$(LIBS)' ./configure $(TKTABLEFLAGS) --enable-shared
+-	cd $(TKTABLEDIR); $(MAKE); $(MAKE) install 
++	cd $(TKTABLEDIR); $(MAKE); $(MAKE) install-binaries install-libraries 
+ 
+ tktable	: FORCE
+ 	@echo "Installing TkTable..."
+ 	cd $(TKTABLEDIR); CC='$(CC)' CFLAGS='$(OPTS)' LDFLAGS='$(LIBS)' ./configure $(TKTABLEFLAGS) --disable-shared
+-	cd $(TKTABLEDIR); $(MAKE); $(MAKE) install
++	cd $(TKTABLEDIR); $(MAKE); $(MAKE) install-binaries install-libraries
+ 
+ tcllib	: FORCE
+ 	@echo "Installing TCLLIB..."
+ 	cd $(TCLLIBDIR); ./configure $(TCLLIBFLAGS)
+-	cd $(TCLLIBDIR); $(MAKE) install
++	cd $(TCLLIBDIR); $(MAKE) install-libraries
+ 
+ tkindex : FORCE
+ 	@echo "Installing Tk mkIndex..."
+@@ -449,7 +449,7 @@
+ zlibsh  : FORCE
+ 	@echo "Installing zlib..."
+ 	cd $(ZLIBDIR); CC='$(CC)' CFLAGS='$(OPTS)' LDFLAGS='$(LIBS)' ./configure $(ZLIBFLAGS) --shared
+-	cd $(ZLIBDIR); $(MAKE) install
++	cd $(ZLIBDIR); $(MAKE) install-binaries install-libraries
+ 
+ tkimg	: FORCE
+ 	@echo "Installing TKIMG noshared..."
+@@ -459,7 +459,7 @@
+ tkimgsh	: FORCE
+ 	@echo "Installing TKIMG shared..."
+ 	cd $(TKIMGDIR); CC='$(CC)' CFLAGS='$(OPTS)' LDFLAGS='$(LIBS)' ./configure $(TKIMGFLAGS)
+-	cd $(TKIMGDIR); $(MAKE) install
++	cd $(TKIMGDIR); $(MAKE) install-binaries install-libraries
+ 
+ tkmpeg	: FORCE
+ 	@echo "Installing TKMPEG..."
