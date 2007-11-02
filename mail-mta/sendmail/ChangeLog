@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.78 2007/09/26 10:46:26 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.79 2007/11/02 20:34:08 lcars Exp $
+
+*sendmail-8.14.2 (02 Nov 2007)
+
+  02 Nov 2007; Andrea Barisani <lcars@gentoo.org> +sendmail-8.14.2.ebuild:
+  Version bump.
 
   26 Sep 2007; <lcars@gentoo.org> files/sendmail:
   The init script now kills using pid file, bug #193554.
