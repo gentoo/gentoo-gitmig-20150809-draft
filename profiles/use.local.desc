@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3111 2007/10/31 16:59:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3112 2007/11/02 04:50:08 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -60,6 +60,7 @@ app-cdr/cdrkit:hfs - Provide building of HFS (Apple) CD-images
 app-cdr/disc-cover:cdrom - Enable audio CD support. This is not needed to make www-apps/disc-cover work.
 app-cdr/k3b:css - Enables ripping of encrypted dvds
 app-cdr/k3b:emovix - Enable burning support for eMoviX images
+app-cdr/mybashburn:normalize - Add support for normalizing audio file volume levels
 app-cdr/pxlinux:gnuplot - enable gnuplot support
 app-cdr/serpentine:muine - Enable Muine support
 app-crypt/ccid:nousb - Disable USB support via pcsc-lite
