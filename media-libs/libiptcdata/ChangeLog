@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libiptcdata
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/ChangeLog,v 1.5 2007/10/24 16:47:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/ChangeLog,v 1.6 2007/11/02 22:46:01 drac Exp $
+
+  02 Nov 2007; Samuli Suominen <drac@gentoo.org> libiptcdata-1.0.2.ebuild:
+  Keyword ~amd64 wrt #156398.
 
   24 Oct 2007; Raúl Porcel <armin76@gentoo.org> libiptcdata-1.0.2.ebuild:
   Add ~ia64 wrt #156398
