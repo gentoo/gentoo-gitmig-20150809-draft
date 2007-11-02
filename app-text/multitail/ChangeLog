@@ -1,6 +1,9 @@
 # ChangeLog for app-text/multitail
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.51 2007/11/01 16:11:31 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.52 2007/11/02 03:30:12 beandog Exp $
+
+  02 Nov 2007; Steve Dibb <beandog@gentoo.org> multitail-5.2.0.ebuild:
+  amd64 stable, bug 197742
 
   01 Nov 2007; Ferris McCormick <fmccor@gentoo.org> multitail-5.2.0.ebuild:
   Sparc stable --- Bug #197742 --- seems to work as it should.
