@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.9.ebuild,v 1.1 2007/11/02 12:19:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.9.ebuild,v 1.2 2007/11/02 12:31:42 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -96,8 +96,8 @@ src_install() {
 
 	# Install firefox in /opt
 	dodir ${MOZILLA_FIVE_HOME%/*}
-	touch ${S}/extensions/talkback@mozilla.org/chrome.manifest
-	mv ${S} ${D}${MOZILLA_FIVE_HOME}
+	touch "${S}"/extensions/talkback@mozilla.org/chrome.manifest
+	mv "${S}" "${D}"${MOZILLA_FIVE_HOME}
 
 	linguas
 	for X in ${linguas}; do
@@ -117,15 +117,15 @@ src_install() {
 	install_mozilla_launcher_stub firefox-bin ${MOZILLA_FIVE_HOME}
 
 	# Install icon and .desktop for menu entry
-	doicon ${FILESDIR}/icon/${PN}-icon.png
-	domenu ${FILESDIR}/icon/${PN}.desktop
+	doicon "${FILESDIR}"/icon/${PN}-icon.png
+	domenu "${FILESDIR}"/icon/${PN}.desktop
 
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild
-	doins ${FILESDIR}/10firefox-bin
+	doins "${FILESDIR}"/10firefox-bin
 
 	# install ldpath env.d
-	doenvd ${FILESDIR}/71firefox-bin
+	doenvd "${FILESDIR}"/71firefox-bin
 }
 
 pkg_preinst() {
@@ -133,7 +133,7 @@ pkg_preinst() {
 
 	# Remove entire installed instance to prevent all kinds of
 	# problems... see bug 44772 for example
-	rm -rf ${ROOT}${MOZILLA_FIVE_HOME}
+	rm -rf "${ROOT}"${MOZILLA_FIVE_HOME}
 }
 
 pkg_postinst() {
