@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libprojectm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.17 2007/10/24 15:38:28 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.18 2007/11/02 14:24:16 drac Exp $
+
+*libprojectm-1.01-r1 (02 Nov 2007)
+
+  02 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  +files/libprojectm-1.01-cmake_soname.patch,
+  +files/libprojectm-1.01-soil_64bit_fixes.patch,
+  +libprojectm-1.01-r1.ebuild:
+  Add SONAME and 64bit fixes, thanks to William Pitcock.
 
   24 Oct 2007; Joe Peterson <lavajoe@gentoo.org>
   -files/libprojectm-1.01-freebsd.patch,
