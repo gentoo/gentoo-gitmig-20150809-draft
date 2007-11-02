@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.14 2007/10/18 23:09:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.15 2007/11/02 02:48:01 beandog Exp $
 
 # Chris Gianelloni <cgianelloni@gentoo.org> (22 Sep 2007)
 # dependency can't be fulfilled at the moment
@@ -27,3 +27,7 @@ media-video/mplayer amrnb amrwb bidi bl cddb cdio cdparanoia cpudetection dga dv
 # Gilles Dartiguelongue <eva@gentoo.org> (19 Oct 2007)
 # gdm depends on zenity which is not keyworded
 >=gnome-base/gdm-2.20 remote
+
+# Steve Dibb <beandog@gentoo.org> (01 Nov 2007)
+# needs media-libs/ladspa-sdk keyworded
+media-video/mplayer ladspa
