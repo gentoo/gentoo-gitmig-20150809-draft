@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.11 2007/01/14 21:52:59 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.12 2007/11/02 18:37:55 hawking Exp $
+
+*axiom-0.5.20 (02 Nov 2007)
+
+  02 Nov 2007; Ali Polatel <hawking@gentoo.org>
+  +files/axiom-0.5.20-sqlite3.patch, +axiom-0.5.20.ebuild:
+  Version bump.
 
   14 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> axiom-0.5.0.ebuild:
   Corrected dependencies and fixed src_test.
