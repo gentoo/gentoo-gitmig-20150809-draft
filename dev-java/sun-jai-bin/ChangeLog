@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jai-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/ChangeLog,v 1.16 2007/10/31 07:46:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/ChangeLog,v 1.17 2007/11/02 03:31:21 wltjr Exp $
+
+  02 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  sun-jai-bin-1.1.3.ebuild:
+  amd64 stable, bug #197479.
 
   31 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
   sun-jai-bin-1.1.3.ebuild:
