@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.1.ebuild,v 1.4 2007/11/01 19:17:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.12.1.ebuild,v 1.5 2007/11/02 15:58:10 phreak Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -99,23 +99,23 @@ pkg_setup() {
 	fi
 
 	# Fix tests (again)
-	echo "evolution-addressbook.xml" >> po/POTFILES.in
-	echo "evolution-calendar.xml" >> po/POTFILES.in
-	echo "evolution-composer-entries.xml" >> po/POTFILES.in
-	echo "evolution-editor.xml" >> po/POTFILES.in
-	echo "evolution-event-editor.xml" >> po/POTFILES.in
-	echo "evolution-mail-global.xml" >> po/POTFILES.in
-	echo "evolution-mail-list.xml" >> po/POTFILES.in
-	echo "evolution-mail-message.xml" >> po/POTFILES.in
-	echo "evolution-mail-messagedisplay.xml" >> po/POTFILES.in
-	echo "evolution-memo-editor.xml" >> po/POTFILES.in
-	echo "evolution-memos.xml" >> po/POTFILES.in
-	echo "evolution-message-composer.xml" >> po/POTFILES.in
-	echo "evolution-signature-editor.xml" >> po/POTFILES.in
-	echo "evolution-subscribe.xml" >> po/POTFILES.in
-	echo "evolution-task-editor.xml" >> po/POTFILES.in
-	echo "evolution-tasks.xml" >> po/POTFILES.in
-	echo "evolution.xml" >> po/POTFILES.in
+	echo "evolution-addressbook.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-calendar.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-composer-entries.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-editor.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-event-editor.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-mail-global.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-mail-list.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-mail-message.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-mail-messagedisplay.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-memo-editor.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-memos.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-message-composer.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-signature-editor.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-subscribe.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-task-editor.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution-tasks.xml" >> "${S}"/po/POTFILES.in
+	echo "evolution.xml" >> "${S}"/po/POTFILES.in
 
 	# dang - I've changed this to do --enable-plugins=experimental.  This will autodetect
 	# new-mail-notify and exchange, but that cannot be helped for the moment.

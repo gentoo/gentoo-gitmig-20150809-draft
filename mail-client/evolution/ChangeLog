@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.206 2007/10/31 21:41:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.207 2007/11/02 15:58:10 phreak Exp $
+
+  02 Nov 2007; Christian Heim <phreak@gentoo.org> evolution-2.12.0.ebuild,
+  evolution-2.12.1.ebuild:
+  Fixing the tests fix, to actually fix the tests (portage isn't in $S in
+  pkg_setup, so you need to give the echo the full path).
 
   31 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
   evolution-2.12.0.ebuild, evolution-2.12.1.ebuild:
