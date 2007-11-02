@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2.ebuild,v 1.6 2007/10/16 08:59:06 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2.ebuild,v 1.7 2007/11/02 23:28:04 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -69,7 +69,7 @@ PATCHES="${FILESDIR}/${PN}-6.0-bsdcmp.patch
 REMOVE_SUBDIRS="bzip2 bzip2recover tar
 	tput tset
 	less lessecho lesskey
-	dig nslookup nsupdate host
+	dig hesinfo nslookup nsupdate host
 	rsh rlogin rusers rwho ruptime
 	compile_et lex vi smbutil file vacation nc ftp telnet
 	c99 c89

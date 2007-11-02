@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.49 2007/10/16 08:59:06 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.50 2007/11/02 23:28:04 uberlord Exp $
+
+  02 Nov 2007; Roy Marples <uberlord@gentoo.org> freebsd-ubin-6.2.ebuild:
+  Don't build hesinfo, use the hesiod ebuild, #197275.
 
   16 Oct 2007; Roy Marples <uberlord@gentoo.org>
   -files/freebsd-ubin-6.2-sparc64.patch, freebsd-ubin-6.2.ebuild:
