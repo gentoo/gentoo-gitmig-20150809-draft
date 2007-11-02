@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/firewalk
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/ChangeLog,v 1.10 2006/10/22 16:05:02 peper Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/ChangeLog,v 1.11 2007/11/02 18:39:04 beandog Exp $
+
+  02 Nov 2007; Steve Dibb <beandog@gentoo.org> firewalk-5.0.ebuild:
+  amd64 stable, bug 194180
 
   22 Oct 2006; Piotr Jaroszyński <peper@gentoo.org> firewalk-5.0.ebuild:
   Add ~amd64 keyword. Bug #148045.

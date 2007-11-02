@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/firewalk-5.0.ebuild,v 1.9 2006/10/22 16:05:02 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/firewalk-5.0.ebuild,v 1.10 2007/11/02 18:39:04 beandog Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.packetfactory.net/firewalk/dist/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="virtual/libpcap
@@ -20,9 +20,9 @@ DEPEND="virtual/libpcap
 S="${WORKDIR}/Firewalk"
 
 src_unpack() {
-	unpack ${A}
+	unpack "${A}"
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc3.4.diff
+	epatch "${FILESDIR}"/${P}-gcc3.4.diff
 }
 
 src_install() {
