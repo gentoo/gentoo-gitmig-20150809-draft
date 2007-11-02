@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7860 2007/11/01 05:44:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7861 2007/11/02 01:54:54 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Steve Dibb <beandog@gentoo.org> (01 Nov 2007)
+# Forked version of libdvdnav provided by upstream MPlayer
+# May work for you.  May not.
+>=media-libs/libdvdnav-4.1.1
 
 # Doug Goldstein <cardoe@gentoo.org> (01 Nov 2007)
 # beta NVIDIA drivers, not supported. bug #196679
