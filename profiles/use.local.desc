@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3112 2007/11/02 04:50:08 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3113 2007/11/02 14:31:26 drac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -757,7 +757,6 @@ gnome-extra/sensors-applet:hddtemp - Enable support the hddtemp daemon
 gnome-extra/sensors-applet:nvidia - Enable support for nvidia sensors
 gnome-extra/yelp:beagle - Enable beagle support
 gnome-extra/zim:trayicon - Enable support for trayicon
-gnustep-apps/cynthiune:modplug - Build with modplug support
 gnustep-apps/cynthiune:timidity - Build with Timidity++ (MIDI sequencer) support
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages.
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
@@ -990,7 +989,6 @@ media-libs/urt:gs - Add support for postscript
 media-libs/win32codecs:real - Installs the real video codecs
 media-libs/x264-svn:mp4 - Enables mp4 encoding support
 media-libs/xine-lib:dxr3 - Support for DXR3 mpeg accelleration cards
-media-libs/xine-lib:modplug - Build with modplug support
 media-libs/xine-lib:real - Adds real video support
 media-libs/xine-lib:vidix - Support for vidix video output
 media-libs/xine-lib:wavpack - Build with WavPack support
@@ -1000,7 +998,6 @@ media-plugins/audacious-plugins-ugly:cube - Build with CUBE input plugin (suppor
 media-plugins/audacious-plugins-ugly:iris - Build with Iris 3D visual plugin
 media-plugins/audacious-plugins:adplug - Build with AdPlug (Adlib sound card emulation) support
 media-plugins/audacious-plugins:chardet - Try to handle non-UTF8 chinese/japanese/korean ID3 tags
-media-plugins/audacious-plugins:modplug - Build with modplug support
 media-plugins/audacious-plugins:mtp - Build with Media Transfer Protocol music upload support
 media-plugins/audacious-plugins:sid - Build with SID (Commodore 64 Audio) support
 media-plugins/audacious-plugins:timidity - Build with Timidity++ (MIDI sequencer) support
@@ -1033,17 +1030,14 @@ media-sound/amarok:njb - Enable support for NJB (Creative) devices access throug
 media-sound/amarok:real - Build with real/helix player support
 media-sound/amarok:visualization - Support visualization plugins through media-libs/libvisual
 media-sound/audacious:chardet - Try to handle non-UTF8 chinese/japanese/korean ID3 tags
-media-sound/audacious:modplug - Build with modplug support
 media-sound/audacious:sid - Build with SID (Commodore 64 Audio) support
 media-sound/audacious:timidity - Build with Timidity++ (MIDI sequencer) support
 media-sound/audacious:wma - Build with WMA (Windows Media Audio) support
 media-sound/banshee:boo - Use external Boo instead of the bundled one
 media-sound/banshee:daap - Build with Daap support
 media-sound/banshee:njb - Build with njb audio player support
-media-sound/bmpx:modplug - Build with modplug support
 media-sound/bmpx:networkmanager - Enable networkmanager support
 media-sound/bmpx:sid - Build with SID (Commodore 64 Audio) support
-media-sound/cmus:modplug - Build with modplug support
 media-sound/cmus:mp4 - enable mp4 decoding
 media-sound/cmus:pidgin - install support script for net-im/pidgin
 media-sound/cmus:wavpack - add support for wavpack
@@ -1058,7 +1052,6 @@ media-sound/ezstream:taglib - Enable tagging support with taglib
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
 media-sound/gnusound:cpudetection - Enables runtime cpu detection
 media-sound/herrie:http - Enable http streaming
-media-sound/herrie:modplug - Build with modplug support
 media-sound/herrie:xspf - Enable support for reading and saving XSPF playlists
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
 media-sound/jack-audio-connection-kit:cpudetection - Enables runtime cpudetection
@@ -1070,7 +1063,6 @@ media-sound/lastfm-ripper:amazon - Enable advanced tagging using amazon webservi
 media-sound/lastfm-ripper:tagwriting - Enable MP3 tagging
 media-sound/lilypond:vim - Enable installation of lilypond vim plugins
 media-sound/listen:libsexy - Enable libsexy support
-media-sound/moc:modplug - Add support for modplug
 media-sound/moc:sid - Build with SID (Commodore 64 Audio) support
 media-sound/moc:timidity - Add support for timidity
 media-sound/moc:wavpack - Add support for wavpack
