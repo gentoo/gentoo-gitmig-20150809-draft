@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-1.0.0.ebuild,v 1.1 2007/06/17 07:00:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-1.0.3.ebuild,v 1.1 2007/11/02 15:38:54 mrness Exp $
 
 inherit eutils
 
@@ -20,21 +20,12 @@ pkg_setup() {
 	enewuser polipo -1 -1 /var/cache/polipo polipo
 }
 
-src_unpack() {
-	unpack ${A}
-
-	epatch "${FILESDIR}/${P}-gentoo.patch"
-}
-
 src_compile() {
-	emake "PREFIX=/usr" "CDEBUGFLAGS=${CFLAGS}" all || die "build failed"
+	emake PREFIX=/usr "CDEBUGFLAGS=${CFLAGS}" all || die "build failed"
 }
 
 src_install() {
-	einstall "PREFIX=/usr" "TARGET=${D}" || die "install failed"
-	mv polipo.man polipo.1
-	doman "${S}/polipo.1"
-	doinfo "${S}/polipo.info"
+	einstall PREFIX=/usr MANDIR=/usr/share/man INFODIR=/usr/share/info "TARGET=${D}" || die "install failed"
 
 	newinitd "${FILESDIR}/polipo.initd" polipo
 	insinto /etc/polipo ; doins "${FILESDIR}/config"
@@ -42,6 +33,9 @@ src_install() {
 
 	diropts -m0750 -o polipo -g polipo
 	keepdir /var/cache/polipo
+
+	dodoc CHANGES README
+	dohtml html/*
 }
 
 pkg_preinst() {
