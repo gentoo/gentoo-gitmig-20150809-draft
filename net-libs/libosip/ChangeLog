@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libosip
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.26 2007/03/13 12:23:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.27 2007/11/02 04:05:16 beandog Exp $
+
+  02 Nov 2007; Steve Dibb <beandog@gentoo.org> libosip-2.2.2.ebuild:
+  amd64 stable, bug 197384
 
   13 Mar 2007; Raúl Porcel <armin76@gentoo.org> libosip-2.2.2.ebuild:
   x86 stable
