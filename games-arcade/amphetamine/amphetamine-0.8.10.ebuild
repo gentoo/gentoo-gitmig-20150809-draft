@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/amphetamine-0.8.10.ebuild,v 1.3 2007/04/09 21:43:16 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/amphetamine-0.8.10.ebuild,v 1.4 2007/11/02 21:23:52 drac Exp $
 
-inherit eutils games
+inherit eutils games toolchain-funcs
 
 DESCRIPTION="a cool Jump'n Run game offering some unique visual effects."
 HOMEPAGE="http://n.ethz.ch/student/loehrerl/amph/amph.html"
@@ -11,28 +11,28 @@ SRC_URI="http://n.ethz.ch/student/loehrerl/amph/files/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libsdl
 	x11-libs/libXpm"
 
 src_compile() {
-	epatch "${FILESDIR}/${P}"-gentoo.patch
-	sed -i -e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
-		Makefile
-	emake || die "emake failed"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/020_assumed_sizeof_long.diff
+	sed -i -e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" Makefile
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die "emake failed."
 }
 
 src_install() {
 	newgamesbin amph ${PN}
 
-	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r ../amph/* || die "installing data failed"
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins -r ../amph/* || die "doins failed."
 
-	dodoc BUGS ChangeLog NEWS README || die "Installing doc"
+	dodoc BUGS ChangeLog NEWS README || die "dodoc failed."
 	newicon amph.xpm ${PN}.xpm
-	make_desktop_entry ${PN} "Amphetamine" ${PN}.xpm
+	make_desktop_entry ${PN} Amphetamine ${PN}
 
 	prepgamesdirs
 }

@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/amphetamine
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/ChangeLog,v 1.3 2007/04/09 21:43:16 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/ChangeLog,v 1.4 2007/11/02 21:23:52 drac Exp $
+
+  02 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  +files/020_assumed_sizeof_long.diff, amphetamine-0.8.10.ebuild:
+  While keywording for AMD64, add a new patch from Debian, courtesy of Darren
+  Salt: fix wrong assumption that long is a 32 bit type. Also fix desktop file
+  to meet f.d.o standard, Icon= should not be suffixed if full path is not
+  specified. Bug #166049.
 
   09 Apr 2007; Peter Weller <welp@gentoo.org> amphetamine-0.8.10.ebuild:
   Keyworded ~x86-fbsd wrt bug 173405
