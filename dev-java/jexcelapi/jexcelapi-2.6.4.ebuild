@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/jexcelapi-2.6.4.ebuild,v 1.3 2007/11/02 07:30:51 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/jexcelapi-2.6.4.ebuild,v 1.4 2007/11/02 07:33:16 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -26,7 +26,7 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	find -name "*.jar" | xargs rm -v
 	find -name "*.class" -delete
 	rm -fr docs
@@ -44,5 +44,5 @@ src_install() {
 
 	java-pkg_dohtml index.html tutorial.html
 	use doc && java-pkg_dojavadoc docs
-	use source && java-pkg_dosrc ${S}/src/*
+	use source && java-pkg_dosrc "${S}"/src/*
 }
