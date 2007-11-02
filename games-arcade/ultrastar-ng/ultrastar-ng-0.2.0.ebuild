@@ -61,7 +61,6 @@ src_compile() {
 		myconf="$myconf --with-audio=gstreamer"
 	fi
 
-	
 	egamesconf \
 		${myconf} \
 		$(use_enable debug) \
