@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jexcelapi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.11 2007/11/02 04:04:53 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.12 2007/11/02 07:30:51 opfer Exp $
+
+  02 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  jexcelapi-2.6.4.ebuild:
+  stable x86, bug 197812
 
   02 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   jexcelapi-2.6.4.ebuild:
