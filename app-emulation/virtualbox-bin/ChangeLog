@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.18 2007/10/29 13:26:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.19 2007/11/03 15:17:28 jokey Exp $
+
+  03 Nov 2007; Markus Ullmann <jokey@gentoo.org>
+  files/virtualbox-bin-wrapper, -virtualbox-bin-1.4.0.ebuild,
+  -virtualbox-bin-1.5.2.ebuild, +virtualbox-bin-1.5.2-r1.ebuild:
+  Some minor cosmetics in the wrapper, fix desktop entry
 
   29 Oct 2007; Markus Meier <maekke@gentoo.org> virtualbox-bin-1.5.2.ebuild:
   x86 stable

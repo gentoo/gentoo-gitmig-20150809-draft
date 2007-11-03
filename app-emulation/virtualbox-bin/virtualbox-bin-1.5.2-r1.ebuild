@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.2.ebuild,v 1.2 2007/10/29 13:26:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.5.2-r1.ebuild,v 1.1 2007/11/03 15:17:28 jokey Exp $
 
 inherit eutils qt3 pax-utils
 
@@ -78,7 +78,6 @@ src_install() {
 	newins VirtualBox.desktop virtualbox.desktop
 	dosed -e "10d" /usr/share/applications/virtualbox.desktop
 	dosed -e "5d" /usr/share/applications/virtualbox.desktop
-	dosed -e "s/VirtualBox/virtualbox/" /usr/share/applications/virtualbox.desktop
 	dosed -e "s/VBox.png/virtualbox.png/" /usr/share/applications/virtualbox.desktop
 	dosed -e "s/innotek virtualbox/Innotek VirtualBox/" /usr/share/applications/virtualbox.desktop
 	dosed -e "s/X-MandrivaLinux-System;//" /usr/share/applications/virtualbox.desktop
