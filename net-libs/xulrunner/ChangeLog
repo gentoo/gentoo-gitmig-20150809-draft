@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.67 2007/11/03 15:55:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.68 2007/11/03 21:44:43 corsair Exp $
+
+  03 Nov 2007; Markus Rothe <corsair@gentoo.org> xulrunner-1.8.1.9.ebuild:
+  Stable on ppc64; bug #196480
 
   03 Nov 2007; Raúl Porcel <armin76@gentoo.org> xulrunner-1.8.1.9.ebuild:
   alpha/ia64/sparc stable wrt security #196480
