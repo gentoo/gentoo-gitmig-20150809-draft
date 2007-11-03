@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-et
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-et/ChangeLog,v 1.12 2007/08/10 05:11:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-et/ChangeLog,v 1.13 2007/11/03 22:06:19 uberlord Exp $
+
+  03 Nov 2007; Roy Marples <uberlord@gentoo.org> aspell-et-0.1.21.1.ebuild:
+  Keyworded ~sparc-fbsd and ~x86-fbsd
 
   10 Aug 2007; Jeroen Roovers <jer@gentoo.org> aspell-et-0.1.21.1.ebuild:
   Stable for HPPA (bug #178690).

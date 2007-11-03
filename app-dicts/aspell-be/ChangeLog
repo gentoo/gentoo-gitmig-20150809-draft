@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-be
 # Copyright 2006-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-be/ChangeLog,v 1.6 2007/01/22 08:05:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-be/ChangeLog,v 1.7 2007/11/03 21:58:09 uberlord Exp $
+
+  03 Nov 2007; Roy Marples <uberlord@gentoo.org> aspell-be-0.01-r1.ebuild:
+  Keyworded ~sparc-fbsd and ~x86-fbsd
 
   22 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> aspell-be-0.01.ebuild,
   aspell-be-0.01-r1.ebuild:

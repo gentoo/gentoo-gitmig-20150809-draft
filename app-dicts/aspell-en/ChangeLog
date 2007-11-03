@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-en
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.23 2007/11/03 13:01:27 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.24 2007/11/03 22:04:18 uberlord Exp $
+
+  03 Nov 2007; Roy Marples <uberlord@gentoo.org> ChangeLog:
+  Keyworded ~sparc-fbsd and ~x86-fbsd
 
   03 Nov 2007; Roy Marples <uberlord@gentoo.org> aspell-en-6.0.0.ebuild:
   Keyworded ~sparc-fbsd, #197275.

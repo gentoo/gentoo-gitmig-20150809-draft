@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-fr
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fr/ChangeLog,v 1.9 2007/08/20 11:30:48 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fr/ChangeLog,v 1.10 2007/11/03 22:08:22 uberlord Exp $
+
+  03 Nov 2007; Roy Marples <uberlord@gentoo.org> aspell-fr-0.60.ebuild:
+  Keyworded ~sparc-fbsd and ~x86-fbsd
 
   20 Aug 2007; Ferris McCormick <fmccor@gentoo.org> aspell-fr-0.60.ebuild:
   Add ~sparc keyword (placeholder awaiting official ebuild).

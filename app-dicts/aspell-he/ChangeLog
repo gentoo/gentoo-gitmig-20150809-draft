@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-he
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.21 2007/08/10 05:07:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.22 2007/11/03 22:10:23 uberlord Exp $
+
+  03 Nov 2007; Roy Marples <uberlord@gentoo.org> aspell-he-1.0.0.ebuild:
+  Keyworded ~sparc-fbsd and ~x86-fbsd
 
   10 Aug 2007; Jeroen Roovers <jer@gentoo.org> aspell-he-1.0.0.ebuild:
   Stable for HPPA (bug #178690).

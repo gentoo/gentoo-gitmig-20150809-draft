@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-it
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.18 2007/08/15 04:46:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.19 2007/11/03 22:13:37 uberlord Exp $
+
+  03 Nov 2007; Roy Marples <uberlord@gentoo.org>
+  aspell-it-2.2.20050523.ebuild:
+  Keyworded ~sparc-fbsd and ~x86-fbsd
 
   15 Aug 2007; Jeroen Roovers <jer@gentoo.org>
   aspell-it-2.2.20050523.ebuild:

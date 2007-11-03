@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-hy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-hy/ChangeLog,v 1.1 2007/09/02 09:07:24 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-hy/ChangeLog,v 1.2 2007/11/03 22:12:13 uberlord Exp $
+
+  03 Nov 2007; Roy Marples <uberlord@gentoo.org> aspell-hy-0.10.0.ebuild:
+  Keyworded ~sparc-fbsd and ~x86-fbsd
 
 *aspell-hy-0.10.0 (02 Sep 2007)
 
