@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.10.0.ebuild,v 1.2 2007/11/03 13:49:31 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.10.0-r1.ebuild,v 1.1 2007/11/03 16:54:25 coldwind Exp $
 
 inherit qt4
 
@@ -26,8 +26,8 @@ src_unpack() {
 
 	# Change installation directory and demo path
 	sed -i \
-		-e "s@/usr/local/bin@/usr@g" \
-		-e "s@demo\.path.*@demo.path = \$\${INSTALLDIR}/share/doc/${PF}@" \
+		-e "s@/usr/local@/usr@g" \
+		-e "s@doc/packages/vym@doc/vym@g" \
 		vym.pro || die "sed failed"
 
 	qmake

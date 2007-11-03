@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/vym
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.15 2007/11/03 13:49:31 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.16 2007/11/03 16:54:25 coldwind Exp $
+
+*vym-1.10.0-r1 (03 Nov 2007)
+
+  03 Nov 2007; Santiago M. Mola <coldwind@gentoo.org>
+  -files/01_all_linkablemapobj-math.patch, -files/03_gcc41.patch,
+  -files/50_Makefile-1.8.0.patch, -files/02_all_misc-math.patch,
+  -vym-1.10.0.ebuild, +vym-1.10.0-r1.ebuild:
+  Fix prefix #197968 and remove cruft.
 
   03 Nov 2007; Santiago M. Mola <coldwind@gentoo.org> vym-1.10.0.ebuild:
   Check for qt3support, #197952
