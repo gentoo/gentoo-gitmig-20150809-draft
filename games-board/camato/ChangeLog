@@ -1,6 +1,9 @@
 # ChangeLog for games-board/camato
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/camato/ChangeLog,v 1.3 2006/10/12 16:46:29 nyhm Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/camato/ChangeLog,v 1.4 2007/11/03 08:18:09 drac Exp $
+
+  03 Nov 2007; Samuli Suominen <drac@gentoo.org> camato-0.7.4.ebuild:
+  Keyword ~amd64 wrt #195968.
 
 *camato-0.7.4 (12 Oct 2006)
 
