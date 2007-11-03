@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.4.1.ebuild,v 1.17 2007/07/15 02:08:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.4.1.ebuild,v 1.18 2007/11/03 16:17:32 grobian Exp $
 
 inherit eutils flag-o-matic versionator toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.altlinux.org/pub/people/ldv/${PN}/${MY_P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE=""
+IUSE="elibc_FreeBSD"
 
 DEPEND="!virtual/utempter"
 RDEPEND="!virtual/utempter"
