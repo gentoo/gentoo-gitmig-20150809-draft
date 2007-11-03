@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.10.ebuild,v 1.6 2007/07/22 07:51:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.14.ebuild,v 1.1 2007/11/03 19:36:34 tester Exp $
 
 inherit gnome2
 
@@ -10,9 +10,9 @@ HOMEPAGE="http://gnomeicu.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
-DEPEND=">=x11-libs/gtk+-2.2.0
+DEPEND=">=x11-libs/gtk+-2.10.0
 	>=dev-libs/libxml2-2.4.23
 	>=gnome-base/libgnome-2.0.0
 	>=gnome-base/libgnomeui-2.0.0
