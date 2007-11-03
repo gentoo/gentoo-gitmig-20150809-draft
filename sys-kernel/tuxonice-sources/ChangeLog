@@ -1,6 +1,6 @@
-# ChangeLog for sys-kernel/suspend2-sources
+# ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.1 2007/10/27 20:01:35 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.2 2007/11/03 09:51:00 swegener Exp $
 
 *tuxonice-sources-2.6.23 (27 Oct 2007)
 
