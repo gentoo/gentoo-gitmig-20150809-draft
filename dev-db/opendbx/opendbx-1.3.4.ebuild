@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.3.4.ebuild,v 1.1 2007/08/23 20:22:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.3.4.ebuild,v 1.2 2007/11/03 09:36:35 swegener Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="OpenDBX - A database abstraction layer"
-HOMEPAGE="http://www.linuxnetworks.de/opendbx/"
+HOMEPAGE="http://www.linuxnetworks.de/doc/index.php/OpenDBX"
 SRC_URI="http://www.linuxnetworks.de/opendbx/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
