@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.3.ebuild,v 1.3 2007/10/22 21:32:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.3.ebuild,v 1.4 2007/11/03 17:19:51 drac Exp $
 
-inherit qt4 eutils autotools
+inherit autotools qt4 eutils autotools
 
 DESCRIPTION="Intelligent Teaching And Learning with Computers (iTALC) supports working with computers in school"
 HOMEPAGE="http://italc.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/italc/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 IUSE="X v4l crypt xinerama threads fbcon"
 
@@ -33,6 +33,16 @@ RDEPEND=${DEPEND}
 
 pkg_setup() {
 	enewgroup italc
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# From upstream subversion with extra modification for asneeded,
+	# both working but very likely incorrect solutions.
+	# http://italc.svn.sourceforge.net/viewvc/italc/branches/STABLE_1-0/configure.in?r1=217&r2=219
+	epatch "${FILESDIR}"/${P}-fpic-asneeded.patch
+	eautoreconf
 }
 
 src_compile() {

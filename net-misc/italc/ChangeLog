@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/italc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.6 2007/10/22 21:32:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.7 2007/11/03 17:19:51 drac Exp $
+
+  03 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  +files/italc-1.0.3-fpic-asneeded.patch, italc-1.0.3.ebuild:
+  Fix to add -fPIC to EXTRAFLAGS from upstream Subversion. Fix also building
+  with --as-needed, and mark it stable on amd64 wrt #185055 and #191573. There
+  are more problems in build system, not fixed here today.
 
   22 Oct 2007; Markus Ullmann <jokey@gentoo.org> italc-1.0.3.ebuild:
   Remove bogus wx dependency as mentioned in bug #195720
