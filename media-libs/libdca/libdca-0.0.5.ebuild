@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/libdca-0.0.5.ebuild,v 1.19 2007/10/08 17:33:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/libdca-0.0.5.ebuild,v 1.20 2007/11/03 10:57:07 drac Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="oss debug"
 
 RDEPEND="!media-libs/libdts"
@@ -23,11 +23,11 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable oss) $(use_enable debug) || die
-	emake OPT_CFLAGS="" || die "emake failed"
+	econf $(use_enable oss) $(use_enable debug)
+	emake OPT_CFLAGS="" || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README TODO doc/${PN}.txt
 }
