@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.14.ebuild,v 1.2 2007/11/03 21:37:00 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.15.ebuild,v 1.1 2007/11/03 21:37:01 araujo Exp $
 
 inherit base haskell-cabal
 
@@ -16,7 +16,8 @@ IUSE=""
 DEPEND=">=dev-lang/ghc-6.6
 	>=dev-haskell/gtk2hs-0.9.12
 	>=app-portage/eix-0.9.3
-	>=app-portage/gentoolkit-0.2.3"
+	>=app-portage/gentoolkit-0.2.3
+	>=app-portage/portage-utils-0.1.28"
 RDEPEND=""
 
 pkg_setup() {
