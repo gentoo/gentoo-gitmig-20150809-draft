@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.40 2007/06/28 08:12:37 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.41 2007/11/03 16:05:07 jokey Exp $
+
+*pkgcore-0.3.2 (03 Nov 2007)
+
+  03 Nov 2007; Markus Ullmann <jokey@gentoo.org>
+  -files/pkgcore-0.2.13-tweak_intercepts.patch,
+  -files/pkgcore-0.2-hppa-disable-filter-env.patch,
+  -files/pkgcore-0.3-pmerge-unmerge-ask.patch, -pkgcore-0.1.4.ebuild,
+  -pkgcore-0.2.12.ebuild, -pkgcore-0.2.13.ebuild, -pkgcore-0.2.13-r1.ebuild,
+  -pkgcore-0.2.14.ebuild, -pkgcore-0.3.ebuild, +pkgcore-0.3.2.ebuild:
+  Version bump, many bug fixes
 
   28 Jun 2007; Joshua Jackson <tsunam@gentoo.org>
   +files/pkgcore-0.3.1-pmerge-unmerge-ask.patch:
