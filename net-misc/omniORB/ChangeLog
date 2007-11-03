@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.47 2007/11/03 17:04:58 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.48 2007/11/03 17:05:46 caleb Exp $
+
+  03 Nov 2007; Caleb Tennis <caleb@gentoo.org> -omniORB-4.0.6.ebuild,
+  -omniORB-4.0.7.ebuild:
+  remove old versions
 
 *omniORB-4.1.1 (03 Nov 2007)
 
