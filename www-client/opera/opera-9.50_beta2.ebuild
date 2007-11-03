@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2.ebuild,v 1.1 2007/11/03 17:09:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2.ebuild,v 1.2 2007/11/03 17:15:03 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -28,7 +28,7 @@ SRC_URI="
 		!qt-static? ( ${O_URI}intel-linux/${PN}-${O_VER}.6-shared-qt.i386${O_LNG}-${O_SUFF}.tar.bz2 ) )
 	x86-fbsd? (
 		qt-static? ( ${O_URI}intel-freebsd/${PN}-${O_VER}.1-static-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 )
-		!qt-static? ( ${O_URI}intel-freebsd/${PN}-${O_VER}.7-shared-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 ) )
+		!qt-static? ( ${O_URI}intel-freebsd/${PN}-${O_VER}.4-shared-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 ) )
 	"
 
 DEPEND=">=sys-apps/sed-4"

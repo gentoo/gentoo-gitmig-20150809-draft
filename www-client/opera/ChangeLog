@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.168 2007/11/03 17:09:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.169 2007/11/03 17:15:03 jer Exp $
+
+  03 Nov 2007; Jeroen Roovers <jer@gentoo.org> opera-9.50_beta2.ebuild:
+  Use the .4 build for FreeBSD.
 
 *opera-9.50_beta2 (03 Nov 2007)
 
