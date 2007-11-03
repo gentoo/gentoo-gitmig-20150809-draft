@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.10.0.ebuild,v 1.1 2007/11/02 17:14:59 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.10.0.ebuild,v 1.2 2007/11/03 13:49:31 coldwind Exp $
 
 inherit qt4
 
@@ -13,10 +13,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="$(qt4_min_version 4)"
+DEPEND="$(qt4_min_version 4.3)"
 RDEPEND="${DEPEND}
 	x11-libs/libX11
 	x11-libs/libXext"
+
+QT4_BUILT_WITH_USE_CHECK="qt3support"
 
 src_unpack() {
 	unpack ${A}

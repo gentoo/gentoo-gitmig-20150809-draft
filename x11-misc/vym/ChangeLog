@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/vym
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.14 2007/11/02 17:14:59 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.15 2007/11/03 13:49:31 coldwind Exp $
+
+  03 Nov 2007; Santiago M. Mola <coldwind@gentoo.org> vym-1.10.0.ebuild:
+  Check for qt3support, #197952
 
 *vym-1.10.0 (02 Nov 2007)
 
