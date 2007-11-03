@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.3-r1.ebuild,v 1.10 2007/04/24 09:31:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.3-r1.ebuild,v 1.11 2007/11/03 16:47:20 grobian Exp $
 
 inherit eutils python
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz http://dev.gentoo.org/~fuzzyray/distfiles/$
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="userland_GNU"
 
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 
