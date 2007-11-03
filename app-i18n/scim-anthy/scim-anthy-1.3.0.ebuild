@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.3.0.ebuild,v 1.1 2007/03/28 16:34:03 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.3.0.ebuild,v 1.2 2007/11/03 03:39:47 matsuu Exp $
 
 inherit libtool
 
@@ -18,7 +18,7 @@ DEPEND="|| ( >=app-i18n/scim-1.2 >=app-i18n/scim-cvs-1.2 )
 	nls? ( virtual/libintl )
 	gtk? ( >=x11-libs/gtk+-2.8 )"
 RDEPEND="${DEPEND}
-	app-dicts/kasumi"
+	gtk? ( app-dicts/kasumi )"
 DEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
