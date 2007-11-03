@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.41 2007/10/12 00:22:07 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.42 2007/11/03 15:47:47 caster Exp $
+
+*emul-linux-x86-java-1.4.2.16 (03 Nov 2007)
+
+  03 Nov 2007; Vlastimil Babka <caster@gentoo.org>
+  +files/emul-linux-x86-java-1.4.env, +emul-linux-x86-java-1.4.2.16.ebuild,
+  -emul-linux-x86-java-1.5.0.12.ebuild,
+  -emul-linux-x86-java-1.6.0.02.ebuild:
+  Version bump, security bug #178962 use Sun JRE instead of blackdown, change
+  slot from 1.4.2 to 1.4 to follow sun-jre-bin. Cleanup unused versions.
 
   12 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   emul-linux-x86-java-1.4.2.03-r2.ebuild,
