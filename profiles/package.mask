@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7862 2007/11/03 11:46:32 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7863 2007/11/03 18:21:03 hoffie Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -266,11 +266,6 @@ x11-wm/kahakai
 # Replaced by dev-db/mysql-gui-tools
 dev-db/mysql-administrator
 dev-db/mysql-query-browser
-
-# Christian Hoffmann <hoffie@gentoo.org> (30 Sep 2007)
-# 5.1 is unsupported by upstream and vulnerable to several security issues
-# Masked for removal in 30 days
-=dev-lang/php-5.1*
 
 # Peter Volkov <pva@gentoo.org> (28 Sep 2007)
 # masked for testing
