@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.4.0_rc1.ebuild,v 1.1 2007/11/01 23:51:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.4.0_rc1-r1.ebuild,v 1.1 2007/11/03 00:56:00 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -14,9 +14,9 @@ SRC_URI="http://distfiles.atheme.org/${MY_P}.tgz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="chardet dbus nls"
+IUSE="chardet nls"
 
-RDEPEND="dbus? ( >=dev-libs/dbus-glib-0.60 )
+RDEPEND=">=dev-libs/dbus-glib-0.60
 	>=dev-libs/libmcs-0.6.0
 	>=dev-libs/libmowgli-0.5.0
 	dev-libs/libxml2
@@ -33,9 +33,9 @@ PDEPEND=">=media-plugins/audacious-plugins-1.4.0_rc1"
 
 src_compile() {
 	econf \
+		--enable-dbus
 		--enable-samplerate \
 		$(use_enable chardet) \
-		$(use_enable dbus) \
 		$(use_enable nls) \
 		|| die
 
