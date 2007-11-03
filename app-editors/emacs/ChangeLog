@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.200 2007/11/03 17:33:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.201 2007/11/03 19:04:10 cla Exp $
+
+  03 Nov 2007; Dawid Węgliński <cla@gentoo.org> emacs-22.1-r2.ebuild:
+  Stable on x86 (bug #197958)
 
   03 Nov 2007; Raúl Porcel <armin76@gentoo.org> emacs-22.1-r2.ebuild:
   alpha/ia64/sparc stable wrt security #197958
