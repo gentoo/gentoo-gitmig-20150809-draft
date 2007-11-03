@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2.ebuild,v 1.2 2007/11/03 17:15:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.50_beta2.ebuild,v 1.3 2007/11/03 17:55:05 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="OPERA-9.0"
 KEYWORDS="~ppc ~x86 ~x86-fbsd"
 
-IUSE="qt-static spell gnome"
+IUSE="qt-static spell gnome elibc_FreeBSD"
 RESTRICT="strip mirror"
 
 O_LNG=""
@@ -21,42 +21,46 @@ O_SUFF="1652"
 O_VER="9.50-20071102"
 
 O_URI="http://snapshot.opera.com/unix/snapshot-${O_SUFF}/"
+
 SRC_URI="
 	ppc? ( ${O_URI}ppc-linux/${PN}-${O_VER}.6-shared-qt.ppc${O_LNG}-${O_SUFF}.tar.bz2 )
-	x86? (
-		qt-static? ( ${O_URI}intel-linux/${PN}-${O_VER}.10-static-qt.i386${O_LNG}-${O_SUFF}.tar.bz2 )
-		!qt-static? ( ${O_URI}intel-linux/${PN}-${O_VER}.6-shared-qt.i386${O_LNG}-${O_SUFF}.tar.bz2 ) )
-	x86-fbsd? (
-		qt-static? ( ${O_URI}intel-freebsd/${PN}-${O_VER}.1-static-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 )
-		!qt-static? ( ${O_URI}intel-freebsd/${PN}-${O_VER}.4-shared-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 ) )
+	x86? ( qt-static? ( ${O_URI}intel-linux/${PN}-${O_VER}.10-static-qt.i386${O_LNG}-${O_SUFF}.tar.bz2 )
+		   !qt-static? ( ${O_URI}intel-linux/${PN}-${O_VER}.6-shared-qt.i386${O_LNG}-${O_SUFF}.tar.bz2 ) )
+	x86-fbsd? (	qt-static? ( ${O_URI}intel-freebsd/${PN}-${O_VER}.1-static-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 )
+				!qt-static? ( ${O_URI}intel-freebsd/${PN}-${O_VER}.4-shared-qt.i386.freebsd${O_LNG}-${O_SUFF}.tar.bz2 ) )
 	"
 
 DEPEND=">=sys-apps/sed-4"
 
-RDEPEND=">=media-libs/fontconfig-2.1.94-r1
-		media-libs/jpeg
-		media-libs/libexif
-		x11-libs/libXrandr
-		x11-libs/libXp
-		x11-libs/libXmu
-		x11-libs/libXi
-		x11-libs/libXft
-		x11-libs/libXext
-		x11-libs/libXcursor
-		x11-libs/libX11
-		x11-libs/libSM
-		x11-libs/libICE
-		!qt-static? ( =x11-libs/qt-3* )
-		spell? ( app-text/aspell )"
+RDEPEND="media-libs/libexif
+	media-libs/jpeg
+	>=media-libs/fontconfig-2.1.94-r1
+	x11-libs/libXrandr
+	x11-libs/libXp
+	x11-libs/libXmu
+	x11-libs/libXi
+	x11-libs/libXft
+	x11-libs/libXext
+	x11-libs/libXcursor
+	x11-libs/libX11
+	x11-libs/libSM
+	x11-libs/libICE
+	!qt-static? ( =x11-libs/qt-3* )
+	ppc? ( =x11-libs/qt-3* )
+	spell? ( app-text/aspell )
+	x86-fbsd? ( =virtual/libstdc++-3* )"
 
-S=${WORKDIR}/${A/.tar.bz2/}
+S="${WORKDIR}/${A/.tar.bz2/}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-9.00-install.patch"
-	epatch "${FILESDIR}/${PN}-9.50-pluginpath.patch"
+
+	# bug #181300:
+	use elibc_FreeBSD || epatch "${FILESDIR}/${PN}-9.50-pluginpath.patch"
+	use elibc_FreeBSD && epatch "${FILESDIR}/${PN}-9.50-pluginpath-fbsd.patch"
 
 	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
 		-e "s:/usr/share/applnk:${D}/usr/share/applnk:g" \
@@ -71,6 +75,7 @@ src_unpack() {
 		-e "s:/opt/kde:${D}/usr/kde:" \
 		-e "s:\(str_localdirplugin=\).*$:\1/opt/opera/lib/opera/plugins:" \
 		install.sh || die "sed failed"
+		
 }
 
 src_compile() {
@@ -80,7 +85,6 @@ src_compile() {
 }
 
 src_install() {
-	local res
 	# Prepare installation directories for Opera's installer script.
 	dodir /etc
 
@@ -100,6 +104,8 @@ src_install() {
 	# Install the icons
 	insinto /usr/share/pixmaps
 	doins usr/share/pixmaps/opera.xpm
+
+	local res
 	for res in 16x16 22x22 32x32 48x48 ; do
 		insinto /usr/share/icons/hicolor/${res}/apps
 		doins usr/share/icons/hicolor/${res}/apps/opera.png
@@ -130,7 +136,7 @@ src_install() {
 	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > "${D}"/etc/revdep-rebuild/90opera
 
 	# Change libz.so.3 to libz.so.1 for gentoo/freebsd
-	if use x86-fbsd; then
+	if use elibc_FreeBSD; then
 		scanelf -qR -N libz.so.3 -F "#N" "${D}"/opt/${PN}/ | \
 		while read i; do
 			if [[ $(strings "$i" | fgrep -c libz.so.3) -ne 1 ]];
@@ -161,7 +167,7 @@ pkg_postinst() {
 	elog "To use the spellchecker (USE=spell) for non-English simply do"
 	elog "$ emerge app-dicts/aspell-[your language]."
 
-	if use x86-fbsd; then
+	if use elibc_FreeBSD; then
 		elog
 		elog "To improve shared memory usage please set:"
 		elog "$ sysctl kern.ipc.shm_allow_removed=1"
