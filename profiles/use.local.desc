@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3116 2007/11/03 02:18:37 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3117 2007/11/03 08:52:08 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1458,9 +1458,6 @@ net-ftp/vsftpd:logrotate - Use logrotate for rotating logs
 net-im/bitlbee:msnextras - Enables extra MSN patches not supported by upstream
 net-im/bitlbee:nss - Use NSS for SSL support in MSN and Jabber.
 net-im/bitlbee:openssl - Use OpenSSL for SSL support in MSN and Jabber.
-net-im/centericq:irc - Enable support for the IRC protocol
-net-im/centericq:lj - Enable support for the LiveJournal weblog system
-net-im/centericq:rss - Enable support for RSS/RDF feeds
 net-im/centerim:gadu - Enable support for the Gadu-Gadu protocol
 net-im/centerim:irc - Enable support for the IRC protocol
 net-im/centerim:lj - Enable support for the LiveJournal weblog system

@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.775 2007/11/02 21:37:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.776 2007/11/03 08:52:08 swegener Exp $
+
+  03 Nov 2007; Sven Wegener <swegener@gentoo.org> use.local.desc:
+  net-im/centericq has been removed from the tree.
 
   02 Nov 2007; Daniel Black <dragonheart@gentoo.org> use.local.desc:
   added rss for app-admin/conky
