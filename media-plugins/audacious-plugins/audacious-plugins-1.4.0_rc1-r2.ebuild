@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.4.0_rc1-r2.ebuild,v 1.1 2007/11/03 00:55:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.4.0_rc1-r2.ebuild,v 1.2 2007/11/03 17:01:49 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -66,6 +66,8 @@ src_compile() {
 		--enable-cdaudio-ng \
 		--enable-dbus \
 		--enable-neon \
+		--disable-projectm \
+		--disable-projectm-1.0 \
 		$(use_enable aac) \
 		$(use_enable adplug) \
 		$(use_enable alsa) \

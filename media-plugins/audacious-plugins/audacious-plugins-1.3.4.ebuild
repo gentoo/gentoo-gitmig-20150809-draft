@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.4.ebuild,v 1.3 2007/10/31 17:06:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.3.4.ebuild,v 1.4 2007/11/03 17:01:49 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -68,6 +68,7 @@ src_compile() {
 		--with-dev-dsp=/dev/sound/dsp \
 		--with-dev-mixer=/dev/sound/mixer \
 		--enable-paranormal \
+		--disable-projectm \
 		$(use_enable vorbis) \
 		$(use_enable esd) \
 		$(use_enable mad mp3) \
