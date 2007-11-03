@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.340 2007/11/03 14:20:04 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.341 2007/11/03 15:53:41 armin76 Exp $
+
+  03 Nov 2007; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-2.0.0.9.ebuild:
+  alpha/ia64/sparc stable wrt security #196480
 
   03 Nov 2007; Jurek Bartuszek <jurek@gentoo.org>
   mozilla-firefox-2.0.0.9.ebuild:
