@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.28 2007/10/29 06:27:32 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.29 2007/11/03 15:08:51 jokey Exp $
+
+*virtualbox-1.5.2-r1 (03 Nov 2007)
+
+  03 Nov 2007; Markus Ullmann <jokey@gentoo.org> files/virtualbox-wrapper,
+  -virtualbox-1.4.0.ebuild, -virtualbox-1.5.2.ebuild,
+  +virtualbox-1.5.2-r1.ebuild:
+  Fix desktop entry for bug #196832, typo in wrapper and HAL warning. Thanks
+  to Alessio for providing needed modifications
 
   29 Oct 2007; Dawid Węgliński <cla@gentoo.org> virtualbox-1.5.2.ebuild:
   Stable on x86

@@ -29,17 +29,17 @@ if [ "$1" = "shutdown" ]; then
     SHUTDOWN="true"
 elif [ ! -e /lib/modules/`uname -r`/misc/vboxdrv.ko ]; then
 	cat << EOF
-WARNING: There is no module available for the currente kernel (`uname -r`).
-         Please recompile the kernel module and install it by
+WARNING: There is no module available for the current kernel (`uname -r`).
+         Please recompile the kernel module and install it by:
 	
-	 sudo emerge -1 virtualbox-modules
+	 sudo emerge -1 app-emulation/virtualbox-modules
 
 	 You will not be able to start VMs until this problem is fixed.
 EOF
 elif ! lsmod|grep -q vboxdrv; then
     cat << EOF
 WARNING: The vboxdrv kernel module is not loaded.
-         Please load the kernel by
+         Please load the kernel module by:
 
            sudo modprobe vboxdrv
 
@@ -47,31 +47,45 @@ WARNING: The vboxdrv kernel module is not loaded.
 EOF
 elif [ ! -c /dev/vboxdrv ]; then
     cat << EOF
-WARNING: The character device /dev/vboxdrv does not exist. Try
+WARNING: The character device /dev/vboxdrv does not exist.
+	 Please try to reload the kernel module by:
 
-           sudo /etc/init.d/virtualbox restart
+           sudo rmmod vboxdrv; sleep 2; sudo modprobe vboxdrv
 
-         and if that is not successful, try to re-install the package.
+         and if that is not successful, try to re-install the package by:
+
+	   sudo emerge -1 app-emulation/virtualbox-modules
 
 	 You will not be able to start VMs until this problem is fixed.
 EOF
 elif [ ! -w /dev/vboxdrv ]; then
     if [ "`id | grep vboxusers`" = "" ]; then
         cat << EOF
-WARNING: You are not a member of the "vboxusers" group.  Please add yourself
-         to this group before starting VirtualBox.
+WARNING: You are not a member of the "vboxusers" group.
+	 Please add yourself to this group before starting VirtualBox.
 
 	 You will not be able to start VMs until this problem is fixed.
 EOF
     else
         cat << EOF
-WARNING: /dev/vboxdrv not writable for some reason. If you recently added the
-         current user to the vboxusers group then you have to logout and
-	 re-login to take the change effect.
+WARNING: /dev/vboxdrv not writable for some reason.
+	 If you recently added the current user to the "vboxusers" group
+	 then you have to logout and re-login to take the change effect.
 
 	 You will not be able to start VMs until this problem is fixed.
 EOF
     fi
+elif [ ! -e /usr/lib/libhal.so ]; then
+	cat << EOF
+WARNING: libhal was not found on this system.
+	 This can create several side effects thus problems,
+	 when accessing host resources (eg: Cd/Dvd readers).
+
+	 The use of "sys-apps/hal" is still recommended, please install it
+	 to meet this requirement by:
+
+	 	sudo emerge sys-apps/hal
+EOF
 fi
 
 export LD_LIBRARY_PATH="$INSTALL_DIR${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
