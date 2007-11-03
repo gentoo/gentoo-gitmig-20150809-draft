@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-en
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.22 2007/08/15 04:35:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.23 2007/11/03 13:01:27 uberlord Exp $
+
+  03 Nov 2007; Roy Marples <uberlord@gentoo.org> aspell-en-6.0.0.ebuild:
+  Keyworded ~sparc-fbsd, #197275.
 
   15 Aug 2007; Jeroen Roovers <jer@gentoo.org> aspell-en-6.0.0.ebuild:
   Stable for HPPA (bug #178690).
