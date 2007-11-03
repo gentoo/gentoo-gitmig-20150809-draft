@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.3.4.ebuild,v 1.1 2007/10/10 09:41:44 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.3.4.ebuild,v 1.2 2007/11/03 17:39:02 grobian Exp $
 
 inherit eutils autotools toolchain-funcs flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="http://people.freebsd.org/~kientzle/libarchive/src/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="build static acl xattr"
+IUSE="build static acl xattr kernel_linux"
 
 RDEPEND="!dev-libs/libarchive
 	kernel_linux? (
