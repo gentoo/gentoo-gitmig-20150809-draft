@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.1_p20071003.ebuild,v 1.3 2007/11/03 09:28:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.1_p20071003.ebuild,v 1.4 2007/11/03 09:33:10 swegener Exp $
 
 inherit eutils
 
@@ -31,7 +31,6 @@ DEPEND=">=sys-libs/ncurses-5.2
 	)"
 
 RDEPEND="${DEPEND}
-	!net-im/centericq
 	nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}"/${P/_p*}
