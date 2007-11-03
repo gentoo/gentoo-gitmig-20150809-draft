@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.66 2007/11/03 15:08:58 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.67 2007/11/03 15:13:10 alonbl Exp $
+
+  03 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  -hibernate-script-1.97.ebuild:
+  Cleanup
 
 *hibernate-script-1.97-r1 (03 Nov 2007)
 
