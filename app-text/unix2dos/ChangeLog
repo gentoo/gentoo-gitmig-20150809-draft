@@ -1,6 +1,9 @@
 # ChangeLog for app-text/unix2dos
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/ChangeLog,v 1.23 2007/11/03 17:00:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/ChangeLog,v 1.24 2007/11/03 18:00:26 armin76 Exp $
+
+  03 Nov 2007; Raúl Porcel <armin76@gentoo.org> unix2dos-2.2-r1.ebuild:
+  alpha/sparc stable wrt #197747
 
   03 Nov 2007; Jeroen Roovers <jer@gentoo.org> unix2dos-2.2-r1.ebuild:
   Stable for HPPA (bug #197747).
