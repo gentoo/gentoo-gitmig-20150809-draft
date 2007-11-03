@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.1.ebuild,v 1.4 2007/08/19 02:17:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.90.1.ebuild,v 1.5 2007/11/03 15:27:25 bicatali Exp $
 
 NEED_PYTHON=2.3
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://matplotlib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	doc? ( http://matplotlib.sourceforge.net/users_guide_${DOC_PV}.pdf )"
 
-IUSE="doc examples gtk tk"
+IUSE="doc examples gtk tetex tk"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="PYTHON"
@@ -23,7 +23,6 @@ DEPEND="|| (
 		dev-python/numarray
 		>=dev-python/numeric-23
 	   )
-	!<dev-python/numpy-1.0
 	>=media-libs/freetype-2.1.7
 	media-libs/libpng
 	sys-libs/zlib
@@ -32,7 +31,7 @@ DEPEND="|| (
 	dev-python/python-dateutil"
 
 RDEPEND="${DEPEND}
-	app-text/dvipng
+	tetex? ( app-text/dvipng )
 	media-fonts/ttf-bitstream-vera"
 
 DOCS="INTERACTIVE API_CHANGES NUMARRAY_ISSUES"
@@ -47,7 +46,7 @@ src_unpack() {
 	cd "${S}"
 
 	# disable autodetection (use flags) and install data files
-	epatch "${FILESDIR}/${P}-setup.patch"
+	epatch "${FILESDIR}"/${P}-setup.patch
 	sed -i \
 		-e "/^BUILD_GTK/s/'auto'/$(use gtk && echo 1 || echo 0)/g" \
 		-e "/^BUILD_WX/s/'auto'/0/g" \
