@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim-scim-anthy/skim-scim-anthy-1.2.4.ebuild,v 1.5 2007/09/22 22:05:47 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim-scim-anthy/skim-scim-anthy-1.2.4.ebuild,v 1.6 2007/11/03 03:39:15 matsuu Exp $
 
 inherit kde
 
@@ -16,8 +16,6 @@ IUSE=""
 
 DEPEND=">=app-i18n/skim-1.3
 	>=app-i18n/scim-anthy-1.2.4"
-RDEPEND="${DEPEND}
-	app-dicts/kasumi"
 
 PATCHES="${FILESDIR}/${PN}-1.2.1-qt335.patch"
 
