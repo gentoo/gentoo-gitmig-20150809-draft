@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3115 2007/11/02 21:37:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3116 2007/11/03 02:18:37 uberlord Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1967,6 +1967,7 @@ sys-devel/kgcc64:multislot - Allow for SLOTs to include minor version (3.3.4 ins
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
 sys-freebsd/freebsd-lib:atm - Enable Asynchronous Transfer Mode protocol support
 sys-freebsd/freebsd-lib:gpib - Enable gpib support (TODO improve description)
+sys-freebsd/freebsd-lib:hesiod - Enable hesiod support
 sys-freebsd/freebsd-rescue:atm - Enable Asynchronous Transfer Mode protocol support
 sys-freebsd/freebsd-sbin:atm - Enable Asynchronous Transfer Mode protocol support
 sys-freebsd/freebsd-sbin:ipfilter - Enable ipfilter firewall support
