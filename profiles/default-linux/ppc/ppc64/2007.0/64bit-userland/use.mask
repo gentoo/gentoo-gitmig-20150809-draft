@@ -12,6 +12,7 @@ mono
 beagle
 rar
 multilib
+networkmanager
 
 # dietlibc
 diet
