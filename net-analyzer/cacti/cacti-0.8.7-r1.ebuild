@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6j-r6.ebuild,v 1.12 2007/11/03 18:53:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7-r1.ebuild,v 1.1 2007/11/03 18:53:22 pva Exp $
 
 inherit eutils webapp depend.apache depend.php
 
@@ -14,18 +14,15 @@ SRC_URI="http://www.cacti.net/downloads/${MY_P}.tar.gz"
 
 # patches
 if [ $HAS_PATCHES == 1 ] ; then
-	UPSTREAM_PATCHES="ping_php_version4_snmpgetnext
-					  tree_console_missing_hosts
-					  thumbnail_graphs_not_working
-					  graph_debug_lockup_fix
-					  snmpwalk_fix"
+	UPSTREAM_PATCHES="graph_create_xml_warning
+					  sec_sql_injection-0.8.7"
 	for i in $UPSTREAM_PATCHES ; do
 		SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV/_p*}/${i}.patch"
 	done
 fi
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="snmp bundled-adodb"
 
 DEPEND=""
@@ -53,11 +50,9 @@ src_unpack() {
 		unpack ${MY_P}.tar.gz
 	fi
 
-	epatch "${FILESDIR}/${P}"-dos-large-values.patch
-
 	use bundled-adodb || sed -i -e \
-	's:$config\["library_path"\] . "/adodb/adodb.inc.php":"/usr/share/php/adodb/adodb.inc.php":' \
-	"${S}"/include/config.php || die "Adodb sed failed."
+	's:$config\["library_path"\] . "/adodb/adodb.inc.php":"adodb/adodb.inc.php":' \
+	"${S}"/include/global.php
 }
 
 pkg_setup() {
