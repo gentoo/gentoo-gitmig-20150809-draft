@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.198 2007/11/03 14:49:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.199 2007/11/03 16:14:44 ulm Exp $
+
+  03 Nov 2007; Ulrich Mueller <ulm@gentoo.org> emacs-18.59-r4.ebuild:
+  Use epatch for bulk patching.
 
 *emacs-22.1-r2 (03 Nov 2007)
 

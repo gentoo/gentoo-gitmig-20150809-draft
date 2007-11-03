@@ -1,14 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r4.ebuild,v 1.5 2007/10/10 06:22:17 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r4.ebuild,v 1.6 2007/11/03 16:14:44 ulm Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="The extensible self-documenting text editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
 SRC_URI="mirror://gnu/old-gnu/emacs/${P}.tar.gz
-	mirror://gentoo/emacs-18-patches.tar.bz2
-	ftp://ftp.splode.com/pub/users/friedman/emacs/${P}-linux22x-elf-glibc21.diff.gz"
+	ftp://ftp.splode.com/pub/users/friedman/emacs/${P}-linux22x-elf-glibc21.diff.gz
+	mirror://gentoo/${P}-patches.tar.bz2"
 
 LICENSE="GPL-1 BSD"
 SLOT="18"
@@ -27,12 +27,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}/${P}-linux22x-elf-glibc21.diff"
-	epatch "${WORKDIR}/${P}-unexelf.patch"
-	epatch "${WORKDIR}/${P}-gentoo.patch"
-	epatch "${WORKDIR}/${P}-gcc4.patch"
+	EPATCH_SUFFIX=patch epatch
 }
 
 src_compile() {
+	# Do not use the sandbox, or the dumped Emacs will be twice as large
 	SANDBOX_ON=0
 
 	# autoconf? What's autoconf? We are living in 1992. ;-)
