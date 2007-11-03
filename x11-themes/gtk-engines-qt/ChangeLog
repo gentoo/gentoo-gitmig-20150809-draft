@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.22 2007/09/11 22:48:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.23 2007/11/03 16:59:20 jokey Exp $
+
+  03 Nov 2007; Markus Ullmann <jokey@gentoo.org> gtk-engines-qt-0.8.ebuild:
+  Stable on x86
 
 *gtk-engines-qt-0.8 (11 Sep 2007)
 
