@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcre++/pcre++-0.9.5-r1.ebuild,v 1.10 2007/09/28 12:02:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcre++/pcre++-0.9.5-r1.ebuild,v 1.11 2007/11/03 10:40:52 swegener Exp $
 
 inherit eutils autotools
 
@@ -20,9 +20,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	for p in "${WORKDIR}"/${P}-patches/*.patch ; do
-		epatch "${p}"
-	done
+	EPATCH_SUFFIX="patch" \
+	EPATCH_SOURCE="${WORKDIR}/${P}-patches" \
+	EPATCH_FORCE="yes" \
+	epatch
 
 	./autogen.sh || die "autogen.sh failed"
 }
@@ -31,9 +32,8 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
-	cd ${S}/doc/html
-	dohtml -r .
+	dohtml -r doc/html/.
+	doman doc/man/man3/Pcre.3
 
-	cd ${S}/doc/man/man3
-	doman Pcre.3
+	rm -rf "${D}"/usr/doc
 }
