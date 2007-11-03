@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0_p20070920.ebuild,v 1.5 2007/11/02 09:43:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0_p20070920.ebuild,v 1.6 2007/11/03 20:23:02 ulm Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
@@ -72,6 +72,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-make-tramp-temp-file.patch"
 	epatch "${FILESDIR}/${PN}-makeinfo-regexp.patch"
 	epatch "${FILESDIR}/${PN}-no-x-compile.patch"
+	epatch "${FILESDIR}/${PN}-hack-local-variables.patch"
 	# ALSA is detected and used even if not requested by the USE=alsa flag.
 	# So remove the automagic check
 	use alsa || epatch "${FILESDIR}/${PN}-disable_alsa_detection-r1.patch"
