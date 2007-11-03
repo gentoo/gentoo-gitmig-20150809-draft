@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.256 2007/10/19 22:29:37 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.257 2007/11/03 20:10:20 philantrop Exp $
+
+  03 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/kdemultimedia-kioslaves-3.5.8-freebsd.patch,
+  kdemultimedia-3.5.8.ebuild:
+  Added a patch for BSD compatibility.
 
 *kdemultimedia-3.5.8 (19 Oct 2007)
 
