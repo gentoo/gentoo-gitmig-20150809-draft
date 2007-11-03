@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.1.ebuild,v 1.2 2007/10/09 08:23:57 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.0.1.ebuild,v 1.3 2007/11/03 17:01:17 grobian Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability versionator
 
@@ -39,7 +39,8 @@ IUSE="${IUSE_VIDEO_CARDS}
 	hardened
 	motif
 	nptl
-	xcb"
+	xcb
+	kernel_FreeBSD"
 
 RDEPEND="dev-libs/expat
 	x11-libs/libX11
