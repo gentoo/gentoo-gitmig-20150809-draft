@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.187 2007/10/28 07:13:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.188 2007/11/03 00:49:09 pylon Exp $
+
+  03 Nov 2007; Lars Weiler <pylon@gentoo.org> mldonkey-2.9.1.ebuild:
+  stable ppc, bug #197206
 
   28 Oct 2007; Jeroen Roovers <jer@gentoo.org> mldonkey-2.9.1.ebuild:
   Stable for HPPA (bug #197206). Fixed quoting issues.
