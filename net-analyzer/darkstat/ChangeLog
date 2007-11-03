@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.26 2007/11/01 13:29:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.27 2007/11/03 17:33:26 pva Exp $
+
+*darkstat-3.0.707-r1 (03 Nov 2007)
+
+  03 Nov 2007; <pva@gentoo.org> +files/darkstat-confd.new,
+  +files/darkstat-init.new, +darkstat-3.0.707-r1.ebuild:
+  Fixes init script and ebuild cleanups. Fixes bug #194650, thank Tiger
+  <marchaldoneway AT hotmail.fr> for report and help.
 
 *darkstat-3.0.707 (01 Nov 2007)
 
