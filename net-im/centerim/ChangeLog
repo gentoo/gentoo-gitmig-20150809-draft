@@ -1,6 +1,11 @@
 # ChangeLog for net-im/centerim
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.4 2007/11/02 19:33:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.5 2007/11/03 09:28:28 swegener Exp $
+
+  03 Nov 2007; Sven Wegener <swegener@gentoo.org>
+  +files/centerim-imotr-config.patch, centerim-4.22.1_p20070625.ebuild,
+  centerim-4.22.1_p20071003.ebuild, centerim-4.22.1_p20071022.ebuild:
+  Add jpeg and otr USE flags.
 
 *centerim-4.22.1_p20071022 (02 Nov 2007)
 

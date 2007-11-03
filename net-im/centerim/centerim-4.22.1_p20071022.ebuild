@@ -1,11 +1,11 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.1_p20071022.ebuild,v 1.1 2007/11/02 19:33:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.1_p20071022.ebuild,v 1.2 2007/11/03 09:28:28 swegener Exp $
 
 inherit eutils
 
 PROTOCOL_IUSE="aim gadu icq irc jabber lj msn rss yahoo"
-IUSE="${PROTOCOL_IUSE} bidi nls ssl crypt"
+IUSE="${PROTOCOL_IUSE} bidi nls ssl crypt jpeg otr"
 
 DESCRIPTION="CenterIM is a fork of CenterICQ - a ncurses ICQ/Yahoo!/AIM/IRC/MSN/Jabber/GaduGadu/RSS/LiveJournal Client"
 if [[ ${PV} = *_p* ]] # is this a snaphot?
@@ -22,6 +22,8 @@ KEYWORDS="~x86 ~amd64"
 DEPEND=">=sys-libs/ncurses-5.2
 	bidi? ( dev-libs/fribidi )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
+	jpeg? ( media-libs/jpeg )
+	otr? ( net-libs/libotr )
 	jabber? ( crypt? ( >=app-crypt/gpgme-1.0.2 ) )
 	msn? (
 		net-misc/curl
@@ -64,6 +66,20 @@ pkg_setup() {
 		eerror
 		die "net-misc/curl dependencie issue"
 	fi
+
+	if use gadu && ! use jpeg
+	then
+		ewarn
+		ewarn "You need jpeg support to be able to register Gadu-Gadu accounts!"
+		ewarn
+	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-imotr-config.patch
 }
 
 src_compile() {
@@ -71,6 +87,8 @@ src_compile() {
 		$(use_with ssl) \
 		$(use_enable aim) \
 		$(use_with bidi fribidi) \
+		$(use_with jpeg libjpeg) \
+		$(use_with otr libotr) \
 		$(use_enable gadu gg) \
 		$(use_enable icq) \
 		$(use_enable irc) \
@@ -88,5 +106,5 @@ src_compile() {
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING FAQ README THANKS TODO
+	dodoc AUTHORS ChangeLog FAQ README THANKS TODO
 }
