@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.20.1.ebuild,v 1.2 2007/10/07 22:45:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.20.1.ebuild,v 1.3 2007/11/03 14:41:53 dang Exp $
 
 inherit gnome2 eutils python multilib pam
 
@@ -26,7 +26,8 @@ RDEPEND="${DEPEND}
 	app-admin/gamin
 	dev-libs/libxml2
 	>=gnome-base/gconf-2.8.1
-	>=dev-python/gnome-python-2.6.0"
+	>=dev-python/gnome-python-2.6.0
+	x11-libs/gksu"
 
 pkg_setup() {
 	if built_with_use x11-base/xorg-server minimal; then
@@ -61,6 +62,14 @@ pkg_setup() {
 
 	DOCS="AUTHORS ChangeLog ISSUES NEWS README TODO"
 	USE_DESTDIR="1"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Switch gnomesu to gksu; bug #197865
+	sed -i -e 's/gnomesu/gksu/' admin-tool/sabayon.desktop || die "gksu sed failed"
+	sed -i -e 's/gnomesu/gksu/' admin-tool/sabayon.desktop.in || die "gksu sed failed"
 }
 
 pkg_postinst() {

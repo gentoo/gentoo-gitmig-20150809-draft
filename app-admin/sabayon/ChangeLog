@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.28 2007/10/07 22:45:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.29 2007/11/03 14:41:53 dang Exp $
+
+  03 Nov 2007; Daniel Gryniewicz <dang@gentoo.org> sabayon-2.20.1.ebuild:
+  Make sabayon use gksu rather than gnomesu; bug #197865
 
   07 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org> sabayon-2.18.1.ebuild,
   sabayon-2.20.1.ebuild:
