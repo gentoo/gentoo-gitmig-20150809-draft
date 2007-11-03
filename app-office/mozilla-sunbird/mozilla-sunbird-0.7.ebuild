@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.7.ebuild,v 1.2 2007/10/27 21:51:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.7.ebuild,v 1.3 2007/11/03 12:27:40 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
-PATCH="${PN}-0.5-patches-0.1"
+PATCH="${P}-patches-0.1"
 LANGS="ca cs da de es-AR es-ES eu fr ga-IE hu it ka lt mk nb-NO nl pa-IN pl pt-BR pt-PT ru sk sl sv-SE tr zh-CN"
 NOSHORTLANGS="es-AR pt-BR zh-TW"
 
@@ -152,9 +152,9 @@ src_compile() {
 	# to econf, but the quotes cause configure to fail.
 	sed -i -e \
 		's|-DARON_WAS_HERE|-DGENTOO_NSPLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsplugins\\\" -DGENTOO_NSBROWSER_PLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsbrowser/plugins\\\"|' \
-		${S}/config/autoconf.mk \
-		${S}/nsprpub/config/autoconf.mk \
-		${S}/xpfe/global/buildconfig.html
+		"${S}"/config/autoconf.mk \
+		"${S}"/nsprpub/config/autoconf.mk \
+		"${S}"/xpfe/global/buildconfig.html
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
 	# requirements while compiling
