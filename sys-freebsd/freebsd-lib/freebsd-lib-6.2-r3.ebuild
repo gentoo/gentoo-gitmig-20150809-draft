@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2-r3.ebuild,v 1.1 2007/10/23 12:02:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2-r3.ebuild,v 1.2 2007/11/03 02:24:26 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="FreeBSD's base system libraries"
 SLOT="6.0"
 KEYWORDS="~sparc-fbsd ~x86-fbsd"
 
-IUSE="atm bluetooth ssl ipv6 kerberos nis gpib build bootstrap"
+IUSE="atm bluetooth ssl hesiod ipv6 kerberos nis gpib build bootstrap"
 
 # Crypto is needed to have an internal OpenSSL header
 # sys is needed for libalias, probably we can just extract that instead of
@@ -25,6 +25,7 @@ SRC_URI="mirror://gentoo/${LIB}.tar.bz2
 
 if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 	RDEPEND="ssl? ( dev-libs/openssl )
+		hesiod? ( net-dns/hesiod )
 		kerberos? ( virtual/krb5 )
 		!sys-freebsd/freebsd-headers"
 	DEPEND="${RDEPEND}
@@ -60,6 +61,7 @@ pkg_setup() {
 
 	use atm || mymakeopts="${mymakeopts} NO_ATM= "
 	use bluetooth || mymakeopts="${mymakeopts} NO_BLUETOOTH= "
+	use hesiod || mymakeopts="${mymakeopts} NO_HESIOD_LIBC= "
 	use ssl || mymakeopts="${mymakeopts} NO_OPENSSL= NO_CRYPT= "
 	use ipv6 || mymakeopts="${mymakeopts} NO_INET6= "
 	use kerberos || mymakeopts="${mymakeopts} NO_KERBEROS= "
@@ -125,6 +127,12 @@ src_unpack() {
 			|| die "Failed to sed ${x}"
 		rm "${x}".bak
 	done
+
+	# Don't install the hesiod man page or header
+	rm "${WORKDIR}"/include/hesiod.h || die
+	sed -i.bak -e 's:hesiod.h::' "${WORKDIR}"/include/Makefile || die
+	sed -i.bak -e 's:hesiod.c::' -e 's:hesiod.3::' \
+	"${WORKDIR}"/lib/libc/net/Makefile.inc || die
 
 	# Apply this patch for Gentoo/FreeBSD/SPARC64 to build correctly
 	# from catalyst, then don't do anything else
