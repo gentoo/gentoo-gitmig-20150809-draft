@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.707-r1.ebuild,v 1.1 2007/11/03 17:33:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.707-r1.ebuild,v 1.2 2007/11/03 20:22:51 pva Exp $
 
 inherit eutils
 
@@ -44,8 +44,8 @@ pkg_preinst() {
 
 pkg_postinst() {
 	# Workaround bug #141619
-	DARKSTAT_CHROOT_DIR=`sed -n 's/^#CHROOT=\(.*\)/\1/p' /etc/conf.d/darkstat`
-	chown darkstat:0 "${DARKSTAT_CHROOT_DIR}"
+	DARKSTAT_CHROOT_DIR=`sed -n 's/^#CHROOT=\(.*\)/\1/p' "${ROOT}"etc/conf.d/darkstat`
+	chown darkstat:0 "${ROOT}${DARKSTAT_CHROOT_DIR}"
 
 	elog "WARNING: the darkstat init script has changed"
 	elog "To start different darkstat instances which will listen on a different"
@@ -54,6 +54,6 @@ pkg_postinst() {
 	elog "Also in /etc/conf.d directory copy darkstat to darkstat.if"
 	elog "and edit it to change default values."
 	elog
-	elog "darkstat's default chroot directory is: ${DARKSTAT_CHROOT_DIR}"
+	elog "darkstat's default chroot directory is: \"${ROOT}${DARKSTAT_CHROOT_DIR}\""
 }
 
