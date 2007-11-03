@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.128 2007/11/02 15:21:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.129 2007/11/03 21:56:05 corsair Exp $
+
+  03 Nov 2007; Markus Rothe <corsair@gentoo.org> liferea-1.2.23-r1.ebuild:
+  Stable on ppc64; bug #197701
 
   02 Nov 2007; Raúl Porcel <armin76@gentoo.org> liferea-1.2.23-r1.ebuild:
   sparc stable wrt security #197701
