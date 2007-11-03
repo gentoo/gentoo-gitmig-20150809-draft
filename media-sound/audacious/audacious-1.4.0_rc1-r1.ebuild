@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.4.0_rc1-r1.ebuild,v 1.1 2007/11/03 00:56:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.4.0_rc1-r1.ebuild,v 1.2 2007/11/03 07:16:11 robbat2 Exp $
 
 inherit flag-o-matic
 
@@ -33,7 +33,7 @@ PDEPEND=">=media-plugins/audacious-plugins-1.4.0_rc1"
 
 src_compile() {
 	econf \
-		--enable-dbus
+		--enable-dbus \
 		--enable-samplerate \
 		$(use_enable chardet) \
 		$(use_enable nls) \
