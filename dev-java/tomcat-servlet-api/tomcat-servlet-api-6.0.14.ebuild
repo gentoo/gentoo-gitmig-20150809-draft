@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-6.0.14.ebuild,v 1.5 2007/09/02 15:05:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-6.0.14.ebuild,v 1.6 2007/11/03 02:01:25 wltjr Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	cp ${FILESDIR}/${SLOT}-build.xml build.xml || die "Could not replace build.xml"
+	cp "${FILESDIR}/${SLOT}-build.xml" build.xml || die "Could not replace build.xml"
 	rm */*/build.xml
 }
 
