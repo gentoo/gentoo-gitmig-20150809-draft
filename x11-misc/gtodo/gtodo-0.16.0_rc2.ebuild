@@ -1,13 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.16.0_rc2.ebuild,v 1.8 2007/11/03 15:13:16 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.16.0_rc2.ebuild,v 1.9 2007/11/03 15:15:28 coldwind Exp $
 
 inherit gnome2 versionator
 
 MY_P=${PN}-$(replace_version_separator 3 '-' )
 
 DESCRIPTION="Gnome Task List Manager is a GTK+ based TODO application with applet."
-HOMEPAGE="http://cms.qballcow.nl/index.php?page=Gnome_Task_List_Manager"
+HOMEPAGE="http://sarine.nl/gnome-task-list-manager"
 SRC_URI="http://download.qballcow.nl/programs/${PN}/${MY_P}.tar.gz
 	gnome? ( http://download.qballcow.nl/programs/${PN}/${PN}-applet-0.16-2.tar.gz )"
 
