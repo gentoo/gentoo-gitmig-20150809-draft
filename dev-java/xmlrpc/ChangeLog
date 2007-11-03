@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlrpc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.15 2007/11/02 03:27:25 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.16 2007/11/03 01:52:59 pylon Exp $
+
+  03 Nov 2007; Lars Weiler <pylon@gentoo.org> xmlrpc-2.0.1.ebuild:
+  stable ppc, bug #197476
 
   02 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   xmlrpc-2.0.1.ebuild:
