@@ -1,6 +1,16 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.491 2007/10/19 22:27:24 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.492 2007/11/03 16:11:18 philantrop Exp $
+
+*kdelibs-3.5.8-r1 (03 Nov 2007)
+
+  03 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org> 
+  +kdelibs-3.5.8-r1.ebuild:
+  Added several upstream patches:
+  - Un-break editable controls like zoom selectors.
+  - BSD patch that should fix startup problems.
+  - Incorrect username shortening in konqueror.
+  - Miscellaneous post-3.5.8 fixes.
 
 *kdelibs-3.5.8 (19 Oct 2007)
 
