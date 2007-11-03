@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.65 2007/10/28 07:11:25 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.66 2007/11/03 15:08:58 alonbl Exp $
+
+*hibernate-script-1.97-r1 (03 Nov 2007)
+
+  03 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org>
+  +hibernate-script-1.97-r1.ebuild:
+  Fix tuxonice filewriter issue, bug#197630, thanks Frittella Laurento for
+  reporting
 
   28 Oct 2007; Alon Bar-Lev <alonbl@gentoo.org>
   files/digest-hibernate-script-1.97, Manifest:
