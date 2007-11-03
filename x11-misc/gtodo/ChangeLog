@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gtodo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.18 2007/05/16 06:46:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.19 2007/11/03 15:06:11 coldwind Exp $
+
+  03 Nov 2007; Santiago M. Mola <coldwind@gentoo.org>
+  gtodo-0.16.0_rc2.ebuild:
+  Depend on gnome-panel #197908
 
   16 May 2007; Christian Faulhammer <opfer@gentoo.org>
   gtodo-0.16.0_rc2.ebuild:
