@@ -7,3 +7,4 @@ move net-www/dotproject www-apps/dotproject
 slotmove =x11-libs/gtksourceview-1* 1 1.0
 move x11-apps/compiz-settings x11-apps/ccsm
 move x11-plugins/compiz-extra x11-plugins/compiz-fusion-plugins-main
+slotmove =app-emulation/emul-linux-x86-java-1.4* 1.4.2 1.4
