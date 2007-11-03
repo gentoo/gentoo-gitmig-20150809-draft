@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.16.0_rc2.ebuild,v 1.7 2007/11/03 15:06:11 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.16.0_rc2.ebuild,v 1.8 2007/11/03 15:13:16 coldwind Exp $
 
 inherit gnome2 versionator
 
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	>=gnome-base/gconf-2
 	>=dev-libs/glib-2
 	>=gnome-base/gnome-vfs-2
-	gnome-base/gnome-panel"
+	gnome? ( gnome-base/gnome-panel )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
