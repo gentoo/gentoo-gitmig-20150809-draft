@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/kannel
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.13 2007/08/18 07:08:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.14 2007/11/04 08:31:02 mrness Exp $
+
+  04 Nov 2007; Alin Năstac <mrness@gentoo.org> kannel-1.4.1.ebuild:
+  Remove useless pkg_preinst function.
 
   18 Aug 2007; Alin Năstac <mrness@gentoo.org>
   -files/kannel-1.4.0-custom-wap-ports.patch,

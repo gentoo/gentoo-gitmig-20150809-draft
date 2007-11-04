@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.4 2007/04/24 06:50:57 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.5 2007/11/04 08:31:02 mrness Exp $
 inherit eutils
 
 DESCRIPTION="Powerful SMS and WAP gateway"
@@ -87,8 +87,4 @@ src_install() {
 
 	newinitd "${FILESDIR}/kannel-initd" kannel
 	newconfd "${FILESDIR}/kannel-confd" kannel
-}
-
-pkg_preinst() {
-	pkg_setup
 }

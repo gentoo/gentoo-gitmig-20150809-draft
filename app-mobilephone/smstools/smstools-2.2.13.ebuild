@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/smstools-2.2.13.ebuild,v 1.1 2006/12/04 13:52:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/smstools-2.2.13.ebuild,v 1.2 2007/11/04 08:32:52 mrness Exp $
 
 inherit eutils
 
@@ -56,10 +56,6 @@ src_install() {
 	newins "${S}"/examples/smsd.conf.easy smsd.conf
 
 	dohtml "${S}"/doc/*
-}
-
-pkg_preinst() {
-	pkg_setup
 }
 
 pkg_postinst() {
