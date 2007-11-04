@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/powwow
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/ChangeLog,v 1.9 2007/03/02 13:56:42 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/ChangeLog,v 1.10 2007/11/04 20:38:25 tupone Exp $
+
+*powwow-1.2.12 (04 Nov 2007)
+
+  04 Nov 2007; Tupone Alfredo <tupone@gentoo.org> +powwow-1.2.12.ebuild:
+  Version bump
 
 *powwow-1.2.11 (02 Mar 2007)
 
