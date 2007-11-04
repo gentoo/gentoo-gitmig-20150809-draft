@@ -12,7 +12,7 @@
  GenericName[zh_CN]=Diff/Patch 前端
  GenericName[zu]=Diff/PatchIsiqalo sokugcina
 -Exec=kdiff3 %i %m -caption "%c"
-+Exec=kdiff3 %i -caption "%c" --miniicon
++Exec=kdiff3 %i %m -caption "%c"
  Icon=kdiff3
  Type=Application
 +Categories=Qt;KDE;Development;

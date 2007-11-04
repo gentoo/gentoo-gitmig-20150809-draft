@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.29 2007/08/20 18:42:25 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.30 2007/11/04 17:26:04 philantrop Exp $
+
+  04 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  files/kdiff3-0.9.92-fix-desktop-file.patch, kdiff3-0.9.92.ebuild:
+  Fixed the desktop file as per bug 196889.
 
   20 Aug 2007; Tobias Heinlein <keytoaster@gentoo.org>
   +files/kdiff3-0.9.92-fix-desktop-file.patch, kdiff3-0.9.92.ebuild:
