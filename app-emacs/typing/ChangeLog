@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/typing
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/typing/ChangeLog,v 1.9 2007/07/03 19:49:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/typing/ChangeLog,v 1.10 2007/11/04 17:05:47 ulm Exp $
+
+  04 Nov 2007; Ulrich Mueller <ulm@gentoo.org> typing-1.1.2.ebuild:
+  amd64 stable, bug 195512
 
   03 Jul 2007; Ulrich Mueller <ulm@gentoo.org> typing-1.1.2.ebuild:
   Remove redundant functions.
