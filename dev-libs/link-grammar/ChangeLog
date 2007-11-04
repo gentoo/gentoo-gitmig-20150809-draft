@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/link-grammar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.17 2007/08/15 10:33:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.18 2007/11/04 22:57:47 eva Exp $
+
+  04 Nov 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  link-grammar-4.2.2.ebuild, link-grammar-4.2.4.ebuild:
+  fix repoman warnings
+
+*link-grammar-4.2.4-r1 (04 Nov 2007)
+
+  04 Nov 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/link-grammar-4.2.4-tokenize.patch, +link-grammar-4.2.4-r1.ebuild:
+  fix bug #196803
 
 *link-grammar-4.2.4 (15 Aug 2007)
 
