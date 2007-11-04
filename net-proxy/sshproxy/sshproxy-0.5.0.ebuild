@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.5.0.ebuild,v 1.2 2006/09/29 03:26:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.5.0.ebuild,v 1.3 2007/11/04 08:25:03 mrness Exp $
 
 inherit distutils
 
@@ -90,8 +90,6 @@ pkg_postinst () {
 		einfo "   SSHPROXY_USER (default to $USER)"
 		einfo "for each sshproxy user."
 	else
-		pkg_setup #for creating the user when installed from binary package
-
 		distutils_pkg_postinst
 
 		echo
