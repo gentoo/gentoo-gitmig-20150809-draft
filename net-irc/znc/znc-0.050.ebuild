@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.050.ebuild,v 1.2 2007/10/23 22:09:54 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.050.ebuild,v 1.3 2007/11/04 14:16:50 angelos Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="debug ipv6 nomodules perl ssl"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.7d )
