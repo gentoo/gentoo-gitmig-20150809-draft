@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-3.6.14.ebuild,v 1.4 2007/07/22 09:32:14 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-3.6.14.ebuild,v 1.5 2007/11/04 10:19:40 drac Exp $
 
 inherit libtool eutils
 
-MY_P="VFlib3-${PV}"
+MY_P=VFlib3-${PV}
 
 DESCRIPTION="Japanese Vector Font library"
 HOMEPAGE="http://www-masu.ist.osaka-u.ac.jp/~kakugawa/VFlib/"
@@ -23,18 +23,19 @@ RDEPEND="x11-libs/libX11
 	media-libs/t1lib"
 DEPEND="${RDEPEND}
 	x11-proto/xproto
-	virtual/tetex"
+	virtual/tetex
+	x11-misc/imake"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
-src_unpack () {
+src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/${P}-install-info.diff"
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-install-info.diff
+	elibtoolize
 }
 
-src_compile () {
-	elibtoolize
+src_compile() {
 	sed -i -e "s:<varargs.h>:<stdarg.h>:" src/vfldisol.c
 	if has_version '>=media-libs/t1lib-5' ; then
 		sed -i -e "s:T1_Get_no_fonts:T1_GetNoFonts:" src/drv_t1.c
@@ -58,8 +59,8 @@ src_compile () {
 
 src_install () {
 	einstall \
-		runtimedir=${D}/usr/share/VFlib/${PV} \
-		runtimesitedir=${D}/usr/share/VFlib/site || die
+		runtimedir="${D}"/usr/share/VFlib/${PV} \
+		runtimesitedir="${D}"/usr/share/VFlib/site || die
 
 	dodoc CHANGES COPYING* DISTRIB.txt INSTALL README*
 }

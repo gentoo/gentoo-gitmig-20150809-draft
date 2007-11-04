@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vflib
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/ChangeLog,v 1.10 2007/07/22 09:32:14 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/ChangeLog,v 1.11 2007/11/04 10:19:40 drac Exp $
+
+  04 Nov 2007; Samuli Suominen <drac@gentoo.org> vflib-3.6.14.ebuild:
+  Add missing imake dep, and fix some quoting.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; vflib-3.6.14.ebuild:
   Drop virtual/x11 references.
