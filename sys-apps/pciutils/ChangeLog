@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.115 2007/11/03 09:23:56 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.116 2007/11/04 03:26:29 fmccor Exp $
+
+  04 Nov 2007; Ferris McCormick <fmccor@gentoo.org>
+  pciutils-2.2.7-r1.ebuild:
+  Sparc stable, Bug #197901 based on Comment 10 (lspci works).
 
   03 Nov 2007; Dawid Węgliński <cla@gentoo.org> pciutils-2.2.7-r1.ebuild:
   Stable on x86 (bug #1197901)
