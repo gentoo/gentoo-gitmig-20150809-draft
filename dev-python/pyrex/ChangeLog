@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.58 2007/10/08 21:08:21 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.59 2007/11/04 08:54:50 hawking Exp $
+
+*pyrex-0.9.6.3 (04 Nov 2007)
+
+  04 Nov 2007; Ali Polatel <hawking@gentoo.org>
+  +files/pyrex-0.9.6.3-setup_py.patch,
+  +files/pyrex-0.9.6.3-setuptools-workaround.patch, -pyrex-0.9.6.ebuild,
+  +pyrex-0.9.6.3.ebuild:
+  Version bump. Fix setuptools issues, thanks to Rene 'Necoro' Neumann, bug
+  195992
 
 *pyrex-0.9.6 (08 Oct 2007)
 
