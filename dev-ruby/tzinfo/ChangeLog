@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.6 2007/08/25 12:24:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.7 2007/11/04 07:58:19 graaff Exp $
+
+*tzinfo-0.3.5 (04 Nov 2007)
+
+  04 Nov 2007; Hans de Graaff <graaff@gentoo.org> +tzinfo-0.3.5.ebuild:
+  Version bump: Updated to tzdata version 2007h
 
 *tzinfo-0.3.4 (25 Aug 2007)
 
