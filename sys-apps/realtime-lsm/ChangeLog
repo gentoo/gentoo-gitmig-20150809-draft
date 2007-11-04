@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/realtime-lsm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.16 2007/07/09 14:43:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.17 2007/11/04 15:00:13 maekke Exp $
+
+  04 Nov 2007; Markus Meier <maekke@gentoo.org>
+  realtime-lsm-0.8.5-r2.ebuild:
+  x86 stable, bug #197128
 
   09 Jul 2007; Diego Pettenò <flameeyes@gentoo.org>
   realtime-lsm-0.8.5-r2.ebuild:
