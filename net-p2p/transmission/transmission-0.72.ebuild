@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.72.ebuild,v 1.5 2007/06/02 21:27:00 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.72.ebuild,v 1.6 2007/11/04 23:51:22 compnerd Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix man page install location
 	sed -i -e 's|/man/man1|/share/man/man1|' mk/common.mk
