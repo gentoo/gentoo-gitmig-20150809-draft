@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/read-edid
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.9 2007/09/27 19:25:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.10 2007/11/04 14:23:53 angelos Exp $
+
+  04 Nov 2007; Christoph Mende <angelos@gentoo.org>
+  read-edid-1.4.1-r1.ebuild:
+  Stable on amd64 wrt bug #195220
 
   27 Sep 2007; Samuli Suominen <drac@gentoo.org> -read-edid-1.4.1.ebuild,
   read-edid-1.4.1-r1.ebuild:
