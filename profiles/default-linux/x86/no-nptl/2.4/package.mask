@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.147 2007/11/01 17:00:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.148 2007/11/04 06:58:00 mr_bones_ Exp $
 
 # Michael Sterrett <mr_bones_@gentoo.org (21 Oct 2007)
 # Needs masked gtk+
@@ -10,6 +10,7 @@
 # Michael Sterrett <mr_bones_@gentoo.org (14 Oct 2007)
 # Needs sys-fs/udev
 >=sys-power/nut-2.2.0
+>=sys-fs/device-mapper-1.02.22-r5
 
 # Michael Sterrett <mr_bones_@gentoo.org> (14 Oct 2007)
 # Needs x11-libs/gtksourceview
