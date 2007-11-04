@@ -14,7 +14,7 @@ dev-java/ibm-jre-bin nsplugin
 # Not removed from ebuilds because this is the only 64 bit plugin
 # on amd64.
 dev-java/blackdown-jdk nsplugin
-dev-java/blackdown-jre nsplugin
+#dev-java/blackdown-jre nsplugin
 
 # These are for BSD only
 net-proxy/squid ipf-transparent pf-transparent
