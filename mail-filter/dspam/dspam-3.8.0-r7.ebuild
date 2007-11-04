@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r7.ebuild,v 1.4 2007/10/22 22:39:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r7.ebuild,v 1.5 2007/11/04 08:39:38 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -36,20 +36,6 @@ DSPAM_CONFDIR="/etc/mail/dspam"
 DSPAM_LOGDIR="/var/log/dspam"
 DSPAM_MODE=2511
 
-create_dspam_usergroup() {
-	local egid euid
-	#Need a UID and GID >= 1000, for being able to use suexec in apache
-	for euid in $(seq 1000 5000 ) ; do
-		[[ -z $(egetent passwd ${euid}) ]] && break
-	done
-	for egid in $(seq 1000 5000 ) ; do
-		[[ -z $(egetent group ${egid}) ]] && break
-	done
-
-	enewgroup dspam ${egid}
-	enewuser dspam ${euid} -1 "${DSPAM_HOMEDIR}" dspam,mail
-}
-
 pkg_setup() {
 	# Delete these lines some time after -r6 removal
 	if has_version "<=mail-filter/dspam-3.8.0-r6" &&
@@ -60,7 +46,17 @@ pkg_setup() {
 			die "sqlite-2 no longer supported"
 	fi
 
-	create_dspam_usergroup
+	local egid euid
+	# Need a UID and GID >= 1000, for being able to use suexec in apache
+	for euid in $(seq 1000 5000 ) ; do
+		[[ -z $(egetent passwd ${euid}) ]] && break
+	done
+	for egid in $(seq 1000 5000 ) ; do
+		[[ -z $(egetent group ${egid}) ]] && break
+	done
+
+	enewgroup dspam ${egid}
+	enewuser dspam ${euid} -1 "${DSPAM_HOMEDIR}" dspam,mail
 }
 
 src_unpack() {
@@ -311,9 +307,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	# need enewgroup/enewuser in this function for binary install.
-	create_dspam_usergroup
-
 	ewarn "The hash_drv storage backend has the following requirements:"
 	ewarn "  - PValue must be set to 'markov'; Do not use this pvalue with any other storage backend!"
 	ewarn "  - Tokenizer must be either 'sbph' or 'osb'"
