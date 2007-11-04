@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.163 2007/10/25 20:06:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.164 2007/11/04 08:22:36 mrness Exp $
+
+  04 Nov 2007; Alin Năstac <mrness@gentoo.org> squid-2.6.16.ebuild,
+  squid-3.0_rc1.ebuild:
+  Remove useless pkg_preinst function.
 
   25 Oct 2007; Alin Năstac <mrness@gentoo.org>
   -files/squid-2.6.13-ToS_Hit_ToS_Preserve.patch,

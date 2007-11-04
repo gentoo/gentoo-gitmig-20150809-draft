@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0_rc1.ebuild,v 1.2 2007/10/25 20:06:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0_rc1.ebuild,v 1.3 2007/11/04 08:22:36 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -162,11 +162,6 @@ src_install() {
 	rm -rf "${D}"/var
 	diropts -m0755 -o squid -g squid
 	keepdir /var/cache/squid /var/log/squid
-}
-
-pkg_preinst() {
-	enewgroup squid 31
-	enewuser squid 31 -1 /var/cache/squid squid
 }
 
 pkg_postinst() {

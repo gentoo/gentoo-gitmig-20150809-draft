@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.6.ebuild,v 1.10 2007/10/28 13:30:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.6.ebuild,v 1.11 2007/11/04 08:20:50 mrness Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -53,10 +53,6 @@ src_compile() {
 		|| die "econf failed"
 
 	emake || die "emake failed"
-}
-
-pkg_preinst() {
-	pkg_setup
 }
 
 src_install () {

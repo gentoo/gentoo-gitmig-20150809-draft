@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r2.ebuild,v 1.4 2007/06/27 06:49:18 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r2.ebuild,v 1.5 2007/11/04 08:17:05 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -88,10 +88,6 @@ src_install() {
 	# cleanups
 	rm -rf "${D}/usr/oops"
 	rm -rf "${D}/usr/lib/oops/modules"
-}
-
-pkg_preinst() {
-	pkg_setup # create oops user and group
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-1.0.2-r1.ebuild,v 1.3 2007/09/02 20:42:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-1.0.2-r1.ebuild,v 1.4 2007/11/04 08:19:32 mrness Exp $
 
 inherit eutils
 
@@ -33,10 +33,6 @@ src_install() {
 
 	diropts -m0750 -o polipo -g polipo
 	keepdir /var/cache/polipo
-}
-
-pkg_preinst() {
-	pkg_setup
 }
 
 pkg_postinst() {

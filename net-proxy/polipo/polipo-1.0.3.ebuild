@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-1.0.3.ebuild,v 1.1 2007/11/02 15:38:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-1.0.3.ebuild,v 1.2 2007/11/04 08:19:32 mrness Exp $
 
 inherit eutils
 
@@ -36,10 +36,6 @@ src_install() {
 
 	dodoc CHANGES README
 	dohtml html/*
-}
-
-pkg_preinst() {
-	pkg_setup
 }
 
 pkg_postinst() {
