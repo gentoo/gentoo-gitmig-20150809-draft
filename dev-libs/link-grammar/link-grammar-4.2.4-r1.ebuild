@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.2.4-r1.ebuild,v 1.1 2007/11/04 22:57:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.2.4-r1.ebuild,v 1.2 2007/11/04 23:14:02 eva Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 	cd "${S}"
 
 	# Fix bug #196803
-	epatch "${FILESDIR}"/${P}-tokenize.c
+	epatch "${FILESDIR}"/${P}-tokenize.patch
 }
 
 src_compile() {
