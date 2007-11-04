@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/sancho-bin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.43 2007/10/31 19:46:39 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.44 2007/11/04 23:47:19 coldwind Exp $
+
+  04 Nov 2007; Santiago M. Mola <coldwind@gentoo.org>
+  sancho-bin-0.9.4.58-r1.ebuild:
+  Uncomment ppc stuff.
 
 *sancho-bin-0.9.4.58-r1 (31 Oct 2007)
 

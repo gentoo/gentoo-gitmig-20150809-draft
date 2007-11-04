@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58-r1.ebuild,v 1.2 2007/11/01 05:29:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58-r1.ebuild,v 1.3 2007/11/04 23:47:19 coldwind Exp $
 
 inherit eutils
 
@@ -14,8 +14,8 @@ SRC_URI="
 		!java? ( mirror://gentoo/${MY_P}-linux-gtk.sh ) )
 	x86? ( java? ( mirror://gentoo/${MY_P}-linux-gtk-java.sh )
 		!java? ( mirror://gentoo/${MY_P}-linux-gtk.sh ) )
+	ppc? ( java? ( mirror://gentoo/${MY_P}-linux-gtk-ppc-java.sh ) )
 "
-#	ppc? ( mirror://gentoo/${MY_P}-linux-gtk-ppc-java.sh )
 
 RESTRICT="strip"
 
