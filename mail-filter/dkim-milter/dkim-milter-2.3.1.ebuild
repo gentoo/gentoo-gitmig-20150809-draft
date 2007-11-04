@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.3.1.ebuild,v 1.1 2007/10/13 03:43:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.3.1.ebuild,v 1.2 2007/11/04 08:43:25 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -80,8 +80,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	pkg_setup # create milter user
-
 	elog "If you want to sign your mail messages, you will have to run"
 	elog "	emerge --config ${CATEGORY}/${PN}"
 	elog "It will help you create your key and give you hints on how"

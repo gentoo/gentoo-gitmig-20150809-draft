@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-0.6.0.ebuild,v 1.1 2007/10/12 20:31:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-0.6.0.ebuild,v 1.2 2007/11/04 08:41:59 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -65,8 +65,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	pkg_setup # create milter user
-
 	ewarn "DomainKeys RFC is obsoleted by DKIM and therefore you should only use"
 	ewarn "dk-milter for verifying mail signed with DomainKeys-Signature."
 	echo
