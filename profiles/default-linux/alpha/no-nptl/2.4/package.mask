@@ -1,11 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.38 2007/11/04 06:57:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.39 2007/11/04 08:00:39 mr_bones_ Exp $
 
 # Michael Sterrett <mr_bones_@gentoo.org (15 Oct 2007)
 # Needs sys-fs/udev
 >=sys-power/nut-2.2.0
 >=sys-fs/device-mapper-1.02.22-r5
+>=sys-fs/lvm2-2.02.28-r2
 
 # Mart Raudsepp <leio@gentoo.org> (25 Aug 2007)
 # need directly or indirectly gnome-python-desktop or nautilus-cd-burner,
