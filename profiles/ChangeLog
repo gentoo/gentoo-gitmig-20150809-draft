@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.780 2007/11/03 18:21:03 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.781 2007/11/04 15:59:21 betelgeuse Exp $
+
+  04 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  package.mask java-gnome-2* and dependency packages for removal
 
   03 Nov 2007; Christian Hoffmann <hoffie@gentoo.org> package.mask:
   removing =dev-lang/php-5.1* mask (related ebuilds are gone)

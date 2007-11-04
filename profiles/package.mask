@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7864 2007/11/04 08:56:30 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7865 2007/11/04 15:59:21 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,17 @@
 ##
 ##   End example
 ##
+
+# Petteri Räty <betelgeuse@gentoo.org> (04 Nov 2007)
+# java-gnome is now a single package so you only need
+# =dev-java/java-gnome-4.0*
+dev-java/cairo-java
+dev-java/glib-java
+dev-java/libgconf-java
+dev-java/libglade-java
+dev-java/libgtk-java
+dev-java/libvte-java
+=dev-java/java-gnome-2*
 
 # Petteri Räty <betelgeuse@gentoo.org> (3 Nov 2007)
 # Replaced by dev-java/sun-jaf. Will be moved to Junkyard
