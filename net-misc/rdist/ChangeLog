@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/rdist
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/ChangeLog,v 1.12 2007/05/14 19:45:45 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/ChangeLog,v 1.13 2007/11/04 14:51:50 masterdriverz Exp $
+
+*rdist-6.1.5-r2 (04 Nov 2007)
+
+  04 Nov 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  +files/rdist-6.1.5-mkstemp.patch, +rdist-6.1.5-r2.ebuild:
+  Add patch from splite to fix Bug 66774. The patch makes ssh the default
+  transport if the "crypt" flag is used. It also fixes the yacc grammer so
+  that bison can again be used. It changes the output format of the noexec
+  option. Finally, it installs the files as group root instead of bin and man.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
