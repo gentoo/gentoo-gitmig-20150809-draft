@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.86.ebuild,v 1.4 2007/06/25 18:59:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.86.ebuild,v 1.5 2007/11/04 08:11:42 mrness Exp $
 
 inherit eutils
 
@@ -25,10 +25,6 @@ src_compile() {
 		$(use_enable clamav) \
 		$(use_enable ssl ssl-tunnel) || die "configure failed"
 	emake || die "make failed"
-}
-
-pkg_preinst() {
-	pkg_setup #for adding username:group when installing from binary package
 }
 
 src_install() {
