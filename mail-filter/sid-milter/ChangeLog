@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/sid-milter
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.5 2007/10/12 22:30:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.6 2007/11/04 08:45:01 mrness Exp $
+
+  04 Nov 2007; Alin Năstac <mrness@gentoo.org> sid-milter-0.2.14.ebuild:
+  Remove useless pkg_postinst.
 
 *sid-milter-0.2.14 (12 Oct 2007)
 

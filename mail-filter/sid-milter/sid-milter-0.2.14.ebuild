@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-0.2.14.ebuild,v 1.2 2007/10/12 22:30:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-0.2.14.ebuild,v 1.3 2007/11/04 08:45:01 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -58,8 +58,4 @@ src_install() {
 
 	# some people like docs
 	dodoc RELEASE_NOTES *.txt
-}
-
-pkg_postinst() {
-	pkg_setup # create milter user
 }
