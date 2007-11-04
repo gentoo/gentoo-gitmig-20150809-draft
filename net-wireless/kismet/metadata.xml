@@ -6,8 +6,4 @@
 		<email>latexer@gentoo.org</email>
 		<name>Peter Johanson</name>
 	</maintainer>
-	<maintainer>
-		<email>phreak@gentoo.org</email>
-		<name>Christian Heim</name>
-	</maintainer>
 </pkgmetadata>
