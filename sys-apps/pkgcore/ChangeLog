@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.41 2007/11/03 16:05:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.42 2007/11/04 09:32:50 masterdriverz Exp $
+
+  04 Nov 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  pkgcore-0.3.2.ebuild:
+  Make pkgcore depend upon snakeoil-0.1, we get a traceback otherwise.
 
 *pkgcore-0.3.2 (03 Nov 2007)
 
