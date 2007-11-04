@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.781 2007/11/04 15:59:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.782 2007/11/04 16:02:03 betelgeuse Exp $
+
+  04 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Add libgnome-java to the java-gnome removal list
 
   04 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> package.mask:
   package.mask java-gnome-2* and dependency packages for removal

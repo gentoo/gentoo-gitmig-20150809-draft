@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7865 2007/11/04 15:59:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7866 2007/11/04 16:02:03 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -30,6 +30,7 @@ dev-java/libgconf-java
 dev-java/libglade-java
 dev-java/libgtk-java
 dev-java/libvte-java
+dev-java/libgnome-java
 =dev-java/java-gnome-2*
 
 # Petteri Räty <betelgeuse@gentoo.org> (3 Nov 2007)
