@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.16.ebuild,v 1.1 2007/11/03 15:47:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.16.ebuild,v 1.2 2007/11/04 06:50:10 mr_bones_ Exp $
 
 inherit multilib eutils pax-utils java-vm-2
 
@@ -100,7 +100,6 @@ src_install() {
 	chmod 644 "${D}/opt/${P}/.systemPrefs/.system.lock"
 	touch "${D}/opt/${P}/.systemPrefs/.systemRootModFile"
 	chmod 644 "${D}/opt/${P}/.systemPrefs/.systemRootModFile"
-
 
 	# FIXME figure out how to handle the control pannel conflict with
 	# sun-jdk-bin
