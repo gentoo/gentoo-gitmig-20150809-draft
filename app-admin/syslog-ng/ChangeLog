@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.167 2007/10/30 17:16:14 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.168 2007/11/04 08:02:27 mr_bones_ Exp $
+
+  04 Nov 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  files/syslog-ng.rc6-r1:
+  Add a use stunnel for the networked case for bug #198003
 
   30 Oct 2007; <solar@gentoo.org> files/syslog-ng.conf.gentoo.hardened:
   - update syslog-ng.conf for hardened
