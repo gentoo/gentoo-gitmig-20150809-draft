@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.47 2007/10/21 19:35:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.48 2007/11/04 10:09:19 phreak Exp $
+
+  04 Nov 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing myself as the maintainer.
 
   21 Oct 2007; Steve Dibb <beandog@gentoo.org> klibc-1.5.ebuild:
   amd64 stable
