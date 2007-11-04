@@ -1,0 +1,12 @@
+diff -ur gst-python-0.10.8.orig/gst/gstmodule.c gst-python-0.10.8/gst/gstmodule.c
+--- gst-python-0.10.8.orig/gst/gstmodule.c	2007-07-28 16:38:15.000000000 +0300
++++ gst-python-0.10.8/gst/gstmodule.c	2007-11-04 08:26:33.000000000 +0200
+@@ -266,8 +266,6 @@
+ 
+      g_timeout_add_full (0, 100, python_do_pending_calls, NULL, NULL);
+ 
+-     atexit(gst_deinit);
+-     
+      if (PyErr_Occurred ()) {
+ 	  Py_FatalError ("can't initialize module gst");
+      }

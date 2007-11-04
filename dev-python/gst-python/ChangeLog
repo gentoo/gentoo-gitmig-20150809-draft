@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.28 2007/09/03 17:41:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.29 2007/11/04 06:40:17 drac Exp $
+
+*gst-python-0.10.8-r1 (04 Nov 2007)
+
+  04 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  +files/gst-python-0.10.8-atexit.patch, +gst-python-0.10.8-r1.ebuild:
+  Patch from upstream CVS, fixing Segmentation Fault with media-sound/exaile.
+  gst/gstmodule.c (DL_EXPORT): Remove the atexit(gst_deinit) Atexit handlers
+  are run after python has finalized (see Py_Exit in pythonrun.c), but
+  gst_deinit can potentially call back into python e.g. for python-defined
+  plugins.
 
   03 Sep 2007; Samuli Suominen <drac@gentoo.org> gst-python-0.10.8.ebuild:
   Instead of filtering -z,now, append -z,lazy wrt #166221.
