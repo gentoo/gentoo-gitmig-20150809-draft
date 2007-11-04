@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/dev86
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.8 2007/07/15 09:04:37 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.9 2007/11/04 14:10:11 masterdriverz Exp $
+
+*dev86-0.16.17-r4 (04 Nov 2007)
+
+  04 Nov 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  +dev86-0.16.17-r4.ebuild:
+  Move man pages from /usr/man to /usr/share/man. Bug 167790, thanks to Andy
+  Romeril for reporting.
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to m-needed, as beu is being retired (#66608).
