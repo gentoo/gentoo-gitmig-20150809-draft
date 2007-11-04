@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.707-r1.ebuild,v 1.2 2007/11/03 20:22:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.707-r1.ebuild,v 1.3 2007/11/04 06:50:35 mr_bones_ Exp $
 
 inherit eutils
 
@@ -56,4 +56,3 @@ pkg_postinst() {
 	elog
 	elog "darkstat's default chroot directory is: \"${ROOT}${DARKSTAT_CHROOT_DIR}\""
 }
-
