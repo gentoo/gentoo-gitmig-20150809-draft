@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/3proxy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.22 2007/10/24 17:38:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.23 2007/11/04 14:14:53 angelos Exp $
+
+  04 Nov 2007; Christoph Mende <angelos@gentoo.org> 3proxy-0.5.3j.ebuild:
+  Stable on amd64 wrt security bug #196772
 
   24 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   3proxy-0.5.3j.ebuild:
