@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_pwdfile
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pwdfile/ChangeLog,v 1.6 2007/02/22 01:02:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pwdfile/ChangeLog,v 1.7 2007/11/04 15:38:35 flameeyes Exp $
+
+  04 Nov 2007; Diego Pettenò <flameeyes@gentoo.org>
+  pam_pwdfile-0.99.ebuild:
+  Use pam.eclass's dopammod to install the module, that also fixes
+  multilib-strict. Die on emake failure. Thanks to Jakub Moc in bug #191949.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
