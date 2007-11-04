@@ -1,8 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/downman/downman-0.0.5-r1.ebuild,v 1.2 2007/11/04 13:55:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/downman/downman-0.0.5-r1.ebuild,v 1.3 2007/11/04 14:02:32 drac Exp $
 
-inherit eutils gnome2
+WANT_AUTOMAKE=1.7
+
+inherit autotools eutils gnome2
 
 DESCRIPTION="Suite of programs to download files."
 HOMEPAGE="http://downman.sourceforge.net"
@@ -28,4 +30,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc-4.patch
 	epatch "${FILESDIR}"/${P}-strlen.patch
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
 }

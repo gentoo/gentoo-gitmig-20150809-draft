@@ -1,6 +1,10 @@
 # ChangeLog for www-client/downman
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/downman/ChangeLog,v 1.5 2007/11/04 13:43:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/downman/ChangeLog,v 1.6 2007/11/04 14:02:32 drac Exp $
+
+  04 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  +files/downman-0.0.5-asneeded.patch, downman-0.0.5-r1.ebuild:
+  Fix building with -Wl,--as-needed.
 
 *downman-0.0.5-r1 (04 Nov 2007)
 
