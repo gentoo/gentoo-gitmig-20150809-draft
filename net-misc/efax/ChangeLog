@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/efax
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.6 2007/05/14 19:45:45 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.7 2007/11/04 14:40:26 masterdriverz Exp $
+
+*efax-0.9a-r1 (04 Nov 2007)
+
+  04 Nov 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  +files/efax-0.9a-segfault.patch, +efax-0.9a-r1.ebuild:
+  Fix some QA problems in the ebuild and add a patch by Keef Aragon to fix bug
+  141235
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
