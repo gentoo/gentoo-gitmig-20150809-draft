@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsap/jsap-2.1.ebuild,v 1.1 2007/04/21 11:27:28 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsap/jsap-2.1.ebuild,v 1.2 2007/11/04 11:12:30 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}-src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="test"
 
 COMMON_DEP="

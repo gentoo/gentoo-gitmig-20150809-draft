@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rundoc/rundoc-0.11.ebuild,v 1.4 2007/07/11 19:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rundoc/rundoc-0.11.ebuild,v 1.5 2007/11/04 11:10:04 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -11,7 +11,7 @@ SRC_URI="http://www.martiansoftware.com/lab/${PN}/${P}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 COMMON_DEP=">=dev-java/ant-core-1.5.4"
