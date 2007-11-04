@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3_pre9.ebuild,v 1.3 2007/06/17 10:48:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3_pre9.ebuild,v 1.4 2007/11/04 01:43:31 betelgeuse Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -33,7 +33,7 @@ JEDIT_HOME="/usr/share/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# we need to use our own classpath
 	java-ant_rewrite-classpath build.xml
@@ -63,7 +63,7 @@ src_compile() {
 src_install () {
 	dodir ${JEDIT_HOME}
 	cp -R build/${PN}.jar jars doc macros modes properties startup \
-		${D}/usr/share/jedit
+		"${D}/usr/share/jedit"
 
 	java-pkg_regjar ${JEDIT_HOME}/${PN}.jar
 
