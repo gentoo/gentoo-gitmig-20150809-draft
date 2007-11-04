@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.6.8.ebuild,v 1.12 2007/09/16 22:15:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.6.8.ebuild,v 1.13 2007/11/04 08:43:58 compnerd Exp $
 
 inherit eutils gnome2
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 	# this patch fixes potential issues
 	# with scrollkeeper. speeds up unnecessary scroll generation
-	epatch ${FILESDIR}/${PN}-2.0.0-scrollkeeper.patch
+	epatch "${FILESDIR}/${PN}-2.0.0-scrollkeeper.patch"
 }
 
 pkg_config() {
@@ -42,6 +42,6 @@ pkg_config() {
 
 src_install() {
 
-	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
+	gnome2_src_install scrollkeeper_localstate_dir="${D}/var/lib/scrollkeeper/"
 
 }
