@@ -1,6 +1,14 @@
 # ChangeLog for www-client/downman
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/downman/ChangeLog,v 1.4 2007/05/11 18:28:33 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/downman/ChangeLog,v 1.5 2007/11/04 13:43:36 drac Exp $
+
+*downman-0.0.5-r1 (04 Nov 2007)
+
+  04 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  +files/downman-0.0.5-gcc-4.patch, +files/downman-0.0.5-strlen.patch,
+  +downman-0.0.5-r1.ebuild:
+  Revision bump, saving it from treecleaners wrt #126572. Since old versions
+  failed to build with modern GCC, commit this straight to stable.
 
   11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
   add metadata.xml
