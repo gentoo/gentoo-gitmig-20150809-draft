@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.60-r1.ebuild,v 1.3 2007/11/03 17:54:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.60-r1.ebuild,v 1.4 2007/11/04 15:48:24 maekke Exp $
 
 inherit autotools elisp-common eutils versionator flag-o-matic
 
@@ -17,7 +17,7 @@ SRC_URI="cjk? ( ftp://ftp.gyve.org/pub/gs-cjk/adobe-cmaps-200406.tar.gz
 
 LICENSE="GPL-2 CPL-1.0"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~ppc ~sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~ppc ~sh sparc x86 ~x86-fbsd"
 IUSE="bindist cjk cups djvu gtk jpeg2k X"
 
 COMMON_DEPEND="media-libs/fontconfig
