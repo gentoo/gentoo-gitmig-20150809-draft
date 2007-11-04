@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jta
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.18 2007/11/02 00:00:39 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.19 2007/11/04 02:35:43 betelgeuse Exp $
+
+  04 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -jta-1.0.1.ebuild:
+  Delete generation 1 ebuild.
 
   02 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   jta-1.0.1-r1.ebuild:
