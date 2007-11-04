@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.53 2007/11/04 01:30:06 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.54 2007/11/04 10:17:22 cla Exp $
+
+  04 Nov 2007; Dawid Węgliński <cla@gentoo.org> tomboy-0.8.1-r1.ebuild:
+  Stable on x86 (bug #189249)
 
 *tomboy-0.8.1-r1 (04 Nov 2007)
 
