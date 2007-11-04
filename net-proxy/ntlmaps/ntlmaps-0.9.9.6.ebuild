@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ntlmaps-0.9.9.6.ebuild,v 1.3 2007/06/26 02:37:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ntlmaps-0.9.9.6.ebuild,v 1.4 2007/11/04 08:15:06 mrness Exp $
 
 inherit eutils
 
@@ -50,7 +50,6 @@ src_install() {
 }
 
 pkg_preinst() {
-	pkg_setup
 	#Remove the following lines sometime in December 2005
 	#Their purpose is to fix security bug #107766
 	if [ -f "${ROOT}/etc/ntlmaps/server.cfg" ]; then

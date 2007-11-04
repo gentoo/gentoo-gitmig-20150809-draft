@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/ntlmaps
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.12 2006/11/17 20:55:55 mrness Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.13 2007/11/04 08:15:06 mrness Exp $
+
+  04 Nov 2007; Alin Năstac <mrness@gentoo.org> ntlmaps-0.9.9-r2.ebuild,
+  ntlmaps-0.9.9.6.ebuild:
+  Remove useless pkg_setup call from pkg_preinst.
 
   17 Nov 2006; Alin Nastac <mrness@gentoo.org>
   -files/ntlmaps-0.9.9.5-gentoo.patch, -ntlmaps-0.9.9.5-r1.ebuild:
