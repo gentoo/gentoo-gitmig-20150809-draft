@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw3945-ucode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945-ucode/ChangeLog,v 1.8 2007/02/13 16:41:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945-ucode/ChangeLog,v 1.9 2007/11/04 10:27:04 phreak Exp $
+
+  04 Nov 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing myself as the maintainer.
 
   13 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   ipw3945-ucode-1.14.2.ebuild:

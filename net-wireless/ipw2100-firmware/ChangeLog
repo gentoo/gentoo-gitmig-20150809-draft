@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw2100-firmware
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100-firmware/ChangeLog,v 1.4 2007/01/15 13:04:37 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100-firmware/ChangeLog,v 1.5 2007/11/04 10:18:07 phreak Exp $
+
+  04 Nov 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing myself as the maintainer.
 
   15 Jan 2007; Christian Heim <phreak@gentoo.org>
   ipw2100-firmware-1.3.ebuild:

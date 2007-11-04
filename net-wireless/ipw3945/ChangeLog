@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw3945
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.32 2007/09/11 15:48:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.33 2007/11/04 10:22:46 phreak Exp $
+
+  04 Nov 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing myself as the maintainer.
 
   11 Sep 2007; Christian Heim <phreak@gentoo.org> ipw3945-1.2.2.ebuild:
   Small touchup modifications, thanks to Cristi Magherusan <majeru at
