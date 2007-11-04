@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kblogger
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/ChangeLog,v 1.10 2007/03/27 10:09:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/ChangeLog,v 1.11 2007/11/04 14:53:16 philantrop Exp $
+
+*kblogger-0.7_beta2 (04 Nov 2007)
+
+  04 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +kblogger-0.7_beta2.ebuild:
+  Version bump to 0.7_beta2 as per bug 197008.
 
 *kblogger-0.6.5 (27 Mar 2007)
 
