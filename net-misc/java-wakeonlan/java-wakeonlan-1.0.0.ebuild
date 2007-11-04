@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/java-wakeonlan-1.0.0.ebuild,v 1.1 2007/04/21 12:30:39 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/java-wakeonlan-1.0.0.ebuild,v 1.2 2007/11/04 11:13:37 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -10,7 +10,7 @@ SRC_URI="http://www.moldaner.de/wakeonlan/download/wakeonlan-${PV}.zip"
 HOMEPAGE="http://www.moldaner.de/wakeonlan/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="test"
 
 COMMON_DEPEND="dev-java/jsap"
