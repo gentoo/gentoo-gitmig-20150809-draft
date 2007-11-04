@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.44 2007/10/19 13:24:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.45 2007/11/04 11:56:01 nixnut Exp $
+
+  04 Nov 2007; nixnut <nixnut@gentoo.org> java-gnome-4.0.3.ebuild:
+  Stable on ppc wrt bug 195689
 
   19 Oct 2007; Christoph Mende <angelos@gentoo.org> java-gnome-4.0.3.ebuild:
   Stable on amd64 wrt bug #195689
