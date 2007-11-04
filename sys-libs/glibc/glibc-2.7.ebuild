@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7.ebuild,v 1.3 2007/10/24 06:11:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7.ebuild,v 1.4 2007/11/04 04:18:49 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 LICENSE="LGPL-2"
-#KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+#KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sh ~x86"
 RESTRICT="strip" # strip ourself #46186
 EMULTILIB_PKG="true"
 
@@ -17,7 +17,7 @@ RELEASE_VER=$(get_version_component_range 1-3) # major glibc version
 BRANCH_UPDATE=$(get_version_component_range 4) # upstream cvs snaps
 MANPAGE_VER=""                                 # pregenerated manpages
 INFOPAGE_VER=""                                # pregenerated infopages
-PATCH_VER="1.1"                                # Gentoo patchset
+PATCH_VER="1.2"                                # Gentoo patchset
 PATCH_GLIBC_VER=${RELEASE_VER}                 # glibc version in patchset
 PORTS_VER=${RELEASE_VER}                       # version of glibc ports addon
 LT_VER=""                                      # version of linuxthreads addon
