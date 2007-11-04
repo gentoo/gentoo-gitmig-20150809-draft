@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.4.ebuild,v 1.4 2007/07/27 14:19:11 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.4.ebuild,v 1.5 2007/11/04 13:09:42 eva Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -39,7 +39,6 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-USE_DESTDIR="1"
 
 # problems with parallel builds
 MAKEOPTS="${MAKEOPTS} -j1"
@@ -70,6 +69,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-freetds_api_fixes.patch
 	# Fix compilation of the mdb provider
 	epatch "${FILESDIR}"/${PN}-1.2.3-mdb_api.patch
+	# Fix tests
+	echo "libsql/parser.c" >> po/POTFILES.in
 
 	sed -n -e '/GTK_DOC_CHECK/,/IT_PROG_INTLTOOL/p' aclocal.m4 > gtk-doc.m4
 	intltoolize --automake -c -f || die "intltoolize failed"
