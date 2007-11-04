@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipv6calc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.18 2007/10/02 18:51:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.19 2007/11/04 19:45:58 angelos Exp $
+
+  04 Nov 2007; Christoph Mende <angelos@gentoo.org> ipv6calc-0.51.ebuild:
+  Stable on amd64
 
   02 Oct 2007; Christoph Mende <angelos@gentoo.org> ipv6calc-0.51.ebuild:
   Added ~amd64
