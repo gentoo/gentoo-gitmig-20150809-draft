@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bfm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.8 2007/10/24 15:35:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.9 2007/11/04 02:36:32 betelgeuse Exp $
+
+  04 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -bfm-1.2.ebuild:
+  Delete generation 1 ebuild.
 
   24 Oct 2007; Markus Meier <maekke@gentoo.org> bfm-1.2-r1.ebuild:
   x86 stable, bug #196840
