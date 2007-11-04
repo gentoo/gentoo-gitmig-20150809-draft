@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.2.ebuild,v 1.1 2007/11/04 04:17:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.2.ebuild,v 1.2 2007/11/04 15:12:28 flameeyes Exp $
 
 inherit eutils libtool toolchain-funcs autotools pam
 
@@ -14,7 +14,7 @@ SLOT="0"
 IUSE="nls pam selinux skey nousuid cracklib"
 
 RDEPEND="cracklib? ( >=sys-libs/cracklib-2.7-r3 )
-	pam? ( virtual/pam )
+	pam? ( >=sys-libs/pam-0.99 )
 	!sys-apps/pam-login
 	!app-admin/nologin
 	skey? ( app-admin/skey )
@@ -95,20 +95,16 @@ src_install() {
 	if ! use pam ; then
 		insopts -m0600
 		doins etc/login.access etc/limits
-	else
-		newpamd "${FILESDIR}/login.pamd.1" login
-		use selinux || sed -i -e '/@selinux@/d' "${D}"/etc/pam.d/login
-		use selinux && sed -i -e 's:@selinux@::g' "${D}"/etc/pam.d/login
 	fi
 	# Output arch-specific cruft
 	case $(tc-arch) in
 		ppc*)  echo "hvc0" >> "${D}"/etc/securetty
-		       echo "hvsi0" >> "${D}"/etc/securetty
-		       echo "ttyPSC0" >> "${D}"/etc/securetty;;
+			   echo "hvsi0" >> "${D}"/etc/securetty
+			   echo "ttyPSC0" >> "${D}"/etc/securetty;;
 		hppa)  echo "ttyB0" >> "${D}"/etc/securetty;;
 		arm)   echo "ttyFB0" >> "${D}"/etc/securetty;;
 		sh)    echo "ttySC0" >> "${D}"/etc/securetty
-		       echo "ttySC1" >> "${D}"/etc/securetty;;
+			   echo "ttySC1" >> "${D}"/etc/securetty;;
 	esac
 
 	# needed for 'adduser -D'
@@ -120,60 +116,31 @@ src_install() {
 	mv "${D}"/usr/bin/passwd "${D}"/bin/
 	dosym /bin/passwd /usr/bin/passwd
 
-	if use pam ; then
-		local INSTALL_SYSTEM_PAMD="yes"
-
-		# Do not install below pam.d files if we have pam-0.78 or later
-		has_version '>=sys-libs/pam-0.78' && \
-			INSTALL_SYSTEM_PAMD="no"
-
-		for x in "${FILESDIR}"/pam.d-include/*; do
-			case "${x##*/}" in
-				"login")
-					# We do no longer install this one, as its from
-					# pam-login now.
-					;;
-				"system-auth"|"system-auth-1.1"|"other")
-					# These we only install if we do not have pam-0.78
-					# or later.
-					[ "${INSTALL_SYSTEM_PAMD}" = "yes" ] && [ -f ${x} ] && \
-						dopamd ${x}
-					;;
-				"su")
-					# Disable support for pam_env and pam_wheel on openpam
-					has_version sys-libs/pam && dopamd ${x}
-					;;
-				"su-openpam")
-					has_version sys-libs/openpam && newpamd ${x} su
-					;;
-				*)
-					[ -f ${x} ] && dopamd ${x}
-					;;
-			esac
-		done
-		for x in chage chsh chfn chpasswd newusers \
-				 user{add,del,mod} group{add,del,mod} ; do
-			newpamd "${FILESDIR}"/pam.d-include/shadow ${x}
-		done
-
-		# remove manpages that pam will install for us
-		# and/or don't apply when using pam
-
-		find "${D}"/usr/share/man \
-			'(' -name 'limits.5*' -o -name 'suauth.5*' ')' \
-			-exec rm {} \;
-	fi
-
 	cd "${S}"
 	insinto /etc
 	insopts -m0644
 	newins etc/login.defs login.defs
 
-	# comment out options that pam hates
 	if use pam ; then
-		awk -f "${FILESDIR}"/login_defs.awk \
+		dopamd "${FILESDIR}/pam.d-include/"{su,passwd,shadow}
+
+		newpamd "${FILESDIR}/login.pamd.2" login
+
+		for x in chage chsh chfn chpasswd newusers \
+				 user{add,del,mod} group{add,del,mod} ; do
+			newpamd "${FILESDIR}"/pam.d-include/shadow ${x}
+		done
+
+		# comment out login.defs options that pam hates
+		gawk -f "${FILESDIR}"/login_defs.awk \
 			lib/getdef.c etc/login.defs \
 			> "${D}"/etc/login.defs
+
+		# remove manpages that pam will install for us
+		# and/or don't apply when using pam
+		find "${D}"/usr/share/man \
+			'(' -name 'limits.5*' -o -name 'suauth.5*' ')' \
+			-exec rm {} \;
 	fi
 
 	# Remove manpages that are handled by other packages
@@ -191,6 +158,8 @@ src_install() {
 pkg_preinst() {
 	rm -f "${ROOT}"/etc/pam.d/system-auth.new \
 		"${ROOT}/etc/login.defs.new"
+
+	use pam && pam_epam_expand "${D}"/etc/pam.d/login
 }
 
 pkg_postinst() {
