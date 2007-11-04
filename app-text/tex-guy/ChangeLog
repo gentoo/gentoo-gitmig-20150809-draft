@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tex-guy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tex-guy/ChangeLog,v 1.5 2007/04/27 04:00:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tex-guy/ChangeLog,v 1.6 2007/11/04 11:13:56 drac Exp $
+
+*tex-guy-1.3.2 (04 Nov 2007)
+
+  04 Nov 2007; Samuli Suominen <drac@gentoo.org> +tex-guy-1.3.2.ebuild:
+  Version bump.
 
   27 Apr 2007; Joseph Jezak <josejx@gentoo.org> tex-guy-1.3.0.ebuild:
   Marked ~ppc for bug #175586.
