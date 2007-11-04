@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.116 2007/11/04 03:26:29 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.117 2007/11/04 04:20:05 pylon Exp $
+
+  04 Nov 2007; Lars Weiler <pylon@gentoo.org> pciutils-2.2.7-r1.ebuild:
+  stable ppc, bug #197901
 
   04 Nov 2007; Ferris McCormick <fmccor@gentoo.org>
   pciutils-2.2.7-r1.ebuild:
