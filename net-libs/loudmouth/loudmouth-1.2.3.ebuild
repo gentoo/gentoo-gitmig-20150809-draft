@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.2.3.ebuild,v 1.2 2007/06/14 05:45:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.2.3.ebuild,v 1.3 2007/11/04 23:47:54 eva Exp $
 
 inherit gnome2
 
@@ -12,10 +12,13 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="doc ssl debug test"
+IUSE="doc gnutls ssl debug test"
 
 RDEPEND=">=dev-libs/glib-2.4
-	ssl? ( >=net-libs/gnutls-1.4.0 )"
+	ssl? ( || (
+		gnutls? ( >=net-libs/gnutls-1.4.0 )
+		dev-libs/openssl
+		) )"
 
 DEPEND="${RDEPEND}
 	test? ( dev-libs/check )
@@ -25,7 +28,15 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-	G2CONF="$(use_enable ssl) \
+	G2CONF="${G2CONF}
 		$(use_enable debug) \
 		$(use_enable doc gtk-doc)"
+
+	if use ssl && use gnutls; then
+		G2CONF="${G2CONF} --with-ssl=gnutls"
+	elif use ssl; then
+		G2CONF="${G2CONF} --with-ssl=openssl"
+	else
+		G2CONF="${G2CONF} --with-ssl=no"
+	fi
 }
