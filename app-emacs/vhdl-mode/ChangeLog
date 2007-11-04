@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/vhdl-mode
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/ChangeLog,v 1.10 2007/09/24 06:28:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/ChangeLog,v 1.11 2007/11/04 11:16:27 ulm Exp $
+
+  04 Nov 2007; Ulrich Mueller <ulm@gentoo.org> vhdl-mode-3.33.21.ebuild:
+  amd64 stable, bug 195512
 
   24 Sep 2007; Ulrich Mueller <ulm@gentoo.org> vhdl-mode-3.33.8.ebuild,
   vhdl-mode-3.33.21.ebuild:
