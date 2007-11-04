@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev-stable,v 1.2 2007/05/05 05:12:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev-stable,v 1.3 2007/11/04 03:01:55 vapier Exp $
 
 cd /
 umask 0022 #159111
@@ -482,7 +482,7 @@ set_keywords() {
 	if [[ ${ver} == "[latest]" ]] || [[ -z ${ver} ]] ; then
 		echo "cross-${CTARGET}/${pkg} $TARCH ~$TARCH" >> ${output}
 	else
-		echo "cross-${CTARGET}/${pkg} * ~* -*" >> ${output}
+		echo "cross-${CTARGET}/${pkg} * ~*" >> ${output}
 		if [[ -f package.mask ]] ; then
 			output="package.mask"
 			sed -i -e "/cross-${CTARGET}\/${pkg}/d" ${output}
