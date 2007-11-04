@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.397 2007/10/20 16:54:31 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.398 2007/11/04 00:17:42 philantrop Exp $
+
+*kdebase-3.5.8-r1 (04 Nov 2007)
+
+  04 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  +files/ksmserver-3.5.8-gdm_interop_197133.patch, +kdebase-3.5.8-r1.ebuild:
+  Added an upstream patch to fix GDM interoperability. Fixes bug 197133.
+  Thanks to pauldv for providing a patch, too.
 
   20 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> kdebase-3.5.8.ebuild:
   Fixed wrong quoting.
