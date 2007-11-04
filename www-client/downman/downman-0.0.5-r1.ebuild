@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/downman/downman-0.0.5-r1.ebuild,v 1.1 2007/11/04 13:43:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/downman/downman-0.0.5-r1.ebuild,v 1.2 2007/11/04 13:55:02 drac Exp $
 
 inherit eutils gnome2
 
@@ -28,5 +28,4 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc-4.patch
 	epatch "${FILESDIR}"/${P}-strlen.patch
-	epatch "${FILESDIR}"/${P}-desktop-entry.patch
 }
