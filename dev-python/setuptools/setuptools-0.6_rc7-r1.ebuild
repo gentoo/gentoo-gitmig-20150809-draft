@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6_rc5.ebuild,v 1.4 2007/07/11 06:19:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6_rc7-r1.ebuild,v 1.1 2007/11/04 08:01:24 hawking Exp $
 
-inherit distutils
+inherit distutils eutils
 
 MY_P=${P/_rc/c}
 S="${WORKDIR}/${MY_P}"
@@ -13,13 +13,18 @@ SRC_URI="http://cheeseshop.python.org/packages/source/s/setuptools/${MY_P}.tar.g
 
 LICENSE="PSF-2.2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.4.2"
 DEPEND="${RDEPEND}"
 
-DOCS="EasyInstall.txt api_tests.txt pkg_resources.txt setuptools.txt"
+DOCS="EasyInstall.txt api_tests.txt pkg_resources.txt setuptools.txt README.txt"
+
+src_unpack() {
+	distutils_src_unpack
+	epatch "${FILESDIR}/${P}-noexe.patch"
+}
 
 src_test() {
 	"${python}" setup.py test || die "tests failed"
