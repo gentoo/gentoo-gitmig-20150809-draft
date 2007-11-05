@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.441 2007/10/31 23:26:25 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.442 2007/11/05 23:32:52 solar Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  05 Nov 2007; <solar@gentoo.org> -baselayout-2.0.0_rc5.ebuild:
+  - UberLord said to punt rc5 for a digest mismatch and now that r6 is here
 
 *baselayout-2.0.0_rc6 (31 Oct 2007)
 
