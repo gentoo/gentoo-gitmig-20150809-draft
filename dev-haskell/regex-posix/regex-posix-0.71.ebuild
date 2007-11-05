@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/regex-posix-0.71.ebuild,v 1.3 2007/10/23 16:32:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/regex-posix-0.71.ebuild,v 1.4 2007/11/05 02:12:30 dcoutts Exp $
 
 CABAL_FEATURES="profile haddock lib"
 inherit haskell-cabal
@@ -11,7 +11,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.6
