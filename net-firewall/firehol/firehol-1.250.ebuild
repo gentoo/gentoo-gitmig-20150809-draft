@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.250.ebuild,v 1.5 2007/07/13 07:21:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.250.ebuild,v 1.6 2007/11/05 14:07:54 centic Exp $
 
 inherit eutils
 
@@ -39,10 +39,10 @@ pkg_setup() {
 # backport from firehol-CVS.
 src_unpack() {
 	unpack ${A}
-	cd ${S} || die
-	epatch ${FILESDIR}/firehol-1.226-to-228.patch || die
-	epatch ${FILESDIR}/firehol-1.226-to-250.patch || die
-	epatch ${FILESDIR}/${P}-printf.patch || die
+	cd "${S}" || die
+	epatch "${FILESDIR}/firehol-1.226-to-228.patch" || die
+	epatch "${FILESDIR}/firehol-1.226-to-250.patch" || die
+	epatch "${FILESDIR}/${P}-printf.patch" || die
 }
 
 src_install() {
@@ -52,7 +52,7 @@ src_install() {
 	insinto /etc/firehol/examples
 	doins examples/* || die
 
-	newconfd ${FILESDIR}/firehol.conf.d firehol || die
+	newconfd "${FILESDIR}/firehol.conf.d firehol" || die
 
 	dodoc ChangeLog README TODO WhatIsNew || die
 	dohtml doc/*.html doc/*.css  || die
@@ -62,7 +62,7 @@ src_install() {
 
 	doman man/*.1 man/*.5 || die
 
-	newinitd ${FILESDIR}/firehol.initrd firehol || die
+	newinitd "${FILESDIR}/firehol.initrd firehol" || die
 }
 
 pkg_postinst() {

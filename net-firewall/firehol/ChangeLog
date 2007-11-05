@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.31 2007/06/01 14:03:10 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.32 2007/11/05 14:07:54 centic Exp $
+
+*firehol-1.256-r1 (02 Nov 2007)
+
+  02 Nov 2007; Dominik Stadler <centic@gentoo.org> firehol-1.250.ebuild,
+  firehol-1.250-r1.ebuild, firehol-1.250-r2.ebuild, firehol-1.256.ebuild,
+  +firehol-1.256-r1.ebuild:
+  Bug 195378, fix check for zcat, Bug 172000, add check for kernel
+  configuration, also add missing quotes as reported by repoman
 
 *firehol-1.256 (01 Jun 2007)
 

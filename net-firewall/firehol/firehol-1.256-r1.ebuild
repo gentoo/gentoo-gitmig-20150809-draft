@@ -1,17 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.250-r2.ebuild,v 1.4 2007/11/05 14:07:54 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.256-r1.ebuild,v 1.1 2007/11/05 14:07:54 centic Exp $
 
-inherit eutils
+inherit eutils linux-info
 
 DESCRIPTION="iptables firewall generator"
 HOMEPAGE="http://firehol.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}-1.226.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="sys-apps/iproute2"
 RDEPEND="net-firewall/iptables
@@ -22,7 +22,7 @@ RDEPEND="net-firewall/iptables
 		net-misc/curl
 	)"
 
-S="${WORKDIR}/${PN}-1.226"
+#S="${WORKDIR}/${PN}-1.226"
 
 pkg_setup() {
 	# Bug 81600 fail if iproute2 is built with minimal
@@ -33,6 +33,12 @@ pkg_setup() {
 		eerror "USE=\"-minimal\" emerge sys-apps/iproute2"
 		die "sys-apps/iproute2 without USE=\"minimal\" needed"
 	fi
+
+	# perform checks for kernel config from eclass linux-info
+	# for now we just print warnings as I am not sure if these
+	# are required always...
+	CONFIG_CHECK="~NF_CONNTRACK_ENABLED ~NF_CONNTRACK_IPV4 ~NF_CONNTRACK_MARK ~IP_NF_IPTABLES ~IP_NF_FILTER ~IP_NF_TARGET_REJECT ~IP_NF_TARGET_LOG ~IP_NF_TARGET_ULOG ~NF_NAT ~IP_NF_TARGET_MASQUERADE ~IP_NF_TARGET_REDIRECT ~IP_NF_MANGLE"
+	linux-info_pkg_setup
 }
 
 # patch for embedded Gentoo - GNAP
@@ -40,10 +46,12 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}" || die
-	epatch "${FILESDIR}/firehol-1.226-to-228.patch" || die
-	epatch "${FILESDIR}/firehol-1.226-to-250.patch" || die
-	# invalid, see Bug 176862 epatch ${FILESDIR}/${P}-groupwith.patch || die
-	epatch "${FILESDIR}/${P}-printf.patch" || die
+	# not needed any more according to http://bugs.gentoo.org/show_bug.cgi?id=172000#c15
+	#epatch ${FILESDIR}/${P}-printf.patch || die
+
+	# Bug 195378, binary is called zcat instead of gzcat, fixed upstream in later releases
+	sed -i -e 's/gzcat/zcat/g' firehol.sh || die
+	sed -i -e 's/GZCAT/ZCAT/g' firehol.sh || die
 }
 
 src_install() {
