@@ -1,14 +1,14 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r8.ebuild,v 1.9 2007/11/05 19:42:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r8.ebuild,v 1.10 2007/11/05 22:00:57 mr_bones_ Exp $
 
 # This ebuild is just kept here to not break the tree for mips stable
 
 # UNMAINTAINED
 # UNMAINTAINED
-#  _  _ _  _ _  _ ____ _ _  _ ___ ____ _ _  _ ____ ___  
-#  |  | |\ | |\/| |__| | |\ |  |  |__| | |\ | |___ |  \ 
-#  |__| | \| |  | |  | | | \|  |  |  | | | \| |___ |__/ 
+#  _  _ _  _ _  _ ____ _ _  _ ___ ____ _ _  _ ____ ___
+#  |  | |\ | |\/| |__| | |\ |  |  |__| | |\ | |___ |  \
+#  |__| | \| |  | |  | | | \|  |  |  | | | \| |___ |__/
 # UNMAINTAINED
 # UNMAINTAINED
 
