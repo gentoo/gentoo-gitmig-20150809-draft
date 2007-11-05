@@ -1,5 +1,14 @@
 --- Makefile.in.orig	2005-08-16 10:00:02.000000000 +0200
 +++ Makefile.in	2005-08-16 10:00:35.000000000 +0200
+@@ -79,7 +79,7 @@
+ MV		= @MV@
+ RM		= @RM@
+ RMF		= @RM@ -f
+-MKDIR		= @MKDIR@
++MKDIR		= @MKDIR@ -p
+ FIND		= @FIND@
+ XARGS		= @XARGS@
+ LDCONFIG	= @LDCONFIG@
 @@ -135,20 +135,6 @@
  		@(if [ -d $(LIBDIR) ] && [ -w $(LIBDIR) ]; then \
  		    echo "$(INSTALL_LIB) $(LIB_STATIC) $(LIBDIR)"; \
@@ -40,3 +49,14 @@
  		)
  
  install.cyg:
+@@ -393,8 +366,8 @@
+ 	$(LN_S) -f $(LIB_SHARED).$(LIBVER) $(LIB_SHARED).$(LIBVERMAJOR)
+ 
+ $(LIB_SHARED).$(LIBVER): $(LIB_OBJS) $(LIB_INCS) config.h
+-	$(CC) -shared -Wl,-soname,$(LIB_SHARED).$(LIBVERMAJOR) -o $(LIB_SHARED).$(LIBVER) \
+-	 $(LIB_OBJS)
++	$(CC) -shared $(USER_LD_FLAGS) -Wl,-soname,$(LIB_SHARED).$(LIBVERMAJOR) -o $(LIB_SHARED).$(LIBVER) \
++	 $(LIB_OBJS) $(LIBRARIES)
+ 
+ install.man:
+ 		@if [ -d doc/man ] ; then \
