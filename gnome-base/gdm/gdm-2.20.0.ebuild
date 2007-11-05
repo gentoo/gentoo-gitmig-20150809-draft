@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.0.ebuild,v 1.2 2007/10/21 12:46:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.0.ebuild,v 1.3 2007/11/05 17:03:27 dang Exp $
 
 inherit autotools eutils pam gnome2
 
@@ -31,6 +31,7 @@ RDEPEND="dev-libs/dbus-glib
 		 >=gnome-base/librsvg-1.1.1
 		 >=dev-libs/libxml2-2.4.12
 		 >=media-libs/libart_lgpl-2.3.11
+		 x11-libs/gksu
 		 x11-libs/libXi
 		 x11-libs/libXau
 		 x11-libs/libX11
