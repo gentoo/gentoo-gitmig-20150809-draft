@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/sendpage-1.1.0-r1.ebuild,v 1.3 2007/11/05 06:23:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/sendpage-1.1.0-r1.ebuild,v 1.4 2007/11/05 06:24:47 mrness Exp $
 
 inherit perl-module eutils
 
@@ -8,7 +8,7 @@ MY_P=${PN}-1.001
 DESCRIPTION="Dialup alphapaging software."
 HOMEPAGE="http://www.sendpage.org/"
 SRC_URI="http://www.sendpage.org/download/${MY_P}.tar.gz"
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -30,15 +30,15 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-makefile.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-makefile.patch
 }
 
 src_install() {
 	perl-module_src_install
 	insinto /etc
 	doins sendpage.cf
-	newinitd ${FILESDIR}/sendpage.initd sendpage
+	newinitd "${FILESDIR}"/sendpage.initd sendpage
 	diropts -o sendpage -g sms -m0770
 	keepdir /var/spool/sendpage
 }
