@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.50 2007/11/04 12:03:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.51 2007/11/05 05:59:40 josejx Exp $
+
+  05 Nov 2007; Joseph Jezak <josejx@gentoo.org> mutagen-1.12.ebuild:
+  Marked ppc64 stable.
 
   04 Nov 2007; nixnut <nixnut@gentoo.org> mutagen-1.12.ebuild:
   Stable on ppc wrt bug 196635
