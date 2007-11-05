@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.40 2007/11/04 08:22:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.41 2007/11/05 15:05:37 opfer Exp $
+
+  05 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  vm-8.0.2.487-r1.ebuild:
+  stable x86, bug 198033
 
 *vm-8.0.5.504 (04 Nov 2007)
 
