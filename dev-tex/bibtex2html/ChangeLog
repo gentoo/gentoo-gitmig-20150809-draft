@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/bibtex2html
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/ChangeLog,v 1.6 2007/03/13 00:09:36 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/ChangeLog,v 1.7 2007/11/05 09:54:48 opfer Exp $
+
+  05 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  bibtex2html-1.80.ebuild:
+  stable x86, bug 197381
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
