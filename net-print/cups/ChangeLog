@@ -1,6 +1,15 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.256 2007/11/05 19:11:14 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.257 2007/11/05 19:42:39 genstef Exp $
+
+  05 Nov 2007; Stefan Schweizer <genstef@gentoo.org>
+  -files/cups-1.1.23-image-png.patch, -files/cups-1.1-str2561-v2.patch,
+  -files/cups-1.1.23-bindnow.patch, -files/cups-1.1.23-respectldflags.patch,
+  -files/cups.xinetd, -files/cups-gcc4-amd64.patch,
+  -files/cups-gentooalt.patch, -files/cupsaddsmb.patch,
+  -files/disable-strip.patch, cups-1.1.23-r8.ebuild, -cups-1.1.23-r9.ebuild:
+  Change the cups-1.1 ebuild to be only a pointer to newer ebuilds. We cannot
+  remove it because the mips stable tree would break then
 
 *cups-1.3.4 (05 Nov 2007)
 *cups-1.2.12-r2 (05 Nov 2007)
