@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.5-r1.ebuild,v 1.2 2007/09/11 08:36:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.5-r1.ebuild,v 1.3 2007/11/05 07:13:48 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 # This is enabled due to modified Makefile.am from the patches
@@ -12,7 +12,7 @@ DESCRIPTION="X Window System initializer"
 
 LICENSE="${LICENSE} GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="hal minimal"
+IUSE="hal minimal pam"
 
 RDEPEND="x11-apps/xauth
 	x11-libs/libX11
@@ -51,12 +51,12 @@ src_unpack() {
 src_install() {
 	x-modular_src_install
 	exeinto /etc/X11
-	doexe ${FILESDIR}/chooser.sh ${FILESDIR}/startDM.sh
+	doexe "${FILESDIR}"/chooser.sh "${FILESDIR}"/startDM.sh || die
 	exeinto /etc/X11/Sessions
-	doexe ${FILESDIR}/Xsession
+	doexe "${FILESDIR}"/Xsession || die
 	exeinto /etc/X11/xinit
-	doexe ${FILESDIR}/xinitrc
-	newinitd ${FILESDIR}/xdm.initd-1 xdm
-	newconfd ${FILESDIR}/xdm.confd-1 xdm
-	newpamd ${FILESDIR}/xserver.pamd xserver
+	doexe "${FILESDIR}"/xinitrc || die
+	newinitd "${FILESDIR}"/xdm.initd-1 xdm
+	newconfd "${FILESDIR}"/xdm.confd-1 xdm
+	newpamd "${FILESDIR}"/xserver.pamd xserver
 }
