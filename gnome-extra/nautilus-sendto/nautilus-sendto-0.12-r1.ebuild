@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.12-r1.ebuild,v 1.2 2007/11/05 15:19:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-0.12-r1.ebuild,v 1.3 2007/11/05 15:53:01 drac Exp $
 
 inherit gnome2 eutils autotools
 
@@ -40,12 +40,12 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-	G2CONF="${G2CONF} --disable-gaim \
-		$(use_enable bluetooth) \
-		$(use_enable eds evolution) \
-		$(use_enable pidgin) \
-		$(use_enable gajim) \
-		$(use_enable sylpheed) \
+	G2CONF="${G2CONF} --disable-gaim
+		$(use_enable bluetooth)
+		$(use_enable eds evolution)
+		$(use_enable pidgin)
+		$(use_enable gajim)
+		$(use_enable sylpheed)
 		$(use_enable thunderbird)"
 }
 
