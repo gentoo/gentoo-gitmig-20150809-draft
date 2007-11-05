@@ -1,0 +1,22 @@
+diff -Nru hcfusbmodem-1.14powerpcfull.orig/diag/diag.c hcfusbmodem-1.14powerpcfull/diag/diag.c
+--- hcfusbmodem-1.14powerpcfull.orig/diag/diag.c	2004-12-14 09:50:46.000000000 +0200
++++ hcfusbmodem-1.14powerpcfull/diag/diag.c	2007-11-06 00:57:56.000000000 +0200
+@@ -13,6 +13,7 @@
+ #include <asm/byteorder.h>
+ #include <stdio.h>
+ #include <sys/select.h>
++#include <stdlib.h>
+ 
+ #include "framewrk.h"
+ #include "osservices.h"
+diff -Nru hcfusbmodem-1.14powerpcfull.orig/diag/modemexpert.c hcfusbmodem-1.14powerpcfull/diag/modemexpert.c
+--- hcfusbmodem-1.14powerpcfull.orig/diag/modemexpert.c	2004-12-14 09:50:39.000000000 +0200
++++ hcfusbmodem-1.14powerpcfull/diag/modemexpert.c	2007-11-06 00:57:56.000000000 +0200
+@@ -13,6 +13,7 @@
+ #include <errno.h>
+ #include <signal.h>
+ #include <sys/queue.h>
++#include <string.h>
+ 
+ #include "framewrk.h"
+ #include "osservices.h"
