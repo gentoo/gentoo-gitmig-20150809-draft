@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.2.ebuild,v 1.5 2007/08/25 09:50:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.2.ebuild,v 1.6 2007/11/05 23:04:42 eva Exp $
 
 inherit gnome2 fdo-mime
 
@@ -36,23 +36,26 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL README"
 
-# darn thing breaks in paralell make :/
+# darn thing breaks in parallel make :/
 MAKEOPTS="${MAKEOPTS} -j1"
 
-G2CONF="${G2CONF} \
-	$(use_enable libgda database) \
-	$(use_enable python) \
-	$(use_enable python python-plugin) \
-	--disable-update-mimedb"
-#	$(use_enable eds) \
-#	$(use_enable eds eds-backend) \
+pkg_setup() {
+	G2CONF="${G2CONF}
+		$(use_enable libgda database)
+		$(use_enable python)
+		$(use_enable python python-plugin)
+		$(use_enable doc gtk-doc)
+		--disable-update-mimedb"
+#		$(use_enable eds) \
+#		$(use_enable eds eds-backend) \
+}
 
 src_install() {
-	local myinstall="sqldocdir=\"\$(datadir)/doc/${PF}\""
+	gnome2_src_install \
+		sqldocdir="\$(datadir)/doc/${PF}" \
+		sampledir="\$(datadir)/doc/${PF}/examples"
 
-	if use examples; then
-		myinstall="${myinstall} sampledir=\"\$(datadir)/doc/${PF}/examples\""
+	if ! use examples; then
+		rm -rf "${D}/usr/share/doc/${PF}/examples"
 	fi
-
-	gnome2_src_install ${myinstall}
 }

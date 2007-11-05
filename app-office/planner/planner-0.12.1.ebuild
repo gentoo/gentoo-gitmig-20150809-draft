@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12.1.ebuild,v 1.12 2007/06/24 09:12:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12.1.ebuild,v 1.13 2007/11/05 23:04:42 eva Exp $
 
 inherit gnome2 fdo-mime
 
@@ -43,7 +43,7 @@ src_install() {
 	gnome2_src_install
 
 	# ugly fix for #83947 - FIXME : write some config magic
-	rm -fr ${D}/usr/share/mime/{XMLnamespaces,globs,magic}
+	rm -fr "${D}/usr/share/mime/{XMLnamespaces,globs,magic}"
 
 }
 
