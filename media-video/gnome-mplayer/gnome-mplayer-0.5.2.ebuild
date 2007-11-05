@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.5.2.ebuild,v 1.1 2007/11/05 20:11:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.5.2.ebuild,v 1.2 2007/11/05 20:20:53 dberkholz Exp $
 
 GCONF_DEBUG="no"
 
@@ -12,7 +12,7 @@ SRC_URI="http://dekorte.homeip.net/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnome-2
