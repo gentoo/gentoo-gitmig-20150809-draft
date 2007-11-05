@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/jconfig-2.8-r2.ebuild,v 1.1 2007/04/28 12:27:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/jconfig-2.8-r2.ebuild,v 1.2 2007/11/05 14:36:27 opfer Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-src-v${PV}.tar.gz"
 HOMEPAGE="http://www.jconfig.org/"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 COMMON_DEP="dev-java/sun-jmx"

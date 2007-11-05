@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/jconfig
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/ChangeLog,v 1.12 2007/04/28 12:27:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/ChangeLog,v 1.13 2007/11/05 14:36:27 opfer Exp $
+
+  05 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  jconfig-2.8-r2.ebuild:
+  stable x86, bug 197813
 
 *jconfig-2.8-r2 (28 Apr 2007)
 
