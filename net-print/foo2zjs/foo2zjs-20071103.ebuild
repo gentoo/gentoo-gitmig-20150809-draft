@@ -1,35 +1,41 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20071012.ebuild,v 1.2 2007/10/13 22:48:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20071103.ebuild,v 1.1 2007/11/05 11:08:33 genstef Exp $
 
 inherit eutils
 
 DESCRIPTION="Support for printing to ZjStream-based printers"
 HOMEPAGE="http://foo2zjs.rkkda.com/"
 
-# etracted by http://gentooexperimental.org/~genstef/dist/foo2zjs-helper.sh
-DEVICES=( "hp2600n" "hp1600" "km2530" "km2490" "km2480" "xp6115" "km2430"
-"km2300" "km2200" "kmcpwl" "sa300" "sa2160" "sa3160" "xp6110" "hp1020" "hp1018"
-"hp1005" "hp1000" )
+# extracted by http://gentooexperimental.org/~genstef/dist/foo2zjs-helper.sh
+DEVICES=( "hp2600n" "hp1600" "hp1500" "km2530" "km2490" "km2480" "xp6115"
+"km2430" "km2300" "km2200" "kmcpwl" "sa300" "sa2160" "sa3160" "xp6110" "lm500"
+"hp1020" "hp1018" "hp1005" "hp1000" )
 URIS=(
-	"http://foo2hp.rkkda.com/hpclj2600n.tar.gz http://foo2zjs.rkkda.com/km2430.tar.gz"
-	"http://foo2hp.rkkda.com/hpclj2600n.tar.gz http://foo2zjs.rkkda.com/km2430.tar.gz"
-	"http://foo2lava.rkkda.com/km2530.tar.gz"
-	"http://foo2lava.rkkda.com/km2530.tar.gz"
-	"http://foo2lava.rkkda.com/km2530.tar.gz"
-	"http://foo2lava.rkkda.com/km2530.tar.gz"
-	"http://foo2zjs.rkkda.com/km2430.tar.gz"
-	"ftp://ftp.minolta-qms.com/pub/crc/out_going/win/m23dlicc.exe http://foo2zjs.rkkda.com/km2430.tar.gz"
-	"ftp://ftp.minolta-qms.com/pub/crc/out_going/win2000/m22dlicc.exe"
-	"ftp://ftp.minolta-qms.com/pub/crc/out_going/windows/cpplxp.exe"
-	"http://foo2qpdl.rkkda.com/samclp300.tar.gz"
-	"http://foo2qpdl.rkkda.com/samclp300.tar.gz"
-	"http://foo2qpdl.rkkda.com/samclp300.tar.gz"
-	"http://foo2qpdl.rkkda.com/samclp300.tar.gz"
-	"http://foo2zjs.rkkda.com/sihp1020.tar.gz"
-	"http://foo2zjs.rkkda.com/sihp1018.tar.gz"
-	"http://foo2zjs.rkkda.com/sihp1005.tar.gz"
-	"http://foo2zjs.rkkda.com/sihp1000.tar.gz"
+"http://foo2hp.rkkda.com/icm/hpclj2600n.tar.gz
+http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
+"http://foo2hp.rkkda.com/icm/hpclj2600n.tar.gz
+http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
+"http://foo2hp.rkkda.com/icm/hpclj2600n.tar.gz
+http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
+"http://foo2lava.rkkda.com/icm/km2530.tar.gz"
+"http://foo2lava.rkkda.com/icm/km2530.tar.gz"
+"http://foo2lava.rkkda.com/icm/km2530.tar.gz"
+"http://foo2lava.rkkda.com/icm/km2530.tar.gz"
+"http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
+"ftp://ftp.minolta-qms.com/pub/crc/out_going/win/m23dlicc.exe
+http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
+"ftp://ftp.minolta-qms.com/pub/crc/out_going/win2000/m22dlicc.exe"
+"ftp://ftp.minolta-qms.com/pub/crc/out_going/windows/cpplxp.exe"
+"http://foo2qpdl.rkkda.com/icm/samclp300.tar.gz"
+"http://foo2qpdl.rkkda.com/icm/samclp300.tar.gz"
+"http://foo2qpdl.rkkda.com/icm/samclp300.tar.gz"
+"http://foo2qpdl.rkkda.com/icm/samclp300.tar.gz"
+"http://foo2slx.rkkda.com/icm/lexc500.tar.gz"
+"http://foo2zjs.rkkda.com/firmware/sihp1020.tar.gz"
+"http://foo2zjs.rkkda.com/firmware/sihp1018.tar.gz"
+"http://foo2zjs.rkkda.com/firmware/sihp1005.tar.gz"
+"http://foo2zjs.rkkda.com/firmware/sihp1000.tar.gz"
 )
 
 SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.gz"
@@ -63,8 +69,8 @@ src_unpack() {
 	done
 
 	cd ${S}
-	epatch ${FILESDIR}/foo2zjs-Makefile-20070424.diff
-	epatch ${FILESDIR}/foo2zjs-udevfwld-20070424.diff
+	epatch ${FILESDIR}/foo2zjs-Makefile-20071105.diff
+	epatch ${FILESDIR}/foo2zjs-udevfwld-20071105.diff
 }
 
 src_compile() {

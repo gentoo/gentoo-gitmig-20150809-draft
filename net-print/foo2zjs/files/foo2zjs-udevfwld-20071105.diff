@@ -1,6 +1,44 @@
+diff -Nur foo2zjs.orig/Makefile foo2zjs/Makefile
+--- foo2zjs.orig/Makefile	2007-11-05 11:12:09.000000000 +0100
++++ foo2zjs/Makefile	2007-11-05 11:13:51.000000000 +0100
+@@ -10,6 +10,10 @@
+ PREFIX=/usr/local
+ PREFIX=$(DESTDIR)/usr
+ 
++# USB_PRINTERID is also installed there because it is needed by the FWloader
++FWLOADERDIR=$(DESTDIR)/sbin
++FIRMWAREDIR=$(DESTDIR)/lib/firmware
++
+ # Pathnames for this package...
+ BIN=$(PREFIX)/bin
+ SHAREZJS=$(PREFIX)/share/foo2zjs
+@@ -588,12 +592,12 @@
+ 	    fi; \
+ 	done
+ 	# foo2zjs Firmware files (if any)
+-	install $(LPuid) $(LPgid) -m 775 -d $(SHAREZJS)/firmware/
++	install $(LPuid) $(LPgid) -m 775 -d $(FIRMWAREDIR)/
+ 	for i in sihp*.img; do \
+ 	    if [ -f $$i ]; then \
+ 		base=`basename $$i .img`; \
+ 		./arm2hpdl $$i >$$base.dl; \
+-		install -c -m 644 $$base.dl $(SHAREZJS)/firmware/; \
++		install -c -m 644 $$base.dl $(FIRMWAREDIR)/; \
+ 	    fi; \
+ 	done
+ 	# foo2oak ICM files (if any)
+@@ -687,6 +691,8 @@
+ UDEVDIR=$(DESTDIR)/etc/udev/rules.d
+ RULES=hplj10xx.rules
+ install-udev:
++	[ -d $(FWLOADERDIR) ] || install -d -m 755 $(FWLOADERDIR)/
++	install -c -m 755 foo2zjs-loadfw $(FWLOADERDIR)/
+ 	[ -d $(UDEVDIR) ] || install -d -m 755 $(UDEVDIR)/
+ 	install -c -m 644 $(RULES) $(UDEVDIR)/11-$(RULES)
+ 
 diff -Nur foo2zjs.orig/foo2zjs-loadfw foo2zjs/foo2zjs-loadfw
 --- foo2zjs.orig/foo2zjs-loadfw	1970-01-01 01:00:00.000000000 +0100
-+++ foo2zjs/foo2zjs-loadfw	2007-04-24 23:21:12.000000000 +0200
++++ foo2zjs/foo2zjs-loadfw	2007-11-05 11:13:51.000000000 +0100
 @@ -0,0 +1,127 @@
 +#!/bin/sh
 +
@@ -130,8 +168,8 @@ diff -Nur foo2zjs.orig/foo2zjs-loadfw foo2zjs/foo2zjs-loadfw
 +    log "...couldn't find $USBID"
 +fi
 diff -Nur foo2zjs.orig/hplj1000 foo2zjs/hplj1000
---- foo2zjs.orig/hplj1000	2007-04-24 23:14:56.000000000 +0200
-+++ foo2zjs/hplj1000	2007-04-24 23:18:43.000000000 +0200
+--- foo2zjs.orig/hplj1000	2007-11-05 11:12:09.000000000 +0100
++++ foo2zjs/hplj1000	2007-11-05 11:13:51.000000000 +0100
 @@ -35,7 +35,7 @@
  #
  # Directory to find downloadable HP firmware files sihpMMMM.dl
@@ -142,56 +180,30 @@ diff -Nur foo2zjs.orig/hplj1000 foo2zjs/hplj1000
  #
  # Program used to determine USB id information
 diff -Nur foo2zjs.orig/hplj10xx.rules foo2zjs/hplj10xx.rules
---- foo2zjs.orig/hplj10xx.rules	2007-04-24 23:14:56.000000000 +0200
-+++ foo2zjs/hplj10xx.rules	2007-04-24 23:24:19.000000000 +0200
-@@ -1,8 +1,4 @@
+--- foo2zjs.orig/hplj10xx.rules	2007-11-05 11:12:09.000000000 +0100
++++ foo2zjs/hplj10xx.rules	2007-11-05 11:13:57.000000000 +0100
+@@ -1,16 +1,8 @@
 -#Own udev rule for HP Laserjet 1000
--KERNEL=="lp*", BUS=="usb", SYSFS{idVendor}=="03f0", SYSFS{product}=="hp LaserJet 1000", NAME="usb/%k", SYMLINK+="hplj1000%e", MODE="0666", RUN+="/etc/hotplug/usb/hplj1000" 
+-KERNEL=="lp*", BUS=="usb", SYSFS{idVendor}=="03f0", \
+-	SYSFS{product}=="hp LaserJet 1000", NAME="usb/%k", \
+-	SYMLINK+="hplj1000%e", MODE="0666", RUN+="/etc/hotplug/usb/hplj1000" 
 -#Own udev rule for HP Laserjet 1005
--KERNEL=="lp*", BUS=="usb", SYSFS{idVendor}=="03f0", SYSFS{product}=="hp LaserJet 1005 series", NAME="usb/%k", SYMLINK+="hplj1005%e", MODE="0666", RUN+="/etc/hotplug/usb/hplj1005" 
+-KERNEL=="lp*", BUS=="usb", SYSFS{idVendor}=="03f0", \
+-	SYSFS{product}=="hp LaserJet 1005 series", NAME="usb/%k", \
+-	SYMLINK+="hplj1005%e", MODE="0666", RUN+="/etc/hotplug/usb/hplj1005" 
 -#Own udev rule for HP Laserjet 1018
--KERNEL=="lp*", BUS=="usb", SYSFS{idVendor}=="03f0", SYSFS{product}=="HP LaserJet 1018", NAME="usb/%k", SYMLINK+="hplj1018%e", MODE="0666", RUN+="/etc/hotplug/usb/hplj1018" 
+-KERNEL=="lp*", BUS=="usb", SYSFS{idVendor}=="03f0", \
+-	SYSFS{product}=="HP LaserJet 1018", NAME="usb/%k", \
+-	SYMLINK+="hplj1018%e", MODE="0666", RUN+="/etc/hotplug/usb/hplj1018" 
 -#Own udev rule for HP Laserjet 1020
--KERNEL=="lp*", BUS=="usb", SYSFS{idVendor}=="03f0", SYSFS{product}=="HP LaserJet 1020", NAME="usb/%k", SYMLINK+="hplj1020%e", MODE="0666", RUN+="/etc/hotplug/usb/hplj1020" 
-+ACTION=="add", KERNEL=="lp*", SUBSYSTEM=="usb", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="0517", RUN+="/sbin/foo2zjs-loadfw 1000 $tempnode"
-+ACTION=="add", KERNEL=="lp*", SUBSYSTEM=="usb", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1317", RUN+="/sbin/foo2zjs-loadfw 1005 $tempnode"
-+ACTION=="add", KERNEL=="lp*", SUBSYSTEM=="usb", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="4117", RUN+="/sbin/foo2zjs-loadfw 1018 $tempnode"
-+ACTION=="add", KERNEL=="lp*", SUBSYSTEM=="usb", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="2b17", RUN+="/sbin/foo2zjs-loadfw 1020 $tempnode"
-diff -Nur foo2zjs.orig/Makefile foo2zjs/Makefile
---- foo2zjs.orig/Makefile	2007-04-24 23:14:56.000000000 +0200
-+++ foo2zjs/Makefile	2007-04-24 23:18:43.000000000 +0200
-@@ -10,6 +10,10 @@
- PREFIX=/usr/local
- PREFIX=$(DESTDIR)/usr
- 
-+# USB_PRINTERID is also installed there because it is needed by the FWloader
-+FWLOADERDIR=$(DESTDIR)/sbin
-+FIRMWAREDIR=$(DESTDIR)/lib/firmware
-+
- # Pathnames for this package...
- BIN=$(PREFIX)/bin
- SHAREZJS=$(PREFIX)/share/foo2zjs
-@@ -506,12 +510,12 @@
- 	    fi; \
- 	done
- 	# foo2zjs Firmware files (if any)
--	install $(LPuid) $(LPgid) -m 775 -d $(SHAREZJS)/firmware/
-+	install $(LPuid) $(LPgid) -m 775 -d $(FIRMWAREDIR)/
- 	for i in sihp*.img; do \
- 	    if [ -f $$i ]; then \
- 		base=`basename $$i .img`; \
- 		./arm2hpdl $$i >$$base.dl; \
--		install -c -m 644 $$base.dl $(SHAREZJS)/firmware/; \
-+		install -c -m 644 $$base.dl $(FIRMWAREDIR)/; \
- 	    fi; \
- 	done
- 	# foo2oak ICM files (if any)
-@@ -586,6 +590,8 @@
- UDEVDIR=$(DESTDIR)/etc/udev/rules.d
- RULES=hplj10xx.rules
- install-udev:
-+	[ -d $(FWLOADERDIR) ] || install -d -m 755 $(FWLOADERDIR)/
-+	install -c -m 755 foo2zjs-loadfw $(FWLOADERDIR)/
- 	[ -d $(UDEVDIR) ] || install -d -m 755 $(UDEVDIR)/
- 	install -c -m 644 $(RULES) $(UDEVDIR)/11-$(RULES)
- 
+-KERNEL=="lp*", BUS=="usb", SYSFS{idVendor}=="03f0", \
+-	SYSFS{product}=="HP LaserJet 1020", NAME="usb/%k", \
+-	SYMLINK+="hplj1020%e", MODE="0666", RUN+="/etc/hotplug/usb/hplj1020" 
++ACTION=="add", KERNEL=="lp*", SUBSYSTEM=="usb", ATTRS{idVendor}=="03f0", \
++	ATTRS{idProduct}=="0517", RUN+="/sbin/foo2zjs-loadfw 1000 $tempnode"
++ACTION=="add", KERNEL=="lp*", SUBSYSTEM=="usb", ATTRS{idVendor}=="03f0", \
++	ATTRS{idProduct}=="1317", RUN+="/sbin/foo2zjs-loadfw 1005 $tempnode"
++ACTION=="add", KERNEL=="lp*", SUBSYSTEM=="usb", ATTRS{idVendor}=="03f0", \
++	ATTRS{idProduct}=="4117", RUN+="/sbin/foo2zjs-loadfw 1018 $tempnode"
++ACTION=="add", KERNEL=="lp*", SUBSYSTEM=="usb", ATTRS{idVendor}=="03f0", \
++	ATTRS{idProduct}=="2b17", RUN+="/sbin/foo2zjs-loadfw 1020 $tempnode"

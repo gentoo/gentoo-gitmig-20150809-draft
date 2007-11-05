@@ -1,6 +1,16 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.29 2007/10/29 11:58:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.30 2007/11/05 11:08:33 genstef Exp $
+
+*foo2zjs-20071103 (05 Nov 2007)
+
+  05 Nov 2007; Stefan Schweizer <genstef@gentoo.org>
+  -files/foo2zjs-Makefile-20070424.diff,
+  -files/foo2zjs-udevfwld-20070424.diff,
+  +files/foo2zjs-Makefile-20071105.diff,
+  +files/foo2zjs-udevfwld-20071105.diff, -foo2zjs-20070424.ebuild,
+  -foo2zjs-20071012.ebuild, +foo2zjs-20071103.ebuild:
+  version bump also solving bug 198122, changed uris
 
   29 Oct 2007; Stefan Schweizer <genstef@gentoo.org>
   files/digest-foo2zjs-20070424, files/digest-foo2zjs-20071012, Manifest:
