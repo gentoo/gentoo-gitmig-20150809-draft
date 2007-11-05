@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.5.2.ebuild,v 1.7 2007/11/05 06:00:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.5.2.ebuild,v 1.8 2007/11/05 13:29:33 maekke Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gtkpod/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ppc ppc64 ~sparc x86"
 IUSE="gtk python doc"
 
 RDEPEND=">=dev-libs/glib-2.4
@@ -29,8 +29,8 @@ RESTRICT="test"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}/src
-	epatch ${FILESDIR}/${P}-no-gdk.patch
+	cd "${S}"/src
+	epatch "${FILESDIR}"/${P}-no-gdk.patch
 }
 
 src_compile() {
@@ -52,6 +52,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc README TROUBLESHOOTING AUTHORS
 }
