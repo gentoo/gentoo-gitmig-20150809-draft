@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qof
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.6 2007/11/04 11:05:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.7 2007/11/05 09:08:36 opfer Exp $
+
+  05 Nov 2007; Christian Faulhammer <opfer@gentoo.org> qof-0.7.2.ebuild:
+  go to the correct directory in src_unpack(), so epatch actually works
 
   04 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   +files/qof-0.7.2-remove_spurious_CFLAGS.patch, qof-0.7.2.ebuild:
