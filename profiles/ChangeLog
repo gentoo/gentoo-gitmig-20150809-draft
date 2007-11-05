@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.786 2007/11/05 17:14:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.787 2007/11/05 18:59:18 tgurr Exp $
+
+  05 Nov 2007; Timo Gurr <tgurr@gentoo.org> use.local.desc:
+  Drop cups local bonjour USE flag in favor of avahi global USE flag.
 
   05 Nov 2007; Peter Volkov <pva@gentoo.org> package.mask:
   Unmasking tcpreplay as it's no more beta.
