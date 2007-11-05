@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.45 2007/11/04 04:49:43 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.46 2007/11/05 20:59:07 opfer Exp $
+
+  05 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  mantisbt-1.0.8.ebuild:
+  stable x86, bug 197988
 
   04 Nov 2007; Lars Weiler <pylon@gentoo.org> mantisbt-1.0.8.ebuild:
   stable ppc, bug #197988
