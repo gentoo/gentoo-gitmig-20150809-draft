@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.3.0.20070828.ebuild,v 1.1 2007/11/05 14:23:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.3.0.20070828.ebuild,v 1.2 2007/11/05 20:03:47 mr_bones_ Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -76,6 +76,6 @@ pkg_config() {
 	else
 		eerror "${K_DIR} is not a directory"
 	fi
-	
+
 	rm -rf "${ROOT}${PORTAGE_TMPDIR}"/patch-o-matic-ng
 }
