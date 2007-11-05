@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.788 2007/11/05 19:57:40 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.789 2007/11/05 21:50:55 eva Exp $
+
+  05 Nov 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  default-bsd/package.use.mask:
+  acl and attr not keyworded
 
   05 Nov 2007; Timo Gurr <tgurr@gentoo.org> package.mask:
   Remove package.mask for cups 1.3.
@@ -44,6 +48,10 @@
 
   02 Nov 2007; Daniel Black <dragonheart@gentoo.org> use.local.desc:
   added rss for app-admin/conky
+
+  31 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  default-bsd/package.use.mask:
+  use.mask pda (gnome-pilot{,-conduits}) aren't keyworded
 
   31 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   remove app-accessibility/dasher mask, bug #188213 fixed

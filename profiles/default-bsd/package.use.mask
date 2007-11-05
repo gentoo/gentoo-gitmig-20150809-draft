@@ -29,3 +29,5 @@ media-video/totem bluetooth nvtv
 # Gilles Dartiguelongue <eva@gentoo.org> (29 Oct 2007)
 # app-vim/gtk-syntax not keyworded yet
 x11-libs/gtk+ vim-syntax
+mail-client/evolution pda
+=gnome-base/gnome-vfs-2.20.0-r1 acl
