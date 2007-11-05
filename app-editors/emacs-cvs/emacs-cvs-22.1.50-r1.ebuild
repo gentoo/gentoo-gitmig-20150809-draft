@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50-r1.ebuild,v 1.8 2007/11/02 09:43:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50-r1.ebuild,v 1.9 2007/11/05 14:02:49 ulm Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -20,7 +20,7 @@ SRC_URI=""
 LICENSE="GPL-3 FDL-1.2 BSD"
 SLOT="22"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="alsa gif gtk gzip-el hesiod jpeg motif png spell sound source tiff toolkit-scroll-bars X Xaw3d xpm"
+IUSE="alsa gif gtk gzip-el hesiod jpeg kerberos motif png spell sound source tiff toolkit-scroll-bars X Xaw3d xpm"
 RESTRICT="strip"
 
 X_DEPEND="x11-libs/libXmu x11-libs/libXt x11-misc/xbitmaps"
@@ -29,6 +29,7 @@ RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-0.7-r1
 	sys-libs/zlib
 	hesiod? ( net-dns/hesiod )
+	kerberos? ( virtual/krb5 )
 	spell? ( || ( app-text/ispell app-text/aspell ) )
 	alsa? ( media-sound/alsa-headers )
 	X? (
@@ -145,6 +146,7 @@ src_compile() {
 	fi
 
 	myconf="${myconf} $(use_with hesiod)"
+	myconf="${myconf} $(use_with kerberos) $(use_with kerberos kerberos5)"
 
 	econf \
 		--program-suffix=-${EMACS_SUFFIX} \

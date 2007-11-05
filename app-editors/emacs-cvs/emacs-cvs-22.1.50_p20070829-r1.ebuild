@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50_p20070829-r1.ebuild,v 1.8 2007/11/03 20:23:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.1.50_p20070829-r1.ebuild,v 1.9 2007/11/05 14:02:49 ulm Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="latest"
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-3 FDL-1.2 BSD"
 SLOT="22"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="alsa gif gpm gtk gzip-el hesiod jpeg motif png spell sound source svg tiff toolkit-scroll-bars X Xaw3d xpm"
+IUSE="alsa gif gpm gtk gzip-el hesiod jpeg kerberos motif png spell sound source svg tiff toolkit-scroll-bars X Xaw3d xpm"
 RESTRICT="strip"
 
 X_DEPEND="x11-libs/libXmu x11-libs/libXt x11-misc/xbitmaps"
@@ -23,6 +23,7 @@ RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-0.7-r1
 	sys-libs/zlib
 	hesiod? ( net-dns/hesiod )
+	kerberos? ( virtual/krb5 )
 	spell? ( || ( app-text/ispell app-text/aspell ) )
 	alsa? ( media-sound/alsa-headers )
 	gpm? ( sys-libs/gpm )
@@ -130,6 +131,7 @@ src_compile() {
 	fi
 
 	myconf="${myconf} $(use_with hesiod)"
+	myconf="${myconf} $(use_with kerberos) $(use_with kerberos kerberos5)"
 	myconf="${myconf} $(use_with gpm)"
 
 	econf \
