@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7867 2007/11/05 10:45:42 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7868 2007/11/05 15:04:18 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -200,11 +200,6 @@ sys-kernel/ck-sources
 # last release was in 2001, possible replacements: media-gfx/opcion
 # and media-gfx/fontforge
 app-misc/gfontview
-
-# Christian Faulhammer <opfer@gentoo.org> (10 Oct 2007)
-# masked for removal, just useless because
-# it does not install anything, see bug 3464
-app-editors/pico
 
 # Doug Goldstein <cardoe@gentoo.org> (10 Oct 2007)
 # the Asterisk is coming! the Asterisk is coming!
