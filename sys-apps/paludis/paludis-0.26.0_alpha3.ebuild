@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_alpha3.ebuild,v 1.1 2007/11/05 14:58:18 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_alpha3.ebuild,v 1.2 2007/11/05 20:04:13 mr_bones_ Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -116,4 +116,3 @@ src_test() {
 pkg_preinst() {
 	create-paludis-user
 }
-
