@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.1.ebuild,v 1.10 2007/10/23 16:37:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.1.ebuild,v 1.11 2007/11/05 02:18:21 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -44,12 +44,13 @@ SRC_URI="!binary? ( http://haskell.org/ghc/dist/${EXTRA_SRC_URI}/${MY_P}-src.tar
 		 amd64?	( mirror://gentoo/ghc-bin-${PV}-amd64.tbz2 )
 		 hppa?	( mirror://gentoo/ghc-bin-${PV}-hppa.tbz2 )
 		 ia64?	( mirror://gentoo/ghc-bin-${PV}-ia64.tbz2 )
+		 ppc?	( mirror://gentoo/ghc-bin-${PV}-ppc.tbz2 )
+		 sparc?	( mirror://gentoo/ghc-bin-${PV}-sparc.tbz2 )
 		 x86?	( mirror://gentoo/ghc-bin-${PV}-x86.tbz2 )"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 x86"
-#KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc x86"
 IUSE="binary doc ghcbootstrap"
 
 LOC="/opt/ghc" # location for installation of binary version
@@ -142,6 +143,12 @@ pkg_setup() {
 			die "USE=\"ghcbootstrap binary\" is not a valid combination."
 		[[ -z $(type -P ghc) ]] && \
 			die "Could not find a ghc to bootstrap with."
+	elif use alpha || use ppc64; then
+		eerror "No binary .tbz2 package available yet for these arches:"
+		eerror "  alpha, ppc64"
+		eerror "Please try emerging with USE=ghcbootstrap and report build"
+		eerror "sucess or failure to the haskell team (haskell@gentoo.org)"
+		die "No binary available for this arch yet, USE=ghcbootstrap"
 	fi
 
 	set_config
@@ -199,7 +206,7 @@ src_unpack() {
 		#	use test && mv "${WORKDIR}/testsuite" "${S}/"
 
 		# Don't strip binaries on install. See QA warnings in bug #140369.
-		sed -i -e 's/SRC_INSTALL_BIN_OPTS	+= -s//' ${S}/mk/config.mk.in
+		sed -i -e 's/SRC_INSTALL_BIN_OPTS	+= -s//' "${S}/mk/config.mk.in"
 
 		# Temporary patches that needs testing before being pushed upstream:
 		cd "${S}"
@@ -244,7 +251,7 @@ src_compile() {
 
 		# GHC build system knows to build unregisterised on alpha and hppa,
 		# but we have to tell it to build unregisterised on some arches
-		if use alpha || use hppa || use ppc64; then
+		if use alpha || use hppa || use ppc64 || use sparc; then
 			echo "GhcUnregisterised=YES" >> mk/build.mk
 			echo "GhcWithInterpreter=NO" >> mk/build.mk
 		fi
@@ -318,7 +325,7 @@ src_install() {
 		cd "${S}"
 		dodoc README ANNOUNCE LICENSE VERSION
 
-		dosbin ${FILESDIR}/ghc-updater
+		dosbin "${FILESDIR}/ghc-updater"
 
 		dobashcompletion "${FILESDIR}/ghc-bash-completion"
 

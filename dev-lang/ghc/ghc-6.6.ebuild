@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.12 2007/08/08 15:57:56 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.ebuild,v 1.13 2007/11/05 02:18:21 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -188,7 +188,7 @@ src_unpack() {
 		#	use test && mv "${WORKDIR}/testsuite" "${S}/"
 
 		# Don't strip binaries on install. See QA warnings in bug #140369.
-		sed -i -e 's/SRC_INSTALL_BIN_OPTS	+= -s//' ${S}/mk/config.mk.in
+		sed -i -e 's/SRC_INSTALL_BIN_OPTS	+= -s//' "${S}/mk/config.mk.in"
 
 		# Temporary patches that needs testing before being pushed upstream:
 		cd "${S}"
@@ -281,7 +281,7 @@ src_install() {
 		cd "${S}"
 		dodoc README ANNOUNCE LICENSE VERSION
 
-		dosbin ${FILESDIR}/ghc-updater
+		dosbin "${FILESDIR}/ghc-updater"
 	fi
 
 	if use doc; then

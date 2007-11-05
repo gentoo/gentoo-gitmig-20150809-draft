@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.21 2007/07/22 08:58:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.22 2007/11/05 02:18:21 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -159,7 +159,7 @@ src_unpack() {
 	base_src_unpack
 	ghc_setup_cflags
 
-	cd ${S}
+	cd "${S}"
 	epatch "${WORKDIR}/${P}-alut.patch"
 	epatch "${FILESDIR}/${P}-sparc32plus.patch"
 	epatch "${FILESDIR}/${P}-sparcmangler.patch"
@@ -177,7 +177,7 @@ src_unpack() {
 	echo 'GC_HC_OPTS += -optc-fno-strict-aliasing' >> "${S}/ghc/rts/Makefile"
 
 	# Don't strip binaries on install. See QA warnings in bug #140369.
-	sed -i -e 's/SRC_INSTALL_BIN_OPTS	+= -s//' ${S}/mk/config.mk.in
+	sed -i -e 's/SRC_INSTALL_BIN_OPTS	+= -s//' "${S}/mk/config.mk.in"
 }
 
 src_compile() {
@@ -269,7 +269,7 @@ src_install () {
 	cd "${S}/ghc"
 	dodoc README ANNOUNCE LICENSE VERSION
 
-	dosbin ${FILESDIR}/ghc-updater
+	dosbin "${FILESDIR}/ghc-updater"
 }
 
 pkg_postinst () {
