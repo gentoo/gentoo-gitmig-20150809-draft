@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jtidy
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/ChangeLog,v 1.10 2007/05/23 17:10:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/ChangeLog,v 1.11 2007/11/05 16:07:49 opfer Exp $
+
+  05 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  jtidy-0_pre20010801-r1.ebuild:
+  stable x86, bug 198013
 
   23 May 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Add ~x86-fbsd keyword. Bug #176906.
