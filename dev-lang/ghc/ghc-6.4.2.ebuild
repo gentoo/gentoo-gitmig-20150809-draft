@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.23 2007/11/05 10:27:49 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.24 2007/11/05 20:03:23 mr_bones_ Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -193,7 +193,6 @@ src_unpack() {
 			"${S}/usr/bin/hsc2hs" \
 			"${S}/usr/$(get_libdir)/${P}/package.conf" \
 			|| die "Relocating ghc from /usr to /opt/ghc failed"
-
 
 		# fix docs
 		if use doc; then
