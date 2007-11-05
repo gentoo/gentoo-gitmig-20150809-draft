@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.38 2007/11/01 03:11:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.39 2007/11/05 06:00:20 josejx Exp $
+
+  05 Nov 2007; Joseph Jezak <josejx@gentoo.org> libgpod-0.5.2.ebuild:
+  Marked ppc/ppc64 stable for bug #197716.
 
   01 Nov 2007; Steve Dibb <beandog@gentoo.org> libgpod-0.5.2.ebuild:
   amd64 stable, bug 197716
