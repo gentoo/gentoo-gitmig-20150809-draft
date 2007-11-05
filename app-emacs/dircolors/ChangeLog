@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/dircolors
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dircolors/ChangeLog,v 1.14 2007/11/04 08:33:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dircolors/ChangeLog,v 1.15 2007/11/05 14:42:16 opfer Exp $
+
+  05 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  dircolors-1.0-r2.ebuild:
+  stable x86, bug 198032
 
   04 Nov 2007; Ulrich Mueller <ulm@gentoo.org> dircolors-1.0-r2.ebuild:
   amd64 stable, bug 195512
