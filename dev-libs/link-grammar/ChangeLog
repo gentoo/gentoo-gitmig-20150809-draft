@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/link-grammar
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.19 2007/11/04 23:14:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.20 2007/11/05 12:28:17 jer Exp $
+
+  05 Nov 2007; Jeroen Roovers <jer@gentoo.org> link-grammar-4.2.4-r1.ebuild:
+  Stable for HPPA.
 
   04 Nov 2007; Gilles Dartiguelongue <eva@gentoo.org>
   link-grammar-4.2.4-r1.ebuild:

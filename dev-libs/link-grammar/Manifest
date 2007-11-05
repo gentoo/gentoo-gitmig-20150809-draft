@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX link-grammar-4.2.4-tokenize.patch 3066 RMD160 964f1051ac5e5c9bbc9d09e481e1fc5c09b0ebba SHA1 3de415726604a2cebe096275182e558867da5d69 SHA256 cc21de0f149c9cfb0a8c7b9516c8ce4c8c60bfd661724551ae2dc54a62e1293e
 MD5 31b2bc6d86dae62cbb436ccd3dd0a72b files/link-grammar-4.2.4-tokenize.patch 3066
 RMD160 964f1051ac5e5c9bbc9d09e481e1fc5c09b0ebba files/link-grammar-4.2.4-tokenize.patch 3066
@@ -11,18 +8,18 @@ EBUILD link-grammar-4.2.2.ebuild 775 RMD160 d9ee74158c012a122fe8f12d31e5f61a595c
 MD5 36a41baa713f4a55f8a7b545f8134ed6 link-grammar-4.2.2.ebuild 775
 RMD160 d9ee74158c012a122fe8f12d31e5f61a595c453a link-grammar-4.2.2.ebuild 775
 SHA256 0a50985081cf1f56bac20bf50ff5f2f1eb2e2808e5e8ce103b0da917a8c7c55b link-grammar-4.2.2.ebuild 775
-EBUILD link-grammar-4.2.4-r1.ebuild 896 RMD160 dc50abf22558735cdb1e5c350abf11207d105a4f SHA1 dca20cc2043cfb24cc0b018ed0d22aea64a5594f SHA256 0f86f8b5e07fa8727df447b0d8873519e01dd491f107cf435fd7bd647f2dfa4a
-MD5 563003bae612268e34199b16803cd2c4 link-grammar-4.2.4-r1.ebuild 896
-RMD160 dc50abf22558735cdb1e5c350abf11207d105a4f link-grammar-4.2.4-r1.ebuild 896
-SHA256 0f86f8b5e07fa8727df447b0d8873519e01dd491f107cf435fd7bd647f2dfa4a link-grammar-4.2.4-r1.ebuild 896
+EBUILD link-grammar-4.2.4-r1.ebuild 895 RMD160 1c8a13e4b4bca3f70001956f896f420e91fcc6f6 SHA1 5229ad5d994e9a016069d93067e16edb188505e0 SHA256 f7bf141af700eea58bdfb3668762424da956aec4119cd010e0466faa48daed02
+MD5 05b070e96e4c24f2a8d7f5a7667f45da link-grammar-4.2.4-r1.ebuild 895
+RMD160 1c8a13e4b4bca3f70001956f896f420e91fcc6f6 link-grammar-4.2.4-r1.ebuild 895
+SHA256 f7bf141af700eea58bdfb3668762424da956aec4119cd010e0466faa48daed02 link-grammar-4.2.4-r1.ebuild 895
 EBUILD link-grammar-4.2.4.ebuild 782 RMD160 d1a920b91ec3900f8beeb8525f1172123fd7a132 SHA1 6d008c510379127c34f478dbeca14fe83e00185a SHA256 46c42166c9635f20b80f41bbc6b9321c6e2f1b2cb0e5f1fff5df154ab96357e2
 MD5 932dd763073e17708fc86fe4a826a113 link-grammar-4.2.4.ebuild 782
 RMD160 d1a920b91ec3900f8beeb8525f1172123fd7a132 link-grammar-4.2.4.ebuild 782
 SHA256 46c42166c9635f20b80f41bbc6b9321c6e2f1b2cb0e5f1fff5df154ab96357e2 link-grammar-4.2.4.ebuild 782
-MISC ChangeLog 2882 RMD160 a5f72da8240ebead95138411b2c9a1eaffeafd1b SHA1 dccb3d0b511620e84b4f67f820b44f766e7a6392 SHA256 0ef1976e08b3aa52d79d5bd13e25dfb0c79fdba0ef5f0f3c78d46bebf87204f5
-MD5 6b874dc707226fd403f4b125dc44dda1 ChangeLog 2882
-RMD160 a5f72da8240ebead95138411b2c9a1eaffeafd1b ChangeLog 2882
-SHA256 0ef1976e08b3aa52d79d5bd13e25dfb0c79fdba0ef5f0f3c78d46bebf87204f5 ChangeLog 2882
+MISC ChangeLog 2979 RMD160 d8ff4cf879a52426ad527ee128aebe4ecb08e5d1 SHA1 1d36d9d42eded5b0080b7a32c12fdca158889169 SHA256 fb41ad17abab170c81be91335ce1ca9864d9b0d6c768e2971bc0ab6fc3d85eba
+MD5 c6ff5cd35443f3ea411f2f0de4073ab3 ChangeLog 2979
+RMD160 d8ff4cf879a52426ad527ee128aebe4ecb08e5d1 ChangeLog 2979
+SHA256 fb41ad17abab170c81be91335ce1ca9864d9b0d6c768e2971bc0ab6fc3d85eba ChangeLog 2979
 MISC metadata.xml 507 RMD160 11e5e0483b675ac84eed8159f3dd67a0235dac37 SHA1 60aa5f8abdf19612407a6bbdc36f1c1a2f4eecaf SHA256 ff2865dbda5b595aff5b7a570cc2301f83e3503d7c4e643e9508fe39666a6b11
 MD5 fdb3e63bc1ea55843677f858b9b119e0 metadata.xml 507
 RMD160 11e5e0483b675ac84eed8159f3dd67a0235dac37 metadata.xml 507
@@ -36,10 +33,3 @@ SHA256 91b59dc19bd0c14ffe9b86aa912d8ebc1d1c5bc95de02b11d9689da58d5f8af2 files/di
 MD5 b290c42cb4e906a07ee98a73a0665b83 files/digest-link-grammar-4.2.4-r1 256
 RMD160 bf1a6d1cd3d4a30c5bb91eb9f3e4b1c7fbc50309 files/digest-link-grammar-4.2.4-r1 256
 SHA256 91b59dc19bd0c14ffe9b86aa912d8ebc1d1c5bc95de02b11d9689da58d5f8af2 files/digest-link-grammar-4.2.4-r1 256
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.7 (GNU/Linux)
-
-iD8DBQFHLlJB1fmVwcYIWAYRAg9gAKDkdq39Jg/kCkzNDKL96kuwrCQmjwCg6nPk
-62Oa5+pZ+FVzpIXmXnGLM1Q=
-=Bonh
------END PGP SIGNATURE-----
