@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.7.ebuild,v 1.3 2007/09/24 08:40:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.7.ebuild,v 1.4 2007/11/05 06:19:09 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -136,9 +136,4 @@ src_install() {
 
 	newinitd "${FILESDIR}/radius.init" radiusd
 	newconfd "${FILESDIR}/radius.conf" radiusd
-}
-
-pkg_preinst() {
-	enewgroup radiusd
-	enewuser radiusd -1 -1 /var/log/radius radiusd
 }

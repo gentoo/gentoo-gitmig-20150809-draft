@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.72 2007/09/24 08:40:38 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.73 2007/11/05 06:19:09 mrness Exp $
+
+  05 Nov 2007; Alin Năstac <mrness@gentoo.org>
+  -files/freeradius-1.1.6-qa-fixes.patch, -files/freeradius-1.1.6-ssl.patch,
+  -files/freeradius-1.1.6-versionless-la-files.patch,
+  -freeradius-1.1.6.ebuild, freeradius-1.1.7.ebuild:
+  Remove old version. Remove useless pkg_preinst function.
 
   24 Sep 2007; Christian Faulhammer <opfer@gentoo.org>
   freeradius-1.1.7.ebuild:
