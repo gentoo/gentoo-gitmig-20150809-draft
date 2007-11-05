@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.4.ebuild,v 1.5 2007/11/04 13:09:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.4.ebuild,v 1.6 2007/11/05 10:25:44 armin76 Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -13,7 +13,7 @@ LICENSE="GPL-2 LGPL-2"
 
 IUSE="berkdb doc firebird freetds ldap mdb mysql oci8 odbc postgres sqlite3 xbase"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 
 RDEPEND=">=dev-libs/glib-2
 	>=dev-libs/libxml2-2
