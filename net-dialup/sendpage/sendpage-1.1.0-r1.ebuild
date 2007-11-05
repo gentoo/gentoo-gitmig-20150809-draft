@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/sendpage-1.1.0-r1.ebuild,v 1.2 2006/11/22 15:03:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/sendpage-1.1.0-r1.ebuild,v 1.3 2007/11/05 06:23:15 mrness Exp $
 
 inherit perl-module eutils
 
@@ -41,8 +41,4 @@ src_install() {
 	newinitd ${FILESDIR}/sendpage.initd sendpage
 	diropts -o sendpage -g sms -m0770
 	keepdir /var/spool/sendpage
-}
-
-pkg_preinst() {
-	pkg_setup
 }
