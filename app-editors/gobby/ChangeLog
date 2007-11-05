@@ -1,9 +1,15 @@
 # ChangeLog for app-editors/gobby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.20 2007/11/04 06:21:13 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.21 2007/11/05 14:58:14 humpback Exp $
+
+  05 Nov 2007; Gustavo Felisberto <humpback@gentoo.org> -gobby-0.3.0.ebuild:
+  Removing older version.
 
   04 Nov 2007; Lars Weiler <pylon@gentoo.org> gobby-0.4.5.ebuild:
   stable ppc, bug #197438
+
+  05 Nov 2007; Gustavo Felisberto <humpback@gentoo.org> -gobby-0.3.0.ebuild:
+  Removing older version
 
   18 Oct 2007; Christoph Mende <angelos@gentoo.org> gobby-0.4.5.ebuild:
   Stable on amd64 wrt bug #196034
