@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/wwwoffle
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.34 2007/11/05 14:01:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.35 2007/11/05 15:15:23 fmccor Exp $
+
+  05 Nov 2007; Ferris McCormick <fmccor@gentoo.org> wwwoffle-2.9c.ebuild:
+  Sparc stable --- Bug #197884 --- comes up and talks.
 
   05 Nov 2007; Markus Meier <maekke@gentoo.org> wwwoffle-2.9c.ebuild:
   x86 stable, bug #197884
