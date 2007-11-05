@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/obby
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.21 2007/11/04 06:19:42 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.22 2007/11/05 17:03:31 humpback Exp $
+
+  05 Nov 2007; Gustavo Felisberto <humpback@gentoo.org>
+  -files/dual_subscribe.patch, -obby-0.3.0-r1.ebuild:
+  Removing older version that is blocking bug #183776
 
   04 Nov 2007; Lars Weiler <pylon@gentoo.org> obby-0.4.4.ebuild:
   stable ppc, bug #197438
