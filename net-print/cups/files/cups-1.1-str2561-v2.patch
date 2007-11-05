@@ -1,0 +1,152 @@
+Index: ipp.c
+===================================================================
+--- cups-1.1.23.orig/cups/ipp.c	(revision 7023)
++++ cups-1.1.23/cups/ipp.c	(working copy)
+@@ -1,5 +1,5 @@
+ /*
+- * "$Id: cups-1.1-str2561-v2.patch,v 1.1 2007/11/05 19:11:14 tgurr Exp $"
++ * "$Id: cups-1.1-str2561-v2.patch,v 1.1 2007/11/05 19:11:14 tgurr Exp $"
+  *
+  *   Internet Printing Protocol support functions for the Common UNIX
+  *   Printing System (CUPS).
+@@ -1119,6 +1119,12 @@
+ 	  {
+ 	    case IPP_TAG_INTEGER :
+ 	    case IPP_TAG_ENUM :
++		if (n != 4)
++		{
++		  DEBUG_printf(("ippReadIO: bad value length %d!\n", n));
++		  return (IPP_ERROR);
++		}
++
+ 	        if ((*cb)(src, buffer, 4) < 4)
+ 		{
+ 	          DEBUG_puts("ippReadIO: Unable to read integer value!");
+@@ -1131,6 +1137,12 @@
+                 value->integer = n;
+ 	        break;
+ 	    case IPP_TAG_BOOLEAN :
++		if (n != 1)
++		{
++		  DEBUG_printf(("ippReadIO: bad value length %d!\n", n));
++		  return (IPP_ERROR);
++		}
++
+ 	        if ((*cb)(src, buffer, 1) < 1)
+ 		{
+ 	          DEBUG_puts("ippReadIO: Unable to read boolean value!");
+@@ -1148,6 +1160,12 @@
+ 	    case IPP_TAG_CHARSET :
+ 	    case IPP_TAG_LANGUAGE :
+ 	    case IPP_TAG_MIMETYPE :
++		if (n >= sizeof(buffer))
++		{
++		  DEBUG_printf(("ippReadIO: bad value length %d!\n", n));
++		  return (IPP_ERROR);
++		}
++
+                 value->string.text = calloc(n + 1, 1);
+ 
+ 	        if ((*cb)(src, (ipp_uchar_t *)value->string.text, n) < n)
+@@ -1160,6 +1178,12 @@
+ 		              value->string.text));
+ 	        break;
+ 	    case IPP_TAG_DATE :
++		if (n != 11)
++		{
++		  DEBUG_printf(("ippReadIO: bad value length %d!\n", n));
++		  return (IPP_ERROR);
++		}
++
+ 	        if ((*cb)(src, value->date, 11) < 11)
+ 		{
+ 	          DEBUG_puts("ippReadIO: Unable to date integer value!");
+@@ -1167,6 +1191,12 @@
+ 		}
+ 	        break;
+ 	    case IPP_TAG_RESOLUTION :
++		if (n != 9)
++		{
++		  DEBUG_printf(("ippReadIO: bad value length %d!\n", n));
++		  return (IPP_ERROR);
++		}
++
+ 	        if ((*cb)(src, buffer, 9) < 9)
+ 		{
+ 	          DEBUG_puts("ippReadIO: Unable to read resolution value!");
+@@ -1183,6 +1213,12 @@
+ 		    (ipp_res_t)buffer[8];
+ 	        break;
+ 	    case IPP_TAG_RANGE :
++		if (n != 8)
++		{
++		  DEBUG_printf(("ippReadIO: bad value length %d!\n", n));
++		  return (IPP_ERROR);
++		}
++
+ 	        if ((*cb)(src, buffer, 8) < 8)
+ 		{
+ 	          DEBUG_puts("ippReadIO: Unable to read range value!");
+@@ -1198,7 +1234,7 @@
+ 	        break;
+ 	    case IPP_TAG_TEXTLANG :
+ 	    case IPP_TAG_NAMELANG :
+-	        if (n > sizeof(buffer) || n < 4)
++	        if (n >= sizeof(buffer) || n < 4)
+ 		{
+ 		  DEBUG_printf(("ippReadIO: bad value length %d!\n", n));
+ 		  return (IPP_ERROR);
+@@ -1224,18 +1260,28 @@
+ 
+ 		n = (bufptr[0] << 8) | bufptr[1];
+ 
++		if ((bufptr + 2 + n) >= (buffer + sizeof(buffer)))
++		{
++		  DEBUG_printf(("ippReadIO: bad value length %d!\n", n));
++		  return (IPP_ERROR);
++		}
++
+                 value->string.charset = calloc(n + 1, 1);
+ 
+-		memcpy(value->string.charset,
+-		       bufptr + 2, n);
++		memcpy(value->string.charset, bufptr + 2, n);
+ 
+                 bufptr += 2 + n;
+ 		n = (bufptr[0] << 8) | bufptr[1];
+ 
++		if ((bufptr + 2 + n) >= (buffer + sizeof(buffer)))
++		{
++		  DEBUG_printf(("ippReadIO: bad value length %d!\n", n));
++		  return (IPP_ERROR);
++		}
++
+                 value->string.text = calloc(n + 1, 1);
+ 
+-		memcpy(value->string.text,
+-		       bufptr + 2, n);
++		memcpy(value->string.text, bufptr + 2, n);
+ 	        break;
+ 
+             case IPP_TAG_BEGIN_COLLECTION :
+@@ -1287,6 +1333,12 @@
+ 		break;
+ 
+             default : /* Other unsupported values */
++		if (n > sizeof(buffer))
++		{
++		  DEBUG_printf(("ippReadIO: bad value length %d!\n", n));
++		  return (IPP_ERROR);
++		}
++
+                 value->unknown.length = n;
+ 	        if (n > 0)
+ 		{
+@@ -2557,5 +2609,5 @@
+ 
+ 
+ /*
+- * End of "$Id: cups-1.1-str2561-v2.patch,v 1.1 2007/11/05 19:11:14 tgurr Exp $".
++ * End of "$Id: cups-1.1-str2561-v2.patch,v 1.1 2007/11/05 19:11:14 tgurr Exp $".
+  */
+

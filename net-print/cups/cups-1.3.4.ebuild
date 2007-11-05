@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.3.ebuild,v 1.1 2007/10/10 21:07:17 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.4.ebuild,v 1.1 2007/11/05 19:11:14 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -13,10 +13,10 @@ SRC_URI="mirror://sourceforge/cups/${MY_P}-source.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="acl bonjour bluetooth dbus java jpeg kerberos ldap nls pam perl php png ppds python samba slp ssl static tiff X"
+IUSE="acl avahi bluetooth dbus java jpeg kerberos ldap nls pam perl php png ppds python samba slp ssl static tiff X"
 
 COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
-	bonjour? ( || ( net-misc/mDNSResponder net-dns/avahi ) )
+	avahi? ( || ( net-misc/mDNSResponder net-dns/avahi ) )
 	dbus? ( sys-apps/dbus )
 	java? ( >=virtual/jre-1.4 )
 	jpeg? ( >=media-libs/jpeg-6b )
@@ -117,7 +117,7 @@ src_compile() {
 		--with-languages=${LINGUAS} \
 		--with-system-groups=lpadmin \
 		$(use_enable acl) \
-		$(use_enable bonjour dnssd) \
+		$(use_enable avahi dnssd) \
 		$(use_enable dbus) \
 		$(use_enable jpeg) \
 		$(use_enable kerberos gssapi) \
