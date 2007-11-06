@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.6.9.ebuild,v 1.1 2007/10/02 13:27:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.6.9.ebuild,v 1.2 2007/11/06 17:23:02 drac Exp $
 
-inherit eutils
+inherit eutils fdo-mime
 
 DESCRIPTION="Hierarchical note manager written using GTK+ and C++"
 HOMEPAGE="http://notecase.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}_src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="gnome"
 
 RDEPEND=">=x11-libs/gtk+-2.6"
@@ -40,4 +40,14 @@ src_unpack() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc readme.txt
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }
