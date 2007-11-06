@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r3.ebuild,v 1.1 2007/10/28 19:03:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r5.ebuild,v 1.1 2007/11/06 23:28:02 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -19,7 +19,8 @@ TEXLIVE_CORE_EXTRA_BUILT_BINARIES="bin-xetex bin-aleph bin-omega"
 
 TEXLIVE_CORE_INCLUDED_TEXMF="${TEXLIVE_BASICBIN_CONTENTS} ${TEXLIVE_FONTBIN_CONTENTS} ${TEXLIVE_BINEXTRA_CONTENTS} ${TEXLIVE_CORE_EXTRA_BUILT_BINARIES}"
 
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	mirror://gentoo/${P}-dviljk-security-fixes.patch.bz2"
 
 for i in ${TEXLIVE_CORE_INCLUDED_TEXMF}; do
 	SRC_URI="${SRC_URI} mirror://gentoo/texlive-module-${i}-${PV}.zip"
@@ -50,7 +51,6 @@ DEPEND="${MODULAR_X_DEPEND}
 	!app-text/xetex
 	!dev-tex/xmltex
 	!dev-tex/vntex
-	!dev-tex/tex4ht
 	sys-apps/ed
 	sys-libs/zlib
 	>=media-libs/libpng-1.2.1
@@ -83,6 +83,10 @@ src_unpack() {
 
 # See http://permalink.gmane.org/gmane.comp.tex.live/14939
 	epatch "${FILESDIR}/${PV}/${P}-dvips_bufferoverflow.patch"
+
+# dviljk buffer overflow issues, bug #198229
+	epatch "${WORKDIR}/${P}-dviljk-security-fixes.patch"
+
 
 	sed -i -e "/mktexlsr/,+3d" -e "s/\(updmap-sys\)/\1 --nohash/" \
 		Makefile.in || die "sed failed"
@@ -133,6 +137,7 @@ src_compile() {
 		--without-pdfopen \
 		--without-detex \
 		--without-ttf2pk \
+		--without-tex4htk \
 		--without-xdvik --without-oxdvik \
 		--enable-shared \
 		$(use_with X x) \
