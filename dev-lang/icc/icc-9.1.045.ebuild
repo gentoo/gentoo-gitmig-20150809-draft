@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.1.045.ebuild,v 1.7 2007/07/02 14:43:12 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.1.045.ebuild,v 1.8 2007/11/06 10:22:56 bicatali Exp $
 
 inherit rpm versionator
 
@@ -13,7 +13,9 @@ HOMEPAGE="http://www.intel.com/software/products/compilers/clin/"
 LICENSE="icc-9.0"
 RDEPEND=">=sys-libs/glibc-2.2.5
 	virtual/libstdc++"
-SLOT="${MAJOR}.${MINOR}"
+# slotting disabled on this version
+#SLOT="${MAJOR}.${MINOR}"
+SLOT="0"
 MMV="${MAJOR}.${MINOR}"
 KEYWORDS="~amd64 ia64 x86"
 IUSE=""

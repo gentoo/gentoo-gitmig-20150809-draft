@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-9.1.040.ebuild,v 1.6 2007/07/02 14:44:01 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-9.1.040.ebuild,v 1.7 2007/11/06 10:24:38 bicatali Exp $
 
 inherit rpm versionator
 
@@ -13,7 +13,8 @@ IUSE=""
 KEYWORDS="~amd64 ia64 x86"
 LICENSE="ifc-9.0"
 RESTRICT="strip fetch"
-SLOT="${MAJOR}.${MINOR}"
+#SLOT="${MAJOR}.${MINOR}"
+SLOT="0"
 MMV="${MAJOR}.${MINOR}"
 
 SRC_URI="l_fc_c_${PV}.tar.gz"
