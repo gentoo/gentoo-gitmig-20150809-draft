@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.40 2007/10/15 15:13:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.41 2007/11/06 16:35:34 armin76 Exp $
+
+  06 Nov 2007; Raúl Porcel <armin76@gentoo.org> xdg-utils-1.0.2.ebuild:
+  sparc stable wrt #193339
 
   15 Oct 2007; Markus Rothe <corsair@gentoo.org> xdg-utils-1.0.2.ebuild:
   Stable on ppc64
