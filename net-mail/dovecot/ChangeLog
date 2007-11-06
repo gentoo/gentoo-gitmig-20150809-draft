@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.125 2007/11/03 00:42:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.126 2007/11/06 19:11:58 armin76 Exp $
+
+  06 Nov 2007; Raúl Porcel <armin76@gentoo.org> dovecot-1.0.5.ebuild:
+  alpha/sparc stable wrt #197388
 
   03 Nov 2007; Lars Weiler <pylon@gentoo.org> dovecot-1.0.5.ebuild:
   stable ppc, bug #197388
