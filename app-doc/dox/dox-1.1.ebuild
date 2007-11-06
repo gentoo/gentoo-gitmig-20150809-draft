@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.18 2007/01/02 15:55:10 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.19 2007/11/06 12:30:06 caleb Exp $
 
 inherit qt3
 
@@ -18,10 +18,11 @@ DEPEND="www-misc/htdig
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	sed -e 's:/opt/www/htdig/bin/htdig:/usr/bin/htdig:g' \
-	-e 's:/opt/www/htdig/bin/htmerge:/usr/bin/htmerge:g' \
-	-e 's:/opt/www/cgi-bin/htsearch:/home/httpd/cgi-bin/htsearch:g' -i configure
+	cd "${S}"
+	sed -i -e 's:/opt/www/htdig/bin/htdig:/usr/bin/htdig:g' \
+		-e 's:/opt/www/htdig/bin/htmerge:/usr/bin/htmerge:g' \
+		-e 's:/opt/www/cgi-bin/htsearch:/usr/bin/htsearch:g' \
+		-e 's:qmake:${QTDIR}/bin/qmake:g' configure || die "sed failed"
 }
 
 src_compile() {
