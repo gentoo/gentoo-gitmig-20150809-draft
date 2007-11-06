@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.56 2007/10/13 10:18:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.57 2007/11/06 14:41:45 nelchael Exp $
+
+  06 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org> resin-3.0.24.ebuild,
+  resin-3.1.2.ebuild:
+  Add missing app-arch/unzip to DEPEND.
 
   13 Oct 2007; Markus Rothe <corsair@gentoo.org> resin-3.0.24.ebuild:
   Stable on ppc64; bug #191740
