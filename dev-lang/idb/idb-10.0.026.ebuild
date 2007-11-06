@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.0.026.ebuild,v 1.2 2007/10/05 06:20:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.0.026.ebuild,v 1.3 2007/11/06 10:15:28 bicatali Exp $
 
 inherit rpm elisp-common
 
@@ -39,7 +39,10 @@ src_unpack() {
 	PACKAGEID=$(basename l_*)
 	mv "${WORKDIR}"/${PACKAGEID} "${S}"
 	cd "${S}"
-	rpm_unpack data/intel*idb*.rpm || die "rpm_unpack failed"
+	for x in data/*idb*.rpm; do
+		einfo "Extracting $(basename ${x})..."
+		rpm_unpack ${x} || die "rpm_unpack ${x} failed"
+	done
 }
 
 src_install() {
