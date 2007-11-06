@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xtla/xtla-1.2.1.ebuild,v 1.1 2007/11/06 22:11:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xtla/xtla-1.2.1.ebuild,v 1.2 2007/11/06 22:14:55 ulm Exp $
 
 inherit elisp
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND="|| ( dev-util/bazaar dev-util/tla )"
+DEPEND="|| ( dev-util/bazaar dev-util/tla )"
+RDEPEND="${DEPEND}"
 
 SITEFILE=50${PN}-gentoo.el
 
