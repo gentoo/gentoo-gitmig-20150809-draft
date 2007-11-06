@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-fortress/enemy-territory-fortress-1.6-r2.ebuild,v 1.3 2007/11/06 21:46:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-fortress/enemy-territory-fortress-1.6-r2.ebuild,v 1.4 2007/11/06 21:49:16 wolf31o2 Exp $
 
 MOD_DESC="a class-based teamplay modification"
 MOD_NAME="Fortress"
@@ -26,7 +26,7 @@ src_unpack() {
 	# has files that we don't want.
 	games-mods_src_unpack
 	rm -rf cfghi.tar.gz cfglow.tar.gz cfgxtrahi.tar.gz enemy-territory.xml \
-		LICENSE search.sh bin
+		LICENSE README search.sh bin
 	cd "${S}"
 	find . -type f -print0 | xargs -0 chmod a-x
 }
