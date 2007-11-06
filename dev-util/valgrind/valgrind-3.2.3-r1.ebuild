@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.2.3-r1.ebuild,v 1.1 2007/10/20 17:44:40 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.2.3-r1.ebuild,v 1.2 2007/11/06 00:57:44 wolf31o2 Exp $
 
 inherit autotools eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.valgrind.org/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="-* amd64 ~ppc ~ppc64 ~x86"
 IUSE="X"
 
 # bug #49147 (bogus stacktrace in gdb with --db-attach=yes) does not seem to be applicable anymore
