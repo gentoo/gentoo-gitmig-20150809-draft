@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.7.8.ebuild,v 1.3 2007/11/06 18:20:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.7.8.ebuild,v 1.4 2007/11/06 21:31:34 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="!app-arch/unrar-gpl"
 
-S="${WORKDIR}"/unrar
+S=${WORKDIR}/unrar
 
 src_compile() {
 	emake \
