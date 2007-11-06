@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.789 2007/11/05 21:50:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.790 2007/11/06 10:50:40 grobian Exp $
+
+  06 Nov 2007; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Change mask entry for monetdb to reflect the current status
 
   05 Nov 2007; Gilles Dartiguelongue <eva@gentoo.org>
   default-bsd/package.use.mask:
