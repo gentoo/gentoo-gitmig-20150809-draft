@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.15-r1.ebuild,v 1.1 2007/11/06 00:42:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.15-r1.ebuild,v 1.2 2007/11/06 07:07:22 mr_bones_ Exp $
 
 inherit linux-mod eutils
 
@@ -46,7 +46,7 @@ src_install() {
 	#newinitd etc/initd/initd.gentoo ietd || die
 	newinitd ${FILESDIR}/ietd-init.d ietd || die "newinitd failed"
 	newconfd ${FILESDIR}/ietd-conf.d ietd || die "newconfd failed"
-	
+
 	# Lock down perms, per bug 198209
 	fperms 0640 /etc/ietd.conf /etc/initiators.{allow,deny}
 
