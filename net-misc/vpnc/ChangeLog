@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.54 2007/11/06 00:47:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.55 2007/11/06 07:20:28 opfer Exp $
+
+  06 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  -files/vpnc-0.4.0-build.patch, -files/vpnc.init, -vpnc-0.4.0.ebuild,
+  -vpnc-0.4.0-r3.ebuild, -vpnc-0.4.0-r4.ebuild, -vpnc-0.5.0.ebuild:
+  clean up
 
   06 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org> vpnc-0.5.1.ebuild:
   Stable on amd64 wrt bug #186577.
