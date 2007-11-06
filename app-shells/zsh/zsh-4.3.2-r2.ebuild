@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.3.2-r2.ebuild,v 1.12 2007/06/14 18:16:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.3.2-r2.ebuild,v 1.13 2007/11/06 00:39:19 wolf31o2 Exp $
 
 inherit eutils multilib
 
@@ -69,10 +69,10 @@ src_compile() {
 		sed -i -e "s/link=no/link=static/g" \
 			-e "s/load=no/load=yes/g" \
 			config.modules || die
-	else
+#	else
 		# avoid linking to libs in /usr/lib, see Bug #27064
-		sed -i -e "/LIBS/s%-lpcre%/usr/$(get_libdir)/libpcre.a%" \
-			Makefile || die
+#		sed -i -e "/LIBS/s%-lpcre%/usr/$(get_libdir)/libpcre.a%" \
+#			Makefile || die
 	fi
 
 	# emake still b0rks
