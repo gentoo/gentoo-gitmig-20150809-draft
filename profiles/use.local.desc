@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3123 2007/11/05 18:59:18 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3124 2007/11/06 10:48:31 grobian Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -307,6 +307,7 @@ app-vim/vcscommand:subversion - Enable subversion support
 app-vim/vcscommand:svk - Enable SVK support
 dev-cpp/sptk:excel - Enable Excel support
 dev-db/libpq:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
+dev-db/monetdb:boehmgc - enables Boehm Garbage Collector for XQuery
 dev-db/mysql-community:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mysql-community:cluster - Add support for NDB clustering.
 dev-db/mysql-community:embedded - Build embedded server (libmysqld)
