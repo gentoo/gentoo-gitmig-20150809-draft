@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/feynmf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.11 2007/11/06 09:13:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.12 2007/11/06 23:33:30 fmccor Exp $
+
+  06 Nov 2007; Ferris McCormick <fmccor@gentoo.org> feynmf-1.08-r2.ebuild:
+  Add sparc, needed for Bug #198289 and works beautifully with texlive.
 
 *feynmf-1.08-r2 (06 Nov 2007)
 
