@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.31 2007/11/06 10:24:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.32 2007/11/06 10:42:02 bicatali Exp $
+
+  06 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  ifc-10.0.026-r1.ebuild:
+  Added a comment if previous version installed.
 
   06 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> ifc-9.1.040.ebuild:
   Disabling slots in 9.*

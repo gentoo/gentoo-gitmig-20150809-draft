@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.0.026-r1.ebuild,v 1.3 2007/10/05 11:38:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.0.026-r1.ebuild,v 1.4 2007/11/06 10:42:02 bicatali Exp $
 
 inherit rpm
 
@@ -28,6 +28,15 @@ IUSE=""
 DEPEND=""
 RDEPEND="virtual/libstdc++
 	amd64? ( app-emulation/emul-linux-x86-compat )"
+
+pkg_setup() {
+	if has_version "<dev-lang/${P}"; then
+		ewarn "${PN}-9.x detected, probably with slotting."
+		ewarn "This version has many bugs and was installed with slotting."
+		ewarn "You might want to do an emerge -C ${PN} first"
+		epause 10
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
