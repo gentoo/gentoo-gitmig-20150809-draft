@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bmon
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.33 2007/09/05 20:20:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.34 2007/11/06 23:22:27 cla Exp $
+
+  06 Nov 2007; Dawid Węgliński <cla@gentoo.org> bmon-2.1.0-r3.ebuild:
+  Stable on x86 (bug #176378)
 
 *bmon-2.1.0-r3 (05 Sep 2007)
 
