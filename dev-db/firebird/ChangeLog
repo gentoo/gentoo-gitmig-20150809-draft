@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.77 2007/11/06 02:15:33 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.78 2007/11/06 04:49:39 wltjr Exp $
+
+*firebird-2.1.0.16780_beta2-r1 (06 Nov 2007)
+*firebird-2.0.3.12981.0-r3 (06 Nov 2007)
+
+  06 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/firebird-2.0.3.12981.0-flags.patch,
+  +files/firebird-2.1.0.16780_beta2-deps-flags-libs-paths.patch,
+  -files/firebird-2.1.0.16780_beta2-deps-libs-paths.patch,
+  +firebird-2.0.3.12981.0-r3.ebuild, -firebird-2.1.0.16780_beta2.ebuild,
+  +firebird-2.1.0.16780_beta2-r1.ebuild:
+  Added patch for custom flags vs default hard coded, thanks to cla there :).
+  Removed past 2.1 beta version.
 
   06 Nov 2007; Dawid Węgliński <cla@gentoo.org>
   firebird-2.0.3.12981.0-r2.ebuild:

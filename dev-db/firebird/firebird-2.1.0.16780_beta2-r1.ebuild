@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.1.0.16780_beta2.ebuild,v 1.1 2007/10/19 18:09:27 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.1.0.16780_beta2-r1.ebuild,v 1.1 2007/11/06 04:49:39 wltjr Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -52,7 +52,7 @@ src_unpack() {
 
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-deps-libs-paths.patch"
+	epatch "${FILESDIR}/${P}-deps-flags-libs-paths.patch"
 
 	find "${S}" -name \*.sh -print0 | xargs -0 chmod +x
 	rm -rf "${S}"/extern/{editline,icu}
