@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/orpheus
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.21 2006/11/29 19:39:59 aballier Exp $
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.22 2007/11/06 21:13:59 drac Exp $
+
+*orpheus-1.6-r1 (06 Nov 2007)
+
+  06 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  +files/101_fix-buffer-overflow.diff, +orpheus-1.6-r1.ebuild:
+  Fix security bug 113683, CVE-2005-3863, a stack-based buffer overflow in
+  kkstrtext.h in ktools library and stabilize amd64.
 
   29 Nov 2006; Alexis Ballier <aballier@gentoo.org> orpheus-1.5.ebuild,
   orpheus-1.6.ebuild:
