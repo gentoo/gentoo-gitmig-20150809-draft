@@ -9,10 +9,11 @@ trap 'exit 0' PIPE
 
 guesscompress() {
 	case "$1" in
-		*.gz)  echo "gunzip -c" ;;
-		*.bz2) echo "bunzip2 -c" ;;
-		*.Z)   echo "compress -d" ;;
-		*)     echo "cat" ;;
+		*.gz)   echo "gunzip -c" ;;
+		*.bz2)  echo "bunzip2 -c" ;;
+		*.lzma) echo "unlzma -c" ;;
+		*.Z)    echo "compress -d" ;;
+		*)      echo "cat" ;;
 	esac
 }
 
@@ -46,6 +47,7 @@ lesspipe() {
 	*.[0-9n]|*.man|\
 	*.[0-9n].bz2|*.man.bz2|\
 	*.[0-9n].gz|*.man.gz|\
+	*.[0-9n].lzma|*.man.lzma|\
 	*.[0-9][a-z].gz|*.[0-9][a-z].gz)
 		local out=$(${DECOMPRESSOR} -- "$1" | file -)
 		case ${out} in
@@ -197,7 +199,7 @@ if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.25 2007/11/06 01:58:44 vapier Exp $"
+	cvsid="$Id: lesspipe.sh,v 1.26 2007/11/06 02:19:29 vapier Exp $"
 	cat <<-EOF
 		$cvsid
 		Copyright 2001-2006 Gentoo Foundation
