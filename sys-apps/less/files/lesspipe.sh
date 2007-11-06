@@ -50,7 +50,7 @@ lesspipe() {
 		local out=$(${DECOMPRESSOR} -- "$1" | file -)
 		case ${out} in
 			*troff*)
-				# Need to make sure we pass path to man or it will try 
+				# Need to make sure we pass path to man or it will try
 				# to locate "$1" in the man search paths
 				if [[ $1 == /* ]] ; then
 					man -- "$1"
@@ -86,10 +86,12 @@ lesspipe() {
 	*.tar)                  tar tvvf "$1" ;;
 	*.tar.bz2|*.tbz2|*.tbz) tar tjvvf "$1" ;;
 	*.tar.gz|*.tgz|*.tar.z) tar tzvvf "$1" ;;
+	*.tar.lzma)             lzma -dc -- "$1" | tar tvvf - ;;
 
 	### Misc archives ###
 	*.bz2)        bzip2 -dc -- "$1" ;;
 	*.gz|*.z)     gzip -dc -- "$1"  ;;
+	*.lzma)       lzma -dc -- "$1" ;;
 	*.zip)        unzip -l "$1" ;;
 	*.rpm)        rpm -qpivl --changelog -- "$1" ;;
 	*.cpi|*.cpio) cpio -itv < "$1" ;;
@@ -195,7 +197,7 @@ if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.24 2007/08/25 15:42:52 vapier Exp $"
+	cvsid="$Id: lesspipe.sh,v 1.25 2007/11/06 01:58:44 vapier Exp $"
 	cat <<-EOF
 		$cvsid
 		Copyright 2001-2006 Gentoo Foundation
