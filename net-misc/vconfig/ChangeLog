@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vconfig
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.25 2007/11/06 00:45:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.26 2007/11/06 07:05:07 pva Exp $
+
+  06 Nov 2007; <pva@gentoo.org> -vconfig-1.8.ebuild, vconfig-1.9.ebuild:
+  Remove note about 2.4 kernel. Clean old.
 
   06 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org> vconfig-1.8.ebuild,
   vconfig-1.9.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.9.ebuild,v 1.8 2007/11/06 00:45:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.9.ebuild,v 1.9 2007/11/06 07:05:07 pva Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -36,7 +36,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "802.1Q VLAN support is now in the linux kernel as of 2.4.14."
 	ewarn "MTU problems exist for many ethernet drivers."
 	ewarn "Reduce the MTU on the interface to 1496 to work around them."
 }
