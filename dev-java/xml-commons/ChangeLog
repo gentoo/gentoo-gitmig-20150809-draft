@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-commons
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/ChangeLog,v 1.19 2007/11/02 03:45:04 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/ChangeLog,v 1.20 2007/11/06 17:40:56 corsair Exp $
+
+  06 Nov 2007; Markus Rothe <corsair@gentoo.org>
+  xml-commons-1.0_beta2-r1.ebuild:
+  Stable on ppc64; bug #197709
 
   02 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   xml-commons-1.0_beta2-r1.ebuild:
