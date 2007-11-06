@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2007-r1.ebuild,v 1.1 2007/11/06 19:37:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2007-r1.ebuild,v 1.2 2007/11/06 20:12:51 aballier Exp $
 
 DESCRIPTION="A complete TeX distribution"
 HOMEPAGE="http://tug.org/texlive/"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="cjk context cyrillic doc extra games graphics humanities music omega
 	png pstricks publishers science xetex xml X"
 
-LANGS="af ar bg bn cs cy da de el en en_GB eo es et fi fr he hi hr hsb hy id
+LANGS="af ar bg bn cs cy da de el en en_GB eo es et fi fr he hi hr hsb hu hy id
 	is it ja ko la ml mn nl no pl pt ro ru sk sl sr sv ta th tr uk vi zh"
 
 for X in ${LANGS}; do

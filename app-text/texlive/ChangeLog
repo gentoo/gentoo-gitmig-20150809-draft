@@ -1,6 +1,11 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.13 2007/11/06 19:37:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.14 2007/11/06 20:12:51 aballier Exp $
+
+  06 Nov 2007; Alexis Ballier <aballier@gentoo.org> texlive-2007.ebuild,
+  texlive-2007-r1.ebuild:
+  Add hu linguas variable to use expand, somehow I missed it when refactoring
+  them; thanks to András <cucaracha@loco.hu>
 
 *texlive-2007-r1 (06 Nov 2007)
 
