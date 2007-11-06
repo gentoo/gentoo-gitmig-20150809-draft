@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.53 2007/10/14 07:42:32 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.54 2007/11/06 00:47:19 wolf31o2 Exp $
+
+  06 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org> vpnc-0.5.1.ebuild:
+  Stable on amd64 wrt bug #186577.
 
   14 Oct 2007; Christian Faulhammer <opfer@gentoo.org> vpnc-0.5.1.ebuild:
   correct a path in a script: /usr/local to /usr, thanks to Thomas Fischer
