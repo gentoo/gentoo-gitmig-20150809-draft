@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r7.ebuild,v 1.2 2007/06/30 01:27:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r7.ebuild,v 1.3 2007/11/06 08:28:37 hollow Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -25,7 +25,7 @@ SRC_URI="
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="cluster controldb debug gencertdaily highvolume mailwrapper qmail-spp rfc2307 rfc822 ssl zlib"
+IUSE="cluster debug gencertdaily highvolume mailwrapper qmail-spp rfc2307 rfc822 ssl zlib"
 RESTRICT="test"
 
 DEPEND="
@@ -287,7 +287,7 @@ src_install() {
 	einfo "Installing OpenLDAP schema ..."
 	insinto /etc/openldap/schema
 	doins qmail.schema
-	use controldb && doins qmail-ldap-control/qmailControl.schema
+	doins qmail-ldap-control/qmailControl.schema
 
 	einfo "Installing some stock configuration files"
 	insinto /var/qmail/control
