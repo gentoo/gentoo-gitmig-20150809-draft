@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r2.ebuild,v 1.3 2007/11/06 02:15:33 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r2.ebuild,v 1.4 2007/11/06 05:58:57 wltjr Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -110,8 +110,7 @@ src_install() {
 	doexe UDF/*.so
 
 	exeinto /usr/share/firebird/intl
-	doexe intl/*.so
-#	newexe intl/libfbintl.so fbintl
+	newexe intl/libfbintl.so fbintl
 
 	insinto /usr/share/firebird/intl
 	doins ../install/misc/fbintl.conf

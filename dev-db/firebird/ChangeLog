@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.78 2007/11/06 04:49:39 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.79 2007/11/06 05:58:57 wltjr Exp $
+
+  06 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  firebird-2.0.3.12981.0-r2.ebuild, firebird-2.0.3.12981.0-r3.ebuild,
+  firebird-2.1.0.16780_beta2-r1.ebuild:
+  Reverted back to newexe vs doexe so libfbintl.so -> fbintl.so as fb expects
+  it. No rev bump. x86 was just stabilized recently, amd64 will be shortly,
+  other ebuilds just added. Thus no rev bump due to all that in brief window
 
 *firebird-2.1.0.16780_beta2-r1 (06 Nov 2007)
 *firebird-2.0.3.12981.0-r3 (06 Nov 2007)
