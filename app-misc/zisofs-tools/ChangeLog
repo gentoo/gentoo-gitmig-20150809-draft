@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/zisofs-tools
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/ChangeLog,v 1.29 2007/08/25 16:45:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/ChangeLog,v 1.30 2007/11/06 19:28:09 armin76 Exp $
+
+  06 Nov 2007; Raúl Porcel <armin76@gentoo.org> zisofs-tools-1.0.6.ebuild:
+  alpha stable
 
   25 Aug 2007; Steve Dibb <beandog@gentoo.org> zisofs-tools-1.0.6.ebuild:
   amd64 stable
