@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.32 2007/11/05 14:07:54 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.33 2007/11/06 10:22:03 centic Exp $
+
+  03 Nov 2007; Dominik Stadler <centic@gentoo.org> firehol-1.250.ebuild,
+  firehol-1.250-r1.ebuild, firehol-1.250-r2.ebuild, firehol-1.256.ebuild,
+  firehol-1.256-r1.ebuild:
+  Bug 198217: fix mistake in quoting
 
 *firehol-1.256-r1 (02 Nov 2007)
 
