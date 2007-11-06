@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gtk-syntax
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.17 2007/10/30 05:14:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.18 2007/11/06 22:27:44 lavajoe Exp $
+
+  06 Nov 2007; Joe Peterson <lavajoe@gentoo.org> gtk-syntax-20060423.ebuild:
+  Add ~x86-fbsd keyword (bug #197349)
 
   30 Oct 2007; Jeroen Roovers <jer@gentoo.org> gtk-syntax-20060423.ebuild:
   Stable for HPPA (bug #197349).
