@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.111 2007/11/05 10:25:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.112 2007/11/06 17:20:38 jer Exp $
+
+  06 Nov 2007; Jeroen Roovers <jer@gentoo.org> libgda-1.2.4.ebuild:
+  Stable for HPPA (bug #197799).
 
   05 Nov 2007; Raúl Porcel <armin76@gentoo.org> libgda-1.2.4.ebuild:
   alpha/ia64/sparc stable wrt #197799
