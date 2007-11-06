@@ -1,6 +1,29 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.42 2007/11/06 23:07:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.43 2007/11/06 23:11:18 wolf31o2 Exp $
+
+  06 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/1.0.2.29634/000_all_initd-location.patch,
+  -files/1.0.2.29634/001_all_fix-permissions.patch,
+  -files/1.0.2.29634/002_all_pagebreak-detection-fix.patch,
+  -files/1.0.2.29634/004_all_do-not-build-modules.patch,
+  -files/1.0.2.29634/007_all_use-modprobe-over-insmod.patch,
+  -files/1.0.2.29634/009_all_init.d-modules-warning.patch,
+  -files/1.0.3.34682/000_all_initd-location.patch,
+  -files/1.0.3.34682/001_all_fix-permissions.patch,
+  -files/1.0.3.34682/002_all_pagebreak-detection-fix.patch,
+  -files/1.0.3.34682/004_all_do-not-build-modules.patch,
+  -files/1.0.3.34682/007_all_use-modprobe-over-insmod.patch,
+  -files/1.0.3.34682/009_all_init.d-modules-warning.patch,
+  -files/2.0.0.45731/000_all_initd-location.patch,
+  -files/2.0.0.45731/001_all_fix-permissions.patch,
+  -files/2.0.0.45731/002_all_pagebreak-detection-fix.patch,
+  -files/2.0.0.45731/004_all_do-not-build-modules.patch,
+  -files/2.0.0.45731/007_all_use-modprobe-over-insmod.patch,
+  -files/2.0.0.45731/009_all_init.d-modules-warning.patch,
+  -vmware-player-1.0.2.29634.ebuild, -vmware-player-1.0.3.34682-r1.ebuild,
+  -vmware-player-2.0.0.45731.ebuild:
+  Cleaning up older versions.
 
   06 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-player-1.0.5.56455.ebuild:
