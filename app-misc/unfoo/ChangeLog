@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/unfoo
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.26 2007/11/02 21:24:56 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.27 2007/11/06 17:48:59 corsair Exp $
+
+  06 Nov 2007; Markus Rothe <corsair@gentoo.org> unfoo-1.0.6.ebuild:
+  Stable on ppc64; bug #197743
 
   02 Nov 2007; Lars Weiler <pylon@gentoo.org> unfoo-1.0.6.ebuild:
   stable ppc, bug #197743
