@@ -40,7 +40,7 @@ pkg_setup() {
 	if use opengl && ! built_with_use media-libs/libsdl opengl ; then
 		eerror "opengl flag set, but libsdl wasn't build with opengl support"
 	fi
-	if ! built_with_use dev-libs/boost threads ; then
+	if ! built_with_use dev-libs/boost --missing=true threads ; then
 		eerror "Please emerge dev-libs/boost with USE=threads"
 	fi
 }
