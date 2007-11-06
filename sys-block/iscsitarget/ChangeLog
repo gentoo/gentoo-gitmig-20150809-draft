@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.6 2007/05/28 07:50:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.7 2007/11/06 00:42:29 robbat2 Exp $
+
+*iscsitarget-0.4.15-r1 (06 Nov 2007)
+
+  06 Nov 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +iscsitarget-0.4.15-r1.ebuild:
+  Lock down perms on ietd.conf and initiation.allow/deny per security bug
+  #198209.
 
 *iscsitarget-0.4.15 (28 May 2007)
 
