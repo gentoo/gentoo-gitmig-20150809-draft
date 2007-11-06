@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.3.ebuild,v 1.8 2007/10/12 14:40:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.10.3.ebuild,v 1.9 2007/11/06 17:08:00 armin76 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -13,7 +13,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2.0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 # gstreamer for audio-inline, when it uses 0.10
 IUSE="bogofilter crypt dbus debug doc hal ipv6 kerberos krb4 ldap mono nntp pda profile spell ssl"
 
