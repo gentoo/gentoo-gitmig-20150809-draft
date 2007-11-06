@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.0.24.ebuild,v 1.5 2007/11/06 14:38:22 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.0.24.ebuild,v 1.6 2007/11/06 14:43:53 nelchael Exp $
 
 inherit eutils apache-module autotools
 
@@ -21,7 +21,7 @@ APACHE2_MOD_DEFINE="CAUCHO"
 
 need_apache2
 
-DEPEND="${DEPENDS}
+DEPEND="${DEPEND}
 	app-arch/unzip"
 
 src_unpack() {
