@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cgkit
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.17 2007/03/28 20:18:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.18 2007/11/06 06:50:59 hawking Exp $
+
+  06 Nov 2007; Ali Polatel <hawking@gentoo.org> -cgkit-1.1.0.ebuild,
+  -cgkit-2.0.0_alpha5.ebuild, -cgkit-2.0.0_alpha6.ebuild,
+  cgkit-2.0.0_alpha7.ebuild:
+  fix quoting. drop old.
 
   28 Mar 2007; Christian Faulhammer <opfer@gentoo.org> cgkit-1.2.0.ebuild:
   force a file to be regenerated, so compilation with GCC 4 succeeds. Fixes

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha7.ebuild,v 1.1 2007/02/15 14:02:08 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha7.ebuild,v 1.2 2007/11/06 06:50:59 hawking Exp $
 
 inherit distutils flag-o-matic
 
@@ -27,7 +27,7 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i -e "s/fPIC/fPIC\",\"${CFLAGS// /\",\"}/" supportlib/SConstruct
 	cp config_template.cfg config.cfg
 	echo 'LIBS += ["GL", "GLU", "glut"]' >> config.cfg
@@ -40,12 +40,12 @@ src_unpack() {
 		echo 'MACROS += [("EXT_HASH", None),("GCC_3_1",None)]' >> config.cfg
 		sed -i -e "s/#include <Math.h>//" wrappers/ogre/OgreCore.h
 	fi
-	sed -i -e "s:INC_DIRS = \[\]:INC_DIRS = \['/usr/include'\]:" ${S}/setup.py
+	sed -i -e "s:INC_DIRS = \[\]:INC_DIRS = \['/usr/include'\]:" "${S}"/setup.py
 }
 
 src_compile() {
-	cd ${S}/supportlib
+	cd "${S}"/supportlib
 	scons ${MAKEOPTS}
-	cd ${S}
+	cd "${S}"
 	distutils_src_compile
 }
