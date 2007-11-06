@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.28 2007/11/05 18:35:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.29 2007/11/06 17:18:12 corsair Exp $
+
+  06 Nov 2007; Markus Rothe <corsair@gentoo.org>
+  ghostscript-gpl-8.60-r1.ebuild:
+  Added ~ppc64; bug #197346
 
   05 Nov 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   ghostscript-gpl-8.60-r1.ebuild:
