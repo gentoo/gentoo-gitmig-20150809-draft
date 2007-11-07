@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.4.ebuild,v 1.8 2007/11/06 19:18:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.4.ebuild,v 1.9 2007/11/07 17:29:19 dang Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -11,7 +11,7 @@ DESCRIPTION="Gnome Database Access Library"
 HOMEPAGE="http://www.gnome-db.org/"
 LICENSE="GPL-2 LGPL-2"
 
-IUSE="berkdb doc firebird freetds ldap mdb mysql oci8 odbc postgres sqlite3 xbase"
+IUSE="berkdb doc freetds ldap mdb mysql oci8 odbc postgres sqlite3 xbase"
 SLOT="1"
 KEYWORDS="alpha ~amd64 hppa ia64 ~ppc ppc64 sparc ~x86 ~x86-fbsd"
 
@@ -26,7 +26,6 @@ RDEPEND=">=dev-libs/glib-2
 	mysql? ( virtual/mysql )
 	postgres? ( >=dev-db/libpq-7.2.1 )
 	freetds? ( >=dev-db/freetds-0.62 )
-	x86? ( firebird? ( dev-db/firebird ) )
 	xbase? ( dev-db/xbase )
 	sqlite3? ( >=dev-db/sqlite-3 )
 	mdb? ( >=app-office/mdbtools-0.5 )
@@ -45,7 +44,6 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
 	G2CONF="$(use_with berkdb bdb /usr)    \
-		$(use_with firebird firebird /usr) \
 		$(use_with freetds tds /usr)       \
 		$(use_with ldap ldap /usr)         \
 		$(use_with mdb mdb /usr)           \
@@ -60,6 +58,8 @@ pkg_setup() {
 
 	# not in portage
 	G2CONF="${G2CONF} --without-msql --without-sybase --without-ibmdb2"
+	# Broken with firebird in portage; fixed in 3.x versions bug #183465
+	G2CONF="${G2CONF} --without-firebird"
 }
 
 src_unpack() {
