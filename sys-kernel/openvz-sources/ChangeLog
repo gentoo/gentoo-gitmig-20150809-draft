@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.71 2007/10/20 15:31:08 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.72 2007/11/07 20:09:32 pva Exp $
+
+*openvz-sources-028.047 (07 Nov 2007)
+
+  07 Nov 2007; <pva@gentoo.org>
+  +files/openvz-sources-028.047-build-with-recent-binutils.patch,
+  +files/openvz-sources-028.047-compilation-vpid.patch,
+  +files/openvz-sources-028.047-cpt-vsyscall-comp.patch,
+  +files/openvz-sources-028.047-grsec-2.1.10-comp-off.patch,
+  +files/openvz-sources-028.047-grsec-2.1.10-tpe-comp.patch, metadata.xml,
+  +openvz-sources-028.047.ebuild:
+  Version bump. Added myself into metadata.
 
 *openvz-sources-028.045 (20 Oct 2007)
 
