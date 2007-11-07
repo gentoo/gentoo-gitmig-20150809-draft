@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.1.ebuild,v 1.3 2007/11/05 12:04:29 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.1.ebuild,v 1.4 2007/11/07 09:52:51 voyageur Exp $
 
 inherit multilib eutils
 
@@ -39,7 +39,7 @@ S=${WORKDIR}/${MY_PN}-${PV}
 export NX_HOME_DIR=/var/lib/nxserver/home
 
 pkg_setup () {
-	enewuser nx -1 /usr/bin/nxserver ${NX_HOME_DIR}
+	enewuser nx -1 -1 ${NX_HOME_DIR}
 }
 
 src_unpack() {
