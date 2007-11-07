@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.45 2007/10/29 14:34:02 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.46 2007/11/07 15:12:24 carlo Exp $
+
+*win32codecs-20071007-r2 (07 Nov 2007)
+
+  07 Nov 2007; Carsten Lohrke <carlo@gentoo.org>
+  +win32codecs-20071007-r2.ebuild:
+  Remove Quicktime support for now, bug #150288.
 
 *win32codecs-20071007-r1 (29 Oct 2007)
 
