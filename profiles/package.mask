@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7880 2007/11/07 19:31:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7881 2007/11/07 21:42:56 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (07 Nov 2007)
+# Masking for testing, since we introduced a fairly invasive patch set and I
+# don't want this hitting user machines just yet.
+~sys-kernel/genkernel-3.4.9_pre8
 
 # Gustavo Felisberto <humpback@gentoo.org> (07 Nov 2007)
 # Beta version
