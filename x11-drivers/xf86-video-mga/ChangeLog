@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-mga
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/ChangeLog,v 1.59 2007/09/11 09:06:58 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/ChangeLog,v 1.60 2007/11/07 09:11:07 dberkholz Exp $
+
+*xf86-video-mga-1.9.100 (07 Nov 2007)
+
+  07 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-video-mga-1.9.100.ebuild:
+  Add a release candidate with RandR-1.2 support. You'll need to use
+  package.keywords with '**' as the keyword to install it.
 
   11 Sep 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-mga-1.4.7.ebuild:
