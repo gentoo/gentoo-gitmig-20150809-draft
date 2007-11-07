@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3125 2007/11/07 09:09:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3126 2007/11/07 10:56:22 aross Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -632,7 +632,13 @@ dev-util/kdevelop:pascal - Support for the Pascal programming language.
 dev-util/kdevelop:perforce - Support for the Perforce version control system.
 dev-util/kdevelop:sql - Support for the Structured Query Language (SQL).
 dev-util/kdevelop:subversion - Support for the Subversion version control system.
-dev-util/mercurial:zsh-completion - Install zsh command completion for hg
+dev-util/mercurial:bugzilla - Support bugzilla integration.
+dev-util/mercurial:cvs - Support conversion of CVS repositories to Mercurial.
+dev-util/mercurial:darcs - Support conversion of Darcs repositories to Mercurial.
+dev-util/mercurial:git - Support conversion of Git repositories to Mercurial.
+dev-util/mercurial:gpg - Support signing with GnuPG.
+dev-util/mercurial:subversion - Support conversion of Subversion repositories to Mercurial.
+dev-util/mercurial:zsh-completion - Install zsh command completion for hg.
 dev-util/monodevelop:aspnet - Enable ASP.NET support
 dev-util/monodevelop:aspnetedit - Enable ASP.NET visual designer support
 dev-util/monodevelop:boo - Enable support for the boo programming language
