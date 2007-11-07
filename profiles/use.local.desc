@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3124 2007/11/06 10:48:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3125 2007/11/07 09:09:31 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1836,6 +1836,7 @@ sci-mathematics/freemat:ffcall - Enables uses of ffcall
 sci-mathematics/freemat:umfpack - Add sparse solving via umfpack
 sci-mathematics/geomview:avg - Enable experimental motion averaging technique
 sci-mathematics/geomview:netpbm - Add NetPBM support for external modules
+sci-mathematics/gretl:sourceview - Enable GtkSourceView support
 sci-mathematics/maxima:auctex - enable auctex in maxima
 sci-mathematics/maxima:clisp - adds clisp support to maxima
 sci-mathematics/maxima:cmucl - adds cmucl (lisp) support to maxima
