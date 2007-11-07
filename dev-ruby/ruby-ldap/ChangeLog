@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-ldap
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.22 2007/11/07 10:02:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.23 2007/11/07 10:32:14 graaff Exp $
+
+*ruby-ldap-0.9.7 (07 Nov 2007)
+
+  07 Nov 2007; Hans de Graaff <graaff@gentoo.org> +ruby-ldap-0.9.7.ebuild:
+  Version bump with fixes for Windows. Also fix QA issues in the ebuild, and
+  restrict testing because tests are interactive and depend on a running LDAP
+  server
 
   07 Nov 2007; Hans de Graaff <graaff@gentoo.org> -ruby-ldap-0.9.2.ebuild,
   -ruby-ldap-0.9.3.ebuild:
