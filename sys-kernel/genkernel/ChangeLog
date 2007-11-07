@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.178 2007/11/02 00:43:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.179 2007/11/07 19:44:52 wolf31o2 Exp $
+
+  07 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/suspend-0.5-Makefile.patch, -genkernel-3.4.9_pre2.ebuild,
+  -genkernel-3.4.9_pre3.ebuild, -genkernel-3.4.9_pre4.ebuild,
+  -genkernel-3.4.9_pre5.ebuild, genkernel-3.4.9_pre6.ebuild:
+  Cleaning up quoting, removing older ebuilds, and marking 3.4.9_pre6 stable.
+  I normally wouldn't stable a pre-release, but we've been using it in release
+  building and it resolves too many user bugs to not go stable.
 
 *genkernel-3.4.9_pre6 (02 Nov 2007)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.9_pre6.ebuild,v 1.1 2007/11/02 00:43:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.9_pre6.ebuild,v 1.2 2007/11/07 19:44:52 wolf31o2 Exp $
 
 inherit bash-completion eutils
 
@@ -31,8 +31,8 @@ SLOT="0"
 RESTRICT=""
 # Please don't touch individual KEYWORDS.  Since this is maintained/tested by
 # Release Engineering, it's easier for us to deal with all arches at once.
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-#KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="ibm selinux"
 
 DEPEND="sys-fs/e2fsprogs
@@ -48,24 +48,24 @@ src_unpack() {
 
 src_install() {
 	dodir /etc
-	cp "${S}"/genkernel.conf ${D}/etc
+	cp "${S}"/genkernel.conf "${D}"/etc
 	# This block updates genkernel.conf
 	sed -i -e "s:VERSION_DMAP:$VERSION_DMAP:" \
 		-e "s:VERSION_DMRAID:$VERSION_DMRAID:" \
 		-e "s:VERSION_E2FSPROGS:$VERSION_E2FSPROGS:" \
 		-e "s:VERSION_LVM2:$VERSION_LVM2:" \
 		-e "s:VERSION_UNIONFS:$VERSION_UNIONFS:" \
-		${D}/etc/genkernel.conf || die "Could not adjust versions"
+		"${D}"/etc/genkernel.conf || die "Could not adjust versions"
 
 	dodir /usr/share/genkernel
 	use ibm && cp "${S}"/ppc64/kernel-2.6-pSeries "${S}"/ppc64/kernel-2.6 || \
 		cp "${S}"/ppc64/kernel-2.6.g5 "${S}"/ppc64/kernel-2.6
-	cp -Rp "${S}"/* ${D}/usr/share/genkernel
+	cp -Rp "${S}"/* "${D}"/usr/share/genkernel
 
 	dodir /usr/bin
 	dosym /usr/share/genkernel/genkernel /usr/bin/genkernel
 
-	rm ${D}/usr/share/genkernel/genkernel.conf
+	rm -f "${D}"/usr/share/genkernel/genkernel.conf
 	dodoc README
 
 	doman genkernel.8
@@ -76,9 +76,9 @@ src_install() {
 	"${DISTDIR}"/device-mapper.${VERSION_DMAP}.tgz \
 	"${DISTDIR}"/unionfs-${VERSION_UNIONFS}.tar.gz \
 	"${DISTDIR}"/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz \
-	${D}/usr/share/genkernel/pkg
+	"${D}"/usr/share/genkernel/pkg
 
-	dobashcompletion ${FILESDIR}/genkernel.bash
+	dobashcompletion "${FILESDIR}"/genkernel.bash
 }
 
 pkg_postinst() {
