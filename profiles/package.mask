@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7876 2007/11/07 17:06:11 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7877 2007/11/07 17:48:55 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Ulrich Mueller <ulm@gentoo.org> (07 Nov 2007)
+# New site-init file, needs testing
+=app-emacs/quack-0.30
 
 # Hanno Boeck <hanno@gentoo.org (11 Nov 2007)
 # Remaining beryl-related packages, beryl has been removed
