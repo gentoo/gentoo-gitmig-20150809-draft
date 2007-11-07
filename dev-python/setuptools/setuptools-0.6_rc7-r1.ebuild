@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6_rc7-r1.ebuild,v 1.1 2007/11/04 08:01:24 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6_rc7-r1.ebuild,v 1.2 2007/11/07 19:16:31 lucass Exp $
+
+NEED_PYTHON=2.4.2
 
 inherit distutils eutils
 
@@ -16,14 +18,14 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.4.2"
-DEPEND="${RDEPEND}"
-
 DOCS="EasyInstall.txt api_tests.txt pkg_resources.txt setuptools.txt README.txt"
 
 src_unpack() {
 	distutils_src_unpack
 	epatch "${FILESDIR}/${P}-noexe.patch"
+
+	# Remove tests that access the network (bugs #198312, #191117)
+	rm setuptools/tests/test_packageindex.py
 }
 
 src_test() {
