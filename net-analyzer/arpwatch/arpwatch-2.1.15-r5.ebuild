@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r4.ebuild,v 1.9 2007/11/07 17:05:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r5.ebuild,v 1.1 2007/11/07 17:05:50 pva Exp $
 
 inherit eutils versionator
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.ee.lbl.gov/${MY_P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc sparc x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="selinux"
 
 DEPEND="virtual/libpcap
@@ -25,6 +25,10 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/${MY_P}
 
+pkg_preinst() {
+	enewuser arpwatch
+}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -33,11 +37,6 @@ src_unpack() {
 	EPATCH_SUFFIX="patch"
 	epatch
 	cp "${WORKDIR}"/arpwatch-patchset/*.8 . || die "Failed to get man-pages from arpwatch-patchset."
-}
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install () {
@@ -58,9 +57,9 @@ src_install () {
 }
 
 pkg_postinst() {
-	elog "For security reasons it is better to run arpwatch as an unprivileged user."
-	elog "If you wish to do so, please, run:"
-	elog "      emerge --config arpwatch"
-	echo
+	# Workaround bug #141619 put this in src_install when bug'll be fixed.
+	chown arpwatch:0 "${ROOT}var/lib/arpwatch"
+
+	elog "For security reasons arpwatch by default runs as an unprivileged user."
 	ewarn "Note: some scripts require snmpwalk utility from net-analyzer/net-snmp"
 }

@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/arpwatch
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.46 2007/06/02 22:37:16 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.47 2007/11/07 17:05:50 pva Exp $
+
+*arpwatch-2.1.15-r5 (07 Nov 2007)
+
+  07 Nov 2007; <pva@gentoo.org> files/arpwatch.confd,
+  arpwatch-2.1.15-r4.ebuild, +arpwatch-2.1.15-r5.ebuild:
+  Fixed bug #198345. Now pkg_config is removed completly and run arpwatch as
+  unprivileged user by default. Thank Richard Hartmann <rick4711 AT
+  myrealbox.com> for report.
 
   02 Jun 2007; Markus Ullmann <jokey@gentoo.org> -files/arpwatch.init-2,
   files/arpwatch.confd, -files/arpwatch.init, +files/arpwatch.initd,
