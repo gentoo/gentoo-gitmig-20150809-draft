@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.791 2007/11/07 09:09:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.792 2007/11/07 09:35:40 ulm Exp $
+
+  07 Nov 2007; Ulrich Mueller <ulm@gentoo.org> updates/4Q-2007:
+  Move app-emacs/circe-cvs to app-emacs/circe.
 
   07 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> use.local.desc:
   Added sourceview local use flag for sci-mathematics/gretl

@@ -15,3 +15,4 @@ move x11-plugins/beryl-dbus x11-plugins/compiz-fusion-plugins-extra
 move x11-misc/beryl-settings-bindings x11-libs/compizconfig-python
 move x11-misc/beryl-settings x11-libs/libcompizconfig
 move x11-misc/beryl-manager x11-apps/ccsm
+move app-emacs/circe-cvs app-emacs/circe
