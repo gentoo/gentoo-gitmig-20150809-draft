@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.19 2007/11/07 08:28:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.20 2007/11/07 08:36:34 dberkholz Exp $
+
+  07 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>; libxcb-1.1.ebuild:
+  Add USE=doc flag to skip the API docs.
 
 *libxcb-1.1 (07 Nov 2007)
 
