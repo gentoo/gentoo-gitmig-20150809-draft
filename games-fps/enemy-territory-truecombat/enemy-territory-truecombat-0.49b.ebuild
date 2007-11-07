@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-truecombat/enemy-territory-truecombat-0.49b.ebuild,v 1.2 2007/08/21 00:54:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-truecombat/enemy-territory-truecombat-0.49b.ebuild,v 1.3 2007/11/07 00:55:04 wolf31o2 Exp $
 
 MY_PV=${PV/./}
 
@@ -19,8 +19,6 @@ SRC_URI="http://dragons-perch.net/tce/tcetest049.zip
 	http://dragons-perch.net/tce/tce${MY_PV}_all_os_fixed.zip"
 
 LICENSE="as-is"
-
-KEYWORDS="-* ~amd64 ~x86"
 
 RDEPEND="games-fps/${GAME}
 	x86? ( =virtual/libstdc++-3.3 )
