@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/quack
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/quack/ChangeLog,v 1.10 2007/02/23 12:08:46 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quack/ChangeLog,v 1.11 2007/11/07 17:49:41 ulm Exp $
+
+*quack-0.30 (07 Nov 2007)
+
+  07 Nov 2007; Ulrich Mueller <ulm@gentoo.org> +files/50quack-gentoo.el,
+  +quack-0.30.ebuild:
+  Version bump. New site-init file using autoload.
 
   23 Feb 2007; Christian Faulhammer <opfer@gentoo.org> -quack-0.28.ebuild:
   clean up
