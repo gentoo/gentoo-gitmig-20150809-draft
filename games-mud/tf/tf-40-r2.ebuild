@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-40-r2.ebuild,v 1.9 2006/10/01 23:49:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-40-r2.ebuild,v 1.10 2007/11/07 17:55:58 mr_bones_ Exp $
 
 inherit eutils
 
@@ -40,5 +40,5 @@ src_install() {
 	insinto /usr/lib/${MY_P}-lib
 	doins CHANGES
 	dodoc CHANGES CREDITS README
-	use doc && dohtml -r ${WORKDIR}/${MY_P}-help
+	use doc && dohtml -r "${WORKDIR}"/${MY_P}-help
 }
