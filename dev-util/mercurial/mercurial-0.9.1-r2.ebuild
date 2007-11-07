@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.9.1-r2.ebuild,v 1.6 2007/07/05 06:12:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.9.1-r2.ebuild,v 1.7 2007/11/07 09:53:49 aross Exp $
 
 inherit bash-completion distutils elisp-common flag-o-matic
 
@@ -33,7 +33,7 @@ src_compile() {
 	distutils_src_compile
 
 	if use emacs; then
-		cd ${S}/contrib
+		cd "${S}"/contrib
 		elisp-compile mercurial.el || die "Emacs modules failed!"
 	fi
 
@@ -47,15 +47,15 @@ src_install() {
 	dobashcompletion contrib/bash_completion ${PN}
 
 	dodoc CONTRIBUTORS PKG-INFO README *.txt
-	cp hgweb*.cgi ${D}/usr/share/doc/${PF}/
+	cp hgweb*.cgi "${D}"/usr/share/doc/${PF}/
 	rm -f contrib/bash_completion
-	cp -r contrib ${D}/usr/share/doc/${PF}/
+	cp -r contrib "${D}"/usr/share/doc/${PF}/
 	doman doc/*.?
 
 	if use emacs; then
 		insinto ${SITELISP}
 		doins contrib/mercurial.el*
-		elisp-site-file-install ${FILESDIR}/70mercurial-gentoo.el
+		elisp-site-file-install "${FILESDIR}"/70mercurial-gentoo.el
 	fi
 }
 
