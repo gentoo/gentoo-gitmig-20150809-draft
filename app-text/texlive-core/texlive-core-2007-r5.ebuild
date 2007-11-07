@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r5.ebuild,v 1.1 2007/11/06 23:28:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r5.ebuild,v 1.2 2007/11/07 19:29:26 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -86,7 +86,6 @@ src_unpack() {
 
 # dviljk buffer overflow issues, bug #198229
 	epatch "${WORKDIR}/${P}-dviljk-security-fixes.patch"
-
 
 	sed -i -e "/mktexlsr/,+3d" -e "s/\(updmap-sys\)/\1 --nohash/" \
 		Makefile.in || die "sed failed"
