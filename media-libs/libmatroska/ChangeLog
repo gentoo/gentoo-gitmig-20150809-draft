@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.79 2007/11/06 19:17:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.80 2007/11/07 17:02:29 jer Exp $
+
+  07 Nov 2007; Jeroen Roovers <jer@gentoo.org> libmatroska-0.7.6.ebuild,
+  libmatroska-0.8.0.ebuild, libmatroska-0.8.1.ebuild:
+  Removing HPPA keywording because nothing HPPA has keyworded depends on this
+  (see bugs #99024 and #197933).
 
   06 Nov 2007; Markus Rothe <corsair@gentoo.org> libmatroska-0.8.1.ebuild:
   Stable on ppc64; bug #197933
