@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/tramp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.57 2007/11/06 08:49:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.58 2007/11/07 11:01:29 armin76 Exp $
+
+  07 Nov 2007; Raúl Porcel <armin76@gentoo.org> tramp-2.1.11-r1.ebuild:
+  alpha/sparc stable wrt #198243
 
   06 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   tramp-2.1.11-r1.ebuild:
