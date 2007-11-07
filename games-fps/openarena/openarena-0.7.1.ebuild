@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.7.1.ebuild,v 1.1 2007/11/07 00:46:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.7.1.ebuild,v 1.2 2007/11/07 00:47:55 wolf31o2 Exp $
 
 inherit versionator games
 
@@ -31,7 +31,7 @@ S=${WORKDIR}/openarena-0.7.0
 dir=${GAMES_PREFIX_OPT}/${PN}
 
 pkg_nofetch() {
-	einfo "Please download ${SRC_URI} from:"
+	einfo "Please download ${A} from:"
 	einfo "  ${HOMEPAGE}"
 	einfo "and move them to ${DISTDIR}"
 	echo
