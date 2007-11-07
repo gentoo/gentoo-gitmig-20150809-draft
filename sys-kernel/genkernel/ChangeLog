@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.180 2007/11/07 21:02:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.181 2007/11/07 21:50:39 wolf31o2 Exp $
+
+*genkernel-3.4.9_pre8 (07 Nov 2007)
+
+  07 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +genkernel-3.4.9_pre8.ebuild:
+  Version bump due to the introduction of a patch from bug #182616 which is
+  rather invasive.
 
 *genkernel-3.4.9_pre7 (07 Nov 2007)
 
