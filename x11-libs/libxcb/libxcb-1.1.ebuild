@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.1.ebuild,v 1.2 2007/11/07 08:36:34 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.1.ebuild,v 1.3 2007/11/07 08:40:01 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -22,3 +22,13 @@ DEPEND="${RDEPEND}
 	~x11-proto/xcb-proto-${PV}"
 
 CONFIGURE_OPTIONS="$(use_enable doc build-docs)"
+
+pkg_postinst() {
+	x-modular_pkg_postinst
+
+	elog "libxcb-1.1 adds the LIBXCB_ALLOW_SLOPPY_LOCK variable to allow"
+	elog "broken applications to keep running instead of being aborted."
+	elog "Set this variable if you need to use broken packages such as Java"
+	elog "(for example, add LIBXCB_ALLOW_SLOPPY_LOCK=1 to /etc/env.d/00local"
+	elog "and run env-update)."
+}
