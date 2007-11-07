@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/feynmf
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.13 2007/11/07 06:53:07 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.14 2007/11/07 15:07:01 armin76 Exp $
+
+  07 Nov 2007; Raúl Porcel <armin76@gentoo.org> feynmf-1.08-r2.ebuild:
+  Add ~alpha/~ia64 wrt #198289
 
   07 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   feynmf-1.08-r2.ebuild:
