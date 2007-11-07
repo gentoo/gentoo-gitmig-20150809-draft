@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.793 2007/11/07 09:49:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.794 2007/11/07 18:21:51 humpback Exp $
+
+  07 Nov 2007; Gustavo Felisberto <humpback@gentoo.org> package.mask:
+  Added >=net-im/skype-2.0.0.13 as it is still beta software.
 
   07 Nov 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Remove app-emacs/junkbust and app-emacs/ses from package.mask since the

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7877 2007/11/07 17:48:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7878 2007/11/07 18:21:51 humpback Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Gustavo Felisberto <humpback@gentoo.org> (07 Nov 2007)
+# Beta version
+>=net-im/skype-2.0.0.13
 
 # Ulrich Mueller <ulm@gentoo.org> (07 Nov 2007)
 # New site-init file, needs testing
