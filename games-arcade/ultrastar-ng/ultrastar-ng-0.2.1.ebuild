@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1.ebuild,v 1.3 2007/11/06 19:12:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1.ebuild,v 1.4 2007/11/07 16:59:52 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -41,7 +41,7 @@ pkg_setup() {
 	if use opengl && ! built_with_use media-libs/libsdl opengl ; then
 		eerror "opengl flag set, but libsdl wasn't build with opengl support"
 	fi
-	if ! built_with_use dev-libs/boost --missing=true threads ; then
+	if ! built_with_use --missing=true threads dev-libs/boost ; then
 		eerror "Please emerge dev-libs/boost with USE=threads"
 	fi
 }
