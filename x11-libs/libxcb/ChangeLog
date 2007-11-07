@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.17 2007/06/24 05:40:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.18 2007/11/07 08:22:45 dberkholz Exp $
+
+  07 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>; libxcb-1.0.ebuild:
+  Update dep to pull in xcb-proto of the same version.
 
   24 Jun 2007; Joshua Kinard <kumba@gentoo.org> libxcb-1.0.ebuild:
   Stable on mips, per #175465.
