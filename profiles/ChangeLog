@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.792 2007/11/07 09:35:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.793 2007/11/07 09:49:50 ulm Exp $
+
+  07 Nov 2007; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Remove app-emacs/junkbust and app-emacs/ses from package.mask since the
+  packages have been removed.
 
   07 Nov 2007; Ulrich Mueller <ulm@gentoo.org> updates/4Q-2007:
   Move app-emacs/circe-cvs to app-emacs/circe.
