@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7879 2007/11/07 19:11:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7880 2007/11/07 19:31:08 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -98,14 +98,7 @@ dev-java/sun-jaf-bin
 
 # Doug Goldstein <cardoe@gentoo.org> (01 Nov 2007)
 # beta NVIDIA drivers, not supported. bug #196679
-=x11-drivers/nvidia-drivers-100.14.23
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (31 Oct 2007)
-# Masking due to bug #197582 that makes genkernel unusable.  I apologize for
-# this and am forcing a downgrade so people have a working genkernel.  I am
-# masking future versions, too.  This way we can test them properly (and easily)
-# without affecting users.  Sorry for any trouble caused.
->=sys-kernel/genkernel-3.4.9_pre4
+~x11-drivers/nvidia-drivers-100.14.23
 
 # Tony Vroon <chainsaw@gentoo.org> (31 Oct 2007)
 # Mask 1.4 for testing and sorting out dependencies.
