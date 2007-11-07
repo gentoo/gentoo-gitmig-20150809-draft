@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/specimen
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.17 2007/09/17 20:52:47 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.18 2007/11/07 17:24:00 armin76 Exp $
+
+  07 Nov 2007; Raúl Porcel <armin76@gentoo.org> specimen-0.5.2_rc3.ebuild:
+  sparc stable wrt #159465, thanks to Alex Maclean for testing
 
   17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing fvdpol from metadata.xml (see #51321 for reference).
