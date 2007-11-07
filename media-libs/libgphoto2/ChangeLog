@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.112 2007/10/03 22:39:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.113 2007/11/07 00:57:06 eva Exp $
+
+  06 Nov 2007; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/libgphoto2-2.3.1-udev-rules-fix.diff,
+  -files/libgphoto2-2.3.1-udev-rules-fix2.diff, -libgphoto2-2.3.1-r2.ebuild,
+  -libgphoto2-2.3.1-r3.ebuild, -libgphoto2-2.3.1-r4.ebuild,
+  libgphoto2-2.4.0-r1.ebuild:
+  prune old versions
+  change location of the fdi file in 2.4.0
 
   03 Oct 2007; Gilles Dartiguelongue <eva@gentoo.org>
   libgphoto2-2.2.1-r1.ebuild:

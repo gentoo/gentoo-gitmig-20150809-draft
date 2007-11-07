@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.0-r1.ebuild,v 1.4 2007/09/27 11:19:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.0-r1.ebuild,v 1.5 2007/11/07 00:57:06 eva Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -129,7 +129,7 @@ src_install() {
 
 	dodoc ChangeLog NEWS* README AUTHORS TESTERS MAINTAINERS HACKING
 
-	HAL_FDI="/usr/share/hal/fdi/information/10freedesktop/10-camera-libgphoto2.fdi"
+	HAL_FDI="/usr/share/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi"
 	UDEV_RULES="/etc/udev/rules.d/70-libgphoto2.rules"
 
 	if [ -x "${D}"/usr/$(get_libdir)/libgphoto2/print-camera-list ]; then
