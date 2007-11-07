@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lzma-utils
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma-utils/ChangeLog,v 1.3 2007/11/07 14:49:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma-utils/ChangeLog,v 1.4 2007/11/07 23:24:53 cla Exp $
+
+  07 Nov 2007; Dawid Węgliński <cla@gentoo.org>
+  lzma-utils-4.32.0_beta5.ebuild:
+  Stable on x86 (bug #198314)
 
   07 Nov 2007; Jeroen Roovers <jer@gentoo.org>
   lzma-utils-4.32.0_beta5.ebuild, lzma-utils-4.32.2.ebuild:
