@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0-r2.ebuild,v 1.1 2007/10/13 20:52:35 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0-r2.ebuild,v 1.2 2007/11/07 08:52:11 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -263,6 +263,7 @@ PDEPEND="
 LICENSE="${LICENSE} MIT"
 
 PATCHES="
+	${FILESDIR}/${PV}-fix-xkb-openoffice-hangs.patch
 	${FILESDIR}/${PV}-fix-dual-head-screen-resolutions.patch
 	${FILESDIR}/${PV}-fix-randr-resizing.patch
 	${FILESDIR}/${PV}-fix-xephyr-amd64-segfault.patch
@@ -354,6 +355,12 @@ src_unpack() {
 		fi
 	fi
 	x-modular_reconf_source
+	#do not install xprint's Xsession.d files, we'll do it later
+	if use xprint; then
+		sed -e "s:install-data-am\: install-dist_xpcDATA:install-data-am\::g" \
+		    -i "${S}"/hw/xprint/etc/Xsession.d/Makefile.in \
+		    || die "sed of Xsession.d makefile failed"
+	fi
 }
 
 src_install() {

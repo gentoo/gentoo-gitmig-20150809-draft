@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.292 2007/11/05 18:42:34 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.293 2007/11/07 08:52:11 dberkholz Exp $
+
+  07 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.3.0.0-fix-xkb-openoffice-hangs.patch,
+  xorg-server-1.3.0.0-r2.ebuild:
+  (#197104) Fix a 100% CPU hang on openoffice. (#196019) Don't create a
+  redundant file with USE=xprint.
 
   05 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.2.0-r3.ebuild, xorg-server-1.3.0.0.ebuild,
