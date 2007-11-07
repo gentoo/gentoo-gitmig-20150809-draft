@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.794 2007/11/07 18:21:51 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.795 2007/11/07 19:11:23 swegener Exp $
+
+  07 Nov 2007; Sven Wegener <swegener@gentoo.org> package.mask:
+  Remove the old mysql-administrator and mysql-query-browser mask.
 
   07 Nov 2007; Gustavo Felisberto <humpback@gentoo.org> package.mask:
   Added >=net-im/skype-2.0.0.13 as it is still beta software.
