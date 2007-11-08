@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.4.ebuild,v 1.2 2007/11/05 23:08:54 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.4-r1.ebuild,v 1.1 2007/11/08 23:15:12 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -13,10 +13,10 @@ SRC_URI="mirror://sourceforge/cups/${MY_P}-source.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="acl avahi dbus java jpeg kerberos ldap nls pam perl php png ppds python samba slp ssl static tiff X"
+IUSE="acl avahi dbus java jpeg kerberos ldap nls pam perl php png ppds python samba slp ssl static tiff X zeroconf"
 
 COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
-	avahi? ( || ( net-misc/mDNSResponder net-dns/avahi ) )
+	avahi? ( net-dns/avahi )
 	dbus? ( sys-apps/dbus )
 	java? ( >=virtual/jre-1.4 )
 	jpeg? ( >=media-libs/jpeg-6b )
@@ -30,6 +30,7 @@ COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
 	slp? ( >=net-libs/openslp-1.0.4 )
 	ssl? ( net-libs/gnutls )
 	tiff? ( >=media-libs/tiff-3.5.5 )
+	zeroconf? ( !avahi? ( net-misc/mDNSResponder ) )
 	app-text/libpaper
 	dev-libs/libgcrypt"
 
@@ -75,6 +76,14 @@ for X in ${LANGS} ; do
 done
 
 pkg_setup() {
+	if use avahi && ! built_with_use net-dns/avahi mdnsresponder-compat ; then
+		echo
+		eerror "In order to have cups working with avahi zeroconf support, you need"
+		eerror "to have net-dns/avahi emerged with 'mdnsresponder-compat' in your USE"
+		eerror "flag. Please add that flag, re-emerge avahi, and then emerge cups again."
+		die "net-dns/avahi is missing the mdnsresponder-compat feature."
+	fi
+
 	enewgroup lp
 	enewuser lp -1 -1 -1 lp
 
@@ -107,7 +116,17 @@ src_compile() {
 
 	export DSOFLAGS="${LDFLAGS}"
 	cd "${S}"
+
+	local myconf
+
+	if use avahi || use zeroconf ; then
+		myconf="${myconf} --enable-dnssd"
+	else
+		myconf="${myconf} --disable-dnssd"
+	fi
+
 	econf \
+		--libdir=/usr/$(get_libdir) \
 		--localstatedir=/var \
 		--with-bindnow=$(bindnow-flags) \
 		--with-cups-user=lp \
@@ -116,7 +135,6 @@ src_compile() {
 		--with-languages=${LINGUAS} \
 		--with-system-groups=lpadmin \
 		$(use_enable acl) \
-		$(use_enable avahi dnssd) \
 		$(use_enable dbus) \
 		$(use_enable jpeg) \
 		$(use_enable kerberos gssapi) \
@@ -136,6 +154,7 @@ src_compile() {
 		--enable-libpaper \
 		--enable-threads \
 		--disable-pdftops \
+		${myconf} \
 		|| die "econf failed"
 
 	# Install in /usr/libexec always, instead of using /usr/lib/cups, as that
@@ -153,8 +172,15 @@ src_install() {
 
 	# clean out cups init scripts
 	rm -rf "${D}"/etc/{init.d/cups,rc*,pam.d/cups}
-	# install our init scripts
-	newinitd "${FILESDIR}"/cupsd.init cupsd
+
+	# install our init script
+	local neededservices
+	use avahi && neededservices="$neededservices avahi-daemon"
+	use dbus && neededservices="$neededservices dbus"
+	use zeroconf && ! use avahi && neededservices="$neededservices mDNSResponderPosix"
+	[[ -n ${neededservices} ]] && sed -e "s/@neededservices@/need$neededservices/" "${FILESDIR}/cupsd.init.d" > "${T}/cupsd"
+	doinitd "${T}/cupsd"
+
 	# install our pam script
 	pamd_mimic_system cups auth account
 
