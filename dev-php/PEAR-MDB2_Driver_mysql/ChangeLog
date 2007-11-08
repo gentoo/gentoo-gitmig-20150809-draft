@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-MDB2_Driver_mysql
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_mysql/ChangeLog,v 1.14 2007/11/08 16:28:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_mysql/ChangeLog,v 1.15 2007/11/08 20:15:16 corsair Exp $
+
+  08 Nov 2007; Markus Rothe <corsair@gentoo.org>
+  PEAR-MDB2_Driver_mysql-1.5.0_alpha1.ebuild:
+  Stable on ppc64; bug #
 
 *PEAR-MDB2_Driver_mysql-1.5.0_alpha1 (08 Nov 2007)
 
