@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.34 2007/11/07 18:53:40 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.35 2007/11/08 16:24:24 bicatali Exp $
+
+  08 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  ifc-10.0.026-r1.ebuild:
+  removed bash specific 'export -n' in script execs.
 
   07 Nov 2007; Christoph Mende <angelos@gentoo.org> ifc-10.0.026-r1.ebuild:
   Stable on amd64 wrt bug #197977

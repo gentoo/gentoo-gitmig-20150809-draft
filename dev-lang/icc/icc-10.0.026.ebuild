@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.0.026.ebuild,v 1.6 2007/11/08 15:38:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.0.026.ebuild,v 1.7 2007/11/08 16:25:56 bicatali Exp $
 
 inherit rpm
 
@@ -58,8 +58,9 @@ src_unpack() {
 	einfo "Fixing paths and tagging"
 	cd "${S}"/${INSTALL_DIR}/bin
 	sed -e "s|<INSTALLDIR>|${INSTALL_DIR}|g" \
+		-e 's|export -n IA32ROOT;||g' \
 		-i ${PEXEC} *sh \
-		|| die "sed fixing path failed"
+		|| die "sed fixing shells and paths failed"
 
 	cd "${S}"/${INSTALL_DIR}/doc
 	sed -e "s|\<installpackageid\>|${PACKAGEID}|g" \
