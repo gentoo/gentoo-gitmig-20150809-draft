@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.51 2007/10/26 13:42:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.52 2007/11/08 16:34:39 bicatali Exp $
+
+  08 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  lapack-atlas-3.8.0.ebuild:
+  added a symlink to clapack.h
 
   19 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org>
   lapack-atlas-3.8.0.ebuild:
