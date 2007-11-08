@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.427 2007/07/28 18:03:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.428 2007/11/08 13:08:54 armin76 Exp $
+
+  08 Nov 2007; Raúl Porcel <armin76@gentoo.org> mysql-5.0.44-r1.ebuild:
+  alpha/ia64/x86 stable
 
   28 Jul 2007; Steve Dibb <beandog@gentoo.org> mysql-5.0.44-r1.ebuild:
   amd64 stable, security bug 185333
