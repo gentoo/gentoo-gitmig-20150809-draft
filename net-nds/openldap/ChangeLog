@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.288 2007/11/02 06:48:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.289 2007/11/08 06:14:35 jokey Exp $
+
+*openldap-2.3.39-r1 (08 Nov 2007)
+
+  08 Nov 2007; Markus Ullmann <jokey@gentoo.org> +openldap-2.3.39-r1.ebuild:
+  Another dep restriction and enable syncprov overlay by default without
+  overlays useflag as that is widely used and causes confusion if compiled as
+  module
 
   02 Nov 2007; Mike Frysinger <vapier@gentoo.org> openldap-2.3.39.ebuild:
   Add a blocker to db-4.6 since it was unmasked for a little while and can
