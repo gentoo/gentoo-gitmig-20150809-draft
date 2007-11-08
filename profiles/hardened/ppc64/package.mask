@@ -1,6 +1,8 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc64/package.mask,v 1.2 2007/07/20 12:09:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc64/package.mask,v 1.3 2007/11/08 20:09:34 mr_bones_ Exp $
 
+# needs newer masked gcc
 =sys-libs/glibc-2.5*
 =sys-libs/glibc-2.6*
+=sys-libs/glibc-2.7*
