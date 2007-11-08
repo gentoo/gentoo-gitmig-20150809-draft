@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.49 2007/11/08 20:31:09 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.50 2007/11/08 21:19:29 armin76 Exp $
+
+  08 Nov 2007; Raúl Porcel <armin76@gentoo.org> nss_ldap-258.ebuild:
+  alpha/sparc stable wrt security #198390
 
   08 Nov 2007; Dawid Węgliński <cla@gentoo.org> nss_ldap-258.ebuild:
   Stable on x86 (bug #198390)
