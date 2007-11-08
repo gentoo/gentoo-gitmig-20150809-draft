@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/archivemail
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/ChangeLog,v 1.9 2007/07/05 01:15:28 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/ChangeLog,v 1.10 2007/11/08 17:55:56 g2boojum Exp $
+
+  08 Nov 2007; Grant Goodyear <g2boojum@gentoo.org> metadata.xml:
+  -m removed myself as maintainer
 
   05 Jul 2007; Ali Polatel <hawking@gentoo.org> archivemail-0.6.1-r1.ebuild:
   use DOCS, mydoc is deprecated. Removed default doc names from DOCS
