@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.69 2007/11/07 14:53:46 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.70 2007/11/08 23:07:44 ferdy Exp $
+
+  08 Nov 2007; Fernando J. Pereda <ferdy@gentoo.org>
+  paludis-0.26.0_alpha3.ebuild:
+  Filter -O3 (fixes bug #198487)
 
   07 Nov 2007; Piotr Jaroszyński <peper@gentoo.org>
   paludis-0.26.0_alpha3.ebuild:

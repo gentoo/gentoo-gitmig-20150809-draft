@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_alpha3.ebuild,v 1.3 2007/11/07 14:53:46 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.26.0_alpha3.ebuild,v 1.4 2007/11/08 23:07:44 ferdy Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -47,6 +47,7 @@ PROVIDE="virtual/portage"
 
 pkg_setup() {
 	replace-flags -Os -O2
+	replace-flags -O3 -O2
 
 	enewgroup "paludisbuild"
 	enewuser "paludisbuild" "-1" "-1" "/var/tmp/paludis" "paludisbuild"
