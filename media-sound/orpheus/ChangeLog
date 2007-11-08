@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/orpheus
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.23 2007/11/07 06:49:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.24 2007/11/08 17:00:22 armin76 Exp $
+
+  08 Nov 2007; Raúl Porcel <armin76@gentoo.org> orpheus-1.6-r1.ebuild:
+  alpha/sparc stable wrt security #113683, thanks to Tobias Klausmann and Alex
+  Maclean for testing
 
   07 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   orpheus-1.6-r1.ebuild:
