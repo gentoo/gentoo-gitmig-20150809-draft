@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.799 2007/11/08 13:07:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.800 2007/11/08 23:02:57 tgurr Exp $
+
+  08 Nov 2007; Timo Gurr <tgurr@gentoo.org> use.local.desc:
+  Add cups-1.3.4 zeroconf local USE flag.
 
   08 Nov 2007; Alin Năstac <mrness@gentoo.org> package.mask:
   Mask net-dialup/ltmodem versions with kernel 2.4 support.
