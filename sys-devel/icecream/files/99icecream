@@ -1,2 +1,0 @@
-KDEDIRS="/opt/icecream:${KDEDIRS}"
-#PATH="/opt/icecream/bin:${PATH}"

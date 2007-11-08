@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/icecream
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.11 2007/06/27 08:00:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.12 2007/11/08 00:32:54 dberkholz Exp $
+
+  08 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/icecream-0.6-20050413-add-disable-option.patch,
+  -files/icecream-0.6-20050413-gcc41.patch,
+  -files/icecream-0.6-20050413-dont-create-symlinks.patch,
+  -files/icecream-0.6-20050413-no-kde.patch, -files/99icecream,
+  -files/icecream_disable.patch, -files/icecreamdaemon,
+  -files/icecreamscheduler, -icecream-0.6.20040829.ebuild,
+  -icecream-0.6.20050413.ebuild, -icecream-0.6.20050413-r1.ebuild:
+  Drop old ebuilds.
 
   27 Jun 2007; Luca Barbato <lu_zero@gentoo.org> icecream-0.7.14.ebuild:
   Marked ~ppc
