@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.46 2007/11/07 15:12:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.47 2007/11/08 07:57:15 opfer Exp $
+
+  08 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
+  win32codecs-20071007-r2.ebuild:
+  stable x86, security bug 150288
 
 *win32codecs-20071007-r2 (07 Nov 2007)
 
