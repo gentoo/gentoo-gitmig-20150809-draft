@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-2.1.ebuild,v 1.3 2007/11/07 17:46:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-2.1.ebuild,v 1.4 2007/11/08 15:04:10 hawking Exp $
 
 inherit eutils toolchain-funcs python multilib
 
@@ -29,26 +29,26 @@ src_unpack() {
 	unpack ${A}
 
 	if use qt4; then
-		cd ${S}/Qt4
+		cd "${S}"/Qt4
 		sed -i -e "s:DESTDIR = \$(QTDIR)/lib:DESTDIR = lib:" qscintilla.pro
 		sed -i -e "s:DESTDIR = \$\$\[QT_INSTALL_LIBS\]:DESTDIR = lib:" qscintilla.pro
 		echo -e "\nQMAKE_CFLAGS_RELEASE=${CFLAGS} -w\nQMAKE_CXXFLAGS_RELEASE=${CXXFLAGS} -w\nQMAKE_LFLAGS_RELEASE=${LDFLAGS}" >> qscintilla.pro
 		/usr/bin/qmake -o Makefile qscintilla.pro
 
-		cd ${S}/designer-Qt4
-		epatch ${FILESDIR}/${P}-qt4.patch
+		cd "${S}"/designer-Qt4
+		epatch "${FILESDIR}/${P}-qt4.patch"
 
 		echo -e "\nQMAKE_CFLAGS_RELEASE=${CFLAGS} -w\nQMAKE_CXXFLAGS_RELEASE=${CXXFLAGS} -w\nQMAKE_LFLAGS_RELEASE=${LDFLAGS}" >> designer.pro
 		/usr/bin/qmake -o Makefile designer.pro
 	else
-		cd ${S}/Qt3
+		cd "${S}"/Qt3
 		sed -i -e "s:DESTDIR = \$(QTDIR)/lib:DESTDIR = lib:" qscintilla.pro
 		sed -i -e "s:DESTDIR = \$\$\[QT_INSTALL_LIBS\]:DESTDIR = lib:" qscintilla.pro
 		echo -e "\nQMAKE_CFLAGS_RELEASE=${CFLAGS} -w\nQMAKE_CXXFLAGS_RELEASE=${CXXFLAGS} -w\nQMAKE_LFLAGS_RELEASE=${LDFLAGS}" >> qscintilla.pro
 		${QTDIR}/bin/qmake -o Makefile qscintilla.pro
 
-		cd ${S}/designer-Qt3
-		epatch ${FILESDIR}/${P}-qt.patch
+		cd "${S}"/designer-Qt3
+		epatch "${FILESDIR}/${P}-qt.patch"
 
 		sed -i -e "s:DESTDIR = \$(QTDIR)/plugins/designer:DESTDIR = .:" designer.pro
 		echo -e "\nQMAKE_CFLAGS_RELEASE=${CFLAGS} -w\nQMAKE_CXXFLAGS_RELEASE=${CXXFLAGS} -w\nQMAKE_LFLAGS_RELEASE=${LDFLAGS}" >> designer.pro
@@ -58,18 +58,18 @@ src_unpack() {
 
 src_compile() {
 	if use qt4; then
-		cd ${S}/Qt4
+		cd "${S}"/Qt4
 	else
-		cd ${S}/Qt3
+		cd "${S}"/Qt3
 	fi
 	make all staticlib CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINK="$(tc-getCXX)" || die "make failed"
 
 	if use qt4; then
-		cd ${S}/designer-Qt4
-		make DESTDIR=${D}/usr/lib/qt4/plugins/designer || die "make failed"
+		cd "${S}"/designer-Qt4
+		make DESTDIR="${D}"/usr/lib/qt4/plugins/designer || die "make failed"
 		dodir /usr/lib/qt4/plugins/designer
 		if use python; then
-			cd ${S}/Python
+			cd "${S}"/Python
 			python_version
 			einfo "Creating bindings for python-${PYVER} ..."
 			local myconf="-d \
@@ -83,11 +83,11 @@ src_compile() {
 			emake || die "emake failed"
 		fi
 	else
-		cd ${S}/designer-Qt3
-		make DESTDIR=${D}/${QTDIR}/plugins/designer || die "make failed"
+		cd "${S}"/designer-Qt3
+		make DESTDIR="${D}/${QTDIR}/plugins/designer" || die "make failed"
 		dodir ${QTDIR}/plugins/designer
 		if use python; then
-			cd ${S}/Python
+			cd "${S}"/Python
 			python_version
 			einfo "Creating bindings for python-${PYVER} ..."
 			local myconf="-d \
@@ -108,9 +108,9 @@ src_install() {
 	dodoc ChangeLog LICENSE NEWS README*
 	dodir /usr/{include,$(get_libdir),share/qscintilla/translations}
 	if use qt4; then
-		cd ${S}/Qt4
+		cd "${S}"/Qt4
 	else
-		cd ${S}/Qt3
+		cd "${S}"/Qt3
 	fi
 	cp -r Qsci "${D}/usr/include"
 	#cp qextscintilla*.h "${D}/usr/include"
@@ -129,21 +129,21 @@ src_install() {
 		done
 	fi
 	if use doc ; then
-		dohtml ${S}/doc/html/*
+		dohtml "${S}"/doc/html/*
 		insinto /usr/share/doc/${PF}/Scintilla
-		doins ${S}/doc/Scintilla/*
+		doins "${S}"/doc/Scintilla/*
 	fi
 	if use qt4; then
 		insinto /usr/$(get_libdir)/qt4/plugins/
 		insopts  -m0755
-		doins ${S}/designer-Qt4/libqscintillaplugin.so
+		doins "${S}"/designer-Qt4/libqscintillaplugin.so
 	else
 		insinto ${QTDIR}/plugins/designer
 		insopts  -m0755
-		doins ${S}/designer-Qt3/libqscintillaplugin.so
+		doins "${S}"/designer-Qt3/libqscintillaplugin.so
 	fi
 	if use python; then
-		cd ${S}/Python
-		make DESTDIR=${D} install || die "install failed"
+		cd "${S}"/Python
+		make DESTDIR="${D}" install || die "install failed"
 	fi
 }
