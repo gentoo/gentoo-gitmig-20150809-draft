@@ -1,6 +1,16 @@
 # ChangeLog for dev-php/PEAR-MDB2
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2/ChangeLog,v 1.16 2007/10/22 16:29:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2/ChangeLog,v 1.17 2007/11/08 16:38:34 jokey Exp $
+
+*PEAR-MDB2-2.5.0_alpha1 (08 Nov 2007)
+
+  08 Nov 2007; Markus Ullmann <jokey@gentoo.org>
+  +PEAR-MDB2-2.5.0_alpha1.ebuild:
+  Version bump from project overlay
+
+  08 Nov 2007; Jakub Moc <jakub@gentoo.org>
+  +PEAR-MDB2-2.5.0_alpha1.ebuild:
+  Version bump, fixes Bug 198446
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org> PEAR-MDB2-2.4.1.ebuild:
   ia64 stable wrt #192247
