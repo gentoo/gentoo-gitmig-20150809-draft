@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-dxr3
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.7 2007/05/12 15:13:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.8 2007/11/08 18:04:39 drac Exp $
+
+  08 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  +files/vdr-dxr3-0.2.7-ffmpeg.patch, vdr-dxr3-0.2.7.ebuild:
+  Fix building with current ffmpeg, was trying to use function from internal
+  headers. Also keyword ~amd64.
 
 *vdr-dxr3-0.2.7 (12 May 2007)
 
