@@ -1,12 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-3.2.0.ebuild,v 1.3 2007/04/29 18:42:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-3.9.2.ebuild,v 1.1 2007/11/08 09:27:39 bicatali Exp $
 
 DESCRIPTION="Command line utilities for operating on netCDF files"
 SRC_URI="http://dust.ess.uci.edu/nco/src/${P}.tar.gz"
 HOMEPAGE="http://nco.sourceforge.net/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
 
@@ -18,7 +18,7 @@ RDEPEND="sci-libs/netcdf
 
 DEPEND="${RDEPEND}
 	ncap2? ( !mpi? ( dev-java/antlr ) )
-	doc? ( virtual/tetex )"
+	doc? ( virtual/latex-base )"
 
 pkg_setup() {
 	if use mpi && use ncap2; then
@@ -30,22 +30,17 @@ pkg_setup() {
 }
 
 src_compile() {
-	 # force disabling experimental and not implemented features
+	# let more experimental options enabling via EXTRA_ECONF
 	econf \
-		--disable-dap \
-		--disable-netcdf4 \
-		--disable-i18n  \
-		--enable-regex \
-		--enable-nco_cplusplus \
 		$(use_enable ncap2 ncoxx) \
 		$(use_enable udunits) \
 		$(use_enable mpi) \
 		|| die "econf failed"
 	emake || die "emake failed"
-	cd "${S}"/doc
-	make clean info
+	cd doc
+	emake clean info
 	if use doc; then
-		make html pdf || die "make doc failed"
+		emake html pdf || die "emake doc failed"
 	fi
 }
 
@@ -56,8 +51,8 @@ src_install() {
 		|| die "dodoc failed"
 	doinfo *.info* || die "doinfo failed"
 	if use doc; then
-		dohtml nco.html/*
+		dohtml nco.html/* || die "dohtml failed"
 		insinto /usr/share/doc/${PF}
-		doins nco.pdf
+		doins nco.pdf || die "pdf install failed"
 	fi
 }
