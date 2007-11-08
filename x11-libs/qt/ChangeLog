@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.492 2007/10/23 12:41:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.493 2007/11/08 15:17:30 fmccor Exp $
+
+  08 Nov 2007; Ferris McCormick <fmccor@gentoo.org> qt-4.3.2.ebuild:
+  Sparc stable --- Bug #198454 --- Good for me since 10 Oct., designer works, ...
 
   23 Oct 2007; Caleb Tennis <caleb@gentoo.org> -files/qt-4.1.4-sparc.patch,
   -files/qt4-parisc-linux.diff, -files/utf8-bug-qt4-2.diff,
