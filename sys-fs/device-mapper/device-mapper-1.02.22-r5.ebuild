@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.22-r5.ebuild,v 1.8 2007/11/06 17:13:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.22-r5.ebuild,v 1.9 2007/11/08 09:10:31 robbat2 Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="selinux"
 
 DEPEND="selinux? ( sys-libs/libselinux )"
-RDEPEND=">=sys-fs/udev-115-r1
+RDEPEND="!<sys-fs/udev-115-r1
 		${DEPEND}"
 
 S="${WORKDIR}/${PN}.${PV}"

@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.100 2007/11/06 17:13:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.101 2007/11/08 09:10:31 robbat2 Exp $
+
+  08 Nov 2007; Robin H. Johnson <robbat2@gentoo.org>
+  device-mapper-1.02.22-r5.ebuild:
+  Block udev versions older than 115-r1 because the rules will conflict with
+  the rules installed by this version, and this interferes with uses of a
+  static /dev per bug #198144
 
   06 Nov 2007; Markus Rothe <corsair@gentoo.org>
   device-mapper-1.02.22-r5.ebuild:
