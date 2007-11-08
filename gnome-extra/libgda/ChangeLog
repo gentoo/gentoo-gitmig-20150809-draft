@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.114 2007/11/07 17:29:19 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.115 2007/11/08 08:57:42 opfer Exp $
+
+  08 Nov 2007; Christian Faulhammer <opfer@gentoo.org> libgda-1.2.4.ebuild:
+  stable x86, bug 197799
 
   07 Nov 2007; Daniel Gryniewicz <dang@gentoo.org> libgda-1.2.4.ebuild:
   Remove firebird support from 1.2.4; bug #183465
