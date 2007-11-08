@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.154 2007/09/07 03:57:29 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.155 2007/11/08 12:51:11 mjolnir Exp $
+
+  08 Nov 2007; Martin Jackson <mjolnir@gentoo.org>
+  +files/net-snmp-maxreps.patch, +net-snmp-5.4-r1.ebuild:
+  Add maxreps patch from upstream, to fix #198346
+
+*net-snmp-5.4-r1 (07 Nov 2007)
 
   07 Sep 2007; Martin Jackson <mjolnir@gentoo.org> net-snmp-5.4.1-r1.ebuild:
   Add dep on setuptools to fix #191504
