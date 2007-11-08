@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/ltmodem
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.35 2007/07/02 14:45:03 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.36 2007/11/08 12:59:15 mrness Exp $
+
+*ltmodem-2.6.9 (08 Nov 2007)
+
+  08 Nov 2007; Alin Năstac <mrness@gentoo.org> +ltmodem-2.6.9.ebuild:
+  Drop kernel 2.4 support (#198258). Version bump.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   ltmodem-8.31_alpha10-r3.ebuild:
