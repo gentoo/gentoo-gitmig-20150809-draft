@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libstdc++
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.10 2006/07/21 00:24:18 flameeyes Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.11 2007/11/08 08:15:24 corsair Exp $
+
+  08 Nov 2007; Markus Rothe <corsair@gentoo.org> libstdc++-3.3.ebuild:
+  Add entry for libstdc++-v3-bin; bug #195264
 
   21 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> libstdc++-3.3.ebuild:
   Add ~x86-fbsd keyword as needed to add diablo-jre-bin (see bug #141071).
