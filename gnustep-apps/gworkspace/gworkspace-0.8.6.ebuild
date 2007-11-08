@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.8.6.ebuild,v 1.4 2007/10/27 16:39:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.8.6.ebuild,v 1.5 2007/11/08 23:36:22 voyageur Exp $
 
 inherit autotools gnustep-2
 
@@ -25,8 +25,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-rpath.patch
-	epatch ${FILESDIR}/${P}-popplerkit.patch
+	epatch "${FILESDIR}"/${P}-rpath.patch
+	epatch "${FILESDIR}"/${P}-popplerkit.patch
 
 	cd Inspector
 	eautoreconf || die "failed running autoreconf"
