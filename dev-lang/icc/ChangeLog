@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.50 2007/11/08 16:25:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.51 2007/11/08 20:14:40 armin76 Exp $
+
+  08 Nov 2007; Raúl Porcel <armin76@gentoo.org> icc-10.0.026.ebuild:
+  ia64 stable wrt #197980
 
   08 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> icc-10.0.026.ebuild:
   removed bash specific 'export -n' in script execs.
