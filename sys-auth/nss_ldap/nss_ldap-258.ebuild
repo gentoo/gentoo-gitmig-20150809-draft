@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-258.ebuild,v 1.1 2007/11/08 03:17:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-258.ebuild,v 1.2 2007/11/08 10:56:04 robbat2 Exp $
 
 inherit fixheadtails eutils multilib autotools
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.padl.com/download/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=net-nds/openldap-2.1.30-r5
 		sasl? ( dev-libs/cyrus-sasl )
@@ -72,4 +72,9 @@ src_install() {
 	dodoc ldap.conf ANNOUNCE NEWS ChangeLog AUTHORS \
 		COPYING CVSVersionInfo.txt README nsswitch.ldap certutil
 	docinto docs; dodoc doc/*
+}
+
+pkg_postinst() {
+	elog "If you use a ldaps:// string in the 'uri' setting of"
+	elog "your /etc/ldap.conf, you must set 'ssl on'!"
 }
