@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfburn
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfburn/ChangeLog,v 1.5 2007/09/15 07:00:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfburn/ChangeLog,v 1.6 2007/11/08 11:24:46 lu_zero Exp $
+
+  08 Nov 2007; Luca Barbato <lu_zero@gentoo.org>
+  xfburn-0.3.0_pre20070824.ebuild:
+  Marked ~ppc
 
   15 Sep 2007; Samuli Suominen <drac@gentoo.org>
   xfburn-0.3.0_pre20070824.ebuild:
