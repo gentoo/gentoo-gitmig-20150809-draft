@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.44 2007/11/07 17:51:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.45 2007/11/08 03:17:53 robbat2 Exp $
+
+*nss_ldap-258 (08 Nov 2007)
+
+  08 Nov 2007; Robin H. Johnson <robbat2@gentoo.org>
+  +files/nss_ldap-257.2-gssapi-headers.patch, +nss_ldap-258.ebuild:
+  Version bump. Bugfixes only, fixes nss_srv_domain per upstream bug, and
+  gentoo bug #165638 for kerberos building.
 
   07 Nov 2007; Raúl Porcel <armin76@gentoo.org> nss_ldap-257.2.ebuild:
   Add ~ia64 wrt #198261
