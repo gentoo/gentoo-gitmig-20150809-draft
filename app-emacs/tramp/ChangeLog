@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/tramp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.59 2007/11/09 19:54:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.60 2007/11/09 20:04:45 ulm Exp $
+
+  09 Nov 2007; Ulrich Mueller <ulm@gentoo.org>
+  -files/tramp-2.1.10-copy-tree-gentoo.patch,
+  -files/tramp-2.1.10-fix-texinfo.patch,
+  -files/tramp-2.1.10-make-tramp-temp-file.patch, -tramp-2.1.10-r2.ebuild,
+  -tramp-2.1.11.ebuild, tramp-2.1.11-r1.ebuild:
+  Clean up.
 
   09 Nov 2007; nixnut <nixnut@gentoo.org> tramp-2.1.11-r1.ebuild:
   Stable on ppc wrt bug 198243

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.1.11-r1.ebuild,v 1.4 2007/11/09 19:54:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.1.11-r1.ebuild,v 1.5 2007/11/09 20:04:45 ulm Exp $
 
 inherit elisp eutils
 
@@ -17,7 +17,7 @@ SITEFILE=51${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}/lisp"
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-environment_fix.patch"
 }
 
