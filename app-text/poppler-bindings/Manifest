@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX glib-2.0.fix 3794 RMD160 ec38bc7db6896db2d124706201ce1169e2900605 SHA1 54f0487411487e2039e75e8ce62b8746617af26a SHA256 6ce30931b31eb49095a1420b6fc1a15e02a726e1ec7b490460587939bbef9e16
 MD5 c8e1183490df063057f55df4e7e32727 files/glib-2.0.fix 3794
 RMD160 ec38bc7db6896db2d124706201ce1169e2900605 files/glib-2.0.fix 3794
@@ -31,38 +28,31 @@ EBUILD poppler-bindings-0.5.4.ebuild 1814 RMD160 075c8e04d914681ca9702c2286f8393
 MD5 34153bfdeaf3ed8be4c9d4f4f4d9d183 poppler-bindings-0.5.4.ebuild 1814
 RMD160 075c8e04d914681ca9702c2286f8393a046a6767 poppler-bindings-0.5.4.ebuild 1814
 SHA256 9d2fe71e7cddfe0a5276ad0234c8b706dfd27ed6f97fe05af39c0ea4e8b72301 poppler-bindings-0.5.4.ebuild 1814
-EBUILD poppler-bindings-0.6.1.ebuild 2022 RMD160 a7b8f796683ed2762c6eca36585f2e9ec30c4dae SHA1 df440fdadfefb8ac5d979974611bf2c5d41ff4d0 SHA256 11a1f6b97407bdbbad30a5118f4c12d37b85066af69e3c2db4c9ce1abe9dff4c
-MD5 e32d969c07e14b4ff5a46f576fa0bec3 poppler-bindings-0.6.1.ebuild 2022
-RMD160 a7b8f796683ed2762c6eca36585f2e9ec30c4dae poppler-bindings-0.6.1.ebuild 2022
-SHA256 11a1f6b97407bdbbad30a5118f4c12d37b85066af69e3c2db4c9ce1abe9dff4c poppler-bindings-0.6.1.ebuild 2022
+EBUILD poppler-bindings-0.6.1.ebuild 2022 RMD160 6bec743008980b9b8daff903d2491f5a1f0cad3a SHA1 c022419de7a303f858f3cd00f4b33593117471c7 SHA256 da89482e4c03c2ec99653265198583b16e5243b7fa7fe03146c935619f06c8cb
+MD5 08447d53624aeb2f3c9fec6d79913d87 poppler-bindings-0.6.1.ebuild 2022
+RMD160 6bec743008980b9b8daff903d2491f5a1f0cad3a poppler-bindings-0.6.1.ebuild 2022
+SHA256 da89482e4c03c2ec99653265198583b16e5243b7fa7fe03146c935619f06c8cb poppler-bindings-0.6.1.ebuild 2022
 EBUILD poppler-bindings-0.6.ebuild 1775 RMD160 cd31f4d692a7c5002a67d0816ec01f010238a745 SHA1 15ec89f6309b8df55098bafddc08442912e85b52 SHA256 289a2520b65428f4e87ece068cedcabe024b30ea0e76fd523ea6b6176f927725
 MD5 7d6c7e074a7071ccbbefe7153b4d8f30 poppler-bindings-0.6.ebuild 1775
 RMD160 cd31f4d692a7c5002a67d0816ec01f010238a745 poppler-bindings-0.6.ebuild 1775
 SHA256 289a2520b65428f4e87ece068cedcabe024b30ea0e76fd523ea6b6176f927725 poppler-bindings-0.6.ebuild 1775
-MISC ChangeLog 10708 RMD160 7735164bc7cd64a150f36c8813c21dac61cbdd47 SHA1 bf8b3d92ef0e92e778a7b1db69a36763ff72d635 SHA256 5656b4f84256d59f419d457eb8dccf77eb6c4188bf1bc07026de84d9fd43b876
-MD5 9c3b22c510672ffe03a7618d5c15b224 ChangeLog 10708
-RMD160 7735164bc7cd64a150f36c8813c21dac61cbdd47 ChangeLog 10708
-SHA256 5656b4f84256d59f419d457eb8dccf77eb6c4188bf1bc07026de84d9fd43b876 ChangeLog 10708
+MISC ChangeLog 10835 RMD160 64b193cfac88ecfe36e5a153898a339b16f1ed1b SHA1 75348b5de11214751160aa90e8f6a28c51826cb6 SHA256 942ef0afce32582aaf75507fac0a87bda83484eb18ed8f5a3e39ddab0915f676
+MD5 e53edab1d72f25550e4ddc16a2a8f17a ChangeLog 10835
+RMD160 64b193cfac88ecfe36e5a153898a339b16f1ed1b ChangeLog 10835
+SHA256 942ef0afce32582aaf75507fac0a87bda83484eb18ed8f5a3e39ddab0915f676 ChangeLog 10835
 MISC metadata.xml 161 RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 SHA1 209c6a46e4cdd891980115e42ba419e3799f8088 SHA256 7c85e6739a71f5bb23e8de36c88677d772946e61f7285892f7554e37bd2bca76
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 metadata.xml 161
 SHA256 7c85e6739a71f5bb23e8de36c88677d772946e61f7285892f7554e37bd2bca76 metadata.xml 161
-MD5 2eceba1d537411ee56339307ecbcc747 files/digest-poppler-bindings-0.5.3 366
-RMD160 63b463cbfe0e7e5293273b0e3c47c6ee5bd6e12a files/digest-poppler-bindings-0.5.3 366
-SHA256 474712e07ff98e93a342c0ce737835e49b03886dc23d9d1d5a33caf3e1d30e8c files/digest-poppler-bindings-0.5.3 366
-MD5 9afa1aba15f1927e325e66f234293a4d files/digest-poppler-bindings-0.5.4 366
-RMD160 7ea5b73840f92874e3bff3517a55fd31f3513e10 files/digest-poppler-bindings-0.5.4 366
-SHA256 cd76290841131584cd2ee05173dc988e603d8d274bebc3c8e67c12cd27d93059 files/digest-poppler-bindings-0.5.4 366
+MD5 17ae238084c0511c598c999a8f5ed11c files/digest-poppler-bindings-0.5.3 503
+RMD160 79be67b17d848ccd4485505d5de5f373812eeddd files/digest-poppler-bindings-0.5.3 503
+SHA256 8a6fce077ac04253b966f047c5ab85bdaca74a1c3c91af643edd5210f01b150d files/digest-poppler-bindings-0.5.3 503
+MD5 ecccdf34b180ec56d723065e603fba18 files/digest-poppler-bindings-0.5.4 503
+RMD160 e65805eae3add99dd9d07a6012fd6c5070977221 files/digest-poppler-bindings-0.5.4 503
+SHA256 08ddeb82cca3c38dd49b940ca14b9b188c8dd79b122a3c8d2880b278fd2383b3 files/digest-poppler-bindings-0.5.4 503
 MD5 9d562560ec4fa0f59bf03cf4a5db1c40 files/digest-poppler-bindings-0.6 238
 RMD160 4cbbf991280550f2a1f959174379989b8f3542e2 files/digest-poppler-bindings-0.6 238
 SHA256 29759009d0c62ba82f973687c8ec106029e00ab15baed843cdfdeb1a83346562 files/digest-poppler-bindings-0.6 238
 MD5 c738dbdd344564944a39c1ba8d184a64 files/digest-poppler-bindings-0.6.1 503
 RMD160 cae30c3fb6a7bc4a3203770dbeefa6702a38fb9f files/digest-poppler-bindings-0.6.1 503
 SHA256 f3e257956a950570edab6914e55d1c33de2328eb2108ad6c085284aa0d891008 files/digest-poppler-bindings-0.6.1 503
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.7 (GNU/Linux)
-
-iD8DBQFHNIgQNQqtfCuFneMRAnoEAJ4jTJFLKkP1p+0hcPmfSVatDKenHwCcD5UJ
-i91WAngytCzUu/WurJxmtwg=
-=LIE5
------END PGP SIGNATURE-----
