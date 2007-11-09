@@ -1,0 +1,12 @@
+diff -Nru hsfmodem-7.68.00.04x86_64full.orig/modules/Makefile hsfmodem-7.68.00.04x86_64full/modules/Makefile
+--- hsfmodem-7.68.00.04x86_64full.orig/modules/Makefile	2007-10-19 20:25:54.000000000 +0300
++++ hsfmodem-7.68.00.04x86_64full/modules/Makefile	2007-11-09 06:47:56.000000000 +0200
+@@ -137,7 +137,7 @@
+ ifeq ($(ON_BUILD_SYSTEM)-$(CONFIG_SND_HDA_INTEL),no-)
+ # On Ubuntu Gutsy (7.10), the HDA modules are not included in linux-image but in a seprarate package
+ # and CONFIG_SND_HDA_INTEL is not enabled in the kernel .config file
+-CONFIG_SND_HDA_INTEL=$(shell modprobe -n snd-hda-intel > /dev/null 2>&1 && echo y || echo n)
++# CONFIG_SND_HDA_INTEL=$(shell modprobe -n snd-hda-intel > /dev/null 2>&1 && echo y || echo n)
+ endif
+ 
+ else

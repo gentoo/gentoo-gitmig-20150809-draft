@@ -1,0 +1,15 @@
+diff -Nru hsfmodem-7.68.00.04x86_64full.orig/scripts/cnxtconfig.in hsfmodem-7.68.00.04x86_64full/scripts/cnxtconfig.in
+--- hsfmodem-7.68.00.04x86_64full.orig/scripts/cnxtconfig.in	2007-10-19 22:14:36.000000000 +0300
++++ hsfmodem-7.68.00.04x86_64full/scripts/cnxtconfig.in	2007-11-06 01:04:01.000000000 +0200
+@@ -1945,9 +1945,9 @@
+ 	if [ -d /etc/udev/rules.d ]; then
+ 		rm -f /etc/udev/rules.d/00-@CNXTTARGET@.rules
+ 		if [ "@CNXTDRIVER@" = "dgc" ]; then
+-			echo 'KERNEL=="ttyACM0", SYMLINK="modem"' > /etc/udev/rules.d/00-@CNXTTARGET@.rules
++			echo 'KERNEL=="ttyACM0", SYMLINK="modem", GROUP="dialout"' > /etc/udev/rules.d/00-@CNXTTARGET@.rules
+ 		else
+-		echo 'KERNEL=="ttyS@CNXTSERDEV@0", SYMLINK="modem"' > /etc/udev/rules.d/00-@CNXTTARGET@.rules
++		echo 'KERNEL=="ttyS@CNXTSERDEV@0", SYMLINK="modem", GROUP="dialout"' > /etc/udev/rules.d/00-@CNXTTARGET@.rules
+ 	fi
+ 	fi
+ 
