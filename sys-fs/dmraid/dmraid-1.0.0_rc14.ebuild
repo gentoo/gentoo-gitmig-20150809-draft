@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc14.ebuild,v 1.1 2007/06/13 14:16:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc14.ebuild,v 1.2 2007/11/09 07:45:41 genstef Exp $
 
 inherit linux-info flag-o-matic
 
@@ -51,26 +51,22 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc CHANGELOG README TODO KNOWN_BUGS doc/*
-
-	# Put the distfile into /usr/share/genkernel/pkg for genkernel
-	# in case the user wants to uuse this instead of genkernel's internal version
-	insinto /usr/share/genkernel/pkg
-	doins "${DISTDIR}"/${A} || die
 }
 
 pkg_postinst() {
 	einfo "For booting Gentoo from Device-Mapper RAID you can use Genkernel."
 	einfo " "
 	einfo "Genkernel will generate the kernel and the initrd with a statically "
-	einfo "linked dmraid binary (its own version - not this version):"
+	einfo "linked dmraid binary (its own version which may not be the same as this version):"
 	einfo "emerge -av sys-kernel/genkernel"
 	einfo "genkernel --dmraid --udev all"
 	einfo " "
-	einfo "If you would rather use this version of DMRAID with Genkernel, update"
-	einfo "the following in /etc/genkernel.conf:"
+	einfo "If you would rather use this version of DMRAID with Genkernel, copy the distfile"
+	einfo "from your distdir to '/usr/share/genkernel/pkg/' and update the following"
+	einfo "in /etc/genkernel.conf:"
 	einfo "DMRAID_VER=\"${MY_PV/_/.}\""
 	einfo "DMRAID_SRCTAR=\"\${GK_SHARE}/pkg/${A}\""
-	ewarn " "
+	einfo " "
 	ewarn "DMRAID should be safe to use, but no warranties can be given"
-	ewarn " "
+	einfo " "
 }
