@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.12.ebuild,v 1.3 2007/10/29 06:51:08 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.12.ebuild,v 1.4 2007/11/09 20:38:16 araujo Exp $
 
 inherit base eutils ghc-package multilib toolchain-funcs versionator
 
@@ -95,7 +95,7 @@ src_install() {
 			"${D}/usr/$(get_libdir)/gtk2hs/gconf.${pkgext}" \
 			"${D}/usr/$(get_libdir)/gtk2hs/sourceview.${pkgext}" ) \
 		$(use svg && echo \
-			"${D}/usr/$(get_libdir)/gtk2hs/svgcairo.${pkgext}")
+			"${D}/usr/$(get_libdir)/gtk2hs/svgcairo.${pkgext}") \
 		$(use opengl && echo \
 			"${D}/usr/$(get_libdir)/gtk2hs/gtkglext.${pkgext}") \
 		$(use seamonkey || use firefox || use xulrunner && echo \
