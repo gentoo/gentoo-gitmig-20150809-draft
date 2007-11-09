@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qjackctl
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.46 2007/10/28 15:21:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.47 2007/11/09 14:37:54 armin76 Exp $
+
+  09 Nov 2007; Raúl Porcel <armin76@gentoo.org> qjackctl-0.3.1a.ebuild:
+  sparc stable wrt #196458, thanks to Alex Maclean for testing
 
   28 Oct 2007; nixnut <nixnut@gentoo.org> qjackctl-0.3.1a.ebuild:
   Stable on ppc wrt bug 196458
