@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-3.26.ebuild,v 1.16 2007/11/09 20:56:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-3.26.ebuild,v 1.17 2007/11/09 21:28:11 ulm Exp $
 
 inherit eutils
 
@@ -18,17 +18,13 @@ DEPEND=">=dev-libs/openssl-0.9.6j
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
-}
-
-src_compile() {
-	econf || die
-	emake || die
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gentoo.diff"
 }
 
 src_install() {
 	dosbin stunnel
-	dodoc FAQ README HISTORY COPYING BUGS PORTS TODO transproxy.txt
+	dolib.so stunnel.so
+	dodoc FAQ README HISTORY BUGS PORTS TODO transproxy.txt
 	doman stunnel.8
 }
