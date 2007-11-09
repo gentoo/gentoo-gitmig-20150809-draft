@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/ristretto
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ChangeLog,v 1.9 2007/11/04 02:04:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/ristretto/ChangeLog,v 1.10 2007/11/09 16:42:31 armin76 Exp $
+
+  09 Nov 2007; Raúl Porcel <armin76@gentoo.org> ristretto-0.0.10.ebuild:
+  Add ~alpha/~ia64/~sparc
 
 *ristretto-0.0.10 (04 Nov 2007)
 
