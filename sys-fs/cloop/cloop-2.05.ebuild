@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.05.ebuild,v 1.2 2007/08/29 18:33:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.05.ebuild,v 1.3 2007/11/09 07:55:52 genstef Exp $
 
 inherit linux-mod
 
@@ -19,6 +19,8 @@ src_unpack() {
 	cd ${S}
 	# This should only be applied on Kernel >= 2.6.22
 	kernel_is ge 2 6 22 && epatch ${FILESDIR}/${P}-kernel_2.6.22.patch
+	# This should only be applied on Kernel >= 2.6.23
+	kernel_is ge 2 6 23 && epatch ${FILESDIR}/${P}-kernel_2.6.23.patch
 }
 
 pkg_setup() {

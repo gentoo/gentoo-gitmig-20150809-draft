@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/cloop
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/ChangeLog,v 1.18 2007/08/29 18:33:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/ChangeLog,v 1.19 2007/11/09 07:55:52 genstef Exp $
+
+  09 Nov 2007; Stefan Schweizer <genstef@gentoo.org>
+  +files/cloop-2.05-kernel_2.6.23.patch, -cloop-2.02.1-r1.ebuild,
+  cloop-2.05.ebuild:
+  2.6.23 compatibility thanks to René Rhéaume (a.k.a. repzilon, rener)
+  <rene.rheaume@videotron.qc.ca> and Alexander Skwar
+  <askwar@digitalprojects.com> in bug 196566
 
 *cloop-2.05.ebuild (29 Aug 2007)
 
