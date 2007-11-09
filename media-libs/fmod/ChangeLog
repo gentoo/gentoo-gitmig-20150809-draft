@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/fmod
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.23 2007/10/17 14:52:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.24 2007/11/09 13:47:40 drac Exp $
+
+*fmod-4.08.05-r1 (09 Nov 2007)
+
+  09 Nov 2007; Samuli Suominen <drac@gentoo.org> +fmod-4.08.05-r1.ebuild:
+  Add more symlinks for 64bit libraries.
 
 *fmod-4.08.05 (17 Oct 2007)
 
