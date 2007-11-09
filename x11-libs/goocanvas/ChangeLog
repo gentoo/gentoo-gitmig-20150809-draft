@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.6 2007/09/08 11:06:45 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.7 2007/11/09 19:47:32 lavajoe Exp $
+
+  09 Nov 2007; Joe Peterson <lavajoe@gentoo.org> goocanvas-0.9.ebuild:
+  Add ~x86-fbsd keyword and elibtoolize (bug #198475); fix HOMEPAGE URL
 
   08 Sep 2007; Christoph Mende <angelos@gentoo.org> goocanvas-0.9.ebuild:
   Added ~amd64 wrt bug #190230
