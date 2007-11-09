@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.14.1.ebuild,v 1.3 2007/09/21 20:23:19 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.14.3.ebuild,v 1.1 2007/11/09 05:49:02 leio Exp $
 
 inherit gnome.org libtool eutils flag-o-matic
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if use ppc64 && use hardened ; then
 		replace-flags -O[2-3] -O1
@@ -39,6 +39,9 @@ src_unpack() {
 			epatch "${FILESDIR}/glib-2.10.3-ia64-atomic-ops.patch"
 		fi
 	fi
+
+	sed -e "s/MATCH_LIMIT_RECURSION=10000000/MATCH_LIMIT_RECURSION=8192/g" \
+		-i "${S}/glib/pcre/Makefile.in" "${S}/glib/pcre/Makefile.am"
 
 	# Fix gmodule issues on fbsd; bug #184301
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
@@ -70,8 +73,8 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
 
-	# Do not install charset.alias even if generated, leave it tol libiconv
-	rm -f ${D}/usr/lib/charset.alias
+	# Do not install charset.alias even if generated, leave it to libiconv
+	rm -f "${D}/usr/lib/charset.alias"
 
 	dodoc AUTHORS ChangeLog* NEWS* README
 }
