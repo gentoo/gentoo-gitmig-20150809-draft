@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.105 2007/10/21 09:28:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.106 2007/11/09 18:42:32 drac Exp $
+
+  09 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  xfce4-panel-4.4.1-r1.ebuild:
+  amd64/arm stable wrt #198562
 
 *xfce4-panel-4.4.1-r1 (21 Oct 2007)
 
