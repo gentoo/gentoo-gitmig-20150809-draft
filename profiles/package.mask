@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7883 2007/11/08 13:07:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7884 2007/11/09 16:53:38 drac Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -67,7 +67,6 @@ net-analyzer/snmpmon
 mail-client/elmo
 net-im/jud
 sys-apps/yard
-mail-client/sylpheed-claws
 app-editors/beaver
 media-radio/ktrack
 app-portage/portagemaster
@@ -583,10 +582,6 @@ app-shells/ash
 dev-ml/camlp5
 >=app-misc/ledit-1.15
 >=app-emacs/ocaml-mode-3.10.0
-
-# Andrej Kacian <ticho@gentoo.org> (26 May 2007)
-# Use mail-client/claws-mail - upstream changed application name after 2.6.0.
-mail-client/sylpheed-claws
 
 # Petteri Räty <betelgeuse@gentoo.org> (24 May 2007)
 # Doesn't compile atm. See https://bugs.gentoo.org/show_bug.cgi?id=164074
