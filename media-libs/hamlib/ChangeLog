@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/hamlib
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.22 2007/06/16 23:01:39 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.23 2007/11/09 19:44:14 lavajoe Exp $
+
+  09 Nov 2007; Joe Peterson <lavajoe@gentoo.org> hamlib-1.2.6.1.ebuild:
+  Add ~x86-fbsd keyword and elibtoolize (bug #198475)
 
 *hamlib-1.2.6.1 (16 Jun 2007)
 

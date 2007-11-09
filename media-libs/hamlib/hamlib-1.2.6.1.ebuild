@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.6.1.ebuild,v 1.1 2007/06/16 23:01:39 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.6.1.ebuild,v 1.2 2007/11/09 19:44:14 lavajoe Exp $
 
-inherit eutils multilib
+inherit eutils multilib libtool
 
 DESCRIPTION="Ham radio backend rig control libraries"
 HOMEPAGE="http://hamlib.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="doc gd python tk X"
 
 RESTRICT="test"
@@ -34,6 +34,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-pkgconfig-fix.diff || \
 		die "epatch failed"
+
+	# Needed for FreeBSD - Please do not remove
+	elibtoolize
 }
 
 src_compile() {
