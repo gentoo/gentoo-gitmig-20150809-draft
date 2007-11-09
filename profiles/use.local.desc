@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3127 2007/11/08 23:02:57 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3128 2007/11/09 12:24:03 bicatali Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1862,7 +1862,7 @@ sci-misc/nco:udunits - Add udunits files support
 sci-misc/ncview:udunits - Add udunits files support
 sci-physics/root:cern - Add cernlib i/o functionality to root
 sci-visualization/gnuplot:xemacs - Add support for XEmacs
-sci-visualization/hippodraw:fits - Add FITS support to hippodraw, via cfitsio
+sci-visualization/hippodraw:fits - Add FITS format support to hippodraw, via cfitsio
 sci-visualization/hippodraw:numarray - Add numarray python array support
 sci-visualization/hippodraw:root - Add root i/o, and minuit support
 sci-visualization/labplot:cdf - Adds cdf data exchange format support
@@ -1870,6 +1870,7 @@ sci-visualization/labplot:kexi - Import and export data from/to MySQL, PostgreSQ
 sci-visualization/opendx:cdf - Adds cdf data exchange format support
 sci-visualization/opendx:hdf - Adds support for the Hierarchical Data Format
 sci-visualization/paraview:hdf5 - Adds support for the Hierarchical Data Format v5
+sci-visualization/veusz:fits - Adds FITS format format, via pyfits
 sec-policy/selinux-desktop:avahi - Add avahi SELinux policy.
 sys-apps/acl:nfs - add support for NFS acls
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
