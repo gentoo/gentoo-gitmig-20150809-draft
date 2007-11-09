@@ -1,16 +1,16 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-1.2.ebuild,v 1.10 2007/07/15 04:56:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-1.2.ebuild,v 1.11 2007/11/09 14:30:51 drac Exp $
 
 inherit eutils
 
 DESCRIPTION="GTK2 DX-cluster client"
 HOMEPAGE="http://www.qsl.net/pg4i/linux/xdx.html"
 SRC_URI="http://www.qsl.net/pg4i/download/${P}.tar.gz"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.2.4-r1"

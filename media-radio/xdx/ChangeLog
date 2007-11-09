@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/xdx
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.9 2007/03/19 15:01:13 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.10 2007/11/09 14:30:51 drac Exp $
+
+*xdx-2.3 (09 Nov 2007)
+
+  09 Nov 2007; Samuli Suominen <drac@gentoo.org> +xdx-2.3.ebuild:
+  Version bump, keywording for ~amd64 wrt #198497.
 
   19 Mar 2007; Marius Mauch <genone@gentoo.org> xdx-1.2.ebuild:
   Replacing einfo with elog
