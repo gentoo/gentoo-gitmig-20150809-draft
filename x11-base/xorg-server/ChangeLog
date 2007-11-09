@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.294 2007/11/09 02:21:15 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.295 2007/11/09 07:56:23 dberkholz Exp $
+
+  09 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.3.0.0-r2.ebuild:
+  (#198525) Stable on amd64, tested by hparker, approved by kingtaco.
 
   09 Nov 2007; Dawid Węgliński <cla@gentoo.org>
   xorg-server-1.3.0.0-r2.ebuild:
