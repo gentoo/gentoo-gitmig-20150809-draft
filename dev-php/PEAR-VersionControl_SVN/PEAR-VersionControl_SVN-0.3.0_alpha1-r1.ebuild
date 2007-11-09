@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/PEAR-VersionControl_SVN-0.3.0_alpha1-r1.ebuild,v 1.17 2007/08/21 08:03:38 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/PEAR-VersionControl_SVN-0.3.0_alpha1-r1.ebuild,v 1.18 2007/11/09 22:11:32 hoffie Exp $
 
+PEAR_PV="${PV/_/}"
 inherit php-pear-r1
 
 DESCRIPTION="Simple OO wrapper interface for the Subversion command-line client."

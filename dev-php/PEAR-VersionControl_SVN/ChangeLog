@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-VersionControl_SVN
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.20 2007/10/15 19:53:20 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.21 2007/11/09 22:11:32 hoffie Exp $
+
+  09 Nov 2007; Christian Hoffmann <hoffie@gentoo.org>
+  PEAR-VersionControl_SVN-0.3.0_alpha1-r1.ebuild:
+  fixing SRC_URI (got broken through pear eclass changes) by setting PEAR_PV
+  appropriately, fixing Manifest for 0.3.0_alpha1-r1
 
 *PEAR-VersionControl_SVN-0.3.1 (14 Oct 2007)
 
