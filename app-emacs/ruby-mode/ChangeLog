@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ruby-mode
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.29 2007/11/09 14:38:35 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.30 2007/11/09 15:01:18 cla Exp $
+
+  09 Nov 2007; Dawid Węgliński <cla@gentoo.org> ruby-mode-1.8.6.ebuild:
+  Stable on x86 (bug #198532)
 
   09 Nov 2007; Ferris McCormick <fmccor@gentoo.org> ruby-mode-1.8.6.ebuild:
   Sparc stable --- Bug #198532 --- no problems.
