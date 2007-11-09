@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.34 2007/11/09 03:21:52 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.35 2007/11/09 18:14:12 vapier Exp $
+
+  09 Nov 2007; Mike Frysinger <vapier@gentoo.org> sdparm-1.02.ebuild:
+  No need to run `doman` as the makefile installs it for us.
 
 *sdparm-1.02 (09 Nov 2007)
 
