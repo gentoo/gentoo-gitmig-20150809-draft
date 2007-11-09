@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.37 2007/11/09 19:10:32 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.38 2007/11/09 22:08:10 nixnut Exp $
+
+  09 Nov 2007; nixnut <nixnut@gentoo.org> ChangeLog:
+  Added ~ppc wrt bug 198114
 
   09 Nov 2007; Daniel Gryniewicz <dang@gentoo.org> transmission-0.82.ebuild:
   Marked stable on amd64 for bug #198114
