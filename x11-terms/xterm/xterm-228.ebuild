@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-228.ebuild,v 1.4 2007/09/08 04:15:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-228.ebuild,v 1.5 2007/11/09 21:30:11 seemant Exp $
 
 inherit flag-o-matic
 
@@ -20,6 +20,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libxkbfile
 	x11-libs/libXft
 	x11-libs/libXaw
+	x11-apps/xmessage
 	unicode? ( x11-apps/luit )
 	Xaw3d? ( x11-libs/Xaw3d )
 	sys-libs/libutempter"
@@ -76,11 +77,11 @@ src_install() {
 	fperms 0755 /usr/bin/xterm
 
 	# restore the navy blue
-	sed -i "s:blue2$:blue:" ${D}${DEFAULTS_DIR}/XTerm-color
+	sed -i "s:blue2$:blue:" "${D}"${DEFAULTS_DIR}/XTerm-color
 
 	# Fix for bug #91453 at Thomas Dickey's suggestion:
-	echo "*allowWindowOps: 	false" >> ${D}/${DEFAULTS_DIR}/XTerm
-	echo "*allowWindowOps: 	false" >> ${D}/${DEFAULTS_DIR}/UXTerm
+	echo "*allowWindowOps: 	false" >> "${D}"/${DEFAULTS_DIR}/XTerm
+	echo "*allowWindowOps: 	false" >> "${D}"/${DEFAULTS_DIR}/UXTerm
 }
 
 pkg_postinst() {
