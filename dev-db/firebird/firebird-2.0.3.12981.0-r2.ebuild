@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r2.ebuild,v 1.5 2007/11/06 21:41:49 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.0.3.12981.0-r2.ebuild,v 1.6 2007/11/09 15:21:43 wltjr Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -129,7 +129,7 @@ src_install() {
 
 	if use xinetd ; then
 		insinto /etc/xinetd.d
-		newins "${S}/gen/install/misc/${PN}.xinetd.2" ${PN} || die "newins xinetd file failed"
+		newins "${FILESDIR}/${PN}.xinetd.2" ${PN} || die "newins xinetd file failed"
 	else
 		newinitd "${FILESDIR}/${PN}.init.d.2" ${PN}
 		newconfd "${FILESDIR}/firebird.conf.d.2" ${PN}

@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.80 2007/11/06 21:41:49 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.81 2007/11/09 15:21:43 wltjr Exp $
+
+  09 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  firebird-2.0.3.12981.0-r2.ebuild, firebird-2.0.3.12981.0-r3.ebuild,
+  firebird-2.1.0.16780_beta2-r1.ebuild:
+  Fixed installed of xinetd file, from using generic one in -> gentoo specific
+  in , bug #198538
 
   06 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   firebird-2.0.3.12981.0-r2.ebuild:
