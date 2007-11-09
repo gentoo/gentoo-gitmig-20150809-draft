@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.266 2007/11/09 19:53:16 dang Exp $
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.267 2007/11/09 21:08:29 vapier Exp $
+
+  09 Nov 2007; Mike Frysinger <vapier@gentoo.org> cups-1.3.4-r1.ebuild:
+  Fix installation of cups init.d script.
 
   09 Nov 2007; Daniel Gryniewicz <dang@gentoo.org> cups-1.2.12-r2.ebuild:
   Marked stable on amd64 for bug #196736

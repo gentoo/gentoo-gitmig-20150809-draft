@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.4-r1.ebuild,v 1.1 2007/11/08 23:15:12 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.4-r1.ebuild,v 1.2 2007/11/09 21:08:29 vapier Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -168,7 +168,7 @@ src_compile() {
 
 src_install() {
 	emake BUILDROOT="${D}" install || die "emake install failed"
-	dodoc {CHANGES{,-1.{0,1}},CREDITS,LICENSE,README}.txt || die "dodoc install failed"
+	dodoc {CHANGES{,-1.{0,1}},CREDITS,README}.txt || die "dodoc install failed"
 
 	# clean out cups init scripts
 	rm -rf "${D}"/etc/{init.d/cups,rc*,pam.d/cups}
@@ -178,8 +178,9 @@ src_install() {
 	use avahi && neededservices="$neededservices avahi-daemon"
 	use dbus && neededservices="$neededservices dbus"
 	use zeroconf && ! use avahi && neededservices="$neededservices mDNSResponderPosix"
-	[[ -n ${neededservices} ]] && sed -e "s/@neededservices@/need$neededservices/" "${FILESDIR}/cupsd.init.d" > "${T}/cupsd"
-	doinitd "${T}/cupsd"
+	[[ -n ${neededservices} ]] && neededservices="need${neededservices}"
+	sed -e "s/@neededservices@/$neededservices/" "${FILESDIR}"/cupsd.init.d > "${T}"/cupsd
+	doinitd "${T}"/cupsd
 
 	# install our pam script
 	pamd_mimic_system cups auth account
