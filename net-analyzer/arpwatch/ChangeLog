@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arpwatch
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.49 2007/11/08 04:34:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.50 2007/11/09 17:38:32 nixnut Exp $
+
+  09 Nov 2007; nixnut <nixnut@gentoo.org> arpwatch-2.1.15-r5.ebuild:
+  Stable on ppc wrt bug 198375
 
   08 Nov 2007; Jeroen Roovers <jer@gentoo.org> arpwatch-2.1.15-r5.ebuild:
   Stable for HPPA (bug #198375).
