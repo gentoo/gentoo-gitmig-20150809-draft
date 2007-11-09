@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.298 2007/11/09 14:44:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.299 2007/11/09 20:45:37 nixnut Exp $
+
+  09 Nov 2007; nixnut <nixnut@gentoo.org> xorg-server-1.3.0.0-r2.ebuild:
+  Stable on ppc wrt bug 198525
 
   09 Nov 2007; Raúl Porcel <armin76@gentoo.org>
   xorg-server-1.3.0.0-r2.ebuild:
