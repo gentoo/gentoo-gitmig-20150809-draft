@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/evolvotron
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/ChangeLog,v 1.13 2007/11/03 12:38:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/ChangeLog,v 1.14 2007/11/09 15:11:22 drac Exp $
+
+  09 Nov 2007; Samuli Suominen <drac@gentoo.org> evolvotron-0.5.0.ebuild:
+  dev-libs/boost is required at build time wrt #198391.
 
 *evolvotron-0.5.0 (03 Nov 2007)
 

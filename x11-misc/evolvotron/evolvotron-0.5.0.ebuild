@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.5.0.ebuild,v 1.1 2007/11/03 12:38:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.5.0.ebuild,v 1.2 2007/11/09 15:11:22 drac Exp $
 
 inherit qt3
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="$(qt_min_version 3)"
+RDEPEND="$(qt_min_version 3)"
+DEPEND="${RDEPEND}
+	dev-libs/boost"
 
 S="${WORKDIR}"/${PN}
 
