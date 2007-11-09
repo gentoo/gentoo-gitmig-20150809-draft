@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler-bindings
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.72 2007/11/09 16:16:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.73 2007/11/09 17:02:09 fmccor Exp $
+
+  09 Nov 2007; Ferris McCormick <fmccor@gentoo.org>
+  poppler-bindings-0.6.1.ebuild:
+  Sparc stable --- Security Bug #196735
 
   09 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   poppler-bindings-0.6.1.ebuild:
