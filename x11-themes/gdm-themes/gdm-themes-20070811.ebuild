@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-20070811.ebuild,v 1.1 2007/08/11 21:46:06 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-20070811.ebuild,v 1.2 2007/11/09 01:34:20 cla Exp $
 
 DESCRIPTION="Some nice themes for the GDM Greeter"
 S=${WORKDIR}
@@ -83,7 +83,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/share/gdm/themes
-	cd ${D}/usr/share/gdm/themes
+	cd "${D}"/usr/share/gdm/themes
 
 	unpack ${A}
 
