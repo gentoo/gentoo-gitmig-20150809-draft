@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i-r7.ebuild,v 1.1 2007/07/22 14:21:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i-r7.ebuild,v 1.2 2007/11/09 20:23:11 armin76 Exp $
 
 inherit eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/22231/${MY_P}.tar.gz"
 
 LICENSE="lha"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~m68k ~ppc ~ppc-macos ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
