@@ -1,6 +1,6 @@
-diff -Nru resin-3.1.2.vanilla/Makefile.in resin-3.1.2/Makefile.in
---- resin-3.1.2.vanilla/Makefile.in	2007-08-17 09:44:18.000000000 +0200
-+++ resin-3.1.2/Makefile.in	2007-08-17 09:45:48.000000000 +0200
+diff -Nru resin-3.1.3.vanilla/Makefile.in resin-3.1.3/Makefile.in
+--- resin-3.1.3.vanilla/Makefile.in	2007-11-09 14:59:07.000000000 +0100
++++ resin-3.1.3/Makefile.in	2007-11-09 15:00:28.000000000 +0100
 @@ -9,20 +9,20 @@
  
  install	:
@@ -8,7 +8,7 @@ diff -Nru resin-3.1.2.vanilla/Makefile.in resin-3.1.2/Makefile.in
 -	if test $(PREFIX) != `pwd`; then \
 -	  mkdir -p $(PREFIX)/lib; \
 -	  mkdir -p $(PREFIX)/$(LIBEXEC); \
--	  cp -r libexec/* $(PREFIX)/$(LIBEXEC); \
+-	  cp -r $(LIBEXEC)/* $(PREFIX)/$(LIBEXEC); \
 -	  cp lib/*.jar $(PREFIX)/lib; \
 -	  mkdir -p $(PREFIX)/bin; \
 -	  cp bin/* $(PREFIX)/bin; \
@@ -23,7 +23,7 @@ diff -Nru resin-3.1.2.vanilla/Makefile.in resin-3.1.2/Makefile.in
 +	if test $(DESTDIR)/$(PREFIX) != `pwd`; then \
 +	  mkdir -p $(DESTDIR)/$(PREFIX)/lib; \
 +	  mkdir -p $(DESTDIR)/$(PREFIX)/$(LIBEXEC); \
-+	  cp -r libexec/* $(DESTDIR)/$(PREFIX)/$(LIBEXEC); \
++	  cp -r $(LIBEXEC)/* $(DESTDIR)/$(PREFIX)/$(LIBEXEC); \
 +	  cp lib/*.jar $(DESTDIR)/$(PREFIX)/lib; \
 +	  mkdir -p $(DESTDIR)/$(PREFIX)/bin; \
 +	  cp bin/* $(DESTDIR)/$(PREFIX)/bin; \
@@ -37,9 +37,9 @@ diff -Nru resin-3.1.2.vanilla/Makefile.in resin-3.1.2/Makefile.in
 +	    cp conf/app-default.xml $(DESTDIR)/$(PREFIX)/conf/app-default.xml; \
  	  fi; \
  	fi
-diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
---- resin-3.1.2.vanilla/build.xml	2007-08-17 09:44:18.000000000 +0200
-+++ resin-3.1.2/build.xml	2007-08-17 09:47:12.000000000 +0200
+diff -Nru resin-3.1.3.vanilla/build.xml resin-3.1.3/build.xml
+--- resin-3.1.3.vanilla/build.xml	2007-11-09 14:59:07.000000000 +0100
++++ resin-3.1.3/build.xml	2007-11-09 15:01:17.000000000 +0100
 @@ -7,7 +7,6 @@
  
    <property name="modules" location="${basedir}/modules"/>
@@ -57,14 +57,14 @@ diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
    <property name="javac.optimize" value="off"/>
    <property name="javac.deprecation" value="off"/>
    <property name="javac.nowarn" value="on"/>
-   <property name="javac.memoryMaximumSize" value="256m"/>
+   <property name="javac.memoryMaximumSize" value="512m"/>
  
 -  <property name="javac.source" value="1.5"/>
 -
    <property name="jar.compress" value="false"/>
    <!--
    <property name="jar.index" value="true"/>
-@@ -66,14 +63,13 @@
+@@ -83,14 +80,13 @@
    </target>
  
    <target name="compile" 
@@ -80,7 +80,7 @@ diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
      </antcall>
    </target>
  
-@@ -81,7 +77,6 @@
+@@ -98,7 +94,6 @@
      <antcall target="module" inheritRefs="true">
        <param name="module.name" value="ejb"/>
        <param name="module.jar" value="ejb-15.jar"/>
@@ -88,7 +88,7 @@ diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
      </antcall>
    </target>
  
-@@ -89,7 +84,6 @@
+@@ -106,7 +101,6 @@
      <antcall target="module" inheritRefs="true">
        <param name="module.name" value="jpa"/>
        <param name="module.jar" value="jpa-15.jar"/>
@@ -96,7 +96,7 @@ diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
      </antcall>
    </target>
  
-@@ -107,11 +101,10 @@
+@@ -124,11 +118,10 @@
      </antcall>
    </target>
  
@@ -109,7 +109,7 @@ diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
      </antcall>
    </target>
  
-@@ -150,7 +143,7 @@
+@@ -167,7 +160,7 @@
      </antcall>
    </target>
  
@@ -118,7 +118,7 @@ diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
      <antcall target="module" inheritRefs="true">
        <param name="module.name" value="jstl"/>
        <param name="module.jar" value="jstl-11.jar"/>
-@@ -196,7 +189,7 @@
+@@ -221,7 +214,7 @@
      </antcall>
    </target>
  
@@ -127,7 +127,7 @@ diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
  
      <!-- filter to insert version -->
  
-@@ -226,7 +219,6 @@
+@@ -251,7 +244,6 @@
  
      <antcall target="module" inheritRefs="true">
        <param name="module.name" value="resin"/>
@@ -135,7 +135,7 @@ diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
      </antcall>
    </target>
    
-@@ -251,14 +243,12 @@
+@@ -276,14 +268,12 @@
    <target name="webutil" depends="init, resin">
      <antcall target="module" inheritRefs="true">
        <param name="module.name" value="webutil"/>
@@ -150,7 +150,7 @@ diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
      </antcall>
    </target>
  
-@@ -267,7 +257,6 @@
+@@ -292,7 +282,6 @@
    <target name="ecmascript" depends="init">
      <antcall target="module" inheritRefs="true">
        <param name="module.name" value="ecmascript"/>
@@ -158,7 +158,7 @@ diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
      </antcall>
    </target>
  
-@@ -299,16 +288,15 @@
+@@ -325,16 +314,15 @@
             verbose="${javac.verbose}" 
             debug="${javac.debug}" optimize="${javac.optimize}"
             deprecation="${javac.deprecation}" nowarn="${javac.nowarn}"
@@ -178,7 +178,7 @@ diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
        </classpath>
      </javac>
  
-@@ -378,13 +366,6 @@
+@@ -428,13 +416,6 @@
      </copy>
    </target>
  
@@ -192,7 +192,7 @@ diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
    <target name="webapps" depends="init, doc, quercus">
    </target>
  
-@@ -520,9 +501,6 @@
+@@ -536,9 +517,6 @@
            <dirset dir="${modules}">
              <include name="*/classes"/>
            </dirset>
@@ -202,11 +202,11 @@ diff -Nru resin-3.1.2.vanilla/build.xml resin-3.1.2/build.xml
          </classpath>
        </java>
  
-@@ -651,7 +629,6 @@
+@@ -667,7 +645,6 @@
          <include name="lib/j2ee-management-10.jar"/>
          <include name="lib/jca-15.jar"/>
          <include name="lib/jms-11.jar"/>
 -        <include name="lib/jsdk-15.jar"/>
-         <!--
          <include name="lib/jsf-12.jar"/>
-         -->
+         <include name="lib/jstl-11.jar"/>
+         <include name="lib/jta-101.jar"/>
