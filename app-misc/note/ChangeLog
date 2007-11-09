@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/note
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/ChangeLog,v 1.18 2007/10/18 13:42:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/ChangeLog,v 1.19 2007/11/09 21:59:23 nixnut Exp $
+
+  09 Nov 2007; nixnut <nixnut@gentoo.org> note-1.3.3.ebuild:
+  Added ~ppc wrt bug 195919
 
   18 Oct 2007; Christoph Mende <angelos@gentoo.org> note-1.3.3.ebuild:
   Added ~amd64 wrt bug #195919
