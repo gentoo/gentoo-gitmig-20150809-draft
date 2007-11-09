@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/talkfilters-2.3.4-r1.ebuild,v 1.8 2007/01/04 13:30:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/talkfilters-2.3.4-r1.ebuild,v 1.9 2007/11/09 21:15:13 grobian Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ SRC_URI="http://www.dystance.net/software/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~mips ppc ~ppc-macos x86"
+KEYWORDS="amd64 ~hppa ~mips ppc x86"
 IUSE=""
 
 src_unpack() {
