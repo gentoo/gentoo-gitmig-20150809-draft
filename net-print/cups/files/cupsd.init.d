@@ -4,7 +4,7 @@ depend() {
 	use net
 	@neededservices@
 	before nfs
-	after logger vmware
+	after logger
 }
 
 start() {
