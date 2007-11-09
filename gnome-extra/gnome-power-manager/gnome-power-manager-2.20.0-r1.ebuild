@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.20.0-r1.ebuild,v 1.1 2007/11/09 08:12:20 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.20.0-r1.ebuild,v 1.2 2007/11/09 18:59:36 mr_bones_ Exp $
 
 inherit gnome2 eutils virtualx
 
@@ -51,7 +51,7 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 pkg_setup() {
 	# TODO :: policykit should have a pam useflag
 
-	# xevents are disabled only because it only breaks the icon from appearing, and nothing else in version 2.20.0 and older 
+	# xevents are disabled only because it only breaks the icon from appearing, and nothing else in version 2.20.0 and older
 	# Reconsider on bump after there is upstream opinion on http://bugzilla.gnome.org/show_bug.cgi?id=413360#c41 (bump might include the necessary patch too)
 	G2CONF="$(use_enable doc docbook-docs) \
 			--enable-actions-menu --with-dpms-ext --disable-policykit \
