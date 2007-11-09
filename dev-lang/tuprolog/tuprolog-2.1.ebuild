@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.1.ebuild,v 1.7 2007/08/11 17:10:36 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.1.ebuild,v 1.8 2007/11/09 18:25:20 keri Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -29,6 +29,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-java1.4.patch
 	epatch "${FILESDIR}"/${P}-javadocs.patch
 	epatch "${FILESDIR}"/${P}-junit.patch
+	epatch "${FILESDIR}"/${P}-DCGLibrary.patch
 
 	cd "${S}"
 	cp "${FILESDIR}"/build.xml "${S}"

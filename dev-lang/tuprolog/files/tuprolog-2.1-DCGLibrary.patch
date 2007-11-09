@@ -1,0 +1,12 @@
+--- src.orig/alice/tuprolog/lib/DCGLibrary.java	2007-11-10 07:00:33.000000000 +1300
++++ src/alice/tuprolog/lib/DCGLibrary.java	2007-11-10 07:03:21.000000000 +1300
+@@ -36,7 +36,8 @@
+ 		//
+ 		// operators defined by the BasicLibrary theory
+ 		//
+-		":- op( 1200, xfx,  '-->'). \n"+
++		":- op(1200, xfx, '-->'). \n" +
++		":- op(200, xfx, '\\'). \n" +
+ 		"dcg_nonterminal(X) :- list(X),!,fail.  \n"+
+ 		"dcg_nonterminal(_).                    \n"+
+ 		"dcg_terminals(Xs) :- list(Xs).         \n"+
