@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.1.19.ebuild,v 1.1 2007/11/06 19:24:44 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.1.19.ebuild,v 1.2 2007/11/10 14:04:33 nelchael Exp $
 
 inherit db-use eutils pam
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.xiaoka.com/${PN}/releases/jabberd-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="debug memdebug ipv6 ldap mysql pam pipe postgres sqlite"
 
 DEPEND=">=net-im/jabber-base-0.01
