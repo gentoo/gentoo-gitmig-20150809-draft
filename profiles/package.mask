@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7888 2007/11/10 10:44:39 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7889 2007/11/10 11:26:07 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Krzysiek Pawlik <nelchael@gentoo.org> (10 Nov 2007)
+# Masking for removal: last Resin 2.x release ws almost two years ago,
+# please move to 3.0 series. Resin 2.1.17 will be removed in 30 days.
+=www-servers/resin-2.1.17
 
 # Mike Doty <kingtaco@gentoo.org> (09 Nov 2007)
 # New build system, currently meant for ATs only.  DO NOT COME
