@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.91.ebuild,v 1.1 2007/11/05 00:10:22 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.91.ebuild,v 1.2 2007/11/10 03:53:32 compnerd Exp $
+
+inherit autotools
 
 DESCRIPTION="Simple BitTorrent client"
 HOMEPAGE="http://transmission.m0k.org/"
@@ -19,6 +21,17 @@ DEPEND="${RDEPEND}
 		sys-devel/gettext
 		>=dev-util/pkgconfig-0.19
 		gtk? ( >=dev-util/intltool-0.35 )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Fix po/Makefile generation (bug #198225)
+	if ! use gtk ; then
+		epatch "${FILESDIR}/${PN}-0.91-potfiles-fix.patch"
+		eautoreconf
+	fi
+}
 
 src_compile() {
 	econf $(use_with gtk) $(use_with wxwindows wx) || die "configure failed"

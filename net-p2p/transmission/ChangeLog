@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.38 2007/11/09 22:08:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.39 2007/11/10 03:53:32 compnerd Exp $
+
+  10 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/transmission-0.91-potfiles-fix.patch, transmission-0.91.ebuild:
+  Add patch from upstream to fix po/Makefile generation on !gtk
 
   09 Nov 2007; nixnut <nixnut@gentoo.org> ChangeLog:
   Added ~ppc wrt bug 198114
