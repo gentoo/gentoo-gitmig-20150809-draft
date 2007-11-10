@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/signing-party
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.5 2007/03/17 11:07:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.6 2007/11/10 14:07:42 alonbl Exp $
+
+  10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> signing-party-0.4.9.ebuild:
+  Minor cleanups
 
   17 Mar 2007; Steve Dibb <beandog@gentoo.org> signing-party-0.4.7.ebuild:
   amd64 stable, bug 168836
