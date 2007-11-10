@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.808 2007/11/10 14:37:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.809 2007/11/10 16:33:24 joker Exp $
+
+  10 Nov 2007; Christian Birchinger <joker@gentoo.org> package.mask:
+  Added >=media-plugins/audacious-dumb-0.56 and
+  >=media-plugins/audacious-xosd-0.9 until Audacious 1.4 gets unmasked
 
   10 Nov 2007; Gilles Dartiguelongue <eva@gentoo.org>
   default-bsd/package.use.mask:
