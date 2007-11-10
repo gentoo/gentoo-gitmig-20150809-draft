@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Lingua-Stem-It
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-It/ChangeLog,v 1.13 2007/08/09 15:35:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-It/ChangeLog,v 1.14 2007/11/10 13:40:39 drac Exp $
+
+  10 Nov 2007; Samuli Suominen <drac@gentoo.org> Lingua-Stem-It-0.02.ebuild:
+  amd64 stable
 
   09 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   Lingua-Stem-It-0.02.ebuild:

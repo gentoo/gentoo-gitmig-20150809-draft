@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Table
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Table/ChangeLog,v 1.19 2007/07/12 13:20:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Table/ChangeLog,v 1.20 2007/11/10 13:25:21 drac Exp $
+
+  10 Nov 2007; Samuli Suominen <drac@gentoo.org> HTML-Table-2.06.ebuild:
+  amd64 stable
 
   12 Jul 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   HTML-Table-2.06.ebuild:
