@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8.ebuild,v 1.4 2007/07/23 11:02:48 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8.ebuild,v 1.5 2007/11/10 16:59:21 alonbl Exp $
 
 inherit eutils
 
@@ -23,29 +23,16 @@ DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-as-needed.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-build.patch"
 }
 
 src_compile() {
-	local conf
-	if ! use X
-	then
-		conf=--disable-gui
-	fi
-	econf ${conf} || die "econf failed"
+	econf $(use_enable X gui) || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	dobin src/wepdecrypt run/wepdecrypt_{inc,word} src/wkeygen || die
-
-	if use X; then
-		dobin src/gwepdecrypt || die
-	fi
-
-	insinto /etc
-	doins conf/wepdecrypt.conf
-	doman doc/wepdecrypt.1 doc/wkeygen.1
-	dodoc CHANGELOG README TODO doc/manual.html doc/manual.txt doc/Examples.txt
+	emake install DESTDIR="${D}"
 }
+
