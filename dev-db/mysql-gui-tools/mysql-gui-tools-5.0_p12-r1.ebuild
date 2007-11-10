@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p12-r1.ebuild,v 1.1 2007/10/24 18:48:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/mysql-gui-tools-5.0_p12-r1.ebuild,v 1.2 2007/11/10 21:26:12 swegener Exp $
 
 GCONF_DEBUG="no"
 
@@ -12,10 +12,11 @@ DESCRIPTION="MySQL GUI Tools"
 HOMEPAGE="http://www.mysql.com/products/tools/"
 SRC_URI="mirror://mysql/Downloads/MySQLGUITools/${MY_P}.tar.gz"
 
+EAPI="1"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="nls administrator query-browser workbench"
+IUSE="nls +administrator +query-browser workbench"
 
 RDEPEND=">=x11-libs/gtk+-2.6
 	>=dev-libs/glib-2.6
@@ -23,25 +24,14 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=dev-libs/libsigc++-2.0
 	>=dev-libs/libpcre-4.4
 	>=dev-libs/libxml2-2.6.2
-	|| (
-		=dev-cpp/glibmm-2.14*
-		=dev-cpp/glibmm-2.12*
-	)
-	|| (
-		=dev-cpp/gtkmm-2.12*
-		=dev-cpp/gtkmm-2.10*
-	)
+	>=dev-cpp/glibmm-2.14
+	dev-cpp/gtkmm:2.4
 	>=virtual/mysql-5.0
 	workbench? (
 		=dev-lang/lua-5.0*
 		virtual/opengl
 	)
-	query-browser? (
-		|| (
-			=gnome-extra/gtkhtml-3.16*
-			=gnome-extra/gtkhtml-3.14*
-		)
-	)"
+	query-browser? ( gnome-extra/gtkhtml:3.14 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.15
 	>=app-text/scrollkeeper-0.3.11"
