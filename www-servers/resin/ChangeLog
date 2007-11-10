@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.59 2007/11/10 12:42:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.60 2007/11/10 20:52:05 nelchael Exp $
+
+  10 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/3.0.22/resin.conf, -files/3.0.22/resin-3.0.22-gentoo.patch,
+  -files/3.0.22/resin.init, files/3.0.24/resin.conf, -resin-3.0.22.ebuild,
+  resin-3.0.24.ebuild, resin-3.1.3.ebuild:
+  multilib fixes, stable on amd64, see bug #191740.
 
   10 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   -files/3.0.24/resin-3.0.24-gentoo.patch,

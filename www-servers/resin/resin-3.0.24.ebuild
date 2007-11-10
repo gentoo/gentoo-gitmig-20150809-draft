@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.24.ebuild,v 1.7 2007/11/10 12:42:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.24.ebuild,v 1.8 2007/11/10 20:52:05 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
-inherit java-pkg-2 java-ant-2 eutils flag-o-matic
+inherit java-pkg-2 java-ant-2 eutils flag-o-matic multilib
 
 DESCRIPTION="A fast Servlet 2.4 and JSP 2.0 engine."
 HOMEPAGE="http://www.caucho.com"
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="~amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 
 COMMON_DEP="~dev-java/resin-servlet-api-${PV}
 	dev-java/aopalliance
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	dev-libs/openssl
 	${COMMON_DEP}"
 
-RESIN_HOME="/usr/lib/resin"
+RESIN_HOME="/usr/$(get_libdir)/resin"
 
 # Rewrites build.xml in documentation
 JAVA_PKG_BSFIX="off"
@@ -125,6 +125,8 @@ src_install() {
 	einfo "Removing unneeded files..."
 	rm -f "${D}"/${RESIN_HOME}/bin/*.in
 	rm -f "${D}"/etc/resin/*.orig
+
+	sed -i -e "s,__RESIN_HOME__,${RESIN_HOME}," "${D}/etc/conf.d/resin"
 
 	einfo "Fixing permissions..."
 	chown -R resin:resin "${D}${RESIN_HOME}"

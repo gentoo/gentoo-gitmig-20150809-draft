@@ -1,10 +1,10 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.3.ebuild,v 1.2 2007/11/10 12:42:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.3.ebuild,v 1.3 2007/11/10 20:52:05 nelchael Exp $
 
 JAVA_PKG_IUSE="doc source"
 
-inherit java-pkg-2 java-ant-2 eutils flag-o-matic
+inherit java-pkg-2 java-ant-2 eutils flag-o-matic multilib
 
 DESCRIPTION="A fast Servlet 2.5 and JSP 2.0 engine."
 HOMEPAGE="http://www.caucho.com"
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	dev-libs/openssl
 	${COMMON_DEP}"
 
-RESIN_HOME="/usr/lib/resin"
+RESIN_HOME="/usr/$(get_libdir)/resin"
 
 # Rewrites build.xml in documentation
 JAVA_PKG_BSFIX="off"
