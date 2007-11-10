@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ccrypt
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.9 2007/06/09 15:51:16 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.10 2007/11/10 12:43:48 nixnut Exp $
+
+  10 Nov 2007; nixnut <nixnut@gentoo.org> ccrypt-1.7-r1.ebuild:
+  Stable on ppc wrt bug 198645
 
 *ccrypt-1.7-r1 (09 Jun 2007)
 
