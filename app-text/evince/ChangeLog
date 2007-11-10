@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.123 2007/11/10 12:53:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.124 2007/11/10 13:17:19 fmccor Exp $
+
+  10 Nov 2007; Ferris McCormick <fmccor@gentoo.org> evince-2.20.1.ebuild:
+  Sparc stable --- Yet more for security Bug #196735
 
   10 Nov 2007; Christian Faulhammer <opfer@gentoo.org> evince-2.20.1.ebuild:
   stable x86, security bug 196735
