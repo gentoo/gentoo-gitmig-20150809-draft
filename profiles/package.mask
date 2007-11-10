@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7892 2007/11/10 16:57:32 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.7893 2007/11/10 20:10:23 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -49,10 +49,6 @@
 # Gustavo Felisberto <humpback@gentoo.org> (07 Nov 2007)
 # Beta version
 >=net-im/skype-2.0.0.13
-
-# Ulrich Mueller <ulm@gentoo.org> (07 Nov 2007)
-# New site-init file, needs testing
-=app-emacs/quack-0.30
 
 # Hanno Boeck <hanno@gentoo.org (11 Nov 2007)
 # Remaining beryl-related packages, beryl has been removed
