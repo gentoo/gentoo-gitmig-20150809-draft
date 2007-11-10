@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.18 2007/08/25 22:21:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.6.ebuild,v 1.19 2007/11/10 14:40:55 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -52,8 +52,8 @@ NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-"2.6.9"}
 
 [[ ${CTARGET} == hppa* ]] && NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-2.6.20}
 
-IUSE="debug nls hardened multilib selinux glibc-omitfp profile glibc-compat20"
-[[ -n ${GLIBC_LT_VER} ]] && IUSE="${IUSE} nptl nptlonly"
+IUSE="debug nls hardened multilib selinux glibc-omitfp profile"
+[[ -n ${GLIBC_LT_VER} ]] && IUSE="${IUSE} glibc-compat20 nptl nptlonly"
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
