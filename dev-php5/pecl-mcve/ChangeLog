@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-mcve
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.20 2007/11/10 13:33:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.21 2007/11/10 21:55:37 corsair Exp $
+
+  10 Nov 2007; Markus Rothe <corsair@gentoo.org> pecl-mcve-5.2.2-r1.ebuild:
+  Stable on ppc64; bug #198560
 
   10 Nov 2007; nixnut <nixnut@gentoo.org> pecl-mcve-5.2.2-r1.ebuild:
   Stable on ppc wrt bug 198560
