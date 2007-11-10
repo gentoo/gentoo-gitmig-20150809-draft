@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/resin-servlet-api-3.0.24.ebuild,v 1.5 2007/11/10 12:41:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/resin-servlet-api-3.0.24.ebuild,v 1.6 2007/11/10 20:36:53 nelchael Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.caucho.com/download/resin-${PV}-src.zip
 
 LICENSE="GPL-2"
 SLOT="2.4"
-KEYWORDS="~amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 
 IUSE=""
 
