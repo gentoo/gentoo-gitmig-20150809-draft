@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.31 2007/10/27 15:43:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.32 2007/11/10 20:27:34 swegener Exp $
+
+*systemtap-0.6_p20071110 (10 Nov 2007)
+
+  10 Nov 2007; Sven Wegener <swegener@gentoo.org>
+  +systemtap-0.6_p20071110.ebuild, -systemtap-20071006.ebuild,
+  -systemtap-20071020.ebuild, -systemtap-20071027.ebuild:
+  Version bump. Change versioning scheme to match internal release versions.
 
 *systemtap-20071027 (27 Oct 2007)
 

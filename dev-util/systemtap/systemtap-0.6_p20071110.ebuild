@@ -1,12 +1,17 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-20071006.ebuild,v 1.1 2007/10/07 15:33:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.6_p20071110.ebuild,v 1.1 2007/11/10 20:27:34 swegener Exp $
 
 inherit linux-info eutils
 
 DESCRIPTION="A linux trace/probe tool"
 HOMEPAGE="http://sourceware.org/systemtap/"
-SRC_URI="ftp://sources.redhat.com/pub/${PN}/snapshots/${P}.tar.bz2"
+if [[ ${PV} = *_p* ]] # is this a snaphot?
+then
+	SRC_URI="ftp://sources.redhat.com/pub/${PN}/snapshots/${PN}-${PV/*_p/}.tar.bz2"
+else
+	: # currently there are only snapshots available, but they have an internal version (see configure.ac)
+fi
 
 LICENSE="GPL-2"
 SLOT="0"
