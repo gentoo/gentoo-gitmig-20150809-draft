@@ -1,0 +1,10 @@
+--- lwt/Makefile.orig	2007-11-10 16:08:28.000000000 +0100
++++ lwt/Makefile	2007-11-10 16:08:36.000000000 +0100
+@@ -55,6 +55,7 @@
+ 
+ install:
+ 	{ test ! -f $(XARCHIVE) || extra="$(XARCHIVE) "`basename $(XARCHIVE) .cmxa`.a; }; \
++	mkdir -p "$(TEMPROOT)/$(MODULEINSTALLDIR)"
+ 	$(OCAMLFIND) install $(NAME) -destdir "$(TEMPROOT)/$(MODULEINSTALLDIR)" *.mli *.cmi $(ARCHIVE) META $$extra
+ 
+ uninstall:
