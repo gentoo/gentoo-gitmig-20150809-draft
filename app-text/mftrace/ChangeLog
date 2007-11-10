@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mftrace
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.38 2007/10/05 10:11:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.39 2007/11/10 17:33:03 armin76 Exp $
+
+  10 Nov 2007; Raúl Porcel <armin76@gentoo.org> mftrace-1.2.9.ebuild:
+  sparc stable wrt #182995
 
   05 Oct 2007; Raúl Porcel <armin76@gentoo.org> mftrace-1.2.9.ebuild:
   alpha stable
