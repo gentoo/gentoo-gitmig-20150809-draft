@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/cryptokit-1.3.ebuild,v 1.1 2007/11/10 15:40:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/cryptokit-1.3.ebuild,v 1.2 2007/11/10 15:42:28 aballier Exp $
 
 inherit eutils findlib
 
@@ -24,7 +24,7 @@ src_unpack() {
 
 src_compile() {
 	emake all || die "emake all failed"
-	emake allopt || elog "emake allopt failed, is ocamlopt missing ?"
+	emake allopt || die "emake allopt failed, is ocamlopt missing ?"
 }
 
 src_install() {
