@@ -1,0 +1,24 @@
+diff -urNp bcrypt-1.6-14.org/mod/Makefile bcrypt-1.6-14/mod/Makefile
+--- bcrypt-1.6-14.org/mod/Makefile	2006-11-09 07:43:33.000000000 +0200
++++ bcrypt-1.6-14/mod/Makefile	2007-11-10 13:06:48.000000000 +0200
+@@ -127,7 +127,7 @@ endif
+ endif
+ endif
+ 
+-LDFLAGS = -d -r
++override LDFLAGS = -d -r
+ 
+ SUBDIRS = gost blowfish twofish des bf128 bf448 cast idea 3des rijn
+ OBJS += bc_mgr.o
+diff -urNp bcrypt-1.6-14.org/mod/Makefile.alg bcrypt-1.6-14/mod/Makefile.alg
+--- bcrypt-1.6-14.org/mod/Makefile.alg	2006-10-20 12:16:01.000000000 +0200
++++ bcrypt-1.6-14/mod/Makefile.alg	2007-11-10 13:06:56.000000000 +0200
+@@ -22,7 +22,7 @@
+ CC = gcc
+ LD = ld
+ LN_S = ln -s
+-LDFLAGS = -d -r
++override LDFLAGS = -d -r
+ ifeq ($(K2616), yes)
+ KBDEF += -DKBUILD_MODNAME=\"$(MODNAME)\" -DKBUILD_BASENAME=\"BestCrypt\" -D_KBUILD_QUOTES
+ else

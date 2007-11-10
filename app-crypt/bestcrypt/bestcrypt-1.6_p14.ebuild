@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p14.ebuild,v 1.1 2007/11/10 11:03:14 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p14.ebuild,v 1.2 2007/11/10 11:15:16 alonbl Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs multilib
 
@@ -24,19 +24,19 @@ S="${WORKDIR}/${MY_PN}-${MY_PV}"
 pkg_setup() {
 	linux-mod_pkg_setup
 
-	MODULE_NAMES="bc(block:${S}/mod)
-		bc_3des(block:${S}/mod:mod/3des)
-		bc_bf128(block:${S}/mod:mod/bf128)
-		bc_bf448(block:${S}/mod:mod/bf448)
-		bc_blowfish(block:${S}/mod:mod/blowfish)
-		bc_cast(block:${S}/mod:mod/cast)
-		bc_des(block:${S}/mod:mod/des)
-		bc_gost(block:${S}/mod:mod/gost)
-		bc_idea(block:${S}/mod:mod/idea)
-		bc_rc6(block:${S}/mod:mod/rc6)
-		bc_rijn(block:${S}/mod:mod/rijn)
-		bc_serpent(block:${S}/mod:mod/serpent)
-		bc_twofish(block:${S}/mod:mod/twofish)"
+	MODULE_NAMES="bc(block:"${S}/mod")
+		bc_3des(block:"${S}/mod":mod/3des)
+		bc_bf128(block:"${S}/mod":mod/bf128)
+		bc_bf448(block:"${S}/mod":mod/bf448)
+		bc_blowfish(block:"${S}/mod":mod/blowfish)
+		bc_cast(block:"${S}/mod":mod/cast)
+		bc_des(block:"${S}/mod":mod/des)
+		bc_gost(block:"${S}/mod":mod/gost)
+		bc_idea(block:"${S}/mod":mod/idea)
+		bc_rc6(block:"${S}/mod":mod/rc6)
+		bc_rijn(block:"${S}/mod":mod/rijn)
+		bc_serpent(block:"${S}/mod":mod/serpent)
+		bc_twofish(block:"${S}/mod":mod/twofish)"
 	BUILD_TARGETS="all"
 	BUILD_PARAMS="
 		CPP=\"$(tc-getCXX)\"
