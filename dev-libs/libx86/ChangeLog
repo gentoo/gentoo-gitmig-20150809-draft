@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libx86
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.3 2007/10/10 19:10:30 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.4 2007/11/10 06:01:43 drac Exp $
+
+  10 Nov 2007; Samuli Suominen <drac@gentoo.org> libx86-0.99.ebuild:
+  Keyword ~amd64 wrt #197687.
 
   10 Oct 2007; Alon Bar-Lev <alonbl@gentoo.org>
   files/libx86-0.99-build.patch, libx86-0.99.ebuild:
