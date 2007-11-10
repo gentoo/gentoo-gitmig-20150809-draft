@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Math-BigRat
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.12 2007/07/27 17:01:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.13 2007/11/10 11:19:46 drac Exp $
+
+  10 Nov 2007; Samuli Suominen <drac@gentoo.org> Math-BigRat-0.19.ebuild:
+  amd64 stable
 
   27 Jul 2007; Raúl Porcel <armin76@gentoo.org> Math-BigRat-0.19.ebuild:
   alpha/ia64/x86 stable
