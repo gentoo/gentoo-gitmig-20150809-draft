@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.129 2007/10/15 14:40:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.130 2007/11/10 09:45:36 swegener Exp $
+
+  10 Nov 2007; Sven Wegener <swegener@gentoo.org> avahi-0.6.19-r2.ebuild,
+  avahi-0.6.20-r2.ebuild, avahi-0.6.21.ebuild:
+  Update gtk+ and libglade dependencies for bug #198627.
 
   15 Oct 2007; Markus Rothe <corsair@gentoo.org> avahi-0.6.20-r2.ebuild:
   Stable on ppc64
