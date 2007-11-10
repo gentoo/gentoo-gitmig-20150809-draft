@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aopalliance/aopalliance-1.0-r1.ebuild,v 1.9 2006/11/24 21:17:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aopalliance/aopalliance-1.0-r1.ebuild,v 1.10 2007/11/10 19:00:40 nelchael Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,19 +16,18 @@ SRC_URI="mirror://gentoo/${P}-gentoo.tar.bz2"
 HOMEPAGE="http://aopalliance.sourceforge.net/"
 LICENSE="public-domain"
 SLOT="1"
+
 KEYWORDS="amd64 ppc ppc64 x86"
+
 IUSE="doc source"
-DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
-	source? ( app-arch/zip )"
+
+DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
 
-src_compile() {
-	eant jar $(use_doc)
-}
-
 src_install() {
+
 	java-pkg_dojar build/${PN}.jar
-	use doc && java-pkg_dohtml -r build/api
+	use doc && java-pkg_dojavadoc build/api
 	use source && java-pkg_dosrc src/main
+
 }
