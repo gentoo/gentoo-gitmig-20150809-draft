@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.160 2007/10/09 08:30:11 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.161 2007/11/10 23:17:07 dberkholz Exp $
+
+*mesa-7.0.2 (10 Nov 2007)
+
+  10 Nov 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/7.0.2-glw.pc.in, +mesa-7.0.2.ebuild:
+  Bump to 7.0.2, with lots of bugfixes. I removed all keywords because I can't
+  get any 3D apps running besides glxgears, but I'd like to get reports from
+  others to help figure out whether my system's just broken.
 
   09 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/mesa-6.5.3-pthread.patch, -mesa-6.5.2.ebuild, -mesa-6.5.3.ebuild:
