@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/engine_pkcs11
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.13 2007/11/10 21:09:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.14 2007/11/10 22:14:54 corsair Exp $
+
+  10 Nov 2007; Markus Rothe <corsair@gentoo.org> engine_pkcs11-0.1.4.ebuild:
+  Stable on ppc64; bug #198685
 
   10 Nov 2007; Samuli Suominen <drac@gentoo.org> engine_pkcs11-0.1.4.ebuild:
   amd64 stable wrt #198685
