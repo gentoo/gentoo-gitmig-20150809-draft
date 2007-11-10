@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/scsign/scsign-0.0.5.ebuild,v 1.4 2006/12/02 04:57:07 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/scsign/scsign-0.0.5.ebuild,v 1.5 2007/11/10 13:27:28 alonbl Exp $
 
 inherit toolchain-funcs eutils
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-S=${WORKDIR}
+S="${WORKDIR}"
 
 DEPEND=">=dev-libs/opensc-0.8.1
 	dev-libs/openssl
@@ -19,11 +19,12 @@ DEPEND=">=dev-libs/opensc-0.8.1
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-printid.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-printid.patch"
 }
 
 src_compile() {
-	$(tc-getCC) ${CFLAGS}  -lcrypto -lpcsclite -lpthread -lopensc main.c libscsign.c -o scsign || die
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -lcrypto -lpcsclite -lpthread -lopensc main.c libscsign.c -o scsign || die
 }
 
 src_install() {
