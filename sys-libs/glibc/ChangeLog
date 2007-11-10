@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.561 2007/10/24 06:11:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.562 2007/11/10 04:07:20 vapier Exp $
+
+  10 Nov 2007; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_unpack.eblit, glibc-2.6.1.ebuild, glibc-2.7.ebuild:
+  Add support for USE=vanilla.
 
   24 Oct 2007; Mike Frysinger <vapier@gentoo.org> glibc-2.7.ebuild:
   Fix building on hppa #196868 and add patch for gcc-4.2 + noinlining #196245.

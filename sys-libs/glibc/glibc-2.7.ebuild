@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7.ebuild,v 1.5 2007/11/07 05:37:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7.ebuild,v 1.6 2007/11/10 04:07:20 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -26,7 +26,7 @@ NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.9"}        # min kernel version nptl require
 
 [[ ${CTARGET} == hppa* ]] && NPTL_KERN_VER=${NPTL_KERN_VER:-2.6.20}
 
-IUSE="debug nls hardened multilib selinux glibc-omitfp profile glibc-compat20 ${LT_VER:+nptl nptlonly}"
+IUSE="debug glibc-omitfp glibc-compat20 hardened multilib nls selinux profile vanilla ${LT_VER:+nptl nptlonly}"
 S=${WORKDIR}/glibc-${RELEASE_VER}
 
 # Here's how the cross-compile logic breaks down ...
