@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/avant-window-navigator-extras
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/ChangeLog,v 1.1 2007/11/10 03:13:17 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/ChangeLog,v 1.2 2007/11/10 03:57:14 wltjr Exp $
+
+  10 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org> metadata.xml:
+  Corrected metadata
 
 *avant-window-navigator-extras-0.2.1 (10 Nov 2007)
 
