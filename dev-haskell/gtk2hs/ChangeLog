@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/gtk2hs
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.37 2007/11/09 20:38:16 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.38 2007/11/10 03:10:42 araujo Exp $
+
+*gtk2hs-0.9.12.1 (10 Nov 2007)
+
+  10 Nov 2007; Luis F. Araujo <araujo@gentoo.org> +gtk2hs-0.9.12.1.ebuild:
+  Adding new version
 
   09 Nov 2007; Luis F. Araujo <araujo@gentoo.org> gtk2hs-0.9.12.ebuild:
   Adding missing backslash to fix package registration
