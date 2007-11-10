@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ming
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.29 2007/11/09 22:34:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.30 2007/11/10 22:07:37 corsair Exp $
+
+  10 Nov 2007; Markus Rothe <corsair@gentoo.org> ming-0.2a-r3.ebuild:
+  Stable on ppc64; bug #198582
 
   09 Nov 2007; nixnut <nixnut@gentoo.org> ming-0.2a-r3.ebuild:
   Stable on ppc wrt bug 198582
