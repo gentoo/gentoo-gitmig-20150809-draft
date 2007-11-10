@@ -1,0 +1,19 @@
+last.fm streaming servers changed the Server field in their HTTP response,
+so xine last.fm stream detection does not properly work with them anymore.
+
+The bug is fixed in xine-lib repository and will be released in xine-lib
+1.1.9, so disable the xine detection for all the previous versions.
+
+Index: amarok-1.4.7/amarok/src/engine/xine/xine-engine.cpp
+===================================================================
+--- amarok-1.4.7.orig/amarok/src/engine/xine/xine-engine.cpp
++++ amarok-1.4.7/amarok/src/engine/xine/xine-engine.cpp
+@@ -1167,7 +1167,7 @@ bool XineEngine::flushBuffer()
+ 
+ bool XineEngine::lastFmProxyRequired()
+ {
+-    return !( xine_check_version(1,1,8) );
++    return !( xine_check_version(1,1,9) );
+ }
+ 
+ //////////////////////////////////////////////////////////////////////////////

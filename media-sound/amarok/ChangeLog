@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.234 2007/11/04 14:10:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.235 2007/11/10 16:27:36 flameeyes Exp $
+
+*amarok-1.4.7-r1 (10 Nov 2007)
+
+  10 Nov 2007; Diego Pettenò <flameeyes@gentoo.org>
+  -files/amarok-1.4.5-magnatune.patch,
+  +files/amarok-1.4.7+xine-lib-1.1.8-lastfm.patch, -amarok-1.4.5-r1.ebuild,
+  -amarok-1.4.6.ebuild, +amarok-1.4.7-r1.ebuild:
+  Remove old version, revision bump to blacklist xine-lib-1.1.8 direct last.fm
+  playback as it's broken by server change, 1.1.9 will work again.
 
   04 Nov 2007; Christoph Mende <angelos@gentoo.org> amarok-1.4.7.ebuild:
   Stable on amd64 wrt bug #192678
