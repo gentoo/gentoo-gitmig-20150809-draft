@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r6.ebuild,v 1.1 2007/11/07 23:31:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2007-r7.ebuild,v 1.1 2007/11/10 11:45:24 aballier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
@@ -137,6 +137,7 @@ src_compile() {
 		--without-xdvipdfmx \
 		--without-lcdf-typetools \
 		--without-pdfopen \
+		--without-ps2eps \
 		--without-detex \
 		--without-ttf2pk \
 		--without-tex4htk \
